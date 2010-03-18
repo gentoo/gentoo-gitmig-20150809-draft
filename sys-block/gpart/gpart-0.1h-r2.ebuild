@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/gpart-0.1h-r2.ebuild,v 1.1 2009/12/19 11:46:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/gpart-0.1h-r2.ebuild,v 1.2 2010/03/18 16:37:24 hwoarang Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.stud.uni-hannover.de/user/76201/gpart/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa ~x86"
 IUSE=""
 
 RDEPEND=""
