@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5414 2010/03/17 19:07:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5415 2010/03/18 17:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -550,9 +550,9 @@ app-text/namazu:kakasi - Enable kakasi support (dev-perl/Text-Kakasi)
 app-text/noweb:icon - Enable dev-lang/icon language support
 app-text/pdftk:nodrm - Decrypt a document with the user_pw even if it has an owner_pw set
 app-text/podofo:boost - Add support for boost
-app-text/poppler:abiword - Enable support for app-office/abiword output. Requires dev-libs/libxml2.
+app-text/poppler:abiword -  Enable support for app-office/abiword output. Requires dev-libs/libxml2. 
 app-text/poppler:exceptions - Enable exceptions throwing.
-app-text/poppler:utils - Install command-line PDF converters and various utilities.
+app-text/poppler:utils -  Install command-line PDF converters and various utilities. 
 app-text/poppler:xpdf-headers - Install xpdf headers.
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
@@ -1215,6 +1215,7 @@ gnome-base/gdm:dmx - Enables Distributed Multihead X (DMX) support
 gnome-base/gdm:remote - Enables support for secure remote connections
 gnome-base/gdm:xklavier - Use x11-libs/libxklavier for keyboard management
 gnome-base/gnome-control-center:sound - Enable sound event support with media-libs/libcanberra
+gnome-base/gnome-light:automount - Use gnome-base/gvfs[gdu] for automounting of drives in nautilus
 gnome-base/gnome-mount:nautilus - Enables the Nautilus plugin
 gnome-base/gnome-session:policykit - Enable sys-auth/policykit authentication support
 gnome-base/gnome-session:splash - Enable gnome splash screen
