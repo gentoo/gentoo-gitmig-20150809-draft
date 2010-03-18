@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.7.1.ebuild,v 1.2 2010/03/11 13:40:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.7.1.ebuild,v 1.3 2010/03/18 06:38:25 caster Exp $
 
 EAPI="1"
 
@@ -9,8 +9,10 @@ inherit java-vm-2
 dist="mirror://gentoo/"
 DESCRIPTION="A Gentoo-made binary build of the icedtea6 JDK"
 TARBALL_VERSION="${PV}"
-SRC_URI="amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2 )
-	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2 )
+SRC_URI="amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2
+			${dist}/${PN}-libpng14-${TARBALL_VERSION}-amd64.tar.bz2 )
+	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2
+		${dist}/${PN}-libpng14-${TARBALL_VERSION}-x86.tar.bz2 )
 	doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.bz2 )
 	examples? (
 		amd64? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-amd64.tar.bz2 )
@@ -61,6 +63,21 @@ DEPEND=""
 QA_EXECSTACK_amd64="opt/${P}/jre/lib/amd64/server/libjvm.so"
 QA_EXECSTACK_x86="opt/${P}/jre/lib/i386/server/libjvm.so
 	opt/${P}/jre/lib/i386/client/libjvm.so"
+
+src_unpack() {
+	unpack ${A}
+
+	if has_version '>=media-libs/libpng-1.4.0'; then
+		einfo "Installing libpng-1.4 ABI version"
+		local arch=${ARCH}
+		use x86 && arch=i386
+		mv -v ${P}-libpng14/jre/lib/${arch}/*.so ${P}/jre/lib/${arch} || die
+	else
+		elog "Installing libpng-1.2 ABI version"
+		elog "You will have to remerge icedtea6-bin after upgrading to libpng-1.4"
+		elog "Note that revdep-rebuild will not do it automatically due to the mask file."
+	fi
+}
 
 src_install() {
 	local dest="/opt/${P}"
