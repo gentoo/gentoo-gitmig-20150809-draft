@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.53 2010/03/02 08:12:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.54 2010/03/18 13:45:47 nyhm Exp $
+
+*optipng-0.6.4 (18 Mar 2010)
+
+  18 Mar 2010; Tristan Heaven <nyhm@gentoo.org> +optipng-0.6.4.ebuild:
+  Version bump, bug #310047
 
   02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> optipng-0.6.3.ebuild:
   x86 stable wrt bug #306359, arch-tested by Thomas Kahle
