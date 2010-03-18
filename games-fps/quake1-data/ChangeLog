@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-data
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/ChangeLog,v 1.8 2008/09/26 18:33:10 zmedico Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/ChangeLog,v 1.9 2010/03/18 03:45:43 mr_bones_ Exp $
+
+  18 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  quake1-data-2.40.ebuild:
+  EAPI=2; built_with_use -> has_version
 
   26 Sep 2008; Zac Medico <zmedico@gentoo.org> quake1-data-2.40.ebuild:
   Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds().

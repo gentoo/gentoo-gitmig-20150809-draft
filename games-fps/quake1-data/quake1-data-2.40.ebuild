@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.14 2008/09/26 18:33:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.15 2010/03/18 03:45:43 mr_bones_ Exp $
 
 # TODO: if installing off of the 1.01 cd, need to fetch the
 #       quake shareware and use that pak0
 # http://linux.omnipotent.net/article.php?article_id=11287
 # ftp://ftp.cdrom.com/pub/idgames/idstuff/quake/quake106.zip
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="iD Software's Quake 1 ... the data files"
@@ -28,7 +29,7 @@ pkg_setup() {
 	games_pkg_setup
 
 	if has_version games-fps/quake1-demodata && \
-	   built_with_use "games-fps/quake1-demodata" symlink ; then
+	   ! has_version "games-fps/quake1-demodata[symlink]" ; then
 		eerror "The symlink for the demo data conflicts with the cdinstall data"
 		die "Unmerge games-fps/quake1-demodata to remove the conflict"
 	fi
