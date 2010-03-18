@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.24 2010/03/03 21:29:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.25 2010/03/18 11:29:20 deathwing00 Exp $
 
   03 Mar 2010; Jeremy Olexa <darkside@gentoo.org> pyinotify-0.8.9.ebuild:
   Add ~amd64-linux, tested by myself
@@ -42,7 +42,7 @@
 
 *pyinotify-0.8.6 (15 Jun 2009)
 
-  15 Jun 2009; Ioannis Aslanidis <iaslanidis@gentoo.org>
+  15 Jun 2009; Ioannis Aslanidis <deathwing00@gentoo.org>
   +files/pyinotify-0.8.6-libc-fix.patch, +pyinotify-0.8.6.ebuild:
   Version bump. Dropped broken libc check with a custom patch.
 
