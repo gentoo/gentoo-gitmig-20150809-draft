@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/nufw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.35 2009/09/14 21:04:56 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.36 2010/03/18 14:59:22 cedk Exp $
+
+  18 Mar 2010; Cédric Krier <cedk@gentoo.org>
+  -files/nufw-2.2.6-auth_mysql.patch, -nufw-2.2.8.ebuild:
+  Remove old
 
   14 Sep 2009; Christian Faulhammer <fauli@gentoo.org> nufw-2.2.21.ebuild:
   stable x86, bug 281222
