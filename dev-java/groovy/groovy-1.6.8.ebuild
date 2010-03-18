@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.6.8.ebuild,v 1.1 2010/03/18 18:45:16 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.6.8.ebuild,v 1.2 2010/03/18 19:08:04 elvanor Exp $
 
 # Groovy's build system is Ant based, but they use Maven for fetching the dependencies.
 # We just have to remove the fetch dependencies target, and then we can use Ant for this ebuild.
@@ -116,4 +116,5 @@ src_install() {
 	java-pkg_dolauncher "groovy" --main groovy.ui.GroovyMain
 	java-pkg_dolauncher "groovysh" --main groovy.ui.InteractiveShell
 	java-pkg_dolauncher "groovyConsole" --main groovy.ui.Console
+	java-pkg_dolauncher "grape" --main org.codehaus.groovy.tools.GrapeMain
 }
