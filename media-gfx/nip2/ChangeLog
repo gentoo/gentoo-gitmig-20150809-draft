@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/nip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.21 2010/03/06 13:25:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.22 2010/03/19 09:22:08 pacho Exp $
+
+  19 Mar 2010; Pacho Ramos <pacho@gentoo.org> nip2-7.20.7.ebuild:
+  amd64 stable, bug 304787
 
   06 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> nip2-7.18.2.ebuild:
   Revert back to ~amd64 wrt #304787.
