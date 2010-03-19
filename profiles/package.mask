@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11371 2010/03/19 17:34:24 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11372 2010/03/19 18:42:07 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1124,7 +1124,7 @@ net-misc/xsupplicant
 # that time, the upstream team has created their own overlay:
 #     emerge -a layman
 #     layman -ka armagetron
-games-action/armagetronad
+<games-action/armagetronad-0.2.8.3.1
 
 # Stefaan De Roeck <stefaan@gentoo.org> (09 Sep 2006)
 # 1.5.x is a development branch, people should test 1.4.x by default
