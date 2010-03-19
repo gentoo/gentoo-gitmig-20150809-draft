@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.61 2010/03/13 10:26:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.62 2010/03/19 09:58:27 phajdan.jr Exp $
+
+  19 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-bin-4.0.295.0_p35884.ebuild:
+  Remove ancient version, also it had plugins-symlink missing in IUSE.
 
   13 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-bin-4.0.295.0_p35884.ebuild,
