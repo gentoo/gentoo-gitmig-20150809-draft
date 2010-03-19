@@ -1,0 +1,24 @@
+http://bugs.gentoo.org/show_bug.cgi?id=310225
+
+--- configure
++++ configure
+@@ -9,6 +9,19 @@
+ # or for csh/tcsh users:
+ #    (setenv prefix $HOME; setenv CC cc; setenv CFLAGS "-O4"; ./configure)
+ 
++# NLS nuisances.
++for as_var in \
++  LANG LANGUAGE LC_ADDRESS LC_ALL LC_COLLATE LC_CTYPE LC_IDENTIFICATION \
++  LC_MEASUREMENT LC_MESSAGES LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER \
++  LC_TELEPHONE LC_TIME
++do
++  if (set +x; test -z "`(eval $as_var=C; export $as_var) 2>&1`"); then
++    eval $as_var=C; export $as_var
++  else
++    unset $as_var
++  fi
++done
++
+ # Incorrect settings of CC or CFLAGS may prevent creating a shared library.
+ # If you have problems, try without defining CC and CFLAGS before reporting
+ # an error.
