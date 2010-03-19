@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5.1.ebuild,v 1.3 2010/01/30 09:00:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5.1.ebuild,v 1.4 2010/03/19 18:06:13 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="acl xattr"
 
 DEPEND="acl? ( sys-apps/acl )

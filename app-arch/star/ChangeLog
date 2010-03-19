@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.84 2010/01/30 09:00:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.85 2010/03/19 18:06:13 phajdan.jr Exp $
+
+  19 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> star-1.5.1.ebuild:
+  x86 stable wrt bug #310013
 
   30 Jan 2010; Peter Volkov <pva@gentoo.org> star-1.5.1.ebuild:
   Fixed automagic deps on libacl and libattr.
