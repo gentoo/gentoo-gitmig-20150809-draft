@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4043 2010/03/19 10:06:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4044 2010/03/19 11:53:12 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Mar 2010; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  Add freebsd 8.0 profiles.desc entries
 
   19 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Remove p.mask entries for www-client/chromium versions no longer in the
