@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.26 2010/02/26 12:05:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.27 2010/03/19 13:55:30 spatz Exp $
+
+  19 Mar 2010; Dror Levin <spatz@gentoo.org> pydf-8.ebuild:
+  Dep on <python3 and change sheband to strictly use python2 as package doesn't
+  support python 3 yet, bug 308273.
 
   26 Feb 2010; Christian Faulhammer <fauli@gentoo.org> pydf-7.ebuild:
   stable x86, bug 305705
