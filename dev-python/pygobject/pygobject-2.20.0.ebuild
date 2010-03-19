@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.4 2010/01/11 16:56:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.5 2010/03/19 17:04:42 pacho Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -47,6 +47,9 @@ src_prepare() {
 
 	# Support installation for multiple Python versions
 	epatch "${FILESDIR}/${PN}-2.18.0-support_multiple_python_versions.patch"
+
+	# Fix compilation with distcc, bug #299680
+	epatch "${FILESDIR}/${PN}-2.20.0-tmpdir-makefile.patch"
 
 	# needed to build on a libtool-1 system, bug #255542
 	rm m4/lt* m4/libtool.m4 ltmain.sh
