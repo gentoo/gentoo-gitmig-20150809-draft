@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/engauge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.5 2010/03/09 11:35:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.6 2010/03/19 17:31:05 calchan Exp $
+
+*engauge-4.1-r1 (19 Mar 2010)
+
+  19 Mar 2010; <calchan@gentoo.org> +engauge-4.1-r1.ebuild,
+  +files/engauge-4.1_qt4.patch:
+  Saved in extremis from complete removal by Oliver Borm who provided a
+  patch to build against Qt4, thanks a lot (bug #310125). Fixed bug #299788
+  also thanks to Oliver Borm.
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> engauge-4.1.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension
