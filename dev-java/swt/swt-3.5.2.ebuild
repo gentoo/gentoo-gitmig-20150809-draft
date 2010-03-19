@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.5.2_rc1.ebuild,v 1.1 2010/01/22 22:18:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.5.2.ebuild,v 1.1 2010/03/19 12:57:38 caster Exp $
 
 EAPI=2
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs java-osgi
 
 MY_PV="${PV/_rc/RC}"
-MY_DMF="download.eclipse.org/eclipse/downloads/drops/S-${MY_PV}-201001130800"
+MY_DMF="download.eclipse.org/eclipse/downloads/drops/R-${MY_PV}-201002111343"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="GTK based SWT Library"
