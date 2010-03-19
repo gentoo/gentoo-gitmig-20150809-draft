@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.62 2010/03/19 09:58:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.63 2010/03/19 17:18:54 phajdan.jr Exp $
+
+  19 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-bin-5.0.308.0_p37385.ebuild, chromium-bin-9999.ebuild:
+  Only block www-plugins/gecko-mediaplayer if it has been compiled with
+  USE=gnome, thanks to George Reitsma <g.p.reitsma@ieee.org> and Doktor
+  Notor <notordoktor@gmail.com> in bug #309231.
 
   19 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   -chromium-bin-4.0.295.0_p35884.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.308.0_p37385.ebuild,v 1.7 2010/03/13 10:26:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.308.0_p37385.ebuild,v 1.8 2010/03/19 17:18:54 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -41,7 +41,7 @@ RDEPEND="app-arch/bzip2
 # www-plugins/gecko-mediaplayer, bug #309231.
 RDEPEND+="
 	plugins-symlink? (
-		!www-plugins/gecko-mediaplayer
+		!www-plugins/gecko-mediaplayer[gnome]
 	)"
 
 S=${WORKDIR}

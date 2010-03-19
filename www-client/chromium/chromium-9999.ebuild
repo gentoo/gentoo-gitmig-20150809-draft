@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.33 2010/03/13 10:21:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.34 2010/03/19 17:16:03 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability subversion toolchain-funcs
@@ -46,7 +46,7 @@ RDEPEND+="
 # www-plugins/gecko-mediaplayer, bug #309231.
 RDEPEND+="
 	plugins-symlink? (
-		!www-plugins/gecko-mediaplayer
+		!www-plugins/gecko-mediaplayer[gnome]
 	)"
 
 pkg_setup() {
