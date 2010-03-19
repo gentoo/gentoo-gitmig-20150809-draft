@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.6 2009/02/12 16:39:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.7 2010/03/19 20:35:17 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,8 +25,9 @@ src_prepare() {
 	sed -i -e "/zozo/d" texts/text_en.txt || die "sed failed"
 	local f
 	for f in src/assembler.S src/assembler_opt.S ; do
+		einfo "patching $f"
 		cat <<-EOF >> ${f}
-		#ifdef __ELF__
+		#if defined(__linux__) && defined(__ELF__)
 		.section .note.GNU-stack,"",%progbits
 		#endif
 		EOF
