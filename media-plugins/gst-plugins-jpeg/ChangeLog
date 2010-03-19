@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-jpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.70 2010/01/18 18:40:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.71 2010/03/19 09:19:15 pacho Exp $
+
+  19 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-jpeg-0.10.17.ebuild:
+  amd64 stable, bug 308379
 
   18 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-jpeg-0.10.14.ebuild, gst-plugins-jpeg-0.10.16.ebuild,

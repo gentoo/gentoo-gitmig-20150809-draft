@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/gst-plugins-neon-0.10.17.ebuild,v 1.1 2010/01/23 20:19:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/gst-plugins-neon-0.10.17.ebuild,v 1.2 2010/03/19 09:52:34 pacho Exp $
 
 inherit autotools gst-plugins-bad
 
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=net-misc/neon-0.26

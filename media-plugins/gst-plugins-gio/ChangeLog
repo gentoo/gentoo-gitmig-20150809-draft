@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.47 2010/03/19 01:51:11 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.48 2010/03/19 08:57:56 pacho Exp $
+
+  19 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-gio-0.10.25.ebuild:
+  amd64 stable, bug 308379
 
 *gst-plugins-gio-0.10.28 (19 Mar 2010)
 
