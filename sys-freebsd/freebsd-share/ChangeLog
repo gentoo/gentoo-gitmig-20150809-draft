@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.35 2010/03/11 11:00:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.36 2010/03/19 11:51:03 aballier Exp $
+
+*freebsd-share-8.0 (19 Mar 2010)
+
+  19 Mar 2010; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-share-8.0.ebuild, +files/freebsd-share-8.0-gnu-miscfiles.patch:
+  bump to 8.0 from the bsd overlay
 
   11 Mar 2010; Alexis Ballier <aballier@gentoo.org>
   -freebsd-share-6.2.ebuild, -freebsd-share-7.1.ebuild,

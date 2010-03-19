@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.83 2010/03/12 15:38:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.84 2010/03/19 11:50:39 aballier Exp $
+
+*freebsd-lib-8.0 (19 Mar 2010)
+
+  19 Mar 2010; Alexis Ballier <aballier@gentoo.org> +freebsd-lib-8.0.ebuild,
+  +files/freebsd-lib-8.0-log2.patch, metadata.xml:
+  bump to 8.0 from the bsd overlay
 
   12 Mar 2010; Alexis Ballier <aballier@gentoo.org>
   freebsd-lib-7.2-r1.ebuild:

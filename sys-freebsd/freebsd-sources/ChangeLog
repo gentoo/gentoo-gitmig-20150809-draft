@@ -1,6 +1,16 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.55 2010/03/11 11:47:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.56 2010/03/19 11:50:50 aballier Exp $
+
+*freebsd-sources-8.0 (19 Mar 2010)
+
+  19 Mar 2010; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-sources-8.0.ebuild, +files/freebsd-sources-8.0-gentoo.patch,
+  +files/freebsd-sources-8.0-sparc64.patch,
+  +files/freebsd-sources-8.0-subnet-route-pr40133.patch,
+  +files/freebsd-sources-8.0-werror.patch,
+  +files/freebsd-sources-8.0-zfs.patch:
+  bump to 8.0 from the bsd overlay
 
   11 Mar 2010; Alexis Ballier <aballier@gentoo.org>
   -files/freebsd-sources-6.0-asm.patch,
