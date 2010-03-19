@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.7 2010/03/19 00:25:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.1 2010/03/19 00:25:59 ulm Exp $
 
 EAPI=3
 
@@ -79,14 +79,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.3.1-multilist-stipple.patch" #215984
-	epatch "${FILESDIR}/${PN}-2.3.1-ac-editres.patch" #82081
-	epatch "${FILESDIR}/${P}-ldflags.patch" #293573
-	epatch "${FILESDIR}/${P}-ddd-layout.patch" #303887
-	epatch "${FILESDIR}/${P}-sanitise-paths.patch"
-	epatch "${FILESDIR}/${P}-libpng14.patch"
+	epatch "${FILESDIR}/${PN}-2.3.2-sanitise-paths.patch"
+	epatch "${FILESDIR}/${PN}-2.3.2-libpng14.patch"
 	[[ ${CHOST} == *-solaris2.11 ]] \
-		&& epatch "${FILESDIR}/${P}-solaris-2.11.patch"
+		&& epatch "${FILESDIR}/${PN}-2.3.2-solaris-2.11.patch"
 
 	# disable compilation of demo binaries
 	sed -i -e '/^SUBDIRS/{:x;/\\$/{N;bx;};s/[ \t\n\\]*demos//;}' Makefile.am
@@ -127,19 +123,16 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake -j1 MWMRCDIR=/etc/X11/mwm || die "emake failed"
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" MWMRCDIR=/etc/X11/mwm install \
+		|| die "emake install failed"
 
 	# mwm default configs
 	insinto /usr/share/X11/app-defaults
 	newins "${FILESDIR}"/Mwm.defaults Mwm
-
-	dodir /etc/X11/mwm
-	mv -f "${ED}"/usr/$(get_libdir)/X11/system.mwmrc "${ED}"/etc/X11/mwm
-	dosym /etc/X11/mwm/system.mwmrc /usr/$(get_libdir)/X11/
 
 	if use examples; then
 		emake -j1 -C demos DESTDIR="${D}" install-data \

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.229 2010/03/14 15:25:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.230 2010/03/19 00:25:59 ulm Exp $
+
+*openmotif-2.3.3 (18 Mar 2010)
+
+  18 Mar 2010; Ulrich Mueller <ulm@gentoo.org> openmotif-2.3.2-r2.ebuild,
+  +openmotif-2.3.3.ebuild:
+  Version bump. Fix DEPEND and RDEPEND.
 
   14 Mar 2010; Ulrich Mueller <ulm@gentoo.org> openmotif-2.3.2-r2.ebuild:
   Fix workaround for LANG, bug 15119.
