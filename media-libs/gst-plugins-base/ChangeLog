@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.119 2010/01/15 09:28:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.120 2010/03/19 01:33:43 leio Exp $
+
+*gst-plugins-base-0.10.28 (19 Mar 2010)
+
+  19 Mar 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-base-0.10.28.ebuild:
+  Version bump with the following most noteworthy upstream changes:
+  Many improvements and refactoring to playbin2.
+  ISO-639 language code utility functions in libgsttag (via iso-codes).
+  DKS and QTtext subtitle format support in subparse.
+  Bug fixes, performance improvements.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-base-0.10.25.ebuild:
