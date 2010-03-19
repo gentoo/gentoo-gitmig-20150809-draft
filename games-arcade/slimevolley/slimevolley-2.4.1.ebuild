@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.1.ebuild,v 1.1 2010/03/19 17:00:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.1.ebuild,v 1.2 2010/03/19 17:03:29 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils games
@@ -28,7 +28,7 @@ src_prepare() {
 	sed -i \
 		-e '/^Encoding/d' \
 		debian/${PN}.desktop || die
-	
+
 	sed -i \
 		-e "/DESTINATION/s:games:${GAMES_BINDIR}:" \
 		CMakeLists.txt || die
