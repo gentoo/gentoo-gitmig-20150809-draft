@@ -1,26 +1,26 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.8.0.ebuild,v 1.1 2010/02/21 00:34:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.8.0-r2.ebuild,v 1.1 2010/03/19 09:16:22 caster Exp $
 
-EAPI="2"
+EAPI="3"
 
 # don't depend on itself
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
 # rewriting build.xml files for the testcases has no reason atm
 JAVA_PKG_BSFIX_ALL=no
 JAVA_PKG_IUSE="doc source"
-inherit java-pkg-2 java-ant-2
+inherit eutils java-pkg-2 java-ant-2 prefix
 
 MY_P="apache-ant-${PV}"
 
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
 HOMEPAGE="http://ant.apache.org/"
 SRC_URI="mirror://apache/ant/source/${MY_P}-src.tar.bz2
-	mirror://gentoo/ant-${PV}-gentoo.tar.bz2"
+	mirror://gentoo/ant-${PV}-gentoo-r2.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
@@ -33,6 +33,9 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# remove bundled xerces
 	rm -v lib/*.jar || die
+
+	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches/"
+	eprefixify "${WORKDIR}/ant"
 
 	# use our split-ant build.xml
 	mv -f "${WORKDIR}/build.xml" . || die
@@ -78,7 +81,7 @@ src_install() {
 	doins -r dist/etc
 	dosym /usr/share/${PN}/etc /usr/share/ant/etc
 
-	echo "ANT_HOME=\"/usr/share/ant\"" > "${T}/20ant"
+	echo "ANT_HOME=\"${EPREFIX}/usr/share/ant\"" > "${T}/20ant"
 	doenvd "${T}/20ant" || die "failed to install env.d file"
 
 	dodoc NOTICE README WHATSNEW KEYS || die

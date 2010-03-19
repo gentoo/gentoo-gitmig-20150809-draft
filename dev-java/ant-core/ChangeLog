@@ -1,10 +1,17 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.102 2010/02/28 14:35:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.103 2010/03/19 09:16:22 caster Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
+
+*ant-core-1.8.0-r2 (19 Mar 2010)
+
+  19 Mar 2010; Vlastimil Babka <caster@gentoo.org> -ant-core-1.8.0.ebuild,
+  +ant-core-1.8.0-r2.ebuild:
+  Add upstream svn patches to fix ant -diagnostics without xerces/xalan and
+  workaround for sigbus with gcj. Upstream bugs #48782 and #48894.
 
 *ant-core-1.8.0-r1 (28 Feb 2010)
 *ant-core-1.7.1-r5 (28 Feb 2010)
