@@ -1,6 +1,18 @@
 # ChangeLog for mail-client/mail-notification
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.89 2009/09/20 13:53:45 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.90 2010/03/19 11:13:54 pacho Exp $
+
+*mail-notification-5.4-r2 (19 Mar 2010)
+
+  19 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  +mail-notification-5.4-r2.ebuild,
+  +files/mail-notification-5.4-e-d-s.patch,
+  +files/mail-notification-5.4-evolution-gtkhtml.patch,
+  +files/mail-notification-5.4-gmime.patch,
+  +files/mail-notification-5.4-sasl_encode64.patch:
+  Sync with Fedora to fix bug 293374, fix building against different and
+  upcoming eds versions in a better way, use new cyrus-sasl ABI and build
+  against latest gmime.
 
   20 Sep 2009; Hans de Graaff <graaff@gentoo.org>
   mail-notification-5.4-r1.ebuild:
