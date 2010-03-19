@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.5_p0.ebuild,v 1.3 2009/05/08 22:30:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.6_p0.ebuild,v 1.1 2010/03/19 12:37:24 pacho Exp $
 
 EAPI=2
 inherit eutils
@@ -30,6 +30,7 @@ S=${WORKDIR}/${P/_}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3_p2-desktop-entry.patch
 	sed -i -e "s:-O3:${CFLAGS}:" configure || die "sed failed"
+	echo "dvd95.glade" >> po/POTFILES.in || die "translation fix failed"
 }
 
 src_configure() {
