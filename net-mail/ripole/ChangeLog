@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripole
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.8 2010/03/19 17:01:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.9 2010/03/19 17:01:48 jer Exp $
+
+  19 Mar 2010; Jeroen Roovers <jer@gentoo.org> ripole-0.2.0.ebuild:
+  Do not install LICENSE.
 
   19 Mar 2010; Jeroen Roovers <jer@gentoo.org> ripole-0.2.0.ebuild:
   Stable for HPPA too.
