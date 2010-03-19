@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.76 2010/03/10 05:31:02 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.77 2010/03/19 09:53:44 pacho Exp $
+
+  19 Mar 2010; Pacho Ramos <pacho@gentoo.org> gst-python-0.10.17.ebuild:
+  amd64 stable, bug 308379
 
   10 Mar 2010; Mart Raudsepp <leio@gentoo.org> gst-python-0.10.17.ebuild:
   Fix tests, bug 285711
