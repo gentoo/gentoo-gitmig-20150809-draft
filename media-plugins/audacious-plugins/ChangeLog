@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.167 2010/03/01 19:57:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.168 2010/03/19 14:36:43 chainsaw Exp $
+
+*audacious-plugins-2.3_beta2 (19 Mar 2010)
+
+  19 Mar 2010; <chainsaw@gentoo.org> +audacious-plugins-2.3_beta2.ebuild:
+  New beta release that enables the ALSA hang-up workaround by default.
+  Also, this release should handle corrupted MP3 files more gracefully.
 
   01 Mar 2010; <chainsaw@gentoo.org> -files/2.1-libmpcdecsv7.patch,
   -audacious-plugins-2.1-r1.ebuild, -audacious-plugins-2.3_alpha1.ebuild,
