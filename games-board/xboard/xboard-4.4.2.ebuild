@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.2.ebuild,v 1.2 2010/01/11 17:34:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.2.ebuild,v 1.3 2010/03/19 02:28:41 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/xboard/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="Xaw3d zippy"
+IUSE="Xaw3d +default-font zippy"
 RESTRICT="test" #124112
 
 RDEPEND="Xaw3d? ( x11-libs/Xaw3d )
@@ -25,9 +25,14 @@ RDEPEND="Xaw3d? ( x11-libs/Xaw3d )
 	x11-libs/libXt
 	x11-libs/libXmu
 	x11-libs/libXext
-	x11-libs/libICE"
+	x11-libs/libICE
+	default-font? ( media-fonts/font-adobe-100dpi )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}*
@@ -56,4 +61,7 @@ pkg_postinst() {
 	elog "No chess engines are emerged by default! If you want a chess engine"
 	elog "to play with, you can emerge gnuchess or crafty."
 	elog "Read xboard FAQ for information."
+	if ! use default-font ; then
+		ewarn "Read the xboard(6) man page for specifying the font for xboard to use."
+	fi
 }
