@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.63 2010/03/18 16:55:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.64 2010/03/19 19:53:34 armin76 Exp $
+
+  19 Mar 2010; Raúl Porcel <armin76@gentoo.org> xawtv-3.95-r2.ebuild:
+  alpha/ia64 stable wrt #307891
 
   18 Mar 2010; Markos Chandras <hwoarang@gentoo.org> xawtv-3.95-r2.ebuild:
   Stable on amd64 wrt bug #307891
