@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.127 2010/01/05 18:18:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.128 2010/03/19 03:19:34 leio Exp $
+
+*gst-plugins-theora-0.10.28 (19 Mar 2010)
+
+  19 Mar 2010; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-theora-0.10.23.ebuild, +gst-plugins-theora-0.10.28.ebuild:
+  Version bump. Ported to new libtheora-1.0 API; libtheora-1.1 extra encoder
+  controls support (vp3-compatible, drop-frames, cap-overflow, cap-underflow
+  and rate-buffer properties); better default encoder quality; bug fixes
 
   05 Jan 2010; nixnut <nixnut@gentoo.org> gst-plugins-theora-0.10.24.ebuild:
   ppc stable #290343
