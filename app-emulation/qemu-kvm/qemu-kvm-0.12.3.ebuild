@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.3.ebuild,v 1.2 2010/03/10 18:17:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.3.ebuild,v 1.3 2010/03/19 17:09:07 tommy Exp $
 
 EAPI="2"
 
@@ -84,10 +84,7 @@ pkg_setup() {
 	for check in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${check}" && counter="1"
 	done
-	for check in ${IUSE_USER_TARGETS} ; do
-		use "qemu_user_targets_${check}" && counter="1"
-	done
-	[[ ${counter} == 0 ]] && eerror "You did not set any targets, this is NOT SUPPORTED"
+	[[ ${counter} == 0 ]] && die "You need to set at least 1 target in QEMU_SOFTMMU_TARGETS"
 
 	if kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
