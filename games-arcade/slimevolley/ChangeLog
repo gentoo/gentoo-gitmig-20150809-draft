@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/slimevolley
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.1 2010/03/19 17:00:57 ssuominen Exp $
+
+*slimevolley-2.4.1 (19 Mar 2010)
+
+  19 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +slimevolley-2.4.1.ebuild:
+  Initial commit wrt #277520 by Sergei Danilov.
+
