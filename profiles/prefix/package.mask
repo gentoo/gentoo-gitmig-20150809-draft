@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.50 2010/03/17 17:43:31 sping Exp $
+# $Id: package.mask,v 1.51 2010/03/19 07:23:50 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -36,6 +36,25 @@
 # Needs some testing on prefixed packages (not all were fixed in gx86)
 >=sys-devel/autoconf-2.64
 
+# Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
+# Very old packages that people should have upgraded away from
+# long ago.  Courtesy mask ... time to upgrade.
+# Added <sys-fs/e2fsprogs as well (halcy0n)
+# prefix: unmask, it's the only thing that compiles for us
+-sys-libs/com_err
+-sys-libs/ss
+-<sys-libs/e2fsprogs-libs-1.41.8
+-<sys-fs/e2fsprogs-1.41.9
+# Fabian Groffen <grobian@gentoo.org> (26 Jul 2009)
+# util-linux doesn't work on non-Linux and doesn't work in Prefix.  This
+# release of e2fsprogs switches from using internal libuuid and libblkid
+# to those provided by util-linux.  In Prefix (but probably for FreeBSD
+# also) we need to probably create virtuals for these, so we can make an
+# e2fsprogs-uuid ebuild or something to provide these libs with on Prefix.
+>=sys-libs/e2fsprogs-libs-1.41.8
+>=sys-fs/e2fsprogs-1.41.8
+>=sys-apps/util-linux-2.16
+
 # Fabian Groffen <grobian@gentoo.org> (27 Dec 2009)
 # Needs some controlled testing before being thrown at all users.
 # (Prefix modifications may not work properly)
@@ -53,16 +72,6 @@
 dev-lang/python:3.0
 dev-lang/python:3.1
 =dev-python/beautifulsoup-3.1.0.1-r1
-
-# Fabian Groffen <grobian@gentoo.org> (26 Jul 2009)
-# util-linux doesn't work on non-Linux and doesn't work in Prefix.  This
-# release of e2fsprogs switches from using internal libuuid and libblkid
-# to those provided by util-linux.  In Prefix (but probably for FreeBSD
-# also) we need to probably create virtuals for these, so we can make an
-# e2fsprogs-uuid ebuild or something to provide these libs with on Prefix.
->=sys-libs/e2fsprogs-libs-1.41.8
->=sys-fs/e2fsprogs-1.41.8
->=sys-apps/util-linux-2.16
 
 # Jeremy Olexa <darkside@gentoo.org> (30 Jun 2009)
 # The PAM auth system just will not work in Gentoo Prefix, instead the host auth
@@ -147,10 +156,6 @@ net-fs/openafs
 # Fabian Groffen <grobian@gentoo.org> (03 Nov 2008)
 # needs cups or lprng which we both don't have
 >=net-print/xfprint-4.4.3
-
-# Fabian Groffen <grobian@gentoo.org> (06 Jul 2008)
-# Needs to have bug #230981 sorted out (e2fsprogs dependency)
-~x11-libs/libSM-1.1.0
 
 # Jeremy Olexa <darkside@gentoo.org> (16 May 2008)
 # distcc-config --install is rather 'interesting' in prefix and I am not 

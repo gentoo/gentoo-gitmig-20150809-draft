@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.158 2010/03/14 21:23:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.159 2010/03/19 07:23:50 grobian Exp $
+
+  19 Mar 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Revert e2fsprogs mask for the time being, since it's the only compiling
+  version for us.
 
   14 Mar 2010; Fabian Groffen <grobian@gentoo.org> package.use.mask:
   drop use-masks for darcs:doc and subversion:nowebdav, we do have texlive
