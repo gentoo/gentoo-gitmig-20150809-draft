@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.331 2010/03/14 16:47:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.332 2010/03/19 18:33:37 grobian Exp $
+
+  19 Mar 2010; Fabian Groffen <grobian@gentoo.org> sqlite-3.6.23.ebuild:
+  Fix compilation on older Mac OS X systems by disabling new locking methods
+  that require features from Snow Leopard (10.6)
 
   14 Mar 2010; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.21.ebuild,
   sqlite-3.6.22-r2.ebuild:
