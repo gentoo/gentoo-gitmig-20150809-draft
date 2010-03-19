@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.77 2010/03/01 21:15:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.78 2010/03/19 12:59:26 nirbheek Exp $
+
+*gparted-0.5.2 (19 Mar 2010)
+
+  19 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org> +gparted-0.5.2.ebuild:
+  Bump to 0.5.2, require parted-2.2 since that's the preferred codepath now
 
   01 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> gparted-0.5.1.ebuild:
   Raise gtkmm dependency to 2.16, bug #306815.
