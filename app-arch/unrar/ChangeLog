@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.133 2010/03/12 17:01:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.134 2010/03/19 02:27:22 vapier Exp $
+
+*unrar-3.9.10 (19 Mar 2010)
+
+  19 Mar 2010; Mike Frysinger <vapier@gentoo.org> +unrar-3.9.10.ebuild:
+  Version bump #309865 by Samuli Suominen.
 
   12 Mar 2010; Markos Chandras <hwoarang@gentoo.org> unrar-3.9.7.ebuild:
   Stable on amd64 wrt bug #308127
