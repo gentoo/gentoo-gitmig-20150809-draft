@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.67 2010/03/17 09:30:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.68 2010/03/19 10:03:13 phajdan.jr Exp $
+
+*chromium-5.0.356.0 (19 Mar 2010)
+
+  19 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-5.0.307.9.ebuild, -chromium-5.0.342.1.ebuild,
+  -chromium-5.0.342.3.ebuild, +chromium-5.0.356.0.ebuild:
+  Version bump for dev channel release. Remove old.
 
 *chromium-5.0.342.5 (17 Mar 2010)
 
