@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.6 2010/03/18 13:04:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.7 2010/03/19 13:49:46 flameeyes Exp $
+
+*drizzle-2010.03.1347 (19 Mar 2010)
+
+  19 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -drizzle-2010.01.1273.ebuild, -drizzle-2010.03.1317.ebuild,
+  +drizzle-2010.03.1347.ebuild:
+  Version bump, remove old versions, fix the curl dependencies (bug
+  #310141).
 
   18 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   drizzle-2010.03.1317.ebuild:
