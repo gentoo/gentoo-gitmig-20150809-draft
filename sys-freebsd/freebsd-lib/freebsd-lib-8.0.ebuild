@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.1 2010/03/19 11:50:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.2 2010/03/19 22:24:37 mr_bones_ Exp $
 
 EAPI=2
 
@@ -347,7 +347,7 @@ src_install() {
 	rm -f "${D}/usr/${mylibdir}/libc.so"
 	cat > "${D}/usr/${mylibdir}/libc.so" <<-END_LDSCRIPT
 /* GNU ld script
-   SSP (-fstack-protector) requires __stack_chk_fail_local to be local. 
+   SSP (-fstack-protector) requires __stack_chk_fail_local to be local.
    GCC invokes this symbol in a non-PIC way, which results in TEXTRELs if
    this symbol was provided by a shared libc. So we link in
    libssp_nonshared.a from here.
