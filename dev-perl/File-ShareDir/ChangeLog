@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-ShareDir
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-ShareDir/ChangeLog,v 1.5 2010/03/19 06:56:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-ShareDir/ChangeLog,v 1.6 2010/03/19 22:15:34 tove Exp $
+
+  19 Mar 2010; Torsten Veller <tove@gentoo.org> File-ShareDir-1.02.ebuild:
+  Install the sample and testfiles to make tests happy
 
 *File-ShareDir-1.02 (19 Mar 2010)
 
