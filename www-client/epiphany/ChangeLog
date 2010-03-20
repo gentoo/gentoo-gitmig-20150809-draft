@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.232 2010/03/16 19:01:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.233 2010/03/20 13:58:35 pacho Exp $
+
+  20 Mar 2010; Pacho Ramos <pacho@gentoo.org> epiphany-2.26.3-r4.ebuild:
+  Bump RDEPEND to xulrunner-1.9.2 since it no longer builds against 1.9.1
 
   16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   epiphany-2.26.3-r3.ebuild:

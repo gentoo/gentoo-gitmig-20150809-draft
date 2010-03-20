@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r4.ebuild,v 1.1 2010/03/12 11:03:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r4.ebuild,v 1.2 2010/03/20 13:58:36 pacho Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.18.0
 	>=app-text/iso-codes-0.35
 	avahi? ( >=net-dns/avahi-0.6.22 )
 	networkmanager? ( net-misc/networkmanager )
-	=net-libs/xulrunner-1.9*
+	=net-libs/xulrunner-1.9.2*
 	python? (
 		>=dev-lang/python-2.3
 		>=dev-python/pygtk-2.7.1
