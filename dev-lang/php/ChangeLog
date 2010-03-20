@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.369 2010/03/13 18:23:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.370 2010/03/20 14:33:03 keytoaster Exp $
+
+*php-5.2.13 (20 Mar 2010)
+
+  20 Mar 2010; Tobias Heinlein <keytoaster@gentoo.org> +php-5.2.13.ebuild:
+  Non-maintainer commit; Version bump, security bug #306939, patch by Bernd
+  Lommerzheim
 
   13 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> php-5.2.12.ebuild,
   +files/php-5.2.12-libpng14.patch:
