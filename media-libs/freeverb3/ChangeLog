@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/freeverb3
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.6 2009/11/25 09:47:44 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.7 2010/03/20 12:33:24 sping Exp $
+
+*freeverb3-2.5.0 (20 Mar 2010)
+
+  20 Mar 2010; Sebastian Pipping <sping@gentoo.org> +freeverb3-2.5.0.ebuild,
+  +files/freeverb3-2.5.0-pow-ambiguity.patch:
+  Bump to 2.5.0
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> freeverb3-2.3.1.ebuild:
   amd64 stable, bug #283896
