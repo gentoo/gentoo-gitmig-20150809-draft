@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.1 2010/03/19 00:25:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.2 2010/03/20 17:48:09 grobian Exp $
 
-EAPI=3
+EAPI="3"
 
 inherit autotools eutils flag-o-matic multilib
 
@@ -79,6 +79,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-2.3.2-darwin.patch"
 	epatch "${FILESDIR}/${PN}-2.3.2-sanitise-paths.patch"
 	epatch "${FILESDIR}/${PN}-2.3.2-libpng14.patch"
 	[[ ${CHOST} == *-solaris2.11 ]] \
@@ -123,11 +124,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 MWMRCDIR=/etc/X11/mwm || die "emake failed"
+	emake -j1 MWMRCDIR="${EPREFIX}"/etc/X11/mwm || die "emake failed"
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" MWMRCDIR=/etc/X11/mwm install \
+	emake -j1 DESTDIR="${D}" MWMRCDIR="${EPREFIX}"/etc/X11/mwm install \
 		|| die "emake install failed"
 
 	# mwm default configs

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.230 2010/03/19 00:25:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.231 2010/03/20 17:48:09 grobian Exp $
+
+  20 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  +files/openmotif-2.3.2-darwin.patch, openmotif-2.3.3.ebuild:
+  Add patch to fix compilation on Mac OS X using patch grabbed from upstream
+  bugtracker
 
 *openmotif-2.3.3 (18 Mar 2010)
 
