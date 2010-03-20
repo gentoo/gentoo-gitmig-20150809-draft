@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.41 2010/03/20 16:07:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.42 2010/03/20 19:34:55 grobian Exp $
+
+  20 Mar 2010; Fabian Groffen <grobian@gentoo.org> dos2unix-5.0.ebuild:
+  Fix USE=nls for platforms that do not have libintl in libc, fix for Prefix
 
 *dos2unix-5.0 (20 Mar 2010)
 
