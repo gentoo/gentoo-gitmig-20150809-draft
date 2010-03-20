@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.48 2010/03/20 13:21:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.49 2010/03/20 13:23:12 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  commons-dbcp-1.2.2-r1.ebuild:
+  Fix HOMEPAGE for bug #202445.
 
   20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
   -commons-dbcp-1.2.2.ebuild:

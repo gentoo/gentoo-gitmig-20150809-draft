@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.2-r1.ebuild,v 1.4 2010/02/09 14:51:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.2.2-r1.ebuild,v 1.5 2010/03/20 13:23:12 betelgeuse Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -9,7 +9,7 @@ JAVA_PKG_WANT_BOOTCLASSPATH="1.5"
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Jakarta component providing database connection pooling API"
-HOMEPAGE="http://jakarta.apache.org/commons/dbcp/"
+HOMEPAGE="http://commons.apache.org/dbcp/"
 SRC_URI="mirror://apache/jakarta/commons/dbcp/source/${P}-src.tar.gz"
 COMMON_DEP=">=dev-java/commons-pool-1.3"
 RDEPEND=">=virtual/jre-1.5
