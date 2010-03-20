@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-digester
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.56 2009/03/18 15:02:27 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.57 2010/03/20 10:30:18 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-digester-1.8.ebuild:
+  Remove old version.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org>
   commons-digester-1.8.1.ebuild:
