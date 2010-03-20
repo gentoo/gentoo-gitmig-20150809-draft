@@ -1,0 +1,11 @@
+--- setup.py.old	2010-03-20 17:38:16.061877304 +0100
++++ setup.py	2010-03-20 17:40:27.328531289 +0100
+@@ -370,7 +370,7 @@
+ 
+             if hp_plugin:
+                 if prop.gui_build:
+-                    os.system("hp-plugin -i")
++                    os.system("hp-plugin --required")
+                 else:
+                     os.system("hp-plugin")
+ 
