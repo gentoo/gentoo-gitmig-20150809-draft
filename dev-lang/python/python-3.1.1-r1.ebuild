@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.29 2010/03/04 17:55:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.30 2010/03/20 20:33:28 arfrever Exp $
 
 EAPI="2"
 
@@ -108,6 +108,10 @@ src_configure() {
 
 	if [[ -n "${PYTHON_DISABLE_MODULES}" ]]; then
 		einfo "Disabled modules: ${PYTHON_DISABLE_MODULES}"
+	fi
+
+	if [[ "$(gcc-major-version)" -ge 4 ]]; then
+		append-flags -fwrapv
 	fi
 
 	export OPT="${CFLAGS}"
@@ -224,7 +228,7 @@ src_install() {
 	sed -e "s:^OPT=.*:OPT=\t\t-DNDEBUG:" -i "${D}$(python_get_libdir)/config/Makefile"
 
 	if use build; then
-		rm -fr "${D}usr/bin/idle${SLOT}" "${D}$(python_get_libdir)/"{email,idlelib,sqlite3,test,tkinter}
+		rm -fr "${D}usr/bin/idle${SLOT}" "${D}$(python_get_libdir)/"{idlelib,sqlite3,test,tkinter}
 	else
 		use elibc_uclibc && rm -fr "${D}$(python_get_libdir)/test"
 		use sqlite || rm -fr "${D}$(python_get_libdir)/"{sqlite3,test/test_sqlite*}

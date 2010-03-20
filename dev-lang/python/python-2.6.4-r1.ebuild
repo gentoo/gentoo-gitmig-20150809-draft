@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.4-r1.ebuild,v 1.8 2010/03/10 10:09:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.4-r1.ebuild,v 1.9 2010/03/20 20:33:28 arfrever Exp $
 
 EAPI="2"
 
@@ -136,6 +136,10 @@ src_configure() {
 		einfo "Disabled modules: ${PYTHON_DISABLE_MODULES}"
 	fi
 
+	if [[ "$(gcc-major-version)" -ge 4 ]]; then
+		append-flags -fwrapv
+	fi
+
 	export OPT="${CFLAGS}"
 
 	filter-flags -malign-double
@@ -239,7 +243,7 @@ src_install() {
 	sed -e "s:^OPT=.*:OPT=\t\t-DNDEBUG:" -i "${D}$(python_get_libdir)/config/Makefile"
 
 	if use build; then
-		rm -fr "${D}usr/bin/idle${SLOT}" "${D}$(python_get_libdir)/"{bsddb,email,idlelib,lib-tk,sqlite3,test}
+		rm -fr "${D}usr/bin/idle${SLOT}" "${D}$(python_get_libdir)/"{bsddb,idlelib,lib-tk,sqlite3,test}
 	else
 		use elibc_uclibc && rm -fr "${D}$(python_get_libdir)/"{bsddb/test,test}
 		use berkdb || rm -fr "${D}$(python_get_libdir)/"{bsddb,test/test_bsddb*}
