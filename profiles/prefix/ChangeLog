@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.159 2010/03/19 07:23:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.160 2010/03/20 10:02:52 grobian Exp $
+
+  20 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  +bsd/freebsd/package.mask:
+  Add mask for sys-devel/m4-1.4.14 on FreeBSD, bug #310335
 
   19 Mar 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Revert e2fsprogs mask for the time being, since it's the only compiling
