@@ -1,6 +1,11 @@
 # ChangeLog for media-video/pitivi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.20 2009/10/04 20:04:39 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.21 2010/03/20 12:41:32 nirbheek Exp $
+
+*pitivi-0.13.4 (20 Mar 2010)
+
+  20 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org> +pitivi-0.13.4.ebuild:
+  Bump to 0.13.4, enable tests
 
   04 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pitivi-0.11.3.ebuild, pitivi-0.13.1.ebuild, pitivi-0.13.3.ebuild:
