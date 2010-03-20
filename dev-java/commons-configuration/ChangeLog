@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-configuration
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.10 2010/03/11 22:44:30 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.11 2010/03/20 13:06:53 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-configuration-1.4.ebuild:
+  Remove old version.
 
   11 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   commons-configuration-1.4.ebuild:

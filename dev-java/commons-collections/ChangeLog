@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.55 2010/01/03 20:23:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.56 2010/03/20 13:05:16 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-collections-3.2-r1.ebuild:
+  Remove old version.
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-collections-3.2.1.ebuild:
