@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.48 2010/02/15 19:58:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.49 2010/03/20 17:10:05 armin76 Exp $
+
+  20 Mar 2010; Raúl Porcel <armin76@gentoo.org> ladspa-sdk-1.13-r1.ebuild:
+  alpha/sparc stable wrt #304033
 
   15 Feb 2010; Joseph Jezak <josejx@gentoo.org> ladspa-sdk-1.13-r1.ebuild:
   Marked ppc/ppc64 stable for bug #304033.
