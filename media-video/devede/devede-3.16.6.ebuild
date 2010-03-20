@@ -1,22 +1,23 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.6.ebuild,v 1.4 2008/05/29 17:27:21 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.16.6.ebuild,v 1.1 2010/03/20 20:27:25 spatz Exp $
 
-NEED_PYTHON=2.4
+EAPI=2
+PYTHON_DEPEND=2
 
 inherit multilib python
 
-DESCRIPTION="DVD Video Creator"
+DESCRIPTION="Program to create video CDs and DVDs, suitable to be played in home DVD players."
 HOMEPAGE="http://www.rastersoft.com/programas/devede.html"
 SRC_URI="http://www.rastersoft.com/descargas/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="doc psyco"
+KEYWORDS="~amd64 ~x86"
+IUSE="psyco"
 
-RDEPEND=">=x11-libs/gtk+-2.6
-	dev-python/pygtk
+RDEPEND=">=x11-libs/gtk+-2.16
+	>=dev-python/pygtk-2.16
 	>=media-video/mplayer-1.0_rc1
 	media-video/dvdauthor
 	media-video/vcdimager
@@ -24,11 +25,20 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	virtual/cdrtools"
 DEPEND=""
 
+S=${WORKDIR}/${P%*b}
+
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_prepare() {
+	python_convert_shebangs -r 2 .
+}
+
 src_install() {
 	./install.sh prefix="/usr" libdir="/usr/$(get_libdir)" \
-		DESTDIR="${D}" || die "install.sh failed."
-	rm -rf "${D}"/usr/share/doc/devede
-	use doc && dohtml docs/*
+		pkgdocdir="/usr/share/doc/${PF}" DESTDIR="${D}" \
+		|| die "install.sh failed."
 }
 
 pkg_postinst() {

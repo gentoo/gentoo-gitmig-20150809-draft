@@ -1,6 +1,13 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.25 2010/01/07 14:23:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.26 2010/03/20 20:27:25 spatz Exp $
+
+*devede-3.16.6 (20 Mar 2010)
+
+  20 Mar 2010; Dror Levin <spatz@gentoo.org> -devede-3.6.ebuild,
+  -devede-3.11b.ebuild, +devede-3.16.6.ebuild:
+  Version bump, bug 304025. Updated usage of python eclass and also dep on
+  >=pygtk-2.16. Remove old.
 
 *devede-3.15.2 (07 Jan 2010)
 
