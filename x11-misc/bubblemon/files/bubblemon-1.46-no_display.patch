@@ -1,0 +1,24 @@
+http://bugs.gentoo.org/310399
+
+--- bubblemon.c
++++ bubblemon.c
+@@ -44,7 +44,7 @@
+  */
+ #define _GNU_SOURCE
+ 
+-#define VERSION "1.41"
++#define VERSION "1.46"
+ 
+ /* general includes */
+ #include <stdio.h>
+@@ -607,10 +607,7 @@
+ 
+     gdk_window_show(bm.win);
+     XSetWMHints(GDK_WINDOW_XDISPLAY(bm.win), win, &wmhints);
+-#ifdef KDE_DOCKAPP
+-    /* makes the dockapp visible inside KDE wm */
+     gdk_window_show(bm.iconwin);
+-#endif
+ 
+     /* We begin with zero bubbles */
+     bm.n_bubbles = 0;
