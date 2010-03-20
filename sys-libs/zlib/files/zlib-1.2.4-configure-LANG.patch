@@ -1,6 +1,7 @@
-diff -ur zlib-1.2.4.orig/configure zlib-1.2.4/configure
---- zlib-1.2.4.orig/configure	2010-03-12 17:06:14.000000000 +0200
-+++ zlib-1.2.4/configure	2010-03-20 19:25:26.000000000 +0200
+http://bugs.gentoo.org/310225
+
+--- configure
++++ configure
 @@ -43,11 +43,11 @@
        echo '  configure [--zprefix] [--prefix=PREFIX]  [--eprefix=EXPREFIX]'
        echo '    [--static] [--64] [--libdir=LIBDIR] [--includedir=INCLUDEDIR]'
