@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/istack-commons-runtime
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.12 2009/11/18 14:10:08 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.13 2010/03/20 14:06:59 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -istack-commons-runtime-20070122.ebuild,
+  -istack-commons-runtime-20090620.ebuild:
+  Remove old revisions.
 
   18 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   istack-commons-runtime-20070122-r1.ebuild:
