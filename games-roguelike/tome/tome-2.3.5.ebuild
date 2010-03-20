@@ -1,6 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.5.ebuild,v 1.4 2010/01/22 20:15:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.5.ebuild,v 1.5 2010/03/20 20:20:33 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -25,20 +26,18 @@ RDEPEND=">=sys-libs/ncurses-5
 DEPEND="${RDEPEND}
 	x11-misc/makedepend"
 
-S=${WORKDIR}/tome-${MY_PV}-src
+S=${WORKDIR}/tome-${MY_PV}-src/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	cd "src"
+src_prepare() {
 	mv makefile.std makefile
-	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
+	epatch "${FILESDIR}/${PV}-gentoo-paths.patch" \
+		"${FILESDIR}"/${P}-overflow.patch
 	sed -i \
 		-e "s:GENTOO_DIR:${GAMES_STATEDIR}:" files.c init2.c \
 		|| die "sed failed"
 
-	find "${S}" -name .cvsignore -exec rm -f \{\} \;
-	find "${S}/lib/edit" -type f -exec chmod a-x \{\} \;
+	find .. -name .cvsignore -exec rm -f \{\} \;
+	find ../lib/edit -type f -exec chmod a-x \{\} \;
 }
 
 src_compile() {
@@ -80,7 +79,6 @@ src_compile() {
 	fi
 	GENTOO_INCLUDES="${GENTOO_INCLUDES} -Ilua -I."
 	GENTOO_DEFINES="${GENTOO_DEFINES} -DUSE_LUA"
-	cd src
 	make \
 		INCLUDES="${GENTOO_INCLUDES}" \
 		DEFINES="${GENTOO_DEFINES}" \
@@ -99,14 +97,13 @@ src_compile() {
 }
 
 src_install() {
-	cd src
 	make \
 		DESTDIR="${D}" \
 		OWNER="${GAMES_USER}" \
 		BINDIR="${GAMES_BINDIR}" \
 		LIBDIR="${GAMES_DATADIR}/${PN}" install \
 		|| die "make install failed"
-	cd "${S}"
+	cd ..
 	dodoc *.txt
 
 	dodir "${GAMES_STATEDIR}"
