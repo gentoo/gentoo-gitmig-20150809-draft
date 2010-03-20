@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.12.ebuild,v 1.1 2009/07/25 15:51:07 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.15.ebuild,v 1.1 2010/03/20 15:44:20 serkan Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.16.1
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.16
 	>=gnome-base/libglade-2.6.3
 	>=gnome-base/libgnome-2.22.0
 	>=gnome-base/gnome-desktop-2.22.0
@@ -40,6 +40,10 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-docfix.patch
+}
 
 src_configure() {
 	# Handwritten in perl so not using econf
