@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/q7z-0.8.0.ebuild,v 1.1 2009/06/06 23:28:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/q7z-0.8.0.ebuild,v 1.2 2010/03/20 19:03:20 spatz Exp $
 
 EAPI="2"
-NEED_PYTHON="2.5"
+PYTHON_DEPEND="2"
 inherit eutils python
 
 MY_PN="Q7Z"
@@ -25,6 +25,10 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}/Build"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	cd ..
 
@@ -40,13 +44,13 @@ src_prepare() {
 	sed -i "s/${MY_PN}/${PN}/" "Desktop/Menu/${PN}.desktop" \
 		|| die "sed failed"
 
+	python_convert_shebangs -r 2 .
+
 	cd Source
 	mv "${MY_PN}.pyw" "${PN}.pyw"
 }
 
 src_install() {
-	python_version
-
 	cd ..
 
 	insinto "$(python_get_sitedir)/${PN}"
