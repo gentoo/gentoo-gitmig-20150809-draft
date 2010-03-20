@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-modeler
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.33 2009/03/15 20:38:24 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.34 2010/03/20 13:54:01 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-modeler-2.0.ebuild:
+  Drop old version.
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org>
   commons-modeler-2.0.1.ebuild:
