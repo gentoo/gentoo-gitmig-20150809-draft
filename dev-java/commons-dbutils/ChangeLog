@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-dbutils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/ChangeLog,v 1.5 2008/08/23 18:25:04 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/ChangeLog,v 1.6 2010/03/20 13:36:24 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-dbutils-1.0.ebuild, commons-dbutils-1.1.ebuild:
+  Remove old version and switch PATCHES to array.
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> commons-dbutils-1.1.ebuild:
   add ~amd64, bug #234375

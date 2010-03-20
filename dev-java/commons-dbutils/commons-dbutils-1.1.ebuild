@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/commons-dbutils-1.1.ebuild,v 1.3 2008/08/23 18:25:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/commons-dbutils-1.1.ebuild,v 1.4 2010/03/20 13:36:24 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -20,7 +20,7 @@ RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${P}-src"
 
-PATCHES="${FILESDIR}/1.1-tests.patch"
+PATCHES=( "${FILESDIR}/1.1-tests.patch" )
 JAVA_ANT_REWRITE_CLASSPATH="yes"
 
 src_install() {
