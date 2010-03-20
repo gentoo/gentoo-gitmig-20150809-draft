@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-betwixt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/ChangeLog,v 1.23 2010/02/09 11:30:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/ChangeLog,v 1.24 2010/03/20 10:53:03 betelgeuse Exp $
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -commons-betwixt-0.7-r1.ebuild, -commons-betwixt-0.7-r2.ebuild:
+  Remove old version.
 
   09 Feb 2010; Pacho Ramos <pacho@gentoo.org> commons-betwixt-0.8.ebuild:
   amd64 stable, bug 254325
