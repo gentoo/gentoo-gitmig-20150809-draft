@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icu4j
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.34 2010/01/03 20:45:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.35 2010/03/20 13:49:49 pacho Exp $
+
+  20 Mar 2010; Pacho Ramos <pacho@gentoo.org> icu4j-4.0.1.1.ebuild:
+  amd64 stable, bug 310181
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   icu4j-3.8.1-r1.ebuild, icu4j-4.0.1.1.ebuild, icu4j-4.2.ebuild:
