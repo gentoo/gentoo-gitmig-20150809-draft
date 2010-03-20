@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.8.3.ebuild,v 1.2 2010/03/07 12:58:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.8.3.ebuild,v 1.3 2010/03/20 16:20:48 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,8 @@ IUSE=""
 # IUSE="doc"
 
 RDEPEND=">=sys-libs/db-4.6"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-python/setuptools"
 #	doc? ( dev-python/sphinx )
 
 DOCS="TODO.txt"
@@ -57,7 +58,10 @@ src_compile() {
 
 src_test() {
 	tests() {
-		python_set_build_dir_symlink
+		rm -f build
+		ln -s build-${PYTHON_ABI} build
+
+		echo BSDDB_TEST_PATH="${T}/tests-${PYTHON_ABI}" "$(PYTHON)" test.py
 		BSDDB_TEST_PATH="${T}/tests-${PYTHON_ABI}" "$(PYTHON)" test.py
 	}
 	python_execute_function tests
