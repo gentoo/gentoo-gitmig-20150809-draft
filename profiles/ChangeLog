@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4046 2010/03/20 18:01:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4047 2010/03/20 19:40:26 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> package.mask:
+  unmask >=sci-libs/clapack-3.2.1.-r1
 
   20 Mar 2010; <vostorga@gentoo.org> package.mask:
   Removing entries for app-misc/welcome2l net-misc/noarp
