@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/charva
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.15 2007/06/17 13:34:22 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.16 2010/03/20 16:46:52 betelgeuse Exp $
+
+*charva-1.1.4 (20 Mar 2010)
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org> +charva-1.1.4.ebuild:
+  Version bump. Fixes bug #283124.
 
   17 Jun 2007; Vlastimil Babka <caster@gentoo.org> -charva-1.0.1.ebuild:
   Remove gen-1 revision.
