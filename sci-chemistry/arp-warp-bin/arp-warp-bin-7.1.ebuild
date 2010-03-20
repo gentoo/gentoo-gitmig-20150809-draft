@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.0.1-r2.ebuild,v 1.1 2010/02/25 08:06:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.1 2010/03/20 18:07:35 jlec Exp $
 
-inherit eutils python
+EAPI="3"
+
+PYTHON_DEPEND="2"
+
+inherit eutils prefix python
 
 MY_P="arp_warp_${PV}"
 
@@ -16,10 +20,13 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-shells/tcsh
-	 >=sci-chemistry/ccp4-6.1.3
-	 sys-apps/gawk
-	 >=dev-lang/python-2.4"
+RDEPEND="
+	app-shells/tcsh
+	>=sci-chemistry/ccp4-6.1.3
+	sys-apps/gawk
+	virtual/jre
+	virtual/opengl
+	x11-libs/libX11"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
@@ -29,41 +36,37 @@ pkg_nofetch(){
 	elog "and place ${A} in ${DISTDIR}"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PV}-setup.patch
-	epatch "${FILESDIR}"/${PV}-source-ccp4-if-needed.patch
+	eprefixify "${S}"/share/arpwarp_setup_base.*
 }
 
 src_install(){
-	python_version
+	PYVER=$(python_get_version)
 	m_type=$(uname -m)
 	os_type=$(uname)
 
 	insinto /opt/${PN}/byte-code/python-${PYVER}
-	doins "${S}"/flex-wARP-src-261/*py
+	doins "${S}"/flex-wARP-src-354/*py
 
 	exeinto /opt/${PN}/bin/bin-${m_type}-${os_type}
 	doexe "${S}"/bin/bin-${m_type}-${os_type}/* && \
 	doexe "${S}"/share/*sh || die
 
 	insinto /opt/${PN}/bin/bin-${m_type}-${os_type}
-	doins "${S}"/share/*{gif,XYZ,bash,csh,dat,lib,tbl,llh} || die
+	doins "${S}"/share/*{gif,bmp,XYZ,bash,csh,dat,lib,tbl,llh} || die
 
 	insinto /etc/profile.d/
 	newins "${S}"/share/arpwarp_setup_base.csh 90arpwarp_setup.csh && \
 	newins "${S}"/share/arpwarp_setup_base.bash 90arpwarp_setup.sh || die
 
-	dodoc "${S}"/README
-	dohtml -r "${S}"/manual/*
-	insinto /usr/share/doc/${PF}
-	doins -r "${S}"/{examples,ARP_wARP_CCP4I6.tar.gz}
+	dodoc "${S}"/README manual/UserGuide${PV}.pdf || die
+	dohtml -r "${S}"/manual/html/* || die
 }
 
 pkg_postinst(){
 	python_need_rebuild
-	python_mod_optimize "${ROOT}"/opt/${PN}/byte-code/python-${PYVER}
+	python_mod_optimize "${EROOT}"/opt/${PN}/byte-code/python-${PYVER}
 
 	testcommand=$(echo 3 2 | awk '{printf"%3.1f",$1/$2}')
 	if [ $testcommand == "1,5" ];then
@@ -82,11 +85,8 @@ pkg_postinst(){
 
 	grep -q sse2 /proc/cpuinfo || einfo "The CPU is lacking SSE2! You should use the cluster at EMBL-Hamburg."
 	einfo
-	elog "The ccp4 interface file could be found in /usr/share/doc/"${P}
-	elog "To install, run ccp4i as root, navigate to System Administration,"
-	elog "Install/uninstall tasks, then choose ARP_wARP_CCP4I6.tar.gz."
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"/opt/${PN}/byte-code/python-${PYVER}
+	python_mod_cleanup "${EROOT}"/opt/${PN}/byte-code/python-${PYVER}
 }
