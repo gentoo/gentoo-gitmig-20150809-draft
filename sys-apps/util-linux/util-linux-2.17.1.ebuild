@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.17.1.ebuild,v 1.2 2010/03/09 00:58:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.17.1.ebuild,v 1.3 2010/03/20 04:07:43 vapier Exp $
 
 EAPI="2"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
-inherit eutils toolchain-funcs libtool
+inherit eutils toolchain-funcs libtool flag-o-matic
 [[ ${PV} == "9999" ]] && inherit git autotools
 
 MY_PV=${PV/_/-}
@@ -50,7 +50,21 @@ src_prepare() {
 	elibtoolize
 }
 
+lfs_fallocate_test() {
+	# Make sure we can use fallocate with LFS #300307
+	cat <<-EOF > "${T}"/fallocate.c
+	#define _GNU_SOURCE
+	#include <fcntl.h>
+	main() { return fallocate(0, 0, 0, 0); }
+	EOF
+	append-lfs-flags
+	$(tc-getCC) ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} "${T}"/fallocate.c -o /dev/null >/dev/null 2>&1 \
+		|| export ac_cv_func_fallocate=no
+	rm -f "${T}"/fallocate.c
+}
+
 src_configure() {
+	lfs_fallocate_test
 	econf \
 		$(use_enable nls) \
 		--enable-agetty \
