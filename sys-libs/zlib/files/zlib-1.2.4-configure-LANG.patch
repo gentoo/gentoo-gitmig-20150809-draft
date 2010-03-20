@@ -1,24 +1,20 @@
-http://bugs.gentoo.org/show_bug.cgi?id=310225
-
---- configure
-+++ configure
-@@ -9,6 +9,19 @@
- # or for csh/tcsh users:
- #    (setenv prefix $HOME; setenv CC cc; setenv CFLAGS "-O4"; ./configure)
- 
-+# NLS nuisances.
-+for as_var in \
-+  LANG LANGUAGE LC_ADDRESS LC_ALL LC_COLLATE LC_CTYPE LC_IDENTIFICATION \
-+  LC_MEASUREMENT LC_MESSAGES LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER \
-+  LC_TELEPHONE LC_TIME
-+do
-+  if (set +x; test -z "`(eval $as_var=C; export $as_var) 2>&1`"); then
-+    eval $as_var=C; export $as_var
-+  else
-+    unset $as_var
-+  fi
-+done
-+
- # Incorrect settings of CC or CFLAGS may prevent creating a shared library.
- # If you have problems, try without defining CC and CFLAGS before reporting
- # an error.
+diff -ur zlib-1.2.4.orig/configure zlib-1.2.4/configure
+--- zlib-1.2.4.orig/configure	2010-03-12 17:06:14.000000000 +0200
++++ zlib-1.2.4/configure	2010-03-20 19:25:26.000000000 +0200
+@@ -43,11 +43,11 @@
+       echo '  configure [--zprefix] [--prefix=PREFIX]  [--eprefix=EXPREFIX]'
+       echo '    [--static] [--64] [--libdir=LIBDIR] [--includedir=INCLUDEDIR]'
+         exit 0 ;;
+-    -p*=* | --prefix=*) prefix=`echo $1 | sed 's/[-a-z_]*=//'`; shift ;;
+-    -e*=* | --eprefix=*) exec_prefix=`echo $1 | sed 's/[-a-z_]*=//'`; shift ;;
+-    -l*=* | --libdir=*) libdir=`echo $1 | sed 's/[-a-z_]*=//'`; shift ;;
+-    -i*=* | --includedir=*) includedir=`echo $1 | sed 's/[-a-z_]*=//'`;shift ;;
+-    -u*=* | --uname=*) uname=`echo $1 | sed 's/[-a-z_]*=//'`;shift ;;
++    -p*=* | --prefix=*) prefix=`echo $1 | sed 's/.*=//'`; shift ;;
++    -e*=* | --eprefix=*) exec_prefix=`echo $1 | sed 's/.*=//'`; shift ;;
++    -l*=* | --libdir=*) libdir=`echo $1 | sed 's/.*=//'`; shift ;;
++    -i*=* | --includedir=*) includedir=`echo $1 | sed 's/.*=//'`;shift ;;
++    -u*=* | --uname=*) uname=`echo $1 | sed 's/.*=//'`;shift ;;
+     -p* | --prefix) prefix="$2"; shift; shift ;;
+     -e* | --eprefix) exec_prefix="$2"; shift; shift ;;
+     -l* | --libdir) libdir="$2"; shift; shift ;;
