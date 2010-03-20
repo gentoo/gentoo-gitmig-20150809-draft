@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/atop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.30 2010/03/20 04:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.31 2010/03/20 04:13:41 vapier Exp $
+
+*atop-1.24-r1 (20 Mar 2010)
+
+  20 Mar 2010; Mike Frysinger <vapier@gentoo.org> +atop-1.24-r1.ebuild:
+  Dont install a cron.d file by default.
 
   20 Mar 2010; Mike Frysinger <vapier@gentoo.org> atop-1.23.ebuild:
   Mark x86 stable #309217.
