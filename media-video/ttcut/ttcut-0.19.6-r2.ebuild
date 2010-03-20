@@ -1,14 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r2.ebuild,v 1.2 2010/01/21 14:31:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r2.ebuild,v 1.3 2010/03/20 20:16:49 billie Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 DESCRIPTION="Tool for cutting MPEG files especially for removing commercials"
 HOMEPAGE="http://www.tritime.de/ttcut/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
@@ -25,20 +26,12 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_prepare() {
-	epatch "${FILESDIR}/ttcut-0.19.6-deprecated.patch"
-	epatch "${FILESDIR}/ttcut-0.19.6-transcode-compat.patch"
-}
-
-src_compile() {
-	eqmake4 ttcut.pro -o Makefile.ttcut
-	emake -f Makefile.ttcut || die "emake failed"
-}
+PATCHES=( "${FILESDIR}"/${P}-deprecated.patch
+		"${FILESDIR}"/${P}-transcode-compat.patch )
 
 src_install() {
-	dobin ttcut || die "Couldn't install ttcut"
+	dobin ttcut || die
 	make_desktop_entry ttcut TTCut "" "AudioVideo;Video;AudioVideoEditing"
 
-	dodoc AUTHORS BUGS CHANGELOG \
-		README.DE README.EN TODO || die "Couldn't install documentation"
+	dodoc AUTHORS BUGS CHANGELOG README.* TODO || die
 }

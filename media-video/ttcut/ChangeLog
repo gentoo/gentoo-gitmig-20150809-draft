@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.25 2010/03/16 17:44:10 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.26 2010/03/20 20:16:49 billie Exp $
+
+  20 Mar 2010; Daniel Pielmeier <billie@gentoo.org> ttcut-0.19.6-r2.ebuild:
+  Switch to qt4-r2 eclass.
 
   16 Mar 2010; Daniel Pielmeier <billie@gentoo.org> -ttcut-9999.ebuild:
   Remove useless live ebuild.
