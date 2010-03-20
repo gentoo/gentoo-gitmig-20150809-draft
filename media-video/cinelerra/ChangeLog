@@ -1,6 +1,13 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.39 2010/01/30 14:37:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.40 2010/03/20 15:00:49 ssuominen Exp $
+
+*cinelerra-20100320 (20 Mar 2010)
+
+  20 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +cinelerra-20100320.ebuild, +files/cinelerra-20100320-libpng14.patch,
+  +files/cinelerra-20100320-pkgconfig-x264.patch:
+  Snapshot from cinelerra-cv git with libpng14 patch from Arch Linux.
 
 *cinelerra-20090210-r1 (30 Jan 2010)
 
