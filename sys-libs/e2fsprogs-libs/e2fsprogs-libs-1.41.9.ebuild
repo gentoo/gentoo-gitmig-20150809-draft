@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.9.ebuild,v 1.11 2009/12/07 11:10:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.9.ebuild,v 1.12 2010/03/20 20:56:13 vapier Exp $
 
 EAPI="2"
 
@@ -23,9 +23,8 @@ DEPEND="nls? ( sys-devel/gettext )
 	dev-util/pkgconfig
 	sys-devel/bc"
 
-export VARTEXFONTS=${T}/fonts #281390
-
 src_prepare() {
+	echo 'all %:' > doc/Makefile.in # don't bother with docs #305613
 	# stupid configure script clobbers CC for us
 	sed -i '/if test -z "$CC" ; then CC=cc; fi/d' configure
 }
