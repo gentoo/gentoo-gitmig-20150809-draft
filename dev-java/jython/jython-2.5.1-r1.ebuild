@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.1-r1.ebuild,v 1.1 2010/03/19 09:59:29 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.1-r1.ebuild,v 1.2 2010/03/20 13:17:20 arfrever Exp $
 
 JAVA_PKG_IUSE="source doc examples oracle"
 #informix missing.  This is a jdbc driver, similar to oracle use flag
@@ -49,6 +49,8 @@ DEPEND=">=virtual/jdk-1.5
 
 java_prepare() {
 	epatch "${FILESDIR}/${P}-build.patch"
+	epatch "${FILESDIR}/${P}-distutils_scripts_location.patch"
+	epatch "${FILESDIR}/${P}-respect_PYTHONPATH.patch"
 
 	rm -Rfv org || die "Unable to remove class files."
 	find extlibs -iname '*.jar' | xargs rm -fv || die "Unable to remove bundled jars"
@@ -117,14 +119,13 @@ src_install() {
 	java-pkg_newjar "${PN}-dev.jar"
 
 	local java_args="-Dpython.home=/usr/share/${PN}-${SLOT}"
-	java_args="${java_args}	-Dpython.cachedir=\${JYTHON_CACHEDIR-\${HOME}/.jythoncachedir}"
+	java_args="${java_args} -Dpython.cachedir=\${JYTHON_CACHEDIR-\${HOME}/.jythoncachedir}"
 	java_args="${java_args} -Dpython.executable=${ROOT}/usr/bin/jython-${SLOT}"
 
 	java-pkg_dolauncher jython-${SLOT} \
 						--main "org.python.util.jython" \
 						--pkg_args "${java_args}"
-	sed -i -e 's_#!/bin/bash_#!/bin/bash\nunset EPYTHON_g' \
-		"${D}/usr/binjython-2.5"
+	sed -e "1a unset EPYTHON" -i "${D}usr/bin/${PN}-${SLOT}" || die "sed failed"
 
 	java-pkg_register-optional-dependency jdbc-mysql
 	java-pkg_register-optional-dependency jdbc-postgresql
@@ -142,16 +143,14 @@ pkg_postinst() {
 	einfo "Version of jython > 2.2* no longer has jythonc. Please see"
 	einfo "http://www.jython.org/Project/jythonc.html for details"
 
-	if use readline; then
-		elog
-		elog "To use readline you need to add the following to your registry"
-		elog
-		elog "python.console=org.python.util.ReadlineConsole"
-		elog "python.console.readlinelib=GnuReadline"
-		elog
-		elog "The global registry can be found in /usr/share/${PN}/registry"
-		elog "User registry in \$HOME/.jython"
-		elog "See http://www.jython.org/docs/registry.html for more information"
-		elog ""
-	fi
+	elog
+	elog "To use readline you need to add the following to your registry"
+	elog
+	elog "python.console=org.python.util.ReadlineConsole"
+	elog "python.console.readlinelib=GnuReadline"
+	elog
+	elog "The global registry can be found in /usr/share/${PN}/registry"
+	elog "User registry in \$HOME/.jython"
+	elog "See http://www.jython.org/docs/registry.html for more information"
+	elog
 }
