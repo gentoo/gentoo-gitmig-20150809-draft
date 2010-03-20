@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r3.ebuild,v 1.3 2008/11/16 13:51:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r3.ebuild,v 1.4 2010/03/20 10:39:16 betelgeuse Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ inherit java-pkg-2 java-ant-2 eutils
 
 MY_P="${P}-src"
 DESCRIPTION="A Java and XML based scripting and processing engine"
-HOMEPAGE="http://jakarta.apache.org/commons/jelly/"
+HOMEPAGE="http://commons.apache.org/jelly/"
 SRC_URI="mirror://apache/jakarta/commons/jelly/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
