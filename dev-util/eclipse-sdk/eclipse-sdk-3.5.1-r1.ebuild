@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.5.1-r1.ebuild,v 1.1 2010/03/05 17:22:59 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.5.1-r1.ebuild,v 1.2 2010/03/20 13:51:51 pacho Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps"
@@ -23,7 +23,7 @@ SRC_URI="http://download.eclipse.org/technology/linuxtools/eclipse-build/eclipse
 
 LICENSE="EPL-1.0"
 SLOT="3.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc gnome source"
 
 CDEPEND=">=dev-java/swt-${PV}:${SLOT}

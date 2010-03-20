@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.154 2010/03/05 17:38:27 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.155 2010/03/20 13:51:51 pacho Exp $
+
+  20 Mar 2010; Pacho Ramos <pacho@gentoo.org> eclipse-sdk-3.5.1-r1.ebuild:
+  amd64 stable, bug 310181
 
   05 Mar 2010; Alistair Bush <ali_bush@gentoo.org>
   files/3.5/gtk_makefile.patch:
