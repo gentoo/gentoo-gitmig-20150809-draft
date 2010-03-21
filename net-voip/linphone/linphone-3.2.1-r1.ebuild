@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.2.1-r1.ebuild,v 1.1 2010/03/18 06:04:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.2.1-r1.ebuild,v 1.2 2010/03/21 12:16:20 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils autotools multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
 IUSE="doc gtk ipv6 ncurses nls video"
 
 RDEPEND=">=media-libs/mediastreamer-2.3.0[video?]
@@ -81,7 +81,7 @@ src_configure() {
 	# rsvp: breaking the build (not maintained anymore) --disable = --enable
 	# alsa, artsc and portaudio are used for bundled mediastreamer
 	econf \
-		--libdir=/usr/$(get_libdir) \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--disable-strict \
 		--enable-external-ortp \
 		--enable-external-mediastreamer \
