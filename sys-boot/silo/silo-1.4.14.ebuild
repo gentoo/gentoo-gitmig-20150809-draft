@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14.ebuild,v 1.2 2008/10/15 22:10:36 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14.ebuild,v 1.3 2010/03/21 18:01:45 armin76 Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -37,6 +37,10 @@ src_unpack() {
 
 	# don't strip binaries, let portage handle it!
 	epatch "${FILESDIR}"/qa-no-strip.patch
+
+	# Fix build failure
+	sed -i -e "s/-fno-strict-aliasing/-fno-strict-aliasing -U_FORTIFY_SOURCE/g" Rules.make
+
 }
 
 src_compile() {
