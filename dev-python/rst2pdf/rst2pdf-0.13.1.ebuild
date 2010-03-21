@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.12.3.ebuild,v 1.2 2010/03/21 15:49:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.13.1.ebuild,v 1.1 2010/03/21 15:49:10 yngwin Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ IUSE="test"
 RDEPEND="dev-python/docutils
 	dev-python/imaging
 	dev-python/pygments
-	=dev-python/reportlab-2.3*"
+	>=dev-python/reportlab-2.4"
 DEPEND="${RDEPEND}
 	test? ( dev-python/pyPdf )"
 RESTRICT_PYTHON_ABIS="3.*"
