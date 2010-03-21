@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-GDOME
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.25 2009/10/10 13:24:24 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.26 2010/03/21 14:08:46 tove Exp $
+
+  21 Mar 2010; Torsten Veller <tove@gentoo.org> +files/0.86-includes.patch,
+  XML-GDOME-0.86.ebuild:
+  Include missing headers (#309281). Thanks to David Leverton
 
   10 Oct 2009; Torsten Veller <tove@gentoo.org> XML-GDOME-0.86.ebuild:
   XML-LibXML-Common was merged in XML-LibXML-1.70
