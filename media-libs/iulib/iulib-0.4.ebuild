@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.4.ebuild,v 1.4 2010/03/21 05:03:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/iulib-0.4.ebuild,v 1.5 2010/03/21 05:06:38 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="sdl"
 
-DEPEND="sys-libs/zlib
-	dev-util/scons
+RDEPEND="sys-libs/zlib
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
@@ -22,6 +21,8 @@ DEPEND="sys-libs/zlib
 		media-libs/libsdl
 		media-libs/sdl-gfx
 	)"
+DEPEND="${RDEPEND}
+	dev-util/scons"
 
 src_unpack() {
 	unpack ${A}
