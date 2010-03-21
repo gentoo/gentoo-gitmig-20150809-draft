@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/oidentd
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.46 2009/02/21 10:32:37 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.47 2010/03/21 17:42:28 angelos Exp $
+
+*oidentd-2.0.8-r3 (21 Mar 2010)
+
+  21 Mar 2010; <angelos@gentoo.org> +oidentd-2.0.8-r3.ebuild,
+  +files/oidentd-2.0.8-bind-to-ipv6-too.patch:
+  Bind to IPv6 as well as IPv4 (bug #308843)
 
   21 Feb 2009; Christoph Mende <angelos@gentoo.org>
   -oidentd-2.0.8-r1.ebuild:
