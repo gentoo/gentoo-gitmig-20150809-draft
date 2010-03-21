@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-ca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.18 2010/02/19 08:59:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ca/ChangeLog,v 1.19 2010/03/21 14:53:12 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-ca-2.1.5.1.ebuild:
+  Marking aspell-ca-2.1.5.1 ppc64 stable for bug 310015
 
 *aspell-ca-2.1.5.1 (19 Feb 2010)
 
