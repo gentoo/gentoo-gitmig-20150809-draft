@@ -66,3 +66,4 @@ slotmove =dev-haskell/quickcheck-1* 0 1
 move x11-misc/googleearth sci-geosciences/googleearth
 move dev-util/git dev-vcs/git
 move dev-util/colorsvn dev-vcs/colorsvn
+move net-misc/anyremote app-mobilephone/anyremote
