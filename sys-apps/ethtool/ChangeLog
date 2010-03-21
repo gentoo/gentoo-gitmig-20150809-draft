@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/ethtool
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.53 2007/12/13 20:10:20 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.54 2010/03/21 17:21:04 vapier Exp $
+
+*ethtool-2.6.33 (21 Mar 2010)
+
+  21 Mar 2010; Mike Frysinger <vapier@gentoo.org> +ethtool-2.6.33.ebuild:
+  Version bump #310173 by Tim Harder.
+
+*ethtool-0.6 (21 Mar 2010)
+
+  21 Mar 2010; Mike Frysinger <vapier@gentoo.org> +ethtool-0.6.ebuild,
+  -ethtool-6.ebuild:
+  Rename older version so that it works with newer ethtool versioning schemes.
 
   13 Dec 2007; Doug Klima <cardoe@gentoo.org> -ethtool-4.ebuild,
   -ethtool-5.ebuild:
