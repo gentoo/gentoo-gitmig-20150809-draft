@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.86 2010/03/20 16:46:43 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.87 2010/03/21 14:52:57 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> star-1.5.1.ebuild:
+  stable ppc64, bug 310013
 
   20 Mar 2010; Tiago Cunha <tcunha@gentoo.org> star-1.5.1.ebuild:
   stable sparc, bug 310013
