@@ -13,6 +13,5 @@ and a GUI.
 </longdescription>
   <use>
     <flag name="vga">Enables the VGA graphics driver</flag>
-	<flag name="tools">Enable extra tools</flag>
   </use>
 </pkgmetadata>
