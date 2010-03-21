@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.110 2010/01/15 22:00:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.111 2010/03/21 15:00:20 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> valgrind-3.5.0.ebuild:
+  stable ppc64, bug 304287
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   valgrind-3.5.0.ebuild:
