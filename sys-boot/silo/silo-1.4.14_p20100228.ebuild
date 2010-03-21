@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.1 2010/03/21 19:21:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.2 2010/03/21 19:23:47 armin76 Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -36,14 +36,13 @@ src_unpack() {
 
 	cd "${S}"
 #	epatch "${WORKDIR}"/${MY_P/_/-}/debian/patches/*.patch
-#	epatch "${FILESDIR}"/sanitized-linuxheaders.patch
 
 	#Set the correct version
 	sed -i -e "s/1.4.14/1.4.14_git2010228_p1/g" Rules.make
 
 	# Fix build failure
 	sed -i -e "s/-fno-strict-aliasing/-fno-strict-aliasing -U_FORTIFY_SOURCE/g" Rules.make
-	
+
 }
 
 src_compile() {
