@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.50_pre6242.ebuild,v 1.1 2010/03/06 15:34:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.51_pre6252.ebuild,v 1.1 2010/03/21 23:22:37 jer Exp $
 
 EAPI="2"
 
@@ -110,22 +110,15 @@ src_unpack() {
 	fi
 }
 
-src_prepare() {
-	sed -i opera \
-		-e 's|=usr/lib/opera|=/usr/lib/opera|g' \
-		-e '6a\OPERA_DIR=/usr/share/opera' \
-		|| die "sed opera script failed"
-	epatch "${FILESDIR}"/${PN}-10.50-paths.patch
-}
-
 src_install() {
 	# This alpha build hardcodes /usr as prefix
-	mv etc/ usr/ "${D}"/ || die "mv etc/ usr/ failed"
+	dodir /usr
+	mv lib/ share/ "${D}"/usr/ || die "mv etc/ usr/ failed"
 
 	make_desktop_entry ${PN} Opera ${PN} # TODO
 
 	# Install startup script
-	dobin ${PN} || die "dobin failed"
+	dobin ${PN}-widget-manager "${FILESDIR}"/opera || die "dobin failed"
 
 	# Stop revdep-rebuild from checking opera binaries
 	dodir /etc/revdep-rebuild
@@ -151,7 +144,7 @@ src_install() {
 pkg_postinst() {
 	elog "To change the UI language, choose [Tools] -> [Preferences], open the"
 	elog "[General] tab, click on [Details...] then [Choose...] and point the"
-	elog "file chooser at ${OPREFIX}/opera/share/opera/locale/, then enter the"
+	elog "file chooser at /usr/share/opera/locale/, then enter the"
 	elog "directory for the language you want and [Open] the .lng file."
 
 	if use elibc_FreeBSD; then
