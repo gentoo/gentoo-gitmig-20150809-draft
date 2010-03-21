@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-lt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.9 2009/03/18 18:19:35 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.10 2010/03/21 14:51:15 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-lt-1.0.1.ebuild:
+  Marking aspell-lt-1.0.1 ppc64 for bug 310015
 
   18 Mar 2009; <baude@gentoo.org> aspell-lt-1.0.1.ebuild:
   Marking aspell-lt-1.0.1 ~ppc for bug 254425
