@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/xf86-video-vmware-11.0.0.ebuild,v 1.1 2010/03/03 09:29:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/xf86-video-vmware-11.0.1.ebuild,v 1.1 2010/03/21 17:07:43 chithanh Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
