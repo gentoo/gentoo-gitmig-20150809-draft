@@ -1,0 +1,45 @@
+# ChangeLog for app-mobilephone/anyremote
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.1 2010/03/21 20:59:38 serkan Exp $
+
+*anyremote-5.1.2 (21 Mar 2010)
+
+  21 Mar 2010; <firari@gentoo.org> +anyremote-5.1.1.ebuild,
+  +anyremote-5.1.2.ebuild, +metadata.xml:
+  Version bump. Remove old. Change herd and category.
+
+*anyremote-5.1.1 (19 Feb 2010)
+
+  19 Feb 2010; Serkan Kaba <serkan@gentoo.org> +anyremote-5.1.1.ebuild,
+  metadata.xml:
+  Version bump. Take over the package.
+
+*anyremote-5.1 (11 Jan 2010)
+
+  11 Jan 2010; Markos Chandras <hwoarang@gentoo.org> +anyremote-5.1.ebuild:
+  version bump. Fixes bug #300478
+
+*anyremote-5.0-r1 (26 Dec 2009)
+
+  26 Dec 2009; Markos Chandras <hwoarang@gentoo.org> -anyremote-5.0.ebuild,
+  +anyremote-5.0-r1.ebuild:
+  Fixed documentation path wrt bug #298317
+
+*anyremote-5.0 (15 Oct 2009)
+
+  15 Oct 2009; Markos Chandras <hwoarang@gentoo.org> +anyremote-5.0.ebuild:
+  Version bump ( fixes bug #289052 )
+
+  26 Jul 2009; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add net-p2p herd on metadata.xml. Fixes bug 279158
+
+  12 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  anyremote-4.18.1.ebuild:
+  List net-wireless/bluez first in ( a b ) dependency w.r.t. bug 269519.
+
+*anyremote-4.18.1 (21 Apr 2009)
+
+  21 Apr 2009; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +anyremote-4.18.1.ebuild:
+  Initial commit of anyremote program. Fixes bug #209686
+
