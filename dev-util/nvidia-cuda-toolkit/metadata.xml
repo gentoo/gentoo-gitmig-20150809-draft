@@ -13,6 +13,9 @@
 		<flag name='debugger'>
 			Installs the CUDA debugger.
 		</flag>
+		<flag name='opencl'>
+			Installs OpenCL utilities.
+		</flag>
 	</use>
 </pkgmetadata>
 
