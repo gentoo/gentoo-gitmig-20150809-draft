@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.104 2010/03/21 20:50:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.105 2010/03/21 22:36:49 caster Exp $
+
+*gnu-classpath-0.97.2-r1 (21 Mar 2010)
+
+  21 Mar 2010; Vlastimil Babka <caster@gentoo.org>
+  +gnu-classpath-0.97.2-r1.ebuild, metadata.xml:
+  Revbump to apply changes from java-overlay: move from /opt to /usr, add
+  missing deps, USE flag descriptions. Also move to ecj-3.5.
 
   21 Mar 2010; Vlastimil Babka <caster@gentoo.org>
   gnu-classpath-0.97-r1.ebuild, gnu-classpath-0.97.2.ebuild,
