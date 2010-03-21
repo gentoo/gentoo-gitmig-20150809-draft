@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.7 2010/03/21 19:33:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.8 2010/03/21 20:41:45 grobian Exp $
+
+  21 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  binutils-apple-3.2-r1.ebuild,
+  +files/ld64-95.2.12-darwin8-no-mlong-branch-warning.patch:
+  Add patch to suppress annoying -mlong-branch warning that we totally can't
+  do anything about
 
 *binutils-apple-3.2-r1 (21 Mar 2010)
 

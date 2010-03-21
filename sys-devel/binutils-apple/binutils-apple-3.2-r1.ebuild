@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2-r1.ebuild,v 1.1 2010/03/21 19:33:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2-r1.ebuild,v 1.2 2010/03/21 20:41:45 grobian Exp $
 
 EAPI="3"
 
@@ -53,7 +53,17 @@ fi
 
 S=${WORKDIR}
 
-prepare_ld64() {
+src_prepare() {
+	cd "${S}"/${CCTOOLS}
+	epatch "${FILESDIR}"/${PN}-3.1.1-as.patch
+	epatch "${FILESDIR}"/${PN}-3.1.1-as-dir.patch
+	epatch "${FILESDIR}"/${PN}-3.1.1-ranlib.patch
+	epatch "${FILESDIR}"/${PN}-3.1.1-libtool-ranlib.patch
+	epatch "${FILESDIR}"/${PN}-3.1.1-nmedit.patch
+	epatch "${FILESDIR}"/${PN}-3.1.1-no-headers.patch
+	epatch "${FILESDIR}"/${PN}-3.1.1-no-oss-dir.patch
+	epatch "${FILESDIR}"/${P}-armv7-defines.patch
+
 	cd "${S}"/${LD64}/src
 	cp "${FILESDIR}"/${LD64}-Makefile Makefile
 
@@ -65,7 +75,14 @@ prepare_ld64() {
 	echo '' > linker_opts
 	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
 
+	epatch "${WORKDIR}"/ld64-unwind/${LD64}-unlibunwind.patch
+	[[ ${CHOST} == powerpc*-darwin* ]] && \
+		epatch "${FILESDIR}"/${LD64}-darwin8-no-mlong-branch-warning.patch
+
 	# clean up test suite
+	cd "${S}"/${LD64}
+	epatch "${FILESDIR}"/${PN}-3.1.1-testsuite.patch
+
 	cd "${S}"/${LD64}/unit-tests/test-cases
 	local c
 
@@ -89,25 +106,7 @@ prepare_ld64() {
 	# TODO no idea what goes wrong here
 	((++c)); rm -rf dwarf-debug-notes;
 
-	elog "Deleted $c tests that were bound to fail"
-}
-
-src_prepare() {
-	prepare_ld64
-
-	cd "${S}"/${CCTOOLS}
-	epatch "${FILESDIR}"/${PN}-3.1.1-as.patch
-	epatch "${FILESDIR}"/${PN}-3.1.1-as-dir.patch
-	epatch "${FILESDIR}"/${PN}-3.1.1-ranlib.patch
-	epatch "${FILESDIR}"/${PN}-3.1.1-libtool-ranlib.patch
-	epatch "${FILESDIR}"/${PN}-3.1.1-nmedit.patch
-	epatch "${FILESDIR}"/${PN}-3.1.1-no-headers.patch
-	epatch "${FILESDIR}"/${PN}-3.1.1-no-oss-dir.patch
-	epatch "${FILESDIR}"/${P}-armv7-defines.patch
-
-	cd "${S}"/${LD64}
-	epatch "${FILESDIR}"/${PN}-3.1.1-testsuite.patch
-	epatch "${WORKDIR}"/ld64-unwind/ld64-95.2.12-unlibunwind.patch
+	einfo "Deleted $c tests that were bound to fail"
 
 	cd "${S}"
 	ebegin "cleaning Makefiles from unwanted CFLAGS"
