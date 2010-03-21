@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.1-r1.ebuild,v 1.11 2010/01/19 00:19:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.1-r1.ebuild,v 1.12 2010/03/21 19:34:32 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -36,7 +36,7 @@ RDEPEND="gnome-base/libglade
 	thunar? ( >=xfce-base/thunar-1
 		>=xfce-base/exo-0.3.100
 		dev-libs/dbus-glib )
-	menu-plugin? ( >=xfce-base/xfce4-panel-4.6 )"
+	menu-plugin? ( =xfce-base/xfce4-panel-4.6* )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
