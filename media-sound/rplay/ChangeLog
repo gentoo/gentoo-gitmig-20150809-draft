@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rplay
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/ChangeLog,v 1.14 2010/03/15 20:18:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/ChangeLog,v 1.15 2010/03/21 14:43:59 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> rplay-3.3.2-r1.ebuild:
+  stable ppc64, bug 309643
 
   15 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> rplay-3.3.2-r1.ebuild,
   +files/rplay-3.3.2-built-in_function_exit.patch:
