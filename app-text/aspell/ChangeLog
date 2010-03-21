@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.116 2010/02/19 10:03:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.117 2010/03/21 14:52:34 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-0.60.6-r1.ebuild:
+  Marking aspell-0.60.6-r1 ppc64 stable for bug 310015
 
   19 Feb 2010; Peter Volkov <pva@gentoo.org> aspell-0.60.6-r1.ebuild:
   Add pt_BR to the LINGUAS.
