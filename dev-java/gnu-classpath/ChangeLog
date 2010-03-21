@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.105 2010/03/21 22:36:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.106 2010/03/21 22:41:37 caster Exp $
+
+  21 Mar 2010; Vlastimil Babka <caster@gentoo.org>
+  gnu-classpath-0.97-r1.ebuild, gnu-classpath-0.97.2.ebuild,
+  gnu-classpath-0.97.2-r1.ebuild:
+  Fix bug #225921 (not enough heap space with ecj compiler) for 0.97 as
+  well.
 
 *gnu-classpath-0.97.2-r1 (21 Mar 2010)
 

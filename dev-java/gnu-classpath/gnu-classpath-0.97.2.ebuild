@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97.2.ebuild,v 1.7 2010/03/21 20:50:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97.2.ebuild,v 1.8 2010/03/21 22:41:37 caster Exp $
 
 EAPI=1
 
@@ -55,6 +55,10 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	export JAVAC="/usr/bin/ecj-3.3 -nowarn"
+
+	# build system is passing -J-Xmx768M which ecj however ignores
+	# this will make the ecj launcher do it (bug #225921)
+	export gjl_java_args="-Xmx768M"
 
 	# don't use econf, because it ends up putting things under /usr, which may
 	# collide with other slots of classpath

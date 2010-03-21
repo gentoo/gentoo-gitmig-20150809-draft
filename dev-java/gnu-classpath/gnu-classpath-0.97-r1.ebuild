@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97-r1.ebuild,v 1.12 2010/03/21 20:50:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97-r1.ebuild,v 1.13 2010/03/21 22:41:37 caster Exp $
 
 EAPI=1
 
@@ -84,6 +84,10 @@ src_compile() {
 
 	if [[ ${HAVE_ECJ} ]]; then
 		local myconf="--with-ecj-jar=$(java-pkg_getjars --build-only eclipse-ecj-3.3)"
+
+		# build system is passing -J-Xmx768M which ecj however ignores
+		# this will make the ecj launcher do it (bug #225921)
+		export gjl_java_args="-Xmx768M"
 	fi
 	# don't use econf, because it ends up putting things under /usr, which may
 	# collide with other slots of classpath
