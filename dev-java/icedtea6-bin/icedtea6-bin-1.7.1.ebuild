@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.7.1.ebuild,v 1.4 2010/03/19 19:26:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.7.1.ebuild,v 1.5 2010/03/21 22:49:58 caster Exp $
 
 EAPI="1"
 
@@ -59,10 +59,6 @@ RDEPEND=">=sys-devel/gcc-4.3
 		>=x11-libs/pango-1.24.5
 	)"
 DEPEND=""
-
-QA_EXECSTACK_amd64="opt/${P}/jre/lib/amd64/server/libjvm.so"
-QA_EXECSTACK_x86="opt/${P}/jre/lib/i386/server/libjvm.so
-	opt/${P}/jre/lib/i386/client/libjvm.so"
 
 src_unpack() {
 	unpack ${A}
