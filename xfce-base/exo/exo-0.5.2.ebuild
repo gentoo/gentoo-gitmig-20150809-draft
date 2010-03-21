@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.1.ebuild,v 1.1 2009/10/24 12:37:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.2.ebuild,v 1.1 2010/03/21 18:50:20 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf python
 
 DESCRIPTION="Extensions, widgets and framework library with session management support"
@@ -18,10 +18,10 @@ RDEPEND=">=dev-lang/perl-5.6
 	dev-perl/URI
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.14:2
-	>=xfce-base/libxfce4util-4.4.2
+	>=xfce-base/libxfce4util-4.2.2
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	hal? ( >=sys-apps/hal-0.5.7 )
-	python? ( dev-python/pygtk )"
+	python? ( >=dev-python/pygtk-2.4 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
@@ -33,12 +33,12 @@ pkg_setup() {
 		$(use_enable libnotify notifications)
 		$(use_enable hal)
 		$(use_enable python)
-		$(use_enable debug)"
+		$(use_enable debug)
+		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
 }
 
 src_prepare() {
-	xfconf_src_prepare
 	rm -f py-compile
 	ln -s $(type -P true) py-compile
 
@@ -46,14 +46,16 @@ src_prepare() {
 		# configure detects getmntent, which is false!
 		export ac_cv_func_getmntent=no
 	fi
+
+	xfconf_src_prepare
 }
 
 pkg_postinst() {
 	xfconf_pkg_postinst
-	python_mod_optimize "$(python_get_sitedir)"
+	python_mod_optimize exo-0.5 pyexo.py
 }
 
 pkg_postrm() {
 	xfconf_pkg_postrm
-	python_mod_cleanup "$(python_get_sitedir)"
+	python_mod_cleanup exo-0.5 pyexo.py
 }
