@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.1 2010/03/11 15:28:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.2 2010/03/21 09:24:53 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs flag-o-matic perl-module
 
@@ -68,8 +68,8 @@ src_configure() {
 
 	use debug && filter-flags -fomit-frame-pointer
 	econf \
-		--docdir=/usr/share/doc/${PF} \
-		--htmldir=/usr/share/doc/${PF}/html \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--enable-shared \
 		--enable-largefile \
 		--without-included-ltdl \
@@ -77,9 +77,9 @@ src_configure() {
 		--without-gslib \
 		--with-modules \
 		--with-quantum-depth=${quantumDepth} \
-		--with-fontpath="/usr/share/fonts" \
-		--with-gs-font-dir="/usr/share/fonts/default/ghostscript" \
-		--with-windows-font-dir="/usr/share/fonts/corefonts" \
+		--with-fontpath="${EPREFIX}/usr/share/fonts" \
+		--with-gs-font-dir="${EPREFIX}/usr/share/fonts/default/ghostscript" \
+		--with-windows-font-dir="${EPREFIX}/usr/share/fonts/corefonts" \
 		$(use_enable debug ccmalloc) \
 		$(use_enable debug prof) \
 		$(use_enable debug gcov) \
