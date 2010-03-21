@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-gl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-gl/ChangeLog,v 1.6 2010/02/19 09:32:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-gl/ChangeLog,v 1.7 2010/03/21 14:54:09 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-gl-0.5.2.ebuild:
+  Marking aspell-gl-0.5.2 ppc64 stable for bug 310015
 
 *aspell-gl-0.5.2 (19 Feb 2010)
 *aspell-gl-0.5.0 (19 Feb 2010)
