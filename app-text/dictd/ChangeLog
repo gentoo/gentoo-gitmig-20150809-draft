@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.80 2009/12/27 11:22:56 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.81 2010/03/21 13:16:31 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> dictd-1.11.2.ebuild:
+  stable ppc64, bug 310023
 
 *dictd-1.11.2 (27 Dec 2009)
 
