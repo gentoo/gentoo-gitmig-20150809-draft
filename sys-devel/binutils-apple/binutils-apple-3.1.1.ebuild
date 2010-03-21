@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.1.1.ebuild,v 1.2 2010/02/12 10:24:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.1.1.ebuild,v 1.3 2010/03/21 19:33:06 grobian Exp $
+
+EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -48,7 +50,7 @@ fi
 
 S=${WORKDIR}
 
-unpack_ld64() {
+prepare_ld64() {
 	cd "${S}"/${LD64}/src
 	cp "${FILESDIR}"/Makefile .
 
@@ -86,9 +88,8 @@ unpack_ld64() {
 	elog "Deleted $c tests that were bound to fail"
 }
 
-src_unpack() {
-	unpack ${A}
-	unpack_ld64
+src_prepare() {
+	prepare_ld64
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-as.patch

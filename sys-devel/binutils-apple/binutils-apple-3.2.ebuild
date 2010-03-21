@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.ebuild,v 1.5 2010/02/12 10:24:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.ebuild,v 1.6 2010/03/21 19:33:06 grobian Exp $
+
+EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -52,22 +54,14 @@ fi
 
 S=${WORKDIR}
 
-unpack_ld64() {
+prepare_ld64() {
 	cd "${S}"/${LD64}/src
 	cp "${FILESDIR}"/Makefile .
-#	cd "${S}"/${LD64}
-#	cp "${FILESDIR}"/${P}-ld64-Makefile .
-#	ln -s ../${CCTOOLS}/include
-# todo: copy compact_unwind_encoding.h
-#	cp "${FILESDIR}"/compact_unwind_encoding.h include/mach-o/
-
-#	cd src
 
 	local VER_STR="\"@(#)PROGRAM:ld  PROJECT:${LD64} (Gentoo ${PN}-${PVR})\\n\""
 	sed -i \
 		-e '/^#define LTO_SUPPORT 1/s:1:0:' \
 		ObjectDump.cpp || die
-#		other/ObjectDump.cpp || die
 	echo '#undef LTO_SUPPORT' > configure.h
 	echo '' > linker_opts
 	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
@@ -99,13 +93,8 @@ unpack_ld64() {
 	elog "Deleted $c tests that were bound to fail"
 }
 
-src_unpack() {
-	unpack ${A}
-	unpack_ld64
-
-	# needed to compile trie support
-#	cp "${S}"/${LD64}/src/other/prune_trie.h \
-#		"${S}"/${CCTOOLS}/include/mach-o
+src_prepare() {
+	prepare_ld64
 
 	cd "${S}"/${CCTOOLS}
 	epatch "${FILESDIR}"/${PN}-3.1.1-as.patch
@@ -176,8 +165,6 @@ install_ld64() {
 }
 
 install_cctools() {
-	local ED=${ED-${D}}
-
 	cd "${S}"/${CCTOOLS}
 	emake install_all_but_headers \
 		EFITOOLS= \
