@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.14 2009/03/30 20:54:42 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.15 2010/03/21 19:41:07 josejx Exp $
+
+*ibm-powerpc-utils-1.2.2 (21 Mar 2010)
+
+  21 Mar 2010; Joseph Jezak <josejx@gentoo.org>
+  -ibm-powerpc-utils-1.0.6.ebuild,
+  -files/ibm-powerpc-utils-1.0.6-remove-doc.patch,
+  -ibm-powerpc-utils-1.1.2.ebuild, +ibm-powerpc-utils-1.2.2.ebuild:
+  Removed old versions, added the latest version. Note that this version
+  contains ibm-powerpc-utils-* including papr, which is now obsolete.
 
 *ibm-powerpc-utils-1.1.2 (30 Mar 2009)
 
