@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.295 2009/12/03 03:24:31 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.296 2010/03/21 14:59:50 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> squid-2.7.7.ebuild:
+  Marking squid-2.7.7 ppc64 for bug 290185
 
   03 Dec 2009; Jeroen Roovers <jer@gentoo.org> squid-2.7.7.ebuild,
   squid-3.0.19.ebuild:
