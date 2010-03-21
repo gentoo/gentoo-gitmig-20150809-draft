@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/iulib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.7 2010/03/20 21:20:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.8 2010/03/21 05:03:55 vapier Exp $
+
+  21 Mar 2010; Mike Frysinger <vapier@gentoo.org> iulib-0.4.ebuild:
+  Pull in sdl-gfx depend and remove useless sdl-image include #310443 by
+  Samuli Suominen. Fix by Samuli Suominen for as-needed issues #310439.
 
   20 Mar 2010; Mike Frysinger <vapier@gentoo.org> iulib-0.4.ebuild:
   Fix tiff check #308955 by Samuli Suominen and automagic SDL depends
