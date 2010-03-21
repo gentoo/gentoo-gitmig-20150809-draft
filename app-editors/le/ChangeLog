@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/le
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.25 2010/03/15 18:41:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.26 2010/03/21 15:03:40 phajdan.jr Exp $
+
+  21 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> le-1.14.3.ebuild:
+  x86 stable, arch-tested by Andreas Schurch, bug #309167
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> le-1.14.3.ebuild:
   ppc stable #309167

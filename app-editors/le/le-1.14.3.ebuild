@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.14.3.ebuild,v 1.3 2010/03/15 18:41:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/le-1.14.3.ebuild,v 1.4 2010/03/21 15:03:40 phajdan.jr Exp $
 
 DESCRIPTION="Terminal text editor"
 HOMEPAGE="http://www.gnu.org/directory/text/editors/le-editor.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.yars.free.net/pub/source/le/le-${PV}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5"
