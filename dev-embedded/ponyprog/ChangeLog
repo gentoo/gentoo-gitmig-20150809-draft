@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/ponyprog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.19 2010/01/01 17:58:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.20 2010/03/21 21:45:08 calchan Exp $
+
+*ponyprog-2.07a-r1 (21 Mar 2010)
+
+  21 Mar 2010; <calchan@gentoo.org> +ponyprog-2.07a-r1.ebuild:
+  Removed seamonkey dependency (bug #300418). Added graphicsmagick as
+  possible replacement to imagemagick.
 
   01 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   ponyprog-2.07a.ebuild:
