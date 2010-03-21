@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.43 2010/03/15 18:39:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.44 2010/03/21 14:59:25 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> fxscintilla-1.71-r2.ebuild:
+  stable ppc64, bug 309175
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> fxscintilla-1.71-r2.ebuild:
   ppc stable #309175
