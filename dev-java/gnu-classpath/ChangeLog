@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.103 2010/03/02 07:44:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.104 2010/03/21 20:50:26 caster Exp $
+
+  21 Mar 2010; Vlastimil Babka <caster@gentoo.org>
+  gnu-classpath-0.97-r1.ebuild, gnu-classpath-0.97.2.ebuild,
+  gnu-classpath-0.98-r1.ebuild, gnu-classpath-0.98-r2.ebuild:
+  Remove nsplugin support, which was already package.use.masked and is not
+  developed or recommended by upstream anymore. Removes the dependencies on
+  old mozilla software versions, fixing bugs #282162, #282286, #300423.
 
   02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnu-classpath-0.98-r2.ebuild:

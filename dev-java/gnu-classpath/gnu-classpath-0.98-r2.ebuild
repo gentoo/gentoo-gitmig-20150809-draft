@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r2.ebuild,v 1.3 2010/03/02 07:44:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r2.ebuild,v 1.4 2010/03/21 20:50:26 caster Exp $
 
 EAPI=2
 
@@ -15,9 +15,8 @@ LICENSE="GPL-2-with-linking-exception"
 SLOT="0.98"
 KEYWORDS="~amd64 ppc ppc64 x86"
 
-IUSE="alsa debug doc dssi examples gconf gjdoc gmp gtk gstreamer nsplugin qt4 xml"
+IUSE="alsa debug doc dssi examples gconf gjdoc gmp gtk gstreamer qt4 xml"
 
-# xulrunner: http://bugs.gentoo.org/show_bug.cgi?id=257803
 RDEPEND="alsa? ( media-libs/alsa-lib )
 		doc? ( >=dev-java/gjdoc-0.7.9-r2 )
 		dssi? ( >=media-libs/dssi-0.9 )
@@ -41,14 +40,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 				x11-libs/libXrender
 				x11-libs/libXtst
 				x11-libs/pango
-		)
-		nsplugin? (
-			>=x11-libs/gtk+-2.8
-			|| (
-				<net-libs/xulrunner-1.9.1
-				<www-client/mozilla-firefox-3.5
-				www-client/seamonkey
-			)
 		)
 		qt4? ( x11-libs/qt-gui:4 )
 		xml? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )
@@ -98,13 +89,13 @@ src_configure() {
 		$(use_enable gmp) \
 		$(use_enable gtk gtk-peer) \
 		$(use_enable gstreamer gstreamer-peer) \
-		$(use_enable nsplugin plugin) \
 		$(use_enable qt4 qt-peer) \
 		$(use_enable xml xmlj) \
 		$(use_enable dssi ) \
 		$(use_with doc gjdoc) \
 		--enable-jni \
 		--disable-dependency-tracking \
+		--disable-plugin \
 		--host=${CHOST} \
 		--prefix=/usr/${PN}-${SLOT} \
 		--with-ecj-jar=$(java-pkg_getjar eclipse-ecj-3.3 ecj.jar) \

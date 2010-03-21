@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97-r1.ebuild,v 1.11 2010/01/01 17:59:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97-r1.ebuild,v 1.12 2010/03/21 20:50:26 caster Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2-with-linking-exception"
 SLOT="0.97"
 KEYWORDS="amd64 ppc ppc64 x86"
 
-IUSE="alsa debug doc dssi examples gconf gtk gstreamer nsplugin qt4 xml"
+IUSE="alsa debug doc dssi examples gconf gtk gstreamer qt4 xml"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 		doc? ( >=dev-java/gjdoc-0.7.8 )
@@ -36,16 +36,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 			x11-libs/libXrender
 			x11-libs/libXtst
 			x11-libs/pango
-		)
-		nsplugin? (
-			>=x11-libs/gtk+-2.8
-			|| (
-				=www-client/mozilla-firefox-2*
-				=net-libs/xulrunner-1.8*
-				=www-client/seamonkey-1*
-				=www-client/seamonkey-bin-1*
-				=www-client/firefox-bin-2*
-			)
 		)
 		qt4? ( x11-libs/qt-gui:4 )
 		xml? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )
@@ -104,7 +94,6 @@ src_compile() {
 		$(use_enable gconf gconf-peer) \
 		$(use_enable gtk gtk-peer) \
 		$(use_enable gstreamer gstreamer-peer) \
-		$(use_enable nsplugin plugin) \
 		$(use_enable qt4 qt-peer) \
 		$(use_enable xml xmlj) \
 		$(use_enable dssi ) \
@@ -113,6 +102,7 @@ src_compile() {
 		--enable-jni \
 		--disable-dependency-tracking \
 		--disable-Werror \
+		--disable-plugin \
 		--host=${CHOST} \
 		--prefix=/opt/${PN}-${SLOT} \
 		|| die "configure failed"
