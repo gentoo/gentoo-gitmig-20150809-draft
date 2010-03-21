@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.56 2010/03/18 16:40:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.57 2010/03/21 19:39:22 armin76 Exp $
+
+  21 Mar 2010; Raúl Porcel <armin76@gentoo.org> gdata-2.0.7.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #307253
 
   18 Mar 2010; Markos Chandras <hwoarang@gentoo.org> gdata-2.0.7.ebuild:
   Stable on amd64 wrt bug #307253
