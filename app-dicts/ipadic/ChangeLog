@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/ipadic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.19 2010/01/04 14:52:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ChangeLog,v 1.20 2010/03/21 00:31:52 matsuu Exp $
+
+*ipadic-2.7.0-r1 (21 Mar 2010)
+
+  21 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> -ipadic-2.6.1.ebuild,
+  -ipadic-2.6.3.ebuild, +ipadic-2.7.0-r1.ebuild,
+  +files/ipadic-2.7.0-gentoo.patch:
+  Fixed parallel-make issue, bug #299613. Removed old versions.
 
   04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> ipadic-2.7.0.ebuild:
   Use -j1 for build (bug #299613).
