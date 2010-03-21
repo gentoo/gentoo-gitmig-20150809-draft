@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.2 2010/03/21 09:24:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.3 2010/03/21 10:34:32 grobian Exp $
 
-EAPI="3"
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic perl-module
 
@@ -66,6 +66,9 @@ src_configure() {
 		quantumDepth="8"
 	fi
 
+	# cannot use EAPI=3 because perl-module eclass doesn't support it yet
+	use !prefix && EPREFIX=
+	
 	use debug && filter-flags -fomit-frame-pointer
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.62 2010/03/21 09:24:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.63 2010/03/21 10:34:32 grobian Exp $
+
+  21 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  graphicsmagick-1.3.12.ebuild:
+  Drop EAPI back to 2 and add compatability code for EPREFIX since
+  perl-module.eclass doesn't support EAPI=3 yet, thanks tove.
 
   21 Mar 2010; Fabian Groffen <grobian@gentoo.org>
   graphicsmagick-1.3.12.ebuild:
