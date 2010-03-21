@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.248 2010/03/14 16:41:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.249 2010/03/21 14:16:42 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> wxGTK-2.6.4.0-r6.ebuild,
+  wxGTK-2.8.10.1-r5.ebuild:
+  Marking wxGTK-2.6.4.0-r6 and -2.8.10.1-r5 for bug 305331
 
   14 Mar 2010; Raúl Porcel <armin76@gentoo.org> wxGTK-2.6.4.0-r6.ebuild,
   wxGTK-2.8.10.1-r5.ebuild:
