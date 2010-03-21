@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.129 2010/02/15 21:02:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.130 2010/03/21 20:57:12 caster Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -99,11 +99,6 @@ sci-mathematics/maxima gcl openmcl
 # Mask the gnome USE flag globally for app-office/abiword-plugins-2.4.6 because
 # it depends on a GLSA affected atom. bug 271708
 =app-office/abiword-plugins-2.4.6 gnome
-
-# Petteri Räty <betelgeuse@gentoo.org> (14 Jul 2009)
-# Open source Java plugin development happens in IcedTea
-# these days.
-dev-java/gnu-classpath nsplugin
 
 # Tristan Heaven <nyhm@gentoo.org> (12 Jun 2009)
 # media-libs/freeimage is masked for bug #269516
