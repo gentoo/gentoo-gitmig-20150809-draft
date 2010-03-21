@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.23 2010/03/21 11:59:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.24 2010/03/21 15:12:17 ranger Exp $
+
+  21 Mar 2010; Brent Baude <ranger@gentoo.org> tesseract-2.04-r1.ebuild:
+  stable ppc64, bug 304053
 
   21 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   tesseract-2.04-r1.ebuild:
