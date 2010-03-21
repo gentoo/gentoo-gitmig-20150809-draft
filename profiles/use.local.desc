@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5420 2010/03/21 14:07:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5421 2010/03/21 22:47:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -724,9 +724,15 @@ dev-java/fop:jai - Enable jai support
 dev-java/fop:jimi - Enable jimi support
 dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
 dev-java/glazedlists:java5 - Builds a Java 1.5 version (recommended)
-dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
-dev-java/gnu-classpath:gconf - Enable the GConf based util.peers backend
-dev-java/gnu-classpath:gjdoc - Build GNU Classpath's javadoc implementation. Formerly dev-java/gjdoc, now part of gnu-classpath upstream.
+dev-java/gnu-classpath:alsa - Build with ALSA javax.sound.midi provider
+dev-java/gnu-classpath:dssi - Build with DSSI javax.sound.midi provider
+dev-java/gnu-classpath:gconf - Build with GConf preferences backend
+dev-java/gnu-classpath:gjdoc - Build GJDoc, a documentation generator
+dev-java/gnu-classpath:gmp - Build with GMP backend for java.math.BigInteger
+dev-java/gnu-classpath:gstreamer - Build with GStreamer javax.sound.sampler provider
+dev-java/gnu-classpath:gtk - Build with Gtk+ AWT peers
+dev-java/gnu-classpath:qt4 - Build with Qt4 AWT peers
+dev-java/gnu-classpath:xml - Build with native XML backend
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/icedtea:cacao - Use the CACAO virtual machine instead of HotSpot on x86, amd64 or SPARC architectures.
 dev-java/icedtea:hs16 - Use the new version of HotSpot (16).
