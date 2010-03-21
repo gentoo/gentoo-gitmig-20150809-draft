@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.250 2010/03/15 19:11:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.251 2010/03/21 12:41:39 phajdan.jr Exp $
+
+  21 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> nginx-0.7.65.ebuild:
+  x86 stable, arch-tested by Andreas Schurch, bug #308175
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> nginx-0.7.65.ebuild:
   ppc stable #308175
