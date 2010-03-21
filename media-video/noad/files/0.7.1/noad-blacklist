@@ -1,0 +1,7 @@
+# Put in some channels (syntax like channels.conf) in noad-blacklist file to disable the automatic NOAD-scan
+# Nevertheless, you can scan the vdr-files with the noad-command from OSD
+#
+# Das Erste;ARD:11836:hC34:S19.2E:27500:101:102=deu,103=2ch;106=dd:104:0:28106:1:1101:0
+#
+
+

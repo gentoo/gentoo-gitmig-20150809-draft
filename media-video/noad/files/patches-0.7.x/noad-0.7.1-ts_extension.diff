@@ -1,0 +1,13 @@
+http://article.gmane.org/gmane.linux.vdr/42461/
+--- noad/noadifnew      2010-03-14 22:27:15.000000000 +0200
++++ noad-fix/noadifnew  2010-03-14 22:27:41.000000000 +0200
+@@ -12,7 +12,8 @@
+    exit -1
+ fi
+ fil="$2/marks.vdr"
+-if  test -a $fil
++filts="$2/marks"
++if [ -e $fil -o -e $filts ]
+ then
+   echo "noad already done for $2"
+ else
