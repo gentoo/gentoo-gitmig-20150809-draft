@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20100302.ebuild,v 1.1 2010/03/02 21:54:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20100302.ebuild,v 1.2 2010/03/21 08:42:41 spock Exp $
 
 EAPI="2"
 
@@ -17,6 +17,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND=">=media-gfx/splashutils-1.1.9.5[png]"
 DEPEND="${RDEPEND}"
 RESTRICT="binchecks strip"
+
+src_prepare() {
+	sed -i -e 's/natural-gentoo/natural_gentoo/g' "${WORKDIR}"/natural_gentoo/*.cfg
+}
 
 src_install() {
 	dodir /etc/splash/{emergence,gentoo,natural_gentoo,emerge-world}
