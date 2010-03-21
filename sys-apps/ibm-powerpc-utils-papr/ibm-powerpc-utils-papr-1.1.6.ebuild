@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.1.4.ebuild,v 1.2 2010/01/18 14:53:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ibm-powerpc-utils-papr-1.1.6.ebuild,v 1.1 2010/03/21 19:19:40 josejx Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ RDEPEND=">=sys-apps/ibm-powerpc-utils-1.1.2
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-1.1.4-removeinitandvscsis.patch
+	epatch "${FILESDIR}"/ibm-powerpc-utils-papr-${PV}-removeinitandvscsis.patch
 }
 
 src_install() {
