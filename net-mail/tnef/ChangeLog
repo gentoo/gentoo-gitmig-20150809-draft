@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/tnef
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.37 2010/03/19 17:01:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.38 2010/03/21 23:52:34 jer Exp $
+
+*tnef-1.4.7 (21 Mar 2010)
+
+  21 Mar 2010; Jeroen Roovers <jer@gentoo.org> +tnef-1.4.7.ebuild:
+  Version bump thanks to Luca Lesinigo (bug #300346 comment #1).
 
   19 Mar 2010; Jeroen Roovers <jer@gentoo.org> tnef-1.3.4.ebuild:
   Stable for HPPA too.
