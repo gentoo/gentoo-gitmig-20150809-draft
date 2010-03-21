@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.460 2010/03/20 20:33:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.461 2010/03/21 12:42:25 arfrever Exp $
+
+*python-2.6.5 (21 Mar 2010)
+
+  21 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.6.5.ebuild:
+  Version bump. Fixed bugs: #189283, #279234, #282859, #300961, #301848.
+  Respect GENTOO_PYTHON_PROCESS_NAME, GENTOO_PYTHON_WRAPPER_SCRIPT_PATH and
+  GENTOO_PYTHON_TARGET_SCRIPT_PATH environmental variables.
 
   20 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.4.6.ebuild, python-2.5.4-r4.ebuild, python-2.6.4-r1.ebuild,
