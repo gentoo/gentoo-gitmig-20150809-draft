@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.2 2010/03/17 16:42:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.3 2010/03/21 10:40:01 ikelos Exp $
+
+  21 Mar 2010; Mike Auty <ikelos@gentoo.org> giggle-0.4.96.ebuild:
+  Add in x11-libs/vte to giggle's dependencies, bug 308393.
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> giggle-0.4.ebuild,
   giggle-0.4.90.ebuild, giggle-0.4.91.ebuild, giggle-0.4.95.ebuild,
