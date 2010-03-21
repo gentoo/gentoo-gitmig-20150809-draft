@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.7.1/record-50-noad.sh,v 1.1 2010/03/21 16:42:27 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/files/0.7.1/record-50-noad.sh,v 1.2 2010/03/21 21:18:52 hd_brummy Exp $
 #
 # Joerg Bornkessel <hd_brummy@gentoo.org>
 # Mathias Schwarzott <zzam@gentoo.org>
@@ -12,22 +12,6 @@ CMD="/usr/bin/noad"
 # parameter are "no | yes"
 
 FORCE_OFFLINE_SCAN=no
-NOAD_CHANNEL_FILE="/etc/vdr/noad-blacklist"
-
-
-if [ "${VDR_RECORD_STATE}" = "after" ]; then
-unset -v NOAD_CHANNEL_ID
-VDR_RECORD_CHANNEL_ID=$(awk '($1 == "C") { print $2 }' "${VDR_RECORD_NAME}/info.vdr")
-
-        if [ -f "${NOAD_CHANNEL_FILE}" ]; then
-                awk -F: '{ printf "%s-%s-%s-%s\n",$4, $11, $12, $10; }' "${NOAD_CHANNEL_FILE}" | grep "${VDR_RECORD_CHANNEL_ID}"
-                if [ $? = 0 ]; then
-			mesg "NOAD-Scan aborted by /etc/vdr/noad-blacklist"
-                        exit
-                fi
-        fi
-fi
-
 
 if [ "${VDR_RECORD_STATE}" = "reccmd" ]; then
 	# script started from reccmd

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.1.ebuild,v 1.1 2010/03/21 16:42:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.1-r1.ebuild,v 1.1 2010/03/21 21:18:50 hd_brummy Exp $
 
 EAPI="2"
 
@@ -60,9 +60,6 @@ src_install() {
 	insinto /etc/vdr/reccmds
 	doins "${CONF_SOURCE}"/reccmds.noad.conf
 
-	insinto /etc/vdr/
-	doins "${CONF_SOURCE}"/noad-blacklist
-
 	exeinto /usr/share/vdr/bin
 	doexe "${CONF_SOURCE}"/noad-reccmd
 }
@@ -77,7 +74,4 @@ pkg_postinst() {
 	elog
 	elog "Note: You can use here all pararmeters for noad,"
 	elog "please look in the documentation of noad."
-	elog
-	elog "up from this version, noad works with .ts file structur"
-	elog "used in comming up version >=vdr-1.7.4"
 }
