@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.20.ebuild,v 1.1 2010/02/03 19:34:32 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.22.ebuild,v 1.1 2010/03/21 12:03:12 steev Exp $
 
 inherit eutils multilib flag-o-matic
 
