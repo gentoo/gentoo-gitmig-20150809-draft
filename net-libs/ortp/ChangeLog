@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.53 2010/02/11 18:52:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.54 2010/03/21 11:48:06 grobian Exp $
+
+  21 Mar 2010; Fabian Groffen <grobian@gentoo.org> ortp-0.16.1.ebuild:
+  Bumped to EAPI=3 for Prefix changes, marked ~ppc-macos and ~x86-macos
 
 *ortp-0.16.1 (11 Feb 2010)
 

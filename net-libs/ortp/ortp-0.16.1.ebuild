@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.16.1.ebuild,v 1.1 2010/02/11 18:52:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.16.1.ebuild,v 1.2 2010/03/21 11:48:06 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/linphone/${PN}/sources/${P
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="debug doc examples ipv6 minimal srtp ssl"
 
 RDEPEND="srtp? ( net-libs/libsrtp )
@@ -57,7 +57,7 @@ src_configure() {
 	# mode64bit adds +DA2.0W +DS2.0 CFLAGS wich are needed for HP-UX
 	# strict adds -Werror, don't want it
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-memcheck \
 		--disable-mode64bit \
 		--disable-strict \
