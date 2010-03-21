@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.2.ebuild,v 1.2 2010/03/21 10:18:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.2.ebuild,v 1.3 2010/03/21 10:20:05 betelgeuse Exp $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
@@ -23,7 +23,9 @@ RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/${P}-src
 
 java_prepare() {
+	# https://issues.apache.org/jira/browse/DAEMON-154
 	find . -name "*.o" -delete -print || die
+
 	cd "${S}/src/native/unix"
 	sed -e "s/powerpc/powerpc|powerpc64/g" -i support/apsupport.m4
 	eautoconf
