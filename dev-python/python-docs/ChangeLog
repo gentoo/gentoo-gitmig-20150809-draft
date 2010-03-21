@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.139 2010/01/01 17:27:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.140 2010/03/21 19:17:59 arfrever Exp $
+
+*python-docs-3.1.2 (21 Mar 2010)
+*python-docs-2.6.5 (21 Mar 2010)
+
+  21 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -python-docs-2.6.2-r1.ebuild, -python-docs-2.6.3.ebuild,
+  +python-docs-2.6.5.ebuild, +python-docs-3.1.2.ebuild:
+  Version bumps.
 
   01 Jan 2010; Brent Baude <ranger@gentoo.org> python-docs-2.6.4.ebuild:
   Marking python-docs-2.6.4 ppc64 for bug 295066
