@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/ghdl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ChangeLog,v 1.10 2009/12/28 16:22:40 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ChangeLog,v 1.11 2010/03/21 19:34:45 calchan Exp $
+
+*ghdl-0.29 (21 Mar 2010)
+
+  21 Mar 2010; <calchan@gentoo.org> +ghdl-0.29.ebuild:
+  Version bump, bug #310259.
 
   28 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> ghdl-0.27.ebuild:
   Use emake -j1 for install, as per bug #277644.
