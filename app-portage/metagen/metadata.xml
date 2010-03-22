@@ -3,6 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+	<email>neurogeek@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>sping@gentoo.org</email>
+</maintainer>
+<maintainer>
 	<email>pythonhead@gentoo.org</email>
 	<name>Rob Cakebread</name>
 	<description>I'm the author of metagen</description>
