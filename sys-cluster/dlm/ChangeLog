@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/dlm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.39 2009/09/06 21:16:27 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.40 2010/03/22 17:50:09 cardoe Exp $
+
+*dlm-2.03.11 (22 Mar 2010)
+
+  22 Mar 2010; Doug Goldstein <cardoe@gentoo.org> +dlm-2.03.11.ebuild:
+  version bump to fix #305463
 
   06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> dlm-2.03.09.ebuild:
   Cleaning up for linux-info work: inherit linux-mod implies inherit
