@@ -13,12 +13,10 @@ using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescripti
 	queries</flag>
 	<flag name='db'>Include features like stats, querycache, popauth, report
 	intervals and bodylengthdb that include berkdb</flag>
-	<flag name='diffheaders'>On verification failure, compare the
-	original and the received headers to look for possible munging</flag>
+	<!--flag name='diffheaders'>On verification failure, compare the
+	original and the received headers to look for possible munging</flag-->
 	<flag name='unbound'>Use the unbound dnssec library to perform DKIM DNS
 	queries.</flag>
-	<flag name='multiplesigs'>Allow addition of multiple signatures when key
-	lists are in use.</flag>
 	<flag name='opendbx'>Use opendbx backend to facilitate dataset driven
 	OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide
 	variety of database types</flag>
