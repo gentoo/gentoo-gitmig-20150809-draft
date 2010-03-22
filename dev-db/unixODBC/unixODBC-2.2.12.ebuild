@@ -1,29 +1,26 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.15 2008/06/15 17:33:57 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.12.ebuild,v 1.16 2010/03/22 08:35:49 ssuominen Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 PATCH_VERSION="2.2.12-r0"
 PATCH_P="${PN}-${PATCH_VERSION}-patches"
 
 inherit eutils multilib autotools gnuconfig libtool
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-
 DESCRIPTION="ODBC Interface for Linux."
 HOMEPAGE="http://www.unixodbc.org/"
 SRC_URI="http://www.unixodbc.org/${P}.tar.gz
 		mirror://gentoo/${PATCH_P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="qt3 gnome"
+IUSE="gnome"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 RDEPEND=">=sys-libs/readline-4.1
-		>=sys-libs/ncurses-5.2
-		qt3? ( =x11-libs/qt-3* )
-		gnome? ( gnome-base/libgnomeui )
-		sys-devel/libtool"
+	>=sys-libs/ncurses-5.2
+	gnome? ( gnome-base/libgnomeui )
+	sys-devel/libtool"
 DEPEND="${RDEPEND}
 	gnome? ( dev-util/cvs )" # see Bug 173256
 
@@ -50,13 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	if use qt3 && ! use mips ; then
-		myconf="--enable-gui=yes --x-libraries=/usr/$(get_libdir)"
-	else
-		myconf="--enable-gui=no"
-	fi
+	local myconf="--enable-gui=no"
 
 	econf --host=${CHOST} \
 		--prefix=/usr \
