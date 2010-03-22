@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xiphos
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.4 2009/08/10 00:39:05 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.5 2010/03/22 05:32:53 ssuominen Exp $
+
+*xiphos-3.1.2 (22 Mar 2010)
+
+  22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +xiphos-3.1.2.ebuild:
+  Version bump wrt #310623, #282279, #295758 and #300412.
 
 *xiphos-3.1.1 (10 Aug 2009)
 
