@@ -1,10 +1,10 @@
 CPPFLAGS += -Iinclude -Iabstraction -Ild -Iother -I.
 
-#all: machocheck rebase unwinddump dyldinfo ObjectDump ld64
+# dropped machocheck due to compilation failures
 all: rebase unwinddump dyldinfo ObjectDump ld64
 
 libprunetrie.a: other/PruneTrie.o other/prune_trie.h
-	$(AR) -r -c libprunetrie.a other/PruneTrie.o
+	$(AR) -s -r -c libprunetrie.a other/PruneTrie.o
 
 ld64: libprunetrie.a ld/ld.o ld/Options.o ld/debugline.o version.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
