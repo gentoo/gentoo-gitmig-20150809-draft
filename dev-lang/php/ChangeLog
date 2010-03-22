@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.371 2010/03/21 13:10:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.372 2010/03/22 12:57:10 fauli Exp $
+
+  22 Mar 2010; Christian Faulhammer <fauli@gentoo.org> php-5.2.13.ebuild:
+  stable x86, security bug 306939
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> php-5.2.13.ebuild:
   Marking php-5.2.13 ppc64 for bug 306939
