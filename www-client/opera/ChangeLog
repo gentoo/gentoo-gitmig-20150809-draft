@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.456 2010/03/21 23:22:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.457 2010/03/22 00:21:40 jer Exp $
+
+  22 Mar 2010; Jeroen Roovers <jer@gentoo.org> opera-10.51_pre6248.ebuild,
+  opera-10.51_pre6252.ebuild:
+  Fix licenses for Opera 10.50.
 
 *opera-10.51_pre6252 (21 Mar 2010)
 
