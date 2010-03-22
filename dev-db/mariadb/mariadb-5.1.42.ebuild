@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.42.ebuild,v 1.3 2010/03/22 19:05:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.42.ebuild,v 1.4 2010/03/22 20:36:10 mr_bones_ Exp $
 
 MY_EXTRAS_VER="20100315-1843Z"
 EAPI=2
@@ -166,7 +166,7 @@ src_test() {
 					mysql_disable_test $t "ndb not supported in mariadb"
 			done
 		fi
-	
+
 		use profiling && use community \
 		|| mysql_disable_test main.profiling \
 			"Profiling test needs profiling support"
