@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tkTheme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.20 2009/08/29 19:11:30 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.21 2010/03/22 20:43:12 jlec Exp $
+
+*tkTheme-1.0-r2 (22 Mar 2010)
+
+  22 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +tkTheme-1.0-r2.ebuild:
+  EAPI=3 bump and cleanup, respecting CC
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> tkTheme-1.0-r1.ebuild:
   ppc stable #281394
