@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.28.2.ebuild,v 1.1 2009/12/24 00:50:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.28.2.ebuild,v 1.2 2010/03/22 09:14:23 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -51,7 +51,7 @@ RDEPEND=">=dev-libs/glib-2.20
 	>=gnome-base/orbit-2.9.8
 	crypt? ( || (
 				  ( >=app-crypt/gnupg-2.0.1-r2
-					|| ( app-crypt/pinentry[gtk] app-crypt/pinentry[qt3] ) )
+					app-crypt/pinentry[gtk] )
 				  =app-crypt/gnupg-1.4* ) )
 	ldap? ( >=net-nds/openldap-2 )
 	mono? ( >=dev-lang/mono-1 )
