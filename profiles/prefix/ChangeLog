@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.161 2010/03/21 19:18:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.162 2010/03/22 09:04:30 mduft Exp $
+
+  22 Mar 2010; Markus Duft <mduft@gentoo.org> windows/interix/use.mask,
+  windows/winnt/use.mask:
+  removed reference to unused qt3 USE flag for windows
 
   21 Mar 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask upcoming sys-devel/binutils-apple-3.2-r1, it needs some testing first

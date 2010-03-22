@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.7 2010/02/10 10:24:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.8 2010/03/22 09:04:31 mduft Exp $
 
 # Re-add Interix libc
 -elibc_Interix
@@ -84,7 +84,6 @@ libedit
 openmp
 portaudio
 pulseaudio
-qt3
 qt4
 # libtiff only static, so avoid this!
 tiff

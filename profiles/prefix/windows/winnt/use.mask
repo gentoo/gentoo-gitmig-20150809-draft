@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/use.mask,v 1.5 2010/02/10 10:24:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/use.mask,v 1.6 2010/03/22 09:04:32 mduft Exp $
 
 # Re-add Interix libc
 -elibc_Winnt
@@ -81,7 +81,6 @@ ladspa
 openmp
 portaudio
 pulseaudio
-qt3
 qt4
 readline
 # libtiff only static, so avoid the tiff USE flag!
