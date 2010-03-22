@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.99 2010/03/22 07:02:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.100 2010/03/22 07:03:59 graaff Exp $
+
+  22 Mar 2010; Hans de Graaff <graaff@gentoo.org>
+  -gtk-gnutella-0.96.6-r1.ebuild, -gtk-gnutella-0.96.7.ebuild:
+  Remove old versions.
 
 *gtk-gnutella-0.96.8 (22 Mar 2010)
 
