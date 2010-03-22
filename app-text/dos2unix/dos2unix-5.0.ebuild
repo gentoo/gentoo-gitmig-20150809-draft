@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.0.ebuild,v 1.3 2010/03/21 08:13:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.0.ebuild,v 1.4 2010/03/22 07:36:28 jlec Exp $
 
 EAPI="3"
 
 inherit toolchain-funcs
 
 DESCRIPTION="Convert DOS or MAC text files to UNIX format or vice versa"
-HOMEPAGE="http://www.xs4all.nl/~waterlan/ http://sourceforge.net/projects/dos2unix/"
+HOMEPAGE="http://www.xs4all.nl/~waterlan/dos2unix.html http://sourceforge.net/projects/dos2unix/"
 SRC_URI="
 	http://www.xs4all.nl/~waterlan/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/${P}.tar.gz"
