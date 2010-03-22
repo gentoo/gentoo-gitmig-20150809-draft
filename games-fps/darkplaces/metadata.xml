@@ -5,7 +5,6 @@
   <use>
     <flag name="cdsound">Enables using CD audio in the engine</flag>
     <flag name="demo">Uses the demo data from quake1 (quake1-demodata)</flag>
-    <flag name="dpmod">Sets up the darkplaces mod from icculus</flag>
     <flag name="lights">Install and setup the updated light maps</flag>
     <flag name="textures">Install and setup the updated textures</flag>
   </use>
