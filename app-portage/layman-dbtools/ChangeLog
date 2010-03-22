@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/layman-dbtools
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/ChangeLog,v 1.1 2010/03/22 20:42:19 sping Exp $
+
+*layman-dbtools-0_p20100322 (22 Mar 2010)
+
+  22 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  +layman-dbtools-0_p20100322.ebuild, +metadata.xml:
+  New package
+
