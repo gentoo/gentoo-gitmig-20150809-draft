@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.313 2010/03/09 11:51:44 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.314 2010/03/22 02:11:37 yngwin Exp $
+
+  22 Mar 2010; Ben de Groot <yngwin@gentoo.org>
+  -mythtv-0.21_p19961-r2.ebuild, -mythtv-0.21_p20877.ebuild:
+  Remove qt3 versions wrt bug #283429 and #299222
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org>
   mythtv-0.22_p22824-r1.ebuild, mythtv-0.22_p22860.ebuild,
