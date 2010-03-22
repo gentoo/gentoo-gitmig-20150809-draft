@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.28 2010/01/07 15:35:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.29 2010/03/22 01:52:01 yngwin Exp $
+
+  22 Mar 2010; Ben de Groot <yngwin@gentoo.org>
+  -kchmviewer-3.1_p2-r1.ebuild:
+  Remove qt-3 and revdeps, bug #283429 (tracker) and #292192 (kchmviewer-3
+  removal)
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> kchmviewer-4.2.ebuild:
   Marked ppc stable for bug #297010.
