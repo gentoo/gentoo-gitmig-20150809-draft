@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-21.5.ebuild,v 1.2 2009/08/14 00:52:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-21.5.ebuild,v 1.3 2010/03/22 20:29:19 jlec Exp $
 
-EAPI=2
+EAPI="3"
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Modular Object Oriented Dynamic SpreadSheet"
 HOMEPAGE="http://moodss.sourceforge.net/"
@@ -37,10 +37,13 @@ src_prepare() {
 	sed -i -e 's:%_datadir:/usr/share:' \
 		-e 's:%_bindir:/usr/bin:' ${PN}.desktop || die
 	sed -i -e "s:/usr/lib:/usr/$(get_libdir):" Makefile || die
+	epatch "${FILESDIR}"/${PV}-ldflags.patch
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die
+	emake \
+		CFLAGS="${CFLAGS}" \
+		CC="$(tc-getCC)" || die
 }
 
 src_install() {

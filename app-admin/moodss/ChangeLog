@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/moodss
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.14 2009/08/14 00:52:06 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.15 2010/03/22 20:29:19 jlec Exp $
+
+  22 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/21.5-ldflags.patch, moodss-21.5.ebuild:
+  Respecting CC and LDFLAGS per 247193
 
   14 Aug 2009; Christian Faulhammer <fauli@gentoo.org> moodss-21.5.ebuild:
   port to EAPI 2
