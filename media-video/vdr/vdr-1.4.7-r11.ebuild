@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r11.ebuild,v 1.6 2009/10/11 19:04:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r11.ebuild,v 1.7 2010/03/22 16:35:00 ssuominen Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -31,7 +31,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-COMMON_DEPEND="media-libs/jpeg
+COMMON_DEPEND=">=media-libs/jpeg-8
 	sys-libs/libcap"
 
 DEPEND="${COMMON_DEPEND}
