@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.2 2010/03/08 07:05:29 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.3 2010/03/22 01:14:04 jmbsvicetto Exp $
+
+  22 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed herd.
 
 *mongodb-1.3.3 (08 Mar 2010)
 *mongodb-1.2.4 (08 Mar 2010)
