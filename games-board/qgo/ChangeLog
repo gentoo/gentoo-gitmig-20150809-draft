@@ -1,0 +1,10 @@
+# ChangeLog for games-board/qgo
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.39 2010/03/22 15:27:25 ssuominen Exp $
+
+*qgo-1.5.4_p20100322 (22 Mar 2010)
+
+  22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +qgo-1.5.4_p20100322.ebuild:
+  Initial commit.
+
