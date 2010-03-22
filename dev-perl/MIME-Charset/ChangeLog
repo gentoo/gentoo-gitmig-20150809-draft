@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MIME-Charset
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/ChangeLog,v 1.1 2010/03/22 10:29:36 tove Exp $
+
+*MIME-Charset-1.008 (22 Mar 2010)
+
+  22 Mar 2010; Torsten Veller <tove@gentoo.org> +MIME-Charset-1.008.ebuild,
+  +metadata.xml:
+  Initial import for www-apps/postfixadmin (#310069). Thanks to Andreis Vinogradovs
+
