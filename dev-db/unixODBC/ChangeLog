@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.76 2010/03/22 08:35:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.77 2010/03/22 15:00:10 ssuominen Exp $
+
+*unixODBC-2.2.14 (22 Mar 2010)
+
+  22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +unixODBC-2.2.14.ebuild, +files/odbcinst.ini:
+  Version bump wrt #249617, thanks to Tais P. Hansen, Bjoern Thorwirth and
+  others.
 
   22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   unixODBC-2.2.12.ebuild:
