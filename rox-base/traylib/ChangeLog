@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/traylib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.9 2008/09/01 09:37:54 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.10 2010/03/22 16:48:38 lack Exp $
+
+  22 Mar 2010; Jim Ramsay <lack@gentoo.org> traylib-0.2.5.ebuild,
+  traylib-0.3.2.1.ebuild:
+  Update python dependencies to use PYTHON_DEPEND instead of NEED_PYTHON
 
   01 Sep 2008; Raúl Porcel <armin76@gentoo.org> traylib-0.3.2.1.ebuild:
   sparc stable wrt #236057

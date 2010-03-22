@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.3.2.1.ebuild,v 1.6 2008/09/01 09:37:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/traylib-0.3.2.1.ebuild,v 1.7 2010/03/22 16:48:38 lack Exp $
 
-NEED_PYTHON="2.3"
+PYTHON_DEPEND="2:2.4"
 inherit python eutils multilib
 
 MY_PN="TrayLib"

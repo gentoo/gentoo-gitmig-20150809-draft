@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.5-r1.ebuild,v 1.7 2009/06/03 17:44:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.5-r1.ebuild,v 1.8 2010/03/22 16:44:35 lack Exp $
 
 EAPI=2
 
-NEED_PYTHON="2.3"
+PYTHON_DEPEND="2:2.4"
 inherit python eutils multilib
 
 MY_PN="rox-lib2"
