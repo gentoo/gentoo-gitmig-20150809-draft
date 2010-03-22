@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ganyremote-5.11.3.ebuild,v 1.1 2010/03/21 21:19:07 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ganyremote-5.11.3-r1.ebuild,v 1.1 2010/03/22 04:55:42 serkan Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="bluetooth"
 
 DEPEND="app-mobilephone/anyremote[bluetooth=]
 	dev-python/pygtk
-	dev-python/pybluez"
+	bluetooth? ( dev-python/pybluez )"
 RDEPEND="${DEPEND}"
 
 src_install() {
