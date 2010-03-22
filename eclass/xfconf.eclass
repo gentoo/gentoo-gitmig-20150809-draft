@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.8 2010/03/22 15:53:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.9 2010/03/22 16:29:27 grobian Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -82,7 +82,7 @@ xfconf_src_prepare() {
 	fi
 
 	if [[ "${EAUTORECONF}" == "yes" ]]; then
-		has "${EAPI:-0}" 0 1 2 && EPREFIX=
+		has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 		AT_M4DIR="${EPREFIX}/usr/share/xfce4/dev-tools/m4macros" eautoreconf
 	else
 		elibtoolize
