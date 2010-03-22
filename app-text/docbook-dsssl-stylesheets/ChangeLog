@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.40 2008/07/04 08:49:24 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.41 2010/03/22 20:16:26 grobian Exp $
+
+  22 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  docbook-dsssl-stylesheets-1.79.ebuild:
+  Bump to EAPI=3 for Prefix support, transferred Prefix keywords
 
   04 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org>
   docbook-dsssl-stylesheets-1.77-r2.ebuild,
