@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5426 2010/03/22 05:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5427 2010/03/22 08:27:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1698,7 +1698,6 @@ media-plugins/gst-plugins-meta:mythtv - Support for retrieval from media-tv/myth
 media-plugins/kipi-plugins:mjpeg - Add mjpeg support
 media-plugins/kipi-plugins:redeyes - Add redeyes removal support
 media-plugins/mythmusic:libvisual - Enables media-libs/libvisual support for effects
-media-plugins/mythphone:festival - Enable app-accessibility/festival support
 media-plugins/mythvideo:jamu - Use and configure the Just Another Metadata Utility by default
 media-plugins/mythzoneminder:minimal - Don't build the mythtv side of this plugin, only the part that communicates with zoneminder. 
 media-plugins/vdr-burn:projectx - Enables support for media-video/projectx
@@ -1889,7 +1888,6 @@ media-tv/mythtv:jack - Allows MythTV to use JACK as your sound output device. Yo
 media-tv/mythtv:lcd - Tells MythTV that you have an instance of app-misc/lcdproc configured on your machine and it should output information such as current time, show name, episode name, etc to that LCD.
 media-tv/mythtv:lirc - Adds LIRC support directly to MythTV allowing for built in control via a LIRC device.
 media-tv/mythtv:mmx - Builds ffmpeg's codec libraries with mmx support.
-media-tv/mythtv:opengl - Builds MythTV with support for using OpenGL as the output painter rather then Qt3 built in painter.
 media-tv/mythtv:perl - Builds the perl bindings for MythTV. Allows you to write scripts in Perl to control your MythTV setup or communicate with it.
 media-tv/mythtv:tiff - Add support for tiff loading and rendering which is only used by media-plugins/mythgallery
 media-tv/mythtv:vdpau - enable support of NVIDIA's VDPAU for video playback
