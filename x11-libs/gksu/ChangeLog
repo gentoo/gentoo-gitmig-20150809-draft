@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.57 2009/10/12 22:47:35 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.58 2010/03/22 17:44:18 pacho Exp $
+
+  22 Mar 2010; Pacho Ramos <pacho@gentoo.org> gksu-2.0.2.ebuild:
+  Set GCONF_DEBUG=no, bug 263406
 
   13 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org -gksu-2.0.0.ebuild,
   -gksu-2.0.0-r2.ebuild, -files/gksu-2.0.0-new-nautilus.patch:
