@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11383 2010/03/22 08:39:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11384 2010/03/22 15:32:22 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (22 Mar 2010)
+# QA: removal on 22. 5. 2010
+# Masked for removal due to major packaging issues
+# that were not addressed by maintainers in timely
+# manner. See bug #150091.
+app-forensics/samhain
 
 # Alistair Bush <ali_bush@gentoo.org> (22 Mar 2010)
 # Masked due to producing build failures in stable
