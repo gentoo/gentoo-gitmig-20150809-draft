@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.27 2010/02/16 00:49:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.28 2010/03/22 18:55:42 mr_bones_ Exp $
+
+  22 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> glest-3.2.2.ebuild:
+  clean up install and install tutorial (bug #285680)
 
   16 Feb 2010; Michael Sterrett <mr_bones_@gentoo.org> glest-3.2.2.ebuild:
   games goes last on the inherit line

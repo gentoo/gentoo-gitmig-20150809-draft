@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.6 2010/02/16 01:00:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.7 2010/03/22 18:55:42 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils wxwidgets games
@@ -8,11 +8,12 @@ inherit eutils wxwidgets games
 DESCRIPTION="Cross-platform 3D realtime strategy game"
 HOMEPAGE="http://www.glest.org/"
 SRC_URI="http://www.titusgames.de/${PN}-source-${PV}.tar.bz2
-	mirror://sourceforge/glest/${PN}_data_3.2.1.zip"
+	mirror://sourceforge/glest/${PN}_data_3.2.1.zip
+	mirror://gentoo/glest/${P}-tutorial.tar.bz2"
 
 LICENSE="GPL-2 glest-data"
 SLOT="0"
-KEYWORDS="~amd64 -ppc ~x86" # ppc: bug #145478
+KEYWORDS="~amd64 -ppc x86" # ppc: bug #145478
 IUSE="editor"
 
 RDEPEND="media-libs/libsdl[joystick,video]
@@ -51,6 +52,8 @@ src_prepare() {
 		-e 's:-O3 -DNDEBUG:-DNDEBUG:' \
 		Jamrules \
 		|| die "sed failed"
+
+	find "${WORKDIR}"/glest_game -name Thumbs.db -exec rm -f '{}' +
 }
 
 src_configure() {
@@ -83,7 +86,7 @@ src_install() {
 
 	cd "${WORKDIR}"/glest_game
 	doins -r servers.ini \
-		data maps scenarios techs tilesets || die "doins data failed"
+		data maps scenarios techs tilesets tutorials || die "doins data failed"
 	dodoc docs/readme.txt || die "dodoc docs/readme.txt failed"
 
 	newicon techs/magitech/factions/magic/units/archmage/images/archmage.bmp \
