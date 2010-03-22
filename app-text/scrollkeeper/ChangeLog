@@ -1,6 +1,10 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.94 2010/01/02 12:19:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.95 2010/03/22 18:57:39 grobian Exp $
+
+  22 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  scrollkeeper-9999-r1.ebuild:
+  Marked ~ppc-macos
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   scrollkeeper-9999-r1.ebuild:
