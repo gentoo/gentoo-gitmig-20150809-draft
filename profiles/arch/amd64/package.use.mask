@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.55 2010/02/03 11:05:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.56 2010/03/22 18:12:51 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -21,12 +21,11 @@
 # Samuli Suominen <ssuominen@gentoo.org> (02 Feb 2009)
 # esd, bug 301824
 # mp3, bug 283860, 299490
-# jpeg, bug 283089, 303255, 299149
 # capi, 292938
 # ghoto2, 286563
 # scanner, 299505
 # hal, 299149
-app-emulation/wine capi esd gphoto2 hal jpeg mp3 scanner
+app-emulation/wine capi esd gphoto2 hal mp3 scanner
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka closurecl) is only available on x86 and amd64

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.81 2010/03/16 09:26:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.82 2010/03/22 18:12:51 ssuominen Exp $
+
+  22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE="jpeg" for app-emulation/wine since emul- 20100220 is stable.
 
   16 Mar 2010; Vlastimil Babka <caster@gentoo.org> no-multilib/package.mask:
   Package move x11-misc/googleearth sci-geosciences/googleearth.
