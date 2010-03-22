@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.18.7-r1.ebuild,v 1.1 2010/03/11 14:52:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.18.9.ebuild,v 1.1 2010/03/22 20:25:00 pacho Exp $
 
 EAPI="2"
 
@@ -86,8 +86,8 @@ src_prepare() {
 	# add correct framework linking options, for aqua
 	epatch "${FILESDIR}/${PN}-2.18.5-macosx-aqua.patch"
 
-	# Fix chromium crash, bug 308985
-	epatch "${FILESDIR}/${PN}-2.18.7-destroy-crash.patch"
+	# Fix gtkentry setting its buffer to null on destroy, upstream bug 613241
+	epatch "${FILESDIR}/${PN}-2.18.9-notifications-gtkentry.patch"
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
