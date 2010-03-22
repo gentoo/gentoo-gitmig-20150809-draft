@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5422 2010/03/22 02:17:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5423 2010/03/22 02:39:07 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2413,10 +2413,6 @@ net-im/qutim:irc - Enable irc support
 net-im/qutim:mrim - Enable mrim plugin
 net-im/qutim:vkontakte - Enable vkontakte plugin
 net-im/qutim:yandexnarod - Enable yanderx.narod plugin
-net-im/sim:gpg - Enable gpg plugin to adds GnuPG encryption/decryption support for messages 
-net-im/sim:livejournal - Enable livejournal plugin to post in LiveJournal 
-net-im/sim:sms - Enable sms plugin
-net-im/sim:weather - Enable weather plugin to get weather data from weather.com and dispaly it 
 net-im/skype:qt-static - Installs binaries statically linked to Qt
 net-im/tkabber:extras - Enables extra non official patches
 net-im/tkabber:plugins - Enables installation the extra plugins
@@ -2847,8 +2843,6 @@ net-voip/telepathy-connection-managers:jabber - Enable XMPP protocol handler (th
 net-voip/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
 net-voip/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-voip/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
-net-voip/twinkle:ilbc - Enables use of ilbc (RFC3951) audio encoding
-net-voip/twinkle:zrtp - Enables use of secure rtp using the zrtp extension of GNU RTP stack developed by Phil Zimmermann 
 net-voip/yate:amrnb -  Enables Adaptive Multi-Rate Audio support (Narrow Band) 
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin
