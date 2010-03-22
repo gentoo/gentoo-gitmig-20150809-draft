@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5424 2010/03/22 02:49:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5425 2010/03/22 03:33:07 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1151,7 +1151,6 @@ games-engines/frobtads:tads3compiler - Build TADS3 compiler
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
-games-fps/darkplaces:dpmod - Sets up the darkplaces mod from icculus
 games-fps/darkplaces:lights - Install and setup the updated light maps
 games-fps/darkplaces:textures - Install and setup the updated textures
 games-fps/doom-data:doomsday - Add wrapper to run it within doomsday
