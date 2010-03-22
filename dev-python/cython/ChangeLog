@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.43 2010/03/10 15:37:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.44 2010/03/22 11:03:36 fauli Exp $
+
+  22 Mar 2010; Christian Faulhammer <fauli@gentoo.org> cython-0.12.1.ebuild:
+  stable x86, bug 308207
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org> cython-0.12.1.ebuild:
   Marked ppc/ppc64 stable for bug #308207.
