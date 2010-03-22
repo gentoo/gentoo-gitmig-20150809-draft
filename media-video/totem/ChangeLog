@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.276 2010/03/16 18:58:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.277 2010/03/22 13:39:09 nirbheek Exp $
+
+  22 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -files/totem-2.20.1-startup-notification.patch,
+  -files/totem-2.20.1-xpcom-hack.patch, -totem-2.20.3.ebuild:
+  Remove old vulnerable version of totem depending on vulnerable
+  seamonkey-1. Fixes bug 300450
 
   16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   totem-2.26.5-r1.ebuild:
