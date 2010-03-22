@@ -1,6 +1,9 @@
 # ChangeLog for media-video/SDLcam
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.13 2009/08/08 20:51:48 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.14 2010/03/22 14:23:16 phajdan.jr Exp $
+
+  22 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> SDLcam-0.8.2.ebuild:
+  x86 stable wrt bug #309021
 
   08 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> -SDLcam-0.8.0.ebuild,
   -SDLcam-0.8.1.ebuild:
