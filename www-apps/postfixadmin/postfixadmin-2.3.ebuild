@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.ebuild,v 1.1 2010/03/16 19:15:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.ebuild,v 1.2 2010/03/22 20:56:39 jlec Exp $
 
 inherit eutils webapp depend.php confutils
 
 DESCRIPTION="Web Based Management tool for Postfix style virtual domains and users."
-HOMEPAGE="http://high5.net/postfixadmin/"
+HOMEPAGE="http://postfixadmin.sourceforge.net"
 MY_P="${PN}_${PV}"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 RESTRICT="mirror"

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.16 2010/03/16 19:15:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.17 2010/03/22 20:56:39 jlec Exp $
+
+  22 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  postfixadmin-2.2.1.1.ebuild, postfixadmin-2.3.ebuild:
+  HOMEPAGE corrected, #310303
 
 *postfixadmin-2.3 (16 Mar 2010)
 
