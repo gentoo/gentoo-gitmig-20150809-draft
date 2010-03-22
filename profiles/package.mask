@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11382 2010/03/22 07:51:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11383 2010/03/22 08:39:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -304,31 +304,6 @@ net-im/naim
 # Removed in 60 days
 dev-lang/squeak
 
-# Ben de Groot <yngwin@gentoo.org> (01 Mar 2010)
-# Grand mask of qt:3 and remaining reverse dependencies
-# pending removal on 21 Mar 2010 (bug 283429)
-=x11-libs/qt-3*
-dev-db/qt-unixODBC
-=media-tv/mythtv-0.21*
-=x11-libs/qt-embedded-3*
-=x11-themes/mythtv-themes-0.21*
-=x11-themes/mythtv-themes-extra-0.21*
-=media-plugins/mytharchive-0.21*
-=media-plugins/mythbrowser-0.21*
-=media-plugins/mythcontrols-0.21*
-=media-plugins/mythflix-0.21*
-=media-plugins/mythgallery-0.21*
-=media-plugins/mythgame-0.21*
-=media-plugins/mythmovies-0.21*
-=media-plugins/mythmusic-0.21*
-=media-plugins/mythnews-0.21*
-=media-plugins/mythphone-0.21*
-=media-plugins/mythvideo-0.21*
-=media-plugins/mythweather-0.21*
-=media-plugins/mythzoneminder-0.21*
-=media-tv/nuvexport-0.5*
-=www-apps/mythweb-0.21*
-
 # Hans de Graaff <graaff@gentoo.org> (01 Mar 2010)
 # Several people reported memory and timeout issues. Masked
 # pending investigation.
@@ -380,14 +355,6 @@ dev-java/mojarra
 # by upstream. Annoying automount error messages on startup.
 =x11-libs/libfm-0.1*
 =x11-misc/pcmanfm-0.9*
-
-# Samuli Suominen <ssuominen@gentoo.org> (21 Feb 2010)
-# libkleo doesn't install required include files anymore,
-# because they are meant only for internal usage. this means
-# kopete-cryptography won't compile anymore, and as such,
-# will be removed from portage. bug 306199 and bug 306115.
-# masked for removal in 30 days
-kde-misc/kopete-cryptography
 
 # Pacho Ramos <pacho@gentoo.org> (21 Feb 2010)
 # Upstream is dead since years, doesn't compile against
