@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.67 2010/03/04 14:59:33 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.68 2010/03/22 02:28:03 yngwin Exp $
+
+  22 Mar 2010; Ben de Groot <yngwin@gentoo.org>
+  -mythtv-themes-0.21_p16505.ebuild:
+  Remove qt3 version, bug #283429
 
   04 Mar 2010; Richard Freeman <rich0@gentoo.org>
   mythtv-themes-0.22_p22869.ebuild:
