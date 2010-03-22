@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.96 2010/03/16 08:31:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.97 2010/03/22 19:20:54 robbat2 Exp $
+
+*pkgcore-0.5.11.3 (22 Mar 2010)
+
+  22 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +pkgcore-0.5.11.3.ebuild:
+  Another verbump for ferringb.
 
   16 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> -pkgcore-0.5.11.ebuild,
   -pkgcore-0.5.11.1.ebuild:
