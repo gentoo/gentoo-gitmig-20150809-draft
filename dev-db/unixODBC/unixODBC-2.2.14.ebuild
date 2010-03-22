@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.14.ebuild,v 1.1 2010/03/22 15:00:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.14.ebuild,v 1.2 2010/03/22 17:15:03 ssuominen Exp $
 
-EAPI=2
-inherit autotools eutils flag-o-matic multilib
+EAPI=3
+inherit autotools eutils flag-o-matic multilib prefix
 
 DESCRIPTION="A complete ODBC driver manager"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/unixodbc/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="static-libs qt4"
 
 RDEPEND=">=sys-libs/readline-6.0
@@ -31,6 +31,9 @@ src_prepare() {
 	rm -rf libltdl odbcinstQ4/m*.cpp
 
 	eautoreconf
+
+	cp "${FILESDIR}"/odbcinst.ini "${T}"
+	eprefixify "${T}"/odbcinst.ini
 }
 
 src_configure() {
@@ -42,12 +45,12 @@ src_configure() {
 	append-flags -fno-strict-aliasing
 
 	econf \
-		--sysconfdir=/etc/${PN} \
+		--sysconfdir="${EPREFIX}/etc/${PN}" \
 		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
 		--enable-fdb \
 		--enable-ltdllib \
-		--with-qt-libraries=/usr/$(get_libdir)/qt4 \
+		--with-qt-libraries="${EPREFIX}/usr/$(get_libdir)/qt4" \
 		${myconf}
 }
 
@@ -59,7 +62,7 @@ src_install() {
 
 	# http://cvs.fedoraproject.org/viewvc/rpms/unixODBC/devel/
 	insinto /etc/unixODBC
-	newins "${FILESDIR}"/odbcinst.ini odbcinst.ini.example
+	newins "${T}"/odbcinst.ini odbcinst.ini.example || die
 
 	if use qt4; then
 		newicon DataManager/LinuxODBC.xpm ${PN}.xpm
