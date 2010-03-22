@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/biosdisk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.7 2008/10/01 10:32:09 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.8 2010/03/22 18:14:42 jlec Exp $
+
+  22 Mar 2010; <justin@gentoo.org> biosdisk-0.65.ebuild,
+  biosdisk-0.75.2.ebuild:
+  Some QA, corrected dos2unix/unix2dos DEP, #310761
 
 *biosdisk-0.75.2 (01 Oct 2008)
 
