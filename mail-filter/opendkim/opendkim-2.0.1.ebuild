@@ -1,10 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-1.1.2.ebuild,v 1.2 2009/11/01 23:38:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.1.ebuild,v 1.1 2010/03/22 05:39:28 dragonheart Exp $
 
 EAPI="2"
 
 inherit eutils
+
+# for betas
+#MY_P=${P/_b/.B}
+#S=${WORKDIR}/${PN}-2.0.0
+#SRC_URI="mirror://sourceforge/opendkim/${MY_P}.tar.gz"
 
 DESCRIPTION="A milter-based application to provide DKIM signing and verification"
 HOMEPAGE="http://opendkim.org"
@@ -13,14 +18,20 @@ SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+db diffheaders asyncdns multiplesigs"
+IUSE="asyncdns +db opendbx ldap lua sasl unbound"
 
-# FUTURE: unbound (dnssec lib) - bug #223103
+# FUTURE: diffheaders (libtre error) - bug #296813
 
 DEPEND="dev-libs/openssl
 	db? ( >=sys-libs/db-3.2 )
 	|| ( mail-filter/libmilter mail-mta/sendmail )
-	diffheaders? ( dev-libs/tre )"
+	opendbx? ( >=dev-db/opendbx-1.4.0 )
+	lua? ( dev-lang/lua )
+	ldap? ( net-nds/openldap
+		sasl? ( dev-libs/cyrus-sasl )
+	)
+	unbound? ( >=net-dns/unbound-1.4.1 )"
+#	diffheaders? ( dev-libs/tre )
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -32,52 +43,67 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-test73.patch
 	sed -i -e 's:/var/db/dkim:/etc/opendkim:g' \
 	       -e 's:/etc/mail:/etc/opendkim:g' \
 		   opendkim/opendkim.conf.sample
 }
 
 src_configure() {
-	econf $(use_enable db bodylengthdb) \
+	local conf
+	if use asyncdns ; then
+		if use unbound; then
+			conf=$(use_with unbound)
+		else
+			conf="$(use_enable asyncdns arlib) $(use_enable asyncdns dnsupgrade)"
+		fi
+	else
+		conf="$(use_with unbound) $(use_enable asyncdns arlib) $(use_enable asyncdns dnsupgrade)"
+	fi
+	if use ldap; then
+		conf="${conf} $(use_with sasl)"
+	fi
+	econf $(use_enable db bodylength_db) \
 		$(use_enable db popauth) \
-		$(use_enable db querycache) \
-		$(use_enable db reportintervals) \
+		$(use_enable db query_cache) \
+		$(use_enable db report_intervals) \
 		$(use_enable db stats) \
-		$(use_enable diffheaders) \
-		$(use_enable asyncdns arlib) \
-		$(use_enable asyncdns dnsupgrade) \
-		$(use_enable multiplesigs multiplesigs) \
+		$(use_with opendbx odbx) \
+		$(use_with lua) \
+		$(use_with ldap openldap) \
+		${conf} \
+		--docdir=/usr/share/doc/${PF} \
 		--without-domainkeys \
-		--enable-captureerrors \
-		--enable-dkimreputation \
-		--enable-identityheader \
+		--enable-capture_unknown_errors \
+		--enable-dkim_reputation \
+		--enable-identity_header \
 		--enable-redirect \
-		--enable-replacerules \
-		--enable-selectcanon \
-		--enable-selectorheader \
-		--enable-sendermacro \
+		--enable-resign \
+		--enable-replace_rules \
+		--enable-select_canonicalization \
+		--enable-selector_header \
+		--enable-sender_macro \
 		--enable-vbr \
 		--enable-ztags
+#		$(use_enable diffheaders) \
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
 	# file collision
 	rm "${D}"/usr/share/man/man3/ar.3
+	#mv "${D}"/usr/share/doc/opendkim "${D}"/usr/share/doc/${PF}
 
-	mv "${D}"/usr/share/doc/opendkim "${D}"/usr/share/doc/${PF}
 	newinitd "${FILESDIR}/opendkim.init" opendkim
 	dodir /etc/opendkim /var/run/opendkim /var/lib/opendkim
 	fowners milter:milter /var/run/opendkim /etc/opendkim /var/lib/opendkim
 
 	# default configuration
-	if [ ! -f /etc/opendkim/opendkim.conf ]; then
+	if [ ! -f "${ROOT}"/etc/opendkim/opendkim.conf ]; then
 		grep ^[^#] "${S}"/opendkim/opendkim.conf.sample \
 			> "${D}"/etc/opendkim/opendkim.conf
 		echo \# Socket local:/var/run/opendkim/opendkim.sock >> \
 			"${D}"/etc/opendkim/opendkim.conf
-		echo UserID milter >> "${D}"/etc/opendkim/opendkim.conf
+		echo UserID milter >> "${D}"/etc/opendkim/opendkim.conf.basic
 		if use db; then
 			echo Statistics /var/lib/opendkim/stats.db >> \
 				"${D}"/etc/opendkim/opendkim.conf
@@ -121,7 +147,7 @@ pkg_config() {
 
 		# generate the private and public keys
 		opendkim-genkey.sh -b ${keysize} -D "${ROOT}"etc/opendkim/ \
-			-s ${selector} && \
+			-s ${selector} -d '(your domain)' && \
 			chown milter:milter \
 			"${ROOT}"etc/opendkim/"${selector}".private || \
 				{ eerror "Failed to create private and public keys." ; return 1; }
@@ -130,7 +156,7 @@ pkg_config() {
 
 	# opendkim selector configuration
 	echo
-	einfo "Make sure you have the following settings in your dkim-filter.conf:"
+	einfo "Make sure you have the following settings in your /etc/opendkim/opendkim.conf:"
 	einfo "  Keyfile /etc/opendkim/${selector}.private"
 	einfo "  Selector ${selector}"
 

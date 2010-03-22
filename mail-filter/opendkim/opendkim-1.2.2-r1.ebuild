@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-1.2.2-r1.ebuild,v 1.1 2010/01/21 01:53:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-1.2.2-r1.ebuild,v 1.2 2010/03/22 05:39:28 dragonheart Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A milter-based application to provide DKIM signing and verification
 HOMEPAGE="http://opendkim.org"
 SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 
-LICENSE="Sendmail-Open-Source BSD"
+LICENSE="Sendmail-Open-Source BSD-4"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+db asyncdns opendbx unbound"
