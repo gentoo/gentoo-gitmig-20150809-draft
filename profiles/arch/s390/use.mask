@@ -25,7 +25,6 @@ bluetooth
 dell
 pcmcia
 cdr
-qt3
 qt4
 gpm
 3dfx

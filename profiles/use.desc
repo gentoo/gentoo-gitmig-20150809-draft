@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.435 2010/02/19 04:52:55 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.436 2010/03/22 08:58:35 ssuominen Exp $
 
 # Keep them sorted
 
@@ -291,7 +291,6 @@ pulseaudio - Adds support for PulseAudio sound server
 python - Adds support/bindings for the Python language
 qdbm - Adds support for the qdbm (Quick Database Manager) library
 qmail-spp - Adds support for qmail SMTP plugins
-qt3 - Adds support for the Qt GUI/Application Toolkit version 3.x
 qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
 quicktime - Adds support for OpenQuickTime
 radius - Adds support for RADIUS authentication

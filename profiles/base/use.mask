@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.98 2010/03/07 17:53:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.99 2010/03/22 08:58:39 ssuominen Exp $
 
 # These need libieee1284 which is amd64/x86 only.
 sane_backends_canon_pp
@@ -260,7 +260,3 @@ ruby_targets_jruby
 # introspection is not mature yet. 
 # gir-repository especially is a big pile of junk
 introspection
-
-# Ben de Groot <yngwin@gentoo.org> (01 Mar 2010)
-# x11-libs/qt:3 mask/removal bug 283429
-qt3

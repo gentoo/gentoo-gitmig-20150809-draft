@@ -50,7 +50,6 @@ scanner
 gphoto2
 mythtv
 dvb
-qt3
 qt4
 kde
 diet

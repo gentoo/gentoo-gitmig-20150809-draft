@@ -72,7 +72,6 @@ cupsddk
 gphoto2
 mythtv
 dvb
-qt3
 afs
 mono
 pike

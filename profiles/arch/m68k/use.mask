@@ -29,7 +29,6 @@ ldap
 slang
 diet
 gtk
-qt3
 qt4
 mono
 python
