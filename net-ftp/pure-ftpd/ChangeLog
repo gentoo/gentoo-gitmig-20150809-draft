@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.87 2010/03/21 13:19:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.88 2010/03/22 19:41:45 voyageur Exp $
+
+  22 Mar 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  pure-ftpd-1.0.29.ebuild, files/pure-ftpd.rc7, +files/pure-ftpd.rc8:
+  Revert rc7 init script changes for 1.0.28 stable request, create rc8 for
+  1.0.29, spotted by Polynomial-C
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> pure-ftpd-1.0.28.ebuild:
   Marking pure-ftpd-1.0.28 ppc64 for bug 296166
