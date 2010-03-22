@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.4.3_beta.ebuild,v 1.4 2010/03/01 19:57:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.4.3_beta.ebuild,v 1.5 2010/03/22 19:07:10 robbat2 Exp $
 
 MY_EXTRAS_VER="20100201-0104Z"
 EAPI=2
@@ -155,6 +155,10 @@ src_test() {
 			done
 			;;
 		esac
+
+		use profiling && use community \
+		|| mysql_disable_test main.profiling \
+			"Profiling test needs profiling support"
 
 		# create directories because mysqladmin might right out of order
 		mkdir -p "${S}"/mysql-test/var-{ps,ns}{,/log}

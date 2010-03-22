@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.517 2010/03/12 18:50:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.518 2010/03/22 19:07:10 robbat2 Exp $
+
+  22 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.1.39-r1.ebuild,
+  mysql-5.1.44.ebuild, mysql-5.1.44-r1.ebuild, mysql-5.4.3_beta.ebuild,
+  mysql-5.5.1_alpha_pre2.ebuild:
+  Bug #224751: Fix false positive fail of the profiling tests.
 
   12 Mar 2010; Brent Baude <ranger@gentoo.org> mysql-5.0.83.ebuild:
   Marking mysql-5.0.83 ppc64 for bug 303747
