@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/librtas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.12 2010/02/01 15:48:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.13 2010/03/22 21:40:43 ranger Exp $
+
+  22 Mar 2010; Brent Baude <ranger@gentoo.org> librtas-1.3.5.ebuild:
+  Marking librtas-1.3.5 ppc and ppc64 stable
 
 *librtas-1.3.5 (01 Feb 2010)
 
