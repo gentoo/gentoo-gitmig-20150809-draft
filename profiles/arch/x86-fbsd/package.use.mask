@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.14 2009/11/26 08:47:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.15 2010/03/22 20:50:01 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2010)
+# xulrunner:1.9 and libgda:3 not keyworded, bug 282291
+dev-python/gnome-python-extras libgda xulrunner
 
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.
