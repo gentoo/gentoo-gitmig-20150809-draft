@@ -47,8 +47,6 @@
 	<flag name="lirc">Adds LIRC support directly to MythTV allowing for built in
 		control via a LIRC device.</flag>
 	<flag name="mmx">Builds ffmpeg's codec libraries with mmx support.</flag>
-	<flag name="opengl">Builds MythTV with support for using OpenGL as the
-		output painter rather then Qt3 built in painter.</flag>
 	<flag name="perl">Builds the perl bindings for MythTV. Allows you to write
 		scripts in Perl to control your MythTV setup or communicate with
 		it.</flag>
