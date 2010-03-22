@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.131 2010/03/12 23:13:21 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.132 2010/03/22 08:51:09 ssuominen Exp $
+
+  22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  wpa_supplicant-0.6.9.ebuild, wpa_supplicant-0.6.10.ebuild,
+  wpa_supplicant-9999.ebuild:
+  Remove USE="qt3" wrt #246932 by Yaroslav Gorbunov.
 
 *wpa_supplicant-0.6.10 (12 Mar 2010)
 
