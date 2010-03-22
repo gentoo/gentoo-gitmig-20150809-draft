@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.122 2010/03/19 08:53:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.123 2010/03/22 03:32:41 leio Exp $
+
+  22 Mar 2010; Mart Raudsepp <leio@gentoo.org>
+  -files/gst-plugins-base-0.10.22-CVE-2009-0586.patch:
+  Remove stale patch
 
   19 Mar 2010; Pacho Ramos <pacho@gentoo.org>
   gst-plugins-base-0.10.25.ebuild:
