@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28-r1.ebuild,v 1.6 2009/12/09 15:41:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28-r1.ebuild,v 1.7 2010/03/22 21:08:15 pacho Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=1.9
@@ -42,7 +42,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	# Backends are now mutually exclusive.
-	# we prefer xulrunner over webkit over seamonkey over gtkhtml
+	# we prefer xulrunner over webkit over gtkhtml
 	if use xulrunner ; then
 		G2CONF="${G2CONF} --enable-gecko"
 		G2CONF="${G2CONF} --with-gecko=libxul"
