@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/qucs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.23 2010/01/15 17:46:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.24 2010/03/22 02:22:34 yngwin Exp $
+
+  22 Mar 2010; Ben de Groot <yngwin@gentoo.org> -qucs-0.0.12.ebuild:
+  Remove qt3 versions wrt bug #283429 and #300043
 
 *qucs-0.0.15_p20100115 (15 Jan 2010)
 
