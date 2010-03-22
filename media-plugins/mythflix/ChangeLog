@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythflix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.27 2009/11/17 22:20:52 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.28 2010/03/22 02:33:33 yngwin Exp $
+
+  22 Mar 2010; Ben de Groot <yngwin@gentoo.org>
+  -mythflix-0.21_p19046.ebuild:
+  Remove qt3 version, bug #283429
 
   17 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   replace media-tv herd for MythTV
