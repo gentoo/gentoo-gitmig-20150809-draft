@@ -1,6 +1,16 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.52 2010/03/16 18:59:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.53 2010/03/22 22:03:15 eva Exp $
+
+  22 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-control-center-2.24.0.1.ebuild,
+  -gnome-control-center-2.24.0.1-r1.ebuild,
+  -gnome-control-center-2.24.0.1-r10.ebuild,
+  -files/gnome-control-center-2.24.0.1-capplet-help.patch,
+  -files/gnome-control-center-2.24.0.1-gnome-desktop-api.patch,
+  -files/gnome-control-center-2.24.0.1-hv-max.patch,
+  -files/gnome-control-center-2.24.0.1-libgnomeui.patch:
+  Clean up old revisions.
 
   16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   gnome-control-center-2.26.0-r1.ebuild:
