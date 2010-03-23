@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/dircproxy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.26 2009/08/30 13:24:36 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.27 2010/03/23 20:26:01 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> dircproxy-1.2.0_rc1.ebuild:
+  Marking dircproxy-1.2.0_rc1 ppc for bug 310429
 
 *dircproxy-1.2.0_rc1 (30 Aug 2009)
 
