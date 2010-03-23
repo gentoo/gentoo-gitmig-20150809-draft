@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/nouveau-drm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.8 2010/03/16 18:54:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.9 2010/03/23 19:43:37 chithanh Exp $
+
+  23 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  nouveau-drm-20100316.ebuild:
+  Warn against more kernel fb drivers, bug #310653
 
 *nouveau-drm-20100316 (16 Mar 2010)
 
