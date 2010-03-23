@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.50 2010/03/23 09:09:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.51 2010/03/23 09:11:39 tove Exp $
+
+  23 Mar 2010; Torsten Veller <tove@gentoo.org> -chrony-1.24.ebuild,
+  chrony-1.24-r1.ebuild:
+  Add stable x86 keyword again and cleanup
 
 *chrony-1.24-r1 (23 Mar 2010)
 
