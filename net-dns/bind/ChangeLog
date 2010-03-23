@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.262 2010/03/07 14:47:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.263 2010/03/23 19:40:57 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> bind-9.4.3_p5.ebuild:
+  Marking bind-9.4.3_p5 ppc for bug 301548
 
   07 Mar 2010; Markus Meier <maekke@gentoo.org> bind-9.4.3_p5.ebuild:
   amd64 stable, bug #301548
