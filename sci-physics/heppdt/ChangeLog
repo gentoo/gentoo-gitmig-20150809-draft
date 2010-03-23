@@ -1,0 +1,10 @@
+# ChangeLog for sci-physics/heppdt
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/heppdt/ChangeLog,v 1.1 2010/03/23 03:24:53 bicatali Exp $
+
+*heppdt-3.04.01 (23 Mar 2010)
+
+  23 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +heppdt-3.04.01.ebuild, +metadata.xml:
+  Initial import
+
