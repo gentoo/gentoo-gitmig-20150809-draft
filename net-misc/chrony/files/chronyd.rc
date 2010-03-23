@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/files/chronyd.rc,v 1.9 2009/11/16 14:28:14 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/files/chronyd.rc,v 1.10 2010/03/23 09:09:50 tove Exp $
 
 depend() {
 	need net
@@ -30,16 +30,20 @@ checkconfig() {
 		# know if it might be handy
 		PIDFILE=`awk '/^ *pidfile/{print $2}' "${CFGFILE}"`
 	fi
+	return 0
+}
 
+setxtrarg() {
 	if [ -c /dev/rtc ]; then
-		grep -q 'rtcfile' "${CFGFILE}" && ARGS="${ARGS} -s"
+		grep -q '^rtcfile' "${CFGFILE}" && ARGS="${ARGS} -s"
 	fi
-	grep -q 'dumponexit' "${CFGFILE}" && ARGS="${ARGS} -r"
+	grep -q '^dumponexit$' "${CFGFILE}" && ARGS="${ARGS} -r"
 	return 0
 }
 
 start() {
 	checkconfig || return $?
+	setxtrarg
 
 	[ -n "${PIDFILE}" ] || PIDFILE=/var/run/chronyd.pid
 
