@@ -1,6 +1,12 @@
 # ChangeLog for games-board/eboard
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.25 2009/06/18 01:48:47 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.26 2010/03/23 17:27:37 mr_bones_ Exp $
+
+*eboard-1.1.1-r1 (23 Mar 2010)
+
+  23 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +eboard-1.1.1-r1.ebuild:
+  apply Debian patch for bug #303399
 
   18 Jun 2009; Tristan Heaven <nyhm@gentoo.org> eboard-1.1.1.ebuild,
   +files/eboard-1.1.1-gcc44.patch:
