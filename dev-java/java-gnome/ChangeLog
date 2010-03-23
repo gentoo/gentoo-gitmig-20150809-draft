@@ -1,10 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.90 2010/03/20 15:44:20 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.91 2010/03/23 18:04:48 serkan Exp $
 
 *java-gnome-4.0.15 (20 Mar 2010)
 
-  20 Mar 2010; <firari@gentoo.org> -files/java-gnome-4.0.8-deprecated.patch,
+  20 Mar 2010; Serkan Kaba <serkan@gentoo.org> -files/java-gnome-4.0.8-deprecated.patch,
   -files/java-gnome-4.0.8-disable-doc-snapshots.patch,
   -files/java-gnome-4.0.9-crashfix.patch,
   -files/java-gnome-4.0.10-i18n-javadoc.patch, -java-gnome-4.0.12.ebuild,
