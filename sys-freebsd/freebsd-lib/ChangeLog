@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.85 2010/03/23 06:28:17 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.86 2010/03/23 11:24:11 the_paya Exp $
+
+  23 Mar 2010; Javier Villavicencio <the_paya@gentoo.org>
+  freebsd-lib-8.0.ebuild:
+  Add sandbox dep, as it's done on glibc, so that it gets pulled during
+  stage builds.
 
   23 Mar 2010; Javier Villavicencio <the_paya@gentoo.org>
   freebsd-lib-8.0.ebuild, +files/freebsd-lib-8.0-rpcsec_gss.patch:
