@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.51 2010/03/22 13:30:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.52 2010/03/23 20:24:14 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> ltrace-0.5.3.1.ebuild:
+  stable ppc, bug 302471
 
   22 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ltrace-0.5.3.1.ebuild:
