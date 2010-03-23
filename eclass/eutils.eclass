@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.340 2010/03/07 03:00:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.341 2010/03/23 03:40:18 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -858,7 +858,7 @@ edos2unix() {
 # Great for making those icons in kde/gnome startmenu !
 # Amaze your friends !	Get the women !	 Join today !
 #
-# make_desktop_entry(<command>, [name], [icon], [type], [path])
+# make_desktop_entry(<command>, [name], [icon], [type], [fields])
 #
 # binary:	what command does the app run with ?
 # name:		the name that will show up in the menu
@@ -867,15 +867,15 @@ edos2unix() {
 #			a full path to an icon
 # type:		what kind of application is this ?	for categories:
 #			http://standards.freedesktop.org/menu-spec/latest/apa.html
-# path:		if your app needs to startup in a specific dir
+# fields:	extra fields to append to the desktop file; a printf string
 make_desktop_entry() {
-	[[ -z $1 ]] && eerror "make_desktop_entry: You must specify the executable" && return 1
+	[[ -z $1 ]] && die "make_desktop_entry: You must specify the executable"
 
 	local exec=${1}
 	local name=${2:-${PN}}
 	local icon=${3:-${PN}}
 	local type=${4}
-	local path=${5}
+	local fields=${5}
 
 	if [[ -z ${type} ]] ; then
 		local catmaj=${CATEGORY%%-*}
@@ -1028,7 +1028,12 @@ make_desktop_entry() {
 	Categories=${type}
 	EOF
 
-	[[ ${path} ]] && echo "Path=${path}" >> "${desktop}"
+	if [[ ${fields:-=} != *=* ]] ; then
+		# 5th arg used to be value to Path=
+		ewarn "make_desktop_entry: update your 5th arg to read Path=${fields}"
+		fields="Path=${fields}"
+	fi
+	[[ -n ${fields} ]] && printf "${fields}\n" >> "${desktop}"
 
 	(
 		# wrap the env here so that the 'insinto' call
