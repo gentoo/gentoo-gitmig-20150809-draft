@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/GStreamer-Interfaces
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer-Interfaces/ChangeLog,v 1.4 2008/07/02 21:37:24 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer-Interfaces/ChangeLog,v 1.5 2010/03/23 07:41:23 tove Exp $
+
+*GStreamer-Interfaces-0.06 (23 Mar 2010)
+
+  23 Mar 2010; Torsten Veller <tove@gentoo.org>
+  +GStreamer-Interfaces-0.06.ebuild:
+  Version bump. Fix LICENSE. Run tests
 
   02 Jul 2008; Samuli Suominen <drac@gentoo.org>
   GStreamer-Interfaces-0.04.ebuild:
