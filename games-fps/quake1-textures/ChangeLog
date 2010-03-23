@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake1-textures
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.5 2007/03/12 14:49:51 genone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.6 2010/03/23 11:21:57 tupone Exp $
+
+  23 Mar 2010; Alfredo Tupone <tupone@gentoo.org>
+  quake1-textures-20050820.ebuild:
+  app-arch/unrar-gpl does not work on this textures. Bug #310731 by
+  flameeyes@gentoo.org
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org>
   quake1-textures-20040716.ebuild, quake1-textures-20050820.ebuild:
