@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.245 2010/03/15 00:21:50 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.246 2010/03/23 20:20:56 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> busybox-1.15.3.ebuild:
+  stable ppc, bug 305619
 
   15 Mar 2010; <solar@gentoo.org> busybox-1.16.0.ebuild, +files/mdev/dvbdev,
   +files/mdev/ide_links, +files/mdev/usbdev, +files/mdev/usbdisk_link,
