@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/bowtie-0.9.9.2.ebuild,v 1.1 2009/05/02 23:48:39 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/bowtie-0.12.3.ebuild,v 1.1 2010/03/23 07:20:14 weaver Exp $
 
 EAPI="2"
 
@@ -17,6 +17,7 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 
 # NB: Bundles code from Maq (http://maq.sf.net) and the SeqAn library (http://www.seqan.de)
+# TODO: properly report system CFLAGS in -DCOMPILE_OPTIONS
 
 src_prepare() {
 	sed -i 's/$(CXX) $(RELEASE_FLAGS)/$(CXX) $(CXXFLAGS) $(RELEASE_FLAGS)/' "${S}/Makefile" || die
@@ -24,6 +25,8 @@ src_prepare() {
 
 src_install() {
 	dobin bowtie bowtie-* || die
+	exeinto /usr/share/${PN}/scripts
+	doexe scripts/* || die
 	newman MANUAL bowtie.1
 	dodoc AUTHORS NEWS TUTORIAL
 }
