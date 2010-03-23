@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dclib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.114 2010/01/16 19:04:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dclib/ChangeLog,v 1.115 2010/03/23 10:38:10 ssuominen Exp $
+
+  23 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> dclib-0.3.23.ebuild,
+  +files/dclib-0.3.23-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #282426 by Kacper Kowalik. Fix
+  missing USE="socks5" and USE="ssl" wrt #285661 by Andreis Vinogradovs.
 
   16 Jan 2010; Raúl Porcel <armin76@gentoo.org> dclib-0.3.13.ebuild,
   dclib-0.3.18.ebuild, dclib-0.3.23.ebuild:
