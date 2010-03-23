@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.17 2010/01/08 04:41:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.18 2010/03/23 03:35:58 bicatali Exp $
+
+*pythia-8.1.35 (23 Mar 2010)
+
+  23 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +pythia-8.1.35.ebuild:
+  Version bump
 
   08 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> pythia-8.1.30.ebuild:
   Reduce the number of tests, closing bug #297512
