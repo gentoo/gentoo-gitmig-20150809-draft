@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.2.4-r1.ebuild,v 1.9 2008/12/14 22:40:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.2.4-r1.ebuild,v 1.10 2010/03/23 14:00:43 pacho Exp $
 
 inherit eutils
 
-DESCRIPTION="The Link Grammar Parser is a syntactic parser of English, based on
-link grammar, an original theory of English syntax."
-HOMEPAGE="http://bobo.link.cs.cmu.edu/link/"
+DESCRIPTION="Link Grammar Parser is a syntactic English parser based on
+link grammar."
+HOMEPAGE="http://www.link.cs.cmu.edu/link/"
 SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="as-is"
