@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.31 2010/03/07 20:42:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.32 2010/03/23 14:42:55 lack Exp $
 
 # ROX eclass Version 3
 
@@ -104,50 +104,6 @@ expandmime() {
 	IFS=$old_IFS
 }
 
-# Creates a .desktop file for this rox application
-# (Adapted from eutils::make_desktop_entry)
-#
-# rox_desktop_entry <exec> <name> <icon> <type> [<extra> ...]
-#  exec - The executable to run
-#  name - The name to display
-#  icon - The icon file to display
-#  Any other arguments will be appended verbatim to the desktop file.
-#
-# The name of the desktop file will be ${exec}.desktop
-#
-rox_desktop_entry() {
-	# Coppied from etuils:make_desktop_entry
-	local exec=${1}; shift
-	local name=${1}; shift
-	local icon=${1}; shift
-	local type=${1}; shift
-
-	local desktop="${exec}.desktop"
-
-	cat <<-EOF > "${desktop}"
-	[Desktop Entry]
-	Name=${name}
-	Type=Application
-	Comment=${DESCRIPTION}
-	Exec=${exec}
-	TryExec=${exec%% *}
-	Icon=${icon}
-	Categories=${type};
-	EOF
-
-	local extra=${1}; shift
-	while [[ "${extra}" ]]; do
-		echo "${extra}" >> "${desktop}"
-		extra=${1}; shift
-	done
-
-	# Subshell, so as to not pollute the caller's env.
-	(
-		insinto /usr/share/applications
-		doins "${desktop}"
-	)
-}
-
 #
 # Install the wrapper in /usr/bin for commandline execution
 #
@@ -226,7 +182,7 @@ rox_install_desktop() {
 			)
 		fi
 
-		rox_desktop_entry "${WRAPPERNAME}" "${APPNAME}" "${WRAPPERNAME}" \
+		make_desktop_entry "${WRAPPERNAME}" "${APPNAME}" "${WRAPPERNAME}" \
 			"${APPCATEGORY}" "MimeType=$(expandmime $APPMIME)"
 	fi
 }
