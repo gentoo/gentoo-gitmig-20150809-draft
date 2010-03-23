@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.67 2010/03/21 13:07:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.68 2010/03/23 20:49:54 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> mpc-0.19.ebuild:
+  Marking mpc-0.19 ppc for bug 309391
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> mpc-0.19.ebuild:
   Marking mpc-0.19 ppc64 for bug 309391
