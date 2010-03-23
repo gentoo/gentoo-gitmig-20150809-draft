@@ -6,6 +6,11 @@
 		<email>lu_zero@gentoo.org</email>
 	</maintainer>
 	<use>
+		<flag name='qt4'>
+			Install qt4 dependent optional tools (e.g Catalyst Control Panel)
+		</flag>
+	</use>
+	<use>
 		<flag name='modules'>Build the kernel modules</flag>
 	</use>
 </pkgmetadata>

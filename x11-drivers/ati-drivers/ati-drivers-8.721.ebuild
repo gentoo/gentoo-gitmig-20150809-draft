@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.721.ebuild,v 1.1 2010/03/21 12:42:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.721.ebuild,v 1.2 2010/03/23 23:15:28 lu_zero Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ else
 	SRC_URI="https://launchpad.net/ubuntu/lucid/+source/fglrx-installer/2:${PV}-0ubuntu2/+files/fglrx-installer_${PV}.orig.tar.gz"
 	FOLDER_PREFIX=""
 fi
-IUSE="debug +modules multilib"
+IUSE="debug +modules multilib qt4"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
@@ -30,6 +30,7 @@ RDEPEND="
 	>=app-admin/eselect-opengl-1.0.7
 	sys-power/acpid
 	x11-apps/xauth
+	qt4? ( x11-libs/qt-gui )
 	>=x11-base/xorg-server-1.7
 	!<x11-base/xorg-server-1.7
 	x11-libs/libXinerama
@@ -239,6 +240,9 @@ src_prepare() {
 		"${ARCH_DIR}"/usr/X11R6/${PKG_LIBDIR}/libfglrx_gamma* \
 		|| die "bin rm failed"
 
+	# in this version amdcccle isn't static, thus we depend on qt4
+	use qt4 || rm "${ARCH_DIR}"/usr/X11R6/bin/amdcccle
+
 	# ACPI fixups
 	sed -i \
 		-e "s:/var/lib/xdm/authdir/authfiles/:/var/run/xauth/:" \
@@ -407,15 +411,15 @@ src_install() {
 	# Just the atigetsysteminfo.sh script.
 	into /usr
 	dosbin ${FOLDER_PREFIX}usr/sbin/* || die
-
-	# data files for the control panel.
-	insinto /usr/share
-	doins -r ${FOLDER_PREFIX}usr/share/ati || die
-	insinto /usr/share/pixmaps
-	doins ${FOLDER_PREFIX}usr/share/icons/ccc_large.xpm || die
-	make_desktop_entry amdcccle 'ATI Catalyst Control Center' \
-		ccc_large System
-
+	if use qt4; then
+		# data files for the control panel.
+		insinto /usr/share
+		doins -r ${FOLDER_PREFIX}usr/share/ati || die
+		insinto /usr/share/pixmaps
+		doins ${FOLDER_PREFIX}usr/share/icons/ccc_large.xpm || die
+		make_desktop_entry amdcccle 'ATI Catalyst Control Center' \
+			ccc_large System
+	fi
 	# doc.
 	dohtml -r ${FOLDER_PREFIX}usr/share/doc/fglrx || die
 

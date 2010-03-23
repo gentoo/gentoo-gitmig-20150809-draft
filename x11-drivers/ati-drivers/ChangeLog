@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.210 2010/03/21 12:42:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.211 2010/03/23 23:15:28 lu_zero Exp $
+
+  23 Mar 2010; Luca Barbato <lu_zero@gentoo.org> metadata.xml,
+  ati-drivers-8.721.ebuild:
+  Make amdcccle optional in the beta ebuild, thanks to Enrico again for the
+  proposed patch
 
 *ati-drivers-8.721 (21 Mar 2010)
 
