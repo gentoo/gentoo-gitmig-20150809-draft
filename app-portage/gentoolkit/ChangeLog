@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.183 2010/03/12 20:19:12 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.184 2010/03/23 12:49:09 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> gentoolkit-0.2.4.6.1.ebuild:
+  Marking gentoolkit-0.2.4.6.1 ppc64 for bug 305793
 
   12 Mar 2010; Paul Varner <fuzzyray@gentoo.org> gentoolkit-9999.ebuild:
   Update gentoolkit-9999 to support the python3 ABI
