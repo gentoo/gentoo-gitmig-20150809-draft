@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p22824-r1.ebuild,v 1.3 2010/03/09 11:51:44 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_p22824-r1.ebuild,v 1.4 2010/03/23 03:43:52 vapier Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -237,9 +237,9 @@ src_install() {
 
 	# create desktop entry for mythfrontend
 	make_desktop_entry /usr/bin/mythfrontend "MythFrontend" mythtv \
-		"AudioVideo;TV;" "/etc/mythtv/"
+		"AudioVideo;TV;" "Path=/etc/mythtv/"
 	make_desktop_entry /usr/bin/mythtv-setup "MythTV Setup" mythtv.png \
-		"AudioVideo;TV;" "/etc/mythtv/"
+		"AudioVideo;TV;" "Path=/etc/mythtv/"
 
 	if use autostart; then
 		dodir /etc/env.d/

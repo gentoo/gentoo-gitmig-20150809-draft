@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.314 2010/03/22 02:11:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.315 2010/03/23 03:43:52 vapier Exp $
+
+  23 Mar 2010; Mike Frysinger <vapier@gentoo.org>
+  mythtv-0.22_p22824-r1.ebuild, mythtv-0.22_p22860.ebuild,
+  mythtv-0.22_p23069.ebuild, mythtv-0.23_alpha22857.ebuild:
+  Update make_desktop_entry usage with the 5th arg #310763 by Jim Ramsay.
 
   22 Mar 2010; Ben de Groot <yngwin@gentoo.org>
   -mythtv-0.21_p19961-r2.ebuild, -mythtv-0.21_p20877.ebuild:
