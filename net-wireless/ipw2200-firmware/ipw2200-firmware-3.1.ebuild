@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-3.1.ebuild,v 1.1 2009/05/05 16:43:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ipw2200-firmware-3.1.ebuild,v 1.2 2010/03/23 13:59:56 fauli Exp $
 
 MY_P=${P/firmware/fw}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SRC_URI="http://www.bughost.org/firmware/${MY_P}.tgz"
 
 LICENSE="ipw2200-fw"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE=""
 DEPEND=""
