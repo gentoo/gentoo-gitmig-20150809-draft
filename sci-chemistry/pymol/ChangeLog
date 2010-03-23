@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.59 2010/03/11 14:19:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.60 2010/03/23 13:54:53 fauli Exp $
+
+  23 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  pymol-1.2.3-r1.ebuild:
+  stable x86, bug 309007
 
   11 Mar 2010; Joseph Jezak <josejx@gentoo.org> pymol-1.2.2-r4.ebuild,
   pymol-1.2.3-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol-apbs-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/ChangeLog,v 1.5 2010/03/11 14:18:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/ChangeLog,v 1.6 2010/03/23 13:53:50 fauli Exp $
+
+  23 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  pymol-apbs-plugin-0_p15.ebuild:
+  stable x86, bug 309007
 
   11 Mar 2010; Joseph Jezak <josejx@gentoo.org>
   pymol-apbs-plugin-0_p15.ebuild:
