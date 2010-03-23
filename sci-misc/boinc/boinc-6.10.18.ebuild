@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.18.ebuild,v 1.4 2010/03/05 14:56:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.18.ebuild,v 1.5 2010/03/23 03:41:05 vapier Exp $
 
 EAPI="2"
 
@@ -93,7 +93,7 @@ src_install() {
 
 	if use X; then
 		newicon "${S}"/packages/generic/sea/${PN}mgr.48x48.png ${PN}.png || die
-		make_desktop_entry boincmgr "${PN}" "${PN}" "Math;Science" /var/lib/${PN}
+		make_desktop_entry boincmgr "${PN}" "${PN}" "Math;Science" "Path=/var/lib/${PN}"
 	fi
 
 	# cleanup cruft
