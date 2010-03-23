@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.3.2.ebuild,v 1.1 2010/03/23 19:09:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.3.2.ebuild,v 1.2 2010/03/23 20:35:11 yngwin Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -30,7 +30,7 @@ src_prepare() {
 src_install() {
 	cmake-utils_src_install
 	newicon "${S}"/res/images/idle.png wally.png || die
-	make_desktop_entry wally Wally wally "Graphics;Qt" || die
+	make_desktop_entry wally Wally wally "Graphics;Qt"
 }
 
 pkg_postinst() {
