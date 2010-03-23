@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/indent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.47 2010/03/23 03:50:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.48 2010/03/23 16:46:22 jer Exp $
+
+  23 Mar 2010; Jeroen Roovers <jer@gentoo.org> indent-2.2.10-r1.ebuild,
+  indent-2.2.11.ebuild:
+  Depend on app-text/texi2html thanks to Leonid Podolny (bug #310833).
 
 *indent-2.2.11 (23 Mar 2010)
 
