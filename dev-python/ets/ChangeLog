@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ets
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.5 2009/09/15 05:12:29 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.6 2010/03/23 05:20:06 bicatali Exp $
+
+*ets-3.4.0 (21 Mar 2010)
+
+  21 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> +ets-3.4.0.ebuild:
+  Version bump
 
   15 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ets-3.3.0.ebuild:

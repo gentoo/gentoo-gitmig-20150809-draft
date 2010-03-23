@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.7 2010/03/15 03:10:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.8 2010/03/23 05:16:38 bicatali Exp $
+
+*traits-3.3.0 (20 Mar 2010)
+
+  20 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> +traits-3.3.0.ebuild:
+  Version bump
 
   15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> -traits-3.1.0.ebuild,
   traits-3.2.0.ebuild:

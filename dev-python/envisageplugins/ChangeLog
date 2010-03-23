@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/envisageplugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/ChangeLog,v 1.4 2010/03/20 15:02:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/ChangeLog,v 1.5 2010/03/23 05:13:25 bicatali Exp $
+
+*envisageplugins-3.1.2 (21 Mar 2010)
+
+  21 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +envisageplugins-3.1.2.ebuild:
+  Version bump
 
   20 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
   envisageplugins-3.1.1.ebuild:
