@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.9.ebuild,v 1.1 2010/01/28 18:44:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.9.ebuild,v 1.2 2010/03/23 12:49:04 ranger Exp $
 
 EAPI="2"
 inherit eutils gnome2 autotools
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/etherape/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2.0
