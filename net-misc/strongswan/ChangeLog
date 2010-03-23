@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.80 2010/03/16 18:37:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.81 2010/03/23 01:38:58 yngwin Exp $
+
+  23 Mar 2010; Ben de Groot <yngwin@gentoo.org> strongswan-4.3.6-r1.ebuild:
+  Fix directory ownership for '+non-root -caps'/'-non-root +caps'
+  installations and add docs. (Changes by Matthias Dahl.)
 
 *strongswan-4.3.6-r1 (16 Mar 2010)
 

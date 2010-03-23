@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.6-r1.ebuild,v 1.2 2010/03/16 19:30:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.6-r1.ebuild,v 1.3 2010/03/23 01:38:58 yngwin Exp $
 
 EAPI=2
 
@@ -91,11 +91,23 @@ src_configure() {
 }
 
 src_install() {
-	einstall || die "einstall failed."
+	einstall || die "einstall failed"
 
 	doinitd "${FILESDIR}"/ipsec
 
-	diropts -m 0750
+	local dir_ugid
+	if use non-root; then
+		fowners ${UGID}:${UGID} \
+			/etc/ipsec.conf \
+			/etc/ipsec.secrets \
+			/etc/strongswan.conf
+
+		dir_ugid="${UGID}"
+	else
+		dir_ugid="root"
+	fi
+
+	diropts -m 0750 -o ${dir_ugid} -g ${dir_ugid}
 	dodir /etc/ipsec.d \
 		/etc/ipsec.d/aacerts \
 		/etc/ipsec.d/acerts \
@@ -106,12 +118,7 @@ src_install() {
 		/etc/ipsec.d/private \
 		/etc/ipsec.d/reqs
 
-	if use caps; then
-		fowners ${UGID}:${UGID} \
-			/etc/ipsec.conf \
-			/etc/ipsec.secrets \
-			/etc/strongswan.conf
-	fi
+	dodoc CREDITS NEWS README TODO
 
 	# shared libs are used only internally and there are no static libs,
 	# so it's safe to get rid of the .la files
