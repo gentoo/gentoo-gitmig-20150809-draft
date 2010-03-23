@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.1 2010/03/14 12:29:26 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.2 2010/03/23 22:03:06 kolmodin Exp $
+
+  23 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> -darcs-1.0.5.ebuild,
+  -darcs-1.0.6.ebuild, -darcs-1.0.7.ebuild, -darcs-1.0.8-r2.ebuild:
+  Remove some of the old ebuilds for version 1.x.
 
   14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> +darcs-1.0.5.ebuild,
   +darcs-1.0.6.ebuild, +darcs-1.0.7.ebuild, +darcs-1.0.8-r2.ebuild,
