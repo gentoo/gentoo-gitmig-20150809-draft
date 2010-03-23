@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-4.0.0.0.ebuild,v 1.3 2009/11/13 22:15:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-4.0.0.0-r1.ebuild,v 1.1 2010/03/23 21:35:07 beandog Exp $
 
 EAPI=2
 inherit eutils fdo-mime rpm multilib gnome2-utils linux-mod
@@ -26,7 +26,7 @@ RESTRICT="strip mirror test"
 CONFIG_CHECK="~CHR_DEV_SG"
 QA_TEXTRELS="opt/nero/$(get_libdir)/nero/*"
 QA_EXECSTACK="opt/nero/$(get_libdir)/nero/*"
-S=${WORKDIR}
+S="${WORKDIR}"
 
 pkg_setup() {
 	check_license
@@ -54,6 +54,7 @@ src_install() {
 
 	make_wrapper nero ./nero /opt/nero /opt/${PN}/$(get_libdir)
 	make_wrapper nerocmd ./nerocmd /opt/nero /opt/nero/$(get_libdir)
+	make_wrapper neroexpress ./neroexpress /opt/nero /opt/nero/$(get_libdir)
 
 	# This is a ugly hack to fix burning in x86_64.
 	# http://club.cdfreaks.com/showthread.php?t=218041
