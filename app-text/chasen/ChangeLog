@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chasen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.39 2010/03/04 20:21:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.40 2010/03/23 20:38:02 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> chasen-2.4.4.ebuild:
+  Marking chasen-2.4.4 ppc for bug 305695
 
   04 Mar 2010; Raúl Porcel <armin76@gentoo.org> chasen-2.4.4.ebuild:
   sparc stable wrt #302323
