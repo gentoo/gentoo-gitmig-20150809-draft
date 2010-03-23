@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r2.ebuild,v 1.3 2010/03/14 17:48:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r2.ebuild,v 1.4 2010/03/23 12:47:47 ranger Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.7"
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${PN}-cvs-20050624.tar.gz"
 IUSE="gnome odbc static-libs"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND=">=dev-libs/glib-2
 	sys-libs/ncurses
