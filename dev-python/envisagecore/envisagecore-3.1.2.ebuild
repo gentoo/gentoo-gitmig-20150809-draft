@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.1.2.ebuild,v 1.1 2010/03/23 05:12:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.1.2.ebuild,v 1.2 2010/03/23 17:57:48 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -19,14 +19,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
-RDEPEND=">=dev-python/apptools-3.3.0
+RDEPEND=">=dev-python/apptools-3.3.1
 	>=dev-python/traits-3.3.0
 	>=dev-python/enthoughtbase-3.0.4"
 DEPEND="dev-python/setuptools
 	doc? ( dev-python/setupdocs )
 	test? ( >=dev-python/nose-0.10.3
-			>=dev-python/apptools-3.3.0
-			>=dev-python/enthoughtbase-3.0.3 )"
+			>=dev-python/apptools-3.3.1
+			>=dev-python/enthoughtbase-3.0.4 )"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
