@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.0.ebuild,v 1.1 2010/03/19 11:50:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.0.ebuild,v 1.2 2010/03/23 11:12:17 the_paya Exp $
 
 EAPI=2
 
@@ -85,6 +85,9 @@ src_prepare() {
 	else
 		dummy_mk mount_smbfs
 	fi
+	# Don't install mtree format manpage
+	# it's installed by libarchive.
+	sed -e "s: mtree.5::g" -i "${S}"/mtree/Makefile
 }
 
 src_install() {
