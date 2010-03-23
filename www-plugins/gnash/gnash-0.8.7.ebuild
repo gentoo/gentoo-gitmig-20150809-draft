@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.2 2010/03/17 23:35:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.3 2010/03/23 23:48:37 chithanh Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="false"
@@ -74,11 +74,17 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! ( use agg || use cairo || use opengl ); then
-		ewarn "You are trying to build Gnash without choosing a renderer [agg|cairo|opengl]."
-		has_version x11-libs/cairo && ewarn "cairo enabled as default" \
-			|| die "Please enable a renderer"
+		eerror "You are trying to build Gnash without choosing a renderer [agg|cairo|opengl]."
+		die "Please enable a renderer"
 	elif use agg && use cairo && use opengl; then
 		ewarn "You enabled 3 renderers, agg was chosen as default."
+	elif use !agg && use cairo; then
+		if use !gtk; then
+			eerror "Cairo backend needs gtk."
+			die "Please enable the gtk USE flag."
+		elif use opengl; then
+			ewarn "You enabled cairo and opengl, cairo was chosen as default."
+		fi
 	fi
 
 	if ! ( use kde || use gtk || use sdl ); then
@@ -251,12 +257,12 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
 pkg_postinst() {
-	if use !ffmpeg && use !gstreamer || use gstreamer && ( ! use gnome ); then
+	if use !gnome || use !gstreamer && use !ffmpeg ; then
 		ewarn ""
 		ewarn "Gnash was built without a media handler and or http handler !"
 		ewarn ""
 		ewarn "If you want Gnash to support video then you will need to"
-		ewarn "rebuild Gnash with either the ffmpeg or gstreamer use flags set."
+		ewarn "rebuild Gnash with either the ffmpeg or gstreamer and gnome use flags set."
 		ewarn ""
 	fi
 	ewarn "${PN} is still in heavy development"
