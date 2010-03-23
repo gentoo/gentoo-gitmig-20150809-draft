@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.1.ebuild,v 1.1 2010/03/23 05:18:31 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.1.ebuild,v 1.2 2010/03/23 13:55:00 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -30,8 +30,7 @@ src_install() {
 
 	python_execute_function metagen_install
 
-	python_generate_wrapper_scripts "${D}"/usr/bin/${PN} \
-		|| die 'python_generate_wrapper_scripts failed'
+	python_generate_wrapper_scripts "${D}"/usr/bin/${PN}
 
 	doman "docs/metagen.1"
 }
@@ -39,8 +38,7 @@ src_install() {
 src_test() {
 	einfo "Starting tests..."
 	testing() {
-		$(PYTHON) -c "from metagen import metagenerator; metagenerator.do_tests()" \
-			|| die "metagen tests failed"
+		$(PYTHON) -c "from metagen import metagenerator; metagenerator.do_tests()"
 	}
 	python_execute_function testing
 	einfo "Tests completed."
