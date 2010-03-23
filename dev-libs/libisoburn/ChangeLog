@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.36 2010/03/15 18:46:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.37 2010/03/23 16:05:50 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> libisoburn-0.5.0.ebuild:
+  Marking libisoburn-0.5.0 ppc64 stable for bug 309053
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> libisoburn-0.5.0.ebuild:
   ppc stable #309053

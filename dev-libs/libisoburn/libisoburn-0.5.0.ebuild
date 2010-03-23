@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.5.0.ebuild,v 1.2 2010/03/15 18:46:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.5.0.ebuild,v 1.3 2010/03/23 16:05:50 ranger Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ppc ppc64 ~x86"
 IUSE="acl external-filters external-filters-setuid readline xattr zlib"
 #IUSE="acl cdio external-filters external-filters-setuid readline xattr zlib"
 #Supports libcdio but needs version >=0.83 which is not yet released.
