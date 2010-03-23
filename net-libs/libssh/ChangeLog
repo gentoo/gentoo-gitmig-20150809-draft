@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.28 2010/03/21 16:05:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.29 2010/03/23 20:27:32 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> libssh-0.4.1.ebuild:
+  Marking libssh-0.4.1 ppc for bug 310017
 
   21 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> libssh-0.4.1.ebuild:
   x86 stable wrt bug #310017
