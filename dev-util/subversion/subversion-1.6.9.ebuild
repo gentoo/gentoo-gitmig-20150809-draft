@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.9.ebuild,v 1.6 2010/03/11 21:46:43 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.9.ebuild,v 1.7 2010/03/23 23:39:42 ranger Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://subversion.tigris.org/downloads/${P/_/-}.tar.bz2"
 
 LICENSE="Subversion"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="apache2 berkdb ctypes-python debug doc +dso emacs extras gnome-keyring java kde nls perl python ruby sasl test vim-syntax +webdav-neon webdav-serf"
 
 CDEPEND=">=dev-db/sqlite-3.4[threadsafe]
