@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.168 2010/03/19 14:36:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.169 2010/03/23 23:59:04 chainsaw Exp $
+
+*audacious-plugins-2.3_beta3 (23 Mar 2010)
+
+  23 Mar 2010; <chainsaw@gentoo.org> -audacious-plugins-2.3_beta2.ebuild,
+  +audacious-plugins-2.3_beta3.ebuild:
+  New beta, USF plugin now disabled by default. A dozen of free minor bug
+  fixes to boot.
 
 *audacious-plugins-2.3_beta2 (19 Mar 2010)
 

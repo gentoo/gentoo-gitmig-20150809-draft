@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.3_beta2.ebuild,v 1.1 2010/03/19 14:36:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.3_beta3.ebuild,v 1.1 2010/03/23 23:59:04 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
