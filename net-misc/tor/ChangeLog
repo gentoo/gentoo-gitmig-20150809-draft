@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.197 2010/03/23 22:46:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.198 2010/03/23 22:49:47 fauli Exp $
+
+  23 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  -tor-0.2.1.19-r2.ebuild, -files/tor-0.2.1.19-openssl.patch,
+  -tor-0.2.1.20-r1.ebuild, -tor-0.2.1.21.ebuild:
+  clean up
 
 *tor-0.2.1.25 (23 Mar 2010)
 
