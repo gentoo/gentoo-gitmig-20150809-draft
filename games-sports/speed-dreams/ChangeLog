@@ -1,0 +1,12 @@
+# ChangeLog for games-sports/speed-dreams
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.1 2010/03/23 16:01:02 ssuominen Exp $
+
+*speed-dreams-1.4.0_rc1 (23 Mar 2010)
+
+  23 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +speed-dreams-1.4.0_rc1.ebuild,
+  +files/speed-dreams-1.4.0_rc1-asneeded.patch:
+  Initial commit wrt #298182 by Kirin Yuri and Piotr Szymaniak with
+  -Wl,--as-needed patch by Kacper Kowalik.
+
