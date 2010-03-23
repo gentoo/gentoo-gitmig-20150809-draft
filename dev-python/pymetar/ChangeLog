@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymetar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.13 2010/02/07 16:54:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.14 2010/03/23 13:56:07 fauli Exp $
+
+  23 Mar 2010; Christian Faulhammer <fauli@gentoo.org> pymetar-0.16.ebuild:
+  stable x86, bug 309397
 
 *pymetar-0.16 (07 Feb 2010)
 
