@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5429 2010/03/23 15:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5430 2010/03/23 22:07:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3168,6 +3168,7 @@ sys-boot/lilo:device-mapper - Enable support for sys-fs/device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-cluster/charm:cmkopt - Enable CMK optimisation
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
+sys-cluster/corosync:nss - Enable NSS support for cryptography
 sys-cluster/gearmand:drizzle -  Support dev-db/libdrizzle for the queue storage. This also adds support for MySQL storage. 
 sys-cluster/gearmand:memcache -  Support memcache daemon (via dev-libs/libmemcached) for the queue storage. 
 sys-cluster/gearmand:tcmalloc -  Use the dev-util/google-perftools libraries to replace the malloc() implementation with a possibly faster one. 
