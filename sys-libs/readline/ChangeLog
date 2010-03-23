@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.152 2010/03/23 14:49:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.153 2010/03/23 20:42:06 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> readline-6.1.ebuild:
+  stable ppc, bug 310819
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> readline-6.1.ebuild:
   Marking readline-6.1 ppc64 for bug 310819
