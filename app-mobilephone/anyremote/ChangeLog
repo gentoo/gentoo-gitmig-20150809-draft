@@ -1,10 +1,14 @@
 # ChangeLog for app-mobilephone/anyremote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.1 2010/03/21 20:59:38 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.2 2010/03/23 18:00:29 serkan Exp $
+
+  23 Mar 2010; Serkan Kaba <serkan@gentoo.org> anyremote-5.1.1.ebuild,
+  anyremote-5.1.2.ebuild:
+  Fix my user. Add missing pkgconfig dependency. Fixes bug #310657
 
 *anyremote-5.1.2 (21 Mar 2010)
 
-  21 Mar 2010; <firari@gentoo.org> +anyremote-5.1.1.ebuild,
+  21 Mar 2010; Serkan Kaba <serkan@gentoo.org> +anyremote-5.1.1.ebuild,
   +anyremote-5.1.2.ebuild, +metadata.xml:
   Version bump. Remove old. Change herd and category.
 
