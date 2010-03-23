@@ -1,12 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.13 2010/03/21 19:18:39 grobian Exp $
-# $Id: package.mask,v 1.13 2010/03/21 19:18:39 grobian Exp $
-
-# Fabian Groffen <grobian@gentoo.org> (21 Mar 2010)
-# This one needs some testing before we can unleash it, feel welcome to
-# locally unmask!
-=sys-devel/binutils-apple-3.2-r1
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.14 2010/03/23 19:33:26 grobian Exp $
+# $Id: package.mask,v 1.14 2010/03/23 19:33:26 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (03 Feb 2010)
 # ld: duplicate symbol mylist<....> caused by implementation code in

@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.162 2010/03/22 09:04:30 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.163 2010/03/23 19:33:25 grobian Exp $
+
+  23 Mar 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Unmask binutils-apple-3.2-r1 sooner than expected, since it is the key to
+  solving problems on Snow Leopard
 
   22 Mar 2010; Markus Duft <mduft@gentoo.org> windows/interix/use.mask,
   windows/winnt/use.mask:
