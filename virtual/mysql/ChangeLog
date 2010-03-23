@@ -1,6 +1,10 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.13 2010/03/15 18:52:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.14 2010/03/23 14:48:06 darkside Exp $
+
+  23 Mar 2010; Jeremy Olexa <darkside@gentoo.org> mysql-5.0.ebuild,
+  mysql-5.1.ebuild, mysql-5.4.ebuild, mysql-5.5.ebuild:
+  Align prefix keywords to reality, bug 309627
 
   15 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.1.ebuild:
   Now with MariaDB included.
