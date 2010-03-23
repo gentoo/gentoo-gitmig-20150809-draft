@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.2.ebuild,v 1.1 2010/03/23 22:51:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.2.ebuild,v 1.2 2010/03/23 23:58:01 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -58,6 +58,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-xshm.patch
 	sed -i \
 		-e "s:/usr/local/lib/VICE:${GAMES_DATADIR}/${PN}:" \
 		man/vice.1 \
