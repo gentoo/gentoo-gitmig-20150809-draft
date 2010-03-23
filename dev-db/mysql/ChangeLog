@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.519 2010/03/23 14:43:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.520 2010/03/23 20:13:19 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> mysql-5.0.90-r2.ebuild:
+  Marking mysql-5.0.90-r2 ppc for bug 303747
 
   23 Mar 2010; Jeremy Olexa <darkside@gentoo.org> mysql-5.0.90-r2.ebuild:
   Add prefix kws as tested in the Gentoo Prefix overlay, bug 309627
