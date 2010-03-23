@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.180 2009/10/21 22:20:36 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.181 2010/03/23 16:02:36 darkside Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -22,7 +22,7 @@
 # -aqua -gtk -motif nextaw      NEXTAW
 # -aqua -gtk -motif -nextaw     ATHENA
 
-inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion
+inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion prefix
 
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
@@ -32,7 +32,7 @@ LICENSE="vim"
 case "${EAPI:-0}" in
 	0|1)
 		;;
-	2)
+	2|3)
 		HAS_SRC_PREPARE=1
 		HAS_USE_DEP=1
 		;;
@@ -247,6 +247,7 @@ vim_pkg_setup() {
 }
 
 vim_src_prepare() {
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 	if [[ ${PN##*-} == cvs ]] ; then
 		ECVS_SERVER="vim.cvs.sourceforge.net:/cvsroot/vim"
 		ECVS_PASS=""
@@ -291,15 +292,15 @@ vim_src_prepare() {
 	fi
 
 	# Fixup a script to use awk instead of nawk
-	sed -i '1s|.*|#!/usr/bin/awk -f|' "${S}"/runtime/tools/mve.awk \
+	sed -i '1s|.*|#!'"${EPREFIX}"'/usr/bin/awk -f|' "${S}"/runtime/tools/mve.awk \
 		|| die "mve.awk sed failed"
 
 	# Patch to build with ruby-1.8.0_pre5 and following
 	sed -i 's/defout/stdout/g' "${S}"/src/if_ruby.c
 
 	# Read vimrc and gvimrc from /etc/vim
-	echo '#define SYS_VIMRC_FILE "/etc/vim/vimrc"' >> "${S}"/src/feature.h
-	echo '#define SYS_GVIMRC_FILE "/etc/vim/gvimrc"' >> "${S}"/src/feature.h
+	echo '#define SYS_VIMRC_FILE "'${EPREFIX}'/etc/vim/vimrc"' >> "${S}"/src/feature.h
+	echo '#define SYS_GVIMRC_FILE "'${EPREFIX}'/etc/vim/gvimrc"' >> "${S}"/src/feature.h
 
 	# Use exuberant ctags which installs as /usr/bin/exuberant-ctags.
 	# Hopefully this pattern won't break for a while at least.
@@ -385,6 +386,7 @@ vim_src_configure() {
 		myconf="--with-features=tiny \
 			--enable-gui=no \
 			--without-x \
+			--disable-darwin \
 			--disable-perlinterp \
 			--disable-pythoninterp \
 			--disable-rubyinterp \
@@ -419,7 +421,7 @@ vim_src_configure() {
 		if [[ ${MY_PN} == vim ]] ; then
 			# don't test USE=X here ... see bug #19115
 			# but need to provide a way to link against X ... see bug #20093
-			myconf="${myconf} --enable-gui=no `use_with vim-with-x x`"
+			myconf="${myconf} --enable-gui=no --disable-darwin `use_with vim-with-x x`"
 
 		elif [[ ${MY_PN} == gvim ]] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
@@ -427,7 +429,7 @@ vim_src_configure() {
 			echo ; echo
 			if use aqua ; then
 				einfo "Building gvim with the Carbon GUI"
-				myconf="${myconf} --enable-gui=carbon"
+				myconf="${myconf} --enable-darwin --enable-gui=carbon"
 			elif use gtk ; then
 				myconf="${myconf} --enable-gtk2-check"
 				if use gnome ; then
@@ -469,6 +471,9 @@ vim_src_configure() {
 	# Let Portage do the stripping. Some people like that.
 	export ac_cv_prog_STRIP="$(type -P true ) faking strip"
 
+	# We have much more cooler tools in our prefix than /usr/local
+	use prefix && myconf="${myconf} --without-local-dir"
+
 	myconf="${myconf} --with-modified-by=Gentoo-${PVR}"
 	econf ${myconf} || die "vim configure failed"
 }
@@ -495,6 +500,8 @@ vim_src_compile() {
 }
 
 vim_src_install() {
+	has "${EAPI:-0}" 0 1 2 && use !prefix && EPREFIX=
+	has "${EAPI:-0}" 0 1 2 && use !prefix && ED="${D}"
 	local vimfiles=/usr/share/vim/vim${VIM_VERSION/.}
 
 	if [[ ${MY_PN} == "vim-core" ]] ; then
@@ -510,9 +517,9 @@ vim_src_install() {
 			install-languages \
 			install-icons \
 			DESTDIR=${D} \
-			BINDIR=/usr/bin \
-			MANDIR=/usr/share/man \
-			DATADIR=/usr/share \
+			BINDIR="${EPREFIX}"/usr/bin \
+			MANDIR="${EPREFIX}"/usr/share/man \
+			DATADIR="${EPREFIX}"/usr/share \
 			|| die "install failed"
 
 		keepdir ${vimfiles}/keymap
@@ -521,6 +528,7 @@ vim_src_install() {
 		# both vim and gvim
 		insinto /etc/vim/
 		newins "${FILESDIR}"/vimrc${VIMRC_FILE_SUFFIX} vimrc
+		eprefixify "${ED}"/etc/vim/vimrc
 
 		if use livecd ; then
 			# To save space, install only a subset of the files if we're on a
@@ -528,23 +536,23 @@ vim_src_install() {
 			einfo "Removing some files for a smaller livecd install ..."
 
 			shopt -s extglob
-			rm -fr "${D}${vimfiles}"/{compiler,doc,ftplugin,indent}
-			rm -fr "${D}${vimfiles}"/{macros,print,tools,tutor}
-			rm "${D}"/usr/bin/vimtutor
+			rm -fr "${ED}${vimfiles}"/{compiler,doc,ftplugin,indent}
+			rm -fr "${ED}${vimfiles}"/{macros,print,tools,tutor}
+			rm "${ED}"/usr/bin/vimtutor
 
 			local keep_colors="default"
-			ignore=$(rm -fr "${D}${vimfiles}"/colors/!(${keep_colors}).vim )
+			ignore=$(rm -fr "${ED}${vimfiles}"/colors/!(${keep_colors}).vim )
 
 			local keep_syntax="conf|crontab|fstab|inittab|resolv|sshdconfig"
 			# tinkering with the next line might make bad things happen ...
 			keep_syntax="${keep_syntax}|syntax|nosyntax|synload"
-			ignore=$(rm -fr "${D}${vimfiles}"/syntax/!(${keep_syntax}).vim )
+			ignore=$(rm -fr "${ED}${vimfiles}"/syntax/!(${keep_syntax}).vim )
 		fi
 
 		# These files might have slight security issues, so we won't
 		# install them. See bug #77841. We don't mind if these don't
 		# exist.
-		rm "${D}${vimfiles}"/tools/{vimspell.sh,tcltags}
+		rm "${ED}${vimfiles}"/tools/{vimspell.sh,tcltags}
 
 	elif [[ ${MY_PN} == gvim ]] ; then
 		dobin src/gvim
@@ -560,6 +568,7 @@ vim_src_install() {
 
 		insinto /etc/vim
 		newins "${FILESDIR}"/gvimrc${GVIMRC_FILE_SUFFIX} gvimrc
+		eprefixify "${ED}"/etc/vim/gvimrc
 
 		insinto /usr/share/applications
 		newins "${FILESDIR}"/gvim.desktop${GVIM_DESKTOP_SUFFIX} gvim.desktop
@@ -590,13 +599,14 @@ vim_src_install() {
 	fi
 	# We shouldn't be installing the ex or view man page symlinks, as they
 	# are managed by eselect-vi
-	rm -f "${D}"/usr/share/man/man1/{ex,view}.1
+	rm -f "${ED}"/usr/share/man/man1/{ex,view}.1
 }
 
 # Make convenience symlinks, hopefully without stepping on toes.  Some
 # of these links are "owned" by the vim ebuild when it is installed,
 # but they might be good for gvim as well (see bug 45828)
 update_vim_symlinks() {
+	has "${EAPI:-0}" 0 1 2 && use !prefix && EROOT="${ROOT}"
 	local f syms
 	syms="vimdiff rvim rview"
 	einfo "Calling eselect vi update..."
@@ -604,21 +614,21 @@ update_vim_symlinks() {
 	eselect vi update --if-unset
 
 	# Make or remove convenience symlink, vim -> gvim
-	if [[ -f "${ROOT}"/usr/bin/gvim ]]; then
-		ln -s gvim "${ROOT}"/usr/bin/vim 2>/dev/null
-	elif [[ -L "${ROOT}"/usr/bin/vim && ! -f "${ROOT}"/usr/bin/vim ]]; then
-		rm "${ROOT}"/usr/bin/vim
+	if [[ -f "${EROOT}"/usr/bin/gvim ]]; then
+		ln -s gvim "${EROOT}"/usr/bin/vim 2>/dev/null
+	elif [[ -L "${EROOT}"/usr/bin/vim && ! -f "${EROOT}"/usr/bin/vim ]]; then
+		rm "${EROOT}"/usr/bin/vim
 	fi
 
 	# Make or remove convenience symlinks to vim
-	if [[ -f "${ROOT}"/usr/bin/vim ]]; then
+	if [[ -f "${EROOT}"/usr/bin/vim ]]; then
 		for f in ${syms}; do
-			ln -s vim "${ROOT}"/usr/bin/${f} 2>/dev/null
+			ln -s vim "${EROOT}"/usr/bin/${f} 2>/dev/null
 		done
 	else
 		for f in ${syms}; do
-			if [[ -L "${ROOT}"/usr/bin/${f} && ! -f "${ROOT}"/usr/bin/${f} ]]; then
-				rm -f "${ROOT}"/usr/bin/${f}
+			if [[ -L "${EROOT}"/usr/bin/${f} && ! -f "${EROOT}"/usr/bin/${f} ]]; then
+				rm -f "${EROOT}"/usr/bin/${f}
 			fi
 		done
 	fi
