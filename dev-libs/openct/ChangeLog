@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.87 2010/03/23 14:51:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.88 2010/03/23 20:43:30 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> openct-0.6.20.ebuild:
+  Marking openct-0.6.20 ppc for bug 310771
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> openct-0.6.20.ebuild:
   Marking openct-0.6.20 ppc64 for bug 310771
