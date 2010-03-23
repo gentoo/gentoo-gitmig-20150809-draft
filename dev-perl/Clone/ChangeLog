@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.58 2010/01/09 17:39:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.59 2010/03/23 18:29:25 grobian Exp $
+
+  23 Mar 2010; Fabian Groffen <grobian@gentoo.org> Clone-0.31.ebuild:
+  Marked ~x64-macos
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> Clone-0.31.ebuild:
   Transfer Prefix keywords
