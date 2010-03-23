@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/lhapdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.8 2010/01/08 02:25:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.9 2010/03/23 02:37:22 bicatali Exp $
+
+*lhapdf-5.8.2 (23 Mar 2010)
+
+  23 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> +lhapdf-5.8.2.ebuild:
+  Version bump
 
 *lhapdf-5.8.1 (08 Jan 2010)
 
