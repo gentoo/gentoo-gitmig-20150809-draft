@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0.ebuild,v 1.3 2010/01/15 12:22:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0.ebuild,v 1.4 2010/03/23 03:25:07 vapier Exp $
 
 EAPI=2
 
@@ -87,5 +87,5 @@ src_compile() {
 
 src_install() {
 	gnome2_src_install
-	make_desktop_entry "/usr/bin/passepartout" "Passepartout DTP" "" "GNOME;Application;Graphics" ""
+	make_desktop_entry "/usr/bin/passepartout" "Passepartout DTP" "" "GNOME;Application;Graphics"
 }
