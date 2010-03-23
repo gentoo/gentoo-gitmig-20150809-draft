@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Services_JSON
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_JSON/ChangeLog,v 1.1 2010/03/23 16:55:28 beandog Exp $
+
+*PEAR-Services_JSON-1.0.2 (23 Mar 2010)
+
+  23 Mar 2010; Steve Dibb <beandog@gentoo.org>
+  +PEAR-Services_JSON-1.0.2.ebuild, +metadata.xml:
+  Initial commit
+
