@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.23 2010/01/11 19:12:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.24 2010/03/23 19:09:53 yngwin Exp $
+
+*wally-2.3.2 (23 Mar 2010)
+
+  23 Mar 2010; Ben de Groot <yngwin@gentoo.org> +wally-2.3.2.ebuild,
+  metadata.xml:
+  Version bump. Co-assign to qt herd.
 
 *wally-2.3.1 (11 Jan 2010)
 
