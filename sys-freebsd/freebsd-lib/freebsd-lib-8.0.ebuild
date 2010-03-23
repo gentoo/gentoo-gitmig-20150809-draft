@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.2 2010/03/19 22:24:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.3 2010/03/23 06:28:17 the_paya Exp $
 
 EAPI=2
 
@@ -88,7 +88,8 @@ PATCHES=( "${FILESDIR}/${PN}-bsdxml.patch"
 	"${FILESDIR}/${PN}-6.1-csu.patch"
 	"${FILESDIR}/${PN}-6.2-bluetooth.patch"
 	"${FILESDIR}/${PN}-new_as.patch"
-	"${FILESDIR}/${PN}-8.0-log2.patch" )
+	"${FILESDIR}/${PN}-8.0-log2.patch"
+	"${FILESDIR}/${PN}-8.0-rpcsec_gss.patch" )
 
 # Here we disable and remove source which we don't need or want
 # In order:
