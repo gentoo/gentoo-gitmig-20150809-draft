@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.37 2010/03/21 14:58:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.38 2010/03/23 20:35:44 ranger Exp $
+
+  23 Mar 2010; Brent Baude <ranger@gentoo.org> libmms-0.5.ebuild:
+  Marking libmms-0.5 ppc for bug 310183
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> libmms-0.5.ebuild:
   stable ppc64, bug 310183
