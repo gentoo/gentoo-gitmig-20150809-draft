@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsm/xsm-1.0.1-r1.ebuild,v 1.9 2010/03/23 16:00:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsm/xsm-1.0.1-r1.ebuild,v 1.10 2010/03/23 23:26:42 abcd Exp $
 
 EAPI=3
+
+XORG_STATIC=no
 inherit xorg-2
 
 DESCRIPTION="X Session Manager"
