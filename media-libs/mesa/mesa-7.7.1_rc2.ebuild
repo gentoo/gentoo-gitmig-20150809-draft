@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.8_rc1.ebuild,v 1.1 2010/03/16 15:27:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7.1_rc2.ebuild,v 1.1 2010/03/23 11:20:10 scarabeus Exp $
 
-EAPI=3
+EAPI="2"
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
 
@@ -62,8 +62,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-misc/makedepend
-	>=x11-proto/dri2proto-2.2
-	>=x11-proto/glproto-1.4.11
+	>=x11-proto/dri2proto-1.99.3
+	>=x11-proto/glproto-1.4.8
 	x11-proto/inputproto
 	>=x11-proto/xextproto-7.0.99.1
 	x11-proto/xf86driproto
@@ -71,11 +71,6 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
-
-# It is slow without texrels, if someone wants slow
-# mesa without texrels +pic use is worth shot
-QA_EXECSTACK="usr/lib*/opengl/xorg-x11/lib/libGL.so*"
-QA_WX_LOAD="usr/lib*/opengl/xorg-x11/lib/libGL.so*"
 
 # Think about: ggi, svga, fbcon, no-X configs
 
@@ -130,16 +125,17 @@ src_configure() {
 	if use gallium; then
 		elog "You have enabled gallium infrastructure."
 		elog "This infrastructure currently support these drivers:"
-		elog "    Intel: works only i915."
-		elog "    Nouveau: Support for nVidia NV30 and later cards."
-		elog "    Radeon: Newest implementation of r300-r500 driver."
-		elog "    Svga: VMWare Virtual GPU driver."
+		elog "    Intel: driver not really functional, thus disabled."
+		elog "    Nouveau: only available implementation. Experimental Quality."
+		elog "    Radeon: implementation up to the r500. Testing Quality."
+		elog "    Svga: VMWare Virtual GPU driver. Hic sunt leones."
 		echo
 		myconf="${myconf}
+			--disable-gallium-intel
 			--with-state-trackers=glx,dri,egl
 			$(use_enable video_cards_svga gallium-svga)
-			$(use_enable video_cards_nouveau gallium-nouveau)
-			$(use_enable video_cards_intel gallium-intel)"
+			$(use_enable video_cards_nouveau gallium-nouveau)"
+			#$(use_enable video_cards_intel gallium-intel)"
 		if use video_cards_radeon || use video_cards_radeonhd; then
 			myconf="${myconf} --enable-gallium-radeon"
 		else
@@ -148,7 +144,7 @@ src_configure() {
 	else
 		if use video_cards_nouveau || use video_cards_svga; then
 			elog "SVGA and nouveau drivers are available only via gallium interface."
-			elog "Enable gallium useflag if you want to use them."
+			elog "Enable gallium useflag if you insist to use them."
 		fi
 	fi
 
@@ -169,6 +165,7 @@ src_configure() {
 }
 
 src_install() {
+	dodir /usr
 	emake DESTDIR="${D}" install || die "Installation failed"
 
 	# Remove redundant headers

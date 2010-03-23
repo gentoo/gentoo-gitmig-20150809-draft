@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.261 2010/03/16 15:27:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.262 2010/03/23 11:20:10 scarabeus Exp $
+
+*mesa-7.8_rc2 (23 Mar 2010)
+*mesa-7.7.1_rc2 (23 Mar 2010)
+
+  23 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -mesa-7.7.1_rc1.ebuild, +mesa-7.7.1_rc2.ebuild, -mesa-7.8_rc1.ebuild,
+  +mesa-7.8_rc2.ebuild:
+  Version bump to new rc's remove old ones.
 
 *mesa-7.8_rc1 (16 Mar 2010)
 *mesa-7.7.1_rc1 (16 Mar 2010)
