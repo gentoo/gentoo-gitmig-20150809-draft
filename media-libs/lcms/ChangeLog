@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.112 2010/03/15 19:55:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.113 2010/03/24 18:12:07 ranger Exp $
+
+  24 Mar 2010; Brent Baude <ranger@gentoo.org> lcms-1.19.ebuild:
+  stable ppc, bug 302647
 
   15 Mar 2010; Brent Baude <ranger@gentoo.org> lcms-1.19.ebuild:
   stable ppc64, bug 302647
