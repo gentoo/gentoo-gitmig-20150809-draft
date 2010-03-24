@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.91 2009/11/25 20:58:35 truedfx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.92 2010/03/24 18:25:54 truedfx Exp $
+
+  24 Mar 2010; Harald van Dĳk <truedfx@gentoo.org> sawfish-1.5.3.ebuild:
+  Add libXinerama to (R)DEPEND, bug #311131
 
 *sawfish-1.5.3 (25 Nov 2009)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.5.3.ebuild,v 1.1 2009/11/25 20:58:35 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.5.3.ebuild,v 1.2 2010/03/24 18:25:54 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -31,7 +31,8 @@ RDEPEND=">=dev-libs/librep-0.90.0
 	>=x11-libs/gtk+-2.6.0
 	audiofile? ( >=media-libs/audiofile-0.2.3 )
 	esd? ( >=media-sound/esound-0.2.23 )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
