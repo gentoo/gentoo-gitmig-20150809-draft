@@ -1,7 +1,4 @@
-Check for xextproto 7.1.1 and include headers for X_ShmAttach.
-
-https://sourceforge.net/tracker/?func=detail&aid=2935150&group_id=223021&atid=1057617
-http://cgit.freedesktop.org/xorg/driver/xf86-video-intel/commit/?id=0a4c4c5fe8ebad2dd13f5770bd90a194eebb2890
+Patch from upstream trunk for xextproto >= 7.0.99.1 compability.
 
 --- configure.in
 +++ configure.in
@@ -10,13 +7,25 @@ http://cgit.freedesktop.org/xorg/driver/xf86-video-intel/commit/?id=0a4c4c5fe8eb
                     LINK_X_LIBS="-lXext $LINK_X_LIBS"],,$X_LIBS)
  
 +    PKG_CHECK_MODULES(XEXT, [xextproto >= 7.0.99.1],
-+                 HAVE_XEXTPROTO_71="yes"; AC_DEFINE(HAVE_XEXTPROTO_71, 1, [xextproto 7.1 available]),
-+    		 HAVE_XEXTPROTO_71="no")
++                HAVE_XEXTPROTO_71="yes"; AC_DEFINE(HAVE_XEXTPROTO_71, 1, [xextproto 7.1 available]),
++                HAVE_XEXTPROTO_71="no")
 +    AM_CONDITIONAL(HAVE_XEXTPROTO_71, [ test "$HAVE_XEXTPROTO_71" = "yes" ])
 +
      AC_MSG_CHECKING(for X11/extensions/Xvlib.h)
      AC_TRY_LINK([#include <X11/Xlib.h>
                   #include <X11/extensions/Xvlib.h>],
+@@ -2391,6 +2396,11 @@
+   AC_DEFINE(HAS_TRANSLATION,,[Enable internationalization support])
+ fi
+ 
++dnl Handle the xextproto conditinal for the systems that don't use it
++if test x"$is_unix_x11" != "xyes" -o x"$enable_sdlui" = "xyes" -o x"$enable_gnomeui" = "xyes"; then
++    AM_CONDITIONAL(HAVE_XEXTPROTO_71, false)
++fi
++
+ dnl CBM4Linux/OpenCBM
+ AC_MSG_CHECKING([for OpenCBM support])
+ if test x"$enable_realdevice" != "xno"; then
 --- src/arch/unix/x11/xaw/x11video.c
 +++ src/arch/unix/x11/xaw/x11video.c
 @@ -56,6 +56,7 @@
