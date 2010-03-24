@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.141 2010/03/24 03:45:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.142 2010/03/24 20:37:54 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -179,6 +179,9 @@ HOMEPAGE="http://www.mysql.com/"
 if [[ "${PN}" == "mariadb" ]]; then
 	HOMEPAGE="http://askmonty.org/"
 	DESCRIPTION="MariaDB is a MySQL fork with 3rd-party patches and additional storage engines merged."
+fi
+if [[ "${PN}" == "mysql-community" ]]; then
+	DESCRIPTION="${DESCRIPTION} (obsolete, move to dev-db/mysql)"
 fi
 LICENSE="GPL-2"
 SLOT="0"
