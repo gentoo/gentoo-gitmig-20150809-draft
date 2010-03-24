@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5433 2010/03/24 19:47:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5434 2010/03/24 21:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -648,6 +648,7 @@ dev-db/mysql-community:profiling - Add support for statement profiling (requires
 dev-db/mysql-community:raid - Deprecated option, removed in the 5.0 series
 dev-db/mysql-community:test - Install upstream testsuites for end use.
 dev-db/mysql-community:xtradb - Add experimental support for Percona's InnoDB replacement: XtraDB
+dev-db/mysql-connector-c++:gcov - Build coverage support
 dev-db/mysql-gui-tools:administrator - Build and install MySQL Administrator
 dev-db/mysql-gui-tools:query-browser - Build and install MySQL Query Browser
 dev-db/postgis:geos - Add the sci-libs/geos library for exact topological tests
