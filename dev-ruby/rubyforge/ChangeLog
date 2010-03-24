@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.57 2010/01/13 16:19:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.58 2010/03/24 07:10:44 graaff Exp $
+
+*rubyforge-2.0.4 (24 Mar 2010)
+
+  24 Mar 2010; Hans de Graaff <graaff@gentoo.org> +rubyforge-2.0.4.ebuild:
+  Version bump.
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> rubyforge-2.0.3.ebuild:
   Marking rubyforge-2.0.3 ~ppc64 for bug 297828
