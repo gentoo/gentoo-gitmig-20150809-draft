@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/mysql-connector-c++-1.1.0_pre814.ebuild,v 1.1 2010/03/24 21:19:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/mysql-connector-c++-1.1.0_pre814.ebuild,v 1.2 2010/03/24 21:37:58 robbat2 Exp $
 
 EAPI="2"
 
@@ -40,10 +40,6 @@ use_cmake() {
 # cmake config that works ...
 CMAKE_USE_DIR="."
 CMAKE_IN_SOURCE_BUILD="1"
-mycmakeargs="-DMYSQLCPPCONN_TRACE_ENABLE:BOOL=$(use_cmake debug) \
-	-DMYSQLCPPCONN_BUILD_EXAMPLES:BOOL=0 \
-	MYSQLCPPCONN_GCOV_ENABLE:BOOL=$(use_cmake gcov) \
-	-DMYSQLCPPCONN_ICU_ENABLE:BOOL=0"
 
 src_unpack() {
 	unpack "${DEBIAN_SRC}"
@@ -60,6 +56,8 @@ src_prepare() {
 src_configure() {
 	# native lib/wrapper needs this!
 	append-flags "-fno-strict-aliasing"
+
+	mycmakeargs="-DMYSQLCPPCONN_TRACE_ENABLE:BOOL=$(use_cmake debug) -DMYSQLCPPCONN_BUILD_EXAMPLES:BOOL=0 MYSQLCPPCONN_GCOV_ENABLE:BOOL=$(use_cmake gcov) -DMYSQLCPPCONN_ICU_ENABLE:BOOL=0"
 
 	# configure
 	cmake-utils_src_configure
