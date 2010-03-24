@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/worldofpadman
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/ChangeLog,v 1.3 2009/09/27 18:33:00 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/ChangeLog,v 1.4 2010/03/24 19:23:03 fauli Exp $
+
+  24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  worldofpadman-1.2-r1.ebuild:
+  stable x86, bug 308571
 
 *worldofpadman-1.2-r1 (27 Sep 2009)
 
