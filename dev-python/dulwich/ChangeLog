@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.7 2010/03/16 09:25:22 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.8 2010/03/24 20:02:27 grobian Exp $
+
+  24 Mar 2010; Fabian Groffen <grobian@gentoo.org> dulwich-0.5.0.ebuild:
+  Marked ~ppc-macos
 
   16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> dulwich-0.4.1.ebuild:
   amd64 stable, bug 303511
