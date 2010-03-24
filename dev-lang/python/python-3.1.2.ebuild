@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2.ebuild,v 1.1 2010/03/22 18:11:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2.ebuild,v 1.2 2010/03/24 08:03:14 arfrever Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit autotools eutils flag-o-matic multilib pax-utils python toolchain-funcs
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
 
-PATCHSET_REVISION="0"
+PATCHSET_REVISION="1"
 
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
