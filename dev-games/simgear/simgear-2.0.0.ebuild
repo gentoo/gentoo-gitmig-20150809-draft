@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.0.0.ebuild,v 1.1 2010/03/03 14:04:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.0.0.ebuild,v 1.2 2010/03/24 12:22:58 tupone Exp $
 EAPI=2
 
 inherit eutils
@@ -25,6 +25,10 @@ DEPEND="${RDEPEND}"
 RESTRICT="test"
 
 S=${WORKDIR}/${MY_P}
+
+src_configure() {
+	econf --with-jpeg-factory
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
