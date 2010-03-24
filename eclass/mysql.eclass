@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.139 2010/03/15 19:27:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.140 2010/03/24 03:09:08 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -925,7 +925,9 @@ mysql_src_install() {
 	fi
 
 	# Configuration stuff
-	if mysql_version_is_at_least "4.1" ; then
+	if mysql_version_is_at_least "5.1" ; then
+		mysql_mycnf_version="5.1"
+	elif mysql_version_is_at_least "4.1" ; then
 		mysql_mycnf_version="4.1"
 	else
 		mysql_mycnf_version="4.0"
@@ -937,7 +939,9 @@ mysql_src_install() {
 		"${FILESDIR}/my.cnf-${mysql_mycnf_version}" \
 		> "${TMPDIR}/my.cnf.ok"
 	if mysql_version_is_at_least "4.1" && use latin1 ; then
-		sed -e "s|utf8|latin1|g" -i "${TMPDIR}/my.cnf.ok"
+		sed -i \
+			-e "/character-set/s|utf8|latin1|g" \
+			"${TMPDIR}/my.cnf.ok"
 	fi
 	newins "${TMPDIR}/my.cnf.ok" my.cnf
 
@@ -1102,7 +1106,8 @@ mysql_pkg_config() {
 
 	local pwd1="a"
 	local pwd2="b"
-	local maxtry=5
+	local MYSQL_ROOT_PASSWORD=''
+	local maxtry=15
 
 	if [[ -d "${ROOT}/${MY_DATADIR}/mysql" ]] ; then
 		ewarn "You have already a MySQL database in place."
@@ -1115,18 +1120,21 @@ mysql_pkg_config() {
 	# localhost. Also causes weird failures.
 	[[ "${HOSTNAME}" == "localhost" ]] && die "Your machine must NOT be named localhost"
 
-	einfo "Creating the mysql database and setting proper"
-	einfo "permissions on it ..."
+	if [ -z "${MYSQL_ROOT_PASSWORD}" ]; then
 
-	einfo "Insert a password for the mysql 'root' user"
-	ewarn "Avoid [\"'\\_%] characters in the password"
-	read -rsp "    >" pwd1 ; echo
+		einfo "Please provide a password for the mysql 'root' user now,"
+		einfo "or in the MYSQL_ROOT_PASSWORD env var."
+		ewarn "Avoid [\"'\\_%] characters in the password"
+		read -rsp "    >" pwd1 ; echo
 
-	einfo "Retype the password"
-	read -rsp "    >" pwd2 ; echo
+		einfo "Retype the password"
+		read -rsp "    >" pwd2 ; echo
 
-	if [[ "x$pwd1" != "x$pwd2" ]] ; then
-		die "Passwords are not the same"
+		if [[ "x$pwd1" != "x$pwd2" ]] ; then
+			die "Passwords are not the same"
+		fi
+		MYSQL_ROOT_PASSWORD="${pwd1}"
+		unset pwd1 pwd2
 	fi
 
 	local options=""
@@ -1150,9 +1158,20 @@ mysql_pkg_config() {
 	chown -R mysql:mysql "${ROOT}/${MY_DATADIR}" 2>/dev/null
 	chmod 0750 "${ROOT}/${MY_DATADIR}" 2>/dev/null
 
-	if mysql_version_is_at_least "4.1.3" ; then
-		options="--skip-ndbcluster"
+	# Figure out which options we need to disable to do the setup
+	helpfile="${TMPDIR}/mysqld-help"
+	${ROOT}/usr/sbin/mysqld --verbose --help >"${helpfile}" 2>/dev/null
+	for opt in grant-tables host-cache name-resolve networking slave-start bdb \
+		federated innodb ssl log-bin relay-log slow-query-log external-locking \
+		; do
+		optexp="--(skip-)?${opt}" optfull="--skip-${opt}"
+		egrep -sq -- "${optexp}" "${helpfile}" && options="${options} ${optfull}"
+	done
+	# But some options changed names
+	egrep -sq external-locking "${helpfile}" && \
+	options="${options/skip-locking/skip-external-locking}"
 
+	if mysql_version_is_at_least "4.1.3" ; then
 		# Filling timezones, see
 		# http://dev.mysql.com/doc/mysql/en/time-zone-support.html
 		"${ROOT}/usr/bin/mysql_tzinfo_to_sql" "${ROOT}/usr/share/zoneinfo" > "${sqltmp}" 2>/dev/null
@@ -1161,49 +1180,60 @@ mysql_pkg_config() {
 			cat "${help_tables}" >> "${sqltmp}"
 		fi
 	fi
+	
+	einfo "Creating the mysql database and setting proper"
+	einfo "permissions on it ..."
 
 	local socket="${ROOT}/var/run/mysqld/mysqld${RANDOM}.sock"
 	local pidfile="${ROOT}/var/run/mysqld/mysqld${RANDOM}.pid"
 	local mysqld="${ROOT}/usr/sbin/mysqld \
 		${options} \
 		--user=mysql \
-		--skip-grant-tables \
 		--basedir=${ROOT}/usr \
 		--datadir=${ROOT}/${MY_DATADIR} \
-		--skip-innodb \
-		--skip-bdb \
-		--skip-networking \
 		--max_allowed_packet=8M \
 		--net_buffer_length=16K \
 		--socket=${socket} \
 		--pid-file=${pidfile}"
+	#einfo "About to start mysqld: ${mysqld}"
+	ebegin "Starting mysqld"
 	${mysqld} &
+	rc=$?
 	while ! [[ -S "${socket}" || "${maxtry}" -lt 1 ]] ; do
 		maxtry=$((${maxtry}-1))
 		echo -n "."
 		sleep 1
 	done
+	eend $rc
 
+	if ! [[ -S "${socket}" ]]; then
+		die "Completely failed to start up mysqld with: ${mysqld}"
+	fi
+
+	ebegin "Setting root password"
 	# Do this from memory, as we don't want clear text passwords in temp files
-	local sql="UPDATE mysql.user SET Password = PASSWORD('${pwd1}') WHERE USER='root'"
+	local sql="UPDATE mysql.user SET Password = PASSWORD('${MYSQL_ROOT_PASSWORD}') WHERE USER='root'"
 	"${ROOT}/usr/bin/mysql" \
 		--socket=${socket} \
 		-hlocalhost \
 		-e "${sql}"
+	eend $?
 
-	einfo "Loading \"zoneinfo\", this step may require a few seconds ..."
-
+	ebegin "Loading \"zoneinfo\", this step may require a few seconds ..."
 	"${ROOT}/usr/bin/mysql" \
 		--socket=${socket} \
 		-hlocalhost \
 		-uroot \
-		-p"${pwd1}" \
+		-p"${MYSQL_ROOT_PASSWORD}" \
 		mysql < "${sqltmp}"
+	rc=$?
+	eend $?
+	[ $rc -ne 0 ] && ewarn "Failed to load zoneinfo!"
 
 	# Stop the server and cleanup
+	einfo "Stopping the server ..."
 	kill $(< "${pidfile}" )
 	rm -f "${sqltmp}"
-	einfo "Stopping the server ..."
 	wait %1
 	einfo "Done"
 }
