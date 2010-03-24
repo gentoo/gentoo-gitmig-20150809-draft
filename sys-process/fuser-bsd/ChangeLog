@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/fuser-bsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.6 2010/03/13 12:30:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.7 2010/03/24 15:15:31 the_paya Exp $
+
+  24 Mar 2010; Javier Villavicencio <the_paya@gentoo.org>
+  fuser-bsd-1142334561.ebuild:
+  Fix dep while building a stage1.
 
   13 Mar 2010; Alexis Ballier <aballier@gentoo.org>
   fuser-bsd-1142334561.ebuild:

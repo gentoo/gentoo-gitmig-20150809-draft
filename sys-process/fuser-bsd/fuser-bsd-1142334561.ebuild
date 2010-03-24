@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/fuser-bsd-1142334561.ebuild,v 1.7 2010/03/13 12:30:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/fuser-bsd-1142334561.ebuild,v 1.8 2010/03/24 15:15:31 the_paya Exp $
 
 EAPI=2
 
@@ -20,7 +20,9 @@ KEYWORDS="~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-freebsd/freebsd-mk-defs"
-RDEPEND="!sys-process/psmisc"
+# virtual/libc needed here for has_version to work.
+RDEPEND="virtual/libc
+	!sys-process/psmisc"
 
 S="${WORKDIR}/${PN/-bsd/}"
 
