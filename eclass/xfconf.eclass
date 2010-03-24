@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.9 2010/03/22 16:29:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.10 2010/03/24 20:13:15 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -44,7 +44,7 @@ if [[ "${EINTLTOOLIZE}" == "yes" ]]; then
 fi
 
 if [[ "${EAUTORECONF}" == "yes" ]]; then
-	_xfce4_m4="dev-util/xfce4-dev-tools"
+	_xfce4_m4=">=dev-util/xfce4-dev-tools-4.7.0"
 fi
 
 RDEPEND=""
