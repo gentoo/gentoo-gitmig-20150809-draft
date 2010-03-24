@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.4 2010/03/21 20:21:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.5 2010/03/24 05:52:29 bicatali Exp $
 
 EAPI="2"
 
@@ -83,6 +83,7 @@ src_configure() {
 		--with-fontpath="${EPREFIX}/usr/share/fonts" \
 		--with-gs-font-dir="${EPREFIX}/usr/share/fonts/default/ghostscript" \
 		--with-windows-font-dir="${EPREFIX}/usr/share/fonts/corefonts" \
+		--with-perl-options="INSTALLDIRS=vendor" \
 		$(use_enable debug ccmalloc) \
 		$(use_enable debug prof) \
 		$(use_enable debug gcov) \
