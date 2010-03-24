@@ -1,13 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.23 2009/11/01 12:17:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.24 2010/03/24 20:00:42 armin76 Exp $
 
 EAPI="2"
 
-inherit eutils distutils subversion flag-o-matic
+inherit eutils distutils git flag-o-matic
 
-ESVN_REPO_URI="http://svn.deluge-torrent.org/trunk"
-ESVN_PROJECT="deluge"
+EGIT_REPO_URI="git://deluge-torrent.org/deluge.git"
 
 DESCRIPTION="BitTorrent client with a client/server model."
 HOMEPAGE="http://deluge-torrent.org/"
@@ -19,7 +18,7 @@ KEYWORDS=""
 IUSE="gtk libnotify webinterface"
 
 DEPEND=">=virtual/python-2.5
-	>=net-libs/rb_libtorrent-0.14.5[python]
+	>=net-libs/rb_libtorrent-0.14.9[python]
 	dev-python/setuptools"
 RDEPEND="${DEPEND}
 	dev-python/chardet

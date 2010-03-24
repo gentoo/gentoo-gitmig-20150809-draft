@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.143 2010/03/20 13:11:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.144 2010/03/24 20:00:42 armin76 Exp $
+
+  24 Mar 2010; Raúl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
+  Move to git repo
 
 *deluge-1.2.2 (20 Mar 2010)
 
