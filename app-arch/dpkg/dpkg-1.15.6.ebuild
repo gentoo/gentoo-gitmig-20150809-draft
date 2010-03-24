@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.6.ebuild,v 1.2 2010/03/23 17:40:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.6.ebuild,v 1.3 2010/03/24 05:24:57 jer Exp $
 
 EAPI=3
 
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE="bzip2 nls test unicode zlib"
-RESTRICT="test"
 
 LANGS="sv de es ja fr hu pl ru"
 
@@ -40,6 +39,11 @@ src_prepare() {
 	# Force the use of the running bash for get-version (this file is never
 	# installed, so no need to worry about hardcoding a temporary bash)
 	sed -i -e '1c\#!'"${BASH}" get-version || die
+
+	# bug 310847
+	if [[ "${PV}" = "1.15.6" ]]; then
+		sed -i lib/dpkg/test/Makefile.am -e '/t[_-]ar/d'
+	fi
 
 	eautoreconf
 }
