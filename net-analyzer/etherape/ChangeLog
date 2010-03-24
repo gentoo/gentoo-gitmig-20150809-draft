@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.56 2010/03/23 20:34:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.57 2010/03/24 19:30:44 fauli Exp $
+
+  24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  etherape-0.9.9.ebuild:
+  stable x86, bug 310027
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> etherape-0.9.9.ebuild:
   Marking etherape-0.9.9 ppc for bug 310027
