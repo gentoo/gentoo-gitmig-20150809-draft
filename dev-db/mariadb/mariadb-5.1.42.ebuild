@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.42.ebuild,v 1.4 2010/03/22 20:36:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.1.42.ebuild,v 1.5 2010/03/24 02:38:29 robbat2 Exp $
 
-MY_EXTRAS_VER="20100315-1843Z"
+MY_EXTRAS_VER="20100324-0235Z"
 EAPI=2
 
 inherit toolchain-funcs mysql
