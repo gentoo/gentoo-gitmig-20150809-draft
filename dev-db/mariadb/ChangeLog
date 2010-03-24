@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.5 2010/03/24 02:38:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.6 2010/03/24 18:27:38 robbat2 Exp $
+
+*mariadb-5.1.42-r1 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-5.1,
+  +mariadb-5.1.42-r1.ebuild:
+  Missed copying back last version of the new my.cnf from my personal
+  overlay, and caused bug #311151.
 
   24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mariadb-5.1.42.ebuild:
   Bug #310131: fix lineendings in mariadb specific patch that broke compile

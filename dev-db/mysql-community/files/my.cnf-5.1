@@ -1,5 +1,5 @@
 # /etc/mysql/my.cnf: The global mysql configuration file.
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/files/my.cnf-5.1,v 1.1 2010/03/24 02:22:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/files/my.cnf-5.1,v 1.2 2010/03/24 18:26:40 robbat2 Exp $
 
 # The following options will be passed to all MySQL clients
 [client]
@@ -9,27 +9,27 @@ socket						= /var/run/mysqld/mysqld.sock
 
 [mysql]
 character-sets-dir=/usr/share/mysql/charsets
-character-set-server=utf8
+default-character-set=utf8
 
 [mysqladmin]
 character-sets-dir=/usr/share/mysql/charsets
-character-set-server=utf8
+default-character-set=utf8
 
 [mysqlcheck]
 character-sets-dir=/usr/share/mysql/charsets
-character-set-server=utf8
+default-character-set=utf8
 
 [mysqldump]
 character-sets-dir=/usr/share/mysql/charsets
-character-set-server=utf8
+default-character-set=utf8
 
 [mysqlimport]
 character-sets-dir=/usr/share/mysql/charsets
-character-set-server=utf8
+default-character-set=utf8
 
 [mysqlshow]
 character-sets-dir=/usr/share/mysql/charsets
-character-set-server=utf8
+default-character-set=utf8
 
 [myisamchk]
 character-sets-dir=/usr/share/mysql/charsets

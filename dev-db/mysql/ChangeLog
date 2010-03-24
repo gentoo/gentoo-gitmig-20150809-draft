@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.524 2010/03/24 03:36:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.525 2010/03/24 18:26:09 robbat2 Exp $
+
+*mysql-5.1.45-r1 (24 Mar 2010)
+*mysql-5.1.44-r3 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-5.1,
+  +mysql-5.1.44-r3.ebuild, +mysql-5.1.45-r1.ebuild:
+  Missed copying back last version of the new my.cnf from my personal
+  overlay, and caused bug #311151.
 
   24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.90-r2.ebuild:
   Minor patchset bump for failed testcases that were noted in sec

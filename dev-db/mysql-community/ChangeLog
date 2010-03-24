@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-community
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.29 2010/03/24 02:22:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.30 2010/03/24 18:26:40 robbat2 Exp $
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-5.1:
+  Missed copying back last version of the new my.cnf from my personal
+  overlay, and caused bug #311151.
 
   24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +files/my.cnf-5.1:
   Just add new config files that gets rid of some deprecated warnings, so
