@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.13 2010/03/12 12:06:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.14 2010/03/24 06:57:57 grobian Exp $
+
+  24 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-4.2.1_p5647.ebuild:
+  Add openmp USE-flag, since some packages check for such flag, gcc-apple
+  has always enabled had it enabled in the past
 
   12 Mar 2010; Fabian Groffen <grobian@gentoo.org>
   gcc-apple-4.2.1_p5646.ebuild, gcc-apple-4.2.1_p5647.ebuild:
