@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.226 2010/03/17 23:29:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.227 2010/03/24 14:54:42 cardoe Exp $
+
+  24 Mar 2010; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-195.36.15.ebuild:
+  add missing nvidia.icd to fix bug #310277
 
   17 Mar 2010; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-173.14.20.ebuild:

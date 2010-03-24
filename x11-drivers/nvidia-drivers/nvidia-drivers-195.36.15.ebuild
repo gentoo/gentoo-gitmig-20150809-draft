@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-195.36.15.ebuild,v 1.1 2010/03/17 23:05:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-195.36.15.ebuild,v 1.2 2010/03/24 14:54:42 cardoe Exp $
 
 EAPI="2"
 
@@ -348,6 +348,11 @@ src_install() {
 		dodir /usr/include/CL
 		insinto /usr/include/CL
 		doins usr/include/CL/*.h || die "failed to install OpenCL headers"
+
+		# OpenCL ICD for NVIDIA
+		dodir /etc/OpenCL/vendors
+		insinto /etc/OpenCL/vendors
+		doins etc/OpenCL/vendors/nvidia.icd
 	fi
 
 	# Documentation
