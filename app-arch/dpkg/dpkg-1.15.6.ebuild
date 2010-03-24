@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.6.ebuild,v 1.3 2010/03/24 05:24:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.6.ebuild,v 1.4 2010/03/24 05:40:11 jer Exp $
 
 EAPI=3
 
@@ -43,6 +43,7 @@ src_prepare() {
 	# bug 310847
 	if [[ "${PV}" = "1.15.6" ]]; then
 		sed -i lib/dpkg/test/Makefile.am -e '/t[_-]ar/d'
+		sed -i scripts/Makefile.am -e '/850_Dpkg_Compression.t/d'
 	fi
 
 	eautoreconf
