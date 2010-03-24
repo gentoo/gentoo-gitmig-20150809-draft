@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.24-r1.ebuild,v 1.3 2010/03/23 20:02:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.24-r1.ebuild,v 1.4 2010/03/24 05:45:38 jer Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ppc ~sparc x86"
+KEYWORDS="~amd64 hppa ~mips ppc ~sparc x86"
 IUSE="caps readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1-r4 )
