@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-community
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.30 2010/03/24 18:26:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/ChangeLog,v 1.31 2010/03/24 20:39:03 robbat2 Exp $
+
+# -------------------------
+# This package is now obsolete. All users should migrate to dev-db/mysql!
+# -------------------------
 
   24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-5.1:
   Missed copying back last version of the new my.cnf from my personal
