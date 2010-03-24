@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.2 2010/03/16 09:27:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.3 2010/03/24 20:04:59 grobian Exp $
+
+  24 Mar 2010; Fabian Groffen <grobian@gentoo.org> hg-git-0.2.1.ebuild:
+  Marked ~ppc-macos
 
   16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> hg-git-0.2.1.ebuild:
   amd64 stable, bug 307277
