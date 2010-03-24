@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_mysql
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.14 2008/08/16 03:44:08 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.15 2010/03/24 19:45:15 robbat2 Exp $
+
+*pam_mysql-0.7_rc1-r2 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +pam_mysql-0.7_rc1-r2.ebuild:
+  Bug #191950: use pam eclass. Bug #299088: fix .la file.
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
