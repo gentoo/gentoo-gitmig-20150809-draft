@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.1 2010/03/17 15:13:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.2 2010/03/24 01:18:03 robbat2 Exp $
+
+*git-1.7.0.3 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> -git-1.7.0.2.ebuild,
+  +git-1.7.0.3.ebuild:
+  Bug #310967: 1.7.0.2 has a segfault bug in git-daemon, remove and replace
+  with 1.7.0.3
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> +files/50git-gentoo.el,
   +git-1.6.3.1.ebuild, +git-1.6.3.3.ebuild, +git-1.6.3.4.ebuild,
