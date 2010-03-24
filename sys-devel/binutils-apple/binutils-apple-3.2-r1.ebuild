@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2-r1.ebuild,v 1.2 2010/03/21 20:41:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2-r1.ebuild,v 1.3 2010/03/24 19:34:04 grobian Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ RESTRICT="test" # the test suite will test what's installed.
 # http://lists.apple.com/archives/Darwin-dev/2009/Sep/msg00025.html
 LD64=ld64-95.2.12
 CCTOOLS=cctools-750
-UNWIND=binutils-apple-3.2-unwind-patches-1
+UNWIND=binutils-apple-3.2-unwind-patches-2
 
 DESCRIPTION="Darwin assembler as(1) and static linker ld(1), Xcode Tools 3.2"
 HOMEPAGE="http://www.opensource.apple.com/darwinsource/"
@@ -76,6 +76,8 @@ src_prepare() {
 	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
 
 	epatch "${WORKDIR}"/ld64-unwind/${LD64}-unlibunwind.patch
+	[[ ${CHOST} == *-darwin10 ]] && \
+		epatch "${WORKDIR}"/ld64-unwind/${LD64}-message-before-abort.patch
 	[[ ${CHOST} == powerpc*-darwin* ]] && \
 		epatch "${FILESDIR}"/${LD64}-darwin8-no-mlong-branch-warning.patch
 

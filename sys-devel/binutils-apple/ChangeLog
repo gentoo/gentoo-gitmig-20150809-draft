@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.9 2010/03/22 20:49:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.10 2010/03/24 19:34:04 grobian Exp $
+
+  24 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  binutils-apple-3.2-r1.ebuild:
+  Bump patchset to include heiko_'s message before abort patch to make sure
+  the actual problem is emitted before the linker aborts (libstdc++ issue it
+  seems)
 
   22 Mar 2010; Fabian Groffen <grobian@gentoo.org>
   files/ld64-95.2.12-Makefile:
