@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.521 2010/03/24 02:17:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.522 2010/03/24 03:32:52 robbat2 Exp $
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.83.ebuild,
+  mysql-5.0.84.ebuild, mysql-5.0.84-r1.ebuild, mysql-5.0.87.ebuild,
+  mysql-5.0.88.ebuild, mysql-5.0.90.ebuild, mysql-5.0.90-r1.ebuild,
+  mysql-5.0.90-r2.ebuild, mysql-5.1.39-r1.ebuild, mysql-5.1.44.ebuild,
+  mysql-5.1.44-r1.ebuild, mysql-5.1.44-r2.ebuild, mysql-5.4.3_beta.ebuild,
+  mysql-5.5.1_alpha_pre2.ebuild:
+  Per bug #303747 masking mysql from hppa for now, try to make repoman
+  happier until GCC4.3 is available (bug #307251).
 
 *mysql-5.1.44-r2 (24 Mar 2010)
 
