@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/wiggle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.19 2010/01/10 22:30:18 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.20 2010/03/24 18:15:28 robbat2 Exp $
+
+*wiggle-0.8 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +wiggle-0.8.ebuild:
+  Version bump, alerted to it by upstream author.
 
   10 Jan 2010; Jonathan Callen <abcd@gentoo.org> wiggle-0.6-r3.ebuild:
   QA: die on failure, spelling fix; add prefix keywords
