@@ -14,7 +14,7 @@ fails as often as it does on Gentoo/FreeBSD, if it uses /usr/bin/install.
  					err(EX_OSERR, "mkdir %s", path);
  					/* NOTREACHED */
 +				} else if (mkdir(path, 0755) < 0) {
-+					/* Previos errno from stat() says that the directory didn't exist (ENOENT)
++					/* Previous errno from stat() says that the directory didn't exist (ENOENT)
 +					 * But if errno is now EEXIST, then we just hit a parallel make bug.
 +					 */
 +					if (errno == EEXIST)
