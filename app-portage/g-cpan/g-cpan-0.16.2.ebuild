@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.16.2.ebuild,v 1.1 2010/03/24 17:31:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.16.2.ebuild,v 1.2 2010/03/24 18:57:12 robbat2 Exp $
 
 EAPI=2
 
@@ -33,4 +33,6 @@ src_install() {
 pkg_postinst() {
 	elog "You may wish to adjust the permissions on /var/tmp/g-cpan"
 	elog "if you have users besides root expecting to use g-cpan."
+	einfo "Please note that some CPAN packages need additional manual" 
+	einfo "parameters or tweaking, due to bugs in their build systems."
 }
