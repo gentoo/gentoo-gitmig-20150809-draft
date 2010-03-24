@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/mod_auth_mysql-3.0.0-r2.ebuild,v 1.6 2010/01/11 08:22:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_mysql/mod_auth_mysql-3.0.0-r2.ebuild,v 1.7 2010/03/24 20:35:36 robbat2 Exp $
 
 EAPI="2"
 
@@ -17,7 +17,8 @@ IUSE=""
 
 DEPEND="virtual/mysql
 		sys-libs/zlib"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		!www-apache/mod-auth-mysql"
 
 APXS2_ARGS="-c -I/usr/include/mysql -lmysqlclient_r -lm -lz ${PN}.c"
 APACHE2_MOD_CONF="12_${PN}"
