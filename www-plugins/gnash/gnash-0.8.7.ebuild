@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.3 2010/03/23 23:48:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.4 2010/03/24 08:24:07 chithanh Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="false"
@@ -78,13 +78,8 @@ pkg_setup() {
 		die "Please enable a renderer"
 	elif use agg && use cairo && use opengl; then
 		ewarn "You enabled 3 renderers, agg was chosen as default."
-	elif use !agg && use cairo; then
-		if use !gtk; then
-			eerror "Cairo backend needs gtk."
-			die "Please enable the gtk USE flag."
-		elif use opengl; then
-			ewarn "You enabled cairo and opengl, cairo was chosen as default."
-		fi
+	elif use !agg && use cairo && use opengl; then
+		ewarn "You enabled cairo and opengl, cairo was chosen as default."
 	fi
 
 	if ! ( use kde || use gtk || use sdl ); then
@@ -93,17 +88,22 @@ pkg_setup() {
 			|| die "Please enable at least one of these USE flags."
 	fi
 
+	if use python && use !gtk; then
+		eerror "Building gnash with python support requires gtk."
+		die "python requires the gtk USE flag."
+	fi
+
 	if use nsplugin && use !gtk; then
 		eerror "Building gnash with nsplugin requires the gtk gui."
 		die "Nsplugin requires the gtk gui."
 	fi
 
 	if use sdl; then
-		ewarn "Enable SDL as gui frontend and sound handler"
+		elog "Enable SDL as gui frontend and sound handler"
 	fi
 
 	if use lirc; then
-		ewarn "Enable LIRC daemon support and lirc extension"
+		elog "Enable LIRC daemon support and lirc extension"
 	fi
 
 	kde4-base_pkg_setup
