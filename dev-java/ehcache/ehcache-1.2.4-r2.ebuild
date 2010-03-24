@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4-r2.ebuild,v 1.4 2010/01/03 20:36:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4-r2.ebuild,v 1.5 2010/03/24 19:27:34 fauli Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ehcache.sourceforge.net"
 
 LICENSE="Apache-2.0"
 SLOT="1.2"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 COMMON_DEPEND="

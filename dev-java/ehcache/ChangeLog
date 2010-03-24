@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ehcache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.12 2010/01/03 21:33:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.13 2010/03/24 19:27:34 fauli Exp $
+
+  24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  ehcache-1.2.4-r2.ebuild:
+  stable x86, bug 292503
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   ehcache-1.1-r1.ebuild:
