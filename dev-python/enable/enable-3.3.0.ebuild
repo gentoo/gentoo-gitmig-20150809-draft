@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.3.0.ebuild,v 1.1 2010/03/23 05:10:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.3.0.ebuild,v 1.2 2010/03/24 05:34:49 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,8 +13,7 @@ DESCRIPTION="Enthought Tool Suite drawing and interaction GUI objects"
 HOMEPAGE="http://code.enthought.com/projects/enable"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="examples"
-#IUSE="examples test"
+IUSE="doc examples"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
@@ -32,7 +31,8 @@ DEPEND="dev-python/setuptools
 	virtual/glu
 	x11-libs/libX11
 	dev-lang/swig
-	dev-python/pyrex"
+	dev-python/pyrex
+	doc? ( dev-python/setupdocs )"
 RESTRICT_PYTHON_ABIS="3.*"
 # tests need X with wxpython
 #	test? ( >=dev-python/nose-0.10.3
@@ -44,11 +44,19 @@ S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="enthought"
 
-DOCS="CHANGELOG.txt"
-
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-3.0.2-nofreetype.patch"
-	sed -i -e "/self.run_command('build_docs')/d" setup.py || die
+	sed -i \
+		-e "s/self.run_command('build_docs')/pass/" \
+		-e "s/setupdocs>=1.0//" \
+		setup.py || die
+	epatch "${FILESDIR}"/${P}-nofreetype.patch
+}
+
+src_compile() {
+	distutils_src_compile
+	if use doc; then
+		"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
+	fi
 }
 
 src_test() {
@@ -61,7 +69,12 @@ src_test() {
 src_install() {
 	find "${S}" -name \*LICENSE.txt -delete
 	distutils_src_install
+	dodoc docs/*.txt
 	insinto /usr/share/doc/${PF}
+	if use doc; then
+		doins -r build/docs/html || die
+		doins docs/latex/*.pdf || die
+	fi
 	if use examples; then
 		doins -r examples || die
 	fi
