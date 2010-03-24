@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11385 2010/03/24 05:15:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11386 2010/03/24 17:27:06 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -600,11 +600,6 @@ x11-apps/xfsinfo
 # Alexis Ballier <aballier@gentoo.org> (14 Nov 2009)
 # beta release
 >=dev-ml/ocamlnet-3.0_beta
-
-# Doug Goldstein <cardoe@gentoo.org> (08 Nov 2009)
-# beta/experimental drivers
->=x11-drivers/nvidia-drivers-195.01
->=media-video/nvidia-settings-195.01
 
 # Doug Goldstein <cardoe@gentoo.org> (07 Nov 2009)
 # upstream MythTV development versions
