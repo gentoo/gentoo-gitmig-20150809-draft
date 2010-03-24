@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-bg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.6 2010/03/21 14:52:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.7 2010/03/24 15:55:50 ranger Exp $
+
+  24 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-bg-4.1.0.ebuild:
+  Marking aspell-bg-4.1.0 ppc stable for bug 310015
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-bg-4.1.0.ebuild:
   Marking aspell-bg-4.1.0 ppc64 stable for bug 310015
