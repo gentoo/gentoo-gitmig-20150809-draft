@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cvs2svn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.28 2010/03/05 07:41:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2svn/ChangeLog,v 1.29 2010/03/24 22:10:43 robbat2 Exp $
+
+*cvs2svn-2.3.0 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +cvs2svn-2.3.0.ebuild:
+  Bug #306821: version bump.
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> cvs2svn-1.5.0.ebuild,
   cvs2svn-1.5.1.ebuild, cvs2svn-2.0.1.ebuild, cvs2svn-2.1.0.ebuild,
