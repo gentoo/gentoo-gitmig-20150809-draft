@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.1_p2.ebuild,v 1.1 2010/03/23 02:23:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.1_p2.ebuild,v 1.2 2010/03/24 04:14:27 the_paya Exp $
 
 inherit autotools eutils multilib toolchain-funcs flag-o-matic
 
@@ -50,6 +50,7 @@ src_unpack() {
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
 	epatch "${FILESDIR}"/${PN}-5.2-no-ignore-shlib-errors.patch #216952
+	epatch "${FILESDIR}"/${PN}-6.1-rlfe-freebsd.patch # 301508
 
 	# force ncurses linking #71420
 	sed -i -e 's:^SHLIB_LIBS=:SHLIB_LIBS=-lncurses:' support/shobj-conf || die "sed"
