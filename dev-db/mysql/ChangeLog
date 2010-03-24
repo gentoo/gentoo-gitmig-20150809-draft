@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.523 2010/03/24 03:34:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.524 2010/03/24 03:36:21 robbat2 Exp $
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.90-r2.ebuild:
+  Minor patchset bump for failed testcases that were noted in sec
+  stabilization bug #303747, patch from bug #308999.
 
 *mysql-5.1.45 (24 Mar 2010)
 
