@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-la
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-la/ChangeLog,v 1.9 2010/03/21 14:52:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-la/ChangeLog,v 1.10 2010/03/24 15:52:36 ranger Exp $
+
+  24 Mar 2010; Brent Baude <ranger@gentoo.org>
+  aspell-la-6.0.20020503.0.ebuild:
+  Marking aspell-la-6.0.20020503.0 ppc for bug 310015
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org>
   aspell-la-6.0.20020503.0.ebuild:
