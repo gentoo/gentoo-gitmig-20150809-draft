@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.8-r1.ebuild,v 1.2 2010/03/08 23:40:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.8-r1.ebuild,v 1.3 2010/03/24 13:39:08 eva Exp $
 
 inherit autotools gnome2
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.6.0
 		media-libs/libpng
 		gnome-base/gconf
 		jpeg? ( media-libs/jpeg )
-		net-libs/xulrunner"
+		>=net-libs/xulrunner-1.9.2"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19"
 

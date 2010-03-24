@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-web-photo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.4 2010/03/08 23:40:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.5 2010/03/24 13:39:08 eva Exp $
+
+  24 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-web-photo-0.8-r1.ebuild, gnome-web-photo-0.9.ebuild:
+  Fix incorrect xulrunner dependency, bug #310697.
 
 *gnome-web-photo-0.9 (08 Mar 2010)
 
