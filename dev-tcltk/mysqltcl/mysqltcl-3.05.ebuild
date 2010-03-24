@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-3.05.ebuild,v 1.1 2009/08/08 01:08:07 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-3.05.ebuild,v 1.2 2010/03/24 21:30:28 robbat2 Exp $
+
+inherit multilib
 
 DESCRIPTION="TCL MySQL Interface"
 HOMEPAGE="http://www.xdobry.de/mysqltcl/"
@@ -20,4 +22,9 @@ src_install() {
 	dodoc AUTHORS README README-msqltcl ChangeLog
 	dohtml doc/mysqltcl.html
 	prepalldocs
+}
+
+src_compile() {
+	econf --with-mysql-lib=/usr/$(get_libdir)/mysql || die
+	emake || die
 }
