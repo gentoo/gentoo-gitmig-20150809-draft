@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.6.4.ebuild,v 1.1 2010/03/17 15:13:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.6.4.ebuild,v 1.2 2010/03/24 22:04:28 robbat2 Exp $
 
 EAPI=2
 
@@ -285,7 +285,11 @@ src_test() {
 	local disabled=""
 	local tests_cvs="t9200-git-cvsexportcommit.sh \
 					t9400-git-cvsserver-server.sh \
-					t9600-cvsimport.sh"
+					t9401-git-cvsserver-crlf.sh \
+					t9600-cvsimport.sh \
+					t9601-cvsimport-vendor-branch.sh \
+					t9602-cvsimport-branches-tags.sh \
+					t9603-cvsimport-patchsets.sh"
 	local tests_perl="t5502-quickfetch.sh \
 					t5512-ls-remote.sh \
 					t5520-pull.sh"
