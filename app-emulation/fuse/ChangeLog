@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.29 2009/12/22 04:40:09 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.30 2010/03/24 00:27:33 neurogeek Exp $
+
+  23 Mar 2010; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Added myself to metadata.xml
 
   22 Dec 2009; Jeremy Olexa <darkside@gentoo.org> -fuse-0.10.0.2-r2.ebuild:
   remove old

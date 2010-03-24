@@ -11,6 +11,11 @@
 		<email>darkside@gentoo.org</email>
 		<description>Proxy Maintainer. Please CC on bugs</description>
 	</maintainer>
+	<maintainer>
+		<email>neurogeek@gentoo.org</email>
+		<name>Jesus Rivero</name>
+		<description>Proxy Maintainer. Please CC on bugs</description>
+	</maintainer>
 	<use>
 		<flag name='libdsk'>Enable support for the floppy disk emulation
 			library <pkg>app-emulation/libdsk</pkg></flag>

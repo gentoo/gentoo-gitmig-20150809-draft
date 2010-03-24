@@ -7,6 +7,11 @@
 		<description>Proxy Maintainer</description>
 	</maintainer>
 	<maintainer>
+		<email>neurogeek@gentoo.org</email>
+		<name>Jesus Rivero</name>
+		<description>Proxy Maintainer</description>
+	</maintainer>
+	<maintainer>
 		<email>jmfo1982@yahoo.es</email>
 		<description>Proxied Maintainer. Please CC on bugs.</description>
 		<name>José Manuel Ferrer Ortiz</name>
