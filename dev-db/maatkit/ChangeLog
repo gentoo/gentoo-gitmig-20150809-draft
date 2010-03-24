@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/maatkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.9 2010/01/02 12:14:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.10 2010/03/24 19:32:25 fauli Exp $
+
+  24 Mar 2010; Christian Faulhammer <fauli@gentoo.org> maatkit-5240.ebuild:
+  stable x86, bug 304031
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> maatkit-5240.ebuild:
   Transfer Prefix keywords
