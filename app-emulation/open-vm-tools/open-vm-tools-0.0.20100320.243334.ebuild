@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20090824.187411.ebuild,v 1.1 2009/08/27 19:03:47 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100320.243334.ebuild,v 1.1 2010/03/24 17:04:34 vadimk Exp $
 
 EAPI="2"
 
-inherit eutils linux-mod pam versionator
+inherit eutils pam versionator
 
 MY_DATE="$(get_version_component_range 3)"
 MY_BUILD="$(get_version_component_range 4)"
@@ -18,68 +18,56 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X doc fuse icu unity xinerama"
+IUSE="X doc fuse icu +pic unity xinerama"
 
-RDEPEND=">=dev-libs/glib-2
-		dev-libs/libdnet
-		sys-apps/ethtool
-		sys-process/procps
-		virtual/pam
-		X? (
-			dev-cpp/gtkmm
-			x11-base/xorg-server
-			x11-drivers/xf86-input-vmmouse
-			x11-drivers/xf86-video-vmware
-			x11-libs/gtk+
-			x11-libs/libnotify
-			x11-libs/libX11
-		)
-		fuse? ( sys-fs/fuse )
-		icu? ( dev-libs/icu )
-		unity? (
-			dev-libs/uriparser
-			x11-libs/libXScrnSaver
-		)
-		xinerama? ( x11-libs/libXinerama )
-		"
+RDEPEND="app-emulation/open-vm-tools-kmod
+	>=dev-libs/glib-2
+	dev-libs/libdnet
+	sys-apps/ethtool
+	sys-process/procps
+	virtual/pam
+	X? (
+		dev-cpp/gtkmm
+		x11-base/xorg-server
+		x11-drivers/xf86-input-vmmouse
+		x11-drivers/xf86-video-vmware
+		x11-libs/gtk+
+		x11-libs/libnotify
+		x11-libs/libX11
+		x11-libs/libXtst
+	)
+	fuse? ( sys-fs/fuse )
+	icu? ( dev-libs/icu )
+	unity? (
+		dev-libs/uriparser
+		x11-libs/libXScrnSaver
+	)
+	xinerama? ( x11-libs/libXinerama )
+	"
 
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
-		virtual/linux-sources
-		doc? ( app-doc/doxygen )
-		"
+	dev-util/pkgconfig
+	virtual/linux-sources
+	doc? ( app-doc/doxygen )
+	"
 
 S="${WORKDIR}/${MY_P}"
 
-VMWARE_MOD_DIR="modules/linux"
-VMWARE_MODULE_LIST="pvscsi vmblock vmci vmhgfs vmsync vmmemctl vmxnet vmxnet3 vsock"
-
 pkg_setup() {
-	use unity && ! use xinerama && \
-	  die 'The Unity USE flag requires USE="xinerama" as well'
-
-	linux-mod_pkg_setup
-	MODULE_NAMES=""
-	BUILD_TARGETS="auto-build HEADER_DIR=${KERNEL_DIR}/include BUILD_DIR=${KV_OUT_DIR} OVT_SOURCE_DIR=${S}"
-
-	for mod in ${VMWARE_MODULE_LIST};
-	do
-		if [ "${mod}" == "vmxnet" -o "${mod}" == "vmxnet3" ];
-		then
-			MODTARGET="net"
-		else
-			MODTARGET="openvmtools"
-		fi
-		MODULE_NAMES="${MODULE_NAMES} ${mod}(${MODTARGET}:${S}/${VMWARE_MOD_DIR}/${mod})"
-	done
+	use unity && ! use xinerama && die 'The Unity USE flag requires USE="xinerama" as well'
 
 	enewgroup vmware
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/default-scripts.patch"
+	epatch "${FILESDIR}/default-scripts1.patch"
+	epatch "${FILESDIR}/checkvm-pie-safety.patch"
+	epatch "${FILESDIR}/vmguestlib-pkg-config.patch"
 	sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
-	sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
+	# Do not filter out Werror
+	# Upstream Bug  http://sourceforge.net/tracker/?func=detail&aid=2959749&group_id=204462&atid=989708
+	# sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
+	sed -i -e 's:\(TEST_PLUGIN_INSTALLDIR=\).*:\1\$libdir/open-vm-tools/plugins/tests:g' configure || die "sed test_plugin_installdir failed"
 }
 
 src_configure() {
@@ -87,27 +75,29 @@ src_configure() {
 		--with-procps \
 		--with-dnet \
 		--without-kernel-modules \
+		$(use_enable doc docs) \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_with X x) \
 		$(use_with X gtk2) \
 		$(use_with X gtkmm) \
 		$(use_with icu) \
+		$(use_with pic) \
 		$(use_enable unity) \
 		$(use_enable xinerama multimon)
 }
 
 src_compile() {
-	linux-mod_src_compile
-
 	emake || die "failed to compile"
 }
 
 src_install() {
-	linux-mod_src_install
-
 	emake DESTDIR="${D}" install || die "failed to install"
 
 	rm "${D}"/etc/pam.d/vmtoolsd
 	pamd_mimic_system vmtoolsd auth account
+
+	rm "${D}"/usr/$(get_libdir)/*.la
+	rm "${D}"/usr/$(get_libdir)/open-vm-tools/plugins/common/*.la
 
 	newinitd "${FILESDIR}/open-vm-tools.initd" vmware-tools || die "failed to newinitd"
 	newconfd "${FILESDIR}/open-vm.confd" vmware-tools || die "failed to newconfd"
