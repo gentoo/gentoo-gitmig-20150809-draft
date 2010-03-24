@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.65 2010/01/03 06:56:48 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.66 2010/03/24 20:01:17 grozin Exp $
+
+*asymptote-1.91-r1 (25 Mar 2010)
+
+  25 Mar 2010; Andrey Grozin <grozin@gentoo.org> -asymptote-1.90.ebuild,
+  -files/asymptote-1.90-configure-ac.patch,
+  -files/asymptote-1.90-xdg-utils.patch, +asymptote-1.91-r1.ebuild:
+  With USE=python, now installs python support for several ABIs
 
 *asymptote-1.91 (03 Jan 2010)
 
