@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/namebench
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/ChangeLog,v 1.1 2010/03/24 00:39:07 spatz Exp $
+
+*namebench-1.2 (24 Mar 2010)
+
+  24 Mar 2010; Dror Levin <spatz@gentoo.org> +namebench-1.2.ebuild,
+  +metadata.xml:
+  Initial version, bug 296138. Thanks to Jacob Swanson and
+  Andreis_Vinogradovs for ebuilds.
+
