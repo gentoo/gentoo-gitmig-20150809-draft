@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/pnglite-0.1.17.ebuild,v 1.1 2010/03/24 23:33:57 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/pnglite-0.1.17.ebuild,v 1.2 2010/03/24 23:41:12 volkmar Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_prepare() {
 src_compile() {
 	if use static-libs; then
 		emake ${PN}.o || die "make failed"
-		ar -cvq lib${PN}.a ${PN}.o || die "ar failed"
+		$(tc-getAR) -cvq lib${PN}.a ${PN}.o || die "ar failed"
 		rm ${PN}.o || die "rm failed"
 	fi
 

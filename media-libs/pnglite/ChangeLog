@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pnglite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/ChangeLog,v 1.1 2010/03/24 23:33:57 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/ChangeLog,v 1.2 2010/03/24 23:41:12 volkmar Exp $
+
+  24 Mar 2010; Mounir Lamouri <volkmar@gentoo.org> pnglite-0.1.17.ebuild:
+  Use tc-getAR instead of ar. Thanks to ssuominen.
 
 *pnglite-0.1.17 (24 Mar 2010)
 
