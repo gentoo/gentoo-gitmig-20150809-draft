@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-es
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/ChangeLog,v 1.14 2010/03/21 14:53:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/ChangeLog,v 1.15 2010/03/24 15:56:44 ranger Exp $
+
+  24 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-es-1.9a.ebuild:
+  Marking aspell-es-1.9a ppc stable for bug 310015
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-es-1.9a.ebuild:
   Marking aspell-es-1.9a ppc64 stable for bug 310015
