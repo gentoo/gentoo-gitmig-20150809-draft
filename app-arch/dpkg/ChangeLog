@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.122 2010/03/24 05:40:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.123 2010/03/24 19:30:13 jer Exp $
+
+  24 Mar 2010; Jeroen Roovers <jer@gentoo.org> dpkg-1.15.6.ebuild,
+  metadata.xml:
+  Make building dselect optional and dependent on USE=nls thanks to Neil
+  Bothwick (bug #311165).
 
   24 Mar 2010; Jeroen Roovers <jer@gentoo.org> dpkg-1.15.6.ebuild:
   Disable Dpkg::Compression::FileHandle test for this version (bug #310847).
