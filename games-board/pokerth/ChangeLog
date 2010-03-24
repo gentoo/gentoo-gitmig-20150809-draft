@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.9 2010/03/09 01:45:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.10 2010/03/24 19:21:00 fauli Exp $
+
+  24 Mar 2010; Christian Faulhammer <fauli@gentoo.org> pokerth-0.7.1.ebuild:
+  stable x86, bug 308567
 
   09 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> pokerth-0.7.1.ebuild:
   allow building against boost:1.41
