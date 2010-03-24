@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.3.0.ebuild,v 1.2 2010/03/24 05:34:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.3.0.ebuild,v 1.3 2010/03/24 16:15:48 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -73,7 +73,7 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	if use doc; then
 		doins -r build/docs/html || die
-		doins docs/latex/*.pdf || die
+		doins build/docs/latex/*.pdf || die
 	fi
 	if use examples; then
 		doins -r examples || die
