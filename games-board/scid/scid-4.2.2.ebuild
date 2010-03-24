@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.2.2.ebuild,v 1.4 2010/03/07 20:33:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.2.2.ebuild,v 1.5 2010/03/24 14:09:42 ranger Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/scid/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tk-8.3

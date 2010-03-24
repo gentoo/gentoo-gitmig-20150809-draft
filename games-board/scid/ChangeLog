@@ -1,6 +1,9 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.27 2010/03/07 20:33:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.28 2010/03/24 14:09:42 ranger Exp $
+
+  24 Mar 2010; Brent Baude <ranger@gentoo.org> scid-4.2.2.ebuild:
+  stable ppc, bug 306683
 
   07 Mar 2010; Raúl Porcel <armin76@gentoo.org> scid-4.0.ebuild,
   scid-4.2.2.ebuild:
