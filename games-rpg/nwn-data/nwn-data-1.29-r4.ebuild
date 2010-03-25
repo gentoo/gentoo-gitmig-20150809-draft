@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.1 2010/01/25 01:19:57 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r4.ebuild,v 1.2 2010/03/25 04:35:54 calchan Exp $
 
 inherit eutils games
 
@@ -39,7 +39,7 @@ SRC_URI="${CLIENT_BASEURL}/${MY_PV}/nwclient${MY_PV}.tar.gz
 
 LICENSE="NWN-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="cdinstall hou nowin sou videos ${LANGUAGES}"
 RESTRICT="strip mirror"
 

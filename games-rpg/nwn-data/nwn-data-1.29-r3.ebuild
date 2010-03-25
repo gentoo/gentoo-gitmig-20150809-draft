@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r3.ebuild,v 1.3 2008/05/29 14:19:13 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29-r3.ebuild,v 1.4 2010/03/25 04:35:54 calchan Exp $
 
 inherit eutils games
 
@@ -291,7 +291,7 @@ src_unpack() {
 			# I think these are not needed.  Can someone verify this?
 #			unzip -qo "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
 #			unzip -qo "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
-			unzip -qo "${CDROM_ROOT}"/Data_Linux.zip || die "unpacking"
+			unzip -qo "${CDROM_ROOT}"/Data_linux.zip || die "unpacking"
 			# We don't give the user the option to install SoU/HotU.  While some
 			# people might complain about this, most newer NWN stuff requires
 			# them both anyway, so it makes no sense not to install them.
