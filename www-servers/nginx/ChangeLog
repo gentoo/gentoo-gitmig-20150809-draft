@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.252 2010/03/25 09:13:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.253 2010/03/25 09:16:05 hollow Exp $
+
+  25 Mar 2010; Benedikt Böhm <hollow@gentoo.org> nginx-0.7.65-r1.ebuild,
+  nginx-0.8.34-r1.ebuild:
+  fix pcre USE flag
 
 *nginx-0.7.65-r1 (25 Mar 2010)
 

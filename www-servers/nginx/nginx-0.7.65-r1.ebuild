@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.65-r1.ebuild,v 1.1 2010/03/25 09:13:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.65-r1.ebuild,v 1.2 2010/03/25 09:16:05 hollow Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ perl random_index realip secure_link stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
 NGINX_MODULES_3RD="http_passenger"
 
-IUSE="aio debug +http +http-cache ipv6 libatomic +pcre ssl"
+IUSE="aio debug +http +http-cache ipv6 libatomic ssl"
 
 for mod in $NGINX_MODULES_STD; do
 	IUSE="${IUSE} +nginx_modules_http_${mod}"
@@ -121,6 +121,7 @@ src_configure() {
 	use debug && myconf="${myconf} --with-debug"
 	use ipv6 && myconf="${myconf} --with-ipv6"
 	use libatomic && myconf="${myconf} --with-libatomic"
+	use pcre && myconf="${myconf} --with-pcre"
 
 	# HTTP modules
 	for mod in $NGINX_MODULES_STD; do
@@ -195,7 +196,6 @@ src_configure() {
 		--http-client-body-temp-path=/var/tmp/${PN}/client \
 		--http-proxy-temp-path=/var/tmp/${PN}/proxy \
 		--http-fastcgi-temp-path=/var/tmp/${PN}/fastcgi \
-		--with-pcre \
 		${myconf} || die "configure failed"
 }
 
