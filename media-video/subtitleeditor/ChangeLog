@@ -1,6 +1,13 @@
 # ChangeLog for media-video/subtitleeditor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.6 2010/03/11 13:09:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.7 2010/03/25 21:46:00 eva Exp $
+
+*subtitleeditor-0.36.1 (25 Mar 2010)
+
+  25 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -subtitleeditor-0.31.0.ebuild, -subtitleeditor-0.33.0.ebuild,
+  +subtitleeditor-0.36.1.ebuild:
+  Version bump. Make sure *.la files are deleted. Clean up old revisions.
 
   11 Mar 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   subtitleeditor-0.36.0.ebuild, +files/subtitleeditor-0.36.0-r681.patch:
