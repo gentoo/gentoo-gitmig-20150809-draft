@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.96-r1.ebuild,v 1.1 2010/03/21 10:17:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.96-r1.ebuild,v 1.2 2010/03/25 14:50:22 nirbheek Exp $
 
 EAPI="2"
 
@@ -29,9 +29,10 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.36
-	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1.10 )"
+	>=dev-util/gtk-doc-am-1.13
+	doc? ( >=dev-util/gtk-doc-1.13 )"
 PDEPEND=">=sys-auth/consolekit-0.4[policykit]"
+# gtk-doc-am-1.13 needed for eautoreconf
 
 pkg_setup() {
 	enewgroup polkituser
