@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.71-r1.ebuild,v 1.3 2010/03/11 19:53:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.71-r1.ebuild,v 1.4 2010/03/25 20:48:57 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils versionator flag-o-matic
 
 DESCRIPTION="GPL Ghostscript - the most current Ghostscript, AFPL, relicensed."
@@ -50,10 +51,7 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# remove internal copies of expat, jasper, jpeg, libpng and zlib
 	rm -rf "${S}/expat"
 	rm -rf "${S}/jasper"
@@ -129,7 +127,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable cairo) \
 		$(use_enable cups) \
@@ -148,10 +146,14 @@ src_compile() {
 		sed -i -e 's!$(DD)bbox.dev!& $(DD)djvumask.dev $(DD)djvusep.dev!g' Makefile
 	fi
 
+	cd "${S}/ijs"
+	econf || die "ijs econf failed"
+}
+
+src_compile() {
 	emake -j1 so all || die "emake failed"
 
 	cd "${S}/ijs"
-	econf || die "ijs econf failed"
 	emake || die "ijs emake failed"
 }
 
