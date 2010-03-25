@@ -1,6 +1,11 @@
 # ChangeLog for media-video/submux-dvd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.11 2007/11/27 11:42:37 zzam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.12 2010/03/25 21:22:40 lordvan Exp $
+
+  25 Mar 2010; <lordvan@gentoo.org> submux-dvd-0.5.1.ebuild:
+  removed submux-dvd-0.5.ebuild
+  fixed QA issues bug #305553 Thanks to Christophe LEFEBVRE
+  <chtof62@gmail.com> and flameeyes
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> submux-dvd-0.5.ebuild:
   Fixed quoting. No longer install LICENSE file.
