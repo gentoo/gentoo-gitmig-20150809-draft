@@ -1,14 +1,6 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 02_fix_new_theora.dpatch by  <root@localhost>
-##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: Fix recording with newest libtheora versions
-
-@DPATCH@
-
---- recordmydesktop-0.3.8.1+svn602.orig/src/rmd_initialize_data.c	2010-02-08 18:30:42.000000000 +0100
-+++ recordmydesktop-0.3.8.1+svn602.bueno/src/rmd_initialize_data.c	2010-02-08 19:12:36.000000000 +0100
-@@ -223,7 +223,7 @@
+--- recordmydesktop-0.3.8.1.old/src/rmd_initialize_data.c	2009-11-25 10:05:58.708779029 -0500
++++ recordmydesktop-0.3.8.1.old/src/rmd_initialize_data.c	2009-11-25 09:28:07.629507987 -0500
+@@ -224,7 +224,7 @@ 
      args->channels             = 1;
      args->frequency            = 22050;
      args->buffsize             = 4096;
@@ -17,27 +9,40 @@
      args->v_quality            = 63;
      args->s_quality            = 10;
  
-@DPATCH@
-
---- recordmydesktop-0.3.8.1+svn602.orig/src/rmd_parseargs.c	2010-02-08 18:30:42.000000000 +0100
-+++ recordmydesktop-0.3.8.1+svn602.bueno/src/rmd_parseargs.c	2010-02-08 19:15:01.000000000 +0100
-@@ -215,7 +215,7 @@
+--- recordmydesktop-0.3.8.1.old/src/rmd_parseargs.c	2009-11-25 10:06:07.409777969 -0500
++++ recordmydesktop-0.3.8.1.old/src/rmd_parseargs.c	2009-11-25 09:39:32.786757292 -0500
+@@ -104,10 +104,10 @@ 
+     "Encoding Options\n"
+     "\t--on-the-fly-encoding\tEncode the audio-video data, while recording.\n"
+     "\t--v_quality n\t\tA number from 0 to 63 for"
+-    " desired encoded video quality(default 63).\n"
++    " desired encoded video quality(default 63).\n\t               (set quality to zero for bitrate controlled usage)\n"
  
-         { "v_bitrate", '\0',
-           POPT_ARG_INT, &arg_return->v_bitrate, 0,
--          "A number from 45000 to 2000000 for desired encoded video bitrate(default 45000).",
-+          "A number from 0 to 2000000 for desired encoded video bitrate(default 0).",
-           "n" },
+-    "\t--v_bitrate n\t\tA number from 45000 to 2000000"
+-    " for desired encoded video bitrate(default 45000).\n"
++    "\t--v_bitrate n\t\tA number from 0 to 200000000"
++    " for desired encoded video bitrate(default 0 = not rate controlled).\n"
  
-         { "s_quality", '\0',
-@@ -460,8 +460,8 @@
-         fprintf(stdout, "--v_quality must be within the inclusive range [0-63].\n");
-         success = FALSE;
-     }
--    if (args->v_bitrate < 45000 || args->v_quality > 2000000) {
--        fprintf(stdout, "--v_bitrate must be within the inclusive range [45000-2000000].\n");
-+    if (args->v_bitrate < 0 || args->v_quality > 2000000) {
-+        fprintf(stdout, "--v_bitrate must be within the inclusive range [0-2000000].\n");
-         success = FALSE;
-     }
-     if (args->frequency <= 0) {
+     "\t--s_quality n\t\tDesired audio quality(-1 to 10).\n\n"
+ 
+@@ -327,17 +327,17 @@ 
+                  strcmp(argv[i], "-v_bitrate")  == 0) {
+             if(i+1<argc){
+                 int num=atoi(argv[i+1]);
+-                if((num>=45000)&&(num<=2000000))
++                if((num>=0)&&(num<=200000000))
+                     arg_return->v_bitrate=num;
+                 else{
+                     fprintf(stderr,"Argument Usage:"
+-                                   " --v_bitrate n(number 45000-2000000)\n");
++                                   " --v_bitrate n(number 0-200000000)\n");
+                     return FALSE;
+                 }
+             }
+             else{
+                 fprintf(stderr,"Argument Usage:"
+-                               " --v_bitrate n(number 45000-2000000)\n");
++                               " --v_bitrate n(number 0-200000000)\n");
+                 return FALSE;
+             }
+             i++;
