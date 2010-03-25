@@ -1,6 +1,6 @@
-diff -ur mongodb-src-r1.3.3/SConstruct mongodb-src-r1.3.3.new/SConstruct
---- mongodb-src-r1.3.3/SConstruct	2010-03-02 07:37:07.000000000 -0800
-+++ mongodb-src-r1.3.3.new/SConstruct	2010-03-07 22:40:02.000000000 -0800
+diff -ur mongodb-src-r1.4.0/SConstruct mongodb-src-r1.4.0.new/SConstruct
+--- mongodb-src-r1.4.0/SConstruct	2010-03-02 07:37:07.000000000 -0800
++++ mongodb-src-r1.4.0.new/SConstruct	2010-03-07 22:40:02.000000000 -0800
 @@ -1211,15 +1211,17 @@
              Exit( 1 )
  
@@ -32,14 +32,13 @@ diff -ur mongodb-src-r1.3.3/SConstruct mongodb-src-r1.3.3.new/SConstruct
      ensureDir( dirName )
      from subprocess import Popen
      mongodForTests = Popen( [ mongod[0].abspath, "--port", mongodForTestsPort, "--dbpath", dirName ] )
-diff -ur mongodb-src-r1.3.3/dbtests/dbtests.cpp mongodb-src-r1.3.3.new/dbtests/dbtests.cpp
---- mongodb-src-r1.3.3/dbtests/dbtests.cpp	2010-03-02 07:37:07.000000000 -0800
-+++ mongodb-src-r1.3.3.new/dbtests/dbtests.cpp	2010-03-07 22:40:37.000000000 -0800
-@@ -22,6 +22,6 @@
- #include "dbtests.h"
+diff -ur mongodb-src-r1.4.0/dbtests/dbtests.cpp mongodb-src-r1.4.0.new/dbtests/dbtests.cpp
+--- mongodb-src-r1.4.0/dbtests/dbtests.cpp	2010-03-02 07:37:07.000000000 -0800
++++ mongodb-src-r1.4.0.new/dbtests/dbtests.cpp	2010-03-07 22:40:37.000000000 -0800
+@@ -23,6 +23,6 @@
  
  int main( int argc, char** argv ) {
+     static StaticObserver StaticObserver;
 -    return Suite::run(argc, argv, "/tmp/unittest");
 +    return Suite::run(argc, argv, "testdir/tmp/unittest");
  }
- 
