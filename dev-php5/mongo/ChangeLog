@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/mongo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/mongo/ChangeLog,v 1.1 2010/03/07 22:04:36 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/mongo/ChangeLog,v 1.2 2010/03/25 21:40:20 ramereth Exp $
+
+*mongo-1.0.6 (25 Mar 2010)
+
+  25 Mar 2010; Lance Albertson <ramereth@gentoo.org> +mongo-1.0.6.ebuild:
+  Version bump to 1.0.6
 
 *mongo-1.0.4 (26 Feb 2010)
 
