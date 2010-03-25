@@ -1,6 +1,10 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.84 2010/01/15 04:10:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.85 2010/03/25 22:34:33 eva Exp $
+
+  25 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> -iso-codes-3.8.ebuild,
+  +iso-codes-3.14.ebuild:
+  Version bump, now strip unwanted translations. Clean up old revisions.
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org> iso-codes-3.11.1.ebuild:
   Add prefix keywords
