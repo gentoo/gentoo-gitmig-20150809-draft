@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.245 2010/03/21 12:03:12 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.246 2010/03/25 17:21:59 steev Exp $
+
+*dbus-1.2.24 (25 Mar 2010)
+
+  25 Mar 2010; <steev@gentoo.org> -dbus-1.2.22.ebuild, +dbus-1.2.24.ebuild:
+  dbus: New upstream release, fixes a crasher with syslogging. Also move 
+  to using EAPI-2, side results are not dying after successfully 
+  installing when using xorg-server-9999 (and eventually xorg-server 1.8.) 
+  Should also fix bug #222551, so that the messagebus user/group get 
+  created before src_install.
 
 *dbus-1.2.22 (21 Mar 2010)
 

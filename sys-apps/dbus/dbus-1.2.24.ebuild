@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.22.ebuild,v 1.1 2010/03/21 12:03:12 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.24.ebuild,v 1.1 2010/03/25 17:21:59 steev Exp $
+
+EAPI=2
 
 inherit eutils multilib flag-o-matic
 
@@ -23,16 +25,18 @@ DEPEND="${RDEPEND}
 	doc? (	app-doc/doxygen
 		app-text/xmlto )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Tests were restricted because of this
-	sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
+src_prepare() {
+		enewgroup messagebus
+	    enewuser messagebus -1 "-1" -1 messagebus
+		unpack ${A}
+		cd "${S}"
+		# Tests were restricted because of this
+	    sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
 		-e '/"dispatch"/d' -i "${S}/bus/test-main.c"
+
 }
 
-src_compile() {
+src_configure() {
 	# so we can get backtraces from apps
 	append-flags -rdynamic
 
@@ -61,8 +65,6 @@ src_compile() {
 	# after the compile, it uses a selinuxfs interface to
 	# check if the SELinux policy has the right support
 	use selinux && addwrite /selinux/access
-
-	emake || die "make failed"
 }
 
 src_test() {
@@ -119,7 +121,7 @@ pkg_postinst() {
 	ewarn "You must restart D-Bus \`/etc/init.d/dbus restart\` to run"
 	ewarn "the new version of the daemon."
 
-	if has_version x11-base/xorg-server && built_with_use x11-base/xorg-server hal; then
+	if has_version x11-base/xorg-server[hal]; then
 		elog
 		ewarn "You are currently running X with the hal useflag enabled"
 		ewarn "restarting the dbus service WILL restart X as well"
