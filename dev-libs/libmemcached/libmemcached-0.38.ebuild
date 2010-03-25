@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.38.ebuild,v 1.1 2010/03/23 03:38:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-0.38.ebuild,v 1.2 2010/03/25 07:49:46 robbat2 Exp $
 
 EAPI=2
 
@@ -20,12 +20,15 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.28-runtestsasuser.patch"
+	sed -r -i \
+		-e 's,(context)(__attribute__),\1 \2,g' \
+		libhashkit/hsieh.c || die "Failed to fix upstream typo"
 }
 
 src_configure() {
 	econf \
 		$(use_with debug debug) \
-		$(use_with hsieh hsieh_hash)
+		$(use_enable hsieh hsieh_hash)
 }
 
 src_install() {
