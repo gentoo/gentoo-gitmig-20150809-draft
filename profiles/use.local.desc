@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5434 2010/03/24 21:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5435 2010/03/25 09:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3437,7 +3437,6 @@ www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
 www-servers/nginx:pop - Enables POP3 proxy support
 www-servers/nginx:random-index - Enables HTTP random index module
 www-servers/nginx:realip - Enables realip module
-www-servers/nginx:securelink - Enable HTTP secure link module
 www-servers/nginx:smtp - Enables SMTP proxy support
 www-servers/nginx:static-gzip - Enables support for gzipping static content
 www-servers/nginx:status - Enables stub_status module
