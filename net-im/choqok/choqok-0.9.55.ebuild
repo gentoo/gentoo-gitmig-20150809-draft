@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-0.9.55.ebuild,v 1.1 2010/03/25 13:51:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-0.9.55.ebuild,v 1.2 2010/03/25 21:09:15 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,5 +14,4 @@ SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.bz2"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-KEYWORDS="~x86"
 IUSE="debug"
