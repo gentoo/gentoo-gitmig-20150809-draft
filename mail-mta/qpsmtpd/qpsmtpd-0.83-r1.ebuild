@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.83-r1.ebuild,v 1.1 2010/03/25 06:07:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.83-r1.ebuild,v 1.2 2010/03/25 06:08:25 robbat2 Exp $
 
 EAPI=2
 
@@ -52,7 +52,7 @@ src_install() {
 
 	diropts -m 0755 -o smtpd -g smtpd
 	dodir /var/spool/qpsmtpd
-	keepdir /var/spool/qpsmtpd
+	keepdir /var/spool/qpsmtpd /var/run/qpsmtpd
 
 	dodir /etc/qpsmtpd
 	insinto /etc/qpsmtpd
