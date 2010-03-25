@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/vanilla-dmz-aa-xcursors
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-aa-xcursors/ChangeLog,v 1.10 2008/07/07 19:12:05 bluebird Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vanilla-dmz-aa-xcursors/ChangeLog,v 1.11 2010/03/25 19:38:45 armin76 Exp $
+
+  25 Mar 2010; Raúl Porcel <armin76@gentoo.org>
+  vanilla-dmz-aa-xcursors-0.4.ebuild:
+  Add ~arm
 
   07 Jul 2008; Friedrich Oslage <bluebird@gentoo.org>
   vanilla-dmz-aa-xcursors-0.4.ebuild:
