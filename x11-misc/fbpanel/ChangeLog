@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.40 2010/02/10 01:40:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.41 2010/03/25 15:32:23 ssuominen Exp $
+
+*fbpanel-6.0 (25 Mar 2010)
+
+  25 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +fbpanel-6.0.ebuild:
+  Version bump.
 
 *fbpanel-5.6 (10 Feb 2010)
 
