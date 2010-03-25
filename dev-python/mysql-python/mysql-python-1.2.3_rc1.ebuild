@@ -1,12 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.3_rc1.ebuild,v 1.10 2010/02/27 20:39:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.3_rc1.ebuild,v 1.11 2010/03/25 19:17:47 arfrever Exp $
 
-NEED_PYTHON=2.3
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
 MY_P="MySQL-python-${PV/_rc/c}"
+
 DESCRIPTION="MySQL Module for python"
 HOMEPAGE="http://sourceforge.net/projects/mysql-python/"
 SRC_URI="mirror://sourceforge/mysql-python/${MY_P}.tar.gz"
@@ -19,6 +22,9 @@ IUSE=""
 RDEPEND="virtual/mysql"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
+
 DOCS="HISTORY doc/FAQ.txt doc/MySQLdb.txt"
+PYTHON_MODNAME="MySQLdb _mysql_exceptions.py"
