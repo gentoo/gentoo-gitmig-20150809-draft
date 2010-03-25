@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.74 2010/03/23 20:32:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.75 2010/03/25 13:30:45 fauli Exp $
+
+  25 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  abiword-plugins-2.6.8.ebuild:
+  stable x86, bug 306405
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> abiword-plugins-2.6.8.ebuild:
   Marking abiword-plugins-2.6.8 ppc for bug 306405
