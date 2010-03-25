@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.1 2010/03/25 07:36:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.2 2010/03/25 07:40:13 robbat2 Exp $
 
 *redis-1.2.5 (25 Mar 2010)
 
@@ -11,4 +11,5 @@
   Initial commit. Partially based on the submission in the upstream
   bugtracker by Geoff Kassel <gkassel@users.sourceforge.net> and W-Mark
   Kubacki <wmark.gentoo@hurrikane.de>. Proxy maintainers welcome.
+  Upstream submission was linked from bug #308243.
 
