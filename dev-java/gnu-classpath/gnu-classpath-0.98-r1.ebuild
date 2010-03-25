@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r1.ebuild,v 1.7 2010/03/21 20:50:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r1.ebuild,v 1.8 2010/03/25 13:08:57 caster Exp $
 
 EAPI=2
 
-inherit eutils flag-o-matic java-pkg-2 base multilib
+inherit eutils java-pkg-2 base multilib
 
 MY_P=${P/gnu-/}
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the Java language"

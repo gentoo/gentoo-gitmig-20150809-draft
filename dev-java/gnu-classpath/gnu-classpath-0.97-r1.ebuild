@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97-r1.ebuild,v 1.13 2010/03/21 22:41:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97-r1.ebuild,v 1.14 2010/03/25 13:08:57 caster Exp $
 
 EAPI=1
 
-inherit eutils flag-o-matic multilib java-pkg-2
+inherit eutils multilib java-pkg-2
 
 # .properties were from missing from tools.zip so I rolled out my own tarball
 # Should be changed back to upstream tarballs fro next release
