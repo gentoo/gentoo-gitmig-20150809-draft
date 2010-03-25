@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.0.ebuild,v 1.1 2010/03/21 13:50:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.0.ebuild,v 1.2 2010/03/25 21:33:47 spock Exp $
 
 EAPI=2
 
@@ -24,6 +24,7 @@ IUSE="debugger doc profiler opencl"
 
 DEPEND="!dev-util/nvidia-cuda-profiler"
 RDEPEND="${DEPEND}
+	>=sys-devel/binutils-2.20
 	>=sys-devel/gcc-4.0
 	profiler? ( x86? (
 		x11-libs/qt-gui
