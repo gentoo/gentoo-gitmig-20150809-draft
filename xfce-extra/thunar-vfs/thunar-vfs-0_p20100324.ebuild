@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-0_p20100324.ebuild,v 1.2 2010/03/25 11:31:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-0_p20100324.ebuild,v 1.3 2010/03/25 11:32:47 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -22,7 +22,7 @@ RDEPEND=">=xfce-base/exo-0.5.1
 	>=media-libs/libpng-1.2
 	>=media-libs/freetype-2
 	>=media-libs/jpeg-6b:0
-	dbus? ( dev-libs/dbus-glib )
+	dbus? ( >=dev-libs/dbus-glib-0.34 )
 	gnome? ( >=gnome-base/gconf-2 )
 	hal? ( >=dev-libs/dbus-glib-0.34
 		sys-apps/hal )
