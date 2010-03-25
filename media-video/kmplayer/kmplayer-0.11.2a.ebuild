@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2.ebuild,v 1.1 2010/03/06 15:03:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2a.ebuild,v 1.1 2010/03/25 13:35:06 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="cs da de el en_GB es et fr ga gl it ja km ku lt lv mai nb nds nl
