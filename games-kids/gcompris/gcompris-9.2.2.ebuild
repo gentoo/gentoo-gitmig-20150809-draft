@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.1 2010/03/25 18:30:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.2 2010/03/25 18:32:41 ssuominen Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2:2.6"
 PYTHON_USE_WITH_OPT="python"
 PYTHON_USE_WITH="sqlite threads"
 
-inherit autotools eutils python games versionator
+inherit autotools eutils python versionator games
 
 DESCRIPTION="full featured educational application for children from 2 to 10"
 HOMEPAGE="http://gcompris.net/"
