@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2a.ebuild,v 1.1 2010/03/25 13:35:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2a.ebuild,v 1.2 2010/03/25 13:40:46 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="cs da de el en_GB es et fr ga gl it ja km ku lt lv mai nb nds nl
@@ -14,7 +14,7 @@ SRC_URI="http://kmplayer.kde.org/pkgs/${P}.tar.bz2"
 LICENSE="GPL-2 FDL-1.2 LGPL-2.1"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="cairo debug doc expat +handbook npp"
+IUSE="cairo debug expat handbook npp"
 
 DEPEND="media-sound/phonon
 	expat? ( >=dev-libs/expat-2.0.1 )
