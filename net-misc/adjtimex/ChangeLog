@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/adjtimex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.22 2009/09/23 19:32:56 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.23 2010/03/25 19:28:46 robbat2 Exp $
+
+*adjtimex-1.20-r3 (25 Mar 2010)
+
+  25 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +adjtimex-1.20-r3.ebuild, files/adjtimex.init:
+  Straight bump to fix bug in init.d script of /usr/bin call without 'need
+  localmount', so startup failed sometimes.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> adjtimex-1.16.ebuild,
   adjtimex-1.16-r1.ebuild, adjtimex-1.20.ebuild, adjtimex-1.20-r1.ebuild,
