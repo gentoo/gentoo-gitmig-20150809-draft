@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.8.1-r2.ebuild,v 1.2 2010/03/25 12:54:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.8.1-r3.ebuild,v 1.1 2010/03/25 13:00:41 scarabeus Exp $
 
 EAPI=2
 
