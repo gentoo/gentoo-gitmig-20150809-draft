@@ -19,7 +19,6 @@
 		<flag name='pop'>Enables POP3 proxy support</flag>
 		<flag name='random-index'>Enables HTTP random index module</flag>
 		<flag name='realip'>Enables realip module</flag>
-		<flag name='securelink'>Enable HTTP secure link module</flag>
 		<flag name='smtp'>Enables SMTP proxy support</flag>
 		<flag name='static-gzip'>Enables support for gzipping static content</flag>
 		<flag name='status'>Enables stub_status module</flag>

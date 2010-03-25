@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.65.ebuild,v 1.3 2010/03/21 12:41:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.65.ebuild,v 1.4 2010/03/25 09:13:20 hollow Exp $
 
 inherit eutils ssl-cert toolchain-funcs perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://nginx.net/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="addition debug fastcgi flv imap pcre perl pop random-index realip smtp ssl static-gzip status sub webdav zlib"
 
 DEPEND="dev-lang/perl
