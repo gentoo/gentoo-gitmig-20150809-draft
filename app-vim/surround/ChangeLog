@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/surround
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/surround/ChangeLog,v 1.2 2010/03/12 09:25:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/surround/ChangeLog,v 1.3 2010/03/25 00:37:18 spatz Exp $
+
+*surround-1.90 (25 Mar 2010)
+
+  25 Mar 2010; Dror Levin <spatz@gentoo.org> +surround-1.90.ebuild:
+  Version bump.
 
   12 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> surround-1.34.ebuild:
   x86 stable wrt bug #307839
