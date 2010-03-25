@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.220 2010/03/21 14:41:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.221 2010/03/25 19:37:48 spock Exp $
+
+  25 Mar 2010; Michał Januszewski <spock@gentoo.org> nmap-5.20.ebuild:
+  Fix bug #308723.
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> nmap-5.21.ebuild:
   stable ppc64, bug 306791
