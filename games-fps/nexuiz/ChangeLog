@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/nexuiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.36 2010/03/05 14:11:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.37 2010/03/25 13:24:30 ssuominen Exp $
+
+  25 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> nexuiz-2.5.2.ebuild:
+  amd64 stable wrt #305991
 
   05 Mar 2010; Christian Faulhammer <fauli@gentoo.org> nexuiz-2.5.2.ebuild:
   stable x86, bug 305991
