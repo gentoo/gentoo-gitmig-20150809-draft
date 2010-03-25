@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/codetools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/ChangeLog,v 1.5 2010/03/23 05:10:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/ChangeLog,v 1.6 2010/03/25 21:17:05 bicatali Exp $
+
+  25 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  codetools-3.1.1.ebuild:
+  Remove setupdocs magic
 
 *codetools-3.1.1 (20 Mar 2010)
 

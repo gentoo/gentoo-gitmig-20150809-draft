@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.0.4.ebuild,v 1.1 2010/03/23 05:14:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.0.4.ebuild,v 1.2 2010/03/25 21:22:18 bicatali Exp $
 
 EAPI="2"
 
@@ -40,7 +40,10 @@ S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME="enthought"
 
 src_prepare() {
-	sed -e "s/self.run_command('build_docs')/pass/" -i setup.py || die
+	sed -i \
+		-e "s/self.run_command('build_docs')/pass/" \
+		-e "s/setupdocs>=1.0//" \
+		setup.py || die
 }
 
 src_test() {
