@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/simutrans
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.23 2010/01/18 22:21:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.24 2010/03/25 04:45:39 mr_bones_ Exp $
+
+*simutrans-0.102.2.2 (25 Mar 2010)
+
+  25 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +simutrans-0.102.2.2.ebuild:
+  Version bump (patch from Matthias Maier via bug #310931)
 
   18 Jan 2010; Markus Meier <maekke@gentoo.org> simutrans-0.102.2.ebuild:
   amd64/x86 stable, bug #299697
