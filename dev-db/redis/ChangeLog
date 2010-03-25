@@ -1,0 +1,14 @@
+# ChangeLog for dev-db/redis
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.1 2010/03/25 07:36:05 robbat2 Exp $
+
+*redis-1.2.5 (25 Mar 2010)
+
+  25 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +files/01-dont-print-pid-on-startup.diff, +files/configure.ac-1.02,
+  +redis-1.2.5.ebuild, +files/redis.confd, +files/redis.initd,
+  +metadata.xml:
+  Initial commit. Partially based on the submission in the upstream
+  bugtracker by Geoff Kassel <gkassel@users.sourceforge.net> and W-Mark
+  Kubacki <wmark.gentoo@hurrikane.de>. Proxy maintainers welcome.
+
