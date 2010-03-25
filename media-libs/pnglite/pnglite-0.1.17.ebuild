@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/pnglite-0.1.17.ebuild,v 1.2 2010/03/24 23:41:12 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/pnglite-0.1.17.ebuild,v 1.3 2010/03/25 10:46:31 ssuominen Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
 RDEPEND="sys-libs/zlib"
@@ -27,6 +27,7 @@ src_prepare() {
 }
 
 src_compile() {
+	tc-export CC
 	if use static-libs; then
 		emake ${PN}.o || die "make failed"
 		$(tc-getAR) -cvq lib${PN}.a ${PN}.o || die "ar failed"
