@@ -10,5 +10,7 @@
 		  lyrics</flag>
 	  <flag name="mirage">Enable the Mirage plugin which automatically, and
 		  intelligently generates playlists for you</flag>
+	  <flag name="telepathy">Enables the Telepathy plugin which lets you to
+		  share and stream music with IM buddies</flag>
   </use>
 </pkgmetadata>
