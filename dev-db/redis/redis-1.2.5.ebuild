@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.5.ebuild,v 1.1 2010/03/25 07:36:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.5.ebuild,v 1.2 2010/03/25 07:36:36 robbat2 Exp $
 
 EAPI=2
-WANT_AUTOCONF="latest"
 
 inherit autotools eutils
 
@@ -18,7 +17,7 @@ SLOT="0"
 
 RDEPEND=""
 DEPEND=""
-	
+
 REDIS_PIDDIR=/var/run/redis/
 REDIS_PIDFILE=${REDIS_PIDDIR}/redis.pid
 REDIS_DATAPATH=/var/lib/redis
