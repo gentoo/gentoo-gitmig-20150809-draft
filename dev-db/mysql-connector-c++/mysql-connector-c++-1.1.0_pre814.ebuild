@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/mysql-connector-c++-1.1.0_pre814.ebuild,v 1.2 2010/03/24 21:37:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/mysql-connector-c++-1.1.0_pre814.ebuild,v 1.3 2010/03/25 18:59:39 robbat2 Exp $
 
 EAPI="2"
 
@@ -29,16 +29,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/_pre/~r}"
 
-# cmake config helper function
-use_cmake() {
-	local i_use="0"
-	use ${1} && i_use="1"
-
-	echo ${i_use}
-}
-
 # cmake config that works ...
-CMAKE_USE_DIR="."
 CMAKE_IN_SOURCE_BUILD="1"
 
 src_unpack() {
@@ -57,9 +48,13 @@ src_configure() {
 	# native lib/wrapper needs this!
 	append-flags "-fno-strict-aliasing"
 
-	mycmakeargs="-DMYSQLCPPCONN_TRACE_ENABLE:BOOL=$(use_cmake debug) -DMYSQLCPPCONN_BUILD_EXAMPLES:BOOL=0 MYSQLCPPCONN_GCOV_ENABLE:BOOL=$(use_cmake gcov) -DMYSQLCPPCONN_ICU_ENABLE:BOOL=0"
+	mycmakeargs=(
+		"-DMYSQLCPPCONN_BUILD_EXAMPLES=OFF"
+		"-DMYSQLCPPCONN_ICU_ENABLE=OFF"
+		$(cmake-utils_use debug MYSQLCPPCONN_TRACE_ENABLE)
+		$(cmake-utils_use gconv MYSQLCPPCONN_GCOV_ENABLE)
+	)
 
-	# configure
 	cmake-utils_src_configure
 }
 
@@ -78,13 +73,13 @@ src_install() {
 	# fast install fails on useflag [-static-libs]
 	# http://bugs.mysql.com/bug.php?id=52281
 	insinto /usr/include
-	doins driver/mysql_{connection,driver}.h
+	doins driver/mysql_{connection,driver}.h || die
 
-	dodoc ANNOUNCE* CHANGES* README
+	dodoc ANNOUNCE* CHANGES* README || die
 
 	# examples
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins "${S}"/examples/*
+		doins "${S}"/examples/* || die
 	fi
 }
