@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.142 2010/03/24 20:37:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.143 2010/03/25 20:58:31 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -1200,6 +1200,7 @@ mysql_pkg_config() {
 		--datadir=${ROOT}/${MY_DATADIR} \
 		--max_allowed_packet=8M \
 		--net_buffer_length=16K \
+		--default-storage-engine=MyISAM \
 		--socket=${socket} \
 		--pid-file=${pidfile}"
 	#einfo "About to start mysqld: ${mysqld}"
