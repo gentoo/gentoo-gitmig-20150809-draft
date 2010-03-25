@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.1 2010/03/25 11:09:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.2 2010/03/25 11:19:42 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -31,17 +31,13 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	XFCONF="--disable-dependency-tracking"
+	PATCHES=( "${FILESDIR}/${P}-syntax.patch" )
 }
 
 src_prepare() {
 	sed -i \
 		-e 's:/usr/local:/usr:' \
 		src/eat{monkey,manager.rb} || die
-
-	# compat18.rb has class to handle this, but it's not working for some reason
-	sed -i \
-		-e 's:Dir.exists:File.directory:' \
-		src/eatsettings.rb || die
 
 	xfconf_src_prepare
 }
