@@ -1,0 +1,127 @@
+diff -ur gcompris-9.2.orig//Makefile.am gcompris-9.2//Makefile.am
+--- gcompris-9.2.orig//Makefile.am	2010-01-18 14:35:41.000000000 -0700
++++ gcompris-9.2//Makefile.am	2010-03-21 17:31:18.314740265 -0600
+@@ -17,7 +17,7 @@
+ endif
+ 
+ 
+-icondir=$(datadir)/pixmaps
++icondir=/usr/share/pixmaps
+ icon_DATA = gcompris.png gcompris-edit.png
+ 
+ if BUILD_MINGW32
+@@ -25,7 +25,7 @@
+ Applications_in_files =
+ Applications_DATA =
+ else
+-Applicationsdir = $(datadir)/applications/
++Applicationsdir = /usr/share/applications/
+ Applications_in_files = gcompris.desktop.in gcompris-edit.desktop.in
+ Applications_DATA = gcompris.desktop gcompris-edit.desktop
+ endif
+diff -ur gcompris-9.2.orig//configure.ac gcompris-9.2//configure.ac
+--- gcompris-9.2.orig//configure.ac	2010-02-13 10:00:00.000000000 -0700
++++ gcompris-9.2//configure.ac	2010-03-21 17:31:18.350739972 -0600
+@@ -217,10 +217,8 @@
+           USE_DEBUG="$enableval", USE_DEBUG="no")
+ if test "x$USE_DEBUG" == "xyes" ; then
+     AC_DEFINE_UNQUOTED(DEBUG, 1, "Enable debug messages.")
+-    CFLAGS="$CFLAGS $OSX_CFLAGS -Wall -Werror -g"
+-else
+-    CFLAGS="$CFLAGS $OSX_CFLAGS -Wall -Werror"
+ fi
++CFLAGS="$CFLAGS $OSX_CFLAGS -Wall"
+ 
+ dnl WIN32 Specifics
+ AC_MSG_CHECKING([for Win32 platform in general])
+@@ -284,25 +282,25 @@
+ if test "x$platform_win32" = "xno" ; then
+ 
+   dnl Set PACKAGE_LOCALE_DIR in config.h.
+-  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${myprefix}/${DATADIRNAME}/locale", [GCompris locale directory])
++  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "/usr/share/locale", [GCompris locale directory])
+ 
+   dnl Set PACKAGE_DATA_DIR
+   PACKAGE_DATA_DIR="boards"
+   AC_SUBST(PACKAGE_DATA_DIR)
+-  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${myprefix}/${DATADIRNAME}", [GCompris data directory])
++  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${datadir}", [GCompris data directory])
+ 
+   dnl Set PACKAGE_HELP_DIR
+-  PACKAGE_HELP_DIR="${myprefix}/${DATADIRNAME}/${PACKAGE}/help"
++  PACKAGE_HELP_DIR="${datadir}/${PACKAGE}/help"
+   AC_SUBST(PACKAGE_HELP_DIR)
+ 
+   dnl Plugin Directory
+   my_libdir=`eval echo "${libdir}"`
+-  AC_DEFINE_UNQUOTED(PACKAGE_CLIB_DIR, "${my_libdir}", [Gcompris plugins directory])
++  AC_DEFINE_UNQUOTED(PACKAGE_CLIB_DIR, "${libdir}", [Gcompris plugins directory])
+   plugindir=$libdir/gcompris
+   AC_SUBST(plugindir)
+ 
+   dnl Python plugin Directory
+-  PYTHON_PLUGIN_DIR="${myprefix}/${DATADIRNAME}/${PACKAGE}/python"
++  PYTHON_PLUGIN_DIR="${datadir}/${PACKAGE}/python"
+   AC_SUBST(PYTHON_PLUGIN_DIR)
+ 
+   dnl System GCompris config directory
+diff -ur gcompris-9.2.orig//docs/C/Makefile.am gcompris-9.2//docs/C/Makefile.am
+--- gcompris-9.2.orig//docs/C/Makefile.am	2009-08-30 10:24:49.000000000 -0600
++++ gcompris-9.2//docs/C/Makefile.am	2010-03-21 17:31:18.350739972 -0600
+@@ -10,7 +10,7 @@
+ 	     overview.dia \
+ 	     $(man_MANS)
+ 
+-gcompris_helpdir = $(datadir)/gnome/help/$(PACKAGE)/C
++gcompris_helpdir = /usr/share/gnome/help/$(PACKAGE)/C
+ 
+ all: $(doc)
+ 
+diff -ur gcompris-9.2.orig//docs/eu/Makefile.am gcompris-9.2//docs/eu/Makefile.am
+--- gcompris-9.2.orig//docs/eu/Makefile.am	2010-01-18 14:35:41.000000000 -0700
++++ gcompris-9.2//docs/eu/Makefile.am	2010-03-21 17:31:18.350739972 -0600
+@@ -8,7 +8,7 @@
+ 	     overview.dia \
+ 	     gcompris.texi
+ 
+-gcompris_helpdir = $(datadir)/gnome/help/$(PACKAGE)/eu
++gcompris_helpdir = /usr/share/gnome/help/$(PACKAGE)/eu
+ 
+ all: $(doc)
+ 
+diff -ur gcompris-9.2.orig//docs/fr/Makefile.am gcompris-9.2//docs/fr/Makefile.am
+--- gcompris-9.2.orig//docs/fr/Makefile.am	2010-01-18 14:35:41.000000000 -0700
++++ gcompris-9.2//docs/fr/Makefile.am	2010-03-21 17:31:18.354741636 -0600
+@@ -8,7 +8,7 @@
+ 	     overview.dia \
+ 	     gcompris.texi
+ 
+-gcompris_helpdir = $(datadir)/gnome/help/$(PACKAGE)/fr
++gcompris_helpdir = /usr/share/gnome/help/$(PACKAGE)/fr
+ 
+ all: $(doc)
+ 
+diff -ur gcompris-9.2.orig//po/Makefile.in.in gcompris-9.2//po/Makefile.in.in
+--- gcompris-9.2.orig//po/Makefile.in.in	2010-01-24 15:46:55.000000000 -0700
++++ gcompris-9.2//po/Makefile.in.in	2010-03-21 17:31:18.354741636 -0600
+@@ -34,7 +34,7 @@
+ datarootdir = @datarootdir@
+ libdir = @libdir@
+ DATADIRNAME = @DATADIRNAME@
+-itlocaledir = $(prefix)/$(DATADIRNAME)/locale
++itlocaledir = /usr/share/locale
+ subdir = po
+ install_sh = @install_sh@
+ # Automake >= 1.8 provides @mkdir_p@.
+diff -ur gcompris-9.2.orig//src/gcompris/gcompris.c gcompris-9.2//src/gcompris/gcompris.c
+--- gcompris-9.2.orig//src/gcompris/gcompris.c	2010-02-13 06:38:20.000000000 -0700
++++ gcompris-9.2//src/gcompris/gcompris.c	2010-03-21 17:31:18.362744045 -0600
+@@ -1216,7 +1216,7 @@
+     properties->package_plugin_dir = g_strconcat(pkg_clib_dir, "/gcompris", NULL);
+     properties->package_python_plugin_dir = g_strconcat(pkg_data_dir, "/gcompris/python",
+ 							NULL);
+-    properties->system_icon_dir = g_strconcat(pkg_data_dir, "/pixmaps", NULL);
++    properties->system_icon_dir = g_strconcat("/usr/share", "/pixmaps", NULL);
+     properties->menu_dir = g_strdup(properties->package_data_dir);
+     g_free(pkg_data_dir);
+     g_free(pkg_clib_dir);

@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/gcompris
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.48 2009/11/23 13:28:04 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.49 2010/03/25 18:30:04 ssuominen Exp $
+
+*gcompris-9.2.2 (25 Mar 2010)
+
+  25 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gcompris-9.2.2.ebuild, +files/gcompris-9.2.2-build.patch:
+  Version bump wrt #310641 by Denis Dupeyron.
 
   23 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> gcompris-8.4.12.ebuild:
   Stable for ppc, bug 288655
