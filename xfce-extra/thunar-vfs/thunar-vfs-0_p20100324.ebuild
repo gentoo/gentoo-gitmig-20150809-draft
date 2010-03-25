@@ -1,14 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-0_p20100324.ebuild,v 1.1 2010/03/24 20:05:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-0_p20100324.ebuild,v 1.2 2010/03/25 11:31:34 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
 inherit xfconf
 
-DESCRIPTION="Transition package - Thunar VFS libraries for unported Xfce4 apps"
+DESCRIPTION="Separate package for (old) Thunar VFS libraries"
 HOMEPAGE="http://git.xfce.org/xfce/thunar-vfs/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
