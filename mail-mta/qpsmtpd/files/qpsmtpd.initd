@@ -1,5 +1,7 @@
 #!/sbin/runscript
 
+pidfile=/var/run/qpsmtpd/qpsmtpd.pid
+
 depend() {
 	use logger dns ypbind amavisd mysql postgresql antivirus postfix_greylist net saslauthd
 	provide mta
@@ -30,20 +32,20 @@ start() {
 			QPSMTPD_OPTIONS="$(echo "${QPSMTPD_OPTIONS}" | sed "s:\-\-pid\-file[\t ]\{1,99\}[^ ]*::gI")"
 			# Option --pid-file is mentioned in the help of the prefork server
 			# but does not work when specified.
-			# QPSMTPD_OPTIONS="${QPSMTPD_OPTIONS} --pid-file /var/run/qpsmtpd.pid"
-			myopts="${myopts} --make-pidfile --pidfile /var/run/qpsmtpd.pid"
+			# QPSMTPD_OPTIONS="${QPSMTPD_OPTIONS} --pid-file ${pidfile}"
+			myopts="${myopts} --make-pidfile --pidfile ${pidfile}"
 			;;
 		async)
 			QPSMTPD_SERVER_BIN="/usr/sbin/qpsmtpd-async"
-			myopts="${myopts} --background --make-pidfile --pidfile /var/run/qpsmtpd.pid"
+			myopts="${myopts} --background --make-pidfile --pidfile ${pidfile}"
 			;;
 		forkserver|*)
 			QPSMTPD_SERVER_BIN="/usr/bin/qpsmtpd-forkserver"
 			QPSMTPD_OPTIONS="$(echo "${QPSMTPD_OPTIONS}" | sed "s:\-\-pid\-file[\t ]\{1,99\}[^ ]*::gI")"
 			QPSMTPD_OPTIONS="$(echo "${QPSMTPD_OPTIONS}" | sed "s:[\t ]\{0,99\}\-d[\t ]\{1,99\}|[\t ]\{1,99\}\-d[\t ]\{0,99\}::gI")"
 			QPSMTPD_OPTIONS="$(echo "${QPSMTPD_OPTIONS}" | sed "s:[\t ]\{0,99\}\-\detach[\t ]\{1,99\}|[\t ]\{1,99\}\-\-detach[\t ]\{0,99\}::gI")"
-			QPSMTPD_OPTIONS="${QPSMTPD_OPTIONS} --pid-file /var/run/qpsmtpd.pid --detach"
-			myopts="${myopts} --pidfile /dev/null"
+			QPSMTPD_OPTIONS="${QPSMTPD_OPTIONS} --pid-file ${pidfile} --detach"
+			myopts="${myopts} --pidfile ${pidfile}"
 			;;
 	esac
 	start-stop-daemon --start --nicelevel ${QPSMTPD_NICELEVEL:-0} \
@@ -55,6 +57,6 @@ start() {
 
 stop() {
 	ebegin "Stopping qpsmtpd [${QPSMTPD_SERVER_TYPE}] server"
-	start-stop-daemon --stop --quiet --pidfile /var/run/qpsmtpd.pid
+	start-stop-daemon --stop --quiet --pidfile ${pidfile}
 	eend $?
 }
