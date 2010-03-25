@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-hdaps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/ChangeLog,v 1.1 2010/03/24 18:14:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/ChangeLog,v 1.2 2010/03/25 19:59:46 ssuominen Exp $
+
+*xfce4-hdaps-0.0.6 (25 Mar 2010)
+
+  25 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-hdaps-0.0.6.ebuild:
+  Version bump wrt #311335 by Michael Orlitzky.
 
 *xfce4-hdaps-0.0.5 (24 Mar 2010)
 
