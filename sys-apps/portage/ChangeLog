@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.694 2010/03/25 02:17:04 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.695 2010/03/25 02:38:15 sping Exp $
+
+  25 Mar 2010; Sebastian Pipping <sping@gentoo.org> portage-9999.ebuild:
+  Fix live ebuild versioning:
+  - OLD: 2.2_rc67-26-g1f09ba1
+  - NEW: 2.2_rc67_p26
 
 *portage-9999 (25 Mar 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.1 2010/03/25 02:17:04 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.2 2010/03/25 02:38:15 sping Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -86,7 +86,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	local _version="'$(cd "${S}/.git" && git describe --tags)'[1:]"
+	local _version="'$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')'[1:]"
 	einfo "Setting portage.VERSION to ${_version} ..."
 	sed -i "s/^VERSION=.*/VERSION=${_version}/" pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
