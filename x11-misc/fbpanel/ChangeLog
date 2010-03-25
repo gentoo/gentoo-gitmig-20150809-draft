@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.41 2010/03/25 15:32:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.42 2010/03/25 20:09:49 ssuominen Exp $
+
+  25 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> fbpanel-6.0.ebuild,
+  +files/fbpanel-6.0-configure-LANG.patch:
+  Reset language vars to C in ./configure wrt #304373 by Harald van Dijk.
 
 *fbpanel-6.0 (25 Mar 2010)
 
