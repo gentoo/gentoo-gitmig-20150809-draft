@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97.2-r1.ebuild,v 1.3 2010/03/25 13:08:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.97.2-r1.ebuild,v 1.4 2010/03/25 13:15:47 caster Exp $
 
 EAPI=1
 
@@ -42,7 +42,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		gstreamer? (
 			>=media-libs/gstreamer-0.10.10
 			>=media-libs/gst-plugins-base-0.10.10
-			dev-libs/glib
+			x11-libs/gtk+
 		)
 		sys-apps/file"
 
@@ -50,7 +50,7 @@ DEPEND="app-arch/zip
 		dev-java/eclipse-ecj:3.5
 		gtk? (
 			x11-libs/libXrender
-			x11-proto/xextproto
+			|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1 )
 			x11-proto/xproto
 		)
 		${RDEPEND}"

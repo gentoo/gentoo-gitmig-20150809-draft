@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r2.ebuild,v 1.5 2010/03/25 13:08:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r2.ebuild,v 1.6 2010/03/25 13:15:47 caster Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		gstreamer? (
 			>=media-libs/gstreamer-0.10.10
 			>=media-libs/gst-plugins-base-0.10.10
-			dev-libs/glib
+			x11-libs/gtk+
 		)
 		gtk? (
 				>=x11-libs/gtk+-2.8
@@ -48,12 +48,11 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 # We should make the build not pickup the wrong antlr binary from pccts
 DEPEND="app-arch/zip
 		gjdoc? ( !!dev-util/pccts )
-		gtk? ( || (
-					x11-libs/libXrender
-					x11-proto/xextproto
-					x11-proto/xproto
-				)
-			)
+		gtk? (
+			x11-libs/libXrender
+			|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1 )
+			x11-proto/xproto
+		)
 		>=virtual/jdk-1.5
 		${RDEPEND}"
 
