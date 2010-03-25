@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-195.36.03.ebuild,v 1.1 2010/02/08 10:45:49 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-195.36.15.ebuild,v 1.1 2010/03/25 20:57:03 peper Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -37,7 +37,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${PN}-190.53-xf86vidmodeproto.patch"
 }
 
