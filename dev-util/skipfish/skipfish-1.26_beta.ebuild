@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/skipfish-1.13_beta.ebuild,v 1.1 2010/03/23 17:42:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/skipfish-1.26_beta.ebuild,v 1.1 2010/03/26 19:46:58 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -24,8 +24,6 @@ src_prepare() {
 	sed -i \
 		-e '/CFLAGS_GEN/s:-g -ggdb::' \
 		-e '/CFLAGS_OPT/s:-O3::' \
-		-e 's:LDFLAGS:LIBS:' \
-		-e 's:$(CC):$(CC) $(LDFLAGS) $(CFLAGS):' \
 		Makefile || die
 
 	sed -i \
