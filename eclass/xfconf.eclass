@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.11 2010/03/26 11:41:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.12 2010/03/26 11:59:08 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -64,18 +64,20 @@ EXPORT_FUNCTIONS ${XFCONF_EXPF}
 
 # @FUNCTION: xfconf_use_debug
 # @RETURN:
-# Return --enable-debug, --enable-debug=full or --disable-debug based on
-# I_KNOW_WHAT_I_AM_DOING variable
+# Return --enable-debug, null, --enable-debug=full or --disable-debug based on
+# I_KNOW_WHAT_I_AM_DOING variable and USE debug
 xfconf_use_debug() {
-	if use debug; then
-		if [[ -n $I_KNOW_WHAT_I_AM_DOING ]]; then
-			echo "--enable-debug=full"
+	if has debug ${IUSE}; then
+		if use debug; then
+			if [[ -n $I_KNOW_WHAT_I_AM_DOING ]]; then
+				echo "--enable-debug=full"
+			else
+				echo "--enable-debug"
+			fi
 		else
-			echo "--enable-debug"
-		fi
-	else
-		if [[ -n $I_KNOW_WHAT_I_AM_DOING ]]; then
-			echo "--disable-debug"
+			if [[ -n $I_KNOW_WHAT_I_AM_DOING ]]; then
+				echo "--disable-debug"
+			fi
 		fi
 	fi
 }
