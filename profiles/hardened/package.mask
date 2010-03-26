@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.66 2010/01/12 19:41:53 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.67 2010/03/26 01:00:12 zorry Exp $
 
 # Hardened versions of gcc-4.0* through gcc-4.2* are not available.
 =sys-devel/gcc-4.0*
@@ -24,5 +24,6 @@
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
 
-# >=sys-devel/gdb-7 is not hardened-ready according to xake & Zorry.
->=sys-devel/gdb-7
+# =sys-devel/gdb-7.0 is not hardened-ready according to xake & Zorry.
+# gdb-7.1 works fine.
+=sys-devel/gdb-7.0*
