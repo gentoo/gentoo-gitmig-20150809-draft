@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.6 2010/03/14 23:42:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.7 2010/03/26 14:32:15 spatz Exp $
 
 EAPI=3
 inherit gnome2-utils eutils qt4 pax-utils
@@ -48,7 +48,8 @@ RDEPEND="
 			x11-libs/qt-gui:4[accessibility,dbus]
 			x11-libs/qt-dbus:4
 			x11-libs/libXext
-			x11-libs/libX11 ) )"
+			x11-libs/libX11 ) )
+	virtual/ttf-fonts"
 
 # Required for lrelease command at buildtime
 DEPEND="!qt-static? ( x11-libs/qt-core:4 )"
