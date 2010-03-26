@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.63 2010/01/11 18:38:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.64 2010/03/26 02:06:09 mr_bones_ Exp $
+
+  26 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.6.5.ebuild,
+  +files/ogre-1.6.5-cegui.patch:
+  add USE flag for cegui support with patch from Adam Van Ymeren via bug
+  #298736
 
 *ogre-1.6.5 (11 Jan 2010)
 

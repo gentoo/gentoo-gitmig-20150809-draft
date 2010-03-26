@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.1 2010/01/11 18:38:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.2 2010/03/26 02:06:09 mr_bones_ Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ogre/ogre-v${PV//./-}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc cg devil double-precision examples gtk threads"
+IUSE="cegui cg devil doc double-precision examples gtk threads"
 RESTRICT="test" #139905
 
 RDEPEND="dev-libs/zziplib
@@ -26,6 +26,7 @@ RDEPEND="dev-libs/zziplib
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	devil? ( media-libs/devil )
 	gtk? ( x11-libs/gtk+:2 )
+	cegui? ( >=dev-games/cegui-0.5 )
 	threads? ( || ( >=dev-libs/boost-1.34.1 dev-libs/boost[threads] ) )"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
@@ -48,7 +49,8 @@ src_prepare() {
 	fi
 	sed -i -e '/CPPUNIT/d' configure.in || die "sed failed"
 	epatch "${FILESDIR}"/${P}-boost.patch \
-		"${FILESDIR}"/${P}-automake.patch
+		"${FILESDIR}"/${P}-automake.patch \
+		"${FILESDIR}"/${P}-cegui.patch
 	eautoreconf
 }
 
@@ -68,7 +70,8 @@ src_configure() {
 		$(use_enable cg) \
 		$(use_enable devil) \
 		$(use_enable double-precision double) \
-		$(use_enable threads threading)
+		$(use_enable threads threading) \
+		$(use_enable cegui)
 }
 
 src_install() {
