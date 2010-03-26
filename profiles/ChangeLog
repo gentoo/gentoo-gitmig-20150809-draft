@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4056 2010/03/26 15:59:58 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4057 2010/03/26 20:34:45 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Mar 2010; Sebastian Pipping <sping@gentoo.org> updates/1Q-2010:
+  Move dev-util/cvs2svn to dev-vcs/cvs2svn
 
   26 Mar 2010; Mounir Lamouri <volkmar@gentoo.org> updates/1Q-2010:
   Moving teeworlds from games-arcade to games-action

@@ -69,3 +69,4 @@ move dev-util/colorsvn dev-vcs/colorsvn
 move net-misc/anyremote app-mobilephone/anyremote
 move games-arcade/teeworlds games-action/teeworlds
 move x11-misc/xfce4-notifyd xfce-extra/xfce4-notifyd
+move dev-util/cvs2svn dev-vcs/cvs2svn
