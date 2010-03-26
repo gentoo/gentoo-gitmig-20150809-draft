@@ -1,6 +1,10 @@
 # ChangeLog for media-video/parole
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.9 2010/03/26 11:44:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.10 2010/03/26 11:52:42 ssuominen Exp $
+
+  26 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> parole-0.2.0.2.ebuild,
+  +files/parole-0.2.0.2-64bit.patch:
+  Fix building with -Werror wrt #302835 by Jesús Guerrero.
 
   26 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> parole-0.2.0.2.ebuild:
   Use xfconf_use_debug instead of use_enable to control debug flags wrt
