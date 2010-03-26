@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.13 2010/03/26 12:10:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.14 2010/03/26 12:17:16 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -63,7 +63,7 @@ esac
 EXPORT_FUNCTIONS ${XFCONF_EXPF}
 
 # @FUNCTION: xfconf_use_debug
-# @RETURN:
+# @DESCRIPTION:
 # Return --enable-debug, null, --enable-debug=full or --disable-debug based on
 # XFCONF_FULL_DEBUG variable and USE debug
 xfconf_use_debug() {
