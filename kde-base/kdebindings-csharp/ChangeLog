@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebindings-csharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.24 2010/03/02 16:21:36 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.25 2010/03/26 21:12:07 reavertm Exp $
+
+  26 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kdebindings-csharp-4.4.1.ebuild,
+  +files/kdebindings-csharp-4.4.1-make-stuff-optional.patch,
+  -files/kdebindings-csharp-4.4-build-fixes.patch, metadata.xml:
+  Fixed bug 307995 (patch by Iain Oliver), also fixed USE flags handling and
+  removed clucene bindings
 
 *kdebindings-csharp-4.4.1 (02 Mar 2010)
 
