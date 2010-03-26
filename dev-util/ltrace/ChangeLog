@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.52 2010/03/23 20:24:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.53 2010/03/26 13:38:41 pacho Exp $
+
+  26 Mar 2010; Pacho Ramos <pacho@gentoo.org> ltrace-0.5.3.1.ebuild:
+  amd64 stable, bug 302471
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> ltrace-0.5.3.1.ebuild:
   stable ppc, bug 302471
