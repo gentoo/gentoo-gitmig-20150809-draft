@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.0.ebuild,v 1.1 2010/02/22 11:05:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.0.ebuild,v 1.2 2010/03/26 08:47:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -45,6 +45,7 @@ RDEPEND="ffmpeg? ( >=media-video/ffmpeg-0.5 )
 
 SWIG_DEPEND=">=dev-lang/swig-1.3.38"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	compressed-lumas? ( media-gfx/imagemagick )
 	lua? ( ${SWIG_DEPEND} dev-util/pkgconfig )
 	python? ( ${SWIG_DEPEND} )
