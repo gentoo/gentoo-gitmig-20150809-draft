@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.13 2009/12/10 18:15:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.14 2010/03/26 15:39:54 darkside Exp $
 
 inherit eutils flag-o-matic autotools toolchain-funcs
 
@@ -15,7 +15,7 @@ SLOT="2.1"
 LICENSE="GPL-2"
 IUSE="doc float fortran mpi openmp threads"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~x86-linux"
 
 pkg_setup() {
 	# this one is reported to cause trouble on pentium4 m series
