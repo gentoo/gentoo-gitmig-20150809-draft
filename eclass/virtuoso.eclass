@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.1 2010/02/08 20:30:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.2 2010/03/26 12:24:12 scarabeus Exp $
 
 # @ECLASS: virtuoso.eclass
 # @MAINTAINER:
@@ -126,7 +126,7 @@ virtuoso_src_configure() {
 }
 
 # @FUNCTION: virtuoso_src_compile
-# @DESCRIPTION
+# @DESCRIPTION:
 # Runs make for specified subdirs
 virtuoso_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
