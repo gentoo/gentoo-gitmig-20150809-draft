@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5441 2010/03/26 16:48:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5442 2010/03/26 21:28:11 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1295,6 +1295,7 @@ kde-base/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/li
 kde-base/kdebindings-csharp:akonadi - Compile bindings for kde-base/akonadi.
 kde-base/kdebindings-csharp:phonon - Compile bindings for media-sound/phonon.
 kde-base/kdebindings-csharp:plasma - Compile bindings for kde's plasma.
+kde-base/kdebindings-csharp:qimageblitz - Compile bindings for kde-base/qimageblitz.
 kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/webkit.
 kde-base/kdebindings-ruby:akonadi - Compile bindings for kde-base/akonadi.
