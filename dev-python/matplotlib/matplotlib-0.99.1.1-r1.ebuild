@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.4 2010/03/08 17:54:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.5 2010/03/26 17:19:45 spatz Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -46,7 +46,7 @@ DEPEND="${CDEPEND}
 		dev-python/ipython )"
 
 RDEPEND="${CDEPEND}
-	|| ( media-fonts/dejavu media-fonts/ttf-bitstream-vera )
+	virtual/ttf-fonts
 	media-fonts/texcm-ttf
 	cairo?  ( dev-python/pycairo )
 	excel?  ( dev-python/xlwt )
