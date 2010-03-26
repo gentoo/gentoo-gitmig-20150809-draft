@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.53 2010/03/26 18:49:53 grobian Exp $
+# $Id: package.mask,v 1.54 2010/03/26 19:36:13 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,16 +32,13 @@
 
 #--- END OF EXAMPLES ---
 
+
 # Fabian Groffen <grobian@gentoo.org> (26 Mar 2010)
 # Scheduled for removal.  This version isn't worth the hassle of merging
 # to gx86, and hence will be removed.  If you are in desparate need of
 # Python 2.4 still, come up with a reason that convinces us and the
 # python team!
 =dev-lang/dev-python-2.4*
-
-# Jonathan Callen <abcd@gentoo.org> (13 Mar 2010)
-# Needs some testing on prefixed packages (not all were fixed in gx86)
->=sys-devel/autoconf-2.64
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from
@@ -66,11 +63,6 @@
 # Needs some controlled testing before being thrown at all users.
 # (Prefix modifications may not work properly)
 =sys-devel/gcc-config-1.5
-
-# Fabian Groffen <grobian@gentoo.org> (22 Nov 2009)
-# non-portable shell code, unconditionally requires strndup (despite
-# gnulib) would need eautoreconf fix ... basically GNU got worse again
-=sys-devel/patch-2.6
 
 # Jeremy Olexa <darkside@gentoo.org> (21 Aug 2009)
 # python-3 will most certainly cause problems if it ever gets unleashed without
