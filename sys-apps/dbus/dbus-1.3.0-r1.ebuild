@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.3.0-r1.ebuild,v 1.3 2009/11/23 21:27:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.3.0-r1.ebuild,v 1.4 2010/03/26 09:41:28 ssuominen Exp $
 
 EAPI="2"
 
@@ -31,6 +31,11 @@ DEPEND="${RDEPEND}
 BD=${WORKDIR}/${P}-build
 # out of sources build dir for make check
 TBD=${WORKDIR}/${P}-tests-build
+
+pkg_setup() {
+	enewgroup messagebus
+	enewuser messagebus -1 "-1" -1 messagebus
+}
 
 src_prepare() {
 	# Remove CFLAGS that is not supported by all gcc, bug #274456
@@ -141,11 +146,6 @@ src_install() {
 	if use doc; then
 		dohtml doc/*.html doc/api/html/* || die "dohtml failed"
 	fi
-}
-
-pkg_preinst() {
-	enewgroup messagebus
-	enewuser messagebus -1 "-1" -1 messagebus
 }
 
 pkg_postinst() {

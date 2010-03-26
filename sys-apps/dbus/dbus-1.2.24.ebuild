@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.24.ebuild,v 1.1 2010/03/25 17:21:59 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.24.ebuild,v 1.2 2010/03/26 09:41:27 ssuominen Exp $
 
 EAPI=2
 
@@ -25,15 +25,15 @@ DEPEND="${RDEPEND}
 	doc? (	app-doc/doxygen
 		app-text/xmlto )"
 
-src_prepare() {
-		enewgroup messagebus
-	    enewuser messagebus -1 "-1" -1 messagebus
-		unpack ${A}
-		cd "${S}"
-		# Tests were restricted because of this
-	    sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
-		-e '/"dispatch"/d' -i "${S}/bus/test-main.c"
+pkg_setup() {
+	enewgroup messagebus
+	enewuser messagebus -1 "-1" -1 messagebus
+}
 
+src_prepare() {
+	# Tests were restricted because of this
+	sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
+	-e '/"dispatch"/d' -i "${S}/bus/test-main.c"
 }
 
 src_configure() {
@@ -100,11 +100,6 @@ src_install() {
 	if use doc; then
 		dohtml doc/*html
 	fi
-}
-
-pkg_preinst() {
-	enewgroup messagebus
-	enewuser messagebus -1 "-1" -1 messagebus
 }
 
 pkg_postinst() {
