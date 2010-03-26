@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.216 2010/03/26 09:10:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.217 2010/03/26 10:54:12 ssuominen Exp $
+
+*wireshark-1.2.6-r1 (26 Mar 2010)
+
+  26 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +wireshark-1.2.6-r1.ebuild:
+  Revision bump to -r1 preventing zlib downgrade for ~arch users wrt
+  #311241.
 
   26 Mar 2010; Peter Volkov <pva@gentoo.org> wireshark-1.2.6.ebuild:
   Require <zlib-1.2.4, bug #311241 thank Kristian for report.
