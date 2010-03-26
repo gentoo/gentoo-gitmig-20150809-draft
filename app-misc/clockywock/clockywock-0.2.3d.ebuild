@@ -1,19 +1,23 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/clockywock-0.2.3.ebuild,v 1.5 2010/03/26 20:36:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/clockywock-0.2.3d.ebuild,v 1.1 2010/03/26 20:36:34 ssuominen Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="ncurses analog clock"
-HOMEPAGE="http://www.soomka.com"
-SRC_URI="http://www.soomka.com/${P}.tar.gz"
+MY_P=${P/d/D}
 
-LICENSE="GPL-2 as-is"
+DESCRIPTION="ncurses based analog clock"
+HOMEPAGE="http://www.soomka.com"
+SRC_URI="http://www.soomka.com/${MY_P}.tar.gz"
+
+LICENSE="BZIP2 GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	$(tc-getCXX) ${LDFLAGS} ${CXXFLAGS} -Wall -o ${PN} ${PN}.cpp -lncurses -lpthread || die
