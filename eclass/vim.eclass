@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.181 2010/03/23 16:02:36 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.182 2010/03/26 18:40:26 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -22,7 +22,12 @@
 # -aqua -gtk -motif nextaw      NEXTAW
 # -aqua -gtk -motif -nextaw     ATHENA
 
-inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion prefix
+if [[ ${MY_PN} != "vim-core" ]] ; then
+	# vim supports python-2 only
+	PYTHON_DEPEND="python? 2"
+	PYTHON_USE_WITH="threads"
+fi
+inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion prefix python
 
 HOMEPAGE="http://www.vim.org/"
 SLOT="0"
@@ -75,26 +80,18 @@ if [[ ${MY_PN} == "vim-core" ]] ; then
 else
 	IUSE="${IUSE} cscope debug gpm perl python ruby"
 
-	if [[ $HAS_USE_DEP ]]; then
-		PYTHON_DEP="python?  ( dev-lang/python[threads] )"
-	else
-		PYTHON_DEP="python?  ( dev-lang/python )"
-	fi
-
 	DEPEND="${DEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		acl?     ( kernel_linux? ( sys-apps/acl ) )
-		ruby?    ( virtual/ruby )
-		${PYTHON_DEP}"
+		ruby?    ( virtual/ruby )"
 	RDEPEND="${RDEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		acl?     ( kernel_linux? ( sys-apps/acl ) )
 		ruby?    ( virtual/ruby )
-		${PYTHON_DEP}
 		!<app-vim/align-30-r1
 		!app-vim/vimspell
 		!<app-vim/vimbuddy-0.9.1-r1
@@ -240,9 +237,16 @@ vim_pkg_setup() {
 	mkdir -p "${T}/home"
 	export HOME="${T}/home"
 
-	# [g]vim needs dev-lang/python[threads]
-	if [[ ${MY_PN} != "vim-core" ]] && use python && ! built_with_use dev-lang/python threads; then
-		die "You must build dev-lang/python with USE=threads"
+	if [[ ${MY_PN} != "vim-core" ]] && use python; then
+		# vim supports python-2 only
+		python_set_active_version 2
+		if [[ $HAS_USE_DEP ]]; then
+			# python.eclass only defines python_pkg_setup for EAPIs that support
+			# USE dependencies
+			python_pkg_setup
+		elif ! built_with_use =dev-lang/python-2* threads; then
+			die "You must build dev-lang/python with USE=threads"
+		fi
 	fi
 }
 
