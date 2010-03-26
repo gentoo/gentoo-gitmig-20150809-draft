@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.237 2010/03/08 09:00:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.238 2010/03/26 22:34:15 spatz Exp $
+
+*cairo-1.8.8-r1 (26 Mar 2010)
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> +cairo-1.8.8-r1.ebuild,
+  metadata.xml:
+  Add lcdfilter USE flag to apply patch from Ubuntu (takes precedence over
+  cleartype USE flag), fixes bug 303421.
 
   08 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> cairo-1.8.8.ebuild,
   +files/cairo-1.8.8-libpng14.patch:
