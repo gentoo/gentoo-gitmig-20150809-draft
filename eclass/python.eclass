@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.95 2010/03/20 17:59:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.96 2010/03/26 15:23:17 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -848,6 +848,7 @@ EOF
 
 wrapper_script_path = os.path.realpath(sys.argv[0])
 target_executable_path = "%s-%s" % (wrapper_script_path, PYTHON_ABI)
+os.environ["GENTOO_PYTHON_PROCESS_NAME"] = os.path.basename(sys.argv[0])
 os.environ["GENTOO_PYTHON_WRAPPER_SCRIPT_PATH"] = sys.argv[0]
 os.environ["GENTOO_PYTHON_TARGET_SCRIPT_PATH"] = target_executable_path
 if not os.path.exists(target_executable_path):
