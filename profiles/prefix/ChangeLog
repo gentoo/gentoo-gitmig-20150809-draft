@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.166 2010/03/26 20:21:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.167 2010/03/26 21:31:18 darkside Exp $
+
+  26 Mar 2010; Jeremy Olexa <darkside@gentoo.org> hpux/package.mask:
+  Extend gcc mask on hpux, bug 311239
 
   26 Mar 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop mask for gcc-config-1.5. It seems to work after some fixes, but it's
