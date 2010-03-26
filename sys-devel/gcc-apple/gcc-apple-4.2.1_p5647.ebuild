@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.7 2010/03/24 06:57:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.8 2010/03/26 19:26:18 grobian Exp $
 
 EAPI="3"
 
@@ -123,6 +123,7 @@ src_prepare() {
 	eprefixify "${S}"/gcc/gcc.c
 
 	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-texinfo.patch
+	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-autoconf-m4-precious.patch
 	cd "${S}"/gcc && eautoconf
 	cd "${S}"/libgomp && eautoconf
 

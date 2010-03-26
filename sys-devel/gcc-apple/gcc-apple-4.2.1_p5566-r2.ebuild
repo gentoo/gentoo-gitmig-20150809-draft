@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5566-r2.ebuild,v 1.3 2010/03/09 17:53:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5566-r2.ebuild,v 1.4 2010/03/26 19:26:18 grobian Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ fi
 
 KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 
-IUSE="fortran nls objc objc++ nocxx"
+IUSE="fortran nls +openmp objc objc++ nocxx"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.2-r2
@@ -108,6 +108,7 @@ src_prepare() {
 	eprefixify "${S}"/gcc/gcc.c
 
 	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-texinfo.patch
+	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-autoconf-m4-precious.patch
 	cd "${S}"/gcc && eautoconf
 	cd "${S}"/libgomp && eautoconf
 
@@ -186,8 +187,7 @@ src_configure() {
 	[[ -z ${I_KNOW_WHAT_IM_DOING_I_WANT_APPLE_MULTILIB} ]] \
 		&& myconf="${myconf} --disable-multilib"
 
-	#libstdcxx does not support this one
-	myconf="${myconf} --enable-languages=${langs}"
+	myconf="${myconf} --enable-languages=${langs} $(use_enable openmp libgomp)"
 
 	# The produced libgcc_s.dylib is faulty if using a bit too much
 	# optimisation.  Nail it down to something sane

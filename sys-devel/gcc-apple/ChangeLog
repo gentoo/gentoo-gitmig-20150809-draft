@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.14 2010/03/24 06:57:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.15 2010/03/26 19:26:18 grobian Exp $
+
+  26 Mar 2010; Fabian Groffen <grobian@gentoo.org>
+  gcc-apple-4.2.1_p5566-r2.ebuild, gcc-apple-4.2.1_p5574.ebuild,
+  gcc-apple-4.2.1_p5646.ebuild, gcc-apple-4.2.1_p5647.ebuild,
+  +files/gcc-apple-4.2.1-autoconf-m4-precious.patch:
+  Add patch to be able to autoconf libgomp using autoconf >=2.64, bug
+  #308515
 
   24 Mar 2010; Fabian Groffen <grobian@gentoo.org>
   gcc-apple-4.2.1_p5647.ebuild:
