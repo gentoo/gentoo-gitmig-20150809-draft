@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cpptest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.9 2010/01/18 16:22:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.10 2010/03/26 04:59:22 sping Exp $
+
+*cpptest-1.1.1 (26 Mar 2010)
+
+  26 Mar 2010; Sebastian Pipping <sping@gentoo.org> +cpptest-1.1.1.ebuild:
+  Trivial-bump to 1.1.1
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Dropping maintenance, adding sping
