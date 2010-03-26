@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.2-r2.ebuild,v 1.12 2010/01/13 18:44:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.2-r2.ebuild,v 1.13 2010/03/26 23:32:41 yngwin Exp $
 
 EAPI="2"
-
-inherit eutils multilib qt4
+inherit eutils multilib qt4-r2
 
 DESCRIPTION="Qt Cryptographic Architecture (QCA)"
 HOMEPAGE="http://delta.affinix.com/qca/"
@@ -18,8 +17,7 @@ RESTRICT="test"
 
 DEPEND="x11-libs/qt-core:4[debug?]"
 RDEPEND="${DEPEND}
-	!<app-crypt/qca-1.0-r3:0
-"
+	!<app-crypt/qca-1.0-r3:0"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-pcfilespath.patch
@@ -53,8 +51,8 @@ src_configure() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc README TODO || die "dodoc failed"
+	emake INSTALL_ROOT="${D}" install || die
+	dodoc README TODO || die
 
 	cat <<-EOF > "${WORKDIR}"/44qca2
 	LDPATH="${EPREFIX}/usr/${_libdir}/qca2"
@@ -62,12 +60,12 @@ src_install() {
 	doenvd "${WORKDIR}"/44qca2 || die
 
 	if use doc; then
-		dohtml "${S}"/apidocs/html/* || die "Failed to install documentation"
+		dohtml "${S}"/apidocs/html/* || die
 	fi
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/
-		doins -r "${S}"/examples || die "Failed to install examples"
+		doins -r "${S}"/examples || die
 	fi
 
 	# add the proper rpath for packages that do CONFIG += crypto
