@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.141 2010/03/11 18:37:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.142 2010/03/26 23:00:09 reavertm Exp $
+
+  26 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  klinkstatus-4.4.0.ebuild, klinkstatus-4.4.1.ebuild:
+  Fixed bug 307895, thanks go to Ken Rushia for reporting.
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> klinkstatus-4.3.5.ebuild:
   Marking klinkstatus-4.3.5 ppc stable for bug 300393
