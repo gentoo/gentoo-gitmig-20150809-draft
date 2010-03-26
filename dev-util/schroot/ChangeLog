@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.15 2010/02/27 02:06:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.16 2010/03/26 18:14:15 abcd Exp $
+
+*schroot-1.4.1-r1 (26 Mar 2010)
+
+  26 Mar 2010; Jonathan Callen <abcd@gentoo.org> +schroot-1.4.1-r1.ebuild,
+  +files/schroot-1.4.1-boost-validation_error.patch:
+  Add patch for boost 1.42.0, thanks to Andrew Savchenko (bug 307975)
 
 *schroot-1.4.1 (27 Feb 2010)
 
