@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.2.ebuild,v 1.1 2010/03/24 00:39:07 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.2.ebuild,v 1.2 2010/03/26 11:54:22 spatz Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ IUSE="X"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	dev-python/dnspython
+	>=dev-python/dnspython-1.8.0
 	dev-python/graphy
 	dev-python/httplib2
 	dev-python/jinja2"
