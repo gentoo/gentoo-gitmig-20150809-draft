@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.5 2010/03/11 20:31:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.6 2010/03/26 12:40:16 yngwin Exp $
 
 EAPI="2"
-inherit eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4 cmake-utils
+inherit eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt4 cmake-utils
 
 # Short package version
 SPV="$(get_version_component_range 1-2)"

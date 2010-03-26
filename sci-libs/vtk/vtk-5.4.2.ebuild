@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.6 2010/02/11 07:38:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.7 2010/03/26 12:40:16 yngwin Exp $
 
 EAPI="2"
-inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
+inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt4
 
 # Short package version
 SPV="$(get_version_component_range 1-2)"
