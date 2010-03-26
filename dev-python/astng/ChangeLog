@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.31 2010/02/27 20:45:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.32 2010/03/26 17:26:25 arfrever Exp $
+
+*astng-0.20.0 (26 Mar 2010)
+
+  26 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +astng-0.20.0.ebuild:
+  Version bump (bug #311323).
 
   27 Feb 2010; Fabian Groffen <grobian@gentoo.org> astng-0.19.3-r1.ebuild:
   Marked ~x64-macos, thanks Ramon van Alteren in bug #306705
