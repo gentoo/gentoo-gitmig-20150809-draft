@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.70 2010/03/08 22:10:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.71 2010/03/26 13:33:49 pacho Exp $
+
+  26 Mar 2010; Pacho Ramos <pacho@gentoo.org> fbida-2.07-r2.ebuild:
+  amd64 stable, bug 311297
 
   08 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> fbida-2.07-r2.ebuild,
   +files/fbida-2.07-libpng14.patch:
