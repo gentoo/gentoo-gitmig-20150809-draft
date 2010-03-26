@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.5 2009/09/24 00:19:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.6 2010/03/26 01:11:55 bicatali Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs autotools flag-o-matic
@@ -70,6 +70,9 @@ src_install() {
 	if use netcdf; then
 		for i in include/netcdf*; do
 			mv ${i} ${i/cdf/cdf-hdf}
+		done
+		for i in "include/mfhdf.h include/local_nc.h"; do
+			sed -i -e 's:"netcdf.h":"netcdf-hdf.h":' ${i} || die "sed failed"
 		done
 	fi
 }
