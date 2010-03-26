@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.166 2010/03/26 01:40:04 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.167 2010/03/26 01:54:24 pchrist Exp $
+
+  26 Mar 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
+  sbcl-1.0.19.ebuild, sbcl-1.0.26-r10.ebuild, sbcl-1.0.27-r10.ebuild,
+  sbcl-1.0.28.ebuild, sbcl-1.0.31.ebuild:
+  Fix graphviz's built_with_use png wrong test case, thanks to Kacper
+  Kowalik (Xarthisius), reference bug #308869
 
   26 Mar 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   sbcl-1.0.36-r1.ebuild:
