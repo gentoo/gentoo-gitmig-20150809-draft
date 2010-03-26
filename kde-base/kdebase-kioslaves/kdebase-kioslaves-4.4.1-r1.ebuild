@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.4.1.ebuild,v 1.1 2010/03/02 16:15:29 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.4.1-r1.ebuild,v 1.1 2010/03/26 22:37:55 reavertm Exp $
 
 EAPI="3"
 
@@ -8,8 +8,8 @@ KMNAME="kdebase-runtime"
 KMMODULE="kioslave"
 inherit kde4-meta
 
-DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 IUSE="+bzip2 exif debug lzma +handbook openexr samba +sftp"
 
 # tests hang, last checked for 4.2.96
@@ -43,6 +43,7 @@ KMEXTRA="
 
 src_configure() {
 	mycmakeargs=(
+		-DWITH_SLP=OFF
 		$(cmake-utils_use_with bzip2 BZip2)
 		$(cmake-utils_use_with exif Exiv2)
 		$(cmake-utils_use_with lzma LibLZMA)

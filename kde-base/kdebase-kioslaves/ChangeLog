@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.189 2010/03/11 18:34:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.190 2010/03/26 22:37:55 reavertm Exp $
+
+*kdebase-kioslaves-4.4.1-r1 (26 Mar 2010)
+
+  26 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -kdebase-kioslaves-4.4.1.ebuild, +kdebase-kioslaves-4.4.1-r1.ebuild:
+  Fixed bug 307659, automagic slp dependency (only system without
+  --as-needed affected)
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org>
   kdebase-kioslaves-4.3.5-r1.ebuild:
