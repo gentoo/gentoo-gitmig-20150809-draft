@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.224 2010/03/17 10:10:58 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.225 2010/03/26 15:32:25 ranger Exp $
+
+  26 Mar 2010; Brent Baude <ranger@gentoo.org> tomcat-6.0.26.ebuild:
+  Marking tomcat-6.0.26 ppc64 for bug 303719
 
 *tomcat-6.0.26 (16 Mar 2010)
 
