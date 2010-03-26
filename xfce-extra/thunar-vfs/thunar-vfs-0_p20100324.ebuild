@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-0_p20100324.ebuild,v 1.3 2010/03/25 11:32:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-0_p20100324.ebuild,v 1.4 2010/03/26 09:19:56 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -53,6 +53,8 @@ pkg_setup() {
 	else
 		XFCONF="${XFCONF} --with-volume-manager=none"
 	fi
+
+	PATCHES=( "${FILESDIR}/${PN}-libpng14.patch" )
 }
 
 src_prepare() {
