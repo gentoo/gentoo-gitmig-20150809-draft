@@ -1,16 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1.ebuild,v 1.3 2010/02/28 12:35:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1.ebuild,v 1.4 2010/03/26 22:18:12 yngwin Exp $
 
 EAPI="2"
-
 PYTHON_DEPEND="2:2.6"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit libtool python
 
-DESCRIPTION="Python bindings to the Poppler PDF library."
+DESCRIPTION="Python bindings to the Poppler PDF library"
 SRC_URI="http://launchpad.net/poppler-python/trunk/development/+download/pypoppler-${PV}.tar.gz"
 HOMEPAGE="http://launchpad.net/poppler-python"
 
@@ -19,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-S="${WORKDIR}/pypoppler-${PV}"
+S=${WORKDIR}/pypoppler-${PV}
 
 RDEPEND=">=app-text/poppler-0.12.3-r3[cairo]
 	dev-python/pygobject:2
@@ -37,9 +36,9 @@ src_prepare() {
 src_install() {
 	python_src_install
 	find "${D}" -name '*.la' -type f -exec rm -f '{}' ';' || die "Removing .la files failed"
-	dodoc NEWS
+	dodoc NEWS || die
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins demo/demo-poppler.py
+		doins demo/demo-poppler.py || die
 	fi
 }
