@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-memcached
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.10 2009/10/24 13:05:16 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.11 2010/03/26 02:48:00 sping Exp $
+
+  26 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  python-memcached-1.44.ebuild:
+  Fix SRC_URI (bug #311273)
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> python-memcached-1.44.ebuild:
   ppc stable #287741
