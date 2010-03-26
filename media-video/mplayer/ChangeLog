@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.717 2010/03/15 15:13:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.718 2010/03/26 12:51:59 spatz Exp $
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> mplayer-9999.ebuild:
+  Remove dvbhead configure argument, bug 307951.
 
   15 Mar 2010; Fabio Erculiani <lxnay@gentoo.org>
   mplayer-1.0_rc4_p20100213-r1.ebuild, mplayer-9999.ebuild:

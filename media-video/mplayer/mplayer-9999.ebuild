@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.32 2010/03/15 15:15:35 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.33 2010/03/26 12:51:59 spatz Exp $
 
 EAPI="2"
 
@@ -393,7 +393,6 @@ src_configure() {
 			--disable-radio-v4l2
 			--disable-radio-bsdbt848
 			--disable-dvb
-			--disable-dvbhead
 			--disable-v4l2
 			--disable-pvr"
 	fi
