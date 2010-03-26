@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.3.ebuild,v 1.1 2010/03/25 21:02:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.3.ebuild,v 1.2 2010/03/26 20:34:32 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ RDEPEND="
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	qt4? (
 			x11-libs/qt-core
-			x11-libs/qt-gui 
+			x11-libs/qt-gui
 		 )
 "
 
