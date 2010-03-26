@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.43 2010/03/21 12:16:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.44 2010/03/26 10:33:50 pva Exp $
+
+*linphone-3.2.1-r2 (26 Mar 2010)
+
+  26 Mar 2010; Peter Volkov <pva@gentoo.org> +linphone-3.2.1-r2.ebuild:
+  Finally fix bug #307865 (install icon to correct location).
 
   21 Mar 2010; Fabian Groffen <grobian@gentoo.org> linphone-3.2.1-r1.ebuild:
   Bumped to EAPI=3 for Prefix changes, marked ~ppc-macos and ~x86-macos, bug
