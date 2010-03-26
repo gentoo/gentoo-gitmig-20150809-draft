@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.4.1-r1.ebuild,v 1.1 2010/03/02 16:25:17 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.4.1-r2.ebuild,v 1.1 2010/03/26 23:19:57 reavertm Exp $
 
 EAPI="3"
 
@@ -80,7 +80,7 @@ EOF
 	cat <<EOF > 11-xdg-menu-${KDE_X}
 #!/bin/sh
 
-if [ -z \${XDG_MENU_PREFIX} ] && [ \${DESKTOP_SESSION} = "${KDE_X}" ]; then
+if [ -z \${XDG_MENU_PREFIX} ] && [ "\${DESKTOP_SESSION}" = "${KDE_X}" ]; then
 	export XDG_MENU_PREFIX="kde-${SLOT}-"
 fi
 EOF
