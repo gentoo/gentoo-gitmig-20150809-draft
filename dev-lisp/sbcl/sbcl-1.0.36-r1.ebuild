@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.36-r1.ebuild,v 1.2 2010/03/26 01:03:35 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.36-r1.ebuild,v 1.3 2010/03/26 01:40:04 pchrist Exp $
 
-EAPI=2
+EAPI=3
 
-inherit multilib eutils common-lisp-common-3
+inherit multilib eutils
 
 #same order as http://www.sbcl.org/platform-table.html
 BV_X86=1.0.36
@@ -185,14 +185,4 @@ EOF
 	echo "SBCL_HOME=/usr/$(get_libdir)/${PN}" > "${ENVD}"
 	echo "SBCL_SOURCE_ROOT=/usr/$(get_libdir)/${PN}/src" >> "${ENVD}"
 	doenvd "${ENVD}"
-
-	impl-save-timestamp-hack sbcl || die
-}
-
-pkg_postinst() {
-	standard-impl-postinst sbcl
-}
-
-pkg_postrm() {
-	standard-impl-postrm sbcl /usr/bin/sbcl
 }

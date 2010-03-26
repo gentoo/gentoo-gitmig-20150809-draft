@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.165 2010/03/26 01:03:35 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.166 2010/03/26 01:40:04 pchrist Exp $
+
+  26 Mar 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
+  sbcl-1.0.36-r1.ebuild:
+  force again EAPI 3, fallback was from wrong decision
 
   26 Mar 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   sbcl-1.0.36-r1.ebuild:
