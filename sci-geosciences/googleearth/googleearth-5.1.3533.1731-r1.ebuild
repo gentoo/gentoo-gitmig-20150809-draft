@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.1 2010/03/16 09:14:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.2 2010/03/26 15:05:30 spatz Exp $
 
 EAPI=2
 
@@ -49,10 +49,7 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 			>=app-emulation/emul-linux-x86-qtlibs-20091231-r1
 		)
 	)
-	|| (
-		media-fonts/dejavu
-		media-fonts/ttf-bitstream-vera
-	)"
+	virtual/ttf-fonts"
 
 S="${WORKDIR}"
 

@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.1 2010/03/16 09:14:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.2 2010/03/26 15:05:30 spatz Exp $
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org>
+  googleearth-4.2.205.5730.ebuild, googleearth-4.3.7284.3916.ebuild,
+  googleearth-5.0.11733.9347.ebuild, googleearth-5.1.3533.1731-r1.ebuild:
+  Convert font deps to virtual/ttf-fonts wrt bug 282754.
 
   16 Mar 2010; Vlastimil Babka <caster@gentoo.org>
   +googleearth-4.2.205.5730.ebuild, +googleearth-4.3.7284.3916.ebuild,
