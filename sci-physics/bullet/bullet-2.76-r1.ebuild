@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.76.ebuild,v 1.1 2010/03/23 02:21:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.76-r1.ebuild,v 1.1 2010/03/26 15:47:06 bicatali Exp $
 
 EAPI=2
 inherit eutils cmake-utils
@@ -17,13 +17,6 @@ IUSE="doc examples"
 RDEPEND="virtual/glut"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	rm -f Extras/CDTestFramework/AntTweakBar/lib/libAntTweakBar.so || die
-	sed -i \
-		-e 's:DESTINATION lib:DESTINATION lib${LIB_SUFFIX}:g' \
-		src/*/CMakeLists.txt || die
-}
-
 src_configure() {
 	mycmakeargs="
 		-DBUILD_SHARED_LIBS=ON
@@ -38,7 +31,7 @@ src_configure() {
 		-e 's|@exec_prefix@|${prefix}|' \
 		-e "s|@libdir@|\${exec_prefix}/$(get_libdir)|" \
 		-e "s|@PACKAGE_VERSION@|${PV}|" \
-		-e 's|Libs:.*$|Libs:-L${libdir} -lBulletDynamics -lBulletCollision -lLinearMath -lBulletSoftBody|' \
+		-e "s|@includedir@|\${prefix}/include|" \
 		bullet.pc.in > bullet.pc || die
 }
 
