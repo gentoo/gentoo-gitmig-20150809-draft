@@ -1,10 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-places-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/ChangeLog,v 1.10 2010/01/15 03:15:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/ChangeLog,v 1.11 2010/03/26 09:33:48 ssuominen Exp $
 
-  15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  26 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-places-plugin-1.2.0.ebuild:
-  Restrict deps to old xfce-base/thunar.
+  Fix thunar and/or thunar-vfs and exo deps.
 
   08 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
   xfce4-places-plugin-1.2.0.ebuild:
