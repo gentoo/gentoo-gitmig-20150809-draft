@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.8.ebuild,v 1.1 2010/03/25 16:20:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.8.ebuild,v 1.2 2010/03/26 06:50:00 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils toolchain-funcs flag-o-matic games
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/libsdl-1.2.7[video,X]
 	!dedicated? (
 		dbus? ( sys-apps/dbus )
 	)
-	>=dev-libs/boost-1.35
+	|| ( dev-libs/boost:1.42 dev-libs/boost:1.41 dev-libs/boost:1.37 dev-libs/boost:1.35 )
 	sys-libs/zlib
 	x11-libs/pango
 	dev-lang/lua
@@ -56,6 +56,15 @@ src_prepare() {
 			doc/CMakeLists.txt \
 			|| die "sed failed"
 	fi
+	# how do I hate boost? Let me count the ways...
+	has_version dev-libs/boost:1.35 && boost_ver=1_35
+	has_version dev-libs/boost:1.37 && boost_ver=1_37
+	has_version dev-libs/boost:1.41 && boost_ver=1_41
+	has_version dev-libs/boost:1.42 && boost_ver=1_42
+	append-cxxflags \
+		-I/usr/include/boost-${boost_ver}
+	append-ldflags \
+		-L/usr/$(get_libdir)/boost-${boost_ver}
 }
 
 src_configure() {
