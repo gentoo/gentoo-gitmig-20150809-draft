@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.87 2010/03/10 16:31:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.88 2010/03/26 21:52:27 maekke Exp $
+
+*hugin-2010.0.0 (26 Mar 2010)
+
+  26 Mar 2010; Markus Meier <maekke@gentoo.org> -hugin-2010.0.0_rc1.ebuild,
+  +hugin-2010.0.0.ebuild:
+  bump to final 2010.0.0 release, remove rc version
 
   10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   hugin-2010.0.0_rc1.ebuild, +files/hugin-2010.0.0_rc1-libpng14.patch:

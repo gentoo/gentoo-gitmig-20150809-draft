@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0_rc1.ebuild,v 1.2 2010/03/10 16:31:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0.ebuild,v 1.1 2010/03/26 21:52:27 maekke Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -14,7 +14,7 @@ LICENSE="GPL-2 SIFT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-LANGS=" bg ca cs de en_GB es fr hu it ja ko nl pl pt_BR ru sk sl sv uk zh_CN zh_TW"
+LANGS=" bg ca cs de en_GB es fi fr hu it ja ko nl pl pt_BR ru sk sl sv uk zh_CN zh_TW"
 IUSE="lapack +sift $(echo ${LANGS//\ /\ linguas_})"
 
 DEPEND="
@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
-PATCHES=( "${FILESDIR}/${P}-libpng14.patch" )
+PATCHES=( "${FILESDIR}/${P}_rc1-libpng14.patch" )
 
 pkg_setup() {
 	DOCS="AUTHORS README TODO"
