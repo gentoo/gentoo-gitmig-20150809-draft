@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/qca-ossl-2.0.0_beta3-r1.ebuild,v 1.9 2010/01/22 04:21:38 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/qca-ossl-2.0.0_beta3-r1.ebuild,v 1.10 2010/03/26 23:54:22 yngwin Exp $
 
 EAPI="2"
-
-inherit base eutils qt4
+inherit eutils qt4-r2
 
 MY_P="${P/_/-}"
 QCA_VER="${PV%.*}"
@@ -22,7 +21,7 @@ DEPEND=">=app-crypt/qca-${QCA_VER}[debug?]
 	>=dev-libs/openssl-0.9.6"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 PATCHES=( "${FILESDIR}/${PN}-openssl-0.9.8i.patch" )
 
@@ -32,15 +31,12 @@ src_configure() {
 	sed -e "s|/usr/|${EPREFIX}/usr/|g" -e "s|usr/local|usr/|g" -i configure
 
 	# cannot use econf because of non-standard configure script
-	./configure \
-		--qtdir="${EPREFIX}"/usr \
-		$(use debug && echo "--debug" || echo "--release") \
-		--no-separate-debug-info \
-		|| die "configure failed"
+	./configure --qtdir="${EPREFIX}"/usr --no-separate-debug-info \
+		$(use debug && echo "--debug" || echo "--release") || die
 
-	eqmake4 ${PN}.pro
+	eqmake4
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	emake INSTALL_ROOT="${D}" install || die
 }

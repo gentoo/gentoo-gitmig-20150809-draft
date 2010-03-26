@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-ossl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.23 2010/01/22 04:21:38 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.24 2010/03/26 23:54:21 yngwin Exp $
+
+  26 Mar 2010; Ben de Groot <yngwin@gentoo.org>
+  qca-ossl-2.0.0_beta3-r1.ebuild:
+  Use qt4-r2.eclass (bug #311481). Tighten formatting.
 
   22 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   -qca-ossl-2.0.0_beta3.ebuild, qca-ossl-2.0.0_beta3-r1.ebuild:
