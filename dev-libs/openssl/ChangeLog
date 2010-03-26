@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.325 2010/03/25 18:58:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.326 2010/03/26 14:02:23 ranger Exp $
+
+  26 Mar 2010; Brent Baude <ranger@gentoo.org> openssl-0.9.8n.ebuild:
+  Marking openssl-0.9.8n ppc64 for bug 308011
 
   25 Mar 2010; Jeroen Roovers <jer@gentoo.org> openssl-0.9.8n.ebuild:
   Stable for PPC (bug #308011).
