@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.56 2010/03/16 10:35:23 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.57 2010/03/26 15:02:12 spatz Exp $
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> pygments-1.1.1.ebuild,
+  pygments-1.2.2.ebuild, pygments-1.3.ebuild, pygments-1.3.1.ebuild:
+  Convert font deps to virtual/ttf-fonts wrt bug 282754.
 
   16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> pygments-1.2.2.ebuild:
   amd64 stable, bug 303191

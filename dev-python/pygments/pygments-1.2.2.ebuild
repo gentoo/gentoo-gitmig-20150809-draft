@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.2.2.ebuild,v 1.6 2010/03/16 10:35:23 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.2.2.ebuild,v 1.7 2010/03/26 15:02:12 spatz Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-i
 SLOT="0"
 IUSE="doc test"
 
-DEPEND="test? ( media-fonts/ttf-bitstream-vera
+DEPEND="test? ( virtual/ttf-fonts
 		dev-python/nose	)"
 RDEPEND=""
 
