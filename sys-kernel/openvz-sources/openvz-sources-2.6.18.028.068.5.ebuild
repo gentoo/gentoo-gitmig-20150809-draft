@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.067.4.ebuild,v 1.1 2010/01/28 18:56:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.068.5.ebuild,v 1.1 2010/03/26 07:29:22 pva Exp $
 
 inherit versionator
 
@@ -23,7 +23,7 @@ detect_version
 
 KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE=""
-PATCHV="164.10.1.el5"
+PATCHV="164.11.1.el5"
 DESCRIPTION="Full sources including OpenVZ patchset for the 2.6.18 kernel tree"
 HOMEPAGE="http://www.openvz.org"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}
@@ -31,6 +31,7 @@ SRC_URI="${KERNEL_URI} ${ARCH_URI}
 
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/patch-${PATCHV}.${OVZ_KERNEL}.${OVZ_REV}-combined.gz
+${FILESDIR}/${PN}-2.6.18.028.068.3-build-fix.patch
 ${FILESDIR}/${PN}-2.6.18.028.064.7-bridgemac.patch"
 
 K_EXTRAEINFO="This openvz kernel uses RHEL5 patchset instead of vanilla kernel.
