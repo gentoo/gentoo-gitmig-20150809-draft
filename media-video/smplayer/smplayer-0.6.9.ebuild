@@ -1,10 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.9.ebuild,v 1.1 2010/02/24 16:39:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.9.ebuild,v 1.2 2010/03/26 20:20:48 yngwin Exp $
 
 EAPI="2"
+LANGS="bg ca cs de en_US es et eu fi fr gl hu it ja ka ko ku mk nl pl pt_BR
+pt sk sr sv tr zh_CN zh_TW"
+LANGSLONG="ar_SY el_GR ro_RO ru_RU sl_SI uk_UA vi_VN"
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 MY_PV=${PV##*_p}
 if [[ "${MY_PV}" != "${PV}" ]]; then
@@ -19,7 +22,7 @@ else
 fi
 
 DESCRIPTION="Great Qt4 GUI front-end for mplayer"
-HOMEPAGE="http://smplayer.sourceforge.net/"
+HOMEPAGE="http://smplayer.berlios.de/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -28,17 +31,6 @@ IUSE="debug"
 DEPEND="x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}
 	media-video/mplayer[ass,png]"
-
-LANGS="bg ca cs de en_US es et eu fi fr gl hu it ja ka ko ku mk nl pl pt_BR
-pt sk sr sv tr zh_CN zh_TW"
-# langs with long notation in pkg, but no long notation in portage:
-NOLONGLANGS="ar_SY el_GR ro_RO ru_RU sl_SI uk_UA vi_VN"
-for X in ${LANGS}; do
-	IUSE="${IUSE} linguas_${X}"
-done
-for X in ${NOLONGLANGS}; do
-	IUSE="${IUSE} linguas_${X%_*}"
-done
 
 src_prepare() {
 	# Force Ctrl+Q as default quit shortcut
@@ -71,7 +63,7 @@ gen_translation() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake || die
 
 	# Generate translations
 	cd "${S}"/src/translations
@@ -80,8 +72,8 @@ src_compile() {
 		if has ${lang} ${LANGS}; then
 			gen_translation ${lang}
 			continue
-		elif [[ " ${NOLONGLANGS} " == *" ${lang}_"* ]]; then
-			for x in ${NOLONGLANGS}; do
+		elif [[ " ${LANGSLONG} " == *" ${lang}_"* ]]; then
+			for x in ${LANGSLONG}; do
 				if [[ "${lang}" == "${x%_*}" ]]; then
 					gen_translation ${x}
 					continue 2
@@ -103,6 +95,6 @@ src_install() {
 	# remove windows-only files
 	rm "${S}"/*.bat
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	prepalldocs
 }
