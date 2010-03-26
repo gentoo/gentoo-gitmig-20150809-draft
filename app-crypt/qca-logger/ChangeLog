@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-logger
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.10 2009/11/13 12:54:11 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.11 2010/03/26 23:44:44 yngwin Exp $
+
+  26 Mar 2010; Ben de Groot <yngwin@gentoo.org>
+  qca-logger-2.0.0_beta2.ebuild:
+  Use qt4-r2.eclass (bug #311481). Tighten formatting.
 
   13 Nov 2009; Joseph Jezak <josejx@gentoo.org>
   qca-logger-2.0.0_beta2.ebuild:

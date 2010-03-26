@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/qca-logger-2.0.0_beta2.ebuild,v 1.10 2009/11/13 12:54:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/qca-logger-2.0.0_beta2.ebuild,v 1.11 2010/03/26 23:44:44 yngwin Exp $
 
 EAPI="2"
-
-inherit eutils qt4
+inherit eutils qt4-r2
 
 MY_P="${P/_/-}"
 QCA_VER="${PV%.*}"
@@ -21,20 +20,17 @@ IUSE="debug"
 DEPEND=">=app-crypt/qca-${QCA_VER}[debug?]"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	# cannot use econf because of non-standard configure script
-	./configure \
-		--qtdir=/usr \
-		$(use debug && echo "--debug" || echo "--release") \
-		--no-separate-debug-info \
-		|| die "configure failed"
+	./configure	--qtdir=/usr --no-separate-debug-info \
+		$(use debug && echo "--debug" || echo "--release") || die
 
-	eqmake4 ${PN}.pro
+	eqmake4
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "make install failed"
+	emake INSTALL_ROOT="${D}" install || die
 	dodoc README || die
 }

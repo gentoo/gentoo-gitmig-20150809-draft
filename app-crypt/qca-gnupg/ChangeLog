@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-gnupg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.21 2009/12/29 18:12:34 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.22 2010/03/26 23:41:47 yngwin Exp $
+
+  26 Mar 2010; Ben de Groot <yngwin@gentoo.org>
+  qca-gnupg-2.0.0_beta3.ebuild:
+  Use qt4-r2.eclass (bug #311481). Tighten formatting.
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   qca-gnupg-2.0.0_beta3.ebuild:
