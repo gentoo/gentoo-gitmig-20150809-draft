@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-core/hachoir-core-1.3.3.ebuild,v 1.1 2010/03/26 19:31:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-core/hachoir-core-1.3.3.ebuild,v 1.2 2010/03/26 19:46:55 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,10 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/setuptools"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 
+DISTUTILS_GLOBAL_OPTIONS=("--setuptools")
 PYTHON_MODNAME="${PN/-/_}"
 
 src_test() {
