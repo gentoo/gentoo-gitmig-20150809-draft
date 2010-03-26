@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.15 2010/03/01 17:23:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.16 2010/03/26 14:45:00 spatz Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -100,7 +100,7 @@ RDEPEND="sys-libs/ncurses
 	xanim? ( media-video/xanim )
 	X? ( x11-libs/libXxf86vm
 		x11-libs/libXext
-		ass? ( || ( media-fonts/ttf-bitstream-vera media-fonts/dejavu )
+		ass? ( virtual/ttf-fonts
 			media-libs/freetype:2 media-libs/fontconfig )
 		dga? ( x11-libs/libXxf86dga  )
 		ggi? ( media-libs/libggi

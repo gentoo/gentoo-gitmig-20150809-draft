@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.33 2010/03/26 12:51:59 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.34 2010/03/26 14:45:00 spatz Exp $
 
 EAPI="2"
 
@@ -49,9 +49,8 @@ SRC_URI="${RELEASE_URI}
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
-# Preffered font is dejavu
 FONT_RDEPS="
-	|| ( media-fonts/dejavu media-fonts/ttf-bitstream-vera )
+	virtual/ttf-fonts
 	media-libs/fontconfig
 	media-libs/freetype:2
 "
