@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.94 2010/03/10 23:46:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.95 2010/03/26 16:42:45 pacho Exp $
+
+  26 Mar 2010; Pacho Ramos <pacho@gentoo.org> -balsa-2.3.28.ebuild,
+  -balsa-2.4.1.ebuild:
+  Drop old version still depending on old gmime-2.2 and old testing
 
 *balsa-2.4.7 (10 Mar 2010)
 
