@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.42 2010/03/08 21:08:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.43 2010/03/26 12:47:22 spatz Exp $
+
+*urw-fonts-2.4.9 (26 Mar 2010)
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> +urw-fonts-2.4.9.ebuild:
+  Version bump: block media-fonts/gnu-gs-fonts-std and install *.pfm files,
+  wrt bugs 247657 and 256088.
 
   08 Mar 2010; Fabian Groffen <grobian@gentoo.org> urw-fonts-2.4.6.ebuild:
   Marked ~x86-solaris
