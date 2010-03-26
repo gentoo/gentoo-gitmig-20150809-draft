@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.6.ebuild,v 1.6 2010/01/30 15:07:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.6.ebuild,v 1.7 2010/03/26 09:10:58 pva Exp $
 
 EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="adns ares gtk ipv6 lua portaudio gnutls gcrypt geoip zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND=">=dev-libs/glib-2.4.0:2
-	zlib? ( sys-libs/zlib )
+	zlib? ( <sys-libs/zlib-1.2.4 )
 	smi? ( net-libs/libsmi )
 	gtk? ( >=x11-libs/gtk+-2.4.0:2
 		x11-libs/pango
