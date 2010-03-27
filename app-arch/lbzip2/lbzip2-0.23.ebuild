@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.23.ebuild,v 1.1 2010/03/04 07:17:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.23.ebuild,v 1.2 2010/03/27 09:48:27 jlec Exp $
 
 EAPI="3"
 
@@ -53,7 +53,6 @@ src_install() {
 	doins corr-perf.sh malloc_trace.pl || die
 
 	if use symlink; then
-		dosym ${PN} /usr/bin/gzip || die
-		dosym un${PN} /usr/bin/gunzip || die
+		dosym ${PN} /usr/bin/bzip2 || die
 	fi
 }
