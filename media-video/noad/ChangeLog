@@ -1,6 +1,13 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.41 2010/03/24 20:20:27 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.42 2010/03/27 20:36:25 hd_brummy Exp $
+
+  27 Mar 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/patches-0.7.x/noad-0.7.0.20100119-asneeded.patch,
+  -files/patches-0.7.x/noad-0.7.0_gcc-4.4.diff,
+  -files/patches-0.7.x/noad-0.7.1-hangcheck.diff,
+  -files/patches-0.7.x/noad-0.7.1-ts_extension.diff:
+  cleanup
 
 *noad-0.7.2 (24 Mar 2010)
 
