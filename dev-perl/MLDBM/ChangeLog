@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MLDBM
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.26 2010/02/04 20:01:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.27 2010/03/27 21:45:34 robbat2 Exp $
+
+*MLDBM-2.04 (27 Mar 2010)
+
+  27 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +MLDBM-2.04.ebuild:
+  Version bump via perl-bump experimental tool.
 
   04 Feb 2010; Torsten Veller <tove@gentoo.org> MLDBM-2.01.ebuild:
   Fix LICENSE (#301969). Maintenance

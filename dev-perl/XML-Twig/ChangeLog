@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.66 2010/01/14 18:35:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.67 2010/03/27 21:49:00 robbat2 Exp $
+
+*XML-Twig-3.34 (27 Mar 2010)
+
+  27 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +XML-Twig-3.34.ebuild:
+  Version bump via perl-bump experimental tool.
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org> XML-Twig-3.32.ebuild:
   Transfer Prefix keywords

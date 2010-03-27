@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/ShipIt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ShipIt/ChangeLog,v 1.6 2009/12/24 19:31:21 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ShipIt/ChangeLog,v 1.7 2010/03/27 21:48:04 robbat2 Exp $
+
+*ShipIt-0.55 (27 Mar 2010)
+
+  27 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +ShipIt-0.55.ebuild:
+  Version bump via perl-bump experimental tool.
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org> -ShipIt-0.52.ebuild:
   Cleanup
