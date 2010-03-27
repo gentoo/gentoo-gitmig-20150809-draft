@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.24.2.ebuild,v 1.2 2010/01/10 16:56:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.24.2.ebuild,v 1.3 2010/03/27 09:41:01 pacho Exp $
 
 inherit gnome2
 
@@ -30,4 +30,10 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable debug bonobo-activation-debug)"
+}
+
+src_test() {
+	# Pass tests with FEATURES userpriv, see bug #288689
+        unset ORBIT_SOCKETDIR
+        emake check || die
 }
