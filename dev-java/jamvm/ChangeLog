@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jamvm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.38 2009/07/19 13:45:51 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.39 2010/03/27 17:55:53 ali_bush Exp $
+
+*jamvm-1.5.4 (27 Mar 2010)
+
+  27 Mar 2010; Alistair Bush <ali_bush@gentoo.org> +jamvm-1.5.4.ebuild:
+  Version Bump.
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> jamvm-1.5.0-r3.ebuild:
   ppc stable #272674
