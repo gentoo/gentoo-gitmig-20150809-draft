@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-2.11.ebuild,v 1.4 2010/01/03 11:15:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-2.11.ebuild,v 1.5 2010/03/27 00:18:15 yngwin Exp $
 
-EAPI=1
-inherit eutils multilib qt4
+EAPI=3
+inherit qt4-r2
 
 DESCRIPTION="A Japanese input method which supports the XIM protocol"
 SRC_URI="mirror://sourceforge.jp/kimera/37271/${P}.tar.gz"
@@ -19,24 +19,10 @@ DEPEND="x11-libs/qt-core:4
 	!anthy? ( app-i18n/canna )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS="AUTHORS README*"
 
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-}
-
-src_compile() {
+src_configure() {
 	local myconf="target.path=/usr/$(get_libdir)/${P}"
-
 	use anthy || myconf="${myconf} no_anthy=1"
-
-	eqmake4 kimera.pro ${myconf} || die
-	emake || die
-}
-
-src_install(){
-	emake INSTALL_ROOT="${D}" install || die
-
-	dodoc AUTHORS README*
+	eqmake4 kimera.pro ${myconf}
 }
