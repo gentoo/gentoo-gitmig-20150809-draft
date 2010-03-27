@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/libmso
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libmso/ChangeLog,v 1.1 2010/03/27 06:45:34 serkan Exp $
+
+*libmso-0.1 (27 Mar 2010)
+
+  27 Mar 2010; Serkan Kaba <serkan@gentoo.org> +libmso-0.1.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+
