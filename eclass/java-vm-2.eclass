@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.29 2009/10/11 11:46:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.30 2010/03/27 22:23:57 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -12,7 +12,7 @@
 #
 # -----------------------------------------------------------------------------
 
-inherit eutils fdo-mime
+inherit eutils fdo-mime multilib
 
 DEPEND="=dev-java/java-config-2*"
 hasq "${EAPI}" 0 1 && DEPEND="${DEPEND} >=sys-apps/portage-2.1"
@@ -131,6 +131,7 @@ set_java_env() {
 		-e "s/@PV@/${PV}/g" \
 		-e "s/@PF@/${PF}/g" \
 		-e "s/@PLATFORM@/${platform}/g" \
+		-e "s/@LIBDIR@/$(get_libdir)/g" \
 		-e "/^LDPATH=.*lib\\/\\\"/s|\"\\(.*\\)\"|\"\\1${platform}/:\\1${platform}/server/\"|" \
 		< ${source_env_file} \
 		> ${env_file} || die "sed failed"
