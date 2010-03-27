@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.243 2010/03/11 20:35:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.244 2010/03/27 13:19:39 scarabeus Exp $
+
+*k3b-1.91.0_rc2 (27 Mar 2010)
+
+  27 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +k3b-1.91.0_rc2.ebuild:
+  Version bump. Per bug #310583.
 
   11 Mar 2010; Markus Meier <maekke@gentoo.org> k3b-1.70.0_beta1.ebuild:
   x86 stable, bug #307301
