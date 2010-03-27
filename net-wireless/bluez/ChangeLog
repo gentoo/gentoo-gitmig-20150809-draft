@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.30 2010/03/11 15:22:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.31 2010/03/27 15:45:04 pacho Exp $
+
+*bluez-4.63 (27 Mar 2010)
+
+  27 Mar 2010; Pacho Ramos <pacho@gentoo.org> +bluez-4.63.ebuild:
+  Version bump including ipctest build fix and solve a few small issues with
+  the A2DP support.
 
   11 Mar 2010; Pacho Ramos <pacho@gentoo.org> bluez-4.62.ebuild,
   +files/bluez-4.62-makefile_ipctest.patch:
