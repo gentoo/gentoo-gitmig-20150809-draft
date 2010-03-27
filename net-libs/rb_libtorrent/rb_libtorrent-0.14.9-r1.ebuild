@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.8-r2.ebuild,v 1.1 2010/01/15 23:33:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.9-r1.ebuild,v 1.1 2010/03/27 17:29:24 yngwin Exp $
 
 EAPI="2"
 inherit autotools eutils flag-o-matic versionator
@@ -22,13 +22,15 @@ RESTRICT="test"
 DEPEND="|| ( >=dev-libs/boost-1.35
 		( ~dev-libs/boost-1.34.1 dev-cpp/asio ) )
 	python? ( >=dev-libs/boost-1.35.0-r5[python] dev-lang/python:2.6[threads] )
-	sys-libs/zlib"
+	=sys-devel/libtool-2.2*
+	sys-libs/zlib
+	examples? ( !net-p2p/mldonkey )"  #292998
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/0.14.6-configure-ldflags-fix.patch  #290756
-	epatch "${FILESDIR}"/${P}-as-needed-fix.patch            #276873
-	epatch "${FILESDIR}"/${P}-boost-detect.patch             #295474
+	epatch "${FILESDIR}"/${PN}-0.14.9-as-needed-fix.patch  #276873
+	epatch "${FILESDIR}"/${PN}-0.14.8-boost-detect.patch   #295474
+	rm ltmain.sh  #298069
 	eautoreconf
 }
 

@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.79 2010/02/27 14:20:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.80 2010/03/27 17:29:24 yngwin Exp $
+
+*rb_libtorrent-0.14.9-r1 (27 Mar 2010)
+
+  27 Mar 2010; Ben de Groot <yngwin@gentoo.org> rb_libtorrent-0.14.6.ebuild,
+  -rb_libtorrent-0.14.8-r2.ebuild, rb_libtorrent-0.14.9.ebuild,
+  +rb_libtorrent-0.14.9-r1.ebuild,
+  +files/rb_libtorrent-0.14.9-as-needed-fix.patch:
+  Revbump to fix bugs with as-needed (#276873) and mixed libtool (#298069).
+  Add blocker to mldonkey when examples useflag is enabled (#292998). Remove
+  older ~arch ebuild.
 
 *rb_libtorrent-0.14.9 (27 Feb 2010)
 
