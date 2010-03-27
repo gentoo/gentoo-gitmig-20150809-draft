@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.18.ebuild,v 1.1 2010/03/11 01:44:07 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.18-r1.ebuild,v 1.1 2010/03/27 15:44:48 reavertm Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+
 inherit python autotools
 
 MY_P="${PN%-common}-${PV}"
@@ -35,6 +37,10 @@ RDEPEND="${COMMON_DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}/${P}-split.patch"
 
@@ -62,4 +68,12 @@ src_install() {
 	fi
 
 	emake DESTDIR="${D}" install || die "emake install failed"
+}
+
+pkg_postinst() {
+	python_mod_optimize cupshelpers /usr/share/system-config-printer
+}
+
+pkg_postrm() {
+	python_mod_cleanup cupshelpers /usr/share/system-config-printer
 }
