@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.91 2010/02/16 07:46:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.92 2010/03/27 11:02:29 graaff Exp $
+
+*rake-0.8.7-r4 (27 Mar 2010)
+
+  27 Mar 2010; Hans de Graaff <graaff@gentoo.org> -rake-0.8.7-r1.ebuild,
+  -rake-0.8.7-r2.ebuild, rake-0.8.7-r3.ebuild, +rake-0.8.7-r4.ebuild:
+  Bump to -r4 without changes, and remove ruby19 and jruby targets from -r3
+  so that we can mark -r3 stable. Remove old versions.
 
   16 Feb 2010; Jonathan Callen <abcd@gentoo.org> rake-0.8.7-r3.ebuild:
   Add ~x64-macos for bug 305355
