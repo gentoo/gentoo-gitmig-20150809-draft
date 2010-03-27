@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.30 2009/11/24 14:39:05 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.31 2010/03/27 23:30:35 mabi Exp $
+
+  27 Mar 2010; <mabi@gentoo.org> PEAR-VersionControl_SVN-0.3.1.ebuild,
+  PEAR-VersionControl_SVN-0.3.3-r1.ebuild:
+  fix deps, DEPEND is already set by php-pear-r1 eclass
 
 *PEAR-VersionControl_SVN-0.3.3-r1 (24 Nov 2009)
 
