@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.16.ebuild,v 1.2 2010/02/24 17:36:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.16.ebuild,v 1.3 2010/03/27 08:23:56 graaff Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	dev-libs/boost
 	>=dev-libs/libxml2-2.6.2
 	>=dev-cpp/glibmm-2.14
-	>=dev-cpp/gtkmm-2.4
+	>=dev-cpp/gtkmm-2.14
 	dev-libs/libzip
 	>=virtual/mysql-5.0
 	dev-libs/libpcre

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.6 2010/03/27 08:10:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.7 2010/03/27 08:23:56 graaff Exp $
+
+  27 Mar 2010; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.16.ebuild:
+  Update gtkmm dependency in accordance with real requirements, fixes
+  #311421.
 
   27 Mar 2010; Hans de Graaff <graaff@gentoo.org>
   -mysql-workbench-5.2.15.ebuild:
