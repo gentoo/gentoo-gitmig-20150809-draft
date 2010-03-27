@@ -1,7 +1,0 @@
-diff -uNr gecko-sharp-2.0-0.7.orig/sample/webshot.in gecko-sharp-2.0-0.7/sample/webshot.in
---- gecko-sharp-2.0-0.7.orig/sample/webshot.in	2004-11-15 15:52:28.000000000 -0600
-+++ gecko-sharp-2.0-0.7/sample/webshot.in	2005-06-23 04:19:43.000000000 -0500
-@@ -1,2 +1,2 @@
- #!/bin/sh
--exec mono @libdir@/gecko-sharp/WebThumbnailer.exe
-+exec mono @libdir@/gecko-sharp/WebThumbnailer.exe "$@"
