@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.4.0.ebuild,v 1.2 2010/03/27 00:31:01 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.4.0.ebuild,v 1.3 2010/03/27 20:25:48 reavertm Exp $
 
 EAPI="2"
 
 KMNAME="kdeutils"
-inherit kde4-meta
+PYTHON_DEPEND="2"
+inherit python kde4-meta
 
 DESCRIPTION="KDE printer system tray utility"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
@@ -18,6 +19,11 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	kde4-meta_pkg_setup
+	python_set_active_version 2
+}
+
 src_prepare() {
 	kde4-meta_src_prepare
 
@@ -28,4 +34,13 @@ src_prepare() {
 		-i "${PN}"/CMakeLists.txt || die "failed to rename printer-applet executable"
 	sed -e "/Exec/s/printer-applet/${newname}/" \
 		-i "${PN}"/printer-applet.desktop || die "failed to patch .desktop file"
+}
+
+src_install() {
+	kde4-meta_src_install
+	python_convert_shebangs -q -r $(python_get_version) "${ED}${PREFIX}/share/apps/${PN}"
+}
+
+pkg_postrm() {
+	python_mod_cleanup "${EPREFIX}${PREFIX}share/apps/${PN}"
 }
