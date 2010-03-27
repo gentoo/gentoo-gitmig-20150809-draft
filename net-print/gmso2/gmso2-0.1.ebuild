@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gmso2/gmso2-0.1.ebuild,v 1.1 2010/03/27 06:52:32 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gmso2/gmso2-0.1.ebuild,v 1.2 2010/03/27 13:35:17 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -39,5 +39,5 @@ src_install() {
 	domo build/mo/*.mo || die "domo failed"
 	doicon image/* || die "doicon failed"
 	java-pkg_dolauncher ${PN} --main com.googlecode.mso.gmso2.Gmso2
-	make_desktop_entry "gksu -u root ${PN}" "GMSO 2" gmso2_icon "Printing;;" 
+	make_desktop_entry "gksu -u root ${PN}" "GMSO 2" gmso2_icon "Printing;;"
 }
