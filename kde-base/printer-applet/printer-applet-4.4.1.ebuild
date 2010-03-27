@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.4.1.ebuild,v 1.3 2010/03/27 20:25:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.4.1.ebuild,v 1.4 2010/03/27 20:46:15 reavertm Exp $
 
 EAPI="3"
 
@@ -42,5 +42,5 @@ src_install() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${EPREFIX}${PREFIX}share/apps/${PN}"
+	python_mod_cleanup "${PREFIX}share/apps/${PN}"
 }

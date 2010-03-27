@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.4.0.ebuild,v 1.3 2010/03/27 20:33:15 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.4.0.ebuild,v 1.4 2010/03/27 20:48:43 reavertm Exp $
 
 EAPI="2"
 
@@ -32,5 +32,5 @@ src_install() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${EPREFIX}${PREFIX}share/apps/${PN}"
+	python_mod_cleanup "${PREFIX}share/apps/${PN}"
 }
