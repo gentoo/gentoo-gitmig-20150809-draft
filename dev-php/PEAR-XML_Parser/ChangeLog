@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Parser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Parser/ChangeLog,v 1.35 2009/11/24 14:41:15 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Parser/ChangeLog,v 1.36 2010/03/27 23:12:29 mabi Exp $
+
+  27 Mar 2010; <mabi@gentoo.org> PEAR-XML_Parser-1.2.7.ebuild,
+  PEAR-XML_Parser-1.2.8.ebuild, PEAR-XML_Parser-1.3.2.ebuild:
+  correct DEPEND
 
   24 Nov 2009; Steve Dibb <beandog@gentoo.org> PEAR-XML_Parser-1.2.7.ebuild,
   PEAR-XML_Parser-1.2.8.ebuild, PEAR-XML_Parser-1.3.2.ebuild:
