@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.18-r1.ebuild,v 1.2 2010/03/27 16:33:58 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.18-r2.ebuild,v 1.1 2010/03/27 17:15:57 reavertm Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -68,6 +68,8 @@ src_install() {
 	fi
 
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	python_convert_shebangs -q -r $(python_get_version) "${D}"usr/share/system-config-printer
 }
 
 pkg_postinst() {
