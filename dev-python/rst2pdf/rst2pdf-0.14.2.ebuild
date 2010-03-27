@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.14.2.ebuild,v 1.1 2010/03/26 18:19:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.14.2.ebuild,v 1.2 2010/03/27 02:53:18 yngwin Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,15 +24,14 @@ DEPEND="dev-python/docutils
 RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
 
-DOCS="CHANGES.txt README.txt Contributors.txt"
-
 src_install() {
 	distutils_src_install
 
-	doman doc/rst2pdf.1 || die "doman failed"
-	dodoc doc/* || die "dodoc failed"
+	doman doc/rst2pdf.1 || die
+	dodoc {README,CHANGES,Contributors}.txt || die
+	dodoc doc/* || die
 	insinto /usr/share/doc/${PF}/examples
-	doins doc/montecristo/* || die "doins failed"
+	doins doc/montecristo/* || die
 }
 
 pkg_postinst() {
