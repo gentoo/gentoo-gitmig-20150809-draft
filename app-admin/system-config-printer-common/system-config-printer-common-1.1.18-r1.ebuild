@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.18-r1.ebuild,v 1.1 2010/03/27 15:44:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.1.18-r1.ebuild,v 1.2 2010/03/27 16:33:58 reavertm Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -71,7 +71,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize cupshelpers /usr/share/system-config-printer
+	python_mod_optimize cupshelpers
 }
 
 pkg_postrm() {
