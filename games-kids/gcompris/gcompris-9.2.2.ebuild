@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.2 2010/03/25 18:32:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.3 2010/03/27 19:40:46 ssuominen Exp $
 
 EAPI=2
 
@@ -34,6 +34,7 @@ RDEPEND="x11-libs/gtk+:2
 	gnet? ( net-libs/gnet:2 )
 	python? ( dev-python/pygtk )"
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	dev-perl/XML-Parser
 	sys-devel/gettext
 	sys-apps/texinfo
