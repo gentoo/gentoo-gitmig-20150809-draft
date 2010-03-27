@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.6.ebuild,v 1.2 2008/12/14 15:05:16 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.2.6.ebuild,v 1.3 2010/03/27 08:54:48 ssuominen Exp $
 
 inherit mono multilib eutils
 
@@ -11,25 +11,17 @@ SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="gtkhtml seamonkey"
+IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.0
-		 >=virtual/monodoc-${PV}
-		 =dev-dotnet/gtk-sharp-2*
-		 =dev-dotnet/glade-sharp-2*
-		 =dev-dotnet/gconf-sharp-2*
-		 gtkhtml? ( =dev-dotnet/gtkhtml-sharp-2* )
-		 seamonkey? ( =dev-dotnet/gecko-sharp-0.11* )
-		 !seamonkey? ( =dev-dotnet/gtkhtml-sharp-2* )"
+	>=virtual/monodoc-${PV}
+	=dev-dotnet/gtk-sharp-2*
+	=dev-dotnet/glade-sharp-2*
+	=dev-dotnet/gconf-sharp-2*
+	=dev-dotnet/gtkhtml-sharp-2*"
 DEPEND="${RDEPEND}
-		  sys-devel/gettext
-		>=dev-util/pkgconfig-0.19"
-
-pkg_setup() {
-	if ! use gtkhtml && ! use seamonkey ; then
-		elog "No browser selected, defaulting to gtkhtml"
-	fi
-}
+	sys-devel/gettext
+	>=dev-util/pkgconfig-0.19"
 
 src_unpack() {
 	unpack ${A}
@@ -51,11 +43,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="$(use_enable gtkhtml) $(use_enable seamonkey mozilla)"
-
-	if ! use gtktml && ! use seamonkey ; then
-		myconf="--enable-gtkhtml --disable-mozilla"
-	fi
+	local myconf="--enable-gtkhtml --disable-mozilla"
 
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
