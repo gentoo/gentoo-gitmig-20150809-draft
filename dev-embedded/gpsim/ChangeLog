@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.48 2010/02/17 22:18:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.49 2010/03/27 11:06:23 pacho Exp $
+
+*gpsim-0.24.0-r1 (27 Mar 2010)
+
+  27 Mar 2010; Pacho Ramos <pacho@gentoo.org> +gpsim-0.24.0-r1.ebuild:
+  Reinstating gtk gui since latest gtk+extra version has fixed gtk+-2.18
+  support. Thanks to Robert Pearce for noticing in bug 309347.
 
   17 Feb 2010; Markus Meier <maekke@gentoo.org> gpsim-0.24.0.ebuild:
   amd64/x86 stable, bug #302502
