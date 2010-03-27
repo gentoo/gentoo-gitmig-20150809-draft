@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-ro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ro/ChangeLog,v 1.13 2010/03/24 15:57:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ro/ChangeLog,v 1.14 2010/03/27 01:44:33 tcunha Exp $
+
+  27 Mar 2010; Tiago Cunha <tcunha@gentoo.org> aspell-ro-3.3.2.ebuild:
+  stable sparc, bug 310015
 
   24 Mar 2010; Brent Baude <ranger@gentoo.org> aspell-ro-3.3.2.ebuild:
   Marking aspell-ro-3.3.2 ppc stable for bug 310015
