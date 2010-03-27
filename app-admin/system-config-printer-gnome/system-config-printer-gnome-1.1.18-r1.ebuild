@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.1.18.ebuild,v 1.1 2010/03/12 17:03:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.1.18-r1.ebuild,v 1.1 2010/03/27 17:24:03 reavertm Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 inherit python autotools
 
 MY_P="${PN%-gnome}-${PV}"
@@ -16,22 +17,19 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="gnome-keyring"
 
-COMMON_DEPEND="
-	dev-lang/python
-"
-DEPEND="${COMMON_DEPEND}
-	app-text/docbook-xml-dtd:4.1.2
-	app-text/xmlto
-	dev-util/intltool
-	sys-devel/gettext
-"
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="
 	>=app-admin/system-config-printer-common-${PV}
 	dev-python/libgnome-python
 	dev-python/notify-python
 	>=dev-python/pygtk-2.4
 	dev-python/pyxml
 	gnome-keyring? ( dev-python/gnome-keyring-python )
+"
+DEPEND="${RDEPEND}
+	app-text/docbook-xml-dtd:4.1.2
+	app-text/xmlto
+	dev-util/intltool
+	sys-devel/gettext
 "
 
 APP_LINGUAS="ar as bg bn_IN bn bs ca cs cy da de el en_GB es et fa fi fr gu he
@@ -43,6 +41,10 @@ done
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}/${P}-split.patch"
 
@@ -52,7 +54,7 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	# disable installation of translations when LINGUAS not chosen
+	# Disable installation of translations when LINGUAS not chosen
 	if [[ -z "${LINGUAS}" ]]; then
 		myconf="${myconf} --disable-nls"
 	else
@@ -66,4 +68,10 @@ src_install() {
 	dodoc AUTHORS ChangeLog README || die "dodoc failed"
 
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	python_convert_shebangs -q -r $(python_get_version) "${D}"usr/share/system-config-printer
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/system-config-printer
 }
