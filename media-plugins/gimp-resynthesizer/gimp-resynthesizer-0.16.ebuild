@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-resynthesizer/gimp-resynthesizer-0.16.ebuild,v 1.1 2010/03/27 21:49:16 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-resynthesizer/gimp-resynthesizer-0.16.ebuild,v 1.2 2010/03/27 22:19:12 spatz Exp $
 
 EAPI=2
 
@@ -25,6 +25,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
+	cp "${FILESDIR}/smart-remove.scm" "${S}" || die
 
 	tc-export CXX
 }
@@ -42,5 +43,6 @@ src_install() {
 pkg_postinst() {
 	elog "The Resynthesizer plugin is accessible from the menu:"
 	elog "* Filters -> Map -> Resynthesize"
-	elog "* Filters -> Enhance -> Smart enlarge/sharpen/remove selection"
+	elog "* Filters -> Enhance -> Smart enlarge/sharpen"
+	elog "* Filters -> Enhance -> Heal selection"
 }
