@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.22 2010/03/27 10:58:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.23 2010/03/27 11:54:54 pacho Exp $
+
+  27 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/gtk+extra-2.1.1-fix-row-deletion-segfault.patch,
+  -files/gtk+extra-2.1.1-glib2.10-full-fix.patch,
+  -files/gtk+extra-2.1.1-glib2.10.patch, gtk+extra-2.1.2.ebuild:
+  Install documentation in proper place (bug 311599), don't install useless
+  INSTALL file (bug 311601), drop no longer used patches (bug 311605), use
+  SLOT deps for gtk+ and glib (bug 311607), stop inheritting no longer used
+  eutils.eclass (bug 311609), switch license from GPL-2 to LGPL-2. Thanks a
+  lot to Samuli Suominen for noticing all the problems.
 
 *gtk+extra-2.1.2 (27 Mar 2010)
 
