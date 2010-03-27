@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/mlview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.24 2010/01/01 21:05:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.25 2010/03/27 08:37:57 ssuominen Exp $
+
+*mlview-0.9.0 (27 Mar 2010)
+
+  27 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +mlview-0.9.0.ebuild,
+  +files/mlview-0.9.0-desktop.patch, +files/mlview-0.9.0-gcc44.patch:
+  Version bump wrt #311573 by Michael Weber.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> mlview-0.8-r1.ebuild:
   Transfer Prefix keywords
