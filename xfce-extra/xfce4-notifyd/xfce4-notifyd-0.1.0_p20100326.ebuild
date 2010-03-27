@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notifyd/xfce4-notifyd-0.1.0_p20100326.ebuild,v 1.1 2010/03/26 16:27:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notifyd/xfce4-notifyd-0.1.0_p20100326.ebuild,v 1.2 2010/03/27 16:20:00 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -8,7 +8,7 @@ inherit xfconf
 
 DESCRIPTION="A simple notification daemon for Xfce4"
 HOMEPAGE="http://spuriousinterrupt.org/projects/xfce4-notifyd"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
