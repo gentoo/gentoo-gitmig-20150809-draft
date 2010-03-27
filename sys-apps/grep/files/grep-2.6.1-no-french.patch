@@ -1,0 +1,30 @@
+From 189913f75b39f3136c825e317bceafe28618a94d Mon Sep 17 00:00:00 2001
+From: Jim Meyering <meyering@redhat.com>
+Date: Fri, 26 Mar 2010 07:24:48 +0100
+Subject: [PATCH] tests: avoid spurious test failure due to lack of a French UTF8 locale
+
+* tests/init.cfg: New file.  If either $LOCALE_FR or $LOCALE_FR_UTF8
+is set to "none", reset it to the empty string.
+Reported by Mike Frysinger and Sven Joachim.
+* tests/Makefile.am (EXTRA_DIST): Add init.cfg.
+---
+ THANKS            |    2 ++
+ tests/Makefile.am |    1 +
+ tests/init.cfg    |    5 +++++
+ 3 files changed, 8 insertions(+), 0 deletions(-)
+ create mode 100644 tests/init.cfg
+
+diff --git a/tests/init.cfg b/tests/init.cfg
+new file mode 100644
+index 0000000..6fec55e
+--- /dev/null
++++ tests/init.cfg
+@@ -0,0 +1,5 @@
++# This file is sourced by init.sh, *before* its initialization.
++
++# Map settings of "none" to the empty string.
++test _"$LOCALE_FR" = _none && LOCALE_FR=
++test _"$LOCALE_FR_UTF8" = _none && LOCALE_FR_UTF8=
+-- 
+1.7.0.2
+
