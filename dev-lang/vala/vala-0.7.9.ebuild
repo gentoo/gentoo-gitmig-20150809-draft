@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.7.9.ebuild,v 1.2 2010/01/01 12:47:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.7.9.ebuild,v 1.3 2010/03/27 21:14:37 ssuominen Exp $
 
 EAPI=1
 GCONF_DEBUG=no
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 IUSE="test +vapigen +coverage"
 
-#FIXME: flex and bison are in "base" profile,
-# so why put them into DEPEND ?
 RDEPEND=">=dev-libs/glib-2.12"
 DEPEND="${RDEPEND}
 	sys-devel/flex
