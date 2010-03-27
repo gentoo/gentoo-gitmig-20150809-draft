@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/gtk+extra
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.21 2008/05/31 13:13:56 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.22 2010/03/27 10:58:01 pacho Exp $
+
+*gtk+extra-2.1.2 (27 Mar 2010)
+
+  27 Mar 2010; Pacho Ramos <pacho@gentoo.org> -gtk+extra-2.1.1.ebuild,
+  -gtk+extra-2.1.1-r1.ebuild, -gtk+extra-2.1.1-r2.ebuild,
+  +gtk+extra-2.1.2.ebuild:
+  Version bump including gtk+-2.18 and SIGSEGV fixes, documentation added.
+  Thanks to Robert Pearce and Joop Stakenborg in bug 292211 for their
+  investigation regarding upstream updates. This also sets GCONF_DEBUG=no
+  due to missing --enable-debug configure option. Cleaning old versions
 
 *gtk+extra-2.1.1-r2 (31 May 2008)
 
