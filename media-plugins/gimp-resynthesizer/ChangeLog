@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/gimp-resynthesizer
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-resynthesizer/ChangeLog,v 1.1 2010/03/27 21:49:16 spatz Exp $
+
+*gimp-resynthesizer-0.16 (27 Mar 2010)
+
+  27 Mar 2010; Dror Levin <spatz@gentoo.org>
+  +gimp-resynthesizer-0.16.ebuild,
+  +files/gimp-resynthesizer-0.16-makefile.patch, +metadata.xml:
+  Initial import, bug 126220. Thanks to Maurizio Pucci and Jouni Rinne.
+
