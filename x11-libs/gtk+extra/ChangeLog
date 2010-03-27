@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.23 2010/03/27 11:54:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.24 2010/03/27 12:02:31 pacho Exp $
+
+  27 Mar 2010; Pacho Ramos <pacho@gentoo.org> gtk+extra-2.1.2.ebuild:
+  As Samuli noticed again in bug 311611, LICENSE should be FDL-1.1 also
 
   27 Mar 2010; Pacho Ramos <pacho@gentoo.org>
   -files/gtk+extra-2.1.1-fix-row-deletion-segfault.patch,

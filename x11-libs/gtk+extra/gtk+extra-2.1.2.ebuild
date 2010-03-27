@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-2.1.2.ebuild,v 1.2 2010/03/27 11:54:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-2.1.2.ebuild,v 1.3 2010/03/27 12:02:31 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ DESCRIPTION="Useful Additional GTK+ widgets"
 HOMEPAGE="http://gtkextra.sourceforge.net"
 SRC_URI="mirror://sourceforge/gtkextra/${P}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="FDL-1.1 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
