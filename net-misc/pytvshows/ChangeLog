@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pytvshows
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.8 2009/10/11 18:04:22 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.9 2010/03/28 04:01:29 darkside Exp $
+
+  28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Drop myself from metadata, add maintainer-needed
 
   11 Oct 2009; Markus Meier <maekke@gentoo.org> pytvshows-0.2-r1.ebuild:
   x86 stable, bug #285724
