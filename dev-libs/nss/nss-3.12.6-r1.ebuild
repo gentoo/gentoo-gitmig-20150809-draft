@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.6.ebuild,v 1.1 2010/03/24 22:31:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.6-r1.ebuild,v 1.1 2010/03/28 14:49:55 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -8,9 +8,7 @@ NSPR_VER="4.8.3-r2"
 RTM_NAME="NSS_${PV//./_}_RTM"
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
-#SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
-#SRC_URI="http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
-SRC_URI="mirror://gentoo/${P}-gentoo.tar.bz2"
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}/src/${P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
@@ -47,7 +45,7 @@ src_compile() {
 	strip-flags
 
 	echo > "${T}"/test.c
-	$(tc-getCC) -c "${T}"/test.c -o "${T}"/test.o
+	$(tc-getCC) ${CFLAGS} -c "${T}"/test.c -o "${T}"/test.o
 	case $(file "${T}"/test.o) in
 	*64-bit*) export USE_64=1;;
 	*32-bit*) ;;
