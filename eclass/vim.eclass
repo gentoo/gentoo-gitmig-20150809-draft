@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.182 2010/03/26 18:40:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.183 2010/03/28 02:23:19 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -21,6 +21,9 @@
 # -aqua -gtk  motif             MOTIF
 # -aqua -gtk -motif nextaw      NEXTAW
 # -aqua -gtk -motif -nextaw     ATHENA
+
+# Support -cvs ebuilds, even though they're not in the official tree.
+MY_PN=${PN%-cvs}
 
 if [[ ${MY_PN} != "vim-core" ]] ; then
 	# vim supports python-2 only
@@ -49,9 +52,6 @@ esac
 if [[ ${PN##*-} == "cvs" ]] ; then
 	inherit cvs
 fi
-
-# Support -cvs ebuilds, even though they're not in the official tree.
-MY_PN=${PN%-cvs}
 
 IUSE="nls acl"
 
