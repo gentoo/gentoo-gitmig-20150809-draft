@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-9.2.0.6.ebuild,v 1.1 2010/03/28 17:35:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-9.2.0.6.ebuild,v 1.2 2010/03/28 17:37:39 caster Exp $
 
 EAPI="3"
 
@@ -44,7 +44,7 @@ JAVA_ANT_REWRITE_CLASSPATH="yes"
 JAVA_ANT_CLASSPATH_TAGS="javac javadoc"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	### fedora-inspired remove
 
