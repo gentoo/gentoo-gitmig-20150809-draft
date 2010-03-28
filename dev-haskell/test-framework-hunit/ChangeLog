@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/test-framework-hunit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/ChangeLog,v 1.1 2010/03/28 15:59:56 kolmodin Exp $
+
+*hunit-1.2.2.1 (28 Mar 2010)
+*test-framework-hunit-0.2.4 (28 Mar 2010)
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +test-framework-hunit-0.2.4.ebuild, +hunit-1.2.2.1.ebuild, +metadata.xml:
+  Initial version.
+
