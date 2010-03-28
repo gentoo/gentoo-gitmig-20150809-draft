@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.745 2010/03/25 20:33:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.746 2010/03/28 20:35:46 halcy0n Exp $
+
+  28 Mar 2010; Mark Loeser <halcy0n@gentoo.org> gcc-4.3.4.ebuild,
+  gcc-4.4.3.ebuild:
+  Fix patch exclusion; bug #309279
 
   25 Mar 2010; Mark Loeser <halcy0n@gentoo.org> gcc-4.4.3.ebuild:
   Excluding alpha patch for bug #309279
