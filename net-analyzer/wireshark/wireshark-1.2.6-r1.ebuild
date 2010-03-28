@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.6-r1.ebuild,v 1.1 2010/03/26 10:54:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.6-r1.ebuild,v 1.2 2010/03/28 15:33:08 pva Exp $
 
 EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -17,10 +17,9 @@ SRC_URI="http://www.wireshark.org/download/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="adns ares gtk ipv6 lua portaudio gnutls gcrypt geoip zlib kerberos threads profile smi +pcap pcre +caps selinux"
+IUSE="adns ares gtk ipv6 lua portaudio gnutls gcrypt geoip kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND=">=dev-libs/glib-2.4.0:2
-	zlib? ( >=sys-libs/zlib-1.2.3 )
 	smi? ( net-libs/libsmi )
 	gtk? ( >=x11-libs/gtk+-2.4.0:2
 		x11-libs/pango
@@ -112,7 +111,7 @@ src_configure() {
 		$(use_with kerberos krb5) \
 		$(use_with smi libsmi) \
 		$(use_with pcap) \
-		$(use_with zlib) \
+		--without-zlib \
 		$(use_with pcre) \
 		$(use_with geoip) \
 		$(use_with portaudio) \
