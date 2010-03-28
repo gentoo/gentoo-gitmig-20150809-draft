@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/utf8-string-0.3.5.ebuild,v 1.2 2010/03/28 17:12:09 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/utf8-string-0.3.6.ebuild,v 1.1 2010/03/28 19:10:05 kolmodin Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
