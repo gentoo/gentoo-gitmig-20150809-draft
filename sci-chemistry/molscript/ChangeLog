@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/molscript
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.7 2007/02/20 01:46:09 je_fro Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.8 2010/03/28 09:06:22 jlec Exp $
+
+*molscript-2.1.2-r1 (28 Mar 2010)
+
+  28 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/2.1.2-ldflags.patch, molscript-2.1.2.ebuild,
+  +molscript-2.1.2-r1.ebuild:
+  Missing instruction for fetch added, Keyworded for ~*-linux, bumped to
+  EAPI=3, LDFLAGS are now respected
 
   20 Feb 2007; Jeff Gardner <je_fro@gentoo.org> molscript-2.1.2.ebuild:
   Removing old X dep per Bug 167408.

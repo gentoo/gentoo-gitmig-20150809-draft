@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2.ebuild,v 1.4 2007/02/20 01:46:09 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2.ebuild,v 1.5 2010/03/28 09:06:22 jlec Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,6 +20,12 @@ DEPEND="media-libs/jpeg
 			x11-libs/libXext
 			x11-libs/libX11	)"
 RDEPEND="${DEPEND}"
+
+pkg_nofetch() {
+	elog "Please visit ${HOMEPAGE}"
+	elog "and get ${A}."
+	elog "Place it in ${DISTDIR}"
+}
 
 src_unpack() {
 	unpack ${A}
