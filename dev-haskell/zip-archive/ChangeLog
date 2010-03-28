@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/zip-archive
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/ChangeLog,v 1.1 2010/03/28 17:13:31 kolmodin Exp $
+
+*zip-archive-0.1.1.6 (28 Mar 2010)
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +zip-archive-0.1.1.6.ebuild, +metadata.xml:
+  Initial version, dependency of hashed-storage, which is a dependency of
+  darcs.
+
