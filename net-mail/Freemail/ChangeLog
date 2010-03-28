@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/Freemail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/ChangeLog,v 1.5 2010/02/05 14:37:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/ChangeLog,v 1.6 2010/03/28 21:22:04 caster Exp $
+
+  28 Mar 2010; Vlastimil Babka <caster@gentoo.org> Freemail-9999.ebuild:
+  Use slot dep for bcprov.
 
   05 Feb 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   Freemail-9999.ebuild:
