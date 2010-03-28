@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/bcfg2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.10 2010/02/20 07:38:40 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.11 2010/03/28 03:55:51 darkside Exp $
+
+  28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Drop myself from metadata, add maintainer-needed
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> bcfg2-1.0.1.ebuild:
   Transfer prefix keywords, bump EAPI
