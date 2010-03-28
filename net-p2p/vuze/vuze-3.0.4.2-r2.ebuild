@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r1.ebuild,v 1.4 2009/09/29 05:36:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r2.ebuild,v 1.1 2010/03/28 21:44:24 caster Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -32,7 +32,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
-	>=dev-java/bcprov-1.35
+	dev-java/bcprov:1.3
 	>=dev-java/commons-cli-1.0
 	>=dev-java/log4j-1.2.8
 	|| (
@@ -83,7 +83,7 @@ src_compile() {
 	use ppc   && mem="192"
 	find . -name "*.java" > "${T}/az-src"
 	ejavac -J-Xmx${mem}m -encoding latin1 \
-		-classpath $(java-pkg_getjars swt-3,commons-cli-1,log4j,bcprov) \
+		-classpath $(java-pkg_getjars swt-3,commons-cli-1,log4j,bcprov-1.3) \
 		@"${T}/az-src"
 	find . -type f -a ! -name "*.java" > "${T}/az-jarlist"
 	jar cf azureus.jar @"${T}/az-jarlist"
