@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/saxon
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.36 2007/06/17 15:24:26 wltjr Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.37 2010/03/28 17:35:21 caster Exp $
+
+*saxon-9.2.0.6 (28 Mar 2010)
+
+  28 Mar 2010; Vlastimil Babka <caster@gentoo.org> +files/9.2-build.xml,
+  -files/build-6.5.2.xml, +files/9.2-edition.properties,
+  +saxon-9.2.0.6.ebuild:
+  Version bump, fixes bug #130568. Thanks to Juan J. García de Soria,
+  Michael Jinks and Hanno Meyer-Thurow.
 
   17 Jun 2007; William L. Thomson Jr. <wltjr@gentoo.org> saxon-6.5.5.ebuild:
   Stable on amd64, bug #180572. Removed older version
