@@ -12,7 +12,7 @@ DESCRIPTION="Log::Any -- Bringing loggers and listeners together"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
