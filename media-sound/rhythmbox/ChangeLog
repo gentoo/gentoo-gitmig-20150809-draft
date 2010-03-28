@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.178 2010/03/16 18:56:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.179 2010/03/28 22:21:38 pacho Exp $
+
+*rhythmbox-0.12.8 (28 Mar 2010)
+
+  28 Mar 2010; Pacho Ramos <pacho@gentoo.org> -rhythmbox-0.12.7.ebuild,
+  -files/rhythmbox-0.12.7-audiocd.patch, +rhythmbox-0.12.8.ebuild:
+  Version bump adding Last.fm cover art search, automatically unmount MTP
+  devices mounted by gvfs, more improvements to mixed-direction text
+  display, no longer needs audiocd patch and other bug fixes. Removing old
+  testing.
 
   16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   rhythmbox-0.12.6.ebuild:

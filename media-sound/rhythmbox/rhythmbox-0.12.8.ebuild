@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.7.ebuild,v 1.3 2010/03/04 00:01:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8.ebuild,v 1.1 2010/03/28 22:21:38 pacho Exp $
 
 EAPI="2"
 
@@ -153,9 +153,6 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# Fix the audiocd plugin build. bug #307457
-	epatch "${FILESDIR}"/${P}-audiocd.patch
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
