@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/skype4py
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.3 2009/08/20 03:23:43 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.4 2010/03/28 04:00:32 darkside Exp $
+
+  28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Drop myself from metadata, add maintainer-needed
 
   20 Aug 2009; Jeremy Olexa <darkside@gentoo.org> skype4py-1.0.31.0.ebuild,
   +files/skype4py-1.0.31.0-automagic-cython.patch:
