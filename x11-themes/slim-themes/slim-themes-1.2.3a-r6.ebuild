@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r3.ebuild,v 1.5 2009/03/25 23:26:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r6.ebuild,v 1.1 2010/03/28 03:14:15 darkside Exp $
+
+EAPI=2
+inherit eutils
 
 DESCRIPTION="SLiM (Simple Login Manager) themes pack"
 HOMEPAGE="http://slim.berlios.de"
@@ -21,11 +24,14 @@ SRC_URI="mirror://berlios/slim/slim-1.2.3-themepack1a.tar.gz
 	mirror://berlios/slim/slim-archlinux-simple.tar.gz
 	mirror://berlios/slim/slim-lake.tar.gz
 	mirror://gentoo/slim-gentoo-1.0.tar.bz2
-	http://www.xfce-look.org/CONTENT/content-files/48605-xfce-g-box-slim-0.1.tar.gz"
+	http://www.xfce-look.org/CONTENT/content-files/48605-xfce-g-box-slim-0.1.tar.gz
+	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_purple/gentoo_10_purple.tar.bz2
+	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_blue/gentoo_10_blue.tar.bz2
+	http://www.konstantinhansen.de/source/slim_themes/gentoo_10_dark/gentoo_10_dark.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-misc/slim"
@@ -35,20 +41,25 @@ RESTRICT="strip binchecks"
 
 S="${WORKDIR}"
 
+src_prepare() {
+	epatch "${FILESDIR}/slim-theme-flat.diff"
+}
+
 src_compile() {
 	:
 }
 
 src_install() {
-	for i in slim-archlinux capernoited flower2 mindlock lotus-{sage,midnight} \
-		Zenwalk	isolated subway xfce-g-box slim-gentoo; do
-			rm ${i}/README
+	for i in capernoited flower2 gentoo isolated lotus-{sage,midnight} \
+		mindlock slim-archlinux subway xfce-g-box Zenwalk ; do
+			rm ${i}/README || die "rm README"
 	done
 
-	rm parallel-dimensions/{LICENSE*,COPY*} debian-moreblue/COPY* \
-		lotus-{sage,midnight}/{LICENSE*,COPY*} xfce-g-box/COPYRIGHT.panel
+	rm debian-moreblue/COPY* lotus-{sage,midnight}/{LICENSE*,COPY*} \
+		parallel-dimensions/{LICENSE*,COPY*} xfce-g-box/COPYRIGHT.panel \
+		|| die "rm LICENSE"
 
 	local themesdir="/usr/share/slim/themes"
-	dodir ${themesdir}
-	cp -R . "${D}"/${themesdir}
+	insinto ${themesdir}
+	doins -r .
 }

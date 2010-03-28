@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/slim-themes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.27 2009/12/30 13:15:35 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.28 2010/03/28 03:14:15 darkside Exp $
+
+*slim-themes-1.2.3a-r6 (28 Mar 2010)
+
+  28 Mar 2010; Jeremy Olexa <darkside@gentoo.org>
+  -slim-themes-1.2.3a-r3.ebuild, +slim-themes-1.2.3a-r6.ebuild,
+  +files/slim-theme-flat.diff:
+  Add small patch from Denilson in bug 303815 to improve the flat theme
 
   30 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   slim-themes-1.2.3a-r5.ebuild:
