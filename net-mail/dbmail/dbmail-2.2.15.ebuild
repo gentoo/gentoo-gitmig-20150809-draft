@@ -1,33 +1,34 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.3.4.ebuild,v 1.3 2010/01/04 02:55:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.15.ebuild,v 1.1 2010/03/28 20:33:23 lordvan Exp $
 
-inherit eutils
+EAPI="1"
+inherit eutils multilib python
 
-MY_P="${P/_/}" # for rcX
+MY_P="${P/_/-}" # for rcX was without the - for versions < 2.2.6
 #MY_P="${P}" # releases
 DESCRIPTION="A mail storage and retrieval daemon that uses MySQL or PostgreSQL as its data store"
 HOMEPAGE="http://www.dbmail.org/"
-SRC_URI="http://www.dbmail.org/download/2.3/${MY_P}.tar.gz"
+SRC_URI="http://www.dbmail.org/download/2.2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-x86 -amd64"
-IUSE="ldap mysql postgres sieve sqlite3 ssl static"
+KEYWORDS="~amd64 ~x86"
+IUSE="ldap mysql postgres sieve sqlite ssl static python"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	postgres? ( >=virtual/postgresql-server-7.4 )
 	mysql? ( >=virtual/mysql-4.1 )
-	sqlite3? ( >=dev-db/sqlite-3.0 )
-	!mysql? ( !postgres? ( !sqlite3? ( >=dev-db/sqlite-3.0 ) ) )
+	sqlite? ( >=dev-db/sqlite-3.0 )
+	!mysql? ( !postgres? ( !sqlite? ( >=dev-db/sqlite-3.0 ) ) )
 	sieve? ( >=mail-filter/libsieve-2.2.1 )
 	ldap? ( >=net-nds/openldap-2.3.33 )
+	python? ( net-zope/zope-interface )
 	app-text/asciidoc
 	app-text/xmlto
 	sys-libs/zlib
-	=dev-libs/gmime-2.2*
-	>=dev-libs/glib-2.8
-	>=app-crypt/mhash-0.9.9-r1"
+	>=dev-libs/gmime-2.2.10:0
+	>=dev-libs/glib-2.8"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -37,8 +38,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	use sqlite3 && myconf="--with-sqlite"
-	if ! use postgres && ! use mysql && ! use sqlite3; then myconf="${myconf} --with-sqlite" ; fi
+	use sqlite && myconf="--with-sqlite"
+	if ! use postgres && ! use mysql && ! use sqlite; then myconf="${myconf} --with-sqlite" ; fi
 	use ldap && myconf=${myconf}" --with-auth-ldap"
 
 	econf \
@@ -57,25 +58,56 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS BUGS UPGRADING ChangeLog README* INSTALL* NEWS THANKS
-	dodoc sql/mysql/*
-	dodoc sql/postgresql/*
-	dodoc sql/sqlite/*
+	dodoc AUTHORS BUGS ChangeLog README* INSTALL NEWS THANKS UPGRADING VERSION
 
-	cp dbmail.conf.dist dbmail.conf
+	docinto sql/mysql
+	dodoc sql/mysql/*
+	docinto sql/postgresql
+	dodoc sql/postgresql/*
+	docinto sql/sqlite
+	dodoc sql/sqlite/*
+	docinto test-scripts
+	dodoc test-scripts/*
+	docinto contrib/sql2sql
+	dodoc contrib/sql2sql
+	docinto contrib/mailbox2dbmail
+	dodoc contrib/mailbox2dbmail
+	docinto contrib
+	dodoc contrib/quota_warn.pl
+
 	sed -i -e "s:nobody:dbmail:" dbmail.conf
 	sed -i -e "s:nogroup:dbmail:" dbmail.conf
 	#sed -i -e "s:#library_directory:library_directory:" dbmail.conf
+
 	insinto /etc/dbmail
 	newins dbmail.conf dbmail.conf.dist
 
-	newinitd "${FILESDIR}"/dbmail-imapd.initd dbmail-imapd
-	newinitd "${FILESDIR}"/dbmail-lmtpd.initd dbmail-lmtpd
-	newinitd "${FILESDIR}"/dbmail-pop3d.initd dbmail-pop3d
-	use sieve && newinitd "${FILESDIR}"/dbmail-timsieved.initd dbmail-timsieved
+	# change config path to our default and use the conf.d and init.d files from the contrib dir
+	sed -i -e "s:/etc/dbmail.conf:/etc/dbmail/dbmail.conf:" contrib/startup-scripts/gentoo/init.d-dbmail
+	newconfd contrib/startup-scripts/gentoo/conf.d-dbmail dbmail
+	newinitd contrib/startup-scripts/gentoo/init.d-dbmail dbmail
 
 	dobin contrib/mailbox2dbmail/mailbox2dbmail
 	doman contrib/mailbox2dbmail/mailbox2dbmail.1
+
+	# ldap schema
+	if use ldap; then
+	   insinto /etc/openldap/schema
+	   doins "${S}/dbmail.schema"
+	fi
+
+	if use python; then
+	   insinto $(python_get_sitedir)/dbmail
+	   doins python/*.py
+	   insinto $(python_get_sitedir)/dbmail/app
+	   doins python/app/*.py
+	   insinto $(python_get_sitedir)/dbmail/bin
+	   doins python/bin/*.py
+	   insinto $(python_get_sitedir)/dbmail/lib
+	   doins python/lib/*.py
+	   insinto $(python_get_sitedir)/dbmail/tests
+	   doins python/tests/*.py
+	fi
 
 	keepdir /var/lib/dbmail
 	fperms 750 /var/lib/dbmail
@@ -83,13 +115,16 @@ src_install() {
 }
 
 pkg_postinst() {
+	if use python; then
+	   python_mod_optimize $(python_get_sitedir)/dbmail
+	fi
 	elog "Please read the INSTALL file in /usr/share/doc/${PF}/"
 	elog "for remaining instructions on setting up dbmail users and "
 	elog "for finishing configuration to connect to your MTA and "
 	elog "to connect to your db."
 	echo
-	elog "DBMail requires either SQLite3, PostgreSQL or MySQL."
-	elog "If none of the use-flags are specified SQLite3 is"
+	elog "DBMail requires either SQLite, PostgreSQL or MySQL."
+	elog "If none of the use-flags are specified SQLite is"
 	elog "used as default. To use another database please"
 	elog "specify the appropriate use-flag and re-emerge dbmail."
 	echo
@@ -107,6 +142,13 @@ pkg_postinst() {
 	elog "dbmail.conf and set it to the correct path"
 	elog "(usually /usr/lib/dbmail or /usr/lib64/dbmail on amd64)"
 	elog "A sample can be found in dbmail.conf.dist after etc-update."
+	echo
+	elog "We are now using the init script from upstream."
+	elog "Please edit /etc/conf.d/dbmail to set which services to start"
+	elog "and delete /etc/init.d/dbmail-* when you are done. (don't"
+	elog "forget to rc-update del dbmail-* first)"
+}
 
-	ewarn "This is a Development release. use at own risk."
+pkg_postrm() {
+	     python_mod_cleanup
 }

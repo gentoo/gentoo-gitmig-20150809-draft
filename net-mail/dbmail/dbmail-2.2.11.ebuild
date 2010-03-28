@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11.ebuild,v 1.4 2010/01/04 02:55:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11.ebuild,v 1.5 2010/03/28 20:33:23 lordvan Exp $
 
 inherit eutils multilib python
 
@@ -13,13 +13,13 @@ SRC_URI="http://www.dbmail.org/download/2.2/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ldap mysql postgres sieve sqlite3 ssl static python"
+IUSE="ldap mysql postgres sieve sqlite ssl static python"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	postgres? ( >=virtual/postgresql-server-7.4 )
 	mysql? ( >=virtual/mysql-4.1 )
-	sqlite3? ( >=dev-db/sqlite-3.0 )
-	!mysql? ( !postgres? ( !sqlite3? ( >=dev-db/sqlite-3.0 ) ) )
+	sqlite? ( >=dev-db/sqlite-3.0 )
+	!mysql? ( !postgres? ( !sqlite? ( >=dev-db/sqlite-3.0 ) ) )
 	sieve? ( >=mail-filter/libsieve-2.2.1 )
 	ldap? ( >=net-nds/openldap-2.3.33 )
 	python? ( net-zope/zope-interface )
@@ -37,8 +37,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	use sqlite3 && myconf="--with-sqlite"
-	if ! use postgres && ! use mysql && ! use sqlite3; then myconf="${myconf} --with-sqlite" ; fi
+	use sqlite && myconf="--with-sqlite"
+	if ! use postgres && ! use mysql && ! use sqlite; then myconf="${myconf} --with-sqlite" ; fi
 	use ldap && myconf=${myconf}" --with-auth-ldap"
 
 	econf \
@@ -124,8 +124,8 @@ pkg_postinst() {
 	elog "for finishing configuration to connect to your MTA and "
 	elog "to connect to your db."
 	echo
-	elog "DBMail requires either SQLite3, PostgreSQL or MySQL."
-	elog "If none of the use-flags are specified SQLite3 is"
+	elog "DBMail requires either SQLite, PostgreSQL or MySQL."
+	elog "If none of the use-flags are specified SQLite is"
 	elog "used as default. To use another database please"
 	elog "specify the appropriate use-flag and re-emerge dbmail."
 	echo

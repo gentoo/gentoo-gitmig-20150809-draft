@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.37 2010/01/04 02:55:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.38 2010/03/28 20:33:23 lordvan Exp $
+
+*dbmail-2.2.15 (28 Mar 2010)
+
+  28 Mar 2010; <lordvan@gentoo.org> dbmail-2.2.9.ebuild,
+  -dbmail-2.2.10.ebuild, -dbmail-2.2.11_rc3.ebuild,
+  -dbmail-2.2.11_rc3-r1.ebuild, dbmail-2.2.11.ebuild, +dbmail-2.2.15.ebuild,
+  -dbmail-2.3.4.ebuild:
+  fixed bug #251392 (sqlite3 -> sqlite)
+  added 2.2.15, removed 2.2.11_rc3*, removed 2.3.*
 
   04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> dbmail-2.2.9.ebuild,
   dbmail-2.2.10.ebuild, dbmail-2.2.11_rc3.ebuild,
