@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-timezonedb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.13 2010/03/28 19:22:39 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.14 2010/03/28 19:42:59 the_paya Exp $
+
+  28 Mar 2010; Javier Villavicencio <the_paya@gentoo.org>
+  pecl-timezonedb-2010.5.ebuild:
+  Keyworded ~x86-fbsd.
 
 *pecl-timezonedb-2010.5 (28 Mar 2010)
 
