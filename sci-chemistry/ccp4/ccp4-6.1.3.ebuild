@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.1.3.ebuild,v 1.1 2010/02/07 10:26:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.1.3.ebuild,v 1.2 2010/03/28 13:41:52 jlec Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI=""
 LICENSE="ccp4"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X arpwarp +balbes-db"
+IUSE="X arpwarp +balbes"
 
 RDEPEND="
 	~sci-chemistry/ccp4-apps-${PV}[X?]
@@ -25,7 +25,7 @@ RDEPEND="
 	sci-chemistry/sfcheck
 	sci-chemistry/xia2
 	arpwarp? ( sci-chemistry/arp-warp-bin )
-	balbes-db? ( ~sci-libs/balbes-db-${PV} )
+	balbes? ( sci-chemistry/balbes )
 	X? (
 		~sci-chemistry/ccp4i-${PV}
 		sci-chemistry/imosflm

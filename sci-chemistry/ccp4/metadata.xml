@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>sci-chemistry</herd>
 <use>
-	<flag name='balbes-db'>install the additional balbes database</flag>
+	<flag name='balbes'>Install sci-chemistry/balbes</flag>
 	<flag name='arpwarp'>Add binary arp-warp for molecular replacement</flag>
 </use>
 </pkgmetadata>
