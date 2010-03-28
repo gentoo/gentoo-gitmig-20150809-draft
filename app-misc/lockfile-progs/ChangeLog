@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lockfile-progs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.5 2010/03/10 09:49:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/ChangeLog,v 1.6 2010/03/28 19:03:32 armin76 Exp $
+
+  28 Mar 2010; Raúl Porcel <armin76@gentoo.org>
+  lockfile-progs-0.1.13.ebuild:
+  Add ~arm/~s390/~sh/~sparc wrt #306633
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org>
   lockfile-progs-0.1.13.ebuild:
