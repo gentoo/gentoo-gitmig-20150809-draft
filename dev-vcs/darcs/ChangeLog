@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.2 2010/03/23 22:03:06 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.3 2010/03/28 21:40:12 kolmodin Exp $
+
+*darcs-2.4 (28 Mar 2010)
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> +darcs-2.4.ebuild:
+  Version bump. Lots of new dependencies, thus at the moment we only support
+  amd64, ppc64 and x86. When we've got GHC 6.12 on more arches we will put
+  the keywords back.
 
   23 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> -darcs-1.0.5.ebuild,
   -darcs-1.0.6.ebuild, -darcs-1.0.7.ebuild, -darcs-1.0.8-r2.ebuild:
