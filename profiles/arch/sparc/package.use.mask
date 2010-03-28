@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.45 2010/03/18 16:40:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.46 2010/03/28 18:11:54 armin76 Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (18 Jan 2010)
 # newer qt-webkit is not keyworded (bug #235685)
@@ -32,6 +32,7 @@ media-libs/libxspf doc
 # Requires stable KDE4
 app-office/openoffice kde
 app-arch/p7zip kde
+dev-util/subversion kde
 
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.
