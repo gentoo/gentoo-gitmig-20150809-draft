@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-fu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.27 2009/07/02 20:07:45 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.28 2010/03/28 00:13:56 robbat2 Exp $
+
+*gtk2-fu-0.11 (28 Mar 2010)
+
+  28 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +gtk2-fu-0.11.ebuild:
+  Version bump via perl-bump experimental tool.
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> gtk2-fu-0.10.ebuild:
   Stable for HPPA too.

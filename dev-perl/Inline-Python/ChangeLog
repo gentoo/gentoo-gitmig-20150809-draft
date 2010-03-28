@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Inline-Python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/ChangeLog,v 1.15 2009/12/24 19:56:18 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/ChangeLog,v 1.16 2010/03/28 00:13:19 robbat2 Exp $
+
+*Inline-Python-0.34 (28 Mar 2010)
+
+  28 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +Inline-Python-0.34.ebuild:
+  Version bump via perl-bump experimental tool.
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org> -Inline-Python-0.29.ebuild:
   Cleanup
