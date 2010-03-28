@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r1.ebuild,v 1.1 2010/02/11 22:36:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r1.ebuild,v 1.2 2010/03/28 20:22:02 jlec Exp $
 
 EAPI="3"
 
@@ -43,7 +43,7 @@ done
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -93,6 +93,8 @@ src_prepare() {
 
 	einfo "Done." # done applying Gentoo patches
 	echo
+
+	sed "s:/usr:${EPREFIX}/usr:g" -i configure || die
 
 	gnuconfig_update
 }
