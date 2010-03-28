@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0.ebuild,v 1.1 2010/03/26 21:52:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0.ebuild,v 1.2 2010/03/28 21:16:28 maekke Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 LANGS=" bg ca cs de en_GB es fi fr hu it ja ko nl pl pt_BR ru sk sl sv uk zh_CN zh_TW"
 IUSE="lapack +sift $(echo ${LANGS//\ /\ linguas_})"
 
-DEPEND="
+CDEPEND="
 	!!dev-util/cocom
 	app-arch/zip
 	>=dev-libs/boost-1.35.0-r5
@@ -33,8 +33,10 @@ DEPEND="
 	x11-libs/wxGTK:2.8[opengl,-odbc]
 	lapack? ( virtual/lapack )
 	sift? ( media-gfx/autopano-sift-C )"
-RDEPEND="${DEPEND}
+RDEPEND="${CDEPEND}
 	media-libs/exiftool"
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
