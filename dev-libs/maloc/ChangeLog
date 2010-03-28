@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/maloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.9 2010/01/12 04:24:06 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.10 2010/03/28 16:24:59 jlec Exp $
+
+*maloc-0.2.1-r1 (28 Mar 2010)
+
+  28 Mar 2010; Justin Lecher <jlec@gentoo.org> +files/0.2.1-mpi.patch,
+  +maloc-0.2.1-r1.ebuild:
+  USE=-mpi should not include mpi-code
 
 *maloc-0.2.1 (12 Jan 2010)
 
