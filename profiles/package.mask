@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11391 2010/03/28 16:59:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11392 2010/03/28 17:08:19 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -896,7 +896,8 @@ dev-util/w32api
 >sys-process/audit-1.7.4
 
 # Jeroen Roovers <jer@gentoo.org> (5 Dec 2008)
-# Snapshot, labs and alpha releases but not betas and RCs of Opera
+# Please read http://my.opera.com/desktopteam/blog/
+# for information about alpha releases
 =www-client/opera-10.20_pre4744
 >=www-client/opera-10.50
 
