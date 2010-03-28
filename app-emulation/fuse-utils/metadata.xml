@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>darkside@gentoo.org</email>
-		<description>Proxy Maintainer</description>
-	</maintainer>
-	<maintainer>
 		<email>neurogeek@gentoo.org</email>
 		<name>Jesus Rivero</name>
 		<description>Proxy Maintainer</description>

@@ -8,10 +8,6 @@
 		<name>José Manuel Ferrer Ortiz</name>
 	</maintainer>
 	<maintainer>
-		<email>darkside@gentoo.org</email>
-		<description>Proxy Maintainer. Please CC on bugs</description>
-	</maintainer>
-	<maintainer>
 		<email>neurogeek@gentoo.org</email>
 		<name>Jesus Rivero</name>
 		<description>Proxy Maintainer. Please CC on bugs</description>

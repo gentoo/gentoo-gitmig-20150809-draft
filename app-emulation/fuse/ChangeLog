@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.30 2010/03/24 00:27:33 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.31 2010/03/28 03:58:03 darkside Exp $
+
+  28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Drop myself from metadata
 
   23 Mar 2010; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Added myself to metadata.xml
