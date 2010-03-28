@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.199 2010/03/19 14:35:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.200 2010/03/28 00:02:16 chainsaw Exp $
+
+*audacious-2.3_beta3 (28 Mar 2010)
+
+  28 Mar 2010; <chainsaw@gentoo.org> +audacious-2.3_beta3.ebuild:
+  New beta. Fixes shuffle operation, among other things.
 
 *audacious-2.3_beta2 (19 Mar 2010)
 
