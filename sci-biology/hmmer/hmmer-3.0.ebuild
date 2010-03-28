@@ -1,44 +1,38 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0_beta2.ebuild,v 1.2 2010/01/01 21:52:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.1 2010/03/28 20:51:02 weaver Exp $
 
 EAPI="2"
 
-MY_P="hmmer-3.0b2"
-
 DESCRIPTION="Sequence analysis using profile hidden Markov models"
 HOMEPAGE="http://hmmer.janelia.org/"
-SRC_URI="ftp://selab.janelia.org/pub/software/hmmer3/${MY_P}.tar.gz"
+SRC_URI="ftp://selab.janelia.org/pub/software/hmmer3/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="sse mpi threads" # gsl
+IUSE="+sse mpi +threads gsl"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
-# NB: compile failure with mpi, disabling temporarily
-# gsl? ( sci-libs/gsl )
-# mpi? ( virtual/mpi )
-DEPEND=""
+DEPEND="mpi? ( virtual/mpi )
+	gsl? ( >=sci-libs/gsl-1.12 )"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	econf $(use_enable sse) \
-		$(use_enable threads) || die
-#		$(use_enable mpi) \
-#		$(use_with gsl) || die
-}
-
-src_compile() {
-	emake -j1 || die
+		$(use_enable mpi) \
+		$(use_enable threads) \
+		$(use_with gsl) || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	einstall || die
 	dolib src/libhmmer.a || die
 	dolib easel/libeasel.a || die
 	insinto /usr/share/${PN}
 	doins -r tutorial || die
 	dodoc RELEASE-NOTES Userguide.pdf
+}
+
+src_test() {
+	emake check || die
 }
