@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.1.ebuild,v 1.1 2010/02/19 23:30:24 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.1.ebuild,v 1.2 2010/03/28 16:12:35 calchan Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ DEPEND="${CDEPEND}
 	!sci-electronics/geda-gattrib
 	!sci-electronics/geda-gnetlist
 	!sci-electronics/geda-gschem
-	!sci-electronics/geda-symcheck
+	!sci-electronics/geda-gsymcheck
 	!sci-electronics/geda-symbols
 	!sci-electronics/geda-utils
 	sys-apps/groff
