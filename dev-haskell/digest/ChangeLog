@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/digest
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.1 2010/03/28 17:10:18 kolmodin Exp $
+
+*digest-0.0.0.8 (28 Mar 2010)
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +digest-0.0.0.8.ebuild, +metadata.xml:
+  Initial version, indirect dependency of darcs.
+
