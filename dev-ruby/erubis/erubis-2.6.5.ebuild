@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.6.5.ebuild,v 1.1 2010/03/28 08:28:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.6.5.ebuild,v 1.2 2010/03/28 13:58:28 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -13,7 +13,6 @@ RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGES.txt README.txt"
 
 inherit ruby-fakegem
-
 
 DESCRIPTION="Erubis is an implementation of eRuby"
 HOMEPAGE="http://www.kuwata-lab.com/erubis/"
