@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/ccp4-apps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.3 2010/02/26 19:06:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.4 2010/03/28 13:42:22 jlec Exp $
+
+*ccp4-apps-6.1.3-r2 (28 Mar 2010)
+
+  28 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +ccp4-apps-6.1.3-r2.ebuild:
+  balbes moved to sci-chemistry/balbes, fixed for PY3
 
   26 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
   ccp4-apps-6.1.3-r1.ebuild:
