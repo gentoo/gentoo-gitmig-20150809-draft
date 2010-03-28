@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.128 2010/03/20 09:33:26 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.129 2010/03/28 10:33:47 the_paya Exp $
+
+  28 Mar 2010; Javier Villavicencio <the_paya@gentoo.org> m4-1.4.14.ebuild,
+  +files/m4-1.4.14-gnulib_spawn.patch:
+  Add patch to fix gnulib's spawn, fixes bug 310335. Keyword again.
 
   20 Mar 2010; Javier Villavicencio <the_paya@gentoo.org> m4-1.4.14.ebuild:
   Drop *-fbsd keywords see bug 310335
@@ -15,13 +19,13 @@
   01 Apr 2009; Mike Frysinger <vapier@gentoo.org> +m4-1.4.13.ebuild:
   Version bump.
 
-  17 Mar 2009; Raúl Porcel <armin76@gentoo.org> m4-1.4.12.ebuild:
+  17 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.12.ebuild:
   m68k stable wrt #258525, thanks to kolla for testing
 
   24 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> m4-1.4.12.ebuild:
   stable amd64, bug 258525
 
-  14 Feb 2009; Raúl Porcel <armin76@gentoo.org> m4-1.4.12.ebuild:
+  14 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.12.ebuild:
   arm/ia64/s390/sh/x86 stable wrt #258525
 
   12 Feb 2009; Brent Baude <ranger@gentoo.org> m4-1.4.12.ebuild:
@@ -59,7 +63,7 @@
   11 Apr 2008; Santiago M. Mola <coldwind@gentoo.org> m4-1.4.11.ebuild:
   amd64 stable wrt security bug #217229
 
-  11 Apr 2008; Raúl Porcel <armin76@gentoo.org> m4-1.4.11.ebuild:
+  11 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.11.ebuild:
   alpha/ia64/sparc/x86 stable wrt security #217229
 
 *m4-1.4.10-r3 (07 Apr 2008)
@@ -76,10 +80,10 @@
   30 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> m4-1.4.10-r1.ebuild:
   amd64 stable wrt bug #215348
 
-  30 Mar 2008; Raúl Porcel <armin76@gentoo.org> m4-1.4.10-r1.ebuild:
+  30 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.10-r1.ebuild:
   alpha/ia64/sparc stable wrt #215348
 
-  30 Mar 2008; Dawid Węgliński <cla@gentoo.org> m4-1.4.10-r1.ebuild:
+  30 Mar 2008; Dawid WÄgliÅski <cla@gentoo.org> m4-1.4.10-r1.ebuild:
   Stable on x86 (bug #215348)
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> m4-1.4.10-r1.ebuild:
@@ -113,10 +117,10 @@
   11 Oct 2007; Tom Gall <tgall@gentoo.org> m4-1.4.10.ebuild:
   stable on ppc64, bug #195257
 
-  10 Oct 2007; Raúl Porcel <armin76@gentoo.org> m4-1.4.10.ebuild:
+  10 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.10.ebuild:
   alpha/ia64 stable wrt #195257
 
-  09 Oct 2007; Dawid Węgliński <cla@gentoo.org> m4-1.4.10.ebuild:
+  09 Oct 2007; Dawid WÄgliÅski <cla@gentoo.org> m4-1.4.10.ebuild:
   Stable on x86 for bug 195257
 
   09 Oct 2007; Jeroen Roovers <jer@gentoo.org> m4-1.4.10.ebuild:
@@ -125,7 +129,7 @@
   09 Oct 2007; Jeroen Roovers <jer@gentoo.org> m4-1.4.10.ebuild:
   Stable for HPPA (bug #195257).
 
-  14 Jul 2007; Raúl Porcel <armin76@gentoo.org> m4-1.4.10.ebuild:
+  14 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.10.ebuild:
   Back to ~arch
 
 *m4-1.4.10 (14 Jul 2007)
@@ -148,7 +152,7 @@
   26 Jun 2007; Lars Weiler <pylon@gentoo.org> m4-1.4.9.ebuild:
   Stable on ppc; bug #183253.
 
-  26 Jun 2007; Raúl Porcel <armin76@gentoo.org> m4-1.4.9.ebuild:
+  26 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.9.ebuild:
   alpha stable wrt #183253
 
   26 Jun 2007; Christoph Mende <angelos@gentoo.org> m4-1.4.9.ebuild:
@@ -160,7 +164,7 @@
   11 May 2007; Joshua Kinard <kumba@gentoo.org> m4-1.4.9.ebuild:
   Stable on mips.
 
-  24 Apr 2007; Raúl Porcel <armin76@gentoo.org> m4-1.4.9.ebuild:
+  24 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> m4-1.4.9.ebuild:
   ia64 + x86 stable
 
   17 Apr 2007; Mike Frysinger <vapier@gentoo.org> m4-1.4.9.ebuild:
@@ -193,13 +197,13 @@
   24 Mar 2007; Mike Frysinger <vapier@gentoo.org> m4-1.4.9.ebuild:
   Version bump.
 
-  20 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> m4-1.4.7.ebuild:
+  20 Feb 2007; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> m4-1.4.7.ebuild:
   Stable on MIPS; bug #156293
 
   20 Dec 2006; Steve Dibb <beandog@gentoo.org> m4-1.4.7.ebuild:
   amd64 stable, bug 156293
 
-  06 Dec 2006; Bryan Østergaard <kloeri@gentoo.org> m4-1.4.7.ebuild:
+  06 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org> m4-1.4.7.ebuild:
   Stable on Alpha.
 
   01 Dec 2006; Markus Rothe <corsair@gentoo.org> m4-1.4.7.ebuild:
@@ -226,7 +230,7 @@
   m4-1.4.6.ebuild, m4-1.4.7.ebuild:
   Dropped ppc-macos, see you in prefix.
 
-  01 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> m4-1.4.6.ebuild:
+  01 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org> m4-1.4.6.ebuild:
   Stable on Alpha, bug 149046.
 
   25 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> m4-1.4.6.ebuild:
@@ -263,7 +267,7 @@
   29 Apr 2006; Joshua Kinard <kumba@gentoo.org> m4-1.4.4.ebuild:
   Marked stable on mips.
 
-  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> m4-1.4.4.ebuild:
+  30 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org> m4-1.4.4.ebuild:
   Add ~x86-fbsd keyword.
 
   19 Mar 2006; Fernando J. Pereda <ferdy@gentoo.org> m4-1.4.4.ebuild:
