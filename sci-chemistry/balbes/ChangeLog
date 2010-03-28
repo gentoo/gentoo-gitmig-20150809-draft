@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/balbes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/ChangeLog,v 1.1 2010/03/28 13:37:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/ChangeLog,v 1.2 2010/03/28 20:46:07 jlec Exp $
+
+  28 Mar 2010; Justin Lecher <jlec@gentoo.org> balbes-1.0.0_p100317.ebuild:
+  Keyworded for ~x86-linux ~amd64-linux
 
 *balbes-1.0.0_p100317 (28 Mar 2010)
 
