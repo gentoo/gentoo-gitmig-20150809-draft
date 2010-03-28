@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.28 2010/02/25 11:20:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.29 2010/03/28 09:59:43 kolmodin Exp $
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> c2hs-0.16.0.ebuild:
+  Stable on amd64, see bug #306311.
 
   25 Feb 2010; Christian Faulhammer <fauli@gentoo.org> c2hs-0.16.0.ebuild:
   stable x86, bug 306311
