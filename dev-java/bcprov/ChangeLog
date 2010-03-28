@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.33 2010/03/28 21:30:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.34 2010/03/28 21:48:05 caster Exp $
+
+*bcprov-1.45 (28 Mar 2010)
+
+  28 Mar 2010; Vlastimil Babka <caster@gentoo.org> +bcprov-1.45.ebuild:
+  Version bump, bug #283768. Switch to jdk15 sources.
 
 *bcprov-1.38-r2 (28 Mar 2010)
 *bcprov-1.38-r1 (28 Mar 2010)
