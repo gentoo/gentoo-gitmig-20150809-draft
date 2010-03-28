@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.191 2010/03/27 10:19:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.192 2010/03/28 17:16:04 armin76 Exp $
+
+  28 Mar 2010; Raúl Porcel <armin76@gentoo.org> boost-1.41.0-r2.ebuild,
+  boost-1.41.0-r3.ebuild, boost-1.42.0.ebuild:
+  sh also needs --disable-long-double
 
   27 Mar 2010; Pacho Ramos <pacho@gentoo.org> boost-1.41.0-r3.ebuild:
   amd64 stable, security bug 305195
