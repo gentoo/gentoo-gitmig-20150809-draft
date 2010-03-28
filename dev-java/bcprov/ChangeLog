@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.32 2010/01/03 20:15:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.33 2010/03/28 21:30:35 caster Exp $
+
+*bcprov-1.38-r2 (28 Mar 2010)
+*bcprov-1.38-r1 (28 Mar 2010)
+
+  28 Mar 2010; Vlastimil Babka <caster@gentoo.org> +bcprov-1.38-r1.ebuild,
+  +bcprov-1.38-r2.ebuild:
+  Revbump to fork bcprov to a 1.38 slot to use with net-p2p/vuze and to keep
+  the main slot 0 at higher version (no other changes, so keeping keywords)
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> bcprov-1.38.ebuild:
   Transfer Prefix keywords
