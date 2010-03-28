@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.129 2010/02/17 22:41:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.130 2010/03/28 10:48:54 ssuominen Exp $
+
+*intltool-0.41.1 (28 Mar 2010)
+
+  28 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +intltool-0.41.1.ebuild:
+  Version bump.
 
   17 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   Moving to freedesktop.
