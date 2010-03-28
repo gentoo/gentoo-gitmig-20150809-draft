@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.70 2010/03/10 14:53:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.71 2010/03/28 07:40:28 tove Exp $
+
+  28 Mar 2010; Torsten Veller <tove@gentoo.org> -XML-LibXSLT-1.62.ebuild,
+  -XML-LibXSLT-1.66.ebuild:
+  Cleanup
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org> XML-LibXSLT-1.70.ebuild:
   Marked ppc/ppc64 stable for bug #307385.
