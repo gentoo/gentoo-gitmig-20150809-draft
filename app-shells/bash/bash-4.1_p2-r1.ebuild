@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.1_p2-r1.ebuild,v 1.1 2010/03/23 02:27:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.1_p2-r1.ebuild,v 1.2 2010/03/28 10:55:37 the_paya Exp $
 
 EAPI="1"
 
@@ -71,6 +71,7 @@ src_unpack() {
 	cd ../..
 
 	epatch "${FILESDIR}"/${PN}-4.x-deferred-heredocs.patch
+	epatch "${FILESDIR}"/${PN}-4.1-fbsd-eaccess.patch # bug 303411
 
 	if ! use vanilla ; then
 		sed -i '1i#define NEED_FPURGE_DECL' execute_cmd.c # needs fpurge() decl
