@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/erubis
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.1 2010/03/28 08:28:58 graaff Exp $
+
+*erubis-2.6.5 (28 Mar 2010)
+
+  28 Mar 2010; Hans de Graaff <graaff@gentoo.org> +erubis-2.6.5.ebuild,
+  +metadata.xml:
+  Initial import, new test dependency for dev-ruby/sinatra.
+
