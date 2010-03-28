@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mmdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.3 2010/02/02 19:17:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.4 2010/03/28 18:35:33 jlec Exp $
+
+  28 Mar 2010; Justin Lecher <jlec@gentoo.org> mmdb-1.21.ebuild:
+  Keyworded for ~x86-linux ~amd64-linux
 
 *mmdb-1.21 (02 Feb 2010)
 

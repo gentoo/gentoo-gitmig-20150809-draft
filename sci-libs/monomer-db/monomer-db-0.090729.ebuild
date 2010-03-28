@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-0.090729.ebuild,v 1.1 2010/02/02 17:34:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-0.090729.ebuild,v 1.2 2010/03/28 18:36:39 jlec Exp $
 
 DESCRIPTION="Monomer library used for macromolecular structure building and refinement"
 HOMEPAGE="www.ccp4.ac.uk"
@@ -9,7 +9,7 @@ SRC_URI="http://dev.gentooexperimental.org/~jlec/science-dist/${P}.tar.gz"
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="

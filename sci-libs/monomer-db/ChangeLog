@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/monomer-db
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.1 2010/02/02 17:34:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.2 2010/03/28 18:36:39 jlec Exp $
+
+  28 Mar 2010; Justin Lecher <jlec@gentoo.org> monomer-db-0.090729.ebuild:
+  Keyworded for ~x86-linux ~amd64-linux
 
 *monomer-db-0.090729 (02 Feb 2010)
 
