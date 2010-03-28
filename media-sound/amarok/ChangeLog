@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.368 2010/03/15 12:32:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.369 2010/03/28 12:18:04 jmbsvicetto Exp $
+
+*amarok-2.3.0-r1 (28 Mar 2010)
+
+  28 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.3.0-r1.ebuild, +files/amarok-2.3.0-crash_fix_info_applet.patch:
+  Applied upstream patch to fix a crash on startup on the info applet caused
+  by a Qt bug.
 
 *amarok-2.3.0 (15 Mar 2010)
 
