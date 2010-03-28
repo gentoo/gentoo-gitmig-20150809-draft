@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Devel-REPL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/ChangeLog,v 1.5 2010/03/05 11:13:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/ChangeLog,v 1.6 2010/03/28 00:22:20 robbat2 Exp $
+
+*Devel-REPL-1.003009 (28 Mar 2010)
+
+  28 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +Devel-REPL-1.003009.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *Devel-REPL-1.003007-r1 (05 Mar 2010)
 
