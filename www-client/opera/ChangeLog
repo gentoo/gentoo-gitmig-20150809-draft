@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.458 2010/03/27 13:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.459 2010/03/28 17:17:57 jer Exp $
+
+*opera-10.52_pre6272-r1 (28 Mar 2010)
+
+  28 Mar 2010; Jeroen Roovers <jer@gentoo.org> -opera-10.20_pre4744.ebuild,
+  -opera-10.52_pre6272.ebuild, +opera-10.52_pre6272-r1.ebuild:
+  Replace @@[*SUFFIX|PREFIX] in various text files thanks to Andrian Nord
+  (bug #311449).
 
 *opera-10.52_pre6272 (27 Mar 2010)
 

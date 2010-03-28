@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.52_pre6272.ebuild,v 1.1 2010/03/27 13:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.52_pre6272-r1.ebuild,v 1.1 2010/03/28 17:17:57 jer Exp $
 
 EAPI="2"
 
@@ -112,11 +112,23 @@ src_unpack() {
 }
 
 src_install() {
-	# This alpha build hardcodes /usr as prefix
+	# We install into usr instead of opt as Opera does not support the latter
 	dodir /usr
-	mv lib/ share/ "${D}"/usr/ || die "mv etc/ usr/ failed"
+	mv lib/ share/ "${D}"/usr/ || die "mv lib/ share/ failed"
 
-	make_desktop_entry ${PN} Opera ${PN} # TODO
+	# Unzip the man pages before sedding
+	gunzip "${D}"/usr/share/man/man1/* || die "gunzip failed"
+
+	# Replace PREFIX and SUFFIX in various files
+	sed -i \
+		-e "s:@@{PREFIX}:/usr:g" \
+		-e "s:@@{SUFFIX}::g" \
+		-e "s:@@{_SUFFIX}::g" \
+		-e "s:@@{USUFFIX}::g" \
+		"${D}"/usr/share/mime/packages/opera-widget.xml \
+		"${D}"/usr/share/man/man1/* \
+		"${D}"/usr/share/applications/opera-browser.desktop \
+		"${D}"/usr/share/applications/opera-widget-manager.desktop || die "sed failed"
 
 	# Install startup script
 	dobin ${PN}-widget-manager "${FILESDIR}"/opera || die "dobin failed"
