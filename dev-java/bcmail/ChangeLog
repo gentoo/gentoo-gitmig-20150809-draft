@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.27 2010/03/28 21:23:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.28 2010/03/28 21:51:13 caster Exp $
+
+*bcmail-1.45 (28 Mar 2010)
+
+  28 Mar 2010; Vlastimil Babka <caster@gentoo.org> +bcmail-1.45.ebuild:
+  Version bump, bug #283770. Switch to jdk15 sources.
 
   28 Mar 2010; Vlastimil Babka <caster@gentoo.org> bcmail-1.38-r1.ebuild:
   Use slot dep for bcprov.
