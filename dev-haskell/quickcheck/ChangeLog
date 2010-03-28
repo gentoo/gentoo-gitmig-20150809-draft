@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.38 2010/03/14 18:42:10 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.39 2010/03/28 15:36:44 kolmodin Exp $
+
+*quickcheck-2.1.0.3 (28 Mar 2010)
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +quickcheck-2.1.0.3.ebuild:
+  Bump to first version of the 2.x series.
+  This version requires extensible-exceptions, which means we have to depend
+  on >=ghc-6.10 and unfortunately drop some arches until we get proper ghc
+  support :(
 
   14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> quickcheck-1.0.ebuild,
   quickcheck-1.0.1.ebuild, quickcheck-1.1.0.0.ebuild,
