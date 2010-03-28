@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.9.7.1-r1.ebuild,v 1.1 2010/03/26 15:51:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/daimonin-client-0.9.7.1-r1.ebuild,v 1.2 2010/03/28 16:45:00 tupone Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -35,6 +35,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-nozlib.patch
+	rm ../../src/include/z{lib,conf}.h
 	sed -i \
 		-e 's:$(d_datadir):$(DESTDIR)$(d_datadir):' \
 		-e '/PROGRAMS/s:daimonin-updater::' \
