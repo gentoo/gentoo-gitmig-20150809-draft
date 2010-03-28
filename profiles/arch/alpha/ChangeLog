@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.57 2010/03/03 09:24:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.58 2010/03/28 18:04:16 armin76 Exp $
+
+  28 Mar 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Package.use.mask dev-util/subversion kde
 
   03 Mar 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
   Mask all of KDE SC 4.4.x, not just 4.4.0
