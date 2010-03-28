@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.695 2010/03/25 02:38:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.696 2010/03/28 05:49:39 zmedico Exp $
+
+  28 Mar 2010; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  In src_test, remove *.pyc from bin directory so they won't be installed.
 
   25 Mar 2010; Sebastian Pipping <sping@gentoo.org> portage-9999.ebuild:
   Fix live ebuild versioning:
