@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.63 2010/03/28 21:05:26 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.64 2010/03/28 21:22:08 mpagano Exp $
+
+  28 Mar 2010; Michael Pagano <mpagano@gentoo.org> portpeek-1.5.7.2.ebuild,
+  portpeek-1.5.8.4.ebuild, portpeek-1.9.36.ebuild:
+  Perform python2->3 fixes as per bug #311793
 
   28 Mar 2010; Mike Pagano <mpagano@gentoo.org> -portpeek-1.9.35.ebuild:
   Drop old version
