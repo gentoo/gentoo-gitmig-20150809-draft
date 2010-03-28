@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gnupg/pecl-gnupg-1.3.1-r1.ebuild,v 1.1 2010/03/28 19:03:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-gnupg/pecl-gnupg-1.3.1-r1.ebuild,v 1.2 2010/03/28 19:05:47 mabi Exp $
 
 PHP_EXT_NAME="gnupg"
 PHP_EXT_INI="yes"
@@ -22,7 +22,6 @@ RDEPEND="${DEPEND}"
 need_php_by_category
 
 src_prepare() {
-	cd ${S}
 	epatch "${FILESDIR}"/"${PV}"/01-large_file_system.patch
 	epatch "${FILESDIR}"/"${PV}"/02-gpgme_new_seg_fault.patch
 	eautoreconf
