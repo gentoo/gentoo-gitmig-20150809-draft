@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.89 2010/01/03 20:42:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.90 2010/03/28 21:18:20 caster Exp $
+
+  28 Mar 2010; Vlastimil Babka <caster@gentoo.org> itext-2.0.8.ebuild,
+  -itext-2.1.2-r1.ebuild, -itext-2.1.3-r1.ebuild, itext-2.1.5.ebuild:
+  Use slot dep for bcprov.
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> itext-2.1.5.ebuild:
   Transfer Prefix keywords

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.5 2008/05/17 14:12:02 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.6 2010/03/28 21:19:48 caster Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 CDEPEND="dev-java/fontbox
-	>=dev-java/bcprov-1.32
+	>=dev-java/bcprov-1.32:0
 	>=dev-java/bcmail-1.32
 	dev-java/lucene:2.1
 	dev-java/ant-core"
