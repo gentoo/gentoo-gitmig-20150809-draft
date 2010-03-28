@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3.ebuild,v 1.1 2010/02/04 23:24:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3.ebuild,v 1.2 2010/03/28 20:36:04 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="${SRC}/${PV}/${MY_P}-${PN/-/}-${VERSION}.tar.gz"
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -34,7 +34,7 @@ src_install() {
 	einfo "Installing files, which can take some time ..."
 	mv "${S}"/share/balbes/BALBES_0.0.1/* "${ED}"/usr/share/balbes/BALBES_0.0.1/ || die
 	# db files should be executable
-	find "${D}"/usr/share/balbes/BALBES_0.0.1/ \
+	find "${ED}"/usr/share/balbes/BALBES_0.0.1/ \
 		-type f \
 		-exec chmod 664 '{}' \;
 	dosym ../../../ccp4/data/monomers /usr/share/balbes/BALBES_0.0.1/dic || die
