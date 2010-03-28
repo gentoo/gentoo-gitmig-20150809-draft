@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.25 2010/03/19 17:23:17 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.26 2010/03/28 17:24:11 jmbsvicetto Exp $
+
+  28 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  qemu-kvm-9999.ebuild, -files/qemu-kvm-9999-sysconfigdir.patch:
+  Remove the sysconfigdir patch from qemu-kvm-9999 as the fix was applied
+  upstream.
+  Fixes bug 310979 - thanks to Jeff Kowalczyk <jtk@yahoo.com>.
 
   19 Mar 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   qemu-kvm-0.12.2-r2.ebuild, qemu-kvm-0.12.3.ebuild:
