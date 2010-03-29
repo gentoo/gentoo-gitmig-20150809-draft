@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/svn2git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.4 2010/03/24 00:41:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.5 2010/03/29 18:44:48 sping Exp $
+
+*svn2git-0_pre20100327 (29 Mar 2010)
+
+  29 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  +svn2git-0_pre20100327.ebuild:
+  Bump to 0_pre20100327
 
 *svn2git-0_pre20100324 (24 Mar 2010)
 
