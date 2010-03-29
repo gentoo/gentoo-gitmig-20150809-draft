@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.15.4.ebuild,v 1.12 2010/03/24 18:25:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.15.4.ebuild,v 1.13 2010/03/29 22:28:28 eva Exp $
 
 EAPI="2"
 
@@ -49,18 +49,22 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-
 	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
 	use sparc && epatch "${FILESDIR}"/webkit-gtk-1.1.15.2-unaligned.patch
 
 	# Darwin/Aqua build is broken, needs autoreconf
 	epatch "${FILESDIR}"/${P}-darwin-quartz.patch
 
+	# Fix build with icu-4.4
+	epatch "${FILESDIR}/${PN}-1.1.15.4-icu44.patch"
+
 	# Make it libtool-1 compatible
 	rm -v autotools/lt* autotools/libtool.m4 \
 		|| die "removing libtool macros failed"
+
 	# Don't force -O2
 	sed -i 's/-O2//g' "${S}"/configure.ac || die "sed failed"
+
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=autotools eautoreconf
 }

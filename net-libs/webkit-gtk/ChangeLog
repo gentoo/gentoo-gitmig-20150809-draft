@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.69 2010/03/24 18:25:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.70 2010/03/29 22:28:28 eva Exp $
+
+  29 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  webkit-gtk-1.1.15.4.ebuild, +files/webkit-gtk-1.1.15.4-icu44.patch:
+  Fix build with icu-4.4, bug #308699.
 
   24 Mar 2010; Raúl Porcel <armin76@gentoo.org> webkit-gtk-1.1.15.4.ebuild:
   alpha/arm/ia64/sparc stable wrt #304775
