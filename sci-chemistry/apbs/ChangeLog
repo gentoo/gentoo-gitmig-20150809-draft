@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.25 2010/02/20 09:33:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.26 2010/03/29 19:00:29 jlec Exp $
+
+*apbs-1.2.1b-r2 (28 Mar 2010)
+
+  28 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +apbs-1.2.1b-r2.ebuild, +files/apbs-1.2.1b-install-fix.patch,
+  +files/apbs-1.2.1b-openmp.patch:
+  Configure fixes, removed unnecessary installed files. Make tools optional
 
 *apbs-1.2.1b-r1 (20 Feb 2010)
 

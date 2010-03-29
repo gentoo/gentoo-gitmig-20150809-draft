@@ -8,5 +8,6 @@
 	<herd>sci-chemistry</herd>
 	<use>
 		<flag name='arpack'>Include support for arpack libs</flag>
+		<flag name='tools'>Install optional tools</flag>
 	</use>
 </pkgmetadata>
