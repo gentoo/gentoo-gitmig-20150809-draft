@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7.ebuild,v 1.5 2010/02/13 05:38:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.1 2010/03/29 04:26:23 nerdboy Exp $
 
 EAPI=2
 
-inherit cmake-utils eutils fdo-mime
+inherit cmake-utils eutils fdo-mime versionator
 
 DESCRIPTION="GPS navigation system with NMEA and Garmin support, zoomable map display, waypoints, etc."
 HOMEPAGE="http://www.gpsdrive.de/"
@@ -18,7 +18,7 @@ S=${WORKDIR}/${P/_/}
 KEYWORDS="~amd64 ~ppc ~x86"
 # submit bug for ppc64
 
-IUSE="dbus debug libgda gdal mapnik scripts speech"
+IUSE="dbus -debug -kismet libgda gdal mapnik scripts -speech"
 
 COMMON_DEP="sci-geosciences/gpsd
 	net-misc/curl
@@ -27,11 +27,15 @@ COMMON_DEP="sci-geosciences/gpsd
 	x11-libs/gtk+:2
 	dbus? ( dev-libs/dbus-glib )
 	gdal? ( sci-libs/gdal )
-	mapnik? ( sci-geosciences/mapnik )
+	kismet? ( net-wireless/kismet )
+	mapnik? ( >=sci-geosciences/mapnik-0.6.1
+		=dev-libs/boost-1.39*
+		>=app-admin/eselect-boost-0.3 )
 	libgda? ( =gnome-extra/libgda-3.0*[postgres] )
 	speech? ( >=app-accessibility/speech-dispatcher-0.6.7 )"
 
 DEPEND="${COMMON_DEP}
+	>=dev-util/cmake-2.8.0
 	dev-util/pkgconfig"
 
 RDEPEND="${COMMON_DEP}
@@ -39,7 +43,22 @@ RDEPEND="${COMMON_DEP}
 	sci-geosciences/mapnik-world-boundaries
 	media-fonts/dejavu"
 
+pkg_setup() {
+	BOOST_PKG="$(best_version "<dev-libs/boost-1.40.0")"
+	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
+	export Boost_LIB_VERSION="$(replace_all_version_separators _ "${BOOST_VER}")"
+	elog "${P} Boost_LIB_VERSION is ${Boost_LIB_VERSION}"
+	export BOOST_INCLUDEDIR="/usr/include/boost-${Boost_LIB_VERSION}"
+	elog "${P} BOOST_INCLUDEDIR is ${BOOST_INCLUDEDIR}"
+	BOOST_LIBDIR_SCHEMA="$(get_libdir)/boost-${Boost_LIB_VERSION}"
+	export BOOST_LIBRARYDIR="/usr/${BOOST_LIBDIR_SCHEMA}"
+	elog "${P} BOOST_LIBRARYDIR is ${BOOST_LIBRARYDIR}"
+}
+
 src_prepare() {
+	# Get rid of the package's FindBoost (see bug #).
+	rm "${S}"/cmake/Modules/FindBoost.cmake
+
 	# Update mapnik font path...
 	sed -i \
 		-e "s:truetype/ttf-dejavu:dejavu:g" \
@@ -63,13 +82,20 @@ src_prepare() {
 }
 
 src_configure() {
+	cat >> cmake/Modules/DefineProjectDefaults.cmake <<- _EOF_
+		
+		# set policy for new linker paths
+		cmake_policy(SET CMP0003 NEW) # or cmake_policy(VERSION 2.6)
+	_EOF_
+
 	local mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with scripts SCRIPTS)
-		$(cmake-utils_use_with mapnik MAPNIK)
-		$(cmake-utils_use_with dbus DBUS)
-		$(cmake-utils_use_with libgda GDA3)
-		$(cmake-utils_use_with speech SPEECH)
-		$(cmake-utils_use_with gdal GDAL)"
+		$(cmake-utils_use_no scripts SCRIPTS)
+		$(cmake-utils_use_no mapnik MAPNIK)
+		$(cmake-utils_use_no kismet KISMET)
+		$(cmake-utils_use_no dbus DBUS)
+		$(cmake-utils_use_no libgda GDA3)
+		$(cmake-utils_use_no speech SPEECH)
+		$(cmake-utils_use_no gdal GDAL)"
 	cmake-utils_src_configure
 }
 
@@ -96,6 +122,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog
+	elog "Setting boost config back to latest..."
+	eselect boost update \
+		    || ewarn "eselect boost update failed."
 	fdo-mime_desktop_database_update
 	elog
 	elog "Be sure to see the README files in /usr/share/doc/${PF}"

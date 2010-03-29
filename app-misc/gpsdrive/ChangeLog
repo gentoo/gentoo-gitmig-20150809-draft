@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.36 2010/02/13 05:38:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.37 2010/03/29 04:26:23 nerdboy Exp $
+
+*gpsdrive-2.10_pre7-r1 (29 Mar 2010)
+
+  29 Mar 2010; Steve Arnold <nerdboy@gentoo.org> -gpsdrive-2.10_pre7.ebuild,
+  +gpsdrive-2.10_pre7-r1.ebuild:
+  Updated to force the specified version of Boost (really fixes bug 308487).
+  Ensures that it configures, builds, and links against one and only one
+  version, no matter which other versions are installed (other half of fix
+  is the 0.6.1-r3 rev of mapnik).
 
   13 Feb 2010; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.10_pre7.ebuild:
   Fixed OSM icon path (bug #304045) and libgda dep (bug #281705).  The boost
