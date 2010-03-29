@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.1 2010/03/29 04:26:23 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.2 2010/03/29 04:54:11 nerdboy Exp $
 
 EAPI=2
 
@@ -122,10 +122,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
-	elog "Setting boost config back to latest..."
-	eselect boost update \
-		    || ewarn "eselect boost update failed."
 	fdo-mime_desktop_database_update
 	elog
 	elog "Be sure to see the README files in /usr/share/doc/${PF}"
