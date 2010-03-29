@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.53 2010/03/24 05:45:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.54 2010/03/29 21:42:22 maekke Exp $
+
+  29 Mar 2010; Markus Meier <maekke@gentoo.org> chrony-1.24-r1.ebuild:
+  amd64 stable, bug #307757
 
   24 Mar 2010; Jeroen Roovers <jer@gentoo.org> chrony-1.24-r1.ebuild:
   Stable for HPPA (bug #307757).
