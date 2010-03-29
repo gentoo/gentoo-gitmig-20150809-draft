@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.ebuild,v 1.4 2010/02/12 04:20:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.2.ebuild,v 1.1 2010/03/29 21:10:08 grozin Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -8,7 +8,7 @@ inherit autotools wxwidgets python versionator toolchain-funcs
 
 DESCRIPTION="Math Graphics Library"
 HOMEPAGE="http://mathgl.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz mirror://sourceforge/${PN}/STIX_font.tgz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -42,6 +42,13 @@ pkg_setup() {
 		export CC=mpicc
 		export CXX=mpicxx
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	mkdir "${S}"/fonts
+	cd "${S}"/fonts
+	unpack STIX_font.tgz
 }
 
 src_prepare() {
