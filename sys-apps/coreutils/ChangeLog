@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.286 2010/03/28 20:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.287 2010/03/29 17:48:07 jer Exp $
+
+  29 Mar 2010; Jeroen Roovers <jer@gentoo.org> coreutils-8.4.ebuild:
+  Stable for HPPA (bug #311827).
 
   28 Mar 2010; Mike Frysinger <vapier@gentoo.org> coreutils-8.4.ebuild:
   Force statfs tests when cross-compiling #311569 by Stephen Lewis.
