@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.0.ebuild,v 1.7 2010/01/14 21:26:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.0.ebuild,v 1.8 2010/03/29 10:52:52 ssuominen Exp $
 
-EAPI="2"
-
-inherit autotools
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="cryptographic library that is designed to fit easily in any context"
 HOMEPAGE="http://www.lysator.liu.se/~nisse/nettle/"
@@ -21,9 +20,10 @@ DEPEND="gmp? ( dev-libs/gmp )
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 	sed -i \
 		-e '/CFLAGS/s:-ggdb3::' \
-		configure.ac || die "sed configure.ac failed"
+		configure.ac || die
 	eautoreconf
 }
 
@@ -35,6 +35,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install  || die "emake install failed"
+	emake DESTDIR="${D}" install  || die
 	dodoc AUTHORS ChangeLog NEWS README
 }
