@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/arj
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.39 2009/10/12 16:38:22 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.40 2010/03/29 23:43:41 abcd Exp $
+
+  29 Mar 2010; Jonathan Callen <abcd@gentoo.org> arj-3.10.22-r2.ebuild,
+  +files/arj-3.10.22-darwin.patch, +files/arj-3.10.22-interix.patch:
+  Bump to EAPI=3, add prefix keywords & patches
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> arj-3.10.22-r1.ebuild:
   QA fixes; WANT_AUTOCONF redundantly set to latest

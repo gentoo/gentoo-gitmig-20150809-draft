@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.9 2009/09/23 15:09:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.10 2010/03/29 23:43:41 abcd Exp $
+
+EAPI=3
 
 inherit autotools eutils toolchain-funcs
 
@@ -13,14 +15,12 @@ SRC_URI="mirror://debian/pool/main/a/arj/${P/-/_}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
 DEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}"/${P/-/_}-${PATCH_LEVEL}.diff \
 		"${FILESDIR}"/${P}-implicit-declarations.patch
 	epatch "${FILESDIR}/${P}-glibc2.10.patch"
@@ -28,18 +28,22 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
 		epatch debian/patches
 
+	epatch "${FILESDIR}"/${P}-darwin.patch
+	epatch "${FILESDIR}"/${P}-interix.patch
+
 	cd gnu
 	eautoconf
 }
 
-src_compile() {
+src_configure() {
 	cd gnu
 	CFLAGS="${CFLAGS} -Wall" econf
+}
 
-	cd "${S}"
+src_compile() {
 	sed -i -e '/stripgcc/d' GNUmakefile || die "sed failed."
 
-	ARJLIBDIR="/usr/$(get_libdir)"
+	ARJLIBDIR="${EPREFIX}/usr/$(get_libdir)"
 
 	emake CC=$(tc-getCC) libdir="${ARJLIBDIR}" \
 		pkglibdir="${ARJLIBDIR}" all || die "emake failed."
