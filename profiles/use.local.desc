@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5444 2010/03/28 13:48:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5445 2010/03/29 04:28:05 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -401,6 +401,7 @@ app-misc/gourmet:gnome-print - Enable printing support using gnome-print
 app-misc/gourmet:rtf - Enable export to RTF
 app-misc/gpsdrive:garmin - Adds specific support for Garmin GPS receivers (pre-2.10 only)
 app-misc/gpsdrive:gdal - Include gdal and ogr support for format conversions.
+app-misc/gpsdrive:kismet - Include support for kismet wifi mapping.
 app-misc/gpsdrive:mapnik - Include mapnik support for custom map creation.
 app-misc/gpsdrive:scripts - Include some of the additional helper scripts.
 app-misc/gpsdrive:speech - Include speech support.
