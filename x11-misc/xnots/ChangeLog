@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnots
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.7 2010/01/10 08:18:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.8 2010/03/29 22:32:17 nelchael Exp $
+
+  29 Mar 2010; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
+  Update my first name.
 
   10 Jan 2010; Robin H. Johnson <robbat2@gentoo.org> xnots-0.2.1.ebuild:
   Bug #283320 cleanup: linux_config_exists before linux_chkconfig*.
