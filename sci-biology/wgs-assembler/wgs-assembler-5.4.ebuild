@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-5.4.ebuild,v 1.4 2009/12/29 21:11:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-5.4.ebuild,v 1.5 2010/03/29 09:42:24 pacho Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/wgs-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="x11-libs/libXt"
 RDEPEND="${DEPEND}
