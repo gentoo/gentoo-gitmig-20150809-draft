@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.1 2010/03/29 14:53:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.2 2010/03/29 15:00:17 darkside Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -32,8 +32,8 @@ pkg_setup() {
 		$(use_enable lm_sensors libsensors)
 		$(use_enable acpi procacpi)
 		$(use_enable acpi sysfsacpi)
-		$(use_enable debug)
-		$(use_enable libnotify notification)"
+		$(use_enable libnotify notification)
+		$(xfconf_use_debug)"
 
 	if ! use hddtemp && ! use lm_sensors && ! use acpi; then
 		XFCONF="${XFCONF} --enable-procacpi --enable-sysfsacpi"
