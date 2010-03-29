@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4061 2010/03/28 17:19:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4062 2010/03/29 13:26:34 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Mask www-client/chromium dev channel release.
 
   28 Mar 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera again.
