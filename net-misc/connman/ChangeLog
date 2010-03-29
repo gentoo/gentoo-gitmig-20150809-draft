@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.11 2010/02/11 17:15:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.12 2010/03/29 08:06:48 dagger Exp $
+
+*connman-0.51 (29 Mar 2010)
+
+  29 Mar 2010; Robert Piasek <dagger@gentoo.org> -connman-0.47.ebuild,
+  -connman-0.48-r1.ebuild, connman-0.49.ebuild, +connman-0.51.ebuild:
+  Version bump. In new version MBM and HSO were removed - ofono now handles
+  3G connections.
 
 *connman-0.49 (11 Feb 2010)
 

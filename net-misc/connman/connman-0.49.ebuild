@@ -15,7 +15,7 @@ IUSE="3G bluetooth debug +dhclient dnsproxy doc +ethernet google moblin ofono po
 # ospm wimax
 
 RDEPEND=">=dev-libs/glib-2.16
-	>=sys-apps/dbus-1.3
+	>=sys-apps/dbus-1.2.24
 	bluetooth? ( net-wireless/bluez )
 	dhclient? ( net-misc/dhcp )
 	ofono? ( net-misc/ofono )

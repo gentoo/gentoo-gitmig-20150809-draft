@@ -11,11 +11,11 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
-IUSE="3G bluetooth debug +dhclient dnsproxy doc +ethernet google moblin ofono policykit resolvconf threads tools +udev +wifi"
-# ospm wimax
+IUSE="bluetooth debug +dhclient dnsproxy doc +ethernet google ofono policykit resolvconf threads tools +udev +wifi"
+# meego ospm wimax
 
 RDEPEND=">=dev-libs/glib-2.16
-	>=sys-apps/dbus-1.3
+	>=sys-apps/dbus-1.2.24
 	bluetooth? ( net-wireless/bluez )
 	dhclient? ( net-misc/dhcp )
 	ofono? ( net-misc/ofono )
@@ -42,9 +42,6 @@ src_configure() {
 		$(use_enable resolvconf resolvconf builtin) \
 		$(use_enable dnsproxy dnsproxy builtin) \
 		$(use_enable google google builtin) \
-		$(use_enable moblin moblin builtin) \
-		$(use_enable 3G hso builtin) \
-		$(use_enable 3G mbm builtin) \
 		$(use_enable policykit polkit builtin) \
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc) \
