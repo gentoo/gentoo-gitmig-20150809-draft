@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.232 2010/02/19 19:33:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.233 2010/03/29 18:45:38 patrick Exp $
+
+*dovecot-1.2.11 (29 Mar 2010)
+
+  29 Mar 2010; Patrick Lauer <patrick@gentoo.org> +dovecot-1.2.11.ebuild:
+  Bump for #308767
 
   19 Feb 2010; Markus Meier <maekke@gentoo.org> dovecot-1.2.10-r1.ebuild:
   add ~arm, bug #300821
