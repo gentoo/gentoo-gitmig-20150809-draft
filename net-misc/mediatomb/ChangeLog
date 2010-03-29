@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/mediatomb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.10 2009/12/29 17:46:14 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.11 2010/03/29 22:32:23 darkside Exp $
+
+  29 Mar 2010; Jeremy Olexa <darkside@gentoo.org> +mediatomb-0.12.0.ebuild,
+  +files/mediatomb-0.12.0.config, metadata.xml:
+  The long awaited mediatomb version bump. Closes bugs: 274627, 284886,
+  281432 - including security bug. Many thanks to BT for the help and
+  motivation
+
+*mediatomb-0.12.0 (29 Mar 2010)
+
+  29 Mar 2010; Jeremy Olexa <darkside@gentoo.org> +mediatomb-0.12.0.ebuild,
+  +files/mediatomb-0.12.0.config:
+  The long awaited mediatomb version bump from upstream, closes bug 264235.
+  Many thanks to BT for the help
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org> mediatomb-0.11.0.ebuild:
   Add ~arm

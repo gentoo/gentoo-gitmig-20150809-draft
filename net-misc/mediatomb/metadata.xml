@@ -6,16 +6,16 @@
     <email>flameeyes@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="taglib">
-    Use <pkg>media-libs/taglib</pkg> for reading files' metadata
-    rather than id3lib. If this USE flag is disabled
-    <pkg>media-libs/id3lib</pkg> is used in its stead.
-  </flag>
-    <flag name="mysql">
-    Use <pkg>dev-db/mysql</pkg> as backend rather than SQLite3. If
-    this USE flag is disabled, <pkg>dev-db/sqlite</pkg> is used in its
-    stead.
-  </flag>
-    <flag name="libextractor">Use libextractor to gather files' metadata.</flag>
+	<flag name="inotify">Enable inotify filesystem monitoring support</flag>
+	<flag name="lastfm">Enable last.fm support</flag>
+	<flag name="libextractor">Use libextractor to gather files' metadata.</flag>
+	<flag name="mysql">Use <pkg>dev-db/mysql</pkg> as backend rather than
+	SQLite3. If	this USE flag is disabled, <pkg>dev-db/sqlite</pkg> is used
+	instead.</flag>
+	<flag name="taglib">Use <pkg>media-libs/taglib</pkg> for reading files'
+	metadata rather than id3lib. If this USE flag is disabled
+	<pkg>media-libs/id3lib</pkg> is used instead.</flag>
+    <flag name="thumbnail">Enables video thumbnails generation through
+	<pkg>media-video/ffmpegthumbnailer</pkg></flag>
   </use>
 </pkgmetadata>
