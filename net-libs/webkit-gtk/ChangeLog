@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.70 2010/03/29 22:28:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.71 2010/03/29 22:35:42 eva Exp $
+
+  29 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -webkit-gtk-0_p40220-r1.ebuild,
+  -files/webkit-gtk-0_p40220-gcc44-aliasing.patch,
+  -webkit-gtk-1.1.10.ebuild,
+  -files/webkit-gtk-1.1.10-reduce-gnome-keyring-req.patch,
+  -webkit-gtk-1.1.15.2.ebuild, -files/webkit-gtk-CVE-2009-0945.patch,
+  metadata.xml:
+  Clean up old revisions.
 
   29 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
   webkit-gtk-1.1.15.4.ebuild, +files/webkit-gtk-1.1.15.4-icu44.patch:
