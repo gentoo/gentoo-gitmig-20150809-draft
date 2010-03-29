@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.4_p1-r2.ebuild,v 1.1 2010/03/29 06:39:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.4_p1-r2.ebuild,v 1.2 2010/03/29 06:40:15 robbat2 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib autotools pam
@@ -76,7 +76,7 @@ src_prepare() {
 	# keep this as we need it to avoid the conflict between LPK and HPN changing
 	# this file.
 	cp version.h version.h.pristine
-	
+
 	if use X509 ; then
 		# Apply X509 patch
 		epatch "${DISTDIR}"/${X509_PATCH}
