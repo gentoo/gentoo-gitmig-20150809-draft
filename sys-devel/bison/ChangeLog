@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.78 2010/01/24 21:24:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.79 2010/03/29 04:58:51 vapier Exp $
+
+*bison-2.4.2 (29 Mar 2010)
+
+  29 Mar 2010; Mike Frysinger <vapier@gentoo.org> +bison-2.4.2.ebuild:
+  Version bump #311727 by Lars Wendler.
 
   24 Jan 2010; Jonathan Callen <abcd@gentoo.org> bison-2.4.1.ebuild:
   Remove old, unused build-dep on flex; cleanup (no patches => no need to
