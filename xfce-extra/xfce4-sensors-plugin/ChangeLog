@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-sensors-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.5 2010/03/29 15:20:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.6 2010/03/29 16:21:06 ssuominen Exp $
+
+  29 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-sensors-plugin-1.0.0.ebuild,
+  +files/xfce4-sensors-plugin-1.0.0-missing_includedir.patch:
+  Fix missing -I flag for libxfce4panel headers.
 
   29 Mar 2010; Jeremy Olexa <darkside@gentoo.org>
   xfce4-sensors-plugin-1.0.0.ebuild:
