@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.76 2010/03/07 09:24:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.77 2010/03/29 09:45:07 pacho Exp $
+
+  29 Mar 2010; Pacho Ramos <pacho@gentoo.org> ncbi-tools-20090809.ebuild:
+  amd64 stable, bug 298779
 
 *ncbi-tools-20090809-r2 (07 Mar 2010)
 
