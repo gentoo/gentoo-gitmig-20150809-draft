@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pysmssend
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.9 2010/03/09 12:17:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.10 2010/03/29 15:54:10 hwoarang Exp $
+
+*pysmssend-1.42-r1 (29 Mar 2010)
+
+  29 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
+  -pysmssend-1.40-r1.ebuild, +pysmssend-1.42-r1.ebuild:
+  Various python enhancements. Fixes bug #311535
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> pysmssend-1.40.ebuild,
   pysmssend-1.40-r1.ebuild, pysmssend-1.42.ebuild:
