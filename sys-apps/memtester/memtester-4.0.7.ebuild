@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/memtester-4.0.7.ebuild,v 1.6 2007/10/24 12:10:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/memtester-4.0.7.ebuild,v 1.7 2010/03/29 19:02:55 armin76 Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://pyropus.ca/software/memtester/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""
