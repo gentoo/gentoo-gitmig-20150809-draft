@@ -1,6 +1,14 @@
 # ChangeLog for app-laptop/omnibook
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.26 2009/11/01 16:30:24 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.27 2010/03/29 15:44:37 hwoarang Exp $
+
+*omnibook-20090628-r1 (29 Mar 2010)
+
+  29 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/backlight-2.6.34-omnibook-20090628.patch,
+  +omnibook-20090628-r1.ebuild:
+  Patch which fixes backlight compilation with kernels>=2.6.34. Thanks to
+  Tiago Batista <a19944@gmail.com> for the patch. Fixes bug #311621
 
   01 Nov 2009; Markos Chandras <hwoarang@gentoo.org>
   -omnibook-20080125.ebuild:
