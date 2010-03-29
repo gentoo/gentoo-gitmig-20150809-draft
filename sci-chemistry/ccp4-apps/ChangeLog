@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ccp4-apps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.4 2010/03/28 13:42:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.5 2010/03/29 13:16:05 jlec Exp $
+
+  29 Mar 2010; <justin@gentoo.org> ccp4-apps-6.1.3-r2.ebuild, metadata.xml:
+  Missing balbes USE added, thanks Mr_Bones
 
 *ccp4-apps-6.1.3-r2 (28 Mar 2010)
 
