@@ -1,6 +1,14 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.15 2010/03/07 21:15:50 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.16 2010/03/29 04:16:46 nerdboy Exp $
+
+*mapnik-0.6.1-r3 (29 Mar 2010)
+
+  29 Mar 2010; Steve Arnold <nerdboy@gentoo.org> -mapnik-0.6.1-r2.ebuild,
+  +mapnik-0.6.1-r3.ebuild:
+  Updated to force the specified version of Boost (really fixes bug 308487).
+  Ensures that it configures, builds, and links against one and only one
+  version, no matter which other versions are installed.  So there...
 
 *mapnik-0.6.1-r2 (07 Mar 2010)
 
