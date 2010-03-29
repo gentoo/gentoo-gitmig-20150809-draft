@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.4 2010/03/29 16:21:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.5 2010/03/29 16:55:51 ssuominen Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -43,7 +43,8 @@ pkg_setup() {
 
 	DOCS="AUTHORS ChangeLog NEWS NOTES README TODO"
 
-	PATCHES=( "${FILESDIR}/${P}-missing_includedir.patch" )
+	PATCHES=( "${FILESDIR}/${P}-missing_includedir.patch"
+		"${FILESDIR}/${P}-without_libnotify.patch" )
 }
 
 src_prepare() {
