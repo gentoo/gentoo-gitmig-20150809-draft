@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnofract4d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.8 2010/03/10 14:38:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.9 2010/03/29 21:35:45 maekke Exp $
+
+  29 Mar 2010; Markus Meier <maekke@gentoo.org> gnofract4d-3.12.ebuild:
+  amd64/x86 stable, bug #286407
 
   10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   gnofract4d-3.12.ebuild, +files/gnofract4d-3.12-libpng14.patch:
