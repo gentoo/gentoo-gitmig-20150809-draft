@@ -1,6 +1,10 @@
 # ChangeLog for media-video/em8300-libraries
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.42 2010/03/15 19:24:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.43 2010/03/29 09:50:13 pacho Exp $
+
+  29 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  em8300-libraries-0.17.4.ebuild:
+  amd64 stable, bug 307327
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> em8300-libraries-0.17.4.ebuild:
   ppc stable #307327
