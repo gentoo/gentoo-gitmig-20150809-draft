@@ -1,6 +1,6 @@
-\# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.1.4-r2.ebuild,v 1.1 2010/03/28 21:44:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.1.4-r2.ebuild,v 1.2 2010/03/29 04:55:20 mr_bones_ Exp $
 
 EAPI=2
 
