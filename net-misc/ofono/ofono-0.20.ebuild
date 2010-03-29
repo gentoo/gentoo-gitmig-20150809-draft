@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.17.ebuild,v 1.1 2010/02/01 10:48:45 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.20.ebuild,v 1.1 2010/03/29 08:09:48 dagger Exp $
 
 EAPI="2"
 
@@ -11,9 +11,10 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
-IUSE="threads +udev"
+IUSE="bluetooth threads +udev"
 
-RDEPEND=">=sys-apps/dbus-1.2
+RDEPEND=">=sys-apps/dbus-1.2.24
+	bluetooth? ( >=net-wireless/bluez-4.61 )
 	>=dev-libs/glib-2.16
 	udev? ( >=sys-fs/udev-143 )"
 
@@ -24,6 +25,7 @@ src_configure() {
 	econf \
 		$(use_enable threads) \
 		$(use_enable udev) \
+		--enable-test \
 		--localstatedir="${ROOT}"/var
 }
 
