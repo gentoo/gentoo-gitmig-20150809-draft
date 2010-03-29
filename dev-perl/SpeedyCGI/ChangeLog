@@ -1,6 +1,23 @@
 # ChangeLog for dev-perl/SpeedyCGI
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.8 2009/11/26 12:36:41 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.9 2010/03/29 14:59:14 pva Exp $
+
+*SpeedyCGI-2.22-r1 (29 Mar 2010)
+
+  29 Mar 2010; Peter Volkov <pva@gentoo.org> +SpeedyCGI-2.22-r1.ebuild,
+  +files/SpeedyCGI-2.22-apache-docs.patch,
+  +files/SpeedyCGI-2.22-apache2.2.patch,
+  +files/SpeedyCGI-2.22-empty-param.patch,
+  +files/SpeedyCGI-2.22-makefile-manpage.patch,
+  +files/SpeedyCGI-2.22-perl5.10.patch,
+  +files/SpeedyCGI-2.22-perl_sys_init.patch,
+  +files/SpeedyCGI-2.22-speedy_unsafe_putenv.patch,
+  +files/SpeedyCGI-2.22-strerror.patch,
+  +files/SpeedyCGI-2.22-strip-backend-libs.patch,
+  +files/SpeedyCGI-2.22-test-timeout.patch,
+  +files/SpeedyCGI-2.22-uninit-crash.patch:
+  Added debian patchset, fixes #299978 thank Diego E. 'Flameeyes' Pettenò
+  for report.
 
   26 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   SpeedyCGI-2.22.ebuild:
