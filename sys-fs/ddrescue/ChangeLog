@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ddrescue
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.21 2009/09/19 08:30:00 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.22 2010/03/29 19:00:17 armin76 Exp $
+
+  29 Mar 2010; Raúl Porcel <armin76@gentoo.org> ddrescue-1.11.ebuild:
+  Add ~ia64 wrt #309331
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> ddrescue-1.11.ebuild:
   amd64/x86 stable, bug #284562

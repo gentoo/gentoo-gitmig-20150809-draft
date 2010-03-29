@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.11.ebuild,v 1.3 2009/09/19 08:30:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.11.ebuild,v 1.4 2010/03/29 19:00:17 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~sparc x86"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
