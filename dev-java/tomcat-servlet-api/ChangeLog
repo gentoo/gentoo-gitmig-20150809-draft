@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.75 2010/03/26 15:40:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.76 2010/03/29 13:57:30 fauli Exp $
+
+  29 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  tomcat-servlet-api-6.0.26.ebuild:
+  stable x86, security bug 303719
 
   26 Mar 2010; Brent Baude <ranger@gentoo.org>
   tomcat-servlet-api-6.0.26.ebuild:
