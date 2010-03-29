@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.254 2010/03/28 10:55:37 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.255 2010/03/29 13:44:52 jer Exp $
+
+  29 Mar 2010; Jeroen Roovers <jer@gentoo.org> bash-4.0_p37.ebuild:
+  Stable for HPPA (bug #310473).
 
   28 Mar 2010; Javier Villavicencio <the_paya@gentoo.org>
   bash-4.1_p2-r1.ebuild, +files/bash-4.1-fbsd-eaccess.patch:
