@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.24.ebuild,v 1.1 2010/03/04 21:48:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.7.24.ebuild,v 1.2 2010/03/29 20:54:36 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -29,8 +29,9 @@ RDEPEND="
 	sys-apps/util-linux
 
 	applet? (
-		>=x11-libs/libnotify-0.4.3
+		>=dev-libs/libgee-0.3
 		gnome-base/gnome-panel
+		>=x11-libs/libnotify-0.4.3
 		>=x11-libs/gtk+-2.18 )
 	deskbar? ( >=gnome-extra/deskbar-applet-2.19 )
 	eds? (
@@ -65,9 +66,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=sys-devel/gettext-0.14
 	>=dev-util/pkgconfig-0.20
-	applet? (
-		dev-lang/vala
-		>=dev-libs/libgee-0.3 )
+	applet? ( dev-lang/vala )
 	gtk? (
 		dev-lang/vala
 		>=dev-libs/libgee-0.3 )

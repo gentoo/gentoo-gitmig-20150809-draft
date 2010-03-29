@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.15 2010/03/01 22:46:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.16 2010/03/29 20:54:36 eva Exp $
 
 EAPI="2"
 G2CONF_DEBUG="no"
@@ -16,10 +16,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 # USE="doc" is managed by eclass.
-IUSE="applet deskbar doc eds exif flac gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 nautilus pdf playlist test +tiff +vorbis xine +xml xmp"
+IUSE="applet deskbar doc eds exif flac gnome-keyring gsf gstreamer gtk hal iptc +jpeg kmail laptop mp3 nautilus pdf playlist test +tiff +vorbis xine +xml xmp"
 
 # Automagic, gconf, uuid, and probably more
-# TODO: quill and streamanalyzer support
+# TODO: grss, quill and streamanalyzer support
 RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.6.16[threadsafe]
@@ -31,8 +31,9 @@ RDEPEND="
 	sys-apps/util-linux
 
 	applet? (
-		>=x11-libs/libnotify-0.4.3
+		>=dev-libs/libgee-0.3
 		gnome-base/gnome-panel
+		>=x11-libs/libnotify-0.4.3
 		>=x11-libs/gtk+-2.18 )
 	deskbar? ( >=gnome-extra/deskbar-applet-2.19 )
 	eds? (
@@ -40,6 +41,7 @@ RDEPEND="
 		>=gnome-extra/evolution-data-server-2.25.5 )
 	exif? ( >=media-libs/libexif-0.6 )
 	flac? ( >=media-libs/flac-1.2.1 )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.26 )
 	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? ( >=media-libs/gstreamer-0.10.12 )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
@@ -69,9 +71,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
 	dev-util/gtk-doc-am
 	>=dev-util/gtk-doc-1.8
-	applet? (
-		dev-lang/vala
-		>=dev-libs/libgee-0.3 )
+	applet? ( dev-lang/vala )
 	gtk? (
 		dev-lang/vala
 		>=dev-libs/libgee-0.3 )
@@ -135,6 +135,7 @@ pkg_setup() {
 		$(use_enable eds evolution-miner)
 		$(use_enable exif libexif)
 		$(use_enable flac libflac)
+		$(use_enable gnome-keyring)
 		$(use_enable gsf libgsf)
 		$(use_enable gtk tracker-explorer)
 		$(use_enable gtk tracker-preferences)
