@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r2.ebuild,v 1.1 2009/08/08 01:23:42 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r2.ebuild,v 1.2 2010/03/29 20:02:10 jlec Exp $
+
+EAPI="3"
 
 inherit multilib
 
@@ -15,16 +17,15 @@ SRC_URI="mirror://sourceforge/incrtcl/${MY_P}.tar.gz
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND=">=dev-tcltk/itcl-3.2.1
+DEPEND="
+	>=dev-tcltk/itcl-3.2.1
 	>=dev-tcltk/itk-3.2.1"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i -e "/^\(LIB\|SCRIPT\)_INSTALL_DIR =/s|lib|$(get_libdir)|" \
 		Makefile.in || die
 
@@ -32,9 +33,13 @@ src_unpack() {
 	rm doc/panedwindow.n
 }
 
-src_compile() {
+src_configure() {
 	econf --with-itcl="${WORKDIR}/${ITCL_MY_P}" || die "configure failed"
 	# we don't need to compile anything
+}
+
+src_compile() {
+	:
 }
 
 src_install() {
@@ -44,11 +49,11 @@ src_install() {
 	dodoc CHANGES ChangeLog README license.terms
 
 	# bug 247184 - iwidget installs man pages in /usr/man
-	mkdir -p "${D}"/usr/share/man/mann
-	mv "${D}"/usr/man/mann/* "${D}"/usr/share/man/mann/
-	rm -rf "${D}"/usr/man
+	mkdir -p "${ED}"/usr/share/man/mann
+	mv "${ED}"/usr/man/mann/* "${ED}"/usr/share/man/mann/
+	rm -rf "${ED}"/usr/man
 
 	# demos are in the wrong place:
-	mkdir -p "${D}/usr/share/doc/${PVR}"
-	mv "${D}/usr/$(get_libdir)/${MY_P}/demos" "${D}/usr/share/doc/${PVR}/"
+	mkdir -p "${ED}/usr/share/doc/${PVR}"
+	mv "${ED}/usr/$(get_libdir)/${MY_P}/demos" "${ED}/usr/share/doc/${PVR}/"
 }
