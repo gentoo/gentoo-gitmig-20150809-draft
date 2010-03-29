@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.1 2010/02/02 21:43:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.2 2010/03/29 19:34:27 jlec Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.ccp4.ac.uk/jwc/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 IUSE=""
 RDEPEND=""
