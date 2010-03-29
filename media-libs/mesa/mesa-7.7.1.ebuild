@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7.1_rc2.ebuild,v 1.1 2010/03/23 11:20:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.7.1.ebuild,v 1.1 2010/03/29 14:57:56 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://mesa3d.sourceforge.net/"
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 else
-	SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/${MAJOR_MINOR}/RC/${MY_SRC_P}.tar.bz2
+	SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/${PV}/${MY_SRC_P}.tar.bz2
 		${SRC_PATCHES}"
 fi
 
