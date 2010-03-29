@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.2 2010/03/29 04:54:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.3 2010/03/29 12:58:14 mr_bones_ Exp $
 
 EAPI=2
 
@@ -83,7 +83,7 @@ src_prepare() {
 
 src_configure() {
 	cat >> cmake/Modules/DefineProjectDefaults.cmake <<- _EOF_
-		
+
 		# set policy for new linker paths
 		cmake_policy(SET CMP0003 NEW) # or cmake_policy(VERSION 2.6)
 	_EOF_
