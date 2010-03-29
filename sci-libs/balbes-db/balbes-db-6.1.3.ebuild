@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3.ebuild,v 1.2 2010/03/28 20:36:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3.ebuild,v 1.3 2010/03/29 18:53:19 jlec Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ src_install() {
 	# the disk space
 	einfo "Installing files, which can take some time ..."
 	mv "${S}"/share/balbes/BALBES_0.0.1/* "${ED}"/usr/share/balbes/BALBES_0.0.1/ || die
-	# db files should be executable
+	# db files shouldn't be executable
 	find "${ED}"/usr/share/balbes/BALBES_0.0.1/ \
 		-type f \
 		-exec chmod 664 '{}' \;
