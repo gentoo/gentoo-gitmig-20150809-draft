@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-sensors-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.4 2010/03/29 15:00:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.5 2010/03/29 15:20:09 darkside Exp $
+
+  29 Mar 2010; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-sensors-plugin-1.0.0.ebuild:
+  Upon closer investigation by ssuominen, hddtemp should use netcat as well.
+  It was automagic before this change
 
   29 Mar 2010; Jeremy Olexa <darkside@gentoo.org>
   xfce4-sensors-plugin-1.0.0.ebuild:
