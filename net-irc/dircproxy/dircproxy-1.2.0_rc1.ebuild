@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.2.0_rc1.ebuild,v 1.2 2010/03/23 20:26:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.2.0_rc1.ebuild,v 1.3 2010/03/29 19:54:03 phajdan.jr Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dircproxy.googlecode.com/files/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ppc ~sparc x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
