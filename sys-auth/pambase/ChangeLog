@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.81 2010/03/24 05:53:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.82 2010/03/29 21:46:00 maekke Exp $
+
+  29 Mar 2010; Markus Meier <maekke@gentoo.org> pambase-20100310.ebuild:
+  amd64 stable, bug #308075
 
   24 Mar 2010; Jeroen Roovers <jer@gentoo.org> pambase-20100310.ebuild:
   Stable for HPPA (bug #308075).
