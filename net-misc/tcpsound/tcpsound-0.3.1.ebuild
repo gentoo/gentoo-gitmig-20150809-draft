@@ -1,21 +1,27 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/tcpsound-0.3.1.ebuild,v 1.3 2007/10/29 15:36:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/tcpsound-0.3.1.ebuild,v 1.4 2010/03/29 12:20:07 ssuominen Exp $
 
 inherit eutils
 
 DESCRIPTION="Play sounds in response to network traffic"
 HOMEPAGE="http://www.ioplex.com/~miallen/tcpsound/"
 SRC_URI="http://www.ioplex.com/~miallen/tcpsound/dl/${P}.tar.gz"
-LICENSE="BSD"
 
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86"
-
 IUSE=""
+
 DEPEND="net-analyzer/tcpdump
 	media-libs/libsdl
 	dev-libs/libmba"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
 
 src_compile() {
 	sed -i -e "s;/usr/share/sounds:/usr/local/share/sounds;/usr/share/tcpsound;g"\
