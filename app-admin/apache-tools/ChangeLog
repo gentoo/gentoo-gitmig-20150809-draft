@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.71 2010/03/07 11:45:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.72 2010/03/29 14:03:01 fauli Exp $
+
+  29 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  apache-tools-2.2.15.ebuild:
+  stable x86, security bug 308049
 
 *apache-tools-2.2.15 (07 Mar 2010)
 
