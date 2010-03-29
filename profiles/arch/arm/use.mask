@@ -35,7 +35,7 @@ mozilla
 
 hardened
 
-# Krzysiek Pawlik <nelchael@gentoo.org>
+# Krzysztof Pawlik <nelchael@gentoo.org>
 # With vapier's permission masking aoss:
 aoss
 

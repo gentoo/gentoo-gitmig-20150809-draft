@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4062 2010/03/29 13:26:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4063 2010/03/29 22:37:23 nelchael Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Mar 2010; Krzysztof Pawlik <nelchael@gentoo.org> arch/arm/use.mask,
+  package.mask:
+  Update my first name.
 
   29 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask www-client/chromium dev channel release.

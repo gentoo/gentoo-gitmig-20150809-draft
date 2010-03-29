@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11395 2010/03/29 14:10:31 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11396 2010/03/29 22:37:23 nelchael Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -350,7 +350,7 @@ dev-perl/Email-Simple-Creator
 # Merged in dev-perl/XML-LibXML (#304685)
 dev-perl/XML-LibXML-Common
 
-# Krzysiek Pawlik <nelchael@gentoo.org> (23 Feb 2010)
+# Krzysztof Pawlik <nelchael@gentoo.org> (23 Feb 2010)
 # Masked for testing.
 >=dev-java/resin-servlet-api-4.0.3
 >=www-servers/resin-4.0.3
@@ -583,7 +583,7 @@ x11-apps/xfsinfo
 # depends on perl-5.10, needs testing
 >=dev-perl/DateManip-6.0
 
-# Krzysiek Pawlik <nelchael@gentoo.org> (23 Nov 2009)
+# Krzysztof Pawlik <nelchael@gentoo.org> (23 Nov 2009)
 # Borken TPM patch, see bug #294119
 =sys-apps/rng-tools-2-r2
 
@@ -927,7 +927,7 @@ gnome-extra/gnome-lirc-properties
 # mask for security bug #190667
 net-irc/bitchx
 
-# Krzysiek Pawlik <nelchael@gentoo.org> (12 Jun 2008)
+# Krzysztof Pawlik <nelchael@gentoo.org> (12 Jun 2008)
 # Testing new version.
 >=dev-java/hessian-3.0.20
 =dev-java/mx4j-core-3.0.2
