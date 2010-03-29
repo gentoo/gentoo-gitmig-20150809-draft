@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.7.0.ebuild,v 1.2 2010/03/21 19:50:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.7.1.ebuild,v 1.1 2010/03/29 14:55:04 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -35,7 +35,7 @@ pkg_setup() {
 	XFCONF="--docdir=${EPREFIX}/usr/share/doc/${PF}
 		--disable-dependency-tracking
 		--disable-static
-		$(use_enable debug)
+		$(xfconf_use_debug)
 		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 	DOCS="AUTHORS ChangeLog NEWS THANKS"
 }
