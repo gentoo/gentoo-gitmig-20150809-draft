@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/hibernate-script
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.86 2009/06/04 19:10:18 nelchael Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.87 2010/03/29 22:31:19 nelchael Exp $
+
+  29 Mar 2010; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
+  Update my first name.
 
   04 Jun 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   -hibernate-script-1.97-r5.ebuild, -hibernate-script-1.98.1.ebuild,
