@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages-posix/man-pages-posix-2003a.ebuild,v 1.12 2010/01/08 18:16:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages-posix/man-pages-posix-2003a.ebuild,v 1.13 2010/03/29 23:24:25 abcd Exp $
+
+EAPI=3
 
 inherit eutils
 
@@ -11,7 +13,7 @@ SRC_URI="mirror://kernel/linux/docs/man-pages/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="man-pages-posix"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 RESTRICT="binchecks"
 
@@ -19,15 +21,15 @@ RDEPEND="virtual/man !<sys-apps/man-pages-3"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/man-pages-2.08-updates.patch
 }
+
+src_configure() { :; }
 
 src_compile() { :; }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${ED}" || die
 	dodoc man-pages-*.Announce README Changes*
 }

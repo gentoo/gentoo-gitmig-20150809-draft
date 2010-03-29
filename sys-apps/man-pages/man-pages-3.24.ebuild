@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.24.ebuild,v 1.1 2010/02/28 10:05:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.24.ebuild,v 1.2 2010/03/29 23:28:32 abcd Exp $
+
+EAPI=3
 
 GENTOO_PATCH=2
 
@@ -12,7 +14,7 @@ SRC_URI="mirror://kernel/linux/docs/manpages/Archive/${P}.tar.bz2
 
 LICENSE="as-is GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE_LINGUAS=" cs da de es fr it ja nl pl ro ru zh_CN"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 RESTRICT="binchecks"
@@ -34,15 +36,16 @@ PDEPEND="nls? (
 	)
 	sys-apps/man-pages-posix"
 
+src_configure() { :; }
+
 src_compile() { :; }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install prefix="${EPREFIX}/usr" DESTDIR="${D}" || die
 	dodoc man-pages-*.Announce README Changes*
 
 	# Override with Gentoo specific or additional Gentoo pages
 	cd "${WORKDIR}"/man-pages-gentoo
-	insinto /usr/share/man
 	doman */* || die
 	dodoc README.Gentoo
 }
