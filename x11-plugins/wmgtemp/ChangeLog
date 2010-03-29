@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmgtemp
 # Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.14 2010/01/19 11:18:26 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgtemp/ChangeLog,v 1.15 2010/03/29 14:07:30 s4t4n Exp $
+
+*wmgtemp-1.0 (29 Mar 2010)
+
+  29 Mar 2010; Michele Noberasco <s4t4n@gentoo.org> wmgtemp-1.0.ebuild:
+  Version bump. See bug #291426.
 
   19 Jan 2010; Michele Noberasco <s4t4n@gentoo.org>; wmgtemp-0.1.ebuild:
   Restrict lm_sensors version to <3.
