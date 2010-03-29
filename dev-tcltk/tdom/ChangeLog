@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tdom
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.4 2008/12/06 19:09:52 mescalinum Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.5 2010/03/29 20:09:59 jlec Exp $
+
+  29 Mar 2010; Justin Lecher <jlec@gentoo.org> tdom-0.8.2.ebuild:
+  Keyworded for ~x86-linux ~amd64-linux, tested by me
 
   06 Dec 2008; Federico Ferri <mescalinum@gentoo.org> -tdom-0.8.0.ebuild,
   -tdom-0.8.0-r1.ebuild:
