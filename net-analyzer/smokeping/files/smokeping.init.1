@@ -2,7 +2,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-opts="${opts} dump restore"
+opts="${opts} dump reload restore"
 
 depend() {
 	need net
@@ -33,6 +33,12 @@ stop() {
 	ebegin "Stopping smokeping"
 	start-stop-daemon --stop \
 		--pidfile /var/run/smokeping/smokeping.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading smokeping"
+	/usr/bin/smokeping --reload 1>/dev/null 2>&1
 	eend $?
 }
 
