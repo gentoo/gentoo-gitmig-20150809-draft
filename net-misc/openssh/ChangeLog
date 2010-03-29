@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.377 2010/03/20 00:17:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.378 2010/03/29 05:42:45 vapier Exp $
+
+*openssh-5.4_p1-r1 (29 Mar 2010)
+
+  29 Mar 2010; Mike Frysinger <vapier@gentoo.org> +openssh-5.4_p1-r1.ebuild,
+  +files/openssh-5.4_p1-pkcs11.patch,
+  +files/openssh-5.4_p1-relative-AuthorizedKeysFile.patch:
+  Fixes from upstream for pkcs build problems #310929 by Alan Hourihane and
+  for relative AuthorizedKeysFile handling #308939 by Eric Vander Weele.
 
   20 Mar 2010; Mike Frysinger <vapier@gentoo.org> openssh-5.3_p1-r1.ebuild,
   openssh-5.4_p1.ebuild:
