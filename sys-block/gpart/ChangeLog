@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gpart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/ChangeLog,v 1.8 2010/03/21 12:22:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gpart/ChangeLog,v 1.9 2010/03/29 06:40:53 jer Exp $
+
+  29 Mar 2010; Jeroen Roovers <jer@gentoo.org> gpart-0.1h-r2.ebuild:
+  Stable for HPPA (bug #308135).
 
   21 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gpart-0.1h-r2.ebuild:
   x86 stable wrt bug #308135
