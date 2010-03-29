@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.ebuild,v 1.2 2010/03/29 21:58:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.1.ebuild,v 1.1 2010/03/29 21:58:35 yngwin Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -14,7 +14,7 @@ SRC_URI="http://openbox.org/dist/openbox/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+imlib nls +startup-notification xinerama"
+IUSE="nls +startup-notification xinerama"
 
 RDEPEND="dev-libs/glib:2
 	>=dev-libs/libxml2-2.0
@@ -23,7 +23,6 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXrandr
 	x11-libs/libXt
 	>=x11-libs/pango-1.8[X]
-	imlib? ( media-libs/imlib2 )
 	nls? ( sys-devel/gettext )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	xinerama? ( x11-libs/libXinerama )"
@@ -33,7 +32,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
@@ -41,7 +40,6 @@ src_prepare() {
 
 src_configure() {
 	econf --docdir=/usr/share/doc/${PF} \
-		$(use_enable imlib imlib2) \
 		$(use_enable nls) \
 		$(use_enable startup-notification)
 }
@@ -51,5 +49,5 @@ src_install() {
 	echo "/usr/bin/openbox-session" > "${D}/etc/X11/Sessions/${PN}"
 	fperms a+x /etc/X11/Sessions/${PN}
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 }

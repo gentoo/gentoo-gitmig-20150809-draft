@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.195 2010/03/18 14:49:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.196 2010/03/29 21:58:35 yngwin Exp $
+
+*openbox-3.4.11.1 (29 Mar 2010)
+
+  29 Mar 2010; Ben de Groot <yngwin@gentoo.org> +openbox-3.4.11.1.ebuild:
+  Version bump. Remove imlib useflag as this is no longer used in this
+  release.
 
   18 Mar 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Adding myself as maintainer since I am no longer in lxde herd
