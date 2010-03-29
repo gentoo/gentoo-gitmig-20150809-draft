@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.5.7.ebuild,v 1.1 2010/03/07 05:01:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.5.7.ebuild,v 1.2 2010/03/29 05:48:25 vapier Exp $
 
 EAPI="2"
 
@@ -27,6 +27,10 @@ PROVIDE="virtual/man"
 pkg_setup() {
 	enewgroup man 15
 	enewuser man 13 -1 /usr/share/man man
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-non-gnu-nroff.patch #309635
 }
 
 src_configure() {
