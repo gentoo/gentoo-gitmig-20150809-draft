@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-3.14.ebuild,v 1.1 2010/03/25 22:34:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-3.14.ebuild,v 1.2 2010/03/30 23:17:33 eva Exp $
 
 EAPI="2"
 
@@ -40,7 +40,7 @@ src_prepare() {
 			sed -e "s:pofiles =.*:pofiles = ${mylinguas}:" \
 				-e "s:mofiles =.*:mofiles = ${mylinguas//.po/.mo}:" \
 				-i "${S}/${norm}/Makefile.am" "${S}/${norm}/Makefile.in" \
-				die "sed in ${norm} folder failed"
+				|| die "sed in ${norm} folder failed"
 		fi
 	done
 }
