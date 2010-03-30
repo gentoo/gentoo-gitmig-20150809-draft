@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kquitapp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.53 2010/03/11 18:35:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.54 2010/03/30 21:26:43 spatz Exp $
+
+*kquitapp-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kquitapp-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kquitapp-4.3.5.ebuild:
   Marking kquitapp-4.3.5 ppc stable for bug 300393

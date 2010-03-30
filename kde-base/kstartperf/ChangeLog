@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstartperf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.38 2010/03/11 18:36:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.39 2010/03/30 21:37:09 spatz Exp $
+
+*kstartperf-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kstartperf-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kstartperf-4.3.5.ebuild:
   Marking kstartperf-4.3.5 ppc stable for bug 300393

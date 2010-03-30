@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.143 2010/03/11 18:34:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.144 2010/03/30 21:22:46 spatz Exp $
+
+*konquest-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +konquest-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> konquest-4.3.5.ebuild:
   Marking konquest-4.3.5 ppc stable for bug 300393

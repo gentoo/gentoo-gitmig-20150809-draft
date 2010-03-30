@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.4 2010/03/02 17:49:42 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.5 2010/03/30 21:06:34 spatz Exp $
+
+*kigo-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kigo-4.4.2.ebuild:
+  Version bump
 
 *kigo-4.4.1 (02 Mar 2010)
 

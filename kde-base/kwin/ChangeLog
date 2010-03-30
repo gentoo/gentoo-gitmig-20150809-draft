@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.191 2010/03/11 18:34:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.192 2010/03/30 21:48:53 spatz Exp $
+
+*kwin-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kwin-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kwin-4.3.5-r1.ebuild:
   Marking kwin-4.3.5-r1 ppc stable for bug 300393

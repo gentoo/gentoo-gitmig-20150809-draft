@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.144 2010/03/11 18:35:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.145 2010/03/30 21:01:39 spatz Exp $
+
+*kgamma-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kgamma-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kgamma-4.3.5.ebuild:
   Marking kgamma-4.3.5 ppc stable for bug 300393

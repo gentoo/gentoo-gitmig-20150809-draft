@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.38 2010/03/11 18:34:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.39 2010/03/30 21:47:55 spatz Exp $
+
+*kwalletd-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kwalletd-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kwalletd-4.3.5.ebuild:
   Marking kwalletd-4.3.5 ppc stable for bug 300393

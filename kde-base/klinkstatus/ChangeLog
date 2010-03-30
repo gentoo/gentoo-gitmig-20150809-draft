@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.142 2010/03/26 23:00:09 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.143 2010/03/30 21:11:53 spatz Exp $
+
+*klinkstatus-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +klinkstatus-4.4.2.ebuild:
+  Version bump
 
   26 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
   klinkstatus-4.4.0.ebuild, klinkstatus-4.4.1.ebuild:

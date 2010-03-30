@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpasswdserver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.53 2010/03/11 18:37:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.54 2010/03/30 21:25:23 spatz Exp $
+
+*kpasswdserver-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kpasswdserver-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kpasswdserver-4.3.5.ebuild:
   Marking kpasswdserver-4.3.5 ppc stable for bug 300393

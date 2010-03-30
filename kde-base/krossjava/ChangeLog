@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krossjava
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.25 2010/03/02 18:31:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.26 2010/03/30 21:29:07 spatz Exp $
+
+*krossjava-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +krossjava-4.4.2.ebuild:
+  Version bump
 
 *krossjava-4.4.1 (02 Mar 2010)
 

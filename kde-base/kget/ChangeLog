@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.153 2010/03/11 18:36:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.154 2010/03/30 21:02:32 spatz Exp $
+
+*kget-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kget-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kget-4.3.5.ebuild:
   Marking kget-4.3.5 ppc stable for bug 300393

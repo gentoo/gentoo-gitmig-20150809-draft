@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krosspython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.38 2010/03/11 18:38:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.39 2010/03/30 21:29:32 spatz Exp $
+
+*krosspython-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +krosspython-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> krosspython-4.3.5.ebuild:
   Marking krosspython-4.3.5 ppc stable for bug 300393

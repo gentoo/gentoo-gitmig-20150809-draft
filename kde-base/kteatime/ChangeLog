@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.142 2010/03/11 18:38:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.143 2010/03/30 21:40:10 spatz Exp $
+
+*kteatime-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kteatime-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kteatime-4.3.5.ebuild:
   Marking kteatime-4.3.5 ppc stable for bug 300393

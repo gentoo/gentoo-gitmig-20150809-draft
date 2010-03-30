@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.54 2010/03/11 18:36:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.55 2010/03/30 21:08:21 spatz Exp $
+
+*kioclient-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kioclient-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kioclient-4.3.5.ebuild:
   Marking kioclient-4.3.5 ppc stable for bug 300393

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kweather
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.148 2010/03/11 18:35:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.149 2010/03/30 21:48:26 spatz Exp $
+
+*kweather-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kweather-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kweather-4.3.5.ebuild:
   Marking kweather-4.3.5 ppc stable for bug 300393

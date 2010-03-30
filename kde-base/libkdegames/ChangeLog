@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.149 2010/03/11 18:36:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.150 2010/03/30 21:52:03 spatz Exp $
+
+*libkdegames-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +libkdegames-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> libkdegames-4.3.5.ebuild:
   Marking libkdegames-4.3.5 ppc stable for bug 300393

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.127 2010/03/11 18:36:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.128 2010/03/30 21:45:48 spatz Exp $
+
+*kuiviewer-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kuiviewer-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kuiviewer-4.3.5.ebuild:
   Marking kuiviewer-4.3.5 ppc stable for bug 300393
