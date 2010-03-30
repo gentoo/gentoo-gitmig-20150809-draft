@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/granatier
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.4 2010/03/02 15:35:03 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.5 2010/03/30 19:25:27 spatz Exp $
+
+*granatier-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +granatier-4.4.2.ebuild:
+  Version bump
 
 *granatier-4.4.1 (02 Mar 2010)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.159 2010/03/11 18:35:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.160 2010/03/30 19:50:20 spatz Exp $
+
+*kdebase-meta-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kdebase-meta-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kdebase-meta-4.3.5.ebuild:
   Marking kdebase-meta-4.3.5 ppc stable for bug 300393

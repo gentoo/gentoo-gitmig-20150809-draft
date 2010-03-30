@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.150 2010/03/11 18:38:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.151 2010/03/30 19:53:47 spatz Exp $
+
+*kdeedu-meta-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kdeedu-meta-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kdeedu-meta-4.3.5.ebuild:
   Marking kdeedu-meta-4.3.5 ppc stable for bug 300393

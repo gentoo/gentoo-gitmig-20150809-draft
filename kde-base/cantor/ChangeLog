@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/cantor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.4 2010/03/02 15:30:57 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.5 2010/03/30 19:23:11 spatz Exp $
+
+*cantor-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +cantor-4.4.2.ebuild:
+  Version bump
 
 *cantor-4.4.1 (02 Mar 2010)
 

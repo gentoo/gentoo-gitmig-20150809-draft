@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.153 2010/03/11 18:34:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.154 2010/03/30 19:42:26 spatz Exp $
+
+*kdeadmin-meta-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kdeadmin-meta-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kdeadmin-meta-4.3.5.ebuild:
   Marking kdeadmin-meta-4.3.5 ppc stable for bug 300393

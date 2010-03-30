@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbruch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.140 2010/03/11 18:35:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.141 2010/03/30 19:34:41 spatz Exp $
+
+*kbruch-4.4.2 (30 Mar 2010)
+
+  30 Mar 2010; Dror Levin <spatz@gentoo.org> +kbruch-4.4.2.ebuild:
+  Version bump
 
   11 Mar 2010; Brent Baude <ranger@gentoo.org> kbruch-4.3.5.ebuild:
   Marking kbruch-4.3.5 ppc stable for bug 300393
