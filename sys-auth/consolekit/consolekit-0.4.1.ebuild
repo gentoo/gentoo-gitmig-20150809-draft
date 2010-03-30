@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.1.ebuild,v 1.5 2010/02/28 18:47:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.1.ebuild,v 1.6 2010/03/30 08:27:33 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit autotools eutils multilib pam
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.freedesktop.org/software/${MY_PN}/dist/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="debug doc pam policykit"
 
 RDEPEND=">=dev-libs/glib-2.16
@@ -57,19 +57,19 @@ src_configure() {
 		$(use_enable doc docbook-docs) \
 		$(use_enable pam pam-module) \
 		$(use_enable policykit polkit) \
-		--with-pam-module-dir=/$(getpam_mod_dir) \
-		--with-dbus-services=/usr/share/dbus-1/services/ \
-		--localstatedir=/var
+		--with-pam-module-dir=$(getpam_mod_dir) \
+		--with-dbus-services="${EPREFIX}"/usr/share/dbus-1/services/ \
+		--localstatedir="${EPREFIX}"/var
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# crappy Redhat init script
-	rm -f "${D}/etc/rc.d/init.d/ConsoleKit"
+	rm -f "${ED}/etc/rc.d/init.d/ConsoleKit"
 
 	# Portage barfs on .la files
-	rm -f "${D}/$(get_libdir)/security/pam_ck_connector.la"
+	rm -f "${ED}/$(get_libdir)/security/pam_ck_connector.la"
 
 	# Gentoo style init script
 	newinitd "${FILESDIR}"/${PN}-0.1.rc consolekit
