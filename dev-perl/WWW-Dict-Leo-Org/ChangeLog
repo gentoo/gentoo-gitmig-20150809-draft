@@ -1,12 +1,12 @@
 # ChangeLog for dev-perl/WWW-Dict-Leo-Org
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Dict-Leo-Org/ChangeLog,v 1.3 2010/03/30 06:35:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Dict-Leo-Org/ChangeLog,v 1.4 2010/03/30 06:58:35 jlec Exp $
 
 *WWW-Dict-Leo-Org-1.34-r2 (30 Mar 2010)
 
   30 Mar 2010; Justin Lecher <jlec@gentoo.org> +files/1.34-umlaut.patch,
   +WWW-Dict-Leo-Org-1.34-r2.ebuild:
-  Added Postinst msg, Umlaut patch #311997, Added missing perl-core/DB_File
+  Added Postinst msg, Umlaut patch #311997, Added missing virtual/perl-DB_File
   to RDEPEND #311997
 
 *WWW-Dict-Leo-Org-1.34-r1 (12 Feb 2010)
