@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.5 2010/03/30 02:32:15 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.6 2010/03/30 13:39:50 grozin Exp $
+
+  30 Mar 2010; Andrey Grozin <grozin@gentoo.org> spyder-1.0.3.ebuild:
+  Added SUPPORT_PYTHON_ABIS
 
 *spyder-1.0.3 (30 Mar 2010)
 
