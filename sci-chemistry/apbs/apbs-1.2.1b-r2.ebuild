@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r2.ebuild,v 1.1 2010/03/29 19:00:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r2.ebuild,v 1.2 2010/03/30 07:02:46 jlec Exp $
 
 EAPI="3"
 
@@ -65,9 +65,15 @@ src_configure() {
 		fi
 	fi || die "Failed to select proper mpi implementation"
 
-	econf $(use_enable python) \
+	# we need the tools target for python
+	if use python && ! use tools; then
+		myconf="${myconf} --enable-tools"
+	fi
+
+	econf \
 		--disable-maloc-rebuild \
 		$(use_enable openmp) \
+		$(use_enable python) \
 		$(use_enable tools) \
 		${myconf}
 }

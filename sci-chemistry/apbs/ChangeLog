@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.26 2010/03/29 19:00:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.27 2010/03/30 07:02:46 jlec Exp $
+
+  30 Mar 2010; Justin Lecher <jlec@gentoo.org> apbs-1.2.1b-r2.ebuild,
+  metadata.xml:
+  Fix for USE="python -tool" situation, #311995
 
 *apbs-1.2.1b-r2 (28 Mar 2010)
 

@@ -5,6 +5,11 @@
         <email>markusle@gentoo.org</email>
         <name>Markus Dittrich</name>
     </maintainer>
+	<maintainer>
+		<email>jlec@gentoo.org</email>
+		<name>Justin Lecher</name>
+		<description>Ebuild Crasher</description>
+	</maintainer>			
 	<herd>sci-chemistry</herd>
 	<use>
 		<flag name='arpack'>Include support for arpack libs</flag>
