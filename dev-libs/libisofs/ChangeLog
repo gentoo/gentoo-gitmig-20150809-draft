@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.55 2010/03/23 16:05:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.56 2010/03/30 08:47:16 phajdan.jr Exp $
+
+  30 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libisofs-0.6.28.ebuild:
+  x86 stable wrt bug #309053
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> libisofs-0.6.28.ebuild:
   Marking libisofs-0.6.28 ppc64 stable for bug 309053

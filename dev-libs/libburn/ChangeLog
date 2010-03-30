@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.68 2010/03/23 16:05:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.69 2010/03/30 08:45:29 phajdan.jr Exp $
+
+  30 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libburn-0.7.6-r1.ebuild:
+  x86 stable wrt bug #309053
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> libburn-0.7.6-r1.ebuild:
   Marking libburn-0.7.6-r1 ppc64 stable for bug 309053
