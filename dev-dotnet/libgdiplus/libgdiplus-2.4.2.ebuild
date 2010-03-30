@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.4.2.ebuild,v 1.4 2010/01/02 12:24:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.4.2.ebuild,v 1.5 2010/03/30 11:50:46 ssuominen Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.go-mono.com/"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="pango"
+IUSE="cairo"
 
 RDEPEND=">=dev-libs/glib-2.16
 		>=media-libs/freetype-2.3.7
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.16
 		>=media-libs/giflib-4.1.3
 		media-libs/jpeg
 		media-libs/tiff
-		pango? ( >=x11-libs/pango-1.20 )"
+		!cairo? ( >=x11-libs/pango-1.20 )"
 DEPEND="${RDEPEND}"
 
 RESTRICT="test"
@@ -39,6 +39,6 @@ src_prepare() {
 src_configure() {
 	append-flags -fno-strict-aliasing
 	go-mono_src_configure	--with-cairo=system			\
-				$(use pango && printf %s --with-pango)	\
+				$(use !cairo && printf %s --with-pango)	\
 				|| die "configure failed"
 }
