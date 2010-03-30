@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r1.ebuild,v 1.1 2010/03/20 18:25:31 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r2.ebuild,v 1.1 2010/03/30 17:32:44 billie Exp $
 
 EAPI=2
 
@@ -70,7 +70,7 @@ ERROR_PARPORT="Please make sure parallel port support is enabled in your kernel 
 pkg_setup() {
 	if ! use minimal; then
 		python_set_active_version 2
-		python_pkg_setup;
+		python_pkg_setup
 	fi
 
 	! use qt4 && ewarn "You need USE=qt4 for the hplip GUI."
@@ -94,6 +94,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	python_convert_shebangs -q -r 2 .
+
 	# Do not install desktop files if there is no gui
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
 	epatch "${FILESDIR}"/${PN}-3.9.10-desktop.patch
@@ -120,8 +122,7 @@ src_prepare() {
 
 	# SYSFS deprecated but kept upstream for compatibility reasons
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
-	sed -i -e "s/SYSFS/ATTRS/g" -e "s/sysfs/attrs/g" data/rules/56-hpmud_support.rules \
-		data/rules/55-hpmud.rules || die
+	epatch "${FILESDIR}"/${P}-udev-attrs.patch
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
