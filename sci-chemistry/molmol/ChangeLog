@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.18 2010/03/07 11:19:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.19 2010/03/30 19:55:26 jlec Exp $
+
+*molmol-2k_p2-r2 (30 Mar 2010)
+
+  30 Mar 2010; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r1.ebuild,
+  +molmol-2k_p2-r2.ebuild, +files/ldflags.patch, +files/prefix.patch:
+  Respecting LDFLAGS and fixes for prefix
 
 *molmol-2k_p2-r1 (07 Mar 2010)
 
