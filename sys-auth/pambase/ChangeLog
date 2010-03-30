@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.82 2010/03/29 21:46:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.83 2010/03/30 20:05:22 abcd Exp $
+
+  30 Mar 2010; Jonathan Callen <abcd@gentoo.org> pambase-20100310.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   29 Mar 2010; Markus Meier <maekke@gentoo.org> pambase-20100310.ebuild:
   amd64 stable, bug #308075
