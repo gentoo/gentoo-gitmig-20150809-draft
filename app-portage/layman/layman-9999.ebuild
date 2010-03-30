@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.10 2010/03/17 15:39:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.11 2010/03/30 20:09:00 sping Exp $
 
 EAPI="2"
-NEED_PYTHON=2.5
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils git

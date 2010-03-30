@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.106 2010/03/17 15:39:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.107 2010/03/30 20:09:00 sping Exp $
+
+  30 Mar 2010; Sebastian Pipping <sping@gentoo.org> layman-1.3.2-r2.ebuild,
+  layman-9999.ebuild:
+  Subsititute NEED_PYTHON with PYTHON_DEPEND (bug #312173)
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> layman-1.2.3.ebuild,
   layman-1.2.4-r3.ebuild, layman-1.2.5.ebuild, layman-1.2.6.ebuild,
