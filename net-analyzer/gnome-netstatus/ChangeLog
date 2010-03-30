@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.88 2010/01/18 00:25:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.89 2010/03/30 12:35:32 pacho Exp $
+
+*gnome-netstatus-2.28.1 (30 Mar 2010)
+
+  30 Mar 2010; Pacho Ramos <pacho@gentoo.org> gnome-netstatus-2.28.0.ebuild,
+  +gnome-netstatus-2.28.1.ebuild:
+  Version bump with translation fixes. Also fixing a typo in 2.28 series
+  that was causing src_prepare phase to not be run and, then, getting broken
+  translations and reviving bug #183969.
 
   18 Jan 2010; Jeroen Roovers <jer@gentoo.org>
   gnome-netstatus-2.26.0.ebuild:
