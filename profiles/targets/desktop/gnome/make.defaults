@@ -1,0 +1,5 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/make.defaults,v 1.1 2010/03/30 00:05:41 tampakrap Exp $
+
+USE="eds evo gnome gstreamer"
