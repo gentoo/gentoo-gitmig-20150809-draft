@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.22 2010/03/30 01:03:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.23 2010/03/30 16:08:07 jer Exp $
+
+  30 Mar 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Maintain.
 
 *idnkit-1.0-r1 (30 Mar 2010)
 
