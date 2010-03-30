@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexdiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.10 2010/01/03 11:38:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.11 2010/03/30 17:40:33 fauli Exp $
+
+  30 Mar 2010; Christian Faulhammer <fauli@gentoo.org> latexdiff-0.5.ebuild:
+  stable x86, bug 310867
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> latexdiff-0.5.ebuild:
   Transfer Prefix keywords
