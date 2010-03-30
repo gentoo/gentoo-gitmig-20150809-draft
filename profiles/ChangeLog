@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4064 2010/03/30 00:32:11 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4065 2010/03/30 08:26:27 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2010; Jonathan Callen <abcd@gentoo.org>
+  default/linux/powerpc/ppc64/10.0/64bit-userland/desktop/kde/parent:
+  fix ppc64 desktop profile - was breaking repoman
 
   30 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   +default/linux/alpha/10.0/desktop/gnome/eapi,
