@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cssc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.3 2010/03/08 18:54:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.4 2010/03/30 16:32:36 jer Exp $
+
+  30 Mar 2010; Jeroen Roovers <jer@gentoo.org> cssc-1.2.0.ebuild:
+  Update HOMEPAGE.
 
   08 Mar 2010; Fabian Groffen <grobian@gentoo.org> +cssc-1.0.1.ebuild:
   Restore cssc-1.0.1, it's the only version that compiles for *-macos (and
