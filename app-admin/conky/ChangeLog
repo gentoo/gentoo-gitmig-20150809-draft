@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.130 2010/03/11 18:25:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.131 2010/03/30 19:04:29 billie Exp $
+
+*conky-1.8.0 (30 Mar 2010)
+
+  30 Mar 2010; Daniel Pielmeier <billie@gentoo.org> -conky-1.8.0_rc2.ebuild,
+  +conky-1.8.0.ebuild:
+  Version bump. Remove release candidate.
 
   11 Mar 2010; Markos Chandras <hwoarang@gentoo.org> conky-1.7.2-r2.ebuild:
   Stable on amd64 wrt bug #304761
