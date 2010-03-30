@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.3 2010/03/30 10:45:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.4 2010/03/30 11:45:11 pacho Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SLOT="2.0"
 # double check none of the deps are still masked !
 KEYWORDS="~amd64 ~x86"
 
-IUSE="accessibility cdr cups dvdr esd ldap mono"
+IUSE="accessibility cdr cups dvdr esd ldap mono policykit"
 
 S=${WORKDIR}
 
@@ -156,7 +156,8 @@ RDEPEND="
 
 	mono? (
 		>=dev-dotnet/gtk-sharp-2.12.9
-		>=app-misc/tomboy-1.0.1 )"
+		>=app-misc/tomboy-1.0.1 )
+	policykit? ( gnome-extra/polkit-gnome )"
 DEPEND=""
 PDEPEND=">=gnome-base/gvfs-1.4.3[gdu]"
 # Broken from assumptions of gnome-vfs headers being included in nautilus headers,
