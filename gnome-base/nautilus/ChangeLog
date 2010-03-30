@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.338 2010/03/16 18:43:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.339 2010/03/30 10:00:20 pacho Exp $
+
+*nautilus-2.28.4-r1 (30 Mar 2010)
+
+  30 Mar 2010; Pacho Ramos <pacho@gentoo.org> +nautilus-2.28.4-r1.ebuild:
+  Revision bump to drop tracker support and being able to safely stabilize
+  this without requiring tracker stabilization too.
 
   16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   nautilus-2.26.4-r1.ebuild:
