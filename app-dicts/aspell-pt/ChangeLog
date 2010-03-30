@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-pt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/ChangeLog,v 1.13 2009/10/18 20:41:40 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/ChangeLog,v 1.14 2010/03/30 22:22:56 truedfx Exp $
+
+  30 Mar 2010; Harald van Dĳk <truedfx@gentoo.org>
+  aspell-pt-0.50.2-r1.ebuild:
+  Update pt_BR removal for multilib systems (#306699)
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-pt-0.50.2.ebuild,
   aspell-pt-0.50.2-r1.ebuild:
