@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0_rc1.ebuild,v 1.1 2010/03/23 16:01:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0_rc1.ebuild,v 1.2 2010/03/30 20:33:20 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -58,6 +58,7 @@ src_prepare() {
 }
 
 src_configure() {
+	addpredict /dev/snd/controlC0
 	egamesconf \
 		--prefix=/usr \
 		--bindir="${GAMES_BINDIR}" \
