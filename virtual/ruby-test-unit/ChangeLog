@@ -1,6 +1,14 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.7 2010/01/11 11:14:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.8 2010/03/30 12:15:38 graaff Exp $
+
+*ruby-test-unit-0-r1 (30 Mar 2010)
+
+  30 Mar 2010; Hans de Graaff <graaff@gentoo.org> ruby-test-unit-0.ebuild,
+  +ruby-test-unit-0-r1.ebuild:
+  Bump revision and remove jruby and ruby19 from ruby-test-unit-0, so that
+  it can be marked stable. Mark ruby-test-unit-0 stable on the same arches
+  as dev-lang/ruby.
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> ruby-test-unit-0.ebuild:
   Set empty HOMEPAGE and LICENSE.
