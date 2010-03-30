@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.11 2010/03/29 22:32:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.12 2010/03/30 01:13:26 darkside Exp $
+
+*mediatomb-0.12.0-r1 (30 Mar 2010)
+
+  30 Mar 2010; Jeremy Olexa <darkside@gentoo.org> -mediatomb-0.12.0.ebuild,
+  +mediatomb-0.12.0-r1.ebuild, +files/mediatomb-0.12.0.confd,
+  +files/mediatomb-0.12.0.initd:
+  minor revbump to grab new init/conf files from bug 264235 that I forgot
 
   29 Mar 2010; Jeremy Olexa <darkside@gentoo.org> +mediatomb-0.12.0.ebuild,
   +files/mediatomb-0.12.0.config, metadata.xml:

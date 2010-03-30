@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.0.ebuild,v 1.1 2010/03/29 22:32:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.0-r1.ebuild,v 1.1 2010/03/30 01:13:26 darkside Exp $
 
 EAPI=2
 
@@ -81,9 +81,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	sed -e "s:#MYSQL#:$(use mysql && has_version dev-db/mysql[-minimal] && echo "mysql"):" \
-		"${FILESDIR}/mediatomb.initd" > "${T}/mediatomb.initd" || die
+		"${FILESDIR}/${P}.initd" > "${T}/mediatomb.initd" || die
 	newinitd "${T}/mediatomb.initd" mediatomb || die
-	newconfd "${FILESDIR}/mediatomb.confd" mediatomb || die
+	newconfd "${FILESDIR}/${P}.confd" mediatomb || die
 
 	insinto /etc/mediatomb
 	newins "${FILESDIR}/${P}.config" config.xml || die
