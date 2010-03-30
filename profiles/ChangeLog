@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4066 2010/03/30 10:03:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4067 2010/03/30 11:42:41 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/make.defaults:
+  Enable exif, lcms, pango and xcb by default.
 
   30 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   targets/desktop/make.defaults:
