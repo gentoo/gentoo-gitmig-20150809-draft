@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.14 2010/03/26 12:17:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.15 2010/03/30 12:10:46 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -86,6 +86,7 @@ xfconf_use_debug() {
 # @DESCRIPTION:
 # Run base_src_util autopatch and eautoreconf or elibtoolize
 xfconf_src_unpack() {
+	debug-print-function ${FUNCNAME} "$@"
 	unpack ${A}
 	cd "${S}"
 	has src_prepare ${XFCONF_EXPF} || xfconf_src_prepare
@@ -95,6 +96,7 @@ xfconf_src_unpack() {
 # @DESCRIPTION:
 # Run base_src_util autopatch and eautoreconf or elibtoolize
 xfconf_src_prepare() {
+	debug-print-function ${FUNCNAME} "$@"
 	base_src_prepare
 
 	if [[ "${EINTLTOOLIZE}" == "yes" ]]; then
@@ -113,6 +115,7 @@ xfconf_src_prepare() {
 # @DESCRIPTION:
 # Run econf with opts in XFCONF variable
 xfconf_src_configure() {
+	debug-print-function ${FUNCNAME} "$@"
 	econf ${XFCONF}
 }
 
@@ -120,6 +123,7 @@ xfconf_src_configure() {
 # @DESCRIPTION:
 # Run econf with opts in XFCONF variable
 xfconf_src_compile() {
+	debug-print-function ${FUNCNAME} "$@"
 	has src_configure ${XFCONF_EXPF} || xfconf_src_configure
 	emake || die "emake failed"
 }
@@ -128,6 +132,7 @@ xfconf_src_compile() {
 # @DESCRIPTION:
 # Run emake install and install documentation in DOCS variable
 xfconf_src_install() {
+	debug-print-function ${FUNCNAME} "$@"
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if [[ -n ${DOCS} ]]; then
@@ -139,6 +144,7 @@ xfconf_src_install() {
 # @DESCRIPTION:
 # Run gnome2_icon_savelist
 xfconf_pkg_preinst() {
+	debug-print-function ${FUNCNAME} "$@"
 	gnome2_icon_savelist
 }
 
@@ -146,6 +152,7 @@ xfconf_pkg_preinst() {
 # @DESCRIPTION:
 # Run fdo-mime_{desktop,mime}_database_update and gnome2_icon_cache_update
 xfconf_pkg_postinst() {
+	debug-print-function ${FUNCNAME} "$@"
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
@@ -155,6 +162,7 @@ xfconf_pkg_postinst() {
 # @DESCRIPTION:
 # Run fdo-mime_{desktop,mime}_database_update and gnome2_icon_cache_update
 xfconf_pkg_postrm() {
+	debug-print-function ${FUNCNAME} "$@"
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
