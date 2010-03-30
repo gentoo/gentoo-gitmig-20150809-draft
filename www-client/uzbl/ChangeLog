@@ -1,6 +1,12 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.23 2010/03/15 09:37:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.24 2010/03/30 17:56:55 wired Exp $
+
+  30 Mar 2010; Alex Alexander <wired@gentoo.org> uzbl-2010.02.02-r1.ebuild,
+  uzbl-2010.03.14.ebuild, uzbl-9999.ebuild:
+  9999: integrated recommendations from bug #310375 together with other
+  ebuild improvements, added vim-syntax USE. all versions: changed
+  description
 
 *uzbl-2010.03.14 (15 Mar 2010)
 

@@ -1,21 +1,31 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.12 2010/03/15 09:37:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.13 2010/03/30 17:56:55 wired Exp $
 
 EAPI="2"
 
-inherit base git
+inherit base
 
-DESCRIPTION="A keyboard controlled (modal vim-like bindings, or with modifierkeys) browser based on Webkit."
+IUSE=""
+if [[ ${PV} == *9999* ]]; then
+	inherit git
+	EGIT_REPO_URI=${EGIT_REPO_URI:-"git://github.com/Dieterbe/uzbl.git"}
+	SRC_URI=""
+	IUSE="experimental"
+	use experimental &&
+		EGIT_BRANCH="experimental" &&
+		EGIT_COMMIT="experimental"
+else
+	SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${PV} -> ${P}.tar.gz"
+fi
+
+DESCRIPTION="Web interface tools which adhere to the unix philosophy."
 HOMEPAGE="http://www.uzbl.org"
-SRC_URI=""
-
-EGIT_REPO_URI=${EGIT_REPO_URI:-"git://github.com/Dieterbe/uzbl.git"}
 
 LICENSE="LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="+browser experimental helpers +tabbed"
+IUSE+=" +browser helpers +tabbed vim-syntax"
 
 COMMON_DEPEND="
 	>=dev-libs/icu-4.0.1
@@ -36,28 +46,27 @@ RDEPEND="
 		x11-misc/xclip
 	)
 	helpers? (
-		dev-lang/perl
-		dev-perl/gtk2-perl
 		dev-python/pygtk
 		dev-python/pygobject
+		dev-python/simplejson
 		gnome-extra/zenity
 		net-misc/socat
 		x11-libs/pango
 		x11-misc/dmenu
 		x11-misc/xclip
 	)
+	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
+# TODO document what requires the above helpers
+# simplejson - save uzbl_tabbed.py sessions & presets in json.
 
 pkg_setup() {
-	use experimental && EGIT_BRANCH="experimental" && EGIT_COMMIT="experimental"
-
 	if ! use helpers; then
 		elog "uzbl's extra scripts use various optional applications:"
 		elog
-		elog "   dev-lang/perl"
-		elog "   dev-perl/gtk2-perl"
 		elog "   dev-python/pygtk"
 		elog "   dev-python/pygobject"
+		elog "   dev-python/simplejson"
 		elog "   gnome-extra/zenity"
 		elog "   net-misc/socat"
 		elog "   x11-libs/pango"
@@ -82,7 +91,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	git_src_prepare
+	if [[ ${PV} == *9999* ]]; then
+		git_src_prepare
+	else
+		cd "${WORKDIR}"/Dieterbe-uzbl-*
+		S=$(pwd)
+	fi
 
 	# remove -ggdb
 	sed -i "s/-ggdb //g" Makefile ||
@@ -105,4 +119,13 @@ src_install() {
 
 	emake DESTDIR="${D}" PREFIX="/usr" DOCDIR="${D}/usr/share/doc/${PF}" ${targets} ||
 		die "Installation failed"
+
+	if use vim-syntax; then
+		insinto /usr/share/vim/vimfiles/ftdetect
+		doins "${S}"/extras/vim/ftdetect/uzbl.vim || die "vim-syntax doins failed"
+
+		insinto /usr/share/vim/vimfiles/syntax
+		doins "${S}"/extras/vim/syntax/uzbl.vim || die "vim-syntax doins failed"
+	fi
+
 }
