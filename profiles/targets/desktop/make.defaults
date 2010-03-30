@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/make.defaults,v 1.14 2010/03/30 01:06:41 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/make.defaults,v 1.15 2010/03/30 10:03:49 ssuominen Exp $
 
-USE="a52 aac acpi alsa branding cairo cdr dbus dts dvd dvdr emboss encode fam 
+USE="a52 aac acpi alsa branding cairo cdr dbus dts dvd dvdr emboss encode fam
 firefox flac gif gpm gtk hal jpeg ldap libnotify mad mikmod mng mp3 mp4 mpeg ogg
-opengl pdf png ppds qt3support qt4 sdl spell svg tiff truetype vorbis unicode
-usb X x264 xml xulrunner xv xvid"
+opengl pdf png ppds qt3support qt4 sdl spell startup-notification svg tiff
+truetype vorbis unicode usb X x264 xml xulrunner xv xvid"
 
 # Adding this for bluetooth support
 USE="${USE} bluetooth consolekit"
