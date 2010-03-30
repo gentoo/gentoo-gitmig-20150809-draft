@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.8-r1.ebuild,v 1.1 2010/01/23 15:18:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.8-r1.ebuild,v 1.2 2010/03/30 18:35:48 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib python toolchain-funcs
 
 MY_PN="Botan"
 MY_P="${MY_PN}-${PV}"
@@ -25,11 +25,18 @@ RDEPEND="bzip2? ( >=app-arch/bzip2-1.0.5 )
 	ssl? ( >=dev-libs/openssl-0.9.8g )"
 
 DEPEND="${RDEPEND}
-	>=dev-lang/python-2.4"
+	=dev-lang/python-2*"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-use_negative_lea_displacement.patch"
-	epatch "${FILESDIR}"/${P}-darwin-install_name-fix.patch
+	epatch "${FILESDIR}/${P}-darwin-install_name-fix.patch"
+
+	# Install documentation in /usr/share/doc/${PF}.
+	sed -e "/^DOCDIR *=/s/Botan-\$(VERSION)/${PF}/" -i src/build-data/makefile/unix_shr.in || die "sed failed"
 }
 
 src_configure() {
@@ -59,7 +66,7 @@ src_configure() {
 	# install in src_install, we need the correct live-system prefix here on
 	# Darwin for a shared lib with correct install_name
 	./configure.py \
-		--prefix="${EPREFIX}"/usr \
+		--prefix="${EPREFIX}/usr" \
 		--libdir=$(get_libdir) \
 		--docdir=share/doc \
 		--cc=gcc \
@@ -86,8 +93,5 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D%/}${EPREFIX}/usr" install || die "emake install failed"
-	# do the move as a two-stage operation for case-INsensitive filesystems
-	mv "${D%/}${EPREFIX}"/usr/share/doc/{Botan-${PV},tbm} || die
-	mv "${D%/}${EPREFIX}"/usr/share/doc/{tbm,${PF}} || die
+	emake DESTDIR="${ED}usr" install || die "emake install failed"
 }
