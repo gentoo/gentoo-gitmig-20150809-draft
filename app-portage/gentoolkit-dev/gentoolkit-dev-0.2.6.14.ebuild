@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.6.13-r1.ebuild,v 1.1 2010/03/13 11:15:47 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.6.14.ebuild,v 1.1 2010/03/30 13:54:05 idl0r Exp $
 
 EAPI="2"
+PYTHON_DEPEND="*:2.6:3.1"
+PYTHON_USE_WITH="xml"
 
-inherit eutils
+inherit python
 
 DESCRIPTION="Collection of developer scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -15,19 +17,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-lang/python[xml]"
-RDEPEND="${DEPEND}
-	sys-apps/portage
+DEPEND=""
+RDEPEND="sys-apps/portage
 	dev-lang/perl"
-
-src_prepare() {
-	sed -i -e 's:sh test:bash test:' src/echangelog/Makefile || die
-
-	# bug 302784 and bug 304249
-	epatch "${FILESDIR}/echangelog_improve-vcs-detection.patch" \
-		"${FILESDIR}/echangelog_add-vcs-switch.patch" \
-		"${FILESDIR}/echangelog_fix-textwrap-regex.patch"
-}
 
 src_test() {
 	# echangelog test is not able to run as root

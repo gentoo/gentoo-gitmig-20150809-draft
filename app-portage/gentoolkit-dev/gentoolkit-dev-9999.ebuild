@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.2 2009/09/09 16:50:27 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.3 2010/03/30 13:54:05 idl0r Exp $
 
 EAPI="2"
+PYTHON_DEPEND="*:2.6:3.1"
+PYTHON_USE_WITH="xml"
 
-inherit subversion
+inherit subversion python
 
 DESCRIPTION="Collection of developer scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
@@ -15,9 +17,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-lang/python[xml]"
-RDEPEND="${DEPEND}
-	sys-apps/portage
+DEPEND=""
+RDEPEND="sys-apps/portage
 	dev-lang/perl"
 
 ESVN_REPO_URI="svn://anonsvn.gentoo.org/gentoolkit/trunk/${PN}"
