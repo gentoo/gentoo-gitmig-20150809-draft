@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.4.ebuild,v 1.4 2010/03/29 17:48:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.4.ebuild,v 1.5 2010/03/30 04:09:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -57,7 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
-	tc-is-cross-compiler && [[ ${CHOST} == *linux* ]] && fu_cv_sys_stat_statfs2_bsize=yes #311569
+	tc-is-cross-compiler && [[ ${CHOST} == *linux* ]] && export fu_cv_sys_stat_statfs2_bsize=yes #311569
 
 	use static && append-ldflags -static
 	use selinux || export ac_cv_{header_selinux_{context,flash,selinux}_h,search_setfilecon}=no #301782
