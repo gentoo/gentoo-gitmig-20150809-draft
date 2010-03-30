@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.70 2010/03/10 08:59:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.71 2010/03/30 15:37:22 dang Exp $
+
+*networkmanager-0.8-r1 (30 Mar 2010)
+
+  30 Mar 2010; Daniel Gryniewicz <dang@gentoo.org>
+  +networkmanager-0.8-r1.ebuild,
+  +files/networkmanager-0.8-confchanges.patch:
+  Add VPN.Plugin to at_console; bug #294992
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org> networkmanager-0.8.ebuild:
   Marked ~ppc/~ppc64 for bug #296548.
