@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.9.1.ebuild,v 1.1 2010/03/21 17:34:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.9.1.ebuild,v 1.2 2010/03/30 03:20:30 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug nls unicode"
 
 RDEPEND="media-libs/libsdl[joystick,video]
-	media-libs/sdl-image[png]
+	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
 	media-libs/sdl-net
