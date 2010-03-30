@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.56 2010/03/08 07:29:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.57 2010/03/30 22:57:27 fauli Exp $
+
+*mlocate-0.22.4 (30 Mar 2010)
+
+  30 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  -mlocate-0.22.3.ebuild, +mlocate-0.22.4.ebuild:
+  version bump
 
 *mlocate-0.22.3 (08 Mar 2010)
 
