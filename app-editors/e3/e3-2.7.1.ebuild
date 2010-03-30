@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.7.1.ebuild,v 1.5 2009/08/21 19:12:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.7.1.ebuild,v 1.6 2010/03/30 22:39:27 fauli Exp $
 
 DESCRIPTION="Very tiny editor in ASM with emacs, pico, wordstar, and vi keybindings"
 HOMEPAGE="http://freshmeat.net/projects/e3/
-	http://mitglied.lycos.de/albkleine/"
-SRC_URI="http://mitglied.lycos.de/albkleine/${P}.tar.gz"
+	http://mitglied.multimania.de/albkleine/"
+SRC_URI="http://mitglied.multimania.de/albkleine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
