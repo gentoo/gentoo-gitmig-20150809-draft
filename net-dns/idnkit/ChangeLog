@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/idnkit
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.21 2008/07/10 20:11:26 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.22 2010/03/30 01:03:17 jer Exp $
+
+*idnkit-1.0-r1 (30 Mar 2010)
+
+  30 Mar 2010; Jeroen Roovers <jer@gentoo.org> +idnkit-1.0-r1.ebuild,
+  +files/idnkit-1.0-autotools.patch:
+  Respect LDFLAGS thanks to Doktor Notor (bug #263135).
 
   10 Jul 2008; Jeroen Roovers <jer@gentoo.org> idnkit-1.0.ebuild:
   ChangeLog, not Changelog.
