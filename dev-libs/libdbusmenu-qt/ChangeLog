@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libdbusmenu-qt
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.1 2010/03/31 16:31:18 tampakrap Exp $
+
+*libdbusmenu-qt-0.3.0 (31 Mar 2010)
+
+  31 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +libdbusmenu-qt-0.3.0.ebuild,
+  +files/libdbusmenu-qt-0.3.0-set-link-directories.patch, +metadata.xml:
+  Initial commit, moved from kde overlay, thanks to Dennis Schridde
+
