@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4072 2010/03/31 16:07:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4073 2010/03/31 16:15:22 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Mar 2010; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Mask =dev-java/sun-jre-bin-1.5* and
+  =app-emulation/emul-linux-x86-java-1.5* for security removal, bug #306579.
 
   31 Mar 2010; Vlastimil Babka <caster@gentoo.org>
   hardened/x86/package.use.mask, uclibc/x86/package.use.mask:
