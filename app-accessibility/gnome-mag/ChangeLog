@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.169 2010/02/14 22:56:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.170 2010/03/31 23:23:05 eva Exp $
+
+*gnome-mag-0.16.1 (31 Mar 2010)
+
+  31 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-mag-0.16.1.ebuild:
+  Version bump. Mostly build fixes and translation updates.
 
 *gnome-mag-0.16.0 (14 Feb 2010)
 
