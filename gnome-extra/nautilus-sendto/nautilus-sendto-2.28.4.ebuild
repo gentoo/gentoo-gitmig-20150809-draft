@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.4.ebuild,v 1.1 2010/03/30 16:18:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-2.28.4.ebuild,v 1.2 2010/03/31 11:07:58 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="bluetooth doc empathy gajim cdr pidgin upnp" # +mail
 
-# FIXME: mail plugin build is broken and not needed with evo-2.28, 
+# FIXME: mail plugin build is broken and not needed with evo-2.28,
 # see https://bugzilla.gnome.org/579099
 #	mail? ( >=gnome-extra/evolution-data-server-1.5.3 )
 RDEPEND=">=x11-libs/gtk+-2.12
