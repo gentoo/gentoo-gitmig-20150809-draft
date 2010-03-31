@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.131-r1.ebuild,v 1.1 2008/01/06 17:38:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.131-r1.ebuild,v 1.2 2010/03/31 18:16:11 solar Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://sources.redhat.com/pub/systemtap/${PN}/${P}.tar.gz
 LICENSE="OpenSoftware"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE=""
+IUSE="elibc_glibc"
 
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never

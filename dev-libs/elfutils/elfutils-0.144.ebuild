@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.144.ebuild,v 1.2 2010/02/20 20:12:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.144.ebuild,v 1.3 2010/03/31 18:16:11 solar Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="https://fedorahosted.org/releases/e/l/elfutils/${P}.tar.bz2"
 LICENSE="GPL-2-with-exceptions"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="bzip2 lzma nls test zlib"
+IUSE="bzip2 lzma nls test zlib elibc_glibc"
 
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never
