@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.6 2010/02/16 17:15:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.7 2010/03/31 17:43:34 tampakrap Exp $
+
+*libindicate-0.3.6 (31 Mar 2010)
+
+  31 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +libindicate-0.3.6.ebuild,
+  +files/libindicate-0.3.6-no-gobject-introspection.patch,
+  +files/libindicate-0.3.6-optional-gtk-support.patch:
+  Version bump, moved from kde overlay, thanks to Dennis Schridde.Reference
+  launchpad bugs for the patches
 
   16 Feb 2010; Joseph Jezak <josejx@gentoo.org> libindicate-0.2.3-r1.ebuild:
   Marked ~ppc/~ppc64 for bug #304365.
