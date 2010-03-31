@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.15 2010/03/07 12:32:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.16 2010/03/31 20:43:32 jlec Exp $
+
+*rasmol-2.7.5-r1 (31 Mar 2010)
+
+  31 Mar 2010; Justin Lecher <jlec@gentoo.org>
+  files/2.7.5-bundled-lib.patch, -rasmol-2.7.5.ebuild,
+  +rasmol-2.7.5-r1.ebuild:
+  Removed unneeded patch for ldflags, removed unneeded linking against
+  libforms, #312369
+
 
   07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   files/2.7.5-bundled-lib.patch, rasmol-2.7.5.ebuild:

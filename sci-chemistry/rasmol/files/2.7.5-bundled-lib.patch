@@ -1,6 +1,17 @@
---- Imakefile	2009-07-20 16:08:43.000000000 +0200
-+++ Imakefile.new	2009-07-25 14:07:08.000000000 +0200
-@@ -276,17 +276,10 @@
+diff --git a/src/Imakefile b/src/Imakefile
+index 03be00e..a0c68f9 100755
+--- a/src/Imakefile
++++ b/src/Imakefile
+@@ -176,7 +176,7 @@ XFORMSLIB_DIR = /usr/local
+ #endif
+ endif
+ XFORMSLIB_INCLUDE_DIR = $(XFORMSLIB_DIR)/include
+-XFORMSLIB_LDLIB = -lXpm -L$(XFORMSLIB_DIR)/lib -lforms
++XFORMSLIB_LDLIB = -lXpm -L$(XFORMSLIB_DIR)/lib
+ #endif
+ #endif
+ #endif
+@@ -281,17 +281,10 @@ RASMOLDIR = $(USRLIBDIR)/rasmol/
  
  #ifndef USE_XFORMSLIB
  DEFINES = $(GTKCFLAGS) $(GUIDEF) -DRASMOLDIR=\"$(RASMOLDIR)\" $(DEPTHDEF) $(LOCALEDEF) \
@@ -20,7 +31,7 @@
  #endif
  
  
-@@ -312,11 +305,11 @@
+@@ -317,11 +310,11 @@ OBJS = rasmol.o molecule.o abstree.o cmndline.o command.o transfor.o \
  # Additional RS6000 AIX MITSHM Library
  # LDLIBS = -lm -lXi -lXextSam $(XLIB)
  
@@ -29,15 +40,15 @@
 -			$(CQRLIB_LDLIB) \
 -			$(CVECTOR_LDLIB) \
 -			$(NEARTREE_LDLIB) $(XFORMSLIB_LDLIB)
-+LDLIBS = -lm -lXi $(XLIB) $(EXTRA_LIBRARIES) -lforms $(GTKLIBS) \
++LDLIBS = -lm -lXi $(XLIB) $(EXTRA_LIBRARIES) $(GTKLIBS) \
 +			-lcbf \
 +			-lCQRlib \
 +			-lCVector \
-+			-lCNearTree -lforms -lgfortran
++			-lCNearTree -lgfortran
  
  
  #
-@@ -420,11 +413,11 @@
+@@ -425,11 +418,11 @@ $(NEARTREE_DIR):
  $(NEARTREE_DIR)/CNearTree.c: $(NEARTREE_DIR)
  #endif		  
  
@@ -54,9 +65,11 @@
  
  
  gtkwin.c: gtkui.h
---- Makefile.in	2009-07-14 18:39:18.000000000 +0200
-+++ Makefile.in.new	2009-07-25 14:08:11.000000000 +0200
-@@ -165,7 +165,7 @@
+diff --git a/src/Makefile.in b/src/Makefile.in
+index fc6d0af..bad90fc 100755
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -165,7 +165,7 @@ $(CBFLIBDIR)/lib/libcbf.a: $(CBFLIBDIR)
  
  all:		postdownload rasmol rastxt
  

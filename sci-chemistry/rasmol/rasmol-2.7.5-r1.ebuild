@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.ebuild,v 1.2 2010/03/07 12:32:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5-r1.ebuild,v 1.1 2010/03/31 20:43:32 jlec Exp $
 
 EAPI="3"
 
@@ -24,7 +24,6 @@ RDEPEND="
 	x11-libs/libXext
 	x11-libs/libXi
 	x11-libs/vte
-	>=x11-libs/xforms-1.0.91
 	dev-libs/cvector
 	sci-libs/cbflib
 	sci-libs/cqrlib
@@ -51,8 +50,6 @@ src_prepare() {
 	eprefixify Imakefile
 
 	xmkmf -DGTKWIN ${myconf}|| die "xmkmf failed with ${myconf}"
-
-	epatch "${FILESDIR}"/ldflags.patch
 }
 
 src_compile() {
@@ -62,6 +59,7 @@ src_compile() {
 		DEPTHDEF=-DTHIRTYTWOBIT \
 		CC="$(tc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
+		EXTRA_LDOPTIONS="${LDFLAGS}" \
 		|| die "make failed"
 }
 
