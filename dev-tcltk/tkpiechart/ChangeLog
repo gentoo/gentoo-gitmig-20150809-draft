@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/tkpiechart
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/ChangeLog,v 1.6 2007/02/22 01:34:55 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/ChangeLog,v 1.7 2010/03/31 20:14:24 jlec Exp $
+
+*tkpiechart-6.5-r1 (31 Mar 2010)
+
+  31 Mar 2010; Justin Lecher <jlec@gentoo.org> tkpiechart-6.5.ebuild,
+  +tkpiechart-6.5-r1.ebuild:
+  Make it respect multilib and fixed .htm installtion issue per 298194,
+  fixed quoting
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
