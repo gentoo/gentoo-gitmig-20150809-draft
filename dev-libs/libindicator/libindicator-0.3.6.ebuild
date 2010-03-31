@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/libindicator-0.3.6.ebuild,v 1.1 2010/03/31 17:11:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/libindicator-0.3.6.ebuild,v 1.2 2010/03/31 21:22:46 ssuominen Exp $
 
 EAPI=2
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="A set of symbols and convience functions that all indicators would like to use"
 HOMEPAGE="http://launchpad.net/libindicator/"
@@ -23,6 +23,12 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-missing_template.patch
+
+	sed -i \
+		-e 's:-Werror::' \
+		{libindicator,tests,tools}/Makefile.am || die
+
+	eautoreconf
 }
 
 src_configure() {
