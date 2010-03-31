@@ -1,8 +1,11 @@
 make sure all the flags in question force i386 and disable SSP
 
---- Makefile
-+++ Makefile
-@@ -10,6 +10,5 @@
+diff -Nuar --exclude '*.orig' memtest86-3.5.orig//Makefile memtest86-3.5//Makefile
+--- memtest86-3.5.orig//Makefile	2010-03-31 19:43:35.355817421 +0000
++++ memtest86-3.5//Makefile	2010-03-31 19:47:10.922462467 +0000
+@@ -8,10 +8,9 @@
+ #
+ FDISK=/dev/fd0
  
 -AS=as -32
 -CC=gcc
@@ -11,13 +14,30 @@ make sure all the flags in question force i386 and disable SSP
 -CFLAGS= -Wall -march=i486 -m32 -Os -fomit-frame-pointer -fno-builtin -ffreestanding -fPIC $(SMP_FL)
 +CFLAGS= -Wall -march=i486 -m32 -O1 -fomit-frame-pointer -fno-builtin -ffreestanding -fPIC -fno-stack-protector $(SMP_FL)
  
-@@ -28,3 +27,3 @@
+ OBJS= head.o reloc.o main.o test.o init.o lib.o patn.o screen_buffer.o \
+       config.o linuxbios.o memsize.o pci.o controller.o random.o extra.o \
+@@ -26,7 +25,7 @@
+ # symbols and then link it dynamically so I have full
+ # relocation information
  memtest_shared: $(OBJS) memtest_shared.lds Makefile
 -	$(LD) --warn-constructors --warn-common -static -T memtest_shared.lds \
 +	$(LD) --warn-constructors --warn-common -static -T memtest_shared.lds -m elf_i386 \
  	-o $@ $(OBJS) && \
-@@ -55,3 +54,3 @@
+ 	$(LD) -shared -Bsymbolic -T memtest_shared.lds -o $@ $(OBJS)
+ 
+@@ -53,7 +52,7 @@
+ 	$(CC) -c $(CFLAGS) -fno-strict-aliasing reloc.c
+ 
  test.o: test.c
 -	$(CC) -c -Wall -march=i486 -m32 -Os -fomit-frame-pointer -fno-builtin -ffreestanding test.c
 +	$(CC) -c $(CFLAGS:-fPIC=) -o $@ $<
  
+ clean:
+ 	rm -f *.o *.s *.iso memtest.bin memtest memtest_shared memtest_shared.bin
+@@ -72,3 +71,6 @@
+ dos: all
+ 	cat mt86+_loader memtest.bin > memtest.exe
+ 
++head.o: head.s
++bootsect.o: bootsect.s
++setup.o: setup.s
