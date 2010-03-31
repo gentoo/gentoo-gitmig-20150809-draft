@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.6_rc1.ebuild,v 1.1 2010/03/03 16:53:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.6_rc1.ebuild,v 1.2 2010/03/31 18:16:55 tampakrap Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ GUI_RDEPEND="
 	ayatana? ( dev-libs/libindicate-qt )
 	kde? (
 		>=kde-base/kdelibs-4.3
-		ayatana? ( kde-misc/plasma-indicatordisplay )
+		ayatana? ( kde-misc/plasma-widget-message-indicator )
 	)
 	phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
 	webkit? ( x11-libs/qt-webkit:4 )
