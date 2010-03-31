@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.151 2010/03/30 19:53:47 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.152 2010/03/31 22:22:33 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdeedu-meta-4.3.4.ebuild,
+  -kdeedu-meta-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdeedu-meta-4.4.2 (30 Mar 2010)
 

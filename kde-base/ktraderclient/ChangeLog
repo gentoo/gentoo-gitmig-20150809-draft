@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktraderclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktraderclient/ChangeLog,v 1.54 2010/03/30 21:42:19 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktraderclient/ChangeLog,v 1.55 2010/03/31 23:11:37 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -ktraderclient-4.3.4.ebuild,
+  -ktraderclient-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *ktraderclient-4.4.2 (30 Mar 2010)
 

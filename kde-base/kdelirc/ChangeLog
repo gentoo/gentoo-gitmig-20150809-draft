@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.98 2010/03/30 20:44:24 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.99 2010/03/31 22:25:03 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdelirc-4.3.4.ebuild,
+  -kdelirc-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdelirc-4.4.2 (30 Mar 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.68 2010/03/30 20:48:26 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.69 2010/03/31 22:28:14 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdepimlibs-4.3.4.ebuild,
+  -kdepimlibs-4.4.0.ebuild, -kdepimlibs-4.4.0-r1.ebuild:
+  Remove old KDE versions.
 
 *kdepimlibs-4.4.2 (30 Mar 2010)
 

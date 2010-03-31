@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-menu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.30 2010/03/30 19:49:27 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.31 2010/03/31 22:19:01 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdebase-menu-4.3.4.ebuild,
+  -kdebase-menu-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdebase-menu-4.4.2 (30 Mar 2010)
 

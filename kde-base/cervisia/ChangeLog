@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.142 2010/03/30 19:23:37 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.143 2010/03/31 22:00:16 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -cervisia-4.3.4.ebuild,
+  -cervisia-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *cervisia-4.4.2 (30 Mar 2010)
 

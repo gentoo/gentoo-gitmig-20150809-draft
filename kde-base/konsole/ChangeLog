@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.161 2010/03/30 21:23:12 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.162 2010/03/31 22:56:08 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -konsole-4.3.4.ebuild,
+  -konsole-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *konsole-4.4.2 (30 Mar 2010)
 

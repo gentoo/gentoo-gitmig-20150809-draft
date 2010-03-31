@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.136 2010/03/30 21:00:18 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.137 2010/03/31 22:37:34 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kfloppy-4.3.4.ebuild,
+  -kfloppy-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kfloppy-4.4.2 (30 Mar 2010)
 

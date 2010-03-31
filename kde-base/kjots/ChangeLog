@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.142 2010/03/30 21:09:42 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.143 2010/03/31 22:44:52 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kjots-4.3.4.ebuild,
+  -kjots-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kjots-4.4.2 (30 Mar 2010)
 

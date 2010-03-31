@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kspaceduel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.144 2010/03/30 21:34:55 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.145 2010/03/31 23:05:47 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kspaceduel-4.3.4.ebuild,
+  -kspaceduel-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kspaceduel-4.4.2 (30 Mar 2010)
 

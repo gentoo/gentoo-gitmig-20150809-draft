@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.192 2010/03/30 21:48:53 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.193 2010/03/31 23:16:36 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kwin-4.3.4-r1.ebuild,
+  -kwin-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kwin-4.4.2 (30 Mar 2010)
 

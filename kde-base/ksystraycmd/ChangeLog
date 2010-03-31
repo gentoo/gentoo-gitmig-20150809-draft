@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksystraycmd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.134 2010/03/30 21:39:45 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.135 2010/03/31 23:09:35 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -ksystraycmd-4.3.4.ebuild,
+  -ksystraycmd-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *ksystraycmd-4.4.2 (30 Mar 2010)
 

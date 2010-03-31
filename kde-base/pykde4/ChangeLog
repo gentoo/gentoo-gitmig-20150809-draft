@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.64 2010/03/30 22:03:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.65 2010/03/31 23:31:27 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -pykde4-4.3.4-r1.ebuild,
+  -pykde4-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *pykde4-4.4.2 (30 Mar 2010)
 

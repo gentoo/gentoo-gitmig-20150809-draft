@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.156 2010/03/30 19:48:08 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.157 2010/03/31 22:18:01 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdebase-data-4.3.4.ebuild,
+  -kdebase-data-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdebase-data-4.4.2 (30 Mar 2010)
 

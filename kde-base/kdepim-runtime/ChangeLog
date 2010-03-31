@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.5 2010/03/30 20:49:29 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.6 2010/03/31 22:28:59 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdepim-runtime-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdepim-runtime-4.4.2 (30 Mar 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/renamedlg-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-plugins/ChangeLog,v 1.44 2010/03/30 22:04:21 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-plugins/ChangeLog,v 1.45 2010/03/31 23:32:18 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org>
+  -renamedlg-plugins-4.3.4.ebuild, -renamedlg-plugins-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *renamedlg-plugins-4.4.2 (30 Mar 2010)
 

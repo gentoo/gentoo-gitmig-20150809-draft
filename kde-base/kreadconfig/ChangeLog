@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.125 2010/03/30 21:27:37 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.126 2010/03/31 23:00:28 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kreadconfig-4.3.4.ebuild,
+  -kreadconfig-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kreadconfig-4.4.2 (30 Mar 2010)
 

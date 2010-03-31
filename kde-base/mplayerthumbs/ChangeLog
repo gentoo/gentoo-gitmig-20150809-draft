@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.27 2010/03/30 21:58:01 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.28 2010/03/31 23:26:16 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -mplayerthumbs-4.3.4.ebuild,
+  -mplayerthumbs-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *mplayerthumbs-4.4.2 (30 Mar 2010)
 

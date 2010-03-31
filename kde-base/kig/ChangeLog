@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.154 2010/03/30 21:06:07 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.155 2010/03/31 22:42:07 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kig-4.3.4.ebuild,
+  -kig-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kig-4.4.2 (30 Mar 2010)
 

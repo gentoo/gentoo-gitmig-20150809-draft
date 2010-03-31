@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.31 2010/03/30 19:26:48 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.32 2010/03/31 22:02:44 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kabcclient-4.3.4.ebuild,
+  -kabcclient-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kabcclient-4.4.2 (30 Mar 2010)
 

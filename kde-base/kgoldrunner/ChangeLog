@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kgoldrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgoldrunner/ChangeLog,v 1.145 2010/03/30 21:03:24 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgoldrunner/ChangeLog,v 1.146 2010/03/31 22:40:03 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kgoldrunner-4.3.4.ebuild,
+  -kgoldrunner-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kgoldrunner-4.4.2 (30 Mar 2010)
 

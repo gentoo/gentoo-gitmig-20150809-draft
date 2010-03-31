@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.152 2010/03/30 21:05:11 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.153 2010/03/31 22:41:26 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -khotkeys-4.3.4.ebuild,
+  -khotkeys-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *khotkeys-4.4.2 (30 Mar 2010)
 

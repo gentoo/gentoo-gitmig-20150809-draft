@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.142 2010/03/30 20:55:03 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.143 2010/03/31 22:33:54 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdf-4.3.4.ebuild,
+  -kdf-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdf-4.4.2 (30 Mar 2010)
 

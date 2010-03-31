@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstartupconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.56 2010/03/30 21:37:37 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.57 2010/03/31 23:07:52 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kstartupconfig-4.3.4.ebuild,
+  -kstartupconfig-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kstartupconfig-4.4.2 (30 Mar 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.155 2010/03/30 20:59:52 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.156 2010/03/31 22:37:14 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kfind-4.3.4.ebuild,
+  -kfind-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kfind-4.4.2 (30 Mar 2010)
 

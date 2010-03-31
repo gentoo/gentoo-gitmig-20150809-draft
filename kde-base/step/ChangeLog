@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.47 2010/03/30 22:06:16 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.48 2010/03/31 23:34:56 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -step-4.3.4.ebuild,
+  -step-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *step-4.4.2 (30 Mar 2010)
 

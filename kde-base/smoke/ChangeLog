@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.97 2010/03/30 22:05:05 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.98 2010/03/31 23:32:57 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -smoke-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *smoke-4.4.2 (30 Mar 2010)
 

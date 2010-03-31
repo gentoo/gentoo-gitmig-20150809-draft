@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.29 2010/03/30 22:01:47 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.30 2010/03/31 23:29:44 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -plasma-runtime-4.3.4.ebuild,
+  -plasma-runtime-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *plasma-runtime-4.4.2 (30 Mar 2010)
 

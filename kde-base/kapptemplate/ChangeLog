@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.122 2010/03/30 19:31:01 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.123 2010/03/31 22:05:52 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kapptemplate-4.3.4.ebuild,
+  -kapptemplate-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kapptemplate-4.4.2 (30 Mar 2010)
 

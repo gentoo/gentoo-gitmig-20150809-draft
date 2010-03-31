@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/keditfiletype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.29 2010/03/30 20:57:51 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.30 2010/03/31 22:35:53 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -keditfiletype-4.3.4.ebuild,
+  -keditfiletype-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *keditfiletype-4.4.2 (30 Mar 2010)
 

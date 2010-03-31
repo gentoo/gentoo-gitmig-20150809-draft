@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knotify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.57 2010/03/30 21:19:44 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.58 2010/03/31 22:53:27 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -knotify-4.3.4.ebuild,
+  -knotify-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *knotify-4.4.2 (30 Mar 2010)
 

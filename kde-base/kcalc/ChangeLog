@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.147 2010/03/30 19:36:03 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.148 2010/03/31 22:09:51 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kcalc-4.3.4.ebuild,
+  -kcalc-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kcalc-4.4.2 (30 Mar 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.72 2010/03/30 22:08:15 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.73 2010/03/31 23:36:36 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -systemsettings-4.3.4.ebuild,
+  -systemsettings-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *systemsettings-4.4.2 (30 Mar 2010)
 

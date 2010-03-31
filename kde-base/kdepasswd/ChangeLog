@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.158 2010/03/30 20:47:00 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.159 2010/03/31 22:27:09 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdepasswd-4.3.4.ebuild,
+  -kdepasswd-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdepasswd-4.4.2 (30 Mar 2010)
 

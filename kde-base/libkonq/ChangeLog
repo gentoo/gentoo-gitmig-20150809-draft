@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.155 2010/03/30 21:54:18 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.156 2010/03/31 23:21:56 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -libkonq-4.3.4.ebuild,
+  -libkonq-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *libkonq-4.4.2 (30 Mar 2010)
 

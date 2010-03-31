@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.117 2010/03/30 20:52:03 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.118 2010/03/31 22:31:04 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdesdk-misc-4.3.4.ebuild,
+  -kdesdk-misc-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdesdk-misc-4.4.2 (30 Mar 2010)
 

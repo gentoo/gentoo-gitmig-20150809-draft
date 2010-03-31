@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.57 2010/03/30 21:49:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.58 2010/03/31 23:17:16 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kwrite-4.3.4.ebuild,
+  -kwrite-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kwrite-4.4.2 (30 Mar 2010)
 

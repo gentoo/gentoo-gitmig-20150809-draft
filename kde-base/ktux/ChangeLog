@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.141 2010/03/30 21:44:30 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.142 2010/03/31 23:13:17 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -ktux-4.3.4.ebuild,
+  -ktux-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *ktux-4.4.2 (30 Mar 2010)
 

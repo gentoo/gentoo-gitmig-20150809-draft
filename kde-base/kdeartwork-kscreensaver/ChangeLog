@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.159 2010/03/30 19:44:50 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.160 2010/03/31 22:15:44 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org>
+  -kdeartwork-kscreensaver-4.3.4.ebuild,
+  -kdeartwork-kscreensaver-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdeartwork-kscreensaver-4.4.2 (30 Mar 2010)
 

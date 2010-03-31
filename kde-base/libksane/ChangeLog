@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libksane
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.45 2010/03/30 21:55:02 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.46 2010/03/31 23:22:35 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -libksane-4.3.4.ebuild,
+  -libksane-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *libksane-4.4.2 (30 Mar 2010)
 

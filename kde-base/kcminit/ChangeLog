@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.137 2010/03/30 19:37:32 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.138 2010/03/31 22:10:52 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kcminit-4.3.4.ebuild,
+  -kcminit-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kcminit-4.4.2 (30 Mar 2010)
 

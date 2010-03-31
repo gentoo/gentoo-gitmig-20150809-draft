@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.144 2010/03/30 19:33:43 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.145 2010/03/31 22:07:55 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kbounce-4.3.4.ebuild,
+  -kbounce-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kbounce-4.4.2 (30 Mar 2010)
 

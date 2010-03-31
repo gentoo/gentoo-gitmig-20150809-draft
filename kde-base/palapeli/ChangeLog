@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/palapeli
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.5 2010/03/30 22:00:16 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.6 2010/03/31 23:28:23 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -palapeli-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *palapeli-4.4.2 (30 Mar 2010)
 

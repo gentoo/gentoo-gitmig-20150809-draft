@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.123 2010/03/30 21:54:40 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.124 2010/03/31 23:22:16 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -libkpgp-4.3.4.ebuild,
+  -libkpgp-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *libkpgp-4.4.2 (30 Mar 2010)
 

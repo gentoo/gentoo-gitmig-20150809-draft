@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.149 2010/03/30 20:54:11 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.150 2010/03/31 22:33:14 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdeutils-meta-4.3.4.ebuild,
+  -kdeutils-meta-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kdeutils-meta-4.4.2 (30 Mar 2010)
 

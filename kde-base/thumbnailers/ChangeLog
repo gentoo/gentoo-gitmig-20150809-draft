@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/thumbnailers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.27 2010/03/30 22:08:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.28 2010/03/31 23:36:56 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -thumbnailers-4.3.4.ebuild,
+  -thumbnailers-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *thumbnailers-4.4.2 (30 Mar 2010)
 

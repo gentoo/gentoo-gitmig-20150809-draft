@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.66 2010/03/30 21:59:27 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.67 2010/03/31 23:27:38 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -okular-4.3.4.ebuild,
+  -okular-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *okular-4.4.2 (30 Mar 2010)
 

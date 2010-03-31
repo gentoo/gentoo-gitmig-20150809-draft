@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kblackbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.144 2010/03/30 19:32:48 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/ChangeLog,v 1.145 2010/03/31 22:07:13 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kblackbox-4.3.4.ebuild,
+  -kblackbox-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kblackbox-4.4.2 (30 Mar 2010)
 

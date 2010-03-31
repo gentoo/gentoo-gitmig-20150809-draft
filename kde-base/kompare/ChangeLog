@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.140 2010/03/30 21:21:52 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.141 2010/03/31 22:55:08 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kompare-4.3.4.ebuild,
+  -kompare-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kompare-4.4.2 (30 Mar 2010)
 

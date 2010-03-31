@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kapman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.37 2010/03/30 19:30:07 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.38 2010/03/31 22:05:07 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kapman-4.3.4.ebuild,
+  -kapman-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kapman-4.4.2 (30 Mar 2010)
 

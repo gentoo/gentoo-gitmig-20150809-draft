@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.173 2010/03/30 21:38:53 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.174 2010/03/31 23:08:54 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -ksysguard-4.3.4.ebuild,
+  -ksysguard-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *ksysguard-4.4.2 (30 Mar 2010)
 

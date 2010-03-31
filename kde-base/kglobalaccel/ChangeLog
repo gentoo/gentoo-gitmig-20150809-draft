@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kglobalaccel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.30 2010/03/30 21:02:57 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.31 2010/03/31 22:39:44 spatz Exp $
+
+  31 Mar 2010; Dror Levin <spatz@gentoo.org> -kglobalaccel-4.3.4.ebuild,
+  -kglobalaccel-4.4.0.ebuild:
+  Remove old KDE versions.
 
 *kglobalaccel-4.4.2 (30 Mar 2010)
 
