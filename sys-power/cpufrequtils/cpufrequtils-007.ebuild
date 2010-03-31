@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-007.ebuild,v 1.1 2010/01/16 23:57:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-007.ebuild,v 1.2 2010/03/31 21:32:11 abcd Exp $
+
+EAPI=3
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,24 +12,24 @@ SRC_URI="mirror://kernel/linux/utils/kernel/cpufreq/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug nls"
 
 DEPEND="sys-fs/sysfsutils"
 
 ft() { use $1 && echo true || echo false ; }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-007-build.patch
 	epatch "${FILESDIR}"/${PN}-007-nls.patch #205576 #292246
+}
 
+src_configure() {
 	export DEBUG=$(ft debug) V=true NLS=$(ft nls)
 	unset bindir sbindir includedir localedir confdir
-	export mandir="/usr/share/man"
-	export libdir="/usr/$(get_libdir)"
-	export docdir="/usr/share/doc/${PF}"
+	export mandir="${EPREFIX}/usr/share/man"
+	export libdir="${EPREFIX}/usr/$(get_libdir)"
+	export docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
 
 src_compile() {
@@ -37,6 +39,8 @@ src_compile() {
 		AR="$(tc-getAR)" \
 		STRIP=: \
 		RANLIB="$(tc-getRANLIB)" \
+		LIBTOOL="${EPREFIX}"/usr/bin/libtool \
+		INSTALL="${EPREFIX}"/usr/bin/install \
 		|| die
 }
 

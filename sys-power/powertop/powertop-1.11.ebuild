@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.11.ebuild,v 1.7 2010/03/08 20:57:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.11.ebuild,v 1.8 2010/03/31 21:35:31 abcd Exp $
+
+EAPI=3
 
 inherit toolchain-funcs eutils
 
@@ -10,29 +12,26 @@ SRC_URI="http://www.lesswatts.org/projects/powertop/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~sparc x86"
+KEYWORDS="amd64 arm ppc ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="unicode"
 
-DEPEND="sys-libs/ncurses
+DEPEND="sys-libs/ncurses[unicode?]
 	sys-devel/gettext"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i '/${CFLAGS}/s:$: ${LDFLAGS}:' Makefile
 	use unicode || sed -i 's:-lncursesw:-lncurses:' Makefile
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC
-	emake || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${ED}" || die
 	dodoc Changelog README
-	gunzip "${D}"/usr/share/man/man1/powertop.1.gz
+	gunzip "${ED}"/usr/share/man/man1/powertop.1.gz
 }
 
 pkg_postinst() {
