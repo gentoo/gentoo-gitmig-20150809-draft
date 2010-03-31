@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.3.ebuild,v 1.7 2005/04/21 20:09:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.3.ebuild,v 1.8 2010/03/31 13:07:29 idl0r Exp $
 
 inherit python
 
@@ -20,7 +20,7 @@ src_install() {
 	python_version
 	dodir /usr/lib/python${PYVER}/site-packages/metagen
 	dodir /usr/bin
-	cp metagen ${D}/usr/lib/python${PYVER}/site-packages/metagen/
-	dosym ${D}/usr/lib/python${PYVER}/site-packages/metagen/metagen /usr/bin/metagen
+	cp metagen "${D}"/usr/lib/python${PYVER}/site-packages/metagen/
+	dosym "${D}"/usr/lib/python${PYVER}/site-packages/metagen/metagen /usr/bin/metagen
 	doman metagen.1.gz
 }
