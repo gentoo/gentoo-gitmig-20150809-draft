@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.170 2010/03/30 20:27:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.171 2010/03/31 16:34:59 fauli Exp $
+
+  31 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  sun-jre-bin-1.6.0.19.ebuild:
+  stable x86, security bug 306579
 
 *sun-jre-bin-1.6.0.19 (30 Mar 2010)
 
