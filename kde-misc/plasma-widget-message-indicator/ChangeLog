@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/plasma-widget-message-indicator
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-message-indicator/ChangeLog,v 1.1 2010/03/31 18:12:05 tampakrap Exp $
+
+*plasma-widget-message-indicator-0.5.2 (31 Mar 2010)
+
+  31 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +plasma-widget-message-indicator-0.5.2.ebuild, +metadata.xml:
+  Initial commit, moved from kde overlay, thanks to Dennis Schridde. This is
+  kde-misc/plasma-indicatordisplay's new name
+
