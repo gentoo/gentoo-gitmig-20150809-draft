@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.8.ebuild,v 1.9 2010/01/15 09:39:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.8.ebuild,v 1.10 2010/03/31 12:27:43 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit libtool
 
 DESCRIPTION="C-based libraries and GStreamer plugins for the Dirac video codec"
@@ -25,7 +25,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		--disable-gtk-doc
+		--disable-gtk-doc \
+		--with-html-dir="${EPREFIX}/usr/share/doc/${PF}/html"
 }
 
 src_install() {
