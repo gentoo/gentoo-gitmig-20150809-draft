@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/toycars
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.15 2009/11/25 14:27:06 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.16 2010/03/31 19:56:12 tupone Exp $
+
+  31 Mar 2010; Tupone Alfredo <tupone@gentoo.org> toycars-0.3.10.ebuild:
+  Rename corner.map to fix bug #311811 by Robert Cernansky
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> toycars-0.3.10.ebuild:
   amd64/x86 stable, bug #294341

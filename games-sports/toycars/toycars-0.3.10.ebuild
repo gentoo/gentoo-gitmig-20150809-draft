@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.10.ebuild,v 1.4 2009/11/25 14:27:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.10.ebuild,v 1.5 2010/03/31 19:56:12 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -23,6 +23,7 @@ DEPEND="media-libs/libsdl[video]
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+	mv data/tracks/Corner/{c,C}orner.map
 }
 
 src_configure() {
