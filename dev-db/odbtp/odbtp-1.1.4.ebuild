@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/odbtp/odbtp-1.1.4.ebuild,v 1.2 2006/11/05 20:46:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/odbtp/odbtp-1.1.4.ebuild,v 1.3 2010/03/31 20:44:11 mabi Exp $
 
 inherit eutils
 
@@ -22,6 +22,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# respect $CC (bug #243768)
+	tc-export CC
 	econf || die "econf failed"
 	emake -j1 || die "emake failed"
 }
