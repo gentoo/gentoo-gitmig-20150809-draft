@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.28 2010/03/07 18:45:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.29 2010/03/31 23:19:39 robbat2 Exp $
+
+  31 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  open-iscsi-2.0.871-r1.ebuild, open-iscsi-2.0.871.3.ebuild:
+  CONFIG_CHECK_MODULES should continue to exist for the as-module sanity
+  check.
 
 *open-iscsi-2.0.871.3 (07 Mar 2010)
 
