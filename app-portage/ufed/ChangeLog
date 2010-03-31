@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.79 2010/03/31 13:37:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.80 2010/03/31 13:54:12 ssuominen Exp $
+
+  31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> ufed-0.40-r11.ebuild:
+  Don't use econf for non-autoconf based ./configure script.
 
   31 Mar 2010; Christian Ruppert <idl0r@gentoo.org> ufed-0.40-r11.ebuild:
   Don't run configure twice also use default src_compile since it does the same.

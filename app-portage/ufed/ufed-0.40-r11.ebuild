@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40-r11.ebuild,v 1.2 2010/03/31 13:37:37 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.40-r11.ebuild,v 1.3 2010/03/31 13:54:12 ssuominen Exp $
 
 EAPI=2
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org/"
@@ -30,6 +30,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-termsize.patch
 	epatch "${FILESDIR}"/${P}-multiple-inheritance.patch
 	epatch "${FILESDIR}"/${P}-termsize-2.patch
+}
+
+src_configure() {
+	tc-export CC
+	./configure || die
 }
 
 src_install() {
