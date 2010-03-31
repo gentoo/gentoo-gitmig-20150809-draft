@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.6.5.1-r1.ebuild,v 1.2 2010/03/24 22:04:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.6.5.1-r1.ebuild,v 1.3 2010/03/31 07:15:31 robbat2 Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ else
 	EGIT_BRANCH="master"
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
 	# EGIT_REPO_URI="http://www.kernel.org/pub/scm/git/git.git"
-	KEYWORDS="~ppc64"
+	KEYWORDS=""
 fi
 
 LICENSE="GPL-2"
