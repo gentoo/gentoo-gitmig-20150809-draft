@@ -1,8 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.25 2010/03/16 12:51:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.26 2010/03/31 16:02:38 caster Exp $
 
 # This file requires >=portage-2.1.1
+
+# Vlastimil Babka <caster@gentoo.org> (31 Mar 2010)
+>=dev-java/sun-jdk-1.6 -nsplugin
+>=dev-java/sun-jre-bin-1.6 -nsplugin
+>=dev-java/ibm-jdk-bin-1.5 -nsplugin 
+>=dev-java/ibm-jre-bin-1.5 -nsplugin
 
 # Jim Ramsay <lack@gentoo.org> (16 March 2010)
 # The '64bit' and '32bit' USE flags are for amd64 only
@@ -38,10 +44,6 @@ dev-python/kaa-base -tls
 # Serkan Kaba <serkan@gentoo.org> (20 Jul 2008)
 app-text/enchant -zemberek
 
->=dev-java/sun-jdk-1.5 -nsplugin
->=dev-java/sun-jre-bin-1.5 -nsplugin
->=dev-java/ibm-jdk-bin-1.5 -nsplugin 
->=dev-java/ibm-jre-bin-1.5 -nsplugin
 x11-terms/eterm sse2
 
 # Christian Faulhammer <opfer@gentoo.org> (14 Jan 2008)

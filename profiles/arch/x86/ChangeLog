@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.34 2010/03/16 12:51:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.35 2010/03/31 16:02:38 caster Exp $
+
+  31 Mar 2010; Vlastimil Babka <caster@gentoo.org> package.use.mask:
+  Stop unmasking nsplugin of sun-jdk and sun-jre-bin 1.5 due to security
+  #306579.
 
   16 Mar 2010; Jim Ramsay <lack@gentoo.org> package.use.mask:
   Oops, got my binary backwards. Really masking this time
