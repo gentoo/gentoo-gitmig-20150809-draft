@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r2.ebuild,v 1.1 2010/03/30 17:32:44 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r3.ebuild,v 1.1 2010/03/31 18:50:24 billie Exp $
 
 EAPI=2
 
@@ -124,6 +124,10 @@ src_prepare() {
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
 	epatch "${FILESDIR}"/${P}-udev-attrs.patch
 
+	# Fix crash when trying to close the systray
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/486698
+	epatch "${FILESDIR}"/${P}-systray-segfault.patch
+
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
 		-e "s:file('/etc/issue', 'r').read():'Gentoo':" \
@@ -243,9 +247,6 @@ pkg_postinst() {
 	elog
 	elog "If your device is connected using USB, users will need to be in the lp group to"
 	elog "access it."
-	elog
-	elog "This release doesn't use an init script anymore, so you should probably do a"
-	elog "'rc-update del hplip' if you are updating from an old version."
 	elog
 	elog "Starting with versions of hplip >=3.9.8 mDNS is the default network search"
 	elog "mechanism. To make use of it you need to activate the zeroconf flag on cups."

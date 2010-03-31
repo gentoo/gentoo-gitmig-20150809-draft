@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.152 2010/03/30 17:32:44 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.153 2010/03/31 18:50:24 billie Exp $
+
+*hplip-3.10.2-r3 (31 Mar 2010)
+
+  31 Mar 2010; Daniel Pielmeier <billie@gentoo.org> -files/70-hpmud.rules,
+  -hplip-3.10.2-r2.ebuild, +hplip-3.10.2-r3.ebuild,
+  +files/hplip-3.10.2-systray-segfault.patch:
+  Revision bump. Add systray segfault patch from upstream reported by netfab
+  in bug #312301. Remove needless rules file.
 
 *hplip-3.10.2-r2 (30 Mar 2010)
 
