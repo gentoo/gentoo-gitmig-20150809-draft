@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.2-r1.ebuild,v 1.5 2010/03/08 22:20:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.3.ebuild,v 1.1 2010/03/31 23:01:18 tgurr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib pam versionator
+inherit autotools eutils flag-o-matic multilib pam versionator
 
 MY_P=${P/_}
 
@@ -15,12 +15,11 @@ SRC_URI="mirror://easysw/${PN}/${PV}/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static +tiff X xinetd"
+IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static +tiff +usb X xinetd"
 
 COMMON_DEPEND="
 	app-text/libpaper
 	dev-libs/libgcrypt
-	dev-libs/libusb
 	acl? (
 		kernel_linux? (
 			sys-apps/acl
@@ -43,6 +42,7 @@ COMMON_DEPEND="
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
 	tiff? ( >=media-libs/tiff-3.5.5 )
+	usb? ( dev-libs/libusb )
 	xinetd? ( sys-apps/xinetd )
 "
 DEPEND="${COMMON_DEPEND}"
@@ -53,10 +53,7 @@ RDEPEND="${COMMON_DEPEND}
 	X? ( x11-misc/xdg-utils )
 "
 PDEPEND="
-	|| (
-		app-text/ghostscript-gpl[cups]
-		app-text/ghostscript-gnu[cups]
-	)
+	app-text/ghostscript-gpl[cups]
 	>=app-text/poppler-0.12.3-r3[utils]
 "
 
@@ -69,7 +66,7 @@ RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
-LANGS="da de es eu fi fr it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
+LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
@@ -81,13 +78,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# remove default optimizations and do not strip by default
+	sed -e 's:OPTIM="-Os -g":OPTIM="":' \
+		-e 's:INSTALL_STRIP="-s":INSTALL_STRIP="":' \
+		-i config-scripts/cups-compiler.m4
+
 	# create a missing symlink to allow https printing via IPP, bug #217293
 	epatch "${FILESDIR}/${PN}-1.4.0-backend-https.patch"
 
-	# CVE-2009-3553: Use-after-free (crash) due improper reference counting
-	# in abstract file descriptors handling interface
-	# upstream bug STR #3200
-	epatch "${FILESDIR}/${PN}-1.4.2-str3200.patch"
+	AT_M4DIR=config-scripts eaclocal
+	eautoconf
 }
 
 src_configure() {
@@ -129,15 +129,14 @@ src_configure() {
 		$(use_enable slp) \
 		$(use_enable static) \
 		$(use_enable tiff) \
-		$(use_enable xinetd xinetd /etc/xinetd.d) \
+		$(use_enable usb libusb) \
 		$(use_with java) \
 		$(use_with perl) \
 		$(use_with php) \
 		$(use_with python) \
+		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
-		--enable-libusb \
 		--enable-threads \
-		--enable-pdftops \
 		--disable-dnssd \
 		${myconf}
 
