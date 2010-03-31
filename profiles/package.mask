@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11399 2010/03/30 22:14:36 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11400 2010/03/31 14:46:57 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Theo Chatzimichos <tampakrap@gentoo.org> (31 Mar 2010)
+# Mask KOffice 2.1.2 until it is released
+=app-office/karbon-2.1.2
+=app-office/kchart-2.1.2
+=app-office/koffice-data-2.1.2
+=app-office/koffice-libs-2.1.2
+=app-office/kplato-2.1.2
+=app-office/kpresenter-2.1.2
+=app-office/krita-2.1.2
+=app-office/kspread-2.1.2
+=app-office/kword-2.1.2
+=app-office/koffice-l10n-2.1.2
+=app-office/koffice-meta-2.1.2
 
 # Mounir Lamouri <volkmar@gentoo.org> (24 Mar 2010)
 # Masked because breaking backward compatibility and still not needed.
