@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.1.ebuild,v 1.2 2009/11/22 21:30:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.1.ebuild,v 1.3 2010/03/31 18:06:59 solar Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ipv6 kerberos +nfsv3 +nfsv4 tcpd"
+IUSE="ipv6 kerberos +nfsv3 +nfsv4 tcpd elibc_glibc"
 
 # kth-krb doesn't provide the right include
 # files, and nfs-utils doesn't build against heimdal either,
