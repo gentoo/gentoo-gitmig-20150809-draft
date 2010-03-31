@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.5.18.ebuild,v 1.1 2010/03/16 06:24:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.5.18.ebuild,v 1.2 2010/03/31 15:20:22 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -27,7 +27,8 @@ ruby_add_rdepend "
 	>=dev-ruby/highline-1.2.7"
 ruby_add_bdepend test "dev-ruby/mocha"
 
-RDEPEND="!dev-ruby/capistrano-launcher"
+RDEPEND="${RDEPEND}
+	!dev-ruby/capistrano-launcher"
 
 each_ruby_prepare() {
 	# Remove Jeweler check_dependencies task
