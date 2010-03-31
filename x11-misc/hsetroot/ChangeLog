@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/hsetroot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hsetroot/ChangeLog,v 1.11 2010/01/10 18:31:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hsetroot/ChangeLog,v 1.12 2010/03/31 18:29:16 armin76 Exp $
+
+  31 Mar 2010; Raúl Porcel <armin76@gentoo.org> hsetroot-1.0.2.ebuild:
+  Add ~alpha wrt #312305
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   hsetroot-1.0.2.ebuild:
