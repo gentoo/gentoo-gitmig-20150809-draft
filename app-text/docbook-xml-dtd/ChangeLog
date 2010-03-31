@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xml-dtd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.75 2010/02/24 09:31:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.76 2010/03/31 07:04:13 phajdan.jr Exp $
+
+  31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  docbook-xml-dtd-4.4-r2.ebuild, docbook-xml-dtd-4.5-r1.ebuild:
+  x86 stable wrt bug #309797
 
   24 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   docbook-xml-dtd-4.3-r1.ebuild:
