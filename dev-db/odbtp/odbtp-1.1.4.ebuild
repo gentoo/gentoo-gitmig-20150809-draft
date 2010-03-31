@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/odbtp/odbtp-1.1.4.ebuild,v 1.3 2010/03/31 20:44:11 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/odbtp/odbtp-1.1.4.ebuild,v 1.4 2010/03/31 21:39:04 ssuominen Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="ODBTP is a fast, efficient TCP/IP protocol for connecting to Win32-based databases from any platform."
 HOMEPAGE="http://odbtp.sourceforge.net/"
