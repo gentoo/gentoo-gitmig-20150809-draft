@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cel
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.26 2009/07/24 07:52:03 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.27 2010/03/31 09:20:30 phajdan.jr Exp $
+
+  31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> cel-1.2.1.ebuild:
+  x86 stable wrt bug #309017
 
   24 Jul 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/cel-1.2.1-glibc210.patch, cel-1.2.1.ebuild:
