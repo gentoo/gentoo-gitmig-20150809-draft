@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.20 2010/01/19 16:23:00 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.21 2010/03/31 07:44:20 phajdan.jr Exp $
+
+  31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> popfile-1.1.1.ebuild:
+  x86 stable wrt bug #310707
 
   19 Jan 2010; Dawid Węgliński <cla@gentoo.org> popfile-1.0.1.ebuild:
   Remove dohtml call on missing files #297137
