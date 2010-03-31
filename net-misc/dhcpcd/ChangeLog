@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.277 2010/03/02 18:14:07 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.278 2010/03/31 18:03:50 solar Exp $
+
+  31 Mar 2010; <solar@gentoo.org> dhcpcd-4.0.15.ebuild, dhcpcd-5.0.4.ebuild,
+  dhcpcd-5.0.5.ebuild, dhcpcd-5.0.6.ebuild, dhcpcd-5.1.0.ebuild,
+  dhcpcd-5.1.1.ebuild, dhcpcd-5.1.2.ebuild, dhcpcd-5.1.3.ebuild,
+  dhcpcd-5.1.3-r1.ebuild, dhcpcd-5.1.4.ebuild, dhcpcd-5.1.5.ebuild,
+  dhcpcd-5.2.1.ebuild:
+  - elibc_glibc has to be defined in IUSE= for profiles that are unable to
+  use.force that flag bug #312085
 
 *dhcpcd-5.2.1 (02 Mar 2010)
 

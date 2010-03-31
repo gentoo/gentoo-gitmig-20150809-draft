@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.15.ebuild,v 1.9 2009/12/28 18:41:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.15.ebuild,v 1.10 2010/03/31 18:03:50 solar Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ LICENSE="BSD-2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 
 SLOT="0"
-IUSE="+compat +zeroconf"
+IUSE="+compat +zeroconf elibc_glibc"
 
 DEPEND=""
 PROVIDE="virtual/dhcpc"
