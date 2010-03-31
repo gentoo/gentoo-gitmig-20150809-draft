@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/php-docs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.42 2007/12/11 16:54:25 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.43 2010/03/31 22:02:32 mabi Exp $
+
+*php-docs-20100326 (31 Mar 2010)
+
+  31 Mar 2010; <mabi@gentoo.org> +php-docs-20100326.ebuild:
+  bump to latest (bug #254070), now uses phps mirrors (thanks to robbat2)
 
   11 Dec 2007; nixnut <nixnut@gentoo.org> php-docs-20071125-r2.ebuild:
   Stable on ppc wrt bug 201438
