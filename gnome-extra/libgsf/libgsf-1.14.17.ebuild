@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.17.ebuild,v 1.1 2010/02/14 23:55:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.17.ebuild,v 1.2 2010/03/31 21:01:39 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -37,7 +37,9 @@ DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-PDEPEND="gnome? ( media-gfx/imagemagick )"
+PDEPEND="gnome? ( || (
+	media-gfx/imagemagick
+	media-gfx/graphicsmagick[imagemagick] ) )"
 
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
 
