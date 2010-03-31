@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.246 2010/03/23 20:20:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.247 2010/03/31 18:10:01 solar Exp $
+
+  31 Mar 2010; <solar@gentoo.org> busybox-1.14.2.ebuild,
+  busybox-1.15.2.ebuild, busybox-1.15.3.ebuild, busybox-1.16.0.ebuild:
+  - elibc_glibc has to be defined in IUSE= for profiles that are unable to
+  use.force that flag bug #312085
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> busybox-1.15.3.ebuild:
   stable ppc, bug 305619
