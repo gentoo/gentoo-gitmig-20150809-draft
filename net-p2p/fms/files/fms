@@ -1,11 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/files/fms,v 1.3 2009/02/12 18:07:25 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/files/fms,v 1.4 2010/03/31 19:19:27 tommy Exp $
+
+# Check for OpenRC/Baselayout 2 - see bug #270646
+is_openrc() {
+    [ -f /lib/librc.so -o -f /etc/init.d/sysfs -o -f /lib/rc/version ]
+}
 
 start() {
 	ebegin "Starting FMS"
-	if [[ -f /etc/init.d/sysfs ]]; then
+	if is_openrc; then
 		start-stop-daemon -S -u freenet:freenet -d /var/freenet/fms -b -x /usr/bin/fms
 		eend $?
 	else
@@ -17,7 +22,7 @@ start() {
 
 stop() {
 	ebegin "Stopping FMS"
-	if [[ -f /etc/init.d/sysfs ]]; then
+	if is_openrc; then
 		start-stop-daemon -K -u freenet:freenet -d /var/freenet/fms /usr/bin/fms
 		eend $?
 	else
