@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.14 2010/03/07 14:42:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.15 2010/03/31 07:56:24 phajdan.jr Exp $
+
+  31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> xmlc-2.3.1.ebuild:
+  x86 stable wrt bug #308239
 
   07 Mar 2010; Petteri Räty <betelgeuse@gentoo.org> xmlc-2.3.1.ebuild:
   Fix documentation installation for bug #305573 and migrate to EAPI 2.
