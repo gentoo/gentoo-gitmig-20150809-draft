@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20090407.ebuild,v 1.2 2010/03/31 19:45:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20090407.ebuild,v 1.3 2010/03/31 19:49:52 jlec Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils
@@ -36,7 +36,7 @@ src_compile() {
 		|| die "libf2c.so failed"
 
 	# Clean up files so we can recompile without PIC for the static lib
-	if use static; then
+	if use static-libs; then
 		rm *.o || die "clean failed"
 		emake \
 			-f makefile.u \
@@ -50,7 +50,7 @@ src_compile() {
 src_install () {
 	dolib libf2c.so.2 || die "dolib failed"
 	dosym libf2c.so.2 /usr/$(get_libdir)/libf2c.so
-	if use static; then
+	if use static-libs; then
 		dolib.a libf2c.a || die "dolib.a failed"
 	fi
 	insinto /usr/include
