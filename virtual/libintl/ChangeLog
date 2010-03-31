@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libintl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.9 2010/01/11 11:05:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.10 2010/03/31 17:52:49 solar Exp $
+
+  31 Mar 2010; <solar@gentoo.org> libintl-0.ebuild:
+  - elibc_glibc has to be defined in IUSE= for profiles that are unable to
+  use.force that flag bug #312085
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> libintl-0.ebuild:
   Set empty HOMEPAGE and LICENSE.
