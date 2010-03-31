@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gejengel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.7 2010/02/23 08:08:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.8 2010/03/31 10:05:35 ssuominen Exp $
+
+  31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> gejengel-0.1.2.ebuild:
+  Fix imagemagick deps to allow both "cxx" and "nocxx".
 
   23 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> gejengel-0.1.2.ebuild:
   Fix lastfmlib to at least 0.4.0 per configure.ac.
