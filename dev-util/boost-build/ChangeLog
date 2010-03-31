@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.52 2010/03/27 10:16:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.53 2010/03/31 18:34:22 armin76 Exp $
+
+  31 Mar 2010; Raúl Porcel <armin76@gentoo.org> boost-build-1.41.0.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #306335
 
   27 Mar 2010; Pacho Ramos <pacho@gentoo.org> boost-build-1.41.0.ebuild:
   amd64 stable, security bug 305195
