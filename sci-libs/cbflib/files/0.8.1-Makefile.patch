@@ -23,7 +23,7 @@ index e5912ce..cfc658a 100644
  $(SOLIB)/libcbf.so: $(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
  	$(CC) $(CFLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(SOURCE)
 -	$(CC) -o $@ *.o $(SOLDFLAGS)
-+	$(CC) $(LDFLAGS) -Wl,-soname,libcbf.so.0.8 $(SOCFLAGS) $(SOLDFLAGS) -o $@ *.o -lgfortran
++	$(CC) $(LDFLAGS) -Wl,-soname,libcbf.so.0.8 $(SOCFLAGS) $(SOLDFLAGS) -o $@ *.o -lgfortran -lm
  	rm *.o
  
  #
@@ -32,7 +32,7 @@ index e5912ce..cfc658a 100644
  $(SOLIB)/libimg.so: $(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
  	$(CC) $(CFLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(EXAMPLES)/img.c
 -	$(CC) -o $@ *.o $(SOLDFLAGS)
-+	$(CC) $(LDFLAGS) -Wl,-soname,libimg.so.0.8 $(SOLDFLAGS) -o $@ *.o
++	$(CC) $(LDFLAGS) -Wl,-soname,libimg.so.0.8 $(SOLDFLAGS) -o $@ *.o -lm
  	rm *.o
  
  #

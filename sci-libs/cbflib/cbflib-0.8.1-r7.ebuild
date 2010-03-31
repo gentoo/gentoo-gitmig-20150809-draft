@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.8.1-r6.ebuild,v 1.2 2010/03/07 17:02:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.8.1-r7.ebuild,v 1.1 2010/03/31 20:25:10 jlec Exp $
 
 EAPI="3"
 
