@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.8.ebuild,v 1.2 2007/10/13 11:39:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.7.8.ebuild,v 1.3 2010/03/31 13:12:08 idl0r Exp $
 
 DESCRIPTION="dynamic deltup client"
 HOMEPAGE="http://linux01.gwdg.de/~nlissne/"
@@ -14,8 +14,8 @@ RDEPEND="app-portage/deltup
 	dev-util/bdelta"
 
 src_install () {
-	sed -i -e "s:/bin/sh:/bin/bash:" ${WORKDIR}/getdelta.sh
-	dobin ${WORKDIR}/getdelta.sh
+	sed -i -e "s:/bin/sh:/bin/bash:" "${WORKDIR}"/getdelta.sh || die
+	dobin "${WORKDIR}"/getdelta.sh || die
 }
 
 pkg_postinst() {
@@ -24,8 +24,8 @@ pkg_postinst() {
 	elog "into your /etc/make.conf to make use of getdelta"
 
 	# make sure permissions are ok
-	touch ${ROOT}/var/log/getdelta.log
-	mkdir -p ${ROOT}/etc/deltup
-	chown -R portage:portage ${ROOT}/{var/log/getdelta.log,etc/deltup}
-	chmod -R ug+rwX ${ROOT}/{var/log/getdelta.log,etc/deltup}
+	touch "${ROOT}"/var/log/getdelta.log
+	mkdir -p "${ROOT}"/etc/deltup
+	chown -R portage:portage "${ROOT}"/{var/log/getdelta.log,etc/deltup}
+	chmod -R ug+rwX "${ROOT}"/{var/log/getdelta.log,etc/deltup}
 }

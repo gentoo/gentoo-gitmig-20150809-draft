@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/getdelta
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.16 2007/10/13 11:39:03 genstef Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.17 2010/03/31 13:12:07 idl0r Exp $
+
+  31 Mar 2010; Christian Ruppert <idl0r@gentoo.org> getdelta-0.7.8.ebuild:
+  Fix repoman complains about unquoted variables. Add missing die
+  statements.
 
   13 Oct 2007; Stefan Schweizer <genstef@gentoo.org> -getdelta-0.7.6.ebuild,
   -getdelta-0.7.7.ebuild, getdelta-0.7.8.ebuild:
