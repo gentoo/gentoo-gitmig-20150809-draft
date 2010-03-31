@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.3.ebuild,v 1.1 2010/03/31 13:30:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.3.ebuild,v 1.2 2010/03/31 13:33:52 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -37,9 +37,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}-1.0.6-init.d acpid || die
 	newconfd "${FILESDIR}"/${PN}-1.0.6-conf.d acpid || die
-
-	insinto /usr/share/doc/${PF}/examples
-	doins -r samples/* || die
 
 	prepalldocs
 }
