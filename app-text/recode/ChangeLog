@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.76 2010/03/27 09:24:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.77 2010/03/31 18:54:12 armin76 Exp $
+
+  31 Mar 2010; Raúl Porcel <armin76@gentoo.org> recode-3.6_p16.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #307889
 
 *recode-3.6_p17 (27 Mar 2010)
 
