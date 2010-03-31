@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.19 2008/02/29 18:07:44 carlo Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.20 2010/03/31 20:51:08 mr_bones_ Exp $
+
+  31 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  maelstrom-3.0.6-r1.ebuild:
+  EAPI=2; add use-deps for libsdl (bug #312505)
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> maelstrom-3.0.6-r1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

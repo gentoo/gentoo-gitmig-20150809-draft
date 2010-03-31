@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.10 2008/02/29 18:07:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.11 2010/03/31 20:51:08 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P=Maelstrom-${PV}
@@ -14,15 +15,12 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.1.5
-	>=media-libs/sdl-net-1.2.2"
+DEPEND="media-libs/libsdl[audio,joystick,video]
+	media-libs/sdl-net"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PF}-security.patch \
 		"${FILESDIR}"/${P}-64bits.patch \
@@ -44,7 +42,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc Changelog README* Docs/{Maelstrom-Announce,*FAQ,MaelstromGPL_press_release,*.Paper,Technical_Notes*}
 	newicon "${D}${GAMES_DATADIR}"/Maelstrom/icon.xpm maelstrom.xpm
 	make_desktop_entry Maelstrom "Maelstrom" maelstrom
