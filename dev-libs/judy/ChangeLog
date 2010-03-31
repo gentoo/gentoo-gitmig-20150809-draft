@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.30 2009/12/27 11:06:41 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.31 2010/03/31 07:21:56 phajdan.jr Exp $
+
+  31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> judy-1.0.5.ebuild:
+  x86 stable wrt bug #310023
 
 *judy-1.0.5 (27 Dec 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmaa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.17 2010/01/14 21:31:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.18 2010/03/31 07:23:56 phajdan.jr Exp $
+
+  31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> libmaa-1.2.0.ebuild:
+  x86 stable wrt bug #310023
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libmaa-1.2.0.ebuild:
   Transfer Prefix keywords
