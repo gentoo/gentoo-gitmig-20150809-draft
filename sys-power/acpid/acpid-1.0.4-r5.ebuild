@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r5.ebuild,v 1.3 2007/05/12 01:40:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r5.ebuild,v 1.4 2010/03/31 13:31:18 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,7 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch ../${DV}.diff
 }
 
@@ -44,7 +44,7 @@ src_install() {
 
 	dodoc README Changelog TODO
 
-	newinitd ${FILESDIR}/${P}-init.d acpid
+	newinitd "${FILESDIR}"/${P}-init.d acpid
 
 	docinto examples
 	dodoc samples/{acpi_handler.sh,sample.conf}
