@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.1 2010/03/31 06:20:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.2 2010/03/31 06:25:01 jlec Exp $
 
 *terminator-0.90 (31 Mar 2010)
 
@@ -8,4 +8,5 @@
   +files/0.90-without-icon-cache.patch, +terminator-0.90.ebuild,
   +metadata.xml:
   Import from sunrise, #213243
+  Thanks Ivan Toshkov for the initial contribution
 
