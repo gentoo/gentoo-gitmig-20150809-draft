@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.99.0.2.95-r1.ebuild,v 1.2 2008/02/03 07:13:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.99.0.2.95-r1.ebuild,v 1.3 2010/03/31 21:59:42 fuzzyray Exp $
 
 inherit bash-completion eutils
 
@@ -17,8 +17,6 @@ DEPEND="app-shells/bash
 	sys-apps/portage"
 RDEPEND="${DEPEND}"
 
-BASH_COMPLETION_NAME="dep"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -33,4 +31,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc ChangeLog*
+}
+
+pkg_postinst() {
+	BASH_COMPLETION_NAME="dep"
+	bash-completion_pkg_postinst
 }
