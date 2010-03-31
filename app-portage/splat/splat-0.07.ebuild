@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/splat-0.07.ebuild,v 1.9 2005/01/01 15:55:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/splat-0.07.ebuild,v 1.10 2010/03/31 13:03:55 idl0r Exp $
 
 DESCRIPTION="Simple Portage Log Analyzer Tool"
 HOMEPAGE="http://www.l8nite.net/projects/splat/"
@@ -15,5 +15,5 @@ DEPEND="dev-lang/perl"
 
 src_install() {
 	newbin splat.pl splat || die
-	dodoc COPYING ChangeLog
+	dodoc ChangeLog
 }
