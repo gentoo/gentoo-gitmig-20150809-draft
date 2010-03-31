@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.108 2010/03/31 16:41:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.109 2010/03/31 18:41:49 armin76 Exp $
+
+  31 Mar 2010; Raúl Porcel <armin76@gentoo.org> libtasn1-2.4.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #306111
 
   31 Mar 2010; Christian Faulhammer <fauli@gentoo.org> libtasn1-2.4.ebuild:
   stable x86, bug 306111
