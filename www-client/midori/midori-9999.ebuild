@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.14 2010/03/10 15:51:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.15 2010/03/31 15:03:48 ssuominen Exp $
 
-EAPI="2"
-inherit eutils xfconf multilib git
+EAPI=2
+
+PYTHON_DEPEND="2:2.6"
+
+inherit eutils multilib python xfconf git
 
 DESCRIPTION="A lightweight web browser"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
@@ -25,13 +28,15 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 	idn? ( net-dns/libidn )
 	sqlite? ( >=dev-db/sqlite-3.0 )
 	unique? ( dev-libs/libunique )"
-
 DEPEND="${RDEPEND}
-	dev-lang/python
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
 	html? ( dev-python/docutils )
 	nls? ( sys-devel/gettext )"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	# moving docs to version-specific directory

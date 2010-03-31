@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.27 2010/03/10 15:51:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.28 2010/03/31 15:03:48 ssuominen Exp $
+
+  31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> midori-0.2.4.ebuild,
+  midori-9999.ebuild:
+  Use Python 2.x instead of Python 3.x for ./waf wrt #302555.
 
   10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> midori-0.2.4.ebuild,
   midori-9999.ebuild:
