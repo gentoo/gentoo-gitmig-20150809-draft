@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicate-qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/ChangeLog,v 1.3 2010/03/31 17:50:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/ChangeLog,v 1.4 2010/03/31 19:48:57 tampakrap Exp $
+
+  31 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  libindicate-qt-0.2.2.ebuild, libindicate-qt-0.2.5.ebuild:
+  update description
 
 *libindicate-qt-0.2.5 (31 Mar 2010)
 
