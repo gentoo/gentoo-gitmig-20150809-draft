@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.85-r1.ebuild,v 1.1 2010/03/31 02:15:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.85-r1.ebuild,v 1.2 2010/03/31 02:16:18 robbat2 Exp $
 
 inherit perl-app
 
@@ -23,8 +23,8 @@ RDEPEND="dev-perl/Net-DNS
 	dev-perl/URI
 	dev-perl/Digest-Nilsimsa"
 
-PATCHES=( 
-	"${FILESDIR}/${PN}-2.85-use-sha-not-sha1.patch" 
+PATCHES=(
+	"${FILESDIR}/${PN}-2.85-use-sha-not-sha1.patch"
 	"${FILESDIR}/${PN}-2.85-cosmetic-pv-fix.patch"
 	)
 
