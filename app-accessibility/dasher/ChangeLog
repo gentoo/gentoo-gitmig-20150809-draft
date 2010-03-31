@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.149 2010/01/17 23:22:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.150 2010/03/31 23:04:33 eva Exp $
+
+*dasher-4.11 (31 Mar 2010)
+
+  31 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> +dasher-4.11.ebuild:
+  Version bump. Drop libglade, fix blank window with >=gtk+-2.18.
 
   17 Jan 2010; Jeroen Roovers <jer@gentoo.org> dasher-4.10.1.ebuild:
   Stable for HPPA (bug #281427).
