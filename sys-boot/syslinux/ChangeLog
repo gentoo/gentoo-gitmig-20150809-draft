@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.56 2010/02/27 08:33:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.57 2010/03/31 15:45:12 chithanh Exp $
+
+*syslinux-4.00_pre37 (31 Mar 2010)
+
+  31 Mar 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -syslinux-4.00_pre29.ebuild, +syslinux-4.00_pre37.ebuild:
+  add new prerelease
 
 *syslinux-4.00_pre29 (27 Feb 2010)
 
