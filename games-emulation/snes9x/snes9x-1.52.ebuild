@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52.ebuild,v 1.3 2010/03/14 19:30:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52.ebuild,v 1.4 2010/03/31 16:22:57 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -17,7 +17,10 @@ IUSE="alsa debug gtk joystick multilib netplay nls opengl oss pulseaudio portaud
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	amd64? ( multilib? ( app-emulation/emul-linux-x86-xlibs
-			gtk? ( >=app-emulation/emul-linux-x86-gtklibs-20100220-r2 ) ) )
+			gtk? ( >=app-emulation/emul-linux-x86-gtklibs-20100220-r2
+				joystick? ( >=app-emulation/emul-linux-x86-sdl-20100220 )
+			)
+		) )
 	gtk? ( >=x11-libs/gtk+-2.10:2
 		>=gnome-base/libglade-2.0
 		x11-misc/xdg-utils
