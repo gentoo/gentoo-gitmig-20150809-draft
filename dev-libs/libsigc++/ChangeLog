@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.146 2010/02/20 22:54:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.147 2010/03/31 23:14:20 eva Exp $
+
+*libsigc++-2.2.5 (31 Mar 2010)
+
+  31 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +libsigc++-2.2.5.ebuild:
+  Version bump.
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> libsigc++-2.2.4.2.ebuild:
   Use doins to install examples, add prefix keywords
