@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/raine
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.23 2009/10/21 12:15:09 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.24 2010/03/31 21:17:46 mr_bones_ Exp $
+
+*raine-0.51.8 (31 Mar 2010)
+
+  31 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> +raine-0.51.8.ebuild:
+  version bump
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org> raine-0.51.5.ebuild:
   x86 stable, bug #285415
