@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.64 2010/01/10 17:55:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.65 2010/03/31 10:08:51 ssuominen Exp $
+
+  31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  pstoedit-3.45-r1.ebuild, pstoedit-3.50.ebuild:
+  Fix imagemagick deps to allow both "cxx" and "-nocxx".
 
   10 Jan 2010; nixnut <nixnut@gentoo.org> pstoedit-3.50.ebuild:
   ppc stable #294109

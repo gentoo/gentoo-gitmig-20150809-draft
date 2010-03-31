@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.6 2010/01/10 17:55:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.7 2010/03/31 10:08:51 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,15 +17,14 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE="emf imagemagick plotutils"
 
 RDEPEND="media-libs/libpng
-		media-libs/gd
-		app-text/ghostscript-gpl
-		emf?			( >=media-libs/libemf-1.0.3 )
-		imagemagick?	( media-gfx/imagemagick[-nocxx] )
-		plotutils?		( media-libs/plotutils )"
-#		swf?			( >=media-libs/ming-0.3 )" bug 238803
-
+	media-libs/gd
+	app-text/ghostscript-gpl
+	emf? ( >=media-libs/libemf-1.0.3 )
+	imagemagick? ( || ( media-gfx/imagemagick[cxx] media-gfx/imagemagick[-nocxx] ) )
+	plotutils? ( media-libs/plotutils )"
+#	swf? ( >=media-libs/ming-0.3 )" bug 238803
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+	dev-util/pkgconfig"
 
 src_prepare() {
 	sed -i -e 's:-pedantic ::' -e 's:CXXFLAGS="-g"::' "${S}"/configure.ac
