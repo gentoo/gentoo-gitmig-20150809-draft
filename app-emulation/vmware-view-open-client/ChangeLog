@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-view-open-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.5 2010/03/07 01:21:18 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.6 2010/03/31 23:18:54 tgurr Exp $
+
+  31 Mar 2010; Timo Gurr <tgurr@gentoo.org>
+  vmware-view-open-client-4.0.1.235010.ebuild:
+  Fixing net-misc/curl[ssl] USE dependency wrt bug #310139.
 
 *vmware-view-open-client-4.0.1.235010 (07 Mar 2010)
 

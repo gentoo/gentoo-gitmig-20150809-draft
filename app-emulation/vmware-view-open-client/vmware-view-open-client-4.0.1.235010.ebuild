@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.0.1.235010.ebuild,v 1.1 2010/03/07 01:21:18 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.0.1.235010.ebuild,v 1.2 2010/03/31 23:18:54 tgurr Exp $
 
 EAPI="2"
 
@@ -23,10 +23,7 @@ COMMON_DEPEND="
 	>=dev-libs/icu-3.8.0
 	>=dev-libs/libxml2-2.6.0
 	>=dev-libs/openssl-0.9.8
-	|| (
-		>=net-misc/curl-7.18.0[openssl]
-		>=net-misc/curl-7.18.0[gnutls]
-	)
+	>=net-misc/curl-7.20.0-r1[ssl]
 	>=x11-libs/gtk+-2.8.0"
 
 DEPEND="${COMMON_DEPEND}
