@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.104 2010/03/29 21:43:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.105 2010/03/31 14:57:28 ranger Exp $
+
+  31 Mar 2010; Brent Baude <ranger@gentoo.org> acl-2.2.49.ebuild:
+  Marking acl-2.2.49 ppc for bug 308049
 
   29 Mar 2010; Markus Meier <maekke@gentoo.org> acl-2.2.49.ebuild:
   amd64/arm stable, bug #298067
