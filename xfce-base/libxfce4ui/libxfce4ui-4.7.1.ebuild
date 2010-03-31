@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.7.1.ebuild,v 1.1 2009/12/20 20:59:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.7.1.ebuild,v 1.2 2010/03/31 12:14:19 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="Unified widgets library for Xfce4, a libxfcegui4 replacement"
@@ -33,6 +33,7 @@ pkg_setup() {
 	XFCONF="--disable-dependency-tracking
 		$(use_enable startup-notification)
 		$(use_enable glade gladeui)
-		$(use_enable debug)"
+		$(xfconf_use_debug)
+		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 	DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
 }

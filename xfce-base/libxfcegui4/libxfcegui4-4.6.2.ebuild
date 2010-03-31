@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.2.ebuild,v 1.4 2010/02/09 20:48:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.2.ebuild,v 1.5 2010/03/31 12:17:23 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="Unified widgets library for Xfce4"
@@ -32,6 +32,7 @@ pkg_setup() {
 		--disable-static
 		$(use_enable startup-notification)
 		$(use_enable glade gladeui)
-		$(use_enable debug)"
+		$(xfconf_use_debug)
+		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 	DOCS="AUTHORS ChangeLog NEWS"
 }

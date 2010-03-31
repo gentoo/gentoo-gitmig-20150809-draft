@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.141 2010/02/09 20:48:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.142 2010/03/31 12:17:23 ssuominen Exp $
+
+  31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libxfcegui4-4.6.2.ebuild:
+  Fix HTML documentation directory.
 
   09 Feb 2010; Fabian Groffen <grobian@gentoo.org> libxfcegui4-4.6.2.ebuild:
   Marked ~x64-solaris
