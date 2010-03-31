@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/bcfg2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.11 2010/03/28 03:55:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.12 2010/03/31 15:45:52 ssuominen Exp $
+
+  31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> bcfg2-1.0.1.ebuild:
+  Fix slotting wrt #312423.
 
   28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   Drop myself from metadata, add maintainer-needed
