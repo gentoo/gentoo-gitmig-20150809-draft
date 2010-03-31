@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.55 2010/03/24 18:18:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.56 2010/03/31 22:17:21 eva Exp $
+
+*dbus-glib-0.86 (31 Mar 2010)
+
+  31 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -dbus-glib-0.80.ebuild, -dbus-glib-0.82.ebuild, +dbus-glib-0.86.ebuild:
+  Version bump. Fix some memory leaks, optimize object infos lookup, add
+  'shadowing'.
 
   24 Mar 2010; Brent Baude <ranger@gentoo.org> dbus-glib-0.82-r1.ebuild:
   stable ppc, bug 310705
