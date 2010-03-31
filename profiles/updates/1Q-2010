@@ -71,3 +71,4 @@ move games-arcade/teeworlds games-action/teeworlds
 move x11-misc/xfce4-notifyd xfce-extra/xfce4-notifyd
 move dev-util/cvs2svn dev-vcs/cvs2svn
 slotmove app-admin/bcfg2 1 0
+move kde-misc/plasma-indicatordisplay kde-misc/plasma-widget-message-indicator
