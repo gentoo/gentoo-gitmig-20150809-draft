@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/razor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.88 2010/03/25 00:39:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.89 2010/03/31 02:15:47 robbat2 Exp $
+
+*razor-2.85-r1 (31 Mar 2010)
+
+  31 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +razor-2.85-r1.ebuild,
+  +files/razor-2.85-cosmetic-pv-fix.patch:
+  Bug #312065: Fix the cosmetic version number that upstream forgot to bump.
 
 *razor-2.85 (25 Mar 2010)
 
