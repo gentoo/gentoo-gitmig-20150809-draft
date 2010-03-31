@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/clapack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.2 2010/03/18 20:46:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.3 2010/03/31 19:46:29 jlec Exp $
+
+  31 Mar 2010; Justin Lecher <jlec@gentoo.org> clapack-3.2.1.ebuild,
+  clapack-3.2.1-r1.ebuild:
+  [static] -> [statis-libs], as consequence of #312465
 
 *clapack-3.2.1-r1 (18 Mar 2010)
 
