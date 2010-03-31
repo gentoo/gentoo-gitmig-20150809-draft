@@ -1,6 +1,12 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.34 2010/03/29 11:48:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.35 2010/03/31 13:16:32 jer Exp $
+
+*wdiff-0.6.0-r1 (31 Mar 2010)
+
+  31 Mar 2010; Jeroen Roovers <jer@gentoo.org> -wdiff-0.6.0.ebuild,
+  +wdiff-0.6.0-r1.ebuild, +files/wdiff-0.6.0-info.patch:
+  Fix info file thanks to Martin von Gagern (bug #312319).
 
 *wdiff-0.6.0 (29 Mar 2010)
 
