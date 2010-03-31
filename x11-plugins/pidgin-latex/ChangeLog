@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-latex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.15 2010/02/25 06:39:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.16 2010/03/31 12:43:40 fauli Exp $
+
+  31 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  pidgin-latex-1.3.4.ebuild:
+  stable x86, bug 310021
 
 *pidgin-latex-1.3.4 (25 Feb 2010)
 
