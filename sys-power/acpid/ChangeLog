@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/acpid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.42 2009/08/31 22:29:13 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.43 2010/03/31 13:30:19 ssuominen Exp $
+
+*acpid-2.0.3 (31 Mar 2010)
+
+  31 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +acpid-2.0.3.ebuild,
+  +files/acpid-2.0.3.patch:
+  Version bump wrt #303891 by Andrew Brouwers.
 
 *acpid-1.0.10_p4 (31 Aug 2009)
 
