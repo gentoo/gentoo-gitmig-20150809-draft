@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.62 2010/01/02 18:39:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.63 2010/03/31 20:36:17 mr_bones_ Exp $
+
+*nasm-2.08.01 (31 Mar 2010)
+
+  31 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> +nasm-2.08.01.ebuild:
+  version bump
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> nasm-2.07.ebuild:
   Transfer Prefix keywords
