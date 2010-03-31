@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11402 2010/03/31 16:16:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11403 2010/03/31 17:26:49 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (31 Mar 2010)
+# Unported to new xfce-base/exo-0.5 API and no activity
+# on upstream git. Also using HAL which is deprecated.
+# Masked for removal in 30 days.
+xfce-extra/xfce4-volstatus-icon
+
+# Samuli Suominen <ssuominen@gentoo.org> (31 Mar 2010)
+# Doesn't compile with libindicator-0.3.6, and no activity
+# on http://hg.foresightlinux.org/xfce/xfce4-indicator-plugin/
+# Masked for removal in 30 days
+xfce-extra/xfce4-indicator-plugin
 
 # Vlastimil Babka <caster@gentoo.org> (31 Mar 2010)
 # Masked for upstream EOL and pending security bugs that won't be thus fixed.
