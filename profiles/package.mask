@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11405 2010/03/31 20:05:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11406 2010/04/01 20:11:46 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -48,20 +48,6 @@ xfce-extra/xfce4-indicator-plugin
 # Removal in 30 days. Bug #306579.
 =dev-java/sun-jre-bin-1.5*
 =app-emulation/emul-linux-x86-java-1.5*
-
-# Theo Chatzimichos <tampakrap@gentoo.org> (31 Mar 2010)
-# Mask KOffice 2.1.2 until it is released
-=app-office/karbon-2.1.2
-=app-office/kchart-2.1.2
-=app-office/koffice-data-2.1.2
-=app-office/koffice-libs-2.1.2
-=app-office/kplato-2.1.2
-=app-office/kpresenter-2.1.2
-=app-office/krita-2.1.2
-=app-office/kspread-2.1.2
-=app-office/kword-2.1.2
-=app-office/koffice-l10n-2.1.2
-=app-office/koffice-meta-2.1.2
 
 # Mounir Lamouri <volkmar@gentoo.org> (24 Mar 2010)
 # Masked because breaking backward compatibility and still not needed.
