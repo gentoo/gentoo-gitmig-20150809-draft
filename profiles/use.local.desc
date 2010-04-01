@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5453 2010/04/01 15:08:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5454 2010/04/01 23:08:12 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -548,6 +548,7 @@ app-text/evince:dvi - Enable the built-in DVI viewer
 app-text/evince:gnome - Enable the use of gnome-base/gconf to honour lockdown settings
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)
+app-text/gtranslator:http - Enable support for open translation plugin using net-libs/libsoup
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/lodgeit:vim -  Install a vim plugin allowing to paste and download from within vim 
