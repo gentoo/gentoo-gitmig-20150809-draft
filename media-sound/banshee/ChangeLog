@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.109 2010/03/25 21:05:58 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.110 2010/04/01 07:55:01 ford_prefect Exp $
+
+*banshee-1.6.0 (01 Apr 2010)
+
+  01 Apr 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +banshee-1.6.0.ebuild:
+  Bump to 1.6.0. This is the latest stable version with a huge number of new
+  features over the 1.4.x series. Just a bunch of bug fixes over 1.5.6.
+  Enabled the gapless playback plugin since we have the required
+  gst-plugins-base, and dropped unnecessary deps (thanks to suka on bug
+  #310601).
 
 *banshee-1.5.6 (25 Mar 2010)
 
