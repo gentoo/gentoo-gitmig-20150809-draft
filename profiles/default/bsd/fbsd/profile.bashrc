@@ -1,11 +1,16 @@
 #!/bin/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.5 2010/03/16 02:25:33 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.6 2010/04/01 08:20:18 the_paya Exp $
 
 alias make=gmake
 alias patch=gpatch
 alias sed=gsed
 alias awk=gawk
+
+# Attempt to point the default SHELL used by configure scripts to bash.
+# while most should work with BSD's bourne just fine, the extra scripts
+# used by some applications (specially test scripts) use way too many bashisms.
+export CONFIG_SHELL="/bin/bash"
 
 # Hack to avoid every package that uses libiconv/gettext
 # install a charset.alias that will collide with libiconv's one

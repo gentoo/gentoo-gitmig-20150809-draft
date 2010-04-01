@@ -1,6 +1,11 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.31 2010/03/16 02:25:31 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.32 2010/04/01 08:20:18 the_paya Exp $
+
+  01 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
+  fbsd/profile.bashrc:
+  Point CONFIG_SHELL to /bin/bash, fixes scripts called by configure, ie:
+  test scripts, that expect bash.
 
   16 Mar 2010; Javier Villavicencio <the_paya@gentoo.org>
   fbsd/profile.bashrc:
