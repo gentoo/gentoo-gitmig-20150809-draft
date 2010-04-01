@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccrypt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.21 2009/10/07 16:40:01 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.22 2010/04/01 21:22:48 abcd Exp $
+
+  01 Apr 2010; Jonathan Callen <abcd@gentoo.org> ccrypt-1.9.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   07 Oct 2009; nixnut <nixnut@gentoo.org> ccrypt-1.9.ebuild:
   ppc stable #286855
