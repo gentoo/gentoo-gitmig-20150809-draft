@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.6.0.ebuild,v 1.1 2010/04/01 07:55:01 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.6.0.ebuild,v 1.2 2010/04/01 11:59:34 ford_prefect Exp $
 
 EAPI=2
 
@@ -82,6 +82,13 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 S=${WORKDIR}/${PN}-1-${PV}
+
+src_prepare () {
+	# Fix intltool b0rkage similar to
+	# https://bugzilla.gnome.org/show_bug.cgi?id=577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "sed failed"
+}
 
 src_configure() {
 	local myconf="--disable-dependency-tracking --disable-static
