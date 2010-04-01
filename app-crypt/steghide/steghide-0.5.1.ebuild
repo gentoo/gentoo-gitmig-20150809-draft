@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.13 2010/01/22 16:39:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.14 2010/04/01 21:33:17 abcd Exp $
 
-EAPI=1
+EAPI="3"
 inherit autotools eutils
 
 DESCRIPTION="A steganography program which hides data in various media files"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="debug"
 
 DEPEND=">=app-crypt/mhash-0.8.18-r1
@@ -19,22 +19,24 @@ DEPEND=">=app-crypt/mhash-0.8.18-r1
 	media-libs/jpeg:0
 	>=sys-libs/zlib-1.1.4-r2"
 
-src_unpack(){
-	unpack ${A}
-	cd "${S}"
+src_prepare(){
 	epatch "${FILESDIR}"/${P}-gcc34.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable debug)
-	emake LIBTOOL="$(type -p libtool)" || die "emake failed."
+}
+
+src_compile() {
+	local libtool
+	[[ ${CHOST} == *-darwin* ]] && libtool=$(type -P glibtool) || libtool=$(type -P libtool)
+	emake LIBTOOL="${libtool}" || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install \
-		|| die "emake install failed."
+	emake DESTDIR="${D}" docdir="${EPREFIX}/usr/share/doc/${PF}" install || die "emake install failed"
 	prepalldocs
 }

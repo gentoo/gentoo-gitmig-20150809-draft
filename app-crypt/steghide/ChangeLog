@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/steghide
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.18 2010/01/22 16:39:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.19 2010/04/01 21:33:17 abcd Exp $
+
+  01 Apr 2010; Jonathan Callen <abcd@gentoo.org> steghide-0.5.1.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   22 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> steghide-0.5.1.ebuild:
   Require SLOT="0" of media-libs/jpeg for headers.

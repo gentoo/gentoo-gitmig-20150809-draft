@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.10.ebuild,v 1.8 2009/10/28 18:30:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.10.ebuild,v 1.9 2010/04/01 21:28:21 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="bzip2 bindist curl idea ldap nls readline selinux smartcard static usb zlib linguas_ru"
 #IUSE="bzip2 bindist curl ecc idea ldap nls readline selinux smartcard static usb zlib linguas_ru"
 
@@ -91,7 +91,7 @@ src_configure() {
 	use static &&append-ldflags -static
 
 	econf \
-		--docdir="/usr/share/doc/${PF}" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable ldap) \
 		--enable-mailto \
 		--enable-hkp \
@@ -107,7 +107,7 @@ src_configure() {
 		$(use_with usb libusb /usr) \
 		$(use_enable static) \
 		--enable-static-rnd=linux \
-		--libexecdir=/usr/libexec \
+		--libexecdir="${EPREFIX}/usr/libexec" \
 		--enable-noexecstack \
 		CC_FOR_BUILD=$(tc-getBUILD_CC) \
 		${myconf}
@@ -117,7 +117,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# keep the documentation in /usr/share/doc/...
-	rm -rf "${D}/usr/share/gnupg/FAQ" "${D}/usr/share/gnupg/faq.html"
+	rm -rf "${ED}usr/share/gnupg/FAQ" "${ED}usr/share/gnupg/faq.html"
 
 	dodoc AUTHORS BUGS ChangeLog NEWS PROJECTS README THANKS \
 		TODO VERSION doc/{FAQ,HACKING,DETAILS,OpenPGP,faq.raw}
