@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.61 2010/03/09 21:17:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.62 2010/04/01 17:16:34 armin76 Exp $
+
+  01 Apr 2010; Raúl Porcel <armin76@gentoo.org> netatalk-2.0.5-r1.ebuild:
+  sh/sparc stable wrt #252210
 
   09 Mar 2010; Joseph Jezak <josejx@gentoo.org> netatalk-2.0.5-r1.ebuild:
   Marked ppc stable for bug #252210.

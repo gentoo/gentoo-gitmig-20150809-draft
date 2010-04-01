@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.5-r1.ebuild,v 1.6 2010/03/09 21:17:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.5-r1.ebuild,v 1.7 2010/04/01 17:16:34 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="cracklib cups debug kerberos krb4 pam slp ssl tcpd xfs"
 
 RDEPEND=">=sys-libs/db-4.2.52
