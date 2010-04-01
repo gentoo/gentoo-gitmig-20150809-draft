@@ -1,13 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.23 2010/03/03 09:29:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.24 2010/04/01 22:25:40 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Jeroen Roovers <jer@gentoo.org> (02 Mar 2010)
-# Depends on >=sys-devel/gcc-4.3 which lack HPPA keywords (bug #307251)
->=dev-db/mysql-5.0.83
-=virtual/mysql-5.1
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Feb 2010)
 # Mask kde 4.4.0 =)
