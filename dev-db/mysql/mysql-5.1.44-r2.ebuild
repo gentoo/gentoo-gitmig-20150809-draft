@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.44-r2.ebuild,v 1.2 2010/03/24 03:32:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.1.44-r2.ebuild,v 1.3 2010/04/01 20:32:47 robbat2 Exp $
 
 MY_EXTRAS_VER="20100324-0213Z"
 EAPI=2
@@ -24,7 +24,7 @@ KEYWORDS="~alpha ~amd64 ~arm  ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbs
 # When MY_EXTRAS is bumped, the index should be revised to exclude these.
 EPATCH_EXCLUDE=''
 
-DEPEND="|| ( >=sys-devel/gcc-4.3 >=sys-devel/gcc-apple-4.2 )"
+DEPEND="|| ( >=sys-devel/gcc-3.4.6 >=sys-devel/gcc-apple-4.0 )"
 RDEPEND="!media-sound/amarok[embedded]"
 
 # Please do not add a naive src_unpack to this ebuild

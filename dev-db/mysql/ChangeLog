@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.525 2010/03/24 18:26:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.526 2010/04/01 20:32:47 robbat2 Exp $
+
+  01 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.87.ebuild,
+  mysql-5.0.88.ebuild, mysql-5.0.90.ebuild, mysql-5.0.90-r1.ebuild,
+  mysql-5.0.90-r2.ebuild, mysql-5.1.39-r1.ebuild, mysql-5.1.44.ebuild,
+  mysql-5.1.44-r1.ebuild, mysql-5.1.44-r2.ebuild, mysql-5.1.44-r3.ebuild,
+  mysql-5.1.45.ebuild, mysql-5.1.45-r1.ebuild, mysql-5.4.3_beta.ebuild,
+  mysql-5.5.1_alpha_pre2.ebuild:
+  Followup on bug #284946, #293801, #310615, #307251: In 5.0.87, the mutex
+  locking code was changed a lot again, so that while 5.0.84 required a
+  newer GCC due to the HAVE_ATOMIC_BUILTINS error, newer releases do NOT
+  need those GCC versions anymore. This also frees up ~hppa to do more
+  stabilization.
 
 *mysql-5.1.45-r1 (24 Mar 2010)
 *mysql-5.1.44-r3 (24 Mar 2010)
