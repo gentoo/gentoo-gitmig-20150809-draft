@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/realpath
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.1 2009/10/13 16:58:23 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.2 2010/04/01 17:14:14 armin76 Exp $
+
+  01 Apr 2010; Raúl Porcel <armin76@gentoo.org> realpath-1.15.ebuild:
+  m68k/s390/sh stable
 
   13 Oct 2009; Ulrich Mueller <ulm@gentoo.org>
   +files/realpath-1.14-build.patch, +files/realpath-1.14-no-po4a.patch,
