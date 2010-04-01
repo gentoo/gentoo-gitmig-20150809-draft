@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.81 2010/03/30 13:54:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.82 2010/04/01 19:27:37 idl0r Exp $
+
+  01 Apr 2010; Christian Ruppert <idl0r@gentoo.org>
+  gentoolkit-dev-0.2.6.14.ebuild:
+  Fix PYTHON_DEPEND.
 
 *gentoolkit-dev-0.2.6.14 (30 Mar 2010)
 
