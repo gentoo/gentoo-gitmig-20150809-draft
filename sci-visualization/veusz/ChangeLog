@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/veusz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.19 2010/01/30 08:56:21 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.20 2010/04/01 19:05:59 grozin Exp $
+
+*veusz-1.7 (01 Apr 2010)
+
+  01 Apr 2010; Andrey Grozin <grozin@gentoo.org> +veusz-1.7.ebuild:
+  Version bump, SUPPORT_PYTHON_ABIS added
 
 *veusz-1.6 (30 Jan 2010)
 
