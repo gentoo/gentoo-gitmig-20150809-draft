@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/polyglot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.11 2010/03/04 07:48:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.12 2010/04/01 06:47:12 graaff Exp $
+
+*polyglot-0.3.1 (01 Apr 2010)
+
+  01 Apr 2010; Hans de Graaff <graaff@gentoo.org> +polyglot-0.3.1.ebuild:
+  Version bump.
 
 *polyglot-0.3.0 (04 Mar 2010)
 
