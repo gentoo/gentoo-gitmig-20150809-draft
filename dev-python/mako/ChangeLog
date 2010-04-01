@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.13 2010/03/12 17:46:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.14 2010/04/01 14:46:46 betelgeuse Exp $
+
+  01 Apr 2010; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Remove antarus as the dedicated maintainer.
 
 *mako-0.3.2 (12 Mar 2010)
 
