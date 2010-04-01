@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.48 2010/03/15 19:30:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.49 2010/04/01 06:44:56 fauli Exp $
+
+  01 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  python-updater-0.8.ebuild:
+  stable x86, bug 307265
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> python-updater-0.8.ebuild:
   ppc stable #307265
