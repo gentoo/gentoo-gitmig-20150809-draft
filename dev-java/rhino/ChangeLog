@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/rhino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.63 2010/03/27 22:23:17 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.64 2010/04/01 20:12:57 ali_bush Exp $
+
+*rhino-1.7.2-r1 (01 Apr 2010)
+
+  01 Apr 2010; Alistair Bush <ali_bush@gentoo.org> +rhino-1.7.2-r1.ebuild:
+  Stop build downloading deps #312175.
 
 *rhino-1.7.2 (27 Mar 2010)
 
