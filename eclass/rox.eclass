@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.32 2010/03/23 14:42:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.33 2010/04/01 17:03:47 lack Exp $
 
 # ROX eclass Version 3
 
@@ -48,6 +48,11 @@
 #    preserve the source code for some reason
 
 # For examples refer to ebuilds in rox-extra/ or rox-base/
+
+if [[ ${ROX_LIB_VER} ]]; then
+	# Presently all packages which require ROX_LIB also require python2
+	PYTHON_DEPEND="2"
+fi
 
 # need python to byte compile modules, if any
 # need autotools to run autoreconf, if required
@@ -188,8 +193,19 @@ rox_install_desktop() {
 }
 
 # Exported functions
+
+rox_pkg_setup() {
+	if [[ ${PYTHON_DEPEND} ]]; then
+		python_set_active_version 2
+	fi
+}
+
 rox_src_compile() {
 	cd "${APPNAME}"
+	# Python packages need their shebangs fixed
+	if [[ ${PYTHON_DEPEND} ]]; then
+		python_convert_shebangs -r 2 .
+	fi
 	#Some packages need to be compiled.
 	chmod 755 AppRun
 	if [[ -d src/ ]]; then
@@ -250,7 +266,9 @@ rox_src_install() {
 }
 
 rox_pkg_postinst() {
-	python_mod_optimize "${APPDIR}/${APPNAME}" >/dev/null 2>&1
+	if [[ ${PYTHON_DEPEND} ]]; then
+		python_mod_optimize "${APPDIR}/${APPNAME}" >/dev/null 2>&1
+	fi
 
 	einfo "${APPNAME} has been installed into ${APPDIR}"
 	if [[ "${WRAPPERNAME}" != "skip" ]]; then
@@ -264,8 +282,10 @@ rox_pkg_postinst() {
 }
 
 rox_pkg_postrm() {
-	python_mod_cleanup "${APPDIR}"
+	if [[ ${PYTHON_DEPEND} ]]; then
+		python_mod_cleanup "${APPDIR}"
+	fi
 }
 
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS pkg_setup src_compile src_install pkg_postinst pkg_postrm
