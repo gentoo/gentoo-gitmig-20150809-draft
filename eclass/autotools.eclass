@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.95 2010/03/31 02:11:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.96 2010/04/01 10:12:36 flameeyes Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -27,7 +27,7 @@ inherit eutils libtool
 # @ECLASS-VARIABLE: _LATEST_AUTOMAKE
 # @DESCRIPTION:
 # CONSTANT!
-# The latest major version/slot of automake available on each arch. 
+# The latest major version/slot of automake available on each arch.
 # If a newer version is stable on any arch, and is NOT reflected in this list,
 # then circular dependencies may arise during emerge @system bootstraps.
 # Do NOT change this variable in your ebuilds!
@@ -40,12 +40,13 @@ if [[ -n ${WANT_AUTOMAKE} ]]; then
 		none)   _automake_atom="" ;; # some packages don't require automake at all
 		# if you change the “latest” version here, change also autotools_run_tool
 		# this MUST reflect the latest stable major version for each arch!
-		latest) 
-			t="" ; for v in ${_LATEST_AUTOMAKE} ; do
+		latest)
+			t=""
+			for v in ${_LATEST_AUTOMAKE} ; do
 				t="${t} =sys-devel/automake-${v}*"
 			done
+			_automake_atom="|| ( ${t} )"
 			unset t v
-			_automake_atom="|| ( ${_automake_atom} )" 
 			;;
 		*)      _automake_atom="=sys-devel/automake-${WANT_AUTOMAKE}*" ;;
 	esac
@@ -277,12 +278,14 @@ autotools_run_tool() {
 
 	# We do the “latest” → version switch here because it solves
 	# possible order problems, see bug #270010 as an example.
-	for pv in ${_LATEST_AUTOMAKE} ; do
-		has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="$pv"
-	done
-	unset pv
-	[[ ${WANT_AUTOMAKE} == "latest" ]] && \
-		die "Cannot find the latest automake! Tried ${_LATEST_AUTOMAKE}"
+	if [[ ${WANT_AUTOMAKE} == "latest" ]]; then
+		for pv in ${_LATEST_AUTOMAKE} ; do
+			has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="$pv"
+		done
+		unset pv
+		[[ ${WANT_AUTOMAKE} == "latest" ]] && \
+			die "Cannot find the latest automake! Tried ${_LATEST_AUTOMAKE}"
+	fi
 	[[ ${WANT_AUTOCONF} == "latest" ]] && export WANT_AUTOCONF=2.5
 
 	local STDERR_TARGET="${T}/$1.out"
