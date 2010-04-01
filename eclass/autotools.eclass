@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.96 2010/04/01 10:12:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.97 2010/04/01 21:42:37 robbat2 Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -280,7 +280,9 @@ autotools_run_tool() {
 	# possible order problems, see bug #270010 as an example.
 	if [[ ${WANT_AUTOMAKE} == "latest" ]]; then
 		for pv in ${_LATEST_AUTOMAKE} ; do
-			has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="$pv"
+			# has_version respects ROOT, but in this case, we don't want it to,
+			# thus "ROOT=/" prefix:
+			ROOT=/ has_version "=sys-devel/automake-${pv}*" && export WANT_AUTOMAKE="$pv"
 		done
 		unset pv
 		[[ ${WANT_AUTOMAKE} == "latest" ]] && \
