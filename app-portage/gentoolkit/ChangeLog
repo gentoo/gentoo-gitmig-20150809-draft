@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.185 2010/03/29 12:21:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.186 2010/04/01 17:15:43 armin76 Exp $
+
+  01 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  gentoolkit-0.2.4.6.1.ebuild, gentoolkit-0.3.0_rc8.ebuild,
+  gentoolkit-0.3.0_rc8-r1.ebuild, gentoolkit-0.3.0_rc9.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #305793
 
   29 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gentoolkit-0.2.4.6.1.ebuild:
