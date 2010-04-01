@@ -1,6 +1,12 @@
 # ChangeLog for rox-base/zeroinstall-injector
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.20 2010/03/31 12:53:22 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.21 2010/04/01 16:56:12 lack Exp $
+
+*zeroinstall-injector-0.43-r1 (01 Apr 2010)
+
+  01 Apr 2010; Jim Ramsay <lack@gentoo.org> +files/0distutils-r2,
+  -zeroinstall-injector-0.43.ebuild, +zeroinstall-injector-0.43-r1.ebuild:
+  Update to better deal with python3 and multiple python ABIs
 
   31 Mar 2010; Jim Ramsay <lack@gentoo.org> -files/0distutils,
   -zeroinstall-injector-0.33.ebuild:

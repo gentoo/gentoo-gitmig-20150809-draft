@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.43.ebuild,v 1.1 2010/01/12 13:33:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.43-r1.ebuild,v 1.1 2010/04/01 16:56:12 lack Exp $
 
-EAPI=2
+EAPI=3
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 inherit distutils
 
 DESCRIPTION="Zeroinstall Injector allows regular users to install software themselves"
@@ -16,21 +20,31 @@ IUSE=""
 
 DEPEND="!<=rox-base/rox-session-0.30"
 RDEPEND=">=dev-python/pygtk-2.0
-	app-crypt/gnupg
-	dev-lang/python[xml]"
+	app-crypt/gnupg"
 
 PYTHON_MODNAME="zeroinstall"
 
 src_prepare() {
 	# Change manpage install path (Bug 207495)
 	sed -i 's:man/man1:share/man/man1:' setup.py
+	cp "${FILESDIR}/0distutils-r2" "${WORKDIR}/0distutils"
+}
+
+src_compile() {
+	distutils_src_compile
 }
 
 src_install() {
 	distutils_src_install
 
+	fix_0launch_gui() {
+		python_convert_shebangs "${PYTHON_ABI}" \
+			"${ED}$(python_get_sitedir)/zeroinstall/0launch-gui/0launch-gui"
+	}
+	python_execute_function -q fix_0launch_gui
+
 	exeinto "/usr/sbin/"
-	newexe "${FILESDIR}/0distutils-r1" 0distutils
+	doexe "${WORKDIR}/0distutils"
 
 	local BASE_XDG_CONFIG="/etc/xdg/0install.net"
 	local BASE_XDG_DATA="/usr/share/0install.net"
@@ -39,12 +53,4 @@ src_install() {
 	newins "${FILESDIR}/global.cfg" global
 
 	dodir "${BASE_XDG_DATA}/native_feeds"
-}
-
-pkg_postinst() {
-	python_version
-	# Note: Must use '-f' because python_mod_optimize sometimes leaves old files
-	# around.
-	python_mod_optimize -f \
-		/usr/$(get_libdir)/python${PYVER}/site-packages/zeroinstall
 }
