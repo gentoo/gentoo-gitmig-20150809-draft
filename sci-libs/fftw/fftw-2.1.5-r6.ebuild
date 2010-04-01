@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.16 2010/04/01 19:09:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r6.ebuild,v 1.1 2010/04/01 19:09:20 jlec Exp $
 
-inherit eutils flag-o-matic autotools toolchain-funcs
+EAPI="3"
+
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
@@ -15,7 +17,7 @@ SLOT="2.1"
 LICENSE="GPL-2"
 IUSE="doc float fortran mpi openmp threads"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 pkg_setup() {
 	# this one is reported to cause trouble on pentium4 m series
@@ -40,14 +42,12 @@ then
 	use openmp && [[ $(tc-getCC)$ == icc* ]] && append-ldflags $(no-as-needed)
 }
 
-src_unpack() {
+src_prepare() {
 	# doc suggests installing single and double precision versions
 	#  via separate compilations. will do in two separate source trees
 	# since some sed'ing is done during the build
 	# (?if --enable-type-prefix is set?)
 
-	unpack ${A}
-	cd "${S}"
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-configure.in.patch
 	epatch "${FILESDIR}"/${P}-no-test.patch
@@ -69,7 +69,7 @@ src_unpack() {
 	mv ${P} ${P}-single
 }
 
-src_compile() {
+src_configure() {
 	local myconf="
 		--enable-shared
 		--enable-type-prefix
@@ -92,10 +92,16 @@ src_compile() {
 	fi
 	cd "${S}-single"
 	econf ${myconf} --enable-float || die "econf for float failed"
-	emake || die "emake for float failed"
 
 	cd "${S}-double"
 	econf ${myconf} || die "econf for double failed"
+}
+
+src_compile() {
+	cd "${S}-single"
+	emake || die "emake for float failed"
+
+	cd "${S}-double"
 	emake || die "emake for double failed"
 }
 
@@ -107,7 +113,6 @@ src_test() {
 }
 
 src_install () {
-
 	# both builds are installed in the same place
 	# libs are distinguished by prefix (s or d), see docs for details
 
@@ -123,17 +128,17 @@ src_install () {
 	use doc && dohtml doc/*
 
 	if use float; then
-		for f in "${D}"/usr/{include,$(get_libdir)}/*sfft*; do
+		for f in "${ED}"/usr/{include,$(get_libdir)}/*sfft*; do
 			ln -s $(basename ${f}) ${f/sfft/fft}
 		done
-		for f in "${D}"/usr/{include,$(get_libdir)}/*srfft*; do
+		for f in "${ED}"/usr/{include,$(get_libdir)}/*srfft*; do
 			ln -s $(basename ${f}) ${f/srfft/rfft}
 		done
 	else
-		for f in "${D}"/usr/{include,$(get_libdir)}/*dfft*; do
+		for f in "${ED}"/usr/{include,$(get_libdir)}/*dfft*; do
 			ln -s $(basename ${f}) ${f/dfft/fft}
 		done
-		for f in "${D}"/usr/{include,$(get_libdir)}/*drfft*; do
+		for f in "${ED}"/usr/{include,$(get_libdir)}/*drfft*; do
 			ln -s $(basename ${f}) ${f/drfft/rfft}
 		done
 	fi
