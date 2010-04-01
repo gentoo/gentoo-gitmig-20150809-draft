@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.218 2010/03/28 15:33:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.219 2010/04/01 07:21:16 pva Exp $
+
+*wireshark-1.2.7 (01 Apr 2010)
+
+  01 Apr 2010; Peter Volkov <pva@gentoo.org> +wireshark-1.2.7.ebuild:
+  Version bump.
 
   28 Mar 2010; Peter Volkov <pva@gentoo.org> wireshark-1.2.6-r1.ebuild:
   Disable zlib, bug #311241
