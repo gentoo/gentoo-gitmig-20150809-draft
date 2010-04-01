@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.9 2010/03/10 08:58:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.10 2010/04/01 11:24:01 dagger Exp $
+
+*modemmanager-0.3_p20100401 (01 Apr 2010)
+
+  01 Apr 2010; Robert Piasek <dagger@gentoo.org>
+  -modemmanager-0.2_p20091109.ebuild, -modemmanager-0.2_p20091123.ebuild,
+  +modemmanager-0.3_p20100401.ebuild:
+  New snapshot of ModemManager (bug #312587)
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org> modemmanager-0.3.ebuild:
   Marked ~ppc/~ppc64 for bug #296548.

@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.2_p20091123.ebuild,v 1.1 2009/11/23 15:34:50 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.3_p20100401.ebuild,v 1.1 2010/04/01 11:24:01 dagger Exp $
 
-EAPI=2
+EAPI="2"
 
-inherit eutils
+inherit gnome.org eutils
 
 # ModemManager likes itself with capital letters
 MY_P=${P/modemmanager/ModemManager}
@@ -15,21 +15,24 @@ SRC_URI="http://dev.gentoo.org/~dagger/files/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
-IUSE=""
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+IUSE="doc test"
 
-RDEPEND="net-dialup/ppp"
-
+RDEPEND=">=dev-libs/glib-2.18
+	>=dev-libs/dbus-glib-0.75
+	net-dialup/ppp"
 DEPEND=">=sys-fs/udev-145[extras]
-	dev-util/pkgconfig
-	dev-util/intltool"
+	dev-util/pkgconfig"
+
+S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	econf \
-		--disable-more-warnings
+		--disable-more-warnings \
+		--with-udev-base-dir=/etc/udev/ \
+		$(use_with doc docs) \
+		$(use_with test tests)
 }
-
-S=${WORKDIR}/${MY_P/_p20090806/}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
