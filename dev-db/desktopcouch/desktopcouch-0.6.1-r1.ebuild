@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.1.ebuild,v 1.1 2010/03/13 18:33:38 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.1-r1.ebuild,v 1.1 2010/04/01 02:22:49 neurogeek Exp $
 
 PYTHONDEPEND="2"
 EAPI="2"
@@ -18,12 +18,12 @@ IUSE="doc"
 
 DEPEND=">=dev-python/python-distutils-extra-2.12"
 RDEPEND=">=dev-db/couchdb-0.10.0
-		 >=dev-python/gnome-keyring-python-2.22.3-r1
-		 >=dev-python/couchdb-python-0.6
-		 >=dev-python/oauth-1.0.1
-		 >=dev-python/simplejson-2.0.9-r1
-		 >=dev-python/twisted-8.2.0-r2
-		 >=net-dns/avahi-0.6.24-r2[python]"
+		>=dev-python/gnome-keyring-python-2.22.3-r1
+		>=dev-python/couchdb-python-0.6
+		>=dev-python/oauth-1.0.1
+		>=dev-python/simplejson-2.0.9-r1
+		>=dev-python/twisted-8.2.0-r2
+		>=net-dns/avahi-0.6.24-r2[python]"
 RESTRICT="test"
 
 src_prepare() {
@@ -34,8 +34,8 @@ src_install() {
 	distutils_src_install
 
 	exeinto "${ROOT}/usr/lib/${PN}"
-	doexe "/usr/lib/desktopcouch/desktopcouch-stop"
-	doexe "/usr/lib/desktopcouch/desktopcouch-service"
+	doexe "bin/desktopcouch-stop"
+	doexe "bin/desktopcouch-service"
 
 	if use doc; then
 		insinto "${ROOT}/usr/share/doc/${PF}/api"
