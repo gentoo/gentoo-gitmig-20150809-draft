@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.67 2010/01/19 10:59:24 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.68 2010/04/01 05:08:57 iluxa Exp $
+
+*sptk-4.02 (01 Apr 2010)
+
+  01 Apr 2010; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  +sptk-4.02.ebuild:
+  Verbump SPTK to 4.02. Make sure sql2cpp is installed under correct name.
 
 *sptk-4.00 (19 Jan 2010)
 
