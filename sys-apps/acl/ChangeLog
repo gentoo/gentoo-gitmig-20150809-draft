@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.106 2010/03/31 14:58:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.107 2010/04/01 13:13:21 jer Exp $
+
+  01 Apr 2010; Jeroen Roovers <jer@gentoo.org> acl-2.2.49.ebuild:
+  Stable for HPPA (bug #298067).
 
   31 Mar 2010; Brent Baude <ranger@gentoo.org> acl-2.2.49.ebuild:
   Marking acl-2.2.49 ppc64 for bug 308049
