@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.21 2010/03/25 21:33:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.22 2010/04/01 21:48:37 spock Exp $
+
+  01 Apr 2010; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-3.0.ebuild,
+  +files/nvidia-cuda-toolkit-3.0-enum_fix.patch:
+  Add an enum fix for gcc pedantic mode (bug #311657), fix a typo in
+  src_install.
 
   25 Mar 2010; Michał Januszewski <spock@gentoo.org>
   nvidia-cuda-toolkit-3.0.ebuild:

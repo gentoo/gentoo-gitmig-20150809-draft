@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.0.ebuild,v 1.2 2010/03/25 21:33:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.0.ebuild,v 1.3 2010/04/01 21:48:37 spock Exp $
 
 EAPI=2
 
@@ -43,6 +43,10 @@ src_unpack() {
 			unpack_makeself ${f}
 		fi
 	done
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-enum_fix.patch
 }
 
 src_install() {
@@ -92,7 +96,7 @@ EOF
 
 		for target in ${targets}; do
 			into ${DEST}/${target}
-			dobin ${taget}/bin/${target}
+			dobin ${target}/bin/${target}
 
 			cat > "${T}/env" << EOF
 PATH=${DEST}/${target}/bin
