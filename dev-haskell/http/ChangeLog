@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/http
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.12 2009/12/16 20:16:53 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.13 2010/04/01 08:50:57 grobian Exp $
+
+  01 Apr 2010; Fabian Groffen <grobian@gentoo.org> http-4000.0.8.ebuild:
+  Marked ~ppc-macos, ~x86-macos, bug #310869
 
 *http-4000.0.8 (15 Dec 2009)
 
