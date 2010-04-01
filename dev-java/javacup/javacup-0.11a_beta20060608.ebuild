@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11a_beta20060608.ebuild,v 1.4 2010/01/03 20:46:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11a_beta20060608.ebuild,v 1.5 2010/04/01 14:36:25 betelgeuse Exp $
 
 JAVA_PKG_IUSE="source doc"
 
@@ -19,9 +19,11 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE=""
+IUSE="userland_BSD"
 
-DEPEND=">=virtual/jdk-1.4"
+# find for bug #214664
+DEPEND=">=virtual/jdk-1.4
+	!userland_BSD? ( >=sys-apps/findutils-4.4 )"
 RDEPEND=">=virtual/jre-1.4
 		>=dev-java/ant-core-1.7.0"
 
