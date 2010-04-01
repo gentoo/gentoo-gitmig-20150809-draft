@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.7 2010/03/19 13:49:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.8 2010/04/01 15:01:51 flameeyes Exp $
+
+*drizzle-2010.03.1412 (01 Apr 2010)
+
+  01 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +drizzle-2010.03.1412.ebuild, metadata.xml:
+  Version bump, new version solves the PAM problem (the pam.d file is set up
+  properly) and simplifies the curl/gnutls/openssl dependency web as the MD5
+  plugin is now using libgcrypt.
 
 *drizzle-2010.03.1347 (19 Mar 2010)
 

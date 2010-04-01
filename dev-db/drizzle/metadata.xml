@@ -35,7 +35,7 @@
       logging (using <pkg>sys-cluster/gearman</pkg>).
     </flag>
 
-    <flag name="gnutls">
+    <flag name="gnutls" restrict="&lt;dev-db/drizzle-2010.03.1412">
       Enable the MD5 plugin for user-defined functions (using
       <pkg>net-libs/gnutls</pkg>).
 
@@ -45,7 +45,7 @@
       conflicts.
     </flag>
 
-    <flag name="openssl">
+    <flag name="openssl" restrict="&lt;dev-db/drizzle-2010.03.1412">
       Enable the MD5 plugin for user-defined functions (using
       <pkg>dev-libs/openssl</pkg>).
 
@@ -61,12 +61,23 @@
       properly.
     </flag>
 
-    <flag name="pam">
+    <flag name="pam" restrict="&lt;dev-db/drizzle-2010.03.1412">
       Enable the PAM authentication plugin (using
       <pkg>sys-libs/pam</pkg>).
 
       Warning: currently the pam configuration file is missing so it
       will not work out of the box.
+    </flag>
+
+    <flag name="pam" restrict="&gt;=dev-db/drizzle-2010.03.1412">
+      Enable the PAM authentication plugin (using
+      <pkg>sys-libs/pam</pkg>). The configuration file created will be
+      /etc/pam.d/drizzle.
+    </flag>
+
+    <flag name="md5" restrict="&gt;=dev-db/drizzle-2010.03.1412">
+      Enable the MD5 plugin, using <pkg>dev-libs/libgcrypt</pkg>; this
+      replaces the older openssl and gnutls USE flags.
     </flag>
   </use>
 </pkgmetadata>
