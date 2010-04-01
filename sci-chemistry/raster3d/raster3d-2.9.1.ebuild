@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.9.1.ebuild,v 1.1 2010/03/28 10:27:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.9.1.ebuild,v 1.2 2010/04/01 19:58:32 jlec Exp $
 
 EAPI="3"
 
@@ -66,7 +66,7 @@ src_install() {
 
 	dodir /etc/env.d
 	echo -e "R3D_LIB=${EPREFIX}/usr/share/${NAME}/materials" > \
-		"${D}"/etc/env.d/10raster3d || \
+		"${ED}"/etc/env.d/10raster3d || \
 		die "Failed to install env file."
 }
 

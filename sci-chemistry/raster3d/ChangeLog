@@ -1,13 +1,16 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.17 2010/03/28 10:27:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.18 2010/04/01 19:58:32 jlec Exp $
+
+  01 Apr 2010; Justin Lecher <jlec@gentoo.org> raster3d-2.9.1.ebuild:
+  Fixed Prefix support, #312117
 
 *raster3d-2.9.1 (28 Mar 2010)
 
   28 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   +files/2.9.1-as-needed.patch, +raster3d-2.9.1.ebuild, metadata.xml:
-  Version BUmp, keyworded for ~*-linux, as-needed aware linking, removed
-  unneded imake DEPEND
+  Version Bump, keyworded for ~*-linux, as-needed aware linking, removed
+  uneeded imake DEPEND
 
   16 Oct 2008; Markus Dittrich <markusle@gentoo.org> raster3d-2.7s.ebuild, raster3d-2.7d.ebuild:
   Added -ffixed-line-length-132 to FFLAGS to avoid gcc-4.1.2 errors 
