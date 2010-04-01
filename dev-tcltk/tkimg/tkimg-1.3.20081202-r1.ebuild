@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.8 2010/04/01 19:58:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202-r1.ebuild,v 1.1 2010/04/01 19:58:54 jlec Exp $
 
-EAPI=2
-inherit eutils
+EAPI="3"
+inherit eutils prefix
 
 DESCRIPTION="Adds a lot of image formats to Tcl/Tk"
 HOMEPAGE="http://sourceforge.net/projects/tkimg/"
@@ -27,9 +27,15 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-systemlibs.patch
 	epatch "${FILESDIR}"/${P}-tests.patch
+	epatch "${FILESDIR}"/${P}-prefix.patch
 	sed -i \
 		-e 's:$(prefix)/man:$(prefix)/share/man:g' \
 		Makefile.in  || die
+	eprefixify \
+		libjpeg/tcl/jpegtclDecls.h \
+		libpng/tcl/pngtclDecls.h \
+		libtiff/tcl/tifftclDecls.h \
+		libz/tcl/zlibtclDecls.h
 }
 
 src_install() {
@@ -38,7 +44,7 @@ src_install() {
 		INSTALL_ROOT="${D}" \
 		install || die "emake install failed"
 	# Make library links
-	for l in "${D}"/usr/lib*/Img*/*tcl*.so; do
+	for l in "${ED}"/usr/lib*/Img*/*tcl*.so; do
 		bl=$(basename $l)
 		dosym Img1.4/${bl} /usr/$(get_libdir)/${bl}
 	done
