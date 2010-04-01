@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.171 2010/02/22 06:51:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.172 2010/04/01 08:39:06 a3li Exp $
+
+*rmagick-2.13.0-r2 (01 Apr 2010)
+
+  01 Apr 2010; Alex Legler <a3li@gentoo.org> rmagick-2.13.0-r1.ebuild,
+  +rmagick-2.13.0-r2.ebuild:
+  Revbump in preparation of stabilizing a new version for keeping ruby19 w/o
+  breaking the stable tree
 
   22 Feb 2010; Hans de Graaff <graaff@gentoo.org>
   files/rmagick-2.13.0-magicklibsubversion.patch:
