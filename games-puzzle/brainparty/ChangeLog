@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/brainparty
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/ChangeLog,v 1.1 2010/04/02 03:23:17 mr_bones_ Exp $
+
+*brainparty-0.5 (02 Apr 2010)
+
+  02 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +brainparty-0.5.ebuild, +metadata.xml:
+  initial commit - ebuild submitted by Chris Coleman via bug #312473
+
