@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.169 2010/03/09 20:26:39 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.170 2010/04/02 22:15:15 phosphan Exp $
+
+  02 Apr 2010; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.20-r3.ebuild:
+  libieee1284 was always linked with, see bug #283341.
 
   09 Mar 2010; Patrick Kursawe <phosphan@gentoo.org>
   -sane-backends-1.0.19-r1.ebuild, -sane-backends-1.0.20.ebuild,
