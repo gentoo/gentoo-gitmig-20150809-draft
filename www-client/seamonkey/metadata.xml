@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mozilla</herd>
+  <maintainer>
+    <email>polynomial-c@gentoo.org</email>
+    <name>Lars Wendler</name>
+  </maintainer>
 <use>
 	<!-- New EAPI-1 style USE-flags -->
 	<flag name='chatzilla'>Build Mozilla's IRC client (default on)</flag>
