@@ -1,10 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.11 2010/03/06 12:24:05 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.12 2010/04/02 18:29:39 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
-# nelchael@gentoo.org
+# Krzysztof Pawlik <nelchael@gentoo.org>
+# Dirkjan Ochtman <djc@gentoo.org>
 # @BLURB: This eclass provides generic mercurial fetching functions
 # @DESCRIPTION:
 # This eclass provides generic mercurial fetching functions. To fetch sources
@@ -29,6 +30,11 @@ DEPEND="dev-vcs/mercurial"
 # EHG_REVISION is passed as a value for --rev parameter, so it can be more than
 # just a revision, please consult `hg help revisions' for more details.
 [[ -z "${EHG_REVISION}" ]] && EHG_REVISION="tip"
+
+# @ECLASS-VARIABLE: EHG_STORE_DIR
+# @DESCRIPTION:
+# Mercurial sources store directory. Users may override this in /etc/make.conf
+[[ -z "${EHG_STORE_DIR}" ]] && EHG_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}/hg-src"
 
 # @ECLASS-VARIABLE: EHG_PROJECT
 # @DESCRIPTION:
@@ -74,38 +80,37 @@ function mercurial_fetch {
 	EHG_REPO_URI=${1-${EHG_REPO_URI}}
 	[[ -z "${EHG_REPO_URI}" ]] && die "EHG_REPO_URI is empty"
 
-	local hg_src_dir="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/hg-src"
 	local module="${2-$(basename "${EHG_REPO_URI}")}"
 
 	# Should be set but blank to prevent using $HOME/.hgrc
 	export HGRCPATH=
 
-	# Check ${hg_src_dir} directory:
-	addwrite "$(dirname "${hg_src_dir}")" || die "addwrite failed"
-	if [[ ! -d "${hg_src_dir}" ]]; then
-		mkdir -p "${hg_src_dir}" || die "failed to create ${hg_src_dir}"
-		chmod -f g+rw "${hg_src_dir}" || \
-			die "failed to chown ${hg_src_dir}"
+	# Check ${EHG_STORE_DIR} directory:
+	addwrite "$(dirname "${EHG_STORE_DIR}")" || die "addwrite failed"
+	if [[ ! -d "${EHG_STORE_DIR}" ]]; then
+		mkdir -p "${EHG_STORE_DIR}" || die "failed to create ${EHG_STORE_DIR}"
+		chmod -f g+rw "${EHG_STORE_DIR}" || \
+			die "failed to chown ${EHG_STORE_DIR}"
 	fi
 
 	# Create project directory:
-	mkdir -p "${hg_src_dir}/${EHG_PROJECT}" || \
-		die "failed to create ${hg_src_dir}/${EHG_PROJECT}"
-	chmod -f g+rw "${hg_src_dir}/${EHG_PROJECT}" || \
+	mkdir -p "${EHG_STORE_DIR}/${EHG_PROJECT}" || \
+		die "failed to create ${EHG_STORE_DIR}/${EHG_PROJECT}"
+	chmod -f g+rw "${EHG_STORE_DIR}/${EHG_PROJECT}" || \
 		echo "Warning: failed to chmod g+rw ${EHG_PROJECT}"
-	cd "${hg_src_dir}/${EHG_PROJECT}" || \
-		die "failed to cd to ${hg_src_dir}/${EHG_PROJECT}"
+	cd "${EHG_STORE_DIR}/${EHG_PROJECT}" || \
+		die "failed to cd to ${EHG_STORE_DIR}/${EHG_PROJECT}"
 
 	# Clone/update repository:
 	if [[ ! -d "${module}" ]]; then
-		einfo "Cloning ${EHG_REPO_URI} to ${hg_src_dir}/${EHG_PROJECT}/${module}"
+		einfo "Cloning ${EHG_REPO_URI} to ${EHG_STORE_DIR}/${EHG_PROJECT}/${module}"
 		${EHG_CLONE_CMD} "${EHG_REPO_URI}" "${module}" || {
 			rm -rf "${module}"
 			die "failed to clone ${EHG_REPO_URI}"
 		}
 		cd "${module}"
 	elif [[ -z "${EHG_OFFLINE}" ]]; then
-		einfo "Updating ${hg_src_dir}/${EHG_PROJECT}/${module} from ${EHG_REPO_URI}"
+		einfo "Updating ${EHG_STORE_DIR}/${EHG_PROJECT}/${module} from ${EHG_REPO_URI}"
 		cd "${module}" || die "failed to cd to ${module}"
 		${EHG_PULL_CMD} || die "update failed"
 	fi
@@ -115,7 +120,7 @@ function mercurial_fetch {
 	hg clone \
 		${EHG_QUIET_CMD_OPT} \
 		--rev="${EHG_REVISION}" \
-		"${hg_src_dir}/${EHG_PROJECT}/${module}" \
+		"${EHG_STORE_DIR}/${EHG_PROJECT}/${module}" \
 		"${WORKDIR}/${module}" || die "hg clone failed"
 }
 
