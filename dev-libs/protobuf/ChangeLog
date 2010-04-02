@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.13 2010/03/29 22:18:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.14 2010/04/02 19:22:47 grobian Exp $
+
+  02 Apr 2010; Fabian Groffen <grobian@gentoo.org> protobuf-2.3.0.ebuild:
+  Marked ~x64-macos, bug #312589
 
   29 Mar 2010; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
   Update my first name.
