@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.134 2010/02/25 21:13:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.135 2010/04/02 05:58:19 pva Exp $
+
+*libpcap-1.1.0 (02 Apr 2010)
+
+  02 Apr 2010; Peter Volkov <pva@gentoo.org> +libpcap-1.1.0.ebuild,
+  +files/libpcap-1.1-cross-linux.patch:
+  Version bump, bug #312337, thank Richard Hartmann for report. Fixes
+  compatibility issue with autoconf-2.64, bug #281690, dropped Mike's patch
+  for that.
 
   25 Feb 2010; Fabian Groffen <grobian@gentoo.org>
   libpcap-1.0.1_pre20090812.ebuild:
