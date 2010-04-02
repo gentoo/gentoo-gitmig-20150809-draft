@@ -1,19 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-2.1.1.ebuild,v 1.1 2010/04/02 20:51:05 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-2.1.1.ebuild,v 1.2 2010/04/02 23:35:24 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-
 DESCRIPTION="A simple, fast, complete, correct and extensible JSON encoder and decoder."
-HOMEPAGE="http://undefined.org/python/#simplejson"
-SRC_URI="http://cheeseshop.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+HOMEPAGE="http://undefined.org/python/#simplejson http://pypi.python.org/pypi/simplejson"
+SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools"
