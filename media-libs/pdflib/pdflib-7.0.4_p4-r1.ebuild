@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-7.0.4_p4.ebuild,v 1.1 2010/04/02 20:15:08 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-7.0.4_p4-r1.ebuild,v 1.1 2010/04/02 20:40:17 mabi Exp $
 
 EAPI="1"
 
@@ -43,6 +43,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-noexec-stack.patch"
 	epatch "${FILESDIR}/${PN}-python-libdir.patch"
+	epatch "${FILESDIR}/${PN}-perl-vendor-dir.patch"
 	sed -ie 's/-module/-module -avoid-version -shared/' config/mkbind.inc.in
 
 	# eautoreconf breaks the build
@@ -114,10 +115,10 @@ src_install() {
 				|| die "sed bind/pdflib/${binding}/Makefile failed"
 	done
 
-	# this should create the correct lib dir for perl
+	# this should create the correct lib dir for perl (bug #298019)
 	if use perl ; then
 		perlinfo
-		dodir ${SITE_ARCH}
+		fixlocalpod
 	fi
 
 	# and no, emake still does not work for install
