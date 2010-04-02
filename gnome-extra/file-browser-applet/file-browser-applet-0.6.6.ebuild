@@ -1,21 +1,22 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.0-r1.ebuild,v 1.5 2009/04/20 20:30:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.6.ebuild,v 1.1 2010/04/02 04:33:41 serkan Exp $
+
+EAPI="2"
 
 inherit gnome2 cmake-utils
 
-DESCRIPTION="Browse and open files in your home directory from the GNOME panel."
+DESCRIPTION="Browse, open and manage files in your computer directly from the GNOME panel."
 HOMEPAGE="http://code.google.com/p/gnome-menu-file-browser-applet/"
 SRC_URI="http://gnome-menu-file-browser-applet.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtkhotkey"
 
 RDEPEND=">=x11-libs/gtk+-2.14
 	>=gnome-base/gnome-panel-2.0
-	>=gnome-base/libglade-2.0
 	>=dev-libs/glib-2.16
 	gtkhotkey? ( x11-libs/gtkhotkey )"
 
@@ -23,16 +24,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/cmake-2.4.8"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}" || die
-	epatch "${FILESDIR}"/${P}-fixautomagic-gtkhotkey.patch
-	#Move to src_prepare when portage-2.2 is stable.
+src_prepare() {
+	sed -i -e "s/-O3 -g//g" CMakeLists.txt
 }
 
 src_compile() {
 	mycmakeargs="${mycmakeargs} -DCMAKE_INSTALL_GCONF_SCHEMA_DIR=/etc/gconf/schemas"
-	use gtkhotkey || mycmakeargs="${mycmakeargs} -DDISABLE_GTK_HOTKEY=true"
+	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable gtkhotkey GTK_HOTKEY)"
 	cmake-utils_src_compile
 }
 

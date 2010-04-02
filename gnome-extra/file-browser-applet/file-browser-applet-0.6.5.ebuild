@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.5.ebuild,v 1.1 2010/02/13 15:49:21 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.5.ebuild,v 1.2 2010/04/02 04:33:41 serkan Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.8"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-cflags.patch
+	sed -i -e "s/-O3 -g//g" CMakeLists.txt
 }
 
 src_compile() {
