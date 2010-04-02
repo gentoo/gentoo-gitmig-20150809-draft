@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tktreectrl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.1 2010/02/04 23:27:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.2 2010/04/02 09:03:59 jlec Exp $
+
+  02 Apr 2010; Justin Lecher <jlec@gentoo.org> tktreectrl-2.2.9.ebuild:
+  Keyworded for ~x86-linux ~amd64-linux, tested by me
 
 *tktreectrl-2.2.9 (04 Feb 2010)
 
