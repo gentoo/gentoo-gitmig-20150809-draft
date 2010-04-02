@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.2.ebuild,v 1.3 2010/01/29 19:28:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.3.ebuild,v 1.1 2010/04/02 16:50:16 dertobi123 Exp $
 
 EAPI="2"
+
+inherit depend.apache
 
 DESCRIPTION="A performance data analyzer for nagios"
 HOMEPAGE="http://www.pnp4nagios.org"
@@ -14,12 +16,19 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-lang/php-4.3[gd-external,pcre,filter,reflection,spl,simplexml,xml,zlib]
+DEPEND=">=dev-lang/php-4.3[gd-external,json,pcre,filter,reflection,spl,simplexml,xml,zlib]
 	>=net-analyzer/rrdtool-1.2
 	net-analyzer/nagios-core"
 RDEPEND="${DEPEND}
 	virtual/perl-Getopt-Long
-	virtual/perl-Time-HiRes"
+	virtual/perl-Time-HiRes
+	apache2? ( www-servers/apache[apache2_modules_rewrite] )"
+
+want_apache2
+
+pkg_setup() {
+	depend.apache_pkg_setup
+}
 
 src_configure() {
 	econf \
@@ -36,16 +45,10 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install install-config || die "emake install failed"
 	doinitd "${FILESDIR}/npcd"
-}
+	rm "${D}/usr/share/pnp/install.php"
 
-pkg_postinst() {
-	elog "To include the pnp webinterface into your Nagios setup you could use"
-	elog "an Alias in you Apache configuration as follows:"
-
-	elog "\tAlias /nagios/pnp       /usr/share/pnp/"
-	elog "\t<Directory "/usr/share/pnp">"
-	elog "\t\tAllowOverride AuthConfig"
-	elog "\t\tOrder allow,deny"
-	elog "\t\tAllow from all"
-	elog "\t</Directory>"
+	if use apache2 ; then
+		insinto "${APACHE_MODULES_CONFDIR}"
+		doins "${FILESDIR}"/98_pnp4nagios.conf
+	fi
 }

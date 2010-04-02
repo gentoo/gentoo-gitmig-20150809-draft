@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.15 2010/01/29 19:28:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.16 2010/04/02 16:50:16 dertobi123 Exp $
+
+*pnp4nagios-0.6.3 (02 Apr 2010)
+
+  02 Apr 2010; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/98_pnp4nagios.conf, -pnp4nagios-0.4.14.ebuild,
+  -pnp4nagios-0.6.2.ebuild, +pnp4nagios-0.6.3.ebuild:
+  Version bump, add Apache2 use-flag to allow for automagic integration into
+  Apache (#302611) (Add -PNP to /etc/conf.d/apache2).
 
   29 Jan 2010; Tobias Scherbaum <dertobi123@gentoo.org>
   pnp4nagios-0.6.2.ebuild:
