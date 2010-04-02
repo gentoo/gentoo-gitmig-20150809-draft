@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tclx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.40 2009/08/05 20:10:09 mescalinum Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.41 2010/04/02 09:22:48 jlec Exp $
+
+*tclx-8.4-r2 (02 Apr 2010)
+
+  02 Apr 2010; Justin Lecher <jlec@gentoo.org> +tclx-8.4-r2.ebuild,
+  +files/tclx-8.4-ldflags.patch:
+  Imported from prefix overlay, ldflags respectation patch
 
   05 Aug 2009; Federico Ferri <mescalinum@gentoo.org> tclx-8.4-r1.ebuild:
   disable tests wrt bug 279283
