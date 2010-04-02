@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.2 2009/10/13 06:46:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.3 2010/04/02 18:23:47 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
