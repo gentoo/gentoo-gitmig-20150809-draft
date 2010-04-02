@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5455 2010/04/02 14:48:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5456 2010/04/02 15:48:03 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2697,13 +2697,13 @@ net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Ve
 net-misc/slimrat:X - Install also GUI client
 net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
-net-misc/strongswan:cisco - Enable support of Cisco VPN client
-net-misc/strongswan:gcrypt - Enable gcrypt support
-net-misc/strongswan:ikev1 - Enable ikev1 protocol
-net-misc/strongswan:ikev2 - Enable ikev2 protocol
-net-misc/strongswan:nat - Enable NAT traversal with IPsec transport mode
-net-misc/strongswan:non-root - Enable running as non-root
-net-misc/strongswan:openssl - Enable openssl support
+net-misc/strongswan:cisco -  Enable support for the Cisco VPN client. 
+net-misc/strongswan:gcrypt -  Enable dev-libs/libgcrypt plugin which provides 3DES, AES, Blowfish, Camellia, CAST, DES, Serpent and Twofish ciphers along with MD4, MD5 and SHA1/2 hash algorithms, RSA and a software random number generator. 
+net-misc/strongswan:ikev1 -  Enable IKEv1 protocol (pluto daemon). 
+net-misc/strongswan:ikev2 -  Enable IKEv2 protocol (charon daemon). 
+net-misc/strongswan:nat-transport -  Enable potentially insecure NAT traversal for transport mode in IKEv1. Only enable if you really need this. 
+net-misc/strongswan:non-root -  Force IKEv1/IKEv2 daemons to normal user privileges. This might impose some restrictions mainly to the IKEv1 daemon. Disable only if you really require superuser privileges. 
+net-misc/strongswan:openssl -  Enable dev-libs/openssl plugin which is required for Elliptic Curve Cryptography (Diffie-Hellman groups 19-21, 25, 26) and ECDSA. Also provides 3DES, AES, Blowfish, Camellia, CAST, DES, IDEA and RC5 ciphers along with MD2, MD4, MD5 and SHA1/2 hash algorithms and RSA. dev-libs/openssl has to be compiled with USE="-bindist". 
 net-misc/stunnel:xforward - Enable X-Forwarded-For support for Stunnel
 net-misc/termpkg:uucp -  Adds support for uucp style device locking 
 net-misc/tigervnc:server - Build TigerVNC server
