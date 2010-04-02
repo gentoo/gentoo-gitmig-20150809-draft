@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.367 2010/04/01 21:28:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.368 2010/04/02 22:38:22 robbat2 Exp $
+
+*gnupg-1.4.10-r1 (02 Apr 2010)
+
+  02 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> gnupg-1.4.10.ebuild,
+  +gnupg-1.4.10-r1.ebuild:
+  Move the EAPI=3 change to a seperate ebuild for the 1.4 series, as some
+  autobuilds still contain a Portage that does not support it, and this can
+  get brought in very early sometimes.
 
   01 Apr 2010; Jonathan Callen <abcd@gentoo.org> gnupg-1.4.10.ebuild,
   gnupg-2.0.14.ebuild, gnupg-2.0.15.ebuild:
