@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.140 2010/04/02 06:02:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.141 2010/04/02 07:07:51 pva Exp $
+
+*tcpdump-4.1.0-r1 (02 Apr 2010)
+
+  02 Apr 2010; Peter Volkov <pva@gentoo.org> +tcpdump-4.1.0-r1.ebuild:
+  Added suid USE flag to allow users in tcpdump group to sniff traffic, bug
+  #283527, thank Hank Leininger for report.
 
 *tcpdump-4.1.0 (02 Apr 2010)
 
