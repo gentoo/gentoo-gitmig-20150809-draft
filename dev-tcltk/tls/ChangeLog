@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tls
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.26 2009/11/16 19:57:19 mescalinum Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.27 2010/04/02 09:13:19 jlec Exp $
+
+*tls-1.6-r2 (02 Apr 2010)
+
+  02 Apr 2010; Justin Lecher <jlec@gentoo.org> +tls-1.6-r2.ebuild:
+  Imported from prefix overlay
 
 *tls-1.6-r1 (16 Nov 2009)
 
