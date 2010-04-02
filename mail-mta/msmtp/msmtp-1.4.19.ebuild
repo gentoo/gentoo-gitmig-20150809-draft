@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.14.ebuild,v 1.1 2008/03/22 14:51:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.19.ebuild,v 1.1 2010/04/02 16:17:12 a3li Exp $
+
+EAPI=2
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -8,11 +10,12 @@ SRC_URI="mirror://sourceforge/msmtp/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc gnutls idn mailwrapper nls sasl ssl"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="doc gnome-keyring gnutls idn mailwrapper nls sasl ssl"
 
 DEPEND="idn? ( net-dns/libidn )
 	nls? ( virtual/libintl )
+	gnome-keyring? ( gnome-base/gnome-keyring )
 	gnutls? ( >=net-libs/gnutls-1.2.0 )
 	!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
 	sasl? ( >=virtual/gsasl-0.2.4 )"
@@ -27,7 +30,7 @@ DEPEND="${DEPEND}
 
 PROVIDE="virtual/mta"
 
-src_compile () {
+src_configure () {
 	local myconf
 
 	if use gnutls ; then
@@ -41,11 +44,9 @@ src_compile () {
 	econf \
 		$(use_with idn libidn) \
 		$(use_with sasl libgsasl) \
+		$(use_with gnome-keyring ) \
 		$(use_enable nls) \
-		${myconf} \
-		|| die "configure failed"
-
-	emake || die "make failed"
+		${myconf}
 }
 
 src_install () {

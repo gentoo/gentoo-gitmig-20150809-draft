@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.74 2010/01/01 18:22:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.75 2010/04/02 16:17:12 a3li Exp $
+
+*msmtp-1.4.19 (02 Apr 2010)
+
+  02 Apr 2010; Alex Legler <a3li@gentoo.org> -msmtp-1.4.9.ebuild,
+  -msmtp-1.4.14.ebuild, -msmtp-1.4.16.ebuild, -msmtp-1.4.17.ebuild,
+  +msmtp-1.4.19.ebuild:
+  Non-maintainer commit: Version bump for security bug 293647. Removing
+  unneeded vulnerable versions.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> msmtp-1.4.17.ebuild:
   Transfer Prefix keywords
