@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libtar
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.8 2009/12/31 17:25:38 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.9 2010/04/02 21:13:50 ssuominen Exp $
+
+*libtar-1.2.11-r3 (02 Apr 2010)
+
+  02 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +libtar-1.2.11-r3.ebuild:
+  Import Debian patchset. Build both shared and static libs.
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> libtar-1.2.11-r2.ebuild:
   Marking libtar-1.2.11-r2 ~ppc64 for bug 283235
