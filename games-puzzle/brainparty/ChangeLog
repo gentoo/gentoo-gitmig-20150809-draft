@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/brainparty
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/ChangeLog,v 1.1 2010/04/02 03:23:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/ChangeLog,v 1.2 2010/04/02 04:42:08 mr_bones_ Exp $
+
+  02 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  brainparty-0.5.ebuild, +files/brainparty-0.5-savegame.patch:
+  savegame patch, also from Chris Coleman
 
 *brainparty-0.5 (02 Apr 2010)
 

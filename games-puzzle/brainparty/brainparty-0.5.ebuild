@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.5.ebuild,v 1.1 2010/04/02 03:23:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.5.ebuild,v 1.2 2010/04/02 04:42:08 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -33,6 +33,8 @@ src_prepare() {
 		"/^int main(/ a\\\\tchdir(\"${GAMES_DATADIR}/${PN}\");\n" \
 		main.cpp \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-savegame.patch
+
 }
 
 src_install() {
