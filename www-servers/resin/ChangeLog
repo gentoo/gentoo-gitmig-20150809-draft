@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.92 2010/04/02 15:41:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.93 2010/04/02 15:46:21 nelchael Exp $
+
+  02 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org> resin-4.0.5.ebuild:
+  Add symlink for hosts for easy virtual host management.
 
 *resin-4.0.5 (02 Apr 2010)
 
