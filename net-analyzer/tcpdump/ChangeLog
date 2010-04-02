@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.139 2010/02/12 14:34:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.140 2010/04/02 06:02:17 pva Exp $
+
+*tcpdump-4.1.0 (02 Apr 2010)
+
+  02 Apr 2010; Peter Volkov <pva@gentoo.org> +tcpdump-4.1.0.ebuild,
+  +files/tcpdump-4.1.0-without-chroot.patch:
+  Version bump, bug #312337, thank Richard Hartmann for report. Fixes
+  inability to run tcpdump if built with USE=-chroot, bug 281936, thank
+  Travis Schack for report. Tests are broken in the release.
 
   12 Feb 2010; Jeroen Roovers <jer@gentoo.org> tcpdump-3.9.8-r1.ebuild:
   Stable for HPPA too.
