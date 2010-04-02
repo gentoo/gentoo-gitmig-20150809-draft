@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.6.ebuild,v 1.3 2010/04/02 14:18:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.6.ebuild,v 1.4 2010/04/02 14:20:30 ssuominen Exp $
 
 EAPI=3
 inherit fdo-mime gnome2-utils
@@ -52,7 +52,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		$(use_enable nls) \
 		$(use_enable xinerama) \
-		$(use_enable lirc) LIRC_CFLAGS=" " LIRC_LIBS="-llirc_client" \
+		$(use_enable lirc) LIRC_CFLAGS="" LIRC_LIBS="-llirc_client" \
 		$(use_enable vdr vdr-keys) \
 		--disable-nvtvsimple \
 		$(use_enable debug) \
