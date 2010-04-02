@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/tangerine-icon-theme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.16 2009/04/28 11:05:51 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/ChangeLog,v 1.17 2010/04/02 14:56:10 ssuominen Exp $
+
+  02 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  tangerine-icon-theme-0.26.ebuild:
+  Fix depend vs. rdepend confusion wrt #312591 by Diego E. 'Flameeyes'
+  Pettenò.
 
   28 Apr 2009; Samuli Suominen <ssuominen@gentoo.org>
   tangerine-icon-theme-0.26.ebuild:

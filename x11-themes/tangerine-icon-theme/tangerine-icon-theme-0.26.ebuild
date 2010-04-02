@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.5 2009/04/28 11:05:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.6 2010/04/02 14:56:10 ssuominen Exp $
 
 EAPI=2
 inherit autotools gnome2-utils
@@ -15,14 +15,14 @@ SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE="png"
 
-RDEPEND=">=x11-misc/icon-naming-utils-0.8.2
+RDEPEND=">=x11-themes/gnome-icon-theme-2.24"
+DEPEND=">=gnome-base/librsvg-2.12.3
 	media-gfx/imagemagick[png?]
-	>=gnome-base/librsvg-2.12.3
-	>=x11-themes/gnome-icon-theme-2.18"
-DEPEND="${RDEPEND}
+	>=x11-misc/icon-naming-utils-0.8.2
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
+
 RESTRICT="binchecks strip"
 
 src_unpack() { unpack ${PN}_${PV}.tar.gz; }
@@ -32,21 +32,22 @@ src_prepare() {
 
 	for res in 16 22 32; do
 		rsvg -w ${res} -h ${res} scalable/places/start-here.svg \
-			${res}x${res}/places/start-here.png || die "rsvg failed"
+			${res}x${res}/places/start-here.png || die
 	done
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
+	intltoolize --force --copy --automake || die
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable png png-creation) \
+	econf \
+		$(use_enable png png-creation) \
 		$(use_enable png icon-framing)
 }
 
 src_install() {
 	addwrite /root/.gnome2
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
 }
 
