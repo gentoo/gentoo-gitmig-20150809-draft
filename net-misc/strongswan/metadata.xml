@@ -2,29 +2,54 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>no-herd</herd>
-        <maintainer>
-                <email>patrick@gentoo.org</email>
-                <name>Patrick Lauer</name>
-        </maintainer>
-        <maintainer>
-                <email>ua_bugz_gentoo@mortal-soul.de</email>
-                <name>Matthias Dahl </name>
-        </maintainer>
-
+  <maintainer>
+    <email>patrick@gentoo.org</email>
+    <name>Patrick Lauer</name>
+  </maintainer>
+  <maintainer>
+    <email>ua_bugz_gentoo@mortal-soul.de</email>
+    <name>Matthias Dahl</name>
+    <description>Proxy Maintainer, CC on all bugs</description>
+  </maintainer>
   <longdescription lang="en">
-		strongSwan is an OpenSource IPsec implementation for the Linux
-		operating system. It is based on the discontinued FreeS/WAN project and
-		the X.509 patch which we developed over the last three years. In order
-		to have a stable IPsec platform to base our future extensions of the
-		X.509 capability on, we decided to lauch the strongSwan project.
-	</longdescription>
+    StrongSwan is direct descendant of the discontinued FreeS/WAN project.
+    As an IPsec based VPN solution which is focused on security and ease of
+    use, it fully implements the IKEv1/IKEv2 protocols, MOBIKE, NAT-Traversal
+    via UDP encapsulation (incl. port floating) and Dead Peer Detection. It
+    also fully supports the Linux 2.6 IPsec stack, IPv6, certificates/keys on
+    Smartcards and virtual IP address pools.
+  </longdescription>
   <use>
-    <flag name="cisco">Enable support of Cisco VPN client</flag>
-    <flag name="nat">Enable NAT traversal with IPsec transport mode</flag>
-    <flag name="gcrypt">Enable gcrypt support</flag>
-    <flag name="ikev1">Enable ikev1 protocol</flag>
-    <flag name="ikev2">Enable ikev2 protocol</flag>
-    <flag name="openssl">Enable openssl support</flag>
-    <flag name="non-root">Enable running as non-root</flag>
+    <flag name="cisco">
+      Enable support for the Cisco VPN client.
+    </flag>
+    <flag name="gcrypt">
+      Enable <pkg>dev-libs/libgcrypt</pkg> plugin which provides 3DES, AES,
+      Blowfish, Camellia, CAST, DES, Serpent and Twofish ciphers along with
+      MD4, MD5 and SHA1/2 hash algorithms, RSA and a software	random number
+      generator.
+    </flag>
+    <flag name="nat-transport">
+      Enable potentially insecure NAT traversal for transport mode in IKEv1.
+      Only enable if you really need this.
+    </flag>
+    <flag name="ikev1">
+      Enable IKEv1 protocol (pluto daemon).
+    </flag>
+    <flag name="ikev2">
+      Enable IKEv2 protocol (charon daemon).
+    </flag>
+    <flag name="openssl">
+      Enable <pkg>dev-libs/openssl</pkg> plugin which is required for Elliptic
+      Curve Cryptography (Diffie-Hellman groups 19-21, 25, 26) and ECDSA. Also
+      provides 3DES, AES, Blowfish, Camellia, CAST, DES, IDEA and RC5 ciphers
+      along with MD2, MD4, MD5 and SHA1/2 hash algorithms and RSA.
+      <pkg>dev-libs/openssl</pkg> has to be compiled with USE="-bindist".
+    </flag>
+    <flag name="non-root">
+      Force IKEv1/IKEv2 daemons to normal user privileges. This might impose
+      some restrictions mainly to the IKEv1 daemon. Disable only if you really
+      require superuser privileges.
+    </flag>
   </use>
 </pkgmetadata>

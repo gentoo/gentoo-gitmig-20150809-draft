@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.81 2010/03/23 01:38:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.82 2010/04/02 15:39:54 yngwin Exp $
+
+*strongswan-4.3.6-r2 (02 Apr 2010)
+
+  02 Apr 2010; Ben de Groot <yngwin@gentoo.org> -strongswan-4.2.17.ebuild,
+  -strongswan-4.3.3.ebuild, -strongswan-4.3.4.ebuild,
+  -strongswan-4.3.5.ebuild, -strongswan-4.3.6.ebuild,
+  -strongswan-4.3.6-r1.ebuild, +strongswan-4.3.6-r2.ebuild, metadata.xml:
+  Remove 'nat' useflag as it is misleading and replace it with an
+  appropriate 'nat-transport' flag and warn users about it. Fix dependency on
+  openssl[-bindist] wrt bug #311981. Thanks to Thomas Klute for reporting this.
+  Overhaul of package/useflag descriptions. Drop built_with_use again
+  (deprecated) which I introduced in the latest revision. Addition of several
+  new warnings/logs that will hopefully help the user. Drop old (and
+  unsupported by proxy maintainer) ebuilds. Update metadata.xml.
 
   23 Mar 2010; Ben de Groot <yngwin@gentoo.org> strongswan-4.3.6-r1.ebuild:
   Fix directory ownership for '+non-root -caps'/'-non-root +caps'

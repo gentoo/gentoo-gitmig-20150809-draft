@@ -1,28 +1,27 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.6-r1.ebuild,v 1.3 2010/03/23 01:38:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.6-r2.ebuild,v 1.1 2010/04/02 15:39:54 yngwin Exp $
 
 EAPI=2
-
 inherit eutils linux-info
 
-DESCRIPTION="Open Source IPsec based VPN solution with a strong focus on security. Fully supports IKEv1/IKEv2, MOBIKE and the Linux 2.6 IPsec stack."
+DESCRIPTION="IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE"
 HOMEPAGE="http://www.strongswan.org/"
 SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86 ~amd64"
-IUSE="+caps cisco curl debug gcrypt ldap +ikev1 +ikev2 mysql nat +non-root +openssl smartcard sqlite"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="+caps cisco curl debug gcrypt ldap +ikev1 +ikev2 mysql nat-transport +non-root +openssl smartcard sqlite"
 
 COMMON_DEPEND="!net-misc/openswan
-	dev-libs/gmp
+	>=dev-libs/gmp-4.1.5
 	gcrypt? ( dev-libs/libgcrypt )
 	caps? ( sys-libs/libcap )
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )
 	smartcard? ( dev-libs/opensc )
-	openssl? ( >=dev-libs/openssl-0.9.8 )
+	openssl? ( >=dev-libs/openssl-0.9.8[-bindist] )
 	mysql? ( virtual/mysql )
 	sqlite? ( >=dev-db/sqlite-3.3.1 )"
 DEPEND="${COMMON_DEPEND}
@@ -38,14 +37,45 @@ pkg_setup() {
 	linux-info_pkg_setup
 	elog "Linux kernel version: ${KV_FULL}"
 
-	if kernel_is 2 6; then
-		elog "Using native Linux 2.6 IPsec stack."
-	else
+	if ! kernel_is -ge 2 6 16; then
 		eerror
 		eerror "This ebuild currently only supports ${PN} with the"
-		eerror "native Linux 2.6 IPsec stack."
+		eerror "native Linux 2.6 IPsec stack on kernels >= 2.6.16."
 		eerror
 		die "Please install a recent 2.6 kernel."
+	fi
+
+	if use nat-transport; then
+		ewarn
+		ewarn "You have enabled NAT Traversal for transport mode with the IKEv1"
+		ewarn "protocol. Please double check if you really require this feature"
+		ewarn "as it is potentially insecure and usually only required in certain"
+		ewarn "situations when interoperating with Windows using L2TP/IPsec."
+		ewarn
+	fi
+
+	if kernel_is -lt 2 6 33; then
+		ewarn
+		ewarn "IMPORTANT KERNEL NOTES: Please read carefully..."
+		ewarn
+
+		if kernel_is -lt 2 6 29; then
+			ewarn "[ < 2.6.29 ] Due to a missing kernel feature, you have to"
+			ewarn "include all required IPv6 modules even if you just intend"
+			ewarn "to run on IPv4 only."
+			ewarn
+			ewarn "This has been fixed with kernels >= 2.6.29."
+			ewarn
+		fi
+
+		if kernel_is -lt 2 6 33; then
+			ewarn "[ < 2.6.33 ] Kernels prior to 2.6.33 include a non-standards"
+			ewarn "compliant implementation for SHA-2 HMAC support in ESP and"
+			ewarn "miss SHA384 and SHA512 HMAC support altogether."
+			ewarn
+			ewarn "If you need any of those features, please use kernel >= 2.6.33."
+			ewarn
+		fi
 	fi
 
 	if use non-root; then
@@ -79,15 +109,14 @@ src_configure() {
 		$(use_enable smartcard) \
 		$(use_enable cisco cisco-quirks) \
 		$(use_enable debug leak-detective) \
-		$(use_enable nat nat-transport) \
+		$(use_enable nat-transport) \
 		$(use_enable openssl) \
 		$(use_enable gcrypt) \
 		$(use_enable mysql) \
 		$(use_enable sqlite) \
 		$(use_enable ikev1 pluto) \
 		$(use_enable ikev2 charon) \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 }
 
 src_install() {
@@ -118,7 +147,7 @@ src_install() {
 		/etc/ipsec.d/private \
 		/etc/ipsec.d/reqs
 
-	dodoc CREDITS NEWS README TODO
+	dodoc CREDITS NEWS README TODO || die
 
 	# shared libs are used only internally and there are no static libs,
 	# so it's safe to get rid of the .la files
@@ -127,25 +156,27 @@ src_install() {
 
 pkg_preinst() {
 	has_version "<net-misc/strongswan-4.3.6-r1"
-	upgrade_from_leq_4_3_6=$?
-	if [[ $upgrade_from_leq_4_3_6 == 0 ]]; then
-		built_with_use net-misc/strongswan caps
-		previous_4_3_6_with_caps=$?
-	fi
+	upgrade_from_leq_4_3_6=$(( !$? ))
+
+	has_version "<net-misc/strongswan-4.3.6-r1[-caps]"
+	previous_4_3_6_with_caps=$(( !$? ))
 }
 
 pkg_postinst() {
-	if ! use openssl ; then
+	if ! use openssl && ! use gcrypt; then
 		elog
-		elog "${PN} has been compiled without OpenSSL support."
-		elog "Please note that (among other things), support for"
-		elog "ECDSA authentification and several ECP Diffie-Hellman groups"
-		elog "is missing."
-		elog "If you require any of the above functionality, please re-emerge"
-		elog "with the \"openssl\" USE flag enabled."
+		elog "${PN} has been compiled without both OpenSSL and libgcrypt support."
+		elog "Please note that this might effect availability and speed of some"
+		elog "cryptographic features. You are advised to enable the OpenSSL plugin."
+	elif ! use openssl; then
 		elog
+		elog "${PN} has been compiled without the OpenSSL plugin. This might effect"
+		elog "availability and speed of some cryptographic features. There will be"
+		elog "no support for Elliptic Curve Cryptography (Diffie-Hellman groups 19-21,"
+		elog "25, 26) and ECDSA."
 	fi
-	if [[ $upgrade_from_leq_4_3_6 == 0 ]]; then
+
+	if [[ $upgrade_from_leq_4_3_6 == 1 ]]; then
 		chmod 0750 "${ROOT}"/etc/ipsec.d \
 			"${ROOT}"/etc/ipsec.d/aacerts \
 			"${ROOT}"/etc/ipsec.d/acerts \
@@ -162,12 +193,12 @@ pkg_postinst() {
 		ewarn "updated accordingly. Please check if necessary."
 		ewarn
 
-		if [[ $previous_4_3_6_with_caps == 0 ]]; then
+		if [[ $previous_4_3_6_with_caps == 1 ]]; then
 			if ! use non-root; then
 				ewarn
 				ewarn "IMPORTANT: You previously had ${PN} installed without root"
-				ewarn "priviledges because it was implied by the 'caps' USE flag."
-				ewarn "This has been changed. If you want ${PN} with user priviledges,"
+				ewarn "privileges because it was implied by the 'caps' USE flag."
+				ewarn "This has been changed. If you want ${PN} with user privileges,"
 				ewarn "you have to re-emerge it with the 'non-root' USE flag enabled."
 				ewarn
 			fi
@@ -175,7 +206,7 @@ pkg_postinst() {
 	fi
 	if ! use caps && ! use non-root; then
 		ewarn
-		ewarn "You have decided to run ${PN} with root priviledges and built it"
+		ewarn "You have decided to run ${PN} with root privileges and built it"
 		ewarn "without support for POSIX capability dropping. It is generally"
 		ewarn "strongly suggested that you reconsider- especially if you intend"
 		ewarn "to run ${PN} as server with a public ip address."
@@ -185,7 +216,7 @@ pkg_postinst() {
 	fi
 	if use non-root; then
 		elog
-		elog "${PN} has been installed without superuser priviledges (USE=non-root)."
+		elog "${PN} has been installed without superuser privileges (USE=non-root)."
 		elog "This imposes several limitations mainly to the IKEv1 daemon 'pluto'"
 		elog "but also a few to the IKEv2 daemon 'charon'."
 		elog
@@ -193,11 +224,11 @@ pkg_postinst() {
 		elog
 		elog "pluto uses a helper script by default to insert/remove routing and"
 		elog "policy rules upon connection start/stop which requires superuser"
-		elog "priviledges. charon in contrast does this internally and can do so"
-		elog "even with reduced (user) priviledges."
+		elog "privileges. charon in contrast does this internally and can do so"
+		elog "even with reduced (user) privileges."
 		elog
 		elog "Thus if you require IKEv1 (pluto) or need to specify a custom updown"
-		elog "script to pluto or charon which requires superuser priviledges, you"
+		elog "script to pluto or charon which requires superuser privileges, you"
 		elog "can work around this limitation by using sudo to grant the"
 		elog "user \"ipsec\" the appropriate rights."
 		elog "For example (the default case):"
@@ -208,6 +239,10 @@ pkg_postinst() {
 		elog "  leftupdown=\"sudo ipsec _updown\""
 		elog
 	fi
+	elog
+	elog "Make sure you have _all_ required kernel modules available including"
+	elog "the appropriate cryptographic algorithms. A list is available at:"
+	elog "  http://wiki.strongswan.org/projects/strongswan/wiki/KernelModules"
 	elog
 	elog "The up-to-date manual is available online at:"
 	elog "  http://wiki.strongswan.org/"
