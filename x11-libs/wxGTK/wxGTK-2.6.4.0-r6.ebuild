@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.6 2010/03/21 14:16:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.7 2010/04/02 21:18:49 dirtyepic Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -62,6 +62,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.6.3-unicode-odbc.patch
 	epatch "${FILESDIR}"/${BASE_P}-collision.patch
 	epatch "${FILESDIR}"/${BASE_P}-mmedia.patch				# Bug #174874
+	epatch "${FILESDIR}"/${PN}-2.8.10.1-odbc-defines.patch  # Bug #310923
 
 	# Patches Specific to this version
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.249 2010/03/21 14:16:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.250 2010/04/02 21:18:49 dirtyepic Exp $
+
+  02 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.6.4.0-r6.ebuild,
+  wxGTK-2.8.10.1-r5.ebuild, +files/wxGTK-2.8.10.1-odbc-defines.patch:
+  Build fix for unixODBC-2.2.14 (bug #310923 by Martin von Gagern).
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> wxGTK-2.6.4.0-r6.ebuild,
   wxGTK-2.8.10.1-r5.ebuild:

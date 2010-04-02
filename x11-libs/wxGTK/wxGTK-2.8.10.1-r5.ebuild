@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r5.ebuild,v 1.6 2010/03/21 14:16:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r5.ebuild,v 1.7 2010/04/02 21:18:49 dirtyepic Exp $
 
 EAPI="2"
 
@@ -60,6 +60,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.6.3-unicode-odbc.patch
 	epatch "${FILESDIR}"/${PN}-2.8.10-collision.patch
 	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch              # Bug #174874
+	epatch "${FILESDIR}"/${PN}-2.8.10.1-odbc-defines.patch     # Bug #310923
 	# this version only:
 	epatch "${FILESDIR}"/${P}-CVE-2009-2369.patch              # Bug #277722
 	epatch "${FILESDIR}"/${P}-gsocket.patch                    # Bug #278778
