@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.64 2009/09/27 14:56:55 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.65 2010/04/02 09:44:28 jlec Exp $
+
+  02 Apr 2010; Justin Lecher <jlec@gentoo.org> +expect-5.44.1.ebuild,
+  +files/expect-5.44.1-darwin.patch, +files/expect-5.44.1-ldflags.patch:
+  Version Bump, Imported from prefix overlay, LDFLAGS patch
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> expect-5.43.0.ebuild:
   ppc stable #281420
