@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.43-r1.ebuild,v 1.1 2010/04/01 16:56:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.43-r1.ebuild,v 1.2 2010/04/02 13:34:34 lack Exp $
 
 EAPI=3
 SUPPORT_PYTHON_ABIS="1"
@@ -38,7 +38,7 @@ src_install() {
 	distutils_src_install
 
 	fix_0launch_gui() {
-		python_convert_shebangs "${PYTHON_ABI}" \
+		python_convert_shebangs "$(python_get_version)" \
 			"${ED}$(python_get_sitedir)/zeroinstall/0launch-gui/0launch-gui"
 	}
 	python_execute_function -q fix_0launch_gui
