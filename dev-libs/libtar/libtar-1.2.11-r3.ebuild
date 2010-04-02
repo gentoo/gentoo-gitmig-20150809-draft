@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r3.ebuild,v 1.2 2010/04/02 21:49:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r3.ebuild,v 1.3 2010/04/02 21:54:23 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -32,7 +32,6 @@ src_prepare() {
 }
 
 src_configure() {
-	export ac_cv_prog_ac_ct_STRIP=true
 	econf \
 		$(use_enable static-libs static) \
 		$(use_with zlib)
