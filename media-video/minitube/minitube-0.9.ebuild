@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.9.ebuild,v 1.4 2010/04/02 09:54:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.9.ebuild,v 1.5 2010/04/02 09:59:13 hwoarang Exp $
 
 EAPI="2"
 LANGS="es_AR pt_BR uk"
@@ -19,8 +19,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug kde"
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
-	kde? ( media-sound/phonon  x11-libs/qt-phonon:4 )
-	!kde? ( x11-libs/qt-phonon:4 media-sound/phonon )
+	kde? ( || ( media-sound/phonon  x11-libs/qt-phonon:4 ) )
+	!kde? ( || ( x11-libs/qt-phonon:4 media-sound/phonon ) )
 	media-plugins/gst-plugins-soup
 	media-plugins/gst-plugins-ffmpeg
 	media-plugins/gst-plugins-faac
