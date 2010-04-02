@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/demerge
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.48 2009/01/18 17:19:17 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.49 2010/04/02 12:34:13 armin76 Exp $
+
+  02 Apr 2010; Raúl Porcel <armin76@gentoo.org> demerge-0.043.ebuild,
+  demerge-0.044.ebuild, demerge-0.045.ebuild, demerge-0.046.ebuild,
+  demerge-0.047.ebuild:
+  Add ~arm/~sh, alpha stable
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org> demerge-0.047.ebuild:
   amd64 stable, bug #254984
