@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.9.ebuild,v 1.2 2010/02/05 22:15:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.6.6.ebuild,v 1.1 2010/04/02 17:20:39 dertobi123 Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -14,14 +14,14 @@ inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # regular ebuild
-IUSE="cdb dovecot-sasl hardened ipv6 ldap mailwrapper mbox mysql nis pam postgres sasl selinux ssl vda"
+IUSE="cdb dovecot-sasl hardened ipv6 ldap mbox mysql nis pam postgres sasl selinux ssl vda"
 # mailer-config support
 #IUSE="cdb dovecot-sasl hardened ipv6 ldap mbox mysql nis pam postgres sasl selinux ssl vda"
 
 MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_PV="2.5.5"
+VDA_PV="2.6.5"
 VDA_P="${PN}-${VDA_PV}-vda-ng"
 RC_VER="2.5"
 
@@ -51,11 +51,8 @@ DEPEND=">=sys-libs/db-3.2
 # regular ebuild
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
-		!mailwrapper? (
-			!virtual/mta
-			!net-mail/mailwrapper
-		)
-		mailwrapper? ( >=net-mail/mailwrapper-0.2 )
+		!virtual/mta
+		!net-mail/mailwrapper
 		selinux? ( sec-policy/selinux-postfix )"
 
 # mailer-config support
@@ -275,31 +272,8 @@ src_install () {
 	# Install rmail for UUCP, closes bug #19127
 	dobin auxiliary/rmail/rmail
 
-	# mailwrapper stuff
-	if use mailwrapper ; then
-		mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.postfix"
-		mv "${D}/usr/bin/rmail" "${D}/usr/bin/rmail.postfix"
-		# mailer-config support
-		#rm "${D}/usr/bin/mailq" "${D}/usr/bin/newaliases"
-
-		mv "${D}/usr/share/man/man1/sendmail.1" \
-			"${D}/usr/share/man/man1/sendmail-postfix.1"
-		mv "${D}/usr/share/man/man1/newaliases.1" \
-			"${D}/usr/share/man/man1/newaliases-postfix.1"
-		mv "${D}/usr/share/man/man1/mailq.1" \
-			"${D}/usr/share/man/man1/mailq-postfix.1"
-		mv "${D}/usr/share/man/man5/aliases.5" \
-			"${D}/usr/share/man/man5/aliases-postfix.5"
-
-		# regular ebuild
-		insinto /etc/mail
-		doins "${FILESDIR}/mailer.conf"
-		# mailer-config support
-		#mailer_install_conf
-	else
-		# Provide another link for legacy FSH
-		dosym /usr/sbin/sendmail /usr/$(get_libdir)/sendmail
-	fi
+	# Provide another link for legacy FSH
+	dosym /usr/sbin/sendmail /usr/$(get_libdir)/sendmail
 
 	# Install qshape tool
 	dobin auxiliary/qshape/qshape.pl
@@ -319,7 +293,7 @@ src_install () {
 	fperms 02711 /usr/sbin/post{drop,queue}
 
 	keepdir /etc/postfix
-	mv "${D}"/usr/share/doc/${PF}/defaults/{*.cf,post*-*} "${D}"/etc/postfix
+	mv "${D}"/usr/share/doc/${PF}/defaults/*.cf "${D}"/etc/postfix
 	if use mbox ; then
 		mypostconf="mail_spool_directory=/var/spool/mail"
 	else
@@ -359,7 +333,8 @@ pkg_postinst() {
 	fi
 
 	ebegin "Fixing queue directories and permissions"
-	"${ROOT}/etc/postfix/post-install" upgrade-permissions
+	"${ROOT}/usr/$(get_libdir)/postfix/post-install" upgrade-permissions \
+		daemon_directory=${ROOT}/usr/$(get_libdir)/postfix
 	echo
 	ewarn "If you upgraded from Postfix-1.x, you must revisit"
 	ewarn "your configuration files. See"
@@ -373,13 +348,10 @@ pkg_postinst() {
 		ewarn "work correctly without it."
 	fi
 
-	# regular ebuild
-	if ! use mailwrapper && [[ -e /etc/mailer.conf ]] ; then
+	if [[ -e /etc/mailer.conf ]] ; then
 		einfo
-		einfo "Since you emerged Postfix without mailwrapper in USE,"
-		einfo "you may want to 'emerge -C mailwrapper' now."
+		einfo "mailwrapper support is discontinued."
+		einfo "You may want to 'emerge -C mailwrapper' now."
 		einfo
 	fi
-	# mailer-config support
-	#mailer_pkg_postinst
 }
