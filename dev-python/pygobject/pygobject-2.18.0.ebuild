@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0.ebuild,v 1.14 2009/12/29 21:50:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0.ebuild,v 1.15 2010/04/02 21:29:10 arfrever Exp $
 
 inherit alternatives autotools gnome2 python virtualx
 
@@ -65,23 +65,18 @@ src_install() {
 		doins -r examples
 	fi
 
-	python_version
-	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py \
-		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py-2.0
-	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth \
-		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth-2.0
+	mv "${D}"$(python_get_sitedir)/pygtk.py "${D}"$(python_get_sitedir)/pygtk.py-2.0
+	mv "${D}"$(python_get_sitedir)/pygtk.pth "${D}"$(python_get_sitedir)/pygtk.pth-2.0
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0
-	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py pygtk.py-[0-9].[0-9]
-	alternatives_auto_makesym /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth pygtk.pth-[0-9].[0-9]
-	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.py
+	python_mod_optimize $(python_get_sitedir)/gtk-2.0
+	alternatives_auto_makesym $(python_get_sitedir)/pygtk.py pygtk.py-[0-9].[0-9]
+	alternatives_auto_makesym $(python_get_sitedir)/pygtk.pth pygtk.pth-[0-9].[0-9]
+	python_mod_compile $(python_get_sitedir)/pygtk.py
 	python_need_rebuild
 }
 
 pkg_postrm() {
-	python_version
 	python_mod_cleanup
 }

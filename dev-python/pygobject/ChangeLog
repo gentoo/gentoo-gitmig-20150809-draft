@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.89 2010/03/19 17:04:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.90 2010/04/02 21:29:10 arfrever Exp $
+
+  02 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygobject-2.18.0.ebuild:
+  Don't call deprecated python_version() (bug #312291).
 
   19 Mar 2010; Pacho Ramos <pacho@gentoo.org> pygobject-2.20.0.ebuild,
   +files/pygobject-2.20.0-tmpdir-makefile.patch:
