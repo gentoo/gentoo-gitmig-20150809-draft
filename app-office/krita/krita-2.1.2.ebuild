@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.1 2010/03/31 21:48:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.2 2010/04/02 10:19:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ KMEXTRACTONLY="libs/"
 KMLOADLIBS="koffice-libs"
 
 PATCHES=( "${FILESDIR}/${PN}-2.1.0-opengl.patch"
-	"${FILESDIR}/${P}-libpng14.patch" )
+	"${FILESDIR}/${PN}-2.1.1-libpng14.patch" )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
