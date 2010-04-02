@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.6 2010/04/02 14:56:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.7 2010/04/02 15:42:25 ssuominen Exp $
 
 EAPI=2
 inherit autotools gnome2-utils
 
 DESCRIPTION="a derivative of the standard Tango theme, using a more orange approach"
 HOMEPAGE="http://packages.ubuntu.com/gutsy/x11/tangerine-icon-theme"
-SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/t/${PN}/${PN}_${PV}.tar.gz
+SRC_URI="mirror://gentoo/${PN}_${PV}.tar.gz
 	http://www.gentoo.org/images/gentoo-logo.svg"
 
 LICENSE="CCPL-Attribution-ShareAlike-2.5"
