@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.1 2010/04/02 09:27:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.2 2010/04/02 09:28:44 jlec Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ src_prepare() {
 	[[ ${CHOST} == *-darwin* ]] && epatch "${FILESDIR}"/${P}-darwin.patch
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--libdir="${EPREFIX}"/usr/$(get_libdir) --includedir="${EPREFIX}"/usr/include"
 
 	use alsa && myconf="${myconf} --enable-alsa"
