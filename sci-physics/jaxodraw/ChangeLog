@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/jaxodraw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.9 2009/04/07 19:35:48 serkan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.10 2010/04/02 18:13:40 nelchael Exp $
+
+*jaxodraw-2.0.1 (02 Apr 2010)
+
+  02 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +jaxodraw-2.0.1.ebuild:
+  Version bump.
 
   07 Apr 2009; Serkan Kaba <serkan@gentoo.org> jaxodraw-2.0.0:
   Fix installation with source USE flag reported in bug #265243 by Robert
