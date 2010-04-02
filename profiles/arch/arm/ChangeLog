@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.69 2010/03/28 18:16:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.70 2010/04/02 14:35:49 maekke Exp $
+
+  02 Apr 2010; Markus Meier <maekke@gentoo.org> package.use.mask:
+  mask media-gfx/ufraw[fits] as it isn't keyworded
 
   28 Mar 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Package.use.mask dev-util/subversion kde
