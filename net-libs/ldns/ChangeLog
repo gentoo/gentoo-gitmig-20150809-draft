@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.7 2010/03/11 18:50:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.8 2010/04/02 19:33:34 grobian Exp $
+
+  02 Apr 2010; Fabian Groffen <grobian@gentoo.org> ldns-1.6.4.ebuild:
+  Marked ~ppc-macos and ~x64-macos, bug #312015
 
   11 Mar 2010; Markos Chandras <hwoarang@gentoo.org> ldns-1.6.4.ebuild:
   Stable on amd64 wrt bug #300362
