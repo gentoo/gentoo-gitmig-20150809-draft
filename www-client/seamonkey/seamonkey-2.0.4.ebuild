@@ -1,16 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.1.ebuild,v 1.1 2009/12/20 17:31:29 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.4.ebuild,v 1.1 2010/04/02 20:06:09 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension java-pkg-opt-2
 
-PATCH="${PN}-2.0-patches-0.1"
-EMVER="1.0.0"
+PATCH="${PN}-2.0.3-patches-0.1"
+EMVER="1.0.1"
 
-LANGS="be ca cs de en-US es-AR es-ES fr gl hu it ka lt nb-NO nl pl pt-PT ru sk sv-SE tr"
+LANGS="be ca cs de en-US es-AR es-ES fr gl hu it ja ka lt nb-NO nl pl pt-PT ru sk sv-SE tr"
 NOSHORTLANGS="es-AR es-ES nb-NO pt-PT sv-SE"
 
 MY_PV="${PV/_rc/rc}"
@@ -22,12 +22,12 @@ HOMEPAGE="http://www.seamonkey-project.org"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa +crypt java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming sqlite"
+IUSE="+alsa +chatzilla +composer +crypt java ldap +mailclient +roaming system-sqlite"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
-	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2
-	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
+	http://dev.gentoo.org/~polynomial-c/${PATCH}.tar.bz2
+	crypt? ( mailclient? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
@@ -50,23 +50,18 @@ RDEPEND="java? ( virtual/jre )
 	>=dev-libs/nss-3.12.2
 	>=dev-libs/nspr-4.8
 	alsa? ( media-libs/alsa-lib )
-	sqlite? ( >=dev-db/sqlite-3.6.20-r1[fts3] )
+	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	>=app-text/hunspell-1.2
-	x11-libs/cairo[X]
-	x11-libs/pango[X]
-	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.4 ) )"
+	>=x11-libs/gtk+-2.10.0
+	>=x11-libs/cairo-1.8.8[X]
+	>=x11-libs/pango-1.14.0[X]
+	crypt? ( mailclient? ( >=app-crypt/gnupg-1.4 ) )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	java? ( >=virtual/jdk-1.4 )"
 
 S="${WORKDIR}/comm-1.9.1"
-
-# Needed by src_compile() and src_install().
-# Would do in pkg_setup but that loses the export attribute,
-# they become pure shell variables.
-export BUILD_OFFICIAL=1
-export MOZILLA_OFFICIAL=1
 
 linguas() {
 	local LANG SLANG
@@ -104,29 +99,21 @@ src_unpack() {
 }
 
 pkg_setup() {
-	java-pkg-opt-2_pkg_setup
+	export BUILD_OFFICIAL=1
+	export MOZILLA_OFFICIAL=1
 
-	if use sqlite ; then
-		einfo
-		elog "You are enabling system sqlite. Do not file a bug with gentoo if you have"
-		elog "issues that arise from enabling system sqlite. All bugs will be concidered"
-		elog  "invalid. All patches are welcomed to fix any issues that might be found with"
-		elog "system sqlite. If you are starting with a fresh profile you can enable sqlite"
-		elog  "without any major issues."
-		epause 10
-	fi
+	java-pkg-opt-2_pkg_setup
 }
 
 src_prepare() {
 	java-pkg-opt-2_src_prepare
 
 	# Apply our patches
-	EPATCH_EXCLUDE="108-fix_ftbfs_with_cairo_fb.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	if use crypt && ! use moznomail; then
+	if use crypt && use mailclient ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
 		cd "${S}"/mailnews/extensions/enigmail || die
 		epatch "${FILESDIR}"/enigmail/70_enigmail-fix.patch
@@ -153,10 +140,10 @@ src_configure() {
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
 
-	if use moznoirc ; then
+	if ! use chatzilla ; then
 		MEXTENSIONS="${MEXTENSIONS},-irc"
 	fi
-	if use moznoroaming ; then
+	if ! use roaming ; then
 		MEXTENSIONS="${MEXTENSIONS},-sroaming"
 	fi
 
@@ -164,13 +151,9 @@ src_configure() {
 		MEXTENSIONS="${MEXTENSIONS},-gnomevfs"
 	fi
 
-	if use moznomail ; then
-		mozconfig_annotate '+moznomail' --disable-mailnews
-	fi
-
-	if use moznocompose ; then
-		if use moznoirc && use moznomail ; then
-			mozconfig_annotate '+moznocompose' --disable-composer
+	if ! use composer ; then
+		if ! use chatzilla && ! use mailclient ; then
+			mozconfig_annotate '-composer' --disable-composer
 		fi
 	fi
 
@@ -179,7 +162,7 @@ src_configure() {
 	mozconfig_annotate 'broken' --disable-mochitest
 	mozconfig_annotate 'broken' --disable-crashreporter
 	mozconfig_annotate '' --enable-system-hunspell
-	mozconfig_annotate '' --enable-system-sqlite
+	mozconfig_annotate '' --enable-jsd
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --with-system-nspr
@@ -194,10 +177,11 @@ src_configure() {
 	# Enable/Disable based on USE flags
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
+	mozconfig_use_enable java javaxpcom
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
-	mozconfig_use_enable sqlite system-sqlite
-	mozconfig_use_enable java javaxpcom
+	mozconfig_use_enable mailclient mailnews
+	mozconfig_use_enable system-sqlite
 
 	# Finalize and report settings
 	mozconfig_final
@@ -224,7 +208,7 @@ src_compile() {
 	emake ${jobs} || die
 
 	# Only build enigmail extension if conditions are met.
-	if use crypt && ! use moznomail; then
+	if use crypt && use mailclient ; then
 		emake -C "${S}"/mailnews/extensions/enigmail || die "make enigmail failed"
 		emake -j1 -C "${S}"/mailnews/extensions/enigmail xpi || die "make enigmail xpi failed"
 	fi
@@ -236,7 +220,7 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	if use crypt && ! use moznomail; then
+	if use crypt && use mailclient ; then
 		cd "${T}"
 		unzip "${S}"/mozilla/dist/bin/enigmail*.xpi install.rdf
 		emid=$(sed -n '/<em:id>/!d; s/.*\({.*}\).*/\1/; p; q' install.rdf)
@@ -251,10 +235,6 @@ src_install() {
 		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${MY_P}-${X}"
 	done
 
-	echo 'pref("intl.locale.matchOS", true);' >> \
-		"${D}/usr/$(get_libdir)/${PN}/defaults/pref/browser-prefs.js" \
-			|| die "setting usage of default OS locale"
-
 	# Install icon and .desktop for menu entry
 	newicon "${S}"/suite/branding/content/icon64.png seamonkey.png
 	domenu "${FILESDIR}"/icon/seamonkey.desktop
@@ -264,9 +244,9 @@ src_install() {
 		echo "StartupNotify=true" >> "${D}"/usr/share/applications/seamonkey.desktop
 	fi
 
-	# Add vendor
-	echo "pref(\"general.useragent.vendor\",\"Gentoo\");" \
-		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
+	# Add our default prefs
+	sed "s|SEAMONKEY_PVR|${PVR}|" "${FILESDIR}"/all-gentoo.js \
+		> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js
 
 	# Plugins dir
 	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins || die "failed to remove existing plugins dir"
@@ -290,7 +270,7 @@ pkg_postinst() {
 	# Update mimedb for the new .desktop file
 	fdo-mime_desktop_database_update
 
-	if ! use moznoirc ; then
+	if use chatzilla ; then
 		elog "chatzilla is now an extension which can be en-/disabled and configured via"
 		elog "the Add-on manager."
 	fi
