@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.86 2010/03/23 03:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.87 2010/04/02 09:45:07 scarabeus Exp $
+
+  02 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Give up maintainership.
 
   23 Mar 2010; Mike Frysinger <vapier@gentoo.org> boinc-6.10.18.ebuild,
   boinc-6.10.36.ebuild:
