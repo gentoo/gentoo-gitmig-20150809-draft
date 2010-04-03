@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11411 2010/04/03 08:54:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11412 2010/04/03 12:15:08 nelchael Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -920,13 +920,6 @@ gnome-extra/gnome-lirc-properties
 # Markus Ullmann <jokey@gentoo.org> (7 Jul 2008)
 # mask for security bug #190667
 net-irc/bitchx
-
-# Krzysztof Pawlik <nelchael@gentoo.org> (12 Jun 2008)
-# Testing new version.
->=dev-java/hessian-3.0.20
-=dev-java/mx4j-core-3.0.2
-=dev-java/mx4j-tools-3.0.2
-=dev-java/mx4j-3.0.2
 
 # Rémi Cardona <remi@gentoo.org> (14 Nov 2009)
 # Masked for removal, until there is 2.0 branch release this must go.
