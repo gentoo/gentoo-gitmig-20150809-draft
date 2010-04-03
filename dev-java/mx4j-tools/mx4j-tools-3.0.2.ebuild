@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/mx4j-tools-3.0.2.ebuild,v 1.1 2008/06/17 14:03:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/mx4j-tools-3.0.2.ebuild,v 1.2 2010/04/03 12:01:25 nelchael Exp $
 
 EAPI=1
 
@@ -28,7 +28,7 @@ RDEPEND="
 	dev-java/commons-logging
 	dev-java/log4j
 	=www-servers/axis-1*
-	dev-java/hessian:3.0
+	dev-java/hessian:4.0
 	dev-java/jython
 	java-virtuals/servlet-api:2.3
 	java-virtuals/jaf
@@ -64,8 +64,8 @@ src_unpack() {
 
 	# optionals
 #    java-pkg_jar-from jetty org.mortbay.jetty.jar
-	java-pkg_jar-from hessian-3.0
-	java-pkg_jar-from jython jython.jar
+	java-pkg_jar-from hessian-4.0
+	java-pkg_jar-from jython-2.5 jython.jar
 	java-pkg_jar-from --virtual jaf
 	java-pkg_jar-from --virtual javamail
 }
