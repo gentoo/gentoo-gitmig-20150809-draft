@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>ruby</herd>
+	<use>
+		<flag name="rubytests">Install ruby tests that can only be run after ruby is installed</flag>
+		<flag name="tcmalloc">Add support for TCMalloc provided by dev-util/google-perftools</flag>
+	</use>
+</pkgmetadata>
