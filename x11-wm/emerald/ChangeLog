@@ -1,6 +1,16 @@
 # ChangeLog for x11-wm/emerald
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.29 2009/12/20 15:48:25 mrpouet Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.30 2010/04/03 05:45:49 jmbsvicetto Exp $
+
+*emerald-0.8.4-r1 (03 Apr 2010)
+
+  03 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +emerald-0.8.4-r1.ebuild, +files/emerald-0.8.4-gtk+-2.20-build.patch:
+  Replaced compiz ~ deps with >= deps to support the new compiz-0.8.6
+  release and to avoid future dep issues.
+  Did a revbump to avoid issues with installed packages.
+  Added a patch to enable emerald to build with gtk+-2.20. Fixes bug 308791
+  - thanks to Leif Walsh <adlaiff6@gmail.com>.
 
   20 Dec 2009; Romain Perier <mrpouet@gentoo.org> -emerald-0.5.2.ebuild,
   -emerald-0.8.2.ebuild, -files/emerald-ru.po.patch:
