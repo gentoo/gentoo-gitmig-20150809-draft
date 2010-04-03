@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.92 2010/03/27 11:02:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.93 2010/04/03 09:21:56 a3li Exp $
+
+  03 Apr 2010; Alex Legler <a3li@gentoo.org> rake-0.8.7-r4.ebuild:
+  Add ree18 support
 
 *rake-0.8.7-r4 (27 Mar 2010)
 
