@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.4-r1.ebuild,v 1.1 2010/04/03 05:45:49 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.4-r1.ebuild,v 1.2 2010/04/03 06:07:01 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -31,7 +31,10 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.15
 "
 
-PATCHES=( "${FILESDIR}-${P}-gtk+-2.20-build.patch" )
+src_prepare() {
+	# Fixing GTK symbol - bug 308791.
+	epatch "${FILESDIR}-${P}-gtk+-2.20-build.patch"
+}
 
 src_configure() {
 	econf --disable-mime-update || die "econf failed"

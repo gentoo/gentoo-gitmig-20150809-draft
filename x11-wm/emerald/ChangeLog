@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.30 2010/04/03 05:45:49 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.31 2010/04/03 06:07:01 jmbsvicetto Exp $
+
+  03 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  emerald-0.8.4-r1.ebuild:
+  Really adding the patch this time.
 
 *emerald-0.8.4-r1 (03 Apr 2010)
 
