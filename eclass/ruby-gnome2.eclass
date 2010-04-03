@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.16 2009/09/13 12:30:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.17 2010/04/03 11:53:34 graaff Exp $
+#
+# DEPRECATION NOTICE
+# This eclass is deprecated because it does not properly handle
+# multiple ruby targets. Please use ruby-ng-gnome2.eclass instead.
 #
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
