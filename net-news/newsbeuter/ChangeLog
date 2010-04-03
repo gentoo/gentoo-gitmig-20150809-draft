@@ -1,6 +1,13 @@
 # ChangeLog for net-news/newsbeuter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.22 2009/08/31 13:28:02 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.23 2010/04/03 13:52:38 tanderson Exp $
+
+*newsbeuter-2.2 (03 Apr 2010)
+
+  03 Apr 2010; Thomas Anderson <tanderson@gentoo.org>
+  +newsbeuter-2.2.ebuild:
+  Add net-news/newsbeuter-2.2, thanks to Tim Harder for ebuild changes in
+  bug #296734.
 
   31 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   -newsbeuter-1.2.ebuild, -newsbeuter-1.3.ebuild:
