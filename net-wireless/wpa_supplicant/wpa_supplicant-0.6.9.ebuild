@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.9.ebuild,v 1.11 2010/03/22 08:51:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.9.ebuild,v 1.12 2010/04/03 12:27:49 gurligebis Exp $
 
 EAPI="2"
 
@@ -15,14 +15,14 @@ SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
 
-DEPEND="dev-libs/libnl
-	dbus? ( sys-apps/dbus )
+DEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
 		madwifi? ( ||
 			( >net-wireless/madwifi-ng-tools-0.9.3
 			net-wireless/madwifi-old )
 		)
+		dev-libs/libnl
 	)
 	!kernel_linux? ( net-libs/libpcap )
 	qt4? ( x11-libs/qt-gui:4
@@ -30,7 +30,8 @@ DEPEND="dev-libs/libnl
 	readline? ( sys-libs/ncurses sys-libs/readline )
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
-	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
+	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
+	dev-util/pkgconfig"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}/${PN}"
