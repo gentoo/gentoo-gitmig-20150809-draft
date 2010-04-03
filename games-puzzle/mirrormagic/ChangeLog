@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/mirrormagic
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/ChangeLog,v 1.12 2008/12/05 17:32:44 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/ChangeLog,v 1.13 2010/04/03 18:03:45 nyhm Exp $
+
+*mirrormagic-2.0.2-r1 (03 Apr 2010)
+
+  03 Apr 2010; Tristan Heaven <nyhm@gentoo.org>
+  +mirrormagic-2.0.2-r1.ebuild, +files/mirrormagic-2.0.2-64bit.patch,
+  +files/mirrormagic.xpm:
+  Patch from Debian to fix crash on amd64, bug #196500; install menu entry
 
   05 Dec 2008; Tristan Heaven <nyhm@gentoo.org> mirrormagic-2.0.2.ebuild:
   Respect CC and LDFLAGS, bug #244100
