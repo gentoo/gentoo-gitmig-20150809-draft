@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.26 2010/03/28 17:24:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.27 2010/04/03 13:51:55 tommy Exp $
+
+*qemu-kvm-0.12.3-r1 (03 Apr 2010)
+
+  03 Apr 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +qemu-kvm-0.12.3-r1.ebuild,
+  +files/qemu-kvm-0.12.3-fix-crash-with-sdl.patch,
+  +files/qemu-kvm-0.12.3-include-madvise-defines.patch:
+  Include madvise defines, fixes bug 305785, include virtio-large-iovecs
+  patch, fixes bug 308451, include upstream fix for crash with sdl as
+  default sound option, fixes sound issues of bug 294269
 
   28 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   qemu-kvm-9999.ebuild, -files/qemu-kvm-9999-sysconfigdir.patch:
