@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.4.ebuild,v 1.3 2010/02/09 11:10:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.4.ebuild,v 1.4 2010/04/03 21:41:51 jlec Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.7.2-LDFLAGS.patch
 	"${FILESDIR}"/${PN}-1.8.3-gcc4.3.patch
 	"${FILESDIR}"/${PN}-1.8.3-disable-gd.patch
+	"${FILESDIR}"/${P}-jobserver-fix.patch
 )
 
 src_prepare() {
