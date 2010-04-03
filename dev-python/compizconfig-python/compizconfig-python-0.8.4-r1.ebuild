@@ -1,6 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.8.4-r1.ebuild,v 1.1 2010/04/03 04:20:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.8.4-r1.ebuild,v 1.2 2010/04/03 18:11:04 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit python
 
@@ -14,16 +19,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=dev-lang/python-2.4
 	>=dev-libs/glib-2.6
 	dev-python/pyrex
 	>=x11-libs/libcompizconfig-${PV}"
 RDEPEND="${DEPEND}"
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-}
-
-pkg_postinst() {
-	python_need_rebuild
-}
+RESTRICT_PYTHON_ABIS="3.*"
