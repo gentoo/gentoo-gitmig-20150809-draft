@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.1.0.ebuild,v 1.1 2009/04/28 00:00:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.1.0.ebuild,v 1.2 2010/04/03 10:09:45 hd_brummy Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ DEPEND=">=media-video/vdr-1.5.7"
 
 RDEPEND="${DEPEND}
 		x11-themes/skinenigmang-logos
-		imagemagick? ( media-gfx/imagemagick )"
+		imagemagick? ( media-gfx/imagemagick[cxx] )"
 
 S=${WORKDIR}/skinenigmang-${PV}
 

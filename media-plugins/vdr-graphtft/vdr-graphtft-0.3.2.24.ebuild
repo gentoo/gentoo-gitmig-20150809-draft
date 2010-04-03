@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.3 2009/10/23 14:28:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.4 2010/04/03 10:07:49 hd_brummy Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ DEPEND=">=media-video/vdr-1.6.0_p2-r1[graphtft]
 		media-libs/imlib2[png,jpeg]
 		gnome-base/libgtop
 		>=media-video/ffmpeg-0.4.8_p20090201
-		imagemagick? ( media-gfx/imagemagick[png,jpeg] )
+		imagemagick? ( media-gfx/imagemagick[png,jpeg,cxx] )
 		directfb? ( dev-libs/DirectFB )
 		graphtft-fe? ( media-libs/imlib2[png,jpeg,X] )"
 
