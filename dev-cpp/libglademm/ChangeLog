@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libglademm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.77 2008/11/17 20:53:46 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.78 2010/04/03 11:26:26 eva Exp $
+
+  03 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org> -files/gcc34.patch,
+  -libglademm-2.0.1.ebuild, -libglademm-2.2.0.ebuild,
+  -files/libglademm-2.2.0-configure.patch, libglademm-2.6.4.ebuild,
+  libglademm-2.6.7.ebuild:
+  Kill slot 2 since it is unused. Clean up ebuild and bring it to EAPI=3.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/libglademm-2.2.0-configure.patch:
