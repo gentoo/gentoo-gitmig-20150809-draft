@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.22 2010/02/18 21:55:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.23 2010/04/03 04:41:43 jmbsvicetto Exp $
+
+*libcompizconfig-0.8.4-r1 (03 Apr 2010)
+
+  03 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +libcompizconfig-0.8.4-r1.ebuild:
+  Replaced compiz ~ deps with >= deps to support the new compiz-0.8.6
+  release and to avoid future dep issues.
+  Did a revbump to avoid issues with installed packages.
+  Fixes bug 289287.
 
   18 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   libcompizconfig-0.8.4.ebuild:
