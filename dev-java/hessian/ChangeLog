@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/hessian
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.20 2009/06/11 22:37:56 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/ChangeLog,v 1.21 2010/04/03 10:57:25 nelchael Exp $
+
+*hessian-4.0.3 (03 Apr 2010)
+
+  03 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +files/build.xml-4.0.3, +hessian-4.0.3.ebuild:
+  Version bump.
 
   11 Jun 2009; Vlastimil Babka <caster@gentoo.org> -hessian-3.0.8-r3.ebuild:
   Remove old.
