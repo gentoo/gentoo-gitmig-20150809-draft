@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.6.7.ebuild,v 1.8 2010/03/14 17:42:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.6.7.ebuild,v 1.9 2010/04/03 11:17:21 eva Exp $
 
 EAPI="2"
 
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9
+	app-text/docbook-xml-dtd:4.1.2
 	doc? ( >=dev-util/gtk-doc-1.9 )
 "
 
