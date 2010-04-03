@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.14.ebuild,v 1.1 2009/09/05 11:13:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.14.ebuild,v 1.2 2010/04/03 07:03:53 tove Exp $
 
 EAPI=2
 
@@ -21,5 +21,4 @@ DEPEND=">=virtual/perl-IO-Compress-1.0
 	>=virtual/perl-MIME-Base64-2.12"
 RDEPEND="${DEPEND}"
 
-# Tests work again as of 1.10 (were broken in 1.09)
-SRC_TEST="do"
+SRC_TEST=online
