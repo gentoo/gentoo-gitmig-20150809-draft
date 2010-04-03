@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.11 2010/01/11 20:43:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.12 2010/04/03 19:56:24 dev-zero Exp $
+
+*tdb-1.2.0-r2 (03 Apr 2010)
+
+  03 Apr 2010; Tiziano Müller <dev-zero@gentoo.org> +tdb-1.2.0-r2.ebuild:
+  Fixed: unnecessary inherit, static-libs installation, added tests.
 
 *tdb-1.2.0-r1 (11 Jan 2010)
 
