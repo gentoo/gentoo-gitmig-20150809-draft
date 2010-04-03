@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.1.ebuild,v 1.6 2010/03/30 08:56:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.1.ebuild,v 1.7 2010/04/03 02:27:08 tcunha Exp $
 
 DESCRIPTION="A library for interfacing Music Player Daemon (media-sound/mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~hppa ppc ppc64 sparc x86"
 IUSE=""
 
 src_install() {

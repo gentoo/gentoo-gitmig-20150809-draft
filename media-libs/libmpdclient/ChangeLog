@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.9 2010/03/30 08:56:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.10 2010/04/03 02:27:08 tcunha Exp $
+
+  03 Apr 2010; Tiago Cunha <tcunha@gentoo.org> libmpdclient-2.1.ebuild:
+  stable sparc, bug 309391
 
   30 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libmpdclient-2.1.ebuild:
