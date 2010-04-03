@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.3 2009/11/08 22:15:42 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.4 2010/04/03 18:46:36 ssuominen Exp $
 
 inherit base
 
@@ -23,7 +23,7 @@ DEPEND="dev-libs/libusb
 	gui? 	( >=dev-cpp/gtkmm-2.4
 				>=dev-cpp/libglademm-2.4
 				>=dev-cpp/glibmm-2.4
-				=dev-libs/libtar-1.2.11-r2 )
+				>=dev-libs/libtar-1.2.11-r2 )
 	opensync? ( =app-pda/libopensync-0.22* )"
 RDEPEND="dev-libs/libusb
 	sys-libs/zlib
