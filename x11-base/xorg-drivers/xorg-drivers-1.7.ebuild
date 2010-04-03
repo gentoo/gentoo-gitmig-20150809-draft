@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.6 2009/12/13 23:42:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.7 2010/04/03 15:25:20 chithanh Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -17,6 +17,7 @@ IUSE_INPUT_DEVICES="
 	input_devices_joystick
 	input_devices_keyboard
 	input_devices_mouse
+	input_devices_penmount
 	input_devices_tslib
 	input_devices_virtualbox
 	input_devices_vmmouse
@@ -85,6 +86,7 @@ PDEPEND="
 	input_devices_joystick?    ( x11-drivers/xf86-input-joystick )
 	input_devices_keyboard?    ( x11-drivers/xf86-input-keyboard )
 	input_devices_mouse?       ( x11-drivers/xf86-input-mouse )
+	input_devices_penmount?    ( x11-drivers/xf86-input-penmount )
 	input_devices_tslib?       ( x11-drivers/xf86-input-tslib )
 	input_devices_virtualbox?  ( x11-drivers/xf86-input-virtualbox )
 	input_devices_vmmouse?     ( x11-drivers/xf86-input-vmmouse )
@@ -140,7 +142,6 @@ PDEPEND="
 	!x11-drivers/xf86-input-fpit
 	!x11-drivers/xf86-input-hyperpen
 	!x11-drivers/xf86-input-mutouch
-	!x11-drivers/xf86-input-penmount
 	!x11-drivers/xf86-video-cyrix
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-nsc
