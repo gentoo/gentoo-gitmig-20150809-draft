@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.420 2010/03/07 04:37:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.421 2010/04/03 20:32:47 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1750,7 +1750,7 @@ gcc-compiler_src_install() {
 
 	cd "${WORKDIR}"/build
 	# Do allow symlinks in private gcc include dir as this can break the build
-	find gcc/include*/ -type l -print0 | xargs rm -f
+	find gcc/include*/ -type l -print0 | xargs -0 rm -f
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
 	for x in $(find gcc/include*/ -name '*.h') ; do
