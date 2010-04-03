@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.35 2010/04/03 20:40:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.36 2010/04/03 20:45:49 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability subversion toolchain-funcs
@@ -136,6 +136,8 @@ src_prepare() {
 		# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
 		epatch "${FILESDIR}"/${PN}-ffmpeg.patch
 	fi
+	# Fix build failure with libpng-1.4, bug 310959.
+	epatch "${FILESDIR}"/${PN}-libpng-1.4.patch
 	# Prevent the make build from filling entire disk space on some systems,
 	# bug 297273.
 	epatch "${FILESDIR}"/${PN}-fix-make-build.patch
