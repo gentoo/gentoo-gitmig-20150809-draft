@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.10 2010/01/31 17:00:45 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.11 2010/04/03 04:52:06 jmbsvicetto Exp $
+
+*compiz-plugins-main-0.8.6 (03 Apr 2010)
+
+  03 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compiz-plugins-main-0.8.6.ebuild:
+  Replaced compiz ~ deps with >= deps to support the new compiz-0.8.6
+  release and to avoid future dep issues.
+  Did a revbump to avoid issues with installed packages.
 
 *compiz-plugins-main-0.8.4-r1 (31 Jan 2010)
 
