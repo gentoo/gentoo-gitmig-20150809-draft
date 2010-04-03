@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/utidylib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.9 2010/02/07 20:40:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.10 2010/04/03 19:27:55 arfrever Exp $
+
+  03 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  utidylib-0.2-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> utidylib-0.2-r1.ebuild:
   Add inherit eutils: epatch is defined there.
