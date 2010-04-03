@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mx4j
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.29 2009/10/04 15:08:07 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/ChangeLog,v 1.30 2010/04/03 12:13:31 nelchael Exp $
+
+  03 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org> mx4j-3.0.2.ebuild,
+  files/mx4j-3.0.2-new-hessian.patch:
+  Update for new Hessian, update patch.
 
   04 Oct 2009; Vlastimil Babka <caster@gentoo.org> -mx4j-3.0.1-r2.ebuild:
   Remove old.

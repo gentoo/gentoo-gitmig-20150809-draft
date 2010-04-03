@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.2.ebuild,v 1.2 2009/07/23 13:20:03 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.2.ebuild,v 1.3 2010/04/03 12:13:31 nelchael Exp $
 
-EAPI=1
+EAPI=2
 JAVA_PKG_IUSE="examples source doc"
 
 inherit java-pkg-2 java-ant-2
@@ -27,8 +27,8 @@ COMMON_DEP="
 		dev-java/commons-logging
 		www-servers/axis:1
 		java-virtuals/servlet-api:2.3
-		dev-java/hessian:3.0
-		dev-java/jython:0
+		dev-java/hessian:4.0
+		dev-java/jython:2.5
 		dev-java/gnu-jaf:1
 		java-virtuals/javamail
 	)
@@ -45,10 +45,8 @@ RDEPEND="
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}"
 
-src_unpack() {
-	unpack "${P}-src.tar.gz"
-
-	#epatch "${FILESDIR}/${P}-new-hessian.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-new-hessian.patch"
 
 	if use doc; then
 		mkdir binary && cd binary
@@ -62,8 +60,8 @@ src_unpack() {
 		java-pkg_jar-from commons-logging commons-logging.jar
 		java-pkg_jar-from axis-1
 		java-pkg_jar-from --virtual servlet-api-2.3 servlet.jar
-		java-pkg_jar-from hessian-3.0
-		java-pkg_jar-from jython jython.jar
+		java-pkg_jar-from hessian-4.0
+		java-pkg_jar-from jython-2.5 jython.jar
 		java-pkg_jar-from gnu-jaf-1 activation.jar
 		java-pkg_jar-from --virtual javamail mail.jar
 	fi
