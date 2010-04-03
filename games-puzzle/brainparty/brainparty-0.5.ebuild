@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.5.ebuild,v 1.2 2010/04/02 04:42:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/brainparty-0.5.ebuild,v 1.3 2010/04/03 15:32:26 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -24,6 +24,7 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	sed -i \
+		-e 's/$(LIBS) $(OSXCOMPAT) $(OBJFILES)/$(OSXCOMPAT) $(OBJFILES) $(LIBS)/' \
 		-e 's/CXXFLAGS = .*/CXXFLAGS+=-c/' \
 		-e '/^CXX =/d' \
 		-e '/-o brainparty/s/INCLUDES) /&$(LDFLAGS) /' \
