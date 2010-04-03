@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.18 2009/05/16 22:08:09 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.19 2010/04/03 05:49:50 leio Exp $
 
 # Author : foser <foser@gentoo.org>, zaheerm <zaheerm@gentoo.org>
 
@@ -25,12 +25,16 @@ MY_PN=gst-plugins-good
 MY_P=${MY_PN}-${PV}
 # All relevant configure options for gst-plugins
 # need a better way to extract these
-# gst-plugins-base 0.9
 
-# This list is current to gst-plugins-good-0.10.6
-my_gst_plugins_good="gconf gconftool oss aalib aalibtest cairo cdio esd esdtest
-flac jpeg ladspa libcaca libdv libpng dv1394 shout2 shout2test speex annodex hal
-x taglib gdk_pixbuf gst_v4l2 sunaudio xshm xvideo zlib wavpack soup pulse bz2"
+# First line for non-plugin build related configure options; second line for
+# sys/ plugins; rest is split plugin options in order of ./configure --help output.
+# Good ways of validation are seeing diff of old and new configure.ac, and ./configure --help
+#
+# This list is current to gst-plugins-good-0.10.21:
+my_gst_plugins_good="gconftool zlib bz2
+directsound oss sunaudio osx_audio osx_video gst_v4l2 x xshm xvideo
+aalib aalibtest annodex cairo esd esdtest flac gconf gdk_pixbuf hal jpeg
+libcaca libdv libpng pulse dv1394 shout2 shout2test soup speex taglib wavpack"
 
 #SRC_URI="mirror://gnome/sources/gst-plugins/${PV_MAJ_MIN}/${MY_P}.tar.bz2"
 SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-good/${MY_P}.tar.bz2"
