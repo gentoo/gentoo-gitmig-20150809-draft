@@ -1,0 +1,23 @@
+This patch makes RubyGems look inside ${libdir}/ruby${executable_suffix} for
+gems. This separates vanilla MRI 1.8 from REE. --a3li
+
+--- lib/rubygems/defaults.rb.orig	2009-04-04 07:59:16.000000000 +0200
++++ lib/rubygems/defaults.rb	2009-04-04 08:01:09.000000000 +0200
+@@ -21,7 +21,7 @@
+       File.join File.dirname(ConfigMap[:sitedir]), 'Gems',
+                 ConfigMap[:ruby_version]
+     else
+-      File.join(ConfigMap[:libdir], ruby_engine, 'gems',
++      File.join(ConfigMap[:libdir], default_exec_format % 'ruby', 'gems',
+                 ConfigMap[:ruby_version])
+     end
+   end
+@@ -30,7 +30,7 @@
+   # Path for gems in the user's home directory
+ 
+   def self.user_dir
+-    File.join(Gem.user_home, '.gem', ruby_engine,
++    File.join(Gem.user_home, '.gem', default_exec_format % 'ruby',
+               ConfigMap[:ruby_version])
+   end
+ 
