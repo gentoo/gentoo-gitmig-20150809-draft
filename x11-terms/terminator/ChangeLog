@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.2 2010/03/31 06:25:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.3 2010/04/03 19:23:24 jlec Exp $
+
+*terminator-0.91 (03 Apr 2010)
+
+  03 Apr 2010; Justin Lecher <jlec@gentoo.org> +terminator-0.91.ebuild:
+  Version Bump, missind DEPEND intltool added, #312925 & #312905
 
 *terminator-0.90 (31 Mar 2010)
 
