@@ -1,6 +1,6 @@
 #!/bin/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.6 2010/04/01 08:20:18 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.7 2010/04/03 11:49:51 the_paya Exp $
 
 alias make=gmake
 alias patch=gpatch
@@ -42,6 +42,7 @@ bsd-patch_install-sh() {
 	local EPDIR="${ECLASSDIR}/ELT-patches/install-sh"
 	local EPATCHES="${EPDIR}/1.5.6 ${EPDIR}/1.5.4 ${EPDIR}/1.5"
 	local ret=0
+	cd "${S}"
 	for file in $(find . -name "install-sh" -print); do
 		if [[ -n $(egrep "scriptversion=2005|scriptversion=2004" ${file}) ]]; then
 			einfo "Automatically patching parallel-make unfriendly install-sh."
