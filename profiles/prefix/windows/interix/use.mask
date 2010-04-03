@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.8 2010/03/22 09:04:31 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.9 2010/04/03 09:02:21 grobian Exp $
 
 # Re-add Interix libc
 -elibc_Interix
@@ -80,6 +80,8 @@ joystick
 kerberos
 ladspa
 libedit
+# bug #310007
+multitarget
 # not working yet on interix
 openmp
 portaudio

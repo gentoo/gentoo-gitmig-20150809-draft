@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.167 2010/03/26 21:31:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.168 2010/04/03 09:02:21 grobian Exp $
+
+  03 Apr 2010; Fabian Groffen <grobian@gentoo.org> windows/interix/use.mask:
+  Mask USE=multitarget on Interix, since it breaks
 
   26 Mar 2010; Jeremy Olexa <darkside@gentoo.org> hpux/package.mask:
   Extend gcc mask on hpux, bug 311239
