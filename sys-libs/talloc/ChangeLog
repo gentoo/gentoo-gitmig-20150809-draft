@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.11 2010/01/26 22:04:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.12 2010/04/03 19:26:15 dev-zero Exp $
+
+*talloc-2.0.1-r1 (03 Apr 2010)
+
+  03 Apr 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +talloc-2.0.1-r1.ebuild, metadata.xml:
+  Fixed: unnecessary inherit, swig dependency, documentation install,
+  static-libs building.
 
 *talloc-2.0.1 (26 Jan 2010)
 

@@ -7,6 +7,7 @@
 		<name>Patrick Lauer</name>
 	</maintainer>
 <use>
-        <flag name="compat">Enable extra compatibility stuff</flag>
+	<flag name="compat">Enable extra compatibility stuff</flag>
+	<flag name="swig">Install interface definitions for <pkg>dev-lang/swig</pkg></flag>
 </use>
 </pkgmetadata>
