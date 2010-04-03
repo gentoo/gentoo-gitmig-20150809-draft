@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/glimmer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.6 2010/01/03 14:17:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.7 2010/04/03 22:26:28 jlec Exp $
+
+*glimmer-3.02-r2 (03 Apr 2010)
+
+  03 Apr 2010; Justin Lecher <jlec@gentoo.org> +glimmer-3.02-r2.ebuild,
+  +files/glimmer-3.02-jobserver-fix.patch:
+  jobserver fix, #299482, Thanks Myckel Habets
+  LDFLAGS/CFLAGS etc repected
 
   03 Jan 2010; Pacho Ramos <pacho@gentoo.org> glimmer-3.02-r1.ebuild:
   amd64 stable, bug 298762
