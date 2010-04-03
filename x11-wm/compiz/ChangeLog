@@ -1,6 +1,18 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.52 2010/02/20 19:05:22 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.53 2010/04/03 06:03:27 jmbsvicetto Exp $
+
+*compiz-0.8.6 (03 Apr 2010)
+*compiz-0.8.4-r3 (03 Apr 2010)
+
+  03 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compiz-0.8.4-r3.ebuild, +files/compiz-0.8.4-gtk+-2.20-build.patch,
+  +compiz-0.8.6.ebuild:
+  Replaced compiz ~ deps with >= deps to support the new compiz-0.8.6
+  release and to avoid future dep issues.
+  Did a revbump to avoid issues with installed packages.
+  Added a patch to enable emerald to build with gtk+-2.20. Fixes bug 311743
+  - thanks to Guillaume ZITTA <gentoo@zitta.fr>.
 
   20 Feb 2010; Hanno Boeck <hanno@gentoo.org> compiz-0.8.4-r2.ebuild,
   +files/compiz-0.8.4-kde44.patch, +files/compiz-0.8.4-libpng14.patch:
