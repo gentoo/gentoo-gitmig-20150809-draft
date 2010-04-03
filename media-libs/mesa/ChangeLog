@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.263 2010/03/29 14:57:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.264 2010/04/03 17:15:50 chithanh Exp $
+
+  03 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-7.8.ebuild:
+  Bump libdrm dependency, bug #312933
 
 *mesa-7.8 (29 Mar 2010)
 *mesa-7.7.1 (29 Mar 2010)
