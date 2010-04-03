@@ -1,6 +1,11 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.8 2010/01/31 17:21:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.9 2010/04/03 09:15:03 a3li Exp $
+
+*rubygems-0-r3 (03 Apr 2010)
+
+  03 Apr 2010; Alex Legler <a3li@gentoo.org> +rubygems-0-r3.ebuild:
+  Add ree18 support
 
 *rubygems-0-r2 (31 Jan 2010)
 
