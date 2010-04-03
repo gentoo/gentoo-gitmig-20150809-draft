@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.150 2010/03/18 20:30:23 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.151 2010/04/03 15:54:04 phajdan.jr Exp $
+
+  03 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rtorrent-0.8.6-r1.ebuild:
+  x86 stable wrt bug #311143
 
   18 Mar 2010; Dror Levin <spatz@gentoo.org> files/rtorrentd.init:
   Fix screen invocation in initd script, bug 294435.
