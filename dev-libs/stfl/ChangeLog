@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/stfl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.23 2009/08/30 12:24:35 tanderson Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.24 2010/04/03 13:41:00 tanderson Exp $
+
+*stfl-0.21 (03 Apr 2010)
+
+  03 Apr 2010; Thomas Anderson <tanderson@gentoo.org> +stfl-0.21.ebuild,
+  +files/stfl-0.21-python.patch:
+  Add dev-libs/stfl-0.21, thanks to Tim Harder <radhermit@gmail.com> in bug
+  #296735 for initial ebuild updates and patches.
 
   30 Aug 2009; Thomas Anderson <tanderson@gentoo.org> stfl-0.19.ebuild:
   stable amd64, bug 281352
