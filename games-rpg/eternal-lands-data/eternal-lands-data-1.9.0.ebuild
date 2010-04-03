@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.8.0-r1.ebuild,v 1.1 2009/01/12 22:06:49 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.9.0.ebuild,v 1.1 2010/04/03 21:34:52 rich0 Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ MY_PV="${MY_PV//./}"
 MY_PN="${PN%*-data}"
 DESCRIPTION="An online MMORPG written in C and SDL"
 HOMEPAGE="http://www.eternal-lands.com"
-SRC_URI="http://www.eternal-lands.com/el_linux_180_install.zip
+SRC_URI="http://www.eternal-lands.com/el_linux_190.zip
 		music? ( mirror://gentoo/el_music_full-${MUSIC_DATE}.zip )
 		sound? ( mirror://gentoo/el_sound_150.zip )"
 # WARNING: The music file is held at
@@ -50,7 +50,7 @@ src_install() {
 	insopts -m 0660
 	insinto "${GAMES_DATADIR}/${MY_PN}"
 	doins -r 2dobjects 3dobjects actor_defs animations maps meshes \
-		particles skeletons textures tiles languages shaders skybox \
+		particles skeletons shaders textures languages shaders skybox \
 		*.lst 3dobjects.txt *.xml \
 		|| die "doins failed"
 
