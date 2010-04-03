@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.1-r1.ebuild,v 1.1 2010/02/27 15:47:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.6.1-r1.ebuild,v 1.2 2010/04/03 22:33:03 idl0r Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_USE_WITH="xml threads"
 
 inherit distutils eutils
 
@@ -17,14 +20,14 @@ IUSE="nls"
 LANGS="de pl ru vi it fr tr"
 for X in $LANGS; do IUSE="${IUSE} linguas_${X}"; done
 
-RDEPEND=">=dev-lang/python-2.4[xml,threads]
-	>=sys-apps/portage-2.1
+RDEPEND=">=sys-apps/portage-2.1
 	>=dev-python/pygtk-2.4.0
 	>=gnome-base/libglade-2.5.0
 	dev-python/pygtksourceview:2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.14 )"
+RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-masking_status.patch" # bug 307037
