@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.8.ebuild,v 1.5 2010/04/02 15:27:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.8.ebuild,v 1.6 2010/04/03 23:44:52 nyhm Exp $
 
 EAPI=2
-inherit cmake-utils eutils toolchain-funcs flag-o-matic games
+inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
 
 DESCRIPTION="Battle for Wesnoth - A fantasy turn-based strategy game"
 HOMEPAGE="http://www.wesnoth.org/"
