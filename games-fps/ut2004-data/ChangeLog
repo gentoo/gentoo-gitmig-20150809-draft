@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.25 2010/02/16 17:39:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.26 2010/04/03 18:14:43 nyhm Exp $
+
+  03 Apr 2010; Tristan Heaven <nyhm@gentoo.org> ut2004-data-3186-r4.ebuild:
+  Stable on amd64/x86
 
 *ut2004-data-3186-r4 (16 Feb 2010)
 

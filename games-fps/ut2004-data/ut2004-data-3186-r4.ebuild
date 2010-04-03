@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r4.ebuild,v 1.1 2010/02/16 17:39:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r4.ebuild,v 1.2 2010/04/03 18:14:43 nyhm Exp $
 
 inherit eutils portability games
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="games-util/uz2unpack
