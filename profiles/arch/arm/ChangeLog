@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.70 2010/04/02 14:35:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.71 2010/04/04 04:43:48 darkside Exp $
+
+  04 Apr 2010; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
+  mask net-misc/mediatomb[lastfm] as lastfmlib isn't keyworded
 
   02 Apr 2010; Markus Meier <maekke@gentoo.org> package.use.mask:
   mask media-gfx/ufraw[fits] as it isn't keyworded

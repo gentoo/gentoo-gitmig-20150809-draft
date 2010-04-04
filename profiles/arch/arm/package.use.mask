@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.19 2010/04/02 14:35:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.20 2010/04/04 04:43:48 darkside Exp $
+
+# Jeremy Olexa <darkside@gentoo.org> (04 Apr 2010)
+# mask net-misc/mediatomb[lastfm] as lastfmlib isn't keyworded
+net-misc/mediatomb lastfm
 
 # Markus Meier <maekke@gentoo.org> (27 Sep 2009)
 # mask media-gfx/ufraw[fits] as cfitsio isn't keyworded
