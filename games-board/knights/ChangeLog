@@ -1,0 +1,10 @@
+# ChangeLog for games-board/knights
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.14 2010/04/04 16:35:42 scarabeus Exp $
+
+*knights-2.0 (04 Apr 2010)
+
+  04 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> +knights-2.0.ebuild,
+  +metadata.xml:
+  Initial commit of game that was removed with kde3 removal.
+
