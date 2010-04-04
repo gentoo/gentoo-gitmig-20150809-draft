@@ -35,13 +35,13 @@ diff -urN pm-utils-1.3.0.old//configure.ac pm-utils-1.3.0/configure.ac
 +	AC_PATH_PROG(XMLTO, xmlto, no)
 +	AS_IF([test "x$MAN" = "xyes"],
 +	[
-+		AS_IF([test "x$XMLTO" != "xyes"],
++		AS_IF([test "x$XMLTO" = "xno"],
 +			[AC_MSG_ERROR([Manpage generating requested but xmlto not found.])
 +		])
 +	],
 +	[test "x${MAN}" != "xno"],
 +	[
-+		AS_IF([test "x$XMLTO" = "xyes"],
++		AS_IF([test "x$XMLTO" != "xno"],
 +			[MAN="yes"],
 +			[MAN="no"])
 +	])

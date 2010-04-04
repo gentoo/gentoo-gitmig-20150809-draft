@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.30 2010/04/04 16:10:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.31 2010/04/04 18:54:33 scarabeus Exp $
+
+  04 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/1.3.0-fix_autotools.patch:
+  Update patch to work with +doc.
 
 *pm-utils-1.3.0 (04 Apr 2010)
 
