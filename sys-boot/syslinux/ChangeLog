@@ -1,6 +1,17 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.57 2010/03/31 15:45:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.58 2010/04/04 21:51:35 chithanh Exp $
+
+*syslinux-4.00_pre38 (04 Apr 2010)
+*syslinux-3.86 (04 Apr 2010)
+
+  04 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  syslinux-1.76.ebuild, syslinux-2.13.ebuild, syslinux-3.11.ebuild,
+  syslinux-3.20.ebuild, syslinux-3.31.ebuild, syslinux-3.52.ebuild,
+  syslinux-3.71.ebuild, syslinux-3.83.ebuild, syslinux-3.84.ebuild,
+  syslinux-3.85.ebuild, +syslinux-3.86.ebuild, -syslinux-4.00_pre37.ebuild,
+  +syslinux-4.00_pre38.ebuild:
+  Version bump. Fix SRC_URI, bug #313119
 
 *syslinux-4.00_pre37 (31 Mar 2010)
 

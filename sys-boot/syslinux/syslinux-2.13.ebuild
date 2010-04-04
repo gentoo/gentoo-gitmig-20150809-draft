@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.13.ebuild,v 1.3 2005/06/16 22:50:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-2.13.ebuild,v 1.4 2010/04/04 21:51:35 chithanh Exp $
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
-SRC_URI="mirror://kernel/linux/utils/boot/syslinux/Old/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${PV:0:1}.xx/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

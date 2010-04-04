@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.85.ebuild,v 1.2 2010/04/04 21:51:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.00_pre38.ebuild,v 1.1 2010/04/04 21:51:35 chithanh Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
+DESCRIPTION="SYSLINUX, PXELINUX, ISOLINUX, EXTLINUX and MEMDISK bootloaders"
 HOMEPAGE="http://syslinux.zytor.com/"
-SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${PV:0:1}.xx/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/utils/boot/syslinux/Testing/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,6 +19,8 @@ RDEPEND="sys-fs/mtools
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
+S=${WORKDIR}/${P/_/-}
+
 # This ebuild is a departure from the old way of rebuilding everything in syslinux
 # This departure is necessary since hpa doesn't support the rebuilding of anything other
 # than the installers.
@@ -28,10 +30,12 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-3.72-nopie.patch
+	# Fix building on hardened
+	epatch "${FILESDIR}"/${PN}-4.00-nopie.patch
 
 	rm -f gethostip #bug 137081
 
+	# Don't prestrip or override user LDFLAGS, bug #305783
 	local SYSLINUX_MAKEFILES="extlinux/Makefile linux/Makefile mtools/Makefile \
 		sample/Makefile utils/Makefile"
 	sed -i ${SYSLINUX_MAKEFILES} -e '/^LDFLAGS/d' || die "sed failed"
@@ -52,5 +56,5 @@ src_compile() {
 
 src_install() {
 	emake INSTALLSUBDIRS=utils INSTALLROOT="${D}" MANDIR=/usr/share/man install || die
-	dodoc README NEWS TODO doc/*
+	dodoc README NEWS doc/* || die
 }
