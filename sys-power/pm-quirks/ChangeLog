@@ -1,0 +1,10 @@
+# ChangeLog for sys-power/pm-quirks
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-quirks/ChangeLog,v 1.1 2010/04/04 16:07:58 scarabeus Exp $
+
+*pm-quirks-20100316 (04 Apr 2010)
+
+  04 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +pm-quirks-20100316.ebuild, +metadata.xml:
+  Initial commit of pm-utils Video card quirks.
+
