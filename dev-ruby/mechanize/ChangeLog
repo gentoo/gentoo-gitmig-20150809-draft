@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mechanize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.24 2010/01/30 18:33:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.25 2010/04/04 07:02:55 graaff Exp $
+
+*mechanize-1.0.0 (04 Apr 2010)
+
+  04 Apr 2010; Hans de Graaff <graaff@gentoo.org> +mechanize-1.0.0.ebuild:
+  Version bump. Broken tests got fixed upstream. Add missing built-time
+  dependency on hoe.
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> mechanize-0.9.3-r1.ebuild:
   Add ~sparc
