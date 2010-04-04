@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/batterymon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/ChangeLog,v 1.4 2010/01/15 21:20:58 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/ChangeLog,v 1.5 2010/04/04 12:44:01 hwoarang Exp $
+
+  04 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  batterymon-1.2.0.ebuild:
+  Stable on amd64 wrt bug #312353
 
   15 Jan 2010; Christian Ruppert <idl0r@gentoo.org> batterymon-1.2.0.ebuild:
   Add RESTRICT_PYTHON_ABIS.

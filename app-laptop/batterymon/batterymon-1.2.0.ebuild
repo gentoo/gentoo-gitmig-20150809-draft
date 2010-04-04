@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/batterymon-1.2.0.ebuild,v 1.4 2010/01/15 21:20:58 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/batterymon-1.2.0.ebuild,v 1.5 2010/04/04 12:44:01 hwoarang Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="http://batterymon.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="libnotify"
 
 DEPEND=""
