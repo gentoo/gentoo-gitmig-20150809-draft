@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.26 2010/03/31 16:02:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.27 2010/04/04 15:08:07 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)
+# x86 platforms works
+sys-power/pm-utils -video_cards_intel -video_cards_radeon
 
 # Vlastimil Babka <caster@gentoo.org> (31 Mar 2010)
 >=dev-java/sun-jdk-1.6 -nsplugin

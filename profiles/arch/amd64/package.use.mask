@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.56 2010/03/22 18:12:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.57 2010/04/04 15:08:05 scarabeus Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)$
+# x86 platforms works$
+sys-power/pm-utils -video_cards_intel -video_cards_radeon
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Feb 2009)
 # esd, bug 301824
