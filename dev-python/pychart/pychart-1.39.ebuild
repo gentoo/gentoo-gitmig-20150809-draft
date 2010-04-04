@@ -1,6 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.39.ebuild,v 1.6 2009/12/26 17:34:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.39.ebuild,v 1.7 2010/04/04 17:04:27 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -17,15 +21,19 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc examples"
 
 DEPEND="app-text/ghostscript-gpl"
+RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	distutils_src_install
-	if use doc ; then
-		dohtml -r ${WORKDIR}/${PN}/*
+
+	if use doc; then
+		dohtml -r "${WORKDIR}/${PN}/"* || die "dohtml failed"
 	fi
-	if use examples ; then
+
+	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins demos/*
 	fi

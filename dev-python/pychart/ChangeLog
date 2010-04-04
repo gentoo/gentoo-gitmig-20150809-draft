@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pychart
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.13 2009/12/26 17:34:46 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.14 2010/04/04 17:04:27 arfrever Exp $
+
+  04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pychart-1.39.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> pychart-1.37.ebuild,
   pychart-1.39.ebuild:
