@@ -3,13 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>rwobben@hotmail.com</email>
-		<name>Roelof Wobben</name>
-		<description>Maintainer of ebuilds, assign bugs</description>
-	</maintainer>
-	<maintainer>
 		<email>tommy@gentoo.org</email>
 		<name>Thomas Sachau</name>
-		<description>Proxy committer, CC bugs</description>
+		<description>Previous proxy committer, maintaining user left, feel free to take over</description>
 	</maintainer>
 </pkgmetadata>
