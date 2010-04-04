@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.3 2010/02/22 11:46:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.4 2010/04/04 21:36:16 arfrever Exp $
 
-inherit python multilib eutils
+inherit eutils multilib python
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -11,7 +11,7 @@ SRC_URI="http://www.equi4.com/pub/mk/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86"
-IUSE="python tcl static"
+IUSE="python static tcl"
 
 DEPEND=">=sys-apps/sed-4
 	python? ( >=dev-lang/python-2.2.1 )
@@ -20,21 +20,19 @@ DEPEND=">=sys-apps/sed-4
 RESTRICT="test"
 
 src_unpack() {
-	python_version
-
 	unpack ${A}
 	cd "${S}"
 
 	# Fix all hardcoded python2.5 paths
-	for name in python/scxx/PWOBase.h python/PyHead.h python/PyStorage.cpp ; do
-		sed -i -e "s:Python.h:python${PYVER}/Python.h:" ${name}
+	for name in python/scxx/PWOBase.h python/PyHead.h python/PyStorage.cpp; do
+		sed -i -e "s:Python.h:python$(python_get_version)/Python.h:" ${name}
 	done
-	sed -i -e "s:python2.5:python${PYVER}:" unix/configure
+	sed -i -e "s:python2.5:python$(python_get_version):" unix/configure
 }
 
 src_compile() {
 	local myconf mycxxflags
-	use python && myconf="--with-python=/usr/include/python${PYVER},/usr/$(get_libdir)/python${PYVER}/site-packages"
+	use python && myconf="--with-python=$(python_get_includedir),$(python_get_sitedir)"
 	use tcl && myconf="${myconf} --with-tcl=/usr/include,/usr/$(get_libdir)"
 	use static && myconf="${myconf} --disable-shared"
 	use static || mycxxflags="-fPIC"
@@ -53,9 +51,7 @@ src_compile() {
 }
 
 src_install () {
-	python_version
-
-	use python && dodir /usr/$(get_libdir)/python${PYVER}/site-packages
+	use python && dodir $(python_get_sitedir)
 	make DESTDIR="${D}" install || die
 
 	dodoc CHANGES README

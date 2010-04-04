@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.45 2010/02/22 11:46:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.46 2010/04/04 21:36:16 arfrever Exp $
+
+  04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  metakit-2.4.9.6.ebuild, metakit-2.4.9.7.ebuild:
+  Delete calls to deprecated python_version().
 
   22 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   metakit-2.4.9.7.ebuild:
