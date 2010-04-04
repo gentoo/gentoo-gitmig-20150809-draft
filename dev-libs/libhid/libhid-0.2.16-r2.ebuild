@@ -1,8 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16-r1.ebuild,v 1.1 2009/09/23 23:53:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16-r2.ebuild,v 1.1 2010/04/04 14:56:17 matsuu Exp $
 
-EAPI="1"
+EAPI="2"
+
+PYTHON_DEPEND="python? 2"
+
+inherit autotools python
+
 DESCRIPTION="Provides a generic and flexible way to access and interact with USB HID devices"
 HOMEPAGE="http://libhid.alioth.debian.org/"
 SRC_URI="http://beta.magicaltux.net/${P}.tar.gz"
@@ -15,12 +20,19 @@ IUSE="debug doc python"
 RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	python? (
-		dev-lang/swig
-		>=dev-lang/python-2.1.0
-	)"
+	python? ( dev-lang/swig )"
 
-src_compile() {
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_prepare() {
+	# Bug #260884
+	sed -i -e 's/-Werror//' m4/md_conf_compiler.m4 || die
+	eautoconf
+}
+
+src_configure() {
 	local myconf
 
 	myconf="${myconf} $(use_with doc doxygen)"
@@ -39,7 +51,6 @@ src_compile() {
 		# "python" use flag is not set
 		econf ${myconf} || die
 	fi
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -47,6 +58,6 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README README.licence TODO || die
 	if use doc; then
-		dohtml -r doc/html/*
+		dohtml -r doc/html/* || die
 	fi
 }
