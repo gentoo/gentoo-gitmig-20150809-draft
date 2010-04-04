@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/buildutils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/ChangeLog,v 1.7 2009/10/10 11:58:20 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/ChangeLog,v 1.8 2010/04/04 16:41:05 arfrever Exp $
+
+  04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  buildutils-0.3.ebuild:
+  Fix building of documentation (bug #300788).
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> buildutils-0.3.ebuild:
   Merge from Prefix

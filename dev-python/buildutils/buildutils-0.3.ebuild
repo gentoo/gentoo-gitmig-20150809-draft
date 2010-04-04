@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/buildutils-0.3.ebuild,v 1.4 2010/02/06 14:39:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buildutils/buildutils-0.3.ebuild,v 1.5 2010/04/04 16:41:05 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
@@ -25,12 +25,15 @@ RESTRICT_PYTHON_ABIS="3.*"
 src_prepare() {
 	distutils_src_prepare
 
-	# pudge command is disabled by default, enable it.
+	# Enable pudge command.
 	epatch "${FILESDIR}/${P}-pudge_addcommand.patch"
+
+	sed -e "s/buildutils.command.publish/buildutils.publish_command.publish/" -i buildutils/test/test_publish.py || die "sed failed"
 }
 
 src_compile() {
 	distutils_src_compile
+
 	if use doc; then
 		einfo "Generation of documentation"
 		"$(PYTHON -f)" setup.py pudge || die "Generation of documentation failed"
@@ -39,5 +42,8 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	use doc && dohtml -r doc/html/*
+
+	if use doc; then
+		dohtml -r doc/html/* || die "dohtml failed"
+	fi
 }
