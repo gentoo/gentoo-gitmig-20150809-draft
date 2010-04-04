@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/msgpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.1 2010/03/02 15:51:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.2 2010/04/04 08:43:49 graaff Exp $
+
+*msgpack-0.3.6 (04 Apr 2010)
+
+  04 Apr 2010; Hans de Graaff <graaff@gentoo.org> +msgpack-0.3.6.ebuild:
+  Version bump. Convert to ruby-fakegem. Fix QA notice. Run tests.
 
   02 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +msgpack-0.3.3.ebuild,
   +metadata.xml:
