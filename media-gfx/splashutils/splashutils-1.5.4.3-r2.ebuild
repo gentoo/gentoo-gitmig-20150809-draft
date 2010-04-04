@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r2.ebuild,v 1.4 2010/03/09 22:11:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r2.ebuild,v 1.5 2010/04/04 15:20:23 spock Exp $
 
 EAPI="2"
 
@@ -86,6 +86,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-makefile.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-splash_geninitramfs.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-libjpeg.patch
+	epatch "${FILESDIR}"/splashutils-1.5.4.3-daemon-exit-signal.patch
 
 	cd "${SG}"
 	if has_version ">=sys-apps/openrc-0.4.0"; then
@@ -97,6 +98,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-fix_rc_var.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-openrc-umount-fix.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-nondefault-runlevel.patch
+	epatch "${FILESDIR}"/splashutils-1.5.4.3-openrc-effects.patch
 	cd "${S}"
 
 	rm -f m4/*

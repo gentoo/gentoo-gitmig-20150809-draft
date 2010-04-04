@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.172 2010/03/09 22:11:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.173 2010/04/04 15:20:23 spock Exp $
+
+  04 Apr 2010; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.4.3-r2.ebuild,
+  +files/splashutils-1.5.4.3-daemon-exit-signal.patch,
+  +files/splashutils-1.5.4.3-openrc-effects.patch:
+  Do not enable fadeout if it's not explicitly requested, make sure all
+  signals are processed before exiting (bug #296152).
 
   09 Mar 2010; Joseph Jezak <josejx@gentoo.org>
   splashutils-1.5.4.3-r2.ebuild:
