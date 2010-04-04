@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.14 2010/03/31 16:37:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.15 2010/04/04 18:33:37 armin76 Exp $
+
+  04 Apr 2010; Raúl Porcel <armin76@gentoo.org> mod_ruby-1.3.0.ebuild:
+  alpha/ia64/sparc stable wrt #310245
 
   31 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   mod_ruby-1.3.0.ebuild:
