@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/tilda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/ChangeLog,v 1.22 2010/01/06 19:34:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/tilda/ChangeLog,v 1.23 2010/04/04 13:52:04 steev Exp $
+
+  04 Apr 2010; <steev@gentoo.org> tilda-0.9.6.ebuild,
+  +files/tilda-0.9.6-gdk_resources.patch:
+  Add patch to fix a segfault. Fixes bug #310295. Thanks to Simon
+  <s7mon@web.de> and Lars <hermes.trismegistos@web.de> for their work on
+  this.
 
   06 Jan 2010; Christian Faulhammer <fauli@gentoo.org> tilda-0.9.6.ebuild:
   Transfer Prefix keywords
