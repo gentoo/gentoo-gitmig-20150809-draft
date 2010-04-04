@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-8.0.ebuild,v 1.1 2010/03/19 11:50:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-8.0.ebuild,v 1.2 2010/04/04 21:04:18 the_paya Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -40,4 +40,10 @@ src_unpack() {
 	freebsd_src_unpack
 	# Link in include headers.
 	ln -s "/usr/include" "${WORKDIR}/include" || die "Symlinking /usr/include.."
+}
+
+src_install() {
+	freebsd_src_install
+	# Install zfs volinit script.
+	newinitd "${FILESDIR}"/zvol.initd zvol
 }
