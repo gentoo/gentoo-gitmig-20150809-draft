@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.89 2010/04/02 14:57:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.90 2010/04/04 09:37:12 hwoarang Exp $
+
+  04 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  mirrorselect-2.1.0-r1.ebuild:
+  Stable on amd64 wrt bug #312359
 
 *mirrorselect-2.1.0-r1 (02 Apr 2010)
 
