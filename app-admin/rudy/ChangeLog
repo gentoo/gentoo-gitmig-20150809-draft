@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rudy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.4 2010/03/16 12:55:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.5 2010/04/04 17:54:50 flameeyes Exp $
+
+  04 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -rudy-0.9.6.002-r2.ebuild, rudy-0.9.7.001.ebuild:
+  Remove old version, fix version for storable to 0.6.3 otherwise it breaks.
 
 *rudy-0.9.7.001 (16 Mar 2010)
 

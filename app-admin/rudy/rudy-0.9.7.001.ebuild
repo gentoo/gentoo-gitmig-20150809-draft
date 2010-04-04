@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.7.001.ebuild,v 1.1 2010/03/16 12:55:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.7.001.ebuild,v 1.2 2010/04/04 17:54:50 flameeyes Exp $
 
 EAPI=2
 
@@ -35,11 +35,12 @@ fi
 SRC_URI="http://github.com/solutious/${PN}/tarball/${PN}-${MY_PV} -> ${PN}-git-${PV}.tgz"
 S="${WORKDIR}/solutious-${PN}-35e4659"
 
+# storable 0.6.4-0.7.0 break this version of rudy and should thus not be used
 ruby_add_rdepend '
 	>=dev-ruby/amazon-ec2-0.9.4
 	>=dev-ruby/highline-1.5.1
 	>=dev-ruby/aws-s3-0.6.1
-	>=dev-ruby/storable-0.6.3
+	~dev-ruby/storable-0.6.3
 	>=dev-ruby/gibbler-0.7.4
 	>=dev-ruby/sysinfo-0.7.3
 	>=dev-ruby/caesars-0.7.4
