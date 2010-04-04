@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r3.ebuild,v 1.6 2010/02/07 20:19:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r3.ebuild,v 1.7 2010/04/04 18:34:21 arfrever Exp $
 
 EAPI="2"
 
@@ -28,7 +28,6 @@ src_install() {
 }
 
 pkg_postrm() {
-	distutils_python_version
 	distutils_pkg_postrm
 }
 
