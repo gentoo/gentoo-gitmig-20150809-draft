@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.58 2010/04/04 21:51:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.59 2010/04/04 22:07:07 chithanh Exp $
+
+  04 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  syslinux-3.86.ebuild, +files/syslinux-3.86-nopie.patch:
+  update nopie patch for syslinux-3.86
 
 *syslinux-4.00_pre38 (04 Apr 2010)
 *syslinux-3.86 (04 Apr 2010)

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.86.ebuild,v 1.1 2010/04/04 21:51:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.86.ebuild,v 1.2 2010/04/04 22:07:07 chithanh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-3.72-nopie.patch
+	epatch "${FILESDIR}"/${PN}-3.86-nopie.patch
 
 	rm -f gethostip #bug 137081
 
