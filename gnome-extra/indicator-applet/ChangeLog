@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/indicator-applet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/ChangeLog,v 1.3 2009/09/27 23:20:10 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/ChangeLog,v 1.4 2010/04/04 10:32:32 mrpouet Exp $
+
+*indicator-applet-0.3.6 (04 Apr 2010)
+
+  04 Apr 2010; Romain Perier <mrpouet@gentoo.org>
+  +indicator-applet-0.3.6.ebuild,
+  +files/indicator-applet-0.3.6-fastuserswitchapplet-collision.patch:
+  Version bump.
 
   27 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
   indicator-applet-0.2.0.ebuild:
