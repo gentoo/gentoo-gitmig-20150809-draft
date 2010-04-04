@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8/scratchbox-toolchain-cs2009q1-eglibc2_8-1.0.14.ebuild,v 1.5 2010/04/04 09:08:52 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8/scratchbox-toolchain-cs2009q1-eglibc2_8-1.0.15.ebuild,v 1.1 2010/04/04 09:08:52 ayoy Exp $
 
-ARMV=${PV}-7
-I486V=${PV}-4
+ARMV=${PV}-8
+I486V=${PV}-5
 
 DESCRIPTION="A cross-compilation toolkit designed to make embedded Linux application development easier."
 HOMEPAGE="http://www.scratchbox.org/"
