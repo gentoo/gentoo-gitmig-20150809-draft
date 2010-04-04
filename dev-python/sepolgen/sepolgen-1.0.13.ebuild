@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.13.ebuild,v 1.3 2009/08/02 01:43:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.13.ebuild,v 1.4 2010/04/04 18:53:45 arfrever Exp $
 
 inherit python
 
@@ -22,18 +22,15 @@ src_compile() {
 }
 
 src_install() {
-	python_version
 	python_need_rebuild
-	make DESTDIR="${D}" PYTHONLIBDIR="/usr/$(get_libdir)/python${PYVER}/site-packages" \
+	make DESTDIR="${D}" PYTHONLIBDIR="$(python_get_sitedir)" \
 		 install || die "install failed"
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize $(python_get_sitedir)
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_cleanup $(python_get_sitedir)
 }
