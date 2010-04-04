@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.69-r1.ebuild,v 1.1 2009/09/20 23:24:54 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.69-r1.ebuild,v 1.2 2010/04/04 21:56:32 arfrever Exp $
 
 IUSE="nls"
 
@@ -68,20 +68,17 @@ src_unpack() {
 }
 
 src_compile() {
-	python_version
-
 	einfo "Compiling policycoreutils"
-	emake -C "${S}" PYLIBVER="python${PYVER}" AUDIT_LOG_PRIV=y || die
+	emake -C "${S}" PYLIBVER="python$(python_get_version)" AUDIT_LOG_PRIV=y || die
 	einfo "Compiling policycoreutils-extra"
 	emake -C "${S2}" || die
 }
 
 src_install() {
-	python_version
 	python_need_rebuild
 
 	einfo "Installing policycoreutils"
-	make DESTDIR="${D}" -C "${S}" PYLIBVER="python${PYVER}" AUDIT_LOG_PRIV=y install || die
+	make DESTDIR="${D}" -C "${S}" PYLIBVER="python$(python_get_version)" AUDIT_LOG_PRIV=y install || die
 	einfo "Installing policycoreutils-extra"
 	make DESTDIR="${D}" -C "${S2}" install || die
 
@@ -100,11 +97,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize $(python_get_sitedir)
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_cleanup $(python_get_sitedir)
 }

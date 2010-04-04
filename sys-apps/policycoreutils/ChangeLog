@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/policycoreutils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.76 2009/09/20 23:24:54 pebenito Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.77 2010/04/04 21:56:32 arfrever Exp $
+
+  04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  policycoreutils-2.0.55.ebuild, policycoreutils-2.0.69.ebuild,
+  policycoreutils-2.0.69-r1.ebuild:
+  Delete calls to deprecated python_version().
 
 *policycoreutils-2.0.69-r1 (20 Sep 2009)
 
