@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.21 2010/03/20 13:33:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.22 2010/04/04 07:08:14 jlec Exp $
+
+  04 Apr 2010; Justin Lecher <jlec@gentoo.org> Manifest:
+  distfile digest fix
 
   20 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   +files/1.2.1-aria2.3.patch, +cns-1.2.1-r3.ebuild,
