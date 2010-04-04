@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.12 2010/03/30 01:13:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.13 2010/04/04 04:44:20 darkside Exp $
+
+  04 Apr 2010; Jeremy Olexa <darkside@gentoo.org>
+  mediatomb-0.12.0-r1.ebuild:
+  Add ~arm, tested on armv7 platform
 
 *mediatomb-0.12.0-r1 (30 Mar 2010)
 
