@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.135 2010/04/02 05:58:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.136 2010/04/04 07:30:38 pva Exp $
+
+*libpcap-1.1.0-r1 (04 Apr 2010)
+
+  04 Apr 2010; Peter Volkov <pva@gentoo.org> -libpcap-1.1.0.ebuild,
+  +libpcap-1.1.0-r1.ebuild:
+  Don't install broken .so symlinks (this forced linkage with libpcap.a),
+  bug #312895, thank Davide Pesavento for report.
 
 *libpcap-1.1.0 (02 Apr 2010)
 

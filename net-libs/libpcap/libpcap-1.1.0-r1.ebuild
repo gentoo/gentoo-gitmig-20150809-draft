@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.0.ebuild,v 1.1 2010/04/02 05:58:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.0-r1.ebuild,v 1.1 2010/04/04 07:30:38 pva Exp $
 
 EAPI=2
 inherit autotools versionator eutils multilib toolchain-funcs
@@ -41,10 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-shared || die "emake install failed"
-
-	dosym libpcap$(get_libname ${PV}) /usr/$(get_libdir)/libpcap$(get_libname 1)
-	dosym libpcap$(get_libname ${PV}) /usr/$(get_libdir)/libpcap$(get_libname)
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# We need this to build pppd on G/FBSD systems
 	if [[ "${USERLAND}" == "BSD" ]]; then
