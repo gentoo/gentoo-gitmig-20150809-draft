@@ -6,4 +6,3 @@
 		<flag name='ntp'>install support for <pkg>net-misc/ntp</pkg></flag>
 	</use>
 </pkgmetadata>
-
