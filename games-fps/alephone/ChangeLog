@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.31 2010/03/05 08:09:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.32 2010/04/04 16:49:40 mr_bones_ Exp $
+
+  04 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  alephone-20100218.ebuild:
+  add use dep for libsdl
 
   05 Mar 2010; Tupone Alfredo <tupone@gentoo.org> alephone-20100218.ebuild:
   Adding dev-libs/zzlib dependency. Bug #307581 by j.habenicht

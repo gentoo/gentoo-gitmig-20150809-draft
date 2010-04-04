@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100218.ebuild,v 1.3 2010/03/05 08:09:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100218.ebuild,v 1.4 2010/04/04 16:49:40 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -17,7 +17,7 @@ IUSE="alsa mad mpeg sndfile speex truetype vorbis"
 
 RDEPEND="media-libs/sdl-net
 	media-libs/sdl-image
-	media-libs/libsdl
+	media-libs/libsdl[video]
 	dev-libs/expat
 	dev-libs/zziplib
 	media-libs/libpng
