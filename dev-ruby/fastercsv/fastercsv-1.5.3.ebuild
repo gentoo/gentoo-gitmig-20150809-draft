@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/fastercsv-1.5.3.ebuild,v 1.1 2010/04/04 06:48:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastercsv/fastercsv-1.5.3.ebuild,v 1.2 2010/04/04 06:51:30 graaff Exp $
 
 EAPI=2
 
@@ -16,8 +16,6 @@ RUBY_FAKEGEM_EXTRADOC="AUTHORS CHANGELOG README TODO"
 
 inherit ruby-fakegem
 
-ruby_add_bdepend test virtual/ruby-test-unit
-
 DESCRIPTION="FasterCSV is a replacement for the standard CSV library"
 HOMEPAGE="http://fastercsv.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
@@ -26,7 +24,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-ruby_add_rdepend test virtual/ruby-test-unit
+ruby_add_bdepend test virtual/ruby-test-unit
 
 all_ruby_install() {
 	all_fakegem_install
