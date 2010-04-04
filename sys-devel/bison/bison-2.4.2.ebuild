@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.2.ebuild,v 1.1 2010/03/29 04:58:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.2.ebuild,v 1.2 2010/04/04 20:01:31 the_paya Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -15,6 +15,12 @@ IUSE="nls static"
 
 DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="sys-devel/m4"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.4.2-gnulib_spawn.patch # 312697
+}
 
 src_compile() {
 	use static && append-ldflags -static

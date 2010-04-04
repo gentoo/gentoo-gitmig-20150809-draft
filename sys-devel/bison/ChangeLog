@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.81 2010/04/04 17:16:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.82 2010/04/04 20:01:31 the_paya Exp $
+
+  04 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
+  bison-2.4.2.ebuild, +files/bison-2.4.2-gnulib_spawn.patch:
+  Add patch to fix gnulib's spawn, fixes bug #312697.
 
   04 Apr 2010; Markos Chandras <hwoarang@gentoo.org> bison-2.4.1.ebuild:
   Stable on amd64 wrt bug #311867
