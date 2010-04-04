@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.04.03.ebuild,v 1.2 2010/04/04 15:33:57 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.04.03.ebuild,v 1.3 2010/04/04 15:36:16 wired Exp $
 
 EAPI="2"
 
@@ -58,7 +58,6 @@ RDEPEND="
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 # TODO document what requires the above helpers
-# simplejson - save uzbl_tabbed.py sessions & presets in json.
 
 pkg_setup() {
 	if ! use helpers; then
