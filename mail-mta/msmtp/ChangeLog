@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.76 2010/04/03 13:48:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.77 2010/04/04 18:53:17 armin76 Exp $
+
+  04 Apr 2010; Raúl Porcel <armin76@gentoo.org> msmtp-1.4.19.ebuild:
+  alpha/ia64/sparc stable wrt #293647
 
   03 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> msmtp-1.4.19.ebuild:
   x86 stable wrt security bug #293647
