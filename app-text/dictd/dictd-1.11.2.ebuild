@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.11.2.ebuild,v 1.4 2010/03/31 07:26:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.11.2.ebuild,v 1.5 2010/04/04 18:44:18 armin76 Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/dict/${P}.tar.gz"
 SLOT="0"
 # We install rfc so - ISOC-rfc
 LICENSE="GPL-2 ISOC-rfc"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="dbi judy minimal"
 
 # <gawk-3.1.6 makes tests fail.

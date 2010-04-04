@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.83 2010/03/31 07:26:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.84 2010/04/04 18:44:18 armin76 Exp $
+
+  04 Apr 2010; Raúl Porcel <armin76@gentoo.org> dictd-1.11.2.ebuild:
+  alpha/ia64/sparc stable wrt #310023
 
   31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> dictd-1.11.2.ebuild:
   x86 stable wrt bug #310023
