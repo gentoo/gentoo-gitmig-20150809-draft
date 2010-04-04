@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.43 2010/03/02 02:24:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.44 2010/04/04 15:55:44 armin76 Exp $
+
+  04 Apr 2010; Raúl Porcel <armin76@gentoo.org> pyparted-3.0-r1.ebuild,
+  pyparted-3.1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #300106
 
   02 Mar 2010; Jeroen Roovers <jer@gentoo.org> pyparted-3.0-r1.ebuild,
   pyparted-3.1.ebuild:
