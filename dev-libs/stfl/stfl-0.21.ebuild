@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.21.ebuild,v 1.1 2010/04/03 13:41:00 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.21.ebuild,v 1.2 2010/04/04 20:42:29 tanderson Exp $
 
-EAPI="2"
+EAPI="3"
 inherit eutils multilib perl-module python
 
 DESCRIPTION="A library which implements a curses-based widget set for text terminals"
@@ -52,7 +52,6 @@ src_compile() {
 }
 
 src_install() {
-	PYTHON
 	emake prefix="/usr" DESTDIR="${D}" libdir="$(get_libdir)" install || die "make install failed"
 
 	dodoc README
@@ -77,9 +76,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize usr/$(get_libdir)/python$(python_get_version)/site-packages/stfl.py
+	use python && python_mod_optimize stfl.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup stfl.py
 }
