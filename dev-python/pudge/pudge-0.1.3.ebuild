@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.6 2010/04/04 16:30:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudge/pudge-0.1.3.ebuild,v 1.7 2010/04/04 16:45:02 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -28,6 +28,7 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc; then
+		einfo "Generation of documentation"
 		"$(PYTHON -f)" bin/pudge --modules=pudge --documents=doc/index.rst --dest=doc/html || die "Generation of documentation failed"
 	fi
 }
