@@ -37,6 +37,7 @@
 	<flag name="testbed">Enable the testbed protocol.</flag>
 	<flag name="winpopup">Enable pop-up messages sending on windows. (same as good old "net send" messages ;])</flag>
 	<flag name="yahoo">Enable yahoo protocol support.</flag>
+	<flag name="zeroconf">Enable Link-Local Messaging via the bonjour protocol.</flag>
 </use>
 <herd>kde</herd>
 </pkgmetadata>

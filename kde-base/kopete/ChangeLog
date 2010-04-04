@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.245 2010/03/31 22:57:47 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.246 2010/04/04 15:51:47 jmbsvicetto Exp $
+
+*kopete-4.4.2-r1 (04 Apr 2010)
+
+  04 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kopete-4.4.2-r1.ebuild, +files/kopete-4.4.2-yahoo-stealth-fix.patch,
+  metadata.xml:
+  [kde-base/kopete-4.4.2-r1] Revbumped kopete to apply a few fixes:
+  Added upstream patch to fix issues with yahoo and stealth. Fixes bug
+  311445 - thanks to Navid Zamani <navid.zamani@googlemail.com>.
+  Replaced bonjour with zeroconf use flag. Fixes bug 307105 - thanks to
+  Doktor Notor <notordoktor@gmail.com>.
+  Added explicit dep on kde-base/qimageblitz. Fixes bug 307803.
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kopete-4.3.4.ebuild,
   -kopete-4.4.0.ebuild:
