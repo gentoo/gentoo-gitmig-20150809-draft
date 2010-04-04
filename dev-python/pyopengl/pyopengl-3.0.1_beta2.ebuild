@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1_beta2.ebuild,v 1.9 2010/02/23 11:15:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-3.0.1_beta2.ebuild,v 1.10 2010/04/04 15:36:47 armin76 Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="http://pypi.python.org/packages/source/P/PyOpenGL/${MY_P}.tar.gz
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="tk"
 # Disabled doc useflag
 
