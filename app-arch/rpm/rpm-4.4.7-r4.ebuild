@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.3 2009/09/06 19:27:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.4 2010/04/04 21:48:31 arfrever Exp $
 
 inherit eutils autotools distutils perl-module flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://wraptastic.org/pub/rpm-4.4.x/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls python perl doc sqlite"
 
 RDEPEND="=sys-libs/db-3.2*
@@ -61,12 +61,11 @@ src_compile() {
 	# Until strict aliasing is porperly fixed...
 	filter-flags -fstrict-aliasing
 	append-flags -fno-strict-aliasing
-	python_version
 	econf \
 		--enable-posixmutexes \
 		--without-javaglue \
 		--without-selinux \
-		$(use_with python python ${PYVER}) \
+		$(use_with python python $(python_get_version)) \
 		$(use_with doc apidocs) \
 		$(use_with perl) \
 		$(use_with sqlite) \
