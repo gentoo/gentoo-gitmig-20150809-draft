@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/supybot-plugins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.4 2009/09/22 00:02:21 neurogeek Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.5 2010/04/04 21:14:24 arfrever Exp $
+
+  04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  supybot-plugins-20060723-r2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *supybot-plugins-20060723-r2 (22 Sep 2009)
 
