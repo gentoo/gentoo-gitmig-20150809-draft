@@ -1,14 +1,21 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-0.9-r1.ebuild,v 1.7 2009/09/23 20:29:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/aboot/aboot-1.0_pre20040408-r3.ebuild,v 1.1 2010/04/04 13:50:52 armin76 Exp $
+
+inherit eutils
+
+KERN_VER="2.6.22"
 
 DESCRIPTION="Alpha Linux boot loader for SRM"
 HOMEPAGE="http://aboot.sourceforge.net/"
-SRC_URI="http://aboot.sourceforge.net/tarballs/aboot-0.9bpre.tar.bz2"
+SRC_URI="http://aboot.sourceforge.net/tarballs/${P}.tar.bz2
+	mirror://gentoo/gentoo-headers-base-${KERN_VER}.tar.bz2
+	mirror://gentoo/${PN}_gentoo.diff.bz2
+	http://dev.gentoo.org/~armin76/dist/${PN}_gentoo.diff.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* alpha"
+KEYWORDS="-* ~alpha"
 IUSE=""
 
 DEPEND=""
@@ -16,28 +23,41 @@ PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}
-	mv ${WORKDIR}/aboot-0.9bpre ${WORKDIR}/${P}
-	cd ${S}
-	sed -i "s:/usr/man:/usr/share/man:" Makefile || die
+	# setup local copies of kernel headers since we rely so
+	# heavily on linux internals.
+	mv gentoo-headers-base-${KERN_VER}/include/{linux,asm-generic,asm-alpha} "${S}"/include/ || die
+	cd "${S}"/include
+	ln -s asm-alpha asm || die
+	touch linux/config.h || die
+	cd "${S}"
+	epatch "${FILESDIR}/aboot-gcc-3.4.patch"
+	epatch "${FILESDIR}/aboot-pt_note.patch"
+	# Modified patch from Debian to add netboot support
+	epatch "${WORKDIR}"/aboot_gentoo.diff
 }
 
 src_compile() {
-	emake || die
+	# too many problems with parallel building
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	dodir /boot /sbin /usr/share/man/man5
+	dodir /boot /sbin /usr/share/man/man{1,5,8}
 	make \
-		root=${D} \
-		bindir=${D}/sbin \
-		bootdir=${D}/boot \
-		mandir=${D}/usr/share/man \
+		root="${D}" \
+		bindir="${D}"/sbin \
+		bootdir="${D}"/boot \
+		mandir="${D}"/usr/share/man \
 		install
 
+	insinto /boot
+	doins net_aboot.nh
+	dobin netabootwrap
 	dodoc ChangeLog INSTALL README TODO aboot.conf
 
 	insinto /etc
-	newins ${FILESDIR}/aboot.conf aboot.conf.example
+	newins "${FILESDIR}"/aboot.conf aboot.conf.example
+
 }
 
 pkg_postinst() {
