@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.75 2010/04/03 20:45:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.76 2010/04/04 07:46:19 phajdan.jr Exp $
+
+  04 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-5.0.307.11.ebuild, chromium-5.0.342.7.ebuild,
+  -chromium-5.0.360.0.ebuild, chromium-5.0.360.5.ebuild:
+  Make sure all ebuilds have the fix for libpng-1.4, bug #310959 by
+  loki_val. Remove old.
 
   03 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   +files/chromium-libpng-1.4.patch, chromium-5.0.366.2.ebuild,
