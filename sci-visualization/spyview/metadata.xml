@@ -6,6 +6,11 @@
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
 </maintainer>
+<maintainer>
+<email>mail@akhuettel.de</email>
+<name>Andreas K. Huettel</name>
+<description>Proxy maintainer. Assign all spyview bugs to Andreas</description>
+</maintainer>
 <longdescription lang="en">
 </longdescription>
 </pkgmetadata>

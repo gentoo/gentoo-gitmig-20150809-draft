@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/spyview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.1 2010/03/05 18:41:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.2 2010/04/04 12:22:58 hwoarang Exp $
+
+*spyview-20100329 (04 Apr 2010)
+
+  04 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  +spyview-20100329.ebuild, metadata.xml:
+  Version bump. Fixes bug #313079. Andreas Huettel will be proxy maintainer
+  forit
 
 *spyview-20100203 (05 Mar 2010)
 
