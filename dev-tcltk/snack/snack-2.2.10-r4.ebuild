@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.3 2010/04/05 14:02:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.4 2010/04/05 14:11:24 jlec Exp $
 
 EAPI="3"
 
-PYTHON_DEPEND="python? *"
+PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_MODNAME="tkSnack.py"
 
