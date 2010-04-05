@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.34 2010/02/23 23:01:11 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.35 2010/04/05 20:57:14 maekke Exp $
+
+  05 Apr 2010; Markus Meier <maekke@gentoo.org>
+  jdbc-postgresql-8.4_p701.ebuild:
+  amd64/x86 stable, bug #310825
 
 *jdbc-postgresql-8.4_p701 (23 Feb 2010)
 
