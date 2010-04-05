@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/maradns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.28 2010/03/19 09:39:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.29 2010/04/05 17:45:55 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> maradns-1.2.12.10.ebuild:
+  sparc stable wrt #270908
 
   19 Mar 2010; Pacho Ramos <pacho@gentoo.org> maradns-1.2.12.10.ebuild:
   amd64 stable, bug 270908
