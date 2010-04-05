@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.617 2010/03/22 02:37:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.618 2010/04/05 07:40:10 maekke Exp $
+
+  05 Apr 2010; Markus Meier <maekke@gentoo.org> qt-4.6.2.ebuild:
+  add ~arm, bug #293671
 
   22 Mar 2010; Ben de Groot <yngwin@gentoo.org> -qt-3.3.8b-r1.ebuild,
   -qt-3.3.8b-r2.ebuild:
