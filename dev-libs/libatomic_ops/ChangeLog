@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.18 2010/01/26 18:27:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.19 2010/04/05 16:32:02 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  libatomic_ops-1.2-r1.ebuild, +files/libatomic_ops-1.2-sh4.patch:
+  Add patch to make it work on sh
 
   26 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   libatomic_ops-1.2-r1.ebuild:
