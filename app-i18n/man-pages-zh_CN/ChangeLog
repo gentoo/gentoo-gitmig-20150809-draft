@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-zh_CN
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/ChangeLog,v 1.3 2007/05/13 18:28:40 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/ChangeLog,v 1.4 2010/04/05 04:22:39 abcd Exp $
+
+  05 Apr 2010; Jonathan Callen <abcd@gentoo.org> man-pages-zh_CN-1.5.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
