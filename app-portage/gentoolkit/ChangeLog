@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.186 2010/04/01 17:15:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.187 2010/04/05 21:04:18 idl0r Exp $
+
+*gentoolkit-0.3.0_rc10 (05 Apr 2010)
+
+  05 Apr 2010; Christian Ruppert <idl0r@gentoo.org>
+  +gentoolkit-0.3.0_rc10.ebuild, gentoolkit-9999.ebuild:
+  Version bump to 0.3.0_rc10, please take a look at bug 237964 for more
+  information about the changes in this release. Thanks to all contributors!
+  Merge ebuild related changes in _rc10 to gentoolkit-9999 as well.
 
   01 Apr 2010; Raúl Porcel <armin76@gentoo.org>
   gentoolkit-0.2.4.6.1.ebuild, gentoolkit-0.3.0_rc8.ebuild,

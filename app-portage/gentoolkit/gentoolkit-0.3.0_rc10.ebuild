@@ -1,26 +1,24 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.8 2010/04/05 21:04:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc10.ebuild,v 1.1 2010/04/05 21:04:18 idl0r Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_DISABLE_VERSIONING_OF_PYTHON_SCRIPTS="1"
 RESTRICT_PYTHON_ABIS="2.[45]"
 
-inherit distutils python subversion
-
-ESVN_REPO_URI="svn://anonsvn.gentoo.org/gentoolkit/trunk/gentoolkit"
-ESVN_PROJECT="gentoolkit"
+inherit distutils python
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
-SRC_URI=""
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS=""
+# Drop ~sparc-fbsd ~x86-fbsd due to app-misc/realpath dependency
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 DEPEND="sys-apps/portage
 	>=dev-lang/python-2.6[xml]
@@ -31,13 +29,8 @@ RDEPEND="${DEPEND}
 	sys-apps/grep"
 
 distutils_src_compile_pre_hook() {
-	echo VERSION="9999-r${ESVN_WC_REVISION}" "$(PYTHON)" setup.py set_version
-	VERSION="9999-r${ESVN_WC_REVISION}" "$(PYTHON)" setup.py set_version
-}
-
-src_compile() {
-	subversion_wc_info
-	distutils_src_compile
+	echo VERSION="${PV}" "$(PYTHON)" setup.py set_version
+	VERSION="${PV}" "$(PYTHON)" setup.py set_version
 }
 
 src_install() {
