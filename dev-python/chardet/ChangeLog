@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/chardet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.17 2010/03/15 19:41:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.18 2010/04/05 17:35:38 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> chardet-2.0.1.ebuild:
+  sparc stable wrt #305183
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> chardet-2.0.1.ebuild:
   ppc stable #305183
