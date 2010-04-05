@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-96.ebuild,v 1.3 2010/03/29 09:58:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-96.ebuild,v 1.4 2010/04/05 12:10:02 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="http://last.cbrc.jp/archive/${P}.zip"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
