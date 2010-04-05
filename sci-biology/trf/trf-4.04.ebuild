@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.04.ebuild,v 1.2 2010/03/29 10:00:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.04.ebuild,v 1.3 2010/04/05 12:11:35 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://tandem.bu.edu/trf/downloads/${MY_P}.linux.exe"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND=""
