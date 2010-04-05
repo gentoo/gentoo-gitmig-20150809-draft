@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.1.16.ebuild,v 1.3 2010/03/10 14:49:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2010.1.16.ebuild,v 1.4 2010/04/05 20:36:19 maekke Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="acl debug hal suid +external-fuse"
 
 RDEPEND=">=sys-fs/fuse-2.6.0
