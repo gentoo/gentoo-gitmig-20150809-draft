@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.29 2010/03/11 18:15:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.30 2010/04/05 16:46:31 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> highlight-2.9.ebuild:
+  sparc stable wrt #306711
 
   11 Mar 2010; Markos Chandras <hwoarang@gentoo.org> highlight-2.9.ebuild:
   Stable on amd64 wrt bug #306711
