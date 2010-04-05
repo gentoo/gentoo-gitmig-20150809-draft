@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.3.0.ebuild,v 1.1 2010/04/04 16:10:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.3.0-r1.ebuild,v 1.1 2010/04/05 13:22:45 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="alsa debug doc networkmanager ntp video_cards_intel video_cards_radeon"
 
+vbetool="!video_cards_intel? ( sys-apps/vbetool )"
 RDEPEND="
 	!sys-power/powermgmt-base
 	sys-apps/dbus
@@ -23,6 +24,9 @@ RDEPEND="
 	alsa? ( media-sound/alsa-utils )
 	networkmanager? ( net-misc/networkmanager )
 	ntp? ( net-misc/ntp )
+	amd64? ( ${vbetool} )
+	x86? ( ${vbetool} )
+	video_cards_radeon? ( app-laptop/radeontool )
 "
 DEPEND="doc? ( app-text/xmlto )"
 
