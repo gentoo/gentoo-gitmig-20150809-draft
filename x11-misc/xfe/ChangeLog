@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.60 2010/03/21 14:16:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.61 2010/04/05 18:08:58 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> xfe-1.32.1.ebuild:
+  sparc stable wrt #309023
 
   21 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> xfe-1.32.1.ebuild:
   x86 stable wrt bug #309023
