@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.8 2009/09/23 15:23:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.9 2010/04/05 04:16:56 abcd Exp $
+
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.triptico.com/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-interix ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="gtk ncurses nls pcre"
 
 RDEPEND="!dev-util/rej
@@ -23,8 +25,8 @@ RDEPEND="!dev-util/rej
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
-	local myconf="--prefix=/usr --without-win32 --without-gtk1"
+src_configure() {
+	local myconf="--prefix=${EPREFIX}/usr --without-win32 --without-gtk1"
 	tc-export CC
 
 	if use gtk ; then
@@ -40,14 +42,12 @@ src_compile() {
 
 	echo ${CFLAGS} >> config.cflags
 	echo ${LDFLAGS} >> config.ldflags
-
-	emake || die "Compile Failed"
 }
 
 src_install() {
 	dobin mp || die "Install Failed"
 
-	use gtk && dosym mp ${DESTTREE}/bin/gmp
+	use gtk && dosym mp /usr/bin/gmp
 
 	dodoc AUTHORS README Changelog mprc.sample
 	doman mp.1
