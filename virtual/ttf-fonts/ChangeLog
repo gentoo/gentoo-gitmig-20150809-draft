@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ttf-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ChangeLog,v 1.3 2010/03/26 17:35:54 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ChangeLog,v 1.4 2010/04/05 15:16:22 spatz Exp $
+
+  05 Apr 2010; Dror Levin <spatz@gentoo.org> ttf-fonts-1.ebuild:
+  Add more packages to dep list.
 
   26 Mar 2010; Dror Levin <spatz@gentoo.org> ttf-fonts-1.ebuild:
   Change description as per leio's request.
