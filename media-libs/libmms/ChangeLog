@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.39 2010/03/24 19:11:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.40 2010/04/05 18:06:23 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> libmms-0.5.ebuild:
+  alpha/sparc stable wrt #310183
 
   24 Mar 2010; Christian Faulhammer <fauli@gentoo.org> libmms-0.5.ebuild:
   stable x86, bug 310183
