@@ -1,6 +1,16 @@
 # ChangeLog for sys-power/pmtools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.12 2009/09/23 20:57:57 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.13 2010/04/05 05:19:58 nerdboy Exp $
+
+*pmtools-20100123 (05 Apr 2010)
+
+  05 Apr 2010; Steve Arnold <nerdboy@gentoo.org> +pmtools-20100123.ebuild,
+  +files/pmtools-20100123-acpixtract-pmtools.patch,
+  +files/pmtools-20100123-cflags-ldflags.patch,
+  +files/pmtools-20100123-madt.patch:
+  Updated to current release; closes bug 308233.  Thanks to Philipp 
+  Nordhus <philipp@tigerclaw.de> for submitting the bug with updated
+  patches.  Includes new turbostat tool for Intel CPUs.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> pmtools-20071116.ebuild,
   pmtools-20071116-r1.ebuild:
