@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20091215.ebuild,v 1.2 2010/02/26 19:08:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20091215.ebuild,v 1.3 2010/04/05 18:05:41 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.ysbl.york.ac.uk/~cowtan/clipper/clipper-2.1-${PV:2:${#PV}}-a
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="
@@ -48,7 +48,7 @@ src_configure() {
 		--enable-minimol \
 		--enable-mmdb \
 		--enable-phs \
-		--with-mmdb=${EPREFIX}/usr \
+		--with-mmdb="${EPREFIX}"/usr \
 		$(use_enable debug)
 }
 
