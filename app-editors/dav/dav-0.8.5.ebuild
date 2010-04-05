@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/dav-0.8.5.ebuild,v 1.10 2008/12/30 18:35:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dav/dav-0.8.5.ebuild,v 1.11 2010/04/05 04:06:56 abcd Exp $
+
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -13,16 +15,16 @@ SRC_URI="http://dav-text.sourceforge.net/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc x86"
+KEYWORDS="alpha ~amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
+
+src_configure() { :; }
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" \
@@ -32,6 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	# no ./configure and doesn't hardcode /usr, so ED is fine
+	emake DESTDIR="${ED}" install || die
 	dodoc README
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/lpe
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.22 2009/02/15 06:34:45 dragonheart Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.23 2010/04/05 04:10:05 abcd Exp $
+
+  05 Apr 2010; Jonathan Callen <abcd@gentoo.org> lpe-1.2.6.13.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   15 Feb 2009; Daniel Black <dragonheart@gentoo.org> lpe-1.2.6.13.ebuild:
   QA - no more preparealldocs
