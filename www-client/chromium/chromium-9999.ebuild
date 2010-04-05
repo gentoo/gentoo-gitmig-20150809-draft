@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.36 2010/04/03 20:45:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.37 2010/04/05 15:23:11 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability subversion toolchain-funcs
@@ -40,7 +40,8 @@ RDEPEND+="
 		x11-themes/tango-icon-theme
 		x11-themes/xfce4-icon-theme
 	)
-	x11-misc/xdg-utils"
+	x11-misc/xdg-utils
+	virtual/ttf-fonts"
 
 # Incompatible system plugins:
 # www-plugins/gecko-mediaplayer, bug #309231.
