@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.65 2010/03/30 01:00:47 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.66 2010/04/05 17:47:40 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> portpeek-1.5.8.4.ebuild:
+  sparc stable wrt #309059
 
   30 Mar 2010; Michael Pagano <mpagano@gentoo.org> portpeek-1.9.36.ebuild:
   Move to git repo for 1.9+ versions
