@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.42 2010/04/02 09:27:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.43 2010/04/05 14:02:59 jlec Exp $
+
+  05 Apr 2010; Justin Lecher <jlec@gentoo.org> snack-2.2.10-r4.ebuild:
+  Proposed enhancement from Arfrever included
 
 *snack-2.2.10-r4 (02 Apr 2010)
 

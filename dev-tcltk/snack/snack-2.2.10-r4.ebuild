@@ -1,12 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.2 2010/04/02 09:28:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.3 2010/04/05 14:02:59 jlec Exp $
 
 EAPI="3"
 
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="python? *"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_MODNAME="tkSnack.py"
 
-inherit eutils multilib python
+inherit eutils distutils multilib
 
 DESCRIPTION="The Snack Sound Toolkit (Tcl)"
 HOMEPAGE="http://www.speech.kth.se/snack/"
@@ -25,6 +27,7 @@ DEPEND="
 	alsa? ( media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${PN}${PV}/unix"
 
@@ -50,8 +53,11 @@ src_configure() {
 	fi
 
 	econf ${myconf} || die "configure failed"
-	emake || die "make failed"
+}
 
+src_compile() {
+	# We do not want to run distutils_src_compile
+	emake || die
 }
 
 src_install() {
@@ -59,30 +65,22 @@ src_install() {
 
 	if use python ; then
 		cd "${S}"/../python
-		python setup.py install --root="${ED}" || die
+		distutils_src_install
 	fi
 
 	cd "${S}"/..
 
-	dodoc README changes
-	dohtml doc/*
+	dodoc README changes || die
+	dohtml doc/* || die
 
 	if use examples ; then
 		sed -i -e 's/wish[0-9.]+/wish/g' demos/tcl/* || die
 		docinto examples/tcl
-		dodoc demos/tcl/*
+		dodoc demos/tcl/* || die
 
 		if use python ; then
 			docinto examples/python
-			dodoc demos/python/*
+			dodoc demos/python/* || die
 		fi
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize tkSnack.py
-}
-
-pkg_postrm() {
-	python_mod_cleanup tkSnack.py
 }
