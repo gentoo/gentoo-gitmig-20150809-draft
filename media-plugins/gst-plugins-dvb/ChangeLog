@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-dvb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.23 2010/03/24 20:21:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.24 2010/04/05 23:26:37 leio Exp $
+
+*gst-plugins-dvb-0.10.18 (05 Apr 2010)
+
+  05 Apr 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-dvb-0.10.18.ebuild:
+  Version bump. Fixes dvbsrc element to shutdown on bad reception (instead
+  of infinite looping)
 
   24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-dvb-0.10.17.ebuild:
