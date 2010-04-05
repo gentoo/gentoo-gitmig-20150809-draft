@@ -1,6 +1,9 @@
 # ChangeLog for app-text/asciidoc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.51 2009/12/04 16:55:12 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.52 2010/04/05 23:16:25 abcd Exp $
+
+  05 Apr 2010; Jonathan Callen <abcd@gentoo.org> asciidoc-8.5.1.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
 *asciidoc-8.5.1 (04 Dec 2009)
 
