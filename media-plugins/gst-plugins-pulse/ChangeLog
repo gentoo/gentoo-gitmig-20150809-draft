@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.32 2010/04/05 04:04:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.33 2010/04/05 18:32:58 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-pulse-0.10.17.ebuild:
+  alpha/sparc stable wrt #308379
 
 *gst-plugins-pulse-0.10.21 (05 Apr 2010)
 
