@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.9 2010/04/02 20:26:21 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.10 2010/04/05 07:41:09 a3li Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -447,4 +447,30 @@ ruby_get_hdrdir() {
 	fi
 
 	echo "${rubyhdrdir}"
+}
+
+# @FUNCTION: ruby_get_version
+# @RETURN: The version of the Ruby interpreter in ${RUBY}, or what 'ruby' points to.
+ruby_get_version() {
+	local ruby=${RUBY:-$(type -p ruby 2>/dev/null)}
+
+	echo $(${ruby} -e 'puts RUBY_VERSION')
+}
+
+# @FUNCTION: ruby_get_implementation
+# @RETURN: The implementation of the Ruby interpreter in ${RUBY}, or what 'ruby' points to.
+ruby_get_implementation() {
+	local ruby=${RUBY:-$(type -p ruby 2>/dev/null)}
+
+	case $(${ruby} --version) in
+		*Enterprise*)
+			echo "ree"
+			;;
+		*jruby*)
+			echo "jruby"
+			;;
+		*)
+			echo "mri"
+			;;
+	esac
 }
