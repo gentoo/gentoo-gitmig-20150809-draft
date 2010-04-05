@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.130 2010/03/24 20:04:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.131 2010/04/05 03:46:43 leio Exp $
+
+*gst-plugins-flac-0.10.21 (05 Apr 2010)
+
+  05 Apr 2010; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-flac-0.10.14.ebuild, +gst-plugins-flac-0.10.21.ebuild:
+  Version bump. Fixes for FLAC decoder when FLAC is embedded in a container
+  such as Ogg or Matroska. Push mode related bug fixes.
 
   24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-flac-0.10.17.ebuild:
