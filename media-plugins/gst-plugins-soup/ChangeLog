@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-soup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.28 2010/04/05 04:30:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.29 2010/04/05 18:33:27 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-soup-0.10.17.ebuild:
+  alpha/arm/ia64/sparc stable wrt #308379
 
 *gst-plugins-soup-0.10.21 (05 Apr 2010)
 
