@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.17 2010/02/11 18:53:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.18 2010/04/05 18:51:53 hwoarang Exp $
+
+  05 Apr 2010; Markos Chandras <hwoarang@gentoo.org> libsvm-2.90-r1.ebuild:
+  Stable on amd64 wrt bug #313139
 
 *libsvm-2.90-r1 (11 Feb 2010)
 
