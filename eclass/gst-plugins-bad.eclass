@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.25 2010/04/05 01:55:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.26 2010/04/05 01:57:41 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -16,11 +16,10 @@
 # drac at gentoo.org:
 # This list is current to gst-plugins-bad-0.10.5 except for:
 #   Not present in 0.10.5 - wavpack
-# This list is current for gst-plugins-bad-0.10.14 and is only getting entries
-# added to it, and never removed for longer backwards compatibility.
+# This list is current for gst-plugins-bad-0.10.18.
 my_gst_plugins_bad="directsound directdraw osx_video quicktime vcd
 alsa assrender amrwb apexsink bz2 cdaudio celt cog directfb dirac dts divx
-dvdnav metadata faac faad fbdev gsm jack jp2k kate ladspa lv2 libmms
+dvdnav metadata faac faad fbdev flite gsm jack jp2k kate ladspa lv2 libmms
 modplug mimic mpeg2enc mplex musepack musicbrainz mythtv nas neon ofa rsvg
 timidity wildmidi sdl sdltest sndfile soundtouch spc gme swfdec theoradec xvid
 dvb oss4 wininet acm vdpau schro zbar
@@ -30,6 +29,7 @@ gst_v4l2 wavpack soup twolame x264 ivorbis opengl x"
 # soup     gone since 0.10.7  (moved to -good-0.10.8)
 # twolame  gone since 0.10.11 (moved to -ugly-0.10.11)
 # x264     gone since 0.10.13 (moved to -ugly-0.10.12)
+# ivorbis  gone since 0.10.18 (moved to -base-0.10.27 as part of vorbis plugin)
 
 
 #qtdemux spped tta
