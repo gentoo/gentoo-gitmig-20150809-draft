@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/batterymon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/ChangeLog,v 1.5 2010/04/04 12:44:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batterymon/ChangeLog,v 1.6 2010/04/05 19:26:33 phajdan.jr Exp $
+
+  05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  batterymon-1.2.0.ebuild:
+  x86 stable wrt bug #312353
 
   04 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   batterymon-1.2.0.ebuild:
