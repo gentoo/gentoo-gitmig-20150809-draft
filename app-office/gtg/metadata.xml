@@ -5,6 +5,9 @@
 <maintainer>
 <email>leio@gentoo.org</email>
 </maintainer>
+<maintainer>
+<email>steev@gentoo.org</email>
+</maintainer>
 <longdescription lang="en">
 	Getting Things Gnome! (gtg) is a personal organizer for the GNOME desktop that
 	was inspired by the Getting Things Done methodology (GTD). It is not a GTD only
