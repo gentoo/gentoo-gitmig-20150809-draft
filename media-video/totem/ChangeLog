@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.277 2010/03/22 13:39:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.278 2010/04/05 15:08:35 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> totem-2.26.5-r1.ebuild:
+  alpha/arm/ia64/sparc stable wrt #308549
 
   22 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   -files/totem-2.20.1-startup-notification.patch,

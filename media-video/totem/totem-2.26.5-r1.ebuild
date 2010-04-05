@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.26.5-r1.ebuild,v 1.6 2010/03/16 18:58:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.26.5-r1.ebuild,v 1.7 2010/04/05 15:08:35 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="bluetooth debug doc galago lirc nautilus nsplugin python tracker"
 
