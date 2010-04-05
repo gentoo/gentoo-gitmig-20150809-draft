@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/barcode-0.98.ebuild,v 1.17 2009/02/27 21:43:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/barcode-0.98.ebuild,v 1.18 2010/04/05 22:20:41 abcd Exp $
+
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -10,12 +12,10 @@ SRC_URI="mirror://gnu/barcode/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~arm"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PV}-info.patch
 	sed -i \
 		-e 's:/info:/share/info:' \
@@ -23,13 +23,12 @@ src_unpack() {
 		Makefile.in || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC
 	econf
-	emake || die "emake failed"
 }
 
 src_install() {
-	emake install prefix="${D}/usr" LIBDIR="\$(prefix)/$(get_libdir)" || die
+	emake install prefix="${ED}/usr" LIBDIR="\$(prefix)/$(get_libdir)" || die
 	dodoc ChangeLog README TODO doc/barcode.{pdf,ps}
 }
