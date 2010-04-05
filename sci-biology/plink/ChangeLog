@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/plink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.6 2010/03/29 10:01:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.7 2010/04/05 12:13:23 phajdan.jr Exp $
+
+  05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> plink-1.07.ebuild:
+  x86 stable wrt bug #311835
 
   29 Mar 2010; Pacho Ramos <pacho@gentoo.org> plink-1.07.ebuild:
   amd64 stable, bug 311835
