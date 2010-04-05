@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/code2html-0.9.1-r1.ebuild,v 1.5 2009/07/03 00:47:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/code2html-0.9.1-r1.ebuild,v 1.6 2010/04/05 22:24:08 abcd Exp $
 
-inherit eutils
+EAPI="3"
+
+inherit eutils prefix
 
 DESCRIPTION="Converts source files to colored HTML output."
 HOMEPAGE="http://www.palfrader.org/code2html/"
@@ -12,16 +14,13 @@ SRC_URI="http://www.palfrader.org/code2html/all/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""
 RDEPEND=">=dev-lang/perl-5"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Be consistent in color codes (bug #119406)
 	epatch "${WORKDIR}"/${P}-lowercase_color_codes.patch
 
@@ -30,10 +29,13 @@ src_unpack() {
 
 	# Improved Ada support (bug #133176)
 	epatch "${WORKDIR}"/${P}-ada_identifiers.patch
+
+	# For prefix paths
+	epatch "${FILESDIR}"/${P}-prefix.patch
+	eprefixify code2html
 }
 
-src_install () {
-	into /usr
+src_install() {
 	dobin code2html
 	dodoc ChangeLog CREDITS README
 	doman code2html.1

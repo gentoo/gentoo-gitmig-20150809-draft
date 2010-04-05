@@ -1,6 +1,10 @@
 # ChangeLog for app-text/code2html
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.19 2009/07/03 00:47:51 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.20 2010/04/05 22:24:08 abcd Exp $
+
+  05 Apr 2010; Jonathan Callen <abcd@gentoo.org> code2html-0.9.1-r1.ebuild,
+  +files/code2html-0.9.1-prefix.patch:
+  Bump to EAPI=3, add prefix keywords & patch
 
   03 Jul 2009; Jeroen Roovers <jer@gentoo.org> code2html-0.9.1-r1.ebuild:
   Do not install LICENSE.
