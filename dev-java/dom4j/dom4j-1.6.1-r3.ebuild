@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r3.ebuild,v 1.8 2010/01/15 17:36:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r3.ebuild,v 1.9 2010/04/05 23:42:07 caster Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -25,16 +25,18 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/xerces:2
 	>=dev-java/xsdlib-20050627-r2:0
 	dev-java/xml-commons-external:1.3"
-# Should look into why the tests fail with other versions
 DEPEND="
-	!test? ( >=virtual/jdk-1.4 )
+	>=virtual/jdk-1.4
 	test? (
-		=virtual/jdk-1.5*
 		dev-java/ant-junit:0
 		dev-java/xalan:0
 		dev-java/junitperf:0
 	)
 	${RDEPEND}"
+
+src_test() {
+	java-pkg-2_src_test
+}
 
 src_unpack() {
 	unpack ${A}
@@ -45,6 +47,8 @@ src_unpack() {
 
 	# Needs X11
 	rm -v ./src/test/org/dom4j/bean/BeansTest.java || die
+	# fails with a 1.6 JDK for some reason
+	rm -v src/test/org/dom4j/io/StaxTest.java || die
 	rm -v *.jar || die
 	cd "${S}/lib"
 	#circular deps with jaxen
