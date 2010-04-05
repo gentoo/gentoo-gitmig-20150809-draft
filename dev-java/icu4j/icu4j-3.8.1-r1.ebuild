@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.8.1-r1.ebuild,v 1.5 2010/01/03 20:45:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.8.1-r1.ebuild,v 1.6 2010/04/05 23:50:45 caster Exp $
 
 # We currently download the Javadoc documentation.
 # It could optionally be built using the Ant build file.
@@ -27,11 +27,16 @@ RDEPEND=">=virtual/jre-1.4"
 
 # build.xml does file version detection that fails for 1.7
 # http://bugs.gentoo.org/show_bug.cgi?id=213555
-DEPEND="test? ( || ( =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
-	!test? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
+DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	app-arch/unzip"
 
+# test curently disabled
+#DEPEND="test? ( || ( =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
+#	!test? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* =virtual/jdk-1.4* ) )
+
 IUSE="doc test"
+
+RESTRICT="test"
 
 S="${WORKDIR}"
 
