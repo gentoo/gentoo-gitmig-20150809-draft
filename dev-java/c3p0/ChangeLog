@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/c3p0
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.29 2010/02/09 14:49:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/ChangeLog,v 1.30 2010/04/05 22:48:04 caster Exp $
+
+  05 Apr 2010; Vlastimil Babka <caster@gentoo.org> -c3p0-0.9.0.4.ebuild:
+  Remove old.
 
   09 Feb 2010; Joseph Jezak <josejx@gentoo.org> c3p0-0.9.1.2.ebuild:
   Marked ppc/ppc64 stable for bug #296209.
