@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/xrdp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.6 2010/01/25 17:33:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.7 2010/04/05 14:06:49 flameeyes Exp $
+
+  05 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> xrdp-0.4.1.ebuild,
+  files/xrdp-0.4.1-asneeded.patch:
+  Fix --as-needed patching to work on both x86 and amd64.
 
   25 Jan 2010; Raúl Porcel <armin76@gentoo.org> -xrdp-0.3.1.ebuild,
   xrdp-0.4.1.ebuild:

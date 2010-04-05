@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.4.1.ebuild,v 1.3 2010/01/25 17:33:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.4.1.ebuild,v 1.4 2010/04/05 14:06:49 flameeyes Exp $
 
 EAPI="2"
 
@@ -26,18 +26,17 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-curdir.patch"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 
 	# fix cflags, broken paths, multilib, and insecure rpath in all makefiles
-	for MAKE in $(find . -name Makefile) ; do
-		sed -i "s:CFLAGS = -Wall -O. :CFLAGS += :
+	find . -name Makefile -print0 | \
+		xargs -0 sed \
+		-i "s:CFLAGS = -Wall -O. :CFLAGS += :
 			s:/usr/xrdp:${DESTDIR}:g
 			s:/usr/lib/:/usr/$(get_libdir)/:g
-			s:rpath,\.:rpath,${DESTDIR}:g" ${MAKE}
-	done
+			s:rpath,\.:rpath,${DESTDIR}:g"
 
 	sed -i '/instfiles\/xrdp_control1.sh/ d' Makefile
-
-	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {
