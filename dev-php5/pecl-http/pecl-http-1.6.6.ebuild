@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.6.6.ebuild,v 1.1 2010/04/05 19:09:27 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-http/pecl-http-1.6.6.ebuild,v 1.2 2010/04/05 19:10:29 mabi Exp $
 
 PHP_EXT_NAME="http"
 PHP_EXT_PECL_PKG="pecl_http"
@@ -61,4 +61,3 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "http.send.deflate.start_flags" "0"
 	php-ext-base-r1_addtoinifiles "http.send.not_found_404" "1"
 }
-
