@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jna-posix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna-posix/ChangeLog,v 1.4 2010/01/03 21:05:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna-posix/ChangeLog,v 1.5 2010/04/05 20:56:57 phajdan.jr Exp $
+
+  05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  jna-posix-1.0.1.ebuild:
+  x86 stable wrt bug #312543
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   jna-posix-1.0.1.ebuild:

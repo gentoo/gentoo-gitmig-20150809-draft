@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna-posix/jna-posix-1.0.1.ebuild,v 1.3 2010/01/03 21:05:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna-posix/jna-posix-1.0.1.ebuild,v 1.4 2010/04/05 20:56:57 phajdan.jr Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source test"
@@ -11,7 +11,7 @@ HOMEPAGE="http://kenai.com/projects/jna-posix"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5
