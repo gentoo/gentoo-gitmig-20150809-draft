@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/tijmp
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tijmp/ChangeLog,v 1.1 2010/04/05 12:09:09 caster Exp $
+
+*tijmp-0.8 (05 Apr 2010)
+
+  05 Apr 2010; Vlastimil Babka <caster@gentoo.org> +tijmp-0.8.ebuild,
+  +files/tijmp-jni.h.patch, +metadata.xml:
+  New package based on dev-java/jmp but for the new JDK 1.6 API. Bug
+  #233548.
+
