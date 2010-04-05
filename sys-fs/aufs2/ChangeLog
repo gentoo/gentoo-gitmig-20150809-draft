@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.17 2010/03/17 15:42:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.18 2010/04/05 12:37:30 tommy Exp $
+
+*aufs2-0_p20100405 (05 Apr 2010)
+
+  05 Apr 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -aufs2-0_p20091214.ebuild, +aufs2-0_p20100405.ebuild,
+  files/aufs2-standalone-31.patch, files/aufs2-standalone-32.patch,
+  files/aufs2-standalone-33.patch:
+  Version bump
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   aufs2-0_p20091214.ebuild, aufs2-0_p20100308.ebuild:
