@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.72 2010/03/26 03:03:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.73 2010/04/05 20:59:29 maekke Exp $
+
+  05 Apr 2010; Markus Meier <maekke@gentoo.org> xfsdump-3.0.1.ebuild:
+  amd64/x86 stable, bug #311383
 
 *xfsdump-3.0.4 (26 Mar 2010)
 
