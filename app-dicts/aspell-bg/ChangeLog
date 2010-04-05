@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-bg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.8 2010/03/27 01:38:25 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-bg/ChangeLog,v 1.9 2010/04/05 20:39:22 maekke Exp $
+
+  05 Apr 2010; Markus Meier <maekke@gentoo.org> aspell-bg-4.1.0.ebuild:
+  amd64/arm/x86 stable, bug #310015
 
   27 Mar 2010; Tiago Cunha <tcunha@gentoo.org> aspell-bg-4.1.0.ebuild:
   stable sparc, bug 310015

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-sk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sk/ChangeLog,v 1.13 2010/03/27 01:46:57 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-sk/ChangeLog,v 1.14 2010/04/05 20:47:14 maekke Exp $
+
+  05 Apr 2010; Markus Meier <maekke@gentoo.org> aspell-sk-2.01.2.ebuild:
+  amd64/arm/x86 stable, bug #310015
 
   27 Mar 2010; Tiago Cunha <tcunha@gentoo.org> aspell-sk-2.01.2.ebuild:
   stable sparc, bug 310015

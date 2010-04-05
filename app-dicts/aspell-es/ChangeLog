@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-es
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/ChangeLog,v 1.16 2010/03/27 01:41:21 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/ChangeLog,v 1.17 2010/04/05 20:42:20 maekke Exp $
+
+  05 Apr 2010; Markus Meier <maekke@gentoo.org> aspell-es-1.9a.ebuild:
+  amd64/arm/x86 stable, bug #310015
 
   27 Mar 2010; Tiago Cunha <tcunha@gentoo.org> aspell-es-1.9a.ebuild:
   stable sparc, bug 310015
