@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.24 2009/11/09 02:43:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.25 2010/04/05 01:55:01 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -18,12 +18,19 @@
 #   Not present in 0.10.5 - wavpack
 # This list is current for gst-plugins-bad-0.10.14 and is only getting entries
 # added to it, and never removed for longer backwards compatibility.
-my_gst_plugins_bad="alsa amrwb apexsink assrender bz2 cdaudio celt dc1394 dirac
-directfb divx dts dvb dvdnav faac faad fbdev gme gsm gst_v4l2 ivorbis jack jp2k
-kate ladspa libmms lv2 metadata mimic modplug mpeg2enc mplex musepack
-musicbrainz mythtv nas neon ofa opengl oss4 quicktime schro sdl sdltest sndfile
-soundtouch soup spc swfdec theoradec timidity twolame vcd vdpau wavpack wildmidi
-x x264 xvid"
+my_gst_plugins_bad="directsound directdraw osx_video quicktime vcd
+alsa assrender amrwb apexsink bz2 cdaudio celt cog directfb dirac dts divx
+dvdnav metadata faac faad fbdev gsm jack jp2k kate ladspa lv2 libmms
+modplug mimic mpeg2enc mplex musepack musicbrainz mythtv nas neon ofa rsvg
+timidity wildmidi sdl sdltest sndfile soundtouch spc gme swfdec theoradec xvid
+dvb oss4 wininet acm vdpau schro zbar
+gst_v4l2 wavpack soup twolame x264 ivorbis opengl x"
+# gst_v4l2 gone since 0.10.4  (moved to -good-0.10.5)
+# wavpack  gone since 0.10.5  (moved to -good-0.10.6)
+# soup     gone since 0.10.7  (moved to -good-0.10.8)
+# twolame  gone since 0.10.11 (moved to -ugly-0.10.11)
+# x264     gone since 0.10.13 (moved to -ugly-0.10.12)
+
 
 #qtdemux spped tta
 
