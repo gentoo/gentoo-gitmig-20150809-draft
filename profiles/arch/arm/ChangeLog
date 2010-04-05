@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.71 2010/04/04 04:43:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.72 2010/04/05 07:41:53 maekke Exp $
+
+  05 Apr 2010; Markus Meier <maekke@gentoo.org> package.use.mask:
+  drop dev-python/PyQt4[multimedia] mask as it's keyworded now
 
   04 Apr 2010; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
   mask net-misc/mediatomb[lastfm] as lastfmlib isn't keyworded

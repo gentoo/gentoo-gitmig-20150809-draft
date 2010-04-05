@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.20 2010/04/04 04:43:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.21 2010/04/05 07:41:53 maekke Exp $
 
 # Jeremy Olexa <darkside@gentoo.org> (04 Apr 2010)
 # mask net-misc/mediatomb[lastfm] as lastfmlib isn't keyworded
@@ -26,10 +26,6 @@ dev-libs/soprano virtuoso
 # Needs mplayer
 kde-base/dolphin thumbnail
 kde-base/konqueror thumbnail
-
-# Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
-# qt-multimedia is not keyworded, bug 293671
-dev-python/PyQt4 multimedia
 
 # Raul Porcel <armin76@gentoo.org> (27 Dec 2009)
 # Needs qt-3
