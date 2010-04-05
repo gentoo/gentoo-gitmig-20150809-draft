@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.233 2010/03/20 13:58:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.234 2010/04/05 15:10:30 armin76 Exp $
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> epiphany-2.26.3-r3.ebuild:
+  alpha/ia64/sparc stable wrt #308549
 
   20 Mar 2010; Pacho Ramos <pacho@gentoo.org> epiphany-2.26.3-r4.ebuild:
   Bump RDEPEND to xulrunner-1.9.2 since it no longer builds against 1.9.1
