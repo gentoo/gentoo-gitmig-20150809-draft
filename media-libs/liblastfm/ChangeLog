@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liblastfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.8 2010/04/05 07:03:54 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.9 2010/04/05 11:35:20 reavertm Exp $
+
+  05 Apr 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  liblastfm-0.3.0.ebuild:
+  Fixed, bug 287906 - support for ruby-1.9
 
   05 Apr 2010; Maciej Mrozowski <reavertm@gentoo.org>
   liblastfm-0.3.0.ebuild:

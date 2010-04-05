@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.0.ebuild,v 1.9 2010/04/05 07:03:54 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.0.ebuild,v 1.10 2010/04/05 11:35:20 reavertm Exp $
 
 EAPI="2"
 
@@ -21,9 +21,8 @@ COMMON_DEPEND="
 	>=x11-libs/qt-core-4.5:4
 	>=x11-libs/qt-sql-4.5:4
 "
-# Unrestrict Ruby depend for next release!
 DEPEND="${COMMON_DEPEND}
-	=dev-lang/ruby-1.8*
+	dev-lang/ruby
 	>=x11-libs/qt-test-4.5:4
 "
 RDEPEND="${COMMON_DEPEND}
@@ -34,6 +33,12 @@ src_prepare() {
 	# Fix multilib paths
 	find . -name *.pro -exec sed -i -e "/target.path/s/lib/$(get_libdir)/g" {} + \
 		|| die "failed to fix multilib paths"
+
+	# >=1.9 ruby compatibility
+	case `ruby -e 'puts RUBY_VERSION'` in
+		1.8.*) ;;
+		*) sed -e "s/require 'ftools'//g" -i admin/* || die ;;
+	esac
 }
 
 src_configure() {
@@ -42,5 +47,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}${ROOT}" install || die "emake install failed"
+
 	dodoc README || die "dodoc failed"
 }
