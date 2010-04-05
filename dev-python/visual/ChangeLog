@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.35 2010/02/08 08:50:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.36 2010/04/05 17:11:20 arfrever Exp $
+
+*visual-5.1.3 (05 Apr 2010)
+
+  05 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +visual-5.1.3.ebuild, -visual-5.12.ebuild, -visual-5.13.ebuild:
+  Fix versioning.
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> visual-3.2.9-r2.ebuild:
   Add inherit eutils for epatch.

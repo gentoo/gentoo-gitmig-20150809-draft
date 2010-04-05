@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.12.ebuild,v 1.2 2009/12/09 15:50:38 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.1.3.ebuild,v 1.1 2010/04/05 17:11:20 arfrever Exp $
 
-EAPI=2
+EAPI="2"
+
 inherit eutils python flag-o-matic versionator
 
-MY_P="${P}_release"
-S="${WORKDIR}/${MY_P}"
+MY_P="${PN}-$(delete_version_separator 2)_release"
 
 DESCRIPTION="Real-time 3D graphics library for Python"
 HOMEPAGE="http://www.vpython.org/"
@@ -21,9 +21,10 @@ RDEPEND=">=dev-libs/boost-1.41.0[python]
 	dev-cpp/libglademm
 	>=dev-cpp/gtkglextmm-1.2
 	dev-python/numpy"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.41.0")"
