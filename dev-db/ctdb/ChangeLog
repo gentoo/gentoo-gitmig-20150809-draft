@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/ctdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.11 2009/11/30 16:02:46 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.12 2010/04/05 06:14:52 dev-zero Exp $
+
+*ctdb-1.0.114_p1 (05 Apr 2010)
+
+  05 Apr 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +ctdb-1.0.114_p1.ebuild, +files/ctdb-1.0.114_p1-functions.patch:
+  Version bump (needed for samba-3.5.x, one patch not needed anymore, other
+  patch ported), fixed tests (bug #278141).
 
   30 Nov 2009; Raúl Porcel <armin76@gentoo.org> ctdb-1.0.88.ebuild:
   Add ~arm/~ia64/~s390/~sh/~sparc wrt #285952
