@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.89 2010/02/27 11:53:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.90 2010/04/05 19:25:39 nelchael Exp $
+
+  05 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org> scite-2.03.ebuild:
+  Add LDFLAGS to makefile.
 
 *scite-2.03 (27 Feb 2010)
 

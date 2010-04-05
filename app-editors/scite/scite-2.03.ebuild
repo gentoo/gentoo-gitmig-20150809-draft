@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.03.ebuild,v 1.1 2010/02/27 11:53:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.03.ebuild,v 1.2 2010/04/05 19:25:39 nelchael Exp $
 
 inherit toolchain-funcs eutils
 
@@ -30,6 +30,11 @@ src_unpack() {
 		-e "s#^\(CXXFLAGS=.*\)-Os#\1#" \
 		-e "s#^CC =\(.*\)#CC = $(tc-getCXX)#" \
 		-e "s#-Os##" \
+		|| die "error patching makefile"
+
+	cd "${WORKDIR}/scite/gtk"
+	sed -i makefile \
+		-e "s#-rdynamic#-rdynamic ${LDFLAGS}#" \
 		|| die "error patching makefile"
 
 	cd "${S}"
