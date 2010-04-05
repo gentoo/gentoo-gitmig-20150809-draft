@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5461 2010/04/05 15:07:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5462 2010/04/05 15:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1873,6 +1873,7 @@ media-sound/squeezecenter:aac - Enable playback support for AAC (.m4a) encoded f
 media-sound/squeezecenter:alac - Enable support for alac
 media-sound/squeezecenter:bonjour - Enable support for bonjour
 media-sound/traverso:lv2 - Add support for Ladspa V2
+media-sound/vorbis-tools:kate - Adds support for Ogg Kate subtitles via libkate.
 media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
 media-sound/xmp:audacious - Enable audacious support
 media-sound/xwax:alsa - Adds support for ALSA audio input/output.
