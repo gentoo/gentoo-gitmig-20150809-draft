@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/ggobi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.4 2010/01/21 13:52:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.5 2010/04/05 20:04:46 hwoarang Exp $
+
+  05 Apr 2010; Markos Chandras <hwoarang@gentoo.org> ggobi-2.1.8.ebuild:
+  Stable on amd64 wrt bug #301484
 
   21 Jan 2010; Christian Faulhammer <fauli@gentoo.org> ggobi-2.1.8.ebuild:
   stable x86, bug 301484
