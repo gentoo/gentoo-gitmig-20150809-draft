@@ -18,7 +18,7 @@ diff -Naur pdb-extract-v3.004-prod-src/etc/make.platform.darwin3 pdb-extract-v3.
  
  ## Global include directories
 -GINCLUDES= 
-+GINCLUDES=-I/usr/include/cifparse-obj
++GINCLUDES=-I@GENTOO_PORTAGE_EPREFIX@/usr/include/cifparse-obj
  
  # Collect all include directories from global include directories and
  # include directories specified in module makefile
@@ -39,7 +39,7 @@ diff -Naur pdb-extract-v3.004-prod-src/etc/make.platform.darwin4 pdb-extract-v3.
  
  ## Global include directories
 -GINCLUDES= 
-+GINCLUDES=-I/usr/include/cifparse-obj
++GINCLUDES=-I@GENTOO_PORTAGE_EPREFIX@/usr/include/cifparse-obj
  
  # Collect all include directories from global include directories and
  # include directories specified in module makefile
@@ -69,7 +69,7 @@ diff -Naur pdb-extract-v3.004-prod-src/etc/make.platform.gnu3 pdb-extract-v3.004
  
  ## Global include directories
 -GINCLUDES= 
-+GINCLUDES=-I/usr/include/cifparse-obj
++GINCLUDES=-I@GENTOO_PORTAGE_EPREFIX@/usr/include/cifparse-obj
  
  # Collect all include directories from global include directories and
  # include directories specified in module makefile
@@ -146,7 +146,7 @@ diff -Naur pdb-extract-v3.004-prod-src/etc/make.platform.gnu4 pdb-extract-v3.004
  
  ## Global include directories
 -GINCLUDES= 
-+GINCLUDES=-I/usr/include/cifparse-obj
++GINCLUDES=-I@GENTOO_PORTAGE_EPREFIX@/usr/include/cifparse-obj
  
  # Collect all include directories from global include directories and
  # include directories specified in module makefile

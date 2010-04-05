@@ -1,19 +1,22 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-3.004.ebuild,v 1.2 2010/02/10 08:17:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-3.004.ebuild,v 1.3 2010/04/05 19:47:02 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs multilib
 
 MY_P="${PN}-v${PV}-prod-src"
+
 DESCRIPTION="Tools for extracting mmCIF data from structure determination applications"
 HOMEPAGE="http://sw-tools.pdb.org/apps/PDB_EXTRACT/index.html"
 SRC_URI="http://sw-tools.pdb.org/apps/PDB_EXTRACT/${MY_P}.tar.gz"
+
 LICENSE="PDB"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
+
 RDEPEND="!<app-text/html-xml-utils-5.3"
 DEPEND="${RDEPEND}
 	>=sci-libs/cifparse-obj-7.025"
@@ -39,10 +42,12 @@ src_prepare() {
 	sed -i \
 		-e "s:^\(CCC=\).*:\1$(tc-getCXX):g" \
 		-e "s:^\(CC=\).*:\1$(tc-getCC):g" \
-		-e "s:^\(GINCLUDES=\).*:\1-I/usr/include/cifparse-obj:g" \
-		-e "s:^\(LIBDIR=\).*:\1/usr/$(get_libdir):g" \
+		-e "s:^\(GINCLUDES=\).*:\1-I${EPREFIX}/usr/include/cifparse-obj:g" \
+		-e "s:^\(LIBDIR=\).*:\1${EPREFIX}/usr/$(get_libdir):g" \
 		"${S}"/etc/make.* \
 		|| die "Failed to fix makefiles"
+
+	eprefixify pdb-extract-v3.0/Makefile etc/*
 }
 
 src_compile() {
@@ -66,8 +71,8 @@ src_install() {
 		|| die "failed to install data files"
 
 	cat >> "${T}"/envd <<- EOF
-	PDB_EXTRACT="/usr/lib/rcsb/"
-	PDB_EXTRACT_ROOT="/usr/"
+	PDB_EXTRACT="${EPREFIX}/usr/lib/rcsb/"
+	PDB_EXTRACT_ROOT="${EPREFIX}/usr/"
 	EOF
 
 	newenvd "${T}"/envd 20pdb-extract \
@@ -75,5 +80,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "We moved extract to extract-pdb due to multiple collision of /usr/bin/extract"
+	ewarn "We moved extract to extract-pdb due to multiple collision of ${EROOT}usr/bin/extract"
 }

@@ -21,7 +21,7 @@
  
  M_INCL_DIR = ../include
  M_LIB_DIR  = ../lib
-+M_LIB_DIR_GENTOO = /usr/GENTOOLIBDIR
++M_LIB_DIR_GENTOO = @GENTOO_PORTAGE_EPREFIX@/usr/GENTOOLIBDIR
  M_BIN_DIR  = ../bin
  
  PROJ_DIR   = .
