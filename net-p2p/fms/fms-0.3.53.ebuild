@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.43.ebuild,v 1.1 2009/10/02 22:39:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.53.ebuild,v 1.1 2010/04/05 12:19:37 tommy Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	edos2unix src/http/pages/showfilepage.cpp
 	epatch "${FILESDIR}"/${PN}-use-system-libs.patch
 	sed -i "s:LTC_PKCS:LTC_LTC_PKCS:g" src/freenet/frostidentity.cpp
 }
@@ -45,11 +46,8 @@ src_configure() {
 src_install() {
 	insinto /var/freenet/fms
 	dobin "${CMAKE_BUILD_DIR}"/fms || die
-	doins {forum-,}template.htm || die "doinstall failed"
-	insinto /var/freenet/fms/fonts
-	doins fonts/*.bmp || die "doinstall of fonts failed"
-	insinto /var/freenet/fms/images
-	doins images/*png || die "doinstall of images failed"
+	doins *.htm || die "doinstall failed"
+	doins -r fonts images styles translations || die
 	fperms -R o-rwx /var/freenet/fms/ /usr/bin/fms
 	fowners -R freenet:freenet /var/freenet/fms/ /usr/bin/fms
 	doinitd "${FILESDIR}/fms" || die "installing init.d file failed"
