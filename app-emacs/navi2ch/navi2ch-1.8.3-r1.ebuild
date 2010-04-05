@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.8.3-r1.ebuild,v 1.4 2010/03/24 18:20:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/navi2ch-1.8.3-r1.ebuild,v 1.5 2010/04/05 18:02:25 armin76 Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/navi2ch/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 SITEFILE="50${PN}-gentoo.el"
