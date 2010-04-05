@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1-r1.ebuild,v 1.1 2010/03/31 21:03:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1-r1.ebuild,v 1.2 2010/04/05 20:16:17 jlec Exp $
 
 PYTHON_DEPEND="2"
 
@@ -18,13 +18,18 @@ IUSE=""
 DEPEND=">=dev-lang/tcl-8.4"
 
 src_compile() {
-	einfo \
-		"$(tc-getCC) -shared ${LDFLAGS} -fPIC ${CFLAGS} -o tclpython.so.${PV} \
-		-I$(python_get_includedir) tclpython.c -lpthread -lutil"
+	cfile="tclpython"
+	for src in ${cfile}; do
+		compile="$(tc-getCC) -shared -fPIC ${CFLAGS} -I$(python_get_includedir) -c ${src}.c"
+		einfo "${compile}"
+		eval "${compile}" || die
+	done
 
-	$(tc-getCC) -shared ${LDFLAGS} -fPIC ${CFLAGS} -o tclpython.so.${PV} \
-		-I$(python_get_includedir) tclpython.c -lpthread -lutil \
-		|| die
+	link="$(tc-getCC) -fPIC -shared ${LDFLAGS} -o tclpython.so.${PV} tclpython.o -lpthread -lutil $(python_get_library -l) -ltcl"
+
+	einfo "${link}"
+
+	eval "${link}" || die
 }
 
 src_install() {

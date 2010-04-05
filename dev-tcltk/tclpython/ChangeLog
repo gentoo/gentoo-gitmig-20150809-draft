@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclpython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.10 2010/03/31 21:03:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.11 2010/04/05 20:16:17 jlec Exp $
+
+  05 Apr 2010; Justin Lecher <jlec@gentoo.org> tclpython-3.1-r1.ebuild,
+  tclpython-4.1-r2.ebuild:
+  Underlinking fixed, all src files get compiled, #313255
 
 *tclpython-4.1-r2 (31 Mar 2010)
 *tclpython-3.1-r1 (31 Mar 2010)
