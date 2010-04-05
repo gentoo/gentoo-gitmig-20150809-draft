@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.531 2010/03/22 14:05:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.532 2010/04/05 13:11:01 jer Exp $
+
+  05 Apr 2010; Jeroen Roovers <jer@gentoo.org> udev-149.ebuild:
+  Back to ~hppa (bug #294470).
 
   22 Mar 2010; Brent Baude <ranger@gentoo.org> udev-149.ebuild:
   Marking udev-149 ppc64 for bug 303031
