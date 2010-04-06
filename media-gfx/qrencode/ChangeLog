@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.7 2010/04/04 17:04:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.8 2010/04/06 10:32:25 phajdan.jr Exp $
+
+  06 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qrencode-3.1.1.ebuild:
+  x86 stable wrt bug #312727
 
   04 Apr 2010; Markos Chandras <hwoarang@gentoo.org> qrencode-3.1.1.ebuild:
   Stable on amd64 wrt bug #312727
