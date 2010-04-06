@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.2 2010/02/01 10:30:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.3 2010/04/06 11:55:18 aballier Exp $
+
+  06 Apr 2010; Alexis Ballier <aballier@gentoo.org> coccinelle-0.2.1.ebuild:
+  set VARTEXFONTS to avoid sandbox violations, bug #312343
 
 *coccinelle-0.2.1 (01 Feb 2010)
 

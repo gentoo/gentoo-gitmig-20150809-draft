@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.1.ebuild,v 1.1 2010/02/01 10:30:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.1.ebuild,v 1.2 2010/04/06 11:55:18 aballier Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ src_compile() {
 	emake depend || die
 	emake || die
 	if use doc ; then
-		emake docs || die
+		VARTEXFONTS="${T}"/fonts emake docs || die
 	fi
 	if use ocamlopt ; then
 		emake opt || die
