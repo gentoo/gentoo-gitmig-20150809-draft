@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.180 2010/04/05 15:06:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.181 2010/04/06 21:00:43 eva Exp $
+
+  06 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  rhythmbox-0.12.8.ebuild:
+  Raise gtk+ dependency to 2.18, bug #312641.
 
   05 Apr 2010; Raúl Porcel <armin76@gentoo.org> rhythmbox-0.12.6.ebuild:
   sparc stable wrt #308549

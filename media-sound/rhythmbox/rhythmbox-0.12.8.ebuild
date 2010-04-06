@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8.ebuild,v 1.1 2010/03/28 22:21:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8.ebuild,v 1.2 2010/04/06 21:00:43 eva Exp $
 
 EAPI="2"
 
@@ -19,11 +19,11 @@ SLOT="0"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18
 	dev-libs/libxml2
-	>=x11-libs/gtk+-2.16
+	>=x11-libs/gtk+-2.18
 	>=dev-libs/dbus-glib-0.71
-	>=dev-libs/totem-pl-parser-2.26.0
+	>=dev-libs/totem-pl-parser-2.26
 	>=gnome-base/gconf-2
-	>=gnome-extra/gnome-media-2.14.0
+	>=gnome-extra/gnome-media-2.14
 	>=net-libs/libsoup-2.26:2.4
 	>=net-libs/libsoup-gnome-2.26:2.4
 
@@ -39,11 +39,11 @@ COMMON_DEPEND=">=dev-libs/glib-2.18
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	udev? (
 		ipod? ( >=media-libs/libgpod-0.6 )
-		mtp? ( >=media-libs/libmtp-0.3.0 )
+		mtp? ( >=media-libs/libmtp-0.3 )
 		>=sys-fs/udev-145[extras] )
 	hal? (
 		ipod? ( >=media-libs/libgpod-0.6 )
-		mtp? ( >=media-libs/libmtp-0.3.0 )
+		mtp? ( >=media-libs/libmtp-0.3 )
 		>=sys-apps/hal-0.5 )
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	lirc? ( app-misc/lirc )
