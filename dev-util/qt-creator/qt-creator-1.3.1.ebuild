@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.9 2010/03/17 17:06:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.10 2010/04/06 17:19:44 spatz Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -9,7 +9,7 @@ inherit qt4-r2 multilib
 MY_PN="${PN/-/}"
 
 DESCRIPTION="Lightweight IDE for C++ development centering around Qt"
-HOMEPAGE="http://labs.qtsoftware.com/page/Projects/Tools/QtCreator"
+HOMEPAGE="http://qt.nokia.com/products/developer-tools"
 SRC_URI="http://get.qt.nokia.com/${MY_PN}/${P}-src.tar.gz"
 
 LICENSE="LGPL-2.1"
