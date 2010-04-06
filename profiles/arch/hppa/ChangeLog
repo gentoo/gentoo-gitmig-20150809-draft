@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.50 2010/04/01 22:25:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.51 2010/04/06 14:23:32 jer Exp $
+
+  06 Apr 2010; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask nouveau and svga video_cards_ USE flags.
 
   01 Apr 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove mysql mask (bug #303747 comment #15).
