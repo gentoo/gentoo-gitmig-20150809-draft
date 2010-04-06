@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/linklint/linklint-2.3.5.ebuild,v 1.5 2008/09/20 14:40:38 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/linklint/linklint-2.3.5.ebuild,v 1.6 2010/04/06 09:22:21 abcd Exp $
 
 DESCRIPTION="a Perl program that checks links on web sites."
 HOMEPAGE="http://www.linklint.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.linklint.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND="dev-lang/perl"

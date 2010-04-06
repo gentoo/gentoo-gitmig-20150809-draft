@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/linklint
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/linklint/ChangeLog,v 1.10 2008/09/20 14:40:38 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/linklint/ChangeLog,v 1.11 2010/04/06 09:22:21 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> linklint-2.3.5.ebuild:
+  Add prefix keywords
 
   20 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
   -linklint-2.3.4.ebuild, linklint-2.3.5.ebuild:
