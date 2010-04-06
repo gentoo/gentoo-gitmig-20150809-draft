@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.2.ebuild,v 1.1 2010/04/06 21:33:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.2.ebuild,v 1.2 2010/04/06 21:38:14 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -37,7 +37,7 @@ pkg_setup() {
 	use kernel_linux && myconf="${myconf} WITH_KERNELFAM=1 USE_INOTIFY=1"
 	use spell && myconf="${myconf} EDITOR_SPELLCHECK=1"
 	use nls || myconf="${myconf} I18N=0"
-	use policykit && myconf="${myconf} POLKIT=1"
+	use policykit && myconf="${myconf} WITH_POLKIT=1"
 
 	if ! use kernel_linux && use fam; then
 		if has_version "app-admin/gamin"; then
