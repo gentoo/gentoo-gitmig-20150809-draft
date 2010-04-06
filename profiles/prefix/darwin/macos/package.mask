@@ -1,11 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.mask,v 1.5 2009/12/04 16:52:42 grobian Exp $
-
-# Fabian Groffen <grobian@gentoo.org> (02 Sep 2009)
-# freeglut_internal.h:403: error: expected specifier-qualifier-list
-# before ‘SFG_WindowHandleType’
-=media-libs/freeglut-2.6.0_rc1
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.mask,v 1.6 2010/04/06 19:17:26 darkside Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (15 Feb 2007)
 # Doesn't compile, previous release (1.0.6) does.

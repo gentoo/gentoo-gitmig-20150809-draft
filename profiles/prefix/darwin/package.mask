@@ -1,7 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.14 2010/03/23 19:33:26 grobian Exp $
-# $Id: package.mask,v 1.14 2010/03/23 19:33:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.15 2010/04/06 19:17:26 darkside Exp $
+# $Id: package.mask,v 1.15 2010/04/06 19:17:26 darkside Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (03 Feb 2010)
 # ld: duplicate symbol mylist<....> caused by implementation code in
@@ -25,15 +25,6 @@
 # odcctools have been replaced by binutils-apple, which is more close to
 # Apple's original sources
 sys-devel/odcctools
-
-# Fabian Groffen <grobian@gentoo.org> (15 Sep 2008)
-# error: redefinition of ‘struct error_table’
-=app-crypt/mit-krb5-1.6.3-r4
-
-# Fabian Groffen <grobian@gentoo.org> (28 Mar 2008)
-# This version is taken from iPhone SDK Beta 7, and doesn't build on
-# OSX 10.4, due to POSIX spawnattr (spawn.h)
-=sys-devel/gdb-apple-961
 
 # Elias Pipping <pipping@gentoo.org> (22 Dec 2007)
 # bug #211712: archive has no table of contents

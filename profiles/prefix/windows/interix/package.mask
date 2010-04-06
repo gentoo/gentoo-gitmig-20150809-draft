@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.9 2010/02/17 14:27:21 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.10 2010/04/06 19:17:26 darkside Exp $
 
-# $Id: package.mask,v 1.9 2010/02/17 14:27:21 mduft Exp $
+# $Id: package.mask,v 1.10 2010/04/06 19:17:26 darkside Exp $
 
 # Markus Duft <mduft@gentoo.org> (17 Feb 2010)
 # not quite yet... seems that perl itself is simply not even trying
@@ -26,13 +26,6 @@
 # sed seems to be broken, it always says:
 # sed: couldn't flush stdin: Invalid seek on non-seekable object
 =sys-apps/sed-4.2*
-
-# Markus Duft <mduft@gentoo.org> (13 May 2009)
-# this dooms many things (must be some environment during install),
-# making installation fail.
-=dev-util/subversion-1.6.2*
-=dev-util/subversion-1.6.3*
-=dev-util/subversion-1.6.4*
 
 # Markus Duft <mduft@gentoo.org> (02 Feb 2009)
 # this does not work correctly, since there seems to be some

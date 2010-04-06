@@ -1,9 +1,4 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.4/ppc/package.mask,v 1.3 2009/09/05 12:25:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.4/ppc/package.mask,v 1.4 2010/04/06 19:17:26 darkside Exp $
 
-# Fabian Groffen <grobian@gentoo.org> (30 May 2009)
-# doesn't have Altivec or dummy backends implemented, only SSE :(
-=sci-biology/hmmer-3.0_alpha2
-=sci-biology/hmmer-3.0_beta1
-=sci-biology/hmmer-3.0_beta2
