@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sgml-common
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.52 2009/07/19 11:18:02 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.53 2010/04/06 01:26:04 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org>
+  sgml-common-0.6.3-r5.ebuild, files/sgml-common-0.6.3-install-catalog.in,
+  +files/sgml-common-0.6.3-prefix.patch:
+  Bump to EAPI=3, add prefix keywords, more quoting
 
   19 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   sgml-common-0.6.3-r5.ebuild, +files/sgml-common-0.6.3-man_MANS.patch:
