@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
+		<email>spatz@gentoo.org</email>
+		<name>Dror Levin</name>
 	</maintainer>
 	<longdescription lang="en">
 		The XAR project aims to provide an easily extensible archive format.
