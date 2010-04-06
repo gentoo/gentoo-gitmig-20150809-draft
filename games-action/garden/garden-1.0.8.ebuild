@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/garden-1.0.8.ebuild,v 1.1 2010/04/06 17:50:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/garden-1.0.8.ebuild,v 1.2 2010/04/06 17:52:21 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,7 +25,7 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	newicon resources/garden.svg ${PN}.svg
+	doicon resources/garden.svg
 	make_desktop_entry garden "Garden of coloured lights"
 	dodoc AUTHORS ChangeLog NEWS README
 	prepgamesdirs
