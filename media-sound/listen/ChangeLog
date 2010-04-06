@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/listen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.24 2009/08/28 14:07:58 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.25 2010/04/06 17:01:31 ssuominen Exp $
+
+*listen-0.6.5 (06 Apr 2010)
+
+  06 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +listen-0.6.5.ebuild,
+  +files/listen-0.6.5-Makefile.patch:
+  Version bump and remove USE="hal" wrt #313399. Fix SRC_URI wrt #311065 by
+  Johann Schmitz. Missing dbus-python rdepend wrt #299891 by Paul Mulders.
 
 *listen-0.6.3 (28 Aug 2009)
 
