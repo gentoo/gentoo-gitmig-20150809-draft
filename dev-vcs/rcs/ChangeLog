@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.1 2010/03/05 07:10:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.2 2010/04/06 09:26:38 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> rcs-5.7-r3.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> +rcs-5.7-r3.ebuild,
   +metadata.xml:
