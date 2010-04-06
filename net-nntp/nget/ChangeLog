@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nget
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/ChangeLog,v 1.13 2009/02/15 22:38:29 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nget/ChangeLog,v 1.14 2010/04/06 18:21:05 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> nget-0.27.1.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   15 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   -files/nget-0.27.1-gcc-4.3.patch, +files/nget-0.27.1-headers.patch,
