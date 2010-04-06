@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.25 2009/12/25 12:10:32 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.26 2010/04/06 14:46:59 lavajoe Exp $
+
+  06 Apr 2010; Joe Peterson <lavajoe@gentoo.org> btrfs-progs-9999.ebuild:
+  Add new "btrfs" tool (bug #312579)
 
   25 Dec 2009; Raúl Porcel <armin76@gentoo.org> btrfs-progs-0.19.ebuild:
   Add ~arm, thanks to max_posedon for testing
