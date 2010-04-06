@@ -1,0 +1,28 @@
+--- lib/new_filter.cpp
++++ lib/new_filter.cpp
+@@ -458,11 +458,23 @@
+       module->file.assign(option_file.str(), slash + 1 - option_file.str());
+       //module->file += "lib";
+       module->file += filter_name;
+-      module->file += "-filter.so";
++      module->file += "-filter."
++#ifdef __APPLE_CC__
++		  "bundle"
++#else
++		  "so"
++#endif
++		  ;
+     } else {
+       if (module->file[0] != '/')
+         module->file.insert(0, option_file.str(), slash + 1 - option_file.str());
+-      module->file += ".so";
++      module->file += "."
++#ifdef __APPLE_CC__
++		  "bundle"
++#else
++		  "so"
++#endif
++		  ;
+     }
+ 
+     return module.release();
