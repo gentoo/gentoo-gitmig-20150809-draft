@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11421 2010/04/06 17:41:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11422 2010/04/06 18:06:40 spatz Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -639,10 +639,6 @@ xfce-extra/thunar-vfs
 # Will be unmasked when felt “ready” (and openrc'll support it as
 # guest).
 app-emulation/lxc
-
-# Dirkjan Ochtman <djc@gentoo.org> (21 Oct 2009)
-# Needs some more testing before unleashing on the masses.
-=dev-libs/boost-1.40.0
 
 # Peter Alfredsen <loki_val@gentoo.org> (21 Oct 2009)
 # Masked because this needs a patch to be applied to portage
