@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-resindvd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.10 2010/03/19 10:04:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.11 2010/04/06 00:28:58 leio Exp $
+
+*gst-plugins-resindvd-0.10.18 (06 Apr 2010)
+
+  06 Apr 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-resindvd-0.10.18.ebuild:
+  Version bump. Fixes int alignment issues on ARM, re-uses more of
+  gst-plugins-base code instead of temporary local copies
 
   19 Mar 2010; Pacho Ramos <pacho@gentoo.org>
   gst-plugins-resindvd-0.10.17.ebuild:
