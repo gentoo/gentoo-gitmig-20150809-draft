@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11423 2010/04/06 18:25:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11424 2010/04/06 20:14:06 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -430,12 +430,6 @@ dev-ruby/activerecord-jdbc
 media-tv/vdr-dvd-scripts
 media-tv/vdrplugin-rebuild
 
-# Tony Vroon <chainsaw@gentoo.org> (19 Jan 2010)
-# Alpha releases, you are welcome to help us test
-# and report bugs *upstream* at http://jira.atheme.org
-=media-plugins/audacious-plugins-2.3_alpha*
-=media-sound/audacious-2.3_alpha*
-
 # Doug Goldstein <cardoe@gentoo.org> (18 Jan 2010)
 # masked for testing and development
 =media-tv/ivtv-utils-1.3.0-r2
@@ -654,11 +648,9 @@ sys-auth/pam_keystore
 # mask libpano13 beta versions for testing
 >=media-libs/libpano13-2.9.15_beta3
 
-# Tony Vroon <chainsaw@gentoo.org> (14 Sep 2009)
-# Alpha releases. Unmask at your own risk, bugs
-# go upstream to http://jira.atheme.org/
-=media-sound/audacious-2.2_alpha*
-=media-plugins/audacious-plugins-2.2_alpha*
+# Jory A. Pratt <anarchy@gentoo.org> (24 Sep 2009)
+# Much testing needed, not ready for mainline by any means.
+>=www-client/seamonkey-2.0_beta2
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Sep 2009)
 # Masked to enforce upgrade which looks like downgrade.

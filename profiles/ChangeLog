@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4087 2010/04/06 18:06:40 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4088 2010/04/06 20:14:06 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Apr 2010; <chainsaw@gentoo.org> package.mask:
+  Remove no longer needed Audacious masks as per Dror "spatz" Levin in
+  #gentoo-dev.
 
   06 Apr 2010; Dror Levin <spatz@gentoo.org> package.mask:
   Remove dev-libs/boost-1.40 mask since it's no longer in the tree.
