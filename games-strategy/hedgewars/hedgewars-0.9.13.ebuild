@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.13.ebuild,v 1.1 2010/04/06 16:17:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.13.ebuild,v 1.2 2010/04/06 21:18:47 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -20,7 +20,8 @@ RDEPEND="x11-libs/qt-gui:4
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image[png]
-	media-libs/sdl-net"
+	media-libs/sdl-net
+	dev-lang/lua"
 DEPEND="${RDEPEND}
 	>=dev-lang/fpc-2.2"
 RDEPEND="${RDEPEND}
