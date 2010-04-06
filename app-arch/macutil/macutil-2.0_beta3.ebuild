@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.17 2008/10/23 02:40:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/macutil/macutil-2.0_beta3.ebuild,v 1.18 2010/04/06 05:58:16 abcd Exp $
+
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -11,23 +13,27 @@ SRC_URI="ftp://ftp.cwi.nl/pub/dik/${MY_P/-/}.shar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc x86"
+KEYWORDS="~amd64 ~hppa ppc x86 ~x86-interix ~x86-linux ~ppc-macos"
 IUSE=""
-RDEPEND=""
+
 DEPEND="sys-apps/sed"
+RDEPEND=""
+
 S=${WORKDIR}/${PN}
 
 src_unpack() {
-	gzip -dc "${DISTDIR}"/${A} | /bin/sh || die
-	epatch "${FILESDIR}"/${PV}-gentoo.patch || die
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+	gzip -dc "${DISTDIR}"/${A} | ${EPREFIX}/bin/sh
+	assert
+}
 
-	cd ${PN}
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	sed -i.orig \
 		-e "s:-DBSD::g" \
 		-e "s:-DDEBUG::g" \
-		-e "s:/ufs/dik/tmpbin:${D}/usr/bin:g" \
+		-e "s:/ufs/dik/tmpbin:${ED}/usr/bin:g" \
 		makefile || die "sed makefile failed"
 
 	sed -i \
@@ -39,6 +45,8 @@ src_unpack() {
 		-e '/-o makecrc/s:cc -O:$(CC) $(LDFLAGS):' \
 		crc/makefile || die "sed makefile [3] failed"
 }
+
+src_configure() { :; }
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die "build failed"
