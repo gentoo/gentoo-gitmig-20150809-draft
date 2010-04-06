@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/backlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.5 2010/02/08 18:29:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.6 2010/04/06 19:49:18 billie Exp $
+
+  06 Apr 2010; Daniel Pielmeier <billie@gentoo.org> backlite-1.0.0.ebuild:
+  Add media-video/ffmpeg dependency as reported by Paweł Hajdan jr in bug
+  #313199.
 
 *backlite-1.0.0 (08 Feb 2010)
 
