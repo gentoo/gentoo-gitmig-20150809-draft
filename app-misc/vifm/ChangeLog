@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/vifm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.16 2008/09/23 01:03:42 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.17 2010/04/06 13:27:49 yngwin Exp $
+
+*vifm-0.5 (06 Apr 2010)
+
+  06 Apr 2010; Ben de Groot <yngwin@gentoo.org> +vifm-0.5.ebuild:
+  Version bump. Upgrade to eapi-3.
 
 *vifm-0.4 (23 Sep 2008)
 
