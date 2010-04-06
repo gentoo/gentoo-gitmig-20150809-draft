@@ -1,39 +1,43 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.1_beta.ebuild,v 1.2 2010/04/06 12:10:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.1.0.ebuild,v 1.1 2010/04/06 12:10:08 ssuominen Exp $
 
 EAPI=2
-inherit eutils fdo-mime multilib python
 
-MY_PV=${PV/_beta/b}
-MY_P=${PN}-${MY_PV}
+PYTHON_DEPEND="2:2.6"
+PYTHON_USE_WITH="sqlite"
+
+inherit fdo-mime multilib python
 
 DESCRIPTION="a media player aiming to be similar to AmaroK, but for GTK+"
 HOMEPAGE="http://www.exaile.org/"
-SRC_URI="http://launchpad.net/exaile/${PV/_beta}/${MY_PV}/+download/${MY_P}.tar.gz"
+SRC_URI="http://launchpad.net/exaile/0.3.1/0.3.1/+download/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cddb libnotify +libsexy nls"
+IUSE="cddb libnotify nls"
 
 RDEPEND="dev-python/dbus-python
 	>=media-libs/mutagen-1.10
 	>=dev-python/pygtk-2.14
-	>=dev-lang/python-2.5[sqlite]
+	>=dev-python/pygobject-2.18
 	dev-python/gst-python:0.10
 	media-libs/gst-plugins-good:0.10
 	media-plugins/gst-plugins-meta:0.10
 	libnotify? ( dev-python/notify-python )
-	libsexy? ( dev-python/sexy-python )
 	cddb? ( dev-python/cddb-py )"
 DEPEND="nls? ( dev-util/intltool
 	sys-devel/gettext )"
 
-S=${WORKDIR}/${MY_P}
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefile.patch
+	sed -i \
+		-e "s:exec python:exec $(PYTHON):" \
+		exaile tools/generate-launcher || die
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0_alpha2.ebuild,v 1.9 2009/08/09 13:58:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0_alpha2.ebuild,v 1.10 2010/04/06 12:10:08 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime multilib python
@@ -14,7 +14,7 @@ SRC_URI="http://www.exaile.org/files/${PN}_${MY_PV}.tar.gz"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
-IUSE="cddb doc hal libnotify +libsexy nls"
+IUSE="cddb doc libnotify +libsexy nls"
 
 RDEPEND="dev-python/dbus-python
 	>=media-libs/mutagen-1.10
@@ -25,7 +25,6 @@ RDEPEND="dev-python/dbus-python
 	media-plugins/gst-plugins-meta:0.10
 	libnotify? ( dev-python/notify-python )
 	libsexy? ( dev-python/sexy-python )
-	hal? ( sys-apps/hal )
 	cddb? ( dev-python/cddb-py )"
 DEPEND="doc? ( dev-python/epydoc )
 	nls? ( dev-util/intltool
