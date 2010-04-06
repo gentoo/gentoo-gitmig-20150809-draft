@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.89 2010/03/30 17:41:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.90 2010/04/06 14:00:40 jer Exp $
+
+  06 Apr 2010; Jeroen Roovers <jer@gentoo.org> metalog-1.ebuild:
+  Stable for HPPA (bug #308769).
 
   30 Mar 2010; Christian Faulhammer <fauli@gentoo.org> metalog-1.ebuild:
   stable x86, bug 308769
