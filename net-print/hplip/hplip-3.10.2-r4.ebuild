@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r3.ebuild,v 1.1 2010/03/31 18:50:24 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r4.ebuild,v 1.1 2010/04/06 19:14:52 billie Exp $
 
 EAPI=2
 
@@ -40,7 +40,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 RDEPEND="${COMMON_DEPEND}
-	>=app-text/ghostscript-gpl-8.70
+	>=app-text/ghostscript-gpl-8.71-r3
 	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	!minimal? (
 		dev-python/pygobject
