@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.5.0.ebuild,v 1.2 2010/04/06 16:14:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.5.0.ebuild,v 1.3 2010/04/06 16:29:39 abcd Exp $
 
 EAPI="3"
 inherit libtool confutils autotools
@@ -31,8 +31,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	unpack ${A}
-	cd "${S}"
 	# Fix for upstream bug #12305
 	# http://bugzilla.abisource.com/show_bug.cgi?id=12305
 	epatch "${FILESDIR}"/${P}-zemberek.patch
