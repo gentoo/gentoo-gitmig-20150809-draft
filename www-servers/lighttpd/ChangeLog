@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.226 2010/03/14 21:45:18 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.227 2010/04/06 15:56:29 jer Exp $
+
+  06 Apr 2010; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.26-r1.ebuild:
+  Stable for HPPA (bug #308405).
 
   14 Mar 2010; Thilo Bangert <bangert@gentoo.org>
   files/conf/mime-types.conf:
