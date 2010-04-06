@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gxine
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.97 2009/05/17 18:01:29 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.98 2010/04/06 10:31:54 ssuominen Exp $
+
+*gxine-0.5.905 (06 Apr 2010)
+
+  06 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +gxine-0.5.905.ebuild,
+  +files/gxine-0.5.905-desktop.patch:
+  Version bump.
 
   17 May 2009; nixnut <nixnut@gentoo.org> gxine-0.5.903.ebuild:
   ppc stable #260644
