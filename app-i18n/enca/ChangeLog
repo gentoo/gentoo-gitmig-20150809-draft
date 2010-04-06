@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.63 2010/04/05 19:20:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.64 2010/04/06 16:25:59 jer Exp $
+
+  06 Apr 2010; Jeroen Roovers <jer@gentoo.org> enca-1.13.ebuild:
+  Stable for HPPA (bug #311639).
 
   05 Apr 2010; Markos Chandras <hwoarang@gentoo.org> enca-1.13.ebuild:
   Stable on amd64 wrt bug #311639
