@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11417 2010/04/05 22:16:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11418 2010/04/06 17:11:43 jsbronder Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -291,6 +291,7 @@ dev-lang/gnu-smalltalk
 net-irc/ircd-hybrid
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Mar 2010)
+# Justin Bronder <jsbronder@gentoo.org> (06 Apr 2010)
 # Masked for QA, security
 #
 # After over an year of no word from maintainers
@@ -300,7 +301,9 @@ net-irc/ircd-hybrid
 # http://bugs.gentoo.org/show_bug.cgi?id=252398
 #
 # Masked for removal in 60 days
-app-shells/pdsh
+#
+# Update:  Libtool unbundled as of 2.18-r1.
+>app-shells/pdsh-2.18-r1
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Mar 2010)
 # Masked for QA, security
