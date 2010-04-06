@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11422 2010/04/06 18:06:40 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11423 2010/04/06 18:25:29 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -653,10 +653,6 @@ sys-auth/pam_keystore
 # Markus Meier <maekke@gentoo.org> (03 Oct 2009)
 # mask libpano13 beta versions for testing
 >=media-libs/libpano13-2.9.15_beta3
-
-# Jory A. Pratt <anarchy@gentoo.org> (24 Sep 2009)
-# Much testing needed, not ready for mainline by any means.
->=www-client/seamonkey-2.0_beta2
 
 # Tony Vroon <chainsaw@gentoo.org> (14 Sep 2009)
 # Alpha releases. Unmask at your own risk, bugs
