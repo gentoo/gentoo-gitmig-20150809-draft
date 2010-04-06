@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.0.ebuild,v 1.5 2009/10/24 13:26:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.0.ebuild,v 1.6 2010/04/06 19:19:31 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs versionator
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.aircrack-ng.org/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc x86"
+KEYWORDS="amd64 arm ppc x86 ~amd64-linux ~x86-linux"
 IUSE="+sqlite kernel_linux kernel_FreeBSD"
 
 DEPEND="dev-libs/openssl
@@ -46,8 +46,8 @@ src_compile() {
 src_install() {
 	# UNSTABLE=true enables installation of buddy-ng, easside-ng, tkiptun-ng and wesside-ng
 	emake \
-		prefix="/usr" \
-		mandir="/usr/share/man/man1" \
+		prefix="${EPREFIX}/usr" \
+		mandir="${EPREFIX}/usr/share/man/man1" \
 		DESTDIR="${D}" \
 		sqlite=$(have_sqlite) \
 		UNSTABLE=true \
