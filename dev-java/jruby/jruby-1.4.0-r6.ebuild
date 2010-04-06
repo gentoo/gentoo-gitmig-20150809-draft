@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r6.ebuild,v 1.1 2010/04/05 23:03:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r6.ebuild,v 1.2 2010/04/06 08:22:21 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -71,7 +71,15 @@ pkg_setup() {
 
 	for directory in "${GEMS}" "${SITE_RUBY}"; do
 		if [[ -L ${directory} ]]; then
-			eerror "${directory} is a symlink. Please remove this symlink."
+			eerror "${directory} is a symlink. Please do the following to resolve the situation:"
+			echo 'emerge -an app-portage/gentoolkit'
+			echo 'equery -qC b '"${directory}"' | sort | uniq | sed s/^/=/ > ~/jruby.fix'
+			echo 'emerge -1C $(< ~/jruby.fix)'
+			echo "rm ${directory}"
+			echo 'emerge -1 $(< ~/jruby.fix)'
+			echo 'rm ~/jruby.fix'
+			
+			eerror "For more information, please see http://bugs.gentoo.org/show_bug.cgi?id=302187"
 			fail="true"
 		fi
 	done
