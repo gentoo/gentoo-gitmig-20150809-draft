@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.12 2009/09/23 16:50:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.13 2010/04/06 09:04:00 abcd Exp $
 
-inherit multilib
+EAPI="3"
+
+inherit multilib autotools
 
 DESCRIPTION="A clean, lightweight, object oriented scripting language"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -13,34 +15,56 @@ DEPEND=">=dev-libs/libpcre-5
 
 SLOT="1"
 LICENSE="as-is"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e '/^fbmdir/s:$(prefix)/share/doc/ferite:/usr/share/doc/${PF}:' Makefile.in
-	sed -i -e 's:$(prefix)/share/doc/ferite:${D}/usr/share/doc/${PF}:' docs/Makefile.in
-	sed -i -e '/$(docsdir)/s:$(DESTDIR)::' docs/Makefile.in
-	sed -i -e '/$(docsDATA_INSTALL)/s:$(DESTDIR)::' docs/Makefile.in
-	sed -i -e '/^LDFLAGS/s:LDFLAGS:#LDFLAGS:' modules/stream/Makefile.in
-	sed -i -e '/^testscriptsdir/s:$(prefix)/share/doc/ferite/:/usr/share/doc/${PF}/:' \
-		scripts/test/Makefile.in
-	sed -i -e '/^testscriptsdir/s:$(prefix)/share/doc/ferite/:/usr/share/doc/${PF}/:' \
-		scripts/test/rmi/Makefile.in
-	sed -i -e "s|\$prefix/lib|\$prefix/$(get_libdir)|g" configure
+src_prepare() {
+	# use docsdir variable, install to DESTDIR
+	sed -i -e '/docsdir =/!s:$(prefix)/share/doc/ferite:$(DESTDIR)$(docsdir):' \
+		docs/Makefile.am || die
+
+	# Install docs to /usr/share/doc/${PF}, not .../${PN}
+	sed -i -e "s:doc/ferite:doc/${PF}:" \
+		Makefile.am \
+		docs/Makefile.am \
+		scripts/test/Makefile.am \
+		scripts/test/rmi/Makefile.am || die
+
+	# Don't override the user's LDFLAGS
+	sed -i -e 's:_LDFLAGS = :&$(AM_LDFLAGS) :' \
+		-e '/^LDFLAGS/s:^:AM_:' \
+		modules/*/Makefile.am \
+		libs/{aphex,triton}/src/Makefile.am \
+		src/Makefile.am || die
+
+	# Only build/install shared libs for modules (can't use static anyway)
+	sed -i -e '/_LDFLAGS/s:-module:& -shared:' modules/*/Makefile.am || die
+
+	# use LIBADD to ensure proper deps (fix parellel build)
+	sed -i -e '/^stream_la_LDFLAGS/s:-L\. -lferitestream::' \
+		-e '/^stream_la_LIBADD/s:$:libferitestream.la:' \
+		modules/stream/Makefile.am || die
+
+	# Make sure we install in $(get_libdir), not lib
+	sed -i -e "s|\$prefix/lib|\$prefix/$(get_libdir)|g" configure.ac || die
+
+	# We copy feritedoc to ${T} in src_install, then patch it in-situ
+	# note that this doesn't actually work right, currently - it still tries
+	# to pull from / instead of ${D}, and I can't figure out how to fix that
+	sed -i -e 's:$(prefix)/bin/:${T}/:' docs/Makefile.am || die
+
+	eautoreconf
 }
 
-src_compile() {
-	econf --libdir=/usr/$(get_libdir)|| die
-	# Parallel make issues, see bug #244871
-	emake -j1 || die
+src_configure() {
+	econf --libdir="${EPREFIX}"/usr/$(get_libdir)
 }
 
 src_install() {
 	cp tools/doc/feritedoc "${T}"
-	sed -i -e '/^prefix/s:prefix:${T}' -e "${T}"/feritedoc
-	sed -i -e '/^$prefix/s:$prefix/bin/ferite:{D}/usr/bin/ferite:' -e "${T}"/feritedoc
-	sed -i -e 's:build_c_api_docs.sh $(prefix)/bin/:build_c_api_docs.sh ${T}/:' docs/Makefile.in
-	make DESTDIR="${D}" LIBDIR=/usr/$(get_libdir) install || die
+	sed -i -e '/^prefix/s:prefix:${T}' "${T}"/feritedoc
+	sed -i -e '/^$prefix/s:$prefix/bin/ferite:'"${ED}"'usr/bin/ferite:' "${T}"/feritedoc
+	sed -i -e 's:$library_path $library_path:${S}/tools/doc ${S}/tools/doc:' "${T}"/feritedoc
+	export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}${LD_LIBRARY_PATH:+:}${ED}usr/lib"
+	emake -j1 DESTDIR="${D}" LIBDIR="${EPREFIX}"/usr/$(get_libdir) install || die
 }

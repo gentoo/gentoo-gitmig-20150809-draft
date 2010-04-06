@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ferite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.29 2009/09/23 16:50:17 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.30 2010/04/06 09:04:00 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> ferite-1.0.2.ebuild:
+  Bump to EAPI=3, add prefix keywords, many QA fixes
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ferite-1.0.2.ebuild:
   Remove virtual/libc
