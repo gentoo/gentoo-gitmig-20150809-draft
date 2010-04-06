@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.5.ebuild,v 1.1 2010/04/06 18:58:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.5.ebuild,v 1.2 2010/04/06 19:01:39 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i \
-		-e '/^INSTMAN/s:=.*:=/usr/share/man/man:' \
+		-e '/^INSTMAN/s:=.*:=/usr/share/man/man6:' \
 		-e "/^INSTLIB/s:=.*:=${GAMES_DATADIR}/${PN}:" \
 		-e "/^INSTBIN/s:=.*:=${GAMES_BINDIR}:" \
 		Local.config \
