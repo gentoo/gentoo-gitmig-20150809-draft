@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.28.2.ebuild,v 1.1 2010/04/06 14:16:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.28.2.ebuild,v 1.2 2010/04/06 14:21:07 eva Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi crypt gnutls ipv6 jpeg gnome-keyring libnotify networkmanager +telepathy zlib"
 
 RDEPEND=">=dev-libs/glib-2.17
