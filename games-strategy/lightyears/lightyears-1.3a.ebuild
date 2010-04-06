@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.3a.ebuild,v 1.4 2009/11/21 19:32:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.3a.ebuild,v 1.5 2010/04/06 14:41:38 tupone Exp $
 
 EAPI=2
+PYTHON_DEPEND="2"
 inherit eutils python games
 
 DESCRIPTION="a single-player game with a science-fiction theme"
@@ -14,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-lang/python
-	dev-python/pygame"
+DEPEND="dev-python/pygame"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch
@@ -23,6 +23,7 @@ src_prepare() {
 		-e "s:@GENTOO_LIBDIR@:$(games_get_libdir)/${PN}:" \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		${PN} || die "Changing library path failed"
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
@@ -39,6 +40,11 @@ src_install() {
 	newicon data/32.png ${PN}.png
 	make_desktop_entry ${PN} "Light Years Into Space"
 	prepgamesdirs
+}
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
 }
 
 pkg_postinst() {
