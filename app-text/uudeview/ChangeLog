@@ -1,6 +1,9 @@
 # ChangeLog for app-text/uudeview
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.31 2009/11/10 04:19:17 abcd Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.32 2010/04/06 01:29:35 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> uudeview-0.5.20-r1.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   10 Nov 2009; Jonathan Callen <abcd@gentoo.org> uudeview-0.5.20-r1.ebuild:
   List all patches to be applied directly; clean up ebuild
