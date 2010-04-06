@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1-r3.ebuild,v 1.3 2009/08/02 14:12:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1-r3.ebuild,v 1.4 2010/04/06 20:11:29 nelchael Exp $
 
 EAPI="2"
 
@@ -124,10 +124,12 @@ src_install() {
 	dosym /var/log/resin /usr/share/resin/log
 
 	dodir /var/lib/resin/webapps
+	keepdir /var/lib/resin/hosts
 	mv "${D}"/${RESIN_HOME}/webapps/* "${D}/var/lib/resin/webapps" || \
 		die "mv of webapps failed"
 	rm -rf "${D}/${RESIN_HOME}/webapps"
 	dosym /var/lib/resin/webapps ${RESIN_HOME}/webapps
+	dosym /var/lib/resin/hosts ${RESIN_HOME}/hosts
 
 	use admin && {
 		cp -a "${S}/doc/admin" "${D}/var/lib/resin/webapps/" || die "cp failed"
