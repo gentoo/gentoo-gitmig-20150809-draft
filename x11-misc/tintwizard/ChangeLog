@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/tintwizard
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.1 2010/04/06 11:54:25 idl0r Exp $
+
+*tintwizard-0.3.3 (06 Apr 2010)
+
+  06 Apr 2010; Christian Ruppert <idl0r@gentoo.org>
+  +tintwizard-0.3.3.ebuild, +metadata.xml:
+  New ebuild x11-misc/tintwizard, bug 310677.
+
