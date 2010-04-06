@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sablotron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.67 2010/02/06 14:19:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.68 2010/04/06 00:26:07 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> sablotron-1.0.3.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   06 Feb 2010; Torsten Veller <tove@gentoo.org> sablotron-1.0.3.ebuild:
   Prepare in the correct directory (#300798)
