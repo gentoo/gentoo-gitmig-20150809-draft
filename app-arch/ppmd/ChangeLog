@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.36 2009/10/12 16:46:02 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.37 2010/04/06 06:06:11 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> ppmd-9.1_p14.ebuild:
+  Bump to EAPI=3, add prefix keywords, QA fixes
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ppmd-9.1_p10.ebuild,
   ppmd-9.1_p14.ebuild:
