@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.0.ebuild,v 1.6 2010/04/06 06:21:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.0.ebuild,v 1.7 2010/04/06 21:52:06 abcd Exp $
 
 EAPI="3"
 
@@ -27,8 +27,8 @@ PATCHES=(
 	"${FILESDIR}/${P}-gentoo-alt.patch"
 )
 
-src_configure() {
-	base_src_configure
+src_prepare() {
+	base_src_prepare
 
 	eautoreconf
 }

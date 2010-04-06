@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.41 2010/04/06 06:21:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.42 2010/04/06 21:52:06 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> fish-1.23.0.ebuild:
+  Fix typo (configure -> prepare)
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org>
   +files/fish-1.22.3-gettext.patch, fish-1.23.0.ebuild,
