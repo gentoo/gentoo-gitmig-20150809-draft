@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wpd2sxw
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/ChangeLog,v 1.19 2008/10/05 13:09:12 gentoofan23 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2sxw/ChangeLog,v 1.20 2010/04/06 01:30:56 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> wpd2sxw-0.7.3.ebuild:
+  Add prefix keywords
 
   05 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
   wpd2sxw-0.7.1.ebuild, wpd2sxw-0.7.3.ebuild:
