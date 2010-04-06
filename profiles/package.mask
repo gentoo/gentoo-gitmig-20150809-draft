@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11424 2010/04/06 20:14:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11425 2010/04/06 21:34:19 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -474,10 +474,6 @@ net-libs/libjingle
 # still being used.  (please fix deps before masking again - halcy0n)
 #dev-db/libpq
 #dev-db/postgresql
-
-# Patrick Lauer <patrick@gentoo.org> (07 Jan 2010)
-# Upstream changed all options around again, so masking until someone fixes it
-=app-misc/emelfm2-0.7.1
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Jan 2010)
 # Dev channel releases are only for people who are developers or want more
