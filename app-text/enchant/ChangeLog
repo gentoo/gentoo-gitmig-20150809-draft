@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.97 2010/03/09 17:40:33 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.98 2010/04/06 16:14:09 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org> enchant-1.5.0.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
 *enchant-1.5.0 (09 Mar 2010)
 
