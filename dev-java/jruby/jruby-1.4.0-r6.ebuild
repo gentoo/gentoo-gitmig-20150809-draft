@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r6.ebuild,v 1.2 2010/04/06 08:22:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.0-r6.ebuild,v 1.3 2010/04/06 15:16:44 mr_bones_ Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -78,7 +78,7 @@ pkg_setup() {
 			echo "rm ${directory}"
 			echo 'emerge -1 $(< ~/jruby.fix)'
 			echo 'rm ~/jruby.fix'
-			
+
 			eerror "For more information, please see http://bugs.gentoo.org/show_bug.cgi?id=302187"
 			fail="true"
 		fi
