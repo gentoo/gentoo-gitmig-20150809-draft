@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.1 2009/11/15 12:23:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.2 2010/04/06 09:17:57 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils multilib autotools java-pkg-opt-2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/beecrypt/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java nocxx python threads doc"
 
 COMMONDEPEND="python? ( >=dev-lang/python-2.2 )
@@ -40,10 +40,9 @@ src_configure() {
 	econf \
 		--disable-expert-mode \
 		$(use_enable threads) \
-		$(use_with python python /usr/bin/python) \
+		$(use_with python python "${EPREFIX}"/usr/bin/python) \
 		$(use threads && use_with !nocxx cplusplus || echo --without-cplusplus) \
-		$(use_with java) \
-		|| die
+		$(use_with java)
 }
 
 src_compile() {
@@ -57,13 +56,15 @@ src_compile() {
 }
 
 src_test() {
+	export BEECRYPT_CONF_FILE="${T}/beecrypt-test.conf"
+	echo "provider.1=${S}/c++/provider/.libs/base.so" > "${BEECRYPT_CONF_FILE}"
 	make check || die "self test failed"
 	make bench || die "self benchmark test failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	rm -f "${D}"/usr/$(get_libdir)/python*/site-packages/_bc.*a
+	rm -f "${ED}"/usr/$(get_libdir)/python*/site-packages/_bc.*a
 
 	dodoc BUGS README BENCHMARKS NEWS || die "dodoc failed"
 	if use doc
