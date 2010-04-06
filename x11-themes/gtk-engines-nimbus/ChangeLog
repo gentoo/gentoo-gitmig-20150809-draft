@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-nimbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/ChangeLog,v 1.25 2010/02/03 20:34:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/ChangeLog,v 1.26 2010/04/06 05:42:41 abcd Exp $
+
+  06 Apr 2010; Jonathan Callen <abcd@gentoo.org>
+  gtk-engines-nimbus-0.1.4.ebuild:
+  Add prefix keywords, eautoreconf on Interix
 
   03 Feb 2010; Markus Meier <maekke@gentoo.org>
   gtk-engines-nimbus-0.1.4.ebuild:

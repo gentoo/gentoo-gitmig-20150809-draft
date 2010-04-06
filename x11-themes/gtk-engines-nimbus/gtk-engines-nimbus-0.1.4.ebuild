@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.1.4.ebuild,v 1.2 2010/02/03 20:34:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.1.4.ebuild,v 1.3 2010/04/06 05:42:41 abcd Exp $
 
 EAPI=2
-inherit gnome2-utils
+
+AUTOTOOLS_AUTO_DEPEND="no"
+inherit gnome2-utils autotools
 
 MY_P=nimbus-${PV}
 
@@ -13,20 +15,24 @@ SRC_URI="http://dlc.sun.com/osol/jds/downloads/extras/nimbus/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6:2"
 DEPEND="${RDEPEND}
 	>=x11-misc/icon-naming-utils-0.8.1
 	dev-util/pkgconfig
-	dev-util/intltool"
+	dev-util/intltool
+	kernel_Interix? ( ${AUTOTOOLS_DEPEND} )"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	echo light-index.theme.in >> po/POTFILES.skip
 	echo dark-index.theme.in >> po/POTFILES.skip
+
+	# Interix needs a full eautoreconf, but don't bother for other archs
+	[[ ${CHOST} == *-interix* ]] && eautoreconf
 }
 
 src_configure() {
