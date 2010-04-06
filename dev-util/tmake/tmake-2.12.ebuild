@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-2.12.ebuild,v 1.7 2010/04/06 09:25:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-2.12.ebuild,v 1.8 2010/04/06 15:19:47 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -24,4 +24,3 @@ src_install () {
 	echo "TMAKEPATH=\"${EPREFIX}/usr/lib/tmake/linux-g++\"" > "${T}"/51tmake
 	doenvd "${T}"/51tmake
 }
-
