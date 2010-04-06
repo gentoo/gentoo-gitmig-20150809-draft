@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.905.ebuild,v 1.1 2010/04/06 10:31:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.905.ebuild,v 1.2 2010/04/06 10:42:34 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -26,15 +26,15 @@ RDEPEND=">=media-libs/xine-lib-1.1.17
 		gnome-extra/gnome-screensaver )
 	lirc? ( app-misc/lirc )
 	nls? ( virtual/libintl )
-	nsplugin? ( dev-libs/nspr )
+	nsplugin? ( dev-libs/nspr
+		x11-libs/libXaw
+		x11-libs/libXt )
 	udev? ( >=sys-fs/udev-143[extras] )
 	xcb? ( x11-libs/libxcb )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	x11-libs/libXt
-	nls? ( sys-devel/gettext )
-	nsplugin? ( x11-libs/libXaw )"
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-desktop.patch
