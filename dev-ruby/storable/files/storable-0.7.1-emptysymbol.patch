@@ -1,0 +1,30 @@
+From 2e458688a077412bb1d050f5e9ca1edeb8d89bb0 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20'Flameeyes'=20Petten=C3=B2?= <flameeyes@gmail.com>
+Date: Tue, 6 Apr 2010 10:31:24 +0200
+Subject: [PATCH] Handle empty symbols alike to the old Storable 0.6.4.
+
+Without this, rudy 0.9.8 aborts for me with:
+
+ERROR (ArgumentError): interning empty string
+
+because there it tries to create a symbol from an empty string.
+---
+ lib/storable.rb |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/lib/storable.rb b/lib/storable.rb
+index 45a4d34..9d7c958 100644
+--- a/lib/storable.rb
++++ b/lib/storable.rb
+@@ -178,7 +178,7 @@ class Storable
+       
+       next if value_orig.nil?
+       
+-      if ftype == String && value_orig.to_s.empty?
++      if ( ftype == String or ftype == Symbol ) && value_orig.to_s.empty?
+         value = ''
+       elsif ftype == Array
+         value = Array === value_orig ? value_orig : [value_orig]
+-- 
+1.7.0.4
+
