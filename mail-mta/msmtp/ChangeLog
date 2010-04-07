@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.78 2010/04/06 18:31:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.79 2010/04/07 06:27:49 robbat2 Exp $
+
+*msmtp-1.4.19-r1 (07 Apr 2010)
+
+  07 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +msmtp-1.4.19-r1.ebuild, metadata.xml:
+  msmtp is extremely useful as a custom relaying tool for users despite the
+  system MTA, to provide an option to disable acting as virtual/mta.
 
   06 Apr 2010; Brent Baude <ranger@gentoo.org> msmtp-1.4.19.ebuild:
   Marking msmtp-1.4.19 ppc64 for bug 293647
