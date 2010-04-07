@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.436 2010/03/22 08:58:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.437 2010/04/07 21:44:22 zmedico Exp $
 
 # Keep them sorted
 
@@ -267,7 +267,7 @@ oracle - Enable Oracle Database support
 osc - Enables support for Open Sound Control
 oscar - Enable Oscar (AIM/ICQ) IM protocol support
 oss - Adds support for OSS (Open Sound System)
-pam - Adds support PAM (Pluggable Authentication Modules) - DANGEROUS to arbitrarily flip
+pam - Adds support for PAM (Pluggable Authentication Modules) - DANGEROUS to arbitrarily flip
 pch - Enable precompiled header support for faster compilation at the expense of disk space and memory (>=sys-devel/gcc-3.4 only)
 pcmcia - Adds support for PCMCIA slots/devices found on laptop computers
 pcntl - Adds support for process creation functions
