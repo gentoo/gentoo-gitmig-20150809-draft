@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p43-r2.ebuild,v 1.1 2010/01/05 14:39:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59.ebuild,v 1.1 2010/04/07 09:40:10 voyageur Exp $
 
 EAPI="2"
 
@@ -100,7 +100,7 @@ pkg_postinst () {
 		elog " * home directory: ${NX_HOME_DIR}"
 	fi
 
-	if ! built_with_use net-misc/openssh pam; then
+	if has_version net-misc/openssh[-pam]; then
 		elog ""
 		elog "net-misc/openssh was not built with PAM support"
 		elog "You will need to unlock the nx account by setting a password for it"
