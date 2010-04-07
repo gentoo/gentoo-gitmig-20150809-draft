@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11427 2010/04/07 14:18:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11428 2010/04/07 15:01:41 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Samuli Suominen <ssuominen@gentoo.org> (07 Apr 2010)
 # Missing required lvm2 wrt bug #309757. Unmask soon as it's in tree.
 sys-fs/udisks
+x11-plugins/wmudmount
 
 # Vlastimil Babka <caster@gentoo.org> (06 Apr 2010)
 # Legacy library nothing in the tree depends on. Needs 1.5 java to compile.
