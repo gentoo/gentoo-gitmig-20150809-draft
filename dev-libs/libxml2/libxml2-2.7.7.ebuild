@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.7.ebuild,v 1.2 2010/04/06 22:44:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.7.ebuild,v 1.3 2010/04/07 21:16:18 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -171,5 +171,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup drv_libxml2.py libxml2.py
+	if use python; then
+		python_mod_cleanup drv_libxml2.py libxml2.py
+	fi
 }
