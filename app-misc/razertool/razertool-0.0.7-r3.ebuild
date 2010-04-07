@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7-r2.ebuild,v 1.1 2010/04/06 21:05:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7-r3.ebuild,v 1.1 2010/04/07 21:27:33 voyageur Exp $
 
 EAPI=2
 inherit eutils
@@ -26,6 +26,11 @@ src_prepare() {
 	sed -i razertool.rules.example \
 		-e 's:ACTION=="add", ::;s:BUS=:SUBSYSTEMS=:;s:SYSFS{:ATTRS{:g' \
 		|| die "sed razertool.rules.example action failed"
+
+	# plugdev group may not exist (created by hal), default to usb
+	sed -i razertool.rules.example \
+		-e 's:plugdev:usb:' \
+		|| die "sed razertool.rules.example plugdev failed"
 }
 
 src_configure() {
@@ -50,8 +55,8 @@ pkg_postinst() {
 	elog "Razer Copperhead mice need firmware version 6.20 or higher"
 	elog "to work properly. Running ${PN} on mice with older firmwares"
 	elog "might lead to random USB-disconnects."
-	elog "To run as non-root, add yourself to the plugdev group:"
-	elog "   gpasswd -a <user> plugdev"
+	elog "To run as non-root, add yourself to the usb group:"
+	elog "   gpasswd -a <user> usb"
 	elog "or adapt permissions/owner/group in:"
 	elog "   /etc/udev/rules.d/90-razertool.rules"
 	elog "Then unplug and plug in the mouse."
