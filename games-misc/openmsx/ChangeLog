@@ -1,0 +1,11 @@
+# ChangeLog for games-misc/openmsx
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/openmsx/ChangeLog,v 1.1 2010/04/07 16:44:00 mr_bones_ Exp $
+
+*openmsx-0.2.1 (07 Apr 2010)
+
+  07 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +openmsx-0.2.1.ebuild, +metadata.xml:
+  initial commit - ebuild submitted by Locke 'Wizzleby' Shinseiko (bug
+  #312993)
+
