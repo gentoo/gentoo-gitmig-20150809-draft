@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5467 2010/04/07 14:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5468 2010/04/07 19:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -40,7 +40,6 @@ app-admin/conky:apcupsd - enable support for sys-power/apcupsd
 app-admin/conky:audacious - enable monitoring of music played by media-sound/audacious
 app-admin/conky:eve - enable support for the eve-online skill monitor
 app-admin/conky:iostats - enable support for per-task I/O statistics
-app-admin/conky:ipv6 - disable support for tcp (ip4) port monitoring
 app-admin/conky:lua - enable if you want Lua scripting support
 app-admin/conky:lua-cairo - enable if you want Lua Cairo bindings for Conky (also enables lua support)
 app-admin/conky:lua-imlib - enable if you want Lua Imlib2 bindings for Conky (also enables lua and imlib support)
@@ -50,7 +49,6 @@ app-admin/conky:mpd - enable monitoring of music controlled by media-sound/mpd
 app-admin/conky:nano-syntax - enable syntax highlighting for app-editors/nano
 app-admin/conky:nvidia - enable reading of nvidia card temperature sensors via media-video/nvidia-settings
 app-admin/conky:portmon - enable support for tcp (ip4) port monitoring
-app-admin/conky:smapi - enable support for smapi
 app-admin/conky:thinkpad - enable support for IBM/Lenovo notebooks
 app-admin/conky:weather-metar - enable support for metar weather service
 app-admin/conky:weather-xoap - enable support for metar and xoap weather service
