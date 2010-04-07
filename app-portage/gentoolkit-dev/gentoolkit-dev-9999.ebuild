@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.4 2010/04/01 20:37:12 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.5 2010/04/07 16:34:22 darkside Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="*:2.6"
 PYTHON_USE_WITH="xml"
 
@@ -35,5 +35,5 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${ED}" install || die
 }

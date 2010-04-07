@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.84 2010/04/07 16:30:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.85 2010/04/07 16:34:22 darkside Exp $
+
+  07 Apr 2010; Jeremy Olexa <darkside@gentoo.org>
+  gentoolkit-dev-9999.ebuild:
+  Also sync up -9999 ebuild that I overlooked in last commit. Same changes
+  sans keywords
 
   07 Apr 2010; Jeremy Olexa <darkside@gentoo.org>
   gentoolkit-dev-0.2.6.14.ebuild:
