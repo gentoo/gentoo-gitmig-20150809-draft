@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.35 2010/01/31 19:46:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.36 2010/04/07 14:21:52 chiiph Exp $
+
+*bigloo-3.3a_p5 (07 Apr 2010)
+
+  07 Apr 2010; <chiiph@gentoo.org> +bigloo-3.3a_p5.ebuild,
+  +files/bigloo-3.3a_p5-no_strip.patch:
+  Version bump
 
   31 Jan 2010; Torsten Veller <tove@gentoo.org> bigloo-3.2b_p2.ebuild:
   Change vecho to echo
