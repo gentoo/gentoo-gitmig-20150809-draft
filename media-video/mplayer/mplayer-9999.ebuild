@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.34 2010/03/26 14:45:00 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.35 2010/04/07 10:49:50 scarabeus Exp $
 
 EAPI="2"
 
@@ -135,7 +135,6 @@ RDEPEND+="
 		|| (
 			app-arch/unrar
 			app-arch/rar
-			app-arch/unrar-gpl
 		)
 	)
 	samba? ( net-fs/samba )
