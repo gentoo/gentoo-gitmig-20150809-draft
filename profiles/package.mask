@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11428 2010/04/07 15:01:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11429 2010/04/07 15:59:17 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (07 Apr 2010)
+# Migrating back to unsplit samba ebuilds. 
+net-fs/samba-libs
+net-fs/samba-server
+net-fs/samba-client
+
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 Apr 2010)
 # Missing required lvm2 wrt bug #309757. Unmask soon as it's in tree.
@@ -313,10 +320,6 @@ net-irc/ircd-hybrid
 dev-libs/gobject-introspection
 dev-libs/gir-repository
 
-# Patrick Lauer <patrick@gentoo.org> (26 Feb 2010)
-# Unsplit samba ebuild. might need some testing :)
-=net-fs/samba-3.4.6
-
 # Theo Chatzimichos <tampakrap@gentoo.org> (26 Feb 2010)
 # Mask knetworkmanager as it is crashy, unusable, under
 # heavy development, and snapshot
@@ -402,13 +405,6 @@ dev-db/mysql-community
 >=dev-lang/ghc-6.12
 >=dev-haskell/haddock-2.6
 =app-admin/haskell-updater-1*
-
-# Patrick Lauer <patrick@gentoo.org> (26 Jan 2010)
-# Masking release candidates
->=net-fs/samba-3.5.0_rc2
->=net-fs/samba-libs-3.5.0_rc2
->=net-fs/samba-server-3.5.0_rc2
->=net-fs/samba-client-3.5.0_rc2
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Jan 2010)
 # Final rc of networkmanager-0.8 and friends
