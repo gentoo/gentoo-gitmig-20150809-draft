@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.404 2010/03/01 16:19:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.405 2010/04/07 15:24:14 patrick Exp $
+
+*samba-3.5.2 (07 Apr 2010)
+
+  07 Apr 2010; Patrick Lauer <patrick@gentoo.org> +samba-3.5.2.ebuild:
+  Bump to 3.5.2
 
 *samba-3.5.0 (01 Mar 2010)
 
