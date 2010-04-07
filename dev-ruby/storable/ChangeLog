@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/storable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.6 2010/04/06 08:48:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.7 2010/04/07 12:42:05 flameeyes Exp $
+
+*storable-0.7.2 (07 Apr 2010)
+
+  07 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -storable-0.7.1-r1.ebuild, -files/storable-0.7.1-emptysymbol.patch,
+  +storable-0.7.2.ebuild:
+  Version bump.
 
 *storable-0.7.1-r1 (06 Apr 2010)
 
