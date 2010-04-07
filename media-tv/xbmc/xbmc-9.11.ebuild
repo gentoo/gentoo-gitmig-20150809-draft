@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11.ebuild,v 1.3 2010/01/17 21:26:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11.ebuild,v 1.4 2010/04/07 16:03:31 patrick Exp $
 
 EAPI="2"
 
@@ -72,7 +72,7 @@ RDEPEND="opengl? ( virtual/opengl )
 	media-video/ffmpeg
 	avahi? ( net-dns/avahi )
 	net-misc/curl
-	|| ( net-fs/samba-libs[smbclient] <net-fs/samba-3.3 )
+	|| ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.3 )
 	sys-apps/dbus
 	sys-apps/hal
 	sys-libs/zlib

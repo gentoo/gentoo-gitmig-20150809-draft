@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.48 2010/03/18 15:11:23 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.49 2010/04/07 16:03:31 patrick Exp $
+
+  07 Apr 2010; Patrick Lauer <patrick@gentoo.org> xbmc-9.11.ebuild,
+  xbmc-9.11-r3.ebuild, xbmc-9999.ebuild:
+  Fixing samba deps
 
 *xbmc-9.11-r3 (18 Mar 2010)
 
