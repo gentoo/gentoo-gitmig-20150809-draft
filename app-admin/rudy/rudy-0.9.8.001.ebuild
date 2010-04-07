@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.001.ebuild,v 1.1 2010/04/06 08:10:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.001.ebuild,v 1.2 2010/04/07 16:28:16 flameeyes Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ ruby_add_rdepend '
 	>=dev-ruby/amazon-ec2-0.9.10
 	>=dev-ruby/highline-1.5.1
 	>=dev-ruby/aws-s3-0.6.1
-	~dev-ruby/storable-0.7.1
+	>=dev-ruby/storable-0.7.1
 	>=dev-ruby/gibbler-0.7.7
 	>=dev-ruby/sysinfo-0.7.3
 	>=dev-ruby/caesars-0.7.4
