@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.0.0.ebuild,v 1.1 2010/04/07 14:41:50 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.0.0.ebuild,v 1.2 2010/04/07 14:51:19 tester Exp $
 
 EAPI=3
 
 DESCRIPTION="Support library to communicate with Apple iPhone/iPod Touch devices"
 HOMEPAGE="http://www.libimobiledevice.org/"
 SRC_URI="http://www.libimobiledevice.org/downloads/${P}.tar.bz2"
-LICENSE="GPL-2"
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="python"
