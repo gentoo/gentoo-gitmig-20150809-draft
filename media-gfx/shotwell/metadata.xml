@@ -2,6 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>no-herd</herd>
+	<maintainer>
+		<email>hollow@gentoo.org</email>
+		<name>Benedikt Böhm</name>
+	</maintainer>
+	<maintainer>
+		<email>nutz@unfoog.de</email>
+		<name>Andreas Nüßlein</name>
+		<description>Proxy maintainer. Please CC on bugs.</description>
+	</maintainer>
 	<longdescription lang="en">
 	Shotwell is a digital photo organizer designed for the GNOME desktop
 	environment. It allows you to import photos from disk or camera, organize

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.1 2010/04/07 17:04:04 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.2 2010/04/07 17:08:21 hollow Exp $
+
+  07 Apr 2010; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  fix metadata
 
 *shotwell-0.5.0 (07 Apr 2010)
 
