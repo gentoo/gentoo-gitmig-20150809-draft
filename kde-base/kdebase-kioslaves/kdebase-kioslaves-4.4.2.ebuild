@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.4.2.ebuild,v 1.1 2010/03/30 19:49:00 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.4.2.ebuild,v 1.2 2010/04/07 16:02:56 patrick Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ DEPEND="
 	samba? (
 		|| (
 			=net-fs/samba-3.0*
-			>=net-fs/samba-libs-3.4[smbclient]
+			>=net-fs/samba-3.4.6[smbclient]
 		)
 	)
 	sftp? ( >=net-libs/libssh-0.4.0[sftp] )
