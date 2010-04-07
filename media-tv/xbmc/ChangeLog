@@ -1,10 +1,15 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.49 2010/04/07 16:03:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.50 2010/04/07 20:39:16 scarabeus Exp $
 
   07 Apr 2010; Patrick Lauer <patrick@gentoo.org> xbmc-9.11.ebuild,
   xbmc-9.11-r3.ebuild, xbmc-9999.ebuild:
   Fixing samba deps
+
+  07 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> xbmc-9.11.ebuild,
+  xbmc-9.11-r3.ebuild, xbmc-9999.ebuild:
+  Drop unrar-gpl dependencies. Unrar-gpl cant open most rars that are
+  around.
 
 *xbmc-9.11-r3 (18 Mar 2010)
 
