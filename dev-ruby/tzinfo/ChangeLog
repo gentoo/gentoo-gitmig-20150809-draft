@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.52 2010/04/03 12:12:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.53 2010/04/07 06:49:09 graaff Exp $
+
+*tzinfo-0.3.19 (07 Apr 2010)
+
+  07 Apr 2010; Hans de Graaff <graaff@gentoo.org> +tzinfo-0.3.19.ebuild:
+  Version bump: Updated to tzdata version 2010h.
 
   03 Apr 2010; Hans de Graaff <graaff@gentoo.org> tzinfo-0.3.16.ebuild:
   Drop ruby19 and jruby to facilitate stabling this specific version.
