@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xset
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.60 2010/01/23 19:23:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.61 2010/04/07 22:35:46 chithanh Exp $
+
+  07 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xset-1.1.0.ebuild:
+  add libXxf86misc dependency, bug #311821
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> -xset-1.0.3.ebuild,
   -xset-1.0.4.ebuild:
