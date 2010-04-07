@@ -1,6 +1,12 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.4 2010/02/14 10:00:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.5 2010/04/07 21:06:19 scarabeus Exp $
+
+*rekonq-0.4.0 (07 Apr 2010)
+
+  07 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> -rekonq-0.3.0.ebuild,
+  -rekonq-0.3.90.ebuild, +rekonq-0.4.0.ebuild:
+  Version bump. Drop old.
 
   14 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> rekonq-0.3.90.ebuild:
   Fix depend to KDE 4.4.0 and Qt 4.6.0 wrt #305041.
