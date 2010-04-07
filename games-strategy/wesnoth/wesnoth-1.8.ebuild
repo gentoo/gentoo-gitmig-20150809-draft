@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.8.ebuild,v 1.6 2010/04/03 23:44:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.8.ebuild,v 1.7 2010/04/07 03:13:41 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
@@ -98,6 +98,7 @@ src_configure() {
 		$(cmake-utils_use_enable nls NLS)
 		$(cmake-utils_use_enable dbus NOTIFICATIONS)
 		"-DGUI=$(use tinygui && echo tiny || echo normal)"
+		"-DCMAKE_VERBOSE_MAKEFILE=TRUE"
 		"-DENABLE_FRIBIDI=FALSE"
 		"-DENABLE_STRICT_COMPILATION=FALSE"
 		"-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}"
