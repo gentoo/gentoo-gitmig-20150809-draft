@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7.1.ebuild,v 1.1 2010/03/16 11:56:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7.1-r1.ebuild,v 1.1 2010/04/07 14:35:55 flameeyes Exp $
 
 EAPI=2
 
@@ -24,6 +24,10 @@ LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-64bit.patch
+}
 
 src_configure() {
 	econf \
