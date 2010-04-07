@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.99.0.2.95-r1.ebuild,v 1.3 2010/03/31 21:59:42 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.99.0.2.95-r1.ebuild,v 1.4 2010/04/07 04:22:24 darkside Exp $
 
 inherit bash-completion eutils
 
@@ -34,6 +34,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	BASH_COMPLETION_NAME="dep"
+	BASHCOMPLETION_NAME="dep"
 	bash-completion_pkg_postinst
 }
