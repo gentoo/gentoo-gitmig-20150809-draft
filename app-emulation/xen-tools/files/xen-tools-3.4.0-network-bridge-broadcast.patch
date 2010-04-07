@@ -5,7 +5,7 @@
  
  get_ip_info() {
 -    addr_pfx=`ip addr show dev $1 | egrep '^ *inet' | sed -e 's/ *inet //' -e 's/ .*//'`
-+    addr_pfx=`ip addr show dev $1 | egrep '^ *inet' | sed -e 's/ *inet //' -e "s/$1//"`
++    addr_pfx=`ip addr show dev $1 | egrep '^ *inet ' | sed -e 's/ *inet //' -e "s/$1//"`
      gateway=`ip route show dev $1 | fgrep default | sed 's/default via //'`
  }
      

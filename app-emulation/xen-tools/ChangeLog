@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.58 2010/01/16 17:25:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.59 2010/04/07 16:46:08 patrick Exp $
+
+  07 Apr 2010; Patrick Lauer <patrick@gentoo.org>
+  files/xen-tools-3.4.0-network-bridge-broadcast.patch:
+  Fixing xen-tools-3.4.0-network-bridge-broadcast.patch for #258378
 
   16 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   xen-tools-3.4.2.ebuild:
