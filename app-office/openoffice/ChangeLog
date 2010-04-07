@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.524 2010/03/30 08:35:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.525 2010/04/07 04:22:12 darkside Exp $
+
+  07 Apr 2010; Jeremy Olexa <darkside@gentoo.org> openoffice-3.1.1.ebuild,
+  openoffice-3.2.0.ebuild:
+  Due to portage's environment filtering, variables that start with BASH_
+  cannot be used. As such, s/BASH_COMPLETION_NAME/BASHCOMPLETION_NAME/g for
+  bug 312671
 
   30 Mar 2010; Pacho Ramos <pacho@gentoo.org> openoffice-3.2.0.ebuild:
   stable x86, security bug 305195

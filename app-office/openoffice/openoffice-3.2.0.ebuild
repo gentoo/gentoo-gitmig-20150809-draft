@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.18 2010/03/30 08:35:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.19 2010/04/07 04:22:12 darkside Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -379,7 +379,7 @@ pkg_postinst() {
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	BASH_COMPLETION_NAME=ooffice && bash-completion_pkg_postinst
+	BASHCOMPLETION_NAME=ooffice && bash-completion_pkg_postinst
 
 	( [[ -x /sbin/chpax ]] || [[ -x /sbin/paxctl ]] ) && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && scanelf -Xzm /usr/$(get_libdir)/openoffice/program/soffice.bin
 
