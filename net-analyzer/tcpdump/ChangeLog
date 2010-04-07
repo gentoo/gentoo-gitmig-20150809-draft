@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.141 2010/04/02 07:07:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.142 2010/04/07 17:24:01 pva Exp $
+
+  07 Apr 2010; Peter Volkov <pva@gentoo.org> tcpdump-4.1.0-r1.ebuild:
+  Print elog only if USE=suid, bug #312841, thank Martin von Gagern for
+  report.
 
 *tcpdump-4.1.0-r1 (02 Apr 2010)
 

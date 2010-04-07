@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.0-r1.ebuild,v 1.1 2010/04/02 07:07:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.0-r1.ebuild,v 1.2 2010/04/07 17:24:02 pva Exp $
 
 EAPI="2"
 inherit flag-o-matic toolchain-funcs eutils versionator autotools
@@ -88,5 +88,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To let normal users run tcpdump add them into tcpdump group."
+	use suid && elog "To let normal users run tcpdump add them into tcpdump group."
 }
