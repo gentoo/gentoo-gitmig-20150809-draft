@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.131 2010/03/30 19:04:29 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.132 2010/04/07 19:05:02 billie Exp $
+
+  07 Apr 2010; Daniel Pielmeier <billie@gentoo.org>
+  -files/conky-1.6.1-stdio.patch, -files/conky_no_x11.conf,
+  -conky-1.6.1.ebuild, -files/conky-1.7.1.1-comment.patch,
+  conky-1.8.0.ebuild, +files/conky-1.8.0-ncurses.patch, metadata.xml:
+  Fix building with ncurses disabled thanks to all involved in bug #313081.
+  Remove old version and unused files.
 
 *conky-1.8.0 (30 Mar 2010)
 
