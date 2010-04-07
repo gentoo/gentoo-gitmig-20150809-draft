@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/config-general
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.55 2009/10/12 11:23:25 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.56 2010/04/07 06:37:10 tove Exp $
+
+*config-general-2.45 (07 Apr 2010)
+
+  07 Apr 2010; Torsten Veller <tove@gentoo.org> +config-general-2.45.ebuild:
+  Version bump
 
   12 Oct 2009; Torsten Veller <tove@gentoo.org> -config-general-2.43.ebuild:
   Cleanup
