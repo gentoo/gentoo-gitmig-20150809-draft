@@ -1,0 +1,11 @@
+# ChangeLog for games-misc/opensfx
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opensfx/ChangeLog,v 1.1 2010/04/07 19:49:51 mr_bones_ Exp $
+
+*opensfx-0.2.3 (07 Apr 2010)
+
+  07 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +opensfx-0.2.3.ebuild, +metadata.xml:
+  initial commit - ebuild submitted by Locke 'Wizzleby' Shinseiko via bug
+  #308355
+
