@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.0.ebuild,v 1.1 2010/04/03 21:35:22 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.0.ebuild,v 1.2 2010/04/07 17:43:49 rich0 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	virtual/opengl
 	virtual/glu
-	media-libs/libsdl
+	media-libs/libsdl[X]
 	media-libs/sdl-net
 	media-libs/sdl-image
 	media-libs/openal

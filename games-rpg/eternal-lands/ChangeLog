@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.52 2010/04/03 21:35:22 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.53 2010/04/07 17:43:49 rich0 Exp $
+
+  07 Apr 2010; Richard Freeman <rich0@gentoo.org>
+  eternal-lands-1.9.0.ebuild:
+  Fixed missing X usedep for libsdl - users need not rebuild unless they
+  couldn't compile in the first place.
 
 *eternal-lands-1.9.0 (03 Apr 2010)
 
