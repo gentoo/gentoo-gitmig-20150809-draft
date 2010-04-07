@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.155 2010/03/30 19:50:05 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.156 2010/04/07 04:23:19 darkside Exp $
+
+  07 Apr 2010; Jeremy Olexa <darkside@gentoo.org> paludis-0.40.0.ebuild,
+  paludis-0.40.1.ebuild, paludis-0.42.0_alpha1.ebuild,
+  paludis-0.42.0.ebuild, paludis-0.42.2.ebuild, paludis-0.42.3.ebuild,
+  paludis-0.44.0.ebuild, paludis-0.44.1.ebuild, paludis-0.44.2.ebuild,
+  paludis-0.46.0.ebuild:
+  Due to portage's environment filtering, variables that start with BASH_
+  cannot be used. As such, s/BASH_COMPLETION_NAME/BASHCOMPLETION_NAME/g for
+  bug 312671
 
 *paludis-0.46.0 (30 Mar 2010)
 

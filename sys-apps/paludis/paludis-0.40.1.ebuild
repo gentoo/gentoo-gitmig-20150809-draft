@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.40.1.ebuild,v 1.1 2009/09/18 00:14:09 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.40.1.ebuild,v 1.2 2010/04/07 04:23:19 darkside Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -93,17 +93,17 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS README NEWS
 
-	BASH_COMPLETION_NAME="adjutrix" dobashcompletion bash-completion/adjutrix
-	BASH_COMPLETION_NAME="paludis" dobashcompletion bash-completion/paludis
-	BASH_COMPLETION_NAME="accerso" dobashcompletion bash-completion/accerso
-	BASH_COMPLETION_NAME="importare" dobashcompletion bash-completion/importare
-	BASH_COMPLETION_NAME="instruo" dobashcompletion bash-completion/instruo
-	BASH_COMPLETION_NAME="reconcilio" dobashcompletion bash-completion/reconcilio
+	BASHCOMPLETION_NAME="adjutrix" dobashcompletion bash-completion/adjutrix
+	BASHCOMPLETION_NAME="paludis" dobashcompletion bash-completion/paludis
+	BASHCOMPLETION_NAME="accerso" dobashcompletion bash-completion/accerso
+	BASHCOMPLETION_NAME="importare" dobashcompletion bash-completion/importare
+	BASHCOMPLETION_NAME="instruo" dobashcompletion bash-completion/instruo
+	BASHCOMPLETION_NAME="reconcilio" dobashcompletion bash-completion/reconcilio
 	use qa && \
-		BASH_COMPLETION_NAME="qualudis" \
+		BASHCOMPLETION_NAME="qualudis" \
 		dobashcompletion bash-completion/qualudis
 	use inquisitio && \
-		BASH_COMPLETION_NAME="inquisitio" \
+		BASHCOMPLETION_NAME="inquisitio" \
 		dobashcompletion bash-completion/inquisitio
 
 	if use zsh-completion ; then
