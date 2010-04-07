@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/ski
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.8 2006/05/30 01:49:46 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.9 2010/04/07 13:24:49 tupone Exp $
+
+  07 Apr 2010; Alfredo Tupone <tupone@gentoo.org> ski-6.5.ebuild:
+  Force python 2. Bug #312283 by arfrever@gentoo.org
 
   30 May 2006; Joseph Jezak <josejx@gentoo.org> ski-6.5.ebuild:
   Marked ppc stable.
