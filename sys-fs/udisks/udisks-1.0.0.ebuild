@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.0.ebuild,v 1.1 2010/04/07 14:20:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.0.ebuild,v 1.2 2010/04/07 15:28:46 ssuominen Exp $
 
 EAPI=3
 inherit bash-completion
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-		--localstatedir=/var \
+		--localstatedir="${EPREFIX}/var" \
 		--disable-dependency-tracking \
 		--disable-static \
 		$(use_enable debug verbose-mode) \
