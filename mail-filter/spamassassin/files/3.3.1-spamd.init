@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/files/3.3.1-spamd.init,v 1.1 2010/04/06 01:46:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/files/3.3.1-spamd.init,v 1.2 2010/04/07 04:13:24 darkside Exp $
 
 # NB: Config is in /etc/conf.d/spamd
 
@@ -25,11 +25,12 @@ start() {
 		--nicelevel ${SPAMD_NICELEVEL:-0} \
 		--pidfile ${PIDFILE} \
 		--exec /usr/sbin/spamd -- -d -r ${PIDFILE} \
-			${SPAMD_OPTS}
+		${SPAMD_OPTS}
+	retval=$?
 	if ! [ -f "${PIDFILE}" ]; then
 		sleep 1
 	fi
-	eend $? "Failed to start spamd"
+	eend ${retval} "Failed to start spamd"
 }
 
 stop() {
