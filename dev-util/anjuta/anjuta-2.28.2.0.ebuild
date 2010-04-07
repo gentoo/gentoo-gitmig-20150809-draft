@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.28.2.0.ebuild,v 1.3 2010/03/16 18:31:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.28.2.0.ebuild,v 1.4 2010/04/07 18:43:40 ranger Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.anjuta.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="debug devhelp doc glade +sourceview subversion +symbol-db test"
 
 # FIXME: Anjuta has some CRITICAL and WARNINGS messages, that would be nice to fix them and/or report on upstream
