@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r2.ebuild,v 1.2 2010/03/29 20:02:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r2.ebuild,v 1.3 2010/04/07 22:40:57 flameeyes Exp $
 
 EAPI="3"
 
@@ -54,6 +54,6 @@ src_install() {
 	rm -rf "${ED}"/usr/man
 
 	# demos are in the wrong place:
-	mkdir -p "${ED}/usr/share/doc/${PVR}"
-	mv "${ED}/usr/$(get_libdir)/${MY_P}/demos" "${ED}/usr/share/doc/${PVR}/"
+	mkdir -p "${ED}/usr/share/doc/${PF}"
+	mv "${ED}/usr/$(get_libdir)/${MY_P}/demos" "${ED}/usr/share/doc/${PF}/"
 }

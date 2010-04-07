@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/iwidgets
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.19 2010/03/29 20:02:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.20 2010/04/07 22:40:57 flameeyes Exp $
+
+  07 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  iwidgets-4.0.1-r2.ebuild:
+  Fix obvious thinko in demos install.
 
   29 Mar 2010; Justin Lecher <jlec@gentoo.org> iwidgets-4.0.1-r2.ebuild:
   Keyworded for ~x86-linux ~amd64-linux, EAPI=3 port
