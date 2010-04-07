@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.84.ebuild,v 1.1 2010/03/22 14:20:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.84.ebuild,v 1.2 2010/04/07 04:22:40 darkside Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ BD=${WORKDIR}/${P}-build
 # out of sources build dir for make check
 TBD=${WORKDIR}/${P}-tests-build
 
-BASH_COMPLETION_NAME="dbus"
+BASHCOMPLETION_NAME="dbus"
 
 src_configure() {
 	local my_conf

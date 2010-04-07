@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.82-r1.ebuild,v 1.4 2010/04/05 20:55:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/dbus-glib-0.82-r1.ebuild,v 1.5 2010/04/07 04:22:40 darkside Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 		app-text/xmlto
 		>=dev-util/gtk-doc-1.4 )"
 
-BASH_COMPLETION_NAME="dbus"
+BASHCOMPLETION_NAME="dbus"
 
 src_configure() {
 	econf \
