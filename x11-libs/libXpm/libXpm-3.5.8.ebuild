@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.8.ebuild,v 1.12 2010/02/25 07:31:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/libXpm-3.5.8.ebuild,v 1.13 2010/04/07 21:50:49 chithanh Exp $
 
-inherit x-modular
+inherit x-modular flag-o-matic
 
 DESCRIPTION="X.Org Xpm library"
 
@@ -15,3 +15,11 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	x11-proto/xproto"
+
+src_compile() {
+	# the gettext configure check and code in sxpm are incorrect; they assume
+	# gettext being in libintl, whereas Solaris has gettext by default
+	# resulting in libintl not being added to LIBS
+	[[ ${CHOST} == *-solaris* ]] && append-libs -lintl
+	x-modular_src_compile
+}

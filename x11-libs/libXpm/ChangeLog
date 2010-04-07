@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXpm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.65 2010/02/25 07:31:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.66 2010/04/07 21:50:49 chithanh Exp $
+
+  07 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libXpm-3.5.8.ebuild:
+  Fix building in solaris prefix, bug #303197
 
   25 Feb 2010; Jonathan Callen <abcd@gentoo.org> libXpm-3.5.8.ebuild:
   Transfer prefix keywords (no other changes)
