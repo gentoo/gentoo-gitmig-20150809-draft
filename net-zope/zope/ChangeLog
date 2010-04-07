@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/zope
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.166 2010/02/14 19:17:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.167 2010/04/07 12:47:59 tupone Exp $
+
+*zope-2.10.11 (07 Apr 2010)
+*zope-2.9.12 (07 Apr 2010)
+
+  07 Apr 2010; Alfredo Tupone <tupone@gentoo.org> +zope-2.9.12.ebuild,
+  +zope-2.10.11.ebuild:
+  Fixing vulnerability on version 2.9 and 2.10 as per bug #31337 by
+  craig@gentoo.org
 
   14 Feb 2010; Raúl Porcel <armin76@gentoo.org> zope-2.12.3.ebuild:
   Add ~alpha/~sparc wrt #297734
