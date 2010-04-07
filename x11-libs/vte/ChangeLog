@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.246 2010/03/21 15:07:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.247 2010/04/07 16:05:42 ranger Exp $
+
+  07 Apr 2010; Brent Baude <ranger@gentoo.org> vte-0.22.5.ebuild:
+  Marking vte-0.22.5 ppc for bug 294214
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> vte-0.22.5.ebuild:
   Marking vte-0.22.5 ppc64 for bug 294214
