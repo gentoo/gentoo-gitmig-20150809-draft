@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.157 2010/04/01 19:33:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.158 2010/04/07 17:49:13 vapier Exp $
+
+  07 Apr 2010; Mike Frysinger <vapier@gentoo.org> readline-6.1.ebuild:
+  Mark arm/ia64/s390/sh stable #310819.
 
   01 Apr 2010; Jeroen Roovers <jer@gentoo.org> readline-6.1.ebuild:
   Stable for HPPA (bug #310819).
