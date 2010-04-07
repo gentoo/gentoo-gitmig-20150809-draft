@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.2.ebuild,v 1.1 2010/04/07 08:38:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.2.ebuild,v 1.2 2010/04/07 08:41:10 ssuominen Exp $
 
 EAPI=3
 inherit linux-info
 
 DESCRIPTION="D-Bus abstraction for enumerating power devices and querying history and statistics"
 HOMEPAGE="http://upower.freedesktop.org/"
-SRC_URI="http://upower.freedesktop.org/releases/upower-0.9.2.tar.bz2"
+SRC_URI="http://upower.freedesktop.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,7 +27,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
-	dev-util/gtk-doc-am
 	doc? ( dev-util/gtk-doc
 		app-text/docbook-xml-dtd:4.1.2 )
 	nls? ( >=dev-util/intltool-0.40.0 )"
