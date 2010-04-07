@@ -12,5 +12,7 @@
 	</longdescription>
 	<use>
 		<flag name="gtk">Enables ArtWorkDB support (including Photos and album covers)</flag>
+		<flag name="iphone">Enables support for the iPhone and iPod touch</flag>
+		<flag name="udev">Enable udev support</flag>
 	</use>
 </pkgmetadata>
