@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/hgsubversion-1.1.ebuild,v 1.1 2010/03/20 17:51:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/hgsubversion-1.1.ebuild,v 1.2 2010/04/07 11:29:55 grobian Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://bitbucket.org/durin42/${PN}/get/${PV}.tar.gz -> ${PN}-${PV}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-solaris"
 IUSE="test"
 
 RDEPEND=">=dev-vcs/mercurial-1.4
