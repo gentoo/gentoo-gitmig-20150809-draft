@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.7.ebuild,v 1.7 2010/01/07 20:11:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fusesmb/fusesmb-0.8.7.ebuild,v 1.8 2010/04/07 16:04:54 patrick Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-fs/fuse-2.3
-		|| ( net-fs/samba-libs[smbclient]
+		|| ( >=net-fs/samba-3.4.6[smbclient]
 			<=net-fs/samba-3.3 )"
 
 DEPEND="${RDEPEND}
