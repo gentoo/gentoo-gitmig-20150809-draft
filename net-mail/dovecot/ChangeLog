@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.234 2010/04/07 16:32:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.235 2010/04/07 16:39:50 patrick Exp $
+
+*dovecot-2.0_beta4 (07 Apr 2010)
+
+  07 Apr 2010; Patrick Lauer <patrick@gentoo.org> +dovecot-2.0_beta4.ebuild:
+  Adding dovecot 2.0 beta, thanks to Eray Aslan
 
 *dovecot-1.2.11-r1 (07 Apr 2010)
 
