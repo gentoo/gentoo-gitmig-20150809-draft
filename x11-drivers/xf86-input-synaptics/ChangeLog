@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.46 2010/04/02 10:25:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.47 2010/04/07 21:43:14 scarabeus Exp $
+
+  07 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xf86-input-synaptics-1.2.1.ebuild, xf86-input-synaptics-1.2.2.ebuild:
+  Fix warning message displaying. Per bug #298227.
 
 *xf86-input-synaptics-1.2.2 (02 Apr 2010)
 
