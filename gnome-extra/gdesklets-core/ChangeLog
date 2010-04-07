@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.119 2010/03/01 18:30:41 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.120 2010/04/07 04:22:57 darkside Exp $
+
+  07 Apr 2010; Jeremy Olexa <darkside@gentoo.org>
+  gdesklets-core-0.36.1-r2.ebuild, gdesklets-core-0.36.1-r3.ebuild,
+  gdesklets-core-0.36.2.ebuild:
+  Due to portage's environment filtering, variables that start with BASH_
+  cannot be used. As such, s/BASH_COMPLETION_NAME/BASHCOMPLETION_NAME/g for
+  bug 312671
 
 *gdesklets-core-0.36.2 (01 Mar 2010)
 

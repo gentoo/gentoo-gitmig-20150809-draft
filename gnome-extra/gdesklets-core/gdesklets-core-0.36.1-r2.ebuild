@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r2.ebuild,v 1.5 2009/09/06 20:50:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r2.ebuild,v 1.6 2010/04/07 04:22:57 darkside Exp $
 
 # desklets don't run with USE=debug
 GCONF_DEBUG="no"
@@ -70,7 +70,7 @@ src_install() {
 	gnome2_src_install
 
 	# Install bash completion script
-	BASH_COMPLETION_NAME="gDesklets"
+	BASHCOMPLETION_NAME="gDesklets"
 	dobashcompletion "${FILESDIR}/${PN}-${PV}-bash-completion"
 
 	# Install autostart script
@@ -116,7 +116,7 @@ pkg_postinst() {
 	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/gdesklets-migration-tool"
 	elog "after the first time you run gDesklets"
 	elog
-	BASH_COMPLETION_NAME="gDesklets"
+	BASHCOMPLETION_NAME="gDesklets"
 	bash-completion_pkg_postinst
 
 }
