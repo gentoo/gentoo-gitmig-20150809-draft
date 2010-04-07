@@ -16,12 +16,13 @@ diff -NrU5 httpup-0.3.2.orig/configparser.cpp httpup-0.3.2/configparser.cpp
 diff -NrU5 httpup-0.3.2.orig/httpup.cpp httpup-0.3.2/httpup.cpp
 --- httpup-0.3.2.orig/httpup.cpp	2008-06-20 15:59:35.000000000 +0200
 +++ httpup-0.3.2/httpup.cpp	2008-06-20 15:59:43.000000000 +0200
-@@ -13,10 +13,12 @@
+@@ -13,11 +13,13 @@
  
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <unistd.h>
  #include <dirent.h>
+ #include <libgen.h>
 +#include <cstring>
 +#include <cstdlib>
  
