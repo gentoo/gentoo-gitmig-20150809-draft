@@ -1,15 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/kuickshow-0.9.1.ebuild,v 1.1 2010/02/21 16:21:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/kuickshow-0.9.1.ebuild,v 1.2 2010/04/07 21:01:08 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
-KDE_MINIMAL=4.4
 KDE_LINGUAS="af ar be bg bn br ca ca@valencia cs cy da de el en_GB eo es et eu
 fa fi fr ga gl he hi hne hr hu is it ja km lt lv mai mk ms nb nds ne nl nn oc pa
 pl pt pt_BR ro ru se sk sl sv ta tg th tr uk uz uz@cyrillic vi xh zh_CN zh_TW"
 KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
-
 inherit kde4-base
 
 KDE_VERSION=4.4.0
