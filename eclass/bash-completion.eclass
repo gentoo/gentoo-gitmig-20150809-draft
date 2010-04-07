@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.23 2010/01/02 00:07:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.24 2010/04/07 04:20:46 darkside Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
@@ -13,7 +13,7 @@
 # contributed (ie not included in bash-completion proper)
 # bash-completion scripts.
 
-# @ECLASS-VARIABLE: BASH_COMPLETION_NAME
+# @ECLASS-VARIABLE: BASHCOMPLETION_NAME
 # @DESCRIPTION:
 # Install the completion script with this name (see also dobashcompletion)
 
@@ -31,19 +31,19 @@ PDEPEND="bash-completion? ( app-shells/bash-completion )"
 # @USAGE: < file > [ new_file ]
 # @DESCRIPTION:
 # First arg, <file>, is required and is the location of the bash-completion
-# script to install.  If the variable BASH_COMPLETION_NAME is set in the
+# script to install.  If the variable BASHCOMPLETION_NAME is set in the
 # ebuild, dobashcompletion will install <file> as
-# /usr/share/bash-completion/$BASH_COMPLETION_NAME. If it is not set,
+# /usr/share/bash-completion/$BASHCOMPLETION_NAME. If it is not set,
 # dobashcompletion will check if a second arg [new_file] was passed, installing as
 # the specified name.  Failing both these checks, dobashcompletion will
 # install the file as /usr/share/bash-completion/${PN}.
 dobashcompletion() {
 	[[ -z "$1" ]] && die "usage: dobashcompletion <file> <new file>"
-	[[ -z "${BASH_COMPLETION_NAME}" ]] && BASH_COMPLETION_NAME="${2:-${PN}}"
+	[[ -z "${BASHCOMPLETION_NAME}" ]] && BASHCOMPLETION_NAME="${2:-${PN}}"
 
 	if use bash-completion ; then
 		insinto /usr/share/bash-completion
-		newins "$1" "${BASH_COMPLETION_NAME}" || die "Failed to install $1"
+		newins "$1" "${BASHCOMPLETION_NAME}" || die "Failed to install $1"
 	fi
 }
 
@@ -55,11 +55,11 @@ bash-completion_pkg_postinst() {
 		elog "In the case that you haven't yet enabled command-line completion"
 		elog "for ${PN}, you can run:"
 		elog
-		elog "  eselect bashcomp enable ${BASH_COMPLETION_NAME:-${PN}}"
+		elog "  eselect bashcomp enable ${BASHCOMPLETION_NAME:-${PN}}"
 		elog
 		elog "to install locally, or"
 		elog
-		elog "  eselect bashcomp enable --global ${BASH_COMPLETION_NAME:-${PN}}"
+		elog "  eselect bashcomp enable --global ${BASHCOMPLETION_NAME:-${PN}}"
 		elog
 		elog "to install system-wide."
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.183 2010/03/28 02:23:19 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.184 2010/04/07 04:20:46 darkside Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -692,7 +692,7 @@ vim_pkg_postinst() {
 
 	# Display bash-completion message
 	if [[ ${MY_PN} == "vim-core" ]] ; then
-		export BASH_COMPLETION_NAME="xxd"
+		export BASHCOMPLETION_NAME="xxd"
 	fi
 	bash-completion_pkg_postinst
 
