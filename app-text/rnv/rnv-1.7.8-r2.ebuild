@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/rnv-1.7.8-r2.ebuild,v 1.2 2008/10/27 19:14:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/rnv-1.7.8-r2.ebuild,v 1.3 2010/04/08 13:57:23 fauli Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.davidashen.net/PreTI/RNV/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-libs/expat"
