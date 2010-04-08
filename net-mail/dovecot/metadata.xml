@@ -2,6 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>net-mail</herd>
+        <maintainer>
+                <email>eray.aslan@caf.com.tr</email>
+                <name>Eray Aslan</name>
+        </maintainer>
+        <maintainer>
+                <email>patrick@gentoo.org</email>
+                <name>Patrick Lauer (proxy maint)</name>
+        </maintainer>
   <use>
     <flag name="cydir">Adds cydir storage support</flag>
     <flag name="dbox">Adds dbox storage support</flag>
