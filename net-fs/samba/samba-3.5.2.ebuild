@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.2.ebuild,v 1.1 2010/04/07 15:24:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.2.ebuild,v 1.2 2010/04/08 10:05:23 patrick Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ if use server ; then
 
 	use swat && SBINPROGS="${SBINPROGS} bin/swat"
 	use winbind && SBINPROGS="${SBINPROGS} bin/winbindd"
-	use ads && use winbind && SBIN_PROGS="${SBINPROGS} bin/winbind_krb5_locator"
+	use ads && use winbind && SBINPROGS="${SBINPROGS} bin/winbind_krb5_locator"
 fi
 
 if use client ; then
