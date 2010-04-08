@@ -1,13 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.2.ebuild,v 1.7 2010/02/26 16:44:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.2.ebuild,v 1.8 2010/04/08 16:40:29 arfrever Exp $
 
-EAPI=2
-NEED_PYTHON=2.4
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils versionator
 
-SERIES=$(get_version_component_range 1-2)
+SERIES="$(get_version_component_range 1-2)"
 
 DESCRIPTION="Extensions to the Python unittest library"
 HOMEPAGE="https://launchpad.net/testtools"
@@ -19,4 +20,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
+
+src_test() {
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" -m testtools.run testtools.tests.test_suite
+	}
+	python_execute_function testing
+}
