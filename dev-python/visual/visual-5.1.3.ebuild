@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.1.3.ebuild,v 1.1 2010/04/05 17:11:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.1.3.ebuild,v 1.2 2010/04/08 02:28:41 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="tk"
+PYTHON_USE_WITH_OPT="examples"
 
 inherit eutils python flag-o-matic versionator
 
