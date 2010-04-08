@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.122 2010/04/07 22:43:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.123 2010/04/08 07:25:55 fauli Exp $
+
+  08 Apr 2010; Christian Faulhammer <fauli@gentoo.org> gramps-3.2.0.ebuild:
+  properly fix bug 311523 through python_set_active_version
 
   07 Apr 2010; Christian Faulhammer <fauli@gentoo.org> gramps-3.2.0.ebuild:
   properly fix bug 311523 by setting PYTHON_DEPEND variable
