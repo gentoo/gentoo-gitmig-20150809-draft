@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xdotool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.8 2010/04/08 15:31:05 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.9 2010/04/08 16:12:22 joker Exp $
+
+  08 Apr 2010; Christian Birchinger <joker@gentoo.org>
+  -xdotool-20090815.ebuild, xdotool-20091231.02.ebuild:
+  Removing raw-ldflags() stops the QA notice about ignored LDFLAGS. The user
+  LDFLAGS show up in raw form during src_compile and it seems to work
+
+  08 Apr 2010; Christian Birchinger <joker@gentoo.org>
+  -xdotool-20090815.ebuild:
+  Remove older versions.
 
 *xdotool-1.20100318.2737 (08 Apr 2010)
 
