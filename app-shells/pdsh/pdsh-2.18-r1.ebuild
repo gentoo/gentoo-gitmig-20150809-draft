@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.18-r1.ebuild,v 1.1 2010/04/06 16:30:56 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.18-r1.ebuild,v 1.2 2010/04/08 07:22:11 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://computing.llnl.gov/linux/pdsh.html"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="crypt readline rsh"
 RDEPEND="crypt? ( net-misc/openssh )
 	rsh? ( net-misc/netkit-rsh )
