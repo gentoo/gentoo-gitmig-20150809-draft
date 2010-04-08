@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.0.ebuild,v 1.2 2010/04/07 15:28:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.0.ebuild,v 1.3 2010/04/08 09:04:32 ssuominen Exp $
 
 EAPI=3
 inherit bash-completion
@@ -11,10 +11,10 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="debug doc nls"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="debug doc nls zeroconf"
 
-RDEPEND=">=sys-fs/udev-147[extras]
+COMMON_DEPEND=">=sys-fs/udev-147[extras]
 	>=dev-libs/glib-2.16.1:2
 	>=sys-apps/dbus-1
 	>=dev-libs/dbus-glib-0.82
@@ -24,7 +24,9 @@ RDEPEND=">=sys-fs/udev-147[extras]
 	>=dev-libs/libatasmart-0.14
 	>=sys-apps/sg3_utils-1.27.20090411
 	!sys-apps/devicekit-disks"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	zeroconf? ( net-dns/avahi )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
@@ -40,17 +42,17 @@ src_configure() {
 		$(use_enable debug verbose-mode) \
 		--enable-man-pages \
 		$(use_enable doc gtk-doc) \
+		$(use_enable zeroconf remote-access) \
 		$(use_enable nls) \
 		--with-html-dir="${EPREFIX}/usr/share/doc/${PF}/html"
 }
 
 src_install() {
-	emake DESTDIR="${D}" profiledir="${T}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS HACKING NEWS README
 
-	if use bash-completion; then
-		dobashcompletion tools/udisks-bash-completion.sh || die
-	fi
+	rm -f "${D}"/etc/profile.d/udisks-bash-completion.sh
+	dobashcompletion tools/udisks-bash-completion.sh ${PN}
 
 	find "${ED}" -name '*.la' -delete
 }
