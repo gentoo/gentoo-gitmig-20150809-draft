@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.70 2010/03/24 14:15:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.71 2010/04/08 02:20:41 mr_bones_ Exp $
+
+  08 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org> vice-2.2.ebuild:
+  patch location for files - sed patch from Marcin Deranek via bug #313741
 
   24 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   files/vice-2.2-xshm.patch:
