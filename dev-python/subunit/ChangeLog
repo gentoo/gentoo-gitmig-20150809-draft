@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/subunit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.1 2010/04/08 07:39:25 fauli Exp $
+
+*subunit-0.0.5 (08 Apr 2010)
+
+  08 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  +subunit-0.0.5.ebuild, +metadata.xml:
+  initial commit by me
+
