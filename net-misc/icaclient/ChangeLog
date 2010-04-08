@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.72 2010/03/08 07:55:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.73 2010/04/08 08:18:58 fauli Exp $
+
+*icaclient-11.100-r1 (08 Apr 2010)
+
+  08 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  +icaclient-11.100-r1.ebuild:
+  Introduce nsplugin USE flag as suggested (with patch) by Peter Gantner
+  <gentoo AT nephros DOT org> in bug 309141
 
 *icaclient-11.100 (08 Mar 2010)
 
