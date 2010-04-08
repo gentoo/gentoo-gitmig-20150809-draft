@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.0-r1.ebuild,v 1.2 2010/04/07 17:24:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.1.ebuild,v 1.1 2010/04/08 05:55:08 pva Exp $
 
 EAPI="2"
-inherit flag-o-matic toolchain-funcs eutils versionator autotools
+inherit flag-o-matic toolchain-funcs eutils autotools
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -22,8 +22,6 @@ DEPEND="${RDEPEND}
 	test? ( app-arch/sharutils
 		dev-lang/perl )"
 
-S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
-
 pkg_setup() {
 	if use samba ; then
 		ewarn
@@ -38,11 +36,6 @@ pkg_setup() {
 	fi
 	enewgroup tcpdump
 	enewuser tcpdump -1 -1 -1 tcpdump
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-without-chroot.patch"
-	eautoconf
 }
 
 src_configure() {
@@ -65,9 +58,8 @@ src_compile() {
 }
 
 src_test() {
-	#sed '/^\(bgp_vpn_attrset\|ikev2four\|espudp1\|eapon1\)/d;' -i tests/TESTLIST
-	#make check || die "tests failed"
-	ewarn "tests are broken in the release... (tests directory missed in tarball)"
+	sed '/^\(espudp1\|eapon1\)/d;' -i tests/TESTLIST
+	make check || die "tests failed"
 }
 
 src_install() {
@@ -88,5 +80,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	use suid && elog "To let normal users run tcpdump add them into tcpdump group."
+	elog "To let normal users run tcpdump add them into tcpdump group."
 }
