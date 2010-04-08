@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.111 2010/04/08 07:46:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.112 2010/04/08 10:29:50 pva Exp $
+
+  08 Apr 2010; Peter Volkov <pva@gentoo.org> transmission-1.92.ebuild:
+  amd64 stable, security bug #309831
 
   08 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   transmission-1.92.ebuild:
