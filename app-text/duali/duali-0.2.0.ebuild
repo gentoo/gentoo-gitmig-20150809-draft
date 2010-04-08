@@ -1,32 +1,48 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duali/duali-0.2.0.ebuild,v 1.1 2007/01/22 20:04:01 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duali/duali-0.2.0.ebuild,v 1.2 2010/04/08 19:26:12 arfrever Exp $
 
-inherit distutils
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
-IUSE=""
+inherit python
 
 DESCRIPTION="Arabic dictionary based on the DICT protocol"
 HOMEPAGE="http://www.arabeyes.org/project.php?proj=Duali"
 SRC_URI="mirror://sourceforge/arabeyes/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND=""
 PDEPEND="app-dicts/duali-data"
+RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
-	into /usr
 	dobin duali dict2db trans2arabic arabic2trans
+	python_convert_shebangs -r 2 "${ED}usr/bin"
+
 	insinto /etc
 	doins duali.conf
+
 	doman doc/man/*
 
-	distutils_python_version
-	insinto /usr/lib/python${PYVER}/site-packages/pyduali
-	doins pyduali/*.py
+	installation() {
+		insinto $(python_get_sitedir)/pyduali
+		doins pyduali/*.py
+	}
+	python_execute_function installation
 
 	dodoc README ChangeLog INSTALL MANIFEST
+}
+
+pkg_postinst() {
+	python_mod_optimize pyduali
+}
+
+pkg_postrm() {
+	python_mod_cleanup pyduali
 }

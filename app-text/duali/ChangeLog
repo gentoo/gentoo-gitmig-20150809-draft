@@ -1,6 +1,10 @@
 # ChangeLog for app-text/duali
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.13 2007/01/30 01:03:46 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.14 2010/04/08 19:26:12 arfrever Exp $
+
+  08 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  duali-0.2.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #312099).
 
   30 Jan 2007; Vlastimil Babka <caster@gentoo.org> ChangeLog:
   Fix manifest.
