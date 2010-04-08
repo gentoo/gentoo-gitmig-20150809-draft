@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.65 2010/04/02 09:44:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.66 2010/04/08 06:19:28 jlec Exp $
+
+  08 Apr 2010; Justin Lecher <jlec@gentoo.org> -expect-5.44.1.ebuild:
+  Removed due to a upstream recall of this version, #313567
 
   02 Apr 2010; Justin Lecher <jlec@gentoo.org> +expect-5.44.1.ebuild,
   +files/expect-5.44.1-darwin.patch, +files/expect-5.44.1-ldflags.patch:
