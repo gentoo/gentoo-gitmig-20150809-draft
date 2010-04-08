@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.0.ebuild,v 1.1 2010/03/31 17:27:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.0.ebuild,v 1.2 2010/04/08 23:35:39 matsuu Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2:2.5"
+PYTHON_USE_WITH="sqlite"
 inherit eutils python
 
 PYDB_TAR="pinyin-database-1.2.99.tar.bz2"
@@ -17,7 +19,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 RDEPEND=">=app-i18n/ibus-1.1.0
-	>=dev-lang/python-2.5[sqlite]
 	dev-libs/libsigc++:2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}

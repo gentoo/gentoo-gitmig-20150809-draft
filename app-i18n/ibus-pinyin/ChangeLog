@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/ibus-pinyin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.17 2010/03/31 17:27:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.18 2010/04/08 23:35:39 matsuu Exp $
+
+*ibus-pinyin-1.3.1 (08 Apr 2010)
+
+  08 Apr 2010; MATSUU Takuto <matsuu@gentoo.org>
+  ibus-pinyin-1.2.0.20090915.ebuild, -ibus-pinyin-1.2.99.20100212.ebuild,
+  -ibus-pinyin-1.2.99.20100308.ebuild, -ibus-pinyin-1.2.99.20100318.ebuild,
+  ibus-pinyin-1.3.0.ebuild, +ibus-pinyin-1.3.1.ebuild:
+  Version bumped. Removed old versions. Fixed python dependency, bug
+  #311211.
 
 *ibus-pinyin-1.3.0 (31 Mar 2010)
 
