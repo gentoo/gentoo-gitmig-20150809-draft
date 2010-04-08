@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Format-Human-Bytes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Format-Human-Bytes/ChangeLog,v 1.1 2010/02/15 12:48:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Format-Human-Bytes/ChangeLog,v 1.2 2010/04/08 20:04:56 tove Exp $
+
+*Format-Human-Bytes-0.05 (08 Apr 2010)
+
+  08 Apr 2010; Torsten Veller <tove@gentoo.org>
+  +Format-Human-Bytes-0.05.ebuild:
+  Version bump
 
   15 Feb 2010; Torsten Veller <tove@gentoo.org>
   +Format-Human-Bytes-0.04.ebuild, +metadata.xml:
