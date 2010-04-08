@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.55 2010/04/03 21:31:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.56 2010/04/08 01:36:59 chiiph Exp $
+
+  08 Apr 2010; Tomas Touceda <chiiph@gentoo.org> metadata.xml:
+  Update metadata. Putting myself as the direct maintainer
 
   03 Apr 2010; Justin Lecher <jlec@gentoo.org> axel-2.4.ebuild:
   Imported from prefix overlay
