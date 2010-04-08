@@ -1,10 +1,11 @@
 # ChangeLog for app-portage/portato
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.22 2010/04/08 17:57:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.23 2010/04/08 18:01:48 idl0r Exp $
 
   08 Apr 2010; Christian Ruppert <idl0r@gentoo.org> -portato-0.12.1.ebuild,
-  -portato-0.13.ebuild:
+  -portato-0.13.ebuild portato-0.13.1.ebuild:
   Remove old/unsupported versions.
+  Update HOMEPAGE.
 
   09 Mar 2010; Paul Varner <fuzzyray@gentoo.org> metadata.xml:
   Change herd to tools-portage.
