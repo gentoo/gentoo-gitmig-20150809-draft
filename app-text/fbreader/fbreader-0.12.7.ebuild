@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.7.ebuild,v 1.1 2010/03/06 19:37:00 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.7.ebuild,v 1.2 2010/04/08 17:13:01 spatz Exp $
 
 EAPI=2
 
@@ -35,7 +35,8 @@ src_prepare() {
 	sed -i "s:^Name=E-book reader:Name=FBReader:" fbreader/desktop/desktop || die "sed failed"
 	sed -i "s:^Name\[ru\]=.*$:Name\[ru\]=FBReader:" fbreader/desktop/desktop || die "sed failed"
 	sed -i "s:^Icon=FBReader.png:Icon=FBReader:" fbreader/desktop/desktop || die "sed failed"
-	sed -i "s:^	LDFLAGS += -s::" makefiles/config.mk || die "sed failed"
+	sed -i "/^	LDFLAGS += -s$/ d" makefiles/config.mk || die "sed failed"
+	sed -i "/^LDFLAGS =$/ d" makefiles/arch/desktop.mk || die "sed failed"
 
 	echo "TARGET_ARCH = desktop" > makefiles/target.mk
 	echo "LIBDIR = /usr/$(get_libdir)" >> makefiles/target.mk
