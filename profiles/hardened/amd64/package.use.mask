@@ -67,7 +67,6 @@ games-emulation/xmess mmx
 media-gfx/inkscape mmx
 media-libs/allegro mmx sse
 media-libs/libfame mmx
-media-libs/libmovtar mmx
 media-libs/sdl-gfx mmx
 media-libs/smpeg mmx
 media-video/mjpegtools mmx

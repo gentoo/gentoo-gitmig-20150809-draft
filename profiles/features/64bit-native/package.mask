@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.49 2010/03/16 09:26:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.50 2010/04/08 13:53:18 ssuominen Exp $
 
 # 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
 # needs amd64 multilib
@@ -89,13 +89,11 @@ games-fps/doom3-chextrek
 games-fps/doom3-data
 games-fps/doom3-demo
 games-fps/doom3-ducttape
-games-fps/doom3-dungeon
 games-fps/doom3-eventhorizon
 games-fps/doom3-hellcampaign
 games-fps/doom3-inhell
 games-fps/doom3-lms
 games-fps/doom3-mitm
-games-fps/doom3-opencoop
 games-fps/doom3-phantasm
 games-fps/doom3-roe
 games-fps/doom3
@@ -128,7 +126,6 @@ games-fps/quake3-threewave
 games-fps/quake3-urbanterror
 games-fps/quake4-bin
 games-fps/quake4-data
-games-fps/quake4-deltactf
 games-fps/quake4-demo
 games-fps/rtcw
 games-fps/rtcwmp-demo
@@ -187,7 +184,6 @@ net-im/skype
 net-im/skysentials
 net-libs/xulrunner-bin
 net-misc/icaclient
-net-nntp/bnr2
 net-p2p/sancho-bin
 net-voip/wengophone-bin
 sci-biology/foldingathome
@@ -200,7 +196,6 @@ sys-apps/memtest86
 sys-apps/memtest86+
 sys-block/hpacucli
 sys-libs/lib-compat-loki
-<www-client/opera-9.62
 www-client/firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.58 2010/04/08 13:42:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.59 2010/04/08 13:53:17 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -97,7 +97,6 @@ games-emulation/xmess mmx
 media-gfx/inkscape mmx
 media-libs/allegro mmx sse
 media-libs/libfame mmx
-media-libs/libmovtar mmx
 media-libs/sdl-gfx mmx
 media-libs/smpeg mmx
 net-irc/xchat mmx
