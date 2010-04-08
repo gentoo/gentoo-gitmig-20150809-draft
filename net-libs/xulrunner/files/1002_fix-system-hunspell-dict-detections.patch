@@ -1,5 +1,29 @@
---- ./extensions/spellcheck/hunspell/src/mozHunspell.cpp.orig	2008-02-15 19:21:21.000000000 +0000
-+++ ./extensions/spellcheck/hunspell/src/mozHunspell.cpp	2008-02-15 19:23:20.000000000 +0000
+diff -r e06632956519 extensions/spellcheck/Makefile.in
+--- a/extensions/spellcheck/Makefile.in	Sun Apr 04 07:02:14 2010 +0300
++++ b/extensions/spellcheck/Makefile.in	Tue Apr 06 23:07:03 2010 -0500
+@@ -42,13 +42,19 @@
+ include $(DEPTH)/config/autoconf.mk
+ 
+ MODULE		= spellchecker
++ifndef MOZ_NATIVE_HUNSPELL
+ DIRS		= idl locales
++else
++DIRS		= idl
++endif
+ 
+ ifeq (camino,$(MOZ_BUILD_APP))
+ DIRS		+= osxspell
+ else
++ifndef MOZ_NATIVE_HUNSPELL
+ DIRS		+= hunspell
+ endif
++endif
+ 
+ DIRS += src
+ 
+diff -r e06632956519 extensions/spellcheck/hunspell/src/mozHunspell.cpp
+--- a/extensions/spellcheck/hunspell/src/mozHunspell.cpp	Sun Apr 04 07:02:14 2010 +0300
++++ b/extensions/spellcheck/hunspell/src/mozHunspell.cpp	Tue Apr 06 23:07:03 2010 -0500
 @@ -63,6 +63,9 @@
  #include "nsISimpleEnumerator.h"
  #include "nsIDirectoryEnumerator.h"
@@ -38,9 +62,10 @@
  
    nsCOMPtr<nsISimpleEnumerator> dictDirs;
    rv = dirSvc->Get(DICTIONARY_SEARCH_DIRECTORY_LIST,
---- ./extensions/spellcheck/src/Makefile.in.orig	2008-02-15 19:25:58.000000000 +0000
-+++ ./extensions/spellcheck/src/Makefile.in	2008-02-15 19:28:36.000000000 +0000
-@@ -63,9 +63,16 @@
+diff -r e06632956519 extensions/spellcheck/src/Makefile.in
+--- a/extensions/spellcheck/src/Makefile.in	Sun Apr 04 07:02:14 2010 +0300
++++ b/extensions/spellcheck/src/Makefile.in	Tue Apr 06 23:07:03 2010 -0500
+@@ -63,9 +63,15 @@
  		  txtsvc \
  		  uconv \
  		  unicharutil \
@@ -49,16 +74,15 @@
  
 -CPPSRCS		= \
 +ifdef MOZ_NATIVE_HUNSPELL
-+CPPSRCS         += mozHunspell.cpp
-+ifdef MOZ_XUL_APP
-+CPPSRCS         += mozHunspellDirProvider.cpp
++CPPSRCS         += mozHunspell.cpp \
++		mozHunspellDirProvider.cpp
 +endif
-+endif
++
 +CPPSRCS		+= \
  		mozSpellCheckerFactory.cpp	\
  		mozSpellChecker.cpp		\
  		mozPersonalDictionary.cpp	\
-@@ -80,8 +87,14 @@
+@@ -80,8 +86,15 @@
  SHARED_LIBRARY_LIBS += ../osxspell/src/$(LIB_PREFIX)osxspell_s.$(LIB_SUFFIX)
  LOCAL_INCLUDES += -I$(srcdir)/../osxspell/src
  else
@@ -67,51 +91,22 @@
  LOCAL_INCLUDES += -I$(srcdir)/../hunspell/src
 +else
 +LOCAL_INCLUDES += $(MOZ_HUNSPELL_CFLAGS) \
++		-I$(srcdir)/../hunspell/src \
 +		-DMOZ_NATIVE_HUNSPELL \
 +		$(NULL)
 +endif
  endif
  
  EXTRA_DSO_LDOPTS = \
-@@ -96,3 +112,18 @@
+@@ -96,3 +109,11 @@
  LOCAL_INCLUDES += \
  	-I$(topsrcdir)/xpcom/io \
  	$(NULL)
 +
 +ifdef MOZ_NATIVE_HUNSPELL
-+export:: $(srcdir)/../hunspell/src/mozHunspell.cpp
-+	$(INSTALL) $(srcdir)/../hunspell/src/mozHunspell.* .
-+GARBAGE += mozHunspell.$(OBJ_SUFFIX) mozHunspell.cpp
++export:: $(srcdir)/../hunspell/src/mozHunspell.cpp $(srcdir)/../hunspell/src/mozHunspellDirProvider.cpp
++	$(INSTALL) $(srcdir)/../hunspell/src/mozHunspell.* $(srcdir)/../hunspell/src/mozHunspellDirProvider.* .
++GARBAGE += mozHunspell.$(OBJ_SUFFIX) mozHunspell.cpp mozHunspellDirProvider.$(OBJ_SUFFIX) mozHunspellDirProvider.cpp
 +clean::
-+	rm -f mozHunspell.*
-+ifdef MOZ_XUL_APP
-+export:: $(srcdir)/../hunspell/src/mozHunspellDirProvider.cpp
-+	$(INSTALL) $(srcdir)/../hunspell/src/mozHunspellDirProvider.* .
-+GARBAGE += mozHunspellDirProvider.$(OBJ_SUFFIX) mozHunspellDirProvider.cpp
-+clean::
-+	rm -f mozHunspellDirProvider.*
++	rm -f mozHunspell.* mozHunspellDirProvider.*
 +endif
-+endif
---- ./extensions/spellcheck/Makefile.in.orig	2008-02-15 19:23:39.000000000 +0000
-+++ ./extensions/spellcheck/Makefile.in	2008-02-15 19:24:34.000000000 +0000
-@@ -42,13 +42,19 @@
- include $(DEPTH)/config/autoconf.mk
- 
- MODULE		= spellchecker
--DIRS		= idl locales
-+ifndef MOZ_NATIVE_HUNSPELL
-+DIRS		= idl locales
-+else
-+DIRS		= idl
-+endif
- 
- ifeq (camino,$(MOZ_BUILD_APP))
- DIRS		+= osxspell
- else
-+ifndef MOZ_NATIVE_HUNSPELL
- DIRS		+= hunspell
- endif
-+endif
- 
- DIRS += src
-
