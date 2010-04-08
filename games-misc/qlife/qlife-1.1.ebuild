@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-1.1.ebuild,v 1.1 2010/03/02 19:50:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-1.1.ebuild,v 1.2 2010/04/08 07:54:29 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
@@ -13,7 +13,7 @@ SRC_URI="http://open-maker.tuxfamily.org/blog/public/${PN}_linux.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
