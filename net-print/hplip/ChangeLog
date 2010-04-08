@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.154 2010/04/06 19:14:52 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.155 2010/04/08 18:56:13 billie Exp $
+
+  08 Apr 2010; Daniel Pielmeier <billie@gentoo.org> hplip-3.9.12-r1.ebuild,
+  -hplip-3.10.2.ebuild, hplip-3.10.2-r4.ebuild, metadata.xml:
+  Fix scanner dependencies. Remove old.
 
 *hplip-3.10.2-r4 (06 Apr 2010)
 

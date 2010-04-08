@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r4.ebuild,v 1.1 2010/04/06 19:14:52 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.10.2-r4.ebuild,v 1.2 2010/04/08 18:56:13 billie Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
-IUSE="doc fax gtk +hpcups hpijs libnotify minimal -new-hpcups parport policykit qt4 scanner snmp static-ppds -udev-acl"
+IUSE="doc fax +hpcups hpijs libnotify minimal -new-hpcups parport policykit qt4 scanner snmp static-ppds -udev-acl X"
 
 COMMON_DEPEND="
 	media-libs/jpeg
@@ -46,8 +46,8 @@ RDEPEND="${COMMON_DEPEND}
 		dev-python/pygobject
 		kernel_linux? ( >=sys-fs/udev-114 )
 		scanner? (
-			gtk? ( media-gfx/xsane )
-			!gtk? ( || ( media-gfx/sane-frontends dev-python/imaging ) )
+			dev-python/imaging
+			X? ( || ( media-gfx/xsane media-gfx/sane-frontends ) )
 		)
 		fax? (
 			dev-python/reportlab
@@ -75,7 +75,7 @@ pkg_setup() {
 
 	! use qt4 && ewarn "You need USE=qt4 for the hplip GUI."
 
-	use scanner && ! use gtk && ewarn "You need USE=gtk for the scanner GUI."
+	use scanner && ! use X && ewarn "You need USE=X for the scanner GUI."
 
 	if ! use hpcups && ! use hpijs ; then
 		ewarn "Installing neither hpcups (USE=-hpcups) nor hpijs (USE=-hpijs) driver,"

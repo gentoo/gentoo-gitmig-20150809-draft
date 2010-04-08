@@ -23,8 +23,8 @@
     <flag name="doc">Build documentation</flag>
     <flag name="fax">Enable fax on multifunction devices which support
     it</flag>
-    <flag name="gtk">Enable GTK+ dependencies, currently only the scanner GUI
-    with USE=scanner</flag>
+    <flag name="X">Enables scanner GUI dependencies with USE=scanner
+	where media-gfx/xsane is preferred over media-gfx/sane-frontends</flag>
     <flag name="hpcups">Build the hpcups driver for cups (by HP)</flag>
     <flag name="hpijs">Build the IJS driver for cups (Foomatic)</flag>
     <flag name="libnotify">Enables desktop notifications</flag>
