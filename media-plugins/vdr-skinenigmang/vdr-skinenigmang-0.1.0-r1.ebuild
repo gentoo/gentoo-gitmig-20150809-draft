@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.1.0.ebuild,v 1.3 2010/04/08 14:57:50 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.1.0-r1.ebuild,v 1.1 2010/04/08 14:57:50 hd_brummy Exp $
 
 EAPI="2"
 
@@ -12,14 +12,14 @@ SRC_URI="http://andreas.vdr-developer.org/enigmang/download/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="imagemagick"
 
 DEPEND=">=media-video/vdr-1.5.7"
 
 RDEPEND="${DEPEND}
 		x11-themes/skinenigmang-logos
-		imagemagick? ( media-gfx/imagemagick )"
+		imagemagick? ( media-gfx/imagemagick[cxx] )"
 
 S=${WORKDIR}/skinenigmang-${PV}
 
