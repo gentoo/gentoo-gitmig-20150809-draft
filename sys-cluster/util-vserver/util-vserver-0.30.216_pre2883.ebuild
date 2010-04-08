@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2855.ebuild,v 1.1 2009/11/11 08:47:50 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2883.ebuild,v 1.1 2010/04/08 09:55:22 hollow Exp $
 
 inherit eutils bash-completion
 
@@ -122,10 +122,4 @@ pkg_postinst() {
 		ewarn "  ln -s /etc/init.d/vservers.default /etc/init.d/vservers.<mark>"
 		ewarn
 	fi
-
-	ewarn "You should definitly fix up the barrier of your vserver"
-	ewarn "base directory by using the following command in a root shell:"
-	ewarn
-	ewarn " setattr --barrier ${VDIRBASE}"
-	ewarn
 }
