@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.5.0.ebuild,v 1.1 2010/04/07 17:04:04 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.5.0.ebuild,v 1.2 2010/04/08 18:31:18 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -35,8 +35,8 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS MAINTAINERS NEWS README THANKS"
 
 pkg_setup() {
-	G2CONF="--disable-schemas-install \
-		--disable-desktop-update \
+	G2CONF="--disable-schemas-install
+		--disable-desktop-update
 		--disable-icon-update"
 }
 
