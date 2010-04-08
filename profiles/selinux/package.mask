@@ -1,15 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.48 2010/01/08 18:00:27 pebenito Exp $
-
-# Chris PeBenito <pebenito@gentoo.org> (08 Jan 2010)
-# Needs updated selinux patch   
-=sys-apps/sysvinit-2.87
-=sys-apps/sysvinit-2.87-r1
-=sys-apps/sysvinit-2.87-r2
-
-# Chris PeBenito <pebenito@gentoo.org> (10 Aug 2009)
-# SELinux code problems
-=sys-apps/portage-2.2_rc37
-=sys-apps/portage-2.2_rc38
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.49 2010/04/08 13:47:54 ssuominen Exp $
 
 # >=sci-libs/acml-3.6 requires gcc-4.2.
 >=sci-libs/acml-3.6
