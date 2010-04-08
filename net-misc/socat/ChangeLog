@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.72 2010/04/02 16:08:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.73 2010/04/08 07:49:39 phajdan.jr Exp $
+
+  08 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> socat-1.7.1.2.ebuild:
+  x86 stable wrt bug #312455
 
   02 Apr 2010; Jeroen Roovers <jer@gentoo.org> socat-1.7.1.2.ebuild:
   Stable for HPPA (bug #312455).
