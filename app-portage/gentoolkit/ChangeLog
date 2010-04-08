@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.187 2010/04/05 21:04:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.188 2010/04/08 22:34:30 fuzzyray Exp $
+
+*gentoolkit-0.3.0_rc10-r1 (08 Apr 2010)
+
+  08 Apr 2010; Paul Varner <fuzzyray@gentoo.org>
+  +gentoolkit-0.3.0_rc10-r1.ebuild, +files/eclean.313901.patch:
+  Revision bump to fix regression in eclean where metadata.dtd gets removed
+  (Bug 313901).
 
 *gentoolkit-0.3.0_rc10 (05 Apr 2010)
 
