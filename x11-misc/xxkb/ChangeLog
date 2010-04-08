@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xxkb
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.14 2008/04/16 08:54:14 phosphan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.15 2010/04/08 20:17:02 phosphan Exp $
+
+*xxkb-1.11-r1 (08 Apr 2010)
+
+  08 Apr 2010; Patrick Kursawe <phosphan@gentoo.org> +xxkb-1.11-r1.ebuild,
+  +files/svg-appdefaults.patch, +files/svg-flags.patch:
+  Added SVG format flags, see bug #297220.
 
 *xxkb-1.11 (16 Apr 2008)
 

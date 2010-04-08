@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11.ebuild,v 1.2 2010/04/08 20:17:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r1.ebuild,v 1.1 2010/04/08 20:17:02 phosphan Exp $
 
 inherit eutils
 
@@ -24,21 +24,36 @@ DEPEND="${RDEPEND}
 	x11-misc/imake
 	svg? ( dev-util/pkgconfig )"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	mkdir flags
+	epatch "${FILESDIR}/svg-flags.patch"
+	use svg && epatch "${FILESDIR}/svg-appdefaults.patch"
+}
 
 src_compile() {
 	local myconf
 	use svg && myconf="-DWITH_SVG_SUPPORT"
 	xmkmf ${myconf} || die "xmkmf failed."
-	emake EXTRA_LIBRARIES="-lXext" PROJECTROOT=/usr PIXMAPDIR=/usr/share/xxkb || die "emake failed."
+	emake CDEBUGFLAGS="${CFLAGS}" EXTRA_LIBRARIES="-lXext" PROJECTROOT=/usr \
+			PIXMAPDIR=/usr/share/xxkb || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	local myopts
+	if use svg; then
+		myopts="PIXMAPS=flags/de.svg flags/pl.svg flags/il.svg flags/by.svg \
+		flags/ua.svg flags/su.svg flags/ru.svg flags/bg.svg flags/en.svg"
+	else
+		myopts="FOOBAR=buzz"
+	fi
+	emake "${myopts}"  DESTDIR="${D}" install || die "emake install failed"
 	emake DESTDIR="${D}" install.man || die "emake install.man failed"
 
 	insinto /usr/share/xxkb
-	doins "${FILESDIR}"/*.xpm
-
+	use svg || doins "${FILESDIR}"/*.xpm
 	dodoc README* CHANGES*
 }
