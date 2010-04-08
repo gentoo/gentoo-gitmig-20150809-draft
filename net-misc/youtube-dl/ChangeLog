@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.58 2010/02/21 09:48:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.59 2010/04/08 19:29:28 ricmm Exp $
+
+*youtube-dl-2010.04.04 (08 Apr 2010)
+
+  08 Apr 2010; <ricmm@gentoo.org> +youtube-dl-2010.04.04.ebuild:
+  Version bump. Works with the new layout.
 
   19 Feb 2010; Jeroen Roovers <jer@gentoo.org> youtube-dl-2009.09.13.ebuild:
   Stable for HPPA too.
