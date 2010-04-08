@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.19-r1.ebuild,v 1.1 2010/04/07 06:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.19-r1.ebuild,v 1.2 2010/04/08 01:17:26 mr_bones_ Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ DEPEND="idn? ( net-dns/libidn )
 	sasl? ( >=virtual/gsasl-0.2.4 )"
 
 RDEPEND="${DEPEND}
-	mta? ( 
+	mta? (
 		!mailwrapper? ( !virtual/mta )
 		mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	)"
@@ -86,7 +86,7 @@ src_install () {
 	#local msmtpq=/usr/share/${PN}/$d
 	#insinto ${msmtpqueue}
 	#exeinto ${msmtpqueue}
-	#i=README 
+	#i=README
 	#newdoc scripts/$d/$i $d.$i \
 	#	|| die "dodoc scripts/$d/$i failed"
 
