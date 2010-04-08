@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_beta4.ebuild,v 1.1 2010/04/07 16:39:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_beta4.ebuild,v 1.2 2010/04/08 01:17:44 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -55,7 +55,6 @@ pkg_setup() {
 		enewgroup mail
 	fi
 }
-
 
 src_configure() {
 	local conf=""
@@ -135,7 +134,7 @@ src_install () {
 	dodoc AUTHORS NEWS README TODO || die "basic dodoc failed"
 	rm -f doc/Makefile*
 	dodoc doc/* || die "dodoc doc failed"
-	docinto example-config 
+	docinto example-config
 	dodoc doc/example-config/* || die "dodoc example failed"
 	docinto example-config/conf.d
 	dodoc doc/example-config/conf.d/* || die "dodoc conf.d failed"
