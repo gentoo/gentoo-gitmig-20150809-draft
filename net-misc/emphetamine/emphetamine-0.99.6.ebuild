@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/emphetamine/emphetamine-0.99.6.ebuild,v 1.7 2008/04/26 13:18:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emphetamine/emphetamine-0.99.6.ebuild,v 1.8 2010/04/08 21:01:46 ssuominen Exp $
 
 GCONF_DEBUG=no
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="x11-libs/libelysium
+RDEPEND="x11-libs/libelysium
 	x11-libs/libelysiumui"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog README"
