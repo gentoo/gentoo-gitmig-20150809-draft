@@ -60,14 +60,6 @@ media-sound/lame mmx
 # x86-specific SIMD/asm, bugs #193022 and #207685
 media-sound/mpg123 mmx 3dnow 3dnowext
 
-# 26 Mar 2009: Gordon Malm <gengor@gentoo.org>
-# This version fails if <gcc-4.2, subsequent versions do not
-=x11-libs/pixman-0.12.0 sse2
-
-# Oct 24th 2006; blubb@gentoo.org
-# bug 152646
-x11-themes/polymer mmx sse2
-
 # Oct 23th 2006; blubb@gentoo.org
 # x86 asm only:
 games-emulation/xmame mmx
