@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-0_pre2306.ebuild,v 1.1 2010/04/08 07:46:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-0_pre2306.ebuild,v 1.2 2010/04/08 22:12:52 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -27,7 +27,7 @@ src_prepare() {
 		CXX = $(tc-getCXX)
 		CFLAGS = ${CFLAGS}
 		CXXFLAGS = ${CXXFLAGS}
-		LDOPTS = ${LDFLAGS}
+		LDOPT = ${LDFLAGS}
 		STRIP = :
 		V = 1
 	__EOF__
