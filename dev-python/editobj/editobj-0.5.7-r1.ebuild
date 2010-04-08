@@ -1,11 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r1.ebuild,v 1.1 2009/03/01 19:59:36 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r1.ebuild,v 1.2 2010/04/08 18:10:27 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="tk"
+SUPPORT_PYTHON_ABIS="1"
+
 inherit distutils
 
-MY_P=${P/editobj/EditObj}
+MY_P="${P/editobj/EditObj}"
 
 DESCRIPTION="EditObj can create a dialog box to edit ANY Python object."
 SRC_URI="http://download.gna.org/songwrite/${MY_P}.tar.gz"
@@ -16,10 +20,11 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.2.2[tk]
-	    >=dev-lang/tk-8.3"
+DEPEND=""
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	distutils_src_install
