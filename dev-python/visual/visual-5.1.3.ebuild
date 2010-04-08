@@ -1,11 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.1.3.ebuild,v 1.2 2010/04/08 02:28:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.1.3.ebuild,v 1.3 2010/04/08 03:39:15 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
-PYTHON_USE_WITH="tk"
-PYTHON_USE_WITH_OPT="examples"
 
 inherit eutils python flag-o-matic versionator
 
@@ -51,6 +49,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc authors.txt HACKING.txt NEWS.txt
-	#the vpython script is only use for examples
-	use examples || rm -r "${D}"/usr/bin
+
+	# Don't install useless vpython script.
+	rm -fr "${D}/usr/bin"
 }
