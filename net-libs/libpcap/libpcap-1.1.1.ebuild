@@ -1,21 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.0.1_pre20090708.ebuild,v 1.2 2009/07/22 19:22:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1.ebuild,v 1.1 2010/04/08 05:53:18 pva Exp $
 
 EAPI=2
 inherit autotools eutils multilib toolchain-funcs
 
 DESCRIPTION="A system-independent library for user-level network packet capture"
 HOMEPAGE="http://www.tcpdump.org/"
-MY_P=${PN}-${PV/_pre/-}
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
-S=${WORKDIR}/${MY_P}
-#	SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
-#		http://www.jp.tcpdump.org/release/${P}.tar.gz"
+SRC_URI="http://www.tcpdump.org/release/${P}.tar.gz
+	http://www.jp.tcpdump.org/release/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="bluetooth ipv6 libnl"
 
 RDEPEND="!virtual/libpcap
@@ -23,12 +20,11 @@ RDEPEND="!virtual/libpcap
 	libnl? ( dev-libs/libnl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
+
 PROVIDE="virtual/libpcap"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.0.0-cross-linux.patch"
-	epatch "${FILESDIR}/libpcap-1.0.1_pre20090708-libnl-automagic.patch"
-	echo ${PV} > VERSION # Avoid CVS in version
+	epatch "${FILESDIR}/${PN}-1.1-cross-linux.patch"
 	eautoreconf
 }
 
@@ -43,10 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-shared || die "emake install failed"
-
-	dosym libpcap.so.${PV} /usr/$(get_libdir)/libpcap.so.1
-	dosym libpcap.so.${PV} /usr/$(get_libdir)/libpcap.so
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# We need this to build pppd on G/FBSD systems
 	if [[ "${USERLAND}" == "BSD" ]]; then
