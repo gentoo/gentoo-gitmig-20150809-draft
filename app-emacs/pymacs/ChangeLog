@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/pymacs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.43 2009/11/24 21:14:16 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.44 2010/04/08 10:09:05 fauli Exp $
+
+*pymacs-0.23-r1 (08 Apr 2010)
+
+  08 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  +pymacs-0.23-r1.ebuild:
+  Fix PYTHON_DEPEND usage and only use Python 2.x, fixes bug 311181
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org> pymacs-0.23.ebuild:
   import changes from Prefix overlay
