@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.2.ebuild,v 1.2 2010/04/08 23:19:49 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.2.ebuild,v 1.3 2010/04/08 23:23:32 reavertm Exp $
 
 EAPI="3"
 
@@ -102,6 +102,8 @@ RDEPEND="${COMMONDEPEND}
 		x11-apps/rgb
 		>=x11-misc/xdg-utils-1.0.2-r3
 	)
+"
+PDEPEND="
 	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
 "
 
