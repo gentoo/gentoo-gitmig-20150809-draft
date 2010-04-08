@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.3-r2.ebuild,v 1.1 2010/01/04 17:28:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.3-r2.ebuild,v 1.2 2010/04/08 21:29:22 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit multilib
 
 DESCRIPTION="VDPAU wrapper and trace libraries"
@@ -29,15 +28,20 @@ RDEPEND="x11-libs/libX11
 	!=x11-drivers/nvidia-drivers-190.36
 	!=x11-drivers/nvidia-drivers-190.40"
 DEPEND="${RDEPEND}
-		x11-proto/xproto
-		doc? ( app-doc/doxygen
-			media-gfx/graphviz
-			dev-tex/pdftex )"
+	dev-util/pkgconfig
+	x11-proto/xproto
+	doc? ( app-doc/doxygen
+		media-gfx/graphviz
+		dev-tex/pdftex )"
 
 src_configure() {
-	econf --with-module-dir="/usr/$(get_libdir)"
+	econf \
+		--docdir=/usr/share/doc/${PF} \
+		--disable-dependency-tracking \
+		--with-module-dir=/usr/$(get_libdir)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog
 }
