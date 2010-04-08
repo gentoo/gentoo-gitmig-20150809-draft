@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.1.1.ebuild,v 1.1 2010/03/25 14:58:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.1.1.ebuild,v 1.2 2010/04/08 07:44:16 fauli Exp $
 
 EAPI=3
 
@@ -30,8 +30,10 @@ RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/celementtree )
 
 DEPEND="emacs? ( virtual/emacs )
 	test? (
-		$RDEPEND
+		${RDEPEND}
 		dev-python/medusa
+		dev-python/subunit
+		dev-python/testtools
 	)"
 
 S="${WORKDIR}/${MY_P}"
