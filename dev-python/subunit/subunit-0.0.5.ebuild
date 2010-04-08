@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.5.ebuild,v 1.1 2010/04/08 07:39:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.5.ebuild,v 1.2 2010/04/08 17:57:19 arfrever Exp $
 
-PYTHON_DEPEND="2:2.6"
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit python
 
@@ -15,16 +18,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-python/testtools
-	dev-util/cppunit
+RDEPEND="dev-python/testtools"
+DEPEND="${RDEPEND}
 	dev-lang/perl
+	dev-libs/check
+	dev-util/cppunit
 	dev-util/pkgconfig"
-RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
-pkg_setup() {
-	python_set_active_version 2
+pkg_postinst() {
+	python_mod_optimize subunit
 }
 
-src_install() {
-	emake install DESTDIR="${D}"|| die
+pkg_postrm() {
+	python_mod_cleanup subunit
 }
