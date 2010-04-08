@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.8.ebuild,v 1.3 2009/06/06 17:02:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.8.ebuild,v 1.4 2010/04/08 20:55:04 ssuominen Exp $
 
 GCONF_DEBUG=no
 inherit gnome2
 
-DESCRIPTION="A GNOME2 radio tuner"
-HOMEPAGE="http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio"
-SRC_URI="http://www.wh-hms.uni-ulm.de/~mfcn/${PN}/packages/${P}.tar.gz"
+DESCRIPTION="A FM-radio tuner for the GNOME desktop"
+HOMEPAGE="http://projects.gnome.org/gnomeradio/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +24,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext
-	app-text/scrollkeeper"
+	app-text/rarian"
 
 DOCS="AUTHORS ChangeLog NEWS README* TODO"
