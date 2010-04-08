@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.79 2010/04/07 15:49:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.80 2010/04/08 19:29:08 jer Exp $
+
+  08 Apr 2010; Jeroen Roovers <jer@gentoo.org> lxml-2.2.6.ebuild:
+  Stable for HPPA (bug #313145).
 
   07 Apr 2010; Markos Chandras <hwoarang@gentoo.org> lxml-2.2.6.ebuild:
   Stable on amd64 wrt bug #313145
