@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/spider/spider-1.2_p4.ebuild,v 1.4 2009/12/03 11:21:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/spider/spider-1.2_p4.ebuild,v 1.5 2010/04/09 18:47:23 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,10 +17,10 @@ SRC_URI="mirror://debian/pool/main/s/spider/${MY_P}.orig.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE="xaw"
+IUSE="athena"
 
 RDEPEND="x11-libs/libXext
-	xaw? ( x11-libs/libXaw )
+	athena? ( x11-libs/libXaw )
 	x11-libs/libXmu
 	x11-libs/libXt"
 DEPEND="${RDEPEND}
@@ -43,7 +43,7 @@ src_configure() {
 		-DUseInstalled \
 		-DSmallCards=NO \
 		-DRoundCards \
-		$(use xaw && echo "-DCompileXAW=YES" || echo "-DCompileXlibOnly=YES") \
+		$(use athena && echo "-DCompileXAW=YES" || echo "-DCompileXlibOnly=YES") \
 		-I/usr/lib/X11/config \
 		|| die "imake failed"
 	sed -i \

@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>games</herd>
   <use>
-    <flag name="xaw">Enable athena widgets</flag>
+    <flag name="athena">Enable athena widgets</flag>
   </use>
 </pkgmetadata>

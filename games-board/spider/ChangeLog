@@ -1,6 +1,10 @@
 # ChangeLog for games-board/spider
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/spider/ChangeLog,v 1.4 2009/12/03 11:21:40 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/spider/ChangeLog,v 1.5 2010/04/09 18:47:23 mr_bones_ Exp $
+
+  09 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org> spider-1.2_p4.ebuild,
+  metadata.xml:
+  change xaw use flag to athena for consistency (bug #314153)
 
   03 Dec 2009; Markus Meier <maekke@gentoo.org> spider-1.2_p4.ebuild:
   add ~amd64, bug #295147
