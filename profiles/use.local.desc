@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5471 2010/04/09 00:47:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5472 2010/04/09 04:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1872,6 +1872,7 @@ media-sound/sonata:lyrics - Support for lyrics fetching
 media-sound/sonata:trayicon - Enable support for trayicon
 media-sound/sonic-visualiser:id3tag - Enables ID3 tagging with id3tag library
 media-sound/sox:id3tag - Enables ID3 tagging with id3tag library
+media-sound/squeezeboxserver:aac - Enable playback support for AAC (.m4a) encoded files
 media-sound/squeezeboxserver:alac - Enable support for alac
 media-sound/squeezeboxserver:bonjour - Enable support for bonjour
 media-sound/squeezecenter:aac - Enable playback support for AAC (.m4a) encoded files
