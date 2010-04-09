@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r5.ebuild,v 1.8 2010/04/07 15:38:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r5.ebuild,v 1.9 2010/04/09 03:52:13 jer Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ BASE_P="${PN}-${BASE_PV}"
 # docs, and are released more frequently than wxGTK.
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2"
 
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="X doc debug gnome gstreamer odbc opengl pch sdl"
 
 RDEPEND="
