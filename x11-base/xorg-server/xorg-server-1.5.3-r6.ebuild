@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.18 2009/12/13 23:33:52 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.19 2010/04/09 10:28:58 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -110,7 +110,7 @@ RDEPEND="hal? ( sys-apps/hal )
 	>=x11-apps/iceauth-1.0.2
 	>=x11-apps/rgb-1.0.3
 	>=x11-apps/xauth-1.0.3
-	>=x11-apps/xinit-1.0.8-r3
+	<=x11-apps/xinit-1.2.1
 	app-admin/eselect-opengl
 	>=x11-libs/libXaw-1.0.4
 	>=x11-libs/libXpm-3.5.7
