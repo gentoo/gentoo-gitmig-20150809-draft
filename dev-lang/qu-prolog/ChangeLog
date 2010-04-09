@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.64 2010/03/20 19:37:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.65 2010/04/09 08:27:51 hwoarang Exp $
+
+  09 Apr 2010; Markos Chandras <hwoarang@gentoo.org> qu-prolog-8.10.ebuild:
+  Stable on amd64 wrt bug #304999
 
   20 Mar 2010; Raúl Porcel <armin76@gentoo.org> qu-prolog-8.10.ebuild:
   sparc stable wrt #304999
