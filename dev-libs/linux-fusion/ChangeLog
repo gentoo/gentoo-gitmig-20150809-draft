@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/linux-fusion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.15 2010/03/24 14:14:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.16 2010/04/09 02:53:33 jer Exp $
+
+  09 Apr 2010; Jeroen Roovers <jer@gentoo.org> linux-fusion-8.1.1.ebuild:
+  Remove ~hppa keyword (bug #314019).
 
   24 Mar 2010; Brent Baude <ranger@gentoo.org> linux-fusion-8.1.1.ebuild:
   stable ppc, bug 303633
