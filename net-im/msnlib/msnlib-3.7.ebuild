@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.7.ebuild,v 1.4 2010/03/15 19:25:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/msnlib-3.7.ebuild,v 1.5 2010/04/09 11:12:22 djc Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="http://auriga.wearlab.de/~alb/msnlib/files/${PV}/${P}.tar.bz2"
 
 LICENSE="OSL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="tk"
 
 DEPEND=""
