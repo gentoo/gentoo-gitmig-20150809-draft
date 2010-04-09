@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.51 2010/03/10 11:50:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.52 2010/04/09 10:34:41 aballier Exp $
+
+  09 Apr 2010; Alexis Ballier <aballier@gentoo.org> coq-8.2_p1-r1.ebuild:
+  Add missing netpbm dep for USE=doc, by Christian D. <ThyrusG@gmx.de>, bug
+  #310305
 
   10 Mar 2010; Alexis Ballier <aballier@gentoo.org> -coq-8.1_p4.ebuild,
   -files/coq-8.1_p3-cmxa-install.dpatch, -files/coq-8.1_p3-noocamlopt.patch:
