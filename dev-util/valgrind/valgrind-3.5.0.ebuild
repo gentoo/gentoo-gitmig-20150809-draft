@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.5.0.ebuild,v 1.5 2010/03/21 15:00:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.5.0.ebuild,v 1.6 2010/04/09 08:24:36 fauli Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.valgrind.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~ppc ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="-* ~amd64 ~ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="mpi"
 
 DEPEND="mpi? ( virtual/mpi )"
