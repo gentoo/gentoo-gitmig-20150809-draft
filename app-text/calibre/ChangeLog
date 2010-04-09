@@ -1,6 +1,13 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.81 2010/03/28 10:35:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.82 2010/04/09 19:01:08 zmedico Exp $
+
+*calibre-0.6.47 (09 Apr 2010)
+
+  09 Apr 2010; Zac Medico <zmedico@gentoo.org> +calibre-0.6.47.ebuild:
+  0.6.47 version bump. Updated deps to use virtual/libusb:0 since Bernard
+  Cafarelli <voyageur@g.o> reported that libusb-compat works (tested with
+  sony reader touch).
 
   28 Mar 2010; Zac Medico <zmedico@gentoo.org> -calibre-0.6.37.ebuild,
   -calibre-0.6.40.ebuild:
