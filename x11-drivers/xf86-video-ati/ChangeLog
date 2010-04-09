@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.110 2010/04/06 08:37:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.111 2010/04/09 10:43:50 fauli Exp $
+
+  09 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  xf86-video-ati-6.12.6.ebuild:
+  stable x86, bug 308521
 
 *xf86-video-ati-6.13.0 (06 Apr 2010)
 

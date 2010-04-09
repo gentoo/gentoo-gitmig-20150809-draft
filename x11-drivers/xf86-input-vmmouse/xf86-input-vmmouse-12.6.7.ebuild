@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/xf86-input-vmmouse-12.6.7.ebuild,v 1.1 2010/03/21 17:10:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/xf86-input-vmmouse-12.6.7.ebuild,v 1.2 2010/04/09 10:48:17 fauli Exp $
 
 inherit x-modular
 
 DESCRIPTION="VMWare mouse input driver"
 IUSE=""
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 
 RDEPEND=">=x11-base/xorg-server-0.99.3"
 DEPEND="${RDEPEND}
