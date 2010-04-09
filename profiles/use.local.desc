@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5470 2010/04/08 19:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5471 2010/04/09 00:47:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1014,6 +1014,9 @@ dev-scheme/guile:discouraged -  (implied by deprecated) enable merely discourage
 dev-scheme/guile:elisp - Enable Emacs Lisp support
 dev-scheme/guile:networking - Include networking interfaces
 dev-scheme/guile:regex -  Include regular expression interfaces
+dev-scheme/hop:debug - Enables building with debug symbols
+dev-scheme/hop:ssl - Enable SSL support for hop
+dev-scheme/hop:threads - Enable thread support for hop, it depends on dev-scheme/bigloo built with threads use flag.
 dev-scheme/kawa:awt - Assume AWT is available
 dev-scheme/kawa:echo2 - Enable support for the Echo2 web toolkit with dev-java/echo2
 dev-scheme/kawa:frontend - Build "kawa" front-end program using sys-libs/readline
