@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.05.ebuild,v 1.1 2010/03/13 13:21:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.05.ebuild,v 1.2 2010/04/09 13:33:24 jlec Exp $
 
 EAPI="2"
 FORTRAN="gfortran ifc"
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86 ~x86-linux"
 IUSE=""
 
 # RDEPEND="dev-java/j3d-core"
+RDEPEND="!dev-util/tinker"
 RESTRICT="mirror"
 
 S="${WORKDIR}"/tinker/source
