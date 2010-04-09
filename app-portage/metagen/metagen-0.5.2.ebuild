@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.1.ebuild,v 1.2 2010/03/23 13:55:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.2.ebuild,v 1.1 2010/04/09 19:23:09 neurogeek Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,7 +22,7 @@ src_install() {
 	distutils_src_install
 
 	metagen_install() {
-		local METAGEN_MOD="$(python_get_sitedir)/${PN}/metagen.py"
+		local METAGEN_MOD="$(python_get_sitedir)/${PN}/main.py"
 		fperms 755 ${METAGEN_MOD}
 		dosym  "${D}"${METAGEN_MOD} "/usr/bin/${PN}-${PYTHON_ABI}" \
 			|| die "dosym failed"
