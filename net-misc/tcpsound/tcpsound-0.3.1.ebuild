@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/tcpsound-0.3.1.ebuild,v 1.4 2010/03/29 12:20:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/tcpsound-0.3.1.ebuild,v 1.5 2010/04/09 04:52:09 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Play sounds in response to network traffic"
 HOMEPAGE="http://www.ioplex.com/~miallen/tcpsound/"
@@ -17,13 +19,12 @@ DEPEND="net-analyzer/tcpdump
 	media-libs/libsdl
 	dev-libs/libmba"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
+	tc-export CC
 	sed -i -e "s;/usr/share/sounds:/usr/local/share/sounds;/usr/share/tcpsound;g"\
 		"${S}"/src/tcpsound.c "${S}"/elaborate.conf
 
@@ -34,9 +35,7 @@ src_compile() {
 
 src_install() {
 	# Makefile expects /usr/bin to be there...
-	dodir /usr/bin
-	# einstall is required here
-	einstall || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc README.txt elaborate.conf
 }
