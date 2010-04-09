@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.207 2010/03/31 22:34:55 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.208 2010/04/09 03:39:20 tampakrap Exp $
+
+  09 Apr 2010; Theo Chatzimichos <tampakrap@gentoo.org> kdm-4.4.2.ebuild:
+  Set ServerTimeout=30 in kdmrc, bug 257445
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdm-4.3.4.ebuild,
   -kdm-4.4.0.ebuild:
