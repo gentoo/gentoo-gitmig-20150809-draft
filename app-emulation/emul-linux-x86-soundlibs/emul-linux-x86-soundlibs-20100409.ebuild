@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20100220.ebuild,v 1.1 2010/02/20 23:10:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20100409.ebuild,v 1.1 2010/04/09 17:37:13 pacho Exp $
 
 inherit emul-linux-x86
+
+SRC_URI="mirror://gentoo/${PN}-${PV}.tar.bz2"
 
 LICENSE="as-is BSD GPL-2 LGPL-2 LGPL-2.1 gsm"
 KEYWORDS="-* ~amd64"
