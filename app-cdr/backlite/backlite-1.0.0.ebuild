@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.0.ebuild,v 1.2 2010/04/06 19:49:17 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.0.ebuild,v 1.3 2010/04/09 18:45:52 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/k9copy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="mplayer"
 
 # According to the author of backlite/k9copy libdvdread and libdvdnav are
