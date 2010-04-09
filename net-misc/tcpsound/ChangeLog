@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/tcpsound
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/ChangeLog,v 1.7 2010/04/09 04:59:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/ChangeLog,v 1.8 2010/04/09 05:10:48 jer Exp $
 
   09 Apr 2010; Jeroen Roovers <jer@gentoo.org>
   files/tcpsound-0.3.1-makefile.patch:
@@ -9,9 +9,9 @@
   09 Apr 2010; Jeroen Roovers <jer@gentoo.org> tcpsound-0.3.1.ebuild,
   -files/tcpsound-0.3.1-asneeded.patch,
   +files/tcpsound-0.3.1-makefile.patch:
-  Clean up ebuild. Remove all "mktool" use. Respect LDFLAGS. Incidentally
-  fix useless compiler flags. Make (failing) Makefile commands explicit.
-  Finish building or die (bug #313661).
+  Clean up ebuild. Replace "mktool" with CC and install, respectively. Respect
+  LDFLAGS and LDFLAGS Make (failing) Makefile commands explicit.  Finish
+  building or die (bug #313661). Use emake instead of einstall.
 
   29 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> tcpsound-0.3.1.ebuild,
   +files/tcpsound-0.3.1-asneeded.patch:
