@@ -1,0 +1,12 @@
+# ChangeLog for app-emulation/emul-linux-x86-opengl
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.1 2010/04/09 17:32:14 pacho Exp $
+
+*emul-linux-x86-opengl-20100409 (09 Apr 2010)
+
+  09 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-opengl-20100409.ebuild, +metadata.xml:
+  New emul package including opengl stuff from emul-linux-x86-xlibs as
+  talked with scarabeus to allow easier bumps for people using Xorg overlay
+  and testing packages.
+
