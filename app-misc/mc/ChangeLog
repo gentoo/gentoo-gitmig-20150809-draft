@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.197 2010/04/09 03:51:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.198 2010/04/09 16:25:02 reavertm Exp $
+
+*mc-4.7.1-r2 (09 Apr 2010)
+
+  09 Apr 2010; Maciej Mrozowski <reavertm@gentoo.org> -mc-4.7.1.ebuild,
+  -mc-4.7.1-r1.ebuild, +mc-4.7.1-r2.ebuild,
+  +files/mc-4.7.1_find-results-panelization-crash.patch:
+  Fix bug 314165, crash in find file results panelization, remove old
 
   09 Apr 2010; Jeroen Roovers <jer@gentoo.org> mc-4.7.0.3.ebuild:
   Stable for HPPA (bug #308383).
