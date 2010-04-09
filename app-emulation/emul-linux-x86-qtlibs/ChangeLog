@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.59 2010/03/22 14:01:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.60 2010/04/09 17:41:00 pacho Exp $
+
+*emul-linux-x86-qtlibs-20100409 (09 Apr 2010)
+
+  09 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-qtlibs-20091231.ebuild,
+  +emul-linux-x86-qtlibs-20100409.ebuild:
+  Version bump including x11-libs/qt-xmlpatterns as it's needed by qt-webkit
+  and per request in bug 313311 by Reto Gantenbein. Also removing old.
 
   22 Mar 2010; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-qtlibs-20100220.ebuild:
