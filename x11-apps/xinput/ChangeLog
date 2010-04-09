@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinput
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.12 2010/03/15 22:58:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.13 2010/04/09 10:40:02 fauli Exp $
+
+  09 Apr 2010; Christian Faulhammer <fauli@gentoo.org> xinput-1.5.1.ebuild:
+  stable x86, bug 308521
 
 *xinput-1.5.1 (15 Mar 2010)
 
