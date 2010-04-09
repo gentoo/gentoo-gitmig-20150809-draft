@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtkmmlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtkmmlibs/ChangeLog,v 1.1 2010/02/20 23:07:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtkmmlibs/ChangeLog,v 1.2 2010/04/09 17:33:49 pacho Exp $
+
+*emul-linux-x86-gtkmmlibs-20100409 (09 Apr 2010)
+
+  09 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-gtkmmlibs-20100220.ebuild,
+  +emul-linux-x86-gtkmmlibs-20100409.ebuild:
+  Version bump and remove old.
 
 *emul-linux-x86-gtkmmlibs-20100220 (20 Feb 2010)
 
