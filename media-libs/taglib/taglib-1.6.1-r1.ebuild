@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.6.1-r1.ebuild,v 1.9 2010/04/04 18:22:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.6.1-r1.ebuild,v 1.10 2010/04/09 20:41:03 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -9,7 +9,7 @@ DESCRIPTION="A library for reading and editing audio meta data"
 HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
 SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2 MPL-1.1"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 SLOT="0"
 IUSE="+asf debug examples +mp4 test"
@@ -18,7 +18,8 @@ DEPEND="
 	dev-util/pkgconfig
 	test? ( dev-util/cppunit )
 "
-RDEPEND=""
+RDEPEND="${DEPEND}
+	sys-libs/zlib"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-install-examples.patch
