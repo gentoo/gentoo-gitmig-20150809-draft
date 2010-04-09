@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.1.1.ebuild,v 1.3 2010/02/17 08:47:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.1.1.ebuild,v 1.4 2010/04/09 09:58:06 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -12,25 +12,27 @@ SRC_URI="http://libopenraw.freedesktop.org/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="examples test"
+IUSE="examples"
 
 RDEPEND="dev-libs/expat
 	virtual/libiconv
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	test? ( >=dev-libs/boost-1.37 )"
+	sys-devel/gettext"
+
+# boost and valgrind required and is causing tests to fail depending on system
+RESTRICT="test"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.99.9-boost.m4.BOOST_FIND_LIB.patch \
-		"${FILESDIR}"/${P}-iconv.patch
-	touch config.rpath
+	epatch "${FILESDIR}"/${P}-iconv.patch
+	cp /usr/share/gettext/config.rpath . || die
 	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		$(use_enable test unittest)
+		--disable-unittest
 }
 
 src_install() {
