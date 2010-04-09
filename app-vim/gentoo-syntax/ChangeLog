@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.114 2010/03/12 18:05:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.115 2010/04/09 02:11:09 jer Exp $
+
+  09 Apr 2010; Jeroen Roovers <jer@gentoo.org>
+  gentoo-syntax-20100215.ebuild:
+  Stable for HPPA (bug #313755).
 
   12 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
   gentoo-syntax-20090720.ebuild:
