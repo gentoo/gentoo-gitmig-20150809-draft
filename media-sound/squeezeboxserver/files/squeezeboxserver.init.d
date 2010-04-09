@@ -1,21 +1,22 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/squeezeboxserver.init.d,v 1.1 2009/11/25 22:52:25 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/squeezeboxserver.init.d,v 1.2 2010/04/09 04:17:59 lavajoe Exp $
 
 # These fit the Squeezebox Server ebuild and so shouldn't need to be changed;
 # user-servicable parts go in /etc/conf.d/squeezeboxserver.
 pidfile=/var/run/squeezeboxserver/squeezeboxserver.pid
 logdir=/var/log/squeezeboxserver
 varlibdir=/var/lib/squeezeboxserver
-prefsdir=${varlibdir}/prefs
 cachedir=${varlibdir}/cache
-prefsfile=${prefsdir}/squeezeboxserver.prefs
+prefsdir=/etc/squeezeboxserver/prefs
+prefsfile=/etc/squeezeboxserver/squeezeboxserver.prefs
 scuser=squeezeboxserver
 scname=squeezeboxserver
 
 depend() {
-	need net mysql
+	need net
+	use mysql
 }
 
 start() {

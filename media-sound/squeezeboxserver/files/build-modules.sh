@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# $Id: build-modules.sh,v 1.1 2009/11/25 22:52:25 lavajoe Exp $
+# $Id: build-modules.sh,v 1.2 2010/04/09 04:17:59 lavajoe Exp $
 #
 # This script builds all binary Perl modules required by Squeezebox Server.
 # 
@@ -32,7 +32,7 @@ fi
 # Build dir
 BUILD=$PWD
 
-# Path to Perl 5.8.8
+# Path to Perl 5.8.x
 if [ -x "/usr/bin/perl5.8.8" ]; then
     PERL_58=/usr/bin/perl5.8.8
 elif [ -x "/usr/local/bin/perl5.8.8" ]; then
@@ -48,11 +48,22 @@ fi
 # Install dir for 5.8
 BASE_58=$BUILD/5.8
 
-# Path to Perl 5.10.0
+# Path to Perl 5.10.x
 if [ -x "/usr/bin/perl5.10.0" ]; then
     PERL_510=/usr/bin/perl5.10.0
 elif [ -x "/usr/local/bin/perl5.10.0" ]; then
     PERL_510=/usr/local/bin/perl5.10.0
+elif [ -x "/usr/bin/perl5.10.1" ]; then
+	PERL_510=/usr/bin/perl5.10.1
+elif [ -x "/usr/local/bin/perl5.10.1" ]; then
+	PERL_510=/usr/local/bin/perl5.10.1
+fi
+
+if [ ! "$PERL_58" -a ! "$PERL_510" ]; then
+	echo
+	echo "*** ERROR: Could not find Perl!"
+	echo
+	exit 1
 fi
 
 if [ $PERL_510 ]; then
@@ -147,7 +158,7 @@ function build_module {
 }
 
 function build_all {
-    build Audio::Scan
+#    build Audio::Scan
 #    build AutoXS::Header
 #    build Class::C3::XS
 #    build Class::XSAccessor
