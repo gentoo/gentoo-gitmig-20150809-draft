@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.2.ebuild,v 1.3 2010/04/08 23:23:32 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.2.ebuild,v 1.4 2010/04/09 00:38:54 tampakrap Exp $
 
 EAPI="3"
 
@@ -129,6 +129,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.3.3-klauncher_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.3.3-klauncher_kioslave.patch"
 	"${FILESDIR}/${PN}-4.3.3-klauncher_mac.patch"
+	"${FILESDIR}/${P}-hang.patch"
 )
 
 src_prepare() {
