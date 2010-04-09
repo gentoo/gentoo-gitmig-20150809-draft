@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.2.ebuild,v 1.2 2010/01/01 17:33:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.2.ebuild,v 1.3 2010/04/09 01:52:31 jer Exp $
 
 EAPI="2"
 
@@ -35,7 +35,8 @@ src_prepare() {
 		-e 's:\(#ARGUS_CHROOT_DIR=\).*:\1/var/lib/argus:' \
 			-i support/Config/argus.conf || die
 
-	epatch "${FILESDIR}/${PN}-disable-tcp-wrappers-automagic.patch"
+	epatch "${FILESDIR}/${P}-disable-tcp-wrappers-automagic.patch"
+	epatch "${FILESDIR}/${P}-ac_require_and_cflags.patch"
 	eautoreconf
 }
 
