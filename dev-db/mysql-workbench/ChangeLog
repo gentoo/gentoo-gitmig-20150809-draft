@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.8 2010/04/03 08:23:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.9 2010/04/09 14:55:24 graaff Exp $
+
+*mysql-workbench-5.2.17-r1 (09 Apr 2010)
+
+  09 Apr 2010; Hans de Graaff <graaff@gentoo.org>
+  +mysql-workbench-5.2.17-r1.ebuild,
+  +files/mysql-workbench-5.2.17-as-needed-modules.patch,
+  +files/mysql-workbench-5.2.17-python-libs.patch:
+  More --as-needed patching in modules. This brings back the accept/discard
+  buttons in EDIT mode. Also improve Python detection to fix compilation
+  issues with forced --as-needed.
 
 *mysql-workbench-5.2.17 (03 Apr 2010)
 
