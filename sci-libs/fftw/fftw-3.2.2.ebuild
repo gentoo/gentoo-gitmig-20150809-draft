@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2.ebuild,v 1.11 2010/01/16 06:20:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2.ebuild,v 1.12 2010/04/09 18:41:27 bicatali Exp $
 
 EAPI=2
 inherit flag-o-matic eutils toolchain-funcs autotools
@@ -25,7 +25,7 @@ pkg_setup() {
 		[[ $(tc-getCC)$ == *gcc* ]] &&
 		[[ $(tc-getCC)$ != *apple* ]] &&
 		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
-			! built_with_use sys-devel/gcc openmp )
+			! has_version sys-devel/gcc[openmp] )
 	then
 		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
 		ewarn "If you want to build fftw with OpenMP, abort now,"

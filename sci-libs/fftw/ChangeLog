@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.100 2010/04/01 19:09:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.101 2010/04/09 18:41:27 bicatali Exp $
+
+  09 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org> fftw-2.1.5-r5.ebuild,
+  fftw-2.1.5-r6.ebuild, fftw-3.2.2.ebuild:
+  Replaced built_with_use with has_version
 
 *fftw-2.1.5-r6 (01 Apr 2010)
 
