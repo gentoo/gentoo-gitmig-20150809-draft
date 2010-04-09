@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.155 2010/03/20 13:51:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.156 2010/04/09 18:49:25 caster Exp $
+
+  09 Apr 2010; Vlastimil Babka <caster@gentoo.org>
+  eclipse-sdk-3.5.1-r1.ebuild:
+  Force javac, as building with ecj fails, probably due to classpath
+  polution.
 
   20 Mar 2010; Pacho Ramos <pacho@gentoo.org> eclipse-sdk-3.5.1-r1.ebuild:
   amd64 stable, bug 310181
