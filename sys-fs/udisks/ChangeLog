@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.3 2010/04/09 06:54:54 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.4 2010/04/09 07:19:06 steev Exp $
+
+  09 Apr 2010; Steev Klimaszewski <steev@gentoo.org> udisks-1.0.0.ebuild,
+  metadata.xml:
+  udisks: Change the autoconf flag to remote-access
+
+  The remote-access is more appropriate as this flag is regarding whether 
+  or not remote machines should be allowed to connect to you.
 
   09 Apr 2010; Steev Klimaszewski <steev@gentoo.org> udisks-1.0.0.ebuild:
   udisks: Add a keepdir for /media
