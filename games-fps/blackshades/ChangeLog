@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/blackshades
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/ChangeLog,v 1.3 2009/06/08 07:17:35 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/ChangeLog,v 1.4 2010/04/09 10:05:38 fauli Exp $
+
+  09 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  blackshades-20070723.ebuild:
+  stable x86, bug 308595
 
   08 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
   blackshades-20031110-r1.ebuild, blackshades-20070723.ebuild:
