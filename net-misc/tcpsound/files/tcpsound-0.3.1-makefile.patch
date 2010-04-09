@@ -12,7 +12,7 @@
  includedir = $(prefix)/include
  libdir     = $(prefix)/lib
 -mandir     = $(prefix)/man
-+mandir     = $(prefix)/man/man1
++mandir     = $(prefix)/share/man/man1
  MAN        = tcpsound.1
  MANGZ      = $(MAN:.1=.1.gz)
 -MKTOOL     = ./mktool
