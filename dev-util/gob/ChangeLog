@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.70 2010/01/15 21:40:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.71 2010/04/09 08:05:49 pacho Exp $
+
+*gob-2.0.17 (09 Apr 2010)
+
+  09 Apr 2010; Pacho Ramos <pacho@gentoo.org> +gob-2.0.17.ebuild:
+  Version bump: fix segfault when defining the finilize, dispose, and
+  constructor methods; handle carriage returns in input files; use
+  -G_MAXFLOAT and -G_MAXDOUBLE for the default minima for floating point
+  numbers.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gob-2.0.16.ebuild:
   Transfer Prefix keywords
