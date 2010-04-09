@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.78 2010/04/08 05:43:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.79 2010/04/09 13:32:54 phajdan.jr Exp $
+
+*chromium-5.0.371.0 (09 Apr 2010)
+
+  09 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-5.0.371.0.ebuild, chromium-9999.ebuild:
+  Version bump for dev channel release. Use the old patch for ffmpeg, the
+  new one was broken. Drop the make build patch, it no longer applies.
 
 *chromium-5.0.342.9 (08 Apr 2010)
 
