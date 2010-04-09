@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100406.ebuild,v 1.2 2010/04/09 06:09:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100409.ebuild,v 1.1 2010/04/09 06:09:40 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
