@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a-r1.ebuild,v 1.2 2010/03/29 13:19:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a-r1.ebuild,v 1.3 2010/04/09 21:58:52 calchan Exp $
 
 EAPI="3"
 
@@ -46,9 +46,6 @@ src_prepare() {
 	fi
 	if use firefox ; then
 		sed -i -e 's/netscape/firefox/' e2cmdw.cpp
-	fi
-	if use seamonkey ; then
-		sed -i -e 's/netscape/seamonkey/' e2cmdw.cpp
 	fi
 	convert ponyprog.ico ponyprog.png
 
