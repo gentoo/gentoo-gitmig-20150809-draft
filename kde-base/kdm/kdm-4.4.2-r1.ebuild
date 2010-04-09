@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.4.2.ebuild,v 1.2 2010/04/09 03:39:20 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.4.2-r1.ebuild,v 1.1 2010/04/09 14:56:48 reavertm Exp $
 
 EAPI="3"
 
@@ -63,11 +63,10 @@ src_install() {
 	kde4-meta_src_install
 
 	# Customize the kdmrc configuration
-	sed -i \
-	-e "s:^.*SessionsDirs=.*$:#&\nSessionsDirs=${EPREFIX}/usr/share/xsessions:" \
-	-e "s:#ServerTimeout=15:ServerTimeout=30:" \
-		"${ED}"/${PREFIX}/share/config/kdm/kdmrc \
-		|| die "Failed to set ServerTimeout and SessionsDir correctly in kdmrc."
+	sed -e "s:^.*SessionsDirs=.*$:#&\nSessionsDirs=${EPREFIX}/usr/share/xsessions:" \
+		-e "s:#ServerTimeout=15:ServerTimeout=30:" \
+		-i "${ED}"/${KDEDIR}/share/config/kdm/kdmrc \
+		|| die "Failed to set ServerTimeout and SessionsDirs correctly in kdmrc."
 
 	# Don't install empty dir
 	rmdir "${ED}${KDEDIR}"/share/config/kdm/sessions
