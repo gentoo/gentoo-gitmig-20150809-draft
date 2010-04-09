@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.156 2010/03/31 22:10:32 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.157 2010/04/09 04:00:09 tampakrap Exp $
+
+*kcheckpass-4.4.2-r1 (09 Apr 2010)
+
+  09 Apr 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  kcheckpass-4.4.2.ebuild, +kcheckpass-4.4.2-r1.ebuild,
+  +files/kcheckpass-4.4.2-no-SUID-no-GUID.patch:
+  Do not install SUID/GUID executables, bug 158206
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kcheckpass-4.3.4.ebuild,
   -kcheckpass-4.4.0.ebuild:
