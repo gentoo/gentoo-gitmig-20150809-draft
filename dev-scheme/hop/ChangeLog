@@ -1,6 +1,14 @@
 # ChangeLog for dev-scheme/hop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.9 2009/07/13 14:45:58 hkbst Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.10 2010/04/09 00:39:57 chiiph Exp $
+
+*hop-2.0.1 (08 Apr 2010)
+
+  08 Apr 2010; Tomas Touceda <chiiph@gentoo.org> -hop-1.10.2.ebuild, -hop-1.11.0.ebuild,
+  -hop-1.11.1.ebuild, +hop-2.0.1.ebuild, +files/hop.confd, +files/hop.initd,
+  metadata.xml:
+  Version bump to latest upstream stable 2.0.1. Clean up hop-1.*. Added
+  init.d/conf.d scripts.
 
 *hop-1.11.1 (13 Jul 2009)
 
