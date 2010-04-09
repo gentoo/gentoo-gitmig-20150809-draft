@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.12 2010/04/03 19:56:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.13 2010/04/09 19:04:44 dev-zero Exp $
+
+*tdb-1.2.1 (09 Apr 2010)
+
+  09 Apr 2010; Tiziano Müller <dev-zero@gentoo.org> +tdb-1.2.1.ebuild:
+  Version bump. .
 
 *tdb-1.2.0-r2 (03 Apr 2010)
 
