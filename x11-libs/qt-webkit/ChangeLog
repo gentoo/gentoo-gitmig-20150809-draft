@@ -1,6 +1,22 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.84 2010/04/02 10:01:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.85 2010/04/09 22:26:07 yngwin Exp $
+
+*qt-webkit-4.6.2-r1 (09 Apr 2010)
+*qt-webkit-4.5.3-r3 (09 Apr 2010)
+
+  09 Apr 2010; Ben de Groot <yngwin@gentoo.org> +qt-webkit-4.5.3-r3.ebuild,
+  +files/qt-webkit-4.5.3-cve-2010-0046-css-format-mem-corruption.patch,
+  +files/qt-webkit-4.5.3-cve-2010-0049-freed-line-boxes-ltr-rtl.patch,
+  +files/qt-webkit-4.5.3-cve-2010-0050-crash-misnested-style-tags.patch,
+  +files/qt-webkit-4.5.3-cve-2010-0052-destroyed-input-cached.patch,
+  +qt-webkit-4.6.2-r1.ebuild,
+  +files/qt-webkit-4.6.2-cve-2010-0051-lax-css-parsing-cross-domain-theft.pa
+  tch,
+  +files/qt-webkit-4.6.2-cve-2010-0054-image-element-pointer-name-getter.pat
+  ch:
+  Adding security patches for bug #314193. Make dbus optional, fixes bug
+  #292337.
 
   02 Apr 2010; Markos Chandras <hwoarang@gentoo.org> qt-webkit-4.6.2.ebuild:
   Adjust phonon dependencies
