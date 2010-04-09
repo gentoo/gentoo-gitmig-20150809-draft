@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hgsubversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.4 2010/04/07 11:29:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.5 2010/04/09 11:09:00 djc Exp $
+
+  09 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> hgsubversion-1.0.1.ebuild:
+  amd64 stable, bug 309727
 
   07 Apr 2010; Fabian Groffen <grobian@gentoo.org> hgsubversion-1.1.ebuild:
   Marked ~x86-solaris
