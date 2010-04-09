@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.3 2010/03/29 12:58:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.4 2010/04/09 12:14:23 tupone Exp $
 
 EAPI=2
 
@@ -89,13 +89,13 @@ src_configure() {
 	_EOF_
 
 	local mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_no scripts SCRIPTS)
-		$(cmake-utils_use_no mapnik MAPNIK)
-		$(cmake-utils_use_no kismet KISMET)
-		$(cmake-utils_use_no dbus DBUS)
-		$(cmake-utils_use_no libgda GDA3)
-		$(cmake-utils_use_no speech SPEECH)
-		$(cmake-utils_use_no gdal GDAL)"
+		$(cmake-utils_use_with scripts SCRIPTS)
+		$(cmake-utils_use_with mapnik MAPNIK)
+		$(cmake-utils_use_with kismet KISMET)
+		$(cmake-utils_use_with dbus DBUS)
+		$(cmake-utils_use_with libgda GDA3)
+		$(cmake-utils_use_with speech SPEECH)
+		$(cmake-utils_use_with gdal GDAL)"
 	cmake-utils_src_configure
 }
 

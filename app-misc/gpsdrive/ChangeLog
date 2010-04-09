@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.38 2010/03/29 04:54:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.39 2010/04/09 12:14:23 tupone Exp $
+
+  09 Apr 2010; Tupone Alfredo <tupone@gentoo.org>
+  gpsdrive-2.10_pre7-r1.ebuild:
+  On configure use -DWITH_ . Fix partially bug #313653 by Klaas Decanniere
 
   29 Mar 2010; Steve Arnold <nerdboy@gentoo.org>
   gpsdrive-2.10_pre7-r1.ebuild:
