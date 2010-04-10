@@ -1,6 +1,15 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.228 2010/03/18 14:31:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.229 2010/04/10 02:13:17 reavertm Exp $
+
+*poppler-0.12.4-r2 (10 Apr 2010)
+*poppler-0.12.3-r6 (10 Apr 2010)
+
+  10 Apr 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -poppler-0.12.3-r5.ebuild, +poppler-0.12.3-r6.ebuild,
+  +files/poppler-0.12.3-preserve-cflags.patch, -poppler-0.12.4-r1.ebuild,
+  +poppler-0.12.4-r2.ebuild:
+  Fix bug 309297 - preserve compiler flags
 
   18 Mar 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Reassign to me instead of desktop-misc herd which I left.

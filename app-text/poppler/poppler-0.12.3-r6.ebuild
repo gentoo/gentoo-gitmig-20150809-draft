@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4-r1.ebuild,v 1.1 2010/03/16 12:18:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.3-r6.ebuild,v 1.1 2010/04/10 02:13:17 reavertm Exp $
 
 EAPI="2"
 
@@ -41,13 +41,13 @@ RDEPEND="${COMMON_DEPEND}
 DOCS="AUTHORS ChangeLog NEWS README README-XPDF TODO"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.12.3-cmake-disable-tests.patch
-	epatch "${FILESDIR}"/${PN}-0.12.3-fix-headers-installation.patch
-	epatch "${FILESDIR}"/${PN}-0.12.3-gdk.patch
-	epatch "${FILESDIR}"/${PN}-0.12.3-darwin-gtk-link.patch
+	epatch "${FILESDIR}"/${P}-cmake-disable-tests.patch
+	epatch "${FILESDIR}"/${P}-fix-headers-installation.patch
+	epatch "${FILESDIR}"/${P}-gdk.patch
+	epatch "${FILESDIR}"/${P}-darwin-gtk-link.patch
 	epatch "${FILESDIR}"/${P}-config.patch  #304407
-	epatch "${FILESDIR}"/${PN}-0.12.3-cairo-downscale.patch  #303817
-	epatch "${FILESDIR}"/${PN}-0.12.4-nanosleep-rt.patch
+	epatch "${FILESDIR}"/${P}-cairo-downscale.patch  #303817
+	epatch "${FILESDIR}"/${PN}-0.12.3-preserve-cflags.patch  #309297
 }
 
 src_configure() {
