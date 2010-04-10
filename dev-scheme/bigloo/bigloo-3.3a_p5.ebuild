@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.3a_p5.ebuild,v 1.1 2010/04/07 14:21:52 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.3a_p5.ebuild,v 1.2 2010/04/10 21:18:52 chiiph Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 # bug 254916 for >=dev-libs/boehm-gc-7.1
 DEPEND=">=dev-libs/boehm-gc-7.1[threads?]
 		emacs? ( virtual/emacs )
-		java? ( virtual/jdk app-arch/zip )
+		java? ( >=virtual/jdk-1.5 app-arch/zip )
 		ssl? ( dev-libs/openssl )
 		gstreamer? ( media-libs/gstreamer
 			media-libs/gst-plugins-base )"

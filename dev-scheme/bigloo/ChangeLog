@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.37 2010/04/10 18:05:30 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.38 2010/04/10 21:18:52 chiiph Exp $
+
+  10 Apr 2010; Tomas Touceda <chiiph@gentoo.org> bigloo-3.0c_p4.ebuild,
+  bigloo-3.3a_p5.ebuild:
+  Fix java building problem both in stable and testing version.
 
   10 Apr 2010; Tomas Touceda <chiiph@gentoo.org> -bigloo-3.1a.ebuild,
   -bigloo-3.1b.ebuild, -bigloo-3.2a.ebuild, -bigloo-3.2a_p2.ebuild,
