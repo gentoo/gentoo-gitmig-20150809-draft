@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.34 2010/02/08 23:02:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.35 2010/04/10 15:00:35 ssuominen Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -33,10 +33,6 @@ net-libs/libproxy webkit
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
 # build fails (bug #210880):
 <sys-devel/gcc-4.3 libffi
-
-# Jeroen Roovers <jer@gentoo.org> (15 Apr 2008)
-# Mask kde-base/kttsd[ktts] because of app-accessibility/freetts using Java:
-kde-base/kttsd ktts
 
 # Jeroen Roovers <jer@gentoo.org> (15 Apr 2008)
 # media-sound/fluidsynth fails to build with stable libtool, so it can't be
