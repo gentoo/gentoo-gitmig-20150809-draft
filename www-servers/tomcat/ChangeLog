@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.228 2010/03/29 21:40:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.229 2010/04/10 21:17:30 caster Exp $
+
+  10 Apr 2010; Vlastimil Babka <caster@gentoo.org> tomcat-6.0.26.ebuild:
+  Always use ecj to compile on amd64 to prevent insufficient heap, fixes bug
+  #312293.
 
   29 Mar 2010; Markus Meier <maekke@gentoo.org> tomcat-6.0.26.ebuild:
   amd64 stable, bug #303719

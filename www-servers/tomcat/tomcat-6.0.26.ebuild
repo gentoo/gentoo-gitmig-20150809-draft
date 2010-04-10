@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.26.ebuild,v 1.5 2010/03/29 21:40:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.26.ebuild,v 1.6 2010/04/10 21:17:30 caster Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -66,8 +66,8 @@ pkg_setup() {
 java_prepare() {
 	rm -v webapps/examples/WEB-INF/lib/*.jar || die
 
-	# bug # 178980
-	if use amd64 && [[ "${GENTOO_VM}" = "sun-jdk-1.5" ]] ; then
+	# bug # 178980 and #312293
+	if use amd64; then
 		java-pkg_force-compiler ecj-3.3
 	fi
 
