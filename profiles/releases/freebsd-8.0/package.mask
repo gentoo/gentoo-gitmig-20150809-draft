@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-8.0/package.mask,v 1.1 2010/03/11 10:26:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-8.0/package.mask,v 1.2 2010/04/10 15:43:11 ssuominen Exp $
 
 # Make sure we don't get wrong versions
 <sys-freebsd/freebsd-pam-modules-8.0_alpha
@@ -40,8 +40,5 @@
 
 # Alexis Ballier <aballier@gentoo.org> (19 Jul 2008)
 # JDK/JRE 1.5 are specific to fbsd 6 and 5
-=dev-java/diablo-jdk-1.5*
 =virtual/jdk-1.5*
-=dev-java/diablo-jre-bin-1.5*
 =virtual/jre-1.5*
-
