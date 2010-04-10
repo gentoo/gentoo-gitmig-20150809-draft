@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.13 2010/04/10 15:45:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.14 2010/04/10 15:52:26 ssuominen Exp $
 
 app-misc/mc pam
 dev-util/catalyst cdr
@@ -27,8 +27,7 @@ sys-auth/consolekit pam
 # NetworkManager is Linux-only, Zephyr requires kerberos
 net-im/pidgin networkmanager zephyr
 
-# nvtv is probably Linux only, someone with an nvidia card plz test
-media-video/totem bluetooth nvtv
+media-video/totem bluetooth
 
 # Gilles Dartiguelongue <eva@gentoo.org> (29 Oct 2007)
 mail-client/evolution pda
