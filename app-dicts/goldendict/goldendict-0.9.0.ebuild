@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/goldendict/goldendict-0.9.0.ebuild,v 1.1 2010/01/23 13:04:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/goldendict/goldendict-0.9.0.ebuild,v 1.2 2010/04/10 20:49:05 yngwin Exp $
 
 EAPI="2"
 LANGS="ru"
@@ -21,7 +21,7 @@ RDEPEND=">=app-text/hunspell-1.2
 	media-libs/libogg
 	media-libs/libvorbis
 	x11-libs/libXtst
-	>=x11-libs/qt-webkit-4.5:4"
+	=x11-libs/qt-webkit-4.5*:4"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
