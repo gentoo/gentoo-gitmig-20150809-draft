@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1.ebuild,v 1.1 2010/04/09 19:04:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1.ebuild,v 1.2 2010/04/10 15:50:53 dev-zero Exp $
 
 EAPI="2"
 
@@ -17,13 +17,20 @@ IUSE="python static-libs tools tdbtest"
 RDEPEND=""
 DEPEND="python? ( dev-lang/python )
 	!<net-fs/samba-libs-3.4
-	!<net-fs/samba-3.3"
+	!<net-fs/samba-3.3
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt"
 
 src_prepare() {
 	eautoconf -Ilibreplace
 	sed -i \
 		-e 's:$(SHLD_FLAGS) :$(SHLD_FLAGS) $(LDFLAGS) :' \
 		Makefile.in || die "sed failed"
+
+	# xsltproc will display a warning but we can assume the xml files are valid
+	sed -i \
+		-e 's|$(XSLTPROC) -o|$(XSLTPROC) --nonet -o|' \
+		tdb.mk || die "sed failed"
 }
 
 src_configure() {
