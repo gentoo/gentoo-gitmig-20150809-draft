@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.188 2010/04/08 22:34:30 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.189 2010/04/10 19:15:59 zmedico Exp $
+
+*gentoolkit-0.2.4.6.1-r1 (10 Apr 2010)
+
+  10 Apr 2010; Zac Medico <zmedico@gentoo.org>
+  +gentoolkit-0.2.4.6.1-r1.ebuild:
+  Bug #314247 - Stable revbump with patch just to avoid triggering a
+  'getvirtuals' deprecation warning with sys-apps/portage-2.1.8.x.
 
 *gentoolkit-0.3.0_rc10-r1 (08 Apr 2010)
 
