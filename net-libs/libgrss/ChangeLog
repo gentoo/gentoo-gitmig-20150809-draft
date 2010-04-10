@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/libgrss
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.1 2010/04/10 11:11:39 lxnay Exp $
+
+*libgrss-0.3.0 (10 Apr 2010)
+
+  10 Apr 2010; Fabio Erculiani <lxnay@gentoo.org> +libgrss-0.3.0.ebuild,
+  +metadata.xml:
+  New package, thanks to people involved in #312801, in particular to
+  Tiziano Mueller (dev-zero)
+
