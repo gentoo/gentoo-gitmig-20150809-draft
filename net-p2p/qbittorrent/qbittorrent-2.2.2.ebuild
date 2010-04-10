@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.2.2.ebuild,v 1.3 2010/04/08 12:35:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.2.2.ebuild,v 1.4 2010/04/10 23:09:02 hwoarang Exp $
 
 EAPI="2"
 inherit confutils qt4-r2 versionator
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+X geoip libnotify"
 
 # boost version so that we always have thread support
