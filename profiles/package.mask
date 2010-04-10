@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11443 2010/04/10 16:29:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11444 2010/04/10 16:33:37 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,13 +220,6 @@ x11-plugins/wmalms
 x11-plugins/wmsensormon
 x11-plugins/wmmsens
 
-# Doug Goldstein <cardoe@gentoo.org> (10 Mar 2010)
-# Explicitly mask these as per NVIDIA's request
-# These drivers will destroy your video card
-# http://www.nvnews.net/vbulletin/announcement.php?f=14
-=x11-drivers/nvidia-drivers-195.36.03
-=x11-drivers/nvidia-drivers-195.36.08
-
 # Jeroen Roovers <jer@gentoo.org> (10 Mar 2010)
 # Masked until the blockers of bug #305781 are fixed
 net-analyzer/iptraf-ng
@@ -417,7 +410,6 @@ dev-db/mysql-community
 # Nirbheek Chauhan <nirbheek@gentoo.org> (25 Jan 2010)
 # Final rc of networkmanager-0.8 and friends
 # Mask for testing
-=net-misc/networkmanager-0.7.999*
 =net-misc/networkmanager-pptp-0.7.999*
 =net-misc/networkmanager-vpnc-0.7.999*
 =net-misc/networkmanager-openvpn-0.7.999*
