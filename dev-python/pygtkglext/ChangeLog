@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtkglext
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.40 2008/10/27 10:22:51 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.41 2010/04/10 20:10:16 arfrever Exp $
+
+  10 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygtkglext-1.1.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Delete calls to deprecated python_version() (bug #314455).
 
   27 Oct 2008; Ali Polatel <hawking@gentoo.org> pygtkglext-1.1.0.ebuild:
   Use python_need_rebuild.

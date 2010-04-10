@@ -1,14 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.21 2008/10/27 10:22:51 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.22 2010/04/10 20:10:16 arfrever Exp $
 
-NEED_PYTHON="2.3"
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
-inherit python multilib
+inherit python
 
 DESCRIPTION="Python bindings to GtkGLExt"
 HOMEPAGE="http://gtkglext.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gtkglext/${P}.tar.bz2"
+
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
@@ -23,19 +27,20 @@ RDEPEND=">=dev-python/pygtk-2.8
 	virtual/glu"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+RESTRICT_PYTHON_ABIS="3.*"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# disable pyc compiling
+src_prepare() {
+	# Disable byte-compilation.
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	python_copy_sources
 }
 
 src_install() {
-	python_need_rebuild
-	emake DESTDIR="${D}" install || die "emake install failed"
+	python_src_install
+	python_clean_sitedirs
+
 	dodoc README AUTHORS ChangeLog
 
 	if use examples; then
@@ -45,11 +50,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0
+	python_mod_optimize gtk-2.0
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/gtk-2.0
+	python_mod_cleanup gtk-2.0
 }
