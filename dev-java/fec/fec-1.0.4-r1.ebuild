@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.4.ebuild,v 1.3 2010/02/26 12:24:29 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.4-r1.ebuild,v 1.1 2010/04/10 00:11:02 tommy Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="hardened"
+IUSE=""
 
 COMMON_DEPEND="dev-java/log4j
 	dev-java/concurrent-util"
@@ -30,10 +30,7 @@ src_unpack() {
 	cd "${S}" || die
 	sed -i -e 's/build.compiler=jikes/#build.compiler=jikes/g' build.properties || die
 	sed -i -e 's/test.lib/lib/g' build.properties || die
-	epatch "${FILESDIR}"/${P}-libfec8path.patch
-	pushd src/csrc > /dev/null
-	epatch "${FILESDIR}/${P}-soname.patch"
-	popd > /dev/null
+	epatch "${FILESDIR}"/${P}-{libfec8path,build,soname}.patch
 
 	eant clean
 	cd lib || die
@@ -50,7 +47,7 @@ src_unpack() {
 src_compile() {
 	java-pkg-2_src_compile
 	cd "${S}"/src/csrc
-	(use amd64 || use hardened ) && append-flags -fPIC
+	append-flags -fPIC
 	emake CC=$(tc-getCC) CFLAGS="${CFLAGS} $(java-pkg_get-jni-cflags)" || die
 }
 
