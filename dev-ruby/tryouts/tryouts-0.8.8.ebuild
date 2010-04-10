@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/tryouts-0.8.8.ebuild,v 1.1 2010/03/16 12:23:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/tryouts-0.8.8.ebuild,v 1.2 2010/04/10 00:36:43 flameeyes Exp $
 
 EAPI=2
 
@@ -23,6 +23,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT=test
+
+ruby_add_rdepend 'dev-ruby/sysinfo
+	dev-ruby/drydock'
 
 each_ruby_test() {
 	${RUBY} -Ilib bin/sergeant || die "Tests failed"
