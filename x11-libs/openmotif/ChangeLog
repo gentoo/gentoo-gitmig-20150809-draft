@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.233 2010/03/29 19:49:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.234 2010/04/10 23:49:10 ulm Exp $
+
+  10 Apr 2010; Ulrich Mueller <ulm@gentoo.org> openmotif-2.3.3.ebuild:
+  With USE=examples, make demos in src_compile.
 
   29 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   openmotif-2.3.2-r2.ebuild:

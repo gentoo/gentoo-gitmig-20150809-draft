@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.2 2010/03/20 17:48:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.3 2010/04/10 23:49:10 ulm Exp $
 
 EAPI="3"
 
@@ -125,6 +125,10 @@ src_configure() {
 
 src_compile() {
 	emake -j1 MWMRCDIR="${EPREFIX}"/etc/X11/mwm || die "emake failed"
+
+	if use examples; then
+		emake -j1 -C demos || die "emake of demos failed"
+	fi
 }
 
 src_install() {
