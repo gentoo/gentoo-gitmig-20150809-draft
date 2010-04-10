@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.13.1.ebuild,v 1.2 2010/04/08 18:01:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.13.1.ebuild,v 1.3 2010/04/10 14:47:04 idl0r Exp $
 
 EAPI="2"
 
@@ -89,7 +89,9 @@ src_install ()
 	domenu portato.desktop || die
 
 	# nls
-	use nls && domo i18n/mo/*
+	if use nls && [ -d i18n/mo ]; then
+		domo i18n/mo/*
+	fi
 
 	# man page
 	doman portato.1
