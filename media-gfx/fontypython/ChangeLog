@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontypython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.10 2010/03/08 00:53:31 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.11 2010/04/10 23:54:06 dirtyepic Exp $
+
+  10 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> fontypython-0.4.2.3.ebuild:
+  Call python_set_active_version.
 
   08 Mar 2010; Jonathan Callen <abcd@gentoo.org> fontypython-0.4.2.2.ebuild,
   fontypython-0.4.2.3.ebuild:
