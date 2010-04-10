@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.12 2009/07/31 09:12:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.13 2010/04/10 15:45:53 ssuominen Exp $
 
 app-misc/mc pam
 dev-util/catalyst cdr
@@ -10,9 +10,6 @@ gnome-extra/gnome-screensaver pam
 
 # Requires Linux-only packages
 app-accessibility/gok usb
-kde-base/kcontrol ieee1394
-kde-base/kdebase ieee1394
-kde-base/kdenetwork-meta wifi
 
 # iproute2 - linux only, pkcs11-helper required keywords
 net-misc/openvpn iproute2 pkcs11
