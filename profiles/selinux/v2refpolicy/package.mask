@@ -1,5 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/v2refpolicy/package.mask,v 1.2 2009/08/10 07:38:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/v2refpolicy/package.mask,v 1.3 2010/04/10 16:17:14 ssuominen Exp $
 
 # force version 2.YYYYMMDD policy over version YYYYMMDD policy
 >=sec-policy/selinux-acpi-3
@@ -35,8 +35,6 @@
 >=sec-policy/selinux-kerberos-3
 >=sec-policy/selinux-logrotate-3
 >=sec-policy/selinux-lpd-3
->=sec-policy/selinux-lvm-3
->=sec-policy/selinux-mdadm-3
 >=sec-policy/selinux-munin-3
 >=sec-policy/selinux-mysql-3
 >=sec-policy/selinux-nfs-3
