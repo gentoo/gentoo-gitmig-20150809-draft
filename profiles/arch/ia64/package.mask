@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.mask,v 1.16 2010/03/03 09:23:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.mask,v 1.17 2010/04/10 15:03:06 ssuominen Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Feb 2010)
 # Mask kde 4.4.0 =)
@@ -252,7 +252,6 @@
 =kde-base/libplasmaclock-4.4*
 =kde-base/libplasmagenericshell-4.4*
 =kde-base/libtaskmanager-4.4*
-=kde-base/lilo-config-4.4*
 =kde-base/lokalize-4.4*
 =kde-base/lskat-4.4*
 =kde-base/marble-4.4*

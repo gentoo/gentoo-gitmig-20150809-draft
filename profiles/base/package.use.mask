@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.132 2010/04/09 22:05:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.133 2010/04/10 14:58:23 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -139,14 +139,6 @@ www-client/opera ia32
 # Php module fails to build due to newer autotools.
 >=media-libs/ming-0.4.0_beta5 php
 
-# Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
-# does not work with ffmpeg new headers yet
-<www-plugins/gnash-0.8.3 ffmpeg
-
-# Markus Ullmann <jokey@gentoo.org> (21 Mar 2008)
-# still work in progress
-=net-irc/kvirc-3.4.0 qt4
-
 # Michael Sterrett <mr_bones_@gentoo.org> (09 Mar 2008)
 # tcl version necessary has been masked so mask this for now.
 ~app-editors/nvi-1.81.6 tcl
@@ -163,11 +155,6 @@ app-pda/pilot-link bluetooth
 # Christian Hoffmann <hoffie@gentoo.org> (27 Dec 2007)
 # Missing dev-php5/php-java-bridge
 dev-lang/php java-external
-
-# Donnie Berkholz <dberkholz@gentoo.org> (12 Nov 2007)
-# freedesktop.org bug #7459 committed fix breaks 3D apps
-# but "fix" is only relevant on USE=nptl
-=media-libs/mesa-7.0* nptl
 
 dev-java/sun-jdk nsplugin
 dev-java/sun-jre-bin nsplugin
