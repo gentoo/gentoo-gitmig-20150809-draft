@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.137 2010/03/09 01:55:51 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.138 2010/04/10 04:06:21 anarchy Exp $
+
+  10 Apr 2010; <anarchy@gentoo.org> -files/nspr-4.6.1-gcc-visibility.patch,
+  -files/nspr-4.6.1-prtime.patch, -nspr-4.6.8.ebuild, -nspr-4.7.3.ebuild,
+  -nspr-4.7.4.ebuild, -nspr-4.8.2.ebuild, -nspr-4.8.2-r1.ebuild,
+  -nspr-4.8.3-r3.ebuild, -files/nspr-4.8-pkgconfig-gentoo.patch,
+  -files/nspr-4.8-pkgconfig-gentoo-1.patch, -files/nspr.pc.in:
+  remove stable ebuilds/files
 
 *nspr-4.8.4 (09 Mar 2010)
 
