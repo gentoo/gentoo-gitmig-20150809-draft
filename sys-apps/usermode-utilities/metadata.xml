@@ -6,4 +6,7 @@
 	<name>Daniel Gryniewicz</name>
 </maintainer>
 <herd>no-herd</herd>
+<use>
+	<flag name='fuse'>Build tools (currently umlmount) needing fuse</flag>
+</use>
 </pkgmetadata>
