@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.21 2010/03/04 19:22:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.22 2010/04/10 09:44:22 hwoarang Exp $
+
+  10 Apr 2010; Markos Chandras <hwoarang@gentoo.org> configobj-4.7.2.ebuild:
+  Stable on amd64 wrt bug #313151
 
 *configobj-4.7.2 (04 Mar 2010)
 
