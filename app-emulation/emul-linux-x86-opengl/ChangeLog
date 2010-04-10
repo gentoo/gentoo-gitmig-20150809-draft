@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.2 2010/04/10 13:49:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.3 2010/04/10 17:22:11 pacho Exp $
+
+*emul-linux-x86-opengl-20100410_pre (10 Apr 2010)
+
+  10 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-opengl-20100410_pre.ebuild:
+  Version bump including testing versions as requested by scarabeus to let
+  people using latest Xorg have 3D support.
 
   10 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   emul-linux-x86-opengl-20100409.ebuild:
