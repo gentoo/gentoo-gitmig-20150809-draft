@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.0.3.ebuild,v 1.1 2010/03/20 21:40:28 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.0.3.ebuild,v 1.2 2010/04/10 00:10:30 keri Exp $
 
 inherit eutils java-pkg-opt-2
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-yapsharedir.patch
+	epatch "${FILESDIR}"/${P}-install-clause.patch
 }
 
 src_compile() {
