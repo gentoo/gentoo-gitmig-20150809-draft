@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.48 2010/03/24 21:09:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.49 2010/04/10 02:20:59 reavertm Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -29,12 +29,12 @@
 WANT_CMAKE="${WANT_CMAKE:-always}"
 CMAKEDEPEND=""
 case ${WANT_CMAKE} in
-		always)
-			;;
-		*)
-			IUSE+=" ${WANT_CMAKE}"
-			CMAKEDEPEND+="${WANT_CMAKE}? ( "
-			;;
+	always)
+		;;
+	*)
+		IUSE+=" ${WANT_CMAKE}"
+		CMAKEDEPEND+="${WANT_CMAKE}? ( "
+		;;
 esac
 inherit toolchain-funcs multilib flag-o-matic base
 
@@ -154,7 +154,6 @@ _check_build_dir() {
 		# regular out of tree build
 		[[ ${1} = init || -d ${CMAKE_USE_DIR}_build ]] && SUF="_build" || SUF=""
 		CMAKE_BUILD_DIR="${CMAKE_USE_DIR}${SUF}"
-
 	fi
 	echo ">>> Working in BUILD_DIR: \"$CMAKE_BUILD_DIR\""
 }
@@ -246,8 +245,15 @@ _modify-cmakelists() {
 	cat >> CMakeLists.txt <<- _EOF_
 
 		MESSAGE(STATUS "<<< Gentoo configuration >>>
-		Build type: \${CMAKE_BUILD_TYPE}
-		Install path: \${CMAKE_INSTALL_PREFIX}\n")
+		Build type      \${CMAKE_BUILD_TYPE}
+		Install path    \${CMAKE_INSTALL_PREFIX}
+		Compiler flags:
+		C               \${CMAKE_C_FLAGS}
+		C++             \${CMAKE_CXX_FLAGS}
+		Linker flags:
+		Executable      \${CMAKE_EXE_LINKER_FLAGS}
+		Module          \${CMAKE_MODULE_LINKER_FLAGS}
+		Shared          \${CMAKE_SHARED_LINKER_FLAGS}\n")
 	_EOF_
 }
 
@@ -262,9 +268,9 @@ enable_cmake-utils_src_configure() {
 
 	# check if CMakeLists.txt exist and if no then die
 	if [[ ! -e ${CMAKE_USE_DIR}/CMakeLists.txt ]] ; then
-		eerror "I was unable to locate CMakeLists.txt under:"
+		eerror "Unable to locate CMakeLists.txt under:"
 		eerror "\"${CMAKE_USE_DIR}/CMakeLists.txt\""
-		eerror "You should consider not inheriting the cmake eclass."
+		eerror "Consider not inheriting the cmake eclass."
 		die "FATAL: Unable to find CMakeLists.txt"
 	fi
 
