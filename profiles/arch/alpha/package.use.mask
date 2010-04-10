@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.26 2010/03/28 18:04:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.27 2010/04/10 15:10:04 ssuominen Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded
@@ -40,10 +40,6 @@ dev-lisp/clisp hyperspec pari svm
 # on those.
 sys-apps/iproute2 atm
 net-dialup/ppp atm
-
-# Raúl Porcel <armin76@gentoo.org> (20 May 2008)
-# Needs to be tested
-xfce-base/xfce4-extras lm_sensors
 
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment
