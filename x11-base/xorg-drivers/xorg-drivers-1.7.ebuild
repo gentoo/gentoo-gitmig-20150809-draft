@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.8 2010/04/09 10:10:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.9 2010/04/10 22:37:07 chithanh Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -146,8 +146,4 @@ PDEPEND="
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-nsc
 	!x11-drivers/xf86-video-sunbw2
-	!x11-drivers/xf86-video-suncg14
-	!x11-drivers/xf86-video-suncg3
-	!x11-drivers/xf86-video-suncg6
-	!x11-drivers/xf86-video-suntcx
 "
