@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-opengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.1 2010/04/09 17:32:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.2 2010/04/10 13:49:46 arfrever Exp $
+
+  10 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  emul-linux-x86-opengl-20100409.ebuild:
+  Block <app-emulation/emul-linux-x86-xlibs-20100409 to allow Portage to
+  resolve file collisions.
 
 *emul-linux-x86-opengl-20100409 (09 Apr 2010)
 
