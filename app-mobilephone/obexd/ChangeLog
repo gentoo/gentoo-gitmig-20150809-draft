@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.8 2010/03/15 21:05:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.9 2010/04/10 14:30:11 pacho Exp $
+
+  10 Apr 2010; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Taking care of this with Tiziano.
 
 *obexd-0.22 (15 Mar 2010)
 
