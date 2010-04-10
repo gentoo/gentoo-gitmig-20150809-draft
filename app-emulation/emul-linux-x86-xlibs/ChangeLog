@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.95 2010/04/09 17:31:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.96 2010/04/10 12:05:18 pacho Exp $
+
+*emul-linux-x86-xlibs-20100409-r1 (10 Apr 2010)
+
+  10 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-xlibs-20100409.ebuild,
+  +emul-linux-x86-xlibs-20100409-r1.ebuild:
+  Include x11-libs/libXScrnSaver again (bug #314445), thanks to Francois
+  Chenier and Andrey Yurchuk for noticying.
 
 *emul-linux-x86-xlibs-20100409 (09 Apr 2010)
 
