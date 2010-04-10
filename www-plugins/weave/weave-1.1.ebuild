@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/weave-1.1.ebuild,v 1.1 2010/03/14 17:49:59 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/weave-1.1.ebuild,v 1.2 2010/04/10 14:35:18 volkmar Exp $
 
 EAPI="2"
 
 inherit eutils mozextension multilib
 
 DESCRIPTION="Synchronize your bookmarks, history, tabs and passwords with Firefox"
-HOMEPAGE="https://mozillalabs.com/weave/"
+HOMEPAGE="http://mozillalabs.com/weave/"
 SRC_URI="http://hg.mozilla.org/labs/${PN}/archive/${PV}.tar.bz2
 	-> ${P}.tar.bz2"
 

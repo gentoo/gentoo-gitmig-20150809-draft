@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/weave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/ChangeLog,v 1.3 2010/03/14 17:49:59 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/ChangeLog,v 1.4 2010/04/10 14:35:18 volkmar Exp $
+
+  10 Apr 2010; Mounir Lamouri <volkmar@gentoo.org> -weave-1.0_beta2.ebuild,
+  weave-1.1.ebuild:
+  Change HOMEPAGE, fixing bug 313073 and removing old ebuilds.
 
 *weave-1.1 (14 Mar 2010)
 
