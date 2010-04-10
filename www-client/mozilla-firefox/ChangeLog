@@ -1,10 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.607 2010/04/10 03:52:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.608 2010/04/10 04:24:16 polynomial-c Exp $
 
   10 Apr 2010; <anarchy@gentoo.org> -mozilla-firefox-3.6-r5.ebuild,
   -mozilla-firefox-3.6.2.ebuild:
-  remove stable ebuilds
+  remove stale ebuilds
 
 *mozilla-firefox-3.6.3 (05 Apr 2010)
 
