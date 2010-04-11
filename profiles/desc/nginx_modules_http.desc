@@ -1,6 +1,6 @@
 # Copyright 2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.1 2010/03/07 10:37:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.2 2010/04/11 19:52:21 dev-zero Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -28,6 +28,7 @@ memcached - You can use this module to perform simple caching.
 passenger - Passenger makes deployment of Ruby web applications a breeze.
 perl - This module makes it possible to execute Perl directly within Nginx and call Perl via SSI.
 proxy - This module makes it possible to transfer requests to another server.
+push - External module turning Nginx into an adept HTTP Push and Comet server.
 random_index - Pick a random directory index from a directory.
 realip - This module allows to change the client's IP address to value from request header (e. g. X-Real-IP or X-Forwarded-For).
 referer - This module makes it possible to block access to the site with the incorrect values of line "Referer" in the request header.
