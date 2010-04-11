@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r1.ebuild,v 1.1 2009/02/18 15:37:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r2.ebuild,v 1.1 2010/04/11 15:33:02 chainsaw Exp $
 
 inherit pam linux-info eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PV}-direct_set_config_usb_hello.patch" || die
 	epatch "${FILESDIR}/${PV}-carriagereturn.patch" || die
+	epatch "${FILESDIR}/${PV}-send-sync-event.patch" || die
 	epatch "${FILESDIR}/${PV}-tftoolgroup.patch" || die
 }
 
