@@ -1,0 +1,10 @@
+--- mercury-compiler-10.04-beta.orig/library/Mercury.options	2009-06-12 17:00:26.000000000 +1200
++++ mercury-compiler-10.04-beta/library/Mercury.options	2010-04-11 12:14:32.000000000 +1200
+@@ -89,3 +89,7 @@
+ 
+ # Work around a problem in the HiPE compiler (as of Erlang R11B5).
+ MCFLAGS-bitmap += --no-erlang-native-code
++
++ifeq ("$(ARCH)","ppc")
++MGNUCFLAGS-lexer += -O0
++endif
