@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.20.7.ebuild,v 1.3 2010/03/19 09:20:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.20.7.ebuild,v 1.4 2010/04/11 11:57:53 nixnut Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -15,7 +15,7 @@ HOMEPAGE="http://vips.sourceforge.net"
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="exif fftw imagemagick jpeg lcms openexr png python tiff v4l"
 
 RDEPEND=">=dev-libs/glib-2.6:2
