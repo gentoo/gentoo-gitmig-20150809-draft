@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/symfony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.13 2010/03/21 14:49:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.14 2010/04/11 00:57:49 yngwin Exp $
+
+*symfony-1.4.4 (11 Apr 2010)
+
+  11 Apr 2010; Ben de Groot <yngwin@gentoo.org> +symfony-1.4.4.ebuild:
+  Version bump
 
   21 Mar 2010; Ben de Groot <yngwin@gentoo.org> symfony-1.4.3.ebuild:
   Update use deps as revealed by further testing
