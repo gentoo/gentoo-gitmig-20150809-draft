@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ytree-1.94.ebuild,v 1.1 2010/04/11 15:48:22 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ytree-1.94.ebuild,v 1.2 2010/04/11 15:48:51 jokey Exp $
 
 EAPI=2
 
@@ -28,6 +28,6 @@ pkg_setup() {
 }
 
 src_install() {
-	emake DESTDIR=${D}usr install || die "emake install failed"
+	emake DESTDIR="${D}usr" install || die "emake install failed"
 	dodoc ytree.conf
 }
