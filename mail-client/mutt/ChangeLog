@@ -1,6 +1,54 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.181 2010/03/11 20:18:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.182 2010/04/11 19:17:46 grobian Exp $
+
+*mutt-1.5.20-r14 (11 Apr 2010)
+
+  11 Apr 2010; Fabian Groffen <grobian@gentoo.org>
+  -files/mutt-1.5.19-libgnutls-test-15c662a95b91.patch,
+  -files/mutt-1.5.19-mutt-gnutls-7d0583e0315d-0b13183e40e0.patch,
+  -files/mutt-1.5.19-mutt_ssl-3af7e8af1983-dc9ec900c657.patch,
+  -mutt-1.5.20-r4.ebuild, mutt-1.5.20-r6.ebuild, mutt-1.5.20-r10.ebuild,
+  -mutt-1.5.20-r12.ebuild, mutt-1.5.20-r13.ebuild, +mutt-1.5.20-r14.ebuild,
+  -files/mutt-1.5.20-abort-prompt-ctrlc-c837ab790d2e.patch,
+  -files/mutt-1.5.20-copy-From-to-imap-b2b97c7a2ae6.patch,
+  -files/mutt-1.5.20-display-unsigned-pgp-7f37d0a57d83.patch,
+  -files/mutt-1.5.20-fix-mh-parsing-14bb498c6a1c.patch,
+  -files/mutt-1.5.20-gpgme-case-insensitive-domain-2c78b28027cc.patch,
+  -files/mutt-1.5.20-gpgme-keys-d41e043fa775.patch,
+  -files/mutt-1.5.20-hcache-restore-address-848f08512bf3.patch,
+  -files/mutt-1.5.20-hcache-uidvalidity-size-fix-a2a4286491b4.patch,
+  -files/mutt-1.5.20-header-weeding-f40de578e8ed.patch,
+  -files/mutt-1.5.20-imap-port-invalid-d6f88fbf8387.patch,
+  -files/mutt-1.5.20-imap-start-fatal-fe30f394cbe6.patch,
+  -files/mutt-1.5.20-leave-mailbox-no-new-mail-118b8fef8aae.patch,
+  -files/mutt-1.5.20-mailbox-save-message-double-free-57124ea5592e.patch,
+  -files/mutt-1.5.20-mbox-new-mail-bd59be56c6b0.patch,
+  -files/mutt-1.5.20-mbox-unchanged-new-mail-9ae13dedb5ed.patch,
+  -files/mutt-1.5.20-mhs-flags-leak-9f3053f75f27.patch,
+  -files/mutt-1.5.20-next-invalid-pattern-crash-6a08a5244d60.patch,
+  -files/mutt-1.5.20-no-hcolor-in-hcache-b7d2cb7c7ce1.patch,
+  -files/mutt-1.5.20-null-dptr-use-data-817c60d5da7d.patch,
+  -files/mutt-1.5.20-off-by-one-mailcap-736b6af3c5f1.patch,
+  -files/mutt-1.5.20-pop-port-in-url-6b057dc52222.patch,
+  -files/mutt-1.5.20-propagate-mh_read_sequences-2fc9348684fe.patch,
+  +files/mutt-1.5.20-realpath-slowness.patch,
+  -files/mutt-1.5.20-regexp-fail-crash-05cec973f0d9.patch,
+  -files/mutt-1.5.20-rfc-2047-decode-before-dequote-2a4ca6917fd0.patch,
+  -files/mutt-1.5.20-search-pattern-crash-053ef7bbaa72.patch,
+  -files/mutt-1.5.20-smtp-batch-mode-0a3de4d9a009-f6c6066a5925.patch,
+  -files/mutt-1.5.20-ssl-CVE-2009-3765-dc09812e63a3.patch,
+  -files/mutt-1.5.20-ssl-stack-compile-fix-1cf34ea1f128.patch,
+  -files/mutt-1.5.20-subject-mistruncation-31881f38ca1e.patch,
+  -files/mutt-1.5.20-tab-subject-questionmark-298194c414f0-cff8e8ce4327.patc
+  h, -files/mutt-1.5.20-ungroup-command-77ac8b5c2be6.patch,
+  -files/mutt-1.5.20-unmailbox-segfault-25e46aad362b.patch,
+  -files/mutt-1.5.20-yes-no-non-ascii-a6fddecdc5f5.patch:
+  - Drop unused ebuilds
+  - Drop keywords from mutt-1.5.20-r6: it is the last version for mips
+  - Drop HG patches from filesdir, all moved to jumbo patches from the
+    patchball
+  - Added mutt-1.5.20-r14 with latest fixes from upstream
 
 *mutt-1.5.20-r13 (11 Mar 2010)
 

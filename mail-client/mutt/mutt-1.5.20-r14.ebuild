@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r4.ebuild,v 1.12 2009/09/15 23:49:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r14.ebuild,v 1.1 2010/04/11 19:17:46 grobian Exp $
+
+EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r3"
+PATCHSET_REV="-r6"
 
 # note: latest sidebar patches can be found here:
 # http://www.lunar-linux.org/index.php?option=com_content&task=view&id=44
@@ -22,15 +24,18 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	sidebar? (
 		http://www.lunar-linux.org/~tchan/mutt/${SIDEBAR_PATCH_N}
 	)"
-IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap mbox nls nntp pop qdbm sasl sidebar smime smtp ssl vanilla"
+IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap mbox nls nntp pop qdbm sasl sidebar smime smtp ssl tokyocabinet vanilla"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 RDEPEND=">=sys-libs/ncurses-5.2
-	qdbm?    ( dev-db/qdbm )
-	!qdbm?   (
-		gdbm?  ( sys-libs/gdbm )
-		!gdbm? ( berkdb? ( >=sys-libs/db-4 ) )
+	tokyocabinet?  ( dev-db/tokyocabinet )
+	!tokyocabinet? (
+		qdbm?  ( dev-db/qdbm )
+		!qdbm? (
+			gdbm?  ( sys-libs/gdbm )
+			!gdbm? ( berkdb? ( >=sys-libs/db-4 ) )
+		)
 	)
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
@@ -64,8 +69,9 @@ PATCHDIR="${WORKDIR}"/${P}-gentoo-patches${PATCHSET_REV}
 
 src_unpack() {
 	unpack ${A//${SIDEBAR_PATCH_N}}
-	cd "${S}"
+}
 
+src_prepare() {
 	# this patch is non-generic and only works because we use a sysconfdir
 	# different from the one used by the mailbase ebuild
 	use prefix && epatch "${FILESDIR}"/mutt-1.5.13-prefix-mailcap.patch
@@ -75,23 +81,15 @@ src_unpack() {
 	built_with_use sys-libs/ncurses unicode && \
 		epatch "${FILESDIR}"/mutt-1.5.18-solaris-ncurses-chars.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-1.2.0.patch
+	epatch "${FILESDIR}"/mutt-1.5.20-dont-reveal-bbc.patch
+	epatch "${FILESDIR}"/mutt-1.5.20-realpath-slowness.patch
+
 	# post-release hot-fixes
-	epatch "${FILESDIR}"/mutt-1.5.20-imap-port-invalid-d6f88fbf8387.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-header-weeding-f40de578e8ed.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-display-unsigned-pgp-7f37d0a57d83.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-unmailbox-segfault-25e46aad362b.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-mbox-new-mail-bd59be56c6b0.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-mbox-unchanged-new-mail-9ae13dedb5ed.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-imap-start-fatal-fe30f394cbe6.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-tab-subject-questionmark-298194c414f0-cff8e8ce4327.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-smtp-batch-mode-0a3de4d9a009-f6c6066a5925.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-leave-mailbox-no-new-mail-118b8fef8aae.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-keys-d41e043fa775.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-mhs-flags-leak-9f3053f75f27.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-hcache-restore-address-848f08512bf3.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-ungroup-command-77ac8b5c2be6.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-propagate-mh_read_sequences-2fc9348684fe.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-hcache-uidvalidity-size-fix-a2a4286491b4.patch
+	for rev in $(eval echo {0..${PR#r}}) ; do
+		local revpatch="${PATCHDIR}"/mutt-gentoo-${PV}-r${rev}.patch
+		[[ -e ${revpatch} ]] && \
+			epatch "${revpatch}"
+	done
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
@@ -99,14 +97,14 @@ src_unpack() {
 
 	if use !vanilla && use !sidebar ; then
 		use nntp || rm "${PATCHDIR}"/06-nntp.patch
-		for p in "${PATCHDIR}"/*.patch ; do
+		for p in "${PATCHDIR}"/[0-9][0-9]-*.patch ; do
 			epatch "${p}"
 		done
 	fi
 
 	if use sidebar ; then
 		use vanilla || \
-			ewarn "The sidebar patch is only applied to a vanilla mutt tree."
+			ewarn "the sidebar patch is only applied to a vanilla mutt tree"
 		epatch "${DISTDIR}"/${SIDEBAR_PATCH_N}
 	fi
 
@@ -123,7 +121,7 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	declare myconf="
 		$(use_enable nls) \
 		$(use_enable gpg gpgme) \
@@ -143,11 +141,6 @@ src_compile() {
 		--with-exec-shell=${EPREFIX}/bin/sh"
 
 	case $CHOST in
-		*-darwin7)
-			# locales are broken on Panther
-			myconf="${myconf} --enable-locales-fix --without-wc-funcs"
-			myconf="${myconf} --disable-fcntl --enable-flock"
-		;;
 		*-solaris*)
 			# Solaris has no flock in the standard headers
 			myconf="${myconf} --enable-fcntl --disable-flock"
@@ -157,23 +150,23 @@ src_compile() {
 		;;
 	esac
 
-	# See Bug #22787
-	unset WANT_AUTOCONF_2_5 WANT_AUTOCONF
-
 	# mutt prioritizes gdbm over bdb, so we will too.
 	# hcache feature requires at least one database is in USE.
-	if use qdbm; then
+	if use tokyocabinet; then
 		myconf="${myconf} --enable-hcache \
-		--with-qdbm --without-gdbm --without-bdb"
+			--with-tokyocabinet --without-qdbm --without-gdbm --without-bdb"
+	elif use qdbm; then
+		myconf="${myconf} --enable-hcache \
+			--without-tokyocabinet --with-qdbm --without-gdbm --without-bdb"
 	elif use gdbm ; then
 		myconf="${myconf} --enable-hcache \
-			--without-qdbm --with-gdbm --without-bdb"
+			--without-tokyocabinet --without-qdbm --with-gdbm --without-bdb"
 	elif use berkdb; then
 		myconf="${myconf} --enable-hcache \
-			--without-gdbm --without-qdbm --with-bdb"
+			--without-tokyocabinet --without-qdbm --without-gdbm --with-bdb"
 	else
 		myconf="${myconf} --disable-hcache \
-			--without-qdbm --without-gdbm --without-bdb"
+			--without-tokyocabinet --without-qdbm --without-gdbm --without-bdb"
 	fi
 
 	# there's no need for gnutls, ssl or sasl without socket support
@@ -205,11 +198,9 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
-	local ED=${ED-${D}}
 	make DESTDIR="${D}" install || die "install failed"
 	find "${ED}"/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
@@ -229,6 +220,10 @@ src_install() {
 		cp doc/mutt.man mutt.1
 		cp doc/muttbug.man flea.1
 		doman mutt.1 flea.1
+	else
+		# nuke manpages that should be provided by an MTA, bug #177605
+		rm "${ED}"/usr/share/man/man5/{mbox,mmdf}.5 \
+			|| ewarn "failed to remove files, please file a bug"
 	fi
 
 	if use !prefix ; then

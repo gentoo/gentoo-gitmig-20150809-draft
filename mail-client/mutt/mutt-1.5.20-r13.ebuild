@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r13.ebuild,v 1.1 2010/03/11 20:18:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r13.ebuild,v 1.2 2010/04/11 19:17:46 grobian Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r4"
+PATCHSET_REV="-r5"
 
 # note: latest sidebar patches can be found here:
 # http://www.lunar-linux.org/index.php?option=com_content&task=view&id=44
@@ -84,39 +84,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/mutt-1.5.20-dont-reveal-bbc.patch
 
 	# post-release hot-fixes
-	epatch "${FILESDIR}"/mutt-1.5.20-imap-port-invalid-d6f88fbf8387.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-header-weeding-f40de578e8ed.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-display-unsigned-pgp-7f37d0a57d83.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-unmailbox-segfault-25e46aad362b.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-mbox-new-mail-bd59be56c6b0.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-mbox-unchanged-new-mail-9ae13dedb5ed.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-imap-start-fatal-fe30f394cbe6.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-tab-subject-questionmark-298194c414f0-cff8e8ce4327.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-smtp-batch-mode-0a3de4d9a009-f6c6066a5925.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-leave-mailbox-no-new-mail-118b8fef8aae.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-keys-d41e043fa775.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-mhs-flags-leak-9f3053f75f27.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-hcache-restore-address-848f08512bf3.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-ungroup-command-77ac8b5c2be6.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-propagate-mh_read_sequences-2fc9348684fe.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-hcache-uidvalidity-size-fix-a2a4286491b4.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-fix-mh-parsing-14bb498c6a1c.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-search-pattern-crash-053ef7bbaa72.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-next-invalid-pattern-crash-6a08a5244d60.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-ssl-CVE-2009-3765-dc09812e63a3.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-ssl-stack-compile-fix-1cf34ea1f128.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-no-hcolor-in-hcache-b7d2cb7c7ce1.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-off-by-one-mailcap-736b6af3c5f1.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-subject-mistruncation-31881f38ca1e.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-copy-From-to-imap-b2b97c7a2ae6.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-yes-no-non-ascii-a6fddecdc5f5.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-mailbox-save-message-double-free-57124ea5592e.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-case-insensitive-domain-2c78b28027cc.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-pop-port-in-url-6b057dc52222.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-rfc-2047-decode-before-dequote-2a4ca6917fd0.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-abort-prompt-ctrlc-c837ab790d2e.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-null-dptr-use-data-817c60d5da7d.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-regexp-fail-crash-05cec973f0d9.patch
+	for rev in $(eval echo {0..${PR#r}}) ; do
+		local revpatch="${PATCHDIR}"/mutt-gentoo-${PV}-r${rev}.patch
+		[[ -e ${revpatch} ]] && \
+			epatch "${revpatch}"
+	done
 
 	# patch version string for bug reports
 	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
@@ -124,7 +96,7 @@ src_prepare() {
 
 	if use !vanilla && use !sidebar ; then
 		use nntp || rm "${PATCHDIR}"/06-nntp.patch
-		for p in "${PATCHDIR}"/*.patch ; do
+		for p in "${PATCHDIR}"/[0-9][0-9]-*.patch ; do
 			epatch "${p}"
 		done
 	fi
