@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.6.ebuild,v 1.1 2009/07/13 12:18:46 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7.3.ebuild,v 1.1 2010/04/11 01:32:47 volkmar Exp $
 
 EAPI="2"
 
@@ -18,11 +18,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="app-emulation/wine
+RDEPEND="
+		app-emulation/wine
 		app-arch/cabextract
 		app-arch/unzip
 		dev-python/wxpython:2.8
-		media-gfx/imagemagick
+		|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+		x11-apps/mesa-progs
 		x11-terms/xterm"
 
 S=${WORKDIR}/${PN}
@@ -31,6 +33,9 @@ S=${WORKDIR}/${PN}
 # Having a real install script and let playonlinux use standard filesystem
 # 	architecture to prevent having everything installed into GAMES_DATADIR
 # It will let using LANGUAGES easily
+# How to deal with Microsoft Fonts installation asked every time ?
+# How to deal with wine version installed ? (have a better mgmt of system one)
+# Look at debian pkg: http://packages.debian.org/sid/playonlinux
 
 src_prepare() {
 	einfo "Removing temporary files..."

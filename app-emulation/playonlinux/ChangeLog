@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/playonlinux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.6 2009/11/16 20:27:45 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.7 2010/04/11 01:32:47 volkmar Exp $
+
+*playonlinux-3.7.3 (11 Apr 2010)
+
+  11 Apr 2010; Mounir Lamouri <volkmar@gentoo.org> -playonlinux-3.6.ebuild,
+  +playonlinux-3.7.3.ebuild:
+  Version bump to 3.7.3, adding media-gfx/graphicsmagick to the deps.
+  Fixing bug 305457 and bug 314209.
 
 *playonlinux-3.7-r1 (16 Nov 2009)
 
