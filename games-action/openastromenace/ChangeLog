@@ -1,6 +1,11 @@
 # ChangeLog for games-action/openastromenace
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/ChangeLog,v 1.7 2009/12/17 21:54:45 pacho Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/ChangeLog,v 1.8 2010/04/11 00:54:28 mr_bones_ Exp $
+
+  11 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  openastromenace-1.2.0.ebuild, +files/openastromenace-1.2.0-mesa.patch:
+  Add patch from Andrew Savchenko to build against newer mesa versions (bug
+  #288340)
 
   17 Dec 2009; Pacho Ramos <pacho@gentoo.org> openastromenace-1.2.0.ebuild:
   amd64 stable, bug 295711
