@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.228 2010/04/07 17:58:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.229 2010/04/11 13:17:46 keytoaster Exp $
+
+  11 Apr 2010; Tobias Heinlein <keytoaster@gentoo.org>
+  lighttpd-1.4.26-r1.ebuild:
+  amd64 stable, bug #308405
 
   07 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   lighttpd-1.4.26-r1.ebuild:
