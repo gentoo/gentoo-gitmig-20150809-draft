@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.87-r3.ebuild,v 1.11 2010/03/16 19:09:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.87-r3.ebuild,v 1.12 2010/04/11 16:54:43 armin76 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -15,7 +15,7 @@ F="ftp://ftp.cistron.nl/pub/people/miquels/software/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 ~s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux ibm static kernel_FreeBSD"
 
 RDEPEND="selinux? ( >=sys-libs/libselinux-1.28 )"

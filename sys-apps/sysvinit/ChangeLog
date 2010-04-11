@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.78 2010/03/16 19:09:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.79 2010/04/11 16:54:43 armin76 Exp $
+
+  11 Apr 2010; Raúl Porcel <armin76@gentoo.org> sysvinit-2.87-r3.ebuild:
+  s390 stable wrt #301473
 
   16 Mar 2010; Raúl Porcel <armin76@gentoo.org> sysvinit-2.87-r3.ebuild:
   m68k stable thanks to kolla for testing
