@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.282 2010/03/13 16:03:24 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.283 2010/04/11 08:32:23 hattya Exp $
+
+  11 Apr 2010; Akinori Hattori <hattya@gentoo.org>
+  -files/sylpheed-2.2-replace-aspell-with-enchant.diff,
+  -sylpheed-2.4.8.ebuild:
+  cleaned out old ebuild(s).
 
   13 Mar 2010; Akinori Hattori <hattya@gentoo.org> -sylpheed-2.7.0.ebuild,
   sylpheed-2.7.1.ebuild:
