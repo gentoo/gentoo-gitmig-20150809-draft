@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/scmail-1.3.ebuild,v 1.5 2009/08/16 07:17:05 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/scmail-1.3.ebuild,v 1.6 2010/04/11 10:08:49 hattya Exp $
 
-inherit fixheadtails
+EAPI="2"
+
+inherit eutils fixheadtails
 
 IUSE=""
 
@@ -14,14 +16,16 @@ LICENSE="BSD"
 KEYWORDS="x86 ~ppc"
 SLOT="0"
 
-DEPEND=">=dev-scheme/gauche-0.7.4.1"
+DEPEND="dev-scheme/gauche"
 
-src_unpack() {
+src_prepare() {
 
-	unpack ${A}
-	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-gauche-0.9.diff
 
 	ht_fix_file tests/scmail-commands
+
+	# replace make -> $(MAKE)
+	sed -i "s/make\( \|$\)/\$(MAKE)\1/g" Makefile || die
 
 }
 
