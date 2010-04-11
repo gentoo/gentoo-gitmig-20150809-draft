@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.450 2010/04/07 16:05:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.451 2010/04/11 11:30:59 nixnut Exp $
+
+  11 Apr 2010; <nixnut@gentoo.org> gtk+-2.18.7.ebuild:
+  ppc stable #304777
 
   07 Apr 2010; Brent Baude <ranger@gentoo.org> gtk+-2.18.6.ebuild:
   Marking gtk+-2.18.6 ppc stable for bug 304777
