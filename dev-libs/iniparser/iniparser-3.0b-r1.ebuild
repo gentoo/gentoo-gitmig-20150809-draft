@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0b-r1.ebuild,v 1.14 2009/12/27 08:02:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.0b-r1.ebuild,v 1.15 2010/04/11 08:18:38 dev-zero Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -25,6 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
+	echo "CFLAGS: ${CFLAGS}"
 	sed -i \
 		-e "s|\(CFLAGS  =\) -O2|\1 ${CFLAGS}|" \
 		-e "s|\(LDFLAGS =\)|\1 ${LDFLAGS}|" \

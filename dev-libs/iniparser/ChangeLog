@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/iniparser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.15 2009/12/27 08:02:24 josejx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.16 2010/04/11 08:18:38 dev-zero Exp $
+
+*iniparser-3.0b-r2 (11 Apr 2010)
+
+  11 Apr 2010; Tiziano Müller <dev-zero@gentoo.org>
+  iniparser-3.0b-r1.ebuild, +iniparser-3.0b-r2.ebuild,
+  +files/iniparser-3.0b-cpp.patch, +files/iniparser-3.0b-makefile.patch:
+  Respect CC properly (bug #296050, thanks to Jeroen Roovers). Make headers
+  C++ compatible (bug #264508, thanks to Lei Qing).
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> iniparser-3.0b-r1.ebuild:
   Marked ppc/ppc64 stable for bug #291428.
