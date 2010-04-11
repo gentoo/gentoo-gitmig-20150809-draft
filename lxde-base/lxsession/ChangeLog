@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.15 2010/03/21 16:35:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.16 2010/04/11 21:58:59 vostorga Exp $
+
+*lxsession-0.4.4 (11 Apr 2010)
+
+  11 Apr 2010; Víctor Ostorga <vostorga@gentoo.org>
+  +lxsession-0.4.4.ebuild:
+  Version bump to 0.4.4, including fix for freedesktop.org autostart
+  handling and LTSP (Linux terminal server project) support
 
 *lxsession-0.4.3 (21 Mar 2010)
 
