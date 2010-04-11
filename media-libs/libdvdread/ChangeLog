@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.64 2010/03/19 10:01:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.65 2010/04/11 12:29:52 nixnut Exp $
+
+  11 Apr 2010; <nixnut@gentoo.org> libdvdread-4.1.3_p1168.ebuild:
+  ppc stable #308777
 
   19 Mar 2010; Pacho Ramos <pacho@gentoo.org> libdvdread-4.1.3_p1168.ebuild:
   amd64 stable, bug 308777
