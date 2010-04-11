@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nxserver-freenx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.69 2009/12/15 20:35:41 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.70 2010/04/11 18:51:54 voyageur Exp $
+
+*nxserver-freenx-0.7.3_p104-r4 (11 Apr 2010)
+
+  11 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freenx-0.7.3_p104-r2.ebuild,
+  nxserver-freenx-0.7.3_p104-r3.ebuild,
+  +nxserver-freenx-0.7.3_p104-r4.ebuild:
+  Revision bump to fix support for current stable net-misc/nx-3.4.0, bug
+  #312879
 
 *nxserver-freenx-0.7.3_p104-r3 (15 Dec 2009)
 

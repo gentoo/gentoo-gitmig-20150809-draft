@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r3.ebuild,v 1.2 2010/04/11 18:51:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r4.ebuild,v 1.1 2010/04/11 18:51:54 voyageur Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND="dev-tcltk/expect
 	media-fonts/font-cursor-misc
 	media-fonts/font-misc-misc
 	net-analyzer/gnu-netcat
-	<net-misc/nx-3.4.0
+	>=net-misc/nx-2.1.0
 	sys-apps/gawk
 	virtual/ssh
 	x11-apps/xauth
@@ -53,8 +53,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7.3_p102-cflags.patch
 	epatch "${FILESDIR}"/${PN}-0.7.2-cups.patch
 
+	# Path to net-misc/nx files, support for nx 3.4.0
 	sed	-e "/PATH_LIB=/s/lib/$(get_libdir)/g" \
 		-e "s#REAL_PATH_LIB#/usr/$(get_libdir)/NX/bin#" \
+		-e "s#3.\[0123\].0#3.\[01234\].0#g" \
 		-i nxloadconfig || die "nxloadconfig sed failed"
 }
 
@@ -110,7 +112,7 @@ pkg_postinst () {
 	elog "This will use the default Nomachine SSH key"
 	elog "If you had older NX servers installed, you may need to add \"--clean --purge\" to the nxsetup command"
 
-	if ! built_with_use net-misc/openssh pam; then
+	if has_version net-misc/openssh[-pam]; then
 		elog ""
 		elog "net-misc/openssh was not built with PAM support"
 		elog "You will need to unlock the nx account by setting a password for it"
