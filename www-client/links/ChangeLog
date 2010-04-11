@@ -1,6 +1,15 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.123 2010/02/26 16:29:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.124 2010/04/11 20:31:14 vanquirius Exp $
+
+*links-2.3_pre1 (11 Apr 2010)
+
+  11 Apr 2010; Marcelo Goes <vanquirius@gentoo.org> +links-2.3_pre1.ebuild,
+  metadata.xml:
+  2.3_pre1 version bump for bug 304861, thanks to hitachi <mail at
+  konstantinhansen dot de> for reporting. The UTF-8 patch is no longer
+  applied since UTF-8 text mode terminal support is now present in upstream
+  - if you have problems, please report.
 
   26 Feb 2010; Fabian Groffen <grobian@gentoo.org> links-2.2.ebuild:
   Marked ~x64-macos, thanks Ramon van Alteren, bug #305367
