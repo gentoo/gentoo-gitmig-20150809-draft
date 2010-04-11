@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_ncurses_client/mt_ncurses_client-0.1.98.ebuild,v 1.4 2004/06/24 22:20:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_ncurses_client/mt_ncurses_client-0.1.98.ebuild,v 1.5 2010/04/11 22:16:18 mr_bones_ Exp $
 
 inherit games
 
@@ -20,7 +20,7 @@ DEPEND="=dev-libs/glib-2*
 	sys-libs/ncurses"
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS ChangeLog NEWS README
 	prepgamesdirs
 }
