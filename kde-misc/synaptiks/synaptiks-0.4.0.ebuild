@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.4.0.ebuild,v 1.1 2010/04/11 15:15:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.4.0.ebuild,v 1.2 2010/04/11 21:51:58 spatz Exp $
 
 EAPI=2
 KDE_LINGUAS="da de en_GB ru tr"
@@ -16,8 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
 DEPEND="x11-libs/libXi"
-
-DOCS="CHANGES README"
 
 src_configure() {
 	if has_version ">=x11-libs/libXi-1.3"; then
