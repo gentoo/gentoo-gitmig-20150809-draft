@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.32 2010/03/26 17:26:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.33 2010/04/11 12:40:23 nixnut Exp $
+
+  11 Apr 2010; <nixnut@gentoo.org> astng-0.19.3-r1.ebuild:
+  ppc stable #310410
 
 *astng-0.20.0 (26 Mar 2010)
 

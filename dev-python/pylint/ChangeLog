@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.61 2010/03/26 17:33:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.62 2010/04/11 12:41:41 nixnut Exp $
+
+  11 Apr 2010; <nixnut@gentoo.org> pylint-0.19.0.ebuild:
+  ppc stable #301410
 
 *pylint-0.20.0 (26 Mar 2010)
 
