@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.7.2-r1.ebuild,v 1.1 2010/03/14 20:56:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.7.2-r1.ebuild,v 1.2 2010/04/11 17:10:14 phajdan.jr Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fredrik.hubbe.net/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE="tk"
 
 RDEPEND="x11-libs/libX11

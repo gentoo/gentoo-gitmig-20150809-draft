@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.35 2010/03/14 20:56:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.36 2010/04/11 17:10:14 phajdan.jr Exp $
+
+  11 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  x2vnc-1.7.2-r1.ebuild:
+  x86 stable wrt bug #308713
 
 *x2vnc-1.7.2-r1 (14 Mar 2010)
 
