@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.29 2010/03/28 09:59:43 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.30 2010/04/11 18:27:53 armin76 Exp $
+
+  11 Apr 2010; Raúl Porcel <armin76@gentoo.org> c2hs-0.14.5.ebuild,
+  c2hs-0.15.1.ebuild:
+  Drop ia64/sparc keywords
 
   28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> c2hs-0.16.0.ebuild:
   Stable on amd64, see bug #306311.
