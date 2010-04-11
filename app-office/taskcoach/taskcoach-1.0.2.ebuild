@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.78.4.ebuild,v 1.1 2010/03/16 08:34:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.0.2.ebuild,v 1.1 2010/04/11 23:03:08 caster Exp $
 
 EAPI=1
 
@@ -22,14 +22,13 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-# disappeared in 0.73.2, maybe will appear again?
-#DOCS="CHANGES.txt"
+DOCS="CHANGES.txt"
 
 src_unpack() {
 	distutils_src_unpack
 
 	cd "${S}"
-	elog "Removing Funambol support, works only on x86 and python 2.5."
+	einfo "Removing Funambol support, works only on x86 and python 2.5."
 	rm -fv taskcoachlib/bin.in/linux/*.so || die
 }
 
@@ -45,4 +44,10 @@ src_install() {
 
 	doicon "icons.in/${PN}.png" || die
 	make_desktop_entry ${PN} "Task Coach" ${PN} Office || die
+}
+
+pkg_postinst() {
+	elog "With version 1.0, taskcoach could be stabilized if there is enough user interest."
+	elog "If you run a stable stable system and had to keyword taskcoach, please comment/vote"
+	elog "on http://bugs.gentoo.org/show_bug.cgi?id=311841"
 }
