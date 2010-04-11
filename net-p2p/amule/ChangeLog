@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/amule
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.149 2010/03/20 13:13:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.150 2010/04/11 17:52:42 armin76 Exp $
+
+  11 Apr 2010; Raúl Porcel <armin76@gentoo.org> amule-2.2.6.ebuild,
+  +files/amule-2.2.6-fallocate.diff:
+  Add patch from debian to build on hppa wrt #312831
 
   20 Mar 2010; Raúl Porcel <armin76@gentoo.org> amule-2.2.6.ebuild:
   alpha/x86 stable wrt #309293

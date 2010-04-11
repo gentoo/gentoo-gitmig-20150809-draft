@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.6.ebuild,v 1.5 2010/03/20 13:13:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.6.ebuild,v 1.6 2010/04/11 17:52:42 armin76 Exp $
 
 EAPI="2"
 
@@ -48,6 +48,10 @@ pkg_preinst() {
 		enewgroup p2p
 		enewuser p2p -1 -1 /home/p2p p2p
 	fi
+}
+
+src_unpack() {
+	epatch "${FILESDIR}"/${P}-fallocate.diff
 }
 
 src_configure() {
