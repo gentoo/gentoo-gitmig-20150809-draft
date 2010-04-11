@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/di
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.23 2010/01/10 14:11:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.24 2010/04/11 19:49:21 vapier Exp $
+
+*di-4.20 (11 Apr 2010)
+
+  11 Apr 2010; Mike Frysinger <vapier@gentoo.org> +di-4.20.ebuild:
+  Version bump #312903 by Samuli Suominen.
 
 *di-4.18 (10 Jan 2010)
 
