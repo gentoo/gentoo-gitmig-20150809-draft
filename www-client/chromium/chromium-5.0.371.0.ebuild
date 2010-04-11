@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.371.0.ebuild,v 1.2 2010/04/09 17:29:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.371.0.ebuild,v 1.3 2010/04/11 15:26:29 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -127,16 +127,18 @@ EOF
 	# Sandbox paths
 	myconf="${myconf} -Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox -Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
-	if use amd64 ; then
+	# Use target arch detection logic from bug #296917.
+	local myarch="$ABI"
+	[[ $myarch = "" ]] && myarch="$ARCH"
+
+	if [[ $myarch = amd64 ]] ; then
 		myconf="${myconf} -Dtarget_arch=x64"
-	fi
-
-	if use x86 ; then
+	elif [[ $myarch = x86 ]] ; then
 		myconf="${myconf} -Dtarget_arch=ia32"
-	fi
-
-	if use arm; then
+	elif [[ $myarch = arm ]] ; then
 		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dlinux_use_tcmalloc=0"
+	else
+		die "Failed to determine target arch, got '$myarch'."
 	fi
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then

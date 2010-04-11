@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.80 2010/04/09 17:29:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.81 2010/04/11 15:26:29 phajdan.jr Exp $
+
+  11 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-5.0.371.0.ebuild, chromium-9999.ebuild:
+  Apply arch detection logic from bug #296917 by ferret
+  <ferret@explodingferret.com>
 
   09 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-5.0.371.0.ebuild, chromium-9999.ebuild:
