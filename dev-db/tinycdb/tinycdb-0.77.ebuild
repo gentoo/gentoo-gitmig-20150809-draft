@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77.ebuild,v 1.5 2010/03/14 10:15:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77.ebuild,v 1.6 2010/04/11 08:18:25 hattya Exp $
 
-inherit eutils toolchain-funcs multilib
+EAPI="2"
+
+inherit eutils multilib toolchain-funcs
 
 IUSE=""
 
@@ -12,19 +14,24 @@ SRC_URI="http://www.corpit.ru/mjt/${PN}/${P/-/_}.tar.gz"
 
 RESTRICT="test"
 LICENSE="public-domain"
-KEYWORDS="~amd64 hppa ~ia64 ppc x86"
+KEYWORDS="amd64 hppa ia64 ppc x86"
 SLOT="0"
 
 DEPEND="!dev-db/cdb"
 
-src_compile() {
+src_prepare() {
+
 	# fix multilib support
-	sed -i "/^libdir/s:\/lib:\/$(get_libdir):" Makefile \
+	sed -i "/^libdir/s:/lib:/$(get_libdir):" Makefile \
 		|| die "failed to patch Makefile"
+
+}
+
+src_compile() {
+
 	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} ${LDFLAGS}" \
-		libdir="$(get_libdir)" \
 		staticlib \
 		sharedlib \
 		piclib \
