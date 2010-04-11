@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4106 2010/04/11 12:32:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4107 2010/04/11 20:54:48 swegener Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Apr 2010; Sven Wegener <swegener@gentoo.org> package.mask:
+  Remove dev-db/mysql-gui-tools mask, it has been removed from the tree.
 
   11 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> license_groups:
   Add spin (spinroot.com) licenses to the EULA group.
