@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.41c.ebuild,v 1.4 2005/09/06 21:49:32 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/Circle/Circle-0.41c.ebuild,v 1.5 2010/04/11 18:11:47 sochotnicky Exp $
 
 inherit python
 
@@ -25,20 +25,19 @@ src_compile() {
 }
 
 src_install() {
-	python_version
 	exeinto /usr/bin/
 	doexe circle
-	insinto /usr/lib/python${PYVER}/site-packages/circlelib/
+	insinto ${python_get_sitedir}/circlelib
 	doins circlelib/*.py
-	insinto /usr/lib/python${PYVER}/site-packages/circlelib/pixmaps/
+	insinto ${python_get_sitedir}/circlelib/pixmaps
 	doins circlelib/pixmaps/*
-	insinto /usr/lib/python${PYVER}/site-packages/circlelib/crypto/
+	insinto ${python_get_sitedir}/circlelib/crypto/
 	doins circlelib/crypto/*
-	insinto /usr/lib/python${PYVER}/site-packages/circlelib/ui_gtk/
+	insinto ${python_get_sitedir}/circlelib/ui_gtk/
 	doins circlelib/ui_gtk/*
-	insinto /usr/lib/python${PYVER}/site-packages/circlelib/ui_http/
+	insinto ${python_get_sitedir}/circlelib/ui_http/
 	doins circlelib/ui_http/*
-	insinto /usr/lib/python${PYVER}/site-packages/circlelib/ui_text/
+	insinto ${python_get_sitedir}/circlelib/ui_text/
 	doins circlelib/ui_text/*
 	insinto /usr/share/pixmaps/
 	doins circle-icon.png
@@ -46,6 +45,6 @@ src_install() {
 		insinto /usr/share/gnome/apps/Internet/
 		doins circle.desktop
 	fi
-	dohtml circlelib/*.html
+	dohtml circlelib/html/*.html
 	dodoc NEWS PKG-INFO README
 }
