@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.329 2010/03/29 21:49:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.330 2010/04/11 20:05:36 vapier Exp $
+
+  11 Apr 2010; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8n.ebuild,
+  openssl-1.0.0.ebuild:
+  Remove SCRIPTS from the environment #312551 by Justin Lecher.
 
   29 Mar 2010; Markus Meier <maekke@gentoo.org> openssl-0.9.8n.ebuild:
   amd64 stable, bug #308011
