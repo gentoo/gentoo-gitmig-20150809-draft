@@ -1,0 +1,13 @@
+--- makefile.orig	2010-04-03 12:13:41.000000000 +0200
++++ makefile	2010-04-03 12:14:21.000000000 +0200
+@@ -10,10 +10,6 @@
+ # Documentation: http://spinroot.com/
+ # Bug-reports:   bugs@spinroot.com
+ 
+-CC=gcc -DNXT 		# -DNXT enables the X operator in LTL
+-# CC=cc -m32 -DNXT 	# for 32bit compilation on a 64bit system
+-CFLAGS=-ansi -D_POSIX_SOURCE -Wno-format-security	# on some systems add: -I/usr/include
+-
+ # for a more picky compilation:
+ # CFLAGS=-std=c99 -Wstrict-prototypes -pedantic -fno-strength-reduce -fno-builtin -W -Wshadow -Wpointer-arith -Wcast-qual -Winline -Wall -g
+ 
