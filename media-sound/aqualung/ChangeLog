@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aqualung
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.9 2010/02/02 18:19:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.10 2010/04/11 17:06:56 phajdan.jr Exp $
+
+  11 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  aqualung-0.9_beta11.ebuild:
+  x86 stable wrt bug #307657
 
 *aqualung-0.9_beta11 (02 Feb 2010)
 
