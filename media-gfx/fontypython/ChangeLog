@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontypython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.11 2010/04/10 23:54:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.12 2010/04/11 01:18:25 dirtyepic Exp $
+
+  11 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> fontypython-0.4.2.3.ebuild:
+  Support multiple ABIs.
 
   10 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> fontypython-0.4.2.3.ebuild:
   Call python_set_active_version.
