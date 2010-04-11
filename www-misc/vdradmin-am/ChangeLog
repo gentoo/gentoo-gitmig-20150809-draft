@@ -1,6 +1,13 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.7 2010/03/16 17:18:49 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.8 2010/04/11 17:22:39 billie Exp $
+
+*vdradmin-am-3.6.7 (11 Apr 2010)
+
+  11 Apr 2010; Daniel Pielmeier <billie@gentoo.org> -files/vdradmin-rc-3,
+  -vdradmin-am-3.6.2.ebuild, -vdradmin-am-3.6.4.ebuild,
+  +vdradmin-am-3.6.7.ebuild:
+  Version bump. Remove old.
 
 *vdradmin-am-3.6.6 (16 Mar 2010)
 
