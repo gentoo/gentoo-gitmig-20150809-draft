@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/lwm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.21 2008/08/22 09:11:27 omp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/ChangeLog,v 1.22 2010/04/11 19:18:50 jer Exp $
+
+*lwm-1.2.2 (11 Apr 2010)
+
+  11 Apr 2010; Jeroen Roovers <jer@gentoo.org> +lwm-1.2.2.ebuild:
+  Version bump. Respect CC, CFLAGS, LDFLAGS. Do not install README.
 
   22 Aug 2008; David Shakaryan <omp@gentoo.org> lwm-1.2.1.ebuild:
   Add x11-libs/libSM dependency. (bug #235373)
