@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.496 2010/04/09 10:42:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.497 2010/04/11 21:40:11 chithanh Exp $
+
+  11 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.7.6.ebuild:
+  warn user about gcc-3 incompatibility, bug #314615
 
   09 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   xorg-server-1.7.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.3 2010/04/09 10:42:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.4 2010/04/11 21:40:11 chithanh Exp $
 
 EAPI="2"
 
@@ -179,6 +179,12 @@ pkg_setup() {
 		if [[ $(gcc-major-version) -lt 4 ]]; then
 			filter-flags -fstack-protector
 		fi
+	fi
+
+	# Incompatible with GCC 3.x CPP, bug #314615
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		ewarn "GCC 3.x C preprocessor may cause build failures. Use GCC 4.x"
+		ewarn "or set CPP=cpp-4.3.4 (replace with the actual installed version)"
 	fi
 
 	OLD_IMPLEM="$(eselect opengl show)"
