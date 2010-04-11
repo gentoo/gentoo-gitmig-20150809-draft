@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.04-r1.ebuild,v 1.4 2010/04/05 17:49:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.04-r1.ebuild,v 1.5 2010/04/11 13:56:59 nixnut Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ SRC_URI="http://tesseract-ocr.googlecode.com/files/${P}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~mips ppc ppc64 sparc x86"
 IUSE="examples tiff linguas_de linguas_eu linguas_es linguas_fr linguas_it linguas_nl linguas_pt_BR linguas_vi"
 
 DEPEND="tiff? ( media-libs/tiff )"
