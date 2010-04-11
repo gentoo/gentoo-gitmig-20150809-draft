@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.7.ebuild,v 1.1 2010/04/10 19:28:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.7.ebuild,v 1.2 2010/04/11 19:32:33 vapier Exp $
 
 EAPI="2"
 
@@ -21,7 +21,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-install-lib.patch #273489
 	epatch "${FILESDIR}"/${P}-fbsd.patch #262321
 	epatch "${FILESDIR}"/${PN}-2.2.7-update-pciids-both-forms.patch
-	sed -i -e "/^LIBDIR=/s:/lib:/$(get_libdir):" Makefile
 }
 
 uyesno() { use $1 && echo yes || echo no ; }
