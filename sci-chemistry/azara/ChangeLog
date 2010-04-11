@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/azara
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.2 2010/02/18 22:19:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.3 2010/04/11 18:24:13 jlec Exp $
+
+  11 Apr 2010; Justin Lecher <jlec@gentoo.org> azara-2.7.ebuild:
+  Do not try to install not builded bins, fixed 314491
 
   18 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> azara-2.7.ebuild:
   keyworded for ~amd64-linux

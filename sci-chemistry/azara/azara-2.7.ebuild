@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.7.ebuild,v 1.2 2010/02/18 22:19:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.7.ebuild,v 1.3 2010/04/11 18:24:13 jlec Exp $
 
 EAPI="3"
 
@@ -54,7 +54,12 @@ src_compile() {
 }
 
 src_install() {
-
+	if ! use X; then
+		rm bin/plot* || die
+	fi
+	if ! use opengl; then
+		rm bin/viewer || die
+	fi
 	for bin in bin/*; do
 		dobin "${bin}" || die "failed to install ${bin}"
 	done
