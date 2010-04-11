@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.4_p701-r1.ebuild,v 1.2 2010/04/11 12:38:42 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.4_p701-r1.ebuild,v 1.3 2010/04/11 17:11:48 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -17,12 +17,11 @@ HOMEPAGE="http://jdbc.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 DEPEND=">=dev-java/java-config-2.0.31
 	=virtual/jdk-1.6*
-	java-virtuals/jdk-with-com-sun
 	doc? (
 		dev-libs/libxslt
 		app-text/docbook-xsl-stylesheets
@@ -38,6 +37,8 @@ S="${WORKDIR}/${MY_P}"
 EANT_DOC_TARGET="publicapi"
 
 java_prepare() {
+	# bug 314647
+	epatch "${FILESDIR}/${P}-stray-com.sun-import.patch"
 	# needed for src_test
 	java-ant_rewrite-classpath
 }

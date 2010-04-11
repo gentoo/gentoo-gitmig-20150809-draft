@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.37 2010/04/11 12:38:42 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.38 2010/04/11 17:11:48 caster Exp $
+
+  11 Apr 2010; Vlastimil Babka <caster@gentoo.org>
+  jdbc-postgresql-8.4_p701.ebuild, jdbc-postgresql-8.4_p701-r1.ebuild,
+  +files/jdbc-postgresql-8.4_p701-stray-com.sun-import.patch:
+  Patch unused com.sun import away and put ppc(64) keywords back. Fixes bug
+  #314647.
 
   12 Apr 2010; Alistair Bush <ali_bush@gentoo.org>
   jdbc-postgresql-8.4_p701.ebuild, jdbc-postgresql-8.4_p701-r1.ebuild:
