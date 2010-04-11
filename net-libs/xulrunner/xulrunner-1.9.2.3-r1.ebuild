@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.3-r1.ebuild,v 1.1 2010/04/08 02:33:26 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.3-r1.ebuild,v 1.2 2010/04/11 21:13:09 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -202,6 +202,7 @@ src_install() {
 
 	if use java ; then
 		java-pkg_regjar "${D}/${MOZLIBDIR}/javaxpcom.jar"
+		java-pkg_regso "${D}/${MOZLIBDIR}/libjavaxpcomglue.so"
 		java-pkg_regjar "${D}/${SDKDIR}/lib/MozillaGlue.jar"
 		java-pkg_regjar "${D}/${SDKDIR}/lib/MozillaInterfaces.jar"
 	fi
