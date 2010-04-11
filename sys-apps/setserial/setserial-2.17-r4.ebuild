@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r4.ebuild,v 1.2 2008/05/11 01:50:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/setserial-2.17-r4.ebuild,v 1.3 2010/04/11 20:29:21 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,6 +21,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-manpage-updates.patch
 	epatch "${FILESDIR}"/${P}-headers.patch
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-hayes-esp.patch #309883
 }
 
 src_compile() {
