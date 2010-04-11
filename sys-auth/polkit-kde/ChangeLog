@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.2 2010/02/23 08:07:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.3 2010/04/11 21:09:12 dirtyepic Exp $
+
+  11 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> polkit-kde-0.95.1.ebuild,
+  +files/polkit-kde-0.95.1-gcc45.patch:
+  Fix build w/ GCC 4.5. (bug #314471 by Bernd Buschinski)
 
   23 Feb 2010; Joseph Jezak <josejx@gentoo.org> polkit-kde-0.95.1.ebuild:
   Marked ~ppc/~ppc64 for bug #296548.
