@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.36 2010/04/05 22:59:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.37 2010/04/11 12:38:42 ali_bush Exp $
+
+  12 Apr 2010; Alistair Bush <ali_bush@gentoo.org>
+  jdbc-postgresql-8.4_p701.ebuild, jdbc-postgresql-8.4_p701-r1.ebuild:
+  Drop ppc[64] KEYWORDS as currently package requires com.sun.* classes
+  which are not provided by any java implementations.
 
 *jdbc-postgresql-8.4_p701-r1 (05 Apr 2010)
 
