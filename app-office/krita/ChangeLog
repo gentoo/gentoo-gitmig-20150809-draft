@@ -1,6 +1,10 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.114 2010/04/02 10:19:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.115 2010/04/11 22:13:50 dirtyepic Exp $
+
+  11 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> krita-2.1.2.ebuild,
+  +files/krita-2.1.2-gcc45.patch:
+  Fix build w/ GCC 4.5. (bug #314483 by Bernd Buschinski)
 
   02 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> krita-2.1.2.ebuild:
   Fix patch name.
