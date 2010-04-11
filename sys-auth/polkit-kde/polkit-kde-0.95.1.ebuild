@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1.ebuild,v 1.3 2010/04/11 21:09:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1.ebuild,v 1.4 2010/04/11 21:48:45 dirtyepic Exp $
 
 EAPI="2"
 
@@ -29,4 +29,4 @@ RDEPEND="${DEPEND}"
 
 [[ ${PV} = *9999* ]] || S="${WORKDIR}/${MY_P}"
 
-PATCHES+="${FILESDIR}/${P}-gcc45.patch" # 314471 - fixed upstream for next version
+PATCHES+=( "${FILESDIR}/${P}-gcc45.patch" ) # 314471 - fixed upstream for next version
