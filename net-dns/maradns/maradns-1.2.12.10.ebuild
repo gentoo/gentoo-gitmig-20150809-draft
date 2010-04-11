@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.2.12.10.ebuild,v 1.4 2010/04/05 17:45:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.2.12.10.ebuild,v 1.5 2010/04/11 12:18:49 nixnut Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.maradns.org/download/1.2/${PV}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
