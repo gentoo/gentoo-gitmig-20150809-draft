@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.14b.ebuild,v 1.6 2010/04/04 15:22:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.14b.ebuild,v 1.7 2010/04/11 20:33:36 dirtyepic Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-02.12.01b-build.patch
+	epatch "${FILESDIR}"/${P}-gcc45.patch # 314201 - fixed for 02.15b
 }
 
 src_compile() {
