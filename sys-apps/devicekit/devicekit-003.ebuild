@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit/devicekit-003.ebuild,v 1.2 2009/09/12 10:09:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit/devicekit-003.ebuild,v 1.3 2010/04/11 18:18:35 armin76 Exp $
 
 EAPI="1"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.12
