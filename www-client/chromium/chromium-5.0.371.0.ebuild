@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.371.0.ebuild,v 1.3 2010/04/11 15:26:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.371.0.ebuild,v 1.4 2010/04/11 17:54:34 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -126,6 +126,10 @@ EOF
 
 	# Sandbox paths
 	myconf="${myconf} -Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox -Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
+
+	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
+	# and the performance gain isn't worth it.
+	myconf="${myconf} -Dv8_use_snapshot=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
