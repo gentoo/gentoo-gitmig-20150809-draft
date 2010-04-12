@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.6-r1.ebuild,v 1.2 2010/04/08 15:28:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.6-r1.ebuild,v 1.3 2010/04/12 12:12:35 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -53,7 +53,7 @@ src_compile() {
 	esac
 
 	export NSPR_INCLUDE_DIR=`nspr-config --includedir`
-	export NSPR_LIB_DIR=`nspr-config --libdir'`
+	export NSPR_LIB_DIR=`nspr-config --libdir`
 	export BUILD_OPT=1
 	export NSS_USE_SYSTEM_SQLITE=1
 	export NSDISTMODE=copy
@@ -78,7 +78,7 @@ src_install () {
 	cp -L */lib/*.chk "${D}"/usr/$(get_libdir) || die "copying chk files failed"
 	cp -L */lib/libcrmf.a "${D}"/usr/$(get_libdir) || die "copying libs failed"
 
-	# Install nspr-config and pkgconfig file
+	# Install nss-config and pkgconfig file
 	dodir /usr/bin
 	cp -L */bin/nss-config "${D}"/usr/bin
 	dodir /usr/$(get_libdir)/pkgconfig
