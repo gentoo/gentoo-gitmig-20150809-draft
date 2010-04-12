@@ -9,6 +9,7 @@ System), conditions, loops, etc, plus a translator to C, which can produce
 standalone executables.
 </longdescription>
 <use>
-<flag name='precisegc'>Use type information during garbage collection</flag>
+<flag name='gengc'>Use generational garbage collection (experimental)</flag>
+<flag name='precisegc'>Use type information during garbage collection (experimental)</flag>
 </use>
 </pkgmetadata>
