@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.32.ebuild,v 1.1 2010/02/16 17:06:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.32.ebuild,v 1.2 2010/04/12 19:32:34 maekke Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://tucnak.nagano.cz/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="alsa fftw ftdi gpm hamlib suid"
 
 RDEPEND=">=dev-libs/glib-2
