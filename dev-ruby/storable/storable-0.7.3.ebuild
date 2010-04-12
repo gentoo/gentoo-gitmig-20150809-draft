@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.7.2.ebuild,v 1.1 2010/04/07 12:42:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.7.3.ebuild,v 1.1 2010/04/12 12:40:52 flameeyes Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 SRC_URI="http://github.com/delano/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
-S="${WORKDIR}/delano-${PN}-d582732"
+S="${WORKDIR}/delano-${PN}-87e937b"
 
 ruby_add_bdepend test dev-ruby/tryouts
 
