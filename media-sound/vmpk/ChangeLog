@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vmpk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/ChangeLog,v 1.5 2010/01/09 17:57:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/ChangeLog,v 1.6 2010/04/12 08:14:47 aballier Exp $
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org> -vmpk-0.2.6.ebuild,
+  -vmpk-0.3.0.ebuild:
+  remove old
 
   09 Jan 2010; Markus Meier <maekke@gentoo.org> vmpk-0.3.1.ebuild:
   add ~x86, bug #299056
