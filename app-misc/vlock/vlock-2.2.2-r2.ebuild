@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-2.2.2-r2.ebuild,v 1.8 2009/01/10 16:15:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/vlock-2.2.2-r2.ebuild,v 1.9 2010/04/12 19:05:18 gmsoft Exp $
 
 inherit eutils pam toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://cthulhu.c3d2.de/~toidinamai/vlock/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="pam test"
 
 DEPEND="
