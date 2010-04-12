@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.82 2010/04/05 22:41:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.83 2010/04/12 10:11:21 aballier Exp $
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org>
+  avalon-logkit-1.2.2.ebuild, avalon-logkit-2.1-r4.ebuild:
+  keyword ~x86-fbsd, bug #313309
 
   05 Apr 2010; Vlastimil Babka <caster@gentoo.org>
   -avalon-logkit-1.2-r3.ebuild, -avalon-logkit-1.2-r4.ebuild,
