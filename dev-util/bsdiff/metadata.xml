@@ -2,7 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>ferringb@gentoo.org</email>
-</maintainer>
+<maintainer><email>ferringb@gentoo.org</email></maintainer>
 </pkgmetadata>
