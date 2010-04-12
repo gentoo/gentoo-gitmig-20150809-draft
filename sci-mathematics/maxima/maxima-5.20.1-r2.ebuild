@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.20.1-r1.ebuild,v 1.1 2010/03/06 08:49:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.20.1-r2.ebuild,v 1.1 2010/04/12 11:58:46 grozin Exp $
 EAPI=2
 inherit eutils elisp-common
 
@@ -46,7 +46,7 @@ for LISP in ${SUPP_LISPS}; do
 		RDEPEND="${RDEPEND} gcl? ( >=dev-lisp/gcl-2.6.8_pre[ansi] )"
 	else if [ "${LISP}" = "ecl" ]
 	then
-		RDEPEND="${RDEPEND} ecl? ( >=dev-lisp/ecls-9.8.3 )"
+		RDEPEND="${RDEPEND} ecl? ( >=dev-lisp/ecls-10.4.1 )"
 	else if [ "${LISP}" = "openmcl" ]
 	then
 		RDEPEND="${RDEPEND} openmcl? ( dev-lisp/clozurecl )"
@@ -104,6 +104,9 @@ src_prepare() {
 
 	# ClozureCL executable name is now ccl
 	epatch "${FILESDIR}"/${PN}-clozurecl.patch
+
+	# see http://osdir.com/ml/sage-devel/2010-04/msg00077.html
+	epatch "${FILESDIR}"/${P}-ecl-10.4.1.patch
 
 	epatch "${FILESDIR}"/${P}-emacs-version.patch
 
