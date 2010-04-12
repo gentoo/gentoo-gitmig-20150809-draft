@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.4 2009/12/26 17:34:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.5 2010/04/12 06:16:54 aballier Exp $
 
 EAPI=2
 
@@ -34,6 +34,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-tiffread-CVE-2009-3296.patch"
 	epatch "${FILESDIR}/${P}-ocaml-autoconf11.patch"
 	epatch "${FILESDIR}/${P}-annot.patch"
+	epatch "${FILESDIR}/${P}-noxpm.patch"
 	eautoreconf
 }
 

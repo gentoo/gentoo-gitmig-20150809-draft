@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/camlimages
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.23 2009/12/26 17:34:19 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.24 2010/04/12 06:16:54 aballier Exp $
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org> camlimages-3.0.2.ebuild,
+  +files/camlimages-3.0.2-noxpm.patch:
+  fix build without xpm, bug #297506
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> camlimages-2.20-r2.ebuild,
   camlimages-3.0.1.ebuild, camlimages-3.0.2.ebuild:
