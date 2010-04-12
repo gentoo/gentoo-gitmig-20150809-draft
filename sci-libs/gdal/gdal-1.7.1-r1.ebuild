@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.1.ebuild,v 1.1 2010/04/05 04:50:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.1-r1.ebuild,v 1.1 2010/04/12 07:11:44 nerdboy Exp $
 
 EAPI="2"
 
@@ -83,7 +83,8 @@ src_prepare() {
 	    "${FILESDIR}"/${PN}-1.5.0-soname.patch \
 	    "${FILESDIR}"/${PN}-1.5.1-python-install.patch \
 	    "${FILESDIR}"/${PN}-1.6.0-swig-fix.patch \
-	    "${FILESDIR}"/${PN}-1.6.1-ruby-make.patch
+	    "${FILESDIR}"/${PN}-1.6.1-ruby-make.patch \
+	    "${FILESDIR}"/${P}-warp_fix.patch
 
 	if useq hdf && useq netcdf; then
 		ewarn "Netcdf and HDF4 are incompatible due to certain tools in"
