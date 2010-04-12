@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.4.3.ebuild,v 1.3 2010/03/21 14:49:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/symfony-1.4.3.ebuild,v 1.4 2010/04/12 12:35:28 fauli Exp $
 
 EAPI=2
 inherit php-pear-lib-r1 depend.php
@@ -11,7 +11,7 @@ SRC_URI="http://pear.symfony-project.com/get/${P}.tgz"
 
 LICENSE="MIT LGPL-2.1 BSD BSD-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="dev-lang/php:5[cli,ctype,pcre,reflection,session,simplexml,spl,tokenizer,xml]
