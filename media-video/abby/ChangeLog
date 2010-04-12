@@ -1,6 +1,11 @@
 # ChangeLog for media-video/abby
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/abby/ChangeLog,v 1.9 2009/12/16 14:04:33 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/abby/ChangeLog,v 1.10 2010/04/12 10:21:33 aballier Exp $
+
+*abby-0.4.8 (12 Apr 2010)
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org> +abby-0.4.8.ebuild:
+  version bump
 
 *abby-0.4.6 (16 Dec 2009)
 
