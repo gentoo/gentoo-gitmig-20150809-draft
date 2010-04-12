@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7.ebuild,v 1.1 2010/03/02 11:44:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7-r1.ebuild,v 1.1 2010/04/12 20:20:14 idl0r Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,8 +27,8 @@ src_compile() {
 }
 
 src_install() {
-	dobin foremost
-	#doman foremost.1
+	dobin foremost || die
+	doman foremost.8.gz
 	insinto /etc
 	doins foremost.conf
 	dodoc README CHANGES
