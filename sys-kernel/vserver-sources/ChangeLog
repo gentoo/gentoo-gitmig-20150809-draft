@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.152 2010/04/12 06:23:29 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.153 2010/04/12 15:05:26 hollow Exp $
+
+  12 Apr 2010; Benedikt Böhm <hollow@gentoo.org> Manifest:
+  fix failed hunks in quotaops.h
 
   12 Apr 2010; Benedikt Böhm <hollow@gentoo.org> Manifest:
   fix Manifest for genpatches 2.6.33-1
