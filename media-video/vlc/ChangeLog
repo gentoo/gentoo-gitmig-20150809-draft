@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.563 2010/04/12 14:20:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.564 2010/04/12 14:23:58 aballier Exp $
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  dont try to install inexistant doc file
 
   12 Apr 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   master now requires xulrunner 1.9.2

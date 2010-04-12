@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.65 2010/04/12 14:20:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.66 2010/04/12 14:23:58 aballier Exp $
 
 EAPI="2"
 
@@ -331,7 +331,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS HACKING THANKS NEWS README \
-		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
+		doc/fortunes.txt doc/intf-vcd.txt
 
 	rm -rf "${D}/usr/share/doc/vlc" \
 		"${D}"/usr/share/vlc/vlc{16x16,32x32,48x48,128x128}.{png,xpm,ico}
