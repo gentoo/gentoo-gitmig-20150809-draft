@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.182 2010/04/11 19:17:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.183 2010/04/12 08:31:17 grobian Exp $
+
+  12 Apr 2010; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r6.ebuild,
+  mutt-1.5.20-r10.ebuild, mutt-1.5.20-r13.ebuild, mutt-1.5.20-r14.ebuild:
+  Fix up -r4 patch to fix compilation issue, bug #314785
 
 *mutt-1.5.20-r14 (11 Apr 2010)
 
