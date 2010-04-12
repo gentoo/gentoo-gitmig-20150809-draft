@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4107 2010/04/11 20:54:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4108 2010/04/12 09:47:09 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Apr 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask latest mutt snapshot since it seems to segfault while opening certain
+  messages
 
   11 Apr 2010; Sven Wegener <swegener@gentoo.org> package.mask:
   Remove dev-db/mysql-gui-tools mask, it has been removed from the tree.
