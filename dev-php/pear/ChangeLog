@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pear
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.2 2009/10/05 18:25:33 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.3 2010/04/12 12:21:00 phajdan.jr Exp $
+
+  12 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pear-1.9.0.ebuild:
+  x86 stable wrt bug #311633
 
 *pear-1.9.0 (05 Oct 2009)
 
