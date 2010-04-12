@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/transset-df
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/ChangeLog,v 1.6 2009/02/09 16:43:34 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/ChangeLog,v 1.7 2010/04/12 19:04:21 maekke Exp $
+
+  12 Apr 2010; Markus Meier <maekke@gentoo.org> transset-df-6.ebuild:
+  add ~x86, bug #308657
 
   09 Feb 2009; Christoph Mende <angelos@gentoo.org>
   +files/transset-df-6-ldflags.patch, transset-df-6.ebuild:
