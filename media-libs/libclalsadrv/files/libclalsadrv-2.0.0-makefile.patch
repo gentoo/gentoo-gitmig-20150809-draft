@@ -1,0 +1,19 @@
+Index: clalsadrv-2.0.0/libs/Makefile
+===================================================================
+--- clalsadrv-2.0.0.orig/libs/Makefile
++++ clalsadrv-2.0.0/libs/Makefile
+@@ -41,13 +41,12 @@ CLALSADRV_H = clalsadrv.h
+ 
+ 
+ $(CLALSADRV_MIN): $(CLALSADRV_O)
+-	g++ -shared $(LDFLAGS) -Wl,-soname,$(CLALSADRV_MAJ) -o $(CLALSADRV_MIN) $(CLALSADRV_O) $(CLALSADRV_DEP)
++	$(CXX) -shared $(LDFLAGS) -Wl,-soname,$(CLALSADRV_MAJ) -o $(CLALSADRV_MIN) $(CLALSADRV_O) $(CLALSADRV_DEP)
+ 
+ 
+ install:	$(CLALSADRV_MIN)
+ 	install -Dm 644 $(CLALSADRV_H)   $(DESTDIR)$(PREFIX)/include/$(CLALSADRV_H)
+ 	install -Dm 755 $(CLALSADRV_MIN) $(DESTDIR)$(PREFIX)/$(LIBDIR)/$(CLALSADRV_MIN)
+-	/sbin/ldconfig $(PREFIX)/$(LIBDIR)
+ 	ln -sf $(CLALSADRV_MIN) $(DESTDIR)$(PREFIX)/$(LIBDIR)/$(CLALSADRV_SO)
+ 
+ clean:

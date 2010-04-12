@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libclalsadrv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/ChangeLog,v 1.13 2009/01/25 14:53:49 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/ChangeLog,v 1.14 2010/04/12 08:53:04 aballier Exp $
+
+*libclalsadrv-2.0.0 (12 Apr 2010)
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org>
+  +libclalsadrv-2.0.0.ebuild, +files/libclalsadrv-2.0.0-makefile.patch:
+  version bump
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org> libclalsadrv-1.2.2.ebuild:
   amd64/x86 stable, bug #256042
