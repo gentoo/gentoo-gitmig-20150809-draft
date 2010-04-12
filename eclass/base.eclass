@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.49 2010/02/02 10:20:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.50 2010/04/12 15:33:03 scarabeus Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -87,6 +87,7 @@ base_src_prepare() {
 				# variable and restore later
 				oldval=${EPATCH_SOURCE}
 				EPATCH_SOURCE=${x}
+				EPATCH_FORCE=yes
 				epatch
 				EPATCH_SOURCE=${oldval}
 			elif [[ -f "${x}" ]]; then
