@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/mailcrypt
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.18 2009/06/06 15:36:49 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/ChangeLog,v 1.19 2010/04/12 18:02:32 fauli Exp $
+
+*mailcrypt-3.5.9 (12 Apr 2010)
+
+  12 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  +mailcrypt-3.5.9.ebuild:
+  version bump, reported by user on
+  http://forums.gentoo.org/viewtopic-p-6241340.html
 
   06 Jun 2009; Ulrich Mueller <ulm@gentoo.org> mailcrypt-3.5.8-r1.ebuild:
   Fix elog message, bug 272895.
