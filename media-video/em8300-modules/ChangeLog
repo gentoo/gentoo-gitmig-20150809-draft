@@ -1,6 +1,10 @@
 # ChangeLog for media-video/em8300-modules
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.54 2010/03/29 09:48:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.55 2010/04/12 19:01:10 maekke Exp $
+
+  12 Apr 2010; Markus Meier <maekke@gentoo.org>
+  em8300-modules-0.17.4.ebuild:
+  x86 stable, bug #307327
 
   29 Mar 2010; Pacho Ramos <pacho@gentoo.org> em8300-modules-0.17.4.ebuild:
   amd64 stable, bug 307327
