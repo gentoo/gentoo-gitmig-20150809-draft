@@ -28,24 +28,28 @@ install: all
 	ln -s lockfile-progs.1 $(DESTDIR)/usr/share/man/man1/mail-touchlock.1
 
 test: all
-	lockfile-create testfile
-	lockfile-check testfile
-	lockfile-touch --oneshot testfile
-	lockfile-check testfile
-	lockfile-remove testfile
-	! test -e testfile
-	! lockfile-check testfile
+	ln -s lockfile-create ./lockfile-remove
+	ln -s lockfile-create ./lockfile-touch
+	ln -s lockfile-create ./lockfile-check
 
-	lockfile-create --lock-name test.lock
-	lockfile-check --lock-name test.lock
-	! lockfile-check test.lock
+	./lockfile-create testfile
+	./lockfile-check testfile
+	./lockfile-touch --oneshot testfile
+	./lockfile-check testfile
+	./lockfile-remove testfile
+	! test -e testfile
+	! ./lockfile-check testfile
+
+	./lockfile-create --lock-name test.lock
+	./lockfile-check --lock-name test.lock
+	! ./lockfile-check test.lock
 	! test -e test.lock.lock
-	lockfile-touch --oneshot --lock-name test.lock
-	lockfile-check --lock-name test.lock
-	! lockfile-check test.lock
-	lockfile-remove --lock-name test.lock
+	./lockfile-touch --oneshot --lock-name test.lock
+	./lockfile-check --lock-name test.lock
+	! ./lockfile-check test.lock
+	./lockfile-remove --lock-name test.lock
 	! test -e test.lock
-	! lockfile-check --lock-name test.lock
-	! lockfile-check test.lock
+	! ./lockfile-check --lock-name test.lock
+	! ./lockfile-check test.lock
 
 .PHONY: install test
