@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.0.1.1.ebuild,v 1.3 2010/03/20 13:49:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.0.1.1.ebuild,v 1.4 2010/04/12 22:21:05 caster Exp $
 
 EAPI=2
 
@@ -71,5 +71,7 @@ src_install() {
 # Tests only work with JDK-1.6, severe out of memory problems appear with 1.5
 
 src_test() {
+	# bug #299082 - these tests fail with icedtea, assume too much about double<>string conversions
+	sed -i '/DiagBigDecimal/d' src/com/ibm/icu/dev/test/TestAll.java || die
 	eant check
 }

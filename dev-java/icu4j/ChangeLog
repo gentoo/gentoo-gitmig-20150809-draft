@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icu4j
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.36 2010/04/05 23:50:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.37 2010/04/12 22:21:05 caster Exp $
+
+  12 Apr 2010; Vlastimil Babka <caster@gentoo.org> icu4j-4.0.1.1.ebuild,
+  icu4j-4.2.ebuild:
+  Remove the BigDecimal test as it fails with icedtea and probably relies
+  too much on internal representation. Bug #299082.
 
   05 Apr 2010; Vlastimil Babka <caster@gentoo.org> icu4j-3.8.1-r1.ebuild:
   Don't restrict dependency to 1.5 jdk for tests, since they are disabled
