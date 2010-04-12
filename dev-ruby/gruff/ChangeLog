@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.29 2010/02/08 20:20:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.30 2010/04/12 18:26:15 graaff Exp $
+
+  12 Apr 2010; Hans de Graaff <graaff@gentoo.org> gruff-0.3.6-r1.ebuild:
+  Add imagemagick dependency to ensure truetype support in imagemagick, this
+  was already present in the 0.3.6 ebuild but got dropped at some point.
 
   08 Feb 2010; Hans de Graaff <graaff@gentoo.org> -gruff-0.2.9.ebuild:
   Remove old version.

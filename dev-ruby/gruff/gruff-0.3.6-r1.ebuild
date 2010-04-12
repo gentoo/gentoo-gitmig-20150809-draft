@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.6-r1.ebuild,v 1.1 2010/01/07 07:28:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.6-r1.ebuild,v 1.2 2010/04/12 18:26:15 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -32,3 +32,9 @@ RUBY_PATCHES=(
 	${P}-fix-tests.patch
 	${P}-spider.patch
 )
+
+# imagemagick is an indirect dependency through rmagick. However, for
+# gruff to work properly imagemagick needs to be compiled with
+# truetype support and this cannot be expressed in the rmagick
+# dependency.
+RDEPEND="${RDEPEND} media-gfx/imagemagick[truetype]"
