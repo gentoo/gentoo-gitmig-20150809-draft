@@ -12,7 +12,4 @@ stand alone binary executables. Bigloo enables full connections between
 Scheme and C programs, between Scheme and Java programs, and between
 Scheme and C# programs.
 </longdescription>
-<use>
-<flag name='bee'>Bigloo integrated development environment</flag>
-</use>
 </pkgmetadata>
