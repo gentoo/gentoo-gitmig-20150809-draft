@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1-r1.ebuild,v 1.2 2010/04/05 20:16:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1-r1.ebuild,v 1.3 2010/04/12 13:37:16 phajdan.jr Exp $
 
 PYTHON_DEPEND="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://jfontain.free.fr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.4"
