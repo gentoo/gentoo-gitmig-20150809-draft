@@ -1,5 +1,4 @@
 AR ?= ar
-CPPFLAGS += -DTIXML_USE_STL
 CXX ?= g++
 CXXFLAGS += -Wall
 RANLIB ?= ranlib

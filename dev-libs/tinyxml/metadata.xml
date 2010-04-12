@@ -6,4 +6,7 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
+  <use>
+    <flag name='stl'>Compile with TIXML_USE_STL support</flag>
+  </use>
 </pkgmetadata>
