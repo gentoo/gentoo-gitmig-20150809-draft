@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.86 2010/04/02 17:04:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.87 2010/04/12 19:44:15 maekke Exp $
+
+  12 Apr 2010; Markus Meier <maekke@gentoo.org> nagios-3.2.0.ebuild:
+  amd64/x86 stable, bug #312843
 
 *nagios-3.2.1 (02 Apr 2010)
 
