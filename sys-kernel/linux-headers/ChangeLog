@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.304 2010/03/08 05:21:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.305 2010/04/12 17:46:31 armin76 Exp $
+
+  12 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  linux-headers-2.6.30-r1.ebuild:
+  ia64/m68k/sparc stable wrt #273358
 
 *linux-headers-2.6.33 (08 Mar 2010)
 
