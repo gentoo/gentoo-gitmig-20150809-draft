@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.7.ebuild,v 1.4 2010/03/11 18:43:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.7.ebuild,v 1.5 2010/04/12 18:54:58 maekke Exp $
 
 inherit multilib eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/utils/fs/reiser4/reiser4progs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 -sparc ~x86"
+KEYWORDS="amd64 arm ~ppc ~ppc64 -sparc x86"
 IUSE="static debug readline"
 
 DEPEND="~sys-libs/libaal-1.0.5
