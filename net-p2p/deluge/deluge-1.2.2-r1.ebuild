@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.2.2.ebuild,v 1.1 2010/03/20 13:11:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.2.2-r1.ebuild,v 1.1 2010/04/12 20:50:57 sochotnicky Exp $
 
 EAPI="2"
 
@@ -37,6 +37,10 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	append-ldflags $(no-as-needed)
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-versionsplit.patch
 }
 
 src_install() {
