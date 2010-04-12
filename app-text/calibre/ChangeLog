@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.82 2010/04/09 19:01:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.83 2010/04/12 00:26:11 zmedico Exp $
+
+  12 Apr 2010; Zac Medico <zmedico@gentoo.org> calibre-0.6.47.ebuild:
+  Bug #314229 - Fix deps to pull in graphicsmagick instead of imagemagick if
+  appropriate.
 
 *calibre-0.6.47 (09 Apr 2010)
 
