@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.234 2010/04/05 15:10:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.235 2010/04/12 18:48:34 leio Exp $
+
+  12 Apr 2010; Mart Raudsepp <leio@gentoo.org> epiphany-2.28.2.ebuild:
+  Fix libsoup dependencies - no need to dep on libsoup[gnome], configure
+  checks only libsoup-gnome and we dep on the split package already. Makes
+  things more user friendly for users with no global USE=gnome
 
   05 Apr 2010; Raúl Porcel <armin76@gentoo.org> epiphany-2.26.3-r3.ebuild:
   alpha/ia64/sparc stable wrt #308549
