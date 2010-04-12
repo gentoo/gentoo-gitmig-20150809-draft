@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aeolus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/ChangeLog,v 1.6 2009/08/04 08:04:48 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/ChangeLog,v 1.7 2010/04/12 09:05:51 aballier Exp $
+
+*aeolus-0.8.4 (12 Apr 2010)
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org> +aeolus-0.8.4.ebuild:
+  version bump, by Xavier Miller <xavier.miller@cauwe.org>, bug #310973
 
 *aeolus-0.8.2 (04 Aug 2009)
 
