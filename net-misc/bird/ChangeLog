@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/bird
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.10 2009/12/20 15:49:33 chainsaw Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.11 2010/04/12 11:58:59 chainsaw Exp $
+
+*bird-1.2.2 (12 Apr 2010)
+
+  12 Apr 2010; <chainsaw@gentoo.org> -files/1.1.5-nostrip.patch,
+  -files/initd-v6-bird-1.1.5, -bird-1.1.5.ebuild,
+  -files/initd-v4-bird-1.1.6, -files/1.1.6-nostrip.patch,
+  -files/initd-v6-bird-1.1.6, -bird-1.1.6.ebuild,
+  +files/initd-v4-bird-1.2.2, +files/1.2.2-v4-v6-build.patch,
+  -files/initd-v4-bird-1.1.5, +files/initd-v6-bird-1.2.2,
+  +bird-1.2.2.ebuild:
+  New upstream release. Note that the V6 version is not functional, I have
+  contacted upstream and will provide an updated ebuild when possible.
 
 *bird-1.1.7 (20 Dec 2009)
 
