@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.64 2010/04/09 09:39:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.65 2010/04/12 14:20:29 aballier Exp $
 
 EAPI="2"
 
@@ -106,7 +106,7 @@ RDEPEND="
 		mtp? ( >=media-libs/libmtp-0.3.0 )
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses )
-		nsplugin? ( >=net-libs/xulrunner-1.8 x11-libs/libXpm x11-libs/libXt	<net-libs/xulrunner-1.9.2 )
+		nsplugin? ( >=net-libs/xulrunner-1.9.2 x11-libs/libXpm x11-libs/libXt )
 		ogg? ( media-libs/libogg )
 		opengl? ( virtual/opengl )
 		png? ( media-libs/libpng sys-libs/zlib )
@@ -221,16 +221,6 @@ src_configure() {
 	# It would fail if -fforce-addr is used due to too few registers...
 	use x86 && filter-flags -fforce-addr
 
-	local MOZILLA_PC
-
-	if use nsplugin; then
-		if has_version 'net-libs/xulrunner:1.9' ; then
-			MOZILLA_PC=libxul
-		else
-			MOZILLA_PC=xulrunner-plugin
-		fi
-	fi
-
 	econf \
 		$(use_enable a52) \
 		$(use_enable aalib aa) \
@@ -284,7 +274,7 @@ src_configure() {
 		$(use_enable mtp) \
 		$(use_enable musepack mpc) \
 		$(use_enable ncurses) \
-		$(use_enable nsplugin mozilla) --with-mozilla-pkg="${MOZILLA_PC}" \
+		$(use_enable nsplugin mozilla) --with-mozilla-pkg=libxul \
 		$(use_enable ogg) \
 		$(use_enable opengl glx) $(use_enable opengl) \
 		$(use_enable optimisememory optimize-memory) \
