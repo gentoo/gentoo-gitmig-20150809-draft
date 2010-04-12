@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.43 2010/04/12 13:57:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.44 2010/04/12 16:46:00 bicatali Exp $
+
+*glpk-4.43 (12 Apr 2010)
+
+  12 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org> +glpk-4.43.ebuild:
+  Version bump
 
   12 Apr 2010; Alexis Ballier <aballier@gentoo.org> glpk-4.42.ebuild:
   keyword ~x86-fbsd thanks to Henning Schild <henning@wh9.tu-dresden.de>,
