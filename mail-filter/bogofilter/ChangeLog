@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/bogofilter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.128 2009/11/03 12:30:09 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.129 2010/04/12 18:01:05 tove Exp $
+
+*bogofilter-1.2.1-r1 (12 Apr 2010)
+
+  12 Apr 2010; Torsten Veller <tove@gentoo.org> +bogofilter-1.2.1-r1.ebuild,
+  metadata.xml:
+  Add tokyocabinet support
 
   03 Nov 2009; Torsten Veller <tove@gentoo.org> -bogofilter-1.2.0.ebuild:
   Cleanup
