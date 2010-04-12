@@ -1,5 +1,0 @@
-description = "Image manipulation library"
-version = "VERSION"
-requires=""
-archive(byte) = "camlimages.cmo"
-archive(native) = "camlimages.cmx"

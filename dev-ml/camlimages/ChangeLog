@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.24 2010/04/12 06:16:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.25 2010/04/12 06:21:42 aballier Exp $
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org>
+  -camlimages-2.20-r2.ebuild, -files/camlimages-2.20-ocaml-3.09.diff,
+  -files/META, -files/META.camlimages.in:
+  remove old
 
   12 Apr 2010; Alexis Ballier <aballier@gentoo.org> camlimages-3.0.2.ebuild,
   +files/camlimages-3.0.2-noxpm.patch:
