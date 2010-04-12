@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.16 2010/02/24 13:39:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.17 2010/04/12 10:10:05 aballier Exp $
+
+*cclive-0.6.2 (12 Apr 2010)
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org> +cclive-0.6.2.ebuild:
+  version bump, by hitachi <mail@konstantinhansen.de>, bug #306829
 
   24 Feb 2010; Christian Faulhammer <fauli@gentoo.org> cclive-0.5.8.ebuild:
   stable x86, bug 287175
