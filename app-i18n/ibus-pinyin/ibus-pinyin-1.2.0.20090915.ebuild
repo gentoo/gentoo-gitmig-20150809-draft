@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.2.0.20090915.ebuild,v 1.3 2010/04/08 23:35:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.2.0.20090915.ebuild,v 1.4 2010/04/12 17:00:40 phajdan.jr Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -15,7 +15,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=app-i18n/ibus-1.1.0
