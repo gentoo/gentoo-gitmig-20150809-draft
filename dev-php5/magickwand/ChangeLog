@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/magickwand
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.10 2009/03/20 17:31:47 jmbsvicetto Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.11 2010/04/12 19:51:57 mabi Exp $
+
+*magickwand-1.0.8 (12 Apr 2010)
+
+  12 Apr 2010; <mabi@gentoo.org> -magickwand-1.0.6.ebuild,
+  -magickwand-1.0.7.ebuild, +magickwand-1.0.8.ebuild:
+  version bump (bug #279836), older versions do not work with newer
+  imagemagick
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
