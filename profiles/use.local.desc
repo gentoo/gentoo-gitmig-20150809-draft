@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5479 2010/04/12 13:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5480 2010/04/12 18:07:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -713,8 +713,6 @@ dev-java/ant:resolver - Enable Apache Resolver Ant tasks
 dev-java/ant:testutil - Enable optional test util classes
 dev-java/antlr:gunit -  gUnit is a "Unit Test" framework for ANTLR grammars 
 dev-java/antlr:script - Install a script to run antlr
-dev-java/avalon-logkit:javamail - Enable support for javamail
-dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
 dev-java/commons-collections:test-framework - Install the test framework
 dev-java/commons-logging:avalon-framework - Add optional support for avalon-framework
 dev-java/commons-logging:avalon-logkit - Add optional support for avalon-logkit
@@ -1004,7 +1002,6 @@ dev-ruby/ruby-sdl:mixer - Enable media-libs/sdl-mixer support
 dev-ruby/ruby-sdl:sge - Enable sdl-sge support
 dev-ruby/rubygems:server - Install support for the rubygems server
 dev-ruby/sqlite3-ruby:swig - Use dev-lang/swig to generate bindings
-dev-scheme/bigloo:bee - Bigloo integrated development environment
 dev-scheme/gauche-gl:cg - Enable NVidia Cg binding
 dev-scheme/gauche-gtk:glgd - Enable GL graph draw
 dev-scheme/guile:debug-freelist - Include garbage collector freelist debugging code
@@ -1443,6 +1440,7 @@ mail-filter/amavisd-new:spamassassin - Enable usage of mail-filter/spamassassin 
 mail-filter/ask:procmail - Adds support for mail-filter/procmail
 mail-filter/assp:spf - Adds support for Sender Policy Framework
 mail-filter/assp:srs - Adds support for Sender Rewriting Scheme
+mail-filter/bogofilter:tokyocabinet - Enable Tokyo Cabinet database support
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/clamassassin:clamd - Use the app-antivirus/clamav daemon for virus checking
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting
