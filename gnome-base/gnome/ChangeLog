@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.377 2010/03/30 11:45:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.378 2010/04/12 20:18:31 eva Exp $
+
+  12 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org> -gnome-2.28.1.ebuild,
+  gnome-2.28.2.ebuild:
+  Drop esound dependency from gnome 2.28. Clean up old revision.
 
   30 Mar 2010; Pacho Ramos <pacho@gentoo.org> gnome-2.28.2.ebuild:
   Add a policykit USE flag as suggested by Gilles to make sure users get a

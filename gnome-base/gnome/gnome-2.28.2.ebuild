@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.4 2010/03/30 11:45:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.5 2010/04/12 20:18:31 eva Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SLOT="2.0"
 # double check none of the deps are still masked !
 KEYWORDS="~amd64 ~x86"
 
-IUSE="accessibility cdr cups dvdr esd ldap mono policykit"
+IUSE="accessibility cdr cups dvdr ldap mono policykit"
 
 S=${WORKDIR}
 
@@ -31,7 +31,6 @@ RDEPEND="
 	>=dev-libs/libxslt-1.1.22
 
 	>=media-libs/audiofile-0.2.6-r1
-	esd? ( >=media-sound/esound-0.2.41 )
 	>=x11-libs/libxklavier-3.6
 	>=media-libs/libart_lgpl-2.3.20
 
