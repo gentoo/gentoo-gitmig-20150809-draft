@@ -1,8 +1,6 @@
-Index: expect-5.44.1/tclconfig/tcl.m4
-===================================================================
---- expect-5.44.1.orig/tclconfig/tcl.m4
-+++ expect-5.44.1/tclconfig/tcl.m4
-@@ -1395,12 +1395,12 @@ dnl AC_CHECK_TOOL(AR, ar, :)
+--- expect-5.44.1.15/tclconfig/tcl.m4.orig	2010-04-08 22:49:51.568043292 -0700
++++ expect-5.44.1.15/tclconfig/tcl.m4	2010-04-08 22:50:28.207915301 -0700
+@@ -1579,12 +1579,12 @@
  	FreeBSD-*)
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
@@ -14,6 +12,6 @@ Index: expect-5.44.1/tclconfig/tcl.m4
  	    DL_LIBS=""
 -	    LDFLAGS="$LDFLAGS -export-dynamic"
 +	    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
- 	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  	    if test "${TCL_THREADS}" = "1" ; then
- 		# The -pthread needs to go in the CFLAGS, not LIBS
