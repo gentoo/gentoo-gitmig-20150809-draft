@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.183 2010/04/12 08:31:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.184 2010/04/12 17:56:18 grobian Exp $
+
+  12 Apr 2010; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r14.ebuild:
+  Test drive fix for segfault with -r14
 
   12 Apr 2010; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r6.ebuild,
   mutt-1.5.20-r10.ebuild, mutt-1.5.20-r13.ebuild, mutt-1.5.20-r14.ebuild:
