@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.35 2010/01/02 18:46:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.36 2010/04/12 19:43:12 ssuominen Exp $
+
+*yasm-1.0.0 (12 Apr 2010)
+
+  12 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +yasm-1.0.0.ebuild:
+  Version bump.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> yasm-0.8.0.ebuild:
   Transfer Prefix keywords
