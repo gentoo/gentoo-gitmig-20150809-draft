@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.21.ebuild,v 1.1 2008/12/19 04:09:18 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.21.ebuild,v 1.2 2010/04/12 19:19:48 maekke Exp $
 
 DESCRIPTION="Provides an interface wrapping sockets into streams"
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvnet/html/"
 SRC_URI="http://tinf2.vub.ac.be/~dvermeir/software/dv/${PN}/download/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc"
 
 DEPEND=">dev-libs/dvutil-1.0"
