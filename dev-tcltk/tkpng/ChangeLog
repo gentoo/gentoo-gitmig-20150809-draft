@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkpng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpng/ChangeLog,v 1.1 2010/04/02 06:54:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpng/ChangeLog,v 1.2 2010/04/13 12:10:39 jlec Exp $
+
+  13 Apr 2010; Justin Lecher <jlec@gentoo.org> tkpng-0.9.ebuild:
+  Restrict test, as the test suite is not shipped, #314973
 
 *tkpng-0.9 (02 Apr 2010)
 
