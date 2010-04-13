@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.0.ebuild,v 1.3 2010/04/13 20:43:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.0.ebuild,v 1.4 2010/04/13 20:59:08 scarabeus Exp $
 
 EAPI=3
 XORG_EAUTORECONF="yes"
@@ -196,10 +196,10 @@ src_configure() {
 src_compile() {
 	emake # no die here intentional
 	if [[ $? != 0 ]]; then
-		[[ ${OLD_IMPLEM} != ${OPENGL_DIR} ]] && ( addwrite "${ROOT}"; eselect opengl set ${OPENGL_DIR}; )
+		[[ ${OLD_IMPLEM} != ${OPENGL_DIR} ]] && ( addwrite "${ROOT}"; eselect opengl set ${OLD_IMPLEM}; )
 		die "Compilation failed"
 	fi
-	[[ ${OLD_IMPLEM} != ${OPENGL_DIR} ]] && ( addwrite "${ROOT}"; eselect opengl set ${OPENGL_DIR}; )
+	[[ ${OLD_IMPLEM} != ${OPENGL_DIR} ]] && ( addwrite "${ROOT}"; eselect opengl set ${OLD_IMPLEM}; )
 }
 
 src_install() {
