@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r3.ebuild,v 1.1 2010/01/03 21:47:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/emerge-delta-webrsync-3.5.1-r3.ebuild,v 1.2 2010/04/13 16:42:39 zmedico Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=sys-apps/portage-2.1.1-r1
-	>=dev-util/diffball-0.6.5
-	x86? ( app-arch/tarsync )"
+	>=dev-util/diffball-0.6.5"
 
 S=${WORKDIR}
 
@@ -40,4 +39,14 @@ src_install() {
 
 pkg_preinst() {
 	chgrp portage "${D}"/var/delta-webrsync
+	has_version "$CATEGORY/$PN"
+	WAS_PREVIOUSLY_INSTALLED=$?
+}
+
+pkg_postinst() {
+	if [[ $WAS_PREVIOUSLY_INSTALLED != 0 ]] && \
+		! has_version app-arch/tarsync ; then
+		elog "For maximum emerge-delta-webrsync" \
+			"performance, install app-arch/tarsync."
+	fi
 }

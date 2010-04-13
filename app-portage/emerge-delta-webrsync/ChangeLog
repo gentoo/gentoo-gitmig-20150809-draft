@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.28 2010/01/03 21:47:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.29 2010/04/13 16:42:39 zmedico Exp $
+
+  13 Apr 2010; Zac Medico <zmedico@gentoo.org>
+  emerge-delta-webrsync-3.5.1-r3.ebuild:
+  Bug #264730 - tarsync dep should not be conditional on ARCH.
 
 *emerge-delta-webrsync-3.5.1-r3 (03 Jan 2010)
 
