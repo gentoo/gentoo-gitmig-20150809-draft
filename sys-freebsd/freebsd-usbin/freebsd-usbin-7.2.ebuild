@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.2.ebuild,v 1.5 2009/10/08 09:05:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.2.ebuild,v 1.6 2010/04/13 11:50:36 the_paya Exp $
 
 EAPI=2
 
@@ -58,6 +58,7 @@ pkg_setup() {
 	use pam || mymakeopts="${mymakeopts} WITHOUT_PAM_SUPPORT= "
 	use ssl || mymakeopts="${mymakeopts} WITHOUT_OPENSSL= "
 	use usb || mymakeopts="${mymakeopts} WITHOUT_USB= "
+	use tcpd || mymakeopts="${mymakeopts} NO_WRAP= "
 
 	mymakeopts="${mymakeopts} WITHOUT_BIND_NAMED= WITHOUT_BIND_DNSSEC= WITHOUT_PF= WITHOUT_LPR= WITHOUT_SENDMAIL= WITHOUT_AUTHPF= WITHOUT_MAILWRAPPER= "
 }

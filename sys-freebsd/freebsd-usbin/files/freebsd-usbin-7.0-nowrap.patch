@@ -18,7 +18,7 @@ diff -ur usr.sbin.orig/rpcbind/Makefile usr.sbin/rpcbind/Makefile
 +LDADD=	-lutil
 +
 +.if !defined(NO_WRAP)
-+CFLAGS+= -DTCP_WRAPPER
++CFLAGS+= -DLIBWRAP
 +DPADD+=         ${LIBWRAP}
 +LDADD+=         -lwrap
 +.endif
