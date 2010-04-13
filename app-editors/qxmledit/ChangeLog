@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/qxmledit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.6 2010/02/07 19:46:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.7 2010/04/13 17:50:48 hwoarang Exp $
+
+*qxmledit-0.4.3-r1 (13 Apr 2010)
+
+  13 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  +qxmledit-0.4.3-r1.ebuild:
+  Create desktop file wrt bug #313221
 
   07 Feb 2010; Markus Meier <maekke@gentoo.org> qxmledit-0.3.0-r1.ebuild:
   x86 stable, bug #301903
