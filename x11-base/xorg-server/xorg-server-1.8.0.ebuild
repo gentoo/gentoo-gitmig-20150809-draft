@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.0.ebuild,v 1.5 2010/04/13 21:39:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.0.ebuild,v 1.6 2010/04/13 21:56:38 polynomial-c Exp $
 
 EAPI=3
 XORG_EAUTORECONF="yes"
@@ -56,7 +56,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 
 DEPEND="${RDEPEND}
 	!!net-dialup/dtrace
-	!<x11-apps/xinit-1.2.1
+	!<x11-apps/xinit-1.2.1-r1
 	sys-devel/flex
 	>=x11-proto/bigreqsproto-1.1.0
 	>=x11-proto/compositeproto-0.4

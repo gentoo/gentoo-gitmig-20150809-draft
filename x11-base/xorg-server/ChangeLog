@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.502 2010/04/13 21:39:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.503 2010/04/13 21:56:38 polynomial-c Exp $
+
+  13 Apr 2010; Lars Wendler <polynomial-c@gentoo.org>
+  xorg-server-1.8.0.ebuild:
+  fixing version on xinit blocker (D'oh)
 
   13 Apr 2010; Lars Wendler <polynomial-c@gentoo.org>
   xorg-server-1.8.0.ebuild:
