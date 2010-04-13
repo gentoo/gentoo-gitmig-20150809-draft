@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/visitors
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.10 2010/02/22 16:49:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/ChangeLog,v 1.11 2010/04/13 18:48:41 hwoarang Exp $
+
+  13 Apr 2010; Markos Chandras <hwoarang@gentoo.org> visitors-0.7.ebuild:
+  Keyworded for amd64 wrt bug #314543
 
   22 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> visitors-0.7.ebuild:
   Fix installed documentation wrt bug #298585 by flameeyes.

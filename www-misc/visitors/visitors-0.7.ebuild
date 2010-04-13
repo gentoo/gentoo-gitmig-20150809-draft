@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/visitors-0.7.ebuild,v 1.3 2010/02/22 16:49:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/visitors/visitors-0.7.ebuild,v 1.4 2010/04/13 18:48:41 hwoarang Exp $
 
 DESCRIPTION="Fast web log analyzer"
 HOMEPAGE="http://www.hping.org/visitors/"
 SRC_URI="http://www.hping.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug"
 
 DEPEND=""
