@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.101 2010/03/05 20:23:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.102 2010/04/13 15:49:21 mr_bones_ Exp $
+
+  13 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org> freeciv-2.2.0.ebuild:
+  fix deps for auth support (bug #315005)
 
   05 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> freeciv-2.2.0.ebuild,
   metadata.xml:

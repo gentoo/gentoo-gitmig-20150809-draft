@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.0.ebuild,v 1.3 2010/03/05 20:23:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.0.ebuild,v 1.4 2010/04/13 15:49:21 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -17,6 +17,7 @@ IUSE="auth dedicated ggz gtk ipv6 nls readline sdl +sound"
 RDEPEND="readline? ( sys-libs/readline )
 	sys-libs/zlib
 	app-arch/bzip2
+	auth? ( virtual/mysql )
 	!dedicated? (
 		nls? ( virtual/libintl )
 		gtk? ( x11-libs/gtk+:2 )
@@ -32,7 +33,6 @@ RDEPEND="readline? ( sys-libs/readline )
 		)
 		ggz? ( dev-games/ggz-client-libs )
 		media-libs/libpng
-		auth? ( virtual/mysql )
 	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
