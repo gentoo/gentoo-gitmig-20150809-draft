@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.38 2010/03/14 18:50:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.39 2010/04/13 21:35:32 mr_bones_ Exp $
+
+  13 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  irrlicht-1.7.1.ebuild, +files/irrlicht-1.7.1-gentoo.patch:
+  use the system bzip2; also build the shared library (bug #305271)
 
 *irrlicht-1.7.1 (14 Mar 2010)
 

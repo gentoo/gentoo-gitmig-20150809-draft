@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.7.1.ebuild,v 1.1 2010/03/14 18:50:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.7.1.ebuild,v 1.2 2010/04/13 21:35:32 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -16,6 +16,7 @@ IUSE="doc"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
+	app-arch/bzip2
 	virtual/opengl
 	virtual/glu
 	x11-libs/libX11"
@@ -27,18 +28,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P}/source/Irrlicht
 
 src_prepare() {
-	sed -i \
-		-e '/^CXXFLAGS/s:=:+=:' \
-		-e '/^CXXINCS/s:-Izlib -Ijpeglib -Ilibpng::' \
-		-e '/^ZLIBOBJ/d' \
-		-e '/^JPEGLIBOBJ/d' \
-		-e '/^LIBPNGOBJ/d' \
-		Makefile || die "sed failed"
-
-	sed -i \
-		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
-		CImageLoaderPNG.cpp || die
-
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	cd ../..
 	edos2unix include/IrrCompileConfig.h
 	epatch \
@@ -52,17 +42,19 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CXX="$(tc-getCXX)" || die "emake failed"
+	tc-export CXX CC AR
+	emake sharedlib staticlib || die "emake failed"
 }
 
 src_install() {
 	cd ../..
-	dolib.a lib/Linux/libIrrlicht.a || die "dolib.a failed"
+	dolib.a lib/Linux/libIrrlicht.a || die
+	dolib.so lib/Linux/libIrrlicht.so* || die
 	insinto /usr/include/${PN}
-	doins include/* || die "doins failed"
+	doins include/* || die
 	dodoc changes.txt readme.txt
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples media || die "doins failed"
+		doins -r examples media || die
 	fi
 }
