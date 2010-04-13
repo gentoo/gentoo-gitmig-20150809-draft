@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-1.4.1.ebuild,v 1.2 2009/09/11 11:22:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-1.4.1.ebuild,v 1.3 2010/04/13 11:08:22 phajdan.jr Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc examples ssl test"
 
 RDEPEND="ssl? ( dev-libs/openssl )
