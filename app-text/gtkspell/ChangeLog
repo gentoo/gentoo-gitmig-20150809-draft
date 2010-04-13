@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.81 2010/04/04 18:42:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.82 2010/04/13 18:51:36 hwoarang Exp $
+
+  13 Apr 2010; Markos Chandras <hwoarang@gentoo.org> gtkspell-2.0.16.ebuild:
+  Stable on amd64 wrt bug #310397
 
   04 Apr 2010; Raúl Porcel <armin76@gentoo.org> gtkspell-2.0.16.ebuild:
   alpha/arm/ia64/sparc stable wrt #310397
