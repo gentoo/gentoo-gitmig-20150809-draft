@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.13 2010/03/25 14:50:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.14 2010/04/13 15:12:52 aballier Exp $
+
+  13 Apr 2010; Alexis Ballier <aballier@gentoo.org> polkit-0.96-r1.ebuild,
+  +files/polkit-0.96-getcwd.patch:
+  Fix build on fbsd and keyword it x86-fbsd
 
   25 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org> polkit-0.96.ebuild,
   polkit-0.96-r1.ebuild:
