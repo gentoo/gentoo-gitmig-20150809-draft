@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.0.5.ebuild,v 1.2 2010/03/02 21:29:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.1.1.ebuild,v 1.1 2010/04/13 06:25:51 mr_bones_ Exp $
 
 EAPI=2
 inherit fixheadtails eutils
@@ -76,11 +76,11 @@ src_install() {
 	# Install default configuration
 	insinto /etc/syslog-ng
 	if use hardened || use selinux ; then
-		newins "${FILESDIR}/syslog-ng.conf.gentoo.hardened.${PV%.*}" syslog-ng.conf
+		newins "${FILESDIR}/syslog-ng.conf.gentoo.hardened.${PV%%.*}" syslog-ng.conf
 	elif use userland_BSD ; then
-		newins "${FILESDIR}/syslog-ng.conf.gentoo.fbsd.${PV%.*}" syslog-ng.conf
+		newins "${FILESDIR}/syslog-ng.conf.gentoo.fbsd.${PV%%.*}" syslog-ng.conf
 	else
-		newins "${FILESDIR}/syslog-ng.conf.gentoo.${PV%.*}" syslog-ng.conf
+		newins "${FILESDIR}/syslog-ng.conf.gentoo.${PV%%.*}" syslog-ng.conf
 	fi
 
 	insinto /etc/logrotate.d
@@ -91,7 +91,7 @@ src_install() {
 		newins "${FILESDIR}/syslog-ng.logrotate" syslog-ng
 	fi
 
-	newinitd "${FILESDIR}/syslog-ng.rc6.${PV%.*}-r1" syslog-ng
+	newinitd "${FILESDIR}/syslog-ng.rc6.${PV%%.*}" syslog-ng
 	newconfd "${FILESDIR}/syslog-ng.confd" syslog-ng
 }
 
