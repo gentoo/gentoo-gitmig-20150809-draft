@@ -1,41 +1,39 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r1.ebuild,v 1.8 2007/08/21 19:29:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-2.1-r4.ebuild,v 1.9 2010/04/13 08:22:50 caster Exp $
 
+EAPI=2
 JAVA_PKG_IUSE="doc source test"
+
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Easy-to-use Java logging toolkit"
 HOMEPAGE="http://avalon.apache.org/"
 SRC_URI="mirror://apache/excalibur/excalibur-logkit/source/${P}-src.tar.gz"
 
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 LICENSE="Apache-2.0"
 SLOT="2.0"
 IUSE=""
 
 COMMON_DEP="
 	dev-java/log4j
-	dev-java/sun-jms
-	dev-java/sun-javamail
+	java-virtuals/jms
+	java-virtuals/javamail
 	=dev-java/servletapi-2.4*"
 
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 # Doesn't like 1.6 changes to JDBC
-DEPEND="|| (
-		=virtual/jdk-1.5*
-		=virtual/jdk-1.4*
-	)
+DEPEND=">=virtual/jdk-1.4
 	test? (
 		=dev-java/junit-3*
 		dev-java/ant-junit
 	)
 	${COMMON_DEP}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+java_prepare() {
+	epatch "${FILESDIR}/${PN}-1.2.2-java6.patch"
 
 	java-ant_ignore-system-classes
 
@@ -45,8 +43,8 @@ src_unpack() {
 	mkdir -p target/lib || die
 	cd target/lib || die
 	java-pkg_jar-from servletapi-2.4
-	java-pkg_jar-from sun-jms
-	java-pkg_jar-from sun-javamail
+	java-pkg_jar-from jms
+	java-pkg_jar-from --virtual javamail
 	java-pkg_jar-from log4j
 	java-pkg_filter-compiler jikes
 }
