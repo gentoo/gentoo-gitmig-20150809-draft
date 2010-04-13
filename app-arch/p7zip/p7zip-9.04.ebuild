@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.3 2010/03/08 19:13:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.4 2010/04/13 18:04:44 darkside Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -55,10 +55,11 @@ src_prepare() {
 		[[ ${CHOST} == *64-* ]] \
 			&& cp -f makefile.macosx_64bits makefile.machine \
 			|| cp -f makefile.macosx_32bits makefile.machine
-		# bundles have extension .bundle
+		# bundles have extension .bundle but don't die because USE=-rar
+		# removes the Rar directory
 		sed -i -e '/^PROG=/s/\.so/.bundle/' \
 			CPP/7zip/Bundles/Format7zFree/makefile \
-			CPP/7zip/Compress/Rar/makefile || die
+			CPP/7zip/Compress/Rar/makefile
 	elif use x86-fbsd; then
 		# FreeBSD needs this special makefile, because it hasn't -ldl
 		sed -e 's/-lc_r/-pthread/' makefile.freebsd > makefile.machine

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.115 2010/03/08 19:13:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.116 2010/04/13 18:04:44 darkside Exp $
+
+  13 Apr 2010; Jeremy Olexa <darkside@gentoo.org> p7zip-9.04.ebuild:
+  This sed statement for darwin cannot die because USE=-rar removes one of
+  the two targets. bug 314429
 
   08 Mar 2010; Fabian Groffen <grobian@gentoo.org> p7zip-9.04.ebuild:
   Fix issues on Darwin: use correct makefile, patch makefile for rar, bug
