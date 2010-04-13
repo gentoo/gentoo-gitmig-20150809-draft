@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.2.0.20091217.ebuild,v 1.1 2009/12/17 15:50:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.2.0.20091217.ebuild,v 1.2 2010/04/13 15:56:36 matsuu Exp $
 
 DESCRIPTION="The M17N engine IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -29,12 +29,4 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog NEWS README
-}
-
-pkg_postinst() {
-	ewarn "This package is very experimental, please report your bugs to"
-	ewarn "http://ibus.googlecode.com/issues/list"
-	elog
-	elog "You should run ibus-setup and enable IM Engines you want to use!"
-	elog
 }

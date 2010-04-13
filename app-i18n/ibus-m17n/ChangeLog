@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/ibus-m17n
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.11 2010/02/04 11:30:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.12 2010/04/13 15:56:36 matsuu Exp $
+
+*ibus-m17n-1.3.0 (13 Apr 2010)
+
+  13 Apr 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-m17n-1.2.0.20090930.ebuild, -ibus-m17n-1.2.0.20091120.ebuild,
+  ibus-m17n-1.2.0.20091217.ebuild, -ibus-m17n-1.2.99.20100202.ebuild,
+  +ibus-m17n-1.3.0.ebuild:
+  Version bumped. Removed experimental message, bug #305759. Removed old
+  versions.
 
 *ibus-m17n-1.2.99.20100202 (04 Feb 2010)
 
