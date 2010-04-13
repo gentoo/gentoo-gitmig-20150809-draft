@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.12 2010/04/13 13:29:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.13 2010/04/13 21:18:25 chainsaw Exp $
+
+  13 Apr 2010; <chainsaw@gentoo.org> shorewall6-4.2.11-r1.ebuild:
+  As per Gustavo Zacarias, add an ewarn noting that detect option on
+  interfaces should be avoided with the new init scripts dependencies.
 
 *shorewall6-4.2.11-r1 (13 Apr 2010)
 

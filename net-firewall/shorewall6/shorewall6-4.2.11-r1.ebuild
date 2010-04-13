@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.2.11-r1.ebuild,v 1.1 2010/04/13 13:29:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.2.11-r1.ebuild,v 1.2 2010/04/13 21:18:25 chainsaw Exp $
 
 inherit versionator linux-info
 
@@ -54,6 +54,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	ewarn "You should *not* use the detect option on interfaces"
+	ewarn "as shorewall will now start *before* net."
 	einfo
 	einfo "Documentation is available at http://www.shorewall.net"
 	einfo "There are man pages for ${PN}(8)."
