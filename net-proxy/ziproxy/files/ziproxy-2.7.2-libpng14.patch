@@ -1,5 +1,5 @@
---- configure.in
-+++ configure.in
+--- ziproxy-2.7.2.orig/configure.in
++++ ziproxy-2.7.2/configure.in
 @@ -24,7 +24,7 @@
  AC_CHECK_LIB(jpeg, jpeg_start_decompress,, AC_MSG_ERROR([libjpeg not found.]))
  
