@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.0-r3.ebuild,v 1.1 2010/03/17 12:07:00 scarabeus Exp $
+# $Header $
 
-EAPI="2"
+EAPI="3"
 
 inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils
 
@@ -45,18 +45,18 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-FindPythonLibs.patch
 	"${FILESDIR}"/${PN}-FindPythonInterp.patch
 	"${FILESDIR}"/${PN}-2.6.0-interix.patch
-	"${FILESDIR}"/${P}-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.6.3-darwin-bundle.patch
 	"${FILESDIR}"/${PN}-2.6.3-no-duplicates-in-rpath.patch
 	"${FILESDIR}"/${PN}-2.6.3-fix_broken_lfs_on_aix.patch
-	"${FILESDIR}"/${P}-darwin-default-install_name.patch
-	"${FILESDIR}"/${P}-darwin-no-app-with-qt.patch
+	"${FILESDIR}"/${PN}-2.8.0-darwin-default-install_name.patch
+	"${FILESDIR}"/${PN}-2.8.0-darwin-no-app-with-qt.patch
+	"${FILESDIR}"/${PN}-2.8.1-more-no_host_paths.patch
+	"${FILESDIR}"/${PN}-2.8.1-FindBoost.patch
+	"${FILESDIR}"/${PN}-2.8.1-libform.patch
 )
 
 src_prepare() {
 	base_src_prepare
-
-	use prefix || EPREFIX=
 
 	# Add gcc libs to the default link paths
 	sed -i \
