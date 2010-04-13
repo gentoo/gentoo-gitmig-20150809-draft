@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/htmlentities
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.9 2009/12/15 18:57:22 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.10 2010/04/13 05:59:23 graaff Exp $
+
+  13 Apr 2010; Hans de Graaff <graaff@gentoo.org>
+  -htmlentities-4.1.0.ebuild, -htmlentities-4.2.0-r1.ebuild:
+  Remove old versions.
 
   15 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   htmlentities-4.2.0-r2.ebuild:
