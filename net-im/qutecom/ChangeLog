@@ -1,6 +1,10 @@
 # ChangeLog for net-im/qutecom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/ChangeLog,v 1.1 2010/03/09 16:35:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/ChangeLog,v 1.2 2010/04/13 22:44:46 chithanh Exp $
+
+  13 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  qutecom-2.2_p20100309.ebuild:
+  add qt-webkit dependency, bug 315043
 
 *qutecom-2.2_p20100309 (09 Mar 2010)
 
