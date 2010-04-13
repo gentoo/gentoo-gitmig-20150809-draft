@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/charm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.4 2009/05/26 06:53:55 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.5 2010/04/13 23:51:31 arfrever Exp $
+
+  13 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  charm-1.9.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *charm-1.9.1 (24 May 2009)
 
