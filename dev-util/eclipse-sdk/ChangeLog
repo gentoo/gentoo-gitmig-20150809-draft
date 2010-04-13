@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.156 2010/04/09 18:49:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.157 2010/04/13 08:46:55 caster Exp $
+
+  13 Apr 2010; Vlastimil Babka <caster@gentoo.org>
+  eclipse-sdk-3.5.1-r1.ebuild:
+  Move the compiler forcing before first eant call so that it works.
 
   09 Apr 2010; Vlastimil Babka <caster@gentoo.org>
   eclipse-sdk-3.5.1-r1.ebuild:

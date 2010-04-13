@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.5.1-r1.ebuild,v 1.3 2010/04/09 18:49:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.5.1-r1.ebuild,v 1.4 2010/04/13 08:46:55 caster Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps"
@@ -87,6 +87,8 @@ src_unpack() {
 	ln -s "${DISTDIR}/eclipse-${BUILD_ID}-fetched-src.tar.bz2" "${S}"/ || die
 
 	cd "${S}"
+	# building with ecj fails for some reason (polluted classpath probably)
+	java-pkg_force-compiler javac
 	eant unpack
 }
 
@@ -148,8 +150,6 @@ src_prepare() {
 }
 
 src_compile() {
-	# building with ecj fails for some reason (polluted classpath probably)
-	java-pkg_force-compiler javac
 	ANT_OPTS='-Xmx512M' eant -DbuildArch=${arch}
 }
 
