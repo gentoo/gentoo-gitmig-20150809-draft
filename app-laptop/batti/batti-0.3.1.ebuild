@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.1.ebuild,v 1.1 2010/04/12 11:52:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.1.ebuild,v 1.2 2010/04/13 13:18:23 idl0r Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="libnotify"
 
-RDEPEND=">=dev-python/pygtk-2.16
+RDEPEND="dev-python/pygtk
 	dev-python/dbus-python
 	sys-power/upower
 	libnotify? ( x11-libs/libnotify )"
@@ -36,6 +36,13 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_icon_cache_update
 	distutils_pkg_postinst
+
+	echo
+	ewarn "Remember, in order to use batti, you have to"
+	ewarn "be in the 'messagebus' group."
+	echo
+	ewarn "Just run 'gpasswd -a <USER> messagebus', then have <USER> re-login."
+	echo
 }
 
 pkg_postrm() {
