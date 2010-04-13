@@ -1,9 +1,9 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.57 2010/04/13 18:34:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.58 2010/04/13 18:36:20 armin76 Exp $
 
   13 Apr 2010; Raúl Porcel <armin76@gentoo.org> Finance-Quote-1.17.ebuild:
-  alpha/sparc stable wrt #311337
+  alpha/ia64/sparc stable wrt #311337
 
   05 Apr 2010; Markus Meier <maekke@gentoo.org> Finance-Quote-1.17.ebuild:
   amd64/x86 stable, bug #311337
