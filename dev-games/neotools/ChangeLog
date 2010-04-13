@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/neotools
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.16 2009/03/31 05:11:59 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.17 2010/04/13 15:06:04 phajdan.jr Exp $
+
+  13 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  neotools-0.8.2-r1.ebuild:
+  x86 stable wrt bug #313903
 
 *neotools-0.8.2-r1 (31 Mar 2009)
 
