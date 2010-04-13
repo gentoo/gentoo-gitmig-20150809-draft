@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.83 2010/04/13 15:56:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.84 2010/04/13 20:47:41 hwoarang Exp $
+
+  13 Apr 2010; Markos Chandras <hwoarang@gentoo.org> pyrex-0.9.8.6.ebuild:
+  Stable on amd64 wrt bug #312885
 
 *pyrex-0.9.9 (13 Apr 2010)
 
