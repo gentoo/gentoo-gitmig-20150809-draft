@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.4-r1.ebuild,v 1.1 2010/03/06 10:12:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.4-r1.ebuild,v 1.2 2010/04/13 18:05:28 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gechi-overlay.sourceforge.net/?page=elogv"
 SRC_URI="mirror://sourceforge/gechi-overlay/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""
