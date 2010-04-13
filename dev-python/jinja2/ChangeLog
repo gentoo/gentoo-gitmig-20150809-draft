@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.38 2010/04/09 10:01:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.39 2010/04/13 07:52:12 djc Exp $
+
+*jinja2-2.4 (13 Apr 2010)
+
+  13 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> +jinja2-2.4.ebuild:
+  Version bump to 2.4.
 
   09 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> jinja2-2.3.1.ebuild:
   amd64 stable, bug 310665
