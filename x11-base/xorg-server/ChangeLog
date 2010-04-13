@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.498 2010/04/13 10:07:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.499 2010/04/13 10:09:12 scarabeus Exp $
+
+  13 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xorg-server-1.8.0.ebuild:
+  Remove never triggered sdl dependency.
 
 *xorg-server-1.8.0 (13 Apr 2010)
 
