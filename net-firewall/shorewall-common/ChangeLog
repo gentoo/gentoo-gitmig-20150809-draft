@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/shorewall-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.33 2010/03/16 14:23:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.34 2010/04/13 13:33:31 chainsaw Exp $
+
+*shorewall-common-4.2.11-r1 (13 Apr 2010)
+
+  13 Apr 2010; <chainsaw@gentoo.org> +shorewall-common-4.2.11-r1.ebuild,
+  +files/shorewall.initd2:
+  Updated init script with simplified dependencies addresses security bug
+  #288992 by Hugo Mildenberger.
 
   16 Mar 2010; <chainsaw@gentoo.org> metadata.xml:
   Taking over maintainership from Vieri who is stepping down due to time
