@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.82 2010/04/11 17:54:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.83 2010/04/13 18:03:30 phajdan.jr Exp $
+
+  13 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-5.0.371.0.ebuild, chromium-9999.ebuild:
+  Require ffmpeg with threads USE flag. This is needed for html5 video to
+  work. Should fix bug #314977 by Julien Sanchez <julien.sanchez@gmail.com>.
 
   11 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-5.0.371.0.ebuild, chromium-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.41 2010/04/11 17:54:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.42 2010/04/13 18:03:30 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability subversion toolchain-funcs
@@ -25,7 +25,7 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	>=media-video/ffmpeg-0.5_p21602
+	>=media-video/ffmpeg-0.5_p21602[threads]
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver"
