@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.28.0.ebuild,v 1.2 2010/04/11 18:22:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.28.0.ebuild,v 1.3 2010/04/13 17:04:35 aballier Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="branding doc ipv6 +splash elibc_FreeBSD"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=dev-libs/dbus-glib-0.76
 	>=gnome-base/gconf-2
 	>=x11-libs/startup-notification-0.9
-	>=sys-apps/devicekit-power-008
+	|| ( >=sys-apps/devicekit-power-008 sys-power/upower )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 
 	x11-libs/libSM
