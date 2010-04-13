@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.6.ebuild,v 1.10 2010/04/12 13:55:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.6.ebuild,v 1.11 2010/04/13 06:21:42 pva Exp $
 
 EAPI=2
 
@@ -82,6 +82,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 #   x11-plugins/pidgin-rhythmbox
 #   x11-plugins/purple-plugin_pack
 #   x11-themes/pidgin-smileys
+#	x11-plugins/pidgin-knotify
 # Plugins in Sunrise:
 #	x11-plugins/pidgimpd
 #	x11-plugins/pidgin-birthday
