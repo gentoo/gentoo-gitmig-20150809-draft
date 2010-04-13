@@ -1,6 +1,10 @@
 # ChangeLog for app-text/trang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.24 2010/03/04 17:05:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.25 2010/04/13 08:49:19 phajdan.jr Exp $
+
+  13 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  trang-20091111.ebuild:
+  x86 stable wrt bug #313307
 
   04 Mar 2010; Petteri Räty <betelgeuse@gentoo.org> trang-20091111.ebuild,
   +files/test.xml:
