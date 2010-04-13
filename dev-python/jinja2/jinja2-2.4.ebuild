@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.4.ebuild,v 1.1 2010/04/13 07:52:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.4.ebuild,v 1.2 2010/04/13 16:45:53 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils eutils
+inherit distutils
 
 MY_PN="Jinja2"
 MY_P="${MY_PN}-${PV}"
@@ -14,16 +14,16 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="A small but fast and easy to use stand-alone template engine written in pure python."
 HOMEPAGE="http://jinja.pocoo.org/ http://pypi.python.org/pypi/Jinja2"
 SRC_URI="http://pypi.python.org/packages/source/J/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="BSD"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="doc examples i18n test"
 
-CDEPEND="dev-python/setuptools"
-DEPEND="${CDEPEND}
-	doc? ( >=dev-python/sphinx-0.6 )"
-RDEPEND="${CDEPEND}
+RDEPEND="dev-python/setuptools
 	i18n? ( >=dev-python/Babel-0.9.3 )"
+DEPEND="${RDEPEND}
+	doc? ( >=dev-python/sphinx-0.6 )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -34,16 +34,14 @@ src_compile(){
 	distutils_src_compile
 
 	if use doc; then
-		cd "${S}/docs"
-		PYTHONPATH=.. emake html || die "Building of documentation failed"
+		cd docs
+		PYTHONPATH=".." emake html || die "Building of documentation failed"
 	fi
 }
 
 src_install(){
 	distutils_src_install
-
-	# Don't install C sources.
-	find "${D}"usr/$(get_libdir)/python*/site-packages -name "*.c" | xargs rm -f
+	python_clean_sitedirs
 
 	if use doc; then
 		dohtml -r docs/_build/html/* || die "Installation of documentation failed"
