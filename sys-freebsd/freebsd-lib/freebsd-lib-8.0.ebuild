@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.4 2010/03/23 11:24:11 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.5 2010/04/13 11:00:08 aballier Exp $
 
 EAPI=2
 
@@ -365,6 +365,12 @@ END_LDSCRIPT
 # during compile or install phase.
 SANDBOX_PREDICT="/dev/crypto"
 EOF
+
+	# Install a libusb.pc for better compat with Linux's libusb
+	if use usb ; then
+		dodir /usr/$(get_libdir)/pkgconfig
+		sed -e "s:@LIBDIR@:/usr/$(get_libdir):" "${FILESDIR}/libusb.pc.in" > "${D}/usr/$(get_libdir)/pkgconfig/libusb.pc" || die
+	fi
 }
 
 install_includes()
