@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.82 2010/03/22 18:12:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.83 2010/04/13 16:43:54 chithanh Exp $
+
+  13 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  unmask video_cards_nouveau
 
   22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Unmask USE="jpeg" for app-emulation/wine since emul- 20100220 is stable.

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.138 2010/04/09 22:05:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.139 2010/04/13 16:43:55 chithanh Exp $
+
+  13 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  mask video_cards_nouveau
 
   9 Apr 2010; Zac Medico <zmedico@gentoo.org> package.use.mask:
   Mask python3 for stable portage until python-3.x is marked stable.

@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.27 2010/04/04 15:08:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.28 2010/04/13 16:43:55 chithanh Exp $
 
 # This file requires >=portage-2.1.1
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Apr 2010)
+# xf86-video-nouveau is supported on x86.
+x11-base/xorg-drivers -video_cards_nouveau
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)
 # x86 platforms works
