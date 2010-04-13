@@ -1,7 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.91.ebuild,v 1.1 2010/01/03 06:56:48 grozin Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.92.ebuild,v 1.1 2010/04/13 13:25:58 grozin Exp $
+EAPI=3
+SUPPORT_PYTHON_ABIS=1
+PYTHON_DEPEND="python? 2"
+RESTRICT_PYTHON_ABIS="3.*"
 inherit eutils autotools elisp-common latex-package multilib python
 
 DESCRIPTION="A vector graphics language that provides a framework for technical drawing"
@@ -20,7 +23,6 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	fftw? ( >=sci-libs/fftw-3.0.1 )
 	gsl? ( sci-libs/gsl )
 	X? ( x11-misc/xdg-utils dev-lang/python dev-python/imaging[tk] )
-	python? ( dev-lang/python )
 	latex? ( virtual/latex-base )
 	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
@@ -139,9 +141,11 @@ src_install() {
 
 	# asymptote.py
 	if use python; then
-		python_version
-		insinto /usr/$(get_libdir)/python${PYVER}/site-packages
-		doins base/${PN}.py
+		python_install() {
+			insinto "$(python_get_sitedir)"
+			doins base/${PN}.py
+		}
+		python_execute_function python_install
 	fi
 
 	# emacs mode
@@ -174,14 +178,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use python; then
-		python_version
-		python_mod_compile \
-			/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}.py
-	fi
-
+	use python && python_mod_optimize ${PN}.py
 	use latex && latex-package_rehash
-
 	use emacs && elisp-site-regen
 
 	elog 'Use the variable ASYMPTOTE_PSVIEWER to set the postscript viewer'
@@ -189,7 +187,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	use python && python_mod_cleanup ${PN}.py
 	use latex && latex-package_rehash
 	use emacs && elisp-site-regen
-	use python && python_mod_cleanup
 }
