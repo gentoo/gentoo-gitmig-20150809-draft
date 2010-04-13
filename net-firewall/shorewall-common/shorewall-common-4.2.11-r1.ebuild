@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.2.11-r1.ebuild,v 1.1 2010/04/13 13:33:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.2.11-r1.ebuild,v 1.2 2010/04/13 21:22:22 chainsaw Exp $
 
 EAPI="2"
 
@@ -55,6 +55,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	ewarn "You should *not* use the detect option on interfaces"
+	ewarn "as shorewall will now start *before* net."
 	elog
 	if use doc ; then
 		elog "Documentation is available at /usr/share/doc/${PF}/html."

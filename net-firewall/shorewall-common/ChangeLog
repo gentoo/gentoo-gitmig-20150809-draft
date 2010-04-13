@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.34 2010/04/13 13:33:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.35 2010/04/13 21:22:22 chainsaw Exp $
+
+  13 Apr 2010; <chainsaw@gentoo.org> shorewall-common-4.2.11-r1.ebuild:
+  As per Gustavo Zacarias, add an ewarn noting that the detect option on
+  interfaces should be avoided with the new init script dependencies.
 
 *shorewall-common-4.2.11-r1 (13 Apr 2010)
 
