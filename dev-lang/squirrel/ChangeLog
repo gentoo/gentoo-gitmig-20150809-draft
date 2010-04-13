@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/squirrel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squirrel/ChangeLog,v 1.1 2010/03/05 18:45:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squirrel/ChangeLog,v 1.2 2010/04/13 17:49:42 hwoarang Exp $
+
+*squirrel-2.2.4-r1 (13 Apr 2010)
+
+  13 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  +squirrel-2.2.4-r1.ebuild, files/squirrel-2.2.4-autotools.patch:
+  Fixes bug 314497 by using the --docdir ./configure
+  option. Support EAPI=3 (prefix reviewd by ABCD). Actually support
+  advertised useflags by expanding autotools patch. 
+  Enable removal of static archive and libtool archives on USE=-static-libs. 
+  Thanks to Nathan Phillip Brink (ohnobinki)
 
 *squirrel-2.2.4 (05 Mar 2010)
 
