@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/fuse-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.10 2009/12/20 22:26:36 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.11 2010/04/14 00:24:55 sping Exp $
+
+*fuse-python-0.2-r1 (14 Apr 2010)
+
+  14 Apr 2010; Sebastian Pipping <sping@gentoo.org>
+  +fuse-python-0.2-r1.ebuild, +files/fuse-python-0.2-fix-ctors.patch,
+  metadata.xml:
+  Integrate patch to fix ctors (will be in 0.2.1)
+  Add me as maintainer
 
   20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   fuse-python-0.2.ebuild:
