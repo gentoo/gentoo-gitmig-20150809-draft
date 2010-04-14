@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-shell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.32 2010/03/16 14:25:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.33 2010/04/14 03:25:41 jer Exp $
+
+  14 Apr 2010; Jeroen Roovers <jer@gentoo.org>
+  shorewall-shell-4.2.11.ebuild:
+  Stable for HPPA (bug #288992).
 
   16 Mar 2010; <chainsaw@gentoo.org> metadata.xml:
   Taking over maintainership from Vieri who is stepping down due to time

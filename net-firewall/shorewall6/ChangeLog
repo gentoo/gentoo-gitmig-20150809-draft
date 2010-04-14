@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.13 2010/04/13 21:18:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.14 2010/04/14 03:25:07 jer Exp $
+
+  14 Apr 2010; Jeroen Roovers <jer@gentoo.org> shorewall6-4.2.11-r1.ebuild:
+  Stable for HPPA (bug #288992).
 
   13 Apr 2010; <chainsaw@gentoo.org> shorewall6-4.2.11-r1.ebuild:
   As per Gustavo Zacarias, add an ewarn noting that detect option on

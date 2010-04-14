@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.35 2010/03/16 14:24:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.36 2010/04/14 03:24:41 jer Exp $
+
+  14 Apr 2010; Jeroen Roovers <jer@gentoo.org>
+  shorewall-perl-4.2.11.1.ebuild:
+  Stable for HPPA (bug #288992).
 
   16 Mar 2010; <chainsaw@gentoo.org> metadata.xml:
   Taking over maintainership from Vieri who is stepping down due to time
