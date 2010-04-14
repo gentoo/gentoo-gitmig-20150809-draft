@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11452 2010/04/14 15:42:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11453 2010/04/14 20:31:53 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,40 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (14 Apr 2010)
+# gtk+-1 is old and nasty.
+# Start transitioning away from these packages.
+# Read man 5 portage about package.unmask to unmask the package locally.
+games-arcade/cervi
+games-emulation/darcnes
+games-emulation/epsxe
+games-emulation/gtuxnes
+games-emulation/infones
+games-emulation/pcsx
+games-emulation/pcsx2
+games-emulation/ps2emu-cddvdlinuz
+games-emulation/ps2emu-cdvdiso
+games-emulation/ps2emu-dev9null
+games-emulation/ps2emu-gssoft
+games-emulation/ps2emu-padxwin
+games-emulation/ps2emu-spu2null
+games-emulation/ps2emu-usbnull
+games-emulation/psemu-cdriso
+games-emulation/psemu-padjoy
+games-emulation/psemu-padxwin
+games-emulation/psemu-peopssoftgpu
+games-emulation/psemu-peopsspu
+games-fps/wmquake
+games-kids/gtans
+games-kids/stickers
+games-mud/gMOO
+games-puzzle/codebreaker
+games-puzzle/glickomania
+games-puzzle/xphotohunter
+games-puzzle/xpuyopuyo
+games-simulation/corewars
+games-strategy/xscorch
 
 # Christian Ruppert <idl0r@gentoo.org> (13 Apr 2010)
 # Masked for removal in 30 days due to HAL dependency, bug 313427.
