@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.2.1.1.ebuild,v 1.1 2010/04/13 12:04:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.2.1.1.ebuild,v 1.2 2010/04/14 11:36:39 chainsaw Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ http://downloads.asterisk.org/pub/telephony/firmware/releases/dahdi-fwload-vpmad
 http://downloads.asterisk.org/pub/telephony/firmware/releases/dahdi-fw-oct6114-064-1.05.01.tar.gz
 http://downloads.asterisk.org/pub/telephony/firmware/releases/dahdi-fw-oct6114-128-1.05.01.tar.gz
 http://downloads.asterisk.org/pub/telephony/firmware/releases/dahdi-fw-tc400m-MR6.12.tar.gz
-http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fwload-vpmadt032-1.20.0.tar.gz
+http://downloads.asterisk.org/pub/telephony/firmware/releases/dahdi-fwload-vpmadt032-1.20.0.tar.gz
 mirror://gentoo/gentoo-dahdi-patchset-0.1.tar.bz2"
 
 LICENSE="LGPL-2.1"
@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="net-misc/asterisk"
+RDEPEND=""
 
 EPATCH_SUFFIX="diff"
 PATCHES=( "${WORKDIR}/dahdi-patchset" )

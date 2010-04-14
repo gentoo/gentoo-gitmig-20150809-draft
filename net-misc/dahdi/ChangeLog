@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.3 2010/04/13 12:04:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.4 2010/04/14 11:36:39 chainsaw Exp $
+
+  14 Apr 2010; <chainsaw@gentoo.org> dahdi-2.2.1.1.ebuild:
+  Remove incorrect RDEPEND on Asterisk, initially noted by Oliver Jaksch.
+  Causes circular dependencies as pointed out by Kerin "kerframil" Miller in
+  bug #315201.
 
 *dahdi-2.2.1.1 (13 Apr 2010)
 
