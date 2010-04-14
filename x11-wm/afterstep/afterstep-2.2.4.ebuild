@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.16 2010/01/18 15:24:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.17 2010/04/14 13:03:57 voyageur Exp $
 
 inherit flag-o-matic eutils
 
@@ -31,7 +31,8 @@ RDEPEND="media-libs/freetype
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
-	xinerama? ( x11-proto/xineramaproto )"
+	xinerama? ( x11-proto/xineramaproto )
+	!media-libs/libafterimage"
 
 S=${WORKDIR}/AfterStep-${PV}
 

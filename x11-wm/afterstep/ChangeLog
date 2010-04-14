@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.86 2010/03/31 16:38:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.87 2010/04/14 13:03:57 voyageur Exp $
+
+  14 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  afterstep-2.2.4.ebuild, afterstep-2.2.9.ebuild:
+  Add blocker on libafterimage
 
   31 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   afterstep-2.2.9.ebuild:
