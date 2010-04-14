@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.1 2010/03/10 23:46:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.2 2010/04/14 21:45:24 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -97,4 +97,11 @@ pkg_setup() {
 		$(use_with sqlite)
 		$(use_with ssl)
 		$(use_with xface compface)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix build failure with USE="-libnotify", bug #314123
+	epatch "${FILESDIR}/${P}-build-failure-notify.patch"
 }

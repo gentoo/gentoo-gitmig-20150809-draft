@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.95 2010/03/26 16:42:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.96 2010/04/14 21:45:24 eva Exp $
+
+  14 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org> balsa-2.4.7.ebuild,
+  +files/balsa-2.4.7-build-failure-notify.patch:
+  Fix build failure with USE=-libnotify, bug #314123.
 
   26 Mar 2010; Pacho Ramos <pacho@gentoo.org> -balsa-2.3.28.ebuild,
   -balsa-2.4.1.ebuild:
