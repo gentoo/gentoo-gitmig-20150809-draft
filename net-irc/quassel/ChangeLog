@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.83 2010/04/07 18:25:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.84 2010/04/14 11:19:30 scarabeus Exp $
+
+*quassel-0.6.0 (14 Apr 2010)
+
+  14 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -quassel-0.6_rc1.ebuild, +quassel-0.6.0.ebuild:
+  Version bump. Drop rc.
 
   07 Apr 2010; Daniel Pielmeier <billie@gentoo.org> quassel-0.6_rc1.ebuild,
   quassel-9999.ebuild:
