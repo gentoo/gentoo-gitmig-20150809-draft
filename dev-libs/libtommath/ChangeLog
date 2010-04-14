@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtommath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.30 2010/02/21 00:02:24 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.31 2010/04/14 20:09:52 jer Exp $
+
+  14 Apr 2010; Jeroen Roovers <jer@gentoo.org> libtommath-0.41.ebuild:
+  Marked ~hppa (bug #314875).
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> libtommath-0.41.ebuild:
   Transfer prefix keywords, bump EAPI
