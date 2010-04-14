@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.14 2010/04/14 03:25:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.15 2010/04/14 12:12:25 fauli Exp $
+
+  14 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  shorewall6-4.2.11-r1.ebuild:
+  stable x86, security bug 288992
 
   14 Apr 2010; Jeroen Roovers <jer@gentoo.org> shorewall6-4.2.11-r1.ebuild:
   Stable for HPPA (bug #288992).
