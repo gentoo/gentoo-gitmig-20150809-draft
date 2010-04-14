@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.4.2.ebuild,v 1.1 2010/03/30 22:06:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.4.2.ebuild,v 1.2 2010/04/14 19:13:50 reavertm Exp $
 
 EAPI="3"
 
 KMNAME="kdeutils"
-inherit kde4-meta
+PYTHON_DEPEND="python? 2"
+inherit python kde4-meta
 
 DESCRIPTION="A tool to create interactive applets for the KDE desktop."
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
@@ -20,6 +21,11 @@ RDEPEND="${DEPEND}
 "
 
 PATCHES=( "${FILESDIR}/${PN}-as-needed.patch" )
+
+pkg_setup() {
+	kde4-meta_pkg_setup
+	python_set_active_version 2
+}
 
 src_configure() {
 	mycmakeargs=(
