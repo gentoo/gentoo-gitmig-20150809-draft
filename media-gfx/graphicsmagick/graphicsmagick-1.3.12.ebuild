@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.5 2010/03/24 05:52:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.6 2010/04/14 21:23:33 bicatali Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="bzip2 cxx debug doc fpx imagemagick jbig jpeg jpeg2k lcms openmp
+IUSE="bzip2 cxx debug doc fpx imagemagick jbig jpeg jpeg2k lcms modules openmp
 	perl png q16 q32 svg threads tiff truetype X wmf zlib"
 
 RDEPEND="app-text/ghostscript-gpl
@@ -78,7 +78,6 @@ src_configure() {
 		--without-included-ltdl \
 		--without-frozenpaths \
 		--without-gslib \
-		--with-modules \
 		--with-quantum-depth=${quantumDepth} \
 		--with-fontpath="${EPREFIX}/usr/share/fonts" \
 		--with-gs-font-dir="${EPREFIX}/usr/share/fonts/default/ghostscript" \
@@ -96,6 +95,7 @@ src_configure() {
 		$(use_with jpeg) \
 		$(use_with jpeg2k jp2) \
 		$(use_with lcms) \
+		$(use_with modules) \
 		$(use_with perl) \
 		$(use_with png) \
 		$(use_with svg xml) \
