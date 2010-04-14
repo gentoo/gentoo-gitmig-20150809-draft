@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.35 2010/03/10 21:45:21 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.36 2010/04/14 14:25:30 tcunha Exp $
+
+  14 Apr 2010; Tiago Cunha <tiago@gentoo.org> tmux-1.2.ebuild:
+  Do not depend on a specific version of dev-libs/libevent per bug #314607,
+  and while there depend on sys-libs/ncurses.
 
 *tmux-1.2 (10 Mar 2010)
 
