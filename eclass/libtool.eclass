@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.86 2010/04/14 02:13:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.87 2010/04/14 18:14:45 vapier Exp $
 #
 # Maintainer: base-system@gentoo.org
 #
@@ -106,7 +106,7 @@ ELT_walk_patches() {
 		fi
 	done
 
-	popd "${patch_dir}" >/dev/null
+	popd >/dev/null
 	return ${ret}
 }
 
