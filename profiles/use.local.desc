@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5484 2010/04/14 18:07:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5485 2010/04/14 21:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1558,9 +1558,10 @@ media-gfx/freewrl:libeai - Build EAI C library
 media-gfx/freewrl:spidermonkey - Use spidermonkey instead of Firefox
 media-gfx/gimp:smp -  Enable support for multiprocessors 
 media-gfx/gimp:webkit -  Enable the webkit rendering engine 
-media-gfx/graphicsmagick:fpx - Enable FlashPix support
-media-gfx/graphicsmagick:q16 - Set quantum depth to 16
-media-gfx/graphicsmagick:q32 - Set quantum depth to 32
+media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
+media-gfx/graphicsmagick:modules - Compile graphicsmagick with dynamically loadable modules
+media-gfx/graphicsmagick:q16 - Set storage quantum size to 16 (~2*memory)
+media-gfx/graphicsmagick:q32 - Set storage quantum size to 32 (~5*memory)
 media-gfx/graphviz:lasi -  Enables PostScript output via media-libs/lasi library 
 media-gfx/gthumb:http - Enable webservice integration through net-libs/libsoup
 media-gfx/gthumb:iptc - Add support for IPTC metadata
