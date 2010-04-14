@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.2.1.1.ebuild,v 1.1 2010/04/14 05:43:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.2.1.1.ebuild,v 1.2 2010/04/14 07:42:45 caster Exp $
 
 EAPI=2
 
@@ -27,9 +27,6 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"
-
-# there's some test that limit its run to 10s and fails
-RESTRICT="test"
 
 # Tests only work with JDK-1.6, severe out of memory problems appear with 1.5
 DEPEND="test? ( =virtual/jdk-1.6* )
