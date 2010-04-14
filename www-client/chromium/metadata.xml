@@ -12,7 +12,6 @@
 	</maintainer>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
 	<use>
-		<flag name='ffmpeg'>Add support for HTML5 audio/video tags via <pkg>media-video/ffmpeg</pkg></flag>
 		<flag name='plugins-symlink'>Add support for system web browser plugins out of the box</flag>
 	</use>
 </pkgmetadata>
