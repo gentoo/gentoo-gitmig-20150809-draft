@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.3.3.ebuild,v 1.6 2010/01/19 02:41:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.3.3.ebuild,v 1.7 2010/04/14 18:42:56 reavertm Exp $
 
 EAPI="2"
 
@@ -61,6 +61,11 @@ pkg_postinst() {
 	if ! has_version kde-base/kdepim-kresources:${SLOT}; then
 		echo
 		elog "For groupware functionality, please install kde-base/kdepim-kresources:${SLOT}"
+		echo
+	fi
+	if ! has_version kde-base/kleopatra:${SLOT}; then
+		echo
+		elog "For certificate management and the gnupg log viewer, please install kde-base/kleopatra:${SLOT}"
 		echo
 	fi
 }
