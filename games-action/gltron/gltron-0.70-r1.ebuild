@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.5 2007/02/14 00:34:36 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.6 2010/04/14 16:13:50 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="3d tron, just like the movie"
@@ -16,34 +17,31 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	media-libs/libpng
-	media-libs/libsdl
-	media-libs/sdl-mixer
-	media-libs/sdl-sound"
+	media-libs/libsdl[audio,video]
+	media-libs/sdl-mixer[vorbis]
+	media-libs/sdl-sound[vorbis,mikmod]
+	media-libs/smpeg
+	media-libs/libmikmod"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-configure.patch \
 		"${FILESDIR}"/${P}-prototypes.patch \
 		"${FILESDIR}"/${P}-debian.patch
 }
 
-src_compile() {
+src_configure() {
 	# warn/debug/profile just modify CFLAGS, they aren't
 	# real options, so don't utilize USE flags here
 	egamesconf \
 		--disable-warn \
 		--disable-debug \
-		--disable-profile \
-		|| die
-	emake || die "emake failed"
+		--disable-profile
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog README
-	dohtml *.html
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} GLtron
 	prepgamesdirs
