@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.1.ebuild,v 1.1 2010/04/14 12:23:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.1.ebuild,v 1.2 2010/04/14 12:28:31 ssuominen Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://guake.org/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2
 	dev-python/pygtk
@@ -25,12 +25,14 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	dev-python/gconf-python
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	nls? ( dev-util/intltool )"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="--disable-static
-		--disable-dependency-tracking"
+		--disable-dependency-tracking
+		$(use_enable nls)"
 	python_set_active_version 2
 }
 
