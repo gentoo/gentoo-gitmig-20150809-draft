@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krosspython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.40 2010/03/31 23:01:47 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.41 2010/04/14 19:27:38 reavertm Exp $
+
+  14 Apr 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  krosspython-4.4.2.ebuild:
+  Fix bug 312655, patch by Locke Shinseiko <wizzleby@gmail.com>
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -krosspython-4.3.4.ebuild,
   -krosspython-4.4.0.ebuild:
