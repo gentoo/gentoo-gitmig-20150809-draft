@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r4.ebuild,v 1.2 2010/03/20 13:58:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r4.ebuild,v 1.3 2010/04/14 18:36:08 pacho Exp $
 
 EAPI="2"
 
@@ -100,4 +100,15 @@ src_install() {
 	# Upstream should pass *_la_LIBTOOLFLAGS = --tag=disable-static to drop them instead
 	# but gecko is a dead branch for them, so do it ourselves:
 	find "${D}" -name '*.la' -delete
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+
+	elog
+	elog "If after updating Epiphany it becomes unable to show any webpage reporting"
+	elog "errors in terminal regarding 'EphyBrowser initialization failed', try"
+	elog "removing old compreg.dat file:"
+	elog " rm ~/.gnome2/epiphany/mozilla/epiphany/compreg.dat"
+	elog "and restart it."
 }
