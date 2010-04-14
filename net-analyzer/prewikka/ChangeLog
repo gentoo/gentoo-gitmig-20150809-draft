@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/prewikka
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.39 2009/09/12 14:01:03 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.40 2010/04/14 03:48:14 halcy0n Exp $
+
+  14 Apr 2010; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
   12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   -files/prewikka-0.9.12.1-create-user.patch:
