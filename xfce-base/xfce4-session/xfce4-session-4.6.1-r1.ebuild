@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.1-r1.ebuild,v 1.8 2010/03/11 21:10:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.1-r1.ebuild,v 1.9 2010/04/14 17:42:45 jer Exp $
 
 EAPI=2
 inherit xfconf
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xfce.org/projects/xfce4-session/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug fortune gnome gnome-keyring profile"
 
 RDEPEND="gnome-base/libglade
