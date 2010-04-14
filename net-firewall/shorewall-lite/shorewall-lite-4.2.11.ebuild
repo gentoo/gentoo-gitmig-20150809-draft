@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.2.11.ebuild,v 1.2 2010/04/14 03:23:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-4.2.11.ebuild,v 1.3 2010/04/14 11:52:03 fauli Exp $
 
 inherit versionator
 
@@ -20,7 +20,7 @@ SRC_URI="http://www1.shorewall.net/pub/${MY_PN}/${MY_PV_TREE}/${MY_P}/${P}${MY_P
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 DEPEND="net-firewall/iptables
