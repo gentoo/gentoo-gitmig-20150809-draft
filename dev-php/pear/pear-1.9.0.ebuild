@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.0.ebuild,v 1.2 2010/04/12 12:21:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.0.ebuild,v 1.3 2010/04/15 21:49:48 maekke Exp $
 
 inherit depend.php
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 
 DESCRIPTION="PEAR - PHP Extension and Application Repository"
 HOMEPAGE="http://pear.php.net/"
