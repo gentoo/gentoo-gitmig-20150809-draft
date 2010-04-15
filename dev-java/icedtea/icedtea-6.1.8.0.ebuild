@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.8.0.ebuild,v 1.1 2010/04/14 12:33:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.8.0.ebuild,v 1.2 2010/04/15 13:47:56 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -90,6 +90,7 @@ DEPEND="${RDEPEND}
 	>=dev-java/xalan-2.7.0:0
 	>=dev-java/xerces-2.9.1:2
 	>=dev-java/ant-core-1.7.1-r2
+	dev-java/ant-nodeps
 	app-misc/ca-certificates
 	dev-lang/perl
 	dev-libs/openssl

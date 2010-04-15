@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.5 2010/04/14 12:33:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.6 2010/04/15 13:47:56 caster Exp $
+
+  15 Apr 2010; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.8.0.ebuild:
+  Add ant-nodeps to DEPEND since it's used in ANT_TASKS variable. Bug
+  #315457.
 
 *icedtea-6.1.8.0 (14 Apr 2010)
 
