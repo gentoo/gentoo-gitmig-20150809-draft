@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.184 2010/04/07 04:20:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.185 2010/04/15 19:23:34 darkside Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -475,8 +475,17 @@ vim_src_configure() {
 	# Let Portage do the stripping. Some people like that.
 	export ac_cv_prog_STRIP="$(type -P true ) faking strip"
 
-	# We have much more cooler tools in our prefix than /usr/local
+	# Keep Gentoo Prefix env contained within the EPREFIX
 	use prefix && myconf="${myconf} --without-local-dir"
+
+	if [[ ${MY_PN} == "*vim" ]] ; then
+		if [[ ${CHOST} == *-interix* ]]; then
+			# avoid finding of this function, to avoid having to patch either
+			# configure or the source, which would be much more hackish.
+			# after all vim does it right, only interix is badly broken (again)
+			export ac_cv_func_sigaction=no
+		fi
+	fi
 
 	myconf="${myconf} --with-modified-by=Gentoo-${PVR}"
 	econf ${myconf} || die "vim configure failed"
