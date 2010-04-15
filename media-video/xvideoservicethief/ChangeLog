@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xvideoservicethief
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.12 2010/01/23 20:00:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.13 2010/04/15 16:51:32 hwoarang Exp $
+
+*xvideoservicethief-2.4 (15 Apr 2010)
+
+  15 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  +xvideoservicethief-2.4.ebuild:
+  Version bump wrt bug #315475. Thanks to Dustin Polke
+  <gentoobugsie.20.dsurawicz@spamgourmet.com> for the patch
 
 *xvideoservicethief-2.3.2 (23 Jan 2010)
 
