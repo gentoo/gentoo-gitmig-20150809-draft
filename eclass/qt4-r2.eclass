@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.5 2010/03/18 11:43:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.6 2010/04/15 06:51:08 abcd Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -180,7 +180,7 @@ _find_project_file() {
 eqmake4() {
 	ebegin "Running qmake"
 
-	local qmake_args="$@"
+	local qmake_args=("$@")
 
 	# check if project file was passed as a first argument
 	# if not, then search for it
@@ -194,7 +194,7 @@ eqmake4() {
 			echo
 			die "eqmake4 failed"
 		fi
-		qmake_args="${qmake_args} ${project_file}"
+		qmake_args+=("${project_file}")
 	fi
 
 	# make sure CONFIG variable is correctly set for both release and debug builds
@@ -260,7 +260,7 @@ eqmake4() {
 		QMAKE_LIBDIR_X11="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE_LIBDIR_OPENGL="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE_STRIP= \
-		${qmake_args}
+		"${qmake_args[@]}"
 
 	# was qmake successful?
 	if ! eend $? ; then
