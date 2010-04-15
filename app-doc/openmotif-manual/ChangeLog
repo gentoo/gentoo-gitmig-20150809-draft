@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/openmotif-manual
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/openmotif-manual/ChangeLog,v 1.5 2010/04/11 13:46:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/openmotif-manual/ChangeLog,v 1.6 2010/04/15 03:34:28 jer Exp $
+
+  15 Apr 2010; Jeroen Roovers <jer@gentoo.org>
+  openmotif-manual-2.3.0.ebuild:
+  Stable for HPPA (bug #309999).
 
   11 Apr 2010; <nixnut@gentoo.org> openmotif-manual-2.3.0.ebuild:
   ppc stable #309999
