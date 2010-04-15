@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.14 2010/04/08 17:11:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.15 2010/04/15 14:01:00 darkside Exp $
+
+  15 Apr 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Change maintainer to myself
 
 *mediatomb-0.12.1 (08 Apr 2010)
 

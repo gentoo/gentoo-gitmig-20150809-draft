@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>video</herd>
   <maintainer>
-    <email>flameeyes@gentoo.org</email>
+    <email>darkside@gentoo.org</email>
   </maintainer>
   <use>
 	<flag name="inotify">Enable inotify filesystem monitoring support</flag>
