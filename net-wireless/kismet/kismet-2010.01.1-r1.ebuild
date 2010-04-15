@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2010.01.1-r1.ebuild,v 1.1 2010/04/15 01:32:42 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2010.01.1-r1.ebuild,v 1.2 2010/04/15 07:17:37 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
-# plugins have unresolved QA issues 
+# plugins have unresolved QA issues
 #KISMET_PLUGINS="autowep btscan ptw spectools"
 IUSE="+client kernel_linux +pcre +pcap +suid" # ${KISMET_PLUGINS}"
 
