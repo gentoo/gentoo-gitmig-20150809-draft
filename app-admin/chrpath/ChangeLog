@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/chrpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.12 2010/03/03 17:19:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.13 2010/04/15 17:08:25 hwoarang Exp $
+
+  15 Apr 2010; Markos Chandras <hwoarang@gentoo.org> chrpath-0.13-r1.ebuild,
+  +files/chrpath-0.13-testsuite-1.patch:
+  Fix tests wrt bug #310725. Thanks to Mario Fetka (geos_one)
+  <mario.fetka@gmail.com> for the patch
 
 *chrpath-0.13-r1 (03 Mar 2010)
 

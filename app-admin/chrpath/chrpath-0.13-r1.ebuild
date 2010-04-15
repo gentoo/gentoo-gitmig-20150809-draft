@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r1.ebuild,v 1.1 2010/03/03 17:19:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r1.ebuild,v 1.2 2010/04/15 17:08:25 hwoarang Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ IUSE=""
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-multilib.patch
 	epatch "${FILESDIR}"/${PN}-keepgoing.patch
+	epatch "${FILESDIR}"/${P}-testsuite-1.patch
 	eautoreconf
 }
 
