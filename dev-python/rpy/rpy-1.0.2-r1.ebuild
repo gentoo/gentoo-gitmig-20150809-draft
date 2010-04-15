@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.6 2008/10/27 10:33:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.7 2010/04/15 21:58:10 bicatali Exp $
 
 inherit distutils eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-testfiles.patch
 	epatch "${FILESDIR}"/${P}-rpymodule-R-2.7.patch
 	epatch "${FILESDIR}"/${P}-R28.patch
+	epatch "${FILESDIR}"/${P}-R210.patch
 	# this module should exist only if R was built with USE=lapack
 	if [[ ! -e /usr/$(get_libdir)/R/lib/libRlapack.so ]]; then
 		sed -i \
