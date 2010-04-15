@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.134 2010/04/04 18:49:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.135 2010/04/15 15:10:19 ranger Exp $
+
+  15 Apr 2010; Brent Baude <ranger@gentoo.org> mediawiki-1.15.2.ebuild:
+  Marking mediawiki-1.15.2 ppc for bug 308573
 
   04 Apr 2010; Raúl Porcel <armin76@gentoo.org> mediawiki-1.15.2.ebuild:
   sparc/x86 stable wrt #308573
