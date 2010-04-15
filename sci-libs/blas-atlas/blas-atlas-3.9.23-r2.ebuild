@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r1.ebuild,v 1.2 2010/03/07 23:25:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r2.ebuild,v 1.1 2010/04/15 20:20:43 jlec Exp $
 
 EAPI="3"
 
@@ -76,7 +76,7 @@ src_prepare() {
 	mkdir "${BLD_DIR}" || die "failed to generate build directory"
 	cd "${BLD_DIR}"
 	cp "${FILESDIR}"/war . && chmod a+x war || die "failed to install war"
-	sed -i -e '1c\#! '"${EPREFIX}"'/bin/bash' war || die
+	sed -i -e '1c\#!'"${EPREFIX}"'/bin/bash' war || die
 }
 
 src_configure() {

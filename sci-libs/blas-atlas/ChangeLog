@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.98 2010/03/07 16:56:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.99 2010/04/15 20:20:43 jlec Exp $
+
+*blas-atlas-3.9.23-r2 (15 Apr 2010)
+
+  15 Apr 2010; Justin Lecher <jlec@gentoo.org> -blas-atlas-3.9.23-r1.ebuild,
+  +blas-atlas-3.9.23-r2.ebuild:
+  Fixes for broken move to EAPI=3
 
 *blas-atlas-3.9.23-r1 (07 Mar 2010)
 

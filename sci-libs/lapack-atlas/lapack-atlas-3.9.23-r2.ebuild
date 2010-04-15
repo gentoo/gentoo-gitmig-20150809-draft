@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r1.ebuild,v 1.3 2010/03/07 21:45:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r2.ebuild,v 1.1 2010/04/15 20:21:21 jlec Exp $
 
 EAPI="3"
 
@@ -22,8 +22,8 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 	mirror://gentoo/${L_PN}-reference-${L_PV}-autotools.patch.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 CDEPEND="virtual/blas
 	virtual/cblas
@@ -66,8 +66,7 @@ src_prepare() {
 	mkdir "${BLD_DIR}" || die "failed to generate build directory"
 	cd "${BLD_DIR}"
 	cp "${FILESDIR}"/war . && chmod a+x war || die "failed to install war"
-	sed -i -e '1c\#! '"${EPREFIX}"'/bin/bash' \
-		-e '/^\$ARCHIVER \$@$/i\shift' war
+	sed -i -e '1c\#! '"${EPREFIX}"'/bin/bash' war
 	cd "${S_LAPACK}"
 	epatch "${WORKDIR}"/${L_PN}-reference-${L_PV}-autotools.patch
 	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-test-fix.patch
