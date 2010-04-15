@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.80 2010/04/15 14:52:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.81 2010/04/15 20:14:32 maekke Exp $
+
+  15 Apr 2010; Markus Meier <maekke@gentoo.org> msmtp-1.4.19.ebuild:
+  amd64 stable, bug #293647
 
   15 Apr 2010; Brent Baude <ranger@gentoo.org> msmtp-1.4.19.ebuild:
   Marking msmtp-1.4.19 ppc for bug 293647
