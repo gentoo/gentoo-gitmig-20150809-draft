@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.107 2010/03/14 13:19:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.108 2010/04/15 01:32:42 steev Exp $
+
+*kismet-2010.01.1-r1 (15 Apr 2010)
+
+  15 Apr 2010; Steev Klimaszewski <steev@gentoo.org>
+  +kismet-2010.01.1-r1.ebuild:
+  kismet: Revbump, change the fperms line to pkg_preinst() because we have 
+  to change permissions after we change ownership otherwise we lose the 
+  setuid bit. Add ~arm keyword, tested on my cortex-a8.
 
 *kismet-2010.01.1 (14 Mar 2010)
 
