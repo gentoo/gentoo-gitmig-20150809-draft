@@ -16,5 +16,6 @@ SWIG is a software development tool that connects programs written in C and C++ 
 		<flag name='octave'>Enable Octave support</flag>
 		<flag name='pike'>Enable Pike scripting support</flag>
 		<flag name='R'>Enable R support</flag>
+		<flag name='ccache'>build ccache-swig(a fast compiler cache)</flag>
 	</use>
 </pkgmetadata>
