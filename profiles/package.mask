@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11454 2010/04/15 07:16:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11455 2010/04/15 16:16:37 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -230,14 +230,6 @@ media-libs/jpgalleg
 # and Dead upstream. Recommend icedtea jdk's for
 # a free alternative.
 dev-java/kaffe
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Mar 2010)
-# Replaced by games-board/pysolfc which is a fork
-# of original and now unmaintained pysol.
-#
-# Masked for removal in 30 days.
-games-board/pysol
-games-board/pysol-sound-server
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Mar 2010)
 # Replaced by USE=gtk in snes9x-1.52.
