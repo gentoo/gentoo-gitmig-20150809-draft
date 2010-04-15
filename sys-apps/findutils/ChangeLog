@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.185 2010/04/14 17:43:19 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.186 2010/04/15 01:26:30 pebenito Exp $
+
+  15 Apr 2010; Chris PeBenito <pebenito@gentoo.org>
+  -files/findutils-4.5.4-selinux.diff, findutils-4.5.8.ebuild:
+  Remove SELinux patch from 4.5.8, as the code is integrated.
 
   14 Apr 2010; Tiago Cunha <tcunha@gentoo.org> findutils-4.4.2.ebuild:
   stable sparc, bug 314035

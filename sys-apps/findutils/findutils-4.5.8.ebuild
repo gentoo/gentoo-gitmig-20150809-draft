@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.8.ebuild,v 1.1 2010/04/09 06:14:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.8.ebuild,v 1.2 2010/04/15 01:26:30 pebenito Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
-
-SELINUX_PATCH="findutils-4.5.4-selinux.diff"
 
 DESCRIPTION="GNU utilities for finding files"
 HOMEPAGE="http://www.gnu.org/software/findutils/"
@@ -28,8 +26,6 @@ src_unpack() {
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
 	sed -i '/^SUBDIRS/s/locate//' Makefile.in
-
-	use selinux && epatch "${FILESDIR}/${SELINUX_PATCH}"
 }
 
 src_compile() {
