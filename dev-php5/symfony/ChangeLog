@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/symfony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.15 2010/04/12 12:35:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.16 2010/04/15 21:50:48 maekke Exp $
+
+  15 Apr 2010; Markus Meier <maekke@gentoo.org> symfony-1.4.3.ebuild:
+  amd64 stable, bug #250961
 
   12 Apr 2010; Christian Faulhammer <fauli@gentoo.org> symfony-1.4.3.ebuild:
   stable x86, security bug 250961
