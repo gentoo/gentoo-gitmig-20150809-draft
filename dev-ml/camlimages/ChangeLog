@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.26 2010/04/12 06:55:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.27 2010/04/15 14:47:40 ranger Exp $
+
+  15 Apr 2010; Brent Baude <ranger@gentoo.org> camlimages-3.0.2.ebuild:
+  Marking camlimages-3.0.2 ppc for sec bug 290222
 
   12 Apr 2010; Alexis Ballier <aballier@gentoo.org> camlimages-3.0.2.ebuild:
   require ocaml to be built with X useflag, bug #276452
