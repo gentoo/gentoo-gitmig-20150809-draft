@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.1_alpha6.ebuild,v 1.1 2010/04/06 20:13:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/spambayes-1.1_alpha6.ebuild,v 1.2 2010/04/15 03:50:37 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,11 +16,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="dev-python/lockfile"
+RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
