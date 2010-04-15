@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r2.ebuild,v 1.1 2010/04/15 20:21:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r2.ebuild,v 1.2 2010/04/15 20:28:06 jlec Exp $
 
 EAPI="3"
 
@@ -41,6 +41,7 @@ S="${WORKDIR}/ATLAS"
 S_LAPACK="${WORKDIR}/${L_PN}-lite-${L_PV}"
 BLD_DIR="${S}/gentoo-build"
 RPATH="${DESTTREE}/$(get_libdir)/${L_PN}/${MY_PN}"
+S_LAPACK="${WORKDIR}"/${L_PN}-lite-${L_PV}
 
 src_prepare() {
 	epatch "${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.2.patch.bz2
@@ -118,6 +119,8 @@ src_configure() {
 		-e "s:EXT_ETIME$:INT_CPU_TIME:" \
 		make.inc.example > make.inc \
 		|| die "Failed to set up make.inc"
+	cd "${S_LAPACK}"
+	econf || die "Failed to configure reference lapack lib"
 }
 
 src_compile() {
@@ -128,10 +131,7 @@ src_compile() {
 		make lib || die "Failed to make lib in ${d}"
 	done
 
-	# build rest of lapack
-	S_LAPACK="${WORKDIR}"/${L_PN}-lite-${L_PV}
 	cd "${S_LAPACK}"
-	econf || die "Failed to configure reference lapack lib"
 	emake || die "Failed to make reference lapack lib"
 
 	cd "${S_LAPACK}"/SRC
