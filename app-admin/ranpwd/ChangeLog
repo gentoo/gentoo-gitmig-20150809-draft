@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ranpwd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.10 2009/10/11 23:51:49 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.11 2010/04/15 21:15:48 idl0r Exp $
+
+  15 Apr 2010; Christian Ruppert <idl0r@gentoo.org> ranpwd-1.1.ebuild,
+  ranpwd-1.2.ebuild:
+  QA fixes: DESCRIPTION shortened. Remove useless src_configure. Style clean
+  up. Fix HOMEPAGE/SRC_URI.
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ranpwd-1.1.ebuild,
   ranpwd-1.2.ebuild:
