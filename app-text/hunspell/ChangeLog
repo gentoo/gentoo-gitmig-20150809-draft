@@ -1,6 +1,15 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.63 2010/04/06 17:08:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.64 2010/04/15 07:25:52 pva Exp $
+
+*hunspell-1.2.9 (15 Apr 2010)
+
+  15 Apr 2010; Peter Volkov <pva@gentoo.org> +hunspell-1.2.9.ebuild,
+  +files/hunspell-1.2.9-renameexes.patch:
+  Version bump, bug #314565, thank Samuli Suominen for report. Automatically
+  pull in myspell-* dictionaries based on LINGUAS setting, bug #261050,
+  thank Tobias Leupold for report. Hopefully fixes build on IRIX, bug
+  #257781.
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> hunspell-1.2.8.ebuild:
   Add prefix keywords, -liconv on Darwin
