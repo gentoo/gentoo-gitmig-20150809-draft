@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.155 2010/03/21 15:12:16 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.156 2010/04/15 20:55:42 spatz Exp $
+
+*curl-7.20.1 (15 Apr 2010)
+
+  15 Apr 2010; Dror Levin <spatz@gentoo.org> +curl-7.20.1.ebuild:
+  Version bump. Bump to EAPI 2, don't apply no longer needed libcurl.m4
+  patch.
 
 *curl-7.20.0-r2 (21 Mar 2010)
 
