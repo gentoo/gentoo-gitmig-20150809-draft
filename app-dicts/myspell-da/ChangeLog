@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-da
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/ChangeLog,v 1.15 2009/10/18 22:19:10 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/ChangeLog,v 1.16 2010/04/15 07:20:24 pva Exp $
+
+*myspell-da-20100311 (15 Apr 2010)
+
+  15 Apr 2010; Peter Volkov <pva@gentoo.org> +myspell-da-20100311.ebuild:
+  Version bump, bug #305719, thank hitachi for report.
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> myspell-da-20060316.ebuild:
   QA fixes; IUSE is not defined
