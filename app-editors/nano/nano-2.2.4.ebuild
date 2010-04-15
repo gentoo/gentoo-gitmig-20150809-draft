@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.2.4.ebuild,v 1.1 2010/04/15 21:00:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.2.4.ebuild,v 1.2 2010/04/15 22:43:48 darkside Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="svn://svn.savannah.gnu.org/nano/trunk/nano"
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.nano-editor.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug justify minimal ncurses nls slang spell unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2[unicode?]
@@ -43,7 +43,7 @@ src_configure() {
 		|| myconf="${myconf} $(use_with slang)"
 
 	econf \
-		--bindir=/bin \
+		--bindir="${EPREFIX}"/bin \
 		$(use_enable !minimal color) \
 		$(use_enable !minimal multibuffer) \
 		$(use_enable !minimal nanorc) \
@@ -72,9 +72,9 @@ src_install() {
 	insinto /usr/share/nano
 	local f
 	for f in "${FILESDIR}"/*.nanorc ; do
-		[[ -e ${D}/usr/share/nano/${f##*/} ]] && continue
+		[[ -e ${ED}/usr/share/nano/${f##*/} ]] && continue
 		doins "${f}" || die
-		echo "# include \"/usr/share/nano/${f##*/}\"" >> "${D}"/etc/nanorc
+		echo "# include \"/usr/share/nano/${f##*/}\"" >> "${ED}"/etc/nanorc
 	done
 }
 

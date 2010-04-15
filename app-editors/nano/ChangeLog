@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.248 2010/04/15 21:00:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.249 2010/04/15 22:43:48 darkside Exp $
+
+  15 Apr 2010; Jeremy Olexa <darkside@gentoo.org> nano-2.2.4.ebuild:
+  Import Gentoo Prefix changes, convert to EAPI3, add keywords. bug 315513
 
 *nano-2.2.4 (15 Apr 2010)
 
