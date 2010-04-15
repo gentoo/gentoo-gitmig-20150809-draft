@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.309 2010/03/17 22:01:00 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.310 2010/04/15 19:49:14 darkside Exp $
+
+  15 Apr 2010; Jeremy Olexa <darkside@gentoo.org>
+  +files/gvim-7.1.285-darwin-x11link.patch,
+  +files/gvim-7.1.319-interix-cflags.patch,
+  +files/gvim-7.1-interix-link.patch, gvim-7.2.402.ebuild, files/gvimrc-r1:
+  Import Gentoo Prefix changes, convert to EAPI3, add keywords. bug 310991
 
 *gvim-7.2.402 (17 Mar 2010)
 

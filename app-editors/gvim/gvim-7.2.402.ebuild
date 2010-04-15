@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.2.402.ebuild,v 1.1 2010/03/17 22:01:00 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.2.402.ebuild,v 1.2 2010/04/15 19:49:14 darkside Exp $
 
-EAPI=2
+EAPI=3
 inherit vim
 
 VIM_VERSION="7.2"
@@ -17,5 +17,15 @@ SRC_URI="ftp://ftp.vim.org/pub/vim/unstable/unix/vim-${VIM_VERSION}.tar.bz2
 
 S="${WORKDIR}/vim${VIM_VERSION/.}"
 DESCRIPTION="GUI version of the Vim text editor"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
+
+src_prepare() {
+	vim_src_prepare
+
+	epatch "${FILESDIR}"/${PN}-7.1.285-darwin-x11link.patch
+	if [[ ${CHOST} == *-interix* ]]; then
+		epatch "${FILESDIR}"/${PN}-7.1-interix-link.patch
+		epatch "${FILESDIR}"/${PN}-7.1.319-interix-cflags.patch
+	fi
+}
