@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.36 2010/04/05 20:11:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.37 2010/04/15 15:41:35 ranger Exp $
+
+  15 Apr 2010; Brent Baude <ranger@gentoo.org> libnids-1.24.ebuild:
+  Marking libnids-1.24 ppc for bug 312637
 
   05 Apr 2010; Markos Chandras <hwoarang@gentoo.org> libnids-1.24.ebuild:
   Stable on amd64 wrt bug #312637
