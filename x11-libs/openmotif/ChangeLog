@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.236 2010/04/11 13:48:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.237 2010/04/15 03:35:03 jer Exp $
+
+  15 Apr 2010; Jeroen Roovers <jer@gentoo.org> openmotif-2.3.2-r2.ebuild:
+  Stable for HPPA (bug #309999).
 
   11 Apr 2010; <nixnut@gentoo.org> openmotif-2.3.2-r2.ebuild:
   ppc stable #309999
