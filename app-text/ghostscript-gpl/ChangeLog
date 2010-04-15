@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.86 2010/03/31 23:51:33 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.87 2010/04/15 12:43:56 spatz Exp $
+
+*ghostscript-gpl-8.71-r4 (15 Apr 2010)
+
+  15 Apr 2010; Dror Levin <spatz@gentoo.org>
+  +ghostscript-gpl-8.71-r4.ebuild:
+  Add a check in pkg_setup to die if /usr/share/fonts/default/ghostscript
+  exists and is not a symlink to avoid installation issues, bug 311923.
 
 *ghostscript-gpl-8.71-r3 (31 Mar 2010)
 
