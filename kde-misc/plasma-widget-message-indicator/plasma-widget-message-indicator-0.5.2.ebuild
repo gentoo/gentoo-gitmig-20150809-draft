@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-message-indicator/plasma-widget-message-indicator-0.5.2.ebuild,v 1.2 2010/03/31 19:52:12 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-message-indicator/plasma-widget-message-indicator-0.5.2.ebuild,v 1.3 2010/04/15 11:20:57 scarabeus Exp $
 
 EAPI=2
 
+KDE_MINIMAL="4.4"
 inherit kde4-base
 
 DESCRIPTION="Plasmoid for displaying Ayatana indications"
