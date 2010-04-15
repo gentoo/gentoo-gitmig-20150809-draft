@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyclimate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.16 2009/11/26 17:35:59 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclimate/ChangeLog,v 1.17 2010/04/15 19:28:19 jlec Exp $
+
+*pyclimate-1.2.2-r1 (15 Apr 2010)
+
+  15 Apr 2010; Justin Lecher <jlec@gentoo.org> +pyclimate-1.2.2-r1.ebuild:
+  Moved to new Python ABI stuff, #315459
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> pyclimate-1.2.2.ebuild:
   amd64 stable, bug #289682
