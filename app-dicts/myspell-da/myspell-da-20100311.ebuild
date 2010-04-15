@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/myspell-da-20100311.ebuild,v 1.1 2010/04/15 07:20:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/myspell-da-20100311.ebuild,v 1.2 2010/04/15 07:22:01 pva Exp $
 
 # 1.7.32 version from http://da.speling.org/filer/
+# Hyphenation dates hyph_da_DK.zip from 2007-09-03 :
+# http://wiki.services.openoffice.org/wiki/Dictionaries#Danish_.28Denmark.29
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "da,DK,da_DK,Danish (Denmark),da_DK.zip"
