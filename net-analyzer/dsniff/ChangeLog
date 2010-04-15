@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.51 2010/04/05 20:14:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.52 2010/04/15 16:16:59 jer Exp $
+
+  15 Apr 2010; Jeroen Roovers <jer@gentoo.org> dsniff-2.4_beta1-r4.ebuild:
+  Stable for PPC (bug #312835).
 
   05 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   dsniff-2.4_beta1-r4.ebuild:
