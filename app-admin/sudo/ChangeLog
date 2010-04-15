@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.214 2010/03/01 20:31:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.215 2010/04/15 17:46:07 flameeyes Exp $
+
+*sudo-1.7.2_p6 (15 Apr 2010)
+
+  15 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -sudo-1.7.2_p1.ebuild, -sudo-1.7.2_p3.ebuild, +sudo-1.7.2_p6.ebuild,
+  -sudo-1.7.3_beta1.ebuild:
+  Version bump and cleanup old version. Version 1.7.3_beta1 is gone because
+  it is not covered by the latest two security announces.
 
   01 Mar 2010; Raúl Porcel <armin76@gentoo.org> sudo-1.7.2_p4.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #306865
