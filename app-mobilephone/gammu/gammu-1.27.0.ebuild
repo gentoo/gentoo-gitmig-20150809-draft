@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.27.0.ebuild,v 1.2 2010/02/08 09:03:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.27.0.ebuild,v 1.3 2010/04/15 09:01:03 fauli Exp $
 
 EAPI="2"
+
+PYTHON_DEPEND="python? 2"
 
 inherit eutils cmake-utils distutils
 
@@ -22,7 +24,6 @@ RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
 	postgres? ( virtual/postgresql-server )
 	dbi? ( >=dev-db/libdbi-0.8.3 )
 	dev-util/dialog
-	dev-lang/python
 	!dev-python/python-gammu" # needs to be removed from the tree
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )
@@ -34,6 +35,10 @@ DEPEND="${RDEPEND}
 # Be sure all languages are prefixed with a single space!
 MY_AVAILABLE_LINGUAS=" af bg ca cs da de el es et fi fr gl he hu id it ko nl pl pt_BR ru sk sv sw zh_CN zh_TW"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-skip-locktest.patch
@@ -69,7 +74,7 @@ src_configure() {
 		$(cmake-utils_use_with nls Iconv) \
 		-DBUILD_SHARED_LIBS=ON -DINSTALL_DOC_DIR=share/doc/${PF}"
 	if use python; then
-		mycmakeargs="${mycmakeargs} -DBUILD_PYTHON=/usr/bin/python"
+		mycmakeargs="${mycmakeargs} -DBUILD_PYTHON=$(PYTHON -a)"
 	fi
 	cmake-utils_src_configure
 }
