@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r1.ebuild,v 1.2 2010/04/16 17:42:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r1.ebuild,v 1.3 2010/04/16 17:52:57 ssuominen Exp $
 
 EAPI=2
-inherit eutils flag-o-matic
+inherit eutils
 
 MY_P=ZThread-${PV}
 

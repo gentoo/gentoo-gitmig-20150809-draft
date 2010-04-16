@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.1.ebuild,v 1.13 2009/09/23 16:51:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.1.ebuild,v 1.14 2010/04/16 17:52:57 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -13,8 +13,6 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc alpha ~mips ~hppa amd64"
 IUSE="debug"
 
-DEPEND=""
-
 S=${WORKDIR}/ZThread-${PV}
 
 src_compile() {
@@ -25,11 +23,11 @@ src_compile() {
 
 	append-flags -fpermissive
 
-	econf ${myconf} || die "./configure failed"
+	econf ${myconf}
 	emake || die
 }
 
 src_install() {
 	einstall || die
-	dodoc AUTHORS ChangeLog COPYING README* INSTALL NEWS TODO THANK.YOU
+	dodoc AUTHORS ChangeLog README* NEWS TODO THANK.YOU
 }
