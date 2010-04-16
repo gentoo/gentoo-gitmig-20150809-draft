@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.ebuild,v 1.1 2010/04/12 05:34:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.ebuild,v 1.2 2010/04/16 21:06:25 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils games
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
 	dogamesbin ${PN} || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r campaigns graphics intro languages maps scripts sounds units \
+	doins -r campaigns graphics intro languages maps patches scripts sounds units \
 		|| die "doins failed"
 	doicon "${DISTDIR}"/bos.png
 	make_desktop_entry ${PN} "Bos Wars"	bos
