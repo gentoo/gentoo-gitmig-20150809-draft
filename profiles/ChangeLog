@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4111 2010/04/15 20:37:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4112 2010/04/16 00:06:07 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Removed pysoulseek. (bug #307971)
 
   15 Apr 2010; Justin Lecher <jlec@gentoo.org> package.mask:
   atlas unmasked
