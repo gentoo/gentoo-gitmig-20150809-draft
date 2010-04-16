@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2.ebuild,v 1.8 2010/04/16 13:24:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2.ebuild,v 1.9 2010/04/16 13:28:14 caster Exp $
 
 EAPI="2"
 
@@ -65,7 +65,7 @@ EANT_TEST_ANT_TASKS="hsqldb"
 src_compile() {
 	local ant_target="all"
 	local ant_args=""
-	if use doc; then 
+	if use doc; then
 		ant_args="-Dbuild.apidocs=dist/doc/api"
 		# The javadoc target depends on all so it is enough. Passing both results in two builds,
 		# where the second pass fails due to hsqldb lock - bug #310311.
