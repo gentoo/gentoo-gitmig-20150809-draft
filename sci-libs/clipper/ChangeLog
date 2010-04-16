@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/clipper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.6 2010/04/05 18:05:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/ChangeLog,v 1.7 2010/04/16 21:00:08 jlec Exp $
+
+*clipper-20100416 (16 Apr 2010)
+
+  16 Apr 2010; Justin Lecher <jlec@gentoo.org>
+  -files/20070528-as-needed.patch, +clipper-20100416.ebuild,
+  -files/20070907-as-needed.patch:
+  Version Bump, removed old patches
 
   05 Apr 2010; Justin Lecher <jlec@gentoo.org> clipper-20091215.ebuild:
   Keyworded for ~x86-linux ~amd64-linux, tested by me
