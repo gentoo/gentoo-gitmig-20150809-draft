@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/setserial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.19 2010/04/16 13:42:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.20 2010/04/16 15:21:24 ranger Exp $
+
+  16 Apr 2010; Brent Baude <ranger@gentoo.org> setserial-2.17-r4.ebuild:
+  stable ppc, bug 314741
 
   16 Apr 2010; Jeroen Roovers <jer@gentoo.org> setserial-2.17-r4.ebuild:
   Stable for HPPA (bug #314741).
