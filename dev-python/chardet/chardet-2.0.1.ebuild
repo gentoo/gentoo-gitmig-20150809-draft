@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-2.0.1.ebuild,v 1.7 2010/04/05 17:35:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-2.0.1.ebuild,v 1.8 2010/04/16 15:27:31 ranger Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="http://chardet.feedparser.org/download/python2-${P}.tgz
 	http://chardet.feedparser.org/download/python3-${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~arm hppa ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND=""
