@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/batti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.3 2010/04/13 19:32:09 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.4 2010/04/16 14:12:51 idl0r Exp $
+
+*batti-0.3.4 (16 Apr 2010)
+
+  16 Apr 2010; Christian Ruppert <idl0r@gentoo.org> -batti-0.3.1.ebuild,
+  +batti-0.3.4.ebuild:
+  Version bump. Remove dev-python/python-distutils-extra dependency, fixes
+  bug 315551. Add support for multiple python installations.
 
   13 Apr 2010; Christian Ruppert <idl0r@gentoo.org> batti-0.3.1.ebuild:
   Remove ewarn to tell the user he has to be in the messagebus group. Depend
