@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.36 2010/04/09 10:41:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.37 2010/04/16 21:59:09 pacho Exp $
+
+  16 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  xfce4-settings-4.6.3-r1.ebuild:
+  amd64 stable, bug 308521
 
   09 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   xfce4-settings-4.6.3-r1.ebuild:
