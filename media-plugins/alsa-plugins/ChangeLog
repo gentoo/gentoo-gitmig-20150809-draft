@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.123 2010/02/13 16:27:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.124 2010/04/16 22:44:22 chainsaw Exp $
+
+*alsa-plugins-1.0.23 (16 Apr 2010)
+
+  16 Apr 2010; <chainsaw@gentoo.org> +alsa-plugins-1.0.23.ebuild,
+  +files/alsa-plugins-1.0.23-automagic.patch:
+  Version bump. The USB stream plugin has been protected against null
+  pointer dereferences and now allows user-set period sizes & stream rates.
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> alsa-plugins-1.0.21.ebuild:
   alpha/ia64/sh stable wrt #300064
