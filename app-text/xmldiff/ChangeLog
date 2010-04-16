@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmldiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.7 2010/02/19 19:26:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.8 2010/04/16 18:21:05 armin76 Exp $
+
+  16 Apr 2010; Raúl Porcel <armin76@gentoo.org> xmldiff-0.6.8.ebuild,
+  xmldiff-0.6.9.ebuild:
+  Add ~alpha wrt #296548
 
   19 Feb 2010; Raúl Porcel <armin76@gentoo.org> xmldiff-0.6.8.ebuild,
   xmldiff-0.6.9.ebuild:
