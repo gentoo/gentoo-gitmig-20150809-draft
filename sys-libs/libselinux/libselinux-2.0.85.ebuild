@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.85.ebuild,v 1.2 2009/08/02 01:50:32 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.85.ebuild,v 1.3 2010/04/16 19:33:16 arfrever Exp $
 
 IUSE="ruby"
 RUBY_OPTIONAL="yes"
@@ -39,9 +39,8 @@ src_unpack() {
 }
 
 src_compile() {
-	python_version
 	emake LDFLAGS="-fPIC ${LDFLAGS}" all || die
-	emake PYLIBVER="python${PYVER}" LDFLAGS="-fPIC ${LDFLAGS}" pywrap || die
+	emake PYLIBVER="python$(python_get_version)" LDFLAGS="-fPIC ${LDFLAGS}" pywrap || die
 
 	if use ruby; then
 		emake rubywrap || die
@@ -52,9 +51,8 @@ src_compile() {
 }
 
 src_install() {
-	python_version
 	python_need_rebuild
-	make DESTDIR="${D}" PYLIBVER="python${PYVER}" install install-pywrap || die
+	make DESTDIR="${D}" PYLIBVER="python$(python_get_version)" install install-pywrap || die
 
 	if use ruby; then
 		emake DESTDIR="${D}" install-rubywrap || die
@@ -62,11 +60,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize $(python_get_sitedir)
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_cleanup $(python_get_sitedir)
 }

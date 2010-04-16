@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.27.ebuild,v 1.3 2009/08/02 01:54:26 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.27.ebuild,v 1.4 2010/04/16 19:36:39 arfrever Exp $
 
 IUSE=""
 
@@ -51,23 +51,19 @@ src_unpack() {
 }
 
 src_compile() {
-	python_version
-	emake PYLIBVER="python${PYVER}" all || die
-	emake PYLIBVER="python${PYVER}" pywrap || die
+	emake PYLIBVER="python$(python_get_version)" all || die
+	emake PYLIBVER="python$(python_get_version)" pywrap || die
 }
 
 src_install() {
-	python_version
 	python_need_rebuild
-	make DESTDIR="${D}" PYLIBVER="python${PYVER}" install install-pywrap
+	make DESTDIR="${D}" PYLIBVER="python$(python_get_version)" install install-pywrap
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize $(python_get_sitedir)
 }
 
 pkg_postrm() {
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_cleanup $(python_get_sitedir)
 }

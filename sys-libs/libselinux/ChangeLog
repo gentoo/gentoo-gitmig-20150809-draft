@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.64 2009/08/02 01:50:32 pebenito Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.65 2010/04/16 19:33:16 arfrever Exp $
+
+  16 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libselinux-2.0.71.ebuild, libselinux-2.0.85.ebuild:
+  Delete calls to deprecated python_version().
 
   02 Aug 2009; Chris PeBenito <pebenito@gentoo.org>
   libselinux-2.0.71.ebuild, libselinux-2.0.85.ebuild:
