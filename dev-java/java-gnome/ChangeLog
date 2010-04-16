@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.92 2010/03/24 19:26:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.93 2010/04/16 16:40:02 hwoarang Exp $
+
+  16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  java-gnome-4.0.14.ebuild:
+  Stable on amd64 wrt bug #310395
 
   24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   java-gnome-4.0.14.ebuild:
