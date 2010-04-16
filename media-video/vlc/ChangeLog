@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.566 2010/04/12 16:36:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.567 2010/04/16 13:49:36 ranger Exp $
+
+  16 Apr 2010; Brent Baude <ranger@gentoo.org> vlc-1.0.5.ebuild:
+  stable ppc, bug 314011
 
   12 Apr 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   add kde useflag for installing KDE4 Solid action files
