@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/5.10/sparc64/package.mask,v 1.1 2009/12/28 18:32:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/5.10/sparc64/package.mask,v 1.2 2010/04/16 11:24:33 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (16 Apr 2010)
+# installs a broken zlib.h on 64-bits systems, bug #310209
+=sys-libs/zlib-1.2.4
 
 # Fabian Groffen <grobian@gentoo.org> (28 Dec 2009)
 # Fails to compile on Sparc (both 32-bits and 64-bits)
