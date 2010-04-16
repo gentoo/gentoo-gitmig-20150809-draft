@@ -1,6 +1,10 @@
 # ChangeLog for media-video/jubler
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.32 2009/05/16 16:43:27 serkan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.33 2010/04/16 09:17:22 betelgeuse Exp $
+
+  16 Apr 2010; Petteri Räty <betelgeuse@gentoo.org> jubler-4.1.1.ebuild:
+  inherit gnome2 instead of gnome2-utils so we have access to
+  gnome2_pkg_preinst.
 
 *jubler-4.1.1 (16 May 2009)
 

@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.1.1.ebuild,v 1.1 2009/05/16 16:43:27 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.1.1.ebuild,v 1.2 2010/04/16 09:17:22 betelgeuse Exp $
 
 EAPI="2"
-inherit gnome2-utils eutils java-pkg-2 java-ant-2 toolchain-funcs
+inherit gnome2 eutils java-pkg-2 java-ant-2 toolchain-funcs
 
 MY_PN=${PN/#j/J}
 DESCRIPTION="Java subtitle editor"
