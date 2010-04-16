@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.503 2010/04/13 21:56:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.504 2010/04/16 22:14:25 pacho Exp $
+
+  16 Apr 2010; Pacho Ramos <pacho@gentoo.org> xorg-server-1.7.6.ebuild:
+  amd64 stable, bug 308521
 
   13 Apr 2010; Lars Wendler <polynomial-c@gentoo.org>
   xorg-server-1.8.0.ebuild:

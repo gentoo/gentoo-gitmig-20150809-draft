@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.4 2010/04/11 21:40:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.6.ebuild,v 1.5 2010/04/16 22:14:25 pacho Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="X.Org X servers"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 
 IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_SERVERS} tslib hal ipv6 minimal nptl sdl"
