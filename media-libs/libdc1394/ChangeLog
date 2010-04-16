@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.48 2010/03/04 10:33:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.49 2010/04/16 19:05:37 pacho Exp $
+
+  16 Apr 2010; Pacho Ramos <pacho@gentoo.org> libdc1394-1.2.2.ebuild:
+  amd64 stable, bug 307739
 
   04 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   libdc1394-1.2.2.ebuild:
