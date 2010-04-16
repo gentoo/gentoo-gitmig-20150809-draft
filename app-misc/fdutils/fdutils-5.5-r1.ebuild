@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.5-r1.ebuild,v 1.1 2010/01/10 09:48:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.5-r1.ebuild,v 1.2 2010/04/16 11:03:17 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,11 +28,12 @@ src_unpack() {
 src_compile() {
 	econf --enable-fdmount-floppy-only || die
 
+	# parallel make unsafe (bug#315577)
 	if use doc;
 	then
-		make || die
+		emake -j1 || die
 	else
-		make compile || die
+		emake -j1 compile || die
 	fi
 }
 
