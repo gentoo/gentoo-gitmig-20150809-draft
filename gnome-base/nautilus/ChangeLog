@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.340 2010/04/05 15:00:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.341 2010/04/16 18:33:26 pacho Exp $
+
+*nautilus-2.28.4-r2 (16 Apr 2010)
+
+  16 Apr 2010; Pacho Ramos <pacho@gentoo.org> -nautilus-2.28.4.ebuild,
+  +nautilus-2.28.4-r2.ebuild:
+  Revision bump to recover tracker support for people running testing. This
+  is not a candidate to go to stable then.
 
   05 Apr 2010; Raúl Porcel <armin76@gentoo.org> nautilus-2.26.4-r1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #308549
