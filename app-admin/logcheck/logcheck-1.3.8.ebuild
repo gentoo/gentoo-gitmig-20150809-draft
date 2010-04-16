@@ -1,8 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.4.ebuild,v 1.2 2009/12/23 14:28:39 phajdan.jr Exp $
-
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.8.ebuild,v 1.1 2010/04/16 06:39:53 phajdan.jr Exp $
 
 inherit eutils
 
@@ -12,23 +10,20 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
 RDEPEND="!app-admin/logsentry
 	app-misc/lockfile-progs
 	dev-lang/perl
+	dev-perl/mime-construct
 	virtual/mailx
 	${DEPEND}"
 
 pkg_setup() {
 	enewgroup logcheck
 	enewuser logcheck -1 -1 -1 logcheck
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-makefile.patch"
 }
 
 src_install() {
