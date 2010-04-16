@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.5.ebuild,v 1.1 2009/12/23 10:21:59 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.5-r2.ebuild,v 1.1 2010/04/16 18:37:01 pacho Exp $
 
 EAPI="2"
 
