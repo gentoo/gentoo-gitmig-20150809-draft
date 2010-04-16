@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.6 2010/04/02 20:56:42 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.7 2010/04/16 15:24:46 ranger Exp $
+
+  16 Apr 2010; Brent Baude <ranger@gentoo.org> mercurial-1.5.ebuild:
+  stable ppc, bug 314945
 
 *mercurial-1.5.1 (02 Apr 2010)
 
