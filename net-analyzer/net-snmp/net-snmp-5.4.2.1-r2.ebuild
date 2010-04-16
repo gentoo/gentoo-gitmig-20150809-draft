@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r2.ebuild,v 1.1 2009/10/16 08:51:06 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r2.ebuild,v 1.2 2010/04/16 15:58:57 lxnay Exp $
 
 EAPI=2
 
@@ -106,6 +106,7 @@ src_configure() {
 			--with-zlib"
 	else
 		myconf="${myconf} \
+			--without-rpm \
 			$(use_with bzip2) \
 			$(use_with zlib)"
 	fi

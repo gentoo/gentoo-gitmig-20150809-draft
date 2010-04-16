@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.201 2009/12/08 05:24:42 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.202 2010/04/16 15:58:57 lxnay Exp $
+
+  16 Apr 2010; Fabio Erculiani <lxnay@gentoo.org>
+  net-snmp-5.4.2.1-r2.ebuild, net-snmp-5.4.2.1-r3.ebuild:
+  fix automagic RDEPEND when USE="rpm"
 
 *net-snmp-5.4.2.1-r3 (08 Dec 2009)
 
