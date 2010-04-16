@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/plist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.4 2010/02/24 07:15:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.5 2010/04/16 13:02:46 flameeyes Exp $
+
+  16 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> plist-3.1.0.ebuild,
+  +files/plist-3.1.0-nordoc.patch:
+  Add patch to reduce dependency over RDoc 2, closes bug #315585. Add ruby19
+  and jruby as compatible targets.
 
 *plist-3.1.0 (24 Feb 2010)
 
