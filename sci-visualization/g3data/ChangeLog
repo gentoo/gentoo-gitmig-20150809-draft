@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/g3data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.7 2010/01/19 05:02:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.8 2010/04/16 18:35:44 hwoarang Exp $
+
+  16 Apr 2010; Markos Chandras <hwoarang@gentoo.org> g3data-1.5.3.ebuild:
+  Stable on amd64 wrt bug #299847
 
   19 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> g3data-1.5.3.ebuild,
   files/g3data-1.5.3-makefile.patch:
