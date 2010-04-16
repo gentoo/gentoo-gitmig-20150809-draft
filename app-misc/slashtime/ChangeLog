@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/slashtime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.13 2010/03/30 17:51:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.14 2010/04/16 16:50:42 hwoarang Exp $
+
+  16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  slashtime-0.5.11.ebuild:
+  Stable on amd64 wrt bug #311963
 
   30 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   slashtime-0.5.11.ebuild:
