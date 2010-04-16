@@ -1,48 +1,57 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r1.ebuild,v 1.1 2009/04/19 20:00:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r1.ebuild,v 1.2 2010/04/16 17:42:04 ssuominen Exp $
 
-inherit flag-o-matic eutils
+EAPI=2
+inherit eutils flag-o-matic
 
-MY_P="ZThread-${PV}"
+MY_P=ZThread-${PV}
 
 DESCRIPTION="A platform-independent multi-threading and synchronization library for C++"
 HOMEPAGE="http://zthread.sourceforge.net/"
 SRC_URI="mirror://sourceforge/zthread/${MY_P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="debug doc kernel_linux"
+IUSE="debug doc kernel_linux static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	rm -f include/zthread/{.Barrier.h.swp,Barrier.h.orig} || die
 	epatch "${FILESDIR}"/${P}-no-fpermissive.diff
 }
 
-src_compile() {
-	econf \
-		$(use_enable debug) \
-		$(use_enable kernel_linux atomic-linux) \
-		|| die "configure failed"
-	emake || die "make failed"
+src_configure() {
+	local myconf
+	use debug && myconf="--enable-debug"
 
-	if use doc ; then
-		doxygen doc/zthread.doxygen || die "generating docs failed"
-		cp ./doc/documentation.html ./doc/html/index.html
-		cp ./doc/zthread.css ./doc/html/zthread.css
-		cp ./doc/bugs.js ./doc/html/bugs.js;
+	econf \
+		$(use_enable kernel_linux atomic-linux) \
+		$(use_enable static-libs static) \
+		${myconf}
+}
+
+src_compile() {
+	emake || die
+
+	if use doc; then
+		doxygen doc/zthread.doxygen || die
+		cp doc/documentation.html doc/html/index.html || die
+		cp doc/zthread.css doc/html/zthread.css || die
+		cp doc/bugs.js doc/html/bugs.js || die
 	fi
 }
 
 src_install() {
-	# Uses it's own install-hooks and ignores DESTDIR
-	einstall || die "einstall failed"
-	dodoc AUTHORS ChangeLog README NEWS TODO
+	einstall || die
+
+	dodoc AUTHORS ChangeLog NEWS README TODO
 	use doc && dohtml doc/html/*
+
+	find "${D}" -name '*.la' -delete
 }
