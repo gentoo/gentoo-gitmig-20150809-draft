@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.39 2010/04/13 12:12:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.40 2010/04/16 12:37:19 hwoarang Exp $
+
+  15 Apr 2010; Markos Chandras <hwoarang@gentoo.org> visual-5.1.3.ebuild:
+  Stable on amd64 wrt bug #313263
 
   13 Apr 2010; Christian Faulhammer <fauli@gentoo.org> visual-5.1.3.ebuild:
   stable x86, bug 313263
