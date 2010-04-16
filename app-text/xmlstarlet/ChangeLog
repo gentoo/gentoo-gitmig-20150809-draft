@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.18 2010/04/08 20:18:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.19 2010/04/16 16:39:24 sping Exp $
+
+*xmlstarlet-1.0.2-r1 (16 Apr 2010)
+
+  16 Apr 2010; Sebastian Pipping <sping@gentoo.org>
+  +xmlstarlet-1.0.2-r1.ebuild:
+  New revision to propagate tarball exchange upstream
 
 *xmlstarlet-1.0.2 (08 Apr 2010)
 
