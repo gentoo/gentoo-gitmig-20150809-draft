@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=pySoulSeek
-Comment=Soulseek Filesharing Client
-Exec=pyslsk
-Terminal=false
-Type=Application
-Categories=Application;Network;
