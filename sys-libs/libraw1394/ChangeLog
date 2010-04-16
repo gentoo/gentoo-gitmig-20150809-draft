@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.57 2010/04/11 18:29:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.58 2010/04/16 09:54:55 pacho Exp $
+
+  16 Apr 2010; Pacho Ramos <pacho@gentoo.org> libraw1394-2.0.4.ebuild:
+  amd64 stable, bug 305071
 
   11 Apr 2010; Raúl Porcel <armin76@gentoo.org> libraw1394-2.0.4.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #305071
