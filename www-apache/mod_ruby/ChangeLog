@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.15 2010/04/04 18:33:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.16 2010/04/16 15:37:16 ranger Exp $
+
+  16 Apr 2010; Brent Baude <ranger@gentoo.org> mod_ruby-1.3.0.ebuild:
+  stable ppc, bug 310245
 
   04 Apr 2010; Raúl Porcel <armin76@gentoo.org> mod_ruby-1.3.0.ebuild:
   alpha/ia64/sparc stable wrt #310245
