@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.1 2010/04/16 19:17:20 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scm/scm-5.5.6.ebuild,v 1.2 2010/04/16 21:23:21 chiiph Exp $
 
 EAPI="2"
 
@@ -63,7 +63,7 @@ src_compile() {
 	  use gsubr ||
 	  use sockets ||
 	  use unix ||
-	  use dynamic-linking ) && features=" dynamic-linking"
+	  use dynamic-linking ) && features+=" dynamic-linking"
 
 	./build \
 		--compiler-options="${CFLAGS}" \
