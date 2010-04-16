@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.16-r2.ebuild,v 1.3 2009/08/21 19:55:31 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.16-r2.ebuild,v 1.4 2010/04/16 19:44:03 arfrever Exp $
 
 inherit python
 
@@ -20,12 +20,10 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	python_version
-	emake
+	emake PYVER="$(python_get_version)"
 }
 
 src_install() {
-	python_version
 	python_need_rebuild
-	make DESTDIR="${D}" install
+	make DESTDIR="${D}" PYVER="$(python_get_version)" install
 }

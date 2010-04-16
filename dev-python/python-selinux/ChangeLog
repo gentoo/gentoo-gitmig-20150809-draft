@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-selinux
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.37 2009/08/21 19:55:31 pebenito Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.38 2010/04/16 19:44:03 arfrever Exp $
+
+  16 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-selinux-2.16-r2.ebuild:
+  Delete calls to deprecated python_version().
 
   21 Aug 2009; Chris PeBenito <pebenito@gentoo.org>
   python-selinux-2.16-r2.ebuild:
