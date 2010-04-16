@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.56 2010/04/14 10:09:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.57 2010/04/16 17:58:32 hwoarang Exp $
+
+  16 Apr 2010; Markos Chandras <hwoarang@gentoo.org> kmess-2.0.3.ebuild:
+  Stable on amd64 wrt bug #315245
 
   14 Apr 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add myself as maintainer
