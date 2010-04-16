@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2.ebuild,v 1.7 2010/01/20 02:59:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2.ebuild,v 1.8 2010/04/16 13:24:59 caster Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ java_prepare() {
 	java-pkg_jarfrom xmldb xmldb-api-sdk.jar xmldb-api-sdk-20021118.jar
 	java-pkg_jarfrom --build-only ant-core ant.jar ant-1.5.4.jar
 	java-pkg_jarfrom --build-only ant-core ant.jar ant.jar
-	# no linking to it, probably should be test only (FIXME)
+	# no linking to it, should be used for tests only but used to generate stuff during build anyway
 	java-pkg_jarfrom --build-only hsqldb hsqldb.jar hsqldb-1.7.1.jar
 
 	# Special case: jaxme uses ant/*.xml files, so rewriting them by hand
@@ -60,14 +60,19 @@ java_prepare() {
 	epatch "${FILESDIR}/${P}-fix_marshallers.patch"
 }
 
-EANT_BUILD_TARGET="all"
-EANT_EXTRA_ARGS=""
 EANT_TEST_ANT_TASKS="hsqldb"
 
 src_compile() {
-	use doc && EANT_EXTRA_ARGS+="-Dbuild.apidocs=dist/doc/api"
+	local ant_target="all"
+	local ant_args=""
+	if use doc; then 
+		ant_args="-Dbuild.apidocs=dist/doc/api"
+		# The javadoc target depends on all so it is enough. Passing both results in two builds,
+		# where the second pass fails due to hsqldb lock - bug #310311.
+		ant_target="javadoc"
+	fi
 
-	java-pkg-2_src_compile
+	eant ${ant_args} ${ant_target}
 }
 
 src_install() {
