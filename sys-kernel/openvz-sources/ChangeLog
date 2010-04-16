@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.129 2010/04/01 07:21:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.130 2010/04/16 09:48:23 pva Exp $
+
+*openvz-sources-2.6.27.4.1-r1 (13 Apr 2010)
+
+  13 Apr 2010; Peter Volkov <pva@gentoo.org>
+  +openvz-sources-2.6.27.4.1-r1.ebuild,
+  +files/openvz-sources-2.6.27.4.1-CAP_VE.patch,
+  +files/openvz-sources-2.6.27.4.1-hrtimer.patch,
+  +files/openvz-sources-2.6.27.4.1-nfs-flags.patch,
+  +files/openvz-sources-2.6.27.4.1-signal-curr_target.patch,
+  +files/openvz-sources-2.6.27.4.1-splice.patch,
+  +files/openvz-sources-2.6.27.4.1-task-state-percpu-counters.patch:
+  Upstream patches added.
 
 *openvz-sources-2.6.18.028.068.9 (01 Apr 2010)
 
