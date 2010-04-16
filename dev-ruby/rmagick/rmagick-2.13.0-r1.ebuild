@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.6 2010/04/12 13:41:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.0-r1.ebuild,v 1.7 2010/04/16 01:04:16 tcunha Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -18,7 +18,7 @@ SRC_URI="mirror://rubyforge/rmagick/RMagick-${PV}.tar.bz2"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE="doc"
 
 # hdri causes extensive changes in the imagemagick internals, and
