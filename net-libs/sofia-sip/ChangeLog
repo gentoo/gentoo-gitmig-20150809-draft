@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/sofia-sip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.9 2010/02/19 19:24:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.10 2010/04/16 18:16:27 armin76 Exp $
+
+  16 Apr 2010; Raúl Porcel <armin76@gentoo.org> sofia-sip-1.12.5.ebuild,
+  sofia-sip-1.12.8.ebuild, sofia-sip-1.12.9.ebuild,
+  sofia-sip-1.12.10.ebuild:
+  Add ~alpha wrt #296548
 
   19 Feb 2010; Raúl Porcel <armin76@gentoo.org> sofia-sip-1.12.5.ebuild,
   sofia-sip-1.12.8.ebuild, sofia-sip-1.12.9.ebuild,
