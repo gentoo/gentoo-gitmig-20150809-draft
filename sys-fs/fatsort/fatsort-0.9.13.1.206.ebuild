@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.13.1.206.ebuild,v 1.3 2010/03/03 20:36:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.13.1.206.ebuild,v 1.4 2010/04/16 18:32:05 hwoarang Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}-${MY_PV}
