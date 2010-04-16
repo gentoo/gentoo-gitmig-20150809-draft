@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pywebdav
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.14 2009/11/03 23:37:13 cedk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.15 2010/04/16 02:01:06 arfrever Exp $
+
+*pywebdav-0.9.4 (16 Apr 2010)
+
+  16 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pywebdav-0.9.4.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   03 Nov 2009; Cédric Krier <cedk@gentoo.org> pywebdav-0.9.3.ebuild:
   Fix license
