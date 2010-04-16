@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/supertab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.23 2010/04/04 18:39:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.24 2010/04/16 20:15:51 ranger Exp $
+
+  16 Apr 2010; Brent Baude <ranger@gentoo.org> supertab-0.45.ebuild:
+  Marking supertab-0.45 ppc for bug 246798
 
   04 Apr 2010; Raúl Porcel <armin76@gentoo.org> supertab-0.45.ebuild:
   alpha/ia64/sparc/x86 stable wrt #246798
