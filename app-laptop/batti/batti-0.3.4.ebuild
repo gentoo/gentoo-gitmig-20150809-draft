@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.4.ebuild,v 1.1 2010/04/16 14:12:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.4.ebuild,v 1.2 2010/04/16 15:01:02 idl0r Exp $
 
 EAPI=3
 
-PYTHON_SUPPORT_ABIS="1"
-PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_DEPEND="2"
 RESTRICT_PYTHON_ABIS="3.*"
 
 inherit python distutils gnome2-utils
@@ -25,15 +25,7 @@ RDEPEND="dev-python/pygtk
 	libnotify? ( x11-libs/libnotify )"
 DEPEND=""
 
-pkg_setup() {
-	DOCS="AUTHORS"
-	python_set_active_version 2
-}
-
-src_prepare() {
-	distutils_src_prepare
-	python_convert_shebangs 2 batti
-}
+DOCS="AUTHORS"
 
 pkg_preinst() {
 	gnome2_icon_savelist
