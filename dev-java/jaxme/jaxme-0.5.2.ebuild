@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2.ebuild,v 1.9 2010/04/16 13:28:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.5.2.ebuild,v 1.10 2010/04/16 13:38:21 caster Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ java_prepare() {
 	# Special case: jaxme uses ant/*.xml files, so rewriting them by hand
 	# is better:
 	cd "${S}"
-	for i in build.xml ant/*.xml src/webapp/web.xml src/test/jaxb/build.xml; do
+	for i in build.xml ant/*.xml src/webapp/build.xml src/test/jaxb/build.xml; do
 		java-ant_bsfix_one "${i}"
 	done
 

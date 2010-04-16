@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.35 2010/04/16 13:24:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.36 2010/04/16 13:38:21 caster Exp $
+
+  16 Apr 2010; Vlastimil Babka <caster@gentoo.org> jaxme-0.5.2.ebuild:
+  Don't (needlessly) xml-rewrite web.xml, prevent build-time DTD fetching,
+  fixes bug #297803.
 
   16 Apr 2010; Vlastimil Babka <caster@gentoo.org> jaxme-0.5.2.ebuild:
   Fix building with USE=doc, bug #310311. Thanks to Cosmin Giradu for
