@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.64.ebuild,v 1.5 2010/03/10 20:07:05 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.64.ebuild,v 1.6 2010/04/16 18:48:02 phosphan Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ RDEPEND=">=dev-libs/glib-2.0
 	sys-libs/db"
 
 DEPEND="${RDEPEND}
-	sys-devel/flex"
+	sys-devel/flex
+	<sys-devel/bison-2.4"
 
 src_unpack() {
 	unpack ${A}
@@ -41,4 +42,5 @@ src_install() {
 	cd lib
 	emake DESTDIR="${D}" pkgdatadir="/usr/share/htcobol/" install \
 			install-shared-libs install-static-libs
+	rm -rf "${D}/usr/man" # empty dir, see bug #315401
 }
