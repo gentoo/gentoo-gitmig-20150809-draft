@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.278 2010/04/05 15:08:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.279 2010/04/16 08:12:05 pacho Exp $
+
+*totem-2.28.5-r1 (16 Apr 2010)
+
+  16 Apr 2010; Pacho Ramos <pacho@gentoo.org> +totem-2.28.5-r1.ebuild:
+  Revision bump to drop tracker support and being able to safely stabilize
+  this without requiring tracker stabilization too.
 
   05 Apr 2010; Raúl Porcel <armin76@gentoo.org> totem-2.26.5-r1.ebuild:
   alpha/arm/ia64/sparc stable wrt #308549
