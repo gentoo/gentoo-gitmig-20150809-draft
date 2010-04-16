@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.94 2010/04/09 10:08:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.95 2010/04/16 21:49:03 pacho Exp $
+
+  16 Apr 2010; Pacho Ramos <pacho@gentoo.org> util-macros-1.6.1.ebuild:
+  amd64 stable, bug 308521
 
   09 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   util-macros-1.6.1.ebuild:
