@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.59 2010/03/17 17:09:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.60 2010/04/16 13:43:07 ssuominen Exp $
+
+  16 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  hicolor-icon-theme-0.12.ebuild:
+  alpha/amd64/arm/hppa/ia64/ppc/ppc64/sh/sparc/x86 stable
 
 *hicolor-icon-theme-0.12 (17 Mar 2010)
 
