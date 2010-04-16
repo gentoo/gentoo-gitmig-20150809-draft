@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/pino
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.1 2010/04/16 08:53:15 nirbheek Exp $
+
+*pino-0.2.6 (16 Apr 2010)
+
+  16 Apr 2010; Nirbheek Chauhan <nirbheek@gentoo.org> +pino-0.2.6.ebuild,
+  +metadata.xml:
+  Add net-misc/pino: a Vala twitter client
+
