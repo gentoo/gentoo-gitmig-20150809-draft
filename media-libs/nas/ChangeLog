@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.70 2010/04/11 14:10:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.71 2010/04/16 17:35:39 ranger Exp $
+
+  16 Apr 2010; Brent Baude <ranger@gentoo.org> nas-1.9.2.ebuild:
+  stable ppc, bug 303715
 
   11 Apr 2010; Raúl Porcel <armin76@gentoo.org> nas-1.9.2.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #303715
