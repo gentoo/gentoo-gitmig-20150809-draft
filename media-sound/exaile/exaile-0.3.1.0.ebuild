@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.1.0.ebuild,v 1.1 2010/04/06 12:10:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.1.0.ebuild,v 1.2 2010/04/16 11:18:45 ssuominen Exp $
 
 EAPI=2
 
@@ -29,6 +29,9 @@ RDEPEND="dev-python/dbus-python
 	cddb? ( dev-python/cddb-py )"
 DEPEND="nls? ( dev-util/intltool
 	sys-devel/gettext )"
+
+# Required python 'mox' module missing wrt #315589
+RESTRICT="test"
 
 pkg_setup() {
 	python_set_active_version 2
