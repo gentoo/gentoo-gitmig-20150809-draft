@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.66 2010/04/16 11:18:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.67 2010/04/16 11:37:14 ssuominen Exp $
+
+*exaile-0.3.1.1 (16 Apr 2010)
+
+  16 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +exaile-0.3.1.1.ebuild:
+  Version bump.
 
   16 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> exaile-0.3.1.0.ebuild:
   Disable test suite because of missing python mox module wrt #315589.
