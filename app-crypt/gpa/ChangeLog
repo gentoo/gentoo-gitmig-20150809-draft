@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.68 2010/01/30 18:41:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.69 2010/04/16 21:37:11 arfrever Exp $
+
+*gpa-0.9.1_pre20100416 (16 Apr 2010)
+
+  16 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +gpa-0.9.1_pre20100416.ebuild:
+  Add snapshot supporting libassuan-2.
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> gpa-0.9.0.ebuild:
   sparc stable wrt #279367
