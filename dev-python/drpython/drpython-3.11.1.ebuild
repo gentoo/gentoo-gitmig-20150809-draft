@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.11.1.ebuild,v 1.1 2010/04/16 02:53:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.11.1.ebuild,v 1.2 2010/04/16 02:57:16 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,7 +26,6 @@ S="${WORKDIR}/${P/-/_}"
 src_prepare() {
 	distutils_src_prepare
 
-	epatch "${FILESDIR}/${PN}-165-tabswitch.patch"
 	epatch "${FILESDIR}/${PN}-165-wxversion.patch"
 }
 
