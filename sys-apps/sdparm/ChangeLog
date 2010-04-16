@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sdparm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.52 2009/10/13 20:07:18 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.53 2010/04/16 21:38:45 vapier Exp $
+
+*sdparm-1.05 (16 Apr 2010)
+
+  16 Apr 2010; Mike Frysinger <vapier@gentoo.org> +sdparm-1.05.ebuild:
+  Version bump #315605 by Samuli Suominen.
 
   13 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> sdparm-1.04.ebuild:
   Bug 288797: <sg3_utils-1.28 and >=sdparm-1.04 have a conflict on a script
