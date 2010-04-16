@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xdg-user-dirs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.3 2009/10/12 12:50:52 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.4 2010/04/16 13:55:24 ssuominen Exp $
+
+*xdg-user-dirs-0.12 (16 Apr 2010)
+
+  16 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xdg-user-dirs-0.12.ebuild:
+  Version bump.
 
 *xdg-user-dirs-0.11 (12 Oct 2009)
 
