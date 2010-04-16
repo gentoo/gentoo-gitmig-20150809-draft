@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.229 2010/04/11 13:17:46 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.230 2010/04/16 00:25:59 tcunha Exp $
+
+  15 Apr 2010; Tiago Cunha <tcunha@gentoo.org> lighttpd-1.4.26-r1.ebuild:
+  stable sparc, bug 308405
 
   11 Apr 2010; Tobias Heinlein <keytoaster@gentoo.org>
   lighttpd-1.4.26-r1.ebuild:
