@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5487 2010/04/15 21:47:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5488 2010/04/16 10:47:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1575,8 +1575,8 @@ media-gfx/imagemagick:lqr -  enable experimental liquid rescale support
 media-gfx/imagemagick:q32 -  set quantum depth to 32 
 media-gfx/imagemagick:q8 -  set quantum depth to 8 
 media-gfx/inkscape:dia -  pull in app-office/dia for dia import extension 
+media-gfx/inkscape:gs -  enables support for the PostScript import extension 
 media-gfx/inkscape:inkjar -  enables support for OpenOffice.org SVG jar files 
-media-gfx/inkscape:postscript -  pull in dependencies needed for the postscript import extension 
 media-gfx/jpeg2ps:metric -  Default to A4 paper size 
 media-gfx/k3d:3ds - Enable support for 3D Studio models
 media-gfx/k3d:cuda - Use nvidia cuda toolkit for speeding up computations
