@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.14 2010/04/02 19:22:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.15 2010/04/17 22:57:30 nelchael Exp $
+
+  17 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -files/protobuf-2.0.3-decoder_test_64bit_fix.patch,
+  -protobuf-2.1.0.ebuild,
+  -files/protobuf-2.1.0-fix-emacs-byte-compile.patch,
+  -files/protobuf-2.2.0-decoder_test_64bit_fix.patch,
+  -files/protobuf-2.2.0-fix-emacs-byte-compile.patch,
+  -protobuf-2.2.0a.ebuild:
+  Remove old versions.
 
   02 Apr 2010; Fabian Groffen <grobian@gentoo.org> protobuf-2.3.0.ebuild:
   Marked ~x64-macos, bug #312589
