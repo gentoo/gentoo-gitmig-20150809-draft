@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.13 2009/08/13 15:11:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.14 2010/04/17 16:46:01 polynomial-c Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools git
 
@@ -89,6 +89,11 @@ pkg_setup() {
 	local SND_ERROR="ALSA is already compiled into the kernel."
 	local SOUND_ERROR="Your kernel doesn't have sound support enabled."
 	local SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.	 Please disable them and re-emerge alsa-driver."
+
+	if use oss && kernel_is -ge 2 6 28 ; then
+		local CONFIG_CHECK+="SOUND_PRIME"
+		local SOUND_PRIME_ERROR="You enabled oss USE flag but your kernel's soundcore module lacks support of the proper functions. Please enable CONFIG_SOUND_PRIME and re-emerge alsa-driver."
+	fi
 
 	linux-mod_pkg_setup
 

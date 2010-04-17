@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.306 2010/01/07 17:29:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.307 2010/04/17 16:46:01 polynomial-c Exp $
+
+  17 Apr 2010; Lars Wendler <polynomial-c@gentoo.org>
+  alsa-driver-1.0.22.1.ebuild, alsa-driver-9999.ebuild:
+  Having the oss USE flag enabled, compiling alsa-driver against kernel
+  versions >=2.6.28 results in undefined references when loading the oss 
+  modules. Added a check for CONFIG_SOUND_PRIME being enabled to prevent 
+  this. (With kind permission from beandog)
 
 *alsa-driver-1.0.22.1 (07 Jan 2010)
 
