@@ -1,0 +1,11 @@
+# ChangeLog for sci-electronics/gresistor
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gresistor/ChangeLog,v 1.1 2010/04/17 16:37:53 hwoarang Exp $
+
+*gresistor-0.0.1 (17 Apr 2010)
+
+  17 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  +gresistor-0.0.1.ebuild, +metadata.xml:
+  Initial commit. Fixes bug #265582. Thanks to Johanus
+  <johanus.dwbh@gmail.com> for the initial ebuild
+
