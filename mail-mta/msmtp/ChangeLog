@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.81 2010/04/15 20:14:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.82 2010/04/17 18:54:06 a3li Exp $
+
+  17 Apr 2010; Alex Legler <a3li@gentoo.org> -msmtp-1.4.5.ebuild,
+  -msmtp-1.4.7.ebuild:
+  Removing vulnerable ebuilds, bug 293647.
 
   15 Apr 2010; Markus Meier <maekke@gentoo.org> msmtp-1.4.19.ebuild:
   amd64 stable, bug #293647
