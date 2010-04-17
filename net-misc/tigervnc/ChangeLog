@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.50 2010/04/16 22:01:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.51 2010/04/17 22:34:54 maekke Exp $
+
+  17 Apr 2010; Markus Meier <maekke@gentoo.org>
+  tigervnc-1.0.1_pre20100306-r1.ebuild:
+  x86 stable, bug #315483
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org>
   tigervnc-1.0.1_pre20100306-r1.ebuild:
