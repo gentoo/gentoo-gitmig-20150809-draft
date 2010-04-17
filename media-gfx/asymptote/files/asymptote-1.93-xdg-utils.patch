@@ -1,8 +1,8 @@
-Index: asymptote-1.91/settings.cc
+Index: asymptote-1.93/settings.cc
 ===================================================================
---- asymptote-1.91.orig/settings.cc
-+++ asymptote-1.91/settings.cc
-@@ -86,14 +86,14 @@ mode_t mask;
+--- asymptote-1.93.orig/settings.cc
++++ asymptote-1.93/settings.cc
+@@ -88,14 +88,14 @@ string systemDir=ASYMPTOTE_SYSDIR;
  bool msdos=false;
  string HOME="HOME";
  const char pathSeparator=':';
@@ -18,5 +18,5 @@ Index: asymptote-1.91/settings.cc
 -string defaultDisplay="display";
 +string defaultDisplay="xdg-open";
  string defaultAnimate="animate";
- string systemDir=ASYMPTOTE_SYSDIR;
  string docdir=ASYMPTOTE_DOCDIR;
+ void queryRegistry() {}
