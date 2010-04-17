@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0-r1.ebuild,v 1.1 2010/04/16 12:07:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0-r1.ebuild,v 1.2 2010/04/17 13:40:36 jlec Exp $
 
 EAPI="3"
 
@@ -14,12 +14,11 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
-IUSE="X doc"
+IUSE="doc"
 
 # We need dejagnu for src_test, but dejagnu needs expect
 # to compile/run, so we cant add dejagnu to DEPEND :/
-DEPEND=">=dev-lang/tcl-8.2
-	X? ( >=dev-lang/tk-8.2 )"
+DEPEND=">=dev-lang/tk-8.2"
 RDEPEND="${DEPEND}"
 
 NON_MICRO_V=${PN}-$(get_version_component_range 1-2)
@@ -29,7 +28,7 @@ src_prepare() {
 	# fix install_name on darwin
 	[[ ${CHOST} == *-darwin* ]] && \
 		epatch "${FILESDIR}"/${P}-darwin.patch
-epatch "${FILESDIR}"/"${P}"-multilib.patch
+	epatch "${FILESDIR}"/"${P}"-multilib.patch
 
 	#fix the rpath being set to /var/tmp/portage/...
 	epatch "${FILESDIR}"/expect-5.39.0-libdir.patch
@@ -68,15 +67,7 @@ src_configure() {
 	#configure needs to find the file tclConfig.sh is
 	myconf="--with-tcl=${EPREFIX}/usr/$(get_libdir) --with-tclinclude=${TCL_HDIR}"
 
-	if use X ; then
-		#--with-x is enabled by default
-		#configure needs to find the file tkConfig.sh and tk.h
-		#tk.h is in /usr/lib so don't need to explicitly set --with-tkinclude
-		myconf="$myconf --with-tk=${EPREFIX}/usr/$(get_libdir)"
-	else
-		#configure knows that tk depends on X so just disable X
-		myconf="$myconf --without-x"
-	fi
+	myconf="$myconf --with-tk=${EPREFIX}/usr/$(get_libdir)"
 
 	econf $myconf --enable-shared
 }

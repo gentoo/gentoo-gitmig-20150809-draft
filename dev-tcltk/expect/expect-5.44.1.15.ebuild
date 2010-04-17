@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.2 2010/04/12 20:21:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.3 2010/04/17 13:40:36 jlec Exp $
 
 EAPI="3"
 
@@ -14,13 +14,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
-IUSE="X doc"
+IUSE="doc"
 
 # We need dejagnu for src_test, but dejagnu needs expect
 # to compile/run, so we cant add dejagnu to DEPEND :/
-DEPEND="
-	>=dev-lang/tcl-8.2
-	>=dev-lang/tk-8.2"
+DEPEND=">=dev-lang/tk-8.2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -56,15 +54,7 @@ src_configure() {
 	#configure needs to find the files tclConfig.sh and tclInt.h
 	myconf="--with-tcl=${EPREFIX}/usr/$(get_libdir) --with-tclinclude=${EPREFIX}/usr/$(get_libdir)/tcl${tclv}/include/generic"
 
-	if use X ; then
-		#--with-x is enabled by default
-		#configure needs to find the file tkConfig.sh and tk.h
-		#tk.h is in /usr/lib so don't need to explicitly set --with-tkinclude
-		myconf="$myconf --with-tk=${EPREFIX}/usr/$(get_libdir) --with-tkinclude=${EPREFIX}/usr/include"
-	else
-		#configure knows that tk depends on X so just disable X
-		myconf="$myconf --without-x"
-	fi
+	myconf="$myconf --with-tk=${EPREFIX}/usr/$(get_libdir) --with-tkinclude=${EPREFIX}/usr/include"
 
 	econf $myconf --enable-shared || die "econf failed"
 }
