@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tryouts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.4 2010/04/10 00:36:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tryouts/ChangeLog,v 1.5 2010/04/17 18:00:19 flameeyes Exp $
+
+  17 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  tryouts-0.8.8.ebuild:
+  Add missing dependency over attic.
 
   10 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   tryouts-0.8.8.ebuild:
