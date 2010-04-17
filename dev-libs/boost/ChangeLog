@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.193 2010/03/31 18:35:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.194 2010/04/17 23:52:17 josejx Exp $
+
+  17 Apr 2010; Joseph Jezak <josejx@gentoo.org> boost-1.41.0-r3.ebuild:
+  Marked ppc stable for bug #305195.
 
   31 Mar 2010; Raúl Porcel <armin76@gentoo.org> boost-1.41.0-r3.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #306335
