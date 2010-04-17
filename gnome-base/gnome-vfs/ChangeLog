@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.322 2010/04/14 19:27:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.323 2010/04/17 12:16:14 pacho Exp $
+
+  17 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  files/gnome-vfs-2.24.0-gnutls27.patch:
+  Fix gnutls patch to stop getting have_ssl: command not found when building
+  with gnutls USE flag, see bug #312909. Thanks to Rafal for the fix and
+  Martin for reporting.
 
   14 Apr 2010; Pacho Ramos <pacho@gentoo.org> gnome-vfs-2.24.3.ebuild:
   Raise gtk-doc-am dependency solving bug #313645
