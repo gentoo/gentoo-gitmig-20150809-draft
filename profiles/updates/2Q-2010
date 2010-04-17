@@ -1,1 +1,2 @@
 move x11-libs/compizconfig-backend-kconfig x11-libs/compizconfig-backend-kconfig4
+slotmove kde-misc/youtube-servicemenu 0 4
