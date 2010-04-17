@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.10.ebuild,v 1.1 2010/04/17 19:26:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/silc-toolkit-1.1.10.ebuild,v 1.2 2010/04/17 19:57:57 polynomial-c Exp $
 
 EAPI=2
 
@@ -26,9 +26,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=""
-	use ipv6 && myconf="${myconf} --enable-ipv6"
-
 	econf \
 		--datadir=/usr/share/${PN} \
 		--datarootdir=/usr/share/${PN} \
@@ -39,7 +36,7 @@ src_configure() {
 		--disable-optimizations \
 		--with-simdir=/usr/$(get_libdir)/${PN}/modules \
 		$(use_enable debug) \
-		${myconf}
+		$(use_enable ipv6)
 }
 
 src_install() {
