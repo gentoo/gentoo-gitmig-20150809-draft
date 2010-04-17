@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/oto
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.11 2009/09/07 20:15:35 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.12 2010/04/17 11:39:25 dirtyepic Exp $
+
+  17 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> oto-0.5.ebuild:
+  Completely broken for 8 months and no one noticed.
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> oto-0.5.ebuild:
   Clean up ebuild.
