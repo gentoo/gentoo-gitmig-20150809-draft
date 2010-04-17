@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/weka
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.33 2009/03/29 16:34:28 serkan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.34 2010/04/17 06:01:02 serkan Exp $
+
+*weka-3.6.2 (17 Apr 2010)
+
+  17 Apr 2010; Serkan Kaba <serkan@gentoo.org> +weka-3.6.2.ebuild,
+  +files/weka-3.6.2-build.xml.patch:
+  Version bump. Fixes bug #295495. Thanks to Marshall Banana
+  <JackyRyan@gmx.net> for the report and the ebuild.
 
   29 Mar 2009; Serkan Kaba <serkan@gentoo.org>
   files/weka-3.6.0-build.xml.patch:
