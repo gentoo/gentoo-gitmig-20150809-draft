@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/yum
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.10 2010/03/19 13:20:39 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.11 2010/04/17 16:25:27 deathwing00 Exp $
+
+*yum-3.2.27-r1 (17 Apr 2010)
+
+  17 Apr 2010; Ioannis Aslanidis <iaslanidis@gentoo.org>
+  +yum-3.2.27-r1.ebuild:
+  Fixes bug #315757. Thanks go to arfrever at gentoo dot org for the patch.
 
 *yum-3.2.27 (19 Mar 2010)
 
