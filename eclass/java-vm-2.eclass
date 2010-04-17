@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.30 2010/03/27 22:23:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.31 2010/04/17 08:30:36 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -133,17 +133,17 @@ set_java_env() {
 		-e "s/@PLATFORM@/${platform}/g" \
 		-e "s/@LIBDIR@/$(get_libdir)/g" \
 		-e "/^LDPATH=.*lib\\/\\\"/s|\"\\(.*\\)\"|\"\\1${platform}/:\\1${platform}/server/\"|" \
-		< ${source_env_file} \
-		> ${env_file} || die "sed failed"
+		< "${source_env_file}" \
+		> "${env_file}" || die "sed failed"
 
 	(
 		echo "VMHANDLE=\"${VMHANDLE}\""
 		echo "BUILD_ONLY=\"${JAVA_VM_BUILD_ONLY}\""
-	) >> ${env_file}
+	) >> "${env_file}"
 
 	[[ -n ${JAVA_PROVIDE} ]] && echo "PROVIDES=\"${JAVA_PROVIDE}\"" >> ${env_file}
 
-	local java_home=$(source ${env_file}; echo ${JAVA_HOME})
+	local java_home=$(source "${env_file}"; echo ${JAVA_HOME})
 	[[ -z ${java_home} ]] && die "No JAVA_HOME defined in ${env_file}"
 
 	# Make the symlink
