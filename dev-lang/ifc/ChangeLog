@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.53 2009/12/04 22:56:12 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.54 2010/04/17 13:29:11 jlec Exp $
+
+  17 Apr 2010; Justin Lecher <jlec@gentoo.org> ifc-11.1.056.ebuild:
+  Fixing QA warnings, #315711
 
   04 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> ifc-11.1.056.ebuild:
   Remove invalid restrictions. Please use QA_* variables.

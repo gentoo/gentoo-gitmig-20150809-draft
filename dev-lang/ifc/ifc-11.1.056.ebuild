@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.056.ebuild,v 1.4 2009/12/04 22:56:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.056.ebuild,v 1.5 2010/04/17 13:29:11 jlec Exp $
 
 EAPI=2
 
@@ -31,6 +31,11 @@ RDEPEND="~virtual/libstdc++-3.3
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 DESTINATION="opt/intel/Compiler/${RELEASE}/${BUILD}"
+
+QA_TEXTRELS="${DESTINATION}/*"
+QA_EXECSTACK="${DESTINATION}/*"
+QA_PRESTRIPPED="${DESTINATION}/lib/intel64/ifort_libFNP.so"
+QA_DT_HASH="${DESTINATION}/bin/*/.* ${DESTINATION}/lib/*/.* ${DESTINATION}/mkl/lib/*/.* ${DESTINATION}/mkl/benchmarks/mp_linpack/bin_intel/*/.*"
 
 pkg_setup() {
 	CHECKREQS_MEMORY=1024
