@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.49.0.ebuild,v 1.2 2010/04/13 15:41:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.49.0.ebuild,v 1.3 2010/04/17 17:17:21 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -31,7 +31,12 @@ PYTHON_MODNAME="logilab"
 src_prepare() {
 	distutils_src_prepare
 
-	epatch "${FILESDIR}/${PN}-0.41.0-remove-broken-tests.patch"
+	# Disable broken test.
+	sed -e "s/test_knownValues_is_standard_module_4/_&/" -i test/unittest_modutils.py
+
+	# Disable tests failing when stdout is not a tty.
+	sed -e "s/test_both_capture/_&/" -i test/unittest_testlib.py
+	sed -e "s/test_capture_core/_&/" -i test/unittest_testlib.py
 }
 
 src_test() {
