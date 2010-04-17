@@ -1,6 +1,11 @@
 # ChangeLog for app-office/orage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.26 2010/01/02 10:50:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.27 2010/04/17 04:16:18 darkside Exp $
+
+*orage-4.7.5 (17 Apr 2010)
+
+  17 Apr 2010; Jeremy Olexa <darkside@gentoo.org> +orage-4.7.5.ebuild:
+  Version bump, bug 311311. Patch by Myckel Habets
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> orage-4.6.1.ebuild:
   Transfer Prefix keywords
