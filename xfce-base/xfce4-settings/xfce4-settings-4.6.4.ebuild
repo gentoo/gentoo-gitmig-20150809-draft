@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.4.ebuild,v 1.1 2010/04/17 04:08:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.4.ebuild,v 1.2 2010/04/17 04:21:39 darkside Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -44,7 +44,7 @@ pkg_setup() {
 		$(use_enable libnotify)
 		$(use_enable keyboard libxklavier)
 		$(use_enable sound sound-settings)
-		$(use_enable debug)"
+		$(xfconf_use_debug)"
 	DOCS="AUTHORS ChangeLog NEWS TODO"
 	PATCHES=( "${FILESDIR}/${PN}-4.6.3-exo.patch"
 		"${FILESDIR}/${PN}-4.7.1-libxklavier.patch" )
