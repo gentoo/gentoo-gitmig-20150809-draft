@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.1.1.ebuild,v 1.2 2010/04/16 09:17:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.1.1.ebuild,v 1.3 2010/04/17 04:34:26 serkan Exp $
 
 EAPI="2"
-inherit gnome2 eutils java-pkg-2 java-ant-2 toolchain-funcs
+inherit gnome2-utils eutils java-pkg-2 java-ant-2 toolchain-funcs
 
 MY_PN=${PN/#j/J}
 DESCRIPTION="Java subtitle editor"
@@ -43,7 +43,7 @@ java_prepare() {
 
 src_compile() {
 	java-pkg_filter-compiler ecj-3.2
-	eant -Dgentoo.classpath="$(java-pkg_getjars jupidator)" distbased $(use nls && echo i18n) jar faq changelog || die "eant failed"
+	eant -Dgentoo.classpath="$(java-pkg_getjars jupidator)" distbased $(use nls && echo i18n) jar faq || die "eant failed"
 	cp -v dist/help/jubler-faq.html build/classes/help || die "cp failed"
 	cd resources/ffdecode || die
 	CC=$(tc-getCC) NOSTRIP=true emake linuxdyn || die "make failed"
@@ -66,11 +66,6 @@ src_install() {
 	doman resources/installers/linux/jubler.1 || die "doman fialed"
 	insinto /usr/share/jubler/help
 	doins dist/help/* || die "doins failed"
-}
-
-pkg_preinst() {
-	gnome2_pkg_preinst
-	java-pkg-2_pkg_preinst
 }
 
 pkg_postinst() {

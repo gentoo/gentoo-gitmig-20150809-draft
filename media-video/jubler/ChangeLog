@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.33 2010/04/16 09:17:22 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.34 2010/04/17 04:34:26 serkan Exp $
+
+  17 Apr 2010; Serkan Kaba <serkan@gentoo.org> jubler-4.1.1.ebuild:
+  Fixed eclass usage. Remove call to changelog task to fix bug #315403
 
   16 Apr 2010; Petteri Räty <betelgeuse@gentoo.org> jubler-4.1.1.ebuild:
   inherit gnome2 instead of gnome2-utils so we have access to
