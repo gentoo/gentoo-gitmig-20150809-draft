@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.17 2010/04/02 14:24:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.18 2010/04/17 18:41:53 maekke Exp $
+
+*lensfun-0.2.5-r1 (17 Apr 2010)
+
+  17 Apr 2010; Markus Meier <maekke@gentoo.org> +lensfun-0.2.5-r1.ebuild:
+  disable vectorization support for now, by Serge Gavrilov in bug #314643
 
 *lensfun-0.2.5 (02 Apr 2010)
 
