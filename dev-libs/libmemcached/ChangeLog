@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.28 2010/04/10 13:42:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.29 2010/04/17 18:25:18 robbat2 Exp $
+
+*libmemcached-0.39 (17 Apr 2010)
+
+  17 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +libmemcached-0.39.ebuild, +files/libmemcached-0.39-runtestsasuser.patch:
+  Version bump.
 
   10 Apr 2010; Raúl Porcel <armin76@gentoo.org> libmemcached-0.31.ebuild:
   arm/ia64/sh/sparc stable wrt #288166
