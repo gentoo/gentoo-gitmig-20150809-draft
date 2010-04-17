@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.12.ebuild,v 1.1 2010/02/23 00:31:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.12.ebuild,v 1.2 2010/04/17 18:39:59 robbat2 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/gearmand/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug tcmalloc +memcache drizzle sqlite tokyocabinet" # postgres
 # postgresql support is broken right now so keep it disabled
 
