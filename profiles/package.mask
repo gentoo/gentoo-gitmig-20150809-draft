@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11460 2010/04/17 16:04:20 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11461 2010/04/17 18:42:57 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -529,12 +529,6 @@ net-libs/libjingle
 # Markos Chandras <hwoarang@gentoo.org> (26 Dec 2009)
 # keeping rc ebuilds masked
 =sys-kernel/zen-sources-2.6.33_rc*
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (23 Dec 2009)
-# Masked while we work on polishing the ebuild. Right now it lacks
-# init scripts, PAM configuration, proper test considerations and
-# USE flags for a few dependencies.
-dev-db/drizzle
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
