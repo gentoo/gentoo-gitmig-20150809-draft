@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.369 2010/03/28 12:18:04 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.370 2010/04/17 16:09:01 jmbsvicetto Exp $
+
+*amarok-2.3.0.90 (17 Apr 2010)
+
+  17 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.3.0.90.ebuild:
+  [media-sound/amarok] Bumped to the 2.3.1 Beta 1 (2.3.0.90) release.
 
 *amarok-2.3.0-r1 (28 Mar 2010)
 
