@@ -1,0 +1,39 @@
+diff -Nuar --exclude '*~' drizzle-2010.03.1412/m4.orig/pandora_optimize.m4 drizzle-2010.03.1412/m4//pandora_optimize.m4
+--- drizzle-2010.03.1412/m4.orig/pandora_optimize.m4	2010-03-30 13:02:33.000000000 -0700
++++ drizzle-2010.03.1412/m4//pandora_optimize.m4	2010-04-17 09:51:53.000000000 -0700
+@@ -22,10 +22,9 @@
+     dnl with using AC_CC_STD_C99 above
+     CC="${CC} -std=gnu99"
+ 
+-    AM_CPPFLAGS="-ggdb3 ${AM_CPPFLAGS}"
+-
+     DEBUG_CFLAGS="-O0"
+     DEBUG_CXXFLAGS="-O0"
++    DEBUG_CPPFLAGS="-ggdb3"
+ 
+     OPTIMIZE_CFLAGS="-O3"
+     OPTIMIZE_CXXFLAGS="-O3"
+@@ -35,9 +34,8 @@
+     dnl with using AC_CC_STD_C99 above
+     CC="${CC} -std=c99"
+ 
+-    AM_CPPFLAGS="-g ${AM_CPPFLAGS}"
+-
+     DEBUG_CFLAGS="-O0"
++    DEBUG_CPPFLAGS="-g"
+     DEBUG_CXXFLAGS="-O0"
+ 
+     OPTIMIZE_CFLAGS="-xHOST -O3 -no-prec-div -static"
+@@ -70,10 +68,12 @@
+   AS_IF([test "$with_debug" = "yes"],[
+     # Debugging. No optimization.
+     AM_CFLAGS="${AM_CFLAGS} ${DEBUG_CFLAGS} -DDEBUG"
++    AM_CPPFLAGS="${AM_CPPFLAGS} ${DEBUG_CPPFLAGS} -DDEBUG"
+     AM_CXXFLAGS="${AM_CXXFLAGS} ${DEBUG_CXXFLAGS} -DDEBUG"
+   ],[
+     # Optimized version. No debug
+     AM_CFLAGS="${AM_CFLAGS} ${OPTIMIZE_CFLAGS}"
++    AM_CPPFLAGS="${AM_CPPFLAGS} ${OPTIMIZE_CPPFLAGS}"
+     AM_CXXFLAGS="${AM_CXXFLAGS} ${OPTIMIZE_CXXFLAGS}"
+   ])
+ ])

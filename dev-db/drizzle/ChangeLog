@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.8 2010/04/01 15:01:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.9 2010/04/17 18:41:00 robbat2 Exp $
+
+  17 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  drizzle-2010.03.1412.ebuild, +files/drizzle-2010.03.1412-ggdb3-fix.patch:
+  Tweak the ebuild per suggestions by Monty Taylor of upstream, during the
+  Drizzle Developer day following MySQL UC 2010. Patch to disable -ggdb3
+  being forced as well.
 
 *drizzle-2010.03.1412 (01 Apr 2010)
 
