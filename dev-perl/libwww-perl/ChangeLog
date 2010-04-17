@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.122 2010/01/10 14:03:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.123 2010/04/17 08:10:24 tove Exp $
+
+  17 Apr 2010; Torsten Veller <tove@gentoo.org> libwww-perl-5.834-r1.ebuild:
+  Stable on amd64, x86 (#314467)
 
 *libwww-perl-5.834-r1 (10 Jan 2010)
 

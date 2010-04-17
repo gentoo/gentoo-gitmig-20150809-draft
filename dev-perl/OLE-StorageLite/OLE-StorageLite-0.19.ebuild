@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/OLE-StorageLite-0.19.ebuild,v 1.1 2009/11/26 08:00:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/OLE-StorageLite-0.19.ebuild,v 1.2 2010/04/17 08:24:49 tove Exp $
 
 MODULE_AUTHOR=JMCNAMARA
 MY_PN=OLE-Storage_Lite
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Simple Class for OLE document interface."
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"

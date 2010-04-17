@@ -1,16 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.710.10.ebuild,v 1.1 2009/11/10 10:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.710.10.ebuild,v 1.2 2010/04/17 08:33:06 tove Exp $
 
 MODULE_AUTHOR="MKUTTER"
 inherit perl-module eutils
 
-DESCRIPTION="Provides a simple and lightweight interface to the SOAP protocol (sic) both on client and server side."
+DESCRIPTION="Simple and lightweight interface to the SOAP protocol (sic) both on client and server side"
 
 IUSE="jabber ssl"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 myconf="${myconf} --noprompt"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/OLE-StorageLite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.14 2009/12/24 19:42:23 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.15 2010/04/17 08:24:49 tove Exp $
+
+  17 Apr 2010; Torsten Veller <tove@gentoo.org> OLE-StorageLite-0.19.ebuild:
+  Stable on amd64, x86 (#314467)
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org>
   -OLE-StorageLite-0.18.ebuild:

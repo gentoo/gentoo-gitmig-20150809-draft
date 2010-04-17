@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Probe-Perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.6 2010/01/10 19:53:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.7 2010/04/17 09:07:15 tove Exp $
+
+  17 Apr 2010; Torsten Veller <tove@gentoo.org> Probe-Perl-0.01.ebuild:
+  Stable on amd64, x86 (#314467)
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> Probe-Perl-0.01.ebuild:
   Transfer Prefix keywords
