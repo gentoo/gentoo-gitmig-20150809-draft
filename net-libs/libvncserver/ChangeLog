@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.39 2010/01/22 04:46:24 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.40 2010/04/17 17:29:14 pacho Exp $
+
+  17 Apr 2010; Pacho Ramos <pacho@gentoo.org> libvncserver-0.9.7.ebuild:
+  amd64 stable, bug 304493
 
   22 Jan 2010; Jonathan Callen <abcd@gentoo.org> libvncserver-0.9.7.ebuild:
   Keyword ~amd64-linux/~x86-linux
