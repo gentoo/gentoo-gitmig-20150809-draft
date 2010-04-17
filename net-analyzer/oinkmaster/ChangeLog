@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/oinkmaster
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.21 2009/12/26 16:05:47 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.22 2010/04/17 16:51:14 armin76 Exp $
+
+  17 Apr 2010; Raúl Porcel <armin76@gentoo.org> oinkmaster-2.0.ebuild:
+  Add ~arm wrt #301087
 
   26 Dec 2009; Raúl Porcel <armin76@gentoo.org> oinkmaster-2.0.ebuild:
   sparc stable wrt #292924
