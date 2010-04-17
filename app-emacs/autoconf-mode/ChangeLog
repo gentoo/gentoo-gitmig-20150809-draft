@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/autoconf-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.23 2010/04/16 15:06:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.24 2010/04/17 11:52:50 armin76 Exp $
+
+  17 Apr 2010; Raúl Porcel <armin76@gentoo.org> autoconf-mode-2.65.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #313821
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> autoconf-mode-2.65.ebuild:
   stable ppc, bug 313821
