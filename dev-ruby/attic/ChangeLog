@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/attic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/attic/ChangeLog,v 1.2 2010/02/17 16:11:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/attic/ChangeLog,v 1.3 2010/04/17 18:07:47 flameeyes Exp $
+
+  17 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> attic-0.5.2.ebuild:
+  Fix test function.
 
 *attic-0.5.2 (17 Feb 2010)
 
