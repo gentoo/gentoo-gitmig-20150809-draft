@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.5.ebuild,v 1.5 2010/03/11 20:39:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.5.ebuild,v 1.6 2010/04/18 14:30:55 nixnut Exp $
 
 inherit eutils multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="alpha amd64 hppa ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="bogofilter crypt dbus dillo doc gnome gnutls imap ipv6 ldap nntp pda session smime spamassassin spell ssl startup-notification xface"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.6
