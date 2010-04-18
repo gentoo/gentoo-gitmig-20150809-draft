@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.1.ebuild,v 1.1 2010/04/09 04:11:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.1.ebuild,v 1.2 2010/04/18 12:58:23 grobian Exp $
 
 EAPI="3"
 
@@ -17,6 +17,7 @@ IUSE="X"
 
 DEPEND="sys-libs/ncurses
 	sys-devel/bc
+	sys-devel/gettext
 	www-client/htmlview
 	X? ( x11-misc/xsel )"
 RDEPEND="${DEPEND}"

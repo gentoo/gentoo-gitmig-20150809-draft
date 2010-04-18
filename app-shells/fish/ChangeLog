@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.43 2010/04/09 04:11:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.44 2010/04/18 12:58:23 grobian Exp $
+
+  18 Apr 2010; Fabian Groffen <grobian@gentoo.org> fish-1.23.1.ebuild,
+  files/fish-1.23.1-gentoo-alt.patch:
+  Update gentoo-alt patch to make iconv work again, and not wrongly reported
+  as failing
 
 *fish-1.23.1 (09 Apr 2010)
 
