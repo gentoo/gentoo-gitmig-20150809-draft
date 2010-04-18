@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.506 2010/04/18 16:38:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.507 2010/04/18 20:50:28 maekke Exp $
+
+  18 Apr 2010; Markus Meier <maekke@gentoo.org> xorg-server-1.7.6.ebuild:
+  arm stable, bug #308521
 
   18 Apr 2010; <nixnut@gentoo.org> xorg-server-1.7.6.ebuild:
   ppc stable #308521
