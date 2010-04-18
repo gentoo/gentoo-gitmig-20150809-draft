@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-en
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.24 2010/01/16 14:07:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.25 2010/04/18 08:44:54 grobian Exp $
+
+  18 Apr 2010; Fabian Groffen <grobian@gentoo.org>
+  myspell-en-20081002.ebuild:
+  Marked ~x86-macos
 
   16 Jan 2010; Ulrich Mueller <ulm@gentoo.org> myspell-en-20060316.ebuild,
   myspell-en-20081002.ebuild:
