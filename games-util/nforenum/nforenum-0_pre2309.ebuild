@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nforenum/nforenum-0_pre2309.ebuild,v 1.1 2010/04/08 22:14:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nforenum/nforenum-0_pre2309.ebuild,v 1.2 2010/04/18 07:28:54 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://binaries.openttd.org/extra/nforenum/${MY_PV}/${PN}-${MY_PV}-sour
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}-${MY_PV}
