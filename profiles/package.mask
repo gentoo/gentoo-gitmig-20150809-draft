@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11463 2010/04/18 08:03:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11464 2010/04/18 08:44:27 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -453,11 +453,6 @@ dev-db/mysql-community
 # that installs .jar files. Deprecated.
 # Last rited: to be removed in 30 days.
 dev-ruby/activerecord-jdbc
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (23 Jan 2010)
-# Obsoleted by xorg-server-1.6
-# Let us know in bugs if you have some issues with 1.6
-<x11-base/xorg-server-1.6.0
 
 # Matthias Schwarzott <zzam@gentoo.org> (22 Jan 2010)
 # since long time included in media-tv/gentoo-vdr-scripts
