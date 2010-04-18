@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.017.ebuild,v 1.4 2009/08/22 20:23:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.1.017.ebuild,v 1.5 2010/04/18 08:49:51 jlec Exp $
 
 inherit rpm eutils check-reqs
 
@@ -24,11 +24,16 @@ SRC_URI="amd64? ( ${SRC_COM}_intel64.tar.gz )
 LICENSE="Intel-SDP"
 SLOT="0"
 
-RESTRICT="test strip mirror"
+RESTRICT="test mirror"
 IUSE=""
 DEPEND=""
 RDEPEND="~virtual/libstdc++-3.3
 	amd64? ( app-emulation/emul-linux-x86-compat )"
+
+DESTINATION="opt/intel/fc.*/${PV}"
+QA_TEXTRELS="*"
+QA_EXECSTACK="*"
+QA_DT_HASH="${DESTINATION}/lib/.* ${DESTINATION}/bin/.*"
 
 pkg_setup() {
 	# Check if we have enough RAM and free diskspace
