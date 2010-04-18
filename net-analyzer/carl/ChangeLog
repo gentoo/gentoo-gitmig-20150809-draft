@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/carl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.5 2009/06/13 10:59:39 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.6 2010/04/18 18:46:30 klausman Exp $
+
+*carl-0.9 (18 Apr 2010)
+
+  18 Apr 2010; Tobias Klausmann <klausman@gentoo.org> +carl-0.9.ebuild:
+  Added ebuild for carl 0.9 which includes Python 3 support.
 
 *carl-0.8 (13 Jun 2009)
 
