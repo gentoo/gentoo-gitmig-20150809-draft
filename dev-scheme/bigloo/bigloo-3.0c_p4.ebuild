@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0c_p4.ebuild,v 1.5 2010/04/10 21:18:52 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0c_p4.ebuild,v 1.6 2010/04/18 16:11:39 chiiph Exp $
 
-inherit elisp-common multilib java-pkg-2
+inherit elisp-common multilib java-pkg-opt-2
 
 MY_P=${PN}${PV/_p/-}
 MY_P=${MY_P/_alpha/-alpha}
@@ -18,6 +18,9 @@ KEYWORDS="amd64 ppc x86"
 
 DEPEND="emacs? ( virtual/emacs )
 		java? ( >=virtual/jdk-1.5 )"
+
+RDEPEND="${DEPEND}
+	java? ( >=virtual/jre-1.5 )"
 
 S=${WORKDIR}/${MY_P%-*}
 

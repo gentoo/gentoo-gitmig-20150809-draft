@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.3a_p5.ebuild,v 1.2 2010/04/10 21:18:52 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.3a_p5.ebuild,v 1.3 2010/04/18 16:11:39 chiiph Exp $
 
 EAPI="2"
 
-inherit elisp-common multilib eutils flag-o-matic java-pkg-2
+inherit elisp-common multilib eutils flag-o-matic java-pkg-opt-2
 
 MY_P=${PN}${PV/_p/-}
 MY_P=${MY_P/_alpha/-alpha}
@@ -26,7 +26,8 @@ DEPEND=">=dev-libs/boehm-gc-7.1[threads?]
 		gstreamer? ( media-libs/gstreamer
 			media-libs/gst-plugins-base )"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	java? ( >=virtual/jre-1.5 )"
 
 S=${WORKDIR}/${MY_P}
 
