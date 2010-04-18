@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/scrnsaverproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/scrnsaverproto/ChangeLog,v 1.32 2010/04/18 16:34:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/scrnsaverproto/ChangeLog,v 1.33 2010/04/18 19:39:47 maekke Exp $
+
+  18 Apr 2010; Markus Meier <maekke@gentoo.org> scrnsaverproto-1.2.0.ebuild:
+  arm stable, bug #308521
 
   18 Apr 2010; <nixnut@gentoo.org> scrnsaverproto-1.2.0.ebuild:
   ppc stable #308521

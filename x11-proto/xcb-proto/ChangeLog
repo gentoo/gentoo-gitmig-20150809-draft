@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.43 2010/04/18 16:35:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.44 2010/04/18 19:51:27 maekke Exp $
+
+  18 Apr 2010; Markus Meier <maekke@gentoo.org> xcb-proto-1.6.ebuild:
+  arm stable, bug #308521
 
   18 Apr 2010; <nixnut@gentoo.org> xcb-proto-1.6.ebuild:
   ppc stable #308521
