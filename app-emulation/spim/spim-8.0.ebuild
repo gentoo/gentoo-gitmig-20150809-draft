@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-8.0.ebuild,v 1.1 2010/04/08 18:05:20 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-8.0.ebuild,v 1.2 2010/04/18 13:14:04 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -46,11 +46,11 @@ src_configure() {
 
 src_compile() {
 	cd "${S}/spim"
-	emake || die
+	emake DESTDIR="${EPREFIX}" || die
 
 	if use X; then
 		cd "${S}/xspim"
-		emake -j1 xspim || die
+		emake DESTDIR="${EPREFIX}" -j1 xspim || die
 	fi
 }
 
@@ -59,11 +59,11 @@ src_install() {
 	dodoc README VERSION ChangeLog || die
 
 	cd "${S}/spim"
-	emake DESTDIR="${D}" install || die "Unable to install spim"
+	emake DESTDIR="${ED}" install || die "Unable to install spim"
 
 	if use X; then
 		cd "${S}/xspim"
-		emake DESTDIR="${D}" install || die "Unable to install xspim"
+		emake DESTDIR="${ED}" install || die "Unable to install xspim"
 
 		doman "${S}/Documentation/xspim.1"
 	fi
