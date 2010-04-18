@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.49.0.ebuild,v 1.3 2010/04/17 17:17:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.49.0.ebuild,v 1.4 2010/04/18 17:40:18 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -35,8 +35,19 @@ src_prepare() {
 	sed -e "s/test_knownValues_is_standard_module_4/_&/" -i test/unittest_modutils.py
 
 	# Disable tests failing when stdout is not a tty.
-	sed -e "s/test_both_capture/_&/" -i test/unittest_testlib.py
-	sed -e "s/test_capture_core/_&/" -i test/unittest_testlib.py
+	sed \
+		-e "s/test_both_capture/_&/" \
+		-e "s/test_capture_core/_&/" \
+		-i test/unittest_testlib.py
+
+	if [[ "${EUID}" -eq 0 ]]; then
+		# Disable tests failing with root permissions.
+		sed \
+			-e "s/test_mode_change/_&/" \
+			-e "s/test_mode_change_on_append/_&/" \
+			-e "s/test_restore_on_close/_&/" \
+			-i test/unittest_fileutils.py
+	fi
 }
 
 src_test() {
