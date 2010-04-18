@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.2 2010/04/02 19:22:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.3 2010/04/18 13:15:29 nelchael Exp $
 
 EAPI="2"
 
 JAVA_PKG_IUSE="source"
+PYTHON_DEPEND="python? 2"
 
 inherit eutils distutils python java-pkg-opt-2 elisp-common
 
@@ -23,14 +24,22 @@ DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )
 	emacs? ( virtual/emacs )"
 
+src_prepare() {
+	use python && python_convert_shebangs -r 2 .
+}
+
 src_compile() {
 	emake || die
 
 	if use python; then
-		cd python; distutils_src_compile; cd ..
+		einfo "Compiling Python library ..."
+		pushd python
+		distutils_src_compile
+		popd
 	fi
 
 	if use java; then
+		einfo "Compiling Java library ..."
 		src/protoc --java_out=java/src/main/java --proto_path=src src/google/protobuf/descriptor.proto
 		mkdir java/build
 		pushd java/src/main/java
@@ -49,7 +58,14 @@ src_install() {
 	dodoc CHANGES.txt CONTRIBUTORS.txt README.txt
 
 	if use python; then
-		cd python; distutils_src_install; cd ..
+		pushd python
+		distutils_src_install
+		popd
+	fi
+
+	if use java; then
+		java-pkg_dojar ${PN}.jar
+		use source && java-pkg_dosrc java/src/main/java/*
 	fi
 
 	if use vim-syntax; then
@@ -66,20 +82,20 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins -r examples/* || die "doins examples failed"
 	fi
-
-	if use java; then
-		java-pkg_dojar ${PN}.jar
-		use source && java-pkg_dosrc java/src/main/java/*
-	fi
 }
 
 src_test() {
 	emake check
 
 	if use python; then
-		 cd python; ${python} setup.py test || die "python test failed"
-		 cd ..
+		 pushd python
+		 "$(PYTHON)" setup.py test || die "python tests failed"
+		 popd
 	fi
+}
+
+pkg_setup() {
+	use python && python_set_active_version 2
 }
 
 pkg_postinst() {
