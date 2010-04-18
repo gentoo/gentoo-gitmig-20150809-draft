@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/nip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.23 2010/04/11 11:59:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.24 2010/04/18 12:06:00 maekke Exp $
+
+  18 Apr 2010; Markus Meier <maekke@gentoo.org> nip2-7.20.7.ebuild:
+  x86 stable, bug #304787
 
   11 Apr 2010; <nixnut@gentoo.org> nip2-7.20.7.ebuild:
   ppc stable #304787
