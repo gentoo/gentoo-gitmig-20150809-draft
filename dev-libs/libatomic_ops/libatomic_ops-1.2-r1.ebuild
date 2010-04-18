@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/libatomic_ops-1.2-r1.ebuild,v 1.13 2010/04/09 18:53:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/libatomic_ops-1.2-r1.ebuild,v 1.14 2010/04/18 21:02:31 pchrist Exp $
 
 inherit eutils autotools
 
@@ -22,7 +22,7 @@ src_unpack(){
 	epatch "${FILESDIR}"/${P}-ppc64-load_acquire.patch
 	epatch "${FILESDIR}"/${P}-ppc-asm.patch
 	epatch "${FILESDIR}"/${P}-sh4.patch
-
+	epatch "${FILESDIR}"/${P}-fix-makefile-am-generic.patch
 	eautoreconf
 }
 
