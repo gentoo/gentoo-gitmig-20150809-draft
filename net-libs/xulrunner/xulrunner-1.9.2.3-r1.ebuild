@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.3-r1.ebuild,v 1.2 2010/04/11 21:13:09 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.3-r1.ebuild,v 1.3 2010/04/18 16:03:09 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -73,6 +73,9 @@ src_prepare() {
 
 	# Ensure we find myspell dict.
 	epatch "${FILESDIR}/1002_fix-system-hunspell-dict-detections.patch"
+
+	# Allow user to apply additional patches without modifing ebuild
+	epatch_user
 
 	# Same as in config/autoconf.mk.in
 	MOZLIBDIR="/usr/$(get_libdir)/${PN}-${MAJ_PV}"
