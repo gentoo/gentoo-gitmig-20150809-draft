@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.138 2010/04/10 04:06:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.139 2010/04/18 19:27:06 pacho Exp $
+
+  18 Apr 2010; Pacho Ramos <pacho@gentoo.org> nspr-4.8.4.ebuild:
+  amd64 stable, bug 314025
 
   10 Apr 2010; <anarchy@gentoo.org> -files/nspr-4.6.1-gcc-visibility.patch,
   -files/nspr-4.6.1-prtime.patch, -nspr-4.6.8.ebuild, -nspr-4.7.3.ebuild,

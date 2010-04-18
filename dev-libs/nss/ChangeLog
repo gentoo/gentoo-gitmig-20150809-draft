@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.176 2010/04/10 04:00:45 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.177 2010/04/18 19:28:05 pacho Exp $
+
+  18 Apr 2010; Pacho Ramos <pacho@gentoo.org> nss-3.12.6-r1.ebuild:
+  amd64 stable, bug 314025
 
   10 Apr 2010; <anarchy@gentoo.org> -files/3.12-nss.pc.in,
   -files/nss-3.11.5-config-1.patch, -nss-3.11.9-r1.ebuild,
