@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.528 2010/04/18 13:33:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.529 2010/04/18 13:40:03 suka Exp $
+
+  18 Apr 2010; Andreas Proschofsky <suka@gentoo.org>
+  -openoffice-3.1.1.ebuild, -files/gentoo-3.1.1.diff,
+  -files/Gentoo_ODK_install.patch, -files/base64.diff,
+  -files/nocairofonts.diff:
+  Remove openoffice 3.1.1 for security bug #305195
 
   18 Apr 2010; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.2.0.ebuild:
