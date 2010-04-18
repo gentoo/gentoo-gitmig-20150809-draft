@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.205 2010/03/30 16:39:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.206 2010/04/18 10:10:02 pacho Exp $
+
+  18 Apr 2010; Pacho Ramos <pacho@gentoo.org> librsvg-2.26.2.ebuild,
+  +files/librsvg-2.26.2-choosable-tools.patch, metadata.xml:
+  Build misc tools only when desired (bug #226231). Thanks a lot to Didier
+  Barvaux for his work on this.
 
 *librsvg-2.26.2 (30 Mar 2010)
 

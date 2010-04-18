@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.26.2.ebuild,v 1.1 2010/03/30 16:39:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.26.2.ebuild,v 1.2 2010/04/18 10:10:03 pacho Exp $
 
-inherit eutils gnome2 multilib
+inherit autotools eutils gnome2 multilib
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
@@ -10,7 +10,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc zlib"
+IUSE="doc tools zlib"
 
 RDEPEND=">=media-libs/fontconfig-1.0.1
 	>=media-libs/freetype-2
@@ -30,6 +30,7 @@ DOCS="AUTHORS ChangeLog README NEWS TODO"
 pkg_setup() {
 	# croco is forced on to respect SVG specification
 	G2CONF="${G2CONF}
+		$(use_enable tools)
 		$(use_with zlib svgz)
 		--with-croco
 		--enable-pixbuf-loader
@@ -41,6 +42,10 @@ src_unpack() {
 
 	# gcc-4.3.2-r3 related segfault with various apps like firefox -- bug 239992
 	epatch "${FILESDIR}/${PN}-2.22.3-fix-segfault-with-firefox.patch"
+
+	# Build extra tools only when desired, bug 226231
+	epatch "${FILESDIR}/${P}-choosable-tools.patch"
+	eautoreconf
 }
 
 set_gtk_confdir() {
