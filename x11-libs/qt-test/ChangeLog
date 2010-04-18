@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.63 2010/03/03 11:52:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.64 2010/04/18 13:00:05 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> qt-test-4.6.2.ebuild:
+  ppc stable #297299
 
   03 Mar 2010; Christian Faulhammer <fauli@gentoo.org> qt-test-4.6.2.ebuild:
   stable x86, bug 297299
