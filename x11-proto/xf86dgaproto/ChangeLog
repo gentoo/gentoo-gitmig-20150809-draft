@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86dgaproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.44 2010/04/16 21:45:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.45 2010/04/18 16:36:14 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> xf86dgaproto-2.1.ebuild:
+  ppc stable #308521
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org> xf86dgaproto-2.1.ebuild:
   amd64 stable, bug 308521

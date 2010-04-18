@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86vidmodeproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.35 2010/04/16 21:47:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.36 2010/04/18 16:36:42 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> xf86vidmodeproto-2.3.ebuild:
+  ppc stable #308521
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org> xf86vidmodeproto-2.3.ebuild:
   amd64 stable, bug 308521
