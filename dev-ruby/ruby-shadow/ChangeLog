@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shadow
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.10 2010/04/16 18:29:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.11 2010/04/18 17:32:15 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> ruby-shadow-1.4.1-r1.ebuild:
+  ppc stable #312953
 
   16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   ruby-shadow-1.4.1-r1.ebuild:
