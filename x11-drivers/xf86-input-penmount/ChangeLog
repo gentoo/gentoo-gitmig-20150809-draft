@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-penmount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/ChangeLog,v 1.60 2010/04/16 21:22:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/ChangeLog,v 1.61 2010/04/18 16:25:05 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> xf86-input-penmount-1.4.1.ebuild:
+  ppc stable #308521
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org>
   xf86-input-penmount-1.4.1.ebuild:
