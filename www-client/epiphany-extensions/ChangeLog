@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.122 2010/03/13 11:14:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.123 2010/04/18 19:31:23 pacho Exp $
+
+  18 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  epiphany-extensions-2.26.1-r1.ebuild:
+  amd64 stable, bug 314025
 
 *epiphany-extensions-2.28.1-r2 (13 Mar 2010)
 

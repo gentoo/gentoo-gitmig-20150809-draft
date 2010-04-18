@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.236 2010/04/14 18:36:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.237 2010/04/18 19:30:25 pacho Exp $
+
+  18 Apr 2010; Pacho Ramos <pacho@gentoo.org> epiphany-2.26.3-r4.ebuild:
+  amd64 stable, bug 314025
 
   14 Apr 2010; Pacho Ramos <pacho@gentoo.org> epiphany-2.26.3-r4.ebuild:
   Add a message suggesting people to remove old compreg.dat file to make
