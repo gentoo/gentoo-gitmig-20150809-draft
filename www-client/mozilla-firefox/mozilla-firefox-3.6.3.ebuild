@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.3.ebuild,v 1.1 2010/04/05 05:09:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.3.ebuild,v 1.2 2010/04/18 16:05:46 anarchy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -131,6 +131,9 @@ src_prepare() {
 
 	# Fix broken alignment
 	epatch "${FILESDIR}/1000_fix_alignment.patch"
+
+	# Allow user to apply additional patches without modifing ebuild
+	epatch_user
 
 	eautoreconf
 
