@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.9.97.ebuild,v 1.3 2010/02/11 18:40:27 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.10.2.ebuild,v 1.1 2010/04/18 23:23:04 spatz Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	>=kde-base/kapptemplate-${KDE_MINIMAL}
+	cxx? ( >=sys-devel/gdb-7.0[python] )
 "
 
 src_prepare() {
@@ -53,21 +54,4 @@ src_configure() {
 	)
 
 	kde4-base_src_configure
-}
-
-src_install() {
-	kde4-base_src_install
-
-	rm "${D}/${PREFIX}"/share/apps/kdevappwizard/templates/qmake_qt4guiapp.tar.bz2
-	rm "${D}/${PREFIX}"/share/icons/hicolor/22x22/actions/output_win.png
-}
-
-pkg_postinst() {
-	kde4-base_pkg_postinst
-
-	echo
-	elog "For extra functionality you should look at following packages:"
-	elog "dev-util/valgrind          allows you to do memory leak check."
-	elog ">=sys-devel/gdb-7.0        (RECOMMENDED) required by debugger frontend."
-	echo
 }

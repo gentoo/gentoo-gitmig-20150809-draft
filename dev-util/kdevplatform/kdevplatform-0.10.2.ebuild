@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.98.ebuild,v 1.3 2010/03/17 17:07:35 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.10.2.ebuild,v 1.1 2010/04/18 23:22:50 spatz Exp $
 
 EAPI="2"
 
@@ -21,21 +21,22 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 SLOT="4"
 # Moved to playground for now
-# bazaar git
-IUSE="cvs debug mercurial subversion"
+# bazaar git kompare mercurial
+IUSE="cvs debug subversion"
 
-DEPEND="
-	dev-libs/boost
-	subversion? ( >=dev-util/subversion-1.3 )
-"
 # Moved to playground for now
-# bazaar? ( dev-util/bzr )
+# bazaar? ( dev-vcs/bzr )
+# kompare? ( >=kde-base/kompare-${KDE_MINIMAL} )
+# mercurial? ( dev-vcs/mercurial )
 # git? ( dev-vcs/git )
 # block - some plugins moved to kdevplatform from kdevelop
+DEPEND="
+	dev-libs/boost
+	cvs? ( dev-util/cvs )
+	subversion? ( >=dev-util/subversion-1.3 )
+"
 RDEPEND="${DEPEND}
 	!<dev-util/kdevelop-${KDEVELOP_PV}
-	cvs? ( dev-util/cvs )
-	mercurial? ( dev-vcs/mercurial )
 "
 
 src_prepare() {
@@ -50,10 +51,11 @@ src_prepare() {
 # Moved to playground for now
 # $(cmake-utils_use_build bazaar)
 # $(cmake-utils_use_build git)
+# $(cmake-utils_use_with kompare)
+# $(cmake-utils_use_build mercurial)
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_build cvs)
-		$(cmake-utils_use_build mercurial)
 		$(cmake-utils_use_build subversion)
 		$(cmake-utils_use_with subversion SubversionLibrary)
 	)
