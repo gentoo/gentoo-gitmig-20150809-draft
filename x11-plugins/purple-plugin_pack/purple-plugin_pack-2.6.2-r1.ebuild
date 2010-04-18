@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.2-r1.ebuild,v 1.2 2010/03/31 12:33:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.2-r1.ebuild,v 1.3 2010/04/18 16:51:01 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc x86"
+KEYWORDS="~amd64 ~hppa ppc x86"
 IUSE="debug gtk ncurses spell talkfilters"
 
 RDEPEND="net-im/pidgin[gtk?,ncurses?]

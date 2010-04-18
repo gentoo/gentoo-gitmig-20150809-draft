@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-hotkeys
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.13 2010/03/31 12:20:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.14 2010/04/18 16:48:25 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> pidgin-hotkeys-0.2.4.ebuild:
+  ppc stable #310021
 
   31 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   pidgin-hotkeys-0.2.4.ebuild:
