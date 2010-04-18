@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.33 2010/02/21 18:21:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.34 2010/04/18 17:07:39 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> pysnmp-4.1.13a.ebuild:
+  ppc stable #311357
 
 *pysnmp-4.1.13a (21 Feb 2010)
 

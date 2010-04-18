@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.13a.ebuild,v 1.1 2010/02/21 18:21:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.13a.ebuild,v 1.2 2010/04/18 17:07:39 nixnut Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-python/pyasn1-0.0.6a
