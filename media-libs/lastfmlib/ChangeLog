@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lastfmlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/ChangeLog,v 1.9 2010/04/16 09:19:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/ChangeLog,v 1.10 2010/04/18 12:28:15 maekke Exp $
+
+  18 Apr 2010; Markus Meier <maekke@gentoo.org> lastfmlib-0.4.0.ebuild:
+  amd64 stable, bug #284886
 
   16 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   lastfmlib-0.4.0.ebuild:
