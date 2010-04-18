@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.43 2010/04/13 17:53:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.44 2010/04/18 12:36:13 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> automake-wrapper-4.ebuild:
+  ppc stable #295947
 
   13 Apr 2010; Raúl Porcel <armin76@gentoo.org> automake-wrapper-4.ebuild:
   alpha/sparc stable wrt #295947
