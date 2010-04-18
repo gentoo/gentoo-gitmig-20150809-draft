@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.92 2010/04/16 18:55:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.93 2010/04/18 17:26:42 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> pygobject-2.20.0.ebuild:
+  ppc stable #312877
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org> pygobject-2.20.0.ebuild:
   amd64 stable, bug 312877
