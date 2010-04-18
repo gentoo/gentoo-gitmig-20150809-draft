@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.7.ebuild,v 1.2 2009/11/24 14:09:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.7.ebuild,v 1.3 2010/04/18 00:23:14 josejx Exp $
 
 EAPI=2
-inherit toolchain-funcs eutils
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="A lightweight console based player for Last.FM radio streams"
 HOMEPAGE="http://nex.scrapping.cc/shell-fm/"
@@ -24,12 +24,14 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-asneeded.patch"
-
 	sed -i -e "s:-Os::" source/Makefile || die "sed failed"
 }
 
 src_compile() {
 	tc-export CC
+	if use ppc; then
+		append-flags -DWORDS_BIGENDIAN=1
+	fi
 	emake || die "emake failed"
 }
 

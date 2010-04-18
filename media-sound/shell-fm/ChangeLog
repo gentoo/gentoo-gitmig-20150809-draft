@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/shell-fm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.12 2009/11/24 14:09:05 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.13 2010/04/18 00:23:14 josejx Exp $
+
+  18 Apr 2010; Joseph Jezak <josejx@gentoo.org> shell-fm-0.7.ebuild:
+  Add flags for ppc to build with big endian support, fixes bug #303667.
 
   24 Nov 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -shell-fm-0.6.ebuild, shell-fm-0.7.ebuild,
