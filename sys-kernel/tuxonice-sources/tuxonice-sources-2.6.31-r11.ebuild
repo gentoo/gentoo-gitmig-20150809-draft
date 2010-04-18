@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.31-r11.ebuild,v 1.1 2010/03/27 20:20:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.31-r11.ebuild,v 1.2 2010/04/18 10:59:35 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -39,6 +39,7 @@ RDEPEND="${RDEPEND}
 K_EXTRAELOG="If there are issues with this kernel, please direct any
 queries to the tuxonice-users mailing list:
 http://lists.tuxonice.net/mailman/listinfo/tuxonice-users/"
+K_SECURITY_UNSUPPORTED="1"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
