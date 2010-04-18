@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.4.9.ebuild,v 1.3 2010/04/14 20:25:14 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.4.9.ebuild,v 1.4 2010/04/18 08:40:39 grobian Exp $
 
 # At some point URW++ released fonts under GPL license. After that they were took
 # and improved by Valek Filippov and this work was somehow related with AFPL...
@@ -30,7 +30,7 @@ DESCRIPTION="free good quality fonts gpl'd by URW++"
 HOMEPAGE="http://www.urwpp.de/"
 SRC_URI="mirror://gentoo/${PN}-${MY_PV}.fc13.src.rpm"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 LICENSE="GPL-2"
 SLOT="0"

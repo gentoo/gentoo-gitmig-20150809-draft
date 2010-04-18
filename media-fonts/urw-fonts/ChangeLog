@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.45 2010/04/14 20:25:14 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.46 2010/04/18 08:40:39 grobian Exp $
+
+  18 Apr 2010; Fabian Groffen <grobian@gentoo.org> urw-fonts-2.4.9.ebuild:
+  Marked ~x86-macos
 
   14 Apr 2010; Dror Levin <spatz@gentoo.org> urw-fonts-2.4.9.ebuild:
   Add block on media-fonts/gnu-gs-fonts-other for bug 311923.
