@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/icon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.39 2010/04/14 19:44:51 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.40 2010/04/18 20:33:15 truedfx Exp $
+
+*icon-9.5.0 (18 Apr 2010)
+
+  18 Apr 2010; Harald van Dĳk <truedfx@gentoo.org> +icon-9.5.0.ebuild,
+  +files/icon-9.5.0-flags.patch:
+  Version bump, bug #314949
 
   14 Apr 2010; Harald van Dĳk <truedfx@gentoo.org>
   files/icon-9.4.3-flags.patch:
