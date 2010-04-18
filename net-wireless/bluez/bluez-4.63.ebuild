@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.63.ebuild,v 1.1 2010/03/27 15:45:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.63.ebuild,v 1.2 2010/04/18 11:09:34 betelgeuse Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ CDEPEND="alsa? (
 	usb? ( dev-libs/libusb )
 	cups? ( net-print/cups )
 	sys-fs/udev
-	dev-libs/glib
+	>=dev-libs/glib-2.14
 	sys-apps/dbus
 	media-libs/libsndfile
 	>=dev-libs/libnl-1.1
