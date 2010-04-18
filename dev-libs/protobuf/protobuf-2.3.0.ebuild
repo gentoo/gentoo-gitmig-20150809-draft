@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.3 2010/04/18 13:15:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.4 2010/04/18 13:44:22 nelchael Exp $
 
 EAPI="2"
 
@@ -24,8 +24,14 @@ DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )
 	emacs? ( virtual/emacs )"
 
+PYTHON_MODNAME="google/protobuf"
+DISTUTILS_SRC_TEST="setup.py"
+
 src_prepare() {
-	use python && python_convert_shebangs -r 2 .
+	use python && {
+		python_convert_shebangs -r 2 .
+		distutils_src_prepare
+	}
 }
 
 src_compile() {
@@ -89,7 +95,7 @@ src_test() {
 
 	if use python; then
 		 pushd python
-		 "$(PYTHON)" setup.py test || die "python tests failed"
+		 distutils_src_test
 		 popd
 	fi
 }
@@ -100,8 +106,10 @@ pkg_setup() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
+	use python && distutils_pkg_postinst
 }
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
+	use python && distutils_pkg_postrm
 }
