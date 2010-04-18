@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.75 2010/04/16 21:34:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.76 2010/04/18 16:29:21 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> libXt-1.0.8.ebuild:
+  ppc stable #308521
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org> libXt-1.0.8.ebuild:
   amd64 stable, bug 308521
