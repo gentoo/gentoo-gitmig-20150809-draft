@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.85.1-r1.ebuild,v 1.1 2010/01/23 13:38:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.85.1-r1.ebuild,v 1.2 2010/04/18 14:38:16 hwoarang Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/gnome2-gconf
 	drawing? ( dev-perl/Goo-Canvas  )
 	webphoto? ( gnome-extra/gnome-web-photo )
-	media-gfx/imagemagick
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	dev-perl/libxml-perl
 	dev-perl/gnome2-wnck
 	dev-perl/gnome2-canvas

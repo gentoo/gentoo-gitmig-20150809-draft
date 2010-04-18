@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/shutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.6 2010/01/23 13:38:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.7 2010/04/18 14:38:16 hwoarang Exp $
+
+*shutter-0.86.1 (18 Apr 2010)
+
+  18 Apr 2010; Markos Chandras <hwoarang@gentoo.org> -shutter-0.80.1.ebuild,
+  shutter-0.85.ebuild, shutter-0.85.1-r1.ebuild, +shutter-0.86.1.ebuild:
+  Version bump. Fixes bug #315923. Fix imagemagick dependencies wrt bug
+  #314399
 
   23 Jan 2010; <hwoarang@gentoo.org> -shutter-0.85.1.ebuild,
   +shutter-0.85.1-r1.ebuild:
