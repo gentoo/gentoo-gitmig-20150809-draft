@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11461 2010/04/17 18:42:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11462 2010/04/18 01:46:34 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (18 Apr 2010)
+# Included in Zope >=2.8.1. Masked for deletion in 30 days (bug #312501).
+net-zope/verbosesecurity
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (17 Apr 2010)
 # Masked until the tarballs are released.
