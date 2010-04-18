@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.87 2010/03/29 22:31:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.88 2010/04/18 12:39:27 nelchael Exp $
+
+*hibernate-script-2.0-r2 (18 Apr 2010)
+
+  18 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +hibernate-script-2.0-r2.ebuild:
+  Revision bump for new patches: fixes bug #279067.
 
   29 Mar 2010; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
   Update my first name.
