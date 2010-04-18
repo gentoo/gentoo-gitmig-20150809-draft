@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.609 2010/04/18 16:05:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.610 2010/04/18 19:04:45 volkmar Exp $
+
+  18 Apr 2010; Mounir Lamouri <volkmar@gentoo.org>
+  mozilla-firefox-2.0.0.19.ebuild, metadata.xml:
+  Removing noscript dep (bug 315999) and restrict-javascript USE flag.
 
   18 Apr 2010; <anarchy@gentoo.org> mozilla-firefox-3.6.3.ebuild:
   make use of epatch_user

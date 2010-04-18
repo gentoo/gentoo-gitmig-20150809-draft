@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.19.ebuild,v 1.9 2009/07/21 15:11:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.19.ebuild,v 1.10 2010/04/18 19:04:45 volkmar Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="java mozdevelop bindist xforms restrict-javascript filepicker iceweasel"
+IUSE="java mozdevelop bindist xforms filepicker iceweasel"
 
 MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}"
 SRC_URI="${MOZ_URI}/source/firefox-${PV}-source.tar.bz2
@@ -52,8 +52,6 @@ RDEPEND="java? ( virtual/jre )
 
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
-
-PDEPEND="restrict-javascript? ( www-plugins/noscript )"
 
 S="${WORKDIR}/mozilla"
 
