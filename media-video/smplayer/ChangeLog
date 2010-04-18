@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.89 2010/04/05 22:52:21 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.90 2010/04/18 17:08:54 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> smplayer-0.6.9.ebuild:
+  ppc stable #311491
 
   05 Apr 2010; Alex Alexander <wired@gentoo.org> smplayer-0.6.9.ebuild:
   added ~arm keyword
