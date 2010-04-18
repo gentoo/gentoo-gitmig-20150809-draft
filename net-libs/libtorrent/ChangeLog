@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.149 2010/04/03 15:49:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.150 2010/04/18 17:01:23 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> libtorrent-0.12.6.ebuild:
+  ppc stable #311143
 
   03 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libtorrent-0.12.6.ebuild:
