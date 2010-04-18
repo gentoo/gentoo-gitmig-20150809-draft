@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.69 2010/04/18 13:54:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.70 2010/04/18 14:01:05 ssuominen Exp $
+
+  18 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  redland-1.0.10-r1.ebuild:
+  amd64 stable wrt #301306
 
   18 Apr 2010; <nixnut@gentoo.org> redland-1.0.10-r1.ebuild:
   ppc stable #301306
