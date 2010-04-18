@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.21 2010/04/18 13:28:43 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.22 2010/04/18 13:33:58 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -147,7 +147,7 @@ pkg_setup() {
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
-	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
+	ewarn " package and use aggressive CFLAGS, lower the CFLAGS and try to  "
 	ewarn " merge again. "
 	ewarn
 	ewarn " Also if you experience a build break, please make sure to retry "

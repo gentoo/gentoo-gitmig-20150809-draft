@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.527 2010/04/18 13:28:43 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.528 2010/04/18 13:33:58 suka Exp $
+
+  18 Apr 2010; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.2.0.ebuild:
+  Minor spelling fix, bug #308419
 
   18 Apr 2010; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.2.0.ebuild, files/gentoo-3.2.0.diff:
