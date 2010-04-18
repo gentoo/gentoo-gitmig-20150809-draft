@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.1-r1.ebuild,v 1.1 2010/04/12 07:11:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.1-r1.ebuild,v 1.2 2010/04/18 12:31:02 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 WANT_AUTOCONF="2.5"
 RUBY_OPTIONAL="yes"
@@ -80,11 +80,14 @@ src_prepare() {
 		swig/ruby/RubyMakefile.mk || die "sed failed"
 
 	epatch "${FILESDIR}"/${PN}-1.4.2-datadir.patch \
-	    "${FILESDIR}"/${PN}-1.5.0-soname.patch \
 	    "${FILESDIR}"/${PN}-1.5.1-python-install.patch \
 	    "${FILESDIR}"/${PN}-1.6.0-swig-fix.patch \
 	    "${FILESDIR}"/${PN}-1.6.1-ruby-make.patch \
 	    "${FILESDIR}"/${P}-warp_fix.patch
+
+	[[ ${CHOST} == *-darwin* ]] \
+		&& epatch "${FILESDIR}"/${PN}-1.5.0-install_name.patch \
+		|| epatch "${FILESDIR}"/${PN}-1.5.0-soname.patch
 
 	if useq hdf && useq netcdf; then
 		ewarn "Netcdf and HDF4 are incompatible due to certain tools in"
@@ -98,23 +101,23 @@ src_configure() {
 	local use_conf=""
 
 	pkg_conf="${pkg_conf} --enable-shared=yes --with-pic \
-		--with-libgrass=no --without-libtool"
+		--with-libgrass=no --without-libtool --with-expat=${EPREFIX}/usr"
 
-	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
+	use_conf="$(use_with jpeg) $(use_with jpeg pcidsk) $(use_with png) $(use_with mysql) \
 	    $(use_with postgres pg) $(use_with python) $(use_with ruby) \
 	    $(use_with threads) $(use_with fits cfitsio) $(use_with perl) \
 	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
-	    $(use_with sqlite sqlite3) $(use_with jpeg2k jasper) $(use_with odbc) \
+	    $(use_with sqlite sqlite3 "${EPREFIX}"/usr) $(use_with jpeg2k jasper) $(use_with odbc) \
 	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl) \
 	    $(use_enable debug)"
 
 	# It can't find this
 	if useq ogdi ; then
-	    use_conf="--with-ogdi=/usr ${use_conf}"
+	    use_conf="--with-ogdi=${EPREFIX}/usr ${use_conf}"
 	fi
 
 	if useq mysql ; then
-	    use_conf="--with-mysql=/usr/bin/mysql_config ${use_conf}"
+	    use_conf="--with-mysql=${EPREFIX}/usr/bin/mysql_config ${use_conf}"
 	fi
 
 	if useq gif ; then
