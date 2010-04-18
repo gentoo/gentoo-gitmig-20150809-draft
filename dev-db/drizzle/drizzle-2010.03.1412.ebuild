@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.03.1412.ebuild,v 1.2 2010/04/17 18:41:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.03.1412.ebuild,v 1.3 2010/04/18 16:39:22 mr_bones_ Exp $
 
 EAPI=2
 
@@ -56,7 +56,7 @@ src_configure() {
 	if use debug; then
 		append-flags -DDEBUG
 	fi
-	
+
 	# while I applaud upstreams goal of 0 compiler warnings
 	# the 1412 release didn't achieve it.
 	append-flags -Wno-error
@@ -80,7 +80,7 @@ src_configure() {
 		--with-logging_stats \
 		--without-hello-world-plugin \
 		${myconf}
-	
+
 	# upstream TODO:
 	# --without-all \
 	# broken atm
