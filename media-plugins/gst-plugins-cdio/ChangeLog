@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-cdio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.34 2010/03/24 20:16:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdio/ChangeLog,v 1.35 2010/04/18 15:50:55 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> gst-plugins-cdio-0.10.13.ebuild:
+  ppc stable #308379
 
   24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-cdio-0.10.13.ebuild:
