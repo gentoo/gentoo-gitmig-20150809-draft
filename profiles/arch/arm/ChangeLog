@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.73 2010/04/17 18:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.74 2010/04/18 19:19:42 armin76 Exp $
+
+  18 Apr 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask ocamlopt
 
   17 Apr 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
   Move fits from p.use.mask to use.mask
