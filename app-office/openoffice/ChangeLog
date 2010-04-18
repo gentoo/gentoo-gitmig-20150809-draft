@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.526 2010/04/17 23:52:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.527 2010/04/18 13:28:43 suka Exp $
+
+  18 Apr 2010; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.2.0.ebuild, files/gentoo-3.2.0.diff:
+  Patchset bump to ooo-build-3.2.0.10, also fix upstream tarball mess-up
 
   17 Apr 2010; Joseph Jezak <josejx@gentoo.org> openoffice-3.2.0.ebuild:
   Marked ppc stable for bug #305195.
