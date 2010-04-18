@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXxf86dga
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.48 2010/04/18 16:30:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.49 2010/04/18 20:37:33 maekke Exp $
+
+  18 Apr 2010; Markus Meier <maekke@gentoo.org> libXxf86dga-1.1.1.ebuild:
+  arm stable, bug #308521
 
   18 Apr 2010; <nixnut@gentoo.org> libXxf86dga-1.1.1.ebuild:
   ppc stable #308521
