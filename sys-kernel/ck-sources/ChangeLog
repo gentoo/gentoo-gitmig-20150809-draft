@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.167 2010/04/18 00:01:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.168 2010/04/18 10:38:35 nelchael Exp $
+
+  18 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  ck-sources-2.6.32.ebuild, ck-sources-2.6.33.ebuild:
+  Add K_SECURITY_UNSUPPORTED to mark this kernels as not supported by
+  security team.
 
 *ck-sources-2.6.33 (17 Apr 2010)
 *ck-sources-2.6.32 (17 Apr 2010)
