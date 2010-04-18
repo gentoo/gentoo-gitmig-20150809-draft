@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gstreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.30 2010/01/15 13:46:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.31 2010/04/18 12:23:09 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> ruby-gstreamer-0.19.1.ebuild:
+  ppc stable #295942
 
 *ruby-gstreamer-0.19.3 (15 Jan 2010)
 

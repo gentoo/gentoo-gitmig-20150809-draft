@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-rsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.13 2010/01/16 06:56:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.14 2010/04/18 12:26:23 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> ruby-rsvg-0.19.1.ebuild:
+  ppc stable #295942
 
 *ruby-rsvg-0.19.3 (16 Jan 2010)
 

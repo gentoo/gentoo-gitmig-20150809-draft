@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.16 2010/02/10 16:54:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.17 2010/04/18 12:25:09 nixnut Exp $
+
+  18 Apr 2010; <nixnut@gentoo.org> ruby-poppler-0.19.1.ebuild:
+  ppc stable #295942
 
   10 Feb 2010; Hans de Graaff <graaff@gentoo.org>
   ruby-poppler-0.19.1.ebuild, ruby-poppler-0.19.3.ebuild:
