@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/xinput-1.5.1.ebuild,v 1.4 2010/04/18 16:23:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/xinput-1.5.1.ebuild,v 1.5 2010/04/18 20:41:41 maekke Exp $
 
 inherit x-modular
 
 DESCRIPTION="Utility to set XInput device parameters"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/libX11-1.3
