@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.48 2010/04/11 12:30:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.49 2010/04/18 12:35:34 maekke Exp $
+
+  18 Apr 2010; Markus Meier <maekke@gentoo.org>
+  libdvdnav-4.1.3_p1168.ebuild:
+  x86 stable, bug #308777
 
   11 Apr 2010; <nixnut@gentoo.org> libdvdnav-4.1.3_p1168.ebuild:
   ppc stable #308777
