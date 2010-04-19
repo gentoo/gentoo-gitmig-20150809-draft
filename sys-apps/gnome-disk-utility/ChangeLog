@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gnome-disk-utility
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.2 2009/11/04 21:27:40 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.3 2010/04/19 18:18:17 pacho Exp $
+
+  19 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  -gnome-disk-utility-2.28.0.ebuild, gnome-disk-utility-2.28.1.ebuild,
+  +files/gnome-disk-utility-2.28.1-fix-potfiles_skip.patch:
+  Drop encoding set from POTFILES.skip since it doesn't need it and causes
+  'intltool-update -m' to fail (see bug #313351 , thanks to Diego for
+  reporting). Removing old testing version.
 
 *gnome-disk-utility-2.28.1 (04 Nov 2009)
 
