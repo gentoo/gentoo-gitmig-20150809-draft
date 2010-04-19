@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.8.ebuild,v 1.1 2010/04/19 20:45:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.8.ebuild,v 1.2 2010/04/19 21:16:58 polynomial-c Exp $
 
 EAPI=2
 
@@ -63,7 +63,7 @@ src_install() {
 		myflags+=" INSTALLSITEARCH=${perl_sitearch}"
 	fi
 
-	make DESTDIR="${D}" ${myflags} install || die "make install failed"
+	emake DESTDIR="${D}" ${myflags} install || die "make install failed"
 
 	rm -rf "${D}"/etc
 
