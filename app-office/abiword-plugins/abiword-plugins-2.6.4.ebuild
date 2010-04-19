@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.4.ebuild,v 1.10 2010/02/10 23:02:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.4.ebuild,v 1.11 2010/04/19 21:54:12 eva Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.abisource.com/downloads/abiword/${PV}/source/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="hppa"
 IUSE="cxx debug gnome grammar jabber jpeg libgda math ots pdf readline svg thesaurus wmf wordperfect"
 
 # FIXME: add asio support (better wait on boost 1.35)
