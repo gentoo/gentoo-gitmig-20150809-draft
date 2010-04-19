@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.534 2010/04/19 20:28:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.535 2010/04/19 20:57:35 robbat2 Exp $
+
+*udev-151-r2 (19 Apr 2010)
+
+  19 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> +udev-151-r2.ebuild:
+  Build static libraries as well, for lvm2 to use when building static
+  versions for early boot purposes.
 
   19 Apr 2010; Matthias Schwarzott <zzam@gentoo.org> files/151/udev.initd,
   udev-9999.ebuild:
