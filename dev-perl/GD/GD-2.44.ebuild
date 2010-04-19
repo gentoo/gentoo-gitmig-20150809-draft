@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.44.ebuild,v 1.9 2009/12/23 18:17:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.44.ebuild,v 1.10 2010/04/19 08:56:24 tove Exp $
 
 EAPI=2
 
@@ -34,13 +34,14 @@ DEPEND=">=media-libs/gd-2.0.33
 	)
 	gif? ( media-libs/giflib )"
 
-	SRC_TEST=do
+SRC_TEST=do
 
 src_prepare(){
 	perl-module_src_prepare
 	sed -i "s/use Getopt::Long;/use Getopt::Long qw(:config pass_through);/" \
 		"${S}"/Makefile.PL || die
 }
+
 src_configure() {
 	myconf=""
 	use gif && use animgif && myconf="${myconf},ANIMGIF"
@@ -52,8 +53,14 @@ src_configure() {
 	myconf="-options \"${myconf:1}\""
 	perl-module_src_configure
 }
+
 src_test() {
 	if use png || use jpeg || use gif ; then
+		if has_version ">=media-libs/jpeg-7" ; then
+			# https://rt.cpan.org/Public/Bug/Display.html?id=49053
+			ewarn "Tests fail with >=media-libs/jpeg-7. Skipping tests..."
+			return
+		fi
 		perl-module_src_test
 	else
 		ewarn "The test fails if neither of png, jpeg, gif is in USE!"
