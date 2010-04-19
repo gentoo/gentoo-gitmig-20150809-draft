@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1-r1.ebuild,v 1.3 2010/04/19 17:41:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1-r1.ebuild,v 1.4 2010/04/19 17:51:02 scarabeus Exp $
 
 EAPI=2
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README UPGRADE_0.3"
 
 pkg_setup() {
-	    python_set_active_version 2
+	python_set_active_version 2
 }
 
 src_prepare() {
