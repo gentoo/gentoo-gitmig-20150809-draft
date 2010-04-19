@@ -3,7 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>vostorga@gentoo.org</email>
+		<name>Victor Ostorga</name>
+	</maintainer>
+	<maintainer>
+		<email>iskren.s@gmail.com</email>
+		<name>Iskren Slavov</name>
 	</maintainer>
 	<longdescription>
 	Liferea is a news aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds.  It's
