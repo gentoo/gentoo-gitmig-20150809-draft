@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11467 2010/04/19 11:27:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11468 2010/04/19 13:39:30 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,11 +39,6 @@ www-plugins/noscript
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (18 Apr 2010)
 # Included in Zope >=2.8.1. Masked for deletion in 30 days (bug #312501).
 net-zope/verbosesecurity
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (17 Apr 2010)
-# Masked until the tarballs are released.
-=media-sound/amarok-2.3.0.90
-=media-sound/amarok-utils-2.3.0.90
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (16 Apr 2010)
 # Masked to enforce upgrade which looks like downgrade.
