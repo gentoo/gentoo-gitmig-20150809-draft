@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mead
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.6 2009/02/15 22:57:07 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.7 2010/04/19 07:02:20 jlec Exp $
+
+  19 Apr 2010; Justin Lecher <jlec@gentoo.org> -mead-2.2.5.ebuild,
+  mead-2.2.7.ebuild:
+  Removed old version, removed python support, as numeric is gone
 
 *mead-2.2.7 (15 Feb 2009)
 
