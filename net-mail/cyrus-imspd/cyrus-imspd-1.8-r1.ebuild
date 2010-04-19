@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8-r1.ebuild,v 1.1 2007/12/16 13:48:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.8-r1.ebuild,v 1.2 2010/04/19 10:58:08 flameeyes Exp $
 
 inherit eutils ssl-cert
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 
 	# Cyrus 2.2.x has an extra library.
-	if [ "`best_version '=dev-libs/cyrus-imap-dev-2.2*'`" ] ; then
+	if has_version '>=dev-libs/cyrus-imap-dev-2.2'; then
 		sed -i -e "s:-lcyrus:-lcyrus -lcyrus_min:" \
 			"${S}/imsp/Makefile.in" \
 			"${S}/cmulocal/libcyrus.m4" || die "sed failed"
@@ -36,7 +36,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_with ldap ldap ldap) \
+		$(use_with ldap) \
 		$(use_enable kerberos gssapi) \
 		--without-krb \
 		--with-auth=unix
@@ -49,23 +49,23 @@ src_compile() {
 }
 
 src_install() {
-	newsbin imsp/cyrus-imspd imspd
+	newsbin imsp/cyrus-imspd imspd || die
 
-	newinitd "${FILESDIR}/imspd.rc6" imspd
-	newconfd "${FILESDIR}/imspd.conf" imspd
+	newinitd "${FILESDIR}/imspd.rc6" imspd || die
+	newconfd "${FILESDIR}/imspd.conf" imspd || die
 
 	keepdir /var/imsp{,/user}
 
 	if use ssl ; then
 		insinto /etc/stunnel
-		newins "${FILESDIR}/stunnel.conf" imspd.conf
+		newins "${FILESDIR}/stunnel.conf" imspd.conf || die
 	fi
-	dodoc README imsp/options.sample notes/*
+	dodoc README imsp/options.sample notes/* || die
 }
 
 pkg_postinst() {
 	if use ssl ; then
-		dosed "s:#IMSPD_USE_SSL:IMSPD_USE_SSL:" "${ROOT:-/}"etc/conf.d/imsp
+		sed -i -e "s:#IMSPD_USE_SSL:IMSPD_USE_SSL:" "${ROOT:-/}"etc/conf.d/imsp
 		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Cyrus IMSP Server}"
 		install_cert /etc/ssl/imspd/server
 	fi

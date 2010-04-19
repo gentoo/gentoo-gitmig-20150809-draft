@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imspd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.18 2007/12/26 21:54:03 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.19 2010/04/19 10:58:08 flameeyes Exp $
+
+  19 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  cyrus-imspd-1.8-r1.ebuild:
+  QA: fix some obvious mistakes, make sure to die if the newsbin fails (bug
+  #298587); fix build with cyrus-imap-dev-2.3.
 
   26 Dec 2007; Christian Heim <phreak@gentoo.org>
   -files/digest-cyrus-imspd-1.8:
