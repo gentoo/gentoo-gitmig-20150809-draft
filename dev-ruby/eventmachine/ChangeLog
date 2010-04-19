@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/eventmachine
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.9 2009/12/27 19:49:50 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.10 2010/04/19 11:48:28 flameeyes Exp $
+
+*eventmachine-0.12.10-r2 (19 Apr 2010)
+
+  19 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +eventmachine-0.12.10-r2.ebuild:
+  Add OpenSSL to dependencies, use a trick yo build in parallel, install
+  examples unconditionally, document why jruby is not listed.
 
 *eventmachine-0.12.10-r1 (27 Dec 2009)
 
