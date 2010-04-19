@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/londonlaw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.17 2009/05/20 16:29:55 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.18 2010/04/19 18:42:36 tupone Exp $
+
+  19 Apr 2010; Tupone Alfredo <tupone@gentoo.org> londonlaw-0.2.1-r2.ebuild:
+  Force python2 . Fix bug #312269 by arfrever@gentoo.org
 
   20 May 2009; nixnut <nixnut@gentoo.org> londonlaw-0.2.1-r2.ebuild:
   ppc stable #265236

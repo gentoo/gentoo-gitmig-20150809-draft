@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1-r2.ebuild,v 1.4 2009/05/20 16:29:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/londonlaw-0.2.1-r2.ebuild,v 1.5 2010/04/19 18:42:36 tupone Exp $
+PYTHON_DEPEND="2"
 
-EAPI=1
+EAPI=2
 inherit eutils python games
 
 DESCRIPTION="Clone of the famous Scotland Yard board game"
@@ -14,13 +15,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="dedicated"
 
-DEPEND=">=dev-lang/python-2.3
-	!dedicated? ( dev-python/wxpython:2.6 )
+DEPEND="!dedicated? ( dev-python/wxpython:2.6 )
 	dev-python/twisted"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-setup.py.patch \
 		"${FILESDIR}"/${P}-wxversion.patch
@@ -55,14 +53,14 @@ src_unpack() {
 			londonlaw/server/GameRegistry.py \
 			|| die "sed failed"
 	fi
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
-	python_version
-	python setup.py install \
+	$(PYTHON) setup.py install \
 		--root="${D}" \
 		--prefix="${GAMES_PREFIX}" \
-		--install-lib=/usr/lib/python${PYVER}/site-packages \
+		--install-lib=$(python_get_sitedir) \
 		--install-data="${GAMES_DATADIR}" \
 		|| die "install failed"
 	dodoc ChangeLog README doc/TODO doc/manual.tex doc/readme.protocol
@@ -78,6 +76,11 @@ src_install() {
 	fi
 
 	prepgamesdirs
+}
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
 }
 
 pkg_postinst() {
