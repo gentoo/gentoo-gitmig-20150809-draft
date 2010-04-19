@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/async_sinatra-0.1.5.ebuild,v 1.1 2010/04/19 18:09:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/async_sinatra-0.1.5.ebuild,v 1.2 2010/04/19 18:10:10 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -20,7 +20,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="Asynchronous response API for Sinatra and Thin"
-HOMEPAGE="http://rubyeventmachine.com"
+HOMEPAGE="http://libraggi.rubyforge.org/async_sinatra"
 
 LICENSE="MIT"
 SLOT="0"
