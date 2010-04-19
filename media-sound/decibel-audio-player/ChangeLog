@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/decibel-audio-player
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/ChangeLog,v 1.18 2010/01/10 15:45:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/ChangeLog,v 1.19 2010/04/19 20:35:43 beandog Exp $
+
+*decibel-audio-player-1.03 (19 Apr 2010)
+
+  19 Apr 2010; Steve Dibb <beandog@gentoo.org>
+  +decibel-audio-player-1.03.ebuild, metadata.xml:
+  Version bump, bug 299045; thanks to nightmorph for ebuild; drop sparc due
+  to media-plugins/gst-plugins-wavpack dep
 
   22 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   decibel-audio-player-1.00.ebuild, metadata.xml:
