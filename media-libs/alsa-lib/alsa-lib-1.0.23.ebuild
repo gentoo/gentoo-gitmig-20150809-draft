@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.23.ebuild,v 1.1 2010/04/16 22:12:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.23.ebuild,v 1.2 2010/04/19 16:16:39 arfrever Exp $
 
-inherit eutils libtool
+PYTHON_DEPEND="python? 2"
+
+inherit eutils libtool python
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -16,10 +18,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc debug alisp python"
 
-RDEPEND="python? ( dev-lang/python )"
-DEPEND="${RDEPEND}
-	>=media-sound/alsa-headers-${PV}
+DEPEND=">=media-sound/alsa-headers-${PV}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
+RDEPEND=""
 
 IUSE_PCM_PLUGIN="copy linear route mulaw alaw adpcm rate plug multi shm file
 null empty share meter mmap_emul hooks lfloat ladspa dmix dshare dsnoop asym iec958
@@ -35,6 +36,10 @@ pkg_setup() {
 		ewarn "(which is being set in the profile UNLESS you unset them) or alsa based applications"
 		ewarn "are going to *misbehave* !"
 		epause 5
+	fi
+
+	if use python; then
+		python_set_active_version 2
 	fi
 }
 
@@ -62,8 +67,7 @@ src_compile() {
 		$(use_enable python) \
 		--with-pcm-plugins="${ALSA_PCM_PLUGINS}" \
 		--disable-dependency-tracking \
-		${myconf} \
-		|| die "configure failed"
+		${myconf}
 
 	emake || die "make failed"
 

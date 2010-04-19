@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.307 2010/04/16 22:12:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.308 2010/04/19 16:16:39 arfrever Exp $
+
+  19 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  alsa-lib-1.0.23.ebuild:
+  Use Python 2 (bug #313521).
 
 *alsa-lib-1.0.23 (16 Apr 2010)
 
