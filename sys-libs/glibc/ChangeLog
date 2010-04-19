@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.679 2010/02/15 06:18:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.680 2010/04/19 17:48:25 armin76 Exp $
+
+  19 Apr 2010; Raúl Porcel <armin76@gentoo.org> glibc-2.10.1-r1.ebuild:
+  sh stable
 
   15 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   glibc-2.9_p20081201-r2.ebuild:
