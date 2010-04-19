@@ -1,6 +1,14 @@
 # ChangeLog for net-im/silc-client
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.55 2008/11/27 10:29:18 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.56 2010/04/19 20:45:53 polynomial-c Exp $
+
+*silc-client-1.1.8 (19 Apr 2010)
+
+  19 Apr 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +silc-client-1.1.8.ebuild, +files/silc-client-1.1.8-docdir.patch:
+  non-maintainer commit: version bump for security bug #284561
+  Converted ebuild to EAPI-2 and did some cleanups but there are still some
+  QA warnings about LDFLAGS.
 
 *silc-client-1.1.6 (27 Nov 2008)
 
