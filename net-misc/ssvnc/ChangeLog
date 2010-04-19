@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ssvnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.10 2010/01/10 20:37:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.11 2010/04/19 21:39:12 vapier Exp $
+
+  19 Apr 2010; Mike Frysinger <vapier@gentoo.org> ssvnc-1.0.25.ebuild:
+  Mark amd64/x86 stable.
 
   10 Jan 2010; Mike Frysinger <vapier@gentoo.org> files/Makefile.vncviewer:
   Add more build flags from old imake #299890 by Marcel Pennewiß.
