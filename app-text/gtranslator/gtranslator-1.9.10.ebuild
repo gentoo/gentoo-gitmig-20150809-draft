@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.8.ebuild,v 1.2 2010/04/05 02:51:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.10.ebuild,v 1.1 2010/04/19 20:21:02 eva Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -18,6 +18,7 @@ IUSE="doc http gnome spell"
 RDEPEND="
 	>=dev-libs/glib-2.16:2
 	>=dev-libs/gdl-2.26
+	>=dev-libs/libunique-1
 	>=dev-libs/libxml2-2.4.12
 	>=gnome-base/gconf-2.18
 	>=sys-libs/db-4.3
@@ -35,6 +36,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	dev-util/pkgconfig
 	app-text/gnome-doc-utils
+	app-text/docbook-xml-dtd:4.1.2
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README THANKS TODO"
