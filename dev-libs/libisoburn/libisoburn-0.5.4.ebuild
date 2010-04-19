@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.4.8.ebuild,v 1.1 2010/01/26 18:28:47 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.5.4.ebuild,v 1.1 2010/04/19 20:11:18 billie Exp $
 
 EAPI=2
 
@@ -12,15 +12,15 @@ DESCRIPTION="Enables creation and expansion of ISO-9660 filesystems on all CD/DV
 HOMEPAGE="http://libburnia-project.org/"
 SRC_URI="http://files.libburnia-project.org/releases/${PN}-${MY_PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="acl external-filters external-filters-setuid readline xattr zlib"
 #IUSE="acl cdio external-filters external-filters-setuid readline xattr zlib"
 #Supports libcdio but needs version >=0.83 which is not yet released.
 
-RDEPEND=">=dev-libs/libburn-0.7.6
-	>=dev-libs/libisofs-0.6.26
+RDEPEND=">=dev-libs/libburn-0.7.8
+	>=dev-libs/libisofs-0.6.30
 	acl? ( virtual/acl )
 	readline? ( sys-libs/readline )
 	xattr? ( sys-apps/attr )
@@ -51,7 +51,7 @@ src_install() {
 
 	cd "${S}"/xorriso
 	docinto xorriso
-	dodoc changelog.txt README || die "dodoc failed"
+	dodoc changelog.txt README_gnu_xorriso || die "dodoc failed"
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }
