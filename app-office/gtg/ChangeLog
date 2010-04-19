@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gtg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.5 2010/04/05 04:45:28 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.6 2010/04/19 04:25:35 steev Exp $
+
+*gtg-0.2.4 (19 Apr 2010)
+
+  19 Apr 2010; Steev Klimaszewski <steev@gentoo.org> -gtg-0.2.3.ebuild,
+  +gtg-0.2.4.ebuild:
+  app-office/gtg: Version bump, misc upstream fixes
 
 *gtg-0.2.3 (05 Apr 2010)
 
