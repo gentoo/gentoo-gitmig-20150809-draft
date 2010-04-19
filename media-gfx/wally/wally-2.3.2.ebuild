@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.3.2.ebuild,v 1.2 2010/03/23 20:35:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.3.2.ebuild,v 1.3 2010/04/19 14:44:48 hwoarang Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -20,11 +20,19 @@ DEPEND="media-libs/libexif
 	kde? (	>=kde-base/kdelibs-4.2.0 )"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}-2.2.0-disable_popup.patch" )
+PATCHES=( 
+	"${FILESDIR}/${PN}-2.2.0-disable_popup.patch" 
+	"${FILESDIR}/${P}-disable-plugins.patch"
+)
 
 src_prepare() {
 	kde4-base_src_prepare
 	use kde || epatch "${FILESDIR}/${PN}-2.2.0-disable-kde4.patch"
+}
+
+src_configure() {
+	mycmakeargs="${mycmakeargs} -DSTATIC=FALSE"
+	cmake-utils_src_configure
 }
 
 src_install() {
