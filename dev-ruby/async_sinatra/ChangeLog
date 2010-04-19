@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/async_sinatra
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/ChangeLog,v 1.1 2010/04/19 18:09:22 flameeyes Exp $
+
+*async_sinatra-0.1.5 (19 Apr 2010)
+
+  19 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +async_sinatra-0.1.5.ebuild, +metadata.xml:
+  Initial import of async_sinatra gem.
+
