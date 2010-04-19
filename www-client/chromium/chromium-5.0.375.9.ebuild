@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.3.ebuild,v 1.1 2010/04/14 18:47:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.9.ebuild,v 1.1 2010/04/19 18:55:32 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -72,11 +72,15 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# The 375 branch tarballs have redundant src directory, which makes
+	# our patches apply in the wrong directory.
+	rm -r src || die "rm src failed"
+
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
-	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
+	epatch "${FILESDIR}"/${PN}-drop_sse2-r0.patch
 
 	# Allow supporting more media types provided system ffmpeg supports them.
 	epatch "${FILESDIR}"/${PN}-supported-media-mime-types.patch

@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.86 2010/04/19 09:09:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.87 2010/04/19 18:55:32 phajdan.jr Exp $
+
+*chromium-5.0.375.9 (19 Apr 2010)
+
+  19 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-drop_sse2-r0.patch, -chromium-5.0.375.3.ebuild,
+  +chromium-5.0.375.9.ebuild:
+  Version bump for dev channel release. Should fix problems with H.264 codec
+  support with system ffmpeg, bug #316029 by Daniel Faucon
+  <koolfy@gmail.com>
 
   19 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
   +files/chromium-drop_sse2-r1.patch, chromium-9999.ebuild:
