@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/jdk-with-com-sun-20080505.ebuild,v 1.3 2008/05/30 17:23:26 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/jdk-with-com-sun-20100419.ebuild,v 1.1 2010/04/19 14:38:32 caster Exp $
 
 EAPI=1
 
@@ -12,17 +12,20 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
 RDEPEND="|| (
+			dev-java/icedtea6-bin
+			=dev-java/icedtea-6*
 			dev-java/sun-jdk:1.6
 			dev-java/sun-jdk:1.5
 			dev-java/sun-jdk:1.4
 			dev-java/diablo-jdk:1.5
+			dev-java/blackdown-jdk:1.4.2
 		)
 		>=dev-java/java-config-2.1.6
 		"
 
-JAVA_VIRTUAL_VM="sun-jdk-1.6 sun-jdk-1.5 sun-jdk-1.4 diable-jdk-1.5"
+JAVA_VIRTUAL_VM="icedtea6-bin icedtea6 sun-jdk-1.6 sun-jdk-1.5 sun-jdk-1.4 diablo-jdk-1.5 blackdown-jdk-1.4.2"
