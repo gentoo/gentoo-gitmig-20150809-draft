@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>python</herd>
-  <use>
-    <flag name='numarray'>enable support for numarray</flag>
-    <flag name='numeric'>enable support for numeric</flag>
-  </use>
 </pkgmetadata>
