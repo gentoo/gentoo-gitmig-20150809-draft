@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.370 2010/04/17 16:09:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.371 2010/04/19 13:36:38 jmbsvicetto Exp $
+
+  19 Apr 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.3.0.90.ebuild:
+  [media-sound/amarok-2.3.0.90] Fixing SRC_URI as betas are in the unstable
+  tree - thanks to Torsten (tove).
 
 *amarok-2.3.0.90 (17 Apr 2010)
 

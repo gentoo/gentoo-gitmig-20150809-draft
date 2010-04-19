@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.0.90.ebuild,v 1.1 2010/04/17 16:09:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.0.90.ebuild,v 1.2 2010/04/19 13:36:38 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://amarok.kde.org/"
 if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 else
-	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
+	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
 fi
 
 LICENSE="GPL-2"
