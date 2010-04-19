@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.76 2010/04/08 13:50:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.77 2010/04/19 19:08:18 pacho Exp $
 
 # 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
 # needs amd64 multilib
@@ -40,6 +40,7 @@ app-emulation/emul-linux-x86-cpplibs
 app-emulation/emul-linux-x86-gtklibs
 app-emulation/emul-linux-x86-gtkmmlibs
 app-emulation/emul-linux-x86-medialibs
+app-emulation/emul-linux-x86-opengl
 app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
