@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.26 2010/03/15 21:43:05 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.27 2010/04/19 20:28:22 zzam Exp $
 
 EAPI="1"
 
@@ -171,10 +171,6 @@ src_unpack() {
 			eerror "md5sum: ${MD5}"
 			die "50-udev-default.rules has been updated, please validate!"
 		fi
-	fi
-
-	if use old-hd-rules; then
-		epatch "${FILESDIR}"/udev-151-readd-hd-rules.diff
 	fi
 
 	sed_libexec_dir \
@@ -554,13 +550,9 @@ pkg_postinst() {
 		ewarn "For reference see Bug #269359."
 	fi
 
-	if use old-hd-rules; then
-		ewarn
-		ewarn "old-hd-rules use flag is enabled (by default)."
-		ewarn "This adds the removed rules for /dev/hd* devices"
-		ewarn "Please migrate to the new libata."
-		ewarn "These rules will be removed in the future"
-	fi
+	ewarn
+	ewarn "Rules for /dev/hd* devices have been removed"
+	ewarn "Please migrate to the new libata."
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"

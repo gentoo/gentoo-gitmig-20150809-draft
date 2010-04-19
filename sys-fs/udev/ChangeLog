@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.533 2010/04/16 20:14:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.534 2010/04/19 20:28:22 zzam Exp $
+
+  19 Apr 2010; Matthias Schwarzott <zzam@gentoo.org> files/151/udev.initd,
+  udev-9999.ebuild:
+  Add keywords nolxc and noopenvz to udev init-script, Bug #310427.
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> udev-149.ebuild:
   Marking udev-149 ppc for bug 303031
