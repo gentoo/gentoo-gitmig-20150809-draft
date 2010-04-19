@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/mead
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.7 2010/04/19 07:02:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.8 2010/04/19 17:49:23 jlec Exp $
+
+*mead-2.2.7-r1 (19 Apr 2010)
+
+  19 Apr 2010; Justin Lecher <jlec@gentoo.org> mead-2.2.7.ebuild,
+  +mead-2.2.7-r1.ebuild, +files/mead-2.2.7-respect-flags.patch,
+  -files/respect-cflags.patch:
+  respect LDFLAGS, #316059
 
   19 Apr 2010; Justin Lecher <jlec@gentoo.org> -mead-2.2.5.ebuild,
   mead-2.2.7.ebuild:
