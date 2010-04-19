@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.13.ebuild,v 1.3 2010/03/24 14:01:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.13.ebuild,v 1.4 2010/04/19 07:19:26 tupone Exp $
 
 EAPI=2
-inherit autotools eutils games
+PYTHON_DEPEND="2"
+inherit autotools eutils python games
 
 DESCRIPTION="A modification of the classical Freedroid engine into an RPG"
 HOMEPAGE="http://freedroid.sourceforge.net/"
@@ -30,9 +31,16 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt
 	dev-lang/python"
 
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
 src_prepare() {
 	rm -rf lua src/SDL_rotozoom*
 	epatch "${FILESDIR}"/${P}-syslibs.patch
+
+	python_convert_shebangs -r 2 .
 
 	# No need for executable game resources
 	find sound graphics -type f -exec chmod -c a-x '{}' +
