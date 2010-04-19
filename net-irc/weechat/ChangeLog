@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.70 2010/03/12 12:52:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.71 2010/04/19 14:42:43 scarabeus Exp $
+
+  19 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  weechat-0.3.1.1-r1.ebuild:
+  Depend only on python2.
 
 *weechat-0.3.1.1-r1 (12 Mar 2010)
 

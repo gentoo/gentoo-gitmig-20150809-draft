@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1-r1.ebuild,v 1.1 2010/03/12 12:52:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1-r1.ebuild,v 1.2 2010/04/19 14:42:43 scarabeus Exp $
 
 EAPI=2
-inherit cmake-utils multilib
+
+PYTHON_DEPEND="python? 2"
+
+inherit python cmake-utils multilib
 
 DESCRIPTION="Portable and multi-interface IRC client."
 HOMEPAGE="http://weechat.org/"
@@ -26,7 +29,6 @@ RDEPEND="
 	lua? ( dev-lang/lua[deprecated] )
 	ncurses? ( sys-libs/ncurses )
 	perl? ( dev-lang/perl )
-	python? ( virtual/python )
 	ruby? ( dev-lang/ruby )
 	ssl? ( net-libs/gnutls )
 	spell? ( app-text/aspell )
