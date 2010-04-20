@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.201 2010/02/02 18:15:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.202 2010/04/20 02:58:00 robbat2 Exp $
+
+*lvm2-2.02.63 (19 Apr 2010)
+
+  19 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.63.ebuild,
+  +files/lvm2-2.02.63-always-make-static-libdm.patch:
+  Bug #309757, version bump. Now dropping the export-format patchset
+  entirely in favour of new lvm2/udev cookie and udev rules from upstream.
+  This may require us to set a minimum kernel version.
 
   02 Feb 2010; Jeroen Roovers <jer@gentoo.org> lvm2-2.02.56-r2.ebuild:
   Stable for HPPA (bug #297439).
