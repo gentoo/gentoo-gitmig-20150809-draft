@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-2.1.015.ebuild,v 1.1 2009/03/14 12:14:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-2.2.013.ebuild,v 1.1 2010/04/20 17:37:14 bicatali Exp $
 
 EAPI=2
-inherit eutils versionator toolchain-funcs
+inherit eutils versionator toolchain-funcs alternatives
 #  url number
-MYU="78/135"
+MYU="78/147"
 # release update
 MYR="3"
 
@@ -18,12 +18,13 @@ DESCRIPTION="High level abstract threading library"
 HOMEPAGE="http://www.threadingbuildingblocks.org/"
 SRC_URI="http://www.threadingbuildingblocks.org/uploads/${MYU}/${PV1}.${PV2}%20update%20${MYR}/${MYP}_src.tgz"
 LICENSE="GPL-2-with-exceptions"
-SLOT="${PV1}.${PV2}"
+
+SLOT="${PV1}"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples"
 
-DEPEND=""
-RDEPEND=""
+DEPEND="!<=dev-cpp/tbb-2.1.016"
+RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
@@ -57,20 +58,12 @@ src_test() {
 }
 
 src_install(){
-	insinto /usr/$(get_libdir)/${PN}-${SLOT}
-	insopts -m0755
-	for l in $(find build -name lib\*.so.\*); do
-		doins ${l}
-		# to fix when we have eselect stuff
-		local bl=$(basename ${l})
-		dosym ${PN}-${SLOT}/${bl} /usr/$(get_libdir)/${bl}
-		dosym ${bl} /usr/$(get_libdir)/${bl%.*}
-	done
-	insopts -m0644
-	dodoc README CHANGES doc/Release_Notes.txt
+	dolib.so $(find build -name lib\*.so.\*) || die
 	insinto /usr/include/${PN}-${SLOT}
-	dosym ${PN}-${SLOT} /usr/include/${PN}
+	insopts -m0644
 	doins -r include/tbb/* || die
+
+	dodoc README CHANGES doc/Release_Notes.txt
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
 		doins -r doc/html || die
@@ -81,4 +74,20 @@ src_install(){
 		insinto /usr/share/doc/${PF}/examples
 		doins -r examples || die
 	fi
+}
+
+tbb_alternatives() {
+	for l in "${ROOT}"usr/$(get_libdir)/libtbb*.so.*; do
+		l=$(basename ${l}%.*)
+		alternatives_auto_makesym "/usr/$(get_libdir)/${l}" "/usr/$(get_libdir)/${l}.[0-9]"
+	done
+	alternatives_auto_makesym "/usr/include/${PN}" "/usr/include/${PN}-[0-9]"
+}
+
+pkg_postinst() {
+	tbb_alternatives
+}
+
+pkg_postrm() {
+	tbb_alternatives
 }
