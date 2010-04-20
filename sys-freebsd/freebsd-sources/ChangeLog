@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.56 2010/03/19 11:50:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.57 2010/04/20 23:06:53 the_paya Exp $
+
+  20 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
+  freebsd-sources-8.0.ebuild,
+  +files/freebsd-sources-8.0-arpresolve_panic.patch,
+  +files/freebsd-sources-8.0-mf626.patch:
+  Fix a null pointer reference in arpresolve() that caused panics, and add
+  support for a common 3g usb modem.
 
 *freebsd-sources-8.0 (19 Mar 2010)
 

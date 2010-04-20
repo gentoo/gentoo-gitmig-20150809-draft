@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-8.0.ebuild,v 1.1 2010/03/19 11:50:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-8.0.ebuild,v 1.2 2010/04/20 23:06:53 the_paya Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -49,6 +49,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
 	epatch "${FILESDIR}/${PN}-7.1-includes.patch"
 	epatch "${FILESDIR}/${PN}-8.0-zfs.patch"
+	epatch "${FILESDIR}/${PN}-8.0-arpresolve_panic.patch" # Already in SVN
+	epatch "${FILESDIR}/${PN}-8.0-mf626.patch" # Backported from SVN
 
 	# By adding -DGENTOO_LIVECD to CFLAGS activate this stub
 	# vop_whiteout to tmpfs, so it can be used as an overlay
