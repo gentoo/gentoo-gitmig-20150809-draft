@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.9.ebuild,v 1.2 2010/04/19 18:59:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.9.ebuild,v 1.3 2010/04/20 07:55:14 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -29,6 +29,7 @@ RDEPEND="app-arch/bzip2
 	x11-libs/libXScrnSaver"
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
+	dev-lang/perl
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex"
