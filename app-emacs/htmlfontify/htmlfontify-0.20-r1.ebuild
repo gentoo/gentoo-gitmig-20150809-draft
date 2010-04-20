@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/htmlfontify-0.20-r1.ebuild,v 1.3 2009/03/29 21:35:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/htmlfontify/htmlfontify-0.20-r1.ebuild,v 1.4 2010/04/20 19:51:06 ulm Exp $
 
 inherit elisp
 
@@ -13,6 +13,10 @@ LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
+
+# Package cannot be compiled with Emacs 23 and will be included
+# with Emacs 23.2
+RDEPEND="!>=app-editors/emacs-23"
 
 S="${WORKDIR}/${MY_P/_/-}"
 ELISP_PATCHES="${P}-emacs22.patch"
