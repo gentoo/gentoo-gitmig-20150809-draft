@@ -1,7 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.4 2009/06/16 20:28:29 nyhm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.5 2010/04/20 08:36:39 tupone Exp $
+PYTHON_DEPEND="2"
 EAPI=2
 inherit eutils python toolchain-funcs games
 
@@ -17,7 +17,6 @@ IUSE=""
 RDEPEND="media-libs/libsdl[opengl]
 	media-libs/sdl-image
 	media-libs/sdl-mixer
-	dev-lang/python
 	virtual/opengl
 	virtual/glu
 	virtual/glut"
@@ -51,8 +50,7 @@ src_prepare() {
 
 src_compile() {
 	emake -C kodilib/linux AR="$(tc-getAR)" || die "emake kodilib failed"
-	python_version
-	emake -C linux PYTHON_VERSION="${PYVER}" || die "emake linux failed"
+	emake -C linux PYTHON_VERSION="$(python_get_version)" || die "emake linux failed"
 }
 
 src_install() {
@@ -63,4 +61,9 @@ src_install() {
 
 	dodoc Readme.txt Thanks.txt
 	prepgamesdirs
+}
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
 }
