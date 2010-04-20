@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.7.ebuild,v 1.8 2007/07/24 07:43:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.3.0.ebuild,v 1.1 2010/04/20 20:31:41 caster Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -11,11 +11,11 @@ MY_PV=${PV//./_}
 MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="JGoodies Forms Library"
 HOMEPAGE="http://www.jgoodies.com/"
-SRC_URI="http://www.jgoodies.com/download/libraries/${MY_P}.zip"
+SRC_URI="http://www.jgoodies.com/download/libraries/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
@@ -30,22 +30,26 @@ src_unpack() {
 
 	# Remove the packaged jars
 	rm -v *.jar || die "rm failed"
-
-	# No support for junit tests yet
-	rm -rf "${S}/src/test" || die
-
-	# patch the build.xml:
-	epatch "${FILESDIR}/${P}-build.xml.patch"
-	java-pkg_filter-compiler jikes
 }
 
-# Comes in the tarball
-EANT_DOC_TARGET=""
+src_compile() {
+	# it does not like unset ${build.compiler.executable}
+	# feel free to fix if you want jikes back
+	java-pkg_filter-compiler jikes
+	# not setting the bootcp breaks ecj, javac apparently ignores nonsense
+	eant -Dbuild.boot.classpath="$(java-config -g BOOTCLASSPATH)" jar
+}
+
+#Needs X
+#src_test() {
+#	ANT_TASKS="ant-junit" eant test \
+#		-Djunit.jar="$(java-pkg_getjars junit)"
+#}
 
 src_install() {
 	java-pkg_dojar build/${MY_PN}.jar
 
-	dodoc RELEASE-NOTES.txt README.html
+	dodoc RELEASE-NOTES.txt README.html || die
 
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc src/{core,extras}/com
