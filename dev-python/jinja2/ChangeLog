@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.40 2010/04/18 16:57:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.41 2010/04/20 19:42:17 arfrever Exp $
+
+*jinja2-2.4.1 (20 Apr 2010)
+
+  20 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +jinja2-2.4.1.ebuild, +files/jinja2-2.4.1-object_type_repr.patch:
+  Version bump.
 
   18 Apr 2010; <nixnut@gentoo.org> jinja2-2.3.1.ebuild:
   ppc stable #310665
