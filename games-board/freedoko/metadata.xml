@@ -7,9 +7,12 @@ The Linux version of the popular german cardgame "Doppelkopf"
 </longdescription>
   <use>
     <flag name="altenburgcards">Use the Altenburg card set</flag>
-    <flag name="kdecards">Use the KDE card set</flag>
+    <flag name="kdecards">Install the KDE card set</flag>
     <flag name="net">Enable network game support</flag>
-    <flag name="pysolcards">Use the PySol card set</flag>
-    <flag name="xskatcards">Use the XSkat card set</flag>
+    <flag name="pysolcards">Install the PySol card set</flag>
+    <flag name="xskatcards">Install the XSkat card set</flag>
+    <flag name="gnomecards">Install the gnome-games card set</flag>
+    <flag name="openclipartcards">Install the openclipartcards card set</flag>
+    <flag name="backgrounds">Install additional background images</flag>
   </use>
 </pkgmetadata>
