@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.24.ebuild,v 1.5 2010/04/16 16:04:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.2.24.ebuild,v 1.6 2010/04/20 11:36:30 ssuominen Exp $
 
 EAPI=2
 
@@ -109,9 +109,6 @@ pkg_postinst() {
 	elog
 	elog "Some applications require a session bus in addition to the system"
 	elog "bus. Please see \`man dbus-launch\` for more information."
-	elog
-	elog
-	ewarn "You MUST run 'revdep-rebuild' after emerging this package"
 	elog
 	ewarn "You must restart D-Bus \`/etc/init.d/dbus restart\` to run"
 	ewarn "the new version of the daemon."
