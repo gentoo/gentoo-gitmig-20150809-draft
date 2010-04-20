@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.22 2010/04/20 14:43:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.23 2010/04/20 14:44:49 tove Exp $
+
+  20 Apr 2010; Torsten Veller <tove@gentoo.org> -popfile-1.0.1.ebuild:
+  Cleanup
 
   20 Apr 2010; Torsten Veller <tove@gentoo.org> popfile-1.1.1.ebuild:
   Stable on amd64 (#310707). Fix fperms
