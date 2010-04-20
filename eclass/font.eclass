@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.48 2010/02/09 17:15:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.49 2010/04/20 04:06:59 dirtyepic Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
@@ -83,6 +83,39 @@ font_fontconfig() {
 			[[ -e  ${conffile} ]] && doins ${conffile}
 		done
 	fi
+}
+
+# @FUNCTION: font_cleanup_dirs
+# @DESCRIPTION:
+# Remove any font directories only containing generated files.
+# Runs in pkg_postrm.
+font_cleanup_dirs() {
+	local genfiles="encodings.dir fonts.alias fonts.cache-1 fonts.dir fonts.scale"
+	local d f g generated candidate otherfile
+
+	ebegin "Purging empty font directories"
+	find -L "${EROOT}"usr/share/fonts/ -type d -print0 | while read -d $'\0' d; do
+		candidate=false
+		otherfile=false
+		for f in "${d}"/*; do
+			generated=false
+			[[ -e ${f} || -L ${f} ]] || continue
+			for g in ${genfiles}; do
+				if [[ ${f##*/} == ${g} ]]; then
+					generated=true
+					break
+				fi
+			done
+			${generated} && candidate=true || otherfile=true
+			[[ ${candidate} == ${otherfile} ]] && break # both are true, keep the dir
+		done
+		if [[ ${candidate} == true && ${otherfile} == false ]]; then
+			ebegin "Removing ${d}"
+			rm -rf "${d}"
+			eend $?
+		fi
+	done
+	eend 0
 }
 
 # @FUNCTION: font_src_install
@@ -172,6 +205,8 @@ font_pkg_postinst() {
 # The font pkg_postrm function.
 # Updates global font cache
 font_pkg_postrm() {
+	font_cleanup_dirs
+	
 	# unreadable font files = fontconfig segfaults
 	find "${EROOT}"usr/share/fonts/ -type f '!' -perm 0644 -print0 \
 		| xargs -0 chmod -v 0644 2>/dev/null
