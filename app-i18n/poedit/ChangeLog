@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/poedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.64 2010/03/20 17:01:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.65 2010/04/20 23:11:56 dirtyepic Exp $
+
+*poedit-1.4.6.1 (20 Apr 2010)
+
+  20 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> +poedit-1.4.6.1.ebuild:
+  Version bump.
 
   20 Mar 2010; Raúl Porcel <armin76@gentoo.org> poedit-1.4.3.ebuild:
   sparc stable wrt #303285
