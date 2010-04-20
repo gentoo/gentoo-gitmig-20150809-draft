@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11469 2010/04/19 19:06:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11470 2010/04/20 03:15:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -119,12 +119,6 @@ net-fs/samba-libs
 net-fs/samba-server
 net-fs/samba-client
 >net-fs/samba-4
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 Apr 2010)
-# Missing required lvm2 wrt bug #309757. Unmask soon as it's in tree.
-sys-fs/udisks
-x11-plugins/wmudmount
->=app-misc/emelfm2-0.7.2-r1
 
 # Vlastimil Babka <caster@gentoo.org> (06 Apr 2010)
 # Legacy library nothing in the tree depends on. Needs 1.5 java to compile.
