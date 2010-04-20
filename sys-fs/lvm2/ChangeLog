@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.202 2010/04/20 02:58:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.203 2010/04/20 23:04:25 robbat2 Exp $
+
+*lvm2-2.02.63-r1 (20 Apr 2010)
+
+  20 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +lvm2-2.02.63-r1.ebuild:
+  Bug #316427: upstream changes to makefiles caused some libraries to not be
+  present in / anymore, causing boot failure for users with a split /usr.
 
 *lvm2-2.02.63 (19 Apr 2010)
 
