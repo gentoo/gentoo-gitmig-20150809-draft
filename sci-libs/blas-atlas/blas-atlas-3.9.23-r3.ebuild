@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r2.ebuild,v 1.2 2010/04/20 18:26:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r3.ebuild,v 1.1 2010/04/20 18:26:51 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc"
 
 RDEPEND="app-admin/eselect-blas
@@ -27,6 +27,7 @@ DEPEND="app-admin/eselect-blas
 
 S="${WORKDIR}/ATLAS"
 BLD_DIR="${S}"/gentoo-build
+RPATH=/usr/$(get_libdir)/blas
 
 pkg_setup() {
 	# icc won't compile (as of icc-10.0.026)
@@ -105,9 +106,9 @@ src_configure() {
 	../configure \
 		--cc="${c_compiler}" \
 		--cflags="${CFLAGS}" \
-		--prefix="${ED}/${DESTTREE}" \
-		--libdir="${ED}/${DESTTREE}"/$(get_libdir)/atlas \
-		--incdir="${ED}/${DESTTREE}"/include \
+		--prefix="${ED}"/usr \
+		--libdir="${ED}"/usr/$(get_libdir)/atlas \
+		--incdir="${ED}"/usr/include \
 		-C ac "${c_compiler}" -F ac "${CFLAGS}" \
 		-C if ${FORTRANC} -F if "${FFLAGS:-'-O2'}" \
 		-Ss pmake "\$(MAKE) ${MAKEOPTS}" \
@@ -126,17 +127,16 @@ src_compile() {
 	# â and it fails parallel make, bug #294172
 	emake -j1 || die "emake failed"
 
-	RPATH="${DESTTREE}"/$(get_libdir)/blas
 	emake -j1 \
 		LIBDIR=$(get_libdir) \
-		RPATH="${RPATH}"/atlas \
+		RPATH="${EPREFIX}/${RPATH}"/atlas \
 		shared || die "failed to build shared libraries"
 
 	# build shared libraries of threaded libraries if applicable
 	if [[ -d gentoo/libptcblas.a ]]; then
 		emake -j1 \
 			LIBDIR=$(get_libdir) \
-			RPATH="${RPATH}"/threaded-atlas \
+			RPATH="${EPREFIX}${RPATH}"/threaded-atlas \
 			ptshared || die "failed to build threaded shared libraries"
 	fi
 }
@@ -160,7 +160,7 @@ src_test() {
 src_install () {
 	dodir "${RPATH}"/atlas
 	cd "${BLD_DIR}"/gentoo/libs
-	cp -P libatlas* "${ED}/${DESTTREE}"/$(get_libdir) \
+	cp -P libatlas* "${ED}"/usr/$(get_libdir) \
 		|| die "Failed to install libatlas"
 
 	# pkgconfig files
@@ -209,7 +209,7 @@ src_install () {
 		eselect cblas add $(get_libdir) "${T}"/eselect.cblas.threaded-atlas ${ESELECT_PROF}
 	fi
 
-	insinto "${DESTTREE}"/include/atlas
+	insinto /usr/include/atlas
 	doins \
 		"${S}"/include/cblas.h \
 		"${S}"/include/atlas_misc.h \
@@ -222,6 +222,15 @@ src_install () {
 	# is much shorter if they are available, so save them:
 	doins "${BLD_DIR}"/include/*.h \
 		|| die "failed to install timing headers"
+
+	sed \
+		-e "s:/usr/:${EPREFIX}/usr/:g" \
+		-e "s: /usr/lib: ${EPREFIX}/usr/lib:g" \
+		-e "s:${EPREFIX}${EPREFIX}:${EPREFIX}:g" \
+		-i \
+			${ED}/usr/$(get_libdir)/*.la \
+			${ED}/usr/$(get_libdir)/blas/*/*.la \
+		|| die
 
 	# some docs
 	cd "${S}"/doc
