@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11471 2010/04/20 14:53:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11472 2010/04/20 16:06:44 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -196,15 +196,6 @@ dev-java/openjms-bin
 # Not ready for primetime wrt bug 308559.
 # Use 0.8 series instead for now.
 >=xfce-extra/xfce4-power-manager-0.9.90
-
-# Samuli Suominen <ssuominen@gentoo.org> (18 Mar 2010)
-# Orphaned and vulnerable library.  Use libxml2 instead.
-#
-# Bugs 281446 and 281444
-#
-# Masked for removal in 30 days
-dev-libs/libxml
-games-util/loki_setupdb
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Mar 2010)
 # Doesn't compile with next stable toolchain.
