@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.421 2010/04/03 20:32:47 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.422 2010/04/20 17:47:09 armin76 Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1240,6 +1240,12 @@ gcc-compiler-configure() {
 				[[ ${arm_arch} == *l  ]] && arm_arch=${arm_arch%l}
 				[[ ${arm_arch} == *eb ]] && arm_arch=${arm_arch%eb}
 				confgcc="${confgcc} --with-arch=${arm_arch}"
+			fi
+	
+			# Enable hardvfp
+			if [[ ${CTARGET##*-} == *eabi ]] && [[ $(tc-is-softfloat) == no ]] && \
+			    tc_version_is_at_least "4.5" ; then
+			        confgcc="${confgcc} --with-float=hard"
 			fi
 			;;
 		# Add --with-abi flags to set default MIPS ABI
