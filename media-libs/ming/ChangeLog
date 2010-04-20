@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.63 2010/04/20 22:56:49 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.64 2010/04/20 23:15:17 mabi Exp $
 
   20 Apr 2010; <mabi@gentoo.org> -ming-0.2a.ebuild, metadata.xml:
   orphan package, it does not belong to php; remove old version
@@ -14,7 +14,7 @@
   +files/ming-0.4.x-libpng14.patch, ming-0.4.0_rc2.ebuild:
   Fix building with libpng14 wrt #309309 by Peter Alfredsen.
 
-  31 Jan 2010; RaÃºl Porcel <armin76@gentoo.org> ming-0.4.0_rc2.ebuild:
+  31 Jan 2010; Raúl Porcel <armin76@gentoo.org> ming-0.4.0_rc2.ebuild:
   ia64/s390/sh/sparc stable wrt #297476
 
   23 Jan 2010; Tobias Klausmann <klausman@gentoo.org> ming-0.4.0_rc2.ebuild:
@@ -65,7 +65,7 @@
   29 Jul 2008; Jeroen Roovers <jer@gentoo.org> ming-0.3.0-r1.ebuild:
   Stable for HPPA (bug #222319).
 
-  28 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> ming-0.3.0-r1.ebuild:
+  28 Jul 2008; Raúl Porcel <armin76@gentoo.org> ming-0.3.0-r1.ebuild:
   alpha/ia64/x86 stable wrt #222319
 
   28 Jul 2008; Ferris McCormick <fmccor@gentoo.org> ming-0.3.0-r1.ebuild:
@@ -121,10 +121,10 @@
   14 Nov 2007; Jeroen Roovers <jer@gentoo.org> ming-0.2a-r3.ebuild:
   Stable for HPPA (bug #198582).
 
-  11 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> ming-0.2a-r3.ebuild:
+  11 Nov 2007; Raúl Porcel <armin76@gentoo.org> ming-0.2a-r3.ebuild:
   alpha/ia64/sparc stable wrt #198582
 
-  11 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org> ming-0.2a-r3.ebuild:
+  11 Nov 2007; Dawid Węgliński <cla@gentoo.org> ming-0.2a-r3.ebuild:
   Stable on x86 (bug #198582)
 
   10 Nov 2007; Markus Rothe <corsair@gentoo.org> ming-0.2a-r3.ebuild:
@@ -155,7 +155,7 @@
   20 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> ming-0.3.0.ebuild:
   applying java patch needs to be conditional on java useflag (Bug #144548)
 
-  20 Aug 2006; Bryan Ãstergaard <kloeri@gentoo.org> ming-0.3.0.ebuild:
+  20 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> ming-0.3.0.ebuild:
   Fix python dependency.
 
 *ming-0.3.0 (22 Aug 2006)
@@ -172,7 +172,7 @@
   Bug #123728, fix python module linking brokenness. Also fix QA issue of
   missing SONAME.
 
-  07 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org> +metadata.xml,
+  07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   ming-0.2a.ebuild, ming-0.2a-r1.ebuild:
   Drop virtual/libc dependency. Add maintainer-needed metadata.
 
