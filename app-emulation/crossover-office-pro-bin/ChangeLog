@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/crossover-office-pro-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.15 2009/08/23 10:53:04 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.16 2010/04/20 07:51:42 vapier Exp $
+
+*crossover-office-pro-bin-9.0.0 (20 Apr 2010)
+
+  20 Apr 2010; Mike Frysinger <vapier@gentoo.org>
+  +crossover-office-pro-bin-9.0.0.ebuild:
+  Version bump #311943 by Pacho Ramos.
 
 *crossover-office-pro-bin-8.0.0 (23 Aug 2009)
 *crossover-office-pro-bin-7.1.0 (23 Aug 2009)
