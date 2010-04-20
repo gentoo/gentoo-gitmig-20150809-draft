@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.3-r1.ebuild,v 1.5 2010/04/20 09:27:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.3-r1.ebuild,v 1.6 2010/04/20 20:11:46 arfrever Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib java-pkg-opt-2 autotools
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib java-pkg-opt-2 autotools python
 
 MY_PV="${PV/_rc/rc}" # Handle beta
 MY_PV="${MY_PV/1.9.2/3.6}"
@@ -23,7 +23,6 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa debug libnotify system-sqlite wifi"
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
-	>=dev-lang/python-2.3[threads]
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.6
 	>=dev-libs/nspr-4.8
@@ -39,6 +38,7 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}
+	=dev-lang/python-2*[threads]
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/mozilla-${MAJ_PV}"
@@ -51,6 +51,8 @@ pkg_setup() {
 	export LC_CTYPE="C"
 
 	java-pkg-opt-2_pkg_setup
+
+	python_set_active_version 2
 }
 
 src_prepare() {
@@ -180,7 +182,7 @@ src_configure() {
 	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/$(get_libdir)/nsbrowser/plugins:" \
 		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path!"
 
-	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" econf
+	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" PYTHON="$(PYTHON)" econf
 }
 
 src_install() {

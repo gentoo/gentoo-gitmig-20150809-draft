@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.311 2010/04/20 09:27:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.312 2010/04/20 20:11:46 arfrever Exp $
+
+  20 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xulrunner-1.9.2.3-r1.ebuild:
+  Use Python 2 (bug #315325).
 
   20 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   xulrunner-1.9.2.3-r1.ebuild:
