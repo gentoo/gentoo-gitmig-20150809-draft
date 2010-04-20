@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.47 2010/03/22 21:09:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.48 2010/04/20 02:52:26 vapier Exp $
+
+  19 Apr 2010; Mike Frysinger <vapier@gentoo.org> gnuconfig-20100122.ebuild:
+  Stabilize for everyone.
 
   22 Mar 2010; Jeremy Olexa <darkside@gentoo.org> gnuconfig-20100122.ebuild:
   Add ~ia64-hpux kw, tested by myself
