@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.165 2010/04/11 21:56:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.166 2010/04/20 08:24:36 vapier Exp $
+
+  20 Apr 2010; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.2.ebuild:
+  Disable tests since they require no rpc.statd to be running on the system
+  beforehand #315573 by Pacho Ramos.
 
 *nfs-utils-1.2.2 (11 Apr 2010)
 
