@@ -1,6 +1,12 @@
 # ChangeLog for app-text/mftrace
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.52 2009/09/08 18:15:26 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.53 2010/04/20 04:23:57 dirtyepic Exp $
+
+*mftrace-1.2.13-r1 (20 Apr 2010)
+
+  20 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> +mftrace-1.2.13-r1.ebuild:
+  Revision bump to migrate to new python framework and bump to EAPI3. Patch
+  by Arfrever (bug #312111).
 
   08 Sep 2009; Tristan Heaven <nyhm@gentoo.org> mftrace-1.2.13.ebuild:
   Add src_configure
