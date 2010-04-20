@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11472 2010/04/20 16:06:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11473 2010/04/20 16:12:09 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -160,12 +160,6 @@ dev-lang/ruby-enterprise
 # Masked for removal in 30 days.
 xfce-extra/xfce4-volstatus-icon
 
-# Samuli Suominen <ssuominen@gentoo.org> (31 Mar 2010)
-# Doesn't compile with libindicator-0.3.6, and no activity
-# on http://hg.foresightlinux.org/xfce/xfce4-indicator-plugin/
-# Masked for removal in 30 days
-xfce-extra/xfce4-indicator-plugin
-
 # Vlastimil Babka <caster@gentoo.org> (31 Mar 2010)
 # Masked for upstream EOL and pending security bugs that won't be thus fixed.
 # Removal in 30 days. Bug #306579.
@@ -216,12 +210,6 @@ dev-java/openjms-bin
 # Removal in 30 days
 mail-filter/MailScanner
 
-# Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2010)
-# Replaced by USE jpeg in allegro >= 4.4.1.1
-# It was merged upstream
-# Masked for removal in 30 days
-media-libs/jpgalleg
-
 # Bernard Cafarelli <voyageur@gentoo.org> (15 Mar 2010)
 # Problematic behavior with special keys (french Alt Gr,
 # multimedia keys, ...), bug #304743
@@ -233,12 +221,6 @@ media-libs/jpgalleg
 # and Dead upstream. Recommend icedtea jdk's for
 # a free alternative.
 dev-java/kaffe
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Mar 2010)
-# Replaced by USE=gtk in snes9x-1.52.
-#
-# Masked for removal in 30 days.
-games-emulation/goosnes
 
 # Torsten Veller <tove@gentoo.org> (14 Mar 2010)
 # Mask "End Of Life" versions
