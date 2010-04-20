@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi-otr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.6 2009/10/21 15:40:56 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.7 2010/04/20 19:05:34 polynomial-c Exp $
+
+  20 Apr 2010; Lars Wendler <polynomial-c@gentoo.org> irssi-otr-0.2.ebuild,
+  irssi-otr-0.3.ebuild:
+  RDEPEND was incomplete. Fixed with kind permission from armin76.
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org> irssi-otr-0.2.ebuild:
   x86 stable, bug #286871

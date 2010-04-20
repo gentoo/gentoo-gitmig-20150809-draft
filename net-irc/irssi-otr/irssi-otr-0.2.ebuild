@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.5 2009/10/21 15:40:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.2.ebuild,v 1.6 2010/04/20 19:05:34 polynomial-c Exp $
 
 inherit cmake-utils eutils
 
@@ -19,13 +19,15 @@ KEYWORDS="amd64 ~sparc x86"
 IUSE="debug"
 
 RDEPEND="net-libs/libotr
+	dev-libs/glib
+	dev-libs/libgcrypt
+	dev-libs/libgpg-error
 	|| (
 		net-irc/irssi
 		net-irc/irssi-svn
 	)"
 
 DEPEND="${RDEPEND}
-	dev-libs/glib
 	>=dev-util/cmake-2.4.7
 	dev-util/pkgconfig
 	dev-lang/python"
