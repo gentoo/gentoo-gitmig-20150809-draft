@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.81 2010/01/10 18:50:26 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.82 2010/04/20 18:41:57 fauli Exp $
+
+*libetpan-1.0 (20 Apr 2010)
+
+  20 Apr 2010; Christian Faulhammer <fauli@gentoo.org> +libetpan-1.0.ebuild,
+  +files/libetpan-1.0-ldflags.patch:
+  version bump for bug 313097, also fixes respect of LDFLAGS as reported
+  with patch from Kacper Kowalik <xarthisius DOT kk AT gmail DOT com> in bug
+  310167
 
   10 Jan 2010; Alex Legler <a3li@gentoo.org> libetpan-0.57-r1.ebuild:
   Keyword ~x86-macos
