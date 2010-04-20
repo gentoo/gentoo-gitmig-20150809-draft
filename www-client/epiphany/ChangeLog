@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.237 2010/04/18 19:30:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.238 2010/04/20 09:35:59 fauli Exp $
+
+  20 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  epiphany-2.26.3-r4.ebuild:
+  stable x86, bug 314025
 
   18 Apr 2010; Pacho Ramos <pacho@gentoo.org> epiphany-2.26.3-r4.ebuild:
   amd64 stable, bug 314025
