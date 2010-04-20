@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.5.ebuild,v 1.1 2010/04/20 12:49:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.5.ebuild,v 1.2 2010/04/20 20:34:54 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,6 @@ RDEPEND="!<dev-libs/libxml2-2.7.7" #309623
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.2.4-visibility-support.patch #149929
 	epatch "${FILESDIR}"/${PN}-1.2.3-mingw-implib.patch #288212
 	# trust exit status of the compiler rather than stderr #55434
 	# -if test "`(...) 2>&1`" = ""; then
