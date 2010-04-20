@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.8.ebuild,v 1.2 2010/04/20 10:45:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.10.ebuild,v 1.1 2010/04/20 10:45:34 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic
@@ -12,15 +12,17 @@ SRC_URI="mirror://sourceforge/${PN}-pim/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="syncml"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
-	dev-libs/libtar
+	>=dev-libs/libtar-1.2.11-r3
 	dev-libs/libxml2
 	dev-libs/libgringotts
 	>=dev-libs/libical-0.33
 	app-text/gtkspell
-	x11-libs/libnotify"
+	=gnome-extra/gtkhtml-2*
+	>=x11-libs/libnotify-0.4.4
+	syncml? ( app-pda/libsyncml )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -29,7 +31,7 @@ src_configure() {
 
 	econf \
 		--disable-dependency-tracking \
-		--without-libsyncml
+		$(use_with syncml libsyncml)
 }
 
 src_install() {
