@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wormux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.41 2010/04/18 05:19:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.42 2010/04/20 16:57:13 ssuominen Exp $
+
+  20 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> wormux-0.9.2.ebuild,
+  +files/wormux-0.9.2-x86_64.patch:
+  Port upstream patch for x86_64 wrt #315921 by tman.
 
 *wormux-0.9.2 (18 Apr 2010)
 
