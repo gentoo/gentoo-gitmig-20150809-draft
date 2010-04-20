@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.3.ebuild,v 1.1 2010/03/22 19:20:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.3.ebuild,v 1.2 2010/04/20 19:09:56 arfrever Exp $
+
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils eutils
 
@@ -54,20 +56,15 @@ pkg_postinst() {
 	fi
 
 	# This is left behind by pkgcore 0.2.
-	rm -f "${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages/pkgcore/plugins/plugincache
+	rm -f "${ROOT}"$(python_get_sitedir)/pkgcore/plugins/plugincache
 }
 
 pkg_postrm() {
-	python_version
 	# Careful not to remove this on up/downgrades.
-	local sitep="${ROOT}"usr/$(get_libdir)/python${PYVER}/site-packages
+	local sitep="${ROOT}"$(python_get_sitedir)/site-packages
 	if [[ -e "${sitep}/pkgcore/plugins/plugincache2" ]] &&
 		! [[ -e "${sitep}/pkgcore/plugin.py" ]]; then
 		rm "${sitep}/pkgcore/plugins/plugincache2"
 	fi
 	distutils_pkg_postrm
-}
-
-src_test() {
-	"${python}" setup.py test || die "testing returned non zero"
 }
