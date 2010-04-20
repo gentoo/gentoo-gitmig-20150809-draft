@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.535 2010/04/19 20:57:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.536 2010/04/20 02:53:14 robbat2 Exp $
+
+*udev-146-r3 (20 Apr 2010)
+
+  20 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> +udev-146-r3.ebuild:
+  Alpha cannot use the 151-r2 version due to non-availability of newer
+  kernels, so provide an older ebuild with static libraries for lvm2
+  bumping.
 
 *udev-151-r2 (19 Apr 2010)
 
