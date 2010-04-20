@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.1.ebuild,v 1.3 2010/03/31 07:44:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.1.ebuild,v 1.4 2010/04/20 14:43:51 tove Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://getpopfile.org/downloads/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="cjk ipv6 mysql ssl xmlrpc"
 
 RDEPEND="virtual/perl-Digest-MD5
@@ -47,7 +47,7 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins -r * || die
 
-	fperms 755 /usr/share/${PN}/*.pl
+	fperms 755 /usr/share/${PN}/{popfile,insert,pipe,bayes}.pl
 
 	dosbin "${FILESDIR}"/${PN} || die
 }
