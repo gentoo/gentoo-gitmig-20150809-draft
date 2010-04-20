@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-2.2.013.ebuild,v 1.1 2010/04/20 17:37:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-2.2.013-r1.ebuild,v 1.1 2010/04/20 20:35:04 bicatali Exp $
 
 EAPI=2
 inherit eutils versionator toolchain-funcs alternatives
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.threadingbuildingblocks.org/"
 SRC_URI="http://www.threadingbuildingblocks.org/uploads/${MYU}/${PV1}.${PV2}%20update%20${MYR}/${MYP}_src.tgz"
 LICENSE="GPL-2-with-exceptions"
 
-SLOT="${PV1}"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples"
 
@@ -58,10 +58,13 @@ src_test() {
 }
 
 src_install(){
-	dolib.so $(find build -name lib\*.so.\*) || die
-	insinto /usr/include/${PN}-${SLOT}
-	insopts -m0644
-	doins -r include/tbb/* || die
+	for l in $(find build -name lib\*.so.\*); do
+		dolib.so ${l} || die
+		local bl=$(basename ${l})
+		dosym ${bl} /usr/$(get_libdir)/${bl%.*}
+	done
+	insinto /usr
+	doins -r include || die
 
 	dodoc README CHANGES doc/Release_Notes.txt
 	if use doc ; then
@@ -74,20 +77,4 @@ src_install(){
 		insinto /usr/share/doc/${PF}/examples
 		doins -r examples || die
 	fi
-}
-
-tbb_alternatives() {
-	for l in "${ROOT}"usr/$(get_libdir)/libtbb*.so.*; do
-		l=$(basename ${l}%.*)
-		alternatives_auto_makesym "/usr/$(get_libdir)/${l}" "/usr/$(get_libdir)/${l}.[0-9]"
-	done
-	alternatives_auto_makesym "/usr/include/${PN}" "/usr/include/${PN}-[0-9]"
-}
-
-pkg_postinst() {
-	tbb_alternatives
-}
-
-pkg_postrm() {
-	tbb_alternatives
 }
