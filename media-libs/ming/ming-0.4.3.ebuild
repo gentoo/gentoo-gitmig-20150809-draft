@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3.ebuild,v 1.2 2010/04/20 23:37:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3.ebuild,v 1.3 2010/04/20 23:49:39 arfrever Exp $
 
-EAPI=1
+EAPI="3"
 
 PHP_EXT_NAME=ming
 PYTHON_DEPEND="python? 2"
 
-inherit eutils autotools flag-o-matic multilib php-ext-source-r1 perl-module distutils python
+inherit eutils autotools flag-o-matic multilib php-ext-source-r1 perl-module python
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 DESCRIPTION="An Open Source library for Flash movie generation."
@@ -28,20 +28,16 @@ DEPEND="${DEPEND}
 
 S=${WORKDIR}/${P/_/.}
 
-#Tests only work when the package is tested on a system
-#which does not presently have any version of ming installed.
+# Tests only work when the package is tested on a system
+# which does not presently have any version of ming installed.
 RESTRICT="test"
-RESTRICT_PYTHON_ABIS="3"
 
 pkg_setup() {
 	use python && python_set_active_version 2
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	#Let's get rid of the TEXTRELS, link dynamic. Use gif.
+src_prepare() {
+	# Let's get rid of the TEXTRELS, link dynamic. Use gif.
 	sed -i \
 		-e 's/libming.a/libming.so/' \
 		-e 's/lungif/lgif/' \
@@ -59,12 +55,14 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# build is sensitive to -O3 (bug #297437)
 	replace-flags -O3 -O2
 
-	econf	$(use_enable perl) \
-		$(use_enable python) || die "econf failed"
+	econf $(use_enable perl) $(use_enable python)
+}
+
+src_compile() {
 	emake -j1 DESTDIR="${D}" || die "emake failed"
 
 	if use php; then
@@ -85,8 +83,8 @@ src_install() {
 
 	fixlocalpod
 
-	#Get rid of the precompiled stuff, we generate it later.
-	rm -f $(find "${D}" -name '*.pyc')
+	# Get rid of the precompiled stuff, we generate it later.
+	find "${ED}" -name "*.pyc" -print0 | xargs -0 rm -f
 
 	if use php; then
 		cd "${S}"/php_ext
@@ -96,18 +94,7 @@ src_install() {
 
 pkg_postinst() {
 	use perl && perl-module_pkg_postinst
-
-	if use python
-	then
-		ebegin "Compiling ming.py"
-		python_mod_compile $(python_get_sitedir)/ming.py \
-			|| die "Failed to compile ming.py"
-		eend $?
-
-		ebegin "Compiling mingc.py"
-		python_mod_compile $(python_get_sitedir)/mingc.py || die "mingc.py failed"
-		eend $?
-	fi
+	use python && python_mod_optimize ming.py mingc.py
 }
 
 pkg_prerm() {
@@ -116,5 +103,5 @@ pkg_prerm() {
 
 pkg_postrm() {
 	use perl && perl-module_pkg_postrm
-	use python && distutils_pkg_postrm
+	use python && python_mod_cleanup ming.py mingc.py
 }
