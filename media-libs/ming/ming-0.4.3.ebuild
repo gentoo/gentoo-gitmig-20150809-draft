@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3.ebuild,v 1.1 2010/04/20 22:46:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3.ebuild,v 1.2 2010/04/20 23:37:26 mabi Exp $
 
 EAPI=1
 
@@ -100,7 +100,8 @@ pkg_postinst() {
 	if use python
 	then
 		ebegin "Compiling ming.py"
-		python_mod_compile $(python_get_sitedir)/ming.py
+		python_mod_compile $(python_get_sitedir)/ming.py \
+			|| die "Failed to compile ming.py"
 		eend $?
 
 		ebegin "Compiling mingc.py"
