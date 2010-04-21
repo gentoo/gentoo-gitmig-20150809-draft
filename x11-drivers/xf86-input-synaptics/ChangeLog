@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.49 2010/04/21 16:03:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.50 2010/04/21 16:23:50 chainsaw Exp $
+
+*xf86-input-synaptics-1.2.2-r2 (21 Apr 2010)
+
+  21 Apr 2010; <chainsaw@gentoo.org> -xf86-input-synaptics-1.2.2-r1.ebuild,
+  +xf86-input-synaptics-1.2.2-r2.ebuild:
+  Indeed, I got the priorities wrong. It is last match, not first match.
 
 *xf86-input-synaptics-1.2.2-r1 (21 Apr 2010)
 
