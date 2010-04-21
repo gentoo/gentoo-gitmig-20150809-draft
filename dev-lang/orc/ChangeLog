@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/orc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.1 2010/04/21 15:38:51 ssuominen Exp $
+
+*orc-0.4.4 (21 Apr 2010)
+
+  21 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +orc-0.4.4.ebuild:
+  Initial commit.
+
