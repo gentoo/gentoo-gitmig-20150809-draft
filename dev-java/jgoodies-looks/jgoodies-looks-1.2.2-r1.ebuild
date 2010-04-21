@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2-r1.ebuild,v 1.5 2007/01/21 18:06:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2-r1.ebuild,v 1.6 2010/04/21 20:24:59 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -24,11 +24,11 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	rm *.jar
 	unzip ${MY_PN}-${PV}-src.zip &> /dev/null || die "Unpack Failed"
-	cp ${FILESDIR}/build.xml ${FILESDIR}/plastic.txt .
+	cp "${FILESDIR}/build.xml" "${FILESDIR}/plastic.txt" .
 }
 
 src_compile() {
