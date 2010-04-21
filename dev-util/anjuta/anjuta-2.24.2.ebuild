@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.24.2.ebuild,v 1.4 2009/09/27 13:54:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.24.2.ebuild,v 1.5 2010/04/21 22:06:21 eva Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.anjuta.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ppc ~sparc ~x86"
+KEYWORDS="hppa"
 IUSE="debug devhelp doc glade inherit-graph sourceview subversion valgrind"
 
 # https://bugzilla.gnome.org/show_bug.cgi?id=562113

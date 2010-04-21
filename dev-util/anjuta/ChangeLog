@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.110 2010/04/08 18:27:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.111 2010/04/21 22:06:21 eva Exp $
+
+  21 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/anjuta-1.2.4-gtk-fix.patch, -files/anjuta-2.1.0-sandbox-fix.patch,
+  -anjuta-2.2.0-r1.ebuild, -files/anjuta-2.4.2-documentation.patch,
+  anjuta-2.24.2.ebuild, -files/anjuta-2.26.0.0-symbol-db-optional.patch:
+  Clean up old revisions.
 
   08 Apr 2010; Raúl Porcel <armin76@gentoo.org> anjuta-2.28.2.0.ebuild:
   sparc stable wrt #298200
