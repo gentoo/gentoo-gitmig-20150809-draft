@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/pino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.1 2010/04/16 08:53:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.2 2010/04/21 07:22:55 dev-zero Exp $
+
+  21 Apr 2010; Tiziano Müller <dev-zero@gentoo.org> pino-0.2.6.ebuild,
+  metadata.xml:
+  Use slot deps. Fix webkit-gtk dep. Added python and intlool to DEPEND.
+  Added debug and indicate use flag. Added code to disable automagic dep on
+  libindicate. Added code to handle language file installation. Don't
+  install docs to /usr/share/doc. Added alternative HOMEPAGE.
 
 *pino-0.2.6 (16 Apr 2010)
 
