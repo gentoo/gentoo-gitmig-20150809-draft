@@ -6,7 +6,7 @@
   <email>mrness@gentoo.org</email>
   <name>Alin Nastac</name>
 </maintainer>
-<longdescription> SendEmail is a lightweight, completly command line based, 
+<longdescription> SendEmail is a lightweight, completely command line based, 
 SMTP email agent. If you have the need to send email from a command prompt 
 this tool is perfect. It was designed to be used in bash scripts, Perl 
 programs, and web sites, but it is also quite useful in many other contexts. 
