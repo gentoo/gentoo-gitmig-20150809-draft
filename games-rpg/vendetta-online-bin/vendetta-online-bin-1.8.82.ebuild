@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/vendetta-online-bin-1.8.82.ebuild,v 1.1 2009/08/13 00:31:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/vendetta-online-bin-1.8.82.ebuild,v 1.2 2010/04/21 01:04:31 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -10,13 +10,9 @@ HOMEPAGE="http://www.vendetta-online.com/"
 SRC_URI="amd64? (
 		http://mirror.cle.vendetta-online.com/vendetta-linux-amd64-installer.sh
 			-> ${P}-amd64.sh
-		http://mirror.milw.vendetta-online.com/vendetta-linux-amd64-installer.sh
-			-> ${P}-amd64.sh
 	)
 	x86? (
 		http://mirror.cle.vendetta-online.com/vendetta-linux-ia32-installer.sh
-			-> ${P}-x86.sh
-		http://mirror.milw.vendetta-online.com/vendetta-linux-ia32-installer.sh
 			-> ${P}-x86.sh
 	)"
 
