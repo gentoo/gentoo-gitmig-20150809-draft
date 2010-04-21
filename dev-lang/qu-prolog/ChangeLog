@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.66 2010/04/18 14:35:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.67 2010/04/21 06:46:47 keri Exp $
+
+  21 Apr 2010; <keri@gentoo.org> -qu-prolog-8.8.ebuild,
+  -files/qu-prolog-8.8-portage.patch, -qu-prolog-8.9.ebuild,
+  -files/qu-prolog-8.9-glibc2.10.patch, -files/qu-prolog-8.9-portage.patch,
+  -files/qu-prolog-8.9-print-atom.patch:
+  Remove old versions
 
   18 Apr 2010; <nixnut@gentoo.org> qu-prolog-8.10.ebuild:
   ppc stable #304999
