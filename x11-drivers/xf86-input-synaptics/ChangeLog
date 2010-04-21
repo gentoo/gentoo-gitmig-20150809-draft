@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.48 2010/04/10 09:46:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.49 2010/04/21 16:03:46 chainsaw Exp $
+
+*xf86-input-synaptics-1.2.2-r1 (21 Apr 2010)
+
+  21 Apr 2010; <chainsaw@gentoo.org> +files/1.2.2-xorg-inputclass,
+  +xf86-input-synaptics-1.2.2-r1.ebuild:
+  Install an X.Org 1.8 InputClass policy control file to actually use the
+  driver we installed. With thanks to Hanno Boeck & Stephen "steve"
+  Klimaszewski, closes bug #314989.
 
   10 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   xf86-input-synaptics-1.2.2.ebuild:
