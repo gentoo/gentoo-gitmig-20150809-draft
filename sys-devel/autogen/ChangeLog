@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autogen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.58 2009/08/02 14:24:16 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.59 2010/04/21 19:19:48 pva Exp $
+
+*autogen-5.10.1 (21 Apr 2010)
+
+  21 Apr 2010; Peter Volkov <pva@gentoo.org> +autogen-5.10.1.ebuild,
+  +files/autogen-5.10.1-build-hang.patch, +files/autogen-5.10.1-chmod.patch:
+  Version bump, bug #300561, thank Jeroen Roovers for report.
 
   02 Aug 2009; nixnut <nixnut@gentoo.org> autogen-5.9.7.ebuild:
   ppc stable #274468
