@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.3.ebuild,v 1.1 2010/04/19 20:52:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.3.ebuild,v 1.2 2010/04/21 21:50:34 eva Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ IUSE="cdr exif gnome-keyring gstreamer http raw tiff test"
 
 # clutter
 RDEPEND=">=dev-libs/glib-2.16:2
-	>=x11-libs/gtk+-2.16:2
+	>=x11-libs/gtk+-2.18:2
 	>=gnome-base/gconf-2.6
 	>=dev-libs/libunique-1
 	>=media-libs/jpeg-8:0
