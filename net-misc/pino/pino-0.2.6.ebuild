@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.6.ebuild,v 1.2 2010/04/21 07:22:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.6.ebuild,v 1.3 2010/04/21 07:23:29 dev-zero Exp $
 
 EAPI="3"
 
@@ -47,7 +47,7 @@ src_configure() {
 	for l in ${LINGUAS} ; do
 		if [[ "$supported_linguas" =~ "$l" ]] ; then
 			echo "$l" >> po/LINGUAS
-		fi 
+		fi
 	done
 
 	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" \
