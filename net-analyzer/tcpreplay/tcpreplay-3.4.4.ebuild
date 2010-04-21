@@ -1,10 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.1.ebuild,v 1.2 2009/04/05 21:28:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4.ebuild,v 1.1 2010/04/21 19:24:09 pva Exp $
 
 EAPI="2"
-
-inherit eutils
 
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.synfin.net/"
@@ -16,7 +14,7 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="debug pcapnav +tcpdump"
 
 DEPEND="
-	>=sys-devel/autogen-5.9.7
+	>=sys-devel/autogen-5.9.8
 	dev-libs/libdnet
 	>=net-libs/libpcap-0.9
 	tcpdump? ( net-analyzer/tcpdump )
@@ -26,7 +24,6 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	echo "We don't use bundled libopts" > libopts/options.h
-	epatch "${FILESDIR}/tcpreplay-3.4.1-errx-exit.patch"
 }
 
 src_configure() {
@@ -39,9 +36,10 @@ src_configure() {
 }
 
 src_test() {
-	if hasq userpriv "${FEATURES}"; then
-		ewarn "Some tested disabled due to FEATURES=userpriv"
-		ewarn "For a full test as root - make -C ${S}/test"
+	if [[ ! ${EUID} -eq 0 ]]; then
+		ewarn "Some tests were disabled due to FEATURES=userpriv"
+		ewarn "To run all tests issue the following command as root:"
+		ewarn " # make -C ${S}/test"
 		make -C test tcpprep || die "self test failed - see ${S}/test/test.log"
 	else
 		make test || {
@@ -51,6 +49,6 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "emake install failed"
+	make DESTDIR="${D}" install || die
 	dodoc README docs/{CHANGELOG,CREDIT,HACKING,TODO} || die
 }
