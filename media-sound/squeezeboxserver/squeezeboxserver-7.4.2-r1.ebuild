@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.4.2.ebuild,v 1.1 2010/04/09 04:17:59 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.4.2-r1.ebuild,v 1.1 2010/04/21 15:45:36 lavajoe Exp $
 
 EAPI="2"
 
@@ -92,7 +92,7 @@ RDEPEND="
 	>=dev-perl/Class-C3-0.21
 	>=dev-perl/Class-C3-Componentised-1.0006
 	>=dev-perl/File-ReadBackwards-1.04
-	>=dev-perl/DBIx-Class-0.08115
+	~dev-perl/DBIx-Class-0.08120
 	>=dev-perl/JSON-XS-VersionOneAndTwo-0.31
 	>=dev-perl/MRO-Compat-0.11
 	>=dev-perl/PAR-0.994
