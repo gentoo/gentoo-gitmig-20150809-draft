@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.19 2009/06/13 23:56:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.20 2010/04/21 11:48:50 tupone Exp $
+EAPI="2"
+PYTHON_DEPEND="python? 2"
 
-inherit eutils games
+inherit eutils python games
 
 DESCRIPTION="A console MUD client scriptable in Perl and Python"
 HOMEPAGE="http://www.andreasen.org/mcl/"
@@ -14,13 +16,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="python perl"
 
-DEPEND="perl? ( dev-lang/perl )
-	python? ( dev-lang/python )"
+DEPEND="perl? ( dev-lang/perl )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-fPIC.patch \
 		"${FILESDIR}"/${PV}-vc.patch \
@@ -43,12 +46,11 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		$(use_enable perl) \
 		$(use_enable python) \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install () {

@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/mcl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.19 2009/06/13 23:56:18 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.20 2010/04/21 11:48:50 tupone Exp $
+
+  21 Apr 2010; Tupone Alfredo <tupone@gentoo.org> mcl-0.53.00.ebuild:
+  Force python2 . Bug #312259 by arfrever@gentoo.org
 
   13 Jun 2009; Tristan Heaven <nyhm@gentoo.org> mcl-0.53.00.ebuild,
   +files/mcl-0.53.00-glibc2.10.patch:
