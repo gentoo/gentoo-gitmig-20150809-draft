@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.7.ebuild,v 1.1 2010/03/11 06:15:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.7.ebuild,v 1.2 2010/04/21 16:45:55 robbat2 Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs
@@ -38,6 +38,9 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	dosbin iptables-apply
+	doman iptables-apply.8
+	dodoc COMMIT_NOTES INCOMPATIBILITIES iptables.xslt
 
 	insinto /usr/include
 	doins include/iptables.h $(use ipv6 && echo include/ip6tables.h) || die
