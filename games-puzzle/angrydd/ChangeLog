@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/angrydd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.5 2007/02/22 01:06:04 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.6 2010/04/21 10:26:37 tupone Exp $
+
+  21 Apr 2010; Tupone Alfredo <tupone@gentoo.org> angrydd-1.0.1.ebuild:
+  Force python2 . Bug #312265 by arfrever@gentoo.org
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

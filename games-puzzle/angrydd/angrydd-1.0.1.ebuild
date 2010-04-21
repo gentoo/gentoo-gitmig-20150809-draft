@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/angrydd-1.0.1.ebuild,v 1.5 2006/04/26 00:08:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/angrydd-1.0.1.ebuild,v 1.6 2010/04/21 10:26:37 tupone Exp $
+EAPI="2"
+PYTHON_DEPEND="2"
 
-inherit eutils games
+inherit eutils python games
 
 DESCRIPTION="Angry, Drunken Dwarves, a falling blocks game similar to Puzzle Fighter"
 HOMEPAGE="http://www.sacredchao.net/~piman/angrydd/"
@@ -15,6 +17,15 @@ IUSE=""
 
 DEPEND=">=dev-python/pygame-1.6.2
 	>=dev-lang/python-2.3"
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
+src_prepare() {
+	python_convert_shebangs -r 2 .
+}
 
 src_install() {
 	make DESTDIR="${D}" PREFIX="${GAMES_DATADIR}" TO="${PN}" install \
