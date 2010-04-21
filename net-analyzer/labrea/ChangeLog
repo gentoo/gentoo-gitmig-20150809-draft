@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/labrea
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/labrea/ChangeLog,v 1.8 2007/07/02 14:37:38 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/labrea/ChangeLog,v 1.9 2010/04/21 13:48:44 fauli Exp $
+
+*labrea-2.5-r1 (21 Apr 2010)
+
+  21 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  +labrea-2.5-r1.ebuild, +files/labrea-2.5-stable-1-incdir.patch:
+  revision bump to fix compilation issue and some ebuild clean-up for bug
+  277256 by Andrew Savchenko <bircoph AT gmail DOT com>
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> labrea-2.5.ebuild:
   (QA) RESTRICT clean up.
