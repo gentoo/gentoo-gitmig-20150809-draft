@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.93 2010/04/18 17:25:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.94 2010/04/21 18:02:15 nelchael Exp $
+
+*scite-2.11 (21 Apr 2010)
+
+  21 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org> +scite-2.11.ebuild:
+  Version bump.
 
   18 Apr 2010; <nixnut@gentoo.org> scite-2.03.ebuild:
   ppc stable #312851
