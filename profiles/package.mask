@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11477 2010/04/21 16:44:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11478 2010/04/21 22:08:30 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -566,11 +566,6 @@ x11-apps/xfsinfo
 # Broken, will stay masked until fixed.
 # see bug #290086 for more info
 =x11-apps/xdm-1.1.9
-
-# Tristan Heaven <nyhm@gentoo.org> (05 Nov 2009)
-# Broken. Will be replaced by games-fps/urbanterror when it's ready.
-# Follow progress on bug #203296
-games-fps/quake3-urbanterror
 
 # Víctor Ostorga <vostorga@gentoo.org> (02 Nov 2009)
 # If you use a kernel >= 2.6.29 it is needed >=linux-headers-2.6.29
