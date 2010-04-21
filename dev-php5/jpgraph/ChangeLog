@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/jpgraph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.32 2010/04/21 22:43:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jpgraph/ChangeLog,v 1.33 2010/04/21 22:50:31 mabi Exp $
+
+  21 Apr 2010; <mabi@gentoo.org> -jpgraph-2.1.3.ebuild, -jpgraph-2.2.ebuild:
+  remove old versions
 
 *jpgraph-3.0.7 (21 Apr 2010)
 
