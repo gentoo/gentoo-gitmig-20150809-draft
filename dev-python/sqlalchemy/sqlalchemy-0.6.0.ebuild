@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.6.0.ebuild,v 1.1 2010/04/19 18:35:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.6.0.ebuild,v 1.2 2010/04/21 08:56:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -36,13 +36,21 @@ DEPEND="dev-python/setuptools
 		>=dev-python/nose-0.10.4
 		|| ( >=dev-lang/python-2.5[sqlite] dev-python/pysqlite )
 	)"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
+src_prepare() {
+	# Disable tests hardcoding function call counts specific to Python versions.
+	sed \
+		-e "s/test_first_connect/_&/" \
+		-e "s/test_second_connect/_&/" \
+		-i test/aaa_profiling/test_pool.py
+}
+
 src_test() {
 	testing() {
-		PYTHONPATH="lib" nosetests-${PYTHON_ABI}
+		[[ "${PYTHON_ABI}" == 3.* ]] && return
+		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests
 	}
 	python_execute_function testing
 }
