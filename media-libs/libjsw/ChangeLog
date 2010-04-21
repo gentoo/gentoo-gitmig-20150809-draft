@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjsw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.16 2010/03/22 16:17:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.17 2010/04/21 16:39:20 mr_bones_ Exp $
+
+  21 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org> libjsw-1.5.8.ebuild:
+  remove gtk use flag since it uses gtk+:1
 
 *libjsw-1.5.8 (22 Mar 2010)
 
