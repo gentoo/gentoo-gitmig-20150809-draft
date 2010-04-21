@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.26.ebuild,v 1.1 2010/03/17 12:34:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.26b.ebuild,v 1.1 2010/04/21 13:57:02 flameeyes Exp $
 
 EAPI=2
-
-inherit versionator
 
 MY_P=${P/_/-}
 
@@ -32,7 +30,7 @@ DEPEND="
 	dev-util/pkgconfig
 	media-libs/freetype:2
 	"
-S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
+S="${WORKDIR}/${PN}-${PV%_*}"
 
 src_configure() {
 	econf --enable-ttf-font-dir=/usr/share/fonts/freefont-ttf/
