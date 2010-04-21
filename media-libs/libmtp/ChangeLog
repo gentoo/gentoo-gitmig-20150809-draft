@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.76 2010/02/22 23:23:17 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.77 2010/04/21 17:07:45 ken69267 Exp $
+
+*libmtp-1.0.2-r1 (21 Apr 2010)
+
+  21 Apr 2010; Kenneth Prugh <ken69267@gentoo.org> +libmtp-1.0.2-r1.ebuild:
+  Fix device permissions - bug #288736
 
 *libmtp-1.0.2 (22 Feb 2010)
 
