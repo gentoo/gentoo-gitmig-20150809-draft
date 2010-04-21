@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.64 2010/04/20 23:15:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.65 2010/04/21 16:32:51 mabi Exp $
+
+  21 Apr 2010; <mabi@gentoo.org> +ming-0.2a.ebuild:
+  restore still needed ming-0.2a
 
   20 Apr 2010; <mabi@gentoo.org> -ming-0.2a.ebuild, metadata.xml:
   orphan package, it does not belong to php; remove old version
