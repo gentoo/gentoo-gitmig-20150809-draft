@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.40-r1.ebuild,v 1.4 2010/04/16 15:06:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.40-r1.ebuild,v 1.5 2010/04/21 07:59:07 pchrist Exp $
 
 EAPI="3"
 #inherit autotools #mono #48511
@@ -20,7 +20,7 @@ src_prepare () {
 	#eautoreconf --verbose || die "reconfiguring the build system failed"
 	#use test && die
 	rm -v aclocal.m4 || die "Unable to remove aclocal.m4"
-	env - ./autogen.sh || die "Autogen script failed"
+	./autogen.sh || die "Autogen script failed"
 }
 
 src_configure () {

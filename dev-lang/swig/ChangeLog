@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.131 2010/04/16 07:28:28 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.132 2010/04/21 07:59:07 pchrist Exp $
+
+  21 Apr 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
+  swig-1.3.40-r1.ebuild:
+  minor change, fixes bug 315765
 
   16 Apr 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   swig-1.3.40-r1.ebuild:
