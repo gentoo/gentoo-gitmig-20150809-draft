@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.130 2010/04/15 21:06:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.131 2010/04/21 15:18:30 jer Exp $
+
+*dpkg-1.15.7 (21 Apr 2010)
+
+  21 Apr 2010; Jeroen Roovers <jer@gentoo.org> -dpkg-1.15.2.ebuild,
+  -dpkg-1.15.5.5.ebuild, -dpkg-1.15.5.6.ebuild, -dpkg-1.15.5.6-r1.ebuild,
+  -files/dpkg-1.15.5-nls.patch, -files/dpkg-1.15.5-unicode.patch,
+  -dpkg-1.15.6.ebuild, +dpkg-1.15.7.ebuild:
+  Version bump.
 
   15 Apr 2010; Markus Meier <maekke@gentoo.org> dpkg-1.15.6.1.ebuild:
   amd64 stable, bug #309633
