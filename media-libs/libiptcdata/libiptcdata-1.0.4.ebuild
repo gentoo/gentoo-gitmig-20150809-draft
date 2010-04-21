@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.4.ebuild,v 1.2 2010/01/01 12:53:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/libiptcdata-1.0.4.ebuild,v 1.3 2010/04/21 23:26:36 eva Exp $
 
-inherit eutils
+EAPI="3"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit eutils python
 
 DESCRIPTION="library for manipulating the International Press Telecommunications
 Council (IPTC) metadata"
@@ -20,15 +24,53 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.13.1 )
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-src_compile () {
-	econf $(use_enable nls) \
+src_prepare() {
+	# Python bindings are built/tested/installed manually.
+	sed -e '/SUBDIRS =/s/$(MAYBE_PYTHONLIB)//' -i Makefile.in || die "sed failed"
+}
+
+src_configure () {
+	python_execute_function -f -q econf \
+		$(use_enable nls) \
 		$(use_enable python) \
 		$(use_enable doc gtk-doc)
-	emake || die "emake failed."
+}
+
+src_compile() {
+	default
+
+	if use python; then
+		python_copy_sources python
+		building() {
+			emake PYTHON_CPPFLAGS=-I$(python_get_includedir) \
+				pyexecdir=$(python_get_sitedir)
+		}
+		python_execute_function -s --source-dir python building
+	fi
+}
+
+src_test() {
+	default
+
+	if use python; then
+		testing() {
+			emake test
+		}
+		python_execute_function -s --source-dir python testing
+	fi
 }
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed."
+
+	if use python; then
+		installation() {
+			emake DESTDIR="${D}" pyexecdir=$(python_get_sitedir) install
+		}
+		python_execute_function -s --source-dir python installation
+		python_clean_sitedirs
+	fi
+
 	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed."
 
 	if use examples; then
@@ -37,7 +79,7 @@ src_install () {
 		doins -r python/examples || die "doins 2 failed"
 	fi
 
-	find "${D}" -name '*.la' -delete
+	find "${D}" -name '*.la' -delete || die "failed to remove *.la files"
 }
 
 pkg_postinst() {
