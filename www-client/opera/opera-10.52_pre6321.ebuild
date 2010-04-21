@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.52_pre6317.ebuild,v 1.1 2010/04/16 13:38:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.52_pre6321.ebuild,v 1.1 2010/04/21 12:51:05 jer Exp $
 
 EAPI="2"
 
@@ -112,6 +112,9 @@ src_unpack() {
 }
 
 src_install() {
+	# Remove "license directory" (bug #315473)
+	rm -rf "share/doc/opera"
+
 	# We install into usr instead of opt as Opera does not support the latter
 	dodir /usr
 	mv lib/ share/ "${D}"/usr/ || die "mv lib/ share/ failed"
