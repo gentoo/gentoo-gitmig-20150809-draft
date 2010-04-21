@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r2.ebuild,v 1.1 2010/03/19 11:13:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r3.ebuild,v 1.1 2010/04/21 20:39:04 pacho Exp $
 
 EAPI=1
 
@@ -60,8 +60,8 @@ src_unpack() {
 	# We are not Ubuntu, and I suspect that this is the cause of #215281
 	epatch "${FILESDIR}/${P}-remove-ubuntu-special-case.patch"
 
-	# Make it work ok with eds-2.24 and 2.29, thanks to Fedora folks
-	epatch "${FILESDIR}/${P}-e-d-s.patch"
+	# Make it work ok with eds-2.24
+	epatch "${FILESDIR}/${P}-e-d-s-2.24.patch"
 
 	# Fix gtkhtml depend to solve building against evo-2.28, see bug #293374
 	epatch "${FILESDIR}/${P}-evolution-gtkhtml.patch"
@@ -90,13 +90,13 @@ src_compile() {
 		$(use_var pop pop3) \
 		$(use_var sasl) \
 		$(use_var ssl) \
-		$(use_var sylpheed)
+		$(use_var sylpheed) || die
 
-	./jb build
+	./jb build || die
 }
 
 src_install() {
-	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1" ./jb install
+	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1" ./jb install || die
 
 	dodoc NEWS README AUTHORS TODO TRANSLATING
 
