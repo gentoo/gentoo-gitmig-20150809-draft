@@ -1,24 +1,26 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/gpointing-device-settings-1.3.2.ebuild,v 1.5 2010/04/21 18:25:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/gpointing-device-settings-1.5.1.ebuild,v 1.1 2010/04/21 18:25:56 pva Exp $
 
 GCONF_DEBUG="no"
 inherit eutils gnome2
 
 DESCRIPTION="A GTK+ based configuration utility for the synaptics driver"
 HOMEPAGE="http://live.gnome.org/GPointingDeviceSettings"
-SRC_URI="mirror://sourceforge.jp/gsynaptics/43803/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/gsynaptics/45812/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # recent enough x11-base/xorg-server required
 RDEPEND=">=dev-libs/glib-2.10
 	>=x11-libs/gtk+-2.14.0
 	>=gnome-base/gconf-2.24
+	>=gnome-base/gnome-settings-daemon-2.28
 	>=x11-libs/libXi-1.2
+	>=x11-libs/libX11-1.2.0
 	!<=x11-base/xorg-server-1.6.0
 	!gnome-extra/gsynaptics"
 DEPEND="${RDEPEND}
