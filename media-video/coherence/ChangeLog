@@ -1,6 +1,10 @@
 # ChangeLog for media-video/coherence
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.1 2009/12/27 05:19:07 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.2 2010/04/21 18:03:28 fauli Exp $
+
+  21 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  coherence-0.6.6.1.ebuild:
+  keyworded ~arch for x86, bug 313563
 
 *coherence-0.6.6.1 (27 Dec 2009)
 
