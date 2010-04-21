@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.3-r1.ebuild,v 1.1 2010/02/20 18:21:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.3-r1.ebuild,v 1.2 2010/04/21 13:30:24 jer Exp $
 
 EAPI="2"
 
@@ -16,7 +16,10 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=net-libs/webkit-gtk-1.1.14"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	!media-gfx/surf
+	${DEPEND}
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-download.patch
