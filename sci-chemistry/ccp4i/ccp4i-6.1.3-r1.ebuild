@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r1.ebuild,v 1.1 2010/03/20 17:27:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r1.ebuild,v 1.2 2010/04/22 20:19:04 jlec Exp $
 
 EAPI="2"
 
-inherit base multilib
+inherit base multilib python
 
+PYTHON_DEPEND="2"
 MY_PN="${PN%i}"
 MY_P="${MY_PN}-${PV}"
 
@@ -24,7 +25,7 @@ SRC_URI="
 [[ -n ${PATCHDATE} ]] && SRC_URI="${SRC_URI} http://dev.gentooexperimental.org/~jlec/science-dist/${PV}-${PATCHDATE}-updates.patch.bz2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4"
 IUSE=""
 
@@ -45,12 +46,17 @@ PATCHES=(
 	"${WORKDIR}"/${P}-arpwarp.patch
 	)
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	base_src_prepare
 
 	[[ ! -z ${PATCHDATE} ]] && epatch "${WORKDIR}"/${PV}-${PATCHDATE}-updates.patch
 
 	epatch "${WORKDIR}"/${PV}-oasis4.0.patch
+	python_convert_shebangs -r $(python_get_version) ccp4i/ share/dbccp4i/
 }
 
 src_configure() {
