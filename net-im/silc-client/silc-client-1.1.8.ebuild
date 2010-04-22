@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.8.ebuild,v 1.2 2010/04/19 21:16:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.1.8.ebuild,v 1.3 2010/04/22 12:12:31 fauli Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://silcnet.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="ipv6 perl debug"
 
 COMMONDEPEND="perl? ( dev-lang/perl )
