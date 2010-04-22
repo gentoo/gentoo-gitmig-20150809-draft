@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r2.ebuild,v 1.3 2010/03/29 19:19:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r2.ebuild,v 1.4 2010/04/22 19:50:04 jlec Exp $
 
 EAPI="2"
 
@@ -104,6 +104,10 @@ PDEPEND="${SCIAPPS}"
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	einfo "Applying upstream patches ..."
 	for patch in $(seq $PATCH_TOT); do
@@ -187,7 +191,7 @@ src_prepare() {
 
 	gnuconfig_update
 
-	python_convert_shebangs 2 src/ccp4_pipeline_simple.py
+	python_convert_shebangs $(python_get_version) src/ccp4_pipeline_simple.py ./share/smartie/*.py
 }
 
 src_configure() {
