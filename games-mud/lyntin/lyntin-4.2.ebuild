@@ -1,9 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2.ebuild,v 1.5 2010/03/02 13:45:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2.ebuild,v 1.6 2010/04/22 08:32:10 tupone Exp $
 
 EAPI=2
-inherit eutils games distutils
+
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH_OPT="tk"
+PYTHON_USE_WITH="tk"
+
+inherit eutils python games distutils
 
 DESCRIPTION="tintin mud client clone implemented in Python"
 HOMEPAGE="http://lyntin.sourceforge.net/"
@@ -14,9 +19,15 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="tk"
 
-DEPEND=">=dev-lang/python-2.2.3[tk?]"
+DEPEND=""
 
 DOCS="COMMANDS PKG-INFO HACKING README"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+	games_pkg_setup
+}
 
 src_install() {
 	distutils_src_install
