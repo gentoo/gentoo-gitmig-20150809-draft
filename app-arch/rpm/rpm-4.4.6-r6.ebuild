@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6-r6.ebuild,v 1.11 2010/04/04 21:48:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6-r6.ebuild,v 1.12 2010/04/22 20:59:35 sochotnicky Exp $
 
 inherit eutils autotools distutils perl-module flag-o-matic
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	epatch "${FILESDIR}"/${P}-buffer-overflow.patch
 	epatch "${FILESDIR}"/${P}-qa-fix-undefined.patch
+	epatch "${FILESDIR}"/${P}-fix-cflags-stripping.patch
 	# bug 214799
 	epatch "${FILESDIR}"/${P}-neon-0.28.patch
 
