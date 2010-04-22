@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.62 2010/03/09 12:03:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.63 2010/04/22 18:51:51 vadimk Exp $
+
+*vmware-server-2.0.2.203138-r1 (22 Apr 2010)
+
+  22 Apr 2010; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-server-2.0.2.203138-r1.ebuild:
+  Bug 292771. Use system libxml2 and libexpat.
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org>
   vmware-server-2.0.1.156745-r3.ebuild, vmware-server-2.0.2.203138.ebuild:
