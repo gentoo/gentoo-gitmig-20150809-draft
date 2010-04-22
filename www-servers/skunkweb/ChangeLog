@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/skunkweb
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.21 2008/03/14 10:55:35 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.22 2010/04/22 18:42:52 arfrever Exp $
+
+  22 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  skunkweb-3.4.4.ebuild:
+  Use Python 2.
 
   14 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Christian Andreetta (satya, #48841) from metadata.xml.

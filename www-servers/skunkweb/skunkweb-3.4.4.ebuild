@@ -1,8 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.4.ebuild,v 1.1 2008/02/06 09:55:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.4.ebuild,v 1.2 2010/04/22 18:42:52 arfrever Exp $
 
-inherit eutils apache-module
+EAPI="3"
+PYTHON_DEPEND="2"
+
+inherit apache-module eutils multilib python
 
 DESCRIPTION="robust Python web application server"
 HOMEPAGE="http://skunkweb.sourceforge.net/"
@@ -13,9 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.2
-	>=dev-python/egenix-mx-base-2.0.4
-	app-admin/sudo"
+DEPEND="app-admin/sudo
+	>=dev-python/egenix-mx-base-2.0.4"
 RDEPEND="${DEPEND}"
 
 need_apache
@@ -27,9 +29,11 @@ APACHE2_MOD_CONF="100_mod_skunkweb"
 pkg_setup() {
 	enewgroup skunkweb
 	enewuser skunkweb -1 -1 /usr/share/skunkweb skunkweb
+
+	python_set_active_version 2
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-user=skunkweb \
 		--with-group=skunkweb \
@@ -41,15 +45,19 @@ src_compile() {
 		--with-cache=/var/lib/skunkweb/cache \
 		--with-docdir=/usr/share/doc/${P} \
 		--with-logdir=/var/log/skunkweb \
-		--with-python=/usr/bin/python \
-		--with-apxs=${APXS} || die "configure failed"
+		--with-python="$(PYTHON -a)" \
+		--with-apxs=${APXS}
+}
 
-	emake || die
+src_compile() {
+	default
 }
 
 src_install() {
-	make DESTDIR="${D}" APXSFLAGS="-c" install || die "make install failed"
+	emake DESTDIR="${D}" APXSFLAGS="-c" install || die "emake install failed"
 	apache-module_src_install
+
+	python_need_rebuild
 
 	keepdir /var/{lib,log}/${PN}
 	keepdir /var/lib/${PN}/run
@@ -60,4 +68,13 @@ src_install() {
 	newexe "${FILESDIR}"/skunkweb-cron-cache_cleaner skunkweb-cache_cleaner
 
 	dodoc README ChangeLog NEWS HACKING ACKS INSTALL
+}
+
+pkg_postinst() {
+	apache-module_pkg_postinst
+	python_mod_optimize /usr/$(get_libdir)/skunkweb
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/$(get_libdir)/skunkweb
 }
