@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/pdsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.16 2010/04/08 07:22:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.17 2010/04/22 17:08:14 ssuominen Exp $
+
+  22 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> pdsh-2.18-r1.ebuild:
+  amd64 stable wrt #252398
 
   08 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pdsh-2.18-r1.ebuild:
   x86 stable wrt bug #252398
