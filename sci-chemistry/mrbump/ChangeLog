@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mrbump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.1 2010/02/06 23:25:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.2 2010/04/22 19:35:33 jlec Exp $
+
+  22 Apr 2010; Justin Lecher <jlec@gentoo.org> mrbump-0.4.4.ebuild:
+  Support for Python ABIs, #316175
 
 *mrbump-0.4.4 (06 Feb 2010)
 
