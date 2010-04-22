@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.31 2010/03/15 00:05:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.32 2010/04/22 06:46:21 ferringb Exp $
+
+*snakeoil-0.3.6.4 (22 Apr 2010)
+
+  22 Apr 2010; Brian Harring <ferringb@gentoo.org> +snakeoil-0.3.6.4.ebuild:
+  New version, fixes some py3k compatibility issues.
 
 *snakeoil-0.3.6.3 (14 Mar 2010)
 
