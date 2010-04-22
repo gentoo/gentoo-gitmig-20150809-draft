@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lrzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.13 2010/04/20 15:19:55 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.14 2010/04/22 17:17:10 spatz Exp $
+
+  22 Apr 2010; Dror Levin <spatz@gentoo.org> lrzip-0.45.ebuild:
+  Add dep on virtual/perl-PodParser, bug 316645, thanks to j.habenicht.
 
 *lrzip-0.45 (20 Apr 2010)
 
