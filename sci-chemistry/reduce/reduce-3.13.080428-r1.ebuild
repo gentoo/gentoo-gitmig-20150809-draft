@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.13.080428-r1.ebuild,v 1.1 2010/02/05 23:41:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.13.080428-r1.ebuild,v 1.2 2010/04/22 20:32:15 jlec Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://kinemage.biochem.duke.edu/downloads/software/reduce31/${MY_P}.tg
 
 LICENSE="richardson"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""
@@ -28,7 +28,7 @@ src_prepare() {
 }
 
 src_compile() {
-	DICT_DIR="/usr/share/reduce"
+	DICT_DIR="${EPREFIX}/usr/share/reduce"
 	DICT_FILE="reduce_het_dict.txt"
 
 	emake \
@@ -48,7 +48,7 @@ src_install() {
 
 pkg_info() {
 	elog "To use the PDBv3 dictionary instead of PDBv2, set the environment"
-	elog "variable REDUCE_HET_DICT to /usr/share/reduce/reduce_wwPDB_het_dict.txt"
+	elog "variable REDUCE_HET_DICT to ${EPREFIX}/usr/share/reduce/reduce_wwPDB_het_dict.txt"
 }
 
 pkg_postinst() {
