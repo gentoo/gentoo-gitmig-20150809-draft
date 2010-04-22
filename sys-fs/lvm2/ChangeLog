@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.204 2010/04/21 01:03:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.205 2010/04/22 19:33:26 robbat2 Exp $
+
+*lvm2-2.02.63-r2 (22 Apr 2010)
+
+  22 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +lvm2-2.02.63-r2.ebuild:
+  Bug #316571: more work on library installs.
 
   21 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> -lvm2-2.02.63.ebuild:
   2.02.63-r0 fails to boot on machines with a split /usr, fixed in r1, but
