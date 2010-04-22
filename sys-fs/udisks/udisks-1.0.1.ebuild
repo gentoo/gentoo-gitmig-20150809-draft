@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1.ebuild,v 1.1 2010/04/09 18:14:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1.ebuild,v 1.2 2010/04/22 16:05:30 ssuominen Exp $
 
 EAPI=3
 inherit bash-completion
@@ -33,6 +33,9 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc
 		app-text/docbook-xml-dtd:4.1.2 )
 	nls? ( >=dev-util/intltool-0.40.0 )"
+
+# This would require running dbus and also sudo.
+RESTRICT="test"
 
 src_configure() {
 	econf \
