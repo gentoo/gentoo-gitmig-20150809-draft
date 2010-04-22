@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-0.2.ebuild,v 1.2 2009/12/02 10:51:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-0.2.ebuild,v 1.3 2010/04/22 18:51:30 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.5"
-RDEPEND="${DEPEND}
-			dev-python/simplejson
-			dev-python/pycurl"
+DEPEND="dev-python/pycurl
+	dev-python/simplejson"
+RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
