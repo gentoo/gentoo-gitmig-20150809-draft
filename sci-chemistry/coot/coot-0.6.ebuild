@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.ebuild,v 1.2 2010/02/26 19:02:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.ebuild,v 1.3 2010/04/22 20:23:40 jlec Exp $
 
 EAPI="3"
 
-inherit autotools base versionator
+PYTHON_DEPEND="2"
+
+inherit autotools base python versionator
 
 MY_S2_PV=$(replace_version_separator 2 - ${PV})
 MY_S2_P=${PN}-${MY_S2_PV/pre1/pre-1}
@@ -95,7 +97,7 @@ src_configure() {
 
 src_compile() {
 	emake || die "emake failed"
-
+	python_convert_shebangs $(python_get_version) src/coot_gtk2.py
 	cp "${S}"/src/coot_gtk2.py python/coot.py || die
 }
 
