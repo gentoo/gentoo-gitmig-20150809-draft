@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/basket
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.4 2010/04/22 17:38:12 spatz Exp $
+
+*basket-1.80 (22 Apr 2010)
+
+  22 Apr 2010; Dror Levin <spatz@gentoo.org> +basket-1.80.ebuild,
+  +files/basket-1.80-crypt.patch, +metadata.xml:
+  Import from kde overlay, bug 310827. Thanks to Scott Stubbs, Maciej Grela
+  and Andreas K. Huettel.
+
