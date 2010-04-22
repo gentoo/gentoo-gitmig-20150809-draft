@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4.ebuild,v 1.2 2010/03/05 22:46:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4.ebuild,v 1.3 2010/04/22 10:14:02 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/_/-}
@@ -25,7 +25,8 @@ RDEPEND=">=sys-libs/db-4
 	wavpack? ( >=media-sound/wavpack-4.31 )
 	sndfile? ( >=media-libs/libsndfile-1 )
 	modplug? ( >=media-libs/libmodplug-0.7 )
-	musepack? ( >=media-sound/musepack-tools-444-r1 )
+	musepack? ( >=media-sound/musepack-tools-444-r1
+		>=media-libs/taglib-1.3.1 )
 	timidity? ( media-libs/libtimidity media-sound/timidity++ )
 	sid? ( >=media-libs/libsidplay-2 )
 	ffmpeg? ( media-video/ffmpeg )

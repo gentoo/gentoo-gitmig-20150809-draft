@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.76 2010/03/06 20:01:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.77 2010/04/22 10:14:02 ssuominen Exp $
+
+  22 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  moc-2.5.0_alpha4.ebuild:
+  TagLib is required for Musepack support wrt #312783 by Christian
+  Glindkamp.
 
   06 Mar 2010; Raúl Porcel <armin76@gentoo.org> moc-2.5.0_alpha3-r3.ebuild:
   alpha stable
