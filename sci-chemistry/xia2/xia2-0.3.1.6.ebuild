@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/xia2-0.3.1.6.ebuild,v 1.2 2010/04/22 19:29:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/xia2-0.3.1.6.ebuild,v 1.3 2010/04/22 20:25:40 jlec Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ src_prepare() {
 	find . -name '*.bat' -delete || die
 
 	epatch "${FILESDIR}"/${PV}-fix-syntax.patch
-	python_convert_shebangs -r 4 .
+	python_convert_shebangs -r $(python_get_version) .
 }
 
 src_install() {
