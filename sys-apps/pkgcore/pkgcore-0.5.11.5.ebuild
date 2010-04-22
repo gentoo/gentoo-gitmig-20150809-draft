@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.4.ebuild,v 1.1 2010/04/22 06:52:04 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.5.ebuild,v 1.1 2010/04/22 08:54:31 ferringb Exp $
 
 DISTUTILS_SRC_TEST="setup.py"
 
