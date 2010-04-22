@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.55 2010/04/18 08:49:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.56 2010/04/22 09:17:35 jlec Exp $
+
+*ifc-11.1.056-r1 (22 Apr 2010)
+
+  22 Apr 2010; Justin Lecher <jlec@gentoo.org> +ifc-11.1.056-r1.ebuild:
+  Bumped to EAPI=3, keyworded ~amd64-linux ~x86-linux
 
   18 Apr 2010; Justin Lecher <jlec@gentoo.org> ifc-10.1.017.ebuild,
   ifc-10.1.018.ebuild:
