@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.57 2010/04/18 12:03:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.58 2010/04/22 05:47:25 tove Exp $
+
+*Test-Pod-1.43 (22 Apr 2010)
+
+  22 Apr 2010; Torsten Veller <tove@gentoo.org> +Test-Pod-1.43.ebuild:
+  Version bump. No code changes
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> Test-Pod-1.42.ebuild:
   arm stable, bug #314467
