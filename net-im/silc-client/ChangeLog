@@ -1,6 +1,14 @@
 # ChangeLog for net-im/silc-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.58 2010/04/22 12:12:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.59 2010/04/22 23:00:39 polynomial-c Exp $
+
+  22 Apr 2010; Lars Wendler <polynomial-c@gentoo.org>
+  silc-client-1.1.8.ebuild,
+  +files/silc-client-1.1.8-sandbox-errors-fix.patch:
+  non-maintainer commit: 
+  Added a patch to work around a sandbox violation. 
+  Also added >=net-im/silc-toolkit to DEPEND to fix bug #316691 which got
+  caught by flameeyes during his usual tinderbox runs.
 
   22 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   silc-client-1.1.8.ebuild:
