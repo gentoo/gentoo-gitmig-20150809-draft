@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.6 2010/04/13 12:15:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.7 2010/04/22 12:02:43 djc Exp $
+
+  22 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> argparse-1.1.ebuild:
+  amd64 stable, bug 313141
 
   13 Apr 2010; Christian Faulhammer <fauli@gentoo.org> argparse-1.1.ebuild:
   stable x86, bug 313141
