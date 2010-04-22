@@ -20,7 +20,7 @@ index 29e769c..0b8a51e 100644
  
  ##    2. Complement by other potential places for python :
 -    search_list="${search_list} /usr/local/bin/python /usr/bin/python"
-+    search_list="${search_list} @GENTOO_PORTAGE_EPREFIX@/usr/bin/python"
++    search_list="${search_list} @GENTOO_PORTAGE_EPREFIX@/usr/bin/pythonPYVER"
      flex_wARP_python="/dev/null"
  
  ##    3. Pick up the first one of the list which seems reasonable :
@@ -101,7 +101,7 @@ index 41b11e9..a4edcff 100644
  
  ##    2. Complement by other potential places for python :
 -set search_list = "${search_list} /usr/local/bin/python /usr/bin/python"
-+set search_list = "${search_list} @GENTOO_PORTAGE_EPREFIX@/usr/bin/python"
++set search_list = "${search_list} @GENTOO_PORTAGE_EPREFIX@/usr/bin/pythonPYVER"
  setenv flex_wARP_python "/dev/null"
  
  ##    3. Pick up the first one of the list which seems reasonable :

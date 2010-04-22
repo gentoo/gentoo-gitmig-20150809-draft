@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.1 2010/03/20 18:07:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.2 2010/04/22 20:03:33 jlec Exp $
 
 EAPI="3"
 
@@ -36,9 +36,15 @@ pkg_nofetch(){
 	elog "and place ${A} in ${DISTDIR}"
 }
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-setup.patch
 	eprefixify "${S}"/share/arpwarp_setup_base.*
+	sed "s:PYVER:$(python_get_version):g" -i "${S}"/share/arpwarp_setup_base.*
+	python_convert_shebangs $(python_get_version) flex-wARP-src-354/*py
 }
 
 src_install(){

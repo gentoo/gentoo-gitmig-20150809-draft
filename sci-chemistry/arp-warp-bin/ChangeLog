@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/arp-warp-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.4 2010/03/20 18:07:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.5 2010/04/22 20:03:33 jlec Exp $
+
+  22 Apr 2010; Justin Lecher <jlec@gentoo.org> -files/7.0.1-setup.patch,
+  -files/7.0.1-source-ccp4-if-needed.patch, files/7.1-setup.patch,
+  arp-warp-bin-7.1.ebuild:
+  Fixes for Python ABIs, #316167
 
 *arp-warp-bin-7.1 (20 Mar 2010)
 
