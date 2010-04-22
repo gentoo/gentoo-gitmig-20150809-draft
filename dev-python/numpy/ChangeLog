@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.108 2010/03/04 20:31:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.109 2010/04/22 19:26:48 bicatali Exp $
+
+*numpy-1.4.1 (22 Apr 2010)
+
+  22 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org> -numpy-1.4.0.ebuild,
+  -files/numpy-1.4.0-python-2.7.patch, +numpy-1.4.1.ebuild:
+  Version bump. Removed 1.4.0 because pulled out by upstream for ABI
+  incompatibilities
 
   04 Mar 2010; Joseph Jezak <josejx@gentoo.org> numpy-1.4.0.ebuild:
   Marked -ppc/-ppc64 due to a lack of support for long double format. Please
