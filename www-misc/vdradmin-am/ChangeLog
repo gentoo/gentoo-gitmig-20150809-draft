@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.8 2010/04/11 17:22:39 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.9 2010/04/22 17:11:25 billie Exp $
+
+  22 Apr 2010; Daniel Pielmeier <billie@gentoo.org>
+  files/vdradmin-3.6.6.init:
+  Let the init script create all needed directories under /var in case they
+  are missing. Thanks to Helmut Auer in bug #316625.
 
 *vdradmin-am-3.6.7 (11 Apr 2010)
 
