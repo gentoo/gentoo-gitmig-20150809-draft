@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.7.1.ebuild,v 1.1 2010/04/22 14:23:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.7.1.ebuild,v 1.2 2010/04/22 14:25:06 jer Exp $
 
 EAPI=3
 
@@ -41,7 +41,7 @@ src_prepare() {
 	sed -i -e '1c\#!'"${BASH}" get-version || die
 
 	# bug 310847
-	if [[ "${PV}" = "1.15.7" ]]; then
+	if [[ "${PV}" = "1.15.7.1" ]]; then
 		sed -i lib/dpkg/test/Makefile.am -e '/t[_-]ar/d' || die "sed failed"
 		sed -i scripts/Makefile.am -e '/850_Dpkg_Compression.t/d' \
 			|| die "sed failed"
