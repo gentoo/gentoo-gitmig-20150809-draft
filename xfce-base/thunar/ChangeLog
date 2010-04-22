@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.87 2010/03/09 10:41:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.88 2010/04/22 15:42:00 ssuominen Exp $
+
+  22 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +thunar-1.0.1-r1.ebuild, +files/thunar-1.0.1-fix-umask-handling.patch:
+  Fix umask handling after Create Folder operation wrt #316681 by Ivan
+  Ponomarev.
 
   09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> thunar-1.0.1.ebuild,
   +files/thunar-1.0.1-libpng14.patch:
