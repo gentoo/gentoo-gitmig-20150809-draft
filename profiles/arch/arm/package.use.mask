@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.23 2010/04/17 18:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.24 2010/04/22 18:28:23 aballier Exp $
 
 # Jeremy Olexa <darkside@gentoo.org> (04 Apr 2010)
 # mask net-misc/mediatomb[lastfm] as lastfmlib isn't keyworded
@@ -52,3 +52,6 @@ dev-libs/boost mpi
 # missing keywords
 media-sound/sox ladspa
 media-plugins/gst-plugins-meta lame taglib
+
+# projectm not keyworded, bug #314969
+media-video/vlc projectm
