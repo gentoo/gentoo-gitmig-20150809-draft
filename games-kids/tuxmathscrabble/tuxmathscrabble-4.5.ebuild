@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-4.5.ebuild,v 1.1 2007/10/24 01:28:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-4.5.ebuild,v 1.2 2010/04/22 12:09:35 tupone Exp $
+EAPI="2"
+PYTHON_DEPEND="2"
 
 inherit eutils python multilib games
 
@@ -21,21 +23,24 @@ DEPEND="dev-python/pygame
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
+src_prepare() {
 	rm -f $(find . -name '*.pyc')
 	mv -f ${MY_PN}/{Accounts,Globals,Simulation,StudentData} .
 	sed -i "s:'/','var','games':'${GAMES_STATEDIR}':" \
 		asymptopia_0_1_3/environment.py \
 		|| die "sed failed"
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
 	newgamesbin ${MY_PN}.py ${PN} || die "newgamesbin failed"
 
-	python_version
-	insinto /usr/$(get_libdir)/python${PYVER}/site-packages
+	insinto $(python_get_sitedir)
 	doins -r ${MY_PN} || die "doins failed"
 	doins -r asymptopia_0_1_3 || die "doins asymptopia_0_1_2 failed"
 
