@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.1.ebuild,v 1.1 2010/04/22 10:38:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.16.1.ebuild,v 1.2 2010/04/22 23:22:11 arfrever Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_configure() {
