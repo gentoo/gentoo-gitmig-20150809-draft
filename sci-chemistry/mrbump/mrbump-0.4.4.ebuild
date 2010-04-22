@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/mrbump-0.4.4.ebuild,v 1.2 2010/04/22 19:35:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/mrbump-0.4.4.ebuild,v 1.3 2010/04/22 19:36:23 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="${HOMEPAGE}/release/${P}.tar.gz"
 LICENSE="ccp4"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 IUSE="X perl"
 RDEPEND=">=sci-chemistry/ccp4-apps-6.1.3[X?]
