@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/yoshimi-0.056.ebuild,v 1.1 2010/04/22 09:04:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/yoshimi-0.056.ebuild,v 1.2 2010/04/22 09:36:50 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -11,7 +11,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+# We can't be sure if SSE is available on x86 wrt bug #316627
+KEYWORDS="~amd64 -x86"
 IUSE=""
 
 RDEPEND="sys-libs/zlib
