@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r1.ebuild,v 1.2 2010/04/22 20:19:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r1.ebuild,v 1.3 2010/04/22 22:22:43 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 
 inherit base multilib python
 
-PYTHON_DEPEND="2"
 MY_PN="${PN%i}"
 MY_P="${MY_PN}-${PV}"
 
