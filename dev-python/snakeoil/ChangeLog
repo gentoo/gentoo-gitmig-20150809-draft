@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.32 2010/04/22 06:46:21 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.33 2010/04/22 06:47:50 ferringb Exp $
+
+  22 Apr 2010; Brian Harring <ferringb@gentoo.org> -snakeoil-0.3.4.ebuild,
+  -snakeoil-0.3.5.ebuild, -snakeoil-0.3.6.1.ebuild,
+  -snakeoil-0.3.6.2.ebuild:
+  punt old verisons; leave 0.3.6.3 on the offchance 0.3.6.4 is whacked
 
 *snakeoil-0.3.6.4 (22 Apr 2010)
 
