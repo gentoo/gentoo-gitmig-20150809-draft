@@ -1,8 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/menumaker-0.99.7.ebuild,v 1.1 2009/02/25 16:28:19 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/menumaker-0.99.7.ebuild,v 1.2 2010/04/22 19:25:32 arfrever Exp $
 
-inherit autotools
+EAPI="3"
+PYTHON_DEPEND="2"
+
+inherit python
 
 DESCRIPTION="Utility that scans through the system and generates a menu of installed programs"
 HOMEPAGE="http://menumaker.sourceforge.net/"
@@ -13,31 +16,42 @@ SLOT="0"
 KEYWORDS="~amd64 ~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="virtual/python
-		doc? ( sys-apps/texinfo )"
-MAKEOPTS="-j1"
+DEPEND="doc? ( sys-apps/texinfo )"
+RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	eautoreconf
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_configure() {
+	econf PYTHON="$(PYTHON)"
 }
 
 src_compile() {
-	econf
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 
 	if use doc; then
-		cd "${S}/doc" && make html || die "Could not build docs"
+		cd doc
+		emake html || die "Generation of documentation failed"
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+
+	find "${D}" "(" -name "*.pyc" -o -name "*.pyo" ")" -print0 | xargs -0 rm -fr
+
 	dodoc ChangeLog README NEWS AUTHORS INSTALL
 
 	if use doc; then
-		dohtml "${S}"/doc/mmaker.html/*
+		dohtml doc/mmaker.html/*
 	fi
+}
 
+pkg_postinst() {
+	python_mod_optimize /usr/$(get_libdir)/menumaker
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/$(get_libdir)/menumaker
 }
