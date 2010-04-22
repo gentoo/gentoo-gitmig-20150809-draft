@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.7.ebuild,v 1.1 2010/04/01 07:21:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.7.ebuild,v 1.2 2010/04/22 06:06:27 pva Exp $
 
 EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -17,9 +17,11 @@ SRC_URI="http://www.wireshark.org/download/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="adns ares gtk ipv6 lua portaudio gnutls gcrypt geoip kerberos threads profile smi +pcap pcre +caps selinux"
+IUSE="adns ares gtk ipv6 lua portaudio gnutls gcrypt geoip zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND=">=dev-libs/glib-2.4.0:2
+	zlib? ( sys-libs/zlib 
+		!=sys-libs/zlib-1.2.4 )
 	smi? ( net-libs/libsmi )
 	gtk? ( >=x11-libs/gtk+-2.4.0:2
 		x11-libs/pango
@@ -51,7 +53,6 @@ pkg_setup() {
 
 	# Add group for users allowed to sniff.
 	enewgroup wireshark
-	ewarn "zlib support was disabled due to bug #311241."
 }
 
 src_prepare() {
@@ -112,7 +113,7 @@ src_configure() {
 		$(use_with kerberos krb5) \
 		$(use_with smi libsmi) \
 		$(use_with pcap) \
-		--without-zlib \
+		$(use_with zlib) \
 		$(use_with pcre) \
 		$(use_with geoip) \
 		$(use_with portaudio) \

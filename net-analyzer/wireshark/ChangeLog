@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.219 2010/04/01 07:21:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.220 2010/04/22 06:06:27 pva Exp $
+
+  22 Apr 2010; Peter Volkov <pva@gentoo.org> wireshark-1.2.7.ebuild:
+  zlib USE flag back as it should be fixed now, bug #311241.
 
 *wireshark-1.2.7 (01 Apr 2010)
 
