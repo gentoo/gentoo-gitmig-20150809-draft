@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.1.ebuild,v 1.4 2010/03/11 18:58:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.4.ebuild,v 1.1 2010/04/23 00:09:16 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit autotools eutils multilib
 
@@ -12,17 +12,20 @@ SRC_URI="http://unbound.net/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug libevent python static test threads"
 
 RDEPEND=">=dev-libs/openssl-0.9.8
 	>=net-libs/ldns-1.4[ssl]
 	libevent? ( dev-libs/libevent )"
+#	gost? ( >=dev-libs/openssl-1 )
+
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	test? (
 		net-dns/ldns-utils[examples]
 		dev-util/splint
+		app-text/wdiff
 	)"
 
 pkg_setup() {
@@ -37,11 +40,13 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-pidfile=/var/run/unbound.pid \
-		--with-ldns=/usr \
+		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
+		--with-ldns="${EPREFIX}"/usr \
 		$(use_enable debug) \
 		$(use_enable debug lock-checks) \
 		$(use_enable debug alloc-checks) \
+		$(use_enable debug alloc-lite) \
+		$(use_enable debug alloc-nonregional) \
 		$(use_enable static static-exe) \
 		$(use_with libevent) \
 		$(use_with threads pthreads) \
@@ -51,10 +56,18 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	# bug #299016
+	if use python ; then
+		rm "${ED}/usr/$(get_libdir)"/python*/site-packages/_unbound.*a || die
+	fi
+
 	newinitd "${FILESDIR}/unbound.initd" unbound || die "newinitd failed"
 	newconfd "${FILESDIR}/unbound.confd" unbound || die "newconfd failed"
 
 	dodoc doc/{README,CREDITS,TODO,Changelog,FEATURES} || die "dodoc failed"
+	# bug #315519
+	dodoc contrib/unbound_munin_ || die "dodoc failed"
 
 	exeinto /usr/share/${PN}
 	doexe contrib/{update-anchor,update-itar,split-itar}.sh || die "doexe failed"
