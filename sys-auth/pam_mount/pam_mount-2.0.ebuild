@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.0.ebuild,v 1.1 2010/04/23 13:27:57 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.0.ebuild,v 1.2 2010/04/23 20:35:10 hanno Exp $
 
 EAPI=3
 
@@ -19,12 +19,13 @@ DEPEND=">=sys-libs/pam-0.99
 	dev-libs/openssl
 	>=sys-libs/libhx-3.4
 	dev-libs/libxml2
+	>=sys-fs/cryptsetup-1.1.0
 	dev-util/pkgconfig"
 RDEPEND=">=sys-libs/pam-0.99
 	dev-libs/openssl
 	>=sys-libs/libhx-3.4
 	dev-libs/libxml2
-	>=sys-fs/cryptsetup-1.0.5
+	>=sys-fs/cryptsetup-1.1.0
 	sys-process/lsof"
 
 src_configure() {
