@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing-1.03-r1.ebuild,v 1.1 2008/07/05 09:46:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing-1.03-r1.ebuild,v 1.2 2010/04/23 11:47:31 tove Exp $
 
 MODULE_AUTHOR="DANBORN"
 inherit perl-module
@@ -32,7 +32,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -f ${ROOT}/etc/cron.d/update_google_safebrowsing.sh ]; then
+	if [[ -f ${ROOT}/etc/cron.d/update_google_safebrowsing.sh ]]; then
 		ewarn "You MUST remove ${ROOT}/etc/cron.d/update_google_safebrowsing.sh"
 	fi
 	elog "To use this package:"
