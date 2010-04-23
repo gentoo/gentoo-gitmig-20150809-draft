@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.7.ebuild,v 1.2 2009/09/23 19:55:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.7.ebuild,v 1.3 2010/04/23 19:38:39 dberkholz Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -52,8 +52,8 @@ src_unpack() {
 	cd "${S}"
 	# proper compiler and cflags
 	sed -e "s/g++/$(tc-getCXX)/" \
-		-e "s/CXXOPTS = -O3 -m64 -fexpensive-optimizations -ffast-math/CXXOPTS = ${CXXFLAGS}/" \
 		-e "s/gcc/$(tc-getCC)/" \
+		-e "s/CXXOPTS = -O3 -m64 -fexpensive-optimizations -ffast-math/CXXOPTS = ${CXXFLAGS}/" \
 		-e "s/COPTS = -O3 -m64 -fexpensive-optimizations -ffast-math/COPTS = ${CFLAGS}/" \
 		-i arch/${NAMD_ARCH}.arch || \
 		die "Failed to setup ${NAMD_ARCH}.arch"
