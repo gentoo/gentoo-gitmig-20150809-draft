@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.2.ebuild,v 1.1 2010/04/22 20:28:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.2.ebuild,v 1.2 2010/04/23 00:09:37 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 		http://docs.scipy.org/doc/${SP}.x/${PN}-ref.pdf -> ${SP}-ref.pdf
 	)"
 DESCRIPTION="Scientific algorithms library for Python"
-HOMEPAGE="http://www.scipy.org/"
+HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy"
 
 LICENSE="BSD"
 
