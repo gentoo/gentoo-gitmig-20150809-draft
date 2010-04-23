@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056-r1.ebuild,v 1.1 2010/04/22 09:22:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056-r1.ebuild,v 1.2 2010/04/23 06:17:28 jlec Exp $
 
 EAPI="3"
 
@@ -32,6 +32,7 @@ RDEPEND="~virtual/libstdc++-3.3
 	eclipse? ( >=dev-util/eclipse-sdk-3.4 )"
 
 DESTINATION="${EPREFIX#/}/opt/intel/Compiler/${RELEASE}/${BUILD}"
+DESTINATION="${DESTINATION#/}"
 
 pkg_setup() {
 	CHECKREQS_MEMORY=1024
@@ -72,11 +73,11 @@ link_eclipse_plugins() {
 	dodir /usr/$(get_libdir)/eclipse-${ECLIPSE_V}/features
 
 	for f in "${DESTINATION}/eclipse_support/cdt${CDT_V}/eclipse/plugins"/*; do
-		dosym "${ROOT}${f}" /usr/$(get_libdir)/eclipse-${ECLIPSE_V}/plugins
+		dosym "${EROOT}${f}" /usr/$(get_libdir)/eclipse-${ECLIPSE_V}/plugins
 	done
 
 	for f in "${DESTINATION}/eclipse_support/cdt${CDT_V}/eclipse/features"/*; do
-		dosym "${ROOT}${f}" /usr/$(get_libdir)/eclipse-${ECLIPSE_V}/features
+		dosym "${EROOT}${f}" /usr/$(get_libdir)/eclipse-${ECLIPSE_V}/features
 	done
 	eend $?
 }
@@ -88,7 +89,7 @@ src_prepare() {
 	# extract the tag function from the original install
 	sed -n \
 		-e "s|find \$DESTINATION|find ${DESTINATION}|g" \
-		-e "s|@\$DESTINATION|@${ROOT}${DESTINATION}|g" \
+		-e "s|@\$DESTINATION|@${EROOT}${DESTINATION}|g" \
 		-e '/^UNTAG_CFG_FILES[[:space:]]*(/,/^}/p' \
 		pset/install_cc.sh > tag.sh || die
 	# fix world writeable files
