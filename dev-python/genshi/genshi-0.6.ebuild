@@ -1,16 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.6.ebuild,v 1.1 2010/04/22 20:23:50 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.6.ebuild,v 1.2 2010/04/23 00:14:03 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit eutils distutils
 
 MY_P="Genshi-${PV}"
 
 DESCRIPTION="Python toolkit for stream-based generation of output for the web."
-HOMEPAGE="http://genshi.edgewall.org/"
+HOMEPAGE="http://genshi.edgewall.org/ http://pypi.python.org/pypi/Genshi"
 SRC_URI="ftp://ftp.edgewall.com/pub/genshi/${MY_P}.tar.gz"
 
 LICENSE="BSD"
@@ -23,17 +25,6 @@ RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
-
-#src_prepare(){
-	#epatch "${FILESDIR}/${P}_test_fix.patch"
-#}
-
-src_test() {
-	testing() {
-		"$(PYTHON)" setup.py test
-	}
-	python_execute_function testing
-}
 
 src_install() {
 	distutils_src_install
