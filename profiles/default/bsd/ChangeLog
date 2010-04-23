@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.34 2010/04/22 18:30:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.35 2010/04/23 11:01:59 aballier Exp $
+
+  23 Apr 2010; Alexis Ballier <aballier@gentoo.org> fbsd/profile.bashrc,
+  profile.bashrc:
+  Do not try to access $S if it does not exist.
 
   22 Apr 2010; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
   unmask ruby[threads], seems to work

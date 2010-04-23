@@ -1,6 +1,6 @@
 #!/bin/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.7 2010/04/03 11:49:51 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.8 2010/04/23 11:02:00 aballier Exp $
 
 alias make=gmake
 alias patch=gpatch
@@ -39,6 +39,10 @@ bsd-patch_install-sh() {
 	if [[ -z $(type -P gpatch) ]]; then
 		return 0
 	fi
+
+        # Do nothing if $S does not exist
+        [ -d "${S}" ] || return 0
+
 	local EPDIR="${ECLASSDIR}/ELT-patches/install-sh"
 	local EPATCHES="${EPDIR}/1.5.6 ${EPDIR}/1.5.4 ${EPDIR}/1.5"
 	local ret=0
