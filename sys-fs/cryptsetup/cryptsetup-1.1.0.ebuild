@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.0.ebuild,v 1.1 2010/02/14 00:10:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.1.0.ebuild,v 1.2 2010/04/23 19:35:04 robbat2 Exp $
 
 EAPI=2
 
@@ -43,6 +43,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/1.1.0_rc3-static-no-selinux.patch
+	epatch "${FILESDIR}"/1.1.0-libudev.patch
 	eautoreconf
 }
 
