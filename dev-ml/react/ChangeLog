@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/react
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/react/ChangeLog,v 1.2 2009/10/16 12:17:03 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/react/ChangeLog,v 1.3 2010/04/23 14:12:17 aballier Exp $
+
+*react-0.9.1 (23 Apr 2010)
+
+  23 Apr 2010; Alexis Ballier <aballier@gentoo.org> +react-0.9.1.ebuild:
+  version bump
 
   16 Oct 2009; Alexis Ballier <aballier@gentoo.org> react-0.9.0.ebuild:
   keyword ~x86-fbsd
