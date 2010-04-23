@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-Amazon-S3
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.9 2009/07/16 09:15:21 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.10 2010/04/23 18:22:30 robbat2 Exp $
+
+*Net-Amazon-S3-0.53 (23 Apr 2010)
+
+  23 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +Net-Amazon-S3-0.53.ebuild:
+  Version bump via perl-bump experimental tool.
 
   16 Jul 2009; Torsten Veller <tove@gentoo.org> -Net-Amazon-S3-0.50.ebuild,
   -Net-Amazon-S3-0.51.ebuild:
