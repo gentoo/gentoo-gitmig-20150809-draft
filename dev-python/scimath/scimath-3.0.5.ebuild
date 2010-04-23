@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/scimath-3.0.5.ebuild,v 1.3 2010/04/23 06:05:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/scimath-3.0.5.ebuild,v 1.4 2010/04/23 18:44:16 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
@@ -38,11 +39,4 @@ src_prepare() {
 		-e "s/self.run_command('build_docs')/pass/" \
 		-e "s/setupdocs>=1.0//" \
 		setup.py || die
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
 }
