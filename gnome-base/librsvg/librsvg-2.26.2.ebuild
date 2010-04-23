@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.26.2.ebuild,v 1.2 2010/04/18 10:10:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.26.2.ebuild,v 1.3 2010/04/23 07:05:44 pacho Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -23,7 +23,9 @@ RDEPEND=">=media-libs/fontconfig-1.0.1
 	zlib? ( >=gnome-extra/libgsf-1.6 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12
+	>=dev-util/gtk-doc-am-1.13
 	doc? ( >=dev-util/gtk-doc-1 )"
+# >=dev-util/gtk-doc-am-1.13 needed by eautoreconf, feel free to drop it when not run it
 
 DOCS="AUTHORS ChangeLog README NEWS TODO"
 
