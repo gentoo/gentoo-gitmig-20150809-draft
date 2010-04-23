@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/jdk-with-com-sun-20080505-r1.ebuild,v 1.2 2008/09/13 18:31:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/jdk-with-com-sun-20080505-r1.ebuild,v 1.3 2010/04/23 12:13:36 aballier Exp $
 
 EAPI=1
 
@@ -20,10 +20,10 @@ RDEPEND="|| (
 			dev-java/sun-jdk:1.6
 			dev-java/sun-jdk:1.5
 			dev-java/sun-jdk:1.4
-			dev-java/diablo-jdk:1.5
+			dev-java/diablo-jdk:1.6
 			dev-java/blackdown-jdk:1.4.2
 		)
 		>=dev-java/java-config-2.1.6
 		"
 
-JAVA_VIRTUAL_VM="sun-jdk-1.6 sun-jdk-1.5 sun-jdk-1.4 diable-jdk-1.5 blackdown-jdk-1.4.2"
+JAVA_VIRTUAL_VM="sun-jdk-1.6 sun-jdk-1.5 sun-jdk-1.4 diablo-jdk-1.6 blackdown-jdk-1.4.2"
