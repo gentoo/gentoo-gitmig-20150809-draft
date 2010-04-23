@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.172 2010/04/21 16:29:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.173 2010/04/23 18:48:23 grobian Exp $
+
+  23 Apr 2010; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Masked media-libs/mesa on Darwin as we should be using opengl-apple
 
   21 Apr 2010; Jeremy Olexa <darkside@gentoo.org> linux/packages:
   Add back sys-process/{procps,psmisc} to system set on Gentoo Prefix linux

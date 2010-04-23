@@ -1,7 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.15 2010/04/06 19:17:26 darkside Exp $
-# $Id: package.mask,v 1.15 2010/04/06 19:17:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.16 2010/04/23 18:48:23 grobian Exp $
+# $Id: package.mask,v 1.16 2010/04/23 18:48:23 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (21 Apr 2010)
+# state of mesa is probably not too good on OSX, opengl-apple is
+# preferred
+media-libs/mesa
 
 # Fabian Groffen <grobian@gentoo.org> (03 Feb 2010)
 # ld: duplicate symbol mylist<....> caused by implementation code in
