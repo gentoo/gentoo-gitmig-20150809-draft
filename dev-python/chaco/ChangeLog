@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/chaco
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.5 2010/03/23 05:19:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.6 2010/04/23 05:57:59 bicatali Exp $
+
+  23 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org> chaco-3.3.0.ebuild:
+  Added virtualx for tests
 
 *chaco-3.3.0 (21 Mar 2010)
 

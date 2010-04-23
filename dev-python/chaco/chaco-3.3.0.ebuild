@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.0.ebuild,v 1.1 2010/03/23 05:19:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.0.ebuild,v 1.2 2010/04/23 05:57:59 bicatali Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils virtualx
 
 MY_PN="Chaco"
 MY_P="${MY_PN}-${PV}"
@@ -26,7 +26,11 @@ DEPEND="dev-python/setuptools
 	test? ( >=dev-python/nose-0.10.3
 			dev-python/coverage
 			>=dev-python/enable-3.3.0
-			>=dev-python/enthoughtbase-3.0.4 )"
+			>=dev-python/enthoughtbase-3.0.4
+			x11-apps/xhost
+			media-fonts/font-misc-misc
+			media-fonts/font-cursor-misc )"
+
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
@@ -38,6 +42,7 @@ src_prepare() {
 		-e "s/self.run_command('build_docs')/pass/" \
 		-e "s/setupdocs>=1.0//" \
 		setup.py || die
+	sed -i -e 's:enthought/chaco2/tests::' setup.cfg || die
 }
 
 src_compile() {
@@ -51,7 +56,8 @@ src_test() {
 	testing() {
 		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
 	}
-	python_execute_function testing
+	export maketype="python_execute_function"
+	virtualmake testing
 }
 
 src_install() {
