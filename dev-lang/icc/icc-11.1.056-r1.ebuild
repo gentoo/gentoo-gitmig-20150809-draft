@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056-r1.ebuild,v 1.3 2010/04/23 06:31:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056-r1.ebuild,v 1.4 2010/04/23 06:35:47 jlec Exp $
 
 EAPI="3"
 
@@ -107,7 +107,7 @@ src_install() {
 
 	keepdir /opt/intel/licenses
 	einfo "Copying files"
-	dodir "${DESTINATION}"
+	dodir "${EROOT}${DESTINATION}"
 	cp -pPR \
 		${DESTINATION}/* \
 		"${ED}"/${DESTINATION}/ \
