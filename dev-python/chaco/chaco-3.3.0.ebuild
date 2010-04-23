@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.0.ebuild,v 1.2 2010/04/23 05:57:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.0.ebuild,v 1.3 2010/04/23 18:37:05 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils virtualx
 
@@ -53,11 +54,7 @@ src_compile() {
 }
 
 src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	export maketype="python_execute_function"
-	virtualmake testing
+	maketype="distutils_src_test" virtualmake
 }
 
 src_install() {
