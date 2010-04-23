@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/colorcvs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/ChangeLog,v 1.3 2010/04/14 17:27:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/ChangeLog,v 1.4 2010/04/23 14:17:46 darkside Exp $
+
+  23 Apr 2010; Jeremy Olexa <darkside@gentoo.org> colorcvs-1.4-r1.ebuild,
+  +files/colorcvs-1.4-prefix.patch:
+  Migrate to EAPI3, add keywords/patch as testing in the prefix overlay
 
   14 Apr 2010; Christian Ruppert <idl0r@gentoo.org> -colorcvs-1.4.ebuild:
   Remove old ebuild.
