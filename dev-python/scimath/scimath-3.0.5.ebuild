@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/scimath-3.0.5.ebuild,v 1.2 2010/03/25 21:19:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/scimath-3.0.5.ebuild,v 1.3 2010/04/23 06:05:55 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( >=dev-python/nose-0.10.3
 			>=dev-python/enthoughtbase-3.0.4
+			>=dev-python/etsdevtools-3.0.4
 			>=dev-python/traitsgui-3.3.0[wxwidgets] )"
 RESTRICT_PYTHON_ABIS="3.*"
 
