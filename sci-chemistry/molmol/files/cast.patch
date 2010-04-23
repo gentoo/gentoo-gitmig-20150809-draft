@@ -1,0 +1,13 @@
+diff --git a/src/data/DataDist.c b/src/data/DataDist.c
+index 7f7121f..d303e9e 100644
+--- a/src/data/DataDist.c
++++ b/src/data/DataDist.c
+@@ -89,7 +89,7 @@ hashInter(void *p, unsigned size)
+ {
+   TabEntryInter *entryP = p;
+ 
+-  return ((unsigned) entryP->atom1P + (unsigned) entryP->atom2P) % size;
++  return ((unsigned)(uintptr_t) entryP->atom1P + (unsigned)(uintptr_t) entryP->atom2P) % size;
+ }
+ 
+ static int

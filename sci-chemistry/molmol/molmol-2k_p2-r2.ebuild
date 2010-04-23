@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.1 2010/03/30 19:55:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.2 2010/04/23 14:19:41 jlec Exp $
 
 EAPI="3"
 
@@ -59,6 +59,8 @@ src_prepare() {
 		-e "s:^MCFLAGS.*:MCFLAGS = ${CFLAGS}:" \
 		-e "s:^CC.*:CC = $(tc-getCC):" \
 		"${S}"/makedef
+
+	epatch "${FILESDIR}"/cast.patch
 }
 
 src_compile() {

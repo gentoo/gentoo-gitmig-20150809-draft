@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.19 2010/03/30 19:55:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.20 2010/04/23 14:19:41 jlec Exp $
+
+  23 Apr 2010; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r2.ebuild,
+  +files/cast.patch:
+  fix instance of cast from pointer to integer of different size, stolen
+  from fink
 
 *molmol-2k_p2-r2 (30 Mar 2010)
 
