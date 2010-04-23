@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.34 2010/01/09 18:37:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.35 2010/04/23 03:50:43 jsbronder Exp $
+
+*ganglia-3.1.7 (23 Apr 2010)
+
+  23 Apr 2010; Justin Bronder <jsbronder@gentoo.org> +ganglia-3.1.7.ebuild:
+  Version and EAPI bump, add support for prefix. Remove warning for older
+  versions of ganglia that are no longer in the tree.
 
 *ganglia-3.1.2-r1 (09 Jan 2010)
 
