@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100318.ebuild,v 1.1 2010/03/18 08:01:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.3.1_p100422.ebuild,v 1.1 2010/04/23 06:03:56 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -27,6 +27,8 @@ RDEPEND="
 	dev-lang/tk
 	dev-python/numpy
 	dev-tcltk/tix
+	x11-libs/libXext
+	x11-libs/libX11
 	opengl? ( virtual/glut )"
 DEPEND="${RDEPEND}"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
@@ -73,6 +75,10 @@ src_prepare() {
 			-e "s:^\(LINK_FLAGS =.*\):\1 ${LDFLAGS}:g" \
 			-e "s:^\(IGNORE_GL_FLAG =\).*:\1 ${IGNORE_GL_FLAG}:g" \
 			-e "s:^\(GL_FLAG =\).*:\1 ${GL_FLAG}:g" \
+			-e "s:^\(GL_DIR =\).*:\1 ${GL_DIR}:g" \
+			-e "s:^\(GL_LIB =\).*:\1 ${GL_LIB}:g" \
+			-e "s:^\(GL_LIB_FLAGS =\).*:\1 ${GL_LIB_FLAGS}:g" \
+			-e "s:^\(GL_INCLUDE_FLAGS =\).*:\1 ${GL_INCLUDE_FLAGS}:g" \
 			-e "s:^\(GLUT_NEED_INIT =\).*:\1 ${GLUT_NEED_INIT}:g" \
 			-e "s:^\(GLUT_NOT_IN_GL =\).*:\1:g" \
 			-e "s:^\(X11_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
@@ -80,7 +86,6 @@ src_prepare() {
 			-e "s:^\(TK_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
 			-e "s:^\(PYTHON_INCLUDE_FLAGS =\).*:\1 -I\$(PYTHON_DIR)/include/python$(python_get_version):g" \
 			-e "s:^\(PYTHON_LIB =\).*:\1 -lpython$(python_get_version):g" \
-			-e "s:^\(GL_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
 			c/environment_default.txt > c/environment.txt
 	}
 	python_execute_function -s preparation
