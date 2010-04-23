@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.10.ebuild,v 1.2 2009/12/18 16:24:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.10.ebuild,v 1.3 2010/04/23 09:04:36 hwoarang Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 
 inherit python distutils eutils
 
@@ -21,6 +22,10 @@ DEPEND="dev-python/PyQt4[webkit,X]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_compile() {
 	true
