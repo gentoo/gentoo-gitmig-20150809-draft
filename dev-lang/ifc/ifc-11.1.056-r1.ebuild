@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.056-r1.ebuild,v 1.1 2010/04/22 09:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.056-r1.ebuild,v 1.2 2010/04/23 07:46:36 jlec Exp $
 
 EAPI="3"
 
@@ -30,7 +30,7 @@ DEPEND=""
 RDEPEND="~virtual/libstdc++-3.3
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
-DESTINATION="${EPRFIX#/}/opt/intel/Compiler/${RELEASE}/${BUILD}"
+DESTINATION="opt/intel/Compiler/${RELEASE}/${BUILD}"
 
 QA_TEXTRELS="${DESTINATION}/*"
 QA_EXECSTACK="${DESTINATION}/*"
@@ -70,7 +70,7 @@ src_prepare() {
 	# extract the tag function from the original install
 	sed -n \
 		-e "s|find \$DESTINATION|find ${DESTINATION}|g" \
-		-e "s|@\$DESTINATION|@${ROOT}${DESTINATION}|g" \
+		-e "s|@\$DESTINATION|@${EROOT}${DESTINATION}|g" \
 		-e '/^UNTAG_CFG_FILES[[:space:]]*(/,/^}/p' \
 		pset/install_fc.sh > tag.sh || die
 	# fix world writeable files
@@ -89,7 +89,7 @@ src_install() {
 
 	keepdir /opt/intel/licenses
 	einfo "Copying files"
-	dodir "${DESTINATION}"
+	dodir "/${DESTINATION}"
 	cp -pPR \
 		${DESTINATION}/* \
 		"${ED}"/${DESTINATION}/ \
