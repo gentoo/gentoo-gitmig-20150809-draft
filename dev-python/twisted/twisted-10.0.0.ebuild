@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-10.0.0.ebuild,v 1.1 2010/03/17 10:39:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-10.0.0.ebuild,v 1.2 2010/04/23 08:48:42 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils versionator
@@ -46,7 +46,7 @@ src_test() {
 		local return_status="0"
 		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${T}/tests" --no-compile || die "Installation of tests failed with Python ${PYTHON_ABI}"
 
-		pushd "${T}/tests$(python_get_sitedir)" > /dev/null || die
+		pushd "${T}/tests${EPREFIX}$(python_get_sitedir)" > /dev/null || die
 
 		# Skip broken tests.
 		rm -f twisted/python/test/test_release.py
@@ -58,7 +58,7 @@ src_test() {
 		# docstrings in all packages
 		echo "'''plugins stub'''" > twisted/plugins/__init__.py || die
 
-		if ! PYTHONPATH="." "${T}/tests/usr/bin/trial" twisted; then
+		if ! PYTHONPATH="." "${T}/tests${EPREFIX}/usr/bin/trial" twisted; then
 			if [[ -n "${TWISTED_DEBUG_TESTS}" ]]; then
 				die "Tests failed with Python ${PYTHON_ABI}"
 			else
@@ -102,7 +102,7 @@ src_install() {
 
 update_plugin_cache() {
 	# Update dropin.cache only when Twisted is still installed.
-	if [[ -f "${ROOT%/}${EPREFIX}$(python_get_sitedir)/twisted/plugin.py" ]]; then
+	if [[ -f "${EROOT%/}$(python_get_sitedir)/twisted/plugin.py" ]]; then
 		einfo "Regenerating plugin cache with Python ${PYTHON_ABI}"
 		# http://twistedmatrix.com/documents/current/core/howto/plugin.html
 		"$(PYTHON)" -c "from twisted.plugin import IPlugin, getPlugins; list(getPlugins(IPlugin))"
