@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-2.0.0.ebuild,v 1.1 2009/07/30 14:38:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-2.0.0.ebuild,v 1.2 2010/04/23 12:43:16 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,13 +13,12 @@ SRC_URI="http://yate.null.ro/tarballs/yate2/${P}-1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa amrnb debug doc gsm h323 ilbc mysql oss postgres qt4 sctp spandsp
+IUSE="alsa debug doc gsm h323 ilbc mysql oss postgres qt4 sctp spandsp
 speex ssl zaptel"
 
 RDEPEND="
 	sys-libs/glibc
 	alsa? ( media-libs/alsa-lib )
-	amrnb? ( media-libs/amrnb )
 	gsm? ( media-sound/gsm )
 	h323? ( dev-libs/pwlib
 		net-libs/openh323 )
@@ -74,7 +73,7 @@ src_configure() {
 		--without-doxygen \
 		--without-kdoc \
 		--with-archlib=$(get_libdir) \
-		$(use_with amrnb amrnb /usr) \
+		--without-amrnb \
 		$(use_enable alsa) \
 		$(use_with gsm libgsm) \
 		$(use_with h323 openh323 /usr) \

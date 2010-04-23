@@ -7,9 +7,6 @@
 		<name>Mounir Lamouri</name>
 	</maintainer>
 	<use>
-		<flag name='amrnb'>
-			Enables Adaptive Multi-Rate Audio support (Narrow Band)
-		</flag>
 		<flag name='h323'>Build H.323 Channel plugin</flag>
 		<flag name='ilbc'>Build ILBC codec plugin</flag>
 		<flag name='sctp'>
