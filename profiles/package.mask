@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11483 2010/04/22 19:24:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11484 2010/04/23 10:57:21 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,12 +220,6 @@ mail-filter/MailScanner
 # multimedia keys, ...), bug #304743
 =net-misc/nx-3.4.0-r1
 =net-misc/nxnode-3.4.0.11
-
-# Alistair Bush <ali_bush@gentoo.org> (15 Mar 2010)
-# Mask for removal (#309459).  Does not compile
-# and Dead upstream. Recommend icedtea jdk's for
-# a free alternative.
-dev-java/kaffe
 
 # Torsten Veller <tove@gentoo.org> (14 Mar 2010)
 # Mask "End Of Life" versions
