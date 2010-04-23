@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.13 2010/04/23 00:09:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.14 2010/04/23 08:51:39 grobian Exp $
+
+  23 Apr 2010; Fabian Groffen <grobian@gentoo.org> unbound-1.4.4.ebuild:
+  Marked ~x64-macos, bug #312015
 
 *unbound-1.4.4 (23 Apr 2010)
 
