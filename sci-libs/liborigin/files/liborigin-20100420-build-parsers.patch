@@ -1,0 +1,15 @@
+=== modified file '3rdparty/liborigin/liborigin.pro'
+--- 3rdparty/liborigin/liborigin.pro	2010-04-22 17:58:49 +0000
++++ 3rdparty/liborigin/liborigin.pro	2010-04-23 04:34:41 +0000
+@@ -22,5 +22,10 @@
+ SOURCES += OriginFile.cpp
+ SOURCES += OriginParser.cpp
+ SOURCES += OriginDefaultParser.cpp
++SOURCES += Origin600Parser.cpp
++SOURCES += Origin610Parser.cpp
++SOURCES += Origin700Parser.cpp
+ SOURCES += Origin750Parser.cpp
++SOURCES += Origin800Parser.cpp
++SOURCES += Origin810Parser.cpp
+ 
+
