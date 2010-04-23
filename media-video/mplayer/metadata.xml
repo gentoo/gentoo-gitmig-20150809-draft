@@ -7,6 +7,7 @@
   </maintainer>
   <use>
     <flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
+	<flag name="amr">Enables Adaptive Multi-Rate format support</flag>
     <flag name="ass">Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support</flag>
     <flag name="bl">Blinkenlights video output</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
@@ -27,7 +28,6 @@
     <flag name="mng">MNG input support</flag>
 	<flag name="network">Enables network streaming support</flag>
 	<flag name="nut">Enables support for the NUT container format</flag>
-	<flag name="opencore-amr">Enables Adaptive Multi-Rate format support</flag>
 	<flag name="osdmenu">Enables support for on-screen display (OSD) menus</flag>
     <flag name="pnm">Add PNM video output option, to create PPM/PGM/PGMYUV images</flag>
     <flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>

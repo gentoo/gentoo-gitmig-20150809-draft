@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.720 2010/04/07 10:49:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.721 2010/04/23 13:04:43 ssuominen Exp $
+
+  23 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mplayer-1.0_rc4_p20091026-r1.ebuild, mplayer-1.0_rc4_p20100213-r1.ebuild,
+  mplayer-9999.ebuild, metadata.xml:
+  Rename USE opencore-amr to amr.
 
   07 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   mplayer-1.0_rc4_p20091026-r1.ebuild, mplayer-1.0_rc4_p20100213-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.17 2010/04/07 10:49:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.18 2010/04/23 13:04:43 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -12,7 +12,7 @@ IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +ass bidi bindist bl bs2b
 doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon ftp gif
 ggi -gmplayer +iconv ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc
 +live lzo mad md5sum +mmx mmxext mng +mp3 nas +network nut openal +opengl
-opencore-amr +osdmenu oss png pnm pulseaudio pvr +quicktime radio +rar +real
+amr +osdmenu oss png pnm pulseaudio pvr +quicktime radio +rar +real
 +rtc samba +shm +schroedinger sdl +speex sse sse2 ssse3 svga teletext tga
 +theora +toolame +tremor +truetype +twolame +unicode v4l v4l2 vdpau vidix +vorbis
 win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
@@ -50,7 +50,7 @@ RDEPEND="sys-libs/ncurses
 	)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	opencore-amr? ( media-libs/opencore-amr )
+	amr? ( media-libs/opencore-amr )
 	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
 	bs2b? ( media-libs/libbs2b )
@@ -331,7 +331,7 @@ src_configure() {
 	# Use internal musepack codecs for SV7 and SV8 support
 	myconf="${myconf} --disable-musepack"
 
-	use opencore-amr || myconf="${myconf} --disable-libopencore_amrnb
+	use amr || myconf="${myconf} --disable-libopencore_amrnb
 		--disable-libopencore_amrwb"
 	use aac || myconf="${myconf} --disable-faad-internal"
 	use dirac || myconf="${myconf} --disable-libdirac-lavc"
