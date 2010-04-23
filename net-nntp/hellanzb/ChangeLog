@@ -1,6 +1,12 @@
 # ChangeLog for net-nntp/hellanzb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/ChangeLog,v 1.16 2010/04/23 13:46:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/ChangeLog,v 1.17 2010/04/23 13:48:59 aballier Exp $
+
+*hellanzb-0.13-r8 (23 Apr 2010)
+
+  23 Apr 2010; Alexis Ballier <aballier@gentoo.org>
+  -hellanzb-0.13-r7.ebuild, +hellanzb-0.13-r8.ebuild:
+  push changes
 
   23 Apr 2010; Alexis Ballier <aballier@gentoo.org> files/hellanzb.init:
   init script improvements by Vladimir Brik <no.hope@gmail.com>, bug #293222
