@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/hellanzb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/ChangeLog,v 1.14 2010/02/21 08:05:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/ChangeLog,v 1.15 2010/04/23 13:36:52 aballier Exp $
+
+  23 Apr 2010; Alexis Ballier <aballier@gentoo.org> hellanzb-0.13-r7.ebuild,
+  +files/hellanzb-0.13-python_26_fixes.patch,
+  +files/hellanzb-0.13-twisted-10.0.0.patch:
+  Add patch for compat. with twisted 10.0.0, grabbed from debian, bug
+  #316725 by Michael Farrell <micolous+gentoo@gmail.com>, pach to fix
+  warnings with python 2.6, bug #262881 by rinus.
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> hellanzb-0.13-r7.ebuild:
   Transfer prefix keywords (no other changes)

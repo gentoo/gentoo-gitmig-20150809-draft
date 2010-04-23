@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r7.ebuild,v 1.4 2010/02/21 08:05:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r7.ebuild,v 1.5 2010/04/23 13:36:52 aballier Exp $
 
 inherit distutils eutils
 
@@ -34,6 +34,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-Choose_interface_to_bind_on.patch"
 	epatch "${FILESDIR}/${P}-fix_multiples_hosts.diff"
 	epatch "${FILESDIR}/${P}-gettinggroup.patch"
+	epatch "${FILESDIR}/${P}-python_26_fixes.patch"
+	epatch "${FILESDIR}/${P}-twisted-10.0.0.patch"
 }
 
 src_install() {
