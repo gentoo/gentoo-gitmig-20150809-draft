@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.6.ebuild,v 1.1 2010/04/22 17:56:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.6.ebuild,v 1.2 2010/04/23 15:24:24 aballier Exp $
 
 EAPI="2"
 
@@ -126,7 +126,11 @@ RDEPEND="
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image ) )
 		shout? ( media-libs/libshout )
-		skins? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libXext x11-libs/libX11 )
+		skins? (
+				x11-libs/qt-gui:4 x11-libs/qt-core:4
+				x11-libs/libXext x11-libs/libX11
+				media-libs/freetype media-fonts/dejavu
+			   )
 		speex? ( media-libs/speex )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
 		svga? ( media-libs/svgalib )
@@ -179,13 +183,11 @@ vlc_use_force() {
 	use $1 && use !$2 && ewarn "USE=$1 requires $2, $2 will be enabled."
 }
 
-# Use when $2 depends strictly on $3
-# if use $1 then enable $2 and $3, otherwise disable $2
+# Use when $1 depends strictly on $2
+# if use $1 then enable $2
 vlc_use_enable_force() {
 	if use $1 ; then
-		echo "--enable-$2 --enable-$3"
-	else
-		echo "--disable-$2"
+		echo "--enable-$2"
 	fi
 }
 
@@ -196,17 +198,20 @@ pkg_setup() {
 		eerror "the old ${PN} version and will not work."
 		die "Unmerge vlc 0.9.x first"
 	fi
-	vlc_use_needs skins truetype
-	vlc_use_force skins qt4
 	vlc_use_needs cddax cdio
 	vlc_use_needs vcdx cdio
 	vlc_use_needs vcdx vcdinfo
 	vlc_use_needs vcdinfo cdio
 	vlc_use_needs bidi truetype
-	vlc_use_force remoteosd gcrypt
 	vlc_use_needs fontconfig truetype
 	vlc_use_needs libv4l2 v4l2
 	vlc_use_needs libtiger kate
+	vlc_use_force remoteosd gcrypt
+	vlc_use_force skins truetype
+	vlc_use_force skins qt4
+	vlc_use_force skins X
+	vlc_use_force qt4 X
+	vlc_use_force vlm stream
 	use cddb && use !cdda && use !cddax && ewarn "USE=cddb requires either cdda or cddax, cddb will be disabled."
 	if use qt4 || use skins ; then
 		qt4_pkg_setup
@@ -318,6 +323,7 @@ src_configure() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr) \
 		$(use_enable qt4) \
+		$(use_enable remoteosd) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
 		$(use_enable samba smb) \
@@ -342,6 +348,7 @@ src_configure() {
 		$(use_enable v4l2) \
 		$(use_enable vcdinfo) \
 		$(use_enable vcdx) \
+		$(use_enable vlm) \
 		$(use_enable vorbis) \
 		$(use_enable win32codecs loader) \
 		$(use_enable wma-fixed) \
@@ -358,9 +365,12 @@ src_configure() {
 		--disable-growl \
 		--disable-optimizations \
 		--enable-fast-install \
-		$(vlc_use_enable_force vlm vlm sout) \
-		$(vlc_use_enable_force skins skins2 qt4) \
-		$(vlc_use_enable_force remoteosd remoteosd libgcrypt)
+		$(vlc_use_enable_force qt4 x11) \
+		$(vlc_use_enable_force vlm sout) \
+		$(vlc_use_enable_force skins qt4) \
+		$(vlc_use_enable_force skins freetype) \
+		$(vlc_use_enable_force skins x11) \
+		$(vlc_use_enable_force remoteosd libgcrypt)
 }
 
 src_install() {
