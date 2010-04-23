@@ -5,10 +5,4 @@
   <maintainer>
     <email>media-video@gentoo.org</email>
   </maintainer>
-  <longdescription lang="en">
-A set of tools to tailor to an open source version of the MPEG-4 standard.
-</longdescription>
-  <use>
-    <flag name="amr">Adaptive Multi-Rate Audio support (commonly used in telephony)</flag>
-  </use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.11 2010/03/10 23:49:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.12 2010/04/23 12:39:48 ssuominen Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="a52 aac alsa amr debug ffmpeg ipv6 jack jpeg jpeg2k javascript mad ogg opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwidgets xml xvid"
+IUSE="a52 aac alsa debug ffmpeg ipv6 jack jpeg jpeg2k javascript mad ogg opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwidgets xml xvid"
 
 S=${WORKDIR}/${PN}
 
@@ -23,7 +23,6 @@ RDEPEND="
 	a52? ( media-libs/a52dec )
 	aac? ( >=media-libs/faad2-2.0 )
 	alsa? ( media-libs/alsa-lib )
-	amr? ( media-libs/amrnb media-libs/amrwb )
 	ffmpeg? ( media-video/ffmpeg )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( media-libs/jpeg )
@@ -112,7 +111,7 @@ src_compile() {
 	econf \
 		--enable-svg \
 		--enable-pic \
-		$(use_enable amr) \
+		--disable-amr \
 		$(use_enable debug) \
 		$(use_enable opengl) \
 		$(use_enable oss oss-audio) \
