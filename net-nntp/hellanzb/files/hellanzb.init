@@ -14,9 +14,11 @@ start() {
 		eend 1
 		return 1
 	fi
+	if [ "${RC_CMD}" = "restart" ] ; then
+		sleep 1 # wait for socket to be released
+	fi
 
-	export PATH="${PATH}:/opt/bin"
-        start-stop-daemon --quiet --start -c ${HELLA_USER} \
+        start-stop-daemon --start -c ${HELLA_USER} \
 		-g ${HELLA_GROUP} --name hellanzb.py \
                 --exec /usr/bin/hellanzb.py -- \
                 -D -c ${HELLA_CONFIGFILE} ${HELLA_OPTS} &> /dev/null
@@ -25,8 +27,7 @@ start() {
 
 stop() {
 	ebegin "Stopping hellanzb"
-	start-stop-daemon --quiet --stop \
-		--name hellanzb.py
+	/usr/bin/hellanzb.py shutdown &> /dev/null
 	eend $?
 }
 
