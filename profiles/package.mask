@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11485 2010/04/23 11:06:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11486 2010/04/23 12:57:53 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (23 Apr 2010)
+# Masked for removal wrt bug #252140 in 30 days.  Use opencore-amr instead.
+media-libs/amrnb
+media-libs/amrwb
 
 # Alexis Ballier <aballier@gentoo.org> (22 Apr 2010)
 # Pre release
