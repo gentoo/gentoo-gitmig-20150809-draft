@@ -1,6 +1,21 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.451 2010/04/11 11:30:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.452 2010/04/23 09:24:15 eva Exp $
+
+  23 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gtk+-2.8.10-xinerama.patch,
+  -files/gtk+-2.10.7-mozilla-dnd-fix.patch,
+  -files/gtk+-2.10.11-update-icon-subdirs.patch,
+  -files/gtk+-2.12.0-flash-workaround.patch,
+  -files/gtk+-2.12.0-openoffice-freeze-workaround.patch,
+  -files/gtk+-2.12.1-firefox-print-preview.patch,
+  -files/gtk+-2.12.9-libtool-2.patch, -files/gtk+-2.12.10-fix-nocxx.patch,
+  -files/gtk+-2.12.10-no-libintl.patch, -gtk+-2.12.11.ebuild,
+  -gtk+-2.12.12.ebuild, -gtk+-2.14.7-r2.ebuild,
+  -files/gtk+-2.14.7-filechooser.patch,
+  -files/gtk+-2.14.7-ignore-gtkcurve.patch,
+  -files/gtk+-2.14.7-uncertain-mime.patch, -gtk+-2.18.5.ebuild:
+  Clean up old revisions.
 
   11 Apr 2010; <nixnut@gentoo.org> gtk+-2.18.7.ebuild:
   ppc stable #304777
