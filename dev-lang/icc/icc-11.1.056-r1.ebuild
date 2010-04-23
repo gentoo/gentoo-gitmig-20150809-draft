@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056-r1.ebuild,v 1.2 2010/04/23 06:17:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056-r1.ebuild,v 1.3 2010/04/23 06:31:27 jlec Exp $
 
 EAPI="3"
 
@@ -31,8 +31,7 @@ RDEPEND="~virtual/libstdc++-3.3
 	amd64? ( app-emulation/emul-linux-x86-compat )
 	eclipse? ( >=dev-util/eclipse-sdk-3.4 )"
 
-DESTINATION="${EPREFIX#/}/opt/intel/Compiler/${RELEASE}/${BUILD}"
-DESTINATION="${DESTINATION#/}"
+DESTINATION="opt/intel/Compiler/${RELEASE}/${BUILD}"
 
 pkg_setup() {
 	CHECKREQS_MEMORY=1024
