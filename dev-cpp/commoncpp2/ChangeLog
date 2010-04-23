@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/commoncpp2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.49 2009/07/30 07:58:34 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.50 2010/04/23 10:17:57 pva Exp $
+
+*commoncpp2-1.8.0 (23 Apr 2010)
+
+  23 Apr 2010; Peter Volkov <pva@gentoo.org> +commoncpp2-1.8.0.ebuild:
+  Version bump, bug #279505, thank Eric Womer for report. This should fix
+  gcc-4.4 build issues.
 
   30 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> commoncpp2-1.6.3.ebuild,
   +files/commoncpp2-1.6.3-glibc-2.10.patch:
