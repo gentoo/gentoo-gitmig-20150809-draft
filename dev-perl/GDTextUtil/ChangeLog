@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDTextUtil
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.18 2009/12/23 19:02:43 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.19 2010/04/23 12:00:03 tove Exp $
+
+  23 Apr 2010; Torsten Veller <tove@gentoo.org> GDTextUtil-0.86.ebuild:
+  Maintenance. EAPI=3. LICENSE fix.
 
   23 Dec 2009; Fabian Groffen <grobian@gentoo.org> GDTextUtil-0.86.ebuild:
   Marked ~x86-solaris, bug #296509
