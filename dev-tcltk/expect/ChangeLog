@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.70 2010/04/17 13:40:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.71 2010/04/23 10:44:12 jlec Exp $
+
+  23 Apr 2010; Justin Lecher <jlec@gentoo.org> expect-5.43.0-r1.ebuild,
+  expect-5.44.1.15.ebuild:
+  Reintroduced USE=X again on request of aballier
 
   17 Apr 2010; Justin Lecher <jlec@gentoo.org> expect-5.43.0-r1.ebuild,
   expect-5.44.1.15.ebuild:
