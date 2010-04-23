@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.1 2010/04/23 11:08:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.2 2010/04/23 16:18:09 aballier Exp $
 
 EAPI="2"
 
@@ -63,7 +63,7 @@ RDEPEND="
 		aalib? ( media-libs/aalib )
 		aac? ( >=media-libs/faad2-2.6.1 )
 		alsa? ( media-libs/alsa-lib )
-		avahi? ( >=net-dns/avahi-0.6 )
+		avahi? ( >=net-dns/avahi-0.6[dbus] )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		cdda? (	cddb? ( >=media-libs/libcddb-1.2.0 ) )
 		dbus? ( >=sys-apps/dbus-1.0.2 )
@@ -120,7 +120,11 @@ RDEPEND="
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
 		shout? ( media-libs/libshout )
-		skins? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libXext x11-libs/libX11 )
+		skins? (
+				x11-libs/qt-gui:4 x11-libs/qt-core:4
+				x11-libs/libXext x11-libs/libX11
+				media-libs/freetype media-fonts/dejavu
+			   )
 		speex? ( media-libs/speex )
 		sqlite? ( >=dev-db/sqlite-3.6.0:3 )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
@@ -164,14 +168,10 @@ vlc_use_force() {
 	use $1 && use !$2 && ewarn "USE=$1 requires $2, $2 will be enabled."
 }
 
-# Use when $2 depends strictly on $3
-# if use $1 then enable $2 and $3, otherwise disable $2
+# Use when $1 depends strictly on $2
+# if use $1 then enable $2
 vlc_use_enable_force() {
-	if use $1 ; then
-		echo "--enable-$2 --enable-$3"
-	else
-		echo "--disable-$2"
-	fi
+	use $1 && echo "--enable-$2"
 }
 
 pkg_setup() {
@@ -181,16 +181,22 @@ pkg_setup() {
 		eerror "the old ${PN} version and will not work."
 		die "Unmerge vlc 1.0.x first"
 	fi
-	vlc_use_needs skins truetype
-	vlc_use_force skins qt4
-	vlc_use_needs bidi truetype
+
+	# Useflags we need to forcefuly enable
 	vlc_use_force remoteosd gcrypt
+	vlc_use_force skins truetype
+	vlc_use_force skins qt4
+	vlc_use_force vlm stream
+
+	# Useflags that will be automagically discarded if deps are not met
+	vlc_use_needs bidi truetype
+	vlc_use_needs cddb cdda
 	vlc_use_needs fontconfig truetype
 	vlc_use_needs libv4l2 v4l2
 	vlc_use_needs libv4l v4l
 	vlc_use_needs libtiger kate
 	vlc_use_needs xv xcb
-	vlc_use_needs cddb cdda
+
 	if use qt4 || use skins ; then
 		qt4_pkg_setup
 	else
@@ -287,6 +293,7 @@ src_configure() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr) \
 		$(use_enable qt4) \
+		$(use_enable remoteosd) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
 		$(use_enable samba smb) \
@@ -311,6 +318,7 @@ src_configure() {
 		$(use_enable v4l) \
 		$(use_enable v4l2) \
 		$(use_enable vcdx) \
+		$(use_enable vlm) \
 		$(use_enable vorbis) \
 		$(use_enable win32codecs loader) \
 		$(use_enable wma-fixed) \
@@ -324,9 +332,10 @@ src_configure() {
 		--disable-growl \
 		--disable-optimizations \
 		--enable-fast-install \
-		$(vlc_use_enable_force vlm vlm sout) \
-		$(vlc_use_enable_force skins skins2 qt4) \
-		$(vlc_use_enable_force remoteosd remoteosd libgcrypt)
+		$(vlc_use_enable_force vlm sout) \
+		$(vlc_use_enable_force skins qt4) \
+		$(vlc_use_enable_force skins freetype) \
+		$(vlc_use_enable_force remoteosd libgcrypt)
 }
 
 src_install() {
