@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Module-Load-Conditional
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/ChangeLog,v 1.7 2010/02/11 11:58:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/ChangeLog,v 1.8 2010/04/23 18:27:16 robbat2 Exp $
+
+*Module-Load-Conditional-0.38 (23 Apr 2010)
+
+  23 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +Module-Load-Conditional-0.38.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *Module-Load-Conditional-0.36 (11 Feb 2010)
 
