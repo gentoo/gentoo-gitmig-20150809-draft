@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.5.ebuild,v 1.2 2009/10/03 17:30:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.5.ebuild,v 1.3 2010/04/23 19:56:48 arfrever Exp $
 
 NEED_PYTHON=2.3
 
-inherit eutils multilib python
+inherit eutils python
 
 MY_P="${P/pyicq-t/pyicqt}"
 
@@ -29,8 +29,7 @@ RDEPEND="${DEPEND}
 src_install() {
 	local inspath
 
-	python_version
-	inspath=/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	inspath=$(python_get_sitedir)/${PN}
 	insinto ${inspath}
 	doins -r data src tools
 	newins PyICQt.py ${PN}.py
@@ -51,8 +50,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize $(python_get_sitedir)/${PN}
 
 	elog "A sample configuration file has been installed in /etc/jabber/${PN}.xml."
 	elog "Please edit it and the configuration of your Jabber server to match."
@@ -60,12 +58,12 @@ pkg_postinst() {
 	ewarn "If you are storing user accounts in MySQL and are upgrading from a "
 	ewarn "version older than 0.8.1, then you will need to run the following "
 	ewarn "command to create some new tables:"
-	ewarn "	 mysql -u user_name -p pyicqt < /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/tools/db-setup.mysql"
+	ewarn "	 mysql -u user_name -p pyicqt < $(python_get_sitedir)/${PN}/tools/db-setup.mysql"
 
 	elog  "These instructions along with a list of new config variables are "
 	elog  "available at: http://code.google.com/p/pyicqt/wiki/Upgrade"
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/${PN}
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
