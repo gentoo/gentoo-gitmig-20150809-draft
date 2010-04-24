@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r2.ebuild,v 1.4 2010/02/10 20:51:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r2.ebuild,v 1.5 2010/04/24 18:02:42 lxnay Exp $
 
 EAPI=2
 
@@ -96,6 +96,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+
+	#Fix upstream bug, Gentoo bug #306313
+	epatch "${FILESDIR}"/${P}-sqlite.patch
+
 	#Fix bug 248703
 	sed -i  -e 's:VALID_EPIPHANY_VERSIONS=":VALID_EPIPHANY_VERSIONS="2.26 2.25 2.24 :' \
 		configure.in || die "epiphany sed failed"
