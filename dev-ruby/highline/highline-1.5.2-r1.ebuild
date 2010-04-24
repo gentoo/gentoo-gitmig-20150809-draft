@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.5.2.ebuild,v 1.3 2010/04/24 08:25:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.5.2-r1.ebuild,v 1.1 2010/04/24 08:25:51 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README TODO"
 RUBY_FAKEGEM_DOCDIR="doc/html"
