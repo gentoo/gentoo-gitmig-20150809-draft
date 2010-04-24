@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.12.1.ebuild,v 1.2 2010/04/24 17:19:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.12.1.ebuild,v 1.3 2010/04/24 17:24:02 ssuominen Exp $
 
 EAPI=2
 
@@ -52,10 +52,6 @@ src_configure() {
 		use 3dnowext && _cpu=x86
 	fi
 
-	if use network && use ipv6; then
-		_ipv6=enable
-	fi
-
 	econf \
 		--disable-dependency-tracking \
 		--with-optimization=0 \
@@ -63,7 +59,7 @@ src_configure() {
 		--with-default-audio=${_output} \
 		--with-cpu=${_cpu} \
 		--enable-network \
-		--${_ipv6}-ipv6
+		$(use_enable ipv6)
 }
 
 src_install() {
