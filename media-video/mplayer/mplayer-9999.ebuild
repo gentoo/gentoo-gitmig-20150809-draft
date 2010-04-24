@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.39 2010/04/24 12:33:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.40 2010/04/24 12:44:45 aballier Exp $
 
 EAPI="2"
 
@@ -70,7 +70,6 @@ RDEPEND+="
 	)
 	X? (
 		${X_RDEPS}
-		ass? ( ${FONT_RDEPS} media-libs/libass )
 		dga? ( x11-libs/libXxf86dga )
 		ggi? (
 			media-libs/libggi
@@ -82,7 +81,6 @@ RDEPEND+="
 			x11-libs/libXi
 		)
 		opengl? ( virtual/opengl )
-		truetype? ( ${FONT_RDEPS} )
 		vdpau? ( || ( x11-libs/libvdpau >=x11-drivers/nvidia-drivers-180.51 ) )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
@@ -93,6 +91,7 @@ RDEPEND+="
 	)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
+	ass? ( ${FONT_RDEPS} media-libs/libass )
 	bidi? ( dev-libs/fribidi )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
@@ -143,6 +142,7 @@ RDEPEND+="
 	speex? ( media-libs/speex )
 	svga? ( media-libs/svgalib )
 	theora? ( media-libs/libtheora )
+	truetype? ( ${FONT_RDEPS} )
 	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
 "
