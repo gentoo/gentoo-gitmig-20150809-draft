@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xstream
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.28 2010/01/22 11:08:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.29 2010/04/24 17:39:56 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> xstream-1.3.1-r1.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   22 Jan 2010; Vlastimil Babka <caster@gentoo.org> -xstream-1.2-r1.ebuild,
   -files/xstream-1.2-javadoc-fix.patch, xstream-1.3.1-r1.ebuild:
