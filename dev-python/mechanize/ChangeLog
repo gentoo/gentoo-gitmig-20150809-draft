@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.18 2010/02/14 18:48:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.19 2010/04/24 10:33:34 djc Exp $
+
+*mechanize-0.2.0 (24 Apr 2010)
+
+  24 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> +mechanize-0.2.0.ebuild:
+  Version bump to 0.2.0.
 
   14 Feb 2010; Raúl Porcel <armin76@gentoo.org> mechanize-0.1.11.ebuild:
   Add ~alpha/~sparc
