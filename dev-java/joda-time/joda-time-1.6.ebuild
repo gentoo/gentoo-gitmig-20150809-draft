@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.6.ebuild,v 1.5 2010/01/03 21:07:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-1.6.ebuild,v 1.6 2010/04/24 17:55:14 grobian Exp $
 
 JAVA_PKG_IUSE="doc examples source test"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://joda-time.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="

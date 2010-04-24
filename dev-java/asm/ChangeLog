@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.70 2010/02/26 12:24:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.71 2010/04/24 17:57:07 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> asm-3.2.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   26 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> asm-3.2.ebuild:
   x86 stable wrt bug #302954
