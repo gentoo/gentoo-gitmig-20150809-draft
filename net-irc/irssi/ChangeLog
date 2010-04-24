@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.160 2010/04/23 17:19:05 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.161 2010/04/24 19:59:25 armin76 Exp $
+
+  24 Apr 2010; Raúl Porcel <armin76@gentoo.org> irssi-0.8.15.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #314639
 
   23 Apr 2010; Tobias Heinlein <keytoaster@gentoo.org> irssi-0.8.15.ebuild:
   amd64 stable, security bug #314639
