@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.48 2010/04/24 14:30:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.49 2010/04/24 14:30:57 aballier Exp $
 
 EAPI="2"
 
@@ -649,7 +649,7 @@ src_compile() {
 			hasq $i ${ALLOWED_LINGUAS} && BUILT_DOCS+=" $i"
 		done
 		if [[ -z $BUILT_DOCS ]]
-		then 
+		then
 			emake -j1 -C DOCS/xml html-chunked || die "Failed to generate html docs"
 		else
 			for i in ${BUILT_DOCS} ; do
