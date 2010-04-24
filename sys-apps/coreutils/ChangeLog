@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.289 2010/04/08 12:51:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.290 2010/04/24 02:48:48 vapier Exp $
+
+*coreutils-8.5 (24 Apr 2010)
+
+  24 Apr 2010; Mike Frysinger <vapier@gentoo.org> +coreutils-8.5.ebuild:
+  Version bump.
 
   08 Apr 2010; Christian Faulhammer <fauli@gentoo.org> coreutils-8.4.ebuild:
   stable x86, bug 311827
