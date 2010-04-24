@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rundoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/ChangeLog,v 1.9 2010/01/05 00:25:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rundoc/ChangeLog,v 1.10 2010/04/24 15:31:51 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> rundoc-0.11.ebuild:
+  Marked ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris, bug #314093
 
   05 Jan 2010; Joseph Jezak <josejx@gentoo.org> rundoc-0.11.ebuild:
   Marked ppc/ppc64 stable.
