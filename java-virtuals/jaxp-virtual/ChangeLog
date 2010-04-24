@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/jaxp-virtual
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaxp-virtual/ChangeLog,v 1.8 2009/12/16 19:31:17 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaxp-virtual/ChangeLog,v 1.9 2010/04/24 17:51:05 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org>
+  jaxp-virtual-1.4-r1.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   16 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   jaxp-virtual-1.4.ebuild, jaxp-virtual-1.4-r1.ebuild:

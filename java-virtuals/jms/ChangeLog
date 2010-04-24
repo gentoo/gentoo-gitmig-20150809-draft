@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/jms
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jms/ChangeLog,v 1.6 2009/12/16 19:36:19 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jms/ChangeLog,v 1.7 2010/04/24 17:52:23 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> jms-1.1.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   16 Dec 2009; Christian Faulhammer <fauli@gentoo.org> jms-1.1.ebuild:
   QA: transfer Prefix keywords
