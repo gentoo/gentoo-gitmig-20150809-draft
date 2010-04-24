@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.722 2010/04/24 11:57:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.723 2010/04/24 12:18:43 aballier Exp $
+
+  24 Apr 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  fix opencore-amr automagic dep
 
   24 Apr 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   Fix codecsdir handling; default to real ones, the default can be overriden

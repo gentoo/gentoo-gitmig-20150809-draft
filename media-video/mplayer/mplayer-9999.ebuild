@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.37 2010/04/24 11:57:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.38 2010/04/24 12:18:44 aballier Exp $
 
 EAPI="2"
 
@@ -418,6 +418,7 @@ src_configure() {
 	fi
 	use bs2b || myconf+=" --disable-libbs2b"
 	use schroedinger || myconf+=" --disable-libschroedinger-lavc"
+	use amr || myconf+=" --disable-libopencore_amrnb --disable-libopencore_amrwb"
 	if ! use png && ! use gmplayer; then
 		myconf+=" --disable-png"
 	fi
