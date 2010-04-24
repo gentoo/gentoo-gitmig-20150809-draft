@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.48 2010/03/12 17:01:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.49 2010/04/24 18:29:25 armin76 Exp $
+
+  24 Apr 2010; Raúl Porcel <armin76@gentoo.org> nose-0.11.3.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #315155
 
 *nose-0.11.3 (12 Mar 2010)
 
