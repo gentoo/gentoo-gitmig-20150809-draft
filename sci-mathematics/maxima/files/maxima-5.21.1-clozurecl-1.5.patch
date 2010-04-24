@@ -1,0 +1,22 @@
+diff -r -U2 maxima-5.20.1.orig/configure maxima-5.20.1/configure
+--- maxima-5.20.1.orig/configure	2009-12-14 04:20:43.000000000 +0100
++++ maxima-5.20.1/configure	2010-04-24 21:59:24.000000000 +0200
+@@ -2559,5 +2559,5 @@
+ fi
+ 
+-openmcl_default_name=openmcl
++openmcl_default_name=ccl
+ # Check whether --enable-openmcl or --disable-openmcl was given.
+ if test "${enable_openmcl+set}" = set; then
+diff -r -U2 maxima-5.20.1.orig/src/maxima-build.lisp maxima-5.20.1/src/maxima-build.lisp
+--- maxima-5.20.1.orig/src/maxima-build.lisp	2008-12-30 02:32:33.000000000 +0100
++++ maxima-5.20.1/src/maxima-build.lisp	2010-04-24 21:54:19.000000000 +0200
+@@ -36,5 +36,5 @@
+   #+allegro (excl:dumplisp :name "binary-acl/maxima.dxl")
+   #+lispworks (hcl:save-image "binary-lispworks/maxima" :restart-function 'cl-user::run)
+-  #+ccl (ccl:save-application "binary-openmcl/maxima" :toplevel-function 'cl-user::run))
+-
+-
++  #+ccl (ccl:save-application "binary-openmcl/maxima" :toplevel-function
++   (lambda () (let* ((*read-default-float-format* 'double-float))
++     (cl-user::run))))

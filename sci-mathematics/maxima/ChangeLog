@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.77 2010/04/12 11:58:46 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.78 2010/04/24 21:23:45 grozin Exp $
+
+*maxima-5.21.1 (24 Apr 2010)
+
+  24 Apr 2010; Andrey Grozin <grozin@gentoo.org> +maxima-5.21.1.ebuild,
+  +files/maxima-5.21.1-clozurecl-1.5.patch,
+  +files/maxima-5.21.1-emacs-version.patch:
+  Version bump
 
 *maxima-5.20.1-r2 (12 Apr 2010)
 
