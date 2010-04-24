@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.72 2010/02/16 07:49:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.73 2010/04/24 07:54:19 graaff Exp $
+
+*hoe-2.6.0 (24 Apr 2010)
+
+  24 Apr 2010; Hans de Graaff <graaff@gentoo.org> +hoe-2.6.0.ebuild:
+  Version bump. Minor enhancements and bug fixes.
 
   16 Feb 2010; Jonathan Callen <abcd@gentoo.org> hoe-2.5.0.ebuild:
   Add ~x64-macos for bug 305355
