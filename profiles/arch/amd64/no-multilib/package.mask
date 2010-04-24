@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.77 2010/04/19 19:08:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.78 2010/04/24 12:35:16 nyhm Exp $
 
 # 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
 # needs amd64 multilib
@@ -110,21 +110,9 @@ games-fps/glxquake-bin
 games-fps/legends
 games-fps/postal2
 games-fps/postal2mp-demo
-games-fps/quake3-alliance
-games-fps/quake3-alternatefire
-games-fps/quake3-bfp
 games-fps/quake3-bin
-games-fps/quake3-brainworks
-games-fps/quake3-cpma
-games-fps/quake3-defrag
 games-fps/quake3-demo
-games-fps/quake3-matrix
-games-fps/quake3-nsco
-games-fps/quake3-osp
 games-fps/quake3-ra3
-games-fps/quake3-ruinhunters
-games-fps/quake3-threewave
-games-fps/quake3-urbanterror
 games-fps/quake4-bin
 games-fps/quake4-data
 games-fps/quake4-demo
