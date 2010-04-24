@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.728 2010/04/24 13:30:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.729 2010/04/24 13:56:22 aballier Exp $
+
+  24 Apr 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  Build and install html documentation into the correct location, based on
+  the LINGUAS variable, from on a patch by Andrew Savchenko in bug #299405
 
   24 Apr 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   dont depend on cdparanoia if cdio is enabled, we wont use it; patch by

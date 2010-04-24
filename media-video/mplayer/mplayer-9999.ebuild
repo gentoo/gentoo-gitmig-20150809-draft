@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.45 2010/04/24 13:30:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.46 2010/04/24 13:56:22 aballier Exp $
 
 EAPI="2"
 
@@ -641,7 +641,24 @@ src_configure() {
 src_compile() {
 	base_src_compile
 	emake || die "Failed to build MPlayer!"
-	use doc && make -C DOCS/xml html-chunked
+	# Build only user-requested docs if they're available.
+	if use doc ; then
+		# select available languages from $LINGUAS
+		LINGUAS=${LINGUAS/zh/zh_CN}
+		local ALLOWED_LINGUAS="cs de en es fr hu it pl ru zh_CN"
+		local BUILT_DOCS=""
+		for i in ${LINGUAS} ; do
+			hasq $i ${ALLOWED_LINGUAS} && BUILT_DOCS+=" $i"
+		done
+		if [[ -z $BUILT_DOCS ]]
+		then 
+			emake -j1 -C DOCS/xml html-chunked || die "Failed to generate html docs"
+		else
+			for i in ${BUILT_DOCS} ; do
+				emake -j1 -C DOCS/xml html-chunked-$i || die "Failed to generate html docs for $i"
+			done
+		fi
+	fi
 }
 
 src_install() {
@@ -672,6 +689,7 @@ src_install() {
 	dodoc DOCS/tech/mirrors/* || die
 
 	if use doc; then
+		docinto html/
 		dohtml -r "${S}"/DOCS/HTML/* || die
 	fi
 
