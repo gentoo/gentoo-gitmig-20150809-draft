@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convertlit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.19 2010/04/14 20:10:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.20 2010/04/24 19:46:35 armin76 Exp $
+
+  24 Apr 2010; Raúl Porcel <armin76@gentoo.org> convertlit-1.8-r1.ebuild:
+  Add ~alpha/~ia64 wrt #314875
 
   14 Apr 2010; Jeroen Roovers <jer@gentoo.org> convertlit-1.8-r1.ebuild:
   Marked ~hppa (bug #314875).
