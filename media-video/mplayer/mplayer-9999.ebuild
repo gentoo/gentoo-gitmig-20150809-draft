@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.42 2010/04/24 13:03:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.43 2010/04/24 13:07:53 aballier Exp $
 
 EAPI="2"
 
@@ -283,13 +283,12 @@ src_configure() {
 		$(use_enable network)
 		$(use_enable joystick)
 	"
-	uses="bl enca ftp rtc" # nemesi <- not working with in-tree ebuild
+	uses="ass bl enca ftp rtc" # nemesi <- not working with in-tree ebuild
 	myconf+=" --disable-nemesi" # nemesi automagic disable
+	myconf+=" --disable-ass-internal" # always use system libass
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use ass || myconf+=" --disable-ass"
-	myconf+=" --disable-ass-internal"
 	use bidi || myconf+=" --disable-fribidi"
 	use encode || myconf+=" --disable-mencoder"
 	use ipv6 || myconf+=" --disable-inet6"
