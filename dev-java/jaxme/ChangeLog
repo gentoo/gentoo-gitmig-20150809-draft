@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.36 2010/04/16 13:38:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.37 2010/04/24 17:28:43 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> jaxme-0.5.2.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   16 Apr 2010; Vlastimil Babka <caster@gentoo.org> jaxme-0.5.2.ebuild:
   Don't (needlessly) xml-rewrite web.xml, prevent build-time DTD fetching,
