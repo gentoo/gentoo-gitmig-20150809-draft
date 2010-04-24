@@ -1,13 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.5.0.ebuild,v 1.1 2010/04/24 23:53:52 halcy0n Exp $
-
-GENTOO_PATCH_EXCLUDE="00_all_gcc-trampolinewarn.patch
-18_all_904-flatten-switch-stmt-00.patch
-54_all_300-libstdc++-pic.patch
-73_all_sh-libgcc-stacks.patch
-90_all_gcc-freebsd.patch
-91_all_gcc-freebsd.patch"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.5.0.ebuild,v 1.2 2010/04/24 23:58:59 halcy0n Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
