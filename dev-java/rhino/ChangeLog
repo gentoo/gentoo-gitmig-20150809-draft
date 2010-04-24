@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.65 2010/04/06 22:11:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.66 2010/04/24 16:46:01 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> rhino-1.7.2-r2.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
 *rhino-1.7.2-r2 (06 Apr 2010)
 

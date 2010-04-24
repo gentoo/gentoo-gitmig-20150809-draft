@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.68 2010/03/10 03:45:00 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.69 2010/04/24 16:43:38 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> servletapi-2.4-r5.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   10 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   servletapi-2.4-r5.ebuild:

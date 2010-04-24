@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.52 2010/04/05 23:42:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.53 2010/04/24 16:59:27 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> dom4j-1.6.1-r3.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   05 Apr 2010; Vlastimil Babka <caster@gentoo.org> dom4j-1.6.1-r3.ebuild:
   Actually enable tests execution, and remove a test that fails with 1.6

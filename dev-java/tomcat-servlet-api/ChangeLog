@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.77 2010/03/29 21:38:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.78 2010/04/24 16:38:45 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org>
+  tomcat-servlet-api-3.ebuild, tomcat-servlet-api-4.1.36.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   29 Mar 2010; Markus Meier <maekke@gentoo.org>
   tomcat-servlet-api-6.0.26.ebuild:

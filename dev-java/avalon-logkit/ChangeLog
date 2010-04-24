@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.85 2010/04/13 08:22:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.86 2010/04/24 16:42:06 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org>
+  avalon-logkit-2.1-r4.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   13 Apr 2010; Vlastimil Babka <caster@gentoo.org>
   -avalon-logkit-2.1-r1.ebuild, +avalon-logkit-2.1-r4.ebuild:
