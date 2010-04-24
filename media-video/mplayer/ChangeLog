@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.725 2010/04/24 12:44:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.726 2010/04/24 13:03:41 aballier Exp $
+
+  24 Apr 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  Disable opencore-amr support with bindist, Apache-2.0 vs GPL-2 issues,
+  https://bugs.gentoo.org/show_bug.cgi?id=299405#c6
 
   24 Apr 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   allow ass and truetype without X, by Andrew Savchenko, bug #299405

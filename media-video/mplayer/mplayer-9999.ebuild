@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.41 2010/04/24 12:47:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.42 2010/04/24 13:03:41 aballier Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ RDEPEND+="
 	)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	amr? ( media-libs/opencore-amr )
+	amr? ( !bindist? ( media-libs/opencore-amr ) )
 	ass? ( ${FONT_RDEPS} media-libs/libass )
 	bidi? ( dev-libs/fribidi )
 	bs2b? ( media-libs/libbs2b )
@@ -419,7 +419,9 @@ src_configure() {
 	fi
 	use bs2b || myconf+=" --disable-libbs2b"
 	use schroedinger || myconf+=" --disable-libschroedinger-lavc"
-	use amr || myconf+=" --disable-libopencore_amrnb --disable-libopencore_amrwb"
+	# Disable opencore-amr with bindist
+	# https://bugs.gentoo.org/show_bug.cgi?id=299405#c6
+	{ use amr && use !bindist ; } || myconf+=" --disable-libopencore_amrnb --disable-libopencore_amrwb"
 	if ! use png && ! use gmplayer; then
 		myconf+=" --disable-png"
 	fi
