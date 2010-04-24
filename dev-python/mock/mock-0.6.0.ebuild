@@ -1,14 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.6.0.ebuild,v 1.2 2009/10/10 11:55:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.6.0.ebuild,v 1.3 2010/04/24 21:17:20 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-DESCRIPTION="Python mocking library using action -> assertion pattern"
-HOMEPAGE="http://www.voidspace.org.uk/python/mock/"
+DESCRIPTION="A Python Mocking and Patching Library for Testing"
+HOMEPAGE="http://www.voidspace.org.uk/python/mock/ http://pypi.python.org/pypi/mock"
 SRC_URI="http://www.voidspace.org.uk/downloads/${P}.zip"
 
 LICENSE="BSD"
@@ -16,11 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="docs/*.txt"
+PYTHON_MODNAME="mock.py"
 
 src_install() {
 	distutils_src_install
@@ -29,8 +31,4 @@ src_install() {
 		dodoc mock.pdf
 		dohtml -r html/*
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize mock.py
 }
