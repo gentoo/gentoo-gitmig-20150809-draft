@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xindy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.9 2009/05/30 08:35:31 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.10 2010/04/24 11:12:33 aballier Exp $
+
+  24 Apr 2010; Alexis Ballier <aballier@gentoo.org> xindy-2.3.ebuild,
+  +files/xindy-2.3-clisp-2.48.patch:
+  fix build with clisp-2.48, by Semen Cirit, bug #281271
 
   30 May 2009; Ulrich Mueller <ulm@gentoo.org> xindy-2.3.ebuild:
   Remove app-text/tetex from dependencies, bug 227443.

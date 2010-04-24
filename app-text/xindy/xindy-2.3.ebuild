@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.3.ebuild,v 1.9 2009/05/30 08:35:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.3.ebuild,v 1.10 2010/04/24 11:12:33 aballier Exp $
+
+inherit eutils
 
 DESCRIPTION="A Flexible Indexing System"
 
@@ -17,6 +19,12 @@ RDEPEND="virtual/latex-base
 	|| ( dev-texlive/texlive-langcyrillic app-text/ptex )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	has_version '>=dev-lisp/clisp-2.48' && epatch "${FILESDIR}/${P}-clisp-2.48.patch"
+}
 
 src_compile() {
 	local clisp_dir
