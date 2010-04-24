@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.40 2010/04/24 12:44:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.41 2010/04/24 12:47:28 aballier Exp $
 
 EAPI="2"
 
@@ -91,6 +91,7 @@ RDEPEND+="
 	)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
+	amr? ( media-libs/opencore-amr )
 	ass? ( ${FONT_RDEPS} media-libs/libass )
 	bidi? ( dev-libs/fribidi )
 	bs2b? ( media-libs/libbs2b )
@@ -115,6 +116,7 @@ RDEPEND+="
 	gif? ( media-libs/giflib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( media-libs/jpeg )
+	jpeg2k? ( media-libs/openjpeg )
 	ladspa? ( media-libs/ladspa-sdk )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
@@ -125,8 +127,6 @@ RDEPEND+="
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
 	openal? ( media-libs/openal )
-	amr? ( media-libs/opencore-amr )
-	jpeg2k? ( media-libs/openjpeg )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
 	pulseaudio? ( media-sound/pulseaudio )
