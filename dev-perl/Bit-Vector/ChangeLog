@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Bit-Vector
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.35 2010/04/17 08:49:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.36 2010/04/24 20:24:15 armin76 Exp $
+
+  24 Apr 2010; Raúl Porcel <armin76@gentoo.org> Bit-Vector-6.4.ebuild,
+  Bit-Vector-7.1.ebuild:
+  Add ~arm
 
   17 Apr 2010; Torsten Veller <tove@gentoo.org> Bit-Vector-7.1.ebuild:
   Stable on amd64, x86 (#314467)
