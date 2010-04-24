@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/namd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.10 2010/04/23 19:38:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.11 2010/04/24 00:02:02 dberkholz Exp $
+
+*namd-2.7_beta2 (24 Apr 2010)
+*namd-2.7_beta1 (24 Apr 2010)
+
+  24 Apr 2010; Donnie Berkholz <dberkholz@gentoo.org>;
+  +namd-2.7_beta1.ebuild, +namd-2.7_beta2.ebuild, -namd-2.7.ebuild,
+  +files/namd-2.7_beta2-gentoo.patch:
+  Bump to 2.7_beta2. The previous 2.7 ebuild was actually 2.7 beta 1 but was
+  not named as such, so rename it to allow people to upgrade to beta 2.
 
   23 Apr 2010; Donnie Berkholz <dberkholz@gentoo.org>; namd-2.7.ebuild:
   All tc-get* sed replacements must happen before C*FLAGS-related ones,
