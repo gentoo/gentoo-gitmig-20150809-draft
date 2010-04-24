@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4130 2010/04/24 15:31:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4131 2010/04/24 20:59:26 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Add layman-dbtools to the mass-mask of live ebuilds.
 
   24 Apr 2010; Torsten Veller <tove@gentoo.org> package.mask:
   Mask dev-perl/Net-XWhois for removal (#276745)
