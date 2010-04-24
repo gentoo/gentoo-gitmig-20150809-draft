@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.131 2010/03/31 18:16:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.132 2010/04/24 07:30:32 dirtyepic Exp $
+
+*elfutils-0.146 (24 Apr 2010)
+
+  24 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> +elfutils-0.146.ebuild:
+  Version bump.
 
   31 Mar 2010; <solar@gentoo.org> elfutils-0.127.ebuild,
   elfutils-0.131-r1.ebuild, elfutils-0.131-r2.ebuild,
