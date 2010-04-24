@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-io
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.47 2010/01/03 20:27:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.48 2010/04/24 16:15:33 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> commons-io-1.4.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-io-1.4.ebuild:
