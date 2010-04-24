@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.4.1.ebuild,v 1.1 2010/04/24 16:08:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.4.1.ebuild,v 1.2 2010/04/24 16:34:26 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -37,7 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/m4a-tagging.patch
 	sed -i \
 		-e 's:/etc/abcde.conf:/etc/abcde/abcde.conf:g' \
-		Makefile || die
+		abcde || die
 }
 
 src_install() {
