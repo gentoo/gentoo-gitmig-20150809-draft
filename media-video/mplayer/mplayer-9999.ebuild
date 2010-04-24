@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.36 2010/04/23 13:04:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.37 2010/04/24 11:57:49 aballier Exp $
 
 EAPI="2"
 
@@ -418,7 +418,6 @@ src_configure() {
 	fi
 	use bs2b || myconf+=" --disable-libbs2b"
 	use schroedinger || myconf+=" --disable-libschroedinger-lavc"
-	use xanim && myconf+=" --xanimcodecsdir=/usr/lib/xanim/mods"
 	if ! use png && ! use gmplayer; then
 		myconf+=" --disable-png"
 	fi
@@ -484,8 +483,8 @@ src_configure() {
 
 	# Real binary codec support only available on x86, amd64
 	if use real; then
-		use x86 && myconf+=" --realcodecsdir=/opt/RealPlayer/codecs"
-		use amd64 && myconf+=" --realcodecsdir=/usr/$(get_libdir)/codecs"
+		use x86 && myconf+=" --codecsdir=/opt/RealPlayer/codecs"
+		use amd64 && myconf+=" --codecsdir=/usr/$(get_libdir)/codecs"
 	elif ! use bindist; then
 			myconf+=" $(use_enable win32codecs win32dll)"
 	fi
