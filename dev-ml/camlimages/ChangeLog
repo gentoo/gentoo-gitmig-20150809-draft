@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.27 2010/04/15 14:47:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.28 2010/04/24 12:20:50 aballier Exp $
+
+  24 Apr 2010; Alexis Ballier <aballier@gentoo.org>
+  -camlimages-3.0.1.ebuild, -files/camlimages-3.0.1-CVE-2009-2295.patch,
+  -files/camlimages-3.0.1-lablgtk.patch:
+  remove old
 
   15 Apr 2010; Brent Baude <ranger@gentoo.org> camlimages-3.0.2.ebuild:
   Marking camlimages-3.0.2 ppc for sec bug 290222
