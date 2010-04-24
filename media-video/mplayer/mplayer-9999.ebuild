@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.46 2010/04/24 13:56:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.47 2010/04/24 14:13:36 aballier Exp $
 
 EAPI="2"
 
@@ -560,7 +560,6 @@ src_configure() {
 		append-ldflags -nopie
 	fi
 
-	append-flags -D__STDC_LIMIT_MACROS
 	is-flag -O? || append-flags -O2
 	if use x86 || use x86-fbsd; then
 		use debug || append-flags -fomit-frame-pointer
