@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.5 2010/03/14 21:55:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.6 2010/04/24 17:58:36 pacho Exp $
 
 EAPI="2"
 
@@ -59,6 +59,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 DEPEND="${RDEPEND}
 	test? ( >=dev-libs/check-0.9.4 )
 	xinerama? ( x11-proto/xineramaproto )
+	app-text/docbook-xml-dtd:4.1.2
 	sys-devel/gettext
 	x11-proto/inputproto
 	>=dev-util/intltool-0.40

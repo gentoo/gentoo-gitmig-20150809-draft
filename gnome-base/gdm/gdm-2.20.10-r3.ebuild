@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r3.ebuild,v 1.1 2010/01/21 18:27:33 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r3.ebuild,v 1.2 2010/04/24 17:58:36 pacho Exp $
 
 EAPI="2"
 
@@ -55,6 +55,7 @@ RDEPEND=">=dev-libs/glib-2.12
 DEPEND="${RDEPEND}
 	dmx? ( x11-proto/dmxproto )
 	xinerama? ( x11-proto/xineramaproto )
+	app-text/docbook-xml-dtd:4.1.2
 	sys-devel/gettext
 	x11-proto/inputproto
 	>=dev-util/intltool-0.35
