@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4131 2010/04/24 20:59:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4132 2010/04/24 23:51:05 halcy0n Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Apr 2010; Mark Loeser <halcy0n@gentoo.org> package.mask:
+  Add mask for testing gcc-4.5.x
 
   24 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Add layman-dbtools to the mass-mask of live ebuilds.
