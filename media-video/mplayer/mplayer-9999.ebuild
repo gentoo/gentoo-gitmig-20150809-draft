@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.49 2010/04/24 14:30:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.50 2010/04/24 15:49:46 aballier Exp $
 
 EAPI="2"
 
@@ -107,7 +107,7 @@ RDEPEND+="
 		twolame? ( media-sound/twolame )
 		faac? ( media-libs/faac )
 		mp3? ( media-sound/lame )
-		x264? ( >=media-libs/x264-0.0.20091124 )
+		x264? ( >=media-libs/x264-0.0.20100423 )
 		xvid? ( media-libs/xvid )
 	)
 	esd? ( media-sound/esound )
