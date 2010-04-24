@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.47 2010/04/24 14:13:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.48 2010/04/24 14:30:04 aballier Exp $
 
 EAPI="2"
 
@@ -407,7 +407,6 @@ src_configure() {
 	use dirac || myconf+=" --disable-libdirac-lavc"
 	use dts || myconf+=" --disable-libdca"
 	use dv || myconf+=" --disable-libdv"
-	use faad || myconf+=" --disable-faad"
 	use lzo || myconf+=" --disable-liblzo"
 	if ! use mp3; then
 		myconf+="
@@ -425,7 +424,7 @@ src_configure() {
 		myconf+=" --disable-png"
 	fi
 
-	uses="gif jpeg live mad mng pnm speex tga theora xanim"
+	uses="faad gif jpeg live mad mng pnm speex tga theora xanim"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
