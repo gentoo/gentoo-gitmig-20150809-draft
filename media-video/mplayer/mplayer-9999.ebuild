@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.44 2010/04/24 13:24:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.45 2010/04/24 13:30:48 aballier Exp $
 
 EAPI="2"
 
@@ -96,7 +96,7 @@ RDEPEND+="
 	bidi? ( dev-libs/fribidi )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
-	cdparanoia? ( media-sound/cdparanoia )
+	cdparanoia? ( !cdio? ( media-sound/cdparanoia ) )
 	dirac? ( media-video/dirac )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdca )
