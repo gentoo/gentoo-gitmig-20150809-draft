@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.38 2010/04/24 12:18:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.39 2010/04/24 12:33:02 aballier Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 FONT_RDEPS="
 	virtual/ttf-fonts
 	media-libs/fontconfig
-	media-libs/freetype:2
+	>=media-libs/freetype-2.2.1:2
 "
 X_RDEPS="
 	x11-libs/libXext
@@ -70,7 +70,7 @@ RDEPEND+="
 	)
 	X? (
 		${X_RDEPS}
-		ass? ( ${FONT_RDEPS} )
+		ass? ( ${FONT_RDEPS} media-libs/libass )
 		dga? ( x11-libs/libXxf86dga )
 		ggi? (
 			media-libs/libggi
@@ -288,7 +288,8 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
-	use ass || myconf+=" --disable-ass --disable-ass-internal"
+	use ass || myconf+=" --disable-ass"
+	myconf+=" --disable-ass-internal"
 	use bidi || myconf+=" --disable-fribidi"
 	use encode || myconf+=" --disable-mencoder"
 	use ipv6 || myconf+=" --disable-inet6"
