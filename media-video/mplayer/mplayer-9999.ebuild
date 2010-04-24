@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.43 2010/04/24 13:07:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.44 2010/04/24 13:24:32 aballier Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit eutils flag-o-matic multilib base ${SVN_ECLASS}
 
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r30554
 
-IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +ass bidi bindist bl bs2b
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec +ass bidi bindist bl bs2b
 +cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac directfb
 doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon ftp
 gif ggi -gmplayer +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
@@ -112,7 +112,7 @@ RDEPEND+="
 	)
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
-	faad? ( !aac? ( media-libs/faad2 ) )
+	faad? ( media-libs/faad2 )
 	gif? ( media-libs/giflib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( media-libs/jpeg )
@@ -403,7 +403,7 @@ src_configure() {
 	# Use internal musepack codecs for SV7 and SV8 support
 	myconf+=" --disable-musepack"
 
-	use aac || myconf+=" --disable-faad-internal"
+	myconf+=" --disable-faad-internal" # always use system media-libs/faad2
 	use dirac || myconf+=" --disable-libdirac-lavc"
 	use dts || myconf+=" --disable-libdca"
 	use dv || myconf+=" --disable-libdv"
@@ -446,7 +446,7 @@ src_configure() {
 		for i in ${uses}; do
 			use ${i} || myconf+=" --disable-${i}"
 		done
-		use aac || myconf+=" --disable-faac-lavc"
+		use faac || myconf+=" --disable-faac-lavc"
 	else
 		myconf+="
 			--disable-faac-lavc
@@ -458,7 +458,7 @@ src_configure() {
 			--disable-twolame
 			--disable-toolame
 		"
-		uses="aac faac x264 xvid toolame twolame"
+		uses="faac x264 xvid toolame twolame"
 		for i in ${uses}; do
 			use ${i} && elog "Useflag \"${i}\" require \"encode\" useflag enabled to work."
 		done
