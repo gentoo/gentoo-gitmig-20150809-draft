@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.17 2007/08/19 16:06:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3ed/id3ed-1.10.4.ebuild,v 1.18 2010/04/24 16:42:41 ssuominen Exp $
 
+EAPI=2
 inherit toolchain-funcs
 
 DESCRIPTION="ID3 tag editor for mp3 files"
@@ -16,19 +17,19 @@ IUSE=""
 DEPEND="sys-libs/ncurses
 	sys-libs/readline"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e "s:-s::" Makefile.in
+src_prepare() {
+	sed -i \
+		-e '/install/s:-s::' \
+		-e 's:$(CXX) $(CXXFLAGS):$(CXX) $(LDFLAGS) $(CXXFLAGS):' \
+		Makefile.in || die
 }
 
 src_compile() {
-	econf
-	emake CXX="$(tc-getCXX)" CFLAGS="${CFLAGS} -I./" || die "emake failed."
+	emake CXX="$(tc-getCXX)" CFLAGS="${CFLAGS} -I./" || die
 }
 
 src_install() {
 	dodir /usr/bin /usr/share/man/man1
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc README ChangeLog
+	emake DESTDIR="${D}" install || die
+	dodoc README || die
 }
