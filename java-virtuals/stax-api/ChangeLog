@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/stax-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.12 2010/01/15 17:33:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.13 2010/04/24 17:45:30 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> stax-api-1-r1.ebuild:
+  Marked ~sparc-solaris ~x86-solaris, bug #314093
 
   15 Jan 2010; Fabian Groffen <grobian@gentoo.org> stax-api-1-r1.ebuild:
   Marked ~x64-solaris
