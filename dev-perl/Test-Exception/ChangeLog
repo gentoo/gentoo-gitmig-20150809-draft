@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.60 2010/02/03 11:24:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.61 2010/04/24 18:36:32 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org>
+  Test-Exception-0.29.ebuild:
+  Marked ~arch for some Prefix arches
 
   03 Feb 2010; Alexis Ballier <aballier@gentoo.org>
   Test-Exception-0.29.ebuild:
