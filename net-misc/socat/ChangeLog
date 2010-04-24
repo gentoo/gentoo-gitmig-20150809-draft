@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.76 2010/04/24 19:09:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.77 2010/04/24 19:15:28 grobian Exp $
+
+  24 Apr 2010; Fabian Groffen <grobian@gentoo.org> socat-1.7.1.2.ebuild:
+  Marked ~ppc-macos
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> socat-1.7.1.2.ebuild,
   socat-2.0.0_beta3.ebuild:
