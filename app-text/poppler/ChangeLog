@@ -1,6 +1,13 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.229 2010/04/10 02:13:17 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.230 2010/04/25 17:37:03 the_paya Exp $
+
+*poppler-0.12.4-r3 (25 Apr 2010)
+
+  25 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
+  +poppler-0.12.4-r3.ebuild, +files/poppler-0.12.4-strings_h.patch,
+  +files/poppler-0.12.4-xopen_source.patch:
+  Apply patch from upstream wrt bug #314925 with revbump.
 
 *poppler-0.12.4-r2 (10 Apr 2010)
 *poppler-0.12.3-r6 (10 Apr 2010)
