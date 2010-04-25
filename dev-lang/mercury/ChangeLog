@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.102 2010/04/11 00:21:18 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.103 2010/04/25 08:25:46 keri Exp $
+
+  25 Apr 2010; <keri@gentoo.org> files/mercury-10.04_beta1-ppc-lexer.patch:
+  Move MGNUCFLAGS-lexer definition to library/Mmakefile to allow mmc to
+  parse Mercury.options. Closes #317051
 
   11 Apr 2010; <keri@gentoo.org> mercury-10.04_beta1.ebuild,
   +files/mercury-10.04_beta1-ppc-lexer.patch:
