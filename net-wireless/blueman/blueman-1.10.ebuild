@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.10.ebuild,v 1.3 2010/04/25 15:43:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.10.ebuild,v 1.4 2010/04/25 15:50:07 arfrever Exp $
 
 EAPI="2"
 
-inherit multilib python
+inherit python
 
 DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks."
 HOMEPAGE="http://blueman-project.org/"
