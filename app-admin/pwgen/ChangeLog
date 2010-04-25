@@ -1,13 +1,13 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.53 2010/02/02 16:55:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.54 2010/04/25 11:12:57 jlec Exp $
 
-  02 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> pwgen-2.06-r1.ebuild:
+  02 Feb 2010; Justin Lecher <jlec@gentoo.org> pwgen-2.06-r1.ebuild:
   Prefix keywords added, as requested in bug 303161
 
 *pwgen-2.06-r1 (31 Dec 2009)
 
-  31 Dec 2009; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  31 Dec 2009; Justin Lecher <jlec@gentoo.org>
   +pwgen-2.06-r1.ebuild, +files/2.06-special-char.patch,
   +pwgen-2.06-r1.ebuild:
   EAPI="3", ready for PREFIX whitelist, using emake,
