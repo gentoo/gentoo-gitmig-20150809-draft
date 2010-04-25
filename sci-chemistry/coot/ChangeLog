@@ -1,16 +1,16 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.22 2010/04/22 20:23:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.23 2010/04/25 11:37:01 jlec Exp $
 
   22 Apr 2010; Justin Lecher <jlec@gentoo.org> coot-0.6.ebuild:
   Fixes for Python ABIs
 
-  26 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> coot-0.6.ebuild:
+  26 Feb 2010; Justin Lecher <jlec@gentoo.org> coot-0.6.ebuild:
   Missing sci-libs/mmdb DEP added
 
 *coot-0.6 (06 Feb 2010)
 
-  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> -coot-0.1.2.ebuild,
+  06 Feb 2010; Justin Lecher <jlec@gentoo.org> -coot-0.1.2.ebuild,
   -coot-0.3.1.ebuild, -coot-0.3.3.ebuild, -coot-0.4_pre2-r549.ebuild,
   +coot-0.6.ebuild, +files/glib.m4, +files/gtk.m4:
   Version BUmp, removed broken versions
