@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.27 2010/03/30 07:02:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.28 2010/04/25 09:24:23 jlec Exp $
+
+  25 Apr 2010; Justin Lecher <jlec@gentoo.org> apbs-1.2.1b-r2.ebuild:
+  Python ABI fixes, #316165
 
   30 Mar 2010; Justin Lecher <jlec@gentoo.org> apbs-1.2.1b-r2.ebuild,
   metadata.xml:
