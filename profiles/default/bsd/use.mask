@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.6 2009/09/18 18:11:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.7 2010/04/25 17:03:18 the_paya Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -91,3 +91,7 @@ mpm-itk
 
 # Linux only sane backends
 sane_backends_qcam
+
+# Few database backends unlikely to be tested anytime soon.
+mssql
+firebird
