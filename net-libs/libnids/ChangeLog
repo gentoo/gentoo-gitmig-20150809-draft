@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.37 2010/04/15 15:41:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.38 2010/04/25 23:47:10 jer Exp $
+
+  25 Apr 2010; Jeroen Roovers <jer@gentoo.org> libnids-1.24.ebuild:
+  Do not apply the chksum.c patch (bug #312749).
 
   15 Apr 2010; Brent Baude <ranger@gentoo.org> libnids-1.24.ebuild:
   Marking libnids-1.24 ppc for bug 312637

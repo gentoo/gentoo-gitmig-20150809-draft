@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24.ebuild,v 1.4 2010/04/15 15:41:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.24.ebuild,v 1.5 2010/04/25 23:47:10 jer Exp $
 
 EAPI=2
 inherit eutils
@@ -20,7 +20,6 @@ RDEPEND="${DEPEND}
 	!net-libs/libnids:1.1"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.20-chksum.c-ebx.patch"
 	epatch "${FILESDIR}/${P}-ldflags.patch"
 }
 
