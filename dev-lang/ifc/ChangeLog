@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.56 2010/04/22 09:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.57 2010/04/25 08:50:46 jlec Exp $
+
+  25 Apr 2010; Justin Lecher <jlec@gentoo.org> ifc-11.1.056-r1.ebuild:
+  Additional QA_ fixes including PREFIX
 
 *ifc-11.1.056-r1 (22 Apr 2010)
 
