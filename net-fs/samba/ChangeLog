@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.407 2010/04/08 10:05:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.408 2010/04/25 15:42:48 arfrever Exp $
+
+  25 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  samba-3.0.37.ebuild:
+  Delete calls to deprecated python_version().
 
   08 Apr 2010; Patrick Lauer <patrick@gentoo.org> samba-3.5.2.ebuild:
   Fix typo #313813

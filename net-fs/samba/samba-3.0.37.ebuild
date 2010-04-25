@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.37.ebuild,v 1.7 2009/11/21 20:01:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.37.ebuild,v 1.8 2010/04/25 15:42:48 arfrever Exp $
 
 inherit autotools eutils pam python multilib versionator confutils
 
@@ -79,9 +79,8 @@ src_compile() {
 	local mylangs
 	local mymod_shared
 
-	python_version
 	myconf="--with-python=no"
-	use python && myconf="--with-python=${python}"
+	use python && myconf="--with-python=$(PYTHON -a)"
 
 	use winbind && mymod_shared="--with-shared-modules=idmap_rid"
 	if use ldap ; then
@@ -210,7 +209,7 @@ src_install() {
 	if use python ; then
 		emake DESTDIR="${D}" python_install || die "emake installpython failed"
 		# We're doing that manually
-		find "${D}/usr/$(get_libdir)/python${PYVER}/site-packages" -iname "*.pyc" -delete
+		find "${D}$(python_get_sitedir)" -iname "*.pyc" -delete
 	fi
 
 	cd "${S}/source"
@@ -311,8 +310,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	if use python ; then
-		python_version
-		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/samba
+		python_mod_optimize $(python_get_sitedir)/samba
 	fi
 
 	if use swat ; then
@@ -345,7 +343,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if use python ; then
-		python_version
-		python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/samba
+		python_mod_cleanup $(python_get_sitedir)/samba
 	fi
 }
