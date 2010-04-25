@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.6 2010/02/08 08:48:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.7 2010/04/25 17:58:12 nixphoeni Exp $
+
+*icalendar-2.1_p20100409 (25 Apr 2010)
+
+  25 Apr 2010; Joe Sapp <nixphoeni@gentoo.org>
+  +files/01_all_UIDGenerator-fix.patch, icalendar-2.0.1.ebuild,
+  +files/02_all_vDatetime-tzinfo-fix.patch, icalendar-2.1-r1.ebuild,
+  +files/03_all_duration-fix.patch, +icalendar-2.1_p20100409.ebuild,
+  +files/04_all_date-type-test-in-vDDDTypes.patch,
+  +files/05_all_utf8-multi-octet-fix.patch,
+  +files/06_all_test.py-use-set.patch:
+  Added an ebuild to include patches flying across the mailing list. It's
+  unknown when upstream will release a version incorporating these fixes.
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> icalendar-2.0.1.ebuild,
   icalendar-2.1-r1.ebuild:

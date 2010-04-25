@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.0.1.ebuild,v 1.4 2010/02/08 08:48:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.0.1.ebuild,v 1.5 2010/04/25 17:58:12 nixphoeni Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 DOCS="CHANGES.txt CREDITS.txt doc/* HISTORY.txt README.txt TODO.txt"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-UIDGenerator-fix.patch"
+	epatch "${FILESDIR}/01_all_UIDGenerator-fix.patch"
 }
 
 src_test() {
