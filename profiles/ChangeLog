@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4133 2010/04/25 05:26:34 blackace Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4134 2010/04/25 07:44:36 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Apr 2010; Peter Volkov <pva@gentoo.org> package.mask:
+  Masking beta version of autogen, bug 316583#c12.
 
   25 Apr 2010; <blackace@gentoo.org> package.mask:
   Mask app-office/nostaples for removal (#317079)
