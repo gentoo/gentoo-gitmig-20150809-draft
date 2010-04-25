@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.41.0-r3.ebuild,v 1.9 2010/04/17 23:52:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.41.0-r3.ebuild,v 1.10 2010/04/25 18:28:14 arfrever Exp $
 
 EAPI="2"
 
@@ -51,8 +51,7 @@ _add_line() {
 pkg_setup() {
 	# It doesn't compile with USE="python mpi" and python-3 (bug 295705)
 	if use python && use mpi ; then
-		python_version
-		if [[ "${PYVER_MAJOR}" != "2" ]]; then
+		if [[ "$(python_get_version --major)" != "2" ]]; then
 			eerror "The Boost.MPI python bindings do not support any other python version"
 			eerror "than 2.x. Please either use eselect to select a python 2.x version or"
 			eerror "disable the python and/or mpi use flag for =${CATEGORY}/${PF}."
@@ -142,8 +141,7 @@ src_configure() {
 	use mpi && mpi="using mpi ;"
 
 	if use python ; then
-		python_version
-		pystring="using python : ${PYVER} : /usr :	/usr/include/python${PYVER} : /usr/lib/python${PYVER} ;"
+		pystring="using python : $(python_get_version) : /usr :	$(python_get_includedir) : $(python_get_libdir) ;"
 	fi
 
 	cat > "${S}/user-config.jam" << __EOF__
@@ -264,10 +262,10 @@ src_install () {
 
 	# Move the mpi.so to the right place and make sure it's slotted
 	if use mpi && use python; then
-		mkdir -p "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/boost_${MAJOR_PV}"
-		mv "${D}/usr/$(get_libdir)/mpi.so" "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/boost_${MAJOR_PV}/"
-		touch "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/boost_${MAJOR_PV}/__init__.py"
-		_add_line "python=\"/usr/$(get_libdir)/python${PYVER}/site-packages/boost_${MAJOR_PV}/mpi.so\""
+		mkdir -p "${D}$(python_get_sitedir)/boost_${MAJOR_PV}"
+		mv "${D}/usr/$(get_libdir)/mpi.so" "${D}$(python_get_sitedir)/boost_${MAJOR_PV}/"
+		touch "${D}$(python_get_sitedir)/boost_${MAJOR_PV}/__init__.py"
+		_add_line "python=\"$(python_get_sitedir)/boost_${MAJOR_PV}/mpi.so\""
 	fi
 
 	if use doc ; then

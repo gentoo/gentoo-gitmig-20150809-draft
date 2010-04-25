@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r2.ebuild,v 1.14 2009/10/21 16:57:23 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r2.ebuild,v 1.15 2010/04/25 18:28:14 arfrever Exp $
 
 inherit python flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -94,7 +94,6 @@ generate_options() {
 
 generate_userconfig() {
 	einfo "Writing new user-config.jam"
-	python_version
 
 	local compiler compilerVersion compilerExecutable
 	if [[ ${CHOST} == *-darwin* ]] ; then
@@ -114,7 +113,7 @@ variant gentoorelease : release : <optimization>none <debug-symbols>none ;
 variant gentoodebug : debug : <optimization>none <debug-symbols>none ;
 
 using ${compiler} : ${compilerVersion} : ${compilerExecutable} : <cxxflags>"${CXXFLAGS}" <linkflags>"${LDFLAGS}" ;
-using python : ${PYVER} : /usr : /usr/include/python${PYVER} : /usr/lib/python${PYVER} ;
+using python : $(python_get_version) : /usr : $(python_get_includedir) : $(python_get_libdir) ;
 
 __EOF__
 
@@ -171,8 +170,8 @@ src_install () {
 
 	# Move the mpi.so to the right place
 	if use mpi; then
-		mkdir -p "${D}/usr/$(get_libdir)/python${PYVER}/site-packages"
-		mv "${D}/usr/$(get_libdir)/mpi.so" "${D}/usr/$(get_libdir)/python${PYVER}/site-packages"
+		mkdir -p "${D}$(python_get_sitedir)"
+		mv "${D}/usr/$(get_libdir)/mpi.so" "${D}$(python_get_sitedir)"
 	fi
 
 	if use doc ; then
