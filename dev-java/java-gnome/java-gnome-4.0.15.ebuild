@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.15.ebuild,v 1.1 2010/03/20 15:44:20 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.15.ebuild,v 1.2 2010/04/25 07:27:52 ken69267 Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source"
@@ -19,7 +19,7 @@ SLOT="4.0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.16.1
+RDEPEND=">=dev-libs/glib-2.22
 	>=x11-libs/gtk+-2.16
 	>=gnome-base/libglade-2.6.3
 	>=gnome-base/libgnome-2.22.0

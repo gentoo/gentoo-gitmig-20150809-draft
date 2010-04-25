@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.93 2010/04/16 16:40:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.94 2010/04/25 07:27:52 ken69267 Exp $
+
+  25 Apr 2010; Kenneth Prugh <ken69267@gentoo.org> java-gnome-4.0.15.ebuild:
+  Update glib dependency
 
   16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   java-gnome-4.0.14.ebuild:
