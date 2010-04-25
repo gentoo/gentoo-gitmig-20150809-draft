@@ -8,7 +8,7 @@ index 47bea67..bc23ad8 100644
  ../$(LAPACKLIB): $(ALLOBJ) $(ALLXOBJ)
 -	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ) $(ALLXOBJ)
 -	$(RANLIB) $@
-+	$(CC) $(LDFLAGS) -shared -o $@ $(ALLOBJ) $(ALLXOBJ) -lf2c
++	$(CC) $(LOADOPTS) -shared -o $@ $(ALLOBJ) $(ALLXOBJ) -lf2c
  
  single: $(SLASRC) $(ALLAUX) $(SCLAUX) 
  	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(SLASRC) $(ALLAUX) \
