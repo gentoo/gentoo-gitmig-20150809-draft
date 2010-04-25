@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.4 2010/01/18 18:38:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.5 2010/04/25 14:45:26 the_paya Exp $
+
+  25 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
+  html5lib-0.90.ebuild:
+  Keyworded ~x86-fbsd.
 
 *html5lib-0.90 (18 Jan 2010)
 
