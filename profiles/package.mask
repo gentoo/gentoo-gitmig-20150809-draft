@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11492 2010/04/25 18:25:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11493 2010/04/25 20:25:56 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,79 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (25 Apr 2010)
+#  on behalf of QA team <qa@gentoo.org
+#
+# Mask SElinux packages on all the profile and unmask it only for
+# selinux itself; automagic dependencies can break systems otherwise
+#
+# Please keep this mask in sync between profiles/package.mask and
+# selinux/package.mask (with - prefix there).
+sys-libs/libselinux
+sec-policy/selinux-acpi
+sec-policy/selinux-apache
+sec-policy/selinux-arpwatch
+sec-policy/selinux-asterisk
+sec-policy/selinux-audio-entropyd
+sec-policy/selinux-avahi
+sec-policy/selinux-base-policy
+sec-policy/selinux-bind
+sec-policy/selinux-bluez
+sec-policy/selinux-clamav
+sec-policy/selinux-clockspeed
+sec-policy/selinux-courier-imap
+sec-policy/selinux-cups
+sec-policy/selinux-cyrus-sasl
+sec-policy/selinux-daemontools
+sec-policy/selinux-dante
+sec-policy/selinux-dbus
+sec-policy/selinux-desktop
+sec-policy/selinux-dhcp
+sec-policy/selinux-distcc
+sec-policy/selinux-djbdns
+sec-policy/selinux-dnsmasq
+sec-policy/selinux-ftpd
+sec-policy/selinux-games
+sec-policy/selinux-gnupg
+sec-policy/selinux-gpm
+sec-policy/selinux-hal
+sec-policy/selinux-inetd
+sec-policy/selinux-ipsec-tools
+sec-policy/selinux-jabber-server
+sec-policy/selinux-kerberos
+sec-policy/selinux-logrotate
+sec-policy/selinux-lpd
+sec-policy/selinux-munin
+sec-policy/selinux-mysql
+sec-policy/selinux-nfs
+sec-policy/selinux-ntop
+sec-policy/selinux-ntp
+sec-policy/selinux-openldap
+sec-policy/selinux-openvpn
+sec-policy/selinux-pcmcia
+sec-policy/selinux-portmap
+sec-policy/selinux-postfix
+sec-policy/selinux-postgresql
+sec-policy/selinux-ppp
+sec-policy/selinux-privoxy
+sec-policy/selinux-procmail
+sec-policy/selinux-publicfile
+sec-policy/selinux-pyzor
+sec-policy/selinux-qmail
+sec-policy/selinux-razor
+sec-policy/selinux-samba
+sec-policy/selinux-screen
+sec-policy/selinux-snmpd
+sec-policy/selinux-snort
+sec-policy/selinux-spamassassin
+sec-policy/selinux-squid
+sec-policy/selinux-stunnel
+sec-policy/selinux-sudo
+sec-policy/selinux-tcpd
+sec-policy/selinux-tftpd
+sec-policy/selinux-ucspi-tcp
+sec-policy/selinux-wireshark
 
 # Peter Volkov <pva@gentoo.org> (25 Apr 2010)
 # Beta version, for tests. See bug 316583#c12
