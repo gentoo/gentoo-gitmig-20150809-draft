@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/gentoo-filepaths.pm,v 1.2 2010/04/09 04:17:59 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/gentoo-filepaths.pm,v 1.3 2010/04/25 22:26:28 lavajoe Exp $
 
 # This file contains a custom OS package to provide information on the
 # installation structure on Gentoo. It is based on the Debian OS equivalent

@@ -1,12 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.4.1.ebuild,v 1.2 2009/12/02 23:31:35 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.0.ebuild,v 1.1 2010/04/25 22:26:28 lavajoe Exp $
+
+EAPI="2"
 
 inherit eutils
 
 MAJOR_VER="${PV:0:3}"
 MINOR_VER="${PV:4:1}"
-BUILD_NUM="28947"
+BUILD_NUM="30464"
 SRC_DIR="SqueezeboxServer_v${MAJOR_VER}.${MINOR_VER}"
 MY_P="squeezeboxserver-${MAJOR_VER}.${MINOR_VER}-noCPAN"
 MY_P_BUILD_NUM="squeezeboxserver-${MAJOR_VER}.${MINOR_VER}-${BUILD_NUM}-noCPAN"
@@ -16,11 +18,10 @@ HOMEPAGE="http://www.logitechsqueezebox.com/support/download-squeezebox-server.h
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lame wavpack musepack alac ogg flac avahi aac bonjour"
+IUSE="lame wavpack alac ogg flac aac"
 
-# Note: Audio::Scan and EV present because of bug#287264 and bug#287857.
+# Note: EV present because of bug#287857.
 SRC_URI="http://www.slimdevices.com/downloads/${SRC_DIR}/${MY_P}.tgz
-	mirror://gentoo/SqueezeboxServer-Audio-Scan-0.45.tar.gz
 	mirror://gentoo/SqueezeboxServer-EV-3.8.tar.gz"
 
 # Note: common-sense currently required due to bundled EV (Gentoo bug#287257)
@@ -28,7 +29,6 @@ DEPEND="
 	!media-sound/squeezecenter
 	virtual/logger
 	virtual/mysql
-	avahi? ( net-dns/avahi )
 	>=dev-perl/common-sense-2.01
 	"
 # Note: dev-perl/GD necessary because of SC bug#6143
@@ -37,8 +37,8 @@ RDEPEND="
 	dev-perl/File-Which
 	virtual/logger
 	virtual/mysql
-	avahi? ( net-dns/avahi )
 	>=dev-lang/perl-5.8.8
+	>=dev-perl/Audio-Scan-0.59
 	>=dev-perl/GD-2.41
 	>=virtual/perl-IO-Compress-2.015
 	>=dev-perl/YAML-Syck-1.05
@@ -84,6 +84,7 @@ RDEPEND="
 	>=dev-perl/AnyEvent-5.2
 	>=dev-perl/Sub-Name-0.04
 	>=dev-perl/Module-Find-0.08
+	>=dev-perl/Class-Accessor-0.31
 	>=dev-perl/Class-XSAccessor-1.05
 	>=dev-perl/AutoXS-Header-1.02
 	>=dev-perl/Scope-Guard-0.03
@@ -91,85 +92,57 @@ RDEPEND="
 	>=dev-perl/Class-C3-0.21
 	>=dev-perl/Class-C3-Componentised-1.0006
 	>=dev-perl/File-ReadBackwards-1.04
+	~dev-perl/DBIx-Class-0.08120
+	>=dev-perl/JSON-XS-VersionOneAndTwo-0.31
+	>=dev-perl/MRO-Compat-0.11
+	>=dev-perl/PAR-0.994
+	>=dev-perl/enum-1.016
+	>=dev-perl/URI-Find-20100211
+	>=dev-perl/Algorithm-C3-0.08
+	>=dev-perl/Text-Unidecode-0.04
+	>=dev-perl/Net-UPnP-1.4.2
+	>=dev-perl/File-BOM-0.14
+	>=dev-perl/Proc-Background-1.10
+	>=dev-perl/Tie-Cache-LRU-20081023.2116
+	>=dev-perl/Tie-Cache-LRU-Expires-0.54
+	>=dev-perl/Data-Dump-1.15
+	>=dev-perl/Data-Page-2.02
+	>=dev-perl/Data-URIEncode-0.11
+	>=dev-perl/Tie-LLHash-1.003
+	>=dev-perl/Tie-RegexpHash-0.15
+	>=dev-perl/Data-UUID-1.202
 	lame? ( media-sound/lame )
 	alac? ( media-sound/alac_decoder )
 	wavpack? ( media-sound/wavpack )
-	bonjour? ( net-misc/mDNSResponder )
 	flac? (
 		media-libs/flac
-		media-sound/sox
+		media-sound/sox[flac]
 		)
-	ogg? ( media-sound/sox )
+	ogg? ( media-sound/sox[ogg] )
 	aac? ( media-libs/faad2 )
 	"
 
 S="${WORKDIR}/${MY_P_BUILD_NUM}"
 
-# Selected contents of SqueezeCenter's local CPAN collection that we include
-# in the installation. This removes duplication of CPAN modules. (See Gentoo
-# bug #251494).
-CPANKEEP="
-	Class/XSAccessor/Array.pm
-
-	JSON/XS/VersionOneAndTwo.pm
-	Class/Accessor/
-	Class/Accessor.pm
-	MRO/Compat.pm
-	Algorithm/C3.pm
-	Data/
-	DBIx/
-	File/BOM.pm
-	Net/UPnP/
-	Net/UPnP.pm
-	Proc/Background/
-	Proc/Background.pm
-	Text/Unidecode/
-	Text/Unidecode.pm
-	Tie/Cache/LRU/
-	Tie/Cache/LRU.pm
-	Tie/LLHash.pm
-	Tie/RegexpHash.pm
-	UUID/Tiny.pm
-	URI/Find.pm
-	PAR/
-	PAR.pm
-	enum.pm
-	"
-
-VARLIBSBS="/var/lib/squeezeboxserver"
-PREFSDIR="${VARLIBSBS}/prefs"
-PREFS="${PREFSDIR}/squeezeboxserver.prefs"
-LIVE_PREFS="${PREFSDIR}/server.prefs"
+ETCDIR="/etc/squeezeboxserver"
+PREFS="${ETCDIR}/squeezeboxserver.prefs"
+PREFSDIR="${ETCDIR}/prefs"
 DOCDIR="/usr/share/doc/squeezeboxserver-${PV}"
 SHAREDIR="/usr/share/squeezeboxserver"
-LIBDIR="/usr/lib/squeezeboxserver"
+LIBDIR="/usr/$(get_libdir)/squeezeboxserver"
 OLDDBUSER="squeezecenter"
 DBUSER="squeezeboxserver"
+VARLIBSBS="/var/lib/squeezeboxserver"
 PLUGINSDIR="${VARLIBSBS}/Plugins"
-ETCDIR=/etc/squeezecenter
 
 # To support Migration
-OLDETCDIR=/etc/squeezecenter
-OLDPREFSDIR=/var/lib/squeezecenter/prefs
-OLDPLUGINSDIR=/var/lib/squeezecenter/Plugins
-MIGMARKER=.migrated
+OLDETCDIR="/etc/squeezecenter"
+OLDPREFSDIR="/var/lib/squeezecenter/prefs"
+OLDPREFSFILE="${OLDPREFSDIR}/server.prefs"
+OLDPLUGINSDIR="/var/lib/squeezecenter/Plugins"
+MIGMARKER=".migrated"
 
 pkg_setup() {
-	# Sox has optional OGG and FLAC support, so make sure it has that included
-	# if required
-	if use ogg; then
-		if ! built_with_use media-sound/sox ogg; then
-			eerror "media-sound/sox not built with USE=ogg"
-			die "Squeezebox Server needs media-sound/sox to be built with USE=ogg"
-		fi
-	fi
-	if use flac; then
-		if ! built_with_use media-sound/sox flac; then
-			eerror "media-sound/sox not built with USE=flac"
-			die "Squeezebox Server needs media-sound/sox to be built with USE=flac"
-		fi
-	fi
-
 	# Create the user and group if not already present
 	enewgroup squeezeboxserver
 	enewuser squeezeboxserver -1 -1 "/dev/null" squeezeboxserver
@@ -181,43 +154,37 @@ src_unpack() {
 
 	# Apply patches
 	epatch "${FILESDIR}/${P}-build-perl-modules-gentoo.patch"
+	epatch "${FILESDIR}/${P}-uuid-gentoo.patch"
+	epatch "${FILESDIR}/${P}-squeezeslave.patch"
+
+	# Copy in the module builder - can't run it from the files directory in case
+	# Portage is mounted 'noexec'.
+	cp "${FILESDIR}/build-modules.sh" "${S}"	|| die
+	chmod 555 "${S}/build-modules.sh"			|| die
 }
 
-# Build Audio::Scan and EV present because of bug#287264 and bug#287857.
+# Building of EV present because of bug#287857.
 src_compile() {
 	einfo "Building bundled Perl modules (some warnings are normal here)..."
-	"${FILESDIR}/build-modules.sh" "${DISTDIR}" || die "Unable to build Perl modules"
+	"./build-modules.sh" "${DISTDIR}" || die "Unable to build Perl modules"
 }
 
 src_install() {
 
 	# The main Perl executables
 	exeinto /usr/sbin
-	newexe slimserver.pl squeezeboxserver
-	newexe scanner.pl squeezeboxserver-scanner
-	newexe cleanup.pl squeezeboxserver-cleanup
-
-	# Get the Perl package name and version
-	eval `perl '-V:package'`
-	eval `perl '-V:version'`
+	newexe slimserver.pl squeezeboxserver		|| die "Failed to install server executable"
+	newexe scanner.pl squeezeboxserver-scanner	|| die "Failed to install scanner executable"
+	newexe cleanup.pl squeezeboxserver-cleanup	|| die "Failed to install cleanup executable"
 
 	# The custom OS module for Gentoo - provides OS-specific path details
 	cp "${FILESDIR}/gentoo-filepaths.pm" "Slim/Utils/OS/Custom.pm" || die "Unable to install Gentoo custom OS module"
 
 	# The server Perl modules
-	dodir "/usr/lib/${package}/vendor_perl/${version}"
-	cp -r Slim "${D}/usr/lib/${package}/vendor_perl/${version}" || die "Unable to install server Perl modules"
-
-	# Compiled CPAN module go under lib as they are arch-specific
-	dodir "/usr/lib/squeezeboxserver/CPAN"
-	cp -r CPAN/arch "${D}/usr/lib/squeezeboxserver/CPAN" || die "Unable to install compiled CPAN modules"
-
-	# Preseve some of the Squeezebox Server-packaged CPAN modules that Gentoo
-	# doesn't provide ebuilds for.
-	for ITEM in ${CPANKEEP}; do
-		dodir "/usr/share/squeezeboxserver/CPAN/$(dirname ${ITEM})"
-		cp -r "CPAN/${ITEM}" "${D}/usr/share/squeezeboxserver/CPAN/${ITEM}" || die "Unable to preserve CPAN item ${ITEM}"
-	done
+	local installvendorlib
+	eval `perl '-V:installvendorlib'`
+	dodir "${installvendorlib}"
+	cp -r Slim "${D}${installvendorlib}" || die "Unable to install server Perl modules"
 
 	# Various directories of architecture-independent static files
 	dodir "${SHAREDIR}"
@@ -227,14 +194,17 @@ src_install() {
 	cp -r IR "${D}/${SHAREDIR}"			|| die "Unable to install IR"
 	cp -r SQL "${D}/${SHAREDIR}"		|| die "Unable to install SQL"
 
+	# Remove bundled modified AnyEvent - we depend on a newer version now
+	rm -r lib/AnyEvent.pm lib/AnyEvent || die "Unable to remove bundled AnyEvent"
+
 	# Architecture-dependent static files
 	dodir "${LIBDIR}"
-	cp -r lib/* "${D}/${LIBDIR}" || die "Unable to install architecture-dependent files"
+	cp -r lib/* "${D}${LIBDIR}" || die "Unable to install architecture-dependent files"
 
-	# Install compiled Perl modules because of bug#287264 and bug#287857.
-	dodir "/usr/lib/squeezeboxserver/CPAN/arch"
-	cp -r CPAN-arch/* "${D}/usr/lib/squeezeboxserver/CPAN/arch" || die "Unable to install compiled CPAN modules"
-	cp -r CPAN-pm/* "${D}/usr/share/squeezeboxserver/CPAN" || die "Unable to install compiled CPAN modules"
+	# Install compiled Perl modules because of bug#287857.
+	dodir "${LIBDIR}/CPAN/arch"
+	cp -r CPAN-arch/* "${D}${LIBDIR}/CPAN/arch" || die "Unable to install compiled CPAN modules"
+	cp -r CPAN-pm/* "${D}${LIBDIR}/CPAN" || die "Unable to install compiled CPAN modules"
 
 	# Strings and version identification
 	insinto "${SHAREDIR}"
@@ -245,25 +215,24 @@ src_install() {
 	dodoc Changelog*.html
 	dodoc Installation.txt
 	dodoc License*.txt
-	newdoc "${FILESDIR}/Gentoo-plugins-README.txt" Gentoo-plugins-README.txt
+	dodoc "${FILESDIR}/Gentoo-plugins-README.txt"
+	dodoc "${FILESDIR}/Gentoo-detailed-changelog.txt"
 
-	# Configuration files
-	insinto /etc/squeezeboxserver
+	# Configuration files and preferences
+	insinto "${ETCDIR}"
 	doins convert.conf
 	doins types.conf
 	doins modules.conf
+	newins "${FILESDIR}/squeezeboxserver.prefs" squeezeboxserver.prefs
+
+	# Preferences directory
+	dodir "${PREFSDIR}"
+	fowners squeezeboxserver:squeezeboxserver "${PREFSDIR}"
+	fperms 770 "${PREFSDIR}"
 
 	# Install init scripts
 	newconfd "${FILESDIR}/squeezeboxserver.conf.d" squeezeboxserver
 	newinitd "${FILESDIR}/squeezeboxserver.init.d" squeezeboxserver
-
-	# Install preferences
-	insinto "${PREFSDIR}"
-	if [ ! -f "${PREFSDIR}/squeezeboxserver.prefs" ]; then
-		newins "${FILESDIR}/squeezeboxserver.prefs" squeezeboxserver.prefs
-	fi
-	fowners squeezeboxserver:squeezeboxserver "${PREFSDIR}"
-	fperms 770 "${PREFSDIR}"
 
 	# Install the SQL configuration scripts
 	insinto "${SHAREDIR}/SQL/mysql"
@@ -299,12 +268,6 @@ src_install() {
 	# Install logrotate support
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/squeezeboxserver.logrotate.d" squeezeboxserver
-
-	# Install Avahi support (if USE flag is set)
-	if use avahi; then
-		insinto /etc/avahi/services
-		newins "${FILESDIR}/avahi-squeezeboxserver.service" squeezeboxserver.service
-	fi
 }
 
 sc_starting_instr() {
@@ -348,10 +311,10 @@ pkg_postinst() {
 	# Album art requires PNG and JPEG support from GD, so if it's not there
 	# then warn the user.  It's not mandatory as the user may not be using
 	# album art.
-	if ! built_with_use dev-perl/GD jpeg || \
-	   ! built_with_use dev-perl/GD png || \
-	   ! built_with_use media-libs/gd jpeg || \
-	   ! built_with_use media-libs/gd png; then
+	if ! has_version dev-perl/GD[jpeg] || \
+	   ! has_version dev-perl/GD[png] || \
+	   ! has_version media-libs/gd[jpeg] || \
+	   ! has_version media-libs/gd[png]; then
 		ewarn "For correct operation of album art through Squeezebox Server's web"
 		ewarn "interface the GD library and Perl module must be built with PNG"
 		ewarn "and JPEG support.  If necessary you can add the following lines"
@@ -371,15 +334,16 @@ pkg_postinst() {
 	elog "This command will also migrate old SqueezeCenter preferences and"
 	elog "plugins (if present)."
 
-	# Remind user to configure Avahi if necessary
-	if use avahi; then
-		elog ""
-		elog "Avahi support installed.  Remember to edit the folowing file if"
-		elog "you run Squeezebox Server's web interface on a port other than 9000:"
-		elog "\t/etc/avahi/services/squeezeboxserver.service"
-	fi
+	elog ""
+
+	ewarn "Note: If Squeezebox Server dies after the initial configuration"
+	ewarn "      after an upgrade from a previous installation, try removing"
+	ewarn "      /var/lib/squeezeboxserver and /etc/squeezeboxserver and"
+	ewarn "      then reinstalling the package (note that old preferences"
+	ewarn "      and plugins will be lost).  See bug #307119."
 
 	elog ""
+
 	sc_starting_instr
 }
 
@@ -467,17 +431,18 @@ pkg_config() {
 	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" -e "s/__DBPASSWORD__/${DBUSER_PASSWD}/" < "${SHAREDIR}/SQL/mysql/dbcreate-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" || die "Unable to create MySQL database and user"
 
 	# Migrate old preferences, if present.
-	if [ -d "${OLDPREFSDIR}" ]; then
-		if [ -f "${PREFSDIR}/${MIGMARKER}" ]; then
+	if [ -d "${OLDPREFSFILE}" ]; then
+		if [ -f "${ETCDIR}/${MIGMARKER}" ]; then
 			einfo ""
 			einfo "Old preferences are present, but they appear to have been"
 			einfo "migrated before. If you would like to re-migrate the old"
 			einfo "SqueezeCenter preferences remove the following file, and"
 			einfo "then restart the configuration."
-			einfo "\t${PREFSDIR}/${MIGMARKER}"
+			einfo "\t${ETCDIR}/${MIGMARKER}"
 		else
 			einfo "Migrating old SqueezeCenter preferences"
 			cp -r "${OLDPREFSDIR}" "${VARLIBSBS}"
+			mv "${VARLIBSBS}/prefs/server.prefs" "/etc/squeezeboxserver/squeezeboxserver.prefs"
 			chown -R squeezeboxserver:squeezeboxserver "${PREFSDIR}"
 			touch "${PREFSDIR}/${MIGMARKER}"
 		fi
@@ -502,11 +467,9 @@ pkg_config() {
 
 	# Remove the existing MySQL preferences from Squeezebox Server (if any).
 	sc_remove_db_prefs "${PREFS}"
-	[ -f "${LIVE_PREFS}" ] && sc_remove_db_prefs ${LIVE_PREFS}
 
 	# Insert the external MySQL configuration into the preferences.
 	sc_update_prefs "${PREFS}" "${DBUSER}" "${DBUSER_PASSWD}"
-	[ -f "${LIVE_PREFS}" ] && sc_update_prefs "${LIVE_PREFS}" "${DBUSER}" "${DBUSER_PASSWD}"
 
 	# Phew - all done. Give some tips on what to do now.
 	einfo "Database configuration complete."

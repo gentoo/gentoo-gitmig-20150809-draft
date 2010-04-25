@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# $Id: build-modules.sh,v 1.2 2010/04/09 04:17:59 lavajoe Exp $
+# $Id: build-modules.sh,v 1.3 2010/04/25 22:26:28 lavajoe Exp $
 #
 # This script builds all binary Perl modules required by Squeezebox Server.
 # 
