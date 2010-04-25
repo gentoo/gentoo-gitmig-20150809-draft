@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ruby-gtkmozembed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.23 2010/01/25 19:52:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.24 2010/04/25 15:51:29 graaff Exp $
+
+*ruby-gtkmozembed-0.19.4 (25 Apr 2010)
+
+  25 Apr 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-gtkmozembed-0.19.4.ebuild,
+  +files/ruby-gtkmozembed-0.19.4-xulrunner-1.9.2.patch:
+  Version bump to ruby-gnome 0.19.4. Add patch to allow NSPR files to be
+  found.
 
   25 Jan 2010; Hans de Graaff <graaff@gentoo.org>
   -ruby-gtkmozembed-0.16.0.ebuild, -ruby-gtkmozembed-0.19.0.ebuild:
