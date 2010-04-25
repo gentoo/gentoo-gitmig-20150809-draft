@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5502 2010/04/25 00:07:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5503 2010/04/25 04:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1779,7 +1779,6 @@ media-sound/aqualung:lua - Enable support for programmable title formatting with
 media-sound/aqualung:mac - Enable support for decoding Monkey's Audio files
 media-sound/aqualung:podcast - Enable podcast support
 media-sound/aqualung:systray - Enable system tray support
-media-sound/ardour:freesound - Enables direct searching and download of samples from Freesound via the Import dialog
 media-sound/ardour:lv2 - Add support for Ladspa V2
 media-sound/ario:audioscrobbler - Enable song tracking via last.fm
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
