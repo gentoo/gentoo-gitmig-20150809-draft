@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.44 2010/04/18 19:51:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.45 2010/04/25 14:57:01 chithanh Exp $
+
+  25 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xcb-proto-1.6.ebuild:
+  Improve Python-related code, patch by arfrever, bug 317035
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> xcb-proto-1.6.ebuild:
   arm stable, bug #308521
