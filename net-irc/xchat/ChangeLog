@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.278 2010/04/06 22:06:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.279 2010/04/25 17:46:16 armin76 Exp $
+
+  25 Apr 2010; Raúl Porcel <armin76@gentoo.org> xchat-2.8.6-r3.ebuild:
+  Add ~arm
 
 *xchat-2.8.6-r3 (06 Apr 2010)
 
