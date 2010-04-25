@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.65 2010/04/25 10:00:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.66 2010/04/25 11:33:24 jlec Exp $
 
   25 Apr 2010; Justin Lecher <jlec@gentoo.org> vtk-5.4.2-r1.ebuild:
   Python ABI fixes, #316229
@@ -13,7 +13,7 @@
   +files/vtk-5.4.2-libpng14.patch:
   Fix building with libpng14.
 
-  11 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> vtk-5.4.2.ebuild,
+  11 Feb 2010; Justin Lecher <jlec@gentoo.org> vtk-5.4.2.ebuild,
   vtk-5.4.2-r1.ebuild:
   Removed qt3 support as it is no longer in the tree
 

@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/clapack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.4 2010/04/25 09:40:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.5 2010/04/25 11:32:11 jlec Exp $
 
 *clapack-3.2.1-r2 (25 Apr 2010)
 
@@ -14,13 +14,13 @@
 
 *clapack-3.2.1-r1 (18 Mar 2010)
 
-  18 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  18 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +files/3.2.1-solib.patch, clapack-3.2.1.ebuild, +clapack-3.2.1-r1.ebuild:
   We are linking shared libs now
 
 *clapack-3.2.1 (04 Mar 2010)
 
-  04 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  04 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +clapack-3.2.1.ebuild, +metadata.xml:
   New ebuild, imported from sci on request 206934
 
