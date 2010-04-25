@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.373 2010/04/09 10:01:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.374 2010/04/25 00:39:07 tcunha Exp $
+
+  25 Apr 2010; Tiago Cunha <tcunha@gentoo.org> emacs-21.4-r20.ebuild,
+  emacs-22.3-r4.ebuild, emacs-23.1-r3.ebuild:
+  stable sparc, bug 313861
 
   09 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   emacs-21.4-r20.ebuild, emacs-22.3-r4.ebuild, emacs-23.1-r3.ebuild:
