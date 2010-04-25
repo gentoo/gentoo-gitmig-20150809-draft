@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.5 2010/04/12 20:18:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.6 2010/04/25 13:26:26 pacho Exp $
 
 EAPI="2"
 
@@ -21,6 +21,7 @@ S=${WORKDIR}
 # FIXME: bump gstreamer to 0.10.26
 # XXX: lower gdm to 2.20 since we still keep 2.28 masked
 # Lower epiphany to 2.26 since 2.28 is not ready to go stable
+# Lower ekiga since 3.x cannot be stabilized yet as talked with voip herd
 RDEPEND="
 	>=dev-libs/glib-2.22.4
 	>=x11-libs/gtk+-2.18.7
@@ -133,7 +134,7 @@ RDEPEND="
 	>=app-admin/pessulus-2.28.0
 	ldap? (
 		>=app-admin/sabayon-2.28.1
-		>=net-voip/ekiga-3.2.6 )
+		>=net-voip/ekiga-2.0.12 )
 
 	>=gnome-extra/gnome-screensaver-2.28.3
 	>=x11-misc/alacarte-0.12.4
