@@ -1,19 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc4.ebuild,v 1.6 2010/01/17 21:37:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-2.0.1.ebuild,v 1.1 2010/04/25 13:31:06 lavajoe Exp $
 
 inherit eutils multilib games versionator
 
-SECONDLIFE_REVISION=123523
-SECONDLIFE_MAJOR_VER=$(get_version_component_range 1-2)
-SECONDLIFE_MINOR_VER=$(get_version_component_range 3)
-SECONDLIFE_MINOR_VER=${SECONDLIFE_MINOR_VER/rc/}
-MY_P="SecondLife-i686-${SECONDLIFE_MAJOR_VER}.${SECONDLIFE_MINOR_VER}.${SECONDLIFE_REVISION}"
+SECONDLIFE_REVISION=203797
+MY_P="SecondLife-i686-${PV}.${SECONDLIFE_REVISION}"
 
 DESCRIPTION="The Second Life (an online, 3D virtual world) viewer"
 HOMEPAGE="http://secondlife.com/"
-SRC_URI="http://automated-builds-secondlife-com.s3.amazonaws.com/viewer-rc-frozen/${SECONDLIFE_REVISION}/${MY_P}.tar.bz2"
-RESTRICT="mirror strip"
+SRC_URI="http://download.cloud.secondlife.com/Viewer-2/${MY_P}.tar.bz2"
+RESTRICT="strip"
 
 LICENSE="GPL-2-with-Linden-Lab-FLOSS-exception"
 SLOT="0"
@@ -69,14 +66,13 @@ QA_TEXTRELS="${SECONDLIFE_HOME:1}/bin/libllkdu.so
 	${SECONDLIFE_HOME:1}/lib/libkdu.so
 	${SECONDLIFE_HOME:1}/lib/libfmod-3.75.so
 	${SECONDLIFE_HOME:1}/lib/libvivoxsdk.so
-	${SECONDLIFE_HOME:1}/app_settings/mozilla-runtime-linux-i686/libxul.so"
+	${SECONDLIFE_HOME:1}/lib/libvivoxplatform.so
+	${SECONDLIFE_HOME:1}/lib/libllcommon.so
+	${SECONDLIFE_HOME:1}/lib/libortp.so
+	${SECONDLIFE_HOME:1}/bin/llplugin/libmedia_plugin_gstreamer.so
+	${SECONDLIFE_HOME:1}/bin/llplugin/libmedia_plugin_webkit.so"
 QA_EXECSTACK="${SECONDLIFE_HOME:1}/bin/do-not-directly-run-secondlife-bin
-	${SECONDLIFE_HOME:1}/bin/libllkdu.so
-	${SECONDLIFE_HOME:1}/lib/libSDL-1.2.so.0
-	${SECONDLIFE_HOME:1}/lib/libcrypto.so.0.9.7
-	${SECONDLIFE_HOME:1}/lib/libkdu.so
-	${SECONDLIFE_HOME:1}/lib/libfmod-3.75.so
-	${SECONDLIFE_HOME:1}/app_settings/mozilla-runtime-linux-i686/libxul.so"
+	${SECONDLIFE_HOME:1}/bin/libllkdu.so"
 
 pkg_setup() {
 	games_pkg_setup
@@ -91,13 +87,17 @@ src_unpack() {
 
 	# On 64-bit systems, we need to uncomment LL_BAD_OPENAL_DRIVER=x
 	# and comment out the amd64 streaming disable to fix streaming audio.
-	use amd64 && epatch "${FILESDIR}/${P}-amd64-audio-streaming-fix.patch"
+	#use amd64 && epatch "${FILESDIR}/${P}-amd64-audio-streaming-fix.patch"
 }
 
 src_install() {
 	exeinto "${SECONDLIFE_HOME}"
-	doexe launch_url.sh secondlife || die
-	rm -rf launch_url.sh secondlife
+	doexe secondlife || die
+	rm -rf secondlife
+
+	exeinto "${SECONDLIFE_HOME}"/bin/llplugin
+	doexe bin/llplugin/* || die
+	rm -rf bin/llplugin
 
 	exeinto "${SECONDLIFE_HOME}"/bin
 	doexe bin/* || die
