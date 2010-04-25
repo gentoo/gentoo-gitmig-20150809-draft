@@ -1,35 +1,35 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.5 2010/03/27 09:48:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.6 2010/04/25 11:14:05 jlec Exp $
 
 *lbzip2-0.23-r1 (27 Mar 2010)
 
-  27 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  27 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +files/0.23-s_isreg.patch, +lbzip2-0.23-r1.ebuild:
   Add support for symlink decompression #309683
 
 *lbzip2-0.23 (04 Mar 2010)
 
-  04 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  04 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +lbzip2-0.23.ebuild:
   Version Bump
 
 *lbzip2-0.22 (19 Feb 2010)
 
-  19 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  19 Feb 2010; Justin Lecher <jlec@gentoo.org>
   -files/0.21-Makefile.patch, -lbzip2-0.21.ebuild,
   +files/0.22-Makefile.patch, +lbzip2-0.22.ebuild:
   Version Bump
 
 *lbzip2-0.21 (18 Feb 2010)
 
-  18 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  18 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/0.21-Makefile.patch, +lbzip2-0.21.ebuild:
   Version Bump
 
 *lbzip2-0.20 (09 Feb 2010)
 
-  09 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  09 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/0.20-Makefile.patch, +lbzip2-0.20.ebuild, +metadata.xml:
   Added on request of bug 264002
   thanks Daniel Lin for initial ebuild

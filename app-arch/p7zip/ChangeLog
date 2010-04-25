@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.116 2010/04/13 18:04:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.117 2010/04/25 11:15:41 jlec Exp $
 
   13 Apr 2010; Jeremy Olexa <darkside@gentoo.org> p7zip-9.04.ebuild:
   This sed statement for darwin cannot die because USE=-rar removes one of
@@ -10,19 +10,19 @@
   Fix issues on Darwin: use correct makefile, patch makefile for rar, bug
   #305723
 
-  16 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> p7zip-9.04.ebuild:
+  16 Feb 2010; Justin Lecher <jlec@gentoo.org> p7zip-9.04.ebuild:
   Fix for correct symlinking, 305345
 
 *p7zip-9.04 (15 Feb 2010)
 
-  15 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  15 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/9.04-kde4.patch, +p7zip-9.04.ebuild, +files/9.04-makefile.patch:
   Version Bump per 300838
 
 *p7zip-4.58-r1 (15 Feb 2010)
 *p7zip-4.65-r1 (15 Feb 2010)
 
-  15 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  15 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/4.65-kde4.patch, +p7zip-4.58-r1.ebuild, +p7zip-4.65-r1.ebuild,
   metadata.xml:
   added myself as maintainer, Respect multilib enviroments per 282228,
