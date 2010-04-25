@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4135 2010/04/25 11:23:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4136 2010/04/25 18:25:24 halcy0n Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Apr 2010; Mark Loeser <halcy0n@gentoo.org> package.mask:
+  Block all revisions of tar-1.23 for now as well
 
   25 Apr 2010; Peter Volkov <pva@gentoo.org> package.mask:
   Masking beta version of autogen, bug 316583#c12.
