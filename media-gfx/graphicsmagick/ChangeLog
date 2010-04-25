@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.65 2010/04/14 21:23:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.66 2010/04/25 11:24:39 jlec Exp $
 
   14 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org>
   graphicsmagick-1.3.12.ebuild, metadata.xml:
@@ -112,7 +112,7 @@
   graphicsmagick-1.3.5.ebuild:
   Fixed EAPI definition.
 
-  17 Apr 2009; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  17 Apr 2009; Justin Lecher <jlec@gentoo.org>
   graphicsmagick-1.3.5.ebuild:
   QA quotes around EAPI version
 
