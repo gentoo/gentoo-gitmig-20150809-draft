@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r1.ebuild,v 1.2 2010/04/25 10:52:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r1.ebuild,v 1.3 2010/04/25 11:00:37 jlec Exp $
 
 EAPI="3"
 
@@ -75,7 +75,7 @@ src_compile() {
 	pushd $(uname -s)
 	emake viewmol_ tm_ bio_ readgamess_ readgauss_ readmopac_ readpdb_ || die
 	popd
-	"${ERPEFIX}"/bin/bash makeTranslations || die
+	"${EPREFIX}"/bin/bash makeTranslations || die
 }
 
 src_install() {
