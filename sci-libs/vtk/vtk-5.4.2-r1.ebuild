@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.6 2010/03/26 12:40:16 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.7 2010/04/25 10:00:50 jlec Exp $
 
 EAPI="2"
-inherit eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt4 cmake-utils
+
+PYTHON_DEPEND="python? 2"
+inherit cmake-utils eutils flag-o-matic java-pkg-opt-2 python qt4 versionator toolchain-funcs
 
 # Short package version
 SPV="$(get_version_component_range 1-2)"
@@ -17,7 +19,7 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="boost cg doc examples mpi patented python tcl tk threads qt4"
+IUSE="boost cg doc examples mpi patented python qt4 tcl tk threads"
 RDEPEND="mpi? ( || (
 					sys-cluster/openmpi
 					sys-cluster/lam-mpi
@@ -58,9 +60,8 @@ pkg_setup() {
 
 	java-pkg-opt-2_pkg_setup
 
-	if use qt4; then
-		qt4_pkg_setup
-	fi
+	use python && python_set_active_version 2
+	use qt4 && qt4_pkg_setup
 }
 
 src_prepare() {
@@ -129,7 +130,7 @@ src_configure() {
 	fi
 
 	if use python; then
-		python_version
+		PYVER="$(python_get_version)"
 		mycmakeargs+=(
 			-DVTK_WRAP_PYTHON=ON
 			-DPYTHON_INCLUDE_PATH=/usr/include/python${PYVER}
