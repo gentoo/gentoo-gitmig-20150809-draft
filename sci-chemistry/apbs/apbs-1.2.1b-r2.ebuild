@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r2.ebuild,v 1.3 2010/04/25 09:24:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r2.ebuild,v 1.4 2010/04/25 17:51:31 arfrever Exp $
 
 EAPI="3"
 
@@ -129,9 +129,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${EPREFIX}/usr/$(python_get_sitedir)/${PN}
+	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup ${EPREFIX}/usr/$(python_get_sitedir)/${PN}
+	python_mod_cleanup ${PN}
 }
