@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-1.0.0-r1.ebuild,v 1.2 2010/04/25 10:47:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-1.0.0-r1.ebuild,v 1.3 2010/04/25 17:37:53 arfrever Exp $
 
 EAPI="3"
-
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils multilib

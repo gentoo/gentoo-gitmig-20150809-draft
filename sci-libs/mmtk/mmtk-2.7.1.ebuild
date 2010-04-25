@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.1.ebuild,v 1.1 2010/04/25 10:29:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.1.ebuild,v 1.2 2010/04/25 17:40:58 arfrever Exp $
 
 EAPI="2"
 
-PYTHON_MODNAME=${MY_PN}
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}"/${MY_P}
+
+PYTHON_MODNAME="${MY_PN}"
 
 src_prepare() {
 	sed -i -e "/ext_package/d" \
