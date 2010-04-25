@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.35 2010/04/22 12:16:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.36 2010/04/25 14:13:15 the_paya Exp $
+
+  25 Apr 2010; Javier Villavicencio <the_paya@gentoo.org> py-1.2.1.ebuild:
+  Keyworded ~x86-fbsd.
 
   22 Apr 2010; Christian Faulhammer <fauli@gentoo.org> py-1.2.1.ebuild:
   stable x86, bug 311353
