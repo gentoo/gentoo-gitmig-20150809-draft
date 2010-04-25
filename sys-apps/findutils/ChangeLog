@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.188 2010/04/16 13:51:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.189 2010/04/25 16:30:05 phajdan.jr Exp $
+
+  25 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  findutils-4.4.2.ebuild:
+  x86 stable wrt bug #314035
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> findutils-4.4.2.ebuild:
   stable ppc, bug 314035
