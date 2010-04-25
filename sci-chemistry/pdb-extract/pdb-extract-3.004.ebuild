@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-3.004.ebuild,v 1.3 2010/04/05 19:47:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-3.004.ebuild,v 1.4 2010/04/25 09:52:44 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib prefix
 
 MY_P="${PN}-v${PV}-prod-src"
 
