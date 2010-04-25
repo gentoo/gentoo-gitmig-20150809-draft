@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.81 2010/04/18 17:40:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.82 2010/04/25 14:19:08 the_paya Exp $
+
+  25 Apr 2010; Javier Villavicencio <the_paya@gentoo.org> lxml-2.2.6.ebuild:
+  Keyworded ~x86-fbsd.
 
   18 Apr 2010; <nixnut@gentoo.org> lxml-2.2.6.ebuild:
   ppc stable #313145

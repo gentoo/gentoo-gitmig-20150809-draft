@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.18 2010/04/24 16:29:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.19 2010/04/25 14:19:58 the_paya Exp $
+
+  25 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
+  werkzeug-0.6.2.ebuild:
+  Keyworded ~x86-fbsd.
 
 *werkzeug-0.6.2 (24 Apr 2010)
 
