@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-1.2.ebuild,v 1.10 2009/07/18 18:08:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-1.2.ebuild,v 1.11 2010/04/25 14:38:15 the_paya Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://jinja.pocoo.org/1/"
 SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="test"
 
 # dev-python/setuptools is used at run-time.
