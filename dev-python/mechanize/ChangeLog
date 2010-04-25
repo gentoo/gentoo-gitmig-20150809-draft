@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.19 2010/04/24 10:33:34 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.20 2010/04/25 09:03:30 djc Exp $
+
+  25 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> mechanize-0.2.0.ebuild:
+  Bug 317047: fix docs. Patch by Olivier Huber <oli.huber@gmail.com>.
 
 *mechanize-0.2.0 (24 Apr 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.2.0.ebuild,v 1.1 2010/04/24 10:33:34 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.2.0.ebuild,v 1.2 2010/04/25 09:03:30 djc Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,7 +20,7 @@ DEPEND=""
 RDEPEND=""
 RESTRICT_PYTHON_ABIS="3.*"
 
-DOCS="0.1-changes.txt"
+DOCS="docs/*.txt"
 
 src_prepare() {
 	# Use distutils instead of setuptools.
@@ -41,9 +41,8 @@ src_test() {
 }
 
 src_install() {
-	# Remove some files to prevent distutils_src_install from installing them.
-	dohtml *.html
-	rm -f README.html*
-
+	# Fix some paths.
+	sed -i -e 's:../styles/:styles/:g' docs/html/*
+	dohtml -r docs/html/ docs/styles
 	distutils_src_install
 }
