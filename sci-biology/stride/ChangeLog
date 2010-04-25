@@ -1,8 +1,8 @@
 # ChangeLog for sci-biology/stride
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.9 2010/03/07 09:10:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.10 2010/04/25 11:25:18 jlec Exp $
 
-  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  07 Mar 2010; Justin Lecher <jlec@gentoo.org>
   stride-20011129-r1.ebuild:
   Keyworded for prefix-linux, tested by me
 
@@ -15,7 +15,7 @@
   06 Nov 2009; Markus Dittrich <markusle@gentoo.org>
   +stride-20011129-r1.ebuild, +files/stride-LDFLAGS.patch:
   Added patch to respect LDFLAGS (bug #290754). Thanks much to
-  Justin Lecher (jlec) <jlec@j-schmitz.net> for providing it.
+  Justin Lecher <jlec@gentoo.org> for providing it.
 
   20 Sep 2007; Santiago M. Mola <coldwind@gentoo.org>
   stride-20011129.ebuild:
