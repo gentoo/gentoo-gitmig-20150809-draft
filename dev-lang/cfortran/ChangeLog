@@ -1,8 +1,8 @@
 # ChangeLog for dev-lang/cfortran
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.22 2010/02/15 08:45:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.23 2010/04/25 11:22:35 jlec Exp $
 
-  15 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  15 Feb 2010; Justin Lecher <jlec@gentoo.org>
   cfortran-4.4-r2.ebuild:
   Keyworded for ~amd64-linux ~x86-linux per 305123
 
