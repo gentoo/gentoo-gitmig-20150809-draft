@@ -1,10 +1,10 @@
 # ChangeLog for sci-chemistry/xdsi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/ChangeLog,v 1.1 2010/02/17 11:34:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/ChangeLog,v 1.2 2010/04/25 11:31:42 jlec Exp $
 
 *xdsi-0.91 (17 Feb 2010)
 
-  17 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  17 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/0.91-gentoo.patch, +xdsi-0.91.ebuild, +metadata.xml:
   Initial addition
 

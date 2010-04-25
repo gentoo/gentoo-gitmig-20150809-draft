@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.26 2010/04/23 06:03:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.27 2010/04/25 11:29:20 jlec Exp $
 
 *ccpn-2.1.3.1_p100422 (22 Apr 2010)
 
@@ -35,85 +35,85 @@
 
 *ccpn-2.1.3.1_p100327 (27 Mar 2010)
 
-  27 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  27 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100327.ebuild:
   Todays Python patches
 
 *ccpn-2.1.3.1_p100326 (26 Mar 2010)
 
-  26 Mar 2010; <justin@gentoo.org> +ccpn-2.1.3.1_p100326.ebuild:
+  26 Mar 2010; <jlec@gentoo.org> +ccpn-2.1.3.1_p100326.ebuild:
   Todays Python patches added
 
 *ccpn-2.1.3.1_p100318-r1 (18 Mar 2010)
 
-  18 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  18 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100318-r1.ebuild:
   Important fix from upstream
 
 *ccpn-2.1.3.1_p100318 (18 Mar 2010)
 
-  18 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  18 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100318.ebuild:
   Todays Python patches
 
 *ccpn-2.1.3.1_p100313 (13 Mar 2010)
 
-  13 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  13 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100313.ebuild:
   Todays python patches
 
 *ccpn-2.1.3.1_p100312 (12 Mar 2010)
 
-  12 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  12 Mar 2010; Justin Lecher <jlec@gentoo.org>
   -ccpn-2.1.3.1_p100226-r1.ebuild, -ccpn-2.1.3.1_p100227.ebuild,
   -ccpn-2.1.3.1_p100303.ebuild, +ccpn-2.1.3.1_p100312.ebuild:
   Python changes added, cleaned old versions
 
 *ccpn-2.1.3.1_p100311 (11 Mar 2010)
 
-  11 Mar 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  11 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100311.ebuild:
   Python changes added
 
 *ccpn-2.1.3.1_p100308 (08 Mar 2010)
 
-  08 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  08 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100308.ebuild:
   Todays python patches
 
 *ccpn-2.1.3.1_p100303 (03 Mar 2010)
 
-  03 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  03 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100303.ebuild:
   Added todays python patches
 
 *ccpn-2.1.3.1_p100227 (27 Feb 2010)
 
-  27 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  27 Feb 2010; Justin Lecher <jlec@gentoo.org>
   -ccpn-2.1.3.1_p100225.ebuild, +ccpn-2.1.3.1_p100227.ebuild:
   Todays Python updates
 
 *ccpn-2.1.3.1_p100226-r1 (26 Feb 2010)
 
-  26 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  26 Feb 2010; Justin Lecher <jlec@gentoo.org>
   -ccpn-2.1.3.1_p100226.ebuild, +ccpn-2.1.3.1_p100226-r1.ebuild:
   Upstream corrected typo in python code
 
 *ccpn-2.1.3.1_p100226 (26 Feb 2010)
 
-  26 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  26 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100226.ebuild:
   Today's python patches added
 
 *ccpn-2.1.3.1_p100225 (25 Feb 2010)
 
-  25 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  25 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.3.1_p100225.ebuild:
   Today's python patches added
 
 *ccpn-2.1.3.1 (18 Feb 2010)
 
-  18 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  18 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/2.1.3_1-dynamics.patch, -ccpn-2.1.2.1_p100204.ebuild,
   +ccpn-2.1.3.1.ebuild, +files/2.1.3_1-parallel.patch,
   -ccpn-2.1.2.1_p100213.ebuild:
@@ -121,35 +121,35 @@
 
 *ccpn-2.1.3 (17 Feb 2010)
 
-  17 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  17 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/2.1.3-dynamics.patch, +ccpn-2.1.3.ebuild,
   +files/2.1.3-parallel.patch:
   Version bump, keyworded for amd64-linux and x86-linux
 
 *ccpn-2.1.2.1_p100216 (16 Feb 2010)
 
-  16 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  16 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.2.1_p100216.ebuild:
   Added latest python patches
 
-  13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  13 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/2.1.2_1-parallel.patch, ccpn-2.1.2.1_p100204.ebuild,
   ccpn-2.1.2.1_p100213.ebuild:
   Fixed parallel build problems, bug 304959
 
 *ccpn-2.1.2.1_p100213 (13 Feb 2010)
 
-  13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  13 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +ccpn-2.1.2.1_p100213.ebuild:
   Added todays python patches
 
-  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  06 Feb 2010; Justin Lecher <jlec@gentoo.org>
   ccpn-2.1.2.1_p100204.ebuild:
   RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 *ccpn-2.1.2.1_p100204 (06 Feb 2010)
 
-  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +files/analysis,
+  06 Feb 2010; Justin Lecher <jlec@gentoo.org> +files/analysis,
   +files/dangle, +files/dataShifter, +files/eci, +files/formatConverter,
   +files/pipe2azara, +ccpn-2.1.2.1_p100204.ebuild, +metadata.xml:
   Initial commit

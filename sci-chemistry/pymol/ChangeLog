@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.60 2010/03/23 13:54:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.61 2010/04/25 11:30:21 jlec Exp $
 
   23 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   pymol-1.2.3-r1.ebuild:
@@ -12,32 +12,32 @@
 
 *pymol-1.2.3-r1 (22 Feb 2010)
 
-  22 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  22 Feb 2010; Justin Lecher <jlec@gentoo.org>
   -pymol-1.2.3.ebuild, +pymol-1.2.3-r1.ebuild:
   Fix the actual revision of version 1.2.3
 
 *pymol-1.2.3 (20 Feb 2010)
 
-  20 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +pymol-1.2.3.ebuild:
+  20 Feb 2010; Justin Lecher <jlec@gentoo.org> +pymol-1.2.3.ebuild:
   Version Bump
 
 *pymol-1.2.2-r4 (19 Feb 2010)
 
-  19 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  19 Feb 2010; Justin Lecher <jlec@gentoo.org>
   -pymol-1.2.2-r1.ebuild, -pymol-1.2.2-r3.ebuild, +pymol-1.2.2-r4.ebuild:
   Cleaned old revisions, fixed usage of distutils.eclass at EAPI=3, multiple
   python version support
 
 *pymol-1.2.2-r3 (18 Feb 2010)
 
-  18 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  18 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/1.2.2-prefix.patch, +pymol-1.2.2-r3.ebuild:
   Fixed usage of pathon eclass, EAPI=3 and PREFIX ready fixes, keyworded for
   amd64-linux & x86-linux
 
 *pymol-1.2.2-r2 (10 Feb 2010)
 
-  10 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  10 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +files/1.2.2-data-path.patch, +pymol-1.2.2-r2.ebuild:
   Fixing PYMOL_DATA again per 304259
 
@@ -48,24 +48,24 @@
 
 *pymol-1.2.2-r1 (01 Feb 2010)
 
-  01 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  01 Feb 2010; Justin Lecher <jlec@gentoo.org>
   +pymol-1.2.2-r1.ebuild, +files/pymol-1.2.2-vmd.patch, metadata.xml:
   vmd and numpy added to IUSE
   apbs plugin support now depends on sci-chemistry/pymol-apbs-plugin
 
-  01 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> pymol-1.2.1.ebuild,
+  01 Feb 2010; Justin Lecher <jlec@gentoo.org> pymol-1.2.1.ebuild,
   pymol-1.2.2.ebuild:
   We don't install the splash window until we have a gentoo community
   contribution, fixes bug 299020
 
-  31 Jan 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  31 Jan 2010; Justin Lecher <jlec@gentoo.org>
   -files/1.1/pymol-1.1-r2-data-path.patch,
   -files/1.1/pymol-1.1-r2-shaders.patch, -files/1.1/apbs-070604.patch.bz2,
   -files/1.1/nosplash-gentoo.patch:
   Cleanup of forgotten files, fixes bug 274865
   Added myself as maintainer
 
-  31 Jan 2010; Justin Lecher (jlec) <jlec@j-schmitz.net> pymol-1.2.1.ebuild,
+  31 Jan 2010; Justin Lecher <jlec@gentoo.org> pymol-1.2.1.ebuild,
   pymol-1.2.2.ebuild, metadata.xml:
   Needs media-libs/freetype:2, fixes bug 299019
 
