@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.51 2010/04/01 21:39:23 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.52 2010/04/25 16:33:48 aballier Exp $
+
+  25 Apr 2010; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-intel-2.10.0-r1.ebuild, xf86-video-intel-2.11.0.ebuild:
+  Keyword -x86-fbsd versions that require kms and will not work on FreeBSD,
+  bug #314827
 
 *xf86-video-intel-2.11.0 (01 Apr 2010)
 
