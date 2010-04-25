@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.93.ebuild,v 1.2 2010/04/25 08:43:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.93.ebuild,v 1.3 2010/04/25 11:11:16 jlec Exp $
 
 EAPI="2"
 
@@ -29,5 +29,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/0.90-without-icon-cache.patch
+	epatch "${FILESDIR}"/${PV}-session.patch
 	distutils_src_prepare
 }

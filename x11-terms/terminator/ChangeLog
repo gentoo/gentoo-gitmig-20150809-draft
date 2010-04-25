@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.6 2010/04/25 08:43:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.7 2010/04/25 11:11:16 jlec Exp $
+
+  25 Apr 2010; Justin Lecher <jlec@gentoo.org> +files/0.93-session.patch,
+  terminator-0.93.ebuild:
+  Adding patch for broken gnome-session support until fixed by upstream,
+  #316155
 
   25 Apr 2010; Justin Lecher <jlec@gentoo.org> -terminator-0.90.ebuild,
   -terminator-0.91.ebuild, -terminator-0.92.ebuild, terminator-0.93.ebuild:
