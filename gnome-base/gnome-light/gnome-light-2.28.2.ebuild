@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.28.1.ebuild,v 1.2 2010/03/18 17:25:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.28.2.ebuild,v 1.1 2010/04/25 14:09:34 pacho Exp $
 
 EAPI="2"
 
@@ -28,20 +28,17 @@ KEYWORDS="~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 RDEPEND="!gnome-base/gnome
 
-	>=dev-libs/glib-2.22.3
-	>=x11-libs/gtk+-2.18.5
+	>=dev-libs/glib-2.22.4
+	>=x11-libs/gtk+-2.18.7
 	>=dev-libs/atk-1.28.0
-	>=x11-libs/pango-1.26.1
+	>=x11-libs/pango-1.26.2
 
-	>=gnome-base/orbit-2.14.16
+	>=gnome-base/orbit-2.14.17
 
 	>=x11-libs/libwnck-2.28.0
-	>=x11-wm/metacity-2.28.0
+	>=x11-wm/metacity-2.28.1
 
-	>=gnome-base/gnome-vfs-2.24.2
 	>=gnome-base/gconf-2.28.0
-
-	>=gnome-base/gnome-mime-data-2.18.0
 
 	>=gnome-base/libbonobo-2.24.2
 	>=gnome-base/libbonoboui-2.24.2
@@ -55,14 +52,14 @@ RDEPEND="!gnome-base/gnome
 
 	>=gnome-base/nautilus-2.28.4
 
-	>=gnome-base/gnome-desktop-2.28.1
+	>=gnome-base/gnome-desktop-2.28.2
 	>=gnome-base/gnome-session-2.28.0
 	>=gnome-base/gnome-panel-2.28.0
 
 	>=x11-themes/gnome-icon-theme-2.28.0
 	>=x11-themes/gnome-themes-2.28.1
 
-	>=x11-terms/gnome-terminal-2.28.1
+	>=x11-terms/gnome-terminal-2.28.2
 
 	>=gnome-base/librsvg-2.26.0
 
