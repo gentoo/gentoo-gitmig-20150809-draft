@@ -1,0 +1,10 @@
+# ChangeLog for www-misc/surl
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/surl/ChangeLog,v 1.1 2010/04/25 13:40:58 wired Exp $
+
+*surl-0.7.0 (25 Apr 2010)
+
+  25 Apr 2010; Alex Alexander <wired@gentoo.org> +surl-0.7.0.ebuild,
+  +metadata.xml:
+  new ebuild
+
