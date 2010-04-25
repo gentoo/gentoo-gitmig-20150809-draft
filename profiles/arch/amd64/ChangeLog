@@ -1,6 +1,6 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.83 2010/04/13 16:43:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.84 2010/04/25 11:24:53 jlec Exp $
 
   13 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
@@ -19,12 +19,12 @@
   07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Unmask x86_* flags sse3, sse4, sse4a, and sse5.
 
-  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  07 Mar 2010; Justin Lecher <jlec@gentoo.org>
   no-multilib/package.mask:
   Masked sci-chemistry/cara-bin for no-multilib -> binary package which
   needs emul*
 
-  24 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  24 Feb 2010; Justin Lecher <jlec@gentoo.org>
   no-multilib/package.mask:
   Masked sci-chemistry/mars for non multilib as it only provides 32bit
   binaries
@@ -42,7 +42,7 @@
   14 Feb 2010; Raúl Porcel <armin76@gentoo.org> no-multilib/package.mask:
   p.mask openocd
 
-  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  06 Feb 2010; Justin Lecher <jlec@gentoo.org>
   no-multilib/package.use.mask:
   USE="icc" masked from sci-biology/fasta as icc relies on multilib
 

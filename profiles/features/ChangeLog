@@ -1,6 +1,6 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.19 2010/03/16 09:26:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.20 2010/04/25 11:26:34 jlec Exp $
 
   16 Mar 2010; Vlastimil Babka <caster@gentoo.org>
   64bit-native/package.mask:
@@ -10,12 +10,12 @@
   64bit-native/package.mask:
   Unmask snes9x-1.52.
 
-  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  07 Mar 2010; Justin Lecher <jlec@gentoo.org>
   64bit-native/package.mask:
   Masked sci-chemistry/cara-bin for no-multilib -> binary package which
   needs emul*
 
-  24 Feb 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  24 Feb 2010; Justin Lecher <jlec@gentoo.org>
   64bit-native/package.mask:
   Masked sci-chemistry/mars for non multilib as it only provides 32bit
   binaries
@@ -24,7 +24,7 @@
   64bit-native/package.mask:
   Sync with arch/amd64/no-multilib/package.mask.
 
-  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  06 Feb 2010; Justin Lecher <jlec@gentoo.org>
   64bit-native/package.use.mask:
   USE=icc masked for sci-biology/fasta in 64bit-native
 
