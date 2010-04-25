@@ -1,8 +1,11 @@
 # ChangeLog for sci-chemistry/pdb-extract
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.14 2010/04/25 09:52:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.15 2010/04/25 09:53:47 jlec Exp $
 
-  25 Apr 2010; Justin Lecher <jlec@gentoo.org> pdb-extract-3.004.ebuild:
+*pdb-extract-3.004-r1 (25 Apr 2010)
+
+  25 Apr 2010; Justin Lecher <jlec@gentoo.org> -pdb-extract-3.004.ebuild,
+  +pdb-extract-3.004-r1.ebuild:
   Add missing prefix.eclass
 
   05 Apr 2010; Justin Lecher <jlec@gentoo.org> pdb-extract-3.004.ebuild,
