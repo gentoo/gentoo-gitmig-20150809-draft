@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.87.ebuild,v 1.1 2010/03/21 18:04:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.87.ebuild,v 1.2 2010/04/25 18:02:09 aballier Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="USB enumeration utilities"
 HOMEPAGE="http://linux-usb.sourceforge.net/"
@@ -21,8 +21,9 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.82-fbsd.patch #275052
-	sed -i '/^pkgconfigdir/s:datadir:datarootdir:' Makefile.in #287206
+	epatch "${FILESDIR}"/${PN}-0.87-fbsd.patch #275052 #316671
+	sed -i '/^pkgconfigdir/s:datadir:datarootdir:' Makefile.am #287206
+	eautoreconf
 }
 
 src_configure() {
