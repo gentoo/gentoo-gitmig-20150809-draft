@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.93.ebuild,v 1.1 2010/04/16 06:51:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.93.ebuild,v 1.2 2010/04/25 08:43:17 jlec Exp $
 
 EAPI="2"
 
@@ -22,6 +22,10 @@ RDEPEND="
 	gnome? ( dev-python/gnome-python )
 	>=x11-libs/vte-0.16[python]"
 DEPEND="dev-util/intltool"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/0.90-without-icon-cache.patch

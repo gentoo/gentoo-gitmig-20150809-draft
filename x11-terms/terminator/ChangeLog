@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.5 2010/04/16 06:51:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.6 2010/04/25 08:43:17 jlec Exp $
+
+  25 Apr 2010; Justin Lecher <jlec@gentoo.org> -terminator-0.90.ebuild,
+  -terminator-0.91.ebuild, -terminator-0.92.ebuild, terminator-0.93.ebuild:
+  Cleaned old versions, Fixed new PYTHON ABI compatibility, #317039
 
 *terminator-0.93 (16 Apr 2010)
 
