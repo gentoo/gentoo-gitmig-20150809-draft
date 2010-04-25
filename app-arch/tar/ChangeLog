@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.144 2010/04/25 18:53:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.145 2010/04/25 18:57:31 chainsaw Exp $
+
+  25 Apr 2010; <chainsaw@gentoo.org> -tar-1.22.ebuild, -tar-1.23.ebuild:
+  Pull revisions that cause havoc with GCC 4.5; these should never be
+  stabled.
 
 *tar-1.22-r1 (25 Apr 2010)
 
