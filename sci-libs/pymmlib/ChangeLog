@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/pymmlib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.15 2008/05/29 17:54:58 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.16 2010/04/25 10:47:08 jlec Exp $
+
+*pymmlib-1.0.0-r1 (25 Apr 2010)
+
+  25 Apr 2010; Justin Lecher <jlec@gentoo.org> +pymmlib-1.0.0-r1.ebuild:
+  Python ABI fixes, #316227
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> pymmlib-0.9.7.ebuild,
   pymmlib-0.9.8.ebuild, pymmlib-1.0.0.ebuild:
