@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1244.ebuild,v 1.1 2010/03/18 17:28:58 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1245.ebuild,v 1.1 2010/04/25 19:23:40 tommy Exp $
 
 EAPI="2"
-DATE=20100316
+DATE=20100425
 
 inherit eutils java-pkg-2 java-ant-2 multilib
 
@@ -53,12 +53,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cd "${WORKDIR}"/freenet-fred-official-*
-	S=$(pwd)
+	mv "${WORKDIR}"/freenet-fred-official-* "${S}"
+	cd "${S}"
 	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
 	epatch "${FILESDIR}"/ext.patch
-	epatch "${FILESDIR}"/${PN}-0.7.5_p1232-{strip-error,strip-openjdk-warning}.patch
+	epatch "${FILESDIR}"/0.7.5_p1245-strip-openjdk-check.patch
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath

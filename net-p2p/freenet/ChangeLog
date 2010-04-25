@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.77 2010/03/18 17:28:58 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.78 2010/04/25 19:23:40 tommy Exp $
+
+*freenet-0.7.5_p1245 (25 Apr 2010)
+
+  25 Apr 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/0.7.5_p1245-strip-openjdk-check.patch, -freenet-0.7.5_p1243.ebuild,
+  -freenet-0.7.5_p1244.ebuild, +freenet-0.7.5_p1245.ebuild,
+  -files/freenet-0.7.5_p1232-strip-error.patch,
+  -files/freenet-0.7.5_p1232-strip-openjdk-warning.patch:
+  Version bump
 
 *freenet-0.7.5_p1244 (18 Mar 2010)
 
