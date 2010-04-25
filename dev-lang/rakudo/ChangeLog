@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/rakudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/ChangeLog,v 1.3 2010/03/02 01:42:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/ChangeLog,v 1.4 2010/04/25 07:44:05 tove Exp $
+
+*rakudo-2010.04 (25 Apr 2010)
+
+  25 Apr 2010; Torsten Veller <tove@gentoo.org> +rakudo-2010.04.ebuild:
+  Version bump. Thanks to Alexandre Rostovtsev (#307203)
 
   02 Mar 2010; Patrick Lauer <patrick@gentoo.org> rakudo-2010.02.ebuild:
   Fixing src_install to actually install, fixes #307405
