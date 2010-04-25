@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/ssmtp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.93 2009/12/09 19:24:18 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.94 2010/04/25 23:28:42 abcd Exp $
+
+*ssmtp-2.62-r8 (25 Apr 2010)
+
+  25 Apr 2010; Jonathan Callen <abcd@gentoo.org>
+  +files/ssmtp-2.61-darwin7.patch, +ssmtp-2.62-r8.ebuild,
+  +files/ssmtp-2.62-darwin-crypto.patch,
+  +files/ssmtp-2.62-solaris-basename-conflict.patch:
+  Revbump, add patches for Darwin/Solaris, bump to EAPI-3, add prefix
+  support & keywords, die on failure, cleanup
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> ssmtp-2.62-r7.ebuild:
   ppc stable #282907
