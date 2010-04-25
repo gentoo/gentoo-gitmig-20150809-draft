@@ -1,6 +1,11 @@
 # ChangeLog for virtual/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-server/ChangeLog,v 1.19 2010/01/11 11:17:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/postgresql-server/ChangeLog,v 1.20 2010/04/25 20:38:34 armin76 Exp $
+
+  25 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  postgresql-server-8.1.ebuild, postgresql-server-8.2.ebuild,
+  postgresql-server-8.3.ebuild, postgresql-server-8.4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #285475
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> postgresql-server-7.3.ebuild,
   postgresql-server-7.4.ebuild, postgresql-server-8.0.ebuild,
