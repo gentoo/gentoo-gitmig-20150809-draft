@@ -1,6 +1,9 @@
 # ChangeLog for games-util/deutex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/ChangeLog,v 1.1 2010/03/10 17:58:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/ChangeLog,v 1.2 2010/04/26 20:55:23 fauli Exp $
+
+  26 Apr 2010; Christian Faulhammer <fauli@gentoo.org> deutex-4.4.0.ebuild:
+  stable x86, bug 315049
 
 *deutex-4.4.0 (10 Mar 2010)
 
