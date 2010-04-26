@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.758 2010/04/24 18:02:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.759 2010/04/26 07:44:05 robbat2 Exp $
+
+  26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  vanilla-sources-2.6.34_rc1.ebuild, vanilla-sources-2.6.34_rc2.ebuild,
+  vanilla-sources-2.6.34_rc3.ebuild, vanilla-sources-2.6.34_rc4.ebuild,
+  vanilla-sources-2.6.34_rc5.ebuild, metadata.xml:
+  Update Manifest for deblob support in kernel-2 eclass. Also block the
+  2.6.34 series from using unblob as it is not yet available for that
+  version.
 
   24 Apr 2010; Pacho Ramos <pacho@gentoo.org>
   vanilla-sources-2.6.32.9.ebuild:
