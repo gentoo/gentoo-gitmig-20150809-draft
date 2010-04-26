@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.230 2010/04/26 07:26:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.231 2010/04/26 08:05:10 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -83,6 +83,10 @@ fi
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ ${HOMEPAGE}"
 [[ -z ${LICENSE} ]] && \
 	LICENSE="GPL-2"
+
+# This is the latest KV_PATCH of the deblob tool available from the
+# libre-sources upstream.
+[[ -z ${DEBLOB_MAX_VERSION} ]] && DEBLOB_MAX_VERSION=33
 
 # No need to run scanelf/strip on kernel sources/headers (bug #134453).
 RESTRICT="binchecks strip"
@@ -309,14 +313,16 @@ if [[ ${ETYPE} == sources ]]; then
 
 	# Bug #266157, deblob for libre support
 	if [[ -z ${K_PREDEBLOBBED} ]] ; then
-		if kernel_is ge 2 6 27 && [[ -z ${K_DEBLOB_AVAILABLE} ]] ; then
+		if [[ -z ${K_DEBLOB_AVAILABLE} ]] ; then
+			kernel_is ge 2 6 27 && \
+				kernel_is le 2 6 ${DEBLOB_MAX_VERSION} && \
+				K_DEBLOB_AVAILABLE=1
+		fi
+		if [[ ${K_DEBLOB_AVAILABLE} == "1" ]] ; then
 			IUSE="${IUSE} deblob"
 			# Reflect that kernels contain firmware blobs unless otherwise
 			# stripped
 			LICENSE="${LICENSE} !deblob? ( freedist )"
-			
-			# This to to avoid us triggering some QA warnings
-			K_DEBLOB_AVAILABLE=1
 
 			DEBLOB_PV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 			DEBLOB_A="deblob-${DEBLOB_PV}"
