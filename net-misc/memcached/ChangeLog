@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/memcached
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.111 2010/04/24 19:41:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.112 2010/04/26 19:05:44 maekke Exp $
+
+  26 Apr 2010; Markus Meier <maekke@gentoo.org> memcached-1.4.5.ebuild:
+  amd64 stable, bug #314597
 
   24 Apr 2010; Raúl Porcel <armin76@gentoo.org> memcached-1.4.5.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #314597
