@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.13 2009/10/20 00:51:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.14 2010/04/26 15:06:56 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,8 @@ KEYWORDS="x86"
 IUSE="X mmx opengl"
 
 RDEPEND="media-libs/libsdl
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	!media-gfx/fondu"
 DEPEND="${RDEPEND}
 	X? ( x11-misc/imake )
 	dev-lang/nasm"
