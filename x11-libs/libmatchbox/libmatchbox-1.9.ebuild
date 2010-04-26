@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.8 2010/03/09 14:57:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.9 2010/04/26 15:17:37 yvasilev Exp $
 
-inherit eutils libtool
+inherit eutils
 
 DESCRIPTION="The Matchbox Library."
 HOMEPAGE="http://matchbox-project.org/"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
-IUSE="debug doc jpeg pango png truetype X xsettings"
+IUSE="debug doc jpeg pango png test truetype X xsettings"
 
 RDEPEND="x11-libs/libXext
 	truetype? ( x11-libs/libXft )
@@ -20,7 +20,9 @@ RDEPEND="x11-libs/libXext
 	png? ( media-libs/libpng )
 	xsettings? ( x11-libs/libxsettings-client )"
 
-DEPEND="doc? ( app-doc/doxygen )"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
+	test? ( dev-libs/check )"
 
 pkg_setup() {
 	# Bug #138135
@@ -36,6 +38,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	epatch "${FILESDIR}"/${P}-libpng14.patch
 	elibtoolize
 }
@@ -49,6 +52,7 @@ src_compile() {
 		$(use_enable png) \
 		$(use_enable xsettings) \
 		$(use_with X x) \
+		$(use_enable test unit-tests) \
 		|| die "Configuration failed"
 
 	emake || die "Compilation failed"
@@ -57,6 +61,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	dodoc AUTHORS Changelog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 	use doc && dohtml doc/html/*
 }
