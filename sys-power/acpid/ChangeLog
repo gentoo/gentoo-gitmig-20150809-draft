@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.45 2010/04/04 16:39:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.46 2010/04/26 12:55:42 ssuominen Exp $
+
+*acpid-2.0.4 (26 Apr 2010)
+
+  26 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +acpid-2.0.4.ebuild,
+  +files/acpid-2.0.4-default.sh:
+  Version bump wrt #317273 by Tim Harder. Install new powerbtn.sh wrt
+  #253764 by Pacho Ramos.
 
 *acpid-2.0.3-r1 (04 Apr 2010)
 
