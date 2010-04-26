@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.145 2010/03/31 22:55:48 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.146 2010/04/26 19:54:47 ssuominen Exp $
+
+  26 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -konquest-4.3.3.ebuild, -konquest-4.3.5.ebuild:
+  Remove konquest 4.3.x because of Qt 4.6.x problems wrt #317347 by
+  Sebastian Meßmer.
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -konquest-4.3.4.ebuild,
   -konquest-4.4.0.ebuild:

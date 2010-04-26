@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/kdegames-meta-4.3.3.ebuild,v 1.7 2010/01/19 02:08:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/kdegames-meta-4.3.3.ebuild,v 1.8 2010/04/26 19:53:24 ssuominen Exp $
 
 EAPI="2"
 inherit kde4-functions
@@ -35,7 +35,6 @@ RDEPEND="
 	$(add_kdebase_dep knetwalk)
 	$(add_kdebase_dep kolf)
 	$(add_kdebase_dep kollision)
-	$(add_kdebase_dep konquest)
 	$(add_kdebase_dep kpat)
 	$(add_kdebase_dep kreversi)
 	$(add_kdebase_dep ksame)
