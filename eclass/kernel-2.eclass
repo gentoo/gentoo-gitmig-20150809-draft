@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.228 2010/04/26 06:48:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.229 2010/04/26 07:15:03 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -74,9 +74,8 @@ if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY} ]]; then
 fi
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ ${HOMEPAGE}"
-# Reflect that kernels contain firmware blobs unless otherwise stripped
 [[ -z ${LICENSE} ]] && \
-	LICENSE="GPL-2 freedist"
+	LICENSE="GPL-2"
 
 # No need to run scanelf/strip on kernel sources/headers (bug #134453).
 RESTRICT="binchecks strip"
@@ -300,6 +299,34 @@ if [[ ${ETYPE} == sources ]]; then
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the ${KV_MAJOR}.${KV_MINOR} linux kernel"
 	IUSE="symlink build"
+
+	# Bug #266157, deblob for libre support
+	if [[ -z ${KERNEL_DEBLOBBED} ]] ; then
+		if kernel_is ge 2 6 27 ; then
+			IUSE="${IUSE} deblob"
+			# Reflect that kernels contain firmware blobs unless otherwise
+			# stripped
+			LICENSE="${LICENSE} !deblob? ( freedist )"
+			
+			# This to to avoid us triggering some QA warnings
+			DEBLOB_AVAILABLE=1
+
+			DEBLOB_PV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+			DEBLOB_A="deblob-${DEBLOB_PV}"
+			DEBLOB_HOMEPAGE="http://www.fsfla.org/svnwiki/selibre/linux-libre/"
+			HOMEPAGE="${HOMEPAGE} ${DEBLOB_HOMEPAGE}"
+				
+			KERNEL_URI="${KERNEL_URI}
+				deblob? (
+					${DEBLOB_HOMEPAGE}/download/releases/LATEST-${DEBLOB_PV}.N/${DEBLOB_A}
+				)"
+		else
+			# We have no way to deblob older kernels, so just mark them as
+			# tainted with non-libre materials.
+			LICENSE="${LICENSE} freedist"
+		fi
+	fi
+
 elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
 
@@ -625,6 +652,11 @@ postinst_sources() {
 
 	# if we have USE=symlink, then force K_SYMLINK=1
 	use symlink && K_SYMLINK=1
+
+	# if we're using a deblobbed kernel, it's not supported
+	[[ $DEBLOB_AVAILABLE == "1" ]] && \
+		use deblob && \
+		K_SECURITY_UNSUPPORTED=1
 
 	# if we are to forcably symlink, delete it if it already exists first.
 	if [[ ${K_SYMLINK} > 0 ]]; then
@@ -1066,11 +1098,22 @@ kernel-2_src_unpack() {
 		kernel_is 2 4 && unpack_2_4
 		kernel_is 2 6 && unpack_2_6
 	fi
+
+	if [[ $DEBLOB_AVAILABLE == "1" ]] && use deblob ; then
+		cp "${DISTDIR}/${DEBLOB_A}" "${T}"
+		chmod +x "${T}/${DEBLOB_A}"
+	fi
 }
 
 kernel-2_src_compile() {
 	cd "${S}"
 	[[ ${ETYPE} == headers ]] && compile_headers
+
+	if [[ $DEBLOB_AVAILABLE == "1" ]] && use deblob ; then
+		echo ">>> Running deblob script ..."
+		sh "${T}/${DEBLOB_A}" --force || \
+			die "Deblob script failed to run!!!"
+	fi
 }
 
 kernel-2_pkg_preinst() {
