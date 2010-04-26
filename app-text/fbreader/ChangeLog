@@ -1,6 +1,11 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.16 2010/04/08 17:13:01 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.17 2010/04/26 21:07:19 spatz Exp $
+
+  26 Apr 2010; Dror Levin <spatz@gentoo.org> fbreader-0.12.10.ebuild,
+  +files/fbreader-0.12.10-gcc45.patch:
+  Add patch for building with gcc-4.5, bug 317189. Thanks to Azamat H.
+  Hackimov for the patch.
 
 *fbreader-0.12.10 (08 Apr 2010)
 
