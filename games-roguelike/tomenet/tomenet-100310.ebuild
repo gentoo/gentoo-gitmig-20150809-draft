@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-100310.ebuild,v 1.1 2010/03/11 21:51:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-100310.ebuild,v 1.2 2010/04/26 14:52:24 phajdan.jr Exp $
 
 EAPI=2
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="http://angband.oook.cz/${PN}-nightly/${PN}-cvs-snapshot-${PV}.tar.bz2"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X Xaw3d"
 
 DEPEND="sys-libs/ncurses
