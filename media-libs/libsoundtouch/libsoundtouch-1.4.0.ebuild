@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.4.0.ebuild,v 1.4 2010/04/16 17:55:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.4.0.ebuild,v 1.5 2010/04/26 11:59:24 fauli Exp $
 
 EAPI=2
 MY_PN=${PN/lib}
@@ -12,7 +12,7 @@ SRC_URI="http://www.surina.net/soundtouch/${P/lib}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ppc ~ppc64 ~sparc x86"
 IUSE="sse2"
 
 S=${WORKDIR}/${MY_PN}
