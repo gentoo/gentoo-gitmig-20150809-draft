@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20090406.ebuild,v 1.2 2009/11/23 01:57:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20090406.ebuild,v 1.3 2010/04/26 20:34:20 maekke Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/qtiplot/${MYP}.zip"
 HOMEPAGE="http://sourceforge.net/projects/liborigin/"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 SLOT="2"
 IUSE="doc"
