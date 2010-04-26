@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnots
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.8 2010/03/29 22:32:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.9 2010/04/26 20:49:55 fauli Exp $
+
+  26 Apr 2010; Christian Faulhammer <fauli@gentoo.org> xnots-0.2.1.ebuild:
+  stable x86, bug 315813
 
   29 Mar 2010; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
   Update my first name.
