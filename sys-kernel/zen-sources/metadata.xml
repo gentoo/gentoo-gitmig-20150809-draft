@@ -13,6 +13,7 @@
 <use>
 	<flag name="drm-next">Enable the drm-next patch</flag>
 	<flag name="stable">Clone stable git tree</flag>
+	<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
 </use>
 </pkgmetadata>
 

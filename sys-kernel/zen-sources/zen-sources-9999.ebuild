@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-9999.ebuild,v 1.3 2010/04/26 07:46:53 robbat2 Exp $
 
 EAPI="2"
 
@@ -8,6 +8,10 @@ COMPRESSTYPE=".lzma"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
+K_DEBLOB_AVAILABLE=0
+# If these are not set, you will get weird behavior from kernel-2, due to the
+# huge $PV that is used otherwise.
+CKV='2.6.99'
 
 ETYPE="sources"
 

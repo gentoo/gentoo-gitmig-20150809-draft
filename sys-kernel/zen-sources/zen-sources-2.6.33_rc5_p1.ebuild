@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.33_rc5_p1.ebuild,v 1.2 2010/04/26 07:46:53 robbat2 Exp $
 
 COMPRESSTYPE=".lzma"
 K_USEPV="yes"
