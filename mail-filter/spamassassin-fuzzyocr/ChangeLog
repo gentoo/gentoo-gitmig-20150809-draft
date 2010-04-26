@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.19 2010/04/26 20:17:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.20 2010/04/26 21:36:42 voyageur Exp $
+
+  26 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -spamassassin-fuzzyocr-2.3b.ebuild, -spamassassin-fuzzyocr-3.5.1.ebuild,
+  -spamassassin-fuzzyocr-3.5.1-r1.ebuild:
+  Drop old versions, they do not work with current in-tree SA
 
   26 Apr 2010; Markus Meier <maekke@gentoo.org>
   spamassassin-fuzzyocr-3.6.0.ebuild:
