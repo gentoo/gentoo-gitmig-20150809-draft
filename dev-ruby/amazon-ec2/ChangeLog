@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amazon-ec2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.5 2010/04/26 11:02:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.6 2010/04/26 18:59:08 flameeyes Exp $
+
+  26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  amazon-ec2-0.9.12.ebuild:
+  Enable ruby19 support, test-spec with test-unit-2 works for testing this.
 
 *amazon-ec2-0.9.12 (26 Apr 2010)
 
