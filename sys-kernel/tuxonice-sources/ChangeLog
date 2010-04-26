@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.79 2010/04/18 10:59:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.80 2010/04/26 07:39:53 robbat2 Exp $
+
+  26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Update Manifest for deblob support in kernel-2 eclass.
 
   18 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   tuxonice-sources-2.6.30-r6.ebuild, -tuxonice-sources-2.6.30-r9.ebuild,

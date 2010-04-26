@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.311 2009/05/31 12:58:45 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.312 2010/04/26 07:38:26 robbat2 Exp $
+
+  26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Update Manifest for deblob support in kernel-2 eclass.
 
   31 May 2009; nixnut <nixnut@gentoo.org> hardened-sources-2.6.28-r9.ebuild:
   ppc stable

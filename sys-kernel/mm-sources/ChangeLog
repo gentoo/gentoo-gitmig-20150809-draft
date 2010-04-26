@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.376 2008/10/30 10:12:29 voxus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.377 2010/04/26 07:39:08 robbat2 Exp $
+
+  26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Update Manifest for deblob support in kernel-2 eclass.
 
 *mm-sources-2.6.28_rc2-r1 (30 Oct 2008)
 
