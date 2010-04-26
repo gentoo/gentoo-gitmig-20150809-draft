@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/seahorse-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.18 2010/02/12 19:59:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.19 2010/04/26 13:48:58 pacho Exp $
+
+*seahorse-plugins-2.28.1-r1 (26 Apr 2010)
+
+  26 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  +seahorse-plugins-2.28.1-r1.ebuild,
+  +files/seahorse-plugins-2.28.1-gpgme_check_version.patch:
+  Revision bump to apply ubuntu patch to call gpgme_check_version () as
+  required by current stable and newer gpgme versions (see bug #281729).
+  Thanks to Sebastien Bacher for the patch, Patrick Beckmann and Alexander
+  Bezrukov for reporting.
 
   12 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   seahorse-plugins-2.26.2-r1.ebuild:
