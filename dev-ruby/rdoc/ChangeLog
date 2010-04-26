@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.27 2010/04/22 06:07:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.28 2010/04/26 14:25:52 flameeyes Exp $
+
+*rdoc-2.5.6 (26 Apr 2010)
+
+  26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> -rdoc-2.5.5.ebuild,
+  +rdoc-2.5.6.ebuild, +files/rdoc-2.5.6-ruby19.patch:
+  Version bump, add a patch so that tests pass on Ruby 1.9.
 
 *rdoc-2.5.5 (22 Apr 2010)
 

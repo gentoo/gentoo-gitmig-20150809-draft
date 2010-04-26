@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.5.ebuild,v 1.1 2010/04/22 06:07:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.6.ebuild,v 1.1 2010/04/26 14:25:52 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt Manifest.txt README.txt RI.txt"
 
 RUBY_FAKEGEM_BINWRAP=""
 
-inherit ruby-fakegem
+inherit ruby-fakegem eutils
 
 DESCRIPTION="An extended version of the RDoc library from Ruby 1.8"
 HOMEPAGE="http://rubyforge.org/projects/rdoc/"
@@ -26,6 +26,10 @@ IUSE=""
 ruby_add_bdepend test dev-ruby/hoe
 ruby_add_bdepend test virtual/ruby-minitest
 ruby_add_bdepend doc dev-ruby/hoe
+
+all_ruby_prepare() {
+	epatch "${FILESDIR}/${P}-ruby19.patch"
+}
 
 all_ruby_install() {
 	all_fakegem_install
