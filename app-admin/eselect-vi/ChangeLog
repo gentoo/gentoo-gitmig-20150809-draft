@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-vi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.35 2010/04/23 18:41:59 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.36 2010/04/26 02:36:14 lack Exp $
+
+*eselect-vi-1.1.7-r1 (26 Apr 2010)
+
+  26 Apr 2010; Jim Ramsay <lack@gentoo.org> +eselect-vi-1.1.7-r1.ebuild,
+  +files/eselect-vi-1.1.7-prefix.patch:
+  Patch for prefix support
 
 *eselect-vi-1.1.7 (23 Apr 2010)
 
