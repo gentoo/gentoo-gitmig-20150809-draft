@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4139 2010/04/26 16:25:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4140 2010/04/26 20:18:07 fuzzyray Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Apr 2010; Paul Varner <fuzzyray@gentoo.org> package.mask:
+  Mask app-text/manedit for removal (bug #315947).
 
   26 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask media-libs/allegrogl for removal.
