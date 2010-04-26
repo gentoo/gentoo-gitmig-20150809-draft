@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-0.12.10-r2.ebuild,v 1.1 2010/04/19 11:48:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-0.12.10-r2.ebuild,v 1.2 2010/04/26 14:09:07 flameeyes Exp $
 
 EAPI="2"
 # jruby → has shims for Java handling but tests fail badly, remaining
@@ -20,29 +20,35 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-ruby_add_bdepend 'dev-ruby/rake'
-
 DEPEND="${DEPEND}
 	dev-libs/openssl"
 RDEPEND="${RDEPEND}
 	dev-libs/openssl"
 
 all_ruby_prepare() {
-	# This test only works on BSD, and error handling fails on 1.8
-	rm tests/test_process_watch.rb || die "rm failed"
+	# fix building with RDoc 2.5.x (bug #317281) — upstream b12663e475514b02a28b60d4427a48be7d75faac
+	# fix tests with Ruby 1.9 — sent upstream
+	# fix tests on non-FreeBSD (where kqueue is missing) — sent upstream
+	# fix building when git is not available — sent upstream
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+}
 
-	cat - > "${T}"/submake <<EOF
-#!/bin/sh
-
-myrealmake=${MAKE}
-MAKE=\$myrealmake emake "\$@"
-
-EOF
-	chmod +x "${T}"/submake || die
+each_ruby_configure() {
+	for extdir in ext ext/fastfilereader; do
+		pushd $extdir
+		${RUBY} extconf.rb || die "extconf.rb failed for ${extdir}"
+		popd
+	done
 }
 
 each_ruby_compile() {
-	MAKE="${T}"/submake ${RUBY} -S rake build || die "rake build failed"
+	for extdir in ext ext/fastfilereader; do
+		pushd $extdir
+		# both extensions use C++, so use the CXXFLAGS not the CFLAGS
+		emake CFLAGS="${CXXFLAGS} -fPIC" archflag="${LDFLAGS}" || die "emake failed for ${extdir}"
+		popd
+		cp $extdir/*.so lib/ || die "Unable to copy extensions for ${extdir}"
+	done
 }
 
 all_ruby_install() {

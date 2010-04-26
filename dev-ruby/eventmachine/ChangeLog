@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.10 2010/04/19 11:48:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.11 2010/04/26 14:09:07 flameeyes Exp $
+
+  26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  eventmachine-0.12.10-r2.ebuild, +files/eventmachine-0.12.10-gentoo.patch:
+  Add a patch to fix a few more problems in eventmachine, such as bug
+  #317281.
 
 *eventmachine-0.12.10-r2 (19 Apr 2010)
 
