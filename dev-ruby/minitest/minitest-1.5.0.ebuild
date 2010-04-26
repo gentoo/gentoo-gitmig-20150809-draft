@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.5.0.ebuild,v 1.1 2010/01/07 20:14:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.5.0.ebuild,v 1.2 2010/04/26 10:47:35 flameeyes Exp $
 
 EAPI=2
 # jruby → tests fail, reported upstream
@@ -11,8 +11,6 @@ RUBY_FAKEGEM_TASK_DOC="docs"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="History.txt Manifest.txt README.txt"
-
-RUBY_FAKEGEM_EXTRAINSTALL="template"
 
 inherit ruby-fakegem
 

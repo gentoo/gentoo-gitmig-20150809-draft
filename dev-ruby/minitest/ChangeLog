@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.10 2010/01/13 16:22:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.11 2010/04/26 10:47:35 flameeyes Exp $
+
+  26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  minitest-1.5.0.ebuild:
+  Remove install of non-existing directory.
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> minitest-1.4.2.ebuild:
   Marking minitest-1.4.2 ~ppc64 for bug 297830
