@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.2 2010/03/26 15:05:30 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.3 2010/04/26 19:06:59 maekke Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://dl.google.com/earth/client/current/GoogleEarthLinux.bin
 
 LICENSE="googleearth MIT SGI-B-1.1 openssl as-is ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 RESTRICT="mirror strip"
 IUSE="qt-bundled"
 
