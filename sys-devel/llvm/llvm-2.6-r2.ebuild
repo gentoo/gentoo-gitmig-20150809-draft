@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6-r2.ebuild,v 1.1 2010/04/26 09:38:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6-r2.ebuild,v 1.2 2010/04/26 13:14:11 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -151,8 +151,12 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=none"
 	fi
 
+	# --without-udis86 does not work
+	if use udis86; then
+		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
+	fi
+
 	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
-	CONF_FLAGS="${CONF_FLAGS} $(use_with udis86)"
 	econf ${CONF_FLAGS} || die "econf failed"
 }
 
