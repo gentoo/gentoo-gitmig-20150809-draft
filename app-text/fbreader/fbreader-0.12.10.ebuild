@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.10.ebuild,v 1.2 2010/04/26 21:07:19 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.10.ebuild,v 1.3 2010/04/26 21:10:25 spatz Exp $
 
 EAPI=2
 
-inherit confutils
+inherit eutils confutils
 
 DESCRIPTION="E-Book Reader. Supports many e-book formats."
 HOMEPAGE="http://www.fbreader.org/"
