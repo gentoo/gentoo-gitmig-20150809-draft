@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.226 2010/04/26 06:44:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.227 2010/04/26 06:46:25 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -96,6 +96,9 @@ debug-print-kernel2-variables() {
 	debug-print "OKV: ${OKV}"
 	debug-print "KV: ${KV}"
 	debug-print "KV_FULL: ${KV_FULL}"
+	debug-print "KV_MAJOR: ${KV_MAJOR}"
+	debug-print "KV_MINOR: ${KV_MINOR}"
+	debug-print "KV_PATCH: ${KV_PATCH}"
 	debug-print "RELEASETYPE: ${RELEASETYPE}"
 	debug-print "RELEASE: ${RELEASE}"
 	debug-print "UNIPATCH_LIST_DEFAULT: ${UNIPATCH_LIST_DEFAULT} "
