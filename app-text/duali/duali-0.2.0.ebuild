@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duali/duali-0.2.0.ebuild,v 1.2 2010/04/08 19:26:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duali/duali-0.2.0.ebuild,v 1.3 2010/04/26 10:42:24 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/arabeyes/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
