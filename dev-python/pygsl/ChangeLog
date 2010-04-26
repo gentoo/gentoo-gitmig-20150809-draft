@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygsl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.13 2010/02/08 08:39:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.14 2010/04/26 20:19:43 maekke Exp $
+
+  26 Apr 2010; Markus Meier <maekke@gentoo.org> pygsl-0.9.4.ebuild:
+  amd64 stable, bug #300267
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> pygsl-0.9.4.ebuild:
   Add inherit eutils for epatch.
