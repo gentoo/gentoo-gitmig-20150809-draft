@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0-r1.ebuild,v 1.1 2010/03/09 18:05:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0-r1.ebuild,v 1.2 2010/04/26 10:45:33 fauli Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/criticalmass/CriticalMass-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="media-libs/sdl-mixer
