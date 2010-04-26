@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5506 2010/04/26 07:47:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5507 2010/04/26 09:47:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3270,6 +3270,7 @@ sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problem
 sys-devel/llvm:alltargets - Build all host targets (default: host only)
 sys-devel/llvm:libffi - Add support to call arbitrary external (natively compiled) functions via dev-libs/libffi
 sys-devel/llvm:llvm-gcc - Build LLVM with sys-devel/llvm-gcc
+sys-devel/llvm:udis86 - Enable support for dev-libs/udis86 disassembler library
 sys-devel/llvm-gcc:bootstrap - Compile the final llvm-gcc executables with llvm-gcc itself
 sys-devel/llvm-gcc:objc - Build support for the Objective C code language
 sys-devel/llvm-gcc:objc++ - Build support for the Objective C++ language
