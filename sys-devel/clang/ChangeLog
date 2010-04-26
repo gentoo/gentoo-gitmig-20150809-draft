@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.10 2010/03/18 21:33:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.11 2010/04/26 21:46:54 voyageur Exp $
+
+*clang-2.6-r3 (26 Apr 2010)
+
+  26 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org> +clang-2.6-r3.ebuild:
+  python support enhancements, grabbed from my in-progress 2.7_pre2 ebuild
 
 *clang-2.6-r2 (18 Mar 2010)
 
