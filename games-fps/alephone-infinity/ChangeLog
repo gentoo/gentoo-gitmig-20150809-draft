@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone-infinity
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.6 2009/11/07 17:03:40 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.7 2010/04/26 11:56:25 fauli Exp $
+
+  26 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  alephone-infinity-20080622.ebuild:
+  stable x86, bug 309705
 
   07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org>
   alephone-infinity-20080622.ebuild:
