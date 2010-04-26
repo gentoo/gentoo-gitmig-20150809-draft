@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4137 2010/04/25 20:25:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4138 2010/04/26 00:34:49 halcy0n Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Apr 2010; Mark Loeser <halcy0n@gentoo.org> package.mask,
+  selinux/package.mask:
+  Add missing packages to mask for selinux
 
   25 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask,
   selinux/package.mask:
