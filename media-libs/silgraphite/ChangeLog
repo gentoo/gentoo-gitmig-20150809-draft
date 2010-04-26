@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/silgraphite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.11 2010/03/10 10:01:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.12 2010/04/26 18:43:03 grobian Exp $
+
+  26 Apr 2010; Fabian Groffen <grobian@gentoo.org> silgraphite-2.3.1.ebuild:
+  Marked ~sparc-solaris, ~sparc64-solaris
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org> silgraphite-2.3.1.ebuild:
   Marked ~ppc/~ppc64 for bug #301428.
