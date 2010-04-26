@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.56 2010/04/23 08:16:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.57 2010/04/26 20:40:42 maekke Exp $
+
+  26 Apr 2010; Markus Meier <maekke@gentoo.org> qtiplot-0.9.7.12.ebuild:
+  amd64/x86 stable, bug #309717
 
 *qtiplot-0.9.7.14 (23 Apr 2010)
 
