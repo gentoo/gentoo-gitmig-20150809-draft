@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.6.0.ebuild,v 1.1 2010/04/24 07:54:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.6.0.ebuild,v 1.2 2010/04/26 05:29:14 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -31,8 +31,16 @@ ruby_add_bdepend test "virtual/ruby-minitest >=dev-ruby/rubyforge-2.0.3"
 
 ruby_add_rdepend ">=dev-ruby/rake-0.8.7"
 
-all_ruby_prepare() {
-	# This file is expected by the documentation rake task
-	mkdir "${WORKDIR}/../homedir/.rubyforge" || die
-	touch "${WORKDIR}/../homedir/.rubyforge/user-config.yml" || die
+all_ruby_compile() {
+	mkdir "${HOME}/.rubyforge" || die
+	touch "${HOME}/.rubyforge/user-config.yml" || die
+
+	all_fakegem_compile
+}
+
+each_ruby_test() {
+	mkdir "${HOME}/.rubyforge" || die
+	touch "${HOME}/.rubyforge/user-config.yml" || die
+	
+	each_fakegem_test
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.73 2010/04/24 07:54:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.74 2010/04/26 05:29:14 graaff Exp $
+
+  26 Apr 2010; Hans de Graaff <graaff@gentoo.org> hoe-2.6.0.ebuild:
+  Provide user-config file in those phases that need it. Use proper path for
+  it.
 
 *hoe-2.6.0 (24 Apr 2010)
 
