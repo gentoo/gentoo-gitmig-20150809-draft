@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/childsplay
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.16 2009/11/26 21:07:05 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.17 2010/04/26 10:27:00 tupone Exp $
+
+  26 Apr 2010; Tupone Alfredo <tupone@gentoo.org> childsplay-0.90.2.ebuild,
+  +files/childsplay-0.90.2-gentoo.patch:
+  Force python2 fixing bug #312251 by arfrever@gentoo.org
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> childsplay-0.90.2.ebuild:
   x86 stable, bug #294562
