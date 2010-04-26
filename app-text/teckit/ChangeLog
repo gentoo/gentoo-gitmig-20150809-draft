@@ -1,6 +1,9 @@
 # ChangeLog for app-text/teckit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.12 2010/03/10 09:40:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.13 2010/04/26 18:39:21 grobian Exp $
+
+  26 Apr 2010; Fabian Groffen <grobian@gentoo.org> teckit-2.5.1.ebuild:
+  Marked ~sparc-solaris, ~sparc64-solaris
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org> teckit-2.5.1.ebuild:
   Marked ~ppc for bug #300063.
