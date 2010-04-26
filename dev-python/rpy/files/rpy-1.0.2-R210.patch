@@ -306,33 +306,8 @@
 +fit = r.predict(NNModel,XG)
 +print fit
 +
---- rpy-1.0.2/PKG-INFO	2008-04-10 17:54:36.000000000 +0100
-+++ rpy-1.0.4.orig/PKG-INFO	1970-01-01 01:00:00.000000000 +0100
-@@ -1,13 +0,0 @@
--Metadata-Version: 1.0
--Name: rpy
--Version: 1.0.2
--Summary: Python interface to the R language
--Home-page: http://rpy.sourceforge.net
--Author: Gregory R. Warnes
--Author-email: warnes@bst.rochester.edu
--License: GPL
--Description: RPy provides a robust Python interface to the R
--        programming language.  It can manage all kinds of R objects and can
--        execute arbitrary R functions. All the errors from the R language are
--        converted to Python exceptions.
--Platform: UNKNOWN
 --- rpy-1.0.2.orig/rpy.py	2008-01-02 17:57:09.000000000 +0000
 +++ rpy-1.0.2/rpy.py	2010-04-15 17:44:06.000000000 +0100
-@@ -16,7 +16,7 @@
- #
- #  High level module for managing the lookup of R objects.
- #
--#  $Id: rpy-1.0.2-R210.patch,v 1.1 2010/04/15 21:58:10 bicatali Exp $
-+#  $Id: rpy-1.0.2-R210.patch,v 1.1 2010/04/15 21:58:10 bicatali Exp $
- #
- #
- from __future__ import nested_scopes
 @@ -139,6 +139,7 @@
  
  # Version
