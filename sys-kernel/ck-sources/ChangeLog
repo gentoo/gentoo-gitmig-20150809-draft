@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.169 2010/04/26 07:37:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.170 2010/04/26 17:53:52 nelchael Exp $
+
+  26 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.32.ebuild:
+  Remove 2.6.32 as it fails to apply the patch.
 
   26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update Manifest for deblob support in kernel-2 eclass.
