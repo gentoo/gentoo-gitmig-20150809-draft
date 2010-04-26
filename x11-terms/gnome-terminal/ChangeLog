@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.213 2010/02/24 22:37:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.214 2010/04/26 19:43:21 pacho Exp $
+
+  26 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  gnome-terminal-2.26.3.1-r2.ebuild,
+  +files/gnome-terminal-2.26.3.1-remove-plural.patch:
+  Apply upstream patch to drop useless Plural-Forms line causing build to
+  fail with current stable gnome-doc-utils. Thanks to Peter Volkov for
+  finding the fix in bug #304091
 
   24 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-terminal-2.24.2-r1.ebuild, -gnome-terminal-2.28.1.ebuild:

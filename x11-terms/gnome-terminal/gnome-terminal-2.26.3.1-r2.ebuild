@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r2.ebuild,v 1.9 2010/01/16 17:14:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r2.ebuild,v 1.10 2010/04/26 19:43:21 pacho Exp $
 
 inherit eutils gnome2
 
@@ -48,6 +48,10 @@ src_unpack() {
 	# Fix bug 268846 -- gnome-terminal errors out if it can't find the gconf
 	# daemon. Patch is from upstream git repository, included in 2.28
 	epatch "${FILESDIR}"/${P}-partial-fix-dbus-error.patch
+
+	# Remove useless Plural-Forms line which breaks build with new 
+	# gnome-doc-utils. See bug #304091
+	epatch "${FILESDIR}"/${P}-remove-plural.patch
 
 	# patch gnome terminal to report as GNOME rather than xterm
 	# This needs to resolve a few bugs (#120294,)
