@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.2-r1.ebuild,v 1.1 2010/04/05 22:36:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.2-r1.ebuild,v 1.2 2010/04/26 11:04:41 fauli Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x64-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~x64-solaris"
 IUSE=""
 
 CDEPEND="java-virtuals/servlet-api:2.3"
