@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/libxcrypt-2.4.ebuild,v 1.1 2010/01/12 11:42:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/libxcrypt-2.4.ebuild,v 1.2 2010/04/26 11:25:53 flameeyes Exp $
 
 EAPI=2
 
@@ -17,12 +17,12 @@ IUSE=""
 
 src_configure() {
 	# Do not install into /usr so that tcb and pam can use us.
-	econf --libdir=/$(get_libdir)
+	econf --libdir=/$(get_libdir) --disable-static
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake failed"
 
 	# Remove unneeded files from /
-	rm -f "${D}"/$(get_libdir)/"${PN}".{a,la} || die "rm failed"
+	rm -f "${D}"/$(get_libdir)/"${PN}".la || die "rm failed"
 }

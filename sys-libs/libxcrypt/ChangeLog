@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libxcrypt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.8 2010/01/12 11:42:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libxcrypt/ChangeLog,v 1.9 2010/04/26 11:25:53 flameeyes Exp $
+
+  26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libxcrypt-2.4.ebuild:
+  Disable static libraries, since they would get removed anyway.
 
 *libxcrypt-2.4 (12 Jan 2010)
 
