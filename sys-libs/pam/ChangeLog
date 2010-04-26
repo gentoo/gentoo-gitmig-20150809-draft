@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.257 2010/04/06 05:39:37 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.258 2010/04/26 12:04:09 flameeyes Exp $
+
+  26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/Linux-PAM-0.99.7.0-disable-regenerate-man.patch, -pam-1.0.4.ebuild,
+  -files/Linux-PAM-1.0.4-fix-tests.patch, pam-1.1.0.ebuild,
+  +files/Linux-PAM-1.1.0-xcrypt.patch, -pam-1.1.1.ebuild,
+  -pam-1.1.1-r1.ebuild, pam-1.1.1-r2.ebuild,
+  +files/Linux-PAM-1.1.1-xcrypt.patch:
+  Cleanup old ebuilds and files; add patches to disable libxcrypt automagic
+  dependency (bug #317195).
 
 *pam-1.1.1-r2 (06 Apr 2010)
 

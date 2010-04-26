@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.14 2010/01/24 18:27:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.15 2010/04/26 12:04:09 flameeyes Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
 
@@ -93,6 +93,10 @@ src_unpack() {
 	# Fix building with nls USE flag disabled
 	epatch "${FILESDIR}/${MY_PN}-1.1.0-nonls.patch"
 
+	# make it possible to skip libxcrypt detection if header is not
+	# found
+	epatch "${FILESDIR}/${MY_PN}-1.1.0-xcrypt.patch"
+
 	# Remove libtool-2 libtool macros, see bug 261167
 	rm m4/libtool.m4 m4/lt*.m4 || die "rm libtool macros failed."
 
@@ -107,6 +111,11 @@ src_compile() {
 	if use hppa || use elibc_FreeBSD; then
 		myconf="${myconf} --disable-pie"
 	fi
+
+	# Disable automatic detection of libxcrypt; we _don't_ want the
+	# user to link libxcrypt in by default, since we won't track the
+	# dependency and allow to break PAM this way.
+	export ac_cv_header_xcrypt_h=no
 
 	econf \
 		--libdir=/usr/$(get_libdir) \
