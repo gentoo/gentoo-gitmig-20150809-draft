@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.2 2010/03/09 12:09:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.3 2010/04/26 22:50:43 scarabeus Exp $
 
 EAPI="2"
 
-inherit cmake-utils eutils
+PYTHON_USE_WITH="sqlite"
+PYTHON_DEPEND="python? 2"
+inherit python cmake-utils eutils
 
 DESCRIPTION="User friendly Geographic Information System"
 HOMEPAGE="http://www.qgis.org/"
@@ -24,16 +26,27 @@ RDEPEND=">=sci-libs/gdal-1.6.1
 	x11-libs/qt-sql:4
 	sci-libs/geos
 	sci-libs/proj
-	gps? ( dev-libs/expat sci-geosciences/gpsbabel )
-	grass? ( >=sci-geosciences/grass-6 sci-geosciences/gdal-grass )
+	gps? (
+		dev-libs/expat
+		sci-geosciences/gpsbabel
+	)
+	grass? (
+		>=sci-geosciences/grass-6
+		sci-geosciences/gdal-grass
+	)
 	gsl? ( sci-libs/gsl )
 	postgres? ( >=virtual/postgresql-base-8 )
-	python? ( dev-lang/python[sqlite] dev-python/PyQt4[sql,svg] )
+	python? ( dev-python/PyQt4[sql,svg] )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_configure() {
 	local mycmakeargs
@@ -66,9 +79,9 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	dodoc AUTHORS BUGS ChangeLog README SPONSORS CONTRIBUTORS
+	dodoc AUTHORS BUGS ChangeLog README SPONSORS CONTRIBUTORS || die
 
-	newicon images/icons/qgis-icon.png qgis.png
+	newicon images/icons/qgis-icon.png qgis.png || die
 	make_desktop_entry qgis "Quantum GIS " qgis
 
 	if use examples; then
