@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.229 2010/04/26 07:15:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.230 2010/04/26 07:26:06 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -45,6 +45,13 @@
 #						  A value of "5" would apply genpatches-2.6.12-5 to
 #						  my-sources-2.6.12.ebuild
 # K_SECURITY_UNSUPPORTED- If set, this kernel is unsupported by Gentoo Security
+# K_DEBLOB_AVAILABLE	- A value of "0" will disable all of the optional deblob
+#						  code. If empty, will be set to "1" if deblobbing is
+#						  possible. Test ONLY for "1".
+# K_PREDEBLOBBED		- This kernel was already deblobbed elsewhere.
+#						  If false, either optional deblobbing will be available
+#						  or the license will note the inclusion of freedist
+#						  code.
 
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
@@ -301,15 +308,15 @@ if [[ ${ETYPE} == sources ]]; then
 	IUSE="symlink build"
 
 	# Bug #266157, deblob for libre support
-	if [[ -z ${KERNEL_DEBLOBBED} ]] ; then
-		if kernel_is ge 2 6 27 ; then
+	if [[ -z ${K_PREDEBLOBBED} ]] ; then
+		if kernel_is ge 2 6 27 && [[ -z ${K_DEBLOB_AVAILABLE} ]] ; then
 			IUSE="${IUSE} deblob"
 			# Reflect that kernels contain firmware blobs unless otherwise
 			# stripped
 			LICENSE="${LICENSE} !deblob? ( freedist )"
 			
 			# This to to avoid us triggering some QA warnings
-			DEBLOB_AVAILABLE=1
+			K_DEBLOB_AVAILABLE=1
 
 			DEBLOB_PV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 			DEBLOB_A="deblob-${DEBLOB_PV}"
@@ -654,7 +661,7 @@ postinst_sources() {
 	use symlink && K_SYMLINK=1
 
 	# if we're using a deblobbed kernel, it's not supported
-	[[ $DEBLOB_AVAILABLE == "1" ]] && \
+	[[ $K_DEBLOB_AVAILABLE == 1 ]] && \
 		use deblob && \
 		K_SECURITY_UNSUPPORTED=1
 
@@ -1099,7 +1106,7 @@ kernel-2_src_unpack() {
 		kernel_is 2 6 && unpack_2_6
 	fi
 
-	if [[ $DEBLOB_AVAILABLE == "1" ]] && use deblob ; then
+	if [[ $K_DEBLOB_AVAILABLE == 1 ]] && use deblob ; then
 		cp "${DISTDIR}/${DEBLOB_A}" "${T}"
 		chmod +x "${T}/${DEBLOB_A}"
 	fi
@@ -1109,7 +1116,7 @@ kernel-2_src_compile() {
 	cd "${S}"
 	[[ ${ETYPE} == headers ]] && compile_headers
 
-	if [[ $DEBLOB_AVAILABLE == "1" ]] && use deblob ; then
+	if [[ $K_DEBLOB_AVAILABLE == 1 ]] && use deblob ; then
 		echo ">>> Running deblob script ..."
 		sh "${T}/${DEBLOB_A}" --force || \
 			die "Deblob script failed to run!!!"
