@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.10 2010/02/19 09:30:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.11 2010/04/26 14:45:03 flameeyes Exp $
+
+*pg-0.9.0 (26 Apr 2010)
+
+  26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pg-0.9.0_pre156.ebuild, +pg-0.9.0.ebuild:
+  Bump to 0.9.0 final; testsuite only works with Ruby 1.8, but it builds
+  fine with 1.9 as well.
 
 *pg-0.9.0_pre156 (19 Feb 2010)
 
