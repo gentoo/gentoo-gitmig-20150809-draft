@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chrpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.13 2010/04/15 17:08:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.14 2010/04/26 02:25:17 vapier Exp $
+
+  26 Apr 2010; Mike Frysinger <vapier@gentoo.org> chrpath-0.13-r1.ebuild:
+  Clean up installed paths.
 
   15 Apr 2010; Markos Chandras <hwoarang@gentoo.org> chrpath-0.13-r1.ebuild,
   +files/chrpath-0.13-testsuite-1.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r1.ebuild,v 1.2 2010/04/15 17:08:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r1.ebuild,v 1.3 2010/04/26 02:25:17 vapier Exp $
 
 EAPI="2"
 
@@ -13,18 +13,18 @@ SRC_URI="http://ftp.tux.org/pub/X-Windows/ftp.hungry.com/chrpath/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux
-~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-multilib.patch
 	epatch "${FILESDIR}"/${PN}-keepgoing.patch
 	epatch "${FILESDIR}"/${P}-testsuite-1.patch
+	sed -i -e '/^docdir/d' Makefile.am # use standard docdir
 	eautoreconf
 }
 
 src_install() {
-	einstall
-	dodoc ChangeLog AUTHORS NEWS README || die "dodoc failed"
+	emake install DESTDIR="${D}" || die
+	dodoc ChangeLog AUTHORS NEWS README
 }
