@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.255 2010/04/11 19:52:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.256 2010/04/26 09:50:08 dev-zero Exp $
+
+*nginx-0.8.36 (26 Apr 2010)
+
+  26 Apr 2010; Tiziano Müller <dev-zero@gentoo.org> +nginx-0.8.36.ebuild:
+  Version bump. Make sure we don't depend on perl unconditionally.
 
 *nginx-0.8.35 (11 Apr 2010)
 
