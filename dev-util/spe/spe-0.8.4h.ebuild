@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.4h.ebuild,v 1.2 2010/04/08 18:40:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.4h.ebuild,v 1.3 2010/04/26 10:48:59 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="mirror://berlios/python/spe-${MY_PV}-wx2.6.1.0.tar.gz"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 DEPEND=""
 RDEPEND=">=dev-python/pychecker-0.8.18
