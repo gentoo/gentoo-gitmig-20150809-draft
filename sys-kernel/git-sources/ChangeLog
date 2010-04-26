@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.800 2010/04/26 07:43:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.801 2010/04/26 08:07:30 robbat2 Exp $
+
+  26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
+  git-sources-2.6.34_rc4.ebuild, git-sources-2.6.34_rc4-r1.ebuild,
+  git-sources-2.6.34_rc4-r2.ebuild, git-sources-2.6.34_rc4-r3.ebuild,
+  git-sources-2.6.34_rc4-r4.ebuild, git-sources-2.6.34_rc4-r5.ebuild,
+  git-sources-2.6.34_rc4-r6.ebuild, git-sources-2.6.34_rc5.ebuild,
+  git-sources-2.6.34_rc5-r1.ebuild, git-sources-2.6.34_rc5-r2.ebuild,
+  git-sources-2.6.34_rc5-r3.ebuild, git-sources-2.6.34_rc5-r4.ebuild,
+  git-sources-2.6.34_rc5-r5.ebuild, git-sources-2.6.34_rc5-r6.ebuild,
+  git-sources-2.6.34_rc5-r7.ebuild:
+  More control of deblob-available moved back to eclass.
 
   26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org>
   git-sources-2.6.34_rc4.ebuild, git-sources-2.6.34_rc4-r1.ebuild,
