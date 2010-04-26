@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3.4.ebuild,v 1.1 2010/02/08 11:35:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3.4.ebuild,v 1.2 2010/04/26 15:01:25 ssuominen Exp $
 
 EAPI="2"
 
@@ -46,6 +46,7 @@ DEPEND="${COMMONDEPEND}
 	sys-devel/gettext
 "
 RDEPEND="${COMMONDEPEND}
+	kde-base/oxygen-icons
 	infowidget? ( >=dev-libs/geoip-1.4.4 )
 	ipfilter? (
 			app-arch/bzip2

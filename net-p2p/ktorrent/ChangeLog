@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.141 2010/02/08 11:35:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.142 2010/04/26 15:01:25 ssuominen Exp $
+
+  26 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> ktorrent-3.3.4.ebuild:
+  Fix missing kde-base/oxygen-icons RDEPEND wrt #306725.
 
 *ktorrent-3.3.4 (08 Feb 2010)
 
