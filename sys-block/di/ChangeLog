@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/di
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.25 2010/04/16 13:55:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.26 2010/04/26 07:54:29 phajdan.jr Exp $
+
+  26 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> di-4.18.ebuild:
+  x86 stable wrt bug #314737
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> di-4.18.ebuild:
   stable ppc, bug 314737
