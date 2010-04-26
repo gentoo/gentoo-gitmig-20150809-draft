@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.3 2010/02/22 20:48:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.4 2010/04/26 09:55:10 ssuominen Exp $
 
 EAPI=3
 
@@ -29,8 +29,9 @@ TEXMF_PATH=/usr/share/texmf
 S=${WORKDIR}/${P}/texk/xdvik
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-open-mode.patch"
-	epatch "${FILESDIR}/${P}-cvararg.patch"
+	epatch "${FILESDIR}"/${P}-open-mode.patch \
+		"${FILESDIR}"/${P}-cvararg.patch \
+		"${FILESDIR}"/${P}-parallel_make.patch
 	# Make sure system kpathsea headers are used
 	cd "${WORKDIR}/${P}/texk/kpathsea"
 	for i in *.h ; do echo "#include_next \"$i\"" > $i; done
