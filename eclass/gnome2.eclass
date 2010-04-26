@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.86 2009/02/17 16:05:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.87 2010/04/26 19:37:25 abcd Exp $
 
 #
 # gnome2.eclass
@@ -83,6 +83,7 @@ gnome2_src_compile() {
 }
 
 gnome2_src_install() {
+	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
 	# if this is not present, scrollkeeper-update may segfault and
 	# create bogus directories in /var/lib/
 	local sk_tmp_dir="/var/lib/scrollkeeper"
@@ -93,10 +94,10 @@ gnome2_src_install() {
 
 	if [[ -z "${USE_EINSTALL}" || "${USE_EINSTALL}" = "0" ]]; then
 		debug-print "Installing with 'make install'"
-		emake DESTDIR="${D}" "scrollkeeper_localstate_dir=${D}${sk_tmp_dir} " "$@" install || die "install failed"
+		emake DESTDIR="${D}" "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" install || die "install failed"
 	else
 		debug-print "Installing with 'einstall'"
-		einstall "scrollkeeper_localstate_dir=${D}${sk_tmp_dir} " "$@" || die "einstall failed"
+		einstall "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" || die "einstall failed"
 	fi
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
@@ -106,15 +107,15 @@ gnome2_src_install() {
 
 	# Do not keep /var/lib/scrollkeeper because:
 	# 1. The scrollkeeper database is regenerated at pkg_postinst()
-	# 2. ${D}/var/lib/scrollkeeper contains only indexes for the current pkg
+	# 2. ${ED}/var/lib/scrollkeeper contains only indexes for the current pkg
 	#    thus it makes no sense if pkg_postinst ISN'T run for some reason.
 	if [[ -z "$(find "${D}" -name '*.omf')" ]]; then
 		export SCROLLKEEPER_UPDATE="0"
 	fi
-	rm -rf "${D}${sk_tmp_dir}"
+	rm -rf "${ED}${sk_tmp_dir}"
 
 	# Make sure this one doesn't get in the portage db
-	rm -fr "${D}/usr/share/applications/mimeinfo.cache"
+	rm -fr "${ED}/usr/share/applications/mimeinfo.cache"
 }
 
 gnome2_pkg_preinst() {
