@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/scidavis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.13 2010/03/15 22:09:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.14 2010/04/26 20:36:10 maekke Exp $
+
+  26 Apr 2010; Markus Meier <maekke@gentoo.org> scidavis-0.2.3.ebuild:
+  amd64 stable, bug #300267
 
 *scidavis-0.2.4 (15 Mar 2010)
 
