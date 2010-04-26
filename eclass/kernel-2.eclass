@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.227 2010/04/26 06:46:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.228 2010/04/26 06:48:33 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -91,21 +91,11 @@ RESTRICT="binchecks strip"
 # if you are adding new functionality in, put a call to it
 # at the start of src_unpack, or during SRC_URI/dep generation.
 debug-print-kernel2-variables() {
-	debug-print "PVR: ${PVR}"
-	debug-print "CKV: ${CKV}"
-	debug-print "OKV: ${OKV}"
-	debug-print "KV: ${KV}"
-	debug-print "KV_FULL: ${KV_FULL}"
-	debug-print "KV_MAJOR: ${KV_MAJOR}"
-	debug-print "KV_MINOR: ${KV_MINOR}"
-	debug-print "KV_PATCH: ${KV_PATCH}"
-	debug-print "RELEASETYPE: ${RELEASETYPE}"
-	debug-print "RELEASE: ${RELEASE}"
-	debug-print "UNIPATCH_LIST_DEFAULT: ${UNIPATCH_LIST_DEFAULT} "
-	debug-print "UNIPATCH_LIST_GENPATCHES: ${UNIPATCH_LIST_GENPATCHES} "
-	debug-print "UNIPATCH_LIST: ${UNIPATCH_LIST}"
-	debug-print "S: ${S}"
-	debug-print "KERNEL_URI: ${KERNEL_URI}"
+	for v in PVR CKV OKV KV KV_FULL KV_MAJOR KV_MINOR KV_PATCH RELEASETYPE \
+			RELEASE UNIPATCH_LIST_DEFAULT UNIPATCH_LIST_GENPATCHES \
+			UNIPATCH_LIST S KERNEL_URI ; do
+		debug-print "${v}: ${!v}"
+	done
 }
 
 #Eclass functions only from here onwards ...
