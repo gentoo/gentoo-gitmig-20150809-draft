@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.342.9.ebuild,v 1.2 2010/04/14 13:05:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.342.9.ebuild,v 1.3 2010/04/26 11:43:49 voyageur Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -94,6 +94,9 @@ src_prepare() {
 	fi
 	# Fix build failure with libpng-1.4, bug 310959.
 	epatch "${FILESDIR}"/${PN}-libpng-1.4.patch
+	# GCC 4.5 support, bug #317155
+	epatch "${FILESDIR}"/${PN}-gcc45.patch
+
 	# Prevent the make build from filling entire disk space on some systems,
 	# bug 297273.
 	epatch "${FILESDIR}"/${PN}-fix-make-build.patch
