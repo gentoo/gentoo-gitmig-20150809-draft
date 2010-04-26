@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/joni-1.1.3.ebuild,v 1.3 2010/01/03 21:08:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/joni-1.1.3.ebuild,v 1.4 2010/04/26 13:33:25 phajdan.jr Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="source"
@@ -11,7 +11,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 CDEPEND="dev-java/asm:3
