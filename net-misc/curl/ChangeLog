@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.156 2010/04/15 20:55:42 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.157 2010/04/26 09:10:54 phajdan.jr Exp $
+
+  26 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  curl-7.20.0-r2.ebuild:
+  x86 stable wrt bug #315507
 
 *curl-7.20.1 (15 Apr 2010)
 
