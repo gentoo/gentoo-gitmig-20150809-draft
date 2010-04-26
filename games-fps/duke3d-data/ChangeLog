@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/duke3d-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.4 2010/03/25 16:57:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.5 2010/04/26 11:55:23 fauli Exp $
+
+  26 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  duke3d-data-1.0.ebuild:
+  stable x86, bug 309703
 
   25 Mar 2010; Jeroen Roovers <jer@gentoo.org> duke3d-data-1.0.ebuild:
   Stable for PPC (bug #309703).

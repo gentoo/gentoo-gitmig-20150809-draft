@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0.ebuild,v 1.4 2010/03/25 16:57:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0.ebuild,v 1.5 2010/04/26 11:55:23 fauli Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="DUKE3D"
 SLOT="0"
-KEYWORDS="hppa ppc ~x86"
+KEYWORDS="hppa ppc x86"
 IUSE=""
 PROPERTIES="interactive"
 
