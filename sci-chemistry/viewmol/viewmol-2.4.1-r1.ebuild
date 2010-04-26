@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r1.ebuild,v 1.3 2010/04/25 11:00:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r1.ebuild,v 1.4 2010/04/26 07:31:36 jlec Exp $
 
 EAPI="3"
 
@@ -64,7 +64,7 @@ src_prepare() {
 	SCANDIR=
 	INCLUDE=\$(TIFFINCLUDE) -I\$(PNGINCLUDE) -I\$(PYTHONINCLUDE)
 	LIBRARY=\$(LIBTIFF) \$(LIBPNG) -L\$(LIBPYTHON)
-	LIBS=-L${EPREFIX}/$(get_libdir) -l\${PYTHONVERSION} -ltiff -lpng -lz -lGLU -lGL -L${EPREFIX}/usr/X11R6/lib -lXm -lXmu -lXp -lXi -lXext -lXt -lX11 -lpthread -lutil -ldl -lm
+	LIBS=-L${EPREFIX}/$(get_libdir) $(python_get_library -l) -ltiff -lpng -lz -lGLU -lGL -L${EPREFIX}/usr/X11R6/lib -lXm -lXmu -lXp -lXi -lXext -lXt -lX11 -lpthread -lutil -ldl -lm
 	EOF
 
 	cp .config.$(uname -s) makefile
