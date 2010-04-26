@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.225 2010/04/01 21:12:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.226 2010/04/26 06:44:38 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -247,7 +247,14 @@ detect_version() {
 }
 
 kernel_is() {
-	[[ -z ${OKV} ]] && detect_version
+	# ALL of these should be set before we can safely continue this function.
+	# some of the sources have in the past had only one set.
+	local v n=0
+	for v in OKV KV_{MAJOR,MINOR,PATCH} ; do [[ -z ${!v} ]] && n=1 ; done
+	[[ $n -eq 1 ]] && detect_version
+	unset v n
+
+	# Now we can continue
 	local operator test value x=0 y=0 z=0
 
 	case ${1} in
