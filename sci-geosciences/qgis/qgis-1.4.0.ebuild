@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.3 2010/04/26 22:50:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.4 2010/04/27 12:37:17 scarabeus Exp $
 
 EAPI="2"
 
@@ -51,6 +51,7 @@ pkg_setup() {
 src_configure() {
 	local mycmakeargs
 	mycmakeargs+=(
+		"-DQGIS_MANUAL_SUBDIR=/share/man/"
 		"-DBUILD_SHARED_LIBS:BOOL=ON"
 		"-DBINDINGS_GLOBAL_INSTALL:BOOL=ON"
 		"-DQGIS_LIB_SUBDIR=$(get_libdir)"
