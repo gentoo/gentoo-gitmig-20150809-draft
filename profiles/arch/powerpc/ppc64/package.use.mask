@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.13 2010/03/02 19:06:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.14 2010/04/27 06:37:40 mr_bones_ Exp $
+
+# uses games-board/ggz-gtk-client
+games-strategy/freeciv ggz
 
 # Mark Loeser <halcy0n@gentoo.org> (02 Mar 2010)
 # Mask webkit useflag since dev-python/mako and dev-python/pywebkitgtk are not

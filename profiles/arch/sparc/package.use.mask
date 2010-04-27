@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.46 2010/03/28 18:11:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.47 2010/04/27 06:37:40 mr_bones_ Exp $
+
+# uses games-board/ggz-gtk-client
+games-strategy/freeciv ggz
 
 # Ben de Groot <yngwin@gentoo.org> (18 Jan 2010)
 # newer qt-webkit is not keyworded (bug #235685)
