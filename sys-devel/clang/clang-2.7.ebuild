@@ -1,15 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r2.ebuild,v 1.1 2010/03/18 21:33:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7.ebuild,v 1.1 2010/04/27 12:08:55 voyageur Exp $
 
 EAPI=2
+
+RESTRICT_PYTHON_ABIS="3.*"
+SUPPORT_PYTHON_ABIS="1"
+
 inherit eutils python
 
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
 # Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tar.gz
-	http://llvm.org/releases/${PV}/${P}.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tgz
+	http://llvm.org/releases/${PV}/${P}.tgz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -21,16 +25,16 @@ DEPEND="static-analyzer? ( dev-lang/perl )
 	test? ( dev-util/dejagnu )"
 RDEPEND="~sys-devel/llvm-${PV}"
 
-S="${WORKDIR}/llvm-2.6"
+S="${WORKDIR}/llvm-2.7"
 
 src_prepare() {
-	mv "${WORKDIR}"/clang-2.6 "${S}"/tools/clang || die "clang source directory not found"
+	mv "${WORKDIR}"/clang-2.7 "${S}"/tools/clang || die "clang source directory not found"
 
 	# Same as llvm doc patches
-	epatch "${FILESDIR}"/${PN}-2.6-fixdoc.patch
+	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
 	# multilib-strict
-	sed -e "/PROJ_headers/s#lib/clang/1.0#$(get_libdir)/clang/1.0#" \
+	sed -e "/PROJ_headers/s#lib/clang#$(get_libdir)/clang#" \
 		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
 	# fix the static analyzer for in-tree install
@@ -38,24 +42,21 @@ src_prepare() {
 		-i tools/clang/tools/scan-view/scan-view \
 		|| die "scan-view sed failed"
 	sed -e "/scanview.css\|sorttable.js/s#\$RealBin#/usr/share/${PN}#" \
-		-i tools/clang/utils/scan-build \
+		-i tools/clang/tools/scan-build/scan-build \
 		|| die "scan-build sed failed"
-	# Broken test in 2.6, http://llvm.org/bugs/show_bug.cgi?id=5111
-	rm tools/clang/test/Analysis/retain-release.m
+	# Specify python version
+	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
 
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
-	sed -e 's,^PROJ_docsdir.*,PROJ_docsdir := $(DESTDIR)$(PROJ_prefix)/share/doc/'${PF}, \
-		-e 's,^PROJ_etcdir.*,PROJ_etcdir := $(DESTDIR)/etc/llvm,' \
-		-e 's,^PROJ_libdir.*,PROJ_libdir := $(DESTDIR)/usr/'$(get_libdir), \
+	sed -e 's,^PROJ_docsdir.*,PROJ_docsdir := $(PROJ_prefix)/share/doc/'${PF}, \
+		-e 's,^PROJ_etcdir.*,PROJ_etcdir := /etc/llvm,' \
+		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir), \
 		-i Makefile.config.in || die "Makefile.config sed failed"
 
 	einfo "Fixing rpath"
 	sed -e 's/\$(RPATH) -Wl,\$(\(ToolDir\|LibDir\))//g' -i Makefile.rules \
 		|| die "rpath sed failed"
-
-	# Do not force -O3 -fomit-frame-pointer on users, from llvm ebuild
-	epatch "${FILESDIR}"/llvm-2.6-cflags.patch
 }
 
 src_configure() {
@@ -83,10 +84,13 @@ src_configure() {
 }
 
 src_compile() {
-	emake VERBOSE=1 KEEP_SYMBOLS=1  clang-only || die "emake failed"
+	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1 clang-only || die "emake failed"
 }
 
 src_test() {
+	cd "${S}"/test || die "cd failed"
+	emake site.exp || die "updating llvm site.exp failed"
+
 	cd "${S}"/tools/clang || die "cd clang failed"
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
@@ -101,27 +105,29 @@ src_install() {
 	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install || die "install failed"
 
 	if use static-analyzer ; then
-		dobin utils/ccc-analyzer
-		dobin utils/scan-build
+		dobin tools/scan-build/ccc-analyzer
+		dosym ccc-analyzer /usr/bin/c++-analyzer
+		dobin tools/scan-build/scan-build
 
 		insinto /usr/share/${PN}
-		doins utils/scanview.css
-		doins utils/sorttable.js
+		doins tools/scan-build/scanview.css
+		doins tools/scan-build/sorttable.js
 
 		cd tools/scan-view || die "cd scan-view failed"
 		dobin scan-view
-		python_version
-		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/clang
-		doins Reporter.py Resources ScanView.py startfile.py
-		touch "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/clang/__init__.py
+		install-scan-view() {
+			insinto "$(python_get_sitedir)"/clang
+			doins Reporter.py Resources ScanView.py startfile.py
+			touch "${D}"/"$(python_get_sitedir)"/clang/__init__.py
+		}
+		python_execute_function install-scan-view
 	fi
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/clang
+	python_mod_optimize clang
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup clang
 }
