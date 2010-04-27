@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.0.ebuild,v 1.4 2010/04/13 15:49:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.0.ebuild,v 1.5 2010/04/27 06:38:00 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -11,12 +11,13 @@ SRC_URI="mirror://sourceforge/freeciv/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="auth dedicated ggz gtk ipv6 nls readline sdl +sound"
 
 RDEPEND="readline? ( sys-libs/readline )
 	sys-libs/zlib
 	app-arch/bzip2
+	dev-games/libggz
 	auth? ( virtual/mysql )
 	!dedicated? (
 		nls? ( virtual/libintl )
@@ -31,7 +32,7 @@ RDEPEND="readline? ( sys-libs/readline )
 			media-libs/libsdl[audio]
 			media-libs/sdl-mixer
 		)
-		ggz? ( dev-games/ggz-client-libs )
+		ggz? ( games-board/ggz-gtk-client )
 		media-libs/libpng
 	)"
 DEPEND="${RDEPEND}
@@ -61,7 +62,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myclient
+	local myclient myopts
 
 	if use dedicated ; then
 		myclient="no"
@@ -69,17 +70,19 @@ src_configure() {
 		use sdl && myclient="${myclient} sdl"
 		use gtk && myclient="${myclient} gtk"
 		[[ -z ${myclient} ]] && myclient="gtk" # default to gtk if none specified
+		myopts=$(use_with ggz ggz-client)
 	fi
 
 	egamesconf \
 		--disable-dependency-tracking \
 		--localedir=/usr/share/locale \
+		--with-ggzconfig=/usr/bin \
 		$(use_enable auth) \
 		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_with readline) \
 		$(use_enable sound sdl-mixer) \
-		$(use_with ggz ggz-client) \
+		${myopts} \
 		--enable-client="${myclient}"
 }
 
