@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/libdap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.6 2009/12/07 06:27:24 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.7 2010/04/27 10:06:52 scarabeus Exp $
+
+*libdap-3.10.0 (27 Apr 2010)
+
+  27 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/3.10.0-fix_tests.patch, -libdap-3.8.2.ebuild, -libdap-3.9.2.ebuild,
+  -files/libdap-3.9.2-gcc-4.4.patch, -libdap-3.9.3.ebuild,
+  +libdap-3.10.0.ebuild:
+  Version bump. Drop old.
 
 *libdap-3.9.3 (07 Dec 2009)
 
