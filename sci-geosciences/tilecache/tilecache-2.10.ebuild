@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tilecache/tilecache-2.10.ebuild,v 1.2 2010/04/06 08:24:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tilecache/tilecache-2.10.ebuild,v 1.3 2010/04/27 09:33:43 scarabeus Exp $
 
-EAPI="2"
+EAPI="3"
 
+PYTHON_DEPEND="2"
 inherit distutils
 
 DESCRIPTION="Web map tile caching system"
@@ -19,6 +20,10 @@ RDEPEND="dev-python/imaging"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 "
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_install() {
 	distutils_src_install "--debian"
