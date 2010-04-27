@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.45.ebuild,v 1.1 2010/03/05 16:49:35 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.45.ebuild,v 1.2 2010/04/27 17:30:46 ssuominen Exp $
 
 EAPI=2
 inherit bash-completion elisp-common eutils
@@ -32,6 +32,10 @@ pkg_setup() {
 	if [[ "$(gcc-version)" == "3.3" ]]; then
 		die 'requires >=gcc-3.4'
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {
