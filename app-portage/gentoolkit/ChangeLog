@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.192 2010/04/14 18:46:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.193 2010/04/27 10:15:18 aballier Exp $
+
+  27 Apr 2010; Alexis Ballier <aballier@gentoo.org>
+  gentoolkit-0.3.0_rc10-r1.ebuild, gentoolkit-9999.ebuild:
+  adapt realpath deps for freebsd and keyword it, bug #299970
 
   14 Apr 2010; Jeroen Roovers <jer@gentoo.org>
   gentoolkit-0.2.4.6.1-r1.ebuild:

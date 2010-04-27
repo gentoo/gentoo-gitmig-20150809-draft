@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.8 2010/04/05 21:04:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.9 2010/04/27 10:15:18 aballier Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -26,7 +26,7 @@ DEPEND="sys-apps/portage
 	>=dev-lang/python-2.6[xml]
 	!!>=dev-lang/python-2.6[-xml]"
 RDEPEND="${DEPEND}
-	app-misc/realpath
+	|| ( app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
 	sys-apps/grep"
 
