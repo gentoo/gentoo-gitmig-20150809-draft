@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libdbusmenu-qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.1 2010/03/31 16:31:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.2 2010/04/27 13:47:48 reavertm Exp $
+
+*libdbusmenu-qt-0.3.2-r1 (27 Apr 2010)
+
+  27 Apr 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  +libdbusmenu-qt-0.3.2-r1.ebuild, +files/libdbusmenu-qt-0.3.2-cmake.patch:
+  Version bump 0.3.2, fix bug 317389, restrict test, bug 315215
 
 *libdbusmenu-qt-0.3.0 (31 Mar 2010)
 
