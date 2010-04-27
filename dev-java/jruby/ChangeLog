@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.57 2010/04/06 08:22:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.58 2010/04/27 09:23:58 caster Exp $
+
+*jruby-1.4.1 (27 Apr 2010)
+
+  27 Apr 2010; Vlastimil Babka <caster@gentoo.org> -jruby-1.4.0-r4.ebuild,
+  -jruby-1.4.0-r5.ebuild, -files/jruby-1.4.0-system-jars.patch,
+  +jruby-1.4.1.ebuild, -files/auto_gem.rb:
+  Version bump, depend on new jcondings for security bug #312547.
 
   06 Apr 2010; Vlastimil Babka <caster@gentoo.org> jruby-1.4.0-r6.ebuild:
   Fix symlink upgrade instructions. Thanks to Martin von Gagern
