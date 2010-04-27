@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.51 2010/04/27 11:21:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100427.ebuild,v 1.1 2010/04/27 11:21:09 ssuominen Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ FONT_URI="
 if [[ ${PV} == *9999* ]]; then
 	RELEASE_URI=""
 else
-	RELEASE_URI="mirror://gentoo/${P}.tbz2"
+	RELEASE_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
 fi
 SRC_URI="${RELEASE_URI}
 	!truetype? ( ${FONT_URI} )
@@ -171,7 +171,7 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 else
 	KEYWORDS=""
 fi
