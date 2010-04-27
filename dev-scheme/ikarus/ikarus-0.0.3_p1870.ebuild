@@ -1,12 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3.ebuild,v 1.3 2008/06/01 18:03:13 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3_p1870.ebuild,v 1.1 2010/04/27 17:00:00 chiiph Exp $
 
-inherit eutils flag-o-matic autotools
+EAPI="3"
 
-DESCRIPTION="A free optimizing incremental native-code compiler for R6RS Scheme."
-HOMEPAGE="http://www.cs.indiana.edu/~aghuloum/ikarus/"
-SRC_URI="http://www.cs.indiana.edu/~aghuloum/ikarus/${P}.tar.gz"
+inherit eutils flag-o-matic autotools versionator
+
+MY_PV=$(get_version_component_range 4-)
+MY_PV=${MY_PV/p/}
+
+MY_P=${PN}-scheme-r${MY_PV}
+
+DESCRIPTION="A free optimizing incremental native-code compiler for R6RS Scheme"
+HOMEPAGE="http://ikarus-scheme.org/"
+SRC_URI="http://ikarus-scheme.org/ikarus.dev/${MY_P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -17,13 +24,14 @@ IUSE="sse2 doc"
 RDEPEND=">=dev-libs/gmp-4.2.2"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e 's/-O3//' configure.ac
+S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	sed -i -e 's/-O3//' configure.ac || die
 	epatch "${FILESDIR}/${P}-cpu_has_sse2.patch"
 	epatch "${FILESDIR}/${P}-ikarus-enter.patch"
-	eautoreconf || die "autoconf failed"
+
+	eautoreconf
 }
 
 src_compile() {
@@ -34,7 +42,6 @@ src_compile() {
 
 	append-flags "-std=gnu99"
 
-	econf || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -49,9 +56,9 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	rm -R "${D}/usr/share"
-	dodoc README ACKNOWLEDGMENTS
+	rm -Rf "${D}/usr/share"
+	dodoc README ACKNOWLEDGMENTS || die "dodoc failed"
 	if use doc; then
-		dodoc doc/*.pdf
+		dodoc doc/*.pdf || die "dodoc failed"
 	fi
 }
