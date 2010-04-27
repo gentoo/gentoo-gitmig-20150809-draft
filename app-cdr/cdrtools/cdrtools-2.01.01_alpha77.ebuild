@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha77.ebuild,v 1.2 2010/03/16 10:58:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha77.ebuild,v 1.3 2010/04/27 20:27:26 billie Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit multilib eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="A set of tools for CD/DVD reading and recording, including cdrecord"
 HOMEPAGE="http://cdrecord.berlios.de/private/cdrecord.html"
-if [[ ${PV%_alpha*} == ${PV} ]] ; then
+if [[ ${PV%_alpha*} == ${PV} ]]; then
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2"
 else
 SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl unicode"
 
-DEPEND="acl? ( sys-apps/acl )
+DEPEND="acl? ( virtual/acl )
 	!app-cdr/dvdrtools
 	!app-cdr/cdrkit"
 RDEPEND="${DEPEND}"
@@ -62,7 +62,7 @@ src_prepare() {
 
 	# Create additional symlinks needed for some archs.
 	local t
-	for t in ppc64 s390x ; do
+	for t in ppc64 s390x; do
 		ln -s i586-linux-cc.rul ${t}-linux-cc.rul || die
 		ln -s i586-linux-gcc.rul ${t}-linux-gcc.rul || die
 	done
@@ -92,16 +92,13 @@ src_compile() {
 		fi
 	fi
 
-	local acl="-lacl"
-	if ! use acl
-	then
+	if ! use acl; then
 		CFLAGS="${CFLAGS} -DNO_ACL"
-		acl=""
 	fi
 
 	# If not built with -j1, "sometimes" cdda2wav will not be built. Bug?
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
-		LDOPTX="${LDFLAGS}" LINKMODE="dynamic" LIB_ACL_TEST="${acl}" \
+		LDOPTX="${LDFLAGS}" LINKMODE="dynamic" \
 		GMAKE_NOWARN="true" || die "emake"
 }
 
