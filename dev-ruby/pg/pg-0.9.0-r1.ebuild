@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0.ebuild,v 1.2 2010/04/26 14:47:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.1 2010/04/27 10:24:26 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -36,11 +36,11 @@ each_ruby_configure() {
 	pushd ext
 	${RUBY} extconf.rb || die "extconf.rb failed"
 	popd
-	cp ext/*.so lib || die
 }
 
 each_ruby_compile() {
 	pushd ext
 	emake CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" || die "emake failed"
 	popd
+	cp ext/*.so lib || die
 }
