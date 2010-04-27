@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r1.ebuild,v 1.5 2010/03/23 20:33:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r1.ebuild,v 1.6 2010/04/27 17:59:24 matsuu Exp $
 
 EAPI="2"
 inherit autotools eutils flag-o-matic multilib
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.33
 	sys-devel/libtool"
 
-get_gtk_confdir() {
+pkg_setup() {
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
