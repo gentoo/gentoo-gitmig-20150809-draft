@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.6.0.ebuild,v 1.2 2010/04/26 05:29:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.6.0.ebuild,v 1.3 2010/04/27 04:50:10 mr_bones_ Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -41,6 +41,6 @@ all_ruby_compile() {
 each_ruby_test() {
 	mkdir "${HOME}/.rubyforge" || die
 	touch "${HOME}/.rubyforge/user-config.yml" || die
-	
+
 	each_fakegem_test
 }
