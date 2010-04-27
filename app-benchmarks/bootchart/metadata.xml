@@ -2,6 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>java</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+		<name>Default assignee for orphaned packages</name>
+		<description>Java is just optional in this package. A dedicated maintainer would be preferable.</description>
+	</maintainer>
 	<longdescription lang="en">
 		Performance analysis and visualization of the system boot process.
 	</longdescription>
