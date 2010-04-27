@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libdap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.7 2010/04/27 10:06:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.8 2010/04/27 15:19:14 scarabeus Exp $
+
+  27 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> libdap-3.10.0.ebuild:
+  Build static libs only when requested.
 
 *libdap-3.10.0 (27 Apr 2010)
 
