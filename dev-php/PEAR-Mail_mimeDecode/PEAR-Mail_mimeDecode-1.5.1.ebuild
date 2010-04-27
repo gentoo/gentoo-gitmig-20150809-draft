@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/PEAR-Mail_mimeDecode-1.5.1.ebuild,v 1.1 2010/01/05 05:48:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/PEAR-Mail_mimeDecode-1.5.1.ebuild,v 1.2 2010/04/27 16:22:58 beandog Exp $
 
 inherit php-pear-r1 eutils
 
@@ -14,5 +14,4 @@ IUSE=""
 # >=PEAR-Mail_Mime-1.5.2 in in DEPEND to avoid blockers and circular deps
 # with this package; using PDEPEND in PEAR-Mail_Mime for the same reason
 
-DEPEND=">=dev-php/PEAR-PEAR-1.6.0
-	>=dev-php/PEAR-Mail_Mime-1.5.2"
+DEPEND=">=dev-php/PEAR-Mail_Mime-1.5.2"

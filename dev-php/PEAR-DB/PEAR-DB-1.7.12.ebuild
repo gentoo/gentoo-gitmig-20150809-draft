@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/PEAR-DB-1.7.12.ebuild,v 1.11 2010/02/15 01:29:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/PEAR-DB-1.7.12.ebuild,v 1.12 2010/04/27 16:17:56 beandog Exp $
 
 inherit php-pear-r1
 
@@ -10,7 +10,3 @@ DESCRIPTION="Database abstraction layer for PHP."
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
-
-DEPEND="|| ( <dev-php/PEAR-PEAR-1.71
-	dev-php/PEAR-Console_Getopt )"
-RDEPEND=""
