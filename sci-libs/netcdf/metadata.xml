@@ -10,4 +10,7 @@
   Together, the interface, library, and format support the creation,
   access, and sharing of scientific data.
 </longdescription>
+<use>
+	<flag name="dap">Support for remote data access with the built-in OPeNDAP client</flag>
+</use>
 </pkgmetadata>
