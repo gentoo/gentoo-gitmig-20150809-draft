@@ -1,6 +1,14 @@
 # ChangeLog for sci-geosciences/osm2pgsql
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.1 2009/07/08 12:55:19 tupone Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.2 2010/04/27 09:22:19 scarabeus Exp $
+
+*osm2pgsql-99999999 (27 Apr 2010)
+*osm2pgsql-20100413 (27 Apr 2010)
+
+  27 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -osm2pgsql-20090707.ebuild, +osm2pgsql-20100413.ebuild,
+  +osm2pgsql-99999999.ebuild:
+  Version bump. Remove ebuild with old api version. Add live ebuild.
 
 *osm2pgsql-20090707 (08 Jul 2009)
 
