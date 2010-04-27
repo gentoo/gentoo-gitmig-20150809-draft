@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/naev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.2 2010/04/27 15:12:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.3 2010/04/27 15:30:36 ssuominen Exp $
+
+  27 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> naev-0.4.2.ebuild:
+  amd64 stable wrt #315913
 
   27 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> naev-0.4.2.ebuild:
   x86 stable wrt bug #315913
