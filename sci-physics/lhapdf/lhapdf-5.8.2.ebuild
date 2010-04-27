@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.2.ebuild,v 1.1 2010/03/23 02:37:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.2.ebuild,v 1.2 2010/04/27 16:28:04 bicatali Exp $
 
 EAPI=2
 
@@ -41,7 +41,7 @@ src_configure() {
 src_test() {
 	# need to make a bogus link for octave test
 	ln -s "${DISTDIR}" PDFsets
-	LHAPATH="${DISTDIR}" \
+	LHAPATH="${PWD}/PDFsets" \
 		LD_LIBRARY_PATH="${PWD}/lib/.libs:${LD_LIBRARY_PATH}" \
 		emake check || die "emake check failed"
 }
