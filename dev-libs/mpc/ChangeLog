@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.12 2010/01/19 05:19:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.13 2010/04/27 09:23:56 aballier Exp $
+
+  27 Apr 2010; Alexis Ballier <aballier@gentoo.org> mpc-0.8.1.ebuild:
+  keyword ~sparc-fbsd, bug #279851
 
 *mpc-0.8.1 (19 Jan 2010)
 
