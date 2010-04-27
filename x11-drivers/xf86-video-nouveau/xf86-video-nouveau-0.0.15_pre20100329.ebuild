@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.15_pre20100329.ebuild,v 1.2 2010/04/03 16:25:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.15_pre20100329.ebuild,v 1.3 2010/04/27 23:47:16 chithanh Exp $
 
 EAPI=2
 SNAPSHOT="yes"
@@ -33,14 +33,10 @@ pkg_postinst() {
 			ewarn "acceleration with nouveau, emerge x11-base/nouveau-drm or"
 			ewarn "enable CONFIG_DRM_NOUVEAU in the kernel."
 		fi
-		if kernel_is 2 6 33 && has_version ">=x11-libs/libdrm-2.4.18"; then
+		if kernel_is 2 6 33; then
 			ewarn "Nouveau DRM in kernel 2.6.33 is API incompatible to"
 			ewarn ">=x11-libs/libdrm-2.4.18, please use x11-base/nouveau-drm"
-			ewarn "or x11-libs/libdrm-2.4.18_pre20100211 instead."
-		fi
-		if ! has_version x11-drivers/nouveau-firmware; then
-			ewarn "Nouveau firmware not detected, for acceleration on NV50 (G80)"
-			ewarn "and newer chipsets, emerge x11-drivers/nouveau-firmware."
+			ewarn "instead."
 		fi
 	fi
 }
