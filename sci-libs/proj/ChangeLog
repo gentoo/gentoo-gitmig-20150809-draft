@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.19 2010/04/26 22:03:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.20 2010/04/27 12:39:30 scarabeus Exp $
+
+  27 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> proj-4.7.0.ebuild:
+  Add missing die to dodoc.
 
   26 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> proj-4.7.0.ebuild:
   Make static library configureable.

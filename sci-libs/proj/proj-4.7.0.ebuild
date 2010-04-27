@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.7.0.ebuild,v 1.4 2010/04/26 22:03:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.7.0.ebuild,v 1.5 2010/04/27 12:39:30 scarabeus Exp $
 
 EAPI="3"
 inherit base
@@ -32,7 +32,7 @@ src_configure() {
 
 src_install() {
 	base_src_install
-	dodoc README NEWS AUTHORS INSTALL ChangeLog nad/README.{NAD,NADUS}
+	dodoc README NEWS AUTHORS INSTALL ChangeLog nad/README.{NAD,NADUS} || die
 	cd nad
 	insinto /usr/share/proj
 	insopts -m 755
