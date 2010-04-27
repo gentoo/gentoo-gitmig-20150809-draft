@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.1 2010/04/26 17:00:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.2 2010/04/27 07:52:11 pva Exp $
+
+*eiskaltdcpp-2.0.1-r1 (27 Apr 2010)
+
+  27 Apr 2010; Peter Volkov <pva@gentoo.org> -eiskaltdcpp-2.0.1.ebuild,
+  +eiskaltdcpp-2.0.1-r1.ebuild, eiskaltdcpp-9999.ebuild:
+  Added FREE_SPACE_BAR_C=1 per Nikoli request.
 
 *eiskaltdcpp-9999 (26 Apr 2010)
 *eiskaltdcpp-2.0.1 (26 Apr 2010)

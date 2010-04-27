@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.1 2010/04/26 17:00:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.2 2010/04/27 07:52:11 pva Exp $
 
 EAPI=2
 
@@ -37,6 +37,7 @@ src_configure() {
 	[[ -z ${langs} ]] && langs=${LANGS}
 
 	local mycmakeargs=(
+		-DFREE_SPACE_BAR_C="1"
 		"$(cmake-utils_use spell USE_ASPELL)"
 		-Dlinguas="${langs}"
 	)
