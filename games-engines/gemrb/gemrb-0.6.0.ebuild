@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.0.ebuild,v 1.2 2010/02/03 21:49:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/gemrb-0.6.0.ebuild,v 1.3 2010/04/27 08:48:06 tupone Exp $
+PYTHON_DEPEND="2"
 
 EAPI=2
-inherit autotools eutils games
+inherit autotools eutils python games
 
 DESCRIPTION="Reimplementation of the Infinity engine"
 HOMEPAGE="http://gemrb.sourceforge.net/"
@@ -18,8 +19,12 @@ DEPEND=">=media-libs/libsdl-1.2
 	sys-libs/zlib
 	media-libs/libvorbis
 	media-libs/libpng
-	media-libs/openal
-	>=dev-lang/python-2.3"
+	media-libs/openal"
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
 src_prepare() {
 	sed -i \
