@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.65 2010/03/20 18:00:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.66 2010/04/27 15:41:21 phajdan.jr Exp $
+
+  27 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  eclipse-ecj-3.5.2.ebuild:
+  x86 stable wrt bug #316293
 
 *eclipse-ecj-3.5.2 (20 Mar 2010)
 
