@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.11 2007/02/07 13:56:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomeboyadvance/gnomeboyadvance-0.1.ebuild,v 1.12 2010/04/27 12:20:39 tupone Exp $
+EAPI="2"
+PYTHON_DEPEND="2"
 
-inherit games
+inherit python games
 
 DESCRIPTION="A GNOME Python frontend to VisualBoyAdvance"
 HOMEPAGE="http://developer.berlios.de/projects/gnomeboyadvance/"
@@ -13,21 +15,23 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.2
-	 >=dev-python/gnome-python-1.99
+RDEPEND=">=dev-python/gnome-python-1.99
 	 >=dev-python/pygtk-1.99
 	 games-emulation/visualboyadvance"
 
 S=${WORKDIR}/gnomeBoyAdvance-0.1
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
+src_prepare() {
 	sed -i \
 		-e 's:/usr/share/:/usr/share/games/:' \
 			gnomeboyadvance \
 			|| die "sed gnomeboyadvance failed"
+	python_convert_shebangs -r 2 ${PN}
 }
 
 src_install() {
