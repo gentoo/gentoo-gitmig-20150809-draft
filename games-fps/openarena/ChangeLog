@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/openarena
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.14 2010/03/12 08:01:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.15 2010/04/27 14:27:06 phajdan.jr Exp $
+
+  27 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  openarena-0.8.1-r1.ebuild:
+  x86 stable wrt bug #315299
 
   12 Mar 2010; Tupone Alfredo <tupone@gentoo.org> openarena-0.8.1-r1.ebuild,
   files/openarena-0.8.1-makefile.patch,
