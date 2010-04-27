@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.14.2.ebuild,v 1.2 2010/03/27 02:53:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.14.2.ebuild,v 1.3 2010/04/27 15:13:17 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://rst2pdf.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/docutils

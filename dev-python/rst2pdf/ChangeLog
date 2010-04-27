@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.4 2010/03/27 02:53:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.5 2010/04/27 15:13:17 djc Exp $
+
+  27 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> rst2pdf-0.14.2.ebuild:
+  keyword x86
 
   27 Mar 2010; Ben de Groot <yngwin@gentoo.org> rst2pdf-0.14.2.ebuild:
   Keep doc installation in one place. Remove unneeded die messages.
