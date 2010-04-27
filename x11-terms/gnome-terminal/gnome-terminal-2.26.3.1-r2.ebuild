@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r2.ebuild,v 1.10 2010/04/26 19:43:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r2.ebuild,v 1.11 2010/04/27 04:50:52 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -49,7 +49,7 @@ src_unpack() {
 	# daemon. Patch is from upstream git repository, included in 2.28
 	epatch "${FILESDIR}"/${P}-partial-fix-dbus-error.patch
 
-	# Remove useless Plural-Forms line which breaks build with new 
+	# Remove useless Plural-Forms line which breaks build with new
 	# gnome-doc-utils. See bug #304091
 	epatch "${FILESDIR}"/${P}-remove-plural.patch
 
