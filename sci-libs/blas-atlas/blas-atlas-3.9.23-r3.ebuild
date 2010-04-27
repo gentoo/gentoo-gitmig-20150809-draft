@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r3.ebuild,v 1.1 2010/04/20 18:26:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r3.ebuild,v 1.2 2010/04/27 08:03:23 jlec Exp $
 
 EAPI="3"
 
@@ -224,9 +224,8 @@ src_install () {
 		|| die "failed to install timing headers"
 
 	sed \
-		-e "s:/usr/:${EPREFIX}/usr/:g" \
+		-e "s:L/usr/:L${EPREFIX}/usr/:g" \
 		-e "s: /usr/lib: ${EPREFIX}/usr/lib:g" \
-		-e "s:${EPREFIX}${EPREFIX}:${EPREFIX}:g" \
 		-i \
 			${ED}/usr/$(get_libdir)/*.la \
 			${ED}/usr/$(get_libdir)/blas/*/*.la \
