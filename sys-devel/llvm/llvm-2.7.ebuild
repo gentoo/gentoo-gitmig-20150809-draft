@@ -1,18 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6-r1.ebuild,v 1.1 2010/03/18 19:38:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.7.ebuild,v 1.1 2010/04/27 11:49:22 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/releases/${PV}/${P}.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.tgz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alltargets debug +libffi llvm-gcc ocaml test"
+IUSE="alltargets debug +libffi llvm-gcc ocaml test udis86"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/make-3.79
@@ -25,7 +25,8 @@ DEPEND="dev-lang/perl
 	libffi? ( virtual/libffi )
 	llvm-gcc? ( sys-devel/llvm-gcc )
 	ocaml? ( dev-lang/ocaml )
-	test? ( dev-util/dejagnu )"
+	test? ( dev-util/dejagnu )
+	udis86? ( dev-libs/udis86 )"
 RDEPEND="dev-lang/perl"
 
 S=${WORKDIR}/${PN}-${PV/_pre*}
@@ -68,30 +69,16 @@ src_prepare() {
 	# unfortunately ./configure won't listen to --mandir and the-like, so take
 	# care of this.
 	einfo "Fixing install dirs"
-	sed -e 's,^PROJ_docsdir.*,PROJ_docsdir := $(DESTDIR)$(PROJ_prefix)/share/doc/'${PF}, \
-		-e 's,^PROJ_etcdir.*,PROJ_etcdir := $(DESTDIR)/etc/llvm,' \
-		-e 's,^PROJ_libdir.*,PROJ_libdir := $(DESTDIR)/usr/'$(get_libdir), \
-		-i Makefile.config.in || die "sed failed"
-
-	# this points by default to the build directory
-	einfo "Fixing gccld and gccas"
-	sed -e 's,^TOOLDIR.*,TOOLDIR=/usr/bin,' \
-		-i tools/gccld/gccld.sh tools/gccas/gccas.sh || die "sed failed"
+	sed -e 's,^PROJ_docsdir.*,PROJ_docsdir := $(PROJ_prefix)/share/doc/'${PF}, \
+		-e 's,^PROJ_etcdir.*,PROJ_etcdir := /etc/llvm,' \
+		-e 's,^PROJ_libdir.*,PROJ_libdir := $(PROJ_prefix)/'$(get_libdir), \
+		-i Makefile.config.in || die "Makefile.config sed failed"
 
 	einfo "Fixing rpath"
 	sed -e 's/\$(RPATH) -Wl,\$(\(ToolDir\|LibDir\))//g' -i Makefile.rules || die "sed failed"
 
-	# Fix docs installation
-	sed -e '/^NO_INSTALL_MANS/s/$/$(DST_MAN_DIR)tblgen.1 $(DST_MAN_DIR)llvmgcc.1 $(DST_MAN_DIR)llvmgxx.1/' \
-		-i docs/CommandGuide/Makefile || die "manpages sed failed"
-	epatch "${FILESDIR}"/${PN}-2.6-nodoctargz.patch
+	epatch "${FILESDIR}"/${PN}-2.7-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
-
-	# Buggy test, http://llvm.org/bugs/show_bug.cgi?id=5047
-	rm test/DebugInfo/2009-01-15-dbg_declare.ll
-
-	# Do not force -O3 -fomit-frame-pointer on users
-	epatch "${FILESDIR}"/${PN}-2.6-cflags.patch
 }
 
 src_configure() {
@@ -150,12 +137,15 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=none"
 	fi
 
+	if use udis86; then
+		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
+	fi
 	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
 	econf ${CONF_FLAGS} || die "econf failed"
 }
 
 src_compile() {
-	emake VERBOSE=1 KEEP_SYMBOLS=1 || die "emake failed"
+	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1 || die "emake failed"
 }
 
 src_install() {
