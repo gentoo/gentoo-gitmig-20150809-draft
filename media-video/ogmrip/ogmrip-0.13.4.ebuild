@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.4.ebuild,v 1.1 2010/04/26 19:11:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.4.ebuild,v 1.2 2010/04/27 10:35:50 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="aac dbus dts gtk libnotify matroska mp3 mp4 nls ogm spell srt theora vorbis x264 xvid"
 
-RDEPEND=">=dev-libs/glib-2.16:2
+COMMON_DEPEND=">=dev-libs/glib-2.16:2
 	>=app-i18n/enca-1.9
 	dev-libs/libxml2
 	media-libs/libdvdread
@@ -43,7 +43,9 @@ RDEPEND=">=dev-libs/glib-2.16:2
 		media-libs/libpng )
 	theora? ( media-libs/libtheora )
 	vorbis? ( media-sound/vorbis-tools )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	gnome-base/gvfs"
+DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext
 		dev-util/intltool )
 	dev-util/pkgconfig"
