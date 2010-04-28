@@ -1,14 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/files/quasselcore-2.init,v 1.1 2009/02/20 20:02:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/files/quasselcore-2.init,v 1.2 2010/04/28 18:42:42 billie Exp $
 
 depend() {
-	need net
+	if [ "${LOCAL_PGSQL}" == "yes" ]; then
+		need net postgresql
+	else
+		need net
+	fi
 }
 
 checkconfig() {
-	if [ -z "${QUASSEL_USER}" ] ; then
+	if [ -z "${QUASSEL_USER}" ]; then
 		eerror "Did you read the elog messages? You need to define the"
 		eerror "QUASSEL_USER variable in /etc/conf.d/quasselcore first."
 		return 1
@@ -19,12 +23,12 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting Quassel Core"
-	local LOGFILE="/var/log/quassel.log"
-	if [ ! -e ${LOGFILE} ] ; then
+	local LOGFILE=/var/log/quassel.log
+	if [ ! -e "${LOGFILE}" ]; then
 		touch ${LOGFILE} && chown ${QUASSEL_USER} ${LOGFILE}
 	fi
 
-	if [[ -n "${RC_UNAME}" ]]; then
+	if [ -n "${RC_UNAME}" ]; then
 		# running on baselayout-2/openrc
 		start-stop-daemon --start --user ${QUASSEL_USER} --background --make-pidfile \
 		--pidfile /var/run/quassel.pid --exec /usr/bin/quasselcore -- --logfile=${LOGFILE} \

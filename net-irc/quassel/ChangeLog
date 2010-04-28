@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.85 2010/04/18 11:44:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.86 2010/04/28 18:42:42 billie Exp $
+
+  28 Apr 2010; Daniel Pielmeier <billie@gentoo.org>
+  files/quasselcore-2.conf, files/quasselcore-2.init:
+  Add support for a local postgres backend to the init script to make the
+  database available when quasselcore starts up. Fixes bug #316799, thanks
+  to Aaron W. Swenson for reporting.
 
 *quassel-0.6.1 (18 Apr 2010)
 
