@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cbflib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.7 2010/03/31 20:25:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.8 2010/04/28 19:56:17 jlec Exp $
+
+*cbflib-0.9.0 (28 Apr 2010)
+
+  28 Apr 2010; Justin Lecher <jlec@gentoo.org> +files/0.9.0-Makefile.patch,
+  +cbflib-0.9.0.ebuild:
+  Version Bump, #317261
 
 *cbflib-0.8.1-r7 (31 Mar 2010)
 

@@ -1,0 +1,69 @@
+diff --git a/Makefile_LINUX_gcc42 b/Makefile_LINUX_gcc42
+index 52c5286..5d922a7 100644
+--- a/Makefile_LINUX_gcc42
++++ b/Makefile_LINUX_gcc42
+@@ -282,7 +282,7 @@ SHAR	= /usr/bin/shar
+ #
+ # Program to use to create archives
+ #
+-AR	= /usr/bin/ar
++AR	= ar
+ 
+ #
+ # Program to use to add an index to an archive
+@@ -292,13 +292,13 @@ RANLIB  = /usr/bin/ranlib
+ #
+ # Program to use to decompress a data file
+ #
+-DECOMPRESS = /usr/bin/bunzip2
++DECOMPRESS = bunzip2
+ 
+ 
+ #
+ # Program to use to compress a data file
+ #
+-COMPRESS = /usr/bin/bzip2
++COMPRESS = bzip2
+ 
+ #
+ # Program to use to generate a signature
+@@ -486,9 +486,9 @@ F90SOURCE = $(SRC)/fcb_atol_wcnt.f90     \
+ 		    $(SRC)/fcb_read_image.f90    \
+ 		    $(SRC)/fcb_read_line.f90     \
+ 		    $(SRC)/fcb_read_xds_i2.f90   \
+-		    $(SRC)/fcb_skip_whitespace.f90 \
+-		    $(EXAMPLES)/test_fcb_read_image.f90 \
+-		    $(EXAMPLES)/test_xds_binary.f90
++		    $(SRC)/fcb_skip_whitespace.f90
++#		    $(EXAMPLES)/test_fcb_read_image.f90 \
++#		    $(EXAMPLES)/test_xds_binary.f90
+ 		    
+ 		   
+ #
+@@ -849,7 +849,7 @@ endif
+ $(SOLIB)/libcbf.so: $(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
+ 	$(CC) $(CFLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(SOURCE)
+ 	mv *.o $(SOLIB)
+-	$(CC) -o $@ $(SOLIB)/*.o $(SOLDFLAGS) $(EXTRALIBS)
++	$(CC) $(LDFLAGS) -Wl,-soname,libcbf.so.$(VERSION) $(SOCFLAGS) $(SOLDFLAGS) -o $@ $(SOLIB)/*.o $(EXTRALIBS)
+ 
+ #
+ # IMG library
+@@ -864,7 +864,7 @@ endif
+ 	
+ $(SOLIB)/libimg.so: $(SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
+ 	$(CC) $(CFLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(EXAMPLES)/img.c
+-	$(CC) -o $@ img.o $(SOLDFLAGS)
++	$(CC) $(LDFLAGS) -Wl,-soname,libimg.so.$(VERSION) $(SOCFLAGS) $(SOLDFLAGS) -o $@ img.o
+ 	rm img.o
+ 
+ #
+@@ -891,7 +891,7 @@ endif
+ $(SOLIB)/libfcb.so: $(F90SOURCE) $(HEADERS) $(COMMONDEP) $(SOLIB)
+ ifneq ($(F90C),)
+ 	$(F90C) $(F90FLAGS) $(SOCFLAGS) $(INCLUDES) $(WARNINGS) -c $(F90SOURCE)
+-	$(F90C) $(F90FLAGS) -o $@ *.o $(SOLDFLAGS)
++	$(F90C) $(LDFLAGS) -Wl,-soname,libfcb.so.$(VERSION) $(SOCFLAGS) $(SOLDFLAGS) $(F90FLAGS) -o $@ *.o 
+ 	rm *.o
+ else
+ 	echo "Define F90C to build $(SOLIB)/libfcb.so"
