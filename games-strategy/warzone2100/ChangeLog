@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.40 2010/04/25 22:36:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.41 2010/04/28 20:53:50 mr_bones_ Exp $
+
+  28 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  warzone2100-2.3.0.ebuild:
+  use the higher quality videos (bug #317283)
 
 *warzone2100-2.3.0 (25 Apr 2010)
 
