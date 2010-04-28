@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.52_pre6321.ebuild,v 1.1 2010/04/21 12:51:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.53_pre6326.ebuild,v 1.1 2010/04/28 18:02:15 jer Exp $
 
 EAPI="2"
 
