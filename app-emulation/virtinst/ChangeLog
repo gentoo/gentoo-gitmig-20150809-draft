@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.17 2010/02/09 17:04:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.18 2010/04/28 21:33:45 cardoe Exp $
+
+*virtinst-0.500.3 (28 Apr 2010)
+
+  28 Apr 2010; Doug Goldstein <cardoe@gentoo.org>
+  -files/virtinst-0.400.3-kvm-img.patch, -virtinst-0.500.1.ebuild,
+  +virtinst-0.500.3.ebuild:
+  bump version (bug #312731) and fix bug #311193. Remove older version with
+  a bunch of known bugs we don't want to support since they're fixed in
+  newer versions
 
 *virtinst-0.500.2 (09 Feb 2010)
 
