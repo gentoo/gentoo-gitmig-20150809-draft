@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mobile</herd>
+  <herd>mobile</herd>
+  <use>
+    <flag name="consolekit">Install consolekit based powerbtn.sh (power button) script</flag>
+  </use>
 </pkgmetadata>
