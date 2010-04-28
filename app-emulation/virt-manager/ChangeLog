@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.28 2010/02/12 00:03:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.29 2010/04/28 22:32:31 cardoe Exp $
+
+*virt-manager-0.8.4 (28 Apr 2010)
+
+  28 Apr 2010; Doug Goldstein <cardoe@gentoo.org>
+  +virt-manager-0.8.4.ebuild:
+  version bump (#312733). fixed bug #311195 and bug #297434
 
   12 Feb 2010; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.8.2.ebuild,
   virt-manager-0.8.2-r1.ebuild, virt-manager-0.8.3.ebuild, metadata.xml:
