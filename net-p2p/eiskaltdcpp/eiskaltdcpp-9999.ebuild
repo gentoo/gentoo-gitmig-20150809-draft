@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.2 2010/04/27 07:52:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.3 2010/04/28 06:05:36 pva Exp $
 
 EAPI=2
 
-LANGS="be en hu ru"
+LANGS="be en fr hu ru pl"
 inherit qt4-r2 cmake-utils subversion
 
 DESCRIPTION="Qt4 based client for DirectConnect and ADC protocols, based on DC++ library"
