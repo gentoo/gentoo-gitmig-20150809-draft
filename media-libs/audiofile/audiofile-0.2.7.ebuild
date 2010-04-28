@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.7.ebuild,v 1.1 2010/04/28 16:03:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.2.7.ebuild,v 1.2 2010/04/28 20:18:22 mr_bones_ Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -20,7 +20,7 @@ src_prepare() {
 	sed -i \
 		-e 's:noinst_PROGRAMS:check_PROGRAMS:' \
 		test/Makefile.am || die
-	
+
 	eautoreconf
 }
 
