@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.61 2010/04/13 15:41:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.62 2010/04/28 17:18:38 arfrever Exp $
+
+*logilab-common-0.50.1 (28 Apr 2010)
+
+  28 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -logilab-common-0.45.2.ebuild, -logilab-common-0.46.0.ebuild,
+  -logilab-common-0.46.1.ebuild, -logilab-common-0.48.0.ebuild,
+  +logilab-common-0.50.1.ebuild:
+  Version bump.
 
   13 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   logilab-common-0.49.0.ebuild:
