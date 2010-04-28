@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zope-app-pagetemplate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-pagetemplate/ChangeLog,v 1.6 2010/02/14 19:17:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-pagetemplate/ChangeLog,v 1.7 2010/04/28 21:17:47 arfrever Exp $
+
+*zope-app-pagetemplate-3.11.0 (28 Apr 2010)
+
+  28 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-app-pagetemplate-3.10.1.ebuild,
+  +zope-app-pagetemplate-3.11.0.ebuild:
+  Version bump.
 
   14 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   zope-app-pagetemplate-3.10.1.ebuild:
