@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11.ebuild,v 1.1 2010/04/28 11:50:52 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11.ebuild,v 1.2 2010/04/28 12:05:35 ali_bush Exp $
 
 EAPI="2"
-NEED_PYTHON="2.4"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit fdo-mime gnome2-utils distutils eutils
@@ -21,13 +21,9 @@ DEPEND=""
 RDEPEND=">=dev-java/java-config-wrapper-0.15"
 # Tests fail when java-config isn't already installed.
 RESTRICT="test"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5"
 
 PYTHON_MODNAME="java_config_2"
-
-src_prepare() {
-	sed -e "s/if not self.dry_run/& and not os.path.exists(s)/" -i setup.py || die "sed failed"
-}
 
 src_test() {
 	testing() {

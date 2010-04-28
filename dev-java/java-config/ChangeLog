@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.241 2010/04/28 11:50:52 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.242 2010/04/28 12:05:35 ali_bush Exp $
+
+  29 Apr 2010; Alistair Bush <ali_bush@gentoo.org>
+  java-config-2.1.11.ebuild:
+  Update 2.1.11 based on suggestions from Arfrever.
 
 *java-config-2.1.11 (28 Apr 2010)
 
