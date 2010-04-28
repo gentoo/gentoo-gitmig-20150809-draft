@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.1.ebuild,v 1.1 2010/04/28 04:53:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.1.1.ebuild,v 1.2 2010/04/28 14:55:16 bicatali Exp $
 
 EAPI="2"
 
@@ -66,10 +66,6 @@ src_configure() {
 }
 
 src_compile() {
-	emake install -j1 -C omalloc || die "emake omalloc failed"
-	emake install -j1 -C factory || die "emake factory failed"
-	emake install -C libfac || die "emake libfac failed"
-	emake install -C kernel || die "emake libfac failed"
 	emake -j1 || die "emake failed"
 	if use emacs; then
 		cd "${WORKDIR}"/${MY_PN}/${MY_PV}/emacs/

@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.32 2010/04/28 04:53:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.33 2010/04/28 14:55:16 bicatali Exp $
+
+  28 Apr 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  singular-3.1.1.ebuild:
+  Reverted to full -j1, simple hacks for parallel builds unstable
 
 *singular-3.1.1 (28 Apr 2010)
 
