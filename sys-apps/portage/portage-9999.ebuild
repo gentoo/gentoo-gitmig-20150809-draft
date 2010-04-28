@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.3 2010/03/28 05:49:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.4 2010/04/28 07:26:51 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -163,8 +163,8 @@ src_install() {
 
 	local x symlinks
 
-	for x in $(find "$S"/bin -type d) ; do
-		x=${x#$S/}
+	cd "$S" || die "cd failed"
+	for x in $(find bin -type d) ; do
 		exeinto $portage_base/$x || die "exeinto failed"
 		cd "$S"/$x || die "cd failed"
 		doexe $(find . -mindepth 1 -maxdepth 1 -type f ! -type l) || \
@@ -175,8 +175,8 @@ src_install() {
 		fi
 	done
 
-	for x in $(find "$S"/pym -type d) ; do
-		x=${x#$S/}
+	cd "$S" || die "cd failed"
+	for x in $(find pym/* -type d) ; do
 		insinto $portage_base/$x || die "insinto failed"
 		cd "$S"/$x || die "cd failed"
 		doins *.py || die "doins failed"
