@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/irda-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.34 2009/10/09 09:22:57 sbriesen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.35 2010/04/28 22:27:37 jer Exp $
+
+  28 Apr 2010; Jeroen Roovers <jer@gentoo.org> irda-utils-0.9.18-r3.ebuild,
+  +files/irda-utils-0.9.18-dofail.patch:
+  Fail in the top Makefile (bug #317539).
 
   09 Oct 2009; Stefan Briesenick <sbriesen@gentoo.org> files/irda.confd:
   fixed reference to irda(.conf)

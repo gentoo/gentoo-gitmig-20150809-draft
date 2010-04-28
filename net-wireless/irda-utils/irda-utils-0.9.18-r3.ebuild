@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r3.ebuild,v 1.5 2009/10/08 19:54:30 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r3.ebuild,v 1.6 2010/04/28 22:27:37 jer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-makefile.diff"
 	epatch "${FILESDIR}/${P}-smcinit.diff"
 	epatch "${FILESDIR}/${P}-io.h.diff"
+	epatch "${FILESDIR}/${P}-dofail.patch"
 
 	# fix crosscompile, respect CFLAGS (Bug 200295)
 	sed -i -e "/^CC/s:gcc:$(tc-getCC):" \
