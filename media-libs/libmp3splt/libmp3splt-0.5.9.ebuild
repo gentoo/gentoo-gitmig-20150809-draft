@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.6.ebuild,v 1.2 2009/07/22 20:04:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.9.ebuild,v 1.1 2010/04/28 06:59:56 ssuominen Exp $
 
 EAPI=2
 inherit multilib
@@ -28,11 +28,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog LIMITS NEWS README TODO
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog LIMITS NEWS README TODO || die
 	find "${D}"/usr -name '*.la' -delete
-}
-
-pkg_postinst() {
-	chmod -R 755 "${ROOT}"usr/$(get_libdir)/${PN}
 }
