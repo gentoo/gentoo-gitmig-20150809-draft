@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.04.ebuild,v 1.1 2010/04/28 06:12:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.04.ebuild,v 1.2 2010/04/28 09:04:33 ssuominen Exp $
 
 EAPI=2
 inherit autotools fdo-mime multilib
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	if ! use lirc; then
 		sed -i \
+			-e '/AC_CHECK_HEADER/s:lirc_client.h:dIsAbLe&:' \
 			-e '/AC_CHECK_LIB/s:lirc_init:dIsAbLe&:' \
 			configure.ac || die
 	fi
