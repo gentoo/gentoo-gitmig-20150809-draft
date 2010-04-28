@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.66 2010/03/14 07:20:33 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.67 2010/04/28 07:34:46 phajdan.jr Exp $
+
+  28 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  lucene-2.9.1-r1.ebuild:
+  x86 stable wrt bug #299867
 
 *lucene-2.9.1-r1 (13 Mar 2010)
 
