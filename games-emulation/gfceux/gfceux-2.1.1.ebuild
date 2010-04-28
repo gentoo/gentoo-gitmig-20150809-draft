@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1.ebuild,v 1.2 2009/11/02 21:09:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1.ebuild,v 1.3 2010/04/28 08:28:55 tupone Exp $
 
 EAPI=2
-inherit eutils distutils games
+PYTHON_DEPEND="2:2.5"
+inherit eutils python distutils games
 
 DESCRIPTION="A graphical frontend for the FCEUX emulator"
 HOMEPAGE="http://fceux.com"
@@ -14,20 +15,24 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.5
-	dev-python/pygtk"
+DEPEND="dev-python/pygtk"
 RDEPEND="${DEPEND}
 	games-emulation/fceux"
 
 S=${WORKDIR}/${PN}
 
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
 src_prepare() {
+	python_convert_shebangs -r 2 .
 	distutils_src_prepare
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
-	python_version
 	distutils_src_compile
 }
 
