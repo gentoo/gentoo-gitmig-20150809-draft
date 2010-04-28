@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r1.ebuild,v 1.9 2009/12/11 15:58:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r1.ebuild,v 1.10 2010/04/28 18:23:25 hwoarang Exp $
 
 inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2
 
@@ -140,7 +140,7 @@ src_compile() {
 		$(use_enable java) \
 		$(use_with java javahome ${JAVA_HOME}) \
 		$(use_with mysql) \
-		$(use_with postgres pgsql $(pg_config --libdir)) \
+		$(use_with postgres pgsql $(pkg_config --libdir)) \
 		$(use_with sqlite) \
 		$(use_enable srp) \
 		${myconf} || die "econf failed"
