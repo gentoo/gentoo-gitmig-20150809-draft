@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r3.ebuild,v 1.1 2010/04/26 21:46:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.6-r3.ebuild,v 1.2 2010/04/28 08:40:06 voyageur Exp $
 
 EAPI=2
 
@@ -62,6 +62,8 @@ src_prepare() {
 
 	# Do not force -O3 -fomit-frame-pointer on users, from llvm ebuild
 	epatch "${FILESDIR}"/llvm-2.6-cflags.patch
+	# GCC 4.5 support, bug #317467
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {
