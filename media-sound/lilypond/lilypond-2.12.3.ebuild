@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.1 2010/04/13 18:35:47 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.2 2010/04/28 12:31:12 chiiph Exp $
 
 EAPI="3"
 
-inherit eutils versionator toolchain-funcs elisp-common flag-o-matic
+PYTHON_DEPEND="2"
+
+inherit eutils versionator toolchain-funcs elisp-common flag-o-matic python
 
 DESCRIPTION="GNU Music Typesetter"
 SRC_URI="http://download.linuxaudio.org/lilypond/sources/v$(get_version_component_range 1-2)/${P}.tar.gz"
@@ -16,12 +18,11 @@ KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 
 IUSE="debug emacs profile"
 
-RDEPEND="
+RDEPEND="|| ( media-fonts/gnu-gs-fonts-std media-fonts/urw-fonts )
 	>=media-libs/freetype-2
 	media-libs/fontconfig
 	>=x11-libs/pango-1.12.3
 	>=dev-scheme/guile-1.8.2[deprecated,regex]
-	>=dev-lang/python-2.4
 	|| ( >=app-text/ghostscript-gnu-8.15
 		 >=app-text/ghostscript-gpl-8.15 )
 	emacs? ( virtual/emacs )"
@@ -38,6 +39,10 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=sys-devel/bison-2.0"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-qa_pyc_fix.patch
 }
@@ -49,6 +54,7 @@ src_configure() {
 	fi
 
 	if use profile; then
+		einfo "Stripping -fomit-frame-pointer flag"
 		strip-flags -fomit-frame-pointer
 	fi
 
@@ -78,7 +84,7 @@ src_compile() {
 # for our purposes.
 RESTRICT=test
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" vimdir=/usr/share/vim/vimfiles install || die "emake install failed"
 
 	# remove elisp files since they are in the wrong directory
@@ -91,6 +97,8 @@ src_install () {
 	fi
 
 	dodoc AUTHORS.txt HACKING NEWS.txt README.txt || die
+
+	python_convert_shebangs -r 2 "${D}"
 }
 
 pkg_postinst() {
