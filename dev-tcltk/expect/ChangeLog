@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.71 2010/04/23 10:44:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.72 2010/04/28 19:58:03 jlec Exp $
+
+  28 Apr 2010; Justin Lecher <jlec@gentoo.org> expect-5.44.1.15.ebuild:
+  Fix for changed path of example files, #316885, thanks Juergen Rose for
+  providing the patch
 
   23 Apr 2010; Justin Lecher <jlec@gentoo.org> expect-5.43.0-r1.ebuild,
   expect-5.44.1.15.ebuild:

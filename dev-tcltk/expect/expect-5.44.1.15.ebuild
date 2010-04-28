@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.4 2010/04/23 10:44:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.5 2010/04/28 19:58:03 jlec Exp $
 
 EAPI="3"
 
@@ -90,7 +90,9 @@ src_install() {
 		local scripts=$(make -qp | \
 			sed -e 's/^SCRIPTS = //' -et -ed | head -n1)
 		insinto /usr/share/doc/${PF}/examples
-		doins ${scripts} || die
+		for s in ${scripts}; do
+			doins example/${s} || die
+		done
 		local scripts_manpages=$(make -qp | \
 		       sed -e 's/^_SCRIPTS_MANPAGES = //' -et -ed | head -n1)
 		for m in ${scripts_manpages}; do
