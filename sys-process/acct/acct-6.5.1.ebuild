@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.1.ebuild,v 1.8 2010/03/11 18:35:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.1.ebuild,v 1.9 2010/04/28 19:32:40 jer Exp $
 
 DESCRIPTION="GNU system accounting utilities"
 HOMEPAGE="https://savannah.gnu.org/projects/acct/"
@@ -20,7 +20,7 @@ src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 	keepdir /var/account
-	newinitd "${FILESDIR}"/acct.rc6 acct || die
+	newinitd "${FILESDIR}"/acct.initd acct || die
 	newconfd "${FILESDIR}"/acct.confd acct
 
 	# sys-apps/sysvinit already provides this

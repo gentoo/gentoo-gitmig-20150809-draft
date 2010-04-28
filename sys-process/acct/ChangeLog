@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.24 2010/04/28 19:09:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.25 2010/04/28 19:32:40 jer Exp $
+
+*acct-6.5.4-r1 (28 Apr 2010)
+
+  28 Apr 2010; Jeroen Roovers <jer@gentoo.org> acct-6.5.1.ebuild,
+  acct-6.5.3.ebuild, acct-6.5.4.ebuild, +acct-6.5.4-r1.ebuild,
+  +files/acct.initd, +files/acct.logrotate, -files/acct.rc6, metadata.xml:
+  Rename initd script to be more Gentoo like. Bump to add logrotate script
+  thanks to Jeremy Sermersheim (bug #313099).
 
   28 Apr 2010; Jeroen Roovers <jer@gentoo.org> -acct-6.3.5-r1.ebuild,
   -acct-6.3.5-r2.ebuild, -files/acct.rc6-6.3.5-r3, -acct-6.3.5-r3.ebuild,
