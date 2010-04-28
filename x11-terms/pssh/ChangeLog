@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/pssh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/ChangeLog,v 1.14 2010/01/06 19:28:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/ChangeLog,v 1.15 2010/04/28 01:23:34 jsbronder Exp $
+
+*pssh-2.1.1 (28 Apr 2010)
+
+  28 Apr 2010; Justin Bronder <jsbronder@gentoo.org> +pssh-2.1.1.ebuild:
+  Version bump, update for python.eclass changes, fix homepage. #317037 and
+  #316823.
 
   06 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pssh-1.4.3.ebuild:
   Transfer Prefix keywords
