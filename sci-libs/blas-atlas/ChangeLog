@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.100 2010/04/20 18:26:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.101 2010/04/28 07:28:46 jlec Exp $
+
+*blas-atlas-3.9.23-r4 (28 Apr 2010)
+
+  28 Apr 2010; Justin Lecher <jlec@gentoo.org> -blas-atlas-3.9.23-r3.ebuild,
+  +blas-atlas-3.9.23-r4.ebuild:
+  Fixes installation of broken .la files, #316863
 
 *blas-atlas-3.9.23-r3 (20 Apr 2010)
 

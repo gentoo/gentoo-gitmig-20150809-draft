@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r3.ebuild,v 1.2 2010/04/27 08:03:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r4.ebuild,v 1.1 2010/04/28 07:28:46 jlec Exp $
 
 EAPI="3"
 
