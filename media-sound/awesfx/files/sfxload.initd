@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/files/sfxload.initd,v 1.1 2009/05/30 19:22:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/files/sfxload.initd,v 1.2 2010/04/28 19:01:05 ssuominen Exp $
 
 depend() {
 	need alsasound
@@ -9,12 +9,12 @@ depend() {
 
 start() {
 	ebegin "Loading sound font bank"
-	/usr/bin/sfxload -q ${sfxbank}
+	${sfxload} -q "${sfxbank}"
 	eend $? "Error at loading sound font bank ${sfxbank}"
 }
 
 stop() {
 	ebegin "Unloading sound font bank"
-	/usr/bin/sfxload -i -q
+	${sfxload} -i -q
 	eend $? "Error at unloading sound font bank"
 }
