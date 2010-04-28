@@ -85,3 +85,14 @@ diff -ru scid.orig/tcl/utils/sound.tcl scid/tcl/utils/sound.tcl
      set hasSnackPackage 0
      ::splash::add "    Move speech disabled - Snack sound package not found"
      return
+--- scid/Makefile.conf.old	2010-04-28 11:02:18.000000000 +0200
++++ scid/Makefile.conf		2010-04-28 11:03:17.000000000 +0200
+@@ -199,7 +199,7 @@
+ # Small extra programs. Most are written in Tcl using tcscid, but
+ # a few contributed ones may be in Python or other languages.
+ #
+-SCRIPTS= sc_addmove sc_epgn sc_spell sc_eco sc_import sc_remote sc_tree scidpgn pgnfix spliteco spf2spi
++SCRIPTS= sc_addmove sc_epgn sc_spell sc_eco sc_import sc_remote sc_tree scidpgn pgnfix eco2pgn spliteco spf2spi
+ 
+ ####################
+ 

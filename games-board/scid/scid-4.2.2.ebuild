@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.2.2.ebuild,v 1.5 2010/03/24 14:09:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.2.2.ebuild,v 1.6 2010/04/28 09:17:11 tupone Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs games
+PYTHON_DEPEND="2"
+inherit eutils toolchain-funcs python games
 
 DESCRIPTION="a free chess database application"
 HOMEPAGE="http://scid.sourceforge.net/"
@@ -23,10 +24,14 @@ DEPEND=">=dev-lang/tk-8.3
 	app-arch/unzip"
 RDEPEND="${DEPEND}
 	!games-board/chessdb
-	x11-libs/libX11
-	>=dev-lang/python-2.1"
+	x11-libs/libX11"
 
 S=${WORKDIR}/${PN}
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
@@ -37,6 +42,7 @@ src_prepare() {
 		src/scidlet.cpp \
 		|| die "sed failed"
 	gzip ../ratings_2009_01.ssp
+	python_convert_shebangs -r 2 .
 }
 
 src_configure() {
