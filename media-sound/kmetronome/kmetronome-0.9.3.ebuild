@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmetronome/kmetronome-0.9.3.ebuild,v 1.1 2010/04/27 23:54:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmetronome/kmetronome-0.9.3.ebuild,v 1.2 2010/04/28 00:09:10 ssuominen Exp $
 
 EAPI=2
 # FIXME. Doesn't work with KDE_LINGUAS added
@@ -26,5 +26,5 @@ src_configure() {
 		"-DSTATIC_DRUMSTICK=OFF"
 		)
 
-	cmake-utils_src_configure
+	kde4-base_src_configure
 }
