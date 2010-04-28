@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100427.ebuild,v 1.1 2010/04/27 11:21:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100427.ebuild,v 1.2 2010/04/28 14:58:06 ssuominen Exp $
 
 EAPI="2"
 
@@ -235,7 +235,7 @@ src_unpack() {
 	fi
 
 	use gmplayer && unpack "Blue-${BLUV}.tar.bz2"
-	use svga && unpack "svgalib_helper-${SVGV}-mplayer.tar.gz"
+	use svga && unpack "svgalib_helper-${SVGV}-mplayer.tar.bz2"
 }
 
 src_prepare() {
