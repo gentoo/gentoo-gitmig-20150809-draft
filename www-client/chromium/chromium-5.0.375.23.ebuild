@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.371.0.ebuild,v 1.5 2010/04/13 18:03:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.23.ebuild,v 1.1 2010/04/28 13:12:18 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bindist +plugins-symlink"
+IUSE="mp3 +plugins-symlink x264"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
@@ -23,18 +23,20 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	>=media-video/ffmpeg-0.5_p21602[threads]
+	>=media-video/ffmpeg-0.5_p21602[mp3=,threads,x264=]
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver"
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
+	dev-lang/perl
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex"
 RDEPEND+="
 	|| (
 		x11-themes/gnome-icon-theme
+		x11-themes/oxygen-molecule
 		x11-themes/tango-icon-theme
 		x11-themes/xfce4-icon-theme
 	)
@@ -69,29 +71,18 @@ pkg_setup() {
 	elog "${PN} might crash occasionally. To get more useful backtraces"
 	elog "and submit better bug reports, please read"
 	elog "http://www.gentoo.org/proj/en/qa/backtraces.xml"
-
-	if ! use bindist; then
-		einfo
-		elog "You may not redistribute this build to any users on your network"
-		elog "or the internet."
-		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
-	fi
 }
 
 src_prepare() {
-	# Gentoo uses .kde4, not .kde
-	# TODO: this does not work with kdeprefix, fixing http:/crbug.com/29927
-	# would be better
-	sed -e 's/\.kde/.kde4/' -i net/proxy/proxy_config_service_linux.cc \
-		|| die "kde proxy sed failed"
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
+
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
-	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
-	if ! use bindist; then
-		# Allow use of MP3/MPEG-4 audio/video tags with our system ffmpeg
-		epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
-	fi
+	epatch "${FILESDIR}"/${PN}-drop_sse2-r0.patch
+
+	# Allow supporting more media types provided system ffmpeg supports them.
+	epatch "${FILESDIR}"/${PN}-supported-media-mime-types.patch
+
 	# Fix build failure with libpng-1.4, bug 310959.
 	epatch "${FILESDIR}"/${PN}-libpng-1.4.patch
 
@@ -106,6 +97,14 @@ src_configure() {
 
 	# Fails to build on arm if we don't do this
 	use arm && append-flags -fno-tree-sink
+
+	if use mp3 ; then
+		append-cflags -DGENTOO_CHROMIUM_MP3_ENABLED
+	fi
+
+	if use x264 ; then
+		append-cflags -DGENTOO_CHROMIUM_H264_ENABLED
+	fi
 
 	# CFLAGS/LDFLAGS
 	mkdir -p "${S}"/.gyp
