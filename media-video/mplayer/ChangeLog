@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.732 2010/04/27 11:21:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.733 2010/04/28 17:40:50 ssuominen Exp $
+
+  28 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mplayer-1.0_rc4_p20100427.ebuild, mplayer-9999.ebuild:
+  Revert SRC_URI change for svgalib_helper; mirrors still ship the broken
+  copy.
 
 *mplayer-1.0_rc4_p20100427 (27 Apr 2010)
 
