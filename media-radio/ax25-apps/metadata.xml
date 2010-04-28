@@ -3,11 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>tb@forth-ev.de</email>
+    <email>tomjbe@gentoo.org</email>
     <name>Thomas Beierlein</name>
-  </maintainer>
-  <maintainer>
-    <email>ssuominen@gentoo.org</email>
-    <name>Samuli Suominen</name>
   </maintainer>
 </pkgmetadata>
