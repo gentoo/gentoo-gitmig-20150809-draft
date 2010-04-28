@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/pycifrw
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pycifrw/ChangeLog,v 1.1 2010/04/28 20:14:33 jlec Exp $
+
+*pycifrw-3.3 (28 Apr 2010)
+
+  28 Apr 2010; Justin Lecher <jlec@gentoo.org> +pycifrw-3.3.ebuild,
+  +metadata.xml:
+  Initial commit
+
