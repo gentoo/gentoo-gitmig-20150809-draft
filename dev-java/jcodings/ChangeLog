@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jcodings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.6 2010/04/27 09:03:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.7 2010/04/28 13:58:46 phajdan.jr Exp $
+
+  28 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  jcodings-1.0.4.ebuild:
+  x86 stable wrt security bug #317435 (also see bug #312547)
 
 *jcodings-1.0.4 (27 Apr 2010)
 
