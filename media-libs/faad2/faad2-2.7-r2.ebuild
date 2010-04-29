@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.7-r1.ebuild,v 1.6 2010/01/15 09:27:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.7-r2.ebuild,v 1.1 2010/04/29 15:13:58 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -16,8 +16,11 @@ IUSE="digitalradio"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libmp4ff-shared-lib.patch \
+		"${FILESDIR}"/${P}-libmp4ff-install-mp4ff_int_types_h.patch \
 		"${FILESDIR}"/${P}-man1_MANS.patch
-	sed -i -e 's:iquote :I:' libfaad/Makefile.am || die "sed failed"
+
+	sed -i -e 's:iquote :I:' libfaad/Makefile.am || die
+
 	eautoreconf
 }
 
@@ -28,6 +31,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README README.linux TODO
 }

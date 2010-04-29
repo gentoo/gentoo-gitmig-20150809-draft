@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/faad2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.130 2010/01/15 09:27:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.131 2010/04/29 15:13:58 ssuominen Exp $
+
+*faad2-2.7-r2 (29 Apr 2010)
+
+  29 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +faad2-2.7-r2.ebuild,
+  +files/faad2-2.7-libmp4ff-install-mp4ff_int_types_h.patch:
+  Install mp4ff_int_types.h since we are building unsupported libmp4ff
+  library anyway wrt #275008.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> faad2-2.7-r1.ebuild:
   Transfer Prefix keywords
