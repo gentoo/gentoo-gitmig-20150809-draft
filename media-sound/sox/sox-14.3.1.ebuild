@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.1.ebuild,v 1.1 2010/04/23 12:18:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.1.ebuild,v 1.2 2010/04/29 11:46:59 ssuominen Exp $
 
-inherit flag-o-matic
+EAPI=2
+inherit eutils flag-o-matic
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -13,7 +14,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="alsa amr ao debug encode ffmpeg flac id3tag ladspa mad ogg oss png pulseaudio sndfile wavpack"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+# libtool required for libltdl
+RDEPEND="sys-devel/libtool
+	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	encode? ( media-sound/lame )
 	flac? ( media-libs/flac )
@@ -31,11 +34,16 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile () {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nomad.patch
+}
+
+src_configure() {
 	# Fixes wav segfaults. See Bug #35745.
 	append-flags -fsigned-char
 
-	econf $(use_with alsa) \
+	econf \
+		$(use_with alsa) \
 		$(use_enable debug) \
 		$(use_with ao) \
 		$(use_with oss) \
@@ -53,11 +61,9 @@ src_compile () {
 		$(use_with pulseaudio) \
 		$(use_with wavpack) \
 		--with-distro="Gentoo"
-
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc NEWS ChangeLog README AUTHORS
 }
