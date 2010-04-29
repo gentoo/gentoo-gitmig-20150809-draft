@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.1-r1.ebuild,v 1.1 2010/04/07 04:13:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.1-r2.ebuild,v 1.1 2010/04/29 21:17:34 darkside Exp $
 
 EAPI="2"
 
@@ -94,9 +94,6 @@ src_configure() {
 }
 
 src_compile() {
-	mymake=""
-	myinst=""
-
 	export PERL_MM_USE_DEFAULT=1
 	emake spamc/Makefile  || die "emake failed"
 
@@ -193,5 +190,8 @@ pkg_postinst() {
 	ewarn "Rules are no longer included with SpamAssassin out of the box".
 	ewarn "You will need to immediately run sa-update, or download"
 	ewarn "the additional rules .tgz package and run sa-update --install"
-	ewarn "with it, to get a ruleset."
+	ewarn "with it, to get a ruleset.\n"
+	elog "If when you run sa-update and receive a GPG validation error."
+	elog "Then you need to import an updated sa-update key."
+	elog "sa-update --import /usr/share/spamassassin/sa-update-pubkey.txt\n"
 }
