@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r3.ebuild,v 1.1 2010/04/21 20:39:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r3.ebuild,v 1.2 2010/04/29 20:57:25 pacho Exp $
 
 EAPI=1
 
@@ -60,8 +60,8 @@ src_unpack() {
 	# We are not Ubuntu, and I suspect that this is the cause of #215281
 	epatch "${FILESDIR}/${P}-remove-ubuntu-special-case.patch"
 
-	# Make it work ok with eds-2.24
-	epatch "${FILESDIR}/${P}-e-d-s-2.24.patch"
+	# Make it work ok with eds-2.24 and 2.29
+	epatch "${FILESDIR}/${P}-e-d-s.patch"
 
 	# Fix gtkhtml depend to solve building against evo-2.28, see bug #293374
 	epatch "${FILESDIR}/${P}-evolution-gtkhtml.patch"

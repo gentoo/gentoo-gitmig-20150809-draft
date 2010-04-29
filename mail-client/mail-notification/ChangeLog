@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.91 2010/04/21 20:39:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.92 2010/04/29 20:57:25 pacho Exp $
+
+  29 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  mail-notification-5.4-r3.ebuild, +files/mail-notification-5.4-e-d-s.patch:
+  Use again fedora patch for compatibility with e-d-s-2.30 as
+  evolution-data-server versioning is now fixed. Thanks to Matthew Barnes
+  for his help on this.
 
 *mail-notification-5.4-r3 (21 Apr 2010)
 
