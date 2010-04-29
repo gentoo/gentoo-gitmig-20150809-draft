@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.12 2010/04/23 12:39:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r1.ebuild,v 1.13 2010/04/29 11:22:29 ssuominen Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -8,9 +8,10 @@ DESCRIPTION="GPAC is an implementation of the MPEG-4 Systems standard developed 
 HOMEPAGE="http://gpac.sourceforge.net/"
 NBV="610"
 WBV="600"
-PATCHLEVEL="2"
+PATCHLEVEL="3"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2"
+	http://dev.gentoo.org/~ssuominen/${P}-patches-${PATCHLEVEL}.tar.bz2"
+# mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -62,8 +63,6 @@ src_unpack() {
 	cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-	epatch "${FILESDIR}"/${P}-glx-define-prototype.patch \
-		"${FILESDIR}"/${P}-libpng14.patch
 
 	sed -ie '/ldconfig / d' "${S}/Makefile"
 
