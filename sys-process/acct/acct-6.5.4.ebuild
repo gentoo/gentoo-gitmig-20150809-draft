@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.4.ebuild,v 1.2 2010/04/28 19:32:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/acct-6.5.4.ebuild,v 1.3 2010/04/29 04:39:44 jer Exp $
 
 DESCRIPTION="GNU system accounting utilities"
 HOMEPAGE="https://savannah.gnu.org/projects/acct/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~x86"
 IUSE=""
 
 src_compile() {
