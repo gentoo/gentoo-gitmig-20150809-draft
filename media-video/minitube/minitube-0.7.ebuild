@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.7.ebuild,v 1.2 2010/03/09 12:25:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.7.ebuild,v 1.3 2010/04/29 08:10:10 hwoarang Exp $
 
 EAPI="2"
+LANGS="es_AR pt_BR"
+LANGSLONG="cs_CZ de_DE es_ES he_IL it_IT ja_JP pl_PL ru_RU"
 
-inherit qt4
+inherit qt4-r2
 
 MY_PN="${PN}-src"
 MY_P="${MY_PN}-${PV}"
@@ -17,10 +19,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug kde"
-LNGS="cs de es es_AR he it ja pl pt_BR ru uk"
-for lng in ${LNGS}; do
-	IUSE="${IUSE} linguas_${lng}"
-done
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
 	kde? ( media-sound/phonon[gstreamer] )
@@ -28,13 +26,6 @@ DEPEND="x11-libs/qt-gui:4[accessibility]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
-
-LANGS="es_AR pt_BR"
-LANGSNOLONG="cs_CZ de_DE es_ES he_IL it_IT jp_JP pl_PL ru_RU"
-
-src_configure() {
-	eqmake4 ${PN}.pro
-}
 
 src_install() {
 	dobin build/target/minitube || die "dobin failed"
@@ -49,7 +40,7 @@ src_install() {
 				doins "build/target/locale/${x}.qm" || die "doins failed"
 			fi
 		done
-		for x in ${LANGSNOLONG}; do
+		for x in ${LANGSLONG}; do
 			if [[ ${x%_*} == ${lang} ]]; then
 				doins "build/target/locale/${x}.qm" || die "doins failed"
 			fi

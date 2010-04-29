@@ -1,6 +1,10 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.23 2010/04/02 09:59:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.24 2010/04/29 08:10:10 hwoarang Exp $
+
+  29 Apr 2010; Markos Chandras <hwoarang@gentoo.org> minitube-0.7.ebuild,
+  minitube-0.8.ebuild, minitube-0.8.1.ebuild:
+  Migrate to qt4-r2 eclass wrt bug #311481
 
   02 Apr 2010; Markos Chandras <hwoarang@gentoo.org> minitube-0.9.ebuild:
   Fix my previous commit
