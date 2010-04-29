@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-pool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.49 2010/03/20 14:07:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/ChangeLog,v 1.50 2010/04/29 12:40:36 betelgeuse Exp $
+
+  29 Apr 2010; Petteri Räty <betelgeuse@gentoo.org>
+  commons-pool-1.5.4.ebuild:
+  Add empty IUSE to make repoman happy.
 
 *commons-pool-1.5.4 (20 Mar 2010)
 
