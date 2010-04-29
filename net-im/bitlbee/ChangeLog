@@ -1,6 +1,12 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.124 2010/03/04 17:46:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.125 2010/04/29 21:40:29 cedk Exp $
+
+*bitlbee-1.2.6a (29 Apr 2010)
+
+  29 Apr 2010; Cédric Krier <cedk@gentoo.org> +bitlbee-1.2.6a.ebuild,
+  metadata.xml:
+  Version bump and add twitter USE flag
 
   04 Mar 2010; Cédric Krier <cedk@gentoo.org> files/bitlbee.confd,
   files/bitlbee.initd:
