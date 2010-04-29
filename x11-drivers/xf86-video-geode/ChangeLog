@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-geode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.6 2009/11/03 09:29:27 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.7 2010/04/29 00:55:45 leio Exp $
+
+*xf86-video-geode-2.11.8 (29 Apr 2010)
+
+  29 Apr 2010; Mart Raudsepp <leio@gentoo.org>
+  -xf86-video-geode-2.9.0.ebuild, -xf86-video-geode-2.11.6.ebuild,
+  +xf86-video-geode-2.11.8.ebuild:
+  Version bump. Most importantly fixes image drawing under
+  xorg-server-1.7/1.8
 
 *xf86-video-geode-2.11.6 (03 Nov 2009)
 
