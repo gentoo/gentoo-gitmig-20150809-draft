@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.28.3.1.ebuild,v 1.1 2010/03/08 23:12:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.28.3.1-r1.ebuild,v 1.1 2010/04/29 20:54:02 pacho Exp $
 
 EAPI="2"
 
-inherit db-use eutils flag-o-matic gnome2 versionator
+inherit autotools db-use eutils flag-o-matic gnome2 versionator
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
@@ -66,6 +66,9 @@ src_prepare() {
 	# Rewind in camel-disco-diary to fix a crash
 	epatch "${FILESDIR}/${PN}-1.8.0-camel-rewind.patch"
 
+	# Append .1 to version properly as talked with upstream
+	epatch "${FILESDIR}/${P}-version-number.patch"
+
 	if use doc; then
 		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/usr/bin/gtkdoc-rebase" \
 			-i gtk-doc.make || die "sed 1 failed"
@@ -95,6 +98,8 @@ src_prepare() {
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "intltool rules fix failed"
+
+	eautoconf
 }
 
 src_install() {
