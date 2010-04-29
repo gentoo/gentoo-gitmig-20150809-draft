@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.15 2009/11/01 18:38:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/SphinxTrain-0.9.1-r1.ebuild,v 1.16 2010/04/29 11:07:29 flameeyes Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ src_install() {
 	find bin.* -mindepth 1 -maxdepth 1 -type f -exec dobin '{}' \; || die
 
 	dodoc README etc/*cfg
-	dohtml doc/*[txt html sgml]
+	dohtml doc/*{txt,html,sgml}
 }
 
 pkg_postinst() {

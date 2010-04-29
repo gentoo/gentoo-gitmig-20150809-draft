@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/SphinxTrain
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.15 2009/11/01 18:38:04 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/SphinxTrain/ChangeLog,v 1.16 2010/04/29 11:07:29 flameeyes Exp $
+
+  29 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  SphinxTrain-0.9.1-r1.ebuild:
+  Fix documentation install.
 
   26 Sep 2009; William Hubbs <williamh@gentoo.org>
   SphinxTrain-0.9.1-r1.ebuild:
