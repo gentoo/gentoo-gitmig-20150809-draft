@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boolstuff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boolstuff/ChangeLog,v 1.5 2010/04/29 07:40:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boolstuff/ChangeLog,v 1.6 2010/04/29 07:47:35 hwoarang Exp $
+
+  29 Apr 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Update Georges' ( proxy maintainer ) email
 
 *boolstuff-0.1.13 (29 Apr 2010)
 
