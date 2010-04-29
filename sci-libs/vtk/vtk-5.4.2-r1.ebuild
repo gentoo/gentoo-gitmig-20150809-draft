@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.7 2010/04/25 10:00:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.8 2010/04/29 01:15:58 arfrever Exp $
 
 EAPI="2"
 
@@ -130,11 +130,10 @@ src_configure() {
 	fi
 
 	if use python; then
-		PYVER="$(python_get_version)"
 		mycmakeargs+=(
 			-DVTK_WRAP_PYTHON=ON
-			-DPYTHON_INCLUDE_PATH=/usr/include/python${PYVER}
-			-DPYTHON_LIBRARY=/usr/$(get_libdir)/libpython${PYVER}.so
+			-DPYTHON_INCLUDE_PATH=$(python_get_includedir)
+			-DPYTHON_LIBRARY=$(python_get_library)
 			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
 	fi
 
