@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.154 2010/04/26 07:40:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.155 2010/04/29 07:47:16 hollow Exp $
+
+*vserver-sources-2.3.0.36.30.4-r1 (29 Apr 2010)
+
+  29 Apr 2010; Benedikt Böhm <hollow@gentoo.org>
+  -vserver-sources-2.3.0.36.30.4.ebuild,
+  +vserver-sources-2.3.0.36.30.4-r1.ebuild:
+  use genpatches 2.6.33-2
 
   26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update Manifest for deblob support in kernel-2 eclass.
