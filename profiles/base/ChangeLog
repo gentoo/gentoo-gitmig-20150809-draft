@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.139 2010/04/13 16:43:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.140 2010/04/29 09:23:39 pva Exp $
+
+  29 Apr 2010; Peter Volkov <pva@gentoo.org> make.defaults:
+  Add XTABLES_ADDONS as discussed in -dev on 18.01.2010 (but dropped
+  _MODULES part to make it shorter).
 
   13 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
