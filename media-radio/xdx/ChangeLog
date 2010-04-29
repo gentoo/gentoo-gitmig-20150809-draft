@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xdx
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.15 2008/12/02 15:26:05 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.16 2010/04/29 16:53:07 tomjbe Exp $
+
+  29 Apr 2010; Thomas Beierlein <tomjbe@gentoo.org> metadata.xml:
+  I take over maintainership. Darkside, thanks for proxying.
 
   02 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +files/xdx-2.4-gtk.patch,
   metadata.xml, xdx-2.4.ebuild:
