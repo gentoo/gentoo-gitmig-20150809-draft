@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6-r1.ebuild,v 1.3 2010/02/12 12:36:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.7.6-r1.ebuild,v 1.4 2010/04/29 02:18:25 cardoe Exp $
 
 BACKPORTS=
 
@@ -26,7 +26,7 @@ RESTRICT=test
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
-	>=dev-libs/libxml2-2.7.6
+	>=dev-libs/libxml2-2.7.6[python?]
 	>=net-libs/gnutls-1.0.25
 	dev-lang/python
 	sys-fs/sysfsutils
