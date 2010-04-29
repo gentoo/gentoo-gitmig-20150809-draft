@@ -3,12 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>tb@forth-ev.de</email>
+		<email>tomjbe@gentoo.org</email>
 		<name>Thomas Beierlein</name>
-		<description>Proxy maintainer, please assign bugs</description>
-	</maintainer>
-	<maintainer>
-	  <email>darkside@gentoo.org</email>
-	  <description>Proxy committer, CC on bugs</description>
 	</maintainer>
 </pkgmetadata>
