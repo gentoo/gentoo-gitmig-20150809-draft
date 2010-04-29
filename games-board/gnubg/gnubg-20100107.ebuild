@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20100107.ebuild,v 1.3 2010/02/27 18:03:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20100107.ebuild,v 1.4 2010/04/29 15:37:45 tupone Exp $
 
 EAPI=2
-inherit autotools eutils games
+PYTHON_DEPEND="python? 2"
+inherit autotools eutils python games
 
 DESCRIPTION="GNU BackGammon"
 HOMEPAGE="http://www.gnubg.org/"
@@ -40,6 +41,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
 src_prepare() {
 	# use ${T} instead of /tmp for constructing credits (bug #298275)
 	sed -i \
@@ -47,6 +53,7 @@ src_prepare() {
 		credits.sh \
 		|| die 'sed failed'
 	epatch "${FILESDIR}"/${P}-build.patch
+	python_convert_shebangs -r 2 python-config
 	eautoreconf
 }
 
