@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.132 2010/04/21 07:59:07 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.133 2010/04/29 11:09:38 pchrist Exp $
+
+  29 Apr 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
+  swig-1.3.40-r1.ebuild:
+  RESTRICT=test for the time being, fixes bug 317733 and broken testsuite
+  once and for all
 
   21 Apr 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   swig-1.3.40-r1.ebuild:
