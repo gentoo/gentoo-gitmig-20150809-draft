@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.23.ebuild,v 1.1 2010/04/28 13:12:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.23.ebuild,v 1.2 2010/04/29 10:48:09 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability toolchain-funcs
@@ -74,9 +74,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Changing this in ~/include.gypi does not work
-	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
-
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2-r0.patch
 
@@ -85,11 +82,6 @@ src_prepare() {
 
 	# Fix build failure with libpng-1.4, bug 310959.
 	epatch "${FILESDIR}"/${PN}-libpng-1.4.patch
-
-	# Disable prefixing to allow linking against system zlib
-	sed -e '/^#include "mozzconf.h"$/d' \
-		-i third_party/zlib/zconf.h \
-		|| die "zlib sed failed"
 }
 
 src_configure() {
@@ -107,8 +99,8 @@ src_configure() {
 	fi
 
 	# CFLAGS/LDFLAGS
-	mkdir -p "${S}"/.gyp
-	cat << EOF > "${S}"/.gyp/include.gypi
+	mkdir -p "${S}"/.gyp || die "cflags mkdir failed"
+	cat << EOF > "${S}"/.gyp/include.gypi || die "cflags cat failed"
 {
 	'target_defaults': {
 		'cflags': [ '${CFLAGS// /','}' ],
@@ -147,6 +139,11 @@ EOF
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
 	fi
+
+	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
+	# Depending on GCC version the warnings are different and we don't want
+	# the build to fail because of that.
+	myconf="${myconf} -Dwerror="
 
 	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die "gyp failed"
 }
