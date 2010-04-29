@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.25.ebuild,v 1.1 2010/04/29 09:31:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.25.ebuild,v 1.2 2010/04/29 15:37:21 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ XA_qa_check() {
 	fi
 }
 
-# Is there any use flag set? 
+# Is there any use flag set?
 XA_has_something_to_build() {
 	local mod
 	for mod in ${MODULES}; do
