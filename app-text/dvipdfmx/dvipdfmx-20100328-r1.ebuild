@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20100328-r1.ebuild,v 1.1 2010/04/29 19:08:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20100328-r1.ebuild,v 1.2 2010/04/29 19:16:43 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -31,8 +31,8 @@ src_prepare() {
 src_install() {
 	# Override dvipdfmx.cfg default installation location so that it is easy to
 	# modify it and it gets config protected. Symlink it from the old location.
-	emake configdatadir="/etc/texmf/dvipdfm" DESTDIR="${D}" install || die
-	dosym /etc/texmf/dvipdfm/dvipdfmx.cfg /usr/share/texmf/dvipdfmx/dvipdfmx.cfg || die
+	emake configdatadir="/etc/texmf/dvipdfmx" DESTDIR="${D}" install || die
+	dosym /etc/texmf/dvipdfmx/dvipdfmx.cfg /usr/share/texmf/dvipdfmx/dvipdfmx.cfg || die
 
 	# Symlink poppler-data cMap, bug #201258
 	dosym /usr/share/poppler/cMap /usr/share/texmf/fonts/cmap/cMap || die
