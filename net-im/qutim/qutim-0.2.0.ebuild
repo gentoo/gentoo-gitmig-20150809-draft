@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0.ebuild,v 1.3 2010/03/09 11:57:42 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0.ebuild,v 1.4 2010/04/29 08:13:23 hwoarang Exp $
 
 EAPI="2"
 
-inherit eutils qt4 cmake-utils
+inherit eutils qt4-r2 cmake-utils
 MY_PN="${PN/im/IM}"
 
 DESCRIPTION="New Qt4-based Instant Messenger (ICQ)."
