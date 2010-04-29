@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.10 2010/02/10 20:16:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.11 2010/04/29 23:42:23 arfrever Exp $
+
+  29 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-interface-3.5.3.ebuild:
+  amd64 stable (bug #300248).
 
   10 Feb 2010; Jeroen Roovers <jer@gentoo.org> zope-interface-3.5.3.ebuild:
   Stable for HPPA (bug #300248).
