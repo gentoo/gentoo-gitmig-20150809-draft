@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.4.ebuild,v 1.1 2010/04/27 18:43:25 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/desktopcouch/desktopcouch-0.6.4.ebuild,v 1.2 2010/04/29 00:49:24 arfrever Exp $
 
-PYTHONDEPEND="2"
 EAPI="2"
+PYTHON_DEPEND="2"
 
-inherit distutils eutils
+inherit distutils eutils multilib
 
 DESCRIPTION="Desktop-oriented interface to CouchDB"
 HOMEPAGE="https://launchpad.net/desktopcouch"
@@ -25,23 +25,26 @@ RDEPEND=">=dev-db/couchdb-0.10.0
 	>=net-dns/avahi-0.6.24-r2[python]"
 RESTRICT="test"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}/${P}-setup_hardlinks.patch"
 }
 
 src_install() {
-
 	python_convert_shebangs -r 2 "bin/"
 
 	distutils_src_install
 
-	exeinto "${ROOT}/usr/lib/${PN}"
+	exeinto "/usr/$(get_libdir)/${PN}"
 	doexe "bin/desktopcouch-stop"
 	doexe "bin/desktopcouch-service"
 	doexe "bin/desktopcouch-get-port"
 
 	if use doc; then
-		insinto "${ROOT}/usr/share/doc/${PF}/api"
+		insinto "/usr/share/doc/${PF}/api"
 		doins "desktopcouch/records/doc/records.txt"
 		doins "desktopcouch/records/doc/field_registry.txt"
 		doins "desktopcouch/contacts/schema.txt"
