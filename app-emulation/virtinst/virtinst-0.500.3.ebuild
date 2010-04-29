@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.500.3.ebuild,v 1.1 2010/04/28 21:33:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.500.3.ebuild,v 1.2 2010/04/29 02:07:07 cardoe Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND=">=app-emulation/libvirt-0.2.1
+RDEPEND=">=app-emulation/libvirt-0.7.0[python]
 	dev-python/urlgrabber"
 DEPEND="${RDEPEND}"
 
