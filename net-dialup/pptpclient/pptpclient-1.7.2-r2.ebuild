@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.2-r2.ebuild,v 1.2 2010/01/02 14:43:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.2-r2.ebuild,v 1.3 2010/04/29 19:46:17 truedfx Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake OPTIMISE= DEBUG= CFLAGS="${CFLAGS}" LDFLAGS=${LDFLAGS} CC=$(tc-getCC) || die "emake failed"
+	emake OPTIMISE= DEBUG= CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
