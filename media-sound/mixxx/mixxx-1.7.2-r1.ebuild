@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.7.2-r1.ebuild,v 1.1 2010/04/27 18:47:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.7.2-r1.ebuild,v 1.2 2010/04/29 08:45:09 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -24,7 +24,7 @@ RDEPEND="media-libs/libmad
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
 	x11-libs/qt-opengl:4
-	>=media-libs/libsoundtouch-1.4.0
+	>=media-libs/libsoundtouch-1.5.0
 	ladspa? ( media-libs/ladspa-sdk )
 	pulseaudio? ( media-sound/pulseaudio )
 	shout? ( media-libs/libshout )"
