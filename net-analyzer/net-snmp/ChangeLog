@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.202 2010/04/16 15:58:57 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.203 2010/04/29 16:51:58 jer Exp $
+
+*net-snmp-5.4.2.1-r4 (29 Apr 2010)
+
+  29 Apr 2010; Jeroen Roovers <jer@gentoo.org> +net-snmp-5.4.2.1-r4.ebuild:
+  Do not export CFLAGS/LDFLAGS to net-snmp-config (bug #303237).
 
   16 Apr 2010; Fabio Erculiani <lxnay@gentoo.org>
   net-snmp-5.4.2.1-r2.ebuild, net-snmp-5.4.2.1-r3.ebuild:
