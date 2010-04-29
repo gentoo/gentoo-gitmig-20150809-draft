@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/kvm-kmod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.9 2010/04/29 01:55:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.10 2010/04/29 01:59:15 cardoe Exp $
+
+*kvm-kmod-2.6.33.3 (29 Apr 2010)
+*kvm-kmod-2.6.32.12 (29 Apr 2010)
+
+  29 Apr 2010; Doug Goldstein <cardoe@gentoo.org>
+  +kvm-kmod-2.6.32.12.ebuild, +kvm-kmod-2.6.33.3.ebuild:
+  bump versions to the latest versions. The goal is going to be to stabilize
+  the 2.6.32.x series while maintaining 2.6.3x at the cutting edge to test
+  with. Useful for people who don't want to constantly upgrade their kernel
+  to get the latest KVM updates.
 
   29 Apr 2010; Doug Goldstein <cardoe@gentoo.org> -kvm-kmod-2.6.32.2.ebuild,
   -kvm-kmod-2.6.32.3.ebuild:
