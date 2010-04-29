@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.108 2010/03/25 13:15:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.109 2010/04/29 19:50:01 caster Exp $
+
+*gnu-classpath-0.98-r3 (29 Apr 2010)
+
+  29 Apr 2010; Vlastimil Babka <caster@gentoo.org>
+  +gnu-classpath-0.98-r3.ebuild:
+  Revbump to remove ecj from RDEPEND as it's used only build-time. Also make
+  the dep unversioned thanks to globbing in new java-config.
 
   25 Mar 2010; Vlastimil Babka <caster@gentoo.org>
   gnu-classpath-0.97-r1.ebuild, gnu-classpath-0.97.2.ebuild,
