@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.3.3.ebuild,v 1.6 2010/01/19 02:10:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.3.3.ebuild,v 1.7 2010/04/29 03:56:32 reavertm Exp $
 
 EAPI="2"
 
@@ -44,6 +44,6 @@ pkg_postinst() {
 	kde4-meta_pkg_postinst
 
 	echo
-	elog "If you want to have svg support, emerge kde-base/svgpart"
+	elog "For SVG support, emerge -va kde-base/svgpart"
 	echo
 }
