@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.2-r1.ebuild,v 1.1 2010/03/13 14:43:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.2-r1.ebuild,v 1.2 2010/04/29 08:00:45 hwoarang Exp $
 
 EAPI="2"
+LANGS="de en he it pl pt ru"
 
-inherit qt4
+inherit qt4-r2
 
 MY_PN="2ManDVD"
 
@@ -33,12 +34,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
 
-LANGS="de en he it pl pt ru"
-
-for x in ${LANGS}; do
-	IUSE="${IUSE} linguas_${x}"
-done
-
 src_prepare() {
 	# fix installation path
 	for file in mainfrm.cpp media_browser.cpp rendering.cpp; do
@@ -49,11 +44,7 @@ src_prepare() {
 	sed -i "s:qApp->applicationDirPath():\"/usr/share/${PN}/\":" \
 		mainfrm.cpp || die "sed failed"
 
-	qt4_src_prepare
-}
-
-src_configure() {
-	eqmake4 ${MY_PN}.pro
+	qt4-r2_src_prepare
 }
 
 src_install() {
