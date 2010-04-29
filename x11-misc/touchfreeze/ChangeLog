@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/touchfreeze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.6 2010/01/24 14:04:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.7 2010/04/29 08:16:46 hwoarang Exp $
+
+  29 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  touchfreeze-0.2.3-r1.ebuild, touchfreeze-0.2.4.ebuild:
+  Migrate to qt4-r2 eclass wrt bug #311481
 
 *touchfreeze-0.2.4 (24 Jan 2010)
 
