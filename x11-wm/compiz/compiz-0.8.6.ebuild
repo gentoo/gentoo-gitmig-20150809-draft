@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.6.ebuild,v 1.1 2010/04/03 06:03:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.6.ebuild,v 1.2 2010/04/29 00:18:52 jmbsvicetto Exp $
 
 EAPI="2"
 
 inherit autotools eutils gnome2-utils
 
-DESCRIPTION="3D composite and windowmanager"
+DESCRIPTION="OpenGL window and compositing manager"
 HOMEPAGE="http://www.compiz.org/"
 SRC_URI="http://releases.compiz.org/${PV}/${P}.tar.bz2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+cairo dbus fuse gnome gtk kde +svg"
 
-DEPEND="
+COMMONDEPEND="
 	dev-libs/glib:2
 	dev-libs/libxml2
 	dev-libs/libxslt
@@ -33,7 +33,7 @@ DEPEND="
 	>=x11-libs/libXrender-0.8.4
 	>=x11-libs/startup-notification-0.7
 	cairo? (
-			x11-libs/cairo[X]
+		x11-libs/cairo[X]
 	)
 	dbus? ( >=sys-apps/dbus-1.0 )
 	fuse? ( sys-fs/fuse )
@@ -59,14 +59,16 @@ DEPEND="
 	)
 "
 
-RDEPEND="${DEPEND}
-	x11-apps/mesa-progs
-	x11-apps/xvinfo"
-
-DEPEND="${DEPEND}
+DEPEND="${COMMONDEPEND}
 	dev-util/pkgconfig
 	x11-proto/damageproto
-	x11-proto/xineramaproto"
+	x11-proto/xineramaproto
+"
+
+RDEPEND="${COMMONDEPEND}
+	x11-apps/mesa-progs
+	x11-apps/xvinfo
+"
 
 src_prepare() {
 
