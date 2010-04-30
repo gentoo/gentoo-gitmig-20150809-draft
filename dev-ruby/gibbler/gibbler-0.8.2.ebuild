@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/gibbler-0.8.1.ebuild,v 1.1 2010/04/12 12:40:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/gibbler-0.8.2.ebuild,v 1.1 2010/04/30 17:41:47 flameeyes Exp $
 
 EAPI=2
 
@@ -26,17 +26,10 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/attic-0.4.0"
 
-#ruby_add_bdepend test dev-ruby/tryouts
+ruby_add_bdepend test dev-ruby/tryouts
 
-# Tests currenty fail for all implementations
-# http://github.com/delano/gibbler/issues/issue/1
-RESTRICT=test
-
-# Tests are not in the released gem, but since we don't run them we
-# don't need the whole sources as it is.
-
-#SRC_URI="http://github.com/delano/${PN}/tarball/${P} -> ${PN}-git-${PV}.tgz"
-#S="${WORKDIR}/delano-${PN}-${whatever}"
+SRC_URI="http://github.com/delano/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
+S="${WORKDIR}/delano-${PN}-*"
 
 each_ruby_test() {
 	${RUBY} -S sergeant || die "tests failed"
