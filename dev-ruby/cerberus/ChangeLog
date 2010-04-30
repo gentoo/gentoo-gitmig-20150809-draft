@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/cerberus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.5 2009/08/22 21:35:16 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.6 2010/04/30 08:00:59 graaff Exp $
+
+*cerberus-0.7.6 (27 Mar 2010)
+
+  27 Mar 2010; Hans de Graaff <graaff@gentoo.org> +cerberus-0.7.6.ebuild:
+  Version bump. Convert to ruby-fakegem.
 
   22 Aug 2009; Hans de Graaff <graaff@gentoo.org> -cerberus-0.3.4.ebuild:
   Remove old version.
