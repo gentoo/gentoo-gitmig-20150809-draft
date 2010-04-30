@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/storable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.8 2010/04/12 12:40:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.9 2010/04/30 20:56:23 graaff Exp $
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> storable-0.7.3.ebuild:
+  Deal with github changing their tarball generation.
 
 *storable-0.7.3 (12 Apr 2010)
 

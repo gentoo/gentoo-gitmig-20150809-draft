@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.4 2010/04/30 20:53:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.5 2010/04/30 20:55:00 graaff Exp $
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> shoulda-2.10.3.ebuild:
+  Deal with github changing their tarball generation.
 
   30 Apr 2010; Hans de Graaff <graaff@gentoo.org> -shoulda-2.10.2.ebuild:
   Remove old version.
