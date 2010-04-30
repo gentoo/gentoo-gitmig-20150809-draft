@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.253 2010/04/26 19:01:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.254 2010/04/30 14:06:37 ranger Exp $
+
+  30 Apr 2010; Brent Baude <ranger@gentoo.org> nano-2.2.4.ebuild:
+  Marking nano-2.2.4 ppc for bug 315355
 
   26 Apr 2010; Markus Meier <maekke@gentoo.org> nano-2.2.4.ebuild:
   amd64 stable, bug #315355
