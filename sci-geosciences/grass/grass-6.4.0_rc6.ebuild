@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.2 2010/04/30 08:54:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.3 2010/04/30 18:43:55 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -145,7 +145,7 @@ src_configure() {
 		else
 			WX_BUILD=no
 			# use tcl gui if wxwidgets are disabled
-			
+
 			myconf+="
 				--with-tcltk
 				--without-wxwidgets
