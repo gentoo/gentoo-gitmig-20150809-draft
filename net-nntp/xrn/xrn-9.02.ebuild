@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/xrn-9.02.ebuild,v 1.4 2007/07/22 07:56:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/xrn/xrn-9.02.ebuild,v 1.5 2010/04/30 15:43:50 flameeyes Exp $
 
 DESCRIPTION="A small and fast news reader for X."
 HOMEPAGE="http://www.mit.edu/people/jik/software/xrn.html"
@@ -55,7 +55,7 @@ src_compile() {
 	xmkmf || die "xmkmf failed"
 
 	# Use our own CFLAGS and our desired language:
-	emake CDEBUGFLAGS="${CFLAGS}" LANGUAGE="${MY_LANG}" || die "emake failed"
+	emake -j1 CDEBUGFLAGS="${CFLAGS}" LANGUAGE="${MY_LANG}" || die "emake failed"
 }
 
 src_install() {
