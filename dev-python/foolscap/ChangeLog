@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.16 2010/04/20 17:10:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.17 2010/04/30 15:03:21 grobian Exp $
+
+  30 Apr 2010; Fabian Groffen <grobian@gentoo.org> foolscap-0.4.2.ebuild:
+  Keyworded for several Prefix arches
 
   20 Apr 2010; Jeremy Olexa <darkside@gentoo.org> foolscap-0.4.2.ebuild:
   Add ~amd64-linux as tested in bug 315917
