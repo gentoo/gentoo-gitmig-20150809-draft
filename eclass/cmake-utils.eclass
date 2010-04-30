@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.49 2010/04/10 02:20:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.50 2010/04/30 23:41:11 abcd Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -27,6 +27,12 @@
 # Valid values are: always [default], optional (where the value is the useflag
 # used for optionality)
 WANT_CMAKE="${WANT_CMAKE:-always}"
+
+# @ECLASS-VARIABLE: CMAKE_MIN_VER
+# @DESCRIPTION:
+# Specify the minimum allowable version of cmake.  Defaults to 2.6.2-r1
+CMAKE_MIN_VER="${CMAKE_MIN_VER:-2.6.2-r1}"
+
 CMAKEDEPEND=""
 case ${WANT_CMAKE} in
 	always)
@@ -49,7 +55,7 @@ EXPORT_FUNCTIONS ${CMAKE_EXPF}
 : ${DESCRIPTION:="Based on the ${ECLASS} eclass"}
 
 if [[ ${PN} != cmake ]]; then
-	CMAKEDEPEND+=">=dev-util/cmake-2.6.2-r1"
+	CMAKEDEPEND+=">=dev-util/cmake-${CMAKE_MIN_VER}"
 fi
 
 CMAKEDEPEND+=" userland_GNU? ( >=sys-apps/findutils-4.4.0 )"
