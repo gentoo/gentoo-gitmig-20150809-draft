@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8.ebuild,v 1.6 2009/06/21 18:27:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8.ebuild,v 1.7 2010/04/30 14:15:19 grobian Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://meltin.net/hacks/emacs/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""
