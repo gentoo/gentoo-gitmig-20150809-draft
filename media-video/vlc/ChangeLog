@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.575 2010/04/26 19:18:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.576 2010/04/30 14:16:33 ranger Exp $
+
+  30 Apr 2010; Brent Baude <ranger@gentoo.org> vlc-1.0.6.ebuild:
+  Marking vlc-1.0.6 ppc for bug 316709
 
   26 Apr 2010; Markus Meier <maekke@gentoo.org> vlc-1.0.6.ebuild:
   amd64 stable, bug #316709
