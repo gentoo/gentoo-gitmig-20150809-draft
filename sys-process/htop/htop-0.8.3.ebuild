@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3.ebuild,v 1.6 2010/03/21 14:40:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3.ebuild,v 1.7 2010/04/30 21:48:10 darkside Exp $
 
-EAPI="2"
+EAPI=3
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="interactive process viewer"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="sys-libs/ncurses[unicode]"
@@ -47,5 +47,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README ChangeLog TODO || die "documentation installation failed."
-	rmdir "${D}"/usr/{include,$(get_libdir)} || die "Removing empty directory failed."
+	rmdir "${ED}"/usr/{include,$(get_libdir)} || die "Removing empty directory failed."
 }
