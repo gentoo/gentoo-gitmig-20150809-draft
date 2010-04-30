@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.3 2010/02/12 10:58:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.4 2010/04/30 20:53:43 graaff Exp $
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> -shoulda-2.10.2.ebuild:
+  Remove old version.
 
   12 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   shoulda-2.10.3.ebuild:
