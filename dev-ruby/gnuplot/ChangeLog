@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gnuplot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.2 2009/08/22 20:48:06 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.3 2010/04/30 08:08:51 graaff Exp $
+
+*gnuplot-2.3.1 (30 Apr 2010)
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> +gnuplot-2.3.1.ebuild:
+  Version bump. Convert to ruby-fakegem.
 
   22 Aug 2009; Hans de Graaff <graaff@gentoo.org> gnuplot-2.2.ebuild:
   Add missing CVS header. Add explicit empty DEPEND.
