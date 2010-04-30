@@ -1,0 +1,42 @@
+diff --git a/Rakefile b/Rakefile
+index 61daa8b..1138f0f 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -38,8 +40,6 @@ rescue LoadError
+   end
+ end
+ 
+-task :test => :check_dependencies
+-
+ task :default => :test
+ 
+ require 'rake/rdoctask'
+diff --git a/lib/faraday/connection.rb b/lib/faraday/connection.rb
+index dbda09a..f441d42 100644
+--- a/lib/faraday/connection.rb
++++ b/lib/faraday/connection.rb
+@@ -173,12 +173,12 @@ module Faraday
+     #
+     def build_url(url, params = nil)
+       uri          = URI.parse(url.to_s)
+-      uri.host   ||= @host
+-      uri.port   ||= @port
+-      uri.scheme ||= @scheme
+       if @path_prefix && uri.path !~ /^\//
+         uri.path = "#{@path_prefix.size > 1 ? @path_prefix : nil}/#{uri.path}"
+       end
++      uri.host   ||= @host
++      uri.port   ||= @port
++      uri.scheme ||= @scheme
+       replace_query(uri, params)
+       uri
+     end
+--- faraday-0.4.3.orig/test/helper.rb
++++ faraday-0.4.3/test/helper.rb
+@@ -1,6 +1,4 @@
+ require 'rubygems'
+-gem 'rack',        '~> 1.1.0'
+-gem 'addressable', '2.1.1'
+ 
+ require 'test/unit'
+ if ENV['LEFTRIGHT']

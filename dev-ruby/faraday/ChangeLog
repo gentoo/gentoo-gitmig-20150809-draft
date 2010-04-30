@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/faraday
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.1 2010/04/30 18:12:06 flameeyes Exp $
+
+*faraday-0.4.3 (30 Apr 2010)
+
+  30 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +faraday-0.4.3.ebuild, +files/faraday-0.4.3-gentoo.patch, +metadata.xml:
+  Initial import of the faraday library. Patch sent upstream for 0.4.4
+  release.
+
