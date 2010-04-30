@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/jcodings-1.0.4.ebuild,v 1.2 2010/04/28 13:58:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/jcodings-1.0.4.ebuild,v 1.3 2010/04/30 05:38:16 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source"
@@ -11,7 +11,8 @@ GIT_PV="0-gbaaab90"
 
 DESCRIPTION="Byte-based encoding support library for Java"
 HOMEPAGE="http://jruby.codehaus.org/"
-SRC_URI="http://github.com/jruby/${PN}/tarball/${PV} -> ${P}-git.tar.gz"
+#SRC_URI="http://github.com/jruby/${PN}/tarball/${PV} -> ${P}-git.tar.gz"
+SRC_URI="mirror://gentoo/${P}-git.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
