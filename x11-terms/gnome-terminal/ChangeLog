@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.214 2010/04/26 19:43:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.215 2010/04/30 07:21:30 pacho Exp $
+
+  30 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  gnome-terminal-2.26.3.1-r2.ebuild,
+  +files/gnome-terminal-2.26.3.1-en_GB.patch, gnome-terminal-2.28.2.ebuild:
+  Fix British English documentation translation. Thanks to Daniel Schömer
+  for pointing to the issue and Markus Meier for reporting bug #289361. This
+  is solved by upstream in >2.30.1
 
   26 Apr 2010; Pacho Ramos <pacho@gentoo.org>
   gnome-terminal-2.26.3.1-r2.ebuild,

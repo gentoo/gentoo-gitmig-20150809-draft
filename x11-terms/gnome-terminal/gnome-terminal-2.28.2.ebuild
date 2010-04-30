@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.28.2.ebuild,v 1.2 2010/01/06 19:24:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.28.2.ebuild,v 1.3 2010/04/30 07:21:30 pacho Exp $
 
 GCONF_DEBUG="no"
 
@@ -37,6 +37,9 @@ src_unpack() {
 
 	# Use login shell by default (#12900)
 	epatch "${FILESDIR}"/${PN}-2.22.0-default_shell.patch
+
+	# Fix British English documentation translation (bug #289361)
+	epatch "${FILESDIR}"/${PN}-2.26.3.1-en_GB.patch
 
 	# patch gnome terminal to report as GNOME rather than xterm
 	# This needs to resolve a few bugs (#120294,)

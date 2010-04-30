@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r2.ebuild,v 1.11 2010/04/27 04:50:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r2.ebuild,v 1.12 2010/04/30 07:21:30 pacho Exp $
 
 inherit eutils gnome2
 
@@ -52,6 +52,9 @@ src_unpack() {
 	# Remove useless Plural-Forms line which breaks build with new
 	# gnome-doc-utils. See bug #304091
 	epatch "${FILESDIR}"/${P}-remove-plural.patch
+
+	# Fix British English documentation translation (bug #289361)
+	epatch "${FILESDIR}"/${PN}-2.26.3.1-en_GB.patch
 
 	# patch gnome terminal to report as GNOME rather than xterm
 	# This needs to resolve a few bugs (#120294,)
