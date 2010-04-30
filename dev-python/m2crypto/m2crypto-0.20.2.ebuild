@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.2.ebuild,v 1.12 2010/02/14 18:00:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.2.ebuild,v 1.13 2010/04/30 18:21:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils eutils multilib portability
+inherit distutils eutils
 
 MY_PN="M2Crypto"
 
@@ -26,30 +27,34 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools"
 RESTRICT_PYTHON_ABIS="3.*"
 
-PYTHON_MODNAME="${MY_PN}"
-
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 DOCS="CHANGES"
+PYTHON_MODNAME="${MY_PN}"
 
-src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-openssl-1.0.0.patch"
+}
+
+src_compile() {
+	distutils_src_compile
+
+	if use doc; then
+		cd doc
+		einfo "Generation of documentation"
+		PYTHONPATH="$(ls -d ../build-$(PYTHON -f --ABI)/lib.*)" epydoc --html --output=api --name=M2Crypto M2Crypto || die "Generation of documentation failed"
+	fi
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 
 	if use doc; then
-		cd "${S}/demo"
-		treecopy . "${ED}/usr/share/doc/${PF}/example"
-
-		einfo "Generating API documentation..."
-		cd "${S}/doc"
-		PYTHONPATH="${ED}$(python_get_sitedir -f)" epydoc --html --output=api --name=M2Crypto M2Crypto
+		pushd demo > /dev/null
+		insinto /usr/share/doc/${PF}/example
+		doins -r *
+		popd > /dev/null
 	fi
-	dohtml -r *
+	dohtml -r doc/*
 }

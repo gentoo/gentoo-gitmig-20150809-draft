@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.58 2010/02/14 18:00:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.59 2010/04/30 18:21:16 arfrever Exp $
+
+  30 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  m2crypto-0.20.2.ebuild, +files/m2crypto-0.20.2-openssl-1.0.0.patch:
+  Fix building with openssl-1.0.0 (bug #310461).
 
   14 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   m2crypto-0.20.2.ebuild:
