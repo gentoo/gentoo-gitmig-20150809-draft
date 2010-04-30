@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.7.1.ebuild,v 1.3 2010/02/10 08:12:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcov/rcov-0.9.7.1.ebuild,v 1.4 2010/04/30 20:33:23 graaff Exp $
 
 EAPI=2
 
@@ -15,7 +15,8 @@ inherit ruby-fakegem versionator eutils
 
 DESCRIPTION="A ruby code coverage analysis tool"
 HOMEPAGE="http://eigenclass.org/hiki.rb?rcov"
-SRC_URI="http://github.com/relevance/${PN}/tarball/release_$(replace_all_version_separators _) -> ${P}.tgz"
+#SRC_URI="http://github.com/relevance/${PN}/tarball/release_$(replace_all_version_separators _) -> ${P}.tgz"
+SRC_URI="mirror://gentoo/${P}.tgz"
 
 S="${WORKDIR}/relevance-${PN}-6f33de1"
 
