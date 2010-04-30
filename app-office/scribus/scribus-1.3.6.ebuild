@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.1 2010/03/17 09:56:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.2 2010/04/30 22:53:15 zmedico Exp $
 
 EAPI=2
 
@@ -36,7 +36,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-libs/boost"
 
-PATCHES=( "${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch" "${FILESDIR}/${PN}-1.3.6-podofo-0.8.0.patch" )
 
 DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
 
