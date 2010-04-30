@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.28.2.ebuild,v 1.1 2009/12/23 23:30:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.28.2.ebuild,v 1.2 2010/04/30 07:39:16 pacho Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Unicode character map viewer"
 HOMEPAGE="http://gucharmap.sourceforge.net/"
@@ -40,4 +40,10 @@ pkg_setup() {
 src_install() {
 	gnome2_src_install
 	find "${D}" -name "*.la" -delete || die "remove of la files failed"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	# Fix British English documentation translation (bug #289348)
+	epatch "${FILESDIR}/${PN}-2.26.3.1-en_GB.patch"
 }

@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.133 2010/02/24 23:00:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.134 2010/04/30 07:39:16 pacho Exp $
+
+  30 Apr 2010; Pacho Ramos <pacho@gentoo.org> gucharmap-2.26.3.1.ebuild,
+  +files/gucharmap-2.26.3.1-en_GB.patch, gucharmap-2.28.2.ebuild:
+  Fix British English documentation translation (bug #289348 reported by
+  Markus Meier) with upstream patch. Also thanks to Daniel Schömer for
+  finding the problem. This is fixed upstream in > 2.30.1 versions.
 
   24 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gucharmap-2.24.3.ebuild, -gucharmap-2.28.1.ebuild:

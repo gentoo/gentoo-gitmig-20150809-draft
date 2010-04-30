@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.26.3.1.ebuild,v 1.9 2010/01/18 00:15:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-2.26.3.1.ebuild,v 1.10 2010/04/30 07:39:16 pacho Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Unicode character map viewer"
 HOMEPAGE="http://gucharmap.sourceforge.net/"
@@ -35,4 +35,10 @@ pkg_setup() {
 		$(use_enable gnome gconf)
 		$(use_enable cjk unihan)
 		$(use_enable python python-bindings)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+	# Fix British English documentation translation (bug #289348)
+	epatch "${FILESDIR}/${PN}-2.26.3.1-en_GB.patch"
 }
