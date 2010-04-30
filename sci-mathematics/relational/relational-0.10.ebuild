@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.10.ebuild,v 1.3 2010/04/23 09:04:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.10.ebuild,v 1.4 2010/04/30 10:57:16 hwoarang Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit python distutils eutils
@@ -42,11 +42,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize $(python_get_sitedir)/${PN}/
-	python_mod_optimize $(python_get_sitedir)/${PN}_gui/
+	python_mod_optimize ${PN} ${PN}_gui
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup ${PN} ${PN}_gui
 }
