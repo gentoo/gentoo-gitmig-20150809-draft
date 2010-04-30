@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5-appl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.1 2010/04/30 22:20:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.2 2010/04/30 22:28:35 darkside Exp $
+
+  30 Apr 2010; Jeremy Olexa <darkside@gentoo.org> mit-krb5-appl-1.0.ebuild:
+  Improve EAPI2 handling by adding a src_prepare step. Improve description
 
 *mit-krb5-appl-1.0 (30 Apr 2010)
 

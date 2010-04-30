@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.ebuild,v 1.1 2010/04/30 22:20:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.ebuild,v 1.2 2010/04/30 22:28:35 darkside Exp $
 
 EAPI="2"
 
 inherit eutils flag-o-matic autotools
 
 MY_P=${P/mit-}
-DESCRIPTION="MIT Kerberos V"
+DESCRIPTION="Kerberized applications split from the main MIT Kerberos V distribution"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
 SRC_URI="http://web.mit.edu/kerberos/dist/krb5-appl/${PV}/${MY_P}-signed.tar"
 
@@ -24,6 +24,9 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	unpack ./"${MY_P}".tar.gz
+}
+
+src_prepare() {
 	local subdir
 	for subdir in $(find . -name configure.in \
 		| xargs grep -l 'AC_CONFIG_SUBDIRS' \
