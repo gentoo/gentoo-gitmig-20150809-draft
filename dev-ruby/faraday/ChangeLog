@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.2 2010/04/30 18:13:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.3 2010/04/30 20:23:21 flameeyes Exp $
+
+  30 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  faraday-0.4.3.ebuild:
+  Add Ruby 1.9 support.
 
   30 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   faraday-0.4.3.ebuild:

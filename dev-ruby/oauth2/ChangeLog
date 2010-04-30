@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/oauth2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.1 2010/04/30 18:18:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.2 2010/04/30 20:24:03 flameeyes Exp $
+
+  30 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> oauth2-0.0.8.ebuild:
+  Add Ruby 1.9 support.
 
 *oauth2-0.0.8 (30 Apr 2010)
 
