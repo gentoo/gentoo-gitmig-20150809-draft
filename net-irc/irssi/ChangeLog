@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.161 2010/04/24 19:59:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.162 2010/04/30 14:21:40 ranger Exp $
+
+  30 Apr 2010; Brent Baude <ranger@gentoo.org> irssi-0.8.15.ebuild:
+  Marking irssi-0.8.15 ppc for bug 314639
 
   24 Apr 2010; Raúl Porcel <armin76@gentoo.org> irssi-0.8.15.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #314639
