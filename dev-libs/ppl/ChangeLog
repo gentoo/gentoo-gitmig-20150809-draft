@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.19 2010/02/27 05:31:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.20 2010/04/30 05:17:28 aballier Exp $
+
+  30 Apr 2010; Alexis Ballier <aballier@gentoo.org> ppl-0.10.2-r1.ebuild:
+  keyword ~sparc-fbsd
 
 *ppl-0.10.2-r1 (27 Feb 2010)
 
