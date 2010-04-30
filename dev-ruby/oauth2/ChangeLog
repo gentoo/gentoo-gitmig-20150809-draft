@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/oauth2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.1 2010/04/30 18:18:16 flameeyes Exp $
+
+*oauth2-0.0.8 (30 Apr 2010)
+
+  30 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +oauth2-0.0.8.ebuild, +metadata.xml:
+  Initial impor of the OAuth2 gem, to use the new Facebook authentication
+  APIs.
+
