@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.11 2010/04/26 15:07:58 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.12 2010/04/30 17:40:10 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -216,7 +216,16 @@ done
 
 _ruby_invoke_environment() {
 	old_S=${S}
-	sub_S=${S#${WORKDIR}}
+	sub_S=${S#${WORKDIR}/}
+
+	# Special case, for the always-lovely GitHub fetches. With this,
+	# we allow the star glob to just expand to whatever directory it's
+	# called.
+	if [[ ${sub_S} = *"*" ]]; then
+		pushd "${WORKDIR}"/all &>/dev/null
+		sub_S=$(eval ls -d ${sub_S})
+		popd &>/dev/null
+	fi
 
 	environment=$1; shift
 
