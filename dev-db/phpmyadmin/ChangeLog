@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.379 2009/11/21 18:56:02 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.380 2010/04/30 21:41:43 mabi Exp $
+
+*phpmyadmin-3.3.2 (30 Apr 2010)
+
+  30 Apr 2010; <mabi@gentoo.org> +phpmyadmin-3.3.2.ebuild:
+  version bump from the php-experimental overlay (thanks to Tsisaruk V
+  <tsisaruk.v@gmail.com>)
 
   21 Nov 2009; nixnut <nixnut@gentoo.org> phpmyadmin-2.11.9.6.ebuild,
   phpmyadmin-3.2.2.1.ebuild:
