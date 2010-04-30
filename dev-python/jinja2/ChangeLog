@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.41 2010/04/20 19:42:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.42 2010/04/30 14:36:55 grobian Exp $
+
+  30 Apr 2010; Fabian Groffen <grobian@gentoo.org> jinja2-2.4.1.ebuild:
+  Marked ~x64-macos (bug #316787) and ~ppc-macos
 
 *jinja2-2.4.1 (20 Apr 2010)
 
