@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/pdf-reader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.6 2010/02/14 22:45:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.7 2010/04/30 11:17:18 graaff Exp $
+
+*pdf-reader-0.8.5 (30 Apr 2010)
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> +pdf-reader-0.8.5.ebuild:
+  Version bump.
 
 *pdf-reader-0.8.3 (14 Feb 2010)
 
