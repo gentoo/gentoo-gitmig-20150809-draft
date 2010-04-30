@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-0.8.1.ebuild,v 1.1 2010/01/28 00:50:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-0.8.1.ebuild,v 1.2 2010/04/30 20:00:56 graaff Exp $
 
 EAPI=2
 
@@ -21,7 +21,8 @@ GITHUB_USER="wycats"
 # Untagged, but should correspond to 0.8.1 release
 TREE_HASH="db101cc631de7784267f87c67f33a695d2b9db26"
 
-SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${TREE_HASH} -> ${PN}-git-${PV}.tgz"
+#SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${TREE_HASH} -> ${PN}-git-${PV}.tgz"
+SRC_URI="mirror://gentoo/${PN}-git-${PV}.tgz"
 S="${WORKDIR}/${GITHUB_USER}-${PN}-${TREE_HASH:0:7}"
 
 LICENSE="MIT"

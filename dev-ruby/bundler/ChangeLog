@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.1 2010/01/28 00:50:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.2 2010/04/30 20:00:56 graaff Exp $
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> bundler-0.8.1.ebuild:
+  Deal with github changing their tarball generation.
 
 *bundler-0.8.1 (28 Jan 2010)
 
