@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.21 2010/02/13 19:13:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.22 2010/04/30 11:10:32 graaff Exp $
+
+*parsetree-3.0.5 (30 Apr 2010)
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> +parsetree-3.0.5.ebuild:
+  Version bump with minor bug fix.
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> parsetree-3.0.3.ebuild,
   parsetree-3.0.4.ebuild, parsetree-3.0.4-r1.ebuild:
