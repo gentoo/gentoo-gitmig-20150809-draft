@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/qshare
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.2 2010/03/09 11:26:18 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.3 2010/04/30 13:30:46 hwoarang Exp $
+
+*qshare-1.3 (30 Apr 2010)
+
+  30 Apr 2010; Markos Chandras <hwoarang@gentoo.org> +qshare-1.3.ebuild:
+  Version bump
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> qshare-0.9.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension
