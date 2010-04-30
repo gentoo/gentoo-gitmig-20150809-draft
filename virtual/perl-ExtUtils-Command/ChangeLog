@@ -1,0 +1,17 @@
+# ChangeLog for virtual/perl-ExtUtils-Command
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.1 2010/04/30 06:28:38 tove Exp $
+
+*perl-ExtUtils-Command-1.16 (30 Apr 2010)
+
+  30 Apr 2010; Torsten Veller <tove@gentoo.org>
+  +perl-ExtUtils-Command-1.16.ebuild, +metadata.xml:
+  Import from perl-experimental
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-ExtUtils-Command-1.16.ebuild:
+  Add empty HOMEPAGE and LICENSE. Add mandatory SRC_URI
+
+  15 Sep 2009; Torsten Veller <tove@gentoo.org> +metadata.xml:
+  Initial commit
+
