@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Math-Bezier
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Bezier/ChangeLog,v 1.1 2010/04/30 05:01:07 weaver Exp $
+
+*Math-Bezier-0.01 (29 Apr 2010)
+
+  29 Apr 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +Math-Bezier-0.01.ebuild:
+  New package, dependency of sci-visualization/circos
+
