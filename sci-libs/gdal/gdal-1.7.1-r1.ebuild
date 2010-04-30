@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.1-r1.ebuild,v 1.2 2010/04/18 12:31:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.1-r1.ebuild,v 1.3 2010/04/30 08:18:41 scarabeus Exp $
 
 EAPI="3"
 
@@ -143,7 +143,7 @@ src_configure() {
 	# mysql-config puts this in (and boy is it a PITA to get it out)
 	sed \
 	    -i -e "s;-Wl,-O1;;" \
-	    -i -e "s| -rdynamic ||" \
+	    -i -e "s| -rdynamic | |" \
 	    GDALmake.opt || die "sed LIBS failed"
 
 	# updated for newer swig (must specify the path to input files)

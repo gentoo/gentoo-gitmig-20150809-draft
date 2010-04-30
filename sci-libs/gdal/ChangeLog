@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.79 2010/04/18 12:31:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.80 2010/04/30 08:18:41 scarabeus Exp $
+
+  30 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.7.1-r1.ebuild:
+  Fix linking. Per bug #314047.
 
   18 Apr 2010; Fabian Groffen <grobian@gentoo.org> gdal-1.7.1-r1.ebuild:
   Add back in necessary Prefix changes from 1.6.3 that seemingly got lost
