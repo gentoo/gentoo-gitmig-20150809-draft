@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.215 2010/01/14 09:12:31 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.216 2010/04/30 22:17:14 darkside Exp $
+
+*mit-krb5-1.8.1 (30 Apr 2010)
+
+  30 Apr 2010; Jeremy Olexa <darkside@gentoo.org> +mit-krb5-1.8.1.ebuild,
+  +files/CVE-2010-1320.patch:
+  Version bump by Eray Aslan, security bug 312481
 
 *mit-krb5-1.7-r2 (14 Jan 2010)
 *mit-krb5-1.6.3-r7 (14 Jan 2010)
