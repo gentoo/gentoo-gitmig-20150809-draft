@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mechanize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.25 2010/04/04 07:02:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.26 2010/04/30 20:18:10 graaff Exp $
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> -mechanize-0.9.3.ebuild,
+  -mechanize-0.9.3-r1.ebuild:
+  Remove old versions.
 
 *mechanize-1.0.0 (04 Apr 2010)
 
