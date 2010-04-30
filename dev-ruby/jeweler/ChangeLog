@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/jeweler
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.1 2010/04/30 07:27:25 graaff Exp $
+
+*jeweler-1.4.0 (30 Apr 2010)
+
+  30 Apr 2010; Hans de Graaff <graaff@gentoo.org> +jeweler-1.4.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
