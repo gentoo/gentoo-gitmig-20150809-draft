@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.ebuild,v 1.3 2010/03/16 18:20:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.ebuild,v 1.4 2010/04/30 07:21:18 tupone Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit autotools eutils gnome2 games
+PYTHON_DEPEND="2"
+inherit autotools eutils python gnome2 games
 
 DESCRIPTION="A clone of classic hearts card game"
 HOMEPAGE="http://www.gnome-hearts.org"
@@ -17,14 +18,18 @@ IUSE="nls"
 
 RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libglade-2
-	>=gnome-base/libgnomeui-2
-	dev-lang/python"
+	>=gnome-base/libgnomeui-2"
 DEPEND="${RDEPEND}
 	app-text/rarian
 	dev-util/intltool
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
 src_prepare() {
 	# make src_test work
