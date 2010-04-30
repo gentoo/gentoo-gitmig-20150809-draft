@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.0.1-r1.ebuild,v 1.9 2010/01/17 19:39:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.0.1-r1.ebuild,v 1.10 2010/04/30 20:13:50 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 jruby"
@@ -23,13 +23,11 @@ IUSE=""
 # make them dependencies at all.
 ruby_add_bdepend test dev-ruby/test-spec
 
+#USE_RUBY=ruby19 \
+#	ruby_add_bdepend "ruby_targets_ruby19 test" '=dev-ruby/test-unit-1*'
+
 all_ruby_prepare() {
-	# Disable the test on the content-length: it not only varies on
-	# the internal implementation (and thus “needs change often” as
-	# the code says), but it also varies on the implementation (thus
-	# failing on JRuby).
-	sed -i -e '/content_length\.should\.be/s:^:#:' \
-		test/spec_rack_mock.rb || die
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 each_ruby_test() {
