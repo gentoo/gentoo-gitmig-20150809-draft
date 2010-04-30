@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-0.0.8.ebuild,v 1.2 2010/04/30 20:24:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-0.0.8.ebuild,v 1.3 2010/04/30 21:35:42 flameeyes Exp $
 
 EAPI="2"
 
@@ -26,5 +26,5 @@ ruby_add_rdepend "dev-ruby/faraday"
 ruby_add_bdepend test ">=dev-ruby/rspec-1.2.9"
 
 all_ruby_prepare() {
-	sed -i -e '/check_dependencies/d' Rakefile || die
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
