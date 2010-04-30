@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.83 2010/02/21 17:38:21 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.84 2010/04/30 22:01:38 mabi Exp $
+
+*phppgadmin-4.2.3 (30 Apr 2010)
+
+  30 Apr 2010; <mabi@gentoo.org> +phppgadmin-4.2.3.ebuild:
+  version bump from the php-experimental overlay (thanks to Tsisaruk V
+  <tsisaruk.v@gmail.com>)
 
 *phppgadmin-9999 (21 Feb 2010)
 
