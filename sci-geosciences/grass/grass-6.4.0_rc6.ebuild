@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.1 2010/04/30 08:48:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.2 2010/04/30 08:54:30 scarabeus Exp $
 
 EAPI="3"
 
@@ -63,7 +63,10 @@ RDEPEND="
 		x11-libs/libXp
 		x11-libs/libXpm
 		x11-libs/libXt
-		opengl? ( virtual/opengl )
+		opengl? (
+			virtual/opengl
+			${TCL_DEPS}
+		)
 		python? ( wxwidgets? ( >=dev-python/wxpython-2.8.10.1 ) )
 		!python? ( ${TCL_DEPS} )
 		!wxwidgets? ( ${TCL_DEPS} )
@@ -123,10 +126,14 @@ src_configure() {
 	local myconf TCL_LIBDIR
 
 	if use X; then
+		TCL_LIBDIR="/usr/$(get_libdir)/tcl8.5"
 		myconf+="
+			--with-tcltk-libs=${TCL_LIBDIR}
 			$(use_with opengl)
 			--with-x
 		"
+		use opengl && myconf+=" --with-tcltk"
+
 		if use python && use wxwidgets; then
 			WX_BUILD=yes
 			WX_GTK_VER=2.8
@@ -138,10 +145,9 @@ src_configure() {
 		else
 			WX_BUILD=no
 			# use tcl gui if wxwidgets are disabled
-			TCL_LIBDIR="/usr/$(get_libdir)/tcl8.5"
+			
 			myconf+="
 				--with-tcltk
-				--with-tcltk-libs=${TCL_LIBDIR}
 				--without-wxwidgets
 			"
 		fi
