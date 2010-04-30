@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.1.3.ebuild,v 1.3 2010/02/19 17:13:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.1.3.ebuild,v 1.4 2010/04/30 20:16:28 graaff Exp $
 
 EAPI=2
 
@@ -19,7 +19,8 @@ HOMEPAGE="http://rails-i18n.org/"
 # version 0.1.3, unfortunately there is *no such official release* as
 # the one bundled with activesupport. On the other hand, this seems to
 # be it, minus some test changes.
-SRC_URI="http://github.com/svenfuchs/i18n/tarball/38d85ea3b8eec032c1b0898a30f8010917416d9d -> ${PN}-git-${PV}.tgz"
+#SRC_URI="http://github.com/svenfuchs/i18n/tarball/38d85ea3b8eec032c1b0898a30f8010917416d9d -> ${PN}-git-${PV}.tgz"
+SRC_URI="mirror://gentoo/${PN}-git-${PV}.tgz"
 S="${WORKDIR}/svenfuchs-${PN}-38d85ea"
 
 LICENSE="MIT"
