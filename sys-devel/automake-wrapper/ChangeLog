@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.44 2010/04/18 12:36:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.45 2010/04/30 17:16:47 grobian Exp $
+
+  30 Apr 2010; Fabian Groffen <grobian@gentoo.org>
+  automake-wrapper-5.ebuild:
+  Change shebang of am-wrapper script from /bin/sh to bin/sh from the offset
+  for Prefix installs, since /bin/sh rarely is a POSIX shell out there.
 
   18 Apr 2010; <nixnut@gentoo.org> automake-wrapper-4.ebuild:
   ppc stable #295947

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/automake-wrapper-5.ebuild,v 1.1 2010/03/07 15:45:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/automake-wrapper-5.ebuild,v 1.2 2010/04/30 17:16:47 grobian Exp $
 
 inherit multilib
 
@@ -15,9 +15,17 @@ IUSE=""
 
 S=${WORKDIR}
 
+src_unpack() {
+	cp "${FILESDIR}"/am-wrapper-${PV}.sh "${T}"/
+	# usr/bin/aclocal: bad substitution -> /bin/sh != POSIX shell
+	if use prefix ; then
+		sed -i -e '1c\#!'"${EPREFIX}"'/bin/sh' "${T}"/am-wrapper-${PV}.sh || die
+	fi
+}
+
 src_install() {
 	exeinto /usr/$(get_libdir)/misc
-	newexe "${FILESDIR}"/am-wrapper-${PV}.sh am-wrapper.sh || die
+	newexe "${T}"/am-wrapper-${PV}.sh am-wrapper.sh || die
 
 	keepdir /usr/share/aclocal
 
