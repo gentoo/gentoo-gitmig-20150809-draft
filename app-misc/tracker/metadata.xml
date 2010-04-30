@@ -15,5 +15,7 @@
     <pkg>gnome-base/nautilus</pkg> by providing entries in its context menu
   </flag>
   <flag name="playlist">Add support for playlists</flag>
+  <flag name="strigi">Add support for <pkg>app-misc/strigi</pkg> search
+  engine.</flag>
 </use>
 </pkgmetadata>
