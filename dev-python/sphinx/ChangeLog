@@ -1,9 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.50 2010/04/30 14:34:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.51 2010/04/30 14:47:37 grobian Exp $
 
   30 Apr 2010; Fabian Groffen <grobian@gentoo.org> sphinx-0.6.5.ebuild:
-  Marked ~x64-macos and ~ppc-macos
+  Marked ~x64-macos (Bug #316787) and ~ppc-macos
 
   25 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> sphinx-0.6.5.ebuild:
   amd64 stable, bug 313147
