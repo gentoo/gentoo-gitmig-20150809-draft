@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.50 2009/12/16 16:09:54 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.51 2010/04/30 14:50:13 grobian Exp $
+
+  30 Apr 2010; Fabian Groffen <grobian@gentoo.org> pexpect-2.4.ebuild:
+  Marked ~x64-macos (bug #316787)
 
   16 Dec 2009; Brent Baude <ranger@gentoo.org> pexpect-2.4.ebuild:
   Marking pexpect-2.4 ppc64 for bug 291523
