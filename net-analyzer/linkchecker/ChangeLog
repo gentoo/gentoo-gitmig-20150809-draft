@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.42 2010/04/30 15:22:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.43 2010/04/30 15:23:21 jlec Exp $
 
 *linkchecker-5.2 (30 Apr 2010)
 
@@ -8,7 +8,7 @@
   +files/5.2-missing-files.patch, -linkchecker-5.0.2.ebuild,
   +linkchecker-5.2.ebuild, metadata.xml:
   Version Bump, fixed missing dep on PyQt4, #317799, introduced USE=X, fix
-  Python ABIs compatibility, #315075
+  Python ABIs compatibility, #315075, taken the package
 
   05 Oct 2009; Fabian Groffen <grobian@gentoo.org> linkchecker-5.0.2.ebuild:
   Marked ~ppc-macos and ~x64-solaris
