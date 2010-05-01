@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/stringparser_bbcode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/ChangeLog,v 1.5 2010/05/01 19:07:49 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/stringparser_bbcode/ChangeLog,v 1.6 2010/05/01 19:09:11 mabi Exp $
+
+  01 May 2010; <mabi@gentoo.org> -stringparser_bbcode-0.3.2a.ebuild,
+  -stringparser_bbcode-0.3.2b.ebuild:
+  remove old version
 
 *stringparser_bbcode-0.3.3 (01 May 2010)
 
