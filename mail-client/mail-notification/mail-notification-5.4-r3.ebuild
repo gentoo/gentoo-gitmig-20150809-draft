@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r3.ebuild,v 1.2 2010/04/29 20:57:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r3.ebuild,v 1.3 2010/05/01 08:27:51 graaff Exp $
 
 EAPI=1
 
@@ -72,6 +72,9 @@ src_unpack() {
 
 	# Fedora patch to build against dev-libs/gmime:2.4
 	epatch "${FILESDIR}/${P}-gmime.patch"
+
+	# Fix forced --as-needed, bug 317905
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 }
 
 src_compile() {
