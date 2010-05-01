@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.7.0-r1.ebuild,v 1.4 2010/04/30 20:29:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.7.0-r1.ebuild,v 1.5 2010/05/01 00:46:44 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -18,8 +18,7 @@ DESCRIPTION="Provide a standard and simplified way to build and package Ruby ext
 HOMEPAGE="http://github.com/luislavena/rake-compiler"
 LICENSE="as-is" # truly
 
-#SRC_URI="http://github.com/luislavena/${PN}/tarball/v${PV} -> ${P}.tar.gz"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://github.com/luislavena/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 S="${WORKDIR}/luislavena-${PN}-2834041"
 
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"

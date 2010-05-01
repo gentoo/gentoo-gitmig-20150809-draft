@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.5 2010/04/30 20:55:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.6 2010/05/01 00:50:47 flameeyes Exp $
+
+  01 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  shoulda-2.10.3.ebuild:
+  Restore original SRC_URI.
 
   30 Apr 2010; Hans de Graaff <graaff@gentoo.org> shoulda-2.10.3.ebuild:
   Deal with github changing their tarball generation.

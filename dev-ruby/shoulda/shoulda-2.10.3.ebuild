@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-2.10.3.ebuild,v 1.3 2010/04/30 20:55:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/shoulda-2.10.3.ebuild,v 1.4 2010/05/01 00:50:47 flameeyes Exp $
 
 EAPI=2
 
@@ -13,8 +13,7 @@ inherit ruby-fakegem
 
 DESCRIPTION="Making tests easy on the fingers and eyes"
 HOMEPAGE="http://thoughtbot.com/projects/shoulda"
-#SRC_URI="http://github.com/thoughtbot/${PN}/tarball/v${PV} -> ${P}.tar.gz"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://github.com/thoughtbot/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 S="${WORKDIR}/thoughtbot-${PN}-5add4d2"
 
 LICENSE="MIT"

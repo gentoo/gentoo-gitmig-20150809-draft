@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/pdf-inspector-0_pre20081022.ebuild,v 1.2 2010/04/30 20:19:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/pdf-inspector-0_pre20081022.ebuild,v 1.3 2010/05/01 00:45:26 flameeyes Exp $
 
 EAPI=2
 
@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-#SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${GITHUB_TREE} -> ${P}.tgz"
-SRC_URI="mirror://gentoo/${P}.tgz"
+SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${GITHUB_TREE} -> ${P}.tgz"
 
 USE_RUBY="ruby18"
 
