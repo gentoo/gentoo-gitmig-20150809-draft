@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.15 2010/01/14 23:48:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.16 2010/05/01 10:44:39 flameeyes Exp $
+
+*test-unit-2.0.7 (01 May 2010)
+
+  01 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -test-unit-2.0.5.ebuild, -test-unit-2.0.6.ebuild, +test-unit-2.0.7.ebuild:
+  Version bump for series two, it still causes problems but is needed for
+  some cases.
 
 *test-unit-1.2.3 (14 Jan 2010)
 

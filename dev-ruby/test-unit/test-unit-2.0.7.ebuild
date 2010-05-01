@@ -1,20 +1,22 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.5.ebuild,v 1.4 2010/01/14 23:48:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.7.ebuild,v 1.1 2010/05/01 10:44:39 flameeyes Exp $
 
 EAPI=2
 # One test fails on jruby, might be a jruby bug
 # When enabled on ruby18 it breaks too many things, so don't enable it for that just yet
 USE_RUBY="ruby19"
 
-# Don't enable docs yet since this requires hoe
-RUBY_FAKEGEM_TASK_DOC="" # doc
+RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="TODO README.txt History.txt"
 
+# Disable default binwraps
+RUBY_FAKEGEM_BINWRAP=""
+
 inherit ruby-fakegem
 
-#ruby_add_bdepend doc dev-ruby/hoe
+ruby_add_bdepend doc dev-ruby/hoe
 
 DESCRIPTION="An improved version of the Test::Unit framework from Ruby 1.8"
 HOMEPAGE="http://test-unit.rubyforge.org/"
@@ -34,4 +36,12 @@ each_ruby_test() {
 	[[ $(basename ${RUBY}) == jruby ]] && rubyflags="-X+O"
 
 	${RUBY} ${rubyflags} test/run-test.rb || die "testsuite failed"
+}
+
+all_ruby_intall() {
+	all_fakegem_install
+
+	# Create a testrb2 wrapper similarly to the rdoc2 wrapper for
+	# rdoc-2* series.
+	ruby_fakegem_binwrapper testrb /usr/bint/testrb2
 }
