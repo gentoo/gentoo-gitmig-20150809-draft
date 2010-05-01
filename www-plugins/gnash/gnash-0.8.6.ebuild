@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.9 2010/03/15 15:46:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.10 2010/05/01 00:58:17 reavertm Exp $
 
 EAPI="2"
-CMAKE_REQUIRED="false"
+CMAKE_REQUIRED="never"
 KDE_REQUIRED="optional"
 KDE_MINIMAL="4.2"
 AT_M4DIR="cygnal"
