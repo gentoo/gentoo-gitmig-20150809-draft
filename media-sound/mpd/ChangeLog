@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.201 2010/04/09 02:02:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.202 2010/05/01 11:20:43 angelos Exp $
+
+*mpd-0.15.9 (01 May 2010)
+
+  01 May 2010; Christoph Mende <angelos@gentoo.org> mpd-0.15.8.ebuild,
+  +mpd-0.15.9.ebuild:
+  Version bump (bug 310945) and 0.15.8 stable on amd64 (bug 309389), thanks
+  to Roeland Douma
 
   09 Apr 2010; Jeroen Roovers <jer@gentoo.org> mpd-0.15.8.ebuild:
   Stable for HPPA (bug #309389).
