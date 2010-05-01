@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.734 2010/04/29 17:08:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.735 2010/05/01 15:39:08 aballier Exp $
+
+  01 May 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  Add missing dep on app-text/docbook-xml-dtd by Scott Burgess
+  <scottburgess@diamondkey.com>, bug #317559
 
   29 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
   mplayer-1.0_rc4_p20100427.ebuild, mplayer-9999.ebuild:
