@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.5 2010/04/13 11:00:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.6 2010/05/01 13:14:10 aballier Exp $
 
 EAPI=2
 
@@ -33,7 +33,6 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2
 		=sys-freebsd/freebsd-sources-${RV}*
-		>=sys-apps/sandbox-1.3.2
 		!bootstrap? ( app-arch/bzip2 )"
 
 	PROVIDE="virtual/libc
