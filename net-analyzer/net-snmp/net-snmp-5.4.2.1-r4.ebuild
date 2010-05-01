@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.1 2010/04/29 16:51:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.2 2010/05/01 00:20:04 flameeyes Exp $
 
 EAPI=2
 
@@ -152,7 +152,8 @@ src_test() {
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	# bug #317965
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 
 	if use perl ; then
 		fixlocalpod
