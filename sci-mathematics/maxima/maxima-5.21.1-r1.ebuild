@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.21.1.ebuild,v 1.1 2010/04/24 21:23:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.21.1-r1.ebuild,v 1.1 2010/05/01 12:18:10 grozin Exp $
 EAPI=2
 inherit eutils elisp-common
 
@@ -100,12 +100,11 @@ src_prepare() {
 	# use xdg-open to view ps, pdf
 	epatch "${FILESDIR}"/${PN}-xdg-utils.patch
 
-	epatch "${FILESDIR}"/${PN}-${NO_INIT_PATCH_PV}-no-init-files.patch
-
+	# Don't use lisp init files
 	# ClozureCL executable name is now ccl
 	# *read-default-float-format* is now bound per-thread
 	# and isn't saved in a heap image
-	epatch "${FILESDIR}"/${P}-clozurecl-1.5.patch
+	epatch "${FILESDIR}"/${P}.patch
 
 	epatch "${FILESDIR}"/${P}-emacs-version.patch
 
