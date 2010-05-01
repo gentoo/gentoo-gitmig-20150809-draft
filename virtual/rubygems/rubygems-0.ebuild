@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-0.ebuild,v 1.7 2010/01/11 11:13:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-0.ebuild,v 1.8 2010/05/01 10:35:26 a3li Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 sparc x86 ~x86-fbsd ~
 IUSE=""
 
 RDEPEND="ruby_targets_ruby18? ( dev-ruby/rubygems )
-	ruby_targets_ruby19? ( dev-lang/ruby:1.9 )"
+	ruby_targets_ruby19? ( dev-ruby/rubygems[ruby_targets_ruby19] )"
 DEPEND=""
 
 pkg_setup() { :; }
