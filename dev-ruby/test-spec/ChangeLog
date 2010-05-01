@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.14 2010/04/26 17:56:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.15 2010/05/01 10:41:40 flameeyes Exp $
+
+  01 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  test-spec-0.10.0-r2.ebuild:
+  Don't depend on test-unit-2 at runtime.
 
   26 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   test-spec-0.10.0-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/test-spec-0.10.0-r2.ebuild,v 1.8 2010/04/26 17:56:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/test-spec-0.10.0-r2.ebuild,v 1.9 2010/05/01 10:41:40 flameeyes Exp $
 
 EAPI="2"
 
@@ -21,9 +21,13 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 ruby_add_rdepend virtual/ruby-test-unit
-USE_RUBY=ruby19 \
-	ruby_add_rdepend ruby_targets_ruby19 '>=dev-ruby/test-unit-2.0.6'
 ruby_add_bdepend test dev-ruby/mocha
+
+# On Ruby 1.9, the tests only work with test-unit-2, but generally
+# speaking, test-spec should work fine with test-unit-1.2.3, and
+# indeed some testsuites only work with that.
+USE_RUBY=ruby19 \
+	ruby_add_bdepend "ruby_targets_ruby19 test" '>=dev-ruby/test-unit-2.0.6'
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${P}-jruby.patch
