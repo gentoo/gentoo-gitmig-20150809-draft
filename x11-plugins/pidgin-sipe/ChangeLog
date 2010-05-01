@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-sipe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.6 2010/04/25 13:29:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.7 2010/05/01 06:49:03 pva Exp $
+
+  01 May 2010; Peter Volkov <pva@gentoo.org> pidgin-sipe-1.10.0.ebuild:
+  Explicitely disable telepathy to avoid but #317489, thank Paul Varner for
+  report.
 
 *pidgin-sipe-1.10.0 (25 Apr 2010)
 

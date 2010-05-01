@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.10.0.ebuild,v 1.1 2010/04/25 13:29:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.10.0.ebuild,v 1.2 2010/05/01 06:49:03 pva Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ RDEPEND="net-im/pidgin
 src_configure() {
 	econf \
 		--enable-purple \
+		--disable-telepathy \
 		$(use_enable debug) \
 		$(use_with kerberos krb5)
 }
