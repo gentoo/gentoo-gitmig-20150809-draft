@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-libexec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.39 2010/03/19 11:51:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/ChangeLog,v 1.40 2010/05/01 11:07:45 aballier Exp $
+
+  01 May 2010; Alexis Ballier <aballier@gentoo.org>
+  freebsd-libexec-8.0.ebuild:
+  readd the pic vs PIC patch from 7.2; its still needed on sparc
 
 *freebsd-libexec-8.0 (19 Mar 2010)
 

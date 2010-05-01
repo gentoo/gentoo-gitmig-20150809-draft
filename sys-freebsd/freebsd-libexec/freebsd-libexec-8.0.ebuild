@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-8.0.ebuild,v 1.1 2010/03/19 11:51:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-8.0.ebuild,v 1.2 2010/05/01 11:07:45 aballier Exp $
 
 EAPI=2
 
@@ -28,6 +28,7 @@ RDEPEND="${RDEPEND}
 
 S="${WORKDIR}/libexec"
 
+PATCHES=( "${FILESDIR}/${PN}-7.2-pic.patch" )
 # Remove sendmail, tcp_wrapper and other useless stuff
 REMOVE_SUBDIRS="smrsh mail.local tcpd telnetd rshd rlogind lukemftpd ftpd"
 
