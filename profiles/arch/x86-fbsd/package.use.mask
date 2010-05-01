@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.16 2010/04/28 12:23:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.17 2010/05/01 16:32:13 aballier Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (22 Mar 2010)
 # xulrunner:1.9 and libgda:3 not keyworded, bug 282291
@@ -28,3 +28,6 @@ media-plugins/frei0r-plugins scale0tilt facedetect
 
 # untested, bug 281573
 media-gfx/imagemagick autotrace
+
+# needs to rework xanim's ebuild to make it bsd-friendly
+media-video/mplayer xanim
