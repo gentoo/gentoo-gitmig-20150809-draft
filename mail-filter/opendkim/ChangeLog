@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.13 2010/04/25 05:39:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.14 2010/05/01 01:46:59 dragonheart Exp $
+
+*opendkim-2.0.3 (01 May 2010)
+
+  01 May 2010; Daniel Black <dragonheart@gentoo.org> +opendkim-2.0.3.ebuild:
+  version bump
 
 *opendkim-2.0.2 (25 Apr 2010)
 
