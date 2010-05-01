@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.12 2010/05/01 08:04:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.13 2010/05/01 08:06:20 graaff Exp $
+
+  01 May 2010; Hans de Graaff <graaff@gentoo.org> minitest-1.5.0.ebuild,
+  minitest-1.6.0.ebuild:
+  Add ~ppc64 keyword also to latest versions because it seems that this was
+  the intention of the ppc64 herd.
 
 *minitest-1.6.0 (01 May 2010)
 
