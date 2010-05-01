@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/clozurecl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.1 2009/12/17 12:16:40 grozin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.2 2010/05/01 12:10:40 grozin Exp $
+
+*clozurecl-1.5 (01 May 2010)
+
+  01 May 2010; Andrey Grozin <grozin@gentoo.org> +clozurecl-1.5.ebuild:
+  Version bump
 
 *clozurecl-1.4 (17 Dec 2009)
 
