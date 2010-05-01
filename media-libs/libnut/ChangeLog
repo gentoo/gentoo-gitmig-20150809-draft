@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.16 2010/01/31 17:45:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.17 2010/05/01 15:50:52 aballier Exp $
+
+  01 May 2010; Alexis Ballier <aballier@gentoo.org> libnut-661.ebuild:
+  keyword ~x86-fbsd
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org> libnut-661.ebuild:
   sparc stable
