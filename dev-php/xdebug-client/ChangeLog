@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/xdebug-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.15 2010/02/05 09:49:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.16 2010/05/01 19:30:48 mabi Exp $
+
+*xdebug-client-2.1.0_rc1 (01 May 2010)
+
+  01 May 2010; <mabi@gentoo.org> +xdebug-client-2.1.0_rc1.ebuild:
+  version bump (bug #310515, thanks to Ole Markus With
+  <o.with@sportradar.ag>)
 
   05 Feb 2010; Alexis Ballier <aballier@gentoo.org>
   xdebug-client-2.0.2.ebuild, xdebug-client-2.0.3.ebuild,
