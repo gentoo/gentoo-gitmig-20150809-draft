@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.6.ebuild,v 1.1 2010/03/28 13:43:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.6.ebuild,v 1.2 2010/05/01 14:04:21 lxnay Exp $
 
 inherit eutils linux-mod
 
@@ -127,9 +127,9 @@ src_install() {
 
 		# udev rule for vboxdrv
 		dodir /etc/udev/rules.d
-		echo 'KERNEL=="vboxguest", NAME="vboxguest", OWNER="vboxguest", MODE="0660"' \
+		echo 'KERNEL=="vboxguest", NAME="vboxguest", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
 		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
-		echo 'KERNEL=="vboxuser", NAME="vboxuser", OWNER="vboxguest", MODE="0660"' \
+		echo 'KERNEL=="vboxuser", NAME="vboxuser", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
 		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
 }
 

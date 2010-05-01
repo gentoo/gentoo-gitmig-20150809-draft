@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.34 2010/03/28 13:43:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.35 2010/05/01 14:04:21 lxnay Exp $
+
+  01 May 2010; Fabio Erculiani <lxnay@gentoo.org>
+  virtualbox-guest-additions-3.1.0.ebuild,
+  virtualbox-guest-additions-3.1.2.ebuild,
+  virtualbox-guest-additions-3.1.4.ebuild,
+  virtualbox-guest-additions-3.1.6.ebuild:
+  fix /dev/vbox{guest,user} udev rule, add GROUP=vboxguest
 
 *virtualbox-guest-additions-3.1.6 (28 Mar 2010)
 
