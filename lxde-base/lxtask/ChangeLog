@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxtask
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.10 2010/02/23 18:42:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.11 2010/05/01 18:58:11 vostorga Exp $
+
+*lxtask-0.1.3 (01 May 2010)
+
+  01 May 2010; Víctor Ostorga <vostorga@gentoo.org> +lxtask-0.1.3.ebuild:
+  Version bump to 0.1.3
 
   23 Feb 2010; Raúl Porcel <armin76@gentoo.org> lxtask-0.1.1.ebuild:
   arm stable wrt #306433
