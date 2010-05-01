@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.12 2010/04/30 17:40:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.13 2010/05/01 16:05:45 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -223,7 +223,7 @@ _ruby_invoke_environment() {
 	# called.
 	if [[ ${sub_S} = *"*" ]]; then
 		pushd "${WORKDIR}"/all &>/dev/null
-		sub_S=$(eval ls -d ${sub_S})
+		sub_S=$(eval ls -d ${sub_S} 2>/dev/null)
 		popd &>/dev/null
 	fi
 
