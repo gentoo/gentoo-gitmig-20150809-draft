@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.6-r1.ebuild,v 1.1 2010/05/01 10:18:57 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.6-r1.ebuild,v 1.2 2010/05/01 10:28:10 a3li Exp $
 
 EAPI="2"
 
@@ -22,7 +22,10 @@ SLOT="0"
 IUSE="doc server"
 
 # previous versions had rubygems bundled, so it would collide badly
-RDEPEND="ruby_targets_jruby? ( >=dev-java/jruby-1.4.0-r5 )"
+RDEPEND="
+	ruby_targets_jruby? ( >=dev-java/jruby-1.4.0-r5 )
+	ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.1_p376 )
+"
 
 # index_gem_repository.rb
 PDEPEND="server? ( dev-ruby/builder[ruby_targets_ruby18] )"
