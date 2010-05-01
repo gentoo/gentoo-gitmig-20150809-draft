@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.374 2010/04/25 00:39:07 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.375 2010/05/01 15:16:41 ulm Exp $
+
+  01 May 2010; Ulrich Mueller <ulm@gentoo.org> emacs-22.3-r4.ebuild,
+  emacs-23.1-r3.ebuild:
+  Revert change of 2010-04-08. Fix directory owner.
 
   25 Apr 2010; Tiago Cunha <tcunha@gentoo.org> emacs-21.4-r20.ebuild,
   emacs-22.3-r4.ebuild, emacs-23.1-r3.ebuild:
