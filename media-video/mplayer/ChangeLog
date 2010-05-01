@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.735 2010/05/01 15:39:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.736 2010/05/01 15:41:17 aballier Exp $
+
+  01 May 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  iconv should be in RDEPEND too
 
   01 May 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   Add missing dep on app-text/docbook-xml-dtd by Scott Burgess
