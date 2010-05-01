@@ -1,6 +1,23 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.34 2010/04/30 19:44:13 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.35 2010/05/01 00:01:34 lxnay Exp $
+
+*xf86-video-virtualbox-3.1.6-r1 (01 May 2010)
+*xf86-video-virtualbox-3.1.4-r2 (01 May 2010)
+*xf86-video-virtualbox-3.1.2-r1 (01 May 2010)
+*xf86-video-virtualbox-3.1.0-r1 (01 May 2010)
+
+  01 May 2010; Fabio Erculiani <lxnay@gentoo.org>
+  -xf86-video-virtualbox-3.1.0.ebuild,
+  +xf86-video-virtualbox-3.1.0-r1.ebuild,
+  -xf86-video-virtualbox-3.1.2.ebuild,
+  +xf86-video-virtualbox-3.1.2-r1.ebuild,
+  -xf86-video-virtualbox-3.1.4-r1.ebuild,
+  +xf86-video-virtualbox-3.1.4-r2.ebuild,
+  -xf86-video-virtualbox-3.1.6.ebuild,
+  +xf86-video-virtualbox-3.1.6-r1.ebuild:
+  revision bump to ensure proper user notification, since pkg now works with
+  xorg-server-1.7
 
   30 Apr 2010; Fabio Erculiani <lxnay@gentoo.org>
   xf86-video-virtualbox-3.1.0.ebuild, xf86-video-virtualbox-3.1.2.ebuild,

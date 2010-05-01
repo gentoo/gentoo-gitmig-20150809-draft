@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.0.ebuild,v 1.2 2010/04/30 19:44:13 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.6-r1.ebuild,v 1.1 2010/05/01 00:01:34 lxnay Exp $
 
 EAPI=2
 
@@ -50,17 +50,17 @@ pkg_setup() {
 		BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 }
 
-src_unpack() {
-		unpack ${A}
-
-		# Prepare the vboxvideo_drm sources and Makefile in ${WORKDIR}
-		cp -a "${MY_P/-OSE/_OSE}"/src/VBox/Additions/linux/drm \
-		"${WORKDIR}/vboxvideo_drm"
-		cp "${FILESDIR}/${PN}-3-vboxvideo_drm.makefile" \
-		"${WORKDIR}/vboxvideo_drm/Makefile"
-}
-
 src_prepare() {
+		# Prepare the vboxvideo_drm sources and Makefile in ${WORKDIR}
+		cp -a "${WORKDIR}/${MY_P/-OSE/_OSE}"/src/VBox/Additions/linux/drm \
+		"${WORKDIR}/vboxvideo_drm" || die "cannot copy vboxvideo_drm directory"
+		cp "${FILESDIR}/${PN}-3-vboxvideo_drm.makefile" \
+		"${WORKDIR}/vboxvideo_drm/Makefile" || die "cannot copy vboxvideo_drm Makefile"
+
+	        if kernel_is -ge 2 6 33; then
+	                # evil patch for new kernels - header moved
+        	        grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
+        	fi
 		# Remove shipped binaries (kBuild,yasm), see bug #232775
 		rm -rf kBuild/bin tools
 
