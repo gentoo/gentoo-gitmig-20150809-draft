@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/gibbler-0.8.2.ebuild,v 1.1 2010/04/30 17:41:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/gibbler-0.8.2.ebuild,v 1.2 2010/05/01 00:43:33 flameeyes Exp $
 
 EAPI=2
 
@@ -28,7 +28,9 @@ ruby_add_rdepend ">=dev-ruby/attic-0.4.0"
 
 ruby_add_bdepend test dev-ruby/tryouts
 
-SRC_URI="http://github.com/delano/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
+# Restore after 0.8.2
+#SRC_URI="http://github.com/delano/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
+SRC_URI="mirror://gentoo/${PN}-git-${PV}.tgz"
 S="${WORKDIR}/delano-${PN}-*"
 
 each_ruby_test() {

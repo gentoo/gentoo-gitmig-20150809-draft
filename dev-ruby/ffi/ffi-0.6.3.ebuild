@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.3.ebuild,v 1.1 2010/04/30 20:13:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-0.6.3.ebuild,v 1.2 2010/05/01 00:42:58 flameeyes Exp $
 
 EAPI=2
 
@@ -19,7 +19,9 @@ inherit ruby-fakegem
 DESCRIPTION="Ruby extension for programmatically loading dynamic libraries"
 HOMEPAGE="http://wiki.github.com/ffi/ffi"
 
-SRC_URI="http://github.com/${PN}/${PN}/tarball/${PV} -> ${PN}-git-${PV}.tgz"
+# Restore this after 0.6.3
+#SRC_URI="http://github.com/${PN}/${PN}/tarball/${PV} -> ${PN}-git-${PV}.tgz"
+SRC_URI="mirror://gentoo/${PN}-git-${PV}.tgz"
 S="${WORKDIR}/${PN}-${PN}-*"
 
 IUSE=""

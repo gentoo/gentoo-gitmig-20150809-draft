@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gibbler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/ChangeLog,v 1.6 2010/04/30 17:41:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/ChangeLog,v 1.7 2010/05/01 00:43:33 flameeyes Exp $
+
+  01 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  gibbler-0.8.2.ebuild:
+  Move to mirrors-only (April 30th had different archives).
 
 *gibbler-0.8.2 (30 Apr 2010)
 

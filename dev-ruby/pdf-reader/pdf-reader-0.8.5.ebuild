@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-0.8.5.ebuild,v 1.1 2010/04/30 11:17:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-0.8.5.ebuild,v 1.2 2010/05/01 00:46:16 flameeyes Exp $
 
 EAPI=2
 
@@ -22,7 +22,9 @@ HOMEPAGE="http://github.com/yob/pdf-reader/"
 # We cannot use the gem distributions because they don't contain the
 # tests' data, we have to rely on the git tags. And yes that's not so
 # quick to deal with as we have to re-set S each release :(
-SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
+# Restore after 0.8.5
+#SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
+SRC_URI="mirror://gentoo/${PN}-git-${PV}.tgz"
 S="${WORKDIR}/${GITHUB_USER}-${PN}-v${PV}-0-g37a2c06"
 
 LICENSE="MIT"
