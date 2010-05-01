@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.1.ebuild,v 1.1 2010/04/30 22:17:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.1.ebuild,v 1.2 2010/05/01 14:43:06 darkside Exp $
 
 EAPI="2"
 
@@ -48,7 +48,7 @@ src_prepare() {
 src_configure() {
 	append-flags "-I/usr/include/et"
 	econf \
-		$(use_enable ldap) \
+		$(use_with ldap) \
 		--without-krb4 \
 		--enable-shared \
 		--with-system-et \
