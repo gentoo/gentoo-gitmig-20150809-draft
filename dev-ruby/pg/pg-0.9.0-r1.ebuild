@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.1 2010/04/27 10:24:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.2 2010/05/01 11:13:10 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
 
-RUBY_FAKEGEM_TEST_TASK="spec"
+RUBY_FAKEGEM_TEST_TASK=""
 
 RUBY_FAKEGEM_TASK_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="docs/api"
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 # package; what is shipped with Ruby 1.9 is not good enough as it
 # lacks the packaging tasks for Rake.
 ruby_add_bdepend doc "dev-ruby/rake-compiler dev-ruby/rubygems"
-ruby_add_bdepend test "dev-ruby/rspec dev-ruby/rake-compiler dev-ruby/rubygems"
+ruby_add_bdepend test dev-ruby/rspec
 
 each_ruby_configure() {
 	pushd ext
@@ -43,4 +43,11 @@ each_ruby_compile() {
 	emake CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" || die "emake failed"
 	popd
 	cp ext/*.so lib || die
+}
+
+each_ruby_test() {
+	# Make the rspec call explicit, this way we don't have to depend
+	# on rake-compiler (nor rubygems) _and_ we don't have to rebuild
+	# the whole extension from scratch.
+	${RUBY} -Ilib -S spec -Du -fs spec/*_spec.rb || die "spec failed"
 }
