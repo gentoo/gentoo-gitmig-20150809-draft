@@ -1,5 +1,4 @@
-Index: echoe-4.0/lib/echoe.rb
-===================================================================
+unchanged:
 --- echoe-4.0.orig/lib/echoe.rb
 +++ echoe-4.0/lib/echoe.rb
 @@ -21,7 +21,11 @@ require "#{$HERE}/echoe/extensions"
@@ -15,3 +14,16 @@ Index: echoe-4.0/lib/echoe.rb
  
  require 'highline/import'
  
+only in patch2:
+unchanged:
+--- a/lib/echoe.rb
++++ b/lib/echoe.rb
+@@ -723,7 +723,7 @@ private
+       task :default => :test
+     end
+ 
+-    if spec_pattern.any?
++    if defined? Spec and spec_pattern.any?
+       desc "Run the spec suite"
+       Spec::Rake::SpecTask.new('spec') do |t|
+         t.spec_files = spec_pattern
