@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hyperestraier
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.56 2010/01/14 00:18:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.57 2010/05/02 11:09:15 aballier Exp $
+
+  02 May 2010; Alexis Ballier <aballier@gentoo.org>
+  hyperestraier-1.4.13.ebuild:
+  keyword ~x86-fbsd
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> hyperestraier-1.4.13.ebuild:
   Stable for HPPA too.
