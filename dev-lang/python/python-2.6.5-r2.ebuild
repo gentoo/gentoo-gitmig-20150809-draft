@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.5-r2.ebuild,v 1.2 2010/05/01 22:25:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.5-r2.ebuild,v 1.3 2010/05/02 16:41:19 arfrever Exp $
 
 EAPI="2"
 
@@ -180,10 +180,6 @@ src_configure() {
 		--with-system-ffi
 }
 
-src_compile() {
-	emake EXTRA_CFLAGS="${CFLAGS}" || die "emake failed"
-}
-
 src_test() {
 	# Tests will not work when cross compiling.
 	if tc-is-cross-compiler; then
@@ -219,7 +215,7 @@ src_test() {
 	done
 
 	elog "If you would like to run them, you may:"
-	elog "cd ${EPREFIX}$(python_get_libdir)/test"
+	elog "cd '${EPREFIX}$(python_get_libdir)/test'"
 	elog "and run the tests separately."
 
 	python_disable_pyc
@@ -252,13 +248,15 @@ src_install() {
 
 	prep_ml_includes $(python_get_includedir)
 
+	dodoc Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
+
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r "${S}/Tools" || die "doins failed"
 	fi
 
-	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
-	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
+	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
+	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
 
 	# Do not install empty directory.
 	rmdir "${ED}$(python_get_libdir)/lib-old"

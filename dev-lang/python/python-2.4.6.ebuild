@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.32 2010/03/20 20:33:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.33 2010/05/02 16:41:19 arfrever Exp $
 
 EAPI="1"
 
@@ -58,6 +58,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Ensure that internal copy of expat is not used.
+	rm -fr Modules/expat
 
 	if tc-is-cross-compiler; then
 		epatch "${FILESDIR}/python-2.4.4-test-cross.patch"
@@ -175,7 +178,7 @@ src_compile() {
 }
 
 src_test() {
-	# Tests won't work when cross compiling.
+	# Tests will not work when cross compiling.
 	if tc-is-cross-compiler; then
 		elog "Disabling tests due to crosscompiling."
 		return
@@ -206,13 +209,15 @@ src_test() {
 	done
 
 	elog "If you'd like to run them, you may:"
-	elog "cd $(python_get_libdir)/test"
+	elog "cd '${EPREFIX}$(python_get_libdir)/test'"
 	elog "and run the tests separately."
 
 	python_disable_pyc
 }
 
 src_install() {
+	[[ -z "${ED}" ]] && ED="${D%/}${EPREFIX}/"
+
 	emake DESTDIR="${D}" altinstall maninstall || die "emake altinstall maninstall failed"
 
 	# Install our own custom python-config
@@ -223,33 +228,35 @@ src_install() {
 	dosed "s:/usr/lib/:/usr/$(get_libdir)/:" /usr/bin/python-config-${SLOT}
 
 	# Fix collisions between different slots of Python.
-	mv "${D}usr/bin/pydoc" "${D}usr/bin/pydoc${SLOT}"
-	mv "${D}usr/bin/idle" "${D}usr/bin/idle${SLOT}"
-	mv "${D}usr/share/man/man1/python.1" "${D}usr/share/man/man1/python${SLOT}.1"
-	rm -f "${D}usr/bin/smtpd.py"
+	mv "${ED}usr/bin/pydoc" "${ED}usr/bin/pydoc${SLOT}"
+	mv "${ED}usr/bin/idle" "${ED}usr/bin/idle${SLOT}"
+	mv "${ED}usr/share/man/man1/python.1" "${ED}usr/share/man/man1/python${SLOT}.1"
+	rm -f "${ED}usr/bin/smtpd.py"
 
 	# Fix the OPT variable so that it doesn't have any flags listed in it.
 	# Prevents the problem with compiling things with conflicting flags later.
-	sed -e "s:^OPT=.*:OPT=\t\t-DNDEBUG:" -i "${D}$(python_get_libdir)/config/Makefile"
+	sed -e "s:^OPT=.*:OPT=\t\t-DNDEBUG:" -i "${ED}$(python_get_libdir)/config/Makefile"
 
 	# Python 2.4 partially doesn't respect $(get_libdir).
 	if use build; then
-		rm -fr "${D}usr/bin/idle${SLOT}" "${D}"usr/lib*/python${SLOT}/{bsddb,idlelib,lib-tk,test}
+		rm -fr "${ED}usr/bin/idle${SLOT}" "${ED}"usr/lib*/python${SLOT}/{bsddb,idlelib,lib-tk,test}
 	else
-		use elibc_uclibc && rm -fr "${D}"usr/lib*/python${SLOT}/{bsddb/test,test}
-		use berkdb || rm -fr "${D}"usr/lib*/python${SLOT}/{bsddb,test/test_bsddb*}
-		use tk || rm -fr "${D}usr/bin/idle${SLOT}" "${D}"usr/lib*/python${SLOT}/{idlelib,lib-tk}
+		use elibc_uclibc && rm -fr "${ED}"usr/lib*/python${SLOT}/{bsddb/test,test}
+		use berkdb || rm -fr "${ED}"usr/lib*/python${SLOT}/{bsddb,test/test_bsddb*}
+		use tk || rm -fr "${ED}usr/bin/idle${SLOT}" "${ED}"usr/lib*/python${SLOT}/{idlelib,lib-tk}
 	fi
 
 	prep_ml_includes $(python_get_includedir)
+
+	dodoc Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r "${S}/Tools" || die "doins failed"
 	fi
 
-	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
-	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
+	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
+	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
 }
 
 pkg_preinst() {
