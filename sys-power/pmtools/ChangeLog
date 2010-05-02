@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/pmtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.13 2010/04/05 05:19:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.14 2010/05/02 21:28:24 robbat2 Exp $
+
+*pmtools-20100430 (02 May 2010)
+
+  02 May 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +pmtools-20100430.ebuild:
+  Bug #318213: Version bump.
 
 *pmtools-20100123 (05 Apr 2010)
 
