@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.10 2010/03/24 19:34:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.11 2010/05/02 14:37:45 grobian Exp $
+
+  02 May 2010; Fabian Groffen <grobian@gentoo.org>
+  binutils-apple-3.2-r1.ebuild:
+  ld64-95 (as in binutils-apple-3.2-r1) needs gcc-apple-4.2.1 to be
+  compiled, add proper dependency, bug #314461
 
   24 Mar 2010; Fabian Groffen <grobian@gentoo.org>
   binutils-apple-3.2-r1.ebuild:
