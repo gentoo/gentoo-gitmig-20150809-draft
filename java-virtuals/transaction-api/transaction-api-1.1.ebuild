@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/transaction-api/transaction-api-1.1.ebuild,v 1.2 2008/08/03 22:29:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/transaction-api/transaction-api-1.1.ebuild,v 1.3 2010/05/02 12:05:32 betelgeuse Exp $
 
 EAPI=1
 
@@ -20,7 +20,6 @@ RDEPEND="|| (
 			dev-java/glassfish-transaction-api:0
 			dev-java/jta:0
 		)
-		>=dev-java/java-config-2.1.6
 		"
 
 JAVA_VIRTUAL_PROVIDES="glassfish-transaction-api jta"
