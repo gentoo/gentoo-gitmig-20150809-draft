@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.231 2010/04/26 08:05:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.232 2010/05/02 08:48:16 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -669,7 +669,7 @@ postinst_sources() {
 	# if we're using a deblobbed kernel, it's not supported
 	[[ $K_DEBLOB_AVAILABLE == 1 ]] && \
 		use deblob && \
-		K_SECURITY_UNSUPPORTED=1
+		K_SECURITY_UNSUPPORTED=deblob
 
 	# if we are to forcably symlink, delete it if it already exists first.
 	if [[ ${K_SYMLINK} > 0 ]]; then
@@ -714,9 +714,14 @@ postinst_sources() {
 	fi
 
 	# optionally display security unsupported message
-	if [[ -n ${K_SECURITY_UNSUPPORTED} ]]; then
-		echo
+	#  Start with why
+	if [[ ${K_SECURITY_UNSUPPORTED} = deblob ]]; then
+		ewarn "Deblobbed kernels are UNSUPPORTED by Gentoo Security"
+	elif [[ -n ${K_SECURITY_UNSUPPORTED} ]]; then
 		ewarn "${PN} is UNSUPPORTED by Gentoo Security."
+	fi
+	#  And now the general message.
+	if [[ -n ${K_SECURITY_UNSUPPORTED} ]]; then
 		ewarn "This means that it is likely to be vulnerable to recent security issues."
 		ewarn "For specific information on why this kernel is unsupported, please read:"
 		ewarn "http://www.gentoo.org/proj/en/security/kernel.xml"
