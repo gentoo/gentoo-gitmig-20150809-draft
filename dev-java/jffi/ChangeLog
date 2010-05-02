@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.12 2010/04/11 09:25:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.13 2010/05/02 11:58:44 betelgeuse Exp $
+
+  02 May 2010; Petteri Räty <betelgeuse@gentoo.org> jffi-1.0.0.ebuild,
+  +files/1.0.0-gcc-3.4.patch:
+  Don't let the build system specify march and mtune so gcc 3.4 can be used.
+  Fixes bug #304979.
 
   11 Apr 2010; Petteri Räty <betelgeuse@gentoo.org> -jffi-0.3-r3.ebuild:
   Remove old unused slot.
