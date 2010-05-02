@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.5-r2.ebuild,v 1.1 2010/04/16 18:37:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.5-r4.ebuild,v 1.1 2010/05/02 13:40:11 pacho Exp $
 
 EAPI="2"
 
@@ -13,7 +13,13 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
-IUSE="bluetooth debug doc galago iplayer lirc nautilus nsplugin python tracker +youtube" #zeroconf
+SRC_URI="${SRC_URI}
+	mirror://gentoo/${P}-patches.tar.bz2"
+
+# FIXME: Enable for now python USE flag per bug #316409
+# this change should only be noticed by people not following current
+# current linux profiles default
+IUSE="bluetooth debug doc galago iplayer lirc nautilus nsplugin +python tracker +youtube" #zeroconf
 
 # TODO:
 # Cone (VLC) plugin needs someone with the right setup (remi ?)
@@ -128,6 +134,9 @@ src_prepare() {
 
 	# Fix broken smclient option passing
 	epatch "${FILESDIR}/${PN}-2.26.1-smclient-target-detection.patch"
+
+	# Apply upstream patches committed to gnome-2.28 branch
+	epatch "${WORKDIR}"/${P}-patches/*.patch
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf

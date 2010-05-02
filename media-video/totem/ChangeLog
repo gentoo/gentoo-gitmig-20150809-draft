@@ -1,6 +1,17 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.280 2010/04/16 18:37:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.281 2010/05/02 13:40:11 pacho Exp $
+
+*totem-2.28.5-r4 (02 May 2010)
+*totem-2.28.5-r3 (02 May 2010)
+
+  02 May 2010; Pacho Ramos <pacho@gentoo.org> -totem-2.28.5-r2.ebuild,
+  +totem-2.28.5-r3.ebuild, +totem-2.28.5-r4.ebuild:
+  Revision bump to include upstream patches committed to gnome-2.28 branch
+  fixing tons of bugs like problems playing through gvfs mounts, youtube
+  updates and many others. For full descriptions feel free to read each
+  patch header. This also auto-enables python USE to workaround bug #316409
+  until a fix is found. Dropping old testing version.
 
 *totem-2.28.5-r2 (16 Apr 2010)
 
