@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.79 2010/04/22 21:07:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.80 2010/05/02 19:33:21 ssuominen Exp $
+
+  02 May 2010; Samuli Suominen <ssuominen@gentoo.org> unixODBC-2.3.0.ebuild:
+  Pass --disable-drivers and --disable-driver-conf per upstream default in
+  ./configure with USE +minimal. Same as building basic libraries only per
+  default.
 
 *unixODBC-2.3.0 (22 Apr 2010)
 
