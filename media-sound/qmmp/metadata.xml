@@ -4,7 +4,15 @@
   <herd>sound</herd>
   <use>
     <flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
-    <flag name="projectm">Enable projectm music visualization plugin</flag>
+	<flag name="cover">Enable album cover support</flag>
+	<flag name="enca">Detects the character encoding automatically</flag>
+	<flag name="lyrics">Fetch track lyrics from the web</flag>
+	<flag name="mms">Enable mms support</flag>
+	<flag name="mpris">Enable MPRIS support</flag>
+	<flag name="notifier">Enable qmmps' notifier system</flag>
+	<flag name="tray">Build tray icon</flag>
+    <flag name="kde">Use kde4 notifier system</flag>
+	<flag name="projectm">Enable projectm music visualization plugin</flag>
     <flag name="scrobbler">Enable audioscrobbler/last.fm support</flag>
   </use>
 </pkgmetadata>
