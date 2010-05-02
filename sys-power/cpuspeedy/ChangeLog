@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/cpuspeedy
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/ChangeLog,v 1.4 2008/05/29 18:11:15 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/ChangeLog,v 1.5 2010/05/02 21:48:04 ssuominen Exp $
+
+  02 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  cpuspeedy-0.4.1.ebuild:
+  Improve python eclass usage wrt #316963 by Arfrever Frehtes Taifersar
+  Arahesis.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> cpuspeedy-0.4.1.ebuild:
   python_mod_{cleanup,optimize} are ROOT aware. Quoting.
