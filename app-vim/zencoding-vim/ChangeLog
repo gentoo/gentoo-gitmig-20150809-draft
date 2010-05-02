@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/zencoding-vim
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.1 2010/05/02 15:08:39 spatz Exp $
+
+*zencoding-vim-0.36 (02 May 2010)
+
+  02 May 2010; Dror Levin <spatz@gentoo.org> +zencoding-vim-0.36.ebuild,
+  +metadata.xml:
+  Initial import.
+
