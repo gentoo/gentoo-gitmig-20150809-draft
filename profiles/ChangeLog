@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4145 2010/04/30 08:44:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4146 2010/05/02 00:38:15 spatz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 May 2010; Dror Levin <spatz@gentoo.org> package.mask:
+  Unmask dev-util/kdevelop-4.0.0 and dev-util/kdevplatform-1.0.0 after release.
 
   30 Apr 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/hoe-2.6.0 while investigating breakage.
