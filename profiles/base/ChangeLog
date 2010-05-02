@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.141 2010/04/30 00:01:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.142 2010/05/02 08:53:16 a3li Exp $
+
+  02 May 2010; Alex Legler <a3li@gentoo.org> use.mask:
+  Remove ruby_targets_ree18 mask
 
   29 Apr 2010; Zac Medico <zmedico@gentoo.org> profile.bashrc:
   Skip /etc/portage/env code if PM_EBUILD_HOOK_DIR is set since this means
