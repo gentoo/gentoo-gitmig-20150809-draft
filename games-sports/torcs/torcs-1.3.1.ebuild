@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.6 2010/04/26 23:15:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.7 2010/05/02 16:39:51 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils multilib games
@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_configure() {
-	addpredict /dev/snd/controlC?
+	addpredict $(echo /dev/snd/controlC? | sed 's/ /:/g')
 	[[ -e /dev/dsp ]] && addpredict /dev/dsp
 	egamesconf \
 		--disable-dependency-tracking \
