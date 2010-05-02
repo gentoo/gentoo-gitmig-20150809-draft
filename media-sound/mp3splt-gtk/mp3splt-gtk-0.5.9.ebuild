@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.5.9.ebuild,v 1.1 2010/04/28 07:11:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.5.9.ebuild,v 1.2 2010/05/02 18:24:49 ssuominen Exp $
 
 EAPI=2
-inherit multilib
+inherit autotools multilib
 
 DESCRIPTION="a GTK+ based utility to split mp3 and ogg files without decoding."
 HOMEPAGE="http://mp3splt.sourceforge.net"
@@ -20,6 +20,15 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 	gstreamer? ( media-libs/gst-plugins-base:0.10 )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	if use audacious; then
+		sed -i \
+			-e 's:@AUDACIOUS_LIBS@:-laudclient &:' \
+			src/Makefile.am || die
+		eautoreconf
+	fi
+}
 
 src_configure() {
 	local myconf
