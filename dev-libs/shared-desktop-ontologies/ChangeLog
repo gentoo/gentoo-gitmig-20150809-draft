@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/shared-desktop-ontologies
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/ChangeLog,v 1.4 2010/03/11 04:28:21 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/ChangeLog,v 1.5 2010/05/02 10:21:26 aballier Exp $
+
+  02 May 2010; Alexis Ballier <aballier@gentoo.org>
+  shared-desktop-ontologies-0.3.ebuild:
+  keyword ~x86-fbsd
 
 *shared-desktop-ontologies-0.3 (11 Mar 2010)
 
