@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11506 2010/05/02 08:53:15 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11507 2010/05/02 14:22:56 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tony Vroon <chainsaw@gentoo.org> (2 May 2010)
+# Fails to build, 1.6.1/1.6.2 patched to provide equivalent functionality.
+# Removal at end of May.
+net-misc/asterisk-app_nv_faxdetect
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (30 Apr 2010)
 # Mask not finished ebuild. Needs .pc file cleanup and
