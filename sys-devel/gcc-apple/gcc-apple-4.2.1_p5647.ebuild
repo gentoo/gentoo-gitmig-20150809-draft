@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.8 2010/03/26 19:26:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5647.ebuild,v 1.9 2010/05/02 14:53:45 grobian Exp $
 
 EAPI="3"
 
@@ -122,10 +122,14 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.2.1-prefix-search-dirs.patch
 	eprefixify "${S}"/gcc/gcc.c
 
-	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-texinfo.patch
-	epatch "${FILESDIR}"/${PN}-${GCC_VERS}-autoconf-m4-precious.patch
-	cd "${S}"/gcc && eautoconf
-	cd "${S}"/libgomp && eautoconf
+	if use !bootstrap ; then
+		# this only occurs with up-to-date tools from the Prefix, and actually
+		# breaks the bootstrap since the autoconf needs a very recent automake
+		epatch "${FILESDIR}"/${PN}-${GCC_VERS}-texinfo.patch
+		epatch "${FILESDIR}"/${PN}-${GCC_VERS}-autoconf-m4-precious.patch
+		cd "${S}"/gcc && eautoconf
+		cd "${S}"/libgomp && eautoconf
+	fi
 
 	local BRANDING_GCC_PKGVERSION="$(sed -n -e '/^#define VERSUFFIX/s/^[^"]*"\([^"]\+\)".*$/\1/p' "${S}"/gcc/version.c)"
 	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/(/(Gentoo ${PVR}, }
