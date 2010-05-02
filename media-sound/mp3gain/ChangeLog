@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.41 2010/01/07 14:38:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.42 2010/05/02 14:47:58 chainsaw Exp $
+
+*mp3gain-1.5.1 (02 May 2010)
+
+  02 May 2010; <chainsaw@gentoo.org> +files/1.5.1-format-string.patch,
+  +mp3gain-1.5.1.ebuild:
+  Version bump as requested by Daniel Pinto dos Santos in bug #285794.
+  Dropped long options support as I was unable to rebase it. Addressed
+  format string vulnerability with a patch.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mp3gain-1.4.6-r3.ebuild:
