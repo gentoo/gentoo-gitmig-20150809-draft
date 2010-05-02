@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.11 2009/12/06 03:50:14 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.12 2010/05/02 23:14:10 abcd Exp $
+
+EAPI="3"
 
 inherit autotools eutils fortran flag-o-matic multilib portability
 
@@ -23,20 +25,16 @@ RDEPEND="${DEPEND}
 	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
-KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 LICENSE="lam-mpi"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
+	sed -i "s|docdir=\"\$datadir/lam/doc\"|docdir=\"${ED}/usr/share/doc/${PF}\"|" romio/util/romioinstall.in
 
-	cd "${S}"/romio/util/
-	sed -i "s|docdir=\"\$datadir/lam/doc\"|docdir=\"${D}/usr/share/doc/${PF}\"|" romioinstall.in
-
-	for i in "${S}"/share/memory/{ptmalloc,ptmalloc2,darwin7}/Makefile.in; do
-	  sed -i -e 's@^\(docdir = \)\$(datadir)/lam/doc@\1'/usr/share/doc/${PF}'@' ${i}
+	for i in share/memory/{ptmalloc,ptmalloc2,darwin7}/Makefile.in; do
+	  sed -i -e 's@^\(docdir = \)\$(datadir)/lam/doc@\1'"${EPREFIX}"/usr/share/doc/${PF}'@' ${i}
 	done
 
-	cd "${S}"
 	epatch "${FILESDIR}"/7.1.2-lam_prog_f77.m4.patch
 	epatch "${FILESDIR}"/7.1.2-liblam-use-extra-libs.patch
 	epatch "${FILESDIR}"/7.1.4-as-needed.patch
@@ -77,7 +75,7 @@ pkg_setup() {
 	# fortran_pkg_setup should -not- be run here.
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use crypt; then
@@ -104,24 +102,21 @@ src_compile() {
 		fortran_pkg_setup
 		# this is NOT in pkg_setup as it is NOT needed for RDEPEND right away it
 		# can be installed after merging from binary, and still have things fine
-		myconf="${myconf} --with-fc=${FORTRANC}"
-	else
-		myconf="${myconf} --without-fc"
 	fi
 
 	# Disable totalview, see #245439 and #276194
 	econf \
-		--with-ltdl-include=/usr/include \
-		--with-ltdl-lib=/usr/$(get_libdir) \
+		--with-ltdl-include="${EPREFIX}"/usr/include \
+		--with-ltdl-lib="${EPREFIX}"/usr/$(get_libdir) \
 		--disable-ltdl-install \
 		$(use_with xmpi trillium) \
-		--sysconfdir=/etc/lam-mpi \
+		--sysconfdir="${EPREFIX}"/etc/lam-mpi \
 		--enable-shared \
 		--with-threads=posix \
 		--disable-tv \
 		$(use_with romio) \
-		${myconf} || die "econf failed."
-	emake || die "emake failed."
+		$(use_with fortran fc "${FORTRANC}") \
+		${myconf}
 }
 
 src_install () {
@@ -130,8 +125,8 @@ src_install () {
 	# With USE=xmpi /usr/bin/sweep is installed.  However it's just
 	# a bash script to call bfctl -R and it causes file collisions
 	# with media-sound/sweep.  Hence, we remove it, see man bfcfl.
-	if [ -f "${D}"/usr/bin/sweep ]; then
-		rm -f "${D}"/usr/bin/sweep || die
+	if [ -f "${ED}"/usr/bin/sweep ]; then
+		rm -f "${ED}"/usr/bin/sweep || die
 	fi
 
 	# There are a bunch more tex docs we could make and install too,
@@ -142,8 +137,8 @@ src_install () {
 	# With USE=xmpi /usr/bin/sweep is installed.  However it's just
 	# a bash script to call bfctl -R and it causes file collisions
 	# with media-sound/sweep.  Hence, we remove it, see man bfcfl.
-	if [ -f "${D}"/usr/bin/sweep ]; then
-		rm -f "${D}"/usr/bin/sweep || die
+	if [ -f "${ED}"/usr/bin/sweep ]; then
+		rm -f "${ED}"/usr/bin/sweep || die
 	fi
 
 	if use examples; then
@@ -151,7 +146,7 @@ src_install () {
 		dodir /usr/share/${P}/examples
 		find -name README -or -iregex '.*\.[chf][c]?$' >"${T}"/testlist
 		while read p; do
-			treecopy $p "${D}"/usr/share/${P}/examples ;
+			treecopy $p "${ED}"/usr/share/${P}/examples ;
 		done < "${T}"/testlist
 	fi
 }
