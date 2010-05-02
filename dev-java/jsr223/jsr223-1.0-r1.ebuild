@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/jsr223-1.0-r1.ebuild,v 1.1 2010/05/02 13:49:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/jsr223-1.0-r1.ebuild,v 1.2 2010/05/02 18:24:04 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE=""
@@ -27,6 +27,7 @@ DEPEND=">=virtual/jdk-1.5"
 S="${WORKDIR}"
 
 src_compile() {
+	mkdir build || die
 	ejavac -d build jdk/src/share/classes/javax/script/*.java
 	jar -cf script-api.jar -C build javax || die
 }
