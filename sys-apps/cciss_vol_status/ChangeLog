@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/cciss_vol_status
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.6 2009/07/22 15:46:34 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.7 2010/05/02 15:39:47 chainsaw Exp $
+
+*cciss_vol_status-1.06 (02 May 2010)
+
+  02 May 2010; <chainsaw@gentoo.org> +files/1.06-strlen-typo.patch,
+  +cciss_vol_status-1.06.ebuild:
+  Version bump, as requested by Johan Bergström in bug #299729. Patched out
+  a strnlen vs strlen typo.
 
   22 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   cciss_vol_status-1.03.ebuild:
