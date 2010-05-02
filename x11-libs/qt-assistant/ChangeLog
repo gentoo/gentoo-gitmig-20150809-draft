@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.76 2010/05/01 18:21:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.77 2010/05/02 19:22:00 hwoarang Exp $
+
+  02 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  qt-assistant-4.6.2-r1.ebuild:
+  Fixing extracted directories wrt bug #318079
 
 *qt-assistant-4.6.2-r1 (01 May 2010)
 
