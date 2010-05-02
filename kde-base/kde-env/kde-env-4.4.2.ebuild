@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.4.2.ebuild,v 1.1 2010/03/30 19:54:15 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.4.2.ebuild,v 1.2 2010/05/02 12:52:36 aballier Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Environment setting required for all KDE4 apps to run."
 HOMEPAGE="http://kde.org"
 [[ ${PV} = *9999* ]] && ESVN_REPO_URI="" || SRC_URI=""
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="as-is"
 IUSE="aqua"
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.73 2010/03/31 22:22:54 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.74 2010/05/02 12:52:36 aballier Exp $
+
+  02 May 2010; Alexis Ballier <aballier@gentoo.org> kde-env-4.4.2.ebuild:
+  keyword ~x86-fbsd
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kde-env-4.3.4-r1.ebuild,
   -kde-env-4.4.0.ebuild:
