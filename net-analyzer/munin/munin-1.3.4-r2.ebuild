@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.9 2010/01/11 07:41:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.10 2010/05/02 22:33:29 robbat2 Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ DEPEND_COM="dev-lang/perl
 			dev-perl/Net-SNMP
 			dev-perl/libwww-perl
 			dev-perl/net-server
+			dev-perl/DBI
 			virtual/perl-Digest-MD5
 			virtual/perl-Getopt-Long
 			virtual/perl-MIME-Base64
