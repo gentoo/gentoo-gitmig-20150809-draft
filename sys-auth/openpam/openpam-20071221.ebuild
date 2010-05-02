@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.5 2009/07/08 17:00:46 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.6 2010/05/02 11:20:56 aballier Exp $
 
-inherit multilib flag-o-matic autotools
+EAPI="2"
+inherit multilib autotools
 
 DESCRIPTION="Open source PAM library."
 HOMEPAGE="http://www.openpam.org/"
@@ -21,10 +22,7 @@ PDEPEND="sys-auth/pambase
 
 PROVIDE="virtual/pam"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-20050201-nbsd.patch"
 	epatch "${FILESDIR}/${PN}-20050616-redef.patch"
@@ -36,18 +34,14 @@ src_unpack() {
 	elibtoolize
 }
 
-src_compile() {
-	econf \
+src_configure() {
+	econf ${myconf} \
 		--disable-dependency-tracking \
-		--with-modules-dir=/$(get_libdir)/security/ \
-		${myconf} || die "econf failed"
-
-	emake || die "emake failed"
+		--with-modules-dir=/$(get_libdir)/security/
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install
-
+	emake -j1 DESTDIR="${D}" install || die
 	dodoc CREDITS HISTORY RELNOTES README || die
 
 	find "${D}" -name '*.la' -delete || die
