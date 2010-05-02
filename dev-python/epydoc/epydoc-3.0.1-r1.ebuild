@@ -1,11 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.2 2010/02/08 08:50:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.3 2010/05/02 19:00:24 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="tk"
+PYTHON_USE_WITH_OPT="X"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils distutils
+inherit distutils eutils
 
 DESCRIPTION="Tool for generating API documentation for Python modules, based on their docstrings"
 HOMEPAGE="http://epydoc.sourceforge.net/"
@@ -20,21 +23,16 @@ DEPEND=""
 RDEPEND="dev-python/docutils
 	latex? ( virtual/latex-base
 		|| ( dev-texlive/texlive-latexextra app-text/ptex )
-	)
-	X? ( dev-lang/python[tk] )"
+	)"
 RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
-	# bug #287546, thanks to Engelbert Gruber <grubert@users.sourceforge.net>
-	# and Martin von Gagern <Martin.vGagern@gmx.net>
-	epatch "${FILESDIR}"/${PN}-docutils-0.6.patch
-
-	# bug #288273, thanks to Andre Malo <nd@perlig.de>
-	epatch "${FILESDIR}"/${PN}-python-2.6.patch
+	distutils_src_prepare
+	epatch "${FILESDIR}/${PN}-docutils-0.6.patch"
+	epatch "${FILESDIR}/${PN}-python-2.6.patch"
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 
 	doman man/*
