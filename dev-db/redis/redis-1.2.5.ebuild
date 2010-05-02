@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.5.ebuild,v 1.2 2010/03/25 07:36:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.5.ebuild,v 1.3 2010/05/02 22:30:19 robbat2 Exp $
 
 EAPI=2
 
@@ -12,11 +12,11 @@ SRC_URI="http://redis.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 SLOT="0"
 
 RDEPEND=""
-DEPEND=""
+DEPEND="test? ( dev-lang/tcl )"
 
 REDIS_PIDDIR=/var/run/redis/
 REDIS_PIDFILE=${REDIS_PIDDIR}/redis.pid
@@ -78,4 +78,42 @@ src_install() {
 
 	diropts -m0750 -o redis -g redis
 	keepdir ${REDIS_DATAPATH} ${REDIS_LOGFILE} ${REDIS_PIDDIR}
+}
+
+src_test() {
+	local PORT=$(((RANDOM % 32767)+32768))
+	local PIDFILE=redis-test.pid
+	einfo "Preparing redis test config"
+	# The port number is hardcoded in lots of places
+	sed -r <redis.conf >redis-test.conf \
+		-e "/^pidfile/s~ .*~ ${PIDFILE}~" \
+		-e '/^daemonize/s~ no~ yes~' \
+		-e "/^port/s~ [0-9]+~ ${PORT}~" \
+		-e '/^(# )?bind/s,^,#,g' \
+		-e '/\<bind\>/abind 127.0.0.1' \
+		|| die "Failed to build test server config"
+	# The port number is hardcoded in lots of places
+	for i in test-redis.tcl redis.tcl ; do
+		sed -r <$i >${i/.tcl/-${PORT}.tcl} \
+			-e "/^source redis.tcl/s,redis.tcl,redis-${PORT}.tcl,g" \
+			-e "/6379/s~6379~${PORT}~" \
+			|| die "Failed to build test client config ($i)"
+	done
+	einfo "Starting test server"
+	./redis-server redis-test.conf
+	rc1=$?
+	sleep 2
+	[[ $rc1 -ne 0 ]] && die "Failed to start redis server!"
+	pidof redis-server | fgrep -f ${PIDFILE}
+	rc1=$?
+	[[ $rc1 -ne 0 ]] && die "Could not find started redis server!"
+	unset rc1
+
+	einfo "Starting redis tests"
+	tclsh test-redis-$PORT.tcl
+	rc1=$?
+	kill -9 $(<${PIDFILE})
+	rc2=$?
+	[[ $rc1 -ne 0 ]] && die "Failed testsuite"
+	[[ $rc2 -ne 0 ]] && die "Failed to shut down redis server"
 }
