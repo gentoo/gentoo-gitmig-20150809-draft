@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Test-Inter
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.1 2010/05/02 21:45:01 robbat2 Exp $
+
+*Test-Inter-1.01 (02 May 2010)
+
+  02 May 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +Test-Inter-1.01.ebuild, +metadata.xml:
+  Initial commit. Ebuild by g-cpan. New dependency for
+  dev-perl/DateManip-6.11.
+
