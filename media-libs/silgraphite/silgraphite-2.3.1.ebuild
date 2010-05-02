@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.12 2010/04/26 18:43:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.13 2010/05/02 07:54:00 aballier Exp $
 
 EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="Rendering engine for complex non-Roman writing systems"
 HOMEPAGE="http://graphite.sil.org/"
@@ -18,6 +20,10 @@ RDEPEND="xft? ( x11-libs/libXft )
 	pango? ( x11-libs/pango media-libs/fontconfig )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-aligned_access.patch"
+}
 
 src_configure() {
 	econf \
