@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.157 2010/03/31 22:41:03 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.158 2010/05/03 06:46:22 aballier Exp $
+
+  03 May 2010; Alexis Ballier <aballier@gentoo.org>
+  khelpcenter-4.4.2.ebuild:
+  keyword ~x86-fbsd
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -khelpcenter-4.3.4.ebuild,
   -khelpcenter-4.4.0.ebuild:

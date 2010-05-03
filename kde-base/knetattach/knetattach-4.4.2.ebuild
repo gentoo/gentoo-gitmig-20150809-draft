@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/knetattach-4.4.2.ebuild,v 1.1 2010/03/30 21:17:06 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/knetattach-4.4.2.ebuild,v 1.2 2010/05/03 06:51:10 aballier Exp $
 
 EAPI="3"
 
@@ -8,5 +8,5 @@ KMNAME="kdebase-runtime"
 inherit kde4-meta
 
 DESCRIPTION="KDE network wizard"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
