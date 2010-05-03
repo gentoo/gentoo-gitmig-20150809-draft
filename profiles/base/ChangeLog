@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.142 2010/05/02 08:53:16 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.143 2010/05/03 15:50:29 a3li Exp $
+
+  03 May 2010; Alex Legler <a3li@gentoo.org> use.mask:
+  Readd ruby_targets_ree18 USE mask. Supported arches will be whitelisted
 
   02 May 2010; Alex Legler <a3li@gentoo.org> use.mask:
   Remove ruby_targets_ree18 mask
