@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21.ebuild,v 1.2 2010/03/28 18:35:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21.ebuild,v 1.3 2010/05/03 06:13:35 jlec Exp $
 
 EAPI="2"
 
@@ -14,8 +14,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="
-	!<sci-libs/ccp4-libs-6.1.3
-	!sci-biology/ncbi-tools++"
+	!<sci-libs/ccp4-libs-6.1.3"
 RDEPEND=""
 
 src_install() {
