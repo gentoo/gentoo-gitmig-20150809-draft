@@ -1,6 +1,6 @@
 # Copyright 2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.2 2010/04/11 19:52:21 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.3 2010/05/03 19:33:35 hollow Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -37,6 +37,7 @@ secure_link - This module computes and checks request URLs for a required securi
 ssi - This module provides a filter which processes Server-Side Includes (SSI) in the input.
 stub_status - This module provides the ability to get some status from nginx.
 sub - This module can search and replace text in the nginx response.
+uwsgi - External module for the uWSGI protocol for python web apps.
 upstream_ip_hash - This module provides the ability to distribute upstream requests based on the IP-address of the client.
 userid - This module gives out cookies for identification of clients.
 xslt - This module is a filter which converts an XML response with the aid of one or more XSLT templates.
