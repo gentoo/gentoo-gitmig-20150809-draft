@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r12.ebuild,v 1.2 2010/03/16 08:26:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r13.ebuild,v 1.1 2010/05/03 21:04:01 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils elisp-common
@@ -11,7 +11,8 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
 HOMEPAGE="http://timidity.sourceforge.net/"
-SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exiterror.patch"
+SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~ssuominen/${P}-patchset-1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,7 +33,8 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	ao? ( >=media-libs/libao-0.8.5 )
 	motif? ( x11-libs/openmotif )
 	X? ( x11-libs/libXaw
-		x11-libs/libXext )"
+		x11-libs/libXext )
+	!~media-libs/libpng-1.4.1"
 RDEPEND="${DEPEND}
 	alsa? ( media-sound/alsa-utils )
 	app-admin/eselect-timidity"
@@ -47,20 +49,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${DISTDIR}"/${P}-exiterror.patch \
-		"${FILESDIR}"/${P}-gtk26.patch \
-		"${FILESDIR}"/${P}-gcc4.patch \
-		"${FILESDIR}"/${P}-flac.patch \
-		"${FILESDIR}"/${P}-flac113.patch \
-		"${FILESDIR}"/${P}-protos.patch \
-		"${FILESDIR}"/${P}-params.patch \
-		"${FILESDIR}"/${P}-no_png_set_dither.patch \
-		"${FILESDIR}"/${P}-decl.patch
-
-	# fix header location of speex
-	sed -i -e "s:#include <speex:#include <speex/speex:g" \
-		configure.in timidity/speex_a.c || die "sed failed"
-
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patches
 	eautoreconf
 }
 

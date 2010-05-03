@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r11.ebuild,v 1.8 2009/11/16 23:42:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r11.ebuild,v 1.9 2010/05/03 21:04:01 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils elisp-common
@@ -32,7 +32,8 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	ao? ( >=media-libs/libao-0.8.5 )
 	motif? ( x11-libs/openmotif )
 	X? ( x11-libs/libXaw
-		x11-libs/libXext )"
+		x11-libs/libXext )
+	!~media-libs/libpng-1.4.1"
 RDEPEND="${DEPEND}
 	alsa? ( media-sound/alsa-utils )
 	app-admin/eselect-timidity"
