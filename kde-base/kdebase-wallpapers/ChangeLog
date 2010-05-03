@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-wallpapers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.34 2010/05/03 20:34:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.35 2010/05/03 21:27:53 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdebase-wallpapers-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdebase-wallpapers-4.4.3 (03 May 2010)
 

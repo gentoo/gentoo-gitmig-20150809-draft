@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.150 2010/05/03 20:45:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.151 2010/05/03 21:36:32 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdetoys-meta-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdetoys-meta-4.4.3 (03 May 2010)
 

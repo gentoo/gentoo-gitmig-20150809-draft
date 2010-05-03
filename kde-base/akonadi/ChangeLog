@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.58 2010/05/03 20:11:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.59 2010/05/03 21:08:48 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -akonadi-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> akonadi-4.4.3.ebuild:
   Version bump

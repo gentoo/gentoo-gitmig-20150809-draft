@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.64 2010/05/03 21:13:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.65 2010/05/03 21:59:05 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -krunner-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *krunner-4.4.3 (03 May 2010)
 

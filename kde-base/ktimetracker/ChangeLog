@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktimetracker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.48 2010/05/03 21:22:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.49 2010/05/03 22:05:01 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -ktimetracker-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *ktimetracker-4.4.3 (03 May 2010)
 

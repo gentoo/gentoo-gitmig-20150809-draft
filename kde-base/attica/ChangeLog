@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/attica
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.8 2010/05/03 20:12:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.9 2010/05/03 21:09:56 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -attica-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *attica-4.4.3 (03 May 2010)
 

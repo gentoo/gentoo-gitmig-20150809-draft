@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-colorschemes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-colorschemes/ChangeLog,v 1.55 2010/05/03 20:26:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-colorschemes/ChangeLog,v 1.56 2010/05/03 21:21:15 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdeaccessibility-colorschemes-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdeaccessibility-colorschemes-4.4.3 (03 May 2010)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.129 2010/05/03 21:19:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.130 2010/05/03 22:02:32 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kstart-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kstart-4.4.3 (03 May 2010)
 

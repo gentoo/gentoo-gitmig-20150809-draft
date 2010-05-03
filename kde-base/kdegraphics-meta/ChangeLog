@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.157 2010/05/03 20:37:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.158 2010/05/03 21:29:34 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdegraphics-meta-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdegraphics-meta-4.4.3 (03 May 2010)
 

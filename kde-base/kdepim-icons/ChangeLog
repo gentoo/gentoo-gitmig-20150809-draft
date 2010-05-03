@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-icons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.46 2010/05/03 20:41:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.47 2010/05/03 21:32:29 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdepim-icons-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdepim-icons-4.4.3 (03 May 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.141 2010/05/03 20:43:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.142 2010/05/03 21:35:01 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdesdk-meta-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdesdk-meta-4.4.3 (03 May 2010)
 

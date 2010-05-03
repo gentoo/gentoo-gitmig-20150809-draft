@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.180 2010/05/03 21:06:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.181 2010/05/03 21:54:19 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -konqueror-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *konqueror-4.4.3 (03 May 2010)
 

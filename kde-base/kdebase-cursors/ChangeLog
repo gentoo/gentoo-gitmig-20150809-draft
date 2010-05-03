@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-cursors
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-cursors/ChangeLog,v 1.47 2010/05/03 20:31:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-cursors/ChangeLog,v 1.48 2010/05/03 21:25:30 alexxy Exp $
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdebase-cursors-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdebase-cursors-4.4.3 (03 May 2010)
 
