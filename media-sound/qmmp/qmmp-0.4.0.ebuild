@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.0.ebuild,v 1.2 2010/05/03 05:13:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.0.ebuild,v 1.3 2010/05/03 07:48:49 polynomial-c Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 # KEYWORDS further up
-IUSE="aac +alsa +dbus bs2b cover enca ffmpeg flac hal jack kde ladspa
+IUSE="aac +alsa +dbus bs2b cdrom cover enca ffmpeg flac hal jack kde ladspa
 libsamplerate lyrics +mad mms modplug mplayer mpris musepack notifier oss projectm pulseaudio scrobbler sndfile tray +vorbis wavpack"
 
 RDEPEND="x11-libs/qt-gui:4[qt3support]

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.35 2010/05/03 05:13:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.36 2010/05/03 07:48:49 polynomial-c Exp $
+
+  03 May 2010; Lars Wendler <polynomial-c@gentoo.org> qmmp-0.4.0.ebuild,
+  qmmp-9999.ebuild:
+  non maintainer commit: Added cdrom USE flag to IUSE (reported by
+  Nikoli in bug #318243).
 
   03 May 2010; Lars Wendler <polynomial-c@gentoo.org> qmmp-0.4.0.ebuild:
   non maintainer commit: fixed typo in ebuild reported by Alexandr Orlenko
