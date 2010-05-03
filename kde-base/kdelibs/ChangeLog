@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.679 2010/04/09 00:38:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.680 2010/05/03 04:23:16 aballier Exp $
+
+  02 May 2010; Alexis Ballier <aballier@gentoo.org> kdelibs-4.4.2.ebuild:
+  keyword ~x86-fbsd
 
   09 Apr 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   kdelibs-4.4.2.ebuild, +files/kdelibs-4.4.2-hang.patch:
