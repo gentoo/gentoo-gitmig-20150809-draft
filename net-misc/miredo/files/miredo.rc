@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header $
+
+depend() {
+	need net
+	use dns logger
+}
+
+start() {
+	ebegin "Starting Miredo"
+	[ "${MIREDO_MODPROBE_IPV6}" == "yes" ] && modprobe ipv6
+	[ "${MIREDO_MODPROBE_TUN}" == "yes" ] && modprobe tun
+	start-stop-daemon --start --quiet --exec /usr/sbin/miredo -- \
+		${MIREDO_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Miredo"
+	start-stop-daemon --stop --quiet --pidfile /var/run/miredo.pid
+	eend $?
+}
