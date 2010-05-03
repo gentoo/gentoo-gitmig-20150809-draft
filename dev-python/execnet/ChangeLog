@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/execnet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.6 2010/05/03 19:12:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.7 2010/05/03 20:54:31 grozin Exp $
+
+  03 May 2010; Andrey Grozin <grozin@gentoo.org> execnet-1.0.6.ebuild,
+  +files/execnet-1.0.6-test-nice.patch:
+  Improved test-nice patch
 
 *execnet-1.0.6 (03 May 2010)
 
