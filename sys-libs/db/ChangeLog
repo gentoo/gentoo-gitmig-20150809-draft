@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.301 2010/05/03 21:59:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.302 2010/05/03 23:21:52 robbat2 Exp $
+
+  03 May 2010; Robin H. Johnson <robbat2@gentoo.org> db-4.5.20_p2.ebuild,
+  db-4.5.20_p2-r1.ebuild, db-4.6.21_p4.ebuild:
+  Bug #240568: Fix bad stripping output in older ebuilds.
 
 *db-4.8.30 (03 May 2010)
 
