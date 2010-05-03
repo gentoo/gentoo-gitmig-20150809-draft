@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.91 2010/01/22 18:54:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.92 2010/05/03 18:02:30 ssuominen Exp $
+
+*hydrogen-0.9.4-r1 (03 May 2010)
+
+  03 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +hydrogen-0.9.4-r1.ebuild:
+  Make libarchive optional but enabled by default (upstream scons preferes
+  libtar, we prefer libarchive).
 
   22 Jan 2010; Raúl Porcel <armin76@gentoo.org> hydrogen-0.9.4.ebuild:
   sparc stable
