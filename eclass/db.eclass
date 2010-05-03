@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.32 2010/05/03 22:03:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.33 2010/05/03 22:13:39 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -124,11 +124,23 @@ db_src_test() {
 	if useq tcl; then
 		einfo "Running sys-libs/db testsuite"
 		ewarn "This can take 6+ hours on modern machines"
-		cd ${S}
-		echo 'source ../test/test.tcl' >testrunner.tcl
-		echo 'run_std' >>testrunner.tcl
+		# Fix stuff that fails with relative paths
+		sed -ri \
+			-e '/regsub {test_path }/s,regsub,#regsub,g' \
+			-e '/regsub {src_root }/s,regsub,#regsub,g' \
+			"${S}"/test/parallel.tcl
+		cd "${S}"
+		echo 'source ../test/test.tcl' > testrunner.tcl
+		testJobs=`echo "${MAKEOPTS}" | \
+				sed -e "s/.*-j\([0-9]\+\).*/\1/"`
+		if [[ ${testJobs} =~ [[:digit:]]+ ]]; then
+			echo "run_parallel ${testJobs} run_std" >> testrunner.tcl
+		else 
+			echo 'run_std' >>testrunner.tcl
+		fi
+
 		tclsh testrunner.tcl
-		egrep -qs '^FAIL' ALL.OUT && die "Some tests failed, please see ${S}/ALL.OUT"
+		egrep -qs '^FAIL' ALL.OUT* && die "Some tests failed, please see ${S}/ALL.OUT*"
 	else
 		eerror "You must have USE=tcl to run the sys-libs/db testsuite."
 	fi
