@@ -1,0 +1,12 @@
+# ChangeLog for www-servers/uwsgi
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.1 2010/05/03 19:24:28 hollow Exp $
+
+*uwsgi-0.9.5 (03 May 2010)
+
+  03 May 2010; Benedikt Böhm <hollow@gentoo.org> +uwsgi-0.9.5.ebuild,
+  +files/uwsgi-0.9.5-fix_uwsgiconfig.py_indentation.patch,
+  +files/uwsgi-0.9.5-respect_flags.patch, +metadata.xml:
+  initial ebuild. thanks to Arfrever Frehtes Taifersar Arahesis for sane
+  python ABI support. closes #314931
+
