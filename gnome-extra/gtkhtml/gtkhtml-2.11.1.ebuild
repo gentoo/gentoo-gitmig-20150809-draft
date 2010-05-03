@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.11 2008/04/20 02:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-2.11.1.ebuild,v 1.12 2010/05/03 22:15:20 ssuominen Exp $
 
 inherit eutils gnome2 versionator autotools
 
@@ -19,15 +19,13 @@ IUSE="accessibility test"
 
 # gnome-vfs is only needed to run testgtkhtml (1/3 tests)
 
-RDEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.13.0
 	>=dev-libs/libxml2-2.4.16
-	test? ( >=gnome-base/gnome-vfs-2 )
-	accessibility? ( >=gnome-base/gail-1.8 )"
-
+	test? ( >=gnome-base/gnome-vfs-2 )"
 DEPEND="${RDEPEND}
 	 >=dev-util/pkgconfig-0.12.0"
 
-DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS  README TODO docs/IDEAS"
+DOCS="AUTHORS ChangeLog NEWS README TODO docs/IDEAS"
 
 S=${WORKDIR}/${MY_P}
 

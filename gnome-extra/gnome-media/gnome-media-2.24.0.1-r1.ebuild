@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1-r1.ebuild,v 1.13 2010/02/24 22:57:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1-r1.ebuild,v 1.14 2010/05/03 22:16:41 ssuominen Exp $
 
 EAPI="1"
 
@@ -26,7 +26,6 @@ RDEPEND=">=dev-libs/glib-2.16.0:2
 	>=gnome-base/orbit-2
 	gnomecd? (
 		>=gnome-extra/nautilus-cd-burner-2.12
-		>=gnome-base/gail-0.0.3
 		|| (
 			>=media-plugins/gst-plugins-cdio-0.10
 			>=media-plugins/gst-plugins-cdparanoia-0.10 ) )
