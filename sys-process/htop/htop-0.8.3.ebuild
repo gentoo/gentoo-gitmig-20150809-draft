@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3.ebuild,v 1.7 2010/04/30 21:48:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3.ebuild,v 1.8 2010/05/03 17:57:41 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib
@@ -15,10 +15,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-
 IUSE="debug"
 
 DEPEND="sys-libs/ncurses[unicode]"
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if use elibc_FreeBSD && ! [[ -f "${ROOT}"/proc/stat && -f "${ROOT}"/proc/meminfo ]] ; then
+	if use elibc_FreeBSD && ! [[ -f ${ROOT}/proc/stat && -f ${ROOT}/proc/meminfo ]]; then
 		eerror
 		eerror "htop needs /proc mounted to compile and work, to mount it type"
 		eerror "mount -t linprocfs none /proc"
@@ -27,7 +26,7 @@ pkg_setup() {
 		die "htop needs /proc mounted"
 	fi
 
-	if ! has_version sys-process/lsof ; then
+	if ! has_version sys-process/lsof; then
 		ewarn "To use lsof features in htop(what processes are accessing"
 		ewarn "what files), you must have sys-process/lsof installed."
 	fi
@@ -38,14 +37,14 @@ src_prepare() {
 }
 
 src_configure() {
-	useq debug && append-flags -O -ggdb -DDEBUG
+	useq debug && append-flags -DDEBUG
 	econf \
 		--enable-taskstats \
 		--enable-unicode
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc README ChangeLog TODO || die "documentation installation failed."
-	rmdir "${ED}"/usr/{include,$(get_libdir)} || die "Removing empty directory failed."
+	emake DESTDIR="${D}" install || die
+	dodoc README ChangeLog TODO || die
+	rmdir "${ED}"/usr/{include,$(get_libdir)} || die
 }
