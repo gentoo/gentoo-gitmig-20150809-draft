@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.56 2010/03/31 22:43:53 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.57 2010/05/03 06:30:32 aballier Exp $
+
+  03 May 2010; Alexis Ballier <aballier@gentoo.org> kioclient-4.4.2.ebuild:
+  keyword ~x86-fbsd
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kioclient-4.3.4.ebuild,
   -kioclient-4.4.0.ebuild:
