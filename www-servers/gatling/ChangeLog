@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/gatling
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.4 2009/11/04 08:31:38 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.5 2010/05/03 18:05:21 patrick Exp $
+
+*gatling-0.12 (03 May 2010)
+
+  03 May 2010; Patrick Lauer <patrick@gentoo.org> +gatling-0.12.ebuild:
+  Bump
 
   04 Nov 2009; Patrick Lauer <patrick@gentoo.org> gatling-0.9.ebuild,
   gatling-0.11.ebuild, gatling-0.11-r1.ebuild:
