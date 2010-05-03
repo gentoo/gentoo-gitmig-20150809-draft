@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.2.1.ebuild,v 1.1 2010/04/08 12:15:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.2.1.ebuild,v 1.2 2010/05/03 22:44:14 ssuominen Exp $
 
 EAPI=2
 
@@ -17,7 +17,21 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus gstreamer ipod"
 
-COMMON_DEPEND=">=dev-python/pygtk-2.14"
+COMMON_DEPEND=">=dev-python/pygtk-2.14
+	!media-plugins/quodlibet-titlecase
+	!media-plugins/quodlibet-html
+	!media-plugins/quodlibet-cddb
+	!media-plugins/quodlibet-clock
+	!media-plugins/quodlibet-notify
+	!media-plugins/quodlibet-resub
+	!media-plugins/quodlibet-albumart
+	!media-plugins/quodlibet-jep118
+	!media-plugins/quodlibet-reset
+	!media-plugins/quodlibet-importexport
+	!media-plugins/quodlibet-autorating
+	!media-plugins/quodlibet-trayicon
+	!media-plugins/quodlibet-wikipedia
+	!media-plugins/quodlibet-browsefolders"
 RDEPEND="${COMMON_DEPEND}
 	>=media-libs/mutagen-1.19
 	gstreamer? ( dev-python/gst-python:0.10
