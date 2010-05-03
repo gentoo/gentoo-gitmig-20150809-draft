@@ -10,6 +10,10 @@
 	<email>ssuominen@gentoo.org</email>
 	<name>Samuli Suominen</name>
 </maintainer>
+<use>
+	<flag name="openvz">Enable openvz support</flag>
+	<flag name="vserver">Enable vserver support</flag>
+</use>
 <longdescription>
 htop is an interactive process viewer for Linux. It aims to be a 'better top':
 you can scroll the process list vertically and horizontally, and select a

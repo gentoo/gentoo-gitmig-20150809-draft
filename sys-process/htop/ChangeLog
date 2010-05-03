@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.82 2010/04/30 21:48:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.83 2010/05/03 18:46:02 ssuominen Exp $
+
+*htop-0.8.3-r1 (03 May 2010)
+
+  03 May 2010; Samuli Suominen <ssuominen@gentoo.org> +htop-0.8.3-r1.ebuild,
+  metadata.xml:
+  Experimental USE flags openvz and vserver wrt #291091.
 
   30 Apr 2010; Jeremy Olexa <darkside@gentoo.org> htop-0.8.3.ebuild:
   Bump to EAPI3, add prefix keywords as tested in overlay. Implicit approval
