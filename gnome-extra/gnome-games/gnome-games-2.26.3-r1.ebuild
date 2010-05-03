@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.26.3-r1.ebuild,v 1.8 2010/01/16 17:28:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.26.3-r1.ebuild,v 1.9 2010/05/03 23:32:11 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -62,9 +62,8 @@ DEPEND="${RDEPEND}
 # Others are installed below; multiples in this package.
 DOCS="AUTHORS HACKING MAINTAINERS TODO"
 
-# dang make-check fails on docs with -j > 1.  Restrict them for the moment until
-# it can be chased down.
-#RESTRICT="test"
+# Workaround #289372. Fixed in 2.28.
+RESTRICT="test"
 
 _omitgame() {
 	G2CONF="${G2CONF},${1}"
