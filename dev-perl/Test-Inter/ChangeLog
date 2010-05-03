@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.1 2010/05/02 21:45:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.2 2010/05/03 07:26:47 tove Exp $
+
+  03 May 2010; Torsten Veller <tove@gentoo.org> Test-Inter-1.01.ebuild:
+  EAPI=3. Add Module-Build to DEPEND. Add test useflag for test dependencies
 
 *Test-Inter-1.01 (02 May 2010)
 
