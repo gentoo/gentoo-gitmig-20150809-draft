@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.6 2010/04/15 13:47:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.7 2010/05/03 12:32:51 caster Exp $
+
+*icedtea-6.1.7.3 (03 May 2010)
+
+  03 May 2010; Vlastimil Babka <caster@gentoo.org>
+  +files/6.1.7.3-systemtap-gcc-4.5.patch,
+  +files/6.1.8.0-systemtap-gcc-4.5.patch, -icedtea-6.1.7.1.ebuild,
+  +icedtea-6.1.7.3.ebuild, icedtea-6.1.8.0.ebuild:
+  Fix building with gcc-4.5 and USE=systemtap - fixes bug #317343. Bump the
+  6.1.7.2-r1 to 6.7.1.3 (which is the same)for easier sync with the overlay.
 
   15 Apr 2010; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.8.0.ebuild:
   Add ant-nodeps to DEPEND since it's used in ANT_TASKS variable. Bug

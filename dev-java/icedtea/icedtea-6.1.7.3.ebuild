@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.7.1.ebuild,v 1.1 2010/03/04 23:20:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.7.3.ebuild,v 1.1 2010/05/03 12:32:51 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,14 +9,14 @@
 
 EAPI="2"
 
-inherit pax-utils java-pkg-2 java-vm-2
+inherit autotools pax-utils java-pkg-2 java-vm-2
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="6"
 KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="A harness to build the OpenJDK using Free Software build tools and dependencies"
-ICEDTEA_VER="1.7.1"
+ICEDTEA_VER="1.7.3"
 ICEDTEA_PKG=icedtea${SLOT}-${ICEDTEA_VER}
 OPENJDK_BUILD="17"
 OPENJDK_DATE="14_oct_2009"
@@ -75,10 +75,11 @@ RDEPEND=">=net-print/cups-1.2.12
 #   xext headers have two variants depending on version - bug #288855
 DEPEND="${RDEPEND}
 	|| (
+		( >=dev-java/gcj-jdk-4.3 =app-admin/eselect-ecj-0.5-r1 )
+		( >=dev-java/cacao-0.99.2 =app-admin/eselect-ecj-0.5-r1 )
 		dev-java/icedtea6-bin
 		dev-java/icedtea:${SLOT}
 	)
-	>=virtual/jdk-1.5
 	app-arch/zip
 	>=dev-java/xalan-2.7.0:0
 	>=dev-java/xerces-2.9.1:2
@@ -95,6 +96,11 @@ DEPEND="${RDEPEND}
 		<x11-libs/libXext-1.1.1
 	)
 	sys-apps/lsb-release"
+
+# a bit of hack so the VM switching is triggered without causing dependency troubles
+JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.5"
+JAVA_PKG_WANT_SOURCE="1.5"
+JAVA_PKG_WANT_TARGET="1.5"
 
 pkg_setup() {
 # Shark support disabled for now - still experimental and needs sys-devel/llvm
@@ -153,6 +159,15 @@ src_unpack() {
 	unpack ${ICEDTEA_PKG}.tar.gz
 }
 
+src_prepare() {
+	# Fix build with SystemTap + gcc 4.5
+	# http://icedtea.classpath.org/bugzilla/show_bug.cgi?id=476
+	if use systemtap; then
+		epatch "${FILESDIR}/${PV}-systemtap-gcc-4.5.patch"
+		eautoreconf || die "eautoreconf failed"
+	fi
+}
+
 unset_vars() {
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
 }
@@ -168,7 +183,7 @@ src_configure() {
 		config="${config} --with-openjdk=$(java-config -O)"
 	elif [[ "${vm}" == "gcj-jdk" || "${vm}" == "cacao" ]] ; then
 		# For other 1.5 JDKs e.g. GCJ, CACAO.
-		config="${config} --with-ecj-jar=$(java-pkg_getjar --build-only eclipse-ecj:3.3 ecj.jar)" \
+		config="${config} --with-ecj-jar=/usr/share/eclipse-ecj/ecj.jar" \
 		config="${config} --with-gcj-home=${vmhome}"
 	else
 		eerror "IcedTea${SLOT} must be built with either a JDK based on GNU Classpath or an existing build of IcedTea${SLOT}."
