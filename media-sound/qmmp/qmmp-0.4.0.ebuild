@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.0.ebuild,v 1.1 2010/05/02 09:50:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.0.ebuild,v 1.2 2010/05/03 05:13:47 polynomial-c Exp $
 
 EAPI="2"
 
@@ -94,7 +94,7 @@ src_configure() {
 		$(qmmp_use_enable pulseaudio PULSE)
 		$(qmmp_use_enable scrobbler SCROBBLER)
 		$(qmmp_use_enable sndfile SNDFILE)
-		$(qmmp_use_enalbe tray STATICON)
+		$(qmmp_use_enable tray STATICON)
 		$(qmmp_use_enable libsamplerate SRC)
 		$(qmmp_use_enable vorbis VORBIS)
 		$(qmmp_use_enable wavpack WAVPACK)"
