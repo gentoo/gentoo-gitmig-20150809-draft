@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.33 2010/05/03 22:13:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.34 2010/05/03 23:14:16 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
 
-IUSE="doc test"
+IUSE="doc test examples"
 
 EXPORT_FUNCTIONS src_test
 
@@ -71,6 +71,20 @@ db_src_install_doc() {
 		rm -rf ${D}/usr/docs
 	else
 		rm -rf ${D}/usr/docs
+	fi
+
+	db_src_install_examples
+}
+
+db_src_install_examples() {
+	if use examples ; then
+		local langs="c cxx stl"
+		use java && langs="${langs} java"
+		for i in $langs ; do
+			destdir="/usr/share/doc/${PF}/"
+			dodir "${destdir}"
+			cp -ra "${S}/../examples_${i}/" "${D}${destdir}/"
+		done
 	fi
 }
 
