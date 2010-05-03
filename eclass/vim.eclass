@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.185 2010/04/15 19:23:34 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.186 2010/05/03 01:41:53 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -28,6 +28,7 @@ MY_PN=${PN%-cvs}
 if [[ ${MY_PN} != "vim-core" ]] ; then
 	# vim supports python-2 only
 	PYTHON_DEPEND="python? 2"
+	PYTHON_USE_WITH_OPT="python"
 	PYTHON_USE_WITH="threads"
 fi
 inherit eutils vim-doc flag-o-matic versionator fdo-mime bash-completion prefix python
