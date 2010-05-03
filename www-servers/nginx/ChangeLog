@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.256 2010/04/26 09:50:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.257 2010/05/03 19:34:36 hollow Exp $
+
+*nginx-0.8.36-r1 (03 May 2010)
+
+  03 May 2010; Benedikt Böhm <hollow@gentoo.org> +nginx-0.8.36-r1.ebuild:
+  add uWSGI module wrt bug #314931
 
 *nginx-0.8.36 (26 Apr 2010)
 
