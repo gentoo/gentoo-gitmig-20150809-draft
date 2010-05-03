@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>php</herd>
+  <herd>no-herd</herd>
   <maintainer>
-    <email>ssuominen@gentoo.org</email>
-    <name>Samuli Suominen</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="minimal">Don't build and install bundled drivers and extra libraries</flag>
+    <flag name="minimal">Disable bundled drivers and extra libraries (most users don't need these)</flag>
+    <flag name="odbcmanual">Administrator, Internal Structure, Programmer and User documentation</flag>
   </use>
 </pkgmetadata>
