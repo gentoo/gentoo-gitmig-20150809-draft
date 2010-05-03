@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.12 2010/03/07 17:11:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.13 2010/05/03 17:33:51 patrick Exp $
+
+*cppcheck-1.41-r1 (03 May 2010)
+
+  03 May 2010; Patrick Lauer <patrick@gentoo.org> +cppcheck-1.41-r1.ebuild:
+  Adding qt4 gui, thanks to Benjamin Bannier for the ebuild mods. Fixes
+  #316857
 
   07 Mar 2010; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Add self to metadata so this package doesn't get forgotten
