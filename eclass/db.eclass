@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.31 2009/07/29 20:25:25 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.32 2010/05/03 22:03:38 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -116,6 +116,11 @@ db_src_install_usrlibcleanup() {
 }
 
 db_src_test() {
+	if [[ $UID -eq 0 ]]; then
+		ewarn "You must run the testsuite as non-root, skipping"
+		elog "You must run the testsuite as non-root, skipping"
+		return 0
+	fi
 	if useq tcl; then
 		einfo "Running sys-libs/db testsuite"
 		ewarn "This can take 6+ hours on modern machines"
