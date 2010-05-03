@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5526 2010/05/03 19:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5527 2010/05/03 22:07:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -503,6 +503,7 @@ app-office/osmo:syncml - Enable syncML support
 app-office/rabbit:gnome-print - Gnome-Print support (gnome-base/libgnomeprint)
 app-office/rabbit:gs - Ghostscript support (app-text/ghostscript-gpl)
 app-office/rabbit:tgif - tgif support (media-gfx/tgif)
+app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
 app-office/tpp:figlet - Install app-misc/figlet to support the --huge command
 app-pda/barry:boost - Enable boost support
@@ -1335,6 +1336,7 @@ kde-base/kdebindings-csharp:plasma - Compile bindings for kde's plasma.
 kde-base/kdebindings-csharp:qimageblitz - Compile bindings for kde-base/qimageblitz.
 kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/webkit.
+kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
 kde-base/kdebindings-ruby:akonadi - Compile bindings for kde-base/akonadi.
 kde-base/kdebindings-ruby:kdevplatform - Compile bindings for dev-util/kdevplatform.
 kde-base/kdebindings-ruby:okular - Compile bindings for kde-base/okular.
