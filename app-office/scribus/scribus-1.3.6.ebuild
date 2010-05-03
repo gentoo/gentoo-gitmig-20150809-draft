@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.2 2010/04/30 22:53:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.3 2010/05/03 21:48:15 ssuominen Exp $
 
 EAPI=2
-
 PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils fdo-mime multilib python
@@ -15,13 +14,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cairo debug +pdf spell"
+IUSE="cairo debug +minimal +pdf spell"
 
 COMMON_DEPEND="dev-libs/hyphen
 	dev-libs/libxml2
 	media-libs/fontconfig
 	>=media-libs/freetype-2
-	media-libs/jpeg:0
+	>=media-libs/jpeg-8a
 	media-libs/lcms
 	media-libs/libpng
 	media-libs/tiff
@@ -36,7 +35,10 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-libs/boost"
 
-PATCHES=( "${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch" "${FILESDIR}/${PN}-1.3.6-podofo-0.8.0.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch"
+	"${FILESDIR}/${PN}-1.3.6-podofo-0.8.0.patch"
+	)
 
 DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
 
@@ -55,6 +57,7 @@ src_configure() {
 		$(cmake-utils_use_has spell ASPELL)
 		$(cmake-utils_use_has pdf PODOFO)
 		$(cmake-utils_use_want cairo)
+		$(cmake-utils_use_want minimal NOHEADERINSTALL)
 		)
 
 	cmake-utils_src_configure
