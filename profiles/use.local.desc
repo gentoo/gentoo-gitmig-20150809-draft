@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5524 2010/05/03 18:07:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5525 2010/05/03 18:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3403,6 +3403,8 @@ sys-process/cronie:inotify - Enable inotify filesystem monitoring support.
 sys-process/fcron:debug -  Enable debug code and output. Since version 3.0.5 this will no longer force foreground execution, and fcron will be able to run as a service properly. 
 sys-process/fcron:doc -  Rebuild the user documentation provided with the package; this should really not be necessary as all the documentation is shipped pre-built. 
 sys-process/fcron:pam -  Enable PAM support for fcron. This means that fcron will pass through the "fcron" stack before executing the jobs, and fcrontab will use the "fcrontab" stack to authenticate the user before editing its crontab file. 
+sys-process/htop:openvz - Enable openvz support
+sys-process/htop:vserver - Enable vserver support
 sys-process/procps:n32 - Enable n32 ABI support on mips
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 www-apache/mod_mono:aspnet2 - Handle all applications using ASP.NET 2.0 engine by default
