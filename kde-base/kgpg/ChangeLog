@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.153 2010/03/31 22:40:24 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.154 2010/05/03 18:16:39 reavertm Exp $
+
+  03 May 2010; Maciej Mrozowski <reavertm@gentoo.org> kgpg-4.4.2.ebuild:
+  Add elog message about app-crypt/dirmngr, fix bug 298913
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kgpg-4.3.4.ebuild,
   -kgpg-4.4.0.ebuild:

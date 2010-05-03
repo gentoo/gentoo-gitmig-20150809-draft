@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/kgpg-4.4.2.ebuild,v 1.1 2010/03/30 21:03:49 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/kgpg-4.4.2.ebuild,v 1.2 2010/05/03 18:16:39 reavertm Exp $
 
 EAPI="3"
 
@@ -17,3 +17,11 @@ DEPEND="
 RDEPEND="${DEPEND}
 	app-crypt/gnupg
 "
+
+pkg_postinst() {
+	kde4-meta_pkg_postinst
+
+	if ! has_version app-crypt/dirmngr ; then
+		elog "For improved key search functionality, install app-crypt/dirmngr."
+	fi
+}
