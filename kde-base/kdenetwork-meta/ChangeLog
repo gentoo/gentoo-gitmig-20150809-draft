@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.155 2010/03/31 22:26:46 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.156 2010/05/03 20:40:28 alexxy Exp $
+
+*kdenetwork-meta-4.4.3 (03 May 2010)
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdenetwork-meta-4.4.3.ebuild:
+  Version bump
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdenetwork-meta-4.3.4.ebuild,
   -kdenetwork-meta-4.4.0.ebuild:

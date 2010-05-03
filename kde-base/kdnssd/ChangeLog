@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.154 2010/05/03 05:43:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.155 2010/05/03 20:47:43 alexxy Exp $
+
+*kdnssd-4.4.3 (03 May 2010)
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> +kdnssd-4.4.3.ebuild:
+  Version bump
 
   03 May 2010; Alexis Ballier <aballier@gentoo.org> kdnssd-4.4.2.ebuild:
   keyword ~x86-fbsd

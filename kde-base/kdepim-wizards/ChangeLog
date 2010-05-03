@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.141 2010/03/31 22:29:42 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.142 2010/05/03 20:42:58 alexxy Exp $
+
+*kdepim-wizards-4.4.3 (03 May 2010)
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdepim-wizards-4.4.3.ebuild:
+  Version bump
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kdepim-wizards-4.3.4.ebuild,
   -kdepim-wizards-4.4.0.ebuild:
