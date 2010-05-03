@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.45.2-r1.ebuild,v 1.3 2010/05/03 13:06:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.45.2-r1.ebuild,v 1.4 2010/05/03 15:02:33 lack Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -46,8 +46,7 @@ RDEPEND="x86? ( $NATIVE_DEPS )
 		)
 		!multilib? ( $NATIVE_DEPS )
 	)
-	|| ( media-fonts/liberation-fonts media-fonts/corefonts )
-	!www-plugins/libflashsupport"
+	|| ( media-fonts/liberation-fonts media-fonts/corefonts )"
 
 # Ignore QA warnings in these binary closed-source libraries, since we can't fix
 # them:
