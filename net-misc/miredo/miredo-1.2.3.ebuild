@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.3.ebuild,v 1.1 2010/05/03 09:59:23 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/miredo-1.2.3.ebuild,v 1.2 2010/05/03 18:25:14 bangert Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.remlab.net/files/miredo/miredo-1.2.3.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+caps"
 
 DEPEND="dev-libs/judy
