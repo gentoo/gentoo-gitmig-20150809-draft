@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.20.0.ebuild,v 1.1 2010/03/26 17:33:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.20.0.ebuild,v 1.2 2010/05/03 19:24:34 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-
 IUSE="doc examples test tk"
 
 DEPEND=">=dev-python/logilab-common-0.44.0
-	>=dev-python/astng-0.19.3"
+	>=dev-python/astng-0.20"
 RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -58,7 +58,7 @@ src_install() {
 pkg_postinst() {
 	distutils_pkg_postinst
 
-	if ! has_version dev-lang/python[tk]; then
+	if ! has_version "=dev-lang/python-2*[tk]"; then
 		ewarn "dev-lang/python has been built without tk support,"
 		ewarn "${PN}-gui doesn't work without Tkinter so if you really need it,"
 		ewarn "re-install dev-lang/python with \"tk\" useflag enabled."
