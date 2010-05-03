@@ -1,21 +1,26 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-4.2.3.ebuild,v 1.1 2010/04/30 22:01:38 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-4.2.3.ebuild,v 1.2 2010/05/03 17:44:52 reavertm Exp $
 
 EAPI="2"
-inherit webapp depend.php
 
-IUSE=""
+inherit webapp
 
 MY_P=phpPgAdmin-${PV}
 
 DESCRIPTION="Web-based administration for Postgres database in php"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 HOMEPAGE="http://phppgadmin.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-DEPEND="|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )
+IUSE=""
+
+RDEPEND="
+	|| (
+		<dev-lang/php-5.3[pcre]
+		>=dev-lang/php-5.3
+	)
 	dev-lang/php[postgres,session]
 "
 

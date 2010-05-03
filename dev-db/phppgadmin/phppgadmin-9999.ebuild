@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-9999.ebuild,v 1.1 2010/02/21 17:38:21 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-9999.ebuild,v 1.2 2010/05/03 17:44:52 reavertm Exp $
 
 EAPI="2"
 
-inherit webapp depend.php git
+inherit webapp git
 
 DESCRIPTION="Web-based administration for Postgres database in php"
 HOMEPAGE="http://phppgadmin.sourceforge.net/"
@@ -14,11 +14,16 @@ LICENSE="GPL-2"
 KEYWORDS=""
 IUSE=""
 
-need_php
+RDEPEND="
+	|| (
+		<dev-lang/php-5.3[pcre]
+		>=dev-lang/php-5.3
+	)
+	dev-lang/php[postgres,session]
+"
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use pcre postgres session
 }
 
 src_install() {
