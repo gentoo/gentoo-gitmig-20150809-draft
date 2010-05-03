@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/isbg/isbg-0.99.ebuild,v 1.1 2010/03/12 09:46:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/isbg/isbg-0.99-r1.ebuild,v 1.1 2010/05/03 10:30:53 wired Exp $
 
 EAPI=3
+PYTHON_DEPEND="2"
+
+inherit python
 
 MY_P="${P/-/_}_20100303"
 DESCRIPTION="IMAP Spam Begone: a script that makes it easy to scan an IMAP inbox for spam using SpamAssassin"
@@ -19,9 +22,16 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	|| ( dev-lang/python:2.6 dev-lang/python:2.5 dev-lang/python:2.4 )
 	mail-filter/spamassassin
 "
+
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_prepare() {
+	python_convert_shebangs 2 isbg.py
+}
 
 src_install() {
 	dobin isbg.py || die "script installation failed"
