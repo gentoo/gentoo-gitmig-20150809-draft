@@ -1,9 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/scamp-1.5.5.ebuild,v 1.2 2009/07/28 17:41:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/scamp-1.7.0.ebuild,v 1.1 2010/05/03 21:44:04 bicatali Exp $
 
 EAPI=2
-inherit eutils autotools
 
 DESCRIPTION="Computes astrometric and photometric solutions for astronomical images"
 HOMEPAGE="http://astromatic.iap.fr/software/scamp"
@@ -14,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc threads plplot"
 
-RDEPEND="sci-astronomy/cdsclient
+RDEPEND=">=sci-astronomy/cdsclient-3.4
 	virtual/cblas
 	>=sci-libs/lapack-atlas-3.8.0
 	sci-libs/fftw:3.0
@@ -23,12 +22,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autotools.patch
 	# gentoo uses cblas instead of ptcblas (linked to threaded with eselect)
 	sed -i \
 		-e 's/ptcblas/cblas/g' \
-		acx_atlas.m4 || die "sed acx_atlas.m4 failed"
-	eautoreconf
+		configure || die "sed failed"
 }
 
 src_configure() {
