@@ -1,6 +1,12 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.6 2010/02/09 21:13:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.7 2010/05/03 23:45:56 ssuominen Exp $
+
+*stardict-3.0.1-r3 (03 May 2010)
+
+  03 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +stardict-3.0.1-r3.ebuild, +files/stardict-3.0.1-sparc_sigbus.patch:
+  Fix sparc/sigbus wrt #265792 by Tiago Cunha.
 
   09 Feb 2010; Joseph Jezak <josejx@gentoo.org> stardict-3.0.1-r2.ebuild:
   Marked ppc/ppc64 stable for bug #288555.
