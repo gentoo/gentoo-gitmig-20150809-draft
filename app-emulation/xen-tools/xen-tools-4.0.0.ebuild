@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.0.ebuild,v 1.1 2010/05/03 19:46:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.0.ebuild,v 1.2 2010/05/03 21:38:55 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -143,17 +143,17 @@ src_prepare() {
 		sed -i -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" \
 			"${S}/Makefile"
 	fi
-	# Fix network broadcast on bridged networks                                                                                                                                 
+	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
 
 	# Do not strip binaries
 	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
 
-	# fix variable declaration to avoid sandbox issue, #253134                                                                                                                  
+	# fix variable declaration to avoid sandbox issue, #253134
 	epatch "${FILESDIR}/${PN}-3.3.1-sandbox-fix.patch"
 
-	# fix gcc 4.4 failure                                                                                                                                                       
-	#epatch "${FILESDIR}/${PN}-3.4.1-xc_core-memset.patch"                                                                                                                      
+	# fix gcc 4.4 failure
+	#epatch "${FILESDIR}/${PN}-3.4.1-xc_core-memset.patch"
 }
 
 src_compile() {
