@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.4.2.ebuild,v 1.2 2010/05/03 05:45:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.4.2-r1.ebuild,v 1.1 2010/05/03 19:37:59 reavertm Exp $
 
 EAPI="3"
 
@@ -50,6 +50,8 @@ KMEXTRACTONLY="
 "
 
 add_blocker kcontrol '<4.3.98'
+
+PATCHES=( "${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch" )
 
 src_unpack() {
 	if use handbook; then

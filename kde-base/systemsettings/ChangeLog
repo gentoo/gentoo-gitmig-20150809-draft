@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.74 2010/05/03 05:45:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.75 2010/05/03 19:37:59 reavertm Exp $
+
+*systemsettings-4.4.2-r1 (03 May 2010)
+
+  03 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -systemsettings-4.4.2.ebuild, +systemsettings-4.4.2-r1.ebuild,
+  +files/systemsettings-4.4.2-xinerama_cmake_automagic.patch:
+  Fix Xinerama automagic, bug 312513, thanks for Andreas K. Huettel
+  (dilfridge)
 
   03 May 2010; Alexis Ballier <aballier@gentoo.org>
   systemsettings-4.4.2.ebuild:
