@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/libflashsupport-1.2.ebuild,v 1.4 2010/02/08 20:38:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/libflashsupport-1.2.ebuild,v 1.5 2010/05/03 15:02:39 lack Exp $
 
+EAPI="3"
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Adds pulseaudio/esd/oss audio output and HTTPS/RTMPS support to
@@ -22,12 +23,9 @@ DEPEND="gnutls? ( net-libs/gnutls )
 	pulseaudio? ( media-sound/pulseaudio )"
 
 RDEPEND="${DEPEND}
-	esd? ( media-sound/esound )
-	!>=www-plugins/adobe-flash-10"
+	esd? ( media-sound/esound )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i -e 's:/var/lib/run/pulse/native:/var/run/pulse/native:' \
 		README flashsupport.c || die "sed failed"
 
@@ -93,4 +91,16 @@ src_compile() {
 src_install() {
 	dolib.so libflashsupport.so
 	dodoc README
+}
+
+pkg_postinst() {
+	if has_version ">=www-plugins/adobe-flash-10" && use pulseaudio; then
+		ewarn "You do not need libflashsupport to use adobe-flash with pulseaudio"
+		ewarn "Please consider removing this package and using"
+		ewarn "media-plugins/alsa-plugins[pulseaudio] instead."
+	fi
+
+	if use amd64 && has_version ">=www-plugins/adobe-flash-10[32bit]"; then
+		ewarn "The 32-bit flash plugin cannot use libflashsupport which is 64-bit only."
+	fi
 }
