@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4149 2010/05/03 19:31:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4150 2010/05/03 21:04:10 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Mask KDE SC 4.4.1 for removing
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Mask KDE SC 4.4.3 untill tarball will hit mirrors
