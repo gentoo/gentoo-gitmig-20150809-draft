@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.20 2010/04/30 12:29:05 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.21 2010/05/03 13:06:09 lack Exp $
+
+  03 May 2010; Jim Ramsay <lack@gentoo.org> adobe-flash-10.0.45.2.ebuild,
+  adobe-flash-10.0.45.2-r1.ebuild:
+  Clean up RDEPEND a bit
 
   30 Apr 2010; Jim Ramsay <lack@gentoo.org> adobe-flash-9.0.262.0.ebuild,
   adobe-flash-10.0.45.2.ebuild, adobe-flash-10.0.45.2-r1.ebuild:

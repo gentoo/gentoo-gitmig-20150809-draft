@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.45.2.ebuild,v 1.4 2010/04/30 12:29:05 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.45.2.ebuild,v 1.5 2010/05/03 13:06:09 lack Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -31,8 +31,7 @@ NATIVE_DEPS="x11-libs/gtk+:2
 	media-libs/fontconfig
 	dev-libs/nss
 	net-misc/curl
-	>=sys-libs/glibc-2.4
-	|| ( media-fonts/liberation-fonts media-fonts/corefonts )"
+	>=sys-libs/glibc-2.4"
 
 EMUL_DEPS="app-emulation/emul-linux-x86-baselibs
 	app-emulation/emul-linux-x86-gtklibs
@@ -47,6 +46,7 @@ RDEPEND="x86? ( $NATIVE_DEPS )
 		)
 		!multilib? ( $NATIVE_DEPS )
 	)
+	|| ( media-fonts/liberation-fonts media-fonts/corefonts )
 	!www-plugins/libflashsupport"
 
 # Our new flash-libcompat suffers from the same EXESTACK problem as libcrypto
