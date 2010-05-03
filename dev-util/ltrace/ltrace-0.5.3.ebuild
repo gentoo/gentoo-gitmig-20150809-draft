@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.ebuild,v 1.5 2008/08/10 18:20:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.ebuild,v 1.6 2010/05/03 09:17:23 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -19,6 +19,9 @@ KEYWORDS="-alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-libs/elfutils"
+
+# bug 233958
+RESTRICT="test"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
