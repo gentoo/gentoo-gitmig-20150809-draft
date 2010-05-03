@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.107 2010/04/04 18:29:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.108 2010/05/03 20:05:23 ssuominen Exp $
+
+  03 May 2010; Samuli Suominen <ssuominen@gentoo.org> jpeg-8a.ebuild:
+  Drop now unrequired preserve_old_lib logic.
 
   04 Apr 2010; Raúl Porcel <armin76@gentoo.org> jpeg-8a.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #310211
