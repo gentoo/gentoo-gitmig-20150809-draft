@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.28.1.ebuild,v 1.1 2009/10/29 20:53:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.28.1.ebuild,v 1.2 2010/05/03 22:10:50 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/glib-2.17.4
 	>=gnome-base/libbonobo-2.5.1
 	>=dev-libs/atk-1.3
 	>=x11-libs/gtk+-2.14
-	gnome-base/gail
 	>=x11-libs/libwnck-2.13.5
 	app-accessibility/gnome-speech
 	>=dev-libs/dbus-glib-0.7
