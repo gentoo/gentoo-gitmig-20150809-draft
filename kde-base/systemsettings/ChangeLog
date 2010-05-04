@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.77 2010/05/04 05:55:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.78 2010/05/04 08:18:13 alexxy Exp $
+
+  04 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  systemsettings-4.4.3.ebuild:
+  Restore accidently dropped ~x86-fbsd keyword on KDE SC 4.4.3
 
   04 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -systemsettings-4.4.1.ebuild:
