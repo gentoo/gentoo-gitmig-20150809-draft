@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.8.ebuild,v 1.3 2010/04/21 18:22:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.8.ebuild,v 1.4 2010/05/04 17:31:25 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic
@@ -35,5 +35,4 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README TRANSLATORS
-	use syncml && dodoc README.syncml
 }
