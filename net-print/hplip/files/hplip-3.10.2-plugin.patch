@@ -1,11 +1,11 @@
---- setup.py.old	2010-03-20 17:38:16.061877304 +0100
-+++ setup.py	2010-03-20 17:40:27.328531289 +0100
-@@ -370,7 +370,7 @@
+--- installer/core_install.py.old	2010-02-25 00:07:12.000000000 +0100
++++ installer/core_install.py	2010-05-04 19:25:42.268075063 +0200
+@@ -1990,7 +1990,7 @@
+         if mode == GUI_MODE:
+             return os.system("sh %s --nox11 -- -u" % plugin_file) == 0
+         else:
+-            return os.system("sh %s --nox11 -- -i" % plugin_file) == 0
++            return os.system("sh %s --nox11" % plugin_file) == 0
  
-             if hp_plugin:
-                 if prop.gui_build:
--                    os.system("hp-plugin -i")
-+                    os.system("hp-plugin --required")
-                 else:
-                     os.system("hp-plugin")
  
+     def delete_plugin(self):
