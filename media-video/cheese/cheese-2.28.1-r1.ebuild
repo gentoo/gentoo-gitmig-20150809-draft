@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.28.1-r1.ebuild,v 1.3 2010/03/04 00:26:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.28.1-r1.ebuild,v 1.4 2010/05/04 16:30:03 tester Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/cheese/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="v4l"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.7
