@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/trophy
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/ChangeLog,v 1.8 2009/01/05 01:26:13 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/ChangeLog,v 1.9 2010/05/04 23:19:01 mr_bones_ Exp $
+
+  04 May 2010; Michael Sterrett <mr_bones_@gentoo.org> trophy-1.1.5.ebuild,
+  +files/trophy-1.1.5-asneeded.patch:
+  add patch for --as-needed support submitted by Kacper Kowalik (Xarthisius)
+  via bug #318139
 
   05 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> trophy-1.1.5.ebuild:
   add use-based dep for dev-games/clanlib (bug #247476)
