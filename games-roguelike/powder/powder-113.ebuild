@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/powder-113.ebuild,v 1.1 2010/05/03 23:56:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/powder-113.ebuild,v 1.2 2010/05/04 00:57:02 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -19,6 +19,8 @@ IUSE=""
 DEPEND="media-libs/libsdl[video]"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=( "${FILESDIR}"/${P}-make.patch )
 
 src_compile() {
 	append-cxxflags -DCHANGE_WORK_DIRECTORY
