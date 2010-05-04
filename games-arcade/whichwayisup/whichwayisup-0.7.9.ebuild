@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.8 2009/10/26 05:53:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.9 2010/05/04 04:39:17 tupone Exp $
 
-NEED_PYTHON="2.4"
+PYTHON_DEPEND="2"
 EAPI=2
 inherit eutils python games
 
@@ -22,6 +22,11 @@ RDEPEND=">=dev-python/pygame-1.6"
 
 S=${WORKDIR}/${PN}
 
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
 src_prepare() {
 	sed -i \
 		-e "s:libdir\ =\ .*:libdir\ =\ \"$(games_get_libdir)/${PN}\":" \
@@ -32,6 +37,7 @@ src_prepare() {
 		lib/data.py \
 		|| die "Changing data path failed"
 	rm data/pictures/Thumbs.db
+	python_convert_shebangs -r 2 run_game.py
 }
 
 src_install() {
