@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.3 2010/03/11 18:07:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.4 2010/05/04 23:40:04 bicatali Exp $
 
 EAPI="2"
-inherit flag-o-matic xemacs-elisp-common
+inherit flag-o-matic xemacs-elisp-common autotools
 
 DESCRIPTION="High-level interactive language for numerical computations"
 LICENSE="GPL-3"
@@ -51,11 +51,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2.0_as_needed.patch
 	epatch "${FILESDIR}"/${PN}-3.2.4-imread.patch
 	epatch "${FILESDIR}"/${PN}-3.2.4-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-3.2.4-fltk-magic.patch
+	eautoreconf
 }
 
 src_configure() {
-	use fltk || export FLTK_CONFIG="no"
-	# hdf5 disabled because not really useful (bug #)
+	# hdf5 disabled because not really useful (bug #299876)
 	econf \
 		--localstatedir=/var/state/octave \
 		--enable-shared \
@@ -66,6 +67,7 @@ src_configure() {
 		$(use_enable readline) \
 		$(use_with curl) \
 		$(use_with fftw) \
+		$(use_with fltk) \
 		$(use_with opengl framework-opengl) \
 		$(use_with sparse arpack) \
 		$(use_with sparse umfpack) \
