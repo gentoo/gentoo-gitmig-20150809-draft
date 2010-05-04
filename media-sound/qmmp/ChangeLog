@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.36 2010/05/03 07:48:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.37 2010/05/04 13:06:27 hwoarang Exp $
+
+  04 May 2010; Markos Chandras <hwoarang@gentoo.org> qmmp-0.4.0.ebuild:
+  Replace cdrom use flag with cdda
 
   03 May 2010; Lars Wendler <polynomial-c@gentoo.org> qmmp-0.4.0.ebuild,
   qmmp-9999.ebuild:
