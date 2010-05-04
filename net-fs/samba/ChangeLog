@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.408 2010/04/25 15:42:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.409 2010/05/04 14:26:23 tester Exp $
+
+  03 May 2010; Olivier Crête <tester@gentoo.org> ChangeLog:
+  amd64 stable, bug #300158
 
   25 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   samba-3.0.37.ebuild:
