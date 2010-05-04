@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/system-config-printer-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/ChangeLog,v 1.23 2010/05/03 21:49:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/ChangeLog,v 1.24 2010/05/04 05:55:25 alexxy Exp $
+
+  04 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -system-config-printer-kde-4.4.1.ebuild:
+  Drop KDE SC 4.4.1
 
 *system-config-printer-kde-4.4.3 (03 May 2010)
 
