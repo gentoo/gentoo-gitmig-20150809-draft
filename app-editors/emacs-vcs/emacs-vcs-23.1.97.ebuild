@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.1.94.ebuild,v 1.1 2010/03/11 16:40:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.1.97.ebuild,v 1.1 2010/05/04 07:59:43 ulm Exp $
 
 EAPI=2
 
@@ -279,6 +279,7 @@ pkg_postinst() {
 	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		[ -e "${f}" ] || touch "${f}"
 	done
+	chown games:games "${ROOT}"/var/lib/games/emacs
 
 	elisp-site-regen
 	emacs-infodir-rebuild
