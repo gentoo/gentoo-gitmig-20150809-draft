@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.131 2010/05/03 22:10:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.132 2010/05/04 16:08:35 tester Exp $
+
+  03 May 2010; Olivier Crête <tester@gentoo.org> gok-2.28.1.ebuild:
+  amd64 stable, bug #314899
 
   03 May 2010; Samuli Suominen <ssuominen@gentoo.org> gok-2.24.0.ebuild,
   gok-2.26.0.ebuild, gok-2.28.1.ebuild:
