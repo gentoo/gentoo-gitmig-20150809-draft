@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.4 2007/04/24 15:20:33 drizzt Exp $
-
-inherit eutils games
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.5 2010/05/04 04:47:24 tupone Exp $
+EAPI="2"
+PYTHON_DEPEND="2"
+inherit eutils python games
 
 MY_PN="melons"
 DESCRIPTION="A thrilling watermelon bouncing game."
@@ -16,15 +17,16 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.4
-	dev-python/pygame"
+RDEPEND="dev-python/pygame"
 
 S=${WORKDIR}/${MY_PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
+src_prepare() {
 	sed -i \
 		-e "s:melons.hs:${GAMES_STATEDIR}/${PN}/&:" \
 		main.py \
@@ -33,7 +35,7 @@ src_unpack() {
 	cat <<-EOF > "${PN}"
 	#!/bin/bash
 	cd "${GAMES_DATADIR}/${PN}"
-	exec python main.py
+	exec $(PYTHON) main.py
 EOF
 }
 
