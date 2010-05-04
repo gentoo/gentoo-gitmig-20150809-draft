@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.8 2010/02/10 17:21:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.9 2010/05/04 19:05:48 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
-SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${P}.tar.gz"
+SRC_URI="http://www.hdfgroup.org/ftp/HDF5/prev-releases/${P}/src/${P}.tar.gz"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
