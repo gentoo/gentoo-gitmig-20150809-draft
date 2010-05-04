@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/nsscache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/ChangeLog,v 1.6 2010/02/08 08:53:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/ChangeLog,v 1.7 2010/05/04 02:42:38 idl0r Exp $
+
+*nsscache-0.8.8 (04 May 2010)
+
+  04 May 2010; Christian Ruppert <idl0r@gentoo.org> +nsscache-0.8.8.ebuild:
+  Version bump to 0.8.8, fixes bug 315851.
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> nsscache-0.8.3-r1.ebuild:
   Add inherit eutils for epatch.
