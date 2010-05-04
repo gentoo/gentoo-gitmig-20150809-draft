@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.12.0.ebuild,v 1.3 2010/01/23 09:21:25 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.12.0.ebuild,v 1.4 2010/05/04 21:08:19 tommy Exp $
 
 inherit eutils
 
@@ -13,9 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="examples sse2"
 
-DEPEND=""
-RDEPEND=${DEPEND}
-
 src_compile() {
 	cd "${S}/library"
 	if use sse2 ; then
@@ -24,7 +21,6 @@ src_compile() {
 		sed -i '15iCFLAGS += -fPIC' Makefile
 	fi
 	epatch "${FILESDIR}"/${P}-makefile.patch
-	emake libpolarssl.a || die "emake failed"
 	emake libpolarssl.so || die "emake failed"
 
 	if use examples ; then
@@ -36,7 +32,7 @@ src_compile() {
 src_test() {
 	cd "${S}"/programs
 	emake test/selftest || die "emake selftest failed"
-	./test/selftest || die "selftest failed"
+	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:../library" ./test/selftest || die "selftest failed"
 }
 
 src_install() {
