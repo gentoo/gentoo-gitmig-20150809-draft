@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-table
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ChangeLog,v 1.20 2010/03/01 10:20:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ChangeLog,v 1.21 2010/05/04 00:47:26 matsuu Exp $
+
+  04 May 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-1.1.0.20090615.ebuild, -ibus-table-1.2.0.20090904.ebuild,
+  ibus-table-1.2.0.20100111.ebuild:
+  Fixed python dependency, bug #311211. Removed old versions.
 
   01 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ibus-table-1.2.0.20100111.ebuild:

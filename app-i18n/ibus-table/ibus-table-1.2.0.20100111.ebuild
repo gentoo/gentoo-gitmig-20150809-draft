@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.2.0.20100111.ebuild,v 1.2 2010/03/01 10:20:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ibus-table-1.2.0.20100111.ebuild,v 1.3 2010/05/04 00:47:26 matsuu Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2:2.5"
+PYTHON_USE_WITH="sqlite"
 inherit python
 
 DESCRIPTION="The Table Engine for IBus Framework"
@@ -15,7 +17,6 @@ KEYWORDS="~amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=app-i18n/ibus-1.2
-	=dev-lang/python-2*[sqlite]
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.16.1 )
@@ -33,7 +34,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README || die
 }
 
 pkg_postinst() {
