@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.5 2010/05/03 07:48:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.6 2010/05/04 16:32:23 hwoarang Exp $
 
 EAPI="2"
 
@@ -21,14 +21,14 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 # KEYWORDS further up
-IUSE="aac +alsa +dbus bs2b cdrom cover enca ffmpeg flac hal jack kde ladspa
+IUSE="aac +alsa +dbus bs2b cdda cover enca ffmpeg flac hal jack kde ladspa
 libsamplerate lyrics +mad mms modplug mplayer mpris musepack notifier oss projectm pulseaudio scrobbler sndfile tray +vorbis wavpack"
 
 RDEPEND="x11-libs/qt-gui:4[qt3support]
 	media-libs/taglib
 	alsa? ( media-libs/alsa-lib )
 	bs2b? ( media-libs/libbs2b )
-	cdrom? ( dev-libs/libcdio )
+	cdda? ( dev-libs/libcdio )
 	dbus? ( sys-apps/dbus )
 	aac? ( media-libs/faad2 )
 	enca? ( app-i18n/enca )
@@ -72,7 +72,7 @@ src_configure() {
 		$(qmmp_use_enable aac AAC)
 		$(qmmp_use_enable bs2b BS2B)
 		$(qmmp_use_enable cover COVER)
-		$(qmmp_use_enable cdrom CDA)
+		$(qmmp_use_enable cdda CDA)
 		$(qmmp_use_enable dbus DBUS)
 		$(qmmp_use_enable enca ENCA)
 		$(qmmp_use_enable ffmpeg FFMPEG)
