@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.1.ebuild,v 1.1 2010/05/04 01:34:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.1.ebuild,v 1.2 2010/05/04 16:06:33 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="ibus? 2:2.5"
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
 
 pkg_setup() {
-	confutils_require_any uim xim
+	confutils_require_any ibus xim
 }
 
 src_prepare() {

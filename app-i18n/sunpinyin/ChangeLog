@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/sunpinyin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.1 2010/05/04 01:34:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.2 2010/05/04 16:06:33 matsuu Exp $
+
+  04 May 2010; MATSUU Takuto <matsuu@gentoo.org> sunpinyin-2.0.1.ebuild:
+  Fixed checking wrong use flag, bug #318373.
 
 *sunpinyin-2.0.1 (04 May 2010)
 
