@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1-r1.ebuild,v 1.2 2010/04/09 19:14:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1-r1.ebuild,v 1.3 2010/05/04 06:20:09 tupone Exp $
 
 EAPI=2
-inherit eutils games
+PYTHON_DEPEND="2"
+inherit eutils python games
 
 DESCRIPTION="Fast-paced, 3D, first-person shoot/dodge-'em-up, in the vain of Tempest or n2o"
 HOMEPAGE="http://accelerator3d.sourceforge.net/"
@@ -16,10 +17,14 @@ IUSE=""
 
 DEPEND="dev-python/pyode
 	dev-python/pygame
-	dev-python/pyopengl
-	virtual/python"
+	dev-python/pyopengl"
 
 S=${WORKDIR}/${PN}
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
 src_prepare() {
 	epatch \
@@ -28,6 +33,7 @@ src_prepare() {
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		accelerator.py || die
+	python_convert_shebangs 2 accelerator.py
 }
 
 src_install() {

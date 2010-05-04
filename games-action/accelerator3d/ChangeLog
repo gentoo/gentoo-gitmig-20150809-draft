@@ -1,6 +1,10 @@
 # ChangeLog for games-action/accelerator3d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.7 2010/04/09 19:14:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.8 2010/05/04 06:20:09 tupone Exp $
+
+  04 May 2010; Tupone Alfredo <tupone@gentoo.org>
+  accelerator3d-0.1.1-r1.ebuild:
+  Force python2 fixing bug #312227 by arferever@gentoo.org
 
   09 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   accelerator3d-0.1.1-r1.ebuild:
