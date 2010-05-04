@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.194 2010/05/03 20:32:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.195 2010/05/04 07:39:44 alexxy Exp $
+
+  04 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdebase-kioslaves-4.4.1-r1.ebuild:
+  Drop KDE SC 4.4.1
 
 *kdebase-kioslaves-4.4.3 (03 May 2010)
 
