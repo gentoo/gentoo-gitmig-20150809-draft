@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-table-cyrillic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cyrillic/ChangeLog,v 1.2 2010/03/13 00:53:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cyrillic/ChangeLog,v 1.3 2010/05/04 00:37:25 matsuu Exp $
+
+  04 May 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-cyrillic-1.2.0.20100107.ebuild,
+  ibus-table-cyrillic-1.2.0.20100305.ebuild:
+  Removed python from DEPEND. Removed old version.
 
 *ibus-table-cyrillic-1.2.0.20100305 (13 Mar 2010)
 
