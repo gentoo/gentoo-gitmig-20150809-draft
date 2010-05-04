@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.92 2010/04/29 10:48:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.93 2010/05/04 11:15:54 phajdan.jr Exp $
+
+  04 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
+  Do not apply the libpng-1.4 patch, it has been applied upstream. Bug
+  #318361 by Zeke Connor <xzekex@live.co.uk>
 
   29 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-5.0.375.23.ebuild, chromium-9999.ebuild:

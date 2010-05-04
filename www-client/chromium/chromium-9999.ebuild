@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.47 2010/04/29 10:48:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.48 2010/05/04 11:15:54 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability subversion toolchain-funcs
@@ -124,9 +124,6 @@ src_prepare() {
 
 	# Allow supporting more media types provided system ffmpeg supports them.
 	epatch "${FILESDIR}"/${PN}-supported-media-mime-types.patch
-
-	# Fix build failure with libpng-1.4, bug 310959.
-	epatch "${FILESDIR}"/${PN}-libpng-1.4.patch
 }
 
 src_configure() {
