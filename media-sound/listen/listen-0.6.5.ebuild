@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.1 2010/04/06 17:01:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.2 2010/05/04 08:36:35 ssuominen Exp $
 
 EAPI=2
 
@@ -15,13 +15,13 @@ SRC_URI="http://download.listen-project.org/0.6/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+libsexy musicbrainz webkit"
+IUSE="gnome +libsexy musicbrainz webkit"
 
 RDEPEND="dev-python/dbus-python
 	>=dev-python/pygtk-2.8:2
 	dev-python/pyxdg
 	|| ( dev-python/python-xlib dev-python/egg-python )
-	dev-python/gnome-vfs-python
+	gnome? ( dev-python/gnome-vfs-python )
 	|| ( x11-misc/notification-daemon xfce-extra/xfce4-notifyd )
 	media-libs/mutagen
 	dev-python/gst-python:0.10
