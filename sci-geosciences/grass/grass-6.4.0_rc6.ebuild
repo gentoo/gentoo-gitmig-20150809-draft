@@ -1,18 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.3 2010/04/30 18:43:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.4 2010/05/04 10:52:10 scarabeus Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
-inherit eutils python gnome2 versionator wxwidgets base
+inherit eutils python gnome2 multilib versionator wxwidgets base
 
 MY_PM=${PN}$(get_version_component_range 1-2 ${PV})
+MY_PM=${MY_PM/.}
 MY_P=${P/_rc/RC}
 
 DESCRIPTION="A free GIS with raster and vector functionality, as well as 3D vizualization."
 HOMEPAGE="http://grass.osgeo.org//"
-SRC_URI="http://grass.osgeo.org/${MY_PM/.}/source/${MY_P}.tar.gz"
+SRC_URI="http://grass.osgeo.org/${MY_PM}/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="6"
@@ -39,7 +40,6 @@ RDEPEND="
 		virtual/lapack
 	)
 	jpeg? ( media-libs/jpeg )
-	motif? ( x11-libs/openmotif )
 	mysql? ( dev-db/mysql )
 	odbc? ( dev-db/unixODBC )
 	png? ( media-libs/libpng )
@@ -63,6 +63,10 @@ RDEPEND="
 		x11-libs/libXp
 		x11-libs/libXpm
 		x11-libs/libXt
+		motif? (
+			x11-libs/openmotif
+			opengl? ( media-libs/mesa[motif] )
+		)
 		opengl? (
 			virtual/opengl
 			${TCL_DEPS}
@@ -74,7 +78,9 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-devel/flex
+	sys-devel/gettext
 	sys-devel/bison
 	X? (
 		x11-proto/xextproto
@@ -82,7 +88,11 @@ DEPEND="${RDEPEND}
 		python? ( wxwidgets? ( dev-lang/swig ) )
 	)"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+PATCHES=(
+  "${FILESDIR}/${PN}-pkgconf.patch"
+)
 
 pkg_setup() {
 	local myblas
@@ -106,6 +116,7 @@ pkg_setup() {
 	fi
 
 	# check useflag nesting.
+	use motif && ! use X && ewarn "For motif support X useflag must be enabled"
 	use opengl && ! use X && ewarn "For opengl support X useflag must be enabled"
 	use wxwidgets && ! use X && ewarn "For wxwidgets support X useflag must be enabled"
 	use wxwidgets && ! use python && ewarn "For wxwidgets support python useflag must be enabled"
@@ -116,7 +127,7 @@ pkg_setup() {
 
 src_prepare() {
 	if ! use opengl; then
-	    epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
+		epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
 	fi
 
 	base_src_prepare
@@ -129,10 +140,10 @@ src_configure() {
 		TCL_LIBDIR="/usr/$(get_libdir)/tcl8.5"
 		myconf+="
 			--with-tcltk-libs=${TCL_LIBDIR}
+			$(use_with motif)
 			$(use_with opengl)
 			--with-x
 		"
-		use opengl && myconf+=" --with-tcltk"
 
 		if use python && use wxwidgets; then
 			WX_BUILD=yes
@@ -151,9 +162,14 @@ src_configure() {
 				--without-wxwidgets
 			"
 		fi
+
+		use opengl && myconf+=" --with-tcltk"
+		use motif && use opengl && myconf+=" --with-glw"
+		use motif || myconf+=" --without-glw"
 	else
 		myconf+="
 			--without-opengl
+			--without-glw
 			--without-tcltk
 			--without-wxwidgets
 			--without-x
@@ -168,6 +184,7 @@ src_configure() {
 		--without-glw \
 		--enable-shared \
 		$(use_enable amd64 64bit) \
+		$(use_enable ppc64 64bit) \
 		$(use_with cairo) \
 		$(use_with cxx) \
 		$(use_with fftw) \
@@ -180,7 +197,6 @@ src_configure() {
 		$(use_with gmath lapack) \
 		$(use_with jpeg) \
 		$(use_enable largefile) \
-		$(use_with motif) \
 		$(use_with mysql) \
 		$(use_with nls) \
 		$(use_with odbc) \
@@ -202,12 +218,13 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" \
-		INST_DIR="${D}"/usr/share/${PN}/$(get_version_component_range 1-2 ${PV})/ \
-		PREFIX="${D}"/usr/share/${PN}/$(get_version_component_range 1-2 ${PV})/ \
-		BINDIR="${D}"/usr/bin \
+		INST_DIR="${D}"/usr/${MY_PM} \
+		prefix="${D}"/usr BINDIR="${D}"/usr/bin \
+		PREFIX="${D}"/usr/ \
 		install || die
 
-	cd "${D}"/usr/share/${PN}/$(get_version_component_range 1-2 ${PV})/
+	pushd "${D}"/usr/${MY_PM} &> /dev/null
+
 	# fix docs
 	dodoc AUTHORS CHANGES || die
 	dohtml -r docs/html/* || die
@@ -223,18 +240,51 @@ src_install() {
 	dodir /usr/share/locale/ || die
 	mv locale/* "${D}"/usr/share/locale/ || die
 	rm -rf locale/ || die
+	# pt_BR is broken
+	mv "${D}"/usr/share/locale/pt_br "${D}"/usr/share/locale/pt_BR || die
 
-	# get rid of DESTDIR in script path
-	sed -i -e "s:${D}:/:" "${D}"usr/bin/${MY_PM/.} || die
+	popd &> /dev/null
 
-	cd ${S}
+	# place libraries where they belong
+	mv "${D}"/usr/${MY_PM}/lib/ "${D}"/usr/$(get_libdir)/ || die
+
+	# place header files where they belong
+	mv "${D}"/usr/${MY_PM}/include/ "${D}"/usr/include/ || die
+	# make rules are not required on installed system
+	rm -rf "${D}"/usr/include/Make || die
+
+	# mv remaining gisbase stuff to libdir
+	mv "${D}"/usr/${MY_PM} "${D}"/usr/$(get_libdir) || die
+
+	# set proper default window renderer
+	if [[ ${WX_BUILD} == yes ]]; then
+		sed -i \
+			-e "1,\$s:^DEFAULT_GUI.*:DEFAULT_GUI=\"wxpython\":" \
+			"${D}"/usr/$(get_libdir)/${MY_PM}/etc/Init.sh || die
+	fi
+
+	# get proper folder for grass path in script
+	sed -i \
+		-e "1,\$s:^GISBASE.*:GISBASE=/usr/$(get_libdir)/${MY_PM}:" \
+		"${D}"usr/bin/${MY_PM} || die
+
+	# get proper fonts path for fontcap
+	sed -i \
+		-e "s|${D}/usr/${MY_PM}|/usr/$(get_libdir)/${MY_PM}|" \
+		"${D}"/usr/$(get_libdir)/${MY_PM}/etc/fontcap || die
+
 	if use X; then
 		generate_files
 		doicon gui/icons/${PN}-48x48.png || die
-		domenu ${MY_PM/.}-grass.desktop || die
+		domenu ${MY_PM}-grass.desktop || die
 	fi
 
-	# FIXME: install .pc file so other apps know where to look for grass
+	# install .pc file so other apps know where to look for grass
+	insinto /usr/$(get_libdir)/pkgconfig/
+	doins grass.pc || die
+
+	# fix weird +x on tcl scripts
+	find "${D}" -name "*.tcl" -exec chmod +r-x '{}' \;
 }
 
 pkg_postinst() {
@@ -255,14 +305,14 @@ generate_files() {
 	local GUI="-gui"
 	[[ ${WX_BUILD} == yes ]] && GUI="-wxpython"
 
-	cat <<-EOF > ${MY_PM/.}-grass.desktop
+	cat <<-EOF > ${MY_PM}-grass.desktop
 	[Desktop Entry]
 	Encoding=UTF-8
 	Version=1.0
 	Name=Grass ${PV}
 	Type=Application
 	Comment=GRASS (Geographic Resources Analysis Support System), the original GIS.
-	Exec=${TERM} -T Grass -e /usr/bin/${MY_PM/.} ${GUI}
+	Exec=${TERM} -T Grass -e /usr/bin/${MY_PM} ${GUI}
 	Path=
 	Icon=${PN}-48x48.png
 	Categories=Science;Education;

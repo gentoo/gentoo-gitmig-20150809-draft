@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.78 2010/04/30 08:54:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.79 2010/05/04 10:52:10 scarabeus Exp $
+
+  04 May 2010; Tomáš Chvátal <scarabeus@gentoo.org> -grass-5.4.0.ebuild,
+  -files/99grass-6, -grass-6.0.1.ebuild, -files/99grass-6.2,
+  -files/grass-6.2.0-html-nonviz.patch, -grass-6.2.1.ebuild,
+  -files/grass-6.2.1-ffmpeg-fix.patch, -files/grass-6.2.1-gcc43.patch,
+  -files/grass-6.2.1-html-nonviz.patch,
+  -files/grass-6.2.1-html-nviz-fix.patch, grass-6.4.0_rc6.ebuild,
+  +files/grass-pkgconf.patch:
+  Update install approach. Install .pc file. Drop old.
 
   30 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   grass-6.4.0_rc6.ebuild:
