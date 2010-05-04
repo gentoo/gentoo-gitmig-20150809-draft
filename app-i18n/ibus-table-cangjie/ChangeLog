@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/ibus-table-cangjie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cangjie/ChangeLog,v 1.10 2010/03/07 01:49:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cangjie/ChangeLog,v 1.11 2010/05/04 00:29:43 matsuu Exp $
+
+  04 May 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-cangjie-1.1.0.20090601.ebuild,
+  -ibus-table-cangjie-1.2.0.20090717.ebuild,
+  -ibus-table-cangjie-1.2.0.20100106.ebuild,
+  -ibus-table-cangjie-1.2.0.20100119.ebuild,
+  ibus-table-cangjie-1.2.0.20100305.ebuild:
+  Removed dev-lang/python from DEPEND. Removed old versions.
 
 *ibus-table-cangjie-1.2.0.20100305 (07 Mar 2010)
 
