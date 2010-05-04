@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/chm2pdf-0.9.1.ebuild,v 1.4 2010/04/22 17:54:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/chm2pdf-0.9.1.ebuild,v 1.5 2010/05/04 17:11:30 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
-inherit eutils
+inherit python eutils
 
 DESCRIPTION="A script that converts a CHM file into a single PDF file."
 HOMEPAGE="http://code.google.com/p/chm2pdf/"

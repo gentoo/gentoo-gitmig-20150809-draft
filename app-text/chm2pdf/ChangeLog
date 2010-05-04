@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chm2pdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.5 2010/04/22 17:54:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.6 2010/05/04 17:11:30 hwoarang Exp $
+
+  04 May 2010; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1.ebuild:
+  Inherit python eclass wrt bug #318403
 
   22 Apr 2010; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1.ebuild:
   Refactor ebuild to use python functions correctly. Fixes bug #312097
