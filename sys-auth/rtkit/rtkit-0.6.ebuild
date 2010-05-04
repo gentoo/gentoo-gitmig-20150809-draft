@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.6.ebuild,v 1.1 2010/02/08 03:03:29 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.6.ebuild,v 1.2 2010/05/04 16:36:23 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://0pointer.de/public/${P}.tar.gz"
 
 LICENSE="GPL-3 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND="sys-apps/dbus
