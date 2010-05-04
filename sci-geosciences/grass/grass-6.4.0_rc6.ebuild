@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.4 2010/05/04 10:52:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.5 2010/05/04 10:53:41 scarabeus Exp $
 
 EAPI="3"
 
@@ -91,7 +91,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
-  "${FILESDIR}/${PN}-pkgconf.patch"
+	"${FILESDIR}/${PN}-pkgconf.patch"
 )
 
 pkg_setup() {
