@@ -11,12 +11,6 @@
     <email>flameeyes@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="doc">
-      Rebuild the user documentation provided with the package; this
-      should really not be necessary as all the documentation is
-      shipped pre-built.
-    </flag>
-
     <flag name="debug" restrict="&lt;fcron-3.0.5">
       Enable debug code, output and allocation checks. Warning: in
       ebuilds before 3.0.5, enabling this flag will prevent fcron from
