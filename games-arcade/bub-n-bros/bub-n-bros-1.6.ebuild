@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.6.ebuild,v 1.5 2008/06/29 11:03:16 klausman Exp $
-
-inherit eutils games
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.6.ebuild,v 1.6 2010/05/04 05:10:24 tupone Exp $
+EAPI="2"
+PYTHON_DEPEND="2"
+inherit eutils python games
 
 MY_P=${P/-n-}
 DESCRIPTION="A multiplayer clone of the famous Bubble Bobble game"
@@ -14,31 +15,35 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-lang/python"
 RDEPEND="dev-python/pygame"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
+src_prepare() {
+	ecvs_clean
 	epatch \
 		"${FILESDIR}"/${P}-home.patch \
 		"${FILESDIR}"/${P}-python25.patch
+	python_convert_shebangs -r 2 .
 }
 
 src_compile() {
 	# Compile the "statesaver" extension module to enable the Clock bonus
 	cd "${S}"/bubbob
-	python setup.py build_ext -i || die
+	$(PYTHON) setup.py build_ext -i || die
 
 	# Compile the extension module required for the X Window client
 	cd "${S}"/display
-	python setup.py build_ext -i || die
+	$(PYTHON) setup.py build_ext -i || die
 
 	# Build images
 	cd "${S}"/bubbob/images
-	python buildcolors.py || die
+	$(PYTHON) buildcolors.py || die
 }
 
 src_install() {
@@ -56,6 +61,5 @@ src_install() {
 	newicon http2/data/bob.png ${PN}.png
 	make_desktop_entry bubnbros Bub-n-Bros
 
-	rm -rf $(find "${D}/${dir}" -name CVS -type d)
 	prepgamesdirs
 }
