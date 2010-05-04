@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7.ebuild,v 1.1 2010/05/04 09:04:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7.ebuild,v 1.2 2010/05/04 12:53:24 scarabeus Exp $
 
 EAPI="2"
 
@@ -121,9 +121,6 @@ EPATCH_SUFFIX="patch"
 # These have been sent upstream
 UPSTREAMED_PATCHES=(
 	#"${WORKDIR}/patches/"
-
-	# Fix from bug http://bugs.freedesktop.org/show_bug.cgi?id=25400
-	"${FILESDIR}/1.7.3.901-0001-dix-if-owner-events-is-true-for-passive-grabs-add-th.patch"
 	# Fix for bug #304067
 	"${FILESDIR}/1.7.5.902-fix-tslib-1.0-check.patch"
 	)
