@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/devicekit-disks-009.ebuild,v 1.1 2009/11/07 23:08:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/devicekit-disks-009.ebuild,v 1.2 2010/05/04 16:13:55 tester Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug doc"
 
 # lvm2-2.02.48-r2 dep due to bug 270350
