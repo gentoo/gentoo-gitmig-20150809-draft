@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.4-r2.ebuild,v 1.2 2009/10/02 16:31:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6.ebuild,v 1.1 2010/05/04 11:40:38 flameeyes Exp $
 
-inherit autotools cron pam eutils
+inherit cron pam eutils
 
 MY_P=${P/_/-}
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
@@ -10,14 +10,17 @@ HOMEPAGE="http://fcron.free.fr/"
 SRC_URI="http://fcron.free.fr/archives/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug doc pam selinux"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+IUSE="debug pam selinux linguas_fr"
 
-DEPEND="doc? ( app-text/openjade
-		app-text/docbook-sgml
-		>=app-text/docbook-dsssl-stylesheets-1.77 )
-	selinux? ( sys-libs/libselinux )
+DEPEND="selinux? ( sys-libs/libselinux )
 	pam? ( virtual/pam )"
+
+# see bug 282214 for the reason to depend on bash
+RDEPEND="${DEPEND}
+	app-shells/bash
+	app-editors/gentoo-editor
+	pam? ( >=sys-auth/pambase-20100310 )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -26,18 +29,6 @@ pkg_setup() {
 	enewuser fcron -1 -1 -1 fcron
 	rootuser=$(egetent passwd 0 | cut -d ':' -f 1)
 	rootgroup=$(egetent group 0 | cut -d ':' -f 1)
-	if useq debug; then
-		ewarn
-		ewarn "WARNING: debug USE flag active!"
-		ewarn "The debug USE flag makes fcron start in debug mode"
-		ewarn "by default, thus not detaching into background."
-		ewarn "This will make your system HANG on bootup if"
-		ewarn "fcron is to be started automatically by the"
-		ewarn "init system!"
-		ewarn
-		ebeep 10
-		epause 60
-	fi
 }
 
 src_unpack() {
@@ -46,109 +37,118 @@ src_unpack() {
 
 	# respect LDFLAGS
 	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
-
-	## patch check_system_crontabs to support "-c /path/to/fcron.conf"
-	pushd script &>/dev/null \
-		&& epatch "${FILESDIR}"/check_system_crontabs.fcron-config-file.patch \
-		&& popd &>/dev/null
-
-	## fix SGML files
-	epatch "${FILESDIR}"/${P}-docfix.patch
-
-	eautoreconf || die "autoreconf failed"
 }
 
 src_compile() {
 	local myconf
 
-	use doc \
-		&& myconf="${myconf} --with-dsssl-dir=/usr/share/sgml/stylesheets/dsssl/docbook --with-db2man=/usr/bin/docbook2man"
+	# Don't try to pass --with-debug as it'll play with cflags as
+	# well, and run foreground which is a _very_ nasty idea for
+	# Gentoo.
+	use debug && append-flags -DDEBUG
 
 	[[ -n "${rootuser}" ]] && myconf="${myconf} --with-rootname=${rootuser}"
 	[[ -n "${rootgroup}" ]] && myconf="${myconf} --with-rootgroup=${rootgroup}"
 
 	econf \
-		"$(useq debug || echo --with-cflags=${CFLAGS})" \
-		$(use_with debug '' yes) \
+		--with-cflags="${CFLAGS}" \
 		$(use_with pam) \
 		$(use_with selinux) \
 		--sysconfdir=/etc/fcron \
 		--with-username=fcron \
 		--with-groupname=fcron \
 		--with-piddir=/var/run \
-		--with-etcdir=/etc/fcron \
 		--with-spooldir=/var/spool/fcron \
 		--with-fifodir=/var/run \
 		--with-fcrondyn=yes \
 		--disable-checks \
-		--with-editor=/usr/bin/vi \
+		--with-editor=/usr/libexec/gentoo-editor \
 		--with-sendmail=/usr/sbin/sendmail \
 		--with-shell=/bin/sh \
+		--without-db2man --without-dsssl-dir \
 		${myconf} \
 		|| die "configure failed"
 
 	emake || die "make failed"
 
-	use doc && {
-		make updatedoc || die "make updatedoc failed"
-	}
+	# bug #216460
+	sed -i \
+		-e 's:/usr/local/etc/fcron:/etc/fcron/fcron:g' \
+		-e 's:/usr/local/etc:/etc:g' \
+		-e 's:/usr/local/:/usr/:g' \
+		doc/*/*/*.{txt,1,5,8,html} \
+		|| die "unable to fix documentation references"
 }
 
 src_install() {
-	# cron eclass stuff
-	docron fcron -m0755 -o ${rootuser:-root} -g ${rootgroup:-root}
-	docrondir /var/spool/fcron -m6770 -o fcron -g fcron
-	docrontab fcrontab -m6755 -o fcron -g fcron
+	# create directories that don't have special permissions first so
+	# that we can play with the permissions later
+	dodir /usr/bin /etc /var/spool
+
+	diropts -m6770 -o fcron -g fcron
+	keepdir /var/spool/fcron
 
 	# install fcron tools
 	insinto /usr/bin
+	dosbin fcron || die
+
 	# fcronsighup needs to be suid root, because it sends a HUP
 	# to the running fcron daemon
 	insopts -m6755 -o ${rootuser:-root} -g fcron
-	doins fcronsighup
+	doins fcronsighup || die
 	insopts -m6755 -o fcron -g fcron
-	doins fcrondyn
+	doins fcrondyn fcrontab || die
 
 	# /etc stuff
 	diropts -m0750 -o ${rootuser:-root} -g fcron
 	dodir /etc/fcron
 	insinto /etc/fcron
 	insopts -m0640 -o ${rootuser:-root} -g fcron
-	doins files/fcron.{allow,deny,conf}
+	doins files/fcron.{allow,deny,conf} || die
 
-	# install PAM files
-	newpamd files/fcron.pam fcron
-	newpamd files/fcrontab.pam fcrontab
+	diropts -m0755
+	insopts -m0644
 
 	# install /etc/crontab and /etc/fcrontab
 	insopts -m0640 -o ${rootuser:-root} -g ${rootgroup:-root}
-	insinto /etc
-	doins "${FILESDIR}"/crontab "${FILESDIR}"/fcrontab
+	doins "${FILESDIR}"/crontab "${FILESDIR}"/fcrontab || die
+
+	# install PAM files
+	pamd_mimic system-services fcron auth account session
+	cat - > "${T}"/fcrontab.pam <<EOF
+# Don't ask for the user's password; fcrontab will only allow to
+# change user if running as root.
+auth		sufficient		pam_permit.so
+
+# Still use the system-auth stack for account and session as the
+# sysadmin might have set up stuff properly, and also avoids
+# sidestepping limits (since fcrontab will run $EDITOR).
+account		include			system-auth
+session		include			system-auth
+EOF
+	newpamd "${T}"/fcrontab.pam fcrontab
 
 	# install init script
-	newinitd "${FILESDIR}"/fcron.init fcron
+	newinitd "${FILESDIR}"/fcron.init.2 fcron || die
 
-	# install the very handy check_system_crontabs script
-	dosbin script/check_system_crontabs
+	# install the very handy check_system_crontabs script, POSIX sh variant
+	dosbin script/check_system_crontabs.sh || die
 
 	# doc stuff
-	dodoc MANIFEST VERSION
-	newdoc files/fcron.conf fcron.conf.sample
-	dodoc "${FILESDIR}"/crontab
-	dodoc doc/en/txt/{readme,thanks,faq,todo,relnotes,changes}.txt
-	rm -f doc/en/man/*.3 # ugly hack for bitstring.3 manpage
-	doman doc/en/man/*.[0-9]
-	use doc && dohtml doc/en/HTML/*.html
+	dodoc MANIFEST VERSION "${FILESDIR}"/crontab \
+		doc/en/txt/{readme,thanks,faq,todo,relnotes,changes}.txt \
+		|| die
+	newdoc files/fcron.conf fcron.conf.sample || die
+	dohtml doc/en/HTML/*.html || die
+	doman doc/en/man/*.{1,5,8} || die
 
 	# localized docs
-	local LANGUAGES=$(sed -n 's:LANGUAGES =::p' doc/Makefile)
-	LANGUAGES="${LANGUAGES/en/}"
-	local lang
-	for lang in ${LANGUAGES}; do
-		hasq ${lang} ${LINGUAS} || continue
-		rm -f doc/${lang}/man/*.3 # ugly hack for bitstring.3 manpage
-		doman -i18n=${lang} doc/${lang}/man/*.[0-9]
-		use doc && docinto html/${lang} && dohtml doc/${lang}/HTML/*.html
+	for lang in fr; do
+		use linguas_${lang} || continue
+
+		doman -i18n=${lang} doc/${lang}/man/*.{1,5,8} || die
+		docinto html/${lang}
+		dohtml doc/${lang}/HTML/*.html || die
 	done
 }
 
@@ -230,8 +230,6 @@ pkg_postinst() {
 	ewarn "   ${ROOT}etc/fcron/fcron.allow"
 	ewarn "   ${ROOT}etc/fcron/fcron.deny"
 	ewarn
-	ebeep 10
-	epause 10
 
 	if ls -1 "${ROOT}"var/spool/cron/fcrontabs/* >&/dev/null; then
 		ewarn
@@ -253,7 +251,12 @@ pkg_postinst() {
 		ewarn "*** YOU SHOULD IMMEDIATELY UPDATE THE"
 		ewarn "*** fcrontabs ENTRY IN ${ROOT}etc/fcron/fcron.conf"
 		ewarn "*** AND RESTART YOUR FCRON DAEMON!"
-		ebeep 20
-		epause 10
 	fi
+
+	elog ""
+	elog "Since version 3.0.5 the fcron init script will no longer wait for LDAP, MySQL"
+	elog "or PostgreSQL before starting. If you need any of these for authentication or"
+	elog "for jobs that are executed by fcron, please create a /etc/conf.d/fcron file to"
+	elog "set the rc_need variable to the list of services you should be waiting for."
+	elog ""
 }

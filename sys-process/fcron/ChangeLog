@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/fcron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.78 2010/04/24 19:54:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.79 2010/05/04 11:40:38 flameeyes Exp $
+
+*fcron-3.0.6 (04 May 2010)
+
+  04 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -fcron-3.0.4-r1.ebuild, -fcron-3.0.4-r2.ebuild,
+  -files/fcron-3.0.4-docfix.patch, +fcron-3.0.6.ebuild, -files/fcron.init:
+  Version bump and cleanup old versions. The 3.0.6 merges most of our custom
+  changes so it's mostly vanilla.
 
   24 Apr 2010; Raúl Porcel <armin76@gentoo.org> fcron-3.0.5-r2.ebuild:
   Add ~arm wrt #314629
