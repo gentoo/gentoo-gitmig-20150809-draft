@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.4 2010/01/06 12:51:55 josejx Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.5 2010/05/04 22:04:36 tupone Exp $
+PYTHON_DEPEND="2"
 EAPI=2
-inherit autotools eutils games
+inherit autotools eutils python games
 
 DESCRIPTION="roleplaying game engine"
 HOMEPAGE="http://adonthell.linuxgames.com/"
@@ -21,7 +21,6 @@ RDEPEND="media-libs/sdl-ttf
 	media-libs/freetype
 	media-libs/libogg
 	media-libs/libvorbis
-	dev-lang/python
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-lang/swig
@@ -33,10 +32,18 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-${PV/a/}
 
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-configure.in.patch \
 		"${FILESDIR}"/${P}-glibc-2.10.patch
+	sed -i \
+		-e "/AC_PATH_PROGS/s:python:$(PYTHON):" \
+		configure.in || die "sed failed"
 	rm -f ac{local,include}.m4
 	eautoreconf
 }

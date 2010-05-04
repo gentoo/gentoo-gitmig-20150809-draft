@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/adonthell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.20 2010/01/06 12:51:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.21 2010/05/04 22:04:36 tupone Exp $
+
+  04 May 2010; Tupone Alfredo <tupone@gentoo.org> adonthell-0.3.5.ebuild:
+  Force python2 fixing bug #312271 by arfrever@gentoo.org
 
   06 Jan 2010; Joseph Jezak <josejx@gentoo.org> adonthell-0.3.5.ebuild:
   Marked ppc stable for bug #288816.
