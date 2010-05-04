@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.10 2010/03/10 18:39:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.11 2010/05/04 16:19:41 jer Exp $
+
+  04 May 2010; Jeroen Roovers <jer@gentoo.org> pyasn1-0.0.11a.ebuild:
+  Marked ~hppa (bug #316355).
 
 *pyasn1-0.0.11a (10 Mar 2010)
 

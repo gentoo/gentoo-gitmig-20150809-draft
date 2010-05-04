@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.11a.ebuild,v 1.1 2010/03/10 18:39:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.11a.ebuild,v 1.2 2010/05/04 16:19:41 jer Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
