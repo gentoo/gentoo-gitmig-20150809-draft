@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.133 2010/04/16 15:04:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.134 2010/05/04 15:55:22 tester Exp $
+
+  03 May 2010; Olivier Crête <tester@gentoo.org> intltool-0.41.1.ebuild:
+  amd64 stable, bug #314899
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> intltool-0.41.0.ebuild:
   stable ppc, bug 311725
