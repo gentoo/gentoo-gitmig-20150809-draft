@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.6.4.ebuild,v 1.1 2010/05/04 10:55:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.6.4.ebuild,v 1.2 2010/05/04 19:11:34 spatz Exp $
 
 EAPI=2
 
@@ -34,10 +34,6 @@ RESTRICT="test"
 src_prepare() {
 	go-mono_src_prepare
 	sed -i -e 's:ungif:gif:g' configure || die
-
-	# info_ptr->trans_alpha might be no-go with libpng12
-	has_version ">=media-libs/libpng-1.4" && epatch \
-		"${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_configure() {
