@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.8.5.ebuild,v 1.1 2009/11/21 08:30:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.0.ebuild,v 1.1 2010/05/04 19:50:48 bicatali Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -14,11 +14,11 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="accessibility emacs gmp gnome gtk nls odbc readline sourceview"
+IUSE="accessibility emacs gmp gnome gtk nls odbc openmp readline R sourceview"
 
 RDEPEND="dev-libs/libxml2
 	dev-libs/glib:2
-	sci-visualization/gnuplot
+	>=sci-visualization/gnuplot-4.2
 	virtual/lapack
 	virtual/latex-base
 	sci-libs/fftw:3.0
@@ -35,6 +35,7 @@ RDEPEND="dev-libs/libxml2
 			 gnome-base/libgnomeprint:2.2
 			 gnome-base/libgnomeprintui:2.2
 			 gnome-base/gconf:2 )
+	R? ( dev-lang/R )
 	sourceview? ( x11-libs/gtksourceview )
 	odbc? ( dev-db/unixODBC )
 	emacs? ( virtual/emacs )"
@@ -44,8 +45,23 @@ DEPEND="${RDEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
+pkg_setup() {
+	if use openmp &&
+		[[ $(tc-getCC)$ == *gcc* ]] &&
+		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
+			! has_version sys-devel/gcc[openmp] )
+	then
+		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
+		die "Need an OpenMP capable compiler"
+	fi
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.7.5-locale.patch
+	# fix parallel make
+	sed -i \
+		-e 's/make/$(MAKE)/g' \
+		$(find . -name Makefile.in) || die
 }
 
 src_configure() {
@@ -61,10 +77,12 @@ src_configure() {
 	econf \
 		--with-mpfr \
 		$(use_enable nls) \
+		$(use_enable openmp) \
 		$(use_with readline) \
 		$(use_with gmp) \
 		$(use_with odbc) \
 		$(use_with accessibility audio) \
+		$(use_with R libR) \
 		${myconf} \
 		LAPACK_LIBS="$(pkg-config --libs lapack)"
 }
