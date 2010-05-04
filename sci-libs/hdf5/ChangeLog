@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.53 2010/02/10 17:21:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.54 2010/05/04 18:38:13 bicatali Exp $
+
+*hdf5-1.8.4_p1 (04 May 2010)
+
+  04 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -hdf5-1.6.5-r1.ebuild, -hdf5-1.6.6.ebuild, -hdf5-1.8.3-r1.ebuild,
+  files/hdf5-1.8.3-as-needed.patch, +hdf5-1.8.4_p1.ebuild:
+  Version bump. Important update mainly for netcdf4 users
 
   10 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org> hdf5-1.8.4-r1.ebuild:
   Added some warnings for mpi
