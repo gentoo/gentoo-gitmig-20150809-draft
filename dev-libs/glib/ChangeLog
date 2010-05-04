@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.404 2010/03/26 22:10:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.405 2010/05/04 15:37:22 tester Exp $
+
+  03 May 2010; Olivier Crête <tester@gentoo.org> glib-2.22.5.ebuild:
+  amd64 stable, bug #314899
 
 *glib-2.22.5 (26 Mar 2010)
 
