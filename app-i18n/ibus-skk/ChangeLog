@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-skk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.5 2010/03/01 10:17:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.6 2010/05/04 00:13:52 matsuu Exp $
+
+*ibus-skk-0.0.5 (03 May 2010)
+
+  03 May 2010; MATSUU Takuto <matsuu@gentoo.org> -ibus-skk-0.0.1.ebuild,
+  -ibus-skk-0.0.2.ebuild, -ibus-skk-0.0.3.ebuild, +ibus-skk-0.0.5.ebuild:
+  Version bumped. Fixed python dependency. Removed old versions.
 
   01 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ibus-skk-0.0.4.ebuild:

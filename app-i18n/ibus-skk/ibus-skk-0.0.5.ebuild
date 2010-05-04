@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-0.0.3.ebuild,v 1.1 2009/12/31 06:20:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-0.0.5.ebuild,v 1.1 2010/05/04 00:13:52 matsuu Exp $
 
 EAPI="2"
-
+PYTHON_DEPEND="2:2.5"
 inherit python
 
 DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 RDEPEND="app-i18n/ibus
-	>=dev-lang/python-2.5
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.16.1 )"
