@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.41 2010/04/24 18:31:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.42 2010/05/04 16:11:09 jer Exp $
+
+  04 May 2010; Jeroen Roovers <jer@gentoo.org> Carp-Clan-6.04.ebuild:
+  Stable for HPPA (bug #314467).
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> Carp-Clan-6.04.ebuild:
   Marked ~arch for a big deal of Prefix arches
