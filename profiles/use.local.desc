@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5535 2010/05/04 19:07:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5536 2010/05/04 19:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2864,7 +2864,6 @@ net-print/hplip:hpcups - Build the hpcups driver for cups (by HP)
 net-print/hplip:hpijs - Build the IJS driver for cups (Foomatic)
 net-print/hplip:libnotify - Enables desktop notifications
 net-print/hplip:minimal - Only build internal hpijs driver (not recommended at all, make sure you know what you are doing)
-net-print/hplip:new-hpcups - Build the new hpcups driver for cups which is no longer based on APDK (by HP)
 net-print/hplip:parport - Enable parallel port for devices which require it
 net-print/hplip:policykit - Enable sys-auth/policykit authentication support
 net-print/hplip:qt4 - Enable graphical interface using Qt 4
