@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.160 2010/05/03 21:43:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.161 2010/05/04 08:12:05 alexxy Exp $
+
+  04 May 2010; Alexey Shvetsov <alexxy@gentoo.org> khelpcenter-4.4.3.ebuild:
+  Restore accidently dropped ~x86-fbsd keyword on KDE SC 4.4.3
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -khelpcenter-4.4.1.ebuild:
