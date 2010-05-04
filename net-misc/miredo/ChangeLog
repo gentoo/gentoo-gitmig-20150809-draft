@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/miredo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.2 2010/05/03 18:25:14 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.3 2010/05/04 07:14:03 bangert Exp $
+
+  04 May 2010; Thilo Bangert <bangert@gentoo.org> files/miredo.conf:
+  dont load modules by default
 
   03 May 2010; Thilo Bangert <bangert@gentoo.org> miredo-1.2.3.ebuild:
   add ~amd64
