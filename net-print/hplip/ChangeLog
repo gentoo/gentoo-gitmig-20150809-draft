@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.157 2010/05/04 17:52:11 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.158 2010/05/04 19:30:24 billie Exp $
+
+  04 May 2010; Daniel Pielmeier <billie@gentoo.org> hplip-3.9.12-r1.ebuild,
+  hplip-3.10.2-r4.ebuild, metadata.xml:
+  Remove USE new-hpcups, as it does not do anything.
 
   04 May 2010; Daniel Pielmeier <billie@gentoo.org>
   files/hplip-3.10.2-plugin.patch:

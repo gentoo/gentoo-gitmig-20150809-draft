@@ -30,8 +30,6 @@
     <flag name="libnotify">Enables desktop notifications</flag>
     <flag name="minimal">Only build internal hpijs driver (not recommended at
     all, make sure you know what you are doing)</flag>
-    <flag name="new-hpcups">Build the new hpcups driver for cups which is no
-    longer based on APDK (by HP)</flag>
     <flag name="parport">Enable parallel port for devices which require
     it</flag>
     <flag name="policykit">Enable sys-auth/policykit authentication
