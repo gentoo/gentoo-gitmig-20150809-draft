@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11516 2010/05/05 12:45:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11517 2010/05/05 15:57:05 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sebastien Fabbro <bicataligentoo.org> (5 May 2010)
+# Fails to build. Obsolete with octave>=3, unsupported.
+# Replaced by split octave forge ebuilds (in science overlay)
+# Also g-octave in progress for final substitute
+# Removal mid June.
+sci-mathematics/octave-forge
 
 # Tony Vroon <chainsaw@gentoo.org> (2 May 2010)
 # Fails to build, 1.6.1/1.6.2 patched to provide equivalent functionality.
