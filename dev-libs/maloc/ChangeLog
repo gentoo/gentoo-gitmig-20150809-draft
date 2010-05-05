@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/maloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.12 2010/05/05 10:33:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.13 2010/05/05 10:48:48 jlec Exp $
+
+  05 May 2010; Justin Lecher <jlec@gentoo.org> +files/0.2.1-asneeded.patch,
+  maloc-0.2.1-r2.ebuild:
+  As-needed fix
 
 *maloc-0.2.1-r2 (05 May 2010)
 
