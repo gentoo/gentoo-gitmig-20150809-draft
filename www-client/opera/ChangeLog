@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.470 2010/04/30 16:35:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.471 2010/05/05 21:44:02 jer Exp $
+
+*opera-10.54_pre6331 (05 May 2010)
+
+  05 May 2010; Jeroen Roovers <jer@gentoo.org> -opera-10.53_pre6326.ebuild,
+  -opera-10.53_pre6328.ebuild, +opera-10.54_pre6331.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2010/05/05/startup-crashes-be-gone>.
 
 *opera-10.53_pre6330 (30 Apr 2010)
 *opera-10.53_pre6328 (30 Apr 2010)
