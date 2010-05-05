@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.95 2010/04/05 20:36:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.96 2010/05/05 02:36:40 chutzpah Exp $
+
+  05 May 2010; Patrick McLean <chutzpah@gentoo.org> +files/99-ntfs3g.rules,
+  ntfs3g-2010.3.6.ebuild, metadata.xml:
+  Add udev USE flag to install rules file to make devicekit use ntfs3g
+  instead of the kernel driver for mounting NTFS partitions (bug #304765).
 
   05 Apr 2010; Markus Meier <maekke@gentoo.org> ntfs3g-2010.1.16.ebuild:
   x86 stable, bug #308705
