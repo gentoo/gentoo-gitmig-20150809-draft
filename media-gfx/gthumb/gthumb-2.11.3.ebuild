@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.3.ebuild,v 1.2 2010/04/21 21:50:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.3.ebuild,v 1.3 2010/05/05 23:07:38 eva Exp $
 
 EAPI="3"
 
@@ -11,8 +11,8 @@ HOMEPAGE="http://gthumb.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
-IUSE="cdr exif gnome-keyring gstreamer http raw tiff test"
+KEYWORDS="~amd64 ~x86"
+IUSE="cdr exif gnome-keyring gstreamer http raw slideshow tiff test"
 
 # clutter
 RDEPEND=">=dev-libs/glib-2.16:2
@@ -29,6 +29,9 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	http? (
 		>=net-libs/libsoup-2.26:2.4
 		>=net-libs/libsoup-gnome-2.26:2.4 )
+	slideshow? (
+		>=media-libs/clutter-1:1.0
+		>=media-libs/clutter-gtk-0.10:1.0 )
 	tiff? ( media-libs/tiff )
 	raw? ( >=media-libs/libopenraw-0.0.8 )
 	!raw? ( media-gfx/dcraw )"
@@ -51,6 +54,7 @@ pkg_setup() {
 		$(use_enable gnome-keyring)
 		$(use_enable http libsoup)
 		$(use_enable raw libopenraw)
+		$(use_enable slideshow clutter)
 		$(use_enable test test-suite)
 		$(use_enable tiff)"
 }
