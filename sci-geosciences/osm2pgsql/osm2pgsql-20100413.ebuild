@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-20100413.ebuild,v 1.1 2010/04/27 09:22:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-20100413.ebuild,v 1.2 2010/05/05 21:45:20 tupone Exp $
 
 EAPI="3"
 
@@ -25,6 +25,8 @@ DEPEND="
 	virtual/postgresql-base
 "
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}"/${PN}
 
 src_prepare() {
 	eautoreconf
