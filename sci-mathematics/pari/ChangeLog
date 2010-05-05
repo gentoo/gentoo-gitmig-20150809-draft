@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.75 2010/05/04 21:56:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.76 2010/05/05 16:07:24 bicatali Exp $
+
+  05 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +pari-2.1.7-r1.ebuild:
+  Restored ugly old version to satisfy math-pari old stable
 
 *pari-2.3.5 (04 May 2010)
 
