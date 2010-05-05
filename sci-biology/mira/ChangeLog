@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/mira
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.7 2010/03/18 15:32:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.8 2010/05/05 08:00:05 weaver Exp $
+
+*mira-3.0.5 (05 May 2010)
+
+  05 May 2010; Andrey Kislyuk <weaver@gentoo.org> +mira-3.0.5.ebuild:
+  Version bump
 
 *mira-3.0.3 (18 Mar 2010)
 
