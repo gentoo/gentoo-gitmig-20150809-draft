@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/rubberband
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.11 2009/09/26 13:22:11 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.12 2010/05/05 07:25:38 aballier Exp $
+
+*rubberband-1.5.0 (05 May 2010)
+
+  05 May 2010; Alexis Ballier <aballier@gentoo.org>
+  +rubberband-1.5.0.ebuild:
+  version bump
 
 *rubberband-1.4 (26 Sep 2009)
 
