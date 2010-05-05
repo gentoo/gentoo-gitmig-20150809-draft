@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.58 2010/05/05 18:18:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.59 2010/05/05 18:52:30 halcy0n Exp $
+
+  05 May 2010; Mark Loeser <halcy0n@gentoo.org> +math-pari-2.010801.ebuild:
+  Revert removal of math-pari version
 
   05 May 2010; Mark Loeser <halcy0n@gentoo.org> -math-pari-2.010801.ebuild:
   Depended on version of sci-mathematics/pari that was removed from the tree
