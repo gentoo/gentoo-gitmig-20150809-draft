@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.0.ebuild,v 1.1 2010/05/05 20:54:03 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.0.ebuild,v 1.2 2010/05/05 23:15:26 sochotnicky Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-IUSE="nls python doc sqlite capabilities lua acl"
+IUSE="nls python doc sqlite caps lua acl"
 
 RDEPEND="=sys-libs/db-4.5*
 	>=sys-libs/zlib-1.2.3-r1
@@ -70,7 +70,7 @@ src_install() {
 
 	keepdir /usr/src/rpm/{SRPMS,SPECS,SOURCES,RPMS,BUILD}
 
-	dodoc CHANGES CREDITS GROUPS README* RPM*
+	dodoc CHANGES CREDITS GROUPS README*
 	use doc && dohtml -r apidocs/html/*
 
 	# Fix perllocal.pod file collision
