@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.56 2010/03/31 11:42:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.57 2010/05/05 17:17:14 jer Exp $
+
+*diffutils-3.0 (05 May 2010)
+
+  05 May 2010; Jeroen Roovers <jer@gentoo.org> +diffutils-3.0.ebuild:
+  Version bump by Samuli Suominen (bug #318421).
 
 *diffutils-2.9-r1 (31 Mar 2010)
 
