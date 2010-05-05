@@ -5,7 +5,7 @@
 		<email>tommy@gentoo.org</email>
 		<name>Thomas Sachau (Tommy[D])</name>
 	</maintainer>
-	<herd>net-p2p</herd>
+	<herd>no-herd</herd>
 	<use>
 		<flag name='freemail'>Add Freemail support</flag>
 	</use>

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.8 2010/02/16 17:52:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.9 2010/05/05 16:14:38 tommy Exp $
 
 EAPI="1"
 DATE=20091027
@@ -79,6 +79,9 @@ pkg_postinst() {
 	elog
 	elog "1. Start freenet with /etc/init.d/freenet start."
 	elog "2. Open localhost:8888 in your browser for the web interface."
+	#workaround for previously existing freenet user
+	[[ $(stat --format="%U" /var/freenet) == "freenet" ]] || chown \
+		freenet:freenet /var/freenet
 }
 
 pkg_postrm() {
