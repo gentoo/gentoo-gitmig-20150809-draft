@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.50.100.ebuild,v 1.3 2008/01/26 11:27:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.50.100.ebuild,v 1.4 2010/05/05 14:37:29 caster Exp $
 
 inherit java-pkg-2
 
@@ -17,6 +17,13 @@ DEPEND=">=virtual/jdk-1.5
 	source? ( app-arch/zip )"
 
 S="${WORKDIR}/${PN}"
+
+src_unpack() {
+	unpack ${A}
+	
+	# bug #318589
+	sed -i '/com.sun.jmx.snmp.Enumerated/d' "${S}/src/org/protux/core/GlobalProperties.java" || die
+}
 
 src_compile() {
 	cd src
