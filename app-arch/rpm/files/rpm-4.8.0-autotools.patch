@@ -1,18 +1,5 @@
-diff --git a/Makefile.am b/Makefile.am
-index 587cfa7..498abfb 100644
---- a/Makefile.am
-+++ b/Makefile.am
-@@ -177,7 +177,7 @@ EXTRA_DIST += rpmpopt.in
- 
- usrsrcdir = $(prefix)/src
- 
--rpmvardir = $(localstatedir)/lib/rpm
-+rpmvardir = $(localstatedir)/rpm
- rpmvar_DATA =
- 
- install-exec-hook:
 diff --git a/configure.ac b/configure.ac
-index 8c2ef50..1ec8978 100644
+index 8c2ef50..2fc75f3 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -305,14 +305,9 @@ AM_CONDITIONAL(LIBDWARF,[test "$WITH_LIBDWARF" = yes])
@@ -33,16 +20,13 @@ index 8c2ef50..1ec8978 100644
  AC_SUBST(WITH_NSS_INCLUDE)
  AC_SUBST(WITH_NSS_LIB)
  
-diff --git a/macros.in b/macros.in
-index ae46fcb..213b53c 100644
---- a/macros.in
-+++ b/macros.in
-@@ -155,7 +155,7 @@
- %_bzip2bin		%{__bzip2}
+@@ -1014,9 +1009,6 @@ AC_SUBST(RPMCONFIGDIR)
  
- #	The location of the rpm database file(s).
--%_dbpath		%{_var}/lib/rpm
-+%_dbpath		%{_var}/rpm
+ AC_SUBST(OBJDUMP)
  
- #	The location of the rpm database file(s) after "rpm --rebuilddb".
- %_dbpath_rebuild	%{_dbpath}
+-if test "$with_external_db" = no; then
+-    AC_CONFIG_SUBDIRS(db3)
+-fi
+ 
+ AM_CONDITIONAL([WITH_INTERNAL_DB],[test "$with_external_db" = no])
+ AM_CONDITIONAL([DOXYGEN],[test "$DOXYGEN" != no])
