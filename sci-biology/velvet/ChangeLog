@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/velvet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.9 2009/10/31 17:57:32 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.10 2010/05/05 07:14:47 weaver Exp $
+
+*velvet-0.7.62 (05 May 2010)
+
+  05 May 2010; Andrey Kislyuk <weaver@gentoo.org> +velvet-0.7.62.ebuild:
+  Version bump
 
   31 Oct 2009; Markus Meier <maekke@gentoo.org> velvet-0.7.55.ebuild:
   amd64/x86 stable, bug #290936
