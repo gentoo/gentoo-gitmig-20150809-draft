@@ -1,30 +1,29 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.5-r2.ebuild,v 1.8 2010/02/17 22:58:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.1 2010/05/05 22:50:30 eva Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="1.10"
 
-inherit autotools eutils gnome2 python multilib virtualx
+inherit eutils gnome2 python multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
-IUSE="+brasero cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev"
+KEYWORDS="~amd64 ~x86"
+IUSE="+brasero cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
 
 SLOT="0"
 
-COMMON_DEPEND=">=dev-libs/glib-2.16.0
+COMMON_DEPEND=">=dev-libs/glib-2.18
 	dev-libs/libxml2
-	>=x11-libs/gtk+-2.16
+	>=x11-libs/gtk+-2.18
 	>=dev-libs/dbus-glib-0.71
-	>=dev-libs/totem-pl-parser-2.26.0
+	>=dev-libs/totem-pl-parser-2.26
 	>=gnome-base/gconf-2
-	>=gnome-extra/gnome-media-2.14.0
+	>=gnome-extra/gnome-media-2.14
 	>=net-libs/libsoup-2.26:2.4
 	>=net-libs/libsoup-gnome-2.26:2.4
 
@@ -40,11 +39,11 @@ COMMON_DEPEND=">=dev-libs/glib-2.16.0
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	udev? (
 		ipod? ( >=media-libs/libgpod-0.6 )
-		mtp? ( >=media-libs/libmtp-0.3.0 )
+		mtp? ( >=media-libs/libmtp-0.3 )
 		>=sys-fs/udev-145[extras] )
 	hal? (
 		ipod? ( >=media-libs/libgpod-0.6 )
-		mtp? ( >=media-libs/libmtp-0.3.0 )
+		mtp? ( >=media-libs/libmtp-0.3 )
 		>=sys-apps/hal-0.5 )
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	lirc? ( app-misc/lirc )
@@ -55,10 +54,16 @@ COMMON_DEPEND=">=dev-libs/glib-2.16.0
 			>=dev-lang/python-2.5
 			dev-python/celementtree )
 		>=dev-python/pygtk-2.8
-		>=dev-python/gnome-vfs-python-2.22.0
-		>=dev-python/gconf-python-2.22.0
-		>=dev-python/libgnome-python-2.22.0
-		>=dev-python/gst-python-0.10.8 )"
+		>=dev-python/pygobject-2.15.4
+		>=dev-python/gconf-python-2.22
+		>=dev-python/libgnome-python-2.22
+		>=dev-python/gnome-keyring-python-2.22
+		>=dev-python/gst-python-0.10.8
+		webkit? (
+			dev-python/mako
+			dev-python/pywebkitgtk )
+		upnp? ( media-video/coherence )
+	)"
 
 RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-soup-0.10
@@ -68,15 +73,12 @@ RDEPEND="${COMMON_DEPEND}
 		>=media-plugins/gst-plugins-cdio-0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	>=media-plugins/gst-plugins-taglib-0.10.6
-	nsplugin? ( || (
-		net-libs/xulrunner
-		www-client/seamonkey
-		www-client/mozilla-firefox ) )"
+	nsplugin? ( net-libs/xulrunner )"
 
 # gtk-doc-am needed for eautoreconf
+#	dev-util/gtk-doc-am
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
-	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9.1
@@ -107,6 +109,17 @@ pkg_setup() {
 	if ! use cdr ; then
 		ewarn "You have cdr USE flag disabled."
 		ewarn "You will not be able to burn CDs."
+	fi
+
+	if ! use python; then
+		if use webkit; then
+			ewarn "You need python support in addition to webkit to be able to use"
+			ewarn "the context panel plugin."
+		fi
+
+		if use upnp; then
+			ewarn "You need python support in addition to upnp"
+		fi
 	fi
 
 	if use brasero; then
@@ -141,15 +154,12 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# Fix bug 291315 (patch taken from upstream repo)
-	# DAAP plugin load failure when built with --as-needed
-	epatch "${FILESDIR}/${P}-fix-daap-plugin-linking.patch"
-
-	eautoreconf
-
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	# Fix python initialization problems, bug #318333
+	epatch "${FILESDIR}/${PN}-0.12-python-initialization.patch"
 }
 
 src_compile() {
@@ -162,6 +172,13 @@ src_test() {
 	unset SESSION_MANAGER
 	unset DBUS_SESSION_BUS_ADDRESS
 	Xemake check || die "test failed"
+}
+
+src_install() {
+	gnome2_src_install
+
+	find "${D}/usr/$(get_libdir)/rhythmbox/plugins" -name "*.la" -delete \
+		|| die "failed to remove *.la files"
 }
 
 pkg_postinst() {

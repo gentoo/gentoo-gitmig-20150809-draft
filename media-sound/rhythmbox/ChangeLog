@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.182 2010/04/21 18:02:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.183 2010/05/05 22:50:30 eva Exp $
+
+*rhythmbox-0.12.8-r1 (05 May 2010)
+*rhythmbox-0.12.6-r1 (05 May 2010)
+
+  05 May 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -rhythmbox-0.12.5-r2.ebuild,
+  -files/rhythmbox-0.12.5-fix-daap-plugin-linking.patch,
+  +rhythmbox-0.12.6-r1.ebuild, +rhythmbox-0.12.8-r1.ebuild,
+  +files/rhythmbox-0.12-python-initialization.patch:
+  Fix segfault with recent python, bug #318333. Clean up old revisions.
 
   21 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   rhythmbox-0.12.8.ebuild:
