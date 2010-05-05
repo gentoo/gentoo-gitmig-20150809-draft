@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.20100310.ebuild,v 1.1 2010/04/20 20:35:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.018.ebuild,v 1.1 2010/05/05 01:42:59 bicatali Exp $
 
 EAPI=2
 inherit eutils versionator toolchain-funcs alternatives
 #  url number
-MYU="77/148"
+MYU="78/154"
 # release update
-MYR="3"
+MYR=""
 
 PV1="$(get_version_component_range 1)"
 PV2="$(get_version_component_range 2)"
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.threadingbuildingblocks.org/"
 SRC_URI="http://www.threadingbuildingblocks.org/uploads/${MYU}/${PV1}.${PV2}/${MYP}_src.tgz"
 LICENSE="GPL-2-with-exceptions"
 
-SLOT="${PV1}"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples"
 
@@ -50,7 +50,7 @@ src_compile() {
 
 src_test() {
 	cd src
-	emake ${myconf} test_release || die "emake test failed"
+	emake -j1 ${myconf} test_release || die "emake test failed"
 	if use debug || use examples; then
 		emake ${myconf} test_debug tbbmalloc_test_debug || die "emake test debug failed"
 	fi
