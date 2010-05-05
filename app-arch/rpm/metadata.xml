@@ -9,5 +9,6 @@
 <use>
   <flag name='magic'>Add magic file support (<pkg>sys-apps/file</pkg>)</flag>
   <flag name='neon'>Include support for <pkg>net-misc/neon</pkg></flag>
+  <flag name='capabilities'>Add support for capabilities (<pkg>sys-libs/libcap</pkg>)</flag>
 </use>
 </pkgmetadata>

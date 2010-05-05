@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.109 2010/04/22 20:59:35 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.110 2010/05/05 20:54:03 sochotnicky Exp $
+
+*rpm-4.8.0 (05 May 2010)
+
+  05 May 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +rpm-4.8.0.ebuild, +files/rpm-4.8.0-autotools.patch,
+  +files/rpm-4.8.0-db-path.patch, metadata.xml:
+  Added app-arch/rpm-4.8.0 as a new ebuild
 
   22 Apr 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   rpm-4.4.6-r6.ebuild, rpm-4.4.6-r7.ebuild,
