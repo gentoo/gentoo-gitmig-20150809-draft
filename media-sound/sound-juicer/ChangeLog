@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.185 2010/05/04 16:24:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.186 2010/05/05 17:37:50 pacho Exp $
+
+*sound-juicer-2.28.2-r1 (05 May 2010)
+
+  05 May 2010; Pacho Ramos <pacho@gentoo.org> -sound-juicer-2.28.1.ebuild,
+  -sound-juicer-2.28.2.ebuild, +sound-juicer-2.28.2-r1.ebuild:
+  Revision bump to fix translation due broken intltoolize file (bug #318555,
+  thanks a lot to Jeremy Guitton for reporting the problem). Remove old
+  testing and broken versions.
 
   03 May 2010; Olivier Crête <tester@gentoo.org>
   sound-juicer-2.28.2.ebuild:
