@@ -1,6 +1,18 @@
 # ChangeLog for media-video/isight-firmware-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.10 2010/02/24 22:20:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.11 2010/05/05 22:07:00 eva Exp $
+
+*isight-firmware-tools-1.5.90-r1 (05 May 2010)
+
+  05 May 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/isight-firmware-tools-1.2-ift-ldadd.patch,
+  -files/isight-firmware-tools-1.2-rules.patch,
+  -isight-firmware-tools-1.4.2.ebuild,
+  -files/isight-firmware-tools-1.4.2-hal-disable.patch,
+  isight-firmware-tools-1.5.90.ebuild,
+  +isight-firmware-tools-1.5.90-r1.ebuild,
+  +files/isight-firmware-tools-1.5.90-build-O0.patch:
+  Fix udev rules, bug #316027. Fix build problem with -O0, bug #306803.
 
 *isight-firmware-tools-1.5.90 (24 Feb 2010)
 

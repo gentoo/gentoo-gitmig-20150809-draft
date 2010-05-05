@@ -1,13 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.4.2.ebuild,v 1.1 2009/06/28 21:18:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.5.90-r1.ebuild,v 1.1 2010/05/05 22:07:00 eva Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="1.10"
 
-inherit autotools eutils multilib versionator
+inherit eutils multilib versionator
 
-MY_MAJORV=$(get_version_component_range 1-2)
+MY_MAJORV="$(get_version_component_range 1).6"
 DESCRIPTION="Extract, load or export firmware for the iSight webcams"
 HOMEPAGE="http://bersace03.free.fr/ift/"
 SRC_URI="http://launchpad.net/${PN}/main/${MY_MAJORV}/+download/${P}.tar.gz"
@@ -19,34 +18,37 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.14
 	virtual/libusb:0
-	dev-libs/libgcrypt"
+	dev-libs/libgcrypt
+	>=sys-fs/udev-149"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.5
 	sys-apps/texinfo"
 
 src_prepare() {
-	# Fix forced as-needed build, bug #247904
-	epatch "${FILESDIR}/${PN}-1.2-ift-ldadd.patch"
+	# Fix rules for recent udev versions, bug #316027
+	sed 's/SYSFS/ATTR/g' -i src/isight.rules.in.in || die "sed 1 failed"
 
-	# Fix build without hal, bug #259015
-	epatch "${FILESDIR}/${PN}-1.4.2-hal-disable.patch"
-
+	# Fix multilib support
 	sed "s:/lib/firmware:/$(get_libdir)/firmware:" \
-		-i src/isight.rules.in.in || die "sed failed"
+		-i src/isight.rules.in.in || die "sed 2 failed"
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "sed 3 failed"
+
+	# Fix build with -O0, bug #221325
+	epatch "${FILESDIR}/${PN}-1.5.90-build-O0.patch"
 }
 
 src_configure() {
 	# https://bugs.launchpad.net/isight-firmware-tools/+bug/243255
-	econf --enable-udev --disable-hal --docdir="${ROOT}/usr/share/doc/${P}"
+	econf --docdir="${ROOT}/usr/share/doc/${PF}"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	mv "${D}"/etc/udev/rules.d/isight.rules "${D}"/etc/udev/rules.d/70-isight.rules
-	rm -f "${D}/usr/share/doc/${P}/HOWTO"
+	rm -f "${D}/usr/share/doc/${PF}/HOWTO"
 	dodoc AUTHORS ChangeLog HOWTO NEWS README || die "dodoc failed"
 }
 
