@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.1-r1.ebuild,v 1.1 2010/05/01 20:11:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.1-r1.ebuild,v 1.2 2010/05/05 17:03:36 mr_bones_ Exp $
 
 EAPI=2
-inherit cmake-utils games
+inherit cmake-utils eutils games
 
 DESCRIPTION="A simple volleyball game"
 HOMEPAGE="http://slime.tuxfamily.org/index.php"
@@ -32,6 +32,7 @@ src_prepare() {
 	sed -i \
 		-e "/DESTINATION/s:games:${GAMES_BINDIR}:" \
 		CMakeLists.txt || die
+	epatch "${FILESDIR}"/${P}-nodatalocal.patch # bug #318005
 }
 
 src_configure() {

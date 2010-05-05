@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/slimevolley
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.3 2010/05/01 20:11:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.4 2010/05/05 17:03:36 mr_bones_ Exp $
+
+  05 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  slimevolley-2.4.1-r1.ebuild, +files/slimevolley-2.4.1-nodatalocal.patch:
+  Don't try to look in pwd for a "data" directory (bug #318005)
 
 *slimevolley-2.4.1-r1 (01 May 2010)
 
