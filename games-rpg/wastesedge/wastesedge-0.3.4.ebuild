@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.8 2009/09/14 01:08:33 mr_bones_ Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.9 2010/05/05 05:16:19 tupone Exp $
+PYTHON_DEPEND="2"
 EAPI=2
-inherit eutils games
+inherit eutils python games
 
 DESCRIPTION="role playing game to showcase the adonthell engine"
 HOMEPAGE="http://adonthell.linuxgames.com/"
@@ -15,12 +15,16 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="vorbis doc nls"
 RESTRICT="userpriv"
 
-RDEPEND=">=dev-lang/python-2.0
-	>=games-rpg/adonthell-0.3.3
+RDEPEND=">=games-rpg/adonthell-0.3.3
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( >=app-doc/doxygen-1.2 )"
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
 src_configure(){
 	egamesconf \
