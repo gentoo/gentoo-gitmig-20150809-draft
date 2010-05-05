@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.0.ebuild,v 1.2 2010/01/12 03:12:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-4.0.ebuild,v 1.3 2010/05/05 16:11:17 bicatali Exp $
 
 EAPI="2"
 inherit eutils cmake-utils fdo-mime
@@ -34,6 +34,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}.1-Source"
+
+src_prepare(){
+	epatch "${FILESDIR}"/${P}-gcc45.patch
+}
 
 src_configure() {
 	rm -f CMakeCache.txt libs/lib*/*.moc.* src/*.moc.*

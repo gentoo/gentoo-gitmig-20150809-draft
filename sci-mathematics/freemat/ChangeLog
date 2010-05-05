@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.21 2010/01/12 03:12:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.22 2010/05/05 16:11:17 bicatali Exp $
+
+  05 May 2010; Sébastien Fabbro <bicatali@gentoo.org> freemat-4.0.ebuild,
+  +files/freemat-4.0-gcc45.patch:
+  Added a patch to compile with gcc-4.5, thanks Xarthisius, bug #318045
 
   12 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> freemat-4.0.ebuild:
   Fixed for qt-4.6, thanks hanno
