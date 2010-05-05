@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.48 2010/05/04 11:15:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.49 2010/05/05 12:33:26 voyageur Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib portability subversion toolchain-funcs
@@ -119,9 +119,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
-	epatch "${FILESDIR}"/${PN}-drop_sse2-r1.patch
-
 	# Allow supporting more media types provided system ffmpeg supports them.
 	epatch "${FILESDIR}"/${PN}-supported-media-mime-types.patch
 }
@@ -151,8 +148,8 @@ src_configure() {
 EOF
 	export HOME="${S}"
 
-	# Configuration options (system libraries)
-	local myconf="-Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_ffmpeg=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1"
+	# Configuration options (system libraries and disable forced SSE2)
+	local myconf="-Ddisable_sse2=1 -Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_ffmpeg=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1"
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
 
