@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.11 2006/07/18 07:59:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.12 2010/05/05 20:28:21 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Rogue-like D&D curses game similar to nethack (BUT BETTER)"
@@ -21,16 +22,14 @@ DEPEND=">=sys-libs/ncurses-5"
 
 S=${WORKDIR}/umoria
 
-src_unpack() {
+src_prepare() {
 	local f
-
-	unpack ${A}
-	cd "${S}"
 
 	epatch \
 		"${FILESDIR}"/${PV}-gentoo-paths.patch \
 		"${FILESDIR}"/${PV}-glibc.patch \
-		"${FILESDIR}"/${PV}-fbsd.patch
+		"${FILESDIR}"/${PV}-fbsd.patch \
+		"${FILESDIR}"/${PV}-hours.patch
 
 	for f in source/* unix/* ; do
 		ln -s ${f} $(basename ${f})
@@ -42,6 +41,8 @@ src_unpack() {
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}:" \
 		config.h \
 		|| die "sed failed"
+	echo "#include <stdlib.h>" >> config.h
+	echo "#include <stdio.h>" >> config.h
 	sed -i \
 		-e "/^STATEDIR =/s:=.*:=\$(DESTDIR)${GAMES_STATEDIR}:" \
 		-e "/^BINDIR = /s:=.*:=\$(DESTDIR)${GAMES_BINDIR}:" \
@@ -50,6 +51,7 @@ src_unpack() {
 		-e "/^OWNER = /s:=.*:=${GAMES_USER}:" \
 		-e "/^GROUP = /s:=.*:=${GAMES_GROUP}:" \
 		-e "/^CC = /s:=.*:=$(tc-getCC):" \
+		-e '/^LFLAGS = /s:=.*:= $(LDFLAGS):' \
 		Makefile \
 		|| die "sed failed"
 	mv doc/moria.6 "${S}" || die "mv failed"
@@ -57,7 +59,7 @@ src_unpack() {
 
 src_install() {
 	dodir "${GAMES_BINDIR}" "${GAMES_DATADIR}/${PN}" "${GAMES_STATEDIR}"
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	doman moria.6
 	dodoc README doc/* "${WORKDIR}"/${PN}-extras/*

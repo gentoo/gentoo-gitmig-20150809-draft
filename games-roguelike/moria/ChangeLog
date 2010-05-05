@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/moria
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.8 2006/07/18 07:59:25 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/ChangeLog,v 1.9 2010/05/05 20:28:21 mr_bones_ Exp $
+
+  05 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/5.5.2-hours.patch, moria-5.5.2.ebuild:
+  EAPI=2; honor LDFLAGS; read hours file correctly (bug #316389)
 
   18 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/5.5.2-fbsd.patch, files/5.5.2-glibc.patch, moria-5.5.2.ebuild:
