@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.4 2009/12/18 19:39:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.5 2010/05/05 05:07:50 tupone Exp $
 
 EAPI=2
-inherit eutils games
+PYTHON_DEPEND="2"
+inherit eutils python games
 
 MY_P="Dragon_Hunt-${PV}"
 DESCRIPTION="A simple graphical RPG"
@@ -15,10 +16,14 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="dev-lang/python
-	dev-python/pygame"
+RDEPEND="dev-python/pygame"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
 src_prepare() {
 	# Where to look for modules to load.
@@ -58,8 +63,8 @@ src_install() {
 	insinto "$(games_get_libdir)"/${PN}
 	doins code/*.py || die "doins code failed"
 
-	games_make_wrapper ${PN} "python ./rpg.py" "$(games_get_libdir)"/${PN}
-	games_make_wrapper ${PN}-mapeditor "python ./map_editor.py" \
+	games_make_wrapper ${PN} "$(PYTHON) ./rpg.py" "$(games_get_libdir)"/${PN}
+	games_make_wrapper ${PN}-mapeditor "$(PYTHON) ./map_editor.py" \
 		"$(games_get_libdir)"/${PN}
 
 	newicon modules/default/images/buttons/icon.png ${PN}.png
