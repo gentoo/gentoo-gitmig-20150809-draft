@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20100420.ebuild,v 1.1 2010/04/23 08:14:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20100420.ebuild,v 1.2 2010/05/05 16:49:24 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -31,6 +31,7 @@ src_prepare() {
 	EOF
 	# use system one
 	rm -f tree.hh || die
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {
