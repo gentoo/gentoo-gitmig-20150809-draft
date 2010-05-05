@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11517 2010/05/05 15:57:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11518 2010/05/05 18:24:41 halcy0n Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -83,6 +83,7 @@ dev-python/numeric
 app-admin/setools
 dev-python/python-selinux
 dev-python/sepolgen
+sys-apps/checkpolicy
 sys-apps/policycoreutils
 sys-libs/libselinux
 sys-libs/libsemanage

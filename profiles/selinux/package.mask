@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.51 2010/04/26 00:34:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.52 2010/05/05 18:24:42 halcy0n Exp $
 
 # >=sci-libs/acml-3.6 requires gcc-4.2.
 >=sci-libs/acml-3.6
@@ -14,6 +14,7 @@
 -app-admin/setools
 -dev-python/python-selinux
 -dev-python/sepolgen
+-sys-apps/checkpolicy
 -sys-apps/policycoreutils
 -sys-libs/libselinux
 -sys-libs/libsemanage
