@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.6.2.ebuild,v 1.14 2008/04/13 14:52:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/giftcurs-0.6.2.ebuild,v 1.15 2010/05/05 21:08:13 sochotnicky Exp $
 
 MY_P="giFTcurs-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -33,5 +33,5 @@ src_compile() {
 src_install() {
 	einstall || die "Installation failed"
 
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog NEWS README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
