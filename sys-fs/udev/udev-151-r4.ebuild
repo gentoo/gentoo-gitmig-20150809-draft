@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.28 2010/05/05 19:35:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-151-r4.ebuild,v 1.1 2010/05/05 19:35:07 zzam Exp $
 
 EAPI="1"
 
@@ -23,8 +23,8 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="selinux -extras test"
+KEYWORDS="-alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 -sh ~sparc ~x86"
+IUSE="selinux devfs-compat old-hd-rules -extras test"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	extras? (
@@ -149,6 +149,14 @@ src_unpack() {
 	  	      EPATCH_FORCE="yes" epatch
 	fi
 
+	# Bug 301667
+	epatch "${FILESDIR}"/udev-150-fix-missing-firmware-timeout.diff
+
+	if ! use devfs-compat; then
+		# see Bug #269359
+		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
+	fi
+
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
 		-i rules/{rules.d,packages,gentoo}/*.rules \
@@ -159,13 +167,17 @@ src_unpack() {
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != 8afa8fc0fc71ada547792b5b2a608e4f ]]
+		if [[ ${MD5} != 5685cc3878df54845dda5e08d712447a ]]
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
 			eerror "md5sum: ${MD5}"
 			die "50-udev-default.rules has been updated, please validate!"
 		fi
+	fi
+
+	if use old-hd-rules; then
+		epatch "${FILESDIR}"/udev-151-readd-hd-rules.diff
 	fi
 
 	sed_libexec_dir \
@@ -535,16 +547,31 @@ pkg_postinst() {
 	ewarn "set in /etc/udev/udev.conf, but in /etc/fstab"
 	ewarn "as for other directories."
 
-	ewarn
+	if use devfs-compat; then
+		ewarn
+		ewarn "devfs-compat use flag is enabled."
+		ewarn "This enables devfs compatible device names."
+	else
+		ewarn
+		ewarn "This version of udev no longer has devfs-compat enabled"
+	fi
 	ewarn "If you use /dev/md/*, /dev/loop/* or /dev/rd/*,"
 	ewarn "then please migrate over to using the device names"
 	ewarn "/dev/md*, /dev/loop* and /dev/ram*."
-	ewarn "The devfs-compat rules have been removed."
+	ewarn "The devfs-compat rules will be removed on the next udev update."
 	ewarn "For reference see Bug #269359."
 
-	ewarn
-	ewarn "Rules for /dev/hd* devices have been removed"
-	ewarn "Please migrate to libata."
+	if use old-hd-rules; then
+		ewarn
+		ewarn "old-hd-rules use flag is enabled"
+		ewarn "This adds the removed rules for /dev/hd* devices"
+	else
+		ewarn
+		ewarn "This version of udev no longer has use flag old-hd-rules enabled"
+		ewarn "So all special rules for /dev/hd* devices are missing"
+	fi
+	ewarn "Please migrate to the new libata if you need these rules."
+	ewarn "They will be completely removed on the next udev update."
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"

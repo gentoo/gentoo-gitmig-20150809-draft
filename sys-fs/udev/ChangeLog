@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.537 2010/05/02 17:40:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.538 2010/05/05 19:35:07 zzam Exp $
+
+*udev-151-r4 (05 May 2010)
+
+  05 May 2010; Matthias Schwarzott <zzam@gentoo.org>
+  +files/151-r4/shell-compat-KV.sh, +files/151-r4/shell-compat-addon.sh,
+  +files/151-r4/udev.confd, +files/151-r4/udev-dev-tarball.initd,
+  udev-9999.ebuild, +files/151-r4/udev.initd,
+  +files/151-r4/udev-mount.initd, +files/151-r4/udev-postmount.initd,
+  +files/151-r4/udev-start.sh, +files/151-r4/udev-stop.sh,
+  +udev-151-r4.ebuild:
+  Updated init-scripts. Now support setting debug and trace options in
+  config file. Explicitly send add-event for initial population (newer
+  udevds will default to change). Set property STARTUP while booting for
+  compatibility with new eg. lvm2 init-scripts. Sync udev-9999.ebuild.
 
 *udev-151-r3 (02 May 2010)
 
