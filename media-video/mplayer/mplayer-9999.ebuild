@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.56 2010/05/01 15:41:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.57 2010/05/05 08:37:34 scarabeus Exp $
 
 EAPI="2"
 
@@ -633,7 +633,6 @@ src_configure() {
 
 src_compile() {
 	base_src_compile
-	emake || die "Failed to build MPlayer!"
 	# Build only user-requested docs if they're available.
 	if use doc ; then
 		# select available languages from $LINGUAS
