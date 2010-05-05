@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.6 2009/06/25 17:41:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.7 2010/05/05 17:19:19 tomjbe Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Program for printing music scores"
 HOMEPAGE="http://www.arkkra.com/"
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
+	sed -i -e "s:/lib:/$(get_libdir):g" Makefile || die "sed failed"
 }
 
 src_compile() {
