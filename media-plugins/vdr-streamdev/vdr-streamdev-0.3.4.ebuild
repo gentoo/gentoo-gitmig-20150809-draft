@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.3.4.ebuild,v 1.5 2009/02/25 15:32:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.3.4.ebuild,v 1.6 2010/05/05 15:17:49 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
 DESCRIPTION="Video Disk Recorder Client/Server streaming plugin"
-HOMEPAGE="http://www.magoa.net/linux/"
+HOMEPAGE="http://streamdev.vdr-developer.org/"
 SRC_URI="http://streamdev.vdr-developer.org/releases/${P}.tgz"
 
 LICENSE="GPL-2"

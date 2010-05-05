@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.0_pre20100124.ebuild,v 1.2 2010/05/05 15:17:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.5.0_pre20100505.ebuild,v 1.1 2010/05/05 15:17:49 hd_brummy Exp $
 
 EAPI="2"
 
