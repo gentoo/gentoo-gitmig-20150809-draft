@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/mattricks-0.7.ebuild,v 1.5 2007/12/07 00:04:32 dirtyepic Exp $
-
-inherit distutils eutils
+# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/mattricks-0.7.ebuild,v 1.6 2010/05/05 05:27:23 tupone Exp $
+EAPI="2"
+PYTHON_DEPEND="2"
+inherit eutils python distutils
 
 MY_P=${P/m/M}
 DESCRIPTION="Hattrick Manager"
@@ -19,7 +20,12 @@ DEPEND="<dev-python/wxpython-2.8
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	distutils_src_unpack
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}"/${P}-wxversion.patch
+	python_convert_shebangs -r 2 .
 }

@@ -1,6 +1,9 @@
 # ChangeLog for games-util/mattricks
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/ChangeLog,v 1.9 2007/12/07 00:04:32 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/ChangeLog,v 1.10 2010/05/05 05:27:23 tupone Exp $
+
+  05 May 2010; Tupone Alfredo <tupone@gentoo.org> mattricks-0.7.ebuild:
+  Force python2 fixing bug #312289 by arfrever@gentoo.org
 
   07 Dec 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/mattricks-0.7-wxversion.patch, mattricks-0.7.ebuild:
