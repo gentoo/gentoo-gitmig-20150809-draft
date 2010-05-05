@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.4.2.ebuild,v 1.1 2010/03/30 20:50:44 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.4.2-r1.ebuild,v 1.1 2010/05/05 01:15:51 reavertm Exp $
 
 EAPI="3"
 
@@ -13,20 +13,20 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2 LGPL-2"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug desktopglobe exif qalculate qwt scim semantic-desktop"
+IUSE="debug desktopglobe exif qalculate qwt rss scim semantic-desktop"
 
 # krunner is only needed to generate dbus interface for lancelot
 COMMON_DEPEND="
 	dev-libs/libattica
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
-	$(add_kdebase_dep kdepimlibs)
 	$(add_kdebase_dep krunner)
-	$(add_kdebase_dep plasma-workspace)
+	$(add_kdebase_dep plasma-workspace 'rss?')
 	x11-misc/shared-mime-info
 	desktopglobe? ( $(add_kdebase_dep marble) )
 	exif? ( $(add_kdebase_dep libkexiv2) )
 	qalculate? ( sci-libs/libqalculate )
 	qwt? ( x11-libs/qwt:5 )
+	rss? ( $(add_kdebase_dep kdepimlibs 'akonadi') )
 	scim? ( app-i18n/scim )
 "
 DEPEND="${COMMON_DEPEND}
@@ -39,6 +39,10 @@ RDEPEND="${COMMON_DEPEND}
 
 # kdebase-data: some svg icons moved from data directly here.
 add_blocker kdebase-data '<4.2.88'
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.4.3-cmake.patch"
+)
 
 src_prepare() {
 	sed -e 's/${KDE4WORKSPACE_PLASMACLOCK_LIBRARY}/plasmaclock/g' \
@@ -57,6 +61,7 @@ src_configure() {
 		$(cmake-utils_use_with exif Kexiv2)
 		$(cmake-utils_use_with qalculate)
 		$(cmake-utils_use_with qwt)
+		$(cmake-utils_use_with rss KdepimLibs)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with scim)
 	)
