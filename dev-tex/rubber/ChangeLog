@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/rubber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.18 2010/01/10 18:36:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.19 2010/05/05 07:21:58 aballier Exp $
+
+  05 May 2010; Alexis Ballier <aballier@gentoo.org> -rubber-0.99.8.ebuild,
+  -rubber-1.1.ebuild, -rubber-1.1_p20080323.ebuild,
+  -files/rubber-module-command.patch, -files/rubber-python2.6.patch:
+  remove old
 
   10 Jan 2010; nixnut <nixnut@gentoo.org> rubber-1.1_p20090819.ebuild:
   ppc stable #296418
