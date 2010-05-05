@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.74 2010/04/18 11:51:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.75 2010/05/05 05:24:53 jer Exp $
+
+  05 May 2010; Jeroen Roovers <jer@gentoo.org> Archive-Zip-1.30.ebuild:
+  Stable for HPPA (bug #314467).
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> Archive-Zip-1.30.ebuild:
   arm stable, bug #314467

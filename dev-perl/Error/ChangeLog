@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.61 2010/04/18 11:59:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.62 2010/05/05 05:36:22 jer Exp $
+
+  05 May 2010; Jeroen Roovers <jer@gentoo.org> Error-0.17.016.ebuild:
+  Stable for HPPA (bug #314467).
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> Error-0.17.016.ebuild:
   arm stable, bug #314467

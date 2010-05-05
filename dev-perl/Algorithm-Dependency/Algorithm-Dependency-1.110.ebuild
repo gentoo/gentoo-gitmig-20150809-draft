@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/Algorithm-Dependency-1.110.ebuild,v 1.3 2010/04/17 09:02:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/Algorithm-Dependency-1.110.ebuild,v 1.4 2010/05/05 05:26:46 jer Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Toolkit for implementing dependency systems"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND=">=dev-perl/Params-Util-0.31

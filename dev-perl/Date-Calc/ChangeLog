@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Calc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.43 2010/04/24 20:25:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.44 2010/05/05 05:33:37 jer Exp $
+
+  05 May 2010; Jeroen Roovers <jer@gentoo.org> Date-Calc-6.3.ebuild:
+  Stable for HPPA (bug #314467).
 
   24 Apr 2010; Raúl Porcel <armin76@gentoo.org> Date-Calc-5.4.ebuild,
   Date-Calc-6.3.ebuild:

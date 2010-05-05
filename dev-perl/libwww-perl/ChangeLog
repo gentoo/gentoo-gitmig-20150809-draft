@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.124 2010/04/18 12:06:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.125 2010/05/05 05:45:19 jer Exp $
+
+  05 May 2010; Jeroen Roovers <jer@gentoo.org> libwww-perl-5.834-r1.ebuild:
+  Stable for HPPA (bug #314467).
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> libwww-perl-5.834-r1.ebuild:
   arm stable, bug #314467

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-NamespaceSupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.44 2010/04/18 12:04:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.45 2010/05/05 05:43:47 jer Exp $
+
+  05 May 2010; Jeroen Roovers <jer@gentoo.org>
+  XML-NamespaceSupport-1.11.ebuild:
+  Stable for HPPA (bug #314467).
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org>
   XML-NamespaceSupport-1.11.ebuild:
