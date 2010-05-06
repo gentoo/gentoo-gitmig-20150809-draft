@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0.ebuild,v 1.1 2009/11/17 21:26:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0.ebuild,v 1.2 2010/05/06 08:53:55 voyageur Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -24,6 +24,8 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# http://sourceforge.net/tracker/?func=detail&aid=2880411&group_id=175815&atid=874748
 	epatch "${FILESDIR}"/${P}-algo0x0d_one_scanline_over_fix.patch
+
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 	# Honor LDFLAGS
 	sed -e "/[a-z]_LDFLAGS/s/:=.*/:= $\{LDFLAGS\}/" -i module.mk \
 		|| die "module.mk sed failed"
