@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.9 2010/05/02 15:53:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.10 2010/05/06 09:06:53 pva Exp $
+
+*argus-clients-3.0.3.8 (06 May 2010)
+
+  06 May 2010; Peter Volkov <pva@gentoo.org> +argus-clients-3.0.3.8.ebuild:
+  Version bump.
 
   02 May 2010; Peter Volkov <pva@gentoo.org> +argus-clients-3.0.3.7.ebuild:
   Version bump.
