@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r2.ebuild,v 1.1 2010/04/29 18:16:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r2.ebuild,v 1.2 2010/05/06 11:05:37 ssuominen Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -10,8 +10,7 @@ NBV="610"
 WBV="600"
 PATCHLEVEL="4"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	http://dev.gentoo.org/~ssuominen/${P}-patches-${PATCHLEVEL}.tar.bz2"
-# mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2
+	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
