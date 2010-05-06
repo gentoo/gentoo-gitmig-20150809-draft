@@ -1,0 +1,13 @@
+--- lib/Finance/Quote/VWD.pm
++++ lib/Finance/Quote/VWD.pm
+@@ -122,8 +122,8 @@
+       );
+       next if not $content;
+ 
+-      # <h1> contains price, time, name, and symbol
+-      my $head = $content->find("h1");
++      # <h2> contains price, time, name, and symbol
++      my $head = $content->find("h2");
+       next if not $head;
+ 
+       my $wpkurs = $head->look_down(
