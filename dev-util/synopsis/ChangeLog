@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/synopsis
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.12 2009/06/20 16:16:07 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.13 2010/05/06 10:33:53 ssuominen Exp $
+
+  06 May 2010; Samuli Suominen <ssuominen@gentoo.org> synopsis-0.12.ebuild,
+  +files/synopsis-0.12-gcc45.patch:
+  Fix building with GCC 4.5+ wrt #318429 by Kacper Kowalik. Force Python
+  2.x.
 
 *synopsis-0.12 (20 Jun 2009)
 
