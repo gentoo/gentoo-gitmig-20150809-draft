@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.7 2010/05/02 09:44:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.8 2010/05/06 22:18:34 reavertm Exp $
+
+  06 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -files/6.1.0/6.1.0-common.patch, -virtuoso-server-6.1.0.ebuild:
+  Remove old
 
   02 May 2010; Alexis Ballier <aballier@gentoo.org>
   virtuoso-server-6.1.1.ebuild:
