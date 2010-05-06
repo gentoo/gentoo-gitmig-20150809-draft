@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/psipred
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/ChangeLog,v 1.1 2010/02/28 10:31:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/ChangeLog,v 1.2 2010/05/06 18:27:49 jlec Exp $
+
+*psipred-3.0 (06 May 2010)
+*psipred-2.6.1-r1 (06 May 2010)
+
+  06 May 2010; Justin Lecher <jlec@gentoo.org> +files/3.0-path.patch,
+  -psipred-2.6.1.ebuild, +psipred-2.6.1-r1.ebuild, +psipred-3.0.ebuild:
+  Version Bump, #317977; fixed installation of shipped bins
 
 *psipred-2.6.1 (28 Feb 2010)
 
