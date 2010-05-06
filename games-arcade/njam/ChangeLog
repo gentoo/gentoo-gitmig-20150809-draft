@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/njam
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.10 2007/04/20 05:54:12 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.11 2010/05/06 10:55:02 ssuominen Exp $
+
+  06 May 2010; Samuli Suominen <ssuominen@gentoo.org> njam-1.25.ebuild,
+  +files/njam-1.25-gcc45.patch:
+  Fix building with GCC 4.5+ wrt #318411 by Kacper Kowalik.
 
   20 Apr 2007; Christian Faulhammer <opfer@gentoo.org> njam-1.25.ebuild:
   stable amd64, bug 174569
