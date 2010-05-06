@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-1.92.ebuild,v 1.2 2010/01/07 21:46:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-1.92.ebuild,v 1.3 2010/05/06 07:03:06 tove Exp $
 
 inherit perl-module bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${P}.tar.gz"
 
 LICENSE="|| ( Artistic-2 GPL-1 GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 SRC_TEST=do
