@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.0.ebuild,v 1.2 2010/05/05 23:15:26 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.0.ebuild,v 1.3 2010/05/06 22:45:44 sochotnicky Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ RDEPEND="=sys-libs/db-4.5*
 	sqlite? ( >=dev-db/sqlite-3.3.5 )
 	lua? ( >=dev-lang/lua-5.1.0 )
 	acl? ( virtual/acl )
-	capabilities? ( >=sys-libs/libcap-2.0 )"
+	caps? ( >=sys-libs/libcap-2.0 )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -55,7 +55,7 @@ src_configure() {
 		$(use_enable sqlite sqlite3) \
 		$(use_enable nls) \
 		$(use_with lua) \
-		$(use_with capabilities cap)\
+		$(use_with caps cap)\
 		$(use_with acl)\
 		|| die "econf failed"
 }
