@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-3.2.ebuild,v 1.1 2010/05/06 15:50:59 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-3.2.ebuild,v 1.2 2010/05/06 16:11:07 vostorga Exp $
+
+EAPI="0"
 
 inherit elisp-common flag-o-matic eutils
 
@@ -30,7 +32,6 @@ SITEFILE=50gnu-smalltalk-gentoo.el
 src_compile() {
 	replace-flags '-O3' '-O2'
 	econf \
-		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--with-system-libsigsegv \
 		--with-system-libffi \
@@ -46,7 +47,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS COPYING* ChangeLog NEWS README THANKS TODO
 	if use emacs; then
 		elisp-install "${PN}" *.el *.elc
