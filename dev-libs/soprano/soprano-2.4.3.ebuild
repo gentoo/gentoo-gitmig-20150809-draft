@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.4.3.ebuild,v 1.2 2010/05/02 10:10:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.4.3.ebuild,v 1.3 2010/05/06 18:43:13 reavertm Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ pkg_setup() {
 			ewarn "a different one. Applications using soprano may need at least one backend"
 			ewarn "to be functional. If you experience any problems, enable any of those USE"
 			ewarn "flags:"
-			ewarn "java, redland, virtuoso (recommended)"
+			ewarn "java (deprecated), redland, virtuoso (recommended)"
 			echo
 		else
 			echo
