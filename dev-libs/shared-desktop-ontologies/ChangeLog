@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/shared-desktop-ontologies
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/ChangeLog,v 1.5 2010/05/02 10:21:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/ChangeLog,v 1.6 2010/05/06 22:09:04 reavertm Exp $
+
+*shared-desktop-ontologies-0.4 (06 May 2010)
+
+  06 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -shared-desktop-ontologies-0.3.ebuild,
+  +shared-desktop-ontologies-0.4.ebuild:
+  Version bump, remove old (incompatible one)
 
   02 May 2010; Alexis Ballier <aballier@gentoo.org>
   shared-desktop-ontologies-0.3.ebuild:
