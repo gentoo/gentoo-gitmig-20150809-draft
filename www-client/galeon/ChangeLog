@@ -1,6 +1,14 @@
 # ChangeLog for www-client/galeon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.55 2010/01/10 17:22:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.56 2010/05/06 21:31:07 pacho Exp $
+
+*galeon-2.0.7-r2 (06 May 2010)
+
+  06 May 2010; Pacho Ramos <pacho@gentoo.org> +galeon-2.0.7-r2.ebuild:
+  Revision bump to sync with latest fedora and debian patches. Most notable
+  changes include xulrunner-1.9.2 (thanks a lot to Hicham HAOUARI in bug
+  #310411 and #302552), updated plugin patch (fixes bug #303605 reported by
+  Thomas Raschbacher) and some updates to adapt to new gnome-session.
 
   10 Jan 2010; Hanno Boeck <hanno@gentoo.org> -galeon-2.0.4.ebuild,
   -files/galeon-2.0.4-maketest.diff, -galeon-2.0.7.ebuild,
