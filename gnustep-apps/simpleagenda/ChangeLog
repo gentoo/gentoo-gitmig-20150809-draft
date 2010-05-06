@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/simpleagenda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/ChangeLog,v 1.14 2010/03/15 16:59:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/ChangeLog,v 1.15 2010/05/06 08:43:07 voyageur Exp $
+
+  06 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -simpleagenda-0.38.ebuild, -simpleagenda-0.39.ebuild,
+  -simpleagenda-0.40.ebuild, simpleagenda-0.41.ebuild:
+  Fix compilation with --as-needed, bug #318657
 
 *simpleagenda-0.41 (15 Mar 2010)
 

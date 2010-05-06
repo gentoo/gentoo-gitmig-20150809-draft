@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/simpleagenda-0.41.ebuild,v 1.1 2010/03/15 16:59:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/simpleagenda-0.41.ebuild,v 1.2 2010/05/06 08:43:07 voyageur Exp $
 
 EAPI=2
 inherit gnustep-2
@@ -20,3 +20,8 @@ DEPEND=">=dev-libs/libical-0.27
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+src_prepare() {
+	# Correct link command for --as-needed
+	sed -i -e "s/ADDITIONAL_LDFLAGS/ADDITIONAL_TOOL_LIBS/" GNUmakefile.preamble || die "sed failed"
+}
