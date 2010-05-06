@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmapsi/nmapsi-0.2_alpha3.ebuild,v 1.1 2010/02/18 09:14:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmapsi/nmapsi-0.2_alpha3.ebuild,v 1.2 2010/05/06 10:14:30 ssuominen Exp $
 
 EAPI=2
-inherit cmake-utils
+inherit cmake-utils eutils
 
 MY_P=${PN}4-${PV/_/-}
 
@@ -24,6 +24,10 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS="AUTHORS NEWS README TODO Translation"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc45.patch
+}
 
 src_install() {
 	cmake-utils_src_install
