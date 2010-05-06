@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cloog-ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.15 2010/04/30 06:13:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.16 2010/05/06 04:55:36 dirtyepic Exp $
+
+*cloog-ppl-0.15.9 (06 May 2010)
+
+  06 May 2010; Ryan Hill <dirtyepic@gentoo.org> +cloog-ppl-0.15.9.ebuild:
+  Version bump, bug #318645.
 
   30 Apr 2010; Alexis Ballier <aballier@gentoo.org> cloog-ppl-0.15.8.ebuild:
   keyword ~sparc-fbsd
