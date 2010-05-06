@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.3.ebuild,v 1.1 2010/05/03 21:45:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.3.ebuild,v 1.2 2010/05/06 18:41:23 arfrever Exp $
 
 EAPI="3"
 
 KMNAME="kdebindings"
 KMMODULE="python/pykde4"
 OPENGL_REQUIRED="always"
+PYTHON_DEPEND="*:2.5"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
 inherit python kde4-meta
@@ -24,6 +25,7 @@ DEPEND="
 	!aqua? ( >=dev-python/PyQt4-4.7[dbus,sql,svg,webkit,X] )
 "
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="2.4"
 
 pkg_setup() {
 	python_pkg_setup
