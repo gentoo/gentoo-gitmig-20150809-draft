@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.40 2010/01/04 04:55:54 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.41 2010/05/06 15:50:59 vostorga Exp $
+
+*gnu-smalltalk-3.2 (06 May 2010)
+
+  06 May 2010; Víctor Ostorga <vostorga@gentoo.org>
+  +gnu-smalltalk-3.2.ebuild:
+  Version bump, using econf in place of ./configure, fixes bundled copies of
+  libltdl bug 277089
 
 *gnu-smalltalk-3.1 (04 Jan 2010)
 
