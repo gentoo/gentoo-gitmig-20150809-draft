@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.9 2010/03/10 23:41:30 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.10 2010/05/06 18:38:07 arfrever Exp $
 
 EAPI="2"
 
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils flag-o-matic
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc )
 "
 
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 src_compile() {
 	append-cflags -DVERSION=\\\"${PV}\\\"
