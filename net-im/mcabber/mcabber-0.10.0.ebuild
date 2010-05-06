@@ -1,14 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.9.ebuild,v 1.2 2008/12/17 21:06:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.0.ebuild,v 1.1 2010/05/06 11:31:20 wschlich Exp $
+
+EAPI="2"
+
+inherit flag-o-matic
 
 DESCRIPTION="A small Jabber console client with various features, like MUC, SSL, PGP"
-HOMEPAGE="http://www.lilotux.net/~mikael/mcabber/"
-SRC_URI="http://www.lilotux.net/~mikael/${PN}/files/${P}.tar.bz2"
+HOMEPAGE="http://mcabber.com/"
+SRC_URI="http://mcabber.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="crypt otr spell ssl"
 
@@ -18,8 +22,9 @@ for i in ${LANGS}; do
 	IUSE="${IUSE} linguas_${i}"
 done;
 
-RDEPEND="ssl? ( >=dev-libs/openssl-0.9.7-r1 )
+RDEPEND="ssl? ( net-libs/loudmouth[ssl] )
 	crypt? ( >=app-crypt/gpgme-1.0.0 )
+	>=net-libs/loudmouth-1.4.3
 	otr? ( >=net-libs/libotr-3.1.0 )
 	spell? ( app-text/aspell )
 	>=dev-libs/glib-2.0.0
@@ -28,14 +33,21 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.7-r1 )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
+src_prepare() {
+	use crypt && append-flags -D_FILE_OFFSET_BITS=64 # bug #277888
+	append-flags -fno-strict-aliasing
+}
+
+src_configure() {
 	econf \
+		--enable-modules \
 		$(use_enable crypt gpgme) \
 		$(use_enable otr) \
 		$(use_enable spell aspell) \
-		$(use_with ssl) \
 		|| die "econf failed"
+}
 
+src_compile() {
 	emake || die "emake failed"
 }
 
@@ -55,7 +67,7 @@ src_install() {
 
 	# contrib generic scripts
 	exeinto /usr/share/${PN}/scripts
-	doexe "${S}"/contrib/*.{pl,py,rb}
+	doexe "${S}"/contrib/*.{pl,py}
 
 	# contrib event scripts
 	exeinto /usr/share/${PN}/scripts/events
@@ -74,14 +86,6 @@ pkg_postinst() {
 	elog "  bzcat ${ROOT}usr/share/doc/${PF}/mcabberrc.example.bz2 >~/.mcabber/mcabberrc"
 	elog
 	elog "Then edit ~/.mcabber/mcabberrc with your favorite editor."
-	elog
-	elog "As of MCabber version 0.8.2, there is also a wizard script"
-	elog "with which you can create all necessary configuration options."
-	elog "To use it, simply execute the following command (please note that you need"
-	elog "to have dev-lang/ruby installed for it to work!):"
-	elog
-	elog "  ${ROOT}usr/share/${PN}/scripts/mcwizz.rb"
-	elog
 	elog
 	elog "See the CONFIGURATION FILE and FILES sections of the mcabber"
 	elog "manual page (section 1) for more information."
