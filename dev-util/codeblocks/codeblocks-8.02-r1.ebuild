@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-8.02-r1.ebuild,v 1.2 2010/01/24 23:12:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-8.02-r1.ebuild,v 1.3 2010/05/06 06:08:10 dirtyepic Exp $
 
 inherit autotools wxwidgets flag-o-matic eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
 	#epatch "${FILESDIR}/${PV}-install-plugins.patch"
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gsocket.patch
 	find src/plugins -name Makefile.am -exec \
 		sed -i -e 's#^libdir#pluginsdir#' \
 			   -e 's#^lib_LTLIBRARIES#plugins_LTLIBRARIES#' \

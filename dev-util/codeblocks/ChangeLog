@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/codeblocks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.16 2010/01/24 23:12:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.17 2010/05/06 06:08:10 dirtyepic Exp $
+
+  06 May 2010; Ryan Hill <dirtyepic@gentoo.org> codeblocks-8.02-r1.ebuild,
+  +files/codeblocks-8.02-gsocket.patch, metadata.xml:
+  Patch from upstream to fix building with USE="pch contrib" and new glib
+  versions. (bug #307603)
 
   24 Jan 2010; Brent Baude <ranger@gentoo.org> codeblocks-8.02-r1.ebuild:
   keyworded ~arch for ppc, bug 295271
