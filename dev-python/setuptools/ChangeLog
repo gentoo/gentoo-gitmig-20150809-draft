@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.105 2010/02/13 15:49:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.106 2010/05/06 22:18:13 arfrever Exp $
+
+*setuptools-0.6.12 (06 May 2010)
+
+  06 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +setuptools-0.6.12.ebuild,
+  +files/distribute-0.6.12-disable_versioned_easy_install.patch,
+  +files/distribute-0.6.12-fix_deprecation_warnings.patch:
+  Version bump.
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> setuptools-0.6.10.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #300709
