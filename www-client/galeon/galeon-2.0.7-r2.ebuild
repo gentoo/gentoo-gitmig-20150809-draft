@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.7-r2.ebuild,v 1.1 2010/05/06 21:31:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.7-r2.ebuild,v 1.2 2010/05/06 21:37:27 pacho Exp $
 
 EAPI="2"
 inherit autotools gnome2 eutils
@@ -49,4 +49,14 @@ src_configure() {
 
 src_compile() {
 	emake MOZILLA_HOME="$(pkg-config libxul --variable=sdkdir)"/bin || die "compile failed"
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+
+	elog
+	elog "If after updating Galeon it becomes unable to show any webpage try"
+	elog "removing old compreg.dat file:"
+	elog " rm ~/.galeon/mozilla/galeon/compreg.dat"
+	elog "and restart it."
 }
