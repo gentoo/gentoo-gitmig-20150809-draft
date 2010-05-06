@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11520 2010/05/05 21:42:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11521 2010/05/06 07:40:03 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,19 +31,27 @@
 
 #--- END OF EXAMPLES ---
 
-# Stanislav Ochotnicky <sochotnicky@gentoo.org> (5 May 2010)
+# Samuli Suominen <ssuominen@gentoo.org> (06 May 2010)
+# Orphaned library, see bug 309809.
+#
+# Use Hercules drivers from bug 272100 or ones from upstream
+# HOMEPAGE instead.
+#
+# Masked for removal in 30 days.
+media-libs/libdjconsole
+
+# Stanislav Ochotnicky <sochotnicky@gentoo.org> (05 May 2010)
 # Masked for testing.
 =app-arch/rpm-4.8.0
 
-
-# Sebastien Fabbro <bicataligentoo.org> (5 May 2010)
+# Sebastien Fabbro <bicataligentoo.org> (05 May 2010)
 # Fails to build. Obsolete with octave>=3, unsupported.
 # Replaced by split octave forge ebuilds (in science overlay)
 # Also g-octave in progress for final substitute
 # Removal mid June.
 sci-mathematics/octave-forge
 
-# Tony Vroon <chainsaw@gentoo.org> (2 May 2010)
+# Tony Vroon <chainsaw@gentoo.org> (02 May 2010)
 # Fails to build, 1.6.1/1.6.2 patched to provide equivalent functionality.
 # Removal at end of May.
 net-misc/asterisk-app_nv_faxdetect
