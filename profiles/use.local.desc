@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5543 2010/05/06 13:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5544 2010/05/06 16:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1836,9 +1836,7 @@ media-sound/listen:webkit - Enable webkit rendering engine instead of mozembed
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
-media-sound/mixxx:djconsole - Enable djconsole support
 media-sound/mixxx:hifieq - Enable hifi equalizer support
-media-sound/mixxx:recording - Enable experimental recording support
 media-sound/mixxx:shout - Enable shoutcast support
 media-sound/mixxx:tonal - Enable tonal analysis support
 media-sound/mixxx:vinylcontrol - Enable vinylcontrol feature
