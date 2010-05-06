@@ -6,9 +6,7 @@
     <email>sound@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="djconsole">Enable djconsole support</flag>
     <flag name="hifieq">Enable hifi equalizer support</flag>
-    <flag name="recording">Enable experimental recording support</flag>
     <flag name="shout">Enable shoutcast support</flag>
     <flag name="vinylcontrol">Enable vinylcontrol feature</flag>
 	<flag name="tonal">Enable tonal analysis support</flag>
