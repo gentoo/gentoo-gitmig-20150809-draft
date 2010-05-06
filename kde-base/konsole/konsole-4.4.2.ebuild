@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-4.4.2.ebuild,v 1.3 2010/05/06 18:52:45 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-4.4.2.ebuild,v 1.4 2010/05/06 20:34:01 reavertm Exp $
 
 EAPI="3"
 
@@ -30,5 +30,5 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${P}-remember-size.patch"
+	"${FILESDIR}/${PN}-4.4.2-remember-size.patch"
 )
