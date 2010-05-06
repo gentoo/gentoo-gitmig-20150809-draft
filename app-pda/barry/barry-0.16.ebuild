@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.4 2010/04/03 18:46:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.5 2010/05/06 10:42:01 ssuominen Exp $
 
-inherit base
+inherit autotools base
 
 DESCRIPTION="Allow synchronization, backup, restore,
 program management, and charging for BlackBerry devices"
@@ -33,6 +33,17 @@ RDEPEND="dev-libs/libusb
 				>=dev-cpp/glibmm-2.4 )
 	opensync? ( =app-pda/libopensync-0.22* )"
 
+PATCHES=(
+	"${FILESDIR}/${P}-gcc45.patch"
+	"${FILESDIR}/${P}-asneeded.patch"
+	)
+
+src_unpack(){
+	base_src_unpack
+	cd "${S}"
+	eautoreconf
+}
+
 src_compile(){
 	econf \
 		$(use_with boost boost =/usr/include) \
@@ -40,7 +51,8 @@ src_compile(){
 		$(use_with gui libtar =/usr/lib) \
 		$(use_with gui libz =/usr/lib) \
 		$(use_enable opensync opensync-plugin)
-	emake || die "emake failed!"
+
+	emake || die
 
 	if use doc ; then
 		cd "${S}"
@@ -49,10 +61,10 @@ src_compile(){
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die
 	if use doc; then
-		dodoc AUTHORS NEWS README || die "dodoc failed"
-		dohtml doc/www/doxygen/html/*  || die "dohtml failed"
+		dodoc AUTHORS NEWS README || die
+		dohtml doc/www/doxygen/html/*  || die
 	fi
 
 	#  udev rules
