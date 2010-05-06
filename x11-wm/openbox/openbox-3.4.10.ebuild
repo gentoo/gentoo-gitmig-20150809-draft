@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.10.ebuild,v 1.8 2010/01/24 18:10:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.10.ebuild,v 1.9 2010/05/06 23:36:31 jer Exp $
 
 EAPI="2"
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="http://openbox.org/dist/openbox/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="alpha amd64 arm ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="nls startup-notification xinerama"
 
 RDEPEND=">=dev-libs/glib-2.6
