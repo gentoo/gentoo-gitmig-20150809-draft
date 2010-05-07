@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.143 2010/04/07 16:04:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.144 2010/05/07 15:24:24 jer Exp $
+
+  07 May 2010; Jeroen Roovers <jer@gentoo.org> glibmm-2.22.1.ebuild:
+  Stable for HPPA (bug #304777).
 
   07 Apr 2010; Brent Baude <ranger@gentoo.org> glibmm-2.22.1.ebuild:
   Marking glibmm-2.22.1 ppc stable for bug 304777
