@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.6 2010/05/07 01:48:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.7 2010/05/07 02:07:53 jer Exp $
+
+  07 May 2010; Jeroen Roovers <jer@gentoo.org> ufdbguard-1.13.ebuild,
+  ufdbguard-1.16.ebuild:
+  Replace dev-util/yacc with sys-devel/bison. Remove dohtml and dodoc *.html
+  *.txt calls as those files are not distributed in these versions.
 
   07 May 2010; Jeroen Roovers <jer@gentoo.org> ufdbguard-1.13.ebuild,
   ufdbguard-1.16.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.13.ebuild,v 1.3 2010/05/07 01:48:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.13.ebuild,v 1.4 2010/05/07 02:07:53 jer Exp $
 
 inherit eutils
 DESCRIPTION="ufdbGuard is a redirector for the Squid internet proxy."
@@ -19,7 +19,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	dev-util/yacc
+	sys-devel/bison
 	sys-devel/flex
 "
 
@@ -41,10 +41,10 @@ src_compile() {
 
 src_install() {
 	dodoc CHANGELOG INSTALL README README.multithreaded TODO
-	dodoc doc/*.html doc/*.txt src/UFDB
-	dohtml doc/*.html
+	dodoc src/UFDB
 
-	dobin src/ufdbGenTable src/ufdbGuard src/mtserver/ufdbgclient src/mtserver/ufdbguardd src/ufdbGrab
+	dobin src/ufdbGenTable src/ufdbGuard src/mtserver/ufdbgclient \
+		src/mtserver/ufdbguardd src/ufdbGrab || die "dobin failed"
 
 	dodir /etc/ufdbguard/blacklists
 	insinto /etc/ufdbguard
