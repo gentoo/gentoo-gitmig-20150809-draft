@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.130 2010/05/07 23:44:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.131 2010/05/07 23:45:40 vapier Exp $
+
+  07 May 2010; Mike Frysinger <vapier@gentoo.org>
+  enlightenment-0.16.9999.ebuild, enlightenment-1.0.2.ebuild:
+  Pull in autotools for live ebuilds #309855 by Dennis Nezic.
 
   07 May 2010; Mike Frysinger <vapier@gentoo.org> enlightenment-1.0.1.ebuild:
   alpha stable wrt #301308

@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.2.ebuild,v 1.1 2010/02/10 04:56:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.2.ebuild,v 1.2 2010/05/07 23:45:40 vapier Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
 	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/E16/e"
-	inherit subversion
+	inherit subversion autotools
 	SRC_URI=""
 	#KEYWORDS=""
 	S=${WORKDIR}/e16/e

@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.34 2010/01/17 20:22:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.35 2010/05/07 23:45:40 vapier Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
 	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/E16/e"
-	inherit subversion
+	inherit subversion autotools
 	SRC_URI=""
 	#KEYWORDS=""
 	S=${WORKDIR}/e16/e
@@ -78,5 +78,5 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	rmdir "${D}"/usr/share/doc/e16 || die #294456
-	dodoc AUTHORS ChangeLog COMPLIANCE README* docs/README* TODO
+	dodoc AUTHORS ChangeLog COMPLIANCE TODO
 }
