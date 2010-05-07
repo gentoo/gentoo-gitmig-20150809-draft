@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.35 2010/04/16 15:07:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.36 2010/05/07 18:09:44 armin76 Exp $
+
+  07 May 2010; Raúl Porcel <armin76@gentoo.org> imaxima-1.0-r2.ebuild:
+  sparc stable wrt #313823
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> imaxima-1.0-r2.ebuild:
   stable ppc, bug 313823
