@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.11-r1.ebuild,v 1.4 2010/04/18 11:57:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.11-r1.ebuild,v 1.5 2010/05/07 18:21:09 armin76 Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.dovecot.org/"
 
 SLOT="0"
 LICENSE="LGPL-2.1" # MIT too?
-KEYWORDS="~alpha amd64 ~arm ~sparc x86"
+KEYWORDS="alpha amd64 ~arm sparc x86"
 
 IUSE="berkdb bzip2 caps cydir dbox doc ipv6 kerberos ldap +maildir managesieve mbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
 
