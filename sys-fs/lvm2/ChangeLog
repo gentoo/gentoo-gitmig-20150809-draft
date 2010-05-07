@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.207 2010/05/01 21:26:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.208 2010/05/07 18:22:16 robbat2 Exp $
+
+  07 May 2010; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.63-r1.ebuild,
+  lvm2-2.02.63-r2.ebuild, lvm2-2.02.64.ebuild:
+  Bug #318821: Flip the order of udev deps, so that a really new version is
+  preferred to the patched version.
 
   01 May 2010; Robin H. Johnson <robbat2@gentoo.org>
   files/device-mapper.rc-1.02.51-r2, files/clvmd.rc-2.02.39,
