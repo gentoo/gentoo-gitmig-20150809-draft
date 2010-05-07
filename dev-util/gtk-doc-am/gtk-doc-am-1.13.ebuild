@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.13.ebuild,v 1.5 2010/05/04 15:39:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.13.ebuild,v 1.6 2010/05/07 10:33:26 pacho Exp $
 
 EAPI="3"
 
@@ -23,6 +23,9 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	>=dev-util/pkgconfig-0.19"
+
+# This ebuild doesn't even compile anything, causing tests to fail when updating (bug #316071)
+RESTRICT="test"
 
 S=${WORKDIR}/${MY_P}
 
