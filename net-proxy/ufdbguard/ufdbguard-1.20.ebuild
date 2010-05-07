@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.16.ebuild,v 1.3 2010/05/07 02:07:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.20.ebuild,v 1.1 2010/05/07 03:34:36 jer Exp $
+
+EAPI="2"
 
 inherit eutils
+
 DESCRIPTION="ufdbGuard is a redirector for the Squid internet proxy."
 HOMEPAGE="http://ufdbguard.sf.net"
 SRC_URI="mirror://sourceforge/ufdbguard/ufdbGuard-${PV}.tar.gz"
@@ -23,10 +26,17 @@ DEPEND="
 	sys-devel/flex
 "
 
+src_prepare() {
+	for i in $(find . -name Makefile.in); do
+		cp -av $i $i.org
+	done
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
+}
+
 S="${WORKDIR}/ufdbGuard-${PV}"
 
-src_compile() {
-	./configure \
+src_configure() {
+	econf \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--with-ufdb-config=/etc/ufdbguard \
@@ -35,8 +45,6 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--with-ufdb-images_dir=/usr/share/ufdbguard/images \
 		--mandir=/usr/share/man || die "./configure failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {
