@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5544 2010/05/06 16:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5545 2010/05/07 16:27:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3439,7 +3439,7 @@ www-apps/postfixadmin:extras - Install contributed scripts and plugins
 www-apps/postfixadmin:tests - Install model unit tests
 www-apps/redmine:darcs - Enable support for dev-vcs/darcs
 www-apps/redmine:git - Enable support for dev-vcs/git
-www-apps/redmine:mercurial - Enable support for dev-util/mercurial
+www-apps/redmine:mercurial - Enable support for dev-vcs/mercurial
 www-apps/redmine:openid - Enable support for OpenID
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
