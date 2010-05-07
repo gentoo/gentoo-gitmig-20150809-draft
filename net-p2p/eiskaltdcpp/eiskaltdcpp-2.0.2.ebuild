@@ -1,19 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.4 2010/05/07 04:38:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.0.2.ebuild,v 1.1 2010/05/07 04:38:24 pva Exp $
 
 EAPI=2
 
 LANGS="be en fr hu pl ru"
-inherit qt4-r2 cmake-utils subversion
+inherit qt4-r2 cmake-utils
 
 DESCRIPTION="Qt4 based client for DirectConnect and ADC protocols, based on DC++ library"
 HOMEPAGE="http://eiskaltdc.googlecode.com/"
-ESVN_REPO_URI="http://${PN%pp}.googlecode.com/svn/branches/trunk/"
+SRC_URI="http://${PN/pp/}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="spell"
 
 RDEPEND=">=x11-libs/qt-gui-4.4.0:4[dbus]
