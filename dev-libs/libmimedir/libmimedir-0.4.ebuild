@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/libmimedir-0.4.ebuild,v 1.1 2006/01/11 06:29:23 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/libmimedir-0.4.ebuild,v 1.2 2010/05/07 01:22:34 jer Exp $
 
 inherit eutils autotools
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="sys-devel/flex
 	sys-devel/bison"
+RDEPEND=""
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -26,6 +27,6 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc README
 }

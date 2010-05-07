@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/libmimedir-0.3.ebuild,v 1.8 2005/04/24 12:43:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/libmimedir-0.3.ebuild,v 1.9 2010/05/07 01:22:34 jer Exp $
 
 inherit multilib
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="sys-devel/flex
 	sys-devel/bison"
+RDEPEND=""
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
