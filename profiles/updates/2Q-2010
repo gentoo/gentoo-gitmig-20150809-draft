@@ -2,3 +2,5 @@ move x11-libs/compizconfig-backend-kconfig x11-libs/compizconfig-backend-kconfig
 slotmove kde-misc/youtube-servicemenu 0 4
 move app-i18n/ibus-sunpinyin app-i18n/sunpinyin
 slotmove kde-misc/krusader 2 4
+move dev-util/fossil dev-vcs/fossil
+move dev-util/svk dev-vcs/svk
