@@ -4,3 +4,4 @@ move app-i18n/ibus-sunpinyin app-i18n/sunpinyin
 slotmove kde-misc/krusader 2 4
 move dev-util/fossil dev-vcs/fossil
 move dev-util/svk dev-vcs/svk
+move app-admin/mbr sys-boot/mbr
