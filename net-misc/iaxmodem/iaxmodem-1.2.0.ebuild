@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iaxmodem/iaxmodem-1.2.0.ebuild,v 1.1 2009/12/04 22:08:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iaxmodem/iaxmodem-1.2.0.ebuild,v 1.2 2010/05/07 11:29:32 sbriesen Exp $
 
 EAPI="2"
 
@@ -14,11 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="logrotate"
+IUSE=""
 
 RDEPEND="media-libs/tiff
-	sys-process/procps
-	logrotate? ( app-admin/logrotate )"
+	sys-process/procps"
 
 DEPEND="${RDEPEND}
 	sys-apps/sed"
@@ -101,10 +100,8 @@ src_install() {
 	doins config.ttyIAX iaxmodem-cfg.ttyIAX iaxmodem.inf
 
 	# install logrotate rule
-	if use logrotate; then
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}/iaxmodem.logrotated" iaxmodem
-	fi
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/iaxmodem.logrotated" iaxmodem
 
 	# create log dir
 	keepdir /var/log/iaxmodem
