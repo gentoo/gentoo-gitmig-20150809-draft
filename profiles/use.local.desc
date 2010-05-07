@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5546 2010/05/07 18:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5547 2010/05/07 19:08:08 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1119,9 +1119,6 @@ dev-util/subversion:dso - Enable runtime module search
 dev-util/subversion:extras - Install extras scripts (examples, tools, hooks)
 dev-util/subversion:webdav-neon - Enable WebDAV support using net-misc/neon
 dev-util/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
-dev-util/svk:log4p - Enable perl logger support
-dev-util/svk:pager - Enable perl pager selection support
-dev-util/svk:patch - Enable patch creation, import support
 dev-util/universalindentgui:html - Add support for HTML files
 dev-vcs/bzr:sftp - Enable sftp support
 dev-vcs/bzr-gtk:gconf - Enable GConf support
