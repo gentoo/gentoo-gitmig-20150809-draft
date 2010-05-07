@@ -1,8 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/xmlindent-0.2.17.ebuild,v 1.4 2009/10/12 20:08:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/xmlindent-0.2.17-r1.ebuild,v 1.1 2010/05/07 00:38:42 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit toolchain-funcs
+
 DESCRIPTION="XML Indent is an XML stream reformatter written in ANSI C, analogous to GNU indent."
 HOMEPAGE="http://xmlindent.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xmlindent/${P}.tar.gz"
@@ -12,12 +15,21 @@ KEYWORDS="~amd64 ~sparc ~x86"
 
 IUSE=""
 DEPEND="sys-devel/flex"
+RDEPEND=""
+
+src_prepare() {
+	sed -i Makefile \
+		-e 's|gcc|$(CC)|g' \
+		-e 's|-g|$(CFLAGS) $(LDFLAGS) |g' \
+		|| die "sed failed"
+}
 
 src_compile() {
+	tc-export CC
 	emake || die "emake failed"
 }
 
 src_install() {
-	dobin xmlindent
+	dobin xmlindent || die "dobin failed"
 	doman *.1
 }
