@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.12.ebuild,v 1.1 2010/04/06 21:29:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.12.ebuild,v 1.2 2010/05/07 21:08:02 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/sdl-mixer[mikmod]
-	media-libs/libsdl"
+	media-libs/libsdl[video]"
 
 src_prepare() {
 	sed -i \
