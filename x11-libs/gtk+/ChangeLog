@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.453 2010/05/04 15:38:54 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.454 2010/05/07 15:22:20 jer Exp $
+
+  07 May 2010; Jeroen Roovers <jer@gentoo.org> gtk+-2.18.7.ebuild:
+  Stable for HPPA (bug #304777).
 
   03 May 2010; Olivier Crête <tester@gentoo.org> gtk+-2.18.9.ebuild:
   amd64 stable, bug #314899
