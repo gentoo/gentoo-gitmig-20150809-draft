@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20090407.ebuild,v 1.3 2010/03/31 19:49:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20090407-r1.ebuild,v 1.1 2010/05/07 12:28:06 jlec Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils
@@ -25,6 +25,7 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	epatch "${FILESDIR}"/20051004-add-ofiles-dep.patch
 	epatch "${FILESDIR}"/${PV}-link-shared-libf2c-correctly.patch
+	epatch "${FILESDIR}"/${PV}-main.patch
 }
 
 src_compile() {

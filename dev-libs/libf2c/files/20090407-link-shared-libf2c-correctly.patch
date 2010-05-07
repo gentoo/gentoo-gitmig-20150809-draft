@@ -5,7 +5,7 @@
  
  libf2c.so: $(OFILES)
 -	$(CC) -shared -o libf2c.so $(OFILES)
-+	$(CC) -shared $(LDFLAGS) -Wl,-soname,libf2c.so.2 -lm $(OFILES) -o libf2c.so.2
++	$(CC) -shared $(LDFLAGS) -Wl,-soname,libf2c.so.2 $(OFILES) -o libf2c.so.2 -lm
  
  ### If your system lacks ranlib, you don't need it; see README.
  

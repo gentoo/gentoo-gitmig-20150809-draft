@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.34 2010/03/31 19:45:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.35 2010/05/07 12:28:06 jlec Exp $
+
+*libf2c-20090407-r1 (07 May 2010)
+
+  07 May 2010; Justin Lecher <jlec@gentoo.org>
+  files/20090407-link-shared-libf2c-correctly.patch,
+  -libf2c-20090407.ebuild, +files/20090407-main.patch,
+  +libf2c-20090407-r1.ebuild:
+  Fixed undefined symbols
 
   31 Mar 2010; Justin Lecher <jlec@gentoo.org> libf2c-20090407.ebuild:
   USE static -> statis-libs, #312465
