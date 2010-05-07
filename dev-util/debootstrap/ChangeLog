@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.115 2010/04/22 03:12:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.116 2010/05/07 15:37:26 jer Exp $
+
+  07 May 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add appropriate herd.
 
   22 Apr 2010; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.22.ebuild:
   Stable for HPPA (bug #315197).
