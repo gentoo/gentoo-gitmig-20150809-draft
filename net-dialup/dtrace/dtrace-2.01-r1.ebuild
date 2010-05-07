@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/dtrace-2.01-r1.ebuild,v 1.1 2010/05/07 11:12:18 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/dtrace-2.01-r1.ebuild,v 1.2 2010/05/07 12:17:02 sbriesen Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ src_prepare() {
 }
 
 src_install() {
-	newbin dtrace.static dtrace-avm
+	exeinto /opt/bin
+	newexe dtrace.static dtrace-avm
 	newdoc readme.txt README
 }
