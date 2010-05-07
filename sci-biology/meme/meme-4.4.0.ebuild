@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.2.0.ebuild,v 1.1 2009/09/19 00:00:39 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.4.0.ebuild,v 1.1 2010/05/07 19:40:14 weaver Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://meme.nbcr.net/downloads/${PN}_${PV}.tar.gz"
 LICENSE="meme"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="mpi"
 
@@ -59,5 +59,6 @@ src_install() {
 #}
 
 src_test() {
-	make test || die "Regression tests failed."
+	# bug #297070
+	emake -j1 test || die "Regression tests failed."
 }

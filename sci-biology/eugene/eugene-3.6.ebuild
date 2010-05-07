@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.5d.ebuild,v 1.4 2009/09/09 21:58:14 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.6.ebuild,v 1.1 2010/05/07 19:31:27 weaver Exp $
 
 EAPI=2
 
@@ -8,12 +8,14 @@ inherit autotools
 
 DESCRIPTION="Eukaryotic gene predictor"
 HOMEPAGE="http://www.inra.fr/mia/T/EuGene/"
-SRC_URI="http://mulcyber.toulouse.inra.fr/gf/download/frsrelease/220/3675/${P}-1.tar.gz"
+# self-signed https SRC_URI
+#SRC_URI="http://mulcyber.toulouse.inra.fr/gf/download/frsrelease/220/3675/${P}-1.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 RESTRICT="test"
 
@@ -26,11 +28,7 @@ DEPEND="media-libs/gd[png]
 		)"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${P}-1"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	if ( ! use doc ); then
 		sed -i -e '/SUBDIRS/ s/doc//' \
 			-e '/INSTALL.*doc/ s/\(.*\)//' \

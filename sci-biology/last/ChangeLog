@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/last
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.4 2010/04/05 12:10:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.5 2010/05/07 19:35:18 weaver Exp $
+
+*last-103 (07 May 2010)
+
+  07 May 2010; Andrey Kislyuk <weaver@gentoo.org> +last-103.ebuild:
+  Version bump
 
   05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> last-96.ebuild:
   x86 stable wrt bug #311831
