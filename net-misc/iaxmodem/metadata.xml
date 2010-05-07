@@ -11,9 +11,4 @@
 		(commonly provided by an Asterisk PBX system) instead of a traditional
 		phone line and uses a DSP library instead of DSP hardware chipsets.
 	</longdescription>
-	<use>
-		<flag name='logrotate'>
-			Install support files for app-admin/logrotate
-		</flag>
-	</use>
 </pkgmetadata>
