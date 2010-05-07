@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.42 2010/03/02 16:47:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.43 2010/05/07 00:44:48 jer Exp $
+
+  07 May 2010; Jeroen Roovers <jer@gentoo.org> flow-tools-0.68-r5.ebuild,
+  flow-tools-0.68-r7.ebuild, flow-tools-0.68-r8.ebuild,
+  flow-tools-0.68.5-r1.ebuild:
+  DEPEND on sys-devel/flex instead of RDEPEND (bug #221421).
 
 *flow-tools-0.68.5-r1 (02 Mar 2010)
 
