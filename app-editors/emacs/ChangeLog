@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.375 2010/05/01 15:16:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.376 2010/05/07 05:57:00 jer Exp $
+
+  07 May 2010; Jeroen Roovers <jer@gentoo.org> emacs-21.4-r20.ebuild,
+  emacs-22.3-r4.ebuild, emacs-23.1-r3.ebuild:
+  Stable for HPPA (bug #313861).
 
   01 May 2010; Ulrich Mueller <ulm@gentoo.org> emacs-22.3-r4.ebuild,
   emacs-23.1-r3.ebuild:
