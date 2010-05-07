@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.8 2010/05/07 03:34:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.9 2010/05/07 03:37:35 jer Exp $
+
+  07 May 2010; Jeroen Roovers <jer@gentoo.org> ufdbguard-1.20.ebuild:
+  Remove dev cruft from ebuild.
 
 *ufdbguard-1.20 (07 May 2010)
 
