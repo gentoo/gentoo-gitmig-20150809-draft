@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.13.ebuild,v 1.2 2008/10/12 08:03:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.13.ebuild,v 1.3 2010/05/07 01:48:56 jer Exp $
 
 inherit eutils
 DESCRIPTION="ufdbGuard is a redirector for the Squid internet proxy."
@@ -10,13 +10,18 @@ SRC_URI="mirror://sourceforge/ufdbguard/ufdbGuard-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
-DEPEND="dev-libs/openssl
-		app-arch/bzip2
-		dev-util/yacc
-		sys-devel/flex"
-RDEPEND="${DEPEND}
-		net-misc/wget"
+RDEPEND="
+	dev-libs/openssl
+	app-arch/bzip2
+	net-misc/wget
+"
+DEPEND="
+	${RDEPEND}
+	dev-util/yacc
+	sys-devel/flex
+"
 
 S="${WORKDIR}/ufdbGuard-${PV}"
 
@@ -45,8 +50,8 @@ src_install() {
 	insinto /etc/ufdbguard
 	doins src/ufdbGuard.conf
 
-	newconfd ${FILESDIR}/ufdbguard.confd ufdbguard
-	newinitd ${FILESDIR}/ufdbguard.initd ufdbguard
+	newconfd "${FILESDIR}"/ufdbguard.confd ufdbguard
+	newinitd "${FILESDIR}"/ufdbguard.initd ufdbguard
 
 }
 
