@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.3 2009/12/12 20:36:27 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.4 2010/05/07 18:11:40 robbat2 Exp $
+
+  07 May 2010; Robin H. Johnson <robbat2@gentoo.org>
+  linux-firmware-20090421.ebuild, linux-firmware-99999999.ebuild:
+  Update LICENSE to include freedist just like the kernel sources.
 
   12 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   linux-firmware-99999999.ebuild:
