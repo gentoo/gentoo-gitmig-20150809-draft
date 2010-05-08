@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r1.ebuild,v 1.7 2010/05/06 05:14:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r1.ebuild,v 1.8 2010/05/08 10:28:38 matsuu Exp $
 
 EAPI="2"
 inherit autotools eutils flag-o-matic multilib
@@ -21,7 +21,6 @@ RDEPEND="x11-libs/libX11
 	>=dev-libs/glib-2
 	!app-i18n/scim-cvs"
 DEPEND="${RDEPEND}
-	x11-libs/libXt
 	doc? ( app-doc/doxygen
 		>=app-text/docbook-xsl-stylesheets-1.73.1 )
 	dev-lang/perl
