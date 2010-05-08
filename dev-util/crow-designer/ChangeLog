@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/crow-designer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.15 2010/02/09 12:05:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.16 2010/05/08 06:46:17 pva Exp $
+
+*crow-designer-2.17.0 (08 May 2010)
+
+  08 May 2010; Peter Volkov <pva@gentoo.org> -crow-designer-2.13.0.ebuild,
+  +crow-designer-2.17.0.ebuild:
+  Version bump.
 
   09 Feb 2010; Pacho Ramos <pacho@gentoo.org> crow-designer-2.15.0.ebuild:
   amd64 stable, bug 254638
