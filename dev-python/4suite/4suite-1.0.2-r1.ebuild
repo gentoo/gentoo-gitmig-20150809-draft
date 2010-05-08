@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.8 2009/09/23 17:51:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.9 2010/05/08 16:08:39 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
@@ -30,6 +31,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-amd64_python2.5.patch"
 	epatch "${FILESDIR}/${P}-config.patch"
 
+	# Improve handling of package versions with '+' character.
+	sed -e $'/self._original = vstring/a\\\n        vstring = vstring.rstrip(\'+\')' -i Ft/Lib/DistExt/Version.py || die "sed failed"
+
 	if ! use doc; then
 		sed -e "/'build_docs'/d" -i Ft/Lib/DistExt/Build.py || die "sed failed"
 	fi
@@ -50,5 +54,5 @@ src_configure() {
 src_install() {
 	rm -fr profile test
 	distutils_src_install $(use_with doc docs)
-	rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/{profiles,tests}
+	rm -fr "${ED}"usr/$(get_libdir)/python*/site-packages/{profiles,tests}
 }
