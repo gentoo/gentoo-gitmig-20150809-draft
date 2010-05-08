@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.290 2010/04/24 02:48:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.291 2010/05/08 17:36:27 vapier Exp $
+
+  08 May 2010; Mike Frysinger <vapier@gentoo.org> coreutils-8.4.ebuild:
+  Tweak tests in i18n patch #317565 by T Chan.
 
 *coreutils-8.5 (24 Apr 2010)
 
