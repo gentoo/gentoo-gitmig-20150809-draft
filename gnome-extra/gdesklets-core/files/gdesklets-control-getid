@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/files/gdesklets-control-getid,v 1.4 2010/05/08 03:20:21 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/files/gdesklets-control-getid,v 1.5 2010/05/08 19:04:24 nixphoeni Exp $
 # 
 # A simple script to get the name and id from a Control.
 # Pretty much copied from test-control.py
@@ -18,20 +18,16 @@ try:
     path = os.path.abspath(sys.argv[1])
     folder, base = os.path.split(path)
 except:
-    #sys.exit("Usage: gdesklets-control-getid <control-directory>")
-    print "ERROR_IN_CONTROL_INSTALLATION"
-    
+    sys.exit("ERROR IN CONTROL INSTALLATION")
+
 
 os.chdir(folder)
 try:
     module = __import__(base)
-    os.chdir(base)
     clss = module.get_class()
-    ctrl = clss()
-    
+
 except IOError:
-    #sys.exit("Could not load control %s." % (path))
-    print folder
+    sys.exit("Could not load control in %s!" % (folder))
 
 # Get the string in the form of "IMyControl:hash" and translate it to
 # "MyControl_hash"

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r1.ebuild,v 1.1 2010/05/08 03:20:20 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r2.ebuild,v 1.1 2010/05/08 19:04:24 nixphoeni Exp $
 
 EAPI=2
 # desklets don't run with USE=debug
@@ -54,6 +54,7 @@ pkg_setup() {
 
 src_prepare() {
 
+	epatch "${FILESDIR}/${PN}-getid-fix.patch"
 	gnome2_src_prepare
 
 	# Postpone pyc compiling until pkg_postinst
