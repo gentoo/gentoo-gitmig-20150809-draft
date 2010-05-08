@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.4.ebuild,v 1.2 2010/05/04 16:21:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.28.4.ebuild,v 1.3 2010/05/08 10:40:59 pacho Exp $
 
 GCONF_DEBUG="no"
 
-inherit gnome2 python
+inherit gnome2 python eutils
 
 DESCRIPTION="A text editor for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -60,6 +60,8 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
+	# Fix XML syntax in po files, bug #262325
+	epatch "${FILESDIR}/${P}-xml-syntax.patch"
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
