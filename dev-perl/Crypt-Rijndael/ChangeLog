@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-Rijndael
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.29 2010/05/05 05:30:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.30 2010/05/08 17:51:52 armin76 Exp $
+
+  08 May 2010; Raúl Porcel <armin76@gentoo.org> Crypt-Rijndael-1.09.ebuild:
+  ia64/sparc stable wrt #314467
 
   05 May 2010; Jeroen Roovers <jer@gentoo.org> Crypt-Rijndael-1.09.ebuild:
   Stable for HPPA (bug #314467).

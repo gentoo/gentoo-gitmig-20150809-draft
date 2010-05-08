@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Compare
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Compare/ChangeLog,v 1.40 2010/05/05 05:32:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Compare/ChangeLog,v 1.41 2010/05/08 17:53:36 armin76 Exp $
+
+  08 May 2010; Raúl Porcel <armin76@gentoo.org> Data-Compare-1.22.ebuild:
+  ia64/sparc stable wrt #314467
 
   05 May 2010; Jeroen Roovers <jer@gentoo.org> Data-Compare-1.22.ebuild:
   Stable for HPPA (bug #314467).
