@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/urwvn-fonts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.25 2009/10/24 05:40:46 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.26 2010/05/08 06:18:29 pva Exp $
+
+*urwvn-fonts-3.05 (08 May 2010)
+
+  08 May 2010; Peter Volkov <pva@gentoo.org> +files/65-urwvn.conf,
+  urwvn-fonts-3.04.ebuild, +urwvn-fonts-3.05.ebuild:
+  Version bump. Thank upstream developer Reinhard Kotucha for notification
+  and warning about Vn Utopia font rename.
 
   24 Oct 2009; Peter Volkov <pva@gentoo.org> urwvn-fonts-3.04.ebuild:
   Fixed HOMEPAGE and updated a bit description, bug #289176, thank Alexey
