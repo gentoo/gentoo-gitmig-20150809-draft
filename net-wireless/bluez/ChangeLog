@@ -1,6 +1,18 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.34 2010/05/08 10:54:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.35 2010/05/08 11:04:39 pacho Exp $
+
+*bluez-4.64 (08 May 2010)
+
+  08 May 2010; Pacho Ramos <pacho@gentoo.org> +bluez-4.64.ebuild:
+  Version bump including the following fixes:
+  * Fix invalid memory access in headset_get_nrec function.
+  * Fix issue with disconnect event on higher protocol layers.
+  * Fix issue with list parsing in sdp_set_supp_features function.
+  * Fix device object reference counting for SDP browse requests.
+  * Add missing memory checks whenever memory is allocated for SDP.
+  * Add support for exporting local services via D-Bus.
+  * Add more L2CAP Enhanced Retransmission test options.
 
   08 May 2010; Pacho Ramos <pacho@gentoo.org> -bluez-4.28.ebuild,
   -bluez-4.38.ebuild, -bluez-4.39.ebuild, -bluez-4.39-r1.ebuild,
