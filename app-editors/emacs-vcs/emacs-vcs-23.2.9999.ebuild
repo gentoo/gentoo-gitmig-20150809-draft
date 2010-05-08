@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.1.96.ebuild,v 1.2 2010/05/01 15:16:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999.ebuild,v 1.1 2010/05/08 07:52:53 ulm Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode"
 SLOT="23"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 RESTRICT="strip"
 
@@ -235,7 +235,7 @@ src_install () {
 		c=""
 	fi
 
-	sed 's/^X//' >"${SITEFILE}" <<-EOF
+	sed 's/^X//' >"${T}/${SITEFILE}" <<-EOF
 	X
 	;;; ${PN}-${SLOT} site-lisp configuration
 	X
@@ -253,7 +253,7 @@ src_install () {
 	X	   (setcdr q (cons dir (delete dir (cdr q))))
 	X	   (setq Info-directory-list (prune-directory-list (cdr p)))))))
 	EOF
-	elisp-site-file-install "${SITEFILE}" || die
+	elisp-site-file-install "${T}/${SITEFILE}" || die
 
 	dodoc README BUGS || die "dodoc failed"
 }
