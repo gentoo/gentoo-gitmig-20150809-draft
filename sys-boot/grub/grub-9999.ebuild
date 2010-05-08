@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.19 2010/01/17 01:25:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.20 2010/05/08 17:21:09 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -23,7 +23,7 @@ IUSE="custom-cflags debug truetype multislot static"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5
 	dev-libs/lzo
-	truetype? ( media-libs/freetype )"
+	truetype? ( media-libs/freetype media-fonts/unifont )"
 DEPEND="${RDEPEND}
 	dev-lang/ruby"
 PROVIDE="virtual/bootloader"

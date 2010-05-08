@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.98.ebuild,v 1.1 2010/03/10 19:47:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.98.ebuild,v 1.2 2010/05/08 17:21:09 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -25,7 +25,7 @@ IUSE="custom-cflags debug truetype multislot static"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5
 	dev-libs/lzo
-	truetype? ( media-libs/freetype )"
+	truetype? ( media-libs/freetype media-fonts/unifont )"
 DEPEND="${RDEPEND}
 	dev-lang/ruby"
 PROVIDE="virtual/bootloader"

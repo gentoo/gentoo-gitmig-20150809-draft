@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.133 2010/03/10 19:47:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.134 2010/05/08 17:21:09 vapier Exp $
+
+  08 May 2010; Mike Frysinger <vapier@gentoo.org> grub-1.98.ebuild,
+  grub-9999.ebuild:
+  Pull in unifont for mkfont tools #318747 by Alexis Ballier.
 
 *grub-1.98 (10 Mar 2010)
 
