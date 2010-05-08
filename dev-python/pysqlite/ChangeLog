@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.120 2010/04/18 17:44:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.121 2010/05/08 17:52:28 armin76 Exp $
+
+  08 May 2010; Raúl Porcel <armin76@gentoo.org> pysqlite-2.6.0.ebuild:
+  alpha/ia64/sparc stable wrt #313159
 
   18 Apr 2010; <nixnut@gentoo.org> pysqlite-2.6.0.ebuild:
   ppc stable #313159
