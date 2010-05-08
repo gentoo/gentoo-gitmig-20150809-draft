@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.153 2010/04/26 19:08:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.154 2010/05/08 18:16:09 armin76 Exp $
+
+  08 May 2010; Raúl Porcel <armin76@gentoo.org> iproute2-2.6.31.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #308137
 
   26 Apr 2010; Markus Meier <maekke@gentoo.org> iproute2-2.6.31.ebuild:
   amd64/arm stable, bug #308137
