@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Object
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.19 2010/04/17 20:46:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.20 2010/05/08 15:57:19 armin76 Exp $
+
+  08 May 2010; Raúl Porcel <armin76@gentoo.org> HTML-Object-2.29-r1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #315789
 
 *HTML-Object-2.29-r1 (17 Apr 2010)
 
