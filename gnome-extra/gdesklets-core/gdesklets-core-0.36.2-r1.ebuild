@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2.ebuild,v 1.2 2010/04/07 04:22:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r1.ebuild,v 1.1 2010/05/08 03:20:20 nixphoeni Exp $
 
 EAPI=2
 # desklets don't run with USE=debug
-#GCONF_DEBUG="no"
+GCONF_DEBUG="no"
+PYTHON_DEPEND="2:2.4"
 
-# We want the latest autoconf and automake (the default)
 inherit gnome2 python eutils autotools multilib bash-completion
 
 MY_PN="gDesklets"
@@ -43,6 +43,14 @@ MAKEOPTS="${MAKEOPTS} -j1"
 # Force using MAKEOPTS with emake
 USE_EINSTALL="0"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+CONVERT_SHEBANGS="ctrlinfo gdesklets gdesklets-daemon gdesklets-logview \
+	gdesklets-shell test-control.py contrib/gdesklets-migration-tool"
+
+pkg_setup() {
+
+	python_set_active_version 2
+
+}
 
 src_prepare() {
 
@@ -54,6 +62,8 @@ src_prepare() {
 
 	eautoreconf
 	intltoolize --force || die
+
+	python_convert_shebangs 2 ${CONVERT_SHEBANGS}
 
 }
 
@@ -85,7 +95,7 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 	python_need_rebuild
 	# Compile pyc files on target system
-	python_mod_optimize "${ROOT:-/}usr/$(get_libdir)/gdesklets"
+	python_mod_optimize "/usr/$(get_libdir)/gdesklets"
 
 	echo
 	elog "gDesklets Displays are required before the library"
@@ -105,7 +115,7 @@ pkg_postinst() {
 	elog "If you're updating from a version less than 0.35_rc1,"
 	elog "you can migrate your desklet configurations by"
 	elog "running"
-	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/gdesklets-migration-tool"
+	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/contrib/gdesklets-migration-tool"
 	elog "after the first time you run gDesklets"
 	elog
 
