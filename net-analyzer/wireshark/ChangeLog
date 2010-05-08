@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.222 2010/05/06 09:14:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.223 2010/05/08 07:24:21 pva Exp $
+
+*wireshark-1.2.8-r1 (08 May 2010)
+
+  08 May 2010; Peter Volkov <pva@gentoo.org> +wireshark-1.2.8-r1.ebuild,
+  +files/wireshark-1.2.8-zlib-1.2.5-capture.patch:
+  Fix failure to capture packets with newer zlib, bug #316835, thank Richard
+  for report.
 
 *wireshark-1.2.8 (06 May 2010)
 
