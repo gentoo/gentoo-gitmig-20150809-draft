@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.208 2010/05/04 15:38:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.209 2010/05/08 15:00:05 pacho Exp $
+
+*librsvg-2.26.3 (08 May 2010)
+
+  08 May 2010; Pacho Ramos <pacho@gentoo.org> -librsvg-2.22.3-r1.ebuild,
+  +librsvg-2.26.3.ebuild:
+  Version bump with tons of bugfixes including crashes and rendering
+  problems. Drop old testing version.
 
   03 May 2010; Olivier Crête <tester@gentoo.org> librsvg-2.26.2.ebuild:
   amd64 stable, bug #314899
