@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5548 2010/05/07 19:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5549 2010/05/08 07:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -171,6 +171,7 @@ app-doc/tldp-howto:pdf - Install the docs in pdf format
 app-doc/tldp-howto:text - Install the docs in plain text format
 app-editors/bluefish:gucharmap - Enable gucharmap dictionary plugin
 app-editors/cssed:plugins - Install plugin development files
+app-editors/emacs:gconf - Use gnome-base/gconf to read the system font name
 app-editors/emacs:gzip-el - Compress bundled Emacs Lisp source
 app-editors/emacs:hesiod - Enable support for net-dns/hesiod
 app-editors/emacs:leim - Add support for Emacs input methods
