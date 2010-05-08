@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gquilt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.16 2009/04/25 21:35:37 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.17 2010/05/08 20:51:06 arfrever Exp $
+
+  08 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gquilt-0.21.ebuild:
+  Delete calls to deprecated python_version().
 
   25 Apr 2009; Patrick Lauer <patrick@gentoo.org> gquilt-0.21:
   Fixing badly broken prerm to be postrm. Fixes #250576
