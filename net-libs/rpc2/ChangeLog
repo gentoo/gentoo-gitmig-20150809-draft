@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/rpc2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.29 2009/06/28 11:57:52 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.30 2010/05/08 17:32:50 george Exp $
+
+*rpc2-2.10 (08 May 2010)
+
+  08 May 2010; George Shapovalov <george@gentoo.org> +rpc2-2.10.ebuild:
+  bumping in preparation for new net-fs/coda version
+  Ok with older coda that's in the tree now.
 
 *rpc2-2.8 (28 Jun 2009)
 
