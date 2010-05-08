@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.7 2009/10/18 21:01:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.8 2010/05/08 10:28:28 matsuu Exp $
 
 inherit autotools base eutils
 
@@ -17,8 +17,7 @@ for i in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${i}"
 done
 
-RDEPEND="x11-libs/libXt
-	>=app-i18n/scim-1.4.7-r2
+RDEPEND=">=app-i18n/scim-1.4.7-r2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
