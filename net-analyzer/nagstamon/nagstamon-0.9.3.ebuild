@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.3.ebuild,v 1.1 2010/04/29 23:44:37 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.3.ebuild,v 1.2 2010/05/08 13:20:50 idl0r Exp $
 
 EAPI="3"
 
@@ -60,4 +60,12 @@ src_install() {
 	}
 
 	python_execute_function nagstamon_install
+}
+
+pkg_postinst() {
+	python_mod_optimize ${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup ${PN}
 }
