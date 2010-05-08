@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/tintwizard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.2 2010/04/30 10:52:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.3 2010/05/08 13:27:15 idl0r Exp $
+
+  08 May 2010; Christian Ruppert <idl0r@gentoo.org>
+  tintwizard-0.3.3b.ebuild:
+  Remove SUPPORT_PYTHON_ABIS and RESTRICT_PYTHON_ABIS as requested per bug
+  317027.
 
 *tintwizard-0.3.3b (30 Apr 2010)
 
