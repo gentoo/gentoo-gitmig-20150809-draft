@@ -1,7 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/desklet-ImageSlideShow-0.8-r1.ebuild,v 1.1 2009/09/10 02:19:55 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/desklet-ImageSlideShow-0.8-r1.ebuild,v 1.2 2010/05/08 21:28:15 nixphoeni Exp $
 
+CONTROL_NAME="${PN#desklet-}"
+# This only needs to stick around until the new eclass is committed
 DESKLET_NAME="${PN#desklet-}"
 
 inherit gdesklets
@@ -18,5 +20,5 @@ DOCS="MANIFEST README"
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${DESKLET_NAME}-${PV}-cache-dir.patch"
+	epatch "${FILESDIR}/${CONTROL_NAME}-${PV}-cache-dir.patch"
 }
