@@ -1,6 +1,6 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.18 2009/05/13 02:11:24 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.19 2010/05/08 19:04:04 nixphoeni Exp $
 #
 # Authors:	Joe Sapp <nixphoeni@gentoo.org>
 #		Mike Gardiner <obz@gentoo.org>
@@ -53,12 +53,6 @@ gdesklets_src_install() {
 
 	# The displays only need to be readable
 	insopts -m0744
-
-	# Check to see if DISPLAY is set for the
-	# gdesklets-control-getid script to run without
-	# error
-	[ -z "${DISPLAY}" ] && DISPLAY=""
-	export DISPLAY
 
 	debug-print-section sensor_install
 	# First, install the Sensor (if there is one)
@@ -161,7 +155,7 @@ gdesklets_src_install() {
 		for CTRL in ${CONTROL_INITS[@]}; do
 
 			cd `dirname ${CTRL}`
-			CTRL_NAME=$( "${GDESKLETS_INST_DIR}/gdesklets-control-getid" `pwd` )
+			CTRL_NAME=$( "${GDESKLETS_INST_DIR}/gdesklets-control-getid" `pwd` 2> /dev/null )
 			einfo "Installing Control ${CTRL_NAME}"
 			# This creates the subdirectory of ${CTRL_NAME}
 			# in the global Controls directory
