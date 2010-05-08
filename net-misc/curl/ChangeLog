@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.157 2010/04/26 09:10:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.158 2010/05/08 17:49:34 jer Exp $
+
+  08 May 2010; Jeroen Roovers <jer@gentoo.org> curl-7.20.0-r2.ebuild:
+  Stable for HPPA (bug #315507).
 
   26 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   curl-7.20.0-r2.ebuild:
