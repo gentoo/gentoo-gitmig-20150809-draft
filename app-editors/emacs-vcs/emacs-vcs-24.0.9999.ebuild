@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.4 2010/05/08 07:52:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.5 2010/05/08 08:31:19 ulm Exp $
 
 EAPI=2
 
-inherit autotools elisp-common eutils flag-o-matic
+inherit autotools elisp-common eutils flag-o-matic multilib
 
 if [ "${PV##*.}" = "9999" ]; then
 	inherit bzr
@@ -196,6 +196,7 @@ src_configure() {
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
+		--with-crt-dir=/usr/$(get_libdir) \
 		${myconf} || die "econf emacs failed"
 }
 
