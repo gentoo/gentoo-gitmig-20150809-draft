@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.81 2010/04/07 14:59:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.82 2010/05/09 18:48:25 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org>
+  gtkpod-0.99.14_p20090710.ebuild, gtkpod-0.99.16.ebuild:
+  Drop sparc keyword
 
 *gtkpod-0.99.16 (07 Apr 2010)
 
