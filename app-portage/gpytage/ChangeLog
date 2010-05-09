@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gpytage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gpytage/ChangeLog,v 1.6 2010/04/13 15:28:36 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gpytage/ChangeLog,v 1.7 2010/05/09 15:28:53 phajdan.jr Exp $
+
+  09 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gpytage-0.3.0_rc1.ebuild:
+  x86 stable wrt bug #316023
 
   13 Apr 2010; Kenneth Prugh <ken69267@gentoo.org> gpytage-0.3.0_rc1.ebuild:
   update for bug 311779
