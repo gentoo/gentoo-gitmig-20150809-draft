@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4167 2010/05/09 20:13:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4168 2010/05/09 22:10:29 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 May 2010; Jeremy Olexa <darkside@gentoo.org> updates/2Q-2010:
+  Move net-analyzer/mirmon -> www-apps/mirmon
 
   09 May 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Drop app-i18n/man-pages-es mask as it has just been dropped.
