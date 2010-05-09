@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.2.ebuild,v 1.3 2010/04/27 23:49:12 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.2.ebuild,v 1.4 2010/05/09 22:02:04 truedfx Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
@@ -19,6 +19,12 @@ RDEPEND="${DEPEND}
 	vim-syntax? ( || (
 			app-editors/gvim
 			app-editors/vim ) )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-locale.patch
+}
 
 src_compile() {
 	# The configure script isn't created by GNU autotools.
