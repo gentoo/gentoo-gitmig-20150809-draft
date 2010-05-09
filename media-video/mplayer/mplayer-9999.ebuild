@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.57 2010/05/05 08:37:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.58 2010/05/09 16:44:58 aballier Exp $
 
 EAPI="2"
 
@@ -88,6 +88,7 @@ RDEPEND+="
 			xvmc? ( x11-libs/libXvMC )
 		)
 	)
+	a52? ( media-libs/a52dec )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	amr? ( !bindist? ( media-libs/opencore-amr ) )
@@ -392,12 +393,10 @@ src_configure() {
 	##########
 	# Codecs #
 	##########
-	# Won't work with external liba52
-	myconf+=" --disable-liba52"
-	use a52 && myconf+=" --enable-liba52-internal"
 	# Use internal musepack codecs for SV7 and SV8 support
 	myconf+=" --disable-musepack"
 
+	use a52 || myconf+=" --disable-liba52"
 	myconf+=" --disable-faad-internal" # always use system media-libs/faad2
 	use dirac || myconf+=" --disable-libdirac-lavc"
 	use dts || myconf+=" --disable-libdca"
