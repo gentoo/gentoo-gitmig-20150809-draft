@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.1 2010/05/08 08:08:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.2 2010/05/09 06:34:36 graaff Exp $
+
+*gherkin-1.0.24-r1 (09 May 2010)
+
+  09 May 2010; Hans de Graaff <graaff@gentoo.org> +gherkin-1.0.24-r1.ebuild,
+  +files/gherkin-1.0.24-fix-specs.patch:
+  Fix specs with upstream patch. Run cucumber features. Actually install
+  documentation files.
 
 *gherkin-1.0.24 (08 May 2010)
 
