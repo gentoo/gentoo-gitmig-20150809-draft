@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.28 2010/01/03 15:05:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.29 2010/05/09 08:37:43 swegener Exp $
+
+  09 May 2010; Sven Wegener <swegener@gentoo.org> nzbget-0.6.0.ebuild:
+  Install example post-process script, bug #296311.
 
   03 Jan 2010; Sven Wegener <swegener@gentoo.org> -nzbget-0.4.0.ebuild,
   -nzbget-0.4.0-r1.ebuild, -files/nzbget-0.4.0-gcc-4.3.patch,

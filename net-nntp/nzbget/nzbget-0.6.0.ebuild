@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.6.0.ebuild,v 1.5 2010/01/03 15:05:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.6.0.ebuild,v 1.6 2010/05/09 08:37:44 swegener Exp $
 
 EAPI="2"
 
@@ -29,10 +29,16 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed \
+		-i \
+		-e 's:^PostProcess=.*:#PostProcess=/usr/share/nzbget/postprocess-example.sh:' \
+		nzbget.conf.example \
+		|| die "sed nzbget.conf.example failed"
+
+	sed \
 		-e 's:^$MAINDIR=.*:$MAINDIR=/var/lib/nzbget:' \
 		-e 's:^LockFile=.*:LockFile=/var/run/nzbget/nzbget.pid:' \
 		-e 's:^LogFile=.*:LogFile=/var/log/nzbget/nzbget.log:' \
-		"${S}"/nzbget.conf.example > "${S}"/nzbgetd.conf.example \
+		"${S}"/nzbget.conf.example >"${S}"/nzbgetd.conf.example \
 		|| die "sed nzbgetd.conf.example failed"
 }
 
@@ -58,6 +64,9 @@ src_install() {
 
 	newinitd "${FILESDIR}"/nzbget.initd nzbget
 	newconfd "${FILESDIR}"/nzbget.confd nzbget
+
+	exeinto /usr/share/nzbget
+	doexe postprocess-example.sh
 
 	dodoc AUTHORS ChangeLog README nzbget.conf.example || die "dodoc failed"
 }
