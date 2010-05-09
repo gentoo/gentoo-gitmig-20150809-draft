@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/prboom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.30 2010/03/09 21:51:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.31 2010/05/09 18:27:12 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org> prboom-2.4.7.ebuild,
+  prboom-2.5.0.ebuild:
+  Drop sparc keyword
 
   09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> prboom-2.5.0.ebuild,
   +files/prboom-2.5.0-libpng14.patch:
