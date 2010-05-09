@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/jgrapht-0.7.3.ebuild,v 1.2 2010/01/16 21:00:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/jgrapht-0.7.3.ebuild,v 1.3 2010/05/09 23:11:08 betelgeuse Exp $
 
-EAPI="1"
+EAPI="2"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
@@ -15,8 +15,8 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="test"
 
-CDEPEND="dev-java/touchgraph-graphlayout
-	dev-java/jgraph"
+CDEPEND="dev-java/touchgraph-graphlayout:0
+	dev-java/jgraph:0"
 
 DEPEND="${CDEPEND}
 	>=virtual/jdk-1.5
@@ -24,15 +24,15 @@ DEPEND="${CDEPEND}
 		dev-java/xmlunit:1 )"
 
 RDEPEND="${CDEPEND}
-	>=virtual/jre-1.4"
+	>=virtual/jre-1.5"
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="touchgraph-graphlayout jgraph"
 EANT_DOC_TARGET="javadoc"
 
-src_unpack() {
-	unpack ${A}
+java_prepare() {
 	rm -rf "${S}/lib" || die
+	rm -v "${S}"/*.jar || die
 }
 
 src_install() {
