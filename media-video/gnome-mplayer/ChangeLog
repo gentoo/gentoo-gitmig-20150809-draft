@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.41 2010/04/18 17:56:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.42 2010/05/09 17:08:07 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org>
+  gnome-mplayer-0.9.9.2.ebuild:
+  alpha stable wrt #311801
 
   18 Apr 2010; Pacho Ramos <pacho@gentoo.org> gnome-mplayer-0.9.9.2.ebuild:
   amd64 stable, bug 311801
