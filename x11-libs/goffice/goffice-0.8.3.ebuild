@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.0.ebuild,v 1.1 2010/03/03 22:00:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.3.ebuild,v 1.1 2010/05/09 09:25:13 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -21,7 +21,6 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=gnome-extra/libgsf-1.14.9[gnome?]
 	>=dev-libs/libxml2-2.4.12
 	>=x11-libs/pango-1.8.1
-	>=gnome-base/libglade-2.3.6
 	>=x11-libs/cairo-1.2[svg]
 	x11-libs/libXext
 	x11-libs/libXrender
@@ -31,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.16
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35
-	doc? ( >=dev-util/gtk-doc-1.4 )"
+	doc? ( >=dev-util/gtk-doc-1.11 )"
 
 DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
 
