@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.3.2.ebuild,v 1.1 2010/05/09 03:50:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.3.2-r1.ebuild,v 1.1 2010/05/09 16:32:44 darkside Exp $
 
 EAPI=2
 VIRTUALX_REQUIRED="manual"
@@ -64,6 +64,10 @@ src_configure() {
 		$(use_with X x)
 }
 
+src_compile() {
+	emake -j1 || die "emake failed"
+}
+
 src_install() {
 	INSTALL_CATPAGES="no" emake DESTDIR="${D}" install || die "emake install failed"
 
@@ -95,7 +99,7 @@ src_install() {
 
 	if use hdb-ldap; then
 		insinto /etc/openldap/schema
-		newins "${S}"/lib/hdb/hdb.schema "${S}"/lib/hdb/krb5-kdc.schema
+		newins "${S}/lib/hdb/hdb.schema" krb5-kdc.schema
 	fi
 
 	# default database dir
