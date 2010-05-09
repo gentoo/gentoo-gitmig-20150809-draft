@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.3.1.ebuild,v 1.2 2009/07/19 18:08:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.ebuild,v 1.1 2010/05/09 09:32:38 hd_brummy Exp $
 
 EAPI="2"
 
 inherit eutils versionator
 
 DESCRIPTION="WWW Admin for the VDR (Video Disk Recorder)"
-HOMEPAGE="http://xxv.berlios.de/content/view/43/1/"
+HOMEPAGE="http://xxv.berlios.de/content/view/46/1/"
 SRC_URI="mirror://berlios/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
@@ -24,17 +24,18 @@ RDEPEND=">=media-video/vdr-1.2.6
 	virtual/perl-Getopt-Long
 	virtual/perl-MIME-Base64
 	virtual/perl-Time-HiRes
-	virtual/perl-IO-Compress
+	perl-core/IO-Compress
 	dev-perl/Config-Tiny
-	dev-perl/Digest-HMAC
-	dev-perl/Encode-Detect
-	dev-perl/GD[png,gif]
 	dev-perl/DateManip
 	dev-perl/DBD-mysql
 	dev-perl/DBI
+	dev-perl/Digest-HMAC
+	dev-perl/Encode-Detect
 	dev-perl/Event
+	dev-perl/Font-TTF
+	dev-perl/GD[png,gif]
 	dev-perl/IO-Socket-INET6
-	dev-perl/JSON
+	dev-perl/JSON-XS
 	dev-perl/Linux-Inotify2
 	dev-perl/Locale-gettext
 	dev-perl/MP3-Info
@@ -42,18 +43,18 @@ RDEPEND=">=media-video/vdr-1.2.6
 	dev-perl/Net-Telnet
 	dev-perl/Net-XMPP
 	dev-perl/Proc-ProcessTable
+	dev-perl/SOAP-Lite
 	dev-perl/TextToHTML
 	dev-perl/Template-Toolkit
-	dev-perl/SOAP-Lite
 	dev-perl/XML-RSS
-	themes? ( >=x11-themes/${PN}-skins-1.3 )"
+	themes? ( >=x11-themes/${PN}-skins-${PV} )"
 
 PDEPEND="mplayer? ( media-video/mplayer )"
 
 SHAREDIR="/usr/share/${PN}"
 LIBDIR="/usr/lib/${PN}"
 
-DB_VERS="31"
+DB_VERS="32"
 
 db_update_check() {
 
@@ -128,7 +129,7 @@ src_prepare() {
 
 src_install() {
 
-	newinitd "${FILESDIR}"/xxv.utf8-v4 xxv
+	newinitd "${FILESDIR}"/xxv.utf8-v5 xxv
 
 	dobin	bin/xxvd
 
@@ -163,7 +164,7 @@ src_install() {
 
 	cd "${S}"/doc
 	insinto /usr/share/doc/"${P}"
-	doins docu.tmpl CHANGELOG LIESMICH NEWS README TUTORIAL.txt.gz
+	doins docu.tmpl CHANGELOG README
 	fowners vdr:vdr /usr/share/doc/"${P}"
 
 	doman xxvd.1
