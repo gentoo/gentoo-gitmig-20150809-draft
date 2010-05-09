@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.74 2010/04/26 05:29:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.75 2010/05/09 11:31:59 graaff Exp $
+
+*hoe-2.6.0-r1 (09 May 2010)
+
+  09 May 2010; Hans de Graaff <graaff@gentoo.org> +hoe-2.6.0-r1.ebuild,
+  +files/hoe-2.6.0-rubyforge-without-account.patch:
+  Don't require rubyforge to be configured. Applied patch from Fedora by
+  Mamoru Tasaka, fixing bug 317881.
 
   26 Apr 2010; Hans de Graaff <graaff@gentoo.org> hoe-2.6.0.ebuild:
   Provide user-config file in those phases that need it. Use proper path for
