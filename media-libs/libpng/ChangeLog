@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.251 2010/05/03 20:29:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.252 2010/05/09 00:03:28 ssuominen Exp $
+
+*libpng-1.4.2 (09 May 2010)
+*libpng-1.2.43-r2 (09 May 2010)
+*libpng-1.2.43-r1 (09 May 2010)
+
+  09 May 2010; Samuli Suominen <ssuominen@gentoo.org> libpng-1.2.40.ebuild,
+  -libpng-1.2.42.ebuild, -libpng-1.2.43.ebuild, +libpng-1.2.43-r1.ebuild,
+  +libpng-1.2.43-r2.ebuild, -libpng-1.4.2_rc5.ebuild, +libpng-1.4.2.ebuild:
+  Version bump to final 1.4.2 and release it into arch wrt #305095.
 
 *libpng-1.4.2_rc5 (03 May 2010)
 
