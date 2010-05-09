@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PPI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.32 2010/04/09 07:38:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.33 2010/05/09 08:29:50 tove Exp $
+
+*PPI-1.212 (09 May 2010)
+
+  09 May 2010; Torsten Veller <tove@gentoo.org> +PPI-1.212.ebuild:
+  Version bump
 
   09 Apr 2010; Torsten Veller <tove@gentoo.org> -PPI-1.206.ebuild,
   -PPI-1.208.ebuild, -PPI-1.209.ebuild:
