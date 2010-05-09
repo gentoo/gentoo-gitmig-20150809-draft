@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r2.ebuild,v 1.1 2010/03/27 09:11:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r2.ebuild,v 1.2 2010/05/09 18:32:49 armin76 Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="http://matt.immute.net/src/mtail/mtail-${PV}.tgz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha ~amd64 ~mips ~ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 src_prepare() {
