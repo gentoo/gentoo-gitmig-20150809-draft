@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.73 2010/03/28 18:09:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.74 2010/05/09 18:48:37 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask ipod
 
   28 Mar 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Package.use.mask dev-util/subversion kde
