@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.751 2010/04/27 02:33:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.752 2010/05/09 11:26:06 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org> gcc-4.4.3-r2.ebuild:
+  Add ~sh
 
   27 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> gcc-4.4.3-r2.ebuild:
   Tweak message.
