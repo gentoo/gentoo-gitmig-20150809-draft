@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.0.1.5.ebuild,v 1.1 2010/04/29 12:48:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.0.1.5.ebuild,v 1.2 2010/05/09 19:37:26 voyageur Exp $
 
 EAPI=1
 inherit eutils versionator
@@ -18,6 +18,7 @@ IUSE="+fuse ldap postgres sqlite"
 
 DEPEND=""
 RDEPEND="app-admin/sudo
+	dev-perl/Config-Simple
 	net-misc/nx
 	virtual/ssh
 	fuse? ( sys-fs/sshfs-fuse )
