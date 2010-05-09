@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-1.8.1-r1.ebuild,v 1.4 2010/05/09 16:26:18 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.0.ebuild,v 1.1 2010/05/09 16:26:18 billie Exp $
 
 PYTHON_DEPEND=2
 
 inherit python multilib
 
-MY_PV=20081201
+MY_PV=20081230
 
 DESCRIPTION="PFL is an online searchable file/package database for Gentoo"
 HOMEPAGE="http://www.portagefilelist.de/index.php/Special:PFLQuery2"
@@ -56,8 +56,8 @@ src_install() {
 pkg_postinst() {
 	python_mod_optimize $(python_get_sitedir)/${PN}
 
-	if [[ ! -e "${ROOT%/}/var/lib/${PN}/lastrun" ]]; then
-		echo -n 0 > "${ROOT%/}/var/lib/${PN}/lastrun"
+	if [[ ! -e "${ROOT%/}/var/lib/${PN}/pfl.info" ]]; then
+		touch "${ROOT%/}/var/lib/${PN}/pfl.info"
 		chown -R 0:portage "${ROOT%/}/var/lib/${PN}"
 		chmod 775 "${ROOT%/}/var/lib/${PN}"
 	fi
