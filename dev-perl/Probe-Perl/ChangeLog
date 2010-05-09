@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Probe-Perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.8 2010/05/05 05:41:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.9 2010/05/09 17:23:31 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org> Probe-Perl-0.01.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable
 
   05 May 2010; Jeroen Roovers <jer@gentoo.org> Probe-Perl-0.01.ebuild:
   Stable for HPPA (bug #314467).
