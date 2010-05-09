@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.ebuild,v 1.1 2010/05/09 09:32:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.ebuild,v 1.2 2010/05/09 21:10:35 hd_brummy Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ RDEPEND=">=media-video/vdr-1.2.6
 	dev-perl/Font-TTF
 	dev-perl/GD[png,gif]
 	dev-perl/IO-Socket-INET6
+	dev-perl/JSON
 	dev-perl/JSON-XS
 	dev-perl/Linux-Inotify2
 	dev-perl/Locale-gettext
@@ -135,6 +136,7 @@ src_install() {
 
 	insinto /etc/"${PN}"
 	newins "${FILESDIR}"/xxvd-1.0.cfg xxvd.cfg
+	chown vdr:vdr "${D}"/etc/"${PN}"/xxvd.cfg
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/xxvd-logrotate xxvd
