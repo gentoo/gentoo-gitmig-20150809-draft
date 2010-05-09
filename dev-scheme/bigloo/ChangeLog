@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.39 2010/04/18 16:11:39 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.40 2010/05/09 22:15:50 chiiph Exp $
+
+  09 May 2010; Tomas Touceda <chiiph@gentoo.org> bigloo-3.0c_p4.ebuild:
+  Patch to prevent prestripping wrt bug 251925. Thanks to Christophe
+  Lefebvre
 
   18 Apr 2010; Tomas Touceda <chiiph@gentoo.org> bigloo-3.0c_p4.ebuild,
   bigloo-3.3a_p5.ebuild:

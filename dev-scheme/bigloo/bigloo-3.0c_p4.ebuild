@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0c_p4.ebuild,v 1.6 2010/04/18 16:11:39 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.0c_p4.ebuild,v 1.7 2010/05/09 22:15:50 chiiph Exp $
+
+EAPI="2"
 
 inherit elisp-common multilib java-pkg-opt-2
 
@@ -29,11 +31,13 @@ SITEFILE="50bigloo-gentoo.el"
 IUSE="emacs java"
 # fullbee"
 
-src_compile() {
-	if use emacs; then
-		elisp-compile etc/*.el || die "elisp-compile failed"
-	fi
+src_prepare() {
+	sed -i -e 's/^cstrip="-s"/cstrip="no"/' \
+		-e 's/STRIP=$strip/STRIP=true/' \
+		configure || die
+}
 
+src_configure() {
 	# Bigloo doesn't use autoconf and consequently a lot of options used by econf give errors
 	# Manuel Serrano says: "Please, dont talk to me about autoconf. I simply dont want to hear about it..."
 	./configure \
@@ -49,6 +53,13 @@ src_compile() {
 		--coflags="" || die "configure failed"
 
 #		--bee=$(if use fullbee; then echo full; else echo partial; fi) \
+
+}
+
+src_compile() {
+	if use emacs; then
+		elisp-compile etc/*.el || die "elisp-compile failed"
+	fi
 
 	# parallel build is broken
 	emake -j1 || die "emake failed"
