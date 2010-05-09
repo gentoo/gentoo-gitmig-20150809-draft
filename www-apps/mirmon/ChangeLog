@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mirmon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/ChangeLog,v 1.1 2010/05/09 22:06:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/ChangeLog,v 1.2 2010/05/09 22:07:33 darkside Exp $
+
+  09 May 2010; Jeremy Olexa <darkside@gentoo.org> mirmon-1.38-r3.ebuild:
+  Add empty IUSE var for repoman
 
 *mirmon-1.38-r3 (09 May 2010)
 
