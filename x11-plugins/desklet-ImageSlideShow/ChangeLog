@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-ImageSlideShow
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/ChangeLog,v 1.4 2010/05/08 22:42:30 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/ChangeLog,v 1.5 2010/05/09 00:30:23 nixphoeni Exp $
+
+  09 May 2010; Joe Sapp <nixphoeni@gentoo.org>
+  desklet-ImageSlideShow-0.8-r1.ebuild:
+  Removed SRC_URI since it's defined in the eclass
 
   08 May 2010; Joe Sapp <nixphoeni@gentoo.org>
   desklet-ImageSlideShow-0.8-r1.ebuild:
