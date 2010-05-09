@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.7-r1.ebuild,v 1.2 2010/04/05 15:11:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.7-r1.ebuild,v 1.3 2010/05/09 09:55:05 pacho Exp $
 
 EAPI="2"
 
@@ -30,6 +30,13 @@ DEPEND=">=virtual/jdk-1.5
 
 java_prepare() {
 	epatch "${FILESDIR}/${PN}-2.5.1-jarfixes.patch"
+
+	# dev-tex/tex4ht changed htlatex path, see bug #318963
+	if use doc; then
+		if has_version ">=dev-tex/tex4ht-20090611_p1038-r1" ; then
+			sed -i -e 's:htlatex:/usr/share/texmf/tex/generic/tex4ht/htlatex:' Makefile || die
+		fi
+	fi
 }
 
 src_compile() {
