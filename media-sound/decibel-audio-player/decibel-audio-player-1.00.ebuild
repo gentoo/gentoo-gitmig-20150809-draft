@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/decibel-audio-player-1.00.ebuild,v 1.8 2009/08/04 07:34:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/decibel-audio-player-1.00.ebuild,v 1.9 2010/05/09 17:35:40 armin76 Exp $
 
 DESCRIPTION="A GTK+ audio player which aims at being very straightforward to use."
 HOMEPAGE="http://decibel.silent-blade.org"
@@ -8,7 +8,7 @@ SRC_URI="http://decibel.silent-blade.org/uploads/Main/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="aac cdda gnome-keyring libnotify musepack"
 
 RDEPEND="media-libs/mutagen

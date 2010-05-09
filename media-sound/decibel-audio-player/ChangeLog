@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/decibel-audio-player
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/ChangeLog,v 1.19 2010/04/19 20:35:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/ChangeLog,v 1.20 2010/05/09 17:35:40 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org>
+  decibel-audio-player-1.00.ebuild:
+  Drop sparc keyword
 
 *decibel-audio-player-1.03 (19 Apr 2010)
 
