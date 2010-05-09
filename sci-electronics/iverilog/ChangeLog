@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.31 2010/04/18 14:10:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.32 2010/05/09 17:37:34 armin76 Exp $
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org> iverilog-0.9.1.ebuild:
+  sparc stable wrt #302500
 
   18 Apr 2010; <nixnut@gentoo.org> iverilog-0.9.1.ebuild:
   ppc stable #302500
