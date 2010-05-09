@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.35 2010/03/16 07:49:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.36 2010/05/09 17:16:15 pva Exp $
+
+*ebtables-2.0.9.2-r1 (09 May 2010)
+
+  09 May 2010; Peter Volkov <pva@gentoo.org> +ebtables-2.0.9.2-r1.ebuild,
+  +files/ebtables.confd-r1, +files/ebtables.initd-r1:
+  Fix ebtables tables detection, bug #314529, thank Veovis for report and
+  suggested fix.
 
 *ebtables-2.0.9.2 (16 Mar 2010)
 
