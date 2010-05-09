@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.1.ebuild,v 1.1 2010/03/14 23:02:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.1.ebuild,v 1.2 2010/05/09 09:29:34 pacho Exp $
 
 EAPI="2"
 
-inherit gnome2 flag-o-matic python autotools
+inherit gnome2 flag-o-matic python
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
