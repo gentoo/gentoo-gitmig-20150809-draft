@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r4.ebuild,v 1.2 2010/04/26 10:58:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r4.ebuild,v 1.3 2010/05/09 19:24:17 voyageur Exp $
 
 EAPI=2
 
@@ -52,6 +52,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-nxloadconfig.patch
 	epatch "${FILESDIR}"/${PN}-0.7.3_p102-cflags.patch
 	epatch "${FILESDIR}"/${PN}-0.7.2-cups.patch
+	epatch "${FILESDIR}"/${P}-jobserver_fix.patch
 
 	# Path to net-misc/nx files, support for nx 3.4.0
 	sed	-e "/PATH_LIB=/s/lib/$(get_libdir)/g" \
