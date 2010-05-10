@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.98 2010/03/07 22:23:15 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.99 2010/05/10 19:13:05 idl0r Exp $
+
+*cfengine-2.2.10-r2 (10 May 2010)
+
+  10 May 2010; Christian Ruppert <idl0r@gentoo.org>
+  +files/511666-segfault.patch, -cfengine-2.2.10-r1.ebuild,
+  +cfengine-2.2.10-r2.ebuild, +files/admit-noclass-520696.patch:
+  Revision bump, fixes
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=520696 and
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511666
 
 *cfengine-2.2.10-r1 (07 Mar 2010)
 

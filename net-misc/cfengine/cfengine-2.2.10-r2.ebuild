@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r1.ebuild,v 1.1 2010/03/07 22:23:15 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r2.ebuild,v 1.1 2010/05/10 19:13:05 idl0r Exp $
 
 EAPI="2"
 
@@ -22,11 +22,16 @@ DEPEND=">=sys-libs/db-4
 RDEPEND="${DEPEND}"
 PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
 
+src_prepare() {
+	epatch "${FILESDIR}/admit-noclass-520696.patch" \
+		"${FILESDIR}/511666-segfault.patch"
+}
+
 src_configure() {
 	# Enforce /var/cfengine for historical compatibility
 	econf \
 		--with-workdir=/var/cfengine \
-		--with-berkeleydb=/usr || die
+		--with-berkeleydb=/usr
 
 	# Fix Makefile to skip doc,inputs, & contrib install to wrong locations
 	sed -i -e 's/\(DIST_SUBDIRS.*\) contrib inputs doc/\1/' Makefile
@@ -38,9 +43,9 @@ src_configure() {
 }
 
 src_install() {
-	newinitd "${FILESDIR}"/cfservd.rc6 cfservd
-	newinitd "${FILESDIR}"/cfenvd.rc6 cfenvd
-	newinitd "${FILESDIR}"/cfexecd.rc6 cfexecd
+	newinitd "${FILESDIR}"/cfservd.rc6 cfservd || die
+	newinitd "${FILESDIR}"/cfenvd.rc6 cfenvd || die
+	newinitd "${FILESDIR}"/cfexecd.rc6 cfexecd || die
 
 	make DESTDIR="${D}" install || die
 
