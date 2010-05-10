@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20100504.ebuild,v 1.1 2010/05/07 18:10:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20100504.ebuild,v 1.2 2010/05/10 02:22:11 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -41,6 +41,7 @@ src_prepare() {
 		-e 's:\($(SHLIBLDFLAGS)\):$(LDFLAGS) \1:' \
 		Makefile \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-fixups.patch
 }
 
 src_compile() {
