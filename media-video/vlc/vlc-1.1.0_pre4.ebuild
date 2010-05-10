@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.0_pre3.ebuild,v 1.1 2010/05/01 12:45:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.0_pre4.ebuild,v 1.1 2010/05/10 05:09:48 aballier Exp $
 
 EAPI="2"
 
