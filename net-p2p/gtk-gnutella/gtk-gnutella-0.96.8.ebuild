@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.8.ebuild,v 1.1 2010/03/22 07:02:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.8.ebuild,v 1.2 2010/05/10 11:58:49 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://gtk-gnutella.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86 ~x86-fbsd"
 
 RDEPEND=">=dev-libs/libxml2-2.6.0
 	>=x11-libs/gtk+-2.2.1
