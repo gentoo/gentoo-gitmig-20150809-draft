@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyPdf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.5 2009/12/20 23:14:53 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.6 2010/05/10 17:29:10 phajdan.jr Exp $
+
+  10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyPdf-1.12.ebuild:
+  x86 stable wrt bug #309773
 
   21 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyPdf-1.12.ebuild:
