@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.44 2010/02/22 16:03:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.45 2010/05/10 13:57:27 ssuominen Exp $
+
+  10 May 2010; Samuli Suominen <ssuominen@gentoo.org> +files/lpng14.patch,
+  mozilla-sunbird-0.9.ebuild:
+  Fix building with libpng14 wrt #319093 by Jonathan Adamczewski.
 
   22 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   mozilla-sunbird-0.9.ebuild:

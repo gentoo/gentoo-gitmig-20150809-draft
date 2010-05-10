@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.8 2010/02/22 16:03:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.9 2010/05/10 13:57:27 ssuominen Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -115,6 +115,9 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"/patch
+
+	# todo: move to patchset
+	epatch "${FILESDIR}"/lpng14.patch
 
 	eautoreconf
 }
