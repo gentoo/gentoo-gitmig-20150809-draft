@@ -1,6 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.40.ebuild,v 1.11 2010/05/09 00:03:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.40.ebuild,v 1.12 2010/05/10 13:02:24 ssuominen Exp $
+
+# last of the unslotted libpng ebuild, in weird slot too, please kill this soon
+# as KEYWORDS allow it.
 
 EAPI=3
 inherit libtool
