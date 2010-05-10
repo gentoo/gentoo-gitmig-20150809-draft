@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.0.ebuild,v 1.1 2010/05/09 16:26:18 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.0.ebuild,v 1.2 2010/05/10 21:27:52 billie Exp $
 
 PYTHON_DEPEND=2
 
@@ -20,6 +20,7 @@ IUSE="network-cron"
 
 DEPEND=""
 RDEPEND="${DEPEND}
+	dev-python/pyxml
 	net-misc/curl
 	sys-apps/portage"
 
