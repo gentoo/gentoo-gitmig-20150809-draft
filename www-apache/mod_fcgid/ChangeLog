@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.43 2010/01/31 19:38:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.44 2010/05/10 18:41:33 nixnut Exp $
+
+  10 May 2010; nixnut <nixnut@gentoo.org> mod_fcgid-2.3.5.ebuild:
+  ppc stable #318259
 
 *mod_fcgid-2.3.5 (31 Jan 2010)
 
