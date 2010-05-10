@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1_p20091114.ebuild,v 1.6 2010/05/04 18:53:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1_p20091114.ebuild,v 1.7 2010/05/10 12:43:34 ssuominen Exp $
 
 EAPI=2
 
@@ -35,6 +35,7 @@ src_prepare() {
 		-e "s:^CC=.*:CC=$(tc-getCC) ${CFLAGS}:" \
 		-e "s:^MANDIR=.*:MANDIR=/usr/share/man:" \
 		-e "s:^\t\(.*\)\ \$(LDFLAGS)\ \(.*\):\t\1\ \2\ \$(LDFLAGS):g" \
+		-e "s:lpng12:lpng:" \
 		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
 		Makefile || die "sed failed in Makefile"
 	epatch "${FILESDIR}/${PN}-1.3.1-config.diff"
