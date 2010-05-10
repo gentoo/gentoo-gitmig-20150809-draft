@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.376.0_p44230.ebuild,v 1.1 2010/04/14 12:48:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.376.0_p44230.ebuild,v 1.2 2010/05/10 07:56:44 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -23,7 +23,7 @@ RDEPEND="app-arch/bzip2
 	gnome-base/gconf
 	>=media-libs/alsa-lib-1.0.19
 	<media-libs/jpeg-7
-	=media-libs/libpng-1.2*
+	media-libs/libpng:1.2
 	>=sys-devel/gcc-4.2
 	>=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12.3

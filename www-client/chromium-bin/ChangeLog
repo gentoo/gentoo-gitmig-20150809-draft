@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.65 2010/04/14 12:48:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.66 2010/05/10 07:56:44 voyageur Exp $
+
+  10 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-bin-5.0.308.0_p37385.ebuild,
+  chromium-bin-5.0.376.0_p44230.ebuild, chromium-bin-9999.ebuild:
+  Correct libpng 1.2 dependency
 
 *chromium-bin-5.0.376.0_p44230 (14 Apr 2010)
 
