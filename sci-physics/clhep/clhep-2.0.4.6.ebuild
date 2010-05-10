@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.4.6.ebuild,v 1.1 2010/03/23 02:32:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.4.6.ebuild,v 1.2 2010/05/10 16:55:15 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cern.ch/clhep"
 SRC_URI="http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/tarFiles/${P}.tgz"
 LICENSE="public-domain"
 SLOT="2"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc x86"
 
 IUSE="exceptions"
 RDEPEND=""
