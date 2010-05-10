@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.4-r1.ebuild,v 1.1 2010/03/27 22:32:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.4-r1.ebuild,v 1.2 2010/05/10 12:59:16 phajdan.jr Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug libffi"
 
 CLASSPATH_SLOT=0.98
