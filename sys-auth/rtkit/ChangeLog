@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/rtkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.2 2010/05/04 16:36:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.3 2010/05/10 13:16:53 ford_prefect Exp $
+
+*rtkit-0.7 (10 May 2010)
+
+  10 May 2010; Arun Raghavan <ford_prefect@gentoo.org> +rtkit-0.7.ebuild:
+  Bump to 0.7. Minor features and bug fixes.
 
   04 May 2010; Jeroen Roovers <jer@gentoo.org> rtkit-0.6.ebuild:
   Marked ~hppa (bug #308971).
