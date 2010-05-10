@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.143 2010/05/03 15:50:29 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.144 2010/05/10 16:24:57 chithanh Exp $
+
+  10 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  package.use.mask dev-libs/udis86 test
 
   03 May 2010; Alex Legler <a3li@gentoo.org> use.mask:
   Readd ruby_targets_ree18 USE mask. Supported arches will be whitelisted
