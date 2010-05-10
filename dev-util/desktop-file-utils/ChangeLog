@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.89 2010/05/07 06:12:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.90 2010/05/10 07:50:14 phajdan.jr Exp $
+
+  10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  desktop-file-utils-0.16.ebuild:
+  x86 stable wrt bug #316675
 
   07 May 2010; Jeroen Roovers <jer@gentoo.org>
   desktop-file-utils-0.16.ebuild:
