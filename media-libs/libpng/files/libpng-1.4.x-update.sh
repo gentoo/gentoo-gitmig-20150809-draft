@@ -1,5 +1,13 @@
 #!/bin/bash
-find /usr/lib64 -name '*.la' | xargs sed -i -e '/^dep/s:-lpng12:-lpng14:'
-find /usr/lib -name '*.la' | xargs sed -i -e '/^dep/s:-lpng12:-lpng14:'
 
-# feel free to modify, licensed WTFPL-2
+echo "Run revdep-rebuild before this. This brute force script fill rename"
+echo "rest of -lpng12 and libpng12.la entries in your systems .la files."
+
+[[ -d /usr/lib64 ]] && lib_suffix=64
+
+libdir=/usr/lib${lib_suffix}
+
+find ${libdir} -name '*.la' | xargs sed -i -e '/^dependency_libs/s:-lpng12:-lpng14:'
+find ${libdir} -name '*.la' | xargs sed -i -e '/^dependency_libs/s:libpng12.la:libpng14.la:'
+
+# WTFPL-2
