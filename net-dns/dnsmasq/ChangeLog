@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.190 2010/02/10 14:55:06 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.191 2010/05/10 07:57:10 phajdan.jr Exp $
+
+  10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> dnsmasq-2.52.ebuild:
+  x86 stable wrt bug #316715
 
 *dnsmasq-2.52 (10 Feb 2010)
 
