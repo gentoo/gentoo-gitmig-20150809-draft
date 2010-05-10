@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p3-r1.ebuild,v 1.1 2010/04/28 21:59:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p3-r1.ebuild,v 1.2 2010/05/10 13:36:31 idl0r Exp $
 
 EAPI="2"
 
@@ -198,9 +198,9 @@ src_install() {
 	insinto /etc/bind
 	newins "${FILESDIR}"/named.conf-r3 named.conf || die
 
-	# ftp://ftp.rs.internic.net/domain/named.ca:
+	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
-	doins "${FILESDIR}"/named.ca || die
+	doins "${FILESDIR}"/named.cache || die
 
 	insinto /var/bind/pri
 	newins "${FILESDIR}"/127.zone-r1 127.zone || die
@@ -209,7 +209,7 @@ src_install() {
 	newinitd "${FILESDIR}"/named.init-r7 named || die
 	newconfd "${FILESDIR}"/named.confd-r3 named || die
 
-	dosym /var/bind/named.ca /var/bind/root.cache
+	dosym /var/bind/named.cache /var/bind/root.cache
 	dosym /var/bind/pri /etc/bind/pri
 	dosym /var/bind/sec /etc/bind/sec
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.3_p5.ebuild,v 1.7 2010/03/23 19:40:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.3_p5.ebuild,v 1.8 2010/05/10 13:36:31 idl0r Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -170,8 +170,8 @@ src_install() {
 
 	insinto /etc/bind ; newins "${FILESDIR}"/named.conf-r3 named.conf
 
-	# ftp://ftp.rs.internic.net/domain/named.ca:
-	insinto /var/bind ; doins "${FILESDIR}"/named.ca
+	# ftp://ftp.rs.internic.net/domain/named.cache:
+	insinto /var/bind ; doins "${FILESDIR}"/named.cache
 
 	insinto /var/bind/pri
 	newins "${FILESDIR}"/127.zone-r1 127.zone
@@ -180,7 +180,7 @@ src_install() {
 	newinitd "${FILESDIR}"/named.init-r5 named
 	newconfd "${FILESDIR}"/named.confd-r2 named
 
-	dosym ../../var/bind/named.ca /var/bind/root.cache
+	dosym ../../var/bind/named.cache /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
 
