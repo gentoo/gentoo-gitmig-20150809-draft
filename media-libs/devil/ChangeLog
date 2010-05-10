@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/devil
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.39 2009/12/21 20:04:32 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.40 2010/05/10 20:50:06 ssuominen Exp $
+
+*devil-1.7.8 (10 May 2010)
+
+  10 May 2010; Samuli Suominen <ssuominen@gentoo.org> +devil-1.7.8.ebuild,
+  +files/devil-1.7.8-CVE-2009-3994.patch, +files/devil-1.7.8-libpng14.patch:
+  Version bump wrt #297760 (Karl-Robert Ernst) with CVE-2009-3994 patch
+  (Christopher Harvey) and libpng14 compability (Marcin Baczyński)
 
   21 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org> devil-1.7.7.ebuild:
   update USE=X deps (bug #297608)
