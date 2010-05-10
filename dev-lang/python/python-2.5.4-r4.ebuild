@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.16 2010/05/02 16:41:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.17 2010/05/10 18:44:05 arfrever Exp $
 
 EAPI="1"
 
@@ -146,8 +146,8 @@ src_configure() {
 	[[ "${ARCH}" == "alpha" ]] && append-flags -fPIC
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=50309
-	if is-flag -O3; then
-		is-flag -fstack-protector-all && replace-flags -O3 -O2
+	if is-flagq -O3; then
+		is-flagq -fstack-protector-all && replace-flags -O3 -O2
 		use hardened && replace-flags -O3 -O2
 	fi
 
