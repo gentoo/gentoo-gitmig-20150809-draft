@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/udis86
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.3 2010/05/07 16:14:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.4 2010/05/10 12:55:19 chithanh Exp $
+
+  10 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  udis86-1.7.ebuild:
+  depend on dev-lang/yasm for test, bug #318805
 
   07 May 2010; Jeroen Roovers <jer@gentoo.org> udis86-1.7.ebuild:
   Marked ~hppa (bug #317149).
