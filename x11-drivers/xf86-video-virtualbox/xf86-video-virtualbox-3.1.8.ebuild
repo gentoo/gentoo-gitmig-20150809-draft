@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.4-r2.ebuild,v 1.2 2010/05/10 13:27:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.8.ebuild,v 1.1 2010/05/10 13:27:52 polynomial-c Exp $
 
 EAPI=2
 
@@ -51,11 +51,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-
-		# 2.6.33 support, backported patch
-		# See http://www.virtualbox.org/ticket/6198
-		epatch "${FILESDIR}"/${P}-2.6.33.patch
-
 		# Prepare the vboxvideo_drm sources and Makefile in ${WORKDIR}
 		cp -a "${WORKDIR}/${MY_P/-OSE/_OSE}"/src/VBox/Additions/linux/drm \
 		"${WORKDIR}/vboxvideo_drm" || die "cannot copy vboxvideo_drm directory"

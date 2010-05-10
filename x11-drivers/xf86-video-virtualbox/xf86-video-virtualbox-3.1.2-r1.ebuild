@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.2-r1.ebuild,v 1.1 2010/05/01 00:01:34 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.2-r1.ebuild,v 1.2 2010/05/10 13:27:52 polynomial-c Exp $
 
 EAPI=2
 
@@ -62,9 +62,9 @@ src_unpack() {
 
 src_prepare() {
 	        if kernel_is -ge 2 6 33 ; then
-	                # evil patch for new kernels - header moved
-        	        grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
-        	fi
+			# evil patch for new kernels - header moved
+			grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
+		fi
 		# Remove shipped binaries (kBuild,yasm), see bug #232775
 		rm -rf kBuild/bin tools
 

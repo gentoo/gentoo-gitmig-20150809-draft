@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.1.4-r1.ebuild,v 1.2 2010/04/30 19:46:02 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.1.4-r1.ebuild,v 1.3 2010/05/10 13:31:46 polynomial-c Exp $
 
 EAPI=2
 
@@ -31,9 +31,9 @@ S=${WORKDIR}/${MY_P/-OSE/_OSE}
 
 src_prepare() {
 		if kernel_is -ge 2 6 33 ; then
-                	# evil patch for new kernels - header moved
-                	grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:' || die "Failed replacing"
-        	fi
+			# evil patch for new kernels - header moved
+			grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:' || die "Failed replacing"
+		fi
 		# Remove shipped binaries (kBuild,yasm), see bug #232775
 		rm -rf kBuild/bin tools
 

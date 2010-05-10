@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.1.2.ebuild,v 1.3 2010/05/10 13:31:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.1.8.ebuild,v 1.1 2010/05/10 13:31:46 polynomial-c Exp $
 
 EAPI=2
 
@@ -80,7 +80,7 @@ src_install() {
 		# install hal information file about the mouse driver
 		if use hal; then
 			cd "${S}/src/VBox/Additions/linux/installer"
-			insinto /usr/share/hal/fdi/information/20thirdparty
+			insinto /etc/hal/fdi/policy
 			doins 90-vboxguest.fdi
 		fi
 }
@@ -93,12 +93,8 @@ pkg_postinst() {
 		elog "in the Core Pointer's InputDevice section (Section \"InputDevice\")"
 		elog ""
 		if has_version ">=x11-base/xorg-server-1.5" ; then
-			elog "Starting with 1.5 version, X.Org Server can do mouse auto-detection"
-			elog "you may install the hal information file about the mouse driver:"
-			elog ""
-			elog "/usr/share/hal/fdi/information/20thirdparty/90-vboxguest.fdi"
-			elog ""
-			elog "dropping it into: /etc/hal/fdi/policy/"
-			elog ""
+			elog "Starting with 1.5 version, X.Org Server can do mouse auto-detection."
+			elog "This ebuild provides a working default which has been installed into:"
+			elog "    /etc/hal/fdi/policy/90-vboxguest.fdi"
 		fi
 }
