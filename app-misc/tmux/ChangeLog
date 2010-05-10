@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.39 2010/05/09 22:02:04 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.40 2010/05/10 13:06:24 phajdan.jr Exp $
+
+  10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tmux-1.2.ebuild:
+  x86 stable wrt bug #317535
 
   09 May 2010; Harald van Dĳk <truedfx@gentoo.org> tmux-1.2.ebuild,
   +files/tmux-1.2-locale.patch:
