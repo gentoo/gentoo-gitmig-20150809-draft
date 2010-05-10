@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.37 2010/05/03 15:50:29 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.38 2010/05/10 12:52:42 chithanh Exp $
+
+  10 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  unmask dev-libs/udis86 test
 
   03 May 2010; Alex Legler <a3li@gentoo.org> use.mask:
   Unmask ruby_targets_ree18
