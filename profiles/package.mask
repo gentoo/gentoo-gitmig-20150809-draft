@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11530 2010/05/10 22:49:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11531 2010/05/10 23:27:04 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -830,7 +830,7 @@ net-misc/amazonmp3
 
 # Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
 # Masked until out of beta
-=dev-libs/libevent-2*
+=dev-libs/libevent-2.0.4
 
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing
