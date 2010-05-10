@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.4.3.ebuild,v 1.1 2010/05/03 20:51:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.4.3-r1.ebuild,v 1.1 2010/05/10 22:08:32 reavertm Exp $
 
 EAPI="3"
 
@@ -24,6 +24,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-libs/boost
 "
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.4.3_CVE-2010-1000.patch"
+)
 
 src_configure() {
 	mycmakeargs=(

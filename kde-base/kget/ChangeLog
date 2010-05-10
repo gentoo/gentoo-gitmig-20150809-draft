@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.157 2010/05/03 21:41:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.158 2010/05/10 22:08:32 reavertm Exp $
+
+*kget-4.4.3-r1 (10 May 2010)
+*kget-4.4.2-r1 (10 May 2010)
+
+  10 May 2010; Maciej Mrozowski <reavertm@gentoo.org> -kget-4.4.2.ebuild,
+  +kget-4.4.2-r1.ebuild, -kget-4.4.3.ebuild, +kget-4.4.3-r1.ebuild,
+  +files/kget-4.4.3_CVE-2010-1000.patch:
+  CVE-2010-1000
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kget-4.4.1.ebuild:
   Drop KDE SC 4.4.1
