@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.10 2010/03/09 08:17:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.11 2010/05/10 20:24:00 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
@@ -68,7 +68,7 @@ src_install() {
 			dobin Src/MPI/mpipython-${PYTHON_ABI}
 		}
 		python_execute_function -q installation_of_mpipython
-		python_generate_wrapper_scripts "${D}usr/bin/mpipython"
+		python_generate_wrapper_scripts "${ED}usr/bin/mpipython"
 		doins Examples/mpi.py || die "doins mpi example failed failed"
 	fi
 
