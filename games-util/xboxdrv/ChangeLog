@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xboxdrv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.3 2010/05/01 21:16:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.4 2010/05/10 17:39:05 phajdan.jr Exp $
+
+  10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xboxdrv-0.4.10.ebuild:
+  x86 stable wrt bug #313019
 
 *xboxdrv-0.4.11 (01 May 2010)
 
