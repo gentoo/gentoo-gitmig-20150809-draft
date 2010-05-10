@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langlithuanian
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlithuanian/ChangeLog,v 1.6 2010/02/13 20:07:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlithuanian/ChangeLog,v 1.7 2010/05/10 21:23:28 maekke Exp $
+
+  10 May 2010; Markus Meier <maekke@gentoo.org>
+  texlive-langlithuanian-2009.ebuild:
+  add ~arm, bug #300526
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   texlive-langlithuanian-2009.ebuild:
