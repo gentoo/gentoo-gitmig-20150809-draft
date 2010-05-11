@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/adodb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.105 2009/10/31 14:35:18 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.106 2010/05/11 10:02:56 pva Exp $
+
+*adodb-5.10 (11 May 2010)
+
+  11 May 2010; Peter Volkov <pva@gentoo.org> +adodb-5.10.ebuild:
+  Version bump.
 
   31 Oct 2009; Brent Baude <ranger@gentoo.org> adodb-5.08a.ebuild:
   Marking adodb-5.08a ppc64 for bug 278433
