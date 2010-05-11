@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.6 2010/01/04 16:16:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.7 2010/05/11 10:06:15 tupone Exp $
 EAPI=2
 
 inherit eutils games
@@ -70,15 +70,23 @@ src_prepare() {
 	ln -s xkoules.6 xkoules._man
 }
 
-src_compile() {
-	mkdir bins
+src_configure() {
 	if ! use svga ; then
 		xmkmf -a
 		sed -i \
 			-e '/SYSDEFS =/d' \
-			-e "/^ *CFLAGS =/s:$: ${CFLAGS}:" Makefile \
-				|| die "sed Makefile failed"
+			-e "/^ *CFLAGS =/s:$: ${CFLAGS}:" \
+			-e "/xkoules/s:^all:all1:" \
+			Makefile \
+			|| die "sed Makefile failed"
+	fi
+}
+
+src_compile() {
+	mkdir bins
+	if ! use svga ; then
 		emake || die "emake X failed"
+		emake all1 || die "emake X failed"
 		mv xkoules bins/
 	fi
 	if use svga ; then
