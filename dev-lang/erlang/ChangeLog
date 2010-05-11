@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.188 2010/05/07 18:15:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.189 2010/05/11 21:27:15 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> erlang-13.2.4.ebuild:
+  stable ppc64, bug 313849
 
   07 May 2010; Raúl Porcel <armin76@gentoo.org> erlang-13.2.4.ebuild:
   alpha/sparc stable wrt #313849
