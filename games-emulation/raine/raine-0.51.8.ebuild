@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.8.ebuild,v 1.1 2010/03/31 21:17:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.8.ebuild,v 1.2 2010/05/11 13:46:53 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://rainemu.swishparty.co.uk/html/archive/raines-${PV}.tar.bz2"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="static"
 
 RDEPEND="dev-cpp/muParser
