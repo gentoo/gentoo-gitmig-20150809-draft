@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1_p20091114.ebuild,v 1.8 2010/05/11 06:58:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1_p20091114.ebuild,v 1.9 2010/05/11 07:00:06 ssuominen Exp $
 
 EAPI=2
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="branding screenshot pam"
 
-DEPEND="x11-proto/xproto
+DEPEND="dev-util/pkgconfig
+	x11-proto/xproto
 	x11-libs/libXmu
 	x11-libs/libX11
 	x11-libs/libXpm
@@ -24,7 +25,6 @@ DEPEND="x11-proto/xproto
 	media-libs/jpeg
 	pam? ( virtual/pam )"
 RDEPEND="${DEPEND}
-	dev-util/pkgconfig
 	x11-apps/sessreg
 	screenshot? ( media-gfx/imagemagick )
 	branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
