@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-9.0_beta1.ebuild,v 1.1 2010/05/11 10:32:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-9.0_beta1.ebuild,v 1.2 2010/05/11 15:42:42 mr_bones_ Exp $
 
 EAPI=2
 
@@ -29,7 +29,6 @@ DEPEND="app-text/openjade
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-dsssl-stylesheets
 	app-text/sgmltools-lite"
-
 
 src_prepare() {
 	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch"
