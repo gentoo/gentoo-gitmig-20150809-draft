@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.142 2010/02/26 15:46:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.143 2010/05/11 06:30:22 jer Exp $
+
+  11 May 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Explain USE=+debug very specifically (bug #304231).
 
 *parted-2.2 (26 Feb 2010)
 

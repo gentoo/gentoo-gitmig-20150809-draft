@@ -3,7 +3,15 @@
 <pkgmetadata>
 <herd>livecd</herd>
 <use>
-	<flag name='device-mapper'>Enable <pkg>sys-fs/device-mapper</pkg> support
-		in parted</flag>
+	<flag name='device-mapper'>
+	Enable <pkg>sys-fs/device-mapper</pkg> support in parted
+	</flag>
+	<flag name="debug">
+	Enable debugging as encouraged by upstream: &ldquot;[The default
+	configuration] includes --enable-debug (by default), which contains many
+	assertions.  Obviously, these "waste" space, but in the past, they have
+	caught potentially dangerous bugs before they would have done damage, so we
+	think it's worth it.  Also, it means we get more bug reports ;)&rdquot;
+	</flag>
 </use>
 </pkgmetadata>
