@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.23 2010/05/04 19:50:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.24 2010/05/11 01:34:15 bicatali Exp $
+
+  11 May 2010; Sébastien Fabbro <bicatali@gentoo.org> gretl-1.9.0.ebuild:
+  Removed TODO from dodoc
 
 *gretl-1.9.0 (04 May 2010)
 
