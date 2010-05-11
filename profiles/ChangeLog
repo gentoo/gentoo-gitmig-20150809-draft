@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4172 2010/05/11 07:48:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4173 2010/05/11 13:14:23 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 May 2010; <chainsaw@gentoo.org> package.mask:
+  Mask Asterisk add-ons that fail to build for June 15 removal, bug #298682,
+  #299338, #312433, #313663, #316365 & #316761.
 
   11 May 2010; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Bug 313769: Mask new sys-libs/db-5* for testing and testsuite failures.
