@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.43-r1.ebuild,v 1.2 2010/05/10 19:41:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.43-r1.ebuild,v 1.3 2010/05/11 13:35:34 ssuominen Exp $
 
 # this ebuild is only for the libpng12.so SONAME for ABI compat
 
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
 pkg_setup() {
-	if [[ -e ${ROOT}/usr/$(get_libdir)/libpng12.so.0.43.0 ]]; then
-		rm -f "${ROOT}"/usr/$(get_libdir)/libpng12.so.0.43.0
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libpng12.so.0 ]]; then
+		rm -f "${ROOT}"/usr/$(get_libdir)/libpng12.so.0
 	fi
 }
 
@@ -39,5 +39,5 @@ src_configure() {
 
 src_install() {
 	exeinto /usr/$(get_libdir)
-	doexe .libs/libpng12.so.0.43.0 || die
+	newexe .libs/libpng12.so.0.43.0 libpng12.so.0 || die
 }
