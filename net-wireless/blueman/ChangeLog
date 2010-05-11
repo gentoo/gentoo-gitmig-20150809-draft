@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.5 2010/04/25 15:43:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.6 2010/05/11 07:54:00 dev-zero Exp $
+
+*blueman-1.21 (11 May 2010)
+
+  11 May 2010; Tiziano Müller <dev-zero@gentoo.org> +blueman-1.21.ebuild:
+  Version bump (bug #289902). Also solves bug #274085 (stripping bogus
+  line), bug #274894 (drop dep on notification-daemon completely,
+  automatically pulled in via notify-python), bug #283721 (solved by
+  upstream), bug #315893 (use get_python_sitedir), bug #316507 (added
+  --disable-static and rm *.la file), bug #285907 (solved by upstream).
 
   25 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   blueman-1.02.ebuild, blueman-1.10.ebuild:
