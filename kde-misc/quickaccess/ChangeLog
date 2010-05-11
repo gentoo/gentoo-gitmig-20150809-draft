@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/quickaccess
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.1 2010/05/11 16:19:11 spatz Exp $
+
+*quickaccess-0.8.1 (11 May 2010)
+
+  11 May 2010; Dror Levin <spatz@gentoo.org> +quickaccess-0.8.1.ebuild,
+  +metadata.xml:
+  Initial import from kde overlay, thanks to all who worked on it there.
+
