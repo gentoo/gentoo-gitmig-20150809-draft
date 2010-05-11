@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.96 2010/05/08 18:05:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.97 2010/05/11 15:23:37 jer Exp $
+
+  11 May 2010; Jeroen Roovers <jer@gentoo.org> rake-0.8.7-r3.ebuild:
+  Stable for HPPA (bug #311603).
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> rake-0.8.7-r3.ebuild:
   alpha/ia64/sparc stable wrt #311603
