@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.302 2010/05/03 23:21:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.303 2010/05/11 08:01:45 robbat2 Exp $
+
+*db-5.0.21 (11 May 2010)
+
+  11 May 2010; Robin H. Johnson <robbat2@gentoo.org> +db-5.0.21.ebuild:
+  Bug #313769: version bump. In package.mask still, has test failures. Some
+  false positives due to upstream, but still at least one failure that needs
+  work.
 
   03 May 2010; Robin H. Johnson <robbat2@gentoo.org> db-4.5.20_p2.ebuild,
   db-4.5.20_p2-r1.ebuild, db-4.6.21_p4.ebuild:
