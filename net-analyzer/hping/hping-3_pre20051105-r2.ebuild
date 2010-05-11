@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r2.ebuild,v 1.1 2010/05/11 04:08:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r2.ebuild,v 1.2 2010/05/11 15:43:01 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ src_prepare() {
 		-e 's:/usr/local/lib:/usr/$(LIBDIR):g' \
 		-e 's:-O2:$(CFLAGS):' \
 		|| die "sed Makefile.in failed"
-	
+
 	# Change name from hping2 to hping3
 	sed -i docs/hping3.8 \
 		-e 's|HPING2|HPING|g' \
