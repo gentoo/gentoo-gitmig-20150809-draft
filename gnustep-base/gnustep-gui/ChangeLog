@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.81 2010/05/10 19:01:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.82 2010/05/11 10:02:27 voyageur Exp $
+
+  11 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-gui-0.18.0.ebuild:
+  gsnd was removed, drop portaudio USE flag
 
 *gnustep-gui-0.18.0 (10 May 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.18.0.ebuild,v 1.1 2010/05/10 19:01:39 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.18.0.ebuild,v 1.2 2010/05/11 10:02:27 voyageur Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-IUSE="jpeg gif png portaudio cups"
+IUSE="jpeg gif png cups"
 
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=gnustep-base/gnustep-base-1.20.0
@@ -23,7 +23,6 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	jpeg? ( >=media-libs/jpeg-6b:0 )
 	gif? ( >=media-libs/giflib-4.1 )
 	png? ( >=media-libs/libpng-1.2 )
-	!x86-fbsd? ( portaudio? ( =media-libs/portaudio-19* ) )
 	cups? ( >=net-print/cups-1.1 )
 	media-libs/audiofile
 	app-text/aspell"
@@ -40,7 +39,6 @@ src_configure() {
 		--with-tiff-library="${EPREFIX}"/usr/$(get_libdir) \
 		$(use_enable jpeg) \
 		$(use_enable png) \
-		$(use_enable portaudio gsnd) \
 		$(use_enable cups) \
 		${myconf} || die "configure failed"
 }
