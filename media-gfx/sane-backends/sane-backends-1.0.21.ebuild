@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21.ebuild,v 1.1 2010/05/11 19:39:28 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21.ebuild,v 1.2 2010/05/11 20:31:16 phosphan Exp $
 
 EAPI="1"
 
@@ -128,7 +128,7 @@ RDEPEND="${RDEPEND}
 	!<sys-fs/udev-114"
 
 # Could not access via ftp on 2006-07-20
-SRC_URI="http://alioth.debian.org/frs/download.php/2318/${P}.tar.gz
+SRC_URI="http://alioth.debian.org/frs/download.php/3258/${P}.tar.gz
 	ftp://ftp.sane-project.org/pub/sane/${P}/${P}.tar.gz
 	ftp://ftp.sane-project.org/pub/sane/old-versions/${P}/${P}.tar.gz
 	ftp://ftp.sane-project.org/pub/sane/${P}/${P}-i18n.patch"
