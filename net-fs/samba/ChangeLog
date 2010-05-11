@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.411 2010/05/11 10:55:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.412 2010/05/11 11:27:47 patrick Exp $
+
+  11 May 2010; Patrick Lauer <patrick@gentoo.org> samba-3.4.6.ebuild,
+  samba-3.4.8.ebuild, samba-3.5.2-r1.ebuild:
+  Removing stray dobin call that triggered #318001
 
 *samba-3.4.8 (11 May 2010)
 

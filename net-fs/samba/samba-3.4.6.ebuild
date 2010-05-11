@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.4.6.ebuild,v 1.2 2010/05/04 14:26:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.4.6.ebuild,v 1.3 2010/05/11 11:27:47 patrick Exp $
 
 EAPI="2"
 
@@ -270,7 +270,7 @@ src_install() {
 		dosbin ${prog} || die "installing ${prog} failed"
 		doman ../docs/manpages/${prog/bin\/}* || die "doman failed"
 	done
-	dobin ${BINPROGS} || die "installing binaries failed"
+
 	for prog in ${BINPROGS} ; do
 		dobin ${prog} || die "installing ${prog} failed"
 		doman ../docs/manpages/${prog/bin\/}* || die "doman failed"
