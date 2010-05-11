@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/forehead
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.6 2007/08/18 10:56:40 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/forehead/ChangeLog,v 1.7 2010/05/11 12:18:57 phajdan.jr Exp $
+
+  11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  forehead-1.0_beta5-r1.ebuild:
+  x86 stable wrt bug #317643
 
   18 Aug 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Remove compnerd from metadata.xml.
