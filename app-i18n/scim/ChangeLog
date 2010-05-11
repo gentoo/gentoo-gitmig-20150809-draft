@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.140 2010/05/08 10:28:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.141 2010/05/11 17:58:45 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> scim-1.4.9-r1.ebuild:
+  Marking scim-1.4.9-r1 ppc64 for bug 306035
 
   08 May 2010; MATSUU Takuto <matsuu@gentoo.org> -scim-1.4.5-r1.ebuild,
   scim-1.4.7-r2.ebuild, -scim-1.4.8.ebuild, -scim-1.4.9.ebuild,
