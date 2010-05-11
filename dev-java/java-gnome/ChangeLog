@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.94 2010/04/25 07:27:52 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.95 2010/05/11 12:35:45 phajdan.jr Exp $
+
+  11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  java-gnome-4.0.15.ebuild:
+  x86 stable wrt bug #316309
 
   25 Apr 2010; Kenneth Prugh <ken69267@gentoo.org> java-gnome-4.0.15.ebuild:
   Update glib dependency
