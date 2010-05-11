@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.69 2010/05/02 11:28:27 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.70 2010/05/11 21:05:52 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> reportlab-2.4.ebuild:
+  stable ppc64, bug 306339
 
   02 May 2010; Dirkjan Ochtman <djc@gentoo.org> reportlab-2.4.ebuild:
   amd64 stable, bug 306339
