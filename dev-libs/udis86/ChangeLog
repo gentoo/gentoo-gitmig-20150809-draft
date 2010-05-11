@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/udis86
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.5 2010/05/10 18:17:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.6 2010/05/11 21:02:36 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> udis86-1.7.ebuild:
+  keyworded ~arch for ppc64, bug 317149
 
   10 May 2010; Jeroen Roovers <jer@gentoo.org> udis86-1.7.ebuild:
   Fix dependency on dev-lang/yasm (bug #318805).
