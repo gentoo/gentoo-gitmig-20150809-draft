@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.65 2010/04/18 17:13:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.66 2010/05/11 21:29:06 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> enca-1.13.ebuild:
+  stable ppc64, bug 311639
 
   18 Apr 2010; <nixnut@gentoo.org> enca-1.13.ebuild:
   ppc stable #311639
