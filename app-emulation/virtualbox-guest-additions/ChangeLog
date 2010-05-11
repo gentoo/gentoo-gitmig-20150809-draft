@@ -1,6 +1,19 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.37 2010/05/11 05:39:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.38 2010/05/11 18:52:37 lack Exp $
+
+*virtualbox-guest-additions-3.1.8-r1 (11 May 2010)
+
+  11 May 2010; Jim Ramsay <lack@gentoo.org>
+  virtualbox-guest-additions-3.1.4.ebuild,
+  virtualbox-guest-additions-3.1.6.ebuild,
+  -virtualbox-guest-additions-3.1.8.ebuild,
+  +virtualbox-guest-additions-3.1.8-r1.ebuild,
+  -files/virtualbox-guest-additions-4.initd,
+  +files/virtualbox-guest-additions-5.initd,
+  +files/virtualbox-guest-additions-6.initd:
+  Need s/vboxadd/vboxguest/ in the init script for version 3.1.4 and later
+  (Bug #305583)
 
   11 May 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-guest-additions-3.1.8.ebuild,

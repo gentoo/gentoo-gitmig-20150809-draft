@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.6.ebuild,v 1.2 2010/05/01 14:04:21 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.6.ebuild,v 1.3 2010/05/11 18:52:37 lack Exp $
 
 inherit eutils linux-mod
 
@@ -102,7 +102,7 @@ src_install() {
 		newins mount.vboxsf mount.vboxsf
 		fperms 4755 /sbin/mount.vboxsf
 
-		newinitd "${FILESDIR}"/${PN}-3.initd ${PN}
+		newinitd "${FILESDIR}"/${PN}-5.initd ${PN}
 
 		insinto /usr/sbin/
 		newins VBoxService vboxguest-service
