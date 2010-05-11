@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.9.2.ebuild,v 1.4 2010/05/09 17:09:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.9.2.ebuild,v 1.5 2010/05/11 20:54:55 josejx Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 x86"
 IUSE="gnome"
 
 RDEPEND=">=dev-libs/glib-2.14:2
