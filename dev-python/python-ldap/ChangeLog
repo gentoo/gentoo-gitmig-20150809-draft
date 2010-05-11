@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.81 2010/05/09 18:21:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.82 2010/05/11 21:14:57 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> python-ldap-2.3.11.ebuild:
+  stable ppc64, bug 313149
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> python-ldap-2.3.11.ebuild:
   alpha/ia64/sparc stable wrt #313149
