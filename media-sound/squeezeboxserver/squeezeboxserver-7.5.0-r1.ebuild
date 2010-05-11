@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.0.ebuild,v 1.1 2010/04/25 22:26:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.0-r1.ebuild,v 1.1 2010/05/11 21:34:48 lavajoe Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ RDEPEND="
 	virtual/logger
 	virtual/mysql
 	>=dev-lang/perl-5.8.8
-	>=dev-perl/Audio-Scan-0.59
+	~dev-perl/Audio-Scan-0.62
 	>=dev-perl/GD-2.41
 	>=virtual/perl-IO-Compress-2.015
 	>=dev-perl/YAML-Syck-1.05
@@ -148,10 +148,7 @@ pkg_setup() {
 	enewuser squeezeboxserver -1 -1 "/dev/null" squeezeboxserver
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Apply patches
 	epatch "${FILESDIR}/${P}-build-perl-modules-gentoo.patch"
 	epatch "${FILESDIR}/${P}-uuid-gentoo.patch"
