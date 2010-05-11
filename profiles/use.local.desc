@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5551 2010/05/11 06:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5552 2010/05/11 08:47:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3406,6 +3406,7 @@ sys-power/powerman:genders -  Add support for selecting power control targets us
 sys-power/powerman:httppower -  Add support for HTTP based power controllers 
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
 sys-power/suspend:fbsplash - Add support for framebuffer splash
+sys-power/upower:introspection - Use dev-libs/gobject-introspection for introspection
 sys-process/acct:logrotate - Install a logrotate script to rotate /var/account/*
 sys-process/cronie:inotify - Enable inotify filesystem monitoring support.
 sys-process/fcron:debug -  Enable debug code and output. Since version 3.0.5 this will no longer force foreground execution, and fcron will be able to run as a service properly. 
