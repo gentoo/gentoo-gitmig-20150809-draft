@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.22_p22763-r1.ebuild,v 1.5 2010/03/16 18:37:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.22_p22763-r1.ebuild,v 1.6 2010/05/11 20:49:07 josejx Exp $
 
 EAPI=2
 inherit mythtv webapp depend.php
 
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 IUSE=""
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="dev-perl/DBI
 	dev-perl/DBD-mysql
