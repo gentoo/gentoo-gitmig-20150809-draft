@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.266 2010/05/10 13:36:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.267 2010/05/11 18:28:33 idl0r Exp $
+
+  11 May 2010; Christian Ruppert <idl0r@gentoo.org> files/named.conf-r3:
+  Fix named.ca in named.conf-r3 as well, thanks to cilly
+  <cilly@cilly.mine.nu>.
 
   10 May 2010; Christian Ruppert <idl0r@gentoo.org> bind-9.4.3_p5.ebuild,
   bind-9.6.1_p3.ebuild, bind-9.6.1_p3-r1.ebuild, -files/named.ca,
