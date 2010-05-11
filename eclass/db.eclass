@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.36 2010/05/04 08:03:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.37 2010/05/11 07:58:43 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -90,10 +90,13 @@ db_src_install_examples() {
 
 db_src_install_usrbinslot() {
 	# slot all program names to avoid overwriting
-	for fname in "${D}"/usr/bin/db_*
+	for fname in "${D}"/usr/bin/db*
 	do
-		mv "${fname}" "${fname//\/db_//db${SLOT}_}" || \
-			die "Failed to rename ${fname}"
+		dn="$(dirname "${fname}")"
+		bn="$(basename "${fname}")"
+		bn="${bn/db/db${SLOT}}"
+		mv "${fname}" "${dn}/${bn}" || \
+			die "Failed to rename ${fname} to ${dn}/${bn}"
 	done
 }
 
