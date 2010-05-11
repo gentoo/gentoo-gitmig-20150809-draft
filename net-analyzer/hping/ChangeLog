@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/hping
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.48 2009/12/23 14:02:25 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.49 2010/05/11 04:08:17 jer Exp $
+
+*hping-3_pre20051105-r2 (11 May 2010)
+
+  11 May 2010; Jeroen Roovers <jer@gentoo.org>
+  +hping-3_pre20051105-r2.ebuild:
+  Do not hardcode better values in Makefile.in either, but set them in the
+  emake env. Change program name in man page thanks to Džen (bug #318823)
+  and install man page without version suffix.
 
   23 Dec 2009; Jeroen Roovers <jer@gentoo.org>
   hping-3_pre20051105-r1.ebuild, +files/hping-3_pre20051105-libtcl.patch:
