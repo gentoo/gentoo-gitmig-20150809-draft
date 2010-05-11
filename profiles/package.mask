@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11532 2010/05/10 23:27:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11533 2010/05/11 07:48:23 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Robin H. Johnson <robbat2@gentoo.org> (11 May 2010)
+# Masked for testing, and some testsuite failures.
+# Bug 313769
+=sys-libs/db-5*
 
 # Peter Volkov <pva@gentoo.org> (09 May 2010)
 # Fails to build/work, bug #319085
