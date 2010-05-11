@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.2.ebuild,v 1.6 2010/04/17 11:37:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.3-r1.ebuild,v 1.1 2010/05/11 08:35:49 ssuominen Exp $
 
 EAPI=3
 inherit linux-info
@@ -12,12 +12,13 @@ SRC_URI="http://upower.freedesktop.org/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-IUSE="debug doc nls kernel_FreeBSD kernel_linux test"
+IUSE="debug doc nls introspection kernel_FreeBSD kernel_linux test"
 
 COMMON_DEPEND=">=dev-libs/glib-2.21.5:2
 	>=sys-apps/dbus-1
 	>=dev-libs/dbus-glib-0.76
 	>=sys-auth/polkit-0.91
+	introspection? ( dev-libs/gobject-introspection )
 	kernel_linux? ( >=sys-fs/udev-151[extras]
 		virtual/libusb:0 )
 	!sys-apps/devicekit-power"
@@ -59,6 +60,7 @@ src_configure() {
 
 	econf \
 		--localstatedir="${EPREFIX}/var" \
+		$(use_enable introspection) \
 		--disable-dependency-tracking \
 		--disable-static \
 		$(use_enable debug verbose-mode) \
