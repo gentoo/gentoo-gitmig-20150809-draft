@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.82 2010/04/18 11:49:02 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.83 2010/05/11 17:01:03 vadimk Exp $
+
+  11 May 2010; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-player-2.5.3.185404.ebuild,
+  -files/vmware-player-2.5.3.185404-installer.patch,
+  -files/2.5.3.185404/vmware-player.py.patch,
+  -files/2.5.3.185404/vmware-player-extras.py.patch,
+  -vmware-player-2.5.3.185404-r1.ebuild:
+  removing old versions
 
 *vmware-player-2.5.4.246459 (18 Apr 2010)
 
