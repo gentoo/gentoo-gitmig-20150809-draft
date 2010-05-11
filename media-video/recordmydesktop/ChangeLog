@@ -1,6 +1,10 @@
 # ChangeLog for media-video/recordmydesktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.33 2010/04/16 19:06:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.34 2010/05/11 21:33:41 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org>
+  recordmydesktop-0.3.8.1-r3.ebuild:
+  stable ppc64, bug 315023
 
   16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   recordmydesktop-0.3.8.1-r3.ebuild:
