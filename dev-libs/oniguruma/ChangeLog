@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/oniguruma
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.44 2010/05/10 18:37:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.45 2010/05/11 21:05:46 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> oniguruma-5.9.2.ebuild:
+  stable ppc64, bug 318349
 
   10 May 2010; nixnut <nixnut@gentoo.org> oniguruma-5.9.2.ebuild:
   ppc stable #318349
