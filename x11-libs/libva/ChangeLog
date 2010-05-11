@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.1 2010/05/11 09:16:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.2 2010/05/11 09:33:33 aballier Exp $
+
+  11 May 2010; Alexis Ballier <aballier@gentoo.org> libva-0.31.0_p13.ebuild:
+  add pdepend on vdpau-video for nvidia support
 
 *libva-0.31.0_p13 (11 May 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-0.31.0_p13.ebuild,v 1.1 2010/05/11 09:16:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-0.31.0_p13.ebuild,v 1.2 2010/05/11 09:33:33 aballier Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="opengl"
 
-VIDEO_CARDS="dummy" # intel, nvidia
+VIDEO_CARDS="dummy nvidia" # intel
 for x in ${VIDEO_CARDS}; do
 	IUSE+=" video_cards_${x}"
 done
@@ -28,11 +28,11 @@ RDEPEND=">=x11-libs/libdrm-2.4
 	x11-libs/libXext
 	x11-libs/libXfixes
 	opengl? ( virtual/opengl )"
-# nvidia ? ( x11-libs/vdpau-video )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 # video_cards_intel? gen4asm
+PDEPEND="video_cards_nvidia? ( x11-libs/vdpau-video )"
 
 S=${WORKDIR}/${MY_P}
 
