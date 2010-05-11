@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-codec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.40 2010/04/28 14:56:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.41 2010/05/11 21:29:31 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> commons-codec-1.4.ebuild:
+  stable ppc64, bug 316295
 
   28 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   commons-codec-1.4.ebuild:
