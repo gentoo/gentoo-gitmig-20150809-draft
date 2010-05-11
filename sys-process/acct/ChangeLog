@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.26 2010/04/29 04:39:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.27 2010/05/11 02:42:16 jer Exp $
+
+  11 May 2010; Jeroen Roovers <jer@gentoo.org> acct-6.5.4.ebuild:
+  Stable for PPC (bug #316517).
 
   29 Apr 2010; Jeroen Roovers <jer@gentoo.org> acct-6.5.4.ebuild:
   Stable for HPPA (bug #316517).
