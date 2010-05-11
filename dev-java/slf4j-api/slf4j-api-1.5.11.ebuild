@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/slf4j-api-1.5.11.ebuild,v 1.1 2010/03/20 09:14:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/slf4j-api-1.5.11.ebuild,v 1.2 2010/05/11 12:42:33 phajdan.jr Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.slf4j.org/"
 SRC_URI="mirror://gentoo/${P}-sources.jar"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"

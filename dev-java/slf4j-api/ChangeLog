@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/slf4j-api
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.8 2010/03/20 09:14:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.9 2010/05/11 12:42:33 phajdan.jr Exp $
+
+  11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  slf4j-api-1.5.11.ebuild:
+  x86 stable wrt bug #316317
 
 *slf4j-api-1.5.11 (20 Mar 2010)
 
