@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.86 2010/05/10 08:05:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.87 2010/05/11 07:08:50 ssuominen Exp $
+
+  11 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  nxclient-3.3.0.6.ebuild, nxclient-3.4.0.5.ebuild, nxclient-3.4.0.7.ebuild:
+  Fix libpng depend wrt #319247.
 
   10 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
   nxclient-3.3.0.6.ebuild, nxclient-3.4.0.5.ebuild, nxclient-3.4.0.7.ebuild:
