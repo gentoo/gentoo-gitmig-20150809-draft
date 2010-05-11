@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/libmatthew-java
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libmatthew-java/ChangeLog,v 1.9 2010/04/05 15:27:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libmatthew-java/ChangeLog,v 1.10 2010/05/11 21:25:00 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> libmatthew-java-0.7.2.ebuild:
+  stable ppc64, bug 311741
 
   05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libmatthew-java-0.7.2.ebuild:
