@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/plt-scheme-4.2.2.ebuild,v 1.1 2009/10/09 15:15:42 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/plt-scheme-4.2.2.ebuild,v 1.2 2010/05/11 10:28:00 ssuominen Exp $
 
 inherit eutils latex-package
 
@@ -45,12 +45,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-#	epatch "${FILESDIR}"/typo.patch
-
 	#remove bundled libraries
 	rm -rf wxcommon/{jpeg,libpng,zlib}
 
-	sed "s,docdir=\"\${datadir}/plt/doc,docdir=\"\${datadir}/doc/${PF}," -i configure || die
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+
+	sed -i \
+		-e "s,docdir=\"\${datadir}/plt/doc,docdir=\"\${datadir}/doc/${PF}," \
+		configure || die
 }
 
 src_compile() {
