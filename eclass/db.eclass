@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.37 2010/05/11 07:58:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.38 2010/05/11 08:00:20 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -147,10 +147,17 @@ db_src_test() {
 		einfo "Running sys-libs/db testsuite"
 		ewarn "This can take 6+ hours on modern machines"
 		# Fix stuff that fails with relative paths
+		local test_parallel=''
+		for t in \
+			"${S}"/test/parallel.tcl \
+			"${S}"/../test/parallel.tcl ; do
+			[[ -f "${t}" ]] && test_parallel="${t}" && break
+		done
+
 		sed -ri \
-			-e '/regsub {test_path }/s,regsub,#regsub,g' \
-			-e '/regsub {src_root }/s,regsub,#regsub,g' \
-			"${S}"/test/parallel.tcl
+			-e '/regsub .test_path ./s,(regsub),#\1,g' \
+			-e '/regsub .src_root ./s,(regsub),#\1,g' \
+			"${test_parallel}"
 		cd "${S}"
 		echo 'source ../test/test.tcl' > testrunner.tcl
 		testJobs=`echo "${MAKEOPTS}" | \
