@@ -1,37 +1,6 @@
---- freenet/build.xml	2010-03-13 19:11:10.000000000 +0100
-+++ freenet/build.xml.new	2010-03-13 19:12:26.000000000 +0100
-@@ -68,26 +68,9 @@
- 		<available file="${lib}/freenet-ext.jar" property="freenet-ext.present"/>
- 		<!-- available file="${junit.location}" property="junit.present"/ -->
- 	</target>
--
--	<target name="get-extjar" depends="env" unless="freenet-ext.present"
--		description="Download some external libraries which Freenet relies on">
--		<mkdir dir="${lib}"/>
--		<get src="http://checksums.freenetproject.org/cc/freenet-ext.jar"
--			dest="${freenet-ext.location}"
--			verbose="true"
--			usetimestamp="true"/>
--		<property name="freenet-ext.present" value="true"/>
--	</target>
--
--	<condition property="do.junit" value="true">
--		<and>
--			<isfalse value="${skip_tests}" />
--			<isset property="junit.present" />
--		</and>
--	</condition>
- 	<!-- ================================================== -->
- 
--	<target name="compile" depends="get-extjar">
-+	<target name="compile" depends="env">
- 		<!-- Create the time stamp -->
- 		<tstamp/>
- 
-diff -ur freenet-old/src/freenet/node/NodeStarter.java freenet/src/freenet/node/NodeStarter.java
---- freenet-old/src/freenet/node/NodeStarter.java	2008-10-28 21:40:50.000000000 +0100
-+++ freenet/src/freenet/node/NodeStarter.java	2008-10-28 21:39:14.000000000 +0100
-@@ -162,37 +162,8 @@
+--- src/freenet-old/node/NodeStarter.java	2010-05-10 21:19:25.000000000 +0200
++++ src/freenet/node/NodeStarter.java	2010-05-10 21:35:30.000000000 +0200
+@@ -168,37 +168,8 @@
  	}
  
  	private void getExtBuild() {
@@ -66,8 +35,19 @@ diff -ur freenet-old/src/freenet/node/NodeStarter.java freenet/src/freenet/node/
 -			extRevisionNumber = "INVALID";
 -			extBuildNumber = -1;
 -		}
-+               extRevisionNumber = "";
-+               extBuildNumber = RECOMMENDED_EXT_BUILD_NUMBER;	
++		extRevisionNumber = "";
++		extBuildNumber = RECOMMENDED_EXT_BUILD_NUMBER;
  	}
  
  	/**
+--- build.xml	2010-05-10 21:38:15.000000000 +0200
++++ build.xml.new	2010-05-10 21:43:29.000000000 +0200
+@@ -124,7 +124,7 @@
+ 	</condition>
+ 	<!-- ================================================== -->
+ 
+-	<target name="compile" depends="get-extjar, generate-js">
++	<target name="compile" depends="">
+ 		<!-- Create the time stamp -->
+ 		<tstamp/>
+ 
