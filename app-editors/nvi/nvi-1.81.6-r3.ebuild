@@ -1,10 +1,24 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.4 2010/01/10 18:34:15 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.5 2010/05/11 22:58:10 truedfx Exp $
+
+EAPI=1
 
 inherit autotools db-use eutils flag-o-matic
 
-DBVERS="4.7 4.6 4.5 4.4 4.3 4.2"
+DBVERS="4.8.30 4.7 4.6 4.5 4.4 4.3 4.2"
+DBSLOTS=
+DBDEPENDS=
+for DBVER in ${DBVERS}
+do
+	if [[ ${DBVER} = *.*.* ]]; then
+		DBSLOTS="${DBSLOTS} ${DBVER%.*}"
+		DBDEPENDS="${DBDEPENDS} >=sys-libs/db-${DBVER}:${DBVER%.*}"
+	else
+		DBSLOTS="${DBSLOTS} ${DBVER}"
+		DBDEPENDS="${DBDEPENDS} sys-libs/db:${DBVER}"
+	fi
+done
 
 DESCRIPTION="Vi clone"
 HOMEPAGE="http://www.bostic.com/vi/"
@@ -15,7 +29,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="perl tcl unicode"
 
-DEPEND="|| ( $(printf "=sys-libs/db-%s*\n" ${DBVERS}) )
+DEPEND="|| ( ${DBDEPENDS} )
 	perl? ( dev-lang/perl )
 	tcl? ( !unicode? ( >=dev-lang/tcl-8.5 ) )"
 RDEPEND="${DEPEND}
@@ -40,8 +54,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-perl-shortnames.patch
 	cd ../dist || die
 	chmod +x findconfig || die
-	append-flags -I"$(db_includedir ${DBVERS})"
-	sed -i -e "s@-ldb@-l$(db_libname ${DBVERS})@" configure.in || die
+	append-flags -I"$(db_includedir ${DBSLOTS})"
+	sed -i -e "s@-ldb@-l$(db_libname ${DBSLOTS})@" configure.in || die
 	rm -f configure || die
 	eautoreconf -Im4
 }
