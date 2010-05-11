@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.1.8.ebuild,v 1.1 2010/05/10 13:20:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.1.8.ebuild,v 1.2 2010/05/11 15:47:16 polynomial-c Exp $
 
 EAPI=2
 
@@ -111,6 +111,9 @@ src_prepare() {
 
 	# unset useless/problematic mesa checks in configure
 	epatch "${FILESDIR}/${PN}-3.0.0-mesa-check.patch"
+
+	# fix with newer iasl (bug #319127)
+	epatch "${FILESDIR}/${P}-iasl-length-calculation-fix.patch"
 }
 
 src_configure() {
