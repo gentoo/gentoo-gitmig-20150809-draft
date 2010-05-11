@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dbus-java
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.13 2010/05/09 14:38:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.14 2010/05/11 21:25:53 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> dbus-java-2.7-r1.ebuild:
+  stable ppc64, bug 311745
 
   09 May 2010; Pacho Ramos <pacho@gentoo.org> dbus-java-2.7-r1.ebuild,
   +files/dbus-java-htlatex.patch:
