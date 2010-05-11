@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.35 2010/05/11 07:30:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.36 2010/05/11 15:32:16 phajdan.jr Exp $
+
+  11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  vuze-4.3.1.4-r2.ebuild:
+  x86 stable wrt bug #316565
 
 *vuze-4.4.0.4 (11 May 2010)
 
