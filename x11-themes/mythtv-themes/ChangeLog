@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.68 2010/03/22 02:28:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.69 2010/05/11 19:24:34 josejx Exp $
+
+  11 May 2010; Joseph Jezak <josejx@gentoo.org>
+  mythtv-themes-0.22_p22869.ebuild:
+  Marked ppc stable for bug #299222.
 
   22 Mar 2010; Ben de Groot <yngwin@gentoo.org>
   -mythtv-themes-0.21_p16505.ebuild:
