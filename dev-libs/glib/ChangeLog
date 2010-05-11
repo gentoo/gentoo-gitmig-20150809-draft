@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.406 2010/05/07 15:15:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.407 2010/05/11 19:46:05 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> glib-2.22.4.ebuild:
+  Marking glib-2.22.4 ppc64 for bug 304777
 
   07 May 2010; Jeroen Roovers <jer@gentoo.org> glib-2.22.5.ebuild:
   Stable for HPPA (bug #304777).
