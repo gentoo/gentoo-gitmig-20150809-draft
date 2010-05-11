@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Run revdep-rebuild before this. This brute force script fill rename"
+echo "Run revdep-rebuild before this. This brute force script will rename"
 echo "rest of -lpng12 and libpng12.la entries in your systems .la files."
 
 [[ -d /usr/lib64 ]] && lib_suffix=64
