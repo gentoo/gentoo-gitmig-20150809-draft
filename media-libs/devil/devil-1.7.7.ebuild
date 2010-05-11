@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.8 2009/12/21 20:04:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.9 2010/05/11 08:48:01 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -19,7 +19,7 @@ RDEPEND="gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	lcms? ( media-libs/lcms )
 	mng? ( media-libs/libmng )
-	png? ( media-libs/libpng )
+	png? ( =media-libs/libpng-1.2* )
 	tiff? ( media-libs/tiff )
 	xpm? ( x11-libs/libXpm )
 	allegro? ( media-libs/allegro )
