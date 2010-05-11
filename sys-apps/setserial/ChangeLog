@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/setserial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.22 2010/04/17 17:04:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/setserial/ChangeLog,v 1.23 2010/05/11 20:59:46 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> setserial-2.17-r4.ebuild:
+  stable ppc64, bug 314741
 
   17 Apr 2010; Raúl Porcel <armin76@gentoo.org> setserial-2.17-r4.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #314741
