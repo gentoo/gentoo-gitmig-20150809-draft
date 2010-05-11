@@ -2,7 +2,7 @@
 
 echo "Try revdep-rebuild or lafilefixer first."
 echo "This script will rename -lpng12 and libpng12.la to -lpng14 and libpng14.la"
-echo "in your system libdir."
+echo "in your system libdir libtool .la files without asking permission."
 
 [[ -d /usr/lib64 ]] && lib_suffix=64
 
