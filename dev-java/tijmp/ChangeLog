@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tijmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tijmp/ChangeLog,v 1.1 2010/04/05 12:09:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tijmp/ChangeLog,v 1.2 2010/05/11 12:57:57 josejx Exp $
+
+  11 May 2010; Joseph Jezak <josejx@gentoo.org> tijmp-0.8.ebuild:
+  Marked ~ppc for bug #233548.
 
 *tijmp-0.8 (05 Apr 2010)
 
