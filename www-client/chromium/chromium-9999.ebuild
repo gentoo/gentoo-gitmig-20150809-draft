@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.49 2010/05/05 12:33:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.50 2010/05/11 11:23:48 phajdan.jr Exp $
 
 EAPI="2"
-inherit eutils flag-o-matic multilib portability subversion toolchain-funcs
+
+inherit eutils flag-o-matic multilib pax-utils subversion toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -14,7 +15,7 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="mp3 +plugins-symlink x264"
+IUSE="+plugins-symlink"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
@@ -25,7 +26,7 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	>=media-video/ffmpeg-0.5_p21602[mp3=,threads,x264=]
+	>=media-video/ffmpeg-0.5_p21602[threads]
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver"
@@ -42,6 +43,7 @@ RDEPEND+="
 		x11-themes/tango-icon-theme
 		x11-themes/xfce4-icon-theme
 	)
+	x11-apps/xmessage
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -51,29 +53,6 @@ RDEPEND+="
 	plugins-symlink? (
 		!www-plugins/gecko-mediaplayer[gnome]
 	)"
-
-pkg_setup() {
-	if [[ "${ROOT}" == "/" ]]; then
-		# Prevent user problems like bug 299777.
-		if ! grep -q /dev/shm <<< $(get_mounts); then
-			eerror "You don't have tmpfs mounted at /dev/shm."
-			eerror "${PN} isn't going to work in that configuration."
-			eerror "Please uncomment the /dev/shm entry in /etc/fstab,"
-			eerror "run 'mount /dev/shm' and try again."
-			die "/dev/shm is not mounted"
-		fi
-		if [ `stat -c %a /dev/shm` -ne 1777 ]; then
-			eerror "/dev/shm does not have correct permissions."
-			eerror "${PN} isn't going to work in that configuration."
-			eerror "Please run chmod 1777 /dev/shm and try again."
-			die "/dev/shm has incorrect permissions"
-		fi
-	fi
-
-	elog "${PN} might crash occasionally. To get more useful backtraces"
-	elog "and submit better bug reports, please read"
-	elog "http://www.gentoo.org/proj/en/qa/backtraces.xml"
-}
 
 src_unpack() {
 	subversion_src_unpack
@@ -119,22 +98,14 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Allow supporting more media types provided system ffmpeg supports them.
-	epatch "${FILESDIR}"/${PN}-supported-media-mime-types.patch
+	# Allow supporting more media types.
+	epatch "${FILESDIR}"/${PN}-20100122-ubuntu-html5-video-mimetypes.patch
 }
 
 src_configure() {
 	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
 	# Fails to build on arm if we don't do this
 	use arm && append-flags -fno-tree-sink
-
-	if use mp3 ; then
-		append-cflags -DGENTOO_CHROMIUM_MP3_ENABLED
-	fi
-
-	if use x264 ; then
-		append-cflags -DGENTOO_CHROMIUM_H264_ENABLED
-	fi
 
 	# CFLAGS/LDFLAGS
 	mkdir -p "${S}"/.gyp || die "cflags mkdir failed"
@@ -203,6 +174,7 @@ src_install() {
 	dodir ${CHROMIUM_HOME}
 
 	exeinto ${CHROMIUM_HOME}
+	pax-mark m out/Release/chrome
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox
 	fperms 4755 ${CHROMIUM_HOME}/chrome_sandbox
