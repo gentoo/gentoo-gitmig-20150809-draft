@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.38 2010/05/11 08:00:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.39 2010/05/11 08:19:44 robbat2 Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -79,11 +79,16 @@ db_src_install_doc() {
 db_src_install_examples() {
 	if use examples ; then
 		local langs="c cxx stl"
-		use java && langs="${langs} java"
+		[[ "${IUSE/java}" != "${IUSE}" ]] \
+			&& use java \
+			&& langs="${langs} java"
 		for i in $langs ; do
 			destdir="/usr/share/doc/${PF}/"
-			dodir "${destdir}"
-			cp -ra "${S}/../examples_${i}/" "${D}${destdir}/"
+			src="${S}/../examples_${i}/"
+			if [ -f "${src}" ]; then
+				dodir "${destdir}"
+				cp -ra "${src}" "${D}${destdir}/"
+			fi
 		done
 	fi
 }
