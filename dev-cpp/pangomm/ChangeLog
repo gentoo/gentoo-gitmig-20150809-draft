@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.19 2010/05/07 15:27:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.20 2010/05/11 19:48:01 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> pangomm-2.26.0.ebuild:
+  Marking pangomm-2.26.0 ppc64 for bug 304777
 
   07 May 2010; Jeroen Roovers <jer@gentoo.org> pangomm-2.26.0.ebuild:
   Stable for HPPA (bug #304777).
