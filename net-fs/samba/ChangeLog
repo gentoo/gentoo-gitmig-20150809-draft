@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.412 2010/05/11 11:27:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.413 2010/05/11 11:53:24 patrick Exp $
+
+  11 May 2010; Patrick Lauer <patrick@gentoo.org> files/samba-init:
+  Fixing init script for #301263
 
   11 May 2010; Patrick Lauer <patrick@gentoo.org> samba-3.4.6.ebuild,
   samba-3.4.8.ebuild, samba-3.5.2-r1.ebuild:
