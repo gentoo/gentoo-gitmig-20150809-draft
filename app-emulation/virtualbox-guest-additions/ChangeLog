@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.36 2010/05/10 13:36:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.37 2010/05/11 05:39:44 polynomial-c Exp $
+
+  11 May 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-guest-additions-3.1.8.ebuild,
+  +files/virtualbox-guest-additions-4.initd:
+  Fixing compilation and init script. There's no longer a vboxvfs module.
+  It's now called vboxsf.
 
 *virtualbox-guest-additions-3.1.8 (10 May 2010)
 

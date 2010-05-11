@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.8.ebuild,v 1.1 2010/05/10 13:36:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.8.ebuild,v 1.2 2010/05/11 05:39:44 polynomial-c Exp $
 
 inherit eutils linux-mod
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxguest(misc:${WORKDIR}/vboxguest:${WORKDIR}/vboxguest)
-			vboxvfs(misc:${WORKDIR}/vboxvfs:${WORKDIR}/vboxvfs)"
+			vboxsf(misc:${WORKDIR}/vboxsf:${WORKDIR}/vboxsf)"
 
 S=${WORKDIR}/${MY_P/-OSE/_OSE}
 
@@ -102,7 +102,7 @@ src_install() {
 		newins mount.vboxsf mount.vboxsf
 		fperms 4755 /sbin/mount.vboxsf
 
-		newinitd "${FILESDIR}"/${PN}-3.initd ${PN}
+		newinitd "${FILESDIR}"/${PN}-4.initd ${PN}
 
 		insinto /usr/sbin/
 		newins VBoxService vboxguest-service
@@ -118,9 +118,6 @@ src_install() {
 			fperms 0755 /usr/bin/VBoxClient
 
 			cd "${S}"/src/VBox/Additions/x11/Installer
-			newins VBoxRandR.sh VBoxRandR
-			fperms 0755 /usr/bin/VBoxRandR
-
 			newins 98vboxadd-xclient VBoxClient-all
 			fperms 0755 /usr/bin/VBoxClient-all
 		fi
