@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sablecc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.19 2010/04/13 12:04:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.20 2010/05/11 16:20:24 josejx Exp $
+
+  11 May 2010; Joseph Jezak <josejx@gentoo.org> sablecc-3.2.ebuild:
+  Marked ppc stable for bug #227209.
 
   13 Apr 2010; Christian Faulhammer <fauli@gentoo.org> sablecc-3.2.ebuild:
   stable x86, bug 227209
