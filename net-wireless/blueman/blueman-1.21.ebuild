@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21.ebuild,v 1.1 2010/05/11 07:54:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21.ebuild,v 1.2 2010/05/11 10:38:59 arfrever Exp $
 
 EAPI="3"
 
@@ -39,6 +39,10 @@ RDEPEND="${CDEPEND}
 
 # TODO:
 # - add policykit-support as soon as policykit-1 is available in the tree
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	# disable pyc compiling
