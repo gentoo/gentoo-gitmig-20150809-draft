@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/netstat-nat-1.4.10.ebuild,v 1.1 2010/01/26 01:19:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/netstat-nat-1.4.10.ebuild,v 1.2 2010/05/11 00:28:25 jer Exp $
 
-inherit autotools
+EAPI="2"
+
+inherit autotools eutils
 
 DESCRIPTION="Display NAT connections"
 HOMEPAGE="http://tweegy.nl/projects/netstat-nat/index.html"
@@ -16,13 +18,10 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	sed -i '/^doc_DATA =/{s/ \(COPYING\|INSTALL\)//g}' Makefile.am
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-install.patch
 	eautoreconf
 }
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }

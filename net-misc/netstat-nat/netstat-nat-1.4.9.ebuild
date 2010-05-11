@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/netstat-nat-1.4.9.ebuild,v 1.4 2008/02/28 16:50:16 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/netstat-nat-1.4.9.ebuild,v 1.5 2010/05/11 00:28:25 jer Exp $
 
 inherit autotools
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	sed -i '/^doc_DATA =/{s/ \(COPYING\|INSTALL\)//g}' Makefile.am
+	epatch "${FILESDIR}"/${PN}-1.4.10-install.patch
 	eautoreconf
 }
 src_install() {
