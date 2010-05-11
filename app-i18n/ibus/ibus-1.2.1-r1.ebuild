@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.2.ebuild,v 1.1 2010/04/23 17:45:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.1-r1.ebuild,v 1.1 2010/05/11 23:07:47 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,20 +13,17 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +gconf nls python"
+IUSE="doc nls"
 
 RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2
-	gconf? ( >=gnome-base/gconf-2.12 )
+	>=gnome-base/gconf-2.12
 	>=gnome-base/librsvg-2
 	sys-apps/dbus
 	app-text/iso-codes
 	x11-libs/libX11
-	python? (
-		>=dev-python/pygobject-2.14
-		dev-python/notify-python
-		>=dev-python/dbus-python-0.83
-	)
+	>=dev-python/pygobject-2.14
+	dev-python/notify-python
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
@@ -35,10 +32,9 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.9 )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
-	python? (
-		dev-python/pygtk
-		dev-python/pyxdg
-	)"
+	dev-python/pygtk
+	>=dev-python/dbus-python-0.83
+	dev-python/pyxdg"
 
 RESTRICT="test"
 
@@ -52,6 +48,10 @@ update_gtk_immodules() {
 	fi
 }
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
@@ -61,9 +61,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
-		$(use_enable gconf) \
-		$(use_enable nls) \
-		$(use_enable python) || die
+		$(use_enable nls) || die
 }
 
 src_install() {
@@ -96,13 +94,13 @@ pkg_postinst() {
 
 	update_gtk_immodules
 
-	use python && python_mod_optimize /usr/share/${PN}
+	python_mod_optimize /usr/share/${PN}
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	update_gtk_immodules
 
-	use python && python_mod_cleanup /usr/share/${PN}
+	python_mod_cleanup /usr/share/${PN}
 	gnome2_icon_cache_update
 }
