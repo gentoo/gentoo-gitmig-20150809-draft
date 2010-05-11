@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.93 2010/05/10 18:51:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.94 2010/05/11 21:19:08 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> allegro-4.4.1.1-r1.ebuild:
+  stable ppc64, bug 316375
 
   10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   allegro-4.4.1.1-r1.ebuild:
