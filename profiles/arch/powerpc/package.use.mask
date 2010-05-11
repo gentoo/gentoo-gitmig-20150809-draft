@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.39 2010/04/26 09:29:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.40 2010/05/11 16:47:40 josejx Exp $
 
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Apr 2010)
 # This is for x86/amd64 only
@@ -28,10 +28,6 @@ media-plugins/gst-plugins-meta mythtv
 # only presently. If other drivers support it in the future, then this can
 # get unmasked
 media-tv/mythtv vdpau
-
-# Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
-# qt-multimedia is not keyworded, bug 293671
-dev-python/PyQt4 multimedia
 
 # Brent Baude <ranger@gentoo.org> (14 Jan 2009)
 # # Temporarily masking sql off activerecord

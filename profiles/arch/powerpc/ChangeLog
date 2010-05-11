@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.59 2010/04/26 09:29:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.60 2010/05/11 16:47:40 josejx Exp $
+
+  11 May 2010; Joseph Jezak <josejx@gentoo.org> package.use.mask:
+  qtmultimedia is keyworded now.
 
   26 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
   Mask new udis86 flag for llvm, it is only for x86/amd64
