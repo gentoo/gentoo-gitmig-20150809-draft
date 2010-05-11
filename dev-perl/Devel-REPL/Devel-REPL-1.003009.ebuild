@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/Devel-REPL-1.003009.ebuild,v 1.1 2010/03/28 00:22:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/Devel-REPL-1.003009.ebuild,v 1.2 2010/05/11 08:02:06 tove Exp $
 
 EAPI=2
 
@@ -32,7 +32,6 @@ RDEPEND="
 	dev-perl/Lexical-Persistence
 	dev-perl/App-Nopaste
 	dev-perl/Module-Refresh
-	dev-perl/Task-Weaken
 	dev-perl/Data-Dumper-Concise
 	dev-perl/Sys-SigAction
 "
