@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.82 2010/04/29 07:03:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.83 2010/05/11 16:58:15 mabi Exp $
+
+  11 May 2010; <mabi@gentoo.org> nvidia-settings-190.42.ebuild:
+  sync stable version to nvidia-drivers on amd64, with permission from
+  chainsaw
 
 *nvidia-settings-195.36.24 (29 Apr 2010)
 
