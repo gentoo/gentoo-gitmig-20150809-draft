@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5550 2010/05/10 17:08:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5551 2010/05/11 06:47:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2913,7 +2913,7 @@ net-wireless/bluez:old-daemons - Install old daemons like hidd and sdpd that are
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
 net-wireless/bluez-utils:old-daemons - Install old daemons like hidd and sdpd that are deprecated by the new Service framework
 net-wireless/bluez-utils:test-programs - Install l2test and rctest
-net-wireless/hostapd:debug - Enables debuggin
+net-wireless/hostapd:debug - Enables debugging
 net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
@@ -3178,7 +3178,8 @@ sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM
 sys-apps/paludis:qa - Enable QA tools
 sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
-sys-apps/parted:device-mapper - Enable sys-fs/device-mapper support in parted
+sys-apps/parted:debug -  Enable debugging as encouraged by upstream: [The default configuration] includes --enable-debug (by default), which contains many assertions. Obviously, these "waste" space, but in the past, they have caught potentially dangerous bugs before they would have done damage, so we think it's worth it. Also, it means we get more bug reports ;) 
+sys-apps/parted:device-mapper -  Enable sys-fs/device-mapper support in parted 
 sys-apps/pciutils:network-cron -  Monthly cronjob the update-pciids script 
 sys-apps/pcmcia-cs:trusted - Assume all users are trusted (Build unsafe user-space tools)
 sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
