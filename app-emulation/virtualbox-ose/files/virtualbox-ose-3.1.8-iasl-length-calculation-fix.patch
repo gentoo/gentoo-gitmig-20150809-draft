@@ -7,7 +7,7 @@
                       ResourceProducer,        // bit 0 of general flags is 0
                       PosDecode,               // positive Decode
 -                     MinFixed,                // Range is fixed
-+                     MinNotFixed,             // Range is fixed
++                     MinNotFixed,             // Range is not fixed
                       MaxFixed,                // Range is fixed
                       Cacheable,
                       ReadWrite,
