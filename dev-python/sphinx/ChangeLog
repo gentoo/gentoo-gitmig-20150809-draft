@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.52 2010/05/08 18:20:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.53 2010/05/11 21:13:36 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> sphinx-0.6.5.ebuild:
+  stable ppc64, bug 313147
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> sphinx-0.6.5.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #313147
