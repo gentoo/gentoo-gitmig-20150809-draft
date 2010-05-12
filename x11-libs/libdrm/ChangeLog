@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.114 2010/04/24 16:47:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.115 2010/05/12 18:21:17 ranger Exp $
+
+  12 May 2010; Brent Baude <ranger@gentoo.org>
+  libdrm-2.4.18_pre20100211-r1.ebuild:
+  Marking libdrm-2.4.18_pre20100211-r1 ppc64 stable for bug 308521
 
   24 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libdrm-2.4.18_pre20100211-r1.ebuild, libdrm-2.4.20.ebuild:
