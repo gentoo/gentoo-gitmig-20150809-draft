@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/udis86
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.6 2010/05/11 21:02:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.7 2010/05/12 14:13:00 chithanh Exp $
+
+  12 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  udis86-1.7.ebuild, +files/udis86-1.7-yasm.patch:
+  Don't fail tests if dev-lang/yasm is not installed, bug #318805, patch
+  from jer
 
   11 May 2010; Brent Baude <ranger@gentoo.org> udis86-1.7.ebuild:
   keyworded ~arch for ppc64, bug 317149
