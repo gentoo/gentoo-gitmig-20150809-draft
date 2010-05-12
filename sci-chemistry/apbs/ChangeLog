@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.29 2010/04/26 20:28:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.30 2010/05/12 13:17:41 jlec Exp $
+
+  12 May 2010; Justin Lecher (jlec) <jlec@j-schmitz.net>
+  apbs-1.2.1b-r3.ebuild:
+  Added missing fortran_pkg_setup
 
 *apbs-1.2.1b-r3 (26 Apr 2010)
 
