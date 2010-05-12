@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.813 2010/05/12 12:23:25 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.814 2010/05/12 16:27:56 mpagano Exp $
+
+  12 May 2010; Michael Pagano <mpagano@gentoo.org> ChangeLog:
+  Fix broken manifest
 
 *git-sources-2.6.34_rc7-r3 (12 May 2010)
 
