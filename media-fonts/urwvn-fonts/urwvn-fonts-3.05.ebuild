@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.05.ebuild,v 1.1 2010/05/08 06:18:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.05.ebuild,v 1.2 2010/05/12 18:52:27 pva Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ DESCRIPTION="fonts gpl'd by Han The Thanh, based on URW++ fonts with Vietnamese 
 # http://vntex.sf.net/fonts/urwvn-ttf/download
 # https://sourceforge.net/projects/vntex/files
 HOMEPAGE="http://vntex.sf.net"
-SRC_URI="http://vntex.org/urwvn/download/${MY_P}-ttf.tar.bz2"
+SRC_URI="mirror://sourceforge/project/vntex/urwvn-ttf/${MY_P}-ttf.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
