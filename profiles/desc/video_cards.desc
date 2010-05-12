@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.21 2010/05/12 11:29:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.22 2010/05/12 15:18:51 mr_bones_ Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -36,7 +36,7 @@ r128 - VIDEO_CARDS setting to build driver for ATI r128 video cards
 r200 - VIDEO_CARDS setting to build only r200 based chips code for radeon
 r300 - VIDEO_CARDS setting to build only r300, r400 and r500 based chips code for radeon
 r600 - VIDEO_CARDS setting to build only r600 and r700 based chips code for radeon
-radenhd - VIDEO_CARDS setting to build driver for ATI radeon HD video cards (radeon also works)
+radeonhd - VIDEO_CARDS setting to build driver for ATI radeon HD video cards (radeon also works)
 radeon - VIDEO_CARDS setting to build driver for ATI radeon video cards
 rendition - VIDEO_CARDS setting to build driver for rendition video cards
 s3 - VIDEO_CARDS setting to build driver for s3 video cards
