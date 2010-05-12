@@ -1,12 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.29 2010/05/10 12:52:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.30 2010/05/12 14:16:57 chithanh Exp $
 
 # This file requires >=portage-2.1.1
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 May 2010)
-# dev-lang/yasm is keyworded on x86.
-dev-libs/udis86 -test
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Apr 2010)
 # xf86-video-nouveau is supported on x86.

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.38 2010/05/10 12:52:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.39 2010/05/12 14:16:57 chithanh Exp $
+
+  12 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  unmask dev-libs/udis86 test after adding patch to make yasm optional
 
   10 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
