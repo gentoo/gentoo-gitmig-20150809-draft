@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.96 2010/04/18 19:49:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.97 2010/05/12 18:16:46 ranger Exp $
+
+  12 May 2010; Brent Baude <ranger@gentoo.org> inputproto-2.0.ebuild:
+  Marking inputproto-2.0 ppc64 stable for bug 308521
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> inputproto-2.0.ebuild:
   arm stable, bug #308521
