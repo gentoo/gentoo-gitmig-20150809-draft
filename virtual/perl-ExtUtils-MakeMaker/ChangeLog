@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-MakeMaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.15 2010/05/09 17:56:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.16 2010/05/12 22:29:33 josejx Exp $
+
+  12 May 2010; Joseph Jezak <josejx@gentoo.org>
+  perl-ExtUtils-MakeMaker-6.56.ebuild:
+  Marked ~ppc for bug #317877.
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org>
   perl-ExtUtils-MakeMaker-6.56.ebuild:
