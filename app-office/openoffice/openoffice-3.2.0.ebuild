@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.23 2010/05/01 01:01:06 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.24 2010/05/12 12:25:08 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -223,6 +223,7 @@ src_prepare() {
 	cp -f "${FILESDIR}/qt-use-native-backend.diff" "${S}/patches/hotfixes" || die
 	cp -f "${FILESDIR}/npwrap-fix-nogtk.diff" "${S}/patches/hotfixes" || die
 	cp -f "${FILESDIR}/neon-remove-SSPI-support.diff" "${S}/patches/hotfixes" || die
+	cp -f "${FILESDIR}/gcc45-buildfix.patch" "${S}/patches/hotfixes" || die
 
 	#Use flag checks
 	if use java ; then

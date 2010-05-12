@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.530 2010/05/01 01:01:06 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.531 2010/05/12 12:25:08 suka Exp $
+
+  12 May 2010; Andreas Proschofsky <suka@gentoo.org>
+  +files/gcc45-buildfix.patch, openoffice-3.2.0.ebuild:
+  Fix build with gcc 4.5, bug #317207
 
   01 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
   openoffice-3.2.0.ebuild:
