@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.5 2010/03/29 16:55:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.6 2010/05/12 20:57:20 darkside Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=xfce-base/libxfcegui4-4.4
 	>=xfce-base/xfce4-panel-4.4
 	libnotify? ( >=x11-libs/libnotify-0.4 )
-	lm_sensors? ( sys-apps/lm_sensors )
+	lm_sensors? ( >=sys-apps/lm_sensors-3.1.0 )
 	hddtemp? ( app-admin/hddtemp net-analyzer/gnu-netcat )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
