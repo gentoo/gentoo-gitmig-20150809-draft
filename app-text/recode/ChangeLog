@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.78 2010/05/11 11:07:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.79 2010/05/12 20:05:59 ranger Exp $
+
+  12 May 2010; Brent Baude <ranger@gentoo.org> recode-3.6_p16.ebuild:
+  stable ppc64, bug 307889
 
   11 May 2010; Justin Lecher <jlec@gentoo.org> recode-3.6_p16.ebuild,
   recode-3.6_p17.ebuild:
