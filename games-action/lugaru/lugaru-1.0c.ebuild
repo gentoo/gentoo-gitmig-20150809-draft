@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c.ebuild,v 1.1 2010/05/12 04:21:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c.ebuild,v 1.2 2010/05/12 15:48:07 mr_bones_ Exp $
 
 inherit eutils games
 
-DESCRIPTION="3D arcade with unique fighting system and antropomorphic characters"
+DESCRIPTION="3D arcade with unique fighting system and anthropomorphic characters"
 HOMEPAGE="http://www.wolfire.com/lugaru"
 SRC_URI="${PN}-full-linux-x86-${PV}.bin"
 
@@ -26,7 +26,7 @@ S=${WORKDIR}/data
 
 src_unpack() {
 	# self unpacking zip archive; unzip warns about the exe stuff
-	local a="${DISTDIR}/${A}"
+	local a=${DISTDIR}/${A}
 	echo ">>> Unpacking ${a} to ${PWD}"
 	unzip -q "${a}"
 	[ $? -gt 1 ] && die "unpacking failed"
