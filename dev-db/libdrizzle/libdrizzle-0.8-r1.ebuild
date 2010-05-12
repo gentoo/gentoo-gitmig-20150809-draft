@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdrizzle/libdrizzle-0.8.ebuild,v 1.2 2010/04/19 06:04:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdrizzle/libdrizzle-0.8-r1.ebuild,v 1.1 2010/05/12 10:04:51 flameeyes Exp $
 
 EAPI=2
 
@@ -37,7 +37,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		--disable-mtmalloc \
 		$(use_enable tcmalloc) \
-		$(use_enable libsqlite3)
+		$(use_enable sqlite libsqlite3)
 }
 
 src_install() {
