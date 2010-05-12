@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0_rc2.ebuild,v 1.1 2010/04/26 22:29:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0_rc2-r1.ebuild,v 1.1 2010/05/12 09:23:41 flameeyes Exp $
 
 EAPI="3"
 inherit base
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P/RC*/}
 
 src_configure() {
 	econf \
-		$(use_enable static_libs static) \
+		$(use_enable static-libs static) \
 		--enable-debug=$(use debug && echo yes || echo no) \
 		--with-jpeg=/usr/ \
 		--with-zip=/usr/
