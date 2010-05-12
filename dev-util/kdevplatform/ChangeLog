@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.25 2010/04/29 05:05:57 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.26 2010/05/12 16:24:48 ranger Exp $
+
+  12 May 2010; Brent Baude <ranger@gentoo.org>
+  kdevplatform-0.9.97-r1.ebuild:
+  Marking kdevplatform-0.9.97-r1 ppc64 for bug 304411
 
 *kdevplatform-1.0.0 (29 Apr 2010)
 
