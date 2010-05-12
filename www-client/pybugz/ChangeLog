@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.64 2010/01/27 16:37:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.65 2010/05/12 22:08:51 darkside Exp $
+
+  12 May 2010; Jeremy Olexa <darkside@gentoo.org> pybugz-0.8.0.ebuild:
+  Add ~x64-macos as tested in bug 318497
 
   27 Jan 2010; William Hubbs <williamh@gentoo.org> -pybugz-0.7.4.ebuild:
   removed old version
