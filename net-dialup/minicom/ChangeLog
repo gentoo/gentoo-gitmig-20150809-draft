@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.75 2010/05/10 13:22:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.76 2010/05/12 19:56:56 josejx Exp $
+
+  12 May 2010; Joseph Jezak <josejx@gentoo.org> minicom-2.4.ebuild:
+  Marked ppc/ppc64 stable for bug #317703.
 
   10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> minicom-2.4.ebuild:
   x86 stable wrt bug #317703
