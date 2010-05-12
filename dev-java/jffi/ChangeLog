@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.14 2010/05/04 15:22:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.15 2010/05/12 22:31:22 josejx Exp $
+
+  12 May 2010; Joseph Jezak <josejx@gentoo.org> jffi-1.0.0.ebuild:
+  Marked ppc stable for bug #318153.
 
   04 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jffi-1.0.0.ebuild:
   x86 stable wrt bug #318153
