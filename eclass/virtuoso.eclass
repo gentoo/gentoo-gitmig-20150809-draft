@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.3 2010/04/06 17:28:31 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.4 2010/05/12 17:59:02 reavertm Exp $
 
 # @ECLASS: virtuoso.eclass
 # @MAINTAINER:
@@ -89,7 +89,7 @@ virtuoso_src_prepare() {
 						sed -e '/^# DISABLED \s*SUBDIRS\s*=/s/.*/SUBDIRS =/g' \
 							-i "${path}"/Makefile.am
 						# Append subdirs if not there already
-						if [[ -z `grep --color=never -P "SUBDIRS\s*=.*${subdir}\b" "${path}"/Makefile.am` ]]; then
+						if [[ -z `sed -ne "/SUBDIRS\s*=.*${subdir}\b/p" "${path}"/Makefile.am` ]]; then
 							sed -e "/^SUBDIRS\s*=/s|$| ${subdir}|" \
 								-i "${path}"/Makefile.am || die "failed to append ${subdir}"
 						fi
