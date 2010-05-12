@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317.ebuild,v 1.3 2010/04/22 19:53:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317-r1.ebuild,v 1.1 2010/05/12 10:29:36 jlec Exp $
 
 EAPI="3"
 
@@ -32,6 +32,7 @@ S="${WORKDIR}"/src
 
 pkg_setup() {
 	python_set_active_version 2
+	fortran_pkg_setup
 }
 
 src_unpack() {
@@ -42,21 +43,12 @@ src_unpack() {
 
 src_prepare() {
 	mkdir "${WORKDIR}"/bin || die
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
+	epatch "${FILESDIR}"/${PV}-makefile.patch
 }
 
 src_compile() {
-	# incomplete targets:
-	# dimer_search_db domain_search_db domain align3
-	targets="search_db get_structure_db manage_db search_dm dom2ch
-				save_si get_pdb_list_db update_db
-				update_dom_db bl2mtz check_file_db fobs2cif sol_check
-				get_trns p2s check_cell alt_sg
-				align cell_list create_bins
-				get_pdb_list_db get_ch get_nm get_mod"
 	emake \
-		BLANC_FORT="${FORTRANC} ${FFLAGS}" \
-		${targets} || die
+		BLANC_FORT="${FORTRANC} ${FFLAGS}" || die
 }
 
 src_install() {

@@ -1,8 +1,24 @@
 diff --git a/makefile b/makefile
-index baaceb5..139037e 100755
+index baaceb5..85a7baf 100755
 --- a/makefile
 +++ b/makefile
-@@ -201,58 +201,58 @@ save_seg_id.o: save_seg_id.f
+@@ -70,6 +70,15 @@ OBJDB_G =  get_pdb_list.o
+ 
+ #OBJDB_Z =  blanc2mtz.o libutils.o
+ 
++# incomplete targets:
++# dimer_search_db domain_search_db domain align3
++all: search_db get_structure_db manage_db search_dm dom2ch \
++            save_si get_pdb_list_db update_db \
++            update_dom_db bl2mtz check_file_db fobs2cif sol_check \
++            get_trns p2s check_cell alt_sg \
++            align cell_list create_bins \
++            get_pdb_list_db get_ch get_nm get_mod
++
+ search_db: sdb_l
+ 
+ get_structure_db: tdb_l
+@@ -201,58 +210,58 @@ save_seg_id.o: save_seg_id.f
  	$(BLANC_FORT) -c save_seg_id.f 
  
  sdb_l: $(OBJDB_S)
