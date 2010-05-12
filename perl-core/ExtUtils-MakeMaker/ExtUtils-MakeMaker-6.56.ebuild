@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.56.ebuild,v 1.3 2010/05/09 17:55:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.56.ebuild,v 1.4 2010/05/12 22:28:43 josejx Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Create a module Makefile"
 HOMEPAGE="http://makemaker.org ${HOMEPAGE}"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 PATCHES=( "${FILESDIR}/RUNPATH-6.54.patch" )

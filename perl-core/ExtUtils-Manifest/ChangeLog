@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-Manifest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.2 2010/05/09 17:47:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.3 2010/05/12 22:24:12 josejx Exp $
+
+  12 May 2010; Joseph Jezak <josejx@gentoo.org>
+  ExtUtils-Manifest-1.58.ebuild:
+  Marked ~ppc for bug #317877.
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org>
   ExtUtils-Manifest-1.58.ebuild:
