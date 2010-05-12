@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/padre-0.56.ebuild,v 1.2 2010/02/20 17:25:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/padre-0.61.ebuild,v 1.1 2010/05/12 15:45:37 tove Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ IUSE=""
 # Test Deps
 TDEPEND="
 	>=dev-perl/Capture-Tiny-0.06
+	>=dev-perl/Test-MockObject-1.09
 	>=dev-perl/Test-Script-1.07
 	>=dev-perl/Test-Exception-0.27
 	>=dev-perl/Test-NoWarnings-0.084
@@ -52,7 +53,7 @@ RDEPEND="
 	>=virtual/perl-File-Spec-3.27.01
 	>=dev-perl/File-Which-1.08
 	dev-perl/File-pushd
-	dev-perl/Format-Human-Bytes
+	>=dev-perl/Format-Human-Bytes-0.04
 	virtual/perl-Getopt-Long
 	>=dev-perl/HTML-Parser-3.58
 	>=dev-perl/IO-stringy-2.110
@@ -63,7 +64,7 @@ RDEPEND="
 	>=dev-perl/Locale-Msgfmt-0.14
 	>=dev-perl/Module-Refresh-0.13
 	>=dev-perl/Module-Starter-1.50
-	>=dev-perl/ORLite-1.38
+	>=dev-perl/ORLite-1.41
 	>=dev-perl/PAR-0.989
 	>=dev-perl/Params-Util-0.33
 	>=dev-perl/Parse-ErrorString-Perl-0.11
@@ -73,9 +74,11 @@ RDEPEND="
 	>=virtual/perl-Pod-Simple-3.07
 	>=dev-perl/PPI-1.205
 	>=dev-perl/PPIx-EditorTools-0.09
+	>=dev-perl/PPIx-Regexp-0.005
 	dev-perl/Probe-Perl
+	>=dev-perl/Readonly-XS-1.05
 	>=virtual/perl-Storable-2.15
-	>=dev-perl/Template-Tiny-0.03
+	>=dev-perl/Template-Tiny-0.11
 	>=virtual/perl-Text-Balanced-0.80
 	>=dev-perl/Text-Diff-0.35
 	>=dev-perl/Text-FindIndent-0.06
@@ -84,7 +87,7 @@ RDEPEND="
 	>=dev-perl/Thread-Queue-2.11
 	>=dev-perl/URI-0
 	>=dev-perl/wxperl-0.91
-	>=dev-perl/Wx-Perl-ProcessStream-0.24
+	>=dev-perl/Wx-Perl-ProcessStream-0.25
 	>=dev-perl/YAML-Tiny-1.32
 	>=virtual/perl-version-0.79
 "
