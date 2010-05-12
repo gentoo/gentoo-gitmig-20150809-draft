@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.257 2010/05/11 18:45:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.258 2010/05/12 18:28:17 armin76 Exp $
+
+  12 May 2010; Raúl Porcel <armin76@gentoo.org> libpng-1.2.43-r1.ebuild,
+  libpng-1.2.43-r2.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #307637
 
   11 May 2010; Joseph Jezak <josejx@gentoo.org> libpng-1.2.43-r2.ebuild:
   Marked ppc stable for bug #307637.
