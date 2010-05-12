@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.43-r1.ebuild,v 1.4 2010/05/12 18:28:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.43-r1.ebuild,v 1.5 2010/05/12 18:39:11 ssuominen Exp $
 
-# this ebuild is only for the libpng12.so SONAME for ABI compat
+# this ebuild is only for the libpng12.so.0 SONAME for ABI compat
 
 EAPI=3
 inherit multilib libtool
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="sys-libs/zlib
