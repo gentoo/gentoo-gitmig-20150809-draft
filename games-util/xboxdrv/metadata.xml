@@ -7,6 +7,6 @@
 		<name>Tristan Heaven</name>
 	</maintainer>
 	<use>
-		<flag name="daemon">Install xboxdrv-daemon.py (and its dependencies)</flag>
+		<flag name="daemon">Install xboxdrv-daemon (and its dependencies)</flag>
 	</use>
 </pkgmetadata>
