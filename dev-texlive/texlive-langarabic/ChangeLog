@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarabic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarabic/ChangeLog,v 1.7 2010/05/10 21:22:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarabic/ChangeLog,v 1.8 2010/05/12 19:13:14 ranger Exp $
+
+  12 May 2010; Brent Baude <ranger@gentoo.org>
+  texlive-langarabic-2009.ebuild:
+  Marking texlive-langarabic-2009 ~ppc64 for bug 300526
 
   10 May 2010; Markus Meier <maekke@gentoo.org>
   texlive-langarabic-2009.ebuild:
