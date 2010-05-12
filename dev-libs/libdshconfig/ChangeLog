@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdshconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.16 2010/01/14 21:24:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.17 2010/05/12 22:06:15 darkside Exp $
+
+  12 May 2010; Jeremy Olexa <darkside@gentoo.org>
+  libdshconfig-0.20.12.ebuild:
+  Add ~m68k-mint as tested in bug 319211
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libdshconfig-0.20.12.ebuild:
