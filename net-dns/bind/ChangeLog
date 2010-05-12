@@ -1,6 +1,20 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.267 2010/05/11 18:28:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.268 2010/05/12 23:34:42 idl0r Exp $
+
+*bind-9.7.0_p1 (12 May 2010)
+
+  12 May 2010; Christian Ruppert <idl0r@gentoo.org> -bind-9.6.1_p3.ebuild,
+  bind-9.6.1_p3-r1.ebuild, +files/bind-9.6.1-dlz-patch-dollar2.patch,
+  +files/bind-9.6.1-dlz-patch-ldap-url.patch, +bind-9.7.0_p1.ebuild,
+  +files/named.conf-r4:
+  Add two patches for dlz/ldap in bind-9.6.1_p3-r1, bug 238681. Remove "dig"
+  from make, its installed by bind-tools. Remove bind-9.6.1_p3. Version bump
+  to 9.7.0_p1, bug 302361. Disable geoip support for now, since its not yet
+  ready for 9.7.x. Some clean up. Fix permissions bug 174084 and bug 301275.
+  Don't add a syslog rule automatically to the syslog-ng.conf, use elog now.
+  Add a new named.conf-r4 which contains a lot of new stuff and improvements
+  but see yourself.
 
   11 May 2010; Christian Ruppert <idl0r@gentoo.org> files/named.conf-r3:
   Fix named.ca in named.conf-r3 as well, thanks to cilly

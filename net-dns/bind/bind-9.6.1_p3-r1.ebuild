@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p3-r1.ebuild,v 1.2 2010/05/10 13:36:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p3-r1.ebuild,v 1.3 2010/05/12 23:34:42 idl0r Exp $
 
 EAPI="2"
 
@@ -72,14 +72,22 @@ src_prepare() {
 			"${i}" || die "sed failed, ${i} doesn't exist"
 	done
 
-	use dlz && epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
+	if use dlz; then
+		epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
-	# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
-	# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
-	use dlz && use mysql && has_version ">=dev-db/mysql-5" && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
+		# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
+		use mysql && has_version ">=dev-db/mysql-5" && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+
+		if use ldap; then
+			# bug 238681
+			epatch "${FILESDIR}/bind-9.6.1-dlz-patch-ldap-url.patch" \
+				"${FILESDIR}/bind-9.6.1-dlz-patch-dollar2.patch"
+		fi
+	fi
 
 	# should be installed by bind-tools
-	sed -i -e "s:nsupdate ::g" bin/Makefile.in || die
+	sed -i -r -e "s:(nsupdate|dig) ::g" bin/Makefile.in || die
 
 	# sdb-ldap patch as per  bug #160567
 	# Upstream URL: http://bind9-ldap.bayour.com/
