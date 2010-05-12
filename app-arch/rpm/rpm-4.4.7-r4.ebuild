@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.4 2010/04/04 21:48:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.5 2010/05/12 19:59:42 sochotnicky Exp $
 
 inherit eutils autotools distutils perl-module flag-o-matic
 
 DESCRIPTION="Red Hat Package Management Utils"
-HOMEPAGE="http://www.rpm.org/"
-SRC_URI="http://wraptastic.org/pub/rpm-4.4.x/${P}.tar.gz"
+HOMEPAGE="http://www.rpm5.org/"
+SRC_URI="http://rpm5.org/files/rpm/rpm-4.4/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
