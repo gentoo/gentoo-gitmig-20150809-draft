@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.7.5.ebuild,v 1.1 2010/01/07 14:44:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.7.5.ebuild,v 1.2 2010/05/12 12:03:26 ssuominen Exp $
 
 EAPI="2"
+inherit eutils
 
 DESCRIPTION="A fast, modern and generic image processing library"
 HOMEPAGE="http://www.exactcode.de/site/open_source/exactimage/"
@@ -35,6 +36,11 @@ RDEPEND="agg? ( x11-libs/agg[truetype] )
 
 DEPEND="${RDEPEND}
 	swig? ( dev-lang/swig )"
+
+src_prepare() {
+	# this is broken ebuild: automagic libpng depend.
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+}
 
 src_configure() {
 	# evas support is disabled since evas is not on main tree. You can find it
