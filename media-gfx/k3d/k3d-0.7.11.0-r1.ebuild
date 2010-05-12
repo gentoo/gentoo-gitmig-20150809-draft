@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.4 2010/05/12 09:04:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.5 2010/05/12 09:42:59 ssuominen Exp $
 
 EAPI="2"
 
@@ -71,6 +71,8 @@ src_prepare() {
 	sed -i \
 		-e '/PKG_CHECK_MODULES/s:libpng12:libpng:' \
 		cmake/modules/K3DFindPNG.cmake || die
+
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 
 	epatch "${FILESDIR}"/${P}-fix-potfiles.patch \
 		"${FILESDIR}"/${P}-cuda.patch \
