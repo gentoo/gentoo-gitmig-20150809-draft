@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dri2proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.32 2010/04/18 19:44:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.33 2010/05/12 18:16:00 ranger Exp $
+
+  12 May 2010; Brent Baude <ranger@gentoo.org> dri2proto-2.3.ebuild:
+  Marking dri2proto-2.3 ppc64 stable for bug 308521
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> dri2proto-2.3.ebuild:
   arm stable, bug #308521
