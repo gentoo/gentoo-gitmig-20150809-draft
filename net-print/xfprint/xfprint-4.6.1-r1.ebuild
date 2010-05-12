@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.1 2010/05/12 20:33:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.2 2010/05/12 20:52:12 darkside Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -31,7 +31,7 @@ pkg_setup() {
 		$(use_enable cups)
 		$(xfconf_use_debug)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	PATCHES="${FILESDIR}/${P}-xfconf_channel_fix.diff"
+	PATCHES=( "${FILESDIR}/${P}-xfconf_channel_fix.diff" )
 }
 
 src_prepare() {
