@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.08-r1.ebuild,v 1.5 2009/05/05 19:42:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.08-r1.ebuild,v 1.6 2010/05/13 16:14:47 bicatali Exp $
 
 EAPI=1
 
@@ -38,11 +38,6 @@ src_test() {
 	for i in main0{1..9}*.exe main1{0..5}*.exe; do
 		./${i} > ${i}.out || die "test ${i} failed"
 	done
-	if use hepmc; then
-		emake main31 main32 || die "emake tests for hepmc failed"
-		./main31.exe > main31.exe.out || die
-		./main32.exe main32.cmnd hepmcout32.dat > main32.exe.out || die
-	fi
 	emake clean && rm -f main*out
 }
 
