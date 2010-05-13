@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110.ebuild,v 1.1 2010/05/13 09:59:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110.ebuild,v 1.2 2010/05/13 10:06:31 jlec Exp $
 
 EAPI="2"
 
@@ -60,7 +60,9 @@ src_test() {
 
 src_install() {
 	for i in refmac libcheck makecif; do
-		dobin ${i} || die
+		exeinto /usr/libexec/ccp4/bin/
+		doexe ${i} || die
+		dosym ../libexec/ccp4/bin/${i} /usr/bin/${i}
 	done
 	dosym refmac /usr/bin/refmac5 || die
 	dodoc refmac_keywords.pdf bugs_and_features.pdf || die
