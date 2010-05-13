@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.52.ebuild,v 1.3 2010/05/11 21:03:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.52.ebuild,v 1.4 2010/05/13 18:05:39 josejx Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="dbus +dhcp ipv6 nls tftp"
 
 RDEPEND="dbus? ( sys-apps/dbus )
