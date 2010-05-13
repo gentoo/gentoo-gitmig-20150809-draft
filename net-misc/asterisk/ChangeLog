@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.254 2010/04/06 08:14:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.255 2010/05/13 14:52:34 chainsaw Exp $
+
+*asterisk-1.6.2.7 (13 May 2010)
+
+  13 May 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.7.ebuild,
+  +files/1.6.2/asterisk-1.6.2.7-gsm-pic.patch,
+  +files/1.6.2/asterisk-1.6.2.7-pri-missing-keyword.patch, metadata.xml:
+  Bugfix release from upstream, closes bug #318535 by Thomas Stein. Many
+  thanks to Oliver Jaksch for his patch rediffing & scavenging activities.
+  /etc/asterisk will no longer be polluted with any sample files if the
+  samples USE-flag is unset, closes bug #286574 by Jeremy Johnson and bug
+  #305313 by Michael Higgins.
 
   06 Apr 2010; <chainsaw@gentoo.org> -asterisk-1.6.1.17.ebuild,
   -asterisk-1.6.2.5.ebuild:
