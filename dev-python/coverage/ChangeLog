@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.28 2010/05/10 18:24:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.29 2010/05/13 22:03:09 jer Exp $
+
+  13 May 2010; Jeroen Roovers <jer@gentoo.org> coverage-3.3.1.ebuild:
+  Stable for HPPA (bug #318813).
 
   10 May 2010; nixnut <nixnut@gentoo.org> coverage-3.3.1.ebuild:
   ppc stable #318813
