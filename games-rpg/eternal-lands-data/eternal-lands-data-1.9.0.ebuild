@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.9.0.ebuild,v 1.1 2010/04/03 21:34:52 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.9.0.ebuild,v 1.2 2010/05/13 23:48:52 rich0 Exp $
 
 inherit games
 
@@ -23,9 +23,12 @@ SRC_URI="http://www.eternal-lands.com/el_linux_190.zip
 LICENSE="eternal_lands"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-IUSE="music sound"
+IUSE="music sound bloodsuckermaps"
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+		!bloodsuckermaps? ( !games-rpg/eternal-lands-bloodsucker )"
+
+PDEPEND="bloodsuckermaps? ( games-rpg/eternal-lands-bloodsucker )"
 
 # Maybe one day upstream will do things in a consistent way.
 S="${WORKDIR}/el_linux"
@@ -46,6 +49,25 @@ src_install() {
 
 	rm license.txt
 	rm commands.lst
+
+	# don't install maps if using alternate maps
+	if use bloodsuckermaps ; then
+		rm maps/anitora.bmp maps/cave1.bmp maps/cont2map10.bmp
+		rm maps/cont2map11.bmp maps/cont2map12.bmp maps/cont2map13.bmp
+		rm maps/cont2map14.bmp maps/cont2map15.bmp maps/cont2map16.bmp
+		rm maps/cont2map17.bmp maps/cont2map18.bmp maps/cont2map19.bmp
+		rm maps/cont2map1.bmp maps/cont2map20.bmp maps/cont2map21.bmp
+		rm maps/cont2map22.bmp maps/cont2map23.bmp maps/cont2map24.bmp
+		rm maps/cont2map2.bmp maps/cont2map3.bmp maps/cont2map4.bmp
+		rm maps/cont2map5.bmp maps/cont2map6.bmp maps/cont2map7.bmp
+		rm maps/cont2map8.bmp maps/cont2map9.bmp maps/irilion.bmp
+		rm maps/legend.bmp maps/map11.bmp maps/map12.bmp
+		rm maps/map13.bmp maps/map14f.bmp maps/map15f.bmp
+		rm maps/map2.bmp maps/map3.bmp maps/map4f.bmp
+		rm maps/map5nf.bmp maps/map6nf.bmp maps/map7.bmp
+		rm maps/map8.bmp maps/map9f.bmp maps/seridia.bmp
+		rm maps/startmap.bmp
+	fi
 
 	insopts -m 0660
 	insinto "${GAMES_DATADIR}/${MY_PN}"
