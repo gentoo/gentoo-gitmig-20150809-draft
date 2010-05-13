@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre7-r1.ebuild,v 1.4 2010/05/07 18:10:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre7-r1.ebuild,v 1.5 2010/05/13 18:45:50 ulm Exp $
 
 NEED_EMACS=22
 
 inherit elisp
 
 MY_P=${P/_}
-DESCRIPTION="CEDET: Collection of Emacs Development Tools"
+DESCRIPTION="CEDET: Collection of Emacs Development Environment Tools"
 HOMEPAGE="http://cedet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cedet/${MY_P}.tar.gz"
 
