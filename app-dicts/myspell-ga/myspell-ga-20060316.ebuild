@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ga/myspell-ga-20060316.ebuild,v 1.15 2009/12/13 19:37:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ga/myspell-ga-20060316.ebuild,v 1.16 2010/05/13 19:30:55 josejx Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "ga,IE,ga_IE,Irish (Ireland),ga_IE.zip"
@@ -20,4 +20,4 @@ LICENSE="GPL-2"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://borel.slu.edu/ispell/"
 IUSE=""
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"

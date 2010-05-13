@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-ku
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ku/ChangeLog,v 1.14 2009/06/22 13:39:45 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ku/ChangeLog,v 1.15 2010/05/13 19:33:57 josejx Exp $
+
+  13 May 2010; Joseph Jezak <josejx@gentoo.org> myspell-ku-20060316.ebuild:
+  Marked ppc64 stable.
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> myspell-ku-20060316.ebuild:
   Stable for HPPA too.
