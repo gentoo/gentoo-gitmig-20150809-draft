@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.197 2010/05/06 23:36:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.198 2010/05/13 21:14:55 josejx Exp $
+
+  13 May 2010; Joseph Jezak <josejx@gentoo.org> openbox-3.4.11.1.ebuild:
+  Marked ppc/ppc64 stable for bug #319499.
 
   06 May 2010; Jeroen Roovers <jer@gentoo.org> openbox-3.4.10.ebuild:
   Stable for HPPA (bug #301147).
