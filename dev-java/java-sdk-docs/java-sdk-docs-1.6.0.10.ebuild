@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0.10.ebuild,v 1.7 2010/01/03 20:49:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0.10.ebuild,v 1.8 2010/05/13 20:28:33 nelchael Exp $
 
 ORIG_NAME="jdk-6u10-docs.zip"
 SRC_URI="jdk-6u10-docs.zip"
@@ -20,7 +20,7 @@ S="${WORKDIR}/docs"
 pkg_nofetch() {
 	einfo "Please download ${ORIG_NAME} from "
 	einfo "${DOWNLOAD_URL}"
-	einfo "(select English and agree to the licence) and place it in ${DISTDIR} named as"
+	einfo "(select English and agree to the license) and place it in ${DISTDIR} named as"
 	einfo "${SRC_URI}. Because Sun changes the doc zip file"
 	einfo "without changing the filename, we have to resort to renaming to keep"
 	einfo "the md5sum verification working for existing and new downloads."

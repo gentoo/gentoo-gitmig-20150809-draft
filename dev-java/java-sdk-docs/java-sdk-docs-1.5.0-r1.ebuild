@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0-r1.ebuild,v 1.11 2009/05/29 20:51:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0-r1.ebuild,v 1.12 2010/05/13 20:28:33 nelchael Exp $
 
 SRC_URI="jdk-1_5_0-doc-${PR}.zip"
 DESCRIPTION="Sun's documentation bundle (including API) for Java SE"
@@ -20,7 +20,7 @@ S="${WORKDIR}/docs"
 pkg_nofetch() {
 	einfo "Please download jdk-1_5_0-doc.zip from"
 	einfo "${DOWNLOAD_URL}"
-	einfo "(select English and agree to the licence) and place it in ${DISTDIR} named as"
+	einfo "(select English and agree to the license) and place it in ${DISTDIR} named as"
 	einfo "${SRC_URI}. Notice the ${PR}. Because Sun changes the doc zip file"
 	einfo "without changing the filename, we have to resort to renaming to keep"
 	einfo "the md5sum verification working existing and new downloads."
