@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16-r1.ebuild,v 1.2 2009/11/23 13:35:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/easypg-0.0.16-r1.ebuild,v 1.3 2010/05/13 19:41:31 ulm Exp $
+
+NEED_EMACS=22
 
 inherit elisp
 
@@ -17,8 +19,7 @@ KEYWORDS="amd64 x86"
 IUSE="gnus"
 
 DEPEND="app-crypt/gnupg"
-RDEPEND="${DEPEND}
-	gnus? ( virtual/gnus )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 SITEFILE="50${PN}-gentoo.el"
@@ -44,8 +45,7 @@ src_compile() {
 	emake || die "emake failed"
 	elisp-make-autoload-file || die
 
-	if use gnus && [ "${HAVE_EMACS%%.*}" -ge 22 ]; then
-		# pgg-epg requires pgg, it will not compile with Emacs 21
+	if use gnus; then
 		elisp-compile pgg-epg.el || die
 	fi
 }
