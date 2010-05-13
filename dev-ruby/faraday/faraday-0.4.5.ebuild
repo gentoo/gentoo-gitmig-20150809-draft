@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.4.3.ebuild,v 1.3 2010/04/30 20:23:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.4.5.ebuild,v 1.1 2010/05/13 12:10:29 flameeyes Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/rack dev-ruby/addressable"
+ruby_add_rdepend ">=dev-ruby/rack-1.0.1 >=dev-ruby/addressable-2.1.1"
 ruby_add_bdepend test "virtual/ruby-test-unit"
 
 all_ruby_prepare() {
