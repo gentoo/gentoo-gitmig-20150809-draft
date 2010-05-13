@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1.ebuild,v 1.5 2010/05/12 20:04:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1.ebuild,v 1.6 2010/05/13 08:53:37 pva Exp $
 
 EAPI=2
 inherit autotools eutils multilib toolchain-funcs
@@ -25,6 +25,8 @@ PROVIDE="virtual/libpcap"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.1-cross-linux.patch"
+	# Force usbmon device to avoid #318359
+	sed 's:\(ac_usb_dev_name=\).*udevinfo.*:\1"usbmon":' -i configure.in || die
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.141 2010/05/12 20:04:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.142 2010/05/13 08:53:37 pva Exp $
+
+  13 May 2010; Peter Volkov <pva@gentoo.org> libpcap-1.1.1.ebuild:
+  Force usbmon device for USB capturing, bug #318359, thank David Relson for
+  report.
 
   12 May 2010; Brent Baude <ranger@gentoo.org> libpcap-1.1.1.ebuild:
   stable ppc64, bug 313827
