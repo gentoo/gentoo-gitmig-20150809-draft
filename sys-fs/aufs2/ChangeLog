@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.18 2010/04/05 12:37:30 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.19 2010/05/13 01:45:28 ferringb Exp $
+
+  13 May 2010; Brian Harring <ferringb@gentoo.org> aufs2-0_p20100308.ebuild,
+  aufs2-0_p20100405.ebuild:
+  re-enable merging of aufs2 binpkgs on systems lacking an unpacked kernel
 
 *aufs2-0_p20100405 (05 Apr 2010)
 

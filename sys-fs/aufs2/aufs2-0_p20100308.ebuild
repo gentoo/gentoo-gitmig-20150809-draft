@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100308.ebuild,v 1.2 2010/03/17 15:42:57 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100308.ebuild,v 1.3 2010/05/13 01:45:28 ferringb Exp $
 
 EAPI="2"
 
@@ -23,6 +23,8 @@ S=${WORKDIR}/${PN}-standalone
 MODULE_NAMES="aufs(misc:${S})"
 
 pkg_setup() {
+	# uesd to allow merging of binpkg aufs2 on systems lacking kernel sources
+	[ -n "$PKG_SETUP_HAS_ALREADY_BEEN_RAN" ] && return
 	get_version
 	kernel_is lt 2 6 27 && die "kernel too old"
 	kernel_is gt 2 6 33 && die "kernel too new"
@@ -46,6 +48,7 @@ pkg_setup() {
 		fi
 	fi
 	linux-mod_pkg_setup
+	export PKG_SETUP_HAS_ALREADY_BEEN_RAN=1
 }
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100405.ebuild,v 1.1 2010/04/05 12:37:30 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100405.ebuild,v 1.2 2010/05/13 01:45:28 ferringb Exp $
 
 EAPI="2"
 
@@ -23,6 +23,9 @@ S=${WORKDIR}/${PN}-standalone
 MODULE_NAMES="aufs(misc:${S})"
 
 pkg_setup() {
+	# this is needed so merging a binpkg aufs2 is possible w/out a kernel unpacked on the system
+	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
+
 	get_version
 	kernel_is lt 2 6 27 && die "kernel too old"
 	kernel_is gt 2 6 33 && die "kernel too new"
@@ -46,6 +49,7 @@ pkg_setup() {
 		fi
 	fi
 	linux-mod_pkg_setup
+	export PKG_SETUP_HAS_BEEN_RAN=1
 }
 
 src_prepare() {
