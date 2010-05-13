@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.76 2010/05/12 19:56:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.77 2010/05/13 21:32:40 darkside Exp $
+
+  13 May 2010; Jeremy Olexa <darkside@gentoo.org> minicom-2.4.ebuild:
+  Add Gentoo Prefix changes. Bump to EAPI3, add keywords. bug 316827
 
   12 May 2010; Joseph Jezak <josejx@gentoo.org> minicom-2.4.ebuild:
   Marked ppc/ppc64 stable for bug #317703.
