@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p1.ebuild,v 1.2 2010/05/13 00:13:32 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p1.ebuild,v 1.3 2010/05/13 15:28:54 idl0r Exp $
 
 EAPI="3"
 
@@ -94,10 +94,11 @@ src_prepare() {
 	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
 
 	if use geoip; then
+		cp "${DISTDIR}"/${GEOIP_P}.patch "${S}" || die
 		sed -i -e 's/-RELEASEVER=3/-RELEASEVER=1/' \
 			-e 's/+RELEASEVER=3-geoip-1.3/+RELEASEVER=1-geoip-1.3/' \
-			"${DISTDIR}"/${GEOIP_P}.patch || die
-		epatch "${DISTDIR}"/${GEOIP_P}.patch
+			${GEOIP_P}.patch || die
+		epatch ${GEOIP_P}.patch
 	fi
 
 	# bug #220361
