@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.313 2010/05/09 16:53:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.314 2010/05/13 19:22:04 ssuominen Exp $
+
+  13 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xulrunner-1.8.1.19.ebuild, +files/xulrunner-1.8.1.19-libpng14.patch:
+  Fix building with libpng14 wrt #319575.
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org>
   xulrunner-1.9.2.3-r1.ebuild:
