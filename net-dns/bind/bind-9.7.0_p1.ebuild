@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p1.ebuild,v 1.1 2010/05/12 23:34:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p1.ebuild,v 1.2 2010/05/13 00:13:32 idl0r Exp $
 
 EAPI="3"
 
@@ -11,23 +11,23 @@ MY_P="${PN}-${MY_PV}"
 
 SDB_LDAP_VER="1.1.0"
 
-#GEOIP_PV=1.3
-#GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
-#GEOIP_P="bind-geoip-${GEOIP_PV}"
+GEOIP_PV=1.3
+GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
+GEOIP_P="bind-geoip-${GEOIP_PV}"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
-	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
-#	geoip? ( ${GEOIP_SRC_URI_BASE}/files/${GEOIP_P}-readme.txt
-#			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_P}.patch )"
+	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
+	geoip? ( ${GEOIP_SRC_URI_BASE}/files/${GEOIP_P}-readme.txt
+			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_P}.patch )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
-	resolvconf urandom sdb-ldap xml" # geoip"
+	resolvconf urandom sdb-ldap xml geoip"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -36,8 +36,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	idn? ( net-dns/idnkit )
 	postgres? ( virtual/postgresql-base )
 	threads? ( >=sys-libs/libcap-2.1.0 )
-	xml? ( dev-libs/libxml2 )"
-#	geoip? ( >=dev-libs/geoip-1.4.6 )"
+	xml? ( dev-libs/libxml2 )
+	geoip? ( >=dev-libs/geoip-1.4.6 )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -93,7 +93,12 @@ src_prepare() {
 	# Upstream URL: http://bind9-ldap.bayour.com/
 	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
 
-#	use geoip && epatch "${DISTDIR}"/${GEOIP_P}.patch
+	if use geoip; then
+		sed -i -e 's/-RELEASEVER=3/-RELEASEVER=1/' \
+			-e 's/+RELEASEVER=3-geoip-1.3/+RELEASEVER=1-geoip-1.3/' \
+			"${DISTDIR}"/${GEOIP_P}.patch || die
+		epatch "${DISTDIR}"/${GEOIP_P}.patch
+	fi
 
 	# bug #220361
 	rm {aclocal,libtool}.m4
@@ -149,6 +154,8 @@ src_configure() {
 		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
 
+	use geoip && myconf="${myconf} --with-geoip"
+
 	# bug #158664
 	gcc-specs-ssp && replace-flags -O[23s] -O
 
@@ -198,7 +205,7 @@ src_install() {
 		tar xf "${DISTDIR}"/dyndns-samples.tbz2 || die
 	fi
 
-#	use geoip && dodoc "${DISTDIR}"/${GEOIP_P}-readme.txt
+	use geoip && dodoc "${DISTDIR}"/${GEOIP_P}-readme.txt
 
 	insinto /etc/bind
 	newins "${FILESDIR}"/named.conf-r4 named.conf || die

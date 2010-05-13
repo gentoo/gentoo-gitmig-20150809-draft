@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p3-r1.ebuild,v 1.3 2010/05/12 23:34:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p3-r1.ebuild,v 1.4 2010/05/13 00:13:32 idl0r Exp $
 
 EAPI="2"
 
@@ -148,6 +148,8 @@ src_configure() {
 	else
 		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
+
+	use geoip && myconf="${myconf} --with-geoip"
 
 	# bug #158664
 	gcc-specs-ssp && replace-flags -O[23s] -O

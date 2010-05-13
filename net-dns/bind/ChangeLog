@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.268 2010/05/12 23:34:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.269 2010/05/13 00:13:32 idl0r Exp $
+
+  13 May 2010; Christian Ruppert <idl0r@gentoo.org> bind-9.6.1_p3-r1.ebuild,
+  bind-9.7.0_p1.ebuild:
+  Add geoip back in 9.7.0 also add --with-geoip switch to 9.7.0 and 9.6.1.
 
 *bind-9.7.0_p1 (12 May 2010)
 
