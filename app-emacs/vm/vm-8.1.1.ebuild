@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.0_beta.ebuild,v 1.3 2010/01/04 22:45:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.1.1.ebuild,v 1.1 2010/05/13 20:06:43 ulm Exp $
 
 inherit elisp eutils
 
@@ -8,7 +8,7 @@ MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="The VM mail reader for Emacs"
 HOMEPAGE="http://www.nongnu.org/viewmail/"
-SRC_URI="http://launchpad.net/vm/trunk/${MY_PV}/+download/${MY_P}.tgz"
+SRC_URI="http://launchpad.net/vm/${PV%.*}.x/${MY_PV}/+download/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,8 +26,6 @@ SITEFILE="50${PN}-gentoo.el"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-submake-errors.patch"
 
 	if ! use bbdb; then
 		elog "Excluding vm-pcrisis.el since the \"bbdb\" USE flag is not set."
