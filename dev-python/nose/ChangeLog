@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.51 2010/05/11 21:19:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.52 2010/05/13 20:19:53 jer Exp $
+
+  13 May 2010; Jeroen Roovers <jer@gentoo.org> nose-0.11.3.ebuild:
+  Stable for HPPA PPC (bug #315155).
 
   11 May 2010; Brent Baude <ranger@gentoo.org> nose-0.11.3.ebuild:
   stable ppc64, bug 315155
