@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-sk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sk/ChangeLog,v 1.15 2010/01/16 14:19:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sk/ChangeLog,v 1.16 2010/05/13 19:44:38 josejx Exp $
+
+  13 May 2010; Joseph Jezak <josejx@gentoo.org> myspell-sk-20060316.ebuild:
+  Marked ppc64 stable.
 
   16 Jan 2010; Ulrich Mueller <ulm@gentoo.org> myspell-sk-20060316.ebuild:
   Fix LICENSE, myspell-hyph_sk_SK-TiborBako is identical with MIT, bug 301168.

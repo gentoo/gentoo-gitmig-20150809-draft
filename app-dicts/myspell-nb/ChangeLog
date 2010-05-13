@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-nb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.17 2009/06/22 13:42:09 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.18 2010/05/13 19:41:11 josejx Exp $
+
+  13 May 2010; Joseph Jezak <josejx@gentoo.org> myspell-nb-20080310.ebuild:
+  Marked ppc64 stable.
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> myspell-nb-20080310.ebuild:
   Stable for HPPA too.
