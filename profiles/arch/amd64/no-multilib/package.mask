@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.78 2010/04/24 12:35:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.79 2010/05/13 21:09:56 mabi Exp $
 
 # 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
 # needs amd64 multilib
@@ -53,6 +53,7 @@ app-text/acroread
 app-text/bibus
 dev-embedded/libftd2xx
 dev-embedded/openocd
+>=dev-java/sun-j2me-bin-2.5.2.01
 dev-lang/dmd-bin
 dev-lang/icc
 dev-lang/idb
