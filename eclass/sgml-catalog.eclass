@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.14 2005/09/08 17:37:32 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.15 2010/05/13 21:38:11 darkside Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 
@@ -20,26 +20,29 @@ sgml-catalog_cat_include() {
 
 sgml-catalog_cat_doinstall() {
 	debug-print function $FUNCNAME $*
-	/usr/bin/install-catalog --add $1 $2 &>/dev/null
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
+	"${EPREFIX}"/usr/bin/install-catalog --add "${EPREFIX}/$1" "${EPREFIX}/$2" &>/dev/null
 }
 
 sgml-catalog_cat_doremove() {
 	debug-print function $FUNCNAME $*
-	/usr/bin/install-catalog --remove $1 $2 &>/dev/null
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
+	"${EPREFIX}"/usr/bin/install-catalog --remove "${EPREFIX}/$1" "${EPREFIX}/$2" &>/dev/null
 }
 
 sgml-catalog_pkg_postinst() {
 	debug-print function $FUNCNAME $*
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 
 	for entry in ${SGML_TOINSTALL}; do
-		arg1=`echo ${entry} | cut -f1 -d\:`
-		arg2=`echo ${entry} | cut -f2 -d\:`
-		if [ ! -e ${arg2} ]
+		arg1=${entry%%:*}
+		arg2=${entry#*:}
+		if [ ! -e "${EPREFIX}"${arg2} ]
 		then
-			ewarn "${arg2} doesn't appear to exist, although it ought to!"
+			ewarn "${EPREFIX}${arg2} doesn't appear to exist, although it ought to!"
 			continue
 		fi
-		einfo "Now adding ${arg2} to ${arg1} and /etc/sgml/catalog"
+		einfo "Now adding ${EPREFIX}${arg2} to ${EPREFIX}${arg1} and ${EPREFIX}/etc/sgml/catalog"
 		sgml-catalog_cat_doinstall ${arg1} ${arg2}
 	done
 	sgml-catalog_cleanup
@@ -51,27 +54,29 @@ sgml-catalog_pkg_prerm() {
 
 sgml-catalog_pkg_postrm() {
 	debug-print function $FUNCNAME $*
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 
 	for entry in ${SGML_TOINSTALL}; do
-		arg1=`echo ${entry} | cut -f1 -d\:`
-		arg2=`echo ${entry} | cut -f2 -d\:`
-		if [ -e ${arg2} ]
+		arg1=${entry%%:*}
+		arg2=${entry#*:}
+		if [ -e "${EPREFIX}"${arg2} ]
 		then
-			ewarn "${arg2} still exists!  Not removing from ${arg1}"
+			ewarn "${EPREFIX}${arg2} still exists!  Not removing from ${EPREFIX}${arg1}"
 			ewarn "This is normal behavior for an upgrade ..."
 			continue
 		fi
-		einfo "Now removing $arg1 from $arg2 and /etc/sgml/catalog"
+		einfo "Now removing ${EPREFIX}${arg1} from ${EPREFIX}${arg2} and ${EPREFIX}/etc/sgml/catalog"
 		sgml-catalog_cat_doremove ${arg1} ${arg2}
 	done
 }
 
 sgml-catalog_cleanup() {
-	if [ -e /usr/bin/gensgmlenv ]
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
+	if [ -e "${EPREFIX}/usr/bin/gensgmlenv" ]
 	then
 		einfo Regenerating SGML environment variables ...
 		gensgmlenv
-		grep -v export /etc/sgml/sgml.env > /etc/env.d/93sgmltools-lite
+		grep -v export "${EPREFIX}/etc/sgml/sgml.env" > "${EPREFIX}/etc/env.d/93sgmltools-lite"
 	fi
 }
 
