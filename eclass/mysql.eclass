@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.145 2010/04/27 05:45:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.146 2010/05/13 19:45:47 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -614,7 +614,8 @@ configure_51() {
 
 	# like configuration=max-no-ndb
 	if use cluster ; then
-		plugins_sta="${plugins_sta} ndbcluster"
+		plugins_sta="${plugins_sta} ndbcluster partition"
+		plugins_dis="${plugins_dis//partition}"
 		myconf="${myconf} --with-ndb-binlog"
 	else
 		plugins_dis="${plugins_dis} ndbcluster"
@@ -623,7 +624,7 @@ configure_51() {
 	if [[ "${PN}" == "mariadb" ]] ; then
 		# In MariaDB, InnoDB is packaged in the xtradb directory, so it's not
 		# caught above.
-		plugins_sta="${plugins_sta},maria,innobase"
+		plugins_sta="${plugins_sta} maria innobase"
 		myconf="${myconf} $(use_with libevent)"
 		# This is not optional, without it several upstream testcases fail.
 		# Also strongly recommended by upstream.
