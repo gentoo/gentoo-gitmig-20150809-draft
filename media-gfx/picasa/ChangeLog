@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/picasa
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.14 2009/02/08 01:49:47 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.15 2010/05/13 19:54:58 caster Exp $
+
+  13 May 2010; Vlastimil Babka <caster@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
 *picasa-3.0.0.57.4402.0_beta (08 Feb 2009)
 
