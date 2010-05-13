@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.62 2010/03/10 07:17:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.63 2010/05/13 14:05:56 jer Exp $
+
+  13 May 2010; Jeroen Roovers <jer@gentoo.org> root-5.26.00-r2.ebuild:
+  Stable for HPPA (bug #318469).
 
 *root-5.26.00-r2 (10 Mar 2010)
 
