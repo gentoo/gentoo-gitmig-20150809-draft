@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/glazedlists
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.18 2010/03/03 18:32:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.19 2010/05/13 15:20:27 josejx Exp $
+
+  13 May 2010; Joseph Jezak <josejx@gentoo.org> glazedlists-1.7.0-r1.ebuild:
+  Marked ppc stable for bug #304697.
 
   03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   glazedlists-1.7.0-r1.ebuild:
