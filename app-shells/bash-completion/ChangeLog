@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.213 2010/02/25 21:03:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.214 2010/05/13 20:22:11 grobian Exp $
+
+  13 May 2010; Fabian Groffen <grobian@gentoo.org>
+  bash-completion-1.1-r5.ebuild:
+  Marked ~ppc-macos, bug #319591
 
   25 Feb 2010; Fabian Groffen <grobian@gentoo.org>
   bash-completion-1.1-r5.ebuild:
