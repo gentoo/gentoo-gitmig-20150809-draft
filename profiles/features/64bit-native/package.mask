@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.53 2010/05/13 21:12:02 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.54 2010/05/13 21:12:56 mabi Exp $
 
 # 13 May 2010, Matti Bickel <mabi@gentoo.org>
 # needs amd64 multilib
->=dev-java/sun-j2me-bin
+>=dev-java/sun-j2me-bin-2.5.2.01
 
 # 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
 # needs amd64 multilib
