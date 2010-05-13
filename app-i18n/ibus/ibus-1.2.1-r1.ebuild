@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.1-r1.ebuild,v 1.1 2010/05/11 23:07:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.1-r1.ebuild,v 1.2 2010/05/13 17:52:59 arfrever Exp $
 
 EAPI="2"
-PYTHON_DEPEND="python? 2:2.5"
+PYTHON_DEPEND="2:2.5"
 inherit eutils gnome2-utils multilib python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
