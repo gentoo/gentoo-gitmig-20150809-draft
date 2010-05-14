@@ -1,3 +1,4 @@
+http://bugs.gentoo.org/319113
 http://repos.archlinux.org/wsvn/community/xbmc/trunk/libpng14.patch
 
 diff -Nur xbmc-9.11.orig/xbmc/lib/cximage-6.0/CxImage/ximapng.cpp xbmc-9.11/xbmc/lib/cximage-6.0/CxImage/ximapng.cpp
