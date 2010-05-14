@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.172 2010/05/14 19:53:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.173 2010/05/14 22:59:01 darkside Exp $
+
+  14 May 2010; Jeremy Olexa <darkside@gentoo.org> fvwm-2.5.30.ebuild:
+  Remove hack for documentation location. Use configure and make instead.
+  Help by Thomas Adam in bug 319173
 
 *fvwm-2.5.30 (14 May 2010)
 

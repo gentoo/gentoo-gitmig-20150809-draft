@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.30.ebuild,v 1.1 2010/05/14 19:53:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.30.ebuild,v 1.2 2010/05/14 22:59:01 darkside Exp $
 
 EAPI=2
 
@@ -103,11 +103,12 @@ src_configure() {
 		$(use_with stroke stroke-library) \
 		$(use_enable svg rsvg) \
 		$(use_enable truetype xft) \
-		$(use_enable xinerama)
+		$(use_enable xinerama) \
+		--docdir="/usr/share/doc/${P}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" docdir="/usr/share/doc/${P}" install || die
 
 	# These are always removed, because gentoo doesn't have anymore
 	# a dev-perl/gtk-perl package, so, these modules are pointless.
@@ -148,9 +149,6 @@ src_install() {
 	dodir /etc/X11/Sessions
 	echo "/usr/bin/fvwm" > "${D}/etc/X11/Sessions/${PN}" || die
 	fperms a+x /etc/X11/Sessions/${PN} || die
-
-	# Move docs.
-	mv "${D}"/usr/share/doc/{${PN},${P}}
 
 	dodoc AUTHORS ChangeLog NEWS README \
 		docs/{ANNOUNCE,BUGS,COMMANDS,CONVENTIONS} \
