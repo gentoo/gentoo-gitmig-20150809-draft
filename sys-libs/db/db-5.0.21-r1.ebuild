@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.0.21-r1.ebuild,v 1.1 2010/05/14 03:19:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.0.21-r1.ebuild,v 1.2 2010/05/14 10:56:44 robbat2 Exp $
 
 EAPI=2
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
@@ -188,12 +188,13 @@ src_test() {
 	# db_repsite is impossible to build, as upstream strips those sources.
 	# db_repsite is used directly in the setup_site_prog,
 	# setup_site_prog is called from open_site_prog
-	# which is called only from tests
-	egrep -ril \
-		'open_site_prog|setup_site_prog|db_repsite' \
-		"${S_BASE}/test" \
-		| xargs egrep -l '^# TEST ' \
-		| xargs rename .tcl .tcl.DISABLED
+	# which is called only from tests in the multi_repmgr group.
+	#sed -ri \
+	#	-e '/set subs/s,multi_repmgr,,g' \
+	#	"${S_BASE}/test/testparams.tcl"
+	sed -ri \
+		-e '/multi_repmgr/d' \
+		"${S_BASE}/test/test.tcl"
 
 	db_src_test
 }
