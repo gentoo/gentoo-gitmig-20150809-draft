@@ -47,7 +47,7 @@
  	<!-- ================================================== -->
  
 -	<target name="compile" depends="get-extjar, generate-js">
-+	<target name="compile" depends="">
++	<target name="compile" depends="mkdir">
  		<!-- Create the time stamp -->
  		<tstamp/>
  
