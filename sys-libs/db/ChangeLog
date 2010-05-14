@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.303 2010/05/11 08:01:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.304 2010/05/14 03:19:25 robbat2 Exp $
+
+*db-5.0.21-r1 (14 May 2010)
+
+  14 May 2010; Robin H. Johnson <robbat2@gentoo.org> +db-5.0.21-r1.ebuild,
+  +files/db-5.0.21-enable-dbm-autoconf.patch:
+  Bug #319583: DBM support was not actually being built due to bug in
+  upstream autoconf.
 
 *db-5.0.21 (11 May 2010)
 
