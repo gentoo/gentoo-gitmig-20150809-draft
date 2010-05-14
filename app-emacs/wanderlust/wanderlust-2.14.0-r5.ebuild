@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r5.ebuild,v 1.5 2010/01/30 23:28:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r5.ebuild,v 1.6 2010/05/14 14:53:04 ulm Exp $
 
 inherit elisp eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="bbdb ssl linguas_ja"
 
 DEPEND=">=app-emacs/apel-10.6
-	virtual/flim
+	virtual/emacs-flim
 	app-emacs/semi
 	bbdb? ( app-emacs/bbdb )"
 RDEPEND="!app-emacs/wanderlust-cvs

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mu-cite/mu-cite-8.1_p20070903.ebuild,v 1.1 2007/09/23 18:20:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mu-cite/mu-cite-8.1_p20070903.ebuild,v 1.2 2010/05/14 14:47:53 ulm Exp $
 
 inherit elisp
 
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-emacs/apel
-	virtual/flim"
+	virtual/emacs-flim"
 
-SITEFILE=50${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
 DOCS="ChangeLog NEWS README.en"
 
 S="${WORKDIR}/${MY_P}"

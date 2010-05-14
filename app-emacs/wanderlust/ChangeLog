@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.83 2010/03/20 17:49:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.84 2010/05/14 14:53:04 ulm Exp $
+
+  14 May 2010; Ulrich Mueller <ulm@gentoo.org> wanderlust-2.14.0-r5.ebuild,
+  wanderlust-2.14.0-r6.ebuild, wanderlust-2.15.7_pre20090820.ebuild,
+  wanderlust-2.15.9_pre20100125.ebuild:
+  Fix dependency after package move of virtual/emacs-flim.
 
   20 Mar 2010; Raúl Porcel <armin76@gentoo.org>
   wanderlust-2.14.0-r6.ebuild:

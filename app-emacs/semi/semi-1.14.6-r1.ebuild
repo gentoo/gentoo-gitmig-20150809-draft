@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6-r1.ebuild,v 1.6 2009/05/05 08:08:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/semi-1.14.6-r1.ebuild,v 1.7 2010/05/14 14:50:14 ulm Exp $
 
 inherit elisp eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="linguas_ja"
 
 DEPEND=">=app-emacs/apel-10.6
-	virtual/flim"
+	virtual/emacs-flim"
 RDEPEND="${DEPEND}"
 
 SITEFILE="65${PN}-gentoo.el"
