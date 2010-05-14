@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.8 2010/04/01 19:58:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.9 2010/05/14 14:21:02 jlec Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
-	media-libs/libpng
+	<media-libs/libpng-1.4
 	media-libs/jpeg
 	media-libs/tiff"
 RDEPEND="${DEPEND}"
