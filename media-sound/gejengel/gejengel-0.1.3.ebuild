@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.3.ebuild,v 1.1 2010/04/14 09:03:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.3.ebuild,v 1.2 2010/05/14 16:16:45 hwoarang Exp $
 
 EAPI=2
-inherit eutils multilib
+inherit base eutils multilib
 
 DESCRIPTION="Lightweight audio player"
 HOMEPAGE="http://code.google.com/p/gejengel"
@@ -19,7 +19,8 @@ RDEPEND=">=dev-cpp/gtkmm-2.16
 	dev-cpp/libsexymm
 	media-libs/taglib
 	dev-db/sqlite
-	|| ( media-gfx/imagemagick[cxx] media-gfx/imagemagick[-nocxx] )
+	|| ( || ( media-gfx/imagemagick[cxx] media-gfx/imagemagick[-nocxx] )
+	media-gfx/graphicsmagick[imagemagick] )
 	mad? ( media-libs/libmad )
 	flac? ( media-libs/flac[cxx] )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070330 )
@@ -32,6 +33,10 @@ RDEPEND=">=dev-cpp/gtkmm-2.16
 DEPEND="${RDEPEND}
 	dev-libs/libxdg-basedir
 	>=sys-devel/automake-1.11"
+
+PATCHES=(
+	"${FILESDIR}/${P}-gcc45.patch"
+)
 
 src_configure() {
 	econf \
