@@ -8,4 +8,7 @@
   Includes a C-callable interface, and a Fortran-callable interface.
   MATLAB routines are not included in the Gentoo package.
 </longdescription>
+<use>
+  <flag name='metis'>Use METIS via CHOLMOD(<pkg>sci-libs/cholmod</pkg>) for partitioning</flag>
+</use>
 </pkgmetadata>
