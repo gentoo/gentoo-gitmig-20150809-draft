@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/suitesparse
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/ChangeLog,v 1.3 2009/11/21 08:03:29 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/ChangeLog,v 1.4 2010/05/14 21:47:38 bicatali Exp $
+
+*suitesparse-3.5.0 (14 May 2010)
+
+  14 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -suitesparse-3.1.0.ebuild, -suitesparse-3.2.0.ebuild,
+  +suitesparse-3.5.0.ebuild:
+  Version bump. Only spqr and umfpack have significant changes
 
 *suitesparse-3.4.0 (21 Nov 2009)
 
