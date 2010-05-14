@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p1.ebuild,v 1.3 2010/05/13 15:28:54 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p1.ebuild,v 1.4 2010/05/14 11:04:47 idl0r Exp $
 
 EAPI="3"
 
@@ -240,8 +240,8 @@ src_install() {
 	fowners root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri}
 	fowners root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
 	fperms 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
-	fperms 0750 /etc/bind /var/bind/{pri,sec}
-	fperms 0770 /var/{run,log}/named /var/bind
+	fperms 0750 /etc/bind /var/bind/pri
+	fperms 0770 /var/{run,log}/named /var/bind/{,sec}
 }
 
 pkg_postinst() {

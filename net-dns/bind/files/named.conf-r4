@@ -134,6 +134,16 @@ view "internal" in {
 		allow-update { none; };
 		notify no;
 	};
+
+	/*
+	 * NOTE: All zone blocks for "public" view should be listed here in "internal"
+	 * too! Otherwise you'll have trouble to resolv the public zones properly.
+	 * That affects all hosts from the "trusted" ACL.
+	 * A separate config, which contains all zone blocks, might be better in
+	 * this case. Then you can simply add:
+	 * include "/etc/bind/zones.cfg";
+	 * for "internal" and "public" view.
+	 */
 };
 
 view "public" in {
