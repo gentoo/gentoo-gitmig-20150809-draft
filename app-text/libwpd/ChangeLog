@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.66 2010/01/02 11:28:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.67 2010/05/14 19:30:41 eva Exp $
+
+  14 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -libwpd-0.8.9.ebuild,
+  -libwpd-0.8.10.ebuild:
+  Clean up old revisions.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libwpd-0.8.14.ebuild:
   Transfer Prefix keywords
