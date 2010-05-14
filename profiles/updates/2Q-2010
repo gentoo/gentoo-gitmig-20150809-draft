@@ -6,3 +6,4 @@ move dev-util/fossil dev-vcs/fossil
 move dev-util/svk dev-vcs/svk
 move app-admin/mbr sys-boot/mbr
 move net-analyzer/mirmon www-apps/mirmon
+move virtual/flim virtual/emacs-flim

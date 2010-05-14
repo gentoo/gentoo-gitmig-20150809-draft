@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4174 2010/05/13 19:51:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4175 2010/05/14 14:57:34 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 May 2010; Ulrich Mueller <ulm@gentoo.org> updates/2Q-2010:
+  Package move virtual/flim to virtual/emacs-flim.
 
   13 May 2010; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask virtual/gnus for removal.
