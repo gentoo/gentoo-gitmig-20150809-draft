@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.24 2010/03/13 14:59:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.25 2010/05/14 14:05:40 jlec Exp $
 
 # Joseph Jezak <josejx@gentoo.org (12 Feb 2010)
 # Masking MOL due to breakage, but leaving it in the tree in case anyone 
@@ -10,6 +10,9 @@ app-emulation/mol
 # Samuli Suominen <ssuominen@gentoo.org> (13 Mar 2010)
 # Only texlive-core-2009 is patched for libpng-1.4.
 >=media-libs/libpng-1.4
+# Justin Lecher <jlec@gentoo.org> (13 Mar 2010)
+# Please unmask dev-tcltk/tkimg-1.4.20100510 once libpng-1.4 is unmasked
+>=dev-tcltk/tkimg-1.4.20100510
 
 # Alexis Ballier <aballier@gentoo.org> (11 Jan 2010)
 # Mask TeX Live 2009 for testing
