@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.174 2010/05/06 19:21:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.175 2010/05/14 14:43:09 grobian Exp $
+
+  14 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask upcoming baselayout-prefix-1.12.5-r7 due to its experimental nature
 
   06 May 2010; Jeremy Olexa <darkside@gentoo.org> hpux/package.mask:
   Fix atom syntax

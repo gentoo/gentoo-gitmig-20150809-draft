@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.57 2010/04/18 15:48:54 grobian Exp $
+# $Id: package.mask,v 1.58 2010/05/14 14:43:09 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,6 +32,10 @@
 
 #--- END OF EXAMPLES ---
 
+
+# Fabian Groffen <grobian@gentoo.org> (14 May 2010)
+# Experimental version to support service scripts, bug #196294
+>=sys-apps/baselayout-prefix-1.12.5-r7
 
 # Fabian Groffen <grobian@gentoo.org> (16 Apr 2010)
 # installs a broken zlib.h on 64-bits systems, bug #310209
