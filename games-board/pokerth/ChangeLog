@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.12 2010/05/04 05:33:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.13 2010/05/14 18:13:21 ssuominen Exp $
+
+  14 May 2010; Samuli Suominen <ssuominen@gentoo.org> pokerth-0.7.1.ebuild,
+  +files/pokerth-0.7.1-gcc45.patch:
+  Fix building with GCC 4.5 wrt #318591 by Kacper Kowalik.
 
   04 May 2010; Michael Sterrett <mr_bones_@gentoo.org> pokerth-0.7.1.ebuild:
   Allow newer boost and steal boost-related code from wesnoth ebuild
