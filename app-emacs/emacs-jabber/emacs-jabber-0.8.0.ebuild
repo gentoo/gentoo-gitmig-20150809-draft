@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.8.0.ebuild,v 1.6 2010/05/13 19:33:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/emacs-jabber-0.8.0.ebuild,v 1.7 2010/05/14 14:45:07 ulm Exp $
 
 NEED_EMACS=22
 
@@ -32,5 +32,5 @@ src_install() {
 pkg_postinst() {
 	elisp_pkg_postinst
 	elog "If you want to use SASL authentication, you need either Emacs 23,"
-	elog "or install virtual/flim."
+	elog "or install virtual/emacs-flim."
 }
