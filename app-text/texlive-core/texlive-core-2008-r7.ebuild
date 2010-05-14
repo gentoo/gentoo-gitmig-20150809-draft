@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r7.ebuild,v 1.8 2010/03/08 14:28:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r7.ebuild,v 1.9 2010/05/14 14:47:25 ssuominen Exp $
 
 EAPI=1
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools texlive-common
 
-PATCHLEVEL="15"
+PATCHLEVEL="15.1"
 TEXMFD_VERSION="1"
 
 DESCRIPTION="A complete TeX distribution"
@@ -46,7 +46,7 @@ done
 SRC_URI="${SRC_URI} )"
 
 # Fetch patches
-SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.lzma
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~ssuominen/${PN}-patches-${PATCHLEVEL}.tar.bz2
 	mirror://gentoo/${PN}-2008-texmf.d-${TEXMFD_VERSION}.tar.lzma"
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
