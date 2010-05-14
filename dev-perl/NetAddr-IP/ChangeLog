@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.8 2010/01/28 23:34:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.9 2010/05/14 16:02:07 tove Exp $
+
+*NetAddr-IP-4.028 (14 May 2010)
+
+  14 May 2010; Torsten Veller <tove@gentoo.org> +NetAddr-IP-4.028.ebuild:
+  Version bump
 
   28 Jan 2010; Jeroen Roovers <jer@gentoo.org> NetAddr-IP-4.027.ebuild:
   Marked ~ppc (bug #302604).
