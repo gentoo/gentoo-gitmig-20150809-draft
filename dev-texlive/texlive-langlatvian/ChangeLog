@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langlatvian
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.8 2010/05/12 19:13:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.9 2010/05/14 18:30:32 armin76 Exp $
+
+  14 May 2010; Raúl Porcel <armin76@gentoo.org>
+  texlive-langlatvian-2009.ebuild:
+  Add ~sparc wrt #300526
 
   12 May 2010; Brent Baude <ranger@gentoo.org>
   texlive-langlatvian-2009.ebuild:
