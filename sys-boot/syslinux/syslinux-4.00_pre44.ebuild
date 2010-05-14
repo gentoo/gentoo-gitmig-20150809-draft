@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.00_pre42.ebuild,v 1.1 2010/05/13 03:43:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.00_pre44.ebuild,v 1.1 2010/05/14 13:15:42 chithanh Exp $
 
 inherit eutils toolchain-funcs
 
