@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.1.ebuild,v 1.1 2010/01/05 21:15:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.1.ebuild,v 1.2 2010/05/14 08:14:39 grobian Exp $
+
+EAPI="3"
 
 inherit flag-o-matic
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/source/v1.6/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~ppc-macos"
 IUSE="curl debug doc icu lucene"
 
 RDEPEND="sys-libs/zlib
@@ -20,7 +22,14 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
+src_prepare() {
+	cat > "${T}"/sword.conf <<- _EOF
+		[Install]
+		DataPath=${EPREFIX}/usr/share/sword/
+	_EOF
+}
+
+src_configure() {
 	strip-flags
 	econf --with-zlib \
 		--with-conf \
@@ -28,7 +37,6 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_with icu) \
 		$(use_with lucene) || die "configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
@@ -38,11 +46,11 @@ src_install() {
 		rm -rf examples/.cvsignore
 		rm -rf examples/cmdline/.cvsignore
 		rm -rf examples/cmdline/.deps
-		cp -R samples examples "${D}/usr/share/doc/${PF}/"
+		cp -R samples examples "${ED}/usr/share/doc/${PF}/"
 	fi
 	# global configuration file
 	insinto /etc
-	doins "${FILESDIR}/sword.conf"
+	doins "${T}/sword.conf"
 }
 
 pkg_postinst() {
@@ -50,6 +58,6 @@ pkg_postinst() {
 	elog "Check out http://www.crosswire.org/sword/modules/"
 	elog "to download modules that you would like to use with SWORD."
 	elog "Follow module installation instructions found on"
-	elog "the web or in /usr/share/doc/${PF}/"
+	elog "the web or in ${EPREFIX}/usr/share/doc/${PF}/"
 	echo
 }
