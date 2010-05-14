@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.60 2010/05/11 23:07:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.61 2010/05/14 16:43:36 matsuu Exp $
+
+*ibus-1.3.3-r2 (14 May 2010)
+
+  14 May 2010; MATSUU Takuto <matsuu@gentoo.org> +ibus-1.3.3-r2.ebuild:
+  Changed python USE flag to +python, bug #319417. Fixed bug #311211 again.
 
 *ibus-1.3.3-r1 (11 May 2010)
 *ibus-1.2.1-r1 (11 May 2010)
