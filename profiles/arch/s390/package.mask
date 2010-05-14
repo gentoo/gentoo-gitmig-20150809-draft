@@ -1,10 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/package.mask,v 1.2 2010/03/13 14:58:35 ssuominen Exp $
-
-# Samuli Suominen <ssuominen@gentoo.org> (13 Mar 2010)
-# Only texlive-core-2009 is patched for libpng-1.4.
->=media-libs/libpng-1.4
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/package.mask,v 1.3 2010/05/14 14:48:54 ssuominen Exp $
 
 # Alexis Ballier <aballier@gentoo.org> (11 Jan 2010)
 # Mask TeX Live 2009 for testing

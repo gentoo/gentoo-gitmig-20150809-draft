@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.21 2010/05/14 14:05:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.22 2010/05/14 14:48:54 ssuominen Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Feb 2010)
 # Mask kde 4.4.0 =)
@@ -308,13 +308,6 @@ dev-lang/mono
 dev-util/mono-tools
 dev-util/monodoc
 virtual/monodoc
-
-# Samuli Suominen <ssuominen@gentoo.org> (13 Mar 2010)
-# Only texlive-core-2009 is patched for libpng-1.4.
->=media-libs/libpng-1.4
-# Justin Lecher <jlec@gentoo.org> (13 Mar 2010)
-# Please unmask dev-tcltk/tkimg-1.4.20100510 once libpng-1.4 is unmasked
->=dev-tcltk/tkimg-1.4.20100510
 
 # Alexis Ballier <aballier@gentoo.org> (11 Jan 2010)
 # Mask TeX Live 2009 for testing
