@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/fcron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.80 2010/05/04 11:44:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.81 2010/05/14 11:11:07 flameeyes Exp $
+
+*fcron-3.0.6-r1 (14 May 2010)
+
+  14 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> fcron-3.0.6.ebuild,
+  +fcron-3.0.6-r1.ebuild:
+  Fix handling of classic-style crontab following Wolfram's suggestion:
+  /etc/crontab is no longer installed by this, and check_system_crontabs is
+  set up to work out correctly the location of the fcrontab file.
 
   04 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata and sign manifest with updated keys.
