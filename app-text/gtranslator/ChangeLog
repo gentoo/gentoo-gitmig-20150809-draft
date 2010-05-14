@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.34 2010/04/19 20:21:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.35 2010/05/14 20:10:23 eva Exp $
+
+*gtranslator-1.9.11 (14 May 2010)
+
+  14 May 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtranslator-1.9.11.ebuild:
+  Version bump. Replace usage of berkdb by libgda. Misc bugfixes and
+  translation updates.
 
 *gtranslator-1.9.10 (19 Apr 2010)
 
