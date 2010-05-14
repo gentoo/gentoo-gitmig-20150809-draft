@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5559 2010/05/13 15:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5560 2010/05/14 00:07:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1223,8 +1223,9 @@ games-puzzle/jag:extras - Install additional graphics
 games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the original Amiga version
 games-roguelike/angband:sound - Enable and install sounds
 games-rpg/drascula:audio - Install optional audio files
-games-rpg/eternal-lands-data:music - Install optional music files (extra 30 meg)
-games-rpg/eternal-lands-data:sound - Install optional sound files (extra 40 meg)
+games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps in place of the official map files.
+games-rpg/eternal-lands-data:music - Adds in-game music.
+games-rpg/eternal-lands-data:sound - Adds in-game sound effects.
 games-rpg/kqlives:cheats - Enable cheating mode
 games-rpg/nwn:hou - Install the Hordes of the Underdark expansion pack
 games-rpg/nwn:sou - Installs the Shadows of Undrentide expension pack
