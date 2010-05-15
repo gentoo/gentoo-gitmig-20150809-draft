@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.3-r1.ebuild,v 1.8 2010/01/25 13:35:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.3.3-r1.ebuild,v 1.9 2010/05/15 14:06:43 reavertm Exp $
 
 EAPI="2"
 
@@ -25,7 +25,6 @@ COMMONDEPEND="
 	dev-libs/libpcre
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=kde-base/automoc-0.9.87
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/giflib
