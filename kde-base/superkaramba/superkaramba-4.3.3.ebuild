@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.3.3.ebuild,v 1.6 2010/01/19 02:55:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.3.3.ebuild,v 1.7 2010/05/15 17:08:33 reavertm Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="debug +handbook python"
 
 DEPEND="
-	kde-base/qimageblitz
+	media-libs/qimageblitz
 	python? ( $(add_kdebase_dep pykde4) )
 "
 RDEPEND="${DEPEND}
