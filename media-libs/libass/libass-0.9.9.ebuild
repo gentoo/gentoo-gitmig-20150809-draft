@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/libass-0.9.9.ebuild,v 1.1 2010/03/03 13:32:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/libass-0.9.9.ebuild,v 1.2 2010/05/15 11:55:15 ssuominen Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="enca +fontconfig png"
 
 RDEPEND="fontconfig? ( >=media-libs/fontconfig-2.4.2 )
 	>=media-libs/freetype-2.2.1
-	png? ( >=media-libs/libpng-1.2.15 )
+	png? ( >=media-libs/libpng-1.2.43-r2:0 )
 	virtual/libiconv
 	enca? ( app-i18n/enca )"
 
@@ -30,6 +30,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc Changelog
 }
