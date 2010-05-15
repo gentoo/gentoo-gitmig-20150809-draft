@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.6.ebuild,v 1.1 2010/05/15 17:55:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.6.ebuild,v 1.2 2010/05/15 18:00:58 ssuominen Exp $
 
 EAPI=2
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="a real-time adjustable equalizer plugin for ALSA"
 HOMEPAGE="http://www.thedigitalmachine.net/alsaequal.html"
@@ -18,6 +18,10 @@ DEPEND="media-libs/alsa-lib
 	media-plugins/caps-plugins"
 
 S=${WORKDIR}/${PN}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
 
 src_compile() {
 	emake \
