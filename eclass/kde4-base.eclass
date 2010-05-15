@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.59 2010/04/07 21:16:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.60 2010/05/15 14:03:06 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -260,6 +260,7 @@ if [[ ${PN} != kdelibs ]]; then
 	fi
 fi
 kdedepend="
+	dev-util/automoc
 	dev-util/pkgconfig
 	!aqua? (
 		|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1.0 )
