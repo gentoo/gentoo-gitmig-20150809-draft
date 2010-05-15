@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/company-mode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.9 2009/08/27 19:41:44 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.10 2010/05/15 15:28:20 ulm Exp $
+
+*company-mode-0.5 (15 May 2010)
+
+  15 May 2010; Ulrich Mueller <ulm@gentoo.org> -company-mode-0.4.2.ebuild,
+  -files/company-mode-0.4.2-disable-semantic.patch, +company-mode-0.5.ebuild:
+  Version bump, bug 319225. Turn on semantic USE flag by default, because
+  CEDET is available with Emacs 23.2. Remove old.
 
   27 Aug 2009; Ulrich Mueller <ulm@gentoo.org> company-mode-0.4.3.ebuild:
   Add missing dependency on app-emacs/pymacs. Unroll loop for backend
