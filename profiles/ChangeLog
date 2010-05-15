@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4177 2010/05/14 19:07:23 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4178 2010/05/15 07:27:46 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 May 2010; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask perl-5.12.1 + related packages for testing (#319801)
 
   14 May 2010; Alex Legler <a3li@gentoo.org> thirdpartymirrors:
   Removing no longer available rubyforge mirrors
