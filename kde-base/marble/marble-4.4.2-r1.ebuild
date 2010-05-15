@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.4.3.ebuild,v 1.1 2010/05/03 21:38:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.4.2-r1.ebuild,v 1.1 2010/05/15 21:14:10 reavertm Exp $
 
 EAPI="3"
 
@@ -33,14 +33,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	python_convert_shebangs -r 2 .
 	kde4-meta_src_prepare
+	python_convert_shebangs -r $(python_get_version) .
 }
 
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with designer-plugin DESIGNER_PLUGIN)
 		$(cmake-utils_use_with plasma)
+		$(cmake-utils_use python EXPERIMENTAL_PYTHON_BINDINGS)
 		$(cmake-utils_use_with python PyKDE4)
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PythonLibrary)

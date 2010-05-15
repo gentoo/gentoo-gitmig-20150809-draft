@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.66 2010/05/04 05:49:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.67 2010/05/15 21:14:10 reavertm Exp $
+
+*marble-4.4.3-r1 (15 May 2010)
+*marble-4.4.2-r1 (15 May 2010)
+
+  15 May 2010; Maciej Mrozowski <reavertm@gentoo.org> -marble-4.4.2.ebuild,
+  +marble-4.4.2-r1.ebuild, -marble-4.4.3.ebuild, +marble-4.4.3-r1.ebuild:
+  Fix bug 312659 (python support), actually enable python bindings, thanks
+  to Locke Shinseiko
 
   04 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -marble-4.4.1.ebuild:
   Drop KDE SC 4.4.1

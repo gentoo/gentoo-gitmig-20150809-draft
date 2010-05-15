@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.4.2.ebuild,v 1.1 2010/03/30 21:57:40 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.4.3-r1.ebuild,v 1.1 2010/05/15 21:14:10 reavertm Exp $
 
 EAPI="3"
 
 KMNAME="kdeedu"
 CPPUNIT_REQUIRED="optional"
-inherit kde4-meta
+PYTHON_DEPEND="python? 2"
+inherit python kde4-meta
 
 DESCRIPTION="Generic geographical map widget"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
@@ -26,10 +27,21 @@ RDEPEND="${DEPEND}
 	!kdeprefix? ( !sci-geosciences/marble )
 "
 
+pkg_setup() {
+	python_set_active_version 2
+	kde4-meta_pkg_setup
+}
+
+src_prepare() {
+	kde4-meta_src_prepare
+	python_convert_shebangs -r $(python_get_version) .
+}
+
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with designer-plugin DESIGNER_PLUGIN)
 		$(cmake-utils_use_with plasma)
+		$(cmake-utils_use python EXPERIMENTAL_PYTHON_BINDINGS)
 		$(cmake-utils_use_with python PyKDE4)
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PythonLibrary)
