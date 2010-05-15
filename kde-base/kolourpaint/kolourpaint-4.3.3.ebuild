@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/kolourpaint-4.3.3.ebuild,v 1.6 2010/01/19 02:12:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/kolourpaint-4.3.3.ebuild,v 1.7 2010/05/15 16:56:50 reavertm Exp $
 
 EAPI="2"
 
@@ -11,8 +11,3 @@ DESCRIPTION="Paint Program for KDE"
 KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 LICENSE="BSD LGPL-2"
 IUSE="debug +handbook"
-
-DEPEND="
-	kde-base/qimageblitz
-"
-RDEPEND="${DEPEND}"
