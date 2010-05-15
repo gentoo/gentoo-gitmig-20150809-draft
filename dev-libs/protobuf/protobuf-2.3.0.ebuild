@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.5 2010/05/14 19:30:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.6 2010/05/15 12:15:57 ssuominen Exp $
 
 EAPI="2"
 
 JAVA_PKG_IUSE="source"
 PYTHON_DEPEND="python? 2"
 
-inherit eutils distutils python java-pkg-opt-2 elisp-common
+inherit autotools eutils distutils python java-pkg-opt-2 elisp-common
 
 DESCRIPTION="Google's Protocol Buffers -- an efficient method of encoding structured data"
 HOMEPAGE="http://code.google.com/p/protobuf/"
@@ -28,6 +28,9 @@ PYTHON_MODNAME="google/protobuf"
 DISTUTILS_SRC_TEST="setup.py"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+
 	use python && {
 		python_convert_shebangs -r 2 .
 		distutils_src_prepare
