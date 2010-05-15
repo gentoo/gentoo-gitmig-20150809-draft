@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.510 2010/05/12 18:20:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.511 2010/05/15 20:59:56 remi Exp $
+
+*xorg-server-1.8.1 (15 May 2010)
+
+  15 May 2010; Rémi Cardona <remi@gentoo.org> +xorg-server-1.8.1.ebuild:
+  bump to 1.8.1, first swing at bug #315347 (based on an idea by Michał
+  Górny)
 
   12 May 2010; Brent Baude <ranger@gentoo.org> xorg-server-1.7.6.ebuild:
   Marking xorg-server-1.7.6 ppc64 stable for bug 308521
