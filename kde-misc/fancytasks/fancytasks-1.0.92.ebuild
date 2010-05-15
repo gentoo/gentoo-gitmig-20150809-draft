@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.92.ebuild,v 1.2 2010/03/10 19:39:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.92.ebuild,v 1.3 2010/05/15 17:14:10 reavertm Exp $
 
 EAPI=2
 KDE_LINGUAS="de en_GB es et fr km nds pl pt ru sv tr uk"
@@ -17,11 +17,14 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="x11-libs/libX11
-	x11-libs/libXext
+DEPEND="
+	>=kde-base/plasma-workspace-${KDE_MINIMAL}
+	media-libs/qimageblitz
+	x11-libs/libX11
 	x11-libs/libXcomposite
-	kde-base/qimageblitz
-	>=kde-base/plasma-workspace-${KDE_MINIMAL}"
+	x11-libs/libXext
+"
+RDEPEND="${DEPEND}"
 
 DOCS="CHANGELOG README TODO"
 
