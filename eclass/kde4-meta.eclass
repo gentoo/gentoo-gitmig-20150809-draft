@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.34 2010/03/15 03:35:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.35 2010/05/15 15:19:04 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -340,6 +340,7 @@ kde4-meta_create_extractlists() {
 				kleopatra/ConfigureChecks.cmake"
 			if slot_is_at_least 4.5 ${SLOT}; then
 				KMEXTRACTONLY+="
+					CTestCustom.cmake
 					kdepim-version.h.cmake"
 			else
 				KMEXTRACTONLY+="
@@ -618,6 +619,22 @@ kde4-meta_change_cmakelists() {
 					;;
 				*) ;;
 			esac
+			# koffice 2.1.[8-9][0-9] and 9999
+			case ${PV} in
+				2.1.8[0-9]|2.1.9[0-9]|9999)
+					sed -e '/^option(BUILD/s/ON/OFF/' \
+						-e '/^if(NOT BUILD_kchart/,/^endif(NOT BUILD_kchart/d' \
+						-e '/^if(BUILD_koreport/,/^endif(BUILD_koreport/d' \
+						-e 's/set(SHOULD_BUILD_F_OFFICE TRUE)/set(SHOULD_BUILD_F_OFFICE FALSE)/' \
+						-i "${S}"/CMakeLists.txt || die "sed died while fixing cmakelists"
+					if [[ ${PN} != koffice-data ]] && [[ ${PV} == 9999 ]]; then
+						sed -e '/config-opengl.h/d' \
+						-i "${S}"/CMakeLists.txt || die "sed died while fixing cmakelists"
+
+					fi
+				;;
+				*) ;;
+			esac
 	esac
 
 	popd > /dev/null
@@ -646,6 +663,18 @@ kde4-meta_src_configure() {
 				-DWITH_LibTidy=OFF
 				"${mycmakeargs[@]}"
 			)
+			;;
+		koffice)
+			case ${PV} in
+				2.1.8[0-9]|2.1.9[0-9]|9999)
+					if [[ ${PN} != "kchart" ]]; then
+						mycmakeargs=(
+							-DBUILD_koreport=OFF
+							"${mycmakeargs[@]}"
+						)
+					fi
+				;;
+			esac
 			;;
 	esac
 
@@ -682,22 +711,13 @@ kde4-meta_src_test() {
 kde4-meta_src_install() {
 	debug-print-function $FUNCNAME "$@"
 
-	kde4-base_src_install
-}
-
-# @FUNCTION: kde4-meta_src_make_doc
-# @DESCRIPTION:
-# This function searches in ${S}/${KMMODULE},
-# and tries to install "AUTHORS ChangeLog* README* NEWS TODO" if these files exist.
-kde4-meta_src_make_doc() {
-	debug-print-function ${FUNCNAME} "$@"
-
+	# Search ${S}/${KMMODULE} and install any "AUTHORS ChangeLog* README* NEWS TODO HACKING" found
 	local doc
-	for doc in AUTHORS ChangeLog* README* NEWS TODO; do
-		[[ -s ${KMMODULE}/${doc} ]] && newdoc "${KMMODULE}/${doc}" "${doc}.${KMMODULE##*/}"
+	for doc in AUTHORS ChangeLog* README* NEWS TODO HACKING; do
+		[[ -s "${S}/${KMMODULE}/${doc}" ]] && dodoc "${S}/${KMMODULE}/${doc}"
 	done
 
-	kde4-base_src_make_doc
+	kde4-base_src_install
 }
 
 # @FUNCTION: kde4-meta_pkg_postinst

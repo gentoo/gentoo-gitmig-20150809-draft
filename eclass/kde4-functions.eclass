@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.30 2010/02/02 14:20:16 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.31 2010/05/15 15:19:04 reavertm Exp $
 
 inherit versionator
 
@@ -25,16 +25,15 @@ esac
 # @DESCRIPTION:
 # This gets set to a non-zero value when a package is considered a kde or
 # koffice ebuild.
-
 if [[ ${CATEGORY} = kde-base ]]; then
 	debug-print "${ECLASS}: KDEBASE ebuild recognized"
 	KDEBASE=kde-base
-fi
-
-# is this a koffice ebuild?
-if [[ ${KMNAME} = koffice || ${PN} = koffice ]]; then
+elif [[ ${KMNAME} = koffice || ${PN} = koffice ]]; then
 	debug-print "${ECLASS}: KOFFICE ebuild recognized"
 	KDEBASE=koffice
+elif [[ ${KMNAME} = kdevelop ]]; then
+	debug-print "${ECLASS}: KDEVELOP ebuild recognized"
+	KDEBASE="kdevelop"
 fi
 
 # @ECLASS-VARIABLE: KDE_SLOTS
