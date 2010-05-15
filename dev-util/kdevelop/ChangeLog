@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.194 2010/04/29 05:07:50 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.195 2010/05/15 22:35:26 reavertm Exp $
+
+  15 May 2010; Maciej Mrozowski <reavertm@gentoo.org> kdevelop-4.0.0.ebuild:
+  Use improved ebuild from kde overlay
 
 *kdevelop-4.0.0 (29 Apr 2010)
 

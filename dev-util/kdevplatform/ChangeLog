@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.26 2010/05/12 16:24:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.27 2010/05/15 22:33:55 reavertm Exp $
+
+  15 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kdevplatform-1.0.0.ebuild:
+  Use improved ebuild from kde overlay
 
   12 May 2010; Brent Baude <ranger@gentoo.org>
   kdevplatform-0.9.97-r1.ebuild:
