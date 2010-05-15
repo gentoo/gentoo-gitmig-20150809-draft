@@ -1,22 +1,31 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.34 2010/03/04 21:18:27 abcd Exp $
-#
-# Author: Martin Schlemmer <azarah@gentoo.org>
-#
-# This eclass can be used for packages that needs a working X environment to build
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.35 2010/05/15 05:40:46 dirtyepic Exp $
 
-# Is a dependency on xorg-server and xhost needed?
-# Valid values are "always", "optional", and "manual"
-# "tests" is treated as a synonym for "optional"
+# Original author: Martin Schlemmer <azarah@gentoo.org>
+
+# @ECLASS: virtualx.eclass
+# @MAINTAINER:
+#  x11@gentoo.org
+# @BLURB: This eclass can be used for packages that needs a working X environment to build.
+
+# @ECLASS-VARIABLE: VIRTUALX_REQUIRED
+# @DESCRIPTION:
+#  Is a dependency on xorg-server and xhost needed?
+#  Valid values are "always", "optional", and "manual".
+#  "tests" is a synonym for "optional".
 : ${VIRTUALX_REQUIRED:=optional}
 
-# If VIRTUALX_REQUIRED=optional, what use flag should control
-# the dependency? Default is "test"
+# @ECLASS-VARIABLE: VIRTUALX_USE
+# @DESCRIPTION:
+#  If VIRTUALX_REQUIRED=optional, what USE flag should control
+#  the dependency?
 : ${VIRTUALX_USE:=test}
 
-# Dep string available for use outside of eclass, in case a more
-# complicated dep is needed
+# @ECLASS-VARIABLE: VIRTUALX_DEPEND
+# @DESCRIPTION:
+#  Dep string available for use outside of eclass, in case a more
+#  complicated dep is needed.
 VIRTUALX_DEPEND="!prefix? ( x11-base/xorg-server )
 	x11-apps/xhost"
 
@@ -41,8 +50,6 @@ case ${VIRTUALX_REQUIRED} in
 		die "Invalid value (${VIRTUALX_REQUIRED}) for VIRTUALX_REQUIRED"
 		;;
 esac
-
-DESCRIPTION="Based on the $ECLASS eclass"
 
 virtualmake() {
 	local retval=0
@@ -131,19 +138,25 @@ virtualmake() {
 	return ${retval}
 }
 
-#Same as "make", but setup the Xvfb hack if needed
+# @FUNCTION: Xmake
+# @DESCRIPTION: 
+#  Same as "make", but set up the Xvfb hack if needed.
 Xmake() {
 	export maketype="make"
 	virtualmake "$@"
 }
 
-#Same as "emake", but setup the Xvfb hack if needed
+# @FUNCTION: Xemake
+# @DESCRIPTION: 
+#  Same as "emake", but set up the Xvfb hack if needed.
 Xemake() {
 	export maketype="emake"
 	virtualmake "$@"
 }
 
-#Same as "econf", but setup the Xvfb hack if needed
+# @FUNCTION: Xeconf
+# @DESCRIPTION: 
+#  Same as "econf", but set up the Xvfb hack if needed.
 Xeconf() {
 	export maketype="econf"
 	virtualmake "$@"
