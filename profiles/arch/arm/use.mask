@@ -67,6 +67,7 @@ mpi
 lasi
 fusion
 debug-utils
+schroedinger
 
 # havent tested yet
 cupsddk

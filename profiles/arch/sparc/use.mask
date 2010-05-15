@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.50 2010/05/09 18:49:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.51 2010/05/15 17:10:46 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -103,12 +103,16 @@ bluetooth
 dmraid
 ipod
 
+# Stuff we don't want
+schroedinger
+
 # Asterisk use flag masking
 bri
 florz
 resperl
 zaptel
 ukcid
+
 
 # USE-flags from differents origins
 brltty
