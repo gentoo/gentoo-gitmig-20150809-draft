@@ -1,13 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.49 2010/04/20 04:06:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.50 2010/05/15 05:25:32 dirtyepic Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
-# fonts@gentoo.org
-
-# Author: Tomáš Chvátal <scarabeus@gentoo.org>
-# Author: foser <foser@gentoo.org>
+#  fonts@gentoo.org
 # @BLURB: Eclass to make font installation uniform
 
 inherit eutils
@@ -16,32 +13,32 @@ EXPORT_FUNCTIONS pkg_setup src_install pkg_postinst pkg_postrm
 
 # @ECLASS-VARIABLE: FONT_SUFFIX
 # @DESCRIPTION:
-# Space delimited list of font suffixes to install
+# Space delimited list of font suffixes to install.
 FONT_SUFFIX=${FONT_SUFFIX:=}
 
 # @ECLASS-VARIABLE: FONT_S
 # @DESCRIPTION:
-# Dir containing the fonts
+# Working directory containing the fonts.
 FONT_S=${FONT_S:=${S}}
 
 # @ECLASS-VARIABLE: FONT_PN
 # @DESCRIPTION:
-# Last part of $FONTDIR
+# Font name (ie. last part of FONTDIR).
 FONT_PN=${FONT_PN:=${PN}}
 
 # @ECLASS-VARIABLE: FONTDIR
 # @DESCRIPTION:
-# This is where the fonts are installed
+# Full path to installation directory.
 FONTDIR=${FONTDIR:-/usr/share/fonts/${FONT_PN}}
 
 # @ECLASS-VARIABLE: FONT_CONF
 # @DESCRIPTION:
-# Array, which element(s) is(are) path(s) of fontconfig-2.4 file(s) to install
+# Array containing fontconfig conf files to install.
 FONT_CONF=( "" )
 
 # @ECLASS-VARIABLE: DOCS
 # @DESCRIPTION:
-# Docs to install
+# Space delimited list of docs to install.
 DOCS=${DOCS:-}
 
 IUSE="X"
@@ -54,9 +51,8 @@ DEPEND="X? (
 
 # @FUNCTION: font_xfont_config
 # @DESCRIPTION:
-# Creates the Xfont files.
+# Generate Xorg font files (mkfontscale/mkfontdir).
 font_xfont_config() {
-	# create Xfont files
 	if has X ${IUSE//+} && use X ; then
 		ebegin "Creating fonts.scale & fonts.dir"
 		rm -f "${ED}${FONTDIR}"/fonts.{dir,scale}
@@ -66,15 +62,15 @@ font_xfont_config() {
 			-e ${EPREFIX}/usr/share/fonts/encodings/large \
 			"${ED}${FONTDIR}"
 		eend $?
-		if [ -e "${FONT_S}/fonts.alias" ] ; then
-			doins "${FONT_S}/fonts.alias"
+		if [[ -e ${FONT_S}/fonts.alias ]] ; then
+			doins "${FONT_S}"/fonts.alias
 		fi
 	fi
 }
 
 # @FUNCTION: font_fontconfig
 # @DESCRIPTION:
-# Installs the fontconfig config files of FONT_CONF.
+# Install fontconfig conf files given in FONT_CONF.
 font_fontconfig() {
 	local conffile
 	if [[ -n ${FONT_CONF[@]} ]]; then
@@ -87,8 +83,7 @@ font_fontconfig() {
 
 # @FUNCTION: font_cleanup_dirs
 # @DESCRIPTION:
-# Remove any font directories only containing generated files.
-# Runs in pkg_postrm.
+# Remove font directories containing only generated files.
 font_cleanup_dirs() {
 	local genfiles="encodings.dir fonts.alias fonts.cache-1 fonts.dir fonts.scale"
 	local d f g generated candidate otherfile
@@ -150,7 +145,7 @@ font_src_install() {
 # @FUNCTION: font_pkg_setup
 # @DESCRIPTION:
 # The font pkg_setup function.
-# Collision portection and Prefix compat for eapi < 3.
+# Collision protection and Prefix compat for eapi < 3.
 font_pkg_setup() {
 	# Prefix compat
 	case ${EAPI:-0} in
@@ -172,7 +167,6 @@ font_pkg_setup() {
 # @FUNCTION: font_pkg_postinst
 # @DESCRIPTION:
 # The font pkg_postinst function.
-# Update global font cache and fix permissions.
 font_pkg_postinst() {
 	# unreadable font files = fontconfig segfaults
 	find "${EROOT}"usr/share/fonts/ -type f '!' -perm 0644 -print0 \
@@ -203,7 +197,6 @@ font_pkg_postinst() {
 # @FUNCTION: font_pkg_postrm
 # @DESCRIPTION:
 # The font pkg_postrm function.
-# Updates global font cache
 font_pkg_postrm() {
 	font_cleanup_dirs
 	
