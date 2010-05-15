@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.21 2010/05/13 06:39:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.22 2010/05/15 14:17:53 hwoarang Exp $
+
+  15 May 2010; Markos Chandras <hwoarang@gentoo.org> proj-4.7.0.ebuild:
+  Stable on amd64 wrt bug #317381. Thanks to Roeland Douma
+  <roeland@rullzer.com>
 
   13 May 2010; Jeroen Roovers <jer@gentoo.org> proj-4.7.0.ebuild:
   Stable for HPPA (bug #317381).
