@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.3 2010/04/11 22:13:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.1.2.ebuild,v 1.4 2010/05/15 16:50:18 reavertm Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="gmm +kdcraw openexr +pdf +tiff"
 DEPEND="
 	>=app-office/koffice-libs-${PV}:${SLOT}[openexr=]
 	>=dev-cpp/eigen-2.0.3:2
-	>=kde-base/qimageblitz-0.0.4
+	>=media-libs/qimageblitz-0.0.4
 	>=media-gfx/exiv2-0.16
 	>=media-gfx/imagemagick-0.6.4.9.2[openexr=,png,tiff?]
 	gmm? ( sci-mathematics/gmm )
