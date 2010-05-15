@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.65 2010/03/18 19:33:08 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.66 2010/05/15 07:28:48 tove Exp $
+
+*perl-tk-804.028_p503 (15 May 2010)
+
+  15 May 2010; Torsten Veller <tove@gentoo.org>
+  +perl-tk-804.028_p503.ebuild:
+  Version bump. This developer release works with perl-5.12. Thanks to David
+  Abbott and Denis Sokolovsky (#312813)
 
   18 Mar 2010; Jeremy Olexa <darkside@gentoo.org> perl-tk-804.028-r3.ebuild:
   add ~x86-solaris ~sparc-solaris kw, as tested on bug 308683
