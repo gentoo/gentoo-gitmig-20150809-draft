@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.304 2010/05/12 03:32:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.305 2010/05/15 22:39:37 chainsaw Exp $
+
+  15 May 2010; <chainsaw@gentoo.org> wine-1.1.44.ebuild:
+  Patch by Xavier Parizet allows compilation with USE="pulse", closes bug
+  #319325 by "tman".
 
 *wine-1.1.44 (12 May 2010)
 
