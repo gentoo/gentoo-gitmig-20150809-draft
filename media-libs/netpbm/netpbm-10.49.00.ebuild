@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.49.00.ebuild,v 1.2 2010/03/20 20:37:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.49.00.ebuild,v 1.3 2010/05/15 16:41:25 ssuominen Exp $
 
 EAPI=1
 inherit toolchain-funcs eutils multilib
@@ -19,7 +19,7 @@ IUSE="jbig jpeg jpeg2k png rle svga tiff X xml zlib"
 RDEPEND="jpeg? ( >=media-libs/jpeg-7:0 )
 	jpeg2k? ( media-libs/jasper )
 	tiff? ( >=media-libs/tiff-3.5.5 )
-	png? ( >=media-libs/libpng-1.2.1 )
+	png? ( >=media-libs/libpng-1.2.43-r2:0 )
 	xml? ( dev-libs/libxml2 )
 	zlib? ( sys-libs/zlib )
 	svga? ( media-libs/svgalib )
