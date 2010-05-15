@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.95.1.ebuild,v 1.3 2010/05/02 10:14:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.95.1.ebuild,v 1.4 2010/05/15 13:48:02 reavertm Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	x11-libs/qt-gui[dbus]
 "
 DEPEND="${COMMON_DEPEND}
-	kde-base/automoc
+	dev-util/automoc
 "
 RDEPEND="${COMMON_DEPEND}
 	examples? ( !sys-auth/policykit-qt[examples] )
