@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r7.ebuild,v 1.10 2010/05/14 18:37:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r7.ebuild,v 1.11 2010/05/15 14:40:16 ssuominen Exp $
 
 EAPI=1
 
@@ -71,8 +71,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	!app-text/xdvipdfmx
 	!app-text/dvibook
 	sys-libs/zlib
-	>=media-libs/libpng-1.2.1
-	<media-libs/libpng-1.4
+	>=media-libs/libpng-1.2.43-r2:0
 	media-libs/freetype:2
 	media-libs/fontconfig"
 

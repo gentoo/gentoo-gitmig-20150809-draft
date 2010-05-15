@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2009-r1.ebuild,v 1.4 2010/03/12 10:58:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2009-r1.ebuild,v 1.5 2010/05/15 14:40:16 ssuominen Exp $
 
 EAPI=1
 
@@ -67,7 +67,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	sys-libs/zlib
 	app-text/teckit
 	media-libs/silgraphite
-	>=media-libs/libpng-1.2.1
+	>=media-libs/libpng-1.2.43-r2:0
 	>=app-text/poppler-0.12.3-r3
 	media-libs/freetype:2
 	media-libs/fontconfig"
