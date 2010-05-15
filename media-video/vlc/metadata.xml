@@ -44,6 +44,7 @@
     <flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
     <flag name="udev">Enables Linux udev services discovery.</flag>
     <flag name="upnp">Enables support for Intel UPnP stack.</flag>
+	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
     <flag name="vcdinfo">Enables VCD information library support.</flag>
     <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
     <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>

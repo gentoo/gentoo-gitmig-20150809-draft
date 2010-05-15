@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.70 2010/05/14 16:39:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.71 2010/05/15 08:57:58 aballier Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout skins speex sqlite sse stream
-	svg svga taglib theora truetype twolame udev upnp v4l v4l2 vcdx vlm
+	svg svga taglib theora truetype twolame udev upnp v4l v4l2 vaapi vcdx vlm
 	vorbis win32codecs wma-fixed x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
@@ -136,6 +136,7 @@ RDEPEND="
 		upnp? ( net-libs/libupnp )
 		v4l2? ( libv4l2? ( media-libs/libv4l ) )
 		v4l? ( libv4l? ( media-libs/libv4l ) )
+		vaapi? ( x11-libs/libva >=media-video/ffmpeg-0.5_p22846 )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )
@@ -185,6 +186,7 @@ pkg_setup() {
 	vlc_use_force skins truetype
 	vlc_use_force skins qt4
 	vlc_use_force vlm stream
+	vlc_use_force vaapi ffmpeg
 
 	# Useflags that will be automagically discarded if deps are not met
 	vlc_use_needs bidi truetype
@@ -316,6 +318,7 @@ src_configure() {
 		$(use_enable v4l) \
 		$(use_enable v4l2) \
 		$(use_enable vcdx) \
+		$(use_enable vaapi libva) \
 		$(use_enable vlm) \
 		$(use_enable vorbis) \
 		$(use_enable win32codecs loader) \
@@ -333,7 +336,8 @@ src_configure() {
 		$(vlc_use_enable_force vlm sout) \
 		$(vlc_use_enable_force skins qt4) \
 		$(vlc_use_enable_force skins freetype) \
-		$(vlc_use_enable_force remoteosd libgcrypt)
+		$(vlc_use_enable_force remoteosd libgcrypt) \
+		$(vlc_use_enable_force vaapi avcodec)
 }
 
 src_install() {
