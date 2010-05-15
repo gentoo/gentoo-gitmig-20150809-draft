@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.8.2.ebuild,v 1.1 2010/05/15 21:31:56 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.8.2.ebuild,v 1.2 2010/05/15 21:49:34 dirtyepic Exp $
 
+# Unconditional dependency of gcc.  Keep this set to 0.
 EAPI=0
 
 DESCRIPTION="A library for multiprecision complex arithmetic with exact rounding."

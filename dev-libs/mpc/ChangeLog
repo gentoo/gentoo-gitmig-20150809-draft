@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.14 2010/05/15 21:31:56 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.15 2010/05/15 21:49:34 dirtyepic Exp $
+
+  15 May 2010; Ryan Hill <dirtyepic@gentoo.org> mpc-0.8.2.ebuild:
+  Add note about EAPI 0.
 
 *mpc-0.8.2 (15 May 2010)
 
