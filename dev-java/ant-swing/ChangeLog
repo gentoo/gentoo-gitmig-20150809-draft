@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-swing
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ChangeLog,v 1.19 2010/02/21 00:25:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ChangeLog,v 1.20 2010/05/15 21:05:00 caster Exp $
+
+*ant-swing-1.8.1 (15 May 2010)
+
+  15 May 2010; Vlastimil Babka <caster@gentoo.org> +ant-swing-1.8.1.ebuild:
+  Version bump.
 
 *ant-swing-1.8.0 (20 Feb 2010)
 

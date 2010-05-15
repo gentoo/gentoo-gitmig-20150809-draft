@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-junit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit/ChangeLog,v 1.17 2010/02/21 00:24:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit/ChangeLog,v 1.18 2010/05/15 21:04:01 caster Exp $
+
+*ant-junit-1.8.1 (15 May 2010)
+
+  15 May 2010; Vlastimil Babka <caster@gentoo.org> +ant-junit-1.8.1.ebuild:
+  Version bump.
 
 *ant-junit-1.8.0 (20 Feb 2010)
 
