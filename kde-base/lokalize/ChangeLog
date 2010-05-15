@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/lokalize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.44 2010/05/04 05:48:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.45 2010/05/15 20:33:29 reavertm Exp $
+
+*lokalize-4.4.2-r1 (15 May 2010)
+
+  15 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -lokalize-4.4.2.ebuild, +lokalize-4.4.2-r1.ebuild, lokalize-4.4.3.ebuild:
+  Fix bug 312657, require python 2
 
   04 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -lokalize-4.4.1.ebuild:
   Drop KDE SC 4.4.1

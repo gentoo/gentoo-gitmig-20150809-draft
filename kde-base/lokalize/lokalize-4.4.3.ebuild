@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.4.3.ebuild,v 1.1 2010/05/03 21:38:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.4.3.ebuild,v 1.2 2010/05/15 20:33:29 reavertm Exp $
 
 EAPI="3"
 
@@ -23,12 +23,18 @@ RDEPEND="${DEPEND}
 	$(add_kdebase_dep pykde4)
 "
 
-src_prepare() {
-	python_convert_shebangs -r 2 .
-	kde4-meta_src_prepare
+pkg_setup() {
+	kde4-meta_pkg_setup
+	python_set_active_version 2
+}
+
+src_install() {
+	kde4-meta_src_install
+	python_convert_shebangs -q -r $(python_get_version) "${ED}${PREFIX}/share/apps/${PN}"
 }
 
 pkg_postinst() {
+	kde4-meta_pkg_postinst
 	echo
 	elog "To be able to autofetch KDE translations in new project wizard, install subversion client:"
 	elog "	emerge -vau subversion"
