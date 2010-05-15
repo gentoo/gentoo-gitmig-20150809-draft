@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/libksane-4.3.3.ebuild,v 1.6 2010/01/19 02:13:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/libksane-4.3.3.ebuild,v 1.7 2010/05/15 17:03:13 reavertm Exp $
 
 EAPI="2"
 
@@ -15,7 +15,6 @@ IUSE="debug"
 LICENSE="LGPL-2"
 
 DEPEND="
-	kde-base/qimageblitz
 	media-gfx/sane-backends
 "
 RDEPEND="${DEPEND}"
