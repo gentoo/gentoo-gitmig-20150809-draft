@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/basket-1.80.ebuild,v 1.1 2010/04/22 17:38:12 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/basket-1.80.ebuild,v 1.2 2010/05/15 17:10:53 reavertm Exp $
 
 EAPI="2"
 
+KDE_MINIMAL="4.4"
 inherit kde4-base
 
 DESCRIPTION="A DropDrawers clone. Multiple information organizer"
@@ -13,16 +14,15 @@ SRC_URI="http://${PN}.kde.org/downloads/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-
 IUSE="debug crypt"
 
 DEPEND="
-	>=kde-base/kdelibs-4.4.0
-	>=kde-base/kdepimlibs-4.4.0
-	kde-base/qimageblitz
+	media-libs/qimageblitz
+	>=kde-base/kdelibs-${KDE_MINIMAL}
+	>=kde-base/kdepimlibs-${KDE_MINIMAL}
 	crypt? ( >=app-crypt/gpgme-1.0 )
 "
-RDEPEND=${DEPEND}
+RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-crypt.patch" )
 
