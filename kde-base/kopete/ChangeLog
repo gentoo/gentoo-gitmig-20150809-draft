@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.248 2010/05/03 21:55:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.249 2010/05/15 17:00:22 reavertm Exp $
+
+  15 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kopete-4.4.2-r1.ebuild, kopete-4.4.3.ebuild:
+  Sync qimageblitz dep to 4.4.3
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kopete-4.4.1.ebuild:
   Drop KDE SC 4.4.1
