@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.9 2010/03/15 17:35:52 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.10 2010/05/16 11:22:16 trapni Exp $
+
+*teamspeak-client-bin-3.0.0_beta20 (16 May 2010)
+
+  16 May 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta20.ebuild:
+  version bump
 
   16 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove sound from metadata.xml.
