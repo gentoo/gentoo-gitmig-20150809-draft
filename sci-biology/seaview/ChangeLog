@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.32 2010/03/20 21:49:12 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.33 2010/05/16 17:14:55 je_fro Exp $
+
+*seaview-4.2.5 (16 May 2010)
+
+  16 May 2010; Jeff Gardner <je_fro@gentoo.org> +seaview-4.2.5.ebuild:
+  Latest version, clean out old.
 
 *seaview-4.2.3 (20 Mar 2010)
 
