@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.88 2010/05/13 06:35:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.89 2010/05/16 19:03:46 maekke Exp $
+
+  16 May 2010; Markus Meier <maekke@gentoo.org> octave-3.2.4-r1.ebuild:
+  amd64/x86 stable, bug #318649
 
   13 May 2010; Jeroen Roovers <jer@gentoo.org> octave-3.2.4-r1.ebuild:
   Stable for HPPA (bug #318649).
