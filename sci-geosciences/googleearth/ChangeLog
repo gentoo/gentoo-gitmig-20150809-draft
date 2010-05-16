@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.4 2010/05/16 23:07:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.5 2010/05/16 23:22:05 caster Exp $
+
+  16 May 2010; Vlastimil Babka <caster@gentoo.org>
+  googleearth-5.1.3535.3218.ebuild:
+  Add nss-mdns dep on x86 instead of bundled library.
 
 *googleearth-5.1.3535.3218 (16 May 2010)
 

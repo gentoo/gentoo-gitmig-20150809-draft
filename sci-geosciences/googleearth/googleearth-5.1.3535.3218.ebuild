@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218.ebuild,v 1.1 2010/05/16 23:07:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218.ebuild,v 1.2 2010/05/16 23:22:05 caster Exp $
 
 EAPI=2
 
@@ -43,6 +43,7 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 		)
 		net-misc/curl
 		sci-libs/gdal
+		sys-auth/nss-mdns
 	)
 	amd64? (
 		>=app-emulation/emul-linux-x86-xlibs-20081109
@@ -120,12 +121,7 @@ src_install() {
 	if ! use qt-bundled; then
 		rm -rvf libQt{Core,Gui,Network,WebKit}.so.4 plugins/imageformats qt.conf || die
 	fi
-	rm -rvf libGLU.so.1 libcurl.so.4
-	if use amd64; then
-		# provided by emul-baselibs for amd64
-		# on x86 need to sort out collision between mDNSresponder and nss-mdns first
-		rm -rvf libnss_mdns4_minimal.so.2 || die
-	fi
+	rm -rvf libGLU.so.1 libcurl.so.4 libnss_mdns4_minimal.so.2 || die
 	if use x86; then
 		# no 32 bit libs for gdal
 		rm -rvf libgdal.so.1 || die
