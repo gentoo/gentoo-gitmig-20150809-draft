@@ -1,6 +1,11 @@
 # ChangeLog for app-text/bibletime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.60 2010/02/10 04:03:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.61 2010/05/16 02:03:03 beandog Exp $
+
+*bibletime-2.6 (16 May 2010)
+
+  16 May 2010; Steve Dibb <beandog@gentoo.org> +bibletime-2.6.ebuild:
+  Version bump, bug 310273
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> bibletime-2.3.3.ebuild:
   Marked ppc stable for bug #294863.
