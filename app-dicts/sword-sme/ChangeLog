@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/sword-sme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-sme/ChangeLog,v 1.2 2009/01/10 23:50:41 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-sme/ChangeLog,v 1.3 2010/05/16 00:22:46 beandog Exp $
+
+*sword-sme-1.7 (16 May 2010)
+
+  16 May 2010; Steve Dibb <beandog@gentoo.org> +sword-sme-1.7.ebuild:
+  Version bump
 
 *sword-sme-1.0 (10 Jan 2009)
 

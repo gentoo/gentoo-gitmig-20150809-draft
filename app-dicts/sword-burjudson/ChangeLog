@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/sword-burjudson
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-burjudson/ChangeLog,v 1.1 2009/01/11 00:09:09 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-burjudson/ChangeLog,v 1.2 2010/05/16 00:15:12 beandog Exp $
+
+*sword-burjudson-1.1 (16 May 2010)
+
+  16 May 2010; Steve Dibb <beandog@gentoo.org> +sword-burjudson-1.1.ebuild:
+  Version bump
 
 *sword-burjudson-1.0 (11 Jan 2009)
 

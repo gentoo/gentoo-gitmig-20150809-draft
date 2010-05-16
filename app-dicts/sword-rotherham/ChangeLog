@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/sword-rotherham
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-rotherham/ChangeLog,v 1.1 2008/05/17 02:38:58 beandog Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-rotherham/ChangeLog,v 1.2 2010/05/16 00:21:10 beandog Exp $
+
+*sword-rotherham-1.6 (16 May 2010)
+
+  16 May 2010; Steve Dibb <beandog@gentoo.org> +sword-rotherham-1.6.ebuild:
+  Version bump
 
 *sword-rotherham-1.1 (17 May 2008)
 
