@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.54 2010/05/13 21:12:56 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.55 2010/05/16 17:39:41 nirbheek Exp $
 
 # 13 May 2010, Matti Bickel <mabi@gentoo.org>
 # needs amd64 multilib
@@ -161,7 +161,7 @@ games-strategy/savage-bin
 games-strategy/smac
 games-strategy/x2
 games-strategy/x2-demo
-mail-client/mozilla-thunderbird-bin
+mail-client/thunderbird-bin
 mail-filter/MailScanner
 media-fonts/acroread-asianfonts
 media-gfx/picasa
