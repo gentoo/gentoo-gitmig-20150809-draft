@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.3.5.ebuild,v 1.3 2010/03/11 18:36:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ksplash-4.3.5.ebuild,v 1.4 2010/05/16 12:13:42 ssuominen Exp $
 
 EAPI="2"
 
@@ -19,6 +19,8 @@ DEPEND="${COMMONDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 "
 RDEPEND="${COMMONDEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-libpng14.patch" )
 
 src_configure() {
 	mycmakeargs=(
