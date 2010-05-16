@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11.ebuild,v 1.1 2010/05/02 17:01:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.11.ebuild,v 1.2 2010/05/16 20:16:06 ssuominen Exp $
 
 EAPI="2"
 
@@ -41,6 +41,12 @@ RDEPEND="${DEPEND}
 	>=media-video/lsdvd-0.15"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+pkg_setup() {
+	# See bug 255269.
+	export SKIP_UNPACK_REQUIRED_MODULES=1
+	perl-module_pkg_setup
+}
 
 src_prepare() {
 	filter-flags "-ftracer"

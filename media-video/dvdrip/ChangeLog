@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.126 2010/05/02 17:01:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.127 2010/05/16 20:16:06 ssuominen Exp $
+
+  16 May 2010; Samuli Suominen <ssuominen@gentoo.org> dvdrip-0.98.11.ebuild:
+  Export SKIP_UNPACK_REQUIRED_MODULES to environment wrt #255269, thanks to
+  Helmut Robben, Bernd Butscheidt and others.
 
 *dvdrip-0.98.11 (02 May 2010)
 
