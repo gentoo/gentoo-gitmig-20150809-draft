@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.258 2010/04/27 20:27:26 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.259 2010/05/16 17:32:37 armin76 Exp $
+
+  16 May 2010; Raúl Porcel <armin76@gentoo.org>
+  cdrtools-2.01.01_alpha75.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #308245
 
   27 Apr 2010; Daniel Pielmeier <billie@gentoo.org>
   cdrtools-2.01.01_alpha77.ebuild, cdrtools-2.01.01_alpha78.ebuild:

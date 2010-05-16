@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha75.ebuild,v 1.6 2010/04/25 19:35:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha75.ebuild,v 1.7 2010/05/16 17:32:37 armin76 Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ fi
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="acl unicode"
 
 DEPEND="acl? ( sys-apps/acl )
