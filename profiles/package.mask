@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11541 2010/05/16 12:56:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11542 2010/05/16 19:59:18 gurligebis Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,12 +35,6 @@
 # Upstreams testing version
 # Added on request
 >=sci-chemistry/refmac-5.6
-
-# Bjarke Istrup Pedersen <gurligebis@gentoo.org> (16 May 2010)
-# Since 0.7 are defined as development releases, policy requires that
-# they are hardmasked. (See bug #319923 for more info)
->=net-wireless/hostapd-0.7
->=net-wireless/wpa_supplicant-0.7
 
 # Torsten Veller <tove@gentoo.org> (15 May 2010)
 # Perl 5.12 masks
