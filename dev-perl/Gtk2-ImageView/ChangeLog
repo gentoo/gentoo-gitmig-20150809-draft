@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-ImageView
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-ImageView/ChangeLog,v 1.2 2010/03/22 11:08:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-ImageView/ChangeLog,v 1.3 2010/05/16 20:07:40 hwoarang Exp $
+
+  16 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  Gtk2-ImageView-0.05.ebuild:
+  Stable on amd64 wrt bug #302033
 
   22 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Gtk2-ImageView-0.05.ebuild:
