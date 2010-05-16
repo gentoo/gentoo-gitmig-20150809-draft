@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.2.6.ebuild,v 1.6 2006/11/09 12:30:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.2.6.ebuild,v 1.7 2010/05/16 20:43:48 ssuominen Exp $
 
 IUSE="png jpeg"
 
@@ -24,5 +24,5 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "Make install failed"
+	emake DESTDIR="${D}" install || die "Make install failed"
 }
