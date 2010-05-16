@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gchemutils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.10 2009/09/18 14:48:53 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.11 2010/05/16 02:54:06 je_fro Exp $
+
+*gchemutils-0.10.12 (16 May 2010)
+
+  16 May 2010; Jeff Gardner <je_fro@gentoo.org> -gchemutils-0.10.3.ebuild,
+  +gchemutils-0.10.12.ebuild:
+  Adding latest gchemutils and removing old, broken version. Closing bugs
+  #256314 #303363 #312415 - thanks for the reports :)
 
   18 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
   -gchemutils-0.8.7.ebuild:
