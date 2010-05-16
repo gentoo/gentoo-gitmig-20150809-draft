@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.18 2010/05/14 21:46:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.19 2010/05/16 15:22:50 bicatali Exp $
+
+  16 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  files/umfpack-5.5.0-autotools.patch:
+  Changed the NCHOLMOD define in the autotools patch to fix bug #319841
 
 *umfpack-5.5.0 (14 May 2010)
 
