@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/pslib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.16 2009/11/21 17:30:30 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/ChangeLog,v 1.17 2010/05/16 20:37:53 ssuominen Exp $
+
+*pslib-0.4.1-r2 (16 May 2010)
+
+  16 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +pslib-0.4.1-r2.ebuild:
+  Fix implicit declaration of function png_set_gray_1_2_4_to_8 with
+  libpng14.
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> pslib-0.4.1-r1.ebuild:
   amd64 stable, bug #289340
