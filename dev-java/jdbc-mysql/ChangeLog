@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdbc-mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.70 2010/05/11 21:24:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/ChangeLog,v 1.71 2010/05/16 19:42:02 maekke Exp $
+
+  16 May 2010; Markus Meier <maekke@gentoo.org> jdbc-mysql-5.1.11.ebuild:
+  amd64/x86 stable, bug #309109
 
   11 May 2010; Brent Baude <ranger@gentoo.org> jdbc-mysql-5.1.11.ebuild:
   stable ppc64, bug 309109
