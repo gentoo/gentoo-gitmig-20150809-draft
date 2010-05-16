@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.259 2010/05/13 20:05:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.260 2010/05/16 18:25:37 ssuominen Exp $
+
+  16 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  files/libpng-1.4.x-update.sh:
+  Update libpng-1.4.x-update.sh to use qfile for finding .la files (based on
+  xcb-rebuilder.sh from x11-libs/libxcb, thanks to Rémi Cardona for
+  pointing this out).
 
 *libpng-1.2.43-r3 (13 May 2010)
 
