@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.8 2010/03/11 15:30:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.9 2010/05/16 20:38:39 joker Exp $
 
 EAPI="2"
 
@@ -54,6 +54,9 @@ src_prepare() {
 		epatch
 
 	epatch "${FILESDIR}"/${P}-libpng14.patch
+
+	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=577329
+	epatch "${FILESDIR}"/ftbfs-gvariant-type-conflicts.patch
 
 	sed -i \
 		-e "s:/usr/local/share/mupen64plus:${GAMES_DATADIR}/mupen64plus:" \
