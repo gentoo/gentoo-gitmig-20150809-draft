@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.61 2010/04/25 11:30:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.62 2010/05/16 12:52:12 jlec Exp $
+
+  16 May 2010; Justin Lecher <jlec@gentoo.org> pymol-1.2.2-r4.ebuild,
+  pymol-1.2.3-r1.ebuild:
+  RESTRICT PY ABI 2.5
 
   23 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   pymol-1.2.3-r1.ebuild:
