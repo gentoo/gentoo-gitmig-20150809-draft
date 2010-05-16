@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.8 2010/03/09 19:57:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.9 2010/05/16 09:40:12 eva Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils gnome2 libtool autotools versionator python
 
 MY_P=${P/_/-}
 DESCRIPTION="Diagram/flowchart creation program"
-HOMEPAGE="http://www.gnome.org/projects/dia/"
+HOMEPAGE="http://live.gnome.org/Dia"
 LICENSE="GPL-2"
 
 # dia used -1 instead of .1 for the new version.
@@ -82,6 +82,11 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+}
+
+src_install() {
+	gnome2_src_install
+	find "${D}" -name "*.la" -delete || die "failed to remove *.la"
 }
 
 pkg_postinst() {
