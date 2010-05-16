@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.68 2010/05/13 02:24:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.69 2010/05/16 17:17:27 phajdan.jr Exp $
+
+  16 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rhino-1.7.2-r2.ebuild:
+  x86 stable wrt bug #317417
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> rhino-1.7.2-r2.ebuild:
   Marked ppc stable for bug #317417.
