@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.106 2010/04/24 18:02:42 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.107 2010/05/16 17:31:52 nirbheek Exp $
+
+  16 May 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  beagle-0.3.9-r1.ebuild, beagle-0.3.9-r2.ebuild:
+  Update deps for pkgmove from mozilla-thunderbird-bin to thunderbird-bin
 
   24 Apr 2010; Fabio Erculiani <lxnay@gentoo.org> beagle-0.3.9-r1.ebuild,
   beagle-0.3.9-r2.ebuild, +files/beagle-0.3.9-sqlite.patch:

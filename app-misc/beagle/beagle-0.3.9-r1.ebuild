@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r1.ebuild,v 1.8 2010/04/24 18:02:42 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r1.ebuild,v 1.9 2010/05/16 17:31:52 nirbheek Exp $
 
 EAPI=2
 
@@ -57,7 +57,7 @@ RDEPEND="!!sci-libs/beagle
 	thunderbird? (
 			|| (
 				>=mail-client/mozilla-thunderbird-1.5
-				>=mail-client/mozilla-thunderbird-bin-1.5
+				>=mail-client/thunderbird-bin-1.5
 			)
 	)
 	firefox? (
