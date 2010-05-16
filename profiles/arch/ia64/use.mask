@@ -71,6 +71,7 @@ sctp
 bs2b
 tokyocabinet
 schroedinger
+ots
 
 # Stuff that doesn't compile on ia64
 chicken
