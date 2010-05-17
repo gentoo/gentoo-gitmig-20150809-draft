@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Color-Library
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Color-Library/ChangeLog,v 1.1 2010/05/01 19:56:59 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Color-Library/ChangeLog,v 1.2 2010/05/17 13:17:10 tove Exp $
+
+  17 May 2010; Torsten Veller <tove@gentoo.org> Color-Library-0.02.ebuild:
+  DEPEND on Module-Build. Maintenance
 
   01 May 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
   +Color-Library-0.02.ebuild:
