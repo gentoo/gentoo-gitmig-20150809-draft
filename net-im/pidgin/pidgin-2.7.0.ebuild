@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.0.ebuild,v 1.1 2010/05/13 16:03:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.0.ebuild,v 1.2 2010/05/17 00:59:23 tester Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus debug doc eds gadu gnutls idn meanwhile networkmanager"
-IUSE+=" nls perl silc tcl tk spell qq gadu +gtk sasl +startup-notification"
+IUSE+=" perl silc tcl tk spell qq gadu +gtk sasl +startup-notification"
 IUSE+=" ncurses groupwise prediction +xscreensaver zephyr zeroconf" # mono"
 
 RDEPEND="
@@ -60,9 +60,9 @@ DEPEND="$RDEPEND
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
 	dev-util/intltool
+	sys-devel/gettext
 	gtk? ( x11-proto/scrnsaverproto )
-	doc? ( app-doc/doxygen )
-	nls? ( sys-devel/gettext )"
+	doc? ( app-doc/doxygen )"
 
 # Enable Default protocols
 DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
@@ -106,6 +106,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-icq-fix.patch"
 	intltoolize --automake --copy --force || die
 	eautoreconf
 }
@@ -142,7 +143,6 @@ src_configure() {
 
 	econf \
 		$(use_enable ncurses consoleui) \
-		$(use_enable nls) \
 		$(use_enable gtk gtkui) \
 		$(use_enable gtk sm) \
 		$(use gtk && use_enable startup-notification) \
