@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.4.0.ebuild,v 1.3 2010/05/15 13:50:18 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.4.1.ebuild,v 1.1 2010/05/17 16:01:08 reavertm Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="KDE multimedia API"
 HOMEPAGE="http://phonon.kde.org"
-SRC_URI="mirror://kde/stable/phonon/${PV}/${P}.tgz"
+SRC_URI="mirror://kde/stable/phonon/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
