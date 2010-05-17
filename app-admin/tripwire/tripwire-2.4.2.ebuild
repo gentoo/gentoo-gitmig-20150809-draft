@@ -1,14 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.1.2.ebuild,v 1.5 2009/11/19 13:10:42 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2.ebuild,v 1.1 2010/05/17 18:41:56 patrick Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic autotools
 
-TW_VER="2.3.1-2"
+TW_VER=${PV}
 DESCRIPTION="Open Source File Integrity Checker and IDS"
 HOMEPAGE="http://www.tripwire.org/"
-SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
-	mirror://gentoo/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
+SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}-src.tar.bz2
 	mirror://gentoo/twpol.txt.gz
 	mirror://gentoo/tripwire.gif"
 
@@ -25,38 +26,21 @@ RDEPEND="virtual/cron
 	virtual/mta
 	ssl? ( dev-libs/openssl )"
 
-S="${WORKDIR}"/tripwire-${TW_VER}
+S="${WORKDIR}"/tripwire-${TW_VER}-src
 
-src_unpack() {
-	# unpack tripwire source tarball
-	unpack tripwire-${TW_VER}.tar.gz
-	unpack twpol.txt.gz
-	cd "${S}"
-
-	# Paul Herman has been maintaining some updates to tripwire
-	# including autoconf support and portability fixes.
-	# http://www.frenchfries.net/paul/tripwire/
-	epatch "${FILESDIR}"/tripwire-friend-classes.patch
-	epatch "${DISTDIR}"/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
-	epatch "${FILESDIR}"/tripwire-2.3.0-50-rfc822.patch
-
+src_prepare() {
 	eautoreconf || die "eautoreconf failed"
 }
 
-src_compile() {
+src_configure() {
 	# tripwire can be sensitive to compiler optimisation.
 	# see #32613, #45823, and others.
 	# 	-taviso@gentoo.org
 	strip-flags
 	append-flags -DCONFIG_DIR='"\"/etc/tripwire\""' -fno-strict-aliasing
-
-		ebegin "	Preparing Directory"
-			mkdir "${S}"/lib "${S}"/bin || die
-		eend
 	einfo "Done."
 	chmod +x configure
 	econf $(use_enable ssl openssl) $(use_enable static)
-	emake || die
 }
 
 src_install() {
@@ -68,7 +52,7 @@ src_install() {
 	exeinto /etc/cron.daily
 	doexe "${FILESDIR}"/tripwire.cron
 
-	dodoc README Release_Notes ChangeLog policy/policyguide.txt TRADEMARK \
+	dodoc ChangeLog policy/policyguide.txt TRADEMARK \
 		"${FILESDIR}"/tripwire.txt
 
 	insinto /etc/tripwire
