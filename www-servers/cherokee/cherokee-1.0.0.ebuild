@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.0.ebuild,v 1.1 2010/05/17 09:18:19 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.0.ebuild,v 1.2 2010/05/17 16:47:41 mr_bones_ Exp $
 
 inherit eutils pam versionator libtool
 
@@ -105,7 +105,6 @@ src_install () {
 
 	# Puts logs in /var/log/cherokee/
 	dosed "s:/var/log/cherokee\.:/var/log/cherokee/cherokee\.:g" /etc/cherokee/cherokee.conf
-
 
 }
 
