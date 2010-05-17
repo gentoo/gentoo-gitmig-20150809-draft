@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.210 2010/04/21 16:45:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.211 2010/05/17 16:37:20 phajdan.jr Exp $
+
+  17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  iptables-1.4.6.ebuild:
+  x86 stable wrt bug #318531
 
   21 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> iptables-1.4.7.ebuild:
   Bug #316369: install iptables-apply util as well.
