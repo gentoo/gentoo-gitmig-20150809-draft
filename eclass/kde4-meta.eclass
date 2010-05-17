@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.36 2010/05/15 16:51:46 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.37 2010/05/17 01:16:39 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -711,10 +711,10 @@ kde4-meta_src_test() {
 kde4-meta_src_install() {
 	debug-print-function $FUNCNAME "$@"
 
-	# Search ${S}/${KMMODULE} and install any "AUTHORS ChangeLog* README* NEWS TODO HACKING" found
+	# Search ${S}/${KMMODULE} and install common documentation files found
 	local doc
-	for doc in AUTHORS ChangeLog* README* NEWS TODO HACKING; do
-		[[ -s "${S}/${KMMODULE}/${doc}" ]] && dodoc "${S}/${KMMODULE}/${doc}"
+	for doc in "${S}/${KMMODULE}"/{AUTHORS,CHANGELOG,ChangeLog*,README*,NEWS,TODO,HACKING}; do
+		[[ -s "${doc}" ]] && dodoc "${doc}"
 	done
 
 	kde4-base_src_install
