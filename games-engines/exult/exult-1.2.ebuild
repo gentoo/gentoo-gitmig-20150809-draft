@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.21 2010/03/18 18:55:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.22 2010/05/17 10:36:19 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools multilib games
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="timidity zlib"
 
-RDEPEND="media-libs/libsdl[audio,video,X]
+RDEPEND=">=media-libs/libpng-1.2.43-r2:0
+	media-libs/libsdl[audio,video,X]
 	media-libs/sdl-mixer[vorbis,timidity?]
 	timidity? ( >=media-sound/timidity++-2 )
 	zlib? ( sys-libs/zlib )"
@@ -46,7 +47,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-64bits.patch \
 		"${FILESDIR}"/${P}-x11link.patch \
 		"${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-libpng14.patch
 	sed -i \
 		-e "s/u7siinstrics.data/u7siintrinsics.data/" \
 		usecode/ucxt/data/Makefile.am \
