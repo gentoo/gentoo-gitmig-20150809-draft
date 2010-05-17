@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-2.1.ebuild,v 1.1 2010/01/07 15:50:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-2.2.ebuild,v 1.4 2010/05/17 12:09:21 jer Exp $
 
 EAPI="2"
 
@@ -36,6 +36,14 @@ src_configure() {
 		$(use_enable device-mapper) \
 		--disable-rpath \
 		--disable-Werror || die "Configure failed"
+}
+
+src_test() {
+	if use debug; then
+		emake check || die "emake check failed"
+	else
+		ewarn "Skipping tests because USE=-debug is set."
+	fi
 }
 
 src_install() {
