@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ccze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.26 2010/01/22 17:04:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ChangeLog,v 1.27 2010/05/17 20:15:47 joker Exp $
+
+  17 May 2010; Christian Birchinger <joker@gentoo.org> ccze-0.2.1-r2.ebuild,
+  ccze-0.2.1-r3.ebuild:
+  Changed SRC_URI to gentoo mirrors and HOMEPAGE to a dummy one.
 
 *ccze-0.2.1-r3 (22 Jan 2010)
 
