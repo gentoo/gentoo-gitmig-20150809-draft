@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/geeqie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.8 2010/05/17 12:48:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.9 2010/05/17 17:54:50 voyageur Exp $
+
+  17 May 2010; Bernard Cafarelli <voyageur@gentoo.org> geeqie-1.0-r1.ebuild:
+  Move plugins deps in pkg_postinst
 
 *geeqie-1.0-r1 (17 May 2010)
 

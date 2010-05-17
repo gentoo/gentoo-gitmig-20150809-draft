@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.1 2010/05/17 12:48:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.2 2010/05/17 17:54:50 voyageur Exp $
 
 EAPI=2
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc exif lcms lirc xmp"
 
-RDEPEND="media-gfx/fbida
-	>=x11-libs/gtk+-2.4.0
+RDEPEND=">=x11-libs/gtk+-2.4.0
 	virtual/libintl
 	doc? ( app-text/gnome-doc-utils )
 	lcms? ( media-libs/lcms )
@@ -40,4 +39,10 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	rm -f "${D}/usr/share/doc/${MY_P}/COPYING"
+}
+
+pkg_postinst() {
+	elog "Some plugins may require additional packages"
+	elog "- Image rotate plugin: media-gfx/fbida (JPEG), media-gfx/imagemagick (TIFF/PNG)"
+	elog "- RAW images plugin: media-gfx/ufraw"
 }
