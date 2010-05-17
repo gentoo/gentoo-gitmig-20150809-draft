@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.7 2010/03/08 08:51:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.8 2010/05/17 16:49:34 phajdan.jr Exp $
+
+  17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  guile-cairo-1.4.0.ebuild:
+  x86 stable wrt bug #314167
 
   08 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   guile-cairo-1.4.0.ebuild:
