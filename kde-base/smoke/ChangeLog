@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.100 2010/05/04 05:53:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.101 2010/05/17 15:31:55 reavertm Exp $
+
+*smoke-4.4.3-r1 (17 May 2010)
+*smoke-4.4.2-r1 (17 May 2010)
+
+  17 May 2010; Maciej Mrozowski <reavertm@gentoo.org> -smoke-4.4.2.ebuild,
+  +smoke-4.4.2-r1.ebuild, -smoke-4.4.3.ebuild, +smoke-4.4.3-r1.ebuild,
+  metadata.xml:
+  Rename USE flag qtmultimedia->multimedia, fix dependencies
 
   04 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -smoke-4.4.1.ebuild:
   Drop KDE SC 4.4.1
