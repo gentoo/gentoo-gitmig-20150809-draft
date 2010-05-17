@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.752 2010/05/09 11:26:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.753 2010/05/17 20:02:39 halcy0n Exp $
+
+  17 May 2010; Mark Loeser <halcy0n@gentoo.org> gcc-4.5.0.ebuild:
+  Bump patchset to fix bug #317217
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> gcc-4.4.3-r2.ebuild:
   Add ~sh
