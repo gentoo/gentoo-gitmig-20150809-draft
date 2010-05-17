@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/zope-i18nmessageid-3.5.1.ebuild,v 1.1 2010/04/18 00:00:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/zope-i18nmessageid-3.5.1.ebuild,v 1.2 2010/05/17 18:31:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,10 +26,10 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
-PYTHON_MODNAME="${PN/-//}"
 DOCS="CHANGES.txt README.txt"
+PYTHON_MODNAME="${PN/-//}"
 
 src_install() {
 	distutils_src_install
-	python_clean_sitedirs
+	python_clean_installation_image
 }

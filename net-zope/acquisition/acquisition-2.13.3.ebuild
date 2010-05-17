@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/acquisition/acquisition-2.13.3.ebuild,v 1.1 2010/04/19 20:14:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/acquisition/acquisition-2.13.3.ebuild,v 1.2 2010/05/17 18:29:45 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -42,5 +42,5 @@ distutils_src_test_pre_hook() {
 
 src_install() {
 	distutils_src_install
-	python_clean_sitedirs
+	python_clean_installation_image
 }
