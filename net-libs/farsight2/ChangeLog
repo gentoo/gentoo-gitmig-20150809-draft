@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.29 2010/05/17 14:53:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.30 2010/05/17 16:49:34 tester Exp $
+
+  17 May 2010; Olivier Crête <tester@gentoo.org> +farsight2-0.0.15.ebuild:
+  That version was stable on sparc and ia64
 
   17 May 2010; Olivier Crête <tester@gentoo.org> -farsight2-0.0.15.ebuild,
   -farsight2-0.0.16.ebuild:
