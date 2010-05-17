@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.1 2010/05/17 10:30:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.2 2010/05/17 10:53:34 jlec Exp $
 
 EAPI="3"
 
@@ -117,6 +117,7 @@ src_test() {
 	export PYTHONPATH="${COOT_PYTHON_DIR}:${PYTHONPATH}"
 	export PYTHONHOME="${EPREFIX}"/usr
 	export CCP4_SCR="${T}"/coot_test
+	export CLIBD_MON="${EPREFIX}/usr/share/ccp4/data/monomers/"
 
 	export COOT_TEST_DATA_DIR="${WORKDIR}"/data/greg-data
 
@@ -141,6 +142,7 @@ src_test() {
 	einfo "PYTHONPATH $PYTHONPATH"
 	einfo "PYTHONHOME $PYTHONHOME"
 	einfo "CCP4_SCR ${CCP4_SCR}"
+	einfo "CLIBD_MON ${CLIBD_MON}"
 
 	"${S}"/src/coot-real --no-graphics --script command-line-greg.scm || die
 }
