@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.4.1.ebuild,v 1.2 2010/04/30 14:36:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.4.1.ebuild,v 1.3 2010/05/17 18:25:20 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -47,7 +47,7 @@ src_compile(){
 
 src_install(){
 	distutils_src_install
-	python_clean_sitedirs
+	python_clean_installation_image
 
 	if use doc; then
 		dohtml -r docs/_build/html/* || die "Installation of documentation failed"

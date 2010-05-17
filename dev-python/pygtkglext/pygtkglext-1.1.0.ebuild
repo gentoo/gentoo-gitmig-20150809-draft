@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.22 2010/04/10 20:10:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.23 2010/05/17 18:26:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -39,7 +39,7 @@ src_prepare() {
 
 src_install() {
 	python_src_install
-	python_clean_sitedirs
+	python_clean_installation_image
 
 	dodoc README AUTHORS ChangeLog
 
