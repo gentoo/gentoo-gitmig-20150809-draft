@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/tint2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.15 2010/04/28 21:17:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.16 2010/05/17 13:51:07 idl0r Exp $
+
+*tint2-0.10_beta1 (17 May 2010)
+
+  17 May 2010; Christian Ruppert <idl0r@gentoo.org>
+  +tint2-0.10_beta1.ebuild, +files/tint2-0.10-beta1-install_examples.patch,
+  metadata.xml:
+  Version bump to 0.10_beta1. Add tint2conf useflag. Fix dependencies. Patch
+  Makefile to install examples properly. Remove bunled tintwizard.py.
 
   28 Apr 2010; Christian Ruppert <idl0r@gentoo.org> -tint2-0.7.1.ebuild:
   Remove old version.
