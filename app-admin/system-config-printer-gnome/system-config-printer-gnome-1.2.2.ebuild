@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.1.18-r1.ebuild,v 1.3 2010/03/31 14:50:50 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.2.ebuild,v 1.1 2010/05/17 19:12:39 reavertm Exp $
 
 EAPI="3"
+
 PYTHON_DEPEND="2"
 inherit python autotools
 
@@ -10,7 +11,7 @@ MY_P="${PN%-gnome}-${PV}"
 
 DESCRIPTION="GNOME frontend for a Red Hat's printer administration tool"
 HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
-SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.1/${MY_P}.tar.bz2"
+SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.2/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -51,6 +52,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-split.patch"
 
+	# Upstream bug #587744
+	epatch "${FILESDIR}/${P}-cupspk-fileget-tmp.patch"
+
 	eautoreconf
 }
 
@@ -72,7 +76,7 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	python_convert_shebangs -q -r $(python_get_version) "${D}"usr/share/system-config-printer
+	python_convert_shebangs -q -r $(python_get_version) "${D}"
 }
 
 pkg_postrm() {

@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.5 2010/05/16 14:58:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.6 2010/05/17 19:12:39 reavertm Exp $
+
+*system-config-printer-gnome-1.2.2 (17 May 2010)
+
+  17 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -system-config-printer-gnome-1.1.18-r1.ebuild,
+  -files/system-config-printer-gnome-1.1.18-split.patch,
+  +system-config-printer-gnome-1.2.2.ebuild,
+  +files/system-config-printer-gnome-1.2.2-split.patch:
+  Version bump, remove old, bug 319989
 
   16 May 2010; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Fix maintainer's email.
