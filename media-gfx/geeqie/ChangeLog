@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/geeqie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.7 2010/02/23 10:51:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.8 2010/05/17 12:48:23 voyageur Exp $
+
+*geeqie-1.0-r1 (17 May 2010)
+
+  17 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +geeqie-1.0-r1.ebuild:
+  Fix doc generation, bug #318957, depend on fbida for image rotation, bug
+  #319007
 
 *geeqie-1.0 (23 Feb 2010)
 
