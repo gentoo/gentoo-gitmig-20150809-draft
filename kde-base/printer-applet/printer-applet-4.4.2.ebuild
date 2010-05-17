@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.4.2.ebuild,v 1.1 2010/03/30 22:03:17 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/printer-applet-4.4.2.ebuild,v 1.2 2010/05/17 19:21:11 reavertm Exp $
 
 EAPI="3"
 
@@ -13,8 +13,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="
-	>=app-admin/system-config-printer-common-1.1.18
-	app-misc/hal-cups-utils
+	>=app-admin/system-config-printer-common-1.2.2
 	$(add_kdebase_dep pykde4)
 "
 RDEPEND="${DEPEND}"
@@ -38,7 +37,7 @@ src_prepare() {
 
 src_install() {
 	kde4-meta_src_install
-	python_convert_shebangs -q -r $(python_get_version) "${ED}${PREFIX}/share/apps/${PN}"
+	python_convert_shebangs -q -r $(python_get_version) "${ED}"
 }
 
 pkg_postrm() {

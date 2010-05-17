@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.26 2010/05/04 05:52:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.27 2010/05/17 19:21:11 reavertm Exp $
+
+  17 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  printer-applet-4.4.2.ebuild, printer-applet-4.4.3.ebuild:
+  Raise scp-common dependencies, drop hal-cups-utils dependencies.
 
   04 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -printer-applet-4.4.1.ebuild:
