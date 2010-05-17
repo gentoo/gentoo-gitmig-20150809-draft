@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213.ebuild,v 1.2 2010/03/09 12:45:33 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213.ebuild,v 1.3 2010/05/17 18:35:17 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 HOMEPAGE="http://www.geda.seul.org/tools/gwave/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="gnuplot plotutils"
 SLOT="0"
 
