@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20090717.ebuild,v 1.1 2009/07/17 13:58:16 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20100515.ebuild,v 1.1 2010/05/17 15:49:43 wschlich Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ IUSE=""
 RDEPEND="www-client/lynx
 	net-misc/curl
 	dev-lang/perl
-	dev-perl/libwww-perl"
+	dev-perl/libwww-perl
+	dev-perl/Net-LibIDN"
 
 src_install() {
 	dodir /etc/gwhois
