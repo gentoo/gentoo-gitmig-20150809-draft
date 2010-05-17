@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.33 2010/05/17 10:28:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.34 2010/05/17 15:40:51 pva Exp $
+
+  17 May 2010; Peter Volkov <pva@gentoo.org> kchmviewer-5.2.ebuild,
+  +files/kchmviewer-5.2-kde-build.patch:
+  Fix build issue with USE=kde, bug #320191, thank Leonid Podolny and
+  Vasileios P. Lourdas for report.
 
   17 May 2010; Peter Volkov <pva@gentoo.org>
   -files/kchmviewer-3.1_p2-gcc43.patch, -kchmviewer-4.1.ebuild,

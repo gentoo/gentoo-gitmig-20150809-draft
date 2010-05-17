@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.2.ebuild,v 1.1 2010/05/17 10:25:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.2.ebuild,v 1.2 2010/05/17 15:40:51 pva Exp $
 
 EAPI="2"
 KDE_REQUIRED="never"
@@ -26,11 +26,14 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/build-${PV}
 
+PATCHES=( "${FILESDIR}/${P}-kde-build.patch" )
+
 pkg_setup() {
 	use kde && kde4-base_pkg_setup
 }
 
 src_prepare() {
+	base_src_prepare
 	sed -e "s:KDE4_SERVICES_INSTALL_DIR:SERVICES_INSTALL_DIR:" \
 			-i lib/kio-msits/CMakeLists.txt
 	sed -e "s:KDE4_ICON_INSTALL_DIR:ICON_INSTALL_DIR:" \
