@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.4.3.ebuild,v 1.1 2010/05/03 21:49:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.4.3.ebuild,v 1.2 2010/05/17 19:23:42 reavertm Exp $
 
 EAPI="3"
 
@@ -13,8 +13,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="
-	>=app-admin/system-config-printer-common-1.1.18
-	>=dev-python/pycups-1.9.46
+	>=app-admin/system-config-printer-common-1.2.2
+	>=dev-python/pycups-1.9.49
 	$(add_kdebase_dep pykde4)
 "
 RDEPEND="${DEPEND}
@@ -28,7 +28,7 @@ pkg_setup() {
 
 src_install() {
 	kde4-meta_src_install
-	python_convert_shebangs -q -r $(python_get_version) "${ED}${PREFIX}/share/apps/${PN}"
+	python_convert_shebangs -q -r $(python_get_version) "${ED}"
 }
 
 pkg_postrm() {
