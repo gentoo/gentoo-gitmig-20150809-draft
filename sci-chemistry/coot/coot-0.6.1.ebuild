@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.2 2010/05/17 10:53:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.3 2010/05/17 10:57:32 jlec Exp $
 
 EAPI="3"
 
@@ -56,7 +56,8 @@ RDEPEND="
 	${SCHEMEDEPS}
 	dev-python/pygtk
 	>=dev-libs/gmp-4.2.2-r2
-	>=net-misc/curl-7.19.6"
+	>=net-misc/curl-7.19.6
+	net-dns/libidn"
 DEPEND="${RDEPEND}
 	dev-lang/swig
 	test? ( dev-scheme/greg )"
