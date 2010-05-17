@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4-r3.ebuild,v 1.1 2010/04/25 17:37:03 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4-r3.ebuild,v 1.2 2010/05/17 22:43:53 reavertm Exp $
 
 EAPI="2"
 
@@ -11,32 +11,40 @@ HOMEPAGE="http://poppler.freedesktop.org/"
 SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+SLOT="0"
 IUSE="+abiword cairo cjk debug doc exceptions jpeg jpeg2k +lcms png qt4 +utils +xpdf-headers"
 
-COMMON_DEPEND=">=media-libs/fontconfig-2.6.0
+COMMON_DEPEND="
+	>=media-libs/fontconfig-2.6.0
 	>=media-libs/freetype-2.3.9
 	sys-libs/zlib
 	abiword? ( dev-libs/libxml2:2 )
-	cairo? ( dev-libs/glib:2
-			 >=x11-libs/cairo-1.8.4
-			 >=x11-libs/gtk+-2.14.0:2 )
+	cairo? (
+		dev-libs/glib:2
+		>=x11-libs/cairo-1.8.4
+		>=x11-libs/gtk+-2.14.0:2
+	)
 	jpeg? ( >=media-libs/jpeg-7:0 )
 	jpeg2k? ( media-libs/openjpeg )
 	lcms? ( media-libs/lcms )
 	png? ( media-libs/libpng )
-	qt4? ( x11-libs/qt-core:4
-		   x11-libs/qt-gui:4 )"
+	qt4? (
+		x11-libs/qt-core:4
+		x11-libs/qt-gui:4
+	)
+"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+"
 RDEPEND="${COMMON_DEPEND}
 	!dev-libs/poppler
 	!dev-libs/poppler-glib
 	!dev-libs/poppler-qt3
 	!dev-libs/poppler-qt4
 	!app-text/poppler-utils
-	cjk? ( >=app-text/poppler-data-0.2.1 )"
+	cjk? ( >=app-text/poppler-data-0.2.1 )
+"
 
 DOCS="AUTHORS ChangeLog NEWS README README-XPDF TODO"
 
@@ -61,8 +69,8 @@ src_configure() {
 		-DENABLE_SPLASH=ON
 		-DENABLE_ZLIB=ON
 		$(cmake-utils_use_enable abiword)
-		$(cmake-utils_use_enable lcms)
 		$(cmake-utils_use_enable jpeg2k LIBOPENJPEG)
+		$(cmake-utils_use_enable lcms)
 		$(cmake-utils_use_enable utils)
 		$(cmake-utils_use_enable xpdf-headers XPDF_HEADERS)
 		$(cmake-utils_use_with cairo)
