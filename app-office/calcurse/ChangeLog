@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calcurse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.13 2010/02/28 16:37:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.14 2010/05/17 11:30:36 phajdan.jr Exp $
+
+  17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> calcurse-2.7.ebuild:
+  x86 stable wrt bug #318783
 
 *calcurse-2.7 (28 Feb 2010)
 
