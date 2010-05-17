@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpudyn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.12 2009/10/16 20:03:50 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.13 2010/05/17 08:12:58 phajdan.jr Exp $
+
+  17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> cpudyn-1.0.1.ebuild:
+  x86 stable wrt bug #318229
 
   16 Oct 2009; Thilo Bangert <bangert@gentoo.org> files/cpudyn.init:
   fix bashism in init script (bug #195939)
