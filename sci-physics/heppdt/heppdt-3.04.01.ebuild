@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/heppdt/heppdt-3.04.01.ebuild,v 1.1 2010/03/23 03:24:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/heppdt/heppdt-3.04.01.ebuild,v 1.2 2010/05/17 09:41:38 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/download/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc examples"
 
 RDEPEND=""
