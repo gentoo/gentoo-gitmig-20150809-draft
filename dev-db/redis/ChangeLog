@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.4 2010/05/02 22:30:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.5 2010/05/17 21:32:23 lu_zero Exp $
+
+*redis-1.2.6 (17 May 2010)
+
+  17 May 2010; Luca Barbato <lu_zero@gentoo.org> redis-1.2.5.ebuild,
+  +redis-1.2.6.ebuild:
+  fix bug #318683, thanks to Mark Lewandowski <mark.e.lewandowski@gmail.com>
+  for reporting the issue and the new version
 
   02 May 2010; Robin H. Johnson <robbat2@gentoo.org> redis-1.2.5.ebuild:
   Bug #316767: implement a full src_test that does server setup first.

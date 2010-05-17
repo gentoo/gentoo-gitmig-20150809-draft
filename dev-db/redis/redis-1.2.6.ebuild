@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.5.ebuild,v 1.4 2010/05/17 21:32:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-1.2.6.ebuild,v 1.1 2010/05/17 21:32:23 lu_zero Exp $
 
 EAPI=2
 
