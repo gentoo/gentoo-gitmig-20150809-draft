@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.59 2010/05/11 21:08:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.60 2010/05/17 18:49:46 arfrever Exp $
+
+  17 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dnspython-1.8.0.ebuild:
+  amd64 stable (tested by rullzer) (bug #309395).
 
   11 May 2010; Brent Baude <ranger@gentoo.org> dnspython-1.8.0.ebuild:
   stable ppc64, bug 309395
