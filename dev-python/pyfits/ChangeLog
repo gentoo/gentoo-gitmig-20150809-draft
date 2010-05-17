@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyfits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.15 2010/01/15 19:08:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.16 2010/05/17 19:04:59 bicatali Exp $
+
+*pyfits-2.3 (17 May 2010)
+
+  17 May 2010; Sébastien Fabbro <bicatali@gentoo.org> +pyfits-2.3.ebuild:
+  Version bump. Tests do not pass yet.
 
   15 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> -pyfits-2.1.1.ebuild,
   -pyfits-2.2.1.ebuild, pyfits-2.2.2.ebuild:
