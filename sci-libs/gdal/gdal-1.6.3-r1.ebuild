@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.4 2010/04/17 18:10:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.5 2010/05/17 03:34:26 nerdboy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -83,12 +83,6 @@ src_prepare() {
 	[[ ${CHOST} == *-darwin* ]] \
 		&& epatch "${FILESDIR}"/${PN}-1.5.0-install_name.patch \
 		|| epatch "${FILESDIR}"/${PN}-1.5.0-soname.patch
-
-	if useq hdf && useq netcdf; then
-		ewarn "Netcdf and HDF4 are incompatible due to certain tools in"
-		ewarn "common; HDF5 is now the preferred choice for HDF data."
-		die "Please disable either the hdf or netcdf use flag."
-	fi
 }
 
 src_configure() {
@@ -99,13 +93,23 @@ src_configure() {
 	pkg_conf="${pkg_conf} --enable-shared=yes --with-pic \
 		--with-libgrass=no --without-libtool --with-expat=${EPREFIX}/usr"
 
+	if useq hdf && useq netcdf; then
+		ewarn "Netcdf and HDF4 are incompatible due to certain tools in"
+		ewarn "common; HDF5 is now the preferred choice for HDF data."
+		ewarn "Disabling hdf4 in favor of NetCDF..."
+		use_conf="--with-netcdf --with-hdf4=no"
+	elif useq hdf && ! useq netcdf; then
+		use_conf="--with-netcdf=no --with-hdf4"
+	else
+		$(use_with netcdf)
+	fi
+
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
+	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl) \
 	    $(use_with postgres pg) $(use_with python) $(use_with ruby) \
 	    $(use_with threads) $(use_with fits cfitsio) $(use_with perl) \
-	    $(use_with netcdf) $(use_with hdf hdf4) $(use_with geos) \
-	    $(use_with sqlite sqlite3 ="${EPREFIX}"/usr) $(use_with jpeg2k jasper) $(use_with odbc) \
-	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl) \
-	    $(use_enable debug)"
+	    $(use_with sqlite sqlite3 ="${EPREFIX}"/usr) $(use_with geos) \
+	    $(use_with jpeg2k jasper) $(use_with odbc) $(use_enable debug)"
 
 	# It can't find this
 	if useq ogdi ; then
