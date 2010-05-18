@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.96 2010/05/05 02:36:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.97 2010/05/18 14:21:57 chutzpah Exp $
+
+*ntfs3g-2010.5.16 (18 May 2010)
+
+  18 May 2010; Patrick McLean <chutzpah@gentoo.org> -ntfs3g-2009.3.8.ebuild,
+  -ntfs3g-2009.4.4.ebuild, -ntfs3g-2009.4.4-r1.ebuild,
+  -ntfs3g-2009.11.14.ebuild, +ntfs3g-2010.5.16.ebuild:
+  Version bump (bug #320195). Clean out old versions.
 
   05 May 2010; Patrick McLean <chutzpah@gentoo.org> +files/99-ntfs3g.rules,
   ntfs3g-2010.3.6.ebuild, metadata.xml:
