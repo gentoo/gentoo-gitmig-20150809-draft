@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.53 2010/02/28 17:53:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.54 2010/05/18 12:53:34 hwoarang Exp $
+
+  18 May 2010; Markos Chandras <hwoarang@gentoo.org> ypbind-1.31.ebuild:
+  Stable on amd64 wrt bug #320327
 
   28 Feb 2010; Jeroen Roovers <jer@gentoo.org> ypbind-1.31.ebuild:
   Readd dropped keywords (bug #306627).
