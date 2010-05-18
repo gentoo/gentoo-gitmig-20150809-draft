@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyberjack
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.10 2009/11/19 23:20:21 wschlich Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.11 2010/05/18 19:40:28 ssuominen Exp $
+
+*cyberjack-3.3.5 (18 May 2010)
+
+  18 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +cyberjack-3.3.5.ebuild:
+  Version bump wrt #314081 by Peter Gantner.
 
 *cyberjack-3.3.2 (19 Nov 2009)
 
