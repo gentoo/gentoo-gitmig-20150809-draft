@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.5.ebuild,v 1.2 2010/01/16 20:04:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.5.ebuild,v 1.3 2010/05/18 13:16:15 hwoarang Exp $
 
 EAPI=2
 inherit eutils distutils fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 
 IUSE="doc examples fits"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 
 DEPEND="dev-python/numpy"
