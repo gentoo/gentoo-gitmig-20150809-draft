@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.5 2010/05/08 08:31:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999.ebuild,v 1.6 2010/05/18 08:41:19 ulm Exp $
 
 EAPI=2
 
@@ -87,7 +87,7 @@ pkg_setup() {
 
 src_prepare() {
 	if [ "${PV##*.}" = "9999" ]; then
-		FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
+		FULL_VERSION=$(grep 'const char emacs_version' src/emacs.c \
 			| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
 		[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
 		echo
