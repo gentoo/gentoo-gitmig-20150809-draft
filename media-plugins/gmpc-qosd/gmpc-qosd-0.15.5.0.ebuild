@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/gmpc-qosd-0.15.5.0.ebuild,v 1.6 2009/11/12 09:22:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/gmpc-qosd-0.15.5.0.ebuild,v 1.7 2010/05/18 18:11:46 angelos Exp $
 
 EAPI=2
-inherit autotools
+inherit autotools multilib
 
 DESCRIPTION="This plugin provides an on-screen-display written to look nicer than xosd"
 HOMEPAGE="http://sarine.nl/q-on-screen-display"
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	sed -i -e "/^libdir/d" src/Makefile.am
+	sed -i -e "/^libdir/s/share/$(get_libdir)/" src/Makefile.am
 	eautoreconf
 }
 

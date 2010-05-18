@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-qosd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/ChangeLog,v 1.14 2009/11/12 09:22:15 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/ChangeLog,v 1.15 2010/05/18 18:11:46 angelos Exp $
+
+  18 May 2010; Christoph Mende <angelos@gentoo.org>
+  gmpc-qosd-0.15.5.0.ebuild:
+  Fixed plugin install path (bug #291855)
 
   12 Nov 2009; Christoph Mende <angelos@gentoo.org>
   gmpc-qosd-0.15.5.0.ebuild:
