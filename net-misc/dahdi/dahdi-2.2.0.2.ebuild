@@ -1,11 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.2.0.2.ebuild,v 1.1 2009/10/22 18:19:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.2.0.2.ebuild,v 1.2 2010/05/18 14:28:06 chainsaw Exp $
 
 inherit linux-mod eutils flag-o-matic
 
 MY_P="${P/dahdi/dahdi-linux}"
 MY_S="${WORKDIR}/${MY_P}"
+RESTRICT="test"
 
 DESCRIPTION="Kernel modules for Digium compatible hardware (formerly known as Zaptel)."
 HOMEPAGE="http://www.asterisk.org"

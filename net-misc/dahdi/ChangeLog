@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.4 2010/04/14 11:36:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.5 2010/05/18 14:28:06 chainsaw Exp $
+
+  18 May 2010; <chainsaw@gentoo.org> dahdi-2.1.0.4.ebuild,
+  dahdi-2.2.0.2.ebuild, dahdi-2.2.1.1.ebuild:
+  Restrict test suite which requires SQLite and downloads a full kernel from
+  git, closes bug #319367 by Diego E. "Flameeyes" Pettenò.
 
   14 Apr 2010; <chainsaw@gentoo.org> dahdi-2.2.1.1.ebuild:
   Remove incorrect RDEPEND on Asterisk, initially noted by Oliver Jaksch.
