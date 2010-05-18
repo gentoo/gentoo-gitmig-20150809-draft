@@ -1,6 +1,15 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.474 2010/05/12 14:20:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.475 2010/05/18 15:49:15 jer Exp $
+
+*opera-10.54_pre6336-r1 (18 May 2010)
+*opera-10.53_pre6330-r1 (18 May 2010)
+
+  18 May 2010; Jeroen Roovers <jer@gentoo.org>
+  +opera-10.53_pre6330-r1.ebuild, -opera-10.54_pre6331.ebuild,
+  -opera-10.54_pre6333.ebuild, -opera-10.54_pre6335.ebuild,
+  +opera-10.54_pre6336-r1.ebuild:
+  Use multilib (bug #319861).
 
 *opera-10.54_pre6336 (12 May 2010)
 

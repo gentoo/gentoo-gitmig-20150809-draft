@@ -1,12 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.54_pre6333.ebuild,v 1.1 2010/05/08 04:36:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.53_pre6330-r1.ebuild,v 1.1 2010/05/18 15:49:15 jer Exp $
 
 EAPI="2"
 
-OPREFIX="/usr/lib"
-
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A standards-compliant graphical Web browser"
 HOMEPAGE="http://www.opera.com/"
@@ -14,13 +12,14 @@ HOMEPAGE="http://www.opera.com/"
 SLOT="0"
 LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+IUSE="elibc_FreeBSD"
 
 RESTRICT="mirror test"
 
+OPREFIX="/usr/$(get_libdir)"
+
 QA_DT_HASH="${OPREFIX}/${PN}/.*"
 QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
-
-IUSE="elibc_FreeBSD"
 
 MY_LINGUAS="
 	be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka
