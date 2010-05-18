@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.1.ebuild,v 1.4 2009/11/28 15:19:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.1.ebuild,v 1.5 2010/05/18 16:53:51 bicatali Exp $
 
 EAPI=2
 inherit python flag-o-matic
@@ -30,7 +30,13 @@ pkg_setup() {
 	export BOOST_PYTHON_LIB=boost_python
 }
 
+src_configure() {
+	# no need of static library for python module
+	econf --disable-static
+}
+
 src_install() {
 	python_need_rebuild
 	emake DESTDIR="${D}" install || die "emake install failed"
+	rm -f "${D}"$(python_get_sitedir)/${MY_PN}/*.la
 }
