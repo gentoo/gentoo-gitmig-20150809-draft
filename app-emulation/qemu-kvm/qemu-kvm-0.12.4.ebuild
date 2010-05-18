@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.2-r2.ebuild,v 1.4 2010/03/19 17:23:17 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.4.ebuild,v 1.1 2010/05/18 17:57:32 tommy Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth curl esd gnutls fdt hardened kvm-trace ncurses \
-pulseaudio sasl sdl static vde"
+pulseaudio qemu-ifup sasl sdl static vde"
 
 COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
@@ -47,8 +47,6 @@ RDEPEND="
 	!app-emulation/qemu
 	!app-emulation/qemu-softmmu
 	!app-emulation/qemu-user
-	net-misc/bridge-utils
-	sys-apps/iproute2
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
@@ -61,6 +59,7 @@ RDEPEND="
 	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
 	pulseaudio? ( media-sound/pulseaudio )
+	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
 	vde? ( net-misc/vde )
@@ -115,9 +114,9 @@ src_prepare() {
 	# remove part to make udev happy
 	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
-	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
-
-	epatch "${FILESDIR}"/${P}-virtio-large-iovecs.patch
+	epatch "${FILESDIR}"/qemu-0.11.0-mips64-user-fix.patch \
+		"${FILESDIR}"/${PN}-0.12.3-fix-crash-with-sdl.patch \
+		"${FILESDIR}"/${PN}-0.12.3-include-madvise-defines.patch
 }
 
 src_configure() {
@@ -197,9 +196,11 @@ src_install() {
 	insinto /etc/udev/rules.d/
 	doins kvm/scripts/65-kvm.rules || die
 
-	insinto /etc/qemu/
-	insopts -m0755
-	doins kvm/scripts/qemu-ifup || die
+	if use qemu-ifup; then
+		insinto /etc/qemu/
+		insopts -m0755
+		doins kvm/scripts/qemu-ifup || die
+	fi
 
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
 	newdoc pc-bios/README README.pc-bios || die
