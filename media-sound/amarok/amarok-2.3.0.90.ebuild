@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.0.90.ebuild,v 1.2 2010/04/19 13:36:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.0.90.ebuild,v 1.3 2010/05/18 03:28:17 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -39,12 +39,12 @@ DEPEND="
 	sys-libs/zlib
 	x11-libs/qt-script
 	>=x11-libs/qtscriptgenerator-0.1.0
-	embedded? ( <dev-db/mysql-5.1[embedded,-minimal] )
 	cdda? (
 		>=kde-base/libkcddb-${KDE_MINIMAL}
 		>=kde-base/libkcompactdisc-${KDE_MINIMAL}
 		>=kde-base/kdemultimedia-kioslaves-${KDE_MINIMAL}
 	)
+	embedded? ( <dev-db/mysql-5.1[embedded,-minimal] )
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 	lastfm? ( >=media-libs/liblastfm-0.3.0 )
 	mp3tunes? (
