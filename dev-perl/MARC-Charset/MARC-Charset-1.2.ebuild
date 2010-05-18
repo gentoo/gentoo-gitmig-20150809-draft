@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-Charset/MARC-Charset-1.2.ebuild,v 1.1 2010/05/13 10:35:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-Charset/MARC-Charset-1.2.ebuild,v 1.2 2010/05/18 10:51:58 tove Exp $
 
 EAPI=2
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test"
 
-RDEPEND="dev-perl/XML-SAX
+RDEPEND="dev-lang/perl[gdbm]
+	dev-perl/XML-SAX
 	dev-perl/Class-Accessor"
 DEPEND="${RDEPEND}
 	test? ( dev-perl/Test-Pod )"
