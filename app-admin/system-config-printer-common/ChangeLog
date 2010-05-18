@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.17 2010/05/17 19:11:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.18 2010/05/18 12:48:21 pva Exp $
+
+  18 May 2010; Peter Volkov <pva@gentoo.org>
+  system-config-printer-common-1.2.2.ebuild:
+  Fixed build failure, bug 320269, thank Emmanuel Andry for report.
 
 *system-config-printer-common-1.2.2 (17 May 2010)
 
