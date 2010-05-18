@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.57 2010/04/26 20:40:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.58 2010/05/18 07:03:11 jlec Exp $
+
+  18 May 2010; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.7.14.ebuild:
+  Fix for new python ABIs, #316259
 
   26 Apr 2010; Markus Meier <maekke@gentoo.org> qtiplot-0.9.7.12.ebuild:
   amd64/x86 stable, bug #309717

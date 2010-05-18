@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.14.ebuild,v 1.1 2010/04/23 08:16:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.14.ebuild,v 1.2 2010/05/18 07:03:11 jlec Exp $
 
 EAPI=2
+
+PYTHON_DEPEND="python? 2"
+
 inherit eutils qt4 fdo-mime python
 
 DESCRIPTION="Qt based clone of the Origin plotting package"
@@ -48,7 +51,7 @@ DEPEND="${CDEPEND}
 		   >=app-text/docbook-xml-dtd-4.4-r2:4.4 )"
 
 RDEPEND="${CDEPEND}
-	python? ( >=dev-lang/python-2.5
+	python? (
 		dev-python/PyQt4[X]
 		dev-python/pygsl
 		dev-python/rpy
@@ -60,6 +63,11 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.9.7.12-system-gl2ps.patch"
 	"${FILESDIR}/${PN}-0.9.7.10-dont-install-qwt.patch"
 	)
+
+pkg_setup() {
+	python_set_active_version 2
+	qt4_pkg_setup
+}
 
 src_prepare() {
 	qt4_src_prepare
@@ -112,8 +120,6 @@ src_prepare() {
 	#	echo "EMF_ENGINE_INCLUDEPATH = /usr/include/libEMF" >> build.conf
 	#	echo "EMF_ENGINE_LIBS = -lEMF" >> build.conf
 	#fi
-
-	python_version
 
 	sed -e "s:doc/${PN}/manual:doc/${PN}/html:" \
 		-e "s:/usr/local/${PN}:$(python_get_sitedir)/qtiplot:" \
