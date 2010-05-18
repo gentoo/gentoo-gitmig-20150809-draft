@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.53 2010/02/13 18:18:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.54 2010/05/18 11:13:48 grobian Exp $
+
+  18 May 2010; Fabian Groffen <grobian@gentoo.org> paramiko-1.7.6.ebuild:
+  Marked ~ppc-macos
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> paramiko-1.7.5.ebuild,
   paramiko-1.7.6.ebuild:
