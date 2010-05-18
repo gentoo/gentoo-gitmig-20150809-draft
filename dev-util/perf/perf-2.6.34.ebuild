@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.32.ebuild,v 1.1 2009/12/04 16:33:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-2.6.34.ebuild,v 1.1 2010/05/18 11:22:36 flameeyes Exp $
 
 EAPI=2
 
@@ -20,6 +20,11 @@ if [ ${PV/_rc} != ${PV} ]; then
 	LINUX_PATCH=patch-${PV//_/-}.bz2
 	SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/testing/${LINUX_PATCH}
 		mirror://kernel/linux/kernel/v${LINUX_V}/testing/v${PATCH_VERSION}/${LINUX_PATCH}"
+elif [ $(get_version_component_count) == 4 ]; then
+	# stable-release series
+	LINUX_VER=$(get_version_component_range 1-3)
+	LINUX_PATCH=patch-${PV}.bz2
+	SRC_URI="mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_PATCH}"
 else
 	LINUX_VER=${PV}
 fi
@@ -30,17 +35,15 @@ SRC_URI="${SRC_URI} mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_SOURCES}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+demangle +doc"
+IUSE="+demangle +doc perl python"
 
 RDEPEND="demangle? ( sys-devel/binutils )
+	perl? ( || ( >=dev-lang/perl-5.10 sys-devel/libperl ) )
+	python? ( dev-lang/python )
 	dev-libs/elfutils"
 DEPEND="${RDEPEND}
+	${LINUX_PATCH+dev-util/patchutils}
 	doc? ( app-text/asciidoc app-text/xmlto )"
-
-if [[ -n ${LINUX_PATCH} ]]; then
-	DEPEND="${DEPEND}
-		dev-util/patchutils"
-fi
 
 S="${WORKDIR}/linux-${LINUX_VER}/tools/perf"
 
@@ -60,9 +63,11 @@ src_unpack() {
 	tar --wildcards -xpf "${DISTDIR}"/${LINUX_SOURCES} ${_tarpattern}
 	eend $? || die "tar failed"
 
-	ebegin "Filtering partial source patch"
-	filterdiff ${_filterdiff} -z "${DISTDIR}"/${LINUX_PATCH} > ${P}.patch || die
-	eend $? || die "filterdiff failed"
+	if [[ -n ${LINUX_PATCH} ]]; then
+		ebegin "Filtering partial source patch"
+		filterdiff -p1 ${_filterdiff} -z "${DISTDIR}"/${LINUX_PATCH} > ${P}.patch || die
+		eend $? || die "filterdiff failed"
+	fi
 
 	MY_A=
 	for _AFILE in ${A}; do
@@ -74,6 +79,11 @@ src_unpack() {
 }
 
 src_prepare() {
+	if [[ -n ${LINUX_PATCH} ]]; then
+		cd "${WORKDIR}"/linux-"${LINUX_VER}"
+		epatch "${WORKDIR}"/${P}.patch
+	fi
+
 	# Drop some upstream too-developer-oriented flags and fix the
 	# Makefile in general
 	sed -i \
@@ -81,20 +91,19 @@ src_prepare() {
 		-e 's:-ggdb3::' \
 		-e 's:-fstack-protector-all::' \
 		-e 's:^LDFLAGS =:EXTLIBS +=:' \
+		-e '/\(PERL\|PYTHON\)_EMBED_LDOPTS/s:ALL_LDFLAGS +=:EXTLIBS +=:' \
 		-e '/-x c - /s:\$(ALL_LDFLAGS):\0 $(EXTLIBS):' \
 		-e '/^ALL_CFLAGS =/s:$: $(CFLAGS_OPTIMIZE):' \
 		-e '/^ALL_LDFLAGS =/s:$: $(LDFLAGS_OPTIMIZE):' \
 		"${S}"/Makefile
-
-	if [[ -n ${LINUX_PATCH} ]]; then
-		epatch "${WORKDIR}"/${P}.patch
-	fi
 }
 
 src_compile() {
 	local makeargs=
 
 	use demangle || makeargs="${makeargs} NO_DEMANGLE= "
+	use perl || makeargs="${makeargs} NO_LIBPERL= "
+	use perl || makeargs="${makeargs} NO_LIBPERL= "
 
 	emake ${makeargs} \
 		CC="$(tc-getCC)" AR="$(tc-getAR)" \
@@ -115,7 +124,7 @@ src_test() {
 
 src_install() {
 	# Don't use make install or it'll be re-building the stuff :(
-	dosbin perf || die
+	dobin perf || die
 
 	dodoc CREDITS || die
 
