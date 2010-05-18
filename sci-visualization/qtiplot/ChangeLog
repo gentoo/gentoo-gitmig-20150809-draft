@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.58 2010/05/18 07:03:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.59 2010/05/18 13:52:51 arfrever Exp $
+
+  18 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  qtiplot-0.9.7.12.ebuild, qtiplot-0.9.7.13.ebuild:
+  Delete calls to deprecated python_version().
 
   18 May 2010; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.7.14.ebuild:
   Fix for new python ABIs, #316259
