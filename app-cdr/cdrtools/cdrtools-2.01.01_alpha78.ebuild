@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha78.ebuild,v 1.2 2010/04/27 20:27:26 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha78.ebuild,v 1.3 2010/05/18 19:16:13 billie Exp $
 
 EAPI=2
 
@@ -98,13 +98,16 @@ src_compile() {
 
 	# If not built with -j1, "sometimes" cdda2wav will not be built. Bug?
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
-		LDOPTX="${LDFLAGS}" LINKMODE="dynamic" \
-		GMAKE_NOWARN="true" || die "emake"
+		LDOPTX="${LDFLAGS}" \
+		INS_BASE="${D}/usr/" INS_RBASE="${D}" MANDIR="share/man" \
+		LINKMODE="dynamic" GMAKE_NOWARN="true" || die "emake"
 }
 
 src_install() {
 	# If not built with -j1, "sometimes" manpages are not installed. Bug?
-	emake -j1 INS_BASE="${D}/usr/" INS_RBASE="${D}" MANDIR="share/man" \
+	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
+		LDOPTX="${LDFLAGS}" \
+		INS_BASE="${D}/usr/" INS_RBASE="${D}" MANDIR="share/man" \
 		LINKMODE="dynamic" GMAKE_NOWARN="true" install || die "emake install"
 
 	# These symlinks are for compat with cdrkit.
