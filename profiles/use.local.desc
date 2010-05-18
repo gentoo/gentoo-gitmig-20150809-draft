@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5571 2010/05/18 15:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5572 2010/05/18 17:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2562,6 +2562,7 @@ net-libs/libpcap:libnl - link with dev-libs/libnl (used to put wireless interfac
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
 net-libs/libproxy:gnome - Enable support for reading proxy settings from GNOME using gnome-base/gconf
 net-libs/libproxy:kde - Enable support for reading proxy settings from KDE
+net-libs/libproxy:vala - Enable support for the Vala programming language
 net-libs/libproxy:webkit - Enable support for reading proxy settings from net-libs/webkit-gtk
 net-libs/libproxy:xulrunner - Enable support for reading proxy settings from net-libs/xulrunner
 net-libs/libsrtp:aesicm - Use AES ICM cryptographic algorithm
