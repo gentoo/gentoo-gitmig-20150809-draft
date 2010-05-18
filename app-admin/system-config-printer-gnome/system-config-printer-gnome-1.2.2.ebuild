@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.2.ebuild,v 1.1 2010/05/17 19:12:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.2.ebuild,v 1.2 2010/05/18 13:36:09 pva Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
+WANT_AUTOMAKE="1.11"
 inherit python autotools
 
 MY_P="${PN%-gnome}-${PV}"
