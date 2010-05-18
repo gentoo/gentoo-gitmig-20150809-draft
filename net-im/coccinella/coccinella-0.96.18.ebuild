@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.18.ebuild,v 1.2 2010/05/18 14:52:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.18.ebuild,v 1.3 2010/05/18 15:22:37 mr_bones_ Exp $
 
 inherit eutils fdo-mime
 
