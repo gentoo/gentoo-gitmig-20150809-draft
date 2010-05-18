@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.53_pre6330-r1.ebuild,v 1.1 2010/05/18 15:49:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.53_pre6330-r1.ebuild,v 1.2 2010/05/18 15:59:07 jer Exp $
 
 EAPI="2"
 
@@ -132,8 +132,13 @@ src_install() {
 		"${D}"/usr/share/applications/opera-browser.desktop \
 		"${D}"/usr/share/applications/opera-widget-manager.desktop || die "sed failed"
 
-	# Install startup script
-	dobin ${PN}-widget-manager "${FILESDIR}"/opera || die "dobin failed"
+	# Sed libdir in opera script
+	sed "${FILESDIR}"/opera \
+		-e "s|OPERA_LIBDIR|${OPREFIX}|g" > opera \
+		|| die "sed opera script failed"
+
+	# Install startup scripts
+	dobin ${PN} ${PN}-widget-manager || die "dobin failed"
 
 	# Stop revdep-rebuild from checking opera binaries
 	dodir /etc/revdep-rebuild
