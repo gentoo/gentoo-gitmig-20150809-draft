@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/svk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/ChangeLog,v 1.1 2010/05/07 18:45:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/ChangeLog,v 1.2 2010/05/18 09:55:27 wired Exp $
+
+  18 May 2010; Alex Alexander <wired@gentoo.org> svk-1.08.ebuild,
+  svk-2.0.2.ebuild:
+  fixed HOMEPAGE, bug #319229
 
   07 May 2010; Ulrich Mueller <ulm@gentoo.org> +svk-1.08.ebuild,
   +files/svk-1.08-xxdiff.patch, +svk-2.0.2.ebuild, +metadata.xml:

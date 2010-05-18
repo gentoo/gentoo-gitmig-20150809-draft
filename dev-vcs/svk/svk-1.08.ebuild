@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-1.08.ebuild,v 1.1 2010/05/07 18:45:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-1.08.ebuild,v 1.2 2010/05/18 09:55:27 wired Exp $
 
 inherit eutils perl-module bash-completion
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A decentralized version control system"
 SRC_URI="mirror://cpan/authors/id/C/CL/CLKAO/${MY_P}.tar.gz"
-HOMEPAGE="http://svk.elixus.org/"
+HOMEPAGE="http://www.elixus.org/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
