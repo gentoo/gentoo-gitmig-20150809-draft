@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.1_p376.ebuild,v 1.2 2010/05/18 22:18:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p388-r1.ebuild,v 1.1 2010/05/18 22:18:31 flameeyes Exp $
 
 EAPI=2
 
@@ -12,28 +12,28 @@ S=${WORKDIR}/${MY_P}
 SLOT=$(get_version_component_range 1-2)
 MY_SUFFIX=$(delete_version_separator 1 ${SLOT})
 # 1.8 and 1.9 series disagree on this
-RUBYVERSION=$(get_version_component_range 1-3)
+RUBYVERSION=$(get_version_component_range 1-2)
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${MY_P}.tar.bz2
-		http://dev.a3li.li/gentoo/distfiles/${PN}-patches-${PVR}.tar.bz2"
+SRC_URI="mirror://ruby/${SLOT}/${MY_P}.tar.bz2
+		 http://www.flameeyes.eu/gentoo-distfiles/${PN}-patches-${PVR}.tar.bz2"
 
 LICENSE="|| ( Ruby GPL-2 )"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
-IUSE="berkdb debug doc examples gdbm ipv6 rubytests socks5 ssl tk xemacs ncurses +readline libedit"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="+berkdb debug doc examples +gdbm ipv6 rubytests socks5 ssl threads tk xemacs ncurses +readline libedit"
 
 RDEPEND="
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
-	ssl? ( dev-libs/openssl )
+	ssl? ( >=dev-libs/openssl-0.9.8m )
 	socks5? ( >=net-proxy/dante-1.1.13 )
-	tk? ( dev-lang/tk[threads] )
+	tk? ( dev-lang/tk[threads=] )
 	ncurses? ( sys-libs/ncurses )
 	libedit? ( dev-libs/libedit )
 	!libedit? ( readline? ( sys-libs/readline ) )
 	sys-libs/zlib
-	>=app-admin/eselect-ruby-20100402
+	>=app-admin/eselect-ruby-20091225
 	!=dev-lang/ruby-cvs-${SLOT}*
 	!<dev-ruby/rdoc-2
 	!dev-ruby/rexml"
@@ -44,12 +44,7 @@ PROVIDE="virtual/ruby"
 
 src_prepare() {
 	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" \
-	epatch "${WORKDIR}/patches-${PVR}"
-
-	einfo "Removing rake and rubygems..."
-	# Strip rake and rubygems
-	rm -rf bin/rake lib/rake.rb lib/rake || die "rm rake failed"
-	rm -rf bin/gem || die "rm gem failed"
+		epatch "${WORKDIR}/patches"
 
 	# Fix a hardcoded lib path in configure script
 	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \
@@ -91,9 +86,10 @@ src_configure() {
 		myconf="${myconf} --without-readline"
 	fi
 
-	econf --program-suffix=${MY_SUFFIX} --enable-shared --enable-pthread \
+	econf --program-suffix=$MY_SUFFIX --enable-shared \
 		$(use_enable socks5 socks) \
 		$(use_enable doc install-doc) \
+		$(use_enable threads pthread) \
 		--enable-ipv6 \
 		$(use_enable debug) \
 		$(use_with berkdb dbm) \
@@ -102,6 +98,7 @@ src_configure() {
 		$(use_with tk) \
 		$(use_with ncurses curses) \
 		${myconf} \
+		--with-sitedir=/usr/$(get_libdir)/ruby/site_ruby \
 		--enable-option-checking=no \
 		|| die "econf failed"
 }
@@ -161,7 +158,7 @@ src_install() {
 	dosym "libruby${MY_SUFFIX}$(get_libname ${PV%_*})" \
 		"/usr/$(get_libdir)/libruby$(get_libname ${PV%_*})"
 
-	dodoc ChangeLog NEWS doc/NEWS-1.8.7 README* ToDo || die
+	dodoc ChangeLog NEWS README* ToDo || die
 
 	if use rubytests; then
 		pushd test
