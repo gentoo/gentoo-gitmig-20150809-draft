@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/quarter-1.0.0.ebuild,v 1.1 2009/11/24 17:21:02 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/quarter-1.0.0-r1.ebuild,v 1.1 2010/05/18 14:34:59 reavertm Exp $
 
 EAPI="2"
+
+inherit base
 
 MY_P="${P/q/Q}"
 
@@ -28,6 +30,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+PATCHES=(
+	"${FILESDIR}/${P}-gcc44.patch"
+)
+
 src_configure() {
 	econf \
 		htmldir="${ROOT}usr/share/doc/${PF}/html" \
@@ -39,8 +45,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	base_src_install
 	dodoc AUTHORS NEWS README || die "dodoc failed"
 	# Do not install .la files
-	rm -f "${D}"/usr/lib*/*.la "${D}"/usr/lib*/qt4/plugins/designer/*.la
+	rm -f "${D}"/usr/lib*/qt4/plugins/designer/*.{la,a}
+	use static-libs || rm -f "${D}"/usr/lib*/*.la
 }
