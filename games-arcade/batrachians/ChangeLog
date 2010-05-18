@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/batrachians
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/ChangeLog,v 1.1 2010/05/18 04:31:27 mr_bones_ Exp $
+
+*batrachians-0.1.4 (18 May 2010)
+
+  18 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +batrachians-0.1.4.ebuild, +metadata.xml:
+  Initial commit
+
