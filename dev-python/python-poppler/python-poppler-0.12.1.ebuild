@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1.ebuild,v 1.5 2010/04/26 11:58:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1.ebuild,v 1.6 2010/05/18 13:00:22 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ HOMEPAGE="http://launchpad.net/poppler-python"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="examples"
 
 S=${WORKDIR}/pypoppler-${PV}

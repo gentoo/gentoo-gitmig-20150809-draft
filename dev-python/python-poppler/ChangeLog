@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.7 2010/04/26 11:58:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.8 2010/05/18 13:00:22 hwoarang Exp $
+
+  18 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  python-poppler-0.12.1.ebuild:
+  Stable on amd64 wrt bug #309796
 
   26 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   python-poppler-0.12.1.ebuild:
