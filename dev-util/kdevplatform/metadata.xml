@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>kde</herd>
 <use>
-	<flag name="git">Add suport for git VCS</flag>
 	<flag name="mercurial">Add suport for mercurial VCS</flag>
 </use>
 </pkgmetadata>
