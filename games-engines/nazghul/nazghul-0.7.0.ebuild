@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/nazghul-0.7.0.ebuild,v 1.1 2010/03/21 20:21:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/nazghul-0.7.0.ebuild,v 1.2 2010/05/18 20:27:26 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -21,6 +21,11 @@ DEPEND="media-libs/libpng
 
 src_prepare() {
 	ecvs_clean
+}
+
+src_configure() {
+	egamesconf \
+		--includedir=/usr/include
 }
 
 src_install() {
