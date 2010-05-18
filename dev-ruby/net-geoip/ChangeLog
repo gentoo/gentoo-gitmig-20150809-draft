@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-geoip
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.12 2009/02/08 20:25:30 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.13 2010/05/18 19:07:56 graaff Exp $
+
+*net-geoip-0.07 (18 May 2010)
+
+  18 May 2010; Hans de Graaff <graaff@gentoo.org> +net-geoip-0.07.ebuild:
+  Version bump. Convert to ruby-ng.
 
   08 Feb 2009; Alex Legler <a3li@gentoo.org> net-geoip-0.06-r1.ebuild:
   Removing ruby16 and ruby19 from USE_RUBY, minor cleanup
