@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/kstreamripper
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.21 2010/05/18 17:24:18 ssuominen Exp $
+
+*kstreamripper-0.7.0 (18 May 2010)
+
+  18 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +kstreamripper-0.7.0.ebuild:
+  Initial commit of kstreamripper (renamed from kradioripper) wrt #318769.
+
