@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.164 2010/04/14 20:41:50 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.165 2010/05/18 13:09:09 pva Exp $
+
+*cacti-0.8.7e-r2 (18 May 2010)
+
+  18 May 2010; Peter Volkov <pva@gentoo.org> +cacti-0.8.7e-r2.ebuild:
+  Added sql_injection_template_export patch, fixes security bug #317615,
+  thank Marcin Mirosław for report.
 
   14 Apr 2010; Gordon Malm <gengor@gentoo.org> cacti-0.8.7e-r1.ebuild:
   Fix RDEPEND for bug #304583.
