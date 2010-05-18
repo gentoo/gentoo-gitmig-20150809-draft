@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.3.ebuild,v 1.1 2010/04/23 10:38:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.3.ebuild,v 1.2 2010/05/18 14:03:03 pva Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils python
 
 DESCRIPTION="A package with many different plugins for pidgin and libpurple"
 HOMEPAGE="http://plugins.guifications.org"
@@ -19,7 +19,11 @@ RDEPEND="net-im/pidgin[gtk?,ncurses?]
 	talkfilters? ( app-text/talkfilters )
 	spell? ( app-text/gtkspell )"
 DEPEND="${RDEPEND}
-	dev-lang/python"
+	=dev-lang/python-2*"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 list_plugins_dep() {
 	local dependency=${1}
@@ -30,7 +34,7 @@ src_configure() {
 	local plugins=""
 
 	# list all plugins, then pull DISABLED_PLUGINS with the ones we don't need
-	plugins="$(python plugin_pack.py -d dist_dirs)"
+	plugins="$($(PYTHON) plugin_pack.py -d dist_dirs)"
 	einfo "List of all possible plugins:"
 	einfo "${plugins}"
 

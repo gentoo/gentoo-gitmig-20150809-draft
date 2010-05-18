@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.31 2010/04/23 10:38:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.32 2010/05/18 14:03:03 pva Exp $
+
+  18 May 2010; Peter Volkov <pva@gentoo.org>
+  purple-plugin_pack-2.6.3.ebuild:
+  Improve python handling, bug #317031, thank Arfrever Frehtes Taifersar
+  Arahesis for report.
 
 *purple-plugin_pack-2.6.3 (23 Apr 2010)
 
