@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.40 2010/05/18 12:47:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.41 2010/05/18 12:47:59 flameeyes Exp $
+
+  18 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  narray-0.5.9_p7.ebuild:
+  Remove stray lines.
 
 *narray-0.5.9_p7 (18 May 2010)
 
