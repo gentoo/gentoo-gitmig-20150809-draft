@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.3 2010/04/08 07:44:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.4 2010/05/18 11:19:30 grobian Exp $
+
+  18 May 2010; Fabian Groffen <grobian@gentoo.org> bzr-2.1.1.ebuild:
+  Marked ~ppc-macos
 
   08 Apr 2010; Christian Faulhammer <fauli@gentoo.org> bzr-2.1.1.ebuild:
   add some curly brackets and new dependencies for still restricted test
