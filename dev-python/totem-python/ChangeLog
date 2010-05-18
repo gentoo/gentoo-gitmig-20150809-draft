@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/totem-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.25 2010/01/18 00:40:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.26 2010/05/18 12:53:44 phajdan.jr Exp $
+
+  18 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  totem-python-2.28.0.ebuild:
+  x86 stable wrt bug #320247
 
   18 Jan 2010; Jeroen Roovers <jer@gentoo.org> totem-python-2.26.0.ebuild:
   Stable for HPPA (bug #281427).
