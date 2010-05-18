@@ -1,6 +1,9 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.25 2010/05/04 20:06:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.26 2010/05/18 07:07:48 hwoarang Exp $
+
+  18 May 2010; Markos Chandras <hwoarang@gentoo.org> minitube-1.0.ebuild:
+  Fix Spanish translation wrt bug #319703
 
 *minitube-1.0 (04 May 2010)
 
