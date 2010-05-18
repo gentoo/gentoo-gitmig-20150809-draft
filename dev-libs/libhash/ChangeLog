@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhash
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.5 2007/02/09 02:30:32 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.6 2010/05/18 18:50:50 flameeyes Exp $
+
+  18 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libhash-1.0.3.ebuild:
+  Respect CPPFLAGS/LDFLAGS and fix linking of tests with --as-needed.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
