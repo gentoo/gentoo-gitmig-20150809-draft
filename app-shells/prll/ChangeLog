@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/prll
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.3 2010/04/25 11:19:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.4 2010/05/18 07:02:14 jlec Exp $
+
+*prll-0.5 (18 May 2010)
+
+  18 May 2010; Justin Lecher <jlec@gentoo.org> +files/0.5-prefix.patch,
+  +prll-0.5.ebuild:
+  Version Bump, #319833, thanks Jure Varlec for the patches
 
   01 Mar 2010; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Added to shell-tools herd
