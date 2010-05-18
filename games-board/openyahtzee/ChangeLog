@@ -1,6 +1,10 @@
 # ChangeLog for games-board/openyahtzee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.11 2010/01/24 23:08:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.12 2010/05/18 07:57:34 tupone Exp $
+
+  18 May 2010; Tupone Alfredo <tupone@gentoo.org> openyahtzee-1.9.ebuild,
+  +files/openyahtzee-1.9-gcc45.patch:
+  Fix build with gcc-4.5. Bug #318601 by flameeyes@gentoo.org
 
   24 Jan 2010; Brent Baude <ranger@gentoo.org> openyahtzee-1.9.ebuild:
   keyworded ~arch for ppc, bug 296287
