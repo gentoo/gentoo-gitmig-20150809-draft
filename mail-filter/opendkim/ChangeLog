@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.14 2010/05/01 01:46:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.15 2010/05/18 08:08:47 dragonheart Exp $
+
+*opendkim-2.0.4 (18 May 2010)
+
+  18 May 2010; Daniel Black <dragonheart@gentoo.org>
+  -opendkim-1.2.2-r1.ebuild, -files/opendkim-1.2.2-repcalc.patch,
+  -opendkim-2.0.0.ebuild, -files/opendkim-2.0.0-lua-ldap.patch,
+  -opendkim-2.0.1.ebuild, -opendkim-2.0.2.ebuild, +opendkim-2.0.4.ebuild:
+  version bump and cleanout
 
 *opendkim-2.0.3 (01 May 2010)
 

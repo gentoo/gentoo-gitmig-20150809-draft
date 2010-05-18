@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.1.ebuild,v 1.1 2010/03/22 05:39:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.4.ebuild,v 1.1 2010/05/18 08:08:47 dragonheart Exp $
 
 EAPI="2"
 
