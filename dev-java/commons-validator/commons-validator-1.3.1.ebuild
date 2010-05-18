@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.3.1.ebuild,v 1.6 2010/03/20 10:50:16 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.3.1.ebuild,v 1.7 2010/05/18 14:07:52 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source test"
@@ -56,7 +56,7 @@ src_compile() {
 
 src_test() {
 	echo "junit.jar=$(java-pkg_getjars junit)" >> build.properties
-	local deps="jakarta-oro-2.0,commons-digester,commons-beanutils-1.6"
+	local deps="jakarta-oro-2.0,commons-digester,commons-beanutils-1.7"
 	local deps="${deps},commons-logging,commons-collections,junit"
 	eant test -Dskip.download=true \
 		-Dgentoo.classpath="$(java-pkg_getjars --build-only --with-dependencies ${deps})"
