@@ -40,7 +40,7 @@ index 1b6ea67..d13aca1 100644
 +++ b/plugins/Makefile.rej
 @@ -3,7 +3,6 @@
    # Makefile for molecule file readers
-   # $Id: vmd-1.8.7-config.patch,v 1.3 2010/05/18 07:22:51 jlec Exp $
+   # $Id: vmd-1.8.7-gentoo.patch,v 1.1 2010/05/18 07:22:51 jlec Exp $
    
 -- .SILENT:
    
@@ -48,7 +48,7 @@ index 1b6ea67..d13aca1 100644
    
 @@ -17,7 +16,6 @@
    # Makefile for molecule file readers
-   # $Id: vmd-1.8.7-config.patch,v 1.3 2010/05/18 07:22:51 jlec Exp $
+   # $Id: vmd-1.8.7-gentoo.patch,v 1.1 2010/05/18 07:22:51 jlec Exp $
    
 -+ .SILENT:
    
@@ -118,7 +118,7 @@ index 887b592..d2919dd 100644
  VMFILES = biocore.tcl biocorechat.tcl biocorelogin.tcl biocorepubsync.tcl pkgIndex.tcl locked.gif unlocked.gif biocoreHelper.tcl biocoreutil.tcl
  
 diff --git a/plugins/catdcd/Makefile b/plugins/catdcd/Makefile
-index 7a8f0f8..ce75e33 100644
+index 7a8f0f8..bbc4c01 100644
 --- a/plugins/catdcd/Makefile
 +++ b/plugins/catdcd/Makefile
 @@ -1,6 +1,5 @@
@@ -128,6 +128,17 @@ index 7a8f0f8..ce75e33 100644
  
  .SUFFIXES: 
  
+@@ -45,8 +44,8 @@ ${ARCHDIR}/catdcd.exe : ${CATDCDOBJS} ${COMPILEDIR}/lib_${ARCH}/molfile/libmolfi
+ 	LINK ${CATDCDOBJS} /OUT:${ARCHDIR}/catdcd.exe /LIBPATH:${COMPILEDIR}/lib_${ARCH}/molfile libmolfile_plugin.lib ${TCLLIB} ${TCLLDFLAGS} ${NETCDFLIB} ${NETCDFLDFLAGS}
+ 
+ # all other platforms
+-${ARCHDIR}/catdcd : ${CATDCDOBJS} ${COMPILEDIR}/lib_${ARCH}/molfile/libmolfile_plugin.a
+-	${CXX} ${CXXFLAGS} ${CATDCDOBJS} -o ${ARCHDIR}/catdcd -L${COMPILEDIR}/lib_${ARCH}/molfile -lmolfile_plugin ${TCLLIB} ${TCLLDFLAGS} ${NETCDFLIB} ${NETCDFLDFLAGS} -lm
++${ARCHDIR}/catdcd : ${CATDCDOBJS} ${COMPILEDIR}/lib_${ARCH}/molfile/libmolfile_plugin.a ${COMPILEDIR}/lib_${ARCH}/molfile/libmolfile_plugin.h
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${CATDCDOBJS} -o ${ARCHDIR}/catdcd -L${COMPILEDIR}/lib_${ARCH}/molfile -lmolfile_plugin ${TCLLIB} ${TCLLDFLAGS} ${NETCDFLIB} ${NETCDFLDFLAGS} -lm
+ 
+ ${ARCHDIR}/hash.o: hash.h hash.c
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${SRCDIR}/hash.c $(COPTO)${ARCHDIR}/hash.o
 diff --git a/plugins/cgtools/Makefile b/plugins/cgtools/Makefile
 index adca18b..84bf723 100644
 --- a/plugins/cgtools/Makefile
@@ -149,7 +160,7 @@ index 4672932..181ba85 100644
  .SUFFIXES: 
  
 diff --git a/plugins/cionize/Makefile b/plugins/cionize/Makefile
-index c5fe136..f24fe29 100644
+index c5fe136..b72116f 100644
 --- a/plugins/cionize/Makefile
 +++ b/plugins/cionize/Makefile
 @@ -1,6 +1,5 @@
@@ -159,6 +170,17 @@ index c5fe136..f24fe29 100644
  
  .SUFFIXES: 
  
+@@ -52,8 +51,8 @@ ${ARCHDIR}/cionize.exe : ${IONIZEOBJS} ${MGPOTOBJS} ${ARCHDIR}/cionize.o ${COMPI
+ 	LINK ${IONIZEOBJS} ${MGPOTOBJS} /OUT:${ARCHDIR}/cionize.exe /LIBPATH:${COMPILEDIR}/lib_${ARCH}/molfile libmolfile_plugin.lib ${TCLLIB} ${TCLLDFLAGS} ${NETCDFLIB} ${NETCDFLDFLAGS}
+ 
+ # all other platforms
+-${ARCHDIR}/cionize: ${IONIZEOBJS} ${MGPOTOBJS} ${ARCHDIR}/cionize.o ${COMPILEDIR}/lib_${ARCH}/molfile/libmolfile_plugin.a
+-	${CXX} ${CXXFLAGS} ${ARCHDIR}/cionize.o ${IONIZEOBJS} ${MGPOTOBJS} -o ${ARCHDIR}/cionize -L${COMPILEDIR}/lib_${ARCH}/molfile -lmolfile_plugin ${TCLLIB} ${TCLLDFLAGS} ${NETCDFLIB} ${NETCDFLDFLAGS} -lm
++${ARCHDIR}/cionize: ${IONIZEOBJS} ${MGPOTOBJS} ${ARCHDIR}/cionize.o ${COMPILEDIR}/lib_${ARCH}/molfile/libmolfile_plugin.a ${COMPILEDIR}/lib_${ARCH}/molfile/libmolfile_plugin.h
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${ARCHDIR}/cionize.o ${IONIZEOBJS} ${MGPOTOBJS} -o ${ARCHDIR}/cionize -L${COMPILEDIR}/lib_${ARCH}/molfile -lmolfile_plugin ${TCLLIB} ${TCLLDFLAGS} ${NETCDFLIB} ${NETCDFLDFLAGS} -lm
+ 
+ ${ARCHDIR}/hash.o: hash.h hash.c
+ 	${CC}  ${CCFLAGS} ${INCDIR} -c ${SRCDIR}/hash.c $(COPTO)${ARCHDIR}/hash.o
 diff --git a/plugins/cionize/Makefile.mine b/plugins/cionize/Makefile.mine
 index 5ee841a..1588837 100644
 --- a/plugins/cionize/Makefile.mine
@@ -222,7 +244,7 @@ index e8a4949..e101e56 100755
  VMFILES = clonerep.tcl pkgIndex.tcl
  VMVERSION = 1.1
 diff --git a/plugins/clustalw/Makefile b/plugins/clustalw/Makefile
-index 6329f64..265bb85 100644
+index 6329f64..c343b1c 100644
 --- a/plugins/clustalw/Makefile
 +++ b/plugins/clustalw/Makefile
 @@ -1,6 +1,5 @@
@@ -232,8 +254,17 @@ index 6329f64..265bb85 100644
  
  .SUFFIXES: 
  
+@@ -66,7 +65,7 @@ OBJS = ${ARCHDIR}/alnscore.o \
+ ${ARCHDIR}/clustalw.exe: ${OBJS}
+ 	LINK ${OBJS} /OUT:${ARCHDIR}/clustalw.exe
+ ${ARCHDIR}/clustalw: ${OBJS}
+-	${CC} ${CCFLAGS} ${OBJS} -o ${ARCHDIR}/clustalw -lm
++	${CC} ${LDFLAGS} ${CCFLAGS} ${OBJS} -o ${ARCHDIR}/clustalw -lm
+     
+     
+ # Objects.
 diff --git a/plugins/cluster/Makefile b/plugins/cluster/Makefile
-index 99d347e..a083e57 100644
+index 99d347e..dc542f1 100644
 --- a/plugins/cluster/Makefile
 +++ b/plugins/cluster/Makefile
 @@ -1,6 +1,5 @@
@@ -243,6 +274,15 @@ index 99d347e..a083e57 100644
  
  .SUFFIXES: 
  
+@@ -48,7 +47,7 @@ ${ARCHDIR}/cluster.exe : ${OBJS}
+ 
+ # all other platforms
+ ${ARCHDIR}/cluster : ${OBJS}
+-	${CXX} ${CXXFLAGS} ${OBJS} -o ${ARCHDIR}/cluster -lm
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${OBJS} -o ${ARCHDIR}/cluster -lm
+ 
+ ${ARCHDIR}/cluster.o: ${SRCDIR}/cluster.c
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${SRCDIR}/cluster.c $(COPTO)${ARCHDIR}/cluster.o
 diff --git a/plugins/colorscalebar/Makefile b/plugins/colorscalebar/Makefile
 index 1413898..f58074a 100644
 --- a/plugins/colorscalebar/Makefile
@@ -411,7 +451,7 @@ index 7f45260..9eb996b 100644
  VMFILES = jmvexport.tcl pkgIndex.tcl
  VMVERSION = 1.0
 diff --git a/plugins/libbiokit/Makefile b/plugins/libbiokit/Makefile
-index 7a66d08..ba709a7 100644
+index 7a66d08..12e1fd3 100644
 --- a/plugins/libbiokit/Makefile
 +++ b/plugins/libbiokit/Makefile
 @@ -1,6 +1,5 @@
@@ -421,6 +461,60 @@ index 7a66d08..ba709a7 100644
  
  .SUFFIXES: 
  
+@@ -111,7 +110,7 @@ ${INTERFACESRCDIR}/tcl_libbiokit_wrap.cpp : ${INTERFACESRCDIR}/tcl_libbiokit.i
+ ${ARCHDIR}/percid.exe: ${ARCHDIR}/percid.o ${OBJS}
+ 	LINK ${ARCHDIR}/percid.o ${OBJS} /OUT:${ARCHDIR}/percid.exe
+ ${ARCHDIR}/percid: ${ARCHDIR}/percid.o ${OBJS}
+-	${CXX} ${CXXFLAGS} ${ARCHDIR}/percid.o ${OBJS} -o ${ARCHDIR}/percid -lm
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${ARCHDIR}/percid.o ${OBJS} -o ${ARCHDIR}/percid -lm
+ ${ARCHDIR}/percid.o: ${UTILSRCDIR}/percid.cpp
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${UTILSRCDIR}/percid.cpp $(COPTO)${ARCHDIR}/percid.o
+ 
+@@ -119,7 +118,7 @@ ${ARCHDIR}/percid.o: ${UTILSRCDIR}/percid.cpp
+ ${ARCHDIR}/qpair.exe: ${ARCHDIR}/qPair.o ${OBJS}
+ 	LINK ${ARCHDIR}/qPair.o ${OBJS} /OUT:${ARCHDIR}/qpair.exe
+ ${ARCHDIR}/qpair: ${ARCHDIR}/qPair.o ${OBJS}
+-	${CXX} ${CXXFLAGS} ${ARCHDIR}/qPair.o ${OBJS} -o ${ARCHDIR}/qpair -lm
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${ARCHDIR}/qPair.o ${OBJS} -o ${ARCHDIR}/qpair -lm
+ ${ARCHDIR}/qPair.o: ${UTILSRCDIR}/qPair.cpp
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${UTILSRCDIR}/qPair.cpp $(COPTO)${ARCHDIR}/qPair.o
+ 
+@@ -127,7 +126,7 @@ ${ARCHDIR}/qPair.o: ${UTILSRCDIR}/qPair.cpp
+ ${ARCHDIR}/rmsd.exe: ${ARCHDIR}/rmsd.o ${OBJS}
+ 	LINK ${ARCHDIR}/rmsd.o ${OBJS} /OUT:${ARCHDIR}/rmsd.exe
+ ${ARCHDIR}/rmsd: ${ARCHDIR}/rmsd.o ${OBJS}
+-	${CXX} ${CXXFLAGS} ${ARCHDIR}/rmsd.o ${OBJS} -o ${ARCHDIR}/rmsd -lm
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${ARCHDIR}/rmsd.o ${OBJS} -o ${ARCHDIR}/rmsd -lm
+ ${ARCHDIR}/rmsd.o: ${UTILSRCDIR}/rmsd.cpp
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${UTILSRCDIR}/rmsd.cpp $(COPTO)${ARCHDIR}/rmsd.o
+ 
+@@ -135,7 +134,7 @@ ${ARCHDIR}/rmsd.o: ${UTILSRCDIR}/rmsd.cpp
+ ${ARCHDIR}/q.exe: ${ARCHDIR}/Q.o ${OBJS}
+ 	LINK ${ARCHDIR}/Q.o ${OBJS} /OUT:${ARCHDIR}/q.exe
+ ${ARCHDIR}/q: ${ARCHDIR}/Q.o ${OBJS}
+-	${CXX} ${CXXFLAGS} ${ARCHDIR}/Q.o ${OBJS} -o ${ARCHDIR}/q -lm
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${ARCHDIR}/Q.o ${OBJS} -o ${ARCHDIR}/q -lm
+ ${ARCHDIR}/Q.o: ${UTILSRCDIR}/Q.cpp
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${UTILSRCDIR}/Q.cpp $(COPTO)${ARCHDIR}/Q.o
+ 
+@@ -143,7 +142,7 @@ ${ARCHDIR}/Q.o: ${UTILSRCDIR}/Q.cpp
+ ${ARCHDIR}/seqqr.exe: ${ARCHDIR}/seqqr.o ${OBJS}
+ 	LINK ${ARCHDIR}/seqqr.o ${OBJS} /OUT:${ARCHDIR}/seqqr.exe
+ ${ARCHDIR}/seqqr: ${ARCHDIR}/seqqr.o ${OBJS}
+-	${CXX} ${CXXFLAGS} ${ARCHDIR}/seqqr.o ${OBJS} -o ${ARCHDIR}/seqqr -lm
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${ARCHDIR}/seqqr.o ${OBJS} -o ${ARCHDIR}/seqqr -lm
+ ${ARCHDIR}/seqqr.o: ${UTILSRCDIR}/seqqr.cpp
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${UTILSRCDIR}/seqqr.cpp $(COPTO)${ARCHDIR}/seqqr.o
+ 
+@@ -151,7 +150,7 @@ ${ARCHDIR}/seqqr.o: ${UTILSRCDIR}/seqqr.cpp
+ ${ARCHDIR}/structqr.exe : ${ARCHDIR}/structqr.o ${OBJS}
+ 	LINK ${ARCHDIR}/structqr.o ${OBJS} /OUT:${ARCHDIR}/structqr.exe
+ ${ARCHDIR}/structqr: ${ARCHDIR}/structqr.o ${OBJS}
+-	${CXX} ${CXXFLAGS} ${ARCHDIR}/structqr.o ${OBJS} -o ${ARCHDIR}/structqr -lm
++	${CXX} ${LDFLAGS} ${CXXFLAGS} ${ARCHDIR}/structqr.o ${OBJS} -o ${ARCHDIR}/structqr -lm
+ ${ARCHDIR}/structqr.o: ${UTILSRCDIR}/structqr.cpp
+ 	${CXX} ${CXXFLAGS} ${INCDIR} -c ${UTILSRCDIR}/structqr.cpp $(COPTO)${ARCHDIR}/structqr.o
+     
 diff --git a/plugins/membrane/Makefile b/plugins/membrane/Makefile
 index f92c426..38a9c06 100644
 --- a/plugins/membrane/Makefile
@@ -454,7 +548,7 @@ index 18fb6dc..f17bdda 100644
 +++ b/plugins/molfile_plugin/Makefile
 @@ -1,7 +1,6 @@
  # Makefile for molecule file readers
- # $Id: vmd-1.8.7-config.patch,v 1.3 2010/05/18 07:22:51 jlec Exp $
+ # $Id: vmd-1.8.7-gentoo.patch,v 1.1 2010/05/18 07:22:51 jlec Exp $
  
 -.SILENT:
  
@@ -778,7 +872,7 @@ index 81b79d8..dca38e7 100644
  VMFILES = ssrestraints.tcl ssrestraints_stride.tcl pkgIndex.tcl
  VMVERSION = 1.0
 diff --git a/plugins/stamp/Makefile b/plugins/stamp/Makefile
-index f0fb515..715be81 100644
+index f0fb515..c077d53 100644
 --- a/plugins/stamp/Makefile
 +++ b/plugins/stamp/Makefile
 @@ -1,6 +1,5 @@
@@ -788,6 +882,15 @@ index f0fb515..715be81 100644
  
  .SUFFIXES: 
  
+@@ -101,7 +100,7 @@ OBJS = ${ARCHDIR}/a3to1.o \
+ ${ARCHDIR}/stamp.exe: ${OBJS}
+ 	LINK ${OBJS} /OUT:${ARCHDIR}/stamp.exe
+ ${ARCHDIR}/stamp: ${OBJS}
+-	${CC} ${CCFLAGS} ${OBJS} -o ${ARCHDIR}/stamp -lm
++	${CC} ${LDFLAGS} ${CCFLAGS} ${OBJS} -o ${ARCHDIR}/stamp -lm
+     
+     
+ # Objects.
 diff --git a/plugins/stingtool/Makefile b/plugins/stingtool/Makefile
 index d7b84fe..477a97c 100644
 --- a/plugins/stingtool/Makefile
@@ -915,7 +1018,7 @@ index aa95b41..66ee516 100644
  VMFILES = zoomseq.tcl pkgIndex.tcl
  VMVERSION = 1.1
 diff --git a/vmd-1.8.7/configure b/vmd-1.8.7/configure
-index f01944a..051e04a 100755
+index f01944a..2763347 100755
 --- a/vmd-1.8.7/configure
 +++ b/vmd-1.8.7/configure
 @@ -13,10 +13,10 @@
@@ -1067,6 +1170,15 @@ index f01944a..051e04a 100755
  
        if ($config_static) {
          # link everything statically (this won't work due to libGL issues)
+@@ -2766,7 +2743,7 @@ $config_progname: y.tab.h \$(VMD_OBJS)
+ 	if [ ! -r ./$arch_template_repository ]; then \\
+ 	  ln -s $vmd_src_dir/$arch_template_repository ./$arch_template_repository ; \\
+ 	fi; \\
+-	\$(CCPP) \$(CPPFLAGS) -I$vmd_src_dir -o \$\@ \$(VMD_OBJS) \$(LOADLIBES) ; 
++	\$(CCPP) \$(LDFLAGS) \$(CPPFLAGS) -I$vmd_src_dir -o \$\@ \$(VMD_OBJS) \$(LOADLIBES) ; 
+ 	\$(COMPILERC) \$(RCFLAGS)
+ 
+ install:
 @@ -2804,8 +2781,7 @@ install:
  	-\$(COPY) ../data/.vmdrc ../data/.vmdsensors ../data/vmd_completion.dat "$install_library_dir"
  	\$(CD) $vmd_bin_dir ; \\

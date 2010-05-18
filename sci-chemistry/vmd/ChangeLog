@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.27 2010/02/23 18:00:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.28 2010/05/18 07:22:51 jlec Exp $
+
+*vmd-1.8.7-r1 (18 May 2010)
+
+  18 May 2010; Justin Lecher <jlec@gentoo.org> +vmd-1.8.7-r1.ebuild,
+  files/vmd-1.8.7-config.patch, +files/vmd-1.8.7-gentoo.patch:
+  Fix for new python ABIs, #316187; building netcdf plugin, #306893, thanks
+  Kamil Kisiel for the patch; LDFLAGS are respected now; EAPI=3 and basic
+  fixes for prefix, usability has to be tested
 
   23 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> vmd-1.8.6-r1.ebuild,
   vmd-1.8.7.ebuild, metadata.xml:
