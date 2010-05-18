@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/atop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.32 2010/03/29 17:51:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.33 2010/05/18 17:17:06 jer Exp $
+
+*atop-1.25 (18 May 2010)
+
+  18 May 2010; Jeroen Roovers <jer@gentoo.org> +atop-1.25.ebuild:
+  Version bump.
 
   29 Mar 2010; Jeroen Roovers <jer@gentoo.org> atop-1.23.ebuild:
   Stable for HPPA (bug #309217).
