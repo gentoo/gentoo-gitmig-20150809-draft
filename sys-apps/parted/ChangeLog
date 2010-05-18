@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.145 2010/05/17 12:09:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.146 2010/05/18 15:28:40 phajdan.jr Exp $
+
+  18 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> parted-2.2.ebuild:
+  x86 stable wrt bug #316453
 
   17 May 2010; Jeroen Roovers <jer@gentoo.org> -parted-2.1.ebuild,
   +parted-2.2.ebuild:
