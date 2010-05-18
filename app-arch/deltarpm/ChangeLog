@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/deltarpm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.4 2008/06/09 00:36:56 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.5 2010/05/18 08:58:16 jlec Exp $
+
+*deltarpm-3.5 (18 May 2010)
+
+  18 May 2010; Justin Lecher <jlec@gentoo.org> +files/3.5-zlib.patch,
+  +deltarpm-3.5.ebuild, metadata.xml:
+  Version Bump, #319221; moved to maintainer-needed; unbundled zlib ->
+  vulnerable version
 
 *deltarpm-3.4 (09 Jun 2008)
 
