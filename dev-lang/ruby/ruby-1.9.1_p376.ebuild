@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.1_p376.ebuild,v 1.3 2010/05/18 22:26:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.1_p376.ebuild,v 1.4 2010/05/18 22:59:44 flameeyes Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RUBYVERSION=$(get_version_component_range 1-3)
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${MY_P}.tar.bz2
-		http://dev.a3li.li/gentoo/distfiles/${PN}-patches-${PVR}.tar.bz2"
+		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PVR}.tar.bz2"
 
 LICENSE="|| ( Ruby GPL-2 )"
 KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
@@ -59,6 +59,8 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf=
+
 	# -fomit-frame-pointer makes ruby segfault, see bug #150413.
 	filter-flags -fomit-frame-pointer
 	# In many places aliasing rules are broken; play it safe
@@ -79,7 +81,7 @@ src_configure() {
 	fi
 
 	# ipv6 hack, bug 168939. Needs --enable-ipv6.
-	use ipv6 || myconf="--with-lookup-order-hack=INET"
+	use ipv6 || myconf="${myconf} --with-lookup-order-hack=INET"
 
 	if use libedit; then
 		einfo "Using libedit to provide readline extension"
@@ -91,7 +93,10 @@ src_configure() {
 		myconf="${myconf} --without-readline"
 	fi
 
-	econf --program-suffix=${MY_SUFFIX} --enable-shared --enable-pthread \
+	econf \
+		--program-suffix="${MY_SUFFIX}" \
+		--enable-shared \
+		--enable-pthread \
 		$(use_enable socks5 socks) \
 		$(use_enable doc install-doc) \
 		--enable-ipv6 \

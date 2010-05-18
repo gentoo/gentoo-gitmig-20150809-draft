@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.450 2010/05/18 22:26:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.451 2010/05/18 22:59:44 flameeyes Exp $
+
+  18 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-1.8.6_p388-r1.ebuild, ruby-1.8.7_p249-r2.ebuild,
+  ruby-1.9.1_p376.ebuild:
+  Update ebuilds to be consistent with ruby-enterprise; patches are moved to
+  dev.gentoo.org now.
 
   18 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-1.9.1_p376.ebuild:
