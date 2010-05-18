@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.175 2010/05/14 14:43:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.176 2010/05/18 06:41:10 grobian Exp $
+
+  18 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask upcoming gcc, binutils and gdb from Developer Tools 3.2.2
 
   14 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask upcoming baselayout-prefix-1.12.5-r7 due to its experimental nature
