@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.00.ebuild,v 1.1 2009/07/16 20:19:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.00.ebuild,v 1.2 2010/05/18 16:28:29 jer Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ MY_P=${P//_rc1/RC1}
 
 DESCRIPTION="A utility for network exploration or security auditing"
 HOMEPAGE="http://nmap.org/"
-SRC_URI="http://download.insecure.org/nmap/dist/${MY_P}.tar.bz2"
+SRC_URI="http://nmap.org/dist/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
