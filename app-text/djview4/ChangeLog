@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djview4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.24 2010/02/28 22:00:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.25 2010/05/19 18:46:22 phajdan.jr Exp $
+
+  19 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  djview4-4.5-r1.ebuild:
+  x86 stable wrt bug #299574
 
   28 Feb 2010; Peter Volkov <pva@gentoo.org> djview4-4.5-r1.ebuild,
   +files/djview4-4.5-libtool.patch:
