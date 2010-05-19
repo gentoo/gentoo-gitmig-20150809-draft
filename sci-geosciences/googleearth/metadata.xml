@@ -14,5 +14,6 @@
   </maintainer>
   <use>
     <flag name="qt-bundled">Use bundled Qt4 libraries instead of system ones. Recommended only for troubleshooting.</flag>
+    <flag name="mdns-bundled">Use bundled nss-mdns library instead of depending on sys-auth/nss-mdns. Enable this if you want to avoid the deptree.</flag>
   </use>
 </pkgmetadata>

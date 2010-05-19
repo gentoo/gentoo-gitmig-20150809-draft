@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218.ebuild,v 1.2 2010/05/16 23:22:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218.ebuild,v 1.3 2010/05/19 20:19:20 caster Exp $
 
 EAPI=2
 
@@ -13,11 +13,11 @@ HOMEPAGE="http://earth.google.com/"
 SRC_URI="http://dl.google.com/earth/client/current/GoogleEarthLinux.bin
 			-> GoogleEarthLinux-${PV}.bin"
 
-LICENSE="googleearth MIT SGI-B-1.1 openssl as-is ZLIB"
+LICENSE="googleearth GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror strip"
-IUSE="qt-bundled"
+IUSE="mdns-bundled qt-bundled"
 
 GCC_NEEDED="4.2"
 
@@ -43,7 +43,7 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 		)
 		net-misc/curl
 		sci-libs/gdal
-		sys-auth/nss-mdns
+		!mdns-bundled? ( sys-auth/nss-mdns )
 	)
 	amd64? (
 		>=app-emulation/emul-linux-x86-xlibs-20081109
@@ -85,7 +85,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself
+	sh "${DISTDIR}/GoogleEarthLinux-${PV}.bin" --nox11 --nochown --keep --noexec --target .
 }
 
 src_prepare() {
@@ -121,7 +121,10 @@ src_install() {
 	if ! use qt-bundled; then
 		rm -rvf libQt{Core,Gui,Network,WebKit}.so.4 plugins/imageformats qt.conf || die
 	fi
-	rm -rvf libGLU.so.1 libcurl.so.4 libnss_mdns4_minimal.so.2 || die
+	rm -rvf libGLU.so.1 libcurl.so.4 || die
+	if ! use mdns-bundled; then
+		rm -rfv libnss_mdns4_minimal.so.2 || die
+	fi
 	if use x86; then
 		# no 32 bit libs for gdal
 		rm -rvf libgdal.so.1 || die
