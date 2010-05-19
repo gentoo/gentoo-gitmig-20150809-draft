@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.1.ebuild,v 1.1 2010/05/15 20:59:56 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.1-r1.ebuild,v 1.1 2010/05/19 07:47:45 scarabeus Exp $
 
 EAPI=3
 XORG_EAUTORECONF="yes"
@@ -52,7 +52,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 		>=media-libs/mesa-7.8_rc[nptl=]
 	)
 	tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
-	udev? ( sys-fs/udev[extras] )"
+	udev? ( sys-fs/udev )"
 
 DEPEND="${RDEPEND}
 	!!net-dialup/dtrace
@@ -103,8 +103,6 @@ EPATCH_SUFFIX="patch"
 PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
-#	"${FILESDIR}/1.8.0-no-hardcoded-etc.patch"
-#	"${FILESDIR}/1.8.0-match-only-sane-devices.patch"
 	)
 
 pkg_setup() {
@@ -206,10 +204,9 @@ src_install() {
 
 	server_based_install
 
-	if ! use minimal &&	use xorg; then
-		# Install xorg.conf.example (see bugs #151421 and #151670)
-		insinto /etc/X11
-		doins hw/xfree86/xorg.conf.example \
+	if ! use minimal && use xorg; then
+		# Install xorg.conf.example into docs
+		dodoc hw/xfree86/xorg.conf.example \
 			|| die "couldn't install xorg.conf.example"
 	fi
 
