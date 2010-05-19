@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.149 2010/05/11 21:32:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.150 2010/05/19 20:00:26 armin76 Exp $
+
+  19 May 2010; Raúl Porcel <armin76@gentoo.org> libquicktime-1.1.5.ebuild:
+  alpha/ia64/sparc stable wrt #314821
 
   11 May 2010; Brent Baude <ranger@gentoo.org> libquicktime-1.1.5.ebuild:
   stable ppc64, bug 314821
