@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.1 2010/05/14 11:10:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.2 2010/05/19 09:00:40 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils gnome2-utils
@@ -26,7 +26,8 @@ COMMON_DEPEND="x11-libs/qt-gui:4
 	xine? ( media-libs/xine-lib )
 	!gstreamer? ( !vlc? ( media-libs/xine-lib ) )"
 RDEPEND="${COMMON_DEPEND}
-	gstreamer? ( >=media-plugins/gst-plugins-meta-0.10 )"
+	gstreamer? ( >=media-plugins/gst-plugins-meta-0.10
+		>=media-plugins/gst-plugins-gio-0.10 )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.39
 	dev-util/pkgconfig"
