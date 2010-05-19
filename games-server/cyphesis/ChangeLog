@@ -1,6 +1,10 @@
 # ChangeLog for games-server/cyphesis
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.10 2009/12/16 06:00:50 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.11 2010/05/19 14:40:56 tupone Exp $
+
+  19 May 2010; Tupone Alfredo <tupone@gentoo.org> cyphesis-0.5.22.ebuild,
+  +files/cyphesis-0.5.22-gcc45.patch:
+  Fix build with gcc-4.5 Bug #320477 by flameeyes@gentoo.org
 
 *cyphesis-0.5.22 (16 Dec 2009)
 
