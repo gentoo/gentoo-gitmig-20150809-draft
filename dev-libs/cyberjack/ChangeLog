@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.11 2010/05/18 19:40:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.12 2010/05/19 07:19:07 ssuominen Exp $
+
+  19 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  cyberjack-3.3.5.ebuild:
+  Fix libusb depend to virtual/libusb:1 wrt #320507 by Oliver Schwabedissen.
 
 *cyberjack-3.3.5 (18 May 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5.ebuild,v 1.1 2010/05/18 19:40:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5.ebuild,v 1.2 2010/05/19 07:19:07 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fox pcsc-lite +udev"
 
-RDEPEND="dev-libs/libusb
+RDEPEND="virtual/libusb:1
 	sys-fs/sysfsutils
 	fox? ( >=x11-libs/fox-1.6 )
 	pcsc-lite? ( sys-apps/pcsc-lite	)"
