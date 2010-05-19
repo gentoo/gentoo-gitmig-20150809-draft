@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.2.ebuild,v 1.1 2010/05/19 18:51:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.2.ebuild,v 1.2 2010/05/19 20:58:38 jlec Exp $
 
 EAPI="3"
 
@@ -35,6 +35,7 @@ RDEPEND="${CDEPEND}
 RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
+
 	has_version "<dev-libs/boost-1.37" && \
 		sed -i -e 's:impl/directives.hpp:directives.ipp:g' \
 		"${S}/src/optional_suffix.h"
@@ -68,6 +69,7 @@ src_compile() {
 				PYTHON_LDFLAGS="$(python_get_library -l)" \
 				PYTHON_SITE_PKG="$(python_get_sitedir)" \
 				PYTHON_VERSION="$(python_get_version)" \
+				pyexecdir="$(python_get_sitedir)" \
 				_fityk.la
 		}
 		python_execute_function -s --source-dir swig compilation
