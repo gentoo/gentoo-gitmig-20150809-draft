@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.63 2010/01/11 18:45:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.64 2010/05/19 10:58:36 arfrever Exp $
+
+  19 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libassuan-2.0.0.ebuild:
+  Add "static-libs" USE flag (bug #316065).
 
 *libassuan-2.0.0 (11 Jan 2010)
 
