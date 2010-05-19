@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.414 2010/05/18 08:08:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.415 2010/05/19 15:19:28 patrick Exp $
+
+*samba-3.5.3 (19 May 2010)
+
+  19 May 2010; Patrick Lauer <patrick@gentoo.org> +samba-3.5.3.ebuild:
+  Bump
 
   18 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> samba-3.4.6.ebuild:
   x86 stable wrt bug #300158
