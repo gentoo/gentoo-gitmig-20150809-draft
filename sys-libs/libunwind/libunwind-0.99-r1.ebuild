@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-0.99-r1.ebuild,v 1.3 2010/05/15 13:23:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-0.99-r1.ebuild,v 1.4 2010/05/19 20:27:30 armin76 Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/libunwind/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="7"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="amd64 ia64 x86"
 IUSE=""
 
 RESTRICT="test"		 # https://savannah.nongnu.org/bugs/?22368
