@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.8 2010/02/28 11:07:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.9 2010/05/19 17:26:09 jer Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils eutils multilib
+inherit distutils eutils flag-o-matic multilib
 
 DESCRIPTION="python bindings to sdl and other libs that facilitate game production"
 HOMEPAGE="http://www.pygame.org/"
@@ -13,7 +13,7 @@ SRC_URI="http://www.pygame.org/ftp/pygame-${PV}release.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="doc examples X"
 
 RDEPEND=">=media-libs/libsdl-1.2.5[X?]
@@ -34,6 +34,12 @@ src_prepare() {
 }
 
 src_configure() {
+	# bug #289326
+	if use hppa; then
+		ewarn "Appending -O1 to CFLAGS (bug #289326)."
+		append-flags -O1
+	fi
+
 	"$(PYTHON -f)" config.py -auto
 	sed -i -e 's:X11R6/lib:lib64:g' Setup
 	use X || sed -i -e 's:scrap :#scrap :' Setup

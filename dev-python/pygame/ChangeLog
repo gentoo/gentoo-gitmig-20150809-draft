@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.69 2010/01/09 20:51:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.70 2010/05/19 17:26:09 jer Exp $
+
+  19 May 2010; Jeroen Roovers <jer@gentoo.org> pygame-1.9.1.ebuild:
+  Stable for HPPA (bug #287438).
 
   09 Jan 2010; Raúl Porcel <armin76@gentoo.org> pygame-1.8.1.ebuild,
   pygame-1.9.1.ebuild:
