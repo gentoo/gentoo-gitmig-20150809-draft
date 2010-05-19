@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.9.8.ebuild,v 1.1 2010/05/19 05:35:57 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-1.9.8.ebuild,v 1.2 2010/05/19 14:52:16 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# fix hardcoded /usr/local paths in scripts
 	epatch "${FILESDIR}"/${P}-scripts.diff
-	# and patch libdir 
+	# and patch libdir
 	for f in scripts/permutations.pl scripts/test_coord.pl \
 		scripts/toporama250k.pl scripts/toporama50k.pl; do
 		sed -i -e "s:/usr/lib:/usr/$(get_libdir):g" "${f}" \
