@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.4 2010/05/10 18:44:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.5 2010/05/19 21:23:15 arfrever Exp $
 
 EAPI="3"
 
@@ -18,7 +18,6 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 
 LICENSE="PSF-2.2"
 SLOT="3.1"
-PYTHON_ABI="${SLOT}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
@@ -46,6 +45,11 @@ PDEPEND=">=app-admin/python-updater-0.8
 		|| ( dev-lang/python:2.7 dev-lang/python:2.6 )"
 
 PROVIDE="virtual/python"
+
+pkg_setup() {
+	python_set_active_version ${SLOT}
+	python_pkg_setup
+}
 
 src_prepare() {
 	# Ensure that internal copies of expat, libffi and zlib are not used.

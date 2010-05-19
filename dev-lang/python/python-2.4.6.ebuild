@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.35 2010/05/10 18:44:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.36 2010/05/19 21:23:15 arfrever Exp $
 
 EAPI="1"
 
@@ -18,7 +18,6 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 
 LICENSE="PSF-2.2"
 SLOT="2.4"
-PYTHON_ABI="${SLOT}"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="-berkdb bootstrap build +cxx doc elibc_uclibc examples gdbm ipv6 +ncurses +readline +ssl +threads tk +wide-unicode wininst +xml"
 
@@ -48,6 +47,9 @@ PDEPEND="app-admin/python-updater"
 PROVIDE="virtual/python"
 
 pkg_setup() {
+	python_set_active_version ${SLOT}
+	python_pkg_setup
+
 	if use berkdb; then
 		ewarn "\"bsddb\" module is out-of-date and no longer maintained inside dev-lang/python. It has"
 		ewarn "been additionally removed in Python 3. You should use external, still maintained \"bsddb3\""
