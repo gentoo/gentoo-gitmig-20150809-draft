@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta-r1.ebuild,v 1.4 2009/11/01 18:52:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta-r1.ebuild,v 1.5 2010/05/19 15:58:14 neurogeek Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Festival Text to Speech engine"
 HOMEPAGE="http://www.cstr.ed.ac.uk/projects/festival/"
-SITE="http://www.festvox.org/packed/festival/latest"
+SITE="http://www.festvox.org/packed/festival/1.96"
 MY_P=${PN}-1.96-beta
 SRC_URI="${SITE}/${MY_P}.tar.gz
 	${SITE}/festlex_CMU.tar.gz

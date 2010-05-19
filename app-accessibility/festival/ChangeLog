@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.87 2009/11/01 18:52:37 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.88 2010/05/19 15:58:14 neurogeek Exp $
+
+  19 May 2010; Jesus Rivero <neurogeek@gentoo.org>
+  festival-1.96_beta-r1.ebuild:
+  Fixed SRC_URI
 
   08 Jul 2009; William Hubbs <williamh@gentoo.org> metadata.xml:
   Added neurogeek back as maintainer.
