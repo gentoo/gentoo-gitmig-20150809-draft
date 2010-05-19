@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.94 2010/05/11 21:19:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.95 2010/05/19 19:57:58 armin76 Exp $
+
+  19 May 2010; Raúl Porcel <armin76@gentoo.org> allegro-4.4.1.1-r1.ebuild:
+  alpha/ia64/sparc stable wrt #316375
 
   11 May 2010; Brent Baude <ranger@gentoo.org> allegro-4.4.1.1-r1.ebuild:
   stable ppc64, bug 316375
