@@ -11,3 +11,4 @@ move kde-base/automoc dev-util/automoc
 move kde-base/qimageblitz media-libs/qimageblitz
 move mail-client/mozilla-thunderbird-bin mail-client/thunderbird-bin
 move media-sound/kradioripper media-sound/kstreamripper
+slotmove =dev-ruby/test-unit-2* 0 2

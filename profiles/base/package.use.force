@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.15 2010/02/19 14:26:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.16 2010/05/19 11:28:52 flameeyes Exp $
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
 # Python should use wide Unicode implementation by default.
@@ -20,4 +20,4 @@ dev-ruby/bitescript ruby_targets_jruby
 dev-ruby/duby ruby_targets_jruby
 dev-ruby/jruby-debug-base ruby_targets_jruby
 dev-ruby/jruby-openssl ruby_targets_jruby
-dev-ruby/test-unit ruby_targets_ruby19
+=dev-ruby/test-unit-1* ruby_targets_ruby19
