@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.6.ebuild,v 1.1 2010/05/18 21:32:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.6.ebuild,v 1.2 2010/05/19 08:51:57 aballier Exp $
 
 EAPI=1
 
@@ -147,7 +147,7 @@ pkg_postinst() {
 
 	elog
 	elog "Be warned that LyX 1.6.x series do not play nicely with Qt 4.6."
-	elog "If you encounter random crashes with consider to build LyX"
+	elog "If you encounter random crashes consider to build LyX"
 	elog "with Qt 4.5."
 	elog
 }
