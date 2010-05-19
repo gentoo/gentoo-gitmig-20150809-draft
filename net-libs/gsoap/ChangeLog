@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gsoap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.7 2009/11/09 12:47:23 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.8 2010/05/19 13:20:02 patrick Exp $
+
+*gsoap-2.7.15 (19 May 2010)
+
+  19 May 2010; Patrick Lauer <patrick@gentoo.org>
+  +files/gsoap-2.7.10-fedora-install_soapcpp2_wsdl2h_aux.patch,
+  +gsoap-2.7.15.ebuild, +files/gsoap-2.7.15-use_libtool.patch,
+  +files/gsoap-2.7-fedora-openssl.patch:
+  Bump and fixes from dev-zero, closes #306915
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> gsoap-2.7.13.ebuild:
   amd64 stable, bug #289618
