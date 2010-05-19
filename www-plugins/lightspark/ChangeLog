@@ -1,0 +1,11 @@
+# ChangeLog for www-plugins/lightspark
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.1 2010/05/19 14:04:48 chithanh Exp $
+
+*lightspark-0.3.3 (19 May 2010)
+
+  19 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +lightspark-0.3.3.ebuild, +files/lightspark-0.3.3-llvm-datatypes.patch,
+  +metadata.xml:
+  Initial commit, ideas taken from voyageur's live ebuild
+
