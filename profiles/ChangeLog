@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4187 2010/05/19 18:07:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4188 2010/05/19 20:06:16 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 May 2010; Vlastimil Babka <caster@gentoo.org> license_groups:
+  Put googleearth license under @EULA group.
 
   19 May 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/pdf-inspector and dev-ruby/ttfunk for removal.
