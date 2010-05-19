@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.41 2010/05/14 16:39:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.42 2010/05/19 07:32:11 aballier Exp $
 
 EAPI="2"
 
@@ -115,7 +115,7 @@ RDEPEND="
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
-		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
+		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 x11-libs/libX11 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libX11 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( || ( >=net-fs/samba-3.4.6[smbclient]
@@ -209,6 +209,7 @@ pkg_setup() {
 	vlc_use_force skins qt4
 	vlc_use_force skins X
 	vlc_use_force qt4 X
+	vlc_use_force pulseaudio X
 	vlc_use_force vlm stream
 	use cddb && use !cdda && use !cddax && ewarn "USE=cddb requires either cdda or cddax, cddb will be disabled."
 	if use qt4 || use skins ; then
@@ -368,6 +369,7 @@ src_configure() {
 		$(vlc_use_enable_force skins qt4) \
 		$(vlc_use_enable_force skins freetype) \
 		$(vlc_use_enable_force skins x11) \
+		$(vlc_use_enable_force pulseaudio x11) \
 		$(vlc_use_enable_force remoteosd libgcrypt)
 }
 
