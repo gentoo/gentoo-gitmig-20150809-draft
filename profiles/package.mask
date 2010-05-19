@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11548 2010/05/19 15:55:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11549 2010/05/19 18:07:00 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (19 May 2010)
+# Obsolete dependencies for prawn which were never released
+# by upstream on their own. Newer versions are vendored into
+# dev-ruby/prawn-core and nothing in the tree depends on them.
+# Pending removal on 2010-06-19
+dev-ruby/pdf-inspector
+dev-ruby/ttfunk
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (18 May 2010)
 # Ebuild broken in many ways, not really updated, unneeded.
