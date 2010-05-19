@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libattica
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.4 2010/05/02 10:09:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.5 2010/05/19 12:09:41 dagger Exp $
+
+  19 May 2010; Robert Piasek <dagger@gentoo.org> libattica-0.1.1.ebuild:
+  keyworded ~arm
 
   02 May 2010; Alexis Ballier <aballier@gentoo.org> libattica-0.1.1.ebuild:
   keyword ~x86-fbsd
