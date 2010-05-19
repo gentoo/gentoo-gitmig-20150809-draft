@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta-r2.ebuild,v 1.1 2010/04/23 07:12:38 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta-r2.ebuild,v 1.2 2010/05/19 16:20:50 neurogeek Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ MY_P=${MY_P/_beta/-beta}
 
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
 HOMEPAGE="http://www.cstr.ed.ac.uk/projects/speech_tools/"
-SRC_URI="http://www.festvox.org/packed/festival/latest/${MY_P}.tar.gz
+SRC_URI="http://www.festvox.org/packed/festival/1.96/${MY_P}.tar.gz
 	mirror://gentoo/${MY_P}-patches.tar.gz"
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.66 2010/04/23 07:12:38 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.67 2010/05/19 16:20:50 neurogeek Exp $
+
+  19 May 2010; Jesus Rivero <neurogeek@gentoo.org>
+  speech-tools-1.2.96_beta-r2.ebuild:
+  Fixed SRC_URI
 
 *speech-tools-1.2.96_beta-r2 (23 Apr 2010)
 
