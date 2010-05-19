@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.231 2010/05/17 22:43:53 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.232 2010/05/19 20:38:58 grobian Exp $
+
+  19 May 2010; Fabian Groffen <grobian@gentoo.org> poppler-0.12.4-r3.ebuild:
+  Fixed compilation on Darwin 8 (OSX 10.4) by not defining _XOPEN_SOURCE at
+  all.
 
   17 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
   -poppler-0.12.3-r6.ebuild, -poppler-0.12.4-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4-r3.ebuild,v 1.2 2010/05/17 22:43:53 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4-r3.ebuild,v 1.3 2010/05/19 20:38:58 grobian Exp $
 
 EAPI="2"
 
@@ -59,6 +59,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.12.4-nanosleep-rt.patch
 	epatch "${FILESDIR}"/${PN}-0.12.4-strings_h.patch #314925
 	epatch "${FILESDIR}"/${PN}-0.12.4-xopen_source.patch #314925
+	# The whole _XOPEN_SOURCE thing breaks Tiger (kinda sad they dished
+	# configure, since it typically is good at knowing this), I need to take
+	# this upstream still, configure and cmake conflict in this regard.
+	[[ ${CHOST} == *-darwin8 ]] && \
+		sed -i -e '/add_definitions/d' cmake/modules/PopplerMacros.cmake 
 }
 
 src_configure() {
