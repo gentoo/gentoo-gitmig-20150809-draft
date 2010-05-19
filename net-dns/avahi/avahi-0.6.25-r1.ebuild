@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.25-r1.ebuild,v 1.1 2010/02/09 14:02:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.25-r1.ebuild,v 1.2 2010/05/19 19:14:47 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+PYTHON_USE_WITH="gdbm"
+PYTHON_USE_WITH_OPT="python"
 
 inherit eutils mono python multilib autotools flag-o-matic
 
@@ -35,7 +38,6 @@ RDEPEND=">=dev-libs/libdaemon-0.11-r1
 	howl-compat? ( !net-misc/howl )
 	mdnsresponder-compat? ( !net-misc/mDNSResponder )
 	python? (
-		>=dev-lang/python-2.4[gdbm]
 		gtk? ( >=dev-python/pygtk-2 )
 	)
 	bookmarks? (
@@ -52,6 +54,12 @@ DEPEND="${RDEPEND}
 	)"
 
 pkg_setup() {
+	if use python
+	then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+
 	if ( use mdnsresponder-compat || use howl-compat || use mono ) && ! use dbus
 	then
 		die "For *-compat or mono support you also need to enable the dbus USE flag!"
@@ -132,8 +140,7 @@ src_configure() {
 		--disable-qt3 \
 		$(use_enable qt4) \
 		$(use_enable gdbm) \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 }
 
 src_compile() {
@@ -169,13 +176,14 @@ src_install() {
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup
+	if use python; then
+		python_mod_cleanup avahi avahi_discover
+	fi
 }
 
 pkg_postinst() {
 	if use python; then
-		python_version
-		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/avahi
+		python_mod_optimize avahi avahi_discover
 	fi
 
 	if use autoipd
