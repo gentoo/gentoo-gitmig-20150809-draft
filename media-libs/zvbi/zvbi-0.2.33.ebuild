@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.33.ebuild,v 1.8 2009/11/13 00:29:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.33.ebuild,v 1.9 2010/05/19 20:06:23 armin76 Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://zapping.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="X nls v4l dvb doc"
 
 RDEPEND="X? ( x11-libs/libX11 )
