@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.3.3.ebuild,v 1.1 2010/05/19 14:04:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.3.3-r1.ebuild,v 1.1 2010/05/19 21:42:18 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -40,8 +40,9 @@ src_prepare() {
 	# Adjust plugin directory
 	sed -i "s|/usr/lib/mozilla/|/usr/$(get_libdir)/${PN}/|" plugin-dir/CMakeLists.txt || die
 
-	# Adjust plugin permissions
-	sed -i "s|FILES|PROGRAMS|" plugin-dir/CMakeLists.txt || die
+	# Adjust executable and plugin permissions
+	sed -i 's|FILES ${CMAKE_CURRENT_BINARY_DIR}|PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}|' CMakeLists.txt || die
+	sed -i 's|FILES|PROGRAMS|' plugin-dir/CMakeLists.txt || die
 }
 
 src_configure() {
