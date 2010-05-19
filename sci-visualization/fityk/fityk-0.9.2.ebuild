@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.2.ebuild,v 1.2 2010/05/19 20:58:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.2.ebuild,v 1.3 2010/05/19 21:00:19 jlec Exp $
 
 EAPI="3"
 
@@ -35,7 +35,6 @@ RDEPEND="${CDEPEND}
 RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
-
 	has_version "<dev-libs/boost-1.37" && \
 		sed -i -e 's:impl/directives.hpp:directives.ipp:g' \
 		"${S}/src/optional_suffix.h"
