@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.14 2010/05/18 08:05:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.15 2010/05/19 18:33:01 jer Exp $
+
+  19 May 2010; Jeroen Roovers <jer@gentoo.org> ctdb-1.0.88.ebuild:
+  Stable for HPPA (bug #300158).
 
   18 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ctdb-1.0.88.ebuild:
   x86 stable wrt bug #300158
