@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.7.ebuild,v 1.1 2010/05/01 10:44:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.7.ebuild,v 1.2 2010/05/19 11:29:09 flameeyes Exp $
 
 EAPI=2
 # One test fails on jruby, might be a jruby bug
 # When enabled on ruby18 it breaks too many things, so don't enable it for that just yet
-USE_RUBY="ruby19"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -23,7 +23,7 @@ HOMEPAGE="http://test-unit.rubyforge.org/"
 SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="2"
 KEYWORDS=""
 IUSE=""
 

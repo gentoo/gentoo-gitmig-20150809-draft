@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.16 2010/05/01 10:44:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.17 2010/05/19 11:29:09 flameeyes Exp $
+
+  19 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  test-unit-2.0.7.ebuild:
+  Move test-unit-2 to its own slot and allow to install it for Ruby 1.8 and
+  Ruby EE as well.
 
 *test-unit-2.0.7 (01 May 2010)
 
