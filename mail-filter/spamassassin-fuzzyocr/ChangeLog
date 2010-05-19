@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.20 2010/04/26 21:36:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.21 2010/05/19 15:22:39 voyageur Exp $
+
+*spamassassin-fuzzyocr-3.6.0-r1 (19 May 2010)
+
+  19 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +spamassassin-fuzzyocr-3.6.0-r1.ebuild,
+  +files/spamassassin-fuzzyocr-3.6.0-untaint_ocr_helper.patch:
+  Apply patch from Debian to untaint ocr helpers, bug #313633
 
   26 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -spamassassin-fuzzyocr-2.3b.ebuild, -spamassassin-fuzzyocr-3.5.1.ebuild,

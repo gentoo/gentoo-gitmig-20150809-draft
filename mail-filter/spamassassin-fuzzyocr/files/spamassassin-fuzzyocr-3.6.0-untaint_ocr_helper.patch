@@ -1,0 +1,27 @@
+Description: untaint config entries
+ Explicitly untainting the data from focr_bin_helper and focr_bin_<progname>
+ config entries to make sure Perl can execute the programs in taint mode.
+Forwarded: Christian Holler <decoder@own-hero.net>
+Author: Arjan Opmeer <arjan.opmeer@gmail.com>
+Bug-Debian: http://bugs.debian.org/568560
+Last-Update: 2010-02-18
+
+--- a/FuzzyOcr/Config.pm
++++ b/FuzzyOcr/Config.pm
+@@ -577,7 +577,7 @@ sub parse_config {
+         return 1;
+     } elsif ($opts->{key} eq 'focr_bin_helper') {
+         my @cmd; $conf = $opts->{conf};
+-        my $val = $opts->{value}; $val =~ s/[\s]*//g;
++        my $val = Mail::SpamAssassin::Util::untaint_var($opts->{value}); $val =~ s/[\s]*//g;
+         debuglog("focr_bin_helper: '$val'");
+         foreach my $bin (split(',',$val)) {
+             unless (grep {m/$bin/} @bin_utils) {
+@@ -618,6 +618,7 @@ sub finish_parsing_end {
+             delete $conf->{$b};
+         } 
+         if (defined $conf->{$b}) {
++            $conf->{$b} = Mail::SpamAssassin::Util::untaint_var($conf->{$b});
+             debuglog("Using $a => $conf->{$b}");
+         } else {
+             foreach my $p (@paths) {
