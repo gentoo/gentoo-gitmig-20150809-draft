@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmudmount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.1 2010/04/07 15:03:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.2 2010/05/19 09:43:17 voyageur Exp $
+
+*wmudmount-1.5 (19 May 2010)
+
+  19 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +wmudmount-1.5.ebuild:
+  Version bump
 
 *wmudmount-1.4 (07 Apr 2010)
 
