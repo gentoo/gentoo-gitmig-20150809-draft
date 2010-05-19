@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.368 2010/04/02 22:38:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.369 2010/05/19 11:04:52 arfrever Exp $
+
+  19 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnupg-2.0.15.ebuild:
+  Fix building with "static" USE flag (bug #316065).
 
 *gnupg-1.4.10-r1 (02 Apr 2010)
 
