@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom-bin/odfdom-bin-0.8.ebuild,v 1.1 2010/05/19 12:42:08 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom-bin/odfdom-bin-0.8.ebuild,v 1.2 2010/05/19 12:48:36 haubi Exp $
 
 EAPI=3
 JAVA_PKG_IUSE="doc"
@@ -16,7 +16,7 @@ SRC_URI="http://odftoolkit.org/projects/odfdom/downloads/download/current-versio
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc-aix ~hppa-hpux ~ia64-hpux ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="
