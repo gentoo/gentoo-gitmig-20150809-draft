@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.0_pre4.ebuild,v 1.4 2010/05/19 07:32:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.0_pre4.ebuild,v 1.5 2010/05/19 07:36:42 aballier Exp $
 
 EAPI="2"
 
@@ -101,7 +101,7 @@ RDEPEND="
 		modplug? ( >=media-libs/libmodplug-0.8 )
 		mp3? ( media-libs/libmad )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
-		mtp? ( >=media-libs/libmtp-0.3.0 )
+		mtp? ( >=media-libs/libmtp-1.0.0 )
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses )
 		nsplugin? ( >=net-libs/xulrunner-1.9.2 x11-libs/libXpm x11-libs/libXt )

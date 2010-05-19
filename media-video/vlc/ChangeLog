@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.584 2010/05/19 07:32:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.585 2010/05/19 07:36:42 aballier Exp $
+
+  19 May 2010; Alexis Ballier <aballier@gentoo.org> vlc-1.1.0_pre4.ebuild,
+  vlc-1.1.9999.ebuild, vlc-9999.ebuild:
+  mtp 1.0.0 is required by the mtp plugin, bug #319815 by Nikoli
+  <nikoli@lavabit.com>
 
   19 May 2010; Alexis Ballier <aballier@gentoo.org> vlc-1.0.6.ebuild,
   vlc-1.0.9999.ebuild, vlc-1.1.0_pre4.ebuild, vlc-1.1.9999.ebuild,
