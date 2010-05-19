@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.27 2010/05/11 12:55:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.28 2010/05/19 19:48:33 armin76 Exp $
+
+  19 May 2010; Raúl Porcel <armin76@gentoo.org> json-1.2.2.ebuild:
+  ia64/sparc stable wrt #316883
 
   11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> json-1.2.2.ebuild:
   x86 stable wrt bug #316883
