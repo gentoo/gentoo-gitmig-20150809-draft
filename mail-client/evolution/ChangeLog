@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.289 2010/05/04 16:23:57 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.290 2010/05/19 19:30:59 lack Exp $
+
+*evolution-2.28.3.1-r1 (19 May 2010)
+
+  19 May 2010; Jim Ramsay <lack@gentoo.org> +evolution-2.28.3.1-r1.ebuild,
+  +files/evolution-2.28.3.1-allow-setting-alarms_1.patch,
+  +files/evolution-2.28.3.1-allow-setting-alarms_2.patch,
+  +files/evolution-2.28.3.1-allow-setting-alarms_3.patch,
+  +files/evolution-2.28.3.1-attachment-bar-RTL.patch,
+  +files/evolution-2.28.3.1-unknown-attachment-size.patch:
+  Revbump to fix #317841 and #317765
 
   03 May 2010; Olivier Crête <tester@gentoo.org> evolution-2.28.3.1.ebuild:
   amd64 stable, bug #314899
