@@ -1,0 +1,29 @@
+diff --git a/Makefile b/Makefile
+index 18d5ea5..962e295 100644
+--- a/Makefile
++++ b/Makefile
+@@ -40,7 +40,8 @@ TCC += -DFOSSIL_ENABLE_SSL
+ #    so that we can build a static executable that will run in a
+ #    chroot jail.
+ #
+-LIB = -lz $(LDFLAGS)
++
++LIB = -lz -lsqlite3
+ # If you're on OpenSolaris:
+ # LIB += lsocket
+ # Solaris 10 needs:
+diff --git a/src/main.mk b/src/main.mk
+index 470bedd..a8bbc38 100644
+--- a/src/main.mk
++++ b/src/main.mk
+@@ -266,8 +266,8 @@ VERSION.h:	$(SRCDIR)/../manifest.uuid $(SRCDIR)/../manifest
+ 	awk '{ printf "#define MANIFEST_VERSION \"[%.10s]\"\n", $$1}'  $(SRCDIR)/../manifest.uuid >>VERSION.h
+ 	awk '$$1=="D"{printf "#define MANIFEST_DATE \"%s %s\"\n", substr($$2,1,10),substr($$2,12)}'  $(SRCDIR)/../manifest >>VERSION.h
+ 
+-$(APPNAME):	headers $(OBJ) $(OBJDIR)/sqlite3.o $(OBJDIR)/th.o $(OBJDIR)/th_lang.o
+-	$(TCC) -o $(APPNAME) $(OBJ) $(OBJDIR)/sqlite3.o $(OBJDIR)/th.o $(OBJDIR)/th_lang.o $(LIB)
++$(APPNAME):	headers $(OBJ) $(OBJDIR)/th.o $(OBJDIR)/th_lang.o
++	$(TCC) $(LDFLAGS) -o $(APPNAME) $(OBJ) $(OBJDIR)/th.o $(OBJDIR)/th_lang.o $(LIB)
+ 
+ # This rule prevents make from using its default rules to try build
+ # an executable named "manifest" out of the file named "manifest.c"
