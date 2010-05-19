@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/popfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.23 2010/04/20 14:44:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/ChangeLog,v 1.24 2010/05/19 05:26:14 tove Exp $
+
+  19 May 2010; Torsten Veller <tove@gentoo.org> popfile-1.1.1.ebuild:
+  Depend on dev-perl/IO-Socket-SSL for ssl support (#320473)
 
   20 Apr 2010; Torsten Veller <tove@gentoo.org> -popfile-1.0.1.ebuild:
   Cleanup
