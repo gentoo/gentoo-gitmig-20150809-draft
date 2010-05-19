@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.89 2010/05/16 19:44:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.90 2010/05/19 20:32:57 armin76 Exp $
+
+  19 May 2010; Raúl Porcel <armin76@gentoo.org> openct-0.6.20.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #310771
 
   16 May 2010; Markus Meier <maekke@gentoo.org> openct-0.6.20.ebuild:
   amd64/x86 stable, bug #310771
