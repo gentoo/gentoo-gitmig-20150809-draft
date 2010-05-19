@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.8 2010/03/30 12:15:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.9 2010/05/19 11:30:20 flameeyes Exp $
+
+  19 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-test-unit-0-r1.ebuild:
+  Add slot specification to the dependencies for Ruby 1.9.
 
 *ruby-test-unit-0-r1 (30 Mar 2010)
 
