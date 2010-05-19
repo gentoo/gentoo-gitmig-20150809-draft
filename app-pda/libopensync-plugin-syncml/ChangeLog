@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync-plugin-syncml
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.14 2009/11/15 22:31:27 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.15 2010/05/19 19:14:50 bangert Exp $
+
+  19 May 2010; Thilo Bangert <bangert@gentoo.org>
+  libopensync-plugin-syncml-9999.ebuild:
+  fix build - bug #299271 - fix dep on libsyncml
 
 *libopensync-plugin-syncml-0.39 (15 Nov 2009)
 

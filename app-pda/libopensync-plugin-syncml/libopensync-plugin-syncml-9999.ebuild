@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-9999.ebuild,v 1.3 2009/11/15 22:31:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/libopensync-plugin-syncml-9999.ebuild,v 1.4 2010/05/19 19:14:50 bangert Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="OpenSync SyncML Plugin"
 HOMEPAGE="http://www.opensync.org/"
 SRC_URI=""
 
-ESVN_REPO_URI="http://svn.opensync.org/plugins/syncml"
+ESVN_REPO_URI="http://svn.opensync.org/plugins/syncml/trunk"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
@@ -20,7 +20,7 @@ IUSE="http +obex"
 RDEPEND="=app-pda/libopensync-${PV}*
 	dev-libs/glib:2
 	dev-libs/libxml2
-	>=app-pda/libsyncml-0.5.0[obex?,http?]"
+	>=app-pda/libsyncml-0.5.99[obex?,http?]"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
