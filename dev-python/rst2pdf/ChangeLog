@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.5 2010/04/27 15:13:17 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.6 2010/05/20 14:25:05 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rst2pdf-0.14.2.ebuild:
+  x86 stable wrt bug #318113
 
   27 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> rst2pdf-0.14.2.ebuild:
   keyword x86
