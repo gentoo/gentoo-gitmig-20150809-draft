@@ -1,12 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.1 2009/08/01 15:22:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.2 2010/05/20 20:18:14 jlec Exp $
 
-EAPI=1
+EAPI="3"
 
-inherit eutils
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
 
-DESCRIPTION="interconverts file formats used in molecular modeling"
+inherit eutils distutils
+
+DESCRIPTION="Interconverts file formats used in molecular modeling"
 HOMEPAGE="http://openbabel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
 
@@ -15,29 +18,36 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="doc python swig"
 
-RDEPEND="!sci-chemistry/babel
+RDEPEND="
 	>=dev-libs/libxml2-2.6.5
-	sys-libs/zlib
-	python? ( dev-lang/python )"
+	!sci-chemistry/babel
+	sys-libs/zlib"
 
 DEPEND="${RDEPEND}
-	>=dev-libs/boost-1.35.0
 	dev-lang/perl
+	>=dev-libs/boost-1.35.0
 	python? ( swig? ( >=dev-lang/swig-1.3.38 ) )
 	doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+RESTRICT_PYTHON_ABIS="3.*"
+
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.2.0-doxyfile.patch"
+	if use python; then
+		cd "${S}/scripts/python"
+		distutils_src_prepare
+	fi
 }
 
-src_compile() {
+src_configure() {
 	local swigconf=""
 	if use swig; then
 		swigconf="--enable-maintainer-mode"
 	fi
 	econf ${swigconf} || die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 	if use doc ; then
 		emake docs || die "make docs failed"
@@ -48,7 +58,7 @@ src_compile() {
 	fi
 	if use python; then
 		cd "${S}/scripts/python"
-		python setup.py build || die "Python build failed."
+		distutils_src_compile
 	fi
 }
 
@@ -57,30 +67,23 @@ src_test() {
 }
 
 src_install() {
+	dodoc AUTHORS ChangeLog NEWS README THANKS doc/{*.inc,README*,*.inc,*.mol2} || die
+	dohtml doc/{*.html,*.png} || die
+	if use doc ; then
+		insinto /usr/share/doc/${PF}/API/html
+		doins API/html/* || die
+	fi
+
 	emake DESTDIR="${D}" install || die "make install failed"
 	# Now to install the Python bindings if necessary
 	if use python; then
 		cd "${S}/scripts/python"
-		python ./setup.py install --root="${D}" --optimize=1 \
-			|| die "Python bindings install failed"
+		distutils_src_install
 		if use doc; then
 			docinto python
-			dodoc README
+			dodoc README || die
 			docinto python/html
-			dodoc *.html
+			dodoc *.html || die
 		fi
-	fi
-	# And the documentation
-	docinto
-	cd "${S}"
-	dodoc AUTHORS ChangeLog NEWS README THANKS
-	cd doc
-	dohtml *.html *.png
-	dodoc *.inc README* *.inc *.mol2
-	if use doc ; then
-		dodir /usr/share/doc/${PF}/API/html
-		insinto /usr/share/doc/${PF}/API/html
-		cd API/html
-		doins *
 	fi
 }
