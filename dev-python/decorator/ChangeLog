@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.13 2010/04/04 15:53:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.14 2010/05/20 07:52:23 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  decorator-3.1.2.ebuild:
+  x86 stable wrt bug #316539
 
   04 Apr 2010; Raúl Porcel <armin76@gentoo.org> decorator-3.1.2.ebuild:
   Add ~alpha/~ia64/~sparc wrt #300106
