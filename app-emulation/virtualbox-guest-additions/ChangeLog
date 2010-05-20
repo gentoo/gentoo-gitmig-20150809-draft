@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.39 2010/05/20 13:18:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.40 2010/05/20 20:38:13 polynomial-c Exp $
+
+  20 May 2010; Lars Wendler <polynomial-c@gentoo.org>
+  files/virtualbox-guest-additions-3-localconfig:
+  Fixed building with gcc-4.5
 
 *virtualbox-guest-additions-3.2.0 (20 May 2010)
 
