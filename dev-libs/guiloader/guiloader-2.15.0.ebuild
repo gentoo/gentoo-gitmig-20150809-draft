@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.15.0.ebuild,v 1.3 2010/02/09 12:02:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.15.0.ebuild,v 1.4 2010/05/20 03:17:26 pva Exp $
 
 DESCRIPTION="library to create GTK+ interfaces from GuiXml at runtime"
-HOMEPAGE="http://crow-designer.sourceforge.net"
-SRC_URI="mirror://sourceforge/crow-designer/${P}.tar.bz2"
+HOMEPAGE="http://www.crowdesigner.org"
+SRC_URI="http://nothing-personal.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/guiloader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.16 2010/05/08 06:43:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.17 2010/05/20 03:17:26 pva Exp $
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> guiloader-2.15.0.ebuild,
+  guiloader-2.17.0.ebuild:
+  HOMEPAGE changed.
 
 *guiloader-2.17.0 (08 May 2010)
 
