@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.3.3-r1.ebuild,v 1.1 2010/05/19 21:42:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.3.5.ebuild,v 1.1 2010/05/20 05:21:50 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -35,18 +35,15 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# TODO: have to think of a less ugly solution
-	epatch "${FILESDIR}"/${P}-llvm-datatypes.patch
+	epatch "${FILESDIR}"/${PN}-0.3.3-llvm-datatypes.patch
 
-	# Adjust plugin directory
-	sed -i "s|/usr/lib/mozilla/|/usr/$(get_libdir)/${PN}/|" plugin-dir/CMakeLists.txt || die
-
-	# Adjust executable and plugin permissions
-	sed -i 's|FILES ${CMAKE_CURRENT_BINARY_DIR}|PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}|' CMakeLists.txt || die
+	# Adjust plugin permissions
 	sed -i 's|FILES|PROGRAMS|' plugin-dir/CMakeLists.txt || die
 }
 
 src_configure() {
-	local mycmakeargs="$(cmake-utils_use nsplugin COMPILE_PLUGIN)"
+	local mycmakeargs="$(cmake-utils_use nsplugin COMPILE_PLUGIN)
+		-DPLUGIN_DIRECTORY=/usr/$(get_libdir)/${PN}/plugins"
 
 	cmake-utils_src_configure
 }
