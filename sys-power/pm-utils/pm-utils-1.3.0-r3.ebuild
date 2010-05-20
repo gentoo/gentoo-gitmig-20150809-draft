@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.3.0-r3.ebuild,v 1.1 2010/05/14 19:37:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.3.0-r3.ebuild,v 1.2 2010/05/20 17:50:11 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -26,8 +26,7 @@ RDEPEND="
 	amd64? ( ${vbetool} )
 	x86? ( ${vbetool} )
 	video_cards_radeon? ( app-laptop/radeontool )"
-DEPEND="app-text/xmlto
-	app-text/docbook-xml-dtd:4.5"
+DEPEND=""
 
 src_prepare() {
 	local ignore="01grub"
@@ -38,6 +37,7 @@ src_prepare() {
 	echo "HOOK_BLACKLIST=\"${ignore}\"" >> "${S}/gentoo"
 
 	epatch "${FILESDIR}"/${PV}-fix_autotools.patch \
+		"${FILESDIR}"/${PV}-fix_autotools-2.patch \
 		"${FILESDIR}"/${PV}-on_ac_power-upower.patch
 
 	sed -i \
@@ -49,7 +49,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF}
+		--docdir=/usr/share/doc/${PF} \
+		--disable-manpages
 }
 
 src_install() {
