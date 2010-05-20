@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/flatzebra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.19 2010/05/17 23:57:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.20 2010/05/20 19:50:34 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  flatzebra-0.1.4.ebuild:
+  x86 stable wrt bug #318891
 
 *flatzebra-0.1.5 (17 May 2010)
 
