@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.78 2010/03/19 12:59:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.79 2010/05/20 07:48:29 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gparted-0.5.2.ebuild:
+  x86 stable wrt bug #316537
 
 *gparted-0.5.2 (19 Mar 2010)
 
