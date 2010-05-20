@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.8-r1.ebuild,v 1.1 2010/05/11 18:52:37 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.8-r2.ebuild,v 1.1 2010/05/20 21:02:55 polynomial-c Exp $
 
 inherit eutils linux-mod
 
@@ -102,7 +102,7 @@ src_install() {
 		newins mount.vboxsf mount.vboxsf
 		fperms 4755 /sbin/mount.vboxsf
 
-		newinitd "${FILESDIR}"/${PN}-6.initd ${PN}
+		newinitd "${FILESDIR}"/${PN}-7.initd ${PN}
 
 		insinto /usr/sbin/
 		newins VBoxService vboxguest-service
@@ -124,10 +124,18 @@ src_install() {
 
 		# udev rule for vboxdrv
 		dodir /etc/udev/rules.d
-		echo 'KERNEL=="vboxguest", NAME="vboxguest", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
+		echo 'KERNEL=="vboxguest", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
 		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
-		echo 'KERNEL=="vboxuser", NAME="vboxuser", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
+		echo 'KERNEL=="vboxuser", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
 		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
+
+		# VBoxClient autostart file
+		insinto /etc/xdg/autostart
+		doins "${FILESDIR}"/vboxclient.desktop
+
+		# sample xorg.conf
+		insinto /usr/share/doc/${PF}
+		doins "${FILESDIR}"/xorg.conf.vbox
 }
 
 pkg_postinst() {
@@ -138,8 +146,20 @@ pkg_postinst() {
 		fi
 		elog "Please add:"
 		elog "/etc/init.d/${PN}"
-		elog "to the default runlevel in order to load all"
-		elog "needed modules and services."
+		elog "to the default runlevel in order to start"
+		elog "needed services."
+		elog "To use the VirtualBox X drivers, use the following"
+		elog "file as your /etc/X11/xorg.conf:"
+		elog "    /usr/share/doc/${PF}/xorg.conf.xorg"
+		elog ""
+		elog "Also make sure you use the Mesa library for OpenGL:"
+		elog "    eselect opengl set xorg-x11"
+		elog ""
+		elog "An autostart .desktop file has been installed to start"
+		elog "VBoxClient in desktop sessions."
+		elog ""
+		elog "You can mount shared folders with:"
+		elog "    mount -t vboxsf <shared_folder_name> <mount_point>"
 		elog ""
 		elog "Warning:"
 		elog "this ebuild is only needed if you are running gentoo"
