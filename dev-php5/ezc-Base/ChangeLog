@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-Base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.18 2010/05/13 19:09:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.19 2010/05/20 04:12:05 pva Exp $
+
+*ezc-Base-1.8 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-Base-1.8.ebuild:
+  Version bump, bug #320547
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> ezc-Base-1.4.1.ebuild:
   Marked ~ppc for bug #319263.

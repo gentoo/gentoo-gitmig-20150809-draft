@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-EventLog
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-EventLog/ChangeLog,v 1.15 2008/03/19 00:13:03 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-EventLog/ChangeLog,v 1.16 2010/05/20 04:19:47 pva Exp $
+
+*ezc-EventLog-1.4 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-EventLog-1.4.ebuild:
+  Version bump, bug #320547
 
   18 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-EventLog-1.0.ebuild,
   -ezc-EventLog-1.0.1.ebuild, -ezc-EventLog-1.0.2.ebuild,
