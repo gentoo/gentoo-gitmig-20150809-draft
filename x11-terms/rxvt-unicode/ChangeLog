@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.163 2010/05/18 13:22:19 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.164 2010/05/20 13:12:09 jer Exp $
+
+  20 May 2010; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.07-r1.ebuild:
+  Stable for HPPA (bug #319711).
 
   18 May 2010; Alex Alexander <wired@gentoo.org>
   rxvt-unicode-9.07-r1.ebuild:
