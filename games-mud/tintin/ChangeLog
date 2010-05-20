@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.93 2010/05/09 18:42:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.94 2010/05/20 17:29:29 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tintin-2.00.1.ebuild:
+  x86 stable wrt bug #318509
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> tintin-1.99.8.ebuild,
   tintin-1.99.9.ebuild, tintin-2.00.0.ebuild, tintin-2.00.1.ebuild:
