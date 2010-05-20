@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.5 2010/05/19 21:23:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.6 2010/05/20 21:14:09 arfrever Exp $
 
 EAPI="3"
 
@@ -48,7 +48,7 @@ PROVIDE="virtual/python"
 
 pkg_setup() {
 	python_set_active_version ${SLOT}
-	python_pkg_setup
+	# python_pkg_setup
 }
 
 src_prepare() {

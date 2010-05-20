@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.18 2010/05/19 21:23:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r4.ebuild,v 1.19 2010/05/20 21:14:08 arfrever Exp $
 
 EAPI="1"
 
@@ -55,7 +55,7 @@ PROVIDE="virtual/python"
 
 pkg_setup() {
 	python_set_active_version ${SLOT}
-	python_pkg_setup
+	# python_pkg_setup
 
 	if use berkdb; then
 		ewarn "\"bsddb\" module is out-of-date and no longer maintained inside dev-lang/python. It has"
