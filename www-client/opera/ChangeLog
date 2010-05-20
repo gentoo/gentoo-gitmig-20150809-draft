@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.479 2010/05/20 12:13:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.480 2010/05/20 19:24:19 jer Exp $
+
+  20 May 2010; Jeroen Roovers <jer@gentoo.org>
+  opera-10.54_pre6336-r1.ebuild, metadata.xml:
+  Improve USE flag description, make none of gtk/kde the default.
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org>
   opera-10.54_pre6336-r1.ebuild, metadata.xml:
