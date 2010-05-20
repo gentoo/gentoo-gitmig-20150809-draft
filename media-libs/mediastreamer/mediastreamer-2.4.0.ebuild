@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.4.0.ebuild,v 1.1 2010/05/20 12:48:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.4.0.ebuild,v 1.2 2010/05/20 16:09:02 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ RDEPEND=">=net-libs/ortp-0.15.0_p1
 	video? ( media-libs/libsdl[video,X]
 		media-video/ffmpeg
 		theora? ( media-libs/libtheora )
-		v4l2? ( media-libs/libv4l 
+		v4l2? ( media-libs/libv4l
 			sys-kernel/linux-headers )
 		X? ( x11-libs/libX11 ) )"
 DEPEND="${RDEPEND}
