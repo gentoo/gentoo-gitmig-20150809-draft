@@ -1,6 +1,10 @@
 # ChangeLog for app-office/ledger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.15 2010/02/20 08:11:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.16 2010/05/20 18:32:42 darkside Exp $
+
+  20 May 2010; Jeremy Olexa <darkside@gentoo.org> -ledger-2.5-r2.ebuild,
+  -ledger-2.6.1.ebuild:
+  Remove old versions, bug 320649
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> ledger-2.6.2.ebuild:
   Transfer prefix keywords, bump EAPI
