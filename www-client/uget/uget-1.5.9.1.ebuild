@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.2.ebuild,v 1.2 2010/05/20 14:11:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.9.1.ebuild,v 1.1 2010/05/20 14:11:31 wired Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="
 	dev-libs/libpcre
 	>=dev-libs/glib-2
 	>=net-misc/curl-7.10
-	>=x11-libs/gtk+-2.4
+	>=x11-libs/gtk+-2.18
 	gstreamer? ( media-libs/gstreamer )
 	libnotify? ( x11-libs/libnotify )
 	"
@@ -30,8 +30,6 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/"${PN}"-as-needed.patch
 	eautoreconf
-	# fix test fail
-	echo "uget-gtk/ug_list_view.c" >> "${S}"/po/POTFILES.in
 }
 
 src_configure() {
@@ -46,5 +44,9 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	# the build system forgets this :p
+	dobin uget-cmd/uget-cmd || die "uget-cmd install failed"
+
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
