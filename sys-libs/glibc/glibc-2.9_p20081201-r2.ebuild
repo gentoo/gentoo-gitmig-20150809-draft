@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r2.ebuild,v 1.19 2010/02/15 06:18:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r2.ebuild,v 1.20 2010/05/20 18:16:51 ssuominen Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -91,7 +91,7 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	virtual/os-headers
 	nls? ( sys-devel/gettext )
 	>=sys-apps/sandbox-1.2.18.1-r2
-	>=sys-apps/portage-2.1.2
+	!<sys-apps/portage-2.1.2
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="nls? ( sys-devel/gettext )
 	selinux? ( sys-libs/libselinux )"
