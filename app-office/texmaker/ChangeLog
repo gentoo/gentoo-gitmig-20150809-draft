@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.67 2010/02/25 12:04:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.68 2010/05/20 10:34:59 pva Exp $
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> texmaker-1.92.ebuild:
+  amd64 stable, bug 299590, thank Roland Ramthun for help.
 
 *texmaker-1.99 (25 Feb 2010)
 

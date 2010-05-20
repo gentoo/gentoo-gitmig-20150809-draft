@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.92.ebuild,v 1.6 2010/01/24 23:09:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.92.ebuild,v 1.7 2010/05/20 10:34:59 pva Exp $
 
 EAPI=1
 
@@ -27,7 +27,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE=""
 
