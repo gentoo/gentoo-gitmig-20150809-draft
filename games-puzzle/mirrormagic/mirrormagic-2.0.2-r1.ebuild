@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2-r1.ebuild,v 1.1 2010/04/03 18:03:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2-r1.ebuild,v 1.2 2010/05/20 16:57:00 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -11,7 +11,7 @@ SRC_URI="http://www.artsoft.org/RELEASES/unix/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="sdl"
 
 RDEPEND="!sdl? ( x11-libs/libX11 )

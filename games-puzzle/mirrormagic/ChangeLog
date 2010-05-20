@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/mirrormagic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/ChangeLog,v 1.13 2010/04/03 18:03:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/ChangeLog,v 1.14 2010/05/20 16:57:00 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mirrormagic-2.0.2-r1.ebuild:
+  x86 stable wrt bug #318449
 
 *mirrormagic-2.0.2-r1 (03 Apr 2010)
 
