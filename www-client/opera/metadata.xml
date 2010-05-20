@@ -13,5 +13,7 @@ Windows are also available.
 </longdescription>
 <use>
 <flag name='qt-static'>Install binaries statically linked to Qt</flag>
+<flag name='gtk'>Set runtime dependencies to support plugins, and supoort GNOME-like desktop integration</flag>
+<flag name='kde'>Set runtime dependencies to support KDE desktop integration</flag>
 </use>
 </pkgmetadata>
