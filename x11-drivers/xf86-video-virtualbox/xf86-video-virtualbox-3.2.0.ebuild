@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.4-r2.ebuild,v 1.2 2010/05/10 13:27:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.2.0.ebuild,v 1.1 2010/05/20 13:13:45 polynomial-c Exp $
 
 EAPI=2
 
-inherit x-modular eutils linux-mod multilib
+inherit x-modular eutils linux-mod multilib versionator
 
 MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="VirtualBox video driver"
@@ -51,21 +51,18 @@ pkg_setup() {
 }
 
 src_prepare() {
-
-		# 2.6.33 support, backported patch
-		# See http://www.virtualbox.org/ticket/6198
-		epatch "${FILESDIR}"/${P}-2.6.33.patch
-
 		# Prepare the vboxvideo_drm sources and Makefile in ${WORKDIR}
 		cp -a "${WORKDIR}/${MY_P/-OSE/_OSE}"/src/VBox/Additions/linux/drm \
 		"${WORKDIR}/vboxvideo_drm" || die "cannot copy vboxvideo_drm directory"
 		cp "${FILESDIR}/${PN}-3-vboxvideo_drm.makefile" \
 		"${WORKDIR}/vboxvideo_drm/Makefile" || die "cannot copy vboxvideo_drm Makefile"
 
-	        if kernel_is -ge 2 6 33; then
-			# evil patch for new kernels - header moved
-			grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
-		fi
+		# stupid new header references...
+		for vboxheader in {product,version}-generated.h ; do
+			ln -sf "${S}"/out/linux.${ARCH}/release/${vboxheader} \
+				"${WORKDIR}/vboxvideo_drm/${vboxheader}"
+		done
+
 		# Remove shipped binaries (kBuild,yasm), see bug #232775
 		rm -rf kBuild/bin tools
 
@@ -76,7 +73,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-2.2.0-enable-opengl.patch"
 
 		# unset useless/problematic mesa checks in configure
-		epatch "${FILESDIR}/${PN}-3.0.0-mesa-check.patch"
+		epatch "${FILESDIR}/${PN}-3.2.0-mesa-check.patch"
 }
 
 src_configure() {
@@ -91,10 +88,6 @@ src_configure() {
 }
 
 src_compile() {
-		if use dri; then
-			linux-mod_src_compile
-		fi
-
 		for each in /src/VBox/{Runtime,Additions/common/VBoxGuestLib} \
 		/src/VBox/{GuestHost/OpenGL,Additions/x11/x11stubs,Additions/common/crOpenGL} \
 		/src/VBox/Additions/x11/vboxvideo ; do
@@ -103,6 +96,13 @@ src_compile() {
 			KBUILD_PATH="${S}/kBuild" \
 			|| die "kmk failed"
 		done
+
+		if use dri; then
+			# Now creating the kernel modules. We must do this _after_
+			# we compiled the user-space tools as we need two of the
+			# automatically generated header files. (>=3.2.0)
+			linux-mod_src_compile
+		fi
 }
 
 src_install() {
@@ -113,8 +113,11 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+		# xorg-server-1.8.x
+		if has_version ">=x11-base/xorg-server-1.8" ; then
+				newins vboxvideo_drv_18.so vboxvideo_drv.so
 		# xorg-server-1.7.x
-		if has_version ">=x11-base/xorg-server-1.7" ; then
+		elif has_version ">=x11-base/xorg-server-1.7" ; then
 				newins vboxvideo_drv_17.so vboxvideo_drv.so
 		# xorg-server-1.6.x
 		elif has_version ">=x11-base/xorg-server-1.6" ; then
