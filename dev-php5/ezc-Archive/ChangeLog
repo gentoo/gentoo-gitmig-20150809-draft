@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-Archive
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Archive/ChangeLog,v 1.16 2008/03/19 00:10:37 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Archive/ChangeLog,v 1.17 2010/05/20 04:12:38 pva Exp $
+
+*ezc-Archive-1.4.1 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-Archive-1.4.1.ebuild:
+  Version bump, bug #320547
 
   18 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-Archive-1.0.1.ebuild,
   -ezc-Archive-1.1.ebuild, -ezc-Archive-1.2.3.ebuild:

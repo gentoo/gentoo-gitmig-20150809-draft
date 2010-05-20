@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-ConsoleTools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.19 2008/03/19 00:12:04 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.20 2010/05/20 04:14:52 pva Exp $
+
+*ezc-ConsoleTools-1.6.1 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-ConsoleTools-1.6.1.ebuild:
+  Version bump, bug #320547
 
   18 Mar 2008; Markus Ullmann <jokey@gentoo.org>
   -ezc-ConsoleTools-1.0.ebuild, -ezc-ConsoleTools-1.1.ebuild,
