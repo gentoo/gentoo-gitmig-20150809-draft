@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-check_fail2ban
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/ChangeLog,v 1.1 2010/05/12 08:47:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/ChangeLog,v 1.2 2010/05/20 17:20:49 robbat2 Exp $
+
+  20 May 2010; Robin H. Johnson <robbat2@gentoo.org>
+  nagios-check_fail2ban-2.ebuild:
+  Bug #320749: Fix multilib-strict usage.
 
 *nagios-check_fail2ban-2 (12 May 2010)
 
