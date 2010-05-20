@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.99 2010/05/19 20:34:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.100 2010/05/20 01:50:41 jer Exp $
+
+  20 May 2010; Jeroen Roovers <jer@gentoo.org> opensc-0.11.13.ebuild:
+  Stable for HPPA (bug #310771).
 
   19 May 2010; Raúl Porcel <armin76@gentoo.org> opensc-0.11.13.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #310771

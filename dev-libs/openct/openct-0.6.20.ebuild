@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20.ebuild,v 1.5 2010/05/19 20:32:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20.ebuild,v 1.6 2010/05/20 01:50:06 jer Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"
 
 SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
-KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
