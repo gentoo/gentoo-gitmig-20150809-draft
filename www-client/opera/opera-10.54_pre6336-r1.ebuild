@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.54_pre6336-r1.ebuild,v 1.3 2010/05/20 02:56:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.54_pre6336-r1.ebuild,v 1.4 2010/05/20 03:00:18 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.opera.com/"
 SLOT="0"
 LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="elibc_FreeBSD gtk kde"
+IUSE="elibc_FreeBSD gnome kde"
 
 RESTRICT="mirror test"
 
@@ -44,7 +44,7 @@ SRC_URI="
 DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="
-	gtk? (
+	gnome? (
 		=x11-libs/gtk+-2*
 		dev-libs/atk
 		dev-libs/glib
