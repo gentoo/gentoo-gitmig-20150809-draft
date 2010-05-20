@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.27.ebuild,v 1.3 2009/12/28 16:22:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.27.ebuild,v 1.4 2010/05/20 03:10:44 darkside Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ GNATGCC_SLOT="4.2"
 DESCRIPTION="Complete VHDL simulator using the GCC technology"
 HOMEPAGE="http://ghdl.free.fr"
 SRC_URI="http://ghdl.free.fr/${P}.tar.bz2
-	mirror://gnu/gcc/releases/gcc-${GCC_VERSION}/gcc-core-${GCC_VERSION}.tar.bz2"
+	mirror://gnu/gcc/gcc-${GCC_VERSION}/gcc-core-${GCC_VERSION}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
