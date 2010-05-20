@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.101 2010/05/17 15:31:55 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.102 2010/05/20 03:54:41 reavertm Exp $
+
+  20 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -files/smoke-4.4.1-webkit-cmake.patch, smoke-4.4.2-r1.ebuild,
+  smoke-4.4.3-r1.ebuild, metadata.xml:
+  Remove kdevplatform USE flag, drop old patch.
 
 *smoke-4.4.3-r1 (17 May 2010)
 *smoke-4.4.2-r1 (17 May 2010)

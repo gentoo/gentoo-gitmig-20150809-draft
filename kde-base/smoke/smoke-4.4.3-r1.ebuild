@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.4.3-r1.ebuild,v 1.1 2010/05/17 15:31:55 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.4.3-r1.ebuild,v 1.2 2010/05/20 03:54:41 reavertm Exp $
 
 EAPI="3"
 
@@ -11,12 +11,11 @@ inherit kde4-meta
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE="akonadi kdevplatform okular +phonon qimageblitz qscintilla qwt semantic-desktop"
+IUSE="akonadi okular +phonon qimageblitz qscintilla qwt semantic-desktop"
 
 COMMON_DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
 	akonadi? ( $(add_kdebase_dep kdepimlibs) )
-	kdevplatform? ( dev-util/kdevplatform:4 )
 	okular? ( $(add_kdebase_dep okular) )
 	phonon? ( >=media-sound/phonon-4.3.80[xcb] )
 	qimageblitz? ( >=media-libs/qimageblitz-0.0.4 )
@@ -32,7 +31,6 @@ src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_enable akonadi)
 		$(cmake-utils_use_enable akonadi Kdepimlibs)
-		$(cmake-utils_use_enable kdevplatform KDEVPLATFORM_SMOKE)
 		$(cmake-utils_use_enable multimedia QTMULTIMEDIA_SMOKE)
 		$(cmake-utils_use_enable okular)
 		$(cmake-utils_use_enable phonon PHONON_SMOKE)
