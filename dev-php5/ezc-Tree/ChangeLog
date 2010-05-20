@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-Tree
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Tree/ChangeLog,v 1.4 2008/03/19 00:17:13 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Tree/ChangeLog,v 1.5 2010/05/20 04:34:52 pva Exp $
+
+*ezc-Tree-1.1.4 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-Tree-1.1.4.ebuild:
+  Version bump, bug #320547
 
   19 Mar 2008; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Regen Manifest

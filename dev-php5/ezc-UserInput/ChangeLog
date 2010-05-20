@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ezc-UserInput
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-UserInput/ChangeLog,v 1.16 2008/03/19 00:18:02 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-UserInput/ChangeLog,v 1.17 2010/05/20 04:36:42 pva Exp $
+
+*ezc-UserInput-1.4 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-UserInput-1.4.ebuild:
+  Version bump, bug #320547
 
   19 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-UserInput-1.0.ebuild,
   -ezc-UserInput-1.0.1.ebuild, -ezc-UserInput-1.1.2.ebuild:
