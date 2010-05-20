@@ -1,6 +1,9 @@
 # ChangeLog for games-util/qjoypad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.20 2010/05/13 18:03:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.21 2010/05/20 10:21:49 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> qjoypad-4.1.0.ebuild:
+  x86 stable wrt bug #316561
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> qjoypad-4.1.0.ebuild:
   Marked ppc stable for bug #316561.
