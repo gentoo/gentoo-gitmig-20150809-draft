@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11550 2010/05/19 18:31:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11551 2010/05/20 14:05:51 wired Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alex Alexander <wired@gentoo.org> (20 May 2010)
+# development release
+~www-client/uget-1.5.9.1
 
 # Hans de Graaff <graaff@gentoo.org> (19 May 2010)
 # Obsolete dependencies for prawn which were never released
