@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.5-r1.ebuild,v 1.1 2010/04/16 08:12:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.6.ebuild,v 1.1 2010/05/20 22:25:03 eva Exp $
 
 EAPI="2"
 
@@ -13,16 +13,19 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
-IUSE="bluetooth debug doc galago iplayer lirc nautilus nsplugin python +youtube" #zeroconf
+# FIXME: Enable for now python USE flag per bug #316409
+# this change should only be noticed by people not following current
+# current linux profiles default
+IUSE="bluetooth debug doc galago iplayer lirc nautilus nsplugin +python tracker +youtube" #zeroconf
 
 # TODO:
 # Cone (VLC) plugin needs someone with the right setup (remi ?)
 # check gmyth requirement ? -> waiting for updates in tree
 # coherence plugin not enabled until we have deps in tree
 RDEPEND=">=dev-libs/glib-2.15
-	>=x11-libs/gtk+-2.16.0
-	>=gnome-base/gconf-2.0
-	>=dev-libs/totem-pl-parser-2.27.0
+	>=x11-libs/gtk+-2.16
+	>=gnome-base/gconf-2
+	>=dev-libs/totem-pl-parser-2.27
 	>=x11-themes/gnome-icon-theme-2.16
 	x11-libs/cairo
 	app-text/iso-codes
@@ -58,6 +61,7 @@ RDEPEND=">=dev-libs/glib-2.15
 		dev-python/beautifulsoup )
 	lirc? ( app-misc/lirc )
 	nautilus? ( >=gnome-base/nautilus-2.10 )
+	nsplugin? ( media-plugins/gst-plugins-soup )
 	python? (
 		dev-lang/python[threads]
 		>=dev-python/pygtk-2.12
@@ -65,8 +69,11 @@ RDEPEND=">=dev-libs/glib-2.15
 		dev-python/gst-python
 		dev-python/dbus-python
 		dev-python/gconf-python )
+	tracker? (
+		>=app-misc/tracker-0.6
+		<app-misc/tracker-0.7 )
 	youtube? (
-		>=dev-libs/libgdata-0.4.0
+		>=dev-libs/libgdata-0.4
 		media-plugins/gst-plugins-soup )"
 # FIXME: freezes totem
 #	zeroconf? ( >=net-libs/libepc-0.3 )
@@ -108,6 +115,7 @@ pkg_setup() {
 	use iplayer && plugins="${plugins},iplayer"
 	use lirc && plugins="${plugins},lirc"
 	use python && plugins="${plugins},opensubtitles,jamendo,pythonconsole,dbus-service"
+	use tracker && plugins="${plugins},tracker"
 	use youtube && plugins="${plugins},youtube"
 	#use zeroconf && plugins="${plugins},publish"
 
@@ -124,7 +132,7 @@ src_prepare() {
 
 	# Fix broken smclient option passing
 	epatch "${FILESDIR}/${PN}-2.26.1-smclient-target-detection.patch"
-
+	
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 
