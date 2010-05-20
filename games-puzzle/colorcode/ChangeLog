@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/colorcode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/ChangeLog,v 1.4 2010/04/07 02:23:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/ChangeLog,v 1.5 2010/05/20 19:37:55 phajdan.jr Exp $
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  colorcode-0.6.1.ebuild:
+  x86 stable wrt bug #318883
 
 *colorcode-0.6.1 (07 Apr 2010)
 
