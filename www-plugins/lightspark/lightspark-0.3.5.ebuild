@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.3.5.ebuild,v 1.1 2010/05/20 05:21:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.3.5.ebuild,v 1.2 2010/05/20 05:51:04 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nsplugin"
 
 RDEPEND="dev-libs/libpcre
+	media-fonts/liberation-fonts
 	media-video/ffmpeg
 	media-libs/ftgl
 	media-libs/glew
@@ -38,7 +39,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.3.3-llvm-datatypes.patch
 
 	# Adjust plugin permissions
-	sed -i 's|FILES|PROGRAMS|' plugin-dir/CMakeLists.txt || die
+	sed -i "s|FILES|PROGRAMS|" plugin-dir/CMakeLists.txt || die
+
+	# Adjust font paths
+	sed -i "s|truetype/ttf-liberation|liberation-fonts|" swf.cpp || die
 }
 
 src_configure() {
