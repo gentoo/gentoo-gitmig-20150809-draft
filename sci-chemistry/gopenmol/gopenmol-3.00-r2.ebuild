@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r2.ebuild,v 1.1 2010/05/20 11:40:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gopenmol/gopenmol-3.00-r2.ebuild,v 1.2 2010/05/20 11:41:03 jlec Exp $
 
 EAPI="3"
 
@@ -52,21 +52,21 @@ src_compile() {
 	emake || die "emake failed"
 
 	# Plugins are not built by default
-	cd ${S}/plugins
+	cd "${S}"/plugins
 	emake || die "emake plugins failed"
 
 	# Utilities are not built by default
-	cd ${S}/utility
+	cd "${S}"/utility
 	emake || die "emake utility failed"
 }
 
 src_install() {
 	einstall || die "einstall failed"
 
-	cd ${S}/plugins
+	cd "${S}"/plugins
 	einstall || die "einstall plugins failed"
 
-	cd ${S}/utility
+	cd "${S}"/utility
 	einstall || die "einstall utility failed"
 
 	dosed /usr/bin/rungOpenMol
