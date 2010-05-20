@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cara-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.3 2010/04/25 11:27:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/ChangeLog,v 1.4 2010/05/20 12:10:45 jlec Exp $
+
+  20 May 2010; Justin Lecher <jlec@gentoo.org> cara-bin-1.8.4.ebuild:
+  Fixed HOMEPAGE
 
   09 Mar 2010; Justin Lecher <jlec@gentoo.org>
   cara-bin-1.8.4.ebuild:

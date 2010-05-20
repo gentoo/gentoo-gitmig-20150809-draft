@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/cara-bin-1.8.4.ebuild,v 1.2 2010/03/09 07:55:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cara-bin/cara-bin-1.8.4.ebuild,v 1.3 2010/05/20 12:10:45 jlec Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ MY_P="${MY_PN}_${PV}"
 DESCRIPTION="An application for the analysis of NMR spectra and Computer Aided Resonance Assignment"
 SRC_URI="http://www.cara.nmr-software.org/downloads/${MY_P}_linux.gz
 		 ftp://ftp.mol.biol.ethz.ch/software/${MY_PN}/Start1.2.cara"
-HOMEPAGE="www.nmr.ch"
+HOMEPAGE="http://www.nmr.ch"
 
 RESTRICT="mirror"
 LICENSE="CARA"
