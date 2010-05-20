@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.3.0.ebuild,v 1.3 2010/03/19 15:45:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.3.0.ebuild,v 1.4 2010/05/20 10:05:21 pva Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ DESCRIPTION="library that hides the complexity of using the SIP protocol for mul
 HOMEPAGE="http://savannah.nongnu.org/projects/exosip/"
 SRC_URI="http://download.savannah.nongnu.org/releases/exosip/${MY_P}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="+srv ssl"

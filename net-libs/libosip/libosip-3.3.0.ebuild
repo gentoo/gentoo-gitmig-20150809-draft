@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-3.3.0.ebuild,v 1.4 2010/03/19 15:44:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-3.3.0.ebuild,v 1.5 2010/05/20 10:04:23 pva Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/osip/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ~sparc ~x86 ~ppc-macos ~x86-macos"
 IUSE="test"
 
 S=${WORKDIR}/${MY_P}
