@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.211 2010/05/17 16:37:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.212 2010/05/20 10:38:07 pva Exp $
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> iptables-1.4.6.ebuild:
+  amd64 stable, bug 318531.
 
   17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   iptables-1.4.6.ebuild:
