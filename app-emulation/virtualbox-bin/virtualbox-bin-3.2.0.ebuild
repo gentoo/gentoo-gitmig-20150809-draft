@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.1.2.ebuild,v 1.1 2010/01/28 13:11:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.0.ebuild,v 1.1 2010/05/20 13:07:22 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-56127
+MY_PV=${PV}-61806
 MY_P=VirtualBox-${MY_PV}-Linux
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
@@ -18,9 +18,11 @@ SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.
 LICENSE="PUEL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions +chm headless python sdk vboxwebsrv"
+IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
 RESTRICT="mirror"
 PROPERTIES="interactive"
+
+DEPEND="app-arch/unzip"
 
 RDEPEND="!!app-emulation/virtualbox-ose
 	!app-emulation/virtualbox-ose-additions
@@ -185,6 +187,12 @@ src_install() {
 		newconfd "${FILESDIR}"/vboxwebsrv-confd vboxwebsrv
 	fi
 
+	if use rdesktop-vrdp; then
+		doins rdesktop-vrdp || die
+		doins -r rdesktop-vrdp-keymaps || die
+		fperms 0750 /opt/VirtualBox/rdesktop-vrdp
+	fi
+
 	if ! use headless && use chm; then
 		doins kchmviewer VirtualBox.chm || die
 		fowners root:vboxusers /opt/VirtualBox/kchmviewer
@@ -249,6 +257,10 @@ src_install() {
 		fowners root:vboxusers /opt/VirtualBox/VBoxHeadless
 		fperms 4510 /opt/VirtualBox/VBoxHeadless
 		pax-mark -m "${D}"/opt/VirtualBox/VBoxHeadless
+	fi
+
+	if use rdesktop-vrdp; then
+		dosym /opt/VirtualBox/rdesktop-vrdp /opt/bin/rdesktop-vrdp
 	fi
 
 	exeinto /opt/VirtualBox
