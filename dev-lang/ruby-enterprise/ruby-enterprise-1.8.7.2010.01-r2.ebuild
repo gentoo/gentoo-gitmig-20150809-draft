@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ruby-enterprise-1.8.7.2010.01-r2.ebuild,v 1.1 2010/05/18 23:10:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ruby-enterprise-1.8.7.2010.01-r2.ebuild,v 1.2 2010/05/20 19:15:39 a3li Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RUBYVERSION=$(get_version_component_range 1-2)
 DESCRIPTION="Ruby Enterprise Edition is a branch of Ruby including various enhancements"
 HOMEPAGE="http://www.rubyenterpriseedition.com/"
 SRC_URI="mirror://rubyforge/emm-ruby/${MY_P}.tar.gz
-		 http://www.flameeyes.eu/gentoo-distfiles/${PN}-patches-${PVR}.tar.bz2"
+		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PVR}.tar.bz2"
 
 LICENSE="|| ( Ruby GPL-2 )"
 KEYWORDS="~amd64 ~x86"
@@ -127,7 +127,6 @@ src_install() {
 	# Ruby is involved in the install process, we don't want interference here.
 	unset RUBYOPT
 
-	# Creating the rubygems directories, bug #230163 once more.
 	local MINIRUBY=$(echo -e 'include Makefile\ngetminiruby:\n\t@echo $(MINIRUBY)'|make -f - getminiruby)
 
 	LD_LIBRARY_PATH="${D}/usr/$(get_libdir)${LD_LIBRARY_PATH+:}${LD_LIBRARY_PATH}"
