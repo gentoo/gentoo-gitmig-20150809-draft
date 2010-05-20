@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r1.ebuild,v 1.1 2010/05/20 15:31:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r1.ebuild,v 1.2 2010/05/20 15:32:45 beandog Exp $
 
 EAPI=2
 
@@ -46,13 +46,13 @@ pkg_setup() {
 		eerror "See http://ivtvdriver.org/ for more information"
 		die "This only works on 2.6.29 or newer kernels"
 	fi
-	
+
 	ewarn "Make sure that your I2C and V4L kernel drivers are loaded as"
 	ewarn "modules, and not compiled into the kernel, or IVTV will not"
 	ewarn "work."
-	
+
 	linux-mod_pkg_setup
-	
+
 	BUILD_PARAMS="KDIR=${KV_DIR}"
 }
 
@@ -66,7 +66,7 @@ src_install() {
 
 	# Installed separately now
 	rm "${D}"/usr/bin/v4l2-ctl
-	
+
 	cd "${S}"
 	dodoc README doc/* ChangeLog
 	use perl && dodoc utils/perl/README.ptune
@@ -74,7 +74,7 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	
+
 	elog ""
 	elog "This version of the IVTV utils supports hardware listed at:"
 	elog "http://www.ivtvdriver.org/index.php/Supported_hardware"
@@ -93,4 +93,4 @@ pkg_postinst() {
 	ewarn ""
 	elog "For more information, see the IVTV driver homepage at:"
 	elog "http://www.ivtvdriver.org/"
-} 
+}
