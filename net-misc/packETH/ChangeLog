@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/packETH
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.7 2010/02/26 11:26:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.8 2010/05/20 10:31:33 pva Exp $
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> packETH-1.6.3.ebuild:
+  amd64 stable, bug 304041.
 
   26 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> packETH-1.6.3.ebuild:
   x86 stable wrt bug #304041
