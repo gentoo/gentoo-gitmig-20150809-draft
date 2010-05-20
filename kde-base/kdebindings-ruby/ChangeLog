@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebindings-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.9 2010/05/17 15:37:30 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.10 2010/05/20 03:50:18 reavertm Exp $
+
+  20 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kdebindings-ruby-4.4.2.ebuild, kdebindings-ruby-4.4.3.ebuild,
+  metadata.xml:
+  Remove kdevplatform USE flag
 
   17 May 2010; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml:
   Fix USE flag descriptions
