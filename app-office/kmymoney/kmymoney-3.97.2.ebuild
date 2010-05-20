@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.97.2.ebuild,v 1.1 2010/04/13 14:48:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.97.2.ebuild,v 1.2 2010/05/20 13:59:50 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="bg ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hu it lt
@@ -32,6 +32,8 @@ DEPEND="${COMMON_DEPEND}
 	test? ( >=dev-util/cppunit-1.12.1 )"
 
 DOCS="AUTHORS BUGS ChangeLog* README* TODO"
+
+RESTRICT="test"
 
 src_configure() {
 	mycmakeargs+=(
