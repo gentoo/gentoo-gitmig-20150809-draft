@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1-r1.ebuild,v 1.4 2010/04/27 14:27:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1-r1.ebuild,v 1.5 2010/05/20 12:39:55 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic versionator games
@@ -43,6 +43,8 @@ src_prepare() {
 		-e '/ALDRIVER_DEFAULT/s/libopenal.so.0/libopenal.so/' \
 		"${MY_S}"/code/client/snd_openal.c \
 		|| die "sed failed"
+	cd "${MY_S}"
+	touch jpegint.h
 }
 
 src_compile() {

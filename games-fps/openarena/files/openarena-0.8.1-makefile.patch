@@ -17,7 +17,7 @@
  
 -  BASE_CFLAGS = -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes \
 -    -pipe -DUSE_ICON $(shell sdl-config --cflags)
-+  BASE_CFLAGS = -fno-strict-aliasing -DUSE_ICON $(shell sdl-config --cflags)
++  BASE_CFLAGS = -fno-strict-aliasing -DUSE_ICON $(shell sdl-config --cflags) -I.
  
    ifeq ($(USE_OPENAL),1)
      BASE_CFLAGS += -DUSE_OPENAL
