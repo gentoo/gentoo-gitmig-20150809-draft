@@ -1,10 +1,12 @@
 --- configure
 +++ configure
-@@ -4657,6 +4657,7 @@
+@@ -4657,6 +4657,9 @@
  	  fi
  	esac
  	shared_flag='-shared'
-+	shared_flag="$shared_flag "'${wl}-G'
++	if test "$aix_use_runtimelinking" = yes; then
++	  shared_flag="$shared_flag "'${wl}-G ${wl}-bernotok'
++	fi
        else
  	# not using gcc
  	if test "$host_cpu" = ia64; then

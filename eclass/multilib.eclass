@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.77 2009/10/08 20:10:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.78 2010/05/20 08:22:15 haubi Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -532,7 +532,6 @@ get_libname() {
 	case ${CHOST} in
 		*-cygwin|mingw*|*-mingw*) libname="dll";;
 		*-darwin*)                libname="dylib";;
-		*-aix*)                   libname="a";;
 		*-mint*)                  libname="irrelevant";;
 		hppa*-hpux*)              libname="sl";;
 		*)                        libname="so";;
@@ -544,7 +543,6 @@ get_libname() {
 		for ver in "$@" ; do
 			case ${CHOST} in
 				*-darwin*) echo ".${ver}.${libname}";;
-				*-aix*)    echo ".${libname}";;
 				*-mint*)   echo ".${libname}";;
 				*)         echo ".${libname}.${ver}";;
 			esac
