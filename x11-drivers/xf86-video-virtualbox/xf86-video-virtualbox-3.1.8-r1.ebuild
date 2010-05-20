@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.8.ebuild,v 1.1 2010/05/10 13:27:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.1.8-r1.ebuild,v 1.1 2010/05/20 14:01:10 polynomial-c Exp $
 
 EAPI=2
 
@@ -108,8 +108,11 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+		# xorg-server-1.8.x
+		if has_version ">=x11-base/xorg-server-1.8" ; then
+				newins vboxvideo_drv_18.so vboxvideo_drv.so
 		# xorg-server-1.7.x
-		if has_version ">=x11-base/xorg-server-1.7" ; then
+		elif has_version ">=x11-base/xorg-server-1.7" ; then
 				newins vboxvideo_drv_17.so vboxvideo_drv.so
 		# xorg-server-1.6.x
 		elif has_version ">=x11-base/xorg-server-1.6" ; then
