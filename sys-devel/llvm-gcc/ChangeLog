@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm-gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/ChangeLog,v 1.5 2010/04/27 12:44:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/ChangeLog,v 1.6 2010/05/20 12:57:26 voyageur Exp $
+
+*llvm-gcc-2.7-r1 (20 May 2010)
+
+  20 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +llvm-gcc-2.7-r1.ebuild, +files/gcc-configure-LANG.patch:
+  Add more code from toolchain eclass, should fix bugs #317525 (et_EE locale
+  support), #320137 (strip unsupported CFLAGS)
 
 *llvm-gcc-2.7 (27 Apr 2010)
 
