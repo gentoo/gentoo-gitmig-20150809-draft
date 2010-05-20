@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.512 2010/05/19 07:47:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.513 2010/05/20 14:28:12 chithanh Exp $
+
+  20 May 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.8.1-r1.ebuild:
+  Depend on >=app-doc/doxygen-1.6.1 for building documentation.
 
 *xorg-server-1.8.1-r1 (19 May 2010)
 

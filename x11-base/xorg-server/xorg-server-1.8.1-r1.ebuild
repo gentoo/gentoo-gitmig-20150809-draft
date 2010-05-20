@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.1-r1.ebuild,v 1.1 2010/05/19 07:47:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.8.1-r1.ebuild,v 1.2 2010/05/20 14:28:12 chithanh Exp $
 
 EAPI=3
 XORG_EAUTORECONF="yes"
@@ -81,7 +81,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xineramaproto-1.1.3
 	>=x11-proto/xproto-7.0.13
 	dmx? ( >=x11-proto/dmxproto-2.2.99.1 )
-	doc? ( app-doc/doxygen )
+	doc? ( >=app-doc/doxygen-1.6.1 )
 	!minimal? (
 		>=x11-proto/xf86driproto-2.1.0
 		>=x11-proto/dri2proto-2.1
