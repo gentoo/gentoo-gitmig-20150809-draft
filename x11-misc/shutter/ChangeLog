@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/shutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.9 2010/05/16 20:34:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.10 2010/05/20 19:59:39 hwoarang Exp $
+
+*shutter-0.86.2 (20 May 2010)
+
+  20 May 2010; Markos Chandras <hwoarang@gentoo.org> +shutter-0.86.2.ebuild:
+  Version bump
 
   16 May 2010; Markos Chandras <hwoarang@gentoo.org>
   shutter-0.85.1-r1.ebuild:
