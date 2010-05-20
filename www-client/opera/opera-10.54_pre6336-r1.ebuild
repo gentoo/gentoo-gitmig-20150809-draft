@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.54_pre6336-r1.ebuild,v 1.2 2010/05/18 15:59:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.54_pre6336-r1.ebuild,v 1.3 2010/05/20 02:56:07 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.opera.com/"
 SLOT="0"
 LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="elibc_FreeBSD"
+IUSE="elibc_FreeBSD gtk kde"
 
 RESTRICT="mirror test"
 
@@ -44,15 +44,22 @@ SRC_URI="
 DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="
-	=x11-libs/gtk+-2*
-	dev-libs/atk
+	gtk? (
+		=x11-libs/gtk+-2*
+		dev-libs/atk
+		dev-libs/glib
+		media-libs/glitz
+		media-libs/libpng
+		x11-libs/pango
+		x11-libs/pixman
+	)
+	kde? (
+		kde-base/kdelibs
+	)
 	dev-libs/expat
-	dev-libs/glib
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/glitz
 	media-plugins/gst-plugins-meta
-	media-libs/libpng
 	sys-apps/util-linux
 	sys-libs/zlib
 	virtual/opengl
@@ -73,8 +80,6 @@ RDEPEND="
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libxcb
-	x11-libs/pango
-	x11-libs/pixman
 	x11-libs/xcb-util
 	"
 
@@ -116,7 +121,8 @@ src_install() {
 
 	# We install into usr instead of opt as Opera does not support the latter
 	dodir /usr
-	mv lib/ share/ "${D}"/usr/ || die "mv lib/ share/ failed"
+	mv lib/  "${D}/${OPREFIX}" || die "mv lib/ failed"
+	mv share/ "${D}/usr/" || die "mv share/ failed"
 
 	# Unzip the man pages before sedding
 	gunzip "${D}"/usr/share/man/man1/* || die "gunzip failed"
