@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngnq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.8 2010/05/16 19:31:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.9 2010/05/21 16:15:19 phajdan.jr Exp $
+
+  21 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pngnq-1.0.ebuild:
+  x86 stable wrt bug #319535
 
   16 May 2010; Markos Chandras <hwoarang@gentoo.org> pngnq-1.0.ebuild:
   Stable on amd64 wrt bug #319535
