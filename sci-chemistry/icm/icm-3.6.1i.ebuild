@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.6.1h.ebuild,v 1.2 2010/03/09 11:36:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.6.1i.ebuild,v 1.1 2010/05/21 12:36:43 alexxy Exp $
+
+EAPI="3"
 
 inherit rpm eutils versionator
 
