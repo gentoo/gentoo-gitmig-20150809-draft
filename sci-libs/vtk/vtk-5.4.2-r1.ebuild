@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.8 2010/04/29 01:15:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.9 2010/05/21 18:34:21 arfrever Exp $
 
-EAPI="2"
-
+EAPI="3"
 PYTHON_DEPEND="python? 2"
+
 inherit cmake-utils eutils flag-o-matic java-pkg-opt-2 python qt4 versionator toolchain-funcs
 
 # Short package version
@@ -219,5 +219,15 @@ pkg_postinst() {
 		ewarn "Using patented code in VTK may require a license."
 		ewarn "For more information, please read:"
 		ewarn "http://public.kitware.com/cgi-bin/vtkfaq?req=show&file=faq07.005.htp"
+	fi
+
+	if use python; then
+		python_mod_optimize vtk
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		python_mod_cleanup vtk
 	fi
 }
