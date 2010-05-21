@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.05.1525.ebuild,v 1.2 2010/05/21 20:57:54 flameeyes Exp $
 
 EAPI=2
 
