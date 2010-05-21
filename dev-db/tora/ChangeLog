@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.84 2010/02/13 18:06:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.85 2010/05/21 15:35:51 scarabeus Exp $
+
+*tora-2.1.2 (21 May 2010)
+
+  21 May 2010; Tomáš Chvátal <scarabeus@gentoo.org> +tora-2.1.2.ebuild:
+  Version bump to latest release.
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> tora-2.1.1.ebuild:
   alpha stable wrt #298855
