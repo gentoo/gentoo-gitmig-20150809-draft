@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.7 2010/05/21 09:13:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.8 2010/05/21 10:47:15 arfrever Exp $
 
 EAPI="2"
 
@@ -90,7 +90,6 @@ src_prepare() {
 }
 
 src_configure() {
-	python_version
 	mycmakeargs=(
 	  -DPV_INSTALL_LIB_DIR="${PVLIBDIR}"
 	  -DCMAKE_INSTALL_PREFIX=/usr
