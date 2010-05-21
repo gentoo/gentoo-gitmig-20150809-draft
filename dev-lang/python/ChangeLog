@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.467 2010/05/14 16:18:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.468 2010/05/21 19:22:17 arfrever Exp $
+
+  21 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.6.5-r2.ebuild:
+  amd64 stable (tested by rullzer) (bug #319723).
 
   14 May 2010; Jeroen Roovers <jer@gentoo.org> python-2.6.5-r2.ebuild:
   Stable for HPPA (bug #319723).
