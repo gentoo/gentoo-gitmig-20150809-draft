@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.1.ebuild,v 1.1 2010/03/23 05:08:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.1.ebuild,v 1.2 2010/05/21 18:43:23 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
@@ -33,7 +34,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
-PYTHON_MODNAME="enthought"
+PYTHON_MODNAME="enthought integrationtests"
 
 src_prepare() {
 	sed -i \
@@ -49,15 +50,8 @@ src_compile() {
 	fi
 }
 
-src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
-}
-
 src_install() {
-	find "${S}" -name \*LICENSE.txt -delete
+	find "${S}" -name "*LICENSE.txt" -delete
 	distutils_src_install
 	insinto /usr/share/doc/${PF}
 	if use doc; then
