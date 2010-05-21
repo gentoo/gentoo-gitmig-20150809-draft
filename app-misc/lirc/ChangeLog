@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.214 2010/05/21 02:02:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.215 2010/05/21 02:32:35 beandog Exp $
+
+*lirc-0.8.6-r3 (21 May 2010)
+
+  21 May 2010; Steve Dibb <beandog@gentoo.org> files/lircd-0.8.6,
+  +lirc-0.8.6-r3.ebuild, +files/lirc-0.8.6-i2c.patch,
+  +files/lirc-0.8.6-send-evsyn.diff:
+  I2C patch to build against gentoo-sources-2.6.32, bug 296739; Add
+  localmount, modules to startup init, bug 314545; evdev input patch, bug
+  299030
 
   21 May 2010; Steve Dibb <beandog@gentoo.org> files/lircd.conf.2:
   Typo in conf.d sample, bug 301346
