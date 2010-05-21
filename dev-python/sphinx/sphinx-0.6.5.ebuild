@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.5.ebuild,v 1.8 2010/05/11 21:13:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.5.ebuild,v 1.9 2010/05/21 20:56:18 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64
 IUSE="doc test latex"
 
 RDEPEND=">=dev-python/pygments-0.8
-	>=dev-python/jinja2-2.1
+	>=dev-python/jinja-2.1
 	>=dev-python/docutils-0.4
 	latex? ( dev-texlive/texlive-latexextra )"
 DEPEND="${RDEPEND}

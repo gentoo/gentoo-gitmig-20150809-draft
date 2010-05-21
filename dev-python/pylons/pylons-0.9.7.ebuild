@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.7.ebuild,v 1.3 2010/03/17 03:33:26 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.7.ebuild,v 1.4 2010/05/21 20:59:57 arfrever Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://pylonshq.com"
 SRC_URI="http://cheeseshop.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-IUSE="cheetah genshi jinja2 kid +mako myghty"
+IUSE="cheetah genshi jinja kid +mako myghty"
 
 RDEPEND=">=dev-python/routes-1.10.3
 	>=dev-python/webhelpers-0.6.4
@@ -40,7 +40,7 @@ RDEPEND=">=dev-python/routes-1.10.3
 		>=dev-python/turbocheetah-0.9.5
 	)
 	genshi? ( >=dev-python/genshi-0.4.4 )
-	jinja2? ( dev-python/jinja2 )
+	jinja? ( >=dev-python/jinja-2 )
 	kid? (
 		>=dev-python/kid-0.9
 		>=dev-python/turbokid-0.9.1
