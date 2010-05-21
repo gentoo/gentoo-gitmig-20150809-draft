@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gerris
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.10 2010/05/21 14:00:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.11 2010/05/21 14:12:22 jlec Exp $
+
+  21 May 2010; Justin Lecher <jlec@gentoo.org> gerris-20080929.ebuild:
+  RESTRICT=test for version 20080929, #278430, broken test design by upstream
 
 *gerris-20100519 (21 May 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20080929.ebuild,v 1.2 2008/10/28 02:11:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20080929.ebuild,v 1.3 2010/05/21 14:12:22 jlec Exp $
 
 inherit autotools
 
@@ -21,6 +21,8 @@ RDEPEND=">=dev-libs/glib-2.4.0
 		dx? ( sci-visualization/opendx )"
 DEPEND="${RDEPEND}
 		sys-devel/libtool"
+
+RESTRICT="test"
 
 S="${WORKDIR}"/${PN}-snapshot-080929
 
