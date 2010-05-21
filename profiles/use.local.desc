@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5585 2010/05/20 19:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5586 2010/05/21 21:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -985,7 +985,7 @@ dev-python/PyQt4:xmlpatterns - Build the QtXmlPatterns module
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/dap:server - Enable OpenDAP server support
 dev-python/docutils:glep - Install support for GLEPs
-dev-python/jinja2:i18n - Enables support for i18n with dev-python/Babel
+dev-python/jinja:i18n - Enables support for i18n with dev-python/Babel
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/markdown:pygments - Enable fancy pygments support
@@ -997,7 +997,7 @@ dev-python/psycopg:mxdatetime - Enable support for MX DateTime and use it instea
 dev-python/pygobject:libffi - Enable support to connect to signals on python objects from C.
 dev-python/pylons:cheetah - Add optional cheetah support
 dev-python/pylons:genshi - Add optional genshi support
-dev-python/pylons:jinja2 - Add optional jinja2 support
+dev-python/pylons:jinja - Add optional jinja support
 dev-python/pylons:kid - Add optional kid support
 dev-python/pylons:mako - Add optional mako support
 dev-python/pylons:myghty - Add optional myghty support
