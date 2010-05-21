@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.9.ebuild,v 1.1 2009/10/20 00:02:58 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.9.ebuild,v 1.2 2010/05/21 15:33:28 jlec Exp $
 
 EAPI=2
 
-inherit cmake-utils eutils
+PYTHON_DEPEND="python? 2:2.5"
+
+inherit cmake-utils eutils python
 
 DESCRIPTION="Advanced molecular editor that uses Qt4 and OpenGL"
 HOMEPAGE="http://avogadro.sourceforge.net/"
@@ -20,7 +22,6 @@ RDEPEND=">=sci-chemistry/openbabel-2.2.2
 	>=x11-libs/qt-opengl-4.5.2:4
 	glsl? ( >=media-libs/glew-1.5.0	)
 	python? (
-		>=dev-lang/python-2.5
 		>=dev-libs/boost-1.35
 		>=dev-libs/boost-1.35.0-r5[python]
 		dev-python/numpy
@@ -29,6 +30,10 @@ RDEPEND=">=sci-chemistry/openbabel-2.2.2
 DEPEND="${RDEPEND}
 	dev-cpp/eigen:2
 	>=dev-util/cmake-2.6.2"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_configure() {
 	local mycmakeargs

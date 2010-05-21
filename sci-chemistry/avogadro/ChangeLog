@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.32 2010/02/25 14:59:39 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.33 2010/05/21 15:33:28 jlec Exp $
+
+*avogadro-1.0.1 (21 May 2010)
+
+  21 May 2010; Justin Lecher <jlec@gentoo.org> +files/1.0.1-gl2ps.patch,
+  avogadro-0.9.8.ebuild, avogadro-0.9.9.ebuild, avogadro-1.0.0.ebuild,
+  +avogadro-1.0.1.ebuild:
+  Version Bump, unbundle gl2ps, fix for PYTHON ABI #316169
 
   25 Feb 2010; Fabio Erculiani <lxnay@gentoo.org> avogadro-1.0.0.ebuild,
   +files/avogadro-1.0.0-sip-4.10.patch:
