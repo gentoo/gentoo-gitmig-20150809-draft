@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beanstalkc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beanstalkc/ChangeLog,v 1.5 2010/02/16 22:24:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beanstalkc/ChangeLog,v 1.6 2010/05/21 18:57:28 pacho Exp $
+
+  21 May 2010; Pacho Ramos <pacho@gentoo.org> beanstalkc-0.2.0.ebuild:
+  stable amd64, bug 302671
 
   16 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   beanstalkc-0.2.0.ebuild:
