@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.05.1525.ebuild,v 1.2 2010/05/21 20:57:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.05.1525.ebuild,v 1.3 2010/05/21 20:59:14 flameeyes Exp $
 
 EAPI=2
 
@@ -42,8 +42,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2010.03.1412-ggdb3-fix.patch"
-	# disable in release after 1412
 	epatch "${FILESDIR}/${PN}-2009.12.1240-nolint.patch"
 
 	AT_M4DIR="m4" eautoreconf
@@ -67,7 +65,6 @@ src_configure() {
 		--disable-static \
 		--disable-dependency-tracking \
 		--disable-mtmalloc \
-		--with-debug=$(use debug && echo yes || echo no) \
 		$(use_enable tcmalloc) \
 		$(use_enable memcache libmemcached) \
 		$(use_enable gearman libgearman) \
