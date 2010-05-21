@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.51 2010/05/14 19:39:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.52 2010/05/21 09:10:13 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="+plugins-symlink"
+IUSE=""
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
@@ -46,13 +46,6 @@ RDEPEND+="
 	x11-apps/xmessage
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
-
-# Incompatible system plugins:
-# www-plugins/gecko-mediaplayer, bug #309231.
-RDEPEND+="
-	plugins-symlink? (
-		!www-plugins/gecko-mediaplayer[gnome]
-	)"
 
 src_unpack() {
 	subversion_src_unpack
@@ -104,19 +97,10 @@ src_configure() {
 
 	# Workaround for bug #318969. Remove when upstream http://crbug.com/43778 is
 	# fixed.
-	append-cflags -D__STDC_CONSTANT_MACROS
+	append-flags -D__STDC_CONSTANT_MACROS
 
-	# CFLAGS/LDFLAGS
-	mkdir -p "${S}"/.gyp || die "cflags mkdir failed"
-	cat << EOF > "${S}"/.gyp/include.gypi || die "cflags cat failed"
-{
-	'target_defaults': {
-		'cflags': [ '${CFLAGS// /','}' ],
-		'ldflags': [ '${LDFLAGS// /','}' ],
-	},
-}
-EOF
-	export HOME="${S}"
+	# Workaround for bug #320145. TODO(phajdan.jr): rather use a gyp define.
+	append-flags -DUSE_SSE=0
 
 	# Configuration options (system libraries and disable forced SSE2)
 	local myconf="-Ddisable_sse2=1 -Duse_system_zlib=1 -Duse_system_bzip2=1 -Duse_system_ffmpeg=1 -Dproprietary_codecs=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1"
@@ -129,6 +113,10 @@ EOF
 	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
 	# and the performance gain isn't worth it.
 	myconf="${myconf} -Dv8_use_snapshot=0"
+
+	# Disable tcmalloc memory allocator. It causes problems,
+	# for example bug #320419.
+	myconf="${myconf} -Dlinux_use_tcmalloc=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
@@ -196,10 +184,8 @@ src_install() {
 	dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
 	dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
 
-	# Plugins symlink, optional wrt bug #301911
-	if use plugins-symlink; then
-		dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins
-	fi
+	# Use system plugins by default.
+	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins
 
 	# Icon and desktop entry
 	newicon out/Release/product_logo_48.png ${PN}-browser.png

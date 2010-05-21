@@ -1,6 +1,16 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.99 2010/05/14 19:39:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.100 2010/05/21 09:10:13 phajdan.jr Exp $
+
+*chromium-6.0.408.1 (21 May 2010)
+
+  21 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-5.0.396.0.ebuild, +chromium-6.0.408.1.ebuild,
+  chromium-9999.ebuild:
+  Version bump for dev channel release. Fix bug #319783 by Richard
+  <shiningarcanine@gmail.com>. Fix bug #320145 by Tomas Racek
+  <racek.t@seznam.cz>. Fix bug #320419 by fkhp <fkhp101@tom.com>, used
+  solution by Evan Teran <eteran@alum.rit.edu>. Remove old.
 
 *chromium-6.0.401.1 (14 May 2010)
 
