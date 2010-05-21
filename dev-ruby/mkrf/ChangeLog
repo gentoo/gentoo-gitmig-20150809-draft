@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.11 2010/01/01 20:34:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.12 2010/05/21 19:46:56 flameeyes Exp $
+
+  21 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  mkrf-0.2.3-r1.ebuild:
+  Add Ruby 1.9 support – despite tests failing in both versions – to
+  unbreak (masked) ruby-opengl deptree for 1.9.
 
 *mkrf-0.2.3-r1 (01 Jan 2010)
 
