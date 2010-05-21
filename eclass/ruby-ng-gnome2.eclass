@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.1 2010/01/13 18:33:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.2 2010/05/21 16:54:25 flameeyes Exp $
 #
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -34,6 +34,13 @@ each_ruby_configure() {
 # @DESCRIPTION:
 # Compile the C bindings in the subbinding for each specific ruby target.
 each_ruby_compile() {
+	# We have injected --no-undefined in Ruby as a safety precaution
+	# against broken ebuilds, but the Ruby-Gnome bindings
+	# unfortunately rely on the lazy load of other extensions; see bug
+	# #320545.
+	find . -name Makefile -print0 | xargs -0 \
+		sed -i -e 's:-Wl,--no-undefined ::' || die "--no-undefined removal failed"
+
 	emake || die "emake failed"
 }
 
@@ -55,7 +62,7 @@ all_ruby_install() {
 		[ -s "$doc" ] && dodoc $doc
 	done
 	if [[ -d sample ]]; then
-		dodir /usr/share/doc/${PF}
-		cp -a sample "${D}"/usr/share/doc/${PF} || die "cp failed"
+		insinto /usr/share/doc/${PF}
+		doins -r sample || die "sample install failed"
 	fi
 }
