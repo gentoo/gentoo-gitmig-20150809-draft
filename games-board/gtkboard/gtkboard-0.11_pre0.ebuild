@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.13 2008/10/07 02:40:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/gtkboard-0.11_pre0.ebuild,v 1.14 2010/05/21 16:30:44 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P=${P/_}
@@ -15,29 +16,25 @@ KEYWORDS="amd64 ppc x86"
 IUSE="gnome"
 
 RDEPEND=">=x11-libs/gtk+-2
-	media-libs/libsdl
-	media-libs/sdl-mixer
+	media-libs/libsdl[audio]
+	media-libs/sdl-mixer[vorbis]
 	gnome? ( gnome-base/libgnomeui )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--datadir="${GAMES_DATADIR}"/${PN} \
 		--enable-gtk2 \
 		--enable-sdl \
-		$(use_enable gnome) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable gnome)
 }
 
 src_install() {
