@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r1.ebuild,v 1.2 2010/05/20 15:32:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r1.ebuild,v 1.3 2010/05/21 01:55:17 beandog Exp $
 
 EAPI=2
 
@@ -13,7 +13,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl"
-RDEPEND=">=sys-fs/udev-103"
+RDEPEND=">=sys-fs/udev-103
+	~media-tv/v4l2-ctl-${PV}"
 DEPEND="app-arch/unzip
 	>=sys-kernel/linux-headers-2.6.29
 	!media-tv/ivtv"

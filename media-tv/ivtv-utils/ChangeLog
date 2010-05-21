@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.8 2010/05/20 15:31:31 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.9 2010/05/21 01:55:17 beandog Exp $
+
+  21 May 2010; Steve Dibb <beandog@gentoo.org> ivtv-utils-1.4.0-r1.ebuild:
+  Add dep on v4l2-ctl
 
 *ivtv-utils-1.4.0-r1 (20 May 2010)
 
