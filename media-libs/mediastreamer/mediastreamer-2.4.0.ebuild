@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.4.0.ebuild,v 1.2 2010/05/20 16:09:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.4.0.ebuild,v 1.3 2010/05/21 06:30:23 pva Exp $
 
 EAPI="3"
 
@@ -8,14 +8,14 @@ inherit eutils autotools multilib
 
 DESCRIPTION="Mediastreaming library for telephony application"
 HOMEPAGE="http://www.linphone.org/index.php/eng/code_review/mediastreamer2"
-SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/linphone/${PN}/${P}.tar.gz"
+SRC_URI="mirror://nongnu/linphone/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~ppc-macos ~x86-macos"
 IUSE="+alsa coreaudio debug examples gsm ilbc ipv6 jack oss portaudio +speex theora video v4l2 x264 X"
 
-RDEPEND=">=net-libs/ortp-0.15.0_p1
+RDEPEND=">=net-libs/ortp-0.16.2
 	alsa? ( media-libs/alsa-lib )
 	gsm? ( media-sound/gsm )
 	jack? ( >=media-libs/libsamplerate-0.0.13
