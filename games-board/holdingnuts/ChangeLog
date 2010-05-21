@@ -1,6 +1,9 @@
 # ChangeLog for games-board/holdingnuts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/ChangeLog,v 1.6 2010/03/05 21:30:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/ChangeLog,v 1.7 2010/05/21 18:38:04 pacho Exp $
+
+  21 May 2010; Pacho Ramos <pacho@gentoo.org> holdingnuts-0.0.5-r1.ebuild:
+  stable amd64, bug 318879
 
 *holdingnuts-0.0.5-r1 (05 Mar 2010)
 
