@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.30 2010/05/18 16:52:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.31 2010/05/21 14:35:03 tester Exp $
+
+*libproxy-0.4.2 (21 May 2010)
+
+  21 May 2010; Olivier Crête <tester@gentoo.org> -libproxy-0.4.1.ebuild,
+  +libproxy-0.4.2.ebuild:
+  Version bump
 
 *libproxy-0.4.1 (18 May 2010)
 
