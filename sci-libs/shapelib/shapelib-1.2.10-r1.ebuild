@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10-r1.ebuild,v 1.4 2009/10/18 07:05:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.2.10-r1.ebuild,v 1.5 2010/05/21 21:04:06 pacho Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://dl.maptools.org/dl/shapelib//${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=""
