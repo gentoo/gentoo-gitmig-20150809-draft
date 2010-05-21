@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.42 2010/01/26 01:08:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.43 2010/05/21 21:02:30 pacho Exp $
+
+  21 May 2010; Pacho Ramos <pacho@gentoo.org>
+  freewnn-1.1.1_alpha21-r1.ebuild:
+  stable amd64, bug 300258
 
   26 Jan 2010; Jeroen Roovers <jer@gentoo.org>
   freewnn-1.1.1_alpha21-r1.ebuild:
