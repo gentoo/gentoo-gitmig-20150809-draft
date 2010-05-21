@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.0-r1.ebuild,v 1.1 2010/05/20 20:33:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.0-r1.ebuild,v 1.2 2010/05/21 09:12:47 polynomial-c Exp $
 
 EAPI=2
 
@@ -237,11 +237,12 @@ src_install() {
 	fi
 
 	# Install EFI Firmware files (bug #320757)
-	cd "${S}"/src/VBox/Devices/EFI/FirmwareBin || die
+	pushd "${S}"/src/VBox/Devices/EFI/FirmwareBin &>/dev/null || die
 	for fwfile in VBoxEFI{32,64}.fd ; do
 		doins ${fwfile} || die
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/${fwfile} || die
 	done
+	popd &>/dev/null || die
 
 	insinto /usr/share/${PN}
 	if ! use headless && use qt4 ; then
