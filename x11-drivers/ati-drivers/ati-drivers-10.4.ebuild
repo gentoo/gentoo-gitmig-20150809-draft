@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.4.ebuild,v 1.1 2010/04/29 23:47:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.4.ebuild,v 1.2 2010/05/21 08:59:31 lu_zero Exp $
 
 EAPI="2"
 
@@ -233,6 +233,7 @@ src_prepare() {
 
 	# 2.6.33 kernel support
 	epatch "${FILESDIR}"/ati-drivers-2.6.33.patch
+	epatch "${FILESDIR}"/ati-drivers-2.6.34.patch
 	# Fix a known compilation error
 	epatch "${FILESDIR}"/ati-drivers-fix_compilation-bug-297322.patch
 
