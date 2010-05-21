@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.87 2010/05/18 13:03:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.88 2010/05/21 20:51:07 pacho Exp $
+
+  21 May 2010; Pacho Ramos <pacho@gentoo.org>
+  gentoolkit-dev-0.2.6.14.ebuild:
+  stable amd64, bug 284680
 
   18 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gentoolkit-dev-0.2.6.14.ebuild:
