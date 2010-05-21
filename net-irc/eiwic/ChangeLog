@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/eiwic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.5 2009/02/09 16:58:10 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.6 2010/05/21 19:52:44 angelos Exp $
+
+*eiwic-1.1.4 (21 May 2010)
+
+  21 May 2010; Christoph Mende <angelos@gentoo.org> +eiwic-1.1.4.ebuild:
+  Version bump
 
   09 Feb 2009; Christoph Mende <angelos@gentoo.org>
   +files/eiwic-1.1.3-ldflags.patch, eiwic-1.1.3.ebuild:
