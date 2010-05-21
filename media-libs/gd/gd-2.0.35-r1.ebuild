@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r1.ebuild,v 1.10 2010/05/20 17:32:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r1.ebuild,v 1.11 2010/05/21 10:34:08 ssuominen Exp $
 
+EAPI=1
 inherit autotools
 
 DESCRIPTION="A graphics library for fast image creation"
@@ -14,8 +15,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~spar
 IUSE="fontconfig jpeg png truetype xpm"
 
 RDEPEND="fontconfig? ( media-libs/fontconfig )
-	jpeg? ( >=media-libs/jpeg-6b )
-	png? ( >=media-libs/libpng-1.2.5 sys-libs/zlib )
+	jpeg? ( >=media-libs/jpeg-6b:0 )
+	png? ( >=media-libs/libpng-1.2.43-r2:0
+		sys-libs/zlib )
 	truetype? ( >=media-libs/freetype-2.1.5 )
 	xpm? ( x11-libs/libXpm x11-libs/libXt )"
 DEPEND="${RDEPEND}"
