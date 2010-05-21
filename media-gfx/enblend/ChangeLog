@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.37 2010/03/08 22:28:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.38 2010/05/21 22:31:42 hwoarang Exp $
+
+  21 May 2010; Markos Chandras <hwoarang@gentoo.org> enblend-4.0.ebuild:
+  Stable on amd64 wrt bug #320409
 
   08 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> enblend-4.0.ebuild,
   +files/enblend-4.0-libpng14.patch:
