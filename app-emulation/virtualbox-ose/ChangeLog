@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.55 2010/05/21 09:12:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.56 2010/05/21 17:41:26 polynomial-c Exp $
+
+  21 May 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-ose-3.2.0-r1.ebuild:
+  Added libXinerama to DEPEND. Reported by Serge Ratke in bug #320907
 
   21 May 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-ose-3.2.0-r1.ebuild:
