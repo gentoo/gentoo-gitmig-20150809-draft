@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.74 2010/05/05 17:07:11 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.75 2010/05/21 18:15:48 ken69267 Exp $
+
+  21 May 2010; Kenneth Prugh <ken69267@gentoo.org> portpeek-1.5.8.4.ebuild:
+  amd64 stable, bug #309059
 
   05 May 2010; Michael Pagano <mpagano@gentoo.org> portpeek-1.9.36.ebuild:
   Fix dep for 1.9.36 to force gentoolkit
