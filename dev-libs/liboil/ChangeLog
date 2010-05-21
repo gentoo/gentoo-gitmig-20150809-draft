@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.84 2010/05/20 19:27:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.85 2010/05/21 18:53:40 phajdan.jr Exp $
+
+  21 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> liboil-0.3.17.ebuild:
+  x86 stable wrt bug #319969
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org> liboil-0.3.17.ebuild:
   Stable for HPPA (bug #319969).
