@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/inotail
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.9 2009/11/14 16:05:26 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.10 2010/05/21 20:12:30 angelos Exp $
+
+  21 May 2010; Christoph Mende <angelos@gentoo.org> -inotail-0.5.ebuild:
+  Removed old
 
   14 Nov 2009; Markus Meier <maekke@gentoo.org> inotail-0.5-r1.ebuild:
   amd64/x86 stable, bug #273051
