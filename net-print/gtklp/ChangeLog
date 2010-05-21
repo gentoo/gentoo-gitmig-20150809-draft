@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gtklp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.38 2010/05/10 12:38:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.39 2010/05/21 15:24:43 pva Exp $
+
+  21 May 2010; Peter Volkov <pva@gentoo.org> gtklp-1.2.8.ebuild:
+  amd64 stable, bug 317249
 
   10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gtklp-1.2.8.ebuild:
   x86 stable wrt bug #317249
