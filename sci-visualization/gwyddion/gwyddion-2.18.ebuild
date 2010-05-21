@@ -1,9 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.18.ebuild,v 1.1 2009/11/12 21:50:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.18.ebuild,v 1.2 2010/05/21 09:29:35 jlec Exp $
 
 EAPI=2
-inherit fdo-mime gnome2-utils
+
+PYTHON_DEPEND="python? 2"
+
+inherit fdo-mime gnome2-utils python
 
 DESCRIPTION="A software framework for SPM data analysis"
 HOMEPAGE="http://gwyddion.net/"
@@ -31,6 +34,10 @@ RDEPEND=">=x11-libs/gtk+-2.8
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"
+
+pkg_setup() {
+	use python && python_set_active_version 2
+}
 
 src_configure() {
 	econf \
