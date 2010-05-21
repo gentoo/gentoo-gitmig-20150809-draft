@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.5 2010/05/21 06:39:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.6 2010/05/21 08:47:38 lu_zero Exp $
+
+*mongodb-1.5.1 (21 May 2010)
+
+  21 May 2010; Luca Barbato <lu_zero@gentoo.org>
+  +files/mongodb-1.5-modify-post-strip.patch,
+  +files/mongodb-1.5-modify-testing.patch, +mongodb-1.5.1.ebuild:
+  Development version
 
 *mongodb-1.4.2 (21 May 2010)
 
