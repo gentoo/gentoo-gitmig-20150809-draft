@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.15 2010/01/12 04:46:24 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.16 2010/05/21 19:08:31 jlec Exp $
+
+*hippodraw-1.21.3-r3 (21 May 2010)
+
+  21 May 2010; Justin Lecher <jlec@gentoo.org> +hippodraw-1.21.3-r3.ebuild:
+  Fix for Python ABI #316253, PREFIX fixes
 
 *hippodraw-1.21.3-r2 (12 Jan 2010)
 
