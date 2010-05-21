@@ -1,5 +1,5 @@
---- Makefile.orig	2010-05-21 23:31:01.000000000 +0300
-+++ Makefile	2010-05-21 23:32:04.000000000 +0300
+--- Makefile
++++ Makefile
 @@ -8,10 +8,10 @@
  mandir=		$(prefix)/man
  
