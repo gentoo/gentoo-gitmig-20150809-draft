@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/noexec
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noexec/ChangeLog,v 1.8 2007/05/15 14:19:07 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noexec/ChangeLog,v 1.9 2010/05/21 23:46:31 hwoarang Exp $
+
+  21 May 2010; Markos Chandras <hwoarang@gentoo.org> noexec-1.1.0.ebuild:
+  Keyworded for amd64 wrt bug #318791
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
