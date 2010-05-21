@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/cx18-firmware
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/cx18-firmware/ChangeLog,v 1.1 2008/10/21 18:17:42 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/cx18-firmware/ChangeLog,v 1.2 2010/05/21 02:54:39 beandog Exp $
+
+  21 May 2010; Steve Dibb <beandog@gentoo.org>
+  cx18-firmware-20080628.ebuild:
+  Fix install dir; bug 320125
 
 *cx18-firmware-20080628 (21 Oct 2008)
 
