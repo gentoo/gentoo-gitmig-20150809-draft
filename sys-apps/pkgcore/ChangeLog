@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.100 2010/04/22 08:54:31 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.101 2010/05/21 12:03:25 ferringb Exp $
+
+*pkgcore-0.5.11.6 (21 May 2010)
+
+  21 May 2010; Brian Harring <ferringb@gentoo.org> +pkgcore-0.5.11.6.ebuild:
+  bugfix release fixing xv unpack support primarily
 
 *pkgcore-0.5.11.5 (22 Apr 2010)
 
