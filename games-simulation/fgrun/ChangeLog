@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/fgrun
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.9 2010/03/19 20:29:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.10 2010/05/21 11:18:16 tupone Exp $
+
+  21 May 2010; Tupone Alfredo <tupone@gentoo.org> fgrun-1.5.2.ebuild:
+  Require at least simgear 2.0.0. Fix bug #320367 by flameeyes@gentoo.org
 
 *fgrun-1.5.2 (19 Mar 2010)
 
