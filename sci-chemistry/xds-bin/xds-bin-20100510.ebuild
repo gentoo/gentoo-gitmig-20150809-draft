@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20091228.ebuild,v 1.1 2010/01/31 23:13:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20100510.ebuild,v 1.1 2010/05/21 13:53:35 jlec Exp $
 
 EAPI="2"
 
@@ -10,8 +10,9 @@ DESCRIPTION="X-ray Detector Software for processing single-crystal monochromatic
 HOMEPAGE="http://xds.mpimf-heidelberg.mpg.de/"
 SRC_URI="
 	x86? ( ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS-IA32_Linux_x86.tar.gz -> XDS-IA32_Linux_x86-${PV}.tar.gz )
-	amd64? ( ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS-INTEL64_Linux_x86_64.tar.gz -> XDS-INTEL64_Linux_x86_64-${PV}.tar.gz )
-	 ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS_html_doc.tar.gz -> XDS_html_doc-${PV}.tar.gz"
+	amd64? ( ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS-INTEL64_Linux_x86_64.tar.gz -> XDS-INTEL64_Linux_x86_64-${PV}.tar.gz )"
+# no docs this time
+#	 ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS_html_doc.tar.gz -> XDS_html_doc-${PV}.tar.gz"
 
 LICENSE="free-noncomm"
 SLOT="0"
@@ -20,6 +21,8 @@ IUSE="smp X"
 
 RDEPEND="X? ( sci-visualization/xds-viewer )"
 DEPEND=""
+
+QA_EXECSTACK="*"
 
 pkg_setup() {
 	if use x86; then
@@ -43,9 +46,10 @@ src_install() {
 	else
 		rm "${D}"/opt/${PN}/*par
 	fi
-	dohtml -r "${WORKDIR}"/XDS_html_doc/* || die
-	insinto /usr/share/${PN}/INPUT_templates
-	doins "${WORKDIR}"/XDS_html_doc/html_doc/INPUT_templates/* || die
+# see ^^
+#	dohtml -r "${WORKDIR}"/XDS_html_doc/* || die
+#	insinto /usr/share/${PN}/INPUT_templates
+#	doins "${WORKDIR}"/XDS_html_doc/html_doc/INPUT_templates/* || die
 
 	cat >> "${T}"/20xds <<- EOF
 	PATH="/opt/${PN}/"
