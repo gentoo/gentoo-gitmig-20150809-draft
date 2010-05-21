@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.480 2010/05/20 19:24:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.481 2010/05/21 17:18:09 jer Exp $
+
+*opera-10.54_pre6340 (21 May 2010)
+
+  21 May 2010; Jeroen Roovers <jer@gentoo.org> +opera-10.54_pre6340.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2010/05/21/fonts-usability-widgets-o
+  h-my>.
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org>
   opera-10.54_pre6336-r1.ebuild, metadata.xml:
