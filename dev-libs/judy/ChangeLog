@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.32 2010/04/04 18:34:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.33 2010/05/21 15:37:43 pva Exp $
+
+  21 May 2010; Peter Volkov <pva@gentoo.org> judy-1.0.5.ebuild:
+  amd64 stable, bug 310023
 
   04 Apr 2010; Raúl Porcel <armin76@gentoo.org> judy-1.0.5.ebuild:
   alpha/ia64/sparc stable wrt #310023
