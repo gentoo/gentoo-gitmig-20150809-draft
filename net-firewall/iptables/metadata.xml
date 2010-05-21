@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer restrict="imq and l7filter extensions">
+<maintainer>
 	<email>pva@gentoo.org</email>
 </maintainer>
 <longdescription>
