@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4194 2010/05/21 08:33:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4195 2010/05/21 14:57:07 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 May 2010; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Removing ivtv-utils mask by beandog's request
 
   21 May 2010; Luca Barbato <lu_zero@gentoo.org> package.mask:
   mongodb development release
