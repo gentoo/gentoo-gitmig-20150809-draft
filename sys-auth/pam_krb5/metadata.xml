@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kerberos</herd>
-<maintainer>
-<email>pam-bugs@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>kerberos@gentoo.org</email>
-</maintainer>
+  <herd>kerberos</herd>
+  <maintainer>
+    <email>pam-bugs@gentoo.org</email>
+  </maintainer>
+  <maintainer>
+    <email>kerberos@gentoo.org</email>
+  </maintainer>
+  <maintainer>
+    <email>eray.aslan@caf.com.tr</email>
+    <name>Eray Aslan</name>
+    <description>Proxy maintainer</description>
+  </maintainer>
 </pkgmetadata>
