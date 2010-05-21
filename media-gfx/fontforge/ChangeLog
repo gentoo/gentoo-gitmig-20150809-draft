@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.123 2010/05/20 00:40:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.124 2010/05/21 14:45:52 phajdan.jr Exp $
+
+  21 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fontforge-20090923.ebuild:
+  x86 stable wrt bug #319515
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org> fontforge-20090923.ebuild:
   Stable for HPPA (bug #319515).
