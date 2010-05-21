@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/vitables
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/ChangeLog,v 1.3 2009/09/29 15:19:50 spock Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/ChangeLog,v 1.4 2010/05/21 10:42:59 jlec Exp $
+
+  21 May 2010; Justin Lecher <jlec@gentoo.org> vitables-2.0.ebuild:
+  Fixes for PYTHOON ABI, #316243
 
   29 Sep 2009; Michał Januszewski <spock@gentoo.org> vitables-2.0.ebuild:
   Fix installation of icon and .desktop file.

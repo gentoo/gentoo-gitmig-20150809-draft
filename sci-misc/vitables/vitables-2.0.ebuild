@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.0.ebuild,v 1.3 2009/09/29 15:19:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.0.ebuild,v 1.4 2010/05/21 10:42:59 jlec Exp $
 
 EAPI="2"
-NEED_PYTHON="2.5"
-# Will work with 2.4 if you manually install the uuid package
+
+PYTHON_DEPEND="2:2.5"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
@@ -17,13 +18,17 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc examples"
 
-DEPEND=">=dev-python/pytables-2.0
+DEPEND="
+	>=dev-python/pytables-2.0
 	dev-python/PyQt4[X]"  # FIXME: check if any other useflags are needed
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
+
 S="${WORKDIR}/ViTables-${PV}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-doc-examples.patch
+	distutils_src_prepare
 }
 
 src_install() {
@@ -33,10 +38,10 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${P}/examples
-		doins -r examples/*
+		doins -r examples/* || die
 	fi
 
 	if use doc; then
-		dodoc doc/*
+		dodoc doc/* || die
 	fi
 }
