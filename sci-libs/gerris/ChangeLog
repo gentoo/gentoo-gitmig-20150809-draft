@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gerris
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.9 2010/01/15 18:19:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.10 2010/05/21 14:00:06 jlec Exp $
+
+*gerris-20100519 (21 May 2010)
+
+  21 May 2010; Justin Lecher <jlec@gentoo.org> gerris-20100114.ebuild,
+  +gerris-20100519.ebuild, +files/gerris-20100519-autotools.patch:
+  Version Bump, remove python which is only needed for the restricted test
 
 *gerris-20100114 (15 Jan 2010)
 

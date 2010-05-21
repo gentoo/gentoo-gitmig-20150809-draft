@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20100114.ebuild,v 1.2 2010/05/21 14:00:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20100519.ebuild,v 1.1 2010/05/21 14:00:06 jlec Exp $
 
 EAPI=2
+
 inherit autotools eutils
 
 DESCRIPTION="The Gerris Flow Solver"
@@ -26,7 +27,7 @@ DEPEND="${RDEPEND}
 # test assume it is installed
 RESTRICT="test"
 
-S="${WORKDIR}"/${PN}-snapshot-100114
+S="${WORKDIR}"/${PN}-snapshot-100519
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-autotools.patch
