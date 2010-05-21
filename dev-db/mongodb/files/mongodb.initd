@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/files/mongodb.initd,v 1.1 2010/03/07 23:39:39 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/files/mongodb.initd,v 1.2 2010/05/21 06:39:57 lu_zero Exp $
 
 depend() {
 	need net
@@ -40,6 +40,6 @@ start() {
 
 stop() {
 	ebegin "Stopping ${SVCNAME}"
-	start-stop-daemon --stop --exec ${EXEC} --pidfile ${MONGODB_PID_FILE}
+	start-stop-daemon --stop --exec ${MONGODB_EXEC} --pidfile ${MONGODB_PID_FILE}
 	eend $? "Failed to stop ${SVCNAME}"
 }

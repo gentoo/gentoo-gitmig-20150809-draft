@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.4 2010/03/25 21:32:43 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.5 2010/05/21 06:39:57 lu_zero Exp $
+
+*mongodb-1.4.2 (21 May 2010)
+
+  21 May 2010; Luca Barbato <lu_zero@gentoo.org> files/mongodb.initd,
+  +mongodb-1.4.2.ebuild:
+  New version and fix init.d, thanks to Priit Laes <plaes@plaes.org> and
+  Johan Bergström <bugs@bergstroem.nu> for testing in bug #317531 and
+  TANABE Ken-ichi <nabeken@tknetworks.org> for reporting the init.d issue in
+  bug #318009
 
 *mongodb-1.4.0 (25 Mar 2010)
 
