@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.0.3.ebuild,v 1.2 2010/01/01 21:09:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.0.3.ebuild,v 1.3 2010/05/21 16:56:02 swegener Exp $
 
 EAPI="2"
 
@@ -19,9 +19,7 @@ RDEPEND=">=sys-libs/ncurses-5.2"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
-src_unpack() {
-	default
-
+src_prepare() {
 	sed -i -e s/-O3// "${S}"/src/makefile
 }
 
