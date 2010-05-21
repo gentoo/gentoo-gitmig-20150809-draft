@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.1 2010/05/18 03:07:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.2 2010/05/21 20:51:42 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="network"
+RESTRICT="test"  # doesn't really test anything
 
 RDEPEND=">=dev-games/flatzebra-0.1.5"
 DEPEND="${RDEPEND}
