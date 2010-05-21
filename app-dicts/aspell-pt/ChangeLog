@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-pt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/ChangeLog,v 1.16 2010/05/14 14:15:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/ChangeLog,v 1.17 2010/05/21 13:56:21 phajdan.jr Exp $
+
+  21 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  aspell-pt-0.50.2-r1.ebuild:
+  x86 stable wrt bug #319265
 
   14 May 2010; Jeroen Roovers <jer@gentoo.org> aspell-pt-0.50.2-r1.ebuild:
   Stable for HPPA (bug #319265).
