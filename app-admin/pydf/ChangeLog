@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.29 2010/05/15 19:49:41 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.30 2010/05/21 12:00:16 jlec Exp $
+
+  21 May 2010; Justin Lecher <jlec@gentoo.org> pydf-9.ebuild:
+  PREFIX fixes, keyworded for ~amd64-linux ~x86-linux
 
 *pydf-9 (15 May 2010)
 
