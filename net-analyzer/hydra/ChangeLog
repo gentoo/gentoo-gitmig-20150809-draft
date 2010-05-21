@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.36 2010/03/23 20:29:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.37 2010/05/21 15:53:49 pva Exp $
+
+  21 May 2010; Peter Volkov <pva@gentoo.org> hydra-5.4-r3.ebuild:
+  amd64 stable, bug 310017
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> hydra-5.4-r3.ebuild:
   Marking hydra-5.4-r3 ppc for bug 310017
