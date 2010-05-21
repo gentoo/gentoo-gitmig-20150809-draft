@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.46 2010/05/12 18:17:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.47 2010/05/21 18:08:00 arfrever Exp $
+
+  21 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xcb-proto-1.6.ebuild:
+  Fix byte-compilation.
 
   12 May 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking xcb-proto-1.6 ppc64 stable for bug 308521

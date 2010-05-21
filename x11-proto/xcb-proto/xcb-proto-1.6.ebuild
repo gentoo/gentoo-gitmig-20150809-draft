@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.6.ebuild,v 1.8 2010/05/12 18:17:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.6.ebuild,v 1.9 2010/05/21 18:08:00 arfrever Exp $
 
 PYTHON_DEPEND="2:2.5"
 
@@ -21,4 +21,17 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_install() {
+	x-modular_src_install
+	python_clean_installation_image
+}
+
+pkg_postinst() {
+	python_mod_optimize $(python_get_sitedir)/xcbgen
+}
+
+pkg_postrm() {
+	python_mod_cleanup $(python_get_sitedir)/xcbgen
 }
