@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.6 2010/05/12 12:59:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.7 2010/05/21 09:13:11 jlec Exp $
 
 EAPI="2"
+
+PYTHON_DEPEND="python? 2:2.6"
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4 cmake-utils
 
@@ -23,7 +25,6 @@ RDEPEND="sci-libs/hdf5[mpi=]
 	mpi? ( || (
 				sys-cluster/openmpi
 				sys-cluster/mpich2[cxx] ) )
-	python? ( dev-lang/python:2.6 )
 	gui? ( x11-libs/qt-gui:4
 			x11-libs/qt-qt3support:4
 			x11-libs/qt-opengl:4
@@ -56,6 +57,7 @@ pkg_setup() {
 	if (use overview) && (! use gui); then
 		die "the overview plugin requires the USE='gui'"
 	fi
+	use python && python_set_active_version 2
 }
 
 src_prepare() {
