@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.11.ebuild,v 1.5 2010/02/07 20:16:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.11.ebuild,v 1.6 2010/05/21 19:39:42 arfrever Exp $
 
 EAPI="2"
 inherit eutils distutils
@@ -15,10 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="cdda ffmpeg nls"
 
-RDEPEND="|| (
-		>=dev-lang/python-2.5
-		( dev-lang/python:2.4[cxx] =dev-python/ctypes-0.9 )
-	)
+RDEPEND=">=dev-lang/python-2.5
 	dev-python/PyQt4[X]
 	media-libs/mutagen
 	cdda? ( >=media-libs/libdiscid-0.1.1 )
