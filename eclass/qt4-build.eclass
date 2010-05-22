@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.66 2010/03/24 14:36:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.67 2010/05/22 15:22:46 wired Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -170,12 +170,6 @@ qt4-build_src_prepare() {
 		replace-flags -O2 -O3
 	fi
 
-	# Bug 282984 && Bug 295530
-	sed -e "s:\(^SYSTEM_VARIABLES\):CC=$(tc-getCC)\nCXX=$(tc-getCXX)\n\1:" \
-		-i configure || die "sed qmake compilers failed"
-	sed -e "s:\(\$MAKE\):\1 CC=$(tc-getCC) CXX=$(tc-getCXX) LD=$(tc-getCXX):" \
-		-i config.tests/unix/compile.test || die "sed test compilers failed"
-
 	# Bug 178652
 	if [[ $(gcc-major-version) == 3 ]] && use amd64; then
 		ewarn "Appending -fno-gcse to CFLAGS/CXXFLAGS"
@@ -197,19 +191,17 @@ qt4-build_src_prepare() {
 		append-flags -mminimal-toc
 	fi
 
+	# Bug 282984 && Bug 295530
+	sed -e "s:\(^SYSTEM_VARIABLES\):CC=$(tc-getCC)\nCXX=$(tc-getCXX)\nCFLAGS=\"${CFLAGS}\"\nCXXFLAGS=\"${CXXFLAGS}\"\nLDFLAGS=\"${LDFLAGS}\"\n\1:" \
+		-i configure || die "sed qmake compilers failed"
+	sed -e "s:\(\$MAKE\):\1 CC=$(tc-getCC) CXX=$(tc-getCXX) LD=$(tc-getCXX) LINK=$(tc-getCXX):" \
+		-i config.tests/unix/compile.test || die "sed test compilers failed"
+
 	# Bug 172219
-	sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
-		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
-		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
-		-e "s:X11R6/::" \
+	sed -e "s:X11R6/::" \
 		-i "${S}"/mkspecs/$(qt_mkspecs_dir)/qmake.conf || die "sed ${S}/mkspecs/$(qt_mkspecs_dir)/qmake.conf failed"
 
-	if [[ ${CHOST} != *-darwin* ]]; then
-		sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
-			-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
-			-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
-			-i mkspecs/common/g++.conf || die "sed mkspecs/common/g++.conf failed"
-	else
+	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS *and* remove -arch, since our gcc-apple is multilib
 		# crippled (by design) :/
 		sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
@@ -464,9 +456,9 @@ build_directories() {
 			find "${S}" -name '*.pr[io]'
 		} | xargs sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:${EPREFIX}/usr/$(get_libdir)/qt4:g" || die
 		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
-		emake CC="@echo compiling \$< && $(tc-getCC)" \
-			CXX="@echo compiling \$< && $(tc-getCXX)" \
-			LINK="@echo linking \$@ && $(tc-getCXX)" || die "emake failed"
+		emake CC="$(tc-getCC)" \
+			CXX="$(tc-getCXX)" \
+			LINK="$(tc-getCXX)" || die "emake failed"
 		popd >/dev/null
 	done
 }
