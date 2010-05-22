@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ratproxy/ratproxy-1.51.ebuild,v 1.1 2008/07/08 19:57:42 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ratproxy/ratproxy-1.58.ebuild,v 1.1 2010/05/22 15:02:09 jer Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://ratproxy.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i -e "s:keyfile\.pem:/usr/share/${PN}/&:" ssl.c
+	sed -r -i -e "s:(ratproxy-back\.png|messages\.list):/usr/share/${PN}/&:" ratproxy-report.sh
 	epatch "${FILESDIR}"/${PN}-Makefile.patch
 }
 
@@ -33,8 +34,9 @@ src_compile() {
 }
 
 src_install() {
+	dobin ${PN}-report.sh || die "install failed"
 	dobin ${PN} || die "install failed"
-	dodoc doc/*
+	dodoc doc/{README,TODO}
 	insinto /usr/share/${PN}
-	doins keyfile.pem
+	doins keyfile.pem ratproxy-back.png messages.list
 }

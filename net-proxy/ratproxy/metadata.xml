@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
+	<herd>net-proxy</herd>
 	<longdescription lang="en">
 		A semi-automated, largely passive web application security audit tool,
 		optimized for an accurate and sensitive detection, and automatic
