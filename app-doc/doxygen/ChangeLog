@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.175 2010/03/08 07:15:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.176 2010/05/22 09:00:44 jlec Exp $
+
+  22 May 2010; Justin Lecher <jlec@gentoo.org> doxygen-1.6.1.ebuild,
+  doxygen-1.6.2.ebuild, doxygen-1.6.3.ebuild:
+  Removed epause in EAPI=3 ebuilds
 
 *doxygen-1.6.3 (08 Mar 2010)
 *doxygen-1.6.2 (08 Mar 2010)
