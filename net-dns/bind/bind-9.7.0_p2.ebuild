@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2.ebuild,v 1.2 2010/05/21 16:01:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2.ebuild,v 1.3 2010/05/22 09:04:13 jlec Exp $
 
 EAPI="3"
 
@@ -140,7 +140,6 @@ src_configure() {
 			ewarn
 			myconf="${myconf} --disable-linux-caps --disable-threads"
 			ewarn "Threading support disabled"
-			epause 10
 		else
 			myconf="${myconf} --enable-linux-caps --enable-threads"
 			einfo "Threading support enabled"
