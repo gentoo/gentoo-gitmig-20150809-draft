@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.6 2010/04/24 17:58:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.7 2010/05/22 16:20:59 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~sh ~sparc ~x86"
 
 IUSE_LIBC="elibc_glibc"
 IUSE="accessibility +consolekit debug ipv6 gnome-keyring policykit selinux tcpd test xinerama +xklavier $IUSE_LIBC"
