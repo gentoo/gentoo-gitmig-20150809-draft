@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/xml-mapping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/ChangeLog,v 1.4 2010/05/22 13:09:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/ChangeLog,v 1.5 2010/05/22 13:26:53 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  xml-mapping-0.9.1.ebuild:
+  Install in the correct docdir.
 
   22 May 2010; Hans de Graaff <graaff@gentoo.org> xml-mapping-0.9.1.ebuild:
   test/unit is a build-time dependency.
