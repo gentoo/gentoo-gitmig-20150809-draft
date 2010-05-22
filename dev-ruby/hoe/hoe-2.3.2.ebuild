@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.3.2.ebuild,v 1.6 2009/09/05 15:18:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.3.2.ebuild,v 1.7 2010/05/22 14:23:12 flameeyes Exp $
 
 inherit gems
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 DESCRIPTION="Hoe extends rake to provide full project automation."
 HOMEPAGE="http://seattlerb.rubyforge.org/"

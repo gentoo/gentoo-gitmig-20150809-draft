@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.5.0.ebuild,v 1.4 2010/05/22 13:37:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.5.0.ebuild,v 1.5 2010/05/22 14:23:12 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 jruby"
@@ -27,7 +27,7 @@ IUSE=""
 #   test-time, at least for us;
 # - rubyforge is loaded at runtime when needed, so we don't strictly
 #   depend on it at runtime, but we need it for tests (for now);
-ruby_add_bdepend test "virtual/ruby-minitest >=dev-ruby/rubyforge-2.0.3"
+ruby_add_bdepend "test? ( virtual/ruby-minitest >=dev-ruby/rubyforge-2.0.3 )"
 
 ruby_add_rdepend ">=dev-ruby/rake-0.8.7"
 

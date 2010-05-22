@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.5-r2.ebuild,v 1.2 2010/02/21 00:30:14 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.5-r2.ebuild,v 1.3 2010/05/22 14:36:13 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -32,8 +32,9 @@ ruby_add_rdepend ">=dev-ruby/rake-0.8.3
 	~dev-ruby/activesupport-${PV}
 	~dev-ruby/actionmailer-${PV}
 	~dev-ruby/actionpack-${PV}"
-ruby_add_bdepend doc dev-ruby/redcloth
-ruby_add_bdepend test dev-ruby/mocha
+ruby_add_bdepend "
+	doc? ( dev-ruby/redcloth )
+	test? ( dev-ruby/mocha )"
 
 all_ruby_prepare() {
 	sed -i -e '/horo/d' Rakefile || die

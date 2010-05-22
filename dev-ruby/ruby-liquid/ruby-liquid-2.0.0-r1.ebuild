@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-liquid/ruby-liquid-2.0.0-r1.ebuild,v 1.1 2010/01/16 19:18:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-liquid/ruby-liquid-2.0.0-r1.ebuild,v 1.2 2010/05/22 14:22:02 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -26,5 +26,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86-fbsd ~x86"
 IUSE=""
 
-ruby_add_bdepend doc dev-ruby/hoe
-ruby_add_bdepend test dev-ruby/hoe
+ruby_add_bdepend "
+	doc? ( dev-ruby/hoe )
+	test? ( dev-ruby/hoe )"

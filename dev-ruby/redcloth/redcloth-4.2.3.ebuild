@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3.ebuild,v 1.1 2010/05/01 16:58:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3.ebuild,v 1.2 2010/05/22 14:29:25 flameeyes Exp $
 
 EAPI=2
 
@@ -36,8 +36,13 @@ RDEPEND="$RDEPEND"
 
 S="${WORKDIR}/jgarber-${PN}-*"
 
-ruby_add_bdepend 'dev-ruby/rake >=dev-ruby/echoe-3.0.1'
-ruby_add_bdepend test "dev-ruby/rspec dev-ruby/diff-lcs"
+ruby_add_bdepend "
+	dev-ruby/rake
+	>=dev-ruby/echoe-3.0.1
+	test? (
+		dev-ruby/rspec
+		dev-ruby/diff-lcs
+	)"
 
 pkg_setup() {
 	# Export the VERBOSE variable to avoid remapping of stdout and

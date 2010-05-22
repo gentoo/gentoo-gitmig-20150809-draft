@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.6.ebuild,v 1.1 2010/04/26 14:25:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.6.ebuild,v 1.2 2010/05/22 14:31:45 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -23,9 +23,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend test dev-ruby/hoe
-ruby_add_bdepend test virtual/ruby-minitest
-ruby_add_bdepend doc dev-ruby/hoe
+ruby_add_bdepend "
+	doc? ( >=dev-ruby/hoe-2.5.0 )
+	test? (
+		>=dev-ruby/hoe-2.5.0
+		virtual/ruby-minitest
+	)"
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}/${P}-ruby19.patch"
