@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.116 2010/05/17 08:37:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.117 2010/05/22 09:55:27 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> slang-2.2.2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #318313
 
   17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> slang-2.2.2.ebuild:
   x86 stable wrt bug #318313
