@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xcursor-neutral
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.12 2010/03/11 00:25:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-neutral/ChangeLog,v 1.13 2010/05/22 11:27:00 tove Exp $
+
+  22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove genstef from metadata.xml (#66339)
 
   11 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   xcursor-neutral-1.20.ebuild:
