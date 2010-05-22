@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.10 2010/05/22 15:56:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.11 2010/05/22 19:26:16 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -rubyzip-0.9.1.ebuild:
+  Drop old version.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   rubyzip-0.5.12.ebuild, rubyzip-0.9.1.ebuild:
