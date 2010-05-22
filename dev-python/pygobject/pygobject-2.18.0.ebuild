@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0.ebuild,v 1.16 2010/05/22 11:14:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0.ebuild,v 1.17 2010/05/22 18:10:10 arfrever Exp $
 
 inherit alternatives autotools gnome2 python virtualx
 
@@ -59,6 +59,7 @@ src_test() {
 
 src_install() {
 	gnome2_src_install
+	python_clean_installation_image
 
 	if use examples; then
 		insinto /usr/share/doc/${P}
@@ -70,13 +71,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/gtk-2.0
+	python_mod_optimize $(python_get_sitedir)/gtk-2.0 $(python_get_sitedir)/pygtk.py
 	alternatives_auto_makesym $(python_get_sitedir)/pygtk.py pygtk.py-[0-9].[0-9]
 	alternatives_auto_makesym $(python_get_sitedir)/pygtk.pth pygtk.pth-[0-9].[0-9]
-	python_mod_compile $(python_get_sitedir)/pygtk.py
 	python_need_rebuild
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/gtk-2.0 $(python_get_sitedir)/pygtk.py
 }

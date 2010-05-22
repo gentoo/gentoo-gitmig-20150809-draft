@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.10 2010/05/22 11:14:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.20.0.ebuild,v 1.11 2010/05/22 18:10:10 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -94,6 +94,8 @@ src_install() {
 	}
 	python_execute_function -s installation
 
+	python_clean_installation_image
+
 	if use examples; then
 		insinto /usr/share/doc/${P}
 		doins -r examples
@@ -111,7 +113,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup gtk-2.0 pygtk.py
 
 	create_symlinks() {
 		alternatives_auto_makesym $(python_get_sitedir)/pygtk.py pygtk.py-[0-9].[0-9]
