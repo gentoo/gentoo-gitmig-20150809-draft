@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-af
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-af/ChangeLog,v 1.16 2010/05/13 19:25:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-af/ChangeLog,v 1.17 2010/05/22 11:19:54 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> myspell-af-20060316.ebuild:
+  alpha/arm/ia64/sh/sparc stable
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> myspell-af-20060316.ebuild:
   Marked ppc64 stable.

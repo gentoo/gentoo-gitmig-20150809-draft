@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-hu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.25 2010/05/13 19:32:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-hu/ChangeLog,v 1.26 2010/05/22 11:19:55 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> myspell-hu-20060509.ebuild,
+  myspell-hu-20060531.ebuild, myspell-hu-20061117.ebuild,
+  myspell-hu-20080315.ebuild:
+  alpha/arm/ia64/sh/sparc stable
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> myspell-hu-20080315.ebuild:
   Marked ppc64 stable.
