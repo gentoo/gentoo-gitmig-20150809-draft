@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.20 2010/04/18 13:58:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.21 2010/05/22 19:41:41 flameeyes Exp $
+
+*locale-2.0.5-r1 (22 May 2010)
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -locale-2.0.4.ebuild, +locale-2.0.5-r1.ebuild:
+  Remove old version; add new ebuild based on ruby-fakegem.
 
   18 Apr 2010; <nixnut@gentoo.org> locale-2.0.5.ebuild:
   ppc stable #302042
