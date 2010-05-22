@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.67 2010/05/22 15:22:46 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.68 2010/05/22 19:23:51 wired Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -67,6 +67,18 @@ S=${WORKDIR}/${MY_P}
 # @DESCRIPTION:
 # Sets up S, MY_P, PATH, and LD_LIBRARY_PATH
 qt4-build_pkg_setup() {
+	if [[ "${PN}" == "qt-webkit" ]]; then
+		if [[ "${CFLAGS}" =~ "-ggdb" ]] || [[ "${CXXFLAGS}" =~ "-ggdb" ]]; then
+			echo
+			ewarn "Your \$C{,XX}FLAGS contain -ggdb. You may experience really"
+			ewarn "long compilation times and/or increased memory usage." 
+			ewarn "If compilation fails, please try removing -ggdb before"
+			ewarn "reporting a bug."
+			ewarn "For more info check out bug #307861"
+			echo
+		fi
+	fi
+
 	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
 
 	# Protect users by not allowing downgrades between releases
