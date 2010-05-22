@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.13 2010/03/07 09:49:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.14 2010/05/22 18:13:49 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -172,7 +172,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup wx-${SLOT}-gtk2-unicode wxversion.py
 	fdo-mime_desktop_database_update
 
 	create_symlinks() {
