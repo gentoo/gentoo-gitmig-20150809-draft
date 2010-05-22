@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/xml-simple
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.14 2009/12/15 15:27:19 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.15 2010/05/22 19:23:37 flameeyes Exp $
+
+*xml-simple-1.0.12-r2 (22 May 2010)
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -xml-simple-1.0.12.ebuild, xml-simple-1.0.12-r1.ebuild,
+  +xml-simple-1.0.12-r2.ebuild:
+  Drop old version, drop Ruby 1.9 and JRuby support from 12-r1 (stable
+  candidate bug #321085), add -r2 with all of them.
 
 *xml-simple-1.0.12-r1 (15 Dec 2009)
 
