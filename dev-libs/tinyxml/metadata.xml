@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>ssuominen@gentoo.org</email>
-    <name>Samuli Suominen</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
     <flag name='stl'>Compile with TIXML_USE_STL support</flag>
