@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2-r1.ebuild,v 1.2 2010/01/05 13:48:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2-r1.ebuild,v 1.3 2010/05/22 14:08:08 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 inherit autotools eutils ruby
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 DESCRIPTION="source code search engine"
 HOMEPAGE="http://gonzui.sourceforge.net/"
