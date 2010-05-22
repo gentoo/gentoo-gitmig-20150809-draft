@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r3.ebuild,v 1.1 2010/05/22 11:34:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r3.ebuild,v 1.2 2010/05/22 12:49:34 jlec Exp $
 
 EAPI="3"
 
@@ -422,7 +422,8 @@ src_install() {
 	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/ccp4/html
 
 	# Fix overlaps with other packages
-	rm -f "${D}"/usr/share/man/man1/rasmol.1* "${D}"/usr/lib/font84.dat || die
+	rm -f "${ED}"/usr/share/man/man1/rasmol.1* "${ED}"/usr/lib/font84.dat || die
+	mv "${ED}"/usr/share/man/man1/truncate{,-ccp4}* || die
 
 	cat >> "${T}"/baubles <<- EOF
 	#!${EPREFIX}/bin/bash
