@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libinfinity
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.1 2009/04/08 19:54:27 dev-zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.2 2010/05/22 10:56:57 tove Exp $
+
+  22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove humpback from metadata.xml (#34793)
 
 *libinfinity-0.2.0 (08 Apr 2009)
 

@@ -5,8 +5,5 @@
 <maintainer>
   <email>maintainer-needed@gentoo.org</email>
 </maintainer>
-<maintainer>
-  <email>humpback@gentoo.org</email>
-</maintainer>
      <longdescription>Framework to syncronise changes within a text documents to other participants of a session</longdescription>
 </pkgmetadata>
