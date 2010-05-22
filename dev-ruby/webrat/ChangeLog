@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/webrat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.8 2010/04/27 05:44:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.9 2010/05/22 19:24:38 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -webrat-0.5.3.ebuild, -webrat-0.6.0.ebuild, -webrat-0.7.0.ebuild:
+  Cleanup old versions.
 
 *webrat-0.7.1 (27 Apr 2010)
 
