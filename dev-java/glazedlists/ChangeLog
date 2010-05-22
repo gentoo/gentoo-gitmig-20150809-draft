@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/glazedlists
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.20 2010/05/22 04:55:20 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.21 2010/05/22 12:46:59 caster Exp $
+
+  22 May 2010; Vlastimil Babka <caster@gentoo.org>
+  -glazedlists-1.5.0.ebuild, -files/glazedlists-1.5.0-build.xml.patch,
+  -files/glazedlists-1.5.0-tests.patch, -glazedlists-1.7.0.ebuild,
+  metadata.xml:
+  Remove old.
 
   22 May 2010; Kenneth Prugh <ken69267@gentoo.org>
   glazedlists-1.7.0-r1.ebuild:
