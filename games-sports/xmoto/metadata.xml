@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>games</herd>
-  <maintainer>
-    <email>ssuominen@gentoo.org</email>
-  </maintainer>
   <use>
     <flag name="editor">Depend on inkscape, scripts to convert svg to level (svg2lvl)</flag>
   </use>
