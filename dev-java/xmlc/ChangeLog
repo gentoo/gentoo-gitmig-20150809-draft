@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.16 2010/05/13 16:15:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.17 2010/05/22 05:16:22 ken69267 Exp $
+
+  22 May 2010; Kenneth Prugh <ken69267@gentoo.org> xmlc-2.3.1.ebuild:
+  amd64 stable, bug #308239
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> xmlc-2.3.1.ebuild:
   Marked ppc stable for bug #308239.
