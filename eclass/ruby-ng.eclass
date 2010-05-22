@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.14 2010/05/21 23:18:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.15 2010/05/22 03:39:50 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -415,9 +415,9 @@ _each_ruby_check_install() {
 		> "${T}"/ruby-ng-${_ruby_implementation}-mislink.log
 
 	if [[ -s "${T}"/ruby-ng-${_ruby_implementation}-mislink.log ]]; then
-		ewarn "Extensions installed for ${_ruby_implementation} with missing links to ${libruby}"
+		ewarn "Extensions installed for ${_ruby_implementation} with missing links to ${libruby_soname}"
 		ewarn $(< "${T}"/ruby-ng-${_ruby_implementation}-mislink.log )
-		die "Missing links to ${libruby}"
+		die "Missing links to ${libruby_soname}"
 	fi
 }
 
