@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/thumbs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.21 2009/05/05 17:33:16 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.22 2010/05/22 15:30:45 ulm Exp $
+
+  22 May 2010; Ulrich Mueller <ulm@gentoo.org> files/50thumbs-gentoo.el,
+  thumbs-2.0.ebuild, -files/51thumbs-gentoo.el:
+  Fix HOMEPAGE. Remove stale site-init file.
 
   05 May 2009; Ulrich Mueller <ulm@gentoo.org> thumbs-2.0.ebuild:
   Fix dependencies: media-gfx/imagemagick is not needed at build time.
