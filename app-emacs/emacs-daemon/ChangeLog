@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.37 2010/05/22 14:58:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.38 2010/05/22 15:02:07 ulm Exp $
+
+  22 May 2010; Ulrich Mueller <ulm@gentoo.org> -emacs-daemon-0.15.ebuild,
+  -emacs-daemon-0.16.ebuild:
+  Remove old.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> emacs-daemon-0.17.ebuild:
   stable amd64, bug 302977
