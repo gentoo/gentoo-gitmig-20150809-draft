@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r4.ebuild,v 1.2 2010/05/11 12:20:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r4.ebuild,v 1.3 2010/05/22 20:06:49 ken69267 Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/jakarta/commons/jelly/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="doc test source"
 
 RDEPEND=">=virtual/jre-1.4
