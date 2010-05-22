@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.44 2010/05/22 15:09:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.45 2010/05/22 20:14:53 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -daemons-1.0.5.ebuild:
+  Remove old versions.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   daemons-1.0.5.ebuild:

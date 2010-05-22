@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.35 2010/05/22 15:46:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.36 2010/05/22 20:13:34 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ruby-fcgi-0.8.7-r2.ebuild, -ruby-fcgi-0.8.7-r3.ebuild:
+  Remove old versions.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-fcgi-0.8.7-r2.ebuild:
