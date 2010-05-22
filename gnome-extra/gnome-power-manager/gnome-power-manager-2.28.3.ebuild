@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.28.3.ebuild,v 1.2 2010/05/04 16:18:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.28.3.ebuild,v 1.3 2010/05/22 16:01:40 armin76 Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~sparc ~x86"
 IUSE="doc +hal policykit test"
 
 # FIXME: Interactive testsuite (upstream ? I'm so...pessimistic)
