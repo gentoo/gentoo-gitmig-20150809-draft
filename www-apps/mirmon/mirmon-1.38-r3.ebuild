@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/mirmon-1.38-r3.ebuild,v 1.3 2010/05/10 16:23:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/mirmon-1.38-r3.ebuild,v 1.4 2010/05/22 22:44:54 darkside Exp $
 
 inherit webapp eutils
 WEBAPP_MANUAL_SLOT="yes"
@@ -11,7 +11,7 @@ SRC_URI="http://people.cs.uu.nl/henkp/mirmon/src/$PN/src/$P.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.5-r2"
@@ -38,8 +38,8 @@ src_install() {
 		dodoc ${file}
 		rm -f ${file}
 	done
-	cp -R icons mirmon.html "${D}"/${MY_HTDOCSDIR}
-	rm -rf icons mirmon.html
+	cp -R icons "${D}"/${MY_HTDOCSDIR}
+	rm -rf icons 
 	cp -R . "${D}"/${MY_HOSTROOTDIR}
 
 	webapp_src_install
