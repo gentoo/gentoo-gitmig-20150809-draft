@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/heckle-1.4.3-r1.ebuild,v 1.6 2010/05/22 13:31:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/heckle-1.4.3-r1.ebuild,v 1.7 2010/05/22 23:18:05 a3li Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"

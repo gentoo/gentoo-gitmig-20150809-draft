@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.7.0-r1.ebuild,v 1.6 2010/05/22 15:39:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.7.0-r1.ebuild,v 1.7 2010/05/22 23:01:03 a3li Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 # Tests for now seem only to work when rubygems is fully installed for
 # the implementation and that for now only means Ruby 1.8

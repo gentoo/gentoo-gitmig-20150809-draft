@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.6.0.ebuild,v 1.2 2010/05/01 08:06:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-1.6.0.ebuild,v 1.3 2010/05/22 22:57:28 a3li Exp $
 
 EAPI=2
 # jruby → tests fail, reported upstream
 # http://rubyforge.org/tracker/index.php?func=detail&aid=27657&group_id=1040&atid=4097
-USE_RUBY="ruby18 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 
