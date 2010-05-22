@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.18 2010/03/15 05:45:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.19 2010/05/22 06:50:38 jlec Exp $
+
+*pgplot-5.2.2-r4 (22 May 2010)
+
+  22 May 2010; Justin Lecher <jlec@gentoo.org> pgplot-5.2.2-r3.ebuild,
+  +pgplot-5.2.2-r4.ebuild, +files/pgplot-ldflags.patch:
+  LDFLAGS respected, fix parallel make issue
 
   15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
   pgplot-5.2.2-r3.ebuild:
