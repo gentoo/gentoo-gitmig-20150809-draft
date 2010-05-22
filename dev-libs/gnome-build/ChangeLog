@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.31 2010/04/21 22:08:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.32 2010/05/22 15:56:01 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> gnome-build-2.24.1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #313563
 
   21 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-build-0.1.7.ebuild, -gnome-build-0.2.4.ebuild,

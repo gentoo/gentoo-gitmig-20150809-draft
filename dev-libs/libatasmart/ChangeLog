@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.6 2010/05/13 17:28:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.7 2010/05/22 15:56:32 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> libatasmart-0.17.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #313563
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> libatasmart-0.16.ebuild,
   libatasmart-0.17.ebuild:
