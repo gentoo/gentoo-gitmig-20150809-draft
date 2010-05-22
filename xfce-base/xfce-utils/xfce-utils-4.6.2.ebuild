@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.6.2.ebuild,v 1.1 2010/05/22 16:30:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.6.2.ebuild,v 1.2 2010/05/22 18:34:19 angelos Exp $
 
 EAPI=2
 inherit xfconf
@@ -35,7 +35,7 @@ pkg_setup() {
 		$(use_enable dbus)
 		$(use_enable debug)
 		--with-vendor-info=Gentoo
-		--with-xsession-prefix="${EPREFIX}"/usr"
+		--with-xsession-prefix=${EPREFIX}/usr"
 	DOCS="AUTHORS ChangeLog NEWS README"
 }
 

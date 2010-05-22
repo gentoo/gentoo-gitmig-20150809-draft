@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.146 2010/05/22 16:30:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.147 2010/05/22 18:34:19 angelos Exp $
+
+  22 May 2010; Christoph Mende <angelos@gentoo.org> xfce-utils-4.6.1.ebuild,
+  xfce-utils-4.6.2.ebuild:
+  Removed quotes that should have never been there, thanks to Samuli
+  Souminen
 
 *xfce-utils-4.6.2 (22 May 2010)
 
