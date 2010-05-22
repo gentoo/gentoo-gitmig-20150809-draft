@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.4.3.ebuild,v 1.1 2010/05/07 05:43:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.4.3.ebuild,v 1.2 2010/05/22 13:36:28 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -20,11 +20,12 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x8
 SLOT="0"
 IUSE=""
 
-RDEPEND=""
-DEPEND="dev-util/ragel"
+RDEPEND="${RDEPEND}"
+DEPEND="${DEPEND}
+	dev-util/ragel"
 
-ruby_add_bdepend test virtual/ruby-test-unit
-ruby_add_bdepend dev-ruby/rake
+ruby_add_bdepend "dev-ruby/rake
+	test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
 	# Avoid building the extension twice!

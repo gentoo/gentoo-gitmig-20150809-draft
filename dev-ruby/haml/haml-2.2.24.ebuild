@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-2.2.24.ebuild,v 1.1 2010/04/30 08:19:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-2.2.24.ebuild,v 1.2 2010/05/22 13:28:36 flameeyes Exp $
 
 EAPI=2
 
@@ -40,5 +40,12 @@ each_ruby_install() {
 ruby_add_rdepend dev-ruby/hpricot
 
 # It could use merb during testing as well, but it's not mandatory
-ruby_add_bdepend test "virtual/ruby-test-unit dev-ruby/actionpack"
-ruby_add_bdepend doc "dev-ruby/yard dev-ruby/maruku"
+ruby_add_bdepend "
+	test? (
+		virtual/ruby-test-unit
+		dev-ruby/actionpack
+	)
+	doc? (
+		dev-ruby/yard
+		dev-ruby/maruku
+	)"
