@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.46 2010/05/19 22:29:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.47 2010/05/22 21:03:17 arfrever Exp $
+
+  22 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cython-0.12.1.ebuild:
+  amd64 stable (tested by rullzer) (bug #308207).
 
   19 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cython-0.12.1.ebuild:
