@@ -1,17 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/consed-19-r1.ebuild,v 1.2 2010/05/22 08:53:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/consed-19-r2.ebuild,v 1.1 2010/05/22 08:53:37 jlec Exp $
+
+EAPI=3
 
 inherit toolchain-funcs
 
-DESCRIPTION="Consed: a genome sequence finishing program"
+DESCRIPTION="A genome sequence finishing program"
 HOMEPAGE="http://bozeman.mbt.washington.edu/consed/consed.html"
 SRC_URI="${P}-sources.tar.gz
 	${P}-linux.tar.gz"
 
 LICENSE="phrap"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/openmotif"
@@ -32,14 +34,14 @@ pkg_nofetch() {
 	einfo "and place it in ${DISTDIR}"
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i '/#include/ s/<new.h>/<new>/' "${S}/main.cpp" || die
-	sed -i -e '/CLIBS=/ s/$/ -lXm -lXt -lSM -lICE -lXext -lXmu -lXp -lm/' \
+	sed -i \
+		-e '/CLIBS=/ s/$/ -lXm -lXt -lSM -lICE -lXext -lXmu -lXp -lm/' \
 		-e 's/ARCHIVES=/ARCHIVES=\n_ARCHIVES=/' \
 		-e 's/CFLGS=/CFLGS= ${CFLAGS} /' "${S}/makefile" || die
 	sed -i -e 's/CFLAGS=/CFLAGS += /' "${S}"/misc/*/Makefile || die
-	sed -i 's!\($szPhredParameterFile =\).*!\1 $ENV{PHRED_PARAMETER_FILE} || "/usr/share/phred/phredpar.dat";!' "${S}/scripts/"* || die
+	sed -i 's!\($szPhredParameterFile =\).*!\1 $ENV{PHRED_PARAMETER_FILE} || "${EPREFIX}/usr/share/phred/phredpar.dat";!' "${S}/scripts/"* || die
 }
 
 src_compile() {
@@ -53,14 +55,14 @@ src_install() {
 	dobin consed misc/{mktrace/mktrace,phd2fasta/phd2fasta,454/sff2scf} || die
 	dobin scripts/* contributions/* || die
 	insinto /usr/lib/screenLibs
-	doins misc/*.{fa*,seq}
+	doins misc/*.{fa*,seq} || die
 	insinto /usr/share/${PN}/examples
 	doins -r standard polyphred autofinish assembly_view 454_newbler \
 		align454reads align454reads_answer solexa_example \
 		solexa_example_answer selectRegions selectRegionsAnswer || die
-	echo 'CONSED_HOME=/usr' > "${S}/99consed"
+	echo 'CONSED_HOME=${EPREFIX}/usr' > "${S}/99consed"
 	doenvd "${S}/99consed" || die
-	dodoc README.txt *_announcement.txt
+	dodoc README.txt *_announcement.txt || die
 }
 
 pkg_postinst() {
