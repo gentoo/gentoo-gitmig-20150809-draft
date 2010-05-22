@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.1.ebuild,v 1.3 2010/04/05 04:16:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.1.ebuild,v 1.4 2010/05/22 09:02:59 jlec Exp $
 
 EAPI="3"
 
@@ -63,6 +63,5 @@ pkg_postinst() {
 		einfo "$ DISPLAY=\"\" mp-5"
 		einfo "to use text mode!"
 		einfo
-		epause 5
 	fi
 }
