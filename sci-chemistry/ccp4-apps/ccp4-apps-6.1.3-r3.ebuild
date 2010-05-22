@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r2.ebuild,v 1.6 2010/05/22 11:34:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r3.ebuild,v 1.1 2010/05/22 11:34:22 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2"
 
@@ -71,6 +71,7 @@ TKDEPS="
 
 SCILIBS="
 	~sci-libs/ccp4-libs-${PV}
+	!<=sci-libs/ccp4-libs-${PV}-r2
 	sci-libs/clipper
 	=sci-libs/fftw-2*
 	sci-libs/mmdb
@@ -81,7 +82,7 @@ SCIAPPS="
 	sci-chemistry/pdb-extract
 	sci-chemistry/pymol
 	sci-chemistry/rasmol
-	sci-chemistry/oasis"
+	>=sci-chemistry/oasis-4.0-r1"
 
 RDEPEND="
 	${TKDEPS}
@@ -137,14 +138,14 @@ src_prepare() {
 	ccp_patch "${FILESDIR}"/${PV}-dont-build-libs.patch
 
 	# coreutils installs a binary called truncate
-	ccp_patch "${FILESDIR}"/${PV}-rename-truncate.patch
-	mv ./doc/truncate.doc ./doc/ftruncate.doc || die
-	mv ./html/truncate.html ./html/ftruncate.html || die
+#	ccp_patch "${FILESDIR}"/${PV}-rename-truncate.patch
+#	mv ./doc/truncate.doc ./doc/ftruncate.doc || die
+#	mv ./html/truncate.html ./html/ftruncate.html || die
 
 	# conflicts with media-libs/raptor
-	ccp_patch "${FILESDIR}"/${PV}-rename-rapper.patch
-	mv ./doc/rapper.doc ./doc/rappermc.doc || die
-	mv ./html/rapper.html ./html/rappermc.html || die
+#	ccp_patch "${FILESDIR}"/${PV}-rename-rapper.patch
+#	mv ./doc/rapper.doc ./doc/rappermc.doc || die
+#	mv ./html/rapper.html ./html/rappermc.html || die
 
 	# We have seperate ebuilds for those
 	for bin in molref xia scala imosflm balbes; do
@@ -185,7 +186,7 @@ src_prepare() {
 		-e '/^rappermc_LDADD/s:../gc7.0/libgc.la ../libxml2/libxml2.la:-lgc -lxml2:g' \
 		LOOP/Makefile.am
 	sed -i \
-		-e '/^INCLUDES/s:-I../gc7.0/include -I../libxml2/include:-I/usr/include/gc -I/usr/include/libxml2:g' \
+		-e '/^INCLUDES/s:-I../gc7.0/include -I../libxml2/include:-I${EPREFIX}/usr/include/gc -I${EPREFIX}/usr/include/libxml2:g' \
 		LOOP/Makefile.am
 	eautoreconf
 	popd 2>/dev/null
@@ -232,12 +233,14 @@ src_configure() {
 	sed -i \
 		-e "s~^\(setenv CCP4_MASTER.*\)/.*~\1${WORKDIR}~g" \
 		-e "s~^\(export CCP4_MASTER.*\)/.*~\1${WORKDIR}~g" \
-		-e "s~^\(setenv CCP4I_TCLTK.*\)/usr/local/bin~\1/usr/bin~g" \
-		-e "s~^\(export CCP4I_TCLTK.*\)/usr/local/bin~\1/usr/bin~g" \
+		-e "s~^\(.*export CBIN=.*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
+		-e "s~^\(.*setenv CBIN .*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
+		-e "s~^\(setenv CCP4I_TCLTK.*\)/usr/local/bin~\1${EPREFIX}/usr/bin~g" \
+		-e "s~^\(export CCP4I_TCLTK.*\)/usr/local/bin~\1${EPREFIX}/usr/bin~g" \
 		"${S}"/include/ccp4.setup*
 
 	# Set up variables for build
-	source "${S}"/include/ccp4.setup
+	source "${S}"/include/ccp4.setup-sh
 
 	export CC=$(tc-getCC)
 	export CXX=$(tc-getCXX)
@@ -248,13 +251,13 @@ src_configure() {
 	export FOPTIM=${FFLAGS:- -O2}
 	export BINSORT_SCR="${T}"
 	export CCP4_MASTER="${WORKDIR}"
-	export CCP4I_TCLTK="/usr/bin"
+	export CCP4I_TCLTK="${EPREFIX}/usr/bin"
 
 	# Can't use econf, configure rejects unknown options like --prefix
 	./configure \
 		$(use_enable X x) \
 		--with-shared-libs \
-		--with-fftw=/usr \
+		--with-fftw="${EPREFIX}"/usr \
 		--with-warnings \
 		--disable-pdb_extract \
 		--disable-cctbx \
@@ -272,9 +275,9 @@ src_configure() {
 	econf \
 		--prefix="${S}" \
 		--with-ccp4="${S}" \
-		--with-clipper=/usr \
-		--with-fftw=/usr \
-		--with-mmdb=/usr \
+		--with-clipper="${EPREFIX}"/usr \
+		--with-fftw="${EPREFIX}"/usr \
+		--with-mmdb="${EPREFIX}"/usr \
 		CXX=$(tc-getCXX) \
 		|| die
 	popd 2>/dev/null
@@ -297,7 +300,7 @@ src_compile() {
 
 src_install() {
 	# Set up variables for build
-	source "${S}"/include/ccp4.setup
+	source "${S}"/include/ccp4.setup-sh
 
 #	make install || die "install failed"
 
@@ -316,7 +319,7 @@ src_install() {
 #		-e "s~^\(.*setenv PYTHONPATH .*\)\${CCP4}.*~\1\${CCP4}/share/ccp4/python~g" \
 #		-e "s~^\(.*export PYTHONPATH.*\)\${CCP4}.*~\1\${CCP4}/share/ccp4/python~g" \
 	sed -i \
-		-e "s~^\(setenv CCP4_MASTER.*\)${WORKDIR}~\1/usr~g" \
+		-e "s~^\(setenv CCP4_MASTER.*\)${WORKDIR}~\1${EPREFIX}/usr~g" \
 		-e "s~^\(setenv CCP4.*\$CCP4_MASTER\).*~\1~g" \
 		-e "s~^\(setenv CCP4I_TOP\).*~\1 \$CCP4/$(get_libdir)/ccp4/ccp4i~g" \
 		-e "s~^\(setenv DBCCP4I_TOP\).*~\1 \$CCP4/share/ccp4/dbccp4i~g" \
@@ -325,6 +328,7 @@ src_install() {
 		-e "s~^\(.*setenv CLIBD_MON .*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
 		-e "s~^\(.*setenv MOLREPLIB .*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
 		-e "s~^\(.*setenv CLIB .*\)\$CCP4.*~\1\$CCP4/$(get_libdir)~g" \
+		-e "s~^\(.*setenv CBIN .*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
 		-e "s~^\(export CCP4_MASTER.*\)${WORKDIR}~\1/usr~g" \
 		-e "s~^\(export CCP4.*\$CCP4_MASTER\).*~\1~g" \
 		-e "s~^\(export CCP4I_TOP\).*~\1=\$CCP4/$(get_libdir)/ccp4/ccp4i~g" \
@@ -334,6 +338,7 @@ src_install() {
 		-e "s~^\(.*export CLIBD_MON.*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
 		-e "s~^\(.*export MOLREPLIB.*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
 		-e "s~^\(.*export CLIB=.*\)\$CCP4.*~\1\$CCP4/$(get_libdir)~g" \
+		-e "s~^\(.*export CBIN=.*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
 		-e "/IMOSFLM_VERSION/d" \
 		"${S}"/include/ccp4.setup* || die
 
@@ -348,7 +353,8 @@ src_install() {
 	rm -f "${S}"/bin/{mrbump,pydbviewer} || die
 
 	# Bins
-	dobin "${S}"/bin/* || die
+	exeinto /usr/libexec/ccp4/bin/
+	doexe "${S}"/bin/* || die
 
 	# Libs
 	for file in "${S}"/lib/*; do
@@ -419,16 +425,17 @@ src_install() {
 	rm -f "${D}"/usr/share/man/man1/rasmol.1* "${D}"/usr/lib/font84.dat || die
 
 	cat >> "${T}"/baubles <<- EOF
-	#!/bin/bash
+	#!${EPREFIX}/bin/bash
 	exec $(PYTHON) \${CCP4}/share/ccp4/smartie/baubles.py
 	EOF
 
-	dobin "${T}"/baubles || die
+	exeinto /usr/libexec/ccp4/bin/
+	doexe "${T}"/baubles || die
 }
 
 pkg_postinst() {
 	einfo "The Web browser defaults to firefox. Change CCP4_BROWSER"
-	einfo "in /etc/profile.d/ccp4.setup* to modify this."
+	einfo "in ${EPREFIX}/etc/profile.d/ccp4.setup* to modify this."
 }
 
 # Epatch wrapper for bulk patching
