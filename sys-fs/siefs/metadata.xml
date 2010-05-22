@@ -3,9 +3,4 @@
 <pkgmetadata>
   <herd>kernel-misc</herd>
   <herd>mobile-phone</herd>
-  <maintainer>
-    <email>genstef@gentoo.org</email>
-    <name>Stefan Schweizer</name>
-    <description>I do not own the device, so please contact me, if you own it and want to take this over</description>
-  </maintainer>
 </pkgmetadata>
