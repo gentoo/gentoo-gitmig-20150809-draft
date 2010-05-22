@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.16 2010/05/22 12:18:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.17 2010/05/22 12:31:03 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -112,20 +112,26 @@ ruby_samelib() {
 	echo "[${res%,}]"
 }
 
-_ruby_implementation_depend() {
-	echo "ruby_targets_${1}? ( ${2}[ruby_targets_${1}] )"
-}
-
-_ruby_atoms_samelib() {
-	local samelib=$(ruby_samelib)
-
+_ruby_atoms_samelib_generic() {
+	echo "RUBYTARGET? ("
 	for token in $*; do
 		case "$token" in
 			"||" | "(" | ")" | *"?")
 				echo "${token}" ;;
 			*)
-				echo "${token}${samelib}" ;;
+				# TODO we need to deal with merging USE-based
+				# dependencies
+				echo "${token}[RUBYTARGET]" ;;
 		esac
+	done
+	echo ")"
+}
+
+_ruby_atoms_samelib() {
+	local atoms=$(_ruby_atoms_samelib_generic "$*")
+
+	for _ruby_implementation in $USE_RUBY; do
+		echo "${atoms//RUBYTARGET/ruby_targets_${_ruby_implementation}}"
 	done
 }
 
