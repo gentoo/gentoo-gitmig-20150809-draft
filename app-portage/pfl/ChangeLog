@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.8 2010/05/10 21:27:52 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.9 2010/05/22 14:49:41 pacho Exp $
+
+  22 May 2010; Pacho Ramos <pacho@gentoo.org> pfl-1.8.1.ebuild:
+  stable amd64, bug 301660
 
   10 May 2010; Daniel Pielmeier <billie@gentoo.org> pfl-2.0.ebuild:
   Add dev-python/pyxml dependency, thanks to damage on IRC.
