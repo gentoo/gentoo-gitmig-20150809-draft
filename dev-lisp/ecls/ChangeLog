@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.35 2010/04/12 11:53:52 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.36 2010/05/22 15:21:17 pacho Exp $
+
+  22 May 2010; Pacho Ramos <pacho@gentoo.org> ecls-9.12.3.ebuild:
+  stable amd64, bug 303699
 
 *ecls-10.4.1 (12 Apr 2010)
 
