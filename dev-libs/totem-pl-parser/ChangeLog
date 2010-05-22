@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.53 2010/05/14 20:04:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.54 2010/05/22 16:08:46 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org>
+  totem-pl-parser-2.28.2.ebuild, totem-pl-parser-2.28.3.ebuild:
+  Add ~arm
 
 *totem-pl-parser-2.28.3 (14 May 2010)
 
