@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.99 2010/05/16 19:48:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.100 2010/05/22 13:33:43 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> rake-0.8.7.ebuild,
+  rake-0.8.7-r3.ebuild, rake-0.8.7-r4.ebuild:
+  Add ~s390
 
   16 May 2010; Markus Meier <maekke@gentoo.org> rake-0.8.7-r3.ebuild:
   amd64 stable, bug #311603
