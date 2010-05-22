@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.47 2010/02/10 16:21:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.48 2010/05/22 19:06:35 angelos Exp $
+
+*terminal-0.4.5 (22 May 2010)
+
+  22 May 2010; Christoph Mende <angelos@gentoo.org> +terminal-0.4.5.ebuild:
+  Version bump
 
 *terminal-0.4.4 (10 Feb 2010)
 
