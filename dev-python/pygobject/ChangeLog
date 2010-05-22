@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.94 2010/05/09 17:31:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.95 2010/05/22 11:14:26 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> pygobject-2.18.0.ebuild,
+  pygobject-2.18.0-r2.ebuild, pygobject-2.20.0.ebuild:
+  Drop s390 keywords
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> pygobject-2.20.0.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #312877
