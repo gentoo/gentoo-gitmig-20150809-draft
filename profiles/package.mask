@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11557 2010/05/21 19:50:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11558 2010/05/22 08:41:36 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (16 May 2010)
+# bug 296755 296651 252649
+# breaks with newer glibc, gcc and deps
+# file collision with other packages
+# no one cares and fixes that
+# nearly fully replaced by other packages
+# Last rited today
+sci-libs/rcsb-data
+sci-chemistry/validation
+sci-chemistry/maxit
+=pdb-extract/pdb-extract-1.700
 
 # Luca Barbato <lu_zero@gentoo.org> (21 May 2010)
 # development release

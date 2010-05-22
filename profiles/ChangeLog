@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4195 2010/05/21 14:57:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4196 2010/05/22 08:41:36 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 May 2010; Justin Lecher <jlec@gentoo.org> package.mask:
+  Last rite of sci-chemistry/maxit sci-chemistry/validation
+  sci-libs/rcsb-data
 
   21 May 2010; Patrick Lauer <patrick@gentoo.org> package.mask:
   Removing ivtv-utils mask by beandog's request
