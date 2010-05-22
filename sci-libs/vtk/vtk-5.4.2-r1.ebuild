@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.9 2010/05/21 18:34:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.10 2010/05/22 09:19:22 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -31,7 +31,8 @@ RDEPEND="mpi? ( || (
 	java? ( >=virtual/jre-1.5 )
 	qt4? ( x11-libs/qt-core:4
 			x11-libs/qt-opengl:4
-			x11-libs/qt-gui:4 )
+			x11-libs/qt-gui:4
+			x11-libs/qt-sql )
 	examples? ( x11-libs/qt-core:4[qt3support]
 			x11-libs/qt-gui:4[qt3support] )
 	dev-libs/expat
@@ -56,7 +57,6 @@ pkg_setup() {
 	einfo "using parallel make. Hence, if you experience a build"
 	einfo "failure please try re-emerging with MAKEOPTS=\"-j1\" first."
 	echo
-	epause 5
 
 	java-pkg-opt-2_pkg_setup
 

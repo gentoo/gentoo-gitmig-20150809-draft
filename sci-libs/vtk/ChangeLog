@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.66 2010/04/25 11:33:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.67 2010/05/22 09:19:22 jlec Exp $
+
+  22 May 2010; Justin Lecher <jlec@gentoo.org> vtk-5.4.2.ebuild,
+  vtk-5.4.2-r1.ebuild:
+  Add x11-libs/qt-sql to deps, #301684
 
   25 Apr 2010; Justin Lecher <jlec@gentoo.org> vtk-5.4.2-r1.ebuild:
   Python ABI fixes, #316229
