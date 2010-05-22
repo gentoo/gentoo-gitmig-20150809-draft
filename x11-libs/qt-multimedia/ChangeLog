@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.17 2010/04/18 13:04:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.18 2010/05/22 16:05:49 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> qt-multimedia-4.6.1.ebuild,
+  qt-multimedia-4.6.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #293671
 
   18 Apr 2010; <nixnut@gentoo.org> qt-multimedia-4.6.2.ebuild:
   ppc stable #297299
