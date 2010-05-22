@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/engine_pkcs11-0.1.8.ebuild,v 1.5 2010/05/06 05:21:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/engine_pkcs11-0.1.8.ebuild,v 1.6 2010/05/22 15:23:35 pacho Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.opensc-project.org/engine_pkcs11"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND=">=dev-libs/libp11-0.2.5
