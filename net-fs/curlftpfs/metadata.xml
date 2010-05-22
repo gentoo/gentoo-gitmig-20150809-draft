@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>net-fs</herd>
   <maintainer>
-    <email>genstef@gentoo.org</email>
-    <name>Stefan Schweizer</name>
-  </maintainer>
-  <maintainer>
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
   </maintainer>
