@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.8 2010/05/15 15:53:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.16.0-r1.ebuild,v 1.9 2010/05/22 20:13:01 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit alternatives autotools eutils flag-o-matic gnome.org python virtualx
 
@@ -49,26 +50,8 @@ src_prepare() {
 }
 
 src_configure() {
-	configuration() {
-		use hppa && append-flags -ffunction-sections
-		econf $(use_enable doc docs) --enable-thread
-	}
-	python_execute_function -s configuration
-}
-
-src_compile() {
-	python_execute_function -d -s
-}
-
-src_install() {
-	python_execute_function -d -s
-	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
-
-	if use examples; then
-		rm examples/Makefile*
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
+	use hppa && append-flags -ffunction-sections
+	python_src_configure $(use_enable doc docs) --enable-thread
 }
 
 src_test() {
@@ -84,6 +67,18 @@ src_test() {
 		Xemake check-local
 	}
 	python_execute_function -s testing
+}
+
+src_install() {
+	python_src_install
+	python_clean_installation_image
+	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
+
+	if use examples; then
+		rm examples/Makefile*
+		insinto /usr/share/doc/${PF}
+		doins -r examples
+	fi
 }
 
 pkg_postinst() {

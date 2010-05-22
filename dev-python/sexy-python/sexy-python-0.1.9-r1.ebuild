@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9-r1.ebuild,v 1.7 2010/02/28 12:46:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9-r1.ebuild,v 1.8 2010/05/22 20:17:05 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 
@@ -25,5 +25,6 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
 	python_src_install
+	python_clean_installation_image
 	dodoc AUTHORS ChangeLog NEWS README
 }
