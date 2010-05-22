@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20090113.ebuild,v 1.5 2010/02/11 13:37:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20090113.ebuild,v 1.6 2010/05/22 15:34:15 pacho Exp $
 
 DESCRIPTION="M(easuring)buffer is a replacement for buffer with additional functionality"
 HOMEPAGE="http://www.maier-komor.de/mbuffer.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.maier-komor.de/software/mbuffer/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/mbuffer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.23 2010/02/11 13:37:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.24 2010/05/22 15:34:15 pacho Exp $
+
+  22 May 2010; Pacho Ramos <pacho@gentoo.org> mbuffer-20090113.ebuild:
+  stable amd64, bug 304089
 
   11 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   mbuffer-20090113.ebuild:
