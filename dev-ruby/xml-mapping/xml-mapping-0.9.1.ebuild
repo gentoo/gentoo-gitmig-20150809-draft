@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/xml-mapping-0.9.1.ebuild,v 1.1 2010/05/22 13:06:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/xml-mapping-0.9.1.ebuild,v 1.2 2010/05/22 13:09:00 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "test? ( virtual/ruby-test-unit )"
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 each_ruby_test() {
 	${RUBY} test/all_tests.rb || die "Failed to run tests."
