@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.17 2010/05/22 12:31:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.18 2010/05/22 12:45:03 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -113,6 +113,7 @@ ruby_samelib() {
 }
 
 _ruby_atoms_samelib_generic() {
+	eshopts_push -o noglob
 	echo "RUBYTARGET? ("
 	for token in $*; do
 		case "$token" in
@@ -125,6 +126,7 @@ _ruby_atoms_samelib_generic() {
 		esac
 	done
 	echo ")"
+	eshopts_pop
 }
 
 _ruby_atoms_samelib() {
