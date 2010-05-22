@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-  <email>humpback@gentoo.org</email>
-	<description>In contact with upstream to fix errors.</description>
-</maintainer>
 	<longdescription>Jardinains 2!, the sequel to Jardinains 1! (surprisingly
 	enough) is a fairly straightforward game. You have a paddle. You have a
 	ball. You have a whole bunch of bricks. Inside these bricks live ‘nains.
