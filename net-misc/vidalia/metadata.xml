@@ -5,9 +5,6 @@
 <maintainer>
   <email>maintainer-needed@gentoo.org</email>
 </maintainer>
-<maintainer>
-  <email>humpback@gentoo.org</email>
-</maintainer>
 <use>
 	<flag name='tor'>Allow to use a local tor setup</flag>
 </use>

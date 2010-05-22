@@ -3,9 +3,6 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>humpback@gentoo.org</email>
-  </maintainer>
-  <maintainer>
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
   </maintainer>
