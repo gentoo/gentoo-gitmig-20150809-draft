@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fxruby
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.82 2009/08/22 21:11:52 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.83 2010/05/22 15:16:02 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  fxruby-1.6.18-r1.ebuild, fxruby-1.6.19.ebuild:
+  Various cleanups.
 
   22 Aug 2009; Hans de Graaff <graaff@gentoo.org> -fxruby-1.6.13.ebuild:
   Remove old version.

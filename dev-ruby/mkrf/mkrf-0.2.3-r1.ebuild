@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/mkrf-0.2.3-r1.ebuild,v 1.2 2010/05/21 19:46:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/mkrf-0.2.3-r1.ebuild,v 1.3 2010/05/22 15:25:41 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -24,4 +24,4 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 IUSE=""
 
-ruby_add_bdepend test virtual/ruby-test-unit
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"

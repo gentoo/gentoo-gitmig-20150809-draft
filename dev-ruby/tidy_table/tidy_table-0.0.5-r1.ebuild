@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r1.ebuild,v 1.2 2010/01/28 01:43:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r1.ebuild,v 1.3 2010/05/22 16:04:30 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19 jruby"
@@ -20,5 +20,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_bdepend doc dev-ruby/hoe
-ruby_add_bdepend test "dev-ruby/hoe dev-ruby/rspec"
+ruby_add_bdepend "
+	doc? ( dev-ruby/hoe )
+	test? (
+		dev-ruby/hoe
+		dev-ruby/rspec
+	)"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.117 2010/02/01 16:40:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.118 2010/05/22 15:00:38 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  activesupport-2.3.5.ebuild:
+  Various cleanups.
 
 *activesupport-2.3.5-r4 (01 Feb 2010)
 

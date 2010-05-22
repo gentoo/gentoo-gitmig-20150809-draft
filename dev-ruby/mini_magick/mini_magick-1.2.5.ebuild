@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/mini_magick-1.2.5.ebuild,v 1.1 2010/01/13 13:10:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/mini_magick-1.2.5.ebuild,v 1.2 2010/05/22 15:25:00 flameeyes Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="test? ( media-gfx/imagemagick[tiff,jpeg] )"
 
 # tests are known to fail under imagemagick 6.5 at least, reported upstream:
 # http://github.com/probablycorey/mini_magick/issues/#issue/2
-ruby_add_bdepend test virtual/ruby-test-unit
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
 	# remove executable bit from all files

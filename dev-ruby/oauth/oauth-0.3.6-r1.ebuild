@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.3.6-r1.ebuild,v 1.1 2010/02/26 07:06:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/oauth-0.3.6-r1.ebuild,v 1.2 2010/05/22 15:32:19 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -23,7 +23,7 @@ IUSE=""
 
 RUBY_PATCHES=( "oauth-0.3.6-newgem.patch" )
 
-ruby_add_bdepend test virtual/ruby-test-unit
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 ruby_add_rdepend ">=dev-ruby/ruby-hmac-0.3.1 dev-ruby/rubigen"
 

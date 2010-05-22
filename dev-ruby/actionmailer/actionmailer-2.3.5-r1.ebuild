@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-2.3.5-r1.ebuild,v 1.8 2010/02/13 20:43:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-2.3.5-r1.ebuild,v 1.9 2010/05/22 14:57:47 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 jruby"
@@ -21,8 +21,10 @@ IUSE=""
 ruby_add_rdepend "~dev-ruby/actionpack-${PV}
 	>=dev-ruby/text-format-0.6.3
 	>=dev-ruby/tmail-1.2.3"
-ruby_add_bdepend test ">=dev-ruby/mocha-0.9.5
-	virtual/ruby-test-unit"
+ruby_add_bdepend "test? (
+	>=dev-ruby/mocha-0.9.5
+	virtual/ruby-test-unit
+)"
 
 all_ruby_prepare() {
 	# Custom template not found in package

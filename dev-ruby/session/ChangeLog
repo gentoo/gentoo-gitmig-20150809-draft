@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.3 2010/01/14 22:13:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.4 2010/05/22 15:57:10 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  session-2.4.0.ebuild:
+  Various cleanups.
 
   14 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   session-2.4.0.ebuild, +files/session-2.4.0-jruby.patch:

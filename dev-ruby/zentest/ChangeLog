@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.66 2010/05/22 14:12:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.67 2010/05/22 16:07:19 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  zentest-4.1.3.ebuild:
+  Various cleanups.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -zentest-4.1.4.ebuild, zentest-4.2.1.ebuild:

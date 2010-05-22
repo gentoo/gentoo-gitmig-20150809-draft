@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0.ebuild,v 1.4 2008/10/06 20:27:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0.ebuild,v 1.5 2010/05/22 15:52:00 flameeyes Exp $
 
 inherit ruby gems
 
@@ -8,7 +8,6 @@ USE_RUBY="ruby18"
 
 DESCRIPTION="A Ruby port of the SmartyPants PHP library."
 HOMEPAGE="http://chneukirchen.org/blog/static/projects/rubypants.html"
-SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"

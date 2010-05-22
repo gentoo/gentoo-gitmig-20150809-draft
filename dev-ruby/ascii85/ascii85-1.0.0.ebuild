@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ascii85-1.0.0.ebuild,v 1.1 2010/01/28 19:09:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ascii85-1.0.0.ebuild,v 1.2 2010/05/22 15:01:55 flameeyes Exp $
 
 EAPI=2
 
@@ -24,5 +24,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_bdepend dev-ruby/hoe
-ruby_add_bdepend test dev-ruby/rspec
+ruby_add_bdepend "dev-ruby/hoe
+	test? ( dev-ruby/rspec )"

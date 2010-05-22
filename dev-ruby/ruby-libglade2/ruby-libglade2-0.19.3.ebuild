@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ruby-libglade2-0.19.3.ebuild,v 1.1 2010/01/16 06:16:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ruby-libglade2-0.19.3.ebuild,v 1.2 2010/05/22 15:50:06 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -16,6 +16,5 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 ruby_add_rdepend ">=dev-ruby/ruby-gtk2-${PV}
-	>=dev-ruby/ruby-glib2-${PV}"
-
-ruby_add_rdepend gnome ">=dev-ruby/ruby-gnome2-${PV}"
+	>=dev-ruby/ruby-glib2-${PV}
+	gnome? ( >=dev-ruby/ruby-gnome2-${PV} )"

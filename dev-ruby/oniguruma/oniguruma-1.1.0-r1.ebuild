@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oniguruma/oniguruma-1.1.0-r1.ebuild,v 1.1 2010/02/09 18:12:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oniguruma/oniguruma-1.1.0-r1.ebuild,v 1.2 2010/05/22 15:32:55 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -23,8 +23,12 @@ DEPEND="dev-libs/oniguruma"
 
 RUBY_PATCHES=( "${P}-unmonkey.patch" )
 
-ruby_add_bdepend doc dev-ruby/hoe
-ruby_add_bdepend test "dev-ruby/hoe virtual/ruby-test-unit"
+ruby_add_bdepend "
+	doc? ( dev-ruby/hoe )
+	test? (
+		dev-ruby/hoe
+		virtual/ruby-test-unit
+	)"
 
 each_ruby_configure() {
 	pushd ext >& /dev/null

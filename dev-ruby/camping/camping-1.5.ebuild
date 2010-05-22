@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-1.5.ebuild,v 1.2 2007/10/13 06:18:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-1.5.ebuild,v 1.3 2010/05/22 15:04:27 flameeyes Exp $
 
 inherit ruby gems
 
@@ -8,7 +8,6 @@ USE_RUBY="ruby18"
 
 DESCRIPTION="A web microframework inspired by Ruby on Rails."
 HOMEPAGE="http://code.whytheluckystiff.net/camping/"
-SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/kirbybase-2.6.ebuild,v 1.4 2009/10/05 15:47:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/kirbybase-2.6.ebuild,v 1.5 2010/05/22 15:21:51 flameeyes Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ MY_P="KirbyBase-${PV}"
 
 DESCRIPTION="A simple Ruby DBMS that stores data in plaintext files."
 HOMEPAGE="http://www.netpromi.com/kirbybase_ruby.html"
-SRC_URI="http://gems.rubyforge.org/gems/${MY_P}.gem"
+SRC_URI="mirror://rubygems/${MY_P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"

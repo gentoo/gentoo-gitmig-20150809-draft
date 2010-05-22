@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/fastthread-1.0.7-r1.ebuild,v 1.8 2010/01/31 15:34:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/fastthread-1.0.7-r1.ebuild,v 1.9 2010/05/22 15:14:41 flameeyes Exp $
 
 EAPI=2
 
@@ -22,8 +22,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend '>=dev-ruby/echoe-2.7.11 dev-ruby/rake'
-ruby_add_bdepend test virtual/ruby-test-unit
+ruby_add_bdepend "
+	>=dev-ruby/echoe-2.7.11
+	dev-ruby/rake
+	test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
 	sed -i -e 's|if Platform|if Echoe::Platform|' Rakefile || die

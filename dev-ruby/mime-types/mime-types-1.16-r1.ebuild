@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.16-r1.ebuild,v 1.1 2009/09/25 07:28:06 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.16-r1.ebuild,v 1.2 2010/05/22 15:24:24 flameeyes Exp $
 
 inherit ruby
 
@@ -17,7 +17,7 @@ RDEPEND=""
 DEPEND="doc? ( dev-ruby/rake )
 	test? ( dev-ruby/rake )"
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 src_compile() {
 	if use doc; then

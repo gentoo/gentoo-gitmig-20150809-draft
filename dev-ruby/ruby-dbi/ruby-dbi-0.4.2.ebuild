@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.7 2009/12/21 14:15:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.8 2010/05/22 15:44:09 flameeyes Exp $
 
 inherit "ruby"
 
@@ -27,7 +27,7 @@ PDEPEND="
 	sqlite3?  ( dev-ruby/dbd-sqlite3 )"
 
 S="${WORKDIR}/${MY_P}"
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 src_test() {
 	for rb in $USE_RUBY; do

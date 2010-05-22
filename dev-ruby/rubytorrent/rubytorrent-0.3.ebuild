@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytorrent/rubytorrent-0.3.ebuild,v 1.10 2009/12/24 17:30:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytorrent/rubytorrent-0.3.ebuild,v 1.11 2010/05/22 15:55:13 flameeyes Exp $
 
 inherit ruby
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ia64 ~ppc x86"
 IUSE=""
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 src_install() {
 	local sitelibdir=`${RUBY} -r rbconfig -e 'puts Config::CONFIG["sitelibdir"]'`

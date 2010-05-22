@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.9.ebuild,v 1.7 2009/09/27 15:52:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.9.ebuild,v 1.8 2010/05/22 15:49:25 flameeyes Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="ssl"
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 DEPEND=">=net-nds/openldap-2
 	ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"

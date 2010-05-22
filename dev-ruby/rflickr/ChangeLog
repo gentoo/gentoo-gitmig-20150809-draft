@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rflickr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rflickr/ChangeLog,v 1.3 2009/03/19 13:32:03 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rflickr/ChangeLog,v 1.4 2010/05/22 15:41:23 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  rflickr-20060201.ebuild:
+  Various cleanups.
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> rflickr-20060201.ebuild:
   Marking rflickr-20060201 ~ppc for bug 259257

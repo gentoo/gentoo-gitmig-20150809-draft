@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ultraviolet-0.10.2.ebuild,v 1.3 2010/01/04 12:02:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ultraviolet-0.10.2.ebuild,v 1.4 2010/05/22 16:05:57 flameeyes Exp $
 
 inherit ruby gems
 
 USE_RUBY="ruby18"
 DESCRIPTION="A syntax highlighting engine based on Textpow"
 HOMEPAGE="http://ultraviolet.rubyforge.org/"
-SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"

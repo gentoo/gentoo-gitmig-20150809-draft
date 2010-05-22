@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nano-methods
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nano-methods/ChangeLog,v 1.7 2009/12/20 13:35:42 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nano-methods/ChangeLog,v 1.8 2010/05/22 15:28:21 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  nano-methods-0.8.2.ebuild:
+  Various cleanups.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> nano-methods-0.8.2.ebuild:
   Remove obsolete virtual/ruby dependency.

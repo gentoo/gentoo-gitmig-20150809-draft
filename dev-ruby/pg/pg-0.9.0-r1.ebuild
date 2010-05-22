@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.2 2010/05/01 11:13:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.3 2010/05/22 15:33:37 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -21,16 +21,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="dev-db/postgresql-base"
-DEPEND="${RDEPEND}
+RDEPEND="${RDEPEND}
+	dev-db/postgresql-base"
+DEPEND="${DEPEND}
+	dev-db/postgresql-base
 	test? ( dev-db/postgresql-server )"
 
 # For the rakefile (and thus doc generation and testing) to work as
 # intended, you need both rake-compiler _and_ the real RubyGems
 # package; what is shipped with Ruby 1.9 is not good enough as it
 # lacks the packaging tasks for Rake.
-ruby_add_bdepend doc "dev-ruby/rake-compiler dev-ruby/rubygems"
-ruby_add_bdepend test dev-ruby/rspec
+ruby_add_bdepend "
+	doc? (
+		dev-ruby/rake-compiler
+		dev-ruby/rubygems )
+	test? ( dev-ruby/rspec )"
 
 each_ruby_configure() {
 	pushd ext

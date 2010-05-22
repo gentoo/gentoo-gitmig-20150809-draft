@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mini_magick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/ChangeLog,v 1.1 2010/01/13 13:10:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/ChangeLog,v 1.2 2010/05/22 15:25:00 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  mini_magick-1.2.5.ebuild:
+  Various cleanups.
 
 *mini_magick-1.2.5 (13 Jan 2010)
 

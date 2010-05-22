@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/cmdparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.14 2010/02/01 14:53:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.15 2010/05/22 15:06:37 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  cmdparse-2.0.2.ebuild:
+  Various cleanups.
 
 *cmdparse-2.0.2-r1 (01 Feb 2010)
 

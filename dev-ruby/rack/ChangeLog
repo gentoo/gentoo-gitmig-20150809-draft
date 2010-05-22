@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.28 2010/04/30 20:13:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.29 2010/05/22 15:38:18 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> rack-1.0.0.ebuild,
+  rack-1.0.1.ebuild:
+  Various cleanups.
 
   30 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   rack-1.0.1-r1.ebuild, +files/rack-1.0.1-gentoo.patch, rack-1.1.0.ebuild,

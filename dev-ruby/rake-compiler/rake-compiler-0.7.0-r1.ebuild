@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.7.0-r1.ebuild,v 1.5 2010/05/01 00:46:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.7.0-r1.ebuild,v 1.6 2010/05/22 15:39:25 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -25,10 +25,10 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris
 SLOT="0"
 IUSE=""
 
-ruby_add_bdepend doc ">=dev-ruby/rdoc-2.4.3"
+ruby_add_bdepend "doc? ( >=dev-ruby/rdoc-2.4.3 )"
 
 USE_RUBY=ruby18 \
-	ruby_add_bdepend "test ruby_targets_ruby18" "dev-ruby/rspec dev-util/cucumber dev-ruby/rubygems"
+	ruby_add_bdepend "test? ( dev-ruby/rspec dev-util/cucumber dev-ruby/rubygems )"
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${P}+ruby-1.8.7.patch

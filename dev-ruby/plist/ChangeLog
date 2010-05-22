@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/plist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.5 2010/04/16 13:02:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.6 2010/05/22 15:34:14 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> plist-3.0.0.ebuild,
+  plist-3.1.0.ebuild:
+  Various cleanups.
 
   16 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org> plist-3.1.0.ebuild,
   +files/plist-3.1.0-nordoc.patch:

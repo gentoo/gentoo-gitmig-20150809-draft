@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/quixml
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.9 2009/12/20 13:48:34 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.10 2010/05/22 15:36:54 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  quixml-0.2.1-r1.ebuild:
+  Various cleanups.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> quixml-0.2.1-r1.ebuild:
   Remove obsolete virtual/ruby dependency.

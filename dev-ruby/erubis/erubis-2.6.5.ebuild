@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.6.5.ebuild,v 1.2 2010/03/28 13:58:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.6.5.ebuild,v 1.3 2010/05/22 15:11:13 flameeyes Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_bdepend test virtual/ruby-test-unit
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 ruby_add_rdepend ">=dev-ruby/abstract-1.0.0"
 
 each_ruby_prepare() {

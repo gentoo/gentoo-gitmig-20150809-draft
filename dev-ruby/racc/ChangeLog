@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.48 2010/02/18 16:41:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.49 2010/05/22 15:37:36 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> racc-1.4.6.ebuild:
+  Various cleanups.
 
   18 Feb 2010; Fabian Groffen <grobian@gentoo.org> racc-1.4.6.ebuild:
   Marked ~x86-solaris

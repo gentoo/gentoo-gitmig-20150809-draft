@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/facets-1.4.5.ebuild,v 1.5 2007/07/24 16:27:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/facets-1.4.5.ebuild,v 1.6 2010/05/22 15:14:01 flameeyes Exp $
 
 inherit ruby gems
 
@@ -13,7 +13,6 @@ USE_RUBY="ruby18"
 
 DESCRIPTION="Facets is an extension library adding extra functionality to Ruby"
 HOMEPAGE="http://facets.rubyforge.org/"
-SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"

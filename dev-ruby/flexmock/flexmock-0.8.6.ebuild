@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/flexmock-0.8.6.ebuild,v 1.3 2009/12/27 19:20:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/flexmock-0.8.6.ebuild,v 1.4 2010/05/22 15:15:20 flameeyes Exp $
 
 inherit ruby
 
@@ -17,7 +17,7 @@ RDEPEND=""
 DEPEND="doc? ( dev-ruby/rake )
 	test? ( dev-ruby/rake )"
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 PATCHES=( "${FILESDIR}/${P}-rdoc-template.patch" )
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-yadis
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.1 2007/03/31 08:02:11 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.2 2010/05/22 15:55:53 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-yadis-0.3.4.ebuild:
+  Various cleanups.
 
 *ruby-yadis-0.3.4 (31 Mar 2007)
 

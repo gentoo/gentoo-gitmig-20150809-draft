@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/snmplib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.25 2009/08/18 11:02:27 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.26 2010/05/22 15:58:26 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  snmplib-1.0.2.ebuild:
+  Various cleanups.
 
   18 Aug 2009; Alex Legler <a3li@gentoo.org> -snmplib-0.6.1.ebuild:
   Removing old version to get rid of USE_RUBY="any"

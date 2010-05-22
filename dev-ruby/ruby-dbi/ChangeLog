@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-dbi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.43 2009/12/21 14:15:03 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.44 2010/05/22 15:44:09 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-dbi-0.4.2.ebuild:
+  Various cleanups.
 
   21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-dbi-0.4.2.ebuild:

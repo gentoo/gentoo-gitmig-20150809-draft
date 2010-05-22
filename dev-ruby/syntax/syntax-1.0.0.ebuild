@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/syntax-1.0.0.ebuild,v 1.14 2009/07/06 21:08:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/syntax-1.0.0.ebuild,v 1.15 2010/05/22 16:00:41 flameeyes Exp $
 
 inherit ruby gems
 
@@ -12,4 +12,4 @@ SLOT="0"
 KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86"
 IUSE=""
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"

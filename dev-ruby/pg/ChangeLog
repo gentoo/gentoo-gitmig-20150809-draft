@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.14 2010/05/01 11:13:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.15 2010/05/22 15:33:37 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> pg-0.9.0-r1.ebuild:
+  Various cleanups.
 
   01 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> pg-0.9.0-r1.ebuild:
   Make testing explicit with RSpec rather than using the Rakefile, this way

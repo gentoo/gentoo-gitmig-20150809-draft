@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.10.ebuild,v 1.1 2010/01/23 00:40:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.10.ebuild,v 1.2 2010/05/22 15:53:19 flameeyes Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-ruby_add_bdepend test virtual/ruby-test-unit
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
 	# The thread testing in 0.7.5 and earlier versions is broken, it

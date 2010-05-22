@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-irc/ruby-irc-1.0.12.ebuild,v 1.1 2008/12/26 15:52:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-irc/ruby-irc-1.0.12.ebuild,v 1.2 2010/05/22 15:48:44 flameeyes Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ MY_PN="Ruby-IRC"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Ruby-IRC is a framework for connecting and comunicating with IRC servers."
 HOMEPAGE="http://rubyforge.org/projects/ruby-irc"
-SRC_URI="http://gems.rubyforge.org/gems/${MY_P}.gem"
+SRC_URI="mirror://rubygems/${MY_P}.gem"
 
 LICENSE="MIT"
 SLOT="0"

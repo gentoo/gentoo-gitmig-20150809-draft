@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tidy_table
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.6 2010/02/28 09:19:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.7 2010/05/22 16:04:30 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  tidy_table-0.0.5-r1.ebuild:
+  Various cleanups.
 
   28 Feb 2010; Hans de Graaff <graaff@gentoo.org> -tidy_table-0.0.5.ebuild:
   Remove old version.

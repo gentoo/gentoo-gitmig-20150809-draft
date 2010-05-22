@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.61 2010/02/01 16:49:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.62 2010/05/22 14:59:57 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  activeresource-2.3.5.ebuild:
+  Various cleanups.
 
   01 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   activeresource-2.3.5-r1.ebuild:

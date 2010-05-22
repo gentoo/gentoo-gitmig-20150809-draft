@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.1.20060406.ebuild,v 1.5 2008/05/19 19:54:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.1.20060406.ebuild,v 1.6 2010/05/22 15:52:41 flameeyes Exp $
 
 inherit ruby gems versionator
 
@@ -13,7 +13,7 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="An extension library to access a PostgreSQL database from Ruby"
 HOMEPAGE="http://ruby.scripting.ca/postgres"
-SRC_URI="http://gems.rubyforge.org/gems/${MY_P}.gem"
+SRC_URI="mirror://rubygems/${MY_P}.gem"
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.4.ebuild,v 1.5 2010/01/30 18:31:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.4.ebuild,v 1.6 2010/05/22 15:40:46 flameeyes Exp $
 
 EAPI=2
 
@@ -20,8 +20,12 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
-ruby_add_bdepend doc "dev-ruby/hoe"
-ruby_add_bdepend test "dev-ruby/hoe virtual/ruby-test-unit"
+ruby_add_bdepend "
+	doc? ( >=dev-ruby/hoe-2.5.0 )
+	test? (
+		>=dev-ruby/hoe-2.5.0
+		virtual/ruby-test-unit
+	)"
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${P}-ruby187.patch

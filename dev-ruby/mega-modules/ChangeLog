@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mega-modules
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mega-modules/ChangeLog,v 1.4 2007/09/17 20:23:13 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mega-modules/ChangeLog,v 1.5 2010/05/22 15:23:06 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  mega-modules-0.3.1.ebuild:
+  Various cleanups.
 
   17 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing citizen428 from metadata.xml (see #56803 for reference).

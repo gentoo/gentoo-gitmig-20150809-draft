@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/color
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.9 2010/02/19 10:41:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/ChangeLog,v 1.10 2010/05/22 15:07:16 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> color-1.4.0.ebuild,
+  color-1.4.1.ebuild:
+  Various cleanups.
 
   19 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> color-1.4.1.ebuild:
   Fix up dependencies: since we don't have to strictly follow the

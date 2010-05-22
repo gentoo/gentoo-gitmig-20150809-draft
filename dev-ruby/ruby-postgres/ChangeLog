@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-postgres
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ChangeLog,v 1.23 2010/01/04 11:58:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ChangeLog,v 1.24 2010/05/22 15:52:41 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-postgres-0.7.1.20060406.ebuild, ruby-postgres-0.7.9.20080128.ebuild:
+  Various cleanups.
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   ruby-postgres-0.7.9.20080128.ebuild:

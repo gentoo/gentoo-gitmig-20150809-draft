@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ultraviolet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.4 2010/01/04 12:02:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.5 2010/05/22 16:05:57 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ultraviolet-0.10.2.ebuild:
+  Various cleanups.
 
   04 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   ultraviolet-0.10.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.4.ebuild,v 1.9 2009/04/27 15:40:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.2.4.ebuild,v 1.10 2010/05/22 15:59:10 flameeyes Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE="doc +swig"
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 RDEPEND="=dev-db/sqlite-3*"
 DEPEND="${RDEPEND}
 	swig? ( dev-lang/swig )"

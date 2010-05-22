@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/calendar_date_select/calendar_date_select-1.15-r1.ebuild,v 1.2 2010/01/25 20:13:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/calendar_date_select/calendar_date_select-1.15-r1.ebuild,v 1.3 2010/05/22 15:03:48 flameeyes Exp $
 
 EAPI=2
 
@@ -23,5 +23,14 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_bdepend doc "dev-ruby/activesupport dev-ruby/hoe"
-ruby_add_bdepend test "dev-ruby/rspec dev-ruby/actionpack dev-ruby/activesupport dev-ruby/hoe"
+ruby_add_bdepend "
+	doc? (
+		dev-ruby/activesupport
+		dev-ruby/hoe
+	)
+	test? (
+		dev-ruby/activesupport
+		dev-ruby/hoe
+		dev-ruby/rspec
+		dev-ruby/actionpack
+	)"
