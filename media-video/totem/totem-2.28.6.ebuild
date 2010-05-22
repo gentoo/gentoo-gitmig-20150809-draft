@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.6.ebuild,v 1.1 2010/05/20 22:25:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.6.ebuild,v 1.2 2010/05/22 03:43:45 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -132,7 +132,7 @@ src_prepare() {
 
 	# Fix broken smclient option passing
 	epatch "${FILESDIR}/${PN}-2.26.1-smclient-target-detection.patch"
-	
+
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 
