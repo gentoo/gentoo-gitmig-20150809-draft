@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.6 2010/05/20 21:14:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.7 2010/05/22 21:08:23 arfrever Exp $
 
 EAPI="3"
 
@@ -42,7 +42,10 @@ DEPEND="${RDEPEND}
 		!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )"
 PDEPEND=">=app-admin/python-updater-0.8
-		|| ( dev-lang/python:2.7 dev-lang/python:2.6 )"
+		|| (
+			dev-lang/python:2.7[gdbm?,ipv6?,ncurses?,readline?,sqlite?,ssl?,threads?,tk?,xml?]
+			dev-lang/python:2.6[gdbm?,ipv6?,ncurses?,readline?,sqlite?,ssl?,threads?,tk?,xml?]
+		)"
 
 PROVIDE="virtual/python"
 
