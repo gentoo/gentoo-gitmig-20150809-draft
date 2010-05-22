@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.32.ebuild,v 1.4 2010/03/07 21:29:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.60.ebuild,v 1.1 2010/05/22 20:34:47 dirtyepic Exp $
 
 EAPI=2
 SUPPORT_PYTHON_ABIS=1
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 
 inherit distutils eutils fdo-mime python
 
@@ -29,15 +29,12 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
 
-src_prepare() {
-	#http://code.google.com/p/editra/issues/detail?id=481
-	epatch "${FILESDIR}"/${P}-sandbox.patch
-	# next version, use setup.py install --no-clean
-	distutils_src_prepare
+src_compile() {
+	distutils_src_compile --no-clean # http://code.google.com/p/editra/issues/detail?id=481
 }
 
 src_install() {
-	distutils_src_install
+	distutils_src_install --no-clean
 	insinto /usr/share/pixmaps
 	doins "${S}"/pixmaps/editra.png
 	make_desktop_entry Editra Editra editra "Development;TextEditor"

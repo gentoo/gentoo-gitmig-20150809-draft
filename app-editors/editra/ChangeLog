@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.13 2010/03/17 23:09:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.14 2010/05/22 20:34:46 dirtyepic Exp $
+
+*editra-0.5.60 (22 May 2010)
+
+  22 May 2010; Ryan Hill <dirtyepic@gentoo.org> -editra-0.5.32.ebuild,
+  +editra-0.5.60.ebuild:
+  Version bump. Fixes a number of problems with tab control and other
+  outstanding issues. Update minimum python version to 2.5.
 
 *editra-0.5.51 (17 Mar 2010)
 
