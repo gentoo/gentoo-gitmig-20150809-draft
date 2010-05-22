@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mirmon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/ChangeLog,v 1.4 2010/05/22 22:44:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/ChangeLog,v 1.5 2010/05/22 23:11:27 darkside Exp $
+
+*mirmon-1.38-r4 (22 May 2010)
+
+  22 May 2010; Jeremy Olexa <darkside@gentoo.org> -mirmon-1.38-r3.ebuild,
+  +mirmon-1.38-r4.ebuild:
+  Revision bump to set the proper interpreter
 
   22 May 2010; Jeremy Olexa <darkside@gentoo.org> mirmon-1.38-r3.ebuild:
   Don't try to install mirmon.html that was just removed

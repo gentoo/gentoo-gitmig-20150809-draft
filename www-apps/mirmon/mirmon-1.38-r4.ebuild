@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/mirmon-1.38-r3.ebuild,v 1.4 2010/05/22 22:44:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mirmon/mirmon-1.38-r4.ebuild,v 1.1 2010/05/22 23:11:27 darkside Exp $
 
 inherit webapp eutils
 WEBAPP_MANUAL_SLOT="yes"
@@ -11,7 +11,7 @@ SRC_URI="http://people.cs.uu.nl/henkp/mirmon/src/$PN/src/$P.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.5-r2"
@@ -24,6 +24,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/0001-Add-rsync-monitoring-support-to-mirmon.patch" \
 		"${FILESDIR}/0002-Add-ipv6-monitor-support-to-mirmon.patch"
+	# set the proper interpreter
+	sed -i -e 's:/sw/bin/perl:/usr/bin/perl:' mirmon || die
 }
 
 src_install() {
