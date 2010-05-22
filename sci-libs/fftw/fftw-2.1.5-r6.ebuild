@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r6.ebuild,v 1.2 2010/04/09 18:41:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r6.ebuild,v 1.3 2010/05/22 09:06:38 jlec Exp $
 
 EAPI="3"
 
@@ -37,7 +37,6 @@ pkg_setup() {
 		ewarn "If you want to build fftw with OpenMP, abort now,"
 		ewarn "and switch CC to an OpenMP capable compiler"
 		ewarn "Otherwise the configure script will select POSIX threads."
-		epause 5
 	fi
 	use openmp && [[ $(tc-getCC)$ == icc* ]] && append-ldflags $(no-as-needed)
 }
