@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/rubigen-1.5.4.ebuild,v 1.1 2010/02/26 07:02:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/rubigen-1.5.4.ebuild,v 1.2 2010/05/22 12:48:51 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -21,10 +21,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_bdepend test ">=dev-ruby/mocha-0.9.8
+# The presence of a self-dependency is needed as per bug #320781;
+# since this is a bad situation, don't close the bug, but try working
+# it around.
+ruby_add_bdepend "test? (
+	>=dev-ruby/mocha-0.9.8
 	>=dev-ruby/shoulda-2.10.3
 	>=dev-ruby/hoe-2.4.0
-	virtual/ruby-test-unit"
+	=${CATEGORY}/${PF}
+	virtual/ruby-test-unit
+)"
 
 ruby_add_rdepend ">=dev-ruby/activesupport-2.3.5"
 

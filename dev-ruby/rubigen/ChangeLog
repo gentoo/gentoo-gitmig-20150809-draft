@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubigen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.4 2010/02/26 07:02:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.5 2010/05/22 12:48:51 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  rubigen-1.5.4.ebuild:
+  Update syntax for the new eclass changes, add a dependency on itself or
+  tests (bug #320781).
 
 *rubigen-1.5.4 (26 Feb 2010)
 
