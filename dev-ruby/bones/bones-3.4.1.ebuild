@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/bones-3.4.1.ebuild,v 1.1 2010/04/19 20:03:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/bones-3.4.1.ebuild,v 1.2 2010/05/22 13:16:49 flameeyes Exp $
 
 EAPI=2
 
@@ -30,6 +30,9 @@ ruby_add_rdepend "
 	>=dev-ruby/little-plugger-1.1.2-r1
 	>=dev-ruby/rake-0.8.7"
 
-ruby_add_bdepend test ">=dev-ruby/bones-extras-1.2.2
-	>=dev-ruby/rspec-1.2.9"
-ruby_add_bdepend doc ">=dev-ruby/bones-extras-1.2.2"
+ruby_add_bdepend "
+	test? (
+		>=dev-ruby/bones-extras-1.2.2
+		>=dev-ruby/rspec-1.2.9
+	)
+	doc? ( >=dev-ruby/bones-extras-1.2.2 )"
