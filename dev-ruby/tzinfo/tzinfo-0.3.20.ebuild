@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.20.ebuild,v 1.1 2010/04/20 06:28:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.20.ebuild,v 1.2 2010/05/22 14:10:42 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby"
@@ -22,7 +22,7 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
-ruby_add_bdepend test virtual/ruby-test-unit
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
 	# The package has all the files executable, probably coming from

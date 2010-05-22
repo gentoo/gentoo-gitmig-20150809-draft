@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-4.2.1.ebuild,v 1.7 2010/01/25 18:56:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/zentest-4.2.1.ebuild,v 1.8 2010/05/22 14:12:50 flameeyes Exp $
 
 EAPI=2
 
@@ -22,8 +22,16 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-lin
 SLOT="0"
 IUSE=""
 
-ruby_add_bdepend doc 'dev-ruby/hoe dev-ruby/hoe-seattlerb'
-ruby_add_bdepend test 'dev-ruby/hoe dev-ruby/hoe-seattlerb virtual/ruby-minitest'
+ruby_add_bdepend "
+	doc? (
+		dev-ruby/hoe
+		dev-ruby/hoe-seattlerb
+	)
+	test? (
+		dev-ruby/hoe
+		dev-ruby/hoe-seattlerb
+		virtual/ruby-minitest
+	)"
 
 each_ruby_test() {
 	# JRuby needs the extended objectspace. We do it here

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.13.ebuild,v 1.8 2009/11/11 03:13:17 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.13.ebuild,v 1.9 2010/05/22 14:10:42 flameeyes Exp $
 
 inherit ruby
 
@@ -17,7 +17,7 @@ RDEPEND=""
 DEPEND="doc? ( dev-ruby/rake )
 	test? ( dev-ruby/rake )"
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 src_unpack() {
 	unpack ${A}

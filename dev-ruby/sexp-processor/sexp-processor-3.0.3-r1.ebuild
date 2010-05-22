@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/sexp-processor-3.0.3-r1.ebuild,v 1.7 2010/02/13 19:08:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/sexp-processor-3.0.3-r1.ebuild,v 1.8 2010/05/22 14:16:54 flameeyes Exp $
 
 EAPI=2
 
@@ -22,5 +22,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend test "dev-ruby/hoe dev-ruby/hoe-seattlerb virtual/ruby-minitest"
-ruby_add_bdepend doc "dev-ruby/hoe dev-ruby/hoe-seattlerb"
+ruby_add_bdepend "
+	doc? (
+		dev-ruby/hoe
+		dev-ruby/hoe-seattlerb
+	)
+	test? (
+		dev-ruby/hoe
+		dev-ruby/hoe-seattlerb
+		virtual/ruby-minitest
+	)"

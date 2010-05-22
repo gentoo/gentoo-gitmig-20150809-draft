@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r1.ebuild,v 1.1 2010/05/22 13:34:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/rubyforge-2.0.4-r1.ebuild,v 1.2 2010/05/22 14:06:58 flameeyes Exp $
 
 EAPI=2
 
@@ -22,9 +22,12 @@ IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/json-1.1.7'
 
-ruby_add_bdepend test "virtual/ruby-test-unit dev-ruby/hoe"
-ruby_add_bdepend doc dev-ruby/hoe
+ruby_add_bdepend "
+	doc? ( dev-ruby/hoe )
+	test? (
+		virtual/ruby-test-unit
+		dev-ruby/hoe
+	)"
 
 # JRuby-specific dependency
-USE_RUBY="jruby" \
-	ruby_add_bdepend 'test ruby_targets_jruby' dev-ruby/jruby-openssl
+USE_RUBY="jruby" ruby_add_bdepend "test? ( dev-ruby/jruby-openssl )"

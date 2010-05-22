@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.58 2010/05/09 17:59:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.59 2010/05/22 14:10:42 flameeyes Exp $
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  tzinfo-0.3.13.ebuild, tzinfo-0.3.16.ebuild, -tzinfo-0.3.18.ebuild,
+  -tzinfo-0.3.19.ebuild, tzinfo-0.3.20.ebuild:
+  Cleanup old versions, use new syntax.
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> tzinfo-0.3.16.ebuild:
   sparc stable wrt #312963
