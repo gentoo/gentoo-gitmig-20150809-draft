@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.66 2010/04/18 13:02:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.67 2010/05/22 09:31:49 armin76 Exp $
+
+  22 May 2010; Raúl Porcel <armin76@gentoo.org> qt-script-4.6.2.ebuild,
+  +files/qt-script-4.6.2-alpha.patch:
+  Add a patch to compile on alpha wrt #318975
 
   18 Apr 2010; <nixnut@gentoo.org> qt-script-4.6.2.ebuild:
   ppc stable #297299
