@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/httpup-0.4.0k.ebuild,v 1.1 2010/05/21 20:41:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/httpup-0.4.0k.ebuild,v 1.2 2010/05/22 17:42:17 grobian Exp $
 
-EAPI=2
+EAPI="3"
 inherit eutils toolchain-funcs
 
 DESCRIPTION="synchronisation tool for http file repositories"
@@ -26,6 +26,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" mandir="/usr/share/man" prefix="/usr" install || die
+	emake DESTDIR="${D}" \
+		mandir="${EPREFIX}/usr/share/man" \
+		prefix="${EPREFIX}/usr" install || die
 	dodoc AUTHORS ChangeLog httpup.conf.example README TODO
 }
