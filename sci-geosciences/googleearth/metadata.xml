@@ -7,11 +7,6 @@
     <name>Vlastimil Babka</name>
     <description>Assign bugs to me for now</description>
   </maintainer>
-  <maintainer>
-    <email>genstef@gentoo.org</email>
-    <name>Stefan Schweizer</name>
-    <description>Feel free to change what you want</description>
-  </maintainer>
   <use>
     <flag name="qt-bundled">Use bundled Qt4 libraries instead of system ones. Recommended only for troubleshooting.</flag>
     <flag name="mdns-bundled">Use bundled nss-mdns library instead of depending on sys-auth/nss-mdns. Enable this if you want to avoid the deptree.</flag>

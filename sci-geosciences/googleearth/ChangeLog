@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.8 2010/05/21 07:24:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.9 2010/05/22 18:30:42 tove Exp $
+
+  22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove genstef from metadata.xml (#66339)
 
   21 May 2010; Vlastimil Babka <caster@gentoo.org>
   googleearth-5.1.3535.3218.ebuild:
