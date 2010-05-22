@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.7 2010/05/04 16:31:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.28.2.ebuild,v 1.8 2010/05/22 15:59:34 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~sparc ~x86"
 
 IUSE="accessibility cdr cups dvdr ldap mono policykit"
 
