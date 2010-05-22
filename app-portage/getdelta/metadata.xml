@@ -3,8 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
   <maintainer>
+    <email>maintainer-needed@gentoo.org</email>
+  </maintainer>
+  <maintainer>
     <email>nlissne@linux01.gwdg.de</email>
     <name>Nicolai Lissner</name>
-	<description>proxied by genstef</description>
   </maintainer>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/getdelta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.17 2010/03/31 13:12:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.18 2010/05/22 18:58:43 tove Exp $
+
+  22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add maintainer-needed to metadata.xml
 
   31 Mar 2010; Christian Ruppert <idl0r@gentoo.org> getdelta-0.7.8.ebuild:
   Fix repoman complains about unquoted variables. Add missing die
