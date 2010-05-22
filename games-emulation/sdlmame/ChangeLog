@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.28 2010/03/24 14:12:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.29 2010/05/22 15:06:54 pacho Exp $
+
+  22 May 2010; Pacho Ramos <pacho@gentoo.org> sdlmame-0.136.ebuild:
+  stable amd64, bug 303487
 
   24 Mar 2010; Brent Baude <ranger@gentoo.org> sdlmame-0.136.ebuild:
   stable ppc, bug 303487
