@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.2.5-r1.ebuild,v 1.2 2010/01/25 17:17:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.2.5-r1.ebuild,v 1.3 2010/05/22 12:53:25 flameeyes Exp $
 
 EAPI=2
 
@@ -24,9 +24,8 @@ RDEPEND=""
 ruby_add_rdepend ">=dev-ruby/daemons-1.0.9
 					>=dev-ruby/rack-1.0.0
 					>=dev-ruby/eventmachine-0.12.6"
-ruby_add_bdepend dev-ruby/rake-compiler
-
-ruby_add_bdepend test dev-ruby/rspec
+ruby_add_bdepend "dev-ruby/rake-compiler
+	test? ( dev-ruby/rspec )"
 
 all_ruby_prepare() {
 	# Fix Ragel-based parser generation (uses a *very* old syntax that
