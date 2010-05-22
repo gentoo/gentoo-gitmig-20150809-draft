@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.3 2010/04/22 22:36:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.4 2010/05/22 09:05:34 jlec Exp $
 
 EAPI="3"
 
@@ -86,7 +86,6 @@ pkg_postinst(){
 	  ewarn "\tor"
 	  ewarn "export LC_NUMERIC=C' in your .bashrc file"
 	  ewarn "Otherwise please consult your system manager"
-	  epause 10
 	fi
 
 	grep -q sse2 /proc/cpuinfo || einfo "The CPU is lacking SSE2! You should use the cluster at EMBL-Hamburg."
