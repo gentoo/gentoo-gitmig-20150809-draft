@@ -1,6 +1,13 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.8 2010/01/13 16:20:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.9 2010/05/22 13:25:52 graaff Exp $
+
+*ruby-minitest-0-r1 (22 May 2010)
+
+  22 May 2010; Hans de Graaff <graaff@gentoo.org> ruby-minitest-0.ebuild,
+  +ruby-minitest-0-r1.ebuild:
+  Revision bump so that ruby19 can be dropped from the initial version and
+  stabilized.
 
   13 Jan 2010; Brent Baude <ranger@gentoo.org> ruby-minitest-0.ebuild:
   Marking ruby-minitest-0 ~ppc64 for bug 297830
