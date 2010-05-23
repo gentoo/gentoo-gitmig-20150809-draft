@@ -1,9 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.11 2009/02/05 05:08:13 darkside Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.12 2010/05/23 01:57:36 vapier Exp $
 
 inherit eutils autotools
 
@@ -15,10 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
 IUSE="debug"
+
 RDEPEND="sys-fs/lufis"
-DEPEND="${RDEPEND}
-	sys-devel/automake
-	sys-devel/autoconf"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,8 +26,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/lufs-no-kernel.patch
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 
-	filesystems="ftpfs localfs sshfs"
-	useq amd64 && filesystems="ftpfs localfs"
+	filesystems="ftpfs localfs"
+	use amd64 || filesystems+=" sshfs"
 
 	eautoreconf
 }
@@ -42,20 +38,20 @@ src_compile() {
 	econf $(use_enable debug) || die
 
 	cd filesystems
-	for i in ${filesystems}
-	do
+	local i
+	for i in ${filesystems} ; do
 		cd ${i}
-		emake || die "emake failed"
+		emake || die "emake ${i} failed"
 		cd ..
 	done
 }
 
 src_install() {
 	cd filesystems
-	for i in ${filesystems}
-	do
+	local i
+	for i in ${filesystems} ; do
 		cd ${i}
-		make DESTDIR="${D}" install || die "make install failed"
+		emake DESTDIR="${D}" install || die "emake install ${i} failed"
 		cd ..
 	done
 }
@@ -63,13 +59,13 @@ src_install() {
 pkg_postinst() {
 	ewarn "Lufs Kernel support and lufsd,lufsmnt have been disabled in favour"
 	ewarn "of lufis, please use lufis to mount lufs-filesystems, eg:"
-	if useq amd64; then
-	echo "# lufis fs=ftpfs,host=ftp.kernel.org /mnt/lufis/ -s"
+	if use amd64; then
+		elog "# lufis fs=ftpfs,host=ftp.kernel.org /mnt/lufis/ -s"
 	else
-	echo "# lufis fs=sshfs,host=dev.gentoo.org,username=genstef /mnt/lufis/ -s"
+		elog "# lufis fs=sshfs,host=dev.gentoo.org,username=genstef /mnt/lufis/ -s"
 	fi
 	ewarn "If something does not work for you with this setup please"
 	ewarn "complain to bugs.gentoo.org"
 	einfo "Note: There is also the native sshfs-fuse implementation now"
-	useq amd64 && ewarn "lufs-sshfs does not work on amd64 and is disabled there."
+	use amd64 && ewarn "lufs-sshfs does not work on amd64 and is disabled there."
 }
