@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.29 2010/05/22 15:38:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.30 2010/05/23 10:47:14 a3li Exp $
+
+  23 May 2010; Alex Legler <a3li@gentoo.org> rack-1.0.1-r1.ebuild,
+  rack-1.1.0.ebuild:
+  Add REE18 support
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> rack-1.0.0.ebuild,
   rack-1.0.1.ebuild:

@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/test-spec-0.10.0-r2.ebuild,v 1.9 2010/05/01 10:41:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/test-spec-0.10.0-r2.ebuild,v 1.10 2010/05/23 10:46:04 a3li Exp $
 
 EAPI="2"
 
 # ruby19 → incompatible with test-unit so fails badly
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="README SPECS ROADMAP TODO"
 RUBY_FAKEGEM_DOCDIR="doc"

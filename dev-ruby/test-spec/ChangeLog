@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.15 2010/05/01 10:41:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.16 2010/05/23 10:46:04 a3li Exp $
+
+  23 May 2010; Alex Legler <a3li@gentoo.org> test-spec-0.10.0-r2.ebuild:
+  Add REE18 support
 
   01 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   test-spec-0.10.0-r2.ebuild:
