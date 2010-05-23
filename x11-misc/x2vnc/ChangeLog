@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x2vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.38 2010/05/07 18:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/ChangeLog,v 1.39 2010/05/23 18:49:07 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> x2vnc-1.7.2-r1.ebuild:
+  stable amd64, bug 308713
 
   07 May 2010; Raúl Porcel <armin76@gentoo.org> x2vnc-1.7.2-r1.ebuild:
   alpha/sparc stable wrt #308713
