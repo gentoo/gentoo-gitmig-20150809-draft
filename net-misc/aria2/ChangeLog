@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.61 2010/05/22 18:26:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.62 2010/05/23 14:23:01 phajdan.jr Exp $
+
+  23 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> aria2-1.9.3.ebuild:
+  x86 stable wrt security bug #320975
 
   22 May 2010; Peter Volkov <pva@gentoo.org> aria2-1.9.3.ebuild:
   amd64 stable, security bug 320975
