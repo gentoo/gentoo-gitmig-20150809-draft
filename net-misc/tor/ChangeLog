@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.203 2010/05/22 10:59:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.204 2010/05/23 19:05:46 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> tor-0.2.1.25.ebuild:
+  stable amd64, bug 309873
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove humpback from metadata.xml (#34793)
