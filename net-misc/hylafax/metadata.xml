@@ -13,7 +13,6 @@ HylaFAX(tm) はメールゲートウェイ、ページング、マルチプラ�
 クライアント/サーバ・FAX・システムです。
 </longdescription>
   <use>
-    <flag name="faxonly">Don't depend on mgetty-fax</flag>
     <flag name="html">Adds HTML documentation</flag>
     <flag name="mgetty">Adds support for mgetty and vgetty</flag>
   </use>

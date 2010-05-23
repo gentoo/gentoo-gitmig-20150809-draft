@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r2.ebuild,v 1.7 2009/12/26 17:41:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r2.ebuild,v 1.8 2010/05/23 17:47:48 nerdboy Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="jbig pam mgetty html"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	app-text/ghostscript-gpl
-	>=media-libs/tiff-3.8.2[jbig?]
+	=media-libs/tiff-3.9*[jbig?]
 	media-libs/jpeg
 	jbig? ( media-libs/jbigkit )
 	sys-apps/gawk
