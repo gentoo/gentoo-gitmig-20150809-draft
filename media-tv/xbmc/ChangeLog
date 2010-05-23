@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.52 2010/05/14 15:58:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.53 2010/05/23 18:38:59 vapier Exp $
+
+  23 May 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9.11-r3.ebuild,
+  metadata.xml:
+  Update dodoc line #316081 by Diego E. Pettenò.
 
   14 May 2010; Samuli Suominen <ssuominen@gentoo.org> xbmc-9.11-r3.ebuild:
   Don't apply -libpng14.patch with libpng12 wrt #319721 by Martin von
