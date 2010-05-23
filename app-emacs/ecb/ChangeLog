@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.46 2010/03/24 18:23:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.47 2010/05/23 18:24:13 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> ecb-2.40-r1.ebuild:
+  stable amd64, bug 307577
 
   24 Mar 2010; Brent Baude <ranger@gentoo.org> ecb-2.40-r1.ebuild:
   stable ppc, bug 307577

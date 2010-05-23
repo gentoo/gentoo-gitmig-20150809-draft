@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.40-r1.ebuild,v 1.3 2010/03/24 18:23:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.40-r1.ebuild,v 1.4 2010/05/23 18:24:13 pacho Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ecb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java"
 
 DEPEND=">=app-emacs/cedet-1.0_pre6
