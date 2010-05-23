@@ -1,0 +1,26 @@
+# ChangeLog for dev-libs/yajl
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.1 2010/05/23 22:31:59 flameeyes Exp $
+
+*yajl-1.0.9-r1 (23 May 2010)
+
+  23 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +yajl-1.0.9-r1.ebuild, +files/yajl-fix_cmakelists.patch,
+  +files/yajl-fix_tests.patch, +metadata.xml:
+  Initial import in main tree of yajl, needed for yajl-ruby which is in turn
+  optionally used by the new Rails. Assigned to ruby herd for now. Thanks to
+  the Sunrise people for the ebuild.
+
+  04 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> yajl-1.0.9.ebuild,
+  +files/yajl-fix_cmakelists.patch, +files/yajl-fix_tests.patch:
+  Fixup yajl cmakelist files.
+
+  26 Mar 2010; Ondrej Sukup (mimi_vx) <mimi.vx@gmail.com> +yajl-9999.ebuild:
+  Add live ebuild. Thx chithead
+
+*yajl-1.0.9 (18 Mar 2010)
+
+  18 Mar 2010; Ondrej Sukup (mimi_vx) <mimi.vx@gmail.com>
+  +yajl-1.0.9.ebuild, +metadata.xml:
+  initial commit of yajl , thanks to scarabeus and Tommy[D]
+
