@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.53 2010/05/23 20:45:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.54 2010/05/23 20:47:48 vapier Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils python
 
 # Use XBMC_ESVN_REPO_URI to track a different branch
 ESVN_REPO_URI=${XBMC_ESVN_REPO_URI:-http://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk}
@@ -185,6 +185,10 @@ src_install() {
 
 	dodoc README.linux
 	rm "${D}"/usr/share/xbmc/{README.linux,LICENSE.GPL,*.txt}
+
+	insinto "$(python_get_sitedir)" #309885
+	doins tools/EventClients/lib/python/xbmcclient.py || die
+	newbin "tools/EventClients/Clients/XBMC Send/xbmc-send.py" xbmc-send || die
 }
 
 pkg_postinst() {

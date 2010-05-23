@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r4.ebuild,v 1.1 2010/05/23 20:42:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r4.ebuild,v 1.2 2010/05/23 20:47:48 vapier Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ RDEPEND="virtual/opengl
 	dev-lang/python:2.4
 	dev-libs/boost
 	dev-libs/fribidi
-	dev-libs/libcdio
+	dev-libs/libcdio[-minimal]
 	dev-libs/libpcre
 	dev-libs/lzo
 	>=dev-python/pysqlite-2
@@ -60,7 +60,7 @@ RDEPEND="virtual/opengl
 	media-libs/libmpeg2
 	media-libs/libogg
 	media-libs/libsamplerate
-	media-libs/libsdl[alsa,audio,video,X]
+	media-libs/libsdl[alsa,audio,opengl,video,X]
 	media-libs/libvorbis
 	media-libs/sdl-gfx
 	media-libs/sdl-image[gif,jpeg,png]
@@ -159,7 +159,6 @@ src_prepare() {
 
 	# Tweak autotool timestamps to avoid regeneration
 	find . -type f -print0 | xargs -0 touch -r configure
-
 }
 
 src_configure() {
