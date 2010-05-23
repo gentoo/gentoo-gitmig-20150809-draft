@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.54 2010/05/23 18:42:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.55 2010/05/23 20:42:10 vapier Exp $
+
+*xbmc-9.11-r4 (23 May 2010)
+
+  23 May 2010; Mike Frysinger <vapier@gentoo.org> +xbmc-9.11-r4.ebuild,
+  +files/xbmc-9.11-TexturePacker-parallel-build.patch,
+  +files/xbmc-9.11-shader-upscalers.patch:
+  Force python-2.4 usage #304521 by Domen Kožar. Apply upshader patch from
+  upstream #306661 by zehner. Install the xbmc-send helper python script
+  #309885 by James Broadhead.
 
   23 May 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   metadata.xml:
