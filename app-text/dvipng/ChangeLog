@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.68 2010/05/22 17:01:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.69 2010/05/23 14:29:00 phajdan.jr Exp $
+
+  23 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> dvipng-1.13.ebuild:
+  x86 stable wrt security bug #320961
 
   22 May 2010; Peter Volkov <pva@gentoo.org> dvipng-1.13.ebuild:
   amd64 stable, security bug 320961
