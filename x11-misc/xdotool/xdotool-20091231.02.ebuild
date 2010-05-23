@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20091231.02.ebuild,v 1.5 2010/04/25 16:22:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20091231.02.ebuild,v 1.6 2010/05/23 20:01:35 pacho Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://semicomplete.googlecode.com/files/${P}.tar.gz"
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="examples"
 
 DEPEND="x11-libs/libXtst
