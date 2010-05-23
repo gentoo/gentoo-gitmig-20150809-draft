@@ -1,9 +1,6 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.71 2010/05/23 19:26:04 darkside Exp $
-
-  23 May 2010; Jeremy Olexa <darkside@gentoo.org> wicd-1.7.0.ebuild:
-  Bump urwid dependency, bug 310621
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.72 2010/05/23 19:27:04 darkside Exp $
 
   23 May 2010; Jeremy Olexa <darkside@gentoo.org> wicd-1.7.0.ebuild:
   Bump urwid dependency, bug 310621
