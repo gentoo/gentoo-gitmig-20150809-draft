@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.50 2010/05/23 19:11:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.51 2010/05/23 23:30:29 spatz Exp $
+
+  23 May 2010; Dror Levin <spatz@gentoo.org> -colorschemes-20090118.ebuild:
+  Remove old version.
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> colorschemes-20100218.ebuild:
   stable amd64, bug 310067
