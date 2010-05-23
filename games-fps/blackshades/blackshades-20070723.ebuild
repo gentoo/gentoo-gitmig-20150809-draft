@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/blackshades-20070723.ebuild,v 1.4 2010/04/09 10:05:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/blackshades-20070723.ebuild,v 1.5 2010/05/23 18:42:03 pacho Exp $
 
 EAPI=2
 inherit eutils games
@@ -13,7 +13,7 @@ SRC_URI="http://filesingularity.timedoctor.org/Textures.tar.bz2
 
 LICENSE="blackshades"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
