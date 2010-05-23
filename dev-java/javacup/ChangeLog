@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.26 2010/05/11 21:26:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.27 2010/05/23 19:54:42 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org>
+  javacup-0.11a_beta20060608.ebuild:
+  stable amd64, bug 312499
 
   11 May 2010; Brent Baude <ranger@gentoo.org>
   javacup-0.11a_beta20060608.ebuild:
