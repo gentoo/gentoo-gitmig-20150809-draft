@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.4 2010/05/16 08:43:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.5 2010/05/23 14:18:49 betelgeuse Exp $
 
 EAPI=2
+AUTOTOOLS_AUTO_DEPEND="no"
 
-inherit eutils flag-o-matic java-vm-2
+inherit autotools eutils flag-o-matic java-pkg-2 java-vm-2
 
 DESCRIPTION="Cacao Java Virtual Machine"
 HOMEPAGE="http://cacaovm.org/"
@@ -12,15 +13,30 @@ SRC_URI="http://www.complang.tuwien.ac.at/cacaojvm/download/${P}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="test"
 CLASSPATH_SLOT=0.98
-DEPEND="
+COMMON_DEPEND="
 	dev-java/gnu-classpath:${CLASSPATH_SLOT}
 	app-admin/eselect-ecj
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${COMMON_DEPEND}"
+DEPEND="${COMMON_DEPEND}
+	test? (
+		dev-java/junit:4
+		${AUTOTOOLS_DEPEND}
+	)
+"
 
 CLASSPATH_DIR=/usr/gnu-classpath-${CLASSPATH_SLOT}
+
+src_prepare() {
+	if use test; then
+		sed -ie "s:/usr/share/java/junit4.jar:$(java-config -p junit-4):" \
+			./tests/regression/bugzilla/Makefile.am \
+			./tests/regression/base/Makefile.am || die "sed failed"
+		eautoreconf
+	fi
+}
 
 src_configure() {
 	# A compiler can be forced with the JAVAC variable if needed
@@ -31,6 +47,10 @@ src_configure() {
 		--datarootdir=/usr/${PN}/share \
 		--disable-dependency-tracking \
 		--with-java-runtime-library-prefix=${CLASSPATH_DIR}
+}
+
+src_compile() {
+	default
 }
 
 src_install() {

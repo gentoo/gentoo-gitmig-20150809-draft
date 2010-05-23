@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cacao
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.19 2010/05/16 08:43:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.20 2010/05/23 14:18:49 betelgeuse Exp $
+
+  23 May 2010; Petteri Räty <betelgeuse@gentoo.org> cacao-0.99.4.ebuild:
+  Fix tests to find junit4. They still fail. See bug #321189.
 
   16 May 2010; Petteri Räty <betelgeuse@gentoo.org> cacao-0.99.4.ebuild:
   Update HOMEPAGE. Fixes bug #319791.
