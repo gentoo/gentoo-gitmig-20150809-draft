@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.1 2010/05/21 19:08:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.2 2010/05/23 14:07:59 arfrever Exp $
 
 EAPI=3
 
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
 
@@ -41,6 +41,10 @@ RDEPEND="${CDEPEND}
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+pkg_setup() {
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
