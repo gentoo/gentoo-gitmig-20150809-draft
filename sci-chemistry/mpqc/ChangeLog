@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/mpqc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.17 2006/10/05 13:36:54 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.18 2010/05/23 10:40:50 jlec Exp $
+
+*mpqc-2.3.1-r2 (23 May 2010)
+
+  23 May 2010; Justin Lecher <jlec@gentoo.org> mpqc-2.3.1-r1.ebuild,
+  +mpqc-2.3.1-r2.ebuild, +files/mpqc-2.3.1-as-needed.patch,
+  +files/mpqc-2.3.1-respect-ldflags.patch,
+  +files/mpqc-2.3.1-test-failure-hack.patch:
+  Fix for bug 248345, as-needed related, thanks Kacper Kowalik (Xarthisius)
+  for preparing the patches
 
   05 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; -mpqc-2.2.2.ebuild,
   -mpqc-2.2.3.ebuild, -mpqc-2.3.0.ebuild, -mpqc-2.3.1.ebuild:
