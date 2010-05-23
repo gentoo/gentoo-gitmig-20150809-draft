@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.30 2010/05/22 22:54:33 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.31 2010/05/23 21:47:50 flameeyes Exp $
+
+*json-1.4.3-r1 (23 May 2010)
+
+  23 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +json-1.4.3-r1.ebuild:
+  Version bump, install the extensions in the right paths so that they are
+  actually picked up (yes, all the older versions were still using the
+  pure-ruby implementation after building the C extension.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> json-1.4.3.ebuild:
   Add REE18 support
