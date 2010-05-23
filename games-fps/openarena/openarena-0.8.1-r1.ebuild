@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1-r1.ebuild,v 1.5 2010/05/20 12:39:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1-r1.ebuild,v 1.6 2010/05/23 21:25:31 pacho Exp $
 
 EAPI=2
 inherit eutils flag-o-matic versionator games
@@ -14,7 +14,7 @@ SRC_URI="http://download.tuxfamily.org/openarena/rel/${MY_PV}/oa${MY_PV}.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+curl +openal +vorbis"
 
 RDEPEND="virtual/opengl
