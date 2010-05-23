@@ -1,9 +1,15 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.53 2010/05/23 18:38:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.54 2010/05/23 18:42:31 vapier Exp $
 
-  23 May 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9.11-r3.ebuild,
+  23 May 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   metadata.xml:
+  Stop installing web styles since they no longer exist #305969 by Thomas
+  Andersson. Require opengl support in libsdl #311891 by Stijn Tintel, and
+  require -minimal support in libcdio #311893 by Stijn Tintel. Update dodoc
+  line #316081 by Diego E. Pettenò. Add USE=vaapi support #319701 by hal.
+
+  23 May 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9.11-r3.ebuild:
   Update dodoc line #316081 by Diego E. Pettenò.
 
   14 May 2010; Samuli Suominen <ssuominen@gentoo.org> xbmc-9.11-r3.ebuild:

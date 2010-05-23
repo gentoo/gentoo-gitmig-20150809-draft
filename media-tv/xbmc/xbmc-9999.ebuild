@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.51 2010/04/07 20:39:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.52 2010/05/23 18:42:31 vapier Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ RDEPEND="virtual/opengl
 	>=dev-lang/python-2.4
 	dev-libs/boost
 	dev-libs/fribidi
-	dev-libs/libcdio
+	dev-libs/libcdio[-minimal]
 	dev-libs/libpcre
 	dev-libs/lzo
 	>=dev-python/pysqlite-2
@@ -61,7 +61,7 @@ RDEPEND="virtual/opengl
 	media-libs/libmpeg2
 	media-libs/libogg
 	media-libs/libsamplerate
-	media-libs/libsdl[alsa,audio,video,X]
+	media-libs/libsdl[alsa,audio,opengl,video,X]
 	media-libs/libvorbis
 	media-libs/sdl-gfx
 	media-libs/sdl-image[gif,jpeg,png]
@@ -80,6 +80,7 @@ RDEPEND="virtual/opengl
 	virtual/mysql
 	x11-apps/xdpyinfo
 	x11-apps/mesa-progs
+	vaapi? ( x11-libs/libva )
 	vdpau? (
 		|| ( x11-libs/libvdpau >=x11-drivers/nvidia-drivers-180.51 )
 		media-video/ffmpeg[vdpau]
@@ -170,6 +171,7 @@ src_configure() {
 		$(use_enable midi mid) \
 		$(use_enable profile profiling) \
 		$(use_enable pulseaudio pulse) \
+		$(use_enable vaapi) \
 		$(use_enable vdpau) \
 		$(use_enable xrandr)
 }
@@ -177,14 +179,11 @@ src_configure() {
 src_install() {
 	einstall || die "Install failed!"
 
-	insinto /usr/share/xbmc/web/styles/
-	doins -r "${S}"/web/*/styles/*/ || die
-
 	insinto /usr/share/applications
 	doins tools/Linux/xbmc.desktop
 	doicon tools/Linux/xbmc.png
 
-	dodoc README.linux known_issues.txt
+	dodoc README.linux
 	rm "${D}"/usr/share/xbmc/{README.linux,LICENSE.GPL,*.txt}
 }
 
