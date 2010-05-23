@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync-plugin-sunbird
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-sunbird/ChangeLog,v 1.5 2009/11/15 23:52:46 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-sunbird/ChangeLog,v 1.6 2010/05/23 20:49:28 bangert Exp $
+
+  23 May 2010; Thilo Bangert <bangert@gentoo.org>
+  libopensync-plugin-sunbird-0.22.ebuild:
+  add dep on pkgconfig (#206012)
 
   15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libopensync-plugin-sunbird-0.21.ebuild:
