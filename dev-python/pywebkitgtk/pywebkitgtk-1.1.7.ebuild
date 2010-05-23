@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.7.ebuild,v 1.10 2010/05/22 20:24:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.7.ebuild,v 1.11 2010/05/23 19:59:55 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -36,4 +36,12 @@ src_install() {
 	python_src_install
 	python_clean_installation_image
 	dodoc AUTHORS MAINTAINERS NEWS README || die "dodoc failed"
+}
+
+pkg_postinst() {
+	python_mod_optimize webkit
+}
+
+pkg_postrm() {
+	python_mod_cleanup webkit
 }
