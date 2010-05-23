@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4199 2010/05/22 10:15:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4200 2010/05/23 20:47:57 suka Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2010; Andreas Proschofsky <suka@gentoo.org> package.mask:
+  Mask release candidate for openoffice-bin-3.2.1
 
   22 May 2010; Justin Lecher <jlec@gentoo.org> package.mask:
   sci-chemistry/ccp4-apps masked for bug 314053

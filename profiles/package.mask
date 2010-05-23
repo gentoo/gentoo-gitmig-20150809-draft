@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11561 2010/05/22 10:15:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11562 2010/05/23 20:47:58 suka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas Proschofsky <suka@gentoo.org> (23 May 2010)
+# Mask release candidate
+>=app-office/openoffice-bin-3.2.1_rc1
 
 # Justin Lecher <jlec@gentoo.org> (16 May 2010)
 # Mask until all deps are fixed for bug 314053
