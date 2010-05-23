@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.54 2010/05/07 18:10:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.55 2010/05/23 21:03:18 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> cedet-1.0_pre7-r1.ebuild:
+  stable amd64, bug 313865
 
   07 May 2010; Raúl Porcel <armin76@gentoo.org> cedet-1.0_pre7-r1.ebuild:
   sparc stable wrt #313865
