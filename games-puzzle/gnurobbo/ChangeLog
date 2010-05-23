@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnurobbo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.16 2010/05/13 15:55:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.17 2010/05/23 18:16:37 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> gnurobbo-0.65.6.ebuild:
+  stable amd64, bug 307359
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> gnurobbo-0.65.6.ebuild:
   Marked ppc stable for bug #307359.
