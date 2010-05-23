@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.217 2010/05/01 14:43:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.218 2010/05/23 04:10:42 darkside Exp $
+
+*mit-krb5-1.8.1-r1 (23 May 2010)
+
+  23 May 2010; Jeremy Olexa <darkside@gentoo.org> +mit-krb5-1.8.1-r1.ebuild,
+  +files/CVE-2010-1321.patch:
+  Patch for CVE-2010-1321 - bug #320445. Disable rpath - bug #187201.
+  Installs kerberos.schema - bug #318017. Ebuild clean up. Enable parallel
+  make. Thanks to Eray Aslan
 
   01 May 2010; Jeremy Olexa <darkside@gentoo.org> mit-krb5-1.8.1.ebuild:
   Fix configure call, patch by Eray Aslan
