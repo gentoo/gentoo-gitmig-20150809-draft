@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.21.ebuild,v 1.3 2010/02/04 21:46:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.21.ebuild,v 1.4 2010/05/23 19:00:07 armin76 Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://alsa-project.org/"
 SRC_URI="mirror://alsaproject/pyalsa/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="media-libs/alsa-lib"
