@@ -1,6 +1,12 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.176 2010/05/18 06:41:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.177 2010/05/23 10:53:51 grobian Exp $
+
+  23 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask dev-vcs/git-1.7.1 since it Bus Errors on cherry-pick
+
+  20 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop mask for Dev Tools 3.2.2 goodies, seems to behave pretty much ok.
 
   18 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask upcoming gcc, binutils and gdb from Developer Tools 3.2.2
