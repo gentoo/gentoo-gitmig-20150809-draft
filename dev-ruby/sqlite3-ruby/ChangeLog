@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sqlite3-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.38 2010/05/22 15:59:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.39 2010/05/23 10:21:43 a3li Exp $
+
+  23 May 2010; Alex Legler <a3li@gentoo.org> sqlite3-ruby-1.2.5.ebuild:
+  Add REE18 support
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   sqlite3-ruby-1.2.4.ebuild, sqlite3-ruby-1.2.5.ebuild:

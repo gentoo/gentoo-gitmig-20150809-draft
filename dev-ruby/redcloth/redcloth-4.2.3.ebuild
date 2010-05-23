@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3.ebuild,v 1.2 2010/05/22 14:29:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3.ebuild,v 1.3 2010/05/23 10:20:35 a3li Exp $
 
 EAPI=2
 
 # jruby → tests still fail with UTF-8 characters
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_NAME="RedCloth"
 
