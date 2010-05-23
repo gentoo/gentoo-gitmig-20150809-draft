@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.9.1.ebuild,v 1.3 2010/03/16 18:24:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/urwid-0.9.9.1.ebuild,v 1.4 2010/05/23 18:15:38 pacho Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://excess.org/urwid/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="examples"
 
 DEPEND="dev-python/setuptools"
