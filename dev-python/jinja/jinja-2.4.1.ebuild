@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.4.1.ebuild,v 1.1 2010/05/21 20:52:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.4.1.ebuild,v 1.2 2010/05/23 20:16:03 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,10 +29,12 @@ S="${WORKDIR}/${MY_P}"
 
 DISTUTILS_GLOBAL_OPTIONS=("--with-speedups")
 DOCS="CHANGES"
+PYTHON_MODNAME="jinja2"
 
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/jinja2-2.4.1-object_type_repr.patch"
+	find -name "*.py[co]" -print0 | xargs -0 rm -f
 }
 
 src_compile(){
@@ -54,9 +56,6 @@ src_install(){
 	fi
 
 	if use examples; then
-		# Eliminate .pyc files going into /usr/share
-	    find examples -name "*.pyc" -print0 | xargs -0 rm -fr
-
 		insinto "/usr/share/doc/${PF}"
 		doins -r examples || die "Failed to install examples"
 	fi

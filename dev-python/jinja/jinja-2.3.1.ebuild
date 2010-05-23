@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.3.1.ebuild,v 1.1 2010/05/21 20:52:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-2.3.1.ebuild,v 1.2 2010/05/23 20:16:03 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,6 +29,7 @@ S="${WORKDIR}/${MY_P}"
 
 DISTUTILS_GLOBAL_OPTIONS=("--with-speedups")
 DOCS="CHANGES"
+PYTHON_MODNAME="jinja2"
 
 src_prepare() {
 	distutils_src_prepare
