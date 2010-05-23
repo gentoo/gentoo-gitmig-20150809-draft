@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.77 2010/03/10 17:15:39 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.78 2010/05/23 04:33:07 sping Exp $
+
+  23 May 2010; Sebastian Pipping <sping@gentoo.org>
+  webalizer-2.21.02.ebuild, +files/webalizer-2.21.02-gcc-4.4.patch:
+  Integrate GCC 4.4 patch for bug #321053
 
 *webalizer-2.21.02 (10 Mar 2010)
 

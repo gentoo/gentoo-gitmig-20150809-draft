@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.21.02.ebuild,v 1.1 2010/03/10 17:15:39 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.21.02.ebuild,v 1.2 2010/05/23 04:33:07 sping Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -42,6 +42,10 @@ pkg_setup() {
 		ewarn "if you want to USE=nls"
 		die "please either set LINGUAS or do not use nls"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc-4.4.patch
 }
 
 src_configure() {
