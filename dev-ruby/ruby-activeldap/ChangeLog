@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-activeldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.21 2010/05/23 08:08:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.22 2010/05/23 19:57:47 graaff Exp $
+
+*ruby-activeldap-1.2.1-r2 (23 May 2010)
+
+  23 May 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-activeldap-1.2.1-r2.ebuild:
+  Be more lenient towards newer Rails versions in the same slot.
+  Use correct name for gemspec file.
 
 *ruby-activeldap-1.2.1-r1 (23 May 2010)
 
