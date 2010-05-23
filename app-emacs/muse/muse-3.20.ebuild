@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.20.ebuild,v 1.7 2010/05/19 20:09:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/muse-3.20.ebuild,v 1.8 2010/05/23 18:21:21 pacho Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/muse-el/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.2 GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="test"
 
 DEPEND="test? ( app-emacs/htmlize )"
