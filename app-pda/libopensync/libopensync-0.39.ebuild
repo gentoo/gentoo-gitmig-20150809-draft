@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.39.ebuild,v 1.2 2009/11/16 21:25:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.39.ebuild,v 1.3 2010/05/23 20:38:01 bangert Exp $
 
 inherit cmake-utils
 
@@ -61,4 +61,9 @@ src_install() {
 		cd "${CMAKE_BUILD_DIR}"
 		dohtml docs/html/* || die "Failed to install docs."
 	fi
+}
+
+pkg_postinst() {
+	einfo "For >=app-pda/libopensync-0.39 use app-pda/osynctool instead of"
+	einfo "the older app-pda/msynctool."
 }
