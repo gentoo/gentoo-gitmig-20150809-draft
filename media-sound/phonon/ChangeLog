@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.48 2010/05/17 16:01:08 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.49 2010/05/23 12:09:36 spatz Exp $
+
+  23 May 2010; Dror Levin <spatz@gentoo.org> phonon-4.4.1.ebuild,
+  +files/phonon-4.4.1-pulseaudio-connect.patch,
+  +files/phonon-4.4.1-xine-volume.patch:
+  Adding upstream patches for fixes with pulseaudio and xine, bug 321155.
+  Thanks to Fabian Köster.
 
 *phonon-4.4.1 (17 May 2010)
 
