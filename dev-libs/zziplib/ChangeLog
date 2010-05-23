@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.78 2010/05/19 20:03:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.79 2010/05/23 21:28:20 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> zziplib-0.13.58-r1.ebuild:
+  stable amd64, bug 315365
 
   19 May 2010; Raúl Porcel <armin76@gentoo.org> zziplib-0.13.58-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #315365
