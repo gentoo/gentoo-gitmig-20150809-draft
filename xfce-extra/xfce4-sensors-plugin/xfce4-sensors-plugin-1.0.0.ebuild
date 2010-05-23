@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.6 2010/05/12 20:57:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.7 2010/05/23 10:43:55 angelos Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -50,5 +50,6 @@ pkg_setup() {
 src_prepare() {
 	sed -i -e '/-no-undefined/d' src/Makefile.am || die
 	sed -i -e 's/-Werror//' configure.in || die
+	sed -i -e '/^XDT_I18N/s/nl//' configure.in || die
 	xfconf_src_prepare
 }
