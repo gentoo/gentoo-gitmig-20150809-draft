@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.57 2010/05/23 21:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.58 2010/05/23 23:22:58 vapier Exp $
+
+  23 May 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Run autotools in more subdirs, update docdir install, and convert to
+  emake+DESTDIR for installing.
 
   23 May 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Make hal support optional via USE=hal now that upstream supports it

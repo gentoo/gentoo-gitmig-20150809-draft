@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.55 2010/05/23 21:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.56 2010/05/23 23:22:58 vapier Exp $
 
 EAPI="2"
 
@@ -88,7 +88,9 @@ RDEPEND="virtual/opengl
 	x11-libs/libXinerama
 	xrandr? ( x11-libs/libXrandr )
 	x11-libs/libXrender"
+# The cpluff bundled addon uses gettext which needs CVS ...
 DEPEND="${RDEPEND}
+	dev-util/cvs
 	x11-proto/xineramaproto
 	dev-util/cmake
 	x86? ( dev-lang/nasm )"
@@ -115,7 +117,7 @@ src_prepare() {
 
 	# some dirs ship generated autotools, some dont
 	local d
-	for d in . xbmc/cores/dvdplayer/Codecs/libbdnav ; do
+	for d in . xbmc/cores/dvdplayer/Codecs/{libbdnav,libdvd/lib*/} lib/cpluff ; do
 		[[ -e ${d}/configure ]] && continue
 		pushd ${d} >/dev/null
 		einfo "Generating autotools in ${d}"
@@ -157,6 +159,7 @@ src_configure() {
 	export HELP2MAN=$(type -P help2man || echo true)
 
 	econf \
+		--docdir=/usr/share/doc/${PF} \
 		--disable-ccache \
 		--disable-optimizations \
 		--enable-external-libraries \
@@ -178,14 +181,12 @@ src_configure() {
 }
 
 src_install() {
-	einstall || die "Install failed!"
+	emake install DESTDIR="${D}" || die
+	prepalldocs
 
 	insinto /usr/share/applications
 	doins tools/Linux/xbmc.desktop
 	doicon tools/Linux/xbmc.png
-
-	dodoc README.linux
-	rm "${D}"/usr/share/xbmc/{README.linux,LICENSE.GPL,*.txt}
 
 	insinto "$(python_get_sitedir)" #309885
 	doins tools/EventClients/lib/python/xbmcclient.py || die
