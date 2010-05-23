@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.52 2010/05/23 18:42:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.53 2010/05/23 20:45:52 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="aac alsa altivec avahi css debug joystick midi profile pulseaudio sse sse2 vdpau xrandr"
+IUSE="aac alsa altivec avahi css debug joystick midi profile pulseaudio sse sse2 vaapi vdpau xrandr"
 
 RDEPEND="virtual/opengl
 	app-arch/bzip2
