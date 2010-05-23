@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ruby-inline-3.8.4.ebuild,v 1.10 2010/05/23 20:49:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ruby-inline-3.8.4-r1.ebuild,v 1.1 2010/05/23 20:49:10 flameeyes Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_NAME="RubyInline"
 
@@ -34,6 +34,15 @@ ruby_add_bdepend "
 		dev-ruby/hoe-seattlerb
 		virtual/ruby-test-unit
 	)"
+
+all_ruby_prepare() {
+	# we have to patch the code so that it takes the RUBY_DESCRIPTION
+	# into consideration, to avoid loading Ruby-Enterprise (REE18)
+	# objects in MRI and vice-versa; we're a bit “greedier” since we
+	# will rebuild objects even when just switching versions, but
+	# it'll be better this way than being too conservatives.
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+}
 
 all_ruby_install() {
 	all_fakegem_install
