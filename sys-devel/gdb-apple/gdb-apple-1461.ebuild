@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1461.ebuild,v 1.1 2010/05/21 16:03:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1461.ebuild,v 1.2 2010/05/23 13:40:00 grobian Exp $
 
 EAPI="3"
 
@@ -26,7 +26,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/gdb-${APPLE_PV}/src
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-no-global-gdbinit.patch
 	epatch "${FILESDIR}"/${PN}-768-texinfo.patch
+	epatch "${FILESDIR}"/${P}-dyld-info.patch
 	[[ ${CHOST} == *-darwin8 ]] && epatch "${FILESDIR}"/${P}-darwin8.patch
 
 	# for FSF gcc / gcc-apple:42
@@ -37,6 +39,7 @@ src_configure() {
 	replace-flags -O? -O2
 	econf \
 		--disable-werror \
+		--disable-debug-symbols-framework \
 		$(use_enable nls) \
 		|| die
 }
