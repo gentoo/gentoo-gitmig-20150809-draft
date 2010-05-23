@@ -1,6 +1,9 @@
 # ChangeLog for app-text/duali
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.16 2010/05/08 18:24:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.17 2010/05/23 21:06:43 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> duali-0.2.0.ebuild:
+  stable amd64, bug 313927
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> duali-0.2.0.ebuild:
   alpha/ia64 stable wrt #313927
