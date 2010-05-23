@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-rally
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/ChangeLog,v 1.4 2010/03/24 19:31:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/ChangeLog,v 1.5 2010/05/23 18:52:36 pacho Exp $
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> quake3-rally-1.33.ebuild:
+  stable amd64, bug 309701
 
   24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   quake3-rally-1.33.ebuild:
