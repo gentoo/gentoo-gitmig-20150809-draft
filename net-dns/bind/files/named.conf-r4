@@ -30,8 +30,8 @@ options {
 	directory "/var/bind";
 	pid-file "/var/run/named/named.pid";
 
-	/* https://www.isc.org/solutions/dlv */
-	bindkeys-file "/etc/bind/bind.keys";
+	/* https://www.isc.org/solutions/dlv >=bind-9.7.x only */
+	//bindkeys-file "/etc/bind/bind.keys";
 
 	listen-on-v6 { none; };
 	listen-on { 127.0.0.1; };
@@ -126,6 +126,8 @@ view "internal" in {
 		file "pri/localhost.zone";
 		allow-update { none; };
 		notify no;
+		allow-query { any; };
+		allow-transfer { none; }; 
 	};
 
 	zone "127.in-addr.arpa" IN {
@@ -133,6 +135,8 @@ view "internal" in {
 		file "pri/127.zone";
 		allow-update { none; };
 		notify no;
+		allow-query { any; };
+		allow-transfer { none; };
 	};
 
 	/*
@@ -144,6 +148,19 @@ view "internal" in {
 	 * include "/etc/bind/zones.cfg";
 	 * for "internal" and "public" view.
 	 */
+
+	/*
+	 * Briefly, a zone which has been declared delegation-only will be effectively
+	 * limited to containing NS RRs for subdomains, but no actual data beyond its
+	 * own apex (for example, its SOA RR and apex NS RRset). This can be used to
+	 * filter out "wildcard" or "synthesized" data from NAT boxes or from
+	 * authoritative name servers whose undelegated (in-zone) data is of no
+	 * interest.
+	 * See http://www.isc.org/software/bind/delegation-only for more info
+	 */
+
+	//zone "COM" { type delegation-only; };
+	//zone "NET" { type delegation-only; };
 };
 
 view "public" in {
@@ -167,6 +184,7 @@ view "public" in {
 	//	type master;
 	//	file "/var/bind/pri/YOUR-DOMAIN.TLD.zone";
 	//	allow-query { any; };
+	//	allow-transfer { xfer; };
 	//};
 
 	//zone "YOUR-SLAVE.TLD" {
@@ -182,17 +200,14 @@ view "public" in {
 	//	allow-notify { <MASTER>; };
 	//	notify no;
 	//};
+};
 
-	/*
-	 * Briefly, a zone which has been declared delegation-only will be effectively
-	 * limited to containing NS RRs for subdomains, but no actual data beyond its
-	 * own apex (for example, its SOA RR and apex NS RRset). This can be used to
-	 * filter out "wildcard" or "synthesized" data from NAT boxes or from
-	 * authoritative name servers whose undelegated (in-zone) data is of no
-	 * interest.
-	 * See http://www.isc.org/products/BIND/delegation-only.html for more info
-	 */
-
-	//zone "COM" { type delegation-only; };
-	//zone "NET" { type delegation-only; };
+/* Hide the bind version */
+view "chaos" chaos {
+	match-clients { any; };
+	allow-query { none; };
+	zone "." {
+		type hint;
+		file "/dev/null";  // or any empty file
+	};
 };
