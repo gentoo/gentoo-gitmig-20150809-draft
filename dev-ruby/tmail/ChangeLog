@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.11 2010/05/22 22:40:08 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.12 2010/05/23 19:27:04 graaff Exp $
+
+*tmail-1.2.7.1 (23 May 2010)
+
+  23 May 2010; Hans de Graaff <graaff@gentoo.org> +tmail-1.2.7.1.ebuild:
+  Version bump for the forthcoming Rails 2.3.6 release.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> tmail-1.2.3.1.ebuild:
   Add REE18 support
