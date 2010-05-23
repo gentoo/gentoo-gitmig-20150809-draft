@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.7.4.ebuild,v 1.1 2010/05/02 11:25:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.7.4.ebuild,v 1.2 2010/05/23 22:37:11 flameeyes Exp $
 
 EAPI=2
 
@@ -25,7 +25,11 @@ IUSE=""
 SRC_URI="http://github.com/delano/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
 S="${WORKDIR}/delano-${PN}-*"
 
-ruby_add_bdepend test dev-ruby/tryouts
+# technically, it could work without either; on the other hand, it
+# would break a bit of stuff.
+ruby_add_rdepend "|| ( dev-ruby/json dev-ruby/yajl-ruby )"
+
+ruby_add_bdepend "test? ( dev-ruby/tryouts )"
 
 all_ruby_prepare() {
 	mv bin examples || die
