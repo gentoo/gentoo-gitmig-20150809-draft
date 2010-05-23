@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.19.ebuild,v 1.5 2010/03/15 19:21:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.19.ebuild,v 1.6 2010/05/23 18:20:09 pacho Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://space.mit.edu/pub/davis/jed/v0.99/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="X gpm xft"
 
 RDEPEND=">=sys-libs/slang-2
