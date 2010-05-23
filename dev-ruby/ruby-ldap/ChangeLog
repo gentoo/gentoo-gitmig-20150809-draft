@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.43 2010/05/22 15:49:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.44 2010/05/23 07:50:52 graaff Exp $
+
+*ruby-ldap-0.9.9-r1 (23 May 2010)
+
+  23 May 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-ldap-0.9.9-r1.ebuild:
+  Convert to ruby-ng.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-ldap-0.9.9.ebuild:
