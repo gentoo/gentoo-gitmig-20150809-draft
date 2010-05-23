@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.6-r2.ebuild,v 1.3 2010/05/14 19:04:17 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.6-r2.ebuild,v 1.4 2010/05/23 09:31:36 graaff Exp $
 
 EAPI="2"
 
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 jruby"
 
 inherit ruby-ng
 
@@ -24,7 +24,6 @@ IUSE="doc server"
 # previous versions had rubygems bundled, so it would collide badly
 RDEPEND="
 	ruby_targets_jruby? ( >=dev-java/jruby-1.4.0-r5 )
-	ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.1_p376 )
 "
 
 # index_gem_repository.rb
