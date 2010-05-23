@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.6.1.7.ebuild,v 1.2 2010/05/17 15:34:45 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.6.1.7.ebuild,v 1.3 2010/05/23 11:53:36 ssuominen Exp $
 
 EAPI=3
 inherit multilib toolchain-funcs versionator
@@ -73,12 +73,7 @@ src_configure() {
 
 	local openmp=disable
 
-	# openmp support only works with >=sys-devel/gcc-4.3, bug #223825
-	if use openmp && version_is_at_least 4.3 $(gcc-version) ; then
-		if has_version =sys-devel/gcc-$(gcc-version)*[openmp] ; then
-			openmp=enable
-		fi
-	elif use openmp && has_version sys-devel/gcc-apple && version_is_at_least 4.2.1 $(gcc_version) ; then
+	if use openmp && tc-has-openmp; then
 		openmp=enable
 	fi
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.398 2010/05/18 15:11:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.399 2010/05/23 11:53:36 ssuominen Exp $
+
+  23 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  imagemagick-6.6.1.7.ebuild:
+  Use tc-has-openmp function from toolchain-funcs.eclass to check libgomp
+  availability.
 
   18 May 2010; Jeroen Roovers <jer@gentoo.org> imagemagick-6.6.1.2.ebuild:
   Stable for HPPA (bug #319195).
