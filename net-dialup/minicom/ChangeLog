@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.79 2010/05/20 13:06:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.80 2010/05/23 18:35:59 armin76 Exp $
+
+  23 May 2010; Raúl Porcel <armin76@gentoo.org> minicom-2.4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #317703
 
   20 May 2010; Peter Volkov <pva@gentoo.org> minicom-2.4.ebuild:
   amd64 stable, bug #317703
