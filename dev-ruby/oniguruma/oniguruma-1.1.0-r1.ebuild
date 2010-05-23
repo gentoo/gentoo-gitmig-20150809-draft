@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oniguruma/oniguruma-1.1.0-r1.ebuild,v 1.2 2010/05/22 15:32:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oniguruma/oniguruma-1.1.0-r1.ebuild,v 1.3 2010/05/23 16:52:55 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -40,9 +40,9 @@ each_ruby_compile() {
 	pushd ext >& /dev/null
 	emake || die "Compilation failed."
 	popd >& /dev/null
+	mv ext/oregexp.so lib || die "Unable to move oregexp.so"
 }
 
 each_ruby_install() {
-	mv ext/oregexp.so lib || die "Unable to move oregexp.so"
 	each_fakegem_install
 }
