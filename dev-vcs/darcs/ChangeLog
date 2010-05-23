@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.3 2010/03/28 21:40:12 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.4 2010/05/23 22:10:58 kolmodin Exp $
+
+*darcs-2.4.4 (23 May 2010)
+
+  23 May 2010; Lennart Kolmodin <kolmodin@gentoo.org> +darcs-2.4.4.ebuild:
+  Version bump.
 
 *darcs-2.4 (28 Mar 2010)
 
