@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.76 2010/05/10 11:19:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.77 2010/05/24 15:07:38 nixnut Exp $
+
+  23 May 2010; <nixnut@gentoo.org> rosegarden-10.02.1.ebuild:
+  ppc stable #316783
 
   10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   rosegarden-10.02.1.ebuild:
