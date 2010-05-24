@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20100325.2.ebuild,v 1.1 2010/05/24 12:38:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20100325.2.ebuild,v 1.2 2010/05/24 12:42:17 alexxy Exp $
 
 EAPI="2"
 
@@ -62,10 +62,6 @@ pkg_setup() {
 
 	# note about qmmm-tinker
 	if use qmmm-tinker; then
-		if [ "x$QMMM_GAMESS_MAXMM" == "x" || \
-			"x$QMMM_GAMESS_MAXCLASS" == "x" || \
-			"x$QMMM_GAMESS_MAXCTYP" == "x" || \
-			"x$QMMM_GAMESS_MAXHESS" == "x"  ]; then
 			einfo "By default MM subsistem is restricted to 1000 atoms"
 			einfo "if you want larger MM subsystems then you should set"
 			einfo "QMMM_GAMESS_MAXMM variable to needed value in your make.conf"
@@ -77,7 +73,6 @@ pkg_setup() {
 			einfo "QMMM_GAMESS_MAXHESS"
 			einfo "in your make.conf"
 			ebeep 5
-		fi
 	fi
 
 	#note about mpi
@@ -306,7 +301,7 @@ pkg_postinst() {
 	einfo "does multiprocessor runs and adjust rungms according to"
 	einfo "your target network architecture."
 	echo
-	
+
 	if use qmmm-tinker; then
 		einfo "You may want to install sci-chemistry/tinker to use addition FF"
 		einfo "parameters for your qmmm calculations"
