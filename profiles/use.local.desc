@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5590 2010/05/23 18:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5591 2010/05/24 14:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -915,6 +915,7 @@ dev-libs/soprano:redland - Enables support for the dev-libs/redland storage back
 dev-libs/soprano:virtuoso - Enables support for dev-db/virtuoso storage backend.
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/totem-pl-parser:introspection - Use dev-libs/gobject-introspection for introspection
+dev-libs/udis86:pic - Force shared libraries to be built as PIC
 dev-libs/xerces-c:iconv - Use iconv (virtual/libiconv) as message loader and transcoder (in general it would be possible to use iconv only as message loader and something else like icu or the native method as transcoder and vice-versa, but this is a less common case and hard to handle)
 dev-libs/xerces-c:libwww - Use the net-libs/libwww library for fetching URLs, instead of the builtin method
 dev-libs/xerces-c:threads - Enable threading support through pthread (or other libraries on AIX, IRIX, HPUX, Solars). Highly recommended
