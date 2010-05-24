@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.56 2010/05/20 12:41:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.57 2010/05/24 12:51:31 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> ortp-0.16.1.ebuild:
+  ppc stable #320719
 
 *ortp-0.16.2 (20 May 2010)
 
