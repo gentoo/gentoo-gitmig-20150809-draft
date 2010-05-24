@@ -1,12 +1,6 @@
-Generate a list of locales instead of hardcoding individual ones
-
---
-	Jeroen Roovers <jer@gentoo.org>
-
-
---- Makefile.in
-+++ Makefile.in
-@@ -257,56 +257,13 @@
+--- Makefile.in.orig	2010-03-14 09:12:01.000000000 +0100
++++ Makefile.in	2010-05-24 20:52:19.000000000 +0200
+@@ -257,58 +257,14 @@
  
  install_nls: locales
  ifdef REQUIRE_NLS
@@ -14,6 +8,7 @@ Generate a list of locales instead of hardcoding individual ones
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/da/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/de/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/es/LC_MESSAGES
+-	mkdir -p $(DESTDIR)$(NLS_DIR)/eu/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/fi/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/fr/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/id/LC_MESSAGES
@@ -39,6 +34,7 @@ Generate a list of locales instead of hardcoding individual ones
 -	$(INSTALL_DATA) nls/da.gmo $(DESTDIR)$(NLS_DIR)/da/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/de.gmo $(DESTDIR)$(NLS_DIR)/de/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/es.gmo $(DESTDIR)$(NLS_DIR)/es/LC_MESSAGES/$(PACKAGE).mo
+-	$(INSTALL_DATA) nls/eu.gmo $(DESTDIR)$(NLS_DIR)/eu/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/fi.gmo $(DESTDIR)$(NLS_DIR)/fi/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/fr.gmo $(DESTDIR)$(NLS_DIR)/fr/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/id.gmo $(DESTDIR)$(NLS_DIR)/id/LC_MESSAGES/$(PACKAGE).mo
@@ -63,9 +59,10 @@ Generate a list of locales instead of hardcoding individual ones
 +	catalogs='$(NLSGMO)'; \
 +	for cat in $$catalogs; do \
 +		cat=`basename $$cat`; \
-+		lang=`echo $$cat | sed -e 's/\.gmo$$//'`; \
-+		mkdir -p $(DESTDIR)$(NLS_DIR)/$$lang/LC_MESSAGES; \
-+		$(INSTALL_DATA) nls/$$cat $(DESTDIR)$(NLS_DIR)/$$lang/LC_MESSAGES/$(PACKAGE).mo; \
++		cat=`echo $$cat | sed -e 's/\.gmo$$//'`; \
++		mkdir -p $(DESTDIR)$(NLS_DIR)/$$cat/LC_MESSAGES; \
++		$(INSTALL_DATA) nls/$$cat.gmo \
++			$(DESTDIR)$(NLS_DIR)/$$cat/LC_MESSAGES/$(PACKAGE).mo; \
 +	done
  endif
  
