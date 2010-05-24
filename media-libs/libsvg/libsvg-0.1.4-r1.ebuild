@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/libsvg-0.1.4.ebuild,v 1.24 2010/01/15 09:42:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/libsvg-0.1.4-r1.ebuild,v 1.1 2010/05/24 16:05:50 ssuominen Exp $
 
 inherit autotools eutils libtool
 
@@ -22,6 +22,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i \
+		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
+		src/svg_image.c || die
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	elibtoolize
 	eautoconf

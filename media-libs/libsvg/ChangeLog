@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.37 2010/01/15 09:42:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.38 2010/05/24 16:05:50 ssuominen Exp $
+
+*libsvg-0.1.4-r1 (24 May 2010)
+
+  24 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +libsvg-0.1.4-r1.ebuild:
+  Fix implicit declaration of function "png_set_gray_1_2_4_to_8" wrt #321321
+  by Diego E. Pettenò.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libsvg-0.1.4.ebuild:
   Transfer Prefix keywords
