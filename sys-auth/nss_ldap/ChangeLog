@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.63 2010/04/18 14:39:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.64 2010/05/24 06:43:04 pva Exp $
+
+  24 May 2010; Peter Volkov <pva@gentoo.org> nss_ldap-264-r1.ebuild:
+  amd64 stable, bug 305935, thank Roeland Douma for tests.
 
   18 Apr 2010; <nixnut@gentoo.org> nss_ldap-264-r1.ebuild:
   ppc stable #305935
