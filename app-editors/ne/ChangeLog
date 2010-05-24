@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ne
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.37 2010/05/21 16:56:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.38 2010/05/24 12:47:06 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> ne-2.0.3.ebuild:
+  ppc stable #320911
 
   21 May 2010; Sven Wegener <swegener@gentoo.org> ne-2.0.3.ebuild:
   Move sed to src_prepare.
