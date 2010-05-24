@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.33 2010/05/04 16:32:04 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.34 2010/05/24 06:04:52 pva Exp $
+
+  24 May 2010; Peter Volkov <pva@gentoo.org>
+  gst-plugins-meta-0.10-r4.ebuild:
+  Added v4l/v4l2 USE flags, as discussed in bug 288376, thank Denilson Sá
+  for report.
 
   03 May 2010; Olivier Crête <tester@gentoo.org>
   gst-plugins-meta-0.10-r4.ebuild:
