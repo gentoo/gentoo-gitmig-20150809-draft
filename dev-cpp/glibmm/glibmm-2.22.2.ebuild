@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.22.2.ebuild,v 1.1 2010/03/26 13:00:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.22.2.ebuild,v 1.2 2010/05/24 23:46:54 abcd Exp $
 
+EAPI="3"
 inherit gnome2
 
 DESCRIPTION="C++ interface for glib2"
@@ -9,7 +10,7 @@ HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc examples test"
 
 RDEPEND=">=dev-libs/libsigc++-2.2
@@ -20,8 +21,8 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	if ! use test; then
 		# don't waste time building tests
@@ -49,7 +50,7 @@ src_install() {
 	gnome2_src_install
 
 	if ! use doc && ! use examples; then
-		rm -fr "${D}/usr/share/doc/glibmm*"
+		rm -fr "${ED}usr/share/doc/glibmm*"
 	fi
 
 	if use examples; then

@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.145 2010/05/11 19:47:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.146 2010/05/24 23:46:54 abcd Exp $
+
+  24 May 2010; Jonathan Callen <abcd@gentoo.org> glibmm-2.22.2.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   11 May 2010; Brent Baude <ranger@gentoo.org> glibmm-2.22.1.ebuild:
   Marking glibmm-2.22.1 ppc64 for bug 304777
