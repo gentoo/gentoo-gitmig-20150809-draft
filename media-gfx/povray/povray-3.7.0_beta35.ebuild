@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta35.ebuild,v 1.1 2010/05/24 14:29:56 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta35.ebuild,v 1.2 2010/05/24 21:37:39 lavajoe Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -35,6 +35,10 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Remove logic disallowing libpng 1.4
+	epatch "${FILESDIR}"/${P}-configure-allow-libpng14.patch
+
 	# r_info_ptr->trans_alpha might be no-go with libpn12
 	has_version ">=media-libs/libpng-1.4" && epatch "${FILESDIR}"/${P}-libpng14.patch
 
