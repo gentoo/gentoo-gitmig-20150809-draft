@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.52 2010/04/14 00:47:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.53 2010/05/24 14:23:45 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> bsddb3-5.0.0.ebuild:
+  ppc stable #319731
 
 *bsddb3-5.0.0 (14 Apr 2010)
 
