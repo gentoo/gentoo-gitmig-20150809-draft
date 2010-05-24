@@ -1,6 +1,10 @@
 # ChangeLog for app-text/trang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.26 2010/05/23 20:14:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.27 2010/05/24 13:20:17 caster Exp $
+
+  24 May 2010; Vlastimil Babka <caster@gentoo.org> -files/build-r1.xml,
+  -trang-20030619-r3.ebuild:
+  Remove old.
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> trang-20091111.ebuild:
   stable amd64, bug 313307
