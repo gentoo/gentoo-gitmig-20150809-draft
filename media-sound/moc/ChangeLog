@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.79 2010/05/12 17:34:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.80 2010/05/24 14:49:12 armin76 Exp $
+
+  24 May 2010; Raúl Porcel <armin76@gentoo.org> moc-2.5.0_alpha4.ebuild:
+  alpha/sparc stable wrt #316643
 
   12 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   moc-2.5.0_alpha4.ebuild:
