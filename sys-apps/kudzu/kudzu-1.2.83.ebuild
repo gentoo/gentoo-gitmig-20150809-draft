@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.6 2010/03/13 18:32:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83.ebuild,v 1.7 2010/05/24 18:39:07 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -37,7 +37,7 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	PYTHON_VERSIONS=
-	validate_PYTHON_ABIS
+	python_pkg_setup
 	local version
 	for version in ${PYTHON_ABIS}; do
 		PYTHON_VERSIONS+="${PYTHON_VERSIONS:+ }python${version}"
