@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ncdu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.18 2010/05/13 07:29:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.19 2010/05/24 15:00:06 armin76 Exp $
+
+  24 May 2010; Raúl Porcel <armin76@gentoo.org> ncdu-1.6.ebuild:
+  sparc stable wrt #253036
 
   13 May 2010; Markos Chandras <hwoarang@gentoo.org> ncdu-1.6.ebuild:
   Stable on amd64 wrt bug #253036
