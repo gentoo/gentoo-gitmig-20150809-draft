@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuseiso
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.2 2010/05/17 09:24:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.3 2010/05/24 19:01:59 pacho Exp $
+
+  24 May 2010; Pacho Ramos <pacho@gentoo.org> fuseiso-20070708.ebuild:
+  stable amd64, bug 318327
 
   17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   fuseiso-20070708.ebuild:
