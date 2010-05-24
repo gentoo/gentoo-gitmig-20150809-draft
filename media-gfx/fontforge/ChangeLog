@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.125 2010/05/23 18:30:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.126 2010/05/24 14:44:15 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> fontforge-20090923.ebuild:
+  ppc stable #319515
 
   23 May 2010; Raúl Porcel <armin76@gentoo.org> fontforge-20090923.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #319515
