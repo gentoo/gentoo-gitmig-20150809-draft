@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.59 2010/05/23 18:42:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.60 2010/05/24 14:50:33 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> pyopengl-3.0.1.ebuild:
+  ppc stable #319171
 
   23 May 2010; Raúl Porcel <armin76@gentoo.org> pyopengl-3.0.1.ebuild:
   alpha/arm/ia64/sh/sparc/x86 stable wrt #319171
