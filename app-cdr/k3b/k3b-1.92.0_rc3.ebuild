@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.70.0_beta1.ebuild,v 1.3 2010/03/11 20:35:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.92.0_rc3.ebuild,v 1.1 2010/05/24 19:45:14 spatz Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
+KDE_LINGUAS="ast be bg ca ca@valencia cs csb da de el en_GB eo es et eu fi fr ga
+gl he hi hne hr hu is it ja km ko ku lt mai nb nds nl nn oc pa pl pt pt_BR ro ru
+se sk sl sv th tr uk zh_CN zh_TW"
+KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
 inherit kde4-base
 
 DESCRIPTION="The CD/DVD Kreator for KDE"
@@ -12,12 +16,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="4"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
-IUSE="debug dvd emovix encode ffmpeg flac mad lame musepack musicbrainz sndfile sox taglib vcd vorbis +wav"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE="debug dvd emovix encode ffmpeg flac +handbook mad lame musepack musicbrainz sndfile sox taglib vcd vorbis +wav"
 
 DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
 	media-libs/libsamplerate
-	>=x11-libs/qt-gui-4.5:4
 	dvd? ( media-libs/libdvdread )
 	ffmpeg? ( >=media-video/ffmpeg-0.5 )
 	flac? ( >=media-libs/flac-1.2[cxx] )
@@ -39,7 +42,7 @@ RDEPEND="${DEPEND}
 	encode? ( sox? ( media-sound/sox ) )
 	vcd? ( media-video/vcdimager )"
 
-DOCS="AUTHORS ChangeLog FAQ PERMISSIONS README RELEASE_HOWTO TODO"
+DOCS="ChangeLog FAQ PERMISSIONS README RELEASE_HOWTO TODO"
 
 S=${WORKDIR}/${P/_*}
 
@@ -57,8 +60,7 @@ src_configure() {
 		$(cmake-utils_use flac K3B_BUILD_FLAC_DECODER_PLUGIN)
 		$(cmake-utils_use sndfile K3B_BUILD_SNDFILE_DECODER_PLUGIN)
 		$(cmake-utils_use wav K3B_BUILD_WAVE_DECODER_PLUGIN)
-		$(cmake-utils_use encode K3B_BUILD_EXTERNAL_ENCODER_PLUGIN)
-		"-DWITH_PolkitQt=OFF" )
+		$(cmake-utils_use encode K3B_BUILD_EXTERNAL_ENCODER_PLUGIN) )
 
 	if use encode; then
 		mycmakeargs+=( $(cmake-utils_use vorbis K3B_BUILD_OGGVORBIS_ENCODER_PLUGIN)
