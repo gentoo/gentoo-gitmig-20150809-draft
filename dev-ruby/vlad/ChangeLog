@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/vlad
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/ChangeLog,v 1.6 2009/08/29 07:02:08 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/ChangeLog,v 1.7 2010/05/24 06:28:17 graaff Exp $
+
+*vlad-2.0.0-r1 (24 May 2010)
+
+  24 May 2010; Hans de Graaff <graaff@gentoo.org> -vlad-1.4.0.ebuild,
+  -vlad-2.0.0.ebuild, +vlad-2.0.0-r1.ebuild:
+  Remove gems version that depends on older open4 version. Convert to
+  ruby-fakegem and depend on newer version.
+
+  24 May 2010; Hans de Graaff <graaff@gentoo.org> -vlad-1.4.0.ebuild:
+  Remove old version.
 
 *vlad-2.0.0 (29 Aug 2009)
 
