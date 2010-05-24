@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.20 2010/05/23 19:55:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.21 2010/05/24 09:40:42 tupone Exp $
+
+  24 May 2010; Tupone Alfredo <tupone@gentoo.org> mednafen-0.8.12.ebuild,
+  +files/mednafen-0.8.12-gcc45.patch:
+  Build with gcc-4.5 Bug #321009 by flameeyes@gentoo.org
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> mednafen-0.8.12.ebuild:
   stable amd64, bug 312535
