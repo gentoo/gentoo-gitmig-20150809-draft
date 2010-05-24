@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.1 2010/04/28 11:19:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.2 2010/05/24 20:12:14 darkside Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde libsamplerate melt
 mmx qt4 quicktime sdl sse sse2 vorbis xine xml lua python ruby vdpau" # java perl php tcl
 
@@ -139,7 +139,7 @@ src_install() {
 
 	if use ruby; then
 		cd "${S}"/src/swig/ruby
-		exeinto $(/usr/bin/ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
+		exeinto $("${EPREFIX}"/usr/bin/ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
 		doexe mlt.so || die
 		dodoc play.rb thumbs.rb
 	fi
