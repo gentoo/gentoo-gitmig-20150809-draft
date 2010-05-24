@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>web-apps</herd>
-	<maintainer>
-		<email>wrobel@gentoo.org</email>
-		<name>Gunnar Wrobel</name>
-		<description>Primary maintainer</description>
-	</maintainer>
 	<use>
 		<flag name='tests'>Install model unit tests</flag>
 		<flag name='extras'>Install contributed scripts and plugins</flag>

@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-<maintainer>
- <email>wrobel@gentoo.org</email>
-</maintainer>
 <longdescription>
 Horde 2.x, IMP 3.x, and all other Horde applications make use of the 
 PEAR libraries to handle such tasks as database abstraction, mail 

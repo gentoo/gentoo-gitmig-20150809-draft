@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-<maintainer>
-  <email>wrobel@gentoo.org</email>
-  <name>Gunnar Wrobel</name>
-  <description>Primary maintainer</description>
-</maintainer>
 </pkgmetadata>

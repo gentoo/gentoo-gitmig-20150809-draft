@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-groupware
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/ChangeLog,v 1.9 2009/09/16 14:38:43 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/ChangeLog,v 1.10 2010/05/24 14:23:32 tove Exp $
+
+  24 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove wrobel from metadata.xml (#111816)
 
 *horde-groupware-1.2.4 (16 Sep 2009)
 
