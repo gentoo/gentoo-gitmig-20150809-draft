@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>emacs</herd>
-<maintainer>
-  <email>wrobel@gentoo.org</email>
-  <name>Gunnar Wrobel</name>
-  <description>Primary maintainer</description>
-</maintainer>
 <use>
   <flag name='planner'>Include support for <pkg>app-emacs/planner</pkg></flag>
 </use>

@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>emacs</herd>
-<maintainer>
-  <email>wrobel@gentoo.org</email>
-  <name>Gunnar Wrobel</name>
-  <description>Primary maintainer</description>
-</maintainer>
 <longdescription>
 Emacs Muse is an authoring and publishing environment for Emacs. It
 simplifies the process of writing documents and publishing them to
