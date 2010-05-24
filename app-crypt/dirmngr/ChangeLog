@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/dirmngr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.47 2010/03/18 21:58:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.48 2010/05/24 14:04:44 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> dirmngr-1.1.0_rc1.ebuild:
+  ppc stable #320037
 
 *dirmngr-1.1.0_rc1 (18 Mar 2010)
 

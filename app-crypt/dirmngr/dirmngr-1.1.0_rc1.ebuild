@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.1.0_rc1.ebuild,v 1.1 2010/03/18 21:58:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.1.0_rc1.ebuild,v 1.2 2010/05/24 14:04:44 nixnut Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/${PN}/${P/_/}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND=">=net-nds/openldap-2.1.26

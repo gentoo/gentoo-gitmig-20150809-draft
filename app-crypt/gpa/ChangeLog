@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.69 2010/04/16 21:37:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.70 2010/05/24 14:08:11 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> gpa-0.9.1_pre20100416.ebuild:
+  ppc stable #320037
 
 *gpa-0.9.1_pre20100416 (16 Apr 2010)
 
