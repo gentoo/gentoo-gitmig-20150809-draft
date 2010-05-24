@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.23.ebuild,v 1.1 2010/04/16 22:12:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/alsa-headers-1.0.23.ebuild,v 1.2 2010/05/24 01:26:57 abcd Exp $
 
-inherit eutils
+EAPI="3"
+
+inherit base
 
 MY_PN=${PN/headers/driver}
 MY_P="${MY_PN}-${PV/_rc/rc}"
@@ -14,7 +16,7 @@ SRC_URI="mirror://alsaproject/driver/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""
@@ -22,19 +24,18 @@ RDEPEND=""
 
 RESTRICT="binchecks strip"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-1.0.6a-user.patch"
+)
+
 # Remove the sound symlink workaround...
 pkg_setup() {
-	if [[ -L "${ROOT}/usr/include/sound" ]]; then
-		rm	"${ROOT}/usr/include/sound"
+	if [[ -L ${EROOT}usr/include/sound ]]; then
+		rm	"${EROOT}usr/include/sound"
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-1.0.6a-user.patch"
-}
+src_configure() { :; }
 
 src_compile() { :; }
 

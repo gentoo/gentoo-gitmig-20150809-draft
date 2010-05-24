@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.196 2010/04/16 22:12:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.197 2010/05/24 01:26:57 abcd Exp $
+
+  24 May 2010; Jonathan Callen <abcd@gentoo.org> alsa-headers-1.0.23.ebuild:
+  Bump to EAPI=3, add prefix keywords, use base.eclass to apply patches (bug
+  318185)
 
 *alsa-headers-1.0.23 (16 Apr 2010)
 
