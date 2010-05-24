@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/universalindentgui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.8 2010/01/02 21:06:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.9 2010/05/24 22:03:39 wired Exp $
+
+  24 May 2010; Alex Alexander <wired@gentoo.org>
+  universalindentgui-1.1.0-r2.ebuild,
+  +files/universalindentgui-1.1.0-gcc45.patch:
+  fixed gcc 4.5 compilation bug #321323, thanks to Kacper Kowalik
 
   02 Jan 2010; Ben de Groot <yngwin@gentoo.org>
   universalindentgui-1.1.0-r2.ebuild:

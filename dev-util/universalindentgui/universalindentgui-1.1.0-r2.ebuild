@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0-r2.ebuild,v 1.3 2010/01/02 21:06:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0-r2.ebuild,v 1.4 2010/05/24 22:03:39 wired Exp $
 
 EAPI="2"
 
-inherit qt4-r2
+inherit eutils qt4-r2
 
 DESCRIPTION="Cross platform compatible GUI for several code formatters, beautifiers and indenters."
 HOMEPAGE="http://universalindent.sourceforge.net/"
@@ -117,6 +117,7 @@ src_prepare() {
 		fi
 	done
 
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {
