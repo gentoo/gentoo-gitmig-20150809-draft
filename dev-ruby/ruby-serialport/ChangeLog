@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-serialport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ChangeLog,v 1.14 2010/05/23 18:09:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ChangeLog,v 1.15 2010/05/24 05:36:33 graaff Exp $
+
+  24 May 2010; Hans de Graaff <graaff@gentoo.org>
+  ruby-serialport-1.0.3.ebuild, ruby-serialport-1.0.3-r1.ebuild:
+  Move stable keywords back to 1.0.3 since that version has no ruby19
+  support.
 
   23 May 2010; Raúl Porcel <armin76@gentoo.org>
   -ruby-serialport-0.6.ebuild, ruby-serialport-1.0.3-r1.ebuild:
