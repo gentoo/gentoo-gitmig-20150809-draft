@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.80 2010/05/24 14:49:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.81 2010/05/24 18:31:23 pacho Exp $
+
+  24 May 2010; Pacho Ramos <pacho@gentoo.org> moc-2.5.0_alpha4.ebuild:
+  stable amd64, bug 316643
 
   24 May 2010; Raúl Porcel <armin76@gentoo.org> moc-2.5.0_alpha4.ebuild:
   alpha/sparc stable wrt #316643
