@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.30 2010/05/13 15:15:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.31 2010/05/24 19:27:16 pacho Exp $
+
+  24 May 2010; Pacho Ramos <pacho@gentoo.org> bcmail-1.45.ebuild:
+  stable amd64, bug 317587
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> bcmail-1.45.ebuild:
   Marked ppc/ppc64 stable.
