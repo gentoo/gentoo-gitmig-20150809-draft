@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.31 2010/05/23 21:47:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.32 2010/05/24 19:09:49 pacho Exp $
+
+  24 May 2010; Pacho Ramos <pacho@gentoo.org> json-1.2.2.ebuild:
+  stable amd64, bug 316883
 
 *json-1.4.3-r1 (23 May 2010)
 
