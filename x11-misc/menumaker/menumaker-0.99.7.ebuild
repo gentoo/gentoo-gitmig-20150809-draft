@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/menumaker-0.99.7.ebuild,v 1.3 2010/05/24 18:58:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/menumaker-0.99.7.ebuild,v 1.4 2010/05/24 19:01:29 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="doc? ( sys-apps/texinfo )"
