@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webpy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.11 2009/12/20 15:50:54 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.12 2010/05/24 14:25:58 tove Exp $
+
+  24 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove wrobel from metadata.xml (#111816)
 
   20 Dec 2009; Fabian Groffen <grobian@gentoo.org> webpy-0.32.ebuild:
   Merged keywords from Prefix
