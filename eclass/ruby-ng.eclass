@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.19 2010/05/22 13:15:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.20 2010/05/24 07:33:35 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -142,7 +142,6 @@ _ruby_wrap_conditions() {
 	local atoms="$2"
 
 	for condition in $conditions; do
-		hasq $condition "$IUSE" || IUSE="${IUSE} $condition"
 		atoms="${condition}? ( ${atoms} )"
 	done
 
@@ -180,7 +179,8 @@ ruby_add_rdepend() {
 
 	# Add the dependency as a test-dependency since we're going to
 	# execute the code during test phase.
-	DEPEND="${DEPEND} $(_ruby_wrap_conditions test "${dependency}")"
+	DEPEND="${DEPEND} test? ( ${dependency} )"
+	hasq test "$IUSE" || IUSE="${IUSE} test"
 }
 
 # @FUNCTION: ruby_add_bdepend
