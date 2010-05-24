@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.15 2010/05/23 21:15:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.16 2010/05/24 15:13:18 nixnut Exp $
+
+  23 May 2010; <nixnut@gentoo.org> mako-0.3.2.ebuild:
+  ppc stable #315159
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> mako-0.3.2.ebuild:
   stable amd64, bug 315159
