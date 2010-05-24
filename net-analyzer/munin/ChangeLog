@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.36 2010/05/02 22:33:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.37 2010/05/24 11:00:05 phajdan.jr Exp $
+
+  24 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> munin-1.4.4.ebuild:
+  x86 stable wrt bug #317631
 
   02 May 2010; Robin H. Johnson <robbat2@gentoo.org> munin-1.3.4-r2.ebuild,
   munin-1.4.3.ebuild, munin-1.4.4.ebuild:
