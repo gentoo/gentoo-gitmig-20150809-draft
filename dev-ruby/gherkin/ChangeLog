@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.3 2010/05/19 05:24:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.4 2010/05/24 14:28:20 armin76 Exp $
+
+  24 May 2010; Raúl Porcel <armin76@gentoo.org> gherkin-1.0.24.ebuild,
+  gherkin-1.0.24-r1.ebuild, gherkin-1.0.29.ebuild:
+  Add ~sparc/~x86 wrt #318949
 
 *gherkin-1.0.29 (19 May 2010)
 

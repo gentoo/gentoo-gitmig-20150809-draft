@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-1.0.29.ebuild,v 1.1 2010/05/19 05:24:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-1.0.29.ebuild,v 1.2 2010/05/24 14:28:20 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -17,7 +17,7 @@ DESCRIPTION="Fast Gherkin lexer and parser based on Ragel."
 HOMEPAGE="http://wiki.github.com/aslakhellesoy/cucumber/gherkin"
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
