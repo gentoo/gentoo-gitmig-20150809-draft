@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.44 2010/05/22 11:20:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.45 2010/05/24 13:14:54 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> ypserv-2.22.ebuild:
+  ppc stable #320325
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> ypserv-2.22.ebuild:
   ia64/sparc/x86 stable wrt #320325
