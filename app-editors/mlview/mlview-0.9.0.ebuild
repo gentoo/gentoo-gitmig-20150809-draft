@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.9.0.ebuild,v 1.1 2010/03/27 08:37:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/mlview-0.9.0.ebuild,v 1.2 2010/05/24 22:18:35 xarthisius Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -41,7 +41,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-desktop.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-gcc45.patch
 	gnome2_src_prepare
 }
 
