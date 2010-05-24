@@ -1,10 +1,10 @@
 # ChangeLog for app-editors/mlview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.26 2010/05/24 22:18:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.27 2010/05/24 22:28:46 xarthisius Exp $
 
-  24 May 2010; Kacper Kowalik <xarthisius.kk@gmail.com> mlview-0.9.0.ebuild,
+  24 May 2010; Kacper Kowalik <xarthisius@gentoo.org> mlview-0.9.0.ebuild,
   +files/mlview-0.9.0-gcc45.patch:
-  Fix build with GCC 4.5 wrt bug #320377
+  Fix build with GCC 4.5 wrt bug 320377
 
 *mlview-0.9.0 (27 Mar 2010)
 
