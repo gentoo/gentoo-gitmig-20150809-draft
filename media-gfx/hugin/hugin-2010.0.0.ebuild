@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0.ebuild,v 1.3 2010/05/24 13:10:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2010.0.0.ebuild,v 1.4 2010/05/24 19:40:44 phajdan.jr Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -12,7 +12,7 @@ HOMEPAGE="http://hugin.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 SIFT"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 
 LANGS=" bg ca cs de en_GB es fi fr hu it ja ko nl pl pt_BR ru sk sl sv uk zh_CN zh_TW"
 IUSE="lapack +sift $(echo ${LANGS//\ /\ linguas_})"
