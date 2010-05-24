@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.10 2010/03/04 21:09:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.11 2010/05/24 19:09:35 arfrever Exp $
 
 EAPI="2"
-
-NEED_PYTHON="2.4"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils multilib
@@ -12,11 +11,12 @@ inherit distutils eutils multilib
 DOC_P="${PN}-docs-html-2.3.7"
 
 DESCRIPTION="Various LDAP-related Python modules"
+HOMEPAGE="http://python-ldap.sourceforge.net/ http://pypi.python.org/pypi/python-ldap"
 SRC_URI="http://pypi.python.org/packages/source/p/python-ldap/${P}.tar.gz
 	doc? ( http://www.python-ldap.org/doc/${DOC_P}.tar.gz )"
-HOMEPAGE="http://python-ldap.sourceforge.net/"
-SLOT="0"
+
 LICENSE="PYTHON"
+SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc examples sasl ssl"
 
@@ -24,8 +24,10 @@ RDEPEND=">=net-nds/openldap-2.3
 	sasl? ( dev-libs/cyrus-sasl )"
 DEPEND="${DEPEND}
 	dev-python/setuptools"
+RESTRICT_PYTHON_ABIS="3.*"
 
-RESTRICT_PYTHON_ABIS="3*"
+DOCS="CHANGES README"
+PYTHON_MODNAME="dsml.py ldapurl.py ldif.py ldap"
 
 src_prepare() {
 	# Note: we can't add /usr/lib and /usr/lib/sasl2 to library_dirs due to a bug in py2.4
@@ -49,17 +51,10 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
+
 	use doc && dohtml -r "${WORKDIR}/${DOC_P}"/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r Demo
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize dsml.py ldapurl.py ldif.py ldap
-}
-
-pkg_postrm() {
-	python_mod_cleanup
 }
