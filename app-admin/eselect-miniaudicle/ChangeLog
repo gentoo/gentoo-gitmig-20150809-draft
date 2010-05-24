@@ -1,10 +1,6 @@
 # ChangeLog for app-admin/eselect-miniaudicle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-miniaudicle/ChangeLog,v 1.4 2010/05/24 15:17:22 phajdan.jr Exp $
-
-  24 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
-  eselect-miniaudicle-1.0.1.ebuild:
-  x86 stable wrt bug #320187
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-miniaudicle/ChangeLog,v 1.5 2010/05/24 15:18:38 phajdan.jr Exp $
 
   22 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
