@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/man-pages-ru
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.2 2007/02/21 22:08:35 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.3 2010/05/24 08:43:59 pva Exp $
+
+*man-pages-ru-3.24.2059.1262.20100523 (24 May 2010)
+
+  24 May 2010; Peter Volkov <pva@gentoo.org> man-pages-ru-0.98.ebuild,
+  +man-pages-ru-3.24.2059.1262.20100523.ebuild:
+  Version bump, bug #321273, thank Azamat H. Hackimov for this job. Finally
+  new active upstream!
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
