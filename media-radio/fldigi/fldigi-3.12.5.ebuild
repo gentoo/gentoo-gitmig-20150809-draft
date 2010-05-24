@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.12.5.ebuild,v 1.1 2010/05/04 18:59:43 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.12.5.ebuild,v 1.2 2010/05/24 11:46:24 tomjbe Exp $
 
 EAPI=2
 
-inherit versionator
+inherit eutils versionator
 
 MY_DOC_PN=${PN}-$(get_version_component_range 1-2)
 
@@ -32,6 +32,10 @@ RDEPEND="|| ( >=x11-libs/fltk-1.1.9:1.1[threads] <x11-libs/fltk-1.1.9:1.1 )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+}
 
 src_configure() {
 	econf $(use_with sndfile) \
