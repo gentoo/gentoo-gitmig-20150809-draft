@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.6.4.ebuild,v 1.1 2010/04/22 06:46:21 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.6.4.ebuild,v 1.2 2010/05/24 18:42:29 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -22,7 +22,7 @@ RDEPEND=${DEPEND}
 DOCS="AUTHORS NEWS"
 
 pkg_setup() {
-	validate_PYTHON_ABIS
+	python_pkg_setup
 
 	# A hack to install for all versions of Python in the system.
 	# pkgcore needs it to support upgrading to a different Python slot.
