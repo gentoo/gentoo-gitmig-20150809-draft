@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.69 2010/05/24 14:27:13 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.70 2010/05/24 22:03:30 spatz Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -213,8 +213,11 @@ qt4-build_src_prepare() {
 	# Bug 282984 && Bug 295530
 	sed -e "s:\(^SYSTEM_VARIABLES\):CC=$(tc-getCC)\nCXX=$(tc-getCXX)\nCFLAGS=\"${CFLAGS}\"\nCXXFLAGS=\"${CXXFLAGS}\"\nLDFLAGS=\"${LDFLAGS}\"\n\1:" \
 		-i configure || die "sed qmake compilers failed"
-	sed -e "s:\(\$MAKE\):\1 CC=$(tc-getCC) CXX=$(tc-getCXX) LD=$(tc-getCXX) LINK=$(tc-getCXX):" \
-		-i config.tests/unix/compile.test || die "sed test compilers failed"
+	# bug 321335
+	find ./config.tests/unix -name "*.test" -type f -exec grep -lZ \$MAKE '{}' \; | \
+		xargs -0 \
+		sed -e "s:\(\$MAKE\):\1 CC=$(tc-getCC) CXX=$(tc-getCXX) LD=$(tc-getCXX) LINK=$(tc-getCXX):g" \
+			-i || die "sed test compilers failed"
 
 	# Bug 172219
 	sed -e "s:X11R6/::" \
