@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.21 2010/05/22 07:45:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.22 2010/05/24 14:19:21 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> ppl-0.10.2-r1.ebuild:
+  ppc stable #319885
 
   22 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ppl-0.10.2-r1.ebuild:
   x86 stable wrt bug #319885
