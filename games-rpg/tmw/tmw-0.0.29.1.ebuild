@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.29.1.ebuild,v 1.5 2010/03/02 11:20:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.29.1.ebuild,v 1.6 2010/05/24 15:45:55 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -38,7 +38,8 @@ src_prepare() {
 		-e '/^SUBDIRS/s/fonts//' \
 		data/Makefile.in \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-desktop.patch
+	epatch "${FILESDIR}"/${P}-desktop.patch \
+		"${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {

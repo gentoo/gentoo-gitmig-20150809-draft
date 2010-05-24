@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/tmw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.37 2010/03/02 11:20:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.38 2010/05/24 15:45:55 tupone Exp $
+
+  24 May 2010; Tupone Alfredo <tupone@gentoo.org> tmw-0.0.29.1.ebuild,
+  +files/tmw-0.0.29.1-gcc45.patch:
+  Build with gcc-4.5 Bug #321297 by flameeyes@gentoo.org
 
   02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tmw-0.0.29.1.ebuild:
   x86 stable wrt bug #303483
