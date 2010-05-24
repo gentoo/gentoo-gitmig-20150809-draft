@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.55 2010/05/23 18:46:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.56 2010/05/24 13:13:25 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> ypbind-1.31.ebuild:
+  ppc stable #320327
 
   23 May 2010; Raúl Porcel <armin76@gentoo.org> ypbind-1.31.ebuild:
   ia64/sparc/x86 stable wrt #320327
