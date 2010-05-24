@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/hippo-canvas-0.3.0-r1.ebuild,v 1.5 2010/05/23 21:13:45 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/hippo-canvas-0.3.0-r1.ebuild,v 1.6 2010/05/24 17:16:51 arfrever Exp $
 
 EAPI="2"
 
@@ -32,7 +32,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS README TODO"
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+	fi
 	G2CONF="$(use_enable python)"
 }
 
@@ -47,6 +49,8 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
-	rm "${D}$(python_get_sitedir)/hippo.la"
+	if use python; then
+		python_clean_installation_image
+	fi
 	rm "${D}/usr/$(get_libdir)/libhippocanvas-1.la"
 }
