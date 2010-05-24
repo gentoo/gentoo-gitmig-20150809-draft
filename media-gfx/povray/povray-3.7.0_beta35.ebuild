@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta32.ebuild,v 1.2 2010/03/12 08:54:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta35.ebuild,v 1.1 2010/05/24 14:29:56 lavajoe Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -8,14 +8,14 @@ POVRAY_MAJOR_VER=$(get_version_component_range 1-3)
 POVRAY_MINOR_VER=$(get_version_component_range 4)
 if [ -n "$POVRAY_MINOR_VER" ]; then
 	POVRAY_MINOR_VER=${POVRAY_MINOR_VER/beta/beta.}
-	MY_PV="${POVRAY_MAJOR_VER}.${POVRAY_MINOR_VER}"
+	MY_PV="${POVRAY_MAJOR_VER}.${POVRAY_MINOR_VER}a"
 else
 	MY_PV=${POVRAY_MAJOR_VER}
 fi
 
 DESCRIPTION="The Persistence of Vision Raytracer"
 HOMEPAGE="http://www.povray.org/"
-SRC_URI="http://www.povray.org/beta/source/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="http://www.povray.org/redirect/www.povray.org/beta/source/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="povlegal-3.6"
 SLOT="0"
