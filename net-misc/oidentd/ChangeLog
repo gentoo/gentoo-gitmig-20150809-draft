@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.47 2010/03/21 17:42:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.48 2010/05/24 12:36:50 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> oidentd-2.0.8-r3.ebuild:
+  ppc stable #320931
 
 *oidentd-2.0.8-r3 (21 Mar 2010)
 
