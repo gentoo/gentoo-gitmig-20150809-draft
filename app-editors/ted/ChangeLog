@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.35 2010/05/24 18:50:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.36 2010/05/24 19:10:32 truedfx Exp $
+
+  24 May 2010; Harald van Dĳk <truedfx@gentoo.org> -ted-2.12.ebuild,
+  -ted-2.17-r1.ebuild, -files/ted-2.17-motif.patch:
+  Remove old versions
 
   24 May 2010; Pacho Ramos <pacho@gentoo.org> ted-2.20.ebuild:
   stable amd64, bug 317785
