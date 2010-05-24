@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/qrupdate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.13 2010/05/13 15:53:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.14 2010/05/24 12:43:32 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> qrupdate-1.1.0.ebuild:
+  ppc stable #318649
 
 *qrupdate-1.1.1 (13 May 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.0.ebuild,v 1.4 2010/05/13 06:33:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.0.ebuild,v 1.5 2010/05/24 12:43:32 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/qrupdate/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="virtual/blas
