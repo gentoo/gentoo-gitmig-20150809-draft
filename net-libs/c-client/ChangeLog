@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.61 2009/03/30 16:03:05 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.62 2010/05/24 14:25:14 tove Exp $
+
+  24 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove wrobel from metadata.xml (#111816)
 
   30 Mar 2009; Raúl Porcel <armin76@gentoo.org> c-client-2007e.ebuild:
   arm/s390/sh stable wrt #252567
