@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.28.0.ebuild,v 1.8 2010/05/22 16:22:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.28.0.ebuild,v 1.9 2010/05/24 22:37:10 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 
 inherit autotools eutils gnome2
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="doc eds networkmanager policykit"
 
 RDEPEND="dev-lang/python
@@ -67,7 +67,7 @@ src_prepare() {
 
 	# FIXME: tarball generated with broken gtk-doc, revisit me.
 	if use doc; then
-		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/usr/bin/gtkdoc-rebase" \
+		sed "/^TARGET_DIR/i \GTKDOC_REBASE=${EPREFIX}/usr/bin/gtkdoc-rebase" \
 			-i gtk-doc.make || die "sed 1 failed"
 	else
 		sed "/^TARGET_DIR/i \GTKDOC_REBASE=$(type -P true)" \
@@ -89,8 +89,8 @@ src_prepare() {
 }
 
 pkg_postinst() {
-	local entries="${ROOT}etc/gconf/schemas/panel-default-setup.entries"
-	local gconftool="${ROOT}usr/bin/gconftool-2"
+	local entries="${EROOT}etc/gconf/schemas/panel-default-setup.entries"
+	local gconftool="${EROOT}usr/bin/gconftool-2"
 
 	if [ -e "$entries" ]; then
 		einfo "setting panel gconf defaults..."
