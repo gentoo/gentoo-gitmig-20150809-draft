@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jelly
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.15 2010/05/22 20:06:49 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/ChangeLog,v 1.16 2010/05/24 15:00:56 caster Exp $
+
+  24 May 2010; Vlastimil Babka <caster@gentoo.org>
+  -commons-jelly-1.0-r3.ebuild:
+  Remove old.
 
   22 May 2010; Kenneth Prugh <ken69267@gentoo.org>
   commons-jelly-1.0-r4.ebuild:

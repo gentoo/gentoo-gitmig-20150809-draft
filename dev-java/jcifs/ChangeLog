@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcifs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.23 2010/05/23 17:47:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.24 2010/05/24 14:59:40 caster Exp $
+
+  24 May 2010; Vlastimil Babka <caster@gentoo.org> -jcifs-1.3.2.ebuild:
+  Remove old.
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> jcifs-1.3.13.ebuild:
   stable amd64, bug 306605

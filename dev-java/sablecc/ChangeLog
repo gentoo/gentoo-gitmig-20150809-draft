@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sablecc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.21 2010/05/22 13:42:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.22 2010/05/24 15:03:12 caster Exp $
+
+  24 May 2010; Vlastimil Babka <caster@gentoo.org> -sablecc-3.1-r1.ebuild:
+  Remove old.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> sablecc-3.2.ebuild:
   stable amd64, bug 227209
