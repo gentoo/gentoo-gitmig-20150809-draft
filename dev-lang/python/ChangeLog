@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.469 2010/05/23 20:13:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.470 2010/05/24 13:55:59 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> python-2.6.5-r2.ebuild:
+  ppc stable #319723
 
   23 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.4.6.ebuild, python-2.5.4-r4.ebuild, python-2.6.5-r2.ebuild,
