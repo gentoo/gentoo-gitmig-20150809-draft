@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.1.ebuild,v 1.6 2010/03/26 13:38:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.1.ebuild,v 1.7 2010/05/24 14:44:58 armin76 Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/l/ltrace/${MY_P}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha amd64 ~arm ~ia64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="-alpha amd64 ~arm ~ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="test"
 
 RDEPEND="dev-libs/elfutils"
