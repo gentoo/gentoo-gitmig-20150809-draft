@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.30 2010/05/24 18:06:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.31 2010/05/24 18:15:57 darkside Exp $
+
+  24 May 2010; Jeremy Olexa <darkside@gentoo.org> -midori-0.2.5.ebuild:
+  remove old, issues with USE=doc. bug 321315
 
 *midori-0.2.6 (24 May 2010)
 
