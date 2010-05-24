@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/myspell-nl-20090725.ebuild,v 1.3 2010/05/22 11:19:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/myspell-nl-20090725.ebuild,v 1.4 2010/05/24 12:27:58 nixnut Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "nl,NL,nl_NL,Dutch (Netherlands),nl_NL.zip"
@@ -19,4 +19,4 @@ DESCRIPTION="Dutch dictionaries for myspell/hunspell"
 LICENSE="GPL-2"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://wiki.services.openoffice.org/wiki/Dictionaries#Dutch_.28Netherlands.29"
 
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~ppc ppc64 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ppc ppc64 sh sparc ~x86 ~x86-fbsd"
