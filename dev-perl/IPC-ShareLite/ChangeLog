@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-ShareLite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.28 2010/05/14 15:55:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.29 2010/05/24 14:46:03 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> IPC-ShareLite-0.17.ebuild:
+  ppc stable #319281
 
   14 May 2010; Jeroen Roovers <jer@gentoo.org> IPC-ShareLite-0.17.ebuild:
   Stable for HPPA (bug #319281).
