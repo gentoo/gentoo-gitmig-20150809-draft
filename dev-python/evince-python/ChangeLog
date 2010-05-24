@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/evince-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/evince-python/ChangeLog,v 1.6 2010/05/22 17:54:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/evince-python/ChangeLog,v 1.7 2010/05/24 13:40:58 nixnut Exp $
+
+  24 May 2010; <nixnut@gentoo.org> evince-python-2.28.0.ebuild:
+  ppc stable #320247
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org>
   evince-python-2.28.0.ebuild:
