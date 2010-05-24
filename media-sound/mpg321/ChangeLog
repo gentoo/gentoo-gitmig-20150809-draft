@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.62 2010/05/21 13:43:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.63 2010/05/24 19:12:47 pacho Exp $
+
+  24 May 2010; Pacho Ramos <pacho@gentoo.org> mpg321-0.2.11.ebuild:
+  stable amd64, bug 318197
 
   21 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> mpg321-0.2.11.ebuild:
   x86 stable wrt bug #318197
