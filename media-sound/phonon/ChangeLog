@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.49 2010/05/23 12:09:36 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.50 2010/05/24 20:16:01 spatz Exp $
+
+*phonon-4.4.1-r1 (24 May 2010)
+
+  24 May 2010; Dror Levin <spatz@gentoo.org> -phonon-4.4.1.ebuild,
+  +phonon-4.4.1-r1.ebuild:
+  Revbump for last fix.
 
   23 May 2010; Dror Levin <spatz@gentoo.org> phonon-4.4.1.ebuild,
   +files/phonon-4.4.1-pulseaudio-connect.patch,
