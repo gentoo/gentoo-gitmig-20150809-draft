@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.34 2010/05/24 14:32:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.35 2010/05/24 18:50:44 pacho Exp $
+
+  24 May 2010; Pacho Ramos <pacho@gentoo.org> ted-2.20.ebuild:
+  stable amd64, bug 317785
 
   24 May 2010; Raúl Porcel <armin76@gentoo.org> ted-2.20.ebuild:
   sparc stable wrt #317785
