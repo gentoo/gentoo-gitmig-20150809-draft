@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.28.0.ebuild,v 1.4 2010/05/04 16:17:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.28.0.ebuild,v 1.5 2010/05/24 22:31:31 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils gnome2
 
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 IUSE="branding doc ipv6 +splash elibc_FreeBSD"
 
@@ -47,7 +47,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	# TODO: convert libnotify to a configure option
 	G2CONF="${G2CONF}
-		--docdir=/usr/share/doc/${PF}
+		--docdir=${EPREFIX}/usr/share/doc/${PF}
 		--with-default-wm=gnome-wm
 		$(use_enable splash)
 		$(use_enable doc docbook-docs)
