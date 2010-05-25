@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-1.0.0.ebuild,v 1.4 2010/01/25 18:36:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-1.0.0.ebuild,v 1.5 2010/05/25 21:15:42 pacho Exp $
 
 inherit linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
