@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tinyxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.5 2010/05/22 12:55:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.6 2010/05/25 08:25:44 voyageur Exp $
+
+  25 May 2010; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
+  Take package over, filezilla is the only current consumer
 
 *tinyxml-2.6.1 (22 May 2010)
 
