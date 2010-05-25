@@ -1,6 +1,9 @@
 # ChangeLog for games-util/grfcodec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.2 2010/05/25 09:13:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.3 2010/05/25 21:23:32 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> grfcodec-0_pre2306.ebuild:
+  stable amd64, bug 320497
 
   25 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   grfcodec-0_pre2306.ebuild:
