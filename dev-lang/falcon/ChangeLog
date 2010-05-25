@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/falcon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/falcon/ChangeLog,v 1.2 2009/11/11 18:18:42 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/falcon/ChangeLog,v 1.3 2010/05/25 05:44:04 reavertm Exp $
+
+*falcon-0.9.6.4 (25 May 2010)
+
+  25 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  +falcon-0.9.6.4.ebuild:
+  Version bump 0.9.6.4, also fix bug 312401
 
 *falcon-0.9.4.4 (11 Nov 2009)
 
