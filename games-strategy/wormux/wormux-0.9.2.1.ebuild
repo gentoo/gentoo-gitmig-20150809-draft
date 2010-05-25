@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.9.2.1.ebuild,v 1.1 2010/04/20 19:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.9.2.1.ebuild,v 1.2 2010/05/25 21:44:30 pacho Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://download.gna.org/wormux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug nls unicode"
 
 RDEPEND="media-libs/libsdl[joystick,video]
