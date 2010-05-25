@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/python-mpd-0.2.1.ebuild,v 1.4 2009/03/13 16:19:58 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/python-mpd-0.2.1.ebuild,v 1.5 2010/05/25 20:52:39 angelos Exp $
+
+PYTHON_DEPEND="2:2.4 3"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -13,8 +16,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=virtual/python-2.4"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+RDEPEND=""
+DEPEND="dev-util/pkgconfig"
 
 DOCS="CHANGES.txt README.txt TODO.txt doc/commands.txt"
