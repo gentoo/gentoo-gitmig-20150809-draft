@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.28 2010/04/30 15:45:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.29 2010/05/25 06:41:03 reavertm Exp $
+
+*clucene-0.9.21b-r1 (25 May 2010)
+
+  25 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  +clucene-0.9.21b-r1.ebuild:
+  Add static-libs USE flag, conditionally remove libtool files, move to EAPI-2
 
   30 Apr 2010; Fabian Groffen <grobian@gentoo.org> clucene-0.9.21b.ebuild:
   Marked ~ppc-macos
@@ -68,8 +74,8 @@
   02 Oct 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
   -clucene-0.9.15.ebuild, -clucene-0.9.16a.ebuild, -clucene-0.9.17.ebuild,
   +clucene-0.9.20.ebuild:
-  Version bump to 0.9.20. Fixes bug 179670. 
-  Removed obsolete versions. 
+  Version bump to 0.9.20. Fixes bug 179670.
+  Removed obsolete versions.
   Added myself to metadata.xml as the maintainer.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
