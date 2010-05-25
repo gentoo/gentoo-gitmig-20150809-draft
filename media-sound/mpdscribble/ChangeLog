@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.34 2010/04/16 13:38:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.35 2010/05/25 10:20:21 angelos Exp $
+
+  25 May 2010; Christoph Mende <angelos@gentoo.org> mpdscribble-0.19.ebuild:
+  amd64 stable (bug 320929), thanks to Roeland Douma
 
   16 Apr 2010; Brent Baude <ranger@gentoo.org> mpdscribble-0.19.ebuild:
   keyworded ~arch for ppc, bug 302024
