@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11565 2010/05/25 12:52:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11566 2010/05/25 19:08:57 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -60,7 +60,7 @@
 sci-libs/rcsb-data
 sci-chemistry/validation
 sci-chemistry/maxit
-=pdb-extract/pdb-extract-1.700
+=sci-chemistry/pdb-extract-1.700
 
 # Luca Barbato <lu_zero@gentoo.org> (21 May 2010)
 # development release
