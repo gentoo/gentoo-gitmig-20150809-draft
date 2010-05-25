@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.533 2010/05/24 14:23:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.534 2010/05/25 16:42:48 arfrever Exp $
+
+  25 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  openoffice-3.2.0.ebuild, openoffice-3.2.1_rc1.ebuild:
+  Use Python 2 (bug #311683).
 
 *openoffice-3.2.1_rc1 (24 May 2010)
 

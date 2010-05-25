@@ -1,13 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.25 2010/05/15 07:13:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.26 2010/05/25 16:42:48 arfrever Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="threads"
 
-inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base mono multilib toolchain-funcs
+inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base mono multilib python toolchain-funcs
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
 
@@ -134,7 +136,6 @@ DEPEND="${COMMON_DEPEND}
 	sys-apps/coreutils
 	pam? ( sys-libs/pam
 		sys-apps/shadow[pam] )
-	>=dev-lang/python-2.3.4[threads]
 	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
 		>=dev-java/ant-core-1.7 )
 	ldap? ( net-nds/openldap )"
@@ -200,6 +201,9 @@ pkg_setup() {
 	local db_ver=$(db_findver '>=sys-libs/db-4.3')
 
 	kde4-base_pkg_setup
+
+	python_set_active_version 2
+	python_pkg_setup
 
 }
 
