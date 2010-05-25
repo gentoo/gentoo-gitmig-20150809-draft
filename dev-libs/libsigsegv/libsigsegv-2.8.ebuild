@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.8.ebuild,v 1.5 2010/05/19 20:09:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigsegv/libsigsegv-2.8.ebuild,v 1.6 2010/05/25 15:16:24 hwoarang Exp $
 
 DESCRIPTION="library for handling page faults in user mode"
 HOMEPAGE="http://libsigsegv.sourceforge.net/"
@@ -10,7 +10,7 @@ EAPI="2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_configure () {
