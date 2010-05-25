@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/webpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.12 2010/05/24 14:25:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.13 2010/05/25 10:28:24 djc Exp $
+
+*webpy-0.34 (25 May 2010)
+
+  25 May 2010; Dirkjan Ochtman <djc@gentoo.org> +webpy-0.34.ebuild:
+  Version bump to 0.34, bug 311097.
 
   24 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove wrobel from metadata.xml (#111816)
