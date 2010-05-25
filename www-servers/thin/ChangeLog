@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.12 2010/05/22 19:18:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.13 2010/05/25 14:42:30 a3li Exp $
+
+  25 May 2010; Alex Legler <a3li@gentoo.org> thin-1.2.5-r1.ebuild:
+  Add REE18 support
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> -thin-1.2.4.ebuild,
   -thin-1.2.5.ebuild:
