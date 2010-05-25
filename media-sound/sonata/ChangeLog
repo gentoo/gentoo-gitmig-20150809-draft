@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.49 2010/05/21 20:10:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.50 2010/05/25 20:55:53 angelos Exp $
+
+  25 May 2010; Christoph Mende <angelos@gentoo.org> sonata-1.6.2.1.ebuild:
+  Force python2 since the build system is broken on python3
 
   21 May 2010; Christoph Mende <angelos@gentoo.org> -sonata-1.6.2-r1.ebuild:
   Removed old
