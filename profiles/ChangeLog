@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4205 2010/05/25 19:15:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4206 2010/05/25 19:45:18 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 May 2010; Justin Lecher <jlec@gentoo.org> package.mask:
+  Revert masking of sci-chemistry/pdb-extract etc
 
   25 May 2010; Justin Lecher <jlec@gentoo.org> package.mask:
   Fixed typo pdb-extract/pdb-extract > sci-chemistry/pdb-extract
