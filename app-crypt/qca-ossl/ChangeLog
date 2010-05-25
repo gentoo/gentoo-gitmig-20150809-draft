@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-ossl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.26 2010/05/24 13:01:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.27 2010/05/25 21:18:40 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org>
+  qca-ossl-2.0.0_beta3-r2.ebuild:
+  stable amd64, bug 320469
 
   24 May 2010; <nixnut@gentoo.org> qca-ossl-2.0.0_beta3-r2.ebuild:
   ppc stable #320469
