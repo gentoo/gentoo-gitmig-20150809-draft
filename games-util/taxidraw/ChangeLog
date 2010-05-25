@@ -1,6 +1,9 @@
 # ChangeLog for games-util/taxidraw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/taxidraw/ChangeLog,v 1.4 2009/10/20 12:58:33 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/taxidraw/ChangeLog,v 1.5 2010/05/25 13:43:54 hwoarang Exp $
+
+  25 May 2010; Markos Chandras <hwoarang@gentoo.org> taxidraw-0.3.2.ebuild:
+  Keyworded for amd64 wrt bug #305397
 
   20 Oct 2009; Markus Meier <maekke@gentoo.org> taxidraw-0.3.2.ebuild:
   x86 stable, bug #285385
