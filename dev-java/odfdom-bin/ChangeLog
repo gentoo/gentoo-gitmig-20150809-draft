@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/odfdom-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom-bin/ChangeLog,v 1.4 2010/05/19 15:09:06 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom-bin/ChangeLog,v 1.5 2010/05/25 10:00:23 ali_bush Exp $
+
+  25 May 2010; Alistair Bush <ali_bush@gentoo.org> odfdom-bin-0.8.ebuild:
+  Improve and cleaning ebuild to confirm to java standards.
 
   19 May 2010; Michael Haubenwallner <haubi@gentoo.org>
   odfdom-bin-0.8.ebuild:
