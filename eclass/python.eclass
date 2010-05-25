@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.98 2010/05/25 15:04:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.99 2010/05/25 19:49:54 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2456,17 +2456,19 @@ python_mod_compile() {
 	_python_initialize_prefix_variables
 	_python_set_color_variables
 
-	echo
-	echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01.${_NORMAL}"
-	echo " ${_RED}*${_NORMAL} ${_RED}Use python_mod_optimize() instead of ${FUNCNAME}().${_NORMAL}"
-	echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
-	echo
+	if [[ "${FUNCNAME[1]}" != "python_mod_optimize" ]]; then
+		echo
+		echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01.${_NORMAL}"
+		echo " ${_RED}*${_NORMAL} ${_RED}Use python_mod_optimize() instead of ${FUNCNAME}().${_NORMAL}"
+		echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
+		echo
 
-	einfo &> /dev/null
-	einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01." &> /dev/null
-	einfo "Use python_mod_optimize() instead of ${FUNCNAME}()." &> /dev/null
-	einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
-	einfo &> /dev/null
+		einfo &> /dev/null
+		einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01." &> /dev/null
+		einfo "Use python_mod_optimize() instead of ${FUNCNAME}()." &> /dev/null
+		einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
+		einfo &> /dev/null
+	fi
 
 	local f myroot myfiles=()
 
