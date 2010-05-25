@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.216 2010/05/24 12:45:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.217 2010/05/25 13:20:56 pva Exp $
+
+  25 May 2010; Peter Volkov <pva@gentoo.org> iptables-1.4.8-r1.ebuild,
+  +files/iptables-1.4.8-build.patch:
+  Fix build issue, bug #321271, thank Eray Aslan for report.
 
 *iptables-1.4.8-r1 (24 May 2010)
 

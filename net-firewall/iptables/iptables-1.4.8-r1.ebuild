@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.8-r1.ebuild,v 1.1 2010/05/24 12:45:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.8-r1.ebuild,v 1.2 2010/05/25 13:20:57 pva Exp $
 
 EAPI="2"
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
 HOMEPAGE="http://www.iptables.org/"
@@ -18,7 +18,9 @@ DEPEND="virtual/os-headers"
 RDEPEND=""
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-build.patch" #321271
 	epatch_user
+	eautoreconf
 }
 
 src_configure() {
