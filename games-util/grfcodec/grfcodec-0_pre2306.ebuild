@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-0_pre2306.ebuild,v 1.3 2010/04/18 07:28:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-0_pre2306.ebuild,v 1.4 2010/05/25 09:13:28 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://binaries.openttd.org/extra/grfcodec/${MY_PV}/${PN}-${MY_PV}-sour
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}-${MY_PV}
