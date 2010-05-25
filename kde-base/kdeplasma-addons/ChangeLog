@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.57 2010/05/05 01:15:51 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.58 2010/05/25 13:23:29 scarabeus Exp $
+
+  25 May 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdeplasma-addons-4.4.2-r1.ebuild, kdeplasma-addons-4.4.3.ebuild:
+  Block qcalculate-applet.
 
 *kdeplasma-addons-4.4.2-r1 (05 May 2010)
 

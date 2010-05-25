@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.4.2-r1.ebuild,v 1.1 2010/05/05 01:15:51 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.4.2-r1.ebuild,v 1.2 2010/05/25 13:23:29 scarabeus Exp $
 
 EAPI="3"
 
@@ -33,8 +33,12 @@ DEPEND="${COMMON_DEPEND}
 	dev-cpp/eigen:2
 "
 # kde-misc/plasmaboard: moved here in 4.3.65
+# kde-misc/qalculate-applet: since 4.4.0
 RDEPEND="${COMMON_DEPEND}
-	!kdeprefix? ( !kde-misc/plasmaboard )
+	!kdeprefix? (
+		!kde-misc/qalculate-applet
+		!kde-misc/plasmaboard
+	)
 "
 
 # kdebase-data: some svg icons moved from data directly here.
