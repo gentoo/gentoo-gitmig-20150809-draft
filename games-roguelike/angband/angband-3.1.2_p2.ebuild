@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.1.2_p2.ebuild,v 1.3 2010/05/09 18:43:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.1.2_p2.ebuild,v 1.4 2010/05/25 21:38:03 pacho Exp $
 
 EAPI=2
 inherit eutils versionator games
@@ -14,7 +14,7 @@ SRC_URI="http://rephial.org/downloads/${MAJOR_PV}/${MY_P}-src.tar.gz"
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="gtk ncurses sdl +sound X"
 
 RDEPEND="gtk? ( gnome-base/libglade
