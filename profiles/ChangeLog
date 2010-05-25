@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4202 2010/05/24 14:14:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4203 2010/05/25 12:52:46 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 May 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking media-sound/radiotray live ebuild
 
   24 May 2010; Andreas Proschofsky <suka@gentoo.org> package.mask:
   Mask release candidate for openoffice-3.2.1
