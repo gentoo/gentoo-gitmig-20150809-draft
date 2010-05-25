@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gmpc-lyricwiki
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.14 2009/09/27 12:33:43 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.15 2010/05/25 09:52:11 angelos Exp $
+
+*gmpc-lyricwiki-0.20.0 (25 May 2010)
+
+  25 May 2010; Christoph Mende <angelos@gentoo.org>
+  +gmpc-lyricwiki-0.20.0.ebuild:
+  Version bump
 
 *gmpc-lyricwiki-0.19.0 (27 Sep 2009)
 
