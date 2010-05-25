@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.38.ebuild,v 1.1 2010/05/11 11:23:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.55.ebuild,v 1.1 2010/05/25 19:33:41 phajdan.jr Exp $
 
 EAPI="2"
 
