@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.97 2010/05/17 18:01:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.98 2010/05/25 15:04:40 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -329,10 +329,10 @@ python_pkg_setup() {
 	[[ "${EBUILD_PHASE}" != "setup" ]] && die "${FUNCNAME}() can be used only in pkg_setup() phase"
 
 	if _python_package_supporting_installation_for_multiple_python_abis; then
-		validate_PYTHON_ABIS
+		_python_calculate_PYTHON_ABIS
 		export EPYTHON="$(PYTHON -f)"
 	else
-		PYTHON_ABI="$(PYTHON --ABI)"
+		PYTHON_ABI="${PYTHON_ABI:-$(PYTHON --ABI)}"
 	fi
 
 	if ! has "${EAPI:-0}" 0 1 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; then
@@ -501,11 +501,18 @@ python_clean_installation_image() {
 				ewarn " ${file}"
 			fi
 			rm -f "${file}"
+
+			# Delete empty __pycache__ directories.
+			if [[ "${file%/*}" == *"/__pycache__" ]]; then
+				rmdir "${file%/*}" 2> /dev/null
+			fi
 		done
 	fi
 
 	python_clean_sitedirs() {
-		find "${ED}$(python_get_sitedir)" "(" -name "*.c" -o -name "*.h" -o -name "*.la" ")" -type f -print0 | xargs -0 rm -f
+		if [[ -d "${ED}$(python_get_sitedir)" ]]; then
+			find "${ED}$(python_get_sitedir)" "(" -name "*.c" -o -name "*.h" -o -name "*.la" ")" -type f -print0 | xargs -0 rm -f
+		fi
 	}
 	if _python_package_supporting_installation_for_multiple_python_abis; then
 		python_execute_function -q python_clean_sitedirs
@@ -556,11 +563,7 @@ fi
 
 unset PYTHON_ABIS
 
-# @FUNCTION: validate_PYTHON_ABIS
-# @DESCRIPTION:
-# Ensure that PYTHON_ABIS variable has valid value.
-# This function usually should not be directly called in ebuilds.
-validate_PYTHON_ABIS() {
+_python_calculate_PYTHON_ABIS() {
 	if ! _python_package_supporting_installation_for_multiple_python_abis; then
 		die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 	fi
@@ -817,7 +820,7 @@ python_execute_function() {
 		[[ "${EBUILD_PHASE}" == "postrm" ]] && action="Postuninstallation"
 	fi
 
-	validate_PYTHON_ABIS
+	_python_calculate_PYTHON_ABIS
 	if [[ "${final_ABI}" == "1" ]]; then
 		iterated_PYTHON_ABIS="$(PYTHON -f --ABI)"
 	else
@@ -936,7 +939,7 @@ python_copy_sources() {
 		dirs=("$@")
 	fi
 
-	validate_PYTHON_ABIS
+	_python_calculate_PYTHON_ABIS
 	for PYTHON_ABI in ${PYTHON_ABIS}; do
 		for dir in "${dirs[@]}"; do
 			cp -pr "${dir}" "${dir}-${PYTHON_ABI}" > /dev/null || die "Copying of sources failed"
@@ -988,7 +991,7 @@ python_generate_wrapper_scripts() {
 		die "${FUNCNAME}(): Missing arguments"
 	fi
 
-	validate_PYTHON_ABIS
+	_python_calculate_PYTHON_ABIS
 	for PYTHON_ABI in "${_CPYTHON2_SUPPORTED_ABIS[@]}"; do
 		if has "${PYTHON_ABI}" ${PYTHON_ABIS}; then
 			python2_enabled="1"
@@ -1163,10 +1166,6 @@ python_set_active_version() {
 		die "${FUNCNAME}() cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
 	fi
 
-	if [[ -n "${PYTHON_PKG_SETUP_EXECUTED}" ]]; then
-		die "${FUNCNAME}() should be called before python_pkg_setup()"
-	fi
-
 	if [[ "$#" -ne 1 ]]; then
 		die "${FUNCNAME}() requires 1 argument"
 	fi
@@ -1298,7 +1297,7 @@ PYTHON() {
 			if ! _python_package_supporting_installation_for_multiple_python_abis; then
 				die "${FUNCNAME}(): '--final-ABI' option cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 			fi
-			validate_PYTHON_ABIS
+			_python_calculate_PYTHON_ABIS
 			PYTHON_ABI="${PYTHON_ABIS##* }"
 		elif [[ "${python2}" == "1" ]]; then
 			PYTHON_ABI="$(eselect python show --python2 --ABI)"
@@ -1317,7 +1316,7 @@ PYTHON() {
 		elif ! _python_package_supporting_installation_for_multiple_python_abis; then
 			PYTHON_ABI="$("${EPREFIX}/usr/bin/python" -c "${_PYTHON_ABI_EXTRACTION_COMMAND}")"
 			if [[ -z "${PYTHON_ABI}" ]]; then
-				die "${FUNCNAME}(): Main active version of Python not set"
+				die "${FUNCNAME}(): Failure of extraction of locally active version of Python"
 			fi
 		elif [[ -z "${PYTHON_ABI}" ]]; then
 			die "${FUNCNAME}(): Invalid usage: ${FUNCNAME}() should be used in ABI-specific local scope"
@@ -1945,7 +1944,8 @@ _python_clean_compiled_modules() {
 			if [[ "${compiled_file}" == *.py[co] ]]; then
 				if [[ "${dir}" == "__pycache__" ]]; then
 					base_module_name="${compiled_file##*/}"
-					base_module_name="${base_module_name%%.*py[co]}"
+					base_module_name="${base_module_name%.*py[co]}"
+					base_module_name="${base_module_name%.*}"
 					py_file="${compiled_file%__pycache__/*}${base_module_name}.py"
 				else
 					py_file="${compiled_file%[co]}"
@@ -2024,7 +2024,6 @@ python_mod_optimize() {
 		# Strip trailing slash from EROOT.
 		root="${EROOT%/}"
 
-		# Respect EROOT and options passed to compileall.py.
 		while (($#)); do
 			case "$1" in
 				-l|-f|-q)
@@ -2038,38 +2037,59 @@ python_mod_optimize() {
 					ewarn "${FUNCNAME}(): Ignoring option '$1'"
 					;;
 				*)
-					if ! _python_implementation && [[ "$1" =~ ^/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
-						die "${FUNCNAME}(): Paths of directories / files in site-packages directories must be relative to site-packages directories"
-					elif [[ "$1" =~ ^/ ]]; then
-						if _python_package_supporting_installation_for_multiple_python_abis; then
-							die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
-						fi
-						if [[ -d "${root}$1" ]]; then
-							other_dirs+=("${root}$1")
-						elif [[ -f "${root}$1" ]]; then
-							other_files+=("${root}$1")
-						elif [[ -e "${root}$1" ]]; then
-							ewarn "'${root}$1' is not a file or a directory!"
-						else
-							ewarn "'${root}$1' does not exist!"
-						fi
-					else
-						for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
-							if [[ -d "${root}$(python_get_sitedir)/$1" ]]; then
-								site_packages_dirs+=("$1")
-								break
-							elif [[ -f "${root}$(python_get_sitedir)/$1" ]]; then
-								site_packages_files+=("$1")
-								break
-							elif [[ -e "${root}$(python_get_sitedir)/$1" ]]; then
-								ewarn "'$1' is not a file or a directory!"
-							else
-								ewarn "'$1' does not exist!"
-							fi
-						done
-					fi
+					break
 					;;
 			esac
+			shift
+		done
+
+		if [[ "$#" -eq 0 ]]; then
+			_python_set_color_variables
+
+			echo
+			echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be${_NORMAL}"
+			echo " ${_RED}*${_NORMAL} ${_RED}disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules.${_NORMAL}"
+			echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
+			echo
+
+			einfo &> /dev/null
+			einfo "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be" &> /dev/null
+			einfo "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules." &> /dev/null
+			einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
+			einfo &> /dev/null
+		fi
+
+		while (($#)); do
+			if ! _python_implementation && [[ "$1" =~ ^/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
+				die "${FUNCNAME}(): Paths of directories / files in site-packages directories must be relative to site-packages directories"
+			elif [[ "$1" =~ ^/ ]]; then
+				if _python_package_supporting_installation_for_multiple_python_abis; then
+					die "${FUNCNAME}(): Absolute paths cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
+				fi
+				if [[ -d "${root}$1" ]]; then
+					other_dirs+=("${root}$1")
+				elif [[ -f "${root}$1" ]]; then
+					other_files+=("${root}$1")
+				elif [[ -e "${root}$1" ]]; then
+					eerror "'${root}$1' is not a file or a directory!"
+				else
+					eerror "'${root}$1' does not exist!"
+				fi
+			else
+				for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
+					if [[ -d "${root}$(python_get_sitedir)/$1" ]]; then
+						site_packages_dirs+=("$1")
+						break
+					elif [[ -f "${root}$(python_get_sitedir)/$1" ]]; then
+						site_packages_files+=("$1")
+						break
+					elif [[ -e "${root}$(python_get_sitedir)/$1" ]]; then
+						eerror "'$1' is not a file or a directory!"
+					else
+						eerror "'$1' does not exist!"
+					fi
+				done
+			fi
 			shift
 		done
 
@@ -2119,14 +2139,14 @@ python_mod_optimize() {
 			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation) $(python_get_version)"
 			if ((${#other_dirs[@]})); then
 				"$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON --ABI)}")" != "Jython" ]]; then
+				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
 					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_dirs[@]}"
 			fi
 			if ((${#other_files[@]})); then
 				"$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI-$(PYTHON --ABI)}")" != "Jython" ]]; then
+				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
 					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_dirs[@]}"
@@ -2134,6 +2154,8 @@ python_mod_optimize() {
 			eend "${return_code}"
 		fi
 	else
+		# Deprecated part of python_mod_optimize()
+
 		local myroot mydirs=() myfiles=() myopts=() return_code="0"
 
 		# strip trailing slash
@@ -2153,25 +2175,46 @@ python_mod_optimize() {
 					ewarn "${FUNCNAME}(): Ignoring option '$1'"
 					;;
 				*)
-					if [[ -d "${myroot}/${1#/}" ]]; then
-						mydirs+=("${myroot}/${1#/}")
-					elif [[ -f "${myroot}/${1#/}" ]]; then
-						# Files are passed to python_mod_compile which is EROOT-aware
-						myfiles+=("$1")
-					elif [[ -e "${myroot}/${1#/}" ]]; then
-						ewarn "${myroot}/${1#/} is not a file or directory!"
-					else
-						ewarn "${myroot}/${1#/} does not exist!"
-					fi
+					break
 					;;
 			esac
+			shift
+		done
+
+		if [[ "$#" -eq 0 ]]; then
+			_python_set_color_variables
+
+			echo
+			echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be${_NORMAL}"
+			echo " ${_RED}*${_NORMAL} ${_RED}disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules.${_NORMAL}"
+			echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
+			echo
+
+			einfo &> /dev/null
+			einfo "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be" &> /dev/null
+			einfo "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules." &> /dev/null
+			einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
+			einfo &> /dev/null
+		fi
+
+		while (($#)); do
+			if [[ -d "${myroot}/${1#/}" ]]; then
+				mydirs+=("${myroot}/${1#/}")
+			elif [[ -f "${myroot}/${1#/}" ]]; then
+				# Files are passed to python_mod_compile which is EROOT-aware
+				myfiles+=("$1")
+			elif [[ -e "${myroot}/${1#/}" ]]; then
+				eerror "${myroot}/${1#/} is not a file or directory!"
+			else
+				eerror "${myroot}/${1#/} does not exist!"
+			fi
 			shift
 		done
 
 		# set additional opts
 		myopts+=(-q)
 
-		PYTHON_ABI="$(PYTHON --ABI)"
+		PYTHON_ABI="${PYTHON_ABI:-$(PYTHON --ABI)}"
 
 		ebegin "Compilation and optimization of Python modules for $(python_get_implementation) $(python_get_version)"
 		if ((${#mydirs[@]})); then
@@ -2219,7 +2262,7 @@ python_mod_cleanup() {
 	# Strip trailing slash from EROOT.
 	root="${EROOT%/}"
 
-	if (($#)); then
+	if [[ "$#" -gt 0 ]]; then
 		if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis; then
 			while (($#)); do
 				if ! _python_implementation && [[ "$1" =~ ^/usr/lib(32|64)?/python[[:digit:]]+\.[[:digit:]]+ ]]; then
@@ -2237,10 +2280,26 @@ python_mod_cleanup() {
 				shift
 			done
 		else
+			# Deprecated part of python_mod_cleanup()
+
 			search_paths=("${@#/}")
 			search_paths=("${search_paths[@]/#/${root}/}")
 		fi
 	else
+		_python_set_color_variables
+
+		echo
+		echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be${_NORMAL}"
+		echo " ${_RED}*${_NORMAL} ${_RED}disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules.${_NORMAL}"
+		echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
+		echo
+
+		einfo &> /dev/null
+		einfo "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be" &> /dev/null
+		einfo "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules." &> /dev/null
+		einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
+		einfo &> /dev/null
+
 		for dir in "${root}"/usr/lib*; do
 			if [[ -d "${dir}" && ! -L "${dir}" ]]; then
 				for sitedir in "${dir}"/python*/site-packages; do
@@ -2329,11 +2388,11 @@ python_mod_exists() {
 	echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
 	echo
 
-	einfo &> /dev/null
-	einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01." &> /dev/null
-	einfo "Use USE dependencies and/or has_version() instead of ${FUNCNAME}()." &> /dev/null
-	einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
-	einfo &> /dev/null
+	eerror &> /dev/null
+	eerror "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01." &> /dev/null
+	eerror "Use USE dependencies and/or has_version() instead of ${FUNCNAME}()." &> /dev/null
+	eerror "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
+	eerror &> /dev/null
 
 	if [[ "$#" -ne 1 ]]; then
 		die "${FUNCNAME}() requires 1 argument"
@@ -2360,11 +2419,11 @@ python_tkinter_exists() {
 		echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
 		echo
 
-		einfo &> /dev/null
-		einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01." &> /dev/null
-		einfo "Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}()." &> /dev/null
-		einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
-		einfo &> /dev/null
+		eerror &> /dev/null
+		eerror "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-07-01." &> /dev/null
+		eerror "Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}()." &> /dev/null
+		eerror "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
+		eerror &> /dev/null
 	fi
 
 	if ! "$(PYTHON ${PYTHON_ABI})" -c "from sys import version_info
@@ -2395,6 +2454,19 @@ python_mod_compile() {
 	fi
 
 	_python_initialize_prefix_variables
+	_python_set_color_variables
+
+	echo
+	echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01.${_NORMAL}"
+	echo " ${_RED}*${_NORMAL} ${_RED}Use python_mod_optimize() instead of ${FUNCNAME}().${_NORMAL}"
+	echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
+	echo
+
+	einfo &> /dev/null
+	einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01." &> /dev/null
+	einfo "Use python_mod_optimize() instead of ${FUNCNAME}()." &> /dev/null
+	einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
+	einfo &> /dev/null
 
 	local f myroot myfiles=()
 
