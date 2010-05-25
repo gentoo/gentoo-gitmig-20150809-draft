@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.51 2010/05/25 20:37:12 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.52 2010/05/25 21:16:54 reavertm Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -121,7 +121,7 @@ base_src_configure() {
 	debug-print-function $FUNCNAME "$@"
 
 	# there is no pushd ${S} so we can override its place where to run
-	[[ -x ${ECONF_SOURCE:-.}/configure ]] && econf $@
+	[[ -x ${ECONF_SOURCE:-.}/configure ]] && econf "$@"
 }
 
 # @FUNCTION: base_src_compile
@@ -132,7 +132,7 @@ base_src_compile() {
 	debug-print-function $FUNCNAME "$@"
 
 	has src_configure ${BASE_EXPF} || base_src_configure
-	base_src_make $@
+	base_src_make "$@"
 }
 
 # @FUNCTION: base_src_make
@@ -142,7 +142,7 @@ base_src_make() {
 	debug-print-function $FUNCNAME "$@"
 
 	if [[ -f Makefile || -f GNUmakefile || -f makefile ]]; then
-		emake $@ || die "died running emake, $FUNCNAME:make"
+		emake "$@" || die "died running emake, $FUNCNAME:make"
 	fi
 }
 
@@ -154,7 +154,7 @@ base_src_make() {
 base_src_install() {
 	debug-print-function $FUNCNAME "$@"
 
-	emake DESTDIR="${D}" $@ install || die "died running make install, $FUNCNAME:make"
+	emake DESTDIR="${D}" "$@" install || die "died running make install, $FUNCNAME:make"
 	base_src_install_docs
 }
 
