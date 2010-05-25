@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/hepmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.14 2010/05/17 09:37:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.15 2010/05/25 21:18:31 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> hepmc-2.05.01.ebuild:
+  stable amd64, bug 318461
 
   17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> hepmc-2.05.01.ebuild:
   x86 stable wrt bug #318461
