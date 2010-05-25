@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.2 2009/05/23 16:00:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.3 2010/05/25 21:01:39 angelos Exp $
 
 EAPI=2
-NEED_PYTHON=2.4
+PYTHON_DEPEND="2:2.4"
 inherit distutils
 
 MY_PN=ZSI
@@ -25,6 +25,10 @@ DEPEND=">=dev-python/pyxml-0.8.3
 
 S=${WORKDIR}/${MY_P}
 PYTHON_MODNAME=${MY_PN}
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	if ! use twisted; then

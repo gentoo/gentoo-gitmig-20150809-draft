@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.0.ebuild,v 1.8 2009/03/13 16:26:36 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.0.ebuild,v 1.9 2010/05/25 21:01:39 angelos Exp $
+
+PYTHON_DEPEND="2:2.4"
 
 inherit distutils
 
@@ -25,6 +27,10 @@ DEPEND=">=dev-python/pyxml-0.8.3
 
 S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME=${MY_PN}
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_unpack() {
 	unpack ${A}
