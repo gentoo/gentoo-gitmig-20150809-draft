@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.45 2010/04/09 01:34:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.46 2010/05/25 16:48:12 xarthisius Exp $
+
+  25 May 2010; Kacper Kowalik <xarthisius@gentoo.org> ginac-1.5.7.ebuild,
+  +files/ginac-1.5.7-gcc45.patch:
+  Fix build with GCC-4.5 wrt bug 321411. Thanks Diego for report
 
 *ginac-1.5.7 (09 Apr 2010)
 

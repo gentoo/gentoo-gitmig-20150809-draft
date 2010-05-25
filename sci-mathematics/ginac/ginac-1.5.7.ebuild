@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.7.ebuild,v 1.1 2010/04/09 01:34:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.7.ebuild,v 1.2 2010/05/25 16:48:12 xarthisius Exp $
 
 EAPI=2
 inherit eutils
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.1-pkgconfig.patch
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_compile() {
