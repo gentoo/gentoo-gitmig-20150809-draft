@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321.ebuild,v 1.1 2010/05/21 12:21:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321.ebuild,v 1.2 2010/05/25 17:41:30 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -17,7 +17,6 @@ IUSE="doc examples test"
 RDEPEND="
 	>=dev-libs/glib-2.4.0
 	!dev-vcs/rcs
-	!sys-apps/coreutil
 	!<=sci-chemistry/ccp4-apps-6.1.3-r2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -36,6 +35,7 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	mv "${D}"/usr/bin/split{,-gentoo} || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
 
 	if use examples; then
