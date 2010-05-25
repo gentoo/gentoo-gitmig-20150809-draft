@@ -1,6 +1,11 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.39 2010/03/20 12:55:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.40 2010/05/25 20:22:43 remi Exp $
+
+*grisbi-0.6.0 (25 May 2010)
+
+  25 May 2010; Rémi Cardona <remi@gentoo.org> +grisbi-0.6.0.ebuild:
+  bump to 0.6.0, rewrite ebuild to use the gnome2 eclass
 
   20 Mar 2010; Raúl Porcel <armin76@gentoo.org> grisbi-0.6.0_rc2.ebuild:
   sparc stable wrt #306033
