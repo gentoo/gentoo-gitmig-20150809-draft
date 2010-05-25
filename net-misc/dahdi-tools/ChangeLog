@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dahdi-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.5 2009/12/22 14:27:48 chainsaw Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.6 2010/05/25 15:22:37 chainsaw Exp $
+
+*dahdi-tools-2.3.0 (25 May 2010)
+
+  25 May 2010; <chainsaw@gentoo.org> +dahdi-tools-2.3.0.ebuild:
+  Version bump, with many thanks to Oliver Jaksch, Stefan Knoblich & Jaco
+  Kroon for research, patching & testing in bug #321353. Dependency on
+  dev-libs/newt closes bug #307095 by Jaco Kroon.
 
   22 Dec 2009; <chainsaw@gentoo.org> dahdi-tools-2.2.0-r1.ebuild:
   I have stopped entertaining the notion that the 2.6.28-r1 linux-headers
