@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.181 2010/05/23 20:00:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.182 2010/05/25 16:49:26 a3li Exp $
+
+  25 May 2010; Alex Legler <a3li@gentoo.org> rmagick-2.13.1.ebuild:
+  Add REE18 support
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> rmagick-2.13.0-r1.ebuild:
   stable amd64, bug 312561

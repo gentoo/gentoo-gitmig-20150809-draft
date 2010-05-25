@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.1.ebuild,v 1.1 2010/04/06 06:16:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.1.ebuild,v 1.2 2010/05/25 16:49:26 a3li Exp $
 
 EAPI="2"
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
