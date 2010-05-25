@@ -1,6 +1,10 @@
 # ChangeLog for app-text/focuswriter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/focuswriter/ChangeLog,v 1.3 2010/05/09 19:28:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/focuswriter/ChangeLog,v 1.4 2010/05/25 15:21:27 hwoarang Exp $
+
+  25 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  focuswriter-1.2.0.ebuild:
+  Stable on amd64 wrt bug #316337
 
   09 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   focuswriter-1.2.0.ebuild:
