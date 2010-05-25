@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321.ebuild,v 1.2 2010/05/25 17:41:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r1.ebuild,v 1.1 2010/05/25 19:20:18 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -35,7 +35,7 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	mv "${D}"/usr/bin/split{,-gentoo} || die
+	mv "${D}"/usr/bin/{,gts-}split || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
 
 	if use examples; then
