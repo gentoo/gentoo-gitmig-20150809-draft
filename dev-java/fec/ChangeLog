@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.11 2010/05/17 13:20:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.12 2010/05/25 21:10:16 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> fec-1.0.4-r1.ebuild:
+  stable amd64, bug 319119
 
   17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> fec-1.0.4-r1.ebuild:
   x86 stable wrt bug #319119
