@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mmv
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.21 2008/02/20 23:06:53 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.22 2010/05/25 17:32:10 jlec Exp $
+
+*mmv-1.01b_p15 (25 May 2010)
+
+  25 May 2010; Justin Lecher <jlec@gentoo.org> +mmv-1.01b_p15.ebuild:
+  Version Bump, QA cleanup, license change to LGPL-2 #177818
 
   20 Feb 2008; Santiago M. Mola <coldwind@gentoo.org> mmv-1.01b_p14.ebuild:
   amd64 stable wrt bug #208146
