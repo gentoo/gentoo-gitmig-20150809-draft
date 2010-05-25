@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.76-r1.ebuild,v 1.2 2010/05/10 13:40:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.76-r1.ebuild,v 1.3 2010/05/25 21:12:53 pacho Exp $
 
 EAPI=2
 inherit eutils cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="http://bullet.googlecode.com/files/${P}.tgz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
 RDEPEND="virtual/glut"
