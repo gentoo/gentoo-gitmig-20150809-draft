@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.72 2010/05/02 22:50:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.73 2010/05/25 20:19:58 robbat2 Exp $
+
+*nut-2.4.3-r1 (25 May 2010)
+
+  25 May 2010; Robin H. Johnson <robbat2@gentoo.org> +nut-2.4.3-r1.ebuild,
+  +files/nut-2.4.3-lowspeed-buffer-size.patch:
+  Bug #318937: Fix support for low-speed USB devices.
 
 *nut-2.4.3 (02 May 2010)
 
