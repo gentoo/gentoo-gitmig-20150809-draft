@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/gdal-grass-1.4.3.ebuild,v 1.2 2010/01/19 04:53:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/gdal-grass-1.4.3.ebuild,v 1.3 2010/05/25 15:09:13 hwoarang Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://download.osgeo.org/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE=""
 
