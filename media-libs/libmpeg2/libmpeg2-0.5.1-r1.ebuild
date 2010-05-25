@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1-r1.ebuild,v 1.3 2010/01/24 15:59:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1-r1.ebuild,v 1.4 2010/05/25 17:24:05 josejx Exp $
 
 EAPI=2
-inherit eutils libtool
+inherit autotools eutils libtool
 
 DESCRIPTION="library for decoding mpeg-2 and mpeg-1 video"
 HOMEPAGE="http://libmpeg2.sourceforge.net/"
@@ -27,6 +27,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-global-symbol-test.patch \
 		"${FILESDIR}"/${P}-armv4l.patch
 	elibtoolize
+	### PowerPC fix for altivec
+	epatch "${FILESDIR}"/${P}-altivec.patch
+	eautoconf
 }
 
 src_configure() {
