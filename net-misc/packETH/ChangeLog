@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/packETH
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.9 2010/05/20 10:53:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.10 2010/05/25 08:29:02 pva Exp $
+
+  25 May 2010; Peter Volkov <pva@gentoo.org> packETH-1.6.5.ebuild,
+  +files/packETH-1.6.5-forced-as-needed.patch:
+  Fixed build issue with forced --as-needed, bug #321409, thank Diego E.
+  'Flameeyes' Pettenò for report.
 
 *packETH-1.6.5 (20 May 2010)
 

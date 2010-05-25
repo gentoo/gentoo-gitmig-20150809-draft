@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/packETH-1.6.5.ebuild,v 1.1 2010/05/20 10:53:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/packETH-1.6.5.ebuild,v 1.2 2010/05/25 08:29:02 pva Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Packet generator tool for ethernet"
 HOMEPAGE="http://packeth.sourceforge.net/"
@@ -18,6 +18,11 @@ IUSE=""
 DEPEND="x11-libs/gtk+:2"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-forced-as-needed.patch"
+	eautomake
+}
+
 src_compile() {
 	tc-export CC
 	default
@@ -25,9 +30,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-#		insinto /usr/bin
-#		dobin packETH || die
-#		insinto /usr/share/pixmaps/packETH
-#		doins src/pixmaps/* || die
 	dodoc AUTHORS README || die
 }
