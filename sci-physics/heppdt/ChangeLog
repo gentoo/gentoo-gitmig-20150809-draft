@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/heppdt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/heppdt/ChangeLog,v 1.2 2010/05/17 09:41:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/heppdt/ChangeLog,v 1.3 2010/05/25 21:20:38 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> heppdt-3.04.01.ebuild:
+  stable amd64, bug 318463
 
   17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   heppdt-3.04.01.ebuild:
