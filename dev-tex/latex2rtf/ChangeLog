@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex2rtf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.32 2009/09/06 20:49:03 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.33 2010/05/25 13:51:34 aballier Exp $
+
+*latex2rtf-2.1.0 (25 May 2010)
+
+  25 May 2010; Alexis Ballier <aballier@gentoo.org> +latex2rtf-2.1.0.ebuild:
+  version bump, by pavel sanda <ps@twin.jikos.cz>, bug #309115
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> latex2rtf-1.9.19.ebuild:
   Marking latex2rtf-1.9.19 ppc64 for bug 276990
