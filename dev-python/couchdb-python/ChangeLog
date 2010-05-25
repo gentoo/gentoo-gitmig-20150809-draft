@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/couchdb-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.8 2010/04/15 14:45:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.9 2010/05/25 21:13:00 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> couchdb-python-0.7.ebuild:
+  stable amd64, bug 319891
 
 *couchdb-python-0.7 (15 Apr 2010)
 
