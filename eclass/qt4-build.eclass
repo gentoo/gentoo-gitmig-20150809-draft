@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.70 2010/05/24 22:03:30 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.71 2010/05/25 13:39:46 spatz Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -67,18 +67,6 @@ S=${WORKDIR}/${MY_P}
 # @DESCRIPTION:
 # Sets up S, MY_P, PATH, and LD_LIBRARY_PATH
 qt4-build_pkg_setup() {
-	if [[ "${PN}" == "qt-webkit" ]]; then
-		if [[ "${CFLAGS}" =~ "-ggdb" ]] || [[ "${CXXFLAGS}" =~ "-ggdb" ]]; then
-			echo
-			ewarn "Your \$C{,XX}FLAGS contain -ggdb. You may experience really"
-			ewarn "long compilation times and/or increased memory usage." 
-			ewarn "If compilation fails, please try removing -ggdb before"
-			ewarn "reporting a bug."
-			ewarn "For more info check out bug #307861"
-			echo
-		fi
-	fi
-
 	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
 
 	# Protect users by not allowing downgrades between releases
@@ -91,6 +79,19 @@ qt4-build_pkg_setup() {
 		else
 			ewarn "Downgrading Qt is completely unsupported and will break your system!"
 		fi
+	fi
+
+	if [[ "${PN}" == "qt-webkit" ]]; then
+		eshopts_push -s extglob
+		if is-flagq '-g?(gdb)?([0-9])'; then
+			echo
+			ewarn "You have enabled debug info (probably have -g or -ggdb in your \$C{,XX}FLAGS)."
+			ewarn "You may experience really long compilation times and/or increased memory usage."
+			ewarn "If compilation fails, please try removing -g{,gdb} before reporting a bug."
+			ewarn "For more info check out bug #307861"
+			echo
+		fi
+		eshopts_pop
 	fi
 
 	PATH="${S}/bin${PATH:+:}${PATH}"
