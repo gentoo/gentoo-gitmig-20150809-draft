@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.6 2010/05/19 07:36:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.7 2010/05/25 07:02:33 aballier Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout skins speex sqlite sse stream
 	svg svga taglib theora truetype twolame udev upnp v4l v4l2 vaapi vcdx vlm
-	vorbis win32codecs wma-fixed x264 +xcb xml xosd xv zvbi"
+	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
 		!!<=media-video/vlc-1.0.99999
@@ -109,7 +109,8 @@ RDEPEND="
 		opengl? ( virtual/opengl )
 		png? ( media-libs/libpng sys-libs/zlib )
 		projectm? ( media-libs/libprojectm )
-		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 x11-libs/libX11 )
+		pulseaudio? ( >=media-sound/pulseaudio-0.9.11
+			!X? ( >=media-sound/pulseaudio-0.9.11[-X] ) )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libX11 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( || ( >=net-fs/samba-3.4.6[smbclient]
@@ -140,6 +141,7 @@ RDEPEND="
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )
+		X? ( x11-libs/libX11 )
 		x264? ( >=media-libs/x264-0.0.20090923 )
 		xcb? ( x11-libs/libxcb x11-libs/xcb-util )
 		xml? ( dev-libs/libxml2 )
@@ -323,6 +325,7 @@ src_configure() {
 		$(use_enable vorbis) \
 		$(use_enable win32codecs loader) \
 		$(use_enable wma-fixed) \
+		$(use_with X x) \
 		$(use_enable x264) \
 		$(use_enable xcb) \
 		$(use_enable xml libxml2) \
