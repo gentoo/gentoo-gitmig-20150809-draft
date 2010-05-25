@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4204 2010/05/25 19:08:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4205 2010/05/25 19:15:19 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,7 @@
 
   25 May 2010; Justin Lecher <jlec@gentoo.org> package.mask:
   Fixed typo pdb-extract/pdb-extract > sci-chemistry/pdb-extract
+  Fixing Header
 
   25 May 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking media-sound/radiotray live ebuild
