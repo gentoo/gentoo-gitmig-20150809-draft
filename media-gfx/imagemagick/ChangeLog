@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.400 2010/05/23 18:40:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.401 2010/05/25 21:16:36 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> imagemagick-6.6.1.2.ebuild:
+  stable amd64, bug 319195
 
   23 May 2010; Raúl Porcel <armin76@gentoo.org> imagemagick-6.6.1.2.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #319195
