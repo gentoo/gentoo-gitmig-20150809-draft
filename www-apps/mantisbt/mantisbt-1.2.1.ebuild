@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.1.ebuild,v 1.2 2010/05/13 19:12:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.1.ebuild,v 1.3 2010/05/25 17:27:25 pva Exp $
 
 inherit eutils webapp depend.php
 
@@ -16,8 +16,8 @@ IUSE=""
 RDEPEND="
 	virtual/httpd-php
 	virtual/httpd-cgi
-	dev-php5/ezc-Base
-	dev-php5/ezc-Graph
+	>=dev-php5/ezc-Base-1.8
+	>=dev-php5/ezc-Graph-1.5
 	>=dev-php/adodb-5.10"
 
 pkg_setup() {
