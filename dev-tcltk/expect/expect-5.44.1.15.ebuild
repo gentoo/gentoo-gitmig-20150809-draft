@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.5 2010/04/28 19:58:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.6 2010/05/25 11:01:58 jlec Exp $
 
 EAPI="3"
 
@@ -37,6 +37,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-gfbsd.patch"
 	epatch "${FILESDIR}/${P}-ldflags.patch"
+	epatch "${FILESDIR}/${P}_with-tk-no.patch"
 
 	eautoconf
 }
@@ -51,17 +52,17 @@ src_configure() {
 	tclv=$(grep TCL_VER ${EPREFIX}/usr/include/tcl.h | sed 's/^.*"\(.*\)".*/\1/')
 	#tkv isn't really needed, included for symmetry and the future
 	#tkv=$(grep	 TK_VER ${EPREFIX}/usr/include/tk.h  | sed 's/^.*"\(.*\)".*/\1/')
-	myconf="--with-tcl=${EPREFIX}/usr/$(get_libdir) --with-tclinclude=${EPREFIX}/usr/$(get_libdir)/tcl${tclv}/include/generic"
+	myconf="--with-tcl=${EPREFIX}/usr/$(get_libdir) --with-tclinclude=${EPREFIX}/usr/$(get_libdir)/tcl${tclv}/include/generic --with-tk=yes"
 
-#	if use X ; then
+	if use X ; then
 		#--with-x is enabled by default
 		#configure needs to find the file tkConfig.sh and tk.h
 		#tk.h is in /usr/lib so don't need to explicitly set --with-tkinclude
 		myconf="$myconf --with-tk=${EPREFIX}/usr/$(get_libdir) --with-tkinclude=${EPREFIX}/usr/include"
-#	else
-#		#configure knows that tk depends on X so just disable X
-#		myconf="$myconf --without-x"
-#	fi
+	else
+		#configure knows that tk depends on X so just disable X
+		myconf="$myconf --with-tk=no"
+	fi
 
 	econf \
 		$myconf \
