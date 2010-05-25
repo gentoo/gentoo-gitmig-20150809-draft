@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.27 2010/05/20 14:37:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.28 2010/05/25 18:28:31 darkside Exp $
+
+  25 May 2010; Jeremy Olexa <darkside@gentoo.org> libass-0.9.9.ebuild:
+  Add Gentoo Prefix keywords, compile tested only
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org> libass-0.9.9.ebuild:
   Marked ~hppa (bug #317459).
