@@ -1,6 +1,15 @@
 # ChangeLog for app-text/jadetex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.47 2010/01/02 11:26:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.48 2010/05/25 13:44:17 aballier Exp $
+
+*jadetex-3.13-r3 (25 May 2010)
+
+  25 May 2010; Alexis Ballier <aballier@gentoo.org> +jadetex-3.13-r3.ebuild,
+  +files/format.jadetex.cnf:
+  Switch to manual install for installing properly in our TeX setup; this
+  allows to put it in the texmf-update loop and avoid bugs like #307807;
+  remove support for our, so called, pre-tetex3 layout, it's been there for
+  more than 5 years
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   jadetex-3.13-r2.ebuild:
