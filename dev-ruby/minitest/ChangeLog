@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.14 2010/05/22 22:57:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.15 2010/05/25 10:27:34 flameeyes Exp $
+
+  25 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  minitest-1.4.2.ebuild, minitest-1.5.0.ebuild, minitest-1.6.0.ebuild:
+  Allow usage of minitest with Ruby 1.9 as well, as the interfaces are not
+  the same.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> minitest-1.6.0.ebuild:
   Add REE18 support
