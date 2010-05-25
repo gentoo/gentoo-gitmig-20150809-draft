@@ -72,18 +72,6 @@ index 678100b..7b7d65e 100644
  
  /**
   * splice_direct_to_actor - splices data directly between two non-pipes
-diff --git a/fs/super.c b/fs/super.c
-index 400a760..a1df361 100644
---- a/fs/super.c
-+++ b/fs/super.c
-@@ -270,6 +270,7 @@ int fsync_super(struct super_block *sb)
- 	__fsync_super(sb);
- 	return sync_blockdev(sb->s_bdev);
- }
-+EXPORT_SYMBOL(fsync_super);
- 
- /**
-  *	generic_shutdown_super	-	common helper for ->kill_sb()
 diff --git a/fs/sync.c b/fs/sync.c
 index 2967562..34040d6 100644
 --- a/fs/sync.c
@@ -95,6 +83,18 @@ index 2967562..34040d6 100644
 +EXPORT_SYMBOL(do_fsync);
  
  static long __do_fsync(unsigned int fd, int datasync)
+ {
+diff --git a/kernel/mutex-debug.c b/kernel/mutex-debug.c
+index 1d94160..34fda4a 100644
+--- a/kernel/mutex-debug.c
++++ b/kernel/mutex-debug.c
+@@ -30,6 +30,7 @@ void debug_mutex_set_owner(struct mutex *lock, struct thread_info *new_owner)
+ {
+ 	lock->owner = new_owner;
+ }
++EXPORT_SYMBOL(debug_mutex_set_owner);
+ 
+ void debug_mutex_lock_common(struct mutex *lock, struct mutex_waiter *waiter)
  {
 diff --git a/security/device_cgroup.c b/security/device_cgroup.c
 index 5ba7870..8f880c2 100644
@@ -109,7 +109,7 @@ index 5ba7870..8f880c2 100644
  int devcgroup_inode_mknod(int mode, dev_t dev)
  {
 diff --git a/security/security.c b/security/security.c
-index c0acfa7..812ebf4 100644
+index c0acfa7..8b1dadc 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -434,6 +434,7 @@ int security_inode_readlink(struct dentry *dentry)
@@ -136,3 +136,11 @@ index c0acfa7..812ebf4 100644
  
  int security_file_alloc(struct file *file)
  {
+@@ -570,6 +573,7 @@ int security_file_mmap(struct file *file, unsigned long reqprot,
+ {
+ 	return security_ops->file_mmap(file, reqprot, prot, flags, addr, addr_only);
+ }
++EXPORT_SYMBOL(security_file_mmap);
+ 
+ int security_file_mprotect(struct vm_area_struct *vma, unsigned long reqprot,
+ 			    unsigned long prot)

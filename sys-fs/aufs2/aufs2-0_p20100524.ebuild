@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100308.ebuild,v 1.3 2010/05/13 01:45:28 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100524.ebuild,v 1.1 2010/05/25 16:09:36 tommy Exp $
 
 EAPI="2"
 
@@ -23,11 +23,12 @@ S=${WORKDIR}/${PN}-standalone
 MODULE_NAMES="aufs(misc:${S})"
 
 pkg_setup() {
-	# uesd to allow merging of binpkg aufs2 on systems lacking kernel sources
-	[ -n "$PKG_SETUP_HAS_ALREADY_BEEN_RAN" ] && return
+	# this is needed so merging a binpkg aufs2 is possible w/out a kernel unpacked on the system
+	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
+
 	get_version
 	kernel_is lt 2 6 27 && die "kernel too old"
-	kernel_is gt 2 6 33 && die "kernel too new"
+	kernel_is gt 2 6 34 && die "kernel too new"
 
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null && \
 		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null ); then
@@ -48,7 +49,7 @@ pkg_setup() {
 		fi
 	fi
 	linux-mod_pkg_setup
-	export PKG_SETUP_HAS_ALREADY_BEEN_RAN=1
+	export PKG_SETUP_HAS_BEEN_RAN=1
 }
 
 src_prepare() {
@@ -58,7 +59,7 @@ src_prepare() {
 		sed -i "s:DEBUG = y:DEBUG =:g" config.mk || die
 	fi
 	if use inotify; then
-		sed -i  "s:HINOTIFY =:HINOTIFY = y:g" config.mk || die
+		sed -i  "s:HNOTIFY =:HNOTIFY = y:g" config.mk || die
 	fi
 	if use ramfs; then
 		sed -i  "s:RAMFS =:RAMFS = y:g" config.mk || die
