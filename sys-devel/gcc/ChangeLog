@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.753 2010/05/17 20:02:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.754 2010/05/25 22:18:53 hwoarang Exp $
+
+  25 May 2010; Markos Chandras <hwoarang@gentoo.org> gcc-4.4.3-r2.ebuild:
+  Stable on amd64 wrt bug #302468
 
   17 May 2010; Mark Loeser <halcy0n@gentoo.org> gcc-4.5.0.ebuild:
   Bump patchset to fix bug #317217
