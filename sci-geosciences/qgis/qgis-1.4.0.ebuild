@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.4 2010/04/27 12:37:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.5 2010/05/25 12:29:35 xarthisius Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ RDEPEND=">=sci-libs/gdal-1.6.1
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
 	x11-libs/qt-sql:4
+	x11-libs/qt-webkit:4
 	sci-libs/geos
 	sci-libs/proj
 	gps? (
@@ -46,6 +47,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {
