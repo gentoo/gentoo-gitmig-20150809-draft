@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tijmp/tijmp-0.8.ebuild,v 1.4 2010/05/20 17:42:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tijmp/tijmp-0.8.ebuild,v 1.5 2010/05/25 21:42:13 pacho Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.khelekore.org/jmp/tijmp/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 
