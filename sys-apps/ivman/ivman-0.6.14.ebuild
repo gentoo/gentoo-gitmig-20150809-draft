@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.14.ebuild,v 1.8 2007/07/25 20:54:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.14.ebuild,v 1.9 2010/05/25 10:54:00 wired Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_install() {
 	newinitd "${FILESDIR}"/ivman-0.3.init ivman
 
 	# remove debugging help #182190
-	sed -i -e "s:set -x::" ${D}/usr/bin/ivman-launch
+	sed -i -e "s:set -x::" "${D}"/usr/bin/ivman-launch
 }
 
 pkg_postinst() {
