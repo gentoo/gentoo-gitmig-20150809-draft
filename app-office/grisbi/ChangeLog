@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.40 2010/05/25 20:22:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.41 2010/05/25 20:38:47 remi Exp $
+
+  25 May 2010; Rémi Cardona <remi@gentoo.org> grisbi-0.6.0.ebuild:
+  simplify bash syntax
 
 *grisbi-0.6.0 (25 May 2010)
 

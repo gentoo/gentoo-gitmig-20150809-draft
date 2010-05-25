@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.6.0.ebuild,v 1.1 2010/05/25 20:22:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.6.0.ebuild,v 1.2 2010/05/25 20:38:47 remi Exp $
 
 EAPI="2"
 
@@ -27,8 +27,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	G2CONF="
-		--with-plugins \
-		$(use_with ofx) \
+		--with-plugins
+		$(use_with ofx)
 		$(use_enable nls)"
 	DOCS="AUTHORS NEWS README"
 }
