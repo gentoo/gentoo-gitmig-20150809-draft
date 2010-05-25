@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/openmsx/openmsx-0.2.1.ebuild,v 1.3 2010/04/18 07:37:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/openmsx/openmsx-0.2.1.ebuild,v 1.4 2010/05/25 09:22:36 phajdan.jr Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -12,7 +12,7 @@ SRC_URI="http://bundles.openttdcoop.org/openmsx/releases/${P}-source.tar.gz"
 
 LICENSE="|| ( GPL-2 CCPL-Sampling-Plus-1.0 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 S=${WORKDIR}/${P}-source
