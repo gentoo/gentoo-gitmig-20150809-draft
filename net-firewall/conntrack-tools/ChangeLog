@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.37 2010/05/17 16:20:13 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.38 2010/05/25 21:21:18 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> conntrack-tools-0.9.14.ebuild:
+  stable amd64, bug 320219
 
   17 May 2010; Wolfram Schlich <wschlich@gentoo.org>
   -files/conntrack-tools-0.9.11-INT_MAX.patch, -files/conntrackd.confd,
