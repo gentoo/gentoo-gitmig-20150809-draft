@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sablotron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.68 2010/04/06 00:26:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.69 2010/05/25 15:33:20 xarthisius Exp $
+
+  25 May 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  sablotron-1.0.3.ebuild:
+  Adding missing base_src_prepare
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> sablotron-1.0.3.ebuild:
   Bump to EAPI=3, add prefix keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.3.ebuild,v 1.13 2010/04/06 00:26:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.3.ebuild,v 1.14 2010/05/25 15:33:20 xarthisius Exp $
 
 EAPI="3"
 
@@ -24,9 +24,10 @@ RDEPEND=">=dev-libs/expat-1.95.6-r1"
 DEPEND="${RDEPEND}
 	>=dev-perl/XML-Parser-2.3"
 
-PATCHES="${FILESDIR}/1.0.3-libsablot-expat.patch"
+PATCHES=( "${FILESDIR}/1.0.3-libsablot-expat.patch" )
 
 src_prepare() {
+	base_src_prepare
 	eautoreconf
 	elibtoolize
 }
