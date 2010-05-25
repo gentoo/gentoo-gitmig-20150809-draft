@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.22 2010/04/19 16:10:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.23 2010/05/25 11:22:36 djc Exp $
+
+*couchdb-0.11.0-r1 (25 May 2010)
+
+  25 May 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-0.11.0-r1.ebuild:
+  Fix permissions on configuration files (bug 317055).
 
 *couchdb-0.10.2 (19 Apr 2010)
 
