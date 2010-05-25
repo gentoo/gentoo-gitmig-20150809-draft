@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.86 2010/05/24 14:10:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.87 2010/05/25 21:21:23 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> liboil-0.3.17.ebuild:
+  stable amd64, bug 319969
 
   24 May 2010; <nixnut@gentoo.org> liboil-0.3.17.ebuild:
   ppc stable #319969
