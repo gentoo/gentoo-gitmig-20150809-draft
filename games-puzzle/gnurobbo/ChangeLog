@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gnurobbo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.17 2010/05/23 18:16:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.18 2010/05/25 02:37:03 mr_bones_ Exp $
+
+  25 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  gnurobbo-0.65.6.ebuild:
+  add sdl-image dep (bug #321385)
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> gnurobbo-0.65.6.ebuild:
   stable amd64, bug 307359

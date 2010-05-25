@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/gnurobbo-0.65.6.ebuild,v 1.4 2010/05/23 18:16:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/gnurobbo-0.65.6.ebuild,v 1.5 2010/05/25 02:37:03 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[audio,video,joystick]
+	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf"
 
