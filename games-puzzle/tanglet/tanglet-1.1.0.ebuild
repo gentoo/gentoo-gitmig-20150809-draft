@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/tanglet-1.1.0.ebuild,v 1.1 2010/04/21 02:23:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/tanglet-1.1.0.ebuild,v 1.2 2010/05/25 21:43:22 pacho Exp $
 
 EAPI=2
 inherit eutils gnome2-utils qt4 games
@@ -11,7 +11,7 @@ SRC_URI="http://gottcode.org/${PN}/${P}-src.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
