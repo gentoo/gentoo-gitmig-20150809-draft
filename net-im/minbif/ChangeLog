@@ -1,6 +1,9 @@
 # ChangeLog for net-im/minbif
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/ChangeLog,v 1.5 2010/05/19 20:43:06 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/ChangeLog,v 1.6 2010/05/25 21:43:19 pacho Exp $
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> minbif-1.0.1.ebuild:
+  stable amd64, bug 318785
 
 *minbif-1.0.3 (19 May 2010)
 
