@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/athcool-0.3.11.ebuild,v 1.3 2006/06/24 05:29:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/athcool/athcool-0.3.11-r2.ebuild,v 1.1 2010/05/25 15:45:13 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="small utility to toggle Powersaving mode for AMD Athlon/Duron processors"
 HOMEPAGE="http://members.jcom.home.ne.jp/jacobi/linux/softwares.html#athcool"
@@ -10,10 +10,14 @@ SRC_URI="http://members.jcom.home.ne.jp/jacobi/linux/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 DEPEND="sys-apps/pciutils"
+
+pkg_setup() {
+	tc-export CC
+}
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +36,8 @@ pkg_postinst() {
 	ewarn "enabling powersaving mode may cause:"
 	ewarn " * noisy or distorted sound playback"
 	ewarn " * a slowdown in harddisk performance"
-	ewarn " * system locks or instability"
+	ewarn " * system locks or unpredictable behavior"
+	ewarn " * file system corruption"
 	ewarn "If you met those problems, you should not use athcool.  Please use"
 	ewarn "athcool AT YOUR OWN RISK!"
 }
