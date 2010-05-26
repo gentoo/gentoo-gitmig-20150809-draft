@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.20 2010/04/26 08:42:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.21 2010/05/26 10:41:37 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> werkzeug-0.6.2.ebuild:
+  stable amd64, bug 321347
 
   26 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> werkzeug-0.6.ebuild:
   x86 stable wrt bug #314937
