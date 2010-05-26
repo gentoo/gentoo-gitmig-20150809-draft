@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.13a.ebuild,v 1.3 2010/05/26 10:24:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.13a.ebuild,v 1.4 2010/05/26 12:22:54 xarthisius Exp $
 
-inherit autotools elisp-common eutils fixheadtails
+inherit autotools elisp-common eutils fixheadtails toolchain-funcs
 
 DESCRIPTION="An X11 based presentation tool"
 SRC_URI="ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/${P}.tar.gz
@@ -69,7 +69,9 @@ src_compile() {
 	# no parallel build possibly, anywhere
 	emake -j1 Makefiles || die "emake Makefiles failed"
 	emake -j1 clean || die "emake clean failed"
-	emake -j1 BINDIR=/usr/bin LIBDIR=/etc/X11 || die "emake failed"
+	tc-export CC
+	emake -j1 CC="${CC}" CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}" \
+		BINDIR=/usr/bin LIBDIR=/etc/X11 || die "emake failed"
 	if use emacs; then
 	   cd contrib/
 	   elisp-compile *.el || die "elisp-compile failed"
