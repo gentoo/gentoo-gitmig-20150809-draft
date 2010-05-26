@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.60 2010/05/13 17:41:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.61 2010/05/26 18:56:51 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org>
+  eselect-python-20100321.ebuild:
+  stable amd64, bug 316367
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org>
   eselect-python-20100321.ebuild:
