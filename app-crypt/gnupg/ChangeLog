@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.370 2010/05/24 14:06:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.371 2010/05/26 15:41:04 hwoarang Exp $
+
+  26 May 2010; Markos Chandras <hwoarang@gentoo.org> gnupg-2.0.15.ebuild:
+  Stable on amd64 wrt bug #320037
 
   24 May 2010; <nixnut@gentoo.org> gnupg-2.0.15.ebuild:
   ppc stable #320037
