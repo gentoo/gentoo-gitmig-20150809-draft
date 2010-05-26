@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-libraries
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.87 2007/04/11 13:41:07 welp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.88 2010/05/26 16:26:06 abcd Exp $
+
+  26 May 2010; Jonathan Callen <abcd@gentoo.org>
+  nessus-libraries-2.3.1-r1.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   11 Apr 2007; Peter Weller <welp@gentoo.org> nessus-libraries-2.2.9.ebuild:
   Keyworded ~x86-fbsd wrt bug 172890
