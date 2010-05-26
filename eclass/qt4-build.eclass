@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.71 2010/05/25 13:39:46 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.72 2010/05/26 15:17:17 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -164,7 +164,7 @@ qt4-build_src_prepare() {
 	cd "${S}"
 
 	# fix qt 4.7 regression that skips -fvisibility=hidden
-	if [[ "${PV}" == "4.7.0_beta1" ]]; then
+	if version_is_at_least "4.7.0_beta1"; then
 		sed -e "s/^gcc|g++)/*gcc|*g++)/" \
 			-i config.tests/unix/fvisibility.test ||
 				die "visibility fixing sed failed"
