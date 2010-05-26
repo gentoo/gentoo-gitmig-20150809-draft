@@ -1,6 +1,9 @@
 # ChangeLog for games-action/violetland
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.8 2010/05/01 22:28:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.9 2010/05/26 18:24:37 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> violetland-0.2.9.ebuild:
+  stable amd64, bug 315495
 
 *violetland-0.2.10 (01 May 2010)
 
