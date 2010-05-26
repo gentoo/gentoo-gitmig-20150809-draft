@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ngrep
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.61 2009/06/01 09:45:49 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.62 2010/05/26 16:31:12 abcd Exp $
+
+  26 May 2010; Jonathan Callen <abcd@gentoo.org> ngrep-1.45-r2.ebuild,
+  +files/ngrep-1.45-prefix.patch:
+  Bump to EAPI=3, add prefix keywords, add patch to not search everywhere
+  for includes
 
   01 Jun 2009; Peter Volkov <pva@gentoo.org> -ngrep-1.45.ebuild,
   -ngrep-1.45-r1.ebuild:
