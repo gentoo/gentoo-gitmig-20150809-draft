@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.66 2010/05/25 20:01:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.67 2010/05/26 10:37:37 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> ming-0.4.3.ebuild:
+  stable amd64, bug 320945
 
   25 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ming-0.3.0-r1.ebuild, ming-0.4.0_rc2.ebuild:
