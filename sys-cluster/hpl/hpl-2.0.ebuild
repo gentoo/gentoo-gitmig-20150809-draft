@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0.ebuild,v 1.1 2009/06/13 20:38:47 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0.ebuild,v 1.2 2010/05/26 10:13:58 flameeyes Exp $
 
 inherit eutils
 
@@ -34,8 +34,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# do NOT use emake here
-	HOME=${WORKDIR} make arch=gentoo_hpl_fblas_x86 || die "Failed to build"
+	# parallel make failure — bug #321539
+	HOME=${WORKDIR} emake -j1 arch=gentoo_hpl_fblas_x86 || die "Failed to build"
 }
 
 src_install() {
