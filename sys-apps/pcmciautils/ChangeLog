@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcmciautils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.36 2009/10/16 19:19:38 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.37 2010/05/26 10:16:17 bangert Exp $
+
+*pcmciautils-017 (26 May 2010)
+
+  26 May 2010; Thilo Bangert <bangert@gentoo.org> +pcmciautils-017.ebuild:
+  version bump (#300810)
 
 *pcmciautils-016 (16 Oct 2009)
 
