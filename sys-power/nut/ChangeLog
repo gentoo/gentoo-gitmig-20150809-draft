@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.73 2010/05/25 20:19:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.74 2010/05/26 10:29:58 robbat2 Exp $
+
+  26 May 2010; Robin H. Johnson <robbat2@gentoo.org>
+  files/nut-2.4.3-lowspeed-buffer-size.patch:
+  Fix DOS line feeds from upstream patch.
 
 *nut-2.4.3-r1 (25 May 2010)
 
