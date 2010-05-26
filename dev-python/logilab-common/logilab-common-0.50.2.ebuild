@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.50.2.ebuild,v 1.1 2010/05/25 21:12:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.50.2.ebuild,v 1.2 2010/05/26 17:12:37 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -31,7 +31,9 @@ PYTHON_MODNAME="logilab"
 src_prepare() {
 	distutils_src_prepare
 
-	# Disable broken test.
+	# Disable broken tests.
+	sed -e "s/test_moved/_&/" -i test/unittest_deprecation.py
+	sed -e "s/test_manpage/_&/" -i test/unittest_configuration.py
 	sed -e "s/test_knownValues_is_standard_module_4/_&/" -i test/unittest_modutils.py
 
 	# Disable tests failing when stdout is not a tty.
