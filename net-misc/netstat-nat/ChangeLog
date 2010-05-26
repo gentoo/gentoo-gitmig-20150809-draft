@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.34 2010/05/11 00:28:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.35 2010/05/26 19:19:55 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> netstat-nat-1.4.10.ebuild:
+  stable amd64, bug 318533
 
   11 May 2010; Jeroen Roovers <jer@gentoo.org> netstat-nat-1.4.9.ebuild,
   netstat-nat-1.4.10.ebuild, +files/netstat-nat-1.4.10-install.patch:
