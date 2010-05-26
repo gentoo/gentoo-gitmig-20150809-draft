@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b-r1.ebuild,v 1.2 2010/05/26 10:04:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b-r1.ebuild,v 1.3 2010/05/26 14:47:11 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -41,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	base_src_install 
+	base_src_install
 	use doc && { dohtml "${S}"/doc/html/* ; }
 
 	if ! use static-libs; then
