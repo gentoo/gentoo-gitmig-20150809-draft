@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.66 2010/05/11 14:38:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.67 2010/05/26 18:26:17 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> mod_jk-1.2.30.ebuild:
+  stable amd64, bug 315561
 
   11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> mod_jk-1.2.30.ebuild:
   x86 stable wrt bug #315561
