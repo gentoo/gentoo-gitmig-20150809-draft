@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.98 2010/02/15 10:08:18 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.99 2010/05/26 18:56:26 bangert Exp $
+
+  26 May 2010; Thilo Bangert <bangert@gentoo.org>
+  -files/lm_sensors-3.0.1-sensors-detect-gentoo.patch,
+  -lm_sensors-3.0.2.ebuild, -lm_sensors-3.0.3.ebuild,
+  -files/lm_sensors-3.0.3-sensors-detect-gentoo.patch,
+  -lm_sensors-3.1.1.ebuild,
+  -files/lm_sensors-3.1.1-sensors-detect-gentoo.patch:
+  clean up old versions
 
 *lm_sensors-3.1.2 (15 Feb 2010)
 
