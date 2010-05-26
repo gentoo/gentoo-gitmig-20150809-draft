@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.144 2010/05/24 16:26:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.145 2010/05/26 16:17:23 hwoarang Exp $
+
+  26 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  python-docs-3.1.2.ebuild:
+  Stable on amd64 wrt bug #320043
 
   23 May 2010; <nixnut@gentoo.org> python-docs-3.1.2.ebuild:
   ppc stable #320043
