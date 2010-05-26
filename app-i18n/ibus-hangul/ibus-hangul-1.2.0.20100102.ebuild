@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.2.0.20100102.ebuild,v 1.3 2010/04/25 16:11:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.2.0.20100102.ebuild,v 1.4 2010/05/26 10:33:28 pacho Exp $
 
 DESCRIPTION="The Hangul engine for IBus input platform"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -8,7 +8,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=dev-lang/python-2.5
