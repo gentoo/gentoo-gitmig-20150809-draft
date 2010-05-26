@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xml-simple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.15 2010/05/22 19:23:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.16 2010/05/26 10:32:38 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> xml-simple-1.0.12-r1.ebuild:
+  stable amd64, bug 321085
 
 *xml-simple-1.0.12-r2 (22 May 2010)
 
