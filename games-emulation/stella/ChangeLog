@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.46 2010/04/24 07:58:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.47 2010/05/26 10:40:02 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> stella-3.1.ebuild:
+  stable amd64, bug 321345
 
 *stella-3.1 (24 Apr 2010)
 
