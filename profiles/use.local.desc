@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5597 2010/05/26 20:47:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5598 2010/05/26 21:07:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2480,6 +2480,7 @@ net-im/minbif:video - Add video support
 net-im/pidgin:bonjour - Enable bonjour (zeroconf) support
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support
 net-im/pidgin:groupwise - Enable Novell Groupwise protocol support
+net-im/pidgin:krb4 - Compile Zephyr plugin with Kerberos 4 support
 net-im/pidgin:meanwhile - Enable meanwhile support for Sametime protocol
 net-im/pidgin:prediction - Enable Contact Availability Prediction plugin
 net-im/pidgin:qq - Enable QQ protocol support
