@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.2.ebuild,v 1.4 2009/11/25 03:53:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.2.ebuild,v 1.5 2010/05/26 17:03:56 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
+GENTOO_DEPEND_ON_PERL="no"
 inherit eutils flag-o-matic multilib perl-module autotools
 
 DESCRIPTION="A system to store and display time-series data"
@@ -12,7 +13,7 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="doc lua perl python ruby rrdcgi tcl"
 
 # This versions are minimal versions upstream tested with.
@@ -31,10 +32,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-apps/gawk"
 
-pkg_setup() {
-	use perl && perl-module_pkg_setup
-}
-
 src_prepare() {
 	epatch "${FILESDIR}/rrdtool-1.3.8-configure.ac.patch"
 	sed -i '/PERLLD/s:same as PERLCC:same-as-PERLCC:' configure.ac #281694
@@ -44,7 +41,10 @@ src_prepare() {
 src_configure() {
 	filter-flags -ffast-math
 
-	export RRDDOCDIR=/usr/share/doc/${PF}
+	export RRDDOCDIR=${EPREFIX}/usr/share/doc/${PF}
+
+	# to solve bug #260380
+	[[ ${CHOST} == *-solaris* ]] && append-flags -D__EXTENSIONS__
 
 	econf $(use_enable rrdcgi) \
 		$(use_enable lua) \
@@ -54,7 +54,7 @@ src_configure() {
 		$(use_enable perl) \
 		$(use_enable perl perl-site-install) \
 		$(use_enable tcl) \
-		$(use_with tcl tcllib /usr/$(get_libdir)) \
+		$(use_with tcl tcllib "${EPREFIX}"/usr/$(get_libdir)) \
 		$(use_enable python)
 }
 
@@ -62,20 +62,15 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	if ! use doc ; then
-		rm -rf "${D}"/usr/share/doc/${PF}/{html,txt}
+		rm -rf "${ED}"usr/share/doc/${PF}/{html,txt}
 	fi
 
-	use perl && fixlocalpod
+	use perl && perl_delete_localpod
 
 	dodoc CHANGES CONTRIBUTORS NEWS README THREADS TODO
 }
 
-pkg_preinst() {
-	use perl && perl-module_pkg_preinst
-}
-
 pkg_postinst() {
-	use perl && perl-module_pkg_postinst
 	ewarn "rrdtool dump 1.3 does emit completely legal xml. Basically this means that"
 	ewarn "it contains an xml header and a DOCTYPE definition. Unfortunately this"
 	ewarn "causes older versions of rrdtool restore to be unhappy."
@@ -87,12 +82,4 @@ pkg_postinst() {
 	ewarn "Note: rrdtool-1.3.x doesn't have any default font bundled. Thus if you've"
 	ewarn "upgraded from rrdtool-1.2.x and don't have any font installed to make"
 	ewarn "lables visible, please, install some font, e.g. media-fonts/dejavu."
-}
-
-pkg_prerm() {
-	use perl && perl-module_pkg_prerm
-}
-
-pkg_postrm() {
-	use perl && perl-module_pkg_postrm
 }
