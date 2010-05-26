@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b-r1.ebuild,v 1.1 2010/05/25 06:41:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b-r1.ebuild,v 1.2 2010/05/26 10:04:49 scarabeus Exp $
 
-EAPI="2"
-
-inherit eutils
+EAPI="3"
 
 MY_P=${PN}-core-${PV}
+inherit base
 
 DESCRIPTION="High-performance, full-featured text search engine based off of lucene in C++"
 HOMEPAGE="http://clucene.sourceforge.net/"
@@ -20,29 +19,31 @@ IUSE="debug doc static-libs threads"
 DEPEND="doc? ( >=app-doc/doxygen-1.4.2 )"
 RDEPEND=""
 
+PATCHES=(
+	"${FILESDIR}/${P}-gcc44.patch"
+)
+
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch #254254
-}
-
 src_configure() {
-	econf $(use_enable debug) \
+	econf \
+		$(use_enable debug) \
 		$(use_enable debug cnddebug) \
 		$(use_enable static-libs static) \
 		$(use_enable threads multithreading)
 }
 
 src_compile() {
-	emake || die "emake failed"
+	base_src_compile
 	if use doc ; then
 		emake doxygen || die "making docs failed"
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installation failed"
-	use doc && dohtml "${S}"/doc/html/*
+	base_src_install 
+	use doc && { dohtml "${S}"/doc/html/* ; }
+
 	if ! use static-libs; then
 		find "${D}" -type f -name '*.la' -exec rm -f {} + \
 			|| die "la removal failed"

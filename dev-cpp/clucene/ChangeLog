@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.29 2010/05/25 06:41:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.30 2010/05/26 10:04:49 scarabeus Exp $
+
+*clucene-9999 (26 May 2010)
+
+  26 May 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  clucene-0.9.21b-r1.ebuild, +clucene-9999.ebuild:
+  Update clucene-0.9.21b-r1 to be eapi3 and use base eclass. Add live
+  ebuild.
 
 *clucene-0.9.21b-r1 (25 May 2010)
 
