@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/prboom
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.31 2010/05/09 18:27:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.32 2010/05/26 15:16:22 mr_bones_ Exp $
+
+  26 May 2010; Michael Sterrett <mr_bones_@gentoo.org> prboom-2.5.0.ebuild:
+  Steal copy from doomsday to let people know they might have more
+  to do before playing (bug #321495)
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> prboom-2.4.7.ebuild,
   prboom-2.5.0.ebuild:

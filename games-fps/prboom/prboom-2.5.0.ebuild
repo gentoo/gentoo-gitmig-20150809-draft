@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.4 2010/05/09 18:27:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.5 2010/05/26 15:16:22 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -63,4 +63,17 @@ src_install() {
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "PrBoom"
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	elog "To play the original Doom levels, place doom.wad and/or doom2.wad"
+	elog "into ${GAMES_DATADIR}/doom-data"
+	elog "Then run ${PN} accordingly."
+	elog
+	elog "doom1.wad is the shareware demo wad consisting of 1 episode,"
+	elog "and doom.wad is the full Doom 1 set of 3 episodes"
+	elog "(or 4 in the Final Doom wad)."
+	elog
+	elog "You can even emerge doom-data and/or freedoom to play for free."
 }
