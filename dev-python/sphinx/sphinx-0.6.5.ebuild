@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.5.ebuild,v 1.9 2010/05/21 20:56:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.5.ebuild,v 1.10 2010/05/26 18:24:41 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
@@ -36,15 +37,9 @@ src_compile() {
 
 	if use doc; then
 		cd doc
+		einfo "Generation of documentation"
 		PYTHONPATH="../" emake SPHINXBUILD="$(PYTHON -f) ../sphinx-build.py" html || die "Generation of documentation failed"
 	fi
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests-${PYTHON_ABI}
-	}
-	python_execute_function testing
 }
 
 src_install() {
@@ -60,8 +55,7 @@ pkg_postinst() {
 
 	# Generating the Grammar pickle to avoid on the fly generation causing sandbox violations (bug #266015)
 	generation_of_grammar_pickle() {
-		"$(PYTHON)" -c "from sphinx.pycode.pgen2.driver import load_grammar; load_grammar('${ROOT%/}${EPREFIX}$(python_get_sitedir)/sphinx/pycode/Grammar.txt')" \
-		|| die "Generation of grammar pickle failed"
+		"$(PYTHON)" -c "from sphinx.pycode.pgen2.driver import load_grammar; load_grammar('${ROOT%/}${EPREFIX}$(python_get_sitedir)/sphinx/pycode/Grammar.txt')" || die "Generation of grammar pickle failed"
 	}
 	python_execute_function --action-message 'Generation of Grammar pickle with Python ${PYTHON_ABI}...' generation_of_grammar_pickle
 }
