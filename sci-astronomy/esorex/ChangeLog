@@ -1,0 +1,34 @@
+# ChangeLog for sci-astronomy/esorex
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/ChangeLog,v 1.1 2010/05/26 19:10:16 bicatali Exp $
+
+*esorex-3.8.3 (26 May 2010)
+
+  26 May 2010; Sébastien Fabbro <bicatali@gentoo.org> +esorex-3.8.3.ebuild,
+  +metadata.xml:
+  Import to the main tree and bump
+
+*esorex-3.7.2 (23 Jul 2009)
+
+  23 Jul 2009; Sébastien Fabbro <bicatali@gentoo.org> -esorex-3.6.1.ebuild,
+  -esorex-3.6.8.ebuild, -esorex-3.6.12.ebuild, +esorex-3.7.2.ebuild:
+  Version bump
+
+  08 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +esorex-3.6.12.ebuild:
+  Version bump
+
+  02 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  +esorex-3.6.8.ebuild:
+  Version bump
+
+  26 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org> -esorex-3.6.ebuild,
+  +esorex-3.6.1.ebuild:
+  Version bump.
+
+*esorex-3.6 (15 Oct 2006)
+
+  15 Oct 2006; Sebastien Fabbro <seb@ist.utl.pt>;
+  +esorex-3.6.ebuild,  +metadata.xml.
+  Initial import.
+  
