@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/msynctool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/msynctool/ChangeLog,v 1.8 2009/11/15 23:52:10 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/msynctool/ChangeLog,v 1.9 2010/05/26 12:28:34 bangert Exp $
+
+  26 May 2010; Thilo Bangert <bangert@gentoo.org> -msynctool-9999.ebuild:
+  remove svn ebuild - repository disappeared
 
   15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -msynctool-0.21.ebuild, -msynctool-0.35.ebuild:
