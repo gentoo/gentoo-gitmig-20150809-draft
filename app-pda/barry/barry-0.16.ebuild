@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.5 2010/05/06 10:42:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.6 2010/05/26 08:53:27 bangert Exp $
 
 inherit autotools base
 
@@ -46,10 +46,10 @@ src_unpack(){
 
 src_compile(){
 	econf \
-		$(use_with boost boost =/usr/include) \
+		$(use_enable boost) \
 		$(use_enable gui) \
-		$(use_with gui libtar =/usr/lib) \
-		$(use_with gui libz =/usr/lib) \
+		$(use_with gui libtar /usr) \
+		$(use_with gui libz) \
 		$(use_enable opensync opensync-plugin)
 
 	emake || die
