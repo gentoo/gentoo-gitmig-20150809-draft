@@ -39,5 +39,5 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --datadir=/usr/share/spyview
+	econf --datadir=/usr/share/spyview --docdir=/usr/share/doc/${PF}
 }
