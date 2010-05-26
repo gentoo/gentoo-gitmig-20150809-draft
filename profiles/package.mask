@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11570 2010/05/26 12:31:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11571 2010/05/26 12:56:27 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (26 May 2010)
+#  on behalf of QA team
+#
+# cl-smtp fails to fetch since at least September 2007
+# (bug #193627); cl-pop needs the former.
+#
+# Removal on 2010-07-25
+dev-lisp/cl-smtp
+dev-lisp/cl-pop
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (26 May 2010)
 #  on behalf of QA team
