@@ -4,12 +4,16 @@
 	<herd>kernel</herd>
 	<herd>hardened</herd>
 	<maintainer>
-		<email>kerframil@gmail.com</email>
-		<name>Kerin Millar</name>
+		<email>quantumsummers@gentoo.org</email>
+		<name>Matthew Summers</name>
 	</maintainer>
 	<maintainer>
-		<email>gengor@gentoo.org</email>
-		<name>Gordon Malm</name>
+		<email>robbat@gentoo.org</email>
+		<name>Robin H. Johnson</name>
+	</maintainer>
+	<maintainer>
+		<email>chainsaw@gentoo.org</email>
+		<name>Tony Vroon</name>
 	</maintainer>
 	<longdescription>
 		hardened-sources is based upon genpatches, and adds the grsecurity

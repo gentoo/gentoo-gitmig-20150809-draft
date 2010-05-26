@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.312 2010/04/26 07:38:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.313 2010/05/26 16:24:53 chainsaw Exp $
+
+*hardened-sources-2.6.32-r7 (26 May 2010)
+
+  26 May 2010; <chainsaw@gentoo.org> +hardened-sources-2.6.32-r7.ebuild,
+  metadata.xml:
+  New 2.6.32-based release by Anthony G Basile, Robin H. Johnson & Matthew
+  Summers.
 
   26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update Manifest for deblob support in kernel-2 eclass.
