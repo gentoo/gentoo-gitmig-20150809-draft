@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5593 2010/05/26 14:07:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5594 2010/05/26 18:07:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2913,8 +2913,12 @@ net-proxy/squid:logrotate - Use app-admin/logrotate for rotating logs
 net-proxy/squid:pf-transparent - Adds transparent proxy support for systems using PF (only for *bsd)
 net-proxy/squid:zero-penalty-hit - Add Zero Penalty Hit patch (http://zph.bratcheda.org)
 net-proxy/sshproxy:client-only - Install only the client wrappers
+net-proxy/tinyproxy:filter-proxy - Enable filtering of domains/URLS
 net-proxy/tinyproxy:http-via-header - Add Via field to HTTP headers
-net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
+net-proxy/tinyproxy:reverse-proxy - Enable reverse proxying
+net-proxy/tinyproxy:transparent-proxy - Enable transparent proxying
+net-proxy/tinyproxy:upstream-proxy - Enable upstream proxying
+net-proxy/tinyproxy:xtinyproxy-header - Include the X-Tinyproxy header
 net-proxy/tsocks:tordns -  Apply tordns patch which allows transparent TORification of the DNS queries 
 net-voip/ekiga:gconf - Enable GConf support
 net-voip/ekiga:h323 - Enable H.323 protocol
