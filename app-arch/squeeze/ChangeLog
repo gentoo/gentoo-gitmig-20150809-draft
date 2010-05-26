@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/squeeze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/ChangeLog,v 1.5 2010/01/15 03:58:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/ChangeLog,v 1.6 2010/05/26 12:41:46 angelos Exp $
+
+  26 May 2010; Christoph Mende <angelos@gentoo.org> squeeze-0.2.3.ebuild:
+  Depend on <thunar-1.1 or thunar-vfs
 
   15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> squeeze-0.2.3.ebuild:
   Restrict deps to old xfce-base/thunar.

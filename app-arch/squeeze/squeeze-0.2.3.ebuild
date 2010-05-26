@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/squeeze-0.2.3.ebuild,v 1.3 2010/01/15 03:58:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/squeeze-0.2.3.ebuild,v 1.4 2010/05/26 12:41:46 angelos Exp $
 
 EAPI=2
 inherit eutils fdo-mime gnome2-utils
@@ -18,7 +18,7 @@ IUSE="debug +pathbar +toolbar"
 RDEPEND="x11-libs/gtk+:2
 	dev-libs/dbus-glib
 	>=xfce-base/libxfce4util-4.4
-	<xfce-base/thunar-1.1.0"
+	|| ( xfce-extra/thunar-vfs <xfce-base/thunar-1.1.0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
