@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-m17n
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.13 2010/04/25 16:18:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.14 2010/05/26 10:34:45 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org>
+  ibus-m17n-1.2.0.20091217.ebuild:
+  stable amd64, bug 305759
 
   25 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ibus-m17n-1.2.0.20091217.ebuild:
