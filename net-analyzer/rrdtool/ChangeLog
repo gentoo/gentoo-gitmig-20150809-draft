@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.201 2010/05/26 17:03:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.202 2010/05/26 20:28:02 tove Exp $
+
+  26 May 2010; Torsten Veller <tove@gentoo.org> rrdtool-1.4.2.ebuild:
+  Move perl-modules to vendor-dir. Delete .packlist files (#297134)
 
   26 May 2010; Jonathan Callen <abcd@gentoo.org> rrdtool-1.4.2.ebuild:
   Bump to EAPI=3, add prefix keywords, clean up ebuild

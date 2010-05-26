@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.2.ebuild,v 1.5 2010/05/26 17:03:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.2.ebuild,v 1.6 2010/05/26 20:28:02 tove Exp $
 
 EAPI="3"
 
@@ -53,6 +53,7 @@ src_configure() {
 		$(use_enable ruby ruby-site-install) \
 		$(use_enable perl) \
 		$(use_enable perl perl-site-install) \
+		--with-perl-options=INSTALLDIRS=vendor \
 		$(use_enable tcl) \
 		$(use_with tcl tcllib "${EPREFIX}"/usr/$(get_libdir)) \
 		$(use_enable python)
@@ -65,7 +66,10 @@ src_install() {
 		rm -rf "${ED}"usr/share/doc/${PF}/{html,txt}
 	fi
 
-	use perl && perl_delete_localpod
+	if use perl ; then
+		perl_delete_localpod
+		perl_delete_packlist
+	fi
 
 	dodoc CHANGES CONTRIBUTORS NEWS README THREADS TODO
 }
