@@ -1,19 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.2.ebuild,v 1.1 2010/05/14 19:29:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.2.ebuild,v 1.2 2010/05/26 17:58:12 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit bash-completion distutils webapp
+inherit bash-completion distutils versionator webapp
 
-MY_PN="Django"
-MY_P="${MY_PN}-${PV}"
+MY_P="Django-${PV}"
 
 DESCRIPTION="High-level python web framework"
 HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="http://media.djangoproject.com/releases/$(get_version_component_range 1-2)/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -41,6 +40,7 @@ DOCS="docs/* AUTHORS"
 WEBAPP_MANUAL_SLOT="yes"
 
 pkg_setup() {
+	python_pkg_setup
 	webapp_pkg_setup
 }
 
@@ -81,8 +81,8 @@ src_install() {
 	fi
 
 	if use doc; then
-		mv docs/_build/html/{_,.}sources
-		dohtml txt -r docs/_build/html/*
+		rm -fr docs/_build/html/_sources
+		dohtml -A txt -r docs/_build/html/*
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
@@ -98,6 +98,7 @@ pkg_preinst() {
 pkg_postinst() {
 	bash-completion_pkg_postinst
 	distutils_pkg_postinst
+
 	einfo "Now, Django has the best of both worlds with Gentoo,"
 	einfo "ease of deployment for production and development."
 	echo
@@ -105,7 +106,6 @@ pkg_postinst() {
 	elog "webapp-config for installation in a webroot,"
 	elog "as well as the traditional location in python's"
 	elog "site-packages dir for easy development"
-	echo
 	echo
 	ewarn "If you build Django ${PV} without USE=\"vhosts\""
 	ewarn "webapp-config will automatically install the"

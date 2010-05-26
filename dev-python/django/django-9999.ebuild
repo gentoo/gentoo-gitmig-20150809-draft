@@ -1,15 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.5 2009/08/03 05:10:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.6 2010/05/26 17:58:12 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
-ESVN_REPO_URI="http://code.djangoproject.com/svn/django/trunk/"
-
-inherit bash-completion distutils eutils subversion versionator
+inherit bash-completion distutils subversion webapp
 
 DESCRIPTION="High-level python web framework"
-HOMEPAGE="http://www.djangoproject.com/"
+HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
+SRC_URI=""
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
@@ -28,58 +30,84 @@ DEPEND="${RDEPEND}
 		>=dev-lang/python-2.5[sqlite]
 		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
 	) )"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}"
 
-PYTHON_MODNAME="django"
+ESVN_REPO_URI="http://code.djangoproject.com/svn/django/trunk/"
 
-DOCS="docs/*.txt AUTHORS"
+DOCS="docs/* AUTHORS"
+WEBAPP_MANUAL_SLOT="yes"
+
+pkg_setup() {
+	python_pkg_setup
+	webapp_pkg_setup
+}
 
 src_compile() {
 	distutils_src_compile
 
-	if use doc ; then
+	if use doc; then
 		pushd docs > /dev/null
-		emake html || die "Generation of HTML documentation failed"
+		einfo "Generation of documentation"
+		emake html || die "Generation of documentation failed"
 		popd > /dev/null
 	fi
 }
 
 src_test() {
-	einfo "Running tests."
-	cat >> tests/settings.py << __EOF__
+	testing() {
+		cat >> tests/settings.py << __EOF__
 DATABASE_ENGINE='sqlite3'
 DATABASE_NAME='test.db'
 ROOT_URLCONF='tests/urls.py'
 SITE_ID=1
 __EOF__
-
-	elog "Please note: You're using a live SVN ebuild."
-	elog "We therefore won't fix any failures in the tests."
-	elog "If you think it's django's fault report it to upstream."
-	elog "Otherwise either disable the tests or use a stable version."
-	PYTHONPATH="." ${python} tests/runtests.py --settings=settings -v1 || die "tests failed"
+		# Tests have non-standard assumptions about PYTHONPATH and
+		# don't work with usual "build-${PYTHON_ABI}/lib".
+		PYTHONPATH="." "$(PYTHON)" tests/runtests.py --settings=settings -v1
+	}
+	python_execute_function testing
 }
 
 src_install() {
-	distutils_python_version
-	site_pkgs="$(python_get_sitedir)"
-	export PYTHONPATH="${PYTHONPATH}:${D}/${site_pkgs}"
-	dodir ${site_pkgs}
-
 	distutils_src_install
-
-	dobin django/bin/{compile-messages,daily_cleanup,make-messages,unique-messages,profiling/gather_profile_stats}.py
-	doman docs/man/*
 
 	dobashcompletion extras/django_bash_completion
 
-	if use examples ; then
+	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
 
-	if use doc ; then
+	if use doc; then
+		rm -fr docs/_build/html/_sources
 		dohtml -A txt -r docs/_build/html/*
 	fi
+
+	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
+	doins -r django/contrib/admin/media/* || die "doins failed"
+
+	webapp_src_install
+}
+
+pkg_preinst() {
+	:
+}
+
+pkg_postinst() {
+	bash-completion_pkg_postinst
+	distutils_pkg_postinst
+
+	einfo "Now, Django has the best of both worlds with Gentoo,"
+	einfo "ease of deployment for production and development."
+	echo
+	elog "A copy of the admin media is available to"
+	elog "webapp-config for installation in a webroot,"
+	elog "as well as the traditional location in python's"
+	elog "site-packages dir for easy development"
+	echo
+	ewarn "If you build Django ${PV} without USE=\"vhosts\""
+	ewarn "webapp-config will automatically install the"
+	ewarn "admin media into the localhost webroot."
 }
