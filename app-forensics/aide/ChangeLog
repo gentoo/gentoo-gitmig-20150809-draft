@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/aide
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.45 2009/12/16 14:13:14 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.46 2010/05/26 11:36:28 matsuu Exp $
+
+*aide-0.13.1-r5 (26 May 2010)
+
+  26 May 2010; MATSUU Takuto <matsuu@gentoo.org> +aide-0.13.1-r5.ebuild,
+  +files/aide-0.13.1-zlib.patch:
+  Fixed zlib issue, bug #316665.
 
 *aide-0.13.1-r4 (16 Dec 2009)
 
