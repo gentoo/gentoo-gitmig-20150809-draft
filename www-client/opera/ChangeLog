@@ -1,6 +1,16 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.481 2010/05/21 17:18:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.482 2010/05/26 20:27:42 jer Exp $
+
+*opera-10.54_pre6340-r1 (26 May 2010)
+*opera-10.53_pre6330-r2 (26 May 2010)
+
+  26 May 2010; Jeroen Roovers <jer@gentoo.org>
+  -opera-10.53_pre6330-r1.ebuild, +opera-10.53_pre6330-r2.ebuild,
+  -opera-10.54_pre6336-r1.ebuild, -opera-10.54_pre6340.ebuild,
+  +opera-10.54_pre6340-r1.ebuild:
+  Set proper libdir in /usr/share/opera/defaults/pluginpath.ini thanks to
+  Henning Schild (bug #321471).
 
 *opera-10.54_pre6340 (21 May 2010)
 

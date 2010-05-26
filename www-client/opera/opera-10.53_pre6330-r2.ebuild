@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.54_pre6336-r1.ebuild,v 1.6 2010/05/20 19:24:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.53_pre6330-r2.ebuild,v 1.1 2010/05/26 20:27:42 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.opera.com/"
 SLOT="0"
 LICENSE="OPERA-10.53 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="elibc_FreeBSD gtk kde"
+IUSE="elibc_FreeBSD"
 
 RESTRICT="mirror test"
 
@@ -44,26 +44,19 @@ SRC_URI="
 DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="
-	gtk? (
-		=x11-libs/gtk+-2*
-		dev-libs/atk
-		dev-libs/glib
-		media-libs/glitz
-		media-libs/libpng
-		x11-libs/cairo
-		x11-libs/pango
-		x11-libs/pixman
-	)
-	kde? (
-		kde-base/kdelibs
-	)
+	=x11-libs/gtk+-2*
+	dev-libs/atk
 	dev-libs/expat
+	dev-libs/glib
 	media-libs/fontconfig
 	media-libs/freetype
+	media-libs/glitz
 	media-plugins/gst-plugins-meta
+	media-libs/libpng
 	sys-apps/util-linux
 	sys-libs/zlib
 	virtual/opengl
+	x11-libs/cairo
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
@@ -80,6 +73,8 @@ RDEPEND="
 	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libxcb
+	x11-libs/pango
+	x11-libs/pixman
 	x11-libs/xcb-util
 	"
 
@@ -121,8 +116,7 @@ src_install() {
 
 	# We install into usr instead of opt as Opera does not support the latter
 	dodir /usr
-	mv lib/  "${D}/${OPREFIX}" || die "mv lib/ failed"
-	mv share/ "${D}/usr/" || die "mv share/ failed"
+	mv lib/ share/ "${D}"/usr/ || die "mv lib/ share/ failed"
 
 	# Unzip the man pages before sedding
 	gunzip "${D}"/usr/share/man/man1/* || die "gunzip failed"
@@ -142,6 +136,12 @@ src_install() {
 	sed "${FILESDIR}"/opera \
 		-e "s|OPERA_LIBDIR|${OPREFIX}|g" > opera \
 		|| die "sed opera script failed"
+
+	# Sed libdir in defaults/pluginpath.ini
+	sed -i \
+		-e "s|/usr/lib32|${OPREFIX}|g" \
+		"${D}"/usr/share/opera/defaults/pluginpath.ini \
+		|| die "sed pluginpath.ini failed"
 
 	# Install startup scripts
 	dobin ${PN} ${PN}-widget-manager || die "dobin failed"
