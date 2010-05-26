@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.13 2010/05/25 10:28:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.14 2010/05/26 11:35:58 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> webpy-0.32.ebuild:
+  stable amd64, bug 321431
 
 *webpy-0.34 (25 May 2010)
 
