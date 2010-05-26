@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.317 2010/05/11 19:22:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.318 2010/05/26 15:39:29 cardoe Exp $
+
+  26 May 2010; Doug Goldstein <cardoe@gentoo.org> -mythtv-0.22_p22778.ebuild,
+  -mythtv-0.22_p22811.ebuild, -mythtv-0.22_p22824.ebuild,
+  -mythtv-0.22_p22824-r1.ebuild, -mythtv-0.22_p22860.ebuild:
+  clean out old revisions
 
   11 May 2010; Joseph Jezak <josejx@gentoo.org> mythtv-0.22_p23069.ebuild:
   Marked ppc stable for bug #299222.
