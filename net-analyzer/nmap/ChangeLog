@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.228 2010/05/20 11:09:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.229 2010/05/26 16:41:20 abcd Exp $
+
+  26 May 2010; Jonathan Callen <abcd@gentoo.org> nmap-5.21.ebuild:
+  Bump to EAPI=3, add prefix keywords
 
   20 May 2010; Michał Januszewski <spock@gentoo.org> -nmap-4.76.ebuild,
   -nmap-4.85_beta9.ebuild, -nmap-4.90_rc1.ebuild, -nmap-5.00.ebuild,
