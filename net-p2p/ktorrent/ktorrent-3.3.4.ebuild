@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3.4.ebuild,v 1.5 2010/05/25 21:11:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3.4.ebuild,v 1.6 2010/05/26 08:35:28 pacho Exp $
 
 EAPI="2"
 
 if [[ ${PV} == *9999* ]] ; then
-	KEYWORDS="amd64 x86"
+	KEYWORDS=""
 	KMNAME="extragear/network"
 else
 	# upstream likes to skip that _ in beta releases

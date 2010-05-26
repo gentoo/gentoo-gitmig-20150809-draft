@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.146 2010/05/25 21:11:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.147 2010/05/26 08:35:28 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> ktorrent-3.3.4.ebuild:
+  Drop KEYWORDS for *9999* due ekeyword bug #321475
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> ktorrent-3.3.4.ebuild:
   stable amd64, bug 318383
