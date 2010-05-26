@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/libeventdb-0.90.ebuild,v 1.7 2009/08/26 15:51:45 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/libeventdb-0.90.ebuild,v 1.8 2010/05/26 14:38:02 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 
@@ -29,6 +29,9 @@ src_unpack() {
 	gpe_src_unpack "$@"
 
 	epatch "${FILESDIR}"/libeventdb-unbreak-LIVE-macro.patch
+
+	# Wrong linker logic, fixes bug #320035 .
+	epatch "${FILESDIR}"/${P}-doclinkerfix.patch
 
 	if ! use doc; then
 		sed -i -e 's;SUBDIRS = doc;SUBDIRS = ;' Makefile.am \
