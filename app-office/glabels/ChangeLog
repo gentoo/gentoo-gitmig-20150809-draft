@@ -1,6 +1,13 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.46 2010/05/25 21:15:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.47 2010/05/26 20:37:29 eva Exp $
+
+*glabels-2.2.8 (26 May 2010)
+
+  26 May 2010; Gilles Dartiguelongue <eva@gentoo.org> glabels-2.2.4.ebuild,
+  -glabels-2.2.6.ebuild, +glabels-2.2.8.ebuild:
+  Version bump. New templates, updated translations, fix a crash with
+  glib-2.24.
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> glabels-2.2.7.ebuild:
   stable amd64, bug 319961
