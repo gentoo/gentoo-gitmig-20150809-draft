@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.2.ebuild,v 1.2 2009/01/14 04:20:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/teg/teg-0.11.2.ebuild,v 1.3 2010/05/26 07:09:40 tupone Exp $
 
 EAPI=2
 inherit gnome2
@@ -19,4 +19,5 @@ RDEPEND=">=dev-libs/glib-2
 	gnome-base/libgnome
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	app-text/htmltidy
 	nls? ( sys-devel/gettext )"
