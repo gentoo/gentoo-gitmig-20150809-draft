@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.6 2010/01/10 01:19:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.9_pre20050614.ebuild,v 1.7 2010/05/26 10:26:37 bangert Exp $
 
 inherit eutils toolchain-funcs linux-mod
 
@@ -41,12 +41,8 @@ pkg_setup() {
 		ewarn "CONFIG_PCMCIA in the kernel and use the drivers from"
 		ewarn "sys-apps/pcmcia-cs-modules."
 		ewarn
-	elif kernel_is gt 2 4 && ! (linux_chkconfig_present PCMCIA || linux_chkconfig_present PCCARD); then
-		eerror
-		eerror "The package requires the in-kernel PCMCIA drivers to be enabled"
-		eerror "for kernel 2.6.x."
-		eerror
-		die "linux-${KV_FULL} without PCMCIA support detected"
+	elif kernel_is gt 2 5; then
+		die "Use sys-apps/pcmciautils with 2.6.x kernels"
 	fi
 }
 
