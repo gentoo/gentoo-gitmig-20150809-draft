@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.7 2010/04/03 04:29:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.8 2010/05/26 10:38:16 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> ibus-qt-1.2.0.20091217.ebuild:
+  stable amd64, bug 305763
 
 *ibus-qt-1.3.0 (03 Apr 2010)
 
