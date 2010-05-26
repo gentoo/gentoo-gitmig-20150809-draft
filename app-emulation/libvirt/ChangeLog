@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.53 2010/05/03 20:09:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.54 2010/05/26 17:34:38 cardoe Exp $
+
+*libvirt-0.8.1-r1 (26 May 2010)
+
+  26 May 2010; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.8.1-r1.ebuild:
+  Grab a bunch of patches to fix some NULL ptr deref issues and fix up some
+  corner cases where libvirt wasn't handling errors correctly. Should
+  improve the stability of libvirt. Fix bug #311187 for python eclass
+  updates as well.
 
 *libvirt-0.8.1 (03 May 2010)
 
