@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.5.1-r1.ebuild,v 1.12 2009/09/23 18:21:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.5.1-r1.ebuild,v 1.13 2010/05/26 16:22:25 abcd Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.inetcat.net/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""
@@ -20,16 +20,11 @@ S=${WORKDIR}/${P}a
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-script-whitespace.patch
-}
-
-src_compile() {
-	./configure --host=${CHOST} --prefix=/usr  || die
-	emake CFLAGS="${CFLAGS}" || die
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-script-whitespace.patch
 }
 
 src_install () {
-	dobin nbtscan
+	dobin nbtscan || die
 	dodoc ChangeLog README
 }
