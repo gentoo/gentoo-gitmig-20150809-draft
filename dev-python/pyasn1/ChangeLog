@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.14 2010/05/24 15:11:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.15 2010/05/26 18:22:47 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> pyasn1-0.0.11a.ebuild:
+  stable amd64, bug 315151
 
   23 May 2010; <nixnut@gentoo.org> pyasn1-0.0.11a.ebuild:
   ppc stable #315151
