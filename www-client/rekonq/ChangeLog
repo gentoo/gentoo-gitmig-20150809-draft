@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.6 2010/05/26 08:13:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.7 2010/05/26 17:20:04 scarabeus Exp $
+
+  26 May 2010; Tomáš Chvátal <scarabeus@gentoo.org> rekonq-0.4.90.ebuild:
+  No docs dir in beta.
 
 *rekonq-0.4.90 (26 May 2010)
 
