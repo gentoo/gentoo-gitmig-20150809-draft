@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5595 2010/05/26 19:07:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5596 2010/05/26 20:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2452,10 +2452,13 @@ net-im/centerim:lj - Enable support for the LiveJournal weblog system
 net-im/centerim:otr - Enable encrypted conversations
 net-im/climm:gloox - Enable support for Jabber/XMPP using gloox
 net-im/climm:otr - Enable encrypted conversations
-net-im/ejabberd:mod_irc - Irc support in ejabberd
-net-im/ejabberd:mod_muc - Multi user chat support in ejabberd
-net-im/ejabberd:mod_pubsub - Pubsub support in ejabberd
-net-im/ejabberd:web - Web support in ejabberd
+net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158)
+net-im/ejabberd:mod_irc - Build irc gateway 
+net-im/ejabberd:mod_muc - Build Multi User Chat module
+net-im/ejabberd:mod_proxy65 - Support for SOCKS5 Bytestreams (XEP-0065)
+net-im/ejabberd:mod_pubsub - Build Pubsub module
+net-im/ejabberd:mod_statsdx - Measures several statistics, and provides a new section in ejabberd Web Admin to view them.
+net-im/ejabberd:web - Enable web admin interface
 net-im/empathy:applet - Enable Empathy's applets for gnome-base/gnome-panel
 net-im/empathy:webkit - Build support for Adium-style HTML-based conversation window themes using net-libs/webkit-gtk
 net-im/gajim:idle - Enable idle module
