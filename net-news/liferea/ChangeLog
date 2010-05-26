@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.187 2010/04/19 03:20:11 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.188 2010/05/26 20:59:07 pva Exp $
+
+  26 May 2010; Peter Volkov <pva@gentoo.org> liferea-1.6.3.ebuild:
+  amd64 stable, bug 321565
 
 *liferea-1.7.4 (18 Apr 2010)
 *liferea-1.6.3 (18 Apr 2010)
