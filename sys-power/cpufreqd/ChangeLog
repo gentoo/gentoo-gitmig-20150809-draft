@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.57 2010/01/10 23:34:33 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.58 2010/05/26 09:51:10 bangert Exp $
+
+*cpufreqd-2.4.2 (26 May 2010)
+
+  26 May 2010; Thilo Bangert <bangert@gentoo.org> +cpufreqd-2.4.2.ebuild:
+  version bump (#318959)
 
 *cpufreqd-2.3.4-r2 (10 Jan 2010)
 
