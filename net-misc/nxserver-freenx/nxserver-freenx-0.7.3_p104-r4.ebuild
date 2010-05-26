@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r4.ebuild,v 1.3 2010/05/09 19:24:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r4.ebuild,v 1.4 2010/05/26 18:21:11 pacho Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://freenx.berlios.de/ https://launchpad.net/~freenx-team"
 SRC_URI="http://ppa.launchpad.net/freenx-team/ppa/ubuntu/pool/main/f/${MY_PN}/freenx-server_${MAJOR_PV}+teambzr${PATCH_VER/p}.orig.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+nxclient rdesktop vnc"
 
 DEPEND="x11-misc/gccmakedep
