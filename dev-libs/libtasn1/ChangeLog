@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.113 2010/05/24 15:26:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.114 2010/05/26 10:35:09 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> libtasn1-2.6.ebuild:
+  stable amd64, bug 320943
 
   23 May 2010; <nixnut@gentoo.org> libtasn1-2.6.ebuild:
   ppc stable #320943
