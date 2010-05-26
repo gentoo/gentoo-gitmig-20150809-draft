@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9_beta.ebuild,v 1.1 2010/04/28 12:27:48 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9_beta-r1.ebuild,v 1.1 2010/05/26 11:28:49 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -776,9 +776,10 @@ src_install() {
 
 	# Ant installation
 	if use netbeans_modules_java ; then
-		local ANTDIR="${DESTINATION}/java3/ant"
+		local ANTDIR="${DESTINATION}/java/ant"
 		dosym /usr/share/ant/lib ${ANTDIR}/lib
 		dosym /usr/share/ant-core/bin ${ANTDIR}/bin
+		dosym /usr/share/ant-core/etc ${ANTDIR}/etc
 	fi
 
 	# Documentation
@@ -1037,8 +1038,6 @@ symlink_extjars() {
 	fi
 
 	if use netbeans_modules_java ; then
-		targetdir="java/ant/etc"
-		dosyminstjar ${targetdir} ant ant-bootstrap.jar ant-bootstrap.jar
 		targetdir="java/ant/nblib"
 		# bridge.jar
 		targetdir="java/ant/patches"
