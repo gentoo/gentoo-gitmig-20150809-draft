@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libtododb/libtododb-0.11.ebuild,v 1.3 2009/08/26 16:36:57 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libtododb/libtododb-0.11.ebuild,v 1.4 2010/05/26 12:23:35 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit gpe autotools
@@ -27,10 +27,20 @@ DEPEND="${DEPEND}
 src_unpack() {
 	gpe_src_unpack "$@"
 
+	# Build ignores --disable-gtk-doc
+	# See http://lists.linuxtogo.org/pipermail/gpe-list/2009-July/001018.html
 	if ! use doc; then
 		sed -i -e 's;SUBDIRS = doc;SUBDIRS = ;' Makefile.am \
 		|| die "sed failed"
 	fi
 
 	eautoreconf
+}
+
+src_compile() {
+	# Parallel make only fails when building doc, see #320029 .
+	if use doc; then
+		export MAKEOPTS="$(echo "$MAKEOPTS" | sed -e "s/-j[0-9]*/-j1/g")"
+	fi
+	gpe_src_compile "$@"
 }
