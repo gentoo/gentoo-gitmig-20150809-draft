@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.766 2010/05/26 16:41:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.767 2010/05/26 23:20:15 nelchael Exp $
+
+*vanilla-sources-2.6.33.5 (26 May 2010)
+*vanilla-sources-2.6.32.14 (26 May 2010)
+*vanilla-sources-2.6.27.47 (26 May 2010)
+
+  26 May 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +vanilla-sources-2.6.27.47.ebuild, +vanilla-sources-2.6.32.14.ebuild,
+  +vanilla-sources-2.6.33.5.ebuild:
+  Version bumps.
 
   26 May 2010; Guy Martin <gmsoft@gentoo.org> vanilla-sources-2.6.34.ebuild:
   Added ~hppa to KEYWORDS.
