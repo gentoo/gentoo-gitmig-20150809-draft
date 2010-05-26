@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>chithanh@gentoo.org</email>
+	<name>Chí-Thanh Christopher Nguyễn</name>
 </maintainer>
 <use>
 	<flag name="gpc">Enable gpc polygon clipper library</flag>
