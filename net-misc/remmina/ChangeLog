@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/remmina
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.1 2010/05/26 13:53:19 nyhm Exp $
+
+*remmina-0.7.5 (26 May 2010)
+
+  26 May 2010; Tristan Heaven <nyhm@gentoo.org> +remmina-0.7.5.ebuild,
+  +metadata.xml:
+  Initial commit, based on Anthony Low's ebuild from bug #301069
+
