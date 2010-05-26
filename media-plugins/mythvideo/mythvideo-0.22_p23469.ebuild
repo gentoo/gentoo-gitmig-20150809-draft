@@ -1,20 +1,23 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p22821.ebuild,v 1.1 2009/11/15 00:10:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p23469.ebuild,v 1.1 2010/05/26 16:01:54 cardoe Exp $
 
 EAPI=2
 
 inherit qt4 mythtv-plugins
 
 DESCRIPTION="Video player module for MythTV."
-IUSE=""
+IUSE="+jamu"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="dev-perl/libwww-perl
 	dev-perl/HTML-Parser
 	dev-perl/URI
 	dev-perl/XML-Simple
-	sys-apps/eject"
+	sys-apps/eject
+	jamu? ( >=dev-python/imdbpy-3.8
+			>=dev-python/mysql-python-1.2.2
+			media-tv/mythtv[python] )"
 DEPEND=""
 
 src_install() {
@@ -25,6 +28,18 @@ src_install() {
 	# correct permissions so MythVideo is actually usable
 	fperms 755 /usr/share/mythtv/mythvideo/scripts/*.pl
 	fperms 755 /usr/share/mythtv/mythvideo/scripts/*.py
+
+	# setup JAMU cron jobs
+	if use jamu; then
+		exeinto /etc/cron.daily
+		newexe "${FILESDIR}/mythvideo.daily" mythvideo || die
+		exeinto /etc/cron.hourly
+		newexe "${FILESDIR}/mythvideo.hourly" mythvideo || die
+		exeinto /etc/cron.weekly
+		newexe "${FILESDIR}/mythvideo.weekly" mythvideo || die
+		insinto /home/mythtv/.mythtv/
+		newins mythvideo/scripts/jamu-example.conf jamu.conf || die
+	fi
 }
 
 pkg_postinst() {

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.84 2010/01/04 05:59:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.85 2010/05/26 16:01:54 cardoe Exp $
+
+*mythvideo-0.22_p23469 (26 May 2010)
+
+  26 May 2010; Doug Goldstein <cardoe@gentoo.org>
+  -mythvideo-0.22_p22821.ebuild, -mythvideo-0.22_p22864-r1.ebuild,
+  +mythvideo-0.22_p23469.ebuild:
+  bump to the latest upstream 0.22 and remove older versions
 
 *mythvideo-0.22_p22991 (04 Jan 2010)
 
