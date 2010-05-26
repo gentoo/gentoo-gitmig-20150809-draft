@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/genshi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.23 2010/05/24 12:16:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.24 2010/05/26 10:35:08 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> genshi-0.6.ebuild:
+  stable amd64, bug 321089
 
   24 May 2010; <nixnut@gentoo.org> genshi-0.6.ebuild:
   ppc stable #321089
