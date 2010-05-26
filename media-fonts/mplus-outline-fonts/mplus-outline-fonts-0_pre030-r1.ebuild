@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre030-r1.ebuild,v 1.2 2010/05/24 15:04:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre030-r1.ebuild,v 1.3 2010/05/26 18:10:58 pacho Exp $
 
 EAPI="2"
 inherit font
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge.jp/mplus-fonts/6650/${MY_P}.tar.gz"
 
 LICENSE="mplus-fonts IPAfont"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ia64 ppc ~x86"
 IUSE="ipafont"
 
 DEPEND="ipafont? (
