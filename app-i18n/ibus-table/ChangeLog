@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-table
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ChangeLog,v 1.21 2010/05/04 00:47:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table/ChangeLog,v 1.22 2010/05/26 10:42:16 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org>
+  ibus-table-1.2.0.20100111.ebuild:
+  stable amd64, bug 305767
 
   04 May 2010; MATSUU Takuto <matsuu@gentoo.org>
   -ibus-table-1.1.0.20090615.ebuild, -ibus-table-1.2.0.20090904.ebuild,
