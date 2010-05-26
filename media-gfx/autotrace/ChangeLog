@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.35 2010/02/11 20:22:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.36 2010/05/26 10:15:38 ssuominen Exp $
+
+*autotrace-0.31.1-r5 (26 May 2010)
+
+  26 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +autotrace-0.31.1-r5.ebuild:
+  Rename libpng12 to libpng in configure.in for pkg-config wrt #321525 by
+  Diego E. Pettenò.
 
   11 Feb 2010; Jeroen Roovers <jer@gentoo.org> autotrace-0.31.1-r3.ebuild:
   Stable for HPPA (bug #291696).
