@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.9.ebuild,v 1.1 2010/05/01 11:20:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.9.ebuild,v 1.2 2010/05/26 17:49:54 angelos Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -18,7 +18,7 @@ mikmod modplug musepack +network ogg oss pipe pulseaudio sid sqlite unicode
 vorbis wavpack zip"
 
 RDEPEND="!sys-cluster/mpich2
-	>=dev-libs/glib-2.4:2
+	>=dev-libs/glib-2.6:2
 	aac? ( >=media-libs/faad2-2 )
 	alsa? ( media-sound/alsa-utils )
 	ao? ( >=media-libs/libao-0.8.4[alsa?,pulseaudio?] )
@@ -65,8 +65,9 @@ src_prepare() {
 }
 
 src_configure() {
-	local mpdconf="--enable-tcp --enable-un --disable-wildmidi
-		--disable-libOggFLACtest --disable-documentation"
+	local mpdconf="--disable-dependency-tracking --enable-tcp --enable-un
+		--disable-wildmidi --disable-libOggFLACtest --disable-documentation
+		--docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
@@ -119,9 +120,6 @@ src_install() {
 	keepdir /var/run/mpd
 
 	emake DESTDIR="${D}" install || die "emake install failed"
-	rm -rf "${D}"/usr/share/doc/mpd
-
-	dodoc AUTHORS NEWS README UPGRADING doc/mpdconf.dist
 
 	insinto /etc
 	newins doc/mpdconf.example mpd.conf
