@@ -1,6 +1,12 @@
 # ChangeLog for app-office/magicpoint
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.40 2009/03/28 10:17:12 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.41 2010/05/26 10:24:27 ssuominen Exp $
+
+  26 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  magicpoint-1.13a.ebuild:
+  Rename png_set_gray_1_2_4_to_8 to png_set_expand_gray_1_2_4_to_8 in
+  configure.in and image/png.c for libpng14 compability wrt #321531 by Diego
+  E. Pettenò.
 
   28 Mar 2009; Ulrich Mueller <ulm@gentoo.org> files/50magicpoint-gentoo.el,
   -files/50mgp-mode-gentoo.el:

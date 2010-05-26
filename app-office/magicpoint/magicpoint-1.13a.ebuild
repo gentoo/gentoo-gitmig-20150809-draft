@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.13a.ebuild,v 1.2 2009/01/04 20:24:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.13a.ebuild,v 1.3 2010/05/26 10:24:27 ssuominen Exp $
 
 inherit autotools elisp-common eutils fixheadtails
 
@@ -18,6 +18,7 @@ MY_DEPEND="x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libXrender
 	x11-libs/libXmu
+	>=media-libs/libpng-1.2.43-r2
 	gif? ( >=media-libs/giflib-4.0.1 )
 	imlib? ( media-libs/imlib )
 	truetype? ( x11-libs/libXft )
@@ -41,6 +42,10 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-1.11b-gentoo.diff"
 	epatch "${FILESDIR}/${P}-implicit-declaration.patch"
+
+	sed -i \
+		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
+		configure.in image/png.c || die
 
 	# bug #85720
 	sed -i -e "s/ungif/gif/g" configure.in || die "sed failed"
