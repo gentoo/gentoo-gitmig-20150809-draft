@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/nxtvepg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.25 2009/09/27 14:55:19 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/ChangeLog,v 1.26 2010/05/26 18:59:46 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> nxtvepg-2.8.1.ebuild:
+  stable amd64, bug 316395
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> nxtvepg-2.8.0.ebuild:
   ppc stable #281414
