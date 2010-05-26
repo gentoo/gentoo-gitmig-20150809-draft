@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/tinyproxy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.13 2009/11/29 09:58:56 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.14 2010/05/26 18:03:30 jer Exp $
+
+*tinyproxy-1.8.1 (26 May 2010)
+
+  26 May 2010; Jeroen Roovers <jer@gentoo.org> +tinyproxy-1.8.1.ebuild,
+  +files/tinyproxy-1.8.1-ldflags.patch, metadata.xml:
+  Version bump thanks to Alexander Orlenko (bug #320079). Respect LDFLAGS.
+  Expose more configure options as USE flags.
 
 *tinyproxy-1.6.5 (29 Nov 2009)
 
