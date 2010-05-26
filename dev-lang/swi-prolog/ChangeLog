@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.222 2010/05/22 19:07:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.223 2010/05/26 18:14:19 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> swi-prolog-5.8.3.ebuild:
+  stable amd64, bug 305963
 
   22 May 2010; <keri@gentoo.org> swi-prolog-5.8.3.ebuild,
   swi-prolog-5.10.0.ebuild, swi-prolog-5.11.1.ebuild:
