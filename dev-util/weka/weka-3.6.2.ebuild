@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.6.2.ebuild,v 1.1 2010/04/17 06:01:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.6.2.ebuild,v 1.2 2010/05/26 18:32:36 pacho Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 HOMEPAGE="http://www.cs.waikato.ac.nz/ml/weka/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
 	>=dev-java/javacup-0.11a_beta20060608:0"
