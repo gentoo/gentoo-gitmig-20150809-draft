@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.9.0.ebuild,v 1.1 2010/05/14 19:07:02 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.9.0.ebuild,v 1.2 2010/05/26 00:03:40 reavertm Exp $
 
 EAPI="2"
 
@@ -30,6 +30,8 @@ RDEPEND="${COMMON_DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+DOCS=(AUTHORS ChangeLog NEWS README)
+
 src_configure() {
 	econf \
 		--enable-shared \
@@ -42,11 +44,9 @@ src_install() {
 	base_src_install
 
 	if ! use static-libs; then
-		find "${D}" -type f -name '*.la' -delete \
+		find "${D}" -type f -name '*.la' -exec rm -f {} + \
 			|| die "la removal failed"
 	fi
-
-	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 
 	if use doc; then
 		dohtml -r docs/html/* || die "dohtml failed"
