@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-skk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.7 2010/05/10 17:24:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.8 2010/05/26 10:40:04 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> ibus-skk-0.0.4.ebuild:
+  stable amd64, bug 305765
 
 *ibus-skk-0.0.7 (10 May 2010)
 

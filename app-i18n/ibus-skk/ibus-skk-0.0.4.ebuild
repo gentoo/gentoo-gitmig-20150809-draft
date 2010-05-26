@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-0.0.4.ebuild,v 1.2 2010/03/01 10:17:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-0.0.4.ebuild,v 1.3 2010/05/26 10:40:04 pacho Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://cloud.github.com/downloads/ueno/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND="app-i18n/ibus
