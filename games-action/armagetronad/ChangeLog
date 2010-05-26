@@ -1,6 +1,9 @@
 # ChangeLog for games-action/armagetronad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.16 2010/04/27 15:32:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.17 2010/05/26 18:39:49 pacho Exp $
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> armagetronad-0.2.8.3.1.ebuild:
+  stable amd64, bug 316125
 
   27 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   armagetronad-0.2.8.3.1.ebuild:
