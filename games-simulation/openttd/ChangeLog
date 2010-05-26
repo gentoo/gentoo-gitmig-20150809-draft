@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.87 2010/05/21 21:02:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.88 2010/05/26 20:44:30 mr_bones_ Exp $
+
+  26 May 2010; Michael Sterrett <mr_bones_@gentoo.org> openttd-1.0.1.ebuild,
+  metadata.xml:
+  fix automagic linking against libtimidity (bug #321559); clarify the midi
+  situation - patches from Locke Shinseiko (Wizzleby)
 
   21 May 2010; Pacho Ramos <pacho@gentoo.org> openttd-0.7.5.ebuild:
   amd64 stable, bug 300182

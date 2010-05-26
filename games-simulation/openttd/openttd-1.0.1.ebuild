@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.1.ebuild,v 1.1 2010/05/01 04:26:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.1.ebuild,v 1.2 2010/05/26 20:44:30 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa debug dedicated iconv icu lzo +openmedia +png +truetype zlib"
+IUSE="aplaymidi debug dedicated iconv icu lzo +openmedia +png +timidity +truetype zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -33,15 +33,16 @@ DEPEND="
 	iconv? ( virtual/libiconv )
 	png? ( media-libs/libpng )
 	zlib? ( sys-libs/zlib )"
-RDEPEND="${DEPEND}
-	!dedicated? (
-		alsa? ( media-sound/alsa-utils )
-	)"
+
 PDEPEND="
-	openmedia? (
-		games-misc/opengfx
-		games-misc/opensfx
-		games-misc/openmsx
+	!dedicated? (
+		openmedia? (
+			games-misc/opengfx
+			games-misc/opensfx
+			games-misc/openmsx
+		)
+		aplaymidi? ( media-sound/alsa-utils )
+		!aplaymidi? ( timidity? ( media-sound/timidity++ ) )
 	)"
 
 src_configure() {
@@ -50,12 +51,17 @@ src_configure() {
 	# always built instead.
 	local myopts="${myopts} --without-allegro"
 
+	# libtimidity not needed except for some embedded platform
+	# nevertheless, it will be automagically linked if it is
+	# installed. Hence, we disable it.
+	myopts="${myopts} --without-libtimidity"
+
 	use debug && myopts="${myopts} --enable-debug=3"
 
 	if use dedicated ; then
 		myopts="${myopts} --enable-dedicated"
 	else
-		use alsa && myopts="${myopts} --with-midi=/usr/bin/aplaymidi"
+		use aplaymidi && myopts="${myopts} --with-midi='/usr/bin/aplaymidi'"
 		myopts="${myopts}
 			$(use_with truetype freetype)
 			$(use_with icu)
@@ -106,50 +112,53 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	if ! use openmedia ; then
-		elog
-		elog "OpenTTD was compiled without openmedia USE flags."
-		elog
-		elog "In order to play, you must either install games-misc/opengfx"
-		elog "as well as games-misc/opensfx or copy the following 6 files"
-		elog "from a version of Transport Tycoon Deluxe (windows or DOS)"
-		elog "to ~/.openttd/data/ or ${GAMES_DATADIR}/${PN}/data/."
-		elog
-		elog "From the WINDOWS version you need: "
-		elog "  sample.cat trg1r.grf trgcr.grf trghr.grf trgir.grf trgtr.grf"
-		elog "OR from the DOS version you need: "
-		elog "  SAMPLE.CAT TRG1.GRF TRGC.GRF TRGH.GRF TRGI.GRF TRGT.GRF"
-		elog
-		elog "File names are case sensitive so make sure they are "
-		elog "correct for whichever version you have."
-		elog
-	fi
-
 	if ! use lzo ; then
-		elog "OpenTTD was compiled without lzo2 support."
-		elog "While lzo2 is not required, disabling it does mean that"
-		elog "loading old savegames/scenarios from ancient versions (~0.2)"
-		elog "will be disabled"
+		elog "OpenTTD was built without 'lzo' in USE. While 'lzo' is not"
+		elog "required, disabling it does mean that loading old savegames"
+		elog "or scenarios from ancient versions (~0.2) will fail."
 		elog
 	fi
 
 	if use dedicated ; then
 		ewarn "Warning: The init script will kill all running openttd"
-		ewarn "processes when run, including any running client sessions!"
+		ewarn "processes when triggered, including any running client sessions!"
 	else
-		if use alsa ; then
+		if use aplaymidi ; then
 			elog "You have emerged with 'aplaymidi' for playing MIDI."
-			elog "You have to set the environment variable ALSA_OUTPUT_PORTS."
+			elog "This option is for those with a hardware midi device,"
+			elog "or who have set up ALSA to handle midi ports."
+			elog "You must set the environment variable ALSA_OUTPUT_PORTS."
 			elog "Available ports can be listed by using 'aplaymidi -l'."
-			if ! use openmedia ; then
-				elog "You have disabled the openmedia use flag, in-game music"
-				elog "will be unavailable unless you install games-misc/openmsx"
-				elog "or install a music set in ~/.openttd/gm or use the in-game"
-				elog "download functionality to get a music set"
-			fi
 		else
-			elog "alsa not in USE so music will not be played during the game."
-
+			if ! use timidity ; then
+				elog "OpenTTD was built with neither 'aplaymidi' nor 'timidity'"
+				elog "in USE. Music may or may not work in-game. If you happen"
+				elog "to have timidity++ installed, music will work so long"
+				elog "as it remains installed, but OpenTTD will not depend on it."
+			fi
+		fi
+		if ! use openmedia ; then
+			elog
+			elog "OpenTTD was compiled without the 'openmedia' USE flag."
+			elog
+			elog "In order to play, you must at least install:"
+			elog "games-misc/opengfx, and games-misc/opensfx, or copy the "
+			elog "following 6 files from a version of Transport Tycoon Deluxe"
+			elog "(windows or DOS) to ~/.openttd/data/ or"
+			elog "${GAMES_DATADIR}/${PN}/data/."
+			elog
+			elog "From the WINDOWS version you need: "
+			elog "sample.cat trg1r.grf trgcr.grf trghr.grf trgir.grf trgtr.grf"
+			elog "OR from the DOS version you need: "
+			elog "SAMPLE.CAT TRG1.GRF TRGC.GRF TRGH.GRF TRGI.GRF TRGT.GRF"
+			elog
+			elog "File names are case sensitive, but should work either with"
+			elog "all upper or all lower case names"
+			elog
+			elog "In addition, in-game music will be unavailable: for music,"
+			elog "install games-misc/openmsx, or use the in-game download"
+			elog "functionality to get a music set"
+			elog
 		fi
 	fi
 }
