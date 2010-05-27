@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/qdiskusage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/ChangeLog,v 1.1 2010/05/26 09:37:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/ChangeLog,v 1.2 2010/05/27 21:32:06 hwoarang Exp $
+
+*qdiskusage-1.0.2 (27 May 2010)
+
+  27 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  +qdiskusage-1.0.2.ebuild:
+  Version bump
 
 *qdiskusage-1.0 (26 May 2010)
 
