@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5601 2010/05/27 15:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5602 2010/05/27 23:07:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -818,17 +818,25 @@ dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/php:cli - Enable CLI SAPI
 dev-lang/php:concurrentmodphp - Make it possible to load both mod_php4 and mod_php5 into the same Apache2 instance (experimental)
 dev-lang/php:discard-path - Switch on common security setting for CGI SAPI
+dev-lang/php:embed - Enable embed SAPI
+dev-lang/php:enchant - Add supports Enchant spelling library.
 dev-lang/php:fastbuild - Build PHP quicker (experimental)
 dev-lang/php:fdftk - Add supports for Adobe's FDF toolkit.
+dev-lang/php:fileinfo - Add fileinfo extension support
 dev-lang/php:filter - Add filter extension support
 dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
 dev-lang/php:hash - Enable the hash extension
+dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:java-external - Use the external java extension rather than the bundled one
 dev-lang/php:json - Enable JSON support
 dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension
+dev-lang/php:mysqlnd - Use native driver for mysql, mysqli, PDO_Mysql
+dev-lang/php:pcre - Adds support for Perl Compatible Regular Expressions (deprecated: always "on" in php 5.3)
 dev-lang/php:pdo - Enable the bundled PDO extensions
+dev-lang/php:phar - Enables the phar extension to provide phar archive support
 dev-lang/php:pic - Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)
-dev-lang/php:reflection - Enable the reflection extension (Reflection API)
+dev-lang/php:reflection - Enable the reflection extension (Reflection API) (deprecated: always "on" in php 5.3)
+dev-lang/php:spl - Adds support for the Standard PHP Library (deprecated: always "on" in php 5.3)
 dev-lang/php:suhosin - Add Suhosin support (patch and extension from http://www.suhosin.org/)
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
@@ -2874,19 +2882,21 @@ net-p2p/gift:ares - pull in Ares plugin
 net-p2p/gift:fasttrack - pull in FastTrack plugin
 net-p2p/gift:gnutella - pull in Gnutella plugin
 net-p2p/gift:openft - pull in OpenFT plugin
-net-p2p/ktorrent:bwscheduler - Enable the bwscheduler plugin
-net-p2p/ktorrent:downloadorder - Enable plugin for user selected download order
-net-p2p/ktorrent:infowidget - Enable the infowidget plugin
-net-p2p/ktorrent:ipfilter - Enable the ipfilter plugin
+net-p2p/ktorrent:bwscheduler - Schedule upload and download limits over a period of a week
+net-p2p/ktorrent:downloadorder - Specify the download order of a multi-file torrent
+net-p2p/ktorrent:infowidget - Displays general information about a torrent in several tabs
+net-p2p/ktorrent:ipfilter - Filter IP addresses through a blocklist
 net-p2p/ktorrent:kross - Enable kross scripting support
-net-p2p/ktorrent:logviewer - Enable the logviewer plugin
-net-p2p/ktorrent:mediaplayer - Enable the mediaplayer plugin
-net-p2p/ktorrent:scanfolder - Enable the scanfolder plugin
-net-p2p/ktorrent:search - Enable the search plugin
+net-p2p/ktorrent:logviewer - Displays the logging output
+net-p2p/ktorrent:magnetgenerator - Generates magnet URI's
+net-p2p/ktorrent:mediaplayer - Phonon-based media player
+net-p2p/ktorrent:rss - Syndication plugin for KTorrent, supporting RSS and Atom feeds
+net-p2p/ktorrent:scanfolder - Scan folders for torrent files and load them
+net-p2p/ktorrent:search - Search for torrents
 net-p2p/ktorrent:shutdown - Shutdown when done
-net-p2p/ktorrent:stats - Enable the statistics plugin
-net-p2p/ktorrent:upnp - Enable the uphp plugin
-net-p2p/ktorrent:webinterface - Enable the webinterface plugin
+net-p2p/ktorrent:stats - Shows statistics about torrents in several graphs
+net-p2p/ktorrent:upnp - Forward ports using UPnP
+net-p2p/ktorrent:webinterface - Allows control of KTorrent via a web interface
 net-p2p/ktorrent:zeroconf - Discover peers on the local network using the Zeroconf protocol
 net-p2p/mktorrent:largefile - Enable largefile support on 32 bit systems
 net-p2p/mktorrent:openssl - Use OpenSSL for md5 and sha1 support
