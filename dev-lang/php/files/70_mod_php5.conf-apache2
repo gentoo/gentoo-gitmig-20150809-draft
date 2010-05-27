@@ -6,12 +6,8 @@
 
 	# Set it to handle the files
 	<IfModule mod_mime.c>
-		AddType application/x-httpd-php .php
-		AddType application/x-httpd-php .phtml
-		AddType application/x-httpd-php .php3
-		AddType application/x-httpd-php .php4
-		AddType application/x-httpd-php .php5
-		AddType application/x-httpd-php-source .phps
+		AddHandler application/x-httpd-php .php .php5 .phtml
+		AddHandler application/x-httpd-php-source .phps
 	</IfModule>
 
 	DirectoryIndex index.php index.phtml
