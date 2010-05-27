@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.2.ebuild,v 1.4 2010/04/14 09:03:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.2.ebuild,v 1.5 2010/05/27 11:06:02 maekke Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -19,7 +19,7 @@ RDEPEND=">=dev-cpp/gtkmm-2.16
 	dev-cpp/libsexymm
 	media-libs/taglib
 	dev-db/sqlite
-	|| ( media-gfx/imagemagick[cxx] media-gfx/imagemagick[-nocxx] )
+	media-gfx/imagemagick[cxx]
 	mad? ( media-libs/libmad )
 	flac? ( media-libs/flac[cxx] )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070330 )
