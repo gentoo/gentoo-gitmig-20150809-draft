@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.23 2010/05/25 20:18:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.24 2010/05/27 04:33:24 jer Exp $
+
+  27 May 2010; Jeroen Roovers <jer@gentoo.org> ppl-0.10.2-r1.ebuild:
+  Stable for HPPA (bug #319885).
 
   25 May 2010; Markos Chandras <hwoarang@gentoo.org> ppl-0.10.2-r1.ebuild:
   Stable on amd64 wrt bug #319885
