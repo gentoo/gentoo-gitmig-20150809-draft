@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.7 2010/03/31 10:08:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50.ebuild,v 1.8 2010/05/27 10:54:29 maekke Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="media-libs/libpng
 	media-libs/gd
 	app-text/ghostscript-gpl
 	emf? ( >=media-libs/libemf-1.0.3 )
-	imagemagick? ( || ( media-gfx/imagemagick[cxx] media-gfx/imagemagick[-nocxx] ) )
+	imagemagick? ( media-gfx/imagemagick[cxx] )
 	plotutils? ( media-libs/plotutils )"
 #	swf? ( >=media-libs/ming-0.3 )" bug 238803
 DEPEND="${RDEPEND}
