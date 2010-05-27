@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5600 2010/05/27 13:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5601 2010/05/27 15:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2773,6 +2773,7 @@ net-misc/rdesktop:rdpusb - Enable USB redirection support for app-emulation/virt
 net-misc/remmina:ssh - Enable support for SSH/SFTP using net-libs/libssh
 net-misc/remmina:unique - Enable single instance support using dev-libs/libunique
 net-misc/remmina:vte - Enable Terminal support using x11-libs/vte
+net-misc/remmina:xdmcp - Enable support for X Display Manager Control Protocol
 net-misc/scponly:gftp - Enables gFTP compatibility
 net-misc/scponly:logging - Enables SFTP logging compatibility
 net-misc/scponly:passwd - Enables passwd compatibility
