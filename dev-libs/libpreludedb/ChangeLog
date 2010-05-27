@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.45 2010/05/27 04:55:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.46 2010/05/27 16:27:51 jer Exp $
+
+*libpreludedb-1.0.0-r1 (27 May 2010)
+
+  27 May 2010; Jeroen Roovers <jer@gentoo.org> -libpreludedb-1.0.0.ebuild,
+  +libpreludedb-1.0.0-r1.ebuild, +files/libpreludedb-1.0.0-ldflags.patch:
+  Install Perl stuff in vendor-dir (bug #294892). Use newer configure flags.
+  Respect LDFLAGS.
 
 *libpreludedb-1.0.0 (27 May 2010)
 
