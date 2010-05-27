@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.47 2010/05/06 18:43:13 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.48 2010/05/27 03:44:52 reavertm Exp $
+
+  27 May 2010; Maciej Mrozowski <reavertm@gentoo.org> -soprano-2.4.1.ebuild:
+  Remove old
 
   06 May 2010; Maciej Mrozowski <reavertm@gentoo.org> soprano-2.4.1.ebuild,
   soprano-2.4.3.ebuild:
