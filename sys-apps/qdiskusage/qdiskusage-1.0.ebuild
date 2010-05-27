@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/qdiskusage-1.0.ebuild,v 1.1 2010/05/26 09:37:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/qdiskusage-1.0.ebuild,v 1.2 2010/05/27 23:01:22 hwoarang Exp $
 
 EAPI="2"
 inherit eutils qt4-r2
@@ -17,9 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="app-arch/unzip
-	x11-libs/qt-gui:4"
-RDEPEND="${RDEPEND}"
+RDEPEND="x11-libs/qt-gui:4"
+DEPEND="${RDEPEND}
+	app-arch/zip"
 
 S="${WORKDIR}/${MY_P}"
 
