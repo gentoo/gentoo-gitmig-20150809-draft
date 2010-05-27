@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11572 2010/05/26 20:04:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11573 2010/05/27 00:22:59 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (14 Apr 2010)
+# Masked for security bug #320955
+<games-simulation/openttd-1.0.1
 
 # Peter Volkov <pva@gentoo.org> (09 May 2010)
 # Masked for testing of upgrading path. PLEASE backup before upgrading. #281366
