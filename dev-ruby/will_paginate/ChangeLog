@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/will_paginate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.4 2010/04/19 22:02:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.5 2010/05/27 05:48:34 graaff Exp $
+
+*will_paginate-2.3.14 (27 May 2010)
+
+  27 May 2010; Hans de Graaff <graaff@gentoo.org>
+  +will_paginate-2.3.14.ebuild:
+  Better compatibility with Rails 2.3.8. Remove specific rack dependency
+  since tests now work fine with rack 1.1.x.
 
   19 Apr 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   will_paginate-2.3.12.ebuild:
