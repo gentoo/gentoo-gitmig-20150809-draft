@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-vmware
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.51 2010/04/16 21:29:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.52 2010/05/27 08:54:55 scarabeus Exp $
+
+  27 May 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-video-vmware-10.16.9.ebuild:
+  Drop old.
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org>
   xf86-video-vmware-11.0.1.ebuild:
