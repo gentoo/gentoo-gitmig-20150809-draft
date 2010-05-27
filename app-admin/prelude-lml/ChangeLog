@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.39 2010/02/28 22:01:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.40 2010/05/27 04:56:22 jer Exp $
+
+*prelude-lml-1.0.0 (27 May 2010)
+
+  27 May 2010; Jeroen Roovers <jer@gentoo.org> +prelude-lml-1.0.0.ebuild:
+  Version bump thanks to Thomas McShane (bug #321251).
 
   28 Feb 2010; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   I no longer use this on any systems, removing myself as the maintainer
