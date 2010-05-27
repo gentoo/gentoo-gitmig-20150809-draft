@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/prelude-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.59 2010/05/27 04:55:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.60 2010/05/27 16:04:06 jer Exp $
+
+*prelude-manager-1.0.0-r1 (27 May 2010)
+
+  27 May 2010; Jeroen Roovers <jer@gentoo.org>
+  -prelude-manager-1.0.0.ebuild, +prelude-manager-1.0.0-r1.ebuild:
+  Install documentation in proper directory (bug #295122).
 
 *prelude-manager-1.0.0 (27 May 2010)
 

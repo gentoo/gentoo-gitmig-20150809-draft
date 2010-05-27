@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-1.0.0.ebuild,v 1.1 2010/05/27 04:55:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-1.0.0-r1.ebuild,v 1.1 2010/05/27 16:04:06 jer Exp $
 
 inherit flag-o-matic
 
@@ -33,6 +33,7 @@ src_compile() {
 	use tcpwrapper && myconf="${myconf} --enable-libwrap"
 
 	myconf="${myconf} --localstatedir=/var"
+	myconf="${myconf} --docdir=/usr/share/doc/${PF}"
 
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
