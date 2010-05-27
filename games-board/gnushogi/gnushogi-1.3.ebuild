@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.16 2009/12/30 21:16:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/gnushogi-1.3.ebuild,v 1.17 2010/05/27 15:03:01 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -30,7 +30,8 @@ src_prepare() {
 				|| die "sed ${f} failed"
 	done
 	epatch "${FILESDIR}/${PV}-errno.patch" \
-		"${FILESDIR}/${P}"-gcc4.patch
+		"${FILESDIR}/${P}"-gcc4.patch \
+		"${FILESDIR}"/${P}-parallel.patch
 }
 
 src_configure() {
@@ -38,11 +39,6 @@ src_configure() {
 		$(use_with X x) \
 		$(use_with X xshogi) || die
 	addpredict /usr/games/lib/gnushogi/gnushogi.hsh
-}
-
-src_compile() {
-	# bug #298017
-	emake -j1 || die "emake failed"
 }
 
 src_install() {
