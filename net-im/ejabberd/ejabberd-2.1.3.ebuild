@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.2 2010/05/27 07:31:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.3 2010/05/27 16:15:39 mr_bones_ Exp $
 
 EAPI=3
 
@@ -182,7 +182,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "Updating ${ctlcfg} (debug: ${new_ctlcfg})"
 		sed -e "/#ERLANG_NODE=/aERLANG_NODE=$EJABBERD_NODE" "${ctlcfg}" > "${new_ctlcfg}" || die
-		
+
 		if [[ -e ${EROOT}/var/run/jabber/.erlang.cookie ]]; then
 			ewarn "Moving .erlang.cookie..."
 			if [[ -e ${EROOT}/var/spool/jabber/.erlang.cookie ]]; then
