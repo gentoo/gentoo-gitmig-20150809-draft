@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.161 2010/05/19 21:21:00 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.162 2010/05/27 20:25:45 billie Exp $
+
+  27 May 2010; Daniel Pielmeier <billie@gentoo.org>
+  files/hplip-3.10.2-plugin.patch:
+  Use upstream patch to fix bug #274538.
 
   19 May 2010; Daniel Pielmeier <billie@gentoo.org>
   files/hplip-3.10.5-udev-attrs.patch:

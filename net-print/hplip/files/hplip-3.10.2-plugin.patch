@@ -1,11 +1,17 @@
---- installer/core_install.py.old	2010-02-25 00:07:12.000000000 +0100
-+++ installer/core_install.py	2010-05-04 19:25:42.268075063 +0200
-@@ -1990,7 +1990,7 @@
+Index: installer/core_install.py
+===================================================================
+--- installer/core_install.py	(revision 13658)
++++ installer/core_install.py	(working copy)
+@@ -1990,7 +1990,11 @@
          if mode == GUI_MODE:
              return os.system("sh %s --nox11 -- -u" % plugin_file) == 0
          else:
 -            return os.system("sh %s --nox11 -- -i" % plugin_file) == 0
-+            return os.system("sh %s --nox11" % plugin_file) == 0
++            if os.system("sh %s --nox11 -- -i" % plugin_file) == 0:
++                return True
++            else:
++                log.error("Python gobject/dbus may be not installed")
++                return False
  
  
      def delete_plugin(self):
