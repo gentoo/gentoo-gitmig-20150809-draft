@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r1.ebuild,v 1.9 2009/07/29 21:43:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.11.0.ebuild,v 1.1 2010/05/27 05:12:16 dirtyepic Exp $
 
 EAPI="2"
 
@@ -16,8 +16,8 @@ BASE_P="${PN}-${BASE_PV}"
 # docs, and are released more frequently than wxGTK.
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="X doc debug gnome gstreamer odbc opengl pch sdl"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="X doc debug gnome gstreamer odbc opengl pch sdl tiff"
 
 RDEPEND="
 	dev-libs/expat
@@ -36,6 +36,7 @@ RDEPEND="
 			>=gnome-base/gconf-2.0
 			>=media-libs/gstreamer-0.10 )
 		opengl? ( virtual/opengl )
+		tiff?   ( media-libs/tiff )
 		)"
 
 DEPEND="${RDEPEND}
@@ -57,12 +58,10 @@ LICENSE="wxWinLL-3
 S="${WORKDIR}/wxPython-src-${PV}"
 
 src_prepare() {
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-2.6.3-unicode-odbc.patch
-	epatch "${FILESDIR}"/${PN}-2.8.10-collision.patch
+	epatch "${FILESDIR}"/${PN}-2.8.11-unicode-odbc.patch
+	epatch "${FILESDIR}"/${PN}-2.8.11-collision.patch
 	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch              # Bug #174874
-	# this version only:
-	epatch "${FILESDIR}"/${P}-CVE-2009-2369.patch              # Bug #277722
+	epatch "${FILESDIR}"/${PN}-2.8.10.1-odbc-defines.patch     # Bug #310923
 }
 
 src_configure() {
@@ -79,11 +78,9 @@ src_configure() {
 			--with-expat=sys
 			$(use_enable debug)
 			$(use_enable pch precomp-headers)
-			$(use_with sdl)"
-
-	use odbc \
-		&& myconf="${myconf} --with-odbc=sys" \
-		|| myconf="${myconf} $(use_with odbc)"
+			$(use_with odbc odbc sys)
+			$(use_with sdl)
+			$(use_with tiff libtiff sys)"
 
 	# wxGTK options
 	#   --enable-graphics_ctx - needed for webkit, editra
@@ -96,7 +93,6 @@ src_configure() {
 			--with-libpng=sys
 			--with-libxpm=sys
 			--with-libjpeg=sys
-			--with-libtiff=sys
 			$(use_enable gstreamer mediactrl)
 			$(use_enable opengl)
 			$(use_with opengl)
