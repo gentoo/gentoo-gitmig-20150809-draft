@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.72 2010/05/26 15:17:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.73 2010/05/27 21:27:31 spatz Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -142,8 +142,8 @@ qt4-build_src_unpack() {
 			targets+=" ${MY_P}/${target}"
 	done
 
-	echo tar xzpf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
-	tar xzpf "${DISTDIR}"/${MY_P}.tar.gz ${targets} || die
+	echo tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
+	tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets} || die
 }
 
 # @ECLASS-VARIABLE: PATCHES
