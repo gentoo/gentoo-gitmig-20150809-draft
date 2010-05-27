@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.43 2010/05/22 13:43:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.44 2010/05/27 17:32:18 josejx Exp $
+
+  27 May 2010; Joseph Jezak <josejx@gentoo.org> wmnd-0.4.13.ebuild:
+  Marked ppc stable for bug #280359.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> wmnd-0.4.13.ebuild:
   stable amd64, bug 280359
