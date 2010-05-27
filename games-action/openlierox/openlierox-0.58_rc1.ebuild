@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc1.ebuild,v 1.2 2010/03/09 12:34:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc1.ebuild,v 1.3 2010/05/27 17:56:34 nyhm Exp $
 
 EAPI="2"
 
-inherit cmake-utils games
+inherit cmake-utils eutils games
 
 MY_PN="OpenLieroX"
 MY_P="${MY_PN}_${PV}"
