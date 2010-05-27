@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.5.ebuild,v 1.5 2008/06/01 01:32:35 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/acer_acpi-0.5.ebuild,v 1.6 2010/05/27 11:27:17 bangert Exp $
 
 inherit linux-mod
 
@@ -19,6 +19,9 @@ BUILD_TARGETS="all"
 pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERNELSRC=${KV_DIR} KERNELVERSION=${KV_FULL}"
+	if kernel_is gt 2 6 25; then
+		die "This driver is already included in >=linux-2.6.25. Its called ACER_WMI."
+	fi
 }
 
 src_unpack() {

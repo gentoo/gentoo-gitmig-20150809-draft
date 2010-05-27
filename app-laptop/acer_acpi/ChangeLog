@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/acer_acpi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.17 2008/06/01 01:32:35 jurek Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acer_acpi/ChangeLog,v 1.18 2010/05/27 11:27:17 bangert Exp $
+
+  27 May 2010; Thilo Bangert <bangert@gentoo.org> -acer_acpi-0.4.ebuild,
+  acer_acpi-0.5.ebuild, -acer_acpi-0.7.ebuild, -acer_acpi-0.8.2.ebuild,
+  -acer_acpi-0.10.ebuild, acer_acpi-0.11.2.ebuild:
+  prevent building on >=2.6.25 (#274744, #272494, #272494)
 
   01 Jun 2008; Jurek Bartuszek <jurek@gentoo.org> acer_acpi-0.5.ebuild:
   Fixed kernel 2.6.24 compatibility (bug #208292)
