@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.11 2009/05/05 18:26:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.12 2010/05/27 06:51:44 tove Exp $
 
 inherit eutils perl-module autotools
 
@@ -82,7 +82,7 @@ src_install() {
 
 	dodir usr/share/info
 	dodir usr/share/man/man1
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" INSTALLDIRS=vendor install || die
 	doinfo doc/*.info || die "info page installation failed"
 	doman doc/*.1 || die "man page installation failed"
 	dodoc ChangeLog NEWS TODO AUTHORS
@@ -93,7 +93,10 @@ src_install() {
 	}
 
 	# Fix for bug #142169
-	use perl && fixlocalpod
+	if use perl ; then
+		perl_delete_localpod
+		perl_delete_packlist
+	fi
 }
 
 pkg_postinst()
