@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luasec/luasec-0.4.ebuild,v 1.1 2010/05/27 08:57:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luasec/luasec-0.4.ebuild,v 1.2 2010/05/27 12:03:45 djc Exp $
 
 EAPI=2
 
@@ -39,5 +39,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install || die "Install failed"
 }
