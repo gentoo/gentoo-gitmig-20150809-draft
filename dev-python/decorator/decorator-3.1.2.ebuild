@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.1.2.ebuild,v 1.7 2010/05/20 07:52:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.1.2.ebuild,v 1.8 2010/05/27 17:01:55 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,10 +18,10 @@ IUSE="doc"
 
 DEPEND=""
 RDEPEND=""
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="CHANGES.txt README.txt"
+PYTHON_MODNAME="decorator.py"
 
 src_test() {
 	# multiprocessing module is available only in Python >=2.6, and isn't used anyway.
@@ -38,12 +38,4 @@ src_install() {
 	   dodoc documentation.pdf || die "dodoc pdf doc failed"
 	   dohtml documentation.html || die "dohtml html doc failed"
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize decorator.py
-}
-
-pkg_postrm() {
-	python_mod_cleanup
 }
