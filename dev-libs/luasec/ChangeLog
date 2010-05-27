@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/luasec
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luasec/ChangeLog,v 1.1 2010/05/27 08:57:58 djc Exp $
+
+*luasec-0.4 (27 May 2010)
+
+  27 May 2010; Dirkjan Ochtman <djc@gentoo.org> +luasec-0.4.ebuild,
+  +files/luasec-0.4_Makefile.patch, +metadata.xml:
+  Initial ebuild by jochen@schalanda.de, bug 290592.
+
