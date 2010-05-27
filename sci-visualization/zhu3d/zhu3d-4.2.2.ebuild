@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.2.2.ebuild,v 1.3 2010/01/15 23:04:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.2.2.ebuild,v 1.4 2010/05/27 18:09:38 xarthisius Exp $
 
 EAPI=2
 
@@ -30,7 +30,7 @@ src_prepare() {
 		-e "s:^WORKDIR=:WORKDIR=${datadir}/work:" \
 		-e "s:^DOCDIR=:WORKDIR=/usr/share/doc/${PF}/html:" \
 		${PN}.pri || die "sed zhu3d.pri failed"
-	sed -i -e '/QMAKE_C/d' ${PN}.pro || die "sed zhu3d.pro for flags failed"
+	sed -i -e "/# Optimisation/,/# Include/d" zhu3d.pro || die
 }
 
 src_configure() {
