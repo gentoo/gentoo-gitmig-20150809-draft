@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.6.2.ebuild,v 1.1 2010/05/27 11:47:13 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.6.2.ebuild,v 1.2 2010/05/27 12:56:31 djc Exp $
 
 EAPI="2"
 
@@ -46,11 +46,11 @@ src_configure() {
 		--sysconfdir="${JABBER_ETC}" \
 		--datadir="${JABBER_SPOOL}" \
 		--with-lua-lib=/usr/$(get_libdir)/lua \
-		--require-config
+		--require-config || die "configure failed"
 }
 
 src_install() {
-	DESTDIR="${D}" emake install
+	DESTDIR="${D}" emake install || die "make failed"
 	newinitd "${FILESDIR}/${PN}".initd ${PN}
 }
 
