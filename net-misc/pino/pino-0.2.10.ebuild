@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.6.ebuild,v 1.3 2010/04/21 07:23:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.10.ebuild,v 1.1 2010/05/27 05:47:45 dev-zero Exp $
 
 EAPI="3"
 
@@ -16,18 +16,21 @@ IUSE="debug indicate"
 RDEPEND=">=dev-libs/glib-2.14:2
 	>=x11-libs/gtk+-2.10:2
 	>=dev-libs/libgee-0.5.0
-	net-libs/libsoup:2.4
-	app-text/gtkspell
 	x11-libs/libnotify
+	net-libs/libsoup:2.4
 	dev-libs/libxml2:2
+	>=net-libs/webkit-gtk-1.1
 	dev-libs/libunique
-	>=net-libs/webkit-gtk-1.1"
+	app-text/gtkspell
+	indicate? ( dev-libs/libindicate )"
 DEPEND="${RDEPEND}
-	>=dev-lang/vala-0.7
+	>=dev-lang/vala-0.7.9
 	dev-util/pkgconfig
 	sys-devel/gettext
-	dev-util/intltool
-	dev-lang/python"
+	dev-util/intltool"
+
+# TODO:
+# write a patch (for CMakeLists.txt) to not ignore LINGUAS
 
 DOCS="AUTHORS README"
 
@@ -41,14 +44,6 @@ src_configure() {
 			-e 's|indicate|indicate-false|' \
 			wscript || die "sed failed"
 	fi
-
-	local supported_linguas=$(<po/LINGUAS)
-	rm po/LINGUAS
-	for l in ${LINGUAS} ; do
-		if [[ "$supported_linguas" =~ "$l" ]] ; then
-			echo "$l" >> po/LINGUAS
-		fi
-	done
 
 	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" \
 	./waf --prefix=/usr \
