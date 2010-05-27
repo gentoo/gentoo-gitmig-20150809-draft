@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.9 2010/01/17 16:16:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.10 2010/05/27 16:51:03 xarthisius Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A minimalistic X11 window manager."
 HOMEPAGE="http://www.red-bean.com/~decklin/software/aewm/"
@@ -36,11 +38,23 @@ src_unpack() {
 	sed -i \
 		-e 's/lucidasans-10/-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*/' \
 		src/aewmrc.sample || die "sed failed"
+
+	# QA:  Remove stripping
+	sed -i \
+		-e 's/install -s/install /' \
+		{src,clients}/Makefile || die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+}
+
+src_compile() {
+	tc-export CC
+	emake CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/man/man1
+	dodir /usr/bin || die
+	dodir /usr/share/man/man1 || die
 
 	emake \
 		DESTDIR="${D}" \
@@ -48,5 +62,5 @@ src_install() {
 		XROOT="/usr" \
 		install || die "emake install failed"
 
-	dodoc DESIGN NEWS README TODO
+	dodoc DESIGN NEWS README TODO || die
 }
