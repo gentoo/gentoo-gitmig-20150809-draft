@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.51 2010/04/30 23:58:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.52 2010/05/27 02:44:14 reavertm Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -8,17 +8,17 @@
 #
 # @CODE
 # Tomáš Chvátal <scarabeus@gentoo.org>
-# Maciej Mrozowski <reavertm@gmail.com>
+# Maciej Mrozowski <reavertm@gentoo.org>
 # (undisclosed contributors)
 # Original author: Zephyrus (zephyrus@mirach.it)
 # @CODE
 # @BLURB: common ebuild functions for cmake-based packages
 # @DESCRIPTION:
-# The cmake-utils eclass contains functions that make creating ebuilds for
+# The cmake-utils eclass is base.eclass(5) wrapper that makes creating ebuilds for
 # cmake-based packages much easier.
-# Its main features are support of out-of-source builds as well as in-source
-# builds and an implementation of the well-known use_enable and use_with
-# functions for CMake.
+# It provides all inherited features (DOCS, HTML_DOCS, PATCHES) along with out-of-source
+# builds (default), in-source builds and an implementation of the well-known use_enable
+# and use_with functions for CMake.
 
 # @ECLASS-VARIABLE: WANT_CMAKE
 # @DESCRIPTION:
@@ -101,14 +101,6 @@ _use_me_now_inverted() {
 	fi
 }
 
-# @ECLASS-VARIABLE: DOCS
-# @DESCRIPTION:
-# Documents passed to dodoc command.
-
-# @ECLASS-VARIABLE: HTML_DOCS
-# @DESCRIPTION:
-# Documents passed to dohtml command.
-
 # @ECLASS-VARIABLE: PREFIX
 # @DESCRIPTION:
 # Eclass respects PREFIX variable, though it's not recommended way to set
@@ -132,8 +124,6 @@ _use_me_now_inverted() {
 # specific compiler flags overriding make.conf.
 : ${CMAKE_BUILD_TYPE:=Gentoo}
 
-# @FUNCTION: _check_build_dir
-# @DESCRIPTION:
 # Determine using IN or OUT source build
 _check_build_dir() {
 	# @ECLASS-VARIABLE: CMAKE_USE_DIR
@@ -263,10 +253,6 @@ _modify-cmakelists() {
 	_EOF_
 }
 
-# @FUNCTION: enable_cmake-utils_src_configure
-# @DESCRIPTION:
-# General function for configuring with cmake. Default behaviour is to start an
-# out-of-source build.
 enable_cmake-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -357,10 +343,6 @@ enable_cmake-utils_src_configure() {
 	popd > /dev/null
 }
 
-# @FUNCTION: enable_cmake-utils_src_compile
-# @DESCRIPTION:
-# General function for compiling with cmake. Default behaviour is to check for
-# EAPI and respectively to configure as well or just compile.
 enable_cmake-utils_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -387,25 +369,23 @@ cmake-utils_src_make() {
 	popd &> /dev/null
 }
 
-# @FUNCTION: enable_cmake-utils_src_install
-# @DESCRIPTION:
-# Function for installing the package. Automatically detects the build type.
 enable_cmake-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
 	pushd "${CMAKE_BUILD_DIR}" &> /dev/null
-	emake install DESTDIR="${D}" || die "Make install failed"
+	base_src_install
 	popd &> /dev/null
 
-	# Manual document installation
-	[[ -n "${DOCS}" ]] && { dodoc ${DOCS} || die "dodoc failed" ; }
-	[[ -n "${HTML_DOCS}" ]] && { dohtml -r ${HTML_DOCS} || die "dohtml failed" ; }
+	# Backward compatibility, for non-array variables
+	if [[ -n "${DOCS}" ]] && [[ "$(declare -p DOCS 2>/dev/null 2>&1)" != "declare -a"* ]]; then
+		dodoc ${DOCS} || die "dodoc failed"
+	fi
+	if [[ -n "${HTML_DOCS}" ]] && [[ "$(declare -p HTML_DOCS 2>/dev/null 2>&1)" != "declare -a"* ]]; then
+		dohtml -r ${HTML_DOCS} || die "dohtml failed"
+	fi
 }
 
-# @FUNCTION: enable_cmake-utils_src_test
-# @DESCRIPTION:
-# Function for testing the package. Automatically detects the build type.
 enable_cmake-utils_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -428,40 +408,38 @@ enable_cmake-utils_src_test() {
 	popd &> /dev/null
 }
 
-## Wrappers for calls bellow this line
 # @FUNCTION: cmake-utils_src_configure
 # @DESCRIPTION:
-# Wrapper for detection if we want to run enable_ prefixed function with same name
-# unconditionaly or only when some useflag is enabled.
+# General function for configuring with cmake. Default behaviour is to start an
+# out-of-source build.
 cmake-utils_src_configure() {
 	_execute_optionaly "src_configure" "$@"
 }
 
 # @FUNCTION: cmake-utils_src_compile
 # @DESCRIPTION:
-# Wrapper for detection if we want to run enable_ prefixed function with same name
-# unconditionaly or only when some useflag is enabled.
+# General function for compiling with cmake. Default behaviour is to check for
+# EAPI and respectively to configure as well or just compile.
+# Automatically detects the build type. All arguments are passed to emake.
 cmake-utils_src_compile() {
 	_execute_optionaly "src_compile" "$@"
 }
 
 # @FUNCTION: cmake-utils_src_install
 # @DESCRIPTION:
-# Wrapper for detection if we want to run enable_ prefixed function with same name
-# unconditionaly or only when some useflag is enabled.
+# Function for installing the package. Automatically detects the build type.
 cmake-utils_src_install() {
 	_execute_optionaly "src_install" "$@"
 }
 
 # @FUNCTION: cmake-utils_src_test
 # @DESCRIPTION:
-# Wrapper for detection if we want to run enable_ prefixed function with same name
-# unconditionaly or only when some useflag is enabled.
+# Function for testing the package. Automatically detects the build type.
 cmake-utils_src_test() {
 	_execute_optionaly "src_test" "$@"
 }
 
-
+# Optionally executes phases based on WANT_CMAKE variable/USE flag.
 _execute_optionaly() {
 	local phase="$1" ; shift
 	if [[ ${WANT_CMAKE} = always ]]; then
