@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20a.ebuild,v 1.1 2010/05/12 04:14:47 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20a.ebuild,v 1.2 2010/05/27 00:47:18 chiiph Exp $
 
 EAPI="3"
 
@@ -57,6 +57,8 @@ src_compile() {
 src_install() {
 	env MANDIR=share/man/man1 DOCDIR=share/doc/${PF} \
 		src/tools/make-dist.sh -S -g -G root -O root build-4 ${MY_PV} x86 linux || die "Cannot build installation archive"
+
+	dodir /usr || die "dodir failed"
 
 	tar xzpf cmucl-${MY_PV}-x86-linux.tar.gz -C "${D}"/usr || die "Cannot install main system"
 	if use X ; then
