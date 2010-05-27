@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.1 2010/05/26 20:25:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.2 2010/05/27 07:31:43 pva Exp $
 
 EAPI=3
 
@@ -8,8 +8,7 @@ inherit eutils multilib pam ssl-cert
 
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
-SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tar.gz
-	mod_statsdx? ( mirror://gentoo/2.1.1-mod_statsdx.patch.bz2 )"
+SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,7 +43,7 @@ src_prepare() {
 	if use mod_statsdx; then
 		ewarn "mod_statsdx is not a part of upstream tarball but is a third-party module"
 		ewarn "taken from here: http://www.ejabberd.im/mod_stats2file"
-		epatch "${WORKDIR}/2.1.1-mod_statsdx.patch"
+		epatch "${FILESDIR}/2.1.1-mod_statsdx.patch"
 	fi
 
 	# don't install release notes (we'll do this manually)
@@ -113,7 +112,7 @@ src_install() {
 	# http://www.process-one.net/docs/ejabberd/guide_en.html
 	if use pam; then
 		pamd_mimic_system xmpp auth account || die "Cannot create pam.d file"
-		fperms 4750 "/usr/$(get_libdir)/erlang/lib/${P}/priv/bin/epam" || die "Cannot adjust epam permissions"
+		fperms 4750 "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam" || die "Cannot adjust epam permissions"
 	fi
 
 	cd "${WORKDIR}/${P}/doc"
@@ -183,7 +182,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "Updating ${ctlcfg} (debug: ${new_ctlcfg})"
 		sed -e "/#ERLANG_NODE=/aERLANG_NODE=$EJABBERD_NODE" "${ctlcfg}" > "${new_ctlcfg}" || die
-
+		
 		if [[ -e ${EROOT}/var/run/jabber/.erlang.cookie ]]; then
 			ewarn "Moving .erlang.cookie..."
 			if [[ -e ${EROOT}/var/spool/jabber/.erlang.cookie ]]; then
