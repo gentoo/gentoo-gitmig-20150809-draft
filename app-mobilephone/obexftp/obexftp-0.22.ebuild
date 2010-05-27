@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.11 2009/05/02 08:12:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.12 2010/05/27 06:27:59 tove Exp $
 
 EAPI="2"
 
@@ -60,7 +60,7 @@ src_install() {
 	# -j1 because "make -fMakefile.ruby install" fails
 	# upstream added -j1 to that command so it should be removed
 	# from here in the next version bump
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" INSTALLDIRS=vendor install || die "emake install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README* THANKS TODO
 	dohtml doc/*.html
@@ -73,7 +73,10 @@ src_install() {
 	use ruby && doins examples/*.rb
 	use tcl && doins examples/*.tcl
 
-	use perl && fixlocalpod
+	if use perl ; then
+		perl_delete_localpod
+		perl_delete_packlist
+	fi
 }
 
 pkg_postrm() {

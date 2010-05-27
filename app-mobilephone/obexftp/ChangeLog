@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.56 2010/01/14 01:27:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.57 2010/05/27 06:27:59 tove Exp $
+
+  27 May 2010; Torsten Veller <tove@gentoo.org> obexftp-0.22.ebuild,
+  obexftp-0.23-r1.ebuild:
+  Install perl modules to vendor-dir. Remove .packlist file (#297589)
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> obexftp-0.23-r1.ebuild:
   Stable for HPPA (bug #284661).
