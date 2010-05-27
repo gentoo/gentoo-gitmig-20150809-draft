@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/vnc2swf
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.19 2007/10/28 17:18:06 omp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/ChangeLog,v 1.20 2010/05/27 23:26:25 hwoarang Exp $
+
+*vnc2swf-0.5.0-r1 (27 May 2010)
+
+  27 May 2010; Markos Chandras <hwoarang@gentoo.org> -vnc2swf-0.5.0.ebuild,
+  +vnc2swf-0.5.0-r1.ebuild:
+  Revbump which fixes bug #313667. Thanks to Christophe LEFEBVRE
+  <chtof62@gmail.com> for the patch
 
   28 Oct 2007; David Shakaryan <omp@gentoo.org> vnc2swf-0.5.0.ebuild:
   Remove media-libs/ming dependency. (bug #197258)

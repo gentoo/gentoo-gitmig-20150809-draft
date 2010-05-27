@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.5.0.ebuild,v 1.3 2007/10/28 17:18:06 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vnc2swf/vnc2swf-0.5.0-r1.ebuild,v 1.1 2010/05/27 23:26:25 hwoarang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unixuser.org/~euske/vnc2swf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="x11vnc"
 
 RDEPEND="x11-libs/libX11
@@ -28,21 +28,20 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -ie "s:docs:html:" README
-	sed -ie "s:-mouse ::" recordwin.sh
+	sed -ie "s:docs:html:" README || die
+	sed -ie "s:-mouse ::" recordwin.sh || die
 }
 
 src_install() {
-	dobin vnc2swf
+	dobin vnc2swf || die
 	if use x11vnc; then
 		# this USE flag is needed because recordwin
 		# only works on x11vnc
 		newbin recordwin.sh recordwin
-		dosed "s:./vnc2swf:vnc2swf:" /usr/bin/recordwin
+		dosed "s:./vnc2swf:vnc2swf:" /usr/bin/recordwin || die
 	fi
 	insinto /etc/X11/app-defaults
-	newins Vnc2Swf.ad Vnc2Swf
-	dodoc README TODO sample.html
-	dohtml docs/*
-	dohtml -a swf docs/*
+	newins Vnc2Swf.ad Vnc2Swf || die
+	dodoc README*  || die
+	dohtml -a html,swf docs/* || die
 }
