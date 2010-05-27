@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-0.7.5.ebuild,v 1.1 2010/05/26 13:53:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-0.7.5.ebuild,v 1.2 2010/05/27 15:18:05 nyhm Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi crypt nls rdesktop ssh unique vnc vte"
+IUSE="avahi crypt nls rdesktop ssh unique vnc vte xdmcp"
 
 RDEPEND="x11-libs/gtk+:2
 	avahi? ( net-dns/avahi )
@@ -27,7 +27,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 RDEPEND="${RDEPEND}
-	rdesktop? ( net-misc/rdesktop )"
+	rdesktop? ( net-misc/rdesktop )
+	xdmcp? ( x11-base/xorg-server[kdrive] )"
 
 src_configure() {
 	econf \
