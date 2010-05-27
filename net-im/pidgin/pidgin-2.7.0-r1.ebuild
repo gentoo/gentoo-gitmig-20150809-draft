@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.0-r1.ebuild,v 1.1 2010/05/26 20:50:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.0-r1.ebuild,v 1.2 2010/05/27 12:21:11 pva Exp $
 
 EAPI=2
 
@@ -164,7 +164,7 @@ src_configure() {
 		$(use_enable sasl cyrus-sasl ) \
 		$(use_enable doc doxygen) \
 		$(use_enable networkmanager nm) \
-		$(use_with krb4) \
+		$(use zephyr && use_with krb4) \
 		$(use_enable zeroconf avahi) \
 		$(use_enable idn) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
