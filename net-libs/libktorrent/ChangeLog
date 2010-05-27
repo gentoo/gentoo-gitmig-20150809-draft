@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/libktorrent
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.1 2010/05/27 23:01:22 spatz Exp $
+
+*libktorrent-1.0.0 (27 May 2010)
+
+  27 May 2010; Dror Levin <spatz@gentoo.org> +libktorrent-1.0.0.ebuild,
+  +metadata.xml:
+  Initial import from kde overlay, thanks to all people who worked on it
+  there.
+
