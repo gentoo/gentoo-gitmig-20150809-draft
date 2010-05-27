@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.92 2010/05/25 21:15:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.93 2010/05/27 10:42:34 maekke Exp $
+
+  27 May 2010; Markus Meier <maekke@gentoo.org> -hugin-2009.2.0.ebuild,
+  -hugin-2009.4.0.ebuild:
+  old
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> hugin-2010.0.0.ebuild:
   stable amd64, bug 320411
