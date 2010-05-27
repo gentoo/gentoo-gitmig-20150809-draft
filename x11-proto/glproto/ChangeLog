@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.73 2010/03/04 20:26:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.74 2010/05/27 08:57:03 scarabeus Exp $
+
+  27 May 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -glproto-1.4.10.ebuild:
+  rm
 
   04 Mar 2010; Raúl Porcel <armin76@gentoo.org> glproto-1.4.11.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable
