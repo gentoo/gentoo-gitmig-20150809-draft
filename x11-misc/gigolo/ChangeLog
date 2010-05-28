@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gigolo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.7 2010/05/23 17:46:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.8 2010/05/28 09:51:38 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org> gigolo-0.4.0-r1.ebuild:
+  x86 stable, bug #306559
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> gigolo-0.4.0-r1.ebuild:
   stable amd64, bug 306559
