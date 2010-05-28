@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.3.ebuild,v 1.3 2010/05/15 14:06:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.3.ebuild,v 1.4 2010/05/28 22:53:16 reavertm Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ RESTRICT="test"
 COMMONDEPEND="
 	app-crypt/qca:2
 	>=app-misc/strigi-0.6.3
-	dev-libs/libattica
+	~dev-libs/libattica-0.1.2
 	dev-libs/libpcre[unicode]
 	dev-libs/libxml2
 	dev-libs/libxslt
@@ -128,6 +128,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.3.3-klauncher_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.3.3-klauncher_kioslave.patch"
 	"${FILESDIR}/${PN}-4.3.3-klauncher_mac.patch"
+	"${FILESDIR}/${PN}-4.4.3-mimetypes.patch"
 )
 
 src_prepare() {

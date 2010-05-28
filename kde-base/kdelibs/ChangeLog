@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.684 2010/05/15 14:06:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.685 2010/05/28 22:53:16 reavertm Exp $
+
+  28 May 2010; Maciej Mrozowski <reavertm@gentoo.org> kdelibs-4.4.2.ebuild,
+  kdelibs-4.4.3.ebuild, +files/kdelibs-4.4.3-mimetypes.patch:
+  Update libattica deps - bug 314539, add mimetypes patch - bug 261446 (no
+  revbump as it's less relevant)
 
   15 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
   kdelibs-4.3.3-r1.ebuild, kdelibs-4.3.5.ebuild, kdelibs-4.4.2.ebuild,
@@ -957,7 +962,7 @@
 
 *kdelibs-3.5.8-r1 (03 Nov 2007)
 
-  03 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> 
+  03 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +kdelibs-3.5.8-r1.ebuild:
   Added several upstream patches:
   - Un-break editable controls like zoom selectors.
@@ -2735,7 +2740,7 @@
 
   30 Sep 2003; Luca Barbato <lu_zero@gentoo.org> files/kdelibs-3.1.2-*:
   recovered the patches needed by kdelibs-3.1.2-r1
-  
+
   27 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdelibs-2.2.2a-r2.ebuild,
   kdelibs-2.2.2a-r2.ebuild, kdelibs-3.0.5b.ebuild, kdelibs-3.0.5b.ebuild,
   kdelibs-3.1.1a.ebuild, kdelibs-3.1.1a.ebuild, kdelibs-3.1.2.ebuild,
@@ -2842,7 +2847,7 @@
   Also includes misc other fixes.
 
   27 Mar 2003; Dan Armak <danarmak@gentoo.org> all 3.x ebuilds:
-  
+
   Added explicit dep on sys-devel/gettext, since it will soon be removed
   from the sysem profiles and apps will have to depend on it directly.
 
@@ -2858,16 +2863,16 @@
   Changed ~sparc keyword to sparc.
 
   20 Mar 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.1.1-r1.ebuild:
-  
+
   Add patch that fixes kde bug #55571 (https authentication through proxy).
 
   14 Mar 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.0.5a-r1.ebuild:
-  
+
   Add fix for #16329 to this version as well. Added the other part of the fix
   to arts-1.0.5a. No new revisions.
 
   14 Mar 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.1-r3.ebuild:
-  
+
   Actually add the fix for #16329, as described two entries below. I guess I
   somehow forgot it before. Sorry...
 
@@ -2904,7 +2909,7 @@
   Changed ~sparc keyword to sparc.
 
   28 Feb 2003; Will Woods <wwoods@gentoo.org> kdelibs-3.1-r2.ebuild:
-  Added workaround for gcc3 optimization bug on alpha, removed 
+  Added workaround for gcc3 optimization bug on alpha, removed
   -mieee flag (old attempt to fix this bug), and added ~alpha keyword.
 
   13 Feb 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.1-r1.ebuild:
@@ -2992,7 +2997,7 @@
   Added sparc keyword
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
   05 Dec 2002; Dan Armak <danarmak@gentoo.org> kdelibs-2.2.2-r4.ebuild  :
 
   Ditto for this older ebuild.
@@ -3122,23 +3127,23 @@
 *kdelibs-3.0-r2 (11 May 2002)
 
   11 May 2002; Dan Armak <danarmak@gentoo.org> Changelog :
-  
+
   Make ${KDEDIR}/lib/kde3/plugins (where all style plugins live) a symlink to
   /usr/qt/3/plugins. That way qt-only apps can use kde styles with the default qtconfig
   setup. Closes bug #2118, too.
 
   2 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
-  
+
   Add ghostscript dep (needed for printing to pdf).
 
   6 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
-  
+
   Change cups dep to >=1.1.14.
 
 *kdelibs-3.0-r1 (5 Apr 2002)
 
   5 Apr 2002; Dan Armak <danarmak@gentoo.org> Changelog :
-  
+
   Add --with-fast-malloc=full configure option for a considerable speed improvement.
 
 *kdelibs-3.0 (4 Apr 2002)
@@ -3151,7 +3156,7 @@
 *kdelibs-2.2.2-r4 (24 Mar 2002)
 
   24 Mar 2002; Dan Armak <danarmak@gentoo.org> changelog:
-  
+
   Split the env.d file into two, so that when both ked2 and kde3 are installed,
   the KDEDIR of kde3 gets exported (was the other way around till now).
 
@@ -3164,11 +3169,11 @@
 *kdelibs-2.2.2-r3 (22 Feb 2002)
 
   1 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
-  
+
   Added KDEDIRS export to env.d file - will come in handy when several KDEs are
   installed side-by-side. If you're not into that kind of thing, you don't care
   about it and needn't upgrade.
-  
+
   Added support for customizing kde install locations. You probably don't need it,
   in which case you don't want to hear about it. Note: untested support for now,
   but doesn't break anything else.
@@ -3176,7 +3181,7 @@
 *kdelibs-2.2.2-r2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
