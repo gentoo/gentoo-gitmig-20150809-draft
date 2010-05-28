@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.9.ebuild,v 1.4 2009/07/02 19:19:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.9.9.ebuild,v 1.5 2010/05/28 18:59:49 arfrever Exp $
 
 EAPI="2"
 
@@ -49,7 +49,6 @@ src_compile() {
 src_install() {
 	use doc || sed -i -e '/docs/d' Makefile
 
-	python_version
 	emake \
 		LIBDIR="${D}/usr/$(get_libdir)/griffith" \
 		DESTDIR="${D}" DOC2MAN=docbook2man.pl install || die "emake install failed"
