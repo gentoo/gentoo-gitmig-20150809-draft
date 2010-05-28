@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.9 2010/03/08 01:26:24 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.10 2010/05/28 14:57:07 tupone Exp $
 EAPI=2
 
 inherit eutils games
@@ -19,6 +19,7 @@ IUSE=""
 RDEPEND="!games-misc/wtf
 	!app-misc/banner
 	!games-board/ace
+	!games-puzzle/hangman
 	sys-libs/ncurses
 	sys-apps/miscfiles"
 DEPEND="${RDEPEND}
@@ -30,7 +31,7 @@ export GAMES_TO_BUILD=${GAMES_TO_BUILD:=adventure arithmetic atc
 backgammon banner battlestar bcd boggle caesar canfield countmail cribbage
 dab dm factor fish gomoku hack hangman hunt mille monop morse
 number phantasia pig pom ppt primes quiz rain random robots sail snake
-tetris trek wargames worm worms wtf wump}
+tetris trek wargames worm worms wtf}
 
 src_prepare() {
 	epatch \
