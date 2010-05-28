@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-UUID
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.49 2010/01/09 19:25:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.50 2010/05/28 06:33:25 tove Exp $
+
+*Data-UUID-1.215 (28 May 2010)
+
+  28 May 2010; Torsten Veller <tove@gentoo.org> +Data-UUID-1.215.ebuild:
+  Version bump
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> Data-UUID-1.203.ebuild:
   Transfer Prefix keywords
