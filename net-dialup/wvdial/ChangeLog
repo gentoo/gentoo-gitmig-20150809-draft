@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.56 2010/05/27 13:47:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.57 2010/05/28 05:58:16 pva Exp $
+
+  28 May 2010; Peter Volkov <pva@gentoo.org> wvdial-1.61.ebuild,
+  +files/wvdial-1.61-parallel-make.patch:
+  Fixed build issue, bug #321729, thank Willard Dawson for report and Samuli
+  Suominen, Lars Wendler (Polynomial-C) for this fix.
 
 *wvdial-1.61 (27 May 2010)
 

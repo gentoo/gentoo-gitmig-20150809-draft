@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.61.ebuild,v 1.1 2010/05/27 13:47:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.61.ebuild,v 1.2 2010/05/28 05:58:16 pva Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
 COMMON_DEPEND=">=net-libs/wvstreams-4.4"
@@ -24,6 +24,7 @@ RDEPEND="${COMMON_DEPEND}
 src_prepare() {
 	epatch "${FILESDIR}/${P}-destdir.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-parallel-make.patch"
 }
 
 src_configure() {
