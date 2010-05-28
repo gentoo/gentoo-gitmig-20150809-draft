@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.2 2010/04/07 14:51:19 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.3 2010/05/28 10:10:04 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org>
+  libimobiledevice-1.0.0.ebuild:
+  add ~x86, bug #313691
 
   07 Apr 2010; Olivier Crête <tester@gentoo.org>
   libimobiledevice-1.0.0.ebuild:

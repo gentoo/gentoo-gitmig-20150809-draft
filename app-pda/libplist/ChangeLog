@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libplist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.5 2010/01/21 22:37:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.6 2010/05/28 10:08:51 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org> libplist-1.2.ebuild:
+  add ~x86, bug #313691
 
 *libplist-1.2 (21 Jan 2010)
 

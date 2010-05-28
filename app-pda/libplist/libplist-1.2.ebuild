@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.2.ebuild,v 1.1 2010/01/21 22:37:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.2.ebuild,v 1.2 2010/05/28 10:08:51 maekke Exp $
 
 EAPI=2
 inherit cmake-utils eutils multilib python
@@ -11,7 +11,7 @@ SRC_URI="http://cloud.github.com/downloads/JonathanBeck/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="test"
 
