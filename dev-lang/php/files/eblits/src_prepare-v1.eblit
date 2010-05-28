@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_prepare-v1.eblit,v 1.1 2010/05/27 23:05:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_prepare-v1.eblit,v 1.2 2010/05/28 11:32:55 mabi Exp $
 
 eblit-php-src_prepare() {
 	# USE=sharedmem (session/mod_mm to be exact) tries to mmap() this path
@@ -65,7 +65,7 @@ eblit-php-src_prepare() {
 	if has_version '>=sys-devel/autoconf-2.64' ; then
 		sed -i -r \
 			-e 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
-			$(grep -l divert $(find -name '*.m4') configure.in) || die
+			$(grep -l divert $(find . -name '*.m4') configure.in) || die
 	fi
 	eautoreconf --force -W no-cross
 }
