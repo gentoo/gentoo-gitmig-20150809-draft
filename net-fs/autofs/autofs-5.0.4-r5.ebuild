@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.2 2009/09/23 18:35:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.3 2010/05/28 20:00:02 pva Exp $
 
 inherit eutils multilib autotools
 
@@ -74,8 +74,11 @@ SRC_URI="${SRC_URI_BASE}/${P}.tar.bz2"
 for i in ${PATCH_LIST} ; do
 	SRC_URI="${SRC_URI} ${SRC_URI_BASE}/${i}"
 done ;
-DEPEND="ldap? ( >=net-nds/openldap-2.0 )
-	sasl? ( virtual/krb5 )"
+DEPEND="ldap? ( >=net-nds/openldap-2.0
+		sasl? ( dev-libs/cyrus-sasl
+			virtual/krb5
+			dev-libs/libxml2 )
+	)"
 	# currently, sasl code assumes the presence of kerberosV
 RDEPEND="${DEPEND}"
 SLOT="0"
@@ -87,8 +90,6 @@ src_unpack() {
 	for i in ${PATCH_LIST}; do
 		EPATCH_OPTS="-p1 -d ${S}" epatch "${DISTDIR}"/${i}
 	done
-
-	cd "${S}"
 
 	# fixes bug #210762
 	epatch "${FILESDIR}"/${PN}-5.0.3-heimdal.patch
@@ -117,6 +118,7 @@ src_compile() {
 	econf \
 		$(use_with ldap openldap) \
 		$(use_with sasl) \
+		--without-hesiod \
 		--enable-ignore-busy \
 		|| die "configure failed"
 

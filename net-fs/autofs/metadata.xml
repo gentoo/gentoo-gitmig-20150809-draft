@@ -6,4 +6,12 @@
     <email>stefaan@gentoo.org</email>
     <name>Stefaan De Roeck</name>
 </maintainer>
+<maintainer>
+	<email>pva@gentoo.org</email>
+	<name>Peter Volkov</name>
+</maintainer>
+<maintainer>
+	<email>gentoobugsie.20.dsurawicz@spamgourmet.com</email>
+	<name>Dustin Polke</name>
+</maintainer>
 </pkgmetadata>
