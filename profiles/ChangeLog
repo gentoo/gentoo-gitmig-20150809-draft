@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4210 2010/05/26 20:04:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4211 2010/05/28 08:03:55 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 May 2010; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/Data-Alias for removal
 
   26 May 2010; Peter Volkov <pva@gentoo.org> package.mask:
   Masked =net-im/ejabberd-2.1* for testing #281366
