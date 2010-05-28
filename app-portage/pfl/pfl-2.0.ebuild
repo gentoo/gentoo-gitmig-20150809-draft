@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.0.ebuild,v 1.2 2010/05/10 21:27:52 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.0.ebuild,v 1.3 2010/05/28 18:31:11 billie Exp $
 
 PYTHON_DEPEND=2
 
@@ -65,5 +65,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }

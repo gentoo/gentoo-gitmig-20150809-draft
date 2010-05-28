@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.9 2010/05/22 14:49:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.10 2010/05/28 18:31:11 billie Exp $
+
+  28 May 2010; Daniel Pielmeier <billie@gentoo.org> pfl-1.8.1.ebuild,
+  pfl-1.8.1-r1.ebuild, pfl-2.0.ebuild:
+  Pass path to python_mod_cleanup.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> pfl-1.8.1.ebuild:
   stable amd64, bug 301660
