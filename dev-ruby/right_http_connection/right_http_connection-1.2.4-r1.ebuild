@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/right_http_connection-1.2.4-r1.ebuild,v 1.2 2010/02/12 10:57:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/right_http_connection-1.2.4-r1.ebuild,v 1.3 2010/05/28 17:42:50 josejx Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://rightscale.rubyforge.org/"
 
 LICENSE="as-is" # truly
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 all_ruby_prepare() {

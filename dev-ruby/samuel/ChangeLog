@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.5 2010/02/12 10:58:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.6 2010/05/28 17:43:35 josejx Exp $
+
+  28 May 2010; Joseph Jezak <josejx@gentoo.org> samuel-0.3.2.ebuild:
+  Marked ~ppc.
 
   12 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org> samuel-0.3.2.ebuild:
   Add ~x86 keyword (tested in development container).
