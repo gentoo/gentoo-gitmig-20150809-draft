@@ -1,5 +1,0 @@
-diff -Nr -U0 python-xlib-0.12-orig/Xlib/protocol/display.py python-xlib-0.12/Xlib/protocol/display.py
---- python-xlib-0.12-orig/Xlib/protocol/display.py	2007-01-12 22:58:37.000000000 +0100
-+++ python-xlib-0.12/Xlib/protocol/display.py	2007-01-12 22:46:31.000000000 +0100
-@@ -1,0 +2 @@
-+# -*- coding: latin-1 -*-
