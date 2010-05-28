@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-schroedinger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/ChangeLog,v 1.3 2010/04/05 05:20:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/ChangeLog,v 1.4 2010/05/28 10:05:14 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org>
+  gst-plugins-schroedinger-0.10.18.ebuild:
+  add ~x86, bug #312685
 
 *gst-plugins-schroedinger-0.10.18 (05 Apr 2010)
 
