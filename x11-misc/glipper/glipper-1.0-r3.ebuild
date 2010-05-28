@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.2 2010/02/14 21:47:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.3 2010/05/28 19:12:14 swegener Exp $
+
+EAPI="2"
 
 GCONF_DEBUG="no"
+PYTHON_DEPEND="2"
 
 inherit gnome2 python eutils multilib
 
@@ -15,8 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.4
-	>=dev-python/pygobject-2.6
+DEPEND=">=dev-python/pygobject-2.6
 	>=dev-python/pygtk-2.6
 	>=dev-python/gconf-python-2.22.0
 	>=dev-python/libgnome-python-2.22.0
@@ -29,10 +31,12 @@ RESTRICT="test"
 
 DOCS="AUTHORS ChangeLog NEWS"
 
-src_unpack() {
-	gnome2_src_unpack
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-binary-data.patch
 	epatch "${FILESDIR}"/${P}-transparent.patch
 	epatch "${FILESDIR}"/${P}-pkgconfig.patch
@@ -40,16 +44,16 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install py_compile=true
-	python_version
+
+	python_convert_shebangs 2 "${D}"/usr/$(get_libdir)/glipper/glipper
 
 	# remove pointless .la files, bug #305147
-	rm -f "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/glipper/{keybinder/_keybinder,osutils/_osutils}.la
+	rm -f "${D}$(python_get_sitedir)"/glipper/{keybinder/_keybinder,osutils/_osutils}.la
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/glipper
+	python_mod_optimize glipper
 
 	elog "Glipper has been completely rewritten as a panel applet. Please remove your"
 	elog "existing ~/.glipper directory and then add glipper as a new panel applet."

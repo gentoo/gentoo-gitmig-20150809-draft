@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glipper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.16 2010/02/14 21:47:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.17 2010/05/28 19:12:14 swegener Exp $
+
+  28 May 2010; Sven Wegener <swegener@gentoo.org> glipper-1.0-r3.ebuild:
+  Adjust python support to force python2, bug 317015.
 
   14 Feb 2010; Sven Wegener <swegener@gentoo.org> glipper-1.0-r3.ebuild:
   Remove pointless .la files, bug #305147.
