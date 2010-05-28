@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.7-r1.ebuild,v 1.6 2010/05/23 19:52:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.7-r1.ebuild,v 1.7 2010/05/28 19:32:15 josejx Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus-java/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 AFL-2.1 )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="debug"
 
 RDEPEND=">=virtual/jre-1.5
