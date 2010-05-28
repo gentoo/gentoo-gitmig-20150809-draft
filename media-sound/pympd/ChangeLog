@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pympd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.23 2009/05/26 21:17:25 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.24 2010/05/28 21:30:24 arfrever Exp $
+
+  28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pympd-0.08.1.ebuild:
+  Delete call to deprecated python_version().
 
   26 May 2009; Christian Faulhammer <fauli@gentoo.org> pympd-0.08.1.ebuild:
   stable x86, bug 270782

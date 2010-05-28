@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.6 2009/07/17 23:26:28 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.7 2010/05/28 21:27:28 arfrever Exp $
 
-inherit bash-completion distutils python multilib
+EAPI="3"
+
+inherit bash-completion distutils
 
 DESCRIPTION="Moosic is a music player that focuses on easy playlist management"
 HOMEPAGE="http://www.nanoo.org/~daniel/moosic"
@@ -13,13 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="doc"
 
-RDEPEND="dev-lang/python"
-DEPEND="${RDEPEND}
-	dev-python/setuptools"
+RDEPEND=""
+DEPEND="dev-python/setuptools"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	distutils_src_prepare
 	sed -i -e 's:distutils.core:setuptools:' setup.py || die "sed failed"
 }
 
@@ -33,11 +33,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
 	bash-completion_pkg_postinst
-}
-
-pkg_postrm() {
-	python_mod_cleanup
+	distutils_pkg_postinst
 }

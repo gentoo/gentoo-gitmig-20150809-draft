@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.7 2009/05/26 21:17:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.8 2010/05/28 21:30:24 arfrever Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs python multilib gnome2-utils
@@ -43,12 +43,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/pympd
+	python_mod_optimize $(python_get_sitedir)/pympd
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/pympd
 	gnome2_icon_cache_update
 }

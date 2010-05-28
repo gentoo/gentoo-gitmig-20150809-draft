@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moosic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.20 2009/07/17 23:26:28 tcunha Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.21 2010/05/28 21:27:28 arfrever Exp $
+
+  28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  moosic-1.5.4.ebuild:
+  Delete call to deprecated python_version().
 
   17 Jul 2009; Tiago Cunha <tcunha@gentoo.org> moosic-1.5.4.ebuild:
   stable sparc, bug 274738
