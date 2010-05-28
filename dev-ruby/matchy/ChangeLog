@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/matchy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.4 2010/03/03 10:49:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.5 2010/05/28 15:26:07 josejx Exp $
+
+  28 May 2010; Joseph Jezak <josejx@gentoo.org> matchy-0.5.2.ebuild:
+  Marked ~ppc for bug #302560.
 
   03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> matchy-0.5.2.ebuild:
   Mark ~x86 wrt bug #302560 (a required dependency)

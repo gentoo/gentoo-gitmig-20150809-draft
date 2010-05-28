@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.1.6.ebuild,v 1.4 2010/03/03 11:11:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/crack-0.1.6.ebuild,v 1.5 2010/05/28 15:26:38 josejx Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://rubyforge.org/projects/crack"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 ruby_add_bdepend test "dev-ruby/shoulda dev-ruby/matchy"
