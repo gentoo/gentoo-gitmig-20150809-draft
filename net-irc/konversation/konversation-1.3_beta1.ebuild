@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.3_beta1.ebuild,v 1.1 2010/05/22 22:57:00 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.3_beta1.ebuild,v 1.2 2010/05/28 15:34:12 spatz Exp $
 
 EAPI=2
 KDE_LINGUAS="bg ca cs da de el en_GB es et fi fr gl hu it ja nb nds nl pa pl pt
 pt_BR ru sk sr sv tr uk zh_CN zh_TW"
 KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
+KDE_MINIMAL="4.4"
 inherit kde4-base
 
 MY_PV="${PV/_/-}"

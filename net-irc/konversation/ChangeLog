@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.94 2010/05/22 22:57:00 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.95 2010/05/28 15:34:12 spatz Exp $
+
+  28 May 2010; Dror Levin <spatz@gentoo.org> konversation-1.3_beta1.ebuild:
+  Depend on kde-4.4, bug 321775.
 
 *konversation-1.3_beta1 (22 May 2010)
 
