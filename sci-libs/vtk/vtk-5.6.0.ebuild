@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.11 2010/05/28 11:51:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0.ebuild,v 1.1 2010/05/28 11:51:24 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
 
-inherit cmake-utils eutils flag-o-matic java-pkg-opt-2 python qt4 versionator toolchain-funcs
+inherit eutils flag-o-matic java-pkg-opt-2 python qt4 versionator toolchain-funcs cmake-utils
 
 # Short package version
 SPV="$(get_version_component_range 1-2)"
@@ -19,21 +19,22 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="boost cg doc examples mpi patented python qt4 tcl tk threads"
-RDEPEND="mpi? ( || (
-					sys-cluster/openmpi
-					sys-cluster/lam-mpi
-					sys-cluster/mpich2[cxx] ) )
+IUSE="boost cg doc examples java mpi ogg patented python qt4 tcl tk threads R"
+RDEPEND="
+	mpi? ( virtual/mpi[cxx,romio] )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
-	qt4? ( x11-libs/qt-core:4
+	qt4? (
+			x11-libs/qt-core:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-gui:4
 			x11-libs/qt-sql )
-	examples? ( x11-libs/qt-core:4[qt3support]
+	examples? (
+			x11-libs/qt-core:4[qt3support]
 			x11-libs/qt-gui:4[qt3support] )
+	R? ( dev-lang/R )
 	dev-libs/expat
 	dev-libs/libxml2
 	media-libs/freetype
@@ -46,6 +47,7 @@ RDEPEND="mpi? ( || (
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
 		boost? ( >=dev-libs/boost-1.40.0 )
+		mpi? ( >=dev-util/cmake-2.8 )
 		>=dev-util/cmake-2.6"
 
 S="${WORKDIR}"/VTK
@@ -81,8 +83,8 @@ src_configure() {
 		-DCMAKE_SKIP_RPATH=YES
 		-DVTK_DIR="${S}"
 		-DVTK_INSTALL_LIB_DIR=/$(get_libdir)/
-		-DVTK_DATA_ROOT:PATH=/usr/share/${PN}/data
-		-DCMAKE_INSTALL_PREFIX=/usr
+		-DVTK_DATA_ROOT:PATH="${EPREFIX}"/usr/share/${PN}/data
+		-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
 		-DBUILD_SHARED_LIBS=ON
 		-DVTK_USE_SYSTEM_FREETYPE=ON
 		-DVTK_USE_SYSTEM_JPEG=ON
@@ -101,13 +103,17 @@ src_configure() {
 	mycmakeargs+=(
 		$(cmake-utils_use boost VTK_USE_BOOST)
 		$(cmake-utils_use cg VTK_USE_CG_SHADERS)
+		$(cmake-utils_use doc DOCUMENTATION_HTML_HELP)
+		$(cmake-utils_use_build doc DOCUMENTATION)
+		$(cmake-utils_use java VTK_USE_JAVA)
+		$(cmake-utils_use mpi VTK_USE_MPI)
+		$(cmake-utils_use ogg VTK_USE_OGGTHEORA_ENCODER)
+		$(cmake-utils_use patented VTK_USE_PATENTED)
+		$(cmake-utils_use qt4 VTK_USE_QT)
 		$(cmake-utils_use tcl VTK_WRAP_TCL)
 		$(cmake-utils_use tk VTK_USE_TK)
 		$(cmake-utils_use threads VTK_USE_PARALLEL)
-		$(cmake-utils_use patented VTK_USE_PATENTED)
-		$(cmake-utils_use doc DOCUMENTATION_HTML_HELP)
-		$(cmake-utils_use_build doc DOCUMENTATION)
-		$(cmake-utils_use mpi VTK_USE_MPI))
+		$(cmake-utils_use R VTK_USE_GNU_R) )
 
 	# mpi needs the parallel framework
 	if use mpi && use !threads; then
@@ -142,17 +148,13 @@ src_configure() {
 			-DVTK_USE_QVTK=ON
 			-DVTK_USE_QVTK_QTOPENGL=ON
 			-DQT_WRAP_CPP=ON
-			-DQT_WRAP_UI=ON)
-	fi
-
-	if use qt4; then
-		mycmakeargs+=(
+			-DQT_WRAP_UI=ON
 			-DVTK_INSTALL_QT_DIR=/$(get_libdir)/qt4/plugins/${PN}
 			-DDESIRED_QT_VERSION=4
-			-DQT_MOC_EXECUTABLE=/usr/bin/moc
-			-DQT_UIC_EXECUTABLE=/usr/bin/uic
-			-DQT_INCLUDE_DIR=/usr/include/qt4
-			-DQT_QMAKE_EXECUTABLE=/usr/bin/qmake)
+			-DQT_MOC_EXECUTABLE="${EPREFIX}"/usr/bin/moc
+			-DQT_UIC_EXECUTABLE="${EPREFIX}"/usr/bin/uic
+			-DQT_INCLUDE_DIR="${EPREFIX}"/usr/include/qt4
+			-DQT_QMAKE_EXECUTABLE="${EPREFIX}"/usr/bin/qmake)
 	fi
 
 	cmake-utils_src_configure
