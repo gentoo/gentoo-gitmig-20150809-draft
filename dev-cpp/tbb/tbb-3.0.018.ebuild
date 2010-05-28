@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.018.ebuild,v 1.1 2010/05/05 01:42:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.018.ebuild,v 1.2 2010/05/28 19:09:14 bicatali Exp $
 
 EAPI=2
 inherit eutils versionator toolchain-funcs alternatives
@@ -28,6 +28,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-tests.patch
 	sed -i \
 		-e "s/-O2/${CXXFLAGS}/g" \
 		build/*.inc \

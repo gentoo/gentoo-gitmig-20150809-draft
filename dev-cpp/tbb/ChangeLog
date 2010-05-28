@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.4 2010/05/05 01:42:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.5 2010/05/28 19:09:14 bicatali Exp $
+
+  28 May 2010; Sébastien Fabbro <bicatali@gentoo.org> tbb-3.0.018.ebuild,
+  +files/tbb-3.0.018-tests.patch:
+  Disable buggy tests
 
 *tbb-3.0.018 (05 May 2010)
 
