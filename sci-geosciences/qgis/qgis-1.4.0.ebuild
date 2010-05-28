@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.6 2010/05/25 15:10:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.7 2010/05/28 13:53:10 maekke Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.osgeo.org/${PN}/src/${PN}_${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="examples gps grass gsl postgres python sqlite"
 
 RDEPEND=">=sci-libs/gdal-1.6.1

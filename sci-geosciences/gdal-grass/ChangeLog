@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gdal-grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/ChangeLog,v 1.3 2010/05/25 15:09:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/ChangeLog,v 1.4 2010/05/28 13:52:21 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org> gdal-grass-1.4.3.ebuild:
+  x86 stable, bug #317385
 
   25 May 2010; Markos Chandras <hwoarang@gentoo.org>
   gdal-grass-1.4.3.ebuild:

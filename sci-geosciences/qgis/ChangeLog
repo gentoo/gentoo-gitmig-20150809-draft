@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.9 2010/05/25 15:10:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.10 2010/05/28 13:53:10 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org> qgis-1.4.0.ebuild:
+  x86 stable, bug #317385
 
   25 May 2010; Markos Chandras <hwoarang@gentoo.org> qgis-1.4.0.ebuild:
   Stable on amd64 wrt bug #317385
