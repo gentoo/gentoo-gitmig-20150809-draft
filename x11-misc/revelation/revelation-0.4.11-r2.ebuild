@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11-r2.ebuild,v 1.6 2010/01/07 20:30:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11-r2.ebuild,v 1.7 2010/05/28 18:00:57 arfrever Exp $
 
 inherit autotools eutils multilib python gnome2
 
@@ -43,17 +43,15 @@ src_compile() {
 src_install() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO" \
 	gnome2_src_install
-	python_version
-	rm -f "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/crack.la
+	python_clean_installation_image
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize $(python_get_sitedir)/${PN}
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
