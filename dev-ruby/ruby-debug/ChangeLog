@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-debug
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.15 2010/05/22 15:44:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.16 2010/05/28 17:22:56 josejx Exp $
+
+  28 May 2010; Joseph Jezak <josejx@gentoo.org> ruby-debug-0.10.3-r3.ebuild:
+  Marked ~ppc for bug #302563.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-debug-0.10.3.ebuild:
