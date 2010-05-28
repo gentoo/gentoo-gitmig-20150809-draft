@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/padre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.4 2010/05/12 15:45:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.5 2010/05/28 07:19:07 tove Exp $
+
+*padre-0.62 (28 May 2010)
+
+  28 May 2010; Torsten Veller <tove@gentoo.org> +padre-0.62.ebuild:
+  Version bump
 
 *padre-0.61 (12 May 2010)
 
