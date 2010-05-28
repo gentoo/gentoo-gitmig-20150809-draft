@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11575 2010/05/27 21:17:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11576 2010/05/28 02:53:11 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (28 May 2010)
+# Masked until the tarballs are publicly released
+=media-sound/amarok-2.3.1
+=media-sound/amarok-utils-2.3.1
 
 # Matti Bickel <mabi@gentoo.org> (27 May 2010)
 # Masked for testing, expect breakage at this point
