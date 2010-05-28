@@ -1,0 +1,11 @@
+# ChangeLog for sci-astronomy/galaxy
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.1 2010/05/28 06:42:42 xarthisius Exp $
+
+*galaxy-1.8 (28 May 2010)
+
+  28 May 2010; Kacper Kowalik <xarthisius@gentoo.org> +galaxy-1.8.ebuild,
+  +files/galaxy-1.8-gentoo.patch, +metadata.xml:
+  New ebuild for galaxy. Ebuild written by Juan Pablo Lassala. Fixes bug
+  321719
+
