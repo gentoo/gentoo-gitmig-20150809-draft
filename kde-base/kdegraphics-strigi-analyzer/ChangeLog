@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdegraphics-strigi-analyzer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.46 2010/05/03 21:29:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.47 2010/05/28 23:17:02 reavertm Exp $
+
+  28 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kdegraphics-strigi-analyzer-4.3.3.ebuild,
+  kdegraphics-strigi-analyzer-4.3.5.ebuild,
+  kdegraphics-strigi-analyzer-4.4.2.ebuild,
+  kdegraphics-strigi-analyzer-4.4.3.ebuild:
+  Add strigi dep, bug 306139, thanks to Andreas K. Huettel
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -kdegraphics-strigi-analyzer-4.4.1.ebuild:
