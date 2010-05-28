@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.215 2010/04/15 17:46:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.216 2010/05/28 07:41:25 pva Exp $
+
+  28 May 2010; Peter Volkov <pva@gentoo.org> sudo-1.7.2_p6.ebuild:
+  amd64 stable, security bug #321697
 
 *sudo-1.7.2_p6 (15 Apr 2010)
 
