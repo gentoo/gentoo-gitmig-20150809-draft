@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5603 2010/05/28 10:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5604 2010/05/28 12:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3112,6 +3112,7 @@ sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block 
 sci-libs/suitesparse:metis -  Use METIS (sci-libs/metis or sci-libs/parmetis) for partitioning 
 sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk)
 sci-libs/umfpack:metis - Use METIS via CHOLMOD(sci-libs/cholmod) for partitioning
+sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:patented - Build patented classes
