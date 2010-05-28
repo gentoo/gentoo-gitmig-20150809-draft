@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r1.ebuild,v 1.1 2009/06/06 14:58:59 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r1.ebuild,v 1.2 2010/05/28 22:06:07 arfrever Exp $
 
 EAPI="2"
 
@@ -37,13 +37,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
 	python_need_rebuild
-	python_mod_optimize "$(python_get_sitedir)/FusionIcon"
+	python_mod_optimize $(python_get_sitedir)/FusionIcon
 
 	use gtk && gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/FusionIcon
 }

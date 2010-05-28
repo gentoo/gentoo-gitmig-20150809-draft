@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/fusion-icon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.5 2009/12/11 17:23:07 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.6 2010/05/28 22:06:07 arfrever Exp $
+
+  28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  fusion-icon-0.1-r1.ebuild:
+  Delete call to deprecated python_version().
 
   11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -fusion-icon-0.1.ebuild:
