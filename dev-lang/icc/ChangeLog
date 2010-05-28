@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/icc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.78 2010/04/23 06:17:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.79 2010/05/28 22:35:39 jlec Exp $
+
+*icc-11.1.072 (28 May 2010)
+
+  28 May 2010; Justin Lecher <jlec@gentoo.org> +icc-11.1.072.ebuild:
+  Version Bump #316663
 
   23 Apr 2010; Justin Lecher <jlec@gentoo.org> icc-11.1.056-r1.ebuild:
   Fix Sandbox Violations on non prefixed arches
