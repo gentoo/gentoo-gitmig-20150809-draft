@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/peps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/ChangeLog,v 1.3 2010/05/16 19:46:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/peps/ChangeLog,v 1.4 2010/05/28 09:47:12 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org> peps-2.0.ebuild:
+  x86 stable, bug #286571
 
   16 May 2010; Markos Chandras <hwoarang@gentoo.org> peps-2.0.ebuild:
   Stable on amd64 wrt bug #286571
