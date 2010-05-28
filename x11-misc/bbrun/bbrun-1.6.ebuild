@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.6.ebuild,v 1.7 2008/01/13 02:52:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.6.ebuild,v 1.8 2010/05/28 17:28:42 xarthisius Exp $
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="blackbox program execution dialog box"
 HOMEPAGE="http://www.darkops.net/bbrun"
@@ -15,6 +15,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2"
 DEPEND="${RDEPEND}
+	x11-libs/libXpm
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P}/${PN}
@@ -22,7 +23,7 @@ S=${WORKDIR}/${P}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -e "s:-O2::" -e "s:-g:${CFLAGS}:g" -i Makefile
+	epatch "${FILESDIR}"/${P}-respectflags.patch
 }
 
 src_compile() {

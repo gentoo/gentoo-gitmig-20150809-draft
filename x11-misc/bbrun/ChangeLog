@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bbrun
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.21 2008/01/13 02:52:07 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.22 2010/05/28 17:28:42 xarthisius Exp $
+
+  28 May 2010; Kacper Kowalik <xarthisius@gentoo.org> bbrun-1.6.ebuild,
+  +files/bbrun-1.6-respectflags.patch:
+  Adding missing dependency and respect user flags. Thanks Patrick for the
+  report and Andrew Brouwers for patch.
 
   13 Jan 2008; Samuli Suominen <drac@gentoo.org> bbrun-1.6.ebuild:
   toolchanify and stable on amd64.
