@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.17-r1.ebuild,v 1.1 2010/05/06 07:18:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/Finance-Quote-1.17-r2.ebuild,v 1.1 2010/05/28 07:28:46 tove Exp $
 
 EAPI=3
 

@@ -1,13 +1,11 @@
 --- lib/Finance/Quote/VWD.pm
 +++ lib/Finance/Quote/VWD.pm
-@@ -122,8 +122,8 @@
+@@ -118,7 +118,7 @@
+       # all other info below <div class=contentContainer>
+       my $content = $tree->look_down(
+          "_tag", "div",
+-         "class", "contentContainer"
++         "class", "mainContainer"
        );
        next if not $content;
  
--      # <h1> contains price, time, name, and symbol
--      my $head = $content->find("h1");
-+      # <h2> contains price, time, name, and symbol
-+      my $head = $content->find("h2");
-       next if not $head;
- 
-       my $wpkurs = $head->look_down(
