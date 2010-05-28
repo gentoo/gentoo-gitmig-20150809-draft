@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pcl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/ChangeLog,v 1.6 2007/02/09 07:31:41 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/ChangeLog,v 1.7 2010/05/28 14:07:08 tove Exp $
+
+  28 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove klieber from metadata.xml (#317393)
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
