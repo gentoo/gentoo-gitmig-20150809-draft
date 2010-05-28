@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclperl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.7 2007/05/01 23:43:09 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.8 2010/05/28 23:00:54 jlec Exp $
+
+  28 May 2010; Justin Lecher <jlec@gentoo.org> tclperl-3.2.ebuild:
+  Added missing LDFLAGS #247189
 
 *tclperl-3.2 (01 May 2007)
 

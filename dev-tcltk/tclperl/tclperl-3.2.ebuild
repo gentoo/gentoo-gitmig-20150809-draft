@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/tclperl-3.2.ebuild,v 1.1 2007/05/01 23:43:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/tclperl-3.2.ebuild,v 1.2 2010/05/28 23:00:54 jlec Exp $
 
 inherit flag-o-matic multilib toolchain-funcs
 
@@ -23,7 +23,7 @@ src_compile() {
 	perl Makefile.PL || die
 	make OPTIMIZE="${CFLAGS}" Tcl.o || die
 
-	$(tc-getCC) -shared ${CFLAGS} -o tclperl.so.${PV} -DUSE_TCL_STUBS \
+	$(tc-getCC) -shared ${LDFLAGS} ${CFLAGS} -o tclperl.so.${PV} -DUSE_TCL_STUBS \
 		tclperl.c tclthread.c `perl -MExtUtils::Embed -e ccopts -e ldopts` \
 		/usr/$(get_libdir)/libtclstub`echo 'puts $tcl_version' | tclsh`.a Tcl.o || die
 }
