@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/libassa-3.5.0.ebuild,v 1.6 2009/11/23 13:32:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/libassa-3.5.0.ebuild,v 1.7 2010/05/28 15:16:46 angelos Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -16,7 +16,8 @@ IUSE=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-dont-run-ldconfig.patch
+		"${FILESDIR}"/${P}-dont-run-ldconfig.patch \
+		"${FILESDIR}"/${P}-fix-tests.patch
 	AT_M4DIR="${S}/macros"
 	eautoreconf
 }
