@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libattica
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.6 2010/05/27 03:52:57 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.7 2010/05/28 22:29:02 spatz Exp $
+
+*libattica-0.1.2 (28 May 2010)
+
+  28 May 2010; Dror Levin <spatz@gentoo.org> +libattica-0.1.2.ebuild:
+  Add version needed for kde 4.4, newer version are only for kde 4.5, see
+  bug 314539 for details.
 
 *libattica-0.1.4 (27 May 2010)
 
