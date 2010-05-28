@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.21 2010/05/03 12:25:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.22 2010/05/28 11:31:06 maekke Exp $
+
+  28 May 2010; Markus Meier <maekke@gentoo.org> mcelog-1.0_pre3.ebuild:
+  x86 stable, bug #316673
 
   03 May 2010; Olivier Crête <tester@gentoo.org> mcelog-1.0_pre3.ebuild:
   Newer version needed by stable kernel. Also make this stable on amd64, bug
