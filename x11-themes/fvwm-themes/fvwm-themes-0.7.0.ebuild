@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.16 2008/01/06 08:57:22 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/fvwm-themes-0.7.0.ebuild,v 1.17 2010/05/28 12:39:31 xarthisius Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit autotools eutils
 
 DESCRIPTION="A configuration framework for the fvwm window manager"
 HOMEPAGE="http://fvwm-themes.sourceforge.net/"
@@ -13,38 +15,28 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="gnome"
 
-DEPEND=">=x11-wm/fvwm-2.5.8
-	gnome? ( media-gfx/imagemagick )"
-RDEPEND="x11-wm/fvwm"
+RDEPEND=">=x11-wm/fvwm-2.5.8"
+DEPEND="${RDEPEND}
+	gnome? ( || (
+		media-gfx/imagemagick
+		media-gfx/graphicsmagick[imagemagick] )	)"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${P}-gentoo1.patch"
-	epatch "${FILESDIR}/${P}-posix-sort.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gentoo.patch" \
+		"${FILESDIR}/${P}-posix-sort.patch"
+	eautoreconf
 }
 
-src_compile() {
-	local myconf
-
-	use gnome && myconf="--enable-gnome-icons"
-
-	econf ${myconf} || die "econf failed"
-	emake || die "emake failed"
+src_configure() {
+	econf $(use_enable gnome gnome-icons)
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README TODO || die
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Configuring ${P}"
-	einfo
-
 	fvwm-themes-config --site --reset
 	fvwm-themes-menuapp --site --build-menus --remove-popup
 
