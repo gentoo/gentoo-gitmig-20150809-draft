@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.5.2.ebuild,v 1.2 2010/03/03 11:15:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.5.2.ebuild,v 1.3 2010/05/28 17:46:48 josejx Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://httparty.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 # Code should most likely be patched, but for now…
