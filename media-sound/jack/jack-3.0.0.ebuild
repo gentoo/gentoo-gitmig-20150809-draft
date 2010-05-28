@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.13 2009/08/03 13:04:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0.ebuild,v 1.14 2010/05/28 21:08:01 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils
 
@@ -13,8 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="dev-lang/python
-	sys-libs/ncurses"
+DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	dev-python/cddb-py
 	dev-python/id3-py
@@ -23,6 +25,11 @@ RDEPEND="${DEPEND}
 	media-libs/flac
 	media-sound/lame
 	media-sound/cdparanoia"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_compile() {
 	python setup-cursesmodule.py build || die "compilation failed"
@@ -34,10 +41,9 @@ src_install() {
 
 	dobin jack || die "dobin failed"
 
-	distutils_python_version
-	dodir /usr/$(get_libdir)/python${PYVER}/site-packages
-	insinto /usr/$(get_libdir)/python${PYVER}/site-packages
-	doins jack_*py
+	insinto $(python_get_sitedir)
+	PYTHON_MODNAME="$(ls jack_*.py)"
+	doins ${PYTHON_MODNAME}
 
 	newman jack.man jack.1
 

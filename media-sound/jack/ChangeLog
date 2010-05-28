@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.18 2007/06/02 16:16:02 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/ChangeLog,v 1.19 2010/05/28 21:08:01 arfrever Exp $
+
+  28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  jack-3.0.0.ebuild, jack-3.1.1.ebuild:
+  Use Python 2 (bug #313951).
 
   02 Jun 2007; nixnut <nixnut@gentoo.org> jack-3.1.1.ebuild:
   Stable on ppc wrt bug 172952
