@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.23-r1.ebuild,v 1.1 2010/05/28 18:41:23 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.23-r1.ebuild,v 1.2 2010/05/28 18:47:05 lxnay Exp $
 
 EAPI=2
 
@@ -84,7 +84,7 @@ src_install() {
 		# install ALSA configuration files
 		# making PA to be used by alsa clients
 		insinto /usr/share/alsa
-		doins "${FILESDIR}"/pulse/*.conf
+		doins "${FILESDIR}"/pulse*.conf
 	fi
 
 }
