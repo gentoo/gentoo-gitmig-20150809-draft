@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.3 2010/05/26 17:59:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.4 2010/05/28 09:42:10 maekke Exp $
 
 # needs SRC_URI arrows
 EAPI=2
@@ -14,7 +14,7 @@ SRC_URI="http://dl.google.com/linux/rpm/testing/i386/${MY_P}-current.i386.rpm
 	-> ${P}.i386.rpm"
 LICENSE="google-picasa"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="mirror strip"
 IUSE="nsplugin"
 
