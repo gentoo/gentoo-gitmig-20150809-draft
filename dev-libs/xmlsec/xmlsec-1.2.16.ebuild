@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.16.ebuild,v 1.1 2010/05/27 13:39:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.16.ebuild,v 1.2 2010/05/28 17:26:54 arfrever Exp $
 
 EAPI="3"
 
@@ -27,19 +27,6 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}1-${PV}"
 
-# Redefine use_with() until fixed version is available in released versions of Portage.
-# http://git.overlays.gentoo.org/gitweb/?p=proj/portage.git;a=commit;h=a05bba76435d94407fd25549d0552902962baf62
-use_with() {
-	local UW_SUFFIX=${3+=$3}
-	local UWORD=${2:-$1}
-
-	if useq $1; then
-		echo "--with-${UWORD}${UW_SUFFIX}"
-	else
-		echo "--without-${UWORD}"
-	fi
-}
-
 pkg_setup() {
 	if ! use gcrypt && ! use gnutls && ! use nss && ! use openssl; then
 		die "At least one of the following USE flags must be enabled: gcrypt gnutls nss openssl"
@@ -56,6 +43,19 @@ pkg_setup() {
 #}
 
 src_configure() {
+	# Redefine use_with() until fixed version is available in released versions of Portage.
+	# http://git.overlays.gentoo.org/gitweb/?p=proj/portage.git;a=commit;h=a05bba76435d94407fd25549d0552902962baf62
+	use_with() {
+		local UW_SUFFIX=${3+=$3}
+		local UWORD=${2:-$1}
+
+		if useq $1; then
+			echo "--with-${UWORD}${UW_SUFFIX}"
+		else
+			echo "--without-${UWORD}"
+		fi
+	}
+
 	econf \
 		$(use_with gcrypt gcrypt "") \
 		$(use_with gnutls gnutls "") \
