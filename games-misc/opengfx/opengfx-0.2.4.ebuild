@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.2.4.ebuild,v 1.1 2010/05/01 22:23:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.2.4.ebuild,v 1.2 2010/05/28 18:15:30 josejx Exp $
 
 EAPI=2
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="http://bundles.openttdcoop.org/opengfx/releases/${P}-source.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ppc64 ~x86"
 IUSE=""
 
 S=${WORKDIR}/${P}-source
