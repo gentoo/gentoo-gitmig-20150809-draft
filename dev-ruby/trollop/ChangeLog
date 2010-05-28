@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.2 2010/05/24 14:24:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.3 2010/05/28 20:19:19 josejx Exp $
+
+  28 May 2010; Joseph Jezak <josejx@gentoo.org> trollop-1.16.2.ebuild:
+  Marked ~ppc/~ppc64.
 
   24 May 2010; Raúl Porcel <armin76@gentoo.org> trollop-1.16.2.ebuild:
   Add ~sparc wrt #318949
