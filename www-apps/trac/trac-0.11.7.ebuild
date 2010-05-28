@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11.7.ebuild,v 1.4 2010/05/28 11:01:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11.7.ebuild,v 1.5 2010/05/28 14:47:02 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils distutils webapp
+inherit distutils eutils webapp
 
 MY_PV=${PV/_beta/b}
 MY_P=Trac-${MY_PV}
@@ -56,8 +58,10 @@ RDEPEND="
 	!www-apps/trac-webadmin
 	"
 DEPEND="${RDEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 pkg_setup() {
+	python_pkg_setup
 	webapp_pkg_setup
 
 	if ! use mysql && ! use postgres && ! use sqlite; then
@@ -87,7 +91,7 @@ src_install() {
 
 	# tracd init script
 	newconfd "${FILESDIR}"/tracd.confd tracd
-	newinitd "${FILESDIR}"/tracd.initd.2 tracd
+	newinitd "${FILESDIR}"/tracd.initd tracd
 
 	if use cgi; then
 		cp cgi-bin/trac.cgi "${D}"/${MY_CGIBINDIR} || die
@@ -102,4 +106,9 @@ src_install() {
 	done
 
 	webapp_src_install
+}
+
+pkg_postinst() {
+	distutils_pkg_postinst
+	webapp_pkg_postinst
 }
