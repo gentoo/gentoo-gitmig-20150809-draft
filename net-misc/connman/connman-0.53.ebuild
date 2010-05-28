@@ -11,12 +11,13 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
-IUSE="3G bluetooth debug +dhclient dnsproxy doc +ethernet google moblin ofono policykit resolvconf threads tools +udev +wifi"
-# ospm wimax
+IUSE="bluetooth +caps debug +dhclient dnsproxy doc examples +ethernet google ofono policykit resolvconf threads tools +udev +wifi"
+# gps meego ospm openconnect wimax
 
 RDEPEND=">=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.2.24
 	bluetooth? ( net-wireless/bluez )
+	caps? ( sys-libs/libcap-ng )
 	dhclient? ( net-misc/dhcp )
 	ofono? ( net-misc/ofono )
 	policykit? ( >=sys-auth/policykit-0.7 )
@@ -34,6 +35,8 @@ src_configure() {
 		--enable-fake \
 		--enable-datafiles \
 		--enable-loopback=builtin \
+		$(use_enable caps capng) \
+		$(use_enable example test) \
 		$(use_enable ethernet ethernet builtin) \
 		$(use_enable wifi wifi builtin) \
 		$(use_enable bluetooth bluetooth builtin) \
@@ -42,9 +45,6 @@ src_configure() {
 		$(use_enable resolvconf resolvconf builtin) \
 		$(use_enable dnsproxy dnsproxy builtin) \
 		$(use_enable google google builtin) \
-		$(use_enable moblin moblin builtin) \
-		$(use_enable 3G hso builtin) \
-		$(use_enable 3G mbm builtin) \
 		$(use_enable policykit polkit builtin) \
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc) \
@@ -53,7 +53,11 @@ src_configure() {
 		$(use_enable udev) \
 		--disable-udhcp \
 		--disable-iwmx \
-		--disable-iospm
+		--disable-iospm \
+		--disable-hh2serial-gps \
+		--disable-portal \
+		--disable-meego \
+		--disable-openconnect
 }
 
 src_install() {

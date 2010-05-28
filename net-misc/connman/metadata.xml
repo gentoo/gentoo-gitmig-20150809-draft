@@ -7,12 +7,10 @@
                 <name>Robert Piasek</name>
         </maintainer>
 	<use>
-		<flag name="3G">Enable plugins for 3G modems <pkg>net-misc/dhcp</pkg> for getting ip.</flag>
 		<flag name="dhclient">Use dhclient from <pkg>net-misc/dhcp</pkg> for getting ip.</flag>
 		<flag name="dnsproxy">Enable dnsproxy support.</flag>
 		<flag name="ethernet">Enable ethernet support.</flag>
 		<flag name="google">Enable Google Public DNS support.</flag>
-		<flag name="moblin">enable Moblin features support.</flag>
 		<flag name="ofono">Use <pkg>net-misc/ofono</pkg> for telephony support.</flag>
 		<flag name="resolvconf">Use <pkg>net-dns/openresolv</pkg> for managing DNS information</flag>
 		<flag name="tools">Enable testing tools.</flag>
