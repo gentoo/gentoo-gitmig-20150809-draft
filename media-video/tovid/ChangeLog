@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tovid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.23 2010/02/24 20:07:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.24 2010/05/28 21:33:54 arfrever Exp $
+
+  28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  tovid-0.31-r2.ebuild:
+  Delete call to deprecated python_version().
 
   24 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> tovid-0.31-r2.ebuild:
   Rename USE wxwindows to wxwidgets wrt #306279.

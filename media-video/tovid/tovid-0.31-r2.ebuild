@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31-r2.ebuild,v 1.4 2010/02/24 20:07:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31-r2.ebuild,v 1.5 2010/05/28 21:33:54 arfrever Exp $
 
 inherit eutils python
 
@@ -60,18 +60,17 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install died"
 	dodoc AUTHORS ChangeLog NEWS README
 
-	python_version
 	# remove wxgtk components
 	if ! use wxwidgets; then
 		rm -f "${D}/usr/bin/tovidgui"
-		rm -rf "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/libtovid/gui"
+		rm -rf "${D}$(python_get_sitedir)/libtovid/gui"
 		rm -f "${D}/usr/share/applications/tovidgui.desktop"
 	fi
 
 	# remove tk components
 	if ! use tk; then
 		rm -f "${D}/usr/bin/todiscgui"
-		rm -rf "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/libtovid/metagui"
+		rm -rf "${D}$(python_get_sitedir)/libtovid/metagui"
 		rm -f "${D}/usr/share/applications/todiscgui.desktop"
 	fi
 }
