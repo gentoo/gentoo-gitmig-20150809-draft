@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/corkscrew
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.6 2007/01/21 20:55:04 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.7 2010/05/28 14:10:54 tove Exp $
+
+  28 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove klieber from metadata.xml (#317393)
 
   21 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> corkscrew-2.0.ebuild:
   Fixed bug #152785.

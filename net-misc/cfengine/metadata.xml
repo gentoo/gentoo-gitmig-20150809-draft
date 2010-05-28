@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>sysadmin</herd>
 	<maintainer>
-		<email>klieber@gentoo.org</email>
-		<name>Kurt Lieber</name>
-	</maintainer>
-	<maintainer>
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>

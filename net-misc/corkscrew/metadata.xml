@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sysadmin</herd>
-<maintainer>
- <email>klieber@gentoo.org</email>
- <name>Kurt Lieber</name>
-</maintainer>
 <longdescription>
 Corkscrew is a tool for tunneling SSH through HTTP proxies.
 </longdescription>
