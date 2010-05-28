@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Term-ANSIColor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Term-ANSIColor/ChangeLog,v 1.18 2010/05/25 21:24:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Term-ANSIColor/ChangeLog,v 1.19 2010/05/28 08:23:11 tove Exp $
+
+  28 May 2010; Torsten Veller <tove@gentoo.org> Term-ANSIColor-3.00.ebuild:
+  Stable on x86 (#319615). EAPI=3
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> Term-ANSIColor-3.00.ebuild:
   stable amd64, bug 319615
