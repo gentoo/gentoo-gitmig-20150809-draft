@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.11 2009/07/08 21:27:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.12 2010/05/28 08:18:36 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -45,7 +45,11 @@ src_install() {
 	dogamesbin uglygs.pl || die "dogamesbin failed"
 
 	insinto "$(games_get_libdir)"/${PN}
-	doins -r data images templates tmp || die "doins failed"
+	doins -r data templates tmp || die "doins failed"
+	insinto "$(games_get_libdir)"/${PN}/images
+	doins -r images/{avp2,bds,default.gif,hls,j2s,mhs,q3s,rws,sf2s,uns,vcs} \
+		|| die "doins failed"
+	dosym bds "$(games_get_libdir)"/${PN}/images/bdl
 	keepdir "$(games_get_libdir)"/${PN}/tmp
 
 	exeinto "$(games_get_libdir)"/${PN}
