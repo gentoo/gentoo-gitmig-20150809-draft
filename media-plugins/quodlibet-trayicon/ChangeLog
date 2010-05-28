@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/quodlibet-trayicon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/ChangeLog,v 1.9 2010/01/12 20:00:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/ChangeLog,v 1.10 2010/05/28 19:10:22 arfrever Exp $
+
+  28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  quodlibet-trayicon-4351.ebuild:
+  Delete call to deprecated python_version().
 
   12 Jan 2010; <hwoarang@gentoo.org> quodlibet-trayicon-4351.ebuild:
   Stable on amd64 wrt bug #299214
