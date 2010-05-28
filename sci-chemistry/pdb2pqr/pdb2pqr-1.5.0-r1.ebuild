@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r1.ebuild,v 1.2 2010/03/11 14:17:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r1.ebuild,v 1.3 2010/05/28 20:17:08 jlec Exp $
 
 EAPI="3"
 
@@ -23,6 +23,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="
 	dev-python/numpy
+	sci-chemistry/openbabel
 	opal? ( dev-python/zsi )"
 RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
@@ -62,8 +63,7 @@ src_configure() {
 
 src_test() {
 	testing() {
-		emake -j1 test && \
-			F77="${FORTRANC}" emake -j1 adv-test \
+		emake -j1 test \
 			|| die "tests failed"
 	}
 	python_execute_function -s testing
