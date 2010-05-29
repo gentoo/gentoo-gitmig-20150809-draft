@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.221.ebuild,v 1.2 2010/01/10 09:47:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.221.ebuild,v 1.3 2010/05/29 19:18:38 armin76 Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ DESCRIPTION="Perl bindings for GTK2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~ia64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
