@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.15.2.ebuild,v 1.8 2009/09/23 18:21:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.2-r1.ebuild,v 1.1 2010/05/29 04:48:18 pva Exp $
+
+EAPI="3"
 
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 HOMEPAGE="http://oss.oetiker.ch/mrtg/"
@@ -8,21 +10,25 @@ SRC_URI="http://oss.oetiker.ch/mrtg/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
+	dev-perl/SNMP_Session
 	>=media-libs/gd-1.8.4"
+
+src_prepare() {
+	rm ./lib/mrtg2/{SNMP_{Session,util},BER}.pm || die
+}
 
 src_install () {
 	keepdir /var/lib/mrtg
 
-	emake DESTDIR="${D}" install || die "emake install failed"
-	mv "${D}"/usr/share/doc/mrtg2  "${D}"/usr/share/doc/${PF}
+	emake DESTDIR="${ED}" install || die "emake install failed"
+	mv "${ED}/usr/share/doc/"{mrtg2,${PF}}
 
-	newinitd "${FILESDIR}"/mrtg.rc ${PN}
-	newconfd "${FILESDIR}"/mrtg.confd ${PN}
-
+	newinitd "${FILESDIR}/mrtg.rc" ${PN} || die
+	newconfd "${FILESDIR}/mrtg.confd" ${PN} || die
 }
 
 pkg_postinst(){

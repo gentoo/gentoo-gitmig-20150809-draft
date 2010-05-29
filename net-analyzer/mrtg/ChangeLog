@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/mrtg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.98 2009/09/23 18:21:16 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.99 2010/05/29 04:48:18 pva Exp $
+
+*mrtg-2.16.2-r1 (29 May 2010)
+
+  29 May 2010; Peter Volkov <pva@gentoo.org> -mrtg-2.15.2.ebuild,
+  -mrtg-2.16.1.ebuild, +mrtg-2.16.2-r1.ebuild:
+  Use dev-perl/SNMP_Session instread of bunled one. Drop old.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mrtg-2.15.2.ebuild,
   mrtg-2.16.1.ebuild, mrtg-2.16.2.ebuild:
