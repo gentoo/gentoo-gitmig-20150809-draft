@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.51.ebuild,v 1.2 2010/05/29 00:20:10 flameeyes Exp $
 
 EAPI="2"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.53.ebuild,v 1.2 2010/05/29 00:20:10 flameeyes Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ src_configure() {
 		--enable-datafiles \
 		--enable-loopback=builtin \
 		$(use_enable caps capng) \
-		$(use_enable example test) \
+		$(use_enable examples test) \
 		$(use_enable ethernet ethernet builtin) \
 		$(use_enable wifi wifi builtin) \
 		$(use_enable bluetooth bluetooth builtin) \
