@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.61 2010/05/23 20:06:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.62 2010/05/29 12:44:33 flameeyes Exp $
+
+*tzinfo-0.3.22 (29 May 2010)
+
+  29 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +tzinfo-0.3.22.ebuild:
+  Version bump.
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> tzinfo-0.3.16.ebuild:
   stable amd64, bug 312963
