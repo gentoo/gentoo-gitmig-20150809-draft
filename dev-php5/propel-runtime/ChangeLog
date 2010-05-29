@@ -1,6 +1,14 @@
 # ChangeLog for dev-php5/propel-runtime
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-runtime/ChangeLog,v 1.9 2008/02/26 16:41:25 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-runtime/ChangeLog,v 1.10 2010/05/29 18:39:39 mabi Exp $
+
+*propel-runtime-1.5.1 (29 May 2010)
+
+  29 May 2010; <mabi@gentoo.org> -propel-runtime-1.3.0_beta2.ebuild,
+  -propel-runtime-1.3.0_beta3.ebuild, -propel-runtime-1.3.0_beta4.ebuild,
+  +propel-runtime-1.5.1.ebuild:
+  version bump, depends on dev-php/pear-1.9.0-1 because of pear channel name
+  change
 
 *propel-runtime-1.3.0_beta4 (26 Feb 2008)
 
