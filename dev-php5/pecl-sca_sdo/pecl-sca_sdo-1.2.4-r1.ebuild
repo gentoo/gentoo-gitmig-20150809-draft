@@ -1,13 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sca_sdo/pecl-sca_sdo-1.2.4.ebuild,v 1.2 2009/07/25 22:15:29 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sca_sdo/pecl-sca_sdo-1.2.4-r1.ebuild,v 1.1 2010/05/29 18:48:46 mabi Exp $
+
+EAPI="2"
 
 PHP_EXT_NAME="sdo"
 PHP_EXT_PECL_PKG="SCA_SDO"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 
-inherit eutils php-ext-pecl-r1 depend.php
+inherit eutils php-ext-pecl-r1
 
 KEYWORDS="~amd64 ~x86"
 
@@ -16,14 +18,11 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="examples"
 
-DEPEND=""
-RDEPEND=""
+DEPEND=">=dev-lang/php-5.2[json,soap,xml]
+	    || ( <dev-lang/php-5.3[pcre,reflection,spl] >=dev-lang/php-5.3.1 )"
+RDEPEND="${DEPEND}"
 
 need_php_by_category
-
-pkg_setup() {
-	require_php_with_use json reflection soap spl xml
-}
 
 src_unpack() {
 	php-ext-source-r1_src_unpack

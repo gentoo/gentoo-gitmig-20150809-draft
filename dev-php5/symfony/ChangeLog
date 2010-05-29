@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/symfony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.16 2010/04/15 21:50:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/symfony/ChangeLog,v 1.17 2010/05/29 18:45:33 mabi Exp $
+
+  29 May 2010; <mabi@gentoo.org> symfony-1.4.4.ebuild:
+  update for php-5.3 USE changes (bug #301159)
 
   15 Apr 2010; Markus Meier <maekke@gentoo.org> symfony-1.4.3.ebuild:
   amd64 stable, bug #250961
