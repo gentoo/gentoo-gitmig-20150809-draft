@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Console_Getargs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getargs/ChangeLog,v 1.2 2007/12/05 23:49:14 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Getargs/ChangeLog,v 1.3 2010/05/29 17:48:22 armin76 Exp $
+
+  29 May 2010; Raúl Porcel <armin76@gentoo.org>
+  PEAR-Console_Getargs-1.3.4.ebuild:
+  Add ~alpha/~ia64/~sparc
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   PEAR-Console_Getargs-1.3.4.ebuild:
