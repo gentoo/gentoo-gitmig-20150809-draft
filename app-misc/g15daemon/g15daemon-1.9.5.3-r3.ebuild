@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r3.ebuild,v 1.5 2010/03/09 21:53:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r3.ebuild,v 1.6 2010/05/29 21:11:59 arfrever Exp $
 
 EAPI=2
 
@@ -67,7 +67,6 @@ src_prepare() {
 		# perl-module_src_prepare always calls base_src_prepare
 		base_src_prepare
 	fi
-	use python && [[ -n "${SUPPORT_PYTHON_ABIS}" ]] && python_src_prepare
 }
 
 src_configure() {
@@ -121,9 +120,8 @@ src_install() {
 	if use python; then
 		ebegin "Installing Python Bindings (g15daemon.py)"
 		cd "${WORKDIR}/pyg15daemon"
-		PYVER="$(python_get_version)"
 
-		insinto /usr/$(get_libdir)/python${PYVER}/site-packages/g15daemon
+		insinto $(python_get_sitedir)/g15daemon
 		doins g15daemon.py
 
 		docinto python
@@ -133,8 +131,7 @@ src_install() {
 
 pkg_postinst() {
 	if use python; then
-		PYVER="$(python_get_version)"
-		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/g15daemon
+		python_mod_optimize $(python_get_sitedir)/g15daemon
 		echo ""
 	fi
 
@@ -155,6 +152,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if use python; then
-		python_mod_cleanup "/usr/$(get_libdir)/python*/site-packages/g15daemon"
+		python_mod_cleanup $(python_get_sitedir)/g15daemon
 	fi
 }
