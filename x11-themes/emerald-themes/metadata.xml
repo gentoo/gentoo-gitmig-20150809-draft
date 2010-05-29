@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-effects</herd>
-<maintainer>
-<email>nesl247@gmail.com</email>
-<name>Alex Heck</name>
-</maintainer>
 <longdescription lang="en">Emerald themes are the themes for emerald
 </longdescription>
 </pkgmetadata>
