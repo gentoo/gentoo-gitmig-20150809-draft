@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.3.ebuild,v 1.1 2010/05/19 20:43:06 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.3.ebuild,v 1.2 2010/05/29 12:50:53 cedk Exp $
 
 EAPI=2
 
@@ -38,8 +38,8 @@ src_prepare() {
 }
 
 src_configure() {
-	use gstreamer && ! use libcaca && \
-		die "You need to enable libcaca if you enable gstreamer"
+	use video && ! use libcaca && \
+		die "You need to enable libcaca if you enable video"
 
 	local mycmakeargs
 	mycmakeargs="${mycmakeargs}
