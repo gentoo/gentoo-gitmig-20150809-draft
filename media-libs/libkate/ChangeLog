@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.47 2010/04/15 13:35:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.48 2010/05/29 17:13:34 armin76 Exp $
+
+  29 May 2010; Raúl Porcel <armin76@gentoo.org> libkate-0.3.7.ebuild:
+  Add ~ia64 wrt #313245
 
   15 Apr 2010; Jeroen Roovers <jer@gentoo.org> libkate-0.3.7.ebuild:
   Marked ~hppa (bug #313245).

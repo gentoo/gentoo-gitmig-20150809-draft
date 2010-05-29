@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/liboggz-0.9.9.ebuild,v 1.2 2009/09/18 23:18:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/liboggz-0.9.9.ebuild,v 1.3 2010/05/29 17:09:09 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.annodex.net/software/liboggz/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc test"
 
 RDEPEND="media-libs/libogg"

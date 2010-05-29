@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.25 2010/04/15 13:35:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.26 2010/05/29 17:09:09 armin76 Exp $
+
+  29 May 2010; Raúl Porcel <armin76@gentoo.org> liboggz-0.9.9.ebuild,
+  liboggz-1.0.0.ebuild, liboggz-1.1.0.ebuild:
+  Add ~ia64 wrt #313245
 
   15 Apr 2010; Jeroen Roovers <jer@gentoo.org> liboggz-1.1.0.ebuild:
   Marked ~hppa (bug #313245).
