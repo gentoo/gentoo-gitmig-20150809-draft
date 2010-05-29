@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.7 2010/05/28 13:53:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0.ebuild,v 1.8 2010/05/29 13:40:46 xarthisius Exp $
 
 EAPI="2"
 
@@ -92,7 +92,7 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins "${WORKDIR}"/qgis_sample_data/* || die "Unable to install examples"
+		doins -r "${WORKDIR}"/qgis_sample_data/* || die "Unable to install examples"
 	fi
 }
 
