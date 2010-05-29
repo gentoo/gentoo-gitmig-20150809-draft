@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r1.ebuild,v 1.2 2010/05/29 09:31:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r1.ebuild,v 1.3 2010/05/29 10:13:09 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -28,9 +28,10 @@ RDEPEND="
 	java? ( >=virtual/jre-1.5 )
 	qt4? (
 			x11-libs/qt-core:4
-			x11-libs/qt-opengl:4
 			x11-libs/qt-gui:4
-			x11-libs/qt-sql )
+			x11-libs/qt-opengl:4
+			x11-libs/qt-sql:4
+			x11-libs/qt-webkit:4 )
 	examples? (
 			x11-libs/qt-core:4[qt3support]
 			x11-libs/qt-gui:4[qt3support] )
@@ -40,9 +41,13 @@ RDEPEND="
 	media-libs/freetype
 	media-libs/jpeg
 	media-libs/libpng
+	media-libs/mesa
 	media-libs/tiff
+	sys-libs/zlib
 	virtual/opengl
-	x11-libs/libXmu"
+	x11-libs/libX11
+	x11-libs/libXmu
+	x11-libs/libXt"
 
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
