@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.5.ebuild,v 1.1 2010/01/04 23:08:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.5.ebuild,v 1.2 2010/05/29 17:44:29 armin76 Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sensors-applet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE="+dbus hddtemp libnotify lm_sensors video_cards_fglrx video_cards_nvidia"
 
 RDEPEND="
