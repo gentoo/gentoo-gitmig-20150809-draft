@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r1.ebuild,v 1.3 2010/05/29 10:13:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.1 2010/05/29 11:15:43 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -19,7 +19,7 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="boost cg doc examples java mpi ogg patented python qt4 tcl tk threads R"
+IUSE="boost cg doc examples java mpi patented python qt4 tcl theora tk threads R"
 RDEPEND="
 	mpi? ( virtual/mpi[cxx,romio] )
 	cg? ( media-gfx/nvidia-cg-toolkit )
@@ -35,6 +35,7 @@ RDEPEND="
 	examples? (
 			x11-libs/qt-core:4[qt3support]
 			x11-libs/qt-gui:4[qt3support] )
+	theora? ( media-libs/libtheora )
 	R? ( dev-lang/R )
 	dev-libs/expat
 	dev-libs/libxml2
@@ -92,13 +93,13 @@ src_configure() {
 		-DVTK_DATA_ROOT:PATH="${EPREFIX}"/usr/share/${PN}/data
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
 		-DBUILD_SHARED_LIBS=ON
+		-DVTK_USE_SYSTEM_EXPAT=ON
 		-DVTK_USE_SYSTEM_FREETYPE=ON
 		-DVTK_USE_SYSTEM_JPEG=ON
+		-DVTK_USE_SYSTEM_LIBXML2=ON
 		-DVTK_USE_SYSTEM_PNG=ON
 		-DVTK_USE_SYSTEM_TIFF=ON
 		-DVTK_USE_SYSTEM_ZLIB=ON
-		-DVTK_USE_SYSTEM_EXPAT=ON
-		-DVTK_USE_SYSTEM_LIBXML2=ON
 		-DBUILD_TESTING=OFF
 		-DBUILD_EXAMPLES=OFF
 		-DVTK_USE_HYBRID=ON
@@ -120,6 +121,9 @@ src_configure() {
 		$(cmake-utils_use tk VTK_USE_TK)
 		$(cmake-utils_use threads VTK_USE_PARALLEL)
 		$(cmake-utils_use R VTK_USE_GNU_R) )
+
+	use ogg &&
+	mycmakeargs+=(-DVTK_USE_SYSTEM_OGGTHEORA=ON)
 
 	# mpi needs the parallel framework
 	if use mpi && use !threads; then
