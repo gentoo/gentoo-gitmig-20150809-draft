@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.3.ebuild,v 1.1 2010/05/26 23:05:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.3.ebuild,v 1.2 2010/05/29 16:28:53 jer Exp $
 
 EAPI="3"
 
@@ -33,7 +33,8 @@ DEPEND="${RDEPEND}
 	sys-apps/gawk"
 
 src_prepare() {
-	epatch "${FILESDIR}/rrdtool-1.3.8-configure.ac.patch"
+	epatch "${FILESDIR}/${PN}-1.3.8-configure.ac.patch"
+	epatch "${FILESDIR}/${P}-ruby-ldflags.patch"
 	sed -i '/PERLLD/s:same as PERLCC:same-as-PERLCC:' configure.ac #281694
 	eautoconf
 }

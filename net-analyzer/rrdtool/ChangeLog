@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.203 2010/05/26 23:05:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.204 2010/05/29 16:28:53 jer Exp $
+
+  29 May 2010; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.3.ebuild,
+  +files/rrdtool-1.4.3-ruby-ldflags.patch:
+  Fix space separation between LDFLAGS (bug #321749).
 
 *rrdtool-1.4.3 (26 May 2010)
 
