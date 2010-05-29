@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jtds
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.25 2010/04/05 23:04:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtds/ChangeLog,v 1.26 2010/05/29 08:36:19 betelgeuse Exp $
+
+*jtds-1.2.5 (29 May 2010)
+
+  29 May 2010; Petteri Räty <betelgeuse@gentoo.org> +jtds-1.2.5.ebuild:
+  Version bump. Doesn't need junit to build any more. Fixes bug #321795.
 
   05 Apr 2010; Vlastimil Babka <caster@gentoo.org>
   -files/1.0.3-buildxml.patch, -jtds-1.2-r2.ebuild,
