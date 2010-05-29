@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-1.2.ebuild,v 1.1 2009/09/14 10:58:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-1.2.ebuild,v 1.2 2010/05/29 20:50:21 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
 
-inherit python
+inherit distutils
 
 DESCRIPTION="Google's C++ argument parsing library with python extensions."
 HOMEPAGE="http://code.google.com/p/google-gflags/"
@@ -14,16 +16,18 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="python"
 
-DEPEND="python? ( dev-lang/python )"
-RDEPEND="${DEPEND}"
+DEPEND=""
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
+
+PYTHON_MODNAME="gflags.py"
 
 src_compile() {
 	default
 
 	if use python; then
 		cd python
-		python_version
-		"${python}" setup.py build || die "python build failed"
+		distutils_src_compile
 	fi
 }
 
@@ -36,16 +40,18 @@ src_install() {
 
 	if use python; then
 		cd python
-		python_version
-		"${python}" setup.py install --root="${D}" --no-compile || die "python install failed"
-		python_need_rebuild
+		distutils_src_install
 	fi
 }
 
 pkg_postinst() {
-	python_mod_optimize
+	if use python; then
+		distutils_pkg_postinst
+	fi
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	if use python; then
+		distutils_pkg_postrm
+	fi
 }
