@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.257 2010/05/03 19:34:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.258 2010/05/29 06:35:55 hollow Exp $
+
+  29 May 2010; Benedikt Böhm <hollow@gentoo.org> nginx-0.7.65-r1.ebuild,
+  -nginx-0.8.34-r1.ebuild, -nginx-0.8.35.ebuild, -nginx-0.8.36.ebuild,
+  nginx-0.8.36-r1.ebuild:
+  add vim-syntax support wrt #289926
 
 *nginx-0.8.36-r1 (03 May 2010)
 

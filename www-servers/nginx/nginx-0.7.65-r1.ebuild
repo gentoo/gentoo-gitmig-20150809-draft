@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.65-r1.ebuild,v 1.3 2010/03/26 14:10:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.65-r1.ebuild,v 1.4 2010/05/29 06:35:55 hollow Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ perl random_index realip secure_link stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
 NGINX_MODULES_3RD="http_passenger"
 
-IUSE="aio debug +http +http-cache ipv6 libatomic +pcre ssl"
+IUSE="aio debug +http +http-cache ipv6 libatomic +pcre ssl vim-syntax"
 
 for mod in $NGINX_MODULES_STD; do
 	IUSE="${IUSE} +nginx_modules_http_${mod}"
@@ -69,6 +69,7 @@ CDEPEND="
 RDEPEND="${RDEPEND} ${CDEPEND}"
 DEPEND="${DEPEND} ${CDEPEND}
 	libatomic? ( dev-libs/libatomic_ops )"
+PDEPEND="vim-syntax? ( app-vim/nginx-syntax )"
 
 pkg_setup() {
 	ebegin "Creating nginx user and group"
