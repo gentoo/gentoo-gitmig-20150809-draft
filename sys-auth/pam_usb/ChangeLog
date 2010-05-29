@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_usb
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.15 2008/08/27 18:53:48 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.16 2010/05/29 17:42:56 armin76 Exp $
+
+  29 May 2010; Raúl Porcel <armin76@gentoo.org> pam_usb-0.4.2.ebuild:
+  Add ~alpha
 
   27 Aug 2008; Raúl Porcel <armin76@gentoo.org> pam_usb-0.4.2.ebuild:
   Re-add ~ia64/~sparc
