@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql-proxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/ChangeLog,v 1.6 2010/05/14 10:34:29 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/ChangeLog,v 1.7 2010/05/29 20:45:04 robbat2 Exp $
+
+*mysql-proxy-0.8.0-r1 (29 May 2010)
+
+  29 May 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +files/mysql-proxy.confd-0.8.0-r1, +mysql-proxy-0.8.0-r1.ebuild,
+  +files/mysql-proxy.cnf, files/mysql-proxy.initd:
+  Include a config file for easier usage of mysql-proxy. Upstream moved the
+  binary as well, so update init.d to reflect new /usr/bin/ location.
 
 *mysql-proxy-0.8.0 (14 May 2010)
 
