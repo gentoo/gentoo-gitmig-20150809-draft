@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.28.2.ebuild,v 1.3 2010/04/12 18:48:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.28.2.ebuild,v 1.4 2010/05/29 17:40:46 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="avahi doc networkmanager +nss test"
 # introspection
 
