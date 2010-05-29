@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.0-r4.ebuild,v 1.8 2010/03/14 10:57:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.0-r4.ebuild,v 1.9 2010/05/29 15:22:42 armin76 Exp $
 
 EAPI="1"
 
@@ -141,10 +141,10 @@ src_compile() {
 			--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1 \
 			--enable-install-libxf86config \
 			--enable-dri2 \
-			--enable-glx \
 			--disable-config-dbus \
 			--disable-config-hal \
 			$(use_enable opengl glx) \
+			$(use_enable nptl glx-tls) \
 			|| die "econf server failed"
 		emake || die "emake server failed"
 	fi
