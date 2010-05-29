@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sat4j-pseudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-pseudo/ChangeLog,v 1.4 2010/04/13 11:59:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-pseudo/ChangeLog,v 1.5 2010/05/29 16:34:52 phajdan.jr Exp $
+
+  29 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  sat4j-pseudo-2.1.1.ebuild:
+  x86 stable wrt bug #318541
 
   13 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   sat4j-pseudo-2.1.ebuild:
