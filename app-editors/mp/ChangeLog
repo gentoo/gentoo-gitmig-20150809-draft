@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.70 2010/05/22 09:02:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.71 2010/05/29 19:34:36 armin76 Exp $
+
+  29 May 2010; Raúl Porcel <armin76@gentoo.org> mp-5.1.1.ebuild:
+  Add ~alpha/~ia64/~sparc
 
   22 May 2010; Justin Lecher <jlec@gentoo.org> mp-3.3.18b.ebuild,
   mp-5.1.1.ebuild:
