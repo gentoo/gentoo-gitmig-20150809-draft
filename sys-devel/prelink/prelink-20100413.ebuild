@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100413.ebuild,v 1.1 2010/05/29 07:12:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100413.ebuild,v 1.2 2010/05/29 07:59:25 dirtyepic Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ src_prepare() {
 
 	sed -i -e 's:undosyslibs.sh::' testsuite/Makefile.in #254201
 	sed -i -e '/^CC=/s: : -Wl,--disable-new-dtags :' testsuite/functions.sh #100147
-	sed -i -e '/^CC=/s: : -Wl,--add-needed :' testsuite/functions.sh #303797
+#	sed -i -e '/^CC=/s: : -Wl,--add-needed :' testsuite/functions.sh #303797
 }
 
 src_install() {
