@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.99 2010/05/25 19:49:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.100 2010/05/29 16:39:13 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1923,7 +1923,9 @@ _python_clean_compiled_modules() {
 			if [[ "${EBUILD_PHASE}" == "postrm" ]]; then
 				# Delete empty child directories.
 				find "${path}" -type d | sort -r | while read -r dir; do
-					rmdir "${dir}" 2> /dev/null && echo "${_CYAN}<<< ${dir}${_NORMAL}"
+					if rmdir "${dir}" 2> /dev/null; then
+						echo "${_CYAN}<<< ${dir}${_NORMAL}"
+					fi
 				done
 			fi
 		elif [[ "${path}" == *.py ]]; then
@@ -1979,8 +1981,8 @@ _python_clean_compiled_modules() {
 			# Delete empty parent directories.
 			dir="${compiled_file%/*}"
 			while [[ "${dir}" != "${root}" ]]; do
-				if rmdir "${compiled_file%/*}" 2> /dev/null; then
-					echo "${_CYAN}<<< ${compiled_file%/*}${_NORMAL}"
+				if rmdir "${dir}" 2> /dev/null; then
+					echo "${_CYAN}<<< ${dir}${_NORMAL}"
 				else
 					break
 				fi
