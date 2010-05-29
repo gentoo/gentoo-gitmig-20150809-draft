@@ -72,6 +72,7 @@ bs2b
 tokyocabinet
 schroedinger
 ots
+eclipse
 
 # Stuff that doesn't compile on ia64
 chicken
