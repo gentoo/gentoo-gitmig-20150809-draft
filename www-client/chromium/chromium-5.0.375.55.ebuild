@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.55.ebuild,v 1.2 2010/05/26 06:35:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.55.ebuild,v 1.3 2010/05/29 15:47:26 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -92,6 +92,10 @@ EOF
 	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
 	# and the performance gain isn't worth it.
 	myconf="${myconf} -Dv8_use_snapshot=0"
+
+	# Disable tcmalloc memory allocator. It causes problems,
+	# for example bug #320419.
+	myconf="${myconf} -Dlinux_use_tcmalloc=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
