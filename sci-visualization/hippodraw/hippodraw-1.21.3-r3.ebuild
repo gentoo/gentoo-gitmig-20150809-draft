@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.2 2010/05/23 14:07:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.3 2010/05/29 16:43:31 grobian Exp $
 
-EAPI=3
+EAPI="3"
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
@@ -122,10 +122,10 @@ src_compile() {
 	python_copy_sources python
 	compilation() {
 	emake \
-		PYTHON_INCLUDES="$(python_get_includedir)" \
-		PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
-		NUMARRAY_INCLUDE="$(python_get_sitedir)/numpy/core/include" \
-		PY_INCLUDE="$(python_get_includedir)"
+		PYTHON_INCLUDES="${EPREFIX}$(python_get_includedir)" \
+		PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
+		NUMARRAY_INCLUDE="${EPREFIX}$(python_get_sitedir)/numpy/core/include" \
+		PY_INCLUDE="${EPREFIX}$(python_get_includedir)"
 	}
 	python_execute_function -s --source-dir python compilation
 }
@@ -134,10 +134,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	installation() {
 		emake DESTDIR="${D}" \
-		PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
-		docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
-		exampledir="${EPREFIX}"/usr/share/doc/${PF}/python/examples \
-		install
+			PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
+			docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
+			exampledir="${EPREFIX}"/usr/share/doc/${PF}/python/examples \
+			install
 	}
 	python_execute_function -s --source-dir python installation
 	python_clean_installation_image
