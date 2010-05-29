@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/rskkserv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.22 2009/08/22 22:07:45 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.23 2010/05/29 10:31:52 matsuu Exp $
+
+*rskkserv-2.95.4-r1 (29 May 2010)
+
+  29 May 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -files/rskkserv-2.94.13-conf-gentoo.diff,
+  -files/rskkserv-2.94.13-gentoo.diff, +rskkserv-2.95.4-r1.ebuild,
+  +files/rskkserv-2.95.4-gentoo.patch, files/rskkserv-2.95.initd,
+  -files/rskkserv.initd:
+  Convert to ruby-ng. Added ~amd64.
 
   22 Aug 2009; Alex Legler <a3li@gentoo.org> rskkserv-2.95.3-r1.ebuild,
   rskkserv-2.95.4.ebuild:
