@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.147 2010/05/20 17:17:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.148 2010/05/29 16:18:05 jer Exp $
+
+*parted-2.3 (29 May 2010)
+
+  29 May 2010; Jeroen Roovers <jer@gentoo.org> +parted-2.3.ebuild:
+  Version bump.
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org> parted-2.2.ebuild:
   Reverting x86 stabilisation (bug #316453).
