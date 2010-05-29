@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.23 2010/05/18 16:53:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.24 2010/05/29 15:50:32 arfrever Exp $
+
+  29 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pythonmagick-0.9.1.ebuild,
+  +files/pythonmagick-0.9.1-use_active_python_version.patch:
+  Set SUPPORT_PYTHON_ABIS.
 
   18 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
   -pythonmagick-0.8-r2.ebuild, pythonmagick-0.9.1.ebuild:
