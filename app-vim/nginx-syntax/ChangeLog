@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/nginx-syntax
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nginx-syntax/ChangeLog,v 1.1 2010/05/29 06:29:11 hollow Exp $
+
+*nginx-syntax-0.3.1 (29 May 2010)
+
+  29 May 2010; Benedikt Böhm <hollow@gentoo.org>
+  +nginx-syntax-0.3.1.ebuild, +metadata.xml:
+  initial ebuild, thanks to Denis Seleznyov (bug #289926)
+
