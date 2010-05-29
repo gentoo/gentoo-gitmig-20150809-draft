@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.5 2010/05/18 18:44:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.6 2010/05/29 12:51:57 flameeyes Exp $
+
+*faraday-0.4.6 (29 May 2010)
+
+  29 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +faraday-0.4.6.ebuild:
+  Version bump.
 
   18 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   faraday-0.4.5.ebuild:
