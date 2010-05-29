@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.178 2010/05/23 12:19:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.179 2010/05/29 08:36:21 grobian Exp $
+
+  29 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop git mask for version no longer in the tree
 
   23 May 2010; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:

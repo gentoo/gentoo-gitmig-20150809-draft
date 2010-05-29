@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.60 2010/05/23 10:53:51 grobian Exp $
+# $Id: package.mask,v 1.61 2010/05/29 08:36:21 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,10 +32,6 @@
 
 #--- END OF EXAMPLES ---
 
-
-# Fabian Groffen <grobian@gentoo.org> (23 May 2010)
-# Mask dev-vcs/git-1.7.1, it Bus Errors on cherry-pick, bug #320871
-=dev-vcs/git-1.7.1
 
 # Fabian Groffen <grobian@gentoo.org> (14 May 2010)
 # Experimental version to support service scripts, bug #196294
