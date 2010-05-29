@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.144.ebuild,v 1.3 2010/03/31 18:16:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.147.ebuild,v 1.1 2010/05/29 06:10:52 dirtyepic Exp $
 
 inherit eutils
 
@@ -35,7 +35,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.118-PaX-support.patch
 	epatch "${FILESDIR}"/${PN}-0.143-configure.patch #287130
-	epatch "${FILESDIR}"/${P}-sloppy-include.patch
 	find . -name Makefile.in -print0 | xargs -0 sed -i -e 's:-W\(error\|extra\)::g'
 	use test || sed -i -e 's: tests::' Makefile.in #226349
 }
