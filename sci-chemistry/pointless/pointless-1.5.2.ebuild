@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.4.8.ebuild,v 1.1 2010/02/06 22:28:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.5.2.ebuild,v 1.1 2010/05/29 08:09:04 jlec Exp $
 
-inherit toolchain-funcs multilib
+EAPI="3"
+
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Scores crystallographic Laue and space groups"
 HOMEPAGE="ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/pointless.html"
@@ -21,6 +23,11 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/1.5.1-gcc4.4.patch
+#epatch "${FILESDIR}"/${PV}-linking.patch
+}
+
 src_compile() {
 	emake  \
 		-f Makefile.make \
@@ -35,7 +42,7 @@ src_compile() {
 		ICCP4=-I"${EPREFIX}"/usr/include/ccp4 \
 		ICLPR="-I${EPREFIX}/usr/include -I${EPREFIX}/usr/$(get_libdir)/cctbx/cctbx_sources -I${EPREFIX}/usr/$(get_libdir)/cctbx/cctbx_build/include" \
 		LTBX="-L${EPREFIX}/usr/$(get_libdir)/cctbx/cctbx_build/lib -lcctbx" \
-		LCCP4="$(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -L${EPREFIX}/usr/$(get_libdir) -lgfortran -lgfortranbegin -lccp4c -lccp4f -lm" \
+		SLIB="$(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -L${EPREFIX}/usr/$(get_libdir) -lgfortran -lgfortranbegin" \
 		|| die
 }
 
