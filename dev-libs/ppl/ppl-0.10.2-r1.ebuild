@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.2-r1.ebuild,v 1.6 2010/05/27 04:33:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.2-r1.ebuild,v 1.7 2010/05/29 05:52:36 dirtyepic Exp $
 
 EAPI=2
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="The Parma Polyhedra Library provides numerical abstractions for analysis of complex systems"
 HOMEPAGE="http://www.cs.unipr.it/ppl/"
@@ -25,6 +25,11 @@ pkg_setup() {
 		ewarn "Note that this can take several hours to complete on a fast machine."
 		epause 3
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gmp-5-fix.patch
+	eautoreconf
 }
 
 src_configure() {

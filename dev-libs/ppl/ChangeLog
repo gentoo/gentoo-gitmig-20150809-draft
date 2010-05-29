@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.24 2010/05/27 04:33:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.25 2010/05/29 05:52:36 dirtyepic Exp $
+
+  29 May 2010; Ryan Hill <dirtyepic@gentoo.org> ppl-0.10.2-r1.ebuild,
+  +files/ppl-0.10.2-gmp-5-fix.patch:
+  Fix configure failure with GMP 5.0. (bug #318845 by Mat)
 
   27 May 2010; Jeroen Roovers <jer@gentoo.org> ppl-0.10.2-r1.ebuild:
   Stable for HPPA (bug #319885).
