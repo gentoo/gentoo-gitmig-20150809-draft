@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/amiwm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.10 2009/12/27 13:33:41 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.11 2010/05/29 13:10:44 xarthisius Exp $
+
+  29 May 2010; Kacper Kowalik <xarthisius@gentoo.org> amiwm-0.20_p48.ebuild,
+  +files/amiwm-0.20_p48-gentoo.diff:
+  Fix parallel build wrt bug 248680, don't strip files wrt bug 299918.
+  Thanks
+  Diego for reporting.
+  Fix install directories, respect CC and user flags, multilib-strict.
+  Fix incompatible implicit declaration of built-in function.
+  Update dependencies.
 
   27 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   amiwm-0.20_p48.ebuild:

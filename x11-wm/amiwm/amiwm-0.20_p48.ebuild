@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/amiwm-0.20_p48.ebuild,v 1.10 2009/12/27 13:33:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/amiwm-0.20_p48.ebuild,v 1.11 2010/05/29 13:10:44 xarthisius Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit eutils multilib toolchain-funcs
 
 MY_P="${PN}${PV/_p/pl}"
 DESCRIPTION="Windowmanager ala Amiga(R) Workbench(R)"
@@ -14,39 +16,42 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/libX11
+COMMON_DEPEND="x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXext"
-DEPEND="${RDEPEND}
+
+RDEPEND="${COMMON_DEPEND}
+	media-gfx/xloadimage
+	x11-apps/xrdb
+	x11-apps/xsetroot
+	x11-terms/xterm"
+DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-flex.patch #110169
+pkg_setup() {
+	tc-export CC
 }
 
-src_compile() {
-	econf
-	# bug #248680
-	emake -j1 || die "build failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-flex.patch \
+		"${FILESDIR}"/${P}-gentoo.diff
+	sed -i -e "s:\$(exec_prefix)/lib:\$(exec_prefix)/$(get_libdir):" \
+		Makefile.in || die
+	sed -i -e "s:/bin/ksh:/bin/sh:g" Xsession{,2}.in || die
 }
 
 src_install() {
-	dodir /usr/bin
-	einstall || die
+	emake DESTDIR="${D}" install || die
 
-	rm "${D}"/usr/bin/requestchoice
-	dosym /usr/lib/amiwm/requestchoice /usr/bin/requestchoice
-
-	dosed /usr/lib/amiwm/{Xinitrc,Xsession,Xsession2}
-
-	dodoc INSTALL README*
+	dodoc README* || die
 
 	exeinto /etc/X11/Sessions
-	echo "/usr/bin/amiwm" > "${T}"/amiwm
+	cat <<- EOF > "${T}"/amiwm
+		#!/bin/sh
+		exec /usr/bin/amiwm
+	EOF
 	doexe "${T}"/amiwm
 }
