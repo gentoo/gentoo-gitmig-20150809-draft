@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r1.ebuild,v 1.1 2010/05/28 20:05:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r1.ebuild,v 1.2 2010/05/29 09:31:31 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -47,7 +47,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
 		boost? ( >=dev-libs/boost-1.40.0 )
-		mpi? ( >=dev-util/cmake-2.8 )
+		mpi? ( >=dev-util/cmake-2.8.1-r2 )
 		>=dev-util/cmake-2.6"
 
 S="${WORKDIR}"/VTK
