@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.25 2010/05/29 09:24:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.26 2010/05/29 19:18:41 jlec Exp $
+
+  29 May 2010; Justin Lecher <jlec@gentoo.org> picard-0.12.1-r1.ebuild:
+  Run configure just ones
 
 *picard-0.12.1-r1 (29 May 2010)
 
