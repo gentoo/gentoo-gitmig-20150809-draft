@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.32 2010/05/25 21:15:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.33 2010/05/30 16:14:59 phajdan.jr Exp $
+
+  30 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libnfnetlink-1.0.0.ebuild:
+  x86 stable wrt bug #320219
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> libnfnetlink-1.0.0.ebuild:
   stable amd64, bug 320219
