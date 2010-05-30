@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4-r1.ebuild,v 1.1 2010/05/28 20:54:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4-r1.ebuild,v 1.2 2010/05/30 20:22:14 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -20,7 +20,6 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXft
-	dev-lang/python
 	dev-python/python-xlib
 	sys-apps/sed
 	media-libs/imlib2[X]"
