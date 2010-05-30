@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.9a.ebuild,v 1.4 2010/03/10 18:37:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.9a.ebuild,v 1.5 2010/05/30 17:42:47 armin76 Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-KEYWORDS="~amd64 ~ia64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ppc ~s390 ~sh ~sparc x86"
 
 DESCRIPTION="ASN.1 types and codecs (BER, CER, DER) implementation."
 HOMEPAGE="http://pyasn1.sourceforge.net/"
