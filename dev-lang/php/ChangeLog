@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.380 2010/05/28 20:07:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.381 2010/05/30 10:05:20 mabi Exp $
+
+  30 May 2010; <mabi@gentoo.org> -files/20php4-envd, php-5.3.2.ebuild,
+  -files/php4-ldvs:
+  fix iodbc USE dep (bug #285419), remove unneeded php4 files
 
   28 May 2010; <mabi@gentoo.org> php-5.3.2.ebuild:
   add flex dependency (bug #221357)
