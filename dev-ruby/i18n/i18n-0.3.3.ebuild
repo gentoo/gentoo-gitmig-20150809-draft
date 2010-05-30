@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.3.3.ebuild,v 1.8 2010/05/23 21:46:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.3.3.ebuild,v 1.9 2010/05/30 17:14:54 armin76 Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://rails-i18n.org/"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND=""
