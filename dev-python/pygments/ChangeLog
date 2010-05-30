@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.63 2010/05/24 15:09:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.64 2010/05/30 20:08:00 grobian Exp $
+
+  30 May 2010; Fabian Groffen <grobian@gentoo.org> pygments-1.3.1.ebuild:
+  Marked ~*-solaris
 
   23 May 2010; <nixnut@gentoo.org> pygments-1.3.1.ebuild:
   ppc stable #313773
