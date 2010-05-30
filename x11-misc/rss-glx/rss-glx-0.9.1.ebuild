@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.1 2010/02/08 09:13:50 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.2 2010/05/30 10:54:44 xarthisius Exp $
 
 EAPI=2
-inherit autotools multilib
+inherit autotools eutils multilib
 
 MY_P=${PN}_${PV}
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+bzip2 openal"
+IUSE="+bzip2 openal quesoglc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -23,7 +23,8 @@ RDEPEND="x11-libs/libX11
 	>=media-gfx/imagemagick-6.4
 	>=x11-misc/xscreensaver-5.08-r2
 	bzip2? ( app-arch/bzip2 )
-	openal? ( >=media-libs/freealut-1.1.0-r1 )"
+	openal? ( >=media-libs/freealut-1.1.0-r1 )
+	quesoglc? ( media-libs/quesoglc )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	dev-util/pkgconfig
@@ -35,6 +36,8 @@ src_prepare() {
 	sed -e '/CFLAGS=/s:-O2:${CFLAGS}:' \
 		-e '/CXXFLAGS=/s:-O2:${CXXFLAGS}:' \
 		-i configure.in || die "sed failed"
+	epatch "${FILESDIR}"/${P}-quesoglc.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 	eautoreconf
 }
 
@@ -45,12 +48,13 @@ src_configure() {
 		--disable-dependency-tracking \
 		$(use_enable bzip2) \
 		$(use_enable openal sound) \
+		$(use_with quesoglc) \
 		--with-configdir=/usr/share/xscreensaver/config
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README*
+	dodoc ChangeLog README* || die
 }
 
 pkg_postinst() {
