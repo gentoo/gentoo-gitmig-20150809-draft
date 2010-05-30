@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.5.0.ebuild,v 1.2 2010/04/08 18:31:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.5.2.ebuild,v 1.1 2010/05/30 06:20:04 hollow Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-db/sqlite-3.5.9:3
 	>=sys-fs/udev-145[extras]
 	>=x11-libs/gtk+-2.14.4:2"
 DEPEND="${RDEPEND}
-	=dev-lang/vala-0.7*"
+	>=dev-lang/vala-0.8"
 
 DOCS="AUTHORS MAINTAINERS NEWS README THANKS"
 
