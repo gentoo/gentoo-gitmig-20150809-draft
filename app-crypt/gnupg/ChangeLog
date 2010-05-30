@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.372 2010/05/30 13:53:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.373 2010/05/30 20:01:14 grobian Exp $
+
+  30 May 2010; Fabian Groffen <grobian@gentoo.org> gnupg-2.0.15.ebuild:
+  Marked ~sparc-solaris, ~sparc64-solaris, ~x64-macos
 
   30 May 2010; Fabian Groffen <grobian@gentoo.org> gnupg-2.0.15.ebuild:
   Disable symcryptrun on Solaris, there is no openpty out there
