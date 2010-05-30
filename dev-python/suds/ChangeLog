@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/suds
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.1 2010/05/30 09:23:07 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.2 2010/05/30 11:27:51 cedk Exp $
+
+  30 May 2010; Cédric Krier <cedk@gentoo.org> suds-0.3.9.ebuild:
+  Add doc use flag
 
 *suds-0.3.9 (30 May 2010)
 
