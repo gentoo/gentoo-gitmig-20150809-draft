@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbweather
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.26 2008/12/27 23:06:43 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.27 2010/05/30 13:46:26 xarthisius Exp $
+
+*bbweather-0.6.3 (30 May 2010)
+
+  30 May 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +bbweather-0.6.3.ebuild, +files/bbweather-asneeded.patch:
+  Version bump, also fixing build with as-needed wrt bug 248556. Thanks
+  Diego for reporting
 
   27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> -bbweather-0.5.ebuild,
   -bbweather-0.6.ebuild, bbweather-0.6.2.ebuild:
