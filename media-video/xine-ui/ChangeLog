@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.172 2010/05/24 18:57:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.173 2010/05/30 18:41:54 armin76 Exp $
+
+  30 May 2010; Raúl Porcel <armin76@gentoo.org> xine-ui-0.99.6.ebuild:
+  alpha/sparc stable wrt #317143
 
   24 May 2010; Pacho Ramos <pacho@gentoo.org> xine-ui-0.99.6.ebuild:
   stable amd64, bug 317143
