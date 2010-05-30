@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/odfdom
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/ChangeLog,v 1.1 2010/05/30 02:53:55 ali_bush Exp $
+
+*odfdom-0.8 (30 May 2010)
+
+  30 May 2010; Alistair Bush <ali_bush@gentoo.org> +odfdom-0.8.ebuild,
+  +files/build.xml, +metadata.xml:
+  Add package odfdom.
+
