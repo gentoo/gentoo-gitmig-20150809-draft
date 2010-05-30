@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.6 2010/05/25 21:28:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.7 2010/05/30 16:22:32 phajdan.jr Exp $
 
 inherit autotools gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.imendio.com/pub/imendio/${PN}/src/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~ppc-macos"
 
 IUSE="asyncns doc ssl debug test"
 
@@ -53,7 +53,7 @@ src_unpack() {
 	# Fix detection of gnutls-2.8, bug #272027
 	epatch "${FILESDIR}/${P}-gnutls28.patch"
 
- 	# Fix digest auth with SRV (or similar)
+	# Fix digest auth with SRV (or similar)
 	# Upstream: http://loudmouth.lighthouseapp.com/projects/17276-libloudmouth/tickets/44-md5-digest-uri-not-set-correctly-when-using-srv
 	epatch "${FILESDIR}/${P}-fix-sasl-md5-digest-uri.patch"
 
