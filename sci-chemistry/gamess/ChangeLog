@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.40 2010/05/24 12:38:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.41 2010/05/30 07:00:00 alexxy Exp $
+
+  30 May 2010; Alexey Shvetsov <alexxy@gentoo.org> gamess-20100325.2.ebuild,
+  +files/gamess-20100325.2.gentoo.patch:
+  make it build with new buildsystem
 
 *gamess-20100325.2 (24 May 2010)
 

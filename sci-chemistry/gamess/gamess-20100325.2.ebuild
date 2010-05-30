@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20100325.2.ebuild,v 1.2 2010/05/24 12:42:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20100325.2.ebuild,v 1.3 2010/05/30 07:00:00 alexxy Exp $
 
 EAPI="2"
 
@@ -94,7 +94,7 @@ src_unpack() {
 
 src_prepare() {
 	# apply LINUX-arch patches to gamess makesfiles
-	epatch "${FILESDIR}"/${PN}-20090112.1.gentoo.patch
+	epatch "${FILESDIR}"/${P}.gentoo.patch
 	# select arch
 	# NOTE: please leave lked alone; it should be good as is!!
 	cd "${S}"
@@ -104,9 +104,6 @@ src_prepare() {
 	else
 		active_arch="linux32";
 	fi
-	sed -e "s:gentoo-target:${active_arch}:" \
-		-i comp compall ddi/compddi \
-		|| die "Failed to select proper architecure"
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
@@ -142,15 +139,27 @@ src_prepare() {
 			 -i source/inputb.src \
 			 || die "Setting QMMM_GAMESS_MAXMM failed"
 		fi
-		sed -e "s:maxclass=250:maxclass=$QMMM_GAMESS_MAXCLASS:g" \
-			-i tinker/sizes.i \
-			|| die "Setting QMMM_GAMESS_MAXCLASS failed"
-		sed -e "s:maxtyp=500:maxtyp=$QMMM_GAMESS_MAXCTYP:g" \
-			-i tinker/sizes.i \
-			|| die "Setting QMMM_GAMESS_MAXCTYP failed"
-		sed -e "s:maxhess=1000000:maxhess=$QMMM_GAMESS_MAXHESS:g" \
-			-i tinker/sizes.i \
-			|| die "Setting QMMM_GAMESS_MAXHESS failed"
+		if [ "x$QMMM_GAMESS_MAXCLASS" == "x" ]; then
+			einfo "No QMMM_GAMESS_MAXMM set. Using default value = 250"
+		else
+			sed -e "s:maxclass=250:maxclass=$QMMM_GAMESS_MAXCLASS:g" \
+				-i tinker/sizes.i \
+				|| die "Setting QMMM_GAMESS_MAXCLASS failed"
+		fi
+		if [ "x$QMMM_GAMESS_MAXCTYP" == "x" ]; then
+			einfo "No QMMM_GAMESS_MAXCTYP set. Using default value = 500"
+		else
+			sed -e "s:maxtyp=500:maxtyp=$QMMM_GAMESS_MAXCTYP:g" \
+				-i tinker/sizes.i \
+				|| die "Setting QMMM_GAMESS_MAXCTYP failed"
+		fi
+		if [ "x$QMMM_GAMESS_MAXHESS" == "x" ]; then
+			einfo "No QMMM_GAMESS_MAXHESS set. Usingdefault value = 1000000"
+		else
+			sed -e "s:maxhess=1000000:maxhess=$QMMM_GAMESS_MAXHESS:g" \
+				-i tinker/sizes.i \
+				|| die "Setting QMMM_GAMESS_MAXHESS failed"
+		fi
 	fi
 	# greate proper activate sourcefile
 	cp "./tools/actvte.code" "./tools/actvte.f" || \
@@ -167,33 +176,33 @@ src_prepare() {
 	# specific stuff
 	if [[ "${FORTRANC}" == "ifc" ]]; then
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS} -quiet'/" \
-			-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	elif ! use x86; then
 		sed -e "s/-malign-double //" \
 			-e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
-			-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	else
 		sed -e "s/gentoo-OPT = '-O2'/OPT = '${FFLAGS}'/" \
-			-e "s/gentoo-g77/${FORTRANC}/" \
 			-i comp || die "Failed setting up comp script"
 	fi
 
 	# fix up GAMESS' linker script;
-	sed -e "s/gentoo-g77/${FORTRANC}/" \
-		-e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
+	sed -e "s/gentoo-LDOPTS=' '/LDOPTS='${LDFLAGS}'/" \
 		-i lked || die "Failed setting up lked script"
-
 	# fix up GAMESS' ddi TCP/IP socket build
 	sed -e "s/gentoo-CC = 'gcc'/CC = '$(tc-getCC)'/" \
-		-e "s/gentoo-g77/${FORTRANC}/" \
 		-i ddi/compddi || die "Failed setting up compddi script"
+	# Creating install.info
+	cat > install.info <<-EOF
+	#!/bin/csh
+	setenv GMS_PATH $WORKDIR/gamess
+	setenv GMS_TARGET $active_arch
+	setenv GMS_FORTRAN $FORTRANC
+	setenv GMS_MATHLIB atlas
+	setenv GMS_MATHLIB_PATH  /usr/$(get_libdir)/atlas
+	setenv GMS_DDI_COMM sockets
+	EOF
 
-	# fix up the checker scripts for gamess tests
-	sed -e "s:set GMSPATH:#set GMSPATH:g" \
-		-e "s:\$GMSPATH/tools/checktst:.:g" \
-		-i tools/checktst/checktst
 }
 
 src_compile() {
