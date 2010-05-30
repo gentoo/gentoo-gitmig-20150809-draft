@@ -12,5 +12,7 @@
 		<flag name='ipalias'>Enables enable-ip-alias-domains</flag>
 		<flag name='maildrop'>Enables <pkg>mail-filter/maildrop</pkg> support
 			in vdelivermail</flag>
+		<flag name='spamassassin'>Enables <pkg>mail-filter/spamassassin</pkg>
+			support</flag>
 	</use>
 </pkgmetadata>
