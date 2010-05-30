@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.15.ebuild,v 1.5 2010/05/26 15:41:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.15.ebuild,v 1.6 2010/05/30 13:53:48 grobian Exp $
 
 EAPI="3"
 
@@ -54,13 +54,13 @@ src_configure() {
 
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		--enable-symcryptrun \
 		--enable-gpg \
 		--enable-gpgsm \
 		--enable-agent \
 		$(use_with adns) \
 		$(use_enable bzip2) \
 		$(use_enable smartcard scdaemon) \
+		$(use_enable !elibc_SunOS symcryptrun) \
 		$(use_enable nls) \
 		$(use_enable ldap) \
 		$(use_with caps capabilities) \
