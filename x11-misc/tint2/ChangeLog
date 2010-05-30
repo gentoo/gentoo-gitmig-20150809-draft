@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/tint2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.16 2010/05/17 13:51:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.17 2010/05/30 19:09:25 idl0r Exp $
+
+*tint2-0.10 (30 May 2010)
+
+  30 May 2010; Christian Ruppert <idl0r@gentoo.org>
+  -tint2-0.10_beta1.ebuild, +tint2-0.10.ebuild,
+  -files/tint2-0.10-beta1-install_examples.patch:
+  Version bump to 0.10.
 
 *tint2-0.10_beta1 (17 May 2010)
 

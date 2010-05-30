@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.10_beta1.ebuild,v 1.1 2010/05/17 13:51:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.10.ebuild,v 1.1 2010/05/30 19:09:25 idl0r Exp $
 
-EAPI="2"
-
-inherit eutils autotools
+EAPI="3"
 
 MY_P="${PN}-${PV/_/-}"
 
@@ -38,9 +36,7 @@ RDEPEND="${COMMON_DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${MY_P}-install_examples.patch"
 	sed -i -e 's:python /usr/bin/tintwizard.py:tintwizard:' src/tint2conf/main.c || die
-	eautoreconf
 }
 
 src_configure() {
