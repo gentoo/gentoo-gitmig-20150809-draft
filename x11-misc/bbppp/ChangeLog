@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/bbppp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.13 2008/12/27 23:11:55 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.14 2010/05/30 18:29:20 xarthisius Exp $
+
+*bbppp-0.2.5 (30 May 2010)
+
+  30 May 2010; Kacper Kowalik <xarthisius@gentoo.org> bbppp-0.2.3.ebuild,
+  +bbppp-0.2.5.ebuild, +files/bbppp-0.2.5-gcc3-multiline.patch,
+  +files/bbppp-asneeded.patch:
+  Version bump. Fixing build with as-needed wrt bug 248552. Thanks Diego for
+  report
 
   27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org>
   -bbppp-0.2.2-r1.ebuild, -bbppp-0.2.2-r2.ebuild, bbppp-0.2.3.ebuild:
