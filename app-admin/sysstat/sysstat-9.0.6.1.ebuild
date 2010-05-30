@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.0.6.1.ebuild,v 1.6 2010/05/21 21:46:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.0.6.1.ebuild,v 1.7 2010/05/30 18:21:45 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="cron +doc isag nls"
 
 RDEPEND="
