@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/telepathy-qt4
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt4/ChangeLog,v 1.1 2010/05/30 10:05:10 hwoarang Exp $
+
+*telepathy-qt4-0.3.4 (30 May 2010)
+
+  30 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  +telepathy-qt4-0.3.4.ebuild, +metadata.xml:
+  Initial commit of telepathy-qt4. Moved from qting-edge overlay. Fixes bug
+  #300397
+
