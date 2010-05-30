@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.38.ebuild,v 1.1 2010/05/30 07:14:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.38.ebuild,v 1.2 2010/05/30 07:23:04 hollow Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_zone map memcached proxy referer rewrite ssi
-upstream_ip_hash userid"
+split_clients upstream_ip_hash userid"
 NGINX_MODULES_OPT="addition dav degradation flv geoip gzip_static image_filter
 perl random_index realip secure_link stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
