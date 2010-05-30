@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.10 2010/05/20 00:25:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.11 2010/05/30 20:12:49 grobian Exp $
+
+  30 May 2010; Fabian Groffen <grobian@gentoo.org> mercurial-1.5.3.ebuild:
+  Make ebuild Prefix aware, transfer Prefix keywords, bug #321993
 
   20 May 2010; Jeroen Roovers <jer@gentoo.org> mercurial-1.5.ebuild:
   Stable for HPPA (bug #314945).

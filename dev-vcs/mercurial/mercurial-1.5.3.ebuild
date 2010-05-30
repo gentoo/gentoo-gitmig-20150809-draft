@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.5.3.ebuild,v 1.1 2010/05/14 11:09:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.5.3.ebuild,v 1.2 2010/05/30 20:12:49 grobian Exp $
 
-EAPI=2
+EAPI=3
 
 inherit bash-completion elisp-common flag-o-matic eutils distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://mercurial.selenic.com/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="bugzilla emacs gpg test tk zsh-completion"
 
 CDEPEND=">=dev-lang/python-2.4[threads]"
@@ -54,7 +54,7 @@ src_install() {
 
 	rm -f doc/*.?.txt
 	dodoc CONTRIBUTORS PKG-INFO README doc/*.txt
-	cp hgweb*.cgi "${D}"/usr/share/doc/${PF}/
+	cp hgweb*.cgi "${ED}"/usr/share/doc/${PF}/
 
 	dobin hgeditor
 	dobin contrib/hgk
@@ -63,11 +63,11 @@ src_install() {
 	rm -f contrib/hgk contrib/hg-ssh
 
 	rm -f contrib/bash_completion
-	cp -r contrib "${D}"/usr/share/doc/${PF}/
+	cp -r contrib "${ED}"/usr/share/doc/${PF}/
 	doman doc/*.?
 
 	cat > "${T}/80mercurial" <<-EOF
-HG=/usr/bin/hg
+HG="${EPREFIX}/usr/bin/hg"
 EOF
 	doenvd "${T}/80mercurial"
 
