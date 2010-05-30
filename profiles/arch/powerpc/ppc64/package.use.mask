@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.14 2010/04/27 06:37:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.15 2010/05/30 10:51:29 xarthisius Exp $
+
+# Kacper Kowalik <xarthisius@gentoo.org> (30 May 2010)
+# quesoglc is not keyworded
+x11-misc/rss-glx quesoglc
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
