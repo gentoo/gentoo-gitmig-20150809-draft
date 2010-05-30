@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.162 2010/05/27 20:25:45 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.163 2010/05/30 18:58:18 billie Exp $
+
+  30 May 2010; Daniel Pielmeier <billie@gentoo.org>
+  files/hplip-3.10.2-plugin.patch:
+  Update plugin patch as ~arch patch does not seem to like it.
 
   27 May 2010; Daniel Pielmeier <billie@gentoo.org>
   files/hplip-3.10.2-plugin.patch:

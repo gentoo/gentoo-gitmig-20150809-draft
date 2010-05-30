@@ -1,7 +1,6 @@
-Index: installer/core_install.py
-===================================================================
---- installer/core_install.py	(revision 13658)
-+++ installer/core_install.py	(working copy)
+diff -Naur hplip-3.10.5-old/installer/core_install.py hplip-3.10.5/installer/core_install.py
+--- hplip-3.10.5-old/installer/core_install.py	2010-05-30 13:44:26.900212683 +0200
++++ hplip-3.10.5/installer/core_install.py	2010-05-30 13:45:58.236869364 +0200
 @@ -1990,7 +1990,11 @@
          if mode == GUI_MODE:
              return os.system("sh %s --nox11 -- -u" % plugin_file) == 0
