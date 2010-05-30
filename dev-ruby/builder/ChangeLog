@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.39 2010/05/22 22:47:22 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.40 2010/05/30 12:00:31 graaff Exp $
+
+*builder-2.1.2-r2 (30 May 2010)
+
+  30 May 2010; Hans de Graaff <graaff@gentoo.org> builder-2.1.2-r1.ebuild,
+  +builder-2.1.2-r2.ebuild:
+  Revision bump to be able to drop ree18 from builder-2.1.2-r1 so that it
+  can be stabilized in accordance with bug 321413.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> builder-2.1.2-r1.ebuild:
   Add REE18 support
