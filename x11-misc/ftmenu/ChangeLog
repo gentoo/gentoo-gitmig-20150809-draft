@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/ftmenu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ChangeLog,v 1.5 2008/09/22 13:05:16 omp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ChangeLog,v 1.6 2010/05/30 10:04:12 xarthisius Exp $
+
+*ftmenu-0.4.0 (30 May 2010)
+
+  30 May 2010; Kacper Kowalik <xarthisius@gentoo.org> +ftmenu-0.4.0.ebuild:
+  Version bump
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
   Change herd from commonbox to desktop-wm.
