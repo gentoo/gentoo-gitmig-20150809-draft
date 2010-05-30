@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nstx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.9 2009/12/06 19:37:39 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.10 2010/05/30 16:34:53 phajdan.jr Exp $
+
+  30 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  nstx-1.1_beta6-r3.ebuild:
+  x86 stable wrt bug #320439
 
 *nstx-1.1_beta6-r3 (06 Dec 2009)
 
