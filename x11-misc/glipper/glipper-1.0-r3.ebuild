@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.3 2010/05/28 19:12:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.4 2010/05/30 20:25:53 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2"
@@ -61,5 +61,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup
+	python_mod_cleanup glipper
 }
