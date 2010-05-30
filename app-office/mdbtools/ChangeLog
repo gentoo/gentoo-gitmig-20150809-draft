@@ -1,6 +1,12 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.52 2010/05/25 13:31:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.53 2010/05/30 11:46:41 graaff Exp $
+
+  30 May 2010; Hans de Graaff <graaff@gentoo.org>
+  mdbtools-0.6_pre2-r2.ebuild,
+  +files/mdbtools-0.6_pre2-odbc_definitions.patch:
+  Fix compilation against current unixODBC. Thanks to Hank Leininger for
+  providing the patch in bug 311973.
 
   25 May 2010; Markos Chandras <hwoarang@gentoo.org>
   mdbtools-0.6_pre2-r2.ebuild:

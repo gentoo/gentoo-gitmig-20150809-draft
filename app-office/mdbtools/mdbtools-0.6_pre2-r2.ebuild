@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r2.ebuild,v 1.7 2010/05/25 13:31:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.6_pre2-r2.ebuild,v 1.8 2010/05/30 11:46:40 graaff Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.7"
@@ -36,6 +36,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-haveiconv-fix.patch
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	epatch "${FILESDIR}"/${P}-odbc_definitions.patch
 
 	# This is necessary since the upstream tarball was created with a
 	# buggy libtool, and the .so suffix in library names is lost in
