@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc5.ebuild,v 1.2 2010/02/17 16:48:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc5.ebuild,v 1.3 2010/05/30 20:45:30 arfrever Exp $
 
 EAPI="2"
 
@@ -134,8 +134,6 @@ src_prepare() {
 src_configure() {
 	local myconf
 	addpredict /var/cache/fontconfig
-	# wxwindows needs python (see bug #237495)
-	use wxwindows && distutils_python_version
 
 	myconf="--prefix=/usr --with-cxx --enable-shared \
 		--with-gdal=$(type -P gdal-config) --with-curses --with-proj \

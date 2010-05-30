@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.4 2010/01/19 00:50:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.5 2010/05/30 20:48:39 arfrever Exp $
 
 inherit autotools eutils distutils flag-o-matic
 
@@ -67,7 +67,6 @@ src_compile() {
 		--disable-fast-install"
 		# --enable-superstar2 is missing a header file
 
-	use python && distutils_python_version
 
 	if use ntp; then
 		my_conf="${my_conf} --enable-ntpshm --enable-pps"

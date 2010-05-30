@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.48 2010/02/13 20:04:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.49 2010/05/30 20:48:39 arfrever Exp $
+
+  30 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gpsd-2.32.ebuild, gpsd-2.38.ebuild, gpsd-2.39-r1.ebuild:
+  Delete calls to deprecated distutils_python_version().
 
   13 Feb 2010; Steve Arnold <nerdboy@gentoo.org> files/99-gpsd-usb.rules,
   gpsd-2.39-r1.ebuild:

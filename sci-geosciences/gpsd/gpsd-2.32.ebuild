@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.9 2009/07/18 17:47:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.10 2010/05/30 20:48:39 arfrever Exp $
 
 inherit eutils libtool distutils
 
@@ -46,7 +46,6 @@ src_unpack() {
 RESTRICT="test"
 
 src_compile() {
-	distutils_python_version
 	export MY_ECONF="--with-pic $(use_with X x) $(use_enable dbus)"
 	econf ${MY_ECONF} || die "econf failed"
 	emake || die "emake failed"
@@ -73,7 +72,7 @@ src_install() {
 	fi
 	dobin logextract
 	diropts "-m0644"
-	exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
+	exeinto $(python_get_sitedir)
 	doexe gps.py gpsfake.py
 	dodoc AUTHORS HACKING INSTALL README TODO "${FILESDIR}"/40-usb-serial.rules
 }

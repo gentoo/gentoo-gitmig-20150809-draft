@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.13 2010/02/03 20:56:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.14 2010/05/30 20:45:30 arfrever Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -131,8 +131,6 @@ src_unpack() {
 src_compile() {
 	local myconf
 	addpredict /var/cache/fontconfig
-	# wxwindows needs python (see bug #237495)
-	use wxwindows && distutils_python_version
 
 	myconf="--prefix=/usr --with-cxx --enable-shared \
 		--with-gdal=$(type -P gdal-config) --with-curses --with-proj \
@@ -157,7 +155,7 @@ src_compile() {
 		# The following lib should be there, based on the above and the
 		# wxpython dependency (in theory).  I still need a good way to
 		# query for the location...
-		LIBGDI="/usr/$(get_libdir)/python${PYVER}/site-packages/wx-${WX_GTK_VER}-gtk2-unicode/wx/_gdi_.so"
+		LIBGDI="$(python_get_sitedir)/wx-${WX_GTK_VER}-gtk2-unicode/wx/_gdi_.so"
 		myconf="${myconf} --with-python --with-wxwidgets=${WX_CONFIG}"
 	    else
 		# USE=python must be enabled above if wxwindows is enabled
