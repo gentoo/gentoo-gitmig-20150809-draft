@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/nagios-check_fail2ban-2.ebuild,v 1.2 2010/05/20 17:20:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/nagios-check_fail2ban-3.ebuild,v 1.1 2010/05/30 06:31:01 hollow Exp $
 
 EAPI="2"
 
@@ -25,9 +25,5 @@ src_prepare() {
 }
 
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		nagiosdir="/usr/$(get_libdir)/nagios/plugins/" \
-		install \
-		|| die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
