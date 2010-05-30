@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.133 2010/05/29 06:10:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.134 2010/05/30 18:00:41 hwoarang Exp $
+
+  30 May 2010; Markos Chandras <hwoarang@gentoo.org> elfutils-0.146.ebuild:
+  Stable on amd64 wrt bug #321943. Thanks to Thomas Beierlein
+  <tomjbe@gentoo.org> for testing
 
 *elfutils-0.147 (29 May 2010)
 
