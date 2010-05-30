@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.4 2010/05/30 20:48:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39-r1.ebuild,v 1.5 2010/05/30 20:49:54 arfrever Exp $
 
 EAPI="2"
 
@@ -78,7 +78,6 @@ src_configure() {
 
 	# Drop privs to user gpsd, see bug #282130
 	use gpsd_user && my_conf="${my_conf} --enable-gpsd-user=gpsd"
-
 
 	if ! use ntp; then
 		my_conf="${my_conf} --disable-pps --disable-ntpshm"
