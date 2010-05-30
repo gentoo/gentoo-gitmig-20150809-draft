@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/talika
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/ChangeLog,v 1.1 2010/05/30 21:25:37 hwoarang Exp $
+
+*talika-0.49 (30 May 2010)
+
+  30 May 2010; Markos Chandras <hwoarang@gentoo.org> +talika-0.49.ebuild,
+  +metadata.xml:
+  Initial commit of talika gnome applet. Fixes bug #318239
+
