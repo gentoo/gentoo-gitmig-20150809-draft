@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.6 2009/10/08 03:48:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.7 2010/05/30 18:17:30 armin76 Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ SRC_URI="amd64? ( ${SRC_COM}_intel64.tgz )
 LICENSE="Intel-SDP"
 SLOT="0"
 IUSE="eclipse +idb ipp mkl"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 
 RESTRICT="mirror strip binchecks"
 
