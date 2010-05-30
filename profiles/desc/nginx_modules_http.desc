@@ -1,6 +1,6 @@
 # Copyright 2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.3 2010/05/03 19:33:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.4 2010/05/30 07:12:57 hollow Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -20,6 +20,7 @@ geo - This module creates variables, whose values depend on the IP-address of th
 geoip - This module creates variables based on the IP-address of the client matched against the MaxMind GeoIP binary files.
 gzip - This module allows for on-the-fly gzip compression.
 gzip_static - Before serving a file from disk to a gzip-enabled client, this module will look for a precompressed file in the same location.
+headers_more - Set and clear input and output headers
 image_filter - This module is a filter for transforming JPEG, GIF and PNG images.
 limit_req - This module allows you to limit the number of requests for a given session.
 limit_zone - This module makes it possible to limit the number of simultaneous connections for the assigned session
