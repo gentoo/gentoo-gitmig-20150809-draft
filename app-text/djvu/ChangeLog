@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.103 2010/05/20 10:27:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.104 2010/05/30 18:23:58 armin76 Exp $
+
+  30 May 2010; Raúl Porcel <armin76@gentoo.org> djvu-3.5.22-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #299574
 
   20 May 2010; Peter Volkov <pva@gentoo.org> djvu-3.5.22-r1.ebuild:
   amd64 stable, bug 299574.
