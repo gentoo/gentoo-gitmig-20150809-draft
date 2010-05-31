@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.131 2010/05/27 12:56:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.132 2010/05/31 19:34:46 maekke Exp $
+
+  31 May 2010; Markus Meier <maekke@gentoo.org> wvstreams-4.6.1.ebuild:
+  x86 stable, bug #321637
 
   27 May 2010; Peter Volkov <pva@gentoo.org> wvstreams-4.6.1.ebuild:
   amd64 stable, bug #321637
