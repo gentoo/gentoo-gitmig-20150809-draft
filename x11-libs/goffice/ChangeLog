@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.67 2010/05/16 10:02:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.68 2010/05/31 21:35:58 eva Exp $
+
+*goffice-0.8.5 (31 May 2010)
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> +goffice-0.8.5.ebuild:
+  Version bump.
 
   16 May 2010; Gilles Dartiguelongue <eva@gentoo.org> goffice-0.8.3.ebuild:
   Fix intltool rules, bug #319051.
