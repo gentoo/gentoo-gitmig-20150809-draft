@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/talika-0.49.ebuild,v 1.1 2010/05/30 21:25:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/talika-0.49.ebuild,v 1.2 2010/05/31 13:00:16 hwoarang Exp $
 
 EAPI=3
 
@@ -22,5 +22,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i "/^talikadocdir/s:/doc/talika:/share/doc/${PF}:" Makefile.am
+	# need to add missing files to po/POTFILES.in because testsuite fails
+	# bug 322163
+	echo -e "src/talika.schemas.in\nsrc/talika.server.in" >> po/POTFILES.in
 	eautoreconf
 }
