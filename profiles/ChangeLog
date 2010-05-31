@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4215 2010/05/30 09:24:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4216 2010/05/31 09:19:42 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2010; Alex Alexander <wired@gentoo.org> package.mask:
+  updated uget mask to cover all 1.5.9.x releases
 
   30 May 2010; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Drop mask for gamess
