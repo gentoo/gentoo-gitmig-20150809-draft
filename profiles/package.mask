@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11586 2010/05/31 14:01:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11587 2010/05/31 22:41:06 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -328,11 +328,6 @@ dev-util/awka
 # Old,unmaintained,dead upstream, doesn't build. Masked
 # for removal in 2010-06-28. Bug #316201
 x11-misc/lintar
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (28 May 2010)
-# Masked until the tarballs are publicly released
-=media-sound/amarok-2.3.1
-=media-sound/amarok-utils-2.3.1
 
 # Matti Bickel <mabi@gentoo.org> (27 May 2010)
 # Masked for testing, expect breakage at this point
