@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.3-r1.ebuild,v 1.5 2010/02/28 19:02:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.3-r1.ebuild,v 1.6 2010/05/31 17:49:20 arfrever Exp $
 
 EAPI=2
 
@@ -55,8 +55,6 @@ src_prepare() {
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
 
-	python_version
-
 	# Fix install path.
 	einfo "Fix installation path"
 	find . -iname 'Makefile.in' | xargs \
@@ -84,12 +82,10 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
 	python_mod_optimize $(python_get_sitedir)/${PN}
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_version
 	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
