@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.184 2009/10/13 17:32:34 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.185 2010/05/31 15:02:53 arfrever Exp $
+
+  31 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  blender-2.48a-r3.ebuild, blender-2.49a.ebuild, blender-2.49b.ebuild:
+  Delete calls to python_version().
 
   13 Oct 2009; Raúl Porcel <armin76@gentoo.org> blender-2.49a.ebuild:
   sparc stable

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49a.ebuild,v 1.11 2009/10/13 17:32:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49a.ebuild,v 1.12 2010/05/31 15:02:53 arfrever Exp $
 
 EAPI=2
 
@@ -70,12 +70,11 @@ src_configure() {
 	EOF
 
 	#  set python version to current version in use
-	python_version
 	cat <<- EOF >> "${S}"/user-config.py
-		BF_PYTHON_VERSION="${PYVER}"
-		BF_PYTHON_INC="/usr/include/python${PYVER}"
-		BF_PYTHON_BINARY="/usr/bin/python${PYVER}"
-		BF_PYTHON_LIB="python${PYVER}"
+		BF_PYTHON_VERSION="$(python_get_version)"
+		BF_PYTHON_INC="$(python_get_includedir)"
+		BF_PYTHON_BINARY="$(PYTHON -a)"
+		BF_PYTHON_LIB="python$(python_get_version)"
 	EOF
 
 	# add system openjpeg into scons build.
