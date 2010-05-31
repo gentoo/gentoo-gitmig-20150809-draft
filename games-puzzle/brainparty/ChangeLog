@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/brainparty
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/ChangeLog,v 1.4 2010/05/25 21:07:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainparty/ChangeLog,v 1.5 2010/05/31 18:39:42 maekke Exp $
+
+  31 May 2010; Markus Meier <maekke@gentoo.org> brainparty-0.5.ebuild:
+  x86 stable, bug #318351
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> brainparty-0.5.ebuild:
   stable amd64, bug 318351
