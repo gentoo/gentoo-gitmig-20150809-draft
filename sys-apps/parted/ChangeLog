@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.148 2010/05/29 16:18:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.149 2010/05/31 01:04:37 jer Exp $
+
+  31 May 2010; Jeroen Roovers <jer@gentoo.org> parted-2.3.ebuild:
+  Does not work with automake-1.10.3 (bug #322019).
 
 *parted-2.3 (29 May 2010)
 
