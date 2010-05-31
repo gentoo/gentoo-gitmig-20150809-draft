@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.256 2010/05/13 15:32:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.257 2010/05/31 21:29:24 chainsaw Exp $
+
+  31 May 2010; <chainsaw@gentoo.org> -asterisk-1.2.36.ebuild:
+  Remove vulnerable version as per Alex "a3li" Legler in security bug
+  #295270.
 
 *asterisk-1.6.1.19 (13 May 2010)
 
