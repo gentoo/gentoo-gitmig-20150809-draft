@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scapy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.24 2009/12/22 02:17:49 ikelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.25 2010/05/31 16:57:46 arfrever Exp $
+
+  31 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  scapy-1.1.1-r1.ebuild:
+  Delete call to deprecated python_version().
 
 *scapy-2.1.0 (22 Dec 2009)
 

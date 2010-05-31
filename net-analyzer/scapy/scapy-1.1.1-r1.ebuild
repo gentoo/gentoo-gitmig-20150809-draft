@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1-r1.ebuild,v 1.4 2009/11/20 12:57:57 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1-r1.ebuild,v 1.5 2010/05/31 16:57:46 arfrever Exp $
 
 inherit eutils python multilib
 
@@ -35,8 +35,7 @@ src_install() {
 	newexe scapy.py scapy
 
 	# also install scapy as a importable python module
-	python_version
-	insinto /usr/$(get_libdir)/python${PYVER}/site-packages
+	insinto $(python_get_sitedir)
 	doins scapy.py
 
 	insinto /etc
@@ -46,7 +45,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize
+	python_mod_optimize $(python_get_sitedir)/scapy.py
 
 	einfo ""
 	einfo "- Check http://www.secdev.org/projects/scapy/ for additional info"
@@ -59,5 +58,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/scapy.py
 }
