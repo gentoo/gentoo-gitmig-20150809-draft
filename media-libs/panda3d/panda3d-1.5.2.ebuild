@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.5.2.ebuild,v 1.2 2008/10/08 09:48:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.5.2.ebuild,v 1.3 2010/05/31 15:12:59 arfrever Exp $
 
 inherit eutils python
 
@@ -84,9 +84,8 @@ src_install() {
 
 	if use python ; then
 		# python installation
-		python_version
-		dodir /usr/$(get_libdir)/python${PYVER}/site-packages
-		cat <<- EOF > "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/panda3d.pth
+		dodir $(python_get_sitedir)
+		cat <<- EOF > "${D}"$(python_get_sitedir)/panda3d.pth
 		# This document sets up paths for python to access the
 		# panda3d modules
 		/opt/panda3d
