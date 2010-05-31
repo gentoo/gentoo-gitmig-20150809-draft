@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.120 2010/05/23 10:36:02 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.121 2010/05/31 05:55:46 graaff Exp $
+
+*activesupport-2.3.8 (31 May 2010)
+
+  31 May 2010; Hans de Graaff <graaff@gentoo.org>
+  +activesupport-2.3.8.ebuild, +files/activesupport-2.3.8-unvendorize.patch:
+  Bump for Rails 2.3.8. Drop hppa/ppc/ppc64/x86-fbsd keywords due to new
+  unkeyworded dependency.
 
   23 May 2010; Alex Legler <a3li@gentoo.org> activesupport-2.3.5-r1.ebuild:
   Add REE18 support
