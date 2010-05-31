@@ -6,10 +6,10 @@
                 <email>vdr@gentoo.org</email>
                 <name>Gentoo VDR Project</name>
                  <description>
-                   Please contacts maintainer before you something change.
+                   Please contact maintainers before you change something.
                  </description>
         </maintainer>
         <longdescription lang="en">
-            The "Infosatepg Plugin" can be used to read the contents of infosat and writes the data into the EPG.
+            The infosatepg plugin reads the contents of infosat and writes the data into the EPG.
         </longdescription>
 </pkgmetadata>
