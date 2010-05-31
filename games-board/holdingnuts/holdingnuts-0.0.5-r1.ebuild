@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/holdingnuts-0.0.5-r1.ebuild,v 1.2 2010/05/21 18:38:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/holdingnuts-0.0.5-r1.ebuild,v 1.3 2010/05/31 19:25:54 maekke Exp $
 
 EAPI=2
 inherit eutils cmake-utils games
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.sourceforge.net/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa debug dedicated"
 
 RDEPEND="
