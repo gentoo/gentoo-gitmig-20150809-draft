@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1.ebuild,v 1.1 2010/05/06 09:10:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1.ebuild,v 1.2 2010/05/31 20:50:13 jer Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -35,10 +35,17 @@ src_prepare() {
 }
 
 src_configure() {
-	#	$(use_enable readpcap) \
+	# When USE=ftconv, after we run eautoreconf, we need to define the switches
+	# differently (bug #322201)
+	local myconf
+	if use ftconv; then
+		myconf="--with-ftpath=/usr --enable-ftconv"
+	else
+		myconf="--without-ftconv"
+	fi
+
 	econf \
-		$(use_enable ftconv) \
-		$(use_with ftconv ftpath="/usr") \
+		${myconf} \
 		$(use_enable nfprofile) \
 		$(use_enable sflow)
 }
