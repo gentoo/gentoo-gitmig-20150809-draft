@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.8 2010/03/23 05:16:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.9 2010/05/31 06:45:57 jlec Exp $
+
+*traits-3.4.0 (31 May 2010)
+
+  31 May 2010; Justin Lecher <jlec@gentoo.org> +traits-3.4.0.ebuild:
+  Version Bump on permission of Patrick
 
 *traits-3.3.0 (20 Mar 2010)
 
