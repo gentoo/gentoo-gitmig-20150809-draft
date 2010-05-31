@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cgicc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgicc/ChangeLog,v 1.14 2010/05/28 16:52:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgicc/ChangeLog,v 1.15 2010/05/31 20:08:13 maekke Exp $
+
+  31 May 2010; Markus Meier <maekke@gentoo.org> cgicc-3.2.9.ebuild:
+  x86 stable, bug #321859
 
 *cgicc-3.2.9 (28 May 2010)
 
