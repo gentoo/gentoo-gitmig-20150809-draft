@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.200 2010/05/09 13:14:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.201 2010/05/31 22:13:22 eva Exp $
+
+*gnumeric-1.10.5 (01 Jun 2010)
+
+  01 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnumeric-1.10.5.ebuild:
+  Version bump, bug #322123. Print and sheet order dialog fixes. Add
+  non-linear solved.
 
   09 May 2010; Pacho Ramos <pacho@gentoo.org> gnumeric-1.10.3.ebuild:
   Bump goffice RDEPEND as reported by Priit Laes in bug #319053
