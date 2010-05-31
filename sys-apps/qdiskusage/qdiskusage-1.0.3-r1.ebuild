@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/qdiskusage-1.0.3.ebuild,v 1.1 2010/05/30 09:01:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/qdiskusage-1.0.3-r1.ebuild,v 1.1 2010/05/31 15:41:41 hwoarang Exp $
 
 EAPI="2"
 inherit eutils qt4-r2
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_install(){
-	newicon icon.png ${PN} || die "doicon failed"
+	newicon icon.png ${PN}.png || die "newicon failed"
 	newbin ${MY_PN} ${PN} || die "newbin failed"
 	dodoc README || die "dodoc failed"
 	make_desktop_entry ${PN} "QDiskUsage" ${PN}
