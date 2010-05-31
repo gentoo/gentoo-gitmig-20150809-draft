@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.111 2010/01/10 09:43:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.112 2010/05/31 09:14:25 tove Exp $
+
+*glib-perl-1.223 (31 May 2010)
+
+  31 May 2010; Torsten Veller <tove@gentoo.org> +glib-perl-1.223.ebuild:
+  Version bump
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> glib-perl-1.222.ebuild:
   Transfer Prefix keywords
