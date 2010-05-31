@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.8 2010/05/28 20:30:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.9 2010/05/31 20:06:33 robbat2 Exp $
+
+  31 May 2010; Robin H. Johnson <robbat2@gentoo.org> git-1.7.1-r1.ebuild:
+  Bug #322205: The iconv patch added for -r1 just stopped the segfaults, the
+  testsuite still fails, so forcing USE=iconv for now.
 
   28 May 2010; Robin H. Johnson <robbat2@gentoo.org> -git-1.7.1.ebuild:
   Remove broken 1.7.1.

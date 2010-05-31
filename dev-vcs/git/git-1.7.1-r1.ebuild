@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.1-r1.ebuild,v 1.1 2010/05/28 20:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.1-r1.ebuild,v 1.2 2010/05/31 20:06:33 robbat2 Exp $
 
 EAPI=2
 
@@ -114,7 +114,8 @@ exportmakeopts() {
 	fi
 
 	use iconv \
-		|| myopts="${myopts} NO_ICONV=YesPlease"
+		|| einfo "Forcing iconv for 1.7.1-r1 due to bugs #321895, #322205."
+	#	|| myopts="${myopts} NO_ICONV=YesPlease"
 	use tk \
 		|| myopts="${myopts} NO_TCLTK=YesPlease"
 	use perl \
