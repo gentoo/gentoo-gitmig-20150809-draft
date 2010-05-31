@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/opendict
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.20 2010/03/08 02:22:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.21 2010/05/31 16:13:33 arfrever Exp $
+
+  31 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  opendict-0.6.1.ebuild:
+  Backport fixes for deprecation warnings from opendict-0.6.3.
 
   08 Mar 2010; Ryan Hill <dirtyepic@gentoo.org> opendict-0.6.3.ebuild:
   More python fixes for bug #308351.
