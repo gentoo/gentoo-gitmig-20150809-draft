@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molscript
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.8 2010/03/28 09:06:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.9 2010/05/31 15:50:58 phajdan.jr Exp $
+
+  31 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  molscript-2.1.2-r1.ebuild:
+  x86 stable wrt bug #317711
 
 *molscript-2.1.2-r1 (28 Mar 2010)
 
