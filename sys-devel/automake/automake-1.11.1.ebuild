@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.11.1.ebuild,v 1.7 2010/04/18 12:36:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.11.1.ebuild,v 1.8 2010/05/31 19:20:31 josejx Exp $
 
 inherit eutils versionator
 
@@ -24,7 +24,7 @@ DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 HOMEPAGE="http://sources.redhat.com/automake/"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-lang/perl
