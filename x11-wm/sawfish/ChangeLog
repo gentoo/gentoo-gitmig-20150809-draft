@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.93 2010/03/28 19:43:37 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.94 2010/05/31 20:05:17 truedfx Exp $
+
+*sawfish-1.6.3 (31 May 2010)
+
+  31 May 2010; Harald van Dĳk <truedfx@gentoo.org> +sawfish-1.6.3.ebuild,
+  +files/sawfish-1.6.3-prompt.patch:
+  Version bump
 
 *sawfish-1.6.2 (28 Mar 2010)
 
