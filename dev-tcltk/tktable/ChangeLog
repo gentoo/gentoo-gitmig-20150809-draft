@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tktable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/ChangeLog,v 1.9 2010/05/10 12:41:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/ChangeLog,v 1.10 2010/05/31 18:11:13 maekke Exp $
+
+  31 May 2010; Markus Meier <maekke@gentoo.org> tktable-2.10.ebuild:
+  amd64 stable
 
   10 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tktable-2.10.ebuild:
   x86 stable wrt bug #317253

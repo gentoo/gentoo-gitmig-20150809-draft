@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/tktable-2.10.ebuild,v 1.2 2010/05/10 12:41:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/tktable-2.10.ebuild,v 1.3 2010/05/31 18:11:13 maekke Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://tktable.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tktable/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
 
