@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.5.1.ebuild,v 1.8 2010/02/16 22:34:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.5.1.ebuild,v 1.9 2010/05/31 18:19:25 arfrever Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -41,12 +41,10 @@ PATCHES=( "${FILESDIR}/${P}-check-hdict.patch"
 DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
 
 src_configure() {
-	python_version
-
 	mycmakeargs="${mycmakeargs}
 		-DHAVE_PYTHON=ON
-		-DPYTHON_INCLUDE_PATH=/usr/include/python${PYVER}
-		-DPYTHON_LIBRARY=/usr/$(get_libdir)/libpython${PYVER}.so
+		-DPYTHON_INCLUDE_PATH=$(python_get_includedir)
+		-DPYTHON_LIBRARY=$(python_get_library)
 		-DWANT_NORPATH=ON
 		-DWANT_QTARTHUR=ON
 		-DWANT_QT3SUPPORT=OFF
