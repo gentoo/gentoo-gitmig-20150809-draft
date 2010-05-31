@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.9.1-r1.ebuild,v 1.3 2010/05/21 20:56:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.9.1-r1.ebuild,v 1.4 2010/05/31 19:06:48 josejx Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -16,7 +16,7 @@ HOMEPAGE="http://jakarta.apache.org/lucene"
 SRC_URI="mirror://apache/lucene/java/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="2.9"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-nodeps:0
