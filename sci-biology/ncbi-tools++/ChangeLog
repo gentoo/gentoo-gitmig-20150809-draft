@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ncbi-tools++
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.12 2010/03/11 20:49:57 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.13 2010/05/31 22:05:20 weaver Exp $
+
+*ncbi-tools++-2009.05.15-r4 (31 May 2010)
+
+  31 May 2010; Andrey Kislyuk <weaver@gentoo.org>
+  -ncbi-tools++-2009.05.15-r3.ebuild, +ncbi-tools++-2009.05.15-r4.ebuild:
+  Address bug 300722, bug 312921
 
 *ncbi-tools++-2009.05.15-r3 (11 Mar 2010)
 

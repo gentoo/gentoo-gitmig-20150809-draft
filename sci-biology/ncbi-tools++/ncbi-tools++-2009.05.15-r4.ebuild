@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r3.ebuild,v 1.1 2010/03/11 20:49:57 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r4.ebuild,v 1.1 2010/05/31 22:05:20 weaver Exp $
 
 EAPI="3"
 
@@ -48,7 +48,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
-	sed -i -e 's/-print-file-name=libstdc++.a//' src/build-system/configure
+	sed -i -e 's/-print-file-name=libstdc++.a//' \
+		-e '/sed/ s/\([gO]\[0-9\]\)\*/\1\\+/' \
+		src/build-system/configure || die
 }
 
 src_configure() {
@@ -57,12 +59,14 @@ src_configure() {
 
 	# econf fails
 	# --with-bin-release and --without-ftds are workarounds for build system bugs
+	# --without-boost: see bug 312921
 	# NB: build system supports ICC
 	"${S}"/configure --without-debug \
 		--with-bin-release \
 		--without-static \
 		--with-dll \
 		--without-ftds \
+		--without-boost \
 		--prefix="${ED}"/usr \
 		--libdir="${ED}"/usr/$(get_libdir)/${PN} \
 		--with-z="${EPREFIX}/usr" \
