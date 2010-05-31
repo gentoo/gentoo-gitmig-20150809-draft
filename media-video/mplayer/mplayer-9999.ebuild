@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.58 2010/05/09 16:44:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.59 2010/05/31 13:41:41 lu_zero Exp $
 
 EAPI="2"
 
@@ -243,10 +243,10 @@ src_prepare() {
 	if [[ ${PV} = *9999* ]]; then
 		# Set SVN version manually
 		subversion_wc_info
-		sed -i s/UNKNOWN/${ESVN_WC_REVISION}/ "${S}/version.sh"
+		sed -i -e "s/UNKNOWN/${ESVN_WC_REVISION}/" "${S}/version.sh" || die
 	else
 		# Set version #
-		sed -i s/UNKNOWN/${MPLAYER_REVISION}/ "${S}/version.sh"
+		sed -i -e "s/UNKNOWN/${MPLAYER_REVISION}/" "${S}/version.sh" || die
 	fi
 
 	if use svga; then
