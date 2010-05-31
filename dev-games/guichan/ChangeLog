@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/guichan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.21 2010/05/25 21:48:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.22 2010/05/31 09:22:44 phajdan.jr Exp $
+
+  31 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> guichan-0.8.2.ebuild:
+  x86 stable wrt bug #318909
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> guichan-0.8.2.ebuild:
   stable amd64, bug 318909
