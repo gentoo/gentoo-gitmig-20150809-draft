@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.30 2010/04/11 18:27:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.31 2010/05/31 18:41:51 josejx Exp $
+
+  31 May 2010; Joseph Jezak <josejx@gentoo.org> c2hs-0.16.0.ebuild:
+  Marked ~ppc/~ppc64 for bug #306311.
 
   11 Apr 2010; Raúl Porcel <armin76@gentoo.org> c2hs-0.14.5.ebuild,
   c2hs-0.15.1.ebuild:
