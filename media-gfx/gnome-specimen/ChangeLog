@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnome-specimen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/ChangeLog,v 1.4 2008/06/01 07:01:53 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/ChangeLog,v 1.5 2010/05/31 15:06:58 arfrever Exp $
+
+  31 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnome-specimen-0.4.ebuild:
+  Delete call to deprecated python_version().
 
 *gnome-specimen-0.4 (01 Jun 2008)
 

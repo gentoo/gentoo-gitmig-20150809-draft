@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.1 2008/06/01 07:01:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.2 2010/05/31 15:06:58 arfrever Exp $
 
 GCONF_DEBUG=no
 
@@ -34,13 +34,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize \
-		/usr/$(get_libdir)/python${PYVER}/site-packages/specimen
+	python_mod_optimize $(python_get_sitedir)/specimen
 	gnome2_pkg_postinst
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/specimen
+	python_mod_cleanup $(python_get_sitedir)/specimen
 	gnome2_pkg_postrm
 }
