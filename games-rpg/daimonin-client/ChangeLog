@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/daimonin-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.24 2010/03/28 16:45:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.25 2010/05/31 18:30:55 maekke Exp $
+
+  31 May 2010; Markus Meier <maekke@gentoo.org>
+  daimonin-client-0.9.7.1-r1.ebuild:
+  x86 stable, bug #317687
 
   28 Mar 2010; Tupone Alfredo <tupone@gentoo.org>
   daimonin-client-0.9.7.1-r1.ebuild:
