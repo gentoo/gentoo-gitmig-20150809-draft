@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.32 2010/05/24 15:47:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.33 2010/05/31 21:56:30 eva Exp $
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> libproxy-0.4.2.ebuild:
+  Preserve old lib, bug #320511. Install perl binding in vendor directory,
+  bug #321807. Improve python binding handling, bug #315319.
 
   23 May 2010; <nixnut@gentoo.org> libproxy-0.2.3-r3.ebuild:
   ppc stable #314007

@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.2.ebuild,v 1.1 2010/05/21 14:35:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.2.ebuild,v 1.2 2010/05/31 21:56:30 eva Exp $
 
 EAPI="2"
 CMAKE_MIN_VERSION="2.8"
+PYTHON_DEPEND="python? 2:2.5"
 
-inherit cmake-utils eutils python portability
+inherit cmake-utils eutils multilib python portability
 
 DESCRIPTION="Library for automatic proxy configuration management"
 HOMEPAGE="http://code.google.com/p/libproxy/"
@@ -21,7 +22,6 @@ RDEPEND="
 	kde? ( >=kde-base/kdelibs-4.3 )
 	networkmanager? ( net-misc/networkmanager )
 	perl? (	dev-lang/perl )
-	python? ( >=dev-lang/python-2.5 )
 	vala? ( dev-lang/vala )
 	webkit? ( net-libs/webkit-gtk )
 	xulrunner? ( >=net-libs/xulrunner-1.9.0.11-r1:1.9 )"
@@ -30,6 +30,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19"
 
 DOCS="AUTHORS NEWS README ChangeLog"
+
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+	fi
+}
 
 src_prepare() {
 	base_src_prepare
@@ -42,6 +48,7 @@ src_prepare() {
 
 src_configure() {
 	mycmakeargs=(
+			-DPERL_VENDORINSTALL=ON
 			-DCMAKE_CXX_FLAGS="${CXXFLAGS}"
 			-DCMAKE_LD_FLAGS="${CXXFLAGS}"
 			$(cmake-utils_use_with gnome GNOME)
@@ -56,13 +63,21 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libproxy.so.0
+}
+
 pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libproxy.so.0
+
 	if use python; then
 		python_need_rebuild
-		python_mod_optimize "$(python_get_sitedir)/${PN}.py"
+		python_mod_optimize $(python_get_sitedir)/${PN}.py
 	fi
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/${PN}.py
+	if use python; then
+		python_mod_cleanup $(python_get_sitedir)/${PN}.py
+	fi
 }
