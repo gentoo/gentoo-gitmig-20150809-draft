@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11585 2010/05/31 09:19:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11586 2010/05/31 14:01:44 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1262,6 +1262,7 @@ dev-util/w32api
 # Please read http://my.opera.com/desktopteam/blog/
 # for information about alpha releases
 =www-client/opera-10.54*
+=www-client/opera-10.60*
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # The development branch, to be unmasked when out of beta by upstream.

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4216 2010/05/31 09:19:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4217 2010/05/31 14:01:44 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask www-client/opera-10.60.
 
   31 May 2010; Alex Alexander <wired@gentoo.org> package.mask:
   updated uget mask to cover all 1.5.9.x releases
