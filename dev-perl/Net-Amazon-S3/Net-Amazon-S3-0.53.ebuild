@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/Net-Amazon-S3-0.53.ebuild,v 1.1 2010/04/23 18:22:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/Net-Amazon-S3-0.53.ebuild,v 1.2 2010/05/31 09:42:35 tove Exp $
 
 EAPI=2
 
@@ -17,7 +17,9 @@ DEPEND="
 	dev-perl/Class-Accessor
 	>=dev-perl/Class-MOP-0.88
 	>=dev-perl/Data-Stream-Bulk-0.06
+	dev-perl/DateTime-Format-HTTP
 	dev-perl/Digest-HMAC
+	dev-perl/Digest-MD5-File
 	dev-perl/libwww-perl
 	virtual/perl-IO
 	dev-perl/LWP-UserAgent-Determined
