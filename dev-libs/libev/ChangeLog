@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.24 2010/01/19 16:15:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.25 2010/05/31 18:27:32 gmsoft Exp $
+
+  31 May 2010; Guy Martin <gmsoft@gentoo.org> libev-3.90-r1.ebuild:
+  Added ~hppa to KEYWORDS
 
 *libev-3.90-r1 (19 Jan 2010)
 
