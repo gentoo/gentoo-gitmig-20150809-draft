@@ -1,0 +1,14 @@
+# ChangeLog for dev-perl/Digest-MD5-File
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5-File/ChangeLog,v 1.1 2010/05/31 09:31:44 tove Exp $
+
+  31 May 2010; Torsten Veller <tove@gentoo.org>
+  +Digest-MD5-File-0.07.ebuild, +metadata.xml:
+  Import from perl-experimental for Net-Amazon-S3 (#322121)
+
+*Digest-MD5-File-0.07 (06 Oct 2009)
+
+  06 Oct 2009; Michele Beltrame <m@cattlegrid.info>
+  +Digest-MD5-File-0.07.ebuild:
+  Initial import
+
