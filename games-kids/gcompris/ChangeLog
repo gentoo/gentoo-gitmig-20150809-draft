@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.50 2010/03/27 19:40:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.51 2010/05/31 19:24:19 maekke Exp $
+
+  31 May 2010; Markus Meier <maekke@gentoo.org> gcompris-9.2.2.ebuild:
+  amd64/x86 stable, bug #318633
 
   27 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> gcompris-9.2.2.ebuild:
   Missing gnome-base/gnome-common DEPEND wrt #311559.
