@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.112 2009/12/26 17:30:21 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.113 2010/05/31 21:16:15 eva Exp $
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -ggv-2.8.3.ebuild:
+  Clean up old revisions.
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> ggv-2.8.3.ebuild,
   ggv-2.8.5.ebuild, ggv-2.12.0.ebuild:

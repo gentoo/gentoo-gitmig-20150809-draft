@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.35 2010/05/14 20:10:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.36 2010/05/31 21:16:51 eva Exp $
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtranslator-1.9.9.ebuild, -gtranslator-1.9.10.ebuild:
+  Clean up old revisions.
 
 *gtranslator-1.9.11 (14 May 2010)
 

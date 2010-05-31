@@ -1,6 +1,10 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.87 2010/05/17 12:22:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.88 2010/05/31 21:17:26 eva Exp $
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -iso-codes-3.11.1.ebuild, -iso-codes-3.14.ebuild:
+  Clean up old revisions.
 
 *iso-codes-3.16 (17 May 2010)
 
