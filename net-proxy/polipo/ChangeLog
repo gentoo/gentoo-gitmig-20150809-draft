@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.33 2010/05/29 16:24:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.34 2010/05/31 19:35:27 maekke Exp $
+
+  31 May 2010; Markus Meier <maekke@gentoo.org> polipo-1.0.4.1.ebuild:
+  amd64 stable, bug #300173
 
   29 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   polipo-1.0.4.1.ebuild:

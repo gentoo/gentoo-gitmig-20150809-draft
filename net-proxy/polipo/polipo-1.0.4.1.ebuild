@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.4.1.ebuild,v 1.2 2010/05/29 16:24:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/polipo-1.0.4.1.ebuild,v 1.3 2010/05/31 19:35:27 maekke Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://freehaven.net/~chrisd/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="sys-apps/texinfo"
