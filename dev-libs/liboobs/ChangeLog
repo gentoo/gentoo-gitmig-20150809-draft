@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liboobs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.4 2010/05/22 15:57:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.5 2010/05/31 21:19:26 eva Exp $
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -liboobs-2.20.0.ebuild, -liboobs-2.22.0.ebuild:
+  Clean up old revisions.
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> liboobs-2.22.2.ebuild:
   Add ~alpha/~ia64/~sparc wrt #313563
