@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/powerdevil-4.4.3-r1.ebuild,v 1.1 2010/05/29 06:25:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/powerdevil-4.4.3-r1.ebuild,v 1.2 2010/05/31 10:42:33 reavertm Exp $
 
 EAPI="3"
 
@@ -27,7 +27,9 @@ RDEPEND="${COMMONDEPEND}
 	pm-utils? ( sys-power/pm-utils )
 "
 
-PATCHES=( "${FILESDIR}/${P}-fix-sleep-205453.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-4.4.3-fix-sleep-205453.patch"
+)
 
 KMEXTRACTONLY="
 	krunner/
