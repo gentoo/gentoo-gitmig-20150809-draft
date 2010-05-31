@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.10 2010/05/06 09:06:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.11 2010/05/31 17:31:11 phajdan.jr Exp $
+
+  31 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  argus-clients-3.0.2.ebuild:
+  x86 stable wrt bug #318619
 
 *argus-clients-3.0.3.8 (06 May 2010)
 
