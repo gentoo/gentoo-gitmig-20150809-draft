@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/oroborus
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.32 2008/05/21 17:03:43 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus/ChangeLog,v 1.33 2010/05/31 10:07:19 xarthisius Exp $
+
+*oroborus-2.0.20 (31 May 2010)
+
+  31 May 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +oroborus-2.0.20.ebuild:
+  Version bump
 
   21 May 2008; Samuli Suominen <drac@gentoo.org> -oroborus-2.0.4-r1.ebuild,
   -oroborus-2.0.7.ebuild, -oroborus-2.0.9.ebuild, -oroborus-2.0.13.ebuild,
