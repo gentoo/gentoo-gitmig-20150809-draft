@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.40 2010/03/15 19:55:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.41 2010/05/31 04:48:17 nerdboy Exp $
+
+  31 May 2010; Steve Arnold <nerdboy@gentoo.org> jbigkit-2.0-r1.ebuild:
+  Forced tests to be run sequentially as intended, fixes bug #314963. 
+  The tests create, convert, and delete a bunch of test files, so it
+  pretty much has to be serial rather than parallel.
 
 *jbigkit-2.0-r1 (15 Mar 2010)
 
