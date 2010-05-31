@@ -1,10 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5-r1.ebuild,v 1.4 2010/03/15 03:26:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5-r1.ebuild,v 1.5 2010/05/31 07:23:16 jlec Exp $
 
-NEED_PYTHON=2.3
-EAPI=2
-inherit eutils distutils
+EAPI="2"
+
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="tk"
+
+inherit distutils eutils
+
+PYTHON_MODNAME=enthought
 
 MY_P=MayaVi-${PV}
 DESCRIPTION="VTK based scientific data visualizer"
@@ -14,18 +19,23 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
-
 IUSE="doc examples"
-DEPEND="dev-lang/python[tk]
-	>=sci-libs/vtk-5[tk,python]"
+
+DEPEND="
+	=sci-libs/vtk-5.4*[tk,python]"
 RDEPEND="${DEPEND}"
 
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/mayavi-1.5-tkinter_objects.patch
+	distutils_src_prepare
 }
 
 src_install() {

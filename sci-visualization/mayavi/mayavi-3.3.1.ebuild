@@ -1,9 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.1.ebuild,v 1.1 2010/03/23 05:19:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.1.ebuild,v 1.2 2010/05/31 07:23:16 jlec Exp $
 
 EAPI="2"
+
+PYTHON_DEPEND="2"
+
 inherit distutils eutils
+
+PYTHON_MODNAME=enthought
 
 DESCRIPTION="VTK based scientific data visualizer"
 LICENSE="BSD"
@@ -27,7 +32,7 @@ RDEPEND=">=dev-python/apptools-3.3.1
 	dev-python/configobj
 	dev-python/ipython
 	dev-python/numpy
-	>=sci-libs/vtk-5[python]
+	=sci-libs/vtk-5.4*[python]
 	dev-python/wxpython:2.8[opengl]
 	qt4? ( dev-python/PyQt4[X,opengl] )"
 
@@ -39,14 +44,17 @@ DEPEND="dev-python/setuptools
 RESTRICT=test
 
 S="${WORKDIR}"/${MY_P}
-PYTHON_MODNAME=enthought
 
+pkg_setup() {
+	python_set_active_version 2
+}
 src_prepare() {
 	# documentation generation requires X
 	#epatch "${FILESDIR}"/${P}-nodocs.patch
 	sed -i \
 		-e "s/setupdocs>=1.0//" \
 		setup.py || die
+	distutils_src_prepare
 }
 
 src_install() {
@@ -61,5 +69,5 @@ src_install() {
 }
 
 src_test() {
-	PYTHONPATH="$(ls -d build/lib*)" "${python}" setup.py test || die "tests failed"
+	PYTHONPATH="$(ls -d build/lib*)" "$(PYTHON)" setup.py test || die "tests failed"
 }

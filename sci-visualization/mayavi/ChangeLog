@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.15 2010/03/23 05:19:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.16 2010/05/31 07:23:16 jlec Exp $
+
+*mayavi-3.3.2 (31 May 2010)
+
+  31 May 2010; Justin Lecher <jlec@gentoo.org> mayavi-1.5-r1.ebuild,
+  mayavi-3.3.0.ebuild, mayavi-3.3.1.ebuild, +mayavi-3.3.2.ebuild:
+  Version Bump, fixes incompatibility with vtk-5.6* #322117, fixes for
+  PYTHON ABI support #316255
 
 *mayavi-3.3.1 (21 Mar 2010)
 
