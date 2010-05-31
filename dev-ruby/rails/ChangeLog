@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.174 2010/05/23 11:03:14 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.175 2010/05/31 06:10:03 graaff Exp $
+
+*rails-2.3.8 (31 May 2010)
+
+  31 May 2010; Hans de Graaff <graaff@gentoo.org> +rails-2.3.8.ebuild:
+  Bump for Rails 2.3.8. Drop ppc/ppc64 keywords due to new unkeyworded
+  dependency.
 
 *rails-2.3.5-r3 (23 May 2010)
 

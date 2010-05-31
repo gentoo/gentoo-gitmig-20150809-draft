@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.63 2010/05/23 10:40:04 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.64 2010/05/31 06:06:14 graaff Exp $
+
+*activeresource-2.3.8 (31 May 2010)
+
+  31 May 2010; Hans de Graaff <graaff@gentoo.org>
+  +activeresource-2.3.8.ebuild:
+  Bump for Rails 2.3.8. Drop ppc/ppc64 keywords due to new unkeyworded
+  dependency.
 
   23 May 2010; Alex Legler <a3li@gentoo.org> activeresource-2.3.5-r1.ebuild:
   Add REE18 support
