@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.151 2010/05/04 16:00:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.152 2010/05/31 20:47:11 eva Exp $
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -dasher-4.9.0.ebuild:
+  Clean up old revisions.
 
   03 May 2010; Olivier Crête <tester@gentoo.org> dasher-4.11.ebuild:
   amd64 stable, bug #314899
