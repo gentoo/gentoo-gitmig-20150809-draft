@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.71 2010/04/09 08:05:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.72 2010/05/31 21:21:10 eva Exp $
+
+  31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -gob-2.0.16.ebuild:
+  Clean up old revisions.
 
 *gob-2.0.17 (09 Apr 2010)
 
