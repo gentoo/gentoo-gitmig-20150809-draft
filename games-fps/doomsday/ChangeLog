@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.33 2010/05/25 21:28:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.34 2010/05/31 09:47:25 phajdan.jr Exp $
+
+  31 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  doomsday-1.9.0_beta68.ebuild:
+  x86 stable wrt bug #319293
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> doomsday-1.9.0_beta68.ebuild:
   stable amd64, bug 319293
