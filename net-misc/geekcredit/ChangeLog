@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/geekcredit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.16 2007/12/05 12:54:26 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.17 2010/05/31 16:25:46 arfrever Exp $
+
+  31 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  geekcredit-0.019.ebuild:
+  Delete call to deprecated python_version().
 
   05 Dec 2007; Santiago M. Mola <coldwind@gentoo.org>
   geekcredit-0.019.ebuild:

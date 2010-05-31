@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.019.ebuild,v 1.4 2007/12/05 12:54:26 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.019.ebuild,v 1.5 2010/05/31 16:25:46 arfrever Exp $
 
 inherit python
 
@@ -22,11 +22,10 @@ src_compile() {
 }
 
 src_install() {
-	python_version
 	dobin GCPocket.py
 	dodoc *.txt
 	cp test.sh "${D}"/usr/share/doc/${P}/
-	insinto /usr/lib/python${PYVER}/site-packages/
+	insinto $(python_get_sitedir)
 	doins GeekCredit.py
 	insinto /etc
 	doins gc.cfg
