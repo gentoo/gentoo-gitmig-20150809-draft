@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.6 2010/03/10 08:46:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.7 2010/06/01 10:19:34 pva Exp $
 
 EAPI="2"
 
@@ -42,7 +42,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 PDEPEND="crypt? ( app-crypt/qca-gnupg:2 )
-	jingle? ( net-im/psimedia )
+	jingle? ( net-im/psimedia 
+		app-crypt/qca-ossl:2 )
 	ssl? ( app-crypt/qca-ossl:2 )"
 
 S=${WORKDIR}/${MY_P}
