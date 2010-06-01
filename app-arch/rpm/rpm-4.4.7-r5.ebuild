@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r5.ebuild,v 1.2 2010/05/12 19:59:42 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r5.ebuild,v 1.3 2010/06/01 18:34:25 sochotnicky Exp $
 
 inherit eutils autotools distutils perl-module flag-o-matic
 
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/rpm-4.4.6-buffer-overflow.patch
 	epatch "${FILESDIR}"/${P}-qa-implicit-function-to-pointer.patch
 	epatch "${FILESDIR}"/${P}-qa-fix-undefined.patch
+	epatch "${FILESDIR}"/${P}-have-locale-h.patch
 	# bug 214799
 	epatch "${FILESDIR}"/${PN}-4.4.6-neon-0.28.patch
 
