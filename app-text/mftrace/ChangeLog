@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mftrace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.53 2010/04/20 04:23:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.54 2010/06/01 14:34:41 arfrever Exp $
+
+  01 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mftrace-1.2.13.ebuild:
+  Backport fixes for deprecation warnings from mftrace-1.2.13-r1.
 
 *mftrace-1.2.13-r1 (20 Apr 2010)
 

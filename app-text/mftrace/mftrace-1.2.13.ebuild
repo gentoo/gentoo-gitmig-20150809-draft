@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.9 2009/09/08 18:15:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.10 2010/06/01 14:34:41 arfrever Exp $
 
 EAPI="2"
 
@@ -28,10 +28,8 @@ src_prepare() {
 }
 
 src_configure() {
-	python_version
 	tc-export CC
-	econf --datadir=/usr/$(get_libdir)/python${PYVER}/site-packages || \
-	die "econf failed"
+	econf --datadir=$(python_get_sitedir)
 }
 
 src_compile() {
@@ -39,7 +37,6 @@ src_compile() {
 }
 
 src_install () {
-	python_version
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc README.txt ChangeLog
 }
