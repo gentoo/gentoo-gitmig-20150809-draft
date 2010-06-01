@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libasyncns
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.14 2009/04/28 17:46:37 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.15 2010/06/01 20:43:06 darkside Exp $
+
+*libasyncns-0.8 (01 Jun 2010)
+
+  01 Jun 2010; Jeremy Olexa <darkside@gentoo.org> +libasyncns-0.8.ebuild:
+  Version bump (bug 309355), add Gentoo Prefix support (bug 321023)
 
   28 Apr 2009; Raúl Porcel <armin76@gentoo.org> libasyncns-0.3.ebuild:
   arm/sh stable
