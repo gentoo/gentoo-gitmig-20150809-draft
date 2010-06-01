@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.35 2010/05/25 10:20:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.36 2010/06/01 08:05:26 phajdan.jr Exp $
+
+  01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mpdscribble-0.19.ebuild:
+  x86 stable wrt bug #320929
 
   25 May 2010; Christoph Mende <angelos@gentoo.org> mpdscribble-0.19.ebuild:
   amd64 stable (bug 320929), thanks to Roeland Douma
