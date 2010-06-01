@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mpg123-el
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.25 2010/01/13 20:39:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.26 2010/06/01 06:11:37 ulm Exp $
+
+*mpg123-el-1.55 (01 Jun 2010)
+
+  01 Jun 2010; Ulrich Mueller <ulm@gentoo.org> +mpg123-el-1.55.ebuild:
+  Version bump.
 
   13 Jan 2010; Ulrich Mueller <ulm@gentoo.org> mpg123-el-1.52.ebuild:
   Fix LICENSE, this is free software according to notice in mpg123.el.
