@@ -1,23 +1,25 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.5.ebuild,v 1.1 2010/05/31 06:55:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.5.ebuild,v 1.2 2010/06/01 14:48:57 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
 MY_PN="EnthoughtBase"
 MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="Core packages for the Enthought Tool Suite"
 HOMEPAGE="http://code.enthought.com/projects/enthought_base.php"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="doc examples"
+LICENSE="BSD LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-LICENSE="BSD LGPL-2"
-RDEPEND=""
+IUSE="doc examples"
 
 DEPEND="dev-python/setuptools
 	doc? ( dev-python/setupdocs )"
@@ -25,6 +27,7 @@ DEPEND="dev-python/setuptools
 #	test? ( >=dev-python/nose-0.10.3
 #			dev-python/traits
 #			dev-python/etsdevtools )"
+RDEPEND=""
 
 RESTRICT_PYTHON_ABIS="3.*"
 RESTRICT="test"
@@ -34,6 +37,8 @@ S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME="enthought"
 
 src_prepare() {
+	distutils_src_prepare
+
 	sed -i \
 		-e "s/self.run_command('build_docs')/pass/" \
 		-e '/setupdocs/d' \
@@ -42,18 +47,12 @@ src_prepare() {
 
 src_compile() {
 	distutils_src_compile
+
 	if use doc; then
 		export VARTEXFONTS="${T}/fonts"
-		"$(PYTHON -f)" setup.py build_docs --formats=html,pdf \
-			|| die "doc building failed"
+		einfo "Generation of documentation"
+		"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
 	fi
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
 }
 
 src_install() {
