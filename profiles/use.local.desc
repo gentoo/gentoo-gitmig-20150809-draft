@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5613 2010/06/01 05:07:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5614 2010/06/01 07:27:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2470,6 +2470,7 @@ net-im/ejabberd:mod_irc - Build irc gateway
 net-im/ejabberd:mod_muc - Build Multi User Chat module
 net-im/ejabberd:mod_proxy65 - Support for SOCKS5 Bytestreams (XEP-0065)
 net-im/ejabberd:mod_pubsub - Build Pubsub module
+net-im/ejabberd:mod_srl - Build LDAP shared roster module (https://alioth.debian.org/projects/ejabberd-msrl/)
 net-im/ejabberd:mod_statsdx - Measures several statistics, and provides a new section in ejabberd Web Admin to view them.
 net-im/ejabberd:web - Enable web admin interface
 net-im/empathy:applet - Enable Empathy's applets for gnome-base/gnome-panel
