@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.47 2010/03/15 23:32:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.48 2010/06/01 10:35:39 pva Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -34,6 +34,7 @@ de - German locale
 de_FR - German locale for France
 dgo - Dogri locale for India
 dz - Dzongkha locale
+ee - Ewe locale
 el - Greek locale
 en - English locale
 en_CA - English locale for Canada
