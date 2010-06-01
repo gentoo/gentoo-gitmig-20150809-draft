@@ -18,6 +18,7 @@
 		<flag name='java-external'>Use the external java extension rather than the bundled one</flag>
 		<flag name='json'>Enable JSON support</flag>
 		<flag name='ldap-sasl'>Add SASL support for the PHP LDAP extension</flag>
+		<flag name='mbstring'>Add support for the Multi-Byte String extension</flag>
 		<flag name='mysqlnd'>Use native driver for mysql, mysqli, PDO_Mysql</flag>
 		<flag name='pcre'>Adds support for Perl Compatible Regular Expressions  (deprecated: always "on" in php 5.3)</flag>
 		<flag name='pic'>Force shared modules to build as PIC on x86 (speed tradeoff with memory usage)</flag>

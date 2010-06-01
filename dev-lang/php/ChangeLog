@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.381 2010/05/30 10:05:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.382 2010/06/01 16:17:05 mabi Exp $
+
+  01 Jun 2010; <mabi@gentoo.org> -files/eblits/common-v2.eblit,
+  -files/eblits/src_compile-v2.eblit, -files/eblits/src_install-v2.eblit,
+  files/eblits/src_prepare-v1.eblit, php-5.3.2.ebuild, metadata.xml:
+  align more closely with original php-5.3 work from hoffie@gentoo.org, fix
+  missing mbstring use description, remove unneeded -v2 eblits, remove
+  dangling mcve references
 
   30 May 2010; <mabi@gentoo.org> -files/20php4-envd, php-5.3.2.ebuild,
   -files/php4-ldvs:

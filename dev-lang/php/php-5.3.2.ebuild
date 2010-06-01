@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.4 2010/06/01 03:49:53 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.5 2010/06/01 16:17:05 mabi Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ function php_get_uri ()
 			die "unhandled case in php_get_uri"
 		;;
 	esac
-};
+}
 
 PHP_MV="$(get_major_version)"
 
@@ -44,7 +44,7 @@ PHP_RELEASE="php"
 PHP_P="${PN}-${PHP_PV}"
 PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 
-PHP_PATCHSET="${PHP_PATCHSET:-${PR/r/}}";
+PHP_PATCHSET="${PHP_PATCHSET:-${PR/r/}}"
 PHP_PATCHSET_URI="
 	$(php_get_uri gentoo "php-patchset-${PV}-r${PHP_PATCHSET}.tar.bz2")"
 
@@ -54,9 +54,9 @@ if [[ ${SUHOSIN_VERSION} == *-gentoo ]]; then
 	SUHOSIN_TYPE="gentoo"
 else
 	SUHOSIN_TYPE="suhosin"
-fi;
+fi
 
-SUHOSIN_PATCH="suhosin-patch-${SUHOSIN_VERSION}.patch";
+SUHOSIN_PATCH="suhosin-patch-${SUHOSIN_VERSION}.patch"
 SUHOSIN_URI="$(php_get_uri ${SUHOSIN_TYPE} ${SUHOSIN_PATCH}.gz )"
 
 SRC_URI="
@@ -72,7 +72,7 @@ LICENSE="PHP-3"
 SAPIS="cli cgi embed apache2"
 
 # Gentoo-specific, common features
-IUSE="kolab mcve"
+IUSE="kolab"
 
 # SAPIs and SAPI-specific USE flags:
 IUSE="${IUSE}
@@ -84,7 +84,7 @@ IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 	empress-bcs enchant esoob exif frontbase fileinfo filter firebird
 	flatfile ftp gd gd-external gdbm gmp hash iconv imap inifile
 	interbase intl iodbc ipv6 json kerberos ldap ldap-sasl libedit
-	mssql mysql mysqlnd mysqli nls oci8
+	mbstring mssql mysql mysqlnd mysqli nls oci8
 	oci8-instant-client odbc pcntl pdo phar pic posix postgres qdbm
 	readline recode sapdb session sharedext sharedmem
 	simplexml snmp soap sockets solid spell sqlite sqlite3 ssl suhosin
@@ -92,7 +92,6 @@ IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 	xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
 DEPEND="app-admin/php-toolkit
-	sys-devel/flex
 	>=dev-libs/libpcre-7.9[unicode]
 	adabas? ( >=dev-db/unixODBC-1.8.13 )
 	apache2? ( !threads? ( www-servers/apache[-threads] ) )
@@ -136,7 +135,6 @@ DEPEND="app-admin/php-toolkit
 	ldap-sasl? ( !oci8? ( dev-libs/cyrus-sasl >=net-nds/openldap-1.2.11 ) )
 	libedit? ( || ( sys-freebsd/freebsd-lib dev-libs/libedit ) )
 	mbstring? ( dev-libs/oniguruma )
-	mcve? ( >=dev-libs/openssl-0.9.7 )
 	mssql? ( dev-db/freetds )
 	!mysqlnd? (
 		mysql? ( virtual/mysql )
@@ -191,9 +189,9 @@ DEPEND="app-admin/php-toolkit
 	zip? ( sys-libs/zlib )
 	zlib? ( sys-libs/zlib )
 	virtual/mta
-";
+"
 
-php="=${CATEGORY}/${PF}";
+php="=${CATEGORY}/${PF}"
 RDEPEND="${DEPEND}
 	truetype? ( || ( $php[gd] $php[gd-external] ) )
 	cjk? ( || ( $php[gd] $php[gd-external] ) )
@@ -209,7 +207,6 @@ RDEPEND="${DEPEND}
 	xmlreader? ( $php[xml] )
 	xsl? ( $php[xml] )
 	ldap-sasl? ( $php[ldap,-oci8] )
-	mcve? ( $php[ssl] )
 	suhosin? ( $php[unicode] )
 	adabas? ( $php[odbc] )
 	birdstep? ( $php[odbc] )
@@ -218,7 +215,7 @@ RDEPEND="${DEPEND}
 	empress? ( $php[odbc] )
 	esoob? ( $php[odbc] )
 	db2? ( $php[odbc] )
-	iodbc? ( $php[odbc] )
+	iodbc? ( $php[iodbc] )
 	sapdb? ( $php[odbc] )
 	solid? ( $php[odbc] )
 	kolab? ( $php[imap] )
@@ -248,6 +245,7 @@ RDEPEND="${DEPEND}
 	zip? ( !dev-php${PHP_MV}/pecl-zip )"
 
 DEPEND="${DEPEND}
+	sys-devel/flex
 	>=sys-devel/m4-1.4.3
 	>=sys-devel/libtool-1.5.18"
 
@@ -260,7 +258,7 @@ PDEPEND="doc? ( app-doc/php-docs )
 # for the best
 PROVIDE="virtual/php virtual/httpd-php"
 
-SLOT="${PHP_MV}";
+SLOT="${PHP_MV}"
 S="${WORKDIR}/${PHP_P}"
 
 PHP_INI_FILE="php.ini"
@@ -332,8 +330,8 @@ eblit-pkg pkg_setup v1
 
 src_prepare() { eblit-run src_prepare v1 ; }
 src_configure() { eblit-run src_configure v1 ; }
-src_compile() { eblit-run src_compile v2 ; }
-src_install() { eblit-run src_install v2 ; }
+src_compile() { eblit-run src_compile v1 ; }
+src_install() { eblit-run src_install v1 ; }
 src_test() { eblit-run src_test v1 ; }
 
 eblit-pkg pkg_postinst v1
