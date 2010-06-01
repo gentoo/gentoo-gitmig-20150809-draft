@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.3 2010/05/27 16:15:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.4 2010/06/01 07:20:02 pva Exp $
 
 EAPI=3
 
@@ -8,12 +8,13 @@ inherit eutils multilib pam ssl-cert
 
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
-SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tar.gz
+		mod_srl? ( https://alioth.debian.org/frs/download.php/3283/mod_shared_roster_ldap-0.5.1.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~x86"
-EJABBERD_MODULES="mod_irc mod_muc mod_proxy65 mod_pubsub mod_statsdx"
+EJABBERD_MODULES="mod_irc mod_muc mod_proxy65 mod_pubsub mod_srl mod_statsdx"
 IUSE="captcha debug ldap odbc pam ssl +web zlib ${EJABBERD_MODULES}"
 
 DEPEND=">=net-im/jabber-base-0.01
@@ -32,7 +33,7 @@ PROVIDE="virtual/jabber-server"
 
 S=${WORKDIR}/${P}/src
 
-# pathes in net-im/jabber-base
+# paths in net-im/jabber-base
 JABBER_ETC="${EPREFIX}/etc/jabber"
 #JABBER_RUN="/var/run/jabber"
 JABBER_SPOOL="${EPREFIX}/var/spool/jabber"
@@ -48,7 +49,7 @@ src_prepare() {
 
 	# don't install release notes (we'll do this manually)
 	sed '/install .* [.][.]\/doc\/[*][.]txt $(DOCDIR)/d' -i Makefile.in || die
-	# Set correct pathes
+	# Set correct paths
 	sed -e "/^EJABBERDDIR[[:space:]]*=/{s:ejabberd:${PF}:}" \
 		-e "/^ETCDIR[[:space:]]*=/{s:@sysconfdir@/ejabberd:${JABBER_ETC}:}" \
 		-e "/^LOGDIR[[:space:]]*=/{s:@localstatedir@/log/ejabberd:${JABBER_LOG}:}" \
@@ -77,10 +78,14 @@ src_prepare() {
 	sed -e 's|\({captcha_cmd,[[:space:]]*"\).\+"}|\1/usr/'$(get_libdir)'/erlang/lib/'${P}'/priv/bin/captcha.sh"}|' \
 			-i ejabberd.cfg.example || die "Failed sed ejabberd.cfg.example"
 
-	# disable mod_irc
+	# disable mod_irc in ejabberd.cfg
 	if ! use mod_irc; then
 		sed -i -e "s/{mod_irc,/%{mod_irc,/" \
 			-i ejabberd.cfg.example || die "Failed to disable mod_irc"
+	fi
+
+	if use mod_srl; then
+		cp "${WORKDIR}"/src/mod_shared_roster_ldap{.{e,h}rl,_helpers.erl} "${S}" || die
 	fi
 }
 
@@ -152,10 +157,10 @@ pkg_postinst() {
 		source "${EROOT}/etc/conf.d/ejabberd"
 		ewarn
 		ewarn "!!! WARNING !!!  WARNING !!!  WARNING !!!  WARNING !!!"
-		ewarn "Starting with 2.1.x some pathes and configuration files were"
-		ewarn "changed to better reflect upstream intentions. Notable changes are:"
+		ewarn "Starting with 2.1.x some paths and configuration files were"
+		ewarn "changed to reflect upstream intentions better. Notable changes are:"
 		ewarn
-		ewarn "1. Everything (even init scripts) are now handled by ejabberdctl script."
+		ewarn "1. Everything (even init scripts) is now handled with ejabberdctl script."
 		ewarn "Thus main configuration file became /etc/jabberd/ejabberdctl.cfg"
 		ewarn "You must update ERLANG_NODE there with the value of EJABBERD_NODE"
 		ewarn "from /etc/conf.d/ejebberd or ejabberd will refuse to start."
