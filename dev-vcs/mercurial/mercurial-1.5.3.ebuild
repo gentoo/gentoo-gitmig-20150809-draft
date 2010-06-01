@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.5.3.ebuild,v 1.2 2010/05/30 20:12:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.5.3.ebuild,v 1.3 2010/06/01 16:35:30 djc Exp $
 
 EAPI=3
 
@@ -95,6 +95,9 @@ src_test() {
 		rm -f test-lock-badness		# Test is broken when run as root
 		rm -f test-permissions		# Test is broken when run as root
 		rm -f test-pull-permission	# Test is broken when run as root
+		rm -f test-clone-failure
+		rm -f test-journal-exists
+		rm -f test-repair-strip
 	fi
 	local testdir="${T}/tests"
 	rm -rf "${testdir}"
