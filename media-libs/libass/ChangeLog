@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.28 2010/05/25 18:28:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.29 2010/06/01 20:14:35 darkside Exp $
+
+  01 Jun 2010; Jeremy Olexa <darkside@gentoo.org> libass-0.9.9.ebuild:
+  add ~x64-macos, bug 322229
 
   25 May 2010; Jeremy Olexa <darkside@gentoo.org> libass-0.9.9.ebuild:
   Add Gentoo Prefix keywords, compile tested only
