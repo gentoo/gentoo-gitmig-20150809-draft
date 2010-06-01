@@ -13,7 +13,6 @@
   can be used to create applications.
 </longdescription>
 <use>
-  <flag name='noxft'>Disables xft; use for non-english characters</flag>
   <flag name='games'>Builds and installs some extra games</flag>
 </use>
 </pkgmetadata>
