@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.6.ebuild,v 1.7 2010/01/05 04:52:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-1.6.ebuild,v 1.8 2010/06/01 19:26:51 xarthisius Exp $
 
 DESCRIPTION="EWMH (NetWM) compatible pager. Works with Openbox and other EWMH
 compliant window managers."
@@ -20,7 +20,6 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXau"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	x11-libs/libXft
 	x11-proto/xproto"
 
 src_compile()
