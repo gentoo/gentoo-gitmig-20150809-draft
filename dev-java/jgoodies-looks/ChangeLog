@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-looks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.39 2010/05/21 22:46:53 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.40 2010/06/01 07:59:23 phajdan.jr Exp $
+
+  01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  jgoodies-looks-2.3.1.ebuild:
+  x86 stable wrt bug #320831
 
   21 May 2010; Kenneth Prugh <ken69267@gentoo.org>
   jgoodies-looks-2.3.1.ebuild:
