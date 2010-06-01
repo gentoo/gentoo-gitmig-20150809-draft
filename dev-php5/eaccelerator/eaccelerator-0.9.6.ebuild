@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.ebuild,v 1.1 2010/04/22 08:45:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.6.ebuild,v 1.2 2010/06/01 03:52:00 ferringb Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="http://bart.eaccelerator.net/source/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug disassembler inode doccommentinclusion"
+IUSE="debug disassembler inode doccommentinclusion session"
 
 DEPEND="!dev-php5/pecl-apc !dev-php5/xcache"
 RDEPEND="${DEPEND}
