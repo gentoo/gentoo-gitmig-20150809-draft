@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/crow-designer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.18 2010/05/21 08:58:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.19 2010/06/01 10:02:49 pva Exp $
+
+*crow-designer-2.17.1 (01 Jun 2010)
+
+  01 Jun 2010; Peter Volkov <pva@gentoo.org> +crow-designer-2.17.1.ebuild:
+  Version bump.
 
   21 May 2010; Peter Volkov <pva@gentoo.org> crow-designer-2.17.0.ebuild:
   Improve native language support.
