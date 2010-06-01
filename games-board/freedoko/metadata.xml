@@ -6,7 +6,6 @@
 The Linux version of the popular german cardgame "Doppelkopf"
 </longdescription>
   <use>
-    <flag name="altenburgcards">Use the Altenburg card set</flag>
     <flag name="kdecards">Install the KDE card set</flag>
     <flag name="net">Enable network game support</flag>
     <flag name="pysolcards">Install the PySol card set</flag>

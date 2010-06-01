@@ -1,6 +1,10 @@
 # ChangeLog for games-board/freedoko
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.8 2010/04/20 19:10:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.9 2010/06/01 10:03:28 tupone Exp $
+
+  01 Jun 2010; Tupone Alfredo <tupone@gentoo.org> freedoko-0.7.8.ebuild,
+  +files/freedoko-0.7.8-gcc45.patch, metadata.xml:
+  Fix build with gcc-4.5 Bug #322203 by flameeyes@gentoo.org
 
 *freedoko-0.7.8 (20 Apr 2010)
 
