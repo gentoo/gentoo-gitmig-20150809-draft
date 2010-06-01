@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weka
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.37 2010/05/31 08:44:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.38 2010/06/01 15:03:44 josejx Exp $
+
+  01 Jun 2010; Joseph Jezak <josejx@gentoo.org> weka-3.6.2.ebuild:
+  Marked ppc stable for bug #315685.
 
   31 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> weka-3.6.2.ebuild:
   x86 stable wrt bug #315685
