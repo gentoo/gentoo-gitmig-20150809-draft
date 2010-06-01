@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.6 2010/06/01 00:41:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.7 2010/06/01 01:02:43 jer Exp $
+
+  01 Jun 2010; Jeroen Roovers <jer@gentoo.org> surf-0.4.ebuild:
+  Introduce new default download dependencies.
 
 *surf-0.4 (01 Jun 2010)
 

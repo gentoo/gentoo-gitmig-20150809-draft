@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.ebuild,v 1.1 2010/06/01 00:41:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.ebuild,v 1.2 2010/06/01 01:02:43 jer Exp $
 
 EAPI="2"
 
@@ -18,8 +18,17 @@ IUSE=""
 DEPEND=">=net-libs/webkit-gtk-1.1.14"
 RDEPEND="
 	!media-gfx/surf
+	!savedconfig? ( net-misc/wget x11-terms/xterm )
 	${DEPEND}
 "
+
+pkg_setup() {
+	elog "net-misc/wget and x11-terms/xterm will be installed by default to"
+	elog "support the default download command, which can be changed through"
+	elog "the savedconfig mechanism. If you enable USE=savedconfig, you will"
+	elog "need to satisfy requirements for the alternative download command"
+	elog "yourself."
+}
 
 src_prepare() {
 	sed -i \
