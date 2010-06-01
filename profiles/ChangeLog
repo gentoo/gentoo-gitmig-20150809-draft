@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4219 2010/06/01 10:35:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4220 2010/06/01 21:28:54 spatz Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2010; Dror Levin <spatz@gentoo.org> package.mask:
+  Unmask KDE SC 4.4.4 since we're not adding it to tree yet.
 
   01 Jun 2010; Peter Volkov <pva@gentoo.org> desc/linguas.desc:
   Added ee locale, http://en.wikipedia.org/wiki/Ewe_language
