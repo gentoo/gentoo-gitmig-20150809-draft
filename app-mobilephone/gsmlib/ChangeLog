@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gsmlib
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/ChangeLog,v 1.11 2008/04/20 23:18:17 dirtyepic Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/ChangeLog,v 1.12 2010/06/01 08:26:20 bangert Exp $
+
+  01 Jun 2010; Thilo Bangert <bangert@gentoo.org>
+  gsmlib-1.11_pre041028.ebuild:
+  dont try to install non-existant ChangeLog (#315587)
 
   20 Apr 2008; Ryan Hill <dirtyepic@gentoo.org>
   +files/gsmlib-1.11-gcc43.patch, gsmlib-1.11_pre041028.ebuild:
