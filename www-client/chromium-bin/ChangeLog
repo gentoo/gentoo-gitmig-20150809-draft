@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.67 2010/05/12 18:46:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.68 2010/06/01 14:34:17 voyageur Exp $
+
+  01 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-bin-9999.ebuild:
+  Depend on cups, thanks to Vicente Olivert <peratu@carrosses.com> in bug
+  #321603
 
   12 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-bin-5.0.308.0_p37385.ebuild,

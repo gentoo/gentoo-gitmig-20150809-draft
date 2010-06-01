@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.41 2010/05/12 18:46:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.42 2010/06/01 14:34:17 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -14,13 +14,14 @@ IUSE="+plugins-symlink"
 
 DEPEND="app-arch/unzip"
 RDEPEND="app-arch/bzip2
+	>=dev-libs/nspr-4.7
+	>=dev-libs/nss-3.12.3
 	gnome-base/gconf
 	>=media-libs/alsa-lib-1.0.19
 	<media-libs/jpeg-7
 	=media-libs/libpng-1.2*
+	>=net-print/cups-1.3.5
 	>=sys-devel/gcc-4.2
-	>=dev-libs/nspr-4.7
-	>=dev-libs/nss-3.12.3
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver
