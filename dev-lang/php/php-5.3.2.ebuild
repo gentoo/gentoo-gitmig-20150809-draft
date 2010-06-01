@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.3 2010/05/30 10:05:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.4 2010/06/01 03:49:53 ferringb Exp $
 
 EAPI=2
 
@@ -72,7 +72,7 @@ LICENSE="PHP-3"
 SAPIS="cli cgi embed apache2"
 
 # Gentoo-specific, common features
-IUSE="kolab"
+IUSE="kolab mcve"
 
 # SAPIs and SAPI-specific USE flags:
 IUSE="${IUSE}
