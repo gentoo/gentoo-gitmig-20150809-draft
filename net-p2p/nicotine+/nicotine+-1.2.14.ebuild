@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.14.ebuild,v 1.3 2009/11/21 18:50:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.14.ebuild,v 1.4 2010/06/01 10:52:00 arfrever Exp $
 
-inherit distutils multilib toolchain-funcs
+inherit distutils
 
 DESCRIPTION="A fork of nicotine, a Soulseek client in Python"
 HOMEPAGE="http://nicotine-plus.sourceforge.net"
@@ -24,9 +24,9 @@ RDEPEND="virtual/python
 
 DEPEND="${RDEPEND}"
 
+PYTHON_MODNAME="pynicotine"
+
 src_install() {
-	distutils_python_version
-	distutils_src_install \
-		--install-lib /usr/$(get_libdir)/python${PYVER}/site-packages
+	distutils_src_install
 	dosym nicotine.py /usr/bin/nicotine
 }

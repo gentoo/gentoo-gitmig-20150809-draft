@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.15.ebuild,v 1.3 2010/03/08 03:29:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.15.ebuild,v 1.4 2010/06/01 10:52:00 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 
-inherit distutils python
+inherit distutils
 
 DESCRIPTION="A fork of nicotine, a Soulseek client in Python"
 HOMEPAGE="http://nicotine-plus.sourceforge.net"
@@ -24,6 +24,8 @@ RDEPEND=">=dev-python/pygtk-2.12
 	!net-p2p/nicotine"
 
 DEPEND="${RDEPEND}"
+
+PYTHON_MODNAME="pynicotine"
 
 pkg_setup() {
 	python_set_active_version 2
