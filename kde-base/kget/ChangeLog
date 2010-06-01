@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.160 2010/05/15 13:19:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.161 2010/06/01 15:25:07 josejx Exp $
+
+  01 Jun 2010; Joseph Jezak <josejx@gentoo.org> kget-4.3.5-r1.ebuild:
+  Marked ppc stable for bug #319719.
 
   15 May 2010; Markus Meier <maekke@gentoo.org> kget-4.3.5-r1.ebuild:
   amd64/x86 stable, bug #319719
