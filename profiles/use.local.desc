@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5612 2010/06/01 04:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5613 2010/06/01 05:07:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3593,7 +3593,6 @@ x11-libs/cairo:glitz - Build with glitz support, which replaces some software re
 x11-libs/cairo:lcdfilter - Add FreeType LCD filtering, ClearType-style behavior for sub-pixel-hinting. Overrides cleartype USE flag. Patch taken from Ubuntu
 x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage. Requires hardware OpenGL support
 x11-libs/fltk:games - Builds and installs some extra games
-x11-libs/fltk:noxft - Disables xft; use for non-english characters
 x11-libs/gtkdatabox:glade - Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget
 x11-libs/gtkmathview:t1lib - Enable media-libs/t1lib support
 x11-libs/libSM:uuid - Use UUID for session identification instead of IP address and system time. 
