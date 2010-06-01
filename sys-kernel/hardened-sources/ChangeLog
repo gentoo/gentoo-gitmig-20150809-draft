@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.314 2010/05/27 13:00:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.315 2010/06/01 15:28:09 chainsaw Exp $
+
+*hardened-sources-2.6.32-r8 (01 Jun 2010)
+
+  01 Jun 2010; <chainsaw@gentoo.org> +hardened-sources-2.6.32-r8.ebuild:
+  New patchset by Anthony G Basile, based on mainline 2.6.32.14 sources.
 
   27 May 2010; <chainsaw@gentoo.org> hardened-sources-2.6.32-r7.ebuild:
   Update SRC_URI to point to mirror network now that the distfile has
