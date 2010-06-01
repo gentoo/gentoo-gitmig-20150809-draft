@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.91 2010/05/28 20:00:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.92 2010/06/01 09:19:58 pva Exp $
+
+  01 Jun 2010; Peter Volkov <pva@gentoo.org> autofs-5.0.4-r5.ebuild:
+  Wrong patch was applied and that cause build issue, bug #292147#c15, thank
+  Christian Ruppert (idl0r) for report and Dustin Polke for this fix.
 
   28 May 2010; Peter Volkov <pva@gentoo.org> autofs-5.0.4-r5.ebuild,
   metadata.xml:
