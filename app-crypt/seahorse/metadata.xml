@@ -3,17 +3,7 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-	<flag name="applet">Enable seahorse applet for
-	<pkg>gnome-base/gnome-panel</pkg>.</flag>
-	<flag name="epiphany">Enable text encryption plugin to integrate into
-	<pkg>www-client/epiphany</pkg> context menu.</flag>
-	<flag name="gedit">Enable text encryption plugin to integrate into
-	<pkg>app-editors/gedit</pkg>.</flag>
 	<flag name="ldap">Enable seahorse to manipulate GPG keys on a LDAP server.</flag>
-	<flag name="nautilus">Enable file encryption plugin to integrate into
-	<pkg>gnome-base/nautilus</pkg> context menu.</flag>
-	<flag name="xulrunner">Selects which gecko engine against which to build the
-	<pkg>www-client/epiphany</pkg> plugin.</flag>
 </use>
 <longdescription>Seahorse is a Gnome interface for GnuPG.  It's main purpose is to be a PGP/GPG Key Manager, though 
 it has other components including a text editor and file manager.
