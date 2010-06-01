@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.9.1.ebuild,v 1.5 2010/05/09 17:37:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.9.1.ebuild,v 1.6 2010/06/01 11:59:38 ssuominen Exp $
 
 EAPI="2"
 
@@ -31,6 +31,8 @@ src_prepare() {
 
 	# Fix LDFLAGS
 	sed -i -e 's/@shared@/@shared@ $(LDFLAGS)/' {cadpli,tgt-vhdl,tgt-null,tgt-stub,tgt-vvp}/Makefile.in || die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_install() {
