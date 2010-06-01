@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.64 2010/05/25 21:28:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.65 2010/06/01 19:57:41 phajdan.jr Exp $
+
+  01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  root-5.26.00-r2.ebuild:
+  x86 stable wrt bug #318469
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> root-5.26.00-r2.ebuild:
   stable amd64, bug 318469
