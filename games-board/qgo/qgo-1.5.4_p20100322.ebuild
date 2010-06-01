@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.4 2010/05/20 14:01:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p20100322.ebuild,v 1.5 2010/06/01 08:13:45 tupone Exp $
 
 EAPI=2
 inherit qt4-r2 games
@@ -29,6 +29,8 @@ src_prepare() {
 	sed -i \
 		-e "/TRANSLATIONS_PATH_PREFIX/s:/usr/share:${GAMES_DATADIR}:" \
 		src/defines.h || die
+
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_configure() {
