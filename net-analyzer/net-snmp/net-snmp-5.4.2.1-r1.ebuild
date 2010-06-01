@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r1.ebuild,v 1.9 2009/10/16 08:51:06 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r1.ebuild,v 1.10 2010/06/01 11:54:42 arfrever Exp $
 
 inherit fixheadtails flag-o-matic perl-module python autotools
 
@@ -53,9 +53,7 @@ src_unpack() {
 		die "sed fixproc failed"
 
 	if use python ; then
-		python_version
-		PYTHON_MODNAME="netsnmp"
-		PYTHON_DIR=/usr/$(get_libdir)/python${PYVER}/site-packages
+		PYTHON_DIR="$(python_get_sitedir)"
 		sed -i -e "s:\(install --basedir=\$\$dir\):\1 --root='${D}':" Makefile.in || die "sed python failed"
 	fi
 
@@ -180,13 +178,17 @@ src_install () {
 	newins "${S}"/EXAMPLE.conf snmpd.conf.example
 }
 
-pkg_postrm() {
-	if use python ; then
-		python_mod_cleanup
-	fi
-}
-
 pkg_postinst() {
+	if use python; then
+		python_mod_optimize $(python_get_sitedir)/netsnmp
+	fi
+
 	elog "An example configuration file has been installed in"
 	elog "/etc/snmp/snmpd.conf.example."
+}
+
+pkg_postrm() {
+	if use python; then
+		python_mod_cleanup $(python_get_sitedir)/netsnmp
+	fi
 }
