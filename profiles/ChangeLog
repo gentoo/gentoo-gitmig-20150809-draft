@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4217 2010/05/31 14:01:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4218 2010/06/01 08:05:41 bangert Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2010; Thilo Bangert <bangert@gentoo.org> package.mask:
+  lift mask on new xsupplicant ebuild
 
   31 May 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask www-client/opera-10.60.
