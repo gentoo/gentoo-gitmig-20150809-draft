@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.6 2010/01/18 20:32:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.7 2010/06/01 05:31:27 graaff Exp $
+
+*yard-0.5.5 (01 Jun 2010)
+
+  01 Jun 2010; Hans de Graaff <graaff@gentoo.org> +yard-0.5.5.ebuild:
+  Version bump.
 
   18 Jan 2010; Brent Baude <ranger@gentoo.org> yard-0.5.3.ebuild:
   Marking yard-0.5.3 ~ppc for bug 297718
