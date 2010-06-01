@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.701 2010/05/28 23:57:11 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.702 2010/06/01 03:17:28 robbat2 Exp $
+
+  01 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Bug #322327: deblob-2.6.34 missing from Manifest
 
 *gentoo-sources-2.6.32-r10 (28 May 2010)
 
