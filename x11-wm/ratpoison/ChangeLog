@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ratpoison
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.79 2009/12/08 19:25:44 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.80 2010/06/01 17:12:31 xarthisius Exp $
+
+  01 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  ratpoison-1.4.5.ebuild, +files/ratpoison-1.4.5-asneeded.patch:
+  Fixing build with as-needed wrt bug 310727. Thanks Diego for report.
 
   08 Dec 2009; nixnut <nixnut@gentoo.org> ratpoison-1.4.5.ebuild:
   ppc stable #293517
