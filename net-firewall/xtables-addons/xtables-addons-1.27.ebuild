@@ -1,14 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.25.ebuild,v 1.2 2010/04/29 15:37:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.27.ebuild,v 1.1 2010/06/01 09:01:35 pva Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit eutils linux-mod
+inherit eutils linux-mod multilib
 
 DESCRIPTION="extensions not yet accepted in the main kernel/iptables (patch-o-matic(-ng) successor)"
 HOMEPAGE="http://xtables-addons.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xtables-addons/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/xtables-addons/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -119,8 +119,8 @@ src_prepare() {
 src_configure() {
 	unset ARCH # .. or it'll look for /arch/amd64/Makefile in linux sources
 	export KBUILD_EXTMOD=${S} # Avoid build in /usr/src/linux #250407
-	econf --prefix=/ \
-		--libexecdir=/lib/ \
+	econf --prefix="${EPREFIX}/" \
+		--libexecdir="${EPREFIX}/$(get_libdir)/" \
 		--with-kbuild="${KV_DIR}"
 }
 
@@ -130,8 +130,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${ED}" install || die
 	use modules && linux-mod_src_install
 	dodoc README doc/* || die
-	find "${D}" -type f -name '*.la' -exec rm -rf '{}' '+'
+	find "${ED}" -type f -name '*.la' -exec rm -rf '{}' '+'
 }
