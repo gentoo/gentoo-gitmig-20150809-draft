@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.10 2009/07/26 20:52:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.11 2010/06/01 17:00:17 xarthisius Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="window manager selector tool"
 HOMEPAGE="http://ordiluc.net/selectwm"
@@ -21,18 +21,20 @@ DEPEND="$RDEPEND
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-enable-deprecated-gtk.patch
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+	epatch "${FILESDIR}"/${P}-enable-deprecated-gtk.patch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch \
+		"${FILESDIR}"/${P}-nostrip.patch
+	eautoreconf
 }
 
 src_compile() {
 	econf \
 		--program-suffix=2 \
-		$(use_enable nls) || die "econf failed"
+		$(use_enable nls)
 	emake || die "emake failed"
 }
 
 src_install () {
-	einstall || die "einstall failed"
-	dodoc AUTHORS README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS README sample.xinitrc || die
 }
