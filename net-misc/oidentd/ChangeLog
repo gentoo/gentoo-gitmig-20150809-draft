@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.49 2010/05/26 10:32:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.50 2010/06/01 08:08:49 phajdan.jr Exp $
+
+  01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  oidentd-2.0.8-r3.ebuild:
+  x86 stable wrt bug #320931
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org> oidentd-2.0.8-r3.ebuild:
   stable amd64, bug 320931
