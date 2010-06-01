@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gspeakers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.9 2009/08/01 21:21:38 cryos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.10 2010/06/01 05:04:01 tomjbe Exp $
+
+*gspeakers-0.11-r1 (01 Jun 2010)
+
+  01 Jun 2010; Thomas Beierlein <tomjbe@gentoo.org>
+  +gspeakers-0.11-r1.ebuild:
+  Fix for bug #298530. Thanks for patch to Chr. Levebvre
 
   01 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org> gspeakers-0.11.ebuild:
   Applied patch from Rafael G. Martins <rafael@rafaelmartins.com>, closes
