@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.68 2010/05/19 20:34:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.69 2010/06/01 20:19:15 darkside Exp $
+
+  01 Jun 2010; Jeremy Olexa <darkside@gentoo.org> enca-1.13.ebuild:
+  add ~x64-macos, bug 322229
 
   19 May 2010; Raúl Porcel <armin76@gentoo.org> enca-1.13.ebuild:
   alpha/arm/ia64/sparc stable wrt #311639
