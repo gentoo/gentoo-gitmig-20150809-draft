@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/trebuchet-1.052.ebuild,v 1.6 2008/03/07 01:25:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/trebuchet-1.052.ebuild,v 1.7 2010/06/01 11:50:02 tupone Exp $
+EAPI="2"
 
 inherit games
 
@@ -14,17 +15,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
+RESTRICT="test"
 
 RDEPEND=">=dev-lang/tk-8.3.3
 	dev-lang/tcl"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	sed -i \
 		-e "/Nothing/d" \
-		-e "/LN/ s:../libexec:${GAMES_DATADIR}:" "${S}"/Makefile \
-			|| die "sed Makefile failed"
+		-e "/LN/ s:../libexec:${GAMES_DATADIR}:" \
+		Makefile \
+		|| die "sed Makefile failed"
 }
 
 src_install() {
