@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.60 2010/06/01 00:27:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.61 2010/06/01 04:31:51 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -164,7 +164,7 @@ DEPEND="${RDEPEND}
 		xscreensaver? ( x11-proto/scrnsaverproto )
 	)
 	amd64? ( ${ASM_DEP} )
-	doc? ( dev-libs/libxslt app-text/docbook-xml-dtd 
+	doc? ( dev-libs/libxslt app-text/docbook-xml-dtd
 		   app-text/docbook-xsl-stylesheets )
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
