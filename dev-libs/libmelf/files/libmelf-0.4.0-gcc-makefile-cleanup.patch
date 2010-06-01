@@ -15,7 +15,7 @@ diff -Nuar --exclude '*~' libmelf-0.4.0.orig/example/Makefile.in libmelf-0.4.0/e
 +%: %.c
 +	${CC} $(CFLAGS) $^ -o $@ -L.. -lmelf
 +
-+all: sign test new
++all: $(BINS)
 +
 +clean:
 +	-rm -f $(BINS)
