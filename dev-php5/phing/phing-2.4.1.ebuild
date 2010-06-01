@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/phing-2.4.1.ebuild,v 1.1 2010/05/29 18:35:14 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/phing-2.4.1.ebuild,v 1.2 2010/06/01 04:31:28 mr_bones_ Exp $
 
 EAPI="2"
 inherit php-pear-lib-r1 eutils
@@ -8,7 +8,6 @@ inherit php-pear-lib-r1 eutils
 DESCRIPTION="PHP project build system based on Apache Ant"
 HOMEPAGE="http://www.phing.info/"
 SRC_URI="http://pear.phing.info/get/phing-${PV/_/}.tgz"
-
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -30,7 +29,6 @@ RDEPEND="!minimal? ( >=dev-php/PEAR-PhpDocumentor-1.4.0
 need_php_by_category
 
 S=${WORKDIR}/${PN}-${PV/_/}
-
 
 pkg_postinst() {
 	if use minimal; then
