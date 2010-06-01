@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta35.ebuild,v 1.2 2010/05/24 21:37:39 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta35.ebuild,v 1.3 2010/06/01 12:58:33 lavajoe Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -20,14 +20,13 @@ SRC_URI="http://www.povray.org/redirect/www.povray.org/beta/source/${PN}-${MY_PV
 LICENSE="povlegal-3.6"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="svga tiff X"
+IUSE="tiff X"
 
 DEPEND="media-libs/libpng
 	tiff? ( >=media-libs/tiff-3.6.1 )
 	media-libs/jpeg
 	sys-libs/zlib
 	X? ( x11-libs/libXaw )
-	svga? ( media-libs/svgalib )
 	>=dev-libs/boost-1.36"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -66,6 +65,8 @@ src_unpack() {
 }
 
 src_compile() {
+	local non_redist_conf
+
 	# Fixes bug 71255
 	if [[ $(get-flag march) == k6-2 ]]; then
 		filter-flags -fomit-frame-pointer
@@ -78,9 +79,15 @@ src_compile() {
 	append-flags -DPOVLIBDIR=\\\"${ROOT}usr/share/${PN}\\\"
 	append-flags -DPOVCONFDIR=\\\"${ROOT}etc/${PN}\\\"
 
+	if ! use tiff ; then
+		non_redist_conf="NON_REDISTRIBUTABLE_BUILD=yes"
+	else
+		non_redist_conf=""
+	fi
+
 	econf \
+		${non_redist_conf} \
 		COMPILED_BY="Portage (Gentoo `uname`) on `hostname -f`" \
-		$(use_with svga) \
 		$(use_with tiff libtiff) \
 		$(use_with X x) \
 		--disable-strip \

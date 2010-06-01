@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.102 2010/05/24 21:37:39 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.103 2010/06/01 12:58:33 lavajoe Exp $
+
+  01 Jun 2010; Joe Peterson <lavajoe@gentoo.org> povray-3.7.0_beta35.ebuild:
+  Fix bug #322225; remove unused USE svga
 
   24 May 2010; Joe Peterson <lavajoe@gentoo.org> povray-3.7.0_beta35.ebuild,
   +files/povray-3.7.0_beta35-configure-allow-libpng14.patch:
