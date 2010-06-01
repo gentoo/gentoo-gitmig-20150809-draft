@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/dikt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dikt/ChangeLog,v 1.1 2009/12/27 12:09:18 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dikt/ChangeLog,v 1.2 2010/06/01 15:55:43 spatz Exp $
+
+*dikt-2d (01 Jun 2010)
+
+  01 Jun 2010; Dror Levin <spatz@gentoo.org> +dikt-2d.ebuild:
+  Version bump.
 
 *dikt-1l (27 Dec 2009)
 
