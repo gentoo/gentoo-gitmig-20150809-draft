@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.22.ebuild,v 1.5 2010/05/23 19:00:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/pyalsa-1.0.22.ebuild,v 1.6 2010/06/01 14:52:05 josejx Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="mirror://alsaproject/pyalsa/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="media-libs/alsa-lib"
