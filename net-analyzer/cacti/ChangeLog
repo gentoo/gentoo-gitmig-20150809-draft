@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.170 2010/05/26 19:17:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.171 2010/06/01 15:22:56 josejx Exp $
+
+  01 Jun 2010; Joseph Jezak <josejx@gentoo.org> cacti-0.8.7e-r2.ebuild:
+  Marked ppc stable for bug #317615.
 
   26 May 2010; Brent Baude <ranger@gentoo.org> cacti-0.8.7e-r2.ebuild:
   Marking cacti-0.8.7e-r2 ppc64 for bug 317615
