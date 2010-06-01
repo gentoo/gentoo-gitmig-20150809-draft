@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5615 2010/06/01 10:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5616 2010/06/01 10:47:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2497,8 +2497,13 @@ net-im/pidgin:prediction - Enable Contact Availability Prediction plugin
 net-im/pidgin:qq - Enable QQ protocol support
 net-im/pidgin:silc - Enable SILC protocol support
 net-im/pidgin:zephyr - Enable Zephyr protocol support
+net-im/psi:enchant - Use enchant spell engine instead of aspell
 net-im/psi:extras - Enables extra non official patches
+net-im/psi:iconsets - Install additional iconsets, some of them has not clear licensing
+net-im/psi:plugins - Enable plugins support
+net-im/psi:powersave - Disable some non critical timers for much less CPU usage
 net-im/psi:webkit - Enable chatlog rendering using webkit
+net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
 net-im/psimedia:demo -  build simple test application for the PsiMedia system. 
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface 
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface 
