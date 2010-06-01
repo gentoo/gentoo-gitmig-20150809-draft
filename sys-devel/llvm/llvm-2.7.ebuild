@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.7.ebuild,v 1.1 2010/04/27 11:49:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.7.ebuild,v 1.2 2010/06/01 19:29:46 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -23,7 +23,6 @@ DEPEND="dev-lang/perl
 	>=sys-devel/gcc-3.0
 	>=sys-devel/binutils-2.18
 	libffi? ( virtual/libffi )
-	llvm-gcc? ( sys-devel/llvm-gcc )
 	ocaml? ( dev-lang/ocaml )
 	test? ( dev-util/dejagnu )
 	udis86? ( dev-libs/udis86 )"
