@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel/propel-1.3.0_beta3.ebuild,v 1.1 2007/12/24 14:52:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel/propel-1.5.1.ebuild,v 1.1 2010/06/01 12:20:27 mabi Exp $
 
 KEYWORDS="~amd64 ~x86"
 
