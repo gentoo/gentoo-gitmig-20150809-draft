@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/treetop-1.4.7.ebuild,v 1.1 2010/05/30 09:08:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/treetop-1.4.7.ebuild,v 1.2 2010/06/01 18:24:20 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -23,7 +23,7 @@ IUSE=""
 
 RUBY_PATCHES=( "${P}-fix-tmpdir.patch" )
 
-ruby_add_bdepend "test? ( dev-ruby/rr dev-ruby/rspec )"
+ruby_add_bdepend "test? ( dev-ruby/rr dev-ruby/rspec dev-ruby/ruby-debug )"
 ruby_add_rdepend ">=dev-ruby/polyglot-0.3.1"
 
 all_ruby_install() {
