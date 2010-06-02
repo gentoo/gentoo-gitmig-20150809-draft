@@ -3,9 +3,6 @@
 
 <pkgmetadata>
 <herd>net-im</herd>
-<maintainer>
-  <email>caleb@gentoo.org</email>
-</maintainer>
 <longdescription> Free and Open Source distributed fault-tolerant Jabber server. It's mostly written in Erlang, and works on many platforms.</longdescription>
     <use>
 	<flag name='mod_irc'>Build irc gateway </flag>
