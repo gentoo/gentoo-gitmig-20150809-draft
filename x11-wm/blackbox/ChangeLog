@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.65 2010/02/22 19:53:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.66 2010/06/02 18:00:42 xarthisius Exp $
+
+  02 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  blackbox-0.70.1.ebuild, +files/blackbox-0.70.1-asneeded.patch:
+  Enabling shared libs, fixing as-needed issues wrt bug 248549. Thanks Diego
+  for the report.
 
   22 Feb 2010; Raúl Porcel <armin76@gentoo.org> blackbox-0.70.1.ebuild:
   arm stable
