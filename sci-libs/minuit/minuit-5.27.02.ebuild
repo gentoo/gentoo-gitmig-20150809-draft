@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.27.02.ebuild,v 1.2 2010/06/02 09:51:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.27.02.ebuild,v 1.3 2010/06/02 13:14:01 xarthisius Exp $
 
 EAPI=2
 inherit autotools eutils toolchain-funcs
@@ -24,8 +24,7 @@ RDEPEND=""
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 pkg_setup() {
-	if use openmp && [[ $(tc-getCXX)$ == *g++* ]] && \
-		! built_with_use sys-devel/gcc openmp; then
+	if use openmp && ! tc-has-openmp; then
 		ewarn "You are using gcc built without openmp"
 		ewarn "Switch CXX to an OpenMP capable compiler"
 		die "Need openmp"
