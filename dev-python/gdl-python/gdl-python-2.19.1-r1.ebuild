@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1-r1.ebuild,v 1.11 2009/10/30 07:44:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1-r1.ebuild,v 1.12 2010/06/02 21:10:56 eva Exp $
 
+EAPI="2"
 G_PY_PN="gnome-python-extras"
 
 inherit gnome-python-common
@@ -13,20 +14,20 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2
 DESCRIPTION="Python bindings for GDL"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="hppa ppc64"
 IUSE="examples"
 
-RDEPEND=">=dev-libs/gdl-2.24.0"
+RDEPEND=">=dev-libs/gdl-2.24"
 DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/gdl/*"
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
 
 	# Fix build failure with recent gdl
 	epatch "${FILESDIR}/${P}-gdlicons.patch"
+
+	gnome-python-common_src_prepare
 }
