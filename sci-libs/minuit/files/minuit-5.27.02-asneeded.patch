@@ -1,0 +1,28 @@
+Workaround for as-needed failure. It's not a proper patch!
+If you know how to do it better, please do!
+
+http://bugs.gentoo.org/show_bug.cgi?id=314095
+
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -9,6 +9,10 @@
+ # The convenience library to be built.
+ lib_LTLIBRARIES = libMinuit2.la
+ 
++if GNUOPENMP
++  libMinuit2_la_LIBADD = -lgomp
++endif
++
+ libMinuit2_la_SOURCES =				\
+          AnalyticalGradientCalculator.cxx	\
+          BasicMinimumError.cxx			\
+--- configure.in
++++ configure.in
+@@ -43,6 +43,7 @@
+ AC_OPENMP
+ CFLAGS="$CFLAGS $OPENMP_CFLAGS"
+ CXXFLAGS="$CXXFLAGS $OPENMP_CXXFLAGS"
++AM_CONDITIONAL(GNUOPENMP, test "x$OPENMP_CXXFLAGS" = "x-fopenmp")
+ 
+ dnl files to be generated 
+ AC_OUTPUT(Makefile inc/Makefile inc/Minuit2/Makefile inc/Math/Makefile src/Makefile 
