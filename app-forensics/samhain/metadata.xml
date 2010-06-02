@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>chtekk@gentoo.org</email>
-	<name>Luca Longinotti</name>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
   <flag name='login-watch'>Compile in the module to watch for login/logout
