@@ -6,10 +6,6 @@
     <email>flameeyes@gentoo.org</email>
     <name>Diego E. Pettenò</name>
   </maintainer>
-  <maintainer>
-    <email>chtekk@gentoo.org</email>
-    <name>Luca Longinotti</name>
-  </maintainer>
   <use>
     <flag name="perl">
       Add a dependency upon Perl and install the script to update the
