@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.5 2010/02/28 12:33:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.6 2010/06/02 15:47:32 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -61,4 +61,12 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins qt4examples/* || die
 	fi
+}
+
+pkg_postinst() {
+	python_mod_optimize PyQt4
+}
+
+pkg_postrm() {
+	python_mod_cleanup PyQt4
 }
