@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.92 2010/05/24 23:45:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.93 2010/06/02 19:34:35 eva Exp $
+
+  02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -libxmlpp-2.24.3.ebuild, -libxmlpp-2.26.0.ebuild:
+  Clean up old revisions.
 
   24 May 2010; Jonathan Callen <abcd@gentoo.org> libxmlpp-2.26.1.ebuild:
   Bump to EAPI=3, add prefix keywords
