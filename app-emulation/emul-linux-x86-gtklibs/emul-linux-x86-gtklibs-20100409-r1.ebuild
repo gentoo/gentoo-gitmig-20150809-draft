@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20100409-r1.ebuild,v 1.1 2010/04/10 12:32:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20100409-r1.ebuild,v 1.2 2010/06/02 13:37:02 pacho Exp $
 
 inherit emul-linux-x86
 
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~pacho/emul-linux-x86-${PV}/gtk+-2.18.6.tbz2"
 
 LICENSE="GPL-3 GPL-2 LGPL-2 LGPL-2.1 FTL MIT || ( LGPL-2.1 MPL-1.1 )"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 IUSE=""
 

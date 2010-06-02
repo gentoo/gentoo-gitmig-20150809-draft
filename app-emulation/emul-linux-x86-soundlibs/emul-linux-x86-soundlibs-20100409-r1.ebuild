@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20100409-r1.ebuild,v 1.1 2010/04/10 18:35:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20100409-r1.ebuild,v 1.2 2010/06/02 13:43:47 pacho Exp $
 
 inherit emul-linux-x86
 
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~pacho/emul-linux-x86-${PV}/libao-0.8.8.tbz2"
 
 LICENSE="as-is BSD GPL-2 LGPL-2 LGPL-2.1 gsm"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="alsa pulseaudio"
 
 RDEPEND="pulseaudio? ( media-sound/pulseaudio )
