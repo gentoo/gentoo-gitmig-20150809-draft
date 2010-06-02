@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/blockdpy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/blockdpy/ChangeLog,v 1.1 2009/05/08 21:07:28 hncaldwell Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/blockdpy/ChangeLog,v 1.2 2010/06/02 06:53:07 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove hncaldwell from metadata.xml (#230778)
 
 *blockdpy-1 (08 May 2009)
 
