@@ -1,6 +1,24 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.52 2010/05/17 13:20:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.53 2010/06/02 17:21:28 patrick Exp $
+
+*postgresql-base-9.0_beta1-r1 (02 Jun 2010)
+*postgresql-base-8.4.4-r1 (02 Jun 2010)
+*postgresql-base-8.3.11-r1 (02 Jun 2010)
+*postgresql-base-8.2.17-r1 (02 Jun 2010)
+*postgresql-base-8.1.21-r1 (02 Jun 2010)
+*postgresql-base-8.0.25-r1 (02 Jun 2010)
+*postgresql-base-7.4.29-r1 (02 Jun 2010)
+
+  02 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  +postgresql-base-7.4.29-r1.ebuild, +postgresql-base-8.0.25-r1.ebuild,
+  +postgresql-base-8.1.21-r1.ebuild, +postgresql-base-8.2.17-r1.ebuild,
+  +postgresql-base-8.3.11-r1.ebuild,
+  +files/postgresql-base-8.4-9.0-heimdal_strlcpy.patch,
+  +postgresql-base-8.4.4-r1.ebuild, +postgresql-base-9.0_beta1-r1.ebuild:
+  Fixes for #313765, #251046, #294462, #300793, #274836, #296714, #238817,
+  #278228, #263096, #246397, #285953. Thanks to Aaron Swenson for collecting
+  the fixes and testing.
 
 *postgresql-base-8.4.4 (17 May 2010)
 *postgresql-base-8.3.11 (17 May 2010)
