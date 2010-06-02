@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.160 2010/05/24 15:52:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.161 2010/06/02 20:45:17 eva Exp $
+
+  02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-doc-utils-0.12.2-r1.ebuild,
+  -files/gnome-doc-utils-0.12.2-fhs.patch,
+  -files/gnome-doc-utils-0.14.0-fhs.patch, -gnome-doc-utils-0.14.2.ebuild,
+  gnome-doc-utils-0.16.1.ebuild, -gnome-doc-utils-0.18.0.ebuild:
+  Clean up old revisions.
 
   23 May 2010; <nixnut@gentoo.org> gnome-doc-utils-0.18.1.ebuild:
   ppc stable #314013
