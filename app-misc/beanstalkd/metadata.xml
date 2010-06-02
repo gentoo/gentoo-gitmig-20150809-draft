@@ -3,7 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+  <email>patrick@gentoo.org</email>
+  <name>Patrick Lauer</name>
+</maintainer>
+<maintainer>
+  <email>bugs@bergstroem.nu</email>
+  <name>Johan Bergstroem</name>
 </maintainer>
 <longdescription lang="en">
 beanstalked is a fast distributed workqueue service
