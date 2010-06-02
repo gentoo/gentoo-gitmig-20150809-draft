@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.1 2010/06/01 10:42:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.2 2010/06/02 07:46:30 pva Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ EGIT_HAS_SUBMODULES="true"
 LANGS_URI="git://pv.et-inf.fho-emden.de/git/psi-l10n"
 
 ESVN_DISABLE_DEPENDENCIES="true"
-BASE_URI="http://psi-dev.googlecode.com/svn/trunk"
+ESVN_REPO_URI="http://psi-dev.googlecode.com/svn/trunk"
 ESVN_PROJECT="psiplus"
 
 inherit eutils qt4-r2 multilib git subversion
@@ -91,28 +91,23 @@ src_unpack() {
 			EGIT_PROJECT="psi-l10n/${x}"
 			S="${WORKDIR}/psi-l10n/${x}"
 			git_fetch
+			S="${WORKDIR}/${P}"
 		fi
 	done
 
 	if use extras; then
 		S="${WORKDIR}/patches"
-		ESVN_REPO_URI="${BASE_URI}/patches"
-		subversion_fetch
+		subversion_fetch "${ESVN_REPO_URI}/patches"
+		S="${WORKDIR}/${P}"
 		if use iconsets; then
-			S="${WORKDIR}/${P}/iconsets"
-			ESVN_REPO_URI="${BASE_URI}/iconsets"
-			subversion_fetch
+			subversion_fetch "${ESVN_REPO_URI}/iconsets" "iconsets"
 		else
 			for x in clients moods activities system; do
-				S="${WORKDIR}/${P}/iconsets/${x}/default"
-				ESVN_REPO_URI="${BASE_URI}/iconsets/${x}/default"
 				ESVN_PROJECT="psiplus/${x}"
-				subversion_fetch
+				subversion_fetch "${ESVN_REPO_URI}/iconsets/${x}/default" "iconsets/${x}/default"
 			done
 		fi
 	fi
-
-	S="${WORKDIR}/${P}"
 }
 
 src_prepare() {
