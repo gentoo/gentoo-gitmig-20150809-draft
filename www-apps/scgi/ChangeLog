@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/scgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.11 2010/01/07 15:55:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.12 2010/06/02 06:32:03 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove chtekk from metadata.xml (#103720)
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> scgi-1.13.ebuild:
   Transfer Prefix keywords
