@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rackview
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.14 2009/12/07 13:46:22 weaver Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.15 2010/06/02 06:42:43 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove tantive from metadata.xml (#200343)
 
   07 Dec 2009; Andrey Kislyuk <weaver@gentoo.org> rackview-0.09.ebuild,
   rackview-0.09-r1.ebuild:
