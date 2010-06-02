@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/raidutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.11 2010/01/22 06:54:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.12 2010/06/02 06:23:17 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove xmerlin from metadata.xml (#69210)
 
   22 Jan 2010; Ulrich Mueller <ulm@gentoo.org> raidutils-0.0.6-r1.ebuild:
   Fix LICENSE, bug 301123.
