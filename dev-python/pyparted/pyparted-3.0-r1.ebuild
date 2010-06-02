@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.0-r1.ebuild,v 1.3 2010/04/04 15:55:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.0-r1.ebuild,v 1.4 2010/06/02 15:49:46 arfrever Exp $
 
 EAPI="2"
 
@@ -30,9 +30,6 @@ src_prepare() {
 src_install() {
 	python_need_rebuild
 	emake DESTDIR="${D}" install || die "emake install failed"
+	python_clean_installation_image
 	dodoc ChangeLog NEWS README TODO
-	# remove pointless libtool archive
-	python_version
-	rm -f "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/_pedmodule.la
-
 }
