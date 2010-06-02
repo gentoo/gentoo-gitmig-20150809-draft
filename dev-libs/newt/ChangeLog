@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.61 2009/10/26 08:40:07 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.62 2010/06/02 06:13:08 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove xmerlin from metadata.xml (#69210)
 
   26 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> newt-0.52.10-r1.ebuild:
   Stable for ppc, bug 285854
