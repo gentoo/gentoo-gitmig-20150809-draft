@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.2.ebuild,v 1.2 2010/06/02 12:23:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.2.ebuild,v 1.3 2010/06/02 14:22:27 arfrever Exp $
 
 EAPI="2"
 
@@ -20,6 +20,10 @@ DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
 src_prepare() {
+	# Ensure that system libtool is used.
+	sed -e 's:${installbuilddir}/libtool:/usr/bin/libtool:' -i apr-config.in || die "sed failed"
+	sed -e 's:@LIBTOOL@:$(SHELL) /usr/bin/libtool:' -i build/apr_rules.mk.in || die "sed failed"
+
 	AT_M4DIR="build" eautoreconf
 	elibtoolize
 
@@ -48,9 +52,6 @@ src_configure() {
 		--enable-threads \
 		${myconf}
 
-	# Make sure we use the system libtool.
-	sed -i 's,$(top_builddir)/libtool,/usr/bin/libtool,' build/apr_rules.mk
-	sed -i 's,${installbuilddir}/libtool,/usr/bin/libtool,' apr-1-config
 	rm -f libtool
 }
 
