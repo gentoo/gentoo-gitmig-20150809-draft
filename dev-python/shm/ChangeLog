@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.5 2010/02/07 20:27:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.6 2010/06/02 06:29:21 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove chtekk from metadata.xml (#103720)
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> shm-1.2.2.ebuild:
   Never refer to a variable name in the string; include only raw text.
