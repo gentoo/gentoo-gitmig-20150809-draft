@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.743 2010/06/01 00:27:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.744 2010/06/02 16:25:28 lu_zero Exp $
+
+  02 Jun 2010; Luca Barbato <lu_zero@gentoo.org> mplayer-9999.ebuild:
+  Ebuild improvements from Nikoli <nikoli@lavabit.com> see bug #322377
 
   01 Jun 2010; Luca Barbato <lu_zero@gentoo.org> mplayer-9999.ebuild:
   Change doc deps as reported in bug #317559
