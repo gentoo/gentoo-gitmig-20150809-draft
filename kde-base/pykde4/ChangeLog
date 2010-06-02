@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.68 2010/06/02 07:37:54 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.69 2010/06/02 14:17:36 reavertm Exp $
+
+  02 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> pykde4-4.4.2.ebuild,
+  pykde4-4.4.3.ebuild:
+  Use python_clean_installation_image
 
   02 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> pykde4-4.4.2.ebuild,
   pykde4-4.4.3.ebuild:

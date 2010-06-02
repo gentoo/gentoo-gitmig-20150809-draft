@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.2.ebuild,v 1.2 2010/06/02 07:37:54 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.2.ebuild,v 1.3 2010/06/02 14:17:36 reavertm Exp $
 
 EAPI="3"
 
@@ -56,8 +56,8 @@ src_install() {
 
 	kde4-meta_src_install
 
-	python_convert_shebangs -q -r $(python_get_version) "${ED}"
-	find "${ED}" -type f -name '*.py[co]' -exec rm -f {} +
+	python_convert_shebangs -r $(python_get_version) "${ED}"
+	python_clean_installation_image
 }
 
 pkg_postinst() {
