@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.7 2010/06/02 12:10:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.8 2010/06/02 13:10:32 mr_bones_ Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/qt-gui-4.4.0:4[dbus]
 	dev-libs/openssl
 	virtual/libiconv
 	javascript? (
-		x11-libs/qt-script 
+		x11-libs/qt-script
 		x11-libs/qtscriptgenerator
 		)
 	kde? ( kde-base/oxygen-icons )
