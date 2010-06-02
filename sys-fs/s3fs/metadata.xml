@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>caleb@gentoo.org</email>
-<name>Caleb Tennis</name>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 s3fs is a utility to mount Amazon S3 as a filesystem over FUSE
