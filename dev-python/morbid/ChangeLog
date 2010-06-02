@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/morbid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.7 2010/06/02 06:59:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.8 2010/06/02 11:24:04 djc Exp $
+
+  02 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  python takes over maintainership.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove caleb from metadata.xml (#317071)
