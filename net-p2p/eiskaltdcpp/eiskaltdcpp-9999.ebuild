@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.6 2010/05/26 11:40:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.7 2010/06/02 12:10:46 pva Exp $
 
 EAPI=2
 
@@ -23,7 +23,10 @@ RDEPEND=">=x11-libs/qt-gui-4.4.0:4[dbus]
 	sys-libs/zlib
 	dev-libs/openssl
 	virtual/libiconv
-	javascript? ( x11-libs/qt-script )
+	javascript? (
+		x11-libs/qt-script 
+		x11-libs/qtscriptgenerator
+		)
 	kde? ( kde-base/oxygen-icons )
 	spell? ( app-text/aspell )"
 DEPEND="${RDEPEND}
@@ -35,7 +38,6 @@ src_configure() {
 	for lang in ${LANGS}; do
 		use linguas_${lang} && langs+="${lang} "
 	done
-	[[ -z ${langs} ]] && langs=${LANGS}
 
 	local mycmakeargs=(
 		-DFREE_SPACE_BAR_C="1"

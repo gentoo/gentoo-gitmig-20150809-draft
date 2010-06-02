@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.6 2010/05/26 11:40:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.7 2010/06/02 12:10:46 pva Exp $
+
+  02 Jun 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild:
+  Update dependencies, thank Nikoli for this job.
 
   26 May 2010; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild:
   javascript and kde icon theme support was added upstream, thank Nikoli for
