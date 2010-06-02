@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/gstreamermm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.5 2010/05/14 17:54:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.6 2010/06/02 22:43:08 eva Exp $
+
+*gstreamermm-0.10.7.3 (03 Jun 2010)
+
+  03 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +gstreamermm-0.10.7.3.ebuild:
+  Version bump (with gcc 4.5 fixes). Install documentation in one place,
+  fixes bug #320111.
 
   14 May 2010; Samuli Suominen <ssuominen@gentoo.org>
   gstreamermm-0.10.7.ebuild, +files/gstreamermm-0.10.7-gcc45.patch:
