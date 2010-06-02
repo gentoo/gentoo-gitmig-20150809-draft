@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/telepathy-qt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt4/ChangeLog,v 1.1 2010/05/30 10:05:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt4/ChangeLog,v 1.2 2010/06/02 19:50:45 hwoarang Exp $
+
+*telepathy-qt4-0.3.4-r1 (02 Jun 2010)
+
+  02 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  -telepathy-qt4-0.3.4.ebuild, +telepathy-qt4-0.3.4-r1.ebuild:
+  Use static-libs use flag instead of static. Fixes bug #322493 thanks to
+  Kacper Kowalik (Xarthisius)
 
 *telepathy-qt4-0.3.4 (30 May 2010)
 
