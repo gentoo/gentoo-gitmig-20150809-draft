@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.3.ebuild,v 1.1 2010/05/03 21:08:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.3.ebuild,v 1.2 2010/06/02 10:36:31 reavertm Exp $
 
 EAPI="3"
 
@@ -20,9 +20,6 @@ RDEPEND="${DEPEND}"
 
 # Moved after 4.3.90
 add_blocker kontact-specialdates
-
-# Tests hang, last checked in 4.3.3
-RESTRICT="test"
 
 KMLOADLIBS="libkdepim"
 KMEXTRA="kdgantt1"
