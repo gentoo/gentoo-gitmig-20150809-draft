@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.1 2010/06/01 21:27:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.2 2010/06/02 08:29:27 voyageur Exp $
 
 EAPI=2
 
@@ -12,6 +12,7 @@ inherit subversion eutils python
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
 SRC_URI=""
+ESVN_REPO_URI="http://llvm.org/svn/llvm-project/cfe/trunk"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -28,9 +29,7 @@ S="${WORKDIR}/llvm"
 src_unpack() {
 	# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
 	ESVN_PROJECT=llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
-	ESVN_PROJECT=clang \
-		S="${S}"/tools/clang \
-		subversion_fetch "http://llvm.org/svn/llvm-project/cfe/trunk"
+	ESVN_PROJECT=clang S="${S}"/tools/clang subversion_fetch
 }
 
 src_prepare() {
