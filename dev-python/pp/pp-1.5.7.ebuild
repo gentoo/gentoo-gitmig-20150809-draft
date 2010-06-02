@@ -1,10 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/pp-1.5.7.ebuild,v 1.2 2009/08/17 04:37:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/pp-1.5.7.ebuild,v 1.3 2010/06/02 19:29:10 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="2.3"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
@@ -20,8 +19,9 @@ IUSE="doc examples"
 
 DEPEND=""
 RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
-RESTRICT_PYTHON_ABIS="3*"
+PYTHON_MODNAME="pp.py ppauto.py pptransport.py ppworker.py"
 
 src_install() {
 	distutils_src_install
@@ -33,12 +33,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r "${S}/examples"
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize pp.py ppauto.py pptransport.py ppworker.py
-}
-
-pkg_postrm() {
-	python_mod_cleanup
 }
