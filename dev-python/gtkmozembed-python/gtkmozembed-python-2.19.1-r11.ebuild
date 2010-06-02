@@ -1,9 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r11.ebuild,v 1.11 2009/12/26 16:07:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r11.ebuild,v 1.12 2010/06/02 21:31:20 eva Exp $
 
-EAPI="1"
-
+EAPI="2"
 G_PY_PN="gnome-python-extras"
 
 inherit confutils gnome-python-common
@@ -15,7 +14,7 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2
 DESCRIPTION="Python bindings for the GtkMozEmbed Gecko library"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="hppa ppc64"
 IUSE="doc"
 
 RDEPEND="=net-libs/xulrunner-1.9*"
@@ -27,9 +26,7 @@ pkg_setup() {
 	G2CONF="${G2CONF} --with-gtkmozembed=xulrunner-1.9"
 }
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 
 	# Accomodate new releases of libtool
@@ -40,4 +37,5 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-xulrunner19.patch"
 
 	eautoreconf
+	gnome-python-common_src_prepare
 }

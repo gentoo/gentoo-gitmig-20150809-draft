@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.22 2010/04/11 11:50:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.23 2010/06/02 21:31:20 eva Exp $
+
+  02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gtkmozembed-python-2.19.1-r11.ebuild,
+  gtkmozembed-python-2.19.1-r12.ebuild:
+  Update to use EAPI=2 due to eclass changes.
 
   11 Apr 2010; <nixnut@gentoo.org> gtkmozembed-python-2.19.1-r12.ebuild:
   ppc stable #305287

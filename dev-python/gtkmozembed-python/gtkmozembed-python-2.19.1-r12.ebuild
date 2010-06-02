@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r12.ebuild,v 1.5 2010/04/11 11:50:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r12.ebuild,v 1.6 2010/06/02 21:31:20 eva Exp $
 
-EAPI="1"
-
+EAPI="2"
 G_PY_PN="gnome-python-extras"
 
 inherit confutils gnome-python-common
@@ -27,9 +26,7 @@ pkg_setup() {
 	G2CONF="${G2CONF} --with-gtkmozembed=xulrunner-1.9"
 }
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 
 	# Accomodate new releases of libtool
@@ -43,4 +40,5 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-include-nspr.patch"
 
 	eautoreconf
+	gnome-python-common_src_prepare
 }
