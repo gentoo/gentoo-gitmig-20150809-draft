@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/zencoding-vim-0.40.ebuild,v 1.1 2010/05/15 19:17:57 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/zencoding-vim-0.41.ebuild,v 1.1 2010/06/02 23:40:57 spatz Exp $
 
 EAPI=3
 
