@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/libgda-python-2.19.1.ebuild,v 1.8 2009/03/23 05:07:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/libgda-python-2.19.1.ebuild,v 1.9 2010/06/02 21:42:24 eva Exp $
 
+EAPI="2"
 G_PY_PN="gnome-python-extras"
 G_PY_BINDINGS="gda"
 
@@ -21,9 +22,9 @@ RDEPEND="=gnome-extra/libgda-3*
 	>=dev-python/libbonobo-python-2.22.1"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
+
+	gnome-python-common_src_prepare
 }
