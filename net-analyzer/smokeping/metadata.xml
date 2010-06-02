@@ -6,10 +6,6 @@
 	<email>pva@gentoo.org</email>
 	<name>Peter Volkov</name>
 </maintainer>
-<maintainer>
-	<email>chtekk@gentoo.org</email>
-	<name>Luca Longinotti</name>
-</maintainer>
 <use>
 	<flag name='speedy'>Use <pkg>dev-perl/SpeedyCGI</pkg> instead of perl to
 	speed up cgi scripts</flag>
