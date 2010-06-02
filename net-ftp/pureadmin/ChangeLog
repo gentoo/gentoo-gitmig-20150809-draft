@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pureadmin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.14 2008/04/21 09:56:53 chtekk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.15 2010/06/02 06:31:03 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove chtekk from metadata.xml (#103720)
 
 *pureadmin-0.4 (21 Apr 2008)
 

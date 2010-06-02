@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.228 2010/03/13 17:29:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.229 2010/06/02 06:30:31 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove chtekk from metadata.xml (#103720)
 
   13 Mar 2010; Raúl Porcel <armin76@gentoo.org> proftpd-1.3.2d.ebuild:
   alpha/sparc stable wrt #305343
