@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mirage
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.31 2009/08/17 15:14:01 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.32 2010/06/02 06:37:00 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove omp from metadata.xml (#147119)
 
   17 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> mirage-0.9.3.ebuild:
   Block media-plugins/banshee-mirage wrt #281767.
