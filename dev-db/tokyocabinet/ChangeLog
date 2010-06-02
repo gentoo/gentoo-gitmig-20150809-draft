@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.24 2010/05/03 17:56:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.25 2010/06/02 10:55:17 patrick Exp $
+
+*tokyocabinet-1.4.45 (02 Jun 2010)
+
+  02 Jun 2010; Patrick Lauer <patrick@gentoo.org> -files/1.4.43.patch,
+  -tokyocabinet-1.4.44.ebuild, -files/1.4.44.patch,
+  +tokyocabinet-1.4.45.ebuild, +files/1.4.45.patch,
+  -tokyocabinet-1.4.43.ebuild:
+  Bump, fixes #321171, thanks to Johan Bergstroem
 
   03 May 2010; Patrick Lauer <patrick@gentoo.org>
   tokyocabinet-1.4.44.ebuild:

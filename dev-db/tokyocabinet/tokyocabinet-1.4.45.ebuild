@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.43.ebuild,v 1.1 2010/03/17 21:25:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.45.ebuild,v 1.1 2010/06/02 10:55:17 patrick Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable debug)
+	econf $(use_enable debug) --enable-off64
 }
 
 src_install() {
