@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<maintainer>
-		<email>omp@gentoo.org</email>
-		<name>David Shakaryan</name>
-	</maintainer>
 	<use>
 		<!-- 0.12 -->
 		<flag name="artist-screen">Enable artist screen</flag>

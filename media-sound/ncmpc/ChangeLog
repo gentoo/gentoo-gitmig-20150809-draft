@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.49 2009/10/10 15:23:20 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.50 2010/06/02 06:37:32 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove omp from metadata.xml (#147119)
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> ncmpc-0.14.ebuild:
   sparc/x86 stable wrt #285975

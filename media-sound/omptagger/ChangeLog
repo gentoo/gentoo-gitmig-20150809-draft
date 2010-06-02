@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/omptagger
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.8 2009/07/12 04:39:59 omp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/omptagger/ChangeLog,v 1.9 2010/06/02 06:37:58 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove omp from metadata.xml (#147119)
 
 *omptagger-1.0.3 (12 Jul 2009)
 
