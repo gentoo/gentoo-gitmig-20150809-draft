@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.2.ebuild,v 1.1 2010/04/01 15:05:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.2.ebuild,v 1.2 2010/06/02 12:23:31 patrick Exp $
 
 EAPI="2"
 
@@ -49,7 +49,7 @@ src_configure() {
 		${myconf}
 
 	# Make sure we use the system libtool.
-	sed -i 's,$(apr_builddir)/libtool,/usr/bin/libtool,' build/apr_rules.mk
+	sed -i 's,$(top_builddir)/libtool,/usr/bin/libtool,' build/apr_rules.mk
 	sed -i 's,${installbuilddir}/libtool,/usr/bin/libtool,' apr-1-config
 	rm -f libtool
 }
