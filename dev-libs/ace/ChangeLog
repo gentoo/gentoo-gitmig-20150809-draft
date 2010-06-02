@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.58 2009/09/01 09:36:04 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.59 2010/06/02 06:43:20 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove tantive from metadata.xml (#200343)
 
 *ace-5.7.2 (01 Sep 2009)
 

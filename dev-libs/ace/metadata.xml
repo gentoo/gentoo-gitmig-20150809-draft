@@ -8,10 +8,6 @@
     <description>I just happened to fix this once or twice. Please take over if you want it
     </description>
 </maintainer>
-<maintainer>
-    <email>tantive@gentoo.org</email>
-    <name>Michael Imhof</name>
-</maintainer>
 <use>
   <flag name='ciao'>Include Component Intergraced Ace ORB into the build of
     ace</flag>
