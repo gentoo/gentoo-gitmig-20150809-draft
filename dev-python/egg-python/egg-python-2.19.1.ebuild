@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.12 2009/08/25 13:18:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.13 2010/06/02 21:05:01 eva Exp $
+
+EAPI="2"
 
 # We don't support the egg.recent bindings that are also provided - they are
 # deprecated, have deps we don't really want and there are no users in-tree.
@@ -25,9 +27,9 @@ DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/egg/tray*"
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
+
+	gnome-python-common_src_prepare
 }
