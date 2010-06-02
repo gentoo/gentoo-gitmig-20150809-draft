@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtkhtml-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkhtml-python/ChangeLog,v 1.11 2009/08/25 12:54:38 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkhtml-python/ChangeLog,v 1.12 2010/06/02 21:16:30 eva Exp $
+
+  02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  gtkhtml-python-2.19.1.ebuild:
+  Update to use EAPI=2 due to eclass changes.
 
   25 Aug 2009; Alexis Ballier <aballier@gentoo.org>
   gtkhtml-python-2.19.1.ebuild:

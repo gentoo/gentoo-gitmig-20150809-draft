@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/libgksu-python-2.19.1.ebuild,v 1.9 2009/08/25 12:07:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/libgksu-python-2.19.1.ebuild,v 1.10 2010/06/02 21:22:37 eva Exp $
 
+EAPI="2"
 # The 'gksu' and 'gksuui' bindings are not supported. We don't have =libgksu-1*
 # in tree.
 G_PY_PN="gnome-python-extras"
@@ -24,9 +25,9 @@ DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/gksu2/*"
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
+
+	gnome-python-common_src_prepare
 }

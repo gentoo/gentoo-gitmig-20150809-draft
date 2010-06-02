@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.19.1.ebuild,v 1.9 2009/08/25 12:42:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.19.1.ebuild,v 1.10 2010/06/02 21:19:28 eva Exp $
 
+EAPI="2"
 G_PY_PN="gnome-python-extras"
 
 inherit gnome-python-common
@@ -23,9 +24,9 @@ DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/gtkspell/*"
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
+
+	gnome-python-common_src_prepare
 }
