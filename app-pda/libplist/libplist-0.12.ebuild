@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-0.12.ebuild,v 1.4 2009/06/09 16:28:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-0.12.ebuild,v 1.5 2010/06/02 17:36:22 arfrever Exp $
 
 EAPI=2
 inherit cmake-utils eutils multilib python
@@ -25,19 +25,17 @@ src_prepare() {
 }
 
 src_configure() {
-	python_version
 	mycmakeargs="-DCMAKE_SKIP_RPATH=ON
 		-DCMAKE_INSTALL_LIBDIR=$(get_libdir)
-		-DPYTHON_VERSION=${PYVER}
+		-DPYTHON_VERSION=$(python_get_version)
 	"
 	cmake-utils_src_configure
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize $(python_get_sitedir)/${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }

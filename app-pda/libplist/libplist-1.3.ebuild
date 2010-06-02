@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.3.ebuild,v 1.1 2010/05/28 15:48:28 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.3.ebuild,v 1.2 2010/06/02 17:36:22 arfrever Exp $
 
 EAPI=2
 inherit cmake-utils eutils multilib python
@@ -34,9 +34,9 @@ src_configure() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/$(get_libdir)/python$(python_get_version)/site-packages/plist
+	python_mod_optimize $(python_get_sitedir)/plist
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/python$(python_get_version)/site-packages/plist
+	python_mod_cleanup $(python_get_sitedir)/plist
 }
