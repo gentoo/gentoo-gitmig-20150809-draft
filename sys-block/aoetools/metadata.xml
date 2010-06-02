@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer>
-	<email>caleb@gentoo.org</email>
-	<name>Caleb Tennis</name>
-</maintainer>
 </pkgmetadata>
