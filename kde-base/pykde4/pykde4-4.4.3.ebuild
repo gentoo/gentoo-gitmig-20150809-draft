@@ -1,15 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.3.ebuild,v 1.2 2010/05/06 18:41:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.3.ebuild,v 1.3 2010/06/02 07:37:54 reavertm Exp $
 
 EAPI="3"
 
 KMNAME="kdebindings"
 KMMODULE="python/pykde4"
 OPENGL_REQUIRED="always"
-PYTHON_DEPEND="*:2.5"
 PYTHON_USE_WITH="threads"
-SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4"
 inherit python kde4-meta
 
 DESCRIPTION="Python bindings for KDE4"
@@ -25,7 +24,6 @@ DEPEND="
 	!aqua? ( >=dev-python/PyQt4-4.7[dbus,sql,svg,webkit,X] )
 "
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="2.4"
 
 pkg_setup() {
 	python_pkg_setup
@@ -39,12 +37,10 @@ src_prepare() {
 		sed -e '/^ADD_SUBDIRECTORY(examples)/s/^/# DISABLED /' -i python/${PN}/CMakeLists.txt \
 			|| die "Failed to disable examples"
 	fi
-
-	python_copy_sources
 }
 
 src_configure() {
-	savedcmakeargs=(
+	mycmakeargs=(
 		-DWITH_QScintilla=OFF
 		-DWITH_PolkitQt=OFF
 		$(cmake-utils_use_with semantic-desktop Soprano)
@@ -52,63 +48,22 @@ src_configure() {
 		$(cmake-utils_use_with akonadi KdepimLibs)
 	)
 
-	do_src_configure() {
-		mycmakeargs=("${savedcmakeargs[@]}")
-
-		CMAKE_USE_DIR="${S}-${PYTHON_ABI}"
-		kde4-meta_src_configure
-
-		local value=$(declare -p mycmakeargs)
-		value=${value#*=}
-		declare -a "savedcmakeargs_${PYTHON_ABI//./_}=$value"
-	}
-
-	python_execute_function -s do_src_configure
-}
-
-src_compile() {
-	do_src_compile() {
-		CMAKE_USE_DIR="${S}-${PYTHON_ABI}"
-		kde4-meta_src_compile
-	}
-
-	python_execute_function -s do_src_compile
-}
-
-src_test() {
-	do_src_test() {
-		local var=savedcmakeargs_${PYTHON_ABI//./_}
-		local value=$(declare -p $var)
-		value=${value#*=}
-		declare -a "mycmakeargs=$value"
-
-		CMAKE_USE_DIR="${S}-${PYTHON_ABI}"
-		kde4-meta_src_test
-		export ${var}="${mycmakeargs}"
-	}
-
-	python_execute_function -s do_src_test
+	kde4-meta_src_configure
 }
 
 src_install() {
-	if use doc; then
-		dohtml -r "${S}"/python/pykde4/docs/html/* || die 'dohtml failed'
-	fi
+	use doc && HTML_DOCS=("${S}/python/pykde4/docs/html/")
 
-	do_src_install() {
-		CMAKE_USE_DIR="${S}-${PYTHON_ABI}"
-		kde4-meta_src_install
+	kde4-meta_src_install
 
-		rm -f "${ED}$(python_get_sitedir)"/PyKDE4/*.py[co]
-	}
-
-	python_execute_function -s do_src_install
+	python_convert_shebangs -q -r $(python_get_version) "${ED}"
+	find "${ED}" -type f -name '*.py[co]' -exec rm -f {} +
 }
 
 pkg_postinst() {
 	kde4-meta_pkg_postinst
 
-	python_mod_optimize PyKDE4
+	python_mod_optimize PyKDE4 PyQt4
 
 	if use examples; then
 		echo
@@ -121,5 +76,5 @@ pkg_postinst() {
 pkg_postrm() {
 	kde4-meta_pkg_postrm
 
-	python_mod_cleanup PyKDE4
+	python_mod_cleanup PyKDE4 PyQt4
 }

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.67 2010/05/04 05:52:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.68 2010/06/02 07:37:54 reavertm Exp $
+
+  02 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> pykde4-4.4.2.ebuild,
+  pykde4-4.4.3.ebuild:
+  pykde4 does not support multiple python ABIs, update ebuilds accordingly
 
   04 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -pykde4-4.4.1.ebuild:
   Drop KDE SC 4.4.1
