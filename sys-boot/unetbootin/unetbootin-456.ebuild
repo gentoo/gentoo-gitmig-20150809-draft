@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-436.ebuild,v 1.1 2010/04/27 04:57:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-456.ebuild,v 1.1 2010/06/02 20:18:49 jer Exp $
 
 inherit qt4
 
