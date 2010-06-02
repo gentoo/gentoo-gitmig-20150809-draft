@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bbkeys
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/ChangeLog,v 1.25 2008/09/22 12:49:05 omp Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeys/ChangeLog,v 1.26 2010/06/02 18:22:13 xarthisius Exp $
+
+*bbkeys-0.9.1 (02 Jun 2010)
+
+  02 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> +bbkeys-0.9.1.ebuild:
+  Version bump. Thanks Federico Moro <zayer@frikis.org> for the report.
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
   Change herd from commonbox to desktop-wm.
