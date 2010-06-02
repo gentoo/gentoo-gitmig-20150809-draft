@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vanessa-adt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.15 2010/06/02 06:18:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.16 2010/06/02 11:52:07 patrick Exp $
+
+  02 Jun 2010; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Assimilating package
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove xmerlin from metadata.xml (#69210)
