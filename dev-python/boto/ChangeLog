@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.18 2010/06/02 11:26:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.19 2010/06/02 11:32:09 djc Exp $
+
+*boto-1.9b (02 Jun 2010)
+
+  02 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> +boto-1.9b.ebuild:
+  Version bump to 1.9b (bug 320653).
 
   02 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   python takes over maintainership.
