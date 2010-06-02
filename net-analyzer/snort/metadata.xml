@@ -33,5 +33,6 @@
 <flag name='timestats'>Enable TimeStats functionality</flag>
 <flag name='reload'>Enable reloading a configuration without restarting</flag>
 <flag name='reload-error-restart'>Enable restarting on reload error</flag>
+<flag name='zlib'>Enable Http Response Decompression</flag>
 </use>
 </pkgmetadata>
