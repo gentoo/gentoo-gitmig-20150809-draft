@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-ClamAV
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.42 2009/08/16 08:04:40 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.43 2010/06/02 06:19:40 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove xmerlin from metadata.xml (#69210)
 
   16 Aug 2009; Torsten Veller <tove@gentoo.org>
   -files/0.22-clamav-0.94.patch:
