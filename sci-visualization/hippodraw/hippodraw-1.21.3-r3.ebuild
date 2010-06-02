@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.3 2010/05/29 16:43:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.4 2010/06/02 10:12:04 xarthisius Exp $
 
 EAPI="3"
 
@@ -47,14 +47,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc4.3.patch
-	epatch "${FILESDIR}"/${P}-gcc4.4.patch
-	epatch "${FILESDIR}"/${P}-numarray.patch
-	epatch "${FILESDIR}"/${P}-test-fix.patch
-	epatch "${FILESDIR}"/${P}-minuit2.patch
-	epatch "${FILESDIR}"/${P}-wcslib.patch
-	epatch "${FILESDIR}"/${P}-qt4.patch
-	epatch "${FILESDIR}"/${P}-autoconf-2.64.patch
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch \
+	  "${FILESDIR}"/${P}-gcc4.4.patch \
+	  "${FILESDIR}"/${P}-gcc45.patch \
+	  "${FILESDIR}"/${P}-numarray.patch \
+	  "${FILESDIR}"/${P}-test-fix.patch \
+	  "${FILESDIR}"/${P}-minuit2.patch \
+	  "${FILESDIR}"/${P}-wcslib.patch \
+	  "${FILESDIR}"/${P}-qt4.patch \
+	  "${FILESDIR}"/${P}-autoconf-2.64.patch
 
 	echo "#!${EPREFIX}/bin/sh" > config/py-compile
 
