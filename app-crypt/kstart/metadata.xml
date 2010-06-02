@@ -7,9 +7,6 @@
   to refresh a ticket, and can run single commands with their own
   authentication credentials and refresh those credentials until the
   command exits.</longdescription>
-  <maintainer>
-    <email>mueli@gentoo.org</email>
-  </maintainer>
   <use>
     <flag name="afs">
       Enables afs support which means you can acquire an afs token and
