@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/IcePy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.12 2009/09/10 00:32:30 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.13 2010/06/02 06:58:29 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove caleb from metadata.xml (#317071)
 
   10 Sep 2009; Patrick Lauer <patrick@gentoo.org> IcePy-3.2.1.ebuild,
   +files/IcePy-3.2.1-python-2.6.diff:
