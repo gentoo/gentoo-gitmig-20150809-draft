@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.56 2009/09/05 00:10:49 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.57 2010/06/02 06:39:04 tove Exp $
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove omp from metadata.xml (#147119)
 
   05 Sep 2009; Brent Baude <ranger@gentoo.org> dmenu-4.0.ebuild:
   Marking dmenu-4.0 ppc64 for bug 275411
