@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.53 2010/05/25 21:17:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.54 2010/06/02 07:57:08 xarthisius Exp $
+
+*pekwm-0.1.12 (02 Jun 2010)
+
+  02 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> +pekwm-0.1.12.ebuild:
+  Version bump, fixes bug 316727. Thanks to Michal Fojtik
+  <mfojtik@redhat.com> for ebuild and report.
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> pekwm-0.1.11.ebuild:
   stable amd64, bug 319551
