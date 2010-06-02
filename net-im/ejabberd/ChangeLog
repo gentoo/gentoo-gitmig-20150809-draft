@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.74 2010/06/02 07:03:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.75 2010/06/02 07:12:27 pva Exp $
+
+  02 Jun 2010; Peter Volkov <pva@gentoo.org> files/ejabberd-3.initd:
+  Make stop at init script working again, thank krigstask for report.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove caleb from metadata.xml (#317071)
