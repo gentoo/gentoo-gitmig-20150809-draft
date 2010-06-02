@@ -1,9 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.106 2010/06/01 20:22:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.107 2010/06/02 18:52:09 phajdan.jr Exp $
 
   01 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org> chromium-9999.ebuild:
   Depend on live ffmpeg to fix compilation for now, bug #321159
+
+  02 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-5.0.375.55.ebuild:
+  Only use tarballs from Gentoo mirrors, to try to avoid problems with
+  upstream regenerated tarballs.
 
   29 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-5.0.375.55.ebuild:
