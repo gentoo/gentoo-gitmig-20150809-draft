@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1-r1.ebuild,v 1.1 2010/06/03 22:30:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1-r1.ebuild,v 1.2 2010/06/03 22:32:27 jer Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ src_prepare() {
 
 src_configure() {
 	if use minimal; then
-		ln -s /bin/true ${T}/a2x
+		ln -s /bin/true "${T}"/a2x
 		export PATH="${T}:${PATH}"
 	fi
 	econf \
