@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.128 2010/01/24 22:20:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.129 2010/06/03 02:03:40 vapier Exp $
+
+  03 Jun 2010; Mike Frysinger <vapier@gentoo.org> files/raid-start.sh-3.0:
+  Drop mdadm.conf parsing now that auto assembling is requied with newer
+  superblock formats and the auto option actually works #321909 by Diego E.
+  Pettenò.
 
 *mdadm-3.1.1-r1 (24 Jan 2010)
 
