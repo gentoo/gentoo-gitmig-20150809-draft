@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.162 2010/06/03 14:43:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.163 2010/06/03 16:05:46 hwoarang Exp $
+
+  03 Jun 2010; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.2.ebuild,
+  +files/avidemux-gcc-4.5.patch:
+  GCC-4.5 patch thanks to Martin Väth <vaeth@mathematik.uni-wuerzburg.de>.
+  Fixes bug #322217
 
   03 Jun 2010; Joseph Jezak <josejx@gentoo.org> avidemux-2.5.2.ebuild,
   +files/avidemux-2.5.2-altivec-bool.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.2.ebuild,v 1.2 2010/06/03 14:43:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.2.ebuild,v 1.3 2010/06/03 16:05:46 hwoarang Exp $
 
 EAPI="2"
 
@@ -55,8 +55,9 @@ done
 
 PATCHES=( "${WORKDIR}/patches/2.5.1-i18n.patch"
 	"${WORKDIR}/patches/2.5.1-coreImage-parallel-build.patch"
-	"${FILESDIR}/avidemux-2.5.1-build-plugins-fix.patch" 
-	"${FILESDIR}/avidemux-2.5.2-altivec-bool.patch" )
+	"${FILESDIR}/avidemux-2.5.1-build-plugins-fix.patch"
+	"${FILESDIR}/avidemux-2.5.2-altivec-bool.patch"
+	"${FILESDIR}/${PN}-gcc-4.5.patch" )
 
 src_prepare() {
 	base_src_prepare
