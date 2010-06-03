@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.16.ebuild,v 1.2 2010/06/03 20:13:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.16.ebuild,v 1.3 2010/06/03 20:17:34 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -19,9 +19,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nls python"
 
-DEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib"
+DEPEND="${RDEPEND}
 	python? ( dev-python/setuptools )"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
