@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.95 2010/05/28 15:34:12 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.96 2010/06/03 11:11:15 hwoarang Exp $
+
+  03 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  konversation-1.2.3.ebuild:
+  Stable on amd64 wrt bug #322503
 
   28 May 2010; Dror Levin <spatz@gentoo.org> konversation-1.3_beta1.ebuild:
   Depend on kde-4.4, bug 321775.
