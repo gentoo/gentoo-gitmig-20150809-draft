@@ -1,6 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/sdljoytest/sdljoytest-11102003.ebuild,v 1.2 2005/07/21 07:52:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/sdljoytest/sdljoytest-11102003.ebuild,v 1.3 2010/06/03 16:10:27 mr_bones_ Exp $
+
+EAPI=2
+inherit toolchain-funcs
 
 DESCRIPTION="SDL app to test joysticks and game controllers"
 HOMEPAGE="http://sdljoytest.sourceforge.net/"
@@ -11,15 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[joystick,video]
 	virtual/opengl
 	media-libs/sdl-image"
 
 S=${WORKDIR}/SDLJoytest-GL
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	make clean || die "cleaning"
 	sed -i \
 		-e 's:/usr/local:/usr:' \
@@ -28,6 +29,7 @@ src_unpack() {
 
 src_compile() {
 	emake \
+		CC=$(tc-getCC) \
 		CFLAGS="$(sdl-config --cflags) ${CFLAGS}" \
 		LDFLAGS="$(sdl-config --libs) -lGL ${LDFLAGS}" \
 		|| die
@@ -38,5 +40,4 @@ src_install() {
 	insinto /usr/share/SDLJoytest-GL
 	doins *.bmp || die "data"
 	doman SDLJoytest.1
-	dodoc README
 }
