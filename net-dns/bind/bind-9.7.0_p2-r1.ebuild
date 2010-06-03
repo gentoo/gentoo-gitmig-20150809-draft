@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.1 2010/05/23 20:44:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.2 2010/06/03 16:57:17 idl0r Exp $
 
 EAPI="3"
 
@@ -268,30 +268,21 @@ pkg_postinst() {
 	einfo "Before running the above command you might want to change the chroot"
 	einfo "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
 	einfo
-	einfo "Recently verisign added a wildcard A record to the .COM and .NET TLD"
-	einfo "zones making all .com and .net domains appear to be registered"
-	einfo "This causes many problems such as breaking important anti-spam checks"
-	einfo "which verify source domains exist. ISC released a patch for BIND which"
-	einfo "adds 'delegation-only' zones to allow admins to return the .com and .net"
-	einfo "domain resolution to their normal function."
-	einfo
-	einfo "There is no need to create a com or net data file. Just the"
-	einfo "entries to the named.conf file is enough."
-	einfo
-	einfo "	zone "com" IN { type delegation-only; };"
-	einfo "	zone "net" IN { type delegation-only; };"
 
-	CHROOT=$(sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/named 2>/dev/null)
+	CHROOT=$(source /etc/conf.d/named 2>/dev/null; echo ${CHROOT})
 	if [[ -n ${CHROOT} && -d ${CHROOT} ]]; then
 		ewarn "NOTE: as of 'bind-9.6.1' the chroot part of the init-script got some major changes."
 	fi
 }
 
 pkg_config() {
-	CHROOT=$(sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/named 2>/dev/null)
+	CHROOT=$(source /etc/conf.d/named 2>/dev/null; echo ${CHROOT})
 
-	if [ -z "${CHROOT}" ]; then
-		CHROOT="/chroot/dns"
+	if [[ -z "${CHROOT}" ]]; then
+		eerror "This config script is designed to automate setting up"
+		eerror "a chrooted bind/named. To do so, please first uncomment"
+		eerror "and set the CHROOT variable in '/etc/conf.d/named'."
+		die "Unset CHROOT"
 	fi
 	if [[ -d "${CHROOT}" ]]; then
 		ewarn "NOTE: As of 'bind-9.6.1' the chroot part of the init-script got some major changes."
@@ -327,9 +318,4 @@ pkg_config() {
 
 	elog "You may need to add the following line to your syslog-ng.conf:"
 	elog "source jail { unix-stream(\"${CHROOT}/dev/log\"); };"
-
-	grep -q "^#[[:blank:]]\?CHROOT" /etc/conf.d/named ; RETVAL=$?
-	if [ $RETVAL = 0 ]; then
-		sed -i 's/^# \?\(CHROOT.*\)$/\1/' /etc/conf.d/named 2>/dev/null
-	fi
 }

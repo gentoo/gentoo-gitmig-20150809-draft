@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.275 2010/05/23 20:44:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.276 2010/06/03 16:57:17 idl0r Exp $
+
+  03 Jun 2010; Christian Ruppert <idl0r@gentoo.org> bind-9.6.2_p2.ebuild,
+  bind-9.7.0_p2-r1.ebuild:
+  Improve pkg_config, bug 321457, thanks to Duncan <1i5t5.duncan@cox.net>.
+  Remove some old einfo's
 
 *bind-9.7.0_p2-r1 (23 May 2010)
 *bind-9.6.2_p2 (23 May 2010)
