@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5619 2010/06/02 12:27:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5620 2010/06/03 15:07:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3204,8 +3204,16 @@ sec-policy/selinux-base-policy:peer_perms - Enable the labeled networking peer p
 sys-apps/acl:nfs -  add support for NFS acls 
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
 sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev.conf and support files
-sys-apps/flashrom:ftdi - Enable flashing through FTDI/SPI USB interface
-sys-apps/flashrom:serprog - Enable Serial Flasher support
+sys-apps/flashrom:buspiratespi - Enable Bus Pirate SPI programmer
+sys-apps/flashrom:drkaiser - Enable Dr. Kaiser programmer
+sys-apps/flashrom:dummy - Enable dummy tracing
+sys-apps/flashrom:ftdi - Enable ftdi programmer, flashing through FTDI/SPI USB interface
+sys-apps/flashrom:internal - Enable internal/onboard support
+sys-apps/flashrom:nic3com - Enable 3Com NIC programmer
+sys-apps/flashrom:nvidia - Enable NVIDIA programmer
+sys-apps/flashrom:satasii - Enable programmer for SiI SATA controllers
+sys-apps/flashrom:serprog - Enable Serial Flasher programmer
+sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
 sys-apps/gnome-disk-utility:nautilus - enable gnome-base/nautilus extension.
 sys-apps/hal:acpi - Enables HAL to attempt to read from /proc/acpi/event, if unavailable, HAL will read events from sys-power/acpid. If you need multiple acpi readers, ensure acpid is in your default runlevel (rc-update add acpid default) along with HAL. This will also enable HAL to read Toshiba and IBM acpi events which do not get sent via /proc/acpi/event
 sys-apps/hal:consolekit - Enables HAL to interact with consolekit for determining whether a given process is running on behalf of the person setting at the console.
