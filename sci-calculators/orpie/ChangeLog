@@ -1,6 +1,15 @@
 # ChangeLog for sci-calculators/orpie
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.15 2009/02/03 14:37:55 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/orpie/ChangeLog,v 1.16 2010/06/03 19:40:26 bicatali Exp $
+
+*orpie-1.5.1-r1 (03 Jun 2010)
+
+  03 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +orpie-1.5.1-r1.ebuild, +files/orpie-1.5.1-nogsl.patch,
+  +files/orpie-1.5.1-ocaml311.patch, +files/orpie-1.5.1-orpierc.patch:
+  Now build with system ocamlgsl. Added a fix for more recent ocaml, thanks
+  Dylan Simon for his patch. Closing bug #297409 and bug #314651. Dropping
+  ppc until we have ocamlgsl keyworded
 
   03 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org>
   -files/orpie-1.4.3-quote-down-crash.patch,
