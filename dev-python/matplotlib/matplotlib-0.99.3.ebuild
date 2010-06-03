@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r2.ebuild,v 1.1 2010/05/31 20:23:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.3.ebuild,v 1.1 2010/06/03 19:12:10 bicatali Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 WX_GTK_VER="2.8"
 
-inherit eutils distutils wxwidgets
+inherit eutils distutils wxwidgets flag-o-matic
 
 PDOC="users_guide_${PV}"
 
@@ -79,20 +79,12 @@ use_setup() {
 src_prepare() {
 	# avoid to launch xv while building examples docs
 	epatch "${FILESDIR}"/${PN}-0.98.5.2-no-xv.patch
-
-	# removes hardcoded lib paths, should not break non-Prefix, more
-	# likely to fix it in case of multilib
-	epatch "${FILESDIR}"/${P}-prefix.patch
-	epatch "${FILESDIR}"/${PN}-0.99.0-freebsd7+.patch
-
-	# support libpng-1.4 (from upstream svn)
-	epatch "${FILESDIR}"/${P}-libpng14.patch
 	# allow better small docs (from upstream svn)
-	epatch "${FILESDIR}"/${P}-docs.patch
+	epatch "${FILESDIR}"/${PN}-0.99.1.1-docs.patch
 	# allow compatibility with pygtk-2.12 tooltop (from upstream svn)
-	epatch "${FILESDIR}"/${P}-gtk-tooltip.patch
+	epatch "${FILESDIR}"/${PN}-0.99.1.1-gtk-tooltip.patch
 	# some font stuff (from upstream svn)
-	epatch "${FILESDIR}"/${P}-eintr.patch
+	epatch "${FILESDIR}"/${PN}-0.99.1.1-eintr.patch
 
 	# create setup.cfg (see setup.cfg.template for any changes)
 	cat > setup.cfg <<-EOF
@@ -143,7 +135,7 @@ src_prepare() {
 
 src_compile() {
 	unset DISPLAY # bug #278524
-
+	append-flags -DNDEBUG # bug #322347
 	distutils_src_compile_pre_hook() {
 		ln -fs "${EPREFIX}/usr/share/python$(python_get_version)/CXX" .
 	}
@@ -155,10 +147,7 @@ src_compile() {
 		MATPLOTLIBDATA="${S}/lib/matplotlib/mpl-data" \
 			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
 			"$(PYTHON -f)" make.py --small all
-		MATPLOTLIBDATA="${S}/lib/matplotlib/mpl-data" \
-			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
-			"$(PYTHON -f)" make.py --small all
-		[[ -e build/latex/Matplotlib.pdf ]] && die "doc generation failed"
+		[[ -e build/latex/Matplotlib.pdf ]] || die "doc generation failed"
 	fi
 }
 

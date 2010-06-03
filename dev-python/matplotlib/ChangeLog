@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.88 2010/05/31 20:38:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.89 2010/06/03 19:12:09 bicatali Exp $
+
+*matplotlib-0.99.3 (03 Jun 2010)
+
+  03 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  matplotlib-0.99.1.1-r1.ebuild, -matplotlib-0.99.1.1-r2.ebuild,
+  +matplotlib-0.99.3.ebuild:
+  Version bump. Also forced -DNDEBUG to fix doc generation (bug #322347)
 
   31 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
   files/matplotlib-0.99.1.1-libpng14.patch:

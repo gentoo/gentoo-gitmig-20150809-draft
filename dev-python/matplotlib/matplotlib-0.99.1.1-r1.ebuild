@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.8 2010/05/30 16:32:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1-r1.ebuild,v 1.9 2010/06/03 19:12:09 bicatali Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 WX_GTK_VER="2.8"
 
-inherit eutils distutils wxwidgets
+inherit eutils distutils wxwidgets flag-o-matic
 
 PDOC="users_guide_${PV}"
 
@@ -140,7 +140,7 @@ src_prepare() {
 
 src_compile() {
 	unset DISPLAY # bug #278524
-
+	append-flags -DNDEBUG # bug #322347
 	distutils_src_compile_pre_hook() {
 		ln -fs "${EPREFIX}/usr/share/python$(python_get_version)/CXX" .
 	}
@@ -149,14 +149,10 @@ src_compile() {
 	if use doc; then
 		cd "${S}/doc"
 		export VARTEXFONTS="${T}"/fonts
-		# no die function here: broken compilation at the end, do it twice,
-		# result ok.
 		MATPLOTLIBDATA="${S}/lib/matplotlib/mpl-data" \
 			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
-			"$(PYTHON -f)" make.py html
-		MATPLOTLIBDATA="${S}/lib/matplotlib/mpl-data" \
-			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
-			"$(PYTHON -f)" make.py
+			"$(PYTHON -f)" make.py all
+		[[ -e build/latex/Matplotlib.pdf ]] || die "doc generation failed"
 	fi
 }
 
