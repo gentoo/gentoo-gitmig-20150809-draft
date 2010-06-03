@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/oxygen-molecule
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/ChangeLog,v 1.5 2010/04/24 16:21:47 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/ChangeLog,v 1.6 2010/06/03 13:18:33 spatz Exp $
+
+  03 Jun 2010; Dror Levin <spatz@gentoo.org> oxygen-molecule-3.2.ebuild:
+  Stable on amd64, bug 322533.
 
 *oxygen-molecule-3.2 (24 Apr 2010)
 
