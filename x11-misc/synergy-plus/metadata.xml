@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>desktop-misc</herd>
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-    <name>Diego Pettenò</name>
-  </maintainer>
-  <maintainer>
-	  <email>cardoe@gentoo.org</email>
-	  <name>Doug Goldstein</name>
-  </maintainer>
+	<herd>desktop-misc</herd>
+	<maintainer>
+		<email>flameeyes@gentoo.org</email>
+		<name>Diego Pettenò</name>
+	</maintainer>
+	<maintainer>
+		<email>spatz@gentoo.org</email>
+		<name>Dror Levin</name>
+	</maintainer>
 </pkgmetadata>
