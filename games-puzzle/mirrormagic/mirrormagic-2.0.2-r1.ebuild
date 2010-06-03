@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2-r1.ebuild,v 1.2 2010/05/20 16:57:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2-r1.ebuild,v 1.3 2010/06/03 07:51:57 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-parallel.patch \
 		"${FILESDIR}"/${P}-64bit.patch
 	rm -f ${PN}
 }
