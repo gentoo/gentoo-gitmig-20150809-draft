@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.332 2010/06/03 02:29:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.333 2010/06/03 14:30:56 phajdan.jr Exp $
+
+  03 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  openssl-0.9.8o.ebuild:
+  x86 stable wrt security bug #322575
 
 *openssl-0.9.8o (03 Jun 2010)
 
