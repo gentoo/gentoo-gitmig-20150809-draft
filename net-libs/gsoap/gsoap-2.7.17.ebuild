@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.17.ebuild,v 1.1 2010/06/03 21:25:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.17.ebuild,v 1.2 2010/06/03 22:02:07 polynomial-c Exp $
 
 EAPI=2
 
@@ -27,10 +27,13 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# Fix Pre-ISO headers
-	epatch \
-		"${FILESDIR}/${PN}-2.7-fix-pre-iso-headers.patch" \
-		"${FILESDIR}/${PN}-2.7.10-fedora-install_soapcpp2_wsdl2h_aux.patch" \
-		"${FILESDIR}/${PN}-2.7.15-use_libtool.patch"
+	epatch "${FILESDIR}/${PN}-2.7-fix-pre-iso-headers.patch"
+	epatch "${FILESDIR}/${PN}-2.7.10-fedora-install_soapcpp2_wsdl2h_aux.patch"
+
+	# causes compilation of app-emulation/virtualbox-ose[vboxwebsrv] to
+	# break:
+	#epatch "${FILESDIR}/${PN}-2.7.15-use_libtool.patch"
+
 	eautoreconf
 }
 

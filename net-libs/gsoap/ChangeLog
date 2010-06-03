@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gsoap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.9 2010/06/03 21:25:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.10 2010/06/03 22:02:07 polynomial-c Exp $
+
+  03 Jun 2010; Lars Wendler <polynomial-c@gentoo.org> -gsoap-2.7.14.ebuild,
+  gsoap-2.7.17.ebuild:
+  Really fixing bug #320901. Removed interim version 2.7.14 again.
 
 *gsoap-2.7.17 (03 Jun 2010)
 *gsoap-2.7.14 (03 Jun 2010)
