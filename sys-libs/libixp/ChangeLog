@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libixp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.11 2010/06/02 06:38:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.12 2010/06/03 04:42:20 jer Exp $
+
+  03 Jun 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Needed by x11-wm/wmii, so reassigning to desktop-wm herd.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove omp from metadata.xml (#147119)
