@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.161 2010/01/09 15:36:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.162 2010/06/03 14:43:07 josejx Exp $
+
+  03 Jun 2010; Joseph Jezak <josejx@gentoo.org> avidemux-2.5.2.ebuild,
+  +files/avidemux-2.5.2-altivec-bool.patch:
+  Add fix for altivec on ppc.
 
   09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   avidemux-2.5.1_p5428.ebuild:

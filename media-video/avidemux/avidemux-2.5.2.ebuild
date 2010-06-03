@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.2.ebuild,v 1.1 2009/12/22 16:49:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.2.ebuild,v 1.2 2010/06/03 14:43:07 josejx Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+inherit cmake-utils flag-o-matic
 
 MY_P=${PN}_${PV}
 
@@ -55,7 +55,8 @@ done
 
 PATCHES=( "${WORKDIR}/patches/2.5.1-i18n.patch"
 	"${WORKDIR}/patches/2.5.1-coreImage-parallel-build.patch"
-	"${FILESDIR}/avidemux-2.5.1-build-plugins-fix.patch" )
+	"${FILESDIR}/avidemux-2.5.1-build-plugins-fix.patch" 
+	"${FILESDIR}/avidemux-2.5.2-altivec-bool.patch" )
 
 src_prepare() {
 	base_src_prepare
@@ -85,6 +86,11 @@ src_prepare() {
 }
 
 src_configure() {
+	### Add lax vector typing for PowerPC
+	if use ppc || use ppc64; then
+		append-cflags "-flax-vector-conversions"
+	fi
+
 	mycmakeargs="${mycmakeargs}
 		-DAVIDEMUX_SOURCE_DIR='${S}'
 		-DAVIDEMUX_INSTALL_PREFIX='${S}_build'
