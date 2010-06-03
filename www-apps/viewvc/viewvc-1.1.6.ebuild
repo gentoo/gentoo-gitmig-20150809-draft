@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.6.ebuild,v 1.1 2010/06/03 20:46:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.6.ebuild,v 1.2 2010/06/03 21:06:16 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,8 +16,8 @@ DOWNLOAD_NUMBER="47623"
 SRC_URI="http://viewvc.tigris.org/files/documents/3330/${DOWNLOAD_NUMBER}/${P}.tar.gz"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cvs cvsgraph mod_python mysql pygments +subversion"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="cvs cvsgraph mod_python mod_wsgi mysql pygments +subversion"
 SLOT="0"
 
 DEPEND=""
@@ -31,7 +31,8 @@ RDEPEND="
 	)
 
 	mod_python? ( www-apache/mod_python )
-	!mod_python? ( virtual/httpd-cgi )
+	mod_wsgi? ( www-apache/mod_wsgi )
+	!mod_python? ( !mod_wsgi? ( virtual/httpd-cgi ) )
 
 	cvsgraph? ( >=dev-util/cvsgraph-1.5.0 )
 	mysql? ( >=dev-python/mysql-python-0.9.0 )
