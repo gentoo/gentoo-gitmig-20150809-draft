@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.13.ebuild,v 1.3 2009/11/09 12:47:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.13.ebuild,v 1.4 2010/06/03 21:25:46 polynomial-c Exp $
 
 EAPI=2
 
@@ -25,8 +25,8 @@ RDEPEND=""
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-		# Fix Pre-ISO headers
-		epatch "${FILESDIR}/${PN}-2.7-fix-pre-iso-headers.patch"
+	# Fix Pre-ISO headers
+	epatch "${FILESDIR}/${PN}-2.7-fix-pre-iso-headers.patch"
 }
 
 src_configure() {

@@ -14,4 +14,8 @@
   <email>patrick@gentoo.org</email>
   <name>Patrick Lauer</name>
 </maintainer>
+<maintainer>
+  <email>polynomial-c@gentoo.org</email>
+  <name>Lars Wendler</name>
+</maintainer>
 </pkgmetadata>

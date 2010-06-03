@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.15.ebuild,v 1.1 2010/05/19 13:20:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.17.ebuild,v 1.1 2010/06/03 21:25:46 polynomial-c Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ MY_P="${PN}-2.7"
 
 DESCRIPTION="A cross-platform open source C and C++ SDK to ease the development of SOAP/XML Web services"
 HOMEPAGE="http://gsoap2.sourceforge.net"
-SRC_URI="mirror://sourceforge/gsoap2/gsoap_${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/gsoap2/gsoap_${PV}.zip"
 
 LICENSE="GPL-2 gSOAP"
 SLOT="0"
@@ -29,9 +29,8 @@ src_prepare() {
 	# Fix Pre-ISO headers
 	epatch \
 		"${FILESDIR}/${PN}-2.7-fix-pre-iso-headers.patch" \
-		"${FILESDIR}/${PN}-2.7-fedora-openssl.patch" \
 		"${FILESDIR}/${PN}-2.7.10-fedora-install_soapcpp2_wsdl2h_aux.patch" \
-		"${FILESDIR}/${P}-use_libtool.patch"
+		"${FILESDIR}/${PN}-2.7.15-use_libtool.patch"
 	eautoreconf
 }
 

@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/gsoap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.8 2010/05/19 13:20:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.9 2010/06/03 21:25:46 polynomial-c Exp $
+
+*gsoap-2.7.17 (03 Jun 2010)
+*gsoap-2.7.14 (03 Jun 2010)
+
+  03 Jun 2010; Lars Wendler <polynomial-c@gentoo.org> -gsoap-2.7.9f.ebuild,
+  -gsoap-2.7.12.ebuild, -gsoap-2.7.12-r1.ebuild,
+  -files/gsoap-2.7.12-fix-pre-iso-headers.patch, +gsoap-2.7.14.ebuild,
+  -gsoap-2.7.15.ebuild, +gsoap-2.7.17.ebuild, metadata.xml:
+  Version bumps to latest available version (2.7.17) and latest version
+  which works with virtualbox-ose (2.7.14). Removed old versions. Added
+  myself as maintainer.
 
 *gsoap-2.7.15 (19 May 2010)
 

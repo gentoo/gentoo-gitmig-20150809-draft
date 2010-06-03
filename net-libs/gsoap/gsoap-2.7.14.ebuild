@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.12-r1.ebuild,v 1.1 2009/03/05 20:30:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.14.ebuild,v 1.1 2010/06/03 21:25:46 polynomial-c Exp $
 
 EAPI=2
 
@@ -25,16 +25,20 @@ RDEPEND=""
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-		# Fix Pre-ISO headers
-		epatch "${FILESDIR}/${P}-fix-pre-iso-headers.patch"
+	# Fix Pre-ISO headers
+	epatch "${FILESDIR}/${PN}-2.7-fix-pre-iso-headers.patch"
+	#fix for >=openssl-1.0.0
+	epatch "${FILESDIR}/${PN}-2.7-fedora-openssl.patch"
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable ssl openssl) \
 	$(use_enable examples samples) \
 	$(use_enable debug) \
 	|| die "econf failed"
+}
 
+src_compile() {
 	emake -j1 || die "emake failed"
 }
 
