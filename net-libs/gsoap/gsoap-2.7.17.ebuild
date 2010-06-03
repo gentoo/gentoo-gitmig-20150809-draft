@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.17.ebuild,v 1.2 2010/06/03 22:02:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.17.ebuild,v 1.3 2010/06/03 22:09:59 polynomial-c Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.7.10-fedora-install_soapcpp2_wsdl2h_aux.patch"
 
 	# causes compilation of app-emulation/virtualbox-ose[vboxwebsrv] to
-	# break:
+	# break (bug #320901):
 	#epatch "${FILESDIR}/${PN}-2.7.15-use_libtool.patch"
 
 	eautoreconf
