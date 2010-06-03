@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.9 2010/06/01 21:25:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.10 2010/06/03 06:07:41 grobian Exp $
+
+  02 Jun 2010; Fabian Groffen <grobian@gentoo.org> dbxml-2.5.16-r1.ebuild:
+  Make ebuild Prefix aware
 
 *dbxml-2.5.16-r1 (01 Jun 2010)
 

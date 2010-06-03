@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r1.ebuild,v 1.1 2010/06/01 21:25:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r1.ebuild,v 1.2 2010/06/03 06:07:41 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -103,21 +103,21 @@ src_configure() {
 	cd "${S}/build_unix"
 
 	#Needed despite db_version stuff above
-	append-flags -I/usr/include/db${DB_VER}
+	append-flags -I"${EPREFIX}"/usr/include/db${DB_VER}
 
 	local myconf=""
 
 	# use_enable doesn't work here due to a different syntax
 	use java && myconf="${myconf} --enable-java"
-	use tcl && myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)"
+	use tcl && myconf="${myconf} --enable-tcl --with-tcl=${EPREFIX}/usr/$(get_libdir)"
 
 	export ac_cv_prog_path_strip="missing_strip"
 	ECONF_SOURCE="../" \
 	JAVAPREFIX="${JAVA_HOME}" \
 		econf \
-			--with-berkeleydb=/usr \
-			--with-xqilla=/usr \
-			--with-xerces=/usr \
+			--with-berkeleydb="${EPREFIX}"/usr \
+			--with-xqilla="${EPREFIX}"/usr \
+			--with-xerces="${EPREFIX}"/usr \
 			${myconf}
 }
 
@@ -147,12 +147,12 @@ src_install() {
 	# somewhat broken build system
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	use doc && dohtml -A pdf -r "${D}"/usr/docs/*
-	rm -rf "${D}/usr/docs"
+	use doc && dohtml -A pdf -r "${ED}"/usr/docs/*
+	rm -rf "${ED}/usr/docs"
 
 	if use java ; then
-		java-pkg_dojar "${D}/usr/$(get_libdir)/dbxml.jar"
-		rm "${D}/usr/$(get_libdir)/dbxml.jar"
+		java-pkg_dojar "${ED}/usr/$(get_libdir)/dbxml.jar"
+		rm "${ED}/usr/$(get_libdir)/dbxml.jar"
 	fi
 
 	if use python ; then
