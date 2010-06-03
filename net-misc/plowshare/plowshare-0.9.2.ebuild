@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.9.2.ebuild,v 1.1 2010/05/15 11:35:24 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.9.2.ebuild,v 1.2 2010/06/03 23:26:03 volkmar Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ src_prepare() {
 		sed -i -e 's:^\(MODULES=\".*\)netload_in:\1:' \
 			-e 's:^\(MODULES=\".*\)loadfiles:\1:' \
 			src/{delete,download,list,upload}.sh || die "sed failed"
-		rm src/modules/{netload_in}.sh || die "rm failed"
+		rm src/modules/netload_in.sh || die "rm failed"
 	fi
 }
 
