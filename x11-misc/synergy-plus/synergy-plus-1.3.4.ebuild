@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/synergy-plus-1.3.4.ebuild,v 1.1 2009/10/21 16:15:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/synergy-plus-1.3.4.ebuild,v 1.2 2010/06/03 16:29:48 spatz Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 #SRC_URI="mirror://google/files/${PN}/${P}.tar.gz"
 HOMEPAGE="http://code.google.com/p/synergy-plus/"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE=""
 

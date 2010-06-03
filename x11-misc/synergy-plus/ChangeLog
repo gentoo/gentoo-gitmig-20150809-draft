@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy-plus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/ChangeLog,v 1.1 2009/10/21 16:15:37 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/ChangeLog,v 1.2 2010/06/03 16:29:48 spatz Exp $
+
+  03 Jun 2010; Dror Levin <spatz@gentoo.org> synergy-plus-1.3.4.ebuild:
+  Stable on amd64, bug 322621.
 
 *synergy-plus-1.3.4 (21 Oct 2009)
 
