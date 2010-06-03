@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.22_p22763.ebuild,v 1.2 2009/11/09 21:18:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.22_p22763.ebuild,v 1.3 2010/06/03 16:05:25 cardoe Exp $
 
 EAPI=2
 inherit qt4 mythtv-plugins
@@ -12,6 +12,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-libs/libcdaudio-0.99.6
 	>=media-libs/taglib-1.5
+	>=media-libs/flac-1.2.1
+	>=media-libs/libogg-1.1.4
+	>=media-libs/libvorbis-1.2.1
 	cdr? ( virtual/cdrtools )
 	fftw? ( sci-libs/fftw )
 	opengl? ( virtual/opengl )
@@ -23,8 +26,10 @@ DEPEND="${RDEPEND}"
 
 pkg_config() {
 	if use libvisual && ! use sdl; then
-		eerror "libvisual support requires sdl support. enable 'sdl' USE flag"
-		die "libvisual support requires sdl support. enable 'sdl' USE flag"
+		ewarn
+		ewarn "libvisual support requires sdl support. Enable 'sdl' USE flag"
+		ewarn "if you really want libvisual support"
+		ewarn
 	fi
 }
 

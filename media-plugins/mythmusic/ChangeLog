@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.84 2009/11/18 00:20:47 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.85 2010/06/03 16:05:25 cardoe Exp $
+
+  03 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythmusic-0.22_p22763.ebuild:
+  Added missing dependencies fixing bug #296467
 
   18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   replace media-tv herd for MythTV
