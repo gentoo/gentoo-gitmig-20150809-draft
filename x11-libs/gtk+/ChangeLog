@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.455 2010/05/11 19:46:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.456 2010/06/03 11:10:27 grobian Exp $
+
+  03 Jun 2010; Fabian Groffen <grobian@gentoo.org> gtk+-2.18.9.ebuild:
+  Tidy up ebuild by using EAPI=3
 
   11 May 2010; Brent Baude <ranger@gentoo.org> gtk+-2.18.6.ebuild:
   Marking gtk+-2.18.6 ppc64 for bug 304777
