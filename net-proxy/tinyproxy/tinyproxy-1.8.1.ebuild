@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1.ebuild,v 1.1 2010/05/26 18:03:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1.ebuild,v 1.2 2010/06/03 20:41:16 jer Exp $
 
 EAPI="2"
 
@@ -13,17 +13,23 @@ SRC_URI="http://www.banu.com/pub/${PN}/1.8/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="debug +filter-proxy reverse-proxy transparent-proxy
+IUSE="debug +filter-proxy minimal reverse-proxy transparent-proxy
 	+upstream-proxy +xtinyproxy-header"
 
-DEPEND="app-text/asciidoc"
+DEPEND="doc? ( app-text/asciidoc )"
 RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	use minimal && epatch "${FILESDIR}/${P}-minimal.patch"
 	eautoreconf
 }
+	
 src_configure() {
+	if use minimal; then
+		ln -s /bin/true ${T}/a2x
+		export PATH="${T}:${PATH}"
+	fi
 	econf \
 		$(use_enable filter-proxy filter) \
 		$(use_enable reverse-proxy reverse) \
@@ -38,10 +44,11 @@ src_install() {
 	sed -i \
 		-e 's:mkdir $(datadir)/tinyproxy:mkdir -p $(DESTDIR)$(datadir)/tinyproxy:' \
 		Makefile
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 
-	dodoc AUTHORS ChangeLog NEWS README TODO
-	mv "${D}/usr/share/tinyproxy" "${D}/usr/share/doc/${PF}/html"
+	if ! use minimal; then
+		dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	fi
 
 	newinitd "${FILESDIR}/tinyproxy.initd" tinyproxy
 }

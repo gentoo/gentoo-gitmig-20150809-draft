@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.14 2010/05/26 18:03:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.15 2010/06/03 20:41:16 jer Exp $
+
+  03 Jun 2010; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.1.ebuild,
+  +files/tinyproxy-1.8.1-minimal.patch:
+  Introduce USE=minimal to not install documentation or man pages and to not
+  depend on app-text/asciidoc thanks to jakie jia (bug #321753). Do not move
+  HTML templates to docdir as they are not docs.
 
 *tinyproxy-1.8.1 (26 May 2010)
 
