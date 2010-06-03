@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.1.5-r1.ebuild,v 1.1 2010/03/18 19:08:19 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.1.5-r2.ebuild,v 1.1 2010/06/03 21:55:40 battousai Exp $
 
 inherit eutils perl-app
 
@@ -68,8 +68,6 @@ src_install() {
 
 	cd "${S}"
 
-	fix_psad_conf
-
 	insinto /etc/psad
 	doins *.conf
 	doins psad_*
@@ -85,6 +83,11 @@ src_install() {
 
 	cd "${S}"
 	dodoc BENCHMARK CREDITS Change* FW_EXAMPLE_RULES README SCAN_LOG
+}
+
+pkg_preinst() {
+	# Set sane defaults in config file.
+	fix_psad_conf
 }
 
 pkg_postinst() {
@@ -131,16 +134,16 @@ pkg_postinst() {
 }
 
 fix_psad_conf() {
-	cp psad.conf psad.conf.orig
+	PSADCONF="${D}/etc/psad/psad.conf"
 
 	# Ditch the _CHANGEME_ for hostname, substituting in our real hostname
 	[ -e /etc/hostname ] && myhostname="$(< /etc/hostname)"
 	[ "${myhostname}" == "" ] && myhostname="$HOSTNAME"
 	mydomain=".$(grep ^domain /etc/resolv.conf | cut -d" " -f2)"
-	sed -i "s:HOSTNAME\(.\+\)\_CHANGEME\_;:HOSTNAME\1${myhostname}${mydomain};:" psad.conf || die "fix_psad_conf failed"
+	sed -i "s:HOSTNAME\(.\+\)\_CHANGEME\_;:HOSTNAME\1${myhostname}${mydomain};:" "${PSADCONF}" || die "fix_psad_conf failed"
 
 	# Fix up paths
-	sed -i "s:/sbin/syslogd:/usr/sbin/syslogd:g" psad.conf || die "fix_psad_conf failed"
-	sed -i "s:/sbin/syslog-ng:/usr/sbin/syslog-ng:g" psad.conf || die "fix_psad_conf failed"
-	sed -i "s:/usr/bin/whois_psad:/usr/bin/whois:g" psad.conf || die "fix_psad_conf failed"
+	sed -i "s:/sbin/syslogd:/usr/sbin/syslogd:g" "${PSADCONF}" || die "fix_psad_conf failed"
+	sed -i "s:/sbin/syslog-ng:/usr/sbin/syslog-ng:g" "${PSADCONF}" || die "fix_psad_conf failed"
+	sed -i "s:/usr/bin/whois_psad:/usr/bin/whois:g" "${PSADCONF}" || die "fix_psad_conf failed"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.1.4.ebuild,v 1.1 2008/09/12 05:03:41 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.1.4.ebuild,v 1.2 2010/06/03 21:55:40 battousai Exp $
 
 inherit eutils perl-app
 
@@ -64,7 +64,7 @@ src_install() {
 	insinto /usr
 	dosbin kmsgsd psad psadwatchd
 	newsbin fwcheck_psad.pl fwcheck_psad
-	dobin pscan
+	dobin psad-pscan
 
 	cd "${S}"
 
