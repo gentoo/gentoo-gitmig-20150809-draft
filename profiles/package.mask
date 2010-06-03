@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11591 2010/06/03 19:36:54 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11592 2010/06/03 19:42:28 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -212,11 +212,6 @@ net-misc/asterisk-app_nv_faxdetect
 # Mask not finished ebuild. Needs .pc file cleanup and
 # install paths checking.
 >sci-geosciences/grass-6.4.0_rc5
-
-# Sébastien Fabbro <bicatali@gentoo.org> (27 Apr 2010)
-# Masking for removal (bug #314651).
-# Dead upstream. Many calculators replacements.
-sci-calculators/orpie
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Apr 2010)
 # Replaced by >sci-libs/netcdf-4.0
