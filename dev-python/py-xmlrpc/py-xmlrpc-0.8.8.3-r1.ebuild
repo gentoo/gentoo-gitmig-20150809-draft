@@ -1,22 +1,29 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/py-xmlrpc-0.8.8.3-r1.ebuild,v 1.1 2010/03/01 23:46:49 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/py-xmlrpc-0.8.8.3-r1.ebuild,v 1.2 2010/06/03 19:48:05 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
 inherit distutils eutils
 
-IUSE="examples"
 DESCRIPTION="Fast XML-RPC implementation for Python"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/py-xmlrpc/"
-DEPEND="virtual/python"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+IUSE="examples"
+
+DEPEND=""
+RDEPEND=""
+
+PYTHON_MODNAME="pyxmlrpclib.py xmlrpc.py"
 
 src_prepare() {
-
 	#http://www.FreeBSD.org/cgi/cvsweb.cgi/ports/net/py-xmlrpc/files/
 	epatch "${FILESDIR}/${PN}_patch-extra.patch"
 	epatch "${FILESDIR}/${PN}_rpcBase64.patch"
@@ -25,8 +32,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}_rpcDispatch.patch"
 	epatch "${FILESDIR}/${PN}_rpcUtils.patch"
 	epatch "${FILESDIR}/${PN}_rpcSource.patch"
-	distutils_src_prepare
 
+	distutils_src_prepare
 }
 
 src_install () {
@@ -38,5 +45,4 @@ src_install () {
 		insinto "/usr/share/doc/${PF}/examples/crj"
 		doins examples/crj/*
 	fi
-
 }
