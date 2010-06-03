@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.7.ebuild,v 1.1 2010/01/09 14:41:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.7-r1.ebuild,v 1.1 2010/06/03 14:25:22 beandog Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -26,6 +26,8 @@ pkg_setup() {
 
 	if ! use nls; then
 		MYFLAGS="${MYFLAGS} WITHOUT_NLS=1"
+		MYFLAGS="${MYFLAGS} MYDOCPATH=/usr/share/doc/${PF}/bkisofs"
+		MYFLAGS="${MYFLAGS} ICONPATH=/usr/share/pixmaps/${PN}"
 	fi
 }
 
