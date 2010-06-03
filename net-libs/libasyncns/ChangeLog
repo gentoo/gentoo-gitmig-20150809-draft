@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libasyncns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.15 2010/06/01 20:43:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.16 2010/06/03 13:17:56 josejx Exp $
+
+  03 Jun 2010; Joseph Jezak <josejx@gentoo.org> libasyncns-0.7.ebuild:
+  Marked ppc/ppc64 stable for bug #283362.
 
 *libasyncns-0.8 (01 Jun 2010)
 
