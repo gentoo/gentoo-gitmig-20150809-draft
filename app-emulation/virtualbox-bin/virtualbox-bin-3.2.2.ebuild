@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.1.6.ebuild,v 1.1 2010/03/28 13:42:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.2.ebuild,v 1.1 2010/06/03 10:57:52 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-59338
+MY_PV=${PV}-62298
 MY_P=VirtualBox-${MY_PV}-Linux
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"

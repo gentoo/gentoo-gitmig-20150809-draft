@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.1.6.ebuild,v 1.3 2010/05/11 18:52:37 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.2.ebuild,v 1.1 2010/06/03 10:59:53 polynomial-c Exp $
 
 inherit eutils linux-mod
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxguest(misc:${WORKDIR}/vboxguest:${WORKDIR}/vboxguest)
-			vboxvfs(misc:${WORKDIR}/vboxvfs:${WORKDIR}/vboxvfs)"
+			vboxsf(misc:${WORKDIR}/vboxsf:${WORKDIR}/vboxsf)"
 
 S=${WORKDIR}/${MY_P/-OSE/_OSE}
 
@@ -63,11 +63,17 @@ src_unpack() {
 
 		# Disable things unused or splitted into separate ebuilds
 		cp "${FILESDIR}/${PN}-3-localconfig" LocalConfig.kmk
+
+		# stupid new header references...
+		for vboxheader in {product,revision}-generated.h ; do
+			for mdir in vbox{guest,sf} ; do
+				ln -sf "${S}"/out/linux.${ARCH}/release/${vboxheader} \
+					"${WORKDIR}/${mdir}/${vboxheader}"
+			done
+		done
 }
 
 src_compile() {
-		linux-mod_src_compile
-
 		# build the user-space tools, warnings are harmless
 		./configure --nofatal \
 		--disable-xpcom \
@@ -91,6 +97,11 @@ src_compile() {
 				KBUILD_PATH="${S}/kBuild" \
 				|| die "kmk VBoxClient failed"
 		fi
+
+		# Now creating the kernel modules. We must do this _after_
+		# we compiled the user-space tools as we need two of the
+		# automatically generated header files. (>=3.2.0)
+		linux-mod_src_compile
 }
 
 src_install() {
@@ -102,7 +113,7 @@ src_install() {
 		newins mount.vboxsf mount.vboxsf
 		fperms 4755 /sbin/mount.vboxsf
 
-		newinitd "${FILESDIR}"/${PN}-5.initd ${PN}
+		newinitd "${FILESDIR}"/${PN}-7.initd ${PN}
 
 		insinto /usr/sbin/
 		newins VBoxService vboxguest-service
@@ -118,19 +129,24 @@ src_install() {
 			fperms 0755 /usr/bin/VBoxClient
 
 			cd "${S}"/src/VBox/Additions/x11/Installer
-			newins VBoxRandR.sh VBoxRandR
-			fperms 0755 /usr/bin/VBoxRandR
-
 			newins 98vboxadd-xclient VBoxClient-all
 			fperms 0755 /usr/bin/VBoxClient-all
 		fi
 
 		# udev rule for vboxdrv
 		dodir /etc/udev/rules.d
-		echo 'KERNEL=="vboxguest", NAME="vboxguest", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
+		echo 'KERNEL=="vboxguest", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
 		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
-		echo 'KERNEL=="vboxuser", NAME="vboxuser", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
+		echo 'KERNEL=="vboxuser", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
 		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
+
+		# VBoxClient autostart file
+		insinto /etc/xdg/autostart
+		doins "${FILESDIR}"/vboxclient.desktop
+
+		# sample xorg.conf
+		insinto /usr/share/doc/${PF}
+		doins "${FILESDIR}"/xorg.conf.vbox
 }
 
 pkg_postinst() {
@@ -141,8 +157,20 @@ pkg_postinst() {
 		fi
 		elog "Please add:"
 		elog "/etc/init.d/${PN}"
-		elog "to the default runlevel in order to load all"
-		elog "needed modules and services."
+		elog "to the default runlevel in order to start"
+		elog "needed services."
+		elog "To use the VirtualBox X drivers, use the following"
+		elog "file as your /etc/X11/xorg.conf:"
+		elog "    /usr/share/doc/${PF}/xorg.conf.xorg"
+		elog ""
+		elog "Also make sure you use the Mesa library for OpenGL:"
+		elog "    eselect opengl set xorg-x11"
+		elog ""
+		elog "An autostart .desktop file has been installed to start"
+		elog "VBoxClient in desktop sessions."
+		elog ""
+		elog "You can mount shared folders with:"
+		elog "    mount -t vboxsf <shared_folder_name> <mount_point>"
 		elog ""
 		elog "Warning:"
 		elog "this ebuild is only needed if you are running gentoo"

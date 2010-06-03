@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.1.6.ebuild,v 1.1 2010/03/28 13:44:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.2.ebuild,v 1.1 2010/06/03 10:56:29 polynomial-c Exp $
 
 EAPI=2
 
@@ -47,6 +47,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	hal? ( sys-apps/hal )
+	!headless? ( x11-libs/libXinerama )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( >=dev-lang/python-2.3 )
 	vboxwebsrv? ( >=net-libs/gsoap-2.7.13 )"
@@ -110,7 +111,10 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-3-localconfig > LocalConfig.kmk || die
 
 	# unset useless/problematic mesa checks in configure
-	epatch "${FILESDIR}/${PN}-3.0.0-mesa-check.patch"
+	epatch "${FILESDIR}/${PN}-3.2.0-mesa-check.patch"
+
+	# fix with newer iasl (bug #319127)
+	epatch "${FILESDIR}/${PN}-3.1.8-iasl-length-calculation-fix.patch"
 }
 
 src_configure() {
@@ -207,7 +211,7 @@ src_install() {
 			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/${each}
 		done
 
-		if use opengl ; then
+		if use opengl && use qt4 ; then
 			doins VBoxTestOGL || die
 			fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxTestOGL
 			fperms 0750 /usr/$(get_libdir)/${PN}/VBoxTestOGL
@@ -232,6 +236,14 @@ src_install() {
 		fperms 4750 /usr/$(get_libdir)/${PN}/VBoxHeadless
 		pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxHeadless
 	fi
+
+	# Install EFI Firmware files (bug #320757)
+	pushd "${S}"/src/VBox/Devices/EFI/FirmwareBin &>/dev/null || die
+	for fwfile in VBoxEFI{32,64}.fd ; do
+		doins ${fwfile} || die
+		fowners root:vboxusers /usr/$(get_libdir)/${PN}/${fwfile} || die
+	done
+	popd &>/dev/null || die
 
 	insinto /usr/share/${PN}
 	if ! use headless && use qt4 ; then
