@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/nted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.10 2010/02/07 10:24:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.11 2010/06/03 11:32:54 hwoarang Exp $
+
+*nted-1.10.7 (03 Jun 2010)
+
+  03 Jun 2010; Markos Chandras <hwoarang@gentoo.org> nted-1.9.16.ebuild,
+  +nted-1.10.7.ebuild:
+  Stable on amd64 wrt bug #317439. Version bump wrt bug #322267. Thanks
+  to Matthias Vill <gentoo@cconstruct.de> for the ebuild
 
 *nted-1.9.16 (07 Feb 2010)
 

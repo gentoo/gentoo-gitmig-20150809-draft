@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.9.16.ebuild,v 1.2 2010/06/03 11:32:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.7.ebuild,v 1.1 2010/06/03 11:32:54 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://vsr.informatik.tu-chemnitz.de/staff/jan/${PN}/sources/${P}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc nls debug"
 RDEPEND="doc? ( gnome-extra/yelp app-text/xmlto )
 	x11-libs/cairo
@@ -32,6 +32,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ABOUT_* ChangeLog FAQ NEWS README || die "dodoc failed"
+	dodoc AUTHORS ABOUT_* COPYING* FAQ README || die "dodoc failed"
 	doman "man/${PN}.1" || die "doman failed"
 }
