@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.23 2010/04/29 20:21:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.24 2010/06/03 12:40:14 hwoarang Exp $
+
+  03 Jun 2010; Markos Chandras <hwoarang@gentoo.org> xca-0.8.1.ebuild:
+  Stable on amd64 wrt bug #322283
 
 *xca-0.8.1 (29 Apr 2010)
 
