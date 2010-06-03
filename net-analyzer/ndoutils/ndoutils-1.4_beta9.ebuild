@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta8.ebuild,v 1.1 2009/07/21 19:23:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndoutils/ndoutils-1.4_beta9.ebuild,v 1.1 2010/06/03 18:41:51 dertobi123 Exp $
 
 inherit eutils
 
@@ -38,22 +38,10 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
-	cp "${S}"/src/{file2sock,log2ndo,ndo2db-3x,ndomod-3x.o,sockdebug} "${D}"/usr/bin
-
-	dodir /usr/share/nagios/
-	cp -R "${S}"/db "${D}"/usr/share/nagios
-
-	chown -R root:nagios "${D}"/usr/bin || die "Failed chown of "${D}"/usr/nagios"
-	chmod 750 "${D}"/usr/bin/{file2sock,log2ndo,ndo2db-3x,ndomod-3x.o,sockdebug} || die "Failed chmod"
+	emake install DESTDIR="${D}" || die "emake install failed"
+	emake install-config DESTDIR="${D}" || die "emake install-config failed"
 
 	dodoc README REQUIREMENTS TODO UPGRADING Changelog "docs/NDOUTILS DB Model.pdf" "docs/NDOUtils Documentation.pdf"
-
-	sed -i s:socket_name=/usr/local/nagios/var/ndo.sock:socket_name=/var/nagios/ndo.sock:g "${S}"/config/ndo2db.cfg
-
-	insinto /etc/nagios
-	doins "${S}"/config/ndo2db.cfg
-	doins "${S}"/config/ndomod.cfg
 
 	newinitd "${FILESDIR}"/ndo2db.init-nagios3 ndo2db
 }
