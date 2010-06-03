@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog-ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.20 2010/05/27 15:54:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.21 2010/06/03 21:08:31 maekke Exp $
+
+  03 Jun 2010; Markus Meier <maekke@gentoo.org> cloog-ppl-0.15.8.ebuild:
+  arm stable, bug #319887
 
   27 May 2010; Jeroen Roovers <jer@gentoo.org> cloog-ppl-0.15.8.ebuild:
   Stable for HPPA (bug #319887).
