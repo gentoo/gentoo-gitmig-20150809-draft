@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.15 2010/06/03 20:41:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.16 2010/06/03 21:46:23 jer Exp $
+
+  03 Jun 2010; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.1.ebuild:
+  Remove USE=doc, only use USE=minimal.
 
   03 Jun 2010; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.1.ebuild,
   +files/tinyproxy-1.8.1-minimal.patch:
