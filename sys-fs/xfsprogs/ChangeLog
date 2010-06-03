@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.123 2010/05/11 20:50:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.124 2010/06/03 21:25:55 dev-zero Exp $
+
+*xfsprogs-3.1.2 (03 Jun 2010)
+
+  03 Jun 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +files/xfsprogs-3.1.1-sharedlibs.patch, +xfsprogs-3.1.2.ebuild:
+  Version bump (bug #311109), added deps for readline/libedit, added
+  static-libs use flag, changed dependency from e2fsprogs to util-linux,
+  thanks to Hendrik Leppkes for the updated patch.
 
   11 May 2010; Joseph Jezak <josejx@gentoo.org> xfsprogs-3.0.3.ebuild:
   Marked ppc/ppc64 stable for bug #311381.

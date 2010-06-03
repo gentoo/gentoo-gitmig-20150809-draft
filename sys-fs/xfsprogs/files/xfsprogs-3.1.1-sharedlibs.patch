@@ -1,0 +1,112 @@
+diff --git a/Makefile b/Makefile
+index 83d1b0a..3e4217d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -66,6 +66,7 @@ io: libxcmd libhandle
+ mkfs: libxfs
+ quota: libxcmd
+ repair: libxfs libxlog
++libxlog: libxfs
+ 
+ ifneq ($(ENABLE_BLKID), yes)
+ mkfs: libdisk
+diff --git a/include/buildmacros b/include/buildmacros
+index 62babca..0a3c5ba 100644
+--- a/include/buildmacros
++++ b/include/buildmacros
+@@ -71,17 +71,9 @@ endif
+ # /usr/lib.
+ ifeq ($(ENABLE_SHARED),yes)
+ INSTALL_LTLIB_DEV = \
+-	cd $(TOPDIR)/$(LIBNAME)/.libs; \
+-	../$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
+-	../$(INSTALL) -m 644 -T old_lib $(LIBNAME).lai $(PKG_LIB_DIR); \
+-	../$(INSTALL) -m 644 $(LIBNAME).lai $(PKG_LIB_DIR)/$(LIBNAME).la ; \
+-	../$(INSTALL) -m 755 -d $(PKG_ROOT_LIB_DIR); \
+-	../$(INSTALL) -T so_base $(LIBNAME).lai $(PKG_ROOT_LIB_DIR); \
+-	if test "x$(PKG_LIB_DIR)" != "x$(PKG_ROOT_LIB_DIR)" ; then \
+-	../$(INSTALL) -S $(PKG_LIB_DIR)/$(LIBNAME).a $(PKG_ROOT_LIB_DIR)/$(LIBNAME).a; \
+-	../$(INSTALL) -S $(PKG_LIB_DIR)/$(LIBNAME).la $(PKG_ROOT_LIB_DIR)/$(LIBNAME).la; \
+-	../$(INSTALL) -S $(PKG_ROOT_LIB_DIR)/$(LIBNAME).so $(PKG_LIB_DIR)/$(LIBNAME).so; \
+-	fi
++	cd $(TOPDIR)/$(LIBNAME); \
++	$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
++	env -uDIST_ROOT $(LTINSTALL) $(TOPDIR)/$(LIBNAME)/$(LIBNAME).la $(DIST_ROOT)$(PKG_LIB_DIR)/$(LIBNAME).la
+ else
+ INSTALL_LTLIB_DEV = $(INSTALL_LTLIB_STATIC)
+ endif
+diff --git a/libdisk/Makefile b/libdisk/Makefile
+index 32416a5..7a144c0 100644
+--- a/libdisk/Makefile
++++ b/libdisk/Makefile
+@@ -25,8 +25,10 @@ default: ltdepend $(LTLIBRARY)
+ include $(BUILDRULES)
+ 
+ install: default
++	$(INSTALL_LTLIB)
+ 
+ install-dev: default
++	$(INSTALL_LTLIB_DEV)
+ 
+ install-qa: install-dev
+ 
+diff --git a/libxcmd/Makefile b/libxcmd/Makefile
+index 60b6f9e..38e53a6 100644
+--- a/libxcmd/Makefile
++++ b/libxcmd/Makefile
+@@ -32,6 +32,12 @@ default: ltdepend $(LTLIBRARY)
+ 
+ include $(BUILDRULES)
+ 
+-install install-dev install-qa: default
++install: default
++	$(INSTALL_LTLIB)
++
++install-dev: default
++	$(INSTALL_LTLIB_DEV)
++
++install-qa: default
+ 
+ -include .dep
+diff --git a/libxfs/Makefile b/libxfs/Makefile
+index 8f80cdc..fcba668 100644
+--- a/libxfs/Makefile
++++ b/libxfs/Makefile
+@@ -41,8 +41,10 @@ default: ltdepend $(LTLIBRARY)
+ include $(BUILDRULES)
+ 
+ install: default
++	$(INSTALL_LTLIB)
+ 
+ install-dev: default
++	$(INSTALL_LTLIB_DEV)
+ 
+ install-qa: default
+ 
+diff --git a/libxlog/Makefile b/libxlog/Makefile
+index 7358fb1..666ea77 100644
+--- a/libxlog/Makefile
++++ b/libxlog/Makefile
+@@ -12,6 +12,8 @@ LT_AGE = 0
+ 
+ CFILES = xfs_log_recover.c util.c
+ 
++LTLIBS = $(LIBUUID) $(LIBXFS)
++
+ # don't want to link xfs_repair with a debug libxlog.
+ DEBUG = -DNDEBUG
+ 
+@@ -19,6 +21,12 @@ default: ltdepend $(LTLIBRARY)
+ 
+ include $(BUILDRULES)
+ 
+-install install-dev install-qa: default
++install: default
++	$(INSTALL_LTLIB)
++
++install-dev: default
++	$(INSTALL_LTLIB_DEV)
++
++install-qa: default
+ 
+ -include .dep
