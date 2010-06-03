@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r1.ebuild,v 1.1 2010/06/03 20:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r1.ebuild,v 1.2 2010/06/03 21:02:59 hwoarang Exp $
 
 EAPI="2"
 inherit eutils fdo-mime
@@ -16,6 +16,7 @@ IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
+	gnome-base/gvfs[hal]
 	>=lxde-base/menu-cache-0.3.2
 	x11-misc/shared-mime-info
 	>=x11-libs/libfm-0.1.11
@@ -23,7 +24,6 @@ RDEPEND=">=dev-libs/glib-2.18:2
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
-	gnome-base/gvfs[hal]
 	sys-devel/gettext"
 
 src_configure() {
