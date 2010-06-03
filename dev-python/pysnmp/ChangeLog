@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.34 2010/04/18 17:07:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.35 2010/06/03 14:50:02 phajdan.jr Exp $
+
+  03 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pysnmp-4.1.13a.ebuild:
+  x86 stable wrt bug #311357
 
   18 Apr 2010; <nixnut@gentoo.org> pysnmp-4.1.13a.ebuild:
   ppc stable #311357
