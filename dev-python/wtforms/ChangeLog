@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wtforms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.4 2010/04/28 20:24:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.5 2010/06/03 10:44:17 hwoarang Exp $
+
+  03 Jun 2010; Markos Chandras <hwoarang@gentoo.org> wtforms-0.6.ebuild:
+  Stable on amd64 wrt bug #322287
 
 *wtforms-0.6 (28 Apr 2010)
 
