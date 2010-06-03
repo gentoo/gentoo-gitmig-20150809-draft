@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/plasma-applet-daisy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-applet-daisy/ChangeLog,v 1.1 2010/03/18 20:39:31 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-applet-daisy/ChangeLog,v 1.2 2010/06/03 13:15:05 spatz Exp $
+
+  03 Jun 2010; Dror Levin <spatz@gentoo.org>
+  plasma-applet-daisy-0.0.4.22.ebuild,
+  +files/plasma-applet-daisy-0.0.4.22-gcc45.patch:
+  Fix building with gcc 4.5, bug 322593.
 
 *plasma-applet-daisy-0.0.4.22 (18 Mar 2010)
 
