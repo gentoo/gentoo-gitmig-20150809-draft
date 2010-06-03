@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1-r1.ebuild,v 1.5 2010/05/09 15:59:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.1.1-r1.ebuild,v 1.6 2010/06/03 10:42:44 hwoarang Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.org/files/src/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 NETWORKS="+irc"
 PLUGINS="+charset +fifo +logger relay +scripts +spell"
