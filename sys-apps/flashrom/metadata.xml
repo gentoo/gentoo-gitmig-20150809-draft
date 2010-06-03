@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-	<email>leio@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>peter@stuge.se</email>
-	<description>Please CC on all bugs</description>
-</maintainer>
-<use>
-	<flag name="ftdi">Enable flashing through FTDI/SPI USB interface</flag>
-	<flag name="serprog">Enable Serial Flasher support</flag>
-</use>
-<longdescription lang="en">
-flashrom is a utility for identifying, reading, writing, verifying and erasing flash chips. It's often used to flash BIOS/EFI/coreboot/firmware images.
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>leio@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
+	</maintainer>
+	<maintainer>
+		<email>peter@stuge.se</email>
+		<description>Please CC on all bugs</description>
+	</maintainer>
+	<use>
+		<flag name="buspiratespi">Enable Bus Pirate SPI programmer</flag>
+		<flag name="drkaiser">Enable Dr. Kaiser programmer</flag>
+		<flag name="dummy">Enable dummy tracing</flag>
+		<flag name="ftdi">Enable ftdi programmer, flashing through FTDI/SPI USB interface</flag>
+		<flag name="internal">Enable internal/onboard support</flag>
+		<flag name="nic3com">Enable 3Com NIC programmer</flag>
+		<flag name="nvidia">Enable NVIDIA programmer</flag>
+		<flag name="satasii">Enable programmer for SiI SATA controllers</flag>
+		<flag name="serprog">Enable Serial Flasher programmer</flag>
+		<flag name="wiki">Enable wiki informations, like supported devices etc.</flag>
+	</use>
+	<longdescription lang="en">
+flashrom is a utility for identifying, reading, writing, verifying and erasing flash chips. It is designed to flash BIOS/EFI/coreboot/firmware/optionROM images on mainboards, network/graphics/storage controller cards, and various programmer devices.
 
-    * Supports more than 195 flash chips, 75 chipsets, 130 mainboards, and 17 devices (PCI or USB) which can be used as external programmers.
+    * Supports more than 225 flash chips, 128 chipsets, 186 mainboards, 19 PCI devices, 3 USB devices and all external programmers which use the serprog protocol.
     * Supports parallel, LPC, FWH and SPI flash interfaces and various chip packages (DIP32, PLCC32, DIP8, SO8/SOIC8, TSOP32, TSOP40, TSOP48, and more)
     * No physical access needed, root access is sufficient.
     * No bootable floppy disk, bootable CD-ROM or other media needed.
@@ -25,6 +37,6 @@ flashrom is a utility for identifying, reading, writing, verifying and erasing f
     * Crossflashing and hotflashing is possible as long as the flash chips are electrically and logically compatible (same protocol). Great for recovery.
     * Scriptability. Reflash a whole pool of identical machines at the same time from the command line. It is recommended to check flashrom output and error codes.
     * Speed. flashrom is often much faster than most vendor flash tools.
-    * Portability. Supports Linux, FreeBSD, DragonFly BSD, Solaris, Mac OS X, and other Unix-like OSes.
-</longdescription>
+    * Portability. Supports DOS, Linux, FreeBSD, NetBSD, DragonFly BSD, Solaris, Mac OS X, and other Unix-like OSes. Partial Windows support is available (full support as patch). 
+	</longdescription>
 </pkgmetadata>
