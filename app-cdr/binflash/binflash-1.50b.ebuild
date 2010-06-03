@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/binflash/binflash-1.49b.ebuild,v 1.1 2010/02/16 15:16:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/binflash/binflash-1.50b.ebuild,v 1.1 2010/06/03 14:17:25 beandog Exp $
 
 MY_PN=${PN/bin/nec}
 
