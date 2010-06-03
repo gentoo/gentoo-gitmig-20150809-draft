@@ -2,8 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
+	<maintainer>
+		<email>angelos@gentoo.org</email>
+		<name>Christoph Mende</name>
+	</maintainer>
 	<use>
-		<!-- 0.12 -->
 		<flag name="artist-screen">Enable artist screen</flag>
 		<flag name="colors">Enable color support</flag>
 		<flag name="help-screen">Enable the help screen</flag>
