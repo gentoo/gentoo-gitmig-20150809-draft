@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.166 2010/05/06 18:52:45 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.167 2010/06/03 20:41:43 spatz Exp $
+
+*konsole-4.4.3-r2 (03 Jun 2010)
+
+  03 Jun 2010; Dror Levin <spatz@gentoo.org> -konsole-4.4.3-r1.ebuild,
+  +konsole-4.4.3-r2.ebuild, +files/konsole-4.4.3-refresh-screen.patch:
+  Added patch to fix screen refreshing, backported from upstream by Andreas
+  K. Huettel, bug 301620.
 
 *konsole-4.4.3-r1 (06 May 2010)
 
