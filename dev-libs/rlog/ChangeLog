@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/rlog
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.16 2008/06/15 18:46:14 vanquirius Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.17 2010/06/03 09:54:56 ssuominen Exp $
+
+  03 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> rlog-1.4.ebuild:
+  Fix documentation directory wrt #241278 by Diego E. Pettenò. Mark amd64
+  stable wrt #322489.
 
 *rlog-1.4 (15 Jun 2008)
 
