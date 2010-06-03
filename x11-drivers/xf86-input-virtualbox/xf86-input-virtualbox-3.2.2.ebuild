@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.1.6.ebuild,v 1.3 2010/05/10 13:31:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.2.2.ebuild,v 1.1 2010/06/03 10:58:39 polynomial-c Exp $
 
 EAPI=2
 
@@ -66,8 +66,11 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/input
 
+		# xorg-server-1.8
+		if has_version ">=x11-base/xorg-server-1.8" ; then
+				newins vboxmouse_drv_18.so vboxmouse_drv.so
 		# xorg-server-1.7
-		if has_version ">=x11-base/xorg-server-1.7" ; then
+		elif has_version ">=x11-base/xorg-server-1.7" ; then
 				newins vboxmouse_drv_17.so vboxmouse_drv.so
 		# xorg-server-1.6.x
 		elif has_version ">=x11-base/xorg-server-1.6" ; then
