@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.129 2010/06/03 02:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.130 2010/06/03 02:05:44 vapier Exp $
+
+*mdadm-3.1.2 (03 Jun 2010)
+
+  03 Jun 2010; Mike Frysinger <vapier@gentoo.org> +mdadm-3.1.2.ebuild,
+  +files/mdraid.confd:
+  Version bump #322055 by Xake which also fixes #301396 by Torsten Kurbad.
+  Add tip about rc_need to mdraid conf.d #223475 #301617.
 
   03 Jun 2010; Mike Frysinger <vapier@gentoo.org> files/raid-start.sh-3.0:
   Drop mdadm.conf parsing now that auto assembling is requied with newer
