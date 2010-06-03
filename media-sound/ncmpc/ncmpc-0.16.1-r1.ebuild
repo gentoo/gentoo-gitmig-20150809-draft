@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.16.1.ebuild,v 1.1 2010/06/03 15:56:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.16.1-r1.ebuild,v 1.1 2010/06/03 19:09:26 angelos Exp $
 
 EAPI=2
-inherit multilib
+inherit base multilib
 
 DESCRIPTION="A ncurses client for the Music Player Daemon (MPD)"
 HOMEPAGE="http://mpd.wikia.com/wiki/Client:Ncmpc"
@@ -22,6 +22,8 @@ RDEPEND=">=dev-libs/glib-2.12:2
 #	lirc? ( app-misc/lirc )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+PATCHES=( "${FILESDIR}/${P}-lyrics-backtrace.patch" )
 
 src_configure() {
 	# The use_with lyrics-screen is for multilib

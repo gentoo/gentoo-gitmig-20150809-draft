@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.51 2010/06/03 15:56:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.52 2010/06/03 19:09:26 angelos Exp $
+
+*ncmpc-0.16.1-r1 (03 Jun 2010)
+
+  03 Jun 2010; Christoph Mende <angelos@gentoo.org> -ncmpc-0.16.1.ebuild,
+  +ncmpc-0.16.1-r1.ebuild, +files/ncmpc-0.16.1-lyrics-backtrace.patch:
+  Fix backtrace that happens when trying to use the leoslyrics plugin (bug
+  316397)
 
 *ncmpc-0.16.1 (03 Jun 2010)
 
