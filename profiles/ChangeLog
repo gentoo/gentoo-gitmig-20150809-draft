@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4223 2010/06/03 19:42:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4224 2010/06/03 21:07:21 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jun 2010; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Masking >=net-libs/gsoap-2.7.15 as it breaks
+  app-emulation/virtualbox-ose[vboxwebsrv]
 
   03 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Removing orpie removal, we keep it.
