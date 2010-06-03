@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-applets-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-applets-python/ChangeLog,v 1.28 2010/05/24 13:42:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-applets-python/ChangeLog,v 1.29 2010/06/03 14:42:03 arfrever Exp $
+
+  03 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnome-applets-python-2.26.0.ebuild, gnome-applets-python-2.28.0.ebuild:
+  Convert to EAPI="2".
 
   24 May 2010; <nixnut@gentoo.org> gnome-applets-python-2.28.0.ebuild:
   ppc stable #320247

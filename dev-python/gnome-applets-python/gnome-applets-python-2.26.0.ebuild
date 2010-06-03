@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-applets-python/gnome-applets-python-2.26.0.ebuild,v 1.10 2010/01/17 23:37:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-applets-python/gnome-applets-python-2.26.0.ebuild,v 1.11 2010/06/03 14:42:03 arfrever Exp $
 
+EAPI="2"
 G_PY_PN="gnome-python-desktop"
 G_PY_BINDINGS="applet"
 
@@ -20,9 +21,9 @@ DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/applet/*"
 
-src_unpack() {
-	gnome-python-common_src_unpack
-
+src_prepare() {
 	# Fix session management of python applets, upstream bug #579390.
 	epatch "${FILESDIR}/${P}-session-mgmt.patch"
+
+	gnome-python-common_src_prepare
 }
