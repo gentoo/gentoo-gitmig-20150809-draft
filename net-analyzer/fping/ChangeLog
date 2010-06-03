@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.27 2010/01/01 18:32:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.28 2010/06/03 04:28:33 jer Exp $
+
+  03 Jun 2010; Jeroen Roovers <jer@gentoo.org> fping-2.4_beta2-r2.ebuild:
+  Fix SRC_URI thanks to Jeff Sweeney (bug #321715).
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   fping-2.4_beta2-r2.ebuild:

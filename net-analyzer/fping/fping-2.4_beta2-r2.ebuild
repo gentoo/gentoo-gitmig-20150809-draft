@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2-r2.ebuild,v 1.9 2010/01/01 18:32:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2-r2.ebuild,v 1.10 2010/06/03 04:28:33 jer Exp $
 
 DESCRIPTION="A utility to ping multiple hosts at once"
-SRC_URI="http://www.fping.com/download/fping-2.4b2_to.tar.gz"
+SRC_URI="mirror://gentoo/${PN}-2.4b2_to.tar.gz"
 HOMEPAGE="http://www.fping.com/"
 
 SLOT="0"
