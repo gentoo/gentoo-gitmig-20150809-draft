@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.5-r1.ebuild,v 1.6 2010/06/03 18:11:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.5-r1.ebuild,v 1.7 2010/06/03 18:36:23 polynomial-c Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ DESCRIPTION="A makefile framework for writing simple makefiles for complex tasks
 HOMEPAGE="http://svn.netlabs.org/kbuild/wiki"
 SRC_URI="http://gentoo.zerodev.it/files/${MY_P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
