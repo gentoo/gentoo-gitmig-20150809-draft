@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.0.ebuild,v 1.2 2010/02/19 04:53:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.0.ebuild,v 1.3 2010/06/04 20:56:53 arfrever Exp $
 
 EAPI="2"
 
@@ -27,10 +27,9 @@ RDEPEND="virtual/ooo
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	python_version
 	epatch "${FILESDIR}"/${P}-install.patch
 	epatch "${FILESDIR}"/${P}-pysqlite.patch
-	sed -e "s:gentoo-python:python${PYVER}:g" \
+	sed -e "s:gentoo-python:python$(python_get_version):g" \
 		-i Makefile Setup/Makefile Setup/bibus.cfg Setup/bibus.sh \
 		|| die "Failed to adjust python paths"
 }
@@ -51,9 +50,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/lib/python${PYVER}/site-packages/bibus
+	python_mod_optimize $(python_get_sitedir)/bibus
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/lib/python${PYVER}/site-packages/bibus
+	python_mod_cleanup $(python_get_sitedir)/bibus
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.18 2010/02/19 04:53:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.19 2010/06/04 20:56:53 arfrever Exp $
+
+  04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bibus-1.4.3.2-r1.ebuild, bibus-1.5.0.ebuild:
+  Delete calls to deprecated python_version().
 
   19 Feb 2010; Markus Dittrich <markusle@gentoo.org> bibus-1.5.0.ebuild:
   Changed required version of wxPython to >2.8 (fixes bug #304661).
