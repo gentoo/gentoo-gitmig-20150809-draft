@@ -1,18 +1,21 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.0.ebuild,v 1.3 2010/06/04 20:56:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.0.ebuild,v 1.4 2010/06/04 21:12:12 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
-inherit python multilib eutils versionator
+inherit multilib eutils python versionator
 
 DESCRIPTION="Bibliographic and reference management software, integrates with OO.o and MS Word"
 HOMEPAGE="http://bibus-biblio.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}-biblio/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mysql"
+
 # Most of this mess is designed to give the choice of sqlite or mysql
 # but prefer sqlite. We also need to default to sqlite if neither is requested.
 RDEPEND="virtual/ooo
@@ -25,6 +28,11 @@ RDEPEND="virtual/ooo
 	)
 	dev-db/unixODBC"
 DEPEND="${RDEPEND}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-install.patch
@@ -50,9 +58,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/bibus
+	python_mod_optimize bibus
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/bibus
+	python_mod_cleanup bibus
 }
