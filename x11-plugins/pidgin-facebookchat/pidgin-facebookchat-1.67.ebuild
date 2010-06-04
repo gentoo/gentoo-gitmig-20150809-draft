@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.64.ebuild,v 1.2 2010/02/17 10:44:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.67.ebuild,v 1.1 2010/06/04 14:38:08 voyageur Exp $
 
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Facebook chat plugin for libpurple"
 HOMEPAGE="http://code.google.com/p/pidgin-facebookchat/"
 
-SRC_URI="http://pidgin-facebookchat.googlecode.com/files/${PN}-source-${PV}.tar.bz2"
+SRC_URI="http://pidgin-facebookchat.googlecode.com/files/${PN}-source-${PV}-1.tar.bz2"
 LICENSE="GPL-3"
 
 SLOT="0"
@@ -27,6 +27,7 @@ pkg_setup() {
 	ewarn "as it is now available via XMPP, see:"
 	ewarn "http://blog.facebook.com/blog.php?post=297991732130"
 	ewarn "You can still use this plugin for extra features if you want"
+	ewarn "Future versions will use XMPP and provide these features at the same time"
 }
 
 src_compile() {
