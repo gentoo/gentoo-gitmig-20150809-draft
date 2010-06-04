@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.38.ebuild,v 1.2 2010/05/30 07:23:04 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.38.ebuild,v 1.3 2010/06/04 06:26:47 hollow Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ HTTP_HEADERS_MORE_MODULE_SHA1="5cd9a38"
 
 # http_passenger (http://www.modrails.com/, MIT license)
 # TODO: currently builds some stuff in src_configure
-PASSENGER_PV="2.2.11"
+PASSENGER_PV="2.2.12"
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
 
