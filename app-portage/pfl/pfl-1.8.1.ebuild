@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-1.8.1.ebuild,v 1.5 2010/05/28 18:31:11 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-1.8.1.ebuild,v 1.6 2010/06/04 20:42:35 arfrever Exp $
 
 inherit python multilib
 
@@ -29,12 +29,10 @@ src_unpack() {
 }
 
 src_install() {
-	python_version
-
 	if use network-cron ; then
 		cat >> "${T}/${PN}" <<- EOF
 		#!/bin/sh
-		exec nice ${python} -O $(python_get_sitedir)/${PN}/${PN}.py >/dev/null
+		exec nice $(PYTHON) -O $(python_get_sitedir)/${PN}/${PN}.py >/dev/null
 		EOF
 
 		exeinto /etc/cron.weekly
@@ -52,7 +50,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
 	python_mod_optimize $(python_get_sitedir)/${PN}
 
 	if [[ ! -e "${ROOT%/}/var/lib/${PN}/lastrun" ]]; then
