@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.87 2010/04/15 12:43:56 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.88 2010/06/04 12:13:32 spatz Exp $
+
+  04 Jun 2010; Dror Levin <spatz@gentoo.org>
+  -ghostscript-gpl-8.71-r2.ebuild, -ghostscript-gpl-8.71-r3.ebuild:
+  Remove old revisions which should never be stabilized.
 
 *ghostscript-gpl-8.71-r4 (15 Apr 2010)
 
