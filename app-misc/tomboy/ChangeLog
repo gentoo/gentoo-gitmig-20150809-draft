@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.97 2010/05/04 16:26:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.98 2010/06/04 21:00:16 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> tomboy-1.0.1.ebuild:
+  x86 stable, bug #314899
 
   03 May 2010; Olivier Crête <tester@gentoo.org> tomboy-1.0.1.ebuild:
   amd64 stable, bug #314899
