@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.7.1.ebuild,v 1.3 2010/02/04 16:55:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.7.1.ebuild,v 1.4 2010/06/04 17:03:33 arfrever Exp $
 
-EAPI=2
+EAPI="2"
+PYTHON_DEPEND="2"
+
 inherit eutils python
 
 DESCRIPTION="Gnuplot like graphing program publication-quality figures"
@@ -21,11 +23,15 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
-	python_version
 	sed -i \
 		-e "s:^\(USRDIR=\).*:\1/usr:g" \
-		-e "s:^\(SRCDIR=\).*:\1/usr/$(get_libdir)/python${PYVER}/${PN}:g" \
+		-e "s:^\(SRCDIR=\).*:\1$(python_get_sitedir)/${PN}:g" \
 		-e 's:^\(MANDIR=\).*:\1${USRDIR}/share/man/man1:g' \
 		-e "s:^\(DOCDIR=\).*:\1\${USRDIR}/share/doc/${PF}:g" \
 		-e '/install:/,$s:${\(SRC\|BIN\|DOC\|MAN\)DIR:${DESTDIR}/${\1DIR:g' \

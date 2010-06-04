@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.16 2010/02/04 16:55:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.17 2010/06/04 17:03:33 arfrever Exp $
+
+  04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyxplot-0.7.1.ebuild:
+  Use Python 2. Delete call to deprecated python_version().
 
   04 Feb 2010; Markos Chandras <hwoarang@gentoo.org> pyxplot-0.7.1.ebuild:
   Stable on amd64 wrt bug #270481
