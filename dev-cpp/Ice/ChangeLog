@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/Ice
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.21 2009/11/19 14:32:54 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.22 2010/06/04 13:09:47 spatz Exp $
+
+*Ice-3.3.1-r1 (04 Jun 2010)
+
+  04 Jun 2010; Dror Levin <spatz@gentoo.org> +Ice-3.3.1-r1.ebuild,
+  +files/Ice-3.3.1-openssl.patch:
+  Add patch for openssl-1.0.0 compatibility, bug 312023. Thanks to Philip
+  Kovacs.
 
   19 Nov 2009; Christian Faulhammer <fauli@gentoo.org> Ice-3.3.1.ebuild:
   stable x86, bug 282359
