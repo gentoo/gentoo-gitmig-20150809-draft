@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.23 2010/06/02 17:56:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.24 2010/06/04 13:44:05 graaff Exp $
+
+  04 Jun 2010; Hans de Graaff <graaff@gentoo.org> -sphinx-0.9.8.ebuild,
+  -sphinx-0.9.9_rc1.ebuild, -sphinx-0.9.9_rc2.ebuild,
+  -sphinx-0.9.9_rc2-r1.ebuild, -sphinx-0.9.9_rc2-r2.ebuild:
+  Remove old versions.
 
   02 Jun 2010; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Take over maintainership.
