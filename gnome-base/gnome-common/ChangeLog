@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.75 2010/05/04 15:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.76 2010/06/04 19:17:27 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> gnome-common-2.28.0.ebuild:
+  x86 stable, bug #314899
 
   03 May 2010; Olivier Crête <tester@gentoo.org>
   gnome-common-2.28.0.ebuild:
