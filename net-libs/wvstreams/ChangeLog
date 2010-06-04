@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.132 2010/05/31 19:34:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.133 2010/06/04 12:54:18 spatz Exp $
+
+*wvstreams-4.6.1-r1 (04 Jun 2010)
+
+  04 Jun 2010; Dror Levin <spatz@gentoo.org> +wvstreams-4.6.1-r1.ebuild,
+  +files/wvstreams-4.6.1-openssl-1.0.0.patch:
+  Add patch for compatibility with openssl-1.0.0, bug 304283. Thanks to
+  Hanno Boeck.
 
   31 May 2010; Markus Meier <maekke@gentoo.org> wvstreams-4.6.1.ebuild:
   x86 stable, bug #321637
