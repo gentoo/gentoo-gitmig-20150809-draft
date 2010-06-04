@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/gato
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.11 2008/10/27 12:06:52 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.12 2010/06/04 16:20:34 arfrever Exp $
+
+  04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gato-0.99c.ebuild:
+  Use Python 2 (bug #316239).
 
   27 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/gato-0.99-python.patch, -files/gato-python2.4-gentoo.patch,

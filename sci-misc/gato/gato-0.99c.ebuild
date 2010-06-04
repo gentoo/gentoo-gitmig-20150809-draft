@@ -1,25 +1,35 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.4 2008/10/27 12:06:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.5 2010/06/04 16:20:34 arfrever Exp $
 
-EAPI=2
-inherit python eutils multilib
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="tk"
+
+inherit eutils python
 
 MY_PN="Gato"
 MY_PV=$(echo ${PV} | tr '[:lower:]' '[:upper:]')
 
 DESCRIPTION="Graph Animation Toolbox"
-LICENSE="LGPL-2"
 HOMEPAGE="http://gato.sourceforge.net/"
 SRC_URI="http://gato.sourceforge.net/Download/${MY_PN}-${MY_PV}.tar.gz
 	doc? ( http://gato.sourceforge.net/Download/${MY_PN}-Doc-${MY_PV}.tar.gz )"
 
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
-DEPEND="dev-lang/python[tk]"
 
-S="${WORKDIR}"/${MY_PN}
+DEPEND=""
+RDEPEND=""
+
+S="${WORKDIR}/${MY_PN}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	# convert to python >=2.4
@@ -31,10 +41,8 @@ src_prepare() {
 }
 
 src_install() {
-
 	# install python code
-	python_version
-	local instdir=/usr/$(get_libdir)/python${PYVER}/${PN}
+	local instdir=$(python_get_sitedir)/${PN}
 	insinto ${instdir}
 	doins *.py || die "Failed to install python files"
 	fperms 755 ${instdir}/{Gato,Gred}.py
@@ -49,4 +57,12 @@ src_install() {
 	doins BFS.* DFS.* sample.cat || die "failed to data files"
 
 	use doc && dohtml -r "${WORKDIR}"/Doc/*
+}
+
+pkg_postinst() {
+	python_mod_optimize gato
+}
+
+pkg_postrm() {
+	python_mod_cleanup gato
 }
