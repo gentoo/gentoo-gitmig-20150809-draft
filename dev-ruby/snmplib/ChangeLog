@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.26 2010/05/22 15:58:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.27 2010/06/04 05:54:28 graaff Exp $
+
+*snmplib-1.0.3 (04 Jun 2010)
+
+  04 Jun 2010; Hans de Graaff <graaff@gentoo.org> +snmplib-1.0.3.ebuild:
+  Version bump.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   snmplib-1.0.2.ebuild:
