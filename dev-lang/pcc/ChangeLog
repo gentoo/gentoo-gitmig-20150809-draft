@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/pcc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pcc/ChangeLog,v 1.1 2010/06/04 13:04:02 patrick Exp $
+
+*pcc-1.0.0_pre100604 (04 Jun 2010)
+
+  04 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  +pcc-1.0.0_pre100604.ebuild, +metadata.xml:
+  Initial commit of pcc compiler, ebuild by me
+
