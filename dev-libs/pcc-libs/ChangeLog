@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pcc-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.1 2010/06/04 13:03:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.2 2010/06/04 13:06:35 patrick Exp $
+
+  04 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  pcc-libs-1.0.0_pre100604.ebuild:
+  Fixing URI to be less hardcoded
 
 *pcc-libs-1.0.0_pre100604 (04 Jun 2010)
 
