@@ -1,9 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/pyamazon-0.65.ebuild,v 1.2 2009/05/30 16:52:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/pyamazon-0.65.ebuild,v 1.3 2010/06/04 21:33:51 arfrever Exp $
 
-EAPI=2
-inherit eutils multilib python
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit eutils python
 
 DESCRIPTION="A Python wrapper for the Amazon web API."
 HOMEPAGE="http://www.josephson.org/projects/pyamazon"
@@ -14,27 +17,26 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=""
 DEPEND="app-arch/unzip"
-
-pkg_setup() {
-	python_version
-	dest=/usr/$(get_libdir)/python${PYVER}/site-packages
-}
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
 	edos2unix ${PN}/amazon.py
 }
 
 src_install() {
-	insinto ${dest}
-	doins ${PN}/amazon.py || die "doins failed"
+	installation() {
+		insinto $(python_get_sitedir)
+		doins ${PN}/amazon.py
+	}
+	python_execute_function installation
 }
 
 pkg_postinst() {
-	python_mod_compile ${dest}/amazon.py
+	python_mod_optimize amazon.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup amazon.py
 }

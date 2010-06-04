@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyamazon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/ChangeLog,v 1.1 2009/05/30 16:22:03 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamazon/ChangeLog,v 1.2 2010/06/04 21:33:51 arfrever Exp $
+
+  04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyamazon-0.65.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *pyamazon-0.65 (30 May 2009)
 
