@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.72 2010/04/13 18:13:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.73 2010/06/04 10:44:43 dagger Exp $
+
+  04 Jun 2010; Robert Piasek <dagger@gentoo.org> networkmanager-0.8.ebuild,
+  networkmanager-0.8-r1.ebuild:
+  Removed incorrect postinfo message which is no longer valid for 0.8
 
   13 Apr 2010; Raúl Porcel <armin76@gentoo.org> networkmanager-0.8.ebuild,
   networkmanager-0.8-r1.ebuild:
