@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.154 2010/05/31 05:59:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.155 2010/06/04 13:37:32 graaff Exp $
+
+*actionpack-2.3.8-r1 (04 Jun 2010)
+
+  04 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  +actionpack-2.3.8-r1.ebuild,
+  +files/actionpack-2.3.8-custom-cookie-fix.patch:
+  Fix problems with sessions in integration tests according to
+  https://rails.lighthouseapp.com/projects/8994/tickets/4743-session-cookie-
+  breaks-if-used-with-custom-cookie-in-rails-238
 
 *actionpack-2.3.8 (31 May 2010)
 
