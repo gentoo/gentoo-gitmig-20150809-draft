@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.10 2010/05/26 16:18:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.11 2010/06/04 15:02:43 arfrever Exp $
 
 EAPI="3"
 
@@ -176,6 +176,11 @@ src_test() {
 	# Tests will not work when cross compiling.
 	if tc-is-cross-compiler; then
 		elog "Disabling tests due to crosscompiling."
+		return
+	fi
+
+	if ! use threads; then
+		ewarn "Disabling tests due to USE=\"-threads\""
 		return
 	fi
 
