@@ -1,6 +1,10 @@
 # ChangeLog for net-print/pykota
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.24 2008/05/21 19:00:41 dev-zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.25 2010/06/04 19:57:02 arfrever Exp $
+
+  04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pykota-1.25_p2437-r1.ebuild:
+  Use Python 2 (bug #315873). Delete call to deprecated python_version().
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   pykota-1.25_p2437-r1.ebuild:

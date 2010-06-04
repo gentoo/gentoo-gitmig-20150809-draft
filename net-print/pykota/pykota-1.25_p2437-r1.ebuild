@@ -1,17 +1,19 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437-r1.ebuild,v 1.3 2009/11/29 13:51:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437-r1.ebuild,v 1.4 2010/06/04 19:57:02 arfrever Exp $
 
-S=${WORKDIR}/${PN}
+EAPI="3"
+PYTHON_DEPEND="2"
 
-inherit python eutils distutils
+inherit distutils
 
-DESCRIPTION="Flexible print quota and accounting package for use with CUPS and
-lpd."
-SRC_URI="http://scriptkitty.com/files/${P}.tar.bz2"
+DESCRIPTION="Flexible print quota and accounting package for use with CUPS and lpd."
 HOMEPAGE="http://www.pykota.com"
-LICENSE="GPL-2"
+SRC_URI="http://scriptkitty.com/files/${P}.tar.bz2"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="ldap mysql postgres snmp sqlite snmp xml"
 
 DEPEND="dev-lang/python
@@ -25,17 +27,19 @@ DEPEND="dev-lang/python
 	sqlite?   ( =dev-python/pysqlite-2* )
 	snmp?     ( net-analyzer/net-snmp =dev-python/pysnmp-3.4* )
 	xml?      ( dev-python/jaxml )"
-
 RDEPEND="${DEPEND}"
 
-KEYWORDS="~amd64 ~x86"
-SLOT="0"
+S="${WORKDIR}/${PN}"
 
 DOCS="README MANIFEST.in TODO SECURITY NEWS CREDITS FAQ"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_install() {
 	mkdir -p "${D}"/etc/${PN}
-	python_version
 	distutils_src_install
 	#cups backend ----------------------------------------------
 	mkdir -p "${D}"$(cups-config --serverbin)/backend
