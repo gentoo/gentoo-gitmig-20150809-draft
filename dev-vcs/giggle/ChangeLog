@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.4 2010/06/04 00:15:24 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.5 2010/06/04 08:08:50 ikelos Exp $
+
+  04 Jun 2010; Mike Auty <ikelos@gentoo.org> giggle-0.4.ebuild,
+  -giggle-0.4.90.ebuild, -giggle-0.4.91.ebuild,
+  -files/giggle-0.4.91-libgiggle.patch, giggle-0.4.95.ebuild,
+  giggle-0.4.96.ebuild, giggle-0.5.ebuild:
+  Remove old versions and add gnome-common build dependency to fix bug
+  322617.
 
 *giggle-0.5 (04 Jun 2010)
 
