@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.282 2010/05/04 15:37:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.283 2010/06/04 19:43:47 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> pango-1.26.2.ebuild:
+  x86 stable, bug #314899
 
   03 May 2010; Olivier Crête <tester@gentoo.org> pango-1.26.2.ebuild:
   amd64 stable, bug #314899
