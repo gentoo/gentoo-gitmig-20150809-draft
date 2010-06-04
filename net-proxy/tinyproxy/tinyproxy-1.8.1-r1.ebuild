@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1-r1.ebuild,v 1.2 2010/06/03 22:32:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.1-r1.ebuild,v 1.3 2010/06/04 05:28:04 jer Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="debug +filter-proxy minimal reverse-proxy transparent-proxy
 	+upstream-proxy +xtinyproxy-header"
 
-DEPEND="minimal? ( app-text/asciidoc )"
+DEPEND="!minimal? ( app-text/asciidoc )"
 RDEPEND=""
 
 pkg_setup() {
