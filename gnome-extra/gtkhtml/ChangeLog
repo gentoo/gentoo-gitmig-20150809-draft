@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.209 2010/05/04 15:57:24 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.210 2010/06/04 20:12:16 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> gtkhtml-3.28.3.ebuild:
+  x86 stable, bug #314899
 
   03 May 2010; Olivier Crête <tester@gentoo.org> gtkhtml-3.28.3.ebuild:
   amd64 stable, bug #314899
