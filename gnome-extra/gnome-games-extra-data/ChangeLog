@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games-extra-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.70 2010/05/04 16:28:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.71 2010/06/04 19:32:06 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org>
+  gnome-games-extra-data-2.26.0.ebuild:
+  x86 stable, bug #314899
 
   03 May 2010; Olivier Crête <tester@gentoo.org>
   gnome-games-extra-data-2.26.0.ebuild:
