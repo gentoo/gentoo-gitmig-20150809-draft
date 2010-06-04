@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4226 2010/06/03 22:02:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4227 2010/06/04 12:37:55 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask app-pda/malsync for removal.
 
   03 Jun 2010; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Removed gsoap mask again.
