@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.5 2010/06/04 16:20:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.6 2010/06/04 16:26:09 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -46,6 +46,7 @@ src_install() {
 	insinto ${instdir}
 	doins *.py || die "Failed to install python files"
 	fperms 755 ${instdir}/{Gato,Gred}.py
+	python_convert_shebangs -r 2 "${ED}"
 
 	# create symlinks
 	dodir /usr/bin
