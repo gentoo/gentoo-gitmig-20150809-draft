@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.15.ebuild,v 1.1 2010/03/28 20:33:23 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.15.ebuild,v 1.2 2010/06/04 19:07:40 arfrever Exp $
 
 EAPI="1"
 inherit eutils multilib python
@@ -150,5 +150,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	     python_mod_cleanup
+	     python_mod_cleanup $(python_get_sitedir)/dbmail
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11.ebuild,v 1.5 2010/03/28 20:33:23 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11.ebuild,v 1.6 2010/06/04 19:07:39 arfrever Exp $
 
 inherit eutils multilib python
 
@@ -96,16 +96,15 @@ src_install() {
 	fi
 
 	if use python; then
-	   python_version
-	   insinto /usr/$(get_libdir)/python${PYVER}/site-packages/dbmail
+	   insinto $(python_get_sitedir)/dbmail
 	   doins python/*.py
-	   insinto /usr/$(get_libdir)/python${PYVER}/site-packages/dbmail/app
+	   insinto $(python_get_sitedir)/dbmail/app
 	   doins python/app/*.py
-	   insinto /usr/$(get_libdir)/python${PYVER}/site-packages/dbmail/bin
+	   insinto $(python_get_sitedir)/dbmail/bin
 	   doins python/bin/*.py
-	   insinto /usr/$(get_libdir)/python${PYVER}/site-packages/dbmail/lib
+	   insinto $(python_get_sitedir)/dbmail/lib
 	   doins python/lib/*.py
-	   insinto /usr/$(get_libdir)/python${PYVER}/site-packages/dbmail/tests
+	   insinto $(python_get_sitedir)/dbmail/tests
 	   doins python/tests/*.py
 	fi
 
@@ -116,8 +115,7 @@ src_install() {
 
 pkg_postinst() {
 	if use python; then
-	   python_version
-	   python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/dbmail
+	   python_mod_optimize $(python_get_sitedir)/dbmail
 	fi
 	elog "Please read the INSTALL file in /usr/share/doc/${PF}/"
 	elog "for remaining instructions on setting up dbmail users and "
@@ -151,5 +149,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	     python_mod_cleanup
+	     python_mod_cleanup $(python_get_sitedir)/dbmail
 }
