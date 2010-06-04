@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/fixesproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.34 2010/05/12 18:16:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.35 2010/06/04 14:09:31 gmsoft Exp $
+
+  31 May 2010; Guy Martin <gmsoft@gentoo.org> fixesproto-4.1.1.ebuild:
+  hppa stable, #308521
 
   12 May 2010; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking fixesproto-4.1.1 ppc64 stable for bug 308521

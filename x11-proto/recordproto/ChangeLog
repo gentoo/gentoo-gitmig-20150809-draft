@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/recordproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.36 2010/05/12 18:17:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.37 2010/06/04 14:10:51 gmsoft Exp $
+
+  31 May 2010; Guy Martin <gmsoft@gentoo.org> recordproto-1.14.ebuild:
+  hppa stable, #308521
 
   12 May 2010; Brent Baude <ranger@gentoo.org> recordproto-1.14.ebuild:
   Marking recordproto-1.14 ppc64 stable for bug 308521

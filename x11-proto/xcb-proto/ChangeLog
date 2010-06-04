@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.47 2010/05/21 18:08:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.48 2010/06/04 14:12:14 gmsoft Exp $
+
+  31 May 2010; Guy Martin <gmsoft@gentoo.org> xcb-proto-1.6.ebuild:
+  hppa stable, #308521
 
   21 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   xcb-proto-1.6.ebuild:
