@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.271 2010/05/17 19:37:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.272 2010/06/04 13:53:14 gmsoft Exp $
+
+  31 May 2010; Guy Martin <gmsoft@gentoo.org> mesa-7.7.1.ebuild:
+  hppa stable, #308521
 
   17 May 2010; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.8.1.ebuild:
   Add cross-compile fixes. Thx solar.
