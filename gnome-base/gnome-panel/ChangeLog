@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.301 2010/05/24 22:37:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.302 2010/06/04 20:50:01 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> gnome-panel-2.28.0.ebuild:
+  x86 stable, bug #314899
 
   24 May 2010; Jonathan Callen <abcd@gentoo.org> gnome-panel-2.28.0.ebuild:
   Bump to EAPI=3, add prefix keywords
