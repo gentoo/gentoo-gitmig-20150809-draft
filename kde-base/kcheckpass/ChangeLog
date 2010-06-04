@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.159 2010/05/03 21:19:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.160 2010/06/04 20:14:41 reavertm Exp $
+
+*kcheckpass-4.4.3-r1 (04 Jun 2010)
+
+  04 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -kcheckpass-4.4.3.ebuild, +kcheckpass-4.4.3-r1.ebuild:
+  Set SUID bit depending on pam USE flag, bug 314841. Thanks to Andreas K.
+  Huettel.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kcheckpass-4.4.1.ebuild:
   Drop KDE SC 4.4.1

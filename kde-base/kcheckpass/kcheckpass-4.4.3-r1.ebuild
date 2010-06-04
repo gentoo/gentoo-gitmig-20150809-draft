@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/kcheckpass-4.4.3.ebuild,v 1.1 2010/05/03 20:24:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/kcheckpass-4.4.3-r1.ebuild,v 1.1 2010/06/04 20:14:41 reavertm Exp $
 
 EAPI="3"
 
@@ -21,8 +21,13 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/kdebase-4.0.2-pam-optional.patch"
-	"${FILESDIR}/${PN}-4.4.2-no-SUID-no-GUID.patch"
 )
+
+src_prepare() {
+	kde4-meta_src_prepare
+
+	use pam && epatch "${FILESDIR}/${PN}-4.4.2-no-SUID-no-GUID.patch"
+}
 
 src_configure() {
 	mycmakeargs=(
