@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.62 2010/05/22 16:52:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.63 2010/06/04 19:25:26 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> sg3_utils-1.29.ebuild:
+  x86 stable, bug #314899
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> sg3_utils-1.25.ebuild,
   sg3_utils-1.26.ebuild, sg3_utils-1.26-r1.ebuild,
