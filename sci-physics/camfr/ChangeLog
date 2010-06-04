@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/camfr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.15 2009/11/12 17:55:06 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.16 2010/06/04 16:34:26 arfrever Exp $
+
+  04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  camfr-20070717-r1.ebuild:
+  Delete call to deprecated python_version().
 
   12 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
   camfr-20070717-r1.ebuild:

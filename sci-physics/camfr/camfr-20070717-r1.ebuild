@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.5 2009/11/12 17:55:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.6 2010/06/04 16:34:26 arfrever Exp $
 
 EAPI=2
 inherit eutils distutils python toolchain-funcs
@@ -33,10 +33,9 @@ src_prepare() {
 	cp "${FILESDIR}"/machine_cfg.py.gentoo machine_cfg.py || die
 
 	# Configure to compile against selected python version
-	python_version
 	cat <<-EOF >> machine_cfg.py
 		include_dirs = []
-		include_dirs.append("/usr/include/python${PYVER}")
+		include_dirs.append("$(python_get_includedir)")
 		include_dirs.append("$(python_get_sitedir)")
 	EOF
 
@@ -63,7 +62,7 @@ src_prepare() {
 src_test() {
 	# trick to avoid X in testing (bug #229753)
 	echo "backend : Agg" > matplotlibrc
-	PYTHONPATH=".:visualisation" "${python}" testsuite/camfr_test.py \
+	PYTHONPATH=".:visualisation" "$(PYTHON)" testsuite/camfr_test.py \
 		|| die "tests failed"
 	rm -f matplotlibrc
 }
