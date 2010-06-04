@@ -1,8 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.7 2009/09/05 21:31:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.8 2010/06/04 16:03:07 arfrever Exp $
 
-inherit eutils python multilib
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit distutils eutils
 
 MY_P="SNNSv${PV}"
 MYPATCH="${P}-20040227"
@@ -22,11 +27,8 @@ KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE="X doc python"
 
-RDEPEND="X? ( x11-libs/Xaw3d )
-	python? ( >=dev-lang/python-2.3 )"
-
+RDEPEND="X? ( x11-libs/Xaw3d )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	X? ( x11-proto/xproto )"
 
 S="${WORKDIR}/${MY_P}"
@@ -34,42 +36,52 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	unpack ${MYPATCH}.patch.gz
-	epatch ${MYPATCH}.patch
+
 	if use python; then
 		unpack ${MYPYTHONEXT}.tar.gz
-
-		cd "${S}"
-		epatch "${FILESDIR}"/${PV}-fPIC-python.patch
-		cd "${WORKDIR}"
 		unpack ${MYPYTHONPATCH}.gz
-		cd "${S}"
-		epatch "${WORKDIR}"/${MYPYTHONPATCH}
 	fi
-	cd "${S}"/xgui/sources
+}
+
+src_prepare() {
+	epatch "${WORKDIR}/${MYPATCH}.patch"
+
+	if use python; then
+		epatch "${FILESDIR}/${PV}-fPIC-python.patch"
+		epatch "${WORKDIR}/${MYPYTHONPATCH}"
+	fi
+
+	cd xgui/sources
 	for file in *.c; do
 		sed -e "s:X11/Xaw/:X11/Xaw3d/:g" -i "${file}"
 	done
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--enable-global"
-	local compileopts="compile-kernel compile-tools"
 
 	if use X; then
-		myconf="${myconf} --with-x"
-		compileopts="${compileopts} compile-xgui"
+		myconf+=" --with-x"
 	else
-		myconf="${myconf} --without-x"
+		myconf+=" --without-x"
 	fi
 
-	econf ${myconf} || die "econf failed"
+	econf ${myconf}
+}
+
+src_compile() {
+	local compileopts="compile-kernel compile-tools"
+	if use X; then
+		compileopts+=" compile-xgui"
+	fi
+
 	# parallel make sometimes fails (phosphan)
-	make ${compileopts} || die "make failed"
+	emake -j1 ${compileopts} || die "make failed"
 
 	if use python; then
-		python_version
-		cd python
-		${python} setup.py build || die "could not build python extension"
+		pushd python > /dev/null
+		distutils_src_compile
+		popd > /dev/null
 	fi
 }
 
@@ -91,13 +103,12 @@ src_install() {
 	fi
 
 	if use python; then
-		python_version
-		cd python
-		${python} setup.py install --prefix="${D}"/usr || die "could not install python module"
+		pushd python > /dev/null
+		distutils_src_install
 		cp -pPR examples "${D}"/usr/share/doc/${PF}/python-examples
 		chmod +x "${D}"/usr/share/doc/${PF}/python-examples/*.py
 		newdoc README README.python
-		cd "${S}"
+		popd > /dev/null
 	fi
 
 	insinto /usr/share/doc/${PF}
@@ -111,18 +122,12 @@ src_install() {
 
 pkg_postinst() {
 	if use python; then
-		einfo "Pre-compiling Python module"
-		python_version
-		for file in __init__.py util.py; do
-			python_mod_compile \
-				/usr/$(get_libdir)/python${PYVER}/site-packages/snns/${file}
-		done
+		distutils_pkg_postinst
 	fi
 }
 
 pkg_postrm() {
 	if use python; then
-		einfo "Cleaning up python stuff"
-		python_mod_cleanup
+		distutils_pkg_postrm
 	fi
 }
