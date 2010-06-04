@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.3 2008/03/13 17:50:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.4 2010/06/04 06:32:45 tupone Exp $
+EAPI="2"
 
-inherit toolchain-funcs eutils games
+inherit toolchain-funcs eutils autotools games
 
 DESCRIPTION="An Angband variant, with a Japanese/fantasy theme"
 HOMEPAGE="http://hengband.sourceforge.jp/en/"
@@ -19,9 +20,7 @@ RDEPEND=">=sys-libs/ncurses-5
 DEPEND="${RDEPEND}
 	X? ( x11-libs/libXt )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# Removing Xaw dependency as is not used
 	sed -i \
 		-e '/Xaw/d' src/main-xaw.c \
@@ -34,9 +33,10 @@ src_unpack() {
 			|| die "sed configure failed"
 	epatch "../${P}"-mispellings.patch	\
 		"${FILESDIR}/${P}"-added_faq.patch
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	use linguas_ja || myconf="--disable-japanese"
 
@@ -46,7 +46,6 @@ src_compile() {
 		`use_with X x` \
 		${myconf} \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
