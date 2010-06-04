@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.55 2010/05/21 22:14:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.56 2010/06/04 10:30:24 phajdan.jr Exp $
+
+  04 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> global-5.8.2.ebuild:
+  x86 stable wrt bug #318815
 
   21 May 2010; Markos Chandras <hwoarang@gentoo.org> global-5.8.2.ebuild:
   Stable on amd64 wrt bug #318815
