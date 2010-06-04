@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tempita
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.1 2009/04/26 09:45:58 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.2 2010/06/04 06:36:32 djc Exp $
+
+*tempita-0.4 (04 Jun 2010)
+
+  04 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> +tempita-0.4.ebuild:
+  Version bump to 0.4, bug 315535.
 
 *tempita-0.2 (26 Apr 2009)
 
