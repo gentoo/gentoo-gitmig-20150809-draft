@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.24 2010/05/12 18:20:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.25 2010/06/04 13:56:07 gmsoft Exp $
+
+  31 May 2010; Guy Martin <gmsoft@gentoo.org> xorg-drivers-1.7.ebuild:
+  hppa stable, #308521
 
   12 May 2010; Brent Baude <ranger@gentoo.org> xorg-drivers-1.7.ebuild:
   Marking xorg-drivers-1.7 ppc64 stable for bug 308521
