@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/fann
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.13 2009/09/09 20:35:37 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.14 2010/06/04 15:32:47 arfrever Exp $
+
+  04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  fann-2.1.0_beta.ebuild:
+  Delete call to deprecated python_version().
 
   09 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> -fann-1.2.0.ebuild,
   -fann-1.2.0-r1.ebuild, fann-2.1.0_beta.ebuild,

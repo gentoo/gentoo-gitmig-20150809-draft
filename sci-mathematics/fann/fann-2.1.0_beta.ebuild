@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.3 2009/09/09 20:35:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.4 2010/06/04 15:32:47 arfrever Exp $
 
 EAPI=2
 inherit eutils python autotools
@@ -34,8 +34,7 @@ src_compile() {
 	emake || die "emake failed"
 	if use python; then
 		cd "${S}"/python
-		python_version
-		emake PYTHON_VERSION="${PYVER}" || die "emake python failed"
+		emake PYTHON_VERSION="$(python_get_version)" || die "emake python failed"
 	fi
 }
 
