@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.0.25-r1.ebuild,v 1.1 2010/06/04 14:18:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.0.25-r1.ebuild,v 1.2 2010/06/04 17:07:10 mr_bones_ Exp $
 
 EAPI="2"
 
