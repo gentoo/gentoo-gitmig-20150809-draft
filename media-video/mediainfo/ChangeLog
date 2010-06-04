@@ -1,0 +1,11 @@
+# ChangeLog for media-video/mediainfo
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.1 2010/06/04 02:43:16 beandog Exp $
+
+*mediainfo-0.7.33 (04 Jun 2010)
+
+  04 Jun 2010; Steve Dibb <beandog@gentoo.org> +mediainfo-0.7.33.ebuild,
+  +metadata.xml:
+  Initial commit, bug 294801; thanks to Lucian Muresan and Nikoli for
+  ebuilds
+
