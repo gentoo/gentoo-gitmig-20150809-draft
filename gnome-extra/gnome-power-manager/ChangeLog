@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.122 2010/05/22 16:01:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.123 2010/06/04 13:52:28 gmsoft Exp $
+
+  04 Jun 2010; Guy Martin <gmsoft@gentoo.org>
+  gnome-power-manager-2.22.1-r1.ebuild:
+  hppa stable, #308521
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org>
   gnome-power-manager-2.28.3.ebuild:
