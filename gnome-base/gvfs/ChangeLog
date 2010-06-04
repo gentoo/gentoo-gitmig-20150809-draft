@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.100 2010/05/22 16:00:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.101 2010/06/04 21:14:00 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> gvfs-1.4.3-r1.ebuild:
+  x86 stable, bug #314899
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> gvfs-1.4.3-r1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #313563
