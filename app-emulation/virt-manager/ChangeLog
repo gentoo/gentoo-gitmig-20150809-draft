@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.29 2010/04/28 22:32:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.30 2010/06/04 18:45:02 cardoe Exp $
+
+*virt-manager-0.8.4-r1 (04 Jun 2010)
+
+  04 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  +virt-manager-0.8.4-r1.ebuild,
+  +files/virt-manager-0.8.4-customize-dialog-xmlparsedoc.patch:
+  Applied patch from upstream to fix customize dialog erroring in
+  xmlParseDoc(). Thanks to Dennis Schridde <devurandom@gmx.net> finding this
+  one. bug #322095
 
 *virt-manager-0.8.4 (28 Apr 2010)
 
