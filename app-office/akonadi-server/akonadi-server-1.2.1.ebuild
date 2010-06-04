@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.2.1.ebuild,v 1.12 2010/05/15 13:58:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.2.1.ebuild,v 1.13 2010/06/04 21:16:38 reavertm Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ RDEPEND="
 	>=dev-libs/soprano-2.2
 	>=x11-libs/qt-gui-4.5.0:4[dbus]
 	>=x11-libs/qt-sql-4.5.0:4[mysql?,sqlite?]
+	>=x11-libs/qt-test-4.5.0:4
 	x11-misc/shared-mime-info
 "
 DEPEND="${RDEPEND}
