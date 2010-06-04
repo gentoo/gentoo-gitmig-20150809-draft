@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.301 2010/05/08 10:40:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.302 2010/06/04 20:16:41 maekke Exp $
+
+  04 Jun 2010; Markus Meier <maekke@gentoo.org> gedit-2.28.4.ebuild:
+  x86 stable, bug #314899
 
   08 May 2010; Pacho Ramos <pacho@gentoo.org> -gedit-2.28.3.ebuild,
   gedit-2.28.4.ebuild, +files/gedit-2.28.4-xml-syntax.patch:
