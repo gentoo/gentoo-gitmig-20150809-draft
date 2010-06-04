@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.473 2010/06/04 15:02:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.474 2010/06/04 19:09:40 phajdan.jr Exp $
+
+  04 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  python-3.1.2-r3.ebuild:
+  x86 stable wrt bug #320043
 
   04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-3.1.2-r3.ebuild:
