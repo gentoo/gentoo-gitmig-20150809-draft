@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.4-r1.ebuild,v 1.1 2010/06/04 18:45:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.4-r1.ebuild,v 1.2 2010/06/04 18:47:29 cardoe Exp $
 
 EAPI=2
 
@@ -46,18 +46,18 @@ src_install() {
 	gnome2_src_install
 
 	insinto /usr/share/virt-manager/pixmaps/
-	doins ${S}/pixmaps/*.png
-	doins ${S}/pixmaps/*.svg
+	doins "${S}"/pixmaps/*.png
+	doins "${S}"/pixmaps/*.svg
 
 	insinto /usr/share/virt-manager/pixmaps/hicolor/16x16/actions/
-	doins ${S}/pixmaps/hicolor/16x16/actions/*.png
+	doins "${S}"/pixmaps/hicolor/16x16/actions/*.png
 
 	insinto /usr/share/virt-manager/pixmaps/hicolor/22x22/actions/
-	doins ${S}/pixmaps/hicolor/22x22/actions/*.png
+	doins "${S}"/pixmaps/hicolor/22x22/actions/*.png
 
 	insinto /usr/share/virt-manager/pixmaps/hicolor/24x24/actions/
-	doins ${S}/pixmaps/hicolor/24x24/actions/*.png
+	doins "${S}"/pixmaps/hicolor/24x24/actions/*.png
 
 	insinto /usr/share/virt-manager/pixmaps/hicolor/32x32/actions/
-	doins ${S}/pixmaps/hicolor/32x32/actions/*.png
+	doins "${S}"/pixmaps/hicolor/32x32/actions/*.png
 }
