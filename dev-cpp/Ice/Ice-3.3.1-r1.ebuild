@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.3.1-r1.ebuild,v 1.1 2010/06/04 13:09:47 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.3.1-r1.ebuild,v 1.2 2010/06/04 13:11:43 spatz Exp $
 
 EAPI=2
 
@@ -27,10 +27,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}/cpp
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 	epatch "${FILESDIR}"/${P}-openssl.patch
 

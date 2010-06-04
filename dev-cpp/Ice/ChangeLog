@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/Ice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.22 2010/06/04 13:09:47 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.23 2010/06/04 13:11:43 spatz Exp $
+
+  04 Jun 2010; Dror Levin <spatz@gentoo.org> Ice-3.3.1-r1.ebuild:
+  Move patches to src_prepare, fixes repoman QA warnings.
 
 *Ice-3.3.1-r1 (04 Jun 2010)
 
