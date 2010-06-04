@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.143 2010/05/16 11:14:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.144 2010/06/04 05:31:09 jer Exp $
+
+  04 Jun 2010; Jeroen Roovers <jer@gentoo.org> libpcap-1.1.1.ebuild:
+  Stable for PPC (bug #313827).
 
   16 May 2010; Raúl Porcel <armin76@gentoo.org> libpcap-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #313827
