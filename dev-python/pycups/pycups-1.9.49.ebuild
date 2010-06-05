@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.49.ebuild,v 1.3 2010/06/05 13:13:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.49.ebuild,v 1.4 2010/06/05 22:16:39 reavertm Exp $
 
 EAPI="2"
 
@@ -45,5 +45,4 @@ src_install() {
 		insinto /usr/share/doc/"${P}"
 		doins -r examples/ || die "installing examples failed"
 	fi
-
 }
