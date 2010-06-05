@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.108 2010/06/05 18:36:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.109 2010/06/05 21:36:14 arfrever Exp $
+
+  05 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  icu-4.4.1.ebuild:
+  amd64 stable (tested by rullzer) (bug #322297).
 
   05 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> icu-4.4.1.ebuild:
   x86 stable wrt bug #322297
