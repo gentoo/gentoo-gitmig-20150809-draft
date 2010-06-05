@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.0.ebuild,v 1.5 2010/05/24 18:57:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.0.ebuild,v 1.6 2010/06/05 14:12:33 armin76 Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 ~arm ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
