@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/jwm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.16 2009/01/09 15:11:33 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.17 2010/06/05 20:44:50 ssuominen Exp $
+
+  05 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> jwm-2.0.1.ebuild:
+  Move einfo from pkg_postrm to pkg_postinst.
 
   09 Jan 2009; Rémi Cardona <remi@gentoo.org> jwm-1.7.ebuild,
   jwm-2.0.1.ebuild:
