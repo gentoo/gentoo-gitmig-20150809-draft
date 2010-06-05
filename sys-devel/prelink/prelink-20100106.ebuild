@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100106.ebuild,v 1.1 2010/02/06 20:56:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100106.ebuild,v 1.2 2010/06/05 19:48:19 dirtyepic Exp $
 
 # if not on http://people.redhat.com/jakub/prelink/, releases can usually be ripped from
 # http://mirrors.kernel.org/fedora/development/source/SRPMS/prelink-<blah>.src.rpm
 
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="Modifies ELFs to avoid runtime symbol resolutions resulting in faster load times"
 HOMEPAGE="http://people.redhat.com/jakub/prelink"
@@ -29,11 +29,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-20061201-prelink-conf.patch
 	sed -i -e 's:undosyslibs.sh::' testsuite/Makefile.in #254201
-	sed -i \
-		-e '/^CC=/s: : -Wl,--disable-new-dtags :' \
-		testsuite/functions.sh #100147
-
-	eautoreconf
+	sed -i -e '/^CC=/s: : -Wl,--disable-new-dtags :' testsuite/functions.sh #100147
 }
 
 src_install() {
