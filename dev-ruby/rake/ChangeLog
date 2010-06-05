@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.101 2010/05/22 15:41:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.102 2010/06/05 10:50:36 graaff Exp $
+
+*rake-0.8.7-r5 (05 Jun 2010)
+
+  05 Jun 2010; Hans de Graaff <graaff@gentoo.org> rake-0.8.7-r4.ebuild,
+  +rake-0.8.7-r5.ebuild:
+  Revision bump so that we can have a stable candidate with jruby support.
+  Keep stable keywords for those arches that do not have jruby keyworded
+  to avoid a pointless stabilization request.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> -rake-0.8.7.ebuild:
   Cleanup old version.
