@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.25 2010/04/04 20:42:29 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.26 2010/06/05 15:30:26 phajdan.jr Exp $
+
+  05 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> stfl-0.21.ebuild:
+  x86 stable wrt bug #318317
 
   04 Apr 2010; Thomas Anderson <tanderson@gentoo.org> stfl-0.21.ebuild:
   Fix usage of python.eclass, thanks to Arfrever for mentioning it.
