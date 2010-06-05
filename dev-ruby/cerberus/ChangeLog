@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cerberus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.9 2010/06/05 06:06:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.10 2010/06/05 06:11:09 graaff Exp $
+
+  05 Jun 2010; Hans de Graaff <graaff@gentoo.org> cerberus-0.7.8.ebuild:
+  Add missing test dependency on subversion. Fixes #322661.
 
   05 Jun 2010; Hans de Graaff <graaff@gentoo.org> -cerberus-0.7.ebuild:
   Remove old version.
