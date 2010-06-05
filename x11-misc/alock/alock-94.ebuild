@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.8 2010/06/05 10:19:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-94.ebuild,v 1.1 2010/06/05 10:19:10 hwoarang Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://alock.googlecode.com/files/alock-svn-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="imlib pam"
 
 DEPEND="x11-libs/libX11
@@ -28,8 +28,8 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/alock-svn-${PV}
 
 src_prepare() {
-	sed -i 's|\$(DESTDIR)\$(prefix)/man|\$(DESTDIR)\$(prefix)/share/man|g' \
-		"${S}"/Makefile || die "sed failed"
+	# fix pointer declaration for amd64
+	epatch "${FILESDIR}"/implicit_pointer_conversion_fix_amd64.patch
 }
 
 src_configure() {
