@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.28 2010/05/18 20:10:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.29 2010/06/05 19:59:54 reavertm Exp $
+
+*kdevplatform-1.0.0-r1 (05 Jun 2010)
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -kdevplatform-1.0.0.ebuild, +kdevplatform-1.0.0-r1.ebuild,
+  +files/kdevplatform-1.0.0-preserve-remote-URI.patch:
+  Add project URI patch, bug 319625
 
   18 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
   -kdevplatform-0.9.95.ebuild, -kdevplatform-0.9.99.ebuild,

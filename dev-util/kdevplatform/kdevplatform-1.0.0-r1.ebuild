@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.0.0.ebuild,v 1.2 2010/05/15 22:33:55 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.0.0-r1.ebuild,v 1.1 2010/06/05 19:59:54 reavertm Exp $
 
 EAPI="2"
 
@@ -33,6 +33,10 @@ DEPEND="
 RDEPEND="${DEPEND}
 	!<dev-util/kdevelop-${KDEVELOP_VERSION}
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-preserve-remote-URI.patch" # bug 319625
+)
 
 src_prepare() {
 	kde4-base_src_prepare
