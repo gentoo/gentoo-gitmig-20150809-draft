@@ -1,18 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.0.1.ebuild,v 1.3 2009/08/03 10:19:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.0.1.ebuild,v 1.4 2010/06/05 20:42:56 ssuominen Exp $
 
+EAPI=3
 inherit eutils
 
-IUSE="bidi debug jpeg png truetype xinerama xpm"
-
 DESCRIPTION="Very fast and lightweight still powerfull window manager for X"
-SRC_URI="http://joewing.net/programs/jwm/releases/${P}.tar.bz2"
 HOMEPAGE="http://joewing.net/programs/jwm/"
+SRC_URI="http://joewing.net/programs/jwm/releases/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+IUSE="bidi debug jpeg png truetype xinerama xpm"
 
 RDEPEND="xpm? ( x11-libs/libXpm )
 	xinerama? ( x11-libs/libXinerama )
@@ -30,13 +30,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	xinerama? ( x11-proto/xineramaproto )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-nostrip.patch
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable jpeg) \
@@ -45,9 +43,8 @@ src_compile() {
 		$(use_enable xinerama) \
 		$(use_enable xpm) \
 		$(use_enable bidi fribidi) \
-		--enable-shape --enable-xrender || die "configure failed"
-
-	emake || die "emake failed"
+		--enable-shape \
+		--enable-xrender
 }
 
 src_install() {
@@ -55,8 +52,8 @@ src_install() {
 	dodir /etc
 	dodir /usr/share/man
 	emake BINDIR="${D}/usr/bin" SYSCONF="${D}/etc" \
-		MANDIR="${D}/usr/share/man" install || die "emake install failed"
-	rm "${D}/etc/system.jwmrc"
+		MANDIR="${D}/usr/share/man" install || die
+	rm "${D}"/etc/system.jwmrc
 
 	echo "#!/bin/sh" > jwm
 	echo "exec /usr/bin/jwm" >> jwm
@@ -69,5 +66,5 @@ src_install() {
 pkg_postrm() {
 	einfo "Put an appropriate configuration file in /etc/system.jwmrc"
 	einfo "or in ~/.jwmrc."
-	einfo "An example file can be found in ${R}/usr/share/doc/${P}/"
+	einfo "An example file can be found in ${EROOT}/usr/share/doc/${PF}/"
 }
