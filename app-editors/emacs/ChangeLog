@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.378 2010/05/24 15:39:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.379 2010/06/05 15:56:02 armin76 Exp $
+
+  05 Jun 2010; Raúl Porcel <armin76@gentoo.org> emacs-21.4-r20.ebuild,
+  emacs-22.3-r4.ebuild, emacs-23.1-r3.ebuild:
+  alpha/arm/ia64/sh stable wrt #313861
 
   23 May 2010; <nixnut@gentoo.org> emacs-21.4-r20.ebuild,
   emacs-22.3-r4.ebuild, emacs-23.1-r3.ebuild:
