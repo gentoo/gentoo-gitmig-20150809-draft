@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.15 2010/05/19 17:04:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.16 2010/06/05 18:41:29 armin76 Exp $
+
+  05 Jun 2010; Raúl Porcel <armin76@gentoo.org> talloc-2.0.1-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #300158
 
   19 May 2010; Jeroen Roovers <jer@gentoo.org> talloc-2.0.1-r1.ebuild:
   Stable for HPPA (bug #300158).
