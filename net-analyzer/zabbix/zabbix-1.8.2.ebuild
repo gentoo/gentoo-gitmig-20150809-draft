@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.2.ebuild,v 1.3 2010/05/03 18:21:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.2.ebuild,v 1.4 2010/06/05 11:03:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,7 +16,8 @@ SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="agent curl frontend ipv6 jabber ldap mysql oracle postgres proxy server snmp +sqlite3 openipmi"
-DEPEND="snmp? ( net-analyzer/net-snmp )
+
+COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
 		net-nds/openldap
 		=dev-libs/cyrus-sasl-2*
@@ -25,16 +26,17 @@ DEPEND="snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
 	sqlite3? ( =dev-db/sqlite-3* )
 	postgres? ( virtual/postgresql-base )
-	jabber? ( dev-libs/iksemel
-		dev-util/pkgconfig )
+	jabber? ( dev-libs/iksemel )
 	curl? ( net-misc/curl )
 	openipmi? ( sys-libs/openipmi )"
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	proxy? ( net-analyzer/fping )
 	server? ( net-analyzer/fping
 		app-admin/webapp-config )
 	frontend? ( dev-lang/php[bcmath,ctype]
 		app-admin/webapp-config )"
+DEPEND="${COMMON_DEPEND}
+	jabber? ( dev-util/pkgconfig )"
 
 useq frontend && need_php_httpd
 
