@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sinatra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.6 2010/05/06 18:11:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.7 2010/06/05 07:40:58 graaff Exp $
+
+  05 Jun 2010; Hans de Graaff <graaff@gentoo.org> sinatra-1.0.ebuild:
+  Sinatra should also work with rack 1.1: update dependency. We now have
+  a new version of rack-test that works with this rack version.
 
   06 May 2010; Hans de Graaff <graaff@gentoo.org> sinatra-1.0.ebuild:
   Change dev-ruby/rack dependency to be in line with the dependency
