@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.46 2010/05/23 18:14:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.47 2010/06/05 14:16:41 tomjbe Exp $
+
+*hamlib-1.2.11 (05 Jun 2010)
+
+  05 Jun 2010; Thomas Beierlein <tomjbe@gentoo.org> +hamlib-1.2.11.ebuild,
+  +files/hamlib-1.2.11-bindings.diff:
+  Version bump.
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> hamlib-1.2.10.ebuild:
   stable amd64, bug 307219
