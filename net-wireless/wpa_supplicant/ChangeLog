@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.137 2010/05/29 09:54:59 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.138 2010/06/05 11:07:17 ssuominen Exp $
+
+  05 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  wpa_supplicant-0.6.9.ebuild, wpa_supplicant-0.6.10.ebuild,
+  wpa_supplicant-0.7.1.ebuild, wpa_supplicant-0.7.2-r2.ebuild:
+  Move dev-util/pkgconfig out of RDEPEND.
 
 *wpa_supplicant-0.7.2-r2 (29 May 2010)
 
