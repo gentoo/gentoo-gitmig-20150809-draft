@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4227 2010/06/04 12:37:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4228 2010/06/05 10:36:08 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jun 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking x11-misc/wmakerconf wrt bug #265465
 
   04 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask app-pda/malsync for removal.
