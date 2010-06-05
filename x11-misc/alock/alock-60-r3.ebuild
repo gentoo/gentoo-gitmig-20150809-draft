@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.8 2010/06/05 10:19:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.9 2010/06/05 10:50:59 hwoarang Exp $
 
 EAPI="2"
 
@@ -42,7 +42,7 @@ src_configure() {
 src_install() {
 	dobin src/alock || die
 	doman alock.1 || die
-	dodoc README.txt LICENSE.txt CHANGELOG.txt || die
+	dodoc README.txt CHANGELOG.txt || die
 
 	insinto /usr/share/alock/xcursors
 	doins contrib/xcursor-* || die
