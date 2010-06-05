@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.9.2.ebuild,v 1.1 2010/05/06 07:02:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.9.4.ebuild,v 1.1 2010/06/05 05:40:52 dev-zero Exp $
 
 EAPI="2"
 
