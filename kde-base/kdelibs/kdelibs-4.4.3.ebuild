@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.3.ebuild,v 1.4 2010/05/28 22:53:16 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.3.ebuild,v 1.5 2010/06/05 21:49:07 reavertm Exp $
 
 EAPI="3"
 
@@ -71,11 +71,7 @@ COMMONDEPEND="
 		>=dev-libs/shared-desktop-ontologies-0.2
 		>=dev-libs/soprano-2.3.73[dbus,raptor,redland]
 	)
-	spell? (
-		app-dicts/aspell-en
-		app-text/aspell
-		app-text/enchant
-	)
+	spell? ( app-text/enchant )
 	ssl? ( dev-libs/openssl )
 	zeroconf? (
 		|| (
@@ -129,6 +125,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.3.3-klauncher_kioslave.patch"
 	"${FILESDIR}/${PN}-4.3.3-klauncher_mac.patch"
 	"${FILESDIR}/${PN}-4.4.3-mimetypes.patch"
+	"${FILESDIR}/${PN}-4.4.4-renderblock.patch"
 )
 
 src_prepare() {
@@ -199,6 +196,7 @@ src_configure() {
 	fi
 	mycmakeargs+=(
 		-DWITH_HSPELL=OFF
+		-DWITH_ASPELL=OFF
 		-DKDE_DEFAULT_HOME=${HME}
 		-DKAUTH_BACKEND=POLKITQT-1
 		$(cmake-utils_use_build handbook doc)
@@ -220,7 +218,6 @@ src_configure() {
 		$(cmake-utils_use_with policykit PolkitQt-1)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with semantic-desktop SharedDesktopOntologies)
-		$(cmake-utils_use_with spell ASPELL)
 		$(cmake-utils_use_with spell ENCHANT)
 		$(cmake-utils_use_with ssl OpenSSL)
 	)
