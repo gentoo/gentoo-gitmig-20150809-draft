@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/zfs-fuse
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.9 2009/11/14 14:06:40 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.10 2010/06/05 22:21:16 ssuominen Exp $
+
+  05 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> zfs-fuse-0.5.0.ebuild,
+  -zfs-fuse-9999.ebuild:
+  Remove -Werror from SConstruct wrt #260941 by Diego E. Pettenò. Remove
+  unmaintained mercurial ebuild wrt #284369.
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> zfs-fuse-9999.ebuild:
   QA: Drop keywords from live ebuild.
