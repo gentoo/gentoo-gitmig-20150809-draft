@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.8 2009/11/30 06:36:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.9 2010/06/05 19:06:35 armin76 Exp $
 
 EAPI="2"
 
