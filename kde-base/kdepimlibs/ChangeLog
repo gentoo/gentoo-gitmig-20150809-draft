@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.71 2010/05/03 21:33:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.72 2010/06/05 14:49:58 reavertm Exp $
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kdepimlibs-4.4.2.ebuild, kdepimlibs-4.4.3.ebuild:
+  Rename USE flag akonadi->semantic-desktop
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kdepimlibs-4.4.1.ebuild:
   Drop KDE SC 4.4.1

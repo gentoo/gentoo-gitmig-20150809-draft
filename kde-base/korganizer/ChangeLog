@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.161 2010/06/02 10:36:31 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.162 2010/06/05 14:57:01 reavertm Exp $
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  korganizer-4.4.2.ebuild, korganizer-4.4.3.ebuild:
+  Rename USE flag akonadi->semantic-desktop
 
   02 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   korganizer-4.4.3.ebuild:

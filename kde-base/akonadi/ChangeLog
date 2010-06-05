@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.59 2010/05/03 21:08:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.60 2010/06/05 14:54:01 reavertm Exp $
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> akonadi-4.4.2.ebuild,
+  akonadi-4.4.3.ebuild:
+  Rename USE flag akonadi->semantic-desktop
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -akonadi-4.4.1.ebuild:
   Drop KDE SC 4.4.1

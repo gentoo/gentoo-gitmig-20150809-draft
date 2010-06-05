@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.4.2.ebuild,v 1.1 2010/03/30 19:27:15 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.4.2.ebuild,v 1.2 2010/06/05 14:57:44 reavertm Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ IUSE="debug +handbook"
 
 DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop')
-	$(add_kdebase_dep kdepimlibs 'akonadi')
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop')
 	$(add_kdebase_dep libkdepim)
 	$(add_kdebase_dep libkleo)
 "

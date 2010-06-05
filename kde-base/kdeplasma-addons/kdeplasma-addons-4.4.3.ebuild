@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.4.3.ebuild,v 1.3 2010/05/25 13:23:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.4.3.ebuild,v 1.4 2010/06/05 14:57:15 reavertm Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ COMMON_DEPEND="
 	exif? ( $(add_kdebase_dep libkexiv2) )
 	qalculate? ( sci-libs/libqalculate )
 	qwt? ( x11-libs/qwt:5 )
-	rss? ( $(add_kdebase_dep kdepimlibs 'akonadi') )
+	rss? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop') )
 	scim? ( app-i18n/scim )
 "
 DEPEND="${COMMON_DEPEND}

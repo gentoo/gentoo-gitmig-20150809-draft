@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.146 2010/05/03 21:48:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.147 2010/06/05 15:00:44 reavertm Exp $
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  klinkstatus-4.4.2.ebuild, klinkstatus-4.4.3.ebuild:
+  Rename USE flag akonadi->semantic-desktop
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -klinkstatus-4.4.1.ebuild:

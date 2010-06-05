@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.4.3.ebuild,v 1.3 2010/05/04 01:16:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.4.3.ebuild,v 1.4 2010/06/05 14:57:55 reavertm Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ COMMONDEPEND="
 		>=dev-python/sip-4.7.1
 		$(add_kdebase_dep pykde4)
 	)
-	rss? ( $(add_kdebase_dep kdepimlibs 'akonadi') )
+	rss? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop') )
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${COMMONDEPEND}

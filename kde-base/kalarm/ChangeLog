@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.144 2010/05/03 21:13:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.145 2010/06/05 14:57:55 reavertm Exp $
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> kalarm-4.4.2.ebuild,
+  kalarm-4.4.3.ebuild:
+  Rename USE flag akonadi->semantic-desktop
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kalarm-4.4.1.ebuild:
   Drop KDE SC 4.4.1

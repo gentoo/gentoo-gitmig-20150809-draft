@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.8 2010/05/03 21:33:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.9 2010/06/05 15:00:13 reavertm Exp $
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kdepim-runtime-4.4.2.ebuild, kdepim-runtime-4.4.3.ebuild:
+  Rename USE flag akonadi->semantic-desktop
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -kdepim-runtime-4.4.1.ebuild:
