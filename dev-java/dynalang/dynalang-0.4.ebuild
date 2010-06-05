@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.1 2010/06/05 08:24:22 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.2 2010/06/05 08:36:33 ali_bush Exp $
 
 EAPI=3
 
@@ -51,7 +51,7 @@ src_test() {
 }
 
 src_install() {
-	java-pkg_dojar "${PN}.jar"
-	use doc && java-pkg_dojavadoc build/javadoc
-	use source && java-pkg_dosrc src
+	java-pkg_newjar "build/${MY_P}.jar"
+	use doc && java-pkg_dojavadoc build/doc/javadoc
+	use source && java-pkg_dosrc src/*
 }
