@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.9_rc3.ebuild,v 1.6 2010/03/06 09:17:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.9_rc3.ebuild,v 1.7 2010/06/05 13:57:03 ssuominen Exp $
 
 EAPI=2
 KMNAME="playground/utils"
-KDE_MINIMAL=4.2
 
 inherit kde4-base
 
@@ -22,6 +21,8 @@ IUSE="debug"
 RDEPEND="x11-apps/xdpyinfo"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=( "${FILESDIR}/${P}-gcc45.patch" )
 
 src_prepare() {
 	sed -i \
