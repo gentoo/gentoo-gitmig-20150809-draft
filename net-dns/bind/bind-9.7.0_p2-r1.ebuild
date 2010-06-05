@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.2 2010/06/03 16:57:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.3 2010/06/05 09:38:08 idl0r Exp $
 
 EAPI="3"
 
@@ -262,11 +262,10 @@ pkg_postinst() {
 	einfo
 	einfo "You can edit /etc/conf.d/named to customize named settings"
 	einfo
-	einfo "If you like to run bind in chroot AND this is a new install OR"
-	einfo "your bind doesn't already run in chroot, simply run:"
-	einfo "\`emerge --config '=${CATEGORY}/${PF}'\`"
-	einfo "Before running the above command you might want to change the chroot"
-	einfo "dir in /etc/conf.d/named. Otherwise /chroot/dns will be used."
+	einfo "If you'd like to run bind in a chroot AND this is a new"
+	einfo "install OR your bind doesn't already run in a chroot:"
+	einfo "1) Uncomment and set the CHROOT variable in /etc/conf.d/named."
+	einfo "2) Run \`emerge --config '=${CATEGORY}/${PF}'\`"
 	einfo
 
 	CHROOT=$(source /etc/conf.d/named 2>/dev/null; echo ${CHROOT})

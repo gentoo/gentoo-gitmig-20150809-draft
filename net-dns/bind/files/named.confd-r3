@@ -9,10 +9,11 @@ OPTIONS=""
 # RNDC needs to be told what server we're using sometimes.
 #SERVER="-s 127.0.0.1"
 
-# If you wish to run bind in a chroot, run:
-# emerge --config =<bind-version>
-# and un-comment the following line.
-# You can specify a different chroot directory but MAKE SURE it's empty.
+# If you wish to run bind in a chroot:
+# 1) un-comment the CHROOT= assignment, below. You may use
+#    a different chroot directory but MAKE SURE it's empty.
+# 2) run: emerge --config =<bind-version>
+#
 # CHROOT="/chroot/dns"
 
 # Default pid file location
