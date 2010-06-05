@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.3.ebuild,v 1.2 2010/05/25 21:08:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.3.ebuild,v 1.3 2010/06/05 15:45:44 phajdan.jr Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/pygtk"
