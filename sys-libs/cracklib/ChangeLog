@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.146 2010/06/03 20:13:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.147 2010/06/05 20:46:31 vapier Exp $
+
+  05 Jun 2010; Mike Frysinger <vapier@gentoo.org> cracklib-2.8.15.ebuild,
+  +files/cracklib-2.8.15-no-nls.patch, cracklib-2.8.16.ebuild:
+  Fix building on uClibc systems w/out nls support.
 
   03 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cracklib-2.8.16.ebuild:
