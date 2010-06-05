@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.20 2009/12/12 19:51:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.21 2010/06/05 19:53:12 vapier Exp $
 
 WANT_AUTOCONF="2.5"
 
@@ -62,6 +62,10 @@ src_unpack() {
 
 	# crosscompile patch
 	epatch "${FILESDIR}"/"${P}"-crosscompile.patch
+
+	# sched.h is a system header and causes problems with some C libraries
+	mv sched.h _sched.h || die
+	sed -i '/include/s:sched.h:_sched.h:' screen.h || die
 
 	# Allow for more rendition (color/attribute) changes in status bars
 	sed -i \
