@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.98.0.ebuild,v 1.1 2010/05/20 13:57:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-3.98.1.ebuild,v 1.1 2010/06/05 22:10:18 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="bg ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hu it lt
@@ -27,7 +27,7 @@ COMMON_DEPEND="app-crypt/gpgme
 		>=sys-libs/gwenhywfar-3.11.3 )
 	ofx? ( >=dev-libs/libofx-0.9.1 )"
 RDEPEND="${COMMON_DEPEND}
-	quotes? ( >=dev-perl/Finance-Quote-1.17-r1 )"
+	quotes? ( >=dev-perl/Finance-Quote-1.17 )"
 DEPEND="${COMMON_DEPEND}
 	test? ( >=dev-util/cppunit-1.12.1 )"
 
