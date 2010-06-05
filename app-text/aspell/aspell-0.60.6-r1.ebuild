@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6-r1.ebuild,v 1.11 2010/05/14 14:12:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6-r1.ebuild,v 1.12 2010/06/05 15:45:24 armin76 Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnu/aspell/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="nls examples"
 # Note; app-text/aspell-0.6 and app-dicts/aspell-en-0.6 must go stable together
 
