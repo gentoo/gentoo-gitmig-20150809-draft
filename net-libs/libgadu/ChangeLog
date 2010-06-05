@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.38 2010/05/26 00:03:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.39 2010/06/05 02:30:03 reavertm Exp $
+
+*libgadu-1.9.0-r1 (05 Jun 2010)
+
+  05 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> -libgadu-1.9.0.ebuild,
+  +libgadu-1.9.0-r1.ebuild, +files/libgadu-1.9.0-memleak.patch:
+  Add patch from mailing list to fix memory leak on receiving messages.
 
   25 May 2010; Maciej Mrozowski <reavertm@gentoo.org> libgadu-1.9.0.ebuild:
   Make it POSIX compliant, remove some redundant code
