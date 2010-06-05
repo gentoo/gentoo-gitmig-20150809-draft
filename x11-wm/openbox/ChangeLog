@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.201 2010/05/28 13:15:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.202 2010/06/05 20:58:25 hwoarang Exp $
+
+  05 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  openbox-3.4.11.2.ebuild:
+  Drop xinerama use flag as xinerama is an actual dependency
 
   28 May 2010; Markus Meier <maekke@gentoo.org> openbox-3.4.11.1.ebuild:
   arm/x86 stable, bug #319499
