@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.94 2010/03/09 21:57:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.95 2010/06/05 22:42:19 kumba Exp $
+
+*fwbuilder-4.0.1 (05 Jun 2010)
+
+  05 Jun 2010; Joshua Kinard <kumba@gentoo.org>
+  +files/4.0.1-secure-mktemp.patch, +fwbuilder-4.0.1.ebuild:
+  Import ebuild for fwbuilder-4.0.1. Addresses #318689. Marked ~ on x86,
+  amd64, ppc, and ppc64, per older ebuilds.
 
   09 Mar 2010; Joseph Jezak <josejx@gentoo.org> fwbuilder-3.0.7.ebuild:
   Marked ppc stable for bug #285861.
