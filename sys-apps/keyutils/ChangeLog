@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.15 2010/05/19 23:57:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.16 2010/06/05 18:49:52 armin76 Exp $
+
+  05 Jun 2010; Raúl Porcel <armin76@gentoo.org> keyutils-1.2-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #300158
 
   19 May 2010; Jeroen Roovers <jer@gentoo.org> keyutils-1.2-r2.ebuild:
   Actually use toolchain-funcs.eclass and respect CFLAGS and LDFLAGS too.
