@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/kst
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.30 2010/06/05 20:49:24 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/ChangeLog,v 1.31 2010/06/05 23:32:50 ayoy Exp $
+
+*kst-2.0.0_beta5-r1 (05 Jun 2010)
+
+  05 Jun 2010; Dominik Kapusta <ayoy@gentoo.org> -kst-2.0.0_beta5.ebuild,
+  +kst-2.0.0_beta5-r1.ebuild:
+  Fixed desktop file and removed mistakenly added RESTRICT=mirror (kudos to
+  Samuli again).
 
 *kst-2.0.0_beta5 (05 Jun 2010)
 

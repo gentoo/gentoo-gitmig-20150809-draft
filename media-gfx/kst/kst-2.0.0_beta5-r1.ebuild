@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0_beta5.ebuild,v 1.1 2010/06/05 20:49:24 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kst/kst-2.0.0_beta5-r1.ebuild,v 1.1 2010/06/05 23:32:50 ayoy Exp $
 
 EAPI=2
 
@@ -29,8 +29,6 @@ DEPEND="x11-libs/qt-gui:4[debug?]
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${PN}-cfitsio-includes.patch" )
-
-RESTRICT="mirror"
 
 S="${WORKDIR}/${MY_PN}-2.0-beta5"
 
@@ -64,7 +62,7 @@ src_configure() {
 src_install() {
 	qt4-r2_src_install
 	doicon src/images/${PN}.png
-	make_desktop_entry ${PN} ${PN} ${PN} \
+	make_desktop_entry "${PN}2" ${PN} ${PN} \
 		"Qt;Graphics;DataVisualization" || die "make_desktop_entry failed"
 	dodoc AUTHORS ChangeLog NEWS README RELEASE.NOTES || die "dodoc failed"
 }
