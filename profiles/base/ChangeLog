@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.146 2010/06/05 15:36:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.147 2010/06/05 18:56:38 vapier Exp $
+
+  05 Jun 2010; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Let XZ use all memory when unpacking to avoid failure with low-mem
+  #303975.
 
   05 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Unmask USE bluetooth for app-pda/pilot-link wrt #249889 by Jesse Adelman.
