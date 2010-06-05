@@ -1,6 +1,6 @@
 # ChangeLog for x11-proto/xf86vidmodeproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.39 2010/06/04 14:14:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.40 2010/06/05 06:37:49 tove Exp $
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org> xf86vidmodeproto-2.3.ebuild:
   hppa stable, #308521
@@ -25,21 +25,21 @@
   xf86vidmodeproto-2.3.ebuild:
   Transfer Prefix keywords
 
-  26 Oct 2009; RÃ©mi Cardona <remi@gentoo.org> xf86vidmodeproto-2.3.ebuild:
+  26 Oct 2009; Rémi Cardona <remi@gentoo.org> xf86vidmodeproto-2.3.ebuild:
   sync with overlay, put blocker in RDEPEND too
 
-  26 Oct 2009; RÃ©mi Cardona <remi@gentoo.org> xf86vidmodeproto-2.3.ebuild:
+  26 Oct 2009; Rémi Cardona <remi@gentoo.org> xf86vidmodeproto-2.3.ebuild:
   sync with overlay, add blocker, fixes bug #288619
 
 *xf86vidmodeproto-2.3 (02 Oct 2009)
 
-  02 Oct 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  02 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86vidmodeproto-2.2.99.1.ebuild, +xf86vidmodeproto-2.3.ebuild:
   Bump packages for xorg-server-1.7.
 
 *xf86vidmodeproto-2.2.99.1 (19 Sep 2009)
 
-  19 Sep 2009; RÃ©mi Cardona <remi@gentoo.org>
+  19 Sep 2009; Rémi Cardona <remi@gentoo.org>
   +xf86vidmodeproto-2.2.99.1.ebuild:
   bump to 2.2.99.1
 
@@ -89,7 +89,7 @@
   28 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
 
-  31 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   xf86vidmodeproto-2.2.2.ebuild:
   Add ~x86-fbsd keyword.
 
