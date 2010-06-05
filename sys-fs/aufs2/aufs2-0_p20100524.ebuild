@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100524.ebuild,v 1.1 2010/05/25 16:09:36 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100524.ebuild,v 1.2 2010/06/05 22:55:07 tommy Exp $
 
 EAPI="2"
 
@@ -59,7 +59,8 @@ src_prepare() {
 		sed -i "s:DEBUG = y:DEBUG =:g" config.mk || die
 	fi
 	if use inotify; then
-		sed -i  "s:HNOTIFY =:HNOTIFY = y:g" config.mk || die
+		sed -i  -e "s:AUFS_HNOTIFY =:AUFS_HNOTIFY = y:g" \
+			-e "s:AUFS_HINOTIFY =:AUFS_HINOTIFY = y:g"  config.mk || die
 	fi
 	if use ramfs; then
 		sed -i  "s:RAMFS =:RAMFS = y:g" config.mk || die
