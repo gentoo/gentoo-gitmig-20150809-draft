@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.79 2010/05/22 22:58:55 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.80 2010/06/05 11:16:39 graaff Exp $
+
+*hoe-2.6.1 (05 Jun 2010)
+
+  05 Jun 2010; Hans de Graaff <graaff@gentoo.org> +hoe-2.6.1.ebuild:
+  Version bump. Our rubyforge patch is no longer needed.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> hoe-2.6.0-r1.ebuild:
   Add REE18 support
