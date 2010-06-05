@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.4.3.ebuild,v 1.1 2010/05/03 21:08:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.4.3.ebuild,v 1.2 2010/06/05 14:43:47 reavertm Exp $
 
 EAPI="3"
 
@@ -15,7 +15,9 @@ DEPEND="
 	$(add_kdebase_dep kdepimlibs)
 	$(add_kdebase_dep libkdepim)
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	$(add_kdebase_dep kdepim-runtime)
+"
 
 KMLOADLIBS="libkdepim"
 KMSAVELIBS="true"
