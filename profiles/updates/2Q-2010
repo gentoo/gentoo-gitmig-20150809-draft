@@ -13,3 +13,4 @@ move mail-client/mozilla-thunderbird-bin mail-client/thunderbird-bin
 move media-sound/kradioripper media-sound/kstreamripper
 slotmove =dev-ruby/test-unit-2* 0 2
 move dev-python/jinja2 dev-python/jinja
+move app-mobilephone/openmoko-dfu-util app-mobilephone/dfu-util
