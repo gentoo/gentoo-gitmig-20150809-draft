@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.0.ebuild,v 1.1 2010/04/30 07:02:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.0.ebuild,v 1.2 2010/06/05 21:37:21 zmedico Exp $
 
 EAPI=2
 inherit cmake-utils multilib
@@ -22,9 +22,9 @@ RDEPEND="dev-lang/lua
 	media-libs/jpeg:0
 	media-libs/libpng
 	media-libs/tiff
-	sys-libs/zlib
-	boost? ( dev-util/boost-build )"
+	sys-libs/zlib"
 DEPEND="${RDEPEND}
+	boost? ( dev-util/boost-build )
 	test? ( dev-util/cppunit )"
 
 DOCS="AUTHORS ChangeLog TODO"

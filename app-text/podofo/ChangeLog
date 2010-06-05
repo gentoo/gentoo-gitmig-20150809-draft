@@ -1,6 +1,10 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.9 2010/04/30 07:02:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.10 2010/06/05 21:37:21 zmedico Exp $
+
+  05 Jun 2010; Zac Medico <zmedico@gentoo.org> podofo-0.7.0.ebuild,
+  podofo-0.8.0.ebuild:
+  Bug #322737 - Remove boost-build from RDEPEND.
 
 *podofo-0.8.0 (30 Apr 2010)
 
