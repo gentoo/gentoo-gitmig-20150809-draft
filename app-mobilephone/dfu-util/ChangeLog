@@ -1,0 +1,37 @@
+# ChangeLog for app-mobilephone/openmoko-dfu-util
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/ChangeLog,v 1.1 2010/06/05 19:25:17 vapier Exp $
+
+*dfu-util-0.1 (05 Jun 2010)
+
+  05 Jun 2010; Mike Frysinger <vapier@gentoo.org> dfu-util-0.1.ebuild:
+  Version bump.
+
+  01 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  openmoko-dfu-util-5484.ebuild:
+  Stabilize for amd64/x86.
+
+  17 Oct 2009; Mike Frysinger <vapier@gentoo.org>
+  openmoko-dfu-util-5484.ebuild, openmoko-dfu-util-9999.ebuild:
+  Switch to virtual/libusb:0.
+
+*openmoko-dfu-util-5484 (19 Aug 2009)
+
+  19 Aug 2009; Mike Frysinger <vapier@gentoo.org>
+  +openmoko-dfu-util-5484.ebuild, openmoko-dfu-util-9999.ebuild:
+  Now that svn has settled, make a snapshot release.
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  openmoko-dfu-util-9999.ebuild:
+  Migrate to EAPI 2. Update libusb dependency atom (#270039).
+
+  28 Nov 2008; Peter Volkov <pva@gentoo.org> openmoko-dfu-util-9999.ebuild:
+  Install manual page.
+
+*openmoko-dfu-util-9999 (06 Sep 2008)
+
+  06 Sep 2008; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +openmoko-dfu-util-9999.ebuild:
+  Initial ebuild by mikael lammentausta, Florian Steinel, and Bastien
+  Lacoste #201920.
+
