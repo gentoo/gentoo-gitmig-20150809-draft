@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.90 2010/05/25 21:21:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.91 2010/06/05 19:04:50 phajdan.jr Exp $
+
+  05 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pycrypto-2.1.0.ebuild:
+  x86 stable wrt bug #319589
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> pycrypto-2.1.0.ebuild:
   stable amd64, bug 319589
