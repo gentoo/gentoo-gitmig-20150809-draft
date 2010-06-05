@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GSSAPI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.20 2010/04/24 15:11:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.21 2010/06/05 08:32:48 tove Exp $
+
+*GSSAPI-0.28 (05 Jun 2010)
+
+  05 Jun 2010; Torsten Veller <tove@gentoo.org> +GSSAPI-0.28.ebuild:
+  Version bump
 
 *GSSAPI-0.27 (24 Apr 2010)
 
