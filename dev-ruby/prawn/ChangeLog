@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/prawn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/ChangeLog,v 1.6 2010/04/30 20:26:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/ChangeLog,v 1.7 2010/06/06 10:53:48 graaff Exp $
+
+*prawn-0.8.4 (06 Jun 2010)
+
+  06 Jun 2010; Hans de Graaff <graaff@gentoo.org> +prawn-0.8.4.ebuild:
+  Version bump for prawn 0.8.4.
 
   30 Apr 2010; Hans de Graaff <graaff@gentoo.org> -prawn-0.4.1.ebuild:
   Remove old version.
