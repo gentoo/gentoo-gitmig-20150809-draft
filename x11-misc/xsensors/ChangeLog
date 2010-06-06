@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xsensors
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.27 2009/10/27 08:44:07 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.28 2010/06/06 09:24:56 ssuominen Exp $
+
+*xsensors-0.70 (06 Jun 2010)
+
+  06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> +xsensors-0.70.ebuild:
+  Version bump wrt #269057 by Zeev Tarantov.
 
   27 Oct 2009; Thilo Bangert <bangert@gentoo.org> xsensors-0.60.ebuild:
   depend on old version of lm_sensors (bug #269057)
