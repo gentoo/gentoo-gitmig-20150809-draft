@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.1.ebuild,v 1.2 2010/04/14 12:28:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.1-r1.ebuild,v 1.1 2010/06/06 06:26:40 ssuominen Exp $
 
 EAPI=2
 
 GCONF_DEBUG=no
 PYTHON_DEPEND="2:2.6"
 
-inherit gnome2 python multilib
+inherit eutils gnome2 python multilib
 
 DESCRIPTION="A dropdown terminal made for the GNOME desktop"
 HOMEPAGE="http://guake.org/"
@@ -23,6 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	x11-libs/vte[python]
 	dev-python/notify-python
 	dev-python/gconf-python
+	dev-python/dbus-python
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -34,6 +35,11 @@ pkg_setup() {
 		--disable-dependency-tracking
 		$(use_enable nls)"
 	python_set_active_version 2
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-rename-tab-problem.patch
+	gnome2_src_prepare
 }
 
 src_install() {
