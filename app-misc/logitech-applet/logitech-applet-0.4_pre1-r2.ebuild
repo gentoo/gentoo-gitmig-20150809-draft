@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1-r2.ebuild,v 1.5 2009/09/23 16:04:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1-r2.ebuild,v 1.6 2010/06/06 06:19:19 ssuominen Exp $
 
 inherit eutils
 
@@ -9,8 +9,8 @@ MY_P=${MY_P/-applet/_applet}
 
 DESCRIPTION="Control utility for some special features of some special
 			Logitech USB mice!"
-HOMEPAGE="http://freshmeat.net/projects/logitech_applet/"
-SRC_URI="http://www.frogmouth.net/${MY_P}.tar.gz"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
