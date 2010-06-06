@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.2e.ebuild,v 1.1 2010/06/05 18:09:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.2e-r1.ebuild,v 1.1 2010/06/06 21:16:19 hwoarang Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" prefix="${DESTTREE}" mandir="${DOCDESTTREE}" install \
+	emake DESTDIR="${D}" prefix="${DESTTREE}" mandir="${DESTTREE}/share/man" install \
 		|| die "emake install failed"
 	dodoc README ChangeLog rtmpdump.1.html rtmpgw.8.html || die "dodoc failed"
 }
