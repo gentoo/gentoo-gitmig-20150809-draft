@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.3 2010/06/06 04:46:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.4 2010/06/06 21:50:32 ali_bush Exp $
 
 EAPI=3
 
 JAVA_PKG_IUSE="doc source"
+JAVA_PKG_BSFIX="off"
 
 inherit java-pkg-2 java-ant-2
 
@@ -30,11 +31,13 @@ DEPEND=">=virtual/jdk-1.5
 
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
+java_prepare() {
+	cp "${FILESDIR}/build.xml" build.xml || die
+
 	find . -iname '*.jar' -delete
 
 	sed -i -e '/ivy:retrieve/d' build.xml || die
-
+	sed -i -e 's_\.\./ivy_ivy_' build.xml || die
 	sed -i -e \
 		's/clazz.getConstructors/(Constructor<T>[])clazz.getConstructors/' \
 		src/org/dynalang/mop/beans/BeanMetaobjectProtocol.java || die
@@ -53,5 +56,5 @@ src_test() {
 src_install() {
 	java-pkg_newjar "build/${MY_P}.jar"
 	use doc && java-pkg_dojavadoc build/doc/javadoc
-	use source && java-pkg_dosrc src/*
+	use source && java-pkg_dosrc src/org
 }

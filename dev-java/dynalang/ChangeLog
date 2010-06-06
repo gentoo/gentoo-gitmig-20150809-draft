@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dynalang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/ChangeLog,v 1.1 2010/06/05 08:24:22 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/ChangeLog,v 1.2 2010/06/06 21:50:32 ali_bush Exp $
+
+  06 Jun 2010; Alistair Bush <ali_bush@gentoo.org> dynalang-0.4.ebuild,
+  +files/build.xml:
+  Fix issue when builting as root.
 
 *dynalang-0.4 (05 Jun 2010)
 
