@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.3-r1.ebuild,v 1.1 2009/12/23 15:36:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.3-r1.ebuild,v 1.2 2010/06/06 13:30:02 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -48,9 +48,9 @@ pkg_postinst() {
 	elog "Then reconfigure Fluxbox (using the menu) and hit <WinKey>-<r>"
 	elog
 	elog "The default system-wide definition file for associating file"
-	elog "extensions with applications is /usr/share/grun/gassoc, the"
-	elog "default system-wide definition file for recognized console"
-	elog "applications is /usr/share/grun/consfile. They can be overridden"
+	elog "extensions with applications is /etc/gassoc, the default"
+	elog "system-wide definition file for recognized console"
+	elog "applications is /etc/consfile. They can be overridden"
 	elog "on a per user basis by ~/.gassoc and ~/.consfile respectively."
 	elog
 	elog "To change the default terminal application grun uses, adjust the"
