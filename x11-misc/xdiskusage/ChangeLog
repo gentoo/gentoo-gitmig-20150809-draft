@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xdiskusage
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.16 2008/11/14 19:04:09 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.17 2010/06/06 16:54:14 ssuominen Exp $
+
+*xdiskusage-1.48_p20100606 (06 Jun 2010)
+
+  06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xdiskusage-1.48_p20100606.ebuild:
+  Snapshot from upstream CVS and link against x11-libs/fltk:2 instead of
+  :1.1 wrt #238460.
 
   14 Nov 2008; Santiago M. Mola <coldwind@gentoo.org>
   xdiskusage-1.48.ebuild:
