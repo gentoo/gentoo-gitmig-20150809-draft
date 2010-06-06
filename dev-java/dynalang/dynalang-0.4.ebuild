@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.2 2010/06/05 08:36:33 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dynalang/dynalang-0.4.ebuild,v 1.3 2010/06/06 04:46:03 mr_bones_ Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE=""
+IUSE="test"
 
 RDEPEND=">=virtual/jre-1.5"
 DEPEND=">=virtual/jdk-1.5
