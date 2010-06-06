@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/namespace-clean
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.7 2010/03/19 06:52:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.8 2010/06/06 12:44:28 tove Exp $
+
+*namespace-clean-0.17 (06 Jun 2010)
+
+  06 Jun 2010; Torsten Veller <tove@gentoo.org>
+  +namespace-clean-0.17.ebuild:
+  Version bump
 
 *namespace-clean-0.14 (19 Mar 2010)
 
