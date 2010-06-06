@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.3.2.ebuild,v 1.4 2010/05/21 21:56:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.3.2.ebuild,v 1.5 2010/06/06 09:13:01 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://www.vpython.org/contents/download/${MY_P}.tar.bz2"
 
 IUSE="doc examples"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 LICENSE="visual"
 
 RDEPEND=">=dev-libs/boost-1.41.0[python]
