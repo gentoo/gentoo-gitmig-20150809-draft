@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmetronome/kmetronome-0.9.3.ebuild,v 1.2 2010/04/28 00:09:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmetronome/kmetronome-0.10.0.ebuild,v 1.1 2010/06/06 15:28:18 ssuominen Exp $
 
 EAPI=2
-# FIXME. Doesn't work with KDE_LINGUAS added
-# KDE_LINGUAS="cs es fr"
 inherit kde4-base
 
 DESCRIPTION="MIDI based metronome using ALSA sequencer"
