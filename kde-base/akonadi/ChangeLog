@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.61 2010/06/06 14:41:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.62 2010/06/06 16:15:29 jmbsvicetto Exp $
+
+  06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  akonadi-4.4.4.ebuild:
+  [kde-base/akonadi-4.4.4] Dropped ~alpha and ~ia64 keywords as they require
+  arches to unmask the semantic-desktop use flag.
 
 *akonadi-4.4.4 (06 Jun 2010)
 
