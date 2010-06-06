@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.41 2010/05/31 20:56:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.42 2010/06/06 19:29:51 scarabeus Exp $
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
+# requires more keywording per bug #323003
+kde-base/kde-meta sdk
 
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Apr 2010)
 # This is for x86/amd64 only

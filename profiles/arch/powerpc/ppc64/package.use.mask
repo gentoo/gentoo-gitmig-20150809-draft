@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.15 2010/05/30 10:51:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.16 2010/06/06 19:29:52 scarabeus Exp $
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
+# requires more keywording per bug #323003
+kde-base/kde-meta sdk
 
 # Kacper Kowalik <xarthisius@gentoo.org> (30 May 2010)
 # quesoglc is not keyworded

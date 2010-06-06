@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4229 2010/06/06 10:42:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4230 2010/06/06 19:29:51 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  arch/powerpc/package.use.mask, arch/powerpc/ppc64/package.use.mask:
+  Mask kde-base/kde-meta sdk useflag on ppc/ppc64.
 
   06 Jun 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop mask for no longer existing mutt-1.5.20-r14
