@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.1.ebuild,v 1.7 2010/04/05 18:08:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.1.ebuild,v 1.8 2010/06/06 12:43:35 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -23,6 +23,15 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-inline.patch
+
+	cat >po/POTFILES.skip <<-EOF
+	src/icons.cpp
+	xfe.desktop.in.in
+	xfi.desktop.in.in
+	xfp.desktop.in.in
+	xfv.desktop.in.in
+	xfw.desktop.in.in
+	EOF
 }
 
 src_configure() {
