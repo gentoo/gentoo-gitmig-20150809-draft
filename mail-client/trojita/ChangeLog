@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.3 2010/04/17 11:18:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.4 2010/06/06 10:53:41 polynomial-c Exp $
+
+  06 Jun 2010; Lars Wendler <polynomial-c@gentoo.org> trojita-9999.ebuild:
+  Added qt-sql dependency (proxy commit for jkt)
 
   17 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
   Commit jkt's change for the build sytem.

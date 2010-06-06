@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.3 2010/04/17 11:18:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.4 2010/06/06 10:53:41 polynomial-c Exp $
 
 EAPI=2
 
@@ -20,6 +20,7 @@ RESTRICT="test"
 
 RDEPEND="
 	>=x11-libs/qt-gui-4.6.0:4
+	>=x11-libs/qt-sql-4.6.0:4[sqlite]
 	>=x11-libs/qt-webkit-4.6.0:4
 "
 DEPEND="${RDEPEND}
