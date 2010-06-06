@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5630 2010/06/06 14:07:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5631 2010/06/06 14:47:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1405,7 +1405,6 @@ kde-base/kopete:urlpicpreview - Enables in conversation pictures preview.
 kde-base/kopete:webpresence - Show your status and some more information on web.
 kde-base/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
 kde-base/kopete:yahoo - Enable yahoo protocol support.
-kde-base/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
 kde-base/kpilot:avantgo - Add support for syncing Avantgo accounts
 kde-base/krdc:rdp - Enable runtime dependency for net-misc/rdesktop
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
