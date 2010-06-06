@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.308 2010/06/06 00:59:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.309 2010/06/06 01:01:52 beandog Exp $
+
+  06 Jun 2010; Steve Dibb <beandog@gentoo.org> alsa-driver-1.0.22.1.ebuild,
+  alsa-driver-1.0.23.ebuild, alsa-driver-9999.ebuild:
+  Fix CONFIG_CHECK typo, bug 320583
 
 *alsa-driver-1.0.23 (06 Jun 2010)
 
