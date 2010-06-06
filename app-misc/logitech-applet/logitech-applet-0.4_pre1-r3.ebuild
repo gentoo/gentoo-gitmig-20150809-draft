@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1-r3.ebuild,v 1.2 2010/06/06 06:19:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1-r3.ebuild,v 1.3 2010/06/06 17:04:58 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -30,4 +30,7 @@ src_prepare() {
 src_install() {
 	dosbin logitech_applet || die
 	dodoc AUTHORS ChangeLog README doc/article.txt
+
+	docinto examples
+	dodoc "${FILESDIR}"/40-logitech_applet.rules
 }
