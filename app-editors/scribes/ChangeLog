@@ -1,15 +1,16 @@
 # ChangeLog for app-editors/scribes
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/ChangeLog,v 1.5 2008/11/24 13:33:11 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/ChangeLog,v 1.6 2010/06/06 11:28:04 ssuominen Exp $
 
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
-  Remove my old e-mail drac at gentoo.org from metadata.xml and leave this
-  package for the desktop-misc herd.
+  06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  scribes-0.3.3.3.ebuild, +files/scribes-0.3.3.3-sandbox.patch:
+  Fix sandbox violation wrt #296891 by Kevin Pyle. Force Python 2.x wrt
+  #311177.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> scribes-0.3.3.3.ebuild:
   python_mod_optimize is ROOT aware.
 
-  23 Jan 2008; Samuli Suominen <drac@gentoo.org> scribes-0.3.3.3.ebuild:
+  23 Jan 2008; Samuli Suominen <ssuominen@gentoo.org> scribes-0.3.3.3.ebuild:
   Pass --disable-scrollkeeper in pkg_setup.
 
   21 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
@@ -18,6 +19,6 @@
 
 *scribes-0.3.3.3 (13 Jan 2008)
 
-  13 Jan 2008; Samuli Suominen <drac@gentoo.org> +scribes-0.3.3.3.ebuild:
+  13 Jan 2008; Samuli Suominen <ssuominen@gentoo.org> +scribes-0.3.3.3.ebuild:
   Initial commit for bug 106964, thanks to Mystilleef.
 
