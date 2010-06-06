@@ -1,24 +1,23 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128-r1.ebuild,v 1.5 2009/03/29 16:03:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128-r1.ebuild,v 1.6 2010/06/06 20:27:25 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="A collection of FluxBox themes from FluxMod"
 HOMEPAGE="http://tenr.de/styles/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
-
 IUSE=""
-DEPEND=">=sys-apps/sed-4"
-RDEPEND=">=x11-wm/fluxbox-0.9.11"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+RDEPEND=""
+DEPEND=">=sys-apps/sed-4"
+
+src_prepare() {
 	# comment out every rootcommand
 	find . -name '*.cfg' -exec \
 		sed -i "{}" -e 's-^\(rootcommand\)-!!! \1-i' \;
@@ -27,11 +26,10 @@ src_unpack() {
 }
 
 src_install() {
-	mkdir -p "${D}"/usr/share/fluxbox/fluxmod/styles/ || die "mkdir eeked"
 	insinto /usr/share/fluxbox/fluxmod/styles
-	doins -r * || die "doins failed"
+	doins -r * || die
 	insinto /usr/share/fluxbox/menu.d/styles
-	doins "${FILESDIR}"/styles-menu-fluxmod
+	doins "${FILESDIR}"/styles-menu-fluxmod || die
 }
 
 pkg_postinst() {
@@ -52,5 +50,4 @@ pkg_postinst() {
 	einfo "these to work, fluxbox must be built with USE=\"imlib\" and"
 	einfo "imlib2 must be built with USE=\"png\"."
 	einfo
-	epause
 }
