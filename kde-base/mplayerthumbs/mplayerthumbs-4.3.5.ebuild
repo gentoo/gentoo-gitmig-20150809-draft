@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/mplayerthumbs-4.3.5.ebuild,v 1.3 2010/03/11 18:33:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/mplayerthumbs-4.3.5.ebuild,v 1.4 2010/06/06 21:25:55 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -20,12 +20,7 @@ RDEPEND="
 		$(add_kdebase_dep dolphin)
 		$(add_kdebase_dep konqueror)
 	)
-	mplayer? (
-		|| (
-			media-video/mplayer
-			media-video/mplayer-bin
-		)
-	)
+	mplayer? ( media-video/mplayer )
 "
 
 src_configure() {
