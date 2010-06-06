@@ -1,6 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.24 2010/03/28 18:09:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.25 2010/06/06 17:57:11 jmbsvicetto Exp $
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (06 Jun 2010)
+# Requires support for semantic-desktop
+kde-base/kdeplasma-addons rss
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (06 Jun 2010)
+# Requires support for semantic-desktop
+kde-base/plasma-workspace rss
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jan 2010)
 # Needs kde4 stable
