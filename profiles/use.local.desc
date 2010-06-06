@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5629 2010/06/06 07:47:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5630 2010/06/06 14:07:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -959,6 +959,10 @@ dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using objec
 dev-perl/App-Nopaste:clipboard - copying of URLs with -x/--copy
 dev-perl/App-Nopaste:github - Github authentication
 dev-perl/App-Nopaste:pastebin - pastebin.com support
+dev-perl/DBIx-Class:admin -  Modules required for the DBIx::Class administrative library 
+dev-perl/DBIx-Class:admin_script -  Modules required for the CLI DBIx::Class interface dbicadmin 
+dev-perl/DBIx-Class:deploy -  Modules required for "deploy" in DBIx::Class::Storage::DBI and "deploymen_statements" in DBIx::Class::Storage::DBI 
+dev-perl/DBIx-Class:replicated -  Modules required for DBIx::Class::Storage::DBI::Replicated 
 dev-perl/Eidetic:auth - Enables dev-perl/Apache-AuthTicket based cookie authentication
 dev-perl/GD:animgif - Enable animated gif support
 dev-perl/Graphics-ColorNames:recommended - Install recommended support modules
