@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48_p20100606.ebuild,v 1.1 2010/06/06 16:54:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48_p20100606.ebuild,v 1.2 2010/06/06 20:06:07 ssuominen Exp $
 
 EAPI=3
 inherit autotools flag-o-matic
 
 DESCRIPTION="front end to xdu for viewing disk usage graphically under X11"
 HOMEPAGE="http://xdiskusage.sourceforge.net/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
