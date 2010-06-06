@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.4.4.ebuild,v 1.1 2010/06/06 14:42:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.4.4-r1.ebuild,v 1.1 2010/06/06 18:08:42 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -39,7 +39,6 @@ PLUGINS="+addbookmarks +autoreplace +contactnotes +highlight +history latex
 
 # Available protocols
 #
-#	bonjour: NO DEPS
 #	gadu: net-libs/libgadu @since 4.3
 #	groupwise: app-crypt/qca:2
 #	irc: NO DEPS, probably will fail so inform user about it
@@ -53,8 +52,9 @@ PLUGINS="+addbookmarks +autoreplace +contactnotes +highlight +history latex
 #   testbed: NO DEPS
 #	winpopup: NO DEPS
 #	yahoo: NO DEPS
-PROTOCOLS="bonjour gadu groupwise +jabber jingle meanwhile msn oscar qq
-skype sms testbed winpopup yahoo"
+#	zeroconf (bonjour): NO DEPS
+PROTOCOLS="gadu groupwise +jabber jingle meanwhile msn oscar qq skype
+sms testbed winpopup yahoo zeroconf"
 
 # disabled protocols
 #   telepathy: net-libs/decibel
@@ -121,6 +121,7 @@ src_configure() {
 	# enable protocols
 	for x in ${PROTOCOLS}; do
 		[[ ${x/+/} = msn ]] && x2=Libmsn || x2=""
+		[[ ${x/+/} = zeroconf ]] && x2=bonjour || x2=""
 		mycmakeargs+=($(cmake-utils_use_with ${x/+/} ${x2}))
 	done
 
