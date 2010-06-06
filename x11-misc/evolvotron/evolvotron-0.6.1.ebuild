@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.6.1.ebuild,v 1.3 2010/01/04 22:14:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.6.1.ebuild,v 1.4 2010/06/06 09:42:13 ssuominen Exp $
 
 EAPI=2
-inherit qt4
+PYTHON_DEPEND="2:2.6"
+inherit python qt4-r2
 
 DESCRIPTION="Generative art image evolver"
 HOMEPAGE="http://sourceforge.net/projects/evolvotron/"
@@ -16,10 +17,13 @@ IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
-	dev-lang/python
 	dev-libs/boost"
 
 S=${WORKDIR}/${PN}
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_configure() {
 	eqmake4 main.pro
