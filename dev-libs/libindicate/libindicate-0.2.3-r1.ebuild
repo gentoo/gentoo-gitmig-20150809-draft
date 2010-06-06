@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3-r1.ebuild,v 1.2 2010/02/16 17:15:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3-r1.ebuild,v 1.3 2010/06/06 00:37:37 reavertm Exp $
 
 EAPI=2
 
@@ -24,6 +24,7 @@ RDEPEND="dev-libs/glib:2
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	dev-util/pkgconfig"
+
 src_prepare() {
 	# Make libindicator-gtk library optional
 	epatch "${FILESDIR}/${P}-optional-gtk-support.patch"
@@ -31,6 +32,7 @@ src_prepare() {
 	sed -e 's:-Werror::g' -i libindicate/Makefile.in || die "sed failed"
 	eautoreconf
 }
+
 src_configure() {
 	local my_conf
 
@@ -43,9 +45,11 @@ src_configure() {
 		$(use_enable doc)"
 	econf $my_conf
 }
+
 src_test() {
 	emake check || die "testsuite failed"
 }
+
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS || die "dodoc failed"
