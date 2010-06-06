@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xnee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.8 2010/02/13 20:25:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.9 2010/06/06 14:14:33 ssuominen Exp $
+
+*xnee-3.06 (06 Jun 2010)
+
+  06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> +xnee-3.06.ebuild:
+  Version bump.
 
   13 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> xnee-3.05.ebuild:
   Use virtualx.eclass for src_test wrt #304945 but because it still needs
