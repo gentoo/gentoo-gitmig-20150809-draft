@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/ifuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.4 2010/05/31 18:55:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.5 2010/06/06 16:49:41 xarthisius Exp $
+
+  06 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> ifuse-1.0.0.ebuild,
+  +files/ifuse-1.0.0-asneeded.patch:
+  Fixing build with --as-needed wrt bug 322667. Thanks Diego for the report.
+  Removing Chainsaw from metadata (bug 322667)
 
   31 May 2010; Thilo Bangert <bangert@gentoo.org> -ifuse-0.9.1.ebuild,
   -ifuse-0.9.5.ebuild:

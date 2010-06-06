@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.0.0.ebuild,v 1.1 2010/05/28 16:08:00 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ifuse-1.0.0.ebuild,v 1.2 2010/06/06 16:49:41 xarthisius Exp $
 
 EAPI=3
+
+inherit autotools eutils
 
 DESCRIPTION="Mount Apple iPhone/iPod Touch file systems for backup purposes"
 HOMEPAGE="http://libimobiledevice.org/"
@@ -13,14 +15,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=app-pda/libplist-1.3
+DEPEND=">=app-pda/libplist-1.3
 	>=app-pda/libimobiledevice-1.0.1
 	=dev-libs/glib-2*
 	sys-fs/fuse"
+RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+}
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS README || die
 }
 
 pkg_postinst() {
