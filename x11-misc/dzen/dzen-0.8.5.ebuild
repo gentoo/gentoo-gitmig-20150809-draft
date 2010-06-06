@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.8.5.ebuild,v 1.5 2009/09/30 04:45:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.8.5.ebuild,v 1.6 2010/06/06 09:49:15 ssuominen Exp $
 
 inherit toolchain-funcs multilib
 
@@ -27,6 +27,10 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i \
+		-e 's:../dzen2:dzen2:' \
+		gadgets/kittscanner.sh || die
+
 	sed -e "s:/usr/local:/usr:g" \
 		-e 's:-Os::g' \
 		-e "s:CFLAGS =:CFLAGS +=:g" \
@@ -64,6 +68,7 @@ src_install() {
 	if ! use minimal ; then
 		cd "${S}"/gadgets
 		emake DESTDIR="${D}" install || die "emake gadgets install failed"
+		dobin *.sh || die
 		dodoc README* || die
 	fi
 }
