@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/shared-desktop-ontologies-0.4.ebuild,v 1.2 2010/05/19 13:41:46 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/shared-desktop-ontologies-0.4.ebuild,v 1.3 2010/06/06 01:51:02 reavertm Exp $
 
 EAPI="2"
 
@@ -15,4 +15,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
-DOCS="AUTHORS ChangeLog README"
+DOCS=(AUTHORS ChangeLog README)
