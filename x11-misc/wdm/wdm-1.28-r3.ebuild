@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r2.ebuild,v 1.9 2010/03/13 13:24:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.28-r3.ebuild,v 1.1 2010/06/06 14:01:55 ssuominen Exp $
 
-inherit pam
+EAPI=2
+inherit eutils pam
 
 DESCRIPTION="WINGs Display Manager"
 HOMEPAGE="http://voins.program.ru/wdm/"
@@ -13,29 +14,31 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="truetype pam selinux"
 
-RDEPEND=">=x11-wm/windowmaker-0.70.0
+COMMON_DEPEND=">=x11-wm/windowmaker-0.70.0
 	truetype? ( x11-libs/libXft )
 	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libXpm
 	pam? ( virtual/pam )"
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
-RDEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
 	pam? ( >=sys-auth/pambase-20080219.1 )"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-terminateServer.patch
+}
+
+src_configure() {
 	econf \
 		--exec-prefix=/usr \
 		--with-wdmdir=/etc/X11/wdm \
-		$(use_enable pam)\
-		$(use_enable selinux) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable pam) \
+		$(use_enable selinux)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	rm -f "${D}/etc/pam.d/wdm"
+	emake DESTDIR="${D}" install || die
+	rm -f "${D}"/etc/pam.d/wdm
 	pamd_mimic system-local-login wdm auth account password session
 }
