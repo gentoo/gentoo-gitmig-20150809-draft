@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.20.0.ebuild,v 1.3 2010/05/24 14:49:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.20.0.ebuild,v 1.4 2010/06/06 09:25:08 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/${PN}/${P}.tar.gz http://pypi.python.org/pack
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~ia64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="doc examples test tk"
 
 DEPEND=">=dev-python/logilab-common-0.44.0
