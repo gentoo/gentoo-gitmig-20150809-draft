@@ -1,0 +1,11 @@
+# ChangeLog for games-board/pasang-emas
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/ChangeLog,v 1.1 2010/06/06 07:30:50 mr_bones_ Exp $
+
+*pasang-emas-2.1.0 (06 Jun 2010)
+
+  06 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +pasang-emas-2.1.0.ebuild, +files/pasang-emas-2.1.0-build.patch,
+  +metadata.xml:
+  initial commit - ebuild and patch submitted by kirin yuri via bug #314767
+
