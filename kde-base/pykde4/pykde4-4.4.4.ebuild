@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.4.ebuild,v 1.1 2010/06/06 14:41:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.4.ebuild,v 1.2 2010/06/06 14:52:47 scarabeus Exp $
 
 EAPI="3"
 
@@ -13,13 +13,13 @@ inherit python kde4-meta
 
 DESCRIPTION="Python bindings for KDE4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="akonadi debug doc examples semantic-desktop"
+IUSE="debug doc examples semantic-desktop"
 
 # blocker added due to compatibility issues and error during compile time
 DEPEND="
 	!dev-python/pykde
 	$(add_kdebase_dep kdelibs 'opengl,semantic-desktop?')
-	akonadi? ( $(add_kdebase_dep kdepimlibs) )
+	semantic-desktop? ( $(add_kdebase_dep kdepimlibs 'semantic-desktop') )
 	aqua? ( >=dev-python/PyQt4-4.7[dbus,sql,svg,webkit,aqua] )
 	!aqua? ( >=dev-python/PyQt4-4.7[dbus,sql,svg,webkit,X] )
 "
@@ -45,7 +45,7 @@ src_configure() {
 		-DWITH_PolkitQt=OFF
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with akonadi KdepimLibs)
+		$(cmake-utils_use_with semantic-desktop KdepimLibs)
 	)
 
 	kde4-meta_src_configure
