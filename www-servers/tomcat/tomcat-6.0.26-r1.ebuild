@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.20.ebuild,v 1.4 2009/06/27 19:24:59 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.26-r1.ebuild,v 1.1 2010/06/06 12:32:34 caster Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -14,7 +14,7 @@ MY_P="apache-${P}-src"
 SLOT="6"
 SRC_URI="mirror://apache/${PN}/${PN}-6/v${PV/_/-}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
 IUSE=""
@@ -66,8 +66,8 @@ pkg_setup() {
 java_prepare() {
 	rm -v webapps/examples/WEB-INF/lib/*.jar || die
 
-	# bug # 178980
-	if use amd64 && [[ "${GENTOO_VM}" = "sun-jdk-1.5" ]] ; then
+	# bug # 178980 and #312293
+	if use amd64; then
 		java-pkg_force-compiler ecj-3.3
 	fi
 
@@ -93,7 +93,7 @@ src_install() {
 	local CATALINA_BASE=/var/lib/${TOMCAT_NAME}/
 
 	# init.d, conf.d
-	newinitd "${FILESDIR}"/${SLOT}/tomcat.init ${TOMCAT_NAME}
+	newinitd "${FILESDIR}"/${SLOT}/tomcat.init.2 ${TOMCAT_NAME}
 	newconfd "${FILESDIR}"/${SLOT}/tomcat.conf ${TOMCAT_NAME}
 
 	# create dir structure
@@ -162,6 +162,10 @@ src_install() {
 
 	dodoc  "${S}"/{RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/tomcat-users.xml
+
+	#install *.sh scripts bug #278059
+	exeinto /usr/share/${TOMCAT_NAME}/bin
+	doexe "${S}"/bin/*.sh
 }
 
 pkg_postinst() {
