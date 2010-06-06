@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.8 2010/06/06 06:53:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/expocity/expocity-2.6.2.1.ebuild,v 1.9 2010/06/06 09:35:46 ssuominen Exp $
 
 EAPI=2
 inherit gnome2
@@ -29,5 +29,5 @@ S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable xinerama)"
-	DOCS="AUTHORS Changelog HACKING NEWS README*"
+	DOCS="AUTHORS ChangeLog HACKING NEWS README*"
 }
