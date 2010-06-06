@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.8.ebuild,v 1.11 2010/06/05 17:26:00 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.8.ebuild,v 1.12 2010/06/06 14:19:33 arfrever Exp $
 
 EAPI=2
+PYTHON_DEPEND="python? 2:2.5"
 
 inherit eutils gnome2 fdo-mime multilib python
 
@@ -40,8 +41,7 @@ RDEPEND=">=dev-libs/glib-2.18.1
 	mng? ( media-libs/libmng )
 	pdf? ( >=app-text/poppler-0.12.3-r3[cairo] )
 	png? ( >=media-libs/libpng-1.2.2 )
-	python?	( >=dev-lang/python-2.5.0
-		>=dev-python/pygtk-2.10.4 )
+	python?	( >=dev-python/pygtk-2.10.4 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	svg? ( >=gnome-base/librsvg-2.8.0 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )"
@@ -82,6 +82,10 @@ pkg_setup() {
 		$(use_with svg librsvg) \
 		$(use_with tiff libtiff) \
 		$(use_with wmf)"
+
+	if use python; then
+		python_set_active_version 2
+	fi
 }
 
 pkg_postinst() {
@@ -94,6 +98,6 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_pkg_postrm
 
-	python_mod_cleanup /usr/$(get_libdir)/gimp/2.0/python \
+	use python && python_mod_cleanup /usr/$(get_libdir)/gimp/2.0/python \
 		/usr/$(get_libdir)/gimp/2.0/plug-ins
 }
