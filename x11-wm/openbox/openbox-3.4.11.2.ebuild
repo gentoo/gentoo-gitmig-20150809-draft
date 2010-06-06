@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.2 2010/06/05 20:58:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.3 2010/06/06 07:40:21 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
-	xinerama? ( x11-proto/xineramaproto )"
+	x11-proto/xineramaproto"
 
 S=${WORKDIR}/${MY_P}
 
