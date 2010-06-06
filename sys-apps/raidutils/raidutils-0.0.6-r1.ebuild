@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r1.ebuild,v 1.3 2010/01/22 06:54:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r1.ebuild,v 1.4 2010/06/06 00:33:54 ssuominen Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://i2o.shadowconnect.com/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=sys-kernel/linux-headers-2.6"
