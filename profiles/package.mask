@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11599 2010/06/06 10:42:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11600 2010/06/06 15:36:22 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -594,11 +594,6 @@ dev-perl/Class-XSAccessor-Array
 # Samuli Suominen <ssuominen@gentoo.org> (16 Feb 2010)
 # API breakage.   Masked for testing.
 >=x11-libs/libxklavier-5
-
-# Ben de Groot <yngwin@gentoo.org> (09 Feb 2010)
-# Mask pending removal on 2010-03-09. Upstream dead, open bug #227717,
-# alternatives exist (e.g. media-gfx/feh)
-x11-misc/bbrb
 
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
 # Upstream discontinued the split of -community and -enterprise specific
