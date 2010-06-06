@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/altermime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.15 2010/05/03 16:59:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.16 2010/06/06 01:14:18 ssuominen Exp $
+
+  06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  altermime-0.3.10.ebuild,
+  +files/altermime-0.3.10-MIME_headers-overflow.patch:
+  Fix building with _FORTIFY_SOURCE=2 wrt #320785 by Kevin Pyle.
 
 *altermime-0.3.10 (03 May 2010)
 

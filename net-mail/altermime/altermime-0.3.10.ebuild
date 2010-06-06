@@ -1,31 +1,34 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/altermime-0.3.10.ebuild,v 1.1 2010/05/03 16:59:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/altermime-0.3.10.ebuild,v 1.2 2010/06/06 01:14:18 ssuominen Exp $
 
-inherit toolchain-funcs eutils
+EAPI=2
+inherit eutils toolchain-funcs
 
 DESCRIPTION=" alterMIME is a small program which is used to alter your mime-encoded mailpacks"
 SRC_URI="http://www.pldaniels.com/altermime/${P}.tar.gz"
 HOMEPAGE="http://pldaniels.com/altermime/"
 
 LICENSE="Sendmail"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~s390 ~x86"
 IUSE=""
-SLOT="0"
 
-src_unpack() {
-	unpack ${A}
-	sed -i -e "/^CFLAGS[[:space:]]*=/ s/-O2/${CFLAGS}/" \
+src_prepare() {
+	sed -i \
+		-e "/^CFLAGS[[:space:]]*=/ s/-O2/${CFLAGS}/" \
 		-e 's/${CFLAGS} altermime.c/${CFLAGS} ${LDFLAGS} altermime.c/' \
-		"${S}"/Makefile || die "sed failed."
-	epatch "${FILESDIR}/${P}-fprintf-fixes.patch"
+		Makefile || die
+
+	epatch "${FILESDIR}"/${P}-fprintf-fixes.patch \
+		"${FILESDIR}"/${P}-MIME_headers-overflow.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed."
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install () {
-	dobin altermime || die "dobin failed."
-	dodoc CHANGELOG LICENCE README || die "dodoc failed."
+	dobin altermime || die
+	dodoc CHANGELOG README || die
 }
