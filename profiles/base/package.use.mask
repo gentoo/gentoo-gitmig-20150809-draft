@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.139 2010/06/05 15:36:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.140 2010/06/06 01:27:44 reavertm Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -53,9 +53,9 @@ sci-chemistry/gamess mpi
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2009)
 # Not ready for stable anytime soon.
-<kde-base/kdeadmin-meta-4.4.0 cups
-<kde-base/kdeutils-meta-4.4.0 cups
-<kde-base/plasma-workspace-4.4.0 google-gadgets
+<kde-base/kdeadmin-meta-4.5.0 cups
+<kde-base/kdeutils-meta-4.5.0 cups
+<kde-base/plasma-workspace-4.5.0 google-gadgets
 
 # Alexey Shvetsov <alexxy@gentoo.org> (25 Nov 2009)
 # mask infiniband use flag for some packages since infiniband software
