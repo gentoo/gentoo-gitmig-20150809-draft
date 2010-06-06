@@ -1,16 +1,25 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.15 2010/06/06 00:59:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.23.ebuild,v 1.1 2010/06/06 00:59:52 beandog Exp $
 
-inherit linux-mod flag-o-matic eutils multilib autotools git
+inherit autotools linux-mod flag-o-matic eutils multilib
+
+MY_P="${P/_rc/rc}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
 
-LICENSE="GPL-2 LGPL-2.1"
+if [[ ${MY_P} == ${MY_P/_p*/} ]]; then
+	SRC_URI="mirror://alsaproject/driver/${MY_P}.tar.bz2"
+else # Gentoo snapshots
+	SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
+fi
+
+LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="oss debug"
 
 IUSE_CARDS="hrtimer rtctimer hpet pcsp seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401
@@ -37,16 +46,13 @@ for iuse_card in ${IUSE_CARDS}; do
 	IUSE="${IUSE} alsa_cards_${iuse_card}"
 done
 
-RDEPEND="virtual/modutils
-	 !media-sound/snd-aoa"
+RDEPEND="virtual/modutils"
 DEPEND="${RDEPEND}
-	~media-sound/alsa-headers-${PV}
+	>=media-sound/alsa-headers-1.0.21
 	virtual/linux-sources
 	sys-apps/debianutils"
 
 PROVIDE="virtual/alsa"
-
-S="${WORKDIR}/alsa-driver"
 
 pkg_setup() {
 	# By default, drivers for all supported cards will be compiled.
@@ -61,7 +67,7 @@ pkg_setup() {
 	local PNP_DRIVERS="interwave interwave-stb"
 	local PNP_ERROR="Some of the drivers you selected require PnP support in your kernel (${PNP_DRIVERS}). Either enable PnP in your kernel or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
-	local ISA_DRIVERS="cs4232 msnd-pinnacle cs4231-lib adlib ad1816a ad1848 als100 azt2320
+	local ISA_DRIVERS="cs4232 msnd-pinnacle adlib ad1816a ad1848 als100 azt2320
 		cmi8330 cs4231 cs4236 dt019x  es968 es1688 es18xx gusclassic gusextreme gusmax
 		interwave interwave-stb opl3sa2 opti92x-ad1848 opti92x-cs4231 opti93x miro sb8
 		sb16 sbawe sb16_csp sgalaxy sscape wavefront"
@@ -71,22 +77,27 @@ pkg_setup() {
 		indigoio indigodj emu10k1 korg1212 maestro3 riptide ymfpci asihpi"
 	local FW_LOADER_ERROR="Some of the drivers you selected require 'Userspace firmware loading support' in your kernel (${FW_DRIVERS}). Either enable that feature or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
 
+	local PARPORT_DRIVERS="portman2x4"
+	local PARPORT_ERROR="Some if the drivers you selected require Parallel Port support (${PARPORT_DRIVERS}). Either enable that feature or trim which drivers get compiled using ALSA_CARDS in /etc/make.conf."
+
 	local TMP_ALSA_CARDS
 	local CHECK_PNP
 	local CHECK_ISA
 	local CHECK_FW
+	local CHECK_PARPORT
 	for card in ${ALSA_CARDS}; do
 		if has alsa_cards_${card} ${IUSE} && use alsa_cards_${card}; then
 			TMP_ALSA_CARDS="${TMP_ALSA_CARDS} ${card}"
 			has ${card} ${PNP_DRIVERS} && CHECK_PNP="PNP"
 			has ${card} ${ISA_DRIVERS} && CHECK_ISA="ISA"
 			has ${card} ${FW_DRIVERS} && CHECK_FW="FW_LOADER"
+			has ${card} ${PARPORT_DRIVERS} && CHECK_PARPORT="PARPORT"
 		fi
 	done
 	ALSA_CARDS="${TMP_ALSA_CARDS}"
 
-	local CONFIG_CHECK="!SND SOUND ${CHECK_PNP} ${CHECK_ISA} ${CHECK_FW}"
-	local SND_ERROR="ALSA is already compiled into the kernel."
+	local CONFIG_CHECK="!SND SOUND ${CHECK_PNP} ${CHECK_ISA} ${CHECK_FW} ${CHECK_PARPORT}"
+	local SND_ERROR="ALSA is already compiled into the kernel. This is the recommended configuration, don't emerge alsa-driver."
 	local SOUND_ERROR="Your kernel doesn't have sound support enabled."
 	local SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.	 Please disable them and re-emerge alsa-driver."
 
@@ -104,16 +115,12 @@ pkg_setup() {
 }
 
 src_unpack() {
-	EGIT_REPO_URI="git://git.alsa-project.org/alsa-driver.git" S="${WORKDIR}/alsa-driver" git_src_unpack
-	EGIT_REPO_URI="git://git.alsa-project.org/alsa-kmirror.git" EGIT_PROJECT="alsa-kmirror" S="${WORKDIR}/alsa-driver/alsa-kernel" git_src_unpack
-	S="${WORKDIR}/alsa-driver"
+	unpack ${A}
+
+	cd "${S}"
 
 	convert_to_m "${S}/Makefile"
 	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"
-
-	cd "${S}"
-	emake ALSAKERNELDIR="${S}/alsa-kernel" all-deps
-	eaclocal
 	eautoconf
 }
 
@@ -124,14 +131,17 @@ src_compile() {
 	is-flag "-malign-double" && filter-flags "-fomit-frame-pointer"
 	append-flags "-I${KV_DIR}/arch/$(tc-arch-kernel)/include"
 
-	ALSAKERNELDIR="${S}/alsa-kernel" \
 	econf $(use_with oss) \
+		$(use_with oss pcm-oss-plugins) \
 		$(use_with debug debug full) \
 		--with-kernel="${KV_DIR}" \
 		--with-build="${KV_OUT_DIR}" \
-		--with-isapnp=yes \
+		--with-redhat=no \
+		--with-suse=no \
+		--with-isapnp=auto \
 		--with-sequencer \
-		--with-cards="${ALSA_CARDS}" || die "econf failed"
+		--with-cards="${ALSA_CARDS}" \
+		--with-card-options=all || die "econf failed"
 
 	# linux-mod_src_compile doesn't work well with alsa
 
@@ -145,7 +155,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install-modules || die "make install failed"
 
-	dodoc CARDS-STATUS FAQ README WARNING TODO
+	dodoc CARDS-STATUS FAQ README WARNING TODO SUPPORTED_KERNELS
 
 	if kernel_is 2 6; then
 		# mv the drivers somewhere they won't be killed by the kernel's make modules_install
@@ -156,18 +166,15 @@ src_install() {
 
 pkg_postinst() {
 	elog
-	elog "The alsasound initscript and modules.d/alsa have now moved to alsa-utils"
+	elog "Remember that all mixer channels will be MUTED by default."
+	elog "Use the 'alsamixer' program to unmute them, then save your"
+	elog "mixer settings with /etc/init.d/alsasound save"
 	elog
-	elog "Also, remember that all mixer channels will be MUTED by default."
-	elog "Use the 'alsamixer' program to unmute them."
-	elog
-	elog "If you experience problems, please report bugs to http://bugs.gentoo.org."
+	elog "If you experience problems, please try building the in-kernel"
+	elog "ALSA drivers instead. This ebuild is unsupported."
 	elog
 
 	linux-mod_pkg_postinst
-
-	elog "Check out the ALSA installation guide availible at the following URL:"
-	elog "http://www.gentoo.org/doc/en/alsa-guide.xml"
 
 	if kernel_is 2 6 && [ -e "${ROOT}/lib/modules/${KV_FULL}/kernel/sound" ]; then
 		# Cleanup if they had older alsa installed
@@ -175,6 +182,6 @@ pkg_postinst() {
 			rm -f ${file//${KV_FULL}\/${PN}/${KV_FULL}\/kernel\/sound}
 		done
 
-		find "${ROOT}/lib/modules/${KV_FULL}/kernel/sound" -type d -print0 | xargs rmdir
+		find "${ROOT}/lib/modules/${KV_FULL}/kernel/sound" -type d -print0 | xargs --null rmdir
 	fi
 }
