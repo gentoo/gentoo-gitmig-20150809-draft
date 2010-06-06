@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/jnr-posix-1.1.4.ebuild,v 1.1 2010/06/03 12:23:59 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/jnr-posix-1.1.4.ebuild,v 1.2 2010/06/06 21:57:45 ali_bush Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source test"
@@ -28,6 +28,11 @@ DEPEND=">=virtual/jdk-1.5
 		dev-java/ant-junit4
 		dev-java/jffi:0.4
 	)"
+
+src_unpack() {
+	unpack ${A}
+	mv w* "${P}" || die
+}
 
 java_prepare() {
 	find . -iname '*.jar' -delete
