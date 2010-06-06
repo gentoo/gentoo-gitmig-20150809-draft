@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/gluon
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/ChangeLog,v 1.1 2010/06/06 21:02:19 jmbsvicetto Exp $
+
+*gluon-0.70.0 (06 Jun 2010)
+
+  06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +gluon-0.70.0.ebuild, +metadata.xml:
+  [media-libs/gluon] Initial import to the tree of the first alpha release.
+
