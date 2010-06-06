@@ -1,6 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.29 2010/05/30 10:51:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.30 2010/06/06 17:57:53 jmbsvicetto Exp $
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (06 Jun 2010)
+# Requires support for semantic-desktop
+kde-base/kdeplasma-addons rss
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (06 Jun 2010)
+# Requires support for semantic-desktop
+kde-base/plasma-workspace rss
 
 # Kacper Kowalik <xarthisius@gentoo.org> (30 May 2010)
 # quesoglc is not keyworded
