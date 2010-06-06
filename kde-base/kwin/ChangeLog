@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.196 2010/05/04 00:51:37 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.197 2010/06/06 14:41:58 scarabeus Exp $
+
+*kwin-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kwin-4.4.2.ebuild,
+  -kwin-4.4.3.ebuild, +kwin-4.4.4.ebuild:
+  Remove old. Version bump.
 
   04 May 2010; Maciej Mrozowski <reavertm@gentoo.org> kwin-4.4.2.ebuild,
   +files/kwin-4.4.2-xinerama_cmake_automagic.patch, kwin-4.4.3.ebuild:

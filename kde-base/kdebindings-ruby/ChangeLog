@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebindings-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.10 2010/05/20 03:50:18 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.11 2010/06/06 14:42:08 scarabeus Exp $
+
+*kdebindings-ruby-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdebindings-ruby-4.4.2.ebuild, -kdebindings-ruby-4.4.3.ebuild,
+  +kdebindings-ruby-4.4.4.ebuild:
+  Remove old. Version bump.
 
   20 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
   kdebindings-ruby-4.4.2.ebuild, kdebindings-ruby-4.4.3.ebuild,

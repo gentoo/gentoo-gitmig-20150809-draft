@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.249 2010/05/15 17:00:22 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.250 2010/06/06 14:42:08 scarabeus Exp $
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kopete-4.4.2.ebuild,
+  -kopete-4.4.2-r1.ebuild, -kopete-4.4.3.ebuild, +kopete-4.4.4.ebuild,
+  metadata.xml:
+  Drop unused use desc.
+
+*kopete-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kopete-4.4.2.ebuild,
+  -kopete-4.4.2-r1.ebuild, -kopete-4.4.3.ebuild, +kopete-4.4.4.ebuild:
+  Remove old. Version bump.
 
   15 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
   kopete-4.4.2-r1.ebuild, kopete-4.4.3.ebuild:

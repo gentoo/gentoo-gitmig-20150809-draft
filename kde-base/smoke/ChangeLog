@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.102 2010/05/20 03:54:41 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.103 2010/06/06 14:42:02 scarabeus Exp $
+
+*smoke-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -smoke-4.4.2-r1.ebuild, -smoke-4.4.3-r1.ebuild, +smoke-4.4.4.ebuild:
+  Remove old. Version bump.
 
   20 May 2010; Maciej Mrozowski <reavertm@gentoo.org>
   -files/smoke-4.4.1-webkit-cmake.patch, smoke-4.4.2-r1.ebuild,

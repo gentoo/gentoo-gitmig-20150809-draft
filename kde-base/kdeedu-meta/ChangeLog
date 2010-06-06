@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.154 2010/05/03 21:29:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.155 2010/06/06 14:41:41 scarabeus Exp $
+
+*kdeedu-meta-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdeedu-meta-4.4.2.ebuild, -kdeedu-meta-4.4.3.ebuild,
+  +kdeedu-meta-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -kdeedu-meta-4.4.1.ebuild:

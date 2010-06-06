@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kinfocenter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.58 2010/05/03 21:45:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.59 2010/06/06 14:41:31 scarabeus Exp $
+
+*kinfocenter-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kinfocenter-4.4.2.ebuild, -kinfocenter-4.4.3.ebuild,
+  +kinfocenter-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -kinfocenter-4.4.1.ebuild:

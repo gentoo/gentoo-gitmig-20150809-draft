@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/attica
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.12 2010/05/28 22:44:15 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.13 2010/06/06 14:41:56 scarabeus Exp $
+
+*attica-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -attica-4.4.2.ebuild,
+  -attica-4.4.3.ebuild, +attica-4.4.4.ebuild:
+  Remove old. Version bump.
 
   28 May 2010; Maciej Mrozowski <reavertm@gentoo.org> attica-4.4.2.ebuild,
   attica-4.4.3.ebuild:

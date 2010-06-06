@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.49 2010/05/04 05:50:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.50 2010/06/06 14:42:14 scarabeus Exp $
+
+*okteta-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -okteta-4.4.2.ebuild,
+  -okteta-4.4.3.ebuild, +okteta-4.4.4.ebuild:
+  Remove old. Version bump.
 
   04 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -okteta-4.4.1.ebuild:
   Drop KDE SC 4.4.1

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeartwork-wallpapers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.143 2010/05/03 21:24:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.144 2010/06/06 14:41:25 scarabeus Exp $
+
+*kdeartwork-wallpapers-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdeartwork-wallpapers-4.4.2.ebuild, -kdeartwork-wallpapers-4.4.3.ebuild,
+  +kdeartwork-wallpapers-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -kdeartwork-wallpapers-4.4.1.ebuild:

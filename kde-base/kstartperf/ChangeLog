@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kstartperf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.42 2010/05/03 22:02:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.43 2010/06/06 14:41:32 scarabeus Exp $
+
+*kstartperf-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kstartperf-4.4.2.ebuild, -kstartperf-4.4.3.ebuild,
+  +kstartperf-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kstartperf-4.4.1.ebuild:
   Drop KDE SC 4.4.1

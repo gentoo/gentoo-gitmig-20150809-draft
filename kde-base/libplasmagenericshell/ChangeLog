@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/libplasmagenericshell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmagenericshell/ChangeLog,v 1.10 2010/05/19 13:51:07 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmagenericshell/ChangeLog,v 1.11 2010/06/06 14:42:09 scarabeus Exp $
+
+*libplasmagenericshell-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libplasmagenericshell-4.4.2.ebuild, -libplasmagenericshell-4.4.3.ebuild,
+  +libplasmagenericshell-4.4.4.ebuild:
+  Remove old. Version bump.
 
   19 May 2010; Robert Piasek <dagger@gentoo.org>
   libplasmagenericshell-4.4.3.ebuild:

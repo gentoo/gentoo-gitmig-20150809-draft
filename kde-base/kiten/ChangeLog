@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.148 2010/05/03 21:46:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.149 2010/06/06 14:41:37 scarabeus Exp $
+
+*kiten-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kiten-4.4.2.ebuild,
+  -kiten-4.4.3.ebuild, +kiten-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kiten-4.4.1.ebuild:
   Drop KDE SC 4.4.1

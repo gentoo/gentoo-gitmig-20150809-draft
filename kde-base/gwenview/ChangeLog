@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.62 2010/05/03 21:13:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.63 2010/06/06 14:41:30 scarabeus Exp $
+
+*gwenview-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -gwenview-4.4.2.ebuild, -gwenview-4.4.3.ebuild, +gwenview-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -gwenview-4.4.1.ebuild,
   -gwenview-4.4.1-r1.ebuild:

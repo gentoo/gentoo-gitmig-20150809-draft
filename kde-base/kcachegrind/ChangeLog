@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kcachegrind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.142 2010/05/03 21:18:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcachegrind/ChangeLog,v 1.143 2010/06/06 14:41:37 scarabeus Exp $
+
+*kcachegrind-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kcachegrind-4.4.2.ebuild, -kcachegrind-4.4.3.ebuild,
+  +kcachegrind-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org>
   -kcachegrind-4.4.1.ebuild:

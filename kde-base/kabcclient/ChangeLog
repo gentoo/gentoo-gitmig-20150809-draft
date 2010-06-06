@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.34 2010/05/03 21:13:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.35 2010/06/06 14:42:19 scarabeus Exp $
+
+*kabcclient-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kabcclient-4.4.2.ebuild, -kabcclient-4.4.3.ebuild,
+  +kabcclient-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kabcclient-4.4.1.ebuild:
   Drop KDE SC 4.4.1

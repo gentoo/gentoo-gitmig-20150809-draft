@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.131 2010/05/03 22:07:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.132 2010/06/06 14:41:58 scarabeus Exp $
+
+*kuiviewer-4.4.4 (06 Jun 2010)
+
+  06 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kuiviewer-4.4.2.ebuild, -kuiviewer-4.4.3.ebuild, +kuiviewer-4.4.4.ebuild:
+  Remove old. Version bump.
 
   03 May 2010; Alexey Shvetsov <alexxy@gentoo.org> -kuiviewer-4.4.1.ebuild:
   Drop KDE SC 4.4.1
