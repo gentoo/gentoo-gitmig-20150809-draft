@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.26 2010/06/03 21:07:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.27 2010/06/06 13:56:42 armin76 Exp $
+
+  06 Jun 2010; Raúl Porcel <armin76@gentoo.org> ppl-0.10.2-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #319885
 
   03 Jun 2010; Markus Meier <maekke@gentoo.org> ppl-0.10.2-r1.ebuild:
   arm stable, bug #319885
