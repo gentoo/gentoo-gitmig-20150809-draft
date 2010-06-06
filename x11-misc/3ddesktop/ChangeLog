@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/3ddesktop
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.39 2008/12/17 18:48:58 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.40 2010/06/06 12:03:37 ssuominen Exp $
+
+*3ddesktop-0.2.9-r1 (06 Jun 2010)
+
+  06 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +3ddesktop-0.2.9-r1.ebuild, +files/3ddesktop-0.2.9-gl_init.patch:
+  Move OpenGL calls after OpenGL initialization wrt #123762 by Yarda.
 
   17 Dec 2008; Christoph Mende <angelos@gentoo.org>
   +files/3ddesktop-0.2.9-asneeded.patch,
