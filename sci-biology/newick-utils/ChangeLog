@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/newick-utils
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/newick-utils/ChangeLog,v 1.1 2010/06/06 07:14:05 weaver Exp $
+
+*newick-utils-1.3.0 (06 Jun 2010)
+
+  06 Jun 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +newick-utils-1.3.0.ebuild:
+  New package, ebuild written by me
+
