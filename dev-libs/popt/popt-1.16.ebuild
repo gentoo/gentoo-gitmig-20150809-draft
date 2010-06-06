@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.16.ebuild,v 1.1 2010/05/10 18:33:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.16.ebuild,v 1.2 2010/06/06 03:11:51 ssuominen Exp $
 
 EAPI=3
 
@@ -16,8 +16,11 @@ IUSE="nls"
 RDEPEND="nls? ( virtual/libintl )"
 DEPEND="nls? ( sys-devel/gettext )"
 
-# FIXME
-RESTRICT="test"
+src_prepare() {
+	sed -i \
+		-e 's:lt-test1:test1:' \
+		testit.sh || die
+}
 
 src_configure() {
 	econf \
