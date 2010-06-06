@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r1.ebuild,v 1.2 2008/04/07 20:11:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4b-r1.ebuild,v 1.3 2010/06/06 17:18:37 ssuominen Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="SuxPanel is a complete rewrite of MacOS Style Panel, a light-weight X11 desktop panel"
-SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://suxpanel.berlios.de"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
