@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/opengfx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.5 2010/06/06 20:55:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.6 2010/06/07 15:01:34 hwoarang Exp $
+
+  07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> opengfx-0.2.4.ebuild:
+  Stable on amd64 wrt bug #321611
 
   06 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org> opengfx-0.2.4.ebuild:
   restrict test for bug #320797
