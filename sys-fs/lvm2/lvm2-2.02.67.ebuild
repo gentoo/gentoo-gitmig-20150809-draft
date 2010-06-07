@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.67.ebuild,v 1.1 2010/06/07 22:31:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.67.ebuild,v 1.2 2010/06/07 22:39:26 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools
@@ -135,7 +135,7 @@ src_configure() {
 	fi
 
 	myconf="${myconf}
-			--sbindir=/sbin 
+			--sbindir=/sbin
 			--with-staticdir=/sbin
 			--with-dmeventd-path=/sbin/dmeventd"
 	econf $(use_enable readline) \
