@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fotowall
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.11 2010/03/11 17:58:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.12 2010/06/07 15:58:34 hwoarang Exp $
+
+  07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> fotowall-0.9-r1.ebuild:
+  Stable on amd64 wrt bug #322443
 
   11 Mar 2010; Markos Chandras <hwoarang@gentoo.org> fotowall-0.8.2.ebuild:
   Stable on amd64 wrt bug #307593
