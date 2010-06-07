@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.117 2010/04/25 11:15:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.118 2010/06/07 06:43:56 jlec Exp $
+
+  07 Jun 2010; Justin Lecher <jlec@gentoo.org> p7zip-4.65.ebuild,
+  p7zip-4.65-r1.ebuild, p7zip-9.04.ebuild:
+  removed stupid gui based tests
 
   13 Apr 2010; Jeremy Olexa <darkside@gentoo.org> p7zip-9.04.ebuild:
   This sed statement for darwin cannot die because USE=-rar removes one of

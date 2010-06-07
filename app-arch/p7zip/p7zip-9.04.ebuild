@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.4 2010/04/13 18:04:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.04.ebuild,v 1.5 2010/06/07 06:43:56 jlec Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -86,9 +86,6 @@ src_compile() {
 
 src_test() {
 	emake test_7z test_7zr || die "test failed"
-	if use kde || use wxwidgets; then
-		emake test_7zG || die "GUI test failed"
-	fi
 }
 
 src_install() {
