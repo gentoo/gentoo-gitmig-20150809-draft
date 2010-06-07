@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.9.ebuild,v 1.1 2010/06/04 10:34:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.10.ebuild,v 1.1 2010/06/07 14:15:03 phajdan.jr Exp $
 
 inherit eutils
 
@@ -20,6 +20,8 @@ RDEPEND="!app-admin/logsentry
 	dev-perl/mime-construct
 	virtual/mailx
 	${DEPEND}"
+
+S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	enewgroup logcheck
