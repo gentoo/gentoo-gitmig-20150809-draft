@@ -1,0 +1,25 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/files/eblits/show_ip22_info-v2.eblit,v 1.1 2010/06/07 06:43:17 kumba Exp $
+
+# Eblit with information/warnings for IP22 (Indy/Indigo2 R4x00) users.
+#
+# If you need to add whitespace for formatting in 'einfo', 'ewarn', or 'eerror', use
+# \040 for a space instead of the standard space.  These functions will strip
+# redundant white space.
+
+show_ip22_info() {
+	echo -e ""
+	einfo "IP22 systems with an R5000 processor should work with this release."
+	einfo "The R4x00 series of processors tend to be rather flaky, especially the"
+	einfo "R4600.  If you have to run an R4x00 processor, then try to use an R4400."
+	einfo ""
+	einfo "Some Notes:"
+	einfo "\t- Supported graphics card right now is Newport (XL)."
+	einfo "\t- A driver for Extreme (XZ) supposedly exists, but its author"
+	einfo "\t\040\040has steadfastly refused to release the code for various reasons."
+	einfo "\t\040\040Any questions regarding its status should be directed to ${HILITE}onion${NORMAL}"
+	einfo "\t\040\040in ${GOOD}#mipslinux${NORMAL} on the Freenode IRC network.  Given that he is the"
+	einfo "\t\040\040author, he will know the most current status of the driver."
+	echo -e ""
+}

@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.132 2010/04/26 07:38:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.133 2010/06/07 06:43:17 kumba Exp $
+
+*mips-sources-2.6.34 (07 Jun 2010)
+
+  07 Jun 2010; Joshua Kinard <kumba@gentoo.org>
+  +files/eblits/show_ip22_info-v2.eblit, -mips-sources-2.6.27.21-r1.ebuild,
+  +mips-sources-2.6.34.ebuild, +files/eblits/show_ip32_info-v2.eblit,
+  -mips-sources-2.6.28.9-r1.ebuild:
+  Update to 2.6.34. Octane support is actually marked as testing in this
+  release (persuant to the last log entry). The patches apply, but have not
+  been built. New patches are in the works, as time permits. Current hold-up
+  is a lockup in the 8250 Serial Core when the system boots. This release
+  also adds an experimental RTC Driver for SGI O2 systems and their
+  Dallas/Maxim DS1685/DS1687 timekeeping chips. Slated to be submitted
+  upstream soon.
 
   26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update Manifest for deblob support in kernel-2 eclass.
