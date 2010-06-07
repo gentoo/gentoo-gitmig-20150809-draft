@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.257 2010/05/31 21:29:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.258 2010/06/07 11:02:06 chainsaw Exp $
+
+*asterisk-1.6.2.8 (07 Jun 2010)
+
+  07 Jun 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.8.ebuild,
+  +files/1.6.2/asterisk-1.6.2.8-gsm-pic.patch,
+  +files/1.6.2/asterisk-1.6.2.8-inband-indications.patch,
+  +files/1.6.2/asterisk-1.6.2.8-pri-missing-keyword.patch:
+  Version bump, conditional lua dependency by Francisco Javier in bug
+  #320517. Patching by Oliver Jaksch & Federico Santulli from bug #322427.
 
   31 May 2010; <chainsaw@gentoo.org> -asterisk-1.2.36.ebuild:
   Remove vulnerable version as per Alex "a3li" Legler in security bug
