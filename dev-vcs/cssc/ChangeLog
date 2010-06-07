@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cssc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.4 2010/03/30 16:32:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.5 2010/06/07 10:16:40 angelos Exp $
+
+  07 Jun 2010; Christoph Mende <angelos@gentoo.org> cssc-1.2.0.ebuild:
+  amd64 stable (bug #305659)
 
   30 Mar 2010; Jeroen Roovers <jer@gentoo.org> cssc-1.2.0.ebuild:
   Update HOMEPAGE.
