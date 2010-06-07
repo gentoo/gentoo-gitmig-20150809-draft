@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/ipp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.8 2009/10/06 20:51:51 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.9 2010/06/07 15:27:34 jlec Exp $
+
+*ipp-11.1.072 (07 Jun 2010)
+
+  07 Jun 2010; Justin Lecher <jlec@gentoo.org> +ipp-11.1.072.ebuild:
+  Version Bump #322029, mv to EAPI=3
 
 *ipp-11.1.056 (06 Oct 2009)
 
