@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.347 2010/05/09 18:55:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.348 2010/06/07 16:43:46 lack Exp $
+
+*vim-7.2.442 (07 Jun 2010)
+
+  07 Jun 2010; Jim Ramsay <lack@gentoo.org> +vim-7.2.442.ebuild:
+  vim-7.2.442 is released (Fixes bug #308927)
 
 *vim-7.2.416 (09 May 2010)
 
