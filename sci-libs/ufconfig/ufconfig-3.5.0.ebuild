@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.5.0.ebuild,v 1.1 2010/05/14 16:44:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.5.0.ebuild,v 1.2 2010/06/07 18:30:39 xarthisius Exp $
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
 MY_PN=UFconfig
 DESCRIPTION="Common configuration scripts for the SuiteSparse libraries"
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	dolib.so libufconfig.so.${PV} || die
-	dosym libufconfig.so.${PV} libufconfig.so
+	dosym libufconfig.so.${PV} /usr/$(get_libdir)/libufconfig.so
 	if use static-libs; then
 		dolib.a libufconfig.a || die
 	fi

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ufconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.18 2010/05/14 16:44:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.19 2010/06/07 18:30:39 xarthisius Exp $
+
+  07 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> ufconfig-3.5.0.ebuild:
+  Fixing install paths wrt bug 323107. Thanks Diego for the report
 
 *ufconfig-3.5.0 (14 May 2010)
 
