@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.2.ebuild,v 1.1 2010/06/03 10:57:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.2.ebuild,v 1.2 2010/06/07 08:30:23 polynomial-c Exp $
 
 EAPI=2
 
@@ -87,11 +87,13 @@ QA_TEXTRELS_x86="opt/VirtualBox/VBoxGuestPropSvc.so
 	opt/VirtualBox/VBoxPython2_5.so
 	opt/VirtualBox/VBoxXPCOMC.so
 	opt/VirtualBox/VBoxOGLhostcrutil.so
-	opt/VirtualBox/VBoxNetDHCP.so"
+	opt/VirtualBox/VBoxNetDHCP.so
+	opt/VirtualBox/VBoxGuestControlSvc.so"
 QA_PRESTRIPPED="opt/VirtualBox/VBoxDD.so
 	opt/VirtualBox/VBoxDD2.so
 	opt/VirtualBox/VBoxDDU.so
 	opt/VirtualBox/VBoxDbg.so
+	opt/VirtualBox/VBoxGuestControlSvc.so
 	opt/VirtualBox/VBoxGuestPropSvc.so
 	opt/VirtualBox/VBoxHeadless
 	opt/VirtualBox/VBoxHeadless.so
