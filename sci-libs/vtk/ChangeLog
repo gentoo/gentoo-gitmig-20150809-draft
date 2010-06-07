@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.73 2010/05/31 07:08:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.74 2010/06/07 17:45:09 jlec Exp $
+
+  07 Jun 2010; Justin Lecher <jlec@gentoo.org> vtk-5.6.0-r2.ebuild:
+  Fixed ogg -> theora USE transition
 
   31 May 2010; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Added myself as maintainer

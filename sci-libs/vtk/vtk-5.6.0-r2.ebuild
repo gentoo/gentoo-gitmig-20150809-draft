@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.2 2010/05/30 12:11:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.3 2010/06/07 17:45:09 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -114,15 +114,15 @@ src_configure() {
 		$(cmake-utils_use_build doc DOCUMENTATION)
 		$(cmake-utils_use java VTK_USE_JAVA)
 		$(cmake-utils_use mpi VTK_USE_MPI)
-		$(cmake-utils_use ogg VTK_USE_OGGTHEORA_ENCODER)
 		$(cmake-utils_use patented VTK_USE_PATENTED)
 		$(cmake-utils_use qt4 VTK_USE_QT)
 		$(cmake-utils_use tcl VTK_WRAP_TCL)
+		$(cmake-utils_use theora VTK_USE_OGGTHEORA_ENCODER)
 		$(cmake-utils_use tk VTK_USE_TK)
 		$(cmake-utils_use threads VTK_USE_PARALLEL)
 		$(cmake-utils_use R VTK_USE_GNU_R) )
 
-	use ogg &&
+	use theora &&
 	mycmakeargs+=(-DVTK_USE_SYSTEM_OGGTHEORA=ON)
 
 	# mpi needs the parallel framework
