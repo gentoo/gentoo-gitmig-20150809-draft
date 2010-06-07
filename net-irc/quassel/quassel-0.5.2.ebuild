@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.2.ebuild,v 1.2 2010/01/21 11:32:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.2.ebuild,v 1.3 2010/06/07 16:33:42 billie Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://quassel-irc.org/pub/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 SLOT="0"
-IUSE="dbus debug kde monolithic +oxygen phonon postgres +server +ssl webkit +X"
+IUSE="dbus debug kde monolithic +oxygen phonon postgres +server +ssl webkit X"
 
 LANGS="cs da de fi fr hu it nb_NO ru sl tr"
 for l in ${LANGS}; do

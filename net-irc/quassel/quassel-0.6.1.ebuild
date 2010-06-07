@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.6.1.ebuild,v 1.1 2010/04/18 11:44:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.6.1.ebuild,v 1.2 2010/06/07 16:33:42 billie Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 SLOT="0"
-IUSE="ayatana dbus debug kde monolithic phonon postgres +server +ssl webkit +X"
+IUSE="ayatana dbus debug kde monolithic phonon postgres +server +ssl webkit X"
 
 SERVER_RDEPEND="
 	!postgres? ( x11-libs/qt-sql:4[sqlite] dev-db/sqlite[threadsafe] )
