@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.533 2010/05/15 12:16:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.534 2010/06/07 14:54:26 ranger Exp $
+
+  07 Jun 2010; Brent Baude <ranger@gentoo.org> mysql-5.0.90-r2.ebuild:
+  Marking mysql-5.0.90-r2 ppc64 for bug 303747
 
   15 May 2010; Jeremy Olexa <darkside@gentoo.org> mysql-5.1.46.ebuild:
   Add ~x64-macos as tested in bug 310533
