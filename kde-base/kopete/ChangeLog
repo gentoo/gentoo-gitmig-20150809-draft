@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.251 2010/06/06 18:08:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.252 2010/06/07 02:37:57 jmbsvicetto Exp $
+
+  07 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kopete-4.4.4-r1.ebuild:
+  [kde-base/kopete-4.4.4-r1] Added samba RDEPEND for winpopup.
 
 *kopete-4.4.4-r1 (06 Jun 2010)
 

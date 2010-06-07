@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.4.4-r1.ebuild,v 1.1 2010/06/06 18:08:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.4.4-r1.ebuild,v 1.2 2010/06/07 02:37:57 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -50,7 +50,7 @@ PLUGINS="+addbookmarks +autoreplace +contactnotes +highlight +history latex
 #	qq: NO DEPS
 #   telepathy: net-libs/decibel
 #   testbed: NO DEPS
-#	winpopup: NO DEPS
+#	winpopup: NO DEPS (we're adding samba as RDEPEND so it works)
 #	yahoo: NO DEPS
 #	zeroconf (bonjour): NO DEPS
 PROTOCOLS="gadu groupwise +jabber jingle meanwhile msn oscar qq skype
@@ -93,6 +93,7 @@ RDEPEND="${COMMONDEPEND}
 	)
 	sms? ( app-mobilephone/smssend )
 	ssl? ( app-crypt/qca-ossl )
+	winpopup? ( net-fs/samba )
 "
 #	telepathy? ( net-libs/decibel )"
 DEPEND="${COMMONDEPEND}
