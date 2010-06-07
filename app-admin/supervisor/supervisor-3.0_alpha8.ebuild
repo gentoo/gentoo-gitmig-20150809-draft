@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_alpha8.ebuild,v 1.1 2010/03/09 13:45:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_alpha8.ebuild,v 1.2 2010/06/07 10:23:47 djc Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -24,6 +24,12 @@ RDEPEND="dev-python/meld3"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+DOCS="CHANGES.txt PKG-INFO README.txt TODO.txt"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-no-docs.patch"
+}
 
 src_install() {
 	distutils_src_install

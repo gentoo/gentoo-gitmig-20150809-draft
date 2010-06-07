@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/supervisor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.1 2010/03/09 13:45:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.2 2010/06/07 10:23:47 djc Exp $
+
+  07 Jun 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +files/3.0_alpha8-no-docs.patch, supervisor-3.0_alpha8.ebuild:
+  Prevent installation of doc files in /usr/share/doc directly (bug 315981).
 
 *supervisor-3.0_alpha8 (09 Mar 2010)
 
