@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.258 2010/06/07 11:02:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.259 2010/06/07 12:45:28 chainsaw Exp $
+
+*asterisk-1.6.1.20 (07 Jun 2010)
+
+  07 Jun 2010; <chainsaw@gentoo.org> +asterisk-1.6.1.20.ebuild,
+  +files/1.6.1/asterisk-1.6.1.20-inband-progress.patch:
+  Version bump on the 1.6.1 branch. please note that this branch is now in
+  security maintenance mode only. Do upgrade to 1.6.2 where possible.
 
 *asterisk-1.6.2.8 (07 Jun 2010)
 
