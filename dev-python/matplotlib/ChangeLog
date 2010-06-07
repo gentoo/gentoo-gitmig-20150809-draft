@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.89 2010/06/03 19:12:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.90 2010/06/07 16:44:27 bicatali Exp $
+
+  07 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  matplotlib-0.99.3.ebuild, +files/matplotlib-0.99.3-nopiwik.patch:
+  Avoid piwik code when generating docs, thanks Chris Mayo for his patch,
+  bug #323005
 
 *matplotlib-0.99.3 (03 Jun 2010)
 

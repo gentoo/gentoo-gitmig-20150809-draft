@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.3.ebuild,v 1.1 2010/06/03 19:12:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.3.ebuild,v 1.2 2010/06/07 16:44:27 bicatali Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -85,6 +85,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.99.1.1-gtk-tooltip.patch
 	# some font stuff (from upstream svn)
 	epatch "${FILESDIR}"/${PN}-0.99.1.1-eintr.patch
+	# avoid slow piwik (bug #323005)
+	epatch "${FILESDIR}"/${PN}-0.99.3-nopiwik.patch
 
 	# create setup.cfg (see setup.cfg.template for any changes)
 	cat > setup.cfg <<-EOF
