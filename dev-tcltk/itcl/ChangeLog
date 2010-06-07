@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.43 2010/04/02 09:30:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.44 2010/06/07 14:52:43 jlec Exp $
+
+*itcl-3.4_beta1 (07 Jun 2010)
+
+  07 Jun 2010; Justin Lecher <jlec@gentoo.org> +itcl-3.4_beta1.ebuild:
+  Version Bump, adding LDPATH - fix for #317087
 
 *itcl-3.3.1_pre20090417-r1 (02 Apr 2010)
 
