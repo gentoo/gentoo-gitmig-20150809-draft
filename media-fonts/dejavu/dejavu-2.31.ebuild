@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.31.ebuild,v 1.1 2010/05/28 11:45:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.31.ebuild,v 1.2 2010/06/07 10:03:22 spatz Exp $
 
 EAPI=1
 
@@ -79,18 +79,4 @@ src_install() {
 	then
 		dodoc build/*.txt
 	fi
-
-}
-
-pkg_postinst() {
-	font_pkg_postinst
-
-	ewarn
-	ewarn "Starting with ${PN}-2.22 font ligatures were re-imported in DejaVu"
-	ewarn "That means that you'll possibly encounter the infamous ligature bug"
-	ewarn "with pango-enabled Firefox (e.g. 'fi' and 'fl' will occasionally"
-	ewarn "overlap). This will be fixed in Firefox-3.x. Until this happens"
-	ewarn "either use Firefox without pango (MOZ_DISABLE_PANGO=1), or use"
-	ewarn "${PN}-2.21"
-	ewarn
 }
