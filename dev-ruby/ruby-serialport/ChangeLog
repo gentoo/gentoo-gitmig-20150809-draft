@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-serialport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ChangeLog,v 1.15 2010/05/24 05:36:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ChangeLog,v 1.16 2010/06/07 18:00:58 flameeyes Exp $
+
+  07 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-serialport-1.0.3.ebuild, ruby-serialport-1.0.3-r1.ebuild:
+  install examples in the right place.
 
   24 May 2010; Hans de Graaff <graaff@gentoo.org>
   ruby-serialport-1.0.3.ebuild, ruby-serialport-1.0.3-r1.ebuild:

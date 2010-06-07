@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ruby-serialport-1.0.3-r1.ebuild,v 1.3 2010/05/24 05:36:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-serialport/ruby-serialport-1.0.3-r1.ebuild,v 1.4 2010/06/07 18:00:58 flameeyes Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ each_ruby_compile() {
 all_ruby_install() {
 	all_fakegem_install
 
-	docinto examples
 	# don't compress it
+	insinto /usr/share/doc/${PF}/examples
 	doins test/miniterm.rb || die
 }
