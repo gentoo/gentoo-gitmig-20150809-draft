@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.26 2010/05/21 06:30:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.27 2010/06/07 14:44:54 pva Exp $
+
+*mediastreamer-2.5.0 (07 Jun 2010)
+
+  07 Jun 2010; Peter Volkov <pva@gentoo.org> -mediastreamer-2.2.4.ebuild,
+  -mediastreamer-2.3.0.ebuild, -mediastreamer-2.4.0.ebuild,
+  +mediastreamer-2.5.0.ebuild:
+  Version bump. Drop old.
 
   21 May 2010; Peter Volkov <pva@gentoo.org> mediastreamer-2.4.0.ebuild:
   mediastreamer-2.4.0 requires ortp-0.16.2, bug 320751, thank Nikoli for

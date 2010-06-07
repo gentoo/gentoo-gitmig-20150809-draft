@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.4.0.ebuild,v 1.3 2010/05/21 06:30:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.5.0.ebuild,v 1.1 2010/06/07 14:44:54 pva Exp $
 
 EAPI="3"
 
