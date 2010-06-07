@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.4 2010/06/01 07:20:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.5 2010/06/07 06:11:33 pva Exp $
 
 EAPI=3
 
@@ -9,7 +9,8 @@ inherit eutils multilib pam ssl-cert
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
 SRC_URI="http://www.process-one.net/downloads/${PN}/${PV}/${P}.tar.gz
-		mod_srl? ( https://alioth.debian.org/frs/download.php/3283/mod_shared_roster_ldap-0.5.1.tgz )"
+	mod_statsdx? ( mirror://gentoo/2.1.1-mod_statsdx.patch.bz2 )
+	mod_srl? ( https://alioth.debian.org/frs/download.php/3283/mod_shared_roster_ldap-0.5.1.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,7 +45,7 @@ src_prepare() {
 	if use mod_statsdx; then
 		ewarn "mod_statsdx is not a part of upstream tarball but is a third-party module"
 		ewarn "taken from here: http://www.ejabberd.im/mod_stats2file"
-		epatch "${FILESDIR}/2.1.1-mod_statsdx.patch"
+		epatch "${WORKDIR}/2.1.1-mod_statsdx.patch"
 	fi
 
 	# don't install release notes (we'll do this manually)
