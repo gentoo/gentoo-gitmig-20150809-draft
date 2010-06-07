@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11600 2010/06/06 15:36:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11601 2010/06/07 10:27:06 s4t4n Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -489,18 +489,6 @@ mail-filter/MailScanner
 # Torsten Veller <tove@gentoo.org> (14 Mar 2010)
 # Mask "End Of Life" versions
 <www-apps/bugzilla-3.2
-
-# <s4t4n@gentoo.org> (11 Mar 2010)
-# The following packages are not compatible with lm-sensors-3, upstream is unresponsive.
-# Masked pending removal from the tree.
-# http://bugs.gentoo.org/show_bug.cgi?id=289829
-# http://bugs.gentoo.org/show_bug.cgi?id=291426
-# http://bugs.gentoo.org/show_bug.cgi?id=291429
-# http://bugs.gentoo.org/show_bug.cgi?id=291432
-x11-plugins/wmalms
-=x11-plugins/wmgtemp-0.7
-x11-plugins/wmsensormon
-x11-plugins/wmmsens
 
 # Jeroen Roovers <jer@gentoo.org> (10 Mar 2010)
 # Masked until the blockers of bug #305781 are fixed
