@@ -1,6 +1,3 @@
-
-;;; autoconf-mode site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'autoconf-mode "autoconf-mode"
   "Major mode for editing autoconf files." t)
