@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.3.9.ebuild,v 1.1 2010/05/25 09:04:14 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.1.ebuild,v 1.1 2010/06/07 13:17:29 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -35,8 +35,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	# TODO: have to think of a less ugly solution
-	epatch "${FILESDIR}"/${PN}-0.3.3-llvm-datatypes.patch
+	# Fix gcc complaint about undefined debug variable
+	epatch "${FILESDIR}"/${PN}-0.4.1-debug-defines.patch
 
 	# Adjust plugin permissions
 	sed -i "s|FILES|PROGRAMS|" plugin-dir/CMakeLists.txt || die
