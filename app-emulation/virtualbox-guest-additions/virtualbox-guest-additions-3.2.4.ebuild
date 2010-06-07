@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.0.ebuild,v 1.1 2010/05/20 13:18:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.4.ebuild,v 1.1 2010/06/07 17:43:55 polynomial-c Exp $
 
 inherit eutils linux-mod
 

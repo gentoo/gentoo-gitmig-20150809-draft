@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.0-r1.ebuild,v 1.3 2010/05/21 17:41:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.4.ebuild,v 1.1 2010/06/07 17:41:22 polynomial-c Exp $
 
 EAPI=2
 

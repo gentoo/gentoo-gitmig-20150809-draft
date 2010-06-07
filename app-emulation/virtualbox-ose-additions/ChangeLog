@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-ose-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.39 2010/06/03 10:57:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.40 2010/06/07 17:40:07 polynomial-c Exp $
+
+*virtualbox-ose-additions-3.2.4 (07 Jun 2010)
+
+  07 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-ose-additions-3.2.0.ebuild,
+  +virtualbox-ose-additions-3.2.4.ebuild:
+  Version bump. Removed old.
 
 *virtualbox-ose-additions-3.2.2 (03 Jun 2010)
 
