@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.85 2010/05/24 15:35:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.86 2010/06/07 10:46:00 angelos Exp $
+
+  07 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  wanderlust-2.14.0-r6.ebuild:
+  amd64 stable (bug #307575)
 
   23 May 2010; <nixnut@gentoo.org> wanderlust-2.14.0-r6.ebuild:
   ppc stable #307575
