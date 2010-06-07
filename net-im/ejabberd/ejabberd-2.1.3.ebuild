@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.5 2010/06/07 06:11:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.6 2010/06/07 10:46:06 pva Exp $
 
 EAPI=3
 
@@ -26,9 +26,9 @@ DEPEND=">=net-im/jabber-base-0.01
 	ssl? ( >=dev-libs/openssl-0.9.8e )
 	captcha? ( media-gfx/imagemagick[truetype,png] )
 	zlib? ( sys-libs/zlib )"
-#>=sys-apps/shadow-4.1.4.2-r2 - fixes bug in su that made ejabberdctl unworkable.
+#>=sys-apps/shadow-4.1.4.2-r3 - fixes bug in su that made ejabberdctl unworkable.
 RDEPEND="${DEPEND}
-	>=sys-apps/shadow-4.1.4.2-r2"
+	>=sys-apps/shadow-4.1.4.2-r3"
 
 PROVIDE="virtual/jabber-server"
 
