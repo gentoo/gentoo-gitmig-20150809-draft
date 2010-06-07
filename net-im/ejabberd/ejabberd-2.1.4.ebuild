@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.3.ebuild,v 1.6 2010/06/07 10:46:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.4.ebuild,v 1.1 2010/06/07 14:25:19 pva Exp $
 
 EAPI=3
 
