@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.5.1.ebuild,v 1.1 2010/03/01 22:19:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.5.1.ebuild,v 1.2 2010/06/07 10:39:44 djc Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="IMDbPY"
 MY_P="${MY_PN}-${PV}"
@@ -27,6 +27,10 @@ RESTRICT_PYTHON_ABIS="3.*"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 PYTHON_MODNAME="imdb"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-no-docs.patch"
+}
 
 src_install() {
 	distutils_src_install
