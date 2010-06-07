@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.157 2010/06/02 14:22:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.158 2010/06/07 15:37:16 hwoarang Exp $
+
+  07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> apr-1.4.2.ebuild:
+  Stable on amd64 wrt bug #322681
 
   02 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   apr-1.4.2.ebuild:
