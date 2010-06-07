@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomeradio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.24 2010/04/08 20:55:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/ChangeLog,v 1.25 2010/06/07 06:18:50 pva Exp $
+
+  07 Jun 2010; Peter Volkov <pva@gentoo.org> gnomeradio-1.8.ebuild:
+  Fixed SRC_URI: https://bugzilla.gnome.org/show_bug.cgi?id=608659
 
   08 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> gnomeradio-1.8.ebuild:
   Fix HOMEPAGE, SRC_URI and rarian depend.
