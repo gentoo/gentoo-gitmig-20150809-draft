@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/echinus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.6 2010/02/23 12:51:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.7 2010/06/07 12:24:52 xarthisius Exp $
+
+*echinus-0.4.3.2 (07 Jun 2010)
+
+  07 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +echinus-0.4.3.2.ebuild, +files/echinus-0.4.3.2-gentoo.diff:
+  Version bump wrt bug 313569. Thanks Nico R. Wohlgemuth
+  <nico@lifeisabug.com> for ebuild and report. Fixes bug 314965. Thanks
+  Diego for the report
 
 *echinus-0.4.0 (23 Feb 2010)
 
