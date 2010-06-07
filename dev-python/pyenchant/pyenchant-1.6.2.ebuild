@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.2.ebuild,v 1.1 2010/05/29 16:13:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/pyenchant-1.6.2.ebuild,v 1.2 2010/06/07 16:28:39 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=app-text/enchant-1.4.0
+DEPEND=">=app-text/enchant-${PV%.*}
 	dev-python/setuptools"
 RDEPEND="${DEPEND}"
 
@@ -29,4 +29,12 @@ src_prepare() {
 
 	# TestInstallEnv tests are broken with Python 3 (enchant.tokenize is wrongly imported as tokenize).
 	sed -e "s/test_basic/_&/;s/test_UnicodeInstallPath/_&/" -i enchant/tests.py || die "sed failed"
+}
+
+src_test() {
+	if [[ -n "$(LC_ALL="en_US.UTF-8" bash -c "" 2>&1)" ]]; then
+		ewarn "Disabling tests due to missing en_US.UTF-8 locale"
+	else
+		distutils_src_test
+	fi
 }
