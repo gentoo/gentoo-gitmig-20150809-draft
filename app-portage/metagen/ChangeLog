@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.20 2010/04/09 19:23:09 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.21 2010/06/07 11:03:35 hwoarang Exp $
+
+  07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> metagen-0.5.2.ebuild:
+  Stable on amd64 wrt bug #322781
 
 *metagen-0.5.2 (09 Apr 2010)
 
