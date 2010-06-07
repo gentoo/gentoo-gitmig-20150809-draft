@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.1.1.ebuild,v 1.1 2010/03/12 19:21:58 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.1.3.ebuild,v 1.1 2010/06/07 22:26:03 ramereth Exp $
 
 EAPI=2
 
@@ -34,10 +34,6 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	sys-apps/iproute2
 	sys-fs/lvm2"
 RDEPEND="${DEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-disable-check-man.patch
-}
 
 pkg_setup () {
 	confutils_require_any kvm xen
