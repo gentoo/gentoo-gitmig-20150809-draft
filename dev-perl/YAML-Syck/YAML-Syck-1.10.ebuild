@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/YAML-Syck-1.09.ebuild,v 1.1 2010/05/31 08:08:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/YAML-Syck-1.10.ebuild,v 1.1 2010/06/07 12:18:13 tove Exp $
 
 EAPI=3
 
