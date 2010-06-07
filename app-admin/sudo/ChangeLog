@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.224 2010/06/06 15:10:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.225 2010/06/07 04:59:49 josejx Exp $
+
+  07 Jun 2010; Joseph Jezak <josejx@gentoo.org> sudo-1.7.2_p7.ebuild:
+  Marked ppc/ppc64 for bug #322517.
 
   06 Jun 2010; Christoph Mende <angelos@gentoo.org> sudo-1.7.2_p7.ebuild:
   amd64 stable (bug #322517)
