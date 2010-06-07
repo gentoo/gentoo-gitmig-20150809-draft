@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.208 2010/05/07 18:22:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.209 2010/06/07 22:31:29 robbat2 Exp $
+
+*lvm2-2.02.67 (07 Jun 2010)
+
+  07 Jun 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm2-2.02.64-dmeventd-libs.patch, +lvm2-2.02.67.ebuild,
+  +files/lvm2-2.02.67-createinitrd.patch, +files/lvm.conf-2.02.67.patch:
+  Bugs #301331: create initrd fixes; #312321: path for dmeventd; #318433:
+  QA; #318513: dmeventd libs for bindnow;
 
   07 May 2010; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.63-r1.ebuild,
   lvm2-2.02.63-r2.ebuild, lvm2-2.02.64.ebuild:
