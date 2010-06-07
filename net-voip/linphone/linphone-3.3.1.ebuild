@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.3.0.ebuild,v 1.1 2010/05/20 13:05:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.3.1.ebuild,v 1.1 2010/06/07 14:49:11 pva Exp $
 
 EAPI="3"
 
