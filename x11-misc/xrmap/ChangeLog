@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.17 2010/05/28 21:10:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.18 2010/06/07 13:04:16 flameeyes Exp $
+
+  07 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> xrmap-2.33.ebuild:
+  Parallel make fails, bug #323065.
 
 *xrmap-2.33 (28 May 2010)
 
