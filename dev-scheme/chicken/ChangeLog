@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.40 2010/06/01 20:16:38 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.41 2010/06/07 19:21:59 pchrist Exp $
+
+  07 Jun 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
+  chicken-4.5.0.ebuild, +files/chicken-4.5.0-r0-ARCH-to-zARCH-hack.patch:
+  nasty hack to fix buildsystem's and portage variable collision, wrt bug
+  #322527
 
 *chicken-4.5.0 (01 Jun 2010)
 

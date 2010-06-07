@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.5.0.ebuild,v 1.1 2010/06/01 20:16:38 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.5.0.ebuild,v 1.2 2010/06/07 19:21:59 pchrist Exp $
 
 EAPI="3"
 
-inherit multilib elisp-common
+inherit eutils multilib
 
 DESCRIPTION="Chicken is a Scheme interpreter and native Scheme to C compiler"
 HOMEPAGE="http://www.call-with-current-continuation.org/"
@@ -20,6 +20,10 @@ DEPEND="sys-apps/texinfo
 RDEPEND="emacs? ( virtual/emacs app-emacs/scheme-complete )"
 
 src_prepare() {
+	#Because chicken's Upstream have a custom to use variables that also
+	#portage uses :( eg. $ARCH in this case
+	epatch "${FILESDIR}/${P}-${PR}-ARCH-to-zARCH-hack.patch"
+
 	sed "s,\$(PREFIX)/lib,\$(PREFIX)/$(get_libdir)," -i defaults.make
 	sed "s,\$(DATADIR)/doc,\$(SHAREDIR)/doc/${P}," -i defaults.make
 }
