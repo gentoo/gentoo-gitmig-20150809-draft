@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.29 2010/06/05 09:20:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.30 2010/06/07 15:04:24 hwoarang Exp $
+
+  07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Added it to desktop-misc herd
 
 *rednotebook-0.9.5 (04 Jun 2010)
 
