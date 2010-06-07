@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.1 2010/06/07 14:52:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.2 2010/06/07 15:05:23 jlec Exp $
 
 EAPI="3"
 
@@ -10,10 +10,8 @@ MY_P="${PN}${PV/_beta/b}"
 
 DESCRIPTION="Object Oriented Enhancements for Tcl/Tk"
 HOMEPAGE="http://incrtcl.sourceforge.net/"
-#SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 SRC_URI="mirror://sourceforge/incrtcl/%5BIncr%20Tcl_Tk%5D-source/$(get_version_component_range 1-2)/${MY_P}.tar.gz"
-#http://downloads.sourceforge.net/project/incrtcl/%5BIncr%20Tcl_Tk%5D-source/3.4/itcl3.4b1.tar.gz?use_mirror=heanet
-#http://sourceforge.net/projects/incrtcl/files/%5BIncr%20Tcl_Tk%5D-source/
+
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
