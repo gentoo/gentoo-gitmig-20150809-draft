@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-gattrib/geda-gattrib-1.4.3-r1.ebuild,v 1.1 2010/06/08 17:14:26 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-gattrib/geda-gattrib-1.4.3-r1.ebuild,v 1.2 2010/06/08 17:58:52 tomjbe Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="nls"
 RDEPEND="=sci-libs/libgeda-${PV}*
 	=sci-electronics/geda-symbols-${PV}*
 	>=dev-libs/glib-2.4
-	>=x11-libs/gtk+-2.4
+	>=x11-libs/gtk+-2.18.6
 	|| ( =dev-scheme/guile-1.6* =dev-scheme/guile-1.8*[deprecated] )
 	nls? ( virtual/libintl )"
 
