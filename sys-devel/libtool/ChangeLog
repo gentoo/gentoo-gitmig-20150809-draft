@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.168 2010/06/05 01:56:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.169 2010/06/08 21:52:05 vapier Exp $
+
+*libtool-2.2.8-r1 (08 Jun 2010)
+
+  08 Jun 2010; Mike Frysinger <vapier@gentoo.org> +libtool-2.2.8-r1.ebuild,
+  +files/libtool-2.2.8-versioning-as-needed-test.patch:
+  Add patch from upstream for as-needed test failures #321551 by Xake.
+  Transition the SLOT (and EAPI) so we can install libtool-1.5.x libltdl ABI
+  in parallel. Require newer binutils to avoid old as-needed test failures.
+  Drop help2man cruft now that the upstream tarball includes the man pages.
 
 *libtool-2.2.8 (05 Jun 2010)
 
