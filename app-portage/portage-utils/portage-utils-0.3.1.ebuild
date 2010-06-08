@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.3.1.ebuild,v 1.2 2010/01/24 21:19:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.3.1.ebuild,v 1.3 2010/06/08 05:05:35 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -35,9 +35,20 @@ src_install() {
 	doins "${FILESDIR}"/q-reinitialize || die
 }
 
+pkg_preinst() {
+	# preserve +x bit on postsync files #301721
+	local x
+	pushd "${D}" >/dev/null
+	for x in etc/portage/postsync.d/* ; do
+		[[ -x ${ROOT}/${x} ]] && chmod +x "${x}"
+	done
+}
+
 pkg_postinst() {
 	elog "/etc/portage/postsync.d/q-reinitialize has been installed for convenience"
-	elog "If you wish for it to be automatically run at the end of every --sync simply chmod +x /etc/portage/postsync.d/q-reinitialize"
-	elog "Normally this should only take a few seconds to run but file systems such as ext3 can take a lot longer."
-	elog "If ever you find this to be an inconvenience simply chmod -x /etc/portage/postsync.d/q-reinitialize"
+	elog "If you wish for it to be automatically run at the end of every --sync:"
+	elog "   # chmod +x /etc/portage/postsync.d/q-reinitialize"
+	elog "Normally this should only take a few seconds to run but file systems"
+	elog "such as ext3 can take a lot longer.  To disable, simply do:"
+	elog "   # chmod -x /etc/portage/postsync.d/q-reinitialize"
 }
