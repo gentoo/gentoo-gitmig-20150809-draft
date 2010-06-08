@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.4.ebuild,v 1.1 2010/03/12 18:09:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.14.ebuild,v 1.1 2010/06/08 15:57:43 jer Exp $
 
-inherit libtool
+inherit autotools
 
-MY_P="${P}-alpha"
+MY_P="${P}-stable"
 
 DESCRIPTION="A library to execute a function when a specific event occurs on a file descriptor"
 HOMEPAGE="http://monkey.org/~provos/libevent/"
@@ -30,13 +30,20 @@ src_unpack() {
 	# don't waste time building tests/samples
 	sed -i \
 		-e 's|^\(SUBDIRS =.*\)sample test\(.*\)$|\1\2|' \
-		Makefile.in || die "sed Makefile.in failed"
+		-e 's/libevent_extra_la_LIBADD =/& libevent.la/' \
+		Makefile.am || die "sed Makefile.am failed"
 
-	elibtoolize
+	eautoreconf
 }
 
 src_test() {
-	make verify | tee "${T}"/tests
+	einfo "Building tests"
+	cd test
+	make test || die "failed to build tests"
+
+	einfo "Running tests"
+	./test.sh > "${T}"/tests
+	cat "${T}"/tests
 	grep FAILED "${T}"/tests &>/dev/null && die "1 or more tests failed"
 }
 
