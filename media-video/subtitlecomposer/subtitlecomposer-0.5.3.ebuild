@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3.ebuild,v 1.1 2009/06/05 11:45:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3.ebuild,v 1.2 2010/06/08 03:16:40 reavertm Exp $
 
 EAPI="2"
+
 KDE_LINGUAS="bg cs de el es fr pl pt_BR sr"
 inherit kde4-base
 
@@ -15,10 +16,14 @@ KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="debug gstreamer xine"
 
-RDEPEND="gstreamer? ( media-libs/gstreamer )
-	xine? ( media-libs/xine-lib )"
+RDEPEND="
+	media-sound/phonon
+	gstreamer? ( media-libs/gstreamer )
+	xine? ( media-libs/xine-lib )
+"
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+	sys-devel/gettext
+"
 
 src_prepare() {
 	kde4-base_src_prepare
@@ -32,10 +37,10 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
+	mycmakeargs=(
 		$(cmake-utils_use_with gstreamer GStreamer)
-		$(cmake-utils_use_with xine Xine)
-	"
+		$(cmake-utils_use_with xine)
+	)
 	kde4-base_src_configure
 }
 

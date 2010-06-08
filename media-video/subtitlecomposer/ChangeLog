@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitlecomposer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.3 2009/06/05 11:45:45 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.4 2010/06/08 03:16:40 reavertm Exp $
+
+  08 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  subtitlecomposer-0.5.3.ebuild:
+  List phonon dependency explicitly, convert mycmakeargs to array
 
 *subtitlecomposer-0.5.3 (05 Jun 2009)
 
