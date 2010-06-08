@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/deutex-4.4.0.ebuild,v 1.2 2010/04/26 20:55:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/deutex/deutex-4.4.0.ebuild,v 1.3 2010/06/08 17:10:43 mr_bones_ Exp $
 
 EAPI=2
 inherit games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=""
 
-PATCHES=( "${FILESDIR}"/${P}-makefile.patch )
+PATCHES=( "${FILESDIR}"/${P}-makefile.patch "${FILESDIR}"/${P}-64bit.patch )
 
 src_install() {
 	dobin deusf deutex || die
