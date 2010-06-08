@@ -1,26 +1,29 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.3.9.14.ebuild,v 1.1 2010/06/08 08:15:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.4.2.1.ebuild,v 1.1 2010/06/08 12:43:50 dev-zero Exp $
 
-EAPI="2"
+EAPI="3"
+
+PYTHON_DEPEND="2:2.6"
 
 inherit distutils eutils
 
 DESCRIPTION="A sweet, carbonated git gui known for its sugary flavour and caffeine-inspired features."
 HOMEPAGE="http://cola.tuxfamily.org/"
-SRC_URI="http://cola.tuxfamily.org/releases/${P}-src.tar.gz"
+SRC_URI="http://cola.tuxfamily.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND="dev-python/PyQt4
-	|| ( >=dev-lang/python-2.6 ( =dev-lang/python-2.5* dev-python/simplejson ) )
 	>=dev-python/pyinotify-0.7.1
 	dev-python/jsonpickle
 	dev-vcs/git"
 DEPEND="${RDEPEND}
-	doc? ( app-text/asciidoc )
+	doc? ( app-text/asciidoc
+		dev-python/sphinx
+		app-text/xmlto )
 	test? ( dev-python/nose )"
 
 src_prepare() {
@@ -28,6 +31,11 @@ src_prepare() {
 	sed -i \
 		-e '/doc/d' \
 		setup.py || die "sed failed"
+
+	sed -i \
+		-e  "s|'doc', 'git-cola'|'doc', '${PF}', 'html'|" \
+		cola/resources.py || die "sed failed"
+
 	# don't prefix install path with homedir
 	rm setup.cfg
 
@@ -53,13 +61,15 @@ src_install() {
 	dodoc *.txt
 
 	if use doc ; then
-		dohtml *.html
+		dohtml -r _build/html/*
 		doman *.1
+	else
+		dohtml "${FILESDIR}/index.html"
 	fi
 }
 
 src_test() {
-	PYTHONPATH="$(pwd):$(pwd)/build/lib:${PYTHONPATH}" nosetests \
+	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" nosetests \
 		--verbose --with-doctest --with-id --exclude=jsonpickle --exclude=json \
 		|| die "running nosetests failed"
 }
