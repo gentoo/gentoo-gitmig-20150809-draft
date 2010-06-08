@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.44 2010/06/08 15:38:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.45 2010/06/08 17:52:54 polynomial-c Exp $
+
+  08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/vboxguest-log-use-c99.patch,
+  virtualbox-guest-additions-3.1.8-r2.ebuild,
+  virtualbox-guest-additions-3.2.2.ebuild,
+  virtualbox-guest-additions-3.2.4.ebuild,
+  -files/virtualbox-guest-additions-5.initd,
+  -files/virtualbox-guest-additions-6.initd:
+  Added a patch from PaX Team (bug #298988). Removed unused files.
 
   08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-guest-additions-3.1.8-r2.ebuild,
