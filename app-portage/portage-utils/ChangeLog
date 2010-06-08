@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.108 2010/06/08 05:05:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.109 2010/06/08 05:28:14 vapier Exp $
+
+  08 Jun 2010; Mike Frysinger <vapier@gentoo.org> files/q-reinitialize:
+  Run the postsync step in quiet mode if PORTAGE_QUIET is set #278336 by
+  Aaron Ten Clay.
 
   08 Jun 2010; Mike Frysinger <vapier@gentoo.org>
   portage-utils-0.3.1.ebuild:
