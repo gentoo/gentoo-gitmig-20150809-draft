@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.22 2010/05/29 16:13:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.23 2010/06/08 11:59:45 hwoarang Exp $
+
+  08 Jun 2010; Markos Chandras <hwoarang@gentoo.org> pyenchant-1.6.2.ebuild:
+  Stable on amd64 wrt bug #323093
 
 *pyenchant-1.6.2 (29 May 2010)
 
