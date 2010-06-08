@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r3.ebuild,v 1.7 2010/04/07 04:22:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r3.ebuild,v 1.8 2010/06/08 21:21:06 arfrever Exp $
 
 EAPI=2
 # desklets don't run with USE=debug
@@ -96,7 +96,7 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 	python_need_rebuild
 	# Compile pyc files on target system
-	python_mod_optimize "${ROOT:-/}usr/$(get_libdir)/gdesklets"
+	python_mod_optimize "/usr/$(get_libdir)/gdesklets"
 
 	echo
 	elog "gDesklets Displays are required before the library"
