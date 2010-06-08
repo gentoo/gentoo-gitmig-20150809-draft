@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.3-r1.ebuild,v 1.5 2010/02/10 16:39:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.3-r1.ebuild,v 1.6 2010/06/08 16:40:03 arfrever Exp $
 
 EAPI="2"
 
@@ -58,16 +58,15 @@ src_configure() {
 src_install() {
 	kde4-meta_src_install
 
-	python_version
 	rm -f \
-		"${D}/usr/$(get_libdir)/python${PYVER}"/site-packages/PyKDE4/*.py[co] \
+		"${D}$(python_get_sitedir)"/PyKDE4/*.py[co] \
 		"${D}${PREFIX}"/share/apps/"${PN}"/*.py[co]
 }
 
 pkg_postinst() {
 	kde4-meta_pkg_postinst
 
-	python_mod_optimize ${ROOT}"usr/$(get_libdir)/python${PYVER}"/site-packages/PyKDE4
+	python_mod_optimize "$(python_get_sitedir)"/PyKDE4
 
 	if use examples; then
 		echo
@@ -80,5 +79,5 @@ pkg_postinst() {
 pkg_postrm() {
 	kde4-meta_pkg_postrm
 
-	python_mod_cleanup ${ROOT}"usr/$(get_libdir)/python${PYVER}"/site-packages/PyKDE4
+	python_mod_cleanup "$(python_get_sitedir)"/PyKDE4
 }
