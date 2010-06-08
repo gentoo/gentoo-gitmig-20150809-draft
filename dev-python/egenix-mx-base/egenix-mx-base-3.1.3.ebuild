@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.1.3.ebuild,v 1.6 2010/03/02 02:39:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.1.3.ebuild,v 1.7 2010/06/08 00:12:04 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils flag-o-matic
 
@@ -18,7 +20,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="mx"
 
@@ -44,7 +45,6 @@ src_compile() {
 }
 
 src_install() {
-	[[ -z "${ED}" ]] && local ED="${D}"
 	distutils_src_install
 	dohtml -a html -r mx
 	insinto /usr/share/doc/${PF}
@@ -56,5 +56,5 @@ src_install() {
 			mv -f "${header}" "${ED}$(python_get_includedir)/mx"
 		done
 	}
-	python_execute_function --action-message 'Installation of headers with Python ${PYTHON_ABI}' installation_of_headers
+	python_execute_function -q installation_of_headers
 }
