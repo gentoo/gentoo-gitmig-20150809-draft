@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.4.ebuild,v 1.1 2009/10/02 20:09:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.4.ebuild,v 1.2 2010/06/08 19:11:10 arfrever Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/share/${PN}
+	python_mod_optimize /usr/share/${PN}
 
 	if ! [ -f "${ROOT}"/etc/smolt/hw-uuid ]; then
 		elog "Creating this machines UUID in ${ROOT}/etc/smolt/hw-uuid"
