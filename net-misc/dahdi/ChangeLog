@@ -1,13 +1,13 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.7 2010/06/08 16:47:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.8 2010/06/08 16:49:47 chainsaw Exp $
 
 *dahdi-2.3.0.1 (08 Jun 2010)
 
   08 Jun 2010; <chainsaw@gentoo.org> +dahdi-2.3.0.1.ebuild:
   Rebasing patchset against upstream 2.3.0.1 release; updated semaphore
-  include patch to be portable against <2.6.26 kernels as per Digiums
-  request. Upstream bugs
+  include patch to be portable against <2.6.26 kernels as per Digium's
+  request. Upstream bugs #17382 & #17383.
 
 *dahdi-2.3.0 (24 May 2010)
 
