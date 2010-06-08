@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.24.0.ebuild,v 1.11 2010/01/17 23:43:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.24.0.ebuild,v 1.12 2010/06/08 17:40:45 arfrever Exp $
 
 inherit python gnome2 multilib
 
@@ -30,19 +30,14 @@ src_install() {
 	[[ -z ${ED} ]] && local ED=${D}
 	gnome2_src_install
 
-	python_version
-	mv "${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/CORBA.py \
-		"${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_CORBA.py
-
-	mv "${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/PortableServer.py \
-		"${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_PortableServer.py
+	mv "${ED}"$(python_get_sitedir)/{CORBA.py,pyorbit_CORBA.py}
+	mv "${ED}"$(python_get_sitedir)/{PortableServer.py,pyorbit_PortableServer.py}
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize $(python_get_sitedir)/{pyorbit_CORBA.py,pyorbit_PortableServer.py}
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/{pyorbit_CORBA.py,pyorbit_PortableServer.py}
 }
