@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-gnetlist/geda-gnetlist-1.4.3.ebuild,v 1.2 2009/05/22 08:12:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-gnetlist/geda-gnetlist-1.4.3.ebuild,v 1.3 2010/06/08 17:33:53 tomjbe Exp $
 
 EAPI="2"
 
@@ -24,6 +24,8 @@ RDEPEND="=sci-libs/libgeda-${PV}*
 DEPEND="${RDEPEND}
 	!<sci-electronics/geda-1.4.3-r1
 	>=dev-util/pkgconfig-0.9"
+
+RESTRICT="test"
 
 src_prepare() {
 	sed -i -e 's/ docs//' Makefile.in || die "sed failed"
