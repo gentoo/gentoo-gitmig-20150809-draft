@@ -1,5 +1,8 @@
---- abcde.orig	2010-01-28 08:02:04.000000000 -0700
-+++ abcde	2010-01-28 08:02:53.000000000 -0700
+http://code.google.com/p/abcde/issues/detail?id=31
+http://bugs.gentoo.org/292315
+
+--- abcde
++++ abcde
 @@ -987,7 +987,7 @@
  				TEMPARG="PIPE_$MPPENCODER"
  				;;
