@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-1.0.2.ebuild,v 1.1 2010/04/05 22:08:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-1.0.2.ebuild,v 1.2 2010/06/08 22:45:35 mabi Exp $
 
 EAPI="2"
 
-inherit php-pear-r1
+inherit php-pear-lib-r1
 
 KEYWORDS="~amd64 ~x86"
 
@@ -35,8 +35,8 @@ src_compile() {
 
 src_install() {
 	cd "${WORKDIR}"/${PV}
-	cp -pPR build/ "${WORKDIR}"/${P} || die "failed to copy pear package"
-	cp build/package.xml "${WORKDIR}" || die "failed to copy package.xml"
+	cp -pPR pear-build/ "${WORKDIR}"/${P} || die "failed to copy pear package"
+	cp pear-build/package.xml "${WORKDIR}" || die "failed to copy package.xml"
 	cd "${S}"
 	php-pear-lib-r1_src_install
 }
