@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.59-r1.ebuild,v 1.1 2010/06/07 10:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.59-r1.ebuild,v 1.2 2010/06/08 09:35:44 grobian Exp $
 
 EAPI="2"
 
@@ -46,7 +46,10 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	fowners -R root /usr/share/man || die #321975
+	# fowners fails when we don't have enough permissions (Prefix)
+	if [[ ${EUID} == 0 ]] ; then
+		fowners -R root /usr/share/man || die #321975
+	fi
 
 	if ! use static-libs ; then
 		find "${D}" -type f -name '*.la' -exec rm {} + \
