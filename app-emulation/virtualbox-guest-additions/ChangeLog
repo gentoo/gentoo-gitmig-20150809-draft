@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.43 2010/06/07 17:43:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.44 2010/06/08 15:38:29 polynomial-c Exp $
+
+  08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-guest-additions-3.1.8-r2.ebuild,
+  virtualbox-guest-additions-3.2.2.ebuild,
+  virtualbox-guest-additions-3.2.4.ebuild:
+  Added x11-proto/xproto to DEPEND when X USE flag is unset. Reported by
+  Will B. (bug #323133).
 
 *virtualbox-guest-additions-3.2.4 (07 Jun 2010)
 

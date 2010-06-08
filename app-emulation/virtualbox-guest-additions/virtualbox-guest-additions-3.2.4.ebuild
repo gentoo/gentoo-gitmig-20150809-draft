@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.4.ebuild,v 1.1 2010/06/07 17:43:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.4.ebuild,v 1.2 2010/06/08 15:38:29 polynomial-c Exp $
 
 inherit eutils linux-mod
 
@@ -33,7 +33,8 @@ DEPEND="${RDEPEND}
 		sys-devel/bin86
 		sys-devel/dev86
 		sys-power/iasl
-		X? ( x11-proto/renderproto )"
+		X? ( x11-proto/renderproto )
+		!X? ( x11-proto/xproto )"
 
 BUILD_TARGETS="all"
 BUILD_TARGET_ARCH="${ARCH}"
