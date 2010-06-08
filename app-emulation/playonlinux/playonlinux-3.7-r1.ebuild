@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7-r1.ebuild,v 1.1 2009/11/16 20:27:45 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7-r1.ebuild,v 1.2 2010/06/08 21:17:41 arfrever Exp $
 
 EAPI="2"
 
@@ -85,11 +85,11 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	python_mod_optimize "${ROOT}${GAMES_DATADIR}/${PN}"
+	python_mod_optimize "${GAMES_DATADIR}/${PN}"
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}${GAMES_DATADIR}/${PN}"
+	python_mod_cleanup "${GAMES_DATADIR}/${PN}"
 
 	ewarn "Installed softwares and games with playonlinux have not been removed."
 	ewarn "To remove them, you can re-install playonlinux and remove them using it"
