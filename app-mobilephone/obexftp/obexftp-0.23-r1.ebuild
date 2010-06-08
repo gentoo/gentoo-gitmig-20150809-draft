@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.8 2010/05/27 06:27:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.9 2010/06/08 16:29:30 arfrever Exp $
 
 EAPI="2"
 
@@ -89,8 +89,9 @@ pkg_postrm() {
 
 pkg_postinst() {
 	use perl && perl-module_pkg_postinst
-	use python && {
-		python_version
-		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
-	}
+	use python && python_mod_optimize $(python_get_sitedir)/${PN}
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup $(python_get_sitedir)/${PN}
 }
