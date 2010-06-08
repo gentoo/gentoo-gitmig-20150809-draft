@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.388 2010/05/28 20:42:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.389 2010/06/08 13:28:19 phajdan.jr Exp $
+
+  08 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  binutils-2.20.1-r1.ebuild:
+  x86 stable wrt bug #298571
 
 *binutils-2.20.51.0.9 (28 May 2010)
 
