@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.100 2010/06/04 14:07:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.101 2010/06/08 20:19:32 remi Exp $
+
+  08 Jun 2010; Rémi Cardona <remi@gentoo.org> util-macros-1.8.0.ebuild:
+  stabilize 1.8.0 on all arches, as agreed with arch teams (see bugs #320625
+  and #322559)
 
 *util-macros-1.8.0 (02 Jun 2010)
 
