@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r2.ebuild,v 1.4 2008/11/29 11:56:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r2.ebuild,v 1.5 2010/06/08 16:10:54 arfrever Exp $
 
 GCONF_DEBUG=no
 
@@ -52,11 +52,10 @@ src_unpack() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize $(python_get_sitedir)/${PN}
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
