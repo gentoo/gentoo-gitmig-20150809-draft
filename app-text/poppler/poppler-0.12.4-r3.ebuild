@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4-r3.ebuild,v 1.5 2010/06/08 12:17:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.12.4-r3.ebuild,v 1.6 2010/06/08 12:28:55 grobian Exp $
 
 EAPI="2"
 
@@ -59,8 +59,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.12.4-nanosleep-rt.patch
 	epatch "${FILESDIR}"/${PN}-0.12.4-strings_h.patch #314925
 	epatch "${FILESDIR}"/${PN}-0.12.4-xopen_source.patch #314925
-	# The whole _XOPEN_SOURCE thing breaks OSX Tiger and Solaris, I need to
-	# take this upstream still, configure and cmake conflict in this regard.
+	# The whole _XOPEN_SOURCE thing breaks OSX Tiger and Solaris,
+	# upstream bug 28442.
 	[[ ${CHOST} == *-darwin8 || ${CHOST} == *-solaris* ]] && \
 		sed -i -e '/add_definitions/d' cmake/modules/PopplerMacros.cmake
 }
