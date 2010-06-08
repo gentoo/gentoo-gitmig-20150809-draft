@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.204 2010/05/29 16:28:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.205 2010/06/08 11:55:01 grobian Exp $
+
+  08 Jun 2010; Fabian Groffen <grobian@gentoo.org> rrdtool-1.4.3.ebuild:
+  Avoid installing examples for non-installed features, helps to please
+  shebang check from Prefix Portage.
 
   29 May 2010; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.3.ebuild,
   +files/rrdtool-1.4.3-ruby-ldflags.patch:

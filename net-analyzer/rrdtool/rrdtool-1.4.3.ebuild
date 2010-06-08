@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.3.ebuild,v 1.2 2010/05/29 16:28:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.3.ebuild,v 1.3 2010/06/08 11:55:01 grobian Exp $
 
 EAPI="3"
 
@@ -65,6 +65,12 @@ src_install() {
 
 	if ! use doc ; then
 		rm -rf "${ED}"usr/share/doc/${PF}/{html,txt}
+	fi
+
+	if use !rrdcgi ; then
+		# uses rrdcgi, causes invalid shebang error in Prefix, useless
+		# without rrdcgi installed
+		rm -f "${ED}"usr/share/${PN}/examples/cgi-demo.cgi
 	fi
 
 	if use perl ; then
