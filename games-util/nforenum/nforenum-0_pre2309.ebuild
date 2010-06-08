@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nforenum/nforenum-0_pre2309.ebuild,v 1.5 2010/05/28 18:13:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nforenum/nforenum-0_pre2309.ebuild,v 1.6 2010/06/08 20:25:36 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -32,7 +32,9 @@ src_prepare() {
 		V = 1
 	__EOF__
 
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-string.patch
 }
 
 src_install() {

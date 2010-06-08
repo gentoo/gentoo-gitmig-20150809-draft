@@ -1,6 +1,10 @@
 # ChangeLog for games-util/nforenum
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nforenum/ChangeLog,v 1.4 2010/05/28 18:13:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nforenum/ChangeLog,v 1.5 2010/06/08 20:25:36 mr_bones_ Exp $
+
+  08 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  nforenum-0_pre2309.ebuild, +files/nforenum-0_pre2309-string.patch:
+  fix string handling (bug #323249) with patch from David Leverton
 
   28 May 2010; Joseph Jezak <josejx@gentoo.org> nforenum-0_pre2309.ebuild:
   Marked ppc/ppc64 stable for bug #320495.
