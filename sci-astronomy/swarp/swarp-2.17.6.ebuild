@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/swarp/swarp-2.17.6.ebuild,v 1.2 2009/07/28 17:40:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/swarp/swarp-2.17.6.ebuild,v 1.3 2010/06/08 20:22:04 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -18,6 +18,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-configure.patch
+	epatch "${FILESDIR}"/${PN}-nodoc.patch
 	eautoreconf
 }
 
