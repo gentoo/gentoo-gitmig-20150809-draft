@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.40 2010/06/07 17:43:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.41 2010/06/08 19:33:27 polynomial-c Exp $
+
+  08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-3.1.8-r1.ebuild, xf86-video-virtualbox-3.2.2.ebuild,
+  xf86-video-virtualbox-3.2.4.ebuild:
+  xf86-video-virtualbox needs libdri.so so it won't work with minimal
+  xorg-server. Thanks to Raffaello D. Di Napoli for reporting (bug #297094).
 
 *xf86-video-virtualbox-3.2.4 (07 Jun 2010)
 
