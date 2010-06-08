@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.0.0.ebuild,v 1.1 2010/06/05 22:20:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.0.0-r1.ebuild,v 1.1 2010/06/08 13:20:21 beandog Exp $
 
 EAPI="1"
 inherit eutils wxwidgets flag-o-matic qt4 autotools
@@ -38,7 +38,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	epatch "${FILESDIR}"/${P}-qt4.patch
 	eautoreconf
 }
 
@@ -72,4 +72,9 @@ src_install() {
 		docinto examples
 		dodoc examples/* || die "dodoc failed"
 	fi
+}
+
+pkg_postinst() {
+	use qt4 && elog "Qt GUI is unsupported by upstream, and may be removed
+	soon."
 }
