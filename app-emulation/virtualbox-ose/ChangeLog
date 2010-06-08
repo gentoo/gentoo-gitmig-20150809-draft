@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.58 2010/06/07 17:41:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.59 2010/06/08 11:24:53 polynomial-c Exp $
+
+  08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-ose-3.2.2.ebuild, virtualbox-ose-3.2.4.ebuild:
+  First trial to fix bug #322325
 
 *virtualbox-ose-3.2.4 (07 Jun 2010)
 
