@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.3.3-r1.ebuild,v 1.6 2010/01/19 01:21:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.3.3-r1.ebuild,v 1.7 2010/06/08 16:45:29 arfrever Exp $
 
 EAPI="2"
 
@@ -83,9 +83,8 @@ src_configure() {
 src_install() {
 	kde4-meta_src_install
 
-	python_version
 	rm -f \
-		"${D}/usr/$(get_libdir)/python${PYVER}"/site-packages/PyKDE4/*.py[co] \
+		"${D}$(python_get_sitedir)"/PyKDE4/*.py[co] \
 		"${D}${KDEDIR}"/share/apps/plasma_scriptengine_python/*.py[co]
 }
 
@@ -94,7 +93,7 @@ pkg_postinst() {
 
 	if use python; then
 		python_mod_optimize \
-			"/usr/$(get_libdir)/python${PYVER}"/site-packages/PyKDE4 \
+			"$(python_get_sitedir)"/PyKDE4 \
 			"${KDEDIR}"/share/apps/plasma_scriptengine_python
 	fi
 }
@@ -104,7 +103,7 @@ pkg_postrm() {
 
 	if [[ -d "${KDEDIR}"/share/apps/plasma_scriptengine_python ]]; then
 		python_mod_cleanup \
-			"/usr/$(get_libdir)/python${PYVER}"/site-packages/PyKDE4 \
+			"$(python_get_sitedir)"/PyKDE4 \
 			"${KDEDIR}"/share/apps/plasma_scriptengine_python
 	fi
 }
