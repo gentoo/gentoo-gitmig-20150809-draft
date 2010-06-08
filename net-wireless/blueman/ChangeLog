@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.7 2010/06/08 12:52:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.8 2010/06/08 12:53:50 dev-zero Exp $
+
+  08 Jun 2010; Tiziano Müller <dev-zero@gentoo.org> blueman-1.21.ebuild,
+  blueman-1.21-r1.ebuild:
+  Re-added dropped ~ppc keyword.
 
 *blueman-1.21-r1 (08 Jun 2010)
 
