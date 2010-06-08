@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.60 2010/06/08 11:27:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.61 2010/06/08 19:01:03 polynomial-c Exp $
+
+*virtualbox-ose-3.2.4-r1 (08 Jun 2010)
+
+  08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-ose-3.2.4.ebuild, +virtualbox-ose-3.2.4-r1.ebuild:
+  Oracle exchanged the tarballs on their download server without
+  ver-/revbump. Thanks to Bogdan Lipski for noticing us (bug #323207)
 
   08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-ose-3.2.2.ebuild, virtualbox-ose-3.2.4.ebuild:
