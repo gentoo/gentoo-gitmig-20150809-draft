@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.20.1.ebuild,v 1.1 2010/05/13 18:18:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.20.1.ebuild,v 1.2 2010/06/08 00:21:37 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -17,10 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos"
 IUSE="test"
 
-RDEPEND=">=dev-python/logilab-common-0.39.0"
+# Version specified in __pkginfo__.py.
+RDEPEND=">=dev-python/logilab-common-0.49.0"
 DEPEND="${RDEPEND}
 	test? ( >=dev-python/egenix-mx-base-3.0.0 )"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/logilab-${P}"
 
@@ -60,5 +61,5 @@ src_install() {
 		# Remove unittests since they're just needed during build-time
 		rm -fr "${sdir}/astng/test" || die
 	}
-	python_execute_function --action-message 'Deletion of unneeded files with Python ${PYTHON_ABI}' deletion_of_unneeded_files
+	python_execute_function -q deletion_of_unneeded_files
 }
