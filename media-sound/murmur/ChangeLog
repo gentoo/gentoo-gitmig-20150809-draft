@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.22 2010/02/10 21:52:57 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.23 2010/06/08 08:30:08 dev-zero Exp $
+
+  08 Jun 2010; Tiziano Müller <dev-zero@gentoo.org> murmur-1.1.8.ebuild,
+  murmur-1.2.2.ebuild:
+  Moved Ice from dev-cpp to dev-libs.
 
 *murmur-1.2.2 (10 Feb 2010)
 
