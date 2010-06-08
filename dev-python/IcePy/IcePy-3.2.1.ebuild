@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/IcePy-3.2.1.ebuild,v 1.6 2009/09/10 00:32:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/IcePy-3.2.1.ebuild,v 1.7 2010/06/08 08:27:56 dev-zero Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test debug"
 
-DEPEND="~dev-cpp/Ice-3.2.1"
+DEPEND="~dev-libs/Ice-3.2.1"
 
 src_prepare() {
 	python_version

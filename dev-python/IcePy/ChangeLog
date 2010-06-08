@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/IcePy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.14 2010/06/02 11:44:51 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/ChangeLog,v 1.15 2010/06/08 08:27:56 dev-zero Exp $
+
+  08 Jun 2010; Tiziano Müller <dev-zero@gentoo.org> IcePy-3.2.1.ebuild:
+  Moved Ice from dev-cpp to dev-libs.
 
   02 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   python takes over maintainership for now.
