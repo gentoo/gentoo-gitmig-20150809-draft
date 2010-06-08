@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11.3-r2.ebuild,v 1.3 2009/03/09 14:12:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.11.3-r2.ebuild,v 1.4 2010/06/08 16:05:44 arfrever Exp $
 
 NEED_PYTHON=2.3
 
@@ -34,8 +34,7 @@ src_unpack() {
 src_install() {
 	local inspath
 
-	python_version
-	inspath=/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	inspath=$(python_get_sitedir)/${PN}
 	insinto ${inspath}
 	doins -r data src
 	newins PyMSNt.py ${PN}.py
@@ -62,13 +61,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize $(python_get_sitedir)/${PN}
 
 	elog "A sample configuration file has been installed in /etc/jabber/${PN}.xml."
 	elog "Please edit it and the configuration of your Jabber server to match."
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/${PN}
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
