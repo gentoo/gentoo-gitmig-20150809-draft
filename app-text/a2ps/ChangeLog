@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.88 2009/12/26 17:26:35 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.89 2010/06/08 11:52:54 phajdan.jr Exp $
+
+  08 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> a2ps-4.14-r1.ebuild:
+  x86 stable wrt bug #322867
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> a2ps-4.13c-r5.ebuild,
   a2ps-4.13c-r6.ebuild, a2ps-4.14.ebuild, a2ps-4.14-r1.ebuild:
