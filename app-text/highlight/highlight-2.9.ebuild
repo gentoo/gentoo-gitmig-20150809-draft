@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.9.ebuild,v 1.8 2010/04/05 16:46:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-2.9.ebuild,v 1.9 2010/06/08 01:19:09 abcd Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -25,11 +25,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -f makefile PREFIX="${EPREFIX}" conf_dir="${EPREFIX}"/etc/highlight/ CXX="$(tc-getCXX)" \
+	emake -f makefile PREFIX="${EPREFIX}/usr" conf_dir="${EPREFIX}"/etc/highlight/ CXX="$(tc-getCXX)" \
 		|| die "emake failed"
 
 	if use qt4; then
-		emake -j1 -f makefile PREFIX="${EPREFIX}" conf_dir="${EPREFIX}"/etc/highlight/ CXX="$(tc-getCXX)" gui \
+		emake -j1 -f makefile PREFIX="${EPREFIX}/usr" conf_dir="${EPREFIX}"/etc/highlight/ CXX="$(tc-getCXX)" gui \
 			|| die "emake gui failed"
 	fi
 }
@@ -38,12 +38,12 @@ src_install() {
 	dodir /usr/bin
 
 	emake -f makefile DESTDIR="${D}" \
-		PREFIX="${EPREFIX}" conf_dir="${EPREFIX}"/etc/highlight/ \
+		PREFIX="${EPREFIX}/usr" conf_dir="${EPREFIX}"/etc/highlight/ \
 		install || die "emake install failed"
 
 	if use qt4; then
 		emake -f makefile DESTDIR="${D}" \
-			PREFIX="${EPREFIX}" conf_dir="${EPREFIX}"/etc/highlight/ \
+			PREFIX="${EPREFIX}/usr" conf_dir="${EPREFIX}"/etc/highlight/ \
 			install-gui || die "emake install-gui failed"
 		doicon src/gui-qt/${PN}.xpm
 		domenu ${PN}.desktop
