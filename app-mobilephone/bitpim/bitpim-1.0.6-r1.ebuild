@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.3 2010/02/08 09:03:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.4 2010/06/08 16:23:41 arfrever Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-ffmpeg_quality.patch"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
-	sed -i "s/^PYTHONVER=.*/PYTHONVER=${python}/" src/native/usb/build.sh
+	sed -i "s/^PYTHONVER=.*/PYTHONVER=$(PYTHON)/" src/native/usb/build.sh
 }
 
 src_compile() {
@@ -47,7 +47,7 @@ src_compile() {
 
 	# strings
 	cd "${S}/src/native/strings"
-	${python} setup.py build || die "compilation of native/strings failed"
+	distutils_src_compile
 
 	# bmp2avi
 	cd "${S}/src/native/av/bmp2avi"
@@ -62,7 +62,6 @@ src_install() {
 	# Python's site-packages might not be worthwhile.  We'll
 	# Put it in its own home, and add the PYTHONPATH in the
 	# wrapper executables below.
-	distutils_python_version
 	local RLOC=/usr/$(get_libdir)/${P}
 
 	# Main Python source
@@ -89,8 +88,7 @@ src_install() {
 
 	# strings
 	cd "${S}/src/native/strings"
-	${python} setup.py install --root="${D}" --no-compile "$@" \
-	    || die "install of native/strings failed"
+	distutils_src_install
 
 	cd "${S}"
 	insinto $RLOC/native/strings
@@ -119,11 +117,11 @@ src_install() {
 
 	# Creating scripts
 	echo '#!/bin/sh' > "${T}/bitpim"
-	echo "exec ${python} ${RLOC}/bp.py \"\$@\"" >> "${T}/bitpim"
+	echo "exec $(PYTHON) ${RLOC}/bp.py \"\$@\"" >> "${T}/bitpim"
 	dobin "${T}/bitpim"
 	if use crypt; then
 		echo '#!/bin/sh' > "${T}/bitfling"
-		echo "exec ${python} ${RLOC}/bp.py \"\$@\" bitfling" >> "${T}/bitfling"
+		echo "exec $(PYTHON) ${RLOC}/bp.py \"\$@\" bitfling" >> "${T}/bitfling"
 		dobin "${T}/bitfling"
 	fi
 
