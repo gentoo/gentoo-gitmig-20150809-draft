@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-3.2.4.ebuild,v 1.2 2010/06/08 16:12:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/virtualbox-ose-additions-3.2.4.ebuild,v 1.3 2010/06/09 03:47:38 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils
 
 MY_PN=VBoxGuestAdditions
-MY_P=${MY_PN}-${PV}
+MY_P=${MY_PN}_${PV}
 
 DESCRIPTION="CD image containing guest additions for VirtualBox"
 HOMEPAGE="http://www.virtualbox.org/"
