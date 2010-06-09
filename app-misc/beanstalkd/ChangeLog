@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beanstalkd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.9 2010/06/02 13:14:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.10 2010/06/09 16:05:32 patrick Exp $
+
+  09 Jun 2010; Patrick Lauer <patrick@gentoo.org> beanstalkd-1.3.ebuild:
+  Restricting tests on 1.3 as there's no sane way to fix them
 
   02 Jun 2010; Jeremy Olexa <darkside@gentoo.org> beanstalkd-1.4.6.ebuild:
   Convert to EAPI3 for Gentoo Prefix mods, bug 303397
