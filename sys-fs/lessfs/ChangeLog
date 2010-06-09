@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/lessfs
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.1 2010/06/09 21:01:49 hwoarang Exp $
+
+*lessfs-1.0.8 (09 Jun 2010)
+
+  09 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +lessfs-1.0.8.ebuild,
+  +metadata.xml:
+  Initial commit of lessfs application. Fixes bug #312997. Thanks to devsk
+  <funtoos@yahoo.com> for the initial ebuild
+
