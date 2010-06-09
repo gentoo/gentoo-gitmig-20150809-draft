@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.15 2009/01/12 22:48:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.16 2010/06/09 11:11:58 mabi Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 
@@ -17,7 +17,9 @@ inherit depend.php multilib
 
 EXPORT_FUNCTIONS src_install
 
-DEPEND="dev-lang/php >=dev-php/PEAR-PEAR-1.6.1"
+DEPEND="dev-lang/php
+	|| ( ( >=dev-php/PEAR-PEAR-1.6.1 <dev-php/PEAR-PEAR-1.8.1 )
+		 >=dev-php/pear-1.8.1 )"
 RDEPEND="${DEPEND}"
 
 # @FUNCTION: php-pear-lib-r1_src_install
