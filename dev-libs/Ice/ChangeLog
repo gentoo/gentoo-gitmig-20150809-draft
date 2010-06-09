@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.1 2010/06/08 08:25:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.2 2010/06/09 20:22:51 dev-zero Exp $
+
+*Ice-3.4.0 (09 Jun 2010)
+*Ice-3.3.1-r2 (09 Jun 2010)
+
+  09 Jun 2010; Tiziano Müller <dev-zero@gentoo.org> +Ice-3.3.1-r2.ebuild,
+  +files/Ice-3.3.1-cross-compile.patch, +Ice-3.4.0.ebuild,
+  +files/Ice-3.4.0-openssl.patch, +files/Ice-3.4.0-stream1.patch,
+  +files/Ice-3.4.0-stream2.patch:
+  Added revised ebuilds from my overlay, solving bug #236264 (they contain
+  ruby, python and c# bindings now) and bug #312133. Thanks to b33fc0d3 for
+  the cross-compile patch. Version bump (bug #312869, thanks to Philip
+  Kovacs for the stream-patches and the adapted openssl-patch).
 
   08 Jun 2010; Tiziano Müller <dev-zero@gentoo.org> +Ice-3.2.0.ebuild,
   +files/Ice-3.2.0-Makefile.patch, +Ice-3.2.1.ebuild,
