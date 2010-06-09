@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>jer@gentoo.org</email>
 </maintainer>
 <longdescription>
 Chrony is a pair of programs (chronyd and chronyc) which are used to maintain
