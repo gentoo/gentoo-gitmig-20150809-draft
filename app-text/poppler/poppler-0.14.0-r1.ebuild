@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.0.ebuild,v 1.1 2010/06/08 23:35:49 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.0-r1.ebuild,v 1.1 2010/06/09 14:06:43 scarabeus Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="PDF rendering library based on the xpdf-3.0 code base"
 HOMEPAGE="http://poppler.freedesktop.org/"
-SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
+SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
@@ -50,7 +50,7 @@ RDEPEND="${COMMON_DEPEND}
 	cjk? ( >=app-text/poppler-data-0.2.1 )
 "
 
-DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
+DOCS=(AUTHORS NEWS README README-XPDF TODO)
 
 src_configure() {
 	mycmakeargs=(

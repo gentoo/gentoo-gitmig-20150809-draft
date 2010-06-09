@@ -1,6 +1,13 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.234 2010/06/08 23:35:49 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.235 2010/06/09 14:06:42 scarabeus Exp $
+
+*poppler-0.14.0-r1 (09 Jun 2010)
+
+  09 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -poppler-0.14.0.ebuild, +poppler-0.14.0-r1.ebuild:
+  Update tarball to not use screwed one released by upstream. Revbump to
+  force update.
 
 *poppler-0.14.0 (08 Jun 2010)
 
