@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.92 2010/06/01 09:19:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.93 2010/06/09 08:27:00 pva Exp $
+
+*autofs-5.0.5 (09 Jun 2010)
+
+  09 Jun 2010; Peter Volkov <pva@gentoo.org> +autofs-5.0.5.ebuild,
+  +files/autofs-5.0.5-fix-building-without-sasl.patch,
+  +files/autofs-5.0.5-respect-user-flags-and-fix-asneeded.patch,
+  metadata.xml:
+  Version bump, bug #296357, thank Dustin Polke for this work.
 
   01 Jun 2010; Peter Volkov <pva@gentoo.org> autofs-5.0.4-r5.ebuild:
   Wrong patch was applied and that cause build issue, bug #292147#c15, thank
