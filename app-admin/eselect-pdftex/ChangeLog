@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-pdftex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/ChangeLog,v 1.19 2010/05/21 17:46:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/ChangeLog,v 1.20 2010/06/09 07:17:35 aballier Exp $
+
+  09 Jun 2010; Alexis Ballier <aballier@gentoo.org>
+  -files/pdftex.eselect-0.1, -eselect-pdftex-0.1.ebuild,
+  -files/pdftex.eselect-0.2, -eselect-pdftex-0.2.ebuild:
+  remove old
 
   21 May 2010; Peter Volkov <pva@gentoo.org> eselect-pdftex-0.3.ebuild:
   amd64 stable, bug 302203
