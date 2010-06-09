@@ -1,6 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.13 2010/01/02 14:49:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.14 2010/06/09 16:26:41 patrick Exp $
+
+# bug 318297
+WANT_AUTOMAKE="1.10"
 
 inherit autotools eutils
 
