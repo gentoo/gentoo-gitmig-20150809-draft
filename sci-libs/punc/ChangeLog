@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/punc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.1 2010/06/09 09:07:27 jlec Exp $
+
+*punc-0.2_p1 (09 Jun 2010)
+
+  09 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.2_p1-configure.patch, +files/0.2_p1-underlinking.patch,
+  +punc-0.2_p1.ebuild, +metadata.xml:
+  New addition
+
