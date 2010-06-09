@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.2 2010/05/19 09:00:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.3 2010/06/09 15:50:06 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils gnome2-utils
@@ -36,6 +36,9 @@ DOCS="Changelog TODO"
 
 src_configure() {
 	# -DENGINE_QT_PHONON_ENABLED=ON doesn't compile
+
+	# Harmless workaround for bug 320699.
+	append-cppflags $(pkg-config --cflags-only-I glib-2.0)
 
 	mycmakeargs=(
 		$(cmake-utils_use gstreamer ENGINE_GSTREAMER_ENABLED)
