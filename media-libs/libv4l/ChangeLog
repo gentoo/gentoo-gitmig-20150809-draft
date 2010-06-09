@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.30 2010/05/16 16:13:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.31 2010/06/09 09:45:31 ssuominen Exp $
+
+  09 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> libv4l-0.6.1.ebuild,
+  libv4l-0.7.91.ebuild:
+  DEPEND >=sys-kernel/linux-headers-2.6.30-r1 wrt #323307 by Jonas Berlin.
 
   16 May 2010; Raúl Porcel <armin76@gentoo.org> libv4l-0.6.1.ebuild:
   alpha stable wrt #306419
