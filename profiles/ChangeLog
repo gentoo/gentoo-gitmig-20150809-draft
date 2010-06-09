@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4235 2010/06/08 23:45:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4236 2010/06/09 12:31:30 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask poppler 0.14 as it breaks Gtk/GNOME apps.
 
   08 Jun 2010; <chainsaw@gentoo.org> package.mask:
   Mask 2.4 alpha releases of Audacious.
