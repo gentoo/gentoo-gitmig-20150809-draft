@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.2 2010/06/09 09:08:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.3 2010/06/09 11:41:03 jlec Exp $
 
 EAPI="3"
 
@@ -19,8 +19,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug mpi static-libs"
 
 DEPEND="
-	dev-libs/maloc[mpi?]
-	sci-libs/arpack[mpi?]
+	dev-libs/maloc[mpi=]
+	sci-libs/arpack[mpi=]
 	sci-libs/superlu
 	virtual/blas
 	virtual/mpi"
@@ -32,8 +32,8 @@ src_prepare() {
 	rm -rf src/{blas,lapack,arpack,superlu}
 	epatch "${FILESDIR}"/${PV}-underlinking.patch
 
-	cp tools/tests/pmg/*.f src/pmg/ -vfi
-	cp tools/tests/pmg/*.c src/pmg/ -vfi
+	cp tools/tests/pmg/*.f src/pmg/ -f
+	cp tools/tests/pmg/*.c src/pmg/ -f
 	cp src/pmg/vpmg.h src/vf2c/punc/vpmg.h
 	eautoreconf
 }
