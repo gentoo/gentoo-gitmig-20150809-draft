@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/pygui-2.2-r1.ebuild,v 1.1 2010/02/20 19:01:38 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/pygui-2.2-r1.ebuild,v 1.2 2010/06/09 21:12:22 patrick Exp $
 EAPI=3
 PYTHON_DEPEND=2
 RESTRICT_PYTHON_ABIS="3.*"
@@ -14,7 +14,7 @@ PYTHON_MODNAME=GUI
 SRC_URI="http://www.cosc.canterbury.ac.nz/greg.ewing/python_gui/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT=0
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
 RDEPEND="dev-python/pygtk"
