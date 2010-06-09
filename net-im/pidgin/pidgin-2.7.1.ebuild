@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1.ebuild,v 1.1 2010/06/04 00:45:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1.ebuild,v 1.2 2010/06/09 16:08:01 pva Exp $
 
 EAPI=2
 
 GENTOO_DEPEND_ON_PERL=no
-inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 autotools
+inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 python
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://pidgin.im/"
@@ -16,19 +16,25 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus debug doc eds gadu gnutls +gstreamer +gtk idn krb4 meanwhile"
 IUSE+=" networkmanager nls perl silc tcl tk spell qq sasl +startup-notification"
-IUSE+=" ncurses groupwise prediction +xscreensaver zephyr zeroconf" # mono"
+IUSE+=" ncurses groupwise prediction python +xscreensaver zephyr zeroconf" # mono"
 
+# dbus requires python to generate C code for dbus bindings (thus DEPEND only).
+# finch uses libgnt that links with libpython - {R,}DEPEND. But still there is
+# no way to build dbus and avoid libgnt linkage with python. If you want this
+# send patch upstream.
 RDEPEND="
 	>=dev-libs/glib-2.12
 	>=dev-libs/libxml2-2.6.18
-	ncurses? ( sys-libs/ncurses[unicode] )
+	ncurses? ( sys-libs/ncurses[unicode] 
+		dbus? ( <dev-lang/python-3 )
+		python? ( <dev-lang/python-3 ) )
 	gtk? (
 		>=x11-libs/gtk+-2.10:2
 		x11-libs/libSM
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		startup-notification? ( >=x11-libs/startup-notification-0.5 )
 		spell? ( >=app-text/gtkspell-2.0.2 )
-		eds? ( <gnome-extra/evolution-data-server-2.30 )
+		eds? ( gnome-extra/evolution-data-server )
 		prediction? ( >=dev-db/sqlite-3.3:3 ) )
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-libs/gst-plugins-good-0.10*
@@ -37,9 +43,7 @@ RDEPEND="
 		media-plugins/gst-plugins-gconf )
 	zeroconf? ( net-dns/avahi )
 	dbus? ( >=dev-libs/dbus-glib-0.71
-		>=dev-python/dbus-python-0.71
-		>=sys-apps/dbus-0.90
-		>=dev-lang/python-2.4 )
+		>=sys-apps/dbus-0.90 )
 	perl? ( >=dev-lang/perl-5.8.2-r1[-build] )
 	gadu?  ( >=net-libs/libgadu-1.9.0[-ssl] )
 	gnutls? ( net-libs/gnutls )
@@ -60,9 +64,12 @@ DEPEND="$RDEPEND
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
 	gtk? ( x11-proto/scrnsaverproto )
+	dbus? ( <dev-lang/python-3 )
 	doc? ( app-doc/doxygen )
 	nls? ( >=dev-util/intltool-0.41.1
 		sys-devel/gettext )"
+
+DOCS="AUTHORS HACKING NEWS README ChangeLog"
 
 # Enable Default protocols
 DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
@@ -103,6 +110,9 @@ pkg_setup() {
 		elog "Note: xscreensaver USE flag is disabled. Thus pidgin will be unable"
 		elog "to monitor idle/active status based on mouse/keyboard events"
 	fi
+	if use dbus && ! use python; then
+		elog "It's impossible to disable linkage with python in case dbus is enabled."
+	fi
 }
 
 src_configure() {
@@ -125,14 +135,20 @@ src_configure() {
 	use groupwise && DYNAMIC_PRPLS+=",novell"
 	use zephyr && DYNAMIC_PRPLS+=",zephyr"
 
-	if use gnutls ; then
+	if use gnutls; then
 		einfo "Disabling NSS, using GnuTLS"
-		myconf="${myconf} --enable-nss=no --enable-gnutls=yes"
-		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
-		myconf="${myconf} --with-gnutls-libs=/usr/$(get_libdir)"
+		myconf+=" --enable-nss=no --enable-gnutls=yes"
+		myconf+=" --with-gnutls-includes=/usr/include/gnutls"
+		myconf+=" --with-gnutls-libs=/usr/$(get_libdir)"
 	else
 		einfo "Disabling GnuTLS, using NSS"
-		myconf="${myconf} --enable-gnutls=no --enable-nss=yes"
+		myconf+=" --enable-gnutls=no --enable-nss=yes"
+	fi
+
+	if use dbus || { use ncurses && use python; }; then
+		myconf+=" --with-python=$(PYTHON)"
+	else
+		myconf+=" --without-python"
 	fi
 
 	econf \
@@ -170,5 +186,4 @@ src_configure() {
 src_install() {
 	gnome2_src_install
 	use perl && fixlocalpod
-	dodoc AUTHORS HACKING INSTALL NEWS README ChangeLog
 }
