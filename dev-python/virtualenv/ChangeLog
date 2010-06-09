@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.36 2010/05/28 17:01:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.37 2010/06/09 17:28:25 phajdan.jr Exp $
+
+  09 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  virtualenv-1.4.8.ebuild:
+  x86 stable wrt bug #321237
 
 *virtualenv-1.4.9 (28 May 2010)
 
