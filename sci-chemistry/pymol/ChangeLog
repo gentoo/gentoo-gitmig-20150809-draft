@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.63 2010/06/09 06:49:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.64 2010/06/09 07:04:48 jlec Exp $
+
+*pymol-1.3.0 (09 Jun 2010)
+
+  09 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/1.3.0-vmd.patch,
+  pymol-1.2.3-r1.ebuild, +pymol-1.3.0.ebuild:
+  Version Bump, fixes for usage of python.eclass
 
   09 Jun 2010; Justin Lecher <jlec@gentoo.org> -pymol-1.0-r1.ebuild,
   -files/pymol-1.0-r1-data-path.patch, -pymol-1.2.2.ebuild,

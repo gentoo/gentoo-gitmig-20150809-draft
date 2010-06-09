@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.3-r1.ebuild,v 1.5 2010/06/09 07:04:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.3.0.ebuild,v 1.1 2010/06/09 07:04:48 jlec Exp $
 
 EAPI="3"
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="tk"
-REV="3891"
+REV="3909"
 
 inherit eutils distutils prefix
 
@@ -17,7 +17,7 @@ SRC_URI="http://pymol.svn.sourceforge.net/viewvc/pymol/trunk/pymol.tar.gz?view=t
 
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="apbs numpy shaders vmd"
 
 DEPEND="
@@ -56,7 +56,7 @@ src_prepare() {
 
 	use shaders && epatch "${FILESDIR}"/${PN}-1.2.2-shaders.patch
 
-	use vmd && epatch "${FILESDIR}"/${PN}-1.2.2-vmd.patch
+	use vmd && epatch "${FILESDIR}"/${PV}-vmd.patch
 
 	use numpy && \
 		sed \
@@ -101,6 +101,4 @@ src_install() {
 	doins -r examples || die "Failed to install docs."
 
 	dodoc DEVELOPERS README || die "Failed to install docs."
-
-#	rm "${D}"$(python_get_sitedir)/pmg_tk/startup/apbs_tools.py
 }
