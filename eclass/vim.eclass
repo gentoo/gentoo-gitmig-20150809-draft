@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.186 2010/05/03 01:41:53 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.187 2010/06/09 18:35:45 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -107,13 +107,13 @@ else
 	# 	mzscheme? ( dev-scheme/mzscheme )"
 
 	if [[ ${MY_PN} == vim ]] ; then
-		IUSE="${IUSE} vim-with-x minimal vim-pager"
+		IUSE="${IUSE} X minimal vim-pager"
 		DEPEND="${DEPEND}
-			vim-with-x? ( x11-libs/libXt x11-libs/libX11
+			X? ( x11-libs/libXt x11-libs/libX11
 				x11-libs/libSM x11-proto/xproto )
 			!minimal? ( dev-util/ctags )"
 		RDEPEND="${RDEPEND}
-			vim-with-x? ( x11-libs/libXt )
+			X? ( x11-libs/libXt )
 			!minimal? ( ~app-editors/vim-core-${PV}
 				dev-util/ctags )
 			!<app-editors/nvi-1.81.5-r4"
@@ -426,7 +426,7 @@ vim_src_configure() {
 		if [[ ${MY_PN} == vim ]] ; then
 			# don't test USE=X here ... see bug #19115
 			# but need to provide a way to link against X ... see bug #20093
-			myconf="${myconf} --enable-gui=no --disable-darwin `use_with vim-with-x x`"
+			myconf="${myconf} --enable-gui=no --disable-darwin `use_with X x`"
 
 		elif [[ ${MY_PN} == gvim ]] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
@@ -662,6 +662,11 @@ vim_pkg_postinst() {
 	fi
 
 	if [[ ${MY_PN} == vim ]] ; then
+		if use X; then
+			echo
+			elog "The 'X' USE flag enables vim <-> X communication, like"
+			elog "updating the xterm titlebar. It does not install a GUI."
+		fi
 		echo
 		elog "To install a GUI version of vim, use the app-editors/gvim"
 		elog "package."
@@ -672,7 +677,7 @@ vim_pkg_postinst() {
 	elog "some of these named app-vim/vim-spell-*. If your language of"
 	elog "choice is not included, please consult vim-spell.eclass for"
 	elog "instructions on how to make a package."
-	ewarn
+	echo
 	ewarn "Note that the English word lists are no longer installed by"
 	ewarn "default."
 
@@ -683,7 +688,7 @@ vim_pkg_postinst() {
 
 	# Warn about VIMRUNTIME
 	if [ -n "$VIMRUNTIME" -a "${VIMRUNTIME##*/vim}" != "${VIM_VERSION/./}" ] ; then
-		ewarn
+		echo
 		ewarn "WARNING: You have VIMRUNTIME set in your environment from an old"
 		ewarn "installation.  You will need to either unset VIMRUNTIME in each"
 		ewarn "terminal, or log out completely and back in.  This problem won't"
