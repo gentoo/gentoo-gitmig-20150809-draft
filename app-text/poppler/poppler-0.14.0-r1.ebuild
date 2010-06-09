@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.0-r1.ebuild,v 1.1 2010/06/09 14:06:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.0-r1.ebuild,v 1.2 2010/06/09 14:38:35 scarabeus Exp $
 
 EAPI="2"
 
@@ -88,8 +88,12 @@ src_install() {
 	fi
 }
 
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libpoppler-glib.so.5
+	preserve_old_lib /usr/$(get_libdir)/libpoppler.so.6
+}
+
 pkg_postinst() {
-	ewarn 'After upgrading app-text/poppler you may need to reinstall packages'
-	ewarn 'depending on it. If you have gentoolkit installed, you can find those'
-	ewarn 'with `equery d poppler`.'
+	preserve_old_lib_notify /usr/$(get_libdir)/libpoppler-glib.so.5
+	preserve_old_lib_notify /usr/$(get_libdir)/libpoppler.so.6
 }
