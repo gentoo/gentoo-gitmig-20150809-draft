@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icu4j
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.44 2010/04/29 12:23:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.45 2010/06/09 17:52:14 phajdan.jr Exp $
+
+  09 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> icu4j-4.4.1.ebuild:
+  x86 stable wrt bug #321955
 
 *icu4j-4.4.1 (29 Apr 2010)
 
