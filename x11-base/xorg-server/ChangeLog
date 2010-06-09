@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.514 2010/06/04 13:57:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.515 2010/06/09 12:52:43 scarabeus Exp $
+
+*xorg-server-1.8.1.901 (09 Jun 2010)
+
+  09 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xorg-server-1.8.1-r1.ebuild, +xorg-server-1.8.1.901.ebuild,
+  -files/1.6.3.901-0001-dix-append-built-ins-to-the-font-path-in-SetDefaultF
+  .patch:
+  Version bump. Drop old.
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org> xorg-server-1.7.6.ebuild:
   hppa stable, #308521
