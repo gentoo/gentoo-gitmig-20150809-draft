@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1.ebuild,v 1.2 2010/06/09 16:08:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1.ebuild,v 1.3 2010/06/09 17:06:34 pva Exp $
 
 EAPI=2
 
@@ -112,6 +112,10 @@ pkg_setup() {
 	fi
 	if use dbus && ! use python; then
 		elog "It's impossible to disable linkage with python in case dbus is enabled."
+	fi
+	if use dbus || { use ncurses && use python; }; then
+		python_set_active_version 2
+		python_pkg_setup
 	fi
 }
 
