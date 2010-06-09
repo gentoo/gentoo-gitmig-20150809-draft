@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.62 2010/05/16 12:52:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.63 2010/06/09 06:49:59 jlec Exp $
+
+  09 Jun 2010; Justin Lecher <jlec@gentoo.org> -pymol-1.0-r1.ebuild,
+  -files/pymol-1.0-r1-data-path.patch, -pymol-1.2.2.ebuild,
+  -pymol-1.2.2-r2.ebuild, -pymol-1.2.2-r4.ebuild,
+  -files/nosplash-gentoo.patch:
+  removed old version which having problems with PYTHON ABIs stuff
 
   16 May 2010; Justin Lecher <jlec@gentoo.org> pymol-1.2.2-r4.ebuild,
   pymol-1.2.3-r1.ebuild:
