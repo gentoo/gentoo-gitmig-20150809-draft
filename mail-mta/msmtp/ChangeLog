@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.82 2010/04/17 18:54:06 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.83 2010/06/09 18:51:09 patrick Exp $
+
+*msmtp-1.4.20 (09 Jun 2010)
+
+  09 Jun 2010; Patrick Lauer <patrick@gentoo.org> +msmtp-1.4.20.ebuild:
+  Bump for #301036
 
   17 Apr 2010; Alex Legler <a3li@gentoo.org> -msmtp-1.4.5.ebuild,
   -msmtp-1.4.7.ebuild:
