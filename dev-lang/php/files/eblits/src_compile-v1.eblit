@@ -1,64 +1,87 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_compile-v1.eblit,v 1.1 2010/05/27 23:05:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_compile-v1.eblit,v 1.2 2010/06/09 08:52:07 mabi Exp $
 
 eblit-php-src_compile() {
-	SAPIS="${WORKDIR}/sapis"
+	SAPI_DIR="${WORKDIR}/sapis"
+	local is_first_sapi=1
 
-	if use cli ; then
-		php_sapi_build cli
-		cp sapi/cli/php "${SAPIS}/cli/" \
-			|| die "Unable to copy cli SAPI"
-	fi
+	for sapi in ${SAPIS} ; do
+		use "${sapi}" || continue
+		if [[ ${is_first_sapi} == 1 ]]; then
+			is_first_sapi=0
+		else
+			emake clean
+		fi
 
-	if use cgi ; then
-		php_sapi_build cgi
-		cp sapi/cgi/php-cgi "${SAPIS}/cgi/" \
-			|| die "Unable to copy cgi SAPI"
-	fi
-
-	if use embed ; then
-		php_sapi_build embed
-		cp libs/libphp${PHP_MV}.so "${SAPIS}"/embed \
-			|| die "Unable to copy embed SAPI"
-	fi
-
-	if use apache2 ; then
-		php_sapi_build apache2
-		# apache2 is a special case; the necessary files (yes, multiple)
-		# are copied by make install, not by the ebuild; that's the reason,
-		# why apache2 has to be the last sapi
-	fi
+		php_sapi_build "${sapi}"
+		php_sapi_copy "${sapi}"
+	done
 }
 
 php_sapi_build() {
 	local sapi="$1"
-	php_set_ini_dir ${sapi}
+	php_set_ini_dir "${sapi}"
 
-	mkdir -p "${SAPIS}/${sapi}"
+	mkdir -p "${SAPI_DIR}/${sapi}"
 
 	sapi_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR}
 		--with-config-file-scan-dir=${PHP_EXT_INI_DIR_ACTIVE}"
 
-	for available_sapi in cli cgi embed ; do
-		if [[ $sapi == $available_sapi ]] ; then
-			sapi_conf="${sapi_conf} --enable-${available_sapi}"
-		else
-			sapi_conf="${sapi_conf} --disable-${available_sapi}"
-		fi
-	done
+	for one_sapi in $SAPIS ; do
+		case "$one_sapi" in
+			cli|cgi|embed)
+				if [[ "${one_sapi}" == "${sapi}" ]] ; then
+					sapi_conf="${sapi_conf} --enable-${available_sapi}"
+				else
+					sapi_conf="${sapi_conf} --disable-${available_sapi}"
+				fi
+				;;
 
-	if [[ $sapi == "apache2" ]] ; then
-		sapi_conf="${sapi_conf} --with-apxs2=/usr/sbin/apxs"
-	else
-		sapi_conf="${sapi_conf} --without-apxs2"
-	fi
+			apache2)
+				if [[ "${one_sapi}" == "${sapi}" ]] ; then
+					sapi_conf="${sapi_conf} --with-apxs2=/usr/sbin/apxs"
+				else
+					sapi_conf="${sapi_conf} --without-apxs2"
+				fi
+				;;
+
+		esac
+	done
 
 	econf ${sapi_conf}
 	emake || die "emake failed"
-
-	rm -f main/main.o main/main.lo main/php_ini.o \
-		main/php_ini.lo 2>/dev/null
 }
 
+php_sapi_copy() {
+	local sapi="$1"
+	local source=""
 
+	case "$sapi" in
+		cli)
+			source="sapi/cli/php"
+			;;
+		cgi)
+			source="sapi/cgi/php-cgi"
+			;;
+		embed)
+			source="libs/libphp${PHP_MV}.so"
+			;;
+
+		apache2)
+			# apache2 is a special case; the necessary files
+			# (yes, multiple) are copied by make install, not
+			# by the ebuild; that's the reason, why apache2 has
+			# to be the last sapi
+			emake INSTALL_ROOT="${SAPI_DIR}/${sapi}/" install-sapi
+			;;
+
+		*)
+			die "unhandled sapi in php_sapi_copy"
+			;;
+	esac
+
+	if [[ "${source}" ]] ; then
+		cp "$source" "${SAPI_DIR}/$sapi" || die "Unable to copy ${sapi} SAPI"
+	fi
+}
