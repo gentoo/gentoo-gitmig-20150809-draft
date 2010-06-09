@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.63 2010/04/24 19:43:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.64 2010/06/09 19:00:56 phajdan.jr Exp $
+
+  09 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  omniORB-4.1.4-r1.ebuild:
+  x86 stable wrt bug #322295
 
 *omniORB-4.1.4-r1 (24 Apr 2010)
 
