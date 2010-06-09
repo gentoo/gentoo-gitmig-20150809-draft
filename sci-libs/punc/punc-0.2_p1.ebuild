@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.1 2010/06/09 09:07:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.2 2010/06/09 09:08:23 jlec Exp $
 
 EAPI="3"
 
@@ -64,4 +64,3 @@ src_install() {
 
 	dohtml doc/index.html || die "failed to install html docs"
 }
-
