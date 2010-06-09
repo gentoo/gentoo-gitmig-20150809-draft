@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.2.1-r2.ebuild,v 1.2 2010/05/05 10:48:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.2.1-r3.ebuild,v 1.1 2010/06/09 11:58:24 jlec Exp $
 
 EAPI="3"
 
@@ -30,6 +30,7 @@ src_prepare() {
 }
 
 src_configure() {
+	use mpi && export CC="mpicc"
 	# fix install location of libs in Makefile
 	sed -e "s|libdir = \${prefix}/lib/\${fetk_cpu_vendor_os}|libdir = \${prefix}/$(get_libdir)/|" \
 		-i src/aaa_lib/Makefile.in || \
