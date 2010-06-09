@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.179 2010/05/29 08:36:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.180 2010/06/09 13:12:39 darkside Exp $
+
+  09 Jun 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Drop mask for packages that require root privs to run, as discussed on the
+  gentoo-alt mailing list
 
   29 May 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop git mask for version no longer in the tree

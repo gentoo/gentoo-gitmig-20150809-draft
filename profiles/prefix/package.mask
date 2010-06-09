@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.62 2010/06/08 19:25:43 grobian Exp $
+# $Id: package.mask,v 1.63 2010/06/09 13:12:39 darkside Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -182,14 +182,3 @@ sys-devel/native-cctools
 # dies with "exhausted memory" errors on Darwin, doesn't understand
 # arguments on Solaris.  Probably more problems...
 =dev-util/cvs-1.12.12*
-
-
-# These masks are because the packages need root access to run, even
-# though they compile fine
-app-admin/bcfg2
-net-analyzer/arping
-net-analyzer/mtr
-net-analyzer/pchar
-net-analyzer/tcpdump
-net-misc/ntp
-sys-apps/preload
