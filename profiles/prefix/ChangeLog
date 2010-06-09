@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.180 2010/06/09 13:12:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.181 2010/06/09 13:42:51 darkside Exp $
+
+  09 Jun 2010; Jeremy Olexa <darkside@gentoo.org> linux/package.mask:
+  Revert global ghostscript-gpl mask because it appears to work fine on
+  linux.
 
   09 Jun 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
   Drop mask for packages that require root privs to run, as discussed on the
