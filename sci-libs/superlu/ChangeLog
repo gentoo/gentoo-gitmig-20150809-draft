@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/superlu
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.1 2010/06/09 08:18:58 jlec Exp $
+
+*superlu-4.0-r1 (09 Jun 2010)
+
+  09 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/4.0-test.patch,
+  +superlu-4.0-r1.ebuild, +files/superlu-4.0-autotools.patch,
+  +files/superlu-examples.patch, +metadata.xml:
+  Moved from sci overlay to tree
+
