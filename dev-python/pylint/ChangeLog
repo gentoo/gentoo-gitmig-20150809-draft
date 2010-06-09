@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.68 2010/06/08 00:34:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.69 2010/06/09 12:57:28 arfrever Exp $
+
+  09 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pylint-0.20.0.ebuild:
+  amd64 stable (tested by rullzer) (bug #319177).
 
 *pylint-0.21.1 (08 Jun 2010)
 
