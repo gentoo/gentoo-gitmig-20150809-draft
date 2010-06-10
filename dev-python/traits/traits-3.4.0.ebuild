@@ -1,17 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.4.0.ebuild,v 1.1 2010/05/31 06:45:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.4.0.ebuild,v 1.2 2010/06/10 19:12:51 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
 MY_PN="Traits"
 MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="Enthought Tool Suite explicitly typed attributes for Python"
-HOMEPAGE="http://code.enthought.com/projects/traits"
+HOMEPAGE="http://code.enthought.com/projects/traits http://pypi.python.org/pypi/Traits"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 IUSE="doc examples test"
@@ -25,7 +28,6 @@ DEPEND="dev-python/setuptools
 	doc? ( dev-python/setupdocs )
 	test? ( >=dev-python/nose-0.10.3
 			>=dev-python/numpy-1.1 )"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -43,13 +45,6 @@ src_compile() {
 	if use doc; then
 		"$(PYTHON -f)" setup.py build_docs --formats=html || die "Generation of documentation failed"
 	fi
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="$(dir -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
 }
 
 src_install() {
