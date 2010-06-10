@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <use>
-<flag name="logrotate">Install a logrotate script to rotate /var/account/*</flag>
+<flag name="logrotate">Use <pkg>app-admin/logrotate</pkg> for log rotation in /var/account/.</flag>
 </use>
 </pkgmetadata>
