@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/ast
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.11 2010/01/27 07:00:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.12 2010/06/10 08:58:48 xarthisius Exp $
+
+*ast-5.3.1-r1 (10 Jun 2010)
+
+  10 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> +ast-5.3.1-r1.ebuild,
+  +files/ast-5.3.1-gcc44.patch:
+  Fixing header creation with >=GCC-4.4 wrt bug 322733. Thanks Diego for the
+  report.
 
 *ast-5.3.1 (27 Jan 2010)
 
