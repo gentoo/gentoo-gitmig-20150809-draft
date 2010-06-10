@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.56 2010/06/09 22:09:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.57 2010/06/10 02:24:55 jer Exp $
+
+*chrony-1.24-r2 (10 Jun 2010)
+
+  10 Jun 2010; Jeroen Roovers <jer@gentoo.org> +chrony-1.24-r2.ebuild,
+  +files/chrony.logrotate, metadata.xml:
+  Add USE=logrotate with a logrotate script contributed by Georg Sauthoff
+  (bug #106391).
 
   09 Jun 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Maintain.
