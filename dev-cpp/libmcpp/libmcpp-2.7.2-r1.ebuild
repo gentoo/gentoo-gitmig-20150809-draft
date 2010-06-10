@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/libmcpp-2.7.2-r1.ebuild,v 1.1 2010/06/10 05:47:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/libmcpp-2.7.2-r1.ebuild,v 1.2 2010/06/10 05:48:42 dev-zero Exp $
 
 EAPI="3"
 
@@ -35,4 +35,3 @@ src_install() {
 
 	use static-libs || rm -rf "${D}"/usr/lib*/*.la
 }
-
