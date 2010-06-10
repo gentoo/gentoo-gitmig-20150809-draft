@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11612 2010/06/10 06:59:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11613 2010/06/10 08:36:29 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markus Meier <maekke@gentoo.org> (10 Jun 2010)
+# mask inkscape prereleases for testing
+>=media-gfx/inkscape-0.48_pre0
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Jun 2010)
 # Fails to self-verify/sign in FIPS mode, pending upstream response before
