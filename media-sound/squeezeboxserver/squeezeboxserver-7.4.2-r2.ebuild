@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.4.2-r1.ebuild,v 1.1 2010/04/21 15:45:36 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.4.2-r2.ebuild,v 1.1 2010/06/10 14:30:34 lavajoe Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ RDEPEND="
 	virtual/logger
 	virtual/mysql
 	>=dev-lang/perl-5.8.8
-	>=dev-perl/Audio-Scan-0.59
+	~dev-perl/Audio-Scan-0.59
 	>=dev-perl/GD-2.41
 	>=virtual/perl-IO-Compress-2.015
 	>=dev-perl/YAML-Syck-1.05
