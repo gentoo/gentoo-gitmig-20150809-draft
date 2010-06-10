@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libvpx
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.1 2010/06/10 16:02:09 lu_zero Exp $
+
+*libvpx-9999 (10 Jun 2010)
+
+  10 Jun 2010; Luca Barbato <lu_zero@gentoo.org> +libvpx-9999.ebuild:
+  Initial live ebuild, 0.9.0 release _SHOULD_NOT_ be put into portage, thanks
+  to the people in bug #320817 for the support
+
