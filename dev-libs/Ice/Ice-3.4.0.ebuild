@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.0.ebuild,v 1.1 2010/06/09 20:22:51 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.0.ebuild,v 1.2 2010/06/10 19:07:33 polynomial-c Exp $
 
 EAPI="2"
 
@@ -94,13 +94,13 @@ src_configure() {
 	use ncurses && OPTIONS="${MAKE_RULES} USE_READLINE=yes" || MAKE_RULES="${MAKE_RULES} USE_READLINE=no"
 	use debug && OPTIONS"${MAKE_RULES} OPTIMIZE=no" || MAKE_RULES="${MAKE_RULES} OPTIMIZE=yes"
 
-	MAKE_RULES="${MAKE_RULES} DB_FLAGS=-I/usr/include/db4.6"
+	MAKE_RULES="${MAKE_RULES} DB_FLAGS=-I/usr/include/db4.8"
 	sed -i \
 		-e "s|c++|$(tc-getCXX)|" \
 		-e "s|\(CFLAGS[[:space:]]*=\)|\1 ${CFLAGS}|" \
 		-e "s|\(CXXFLAGS[[:space:]]*=\)|\1 ${CXXFLAGS}|" \
 		-e "s|\(LDFLAGS[[:space:]]*=\)|\1 ${LDFLAGS}|" \
-		-e "s|\(DB_LIBS[[:space:]]*=\) \-ldb_cxx|\1 -ldb_cxx-4.6|" \
+		-e "s|\(DB_LIBS[[:space:]]*=\) \-ldb_cxx|\1 -ldb_cxx-4.8|" \
 		cpp/config/Make.rules{,.Linux} py/config/Make.rules || die "sed failed"
 
 	if use python ; then
