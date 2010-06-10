@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libeXosip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.15 2010/05/20 10:05:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.16 2010/06/10 06:53:32 phajdan.jr Exp $
+
+  10 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libeXosip-3.3.0.ebuild:
+  x86 stable wrt bug #317235
 
   20 May 2010; Peter Volkov <pva@gentoo.org> libeXosip-3.3.0.ebuild:
   amd64 stable, bug 317235.
