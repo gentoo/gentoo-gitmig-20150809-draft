@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.30 2010/06/10 02:22:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.31 2010/06/10 02:50:08 jer Exp $
+
+  10 Jun 2010; Jeroen Roovers <jer@gentoo.org> acct-6.5.4-r1.ebuild,
+  metadata.xml:
+  Remove IUSE=logrotate (bug #198901).
 
   10 Jun 2010; Jeroen Roovers <jer@gentoo.org> acct-6.5.4-r1.ebuild,
   metadata.xml:
