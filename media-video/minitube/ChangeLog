@@ -1,6 +1,13 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.28 2010/06/09 06:55:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.29 2010/06/10 12:08:53 hwoarang Exp $
+
+*minitube-1.0-r1 (10 Jun 2010)
+
+  10 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +minitube-1.0-r1.ebuild:
+  Add gstreamer use flag since minitube works with xine and gstreamer phonon
+  backends. Thanks to amak79 for pointing this out
 
   09 Jun 2010; Christoph Mende <angelos@gentoo.org> minitube-1.0.ebuild:
   Stable on amd64 wrt bug #322691
