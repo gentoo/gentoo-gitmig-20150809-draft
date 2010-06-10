@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.52 2010/06/01 14:54:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.53 2010/06/10 03:04:43 jer Exp $
+
+  10 Jun 2010; Jeroen Roovers <jer@gentoo.org> libdc1394-1.2.2.ebuild,
+  libdc1394-2.1.2.ebuild:
+  Stable for HPPA (bug #315655).
 
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org> libdc1394-1.2.2.ebuild,
   libdc1394-2.1.2.ebuild:
