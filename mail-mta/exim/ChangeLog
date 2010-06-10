@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.164 2010/06/09 13:12:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.165 2010/06/10 01:47:08 jer Exp $
+
+  10 Jun 2010; Jeroen Roovers <jer@gentoo.org> exim-4.72.ebuild:
+  Stable for HPPA (bug #322665).
 
   09 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> exim-4.72.ebuild:
   x86 stable wrt security bug #322665
