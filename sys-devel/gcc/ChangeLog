@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.757 2010/06/10 05:27:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.758 2010/06/10 08:48:26 maekke Exp $
+
+  10 Jun 2010; Markus Meier <maekke@gentoo.org> gcc-4.4.3-r2.ebuild:
+  arm stable, bug #302468
 
 *gcc-4.4.4 (10 Jun 2010)
 
