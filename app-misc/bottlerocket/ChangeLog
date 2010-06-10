@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bottlerocket
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/ChangeLog,v 1.9 2008/12/30 19:20:35 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/ChangeLog,v 1.10 2010/06/10 14:55:18 patrick Exp $
+
+  10 Jun 2010; Patrick Lauer <patrick@gentoo.org> bottlerocket-0.04c.ebuild:
+  Fix homepage and src_uri for #309477
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org>
   bottlerocket-0.04c.ebuild:

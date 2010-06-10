@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/bottlerocket-0.04c.ebuild,v 1.10 2008/12/30 19:20:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bottlerocket/bottlerocket-0.04c.ebuild,v 1.11 2010/06/10 14:55:18 patrick Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="CLI interface to the X-10 Firecracker Kit"
-HOMEPAGE="http://mlug.missouri.edu/~tymm/"
-SRC_URI="http://mlug.missouri.edu/~tymm/${P}.tar.gz"
+HOMEPAGE="http://www.linuxha.com/bottlerocket/"
+SRC_URI="http://www.linuxha.com/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
