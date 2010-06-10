@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.85 2010/06/03 13:36:09 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.86 2010/06/10 03:05:55 jer Exp $
+
+  10 Jun 2010; Jeroen Roovers <jer@gentoo.org> pbzip2-1.1.1.ebuild:
+  Stable for HPPA (bug #322531).
 
   03 Jun 2010; Dror Levin <spatz@gentoo.org> -pbzip2-1.1.0.ebuild,
   pbzip2-1.1.1.ebuild:
