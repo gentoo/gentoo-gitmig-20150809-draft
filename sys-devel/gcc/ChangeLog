@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.755 2010/06/04 19:32:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.756 2010/06/10 03:09:03 vapier Exp $
+
+*gcc-4.3.5 (10 Jun 2010)
+
+  10 Jun 2010; Mike Frysinger <vapier@gentoo.org> +gcc-4.3.5.ebuild:
+  Version bump.
 
   04 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.4.3-r2.ebuild:
   x86 stable wrt bug #302468
