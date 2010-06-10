@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.109 2010/06/08 11:58:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.110 2010/06/10 15:57:02 jer Exp $
+
+  10 Jun 2010; Jeroen Roovers <jer@gentoo.org> enchant-1.6.0.ebuild:
+  Stable for HPPA (bug #323093).
 
   08 Jun 2010; Markos Chandras <hwoarang@gentoo.org> enchant-1.6.0.ebuild:
   Stable on amd64 wrt bug #323093
