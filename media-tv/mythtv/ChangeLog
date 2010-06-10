@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.318 2010/05/26 15:39:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.319 2010/06/10 03:16:50 cardoe Exp $
+
+*mythtv-0.23_p25051 (10 Jun 2010)
+
+  10 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.23_p25051.ebuild:
+  Add experimental ebuild for MythTV 0.23
 
   26 May 2010; Doug Goldstein <cardoe@gentoo.org> -mythtv-0.22_p22778.ebuild,
   -mythtv-0.22_p22811.ebuild, -mythtv-0.22_p22824.ebuild,
