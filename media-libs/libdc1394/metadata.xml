@@ -6,7 +6,4 @@
     <email>stefaan@gentoo.org</email>
     <name>Stefaan De Roeck</name>
   </maintainer>
-  <use>
-    <flag name="juju">Use the new juju firewire stack in the Linux kernel</flag>
-  </use>
 </pkgmetadata>
