@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.59 2010/04/08 19:29:28 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.60 2010/06/10 18:17:51 zmedico Exp $
+
+*youtube-dl-2010.06.06 (10 Jun 2010)
+
+  10 Jun 2010; Zac Medico <zmedico@gentoo.org>
+  +youtube-dl-2010.06.06.ebuild:
+  2010.06.06 version bump. This version supports WebM video formats 43 and
+  45 (upstream issue #139). Also add ebuild fixes for bug #315849, including
+  shebang specifying python2.
 
 *youtube-dl-2010.04.04 (08 Apr 2010)
 
