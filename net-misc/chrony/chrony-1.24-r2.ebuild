@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.24-r2.ebuild,v 1.1 2010/06/10 02:24:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.24-r2.ebuild,v 1.2 2010/06/10 02:50:27 jer Exp $
 
 EAPI=2
 
@@ -13,12 +13,11 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="caps logrotate readline"
+IUSE="caps readline"
 
 RDEPEND="
 	readline? ( >=sys-libs/readline-4.1-r4 )
 	caps? ( sys-libs/libcap )
-	logrotate? ( app-admin/logrotate )
 "
 DEPEND="${RDEPEND}"
 
@@ -62,11 +61,6 @@ src_install() {
 
 	keepdir /var/{lib,log}/chrony /etc/chrony
 
-	if use logrotate; then
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}"/chrony.logrotate chrony
-
-		elog "Rotating logs works through chronyc and requires"
-		elog "a password to be set in /etc/chrony/chrony.keys."
-	fi
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/chrony.logrotate chrony
 }

@@ -5,9 +5,6 @@
 <maintainer>
 	<email>jer@gentoo.org</email>
 </maintainer>
-<use>
-	<flag name="logrotate">Use <pkg>app-admin/logrotate</pkg> for log rotation</flag>
-</use>
 <longdescription>
 Chrony is a pair of programs (chronyd and chronyc) which are used to maintain
 the accuracy of the system clock on a computer. chronyd has been specifically
