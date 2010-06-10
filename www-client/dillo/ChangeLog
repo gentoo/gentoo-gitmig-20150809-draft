@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.86 2010/06/05 16:12:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.87 2010/06/10 02:58:27 jer Exp $
+
+  10 Jun 2010; Jeroen Roovers <jer@gentoo.org> dillo-2.2.ebuild:
+  Stable for HPPA (bug #320665).
 
   05 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> dillo-2.2.ebuild:
   x86 stable wrt bug #320665
