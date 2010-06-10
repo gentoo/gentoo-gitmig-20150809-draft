@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mytharchive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.41 2010/03/22 02:30:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.42 2010/06/10 14:42:43 cardoe Exp $
+
+*mytharchive-0.23_p25065 (10 Jun 2010)
+
+  10 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mytharchive-0.23_p25065.ebuild:
+  Add experimental ebuild for MythTV 0.23
 
   22 Mar 2010; Ben de Groot <yngwin@gentoo.org>
   -mytharchive-0.21_p20566.ebuild:

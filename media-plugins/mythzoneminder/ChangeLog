@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythzoneminder
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/ChangeLog,v 1.6 2009/11/18 00:24:21 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/ChangeLog,v 1.7 2010/06/10 14:54:54 cardoe Exp $
+
+*mythzoneminder-0.23_p25065 (10 Jun 2010)
+
+  10 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythzoneminder-0.23_p25065.ebuild:
+  Add experimental ebuild for MythTV 0.23
 
   18 Nov 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add MythTV herd

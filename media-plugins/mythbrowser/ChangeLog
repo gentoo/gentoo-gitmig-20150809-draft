@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythbrowser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.49 2010/01/09 10:34:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.50 2010/06/10 14:43:43 cardoe Exp $
+
+*mythbrowser-0.23_p25065 (10 Jun 2010)
+
+  10 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythbrowser-0.23_p25065.ebuild:
+  Add experimental ebuild for MythTV 0.23
 
   09 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   -mythbrowser-0.21_p17105.ebuild:
