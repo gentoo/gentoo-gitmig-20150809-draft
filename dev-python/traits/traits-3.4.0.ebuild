@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.4.0.ebuild,v 1.2 2010/06/10 19:12:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.4.0.ebuild,v 1.3 2010/06/10 19:19:33 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit distutils flag-o-matic
 
 MY_PN="Traits"
 MY_P="${MY_PN}-${PV}"
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="BSD"
 
 RDEPEND=">=dev-python/numpy-1.1
-	>=dev-python/enthoughtbase-3.0.3"
+	>=dev-python/enthoughtbase-3.0.5"
 DEPEND="dev-python/setuptools
 	doc? ( dev-python/setupdocs )
 	test? ( >=dev-python/nose-0.10.3
@@ -41,7 +41,10 @@ src_prepare() {
 }
 
 src_compile() {
+	append-flags -fno-strict-aliasing
+
 	distutils_src_compile
+
 	if use doc; then
 		"$(PYTHON -f)" setup.py build_docs --formats=html || die "Generation of documentation failed"
 	fi
