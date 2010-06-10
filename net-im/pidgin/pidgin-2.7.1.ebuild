@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1.ebuild,v 1.3 2010/06/09 17:06:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1.ebuild,v 1.4 2010/06/10 13:20:29 mr_bones_ Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ IUSE+=" ncurses groupwise prediction python +xscreensaver zephyr zeroconf" # mon
 RDEPEND="
 	>=dev-libs/glib-2.12
 	>=dev-libs/libxml2-2.6.18
-	ncurses? ( sys-libs/ncurses[unicode] 
+	ncurses? ( sys-libs/ncurses[unicode]
 		dbus? ( <dev-lang/python-3 )
 		python? ( <dev-lang/python-3 ) )
 	gtk? (
