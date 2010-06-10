@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.110 2010/06/04 07:46:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.111 2010/06/10 15:54:22 phajdan.jr Exp $
+
+*chromium-6.0.427.0 (10 Jun 2010)
+
+  10 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-disable-vp8-r1.patch, -chromium-5.0.375.55.ebuild,
+  -chromium-6.0.408.1.ebuild, +files/chromium-gyp-fixes-r1.patch,
+  -chromium-6.0.401.1.ebuild, +chromium-6.0.427.0.ebuild,
+  chromium-9999.ebuild:
+  Version bump for dev channel release. Remove old.
 
 *chromium-5.0.375.70 (04 Jun 2010)
 
