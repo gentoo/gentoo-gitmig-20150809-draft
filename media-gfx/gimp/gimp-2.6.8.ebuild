@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.8.ebuild,v 1.12 2010/06/06 14:19:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.8.ebuild,v 1.13 2010/06/10 17:51:23 arfrever Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2:2.5"
@@ -85,6 +85,15 @@ pkg_setup() {
 
 	if use python; then
 		python_set_active_version 2
+	fi
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use python; then
+		python_convert_shebangs -r $(python_get_version) "${D}"
+		python_need_rebuild
 	fi
 }
 
