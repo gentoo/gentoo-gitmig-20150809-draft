@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.154 2010/05/08 18:16:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.155 2010/06/10 00:55:34 vapier Exp $
+
+*iproute2-2.6.34 (10 Jun 2010)
+
+  10 Jun 2010; Mike Frysinger <vapier@gentoo.org> +iproute2-2.6.34.ebuild,
+  +files/iproute2-2.6.34-dnet-fix-strict-aliasing-warnings.patch,
+  +files/iproute2-2.6.34-netem-fix-installs-of-dist-files.patch,
+  +files/iproute2-2.6.34-tc-revert-echo-in-install-target.patch:
+  Version bump. Install libnetlink files #314967 by Daniel Deptula. Fix dist
+  lookup with tc #320333 by Ryan Twitchell.
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> iproute2-2.6.31.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #308137
