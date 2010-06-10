@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/opd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/ChangeLog,v 1.12 2009/09/23 19:53:09 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/ChangeLog,v 1.13 2010/06/10 17:51:15 ssuominen Exp $
+
+  10 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  opd-0.2-r1.ebuild, +files/0.2-opd-open-o_creat-mode-fix.patch:
+  Don't compile in src_unpack wrt #323453 by Michał Górny. Respect CC,
+  CFLAGS, LDFLAGS. Fix building with -D_FORTIFY_SOURCE=2.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> opd-0.2.ebuild,
   opd-0.2-r1.ebuild:

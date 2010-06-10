@@ -1,5 +1,5 @@
---- orig/obex_handler.c	2003-03-18 16:35:04.000000000 +0100
-+++ fixed/obex_handler.c	2004-12-15 17:29:11.303999448 +0100
+--- obex_handler.c
++++ obex_handler.c
 @@ -364,7 +364,7 @@
  
  
