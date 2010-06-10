@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.6.ebuild,v 1.5 2010/05/24 12:10:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.6.ebuild,v 1.6 2010/06/10 07:20:36 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86"
 IUSE="ipv6"
 
-DEPEND="virtual/os-headers"
+DEPEND="virtual/os-headers
+	!>=sys-kernel/linux-headers-2.6.33"
 RDEPEND=""
 
 src_unpack() {
