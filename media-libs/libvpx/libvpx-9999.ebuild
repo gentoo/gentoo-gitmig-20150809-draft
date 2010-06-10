@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.1 2010/06/10 16:02:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.2 2010/06/10 16:02:38 lu_zero Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs git
@@ -42,5 +42,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	dodoc AUTHORS CHANGELOG LICENSE README || die
+	dodoc AUTHORS CHANGELOG README || die
 }
