@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.515 2010/06/09 12:52:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.516 2010/06/10 21:14:55 remi Exp $
+
+  10 Jun 2010; Rémi Cardona <remi@gentoo.org> xorg-server-1.8.1.901.ebuild:
+  add missing eselect-opengl call, fixes bug #321443
 
 *xorg-server-1.8.1.901 (09 Jun 2010)
 
