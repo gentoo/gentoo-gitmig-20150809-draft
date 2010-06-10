@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/scrub-2.2.ebuild,v 1.1 2010/06/10 09:53:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/scrub-2.2.ebuild,v 1.2 2010/06/10 09:54:31 dev-zero Exp $
 
 EAPI="3"
 
@@ -20,4 +20,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
-
