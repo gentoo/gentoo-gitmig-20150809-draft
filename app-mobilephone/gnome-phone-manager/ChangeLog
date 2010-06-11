@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.31 2009/09/26 23:25:42 leio Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.32 2010/06/11 11:19:18 ssuominen Exp $
+
+  11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-phone-manager-0.60.ebuild, gnome-phone-manager-0.65.ebuild:
+  Drop bluez-libs support wrt #301630.
 
   26 Sep 2009; Mart Raudsepp <leio@gentoo.org>
   -files/gnome-phone-manager-0.8-as-needed.patch,

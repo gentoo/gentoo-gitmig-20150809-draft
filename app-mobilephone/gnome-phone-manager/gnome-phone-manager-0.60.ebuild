@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.60.ebuild,v 1.4 2009/05/11 19:29:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.60.ebuild,v 1.5 2010/06/11 11:19:18 ssuominen Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/orbit-2
 	dev-libs/openobex
 	>=app-mobilephone/gnokii-0.6.26[bluetooth]
-	|| ( >=net-wireless/bluez-libs-3.12 net-wireless/bluez )
+	net-wireless/bluez
 	>=gnome-base/libglade-2
 	>=gnome-extra/evolution-data-server-1.2.3
 	net-wireless/gnome-bluetooth
