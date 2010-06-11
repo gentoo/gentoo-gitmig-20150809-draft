@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.8 2010/06/02 13:10:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.9 2010/06/11 16:41:24 pva Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Qt4 based client for DirectConnect and ADC protocols, based on DC++
 HOMEPAGE="http://eiskaltdc.googlecode.com/"
 ESVN_REPO_URI="http://${PN%pp}.googlecode.com/svn/branches/trunk/"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS=""
 IUSE="javascript kde spell"
@@ -31,6 +31,8 @@ RDEPEND=">=x11-libs/qt-gui-4.4.0:4[dbus]
 	spell? ( app-text/aspell )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+DOCS="AUTHORS ChangeLog.txt"
 
 src_configure() {
 	# linguas
