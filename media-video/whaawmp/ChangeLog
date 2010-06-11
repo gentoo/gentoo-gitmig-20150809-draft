@@ -1,6 +1,9 @@
 # ChangeLog for media-video/whaawmp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/ChangeLog,v 1.5 2009/10/21 22:27:45 yngwin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/ChangeLog,v 1.6 2010/06/11 21:36:00 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as proxy
 
   21 Oct 2009; Ben de Groot <yngwin@gentoo.org> -whaawmp-0.2.10.1.ebuild,
   whaawmp-0.2.12.1.ebuild:

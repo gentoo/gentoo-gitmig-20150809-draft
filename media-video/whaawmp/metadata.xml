@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>video</herd>
-<maintainer>
-  <email>nightmorph@gentoo.org</email>
-  <name>Josh Saddler</name>
-  <description>proxied by yngwin@gentoo.org</description>
-</maintainer>
 </pkgmetadata>
