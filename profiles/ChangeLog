@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4246 2010/06/11 13:02:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4247 2010/06/11 13:39:29 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jun 2010; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove mask for app-doc/pms live ebuild since it is already masked by
+  empty KEYWORDS, bug 323419.
 
   11 Jun 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask bluez-{libs,utils} for removal per bug 301630.

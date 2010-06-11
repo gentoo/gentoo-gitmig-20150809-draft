@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11616 2010/06/11 13:02:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11617 2010/06/11 13:39:29 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -934,12 +934,6 @@ net-misc/amazonmp3
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing
 =net-analyzer/centreon-1.4.2.7
-
-# Christian Faulhammer <fauli@gentoo.org> (13 Apr 2009)
-# Ulrich Mueller <ulm@gentoo.org>
-# Thomas Anderson <gentoofan23@gentoo.org>
-# Live version
-~app-doc/pms-99999999
 
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)
 # pre-releases
