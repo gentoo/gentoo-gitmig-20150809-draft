@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.23_p25065.ebuild,v 1.1 2010/06/10 03:53:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.23_p25065.ebuild,v 1.2 2010/06/11 15:43:41 cardoe Exp $
 
 EAPI=2
 inherit mythtv webapp depend.php
@@ -22,10 +22,6 @@ need_php5_httpd
 pkg_setup() {
 	webapp_pkg_setup
 	require_php_with_use session mysql pcre posix json spl
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-ao-click.patch"
 }
 
 src_configure() {

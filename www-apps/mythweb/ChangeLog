@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.79 2010/06/10 03:53:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.80 2010/06/11 15:43:41 cardoe Exp $
+
+  11 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.23_p25065.ebuild:
+  remove patch reference
 
 *mythweb-0.23_p25065 (10 Jun 2010)
 
