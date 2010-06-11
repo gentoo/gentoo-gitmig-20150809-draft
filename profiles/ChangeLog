@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4247 2010/06/11 13:39:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4248 2010/06/11 14:31:48 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jun 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Update app-emulation/emul-linux-x86-opengl mask.
 
   11 Jun 2010; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for app-doc/pms live ebuild since it is already masked by
