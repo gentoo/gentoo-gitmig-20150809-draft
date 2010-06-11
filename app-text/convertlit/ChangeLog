@@ -1,6 +1,10 @@
 # ChangeLog for app-text/convertlit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.20 2010/04/24 19:46:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convertlit/ChangeLog,v 1.21 2010/06/11 19:56:22 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer, which means this package is once more
+  maintainer-needed
 
   24 Apr 2010; Raúl Porcel <armin76@gentoo.org> convertlit-1.8-r1.ebuild:
   Add ~alpha/~ia64 wrt #314875
