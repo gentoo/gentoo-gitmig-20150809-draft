@@ -1,8 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-9999.ebuild,v 1.1 2010/03/22 23:16:35 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-9999.ebuild,v 1.2 2010/06/11 22:13:10 arfrever Exp $
 
-inherit git python
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit distutils git
 
 DESCRIPTION="metadata.xml generator for ebuilds"
 HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/metagen.git;a=summary"
@@ -14,31 +19,33 @@ SLOT="0"
 KEYWORDS=""
 
 IUSE=""
-DEPEND=">=dev-python/jaxml-3.01
-	>=dev-lang/python-2.3.3"
+DEPEND=">=dev-python/jaxml-3.01"
+
+src_prepare() {
+	distutils_src_prepare
+	git_src_prepare
+}
 
 src_install() {
-	python_version
-	dodir /usr/lib/python${PYVER}/site-packages/metagen
-	dodir /usr/bin
-	cp *py test_cli "${D}"/usr/lib/python${PYVER}/site-packages/metagen/
-	dosym "${D}"/usr/lib/python${PYVER}/site-packages/metagen/metagen.py \
-			/usr/bin/metagen
-	doman metagen.1
-	dodoc docs/*
+	distutils_src_install
+
+	metagen_install() {
+		local METAGEN_MOD="$(python_get_sitedir)/${PN}/main.py"
+		fperms 755 ${METAGEN_MOD}
+		dosym  "${D}"${METAGEN_MOD} "/usr/bin/${PN}-${PYTHON_ABI}"
+	}
+	python_execute_function metagen_install
+
+	python_generate_wrapper_scripts "${ED}usr/bin/${PN}"
+
+	doman "docs/metagen.1"
 }
 
 src_test() {
 	einfo "Starting tests..."
-	python -c "from metagen import metagenerator; metagenerator.do_tests()" \
-		|| die "metagen tests failed"
+	testing() {
+		$(PYTHON) -c "from metagen import metagenerator; metagenerator.do_tests()"
+	}
+	python_execute_function testing
 	einfo "Tests completed."
-}
-
-pkg_postinst() {
-	python_mod_optimize ${PN}
-}
-
-pkg_postrm() {
-	python_mod_cleanup ${PN}
 }
