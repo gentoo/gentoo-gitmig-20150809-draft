@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/roadsend-php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.13 2010/02/24 19:32:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.14 2010/06/11 19:08:44 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as proxy
 
   24 Feb 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix metadata.xml to include the Gentoo maintainer using the appropriate
