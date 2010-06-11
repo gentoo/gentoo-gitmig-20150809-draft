@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.589 2010/06/11 10:48:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.590 2010/06/11 10:51:18 aballier Exp $
+
+  11 Jun 2010; Alexis Ballier <aballier@gentoo.org> vlc-1.1.9999.ebuild,
+  vlc-9999.ebuild:
+  force regeneration of the plugin cache at postinst
 
   11 Jun 2010; Alexis Ballier <aballier@gentoo.org> -vlc-1.1.0_rc.ebuild:
   remove old
