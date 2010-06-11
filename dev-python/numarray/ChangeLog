@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numarray
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.34 2010/02/07 20:43:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.35 2010/06/11 22:58:00 arfrever Exp $
+
+  11 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  numarray-1.5.2-r1.ebuild:
+  Delete call to deprecated distutils_python_version().
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> numarray-1.5.2-r1.ebuild:
   Add inherit eutils: epatch is defined there.

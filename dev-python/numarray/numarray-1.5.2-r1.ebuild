@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.13 2010/02/07 20:43:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.14 2010/06/11 22:58:00 arfrever Exp $
 
 NEED_PYTHON=2.3
 
@@ -53,8 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-freebsd.patch
 
 	# fix only for python-2.5 (fix still uncomplete, see bug #191240)
-	distutils_python_version
-	[[ "${PYVER}" == 2.5 ]] && epatch "${FILESDIR}"/${P}-python25.patch
+	[[ "$(python_get_version)" == 2.5 ]] && epatch "${FILESDIR}"/${P}-python25.patch
 
 	# array_protocol tests are buggy with various numeric/numpy versions
 	sed -i \
@@ -71,13 +70,13 @@ src_unpack() {
 			cfg_packages.py || die "sed for lapack failed"
 	fi
 
-	"${python}" setup.py config --gencode || die "API code generation failed"
+	"$(PYTHON)" setup.py config --gencode || die "API code generation failed"
 }
 
 src_test() {
 	cd build/lib*
 	cp "${S}"/Lib/testdata.fits numarray
-	PYTHONPATH=. "${python}" -c \
+	PYTHONPATH=. "$(PYTHON)" -c \
 		"from numarray.testall import test;import sys;sys.exit(test())"  2>&1 \
 		| tee test.log
 	grep -q -i failed test.log  && die "failed tests in ${PWD}/test.log"
