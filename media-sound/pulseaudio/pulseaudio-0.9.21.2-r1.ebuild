@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.21.2-r1.ebuild,v 1.2 2010/05/04 16:37:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.21.2-r1.ebuild,v 1.3 2010/06/11 12:05:20 ssuominen Exp $
 
 EAPI=2
 
@@ -44,8 +44,7 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	)
 	app-admin/eselect-esd
 	bluetooth? (
-		|| ( >=net-wireless/bluez-4
-			 >=net-wireless/bluez-libs-3 )
+		>=net-wireless/bluez-4
 		>=sys-apps/dbus-1.0.0
 	)
 	asyncns? ( net-libs/libasyncns )
@@ -76,9 +75,7 @@ RDEPEND="${RDEPEND}
 	system-wide? (
 		sys-apps/openrc
 		alsa? ( media-sound/alsa-utils )
-		bluetooth? (
-		|| ( >=net-wireless/bluez-4
-			 >=net-wireless/bluez-utils-3 ) )
+		bluetooth? ( >=net-wireless/bluez-4 )
 	)"
 
 pkg_setup() {
