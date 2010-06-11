@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.1.ebuild,v 1.1 2010/05/21 16:53:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.1.ebuild,v 1.2 2010/06/11 19:12:30 ssuominen Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="the nice editor, easy to use for the beginner and powerful for the wizard"
 HOMEPAGE="http://ne.dsi.unimi.it/"
@@ -20,7 +20,8 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_prepare() {
-	sed -i -e s/-O3// "${S}"/src/makefile
+	sed -i -e 's/-O3//' src/makefile || die
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {
