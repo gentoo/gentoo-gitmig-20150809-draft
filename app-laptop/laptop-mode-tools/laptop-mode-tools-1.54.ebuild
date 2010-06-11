@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.54.ebuild,v 1.1 2010/05/04 00:25:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.54.ebuild,v 1.2 2010/06/11 11:56:12 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -21,12 +21,7 @@ DEPEND=""
 RDEPEND="sys-apps/ethtool
 		acpi? ( >=sys-power/acpid-2.0.4-r2 )
 		apm? ( sys-apps/apmd )
-		bluetooth? (
-			|| (
-				net-wireless/bluez
-				net-wireless/bluez-utils
-			)
-		)
+		bluetooth? ( net-wireless/bluez )
 		scsi? ( sys-apps/sdparm )
 		sys-apps/hdparm"
 
