@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_blue/pam_blue-0.9.0.ebuild,v 1.5 2009/11/21 15:10:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_blue/pam_blue-0.9.0.ebuild,v 1.6 2010/06/11 11:06:48 ssuominen Exp $
 
 inherit pam autotools multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/pam
-	|| ( net-wireless/bluez net-wireless/bluez-libs )"
+	net-wireless/bluez"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
