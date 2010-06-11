@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.5 2010/06/01 16:17:05 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.6 2010/06/11 17:15:29 mabi Exp $
 
 EAPI=2
 
@@ -128,7 +128,7 @@ DEPEND="app-admin/php-toolkit
 		virtual/imap-c-client[kolab=]
 	)
 	intl? ( dev-libs/icu )
-	iodbc? ( || ( dev-db/libiodbc >=dev-db/unixODBC-1.8.13 ) )
+	iodbc? ( dev-db/libiodbc )
 	kerberos? ( virtual/krb5 )
 	kolab? ( >=net-libs/c-client-2004g-r1 )
 	ldap? ( !oci8? ( >=net-nds/openldap-1.2.11 ) )

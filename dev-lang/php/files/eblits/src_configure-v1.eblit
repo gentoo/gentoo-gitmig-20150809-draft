@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.1 2010/05/27 23:05:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.2 2010/06/11 17:15:29 mabi Exp $
 
 eblit-php-src_configure() {
 	PHP_DESTDIR="/usr/$(get_libdir)/php${PHP_MV}"
@@ -153,9 +153,12 @@ eblit-php-src_configure() {
 		fi
 		phpconfutils_extension_with "esoob"   "esoob" 1
 		phpconfutils_extension_with "ibm-db2" "db2"   1
-		phpconfutils_extension_with "iodbc"   "iodbc" 1 "/usr"
 		phpconfutils_extension_with "sapdb"   "sapdb" 1
 		phpconfutils_extension_with "solid"   "solid" 1
+	fi
+
+	if use iodbc ; then
+		phpconfutils_extension_with "iodbc"   "iodbc" 1 "/usr"
 	fi
 
 	# Oracle support
