@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/maintainer-helper-0.1.2.ebuild,v 1.5 2009/09/30 17:12:30 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/maintainer-helper-0.1.2.ebuild,v 1.6 2010/06/11 21:32:42 arfrever Exp $
 
 EAPI="2"
 
@@ -24,8 +24,7 @@ RDEPEND=">=dev-lang/python-2.4
 
 pkg_postinst() {
 	distutils_pkg_postinst
-	distutils_python_version
 	elog "Currently gvim is hardcoded as editor, to change it, edit"
-	elog "${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/maintainer_helper/backend/tasks.py"
+	elog "${ROOT%/}$(python_get_sitedir)/maintainer_helper/backend/tasks.py"
 	elog "It will be a real setting in the next version"
 }
