@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/fort
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/fort/ChangeLog,v 1.1 2010/06/11 20:02:03 xarthisius Exp $
+
+*fort-0.4.2 (11 Jun 2010)
+
+  11 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> +fort-0.4.2.ebuild,
+  +metadata.xml:
+  New ebuild for fort. Ebuild written by me.
+
