@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.10 2010/05/31 21:01:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.11 2010/06/11 08:35:12 pacho Exp $
 
 # Original Author: Arun Raghavan <ford_prefect@gentoo.org> (based on the
 #		   gnome-python-desktop eclass by Jim Ramsay <lack@gentoo.org>)
@@ -104,12 +104,30 @@ gnome-python-common_src_configure() {
 }
 
 gnome-python-common_src_compile() {
-	has ${EAPI:-0} 0 1 && gnome-python-common_src_configure "$@"
-	python_src_compile "$@"
+	if has ${EAPI:-0} 0 1; then
+		gnome-python-common_src_configure "$@"
+		building() {
+			emake "$@"
+		}
+		python_execute_function -s building "$@"
+	else
+		python_src_compile "$@"
+	fi
 }
 
 gnome-python-common_src_test() {
-	python_src_test "$@"
+	if has ${EAPI:-0} 0 1; then
+		testing() {
+			if emake -j1 -n check &> /dev/null; then
+				emake -j1 check "$@"
+			elif emake -j1 -n test &> /dev/null; then
+				emake -j1 test "$@"
+			fi
+		}
+		python_execute_function -s testing "$@"
+	else
+		python_src_test "$@"
+	fi
 }
 
 # Do a regular gnome2 src_install and then install examples if required.
