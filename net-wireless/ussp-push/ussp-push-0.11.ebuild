@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ussp-push-0.11.ebuild,v 1.1 2009/10/16 20:30:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ussp-push-0.11.ebuild,v 1.2 2010/06/11 12:31:45 ssuominen Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ DEPEND="net-wireless/bluez
 RDEPEND="${DEPEND}"
 
 src_configure(){
-	# patch for bluez-libs -> bluez
+	# patch for bluez 4.x
 	sed 's:hci_remote_name:hci_read_remote_name:g' -i src/obex_socket.c || \
 		die "sed failed"
 

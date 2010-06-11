@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ussp-push-0.9-r1.ebuild,v 1.3 2009/10/16 20:30:32 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ussp-push-0.9-r1.ebuild,v 1.4 2010/06/11 12:31:45 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -20,7 +20,7 @@ src_unpack(){
 	unpack ${A}
 	cd "$S" || die "cd failed"
 
-	# patch for bluez-libs -> bluez
+	# patch for bluez 4.x
 	sed 's:hci_remote_name:hci_read_remote_name:g' -i obex_socket.c || \
 		die "sed failed"
 
