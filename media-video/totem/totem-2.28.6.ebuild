@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.6.ebuild,v 1.4 2010/05/22 16:18:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.6.ebuild,v 1.5 2010/06/11 12:23:09 pacho Exp $
 
 EAPI="2"
 
@@ -49,9 +49,7 @@ RDEPEND=">=dev-libs/glib-2.15
 	>=x11-libs/libXrandr-1.1.1
 	>=x11-libs/libXxf86vm-1.0.1
 
-	bluetooth? ( || (
-		net-wireless/bluez
-		net-wireless/bluez-libs ) )
+	bluetooth? ( net-wireless/bluez )
 	galago? ( >=dev-libs/libgalago-0.5.2 )
 	iplayer? (
 		dev-python/pygobject
