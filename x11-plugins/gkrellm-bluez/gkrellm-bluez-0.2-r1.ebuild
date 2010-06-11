@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/gkrellm-bluez-0.2-r1.ebuild,v 1.7 2010/02/02 08:27:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bluez/gkrellm-bluez-0.2-r1.ebuild,v 1.8 2010/06/11 10:57:34 ssuominen Exp $
 
 inherit gkrellm-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="GKrellm plugin for monitoring bluetooth (Linux BlueZ) adapters"
 SRC_URI="mirror://sourceforge/gkrellm-bluez/${P}.tar.gz"
 HOMEPAGE="http://gkrellm-bluez.sourceforge.net"
 
-RDEPEND="|| ( net-wireless/bluez-libs net-wireless/bluez )"
+RDEPEND="net-wireless/bluez"
 
 LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
