@@ -1,6 +1,14 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.23 2010/05/03 15:09:00 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.24 2010/06/11 19:33:58 lack Exp $
+
+*adobe-flash-10.1.53.64 (11 Jun 2010)
+
+  11 Jun 2010; Jim Ramsay <lack@gentoo.org> +adobe-flash-10.1.53.64.ebuild:
+  Adobe-flash 10.1.53.64 is released, and fixes security exploit
+  CVE-2010-1297 (Bug #322855). Unfortunately there is no native 64bit
+  version, so amd64 users are going back to a 32bit plugin plus
+  nspluginwrapper.
 
   03 May 2010; Jim Ramsay <lack@gentoo.org> adobe-flash-10.0.45.2.ebuild:
   Removing libflashsupport block (Bug #300294)
