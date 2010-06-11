@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.25 2010/04/30 07:16:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.26 2010/06/11 00:41:41 matsuu Exp $
+
+*facter-1.5.7-r2 (11 Jun 2010)
+
+  11 Jun 2010; MATSUU Takuto <matsuu@gentoo.org> +facter-1.5.7-r2.ebuild,
+  +files/facter-1.5.7-ruby19.patch:
+  Convert to ruby-fakegem. Fixed to work with ruby19.
 
   30 Apr 2010; Hans de Graaff <graaff@gentoo.org> facter-1.5.7-r1.ebuild:
   Update HOMEPAGE.
