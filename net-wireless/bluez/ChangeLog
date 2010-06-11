@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.37 2010/06/07 20:15:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.38 2010/06/11 10:14:00 pacho Exp $
+
+*bluez-4.65 (11 Jun 2010)
+
+  11 Jun 2010; Pacho Ramos <pacho@gentoo.org> files/4.60/bluetooth-init.d,
+  +bluez-4.65.ebuild:
+  Fix udevadm usage per bug 319621 (Thanks to Thorsten Vollmer and Reuben
+  Martin). Version bump with bugfixes.
 
   07 Jun 2010; Markus Meier <maekke@gentoo.org> bluez-4.64.ebuild:
   add ~arm, bug #303527
