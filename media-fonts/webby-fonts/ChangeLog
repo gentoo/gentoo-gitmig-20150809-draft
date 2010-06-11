@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/webby-fonts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/webby-fonts/ChangeLog,v 1.6 2008/08/25 12:00:56 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/webby-fonts/ChangeLog,v 1.7 2010/06/11 21:26:18 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer
 
   25 Aug 2008; Raúl Porcel <armin76@gentoo.org> webby-fonts-1.ebuild:
   ia64 stable wrt #234970
