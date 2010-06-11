@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20100410_pre.ebuild,v 1.1 2010/04/10 17:22:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20100611.ebuild,v 1.1 2010/06/11 14:44:35 pacho Exp $
 
 inherit emul-linux-x86
 
@@ -10,8 +10,8 @@ KEYWORDS="-* ~amd64 ~amd64-linux"
 IUSE=""
 
 DEPEND="app-admin/eselect-opengl"
-RDEPEND=">=app-emulation/emul-linux-x86-xlibs-20100409
-	!<app-emulation/emul-linux-x86-xlibs-20100409
+RDEPEND=">=app-emulation/emul-linux-x86-xlibs-20100611
+	!<app-emulation/emul-linux-x86-xlibs-20100611
 	media-libs/mesa"
 
 src_unpack() {
