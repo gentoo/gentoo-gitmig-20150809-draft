@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1.ebuild,v 1.8 2010/06/04 05:31:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1.ebuild,v 1.9 2010/06/11 12:28:54 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib toolchain-funcs
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64
 IUSE="bluetooth ipv6 libnl"
 
 RDEPEND="!virtual/libpcap
-	bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
+	bluetooth? ( net-wireless/bluez )
 	libnl? ( dev-libs/libnl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
