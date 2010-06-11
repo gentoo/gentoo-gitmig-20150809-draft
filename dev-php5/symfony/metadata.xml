@@ -8,11 +8,6 @@
     <name>Jamie Learmonth</name>
     <description>proxy-maintainer</description>
   </maintainer>
-  <maintainer>
-    <email>yngwin@gentoo.org</email>
-    <name>Ben de Groot</name>
-    <description>proxy</description>
-  </maintainer>
   <longdescription>
     Open-source full-stack PHP5 professional web framework.
   </longdescription>
