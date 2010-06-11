@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4244 2010/06/10 13:02:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4245 2010/06/11 10:38:40 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask gnome-extra/gnome-vfs-obexftp for removal wrt #301630.
 
   10 Jun 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Drop masking for radiotray live ebuild
