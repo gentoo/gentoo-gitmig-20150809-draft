@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/IcePy-3.2.1.ebuild,v 1.7 2010/06/08 08:27:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/IcePy-3.2.1.ebuild,v 1.8 2010/06/11 22:50:24 arfrever Exp $
 
 EAPI="2"
 
@@ -18,10 +18,8 @@ IUSE="test debug"
 DEPEND="~dev-libs/Ice-3.2.1"
 
 src_prepare() {
-	python_version
-
 	# Store the PYTHON_VERSION in a variable so the Makefile knows which one to use
-	PYTHON_VERSION="python${PYVER}"
+	PYTHON_VERSION="$(PYTHON)"
 
 	MAKE_RULES="${S}/config/Make.rules"
 	epatch "${FILESDIR}/icepy-${PV}-makefile.patch"
