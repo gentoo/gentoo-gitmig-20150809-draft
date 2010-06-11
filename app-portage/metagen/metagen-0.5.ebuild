@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.ebuild,v 1.6 2007/10/16 04:48:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.ebuild,v 1.7 2010/06/11 21:52:45 arfrever Exp $
 
 inherit python
 
@@ -17,11 +17,10 @@ DEPEND=">=dev-python/jaxml-3.01
 	>=dev-lang/python-2.3.3"
 
 src_install() {
-	python_version
-	dodir /usr/lib/python${PYVER}/site-packages/metagen
+	dodir $(python_get_sitedir)/metagen
 	dodir /usr/bin
-	cp *py test_cli "${D}"/usr/lib/python${PYVER}/site-packages/metagen/
-	dosym "${D}"/usr/lib/python${PYVER}/site-packages/metagen/metagen.py \
+	cp *py test_cli "${D}"$(python_get_sitedir)/metagen/
+	dosym "${D}"$(python_get_sitedir)/metagen/metagen.py \
 			/usr/bin/metagen
 	doman metagen.1.gz
 	dodoc docs/*
