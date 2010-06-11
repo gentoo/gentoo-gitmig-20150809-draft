@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/anyremote-5.1.1.ebuild,v 1.2 2010/03/23 18:00:29 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/anyremote-5.1.1.ebuild,v 1.3 2010/06/11 12:24:59 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="bluetooth dbus"
 
-RDEPEND="bluetooth? ( || ( net-wireless/bluez ( net-wireless/bluez-libs net-wireless/bluez-utils ) ) )
+RDEPEND="bluetooth? ( net-wireless/bluez )
 	dbus? ( sys-apps/dbus )
 	x11-libs/libXtst"
 
