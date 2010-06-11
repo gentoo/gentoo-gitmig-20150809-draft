@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/libixp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.12 2010/06/03 04:42:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.13 2010/06/11 16:12:22 xarthisius Exp $
+
+*libixp-0.5-r1 (11 Jun 2010)
+
+  11 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> +libixp-0.5-r1.ebuild,
+  +files/libixp-0.5-gentoo.diff:
+  Fix install paths wrt bug 309095. Thanks to Nathan Phillip Brink
+  <ohnobinki@ohnopublishing.net> for report and patch. Additionally fixing
+  multiple QA issues and install shared libs.
 
   03 Jun 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Needed by x11-wm/wmii, so reassigning to desktop-wm herd.
