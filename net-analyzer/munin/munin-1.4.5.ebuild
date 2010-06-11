@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.3.ebuild,v 1.4 2010/05/02 22:33:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.5.ebuild,v 1.1 2010/06/11 15:41:56 darkside Exp $
 
-EAPI="2"
+EAPI=2
 
 inherit eutils
 
@@ -13,17 +13,18 @@ SRC_URI="mirror://sourceforge/munin/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
-IUSE="doc minimal irc mysql postgres ssl"
+IUSE="doc irc java minimal mysql postgres ssl"
 
 # Upstream's listing of required modules is NOT correct!
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
 # The mysql plugins use mysqladmin directly.
 DEPEND_COM="dev-lang/perl
 			sys-process/procps
-			ssl? ( dev-perl/Net-SSLeay )
-			mysql? ( virtual/mysql )
-			postgres? ( dev-perl/DBD-Pg virtual/postgresql-base )
 			irc? ( dev-perl/Net-IRC )
+			java? ( >=virtual/jdk-1.5 )
+			mysql? ( virtual/mysql dev-perl/Cache-Cache )
+			ssl? ( dev-perl/Net-SSLeay )
+			postgres? ( dev-perl/DBD-Pg virtual/postgresql-base )
 			dev-perl/DateManip
 			dev-perl/Log-Log4perl
 			dev-perl/Net-CIDR
@@ -44,7 +45,8 @@ DEPEND_COM="dev-lang/perl
 			#munin-sybase? (	 dev-perl/DBD-Sybase )
 
 # Keep this seperate, as previous versions have had other deps here
-DEPEND="${DEPEND_COM}"
+DEPEND="${DEPEND_COM}
+	virtual/perl-Module-Build"
 RDEPEND="${DEPEND_COM}
 		!minimal? ( virtual/cron )"
 
@@ -56,15 +58,14 @@ pkg_setup() {
 src_prepare() {
 	# upstream needs a lot of DESTDIR loving
 	# and Gentoo location support
-	epatch "${FILESDIR}"/${PN}-1.4.3-Makefile.patch
-	# Fix noise in the plugins
-	epatch "${FILESDIR}"/${PN}-1.4.3-plugin-cleanup.patch
+	epatch "${FILESDIR}"/${PN}-1.4.4-Makefile.patch
 
-	# Bug #195964, fix up conntrack
-	# Patch modified as it has only been partially taken up by upstream
-	epatch "${FILESDIR}"/${PN}-1.4.3-fw_conntrack_plugins.patch
-
-	epatch "${FILESDIR}"/${P}-ping6_fix.patch
+	# Don't build java plugins if not requested via USE.
+	if ! use java; then
+		# sed is needed so the java plugins aren't automagically built.
+		sed -i -e 's: build-plugins-java : :' \
+			-e 's: install-plugins-java : :' Makefile || die
+	fi
 }
 
 src_compile() {
