@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.353 2010/06/06 23:11:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.354 2010/06/11 11:34:50 lu_zero Exp $
+
+  11 Jun 2010; Luca Barbato <lu_zero@gentoo.org> metadata.xml,
+  ffmpeg-9999-r1.ebuild:
+  Update live ebuild, support libvpx, that should address the final bit of
+  bug #320817, thanks to Nikoli again for the support
 
   06 Jun 2010; Luca Barbato <lu_zero@gentoo.org> metadata.xml,
   ffmpeg-9999-r1.ebuild:
