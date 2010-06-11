@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.3.3.ebuild,v 1.3 2009/12/10 16:33:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/krossjava-4.3.3.ebuild,v 1.4 2010/06/11 02:01:46 reavertm Exp $
 
 EAPI="2"
 
@@ -30,7 +30,8 @@ src_prepare() {
 }
 
 src_configure() {
-	export mycmakeargs="-DENABLE_KROSSJAVA=ON"
+	mycmakeargs=(-DENABLE_KROSSJAVA=ON)
+	export JAVA_HOME=$(java-config -g JAVA_HOME)
 	kde4-meta_src_configure
 	java-ant-2_src_configure
 }
