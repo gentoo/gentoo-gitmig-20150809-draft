@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.38 2010/06/11 10:14:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.39 2010/06/11 22:25:13 josejx Exp $
+
+  11 Jun 2010; Joseph Jezak <josejx@gentoo.org> bluez-4.63.ebuild,
+  bluez-4.64.ebuild, bluez-4.65.ebuild:
+  Marked ~ppc/~ppc64 for bug #303527.
 
 *bluez-4.65 (11 Jun 2010)
 
