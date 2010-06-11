@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.1.ebuild,v 1.8 2010/02/13 16:27:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.1.ebuild,v 1.9 2010/06/11 11:13:02 ssuominen Exp $
 
 EAPI="2"
 FINDLIB_USE="ocaml"
@@ -18,7 +18,7 @@ IUSE="+api +beeper bluetooth +contracted-braille doc +fm gpm iconv icu
 		java +learn-mode +midi nls ocaml +pcm +pm python usb +speech
 		static tcl X"
 
-COMMON_DEP="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
+COMMON_DEP="bluetooth? ( net-wireless/bluez )
 	gpm? ( >=sys-libs/gpm-1.20 )
 	iconv? ( virtual/libiconv )
 	icu? ( dev-libs/icu )
