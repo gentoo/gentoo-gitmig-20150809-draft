@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-mailparse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.16 2008/01/13 15:23:59 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/ChangeLog,v 1.17 2010/06/11 18:27:48 mabi Exp $
+
+*pecl-mailparse-2.1.5 (11 Jun 2010)
+
+  11 Jun 2010; <mabi@gentoo.org> +pecl-mailparse-2.1.5.ebuild:
+  version bump (bug #300893)
 
 *pecl-mailparse-2.1.3 (13 Jan 2008)
 
