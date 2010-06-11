@@ -1,14 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0.ebuild,v 1.8 2010/06/05 19:04:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.1.0.ebuild,v 1.9 2010/06/11 13:44:12 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="setup.py"
 
-inherit eutils distutils flag-o-matic
+inherit distutils eutils flag-o-matic
 
 DESCRIPTION="Python Cryptography Toolkit"
-HOMEPAGE="http://www.dlitz.net/software/pycrypto/"
+HOMEPAGE="http://www.dlitz.net/software/pycrypto/ http://pypi.python.org/pypi/pycrypto"
 SRC_URI="http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/${P}.tar.gz"
 
 LICENSE="public-domain PSF-2.2"
@@ -19,15 +22,9 @@ IUSE="doc +gmp"
 RDEPEND="gmp? ( dev-libs/gmp )"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils dev-python/epydoc )"
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="ACKS ChangeLog README TODO"
 PYTHON_MODNAME="Crypto"
-
-pkg_setup() {
-	# Some tests fail with some limit of inlining of functions.
-	append-flags -fno-inline-functions
-}
 
 src_prepare() {
 	distutils_src_prepare
@@ -41,6 +38,10 @@ src_configure() {
 }
 
 src_compile() {
+	# Some tests fail with some limit of inlining of functions.
+	# Avoid warnings about breaking strict-aliasing rules.
+	append-flags -fno-inline-functions -fno-strict-aliasing
+
 	distutils_src_compile
 
 	if use doc; then
@@ -48,13 +49,6 @@ src_compile() {
 
 		PYTHONPATH="$(ls -d build-$(PYTHON --ABI -f)/lib.*)" epydoc --config=Doc/epydoc-config --exclude-introspect="^Crypto\.(Random\.OSRNG\.nt|Util\.winrandom)$" || die "Generation of documentation failed"
 	fi
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
 }
 
 src_install() {
