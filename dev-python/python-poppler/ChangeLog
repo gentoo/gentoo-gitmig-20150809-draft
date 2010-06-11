@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.8 2010/05/18 13:00:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/ChangeLog,v 1.9 2010/06/11 19:22:25 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer, reassigning to python herd
 
   18 May 2010; Markos Chandras <hwoarang@gentoo.org>
   python-poppler-0.12.1.ebuild:
