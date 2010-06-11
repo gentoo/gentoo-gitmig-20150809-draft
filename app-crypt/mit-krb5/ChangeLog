@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.219 2010/05/24 12:35:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.220 2010/06/11 15:55:40 darkside Exp $
+
+*mit-krb5-1.8.2 (11 Jun 2010)
+
+  11 Jun 2010; Jeremy Olexa <darkside@gentoo.org> +mit-krb5-1.8.2.ebuild,
+  +files/kpropd.xinetd:
+  Version bump bug #323525. Added xinetd USE flag bug #321939. Disabled
+  parallel make bug #321141. No need to inherit autotools anymore.
 
   24 May 2010; Jeremy Olexa <darkside@gentoo.org> mit-krb5-1.8.1-r1.ebuild:
   Fix kerberos.schema install issue. bug 318017 by Tilman Giese
