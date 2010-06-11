@@ -1,6 +1,11 @@
 # ChangeLog for app-text/t1utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.50 2010/01/02 11:39:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.51 2010/06/11 19:38:48 aballier Exp $
+
+*t1utils-1.36 (11 Jun 2010)
+
+  11 Jun 2010; Alexis Ballier <aballier@gentoo.org> +t1utils-1.36.ebuild:
+  version bump
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> t1utils-1.35.ebuild:
   Transfer Prefix keywords
