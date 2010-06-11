@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.217 2010/04/09 03:56:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.218 2010/06/11 14:45:56 ssuominen Exp $
+
+  11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  seamonkey-1.1.18.ebuild, +files/seamonkey-1.1.18-libpng14.patch:
+  Fix building with libpng14 wrt #323513 by Stephen Lewis.
 
 *seamonkey-2.0.4-r1 (09 Apr 2010)
 
