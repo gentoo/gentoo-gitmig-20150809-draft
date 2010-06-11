@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11619 2010/06/11 20:51:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11620 2010/06/11 21:38:17 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Ben de Groot <yngwin@gentoo.org> (11 Jun 2010)
+# Masked for removal in 30 days, see bug #315067
+media-video/whaawmp
+
 # Pacho Ramos <pacho@gentoo.org> (11 Jun 2010)
 # Drop old and deprecated bluez-libs and bluez-utils. Use bluez instead.
 # Masked for removal in 30 days.
@@ -39,7 +43,7 @@ net-wireless/bluez-libs
 net-wireless/bluez-utils
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Jun 2010)
-# Only used by old bluez-libs and bluez-utils. 
+# Only used by old bluez-libs and bluez-utils.
 # Masked for removal in 30 days.
 # See bug 301630.
 gnome-extra/gnome-vfs-obexftp
@@ -54,9 +58,9 @@ gnome-extra/gnome-vfs-obexftp
 app-crypt/hmaccalc
 
 # Tony Vroon <chainsaw@gentoo.org> (09 Jun 2010)
-# Alpha releases, should you wish to dip your toes in the 
+# Alpha releases, should you wish to dip your toes in the
 # water... please be aware of the sharks.
-# Bugs upstream: http://jira.atheme.org/ and *not* into 
+# Bugs upstream: http://jira.atheme.org/ and *not* into
 # the Gentoo bug tracker.
 =media-plugins/audacious-plugins-2.4_alpha*
 =media-sound/audacious-2.4_alpha*
@@ -674,7 +678,7 @@ net-libs/libjingle
 
 # Patrick Lauer <patrick@gentoo.org> (07 Jan 2010)
 # Mask for removal. Migrate to dev-db/postgresql-{base,server}
-# still being used.  
+# still being used.
 dev-db/libpq
 dev-db/postgresql
 
