@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11618 2010/06/11 14:31:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11619 2010/06/11 20:51:27 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -674,9 +674,9 @@ net-libs/libjingle
 
 # Patrick Lauer <patrick@gentoo.org> (07 Jan 2010)
 # Mask for removal. Migrate to dev-db/postgresql-{base,server}
-# still being used.  (please fix deps before masking again - halcy0n)
-#dev-db/libpq
-#dev-db/postgresql
+# still being used.  
+dev-db/libpq
+dev-db/postgresql
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Jan 2010)
 # Dev channel releases are only for people who are developers or want more
