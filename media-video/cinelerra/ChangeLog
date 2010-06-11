@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.41 2010/05/01 16:04:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.42 2010/06/11 08:57:48 aballier Exp $
+
+  11 Jun 2010; Alexis Ballier <aballier@gentoo.org>
+  cinelerra-20100320.ebuild:
+  fix build with ffmpeg trunk, by DaggyStyle <stompdagger1@yahoo.com>, bug
+  #321945
 
   01 May 2010; Samuli Suominen <ssuominen@gentoo.org>
   cinelerra-20100320.ebuild, +files/cinelerra-20100320-gcc45.patch:

@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.4 2010/05/01 16:04:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.5 2010/06/11 08:57:48 aballier Exp $
 
 EAPI=2
-inherit autotools eutils multilib
+inherit autotools eutils multilib flag-o-matic
 
 DESCRIPTION="Cinelerra - Professional Video Editor - Unofficial GIT-version"
 HOMEPAGE="http://www.cinelerra.org/"
@@ -58,6 +58,8 @@ src_prepare() {
 }
 
 src_configure() {
+	#bug #321945 (UINT64_C vs ffmpeg headers)
+	append-flags -D__STDC_CONSTANT_MACROS
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable oss) \
