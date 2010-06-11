@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.163 2010/06/03 16:05:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.164 2010/06/11 17:53:22 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer and co-assigning to qt herd
 
   03 Jun 2010; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.2.ebuild,
   +files/avidemux-gcc-4.5.patch:

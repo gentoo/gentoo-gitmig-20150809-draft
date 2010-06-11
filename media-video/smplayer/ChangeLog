@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.90 2010/04/18 17:08:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.91 2010/06/11 17:56:35 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer, assigning qt herd as primary
 
   18 Apr 2010; <nixnut@gentoo.org> smplayer-0.6.9.ebuild:
   ppc stable #311491

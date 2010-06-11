@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>video</herd>
-  <maintainer>
-    <email>yngwin@gentoo.org</email>
-    <name>Ben de Groot</name>
-  </maintainer>
+  <herd>qt</herd>
   <use>
     <flag name='aften'>Enable A/52 (AC-3) audio encoder support</flag>
     <flag name='amr'>Enable Adaptive Multi-Rate format support through
