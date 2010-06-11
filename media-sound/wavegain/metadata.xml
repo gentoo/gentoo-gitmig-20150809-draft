@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-<email>beandog@gentoo.org</email>
-<name>Steve Dibb</name>
-<description>Proxy maintainer</description>
-</maintainer>
-<maintainer>
-<email>yngwin@gentoo.org</email>
-<name>Ben de Groot</name>
-</maintainer>
-<longdescription lang="en">
-</longdescription>
+  <herd>sound</herd>
 </pkgmetadata>
