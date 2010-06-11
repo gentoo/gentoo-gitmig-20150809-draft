@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.9 2010/06/10 17:51:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.10 2010/06/11 10:56:10 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="dev-libs/openobex
-	|| ( net-wireless/bluez >=net-wireless/bluez-libs-2.10 )"
+	net-wireless/bluez"
 
 S=${WORKDIR}
 
