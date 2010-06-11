@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.1 2010/02/24 10:05:29 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.2 2010/06/11 12:26:41 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="gtk postgres qt4 ssl tcl threads X"
 RESTRICT="test" #298101
 
 # doesn't compile:
-#   bluetooth? ( net-wireless/bluez-libs )
+#   bluetooth? ( net-wireless/bluez )
 
 RDEPEND="
 	gtk?       ( x11-libs/gtk+:2 )
