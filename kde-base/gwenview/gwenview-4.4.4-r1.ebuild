@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.4.4.ebuild,v 1.1 2010/06/06 14:41:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.4.4-r1.ebuild,v 1.1 2010/06/11 02:46:35 reavertm Exp $
 
 EAPI="3"
 
@@ -21,6 +21,10 @@ DEPEND="
 	kipi? ( $(add_kdebase_dep libkipi) )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.4.4-jpeg.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
