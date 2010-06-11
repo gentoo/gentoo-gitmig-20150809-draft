@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latexmk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.14 2009/09/19 15:11:19 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.15 2010/06/11 11:14:18 aballier Exp $
+
+  11 Jun 2010; Alexis Ballier <aballier@gentoo.org> -latexmk-307a.ebuild,
+  -latexmk-401.ebuild, -latexmk-405.ebuild:
+  remove old
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> latexmk-408.ebuild:
   amd64/x86 stable, bug #281074
