@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.1.ebuild,v 1.8 2009/11/21 15:14:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/sobexsrv-1.0.1.ebuild,v 1.9 2010/06/11 11:43:45 ssuominen Exp $
 
 inherit eutils
 
@@ -18,10 +18,8 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 
 DEPEND="dev-libs/openobex
-	|| ( net-wireless/bluez net-wireless/bluez-libs )"
-
+	net-wireless/bluez"
 RDEPEND="${DEPEND}
-	|| ( net-wireless/bluez net-wireless/bluez-utils )
 	gtk? ( >=dev-python/pygtk-2.2 )"
 
 S="${WORKDIR}/${MY_P}"
