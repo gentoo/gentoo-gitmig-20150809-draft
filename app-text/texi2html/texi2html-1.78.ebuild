@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.78.ebuild,v 1.4 2010/02/22 20:43:55 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.78.ebuild,v 1.5 2010/06/11 19:33:57 aballier Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ src_install() {
 		htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		install || die "Installation Failed"
 
-	dodoc AUTHORS ChangeLog INTRODUCTION NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
 pkg_preinst() {
