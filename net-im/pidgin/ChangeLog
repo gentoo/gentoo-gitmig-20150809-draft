@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.168 2010/06/09 17:06:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.169 2010/06/11 19:48:04 pva Exp $
+
+*pidgin-2.7.1-r1 (11 Jun 2010)
+
+  11 Jun 2010; Peter Volkov <pva@gentoo.org> +pidgin-2.7.1-r1.ebuild:
+  Fix missed icons in tray that is not compatible with new hicolor theme,
+  bug #323355, thank P Purkayastha for report and test.
 
   09 Jun 2010; Peter Volkov <pva@gentoo.org> pidgin-2.7.1.ebuild:
   Set active python version, bug #315109, thank Arfrever Frehtes Taifersar
