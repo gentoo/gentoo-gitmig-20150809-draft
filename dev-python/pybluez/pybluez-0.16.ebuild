@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/pybluez-0.16.ebuild,v 1.5 2009/06/01 15:51:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/pybluez-0.16.ebuild,v 1.6 2010/06/11 11:29:17 ssuominen Exp $
 
 NEED_PYTHON="2.5"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="examples"
 
-DEPEND="|| ( net-wireless/bluez >=net-wireless/bluez-libs-2.10 )"
+DEPEND="net-wireless/bluez"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
