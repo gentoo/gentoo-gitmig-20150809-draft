@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gocr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.61 2010/06/11 19:09:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.62 2010/06/11 19:29:29 aballier Exp $
+
+  11 Jun 2010; Alexis Ballier <aballier@gentoo.org> gocr-0.45.ebuild,
+  gocr-0.48.ebuild:
+  Add missing rdeps over xli and xsane, by Kobboi <gentoo@lermytte.be>, bug
+  #323113
 
   11 Jun 2010; Alexis Ballier <aballier@gentoo.org>
   -files/gocr-0.43-makefile.patch, -gocr-0.46.ebuild,

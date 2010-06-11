@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.48.ebuild,v 1.1 2010/02/28 20:08:37 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.48.ebuild,v 1.2 2010/06/11 19:29:29 aballier Exp $
 
 EAPI=3
 
@@ -13,11 +13,16 @@ SRC_URI="http://www-e.uni-magdeburg.de/jschulen/ocr/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="doc tk"
+IUSE="doc scanner tk"
 
 DEPEND=">=media-libs/netpbm-9.12
 	doc? ( >=media-gfx/transfig-3.2 app-text/ghostscript-gpl )
 	tk? ( dev-lang/tk )"
+RDEPEND="${DEPEND}
+	tk? (
+		media-gfx/xli
+		scanner? ( media-gfx/xsane )
+	)"
 
 DOCS="AUTHORS BUGS CREDITS HISTORY RE* TODO"
 
