@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.4 2010/06/11 06:45:19 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.5 2010/06/11 06:51:51 ford_prefect Exp $
+
+  11 Jun 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  -gobject-introspection-0.6.7.ebuild, -gobject-introspection-0.6.8.ebuild:
+  Remove old ebuilds
 
 *gobject-introspection-0.6.14 (11 Jun 2010)
 
