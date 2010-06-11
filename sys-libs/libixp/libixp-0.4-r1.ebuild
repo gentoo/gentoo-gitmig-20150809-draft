@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.5-r1.ebuild,v 1.2 2010/06/11 17:02:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.4-r1.ebuild,v 1.1 2010/06/11 17:02:01 xarthisius Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.diff
-	sed -i -e "s:(PREFIX)/lib:(PREFIX)/$(get_libdir):" config.mk || die
+	sed -i -e "/LIBDIR/s:{PREFIX}/lib:{PREFIX}/$(get_libdir):" config.mk || die
 }
 
 src_compile() {
@@ -27,7 +27,4 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dolib.so lib/*.so* || die
-	dosym libixp.so.${PV} /usr/$(get_libdir)/libixp.so
-	dosym libixp_pthread.so.${PV} /usr/$(get_libdir)/libixp_pthread.so
 }

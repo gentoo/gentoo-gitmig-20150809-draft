@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libixp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.14 2010/06/11 16:15:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/ChangeLog,v 1.15 2010/06/11 17:02:01 xarthisius Exp $
+
+*libixp-0.4-r1 (11 Jun 2010)
+
+  11 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> +libixp-0.4-r1.ebuild,
+  +files/libixp-0.4-gentoo.diff, libixp-0.5-r1.ebuild,
+  files/libixp-0.5-gentoo.diff:
+  Adding older, revised version for x11-wm/wmii. Minor cleanup in patches.
 
   11 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> -libixp-0.2-r1.ebuild,
   -files/libixp-0.2-shared-object.patch, -libixp-0.4.ebuild,
