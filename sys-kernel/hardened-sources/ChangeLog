@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.315 2010/06/01 15:28:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.316 2010/06/11 23:27:40 chainsaw Exp $
+
+*hardened-sources-2.6.32-r9 (11 Jun 2010)
+
+  11 Jun 2010; <chainsaw@gentoo.org> +hardened-sources-2.6.32-r9.ebuild:
+  New patchset by Anthony G Basile, based on mainline 2.6.32.15 sources.
 
 *hardened-sources-2.6.32-r8 (01 Jun 2010)
 
