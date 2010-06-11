@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.63 2010/06/06 21:27:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.64 2010/06/11 13:59:50 aballier Exp $
 
 EAPI="2"
 
@@ -450,7 +450,7 @@ src_configure() {
 		use faac || myconf+=" --disable-faac-lavc"
 	else
 		myconf+=" --disable-mencoder"
-		myconf+="--disable-faac-lavc"
+		myconf+=" --disable-faac-lavc"
 		for i in ${uses}; do
 			myconf+=" --disable-${i}"
 			use ${i} && elog "Useflag \"${i}\" require \"encode\" useflag enabled to work."
