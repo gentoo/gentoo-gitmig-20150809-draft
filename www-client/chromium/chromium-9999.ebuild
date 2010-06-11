@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.55 2010/06/10 15:54:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.56 2010/06/11 09:44:59 voyageur Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/jpeg:0
 	media-libs/libpng
 	media-video/ffmpeg[threads]
+	>=net-print/cups-1.3.5
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver"
