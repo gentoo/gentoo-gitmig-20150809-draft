@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/pecl-mailparse-2.1.5.ebuild,v 1.1 2010/06/11 18:27:48 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mailparse/pecl-mailparse-2.1.5.ebuild,v 1.2 2010/06/11 18:28:28 mabi Exp $
 
 EAPI="2"
 
@@ -23,4 +23,3 @@ DEPEND="dev-lang/php[unicode]"
 RDEPEND=""
 
 need_php_by_category
-
