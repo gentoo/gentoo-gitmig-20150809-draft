@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.21.1.ebuild,v 1.8 2010/06/11 12:05:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.21.1.ebuild,v 1.9 2010/06/11 12:33:23 ssuominen Exp $
 
 EAPI=2
 
@@ -68,7 +68,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 # alsa-utils dep is for the alsasound init.d script (see bug #155707)
-# bluez-utils dep is for the bluetooth init.d script
+# bluez dep is for the bluetooth init.d script
 RDEPEND="${RDEPEND}
 	gnome-extra/gnome-audio
 	system-wide? (
