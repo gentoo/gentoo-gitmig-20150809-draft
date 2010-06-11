@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.2.ebuild,v 1.2 2010/06/07 11:03:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-0.5.2.ebuild,v 1.3 2010/06/11 22:11:19 arfrever Exp $
 
 EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
 inherit distutils
 
 DESCRIPTION="metadata.xml generator for ebuilds"
@@ -16,7 +19,6 @@ KEYWORDS="amd64 ~hppa ~ppc ~x86"
 
 IUSE=""
 DEPEND=">=dev-python/jaxml-3.01"
-RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
 	distutils_src_install
@@ -24,13 +26,11 @@ src_install() {
 	metagen_install() {
 		local METAGEN_MOD="$(python_get_sitedir)/${PN}/main.py"
 		fperms 755 ${METAGEN_MOD}
-		dosym  "${D}"${METAGEN_MOD} "/usr/bin/${PN}-${PYTHON_ABI}" \
-			|| die "dosym failed"
+		dosym  "${D}"${METAGEN_MOD} "/usr/bin/${PN}-${PYTHON_ABI}"
 	}
-
 	python_execute_function metagen_install
 
-	python_generate_wrapper_scripts "${D}"/usr/bin/${PN}
+	python_generate_wrapper_scripts "${ED}usr/bin/${PN}"
 
 	doman "docs/metagen.1"
 }
