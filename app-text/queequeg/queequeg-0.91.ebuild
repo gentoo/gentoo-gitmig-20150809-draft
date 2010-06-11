@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/queequeg-0.91.ebuild,v 1.8 2007/08/05 09:01:24 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/queequeg-0.91.ebuild,v 1.9 2010/06/11 21:38:05 arfrever Exp $
 
 inherit distutils multilib
 
@@ -31,8 +31,7 @@ src_compile() {
 
 src_install() {
 
-	python_version
-	local prefix=/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	local prefix=$(python_get_sitedir)/${PN}
 
 	insinto ${prefix}
 	doins *.py

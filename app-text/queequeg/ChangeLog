@@ -1,6 +1,10 @@
 # ChangeLog for app-text/queequeg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.7 2007/08/05 09:01:24 philantrop Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.8 2010/06/11 21:38:05 arfrever Exp $
+
+  11 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  queequeg-0.91.ebuild:
+  Delete call to deprecated python_version() (bug #312121).
 
   05 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> queequeg-0.91.ebuild:
   Minor fix for compatibility with app-dicts/wordnet-3.0. Tested on amd64 and
