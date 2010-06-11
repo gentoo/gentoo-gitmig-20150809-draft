@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.9 2010/06/08 16:29:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.10 2010/06/11 11:51:07 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 hppa ppc ~sparc x86"
 IUSE="bluetooth debug perl python ruby swig tcl"
 
 RDEPEND="dev-libs/openobex
-	bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
+	bluetooth? ( net-wireless/bluez )
 	perl? ( dev-lang/perl )
 	python? ( >=dev-lang/python-2.4.4 )
 	ruby? ( dev-lang/ruby:1.8 )
