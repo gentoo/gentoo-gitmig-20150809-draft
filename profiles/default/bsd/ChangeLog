@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.37 2010/05/03 07:01:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.38 2010/06/11 14:10:31 ulm Exp $
+
+  11 Jun 2010; Ulrich Mueller <ulm@gentoo.org> fbsd/amd64/7.2/make.defaults,
+  fbsd/amd64/8.0/make.defaults:
+  Fix invalid variable name in amd64 profiles, as discussed with aballier.
 
   03 May 2010; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask linux only useflags for kde-base/solid
