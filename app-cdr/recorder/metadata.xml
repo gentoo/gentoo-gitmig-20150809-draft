@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>media-optical</herd>
-  <maintainer>
-    <email>yngwin@gentoo.org</email>
-    <name>Ben de Groot</name>
-  </maintainer>
   <longdescription lang="en">
     Recorder is a graphical frontend of cdrecord/cdrtools, cdrdao, mkisofs
     and growisofs. It aims to be simple and easy to use, free of large
