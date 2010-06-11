@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.11 2009/11/18 18:38:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.12 2010/06/11 12:13:42 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86"
 IUSE="bluetooth debug irda syslog usb"
 
-RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
+RDEPEND="bluetooth? ( net-wireless/bluez )
 	usb? ( virtual/libusb:0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
