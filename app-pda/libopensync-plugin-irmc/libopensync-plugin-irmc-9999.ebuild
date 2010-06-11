@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-9999.ebuild,v 1.4 2009/09/27 00:20:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-9999.ebuild,v 1.5 2010/06/11 12:15:30 ssuominen Exp $
 
 inherit eutils cmake-utils subversion
 
@@ -17,7 +17,7 @@ IUSE="bluetooth irda"
 
 DEPEND="=app-pda/libopensync-${PV}*
 	>=dev-libs/openobex-1.0
-	bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )"
+	bluetooth? ( net-wireless/bluez )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {

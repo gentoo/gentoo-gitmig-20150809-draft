@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-0.36.ebuild,v 1.4 2009/09/19 16:26:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-0.36.ebuild,v 1.5 2010/06/11 12:15:30 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="+bluetooth irda"
 
 DEPEND="=app-pda/libopensync-${PV}*
 	>=dev-libs/openobex-1.0[bluetooth?,irda?]
-	bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )"
+	bluetooth? ( net-wireless/bluez )"
 
 RDEPEND="${DEPEND}"
 

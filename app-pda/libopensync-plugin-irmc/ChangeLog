@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync-plugin-irmc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.14 2009/09/27 00:20:41 leio Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.15 2010/06/11 12:15:30 ssuominen Exp $
+
+  11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libopensync-plugin-irmc-0.36.ebuild, libopensync-plugin-irmc-9999.ebuild:
+  Drop bluez-libs support wrt #301630.
 
   27 Sep 2009; Mart Raudsepp <leio@gentoo.org>
   libopensync-plugin-irmc-9999.ebuild:
