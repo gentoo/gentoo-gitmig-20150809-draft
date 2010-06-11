@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33.ebuild,v 1.2 2010/06/07 13:04:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33.ebuild,v 1.3 2010/06/11 18:36:55 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="a X client for generating images of the Earth and manipulating the CIA World data bank"
@@ -21,7 +22,7 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-misc/imake
 	x11-proto/xproto
-	media-gfx/imagemagick
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	app-text/gv
 	sys-apps/less
 	>=sys-apps/sed-4
@@ -32,6 +33,9 @@ src_unpack() {
 	rm -rf "${S}"
 	mv "${WORKDIR}"/${PN}-${FULL_DIST} "${S}"
 	unpack ${A}
+}
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.kit.patch \
 		"${FILESDIR}"/${P}-as-needed.patch
 	cd "${S}"/editkit && xmkmf || die
