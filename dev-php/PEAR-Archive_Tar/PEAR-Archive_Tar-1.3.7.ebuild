@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/PEAR-Archive_Tar-1.3.3.ebuild,v 1.2 2009/10/05 18:13:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/PEAR-Archive_Tar-1.3.7.ebuild,v 1.1 2010/06/11 22:30:29 mabi Exp $
+
+EAPI="2"
 
 MY_PN="${PN/PEAR-/}"
 MY_P="${MY_PN}-${PV}"
-
-inherit depend.php
 
 DESCRIPTION="Tar file management class"
 
@@ -14,15 +14,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
-DEPEND=">=dev-php/PEAR-PEAR-1.8.1"
+DEPEND="|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )
+		>=dev-php/PEAR-PEAR-1.8.1
+"
 PDEPEND="dev-php/pear"
 HOMEPAGE="http://pear.php.net/package/Archive_Tar"
 
 S="${WORKDIR}/${MY_P}"
-
-pkg_setup() {
-	require_php_with_use pcre
-}
 
 src_install() {
 	insinto /usr/share/php/Archive
