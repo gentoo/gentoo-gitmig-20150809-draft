@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-Any
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.4 2010/03/16 13:55:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.5 2010/06/11 06:26:55 tove Exp $
+
+  11 Jun 2010; Torsten Veller <tove@gentoo.org> -Config-Any-0.18.ebuild:
+  Cleanup
 
 *Config-Any-0.19 (16 Mar 2010)
 
