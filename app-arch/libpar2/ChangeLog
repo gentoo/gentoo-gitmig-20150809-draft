@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/libpar2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.10 2009/12/13 18:37:59 klausman Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.11 2010/06/11 20:04:00 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer, which means this package is now
+  maintainer-needed
 
   13 Dec 2009; Tobias Klausmann <klausman@gentoo.org> libpar2-0.2-r1.ebuild:
   Stable on alpha, bug #292370
