@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/vifm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.17 2010/04/06 13:27:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.18 2010/06/11 18:38:58 yngwin Exp $
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer, which means this package is now
+  maintainer-needed!
 
 *vifm-0.5 (06 Apr 2010)
 
