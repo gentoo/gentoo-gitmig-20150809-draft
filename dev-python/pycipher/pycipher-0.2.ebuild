@@ -1,11 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycipher/pycipher-0.2.ebuild,v 1.1 2009/02/03 19:55:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycipher/pycipher-0.2.ebuild,v 1.2 2010/06/11 23:31:26 arfrever Exp $
 
-inherit eutils python
+EAPI="3"
+PYTHON_DEPEND="*"
+SUPPORT_PYTHON_ABIS="1"
 
-DESCRIPTION="A Python module that implements several well-known classical cipher \
-algorithms"
+inherit python
+
+DESCRIPTION="A Python module that implements several well-known classical cipher algorithms"
 HOMEPAGE="http://pycipher.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.py"
 
@@ -14,15 +17,21 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND=""
+RDEPEND=""
 
 src_install() {
-		cd "${WORKDIR}"
+	installation() {
+		insinto $(python_get_sitedir)
+		newins "${DISTDIR}/${P}.py" ${PN}.py
+	}
+	python_execute_function installation
+}
 
-		python_version
-		exeinto "${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages"
-		newexe "${DISTDIR}/${P}.py ${PN}.py"
+pkg_postinst() {
+	python_mod_optimize ${PN}.py
+}
 
-		local dir="${ROOT}/usr/$(get_libdir)/python${PYVER}/site-packages"
-		make_wrapper "${PN}" "python ./${PN}.py" "${dir}"
+pkg_postrm() {
+	python_mod_cleanup ${PN}.py
 }
