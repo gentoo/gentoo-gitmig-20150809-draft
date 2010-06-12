@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-acpi-notifier
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/ChangeLog,v 1.40 2010/03/11 20:40:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-acpi-notifier/ChangeLog,v 1.41 2010/06/12 07:51:47 fauli Exp $
+
+*claws-mail-acpi-notifier-1.0.23 (12 Jun 2010)
+
+  12 Jun 2010; <fauli@gentoo.org> +claws-mail-acpi-notifier-1.0.23.ebuild:
+  version bump, bug 319161
 
   11 Mar 2010; Markus Meier <maekke@gentoo.org>
   claws-mail-acpi-notifier-1.0.22.ebuild:
