@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.374 2010/06/09 12:42:57 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.375 2010/06/12 01:01:42 jmbsvicetto Exp $
+
+*amarok-2.3.1-r1 (12 Jun 2010)
+
+  12 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.3.1-r1.ebuild, +files/amarok-fix-accessibility-dep.patch,
+  metadata.xml:
+  [media-sound/amarok-2.3.1-r1] Merged amarok and amarok-utils. Applied
+  patch to drop the accessibility requirement - should fix bug 319803.
+  Reviewed mysql deps to allow for mariadb - fixes bug 320807. Applied
+  minimal-toc cflag to avoid issues on ppc64 - should fix bug 280552.
+  Testing for this masked version is welcomed.
 
   09 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   amarok-2.3.1.ebuild:
