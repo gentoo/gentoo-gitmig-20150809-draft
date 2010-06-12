@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vamp-aubio-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/ChangeLog,v 1.11 2010/01/06 20:38:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/ChangeLog,v 1.12 2010/06/12 17:22:55 aballier Exp $
+
+  12 Jun 2010; Alexis Ballier <aballier@gentoo.org>
+  -vamp-aubio-plugins-0.3.2b.ebuild,
+  -files/vamp-aubio-plugins-0.3.2b-gcc43.patch:
+  remove old
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org>
   vamp-aubio-plugins-0.3.2c.ebuild:
