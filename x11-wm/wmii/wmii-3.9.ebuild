@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.ebuild,v 1.2 2010/06/07 10:36:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.ebuild,v 1.3 2010/06/12 13:31:46 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic multilib
@@ -27,7 +27,6 @@ COMMON_DEPEND="x11-libs/libXft
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xmessage
 	x11-apps/xsetroot
-	x11-misc/dmenu
 	media-fonts/font-misc-misc"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
