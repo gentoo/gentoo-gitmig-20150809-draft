@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r1.ebuild,v 1.6 2008/11/22 15:10:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r1.ebuild,v 1.7 2010/06/12 10:47:26 aballier Exp $
 
 inherit eutils autotools
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-keyfile.patch"
 	epatch "${FILESDIR}/${P}-signal.patch"
+	epatch "${FILESDIR}/${P}-gcc45.patch"
 	eautoreconf
 }
 
