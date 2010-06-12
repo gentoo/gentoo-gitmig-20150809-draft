@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.175 2010/05/31 18:18:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.176 2010/06/12 20:34:32 kolmodin Exp $
+
+  12 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.10.4-r1.ebuild:
+  Edit the ghc-wrapper installed by USE=binary to include GHC_CFLAGS from
+  the user's compilation.
+  This solves problems for hardend users, as the ghc binaries are not build
+  on hardend systems. See bug #313635 for details.
+  Patch by xake@rymdraket.net.
 
   31 May 2010; Joseph Jezak <josejx@gentoo.org> ghc-6.10.4-r1.ebuild,
   ghc-6.12.1.ebuild:

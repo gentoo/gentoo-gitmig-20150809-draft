@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.3 2010/05/31 18:18:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.4 2010/06/12 20:34:32 kolmodin Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -102,7 +102,6 @@ ghc_setup_cflags() {
 	# We also use these CFLAGS for building the C parts of ghc, ie the rts.
 	strip-flags
 	strip-unsupported-flags
-	filter-flags -fPIC
 
 	GHC_CFLAGS=""
 	for flag in ${CFLAGS}; do
@@ -155,6 +154,13 @@ src_unpack() {
 
 	base_src_unpack
 	ghc_setup_cflags
+
+	if ! use ghcbootstrap; then
+		# Modify the wrapper script from the binary tarball to use GHC_CFLAGS.
+		# See bug #313635.
+		sed -i -e "s|wrapped|wrapped ${GHC_CFLAGS}|" \
+			"${WORKDIR}/usr/bin/ghc-${PV}"
+	fi
 
 	if use binary; then
 
