@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r1.ebuild,v 1.2 2010/06/12 16:54:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r1.ebuild,v 1.3 2010/06/12 21:18:26 a3li Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${MY_P}-notrojan.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="curl +hub ipv6 +operoverride +spoof operoverride-verify +prefixaq
 showlistmodes shunnotices ssl topicisnuhost +usermod zlib"
 
