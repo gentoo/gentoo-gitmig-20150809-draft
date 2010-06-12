@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.17 2010/06/04 17:03:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.18 2010/06/12 15:54:12 bicatali Exp $
+
+*pyxplot-0.8.1 (12 Jun 2010)
+
+  12 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/0.7.0-dont-build-pyx.patch, +pyxplot-0.8.1.ebuild,
+  +files/pyxplot-0.8.1-linking.patch:
+  Version bump. Add dependency on gsl, fftw, cfitsio. Fix more linking
+  problems and flags propagation
 
   04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyxplot-0.7.1.ebuild:
