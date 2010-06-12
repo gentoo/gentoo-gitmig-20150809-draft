@@ -1,11 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.16 2010/05/03 15:50:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.17 2010/06/12 20:40:02 spatz Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
 
 # SECTION: Unmask
+
+# 2010/06/12 - Dror Levin <spatz@gentoo.org>
+# Unmask amd64/x86 only vpx for now
+-vpx
 
 # 2010/02/14 - Samuli Suominen <ssuominen@gentoo.org>
 # Unmask amd64/x86 only SANE_BACKENDS
