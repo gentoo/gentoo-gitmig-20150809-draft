@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/oxygen-molecule
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/ChangeLog,v 1.7 2010/06/12 08:32:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-molecule/ChangeLog,v 1.8 2010/06/12 08:36:04 spatz Exp $
+
+  12 Jun 2010; Dror Levin <spatz@gentoo.org> -oxygen-molecule-2.2.ebuild:
+  Drop old.
 
   12 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   oxygen-molecule-3.2.ebuild:
