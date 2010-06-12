@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.109 2010/06/05 21:36:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.110 2010/06/12 16:36:46 arfrever Exp $
+
+  12 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  icu-4.4.1.ebuild, +files/icu-4.4.1-pkgdata.patch:
+  Fix buffer overflow in pkgdata (bug #285735). Add "static-libs" USE flag
+  (bug #319643).
 
   05 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   icu-4.4.1.ebuild:
