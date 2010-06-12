@@ -1,7 +1,7 @@
 diff -ur Email-Valid-0.181-orig/t/valid.t Email-Valid-0.181/t/valid.t
 --- Email-Valid-0.181-orig/t/valid.t	2008-11-21 22:36:54.000000000 +0100
 +++ Email-Valid-0.181/t/valid.t	2009-06-08 08:43:31.000000000 +0200
-@@ -85,8 +85,7 @@
+@@ -85,6 +85,5 @@
  );
  
  SKIP: {
@@ -9,5 +9,3 @@ diff -ur Email-Valid-0.181-orig/t/valid.t Email-Valid-0.181/t/valid.t
 -    unless $v->address(-address=> 'devnull@pobox.com', -mxcheck => 1);
 +  skip "disabled online tests", 2;
  
-   ok(
-     $v->address(-address => 'blort@aol.com', -mxcheck => 1),
