@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.64 2010/06/11 13:59:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.65 2010/06/12 18:14:40 spatz Exp $
 
 EAPI="2"
 
@@ -18,8 +18,8 @@ gif ggi -gmplayer +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 libcaca lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas +network nut openal
 amr +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc
 samba +shm +schroedinger sdl +speex sse sse2 ssse3 svga tga +theora +tremor
-+truetype +toolame +twolame +unicode v4l v4l2 vdpau vidix +vorbis win32codecs
-+X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
++truetype +toolame +twolame +unicode v4l v4l2 vdpau vidix +vorbis vpx
+win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc zoran"
 [[ ${PV} == *9999* ]] && IUSE+=" external-ffmpeg"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
@@ -147,6 +147,7 @@ RDEPEND+="
 	theora? ( media-libs/libtheora[encode?] )
 	truetype? ( ${FONT_RDEPS} )
 	vorbis? ( media-libs/libvorbis )
+	vpx? ( media-libs/libvpx )
 	xanim? ( media-video/xanim )
 "
 
@@ -441,6 +442,7 @@ src_configure() {
 			--disable-libvorbis
 		"
 	fi
+	use vpx || myconf+=" --disable-libvpx-lavc"
 	# Encoding
 	uses="faac x264 xvid toolame twolame"
 	if use encode; then

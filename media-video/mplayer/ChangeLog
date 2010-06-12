@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.745 2010/06/11 13:59:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.746 2010/06/12 18:14:40 spatz Exp $
+
+  12 Jun 2010; Dror Levin <spatz@gentoo.org> mplayer-9999.ebuild,
+  metadata.xml:
+  Add vpx support via media-libs/libvpx.
 
   11 Jun 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   fix the configure options building with mencoder disabled, bug #323097
