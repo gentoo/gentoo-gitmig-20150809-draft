@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/dhcpcd-dbus
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dhcpcd-dbus/ChangeLog,v 1.1 2010/06/12 21:32:34 darkside Exp $
+
+*dhcpcd-dbus-0.5.0 (12 Jun 2010)
+
+  12 Jun 2010; Jeremy Olexa <darkside@gentoo.org> +dhcpcd-dbus-0.5.0.ebuild,
+  +metadata.xml:
+  Initial ebuild for dhcpcd-dbus by Roy Marples and myself. bug 321367
+
