@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.2 2010/06/12 17:57:21 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.3 2010/06/12 19:58:17 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -32,7 +32,6 @@ IUSE="cdda daap debug embedded ipod lastfm mp3tunes mtp +player semantic-desktop
 # ipod requires gdk enabled and also gtk compiled in libgpod
 # Some UI dialogs require qt-gui built with the accessibility use flag
 DEPEND="
-	!<=media-sound/amarok-utils-2.3.1
 	>=media-libs/taglib-1.6.1[asf,mp4]
 	>=media-libs/taglib-extras-1.0.1
 	player? (
@@ -64,6 +63,7 @@ DEPEND="
 	!player? ( !utils? ( media-sound/amarok[player] ) )
 "
 RDEPEND="${DEPEND}
+	!<=media-sound/amarok-utils-2.3.1
 	>=kde-base/phonon-kde-${KDE_MINIMAL}
 	player? (
 		semantic-desktop? ( >=kde-base/nepomuk-${KDE_MINIMAL} )
