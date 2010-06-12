@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.5.ebuild,v 1.6 2010/06/01 17:12:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.5.ebuild,v 1.7 2010/06/12 13:48:08 ssuominen Exp $
 
 EAPI=2
 
@@ -52,7 +52,10 @@ src_install() {
 	einstall || die
 
 	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}/ratpoison.xsession" ratpoison
+	newexe "${FILESDIR}"/ratpoison.xsession ratpoison || die
+
+	insinto /usr/share/xsessions
+	doins "${FILESDIR}"/${PN}.desktop || die
 
 	dodoc INSTALL TODO README NEWS AUTHORS ChangeLog
 	docinto example
