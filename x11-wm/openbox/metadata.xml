@@ -3,6 +3,10 @@
 <pkgmetadata>
   <herd>lxde</herd>
   <herd>desktop-wm</herd>
+  <maintainer>
+  	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
+  </maintainer>
   <upstream>
     <maintainer status='active'>
       <email>danakj@orodu.net</email>

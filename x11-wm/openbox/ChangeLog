@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.204 2010/06/11 18:28:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.205 2010/06/12 10:00:52 hwoarang Exp $
+
+  12 Jun 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Taking over maintainership
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer
