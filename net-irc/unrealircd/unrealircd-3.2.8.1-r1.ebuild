@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r1.ebuild,v 1.1 2010/06/12 16:34:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r1.ebuild,v 1.2 2010/06/12 16:54:36 ssuominen Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ MY_P=Unreal${PV}
 
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
 HOMEPAGE="http://www.unrealircd.com/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${MY_P}-no_trojan.tar.gz"
+SRC_URI="http://dev.gentoo.org/~ssuominen/${MY_P}-notrojan.tar.gz"
 #SRC_URI="http://unrealircd.icedslash.com/${MY_P}.tar.gz
 #	http://unreal.brueggisite.de/${MY_P}.tar.gz
 #	http://www.blurryfox.com/unreal/${MY_P}.tar.gz"
