@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.148 2010/06/06 01:27:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.149 2010/06/12 20:41:48 spatz Exp $
+
+  12 Jun 2010; Dror Levin <spatz@gentoo.org> use.mask:
+  Use mask vpx until media-libs/libvpx is keyworded by arches.
 
   06 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> package.use.mask:
   Mask cups and google-gadgets USE flags also for KDE 4.4

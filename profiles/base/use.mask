@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.101 2010/05/03 15:50:29 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.102 2010/06/12 20:41:48 spatz Exp $
 
 # These need libieee1284 which is amd64/x86 only.
 sane_backends_canon_pp
@@ -260,3 +260,8 @@ ruby_targets_ree18
 # introspection is not mature yet. 
 # gir-repository especially is a big pile of junk
 introspection
+
+# Dror Levin <spatz@gentoo.org> (12 Jun 2010)
+# media-libs/libvpx needs to be keyworded
+# so it's only for amd64 and x86 for now
+vpx
