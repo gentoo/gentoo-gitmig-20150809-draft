@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.185 2010/06/06 10:39:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.186 2010/06/12 09:15:16 grobian Exp $
+
+  12 Jun 2010; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r15.ebuild,
+  +files/mutt-1.5.20-crash-on-invalid-limit-pattern.patch:
+  Add patch for bug #323613, needs to be taken upstream, works for me to
+  resolve the crash.  Reorganise src_prepare such that we don't patch
+  anything other than what is strictly necessary with USE=vanilla.
 
 *mutt-1.5.20-r15 (06 Jun 2010)
 

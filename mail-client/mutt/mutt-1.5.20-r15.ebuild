@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r15.ebuild,v 1.1 2010/06/06 10:39:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r15.ebuild,v 1.2 2010/06/12 09:15:16 grobian Exp $
 
 EAPI="3"
 
@@ -76,30 +76,38 @@ src_prepare() {
 	# different from the one used by the mailbase ebuild
 	use prefix && epatch "${FILESDIR}"/mutt-1.5.13-prefix-mailcap.patch
 
+	# must haves to compile or behave correctly
 	epatch "${FILESDIR}"/mutt-1.5.18-bdb-prefix.patch # fix bdb detection
 	epatch "${FILESDIR}"/mutt-1.5.18-interix.patch
 	built_with_use sys-libs/ncurses unicode && \
 		epatch "${FILESDIR}"/mutt-1.5.18-solaris-ncurses-chars.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-1.2.0.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-dont-reveal-bbc.patch
-	epatch "${FILESDIR}"/mutt-1.5.20-realpath-slowness.patch
 
-	# post-release hot-fixes
-	for rev in $(eval echo {0..${PR#r}}) ; do
-		local revpatch="${PATCHDIR}"/mutt-gentoo-${PV}-r${rev}.patch
-		[[ -e ${revpatch} ]] && \
-			epatch "${revpatch}"
-	done
+	if use !vanilla ; then
+		# fixes that are not yet upstream, or that upstream doesn't like
+		epatch "${FILESDIR}"/mutt-1.5.20-dont-reveal-bbc.patch
+		epatch "${FILESDIR}"/mutt-1.5.20-realpath-slowness.patch
+		epatch "${FILESDIR}"/mutt-1.5.20-crash-on-invalid-limit-pattern.patch
 
-	# patch version string for bug reports
-	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
-		muttlib.c || die "failed patching in Gentoo version"
-
-	if use !vanilla && use !sidebar ; then
-		use nntp || rm "${PATCHDIR}"/06-nntp.patch
-		for p in "${PATCHDIR}"/[0-9][0-9]-*.patch ; do
-			epatch "${p}"
+		# post-release hot-fixes grabbed from HG
+		for rev in $(eval echo {0..${PR#r}}) ; do
+			local revpatch="${PATCHDIR}"/mutt-gentoo-${PV}-r${rev}.patch
+			[[ -e ${revpatch} ]] && \
+				epatch "${revpatch}"
 		done
+
+		# patch version string for bug reports
+		sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
+			muttlib.c || die "failed patching in Gentoo version"
+
+		# the big feature patches that upstream doesn't want to include, but
+		# nearly every distro has due to their usefulness
+		if use !sidebar ; then
+			use nntp || rm "${PATCHDIR}"/06-nntp.patch
+			for p in "${PATCHDIR}"/[0-9][0-9]-*.patch ; do
+				epatch "${p}"
+			done
+		fi
 	fi
 
 	if use sidebar ; then
