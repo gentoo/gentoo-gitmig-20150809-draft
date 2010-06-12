@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/adhearsion-0.8.3.ebuild,v 1.1 2009/12/09 18:55:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/adhearsion-0.8.3.ebuild,v 1.2 2010/06/12 19:45:00 graaff Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://adhearsion.com"
 IUSE=""
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 RDEPEND="
 	>=dev-ruby/rubigen-1.0.6
