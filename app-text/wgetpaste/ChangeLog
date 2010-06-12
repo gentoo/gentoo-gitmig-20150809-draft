@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.104 2010/06/11 19:27:23 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.105 2010/06/12 16:04:34 wired Exp $
+
+  12 Jun 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added myself as co-maintainer
 
 *wgetpaste-2.17 (11 Jun 2010)
 
