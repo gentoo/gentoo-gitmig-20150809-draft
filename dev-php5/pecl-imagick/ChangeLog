@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-imagick
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.25 2009/12/16 20:22:56 hoffie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-imagick/ChangeLog,v 1.26 2010/06/12 22:24:12 mabi Exp $
+
+  12 Jun 2010; <mabi@gentoo.org> -pecl-imagick-2.0.1.ebuild,
+  -pecl-imagick-2.2.2.ebuild, -pecl-imagick-2.3.0_beta1.ebuild:
+  remove old
 
 *pecl-imagick-2.3.0 (16 Dec 2009)
 
