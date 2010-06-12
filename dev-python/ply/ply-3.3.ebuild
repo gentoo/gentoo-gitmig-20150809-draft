@@ -1,22 +1,25 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.3.ebuild,v 1.1 2009/09/07 20:44:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.3.ebuild,v 1.2 2010/06/12 19:25:05 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
 DESCRIPTION="Python Lex-Yacc library"
+HOMEPAGE="http://www.dabeaz.com/ply/ http://pypi.python.org/pypi/ply"
 SRC_URI="http://www.dabeaz.com/ply/${P}.tar.gz"
-HOMEPAGE="http://www.dabeaz.com/ply/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="examples"
 
+DOCS="ANNOUNCE CHANGES"
+
 src_prepare() {
+	distutils_src_prepare
 	sed -e "s/print repr(result)/print(repr(result))/" -i test/testyacc.py || die "sed failed"
 }
 
@@ -35,9 +38,10 @@ src_test() {
 }
 
 src_install() {
-	DOCS="ANNOUNCE CHANGES"
 	distutils_src_install
+
 	dohtml doc/*
+
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r example
