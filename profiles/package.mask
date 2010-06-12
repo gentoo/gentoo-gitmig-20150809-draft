@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11625 2010/06/12 19:38:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11626 2010/06/12 20:07:58 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -198,10 +198,6 @@ dev-ruby/nimage
 #   It does not work with perl-5.12 and is
 #   not needed by any package
 dev-perl/Data-Alias
-
-# Ulrich Mueller <ulm@gentoo.org> (13 May 2010)
-# No longer needed virtual, masked for removal in 30 days, bug 319601.
-virtual/gnus
 
 # Tony Vroon <chainsaw@gentoo.org> (11 May 2010)
 # The following Asterisk add-ons fail to build correctly against
@@ -495,13 +491,6 @@ games-strategy/castle-combat
 # Mounir Lamouri <volkmar@gentoo.org> (24 Mar 2010)
 # Masked because breaking backward compatibility and still not needed.
 >dev-util/bam-0.2.0
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (22 Mar 2010)
-# QA: removal on 22. 5. 2010
-# Masked for removal due to major packaging issues
-# that were not addressed by maintainers in timely
-# manner. See bug #150091.
-app-forensics/samhain
 
 # Alistair Bush <ali_bush@gentoo.org> (22 Mar 2010)
 # Masked due to producing build failures in stable
