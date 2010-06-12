@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.4.3-r1.ebuild,v 1.1 2010/05/23 21:47:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.4.3-r1.ebuild,v 1.2 2010/06/12 10:43:28 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -9,14 +9,14 @@ RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGES TODO README"
 RUBY_FAKEGEM_DOCDIR="doc"
 
-inherit ruby-fakegem
+inherit multilib ruby-fakegem
 
 DESCRIPTION="A JSON implementation as a Ruby extension."
 HOMEPAGE="http://json.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
 SRC_URI="mirror://rubygems/${P}.gem"
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris ~x64-macos"
 SLOT="0"
 IUSE=""
 
@@ -59,7 +59,7 @@ each_ruby_test() {
 each_ruby_install() {
 	each_fakegem_install
 	if [[ $(basename ${RUBY}) != "jruby" ]]; then
-		ruby_fakegem_newins ext/json/ext/generator.so lib/json/ext/generator.so
-		ruby_fakegem_newins ext/json/ext/parser.so lib/json/ext/parser.so
+		ruby_fakegem_newins ext/json/ext/generator$(get_modname) lib/json/ext/generator$(get_modname)
+		ruby_fakegem_newins ext/json/ext/parser$(get_modname) lib/json/ext/parser$(get_modname)
 	fi
 }
