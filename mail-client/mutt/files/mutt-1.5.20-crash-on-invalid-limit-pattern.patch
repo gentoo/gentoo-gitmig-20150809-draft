@@ -1,4 +1,5 @@
 http://bugs.gentoo.org/show_bug.cgi?id=323613
+http://dev.mutt.org/trac/ticket/3417
 
 --- pattern.c
 +++ pattern.c
