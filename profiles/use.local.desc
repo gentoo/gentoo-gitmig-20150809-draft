@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5647 2010/06/12 18:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5648 2010/06/12 20:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -339,12 +339,6 @@ app-forensics/afflib:s3 - Enable S3
 app-forensics/aide:audit - Enable support for sys-process/audit
 app-forensics/libewf:rawio - Enables raw IO handling
 app-forensics/rdd:rawio - Enables raw IO handling
-app-forensics/samhain:login-watch - Compile in the module to watch for login/logout events
-app-forensics/samhain:mounts-check - Compile in the module to check for correct mount options
-app-forensics/samhain:netclient - Compile a client, rather than a standalone version 
-app-forensics/samhain:netserver - Compile a server, rather than a standalone version 
-app-forensics/samhain:suidcheck - Compile in the module to check file system for SUID/SGID binaries
-app-forensics/samhain:userfiles - Compile in the module to check for files in user home directories
 app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:dbtool - Add patch for dbtool interface from PyFlag
 app-forensics/sleuthkit:ewf - Enable libewf support
