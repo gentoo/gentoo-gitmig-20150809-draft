@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.27.ebuild,v 1.1 2010/06/11 10:16:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.27.ebuild,v 1.2 2010/06/12 16:45:16 pacho Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="debug -eds -server"
 
 RDEPEND="eds? ( gnome-extra/evolution-data-server )
+	!eds? ( dev-libs/libical )
 	net-wireless/bluez
 	>=dev-libs/openobex-1.4
 	dev-libs/glib:2

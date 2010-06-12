@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.14 2010/06/11 10:16:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.15 2010/06/12 16:45:16 pacho Exp $
+
+  12 Jun 2010; Pacho Ramos <pacho@gentoo.org> obexd-0.27.ebuild:
+  Add dependency on dev-libs/libical with USE='-eds'; thanks to gionnico for
+  reporting bug 323615
 
 *obexd-0.27 (11 Jun 2010)
 
