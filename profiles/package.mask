@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11621 2010/06/12 00:47:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11622 2010/06/12 06:45:36 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,26 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (12 Jun 2010)
+# Masked for quick tests of the merged amarok ebuild
+=mail-client/claws-mail-attachwarner-0.2.19
+=mail-client/claws-mail-bsfilter-1.0.4
+=mail-client/claws-mail-fancy-0.9.10
+=mail-client/claws-mail-mailmbox-1.14.4
+=mail-client/claws-mail-notification-0.25
+=mail-client/claws-mail-perl-0.9.18
+=mail-client/claws-mail-rssyl-0.27
+=mail-client/clawsker-0.7.1
+=mail-client/claws-mail-python-0.4
+=mail-client/claws-mail-3.7.6
+=mail-client/claws-mail-acpi-notifier-1.0.23
+=mail-client/claws-mail-archive-0.6.7
+=mail-client/claws-mail-att-remover-1.0.12
+=mail-client/claws-mail-gtkhtml-0.27
+=mail-client/claws-mail-spam_report-0.3.11
+=mail-client/claws-mail-tnef_parse-0.3.8
+=mail-client/claws-mail-vcalendar-2.0.8
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (12 Jun 2010)
 # Masked for quick tests of the merged amarok ebuild
