@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.149 2010/05/11 17:50:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.150 2010/06/12 07:03:19 fauli Exp $
+
+*claws-mail-3.7.6 (12 Jun 2010)
+
+  12 Jun 2010; <fauli@gentoo.org> +claws-mail-3.7.6.ebuild:
+  version bump, bug 319161; revamp ebuild as provided by Didier Barvaux
+  <didier-bugzillagentoo@barvaux.org>
 
   11 May 2010; Brent Baude <ranger@gentoo.org> claws-mail-3.7.5.ebuild:
   Marking claws-mail-3.7.5 ppc64 for bug 304353
