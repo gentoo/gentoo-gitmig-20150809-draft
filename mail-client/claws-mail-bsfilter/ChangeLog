@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-bsfilter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-bsfilter/ChangeLog,v 1.7 2010/03/11 20:42:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-bsfilter/ChangeLog,v 1.8 2010/06/12 07:11:22 fauli Exp $
+
+*claws-mail-bsfilter-1.0.4 (12 Jun 2010)
+
+  12 Jun 2010; <fauli@gentoo.org> +claws-mail-bsfilter-1.0.4.ebuild:
+  version bump, bug 319161
 
   11 Mar 2010; Markus Meier <maekke@gentoo.org>
   claws-mail-bsfilter-1.0.3.ebuild:
