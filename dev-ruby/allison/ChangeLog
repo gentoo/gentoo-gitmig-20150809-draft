@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.10 2010/05/22 15:01:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.11 2010/06/12 20:10:38 graaff Exp $
+
+*allison-2.0.3-r1 (12 Jun 2010)
+
+  12 Jun 2010; Hans de Graaff <graaff@gentoo.org> +allison-2.0.3-r1.ebuild:
+  Convert to ruby-fakegem.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   allison-2.0.3.ebuild:
