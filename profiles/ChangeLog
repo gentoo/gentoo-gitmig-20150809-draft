@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4250 2010/06/12 06:45:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4251 2010/06/12 19:33:34 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jun 2010; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/activerecord-jdbc for removal.
 
   12 Jun 2010; <fauli@gentoo.org> package.mask:
   Mask Claws Mail 3.7.6 and plugins for sane bumping
