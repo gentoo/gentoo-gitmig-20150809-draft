@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.746 2010/06/12 18:14:40 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.747 2010/06/12 20:42:44 spatz Exp $
+
+*mplayer-1.0_rc4_p20100612 (12 Jun 2010)
+
+  12 Jun 2010; Dror Levin <spatz@gentoo.org>
+  +mplayer-1.0_rc4_p20100612.ebuild:
+  Roll new snapshot with VP8 support.
 
   12 Jun 2010; Dror Levin <spatz@gentoo.org> mplayer-9999.ebuild,
   metadata.xml:
