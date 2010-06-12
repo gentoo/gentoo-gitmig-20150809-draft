@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.28 2010/05/18 17:57:32 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.29 2010/06/12 05:20:47 jmbsvicetto Exp $
+
+  12 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  qemu-kvm-9999.ebuild:
+  [app-emulation/qemu-kvm-9999] Restricted targets to x86_64-softmmu after
+  upstream informed that's the only supported target for qemu-kvm.
+  Should fix bug 317205 and bug 318413.
 
 *qemu-kvm-0.12.4 (18 May 2010)
 

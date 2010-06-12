@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.6 2010/03/28 17:24:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.7 2010/06/12 05:20:47 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -28,9 +28,13 @@ SLOT="0"
 IUSE="+aio alsa bluetooth curl esd gnutls fdt hardened kvm-trace ncurses \
 pulseaudio qemu-ifup sasl sdl static vde"
 
-COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
+# Updated targets to use the only supported upstream target - x86_64-softmmu
+COMMON_TARGETS=""
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} x86_64"
+IUSE_USER_TARGETS=""
+#COMMON_TARGETS="i386 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
+#IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} x86_64 mips64 mips64el ppcemb"
+#IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
 	IUSE="${IUSE} +qemu_softmmu_targets_${target}"
@@ -70,7 +74,7 @@ DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.29
 	gnutls? ( dev-util/pkgconfig )"
 
-kvm_kern_war() {
+kvm_kern_warn() {
 	eerror "Please enable KVM support in your kernel, found at:"
 	eerror
 	eerror "  Virtualization"
@@ -79,6 +83,14 @@ kvm_kern_war() {
 }
 
 pkg_setup() {
+
+	local counter="0" check
+	use qemu_softmmu_targets_x86_64 || ewarn "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+	for check in ${IUSE_SOFTMMU_TARGETS} ; do
+		use "qemu_softmmu_targets_${check}" && counter="1"
+	done
+	[[ ${counter} == 0 ]] && die "You need to set at least 1 target in QEMU_SOFTMMU_TARGETS"
+
 	if kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
 		eerror "Either upgrade your kernel"
@@ -141,7 +153,7 @@ src_configure() {
 	use static && conf_opts="${conf_opts} --static"
 
 	# Fix the $(prefix)/etc issue
-	conf_opts="${conf_opts} --sysconfdir=${D}/etc"
+	conf_opts="${conf_opts} --sysconfdir=/etc"
 
 	#config options
 	conf_opts="${conf_opts} $(use_enable aio linux-aio)"
@@ -200,8 +212,13 @@ src_install() {
 	newdoc pc-bios/README README.pc-bios || die
 	dohtml qemu-doc.html qemu-tech.html || die
 
-	dobin "${FILESDIR}"/qemu-kvm
-	dosym /usr/bin/qemu-kvm /usr/bin/kvm
+	if use qemu_softmmu_targets_x86_64 ; then
+		dobin "${FILESDIR}"/qemu-kvm
+		dosym /usr/bin/qemu-kvm /usr/bin/kvm
+	else
+		elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
+		elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
+	fi
 }
 
 pkg_postinst() {
