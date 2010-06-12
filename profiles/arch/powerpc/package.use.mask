@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.42 2010/06/06 19:29:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.43 2010/06/12 16:15:24 nerdboy Exp $
+
+# Steve Arnold <nerdboy@gentoo.org> (12 Jun 2010)
+# masking for gdal (see bug 315659)
+sci-libs/gdal ecwj2k
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
 # requires more keywording per bug #323003
