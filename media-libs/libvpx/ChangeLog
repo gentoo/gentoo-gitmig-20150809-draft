@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.3 2010/06/12 21:11:14 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.4 2010/06/12 21:45:36 spatz Exp $
+
+  12 Jun 2010; Dror Levin <spatz@gentoo.org> libvpx-0.9.0_p20100612.ebuild,
+  libvpx-9999.ebuild, metadata.xml:
+  Add altivec,mmx,sse,sse2,sse3,ssse3 USE flags, consolidate live and normal
+  ebuilds.
 
   12 Jun 2010; Dror Levin <spatz@gentoo.org> libvpx-0.9.0_p20100612.ebuild,
   libvpx-9999.ebuild:
