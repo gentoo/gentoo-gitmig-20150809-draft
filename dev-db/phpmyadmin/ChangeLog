@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.381 2010/06/11 17:11:53 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.382 2010/06/12 14:24:35 fauli Exp $
+
+  12 Jun 2010; <fauli@gentoo.org> phpmyadmin-2.11.10.ebuild:
+  stable x86, security bug 303761
 
 *phpmyadmin-2.11.10 (11 Jun 2010)
 
