@@ -1,6 +1,10 @@
 # ChangeLog for app-text/flpsed
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.21 2009/12/26 17:30:19 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.22 2010/06/12 16:52:40 aballier Exp $
+
+  12 Jun 2010; Alexis Ballier <aballier@gentoo.org> flpsed-0.6.1.ebuild:
+  require ghostscript-gpl to be built with X; bug #294392 by Nick White
+  <gentoo-bugs@njw.me.uk>
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> flpsed-0.5.1.ebuild,
   flpsed-0.6.1.ebuild:
