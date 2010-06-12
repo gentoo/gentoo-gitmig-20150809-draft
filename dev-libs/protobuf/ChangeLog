@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.19 2010/05/15 12:15:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.20 2010/06/12 07:03:16 dev-zero Exp $
+
+*protobuf-2.3.0-r1 (12 Jun 2010)
+
+  12 Jun 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +protobuf-2.3.0-r1.ebuild, +files/protobuf-2.3.0-asneeded-2.patch:
+  Updated patch to fix as-needed issue (bug #271509, thanks to Xarthisius).
+  Added static-libs USE flag.
 
   15 May 2010; Samuli Suominen <ssuominen@gentoo.org> protobuf-2.3.0.ebuild,
   +files/protobuf-2.3.0-asneeded.patch:
