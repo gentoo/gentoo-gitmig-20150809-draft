@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/amstd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.25 2009/12/20 12:02:08 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.26 2010/06/12 20:26:15 graaff Exp $
+
+*amstd-2.0.0-r2 (12 Jun 2010)
+
+  12 Jun 2010; Hans de Graaff <graaff@gentoo.org> +amstd-2.0.0-r2.ebuild:
+  Convert to ruby-ng.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> amstd-2.0.0-r1.ebuild:
   Remove obsolete virtual/ruby dependency.
