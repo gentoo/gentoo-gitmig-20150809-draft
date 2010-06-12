@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.0_p20100612.ebuild,v 1.1 2010/06/12 17:46:34 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.0_p20100612.ebuild,v 1.2 2010/06/12 21:11:14 spatz Exp $
 
 EAPI=2
 inherit multilib toolchain-funcs
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug doc postproc +threads"
 
 RDEPEND=""
-DEPEND="dev-lang/yasm
+DEPEND="amd64? ( dev-lang/yasm )
+	x86? ( dev-lang/yasm )
 	doc? (
 		app-doc/doxygen
 		dev-lang/php
