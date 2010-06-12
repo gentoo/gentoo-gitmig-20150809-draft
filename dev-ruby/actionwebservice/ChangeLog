@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionwebservice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.76 2010/01/13 12:22:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.77 2010/06/12 19:05:41 graaff Exp $
+
+  12 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  actionwebservice-2.3.5.ebuild:
+  Move prefix keywords forward since there is no obvious reason for them to
+  be dropped.
 
 *actionwebservice-2.3.5 (13 Jan 2010)
 
