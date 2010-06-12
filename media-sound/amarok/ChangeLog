@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.375 2010/06/12 01:01:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.376 2010/06/12 17:57:21 jmbsvicetto Exp $
+
+  12 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.3.1-r1.ebuild:
+  [media-sound/amarok-2.3.1-r1] Fix cmake call for utils - utilities !=
+  utils.
 
 *amarok-2.3.1-r1 (12 Jun 2010)
 

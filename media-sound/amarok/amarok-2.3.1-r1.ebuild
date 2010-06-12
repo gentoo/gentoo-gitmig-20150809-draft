@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.1 2010/06/12 01:01:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.2 2010/06/12 17:57:21 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -114,7 +114,7 @@ src_configure() {
 	fi
 
 	mycmakeargs+=(
-		$(cmake-utils_use_with utilities UTILITIES)
+		$(cmake-utils_use_with utils UTILITIES)
 	)
 		# $(cmake-utils_use_with semantic-desktop Nepomuk)
 		# $(cmake-utils_use_with semantic-desktop Soprano)
