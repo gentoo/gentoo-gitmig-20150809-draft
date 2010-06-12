@@ -1,18 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.3 2010/06/12 17:46:34 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.0_p20100612.ebuild,v 1.1 2010/06/12 17:46:34 spatz Exp $
 
 EAPI=2
-inherit multilib toolchain-funcs git
-
-EGIT_REPO_URI="git://review.webmproject.org/${PN}.git"
+inherit multilib toolchain-funcs
 
 DESCRIPTION="WebM VP8 Codec SDK"
 HOMEPAGE="http://www.webmproject.org"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc postproc +threads"
 
 RDEPEND=""
