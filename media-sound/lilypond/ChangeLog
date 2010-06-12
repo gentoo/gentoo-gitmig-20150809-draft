@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.105 2010/04/28 12:31:12 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.106 2010/06/12 04:21:44 chiiph Exp $
+
+  12 Jun 2010; Tomas Touceda <chiiph@gentoo.org> lilypond-2.12.3.ebuild:
+  Update font dependency wrt bug 323603 and 311923
 
   28 Apr 2010; Tomas Touceda <chiiph@gentoo.org> lilypond-2.12.3.ebuild:
   Fix dependency problem wrt bug 315471, and improve python related code wrt

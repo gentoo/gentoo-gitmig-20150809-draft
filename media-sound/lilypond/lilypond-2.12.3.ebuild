@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.2 2010/04/28 12:31:12 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.3 2010/06/12 04:21:44 chiiph Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 
 IUSE="debug emacs profile"
 
-RDEPEND="|| ( media-fonts/gnu-gs-fonts-std media-fonts/urw-fonts )
+RDEPEND="media-fonts/urw-fonts
 	>=media-libs/freetype-2
 	media-libs/fontconfig
 	>=x11-libs/pango-1.12.3
@@ -59,7 +59,7 @@ src_configure() {
 	fi
 
 	# see bug 228823
-	econf --with-ncsb-dir=/usr/share/fonts/default/ghostscript \
+	econf --with-ncsb-dir=/usr/share/fonts/urw-fonts/ \
 		$(use_enable debug debugging) \
 		$(use_enable profile profiling) \
 		--disable-gui \
