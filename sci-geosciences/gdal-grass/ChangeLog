@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/gdal-grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/ChangeLog,v 1.4 2010/05/28 13:52:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/ChangeLog,v 1.5 2010/06/13 09:20:01 scarabeus Exp $
+
+*gdal-grass-1.4.3-r1 (13 Jun 2010)
+
+  13 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  gdal-grass-1.4.3.ebuild, +gdal-grass-1.4.3-r1.ebuild:
+  Detect grass using pkgconfig. Also this package should be removed in favor
+  of gdal[grass] in future.
 
   28 May 2010; Markus Meier <maekke@gentoo.org> gdal-grass-1.4.3.ebuild:
   x86 stable, bug #317385

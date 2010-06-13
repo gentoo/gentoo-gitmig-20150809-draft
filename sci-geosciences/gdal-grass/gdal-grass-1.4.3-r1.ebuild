@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/gdal-grass-1.4.3.ebuild,v 1.5 2010/06/13 09:20:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gdal-grass/gdal-grass-1.4.3-r1.ebuild,v 1.1 2010/06/13 09:20:01 scarabeus Exp $
 
 EAPI=2
 inherit eutils
@@ -11,12 +11,12 @@ SRC_URI="http://download.osgeo.org/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
 RDEPEND="sci-libs/gdal
-	<sci-geosciences/grass-6.4.0_rc6"
+	>=sci-geosciences/grass-6.4.0_rc6"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -24,13 +24,7 @@ src_prepare() {
 }
 
 src_configure() {
-	GRASS_ENVD="/etc/env.d/99grass /etc/env.d/99grass-6 /etc/env.d/99grass-cvs";
-	for file in ${GRASS_ENVD}; do
-		if test -r ${file}; then
-			GRASSPATH=$(sed -n 's/LDPATH="\(.*\)\/lib"$/\1/p' ${file});
-		fi
-	done
-	econf --with-grass=${GRASSPATH} --with-gdal
+	econf --with-grass=$(pkg-config grass --variable grassdir) --with-gdal
 }
 
 src_install() {
