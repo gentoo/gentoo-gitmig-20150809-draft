@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.41 2010/01/09 15:11:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.42 2010/06/13 02:26:31 darkside Exp $
+
+*gentoo-bashcomp-20100613 (13 Jun 2010)
+
+  13 Jun 2010; Jeremy Olexa <darkside@gentoo.org>
+  +gentoo-bashcomp-20100613.ebuild:
+  Version bump to fix bugs: 298919, 298916, 301582, 269498, 287092. Add
+  Gentoo Prefix support.
 
   09 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   gentoo-bashcomp-20091225.ebuild:
