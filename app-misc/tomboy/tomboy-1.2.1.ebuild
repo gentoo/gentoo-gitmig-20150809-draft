@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.1.1.ebuild,v 1.2 2010/04/16 09:18:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.2.1.ebuild,v 1.1 2010/06/13 21:34:41 pacho Exp $
 
 EAPI=2
 
@@ -39,8 +39,17 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
+pkg_setup() {
+	G2CONF="${G2CONF}
+		--disable-update-mimedb"
+}
+
 src_prepare() {
 	sed -i -e '/DISABLE_DEPRECATED/d' $(find . -name 'Makefile.in') || die
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "sed failed"
 }
 
 src_configure() {

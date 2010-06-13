@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.98 2010/06/04 21:00:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.99 2010/06/13 21:34:41 pacho Exp $
+
+*tomboy-1.2.1 (13 Jun 2010)
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> -tomboy-0.14.3.ebuild,
+  -tomboy-1.0.0.ebuild, -tomboy-1.1.1.ebuild, +tomboy-1.2.1.ebuild:
+  Add new version for Gnome 2.30 and drop old testing.
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> tomboy-1.0.1.ebuild:
   x86 stable, bug #314899
