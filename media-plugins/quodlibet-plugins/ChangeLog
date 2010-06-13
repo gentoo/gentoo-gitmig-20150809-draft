@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/quodlibet-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.2 2010/06/03 09:40:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.3 2010/06/13 16:07:37 phajdan.jr Exp $
+
+  13 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  quodlibet-plugins-2.2.1.ebuild:
+  x86 stable wrt bug #321893
 
   03 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   quodlibet-plugins-2.2.1.ebuild:
