@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.40 2010/06/12 20:40:13 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.41 2010/06/13 10:08:39 spatz Exp $
+
+  13 Jun 2010; Dror Levin <spatz@gentoo.org> use.mask:
+  Remove vpx USE unmask.
 
   12 Jun 2010; Dror Levin <spatz@gentoo.org> use.mask:
   Unmask amd64/x86 only vpx for now.
