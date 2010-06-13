@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.10.ebuild,v 1.7 2010/04/05 14:56:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.10.ebuild,v 1.8 2010/06/13 12:08:27 pacho Exp $
 
 EAPI="2"
 
@@ -27,6 +27,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.35"
+
+src_prepare() {
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "sed failed"
+}
 
 src_configure() {
 	econf \
