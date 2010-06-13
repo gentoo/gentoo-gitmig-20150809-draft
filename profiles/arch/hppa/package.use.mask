@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.35 2010/04/10 15:00:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.36 2010/06/13 17:24:38 pacho Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
+# Needs sys-apps/gnome-disk-utility keyworded, bug 323803
+gnome-base/gvfs gdu
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded

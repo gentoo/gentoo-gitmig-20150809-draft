@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.64 2010/06/13 17:18:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.65 2010/06/13 17:24:38 pacho Exp $
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> ppc32/package.use.mask,
+  ppc64/package.use.mask:
+  Mask gnome-base/gvfs gdu USE flag until bug 323803 is fixed.
 
   13 Jun 2010; Pacho Ramos <pacho@gentoo.org> ppc64/package.use.mask:
   Mask gnome-base/gvfs bluetooth USE flag until bug 305913 is fixed.
