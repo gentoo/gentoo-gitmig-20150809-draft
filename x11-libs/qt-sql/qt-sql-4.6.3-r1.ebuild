@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.6.3-r1.ebuild,v 1.1 2010/06/13 09:51:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.6.3-r1.ebuild,v 1.2 2010/06/13 17:18:44 hwoarang Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -8,15 +8,15 @@ inherit qt4-build
 DESCRIPTION="The SQL module for the Qt toolkit"
 SLOT="4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE="firebird iconv mysql odbc postgres qt3support +sqlite tds"
+IUSE="firebird freetds iconv mysql odbc postgres qt3support +sqlite"
 
 DEPEND="~x11-libs/qt-core-${PV}[aqua=,debug=,qt3support=]
 	firebird? ( dev-db/firebird )
+	freetds? ( dev-db/freetds )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	postgres? ( virtual/postgresql-base )
-	sqlite? ( dev-db/sqlite:3 )
-	tds? ( dev-db/freetds )"
+	sqlite? ( dev-db/sqlite:3 )"
 RDEPEND="${DEPEND}"
 
 QT4_TARGET_DIRECTORIES="src/sql src/plugins/sqldrivers"
@@ -36,9 +36,9 @@ PATCHES=(
 )
 
 pkg_setup() {
-	if ! (use firebird || use mysql || use odbc || use postgres || use sqlite || use tds ); then
+	if ! (use firebird || use freetds || use mysql || use odbc || use postgres || use sqlite ); then
 		ewarn "You need to enable at least one SQL driver. Enable at least"
-		ewarn "one of these USE flags: \"firebird mysql odbc postgres sqlite tds\""
+		ewarn "one of these USE flags: \"firebird freetds mysql odbc postgres sqlite \""
 		die "Enable at least one SQL driver."
 	fi
 
@@ -59,7 +59,7 @@ src_configure() {
 		$(qt_use postgres sql-psql plugin) $(use postgres && echo "-I${EPREFIX}/usr/include/postgresql/pgsql ")
 		$(qt_use sqlite sql-sqlite plugin) $(use sqlite && echo '-system-sqlite')
 		$(qt_use odbc sql-odbc plugin)
-		$(qt_use tds sql-tds plugin)
+		$(qt_use freetds sql-tds plugin)
 		$(qt_use qt3support)"
 
 	myconf="${myconf} $(qt_use iconv) -no-xkb  -no-fontconfig -no-xrender -no-xrandr
