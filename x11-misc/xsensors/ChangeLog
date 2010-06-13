@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.28 2010/06/06 09:24:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.29 2010/06/13 19:07:45 ssuominen Exp $
+
+  13 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> xsensors-0.70.ebuild:
+  amd64 stable wrt #323193
 
 *xsensors-0.70 (06 Jun 2010)
 
