@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/pmsvn
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/ChangeLog,v 1.1 2010/06/13 23:34:14 hwoarang Exp $
+
+*pmsvn-1.0.2 (13 Jun 2010)
+
+  13 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +pmsvn-1.0.2.ebuild,
+  +metadata.xml:
+  Initial commit of pmsvn application. Fixes bug #321797. Thanks to Tomasz
+  Bielaszewski <tbielaszewski@power.com.pl> for the ebuild
+
