@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r2.ebuild,v 1.1 2010/06/13 01:32:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r2.ebuild,v 1.2 2010/06/13 16:10:59 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -35,13 +35,7 @@ src_prepare() {
 }
 
 src_install() {
-	# xfconf_src_install will not work here because you cannot add variables to
-	# the emake call. Yay for code duplication.
-	emake DESTDIR="${D}" DOCDIR="${D}/usr/share/doc/${PF}" install || die "emake install failed"
-
-	if [[ -n ${DOCS} ]]; then
-		dodoc ${DOCS} || die "dodoc failed"
-	fi
+	xfconf_src_install DOCDIR="${D}/usr/share/doc/${PF}"
 }
 
 pkg_postinst() {
