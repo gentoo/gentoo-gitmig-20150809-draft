@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/obby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.32 2010/05/22 10:58:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.33 2010/06/13 09:02:56 xarthisius Exp $
+
+  13 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Add dev-zero and myself as maintainers
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove humpback from metadata.xml (#34793)

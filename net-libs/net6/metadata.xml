@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-</maintainer>
-     <longdescription>Network access framework for IPv4/IPv6 written in C++ used
-	 by obby</longdescription>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>dev-zero@gentoo.org</email>
+    <name>Tiziano Müller</name>
+  </maintainer>
+  <maintainer>
+    <email>xarthisius@gentoo.org</email>
+    <name>Kacper Kowalik</name>
+  </maintainer>
+  <longdescription>
+    Network access framework for IPv4/IPv6 written in C++ used by obby
+  </longdescription>
 </pkgmetadata>

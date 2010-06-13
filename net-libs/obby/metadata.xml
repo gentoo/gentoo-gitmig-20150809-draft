@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-</maintainer>
-     <longdescription>Framework to syncronise changes within a text documents to other participants of a session</longdescription>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>dev-zero@gentoo.org</email>
+    <name>Tiziano Müller</name>
+  </maintainer>
+  <maintainer>
+    <email>xarthisius@gentoo.org</email>
+    <name>Kacper Kowalik</name>
+  </maintainer>
+  <longdescription>Framework to synchronize changes within a text documents to other participants of a session</longdescription>
 </pkgmetadata>
