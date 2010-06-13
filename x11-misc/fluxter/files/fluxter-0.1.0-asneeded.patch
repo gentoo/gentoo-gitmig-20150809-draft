@@ -1,15 +1,13 @@
-diff -ur fluxter-0.1.0.orig/Makefile.am fluxter-0.1.0/Makefile.am
---- fluxter-0.1.0.orig/Makefile.am	2002-04-14 08:50:33.000000000 +0300
-+++ fluxter-0.1.0/Makefile.am	2007-11-18 19:11:50.000000000 +0200
+--- Makefile.am
++++ Makefile.am
 @@ -17,4 +17,4 @@
  		  NETInterface.cc NETInterface.hh \
  		  blackboxstyle.hh
  EXTRA_DIST = BUGS TODO
 -fluxter_LDADD = @X_LIBS@
 +fluxter_LDADD = @LIBS@
-diff -ur fluxter-0.1.0.orig/configure.in fluxter-0.1.0/configure.in
---- fluxter-0.1.0.orig/configure.in	2002-04-14 01:03:05.000000000 +0300
-+++ fluxter-0.1.0/configure.in	2007-11-18 19:11:35.000000000 +0200
+--- configure.in
++++ configure.in
 @@ -18,14 +18,12 @@
  [
   test "$CFLAGS" = "" && CFLAGS="-g -Wall -DDEBUG"
