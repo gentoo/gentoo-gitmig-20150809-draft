@@ -1,7 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.0.4-r1.ebuild,v 1.1 2010/06/13 02:26:39 nirbheek Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.0.4-r1.ebuild,v 1.2 2010/06/13 03:05:10 darkside Exp $
+EAPI="3"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools
@@ -16,7 +16,7 @@ MY_P="${P/_rc/rc}"
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="alsa ldap crypt bindist lightning mozdom system-sqlite"
@@ -144,8 +144,10 @@ src_configure() {
 	mozconfig_use_enable ldap ldap-experimental
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --with-user-appdir=.thunderbird
-	mozconfig_annotate '' --with-system-nspr
-	mozconfig_annotate '' --with-system-nss
+	mozconfig_annotate '' --with-system-nspr --with-nspr-prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --with-system-nss --with-nss-prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --with-sqlite-prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --x-includes="${EPREFIX}"/usr/include --x-libraries="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate 'broken' --disable-crashreporter
 	mozconfig_annotate '' --enable-system-hunspell
 
@@ -204,7 +206,7 @@ src_install() {
 		emid=$(sed -n '/<em:id>/!d; s/.*\({.*}\).*/\1/; p; q' install.rdf)
 
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid}
-		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid}
+		cd "${ED}"${MOZILLA_FIVE_HOME}/extensions/${emid}
 		unzip "${S}"/mozilla/dist/xpi-stage/gdata-provider.xpi
 	fi
 
@@ -227,6 +229,6 @@ src_install() {
 
 	# Enable very specific settings for thunderbird-3
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs.js \
-		"${D}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
+		"${ED}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
 		die "failed to cp thunderbird-gentoo-default-prefs.js"
 }
