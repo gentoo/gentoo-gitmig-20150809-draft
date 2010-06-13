@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-nl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.19 2010/05/24 12:27:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.20 2010/06/13 21:33:50 angelos Exp $
+
+  13 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  myspell-nl-20090725.ebuild:
+  Stable on amd64 wrt bug #319805
 
   24 May 2010; <nixnut@gentoo.org> myspell-nl-20090725.ebuild:
   ppc stable #319805
