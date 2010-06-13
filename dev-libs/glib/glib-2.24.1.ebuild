@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.22.3.ebuild,v 1.1 2009/12/18 13:35:16 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.24.1.ebuild,v 1.1 2010/06/13 15:23:34 pacho Exp $
 
 EAPI="2"
 
@@ -46,6 +46,10 @@ src_prepare() {
 
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
+
+	# Do not try to remove files on live filesystem, bug #XXX ?
+	sed 's:^\(.*"/desktop-app-info/delete".*\):/*\1*/:' \
+		-i "${S}"/gio/tests/desktop-app-info.c || die "sed failed"
 
 	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 }
