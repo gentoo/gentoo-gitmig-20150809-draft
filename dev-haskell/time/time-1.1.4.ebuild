@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/time-1.1.4.ebuild,v 1.1 2010/02/11 21:13:14 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/time-1.1.4.ebuild,v 1.2 2010/06/13 21:57:23 kolmodin Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -17,4 +17,4 @@ IUSE=""
 DEPEND=">=dev-lang/ghc-6.6.1
 		>=dev-haskell/cabal-1.6"
 
-CABAL_CORE_LIB_GHC_PV="6.12.1"
+CABAL_CORE_LIB_GHC_PV="6.12.1 6.12.3"

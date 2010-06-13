@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/time
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.19 2010/02/11 21:13:14 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.20 2010/06/13 21:57:23 kolmodin Exp $
+
+  13 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> time-1.1.4.ebuild:
+  time 1.1.4 is a core package in ghc 6.12.3, add 6.12.3 to
+  CABAL_CORE_LIB_GHC_PV.
 
 *time-1.1.4 (26 Jan 2010)
 
