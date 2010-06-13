@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.6-r1.ebuild,v 1.6 2010/01/12 16:34:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.6-r1.ebuild,v 1.7 2010/06/13 02:29:02 nirbheek Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 DEPEND=">=x11-libs/gtk+-2.12
 	|| (
 		>=www-client/mozilla-firefox-2
-		>=mail-client/mozilla-thunderbird-2
+		>=mail-client/thunderbird-2
 		>=net-libs/xulrunner-1.8
 	)
 	ssl? ( >=net-libs/gnutls-1.2.0 )
