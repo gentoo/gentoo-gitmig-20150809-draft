@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.165 2010/04/05 14:58:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.166 2010/06/13 16:16:22 pacho Exp $
+
+*gtk-engines-2.20.1-r1 (13 Jun 2010)
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> -gtk-engines-2.18.4.ebuild,
+  +gtk-engines-2.20.1-r1.ebuild,
+  +files/gtk-engines-2.20.1-evolution-workaround.patch,
+  +files/gtk-engines-2.20.1-xfce-workaround.patch:
+  Add new version for Gnome 2.30, clean old version.
 
   05 Apr 2010; Raúl Porcel <armin76@gentoo.org> gtk-engines-2.18.5.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #308549
