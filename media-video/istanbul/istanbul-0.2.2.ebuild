@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.ebuild,v 1.6 2009/07/27 23:45:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.ebuild,v 1.7 2010/06/13 19:26:42 arfrever Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -62,11 +62,10 @@ src_configure() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
 	python_mod_optimize $(python_get_sitedir)/istanbul
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/istanbul
 }

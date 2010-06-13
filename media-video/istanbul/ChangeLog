@@ -1,6 +1,10 @@
 # ChangeLog for media-video/istanbul
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.15 2009/07/27 23:45:50 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.16 2010/06/13 19:26:42 arfrever Exp $
+
+  13 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  istanbul-0.2.1.ebuild, istanbul-0.2.2.ebuild:
+  Delete deprecation warnings.
 
   27 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org>
   +files/istanbul-0.2.2-macro-typo.patch, istanbul-0.2.2.ebuild:

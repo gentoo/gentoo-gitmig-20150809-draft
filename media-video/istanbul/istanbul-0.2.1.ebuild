@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.1.ebuild,v 1.4 2008/05/29 17:30:45 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.1.ebuild,v 1.5 2010/06/13 19:26:42 arfrever Exp $
 
 inherit eutils gnome2 python autotools
 
@@ -53,10 +53,9 @@ src_compile() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/istanbul
+	python_mod_optimize $(python_get_sitedir)/istanbul
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/istanbul
 }
