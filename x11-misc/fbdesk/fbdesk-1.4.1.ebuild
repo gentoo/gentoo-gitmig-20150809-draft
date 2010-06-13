@@ -1,26 +1,28 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.10 2010/03/11 12:24:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.11 2010/06/13 11:45:49 ssuominen Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="fluxbox-util application that creates and manage icons on your Fluxbox desktop"
-HOMEPAGE="http://www.fluxbox.org/fbdesk/"
-SRC_URI="http://www.fluxbox.org/download/${P}.tar.gz"
+HOMEPAGE="http://fluxbox.sourceforge.net/fbdesk/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ia64 ppc sparc x86"
 IUSE="debug png"
 
-RDEPEND="png? ( media-libs/libpng )
-	media-libs/imlib2
-	>=media-libs/freetype-2
+RDEPEND="x11-libs/libX11
+	x11-libs/libXext
 	x11-libs/libXpm
-	x11-libs/libXft"
+	x11-libs/libXrender
+	x11-libs/libXft
+	media-libs/imlib2[X]
+	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
-	x11-proto/xextproto"
+	x11-proto/xproto"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc-4.3.patch \
