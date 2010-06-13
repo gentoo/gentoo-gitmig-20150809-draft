@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.378 2010/06/12 19:58:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.379 2010/06/13 02:12:28 reavertm Exp $
+
+  13 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  amarok-2.3.1-r1.ebuild:
+  Amarok utils require Qt4, drop implicit Qt dep caused by OPENGL_REQUIRED
+  and replace it by explicit dependency, nepomuk is pulled by
+  kdelibs[semantic-desktop] already
 
   12 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   amarok-2.3.1-r1.ebuild:
