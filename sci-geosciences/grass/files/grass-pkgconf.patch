@@ -1,6 +1,6 @@
---- grass.pc.in.old	2010-05-04 11:38:58.000000000 +0200
-+++ grass.pc.in	2010-05-04 11:40:11.000000000 +0200
-@@ -1,12 +1,12 @@
+--- grass.pc.in.old	2010-06-13 10:53:46.747474687 +0200
++++ grass.pc.in	2010-06-13 10:54:45.957349463 +0200
+@@ -1,12 +1,13 @@
  # Package Information for pkg-config
  
 -prefix=@prefix@/grass-@GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@
@@ -11,6 +11,7 @@
 +exec_prefix=@prefix@
 +libdir=@libdir@
 +includedir=@includedir@
++grassdir=@libdir@/grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@
  
  Name: GRASS
  Description: GRASS GIS
