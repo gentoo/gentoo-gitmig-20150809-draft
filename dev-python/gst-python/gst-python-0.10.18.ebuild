@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.18.ebuild,v 1.1 2010/06/10 06:05:45 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.18.ebuild,v 1.2 2010/06/13 18:22:31 ford_prefect Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -42,18 +42,7 @@ src_install() {
 		dodoc examples/*
 	fi
 
-	local LA_RM="
-		/usr/$(get_libdir)/python2.6/site-packages/gst-0.10/gst/interfaces.la
-		/usr/$(get_libdir)/python2.6/site-packages/gst-0.10/gst/audio.la
-		/usr/$(get_libdir)/python2.6/site-packages/gst-0.10/gst/_gst.la
-		/usr/$(get_libdir)/python2.6/site-packages/gst-0.10/gst/video.la
-		/usr/$(get_libdir)/python2.6/site-packages/gst-0.10/gst/tag.la
-		/usr/$(get_libdir)/python2.6/site-packages/gst-0.10/gst/pbutils.la
-		/usr/$(get_libdir)/python2.6/site-packages/gstoption.la"
-
-	for i in ${LA_RM}; do
-		rm "${D}${i}"
-	done
+	python_clean_installation_image
 }
 
 src_test() {
@@ -63,11 +52,9 @@ src_test() {
 
 pkg_postinst() {
 	python_need_rebuild
-	python_mod_optimize pygst.py
-	python_mod_optimize gst-0.10
+	python_mod_optimize pygst.py gst-0.10
 }
 
 pkg_postrm() {
-	python_mod_cleanup pygst.py
-	python_mod_cleanup gst-0.10
+	python_mod_cleanup pygst.py gst-0.10
 }
