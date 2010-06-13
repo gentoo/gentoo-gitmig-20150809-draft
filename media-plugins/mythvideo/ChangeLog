@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.86 2010/06/10 14:53:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.87 2010/06/13 07:31:21 cardoe Exp $
+
+  13 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythvideo-0.22_p23469.ebuild, mythvideo-0.23_p25065.ebuild:
+  Add a missing depend
 
 *mythvideo-0.23_p25065 (10 Jun 2010)
 
