@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5653 2010/06/13 10:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5654 2010/06/13 16:27:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1927,9 +1927,6 @@ media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler file
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/qtscrobbler:cli - Build commandline client
-media-sound/quodlibet:trayicon - Enable support for trayicon
-media-sound/quodlibet:tta - Enable TTA (True-Audio Loseless) support
-media-sound/quodlibet:wma - Enable support for Windows Media Audio
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:brasero - Enable CD burning via app-cdr/brasero rather than gnome-extra/nautilus-cd-burner
@@ -3623,6 +3620,7 @@ x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage.
 x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/gtkdatabox:glade - Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget
 x11-libs/gtkmathview:t1lib - Enable media-libs/t1lib support
+x11-libs/gtksourceview:glade - Install a glade catalog file
 x11-libs/libSM:uuid - Use UUID for session identification instead of IP address and system time. 
 x11-libs/libfm:demo - Build demo
 x11-libs/libmatchbox:pango - Enable x11-libs/pango support
