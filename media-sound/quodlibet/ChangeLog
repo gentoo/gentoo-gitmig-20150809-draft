@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.76 2010/06/03 09:36:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.77 2010/06/13 16:06:23 phajdan.jr Exp $
+
+  13 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  quodlibet-2.2.1.ebuild:
+  x86 stable wrt bug #321893
 
   03 Jun 2010; Markos Chandras <hwoarang@gentoo.org> quodlibet-2.2.1.ebuild:
   Stable on amd64 wrt bug #321893
