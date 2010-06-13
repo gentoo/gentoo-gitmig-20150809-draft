@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11632 2010/06/13 11:09:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11633 2010/06/13 15:14:04 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (13 Jun 2010)
+# Masked for QA, bugs 252122, 297956 and 297958.
+#
+# Replaced by oroborus-desklaunch, oroborus-deskmenu and oroborus-keylaunch.
+#
+# Removal in 30 days.
+x11-wm/oroborus-extras
 
 # Markos Chandras <hwoarang@gentoo.org> (13 Jun 2010)
 # Masking lessfs beta releases
