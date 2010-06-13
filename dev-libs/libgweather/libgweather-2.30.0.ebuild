@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.0.ebuild,v 1.1 2010/06/13 17:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.0.ebuild,v 1.2 2010/06/13 22:25:46 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -52,7 +52,7 @@ src_prepare() {
 			-i gtk-doc.make || die "sed 2 failed"
 	fi
 	# Fix building -python, Gnome bug #596660.
-	epatch "${FILESDIR}/${PN}-fix-automagic-python-support.patch"
+	epatch "${FILESDIR}/${PN}-2.30.0-fix-automagic-python-support.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
