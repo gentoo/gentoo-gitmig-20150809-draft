@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.457 2010/06/04 19:45:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.458 2010/06/13 15:43:44 pacho Exp $
+
+*gtk+-2.20.1-r1 (13 Jun 2010)
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> +gtk+-2.20.1-r1.ebuild:
+  Add new version for Gnome 2.30.
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> gtk+-2.18.9.ebuild:
   x86 stable, bug #314899
