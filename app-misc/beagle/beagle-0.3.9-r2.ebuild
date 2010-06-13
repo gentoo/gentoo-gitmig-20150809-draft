@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r2.ebuild,v 1.7 2010/05/16 17:45:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r2.ebuild,v 1.8 2010/06/13 02:30:43 nirbheek Exp $
 
 EAPI=2
 
@@ -56,7 +56,7 @@ RDEPEND="!!sci-libs/beagle
 	galago? ( >=dev-dotnet/galago-sharp-0.5.0 )
 	thunderbird? (
 			|| (
-				>=mail-client/mozilla-thunderbird-1.5
+				>=mail-client/thunderbird-1.5
 				>=mail-client/thunderbird-bin-1.5
 			)
 	)
@@ -156,10 +156,10 @@ src_install() {
 		|| die "Unable to find Beagle Thunderbird Extension"
 		mv "${WORKDIR}"/beagle "${WORKDIR}"/thunderbird-beagle
 
-		if has_version '>=mail-client/mozilla-thunderbird-1.5'; then
+		if has_version '>=mail-client/thunderbird-1.5'; then
 			MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-thunderbird"
 			xpi_install "${WORKDIR}"/thunderbird-beagle \
-			|| die "xpi install for mozilla-thunderbird failed!"
+			|| die "xpi install for thunderbird failed!"
 		fi
 		if has_version '>=mail-client/thunderbird-bin-1.5'; then
 			MOZILLA_FIVE_HOME="/opt/thunderbird"

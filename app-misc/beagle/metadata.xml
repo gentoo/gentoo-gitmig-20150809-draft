@@ -24,7 +24,7 @@
 			websites you visit.</flag>
 		<flag name='firefox'>Compiles and installs the extension for either
 			<pkg>www-client/mozilla-firefox</pkg> or
-			<pkg>www-client/mozilla-firefox-bin</pkg>. This extension helps
+			<pkg>www-client/firefox-bin</pkg>. This extension helps
 			Beagle index the websites you visit.</flag>
 		<flag name='galago'>Allows Beagle to get status information from
 			applications such as Pidgin to show in the search results.</flag>
@@ -40,8 +40,8 @@
 			<pkg>app-office/gnumeric</pkg>(ssindex). These allow Beagle to index 
 			MS Powerpoint, Word, and Spreadsheet Documents.</flag>
 		<flag name='thunderbird'>Compiles and installs the extension for either
-			<pkg>mail-client/mozilla-thunderbird</pkg> or
-			<pkg>mail-client/mozilla-thunderbird-bin</pkg>. This extension helps
+			<pkg>mail-client/thunderbird</pkg> or
+			<pkg>mail-client/thunderbird-bin</pkg>. This extension helps
 			Beagle index your mails.</flag>
 		<flag name='xscreensaver'>Allow Beagle to detect when the screensaver is
 			switched on. This allows Beagle to use more resources and index faster

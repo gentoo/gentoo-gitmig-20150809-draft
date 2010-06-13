@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.108 2010/05/16 17:45:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.109 2010/06/13 02:30:43 nirbheek Exp $
+
+  13 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  beagle-0.3.9-r1.ebuild, beagle-0.3.9-r2.ebuild, metadata.xml:
+  pkgmove from mozilla-thunderbird -> thunderbird. Also update metadata.xml
+  for this and previous pkgmoves (fx-bin, tbd-bin)
 
   16 May 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   beagle-0.3.9-r1.ebuild, beagle-0.3.9-r2.ebuild:
