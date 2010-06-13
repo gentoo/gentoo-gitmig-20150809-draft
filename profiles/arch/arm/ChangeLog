@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.79 2010/06/06 13:53:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.80 2010/06/13 17:16:49 pacho Exp $
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> package.use.mask:
+  Mask gnome-base/gvfs bluetooth USE flag until bug 305913 is fixed.
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask tokyocabinet
