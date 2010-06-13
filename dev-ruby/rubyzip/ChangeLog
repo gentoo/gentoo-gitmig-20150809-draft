@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.12 2010/05/26 10:36:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.13 2010/06/13 14:18:58 phajdan.jr Exp $
+
+  13 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> rubyzip-0.9.4.ebuild:
+  x86 stable wrt bug #321101
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org> rubyzip-0.9.4.ebuild:
   stable amd64, bug 321101
