@@ -1,11 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/kmid-2.3.1.ebuild,v 1.1 2010/06/13 10:10:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/kmid-2.3.1.ebuild,v 1.2 2010/06/13 10:22:27 ssuominen Exp $
 
 EAPI=2
-# fix linguas.desc, sr@ijekavianlatin sr@ijekavian
-KDE_LINGUAS="ca ca@valencia cs da de en_GB es fr gl nb nl pt_BR pt sr@Latn sr
-sv uk zh_CN"
+KDE_LINGUAS="ca ca@valencia cs da de en_GB es fr gl nb nl pt_BR pt
+sr@ijekavianlatin sr@ijekavian sr@Latn sr sv uk zh_CN"
 inherit kde4-base
 
 DESCRIPTION="a MIDI/Karaoke player for KDE"
