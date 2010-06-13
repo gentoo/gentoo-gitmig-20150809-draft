@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.26.1.ebuild,v 1.1 2009/11/21 09:35:37 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.0.ebuild,v 1.1 2010/06/13 15:30:04 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
 
-inherit autotools eutils gnome2 multilib
+inherit autotools eutils gnome2 multilib toolchain-funcs
 
 DESCRIPTION="Internationalized text layout and rendering library"
 HOMEPAGE="http://www.pango.org/"
@@ -43,6 +43,7 @@ function multilib_enabled() {
 }
 
 pkg_setup() {
+	tc-export CXX
 	# XXX: DO NOT add introspection support, collides with gir-repository[pango]
 	G2CONF="${G2CONF}
 		--disable-introspection
@@ -58,14 +59,6 @@ src_prepare() {
 	if multilib_enabled ; then
 		epatch "${FILESDIR}/${PN}-1.26.0-lib64.patch"
 	fi
-
-	# gtk-doc checks do not pass, upstream bug #578944
-	sed -e 's:TESTS = check.docs: TESTS = :g' \
-		-i docs/Makefile.am || die "sed failed"
-
-	# Fix introspection automagic.
-	# https://bugzilla.gnome.org/show_bug.cgi?id=596506
-	epatch "${FILESDIR}/${PN}-1.26.0-introspection-automagic.patch"
 
 	eautoreconf
 }
