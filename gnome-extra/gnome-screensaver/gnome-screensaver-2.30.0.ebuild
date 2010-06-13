@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.28.0-r1.ebuild,v 1.2 2010/01/24 22:56:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.0.ebuild,v 1.1 2010/06/13 19:51:37 pacho Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="branding debug doc libnotify opengl pam $KERNEL_IUSE"
 
 RDEPEND=">=gnome-base/gconf-2.6.1
 	>=x11-libs/gtk+-2.14.0
-	>=gnome-base/gnome-desktop-2.23.2
+	>=gnome-base/gnome-desktop-2.29.0
 	>=gnome-base/gnome-menus-2.12
 	>=dev-libs/glib-2.15
 	>=gnome-base/libgnomekbd-0.1
@@ -64,9 +64,6 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# Fix screensaver not locking due inhibitors, upstream bug #600488
-	epatch "${FILESDIR}/${PN}-2.26.1-remove-inhibitors.patch"
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
