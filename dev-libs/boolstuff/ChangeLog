@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boolstuff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boolstuff/ChangeLog,v 1.7 2010/06/09 07:10:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boolstuff/ChangeLog,v 1.8 2010/06/13 14:47:13 phajdan.jr Exp $
+
+  13 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  boolstuff-0.1.13.ebuild:
+  x86 stable wrt bug #321887
 
   09 Jun 2010; Christoph Mende <angelos@gentoo.org> boolstuff-0.1.13.ebuild:
   Stable on amd64 wrt bug #321887
