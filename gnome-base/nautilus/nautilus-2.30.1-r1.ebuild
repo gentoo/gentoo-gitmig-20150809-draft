@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.28.2.ebuild,v 1.1 2009/12/13 22:32:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.30.1-r1.ebuild,v 1.1 2010/06/13 17:44:02 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -12,26 +12,20 @@ HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="beagle doc gnome tracker xmp"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
+IUSE="doc gnome xmp"
 
-# not adding gnome-base/gail because it is in >=gtk+-2.13
-RDEPEND=">=dev-libs/glib-2.21.3
-	>=gnome-base/gnome-desktop-2.25.5
+RDEPEND=">=dev-libs/glib-2.24.0
+	>=gnome-base/gnome-desktop-2.29.91
 	>=x11-libs/pango-1.1.2
-	>=x11-libs/gtk+-2.16.0
+	>=x11-libs/gtk+-2.20.0
 	>=dev-libs/libxml2-2.4.7
 	>=media-libs/libexif-0.5.12
 	>=gnome-base/gconf-2.0
-	>=gnome-base/gvfs-0.1.2
 	dev-libs/libunique
 	dev-libs/dbus-glib
 	x11-libs/libXft
 	x11-libs/libXrender
-	beagle? ( || (
-		dev-libs/libbeagle
-		=app-misc/beagle-0.2* ) )
-	tracker? ( >=app-misc/tracker-0.7 )
 	xmp? ( >=media-libs/exempi-2 )"
 
 DEPEND="${RDEPEND}
@@ -44,7 +38,8 @@ DEPEND="${RDEPEND}
 #	gnome-base/gnome-common
 #	dev-util/gtk-doc-am"
 
-PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )"
+PDEPEND="gnome? ( >=x11-themes/gnome-icon-theme-1.1.91 )
+	>=gnome-base/gvfs-0.1.2"
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README THANKS TODO"
 
@@ -52,8 +47,6 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-update-mimedb
 		--disable-packagekit
-		$(use_enable beagle)
-		$(use_enable tracker)
 		$(use_enable xmp)"
 }
 
@@ -69,16 +62,15 @@ src_prepare() {
 			-i gtk-doc.make || die "sed 2 failed"
 	fi
 
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-		|| die "sed 3 failed"
-
 	# Remove crazy CFLAGS
 	sed 's:-DG.*DISABLE_DEPRECATED::g' -i configure.in configure \
 		|| die "sed 4 failed"
 
 	# Fix nautilus flipping-out with --no-desktop -- bug 266398
 	epatch "${FILESDIR}/${PN}-2.27.4-change-reg-desktop-file-with-no-desktop.patch"
+
+	# Do not show Unmount when showing Eject/Safe removal
+	epatch "${FILESDIR}/${P}-unmount-entries.patch"
 }
 
 src_test() {
