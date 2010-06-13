@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.28.1.ebuild,v 1.4 2010/01/19 17:22:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.30.1.ebuild,v 1.1 2010/06/13 15:48:57 pacho Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="2.4"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 # Do NOT build with --disable-debug/--enable-debug=no - gnome2.eclass takes care of that
 IUSE="debug doc gnome ssl"
 
@@ -42,12 +42,12 @@ src_prepare() {
 
 	# Fix test to follow POSIX (for x86-fbsd)
 	# No patch to prevent having to eautoreconf
-	sed -e 's/\(test.*\)==/\1=/g' -i configure.in configure || die "sed failed"
+	sed -e 's/\(test.*\)==/\1=/g' -i configure.ac configure || die "sed failed"
 
 	# Patch *must* be applied conditionally (see patch for details)
 	if use doc; then
 		# Fix bug 268592 (build fails !gnome && doc)
-		epatch "${FILESDIR}/${PN}-2.26.3-fix-build-without-gnome-with-doc.patch"
-		eautoreconf
+		epatch "${FILESDIR}/${PN}-fix-build-without-gnome-with-doc.patch"
 	fi
+	eautoreconf
 }
