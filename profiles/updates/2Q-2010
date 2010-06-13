@@ -17,3 +17,4 @@ move app-mobilephone/openmoko-dfu-util app-mobilephone/dfu-util
 move media-gfx/qtpfsgui media-gfx/luminance-hdr
 move dev-util/cola dev-vcs/cola
 move dev-cpp/Ice dev-libs/Ice
+move mail-client/mozilla-thunderbird mail-client/thunderbird
