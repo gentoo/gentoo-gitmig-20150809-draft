@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/canny
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.8 2009/03/02 09:02:33 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.9 2010/06/13 07:21:12 graaff Exp $
+
+*canny-0.1.0-r1 (13 Jun 2010)
+
+  13 Jun 2010; Hans de Graaff <graaff@gentoo.org> +canny-0.1.0-r1.ebuild:
+  Convert to ruby-ng.
 
   02 Mar 2009; Alex Legler <a3li@gentoo.org> canny-0.1.0.ebuild:
   Replace USE_RUBY="any" with explicit version. Not Ruby 1.9 compatible.
