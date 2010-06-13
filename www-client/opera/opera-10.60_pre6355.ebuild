@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.60_pre6355.ebuild,v 1.1 2010/06/13 06:03:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.60_pre6355.ebuild,v 1.2 2010/06/13 16:53:18 jer Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ for MY_LINGUA in ${MY_LINGUAS}; do
 	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
 done
 
-O_U="http://snapshot.opera.com/unix/18583_${PV/_pre/-}/"
+O_U="http://snapshot.opera.com/unix/24911_${PV/_pre/-}/"
 O_P="${P/_pre/-}"
 
 SRC_URI="
