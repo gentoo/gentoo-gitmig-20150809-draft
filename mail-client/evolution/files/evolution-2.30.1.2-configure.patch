@@ -1,0 +1,19 @@
+--- configure.ac~	2010-04-27 14:14:22.000000000 +0200
++++ configure.ac	2010-06-12 22:24:39.000000000 +0200
+@@ -47,7 +47,6 @@
+ m4_define([libxml_minimum_version], [2.7.3])
+ m4_define([shared_mime_info_minimum_version], [0.22])
+ m4_define([libpst_minimum_version], [0.6.41])
+-m4_define([unique_minimum_version], [1.1.2])
+ m4_define([dbus_glib_minimum_version], [0.74])
+ 
+ dnl Optional Packages
+@@ -224,7 +223,7 @@
+ 	 libxml-2.0 >= libxml_minimum_version
+ 	 shared-mime-info >= shared_mime_info_minimum_version
+ 	 gnome-desktop-2.0 >= gnome_desktop_minimum_version
+-	 unique-1.0 >= unique_minimum_version])
++	 unique-1.0 ])
+ AC_SUBST(GNOME_PLATFORM_CFLAGS)
+ AC_SUBST(GNOME_PLATFORM_LIBS)
+ 
