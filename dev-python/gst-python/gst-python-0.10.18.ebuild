@@ -1,10 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.18.ebuild,v 1.2 2010/06/13 18:22:31 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.18.ebuild,v 1.3 2010/06/13 18:37:37 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
-inherit autotools eutils multilib python
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
+inherit autotools eutils python
 
 DESCRIPTION="A Python Interface to GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org"
@@ -31,10 +34,11 @@ src_prepare() {
 	rm -f py-compile ltmain.sh common/m4/{libtool,lt*}.m4 || die "rm -f failed"
 	ln -s $(type -P true) py-compile
 	AT_M4DIR="common/m4" eautoreconf
+	python_src_prepare
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	python_src_install
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use examples; then
@@ -46,12 +50,10 @@ src_install() {
 }
 
 src_test() {
-	export LC_ALL="C"
-	emake check || die "make check failed"
+	LC_ALL="C" python_src_test
 }
 
 pkg_postinst() {
-	python_need_rebuild
 	python_mod_optimize pygst.py gst-0.10
 }
 
