@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythnetvision
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnetvision/ChangeLog,v 1.1 2010/06/13 07:06:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnetvision/ChangeLog,v 1.2 2010/06/13 07:27:48 cardoe Exp $
+
+  13 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythnetvision-0.23_p25065.ebuild:
+  Populate depends and setting the proper permissions on the scripts being
+  installed
 
 *mythnetvision-0.23_p25065 (13 Jun 2010)
 
