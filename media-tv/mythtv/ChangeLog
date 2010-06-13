@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.320 2010/06/13 06:56:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.321 2010/06/13 07:09:23 cardoe Exp $
+
+*mythtv-0.23_p25073 (13 Jun 2010)
+
+  13 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-0.23_alpha22834.ebuild, -mythtv-0.23_alpha22857.ebuild,
+  +mythtv-0.23_p25073.ebuild:
+  Bump for latest upstream fixes (all fixes in video playback). Remove old
+  0.23 trunk builds
 
   13 Jun 2010; Doug Goldstein <cardoe@gentoo.org> mythtv-0.23_p25051.ebuild:
   Update blockers to include discontinued MythFlix and MythTV Extra Themes

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23_alpha22857.ebuild,v 1.4 2010/03/23 03:43:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23_p25073.ebuild,v 1.1 2010/06/13 07:09:23 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -10,11 +10,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
-IUSE="alsa altivec autostart +css debug directv dvb faad \
+IUSE="alsa altivec autostart +css dbus debug directv dvb faad \
 fftw ieee1394 jack lcd lirc mmx perl pulseaudio python \
 tiff vdpau xvmc ${IUSE_VIDEO_CARDS}"
 
-RDEPEND=">=media-libs/freetype-2.0
+# fonts from bug #296222
+RDEPEND="media-fonts/corefonts
+	media-fonts/dejavu
+	>=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
 	x11-libs/libX11
 	x11-libs/libXext
@@ -23,10 +26,10 @@ RDEPEND=">=media-libs/freetype-2.0
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
 	>=x11-libs/qt-core-4.4:4[qt3support]
-	>=x11-libs/qt-gui-4.4:4[qt3support,tiff?]
+	>=x11-libs/qt-gui-4.4:4[dbus?,qt3support,tiff?]
 	>=x11-libs/qt-sql-4.4:4[qt3support,mysql]
 	>=x11-libs/qt-opengl-4.4:4[qt3support]
-	>=x11-libs/qt-webkit-4.4:4
+	>=x11-libs/qt-webkit-4.4:4[dbus?]
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
@@ -36,6 +39,7 @@ RDEPEND=">=media-libs/freetype-2.0
 				x11-wm/evilwm
 				x11-apps/xset )
 	css? ( media-libs/libdvdcss )
+	dbus? ( >=x11-libs/qt-dbus-4.4:4 )
 	directv? ( virtual/perl-Time-HiRes )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
 	faad? ( media-libs/faad2 )
@@ -53,12 +57,14 @@ RDEPEND=">=media-libs/freetype-2.0
 	xvmc? ( x11-libs/libXvMC )"
 
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	x11-proto/xineramaproto
 	x11-proto/xf86vidmodeproto
 	x11-apps/xinit
 	!<media-plugins/mythcontrols-0.22
 	!<x11-themes/mythtv-themes-0.22
-	!<x11-themes/mythtv-themes-extra-0.22"
+	!<x11-themes/mythtv-themes-extra-0.23
+	!<media-plugins/mythflix-0.23"
 
 MYTHTV_GROUPS="video,audio,tty,uucp"
 
@@ -89,9 +95,6 @@ src_prepare() {
 		-i "${S}"/bindings/perl/perl.pro
 
 	epatch "${FILESDIR}/${PN}-0.21-ldconfig-sanxbox-fix.patch"
-
-	# fix for bug #292421 & #279944
-	epatch "${FILESDIR}/${PN}-0.22-x86-no-fpic.patch"
 }
 
 src_configure() {
@@ -105,10 +108,10 @@ src_configure() {
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use vdpau && myconf="${myconf} --enable-vdpau"
 
-	#from bug #220857 and fixed for bug #292481
+	#from bug #220857 and fixed for bug #292481, and bug #299063
 	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmcw"
 	if use video_cards_via && use xvmc; then
-		myconf="${myconf} --enable-xvmc-vld";
+		myconf="${myconf} --enable-xvmc-vld --enable-xvmc-pro";
 	else
 		myconf="${myconf} --disable-xvmc-vld";
 	fi
@@ -225,7 +228,7 @@ src_install() {
 	fowners -R mythtv "${D}"/var/log/mythtv
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/mythtv.logrotate.d mythtv
+	newins "${FILESDIR}"/mythtv.logrotate.d-r1 mythtv
 
 	insinto /usr/share/mythtv/contrib
 	doins -r contrib/*
