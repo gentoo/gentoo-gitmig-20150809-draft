@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/mythtv-themes-extra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.23 2010/06/10 03:45:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/ChangeLog,v 1.24 2010/06/13 06:57:44 cardoe Exp $
+
+  13 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  -mythtv-themes-extra-0.23.ebuild:
+  drop the unnecessary dummy script for installs since we now have a valid
+  blocker
 
 *mythtv-themes-extra-0.23 (10 Jun 2010)
 
