@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.1.0_pre8.ebuild,v 1.1 2010/06/13 17:27:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.1.0_pre8.ebuild,v 1.2 2010/06/13 17:31:24 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -36,7 +36,7 @@ src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" INSTALL_STRIP="" install || die
 	dodoc ChangeLog README TODO || die
 
