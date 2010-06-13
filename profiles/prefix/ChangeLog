@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.181 2010/06/09 13:42:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.182 2010/06/13 12:58:14 grobian Exp $
+
+  13 Jun 2010; Fabian Groffen <grobian@gentoo.org> mint/package.use.mask:
+  Add mask for dev-db/sqlite threadsafe, bug #323771
 
   09 Jun 2010; Jeremy Olexa <darkside@gentoo.org> linux/package.mask:
   Revert global ghostscript-gpl mask because it appears to work fine on
