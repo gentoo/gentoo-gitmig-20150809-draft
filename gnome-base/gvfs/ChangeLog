@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.101 2010/06/04 21:14:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.102 2010/06/13 17:25:24 pacho Exp $
+
+*gvfs-1.6.2 (13 Jun 2010)
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> +gvfs-1.6.2.ebuild,
+  +files/gvfs-1.6.2-afc-depend.patch, +files/gvfs-1.6.2-afc-semicolon.patch:
+  Add new version for Gnome 2.30.
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> gvfs-1.4.3-r1.ebuild:
   x86 stable, bug #314899
