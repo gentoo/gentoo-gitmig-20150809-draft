@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.241 2010/05/31 19:26:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.242 2010/06/13 21:09:33 pacho Exp $
+
+*epiphany-2.30.2 (13 Jun 2010)
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> -epiphany-2.26.3-r1.ebuild,
+  -epiphany-2.26.3-r2.ebuild, -epiphany-2.26.3-r3.ebuild,
+  +epiphany-2.30.2.ebuild:
+  Add new version for Gnome 2.30.
 
   31 May 2010; Joseph Jezak <josejx@gentoo.org> epiphany-2.26.3-r4.ebuild:
   Marked ppc/ppc64 stable for bug #314025.
