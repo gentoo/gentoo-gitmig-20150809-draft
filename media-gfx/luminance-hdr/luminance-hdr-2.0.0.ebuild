@@ -1,15 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.0.0.ebuild,v 1.1 2010/06/05 20:15:14 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.0.0.ebuild,v 1.2 2010/06/13 17:06:24 maekke Exp $
 
 EAPI="2"
 
 LANGS="cs de es fr hu id it pl ru tr"
-inherit eutils qt4-r2
+inherit qt4-r2
 
 OLD_PN="qtpfsgui"
 
-DESCRIPTION="Qtpfsgui is a graphical user interface that provides a workflow for HDR imaging."
+DESCRIPTION="Luminance HDR is a graphical user interface that provides a workflow for HDR imaging."
 HOMEPAGE="http://qtpfsgui.sourceforge.net"
 SRC_URI="mirror://sourceforge/${OLD_PN}/${PN}_${PV}.tar.gz"
 
@@ -40,6 +40,9 @@ S="${WORKDIR}/${PN}_${PV}"
 src_prepare() {
 	qt4-r2_src_prepare
 
+	# no insane CXXFLAGS
+	sed -i -e '/QMAKE_CXXFLAGS/d' project.pro || die
+
 	if ! use openmp ; then
 		sed -i -e '/QMAKE_LFLAGS/d' project.pro || die
 	fi
@@ -56,6 +59,6 @@ src_install() {
 	qt4-r2_src_install
 
 	for lang in ${LANGS} ; do
-		use linguas_${lang} || rm "${D}"/usr/share/${PN}/i18n/lang_${lang}.qm
+		use linguas_${lang} || rm "${D}"/usr/share/luminance/i18n/lang_${lang}.qm
 	done
 }
