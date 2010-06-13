@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.25 2010/06/06 17:57:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.26 2010/06/13 20:55:35 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
+# Needs gnome-extra/nautilus-sendto, wait for bug 323851
+net-im/empathy nautilus
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (06 Jun 2010)
 # Requires support for semantic-desktop
