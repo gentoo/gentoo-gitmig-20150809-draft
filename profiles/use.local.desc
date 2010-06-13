@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5650 2010/06/12 22:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5651 2010/06/13 02:42:03 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1462,10 +1462,6 @@ mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mail-notification:mh - Enable MH mailbox checking
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
-mail-client/mozilla-thunderbird:custom-optimization - Enable user CFLAGS
-mail-client/mozilla-thunderbird:lightning - Enable calendar support
-mail-client/mozilla-thunderbird:mozdom - Enable Mozilla's DOM inspector
-mail-client/mozilla-thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 mail-client/mutt:gpg - Enable support for app-crypt/gpgme
 mail-client/mutt:pop - Enable support for pop
 mail-client/mutt:sidebar - Use the vanilla tree + sidebar patch
@@ -1476,6 +1472,10 @@ mail-client/nail:net - Enable network support (thus enabling POP, IMAP and SMTP)
 mail-client/pine:largeterminal - Add support for large terminals by doubling the size of pine's internal display buffer
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 mail-client/squirrelmail:filter - Enable mail-filter/amavisd-new filtering
+mail-client/thunderbird:custom-optimization - Enable user CFLAGS
+mail-client/thunderbird:lightning - Enable calendar support
+mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
+mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 mail-filter/MailScanner:exim - Set mail-mta to used MTA
 mail-filter/MailScanner:postfix - Set mail-mta/postfix to used MTA
 mail-filter/MailScanner:spamassassin - Enable usage of mail-filter/spamassassin for spam protection
