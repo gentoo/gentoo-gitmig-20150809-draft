@@ -1,17 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.28.1.ebuild,v 1.2 2009/10/30 00:34:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.30.1-r1.ebuild,v 1.1 2010/06/13 18:43:22 pacho Exp $
 
 EAPI="2"
 
-inherit gnome2 pam virtualx
+inherit eutils gnome2 pam virtualx autotools
 
 DESCRIPTION="Password and keyring managing daemon"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug doc pam test"
 # USE=valgrind is probably not a good idea for the tree
 
@@ -28,8 +28,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1.9 )"
+PDEPEND="gnome-base/libgnome-keyring"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO keyring-intro.txt"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
@@ -46,9 +47,26 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
+	# Add dbus activation service file for org.freedesktop.secrets, bgo#611002
+	epatch "${FILESDIR}/${P}-dbus-activation.patch"
+
+	# Make sure the service files are created correctly
+	epatch "${FILESDIR}/${P}-service-creation.patch"
+
+	# Fix checking of uninitialized value in prompting code, bgo#616071
+	epatch "${FILESDIR}/${P}-uninitialized-value.patch"
+
+	# Fix broken startup when used with gdm and password-less login, bgo#611002
+	epatch "${FILESDIR}/${P}-password-less-login.patch"
+
 	# Remove silly CFLAGS
 	sed 's:CFLAGS="$CFLAGS -Werror:CFLAGS="$CFLAGS:' \
 		-i configure.in configure || die "sed failed"
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "sed failed"
+	eautoreconf
 }
 
 src_test() {
