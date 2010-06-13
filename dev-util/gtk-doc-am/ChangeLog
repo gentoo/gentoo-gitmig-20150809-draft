@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.35 2010/06/04 19:40:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.36 2010/06/13 15:53:36 pacho Exp $
+
+*gtk-doc-am-1.15 (13 Jun 2010)
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> +gtk-doc-am-1.15.ebuild:
+  Add new version for Gnome 2.30.
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> gtk-doc-am-1.13.ebuild:
   x86 stable, bug #314899
