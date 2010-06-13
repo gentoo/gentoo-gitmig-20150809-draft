@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.24 2010/06/13 15:47:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.25 2010/06/13 18:50:57 pacho Exp $
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  +files/libsoup-gnome-system-lib.patch:
+  Really adding needed patches, thanks Kaleb Elwert and Lars Wendler for
+  reporting.
 
 *libsoup-gnome-2.30.1 (13 Jun 2010)
 
