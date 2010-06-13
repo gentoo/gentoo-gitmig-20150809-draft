@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.184 2010/06/13 00:40:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.185 2010/06/13 02:27:59 nirbheek Exp $
+
+  13 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  enigmail-1.0.1-r3.ebuild:
+  pkgmove from mozilla-thunderbird -> thunderbird
 
   13 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   -files/0.95.0-replytolist.patch, -enigmail-0.94.4.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.9.ebuild,v 1.1 2008/11/20 20:54:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.9.ebuild,v 1.2 2010/06/13 02:28:35 nirbheek Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -19,7 +19,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
 RESTRICT="test"
 
-RDEPEND=">=mail-client/mozilla-thunderbird-2.0_alpha1
+RDEPEND=">=mail-client/thunderbird-2.0_alpha1
 	>=www-client/mozilla-launcher-1.56"
 
 S="${WORKDIR}/mozilla"

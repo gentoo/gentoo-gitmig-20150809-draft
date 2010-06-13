@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/replytolist/replytolist-0.3.0.ebuild,v 1.2 2010/01/07 15:58:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/replytolist/replytolist-0.3.0.ebuild,v 1.3 2010/06/13 02:29:00 nirbheek Exp $
 
 inherit mozextension multilib
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-RDEPEND=">=mail-client/mozilla-thunderbird-2.0_alpha1"
+RDEPEND=">=mail-client/thunderbird-2.0_alpha1"
 DEPEND="${RDEPEND}"
 
 #S="${WORKDIR}"
