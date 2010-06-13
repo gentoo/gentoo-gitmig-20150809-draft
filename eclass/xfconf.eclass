@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.15 2010/03/30 12:10:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.16 2010/06/13 16:10:21 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -133,7 +133,7 @@ xfconf_src_compile() {
 # Run emake install and install documentation in DOCS variable
 xfconf_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" "$@" install || die "emake install failed"
 
 	if [[ -n ${DOCS} ]]; then
 		dodoc ${DOCS} || die "dodoc failed"
