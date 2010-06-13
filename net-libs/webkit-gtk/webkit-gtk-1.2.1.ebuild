@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.1.ebuild,v 1.1 2010/06/13 21:00:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.1.ebuild,v 1.2 2010/06/13 21:52:47 pacho Exp $
 
 EAPI="2"
 
@@ -56,7 +56,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# Build failure with icu-4.4, bug 308699
-	epatch "${FILESDIR}"/webkit-icu-4.4.patch
+	epatch "${FILESDIR}"/files/${PN}-1.2.1-icu-4.4.patch
 
 	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
 	# https://bugs.webkit.org/show_bug.cgi?id=19775

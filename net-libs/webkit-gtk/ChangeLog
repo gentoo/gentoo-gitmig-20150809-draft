@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.72 2010/06/13 21:00:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.73 2010/06/13 21:52:47 pacho Exp $
+
+  13 Jun 2010; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.2.1.ebuild,
+  +files/webkit-gtk-1.2.1-icu-4.4.patch:
+  Apply icu patch properly, thanks to Chainsaw for finding the problem.
 
 *webkit-gtk-1.2.1 (13 Jun 2010)
 
