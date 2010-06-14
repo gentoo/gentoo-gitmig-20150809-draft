@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXdmcp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdmcp/ChangeLog,v 1.52 2010/03/15 22:59:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdmcp/ChangeLog,v 1.53 2010/06/14 17:23:17 grobian Exp $
+
+  14 Jun 2010; Fabian Groffen <grobian@gentoo.org> libXdmcp-1.0.3.ebuild:
+  Marked ~x64-macos, bug #323945
 
   15 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -libXdmcp-1.0.2.ebuild, libXdmcp-1.0.3.ebuild:
