@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.1 2010/06/13 19:20:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.2 2010/06/14 00:52:35 chainsaw Exp $
 
 EAPI="2"
 
@@ -76,7 +76,9 @@ src_prepare() {
 
 	# Fix crazy cflags
 	sed 's:-DG.*DISABLE_DEPRECATED::g' -i configure.ac configure \
-		|| die "sed 1 failed"
+		|| die "sed 1a failed"
+	sed 's:-DG.*DISABLE_SINGLE_INCLUDES::g' -i configure.ac configure \
+		|| die "sed 1b failed"
 
 	# Drop debugger CFLAGS
 	sed -e 's:^CPPFLAGS="$CPPFLAGS -g"$::g' -i configure.ac \
