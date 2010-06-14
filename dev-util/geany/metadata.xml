@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>polynomial-c@gentoo.org</email>
+    <name>Lars Wendler</name>
   </maintainer>
   <longdescription lang="en">
 		Geany is a small and lightweight integrated development environment.
