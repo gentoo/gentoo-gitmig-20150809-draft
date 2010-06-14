@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/renderproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/renderproto/ChangeLog,v 1.55 2010/01/23 21:20:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/renderproto/ChangeLog,v 1.56 2010/06/14 17:47:50 grobian Exp $
+
+  14 Jun 2010; Fabian Groffen <grobian@gentoo.org> renderproto-0.11.ebuild:
+  Marked ~x64-macos, bug #323945
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -renderproto-0.9.3.ebuild:

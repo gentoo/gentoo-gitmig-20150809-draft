@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.98 2010/06/04 14:10:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.99 2010/06/14 17:43:00 grobian Exp $
+
+  14 Jun 2010; Fabian Groffen <grobian@gentoo.org> inputproto-2.0.ebuild:
+  Marked ~x64-macos, bug #323945
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org> inputproto-2.0.ebuild:
   hppa stable, #308521
