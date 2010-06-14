@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.86.ebuild,v 1.4 2009/11/26 11:08:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.86.ebuild,v 1.5 2010/06/14 19:39:00 arfrever Exp $
 EAPI=2
 inherit eutils autotools elisp-common latex-package multilib python
 
@@ -139,8 +139,7 @@ src_install() {
 
 	# asymptote.py
 	if use python; then
-		python_version
-		insinto /usr/$(get_libdir)/python${PYVER}/site-packages
+		insinto $(python_get_sitedir)
 		doins base/${PN}.py
 	fi
 
@@ -174,11 +173,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use python; then
-		python_version
-		python_mod_compile \
-			/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}.py
-	fi
+	use python && python_mod_optimize $(python_get_sitedir)/${PN}.py
 
 	use latex && latex-package_rehash
 
@@ -191,5 +186,5 @@ pkg_postinst() {
 pkg_postrm() {
 	use latex && latex-package_rehash
 	use emacs && elisp-site-regen
-	use python && python_mod_cleanup
+	use python && python_mod_cleanup $(python_get_sitedir)/${PN}.py
 }
