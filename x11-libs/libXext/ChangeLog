@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.77 2010/06/08 16:49:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.78 2010/06/14 17:32:43 grobian Exp $
+
+  14 Jun 2010; Fabian Groffen <grobian@gentoo.org> libXext-1.1.1.ebuild,
+  libXext-1.1.2.ebuild:
+  Marked ~x64-macos, bug #323945, add Prefix keywords to 1.1.2
 
 *libXext-1.1.2 (08 Jun 2010)
 
