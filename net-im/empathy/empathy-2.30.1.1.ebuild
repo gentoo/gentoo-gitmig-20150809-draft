@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.1.1.ebuild,v 1.1 2010/06/13 20:57:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.1.1.ebuild,v 1.2 2010/06/14 15:33:42 tester Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.22.0
 	>=x11-libs/libnotify-0.4.4
 	>=gnome-base/gnome-keyring-2.22
 
-	dev-libs/libunique
+	>=dev-libs/libunique-1.1.6
 	net-libs/farsight2
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
