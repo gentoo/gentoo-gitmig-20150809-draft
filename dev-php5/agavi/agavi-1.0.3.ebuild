@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-1.0.2.ebuild,v 1.2 2010/06/08 22:45:35 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/agavi/agavi-1.0.3.ebuild,v 1.1 2010/06/14 10:36:50 mabi Exp $
 
 EAPI="2"
 
