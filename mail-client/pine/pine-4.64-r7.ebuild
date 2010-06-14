@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r7.ebuild,v 1.6 2009/10/10 16:28:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64-r7.ebuild,v 1.7 2010/06/14 20:21:58 darkside Exp $
 
+EAPI=3
 inherit eutils
 
 # Using this ugly hack, since we're making our own versioned copies of chappa
@@ -21,7 +22,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="ssl ldap kerberos largeterminal pam passfile debug"
 
 DEPEND=">=sys-apps/sed-4
@@ -60,9 +61,7 @@ pkg_setup() {
 	maildir_warn
 }
 
-src_unpack() {
-	unpack ${A} && cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/pine-4.62-spooldir-permissions.patch"
 
 	# Various fixes and features.
@@ -115,7 +114,7 @@ src_unpack() {
 			-i "${S}/pico/makefile.lnx" || die "sed pico/makefile.lnx failed"
 	fi
 
-	sed -e "s:/usr/local/lib/pine.conf:/etc/pine.conf:" \
+	sed -e "s:/usr/local/lib/pine.conf:${EPREFIX}/etc/pine.conf:" \
 		-i "${S}/pine/osdep/os-lnx.h" || die "sed os-lnx.h failed"
 
 	sed -e "s:/usr/local/lib/pine.conf:/etc/pine.conf:" \
@@ -131,10 +130,10 @@ src_unpack() {
 src_compile() {
 	local myconf
 	if use ssl ; then
-		myconf="${myconf} SSLDIR=/usr SSLTYPE=unix SSLCERTS=/etc/ssl/certs"
-		sed -e "s:\$(SSLDIR)/certs:/etc/ssl/certs:" \
-			-e "s:\$(SSLCERTS):/etc/ssl/certs:" \
-			-e "s:-I\$(SSLINCLUDE):-I/usr/include/openssl:" \
+		myconf="${myconf} SSLDIR=${EPREFIX}/usr SSLTYPE=unix SSLCERTS=${EPREFIX}/etc/ssl/certs"
+		sed -e "s:\$(SSLDIR)/certs:${EPREFIX}/etc/ssl/certs:" \
+			-e "s:\$(SSLCERTS):${EPREFIX}/etc/ssl/certs:" \
+			-e "s:-I\$(SSLINCLUDE):-I${EPREFIX}/usr/include/openssl:" \
 			-i "${S}/imap/src/osdep/unix/Makefile" || die "sed Makefile failed"
 	else
 		myconf="${myconf} NOSSL"
@@ -152,9 +151,9 @@ src_compile() {
 	if use elibc_FreeBSD ; then
 		target=bsf
 	elif use pam ; then
-		target=lnp
+		[[ ${CHOST} == *-darwin* ]] && target=oxp || target=lnp
 	else
-		target=slx
+		[[ ${CHOST} == *-darwin* ]] && target=osx || target=slx
 	fi
 
 	./build ${myconf} ${target} || die "compile problem"

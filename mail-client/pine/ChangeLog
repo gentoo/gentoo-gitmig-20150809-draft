@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/pine
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.107 2009/10/10 16:28:54 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.108 2010/06/14 20:21:58 darkside Exp $
+
+  14 Jun 2010; Jeremy Olexa <darkside@gentoo.org> pine-4.64-r7.ebuild:
+  Import modifications from the Gentoo Prefix overlay. Add keywords, convert
+  to EAPI3, add some darwin build fixes. Approved by dertobi123 of the
+  net-mail team
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> pine-4.64-r7.ebuild:
   sparc/x86 stable wrt #286137
