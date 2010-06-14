@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.4.0.11.ebuild,v 1.1 2010/02/09 23:18:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.4.0.13.ebuild,v 1.1 2010/06/14 20:33:50 voyageur Exp $
 
 EAPI="2"
 
