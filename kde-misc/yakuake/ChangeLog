@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.37 2009/10/18 18:22:51 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.38 2010/06/14 14:53:59 scarabeus Exp $
+
+  14 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> yakuake-2.9.6.ebuild:
+  Add missing es. Per bug #323867.
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> yakuake-2.9.6.ebuild:
   x86 stable, bug #288604
