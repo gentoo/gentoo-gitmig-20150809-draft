@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.5 2010/06/13 16:11:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.6 2010/06/14 00:59:27 darkside Exp $
+
+  14 Jun 2010; Jeremy Olexa <darkside@gentoo.org> xfce4-meta-4.6.1.ebuild:
+  After more discussion in bug 323791, it was decided to indeed remove
+  terminal from this the meta package and instead make it more clear in the
+  docs, bug 323801
 
   13 Jun 2010; Christoph Mende <angelos@gentoo.org> xfce4-meta-4.6.1.ebuild:
   Added x11-terms/terminal to USE=-minimal
