@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/uuagc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.14 2007/12/13 17:29:17 dcoutts Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.15 2010/06/14 17:56:08 kolmodin Exp $
+
+*uuagc-0.9.24 (14 Jun 2010)
+
+  14 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> +uuagc-0.9.24.ebuild:
+  Version bump.
 
 *uuagc-0.9.5 (13 Dec 2007)
 
