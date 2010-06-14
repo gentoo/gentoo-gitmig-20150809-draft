@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-0.6.ebuild,v 1.2 2010/06/03 10:44:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/wtforms-0.6.ebuild,v 1.3 2010/06/14 07:46:11 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://pypi.python.org/packages/source/W/${MY_PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 S="${WORKDIR}/${MY_P}"
