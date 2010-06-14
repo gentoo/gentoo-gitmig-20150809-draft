@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.10 2010/06/07 14:48:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.11 2010/06/14 09:50:32 angelos Exp $
+
+  14 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  googleearth-5.1.3535.3218-r1.ebuild:
+  Stable on amd64 wrt bug #320065
 
 *googleearth-5.1.3535.3218-r1 (07 Jun 2010)
 
