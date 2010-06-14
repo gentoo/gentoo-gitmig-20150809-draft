@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0-r1.ebuild,v 1.1 2010/02/09 23:25:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0-r2.ebuild,v 1.1 2010/06/14 20:31:52 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.nomachine.com/developers.php"
 
 URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
 SRC_NX_X11="nx-X11-$PV-3.tar.gz"
-SRC_NXAGENT="nxagent-$PV-5.tar.gz"
+SRC_NXAGENT="nxagent-$PV-8.tar.gz"
 SRC_NXAUTH="nxauth-$PV-1.tar.gz"
 SRC_NXCOMP="nxcomp-$PV-1.tar.gz"
 SRC_NXCOMPEXT="nxcompext-$PV-1.tar.gz"

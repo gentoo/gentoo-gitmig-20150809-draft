@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.49 2010/02/09 23:25:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.50 2010/06/14 20:31:52 voyageur Exp $
+
+*nx-3.4.0-r2 (14 Jun 2010)
+
+  14 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.4.0-r1.ebuild,
+  +nx-3.4.0-r2.ebuild:
+  Bump with changes from nxnode 3.4.0 second maintenance release, fixes bug
+  #304743
 
 *nx-3.4.0-r1 (09 Feb 2010)
 
