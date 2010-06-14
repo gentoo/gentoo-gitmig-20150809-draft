@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>xfce</herd>
-  <use>
-  	<flag name="wnck">Use <pkg>x11-libs/libwnck</pkg> to show window icons/names in the task list</flag>
-  </use>
 </pkgmetadata>
