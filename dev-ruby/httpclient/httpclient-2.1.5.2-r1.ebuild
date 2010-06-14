@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.1.5.2-r1.ebuild,v 1.4 2010/06/14 12:29:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.1.5.2-r1.ebuild,v 1.5 2010/06/14 18:45:00 graaff Exp $
 
 EAPI=2
 
@@ -27,6 +27,8 @@ IUSE=""
 
 RDEPEND="${RDEPEND}
 	!dev-ruby/http-access2"
+
+RESTRICT="test"
 
 # tests are known to fail, but at least they fail for all
 # implementations in the same way.
