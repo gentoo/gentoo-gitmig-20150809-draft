@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.14.ebuild,v 1.1 2010/06/08 15:57:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.14a.ebuild,v 1.1 2010/06/14 22:03:18 jer Exp $
 
 inherit autotools
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="!dev-libs/9libs"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P/a/}
 
 pkg_setup() {
 	prevver=$(best_version ${CATEGORY}/${PN})
