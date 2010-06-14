@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.230 2010/06/14 14:47:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.231 2010/06/14 15:21:10 phajdan.jr Exp $
+
+  14 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  wireshark-1.2.9.ebuild:
+  x86 stable wrt security bug #323859
 
 *wireshark-1.4.0_rc1 (14 Jun 2010)
 
