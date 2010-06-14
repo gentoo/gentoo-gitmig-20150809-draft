@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.103 2010/06/14 08:45:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.104 2010/06/14 08:47:19 djc Exp $
+
+  14 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> trac-0.12.ebuild:
+  Forgot to bump Genshi dependency.
 
 *trac-0.12 (14 Jun 2010)
 

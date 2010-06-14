@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.12.ebuild,v 1.1 2010/06/14 08:45:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.12.ebuild,v 1.2 2010/06/14 08:47:19 djc Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-python/setuptools
 	>=dev-python/docutils-0.3.9
 	dev-python/flup
-	>=dev-python/genshi-0.5
+	>=dev-python/genshi-0.6
 	dev-python/pygments
 	dev-python/pytz
 	i18n? ( >=dev-python/Babel-0.9.5 )
