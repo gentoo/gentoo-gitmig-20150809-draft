@@ -6,6 +6,13 @@
 		A random password generator, for all your secure password needs.
 	</longdescription>
 	<maintainer>
-		<email>maintainer-needed</email>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
+		<description>Proxy maintainer</description>
+	</maintainer>
+	<maintainer>
+		<email>gentoo@xmw.de</email>
+		<name>Michael Weber</name>
+		<description>Maintainer</description>
 	</maintainer>
 </pkgmetadata>
