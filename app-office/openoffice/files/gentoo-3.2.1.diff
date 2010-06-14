@@ -42,13 +42,4 @@
      AC_MSG_RESULT([$SUNTEMPLATES_LANG])
  fi
  AC_SUBST(SUNTEMPLATES_LANG)
-@@ -1584,7 +1584,7 @@
- elif test "$with_tag" = "OOO320_m8" ; then
-    UPSTREAM_VERSION=3.2.0
- elif test "$with_tag" = "OOO320_m17" ; then
--   UPSTREAM_VERSION=3.2.1
-+   UPSTREAM_VERSION=3.2.1rc1_20100506
- fi
- if test -n "$UPSTREAM_VERSION"; then
-    UPSTREAM_NAME="OOo_${UPSTREAM_VERSION}_src"
 

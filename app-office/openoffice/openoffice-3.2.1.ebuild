@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1_rc1.ebuild,v 1.2 2010/05/25 16:42:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1.ebuild,v 1.1 2010/06/14 11:52:45 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -13,11 +13,11 @@ inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl pam templates"
 
-MY_PV=3.2.1.1
+MY_PV=3.2.1.3
 PATCHLEVEL=OOO320
-SRC=OOo_${PV/_/}_20100506_src
-MST=OOO320_m17
-DEVPATH=http://download.services.openoffice.org/files/extended/${PV/_/}/${SRC}
+SRC=OOo_${PV}_src
+MST=OOO320_m19
+DEVPATH=http://download.services.openoffice.org/files/stable/${PV}/${SRC}
 S=${WORKDIR}/ooo
 S_OLD=${WORKDIR}/ooo-build-${MY_PV}
 CONFFILE=${S}/distro-configs/Gentoo.conf.in
@@ -27,7 +27,6 @@ DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="${DEVPATH}_core.tar.bz2
 	${DEVPATH}_extensions.tar.bz2
 	${DEVPATH}_system.tar.bz2
-	${DEVPATH}_testautomation.tar.bz2
 	${DEVPATH}_l10n.tar.bz2
 	binfilter? ( ${DEVPATH}_binfilter.tar.bz2 )
 	templates? ( http://extensions.services.openoffice.org/files/273/0/Sun_ODF_Template_Pack_en-US.oxt
