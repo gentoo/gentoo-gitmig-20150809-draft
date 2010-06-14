@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.0.ebuild,v 1.1 2010/06/10 08:22:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.0.ebuild,v 1.2 2010/06/14 20:14:42 ssuominen Exp $
 
 EAPI=2
-# Missing from linguas.desc: sr@ijekavian sr@ijekavianlatin
 KDE_LINGUAS="ast be ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hr hu
-it ja km ko ku lt mai nb nds nl nn pa pl pt pt_BR ro ru se sk sr sr@latin sv th
-tr uk zh_CN zh_TW"
+it ja km ko ku lt mai nb nds nl nn pa pl pt pt_BR ro ru se sk sr@ijekavian
+sr@ijekavianlatin sr sr@latin sv th tr uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="A media player for KDE with digital TV support"
