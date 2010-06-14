@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1_rc1.ebuild,v 1.1 2010/05/23 22:21:40 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1.ebuild,v 1.1 2010/06/14 11:42:19 suka Exp $
 
 EAPI="2"
 
@@ -8,14 +8,14 @@ inherit eutils fdo-mime rpm multilib
 
 IUSE="gnome java kde"
 
-BUILDID="9498"
-BUILDID2="9498"
+BUILDID="9502"
+BUILDID2="9502"
 UREVER="1.6.1"
-MY_PV="${PV/_/}"
-MY_PV2="${MY_PV}_20100506"
+MY_PV="${PV}rc2"
+MY_PV2="${MY_PV}_20100521"
 MY_PV3="${PV/_rc1/}-${BUILDID}"
 BASIS="ooobasis3.2"
-MST="OOO320_m17"
+MST="OOO320_m18"
 FILEPATH="http://download.services.openoffice.org/files/extended/${MY_PV}"
 
 if [ "${ARCH}" = "amd64" ] ; then
@@ -32,8 +32,8 @@ S="${WORKDIR}"
 UP="${PACKED}_en-US.${BUILDID}/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
 
-SRC_URI="x86? ( "${FILEPATH}"/OOo_${MY_PV2}_Linux_x86_install-rpm_en-US.tar.gz )
-	amd64? ( "${FILEPATH}"/OOo_${MY_PV2}_Linux_x86-64_install-rpm-wJRE_en-US.tar.gz  )"
+SRC_URI="x86? ( http://download.services.openoffice.org/files/stable/${PV}/OOo_${PV}_Linux_x86_install-rpm_en-US.tar.gz )
+	amd64? ( http://download.services.openoffice.org/files/stable/${PV}/OOo_${PV}_Linux_x86-64_install-rpm-wJRE_en-US.tar.gz  )"
 
 LANGS="ar as ast bg bn ca cs da de dz el en en_GB eo es et eu fi fr ga gl gu hi hu id is it ja ka km kn ko ku lt lv mk ml mr my nb nl nn oc om or pa_IN pl pt pt_BR ro ru sh si sk sl sr sv ta te th tr ug uk uz vi zh_CN zh_TW"
 
