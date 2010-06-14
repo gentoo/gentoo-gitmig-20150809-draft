@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.30.1-r1.ebuild,v 1.1 2010/06/13 16:06:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-3.30.1-r1.ebuild,v 1.2 2010/06/14 00:52:07 mr_bones_ Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ IUSE=""
 
 # Glade support is disabled, because it's install broken by design:
 # Install directories for glade are queried from gladeui-1.0.pc which doesn't
-# take our prefix into account. On the other side, there are maybe 3 to 4 
+# take our prefix into account. On the other side, there are maybe 3 to 4
 # people in the world who really need to install the Glade file, so they can
 # fix it themselves :)
 
