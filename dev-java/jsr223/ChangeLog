@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr223
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/ChangeLog,v 1.4 2010/05/02 18:24:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/ChangeLog,v 1.5 2010/06/14 07:54:41 phajdan.jr Exp $
+
+  14 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jsr223-1.0-r1.ebuild:
+  x86 stable wrt bug #322433
 
   02 May 2010; Petteri Räty <betelgeuse@gentoo.org> jsr223-1.0-r1.ebuild:
   Add mkdir build to make javac happy.

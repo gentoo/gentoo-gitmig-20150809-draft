@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/jsr223-1.0-r1.ebuild,v 1.2 2010/05/02 18:24:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/jsr223-1.0-r1.ebuild,v 1.3 2010/06/14 07:54:41 phajdan.jr Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE=""
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/jsr223-openjdk-6-src-b19.tar.bz2"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE=""
 
