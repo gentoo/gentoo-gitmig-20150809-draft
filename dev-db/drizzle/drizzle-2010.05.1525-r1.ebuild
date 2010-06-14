@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.03.1412.ebuild,v 1.3 2010/04/18 16:39:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-2010.05.1525-r1.ebuild,v 1.1 2010/06/14 23:45:57 flameeyes Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit flag-o-matic libtool autotools eutils pam
 
 DESCRIPTION="Database optimized for Cloud and Net applications"
 HOMEPAGE="http://drizzle.org"
-SRC_URI="http://launchpad.net/drizzle/cherry/2010-03-29/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/drizzle/dexter/2010-05-10/+download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -42,8 +42,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2010.03.1412-ggdb3-fix.patch"
-	# disable in release after 1412
 	epatch "${FILESDIR}/${PN}-2009.12.1240-nolint.patch"
 
 	AT_M4DIR="m4" eautoreconf
@@ -67,7 +65,6 @@ src_configure() {
 		--disable-static \
 		--disable-dependency-tracking \
 		--disable-mtmalloc \
-		--with-debug=$(use debug && echo yes || echo no) \
 		$(use_enable tcmalloc) \
 		$(use_enable memcache libmemcached) \
 		$(use_enable gearman libgearman) \
@@ -79,6 +76,10 @@ src_configure() {
 		$(use_with memcache memcache_functions-plugins) \
 		--with-logging_stats \
 		--without-hello-world-plugin \
+		--disable-pbxt-plugin --without-pbxt-plugin \
+		--disable-rabbitmq-plugin --without-rabbitmq-plugin \
+		--disable-embedded-innodb-plugin --without-embedded-innodb-plugin \
+		--disable-auth-ldap-plugin --disable-libldap --without-auth-ldap-plugin \
 		${myconf}
 
 	# upstream TODO:

@@ -2,16 +2,15 @@
 # Copyright 2010 Pavel Stratil, senbonzakura.eu
 # Some functions were taken from debian init script. Licensed under GPL-2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/files/drizzle.init.d,v 1.1 2010/03/18 13:04:24 flameeyes Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/files/drizzle.init.d,v 1.2 2010/06/14 23:45:58 flameeyes Exp $
 
 #########################
 ### Construct vars ######
 #########################
 
 
-SUFIX=".${SVCNAME#*.}"
-[ "${SUFIX}" == ".drizzle" ] && SUFIX=''
+SUFFIX=".${SVCNAME#*.}"
+[ "${SUFFIX}" == ".drizzled" ] && SUFFIX=''
 
 BASE_CONFD="/etc/conf.d/drizzle"
 BASE_CNF="/etc/drizzle/drizzled"
@@ -19,11 +18,11 @@ BASE_PID="/var/run/drizzle/drizzled"
 BASE_LOG="/var/log/drizzle/drizzled"
 BASE_DIR="/var/lib/drizzle/drizzled"
 
-PIDFILE="${BASE_PID}${SUFIX}.pid"
-CNFFILE="${BASE_CNF}${SUFIX}.cnf"
-LOGFILE="${BASE_LOG}${SUFIX}.log"
-DATADIR="${BASE_DIR}${SUFIX}"
-CONFSRC="${BASE_CONFD}${SUFIX}"
+PIDFILE="${BASE_PID}${SUFFIX}.pid"
+CNFFILE="${BASE_CNF}${SUFFIX}.cnf"
+LOGFILE="${BASE_LOG}${SUFFIX}.log"
+DATADIR="${BASE_DIR}${SUFFIX}"
+CONFSRC="${BASE_CONFD}${SUFFIX}"
 DRIZZLE="/usr/bin/drizzle"
 DRIZZLE_USER="drizzle"
 DRIZZLE_DAEMON="/usr/sbin/drizzled"
@@ -37,7 +36,7 @@ DRIZZLE_EXTRA=""
 #
 # drizzle_get_param() fetches a particular option from drizzle's invocation.
 # Usage: void drizzle_get_param option
-# Example: /etc/init.d/drizzle drizzle_get_param pid-file
+# Example: /etc/init.d/drizzled drizzle_get_param pid-file
 # 
 drizzle_get_param() {
 	${DRIZZLE_DAEMON} --print-defaults \
@@ -104,8 +103,8 @@ checkconfig() {
 
 depend() {
 	use localmount
-        need gearmand
-        need memcached
+        use gearmand
+        use memcached
         
         # TODO use drizzle_get_param() to decide if gearmand and memcached
         #      are needed. Then the useflag based sed-ing of this script
@@ -134,7 +133,7 @@ start() {
 	
         # TODO in order to have replication always working we should add the
         #      --server-id=# option. AFAIK only integers are allowed, though
-        #      ${HOSTNAME}${SVCNAME}${SUFIX} whould be much easier to handle.
+        #      ${HOSTNAME}${SVCNAME}${SUFFIX} whould be much easier to handle.
 
 	for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14; do
 	  sleep 1
