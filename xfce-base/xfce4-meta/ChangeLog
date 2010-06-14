@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.6 2010/06/14 00:59:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.7 2010/06/14 01:07:34 darkside Exp $
+
+*xfce4-meta-4.6.2 (14 Jun 2010)
+
+  14 Jun 2010; Jeremy Olexa <darkside@gentoo.org> +xfce4-meta-4.6.2.ebuild:
+  Add a 4.6.2 meta ebuild. It is largely useless but will improve the
+  visibility of the status of xfce in Gentoo. In preparation for the 4.6.2
+  stablereq bug 323729
 
   14 Jun 2010; Jeremy Olexa <darkside@gentoo.org> xfce4-meta-4.6.1.ebuild:
   After more discussion in bug 323791, it was decided to indeed remove
