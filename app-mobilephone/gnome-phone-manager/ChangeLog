@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.32 2010/06/11 11:19:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.33 2010/06/14 09:54:21 angelos Exp $
+
+  14 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  gnome-phone-manager-0.65.ebuild:
+  Stable on amd64 wrt bug #319959
 
   11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   gnome-phone-manager-0.60.ebuild, gnome-phone-manager-0.65.ebuild:
