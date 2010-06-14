@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xtrans
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.76 2010/02/25 07:34:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.77 2010/06/14 17:40:48 grobian Exp $
+
+  14 Jun 2010; Fabian Groffen <grobian@gentoo.org> xtrans-1.2.5.ebuild:
+  Marked ~x64-macos, bug #323945
 
   25 Feb 2010; Jonathan Callen <abcd@gentoo.org> xtrans-1.2.5.ebuild:
   Transfer prefix keywords (no other changes)
