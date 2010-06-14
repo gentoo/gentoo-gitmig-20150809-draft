@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gdisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/ChangeLog,v 1.4 2010/06/07 12:59:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/ChangeLog,v 1.5 2010/06/14 21:06:46 robbat2 Exp $
+
+*gdisk-0.6.8-r1 (14 Jun 2010)
+
+  14 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> +gdisk-0.6.8-r1.ebuild:
+  Install more docs, and confirmed to work on ARM (using MV78100).
 
 *gdisk-0.6.8 (07 Jun 2010)
 
