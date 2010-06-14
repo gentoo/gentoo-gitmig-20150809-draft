@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.82 2010/06/13 09:14:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.83 2010/06/14 11:10:46 scarabeus Exp $
+
+  14 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  grass-6.4.0_rc6.ebuild, +files/grass-6.4.0_rc6-html-nonviz.patch:
+  Fix -opengl nonviz patch to work with latest. Fix -nls build.
 
   13 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   files/grass-pkgconf.patch:

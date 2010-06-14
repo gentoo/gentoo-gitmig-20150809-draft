@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.5 2010/05/04 10:53:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.6 2010/06/14 11:10:46 scarabeus Exp $
 
 EAPI="3"
 
@@ -127,7 +127,7 @@ pkg_setup() {
 
 src_prepare() {
 	if ! use opengl; then
-		epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
+		epatch "${FILESDIR}"/${P}-html-nonviz.patch
 	fi
 
 	base_src_prepare
@@ -237,11 +237,13 @@ src_install() {
 	rm -rf man/ || die
 
 	# translations
-	dodir /usr/share/locale/ || die
-	mv locale/* "${D}"/usr/share/locale/ || die
-	rm -rf locale/ || die
-	# pt_BR is broken
-	mv "${D}"/usr/share/locale/pt_br "${D}"/usr/share/locale/pt_BR || die
+	if use nls; then
+		dodir /usr/share/locale/ || die
+		mv locale/* "${D}"/usr/share/locale/ || die
+		rm -rf locale/ || die
+		# pt_BR is broken
+		mv "${D}"/usr/share/locale/pt_br "${D}"/usr/share/locale/pt_BR || die
+	fi
 
 	popd &> /dev/null
 

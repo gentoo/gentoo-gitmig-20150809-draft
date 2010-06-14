@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+			<title>RAW OUTPUT 3d3Kyh1D</title>
+			<meta name="robots" content="noindex, nofollow" />
+		</head>
+		<body>
+			<pre>--- tools/build_html_index.sh.old       2010-06-14 12:44:05.000000000 +0200
++++ tools/build_html_index.sh   2010-06-14 12:46:01.000000000 +0200
+@@ -135,7 +135,6 @@
+        &lt;/ul&gt;
+
+        &lt;ul&gt;
+-        &lt;li&gt;&lt;a href=\&quot;nviz.html\&quot;&gt;nviz&lt;/a&gt; 3D visualization and animation tool&lt;/li&gt;
+         &lt;li&gt;&lt;a href=\&quot;xganim.html\&quot;&gt;xganim&lt;/a&gt; tool  for animating a raster map series&lt;/li&gt;
+        &lt;/ul&gt;&lt;/td&gt;
+     &lt;/tr&gt;
+@@ -245,11 +244,11 @@
+ #copy over CSS:
+ cp -f grassdocs.css $HTMLDIR/
+ mkdir -p $HTMLDIR/nviz/
+-cp -f grassdocs.css $HTMLDIR/nviz/
++#cp -f grassdocs.css $HTMLDIR/nviz/
+ chmod a+r $HTMLDIR/grassdocs.css $HTMLDIR/nviz/grassdocs.css
+ #copy over GRASS logo:
+ cp -f grass_logo.png $HTMLDIR/
+-cp -f grass_logo.png $HTMLDIR/nviz/
++#cp -f grass_logo.png $HTMLDIR/nviz/
+ chmod a+r $HTMLDIR/grass_logo.png $HTMLDIR/nviz/grass_logo.png
+ if [ &quot;$MACOSX&quot; ] ; then
+   cp -f grass_icon.png $HTMLDIR/
+@@ -302,7 +301,7 @@
+ echo &quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;a href=\&quot;full_index.html#r3\&quot;&gt;r3.*&lt;/a&gt; &lt;/td&gt;&lt;td&gt;raster3D commands&lt;/td&gt;&lt;/tr&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;
+ echo &quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;a href=\&quot;full_index.html#v\&quot;&gt;v.*&lt;/a&gt; &lt;/td&gt;&lt;td&gt;vector commands&lt;/td&gt;&lt;/tr&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;
+ echo &quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;a href=\&quot;gis.m.html\&quot;&gt;gis.m&lt;/a&gt; &lt;/td&gt;&lt;td&gt;GUI frontend to GIS menus and display&lt;/td&gt;&lt;/tr&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;
+-echo &quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;a href=\&quot;nviz.html\&quot;&gt;nviz&lt;/a&gt; &lt;/td&gt;&lt;td&gt;visualization suite&lt;/td&gt;&lt;/tr&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;
++#echo &quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;a href=\&quot;nviz.html\&quot;&gt;nviz&lt;/a&gt; &lt;/td&gt;&lt;td&gt;visualization suite&lt;/td&gt;&lt;/tr&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;
+ echo &quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;a href=\&quot;wxGUI.html\&quot;&gt;wxGUI&lt;/a&gt; &lt;/td&gt;&lt;td&gt;wxPython-based GUI frontend&lt;/td&gt;&lt;/tr&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;
+ echo &quot;&lt;tr&gt;&lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;a href=\&quot;xganim.html\&quot;&gt;xganim&lt;/a&gt; &lt;/td&gt;&lt;td&gt;raster map slideshow&lt;/td&gt;&lt;/tr&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;
+ echo &quot;&lt;/table&gt;&quot; &gt;&gt; &quot;$FULLINDEX&quot;</pre>
+		</body>
+	</html>
