@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.65 2010/06/01 19:57:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.66 2010/06/14 19:15:16 bicatali Exp $
+
+*root-5.26.00-r3 (14 Jun 2010)
+
+  14 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +root-5.26.00-r3.ebuild:
+  New patch set from upstream fixing a number of bugs, more LDFLAGS
+  propagation fixes, added gsl flag and released as-needed for more testing
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   root-5.26.00-r2.ebuild:
