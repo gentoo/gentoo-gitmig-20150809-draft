@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11637 2010/06/14 08:54:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11638 2010/06/14 11:54:48 suka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -239,11 +239,6 @@ dev-lisp/cl-pop
 #
 # Removal on 2010-07-25
 media-video/w3cam
-
-# Andreas Proschofsky <suka@gentoo.org> (23 May 2010)
-# Mask release candidates
->=app-office/openoffice-bin-3.2.1_rc1
->=app-office/openoffice-3.2.1_rc1
 
 # Justin Lecher <jlec@gentoo.org> (22 May 2010)
 # Mask until all deps are fixed for bug 314053
