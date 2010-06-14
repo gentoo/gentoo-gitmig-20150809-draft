@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.7 2010/06/12 22:05:54 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.8 2010/06/14 17:03:23 mabi Exp $
 
 EAPI=2
 
@@ -76,7 +76,7 @@ IUSE="kolab"
 
 # SAPIs and SAPI-specific USE flags:
 IUSE="${IUSE}
-	${SAPIS}
+	+${SAPIS}
 	concurrentmodphp threads"
 
 IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
@@ -94,7 +94,7 @@ IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 DEPEND="app-admin/php-toolkit
 	>=dev-libs/libpcre-7.9[unicode]
 	adabas? ( >=dev-db/unixODBC-1.8.13 )
-	apache2? ( !threads? ( www-servers/apache[-threads] ) )
+	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
 	birdstep? ( >=dev-db/unixODBC-1.8.13 )
 	bzip2? ( app-arch/bzip2 )
