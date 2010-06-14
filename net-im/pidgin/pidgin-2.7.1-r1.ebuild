@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1-r1.ebuild,v 1.1 2010/06/11 19:48:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1-r1.ebuild,v 1.2 2010/06/14 09:20:24 pva Exp $
 
 EAPI=2
 
@@ -189,17 +189,19 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
-	# Fix tray pathes for kde-3.5, e16 (x11-wm/enlightenment) and other
-	# implementations that are not complient with new hicolor theme yet, #323355
-	local pixmapdir
-	for d in 16 22 32 48; do
-		pixmapdir=${D}/usr/share/pixmaps/pidgin/tray/hicolor/${d}x${d}/actions
-		mkdir "${pixmapdir}" || die
-		pushd "${pixmapdir}" >/dev/null || die
-		for f in ../status/*; do
-			ln -s ${f} || die
+	if use gtk; then
+		# Fix tray pathes for kde-3.5, e16 (x11-wm/enlightenment) and other
+		# implementations that are not complient with new hicolor theme yet, #323355
+		local pixmapdir
+		for d in 16 22 32 48; do
+			pixmapdir=${D}/usr/share/pixmaps/pidgin/tray/hicolor/${d}x${d}/actions
+			mkdir "${pixmapdir}" || die
+			pushd "${pixmapdir}" >/dev/null || die
+			for f in ../status/*; do
+				ln -s ${f} || die
+			done
+			popd >/dev/null
 		done
-		popd >/dev/null
-	done
+	fi
 	use perl && fixlocalpod
 }
