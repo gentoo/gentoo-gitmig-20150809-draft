@@ -1,6 +1,10 @@
 # ChangeLog for games-action/rrootage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/ChangeLog,v 1.9 2010/01/25 22:15:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/ChangeLog,v 1.10 2010/06/14 21:35:45 mr_bones_ Exp $
+
+  14 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  rrootage-0.23a.ebuild:
+  add use deps; respect CC, CXX, {CC,CXX,LD}FLAGS
 
   25 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
   rrootage-0.23a.ebuild:

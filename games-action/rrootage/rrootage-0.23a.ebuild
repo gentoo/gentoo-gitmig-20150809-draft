@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.9 2010/01/25 22:15:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.10 2010/06/14 21:35:45 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,15 +19,23 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl
-	media-libs/sdl-mixer
+	media-libs/libsdl[video]
+	media-libs/sdl-mixer[vorbis]
 	>=dev-libs/libbulletml-0.0.3"
 
 S=${WORKDIR}/${MY_PN}/src
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-gcc41.patch
-	sed -e "s/-lglut/-lGL -lGLU/" makefile.lin > Makefile || die "sed failed"
+	sed \
+		-e "s/-lglut/-lGL -lGLU/" \
+		-e "/^CC/d" \
+		-e "/^CXX/d" \
+		-e "/^LDFLAGS/s/=/+=/" \
+		-e "/^CPPFLAGS/s/MORE_CFLAGS/MORE_CXXFLAGS/" \
+		-e "/^CPPFLAGS/s/MORE_CFLAGS/MORE_CXXFLAGS/" \
+		-e "s:-I./bulletml/:-I/usr/include/bulletml:" \
+		makefile.lin > Makefile || die "sed failed"
 
 	sed -i \
 		-e "s:/usr/share/games:${GAMES_DATADIR}:" \
@@ -36,7 +44,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake MORE_CFLAGS="${CFLAGS}" || die "emake failed"
+	emake \
+		MORE_CFLAGS="-DLINUX ${CFLAGS}" \
+		MORE_CXXFLAGS="-DLINUX ${CXXFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {
