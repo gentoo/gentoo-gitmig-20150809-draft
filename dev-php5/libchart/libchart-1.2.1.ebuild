@@ -1,26 +1,25 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/libchart/libchart-1.2.ebuild,v 1.1 2007/11/29 23:45:15 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/libchart/libchart-1.2.1.ebuild,v 1.1 2010/06/14 17:19:06 mabi Exp $
+
+EAPI="2"
 
 inherit php-lib-r1 depend.php
 
 DESCRIPTION="Libchart is a chart creation PHP library that is easy to use."
 HOMEPAGE="http://naku.dohcrew.com/libchart"
-SRC_URI="http://naku.dohcrew.com/${PN}/files/${P}.tar.gz"
+SRC_URI="http://libchart.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3 BitstreamVera"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 SLOT=0
 IUSE="examples"
 
 need_php5
 
-pkg_setup() {
-	if ! PHPCHECKNODIE="yes" require_php_with_use truetype || \
-		! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
-			die "Re-install ${PHP_PKG} with truetype and either gd or gd-external in USE."
-	fi
-}
+DEPEND=""
+RDEPEND="dev-lang/php[truetype]
+	|| ( dev-lang/php[gd] dev-lang/php[gd-external] )"
 
 src_install() {
 	php-lib-r1_src_install ${PN} `cd ${PN}; find . -type f -print`
