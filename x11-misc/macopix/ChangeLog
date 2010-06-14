@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/macopix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.17 2009/12/23 16:45:08 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.18 2010/06/14 19:45:43 phajdan.jr Exp $
+
+  14 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> macopix-1.7.4.ebuild:
+  x86 stable wrt bug #322851
 
 *macopix-1.7.4 (23 Dec 2009)
 
