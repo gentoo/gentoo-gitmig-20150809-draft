@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.18 2010/05/22 22:36:08 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.19 2010/06/14 19:41:07 graaff Exp $
+
+  14 Jun 2010; Hans de Graaff <graaff@gentoo.org> -coderay-0.9.1.ebuild,
+  -coderay-0.9.2_pre455.ebuild:
+  Remove old versions.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> coderay-0.9.3.ebuild:
   Add REE18 support
