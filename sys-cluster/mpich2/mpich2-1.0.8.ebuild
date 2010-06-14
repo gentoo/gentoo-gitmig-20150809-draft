@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.13 2009/12/31 17:12:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.14 2010/06/14 21:44:05 arfrever Exp $
 
 EAPI=1
 inherit python eutils fortran autotools
@@ -49,7 +49,6 @@ pkg_setup() {
 	fi
 
 	MPD_CONF_FILE_DIR=/etc/${PN}
-	python_version
 }
 
 src_unpack() {
@@ -201,7 +200,7 @@ src_install() {
 	sed -i "s,@MPD_CONF_FILE_DIR@,${MPD_CONF_FILE_DIR}," \
 		"${T}"/${PN}.envd
 
-	ln -s ../$(get_libdir)/python${PYVER}/site-packages/mpich2/mpdgdbdrv.py \
+	ln -s ../$(get_libdir)/python$(python_get_version)/site-packages/mpich2/mpdgdbdrv.py \
 		"${D}"/usr/bin/mpdgdbdrv.py
 	newenvd "${FILESDIR}"/${PN}.envd 25mpich2
 }
@@ -211,7 +210,7 @@ pkg_postinst() {
 	chown root:root "${ROOT}"${MPD_CONF_FILE_DIR}/mpd.conf
 	chmod 600 "${ROOT}"${MPD_CONF_FILE_DIR}/mpd.conf
 
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_optimize $(python_get_sitedir)/${PN}
 	elog ""
 	elog "MPE2 has been removed from this ebuild and now stands alone"
 	elog "as sys-cluster/mpe2."
@@ -219,5 +218,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
