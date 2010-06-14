@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/egg-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.12 2010/06/02 21:05:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.13 2010/06/14 13:11:26 pacho Exp $
+
+*egg-python-2.25.3 (14 Jun 2010)
+
+  14 Jun 2010; Pacho Ramos <pacho@gentoo.org> +egg-python-2.25.3.ebuild:
+  Version bump with lots of bugfixes over current stable.
 
   02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
   egg-python-2.19.1.ebuild:

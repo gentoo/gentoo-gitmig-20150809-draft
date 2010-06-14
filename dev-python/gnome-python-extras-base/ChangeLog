@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gnome-python-extras-base
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.10 2009/03/27 22:05:52 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.11 2010/06/14 13:09:23 pacho Exp $
+
+*gnome-python-extras-base-2.25.3 (14 Jun 2010)
+
+  14 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  +gnome-python-extras-base-2.25.3.ebuild:
+  Version bump with lots of bugfixes over current stable.
 
   27 Mar 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
   Stable for HPPA (bug #258040).

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/libgksu-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/ChangeLog,v 1.10 2010/06/02 21:22:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/ChangeLog,v 1.11 2010/06/14 13:17:30 pacho Exp $
+
+*libgksu-python-2.25.3 (14 Jun 2010)
+
+  14 Jun 2010; Pacho Ramos <pacho@gentoo.org> +libgksu-python-2.25.3.ebuild:
+  Version bump with lots of bugfixes over current stable.
 
   02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
   libgksu-python-2.19.1.ebuild:

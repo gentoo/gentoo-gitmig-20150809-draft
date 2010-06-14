@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.23 2010/06/02 21:31:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.24 2010/06/14 13:23:04 pacho Exp $
+
+*gtkmozembed-python-2.25.3 (14 Jun 2010)
+
+  14 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  +gtkmozembed-python-2.25.3.ebuild,
+  +files/gtkmozembed-python-2.25.3-xulrunner19.patch:
+  Version bump with lots of bugfixes over current stable.
 
   02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
   gtkmozembed-python-2.19.1-r11.ebuild,
