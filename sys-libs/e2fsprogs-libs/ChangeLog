@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.47 2010/03/31 17:59:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.48 2010/06/14 20:01:59 phajdan.jr Exp $
+
+  14 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  e2fsprogs-libs-1.41.11.ebuild:
+  x86 stable wrt bug #323893
 
   31 Mar 2010; <solar@gentoo.org> e2fsprogs-libs-1.41.7.ebuild,
   e2fsprogs-libs-1.41.9.ebuild, e2fsprogs-libs-1.41.10.ebuild,
