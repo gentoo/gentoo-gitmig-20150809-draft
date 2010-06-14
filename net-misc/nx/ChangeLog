@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.50 2010/06/14 20:31:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.51 2010/06/14 20:37:34 voyageur Exp $
+
+  14 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.3.0-r1.ebuild,
+  -nx-3.3.0-r4.ebuild, -nx-3.3.0-r5.ebuild:
+  Drop 3.3 NX versions
 
 *nx-3.4.0-r2 (14 Jun 2010)
 
