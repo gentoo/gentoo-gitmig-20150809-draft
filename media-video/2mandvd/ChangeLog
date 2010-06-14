@@ -1,6 +1,15 @@
 # ChangeLog for media-video/2mandvd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/ChangeLog,v 1.8 2010/04/29 08:00:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/ChangeLog,v 1.9 2010/06/14 00:02:28 hwoarang Exp $
+
+  14 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/2mandvd-fix-const-char-concatenation.patch, +2mandvd-1.3.5.ebuild:
+  Version bump
+
+*2mandvd-1.3.5 (13 Jun 2010)
+
+  13 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +2mandvd-1.3.5.ebuild:
+  Version bump
 
   29 Apr 2010; Markos Chandras <hwoarang@gentoo.org> 2mandvd-1.1.1.ebuild,
   2mandvd-1.2-r1.ebuild:
