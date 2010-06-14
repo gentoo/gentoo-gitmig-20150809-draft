@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.31 2010/05/31 18:41:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.32 2010/06/14 06:21:58 kolmodin Exp $
+
+*c2hs-0.16.2 (14 Jun 2010)
+
+  14 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> +c2hs-0.16.2.ebuild:
+  Version bump. Supports GHC 6.12.3.
 
   31 May 2010; Joseph Jezak <josejx@gentoo.org> c2hs-0.16.0.ebuild:
   Marked ~ppc/~ppc64 for bug #306311.
