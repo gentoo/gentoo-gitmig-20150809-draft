@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.10.ebuild,v 1.7 2009/05/10 15:01:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.10.ebuild,v 1.8 2010/06/14 20:12:58 arfrever Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -40,9 +40,8 @@ src_prepare() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
 	python_need_rebuild
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/Alacarte
+	python_mod_optimize $(python_get_sitedir)/Alacarte
 }
 
 pkg_postrm() {
