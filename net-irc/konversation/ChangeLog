@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.98 2010/06/08 08:52:29 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.99 2010/06/15 09:27:00 phajdan.jr Exp $
+
+  15 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  konversation-1.2.3.ebuild:
+  x86 stable wrt bug #322503
 
   08 Jun 2010; Dror Levin <spatz@gentoo.org> konversation-1.3.ebuild:
   Lower dep back to kde 4.3, bug 323145.
