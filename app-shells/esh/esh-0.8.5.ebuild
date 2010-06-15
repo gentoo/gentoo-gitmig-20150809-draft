@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5.ebuild,v 1.17 2008/12/30 20:43:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5.ebuild,v 1.18 2010/06/15 16:31:28 hwoarang Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://slon.ttk.ru/esh/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~amd64 x86 ppc sparc"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
@@ -33,7 +33,7 @@ src_compile() {
 src_install() {
 	dobin esh || die
 	doinfo doc/esh.info
-	dodoc CHANGELOG CREDITS GC_README HEADER READLNE-HACKS TODO
+	dodoc CHANGELOG CREDITS GC_README HEADER READLINE-HACKS TODO
 	dohtml doc/*.html
 	docinto examples
 	dodoc examples/*
