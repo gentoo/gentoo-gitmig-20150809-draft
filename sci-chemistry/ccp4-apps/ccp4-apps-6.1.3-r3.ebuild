@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r3.ebuild,v 1.4 2010/06/15 13:53:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r3.ebuild,v 1.5 2010/06/15 17:14:39 jlec Exp $
 
 EAPI="3"
 
@@ -69,7 +69,7 @@ TKDEPS="
 
 SCILIBS="
 	~sci-libs/ccp4-libs-${PV}
-	!<=sci-libs/ccp4-libs-${PV}-r2
+	!<=sci-libs/ccp4-libs-${PV}-r1
 	sci-libs/clipper
 	=sci-libs/fftw-2*
 	sci-libs/mmdb
