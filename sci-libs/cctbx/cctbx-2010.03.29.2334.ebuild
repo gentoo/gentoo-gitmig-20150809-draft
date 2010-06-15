@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334.ebuild,v 1.1 2010/05/22 08:21:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334.ebuild,v 1.2 2010/06/15 12:56:38 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -91,7 +91,7 @@ src_configure() {
 	myconf="${myconf} --compiler=${compiler}"
 
 	# Precompiling python scripts. It is done in upstreams install script.
-	# Perhaps use python_mod_compile, but as this script works we should stick to it.
+	# Perhaps use python_mod_optimize, but as this script works we should stick to it.
 	$(PYTHON -a) "${MY_S}/libtbx/command_line/py_compile_all.py"
 
 	# Additional USE flag usage
