@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.01.ebuild,v 1.8 2009/11/05 16:29:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.01.ebuild,v 1.9 2010/06/15 18:12:27 arfrever Exp $
 
 inherit eutils
 
@@ -27,8 +27,8 @@ S="${WORKDIR}"
 #/var/log/jabber/ for the log files
 
 #for the python based transports with no install script:
-#they must inherit python, run python_version() and be installed in:
-#/usr/lib/python${PYVER}/site-packages/$package-name
+#they must inherit python and be installed in:
+#$(python_get_sitedir)/$package-name
 
 #the user should be the one created here username=group=jabber
 
