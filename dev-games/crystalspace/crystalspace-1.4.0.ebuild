@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.1 2010/06/11 19:57:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.2 2010/06/15 10:11:10 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib wxwidgets
@@ -121,6 +121,6 @@ pkg_postinst() {
 	for dir in castle flarge isomap parallaxtest partsys r3dtest stenciltest \
 		terrain terrainf;
 	do
-		elog "cslight -video=null /usr/share/${PN}/data/maps/${dir}"
+		elog "cslight -video=null /usr/share/${P}/data/maps/${dir}"
 	done
 }
