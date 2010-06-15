@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/pdb-extract
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.15 2010/04/25 09:53:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.16 2010/06/15 14:45:45 jlec Exp $
+
+*pdb-extract-3.004-r2 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +pdb-extract-3.004-r2.ebuild,
+  files/pdb-extract-3.004-cflags-install.patch:
+  qa and adopted to bug 314053
 
 *pdb-extract-3.004-r1 (25 Apr 2010)
 

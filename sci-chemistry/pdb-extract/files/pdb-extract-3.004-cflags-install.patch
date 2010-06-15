@@ -59,7 +59,7 @@ diff -Naur pdb-extract-v3.004-prod-src/etc/make.platform.gnu3 pdb-extract-v3.004
  ##
  ##########################################################################
  
-+LIBDIR=/usr/lib
++LIBDIR=@GENTOO_PORTAGE_EPREFIX@/usr/GENTOOLIBDIR
 +
  #-----Lexer and Parser section-------------------------------------------#
  
@@ -127,7 +127,7 @@ diff -Naur pdb-extract-v3.004-prod-src/etc/make.platform.gnu4 pdb-extract-v3.004
  ##
  ##########################################################################
  
-+LIBDIR=/usr/lib
++LIBDIR=@GENTOO_PORTAGE_EPREFIX@/usr/GENTOOLIBDIR
 +
  #-----Lexer and Parser section-------------------------------------------#
  
