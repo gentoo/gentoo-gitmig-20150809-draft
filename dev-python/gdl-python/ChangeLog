@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.25 2010/06/02 21:10:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.26 2010/06/15 07:39:12 pacho Exp $
+
+*gdl-python-2.25.3 (15 Jun 2010)
+
+  15 Jun 2010; Pacho Ramos <pacho@gentoo.org> +gdl-python-2.25.3.ebuild:
+  Version bump with lots of bugfixes over current stable.
 
   02 Jun 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gdl-python-2.19.1.ebuild, gdl-python-2.19.1-r1.ebuild,
