@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.4 2010/03/06 12:27:48 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.5 2010/06/15 19:25:22 arfrever Exp $
 
 EAPI="2"
 NEED_PYTHON="2.4"
@@ -45,9 +45,6 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
-
-	# needed for $PYVER
-	distutils_python_version
 
 	# manpage and html docs are built using asciidoc
 	make -C doc man html || die
