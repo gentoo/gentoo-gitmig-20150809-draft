@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CDDB
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.27 2010/03/27 21:37:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.28 2010/06/15 05:21:25 tove Exp $
+
+  15 Jun 2010; Torsten Veller <tove@gentoo.org> CDDB-1.22.0.ebuild:
+  Stable on amd64 and x86 (#323529)
 
 *CDDB-1.22.0 (27 Mar 2010)
 
