@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/pdf2oo-20090715.ebuild,v 1.6 2010/02/10 22:13:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/pdf2oo-20090715.ebuild,v 1.7 2010/06/15 16:19:24 hwoarang Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/zip
-	media-gfx/imagemagick
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	>=app-text/poppler-0.12.3-r3[utils]"
 
 S=${WORKDIR}/${PN}
