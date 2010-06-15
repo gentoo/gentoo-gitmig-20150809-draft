@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.83 2010/05/30 17:29:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.84 2010/06/15 13:08:19 arfrever Exp $
+
+  15 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gdal-1.5.2.ebuild, gdal-1.5.3.ebuild, gdal-1.6.0-r1.ebuild,
+  gdal-1.6.1.ebuild, gdal-1.6.2.ebuild, gdal-1.6.3.ebuild:
+  Delete calls to deprecated distutils_python_version().
 
   30 May 2010; Markos Chandras <hwoarang@gentoo.org> gdal-1.6.3-r1.ebuild:
   Stable on amd64 wrt bug #315659

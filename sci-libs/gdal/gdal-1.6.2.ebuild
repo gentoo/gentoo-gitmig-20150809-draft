@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.2.ebuild,v 1.4 2010/02/23 05:29:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.2.ebuild,v 1.5 2010/06/15 13:08:19 arfrever Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.5"
@@ -88,9 +88,6 @@ src_prepare() {
 }
 
 src_configure() {
-
-	distutils_python_version
-
 	local pkg_conf="${GDAL_CONFIGURE_OPTS}"
 	local use_conf=""
 
@@ -121,7 +118,7 @@ src_configure() {
 	fi
 
 	if useq python ; then
-	    use_conf="--with-pymoddir=/usr/$(get_libdir)/python${PYVER}/site-packages \
+	    use_conf="--with-pymoddir=$(python_get_sitedir) \
 		${use_conf}"
 	fi
 
