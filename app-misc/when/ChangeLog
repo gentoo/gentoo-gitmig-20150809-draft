@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/when
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.35 2009/08/01 02:44:09 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.36 2010/06/15 11:50:53 jlec Exp $
+
+*when-1.1.16-r1 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +when-1.1.16-r1.ebuild,
+  +files/when-prefix.patch:
+  QA, imported prefix changes
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -when-1.1.11.ebuild,
   -when-1.1.13.ebuild:

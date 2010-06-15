@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/supercat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/ChangeLog,v 1.16 2009/09/16 12:01:33 tanderson Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/ChangeLog,v 1.17 2010/06/15 11:50:39 jlec Exp $
+
+*supercat-0.5.5-r1 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +supercat-0.5.5-r1.ebuild:
+  QA, imported prefix changes
 
   16 Sep 2009; Thomas Anderson <tanderson@gentoo.org> metadata.xml:
   Fix email address.
