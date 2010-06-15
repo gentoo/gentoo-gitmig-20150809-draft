@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_musicindex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_musicindex/ChangeLog,v 1.1 2009/09/18 15:57:59 hollow Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_musicindex/ChangeLog,v 1.2 2010/06/15 13:16:23 arfrever Exp $
+
+  15 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mod_musicindex-1.2.5.ebuild:
+  Fix typo in dependencies (bug #324063).
 
 *mod_musicindex-1.2.5 (18 Sep 2009)
 
