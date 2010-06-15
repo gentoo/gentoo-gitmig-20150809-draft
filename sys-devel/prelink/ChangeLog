@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.71 2010/06/09 17:35:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.72 2010/06/15 08:02:01 angelos Exp $
+
+  15 Jun 2010; Christoph Mende <angelos@gentoo.org> prelink-20100106.ebuild:
+  Stable on amd64 wrt bug #321951
 
   09 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   prelink-20100106.ebuild:
