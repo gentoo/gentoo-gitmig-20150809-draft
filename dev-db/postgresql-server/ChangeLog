@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.64 2010/06/13 20:35:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.65 2010/06/15 20:50:14 patrick Exp $
+
+  15 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  postgresql-server-7.4.26.ebuild, postgresql-server-7.4.27.ebuild,
+  postgresql-server-8.0.22.ebuild, postgresql-server-8.0.23.ebuild,
+  postgresql-server-8.1.18.ebuild, postgresql-server-8.1.19.ebuild,
+  postgresql-server-8.2.14.ebuild, postgresql-server-8.2.15.ebuild,
+  postgresql-server-8.3.8.ebuild, postgresql-server-8.3.9.ebuild,
+  postgresql-server-8.4.1.ebuild, postgresql-server-8.4.1-r1.ebuild,
+  postgresql-server-8.4.2.ebuild, postgresql-server-8.4.2-r1.ebuild,
+  -postgresql-server-9.0_alpha4.ebuild, -postgresql-server-9.0_beta1.ebuild,
+  -postgresql-server-9.0_beta1-r1.ebuild:
+  Punt 9.0 alpha and beta1, fix repoman warnings
 
   13 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   postgresql-server-7.4.29.ebuild, postgresql-server-8.0.25.ebuild,

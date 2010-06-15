@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.2-r1.ebuild,v 1.9 2010/05/12 15:39:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.4.2-r1.ebuild,v 1.10 2010/06/15 20:50:14 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -8,7 +8,6 @@ PYTHON_DEPEND="python? 2"
 # weird test failures.
 RESTRICT="test"
 
-WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="none"
 inherit autotools eutils multilib python toolchain-funcs versionator
 
