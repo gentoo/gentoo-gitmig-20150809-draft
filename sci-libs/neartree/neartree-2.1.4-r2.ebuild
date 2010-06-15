@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-2.1.4-r1.ebuild,v 1.2 2010/03/07 18:52:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-2.1.4-r2.ebuild,v 1.1 2010/06/15 13:31:00 jlec Exp $
 
 EAPI="3"
 
@@ -24,11 +24,10 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-FLAGS.patch
 	epatch "${FILESDIR}"/${PV}-gcc4.3.patch
 	epatch "${FILESDIR}"/${PV}-iterator.patch
 	epatch "${FILESDIR}"/${PV}-test.patch
-	epatch "${FILESDIR}"/${PV}-dynlib.patch
+	epatch "${FILESDIR}"/${PV}-gentoo.patch
 
 	sed \
 		-e "s:GENTOOLIBDIR:$(get_libdir):g" \
@@ -44,13 +43,10 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so *.so.${PV} || die
-	dosym libCNearTree.so.${PV} /usr/$(get_libdir)/libCNearTree.so.$(get_version_component_range 1-2) || die
-	dosym libCNearTree.so.${PV} /usr/$(get_libdir)/libCNearTree.so.$(get_major_version) || die
-	dosym libCNearTree.so.${PV} /usr/$(get_libdir)/libCNearTree.so || die
-
-	insinto /usr/include
-	doins CNearTree.h rhrand.h || die
+	emake \
+		CC=$(tc-getCC) \
+		CXX=$(tc-getCXX) \
+		DESTDIR="${D}" install || die
 
 	dodoc README_NearTree.txt || die
 	dohtml *.html || die
