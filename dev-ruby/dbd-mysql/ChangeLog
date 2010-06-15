@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/dbd-mysql
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-mysql/ChangeLog,v 1.4 2009/12/20 12:04:51 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-mysql/ChangeLog,v 1.5 2010/06/15 18:07:32 graaff Exp $
+
+*dbd-mysql-0.4.4 (15 Jun 2010)
+
+  15 Jun 2010; Hans de Graaff <graaff@gentoo.org> +dbd-mysql-0.4.4.ebuild:
+  Version bump. Convert to ruby-ng.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> dbd-mysql-0.4.3.ebuild:
   Remove obsolete virtual/ruby dependency.
