@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.258 2010/06/04 20:36:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.259 2010/06/15 16:16:14 pacho Exp $
+
+*eog-2.30.1 (15 Jun 2010)
+
+  15 Jun 2010; Pacho Ramos <pacho@gentoo.org> +eog-2.30.1.ebuild,
+  +files/eog-2.30.1-libjpeg-configure.patch:
+  Add new version for Gnome 2.30. Also fix bug #319157 with upstream patch
+  (by Claudio Saavedra). Thanks to Roelof Wobben, Jacob Swanson and other
+  people involved in that bug report.
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> eog-2.28.2.ebuild:
   x86 stable, bug #314899
