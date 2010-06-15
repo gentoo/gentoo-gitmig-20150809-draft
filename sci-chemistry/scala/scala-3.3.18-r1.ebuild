@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18.ebuild,v 1.1 2010/02/04 21:03:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r1.ebuild,v 1.1 2010/06/15 14:21:52 jlec Exp $
 
 EAPI="2"
 
@@ -29,7 +29,9 @@ src_prepare() {
 }
 
 src_install() {
-	dobin ${PN} || die
+	exeinto /usr/libexec/ccp4/bin/
+	doexe ${PN} || die
+	dosym ../libexec/ccp4/bin/${PN} /usr/bin/${PN}
 	dodoc ${PN}.doc || die
 	dohtml ${PN}.html || die
 }
