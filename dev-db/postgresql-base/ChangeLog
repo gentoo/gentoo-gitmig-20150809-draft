@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.55 2010/06/13 20:32:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.56 2010/06/15 20:36:40 patrick Exp $
+
+*postgresql-base-9.0_beta2-r1 (15 Jun 2010)
+*postgresql-base-8.4.4-r2 (15 Jun 2010)
+
+  15 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  +postgresql-base-8.4.4-r2.ebuild, +postgresql-base-9.0_beta2-r1.ebuild:
+  Conditional patching for kerberos, thanks to Aaron W. Swenson. Fixes
+  #322539
 
   13 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   postgresql-base-7.4.29.ebuild, postgresql-base-8.0.25.ebuild,
