@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/sfcheck-7.03.18.ebuild,v 1.1 2010/03/12 07:48:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/sfcheck-7.03.18-r1.ebuild,v 1.1 2010/06/15 14:55:05 jlec Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/sfcheck.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4"
 IUSE=""
 
@@ -39,6 +39,8 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/${PN} || die
+	exeinto /usr/libexec/ccp4/bin/
+	doexe bin/${PN} || die
+	dosym ../libexec/ccp4/bin/${PN} /usr/bin/${PN}
 	dodoc readme ${PN}.com.gz doc/${PN}* || die
 }
