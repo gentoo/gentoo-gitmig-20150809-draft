@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.1.ebuild,v 1.1 2010/06/13 21:41:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.1.ebuild,v 1.2 2010/06/15 08:20:25 pacho Exp $
 
 EAPI="2"
 
@@ -61,6 +61,12 @@ src_prepare() {
 	# FIXME: Fix compilation flags crazyness
 	sed 's/CFLAGS="$CFLAGS $WARNING_FLAGS"//' \
 		-i configure.ac configure || die "sed 1 failed"
+
+	sed 's:-DG.*DISABLE_DEPRECATED::g' -i configure.ac configure \
+		|| die "sed 2 failed"
+
+	sed 's:-DG.*DISABLE_SINGLE_INCLUDES::g' -i configure.ac configure \
+		|| die "sed 3 failed"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
