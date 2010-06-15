@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.24.1.ebuild,v 1.1 2010/06/13 21:24:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.24.1.ebuild,v 1.2 2010/06/15 08:35:54 pacho Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc glade python"
 
-RDEPEND=">=dev-libs/glib-2.18.0
+RDEPEND=">=dev-libs/glib-2.22.0
 	>=x11-libs/gtk+-2.14.0
 	>=x11-libs/pango-1.22.0
 	sys-libs/ncurses
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.18.0
 	x11-libs/libX11
 	x11-libs/libXft"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-util/gtk-doc-1.0 )
+	doc? ( >=dev-util/gtk-doc-1.13 )
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
 	sys-devel/gettext"

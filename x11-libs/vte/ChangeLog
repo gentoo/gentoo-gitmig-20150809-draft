@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.248 2010/06/13 21:24:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.249 2010/06/15 08:35:54 pacho Exp $
+
+  15 Jun 2010; Pacho Ramos <pacho@gentoo.org> vte-0.24.1.ebuild:
+  Update glib and gtk-doc dependencies per bug #324007 (by Nathan Phillip
+  Brink)
 
 *vte-0.24.1 (13 Jun 2010)
 
