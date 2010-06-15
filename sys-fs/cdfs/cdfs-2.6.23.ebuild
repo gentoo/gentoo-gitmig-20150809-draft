@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/cdfs-2.6.23.ebuild,v 1.2 2009/12/05 22:09:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cdfs/cdfs-2.6.23.ebuild,v 1.3 2010/06/15 07:26:00 tove Exp $
 
 inherit eutils linux-mod
 
@@ -12,8 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPENDS=""
-DEPENDS=""
 
 MODULE_NAMES="cdfs(fs)"
 CONFIG_CHECK="BLK_DEV_LOOP"
