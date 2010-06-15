@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.40.ebuild,v 1.7 2009/07/27 09:44:00 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.40.ebuild,v 1.8 2010/06/15 13:10:39 arfrever Exp $
 
 EAPI=2
 inherit distutils
@@ -42,9 +42,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
 	# Note: Must use '-f' because python_mod_optimize sometimes leaves old files
 	# around.
-	python_mod_optimize -f \
-		/usr/$(get_libdir)/python${PYVER}/site-packages/zeroinstall
+	python_mod_optimize -f $(python_get_sitedir)/zeroinstall
 }

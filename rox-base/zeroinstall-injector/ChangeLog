@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/zeroinstall-injector
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.23 2010/04/02 13:58:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.24 2010/06/15 13:10:39 arfrever Exp $
+
+  15 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zeroinstall-injector-0.40.ebuild:
+  Delete call to deprecated python_version() (bug #323981).
 
   02 Apr 2010; Jim Ramsay <lack@gentoo.org>
   zeroinstall-injector-0.43-r1.ebuild:
