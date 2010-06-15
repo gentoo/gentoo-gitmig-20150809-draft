@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/refmac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.8 2010/05/27 08:50:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.9 2010/06/15 07:34:44 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +refmac-5.5.0110-r1.ebuild:
+  Unbundled makecif into sci-chemistry/makecif
+
+*refmac-5.5.0110-r1 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +refmac-5.5.0110-r1.ebuild:
+  Exclude makecif from refmac cause we have sci-chemistry/makecif now
 
 *refmac-5.6.0077 (27 May 2010)
 
