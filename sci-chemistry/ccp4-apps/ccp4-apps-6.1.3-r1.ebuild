@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r1.ebuild,v 1.2 2010/02/26 19:06:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r1.ebuild,v 1.3 2010/06/15 08:48:37 jlec Exp $
 
 EAPI="2"
 
@@ -53,8 +53,6 @@ X11DEPS="
 	x11-libs/libX11
 	x11-libs/libXaw
 	x11-libs/libXt
-	x11-libs/libjwc_c
-	x11-libs/libjwc_f
 	x11-libs/libxdl_view"
 
 TKDEPS="
@@ -87,6 +85,8 @@ RDEPEND="X? ( ${X11DEPS} )
 	app-shells/tcsh
 	dev-python/pyxml
 	dev-libs/libxml2
+	dev-libs/libjwc_c
+	dev-libs/libjwc_f
 	dev-libs/boehm-gc
 	!app-office/sc
 	!<sci-chemistry/ccp4-6.1.2"
