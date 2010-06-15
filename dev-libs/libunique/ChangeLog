@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.23 2010/06/14 14:43:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.24 2010/06/15 14:14:22 darkside Exp $
+
+  15 Jun 2010; Jeremy Olexa <darkside@gentoo.org> libunique-1.1.6.ebuild:
+  Add back dropped Gentoo Prefix keywords. As tested by myself
 
   14 Jun 2010; Olivier Crête <tester@gentoo.org> libunique-1.1.6.ebuild:
   Remove duplicated keywords
