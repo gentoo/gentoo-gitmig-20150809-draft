@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.2.ebuild,v 1.4 2010/05/13 20:05:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.2.ebuild,v 1.5 2010/06/15 16:01:05 ssuominen Exp $
 
 EAPI=3
-inherit libtool
+inherit eutils libtool multilib
 
 DESCRIPTION="Portable Network Graphics library"
 HOMEPAGE="http://www.libpng.org/"
@@ -25,19 +25,17 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ANNOUNCE CHANGES README TODO || die
-	dosbin "${FILESDIR}"/libpng-1.4.x-update.sh || die
+	dodoc ANNOUNCE CHANGES README TODO
+	dosbin "${FILESDIR}"/libpng-1.4.x-update.sh
+}
+
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libpng12.so.0
 }
 
 pkg_postinst() {
 	echo
-	ewarn "Moving from libpng 1.2.x to 1.4.x will break installed libtool .la"
-	ewarn "files."
+	elog "Run /usr/sbin/libpng-1.4.x-update.sh to fix libtool archives (.la)"
 	echo
-	elog "Run /usr/sbin/libpng-1.4.x-update.sh at your own risk only if"
-	elog "revdep-rebuild fails."
-	echo
-	elog "Don't forget \"man emerge\" and useful parameters like --skip-first,"
-	elog "--resume and --keep-going."
-	echo
+	preserve_old_lib_notify /usr/$(get_libdir)/libpng12.so.0
 }
