@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/tig-0.15.ebuild,v 1.2 2010/06/15 17:35:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/tig-0.16.ebuild,v 1.1 2010/06/15 17:35:42 jlec Exp $
 
 inherit bash-completion
 
@@ -16,7 +16,6 @@ IUSE=""
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 		dev-vcs/git"
-
 
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
