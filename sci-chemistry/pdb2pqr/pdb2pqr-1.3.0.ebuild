@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.3.0.ebuild,v 1.6 2009/05/24 07:50:41 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.3.0.ebuild,v 1.7 2010/06/15 12:46:05 arfrever Exp $
 
 inherit eutils fortran multilib flag-o-matic distutils
 
@@ -36,8 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	python_version
-	INPATH="/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}"
+	INPATH="$(python_get_sitedir)/${PN}"
 
 	insinto "${INPATH}"
 	doins __init__.py || \
@@ -67,7 +66,7 @@ src_install() {
 	# generate pdb2pqr wrapper
 	cat >> "${T}"/${PN} <<-EOF
 		#!/bin/sh
-		${python} ${INPATH}/${PN}.py \$*
+		$(PYTHON) ${INPATH}/${PN}.py \$*
 	EOF
 
 	exeinto /usr/bin
