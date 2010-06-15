@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1.ebuild,v 1.1 2010/06/13 19:30:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1-r1.ebuild,v 1.1 2010/06/15 15:47:52 pacho Exp $
 
 EAPI="2"
 
@@ -52,6 +52,13 @@ pkg_setup() {
 		$(use_enable libnotify)
 		$(use_enable nautilus)
 		$(use_enable test tests)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Use gpgme_engine_check_version() before gpgm_new() due current gpgme, bug #281729
+	epatch "${FILESDIR}/${PN}-2.28.1-gpgme_check_version.patch"
 }
 
 src_install() {
