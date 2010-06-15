@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.0.ebuild,v 1.1 2010/03/14 14:37:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.0.ebuild,v 1.2 2010/06/15 15:48:53 jlec Exp $
 
-EAPI=2
+EAPI="3"
 
 inherit elisp-common multilib wxwidgets
 
@@ -13,8 +13,9 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
 
 LICENSE="gnuplot GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="cairo doc emacs +gd ggi latex lua pdf plotutils readline svga thin-splines wxwidgets X xemacs"
+
 RESTRICT="wxwidgets? ( test )"
 
 RDEPEND="!app-emacs/gnuplot-mode
@@ -48,7 +49,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 GP_VERSION="${PV%.*}"
 E_SITEFILE="50${PN}-gentoo.el"
-TEXMF="/usr/share/texmf-site"
+TEXMF="${EPREFIX}/usr/share/texmf-site"
 
 src_prepare() {
 	# Add special version identification as required by provision 2
@@ -72,11 +73,11 @@ src_configure() {
 	myconf="${myconf} $(use_with cairo)"
 	myconf="${myconf} $(use_with doc tutorial)"
 	myconf="${myconf} $(use_with gd)"
-	myconf="${myconf} $(use_with ggi ggi /usr/$(get_libdir))"
-	myconf="${myconf} $(use_with ggi xmi /usr/$(get_libdir))"
+	myconf="${myconf} $(use_with ggi ggi ${EPREFIX}/usr/$(get_libdir))"
+	myconf="${myconf} $(use_with ggi xmi ${EPREFIX}/usr/$(get_libdir))"
 	myconf="${myconf} $(use_with lua)"
-	myconf="${myconf} $(use_with pdf pdf /usr/$(get_libdir))"
-	myconf="${myconf} $(use_with plotutils plot /usr/$(get_libdir))"
+	myconf="${myconf} $(use_with pdf pdf "${EPREFIX}"/usr/$(get_libdir))"
+	myconf="${myconf} $(use_with plotutils plot "${EPREFIX}"/usr/$(get_libdir))"
 	myconf="${myconf} $(use_with svga linux-vga)"
 	myconf="${myconf} $(use_enable thin-splines)"
 	myconf="${myconf} $(use_enable wxwidgets)"
@@ -91,13 +92,13 @@ src_configure() {
 		einfo "Configuring gnuplot-mode for XEmacs ..."
 		use emacs && cp -Rp lisp lisp-xemacs || ln -s lisp lisp-xemacs
 		cd "${S}/lisp-xemacs"
-		econf --with-lispdir="/usr/lib/xemacs/site-packages/${PN}" EMACS=xemacs
+		econf --with-lispdir="${EPREFIX}/usr/lib/xemacs/site-packages/${PN}" EMACS=xemacs
 	fi
 
 	if use emacs; then
 		einfo "Configuring gnuplot-mode for GNU Emacs ..."
 		cd "${S}/lisp"
-		econf --with-lispdir="${SITELISP}/${PN}" EMACS=emacs
+		econf --with-lispdir="${EPREFIX}${SITELISP}/${PN}" EMACS=emacs
 	fi
 }
 
@@ -149,7 +150,7 @@ src_install () {
 		cd "${S}/lisp"
 		emake DESTDIR="${D}" install || die
 		# info-look* is included with >=emacs-21
-		rm -f "${D}${SITELISP}/${PN}"/info-look*
+		rm -f "${ED}${SITELISP}/${PN}"/info-look*
 
 		# Gentoo emacs site-lisp configuration
 		echo "(add-to-list 'load-path \"@SITELISP@\")" > ${E_SITEFILE}
@@ -167,8 +168,8 @@ src_install () {
 		# Demo files
 		insinto /usr/share/${PN}/${GP_VERSION}
 		doins -r demo || die
-		rm -f "${D}"/usr/share/${PN}/${GP_VERSION}/demo/Makefile*
-		rm -f "${D}"/usr/share/${PN}/${GP_VERSION}/demo/binary*
+		rm -f "${ED}"/usr/share/${PN}/${GP_VERSION}/demo/Makefile*
+		rm -f "${ED}"/usr/share/${PN}/${GP_VERSION}/demo/binary*
 		# Manual
 		dodoc docs/gnuplot.pdf
 		# Tutorial
