@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/mafft
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.6 2009/07/27 05:53:45 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.7 2010/06/15 13:17:02 jlec Exp $
+
+*mafft-6.811 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/6.811-respect.patch,
+  +mafft-6.811.ebuild:
+  Version BUmp, keyworded for prefix, repecting multilib and LDFLAGS
 
 *mafft-6.707 (27 Jul 2009)
 
