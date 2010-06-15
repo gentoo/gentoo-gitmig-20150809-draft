@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r1.ebuild,v 1.3 2010/05/28 20:17:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.5.0-r2.ebuild,v 1.1 2010/06/15 12:48:48 jlec Exp $
 
 EAPI="3"
 
@@ -80,7 +80,7 @@ src_install() {
 		# generate pdb2pqr wrapper
 		cat >> "${T}"/${PN}-$(python_get_version) <<-EOF
 			#!/bin/sh
-			${PYTHON} ${EPREFIX}/${INPATH}/${PN}.py \$*
+			$(PYTHON) ${EPREFIX}/${INPATH}/${PN}.py \$*
 		EOF
 
 		dobin "${T}"/${PN}-$(python_get_version) || die "Failed to install pdb2pqr wrapper."
