@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.29 2010/06/12 05:20:47 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.30 2010/06/15 18:41:40 cardoe Exp $
+
+*qemu-kvm-0.12.4-r1 (15 Jun 2010)
+
+  15 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  +qemu-kvm-0.12.4-r1.ebuild,
+  +files/qemu-kvm-0.12.4-large-virtio-corruption.patch:
+  Fix issue with large virtio disks getting corrupted. bug #321005
 
   12 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   qemu-kvm-9999.ebuild:
