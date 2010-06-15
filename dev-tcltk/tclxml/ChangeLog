@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.34 2010/03/07 08:52:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.35 2010/06/15 07:53:32 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> tclxml-3.2.ebuild,
+  tclxml-3.2-r1.ebuild:
+  Added missing DEP on dev-tcltk/tclxml, #323411
 
 *tclxml-3.2-r1 (07 Mar 2010)
 *tclxml-3.1-r2 (07 Mar 2010)
