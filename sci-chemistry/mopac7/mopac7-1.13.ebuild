@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.13.ebuild,v 1.1 2008/07/08 06:43:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.13.ebuild,v 1.2 2010/06/15 16:57:35 jlec Exp $
 
 WANT_AUTOMAKE="1.8"
-WANT_AUTOCONF="latest"
 
 inherit autotools
 
