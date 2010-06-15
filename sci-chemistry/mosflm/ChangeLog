@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mosflm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.2 2010/02/13 23:58:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.3 2010/06/15 14:09:13 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> mosflm-7.0.6-r1.ebuild:
+  keyworded for linux prefix
 
   13 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +mosflm-7.0.6.ebuild:
   fix for test and don't statically link against jpeg
