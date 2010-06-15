@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.31 2010/06/09 06:37:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.32 2010/06/15 18:02:51 xarthisius Exp $
+
+*apbs-1.2.1b-r4 (15 Jun 2010)
+
+  15 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +apbs-1.2.1b-r4.ebuild, +files/apbs-1.2.1b-multilib.patch,
+  files/apbs-1.2.1b-openmp.patch, +files/apbs-1.2.1b-parallelbuild.patch,
+  +files/apbs-1.2.1b-shared.patch, metadata.xml:
+  Adding shared libs, fix parallel build, fix install paths on multilib
 
   09 Jun 2010; Justin Lecher <jlec@gentoo.org> -apbs-1.2.0.ebuild,
   -files/apbs-1.2.0-install-fix.patch, -apbs-1.2.1b.ebuild,
