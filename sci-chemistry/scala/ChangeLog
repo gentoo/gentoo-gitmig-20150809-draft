@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/scala
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/ChangeLog,v 1.2 2010/06/15 14:21:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/ChangeLog,v 1.3 2010/06/15 14:49:12 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> scala-3.3.18-r1.ebuild:
+  keyworded for linux prefix
 
 *scala-3.3.18-r1 (15 Jun 2010)
 
