@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-compat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.44 2010/06/11 14:34:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/ChangeLog,v 1.45 2010/06/15 18:00:34 darkside Exp $
+
+  15 Jun 2010; Jeremy Olexa <darkside@gentoo.org>
+  emul-linux-x86-compat-20091231-r1.ebuild,
+  emul-linux-x86-compat-20100611.ebuild:
+  Drop ~amd64-linux kws, legacy cruft
 
 *emul-linux-x86-compat-20100611 (11 Jun 2010)
 
