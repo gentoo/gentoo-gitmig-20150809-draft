@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/molrep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.4 2010/04/25 11:29:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/ChangeLog,v 1.5 2010/06/15 10:51:43 jlec Exp $
+
+*molrep-11.0.00 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  +files/11.0.00-respect-FLAGS.patch, +molrep-11.0.00.ebuild,
+  +files/11.0.00-test.patch:
+  Version Bump, test cases fixed
 
 *molrep-10.2.38 (12 Mar 2010)
 
