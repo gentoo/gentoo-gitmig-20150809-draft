@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4271 2010/06/15 08:13:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4272 2010/06/15 14:56:49 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> package.mask:
+  Masking sci-chemistry/pdb-extract-3.004-r2 for bug 314053
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> updates/2Q-2010:
   move dev-util/hgsvn dev-vcs/hgsvn
