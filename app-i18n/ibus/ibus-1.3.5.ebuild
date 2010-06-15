@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.3-r2.ebuild,v 1.1 2010/05/14 16:43:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.5.ebuild,v 1.1 2010/06/15 17:58:35 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,21 +13,22 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +gconf nls +python"
+IUSE="doc +gconf gtk nls +python vala X"
 
 RDEPEND=">=dev-libs/glib-2.18
-	>=x11-libs/gtk+-2
+	x11-libs/gtk+:2
 	gconf? ( >=gnome-base/gconf-2.12 )
 	>=gnome-base/librsvg-2
 	sys-apps/dbus
 	app-text/iso-codes
-	x11-libs/libX11
 	python? (
-		>=dev-python/pygobject-2.14
 		dev-python/notify-python
 		>=dev-python/dbus-python-0.83
 	)
-	nls? ( virtual/libintl )"
+	nls? ( virtual/libintl )
+	vala? ( dev-lang/vala )
+	X? ( x11-libs/libX11 )"
+#	x11-libs/gtk+:3
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.8.1
 	dev-perl/XML-Parser
@@ -67,8 +68,12 @@ src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
 		$(use_enable gconf) \
+		$(use_enable gtk gtk2) \
 		$(use_enable nls) \
-		$(use_enable python) || die
+		$(use_enable python) \
+		$(use_enable vala) \
+		$(use_enable X xim) || die
+		#$(use_enable gtk gtk3) \
 }
 
 src_install() {

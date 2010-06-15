@@ -9,5 +9,6 @@ developers to develop input method easily.
 </longdescription>
 <use>
   <flag name='gconf'>Enable support for <pkg>gnome-base/gconf</pkg></flag>
+  <flag name='vala'>Enable support for <pkg>dev-lang/vala</pkg></flag>
 </use>
 </pkgmetadata>
