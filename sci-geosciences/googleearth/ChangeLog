@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.12 2010/06/15 07:56:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.13 2010/06/15 08:55:42 caster Exp $
+
+*googleearth-5.2.1.1329_beta (15 Jun 2010)
+
+  15 Jun 2010; Vlastimil Babka <caster@gentoo.org>
+  +googleearth-5.2.1.1329_beta.ebuild:
+  Version bump. Enables qt-bundled flag by default due to crashes on
+  startup.
 
   15 Jun 2010; Vlastimil Babka <caster@gentoo.org>
   -googleearth-4.2.205.5730.ebuild, -googleearth-4.3.7284.3916.ebuild,
