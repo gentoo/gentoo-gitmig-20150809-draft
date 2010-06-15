@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/inotify-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.30 2009/11/26 10:37:20 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.31 2010/06/15 11:47:51 polynomial-c Exp $
+
+*inotify-tools-3.14 (15 Jun 2010)
+
+  15 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +inotify-tools-3.14.ebuild:
+  non-maintainer commit: Version bump (bug #315135)
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org>
   inotify-tools-3.13-r1.ebuild:
