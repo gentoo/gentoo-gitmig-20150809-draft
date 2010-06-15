@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.32 2010/06/12 22:55:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.33 2010/06/15 17:29:16 cardoe Exp $
+
+*virt-manager-0.8.4-r2 (15 Jun 2010)
+
+  15 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
+  +virt-manager-0.8.4-r2.ebuild,
+  +files/virt-manager-0.8.4-default-keyring.patch:
+  Fix issue with default keyring usage. Fixes upstream:
+  https://bugzilla.redhat.com/show_bug.cgi?id=603954 and bug #324027
 
   12 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
   +files/virt-manager-0.8.2-ssh-tunnel-shutdown.patch:
