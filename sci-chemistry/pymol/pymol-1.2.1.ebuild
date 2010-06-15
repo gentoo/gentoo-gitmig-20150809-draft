@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.1.ebuild,v 1.8 2010/02/06 15:26:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.1.ebuild,v 1.9 2010/06/15 12:54:07 arfrever Exp $
 
 EAPI="2"
 
@@ -35,10 +35,6 @@ DEPEND="dev-python/pmw
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${PN}
-
-pkg_setup(){
-	python_version
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}/${P}-data-path.patch \
@@ -88,7 +84,7 @@ src_install() {
 
 	cat >> "${T}"/pymol <<- EOF
 	#!/bin/sh
-	${python} -O \${PYMOL_PATH}/__init__.py \$*
+	$(PYTHON) -O \${PYMOL_PATH}/__init__.py \$*
 	EOF
 
 	dobin "${T}"/pymol || die "Failed to install wrapper."
