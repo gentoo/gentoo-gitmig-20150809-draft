@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.27 2010/04/17 13:30:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.28 2010/06/15 14:33:40 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> imake-1.0.3.ebuild:
+  Imported prefix changes, tested by me
 
 *imake-1.0.3 (17 Apr 2010)
 
