@@ -1,9 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.7.ebuild,v 1.9 2009/10/07 15:33:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.7.ebuild,v 1.10 2010/06/15 16:53:10 jlec Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 
 inherit autotools eutils multilib toolchain-funcs
 
