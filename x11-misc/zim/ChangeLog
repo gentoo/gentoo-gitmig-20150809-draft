@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/zim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.9 2010/05/28 20:42:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.10 2010/06/15 15:27:06 hwoarang Exp $
+
+  15 Jun 2010; Markos Chandras <hwoarang@gentoo.org> zim-0.46.ebuild:
+  Fixing testsuite wrt bug #323073
 
 *zim-0.46 (28 May 2010)
 

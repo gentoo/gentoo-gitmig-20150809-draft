@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.46.ebuild,v 1.1 2010/05/28 20:42:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.46.ebuild,v 1.2 2010/06/15 15:27:06 hwoarang Exp $
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
 
 EAPI="3"
 
-inherit eutils fdo-mime distutils
+inherit eutils virtualx fdo-mime distutils
 
 DESCRIPTION="A desktop wiki"
 HOMEPAGE="http://zim-wiki.org/"
@@ -42,7 +42,8 @@ src_prepare() {
 }
 
 src_test() {
-	$(PYTHON) test.py || die "src_test failed"
+	export maketype="$(PYTHON)"
+	virtualmake test.py || die "src_test failed"
 }
 
 src_install () {
