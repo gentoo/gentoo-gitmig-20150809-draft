@@ -1,9 +1,6 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.117 2010/06/15 12:07:59 jlec Exp $
-
-  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +tcl-8.5.8-r1.ebuild:
-  QA, imported prefix changes
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.118 2010/06/15 14:18:03 jlec Exp $
 
 *tcl-8.5.8-r1 (15 Jun 2010)
 
