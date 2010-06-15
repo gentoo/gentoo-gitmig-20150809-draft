@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.40 2010/01/03 14:23:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.41 2010/06/15 13:47:35 jlec Exp $
+
+*t-coffee-8.69 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/8.69-flags.patch,
+  +t-coffee-8.69.ebuild, +files/8.69-test.patch:
+  Version bump, included test, respecting LDFLAGS and keyworded for linux
+  prefix
 
   03 Jan 2010; Pacho Ramos <pacho@gentoo.org> t-coffee-8.14.ebuild:
   amd64 stable, bug 298765
