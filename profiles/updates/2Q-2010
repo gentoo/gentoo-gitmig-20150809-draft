@@ -19,3 +19,4 @@ move dev-util/cola dev-vcs/cola
 move dev-cpp/Ice dev-libs/Ice
 move mail-client/mozilla-thunderbird mail-client/thunderbird
 move dev-perl/ShadowHash dev-perl/Tie-ShadowHash
+move dev-util/hgsvn dev-vcs/hgsvn
