@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/oasis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.5 2010/05/22 10:04:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.6 2010/06/15 14:31:32 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> oasis-4.0-r1.ebuild:
+  Installing html at correct place
 
 *oasis-4.0-r1 (22 May 2010)
 
