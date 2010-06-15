@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.24 2010/06/15 14:14:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.25 2010/06/15 16:30:12 pacho Exp $
+
+  15 Jun 2010; Pacho Ramos <pacho@gentoo.org> libunique-1.1.6.ebuild:
+  Pass --enable-introspection=no since we are not yet ready for
+  introspection usage due issues like bug 324045
 
   15 Jun 2010; Jeremy Olexa <darkside@gentoo.org> libunique-1.1.6.ebuild:
   Add back dropped Gentoo Prefix keywords. As tested by myself
