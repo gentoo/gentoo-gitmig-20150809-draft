@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4.20100510.ebuild,v 1.1 2010/05/14 14:21:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4.20100510.ebuild,v 1.2 2010/06/15 12:41:28 jlec Exp $
 
 EAPI="3"
 inherit eutils prefix
@@ -8,16 +8,17 @@ inherit eutils prefix
 DESCRIPTION="Adds a lot of image formats to Tcl/Tk"
 HOMEPAGE="http://sourceforge.net/projects/tkimg/"
 # src built with:
-# svn export https://tkimg.svn.sourceforge.net/svnroot/tkimg/trunk tkimg-1.3.YYYYMMDD
-# tar cvfj tkimg-1.3.YYYYMMDD.tar.bz2  tkimg-1.3.YYYYMMDD
+# svn export https://tkimg.svn.sourceforge.net/svnroot/tkimg/trunk tkimg-1.4.YYYYMMDD
+# tar cvfj tkimg-1.4.YYYYMMDD.tar.bz2  tkimg-1.4.YYYYMMDD
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 IUSE="doc"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 
-DEPEND="dev-lang/tk
+DEPEND="
+	dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
 	>=media-libs/libpng-1.4
 	media-libs/jpeg
