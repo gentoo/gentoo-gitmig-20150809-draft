@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/cvector-1.0.3-r1.ebuild,v 1.1 2010/03/07 18:30:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/cvector-1.0.3-r1.ebuild,v 1.2 2010/06/15 12:12:30 jlec Exp $
 
 inherit base eutils toolchain-funcs versionator
 
@@ -15,9 +15,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
-
-RDEPEND=""
-DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 
