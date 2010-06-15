@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.6.3.ebuild,v 1.1 2010/06/13 01:55:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.6.3.ebuild,v 1.2 2010/06/15 11:59:57 jlec Exp $
 
 EAPI="2"
 
@@ -10,13 +10,14 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE=""
 
-DEPEND="sys-apps/diffutils
+DEPEND="
+	sys-apps/diffutils
 	sys-apps/less"
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog NEWS README
+	dodoc ChangeLog NEWS README || die
 }
