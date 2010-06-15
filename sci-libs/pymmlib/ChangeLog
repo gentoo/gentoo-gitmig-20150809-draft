@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pymmlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.16 2010/04/25 10:47:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.17 2010/06/15 13:01:50 arfrever Exp $
+
+  15 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pymmlib-0.9.8.ebuild:
+  Delete call to deprecated python_version().
 
 *pymmlib-1.0.0-r1 (25 Apr 2010)
 
