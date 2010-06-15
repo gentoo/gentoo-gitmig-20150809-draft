@@ -1,11 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.8-r1.ebuild,v 1.2 2010/06/15 16:49:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.8-r1.ebuild,v 1.3 2010/06/15 16:49:50 jlec Exp $
 
 EAPI="3"
-
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
 
 inherit autotools eutils flag-o-matic multilib toolchain-funcs
 
