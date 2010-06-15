@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5664 2010/06/14 18:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5665 2010/06/15 11:07:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -188,7 +188,6 @@ app-editors/gedit-plugins:joinlines - Join several lines or split long ones
 app-editors/gedit-plugins:showtabbar - Add a menu entry to show/hide the tabbar
 app-editors/gedit-plugins:smartspaces - Forget you're not using tabulations
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
-app-editors/gvim:aqua - Include support for the Aqua / Carbon GUI
 app-editors/gvim:netbeans - Include netbeans externaleditor integration support
 app-editors/gvim:nextaw - Include support for the neXtaw GUI
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
