@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.0.1.ebuild,v 1.2 2010/03/05 09:52:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.0.1.ebuild,v 1.3 2010/06/15 17:56:20 arfrever Exp $
 
 EAPI="2"
 
@@ -28,7 +28,6 @@ S=${WORKDIR}/${PN}
 PYTHON_MODNAME=bzrlib
 
 src_test() {
-	python_version
 	einfo "Running testsuite..."
 	# put a linked copy of the bzr core into the build directory to properly
 	# test the "built" version of bzrtools
