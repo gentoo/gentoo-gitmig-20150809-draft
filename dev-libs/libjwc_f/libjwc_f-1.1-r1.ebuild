@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.1 2010/06/15 08:29:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.2 2010/06/15 14:19:47 jlec Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ FORTRAN="g77 gfortran ifc"
 
 PATCH="612"
 
-DESCRIPTION="additional c library for ccp4"
+DESCRIPTION="additional fortran library for ccp4"
 HOMEPAGE="http://www.ccp4.ac.uk/main.html"
 SRC_URI="ftp://ftp.ccp4.ac.uk/jwc/${P}.tar.gz"
 
