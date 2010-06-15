@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.19.ebuild,v 1.6 2009/08/30 12:24:35 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.19.ebuild,v 1.7 2010/06/15 16:54:35 arfrever Exp $
 
 EAPI="2"
 inherit eutils multilib perl-module python toolchain-funcs
@@ -54,7 +54,6 @@ src_compile() {
 }
 
 src_install() {
-	python_version
 	emake prefix="/usr" DESTDIR="${D}" LIBDIR="$(get_libdir)" install || die "make install failed"
 
 	dodoc README
@@ -81,9 +80,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/stfl.py
+	python_mod_optimize $(python_get_libdir)/stfl.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_libdir)/stfl.py
 }

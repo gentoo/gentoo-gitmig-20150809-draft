@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.26 2010/06/05 15:30:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.27 2010/06/15 16:54:35 arfrever Exp $
+
+  15 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  stfl-0.19.ebuild:
+  Delete deprecation warnings.
 
   05 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> stfl-0.21.ebuild:
   x86 stable wrt bug #318317
