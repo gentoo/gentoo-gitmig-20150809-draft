@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.70.ebuild,v 1.3 2010/06/14 20:21:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/xsensors-0.70.ebuild,v 1.4 2010/06/15 11:35:08 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="A hardware health information viewer, interface to lm-sensors."
 HOMEPAGE="http://www.linuxhardware.org/xsensors/"
@@ -17,6 +18,10 @@ RDEPEND="x11-libs/gtk+:2
 	>=sys-apps/lm_sensors-3"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gtk220.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
