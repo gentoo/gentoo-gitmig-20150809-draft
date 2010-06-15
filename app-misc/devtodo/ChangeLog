@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.81 2008/08/10 13:13:13 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.82 2010/06/15 11:21:04 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> devtodo-0.1.20.ebuild:
+  QA, imported prefix changes
 
   10 Aug 2008; Markus Ullmann <jokey@gentoo.org> devtodo-0.1.20.ebuild:
   Fix autotools mess wrt bug #226535

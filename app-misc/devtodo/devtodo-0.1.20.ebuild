@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.12 2008/08/10 13:13:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.13 2010/06/15 11:21:04 jlec Exp $
+
+EAPI="3"
 
 inherit autotools eutils bash-completion flag-o-matic
 
@@ -10,25 +12,23 @@ SRC_URI="http://swapoff.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=sys-libs/ncurses-5.2
+RDEPEND="
+	>=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	replace-flags -O[23] -O1
-	econf --sysconfdir=/etc/devtodo || die "econf failed"
-	emake || die "emake failed"
+	econf --sysconfdir="${EPREFIX}/etc/devtodo"
 }
 
 src_install() {
@@ -39,7 +39,7 @@ src_install() {
 	dobashcompletion contrib/${PN}.bash-completion ${PN}
 	rm contrib/${PN}.bash-completion
 	docinto contrib
-	dodoc contrib/*
+	dodoc contrib/* || die
 }
 
 pkg_postinst() {
