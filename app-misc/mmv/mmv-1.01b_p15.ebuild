@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p15.ebuild,v 1.1 2010/05/25 17:32:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b_p15.ebuild,v 1.2 2010/06/15 11:25:13 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 S="${WORKDIR}"/${PN}-${MY_VER}.orig
@@ -27,7 +27,11 @@ src_prepare() {
 }
 
 src_compile() {
-	append-lfs-flags
+	# i wonder how this works on other platforms if CFLAGS from makefile are
+	# overridden, see bug #218082
+	[[ ${CHOST} == *-interix* ]] && append-flags -DIS_SYSV -DHAS_RENAME -DHAS_DIRENT
+	[[ ${CHOST} == *-interix* ]] || append-lfs-flags
+
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 

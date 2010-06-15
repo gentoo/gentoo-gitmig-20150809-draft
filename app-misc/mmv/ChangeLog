@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.22 2010/05/25 17:32:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.23 2010/06/15 11:25:13 jlec Exp $
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> mmv-1.01b_p15.ebuild:
+  imported prefix changes
 
 *mmv-1.01b_p15 (25 May 2010)
 
