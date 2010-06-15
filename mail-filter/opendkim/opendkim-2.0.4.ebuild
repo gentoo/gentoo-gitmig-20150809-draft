@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.4.ebuild,v 1.1 2010/05/18 08:08:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.4.ebuild,v 1.2 2010/06/15 12:00:07 dragonheart Exp $
 
 EAPI="2"
 
@@ -45,6 +45,7 @@ pkg_setup() {
 src_prepare() {
 	sed -i -e 's:/var/db/dkim:/etc/opendkim:g' \
 	       -e 's:/etc/mail:/etc/opendkim:g' \
+		   -e 's:^#[[:space:]]*PidFile.*:PidFile /var/run/opendkim/opendkim.pid:' \
 		   opendkim/opendkim.conf.sample
 }
 

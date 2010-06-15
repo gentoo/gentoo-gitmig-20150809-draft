@@ -1,10 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/files/opendkim.init,v 1.1 2009/10/06 09:10:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/files/opendkim.init,v 1.2 2010/06/15 12:00:07 dragonheart Exp $
 
 CONFFILE=/etc/opendkim/${SVCNAME}.conf
-PIDFILE=/var/run/opendkim/${SVCNAME}.pid
 
 depend() {
 	use dns logger net
@@ -12,19 +11,18 @@ depend() {
 
 check_cfg() {
 
+	PIDFILE=$(sed -ne 's/^[[:space:]]*PidFile[[:space:]]\+//p' "${CONFFILE}")
 	if [ ! -f "${CONFFILE}" ] ; then
 		eerror "Configuration file ${CONFFILE} is missing"
+		return 1
+	fi
+	if [ -z "${PIDFILE}" ] ; then
+		eerror "Configuration file needs PidFile setting - recommend adding 'PidFile /var/run/opendkim/${SVCNAME}.pid' to ${CONFFILE}"
 		return 1
 	fi
 
 	if egrep -q '^[[:space:]]*Background[[:space:]]+no' "${CONFFILE}" ; then
 		eerror "${SVCNAME} service cannot run with Background key set to yes!"
-		return 1
-	fi
-
-	if egrep -q '^[[:space:]]*PidFile[[:space:]]' "${CONFFILE}"; then
-		eerror "Please remove PidFile key from your configuration file!"
-		eerror "${SVCNAME} is automatically configured to use ${PIDFILE} as pid file."
 		return 1
 	fi
 }
@@ -34,17 +32,19 @@ start() {
 	
 	# Remove stalled Unix socket if no other process is using it
 	local UNIX_SOCKET=$(sed -ne 's/^[[:space:]]*Socket[[:space:]]\+\(unix\|local\)://p' "${CONFFILE}")
+
 	if [ -S "${UNIX_SOCKET}" ] && ! fuser -s "${UNIX_SOCKET}"; then
 		rm "${UNIX_SOCKET}"
 	fi
 
 	ebegin "Starting OpenDKIM"
 	start-stop-daemon --start --pidfile "${PIDFILE}" \
-		--exec /usr/sbin/opendkim -- -x "${CONFFILE}" -P "${PIDFILE}"
+		--exec /usr/sbin/opendkim -- -x "${CONFFILE}"
 	eend $?
 }
 
 stop() {
+	check_cfg || return 1
 	ebegin "Stopping OpenDKIM"
 	start-stop-daemon --stop --pidfile "${PIDFILE}"
 	eend $?
