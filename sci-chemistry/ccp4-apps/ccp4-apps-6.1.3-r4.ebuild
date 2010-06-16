@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r3.ebuild,v 1.5 2010/06/15 17:14:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r4.ebuild,v 1.1 2010/06/16 08:45:25 jlec Exp $
 
 EAPI="3"
 
@@ -69,7 +69,7 @@ TKDEPS="
 
 SCILIBS="
 	~sci-libs/ccp4-libs-${PV}
-	!<=sci-libs/ccp4-libs-${PV}-r1
+	>=sci-libs/ccp4-libs-${PV}-r2
 	sci-libs/clipper
 	=sci-libs/fftw-2*
 	sci-libs/mmdb
@@ -183,10 +183,10 @@ src_prepare() {
 		-e '/^SUBDIRS/s:libxml2 gc7.0::g' \
 		Makefile.am
 	sed -i \
-		-e '/^rappermc_LDADD/s:../gc7.0/libgc.la ../libxml2/libxml2.la:-lgc -lxml2:g' \
+		-e '/^rapper_LDADD/s:../gc7.0/libgc.la ../libxml2/libxml2.la:-lgc -lxml2:g' \
 		LOOP/Makefile.am
 	sed -i \
-		-e '/^INCLUDES/s:-I../gc7.0/include -I../libxml2/include:-I${EPREFIX}/usr/include/gc -I${EPREFIX}/usr/include/libxml2:g' \
+		-e "/^INCLUDES/s:-I../gc7.0/include -I../libxml2/include:-I${EPREFIX}/usr/include/gc -I${EPREFIX}/usr/include/libxml2:g" \
 		LOOP/Makefile.am
 	eautoreconf
 	popd 2>/dev/null
@@ -274,6 +274,7 @@ src_configure() {
 	pushd src/clipper_progs 2>/dev/null
 	econf \
 		--prefix="${S}" \
+		--bindir="${ED}"/usr/libexec/ccp4/bin \
 		--with-ccp4="${S}" \
 		--with-clipper="${EPREFIX}"/usr \
 		--with-fftw="${EPREFIX}"/usr \
@@ -310,7 +311,7 @@ src_install() {
 	# We do this manually, since disabling the clipper libraries also
 	# disables the clipper programs
 	pushd "${S}"/src/clipper_progs 2>/dev/null
-	emake install || die
+		emake install || die
 	popd 2>/dev/null
 
 	einstall || die "install failed"
@@ -394,8 +395,8 @@ src_install() {
 	mv "${S}"/manual/README "${S}"/manual/README-manual
 	dodoc manual/* README CHANGES doc/* examples/README || die
 
-	rm "${D}"/usr/share/doc/${PF}/GNUmakefile.*
-	rm "${D}"/usr/share/doc/${PF}/COPYING.*
+	rm "${ED}"/usr/share/doc/${PF}/GNUmakefile.*
+	rm "${ED}"/usr/share/doc/${PF}/COPYING.*
 
 	dohtml -r "${S}"/html/*
 
@@ -418,8 +419,8 @@ src_install() {
 		done
 	fi
 	# Needed for ccp4i docs to work
-	dosym ../../share/doc/${PF}/examples /usr/$(get_libdir)/ccp4/examples
-	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/ccp4/html
+	dosym ../../share/doc/${PF}/examples /usr/$(get_libdir)/ccp4/examples || die
+	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/ccp4/html || die
 
 	# Fix overlaps with other packages
 	rm -f "${ED}"/usr/share/man/man1/rasmol.1* "${ED}"/usr/lib/font84.dat || die
