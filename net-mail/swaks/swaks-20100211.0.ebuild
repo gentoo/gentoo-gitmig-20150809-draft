@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20100211.0.ebuild,v 1.1 2010/06/16 05:43:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20100211.0.ebuild,v 1.2 2010/06/16 05:57:59 dragonheart Exp $
 
 DESCRIPTION="Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH"
 HOMEPAGE="http://www.jetmore.org/john/code/swaks"
@@ -23,7 +23,6 @@ RDEPEND="${DEPEND}
 		>=dev-perl/Authen-NTLM-1.02
 		>=dev-perl/Authen-DigestMD5-0.04
 		>=dev-perl/Digest-SHA1-2.11"
-
 
 src_compile() {
 	/usr/bin/pod2man -s 1 doc/ref.pod swaks.1 || die "man page compulation failed"

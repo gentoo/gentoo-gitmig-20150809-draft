@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20060621.0.ebuild,v 1.2 2007/07/14 22:22:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20060621.0.ebuild,v 1.3 2010/06/16 05:57:59 dragonheart Exp $
 
 MY_P=${P/-/.}
 DESCRIPTION="Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH"
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}
 
 src_unpack() {
-	cp ${DISTDIR}/${A} ${WORKDIR}
+	cp "${DISTDIR}/${A}" "${WORKDIR}"
 }
 
 src_install() {
