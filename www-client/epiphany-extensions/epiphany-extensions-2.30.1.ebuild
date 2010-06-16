@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.30.1.ebuild,v 1.1 2010/06/13 21:22:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.30.1.ebuild,v 1.2 2010/06/16 08:23:42 pacho Exp $
 
 EAPI="2"
 
@@ -58,6 +58,13 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-maintainer-mode
 		--with-extensions=$(echo "${extensions}" | sed -e 's/[[:space:]]\+/,/g')"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Updated Spanish translation, fixes bug #323753
+	epatch "${FILESDIR}/${P}-fix-es_ES.patch"
 }
 
 src_install() {
