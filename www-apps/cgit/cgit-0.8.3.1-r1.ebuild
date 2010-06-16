@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.8.3.1-r1.ebuild,v 1.2 2010/03/17 16:48:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.8.3.1-r1.ebuild,v 1.3 2010/06/16 16:32:52 ramereth Exp $
 
 EAPI="2"
 
@@ -22,7 +22,8 @@ RDEPEND="dev-vcs/git
 	dev-libs/openssl
 	cgi? ( virtual/httpd-cgi )"
 DEPEND="${RDEPEND}
-	doc? ( app-text/asciidoc )"
+	doc? ( app-text/docbook-xsl-stylesheets
+		>=app-text/asciidoc-8.5.1 )"
 
 src_prepare() {
 	rmdir git

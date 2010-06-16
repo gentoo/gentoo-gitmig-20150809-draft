@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/cgit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.3 2010/03/17 16:48:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.4 2010/06/16 16:32:52 ramereth Exp $
+
+  16 Jun 2010; Lance Albertson <ramereth@gentoo.org> -cgit-0.8.3.1.ebuild,
+  cgit-0.8.3.1-r1.ebuild:
+  Require newer app-text/asciidoc if doc is enabled (resolves #321117), ebuild
+  cleanup
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> cgit-0.8.3.1.ebuild,
   cgit-0.8.3.1-r1.ebuild:
