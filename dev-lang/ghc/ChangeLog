@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.176 2010/06/12 20:34:32 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.177 2010/06/16 19:18:04 kolmodin Exp $
+
+*ghc-6.12.3 (16 Jun 2010)
+
+  16 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.12.1.ebuild,
+  +files/ghc-6.12.2-configure-CHOST-part2.patch, +ghc-6.12.3.ebuild:
+  Version bump to 6.12.3.
+  So far we've got binaries for amd64, ppc64 and x86.
+  Also changed so that the masked ghc 6.12.1 ebuild uses haskell-updater-1*.
 
   12 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.10.4-r1.ebuild:
   Edit the ghc-wrapper installed by USE=binary to include GHC_CFLAGS from

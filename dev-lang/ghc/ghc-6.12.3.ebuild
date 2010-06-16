@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.1.ebuild,v 1.3 2010/06/16 19:18:04 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.1 2010/06/16 19:18:04 kolmodin Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -33,31 +33,25 @@ inherit base autotools bash-completion eutils flag-o-matic toolchain-funcs ghc-p
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
 
-# discover if this is a snapshot release
-IS_SNAPSHOT="$(get_version_component_range 4)" # non-empty if snapshot
-EXTRA_SRC_URI="${PV}"
-[[ "${IS_SNAPSHOT}" ]] && EXTRA_SRC_URI="stable/dist"
-
 arch_binaries=""
 
 arch_binaries="$arch_binaries x86?   ( http://code.haskell.org/~ivanm/ghc-bin-${PV}-x86.tbz2 )"
 arch_binaries="$arch_binaries amd64? ( http://haskell.org/~kolmodin/ghc-bin-${PV}-amd64.tbz2 )"
-arch_binaries="$arch_binaries sparc? ( http://haskell.org/~duncan/ghc/ghc-bin-${PV}-sparc.tbz2 )"
+#arch_binaries="$arch_binaries sparc? ( http://haskell.org/~duncan/ghc/ghc-bin-${PV}-sparc.tbz2 )"
 arch_binaries="$arch_binaries ppc64? ( http://code.haskell.org/~slyfox/ghc-ppc64/ghc-bin-${PV}-ppc64.tbz2 )"
-arch_binaries="$arch_binaries ppc? ( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
 
 #arch_binaries="$arch_binaries alpha?   ( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )"
 #arch_binaries="$arch_binaries amd64?   ( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )"
 #arch_binaries="$arch_binaries hppa?    ( mirror://gentoo/ghc-bin-${PV}-hppa.tbz2 )"
 #arch_binaries="$arch_binaries ia64?    ( mirror://gentoo/ghc-bin-${PV}-ia64.tbz2 )"
 #arch_binaries="$arch_binaries sparc?   ( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )"
-#arch_binaries="$arch_binaries x86? ( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )"
+#arch_binaries="$arch_binaries x86?     ( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )"
 
-SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${P}-src.tar.bz2 )
+SRC_URI="!binary? ( http://darcs.haskell.org/download/dist/${PV}/${P}-src.tar.bz2 )
 	!ghcbootstrap? ( $arch_binaries )"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="binary doc ghcbootstrap"
 
 RDEPEND="
@@ -76,7 +70,7 @@ DEPEND="${RDEPEND}
 # In the ghcbootstrap case we rely on the developer having
 # >=ghc-5.04.3 on their $PATH already
 
-PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1* )"
+PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1.1* )"
 
 # use undocumented feature STRIP_MASK to fix this issue:
 # http://hackage.haskell.org/trac/ghc/ticket/3580
@@ -105,7 +99,6 @@ ghc_setup_cflags() {
 	# We also use these CFLAGS for building the C parts of ghc, ie the rts.
 	strip-flags
 	strip-unsupported-flags
-	filter-flags -fPIC
 
 	GHC_CFLAGS=""
 	for flag in ${CFLAGS}; do
@@ -155,6 +148,13 @@ src_unpack() {
 	base_src_unpack
 	ghc_setup_cflags
 
+	if ! use ghcbootstrap; then
+		# Modify the wrapper script from the binary tarball to use GHC_CFLAGS.
+		# See bug #313635.
+		sed -i -e "s|\"\$topdir\"|\"\$topdir\" ${GHC_CFLAGS}|" \
+			"${WORKDIR}/usr/bin/ghc-${PV}"
+	fi
+
 	if use binary; then
 
 		# Move unpacked files to the expected place
@@ -177,23 +177,30 @@ src_unpack() {
 		sed -i -e "s|\"\$topdir\"|\"\$topdir\" ${GHC_CFLAGS}|" \
 			"${S}/ghc/ghc.wrapper"
 
+		# Since GHC 6.12.2 the GHC wrappers store which GCC version GHC was
+		# compiled with, by saving the path to it. The purpose is to make sure
+		# that GHC will use the very same gcc version when it compiles haskell
+		# sources, as the extra-gcc-opts files contains extra gcc options which
+		# match only this GCC version.
+		# However, this is not required in Gentoo, as only modern GCCs are used
+		# (>4).
+		# Instead, this causes trouble when for example ccache is used during
+		# compilation, but we don't want the wrappers to point to ccache.
+		# Due to the above, we simply remove GCC from the wrappers, which forces
+		# GHC to use GCC from the users path, like previous GHC versions did.
+
+		# Remove path to gcc
+		sed -i -e '/pgmgcc/d' \
+			"${S}/rules/shell-wrapper.mk"
+
+		# Remove usage of the path to gcc
+		sed -i -e 's/-pgmc "$pgmgcc"//' \
+		    "${S}/ghc/ghc.wrapper"
+
 		cd "${S}" # otherwise epatch will break
 
-		epatch "${FILESDIR}/ghc-${PV}-configure-CHOST.patch"
-
-		# fix configure.ac to detect libm need
-		#    http://bugs.gentoo.org/show_bug.cgi?id=293208
-		#    http://hackage.haskell.org/trac/ghc/ticket/3730
-		epatch "${FILESDIR}/ghc-6.10.4-libm-detection.patch"
-
-		# old-time-1.1.4 on hackage lacked this piece while
-		# darcs repo had it
-		# fixes:
-		#    QA Notice: command not found:
-		#    configure: line 3817: FP_DECL_ALTZONE: command not found
-		cp "${S}/libraries/time/aclocal.m4" \
-		   "${S}/libraries/old-time/aclocal.m4" \
-			|| die "unable to copy 'time/aclocal.m4' to 'old-time/aclocal.m4'"
+		epatch "${FILESDIR}/ghc-6.12.1-configure-CHOST.patch"
+		epatch "${FILESDIR}/ghc-6.12.2-configure-CHOST-part2.patch"
 
 		# as we have changed the build system with the readline patch
 		eautoreconf
@@ -292,19 +299,47 @@ src_install() {
 
 		dobashcompletion "${FILESDIR}/ghc-bash-completion"
 
-		cp -rp "${D}/usr/$(get_libdir)/${P}/package.conf.d"{,.shipped} \
-			|| die "failed to copy package.conf.d"
+	fi
+
+	# path to the package.cache
+	PKGCACHE="${D}/usr/$(get_libdir)/${P}/package.conf.d/package.cache"
+
+	# copy the package.conf, including timestamp, save it so we later can put it
+	# back before uninstalling, or when upgrading.
+	cp -p "${PKGCACHE}"{,.shipped} \
+		|| die "failed to copy package.conf.d/package.cache"
+}
+
+pkg_preinst() {
+	# have we got an earlier version of ghc installed?
+	if has_version "<${CATEGORY}/${PF}"; then
+		haskell_updater_warn="1"
 	fi
 }
 
 pkg_postinst() {
 	ghc-reregister
 
-	ewarn "IMPORTANT:"
-	ewarn "If you have upgraded from another version of ghc,"
-	ewarn "once app-admin/haskell-updater has installed please run:"
-	ewarn "      /usr/sbin/haskell-updater --upgrade"
-	ewarn "to re-build all ghc-based Haskell libraries."
+	# path to the package.cache
+	PKGCACHE="${ROOT}/usr/$(get_libdir)/${P}/package.conf.d/package.cache"
+
+	# give the cache a new timestamp, it must be as recent as
+	# the package.conf.d directory.
+	touch "${PKGCACHE}"
+
+	if [[ "${haskell_updater_warn}" == "1" ]]; then
+		ewarn
+		ewarn "\e[1;31m************************************************************************\e[0m"
+		ewarn
+		ewarn "You have just upgraded from an older version of GHC."
+		ewarn "You may have to run"
+		ewarn "      'haskell-updater --upgrade'"
+		ewarn "to rebuild all ghc-based Haskell libraries."
+		ewarn
+		ewarn "\e[1;31m************************************************************************\e[0m"
+		ewarn
+		ebeep 12
+	fi
 
 	bash-completion_pkg_postinst
 }
@@ -327,11 +362,11 @@ pkg_prerm() {
 	# * pkg_postrm for the package being replaced
 	# * pkg_postinst
 
-	# Overwrite the (potentially) modified package.conf with a copy of the
+	# Overwrite the modified package.cache with a copy of the
 	# original one, so that it will be removed during uninstall.
 
-	PKGDIR="${ROOT}/usr/$(get_libdir)/${P}/package.conf.d"
-	rm -rf "${PKGDIR}"
+	PKGCACHE="${ROOT}/usr/$(get_libdir)/${P}/package.conf.d/package.cache"
+	rm -rf "${PKGCACHE}"
 
-	cp -pr "${PKGDIR}"{.shipped,}
+	cp -p "${PKGCACHE}"{.shipped,}
 }
