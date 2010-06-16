@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>virtualization</herd>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
-	<maintainer>
 		<email>cardoe@gentoo.org</email>
 		<name>Doug Goldstein</name>
 	</maintainer>
