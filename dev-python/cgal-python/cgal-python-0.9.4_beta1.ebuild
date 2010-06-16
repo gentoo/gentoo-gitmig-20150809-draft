@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.4_beta1.ebuild,v 1.3 2010/02/26 22:12:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.4_beta1.ebuild,v 1.4 2010/06/16 01:43:15 arfrever Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs python
@@ -30,9 +30,8 @@ src_prepare() {
 			bindings/makefile.inc || die
 	fi
 
-	python_version
 	sed -i \
-		-e "s:-I../.. -O2:-I/usr/include/python${PYVER} -I../..:g" \
+		-e "s:-I../.. -O2:-I$(python_get_includedir) -I../..:g" \
 		bindings/makefile.inc || die
 	for i in $(find bindings -name Makefile); do
 		sed -i -e "s:@g++:@$(tc-getCXX):g" ${i}  || die
@@ -51,7 +50,7 @@ src_test() {
 src_install(){
 	python_need_rebuild
 	emake package || die
-	insinto "$(${python} -c 'from distutils.sysconfig import get_python_lib;print get_python_lib()')"
+	insinto $(python_get_sitedir)
 	doins -r cgal_package/CGAL || die
 	dodoc README.txt CHANGES
 	if use examples; then
