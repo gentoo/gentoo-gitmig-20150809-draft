@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LDAPapi/Net-LDAPapi-3.0.3-r1.ebuild,v 1.1 2010/06/09 13:06:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LDAPapi/Net-LDAPapi-3.0.3-r1.ebuild,v 1.2 2010/06/16 08:18:05 dev-zero Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl5 Module Supporting LDAP API"
 HOMEPAGE="http://sourceforge.net/projects/net-ldapapi/
 	http://search.cpan.org/~mishikal/Net-LDAPapi/"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 # LICENSE is given on the corresponding sourceforge project and matches the
 # default cpan/perl license
@@ -20,8 +20,7 @@ IUSE="examples"
 COMMON="dev-lang/perl
 	net-nds/openldap
 	dev-perl/Convert-ASN1"
-DEPEND="${COMMON}
-	virtual/perl-ExtUtils-MakeMaker"
+DEPEND="${COMMON}"
 RDEPEND="${COMMON}"
 
 # NOTE: tests are available but they hang
