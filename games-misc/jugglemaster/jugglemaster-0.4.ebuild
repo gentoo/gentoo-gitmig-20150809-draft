@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.8 2009/08/17 21:34:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.9 2010/06/16 15:38:17 aballier Exp $
 
 EAPI=2
 WX_GTK_VER="2.6"
-inherit eutils wxwidgets games
+inherit eutils wxwidgets games flag-o-matic
 
 DESCRIPTION="A siteswap animator"
 HOMEPAGE="http://icculus.org/jugglemaster/"
@@ -37,6 +37,8 @@ src_prepare() {
 		-e "s:wx-config:${WX_CONFIG}:" \
 		src/jmdlx/Makefile \
 		|| die "sed Makefile (wx) failed"
+	#bug #324251 (UINT64_C vs ffmpeg headers)
+	append-flags -D__STDC_CONSTANT_MACROS
 }
 
 src_compile() {
