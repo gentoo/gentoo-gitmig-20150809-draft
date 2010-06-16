@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.37 2010/06/13 07:02:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.38 2010/06/16 05:29:21 cardoe Exp $
 #
 # @ECLASS: mythtv-plugins.eclass
 # @AUTHOR: Doug Goldstein <cardoe@gentoo.org>
@@ -49,7 +49,7 @@ mythtv-plugins_pkg_setup() {
 		MYTHPLUGINS="${MYTHPLUGINS/mythphone/}"
 	fi
 
-	if version is_at_least "0.23_beta" ; then
+	if version_is_at_least "0.23_beta" ; then
 		MYTHPLUGINS="${MYTHPLUGINS/mythflix/}"
 		MYTHPLUGINS="${MYTHPLUGINS} mythnetvision"
 	fi
