@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/oops
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.22 2009/07/12 10:57:25 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.23 2010/06/16 14:26:08 phajdan.jr Exp $
+
+  16 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  oops-1.5.24_pre20050503-r4.ebuild:
+  x86 stable wrt bug #322931
 
 *oops-1.5.24_pre20050503-r4 (12 Jul 2009)
 
