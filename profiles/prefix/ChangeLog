@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.182 2010/06/13 12:58:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.183 2010/06/16 00:54:45 sping Exp $
+
+  16 Jun 2010; Sebastian Pipping <sping@gentoo.org>
+  darwin/macos/10.5/ppc/package.use.mask:
+  Package use mask git for dev-vcs/cvs2svn on ppc-macos
 
   13 Jun 2010; Fabian Groffen <grobian@gentoo.org> mint/package.use.mask:
   Add mask for dev-db/sqlite threadsafe, bug #323771
