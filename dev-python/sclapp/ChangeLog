@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sclapp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sclapp/ChangeLog,v 1.4 2010/02/07 21:00:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sclapp/ChangeLog,v 1.5 2010/06/16 02:41:09 sping Exp $
+
+  16 Jun 2010; Sebastian Pipping <sping@gentoo.org> sclapp-0.5.3.ebuild:
+  Add missing dependency dev-python/pexpect for bug #318489
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> sclapp-0.5.3.ebuild:
   Add inherit eutils: epatch is defined there.
