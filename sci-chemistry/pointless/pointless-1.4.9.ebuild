@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.4.9.ebuild,v 1.1 2010/02/26 08:08:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.4.9.ebuild,v 1.2 2010/06/16 06:56:45 jlec Exp $
 
 inherit toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="ccp4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
