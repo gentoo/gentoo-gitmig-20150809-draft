@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.2.ebuild,v 1.1 2010/06/16 07:51:59 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.2-r1.ebuild,v 1.1 2010/06/16 11:54:54 bass Exp $
 
-PYTHON_DEPEND="2"
+EAPI=2
+PYTHON_DEPEND="admin? 2"
 
 inherit python eutils pam versionator libtool
 
@@ -21,7 +22,6 @@ RDEPEND="
 	nls? ( sys-devel/gettext )
 	ssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
-	admin? ( dev-lang/python )
 	geoip? ( dev-libs/geoip )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
@@ -112,8 +112,6 @@ src_install () {
 	# Puts logs in /var/log/cherokee/
 	dosed "s:/var/log/cherokee\.:/var/log/cherokee/cherokee\.:g" /etc/cherokee/cherokee.conf
 
-	# Force shebang to use python2
-	dosed "s:\#\!/usr/bin/env\ python:\#\!/usr/bin/python2:g" /usr/share/cherokee/admin/server.py
 
 
 }
