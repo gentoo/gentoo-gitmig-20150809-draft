@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiotray/radiotray-9999.ebuild,v 1.2 2010/06/04 11:07:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiotray/radiotray-9999.ebuild,v 1.3 2010/06/16 09:40:27 hwoarang Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -27,6 +27,7 @@ RDEPEND="dev-python/gst-python
 	media-plugins/gst-plugins-ffmpeg
 	media-plugins/gst-plugins-mad
 	media-plugins/gst-plugins-ogg
+	media-plugins/gst-plugins-soup
 	media-plugins/gst-plugins-vorbis"
 
 DEPEND="${RDEPEND}"
