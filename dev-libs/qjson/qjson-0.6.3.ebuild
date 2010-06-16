@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.6.3.ebuild,v 1.4 2010/01/05 15:58:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.6.3.ebuild,v 1.5 2010/06/16 15:44:01 ayoy Exp $
 
 EAPI="2"
 
@@ -34,7 +34,7 @@ src_install() {
 	if use doc; then
 		cd "${S}/doc"
 		doxygen Doxyfile || die "Generating documentation failed"
-		HTML_DOCS=( "${S}/doc/html/*" )
+		HTML_DOCS=( "${S}/doc/html/" )
 	fi
 
 	cmake-utils_src_install

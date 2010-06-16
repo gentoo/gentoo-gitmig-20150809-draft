@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.7.1.ebuild,v 1.2 2010/01/20 22:07:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.6.3-r1.ebuild,v 1.1 2010/06/16 15:44:01 ayoy Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug doc test"
 
 RDEPEND="x11-libs/qt-core:4"
@@ -34,7 +34,7 @@ src_install() {
 	if use doc; then
 		cd "${S}/doc"
 		doxygen Doxyfile || die "Generating documentation failed"
-		HTML_DOCS=( "${S}/doc/html/*" )
+		HTML_DOCS=( "${S}/doc/html/" )
 	fi
 
 	cmake-utils_src_install
