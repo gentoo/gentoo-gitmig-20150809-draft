@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.5 2010/06/15 11:39:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.6 2010/06/16 14:22:44 phajdan.jr Exp $
+
+  16 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  realpath-1.15-r1.ebuild:
+  x86 stable wrt bug #322919
 
 *realpath-1.15-r2 (15 Jun 2010)
 
