@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.0.ebuild,v 1.1 2009/06/02 10:43:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.0.ebuild,v 1.2 2010/06/16 13:17:37 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 
 KDE_LINGUAS="cs de es pl pt ru uk"
-inherit kde4-base
+inherit flag-o-matic kde4-base
 
-MY_P="${PN}4-${PV/_/-}"
+MY_P=${PN}4-${PV/_/-}
 
 DESCRIPTION="kradio is a radio tuner application for KDE"
 HOMEPAGE="http://kradio.sourceforge.net/"
@@ -34,15 +34,19 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
-	local mycmakeargs="$(cmake-utils_use_with alsa ALSA)
+	append-cppflags -D__STDC_CONSTANT_MACROS #324279
+
+	mycmakeargs=(
+		$(cmake-utils_use_with alsa ALSA)
 		$(cmake-utils_use_with mp3 LAME)
 		$(cmake-utils_use_with vorbis OGG_VORBIS)
 		$(cmake-utils_use_with lirc LIRC)
 		$(cmake-utils_use_with ffmpeg FFMPEG)
-		$(cmake-utils_use_with v4l2 V4L2)"
+		$(cmake-utils_use_with v4l2 V4L2)
+		)
 
 	kde4-base_src_configure
 }
