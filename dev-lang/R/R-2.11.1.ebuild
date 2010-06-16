@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.11.1.ebuild,v 1.1 2010/06/01 18:55:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.11.1.ebuild,v 1.2 2010/06/16 15:36:14 bicatali Exp $
 
 EAPI=2
 inherit eutils flag-o-matic bash-completion versionator
@@ -53,6 +53,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# fix ocasional failure with parallel install (bug #322965)
+	epatch "${FILESDIR}"/${P}-parallel.patch
+
 	# fix packages.html for doc (bug #205103)
 	# check in later versions if fixed
 	sed -i \

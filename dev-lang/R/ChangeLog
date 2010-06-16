@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.177 2010/06/01 18:55:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.178 2010/06/16 15:36:14 bicatali Exp $
+
+  16 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> -R-2.11.0.ebuild,
+  R-2.11.1.ebuild, +files/R-2.11.1-parallel.patch:
+  Fix occasional failures with parallel install, bug #322965
 
 *R-2.11.1 (01 Jun 2010)
 
