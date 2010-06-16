@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.117 2010/06/03 15:48:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.118 2010/06/16 01:41:45 chiiph Exp $
+
+  16 Jun 2010; Tomas Touceda <chiiph@gentoo.org> PyQt4-4.7.3.ebuild,
+  +files/PyQt4-4.7.3-qreal_float_support.patch:
+  Add patch for qreal/float support in ARM wrt bug 322349
 
   03 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> PyQt4-4.7.3.ebuild:
   x86 stable wrt bug 315775

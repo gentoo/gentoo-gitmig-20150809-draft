@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.3.ebuild,v 1.4 2010/06/03 15:48:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.3.ebuild,v 1.5 2010/06/16 01:41:45 chiiph Exp $
 
 EAPI="2"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
@@ -57,6 +57,10 @@ src_prepare() {
 		sed -i -e 's,^\([[:blank:]]\+\)check_dbus(),\1pass,' \
 			"${S}"/configure.py || die
 	fi
+
+	# Patch to support qreal for arm architecture
+	# wrt bug #322349
+	use arm && epatch "${FILESDIR}/${P}-qreal_float_support.patch"
 
 	qt4-r2_src_prepare
 
