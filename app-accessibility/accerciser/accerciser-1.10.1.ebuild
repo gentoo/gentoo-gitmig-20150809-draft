@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.10.1.ebuild,v 1.1 2010/06/13 16:27:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.10.1.ebuild,v 1.2 2010/06/16 08:29:04 pacho Exp $
 
 PYTHON_DEPEND="2" # Support for Python 3 not verified
 GCONF_DEBUG="no"
 
-inherit gnome2 python
+inherit gnome2 python eutils
 
 DESCRIPTION="Interactive Python accessibility explorer"
 HOMEPAGE="http://live.gnome.org/Accerciser"
@@ -40,6 +40,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# Updated Spanish translation, fixes bug #323697
+	epatch "${FILESDIR}/${P}-fix-es_ES.patch"
 
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
