@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.2.ebuild,v 1.1 2010/03/24 20:20:27 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.7.2.ebuild,v 1.2 2010/06/16 14:19:32 aballier Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Mark commercial Breaks in VDR records"
 HOMEPAGE="http://noad.heliohost.org/"
@@ -22,6 +22,10 @@ DEPEND="media-libs/libmpeg2
 src_prepare() {
 
 	epatch "${FILESDIR}"/patches-0.7.x/"${P}"-hangcheck.diff
+	epatch "${FILESDIR}"/patches-0.7.x/"${P}"-cflags.patch
+	eautoreconf
+	# UINT64_C is needed by ffmpeg headers
+	append-flags -D__STDC_CONSTANT_MACROS
 }
 
 src_configure() {

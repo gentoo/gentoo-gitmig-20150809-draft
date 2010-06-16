@@ -1,6 +1,10 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.43 2010/03/27 20:37:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.44 2010/06/16 14:19:32 aballier Exp $
+
+  16 Jun 2010; Alexis Ballier <aballier@gentoo.org>
+  +files/patches-0.7.x/noad-0.7.2-cflags.patch, noad-0.7.2.ebuild:
+  do not ignore cxxflags and fix build with ffmpeg-0.6
 
   27 Mar 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
   -noad-0.7.0.20100119.ebuild, -noad-0.7.1-r1.ebuild:
