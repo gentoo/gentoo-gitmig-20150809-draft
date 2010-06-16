@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tablix
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.10 2008/07/31 17:07:30 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/ChangeLog,v 1.11 2010/06/16 10:13:10 hwoarang Exp $
+
+*tablix-0.3.5-r1 (16 Jun 2010)
+
+  16 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +tablix-0.3.5-r1.ebuild:
+  Don't install files on /usr/locale wrt bug #246921. 
+  keyworded for amd64
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
