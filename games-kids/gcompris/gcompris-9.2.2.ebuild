@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.4 2010/05/31 19:24:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.5 2010/06/16 02:10:37 arfrever Exp $
 
 EAPI=2
 
@@ -47,7 +47,10 @@ RDEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 	games_pkg_setup
 }
 
@@ -58,8 +61,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local python_version="$(PYTHON -a)"
-
 	GNUCHESS="${GAMES_BINDIR}"/gnuchess \
 	egamesconf \
 		--disable-dependency-tracking \
@@ -67,7 +68,7 @@ src_configure() {
 		--datadir="${GAMES_DATADIR}" \
 		--localedir=/usr/share/locale \
 		--infodir=/usr/share/info \
-		$(use_with python python "${python_version}") \
+		$(use_with python python "$(PYTHON -a)") \
 		$(use_enable debug) \
 		$(use_enable gnet) \
 		--enable-sqlite \
