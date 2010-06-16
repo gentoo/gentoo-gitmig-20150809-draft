@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/mongo/mongo-1.0.6.ebuild,v 1.1 2010/03/25 21:40:20 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/mongo/mongo-1.0.6.ebuild,v 1.2 2010/06/16 16:23:41 ramereth Exp $
 
 EAPI="2"
 
@@ -24,6 +24,8 @@ IUSE=""
 
 DOCS="README.rdoc"
 my_conf="--enable-mongo"
+
+need_php_by_category
 
 src_install() {
 	php-ext-source-r1_src_install
