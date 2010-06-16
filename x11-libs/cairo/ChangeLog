@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.238 2010/03/26 22:34:15 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.239 2010/06/16 18:11:35 spatz Exp $
+
+*cairo-1.8.10 (16 Jun 2010)
+
+  16 Jun 2010; Dror Levin <spatz@gentoo.org> +cairo-1.8.10.ebuild,
+  +files/cairo-1.8.10-libpng14.patch:
+  Version bump now that mozilla issues are solved.
 
 *cairo-1.8.8-r1 (26 Mar 2010)
 
