@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.183 2010/06/16 00:54:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.184 2010/06/16 06:48:50 grobian Exp $
+
+  16 Jun 2010; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.5/ppc/package.use.mask:
+  Undo masking of git USE-flag by sping, we DO have git, but it's still in
+  our svn tree.
 
   16 Jun 2010; Sebastian Pipping <sping@gentoo.org>
   darwin/macos/10.5/ppc/package.use.mask:
