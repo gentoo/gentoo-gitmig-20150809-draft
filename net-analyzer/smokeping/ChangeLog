@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.29 2010/06/02 06:29:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.30 2010/06/16 18:24:17 pva Exp $
+
+*smokeping-2.4.2-r2 (16 Jun 2010)
+
+  16 Jun 2010; Peter Volkov <pva@gentoo.org> -smokeping-2.4.2.ebuild,
+  +smokeping-2.4.2-r2.ebuild, +files/smokeping.init.2:
+  Create /var/run/smokeping directory at init.d script start as FSH
+  suggests. Fix permissions of that directory, bug #324177, thank Weeve for
+  report.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove chtekk from metadata.xml (#103720)

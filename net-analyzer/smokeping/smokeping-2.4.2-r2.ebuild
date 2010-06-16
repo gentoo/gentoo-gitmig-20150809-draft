@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.4.2.ebuild,v 1.3 2009/03/07 12:57:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.4.2-r2.ebuild,v 1.1 2010/06/16 18:24:17 pva Exp $
 
 EAPI="2"
 
@@ -15,17 +15,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="apache2 speedy"
 
+# dev-perl/JSON-1.x is bundled and is incompatible with version 2.x wich is in
+# the tree. See http://bugs.gentoo.org/show_bug.cgi?id=260170#c2
 DEPEND="dev-lang/perl
 		virtual/perl-libnet
 		>=net-analyzer/rrdtool-1.2[perl]
 		>=net-analyzer/fping-2.4_beta2-r2
 		dev-perl/Digest-HMAC
 		dev-perl/libwww-perl
+		dev-perl/CGI-Session
+		>=dev-perl/SNMP_Session-1.13
 		dev-perl/Socket6
 		dev-perl/Net-DNS
 		speedy? ( dev-perl/SpeedyCGI )
 		!apache2? ( virtual/httpd-cgi )
-		apache2? ( >=www-apache/mod_perl-2.0.1 )"
+		apache2? ( >=www-apache/mod_perl-2.0.1 )
+		!dev-perl/JSON"
 
 RDEPEND="${DEPEND}"
 
@@ -34,14 +39,10 @@ pkg_preinst() {
 	enewuser smokeping -1 -1 /var/lib/smokeping smokeping
 }
 
-src_unpack() {
-	# perl-mod.eclass does not support EAPI=2.
-	unpack ${A}
-}
-
 src_prepare() {
-	# we depend on dev-perl/Digest-HMAC. No need for bundled version.
-	rm -rf lib/Digest
+	rm -rf lib/Digest # provided by dev-perl/Digest-HMAC
+	rm -rf lib/CGI # provided by dev-perl/CGI-Session
+	rm -r lib/{BER.pm,SNMP_Session.pm,SNMP_util.pm} # dev-perl/SNMP_Session
 	rm qooxdoo/qooxdoolink
 }
 
@@ -101,7 +102,7 @@ src_install() {
 	sed -e '/^<script/{s:cropper/:/cropper/:}' -i "${D}/etc/${PN}/basepage.html"
 	fperms 700 /etc/${PN}/smokeping_secrets
 
-	newinitd "${FILESDIR}/${PN}.init.1" ${PN} || die
+	newinitd "${FILESDIR}/${PN}.init.2" ${PN} || die
 
 	if use apache2 ; then
 		insinto /etc/apache2/modules.d
@@ -117,8 +118,6 @@ src_install() {
 		fowners smokeping:smokeping /var/lib/${PN}/.simg
 	fi
 	fperms 775 /var/lib/${PN} /var/lib/${PN}/.simg
-	keepdir /var/run/${PN} # for pid files
-	fowners smokeping:smokeping /var/run/${PN}
 
 	# Install documentation.
 	insinto "/usr/share/doc/${PF}"
