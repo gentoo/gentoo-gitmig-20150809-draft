@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/cvs2svn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs2svn/ChangeLog,v 1.1 2010/03/26 20:24:46 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs2svn/ChangeLog,v 1.2 2010/06/16 00:58:26 sping Exp $
+
+  16 Jun 2010; Sebastian Pipping <sping@gentoo.org> cvs2svn-2.2.0.ebuild,
+  cvs2svn-2.3.0.ebuild, metadata.xml:
+  Add git and bazaar use flags for bug #313701
 
   26 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   +files/2.2.0-deprecated-modules.patch, +cvs2svn-1.5.0.ebuild,
