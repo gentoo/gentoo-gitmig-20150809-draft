@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boostpythongenerator/boostpythongenerator-0.3.3.ebuild,v 1.1 2010/01/20 23:41:09 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boostpythongenerator/boostpythongenerator-0.3.3.ebuild,v 1.2 2010/06/16 19:38:17 ayoy Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ IUSE="debug"
 DEPEND="~dev-python/apiextractor-${PV}
 	~dev-python/generatorrunner-${PV}
 	>=x11-libs/qt-core-4.5.0"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!dev-python/shiboken"
 
 src_install() {
 	cmake-utils_src_install
