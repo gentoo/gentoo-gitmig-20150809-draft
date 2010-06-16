@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall6-lite
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.9 2009/10/09 12:41:08 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.10 2010/06/16 15:00:27 chainsaw Exp $
+
+*shorewall6-lite-4.4.10 (16 Jun 2010)
+
+  16 Jun 2010; <chainsaw@gentoo.org> +shorewall6-lite-4.4.10.ebuild:
+  Version bump, closes bug #298301 by Magnus Kessler.
 
 *shorewall6-lite-4.4.2 (09 Oct 2009)
 
