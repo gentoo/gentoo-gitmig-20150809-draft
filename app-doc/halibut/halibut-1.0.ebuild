@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/halibut-1.0.ebuild,v 1.1 2009/08/18 09:52:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/halibut-1.0.ebuild,v 1.2 2010/06/16 04:03:25 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ src_compile() {
 	tc-export CC
 	CFLAGS="${CFLAGS} ${CPPFLAGS}" \
 	LFLAGS="${LDFLAGS}" \
-	emake \
+	emake -j1 \
 		BUILDDIR="${S}/build" \
 		VERSION="${PV}" \
 		|| die "make failed"
