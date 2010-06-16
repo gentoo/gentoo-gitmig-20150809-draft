@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.4 2008/03/30 04:22:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.5 2010/06/16 12:25:44 aballier Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin flag-o-matic
 
 DESCRIPTION="VDR Plugin: adds the functionality to view PhotoCDs"
 HOMEPAGE="http://www.heiligenmann.de/vdr/vdr/plugins/pcd.html"
@@ -23,4 +23,6 @@ src_unpack() {
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
 		sed -e "s:ffmpeg/avcodec.h:libavcodec/avcodec.h:" -i mpeg.h
 	fi
+	# UINT64_C is needed by ffmpeg headers
+	append-flags -D__STDC_CONSTANT_MACROS
 }

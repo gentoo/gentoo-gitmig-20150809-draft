@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.0.ebuild,v 1.2 2009/01/06 06:03:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.0.ebuild,v 1.3 2010/06/16 12:24:14 aballier Exp $
 
-inherit vdr-plugin eutils
+inherit vdr-plugin eutils flag-o-matic
 
 DESCRIPTION="VDR plugin: display of digital images, like jpeg, tiff, png, bmp"
 HOMEPAGE="http://vdr-image.berlios.de/"
@@ -36,6 +36,8 @@ src_unpack() {
 	if has_version "<=media-video/ffmpeg-0.4.9_p20061016"; then
 		BUILD_PARAMS="${BUILD_PARAMS} WITHOUT_SWSCALER=1"
 	fi
+	# UINT64_C is needed by ffmpeg headers
+	append-flags -D__STDC_CONSTANT_MACROS
 }
 
 src_install() {

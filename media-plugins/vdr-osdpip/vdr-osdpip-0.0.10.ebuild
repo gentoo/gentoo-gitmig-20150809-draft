@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.10.ebuild,v 1.3 2009/09/22 05:28:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.10.ebuild,v 1.4 2010/06/16 12:29:30 aballier Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin flag-o-matic
 
 DESCRIPTION="VDR plugin: Show another channel in the OSD"
 HOMEPAGE="http://www.magoa.net/linux"
@@ -33,4 +33,6 @@ src_unpack() {
 		#epatch "${FILESDIR}/${P}-ffmpeg-0.4.9_p20080326-new_header.diff"
 		sed -i Makefile -e 's/#WITH_NEW_FFMPEG_HEADERS/WITH_NEW_FFMPEG_HEADERS/'
 	fi
+	# UINT64_C is needed by ffmpeg headers
+	append-flags -D__STDC_CONSTANT_MACROS
 }

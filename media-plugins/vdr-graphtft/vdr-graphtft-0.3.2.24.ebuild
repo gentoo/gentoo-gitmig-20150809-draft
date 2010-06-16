@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.4 2010/04/03 10:07:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.5 2010/06/16 12:21:31 aballier Exp $
 
 EAPI="2"
 
-inherit eutils vdr-plugin
+inherit eutils vdr-plugin flag-o-matic
 
 #MY_P="${PN}-${PV/_rc/-rc}"
 #S="${WORKDIR}/graphtft-${PV/_rc/-rc}"
@@ -81,6 +81,8 @@ src_prepare() {
 	sed -i "${S}"/imlibrenderer/fbrenderer/fbrenderer.c \
 		-i "${S}"/imlibrenderer/dvbrenderer/mpeg2encoder.c \
 		-e "s:libavutil/avcodec.h:libavcodec/avcodec.h:"
+	# UINT64_C is needed by ffmpeg headers
+	append-flags -D__STDC_CONSTANT_MACROS
 }
 
 src_compile() {

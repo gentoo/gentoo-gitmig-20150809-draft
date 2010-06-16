@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/vdr-audiorecorder-0.1.0_pre6.ebuild,v 1.6 2008/10/18 09:35:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/vdr-audiorecorder-0.1.0_pre6.ebuild,v 1.7 2010/06/16 12:27:56 aballier Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin flag-o-matic
 
 MY_P=${P/_pre/-pre}
 
@@ -33,6 +33,8 @@ src_unpack() {
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326"; then
 		epatch "${FILESDIR}/${P}-ffmpeg-0.4.9_p20080326-new_header.diff"
 	fi
+	# UINT64_C is needed by ffmpeg headers
+	append-flags -D__STDC_CONSTANT_MACROS
 }
 
 src_install() {

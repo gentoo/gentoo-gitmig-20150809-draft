@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-image
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.28 2009/01/06 02:22:11 hd_brummy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.29 2010/06/16 12:24:14 aballier Exp $
+
+  16 Jun 2010; Alexis Ballier <aballier@gentoo.org> vdr-image-0.3.0.ebuild:
+  fix build with ffmpeg >= 0.6
 
 *vdr-image-0.3.0 (06 Jan 2009)
 
