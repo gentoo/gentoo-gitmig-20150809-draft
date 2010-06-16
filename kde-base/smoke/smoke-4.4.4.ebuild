@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.4.4.ebuild,v 1.1 2010/06/06 14:42:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.4.4.ebuild,v 1.2 2010/06/16 06:34:00 reavertm Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE="akonadi okular +phonon qimageblitz qscintilla qwt semantic-desktop"
+IUSE="akonadi debug okular +phonon qimageblitz qscintilla qwt semantic-desktop"
 
 COMMON_DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')

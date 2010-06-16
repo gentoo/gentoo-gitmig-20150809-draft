@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.103 2010/06/06 14:42:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.104 2010/06/16 06:34:00 reavertm Exp $
+
+  16 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> smoke-4.4.4.ebuild:
+  Add debug USE flag
 
 *smoke-4.4.4 (06 Jun 2010)
 
