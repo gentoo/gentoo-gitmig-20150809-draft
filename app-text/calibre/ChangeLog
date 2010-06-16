@@ -1,6 +1,12 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.89 2010/06/09 01:29:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.90 2010/06/16 02:13:59 zmedico Exp $
+
+*calibre-0.7.2 (16 Jun 2010)
+
+  16 Jun 2010; Zac Medico <zmedico@gentoo.org> +calibre-0.7.2.ebuild:
+  0.7.2 version bump. This ebuild includes a workaround for a segfault
+  that was triggered in libuuid.so with >=util-linux-2.17.1.
 
 *calibre-0.7.1 (09 Jun 2010)
 
