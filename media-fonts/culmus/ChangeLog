@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.43 2010/06/16 14:35:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.44 2010/06/16 14:40:31 spatz Exp $
+
+  16 Jun 2010; Dror Levin <spatz@gentoo.org> culmus-0.104-r1.ebuild:
+  amd64 stable, bug 322973.
 
   16 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   culmus-0.104-r1.ebuild:
