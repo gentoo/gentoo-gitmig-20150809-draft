@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/talos+/talos+-1.2009.1013.14.ebuild,v 1.1 2010/03/07 12:54:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/talos+/talos+-1.2009.1013.14.ebuild,v 1.2 2010/06/16 14:11:07 jlec Exp $
 
 EAPI="3"
 
@@ -16,7 +16,9 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND="dev-lang/tcl"
+RDEPEND="
+	dev-lang/tcl
+	sci-chemistry/rasmol"
 DEPEND=""
 
 S="${WORKDIR}"

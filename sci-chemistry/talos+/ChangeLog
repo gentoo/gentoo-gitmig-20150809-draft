@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/talos+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/talos+/ChangeLog,v 1.1 2010/03/07 12:54:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/talos+/ChangeLog,v 1.2 2010/06/16 14:11:07 jlec Exp $
+
+  16 Jun 2010; Justin Lecher <jlec@gentoo.org> talos+-1.2009.1013.14.ebuild:
+  sci-chemistry/rasmol added as DEP
 
 *talos+-1.2009.1013.14 (07 Mar 2010)
 
