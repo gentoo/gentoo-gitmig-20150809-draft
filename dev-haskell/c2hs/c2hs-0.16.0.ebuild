@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.0.ebuild,v 1.5 2010/05/31 18:41:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.0.ebuild,v 1.6 2010/06/16 22:37:13 kolmodin Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal
@@ -16,7 +16,6 @@ IUSE="doc"
 
 DEPEND=">=dev-lang/ghc-6.6.1
 		>=dev-haskell/cabal-1.2
-		dev-haskell/filepath
 		>=dev-haskell/language-c-0.3.1.1
 		doc? (  ~app-text/docbook-xml-dtd-4.2
 				app-text/docbook-xsl-stylesheets
