@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.218 2010/06/11 14:45:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.219 2010/06/16 18:00:43 polynomial-c Exp $
+
+*seamonkey-2.0.4-r2 (16 Jun 2010)
+
+  16 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -seamonkey-2.0.4.ebuild, +seamonkey-2.0.4-r2.ebuild:
+  Added fix against crash with x11-libs/cairo-1.8.10
 
   11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   seamonkey-1.1.18.ebuild, +files/seamonkey-1.1.18-libpng14.patch:
