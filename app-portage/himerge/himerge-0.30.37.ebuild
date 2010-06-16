@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.37.ebuild,v 1.5 2009/09/07 01:22:24 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.37.ebuild,v 1.6 2010/06/16 22:23:17 kolmodin Exp $
 
 EAPI="2"
 
@@ -21,8 +21,8 @@ RDEPEND=">=dev-lang/ghc-6.8.2
 	dev-haskell/regex-posix
 	>=app-portage/eix-0.9.3
 	>=app-portage/gentoolkit-0.2.3
-	>=app-portage/portage-utils-0.1.28
-	>=dev-haskell/filepath-1.0"
+	>=app-portage/portage-utils-0.1.28"
+
 DEPEND="${RDEPEND}"
 
 RESTRICT="strip"
