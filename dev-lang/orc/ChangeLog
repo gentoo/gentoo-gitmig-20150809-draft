@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.4 2010/05/30 10:51:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.5 2010/06/16 11:26:32 hwoarang Exp $
+
+*orc-0.4.5 (16 Jun 2010)
+
+  16 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +orc-0.4.5.ebuild:
+  Version bump. Added examples use flag. Fixes bug #317447
 
   30 May 2010; Fabian Groffen <grobian@gentoo.org> orc-0.4.4.ebuild:
   Marked *-macos, *-solaris
