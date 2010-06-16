@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.9.2-r1.ebuild,v 1.4 2010/03/28 09:41:05 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.9.2-r1.ebuild,v 1.5 2010/06/16 22:30:17 kolmodin Exp $
 
 CABAL_FEATURES="bin"
 inherit base haskell-cabal
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 -sparc ~x86"
 IUSE="xft unicode mail"
 
 RDEPEND=">=dev-lang/ghc-6.6.1
-		dev-haskell/filepath
 		dev-haskell/mtl
 		dev-haskell/parsec
 		dev-haskell/stm

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.8.ebuild,v 1.1 2007/12/15 23:28:17 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.8.ebuild,v 1.2 2010/06/16 22:30:17 kolmodin Exp $
 
 CABAL_FEATURES="bin"
 CABAL_MIN_VERSION=1.2
@@ -15,10 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 -sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.6
+DEPEND=">=dev-lang/ghc-6.6.1
 		>=dev-haskell/x11-1.3.0
-		>=dev-haskell/mtl-1.0
-		>=dev-haskell/filepath-1.0"
+		>=dev-haskell/mtl-1.0"
 
 src_unpack() {
 	unpack ${A}

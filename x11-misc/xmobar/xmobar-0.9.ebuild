@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.9.ebuild,v 1.1 2008/09/24 06:11:46 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.9.ebuild,v 1.2 2010/06/16 22:30:17 kolmodin Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal
@@ -19,7 +19,6 @@ DEPEND=">=dev-lang/ghc-6.6.1
 		>=dev-haskell/x11-1.3.0
 		dev-haskell/mtl
 		dev-haskell/parsec
-		dev-haskell/filepath
 		dev-haskell/stm"
 
 src_compile() {
