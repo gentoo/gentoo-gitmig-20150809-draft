@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.25 2010/06/13 18:50:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.26 2010/06/16 18:18:39 pacho Exp $
+
+  16 Jun 2010; Pacho Ramos <pacho@gentoo.org> libsoup-gnome-2.30.1.ebuild,
+  +files/libsoup-gnome-2.30.1-system-lib.patch,
+  -files/libsoup-gnome-system-lib.patch:
+  Depend on gnome-base/libgnome-keyring when needed instead of recent
+  gnome-base/gnome-keyring versions per bug #324267 (by Jan-Matthias Braun)
+  and choose a proper name for system-lib patch as reminded by Leio some
+  days ago on IRC.
 
   13 Jun 2010; Pacho Ramos <pacho@gentoo.org>
   +files/libsoup-gnome-system-lib.patch:
