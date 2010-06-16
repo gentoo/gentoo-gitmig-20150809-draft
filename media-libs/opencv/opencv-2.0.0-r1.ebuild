@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.4 2010/03/09 12:45:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.5 2010/06/16 16:36:55 ssuominen Exp $
 
 EAPI=2
-inherit cmake-utils
+inherit cmake-utils flag-o-matic
 
 MY_P=OpenCV-${PV}
 
@@ -38,12 +38,16 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}/${P}-multilib.patch"
-	"${FILESDIR}/${P}-libpng14.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-multilib.patch"
+	"${FILESDIR}/${P}-libpng14.patch"
+	)
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		-DCMAKE_SKIP_RPATH=ON
+	append-cppflags -D__STDC_CONSTANT_MACROS
+
+	mycmakeargs=(
+		"-DCMAKE_SKIP_RPATH=ON"
 		$(cmake-utils_use_build examples)
 		$(cmake-utils_use_build python NEW_PYTHON_SUPPORT)
 		$(cmake-utils_use_build octave OCTAVE_SUPPORT)
@@ -51,8 +55,8 @@ src_configure() {
 		$(cmake-utils_use_enable openmp)
 		$(cmake-utils_use ipp USE_IPP)
 		$(cmake-utils_use mmx USE_MMX)
-		-DUSE_O3=OFF
-		-DUSE_OMIT_FRAME_POINTER=OFF
+		"-DUSE_O3=OFF"
+		"-DUSE_OMIT_FRAME_POINTER=OFF"
 		$(cmake-utils_use sse USE_SSE)
 		$(cmake-utils_use sse2 USE_SSE2)
 		$(cmake-utils_use sse3 USE_SSE3)
@@ -64,13 +68,15 @@ src_configure() {
 		$(cmake-utils_use_with jpeg)
 		$(cmake-utils_use_with png)
 		$(cmake-utils_use_with tiff)
-		-DWITH_UNICAP=OFF
+		"-DWITH_UNICAP=OFF"
 		$(cmake-utils_use_with v4l)
-		$(cmake-utils_use_with xine)"
+		$(cmake-utils_use_with xine)
+		)
 
 	if use python; then
-		mycmakeargs="${mycmakeargs}
-			$(cmake-utils_use_build deprecated SWIG_PYTHON_SUPPORT)"
+		mycmakeargs+=(
+			$(cmake-utils_use_build deprecated SWIG_PYTHON_SUPPORT)
+			)
 	fi
 
 	cmake-utils_src_configure
