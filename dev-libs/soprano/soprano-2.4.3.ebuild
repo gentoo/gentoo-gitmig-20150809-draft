@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.4.3.ebuild,v 1.3 2010/05/06 18:43:13 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.4.3.ebuild,v 1.4 2010/06/16 05:25:17 reavertm Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
+	test? ( >=x11-libs/qt-test-4.5.0:4 )
 "
 RDEPEND="${COMMON_DEPEND}
 	virtuoso? ( >=dev-db/virtuoso-server-6.1.0 )
