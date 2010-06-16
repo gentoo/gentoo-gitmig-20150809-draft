@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.11 2010/01/17 21:34:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.12 2010/06/16 20:16:33 sping Exp $
 
 EAPI=2
 inherit eutils games
@@ -9,8 +9,12 @@ DESCRIPTION="Unique mix of strategy and FPS"
 HOMEPAGE="http://www.s2games.com/savage/
 	http://www.notforidiots.com/SFE/
 	http://www.newerth.com/"
-SRC_URI="http://www.newerth.com/downloads/SFE-Standalone.tar.gz
-	http://www.newerth.com/downloads/lin-client-auth-patch.zip"
+SRC_URI="http://www.newerth.com/?id=downloads&op=downloadFile&file=SFE-Standalone.tar.gz&mirrorid=1 -> SFE-Standalone.tar.gz
+	http://www.newerth.com/?id=downloads&op=downloadFile&file=SFE-Standalone.tar.gz&mirrorid=2 -> SFE-Standalone.tar.gz
+	http://www.newerth.com/?id=downloads&op=downloadFile&file=SFE-Standalone.tar.gz&mirrorid=3 -> SFE-Standalone.tar.gz
+	http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=1 -> lin-client-auth-patch.zip
+	http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=2 -> lin-client-auth-patch.zip
+	http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=3 -> lin-client-auth-patch.zip"
 
 LICENSE="as-is"
 SLOT="0"
