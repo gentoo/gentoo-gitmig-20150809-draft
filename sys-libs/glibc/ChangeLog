@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.687 2010/06/12 05:06:40 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.688 2010/06/16 01:43:37 zorry Exp $
+
+  16 Jun 2010; Magnus Granberg <zorry@gentoo.org> files/eblits/common.eblit:
+  bug #293721 to support >=gcc 4.2 SSP support
 
   12 Jun 2010; Joshua Kinard <kumba@gentoo.org> glibc-2.11-r1.ebuild:
   ~mipsify glibc-2.11-r1. Runs OK on O2 so far...
