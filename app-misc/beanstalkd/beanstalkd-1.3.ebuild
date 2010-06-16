@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.3.ebuild,v 1.2 2010/06/09 16:05:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.3.ebuild,v 1.3 2010/06/16 17:07:50 fauli Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://xph.us/dist/beanstalkd/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 
 RDEPEND=">=dev-libs/libevent-1.4.7"
 DEPEND="${RDEPEND}"
