@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/qtoctave
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.7 2009/12/04 04:37:20 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.8 2010/06/16 05:56:39 bicatali Exp $
+
+*qtoctave-0.9.1 (16 Jun 2010)
+
+  16 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +qtoctave-0.9.1.ebuild, +files/qtoctave-0.9.1-doc-path.patch,
+  +files/qtoctave-0.9.1-qt-version.patch:
+  Version bump
 
   04 Dec 2009; Markus Dittrich <markusle@gentoo.org> qtoctave-0.8.2.ebuild:
   Updated dependency on octave (see bug #263872).
