@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.110 2010/06/12 16:36:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.111 2010/06/16 19:50:33 patrick Exp $
+
+  16 Jun 2010; Patrick Lauer <patrick@gentoo.org> icu-4.0.1.ebuild,
+  icu-4.2.1.ebuild, icu-4.4.1.ebuild:
+  Makefiles are parallel-unsafe, so adding -j1 until it is properly fixed.
+  See bug #272328
 
   12 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   icu-4.4.1.ebuild, +files/icu-4.4.1-pkgdata.patch:
