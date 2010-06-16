@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.41 2010/04/17 12:12:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.42 2010/06/16 13:36:06 ssuominen Exp $
+
+*knutclient-1.0.2 (16 Jun 2010)
+
+  16 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +knutclient-1.0.2.ebuild:
+  Version bump.
 
 *knutclient-1.0.1 (17 Apr 2010)
 
