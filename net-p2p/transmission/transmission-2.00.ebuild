@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.00.ebuild,v 1.1 2010/06/16 20:03:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.00.ebuild,v 1.2 2010/06/16 21:30:36 pva Exp $
 
 EAPI=2
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2
@@ -34,6 +34,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
 	sys-apps/sed"
+
+src_prepare() {
+	sed -i -e 's:-ggdb3::g' configure.ac || die
+	eautoreconf
+}
 
 src_configure() {
 	# cli and daemon doesn't have external deps and are enabled by default

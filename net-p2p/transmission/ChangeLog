@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.115 2010/06/16 20:03:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.116 2010/06/16 21:30:36 pva Exp $
+
+  16 Jun 2010; Peter Volkov <pva@gentoo.org> transmission-2.00.ebuild:
+  Drop -ggdb3 from CFLAGS, bug #324367, thank Samuli Suominen for report.
 
 *transmission-2.00 (16 Jun 2010)
 
