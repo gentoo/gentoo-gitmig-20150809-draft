@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.15 2010/05/13 21:38:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/sgml-catalog.eclass,v 1.16 2010/06/16 03:36:06 abcd Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 
@@ -21,13 +21,13 @@ sgml-catalog_cat_include() {
 sgml-catalog_cat_doinstall() {
 	debug-print function $FUNCNAME $*
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
-	"${EPREFIX}"/usr/bin/install-catalog --add "${EPREFIX}/$1" "${EPREFIX}/$2" &>/dev/null
+	"${EPREFIX}"/usr/bin/install-catalog --add "${EPREFIX}$1" "${EPREFIX}$2" &>/dev/null
 }
 
 sgml-catalog_cat_doremove() {
 	debug-print function $FUNCNAME $*
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
-	"${EPREFIX}"/usr/bin/install-catalog --remove "${EPREFIX}/$1" "${EPREFIX}/$2" &>/dev/null
+	"${EPREFIX}"/usr/bin/install-catalog --remove "${EPREFIX}$1" "${EPREFIX}$2" &>/dev/null
 }
 
 sgml-catalog_pkg_postinst() {
