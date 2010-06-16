@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.1.1.ebuild,v 1.2 2010/06/14 15:33:42 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.1.1.ebuild,v 1.3 2010/06/16 09:08:16 pacho Exp $
 
 EAPI="2"
 
@@ -77,6 +77,13 @@ pkg_setup() {
 		$(use_enable spell)
 		$(use_enable test coding-style-checks)
 		$(use_enable webkit)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix uninitialized GError*s causing tests to break, bug #323751
+	epatch "${FILESDIR}/${P}-init-gerror.patch"
 }
 
 src_test() {
