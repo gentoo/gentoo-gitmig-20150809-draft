@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyside-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.1 2009/12/20 16:38:58 ayoy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.2 2010/06/16 18:56:07 ayoy Exp $
+
+*pyside-tools-0.1.3 (16 Jun 2010)
+
+  16 Jun 2010; Dominik Kapusta <ayoy@gentoo.org> +pyside-tools-0.1.3.ebuild:
+  Version bump
 
 *pyside-tools-0.1.2 (20 Dec 2009)
 
