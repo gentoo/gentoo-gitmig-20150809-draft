@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.68 2010/04/26 07:40:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.69 2010/06/16 17:57:39 patrick Exp $
+
+*xen-sources-2.6.34 (16 Jun 2010)
+
+  16 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  +xen-sources-2.6.34.ebuild:
+  Bump to .34, thanks to Andrew Lyon
 
   26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update Manifest for deblob support in kernel-2 eclass.
