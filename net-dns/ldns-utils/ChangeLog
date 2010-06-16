@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ldns-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.5 2010/03/11 18:57:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.6 2010/06/16 23:52:27 matsuu Exp $
+
+*ldns-utils-1.6.5 (16 Jun 2010)
+
+  16 Jun 2010; MATSUU Takuto <matsuu@gentoo.org> +ldns-utils-1.6.5.ebuild:
+  Version bumped.
 
   11 Mar 2010; Markos Chandras <hwoarang@gentoo.org>
   ldns-utils-1.6.4.ebuild:
