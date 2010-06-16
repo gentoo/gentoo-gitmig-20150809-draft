@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.51 2010/05/31 19:24:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.52 2010/06/16 02:08:07 arfrever Exp $
+
+  16 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gcompris-8.4.12.ebuild:
+  Delete call to deprecated python_version() (bug #324195).
 
   31 May 2010; Markus Meier <maekke@gentoo.org> gcompris-9.2.2.ebuild:
   amd64/x86 stable, bug #318633

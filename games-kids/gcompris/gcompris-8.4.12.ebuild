@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.12.ebuild,v 1.3 2009/11/23 13:28:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.12.ebuild,v 1.4 2010/06/16 02:08:07 arfrever Exp $
 
 EAPI=2
 inherit autotools eutils python games
@@ -51,7 +51,6 @@ src_prepare() {
 }
 
 src_configure() {
-	python_version
 	GNUCHESS="${GAMES_BINDIR}"/gnuchess \
 	egamesconf \
 		--disable-dependency-tracking \
@@ -60,7 +59,7 @@ src_configure() {
 		--localedir=/usr/share/locale \
 		--infodir=/usr/share/info \
 		--enable-xf86vidmode \
-		$(use_with python python /usr/bin/python${PYVER}) \
+		$(use_with python python "$(PYTHON -a)") \
 		$(use_enable debug) \
 		$(use_enable gnet) \
 		$(use_enable sqlite)
