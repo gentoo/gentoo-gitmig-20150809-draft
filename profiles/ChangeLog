@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4280 2010/06/16 14:23:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4281 2010/06/16 18:14:29 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jun 2010; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Adding postgres virtuals to postgres alpha/beta mask
 
   16 Jun 2010; Justin Lecher <jlec@gentoo.org> package.mask:
   masked =sci-libs/monomer-db-5.16: Just working with the masked
