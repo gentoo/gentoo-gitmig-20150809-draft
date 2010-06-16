@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.284 2010/06/13 15:30:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.285 2010/06/16 15:51:58 pacho Exp $
+
+*pango-1.28.1 (16 Jun 2010)
+
+  16 Jun 2010; Pacho Ramos <pacho@gentoo.org> -pango-1.28.0.ebuild,
+  +pango-1.28.1.ebuild:
+  Version bump with bugfixes, build fixes, pango-view now accepts --margin
 
 *pango-1.28.0 (13 Jun 2010)
 
