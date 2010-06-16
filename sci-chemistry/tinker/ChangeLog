@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/tinker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.21 2010/04/09 13:33:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/ChangeLog,v 1.22 2010/06/16 11:52:09 jlec Exp $
+
+*tinker-6.0 (16 Jun 2010)
+*tinker-5.1.08 (16 Jun 2010)
+
+  16 Jun 2010; Justin Lecher <jlec@gentoo.org> -tinker-5.1.05.ebuild,
+  +tinker-5.1.08.ebuild, +tinker-6.0.ebuild:
+  Version Bump, #322929
 
   09 Apr 2010; Justin Lecher <jlec@gentoo.org> tinker-5.1.05.ebuild:
   Blocking dev-util/diffuse per 314129 & 279018
