@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.8 2010/04/02 19:33:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.9 2010/06/16 23:52:05 matsuu Exp $
+
+*ldns-1.6.5 (16 Jun 2010)
+
+  16 Jun 2010; MATSUU Takuto <matsuu@gentoo.org> +ldns-1.6.5.ebuild:
+  Version bumped. Added python USE flag.
 
   02 Apr 2010; Fabian Groffen <grobian@gentoo.org> ldns-1.6.4.ebuild:
   Marked ~ppc-macos and ~x64-macos, bug #312015
