@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-23.2.ebuild,v 1.1 2010/04/08 17:47:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-23.2.ebuild,v 1.2 2010/06/16 16:29:51 fauli Exp $
 
 EAPI=2
 inherit flag-o-matic toolchain-funcs games
@@ -13,7 +13,7 @@ SRC_URI="http://www.craftychess.com/${P}.zip
 
 LICENSE="crafty"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="no-opts"
 RESTRICT="test"
 
