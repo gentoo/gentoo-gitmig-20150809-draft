@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.9.ebuild,v 1.1 2009/01/05 23:57:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.9.ebuild,v 1.2 2010/06/16 12:16:04 aballier Exp $
 
-inherit vdr-plugin versionator
+inherit vdr-plugin versionator flag-o-matic
 
 DESCRIPTION="VDR plugin: Use a dxr3 or hw+ card as output device"
 HOMEPAGE="http://sourceforge.net/projects/dxr3plugin/"
@@ -26,4 +26,6 @@ src_unpack() {
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326"; then
 		epatch "${FILESDIR}/${PN}-0.2.8-ffmpeg-includes.diff"
 	fi
+	# UINT64_C is needed by ffmpeg headers
+	append-flags -D__STDC_CONSTANT_MACROS
 }
