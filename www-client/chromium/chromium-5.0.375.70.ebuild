@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.70.ebuild,v 1.2 2010/06/11 09:35:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.70.ebuild,v 1.3 2010/06/16 19:59:32 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -65,6 +65,10 @@ src_prepare() {
 
 src_configure() {
 	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
+
+	# Workaround for bug #318969.
+	# TODO: remove when http://crbug.com/43778 is fixed.
+	append-flags -D__STDC_CONSTANT_MACROS
 
 	# Fails to build on arm if we don't do this
 	use arm && append-flags -fno-tree-sink
