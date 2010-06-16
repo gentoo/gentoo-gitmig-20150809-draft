@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/Data-Dump-Streamer-2.17.ebuild,v 1.1 2010/06/12 12:56:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/Data-Dump-Streamer-2.18.ebuild,v 1.1 2010/06/16 08:11:50 tove Exp $
 
 EAPI=3
 
