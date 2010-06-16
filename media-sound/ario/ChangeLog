@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ario
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.15 2010/06/07 15:24:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.16 2010/06/16 14:15:37 phajdan.jr Exp $
+
+  16 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ario-1.4.4.ebuild:
+  x86 stable wrt bug #322911
 
   07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> ario-1.4.4.ebuild:
   Stable on amd64 wrt bug #322911
