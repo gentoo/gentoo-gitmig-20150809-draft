@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.62 2010/06/16 16:09:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.63 2010/06/16 16:25:47 fauli Exp $
+
+  16 Jun 2010; <fauli@gentoo.org> workrave-1.9.1-r1.ebuild:
+  stable x86, bug 310261
 
 *workrave-1.9.1-r1 (16 Jun 2010)
 
