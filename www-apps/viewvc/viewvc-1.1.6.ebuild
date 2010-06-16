@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.6.ebuild,v 1.2 2010/06/03 21:06:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.6.ebuild,v 1.3 2010/06/16 19:08:24 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -59,6 +59,8 @@ src_prepare() {
 	mv conf/viewvc.conf{.dist,}
 	mv conf/cvsgraph.conf{.dist,}
 	mv conf/mimetypes.conf{.dist,}
+
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
