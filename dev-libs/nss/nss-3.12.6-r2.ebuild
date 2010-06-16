@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.6-r2.ebuild,v 1.1 2010/06/16 18:52:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.6-r2.ebuild,v 1.2 2010/06/16 18:53:30 robbat2 Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -156,11 +156,11 @@ src_install () {
 	for f in $nssutils; do
 		dobin ${f}
 	done
-	
+
 	# Prelink breaks the CHK files. We don't have any reliable way to run
 	# shlibsign after prelink.
 	declare -a libs
-	for l in ${NSS_CHK_SIGN_LIBS} ; do	
+	for l in ${NSS_CHK_SIGN_LIBS} ; do
 		libs+=("/usr/$(get_libdir)/lib${l}.so")
 	done
 	OLD_IFS="${IFS}" IFS=":" ; liblist="${libs[*]}" ; IFS="${OLD_IFS}"
@@ -183,4 +183,3 @@ pkg_postinst() {
 pkg_postrm() {
 	cleanup_chk "${ROOT}"/usr/$(get_libdir)
 }
-
