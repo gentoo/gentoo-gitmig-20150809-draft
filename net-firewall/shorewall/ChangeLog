@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.170 2009/10/09 12:22:43 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.171 2010/06/16 14:44:05 chainsaw Exp $
+
+*shorewall-4.4.10 (16 Jun 2010)
+
+  16 Jun 2010; <chainsaw@gentoo.org>
+  +files/4.4.10-underscore-not-dash.patch, +shorewall-4.4.10.ebuild:
+  Version bump, for bug #298301 by Magnus Kessler.
 
 *shorewall-4.4.2.1 (09 Oct 2009)
 
