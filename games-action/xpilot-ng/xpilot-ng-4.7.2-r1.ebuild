@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.9 2010/01/22 20:05:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.10 2010/06/16 02:02:46 arfrever Exp $
 
 EAPI=2
+PYTHON_DEPEND="2"
 inherit python eutils multilib games
 
 DESCRIPTION="Improvement of the multiplayer space game XPilot"
@@ -31,6 +32,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto"
 
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
+
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-xpngcc.patch \
 		"${FILESDIR}"/${P}-glibc210.patch
@@ -52,13 +58,12 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README
-	python_version
 	insinto "${GAMES_DATADIR}"/${PN}/xpngcc
 	doins contrib/xpngcc/*.py contrib/xpngcc/*.png
 	exeinto "${GAMES_DATADIR}"/${PN}/xpngcc
 	doexe contrib/xpngcc/xpngcc.py
-	dodir /usr/$(get_libdir)/python${PYVER}/site-packages
-	dosym "${GAMES_DATADIR}"/${PN}/xpngcc /usr/$(get_libdir)/python${PYVER}/site-packages/xpngcc
+	dodir $(python_get_sitedir)
+	dosym "${GAMES_DATADIR}"/${PN}/xpngcc $(python_get_sitedir)/xpngcc
 	dosym "${GAMES_DATADIR}"/${PN}/xpngcc/xpngcc.py "${GAMES_BINDIR}"/xpilot-ng
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "XPilot NG"
