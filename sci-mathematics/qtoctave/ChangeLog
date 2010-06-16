@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/qtoctave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.8 2010/06/16 05:56:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.9 2010/06/16 15:30:24 bicatali Exp $
+
+  16 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  qtoctave-0.9.1.ebuild, +files/qtoctave-0.9.1-qtinfo.patch:
+  Added patch from Fedora to avoid collision with libquicktime, bug #324217,
+  thanks ssuominen
 
 *qtoctave-0.9.1 (16 Jun 2010)
 
