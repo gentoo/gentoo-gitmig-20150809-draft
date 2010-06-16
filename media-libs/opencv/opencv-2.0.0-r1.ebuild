@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.5 2010/06/16 16:36:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0-r1.ebuild,v 1.6 2010/06/16 16:38:21 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils flag-o-matic
@@ -44,7 +44,7 @@ PATCHES=(
 	)
 
 src_configure() {
-	append-cppflags -D__STDC_CONSTANT_MACROS
+	append-cppflags -D__STDC_CONSTANT_MACROS #324259
 
 	mycmakeargs=(
 		"-DCMAKE_SKIP_RPATH=ON"
