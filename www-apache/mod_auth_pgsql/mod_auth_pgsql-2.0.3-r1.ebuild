@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/mod_auth_pgsql-2.0.3-r1.ebuild,v 1.4 2008/05/19 20:22:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/mod_auth_pgsql-2.0.3-r1.ebuild,v 1.5 2010/06/17 18:35:20 patrick Exp $
 
 inherit apache-module multilib
 
@@ -13,7 +13,7 @@ SLOT="2"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND="virtual/postgresql-base"
+DEPEND="dev-db/postgresql-base"
 RDEPEND="${DEPEND}"
 
 APXS2_ARGS="-a -c -I/usr/include/postgresql -L/usr/$(get_libdir)/postgresql -lpq mod_auth_pgsql.c"

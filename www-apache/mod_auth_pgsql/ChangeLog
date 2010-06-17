@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_pgsql
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.6 2008/05/19 20:22:28 dev-zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.7 2010/06/17 18:35:20 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  mod_auth_pgsql-2.0.3-r1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   mod_auth_pgsql-2.0.3-r1.ebuild:
