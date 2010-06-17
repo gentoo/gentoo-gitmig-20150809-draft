@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.65 2010/05/23 18:26:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.66 2010/06/17 01:41:16 jsbronder Exp $
+
+  17 Jun 2010; Justin Bronder <jsbronder@gentoo.org> -openmpi-1.2.9.ebuild:
+  sys-cluster/openmpi cleanup
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> openmpi-1.4.1.ebuild:
   stable amd64, bug 307627
