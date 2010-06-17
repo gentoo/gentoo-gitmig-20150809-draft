@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.1 2010/06/15 18:02:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.2 2010/06/17 01:48:33 jsbronder Exp $
 
 EAPI="3"
 
@@ -63,8 +63,6 @@ src_configure() {
 	 		myconf="${myconf} --with-mpich=${EPREFIX}/usr"
 		elif has_version sys-cluster/mpich2; then
 			myconf="${myconf} --with-mpich2=${EPREFIX}/usr"
-		elif has_version sys-cluster/lam-mpi; then
-			myconf="${myconf} --with-lam=${EPREFIX}/usr"
 		elif has_version sys-cluster/openmpi; then
 			myconf="${myconf} --with-openmpi=${EPREFIX}/usr"
 		fi

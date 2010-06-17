@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.0.0-r1.ebuild,v 1.3 2009/05/06 21:05:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.0.0-r1.ebuild,v 1.4 2010/06/17 01:48:33 jsbronder Exp $
 
 inherit eutils fortran autotools
 
@@ -49,8 +49,6 @@ src_compile() {
 	 		myconf="${myconf} --with-mpich=/usr"
 		elif has_version sys-cluster/mpich2; then
 			myconf="${myconf} --with-mpich2=/usr"
-		elif has_version sys-cluster/lam-mpi; then
-			myconf="${myconf} --with-lam=/usr"
 		elif has_version sys-cluster/openmpi; then
 			myconf="${myconf} --with-openmpi=/usr"
 		fi
