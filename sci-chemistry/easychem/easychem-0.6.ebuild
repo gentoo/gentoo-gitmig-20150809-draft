@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6.ebuild,v 1.11 2009/12/26 17:44:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6.ebuild,v 1.12 2010/06/17 10:30:24 jlec Exp $
 
 inherit eutils
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.4.1
+RDEPEND="
+	>=x11-libs/gtk+-2.4.1
 	app-text/ghostscript-gpl
 	media-gfx/pstoedit"
-
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
@@ -33,6 +33,6 @@ src_compile() {
 }
 
 src_install () {
-	dobin easychem
-	dodoc TODO
+	dobin easychem || die
+	dodoc TODO || die
 }
