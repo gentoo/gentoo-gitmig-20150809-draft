@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.111 2010/04/21 22:06:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.112 2010/06/17 18:54:08 pacho Exp $
+
+*anjuta-2.30.2.0 (17 Jun 2010)
+
+  17 Jun 2010; Pacho Ramos <pacho@gentoo.org> +anjuta-2.30.2.0.ebuild,
+  +files/anjuta-2.30.2.0-debug-mode.patch,
+  +files/anjuta-2.30.2.0-symbol-db-optional.patch:
+  Version bump for Gnome 2.30
 
   21 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/anjuta-1.2.4-gtk-fix.patch, -files/anjuta-2.1.0-sandbox-fix.patch,
