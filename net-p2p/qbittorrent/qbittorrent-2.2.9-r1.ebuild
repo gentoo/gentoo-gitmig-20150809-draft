@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.2.9.ebuild,v 1.1 2010/06/17 09:45:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.2.9-r1.ebuild,v 1.1 2010/06/17 12:09:12 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -39,6 +39,8 @@ src_prepare() {
 	# Move saveDHTEntry definition away from slots so the moc
 	# doens't get confused and breaks compilation
 	epatch "${FILESDIR}"/moc_bug_workaround.patch
+	# fix WebUI for nox binary
+	epatch "${FILESDIR}"/nox-webui-fix.patch
 	# Respect LDFLAGS
 	sed -i -e 's/-Wl,--as-needed/$(LDFLAGS)/g' src/src.pro
 	qt4-r2_src_prepare
