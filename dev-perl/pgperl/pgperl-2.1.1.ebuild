@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.1.1.ebuild,v 1.1 2010/01/07 14:42:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pgperl/pgperl-2.1.1.ebuild,v 1.2 2010/06/17 18:29:03 patrick Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/postgresql-base
+DEPEND="dev-db/postgresql-base
 	dev-lang/perl"
 
 S=${WORKDIR}/Pg-${PV}
