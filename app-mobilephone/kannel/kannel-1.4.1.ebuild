@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.10 2009/03/01 16:04:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.11 2010/06/17 21:26:13 patrick Exp $
 
 WANT_AUTOMAKE=none
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.26
 	mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-2* )
 	sqlite3? ( >=dev-db/sqlite-3.2.1 )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	pcre? ( dev-libs/libpcre )
 	doc? ( media-gfx/transfig
 		app-text/jadetex
