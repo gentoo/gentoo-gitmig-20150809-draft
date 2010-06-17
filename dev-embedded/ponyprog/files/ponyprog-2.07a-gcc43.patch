@@ -1,3 +1,5 @@
+http://bugs.gentoo.org/227503
+
 --- a/v/includex/v/vpsdc.h
 +++ b/v/includex/v/vpsdc.h
 @@ -14,7 +14,9 @@
