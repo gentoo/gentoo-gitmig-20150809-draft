@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-6.0.0.ebuild,v 1.8 2009/09/18 20:27:24 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-6.0.0.ebuild,v 1.9 2010/06/17 20:53:45 patrick Exp $
 
 EZMLM_P=ezmlm-0.53
 
@@ -18,7 +18,7 @@ IUSE="mysql postgres"
 
 DEPEND="
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 "
 RDEPEND="${DEPEND}
 	virtual/qmail"

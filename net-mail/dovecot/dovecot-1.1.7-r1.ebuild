@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.7-r1.ebuild,v 1.4 2008/12/08 16:37:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.7-r1.ebuild,v 1.5 2010/06/17 20:52:06 patrick Exp $
 
 inherit autotools eutils ssl-cert versionator
 
@@ -37,7 +37,7 @@ DEPEND=">=sys-apps/sed-4
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam )
 	ssl? ( dev-libs/openssl )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	mysql? ( virtual/mysql )
 	sqlite3? ( =dev-db/sqlite-3* )
 	vpopmail? ( net-mail/vpopmail )"

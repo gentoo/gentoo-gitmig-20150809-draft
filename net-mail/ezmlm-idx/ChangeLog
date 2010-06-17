@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.29 2010/01/26 09:28:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.30 2010/06/17 20:53:45 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> ezmlm-idx-0.40-r2.ebuild,
+  ezmlm-idx-6.0.0.ebuild, ezmlm-idx-7.0.0.ebuild, ezmlm-idx-7.0.0-r1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *ezmlm-idx-7.0.0-r1 (26 Jan 2010)
 

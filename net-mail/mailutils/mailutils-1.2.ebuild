@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-1.2.ebuild,v 1.5 2009/03/16 09:44:22 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-1.2.ebuild,v 1.6 2010/06/17 20:54:47 patrick Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="!virtual/mailx
 	dev-scheme/guile
 	gdbm? ( sys-libs/gdbm )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	nls? ( sys-devel/gettext )
 	virtual/mta"
 

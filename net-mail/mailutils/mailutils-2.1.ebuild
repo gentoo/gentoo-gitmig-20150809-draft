@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.1.ebuild,v 1.4 2010/01/25 00:30:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.1.ebuild,v 1.5 2010/06/17 20:54:47 patrick Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ RDEPEND="!virtual/mailx
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	nls? ( sys-devel/gettext )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	tokyocabinet? ( dev-db/tokyocabinet )
 	virtual/mta"
 

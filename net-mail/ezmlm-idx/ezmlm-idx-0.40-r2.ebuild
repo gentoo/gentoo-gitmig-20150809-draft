@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.18 2006/11/23 16:04:43 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.19 2010/06/17 20:53:45 patrick Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -27,8 +27,8 @@ RDEPEND="virtual/qmail"
 
 if [ "$PN" = "${PB}-pgsql" ]
 then
-	DEPEND="$DEPEND dev-db/postgresql"
-	RDEPEND="$RDEPEND dev-db/postgresql"
+	DEPEND="$DEPEND dev-db/postgresql-server"
+	RDEPEND="$RDEPEND dev-db/postgresql-server"
 elif [ "$PN" = "${PB}-mysql" ]
 then
 	DEPEND="$DEPEND virtual/mysql"
