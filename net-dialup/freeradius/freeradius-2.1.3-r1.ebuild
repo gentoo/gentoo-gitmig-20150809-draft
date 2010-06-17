@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.3-r1.ebuild,v 1.2 2009/07/31 17:06:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.3-r1.ebuild,v 1.3 2010/06/17 21:46:03 patrick Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="!net-dialup/cistronradius
 	dev-lang/perl
 	snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	!bindist? ( firebird? ( dev-db/firebird ) )
 	pam? ( sys-libs/pam )
 	ssl? ( dev-libs/openssl )
