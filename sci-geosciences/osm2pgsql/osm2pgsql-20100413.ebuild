@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-20100413.ebuild,v 1.2 2010/05/05 21:45:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-20100413.ebuild,v 1.3 2010/06/17 18:35:02 patrick Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ DEPEND="
 	sci-libs/geos
 	sci-libs/proj
 	sys-libs/zlib
-	virtual/postgresql-base
+	dev-db/postgresql-base
 "
 RDEPEND="${DEPEND}"
 
