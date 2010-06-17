@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/nufw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.37 2010/03/18 17:11:18 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.38 2010/06/17 21:48:59 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> nufw-2.2.21.ebuild,
+  nufw-2.2.22.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *nufw-2.2.22 (18 Mar 2010)
 
