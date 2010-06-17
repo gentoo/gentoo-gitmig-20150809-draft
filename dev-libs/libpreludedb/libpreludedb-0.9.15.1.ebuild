@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.15.1.ebuild,v 1.3 2009/04/19 19:26:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-0.9.15.1.ebuild,v 1.4 2010/06/17 21:33:54 patrick Exp $
 
 inherit flag-o-matic eutils perl-module
 
@@ -15,7 +15,7 @@ IUSE="doc mysql postgres perl python sqlite swig"
 
 RDEPEND=">=dev-libs/libprelude-0.9.10
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	sqlite? ( =dev-db/sqlite-3* )"
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"

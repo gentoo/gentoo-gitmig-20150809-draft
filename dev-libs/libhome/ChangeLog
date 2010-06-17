@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhome
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.10 2009/07/05 19:53:51 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.11 2010/06/17 21:32:16 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> libhome-0.10.1.ebuild,
+  libhome-0.10.2.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   05 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   files/libhome-0.10.1-Makefile.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2.ebuild,v 1.1 2009/07/05 19:25:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/libhome-0.10.2.ebuild,v 1.2 2010/06/17 21:32:16 patrick Exp $
 
 inherit autotools db-use eutils
 
@@ -17,7 +17,7 @@ DEPEND="berkdb? ( =sys-libs/db-4* )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
-	postgres? ( virtual/postgresql-server )"
+	postgres? ( dev-db/postgresql-server )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
