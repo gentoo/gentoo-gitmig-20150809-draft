@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.1.ebuild,v 1.7 2009/12/26 12:20:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.1.ebuild,v 1.8 2010/06/17 20:41:53 patrick Exp $
 
 inherit eutils autotools multilib
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libpcap
 	flexresp2? ( dev-libs/libdnet )
 	flexresp? ( ~net-libs/libnet-1.0.2a )
 	react? ( ~net-libs/libnet-1.0.2a )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	prelude? ( >=dev-libs/libprelude-0.9.0 )
