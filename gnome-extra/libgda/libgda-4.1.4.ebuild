@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.4.ebuild,v 1.3 2010/05/29 17:47:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.4.ebuild,v 1.4 2010/06/17 20:21:51 patrick Exp $
 
 EAPI="2"
 
@@ -39,7 +39,7 @@ RDEPEND="
 	ldap?     ( >=net-nds/openldap-2.0.25 )
 	mysql?    ( virtual/mysql )
 	odbc?     ( >=dev-db/unixODBC-2.0.6 )
-	postgres? ( >=virtual/postgresql-base-7.2.1 )
+	postgres? ( dev-db/postgresql-base )
 	xbase?    ( dev-db/xbase )
 	>=dev-db/sqlite-3.6.22:3"
 #   json?     ( dev-libs/json-glib )

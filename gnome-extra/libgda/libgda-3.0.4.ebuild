@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.4.ebuild,v 1.9 2009/05/31 21:14:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.4.ebuild,v 1.10 2010/06/17 20:21:51 patrick Exp $
 
 # TODO:
 # * Verify if the parallel compilation problems persist, and if so fix them.
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.8
 	berkdb?   ( sys-libs/db )
 	odbc?     ( >=dev-db/unixODBC-2.0.6 )
 	mysql?    ( virtual/mysql )
-	postgres? ( >=virtual/postgresql-base-7.2.1 )
+	postgres? ( dev-db/postgresql-base )
 	freetds?  ( >=dev-db/freetds-0.62 )
 	!bindist? ( firebird? ( dev-db/firebird ) )
 	xbase?    ( dev-db/xbase )

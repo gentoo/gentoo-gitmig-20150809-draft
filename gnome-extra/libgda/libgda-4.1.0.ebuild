@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.0.ebuild,v 1.7 2010/04/04 16:27:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.0.ebuild,v 1.8 2010/06/17 20:21:51 patrick Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	berkdb?   ( sys-libs/db )
 	odbc?     ( >=dev-db/unixODBC-2.0.6 )
 	mysql?    ( virtual/mysql )
-	postgres? ( >=virtual/postgresql-base-7.2.1 )
+	postgres? ( dev-db/postgresql-base )
 	freetds?  ( >=dev-db/freetds-0.62 )
 	!bindist? ( firebird? ( dev-db/firebird ) )
 	xbase?    ( dev-db/xbase )
