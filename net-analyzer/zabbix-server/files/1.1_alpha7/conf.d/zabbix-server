@@ -1,7 +1,0 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/files/1.1_alpha7/conf.d/zabbix-server,v 1.1 2005/04/26 22:06:07 iggy Exp $
-
-# Config file for /etc/conf.d/zabbix-server
-
-PID="/var/run/zabbix/zabbix_server.pid"
