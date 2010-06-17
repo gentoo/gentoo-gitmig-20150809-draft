@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.87 2010/06/17 18:28:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.88 2010/06/17 21:03:51 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> grass-6.3.0.ebuild,
+  grass-6.4.0_rc5.ebuild, grass-6.4.0_rc6.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   17 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   grass-6.4.0_rc6.ebuild:

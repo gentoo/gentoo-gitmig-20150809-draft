@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.14 2010/05/30 20:45:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.15 2010/06/17 21:03:51 patrick Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -40,8 +40,8 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	motif? ( x11-libs/openmotif )
 	png? ( >=media-libs/libpng-1.2.2 )
 	postgres? ( || (
-		>=virtual/postgresql-base-8.0
-		>=virtual/postgresql-server-8.0 )
+		>=dev-db/postgresql-base-8.0
+		>=dev-db/postgresql-server-8.0 )
 	)
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )

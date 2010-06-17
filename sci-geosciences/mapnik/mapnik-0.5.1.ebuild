@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.9 2009/08/22 23:18:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.10 2010/06/17 21:01:40 patrick Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/boost-1.33.0
 	sci-libs/gdal
 	xml? ( dev-libs/libxml2 )
 	postgres? (
-		>=virtual/postgresql-base-8.0
+		>=dev-db/postgresql-base-8.0
 		>=dev-db/postgis-1.1.2
 	)
 	python? ( >=dev-lang/python-2.4 )
