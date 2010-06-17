@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpqxx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.63 2009/09/10 13:10:42 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.64 2010/06/17 18:23:01 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> libpqxx-2.6.8.ebuild,
+  libpqxx-2.6.9.ebuild, libpqxx-3.0.2.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *libpqxx-3.0.2 (10 Sep 2009)
 

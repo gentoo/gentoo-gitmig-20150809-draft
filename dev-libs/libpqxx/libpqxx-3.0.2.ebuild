@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-3.0.2.ebuild,v 1.1 2009/09/10 13:10:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-3.0.2.ebuild,v 1.2 2010/06/17 18:23:01 patrick Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/postgresql-base"
+DEPEND="dev-db/postgresql-base"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

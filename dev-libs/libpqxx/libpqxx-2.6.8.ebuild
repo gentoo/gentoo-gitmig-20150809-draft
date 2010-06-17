@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.8.ebuild,v 1.11 2008/05/19 19:39:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.8.ebuild,v 1.12 2010/06/17 18:23:01 patrick Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/postgresql-base"
+DEPEND="dev-db/postgresql-base"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
