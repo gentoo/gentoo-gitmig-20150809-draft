@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.65 2010/05/11 05:24:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.66 2010/06/17 20:32:12 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> pmacct-0.11.5-r1.ebuild,
+  pmacct-0.12.0-r1.ebuild, pmacct-0.12.1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *pmacct-0.12.1 (11 May 2010)
 

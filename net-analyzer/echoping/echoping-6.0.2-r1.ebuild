@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.5 2009/09/16 18:04:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.6 2010/06/17 20:28:33 patrick Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RESTRICT="test"
 RDEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	idn? ( net-dns/libidn )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2"

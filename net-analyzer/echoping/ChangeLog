@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/echoping
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.22 2009/09/16 18:04:11 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.23 2010/06/17 20:28:33 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> echoping-6.0.2.ebuild,
+  echoping-6.0.2-r1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   16 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   echoping-6.0.2-r1.ebuild:
