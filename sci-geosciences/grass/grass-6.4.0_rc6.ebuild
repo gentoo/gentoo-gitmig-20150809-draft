@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.7 2010/06/15 12:20:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.8 2010/06/17 14:22:58 arfrever Exp $
 
 EAPI="3"
 
@@ -121,8 +121,10 @@ pkg_setup() {
 	use wxwidgets && ! use X && ewarn "For wxwidgets support X useflag must be enabled"
 	use wxwidgets && ! use python && ewarn "For wxwidgets support python useflag must be enabled"
 
-	# only py2 is supported
-	python_set_active_version 2
+	if use python; then
+		# only py2 is supported
+		python_set_active_version 2
+	fi
 }
 
 src_prepare() {
