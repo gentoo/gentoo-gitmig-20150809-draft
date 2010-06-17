@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/kyotocabinet
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.1 2010/06/17 17:32:12 patrick Exp $
+
+*kyotocabinet-1.0.2 (17 Jun 2010)
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  +kyotocabinet-1.0.2.ebuild, +files/fix_rpath.patch,
+  +files/remove_docinst.patch, +files/remove_ldconfig.patch, +metadata.xml:
+  Initial import. Ebuild by jbergstroem.
+
