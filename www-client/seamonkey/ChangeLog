@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.219 2010/06/16 18:00:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.220 2010/06/17 22:00:30 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> seamonkey-1.1.18.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *seamonkey-2.0.4-r2 (16 Jun 2010)
 
