@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/Pango-1.221.ebuild,v 1.3 2010/05/29 19:16:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/Pango-1.221.ebuild,v 1.4 2010/06/17 15:57:10 tove Exp $
 
 EAPI=2
 
@@ -20,3 +20,8 @@ RDEPEND=">=dev-perl/glib-perl-1.220
 DEPEND=">=dev-perl/extutils-depends-0.300
 	>=dev-perl/extutils-pkgconfig-1.030
 	${RDEPEND}"
+
+src_prepare() {
+	perl-module_src_prepare
+	sed -i -e "s:exit 0:exit 1:g" "${S}"/Makefile.PL || die "sed failed"
+}
