@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.10 2009/01/15 05:25:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31-r2.ebuild,v 1.11 2010/06/17 21:38:18 patrick Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="gd sqlite postgres"
 
-RDEPEND="postgres? ( virtual/postgresql-server )
+RDEPEND="postgres? ( dev-db/postgresql-server )
 		!postgres? ( sqlite? ( =dev-db/sqlite-2* )
 					!sqlite? ( sys-libs/gdbm ) )"
 DEPEND="${RDEPEND}

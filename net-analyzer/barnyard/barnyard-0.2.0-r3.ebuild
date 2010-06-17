@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r3.ebuild,v 1.1 2010/01/16 00:07:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r3.ebuild,v 1.2 2010/06/17 21:37:29 patrick Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 -sparc ~x86"
 IUSE="mysql postgres sguil"
 
 DEPEND="net-libs/libpcap
-	postgres? ( >=virtual/postgresql-server-7.2 )
+	postgres? ( dev-db/postgresql-server )
 	mysql? ( virtual/mysql )
 	sguil? ( dev-lang/tcl )"
 

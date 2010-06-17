@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.8 2009/03/01 19:35:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.9 2010/06/17 21:37:29 patrick Exp $
 
 WANT_AUTOMAKE="1.4"
 inherit eutils autotools
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 -sparc ~x86"
 IUSE="mysql postgres sguil"
 
 DEPEND="net-libs/libpcap
-	postgres? ( >=virtual/postgresql-server-7.2 )
+	postgres? ( dev-db/postgresql-server )
 	mysql? ( virtual/mysql )
 	sguil? ( dev-lang/tcl )"
 
