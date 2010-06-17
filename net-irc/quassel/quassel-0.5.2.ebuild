@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.2.ebuild,v 1.3 2010/06/07 16:33:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5.2.ebuild,v 1.4 2010/06/17 20:48:46 patrick Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND="
 	dbus? ( x11-libs/qt-dbus:4 )
 	monolithic? (
 		!postgres? ( x11-libs/qt-sql:4[sqlite] dev-db/sqlite[threadsafe] )
-		postgres? ( x11-libs/qt-sql:4[postgres] >=virtual/postgresql-base-8.3 )
+		postgres? ( x11-libs/qt-sql:4[postgres] >=dev-db/postgresql-base-8.3 )
 		x11-libs/qt-script:4
 		x11-libs/qt-gui:4
 		kde? ( >=kde-base/kdelibs-4.1 )

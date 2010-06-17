@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.87 2010/06/07 16:33:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.88 2010/06/17 20:48:46 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> quassel-0.5.1.ebuild,
+  quassel-0.5.2.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   07 Jun 2010; Daniel Pielmeier <billie@gentoo.org> quassel-0.5.1.ebuild,
   quassel-0.5.2.ebuild, quassel-0.6.1.ebuild, quassel-9999.ebuild:
