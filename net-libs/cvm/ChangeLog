@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/cvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.23 2010/02/01 06:04:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.24 2010/06/17 21:52:50 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> cvm-0.76.ebuild,
+  cvm-0.82.ebuild, cvm-0.96.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *cvm-0.96 (01 Feb 2010)
 
