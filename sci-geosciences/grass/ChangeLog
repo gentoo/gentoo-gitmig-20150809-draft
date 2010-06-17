@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.84 2010/06/15 12:20:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.85 2010/06/17 07:28:03 scarabeus Exp $
+
+  17 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/grass-6.4.0_rc6-html-nonviz.patch:
+  Update grass-640_rc6 nonviz patch. Pastebin fail. Per bug #300504.
 
   15 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   grass-6.4.0_rc6.ebuild:
