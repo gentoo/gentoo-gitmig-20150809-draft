@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.8 2008/08/23 01:10:39 cardoe Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/ChangeLog,v 1.9 2010/06/17 21:50:04 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> atheme-0.2.2.ebuild,
+  atheme-1.2.1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

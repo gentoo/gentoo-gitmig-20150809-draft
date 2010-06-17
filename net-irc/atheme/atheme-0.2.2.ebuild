@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-0.2.2.ebuild,v 1.7 2008/05/21 18:55:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme/atheme-0.2.2.ebuild,v 1.8 2010/06/17 21:50:04 patrick Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~sparc ~x86 ~x86-fbsd"
 IUSE="largenet postgres"
 
-RDEPEND="postgres? ( virtual/postgresql-server )"
+RDEPEND="postgres? ( dev-db/postgresql-server )"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59"
 
