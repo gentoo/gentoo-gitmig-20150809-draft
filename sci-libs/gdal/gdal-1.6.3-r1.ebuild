@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.6 2010/05/30 17:29:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.7 2010/06/17 21:06:34 patrick Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -39,7 +39,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	ogdi? ( sci-libs/ogdi )
 	gml? ( >=dev-libs/xerces-c-3 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4 )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	|| (
 	    netcdf? ( sci-libs/netcdf )
 	    hdf? ( sci-libs/hdf )

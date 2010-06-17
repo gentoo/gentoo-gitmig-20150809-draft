@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.3.ebuild,v 1.5 2010/06/15 13:08:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.3.ebuild,v 1.6 2010/06/17 21:06:34 patrick Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils perl-module toolchain-funcs
@@ -34,7 +34,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	ogdi? ( sci-libs/ogdi )
 	gml? ( >=dev-libs/xerces-c-3 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4 )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	|| (
 	    netcdf? ( sci-libs/netcdf )
 	    hdf? ( sci-libs/hdf )
