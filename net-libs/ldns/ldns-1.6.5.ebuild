@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.5.ebuild,v 1.1 2010/06/16 23:52:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.5.ebuild,v 1.2 2010/06/17 00:20:52 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
 
-inherit python
+inherit multilib python
 
 DESCRIPTION="ldns is a library with the aim to simplify DNS programing in C"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/ldns/"
@@ -43,6 +43,10 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc Changelog README* || die "dodoc failed"
+
+	if use python ; then
+		rm "${ED}/usr/$(get_libdir)"/python*/site-packages/_ldns.*a || die
+	fi
 
 	if use doc ; then
 		dohtml doc/html/* || die "dohtml failed"
