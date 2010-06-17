@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.0-r1.ebuild,v 1.1 2009/07/26 18:29:55 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.0-r1.ebuild,v 1.2 2010/06/17 09:48:27 jlec Exp $
 
 inherit multilib autotools eutils
 
@@ -22,7 +22,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gmtsuppl gmtfull gmthigh gmttria doc"
 
-RDEPEND=">=sci-libs/netcdf-3.5.0"
+RDEPEND="
+	!sci-biology/probcons
+	>=sci-libs/netcdf-3.5.0"
 DEPEND="${RDEPEND}
 	gmtsuppl? ( >=sys-devel/autoconf-2.58 )"
 
