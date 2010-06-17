@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.130 2010/06/17 20:23:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.131 2010/06/17 21:44:20 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> dspam-3.8.0-r15.ebuild:
+  Really migrating away from deprecated postgres virtuals
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> dspam-3.8.0-r15.ebuild:
   Migrating away from deprecated postgres virtuals
