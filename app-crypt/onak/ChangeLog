@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/onak
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/ChangeLog,v 1.7 2009/10/14 00:57:02 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/ChangeLog,v 1.8 2010/06/17 21:22:15 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> onak-0.3.3-r1.ebuild,
+  onak-0.3.7.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> onak-0.3.3-r1.ebuild:
   QA fixes; unquoted variables
