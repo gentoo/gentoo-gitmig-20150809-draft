@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.2e-r2.ebuild,v 1.1 2010/06/17 16:05:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.2e-r3.ebuild,v 1.1 2010/06/17 21:56:25 hwoarang Exp $
 
 EAPI="2"
 
@@ -31,10 +31,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fix Makefile ( bug #298535 and bug #318353 )
+	# fix Makefile ( bug #298535 , bug #318353 and bug #324513 )
 	sed -i 's/\$(MAKEFLAGS)//g' Makefile \
 		|| die "failed to fix Makefile"
-	sed -i 's:OPT=:&-fPIC :' librtmp/Makefile \
+	sed -i -e 's:OPT=:&-fPIC :' \
+		-e 's:OPT:OPTS:' \
+		-e 's:CFLAGS=.*:& $(OPT):' librtmp/Makefile \
 		|| die "failed to fix Makefile"
 }
 
