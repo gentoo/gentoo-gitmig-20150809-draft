@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.1.ebuild,v 1.1 2008/07/30 11:34:36 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.1.ebuild,v 1.2 2010/06/17 20:48:20 patrick Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -21,7 +21,7 @@ DEPEND="dev-libs/expat
 	mysql? ( virtual/mysql )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	sqlite? ( >=dev-db/sqlite-3 )
 	zlib? ( sys-libs/zlib )"
