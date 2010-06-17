@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4284 2010/06/17 08:56:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4285 2010/06/17 11:14:42 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking qbittorrent-2.2.9 due to broken WebUI
 
   17 Jun 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   license_groups:
