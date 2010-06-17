@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.1 2008/07/13 18:13:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.2.018-r2.ebuild,v 1.2 2010/06/17 01:54:40 jsbronder Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -69,8 +69,6 @@ pkg_setup() {
 		MKL_MPI=mpich2
 	elif has_version sys-cluster/openmpi; then
 		MKL_MPI=openmpi
-	elif has_version sys-cluster/lam-mpi; then
-		MKL_MPI=lam-mpi
 	else
 		MKL_MPI=intelmpi
 	fi
