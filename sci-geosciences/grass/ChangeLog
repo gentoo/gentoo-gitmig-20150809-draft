@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.86 2010/06/17 14:22:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.87 2010/06/17 18:28:47 scarabeus Exp $
+
+  17 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  grass-6.4.0_rc6.ebuild:
+  Add missing backslash
 
   17 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   grass-6.4.0_rc6.ebuild:

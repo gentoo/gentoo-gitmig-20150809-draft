@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.8 2010/06/17 14:22:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0_rc6.ebuild,v 1.9 2010/06/17 18:28:47 scarabeus Exp $
 
 EAPI="3"
 
@@ -201,7 +201,7 @@ src_configure() {
 		$(use_enable largefile) \
 		$(use_with mysql) \
 		--with-mysql-includes=/usr/include/mysql \
-		--with-mysql-libs=/usr/$(get_libdir)/mysql
+		--with-mysql-libs=/usr/$(get_libdir)/mysql \
 		$(use_with nls) \
 		$(use_with odbc) \
 		$(use_with png) \
