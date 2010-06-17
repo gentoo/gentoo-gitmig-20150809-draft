@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.7.ebuild,v 1.2 2009/04/08 17:18:49 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.7.ebuild,v 1.3 2010/06/17 20:58:55 patrick Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/pwlib-1.7.5.2
 	dev-libs/openssl
 	firebird? ( dev-db/firebird )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base )"
+	postgres? ( dev-db/postgresql-base )"
 DEPEND="${RDEPEND}
 	doc? ( app-text/linuxdoc-tools )"
 

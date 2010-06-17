@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.5.ebuild,v 1.3 2008/05/21 19:00:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.5.ebuild,v 1.4 2010/06/17 20:58:55 patrick Exp $
 
 IUSE="mysql postgres radius"
 
@@ -16,7 +16,7 @@ DEPEND="
 	>=dev-libs/pwlib-1.8.4
 	>=net-libs/openh323-1.15.3
 	mysql? ( dev-db/mysql++ )
-	postgres? ( virtual/postgresql-server )"
+	postgres? ( dev-db/postgresql-server )"
 
 src_compile() {
 	econf \

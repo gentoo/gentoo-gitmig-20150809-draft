@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/gnugk
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/ChangeLog,v 1.8 2009/04/08 17:30:18 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/ChangeLog,v 1.9 2010/06/17 20:58:55 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> gnugk-2.2.5.ebuild,
+  gnugk-2.2.7.ebuild, gnugk-2.2.8.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *gnugk-2.2.8 (08 Apr 2009)
 
