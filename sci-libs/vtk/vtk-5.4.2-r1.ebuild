@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.11 2010/05/28 11:51:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.12 2010/06/17 02:25:18 jsbronder Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -22,7 +22,6 @@ SLOT="0"
 IUSE="boost cg doc examples mpi patented python qt4 tcl tk threads"
 RDEPEND="mpi? ( || (
 					sys-cluster/openmpi
-					sys-cluster/lam-mpi
 					sys-cluster/mpich2[cxx] ) )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	tcl? ( >=dev-lang/tcl-8.2.3 )

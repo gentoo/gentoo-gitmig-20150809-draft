@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.75 2010/06/09 07:06:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.76 2010/06/17 02:25:18 jsbronder Exp $
+
+  17 Jun 2010; Justin Bronder <jsbronder@gentoo.org> vtk-5.4.2-r1.ebuild:
+  Remove sys-cluster/lam-mpi handling, see #324415.
 
   09 Jun 2010; Justin Lecher <jlec@gentoo.org> -vtk-5.4.2.ebuild:
   removed old version which having problems with PYTHON ABIs stuff
