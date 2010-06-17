@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.40 2010/04/21 22:14:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.41 2010/06/17 18:50:28 pacho Exp $
+
+*gdl-2.30.0 (17 Jun 2010)
+
+  17 Jun 2010; Pacho Ramos <pacho@gentoo.org> +gdl-2.30.0.ebuild:
+  Version bump for Gnome 2.30
 
   21 Apr 2010; Gilles Dartiguelongue <eva@gentoo.org> -gdl-0.7.1.ebuild,
   -gdl-0.7.6.ebuild, -gdl-0.7.11.ebuild, gdl-2.24.0.ebuild,
