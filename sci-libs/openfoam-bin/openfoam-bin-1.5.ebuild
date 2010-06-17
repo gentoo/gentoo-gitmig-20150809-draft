@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-bin/openfoam-bin-1.5.ebuild,v 1.2 2009/09/25 09:29:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-bin/openfoam-bin-1.5.ebuild,v 1.3 2010/06/17 01:59:10 jsbronder Exp $
 
 inherit eutils versionator multilib toolchain-funcs
 
@@ -61,17 +61,14 @@ src_unpack() {
 }
 
 src_compile() {
-	if has_version sys-cluster/lam-mpi ; then
-		export WM_MPLIB=LAM
-		export MPI_VERSION=lam
-	elif has_version sys-cluster/mpich2 ; then
+	if has_version sys-cluster/mpich2 ; then
 		export WM_MPLIB=MPICH
 		export MPI_VERSION=mpich
 	elif has_version sys-cluster/openmpi ; then
 		export WM_MPLIB=OPENMPI
 		export MPI_VERSION=openmpi
 	else
-		die "You need one of the following mpi implementations: openmpi, lam-mpi or mpich2"
+		die "You need one of the following mpi implementations: openmpi, mpich2"
 	fi
 
 	sed -i -e "s|WM_MPLIB:=OPENMPI|WM_MPLIB:="${WM_MPLIB}"|" etc/bashrc
