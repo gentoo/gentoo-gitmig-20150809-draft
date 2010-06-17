@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.114 2010/06/16 19:59:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.115 2010/06/17 19:59:35 phajdan.jr Exp $
+
+*chromium-6.0.437.1 (17 Jun 2010)
+
+  17 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gyp-fixes-r2.patch, +chromium-6.0.437.1.ebuild,
+  +files/chromium-optional-cups-r1.patch, chromium-9999.ebuild:
+  Version bump for dev channel release. Fix bug #323675 by Dan Douglas
+  <doug0213@metnet.edu>. Fix bug #324105 by Anthony Parsons
+  <ant@specialops.ath.cx>.
 
   16 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-5.0.375.70.ebuild:
