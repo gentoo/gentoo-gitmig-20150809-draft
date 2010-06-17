@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.3-r1.ebuild,v 1.1 2010/05/25 20:19:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.3-r1.ebuild,v 1.2 2010/06/17 19:39:39 robbat2 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Network-UPS Tools"
 HOMEPAGE="http://www.networkupstools.org/"
 # Nut mirrors are presently broken
 SRC_URI="http://random.networkupstools.org/source/${PV%.*}/${MY_P}.tar.gz
-         http://www.networkupstools.org/source/${PV%.*}/${MY_P}.tar.gz"
+		 http://www.networkupstools.org/source/${PV%.*}/${MY_P}.tar.gz"
 
 S="${WORKDIR}/${MY_P}"
 
