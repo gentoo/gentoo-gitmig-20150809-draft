@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a-r1.ebuild,v 1.5 2010/06/17 18:29:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a-r1.ebuild,v 1.6 2010/06/17 18:31:27 ssuominen Exp $
 
 EAPI="3"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Serial device programmer"
 HOMEPAGE="http://www.lancos.com/ppwin95.html"
