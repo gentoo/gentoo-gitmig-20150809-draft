@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.147 2010/05/31 20:36:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.148 2010/06/17 16:15:53 pacho Exp $
+
+*glibmm-2.24.2 (17 Jun 2010)
+
+  17 Jun 2010; Pacho Ramos <pacho@gentoo.org> +glibmm-2.24.2.ebuild:
+  Version bump: adds API for the new Network I/O classes that were added in
+  glib 2.22.x, adds the BalancedTree class (wrapping GTree) and other new
+  additions. Also contains several bugfixes.
 
   31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -glibmm-2.16.4.ebuild,
   -glibmm-2.20.1.ebuild:
