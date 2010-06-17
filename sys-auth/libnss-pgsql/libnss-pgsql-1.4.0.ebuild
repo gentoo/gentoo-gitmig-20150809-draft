@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/libnss-pgsql-1.4.0.ebuild,v 1.3 2008/05/19 20:21:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/libnss-pgsql-1.4.0.ebuild,v 1.4 2010/06/17 21:10:42 patrick Exp $
 
 inherit autotools eutils multilib
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/postgresql-base
+DEPEND="dev-db/postgresql-base
 		app-text/xmlto"
 RDEPEND="${DEPEND}"
 
