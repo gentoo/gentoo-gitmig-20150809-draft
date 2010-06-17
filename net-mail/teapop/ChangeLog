@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/teapop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.25 2009/09/23 19:13:33 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.26 2010/06/17 21:55:22 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> teapop-0.3.8.ebuild,
+  teapop-0.3.8-r1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> teapop-0.3.8.ebuild,
   teapop-0.3.8-r1.ebuild:

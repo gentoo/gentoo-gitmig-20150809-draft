@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.15.ebuild,v 1.2 2010/06/04 19:07:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.15.ebuild,v 1.3 2010/06/17 21:53:54 patrick Exp $
 
 EAPI="1"
 inherit eutils multilib python
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ldap mysql postgres sieve sqlite ssl static python"
 
 DEPEND="ssl? ( dev-libs/openssl )
-	postgres? ( >=virtual/postgresql-server-7.4 )
+	postgres? ( dev-db/postgresql-server )
 	mysql? ( >=virtual/mysql-4.1 )
 	sqlite? ( >=dev-db/sqlite-3.0 )
 	!mysql? ( !postgres? ( !sqlite? ( >=dev-db/sqlite-3.0 ) ) )
