@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/freshmeat-submit
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.9 2009/08/01 19:08:22 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.10 2010/06/17 10:53:41 jlec Exp $
+
+  17 Jun 2010; Justin Lecher <jlec@gentoo.org> freshmeat-submit-1.6.ebuild:
+  Fixes for python ABI support #324395, some QA, keyworded for amd64
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
   -freshmeat-submit-1.4.ebuild:

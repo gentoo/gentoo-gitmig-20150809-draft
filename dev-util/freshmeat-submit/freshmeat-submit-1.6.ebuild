@@ -1,23 +1,32 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/freshmeat-submit-1.6.ebuild,v 1.4 2009/10/12 20:08:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/freshmeat-submit-1.6.ebuild,v 1.5 2010/06/17 10:53:41 jlec Exp $
 
-DESCRIPTION="A utility for submitting version updates to freshmeat.net, designed to run from within a project release script, using freshmeat.net's XML- RPC interface."
+PYTHON_DEPEND="2"
+
+inherit python
+
+DESCRIPTION="A utility for submitting version updates to freshmeat.net, designed to run from within a project release script, using freshmeat.net's XML- RPC interface"
 HOMEPAGE="http://www.catb.org/~esr/freshmeat-submit/"
 SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="virtual/python"
-DEPEND="${RDEPEND}"
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_prepare() {
+	python_convert_shebangs 2 ${PN}
+}
 
 src_compile() { :; }
 
 src_install() {
-	doman freshmeat-submit.1 || die "doman failed"
+	doman ${PN}.1 || die "doman failed"
 	dodoc AUTHORS README || die "dodoc failed"
-	dobin freshmeat-submit || die "dobin failed"
+	dobin ${PN} || die "dobin failed"
 }
