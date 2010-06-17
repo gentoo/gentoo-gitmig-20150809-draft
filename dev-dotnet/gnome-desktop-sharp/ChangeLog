@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gnome-desktop-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/ChangeLog,v 1.10 2010/05/22 16:23:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/ChangeLog,v 1.11 2010/06/17 18:14:08 pacho Exp $
+
+*gnome-desktop-sharp-2.26.0-r1 (17 Jun 2010)
+
+  17 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  +gnome-desktop-sharp-2.26.0-r1.ebuild,
+  +files/gnome-desktop-sharp-2.26.0-soname.patch:
+  Fix libgnome-desktop soname (bug #312163 by Diego E. 'Flameeyes' Pettenò)
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org>
   gnome-desktop-sharp-2.26.0.ebuild:
