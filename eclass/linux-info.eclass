@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.83 2010/01/17 21:46:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.84 2010/06/17 23:46:25 abcd Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -568,7 +568,13 @@ get_version() {
 get_running_version() {
 	KV_FULL=$(uname -r)
 
-	if [[ -f ${ROOT}/lib/modules/${KV_FULL}/source/Makefile ]]; then
+	if [[ -f ${ROOT}/lib/modules/${KV_FULL}/source/Makefile && -f ${ROOT}/lib/modules/${KV_FULL}/build/Makefile ]]; then
+		KERNEL_DIR=$(readlink -f ${ROOT}/lib/modules/${KV_FULL}/source)
+		KBUILD_OUTPUT=$(readlink -f ${ROOT}/lib/modules/${KV_FULL}/build)
+		unset KV_FULL
+		get_version
+		return $?
+	elif [[ -f ${ROOT}/lib/modules/${KV_FULL}/source/Makefile ]]; then
 		KERNEL_DIR=$(readlink -f ${ROOT}/lib/modules/${KV_FULL}/source)
 		unset KV_FULL
 		get_version
