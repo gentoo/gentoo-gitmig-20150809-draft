@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.10.ebuild,v 1.2 2006/07/09 07:18:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.10.ebuild,v 1.3 2010/06/17 09:46:52 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 # Gnuplot is explicitly runtime-only, it's run using system()
-RDEPEND="sci-visualization/gnuplot"
+RDEPEND="
+	!sci-geosciences/gmt
+	sci-visualization/gnuplot"
 DEPEND=""
 S="${WORKDIR}/${PN}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/probcons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.10 2010/06/15 13:27:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.11 2010/06/17 09:46:52 jlec Exp $
+
+  17 Jun 2010; Justin Lecher <jlec@gentoo.org> probcons-1.10.ebuild,
+  probcons-1.12.ebuild, probcons-1.12-r1.ebuild:
+  Blocking sci-geosciences/gmt to resolve bug 248333
 
 *probcons-1.12-r1 (15 Jun 2010)
 

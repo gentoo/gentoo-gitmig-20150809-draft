@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12-r1.ebuild,v 1.1 2010/06/15 13:27:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12-r1.ebuild,v 1.2 2010/06/17 09:46:52 jlec Exp $
 
 EAPI="3"
 
@@ -18,7 +18,9 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 # Gnuplot is explicitly runtime-only, it's run using system()
-RDEPEND="sci-visualization/gnuplot"
+RDEPEND="
+	!sci-geosciences/gmt
+	sci-visualization/gnuplot"
 DEPEND=""
 
 S="${WORKDIR}/${PN}"
