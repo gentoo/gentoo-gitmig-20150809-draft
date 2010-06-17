@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.2 2010/05/24 20:12:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.3 2010/06/17 21:23:24 sping Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
 inherit eutils toolchain-funcs multilib python
 
 DESCRIPTION="An open source multimedia framework, designed and developed for television broadcasting"
-HOMEPAGE="http://mlt.sourceforge.net/"
+HOMEPAGE="http://www.mltframework.org/"
 SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 
 LICENSE="GPL-2"

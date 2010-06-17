@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.59 2010/05/24 20:12:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.60 2010/06/17 21:23:24 sping Exp $
+
+  17 Jun 2010; Sebastian Pipping <sping@gentoo.org> mlt-0.4.6.ebuild,
+  mlt-0.5.4.ebuild:
+  Fix homepage link (bug #324413)
 
   24 May 2010; Jeremy Olexa <darkside@gentoo.org> mlt-0.5.4.ebuild:
   Since this ebuild is already EAPI3, add EPREFIX to ruby call and add

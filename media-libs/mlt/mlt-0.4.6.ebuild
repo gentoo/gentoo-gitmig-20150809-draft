@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.6.ebuild,v 1.6 2009/12/28 16:50:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.6.ebuild,v 1.7 2010/06/17 21:23:24 sping Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="An open source multimedia framework, designed and developed for television broadcasting"
-HOMEPAGE="http://mlt.sourceforge.net/"
+HOMEPAGE="http://www.mltframework.org/"
 SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 
 LICENSE="GPL-2"
