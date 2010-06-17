@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437-r1.ebuild,v 1.4 2010/06/04 19:57:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.25_p2437-r1.ebuild,v 1.5 2010/06/17 21:58:40 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -23,7 +23,7 @@ DEPEND="dev-lang/python
 	dev-python/pkipplib
 	ldap?     ( dev-python/python-ldap )
 	mysql?    ( dev-python/mysql-python )
-	postgres? ( virtual/postgresql-server dev-db/pygresql )
+	postgres? ( dev-db/postgresql-server dev-db/pygresql )
 	sqlite?   ( =dev-python/pysqlite-2* )
 	snmp?     ( net-analyzer/net-snmp =dev-python/pysnmp-3.4* )
 	xml?      ( dev-python/jaxml )"
