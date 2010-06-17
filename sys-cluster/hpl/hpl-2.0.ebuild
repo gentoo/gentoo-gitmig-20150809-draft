@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0.ebuild,v 1.2 2010/05/26 10:13:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0.ebuild,v 1.3 2010/06/17 02:28:03 jsbronder Exp $
 
 inherit eutils
 
@@ -49,9 +49,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Remember to copy /usr/share/hpl/HPL.dat to your working directory first!"
-	einfo "For mpich, run linpack by executing this in your working directory"
-	einfo "\"mpirun -np 4 /usr/bin/xhpl\""
-	einfo "where -np specifies the number of processes."
-	einfo "Other methods are needed lam-mpi etc."
+	einfo "Remember to copy /usr/share/hpl/HPL.dat to your working directory"
+	einfo "before running xhpl."
 }
