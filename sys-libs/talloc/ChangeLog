@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.16 2010/06/05 18:41:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.17 2010/06/17 17:04:55 xarthisius Exp $
+
+  17 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  talloc-2.0.1-r1.ebuild, +files/talloc-2.0.1-respect-ldflags.patch:
+  Respect LDFLAGS. Fixes bug 323497. Thanks Andreis Vinogradovs
+  <spamslepnoga@inbox.ru> for report.
 
   05 Jun 2010; Raúl Porcel <armin76@gentoo.org> talloc-2.0.1-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #300158
