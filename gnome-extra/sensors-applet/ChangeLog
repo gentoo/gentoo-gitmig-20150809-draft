@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/sensors-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.44 2010/05/29 17:44:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.45 2010/06/17 19:14:39 pacho Exp $
+
+*sensors-applet-2.2.6 (17 Jun 2010)
+
+  17 Jun 2010; Pacho Ramos <pacho@gentoo.org> +sensors-applet-2.2.6.ebuild:
+  Version bump migrating from sys-apps/devicekit-disks to sys-fs/udisks
+  usage (bug #315713 reported by Denis). Thanks to Alexandre Borges Marcelo
+  for the patch.
 
   29 May 2010; Raúl Porcel <armin76@gentoo.org>
   sensors-applet-2.2.5.ebuild:
