@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.00.ebuild,v 1.1 2010/01/19 10:59:24 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.00.ebuild,v 1.2 2010/06/17 20:09:40 patrick Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 RDEPEND="fltk?    ( >=x11-libs/fltk-1.1.6:1.1 )
 	odbc?     ( >=dev-db/unixODBC-2.2.6 )
 	sqlite?   ( >=dev-db/sqlite-3 )
-	postgres? ( >=virtual/postgresql-base-8.0 )
+	postgres? ( >=dev-db/postgresql-base-8.0 )
 	mysql?    ( virtual/mysql )
 	aspell?   ( >=app-text/aspell-0.50 )
 	gnutls?   ( net-libs/gnutls )"
