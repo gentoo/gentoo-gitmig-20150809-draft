@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.11.ebuild,v 1.3 2010/04/08 23:34:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.11.ebuild,v 1.4 2010/06/17 19:50:17 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python bindings for dev-libs/gmp"
 HOMEPAGE="http://www.aleax.it/gmpy.html http://code.google.com/p/gmpy/"
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-tests.patch"
+
 	# HACK: distutils only support 'setup.py', so
 	# we symlink what we need to 'setup.py' later
 	mv setup.py setmp.py
