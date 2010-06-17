@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.20.4.ebuild,v 1.2 2009/03/15 17:24:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.20.4.ebuild,v 1.3 2010/06/17 20:00:23 patrick Exp $
 
 inherit versionator
 
@@ -16,7 +16,7 @@ DEPEND="kerberos? ( virtual/krb5 )
 	dbi? ( dev-db/libdbi )
 	gnutls? ( net-libs/gnutls )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	relp? ( >=dev-libs/librelp-0.1.1 )
 	snmp? ( net-analyzer/net-snmp )
 	zlib? ( sys-libs/zlib )"

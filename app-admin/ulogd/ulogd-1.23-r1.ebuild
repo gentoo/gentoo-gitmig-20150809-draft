@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.5 2009/01/25 00:55:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.6 2010/06/17 20:00:40 patrick Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="mysql postgres"
 
 DEPEND="net-firewall/iptables
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-server )"
+	postgres? ( dev-db/postgresql-server )"
 
 src_unpack() {
 	unpack ${A}

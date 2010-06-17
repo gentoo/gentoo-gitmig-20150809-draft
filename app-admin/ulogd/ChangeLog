@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.62 2010/01/25 18:56:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.63 2010/06/17 20:00:40 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> ulogd-1.23-r1.ebuild,
+  ulogd-1.24-r1.ebuild, ulogd-1.24-r2.ebuild, ulogd-2.0.0_beta3.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   25 Jan 2010; Raúl Porcel <armin76@gentoo.org> ulogd-2.0.0_beta3.ebuild:
   Add ~ia64 wrt #281056
