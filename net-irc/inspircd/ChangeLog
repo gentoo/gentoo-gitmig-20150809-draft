@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.29 2010/01/07 21:03:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.30 2010/06/17 22:02:18 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> inspircd-1.1.19.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   07 Jan 2010; Patrick Lauer <patrick@gentoo.org> inspircd-1.1.23.ebuild:
   Fixing postgres dep
