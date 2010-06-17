@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.13.ebuild,v 1.7 2010/01/25 19:31:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.13.ebuild,v 1.8 2010/06/17 18:31:16 patrick Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE="GPL-2"
 IUSE="debug doc examples mxdatetime"
 
-DEPEND=">=virtual/postgresql-base-8.1
+DEPEND=">=dev-db/postgresql-base-8.1
 	mxdatetime? ( dev-python/egenix-mx-base )"
 RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"

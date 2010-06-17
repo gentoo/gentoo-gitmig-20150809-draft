@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.4.ebuild,v 1.8 2008/05/19 19:48:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.4.ebuild,v 1.9 2010/06/17 18:32:11 patrick Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ia64 x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/postgresql-base"
+DEPEND="dev-db/postgresql-base"
 
 S=${WORKDIR}/${PN}
 

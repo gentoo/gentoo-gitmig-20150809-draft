@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.15 2009/12/23 21:23:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.16 2010/06/17 18:31:16 patrick Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=dev-python/egenix-mx-base-2.0.3
-	>=virtual/postgresql-base-7.1.3"
+	dev-db/postgresql-base"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
