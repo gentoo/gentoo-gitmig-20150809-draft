@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/gtk-sharp-gapi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/ChangeLog,v 1.13 2010/01/02 12:19:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/ChangeLog,v 1.14 2010/06/17 17:48:37 pacho Exp $
+
+*gtk-sharp-gapi-2.12.10 (17 Jun 2010)
+
+  17 Jun 2010; Pacho Ramos <pacho@gentoo.org> -gtk-sharp-gapi-2.12.8.ebuild,
+  +gtk-sharp-gapi-2.12.10.ebuild:
+  Version bump with lots of bugfixes. Remove old.
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gtk-sharp-gapi-2.12.9.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-docs/gtk-sharp-docs-2.12.8.ebuild,v 1.1 2009/02/08 17:23:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-docs/gtk-sharp-docs-2.12.10.ebuild,v 1.1 2010/06/17 17:59:08 pacho Exp $
 
 EAPI="2"
 
