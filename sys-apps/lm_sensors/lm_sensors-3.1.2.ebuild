@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.1.2.ebuild,v 1.3 2010/06/14 20:16:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.1.2.ebuild,v 1.4 2010/06/17 08:08:15 bangert Exp $
 
 EAPI="2"
 
@@ -41,8 +41,6 @@ src_compile() {
 	einfo "You may safely ignore any errors from compilation"
 	einfo "that contain \"No such file or directory\" references."
 	einfo
-
-	filter-flags -fstack-protector
 
 	emake CC=$(tc-getCC) \
 		|| die "emake failed"
