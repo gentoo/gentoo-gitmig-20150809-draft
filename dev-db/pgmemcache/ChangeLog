@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/pgmemcache
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmemcache/ChangeLog,v 1.1 2010/06/17 17:51:41 patrick Exp $
+
+*pgmemcache-2.0.4 (17 Jun 2010)
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> +pgmemcache-2.0.4.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by jbergstroem.
+
