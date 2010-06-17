@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.10 2009/03/01 01:52:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.11 2010/06/17 20:05:56 patrick Exp $
 WANT_AUTOCONF='latest'
 WANT_AUTOMAKE='latest'
 inherit eutils autotools
@@ -20,7 +20,7 @@ DEPEND="acl? ( sys-apps/acl )
 	mhash? ( >=app-crypt/mhash-0.9.2 )
 	!mhash? ( dev-libs/libgcrypt )
 	nls? ( virtual/libintl )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	selinux? ( sys-libs/libselinux )
 	xattr? ( sys-apps/attr )
 	zlib? ( sys-libs/zlib )"
