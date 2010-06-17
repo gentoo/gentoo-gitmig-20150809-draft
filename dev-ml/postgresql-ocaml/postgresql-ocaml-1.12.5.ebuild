@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-1.12.5.ebuild,v 1.1 2010/04/09 10:38:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-1.12.5.ebuild,v 1.2 2010/06/17 18:26:55 patrick Exp $
 
 EAPI="2"
 
@@ -13,8 +13,8 @@ SRC_URI="http://ocaml.info/ocaml_sources/${P}.tar.gz"
 HOMEPAGE="http://ocaml.info/home/ocaml_sources.html#toc9"
 
 DEPEND=">=dev-lang/ocaml-3.11[ocamlopt?]
-	>=virtual/postgresql-base-7.3
-	>=virtual/postgresql-server-7.3"
+	dev-db/postgresql-base
+	dev-db/postgresql-server"
 RDEPEND="${DEPEND}"
 
 SLOT="0"
