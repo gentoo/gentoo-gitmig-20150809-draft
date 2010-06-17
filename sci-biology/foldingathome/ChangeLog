@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/foldingathome
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.27 2008/11/30 19:46:50 je_fro Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.28 2010/06/17 09:21:59 jlec Exp $
+
+*foldingathome-6.29 (17 Jun 2010)
+
+  17 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/6.29/fah-init,
+  +files/6.29/folding-conf.d, +files/6.29/initfolding,
+  +foldingathome-6.29.ebuild:
+  Version Bump, 270458, fixes for prestripped files. #252033
 
   30 Nov 2008; Jeff Gardner <je_fro@gentoo.org> files/6.02/folding-conf.d:
   Removing smp from default opts to hopefully fix bug #248896
