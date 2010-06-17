@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.24.1.ebuild,v 1.2 2010/06/15 08:35:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.24.1-r1.ebuild,v 1.1 2010/06/17 19:33:21 pacho Exp $
 
 EAPI="2"
 
@@ -38,4 +38,13 @@ pkg_setup() {
 		$(use_enable glade glade-catalogue)
 		$(use_enable python)
 		--with-html-dir=/usr/share/doc/${PF}/html"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix ugly artifacts with upstream patches from bgo#618749
+	epatch "${FILESDIR}/${P}-background-color.patch"
+	epatch "${FILESDIR}/${P}-background-color2.patch"
+	epatch "${FILESDIR}/${P}-cleanup-background.patch"
 }
