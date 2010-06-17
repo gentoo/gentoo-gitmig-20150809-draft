@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/mpiblast
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mpiblast/ChangeLog,v 1.1 2009/04/13 00:58:49 weaver Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mpiblast/ChangeLog,v 1.2 2010/06/17 22:58:24 weaver Exp $
+
+*mpiblast-1.6.0_beta2 (17 Jun 2010)
+
+  17 Jun 2010; Andrey Kislyuk <weaver@gentoo.org>
+  -files/mpiblast-1.5.0-fix-build.patch, -mpiblast-1.5.0.ebuild,
+  +mpiblast-1.6.0_beta2.ebuild:
+  Version bump, drop keywords (package does not compile with >=gcc-4.4; has
+  other problems)
 
 *mpiblast-1.5.0 (12 Apr 2009)
 
