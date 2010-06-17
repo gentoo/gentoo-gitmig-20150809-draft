@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.0.ebuild,v 1.1 2009/04/23 16:09:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.0.ebuild,v 1.2 2010/06/17 18:20:09 patrick Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 SLOT="0"
 IUSE="doc"
 
-DEPEND=">=virtual/postgresql-base-7.4"
+DEPEND="dev-db/postgresql-base"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}

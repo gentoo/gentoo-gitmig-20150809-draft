@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.8.4.ebuild,v 1.2 2008/07/18 08:11:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.8.4.ebuild,v 1.3 2010/06/17 18:16:44 patrick Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="debug"
 
 DEPEND="x11-libs/wxGTK:2.8
-	virtual/postgresql-base
+	dev-db/postgresql-base
 	>=dev-libs/libxml2-2.5
 	>=dev-libs/libxslt-1.1"
 RDEPEND="${DEPEND}"
