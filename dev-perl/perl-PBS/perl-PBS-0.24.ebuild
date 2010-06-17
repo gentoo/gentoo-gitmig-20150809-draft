@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/perl-PBS-0.24.ebuild,v 1.3 2006/08/06 02:59:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/perl-PBS-0.24.ebuild,v 1.4 2010/06/17 03:29:52 jsbronder Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-		>=sys-cluster/torque-1.2.0_p5
+		<sys-cluster/torque-2.4
 		 dev-perl/Curses"
 DEPEND="${RDEPEND}
 		dev-lang/swig"
