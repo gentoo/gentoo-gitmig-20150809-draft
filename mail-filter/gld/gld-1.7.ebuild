@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7.ebuild,v 1.10 2009/09/23 17:53:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7.ebuild,v 1.11 2010/06/17 21:36:11 patrick Exp $
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -13,7 +13,7 @@ IUSE="postgres"
 # Not adding a mysql USE flag. The package defaults to it, so we will too.
 DEPEND="sys-libs/zlib
 	>=dev-libs/openssl-0.9.6
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	!postgres? ( virtual/mysql )"
 
 src_compile() {
