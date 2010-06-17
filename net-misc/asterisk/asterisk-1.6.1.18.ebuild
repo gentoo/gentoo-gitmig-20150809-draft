@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.18.ebuild,v 1.1 2010/03/16 12:05:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.18.ebuild,v 1.2 2010/06/17 20:56:41 patrick Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -31,7 +31,7 @@ RDEPEND="sys-libs/ncurses
 	misdn? ( net-dialup/misdnuser )
 	newt? ( dev-libs/newt )
 	odbc? ( dev-db/unixODBC )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	radius? ( net-dialup/radiusclient-ng )
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )

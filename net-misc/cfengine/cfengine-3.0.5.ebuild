@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.0.5.ebuild,v 1.1 2010/06/16 16:28:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.0.5.ebuild,v 1.2 2010/06/17 20:57:10 patrick Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ DEPEND=">=sys-libs/db-4
 	>=dev-libs/openssl-0.9.7
 	dev-libs/libpcre
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	app-portage/portage-utils"
 RDEPEND="${DEPEND}"
 PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
