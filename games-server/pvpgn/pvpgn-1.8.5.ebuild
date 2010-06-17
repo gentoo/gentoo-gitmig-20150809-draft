@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.5.ebuild,v 1.2 2009/11/21 18:16:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/pvpgn-1.8.5.ebuild,v 1.3 2010/06/17 21:34:48 patrick Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,7 @@ KEYWORDS="~ppc x86"
 IUSE="mysql postgres"
 
 DEPEND="mysql? ( virtual/mysql )
-	postgres? ( >=virtual/postgresql-server-7 )"
+	postgres? ( dev-db/postgresql-server )"
 
 PATCHES=( "${FILESDIR}/${P}-fhs.patch" )
 
