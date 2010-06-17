@@ -1,20 +1,28 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut.powerfail.initd,v 1.1 2010/01/09 20:17:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/files/nut.powerfail.initd,v 1.2 2010/06/17 19:38:18 robbat2 Exp $
 
 description='Signal the UPS to kill power in a power failure condition'
 
 depend() {
+	# This is only for baselayout2
+	if [ -f /etc/init.d/sysfs ]; then
+		keyword -jail -lxc -openvz -prefix -uml -vserver -xenu -timeout
+	fi
 	need mount-ro
-	keyword -jail -lxc -openvz -prefix -uml -vserver -xenu -timeout
 }
 
 start() {
+	if [ ! -f /etc/init.d/sysfs ]; then
+		eerror "The $SVCNAME init-script is written for baselayout-2!"
+		eerror "Please do not use it with baselayout-1!".
+		return 1
+	fi
 	local UPS_CTL UPS_POWERDOWN
 
 	if [ -f /etc/killpower ]; then
-		UPS_CTL=/usr/sbin/upsdrvctl
+		UPS_CTL=/sbin/upsdrvctl
 		UPS_POWERDOWN="${UPS_CTL} shutdown"
 	elif [ -f /etc/apcupsd/powerfail ]; then
 		UPS_CTL=/sbin/apcupsd
@@ -24,7 +32,7 @@ start() {
 		return 0
 	fi
 
-	if [ "$(runlevel | cut -d' ' -f2)" = "0" -a  -f "${UPS_CTL}" -a -x "${UPS_CTL}" ]; then
+	if [ -f "${UPS_CTL}" -a -x "${UPS_CTL}" ]; then
 		ebegin 'Signaling UPS to kill power'
 		${UPS_POWERDOWN}
 		eend $?
@@ -34,7 +42,8 @@ start() {
 		# If the sleep gets hit, something is wrong...
 		# do NOT restart the system.
 		while [ 1 ]; do sleep 60; done
-
+	else
+		ewarn "UPS powerfail script scheduled, and flags found, but ${UPS_CTL} missing."
 	fi
 }
 

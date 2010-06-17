@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.74 2010/05/26 10:29:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.75 2010/06/17 19:38:18 robbat2 Exp $
+
+*nut-2.4.3-r2 (17 Jun 2010)
+
+  17 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> +nut-2.4.3-r2.ebuild,
+  files/nut.powerfail.initd:
+  Bug #322083: avoid baselayout1 parse errors in powerfail script. Bug
+  #322425: Avoid /usr and /var during shutdown as they may be gone already.
 
   26 May 2010; Robin H. Johnson <robbat2@gentoo.org>
   files/nut-2.4.3-lowspeed-buffer-size.patch:
