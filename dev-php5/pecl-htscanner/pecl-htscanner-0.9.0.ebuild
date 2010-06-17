@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/pecl-htscanner-0.9.0.ebuild,v 1.1 2009/04/09 10:10:40 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/pecl-htscanner-0.9.0.ebuild,v 1.2 2010/06/17 21:42:06 mabi Exp $
 
 PHP_EXT_NAME="htscanner"
 PHP_EXT_INI="yes"
@@ -16,6 +16,10 @@ DESCRIPTION="Enables .htaccess options for php-scripts running as cgi."
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
+
+# functionality is included in >=php-5.3
+DEPEND="<dev-lang/php-5.3"
+RDEPEND="${DEPEND}"
 
 need_php_by_category
 my_conf="--enable-htscanner"
