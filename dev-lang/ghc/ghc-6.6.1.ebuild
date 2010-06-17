@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.17 2008/03/01 11:43:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.6.1.ebuild,v 1.18 2010/06/17 20:16:17 kolmodin Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -71,7 +71,6 @@ DEPEND="${RDEPEND}
 # >=ghc-5.04.3 on their $PATH already
 
 PDEPEND=">=dev-haskell/cabal-1.1.6.2
-		 >=dev-haskell/filepath-1.0
 		 >=dev-haskell/regex-base-0.72
 		 >=dev-haskell/regex-posix-0.71
 		 >=dev-haskell/regex-compat-0.71"
