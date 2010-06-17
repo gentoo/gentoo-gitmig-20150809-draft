@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pg_top
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.4 2009/02/04 18:23:25 cedk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.5 2010/06/17 18:41:06 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> pg_top-3.6.2.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   04 Feb 2009; Cédric Krier <cedk@gentoo.org> pg_top-3.6.2.ebuild:
   Add missing inherit autotools for bug #255817
