@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.61.2.ebuild,v 1.4 2010/01/31 19:49:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.61.2.ebuild,v 1.5 2010/06/17 20:24:54 patrick Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,7 +28,7 @@ DEPEND="
 	pam? ( virtual/pam )
 	mysql? ( virtual/mysql )
 	ldap? ( >=net-nds/openldap-1.2.11 )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	spell? ( virtual/aspell-dict )
 	fam? ( virtual/fam )
 	!mailwrapper? ( !virtual/mta )

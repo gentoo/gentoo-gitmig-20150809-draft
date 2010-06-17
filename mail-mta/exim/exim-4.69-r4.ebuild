@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r4.ebuild,v 1.1 2009/10/20 17:46:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r4.ebuild,v 1.2 2010/06/17 20:26:11 patrick Exp $
 
 inherit eutils toolchain-funcs multilib pam
 
@@ -28,7 +28,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 			  dev-libs/libtasn1 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )
 	spf? ( >=mail-filter/libspf2-1.2.5-r1 )
 	srs? ( mail-filter/libsrs_alt )
