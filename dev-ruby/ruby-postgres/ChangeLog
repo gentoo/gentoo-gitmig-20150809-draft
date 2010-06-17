@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-postgres
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ChangeLog,v 1.24 2010/05/22 15:52:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ChangeLog,v 1.25 2010/06/17 18:33:44 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  ruby-postgres-0.7.1.ebuild, ruby-postgres-0.7.1.20060406.ebuild,
+  ruby-postgres-0.7.9.20080128.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-postgres-0.7.1.20060406.ebuild, ruby-postgres-0.7.9.20080128.ebuild:

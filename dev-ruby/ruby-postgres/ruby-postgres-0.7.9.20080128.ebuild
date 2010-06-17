@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.9.20080128.ebuild,v 1.3 2010/05/22 15:52:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-postgres/ruby-postgres-0.7.9.20080128.ebuild,v 1.4 2010/06/17 18:33:44 patrick Exp $
 
 inherit ruby gems versionator
 
@@ -21,6 +21,6 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-lin
 IUSE=""
 USE_RUBY="ruby18"
 
-RDEPEND="virtual/postgresql-base"
+RDEPEND="dev-db/postgresql-base"
 DEPEND="${RDEPEND}
 	>=dev-ruby/rubygems-0.9.0-r1"
