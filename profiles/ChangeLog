@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4287 2010/06/17 12:48:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4288 2010/06/17 12:50:13 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   17 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Mask dev-libs/pkgconfig-0.25-r1 that's using system dev-libs/popt instead
+  Mask dev-util/pkgconfig-0.25-r1 that's using system dev-libs/popt instead
   of bundled copy for testing.
 
   17 Jun 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
