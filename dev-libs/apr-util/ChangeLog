@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.145 2009/11/04 12:12:05 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.146 2010/06/17 20:11:16 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> apr-util-1.3.9.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   04 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   apr-util-1.3.9.ebuild:

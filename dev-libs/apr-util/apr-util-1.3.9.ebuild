@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.3.9.ebuild,v 1.12 2009/11/04 12:12:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.3.9.ebuild,v 1.13 2010/06/17 20:11:16 patrick Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ RDEPEND="dev-libs/expat
 	ldap? ( =net-nds/openldap-2* )
 	mysql? ( =virtual/mysql-5* )
 	odbc? ( dev-db/unixODBC )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	sqlite? ( dev-db/sqlite:0 )
 	sqlite3? ( dev-db/sqlite:3 )"
 DEPEND="${RDEPEND}
