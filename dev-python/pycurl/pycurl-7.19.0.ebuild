@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.14 2010/02/13 18:16:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.15 2010/06/17 13:43:34 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
 DESCRIPTION="python binding for curl/libcurl"
-HOMEPAGE="http://pycurl.sourceforge.net/"
+HOMEPAGE="http://pycurl.sourceforge.net/ http://pypi.python.org/pypi/pycurl"
 SRC_URI="http://pycurl.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -18,13 +20,12 @@ IUSE="examples"
 
 DEPEND=">=net-misc/curl-7.19.0"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="curl"
 
 src_test() {
 	testing() {
-		"$(PYTHON)" tests/test_internals.py -q
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" tests/test_internals.py -q
 	}
 	python_execute_function testing
 }
