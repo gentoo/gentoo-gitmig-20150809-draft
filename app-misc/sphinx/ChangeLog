@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.25 2010/06/07 14:53:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.26 2010/06/17 20:03:36 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> sphinx-0.9.8.1.ebuild,
+  sphinx-0.9.9.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> sphinx-0.9.9.ebuild:
   Stable on amd64 wrt bug #322751
