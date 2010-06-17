@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.47-r1.ebuild,v 1.5 2009/01/17 14:09:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.47-r1.ebuild,v 1.6 2010/06/17 20:15:40 patrick Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/libiconv
 		 gdbm? ( sys-libs/gdbm )
 		 gtk? ( >=x11-libs/gtk+-2.10 >=gnome-base/libglade-2.6 )
 		 pari? ( >=sci-mathematics/pari-2.3.0 )
-		 postgres? ( >=virtual/postgresql-base-8.0 )
+		 postgres? ( >=dev-db/postgresql-base-8.0 )
 		 readline? ( >=sys-libs/readline-5.0 )
 		 pcre? ( dev-libs/libpcre )
 		 svm? ( sci-libs/libsvm )
