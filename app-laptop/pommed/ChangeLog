@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.50 2010/02/28 16:33:11 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.51 2010/06/17 23:56:19 robbat2 Exp $
+
+  17 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> pommed-1.30.ebuild,
+  pommed-1.31.ebuild:
+  CONFIG_CHECK should be non-fatal in this context.
 
 *pommed-1.31 (28 Feb 2010)
 

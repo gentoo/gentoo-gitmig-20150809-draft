@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.30.ebuild,v 1.4 2010/01/07 16:07:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.30.ebuild,v 1.5 2010/06/17 23:56:19 robbat2 Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -36,7 +36,7 @@ pkg_setup() {
 	if ! use ppc; then
 		linux-info_pkg_setup
 
-		CONFIG_CHECK="DMIID"
+		CONFIG_CHECK="~DMIID"
 		check_extra_config
 	fi
 }
