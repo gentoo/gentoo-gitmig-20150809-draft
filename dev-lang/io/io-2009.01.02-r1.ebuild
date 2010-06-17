@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02-r1.ebuild,v 1.1 2009/01/02 15:33:32 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02-r1.ebuild,v 1.2 2010/06/17 21:31:21 patrick Exp $
 
 DESCRIPTION="Io is a small, prototype-based programming language."
 HOMEPAGE="http://www.iolanguage.com"
@@ -15,7 +15,7 @@ DEPEND="lzo? ( dev-libs/lzo )
 		readline? ( sys-libs/readline )
 		mysql? ( virtual/mysql )
 		cairo? ( x11-libs/cairo )
-		postgres? ( virtual/postgresql-server )
+		postgres? ( dev-db/postgresql-server )
 		opengl? ( virtual/opengl )
 		dbi? ( dev-db/libdbi )
 		ncurses? ( sys-libs/ncurses )

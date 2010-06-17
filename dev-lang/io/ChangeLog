@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/io
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.5 2009/10/17 07:47:11 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.6 2010/06/17 21:31:21 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> io-2009.01.02-r1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   remove dbi description as it is global now
