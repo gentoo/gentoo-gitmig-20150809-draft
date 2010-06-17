@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.66 2010/06/14 19:15:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.67 2010/06/17 21:09:16 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> root-5.22.00-r2.ebuild,
+  root-5.22.00-r3.ebuild, root-5.24.00-r1.ebuild, root-5.26.00-r2.ebuild,
+  root-5.26.00-r3.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *root-5.26.00-r3 (14 Jun 2010)
 
