@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.0.1.5.ebuild,v 1.2 2010/05/09 19:37:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.0.1.5.ebuild,v 1.3 2010/06/17 21:57:27 patrick Exp $
 
 EAPI=1
 inherit eutils versionator
@@ -22,7 +22,7 @@ RDEPEND="app-admin/sudo
 	net-misc/nx
 	virtual/ssh
 	fuse? ( sys-fs/sshfs-fuse )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	sqlite? ( dev-db/sqlite )"
 # Still in the NX overlay for now
 #	ldap? ( net-misc/x2goldaptools )"

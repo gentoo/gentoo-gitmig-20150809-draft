@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.8 2008/06/15 11:04:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.9 2010/06/17 21:56:41 patrick Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,7 +26,7 @@ KEYWORDS="~ppc ~sparc x86"
 RDEPEND="
 	mysql? ( virtual/mysql )
 	radius? ( >=net-dialup/radiusclient-ng-0.5.0 )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 	jabber? ( dev-libs/expat )
 	ldap? (
 		net-nds/openldap
