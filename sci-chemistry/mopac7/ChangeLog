@@ -1,6 +1,18 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.20 2010/06/15 16:57:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.21 2010/06/17 12:29:41 jlec Exp $
+
+*mopac7-1.15 (17 Jun 2010)
+
+  17 Jun 2010; Justin Lecher <jlec@gentoo.org> +mopac7-1.15.ebuild,
+  +files/Makefile, metadata.xml:
+  Version Bump, included optional build of libgmxmopac7
+
+*mopac7-1.14-r2 (16 Jun 2010)
+
+  16 Jun 2010; Justin Lecher <jlec@gentoo.org> mopac7-1.14-r1.ebuild,
+  +mopac7-1.14-r2.ebuild:
+  gmxmopac7 support, Importing from sci overlay
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> mopac7-1.10-r1.ebuild,
   mopac7-1.13.ebuild, mopac7-1.13-r1.ebuild:
