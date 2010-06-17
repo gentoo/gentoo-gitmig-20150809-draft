@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.68 2010/05/31 21:35:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.69 2010/06/17 19:18:01 pacho Exp $
+
+*goffice-0.8.6 (17 Jun 2010)
+
+  17 Jun 2010; Pacho Ramos <pacho@gentoo.org> -goffice-0.8.1.ebuild,
+  -goffice-0.8.3.ebuild, +goffice-0.8.6.ebuild:
+  Version bump with bugfixes: Fix point-on-graph crash, ensure format menu
+  has yyyy-mm-dd, improve docs, fix currency ordering, fix rounding problems
+  for very large numbers. Remove old testing.
 
 *goffice-0.8.5 (31 May 2010)
 
