@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.22.ebuild,v 1.2 2010/05/19 14:40:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.22.ebuild,v 1.3 2010/06/17 18:33:46 patrick Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/skstream-0.3.6
 	sys-libs/readline
 	=media-libs/atlas-c++-0.6*
 	>=media-libs/varconf-0.6.4
-	virtual/postgresql-base"
+	dev-db/postgresql-base"
 DEPEND="${RDEPEND}
 	dev-libs/libxml2
 	dev-util/pkgconfig"
