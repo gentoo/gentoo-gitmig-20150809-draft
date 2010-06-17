@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3.ebuild,v 1.1 2010/03/08 13:38:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3.ebuild,v 1.2 2010/06/17 20:46:33 patrick Exp $
 
 EAPI="2"
 inherit eutils
@@ -36,7 +36,7 @@ DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	mysql? ( virtual/mysql )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( virtual/pam )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	sftp? ( dev-libs/openssl )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
