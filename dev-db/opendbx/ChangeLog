@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.28 2010/05/09 09:32:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.29 2010/06/17 20:09:51 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> opendbx-1.2.4.ebuild,
+  opendbx-1.2.6.ebuild, opendbx-1.4.0.ebuild, opendbx-1.4.4.ebuild,
+  opendbx-1.4.5.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *opendbx-1.4.5 (09 May 2010)
 
