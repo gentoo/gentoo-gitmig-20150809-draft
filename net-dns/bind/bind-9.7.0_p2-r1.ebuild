@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.3 2010/06/05 09:38:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.4 2010/06/17 20:44:37 patrick Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/idnkit )
-	postgres? ( virtual/postgresql-base )
+	postgres? ( dev-db/postgresql-base )
 	threads? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )"

@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.278 2010/06/09 16:25:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.279 2010/06/17 20:44:37 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> bind-9.6.2_p2.ebuild,
+  bind-9.7.0_p2-r1.ebuild:
+  Migrating away from deprecated postgres virtuals
 
   09 Jun 2010; Christian Ruppert <idl0r@gentoo.org> files/named.confd-r3,
   files/named.init-r7:
