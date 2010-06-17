@@ -1,6 +1,17 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.4 2010/05/23 22:10:58 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.5 2010/06/17 06:33:35 kolmodin Exp $
+
+  16 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  -darcs-1.1.0_pre1.ebuild, darcs-2.1.0-r1.ebuild, darcs-2.2.1.ebuild,
+  -darcs-2.4.ebuild:
+  Bump requirement in darcs-2.1.0-r1 and darcs-2.2.1 to >=ghc-6.8 from
+  >=ghc-6.2.2.
+  All arches that are keyworded in those darcs versions also have ghcs
+  either stable or keyworded.
+  This makes the dependency on dev-haskell/filepath unneeded, so it has been
+  removed, see bug #324411.
+  Also remove old or rudendant darcs versions.
 
 *darcs-2.4.4 (23 May 2010)
 

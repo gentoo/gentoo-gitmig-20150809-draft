@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.1.0-r1.ebuild,v 1.1 2010/03/14 12:29:26 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.1.0-r1.ebuild,v 1.2 2010/06/17 06:33:35 kolmodin Exp $
 
 inherit base autotools eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=net-misc/curl-7.10.2
-	>=dev-lang/ghc-6.2.2
+	>=dev-lang/ghc-6.8
 	=dev-haskell/quickcheck-1*
 	dev-haskell/mtl
 	dev-haskell/html
@@ -24,7 +24,6 @@ DEPEND=">=net-misc/curl-7.10.2
 	dev-haskell/regex-compat
 	sys-apps/diffutils
 	dev-haskell/network
-	dev-haskell/filepath
 	sys-libs/zlib
 	doc?  ( virtual/latex-base
 		>=dev-tex/latex2html-2002.2.1_pre20041025-r1 )"
