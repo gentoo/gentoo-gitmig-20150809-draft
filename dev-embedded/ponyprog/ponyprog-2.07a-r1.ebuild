@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a-r1.ebuild,v 1.4 2010/04/29 12:43:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a-r1.ebuild,v 1.5 2010/06/17 18:29:43 ssuominen Exp $
 
 EAPI="3"
 
@@ -13,25 +13,18 @@ SRC_URI="mirror://sourceforge/${PN}/PonyProg2000-${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="epiphany firefox"
+IUSE="epiphany"
 
 RDEPEND="x11-libs/libXaw
 	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libXext
 	x11-libs/libX11
-	epiphany? ( www-client/epiphany )
-	firefox? ( || ( www-client/mozilla-firefox www-client/firefox-bin ) )"
+	epiphany? ( www-client/epiphany )"
 DEPEND="${RDEPEND}
 	|| ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick )"
 
 S="${WORKDIR}/PonyProg2000-${PV}"
-
-pkg_setup() {
-	if (use epiphany && use firefox) ; then
-		die "Only one of epiphany or firefox can be in USE."
-	fi
-}
 
 src_prepare() {
 	sed -i \
@@ -39,21 +32,22 @@ src_prepare() {
 		-e 's/\-O2//' \
 		v/Config.mk || die "sed failed"
 
-	sed -i -e 's/<asm\/io.h>/<sys\/io.h>/' *.cpp || die "sed failed"
+	sed -i -e 's/<asm\/io.h>/<sys\/io.h>/' *.cpp || die
 
 	if use epiphany ; then
-		sed -i -e 's/netscape/epiphany/' e2cmdw.cpp
-	fi
-	if use firefox ; then
-		sed -i -e 's/netscape/firefox/' e2cmdw.cpp
+		sed -i -e 's/netscape/epiphany/' e2cmdw.cpp || die
+	else
+		sed -i -e 's/netscape/firefox/' e2cmdw.cpp || die
 	fi
 	convert ponyprog.ico ponyprog.png
 
-	# Fix compilation with gcc-4.3, bug #227503
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-build.patch
 }
 
 src_compile() {
+	tc-export CC CXX
+
 	# bug #282244
 	emake -j1 || die "emake failed"
 }
