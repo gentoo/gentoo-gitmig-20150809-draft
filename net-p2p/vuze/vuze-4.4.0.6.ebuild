@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.4.0.0.ebuild,v 1.1 2010/04/21 21:21:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.4.0.6.ebuild,v 1.1 2010/06/17 21:26:59 caster Exp $
 
 EAPI=2
 
@@ -65,8 +65,7 @@ java_prepare() {
 	rm -v ./org/gudy/azureus2/ui/swt/win32/Win32UIEnhancer.java || die
 
 	### Removes test files.
-	rm -rv "org/gudy/azureus2/ui/swt/test" \
-		org/gudy/azureus2/ui/console/multiuser/TestUserManager.java || die
+	rm -rv org/gudy/azureus2/ui/console/multiuser/TestUserManager.java || die
 
 	### Removes bouncycastle (we use our own bcprov).
 	rm -rv "org/bouncycastle" || die

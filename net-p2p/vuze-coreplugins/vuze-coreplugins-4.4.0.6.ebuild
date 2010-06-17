@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/vuze-coreplugins-4.3.0.6.ebuild,v 1.3 2010/02/26 12:08:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/vuze-coreplugins-4.4.0.6.ebuild,v 1.1 2010/06/17 21:26:35 caster Exp $
 
 # eventually this should be built from source...
 
@@ -14,8 +14,8 @@ UPDATER_N=azupdater
 UPNPAV_N=azupnpav
 PLUGINS_V=2.1.6
 RATING_V=1.3.1
-UPDATER_V=1.8.13
-UPNPAV_V=0.2.23
+UPDATER_V=1.8.16
+UPNPAV_V=0.2.28
 PLUGINS_DIST=${PLUGINS_N}_${PLUGINS_V}.jar
 RATING_DIST=${RATING_N}_${RATING_V}.jar
 UPDATER_DIST=${UPDATER_N}_${UPDATER_V}.zip
@@ -33,7 +33,7 @@ SRC_URI="
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="~net-p2p/vuze-${PV}"
@@ -61,6 +61,7 @@ pkg_postinst() {
 	elog "Since version 4.0.0.2, plugins that are normally bundled by upstream"
 	elog "(and auto-installed in each user's ~/.azureus if not bundled)"
 	elog "are now installed into shared plugin directory by the ebuild."
+	elog "Vuze may warn that shared plugin dir is not writable, that's fine."
 	elog "Users are recommended to delete the following plugin copies:"
 	elog "~/.azureus/plugins/{${PLUGINS_N},${RATING_N},${UPDATER_N},${UPNPAV_N}}"
 }
