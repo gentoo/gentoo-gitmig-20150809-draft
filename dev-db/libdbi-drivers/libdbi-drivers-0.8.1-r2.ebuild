@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r2.ebuild,v 1.7 2008/11/03 16:57:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r2.ebuild,v 1.8 2010/06/17 21:28:24 patrick Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://libdbi-drivers.sourceforge.net/"
 LICENSE="LGPL-2.1"
 DEPEND=">=dev-db/libdbi-0.8.0
 		mysql? ( virtual/mysql )
-		postgres? ( virtual/postgresql-server )
+		postgres? ( dev-db/postgresql-server )
 		sqlite? ( <dev-db/sqlite-3 )
 		sqlite3? ( >=dev-db/sqlite-3 )
 		!bindist? ( firebird? ( dev-db/firebird ) )"

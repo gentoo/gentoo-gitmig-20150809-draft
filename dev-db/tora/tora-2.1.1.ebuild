@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.8 2010/02/13 18:06:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.1.ebuild,v 1.9 2010/06/17 21:29:40 patrick Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ DEPEND="
 		dev-db/oracle-instantclient-basic
 		dev-db/oracle-instantclient-sqlplus
 	)
-	postgres? ( virtual/postgresql-server )
+	postgres? ( dev-db/postgresql-server )
 "
 
 pkg_setup() {

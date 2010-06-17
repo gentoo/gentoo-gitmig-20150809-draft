@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.85 2010/05/21 15:35:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.86 2010/06/17 21:29:40 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> tora-2.1.1.ebuild,
+  tora-2.1.2.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *tora-2.1.2 (21 May 2010)
 
