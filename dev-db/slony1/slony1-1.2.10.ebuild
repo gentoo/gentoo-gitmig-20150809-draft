@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.2.10.ebuild,v 1.6 2008/05/21 15:58:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-1.2.10.ebuild,v 1.7 2010/06/17 19:15:30 patrick Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-DEPEND="virtual/postgresql-server
+DEPEND="dev-db/postgresql-server
 	perl? ( dev-perl/DBD-Pg )"
 
 src_compile() {

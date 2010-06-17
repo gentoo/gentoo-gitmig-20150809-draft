@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/slony1
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.21 2009/10/22 20:07:50 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.22 2010/06/17 19:15:30 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> slony1-1.1.5.ebuild,
+  slony1-1.2.10.ebuild, slony1-1.2.12.ebuild, slony1-1.2.17.ebuild:
+  Migrating away from deprecated postgres virtuals
 
 *slony1-1.2.17 (22 Oct 2009)
 
