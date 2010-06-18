@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.1 2010/06/18 09:07:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.2 2010/06/18 09:29:54 jlec Exp $
+
+  18 Jun 2010; Justin Lecher <jlec@gentoo.org> libchamplain-0.6.0.ebuild:
+  Changed slot to 0.6
 
 *libchamplain-0.6.0 (18 Jun 2010)
 

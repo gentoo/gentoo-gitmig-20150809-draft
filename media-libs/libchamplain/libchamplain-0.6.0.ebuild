@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.1 2010/06/18 09:07:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.2 2010/06/18 09:29:54 jlec Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Clutter based world map renderer"
 HOMEPAGE="http://blog.pierlux.com/projects/libchamplain/en/"
 
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="0.6"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc gtk introspection python"
 
