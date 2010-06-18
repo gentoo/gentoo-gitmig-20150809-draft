@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.10 2010/05/31 20:50:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.11 2010/06/18 11:09:31 phajdan.jr Exp $
+
+  18 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> nfdump-1.6.1.ebuild:
+  x86 stable wrt bug #323567
 
   31 May 2010; Jeroen Roovers <jer@gentoo.org> nfdump-1.6.1.ebuild:
   When USE=ftconv, after we run eautoreconf, we need to define the switches
