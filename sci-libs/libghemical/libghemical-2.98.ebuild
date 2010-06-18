@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.98.ebuild,v 1.2 2008/11/30 01:00:00 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.98.ebuild,v 1.3 2010/06/18 17:54:50 jlec Exp $
 
 inherit autotools
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gl.patch
 	eautoreconf
 }
 
