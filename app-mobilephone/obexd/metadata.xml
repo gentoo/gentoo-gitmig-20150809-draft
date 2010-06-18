@@ -14,6 +14,8 @@
 		</description>
 	</maintainer>
 	<use>
+		<flag name='nokia'>Add support for Nokia backup
+		plugin</flag>
   		<flag name='server'>Enables server installation, it's
   		incompatible with obex-data-server provided one</flag>
 	</use>
