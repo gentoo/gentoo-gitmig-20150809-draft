@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.37 2010/06/12 21:54:13 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.38 2010/06/18 06:38:54 aballier Exp $
 
-EAPI=2
+EAPI="2"
+
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SCM=subversion
@@ -125,11 +126,11 @@ src_configure() {
 	use ieee1394 && myconf="${myconf} --enable-libdc1394"
 	# Indevs
 	for i in v4l v4l2 alsa oss jack ; do
-		use $i || myconf="${myconf} --disable-indev=$i"
+		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
 	# Outdevs
 	for i in alsa oss ; do
-		use $i || myconf="${myconf} --disable-outdev=$i"
+		use ${i} || myconf="${myconf} --disable-outdev=${i}"
 	done
 	use X && myconf="${myconf} --enable-x11grab"
 
@@ -140,13 +141,13 @@ src_configure() {
 	use amr && myconf="${myconf} --enable-libopencore-amrwb
 		--enable-libopencore-amrnb"
 	for i in gsm faad dirac rtmp schroedinger speex vpx; do
-		use $i && myconf="${myconf} --enable-lib$i"
+		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
 
 	#for i in h264_vdpau mpeg1_vdpau mpeg_vdpau vc1_vdpau wmv3_vdpau; do
-	#	use video_cards_nvidia || myconf="${myconf} --disable-decoder=$i"
-	#	use vdpau || myconf="${myconf} --disable-decoder=$i"
+	#	use video_cards_nvidia || myconf="${myconf} --disable-decoder=${i}"
+	#	use vdpau || myconf="${myconf} --disable-decoder=${i}"
 	#done
 	use video_cards_nvidia || myconf="${myconf} --disable-vdpau"
 	use vdpau || myconf="${myconf} --disable-vdpau"
@@ -154,7 +155,7 @@ src_configure() {
 
 	# CPU features
 	for i in mmx ssse3 altivec ; do
-		use $i ||  myconf="${myconf} --disable-$i"
+		use ${i} ||  myconf="${myconf} --disable-${i}"
 	done
 	use mmxext || myconf="${myconf} --disable-mmx2"
 	use 3dnow || myconf="${myconf} --disable-amd3dnow"
@@ -176,7 +177,7 @@ src_configure() {
 	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
 		[ "${i}" = "native" ] && i="host" # bug #273421
 		[[ ${i} = *-sse3 ]] && i="${i%-sse3}" # bug 283968
-		myconf="${myconf} --cpu=$i"
+		myconf="${myconf} --cpu=${i}"
 		break
 	done
 
