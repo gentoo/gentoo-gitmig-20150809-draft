@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.2-r1.ebuild,v 1.1 2010/01/05 16:43:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.2-r1.ebuild,v 1.2 2010/06/18 14:12:17 arfrever Exp $
 
 inherit x-modular
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xcb/xpyb"
 SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
 DESCRIPTION="XCB-based Python bindings for the X Window System"
-HOMEPAGE="http://xcb.freedesktop.org/"
+HOMEPAGE="http://xcb.freedesktop.org/ http://pypi.python.org/pypi/xpyb"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="selinux"
