@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.0.6.ebuild,v 1.1 2010/04/12 16:53:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.1.3.ebuild,v 1.1 2010/06/18 00:10:46 bicatali Exp $
 
 inherit eutils
 
@@ -19,12 +19,8 @@ RDEPEND="${DEPEND}
 	gnuplot? ( sci-visualization/gnuplot )"
 
 src_compile() {
-	# respect the user's CFLAGS
-	sed -i \
-		-e '/^CFLAGS/ s/-O.//' \
-		makefile primes/makefile || die "sed failed"
-	emake READLINE=1 || die "emake failed"
-	emake -C primes || die "emake in primes failed"
+	emake READLINE=1 OPTFLAGS="" || die "emake failed"
+	emake OPTFLAGS="" -C primes || die "emake in primes failed"
 }
 
 src_test() {
@@ -33,7 +29,6 @@ src_test() {
 }
 
 src_install() {
-	# It was easier just to install the files manually
 	dobin mathomatic || die
 	dobin primes/matho-{mult,primes,pascal,sumsq} primes/primorial || die
 	dodoc changes.txt README.txt AUTHORS
