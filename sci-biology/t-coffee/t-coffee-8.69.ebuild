@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-8.69.ebuild,v 1.1 2010/06/15 13:47:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-8.69.ebuild,v 1.2 2010/06/18 07:55:33 jlec Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tcoffee.org/Packages/T-COFFEE_distribution_Version_${PV}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="examples test"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="sci-biology/clustalw"
@@ -48,25 +48,20 @@ src_test() {
 }
 
 src_install() {
-	dobin t_coffee || die "Failed to install program."
+	dobin t_coffee_source/t_coffee || die "Failed to install program."
 
 	insinto /usr/share/${PN}/lib/html
-	doins "${TCDIR}"/html/* \
-		|| die "Failed to install Web interface files."
+	doins html/* || die "Failed to install Web interface files."
 
-	cd "${TCDIR}"/doc
-	dodoc aln_compare.doc.txt seq_reformat.doc.txt \
-			t_coffee_technical.txt t_coffee_tutorial.txt \
-			|| die "Failed to install text documentation."
-
-	dohtml t_coffee_technical.htm t_coffee_tutorial.htm \
-		|| die "Failed to install HTML documentation."
+#	cd IR}"/doc
+	dodoc doc/*.txt || die "Failed to install text documentation."
+	dohtml doc/*.htm || die "Failed to install HTML documentation."
 
 	insinto /usr/share/doc/${PF}
-	doins t_coffee_technical.doc t_coffee_tutorial.doc \
-		|| die "Failed to install DOC documentation."
+	doins doc/*.doc || die "Failed to install DOC documentation."
 
-	insinto /usr/share/${PN}
-	doins -r "${TCDIR}"/example \
-		|| die "Failed to install example files."
+	if use examples; then
+		insinto /usr/share/${PN}
+		doins -r example || die "Failed to install example files."
+	fi
 }
