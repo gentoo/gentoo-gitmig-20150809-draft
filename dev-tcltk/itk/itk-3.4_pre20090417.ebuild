@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.4_pre20090417.ebuild,v 1.3 2010/06/18 05:27:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.4_pre20090417.ebuild,v 1.4 2010/06/18 17:33:07 bicatali Exp $
 
 EAPI="3"
-inherit multilib
+inherit multilib versionator
 
 MY_PN="incrTcl"
 MY_P="${MY_PN}-${PV}"
