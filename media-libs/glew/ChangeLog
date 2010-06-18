@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.52 2010/04/21 09:09:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.53 2010/06/18 19:33:01 abcd Exp $
+
+  18 Jun 2010; Jonathan Callen <abcd@gentoo.org> glew-1.5.3.ebuild:
+  Bump to EAPI=3; transfer prefix keywords, fixes
 
 *glew-1.5.3 (21 Apr 2010)
 
