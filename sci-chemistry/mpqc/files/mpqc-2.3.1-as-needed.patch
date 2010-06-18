@@ -15,13 +15,14 @@
  
 --- mpqc-2.3.1.orig/src/lib/chemistry/qc/wfn/Makefile	2004-06-12 06:50:35.000000000 +0200
 +++ mpqc-2.3.1/src/lib/chemistry/qc/wfn/Makefile	2010-02-13 14:20:06.911896080 +0100
-@@ -48,6 +48,11 @@
+@@ -48,6 +48,12 @@
  
  LIBS = $(shell $(LISTLIBS) $(INCLUDE) $(SRCDIR)/../dft/LIBS.h)
  
 +LIBADD = $(SRCDIR)/$(TOPDIR)/lib/libSCisosurf.la \
 +	$(SRCDIR)/$(TOPDIR)/lib/libSCsolvent.la \
 +	$(SRCDIR)/$(TOPDIR)/lib/libSCbasis.la \
++	$(SRCDIR)/$(TOPDIR)/lib/libSCdft.la \
 +	$(SRCDIR)/$(TOPDIR)/lib/libSCintv3.la
 +
  wfntest:: wfntest.$(OBJSUF) $(LIBS)
@@ -149,3 +150,14 @@
  
  install_devel:: $(TOPDIR)/lib/libmpqc.$(LIBSUF)
  	$(INSTALL) $(INSTALLDIROPT) $(installroot)$(libdir)
+--- mpqc-2.3.1.orig/src/lib/chemistry/qc/Makefile.orig	2010-06-18 18:09:58.192621760 +0000
++++ mpqc-2.3.1/src/lib/chemistry/qc/Makefile	2010-06-18 18:10:10.350261767 +0000
+@@ -33,7 +33,7 @@
+ include $(SRCDIR)/$(TOPDIR)/lib/GlobalMakefile
+ include $(TOPDIR)/lib/Makedirlist
+ 
+-SUBDIRS = basis oint3 intv3 wfn scf dft mbpt
++SUBDIRS = basis oint3 intv3 dft wfn scf mbpt
+ ifeq ($(HAVE_SC_SRC_LIB_CHEMISTRY_QC_PSI),yes)
+ SUBDIRS := $(SUBDIRS) psi
+ endif
