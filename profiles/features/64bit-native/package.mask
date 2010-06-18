@@ -1,18 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.55 2010/05/16 17:39:41 nirbheek Exp $
-
-# 13 May 2010, Matti Bickel <mabi@gentoo.org>
-# needs amd64 multilib
->=dev-java/sun-j2me-bin-2.5.2.01
-
-# 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
-# needs amd64 multilib
-sci-chemistry/cara-bin
-
-# 24 Feb. 2010, Justin Lecher <jlec@gentoo.org>
-# needs amd64 multilib
-sci-chemistry/mars
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.56 2010/06/18 18:50:51 angelos Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -43,13 +31,13 @@ app-emulation/emul-linux-x86-compat
 app-emulation/emul-linux-x86-cpplibs
 app-emulation/emul-linux-x86-gtklibs
 app-emulation/emul-linux-x86-gtkmmlibs
-app-emulation/emul-linux-x86-opengl
+app-emulation/emul-linux-x86-java
 app-emulation/emul-linux-x86-medialibs
+app-emulation/emul-linux-x86-opengl
 app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
-app-emulation/emul-linux-x86-java
 app-emulation/ies4linux
 app-emulation/wine
 app-emulation/wine-doors
@@ -57,6 +45,7 @@ app-text/acroread
 app-text/bibus
 dev-embedded/libftd2xx
 dev-embedded/openocd
+>=dev-java/sun-j2me-bin-2.5.2.01
 dev-lang/dmd-bin
 dev-lang/icc
 dev-lang/idb
@@ -73,14 +62,16 @@ games-action/descent3
 games-action/descent3-demo
 games-action/heretic2
 games-action/heretic2-demo
+games-action/lugaru
 games-action/lugaru-demo
 games-action/mutantstorm-demo
 games-action/phobiaii
 games-action/rune
 games-action/spacetripper-demo
+games-arcade/aquaria
 games-arcade/barbarian-bin
-games-arcade/jardinains
 games-arcade/gish-demo
+games-arcade/jardinains
 games-emulation/caps
 games-emulation/goosnes
 games-emulation/nestra
@@ -89,6 +80,7 @@ games-emulation/snes9express
 games-emulation/zinc
 games-emulation/zsnes
 games-fps/avp
+games-fps/doom3
 games-fps/doom3-cdoom
 games-fps/doom3-chextrek
 games-fps/doom3-data
@@ -101,11 +93,10 @@ games-fps/doom3-lms
 games-fps/doom3-mitm
 games-fps/doom3-phantasm
 games-fps/doom3-roe
-games-fps/doom3
+games-fps/enemy-territory
 games-fps/enemy-territory-etpro
 games-fps/enemy-territory-fortress
 games-fps/enemy-territory-truecombat
-games-fps/enemy-territory
 games-fps/etqw-bin
 games-fps/etqw-data
 games-fps/etqw-demo
@@ -180,9 +171,11 @@ net-misc/icaclient
 net-p2p/sancho-bin
 net-voip/wengophone-bin
 sci-biology/foldingathome
-sci-electronics/eagle
+sci-chemistry/cara-bin
 sci-chemistry/icm
 sci-chemistry/icm-browser
+sci-chemistry/mars
+sci-electronics/eagle
 sci-geosciences/googleearth
 sci-libs/ipp
 sys-apps/memtest86
@@ -192,6 +185,7 @@ sys-libs/lib-compat-loki
 www-client/firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
+>=www-plugins/adobe-flash-10.1
 www-plugins/nspluginwrapper
 
 # AMD64 Team; <amd64@gentoo.org>
