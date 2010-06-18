@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libinfinity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.6 2010/06/18 10:49:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.7 2010/06/18 11:09:32 xarthisius Exp $
+
+  18 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  libinfinity-0.4.1.ebuild:
+  Remove dependency on sys-libs/e2fsprogs-libs.
 
   18 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   libinfinity-0.4.1.ebuild:
