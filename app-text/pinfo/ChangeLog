@@ -1,6 +1,15 @@
 # ChangeLog for app-text/pinfo
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.40 2007/10/09 08:27:07 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.41 2010/06/18 14:37:50 jer Exp $
+
+*pinfo-0.6.9-r1 (18 Jun 2010)
+
+  18 Jun 2010; Jeroen Roovers <jer@gentoo.org> +pinfo-0.6.9-r1.ebuild,
+  +files/pinfo-0.6.9-GROFF_NO_SGR.patch, +files/pinfo-0.6.9-lzma-xz.patch,
+  +files/pinfo-0.6.9-version.patch:
+  Support more compression algorithms thanks to Martin Väth (bug #269862).
+  Display man pages without terminal escape characters thanks to Aniruddha
+  Shankar (bug #322459). Fix version in info file.
 
   09 Oct 2007; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.9.ebuild:
   Fix quoting issues caught by latest repoman.
