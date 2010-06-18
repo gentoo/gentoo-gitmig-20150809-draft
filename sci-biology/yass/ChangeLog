@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/yass
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/yass/ChangeLog,v 1.1 2010/06/18 05:52:46 weaver Exp $
+
+*yass-1.14 (18 Jun 2010)
+
+  18 Jun 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +yass-1.14.ebuild:
+  New package, ebuild written by me
+
