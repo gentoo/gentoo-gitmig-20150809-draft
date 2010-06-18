@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.428 2010/06/18 01:03:12 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.429 2010/06/18 10:13:17 zorry Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -159,7 +159,10 @@ else
 			tc_version_is_at_least "4.1" && IUSE="${IUSE} objc++"
 			tc_version_is_at_least "4.2" && IUSE="${IUSE} openmp"
 			tc_version_is_at_least "4.3" && IUSE="${IUSE} fixed-point"
-			tc_version_is_at_least "4.4" && IUSE="${IUSE} graphite"
+			if tc_version_is_at_least "4.4" ; then
+				IUSE="${IUSE} graphite"
+				[[ -n ${SPECS_VER} ]] && IUSE="${IUSE} nossp"
+			fi
 			tc_version_is_at_least "4.5" && IUSE="${IUSE} lto"
 		fi
 	fi
