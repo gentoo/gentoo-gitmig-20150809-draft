@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/linuxdcpp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.39 2009/06/27 14:40:12 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/ChangeLog,v 1.40 2010/06/18 19:28:36 sochotnicky Exp $
+
+  18 Jun 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  linuxdcpp-9999.ebuild:
+  Fix missing icons and improve ebuild (#276261)
 
   27 Jun 2009; Raúl Porcel <armin76@gentoo.org> -linuxdcpp-1.0.1-r2.ebuild,
   -linuxdcpp-1.0.2.ebuild, linuxdcpp-9999.ebuild:

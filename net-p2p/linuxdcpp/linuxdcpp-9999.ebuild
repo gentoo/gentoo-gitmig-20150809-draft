@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.12 2009/06/27 14:40:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.13 2010/06/18 19:28:36 sochotnicky Exp $
 
 inherit bzr eutils
 
@@ -34,17 +34,11 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/share/${PN}
-	doins -r ${PN} pixmaps glade
-
+	# linuxdcpp does not install docs according to gentoos naming scheme, so do it by hand
 	dodoc Readme.txt Changelog.txt Credits.txt
+	rm "${S}"/*.txt
 
-	dosym /usr/share/${PN}/${PN} /usr/bin/${PN}
-	fperms +x /usr/share/${PN}/${PN}
-
-	doicon pixmaps/${PN}.png
-
-	make_desktop_entry ${PN} "${PN}" ${PN}
+	scons install PREFIX="/usr" FAKE_ROOT="${D}" || die "scons install failed"
 }
 
 pkg_postinst() {
