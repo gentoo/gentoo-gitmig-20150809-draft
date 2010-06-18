@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LDAPapi/Net-LDAPapi-3.0.3-r1.ebuild,v 1.2 2010/06/16 08:18:05 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LDAPapi/Net-LDAPapi-3.0.3-r1.ebuild,v 1.3 2010/06/18 08:44:45 dev-zero Exp $
 
 EAPI="3"
 
@@ -18,7 +18,8 @@ IUSE="examples"
 # default cpan/perl license
 
 COMMON="dev-lang/perl
-	net-nds/openldap
+	net-nds/openldap[sasl]
+	dev-libs/cyrus-sasl
 	dev-perl/Convert-ASN1"
 DEPEND="${COMMON}"
 RDEPEND="${COMMON}"
