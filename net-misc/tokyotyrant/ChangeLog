@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tokyotyrant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.7 2010/02/19 13:28:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.8 2010/06/18 07:44:54 patrick Exp $
+
+  18 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  -tokyotyrant-1.1.37.ebuild, -tokyotyrant-1.1.39.ebuild:
+  Remove old
 
 *tokyotyrant-1.1.40 (19 Feb 2010)
 
