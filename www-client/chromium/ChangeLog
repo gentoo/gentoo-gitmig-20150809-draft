@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.115 2010/06/17 19:59:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.116 2010/06/18 05:30:26 phajdan.jr Exp $
+
+  18 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-6.0.437.1.ebuild, chromium-9999.ebuild:
+  Add missing gnome-keyring dependency. For now it's required, making it
+  optional is non-trivial. Reported by spatz in bug #324517.
 
 *chromium-6.0.437.1 (17 Jun 2010)
 

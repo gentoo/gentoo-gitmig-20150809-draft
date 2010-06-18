@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.57 2010/06/17 19:59:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.58 2010/06/18 05:30:26 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ RDEPEND="app-arch/bzip2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
+	>=gnome-base/gnome-keyring-2.28.2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
