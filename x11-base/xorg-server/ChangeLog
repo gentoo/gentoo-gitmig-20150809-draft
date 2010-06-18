@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.516 2010/06/10 21:14:55 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.517 2010/06/18 14:14:35 scarabeus Exp $
+
+  18 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  xorg-server-1.8.1.901.ebuild:
+  No need to block dtrace anymore. Does not fail if it is around today.
 
   10 Jun 2010; Rémi Cardona <remi@gentoo.org> xorg-server-1.8.1.901.ebuild:
   add missing eselect-opengl call, fixes bug #321443
