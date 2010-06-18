@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20090417.ebuild,v 1.6 2009/09/22 11:47:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20090417.ebuild,v 1.7 2010/06/18 05:38:46 bicatali Exp $
 
-inherit eutils
+inherit eutils multilib versionator
 
 MY_PN="incrTcl"
 MY_P="${MY_PN}-${PV}"
@@ -27,4 +27,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc ../{CHANGES,ChangeLog,INCOMPATIBLE,README,TODO}
+	cat >> "${T}"/34${PN} <<- EOF
+	LDPATH="/usr/$(get_libdir)/${PN}$(get_version_component_range 1-2)/"
+	EOF
+	doenvd "${T}"/34${PN} || die
 }

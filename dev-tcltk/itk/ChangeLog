@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.22 2010/06/18 05:27:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.23 2010/06/18 05:41:24 bicatali Exp $
+
+  18 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  itk-3.3.1_pre20090417.ebuild:
+  Added a env.d file for stable version too
 
   18 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
   itk-3.4_pre20090417.ebuild:
