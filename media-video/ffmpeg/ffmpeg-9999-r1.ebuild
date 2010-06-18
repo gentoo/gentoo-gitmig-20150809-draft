@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.39 2010/06/18 06:41:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.40 2010/06/18 06:47:20 aballier Exp $
 
 EAPI="2"
 
@@ -30,11 +30,10 @@ if [[ ${PV} == *9999* ]]; then
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
-IUSE="+3dnow +3dnowext alsa altivec cpudetection custom-cflags debug dirac
-	  doc ieee1394 +encode faac faad gsm jack +mmx +mmxext vorbis test
-	  theora threads x264 xvid network zlib sdl X mp3 amr
-	  oss pic rtmp schroedinger +hardcoded-tables bindist v4l v4l2
-	  speex +ssse3 jpeg2k vaapi vdpau vpx"
+IUSE="+3dnow +3dnowext alsa altivec amr bindist cpudetection custom-cflags
+debug dirac doc +encode faac faad gsm +hardcoded-tables ieee1394 jack jpeg2k
++mmx +mmxext mp3 network oss pic rtmp schroedinger sdl speex +ssse3 test theora
+threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 VIDEO_CARDS="nvidia"
 
