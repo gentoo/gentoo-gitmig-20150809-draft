@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.165 2010/06/13 17:16:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.166 2010/06/18 13:47:49 hwoarang Exp $
+
+*avidemux-2.5.3-r1 (18 Jun 2010)
+
+  18 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/2.5.3_field_asm_fix.diff, -avidemux-2.5.3.ebuild,
+  +avidemux-2.5.3-r1.ebuild, -files/avidemux-gcc-4.5.patch:
+  New patch for GCC-4.5. Thanks to Archlinux guys
 
 *avidemux-2.5.3 (13 Jun 2010)
 

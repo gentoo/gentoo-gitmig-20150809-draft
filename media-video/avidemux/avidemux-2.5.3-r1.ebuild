@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.3.ebuild,v 1.1 2010/06/13 17:16:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.3-r1.ebuild,v 1.1 2010/06/18 13:47:49 hwoarang Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ for L in ${AVIDEMUX_LANGS}; do
 done
 
 PATCHES=(
-	"${FILESDIR}/${PN}-gcc-4.5.patch"
+	"${FILESDIR}/${PV}_field_asm_fix.diff"
 	"${FILESDIR}/${P}-build-plugins-fix.patch"
 )
 
