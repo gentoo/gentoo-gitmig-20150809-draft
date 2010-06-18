@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.75 2010/06/17 19:38:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.76 2010/06/18 13:11:10 flameeyes Exp $
+
+  18 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> Manifest:
+  Remove .orig file from Manifest (it's not in CVS, likely caused by a fuzzy
+  patch).
 
 *nut-2.4.3-r2 (17 Jun 2010)
 
