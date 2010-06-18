@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.40 2010/06/18 06:47:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.41 2010/06/18 06:50:47 aballier Exp $
 
 EAPI="2"
 
@@ -72,13 +72,14 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	dirac? ( dev-util/pkgconfig )
+	doc? ( app-text/texi2html )
+	mmx? ( dev-lang/yasm )
 	rtmp? ( dev-util/pkgconfig )
 	schroedinger? ( dev-util/pkgconfig )
-	mmx? ( dev-lang/yasm )
-	doc? ( app-text/texi2html )
 	test? ( net-misc/wget )
 	v4l? ( sys-kernel/linux-headers )
-	v4l2? ( sys-kernel/linux-headers )"
+	v4l2? ( sys-kernel/linux-headers )
+"
 
 src_prepare() {
 	if [[ ${PV} = *9999* ]]; then
