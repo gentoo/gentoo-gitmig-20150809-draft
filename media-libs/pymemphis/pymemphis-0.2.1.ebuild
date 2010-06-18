@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pymemphis/pymemphis-0.2.1.ebuild,v 1.1 2010/06/18 07:18:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pymemphis/pymemphis-0.2.1.ebuild,v 1.2 2010/06/18 21:36:17 jlec Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ src_prepare() {
 }
 
 src_install() {
-	python_execute_function -s -d
-	find "${ED}" -name "*.la" -delete || die
+	python_src_install
+	python_clean_installation_image
 	dodoc AUTHORS ChangeLog README || die
 }
