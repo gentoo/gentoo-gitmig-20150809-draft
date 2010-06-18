@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.40 2010/05/06 08:51:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.41 2010/06/18 11:14:49 phajdan.jr Exp $
+
+  18 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  darkstat-3.0.713.ebuild:
+  x86 stable wrt bug #323569
 
 *darkstat-3.0.713 (06 May 2010)
 
