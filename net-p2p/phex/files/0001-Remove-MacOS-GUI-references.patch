@@ -1,0 +1,261 @@
+From 49f223f74e5557321afdefebd48cdec4f625b97d Mon Sep 17 00:00:00 2001
+From: Stanislav Ochotnicky <sochotnicky@gmail.com>
+Date: Fri, 18 Jun 2010 23:01:32 +0200
+Subject: [PATCH] Remove MacOS GUI references
+
+---
+ src/phex/gui/common/FileDialogHandler.java |   45 +---------
+ src/phex/gui/common/GUIRegistry.java       |    5 -
+ src/phex/gui/macosx/MacOsxGUIUtils.java    |  140 ----------------------------
+ 3 files changed, 2 insertions(+), 188 deletions(-)
+ delete mode 100644 src/phex/gui/macosx/MacOsxGUIUtils.java
+
+diff --git a/src/phex/gui/common/FileDialogHandler.java b/src/phex/gui/common/FileDialogHandler.java
+index a5ee4f7..530f374 100644
+--- a/src/phex/gui/common/FileDialogHandler.java
++++ b/src/phex/gui/common/FileDialogHandler.java
+@@ -34,7 +34,6 @@ import javax.swing.filechooser.FileFilter;
+ 
+ import org.apache.commons.lang.SystemUtils;
+ 
+-import phex.gui.macosx.MacOsxGUIUtils;
+ import phex.utils.DirectoryOnlyFileFilter;
+ 
+ public class FileDialogHandler
+@@ -45,7 +44,7 @@ public class FileDialogHandler
+     {
+         if ( SystemUtils.IS_OS_MAC_OSX )
+         {
+-            return openMacDirectoryChooser( title, null, null );
++            return null;
+         }
+         else
+         {
+@@ -71,10 +70,7 @@ public class FileDialogHandler
+     {
+         if ( SystemUtils.IS_OS_MAC_OSX )
+         {
+-            return new File[]
+-            {
+-                openMacDirectoryChooser( title, notifyPopupTitle, notifyPopupShortMessage )
+-            };
++            return null;
+         }
+         else
+         {
+@@ -85,43 +81,6 @@ public class FileDialogHandler
+         }
+     }
+     
+-    private static File openMacDirectoryChooser( String title,
+-        String notifyPopupTitle, String notifyPopupShortMessage )
+-    {
+-        // create folder dialog through other class this prevents 
+-        // NoClassDefFoundError on Windows systems since the import of the
+-        // required OS X classes is elsewhere.
+-        FileDialog dia = MacOsxGUIUtils.createFolderDialog(); 
+-        dia.setTitle(title);
+-        
+-        // unfortunatly its not possible to display notification popup
+-        // besides heavy weight dialog.
+-        //if ( notifyPopupTitle != null || notifyPopupShortMessage != null )
+-        //{
+-            //displayMacNotificationPopup( dia, notifyPopupTitle, 
+-            //    notifyPopupShortMessage );
+-        //}
+-        
+-        DirectoryOnlyFileFilter filter = new DirectoryOnlyFileFilter();
+-        dia.setFilenameFilter( new FileFilterWrapper(
+-            filter) );
+-        dia.setVisible( true );
+-        String dirStr = dia.getDirectory();
+-        String fileStr = dia.getFile();
+-        
+-        if( dirStr == null || fileStr == null )
+-        {
+-            return null;
+-        }
+-        File file = new File(dirStr, fileStr);
+-        // validate filter
+-        if( !filter.accept(file) )
+-        {
+-            return null;
+-        }
+-        return file;
+-    }
+-    
+     private static JFileChooser initDefaultChooser( String title,
+         String approveBtnText, char approveBtnMnemonic, FileFilter filter,
+         int mode, File currentDirectory, String notifyPopupTitle,
+diff --git a/src/phex/gui/common/GUIRegistry.java b/src/phex/gui/common/GUIRegistry.java
+index 852722e..3c28f2e 100644
+--- a/src/phex/gui/common/GUIRegistry.java
++++ b/src/phex/gui/common/GUIRegistry.java
+@@ -47,7 +47,6 @@ import phex.gui.actions.FWAction;
+ import phex.gui.actions.NewDownloadAction;
+ import phex.gui.actions.SwitchNetworkAction;
+ import phex.gui.chat.ChatFrameManager;
+-import phex.gui.macosx.MacOsxGUIUtils;
+ import phex.gui.prefs.InterfacePrefs;
+ import phex.update.UpdateCheckRunner;
+ import phex.utils.Localizer;
+@@ -119,10 +118,6 @@ public final class GUIRegistry implements GUIRegistryConstants
+             }
+         }
+         
+-        if ( SystemUtils.IS_OS_MAC_OSX )
+-        {
+-            MacOsxGUIUtils.installEventHandlers();
+-        }
+         initializeGlobalActions();
+         chatFrameManager = new ChatFrameManager();
+         try 
+diff --git a/src/phex/gui/macosx/MacOsxGUIUtils.java b/src/phex/gui/macosx/MacOsxGUIUtils.java
+deleted file mode 100644
+index bc6f1d9..0000000
+--- a/src/phex/gui/macosx/MacOsxGUIUtils.java
++++ /dev/null
+@@ -1,140 +0,0 @@
+-/*
+- *  PHEX - The pure-java Gnutella-servent.
+- *  Copyright (C) 2001 - 2006 Phex Development Group
+- *
+- *  This program is free software; you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation; either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  This program is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with this program; if not, write to the Free Software
+- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+- * 
+- *  Created on 28.08.2005
+- *  --- CVS Information ---
+- *  $Id: 0001-Remove-MacOS-GUI-references.patch,v 1.1 2010/06/18 21:10:52 sochotnicky Exp $
+- */
+-package phex.gui.macosx;
+-
+-import java.awt.FileDialog;
+-import java.awt.event.ActionEvent;
+-import java.awt.event.ActionListener;
+-import java.io.File;
+-
+-import net.roydesign.event.ApplicationEvent;
+-import net.roydesign.mac.MRJAdapter;
+-import net.roydesign.ui.FolderDialog;
+-import phex.gui.actions.ExitPhexAction;
+-import phex.gui.actions.NewDownloadAction;
+-import phex.gui.common.GUIRegistry;
+-import phex.gui.dialogs.AboutDialog;
+-import phex.gui.dialogs.options.OptionsDialog;
+-import phex.utils.NLogger;
+-import phex.utils.NLoggerNames;
+-
+-public class MacOsxGUIUtils
+-{
+-    public static final void installEventHandlers()
+-    {
+-        MRJAdapter.addQuitApplicationListener( new ActionListener()
+-        {
+-            public void actionPerformed( ActionEvent evt )
+-            {
+-                try
+-                {
+-                    NLogger.debug( NLoggerNames.NATIV_MACOSX,
+-                        "Called MacOsX quit handler." );
+-                    ExitPhexAction.performCloseGUIAction();
+-                }
+-                catch (Throwable th)
+-                {
+-                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
+-                }
+-            }
+-        } );
+-
+-        MRJAdapter.setPreferencesEnabled( true );
+-        MRJAdapter.addPreferencesListener( new ActionListener()
+-        {
+-            public void actionPerformed( ActionEvent evt )
+-            {
+-                try
+-                {
+-                    NLogger.debug( NLoggerNames.NATIV_MACOSX,
+-                        "Called MacOsX preferences handler." );
+-                    OptionsDialog dialog = new OptionsDialog();
+-                    dialog.show();
+-                }
+-                catch (Throwable th)
+-                {
+-                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
+-                }
+-            }
+-        } );
+-
+-        MRJAdapter.addAboutListener( new ActionListener()
+-        {
+-            public void actionPerformed( ActionEvent evt )
+-            {
+-                try
+-                {
+-                    AboutDialog dialog = new AboutDialog();
+-                    dialog.setVisible( true );
+-                }
+-                catch (Throwable th)
+-                {
+-                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
+-                }
+-            }
+-        } );
+-
+-        MRJAdapter.addOpenDocumentListener( new ActionListener()
+-        {
+-            public void actionPerformed( ActionEvent evt )
+-            {
+-                try
+-                {
+-                    File file = ((ApplicationEvent) evt).getFile();
+-                    NLogger.debug( NLoggerNames.NATIV_MACOSX,
+-                        "Called MacOsX open file handler: " + file );
+-
+-                    String absFileName = file.getAbsolutePath();
+-                    if ( absFileName.endsWith( ".magma" ) )
+-                    {
+-                        NewDownloadAction action = (NewDownloadAction) GUIRegistry
+-                            .getInstance().getGlobalAction(
+-                                GUIRegistry.NEW_DOWNLOAD_ACTION );
+-                        action.incommingMagmaDownload( absFileName );
+-                    }
+-                    if ( absFileName.endsWith( ".xml" ) )
+-                    {
+-                        NewDownloadAction action = (NewDownloadAction) GUIRegistry
+-                            .getInstance().getGlobalAction(
+-                                GUIRegistry.NEW_DOWNLOAD_ACTION );
+-                        action.incommingRSSDownload( absFileName );
+-                    }
+-                }
+-                catch (Throwable th)
+-                {
+-                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
+-                }
+-            }
+-        } );
+-    }
+-
+-    /**
+-     * Create folder dialog here. This prevents 
+-     * NoClassDefFoundError on Windows systems since the import of the
+-     * required OS X classes is elsewhere.
+-     */
+-    public static final FileDialog createFolderDialog()
+-    {
+-        return new FolderDialog( GUIRegistry.getInstance().getMainFrame() );
+-    }
+-}
+-- 
+1.7.1
+
