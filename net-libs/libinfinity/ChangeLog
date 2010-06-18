@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libinfinity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.3 2010/06/13 09:10:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.4 2010/06/18 08:55:28 xarthisius Exp $
+
+*libinfinity-0.4.1 (18 Jun 2010)
+
+  18 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +libinfinity-0.4.1.ebuild, +files/infinoted.confd, +files/infinoted.initd:
+  Version bump. Fixes bug 294922 and bug 267545. Thanks Robin Kauffman and
+  Steffen Stramm for their work
 
   13 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Adding myself as co-maintainer
