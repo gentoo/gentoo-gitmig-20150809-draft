@@ -1,14 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.81 2010/06/03 21:45:44 hwoarang Exp $
-
-# 07 Mar. 2010, Justin Lecher <jlec@gentoo.org>
-# needs amd64 multilib
-sci-chemistry/cara-bin
-
-# 24 Feb. 2010, Justin Lecher <jlec@gentoo.org>
-# needs amd64 multilib
-sci-chemistry/mars
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.82 2010/06/18 18:24:07 angelos Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -180,8 +172,10 @@ net-p2p/sancho-bin
 net-voip/wengophone-bin
 sci-biology/foldingathome
 sci-electronics/eagle
+sci-chemistry/cara-bin
 sci-chemistry/icm
 sci-chemistry/icm-browser
+sci-chemistry/mars
 sci-geosciences/googleearth
 sci-libs/ipp
 sys-apps/memtest86
@@ -191,6 +185,7 @@ sys-libs/lib-compat-loki
 www-client/firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
+>=www-plugins/adobe-flash-10.1
 www-plugins/nspluginwrapper
 
 # AMD64 Team; <amd64@gentoo.org>
