@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.2_p20100618.ebuild,v 1.1 2010/06/18 09:06:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.2_p20100618.ebuild,v 1.2 2010/06/18 16:43:56 ssuominen Exp $
 
 EAPI=2
 
 DESCRIPTION="Portland utils for cross-platform/cross-toolkit/cross-desktop interoperability"
 HOMEPAGE="http://portland.freedesktop.org/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
