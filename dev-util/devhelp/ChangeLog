@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.107 2010/05/23 18:18:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.108 2010/06/18 12:52:38 pacho Exp $
+
+*devhelp-2.30.0 (18 Jun 2010)
+
+  18 Jun 2010; Pacho Ramos <pacho@gentoo.org> +devhelp-2.30.0.ebuild:
+  Version bump for Gnome 2.30
 
   23 May 2010; Raúl Porcel <armin76@gentoo.org> devhelp-0.23-r1.ebuild:
   sparc stable
