@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.42 2010/06/18 06:57:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.43 2010/06/18 14:19:16 aballier Exp $
 
 EAPI="2"
 
@@ -95,22 +95,27 @@ src_configure() {
 	local myconf="${EXTRA_FFMPEG_CONF}"
 
 	# enabled by default
-	use debug || myconf="${myconf} --disable-debug"
-	use zlib || myconf="${myconf} --disable-zlib"
+	for i in debug doc network vaapi zlib; do
+		use ${i} || myconf="${myconf} --disable-${i}"
+	done
 	use sdl || myconf="${myconf} --disable-ffplay"
-	use network || myconf="${myconf} --disable-network"
 
 	use custom-cflags && myconf="${myconf} --disable-optimizations"
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
 
-	# enabled by default
+	#for i in h264_vdpau mpeg1_vdpau mpeg_vdpau vc1_vdpau wmv3_vdpau; do
+	#	use video_cards_nvidia || myconf="${myconf} --disable-decoder=${i}"
+	#	use vdpau || myconf="${myconf} --disable-decoder=${i}"
+	#done
+	use video_cards_nvidia && use vdpau || myconf="${myconf} --disable-vdpau"
+
+	# Encoders
 	if use encode
 	then
 		use mp3 && myconf="${myconf} --enable-libmp3lame"
-		use vorbis && myconf="${myconf} --enable-libvorbis"
-		use theora && myconf="${myconf} --enable-libtheora"
-		use x264 && myconf="${myconf} --enable-libx264"
-		use xvid && myconf="${myconf} --enable-libxvid"
+		for i in theora vorbis x264 xvid; do
+			use ${i} && myconf="${myconf} --enable-lib${i}"
+		done
 		if use bindist
 		then
 			use faac && ewarn "faac is nonfree and cannot be distributed;
@@ -128,11 +133,11 @@ src_configure() {
 	for i in v4l v4l2 alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
+	use X && myconf="${myconf} --enable-x11grab"
 	# Outdevs
 	for i in alsa oss ; do
 		use ${i} || myconf="${myconf} --disable-outdev=${i}"
 	done
-	use X && myconf="${myconf} --enable-x11grab"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf="${myconf} --enable-pthreads"
@@ -144,17 +149,9 @@ src_configure() {
 	done
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
 
-	#for i in h264_vdpau mpeg1_vdpau mpeg_vdpau vc1_vdpau wmv3_vdpau; do
-	#	use video_cards_nvidia || myconf="${myconf} --disable-decoder=${i}"
-	#	use vdpau || myconf="${myconf} --disable-decoder=${i}"
-	#done
-	use video_cards_nvidia || myconf="${myconf} --disable-vdpau"
-	use vdpau || myconf="${myconf} --disable-vdpau"
-	use vaapi || myconf="${myconf} --disable-vaapi"
-
 	# CPU features
 	for i in mmx ssse3 altivec ; do
-		use ${i} ||  myconf="${myconf} --disable-${i}"
+		use ${i} || myconf="${myconf} --disable-${i}"
 	done
 	use mmxext || myconf="${myconf} --disable-mmx2"
 	use 3dnow || myconf="${myconf} --disable-amd3dnow"
@@ -181,9 +178,14 @@ src_configure() {
 	done
 
 	# Mandatory configuration
-	myconf="${myconf} --enable-gpl --enable-version3 --enable-postproc \
-			--enable-avfilter --enable-avfilter-lavf \
-			--disable-stripping"
+	myconf="
+		--enable-gpl
+		--enable-version3
+		--enable-postproc
+		--enable-avfilter
+		--enable-avfilter-lavf
+		--disable-stripping
+		${myconf}"
 
 	# cross compile support
 	if tc-is-cross-compiler ; then
@@ -203,7 +205,6 @@ src_configure() {
 
 	# Misc stuff
 	use hardcoded-tables && myconf="${myconf} --enable-hardcoded-tables"
-	use doc || myconf="${myconf} --disable-doc"
 
 	# Specific workarounds for too-few-registers arch...
 	if [[ $(tc-arch) == "x86" ]]; then
