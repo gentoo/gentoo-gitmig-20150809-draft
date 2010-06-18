@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.41 2010/06/18 06:50:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.42 2010/06/18 06:57:00 aballier Exp $
 
 EAPI="2"
 
@@ -138,8 +138,7 @@ src_configure() {
 	use threads && myconf="${myconf} --enable-pthreads"
 
 	# Decoders
-	use amr && myconf="${myconf} --enable-libopencore-amrwb
-		--enable-libopencore-amrnb"
+	use amr && myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb"
 	for i in gsm faad dirac rtmp schroedinger speex vpx; do
 		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
