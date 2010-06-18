@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/bkchem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bkchem/ChangeLog,v 1.2 2010/06/18 06:28:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bkchem/ChangeLog,v 1.3 2010/06/18 18:09:45 jlec Exp $
+
+*bkchem-0.14.0_pre1-r2 (18 Jun 2010)
+
+  18 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.14.0_pre1-piddle-Fix-assertions.patch,
+  -bkchem-0.14.0_pre1-r1.ebuild, +bkchem-0.14.0_pre1-r2.ebuild:
+  Fix Assertions, thanks rei4dan for providing the patch
 
 *bkchem-0.14.0_pre1-r1 (18 Jun 2010)
 
