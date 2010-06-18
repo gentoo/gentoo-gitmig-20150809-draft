@@ -1,5 +1,5 @@
---- a/MPI/Unsafe.pl	2008-10-06 15:52:17.000000000 +0200
-+++ b/MPI/Unsafe.pl	2010-02-25 21:25:07.000000000 +0100
+--- mpi.net-1.0.0.orig/MPI/Unsafe.pl	2008-10-06 15:52:17.000000000 +0200
++++ mpi.net-1.0.0/MPI/Unsafe.pl	2010-06-18 21:37:23.000000000 +0200
 @@ -96,7 +96,7 @@
  }
  
@@ -27,7 +27,7 @@
      } elsif ($line =~ /struct $mpi_status_name[^;]*$/) {
          $in_mpi_status=1;
      }
-@@ -183,7 +183,11 @@
+@@ -183,7 +183,15 @@
  	    # This is a constant we need to replace.
  	    my $value = $constants{$constant};
  
@@ -35,6 +35,10 @@
 +	    if ($value =~ /LAM_MPI_C_.+\(FN|NULL|IGNORE\)/) {
 +		# this is for you LAM :-)
 +	    	print UNSAFE_OUTPUT ("$whitespace","public static readonly $type $constant = mpinet_$constant();\n");
++		push (@cbridge_constants, "$type:$constant");
++	    } elsif ($value =~ /OMPI_PREDEFINED_GLOBAL\((.+), (.+)\)/) {
++	    	# OpenMPI choose to use external variables for these values
++		print UNSAFE_OUTPUT ("$whitespace","public static readonly $type $constant = mpinet_$constant();\n");
 +		push (@cbridge_constants, "$type:$constant");
 +	    } elsif ($value =~ /&/ or $constant =~ /_FN$/) {
                  # If we're taking the address of something, or if this
