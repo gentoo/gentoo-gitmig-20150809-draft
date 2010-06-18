@@ -1,10 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/fspanel-0.8_beta1-r3.ebuild,v 1.1 2008/12/07 13:04:53 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/fspanel-0.8_beta1-r4.ebuild,v 1.1 2010/06/18 15:02:37 ssuominen Exp $
 
-inherit eutils
+EAPI=2
+inherit eutils toolchain-funcs
 
-MY_P=${P/_beta/beta}
+MY_P=${P/_}
 
 DESCRIPTION="F***ing Small Panel. Good (and small) replacement for gnome-panel"
 HOMEPAGE="http://www.chatjunkies.org/fspanel"
@@ -24,25 +25,25 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-configure.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-configure.patch \
+		"${FILESDIR}"/${P}-workspace.patch
 }
 
 myuse() {
 	use $1 && echo yes || echo no
 }
 
-src_compile() {
+src_configure() {
+	tc-export CC
+
 	export USE_XFT=$(myuse xft)
 	export USE_XPM=$(myuse xpm)
 
-	./configure || die "./configure failed"
-	emake || die "emake failed"
+	./configure || die
 }
 
-src_install () {
-	dobin fspanel
+src_install() {
+	dobin fspanel || die
 	dodoc README
 }
