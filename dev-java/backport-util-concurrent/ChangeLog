@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/backport-util-concurrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.30 2010/03/10 17:04:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.31 2010/06/18 18:51:19 pacho Exp $
+
+  18 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  backport-util-concurrent-3.1.ebuild:
+  amd64 stable, bug 275182
 
   10 Mar 2010; Joseph Jezak <josejx@gentoo.org>
   backport-util-concurrent-3.1.ebuild:
