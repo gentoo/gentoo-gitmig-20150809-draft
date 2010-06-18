@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.1 2010/06/17 19:34:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.2 2010/06/18 09:12:03 jlec Exp $
+
+  18 Jun 2010; Justin Lecher <jlec@gentoo.org> memphis-0.2.2.ebuild,
+  metadata.xml:
+  Added support for dev-lang/vala via USE=vala
 
 *memphis-0.2.2 (17 Jun 2010)
 

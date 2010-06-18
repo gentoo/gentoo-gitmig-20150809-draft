@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.2.ebuild,v 1.1 2010/06/17 19:34:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.2.ebuild,v 1.2 2010/06/18 09:12:03 jlec Exp $
 
 EAPI="3"
 
@@ -13,13 +13,14 @@ SRC_URI="http://wenner.ch/files/public/mirror/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0.2"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc introspection"
+IUSE="debug doc introspection vala"
 
 RDEPEND="
 	>=dev-libs/expat-2.0.1
 	>=dev-libs/glib-2.3.4
 	>=x11-libs/cairo-1.8.8
-	introspection? ( dev-libs/gobject-introspection )"
+	introspection? ( dev-libs/gobject-introspection )
+	vala? ( dev-lang/vala )"
 DEPEND="${RDEPEND}
 		doc? ( >=dev-util/gtk-doc-1.12 )"
 
@@ -35,5 +36,6 @@ src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc) \
-		$(use_enable introspection)
+		$(use_enable introspection) \
+		$(use_enable vala)
 }
