@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.31 2010/05/04 17:32:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.32 2010/06/18 06:31:38 robbat2 Exp $
+
+*iasl-20100528 (18 Jun 2010)
+
+  18 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> +iasl-20100528.ebuild:
+  Bug #322611: version bump
 
 *iasl-20100428 (04 May 2010)
 
