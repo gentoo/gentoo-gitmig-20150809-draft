@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.0.4-r1.ebuild,v 1.2 2010/06/13 03:05:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.0.4-r1.ebuild,v 1.3 2010/06/18 07:58:34 nirbheek Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -142,7 +142,7 @@ src_configure() {
 	mozconfig_annotate '' --enable-application=mail
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
-	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+	mozconfig_annotate '' --with-default-mozilla-five-home="${EPREFIX}${MOZILLA_FIVE_HOME}"
 	mozconfig_annotate '' --with-user-appdir=.thunderbird
 	mozconfig_annotate '' --with-system-nspr --with-nspr-prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --with-system-nss --with-nss-prefix="${EPREFIX}"/usr
