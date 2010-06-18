@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.23 2010/06/13 09:05:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.24 2010/06/18 07:50:26 xarthisius Exp $
+
+*sobby-0.4.7 (18 Jun 2010)
+
+  18 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/sobby-conf-0.4.7, +files/sobby-init-0.4.7, +sobby-0.4.7.ebuild,
+  +files/sobby.xml:
+  Version bump
 
   13 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Add dev-zero and myself as maintainers
