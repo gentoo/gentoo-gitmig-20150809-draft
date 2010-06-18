@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.592 2010/06/16 10:07:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.593 2010/06/18 07:08:17 aballier Exp $
+
+  18 Jun 2010; Alexis Ballier <aballier@gentoo.org> -vlc-1.0.9999.ebuild:
+  Remove 1.0.9999 ebuild per the announce of end of support by upstream
 
   16 Jun 2010; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   Add local description for the matroska useflag, by Sylvain BERTRAND
