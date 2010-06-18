@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.40 2010/06/04 20:05:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.41 2010/06/18 10:11:15 pacho Exp $
+
+*libcanberra-0.25 (18 Jun 2010)
+
+  18 Jun 2010; Pacho Ramos <pacho@gentoo.org> +libcanberra-0.25.ebuild:
+  Version bump (bug #318721 by Samuli Suominen): GTK code is now fine with
+  GSEAL, minor fixes in the PulseAudio backend, other fixes. Optionally
+  build with Gtk+ 3.x in addition to Gtk+ 2.x (disabled for now).
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> libcanberra-0.23.ebuild:
   x86 stable, bug #314899
