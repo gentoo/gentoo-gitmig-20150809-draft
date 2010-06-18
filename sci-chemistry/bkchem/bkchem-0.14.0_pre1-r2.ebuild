@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bkchem/bkchem-0.14.0_pre1-r2.ebuild,v 1.1 2010/06/18 18:09:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bkchem/bkchem-0.14.0_pre1-r2.ebuild,v 1.2 2010/06/18 18:12:14 jlec Exp $
 
 EAPI="3"
 
@@ -38,8 +38,3 @@ src_install() {
 	distutils_src_install "--strip=${D%/}"
 	sed "s:^python:$(PYTHON):g" -i "${D}"/usr/bin/${PN} || die
 }
-
-
-
-
-
