@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gatling
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.6 2010/05/30 23:36:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.7 2010/06/18 07:27:06 patrick Exp $
+
+  18 Jun 2010; Patrick Lauer <patrick@gentoo.org> -gatling-0.9.ebuild,
+  -gatling-0.11.ebuild, -gatling-0.11-r1.ebuild:
+  Remove old
 
   30 May 2010; Víctor Ostorga <vostorga@gentoo.org> gatling-0.12.ebuild,
   +files/gatling-0.12-FLAGS.patch:
