@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r1.ebuild,v 1.5 2010/05/22 16:15:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r1.ebuild,v 1.6 2010/06/18 11:07:50 arfrever Exp $
 
-EAPI="2"
-NEED_PYTHON="3.0"
+EAPI="3"
+PYTHON_DEPEND="3"
 SUPPORT_PYTHON_ABIS="1"
+# Avoid collisions with 3.0 slot.
+RESTRICT_PYTHON_ABIS="2.*"
 
 inherit distutils eutils
 
@@ -12,7 +14,7 @@ MY_PN="BeautifulSoup"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="HTML/XML parser for quick-turnaround applications like screen-scraping."
-HOMEPAGE="http://www.crummy.com/software/BeautifulSoup/"
+HOMEPAGE="http://www.crummy.com/software/BeautifulSoup/ http://pypi.python.org/pypi/BeautifulSoup"
 SRC_URI="http://www.crummy.com/software/${MY_PN}/download/${MY_P}.tar.gz"
 
 LICENSE="PSF-2.3"
@@ -23,8 +25,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="!dev-python/beautifulsoup:0
 	dev-python/beautifulsoup:3.0"
-# Avoid collisions with 3.0 slot.
-RESTRICT_PYTHON_ABIS="2.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -46,5 +46,5 @@ src_install() {
 	distutils_src_install
 
 	# Delete useless files.
-	rm -fr "${D%/}${EPREFIX}/usr/bin"
+	rm -fr "${ED}usr/bin"
 }
