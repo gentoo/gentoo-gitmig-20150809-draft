@@ -4,4 +4,7 @@
 <herd>mobile</herd>
 <herd>pda</herd>
 <herd>gnome</herd>
+<use>
+	<flag name='nautilus'>Build nautilus-sendto plugin</flag>
+</use>
 </pkgmetadata>
