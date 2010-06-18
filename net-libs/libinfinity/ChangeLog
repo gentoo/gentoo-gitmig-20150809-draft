@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libinfinity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.5 2010/06/18 08:56:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.6 2010/06/18 10:49:34 xarthisius Exp $
+
+  18 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  libinfinity-0.4.1.ebuild:
+  Adding ~x86
 
   18 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -files/infinoted.confd-0.2, -files/infinoted.initd-0.2,
