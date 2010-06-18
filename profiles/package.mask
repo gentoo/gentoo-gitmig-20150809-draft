@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11657 2010/06/17 22:45:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11658 2010/06/18 06:56:44 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (18 Jun 2010)
+# Only one provider left, so the virtuals serve
+# no purpose and will be removed soon
+virtual/postgresql-base
+virtual/postgresql-server
 
 # Jeroen Roovers <jer@gentoo.org> (17 Jun 2010)
 # Snapshots and alpha builds are to be used with care,
