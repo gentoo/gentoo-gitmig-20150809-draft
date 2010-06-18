@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11659 2010/06/18 13:10:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11660 2010/06/18 14:23:48 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (18 Jun 2010)
+#  on behalf of QA team
+#
+# Collides with FFmpeg, which is a dependency of it. Its
+# functionality should now be part of the main package
+# (officially since 0.6, but also in our previous
+# snapshots). See bug #314985.
+#
+# Removal on 2010-08-17
+media-video/ffprobe
 
 # Patrick Lauer <patrick@gentoo.org> (18 Jun 2010)
 # Only one provider left, so the virtuals serve
