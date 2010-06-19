@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/multi_json-0.0.3-r1.ebuild,v 1.1 2010/06/19 11:55:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/multi_json-0.0.4.ebuild,v 1.1 2010/06/19 17:33:02 flameeyes Exp $
 
 EAPI=2
 
