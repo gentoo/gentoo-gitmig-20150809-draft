@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.59 2010/06/19 16:12:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.60 2010/06/19 16:19:19 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -107,9 +107,6 @@ src_prepare() {
 
 	# Make dependency on cups optional, bug #324105.
 	epatch "${FILESDIR}"/${PN}-optional-cups-r1.patch
-
-	# Fix gyp files to correctly support system-provided libraries.
-	epatch "${FILESDIR}"/${PN}-gyp-fixes-r2.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/libevent"
