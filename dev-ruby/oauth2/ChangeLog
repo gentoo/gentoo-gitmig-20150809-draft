@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/oauth2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.5 2010/06/19 12:34:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.6 2010/06/19 17:34:01 flameeyes Exp $
+
+*oauth2-0.0.10 (19 Jun 2010)
+
+  19 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -oauth2-0.0.8.ebuild, -files/oauth2-0.0.8-gentoo.patch,
+  -oauth2-0.0.9.ebuild, -files/oauth2-0.0.9-gentoo.patch,
+  +oauth2-0.0.10.ebuild:
+  Version bump, remove patch.
 
 *oauth2-0.0.9 (19 Jun 2010)
 
