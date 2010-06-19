@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34-r1.ebuild,v 1.1 2010/06/17 20:08:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34-r1.ebuild,v 1.2 2010/06/19 20:12:41 xarthisius Exp $
 
 EAPI=2
 
@@ -46,6 +46,8 @@ src_install() {
 
 	dodir /var/lib/csync2/ || die
 	keepdir /var/lib/csync2/
+
+	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO csync2_locheck.sh || die
 }
