@@ -1,27 +1,26 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis/gitosis-0.2_p20080626.ebuild,v 1.2 2010/06/19 16:23:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis-gentoo/gitosis-gentoo-0.2_p20081028.ebuild,v 1.1 2010/06/19 16:19:58 arfrever Exp $
 
 inherit eutils distutils
 
-DESCRIPTION="gitosis -- software for hosting git repositories"
-HOMEPAGE="http://eagain.net/gitweb/?p=gitosis.git;a=summary"
-# This is a snapshot taken from the upstream gitweb.
-MY_PV="20080626-72c754b2f03a139122dc4a3877b05704fa88f751"
-MY_PN="${PN}.git"
-MY_P="${MY_PN}-${MY_PV}"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+DESCRIPTION="gitosis -- software for hosting git repositories, Gentoo fork"
+HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/gitosis-gentoo.git"
+# This is a snapshot taken from the Gentoo overlays gitweb.
+MY_PV="20081025-acf867e8cd12f31dcf0f9fff92f3a3c34912b751"
+MY_P="${PN}-${MY_PV}"
+SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
-DEPEND_GIT=">=dev-vcs/git-1.5.3.6"
+DEPEND_GIT=">=dev-vcs/git-1.5.6.4"
 DEPEND="${DEPEND_GIT}
 		>=dev-python/setuptools-0.6_rc5"
 RDEPEND="${DEPEND}
-		!dev-vcs/gitosis-gentoo"
+		!dev-vcs/gitosis"
 
-S=${WORKDIR}/gitosis
+S=${WORKDIR}/${MY_P}
 
 DOCS="example.conf gitweb.conf lighttpd-gitweb.conf TODO.rst"
 

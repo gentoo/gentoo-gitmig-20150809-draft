@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis/gitosis-0.2_p20080825.ebuild,v 1.1 2010/06/19 16:05:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis/gitosis-0.2_p20080825.ebuild,v 1.2 2010/06/19 16:23:07 arfrever Exp $
 
 inherit eutils distutils
 
@@ -19,7 +19,7 @@ DEPEND_GIT=">=dev-vcs/git-1.5.5.4"
 DEPEND="${DEPEND_GIT}
 		>=dev-python/setuptools-0.6_rc5"
 RDEPEND="${DEPEND}
-		!dev-util/gitosis-gentoo"
+		!dev-vcs/gitosis-gentoo"
 
 S=${WORKDIR}/gitosis
 
