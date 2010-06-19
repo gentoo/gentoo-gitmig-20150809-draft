@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.3 2010/06/19 18:51:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.4 2010/06/19 19:02:06 ssuominen Exp $
 
 EAPI=2
 
@@ -41,8 +41,6 @@ DEPEND="${RDEPEND}
 	!media-radio/ax25-apps
 	!dev-tinyos/listen"
 
-RESTRICT="test" #324719
-
 pkg_setup() {
 	python_set_active_version 2
 }
@@ -58,6 +56,8 @@ src_compile() {
 		USE_GTKMOZEMBED="1" CHECK_DEPENDS="0" emake PYTHON="$(PYTHON)" || die
 	fi
 }
+
+src_test() { :; } #324719
 
 src_install() {
 	DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" emake \
