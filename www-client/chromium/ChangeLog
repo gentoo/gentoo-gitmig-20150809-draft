@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.116 2010/06/18 05:30:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.117 2010/06/19 16:12:26 phajdan.jr Exp $
+
+  19 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-6.0.437.1.ebuild, chromium-9999.ebuild:
+  Add sse2 USE flag, so that SSE2-capable systems can enable it. Suggested
+  by spatz.
 
   18 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-6.0.437.1.ebuild, chromium-9999.ebuild:
