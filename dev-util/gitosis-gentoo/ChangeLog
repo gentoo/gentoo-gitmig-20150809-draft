@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gitosis-gentoo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis-gentoo/ChangeLog,v 1.9 2010/03/17 17:22:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitosis-gentoo/ChangeLog,v 1.10 2010/06/19 16:11:02 arfrever Exp $
+
+  19 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gitosis-gentoo-0.2_p20080203.ebuild, gitosis-gentoo-0.2_p20080711.ebuild,
+  gitosis-gentoo-0.2_p20081028.ebuild, gitosis-gentoo-0.2_p20090515.ebuild:
+  dev-util/gitosis renamed to dev-vcs/gitosis (bug #56967).
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   gitosis-gentoo-0.2_p20080203.ebuild, gitosis-gentoo-0.2_p20080711.ebuild,
