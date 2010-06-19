@@ -29,6 +29,38 @@ index fbf6a4a..3669b7b 100644
  
  require 'rake/rdoctask'
  Rake::RDocTask.new do |rdoc|
+diff --git a/lib/multi_json.rb b/lib/multi_json.rb
+index a1e7bb7..20c074a 100644
+--- a/lib/multi_json.rb
++++ b/lib/multi_json.rb
+@@ -8,6 +8,13 @@ module MultiJson
+     @engine
+   end
+   
++  DefaultByRequire = {
++    "yajl" => :yajl,
++    "json" => :json_gem,
++    "active_support" => :active_support,
++    "json/pure" => :json_pure
++  }
++  
+   # The default engine based on what you currently
+   # have loaded and installed. First checks to see
+   # if any engines are already loaded, then checks
+@@ -17,10 +24,10 @@ module MultiJson
+     return :json_gem if defined?(::JSON)
+     return :active_support if defined?(::ActiveSupport::JSON)
+     
+-    %w(yajl json active_support json/pure).each do |req|
++    DefaultByRequire.each_pair do |library, engine|
+       begin
+-        require req
+-        return req.sub('/','_').to_sym
++        require library
++        return engine
+       rescue LoadError
+         next
+       end
 diff --git a/spec/spec_helper.rb b/spec/spec_helper.rb
 index a198d34..c0338a1 100644
 --- a/spec/spec_helper.rb
