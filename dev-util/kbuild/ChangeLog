@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.14 2010/06/03 18:36:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.15 2010/06/19 00:42:56 abcd Exp $
+
+  19 Jun 2010; Jonathan Callen <abcd@gentoo.org> kbuild-0.1.5-r1.ebuild:
+  Moving dev-util/cvs* to dev-vcs/cvs*
 
   03 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
   kbuild-0.1.5-r1.ebuild, kbuild-0.1.5_p2.ebuild:

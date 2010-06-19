@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-8.0.4.ebuild,v 1.6 2009/05/12 19:13:26 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-8.0.4.ebuild,v 1.7 2010/06/19 00:43:27 abcd Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=">=dev-lang/tk-8.4"
 RDEPEND="${DEPEND}
-	dev-util/cvs
+	dev-vcs/cvs
 	dev-util/subversion
 	sys-apps/diffutils
 	dev-util/tkdiff"
