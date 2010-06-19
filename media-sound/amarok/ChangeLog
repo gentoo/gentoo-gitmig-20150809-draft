@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.379 2010/06/13 02:12:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.380 2010/06/19 01:29:57 jmbsvicetto Exp $
+
+  19 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.3.1-r1.ebuild:
+  [media-sound/amarok-2.3.1-r1] Synced some changes from the live ebuild in
+  the overlay:
+  updated the git repo now that amarok moved from gitorious to kde and
+  dropped a comment.
 
   13 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   amarok-2.3.1-r1.ebuild:

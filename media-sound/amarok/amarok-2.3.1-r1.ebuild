@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.4 2010/06/13 02:12:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.5 2010/06/19 01:29:57 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ if [[ ${PV} != *9999* ]]; then
 	pa pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
 	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
 else
-	EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git"
+	EGIT_REPO_URI="git://git.kde.org/${PN}/${PN}.git"
 	GIT_ECLASS="git"
 fi
 
@@ -30,7 +30,6 @@ IUSE="cdda daap debug embedded ipod lastfm mp3tunes mtp opengl +player semantic-
 RESTRICT="test"
 
 # ipod requires gdk enabled and also gtk compiled in libgpod
-# Some UI dialogs require qt-gui built with the accessibility use flag
 DEPEND="
 	>=media-libs/taglib-1.6.1[asf,mp4]
 	>=media-libs/taglib-extras-1.0.1
