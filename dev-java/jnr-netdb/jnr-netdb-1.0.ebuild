@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.0.ebuild,v 1.2 2010/06/04 23:25:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.0.ebuild,v 1.3 2010/06/19 08:37:17 serkan Exp $
 
 EAPI=3
 
@@ -24,7 +24,11 @@ RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}
-	test? ( dev-java/ant-junit4 )"
+	test?
+	(
+		dev-java/ant-junit4
+		dev-java/hamcrest-core
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -34,6 +38,7 @@ src_unpack() {
 src_prepare() {
 	mkdir -p lib
 	find . -iname 'junit*.jar' -delete
+	sed -i -e "s|run.test.classpath=|run.test.classpath=lib/hamcrest-core.jar:|g" nbproject/project.properties
 	java-pkg_jar-from --into lib jaffl jaffl.jar
 }
 
@@ -44,7 +49,8 @@ EANT_EXTRA_ARGS="-Dreference.jaffl.jar=lib/jaffl.jar \
 src_test() {
 	java-pkg_jar-from --build-only --into lib/junit_4 junit-4 \
 		junit.jar junit-4.5.jar
-
+	java-pkg_jar-from --build-only --into lib hamcrest-core \
+		hamcrest-core.jar
 	sed -i -e \
 	"s_\${file.reference.jffi-complete.jar}_$(java-pkg_getjars --build-only --with-dependencies jaffl)_" \
 		nbproject/project.properties
