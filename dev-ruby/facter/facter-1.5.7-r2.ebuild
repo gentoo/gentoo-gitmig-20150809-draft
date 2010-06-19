@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.7-r2.ebuild,v 1.1 2010/06/11 00:41:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.7-r2.ebuild,v 1.2 2010/06/19 01:15:57 matsuu Exp $
 
 EAPI="2"
 # jruby failed to install
 USE_RUBY="ruby18 ruby19 ree18"
+RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG ChangeLog README* TODO"
 RUBY_FAKEGEM_BINWRAP="facter"
