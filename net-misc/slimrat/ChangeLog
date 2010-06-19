@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/slimrat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/ChangeLog,v 1.2 2010/05/26 07:53:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/ChangeLog,v 1.3 2010/06/19 12:16:15 scarabeus Exp $
+
+  19 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> slimrat-9999.ebuild:
+  Fixing #321595 and added dependency for plugin.
 
 *slimrat-9999 (26 May 2010)
 

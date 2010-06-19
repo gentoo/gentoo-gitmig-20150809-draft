@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/slimrat-9999.ebuild,v 1.1 2010/05/26 07:53:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/slimrat-9999.ebuild,v 1.2 2010/06/19 12:16:15 scarabeus Exp $
 
 EAPI=2
 
@@ -18,6 +18,7 @@ IUSE="X"
 
 DEPEND="
 	>=dev-lang/perl-5.10.1[ithreads]
+	dev-perl/JSON
 	>=dev-perl/WWW-Mechanize-1.52
 	virtual/perl-Getopt-Long
 	virtual/perl-Term-ANSIColor
@@ -55,5 +56,5 @@ src_install() {
 	newins "${S}/slimrat.conf" slimrat.conf
 
 	insinto "/usr/share/${PN}"
-	doins -r "src/"*.pm "src/Clipboard" "src/plugins/" "src/${PN}.glade" || die "doins failed"
+	doins -r "src/"*.pm "src/plugins/" "src/${PN}.glade" || die "doins failed"
 }
