@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/cvscommand
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvscommand/ChangeLog,v 1.22 2006/09/08 20:48:38 pioto Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvscommand/ChangeLog,v 1.23 2010/06/19 00:41:09 abcd Exp $
+
+  19 Jun 2010; Jonathan Callen <abcd@gentoo.org> cvscommand-1.63.ebuild,
+  cvscommand-1.65.ebuild, cvscommand-1.67.ebuild, cvscommand-1.76.ebuild:
+  Moving dev-util/cvs* to dev-vcs/cvs*
 
   08 Sep 2006; <pioto@gentoo.org> cvscommand-1.76.ebuild:
   Removed unnecessary ${RDEPEND} in RDEPEND.

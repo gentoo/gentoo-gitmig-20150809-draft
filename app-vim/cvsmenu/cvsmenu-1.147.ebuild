@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/cvsmenu-1.147.ebuild,v 1.1 2008/09/20 14:16:40 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/cvsmenu-1.147.ebuild,v 1.2 2010/06/19 00:40:25 abcd Exp $
 
 inherit vim-plugin
 
@@ -14,4 +14,4 @@ IUSE=""
 # http://ezytools.cvs.sourceforge.net/*checkout*/ezytools/VimTools/cvsmenu.txt
 VIM_PLUGIN_HELPFILES="cvsmenu.txt"
 
-RDEPEND="dev-util/cvs"
+RDEPEND="dev-vcs/cvs"
