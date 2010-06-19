@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/listen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.26 2010/05/04 08:36:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.27 2010/06/19 18:51:40 ssuominen Exp $
+
+  19 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> listen-0.6.5.ebuild:
+  RESTRICT="test" wrt #324719 by Diego E. Pettenò.
 
   04 May 2010; Samuli Suominen <ssuominen@gentoo.org> listen-0.6.5.ebuild:
   Move gnome-vfs-python RDEPEND behind USE gnome because it's runtime
