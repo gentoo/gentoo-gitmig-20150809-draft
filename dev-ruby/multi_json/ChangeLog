@@ -1,0 +1,13 @@
+# ChangeLog for dev-ruby/multi_json
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.1 2010/06/19 11:35:43 flameeyes Exp $
+
+*multi_json-0.0.3 (19 Jun 2010)
+
+  19 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +multi_json-0.0.3.ebuild, +files/multi_json-0.0.3-gentoo.patch,
+  +metadata.xml:
+  Initial import of multi_json needed for the new version of oauth2. The
+  tests are particularly patched (and not all of it is upstreamed yet) so
+  that they pass on Ruby 1.9 and JRuby properly.
+

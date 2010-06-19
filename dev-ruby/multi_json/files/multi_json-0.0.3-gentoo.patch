@@ -1,0 +1,84 @@
+diff --git a/Rakefile b/Rakefile
+index fbf6a4a..3669b7b 100644
+--- a/Rakefile
++++ b/Rakefile
+@@ -14,10 +14,13 @@ begin
+     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+   end
+   Jeweler::GemcutterTasks.new
++
++  task :spec => :check_dependencies
+ rescue LoadError
+   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+ end
+ 
++begin
+ require 'spec/rake/spectask'
+ Spec::Rake::SpecTask.new(:spec) do |spec|
+   spec.libs << 'lib' << 'spec'
+@@ -30,9 +33,10 @@ Spec::Rake::SpecTask.new(:rcov) do |spec|
+   spec.rcov = true
+ end
+ 
+-task :spec => :check_dependencies
+-
+ task :default => :spec
++rescue LoadError
++  puts "RSpec (or a dependency) not available. Install it with: gem install rspec"
++end
+ 
+ require 'rake/rdoctask'
+ Rake::RDocTask.new do |rdoc|
+diff --git a/spec/spec_helper.rb b/spec/spec_helper.rb
+index a198d34..c0338a1 100644
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -4,8 +4,12 @@ require 'multi_json'
+ require 'spec'
+ require 'spec/autorun'
+ require 'rubygems'
++begin
+ require 'bundler'
+ Bundler.setup
++rescue LoadError
++  $stderr.puts "Bundler (or a dependency) not available."
++end
+ 
+ Spec::Runner.configure do |config|
+   
+diff --git a/spec/x_to_json_spec.rb b/spec/x_to_json_spec.rb
+index 69bffc8..9d2a376 100644
+--- a/spec/x_to_json_spec.rb
++++ b/spec/x_to_json_spec.rb
+@@ -13,13 +13,17 @@ end
+ describe "MultiJson" do
+   context 'engines' do
+     it 'should default to the best available gem' do
++      begin
+       require 'yajl'
+       MultiJson.engine.name.should == 'MultiJson::Engines::Yajl'
++      rescue LoadError
++        pending "YAJL (or a dependency) not available."
++      end
+     end
+ 
+     it 'should be settable via a symbol' do
+-      MultiJson.engine = :yajl
+-      MultiJson.engine.name.should == 'MultiJson::Engines::Yajl'
++      MultiJson.engine = :json_pure
++      MultiJson.engine.name.should == 'MultiJson::Engines::JsonPure'
+     end
+     
+     it 'should be settable via a class' do
+@@ -31,7 +35,11 @@ describe "MultiJson" do
+   %w(active_support json_gem json_pure yajl).each do |engine|
+     context engine do
+       before do
++        begin
+         MultiJson.engine = engine
++        rescue LoadError
++          pending "Engine #{engine} couldn't be loaded (not installed?)"
++        end
+       end
+       
+       describe '.encode' do
