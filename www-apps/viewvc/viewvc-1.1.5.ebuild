@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.5.ebuild,v 1.5 2010/04/15 20:47:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.5.ebuild,v 1.6 2010/06/19 01:00:36 abcd Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -33,7 +33,7 @@ RDEPEND="
 	mod_python? ( www-apache/mod_python )
 	!mod_python? ( virtual/httpd-cgi )
 
-	cvsgraph? ( >=dev-util/cvsgraph-1.5.0 )
+	cvsgraph? ( >=dev-vcs/cvsgraph-1.5.0 )
 	mysql? ( >=dev-python/mysql-python-0.9.0 )
 	pygments? ( dev-python/pygments )
 "

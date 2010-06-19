@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/horde-chora-2.0.2.ebuild,v 1.5 2010/03/05 07:34:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/horde-chora-2.0.2.ebuild,v 1.6 2010/06/19 00:59:30 abcd Exp $
 
 HORDE_MAJ="-h3"
 inherit horde
@@ -13,4 +13,4 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| ( >=www-apps/horde-3 >=www-apps/horde-groupware-1 >=www-apps/horde-webmail-1 )
 	>=dev-vcs/rcs-5.7-r1
-	>=dev-util/cvs-1.11.2"
+	>=dev-vcs/cvs-1.11.2"
