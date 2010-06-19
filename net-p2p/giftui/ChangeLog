@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/giftui
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.23 2008/04/13 14:58:26 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.24 2010/06/19 07:53:36 sochotnicky Exp $
+
+*giftui-0.4.1-r2 (19 Jun 2010)
+
+  19 Jun 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +giftui-0.4.1-r2.ebuild:
+  Put docs in the correct directory (#299332)
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> giftui-0.4.1-r1.ebuild:
   Remove pkgconfig from RDEPEND and sed from DEPEND.
