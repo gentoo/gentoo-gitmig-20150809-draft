@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.2 2010/06/15 10:11:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.3 2010/06/19 19:25:13 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib wxwidgets
@@ -32,7 +32,7 @@ RDEPEND="virtual/opengl
 	alsa? ( media-libs/alsa-lib )
 	mng? ( media-libs/libmng )
 	png? ( media-libs/libpng )
-	wxwidgets? ( =x11-libs/wxGTK-2.6* )
+	wxwidgets? ( x11-libs/wxGTK:2.8[X,opengl] )
 	cegui? ( >=dev-games/cegui-0.5.0 )
 	3ds? ( media-libs/lib3ds )"
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 	dev-lang/swig
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
 	# Installing doc conflict with dodoc on src_install
@@ -55,7 +55,7 @@ src_prepare() {
 
 src_configure() {
 	if useq wxwidgets; then
-		WX_GTK_VER=2.6
+		WX_GTK_VER="2.8"
 		need-wxwidgets gtk2
 	fi
 
@@ -93,7 +93,8 @@ src_configure() {
 }
 
 src_compile() {
-	jam -q || die "compile failed"
+	local jamopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
+	jam -q ${jamopts} || die "compile failed"
 }
 
 src_install() {
