@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/ultimatestunts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.21 2009/01/08 00:44:34 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.22 2010/06/19 00:35:57 abcd Exp $
+
+  19 Jun 2010; Jonathan Callen <abcd@gentoo.org>
+  ultimatestunts-0.7.5.ebuild:
+  Moving dev-util/cvs* to dev-vcs/cvs*
 
   08 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   ultimatestunts-0.7.5.ebuild:
