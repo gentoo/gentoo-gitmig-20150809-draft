@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97-r1.ebuild,v 1.7 2010/05/12 16:24:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97-r1.ebuild,v 1.8 2010/06/19 00:44:52 abcd Exp $
 
 EAPI="2"
 
@@ -34,7 +34,7 @@ DEPEND="
 # block - some plugins moved to kdevplatform from kdevelop
 RDEPEND="${DEPEND}
 	!<dev-util/kdevelop-${KDEVELOP_PV}
-	cvs? ( dev-util/cvs )
+	cvs? ( dev-vcs/cvs )
 	mercurial? ( dev-vcs/mercurial )
 "
 
