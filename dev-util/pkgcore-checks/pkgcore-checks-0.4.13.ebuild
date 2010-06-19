@@ -1,6 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.13.ebuild,v 1.1 2010/01/09 02:39:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.13.ebuild,v 1.2 2010/06/19 15:18:34 arfrever Exp $
+
+EAPI="3"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
@@ -14,17 +17,11 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/pkgcore-0.5.9
-	>=dev-python/snakeoil-0.3.6
-	>=dev-lang/python-2.4"
+	>=dev-python/snakeoil-0.3.6"
 DEPEND="${RDEPEND}"
 
-DOCS="NEWS AUTHORS"
-
-PYTHON_MODNAME=pkgcore_checks
-
-src_test() {
-	"${python}" setup.py test || die "tests returned non zero"
-}
+DOCS="AUTHORS NEWS"
+PYTHON_MODNAME="pkgcore_checks"
 
 pkg_postinst() {
 	einfo "updating pkgcore plugin cache"
@@ -33,11 +30,9 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_version
 	# Careful not to remove this on up/downgrades.
-	local sitep="${ROOT}"usr/lib/python${PYVER}/site-packages
-	if [[ -e "${sitep}/pkgcore_checks/plugins/plugincache2" ]] &&
-		! [[ -e "${sitep}/pkgcore_checks/base.py" ]]; then
+	local sitep="${ROOT}$(python_get_sitedir)"
+	if [[ -e "${sitep}/pkgcore_checks/plugins/plugincache2" && ! -e "${sitep}/pkgcore_checks/base.py" ]]; then
 		rm "${sitep}/pkgcore_checks/plugins/plugincache2"
 	fi
 	distutils_pkg_postrm

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.44 2010/01/09 02:39:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.45 2010/06/19 15:18:34 arfrever Exp $
+
+  19 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pkgcore-checks-0.4.13.ebuild:
+  Delete call to deprecated python_version(). Simplify src_test().
 
 *pkgcore-checks-0.4.13 (09 Jan 2010)
 
