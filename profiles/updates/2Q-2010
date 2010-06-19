@@ -25,3 +25,10 @@ move x11-libs/libjwc_f dev-libs/libjwc_f
 slotmove <=media-libs/libpng-1.2.43 1.2 0
 move dev-util/tig dev-vcs/tig
 slotmove x11-themes/gtk-theme-switch 2 0
+move dev-util/cvs dev-vcs/cvs
+move dev-util/cvs2cl dev-vcs/cvs2cl
+move dev-util/cvsd dev-vcs/cvsd
+move dev-util/cvsgraph dev-vcs/cvsgraph
+move dev-util/cvsps dev-vcs/cvsps
+move dev-util/cvsq dev-vcs/cvsq
+move dev-util/cvsutils dev-vcs/cvsutils

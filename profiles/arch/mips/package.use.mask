@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.20 2010/06/19 00:23:00 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.21 2010/06/19 01:13:16 abcd Exp $
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
@@ -32,7 +32,6 @@ sys-apps/paludis ruby
 # Chris Gianelloni <cgianelloni@gentoo.org> (22 Sep 2007)
 # dependency can't be fulfilled at the moment
 kde-base/kdelibs kerberos
-dev-util/cvs kerberos
 dev-vcs/cvs kerberos
 net-mail/fetchmail kerberos
 
