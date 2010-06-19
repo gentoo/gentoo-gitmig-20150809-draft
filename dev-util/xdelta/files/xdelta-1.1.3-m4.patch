@@ -1,7 +1,0 @@
---- xdelta.m4
-+++ xdelta.m4
-@@ -6,3 +6,3 @@
- dnl
--AC_DEFUN(AM_PATH_XDELTA,
-+AC_DEFUN([AM_PATH_XDELTA],
- [dnl
