@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/liblist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.3 2010/01/03 05:27:01 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblist/ChangeLog,v 1.4 2010/06/19 16:37:01 nerdboy Exp $
+
+*liblist-2.3.1 (19 Jun 2010)
+
+  19 Jun 2010; Steve Arnold <nerdboy@gentoo.org> +liblist-2.3.1.ebuild:
+  Updated to new 'binki-version' who is now the upstream maintainer (yay).
 
   03 Jan 2010; Steve Arnold <nerdboy@gentoo.org> liblist-2.1-r1.ebuild,
   files/liblist-2.1-sharedlib.patch:
