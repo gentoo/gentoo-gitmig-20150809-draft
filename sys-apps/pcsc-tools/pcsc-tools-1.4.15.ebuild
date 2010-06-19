@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.15.ebuild,v 1.2 2009/04/05 17:00:48 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.15.ebuild,v 1.3 2010/06/19 02:13:31 nerdboy Exp $
 
 inherit eutils fdo-mime multilib
 
@@ -13,24 +13,28 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 ## ~arm waiting for keywords
-IUSE="debug usb"
+IUSE="debug gtk usb"
 
 RDEPEND="usb? ( app-crypt/ccid )
 	>=sys-apps/pcsc-lite-1.4.14
 	dev-perl/pcsc-perl
-	dev-perl/gtk2-perl"
+	gtk? ( dev-perl/gtk2-perl )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	local myconf
+	if ! use gtk ; then
+	    epatch "${FILESDIR}"/${PN}_no-gtk.patch
+	fi
 
 	if use debug ; then
 	    sed -i -e "s:-Wall -O2:${CFLAGS}:g" Makefile
 	else
 	    sed -i -e "s:-Wall -O2 -g:${CFLAGS}:g" Makefile
 	fi
+
+	sed -i -e "s:/usr/local:/usr:" Makefile
 
 	make DESTDIR="${D}usr" all || die
 }
@@ -41,10 +45,12 @@ src_install() {
 	# prepalldocs isn't supported any more?
 	dodoc README Changelog
 
-	doicon "${FILESDIR}"/smartcard.svg
-	domenu gscriptor.desktop
-	dosed "s:Categories=Utility;GTK;:Icon=smartcard.svg\\nCategories=System;:g" \
-	    /usr/share/applications/gscriptor.desktop
+	if use gtk ; then
+	    doicon "${FILESDIR}"/smartcard.svg
+	    domenu gscriptor.desktop
+	    dosed "s:Categories=Utility;GTK;:Icon=smartcard.svg\\nCategories=System;:g" \
+	        /usr/share/applications/gscriptor.desktop
+	fi
 
 	insinto /usr/share/pcsc
 	doins "${DISTDIR}"/smartcard_list.txt
