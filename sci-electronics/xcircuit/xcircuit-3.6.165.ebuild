@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.165.ebuild,v 1.1 2010/02/26 09:22:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.6.165.ebuild,v 1.2 2010/06/19 13:02:02 ssuominen Exp $
 
 EAPI=2
-inherit autotools eutils
+inherit autotools eutils multilib
 
 DESCRIPTION="Circuit drawing and schematic capture program."
 SRC_URI="http://opencircuitdesign.com/xcircuit/archive/${P}.tgz"
@@ -32,6 +32,7 @@ src_prepare() {
 }
 
 src_configure() {
+	export loader_run_path="/usr/$(get_libdir)"
 	econf \
 		--disable-dependency-tracking \
 		--with-tcl \
