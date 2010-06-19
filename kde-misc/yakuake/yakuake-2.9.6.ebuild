@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.6.ebuild,v 1.6 2010/06/14 14:53:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.6.ebuild,v 1.7 2010/06/19 08:48:05 scarabeus Exp $
 
 EAPI="2"
 
-KDE_LINGUAS="ca cs da de el en_GB es fr ga gl ja ko nds nl pt pt_BR ro ru sv tr uk"
+KDE_LINGUAS="ca cs da de el en_GB es et fr ga gl hne it ja ko nds nl nn pl pt
+pt_BR ro ru sv th tr uk wa zh_CN"
 inherit kde4-base
 
 DESCRIPTION="A quake-style terminal emulator based on KDE konsole technology"
@@ -18,7 +19,4 @@ IUSE=""
 
 DEPEND=">=kde-base/konsole-${KDE_MINIMAL}
 	sys-devel/gettext"
-RDEPEND="${DEPEND}
-	!kde-misc/yakuake:0
-	!kde-misc/yakuake:4.1
-"
+RDEPEND="${DEPEND}"

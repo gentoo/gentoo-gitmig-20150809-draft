@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.38 2010/06/14 14:53:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.39 2010/06/19 08:48:05 scarabeus Exp $
+
+  19 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> yakuake-2.9.6.ebuild:
+  Update linguas to really match upstream tarball.
 
   14 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> yakuake-2.9.6.ebuild:
   Add missing es. Per bug #323867.
