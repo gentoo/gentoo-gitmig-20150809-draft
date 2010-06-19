@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.760 2010/06/18 00:00:09 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.761 2010/06/19 01:53:09 zorry Exp $
+
+*gcc-4.4.4-r1 (19 Jun 2010)
+*gcc-4.4.3-r3 (19 Jun 2010)
+
+  19 Jun 2010; Magnus Granberg <zorry@gentoo.org> +gcc-4.4.3-r3.ebuild,
+  +gcc-4.4.4-r1.ebuild:
+  bump for adding hardened support #318171
 
   17 Jun 2010; Magnus Granberg <zorry@gentoo.org> gcc-4.3.5.ebuild:
   fix typo in *_STABLE so we don't use hardened_gcc_check_unsupported
