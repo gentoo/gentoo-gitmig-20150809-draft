@@ -1,12 +1,12 @@
 # ChangeLog for net-misc/siproxd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.16 2010/06/19 12:11:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/siproxd/ChangeLog,v 1.17 2010/06/19 16:07:44 ssuominen Exp $
 
 *siproxd-0.8.0-r1 (19 Jun 2010)
 
   19 Jun 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +siproxd-0.8.0-r1.ebuild, +files/siproxd-libtool-2.2.patch:
-  Attempt to fix bug #308945, thanks to ssuominen for the pointer
+  Attempt to fix bug #308495, thanks to ssuominen for the pointer
 
   03 Mar 2010; Christian Faulhammer <fauli@gentoo.org> siproxd-0.8.0.ebuild:
   stable x86, bug 299419
