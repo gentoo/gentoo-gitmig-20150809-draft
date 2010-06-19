@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.437.1.ebuild,v 1.3 2010/06/19 16:12:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.437.1.ebuild,v 1.4 2010/06/19 16:30:14 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -21,7 +21,6 @@ RDEPEND="app-arch/bzip2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
-	>=gnome-base/gnome-keyring-2.28.2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
@@ -34,6 +33,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
+	>=gnome-base/gnome-keyring-2.28.2
 	sys-devel/flex"
 RDEPEND+="
 	|| (
