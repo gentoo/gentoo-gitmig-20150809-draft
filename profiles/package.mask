@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11664 2010/06/19 13:33:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11665 2010/06/19 16:17:32 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (19 Jun 2010)
+# Multiple failures. Look at bugs #197617, #297946, #297947. #299753
+# Not maintained by upstream anymore.
+# Pending removal in 2010-07-19
+app-doc/repodoc
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (18 Jun 2010)
 #  on behalf of QA team
