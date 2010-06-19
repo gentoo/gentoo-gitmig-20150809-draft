@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.56 2010/05/23 23:22:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.57 2010/06/19 00:57:39 abcd Exp $
 
 EAPI="2"
 
@@ -90,7 +90,7 @@ RDEPEND="virtual/opengl
 	x11-libs/libXrender"
 # The cpluff bundled addon uses gettext which needs CVS ...
 DEPEND="${RDEPEND}
-	dev-util/cvs
+	dev-vcs/cvs
 	x11-proto/xineramaproto
 	dev-util/cmake
 	x86? ( dev-lang/nasm )"
