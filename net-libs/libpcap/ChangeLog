@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.146 2010/06/11 18:26:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.147 2010/06/19 21:11:41 vapier Exp $
+
+  19 Jun 2010; Mike Frysinger <vapier@gentoo.org> libpcap-1.1.1.ebuild,
+  libpcap-1.1.1-r1.ebuild:
+  Restore m68k/mips keywords #313827.
 
 *libpcap-1.1.1-r1 (11 Jun 2010)
 
