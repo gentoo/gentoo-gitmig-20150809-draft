@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.40 2010/06/18 12:27:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.41 2010/06/19 16:48:49 pacho Exp $
+
+*bluez-4.66-r1 (19 Jun 2010)
+
+  19 Jun 2010; Pacho Ramos <pacho@gentoo.org> +bluez-4.66-r1.ebuild:
+  Stop building hid2hci since it's replaced by >=sys-fs/udev-146[extras]
+  provided one. This should fix bug #315749 (reported by Balazs Nemeth,
+  Marcin Kryczek and others). Thanks a lot to Bastien Nocera for the tip in
+  linux-bluetooth mailing list.
 
 *bluez-4.66 (18 Jun 2010)
 
