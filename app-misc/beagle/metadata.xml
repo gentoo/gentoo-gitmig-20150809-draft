@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>dotnet</herd>
-	<maintainer>
-		<email>cedk@gentoo.org</email>
-		<name>Cédric Krier</name>
-	</maintainer>
 	<use>
 		<flag name='google'>Enables google (gmail etc.) indexing  support.</flag>
 		<flag name='chm'>Enables support for indexing of the MS CHM (Compressed HTML)
