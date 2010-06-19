@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-mount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.72 2010/03/22 21:54:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.73 2010/06/19 16:57:08 pacho Exp $
+
+  19 Jun 2010; Pacho Ramos <pacho@gentoo.org> gnome-mount-0.8-r1.ebuild:
+  Depend on gnome-base/libgnome-keyring when needed instead of recent
+  gnome-base/gnome-keyring versions per bug #324695 (by Arttu Valo)
 
   22 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-mount-0.6.ebuild, -gnome-mount-0.7.ebuild, -gnome-mount-0.8.ebuild:

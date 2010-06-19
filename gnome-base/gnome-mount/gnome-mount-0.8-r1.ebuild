@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r1.ebuild,v 1.10 2010/01/17 23:57:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r1.ebuild,v 1.11 2010/06/19 16:57:08 pacho Exp $
 
 inherit autotools eutils gnome2
 
@@ -16,7 +16,7 @@ IUSE="libnotify nautilus kernel_FreeBSD"
 RDEPEND=">=dev-libs/glib-2.15.0
 	>=x11-libs/gtk+-2.8
 	>=sys-apps/hal-0.5.8.1
-	>=gnome-base/gnome-keyring-2.20
+	|| ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 )
 	>=gnome-base/gconf-2
 	libnotify? ( >=x11-libs/libnotify-0.3 )
 	nautilus? (
