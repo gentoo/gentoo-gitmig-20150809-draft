@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5679 2010/06/19 10:47:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5680 2010/06/19 11:27:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2367,6 +2367,7 @@ net-dns/bind:dlz - Enables dynamic loaded zones, 3rd party extension
 net-dns/bind:resolvconf - Enable support for net-dns/openresolv
 net-dns/bind:sdb-ldap - Enables ldap-sdb backend
 net-dns/bind:urandom - Use /dev/urandom instead of /dev/random
+net-dns/bind-tools:urandom - Use /dev/urandom instead of /dev/random
 net-dns/djbdns:aliaschain - Enables a fix for the truncation of alias chains
 net-dns/djbdns:cnamefix - Changes the CNAME behavior of dnscache
 net-dns/djbdns:datadir - Enables tinydns-data to read a directory with multiple data files
