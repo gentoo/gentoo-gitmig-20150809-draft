@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.63 2010/06/09 13:12:39 darkside Exp $
+# $Id: package.mask,v 1.64 2010/06/19 00:23:00 abcd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -182,3 +182,4 @@ sys-devel/native-cctools
 # dies with "exhausted memory" errors on Darwin, doesn't understand
 # arguments on Solaris.  Probably more problems...
 =dev-util/cvs-1.12.12*
+=dev-vcs/cvs-1.12.12*

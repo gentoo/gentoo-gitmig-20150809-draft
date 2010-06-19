@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.184 2010/06/16 06:48:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.185 2010/06/19 00:23:00 abcd Exp $
+
+  19 Jun 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Duplicate dev-util/cvs* as dev-vcs/cvs* to keep current masks
 
   16 Jun 2010; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.5/ppc/package.use.mask:

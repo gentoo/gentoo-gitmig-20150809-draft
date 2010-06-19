@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4296 2010/06/18 18:03:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4297 2010/06/19 00:22:59 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jun 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Duplicate dev-util/cvs* as dev-vcs/cvs* to keep current masks
 
   18 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask dev-util/pkgconfig-0.25-r1.
