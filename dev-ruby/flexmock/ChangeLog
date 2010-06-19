@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/flexmock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.9 2010/05/22 15:15:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.10 2010/06/19 14:13:15 flameeyes Exp $
+
+  19 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -flexmock-0.8.6.ebuild, flexmock-0.8.6-r1.ebuild,
+  -files/flexmock-0.8.6-rdoc-template.patch:
+  Remove old version; add support for ruby-enterprise.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   flexmock-0.8.6.ebuild, flexmock-0.8.6-r1.ebuild:
