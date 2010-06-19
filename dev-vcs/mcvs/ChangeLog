@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/mcvs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mcvs/ChangeLog,v 1.1 2010/03/05 16:22:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mcvs/ChangeLog,v 1.2 2010/06/19 00:53:28 abcd Exp $
+
+  19 Jun 2010; Jonathan Callen <abcd@gentoo.org> mcvs-1.0.10.ebuild,
+  mcvs-1.0.13.ebuild:
+  Moving dev-util/cvs* to dev-vcs/cvs*
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> +files/1.0.13-gentoo.patch,
   +mcvs-1.0.10.ebuild, +mcvs-1.0.13.ebuild, +metadata.xml:

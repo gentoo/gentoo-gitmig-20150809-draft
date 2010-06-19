@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mcvs/mcvs-1.0.10.ebuild,v 1.1 2010/03/05 16:22:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mcvs/mcvs-1.0.10.ebuild,v 1.2 2010/06/19 00:53:28 abcd Exp $
 
 inherit common-lisp-common eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=dev-lisp/clisp-2.32
-	dev-util/cvs
+	dev-vcs/cvs
 	dev-vcs/rcs"
 
 src_unpack() {

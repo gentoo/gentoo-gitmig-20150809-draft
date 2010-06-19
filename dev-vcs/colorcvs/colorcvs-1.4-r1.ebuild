@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/colorcvs-1.4-r1.ebuild,v 1.2 2010/04/23 14:17:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorcvs/colorcvs-1.4-r1.ebuild,v 1.3 2010/06/19 00:46:10 abcd Exp $
 
 EAPI=3
 inherit eutils prefix
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-lang/perl
-	dev-util/cvs"
+	dev-vcs/cvs"
 
 src_prepare() {
 	# fix typo
