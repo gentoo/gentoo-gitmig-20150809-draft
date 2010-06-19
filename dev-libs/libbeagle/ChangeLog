@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbeagle
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.12 2009/04/05 11:34:51 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.13 2010/06/19 17:14:21 cedk Exp $
+
+  19 Jun 2010; Cédric Krier <cedk@gentoo.org> metadata.xml:
+  Remove myself as maintainer
 
   05 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
   -libbeagle-0.3.0.ebuild, -libbeagle-0.3.4.ebuild, -libbeagle-0.3.5.ebuild:
