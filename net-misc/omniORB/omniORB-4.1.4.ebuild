@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4.ebuild,v 1.10 2009/12/15 19:19:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4.ebuild,v 1.11 2010/06/19 15:34:04 arfrever Exp $
 
 EAPI="2"
 
@@ -34,8 +34,7 @@ src_configure() {
 
 	use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
 
-	python_version
-	PYTHON=/usr/bin/python${PYVER} ECONF_SOURCE=".." econf ${MY_CONF}
+	PYTHON="$(PYTHON -a)" ECONF_SOURCE=".." econf ${MY_CONF}
 }
 
 src_compile() {
@@ -79,10 +78,9 @@ src_install () {
 
 pkg_postinst() {
 	elog "Since 4.1.2, the omniORB init script has been renamed to omniNames for clarity."
-	python_mod_optimize "/usr/$(get_libdir)/python${PYVER}/site-packages/omniidl"
-	python_mod_optimize "/usr/$(get_libdir)/python${PYVER}/site-packages/omniidl_be"
+	python_mod_optimize $(python_get_sitedir)/{omniidl,omniidl_be}
 }
 
 pkg_postrm() {
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/{omniidl,omniidl_be}
 }

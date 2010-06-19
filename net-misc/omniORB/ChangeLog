@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.64 2010/06/09 19:00:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.65 2010/06/19 15:34:04 arfrever Exp $
+
+  19 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  omniORB-4.1.4.ebuild:
+  Backport fixes for deprecation warnings from omniORB-4.1.4-r1.
 
   09 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   omniORB-4.1.4-r1.ebuild:
