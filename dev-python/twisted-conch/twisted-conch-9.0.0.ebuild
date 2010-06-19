@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-9.0.0.ebuild,v 1.5 2010/02/13 17:42:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-9.0.0.ebuild,v 1.6 2010/06/19 18:02:38 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,6 +14,7 @@ KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="=dev-python/twisted-$(get_version_component_range 1-2)*
+	dev-python/pyasn1
 	>=dev-python/pycrypto-1.9_alpha6"
 RDEPEND="${DEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
