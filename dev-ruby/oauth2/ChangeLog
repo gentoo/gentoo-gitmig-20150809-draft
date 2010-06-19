@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/oauth2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.4 2010/05/18 18:45:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.5 2010/06/19 12:34:34 flameeyes Exp $
+
+*oauth2-0.0.9 (19 Jun 2010)
+
+  19 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +oauth2-0.0.9.ebuild, +files/oauth2-0.0.9-gentoo.patch:
+  Version bump, new ebuild needs multi_json (and a fixed one) and is further
+  fixed.
 
   18 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> oauth2-0.0.8.ebuild:
   Add ~x86, tested on development container.
