@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/cvsweb-3.0.5.ebuild,v 1.1 2010/03/05 18:11:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/cvsweb-3.0.5.ebuild,v 1.2 2010/06/19 00:58:35 abcd Exp $
 
 inherit webapp
 
@@ -13,13 +13,13 @@ KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8
-	>=dev-util/cvs-1.11
+	>=dev-vcs/cvs-1.11
 	>=dev-vcs/rcs-5.7
 	>=dev-perl/URI-1.28
 	dev-perl/IPC-Run
 	dev-perl/MIME-Types
 	dev-perl/String-Ediff
-	>=dev-util/cvsgraph-1.4.0
+	>=dev-vcs/cvsgraph-1.4.0
 	>=app-text/enscript-1.6.3"
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/cvsweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/ChangeLog,v 1.1 2010/03/05 18:11:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cvsweb/ChangeLog,v 1.2 2010/06/19 00:58:35 abcd Exp $
+
+  19 Jun 2010; Jonathan Callen <abcd@gentoo.org> cvsweb-3.0.5.ebuild,
+  cvsweb-3.0.6.ebuild:
+  Moving dev-util/cvs* to dev-vcs/cvs*
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> +cvsweb-1.112.ebuild,
   +cvsweb-3.0.5.ebuild, +cvsweb-3.0.6.ebuild, +files/postinstall-en.txt,
