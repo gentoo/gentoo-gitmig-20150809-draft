@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11665 2010/06/19 16:17:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11666 2010/06/19 20:29:38 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -177,10 +177,6 @@ net-wireless/ieee80211
 # generates many deprecation warnings.
 # Masked for removal in 30 days.
 dev-ruby/amrita
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (12 Jun 2010)
-# Masked for quick tests of the merged amarok ebuild
-=media-sound/amarok-2.3.1-r1
 
 # Ben de Groot <yngwin@gentoo.org> (11 Jun 2010)
 # Masked for removal in 30 days, see bug #315067
