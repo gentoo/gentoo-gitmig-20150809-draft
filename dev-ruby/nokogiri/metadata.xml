@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>ruby</herd>
-<longdescription>Nokogiri (驪ｸ) is an HTML, XML, SAX, and Reader parser.</longdescription>
+  <herd>ruby</herd>
+  <use>
+    <flag name="ffi">
+      Use the Foreign Function Interface library (as provided by
+      <pkg>dev-java/jruby</pkg> or <pkg>dev-ruby/ffi</pkg> depending
+      on the implementation) rather than building a C extension to
+      wrap around the libxml/libxslt interfaces. Note: JRuby always
+      uses the FFI interface as native extensions are not supported.
+    </flag>
+  </use>
 </pkgmetadata>

@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.29 2010/05/22 15:31:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.30 2010/06/19 10:32:56 flameeyes Exp $
+
+*nokogiri-1.4.2 (19 Jun 2010)
+
+  19 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nokogiri-1.4.2.ebuild, metadata.xml:
+  Version bump, add ffi USE flag to use the ffi interface rather than the
+  compiled extension even on MRI.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   nokogiri-1.4.0.ebuild:
