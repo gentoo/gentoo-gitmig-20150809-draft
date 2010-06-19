@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.49 2010/02/25 18:43:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.50 2010/06/19 18:03:47 pacho Exp $
+
+  19 Jun 2010; Pacho Ramos <pacho@gentoo.org> evolution-sharp-0.21.1.ebuild,
+  +files/evolution-sharp-0.21.1-version-check.patch:
+  Use fedora patch to clean e-d-s version checking and allow this to work
+  with Gnome 2.30
 
   25 Feb 2010; Mark Loeser <halcy0n@gentoo.org>
   -evolution-sharp-0.18.1.ebuild:
