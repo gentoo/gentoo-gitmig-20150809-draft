@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xmlwrapp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.32 2008/05/01 00:45:43 dev-zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.33 2010/06/20 12:24:17 hwoarang Exp $
+
+*xmlwrapp-0.6.2 (20 Jun 2010)
+
+  20 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +xmlwrapp-0.6.2.ebuild:
+  Version bump. Fixes bug #279258 and bug #257918
 
   01 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/xmlwrapp-0.5.0-gcc-4.3.patch, xmlwrapp-0.5.0-r1.ebuild:
