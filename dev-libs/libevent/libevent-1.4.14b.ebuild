@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.14a.ebuild,v 1.1 2010/06/14 22:03:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.14b.ebuild,v 1.1 2010/06/20 15:53:08 jer Exp $
 
 inherit autotools
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="!dev-libs/9libs"
 
-S=${WORKDIR}/${MY_P/a/}
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	prevver=$(best_version ${CATEGORY}/${PN})
@@ -27,7 +27,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# don't waste time building tests/samples
+
 	sed -i \
 		-e 's|^\(SUBDIRS =.*\)sample test\(.*\)$|\1\2|' \
 		-e 's/libevent_extra_la_LIBADD =/& libevent.la/' \
@@ -37,14 +37,10 @@ src_unpack() {
 }
 
 src_test() {
-	einfo "Building tests"
 	cd test
-	make test || die "failed to build tests"
-
-	einfo "Running tests"
-	./test.sh > "${T}"/tests
-	cat "${T}"/tests
-	grep FAILED "${T}"/tests &>/dev/null && die "1 or more tests failed"
+	emake test || die "failed to build tests"
+	sh test.sh | tee "${T}"/tests
+	grep -q FAILED "${T}"/tests && die "tests failed"
 }
 
 src_install() {
