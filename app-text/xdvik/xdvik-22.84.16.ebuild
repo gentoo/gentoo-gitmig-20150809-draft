@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.4 2010/04/26 09:55:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.5 2010/06/20 09:31:06 aballier Exp $
 
 EAPI=3
 
@@ -74,7 +74,7 @@ src_install() {
 	dodir /etc/texmf/xdvi /etc/X11/app-defaults
 	mv "${ED}${TEXMF_PATH}/xdvi/XDvi" "${ED}etc/X11/app-defaults" || die "failed to move config file"
 	dosym {/etc/X11/app-defaults,"${TEXMF_PATH}/xdvi"}/XDvi || die "failed to symlink config file"
-	for i in $(find "${ED}${TEXMF_PATH}/xdvi" -type f -maxdepth 1) ; do
+	for i in $(find "${ED}${TEXMF_PATH}/xdvi" -maxdepth 1 -type f) ; do
 		mv ${i} "${ED}etc/texmf/xdvi" || die "failed to move $i"
 		dosym {/etc/texmf,"${TEXMF_PATH}"}/xdvi/$(basename ${i}) || die "failed	to symlink $i"
 	done
