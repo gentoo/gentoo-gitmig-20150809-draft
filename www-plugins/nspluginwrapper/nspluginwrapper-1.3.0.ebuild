@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.3.0.ebuild,v 1.1 2010/06/20 10:07:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.3.0.ebuild,v 1.2 2010/06/20 11:30:09 xarthisius Exp $
 
 EAPI=2
 
@@ -46,12 +46,11 @@ autoinstall() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gdk-native-windows.patch"
-	epatch "${FILESDIR}/${P}-ldflags.patch"
 	epatch "${FILESDIR}/${P}-inst-crash.patch"
-	epatch "${FILESDIR}/${P}-make.patch"
 	epatch "${FILESDIR}/${P}-fix-npident-array-sending.patch"
 	epatch "${FILESDIR}/${P}-fortify.patch"
 	epatch "${FILESDIR}/${P}-offsetof.patch"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 }
 
 src_configure() {
