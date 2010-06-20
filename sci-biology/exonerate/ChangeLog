@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/exonerate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/ChangeLog,v 1.1 2009/05/01 05:22:46 je_fro Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/ChangeLog,v 1.2 2010/06/20 14:41:56 xarthisius Exp $
+
+*exonerate-2.2.0-r1 (20 Jun 2010)
+
+  20 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +exonerate-2.2.0-r1.ebuild, +files/exonerate-2.2.0-asneeded.patch:
+  Fixing --as-needed issues wrt bug 268094, adding threads flag, adding more
+  docs
 
 *exonerate-2.2.0 (01 May 2009)
 
