@@ -1,6 +1,6 @@
 # ChangeLog for www-client/conkeror
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.12 2010/05/25 21:11:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/ChangeLog,v 1.13 2010/06/20 14:02:24 fauli Exp $
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> conkeror-0.9.2.ebuild:
   stable amd64, bug 320329
@@ -23,7 +23,7 @@
   04 Feb 2010; Markos Chandras <hwoarang@gentoo.org> conkeror-0.9.1.ebuild:
   Stable on amd64 wrt bug #299203
 
-  14 Jan 2010; <fauli@gentoo.org> conkeror-0.9.1.ebuild:
+  14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> conkeror-0.9.1.ebuild:
   Add trailing slash for HOMEPAGE
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
