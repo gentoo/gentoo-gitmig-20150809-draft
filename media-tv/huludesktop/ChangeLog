@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/huludesktop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/huludesktop/ChangeLog,v 1.2 2009/12/08 00:14:55 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/huludesktop/ChangeLog,v 1.3 2010/06/20 23:30:50 vapier Exp $
+
+*huludesktop-0.9.7-r1 (20 Jun 2010)
+
+  20 Jun 2010; Mike Frysinger <vapier@gentoo.org>
+  +huludesktop-0.9.7-r1.ebuild:
+  Require older version of flash for 64bit systems as newer versions dont
+  provide it.
 
 *huludesktop-0.9.7 (08 Dec 2009)
 
