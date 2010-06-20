@@ -1,6 +1,6 @@
 # ChangeLog for mail-client/claws-mail-notification
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.48 2010/06/20 11:48:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.49 2010/06/20 13:21:39 fauli Exp $
 
   20 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-notification-0.22.ebuild,
@@ -9,7 +9,7 @@
 
 *claws-mail-notification-0.25 (12 Jun 2010)
 
-  12 Jun 2010; <fauli@gentoo.org> +claws-mail-notification-0.25.ebuild:
+  12 Jun 2010; Christian Faulhammer <fauli@gentoo.org> +claws-mail-notification-0.25.ebuild:
   version bump, bug 319161
 
   11 Mar 2010; Markus Meier <maekke@gentoo.org>
