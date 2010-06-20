@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.25 2010/06/15 16:30:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.26 2010/06/20 11:27:08 nirbheek Exp $
+
+  20 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  libunique-1.1.6.ebuild, metadata.xml:
+  Add introspection support
 
   15 Jun 2010; Pacho Ramos <pacho@gentoo.org> libunique-1.1.6.ebuild:
   Pass --enable-introspection=no since we are not yet ready for
