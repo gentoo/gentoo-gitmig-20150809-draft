@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/blossoc/blossoc-1.4.0.ebuild,v 1.3 2009/05/25 19:57:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/blossoc/blossoc-1.4.0.ebuild,v 1.4 2010/06/20 16:55:14 xarthisius Exp $
 
 EAPI="2"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A linkage disequilibrium association mapping tool"
 HOMEPAGE="http://www.daimi.au.dk/~mailund/Blossoc/"
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i '/TESTS += first_test.sh/ d' "${S}/Makefile.am" || die
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
 
