@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmba
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/ChangeLog,v 1.3 2008/10/27 17:07:00 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/ChangeLog,v 1.4 2010/06/20 18:52:58 xarthisius Exp $
+
+*libmba-0.9.1-r1 (20 Jun 2010)
+
+  20 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +libmba-0.9.1-r1.ebuild, +files/libmba-0.9.1-qa.patch:
+  Fixing multiple QA issues and --as-needed failure wrt bug 313673. Thanks
+  Diego for reporting.
 
   27 Oct 2008; Markus Ullmann <jokey@gentoo.org> libmba-0.9.1.ebuild:
   Fix emake call wrt bug #243922
