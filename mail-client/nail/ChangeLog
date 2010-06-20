@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.58 2010/02/02 18:14:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.59 2010/06/20 09:35:44 fauli Exp $
+
+  20 Jun 2010; <fauli@gentoo.org> nail-12.4.ebuild:
+  Make it compilable on Prefix systems
 
   02 Feb 2010; Jeroen Roovers <jer@gentoo.org> nail-12.4.ebuild,
   +files/nail-12.4-debian.patch:

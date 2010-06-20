@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.3 2010/02/02 18:14:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.4 2010/06/20 09:35:44 fauli Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -64,7 +64,7 @@ src_compile() {
 
 	emake \
 		CPPFLAGS="${CPPFLAGS} -D_GNU_SOURCE"
-		PREFIX=/usr \
+		PREFIX="${EPREFIX}"/usr SYSCONFDIR="${EPREFIX}"/etc \
 		MAILSPOOL='/var/spool/mail' \
 		|| die "emake failed"
 }
@@ -80,7 +80,8 @@ src_install () {
 
 	make DESTDIR="${D}" \
 		UCBINSTALL=$(type -p install) \
-		PREFIX=/usr install || die "install failed"
+		PREFIX="${EPREFIX}"/usr SYSCONFDIR="${EPREFIX}"/etc install \
+		|| die
 	dodoc AUTHORS INSTALL README
 	dodir /bin
 	dosym /usr/bin/mailx /bin/mail
