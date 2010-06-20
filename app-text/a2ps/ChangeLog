@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.89 2010/06/08 11:52:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.90 2010/06/20 17:47:55 armin76 Exp $
+
+  20 Jun 2010; Raúl Porcel <armin76@gentoo.org> a2ps-4.14-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #322867
 
   08 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> a2ps-4.14-r1.ebuild:
   x86 stable wrt bug #322867
