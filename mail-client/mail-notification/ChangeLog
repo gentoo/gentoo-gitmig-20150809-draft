@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.95 2010/05/18 06:28:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.96 2010/06/20 07:56:46 graaff Exp $
+
+*mail-notification-5.4-r4 (20 Jun 2010)
+
+  20 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  +mail-notification-5.4-r4.ebuild,
+  +files/mail-notification-5.4-icons.patch:
+  Add Fedora patch to use Gnome 2.30 icons. Move to EAPI=2.
 
   18 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   mail-notification-5.4-r3.ebuild:
