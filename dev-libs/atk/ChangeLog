@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.195 2010/06/13 15:40:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.196 2010/06/20 09:54:24 ford_prefect Exp $
+
+  20 Jun 2010; Arun Raghavan <ford_prefect@gentoo.org> atk-1.30.0.ebuild,
+  metadata.xml:
+  Add introspection support.
 
 *atk-1.30.0 (13 Jun 2010)
 
