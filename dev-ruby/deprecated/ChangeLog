@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.8 2010/05/22 15:09:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.9 2010/06/20 19:06:18 graaff Exp $
+
+*deprecated-3.0.0 (20 Jun 2010)
+
+  20 Jun 2010; Hans de Graaff <graaff@gentoo.org> +deprecated-3.0.0.ebuild:
+  Version bump. Tests now rely on test-unit:2, drop keywords accordingly,
+  bug 324867.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   deprecated-2.0.1-r1.ebuild:
