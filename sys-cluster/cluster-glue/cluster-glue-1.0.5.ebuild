@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.5.ebuild,v 1.1 2010/06/20 21:29:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.5.ebuild,v 1.2 2010/06/20 21:58:50 xarthisius Exp $
 
 EAPI="2"
 
@@ -51,6 +51,7 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--enable-libnet \
 		--localstatedir=/var \
+		--with-ocf-root=/usr/$(get_libdir)/ocf \
 		--sysconfdir=/var \
 		${myopts} \
 		--with-group-id=65 --with-ccmuser-id=65 \
