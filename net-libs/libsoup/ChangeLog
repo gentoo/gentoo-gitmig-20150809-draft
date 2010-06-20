@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.218 2010/06/14 23:03:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.219 2010/06/20 14:05:16 ford_prefect Exp $
+
+  20 Jun 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  libsoup-2.30.1.ebuild, metadata.xml:
+  Add introspection support
 
   14 Jun 2010; Daniel Gryniewicz <dang@gentoo.org> libsoup-2.30.1.ebuild,
   +files/libsoup-2.30.1-fix-build-without-gnome-with-doc.patch:
