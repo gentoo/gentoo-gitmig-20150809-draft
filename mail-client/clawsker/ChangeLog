@@ -1,10 +1,10 @@
 # ChangeLog for mail-client/clawsker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/clawsker/ChangeLog,v 1.12 2010/06/12 06:48:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/clawsker/ChangeLog,v 1.13 2010/06/20 12:36:29 fauli Exp $
 
 *clawsker-0.7.1 (12 Jun 2010)
 
-  12 Jun 2010; <fauli@gentoo.org> +clawsker-0.7.1.ebuild:
+  12 Jun 2010; Christian Faulhammer <fauli@gentoo.org> +clawsker-0.7.1.ebuild:
   version bump
 
   26 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
