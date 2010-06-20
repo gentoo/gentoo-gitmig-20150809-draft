@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.1.ebuild,v 1.5 2010/05/29 19:34:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.1.ebuild,v 1.6 2010/06/20 16:18:13 hwoarang Exp $
 
 EAPI="3"
 
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/perl"
 
+src_prepare() {
+	# fix force as-needed wrt bug #278086
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
+
 src_configure() {
 	local myconf="--prefix=${EPREFIX}/usr --without-win32"
 
@@ -43,10 +48,12 @@ src_configure() {
 
 	use iconv || myconf="${myconf} --without-iconv"
 
-	sh config.sh ${myconf} || die "Configure failed"
+	for i in "${S}" "${S}"/mpsl "${S}"/mpdm;do
+		echo ${CFLAGS} >> $i/config.cflags
+		echo ${LDFLAGS} >> $i/config.ldflags
+	done
 
-	echo ${CFLAGS} >> config.cflags
-	echo ${LDFLAGS} >> config.ldflags
+	sh config.sh ${myconf} || die "Configure failed"
 }
 
 src_install() {
