@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/react
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/react/ChangeLog,v 1.4 2010/06/20 12:33:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/react/ChangeLog,v 1.5 2010/06/20 12:34:04 aballier Exp $
+
+  20 Jun 2010; Alexis Ballier <aballier@gentoo.org> -react-0.9.0.ebuild,
+  -react-0.9.1.ebuild:
+  remove old
 
 *react-0.9.2 (20 Jun 2010)
 
