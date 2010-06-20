@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.0.0.ebuild,v 1.1 2010/06/20 00:33:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.0.0.ebuild,v 1.2 2010/06/20 09:13:43 vapier Exp $
 
 # NOTE: we cannot depend on autotools here starting with gcc-4.3.x
 inherit eutils
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.mpfr.org/"
 SRC_URI="http://www.mpfr.org/mpfr-current/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-SLOT="4"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
