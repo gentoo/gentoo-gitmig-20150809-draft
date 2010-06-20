@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.65 2010/06/15 20:50:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.66 2010/06/20 13:28:47 patrick Exp $
+
+  20 Jun 2010; Patrick Lauer <patrick@gentoo.org>
+  postgresql-server-9.0_beta2.ebuild:
+  Adapting elog messages for unmasking
 
   15 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   postgresql-server-7.4.26.ebuild, postgresql-server-7.4.27.ebuild,
