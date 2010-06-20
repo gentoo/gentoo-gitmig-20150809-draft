@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.6.ebuild,v 1.1 2010/06/12 07:03:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.6.ebuild,v 1.2 2010/06/20 11:23:56 fauli Exp $
 
 EAPI="2"
 
-inherit eutils multilib autotools
+inherit eutils multilib
 
 DESCRIPTION="An email client (and news reader) based on GTK+"
 HOMEPAGE="http://www.claws-mail.org/"
