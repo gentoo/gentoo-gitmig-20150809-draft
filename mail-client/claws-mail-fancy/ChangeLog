@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-fancy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/ChangeLog,v 1.11 2010/06/12 07:17:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/ChangeLog,v 1.12 2010/06/20 11:42:02 fauli Exp $
+
+  20 Jun 2010; <fauli@gentoo.org> -claws-mail-fancy-0.9.8.ebuild:
+  clean up
 
 *claws-mail-fancy-0.9.10 (12 Jun 2010)
 
