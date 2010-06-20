@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/dbd-odbc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/ChangeLog,v 1.4 2009/12/20 12:11:32 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/ChangeLog,v 1.5 2010/06/20 10:21:15 graaff Exp $
+
+*dbd-odbc-0.2.5-r1 (20 Jun 2010)
+
+  20 Jun 2010; Hans de Graaff <graaff@gentoo.org> +dbd-odbc-0.2.5-r1.ebuild:
+  Convert to ruby-ng.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> dbd-odbc-0.2.5.ebuild:
   Remove obsolete virtual/ruby dependency.
