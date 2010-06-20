@@ -1,6 +1,6 @@
 # ChangeLog for mail-client/claws-mail-rssyl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.70 2010/06/20 12:00:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.71 2010/06/20 13:36:43 fauli Exp $
 
   20 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-rssyl-0.25.ebuild:
@@ -8,7 +8,7 @@
 
 *claws-mail-rssyl-0.27 (12 Jun 2010)
 
-  12 Jun 2010; <fauli@gentoo.org> +claws-mail-rssyl-0.27.ebuild:
+  12 Jun 2010; Christian Faulhammer <fauli@gentoo.org> +claws-mail-rssyl-0.27.ebuild:
   version bump, bug 319161
 
   11 May 2010; Brent Baude <ranger@gentoo.org> claws-mail-rssyl-0.26.ebuild:

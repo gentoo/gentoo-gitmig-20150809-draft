@@ -1,14 +1,14 @@
 # ChangeLog for mail-client/nail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.61 2010/06/20 10:47:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.62 2010/06/20 13:43:35 fauli Exp $
 
-  20 Jun 2010; <fauli@gentoo.org> nail-12.4.ebuild:
+  20 Jun 2010; Christian Faulhammer <fauli@gentoo.org> nail-12.4.ebuild:
   added ~x86-freebsd, bug 324129
 
-  20 Jun 2010; <fauli@gentoo.org> nail-12.4.ebuild:
+  20 Jun 2010; Christian Faulhammer <fauli@gentoo.org> nail-12.4.ebuild:
   added ~x86-interix, bug 324129
 
-  20 Jun 2010; <fauli@gentoo.org> nail-12.4.ebuild:
+  20 Jun 2010; Christian Faulhammer <fauli@gentoo.org> nail-12.4.ebuild:
   Make it compilable on Prefix systems
 
   02 Feb 2010; Jeroen Roovers <jer@gentoo.org> nail-12.4.ebuild,

@@ -1,6 +1,6 @@
 # ChangeLog for mail-client/claws-mail-vcalendar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.80 2010/06/20 12:11:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.81 2010/06/20 13:41:52 fauli Exp $
 
   20 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-vcalendar-2.0.5.ebuild, -claws-mail-vcalendar-2.0.6.ebuild:
@@ -8,7 +8,7 @@
 
 *claws-mail-vcalendar-2.0.8 (12 Jun 2010)
 
-  12 Jun 2010; <fauli@gentoo.org> +claws-mail-vcalendar-2.0.8.ebuild:
+  12 Jun 2010; Christian Faulhammer <fauli@gentoo.org> +claws-mail-vcalendar-2.0.8.ebuild:
   version bump, bug 319161
 
   11 May 2010; Brent Baude <ranger@gentoo.org>
