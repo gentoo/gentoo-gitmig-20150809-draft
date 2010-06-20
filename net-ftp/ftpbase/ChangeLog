@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpbase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.25 2010/06/13 18:05:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.26 2010/06/20 18:17:58 armin76 Exp $
+
+  20 Jun 2010; Raúl Porcel <armin76@gentoo.org> ftpbase-0.01-r2.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #317279
 
   13 Jun 2010; Christoph Mende <angelos@gentoo.org> ftpbase-0.01-r2.ebuild:
   Stable on amd64 wrt bug #317279
