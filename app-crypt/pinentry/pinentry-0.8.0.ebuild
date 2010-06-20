@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0.ebuild,v 1.3 2010/06/20 14:17:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0.ebuild,v 1.4 2010/06/20 14:36:41 fauli Exp $
 
 EAPI=3
 
 inherit multilib eutils flag-o-matic
 
 DESCRIPTION="Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol"
-HOMEPAGE="http://www.gnupg.org/aegypten/"
+HOMEPAGE="http://gnupg.org/aegypten2/index.html"
 SRC_URI="mirror://gnupg/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
