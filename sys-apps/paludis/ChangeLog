@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.156 2010/04/07 04:23:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.157 2010/06/20 18:34:53 tanderson Exp $
+
+*paludis-0.48.0 (20 Jun 2010)
+
+  20 Jun 2010; Thomas Anderson <tanderson@gentoo.org>
+  -paludis-0.40.0.ebuild, -paludis-0.40.1.ebuild,
+  -paludis-0.42.0_alpha1.ebuild, -paludis-0.42.0.ebuild,
+  -paludis-0.42.2.ebuild, -paludis-0.42.3.ebuild, +paludis-0.48.0.ebuild,
+  metadata.xml:
+  Version bump to 0.48.0, Cleanup & remove qa flag description.
 
   07 Apr 2010; Jeremy Olexa <darkside@gentoo.org> paludis-0.40.0.ebuild,
   paludis-0.40.1.ebuild, paludis-0.42.0_alpha1.ebuild,
