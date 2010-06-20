@@ -1,6 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.27.ebuild,v 1.7 2008/01/06 21:22:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.27.ebuild,v 1.8 2010/06/20 12:48:56 ssuominen Exp $
+
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="WMBiff is a dock applet for WindowMaker which can monitor up to 5 mailboxes."
 HOMEPAGE="http://sourceforge.net/projects/wmbiff/"
@@ -17,15 +20,22 @@ RDEPEND="x11-libs/libX11
 	crypt? ( >=net-libs/gnutls-1.2.3
 		>=dev-libs/libgcrypt-1.2.1 )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-src_compile() {
-	econf $(use_enable crypt crypto)
-	emake || die "emake failed."
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gnutls.patch
+	sed -i -e '/AC_PATH_XTRA_CORRECTED/d' configure.ac || die
+	eautoreconf
+}
+
+src_configure() {
+	econf \
+		$(use_enable crypt crypto)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog FAQ NEWS README README.licq TODO wmbiff/sample.wmbiffrc
 }
