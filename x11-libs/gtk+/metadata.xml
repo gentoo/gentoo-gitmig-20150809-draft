@@ -8,4 +8,8 @@
     for projects ranging from small one-off projects to complete
     application suites.
   </longdescription>
+  <use>
+    <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
+      for introspection</flag>
+  </use>
 </pkgmetadata>
