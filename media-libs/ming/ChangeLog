@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.69 2010/06/11 18:39:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.70 2010/06/20 18:11:53 armin76 Exp $
+
+  20 Jun 2010; Raúl Porcel <armin76@gentoo.org> ming-0.4.3.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #320945
 
   11 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ming-0.4.3.ebuild:
   x86 stable wrt bug #320945
