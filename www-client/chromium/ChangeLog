@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.119 2010/06/19 16:30:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.120 2010/06/20 08:17:17 phajdan.jr Exp $
+
+*chromium-5.0.375.70-r1 (20 Jun 2010)
+
+  20 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-flash-hang-workaround-r1.patch,
+  +chromium-5.0.375.70-r1.ebuild:
+  Version bump to work around a flash hang (bug #324365 by lack). Also fix
+  bug #323865 by Alex Barker <alex@1stleg.com>.
 
   19 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-6.0.437.1.ebuild, chromium-9999.ebuild:
