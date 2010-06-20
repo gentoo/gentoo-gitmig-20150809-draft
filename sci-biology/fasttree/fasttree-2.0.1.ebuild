@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/fasttree-2.0.1.ebuild,v 1.1 2009/09/10 23:14:22 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/fasttree-2.0.1.ebuild,v 1.2 2010/06/20 18:20:40 xarthisius Exp $
 
 EAPI="2"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Fast inference of approximately-maximum-likelihood phylogenetic trees"
 HOMEPAGE="http://www.microbesonline.org/fasttree/"
@@ -14,12 +16,17 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=""
-RDEPEND=""
+pkg_setup() {
+	tc-export CC
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
 
 src_install() {
 	dobin FastTree FastTreeUPGMA || die
 	insinto /usr/share/${PN}
 	doins *.pl *.pm || die
-	dodoc README*
+	dodoc README* || die
 }
