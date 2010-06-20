@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.9.ebuild,v 1.4 2010/06/20 15:25:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.9-r1.ebuild,v 1.1 2010/06/20 15:25:25 graaff Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -18,16 +18,13 @@ SRC_URI="http://sphinxsearch.com/downloads/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug id64 mysql postgres stemmer test"
 
 RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )"
 DEPEND="${RDEPEND}
 	test? ( dev-lang/php )"
-
-# Tests require a live database.
-RESTRICT="test"
 
 S=${WORKDIR}/${MY_P}
 
@@ -57,6 +54,11 @@ src_compile() {
 	emake || die "emake failed"
 }
 
+src_test() {
+	elog "Tests require access to a live MySQL database and may require configuration."
+	elog "You will find them in /usr/share/${PN}/test and they require dev-lang/php"
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc doc/*
@@ -66,4 +68,9 @@ src_install() {
 	dodir /var/run/sphinx
 
 	newinitd "${FILESDIR}"/searchd.rc searchd
+
+	if use test; then
+		insinto /usr/share/${PN}
+		doins -r test || die "install of test files failed."
+	fi
 }

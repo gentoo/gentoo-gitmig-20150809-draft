@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.26 2010/06/17 20:03:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.27 2010/06/20 15:25:25 graaff Exp $
+
+*sphinx-0.9.9-r1 (20 Jun 2010)
+
+  20 Jun 2010; Hans de Graaff <graaff@gentoo.org> sphinx-0.9.9.ebuild,
+  +sphinx-0.9.9-r1.ebuild:
+  Restrict tests in 0.9.9, and add a revision bump to install the test files
+  and indicate that they need a live database. Fixes bug 323903.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> sphinx-0.9.8.1.ebuild,
   sphinx-0.9.9.ebuild:
