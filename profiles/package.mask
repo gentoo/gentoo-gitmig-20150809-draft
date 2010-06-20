@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11668 2010/06/20 13:31:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11669 2010/06/20 14:45:01 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -703,13 +703,6 @@ net-irc/ircd-hybrid
 # Jeroen Roovers <jer@gentoo.org> (28 Feb 2010)
 # Development release
 =app-admin/sysstat-9.1*
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (27 Feb 2010)
-# Introspection support is sketchy, and untested
-# introspection USE-flag is already use.masked
-# gir-repository has problems being a nice package too
-dev-libs/gobject-introspection
-dev-libs/gir-repository
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (26 Feb 2010)
 # Mask knetworkmanager as it is crashy, unusable, under
