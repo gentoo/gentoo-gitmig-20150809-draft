@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.2.9-r1.ebuild,v 1.1 2010/06/17 12:09:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.2.9-r1.ebuild,v 1.2 2010/06/20 19:15:24 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -39,6 +39,8 @@ src_prepare() {
 	# Move saveDHTEntry definition away from slots so the moc
 	# doens't get confused and breaks compilation
 	epatch "${FILESDIR}"/moc_bug_workaround.patch
+	# same for trackerlist
+	epatch "${FILESDIR}"/moc_bug_workaround2.patch
 	# fix WebUI for nox binary
 	epatch "${FILESDIR}"/nox-webui-fix.patch
 	# Respect LDFLAGS
