@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.8 2010/03/05 16:13:59 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.9 2010/06/20 19:14:38 ssuominen Exp $
+
+  20 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  audex-0.72_beta1.ebuild, +files/audex-0.72_beta1-MkdirJob.patch:
+  Fix building with KDE 4.4.x wrt #310491 by Marco DR.
 
   05 Mar 2010; Dror Levin <spatz@gentoo.org> audex-0.72_beta1.ebuild:
   Fix HOMEPAGE and SRC_URI, bug 275162.

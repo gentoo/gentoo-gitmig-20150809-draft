@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.72_beta1.ebuild,v 1.2 2010/03/05 16:13:59 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.72_beta1.ebuild,v 1.3 2010/06/20 19:14:38 ssuominen Exp $
 
 EAPI="2"
 
@@ -22,4 +22,6 @@ DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
 	media-sound/cdparanoia"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
+
+PATCHES=( "${FILESDIR}/${P}-MkdirJob.patch" )
