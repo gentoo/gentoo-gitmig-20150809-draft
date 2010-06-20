@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.7.ebuild,v 1.6 2009/08/16 09:15:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.7.ebuild,v 1.7 2010/06/20 17:05:34 ssuominen Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Dockable applet for WindowMaker that controls Audacious."
@@ -15,18 +16,22 @@ IUSE=""
 
 RDEPEND="dev-libs/dbus-glib
 	x11-libs/libX11
-	>=x11-libs/gtk+-2
+	x11-libs/gtk+:2
 	>=media-sound/audacious-1.5"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+}
+
 src_compile() {
 	tc-export CC
-	emake || die "emake failed."
+	emake || die
 }
 
 src_install () {
-	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed."
+	emake DESTDIR="${D}" PREFIX="/usr" install || die
 	dodoc AUTHORS README
 }
