@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.21 2010/06/14 07:51:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.22 2010/06/20 18:24:43 armin76 Exp $
+
+  20 Jun 2010; Raúl Porcel <armin76@gentoo.org> lksctp-tools-1.0.10.ebuild:
+  alpha/sparc stable wrt #322321
 
   14 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   lksctp-tools-1.0.10.ebuild:
