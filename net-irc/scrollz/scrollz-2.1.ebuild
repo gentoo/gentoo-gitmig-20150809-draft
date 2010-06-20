@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-2.1.ebuild,v 1.1 2010/06/20 12:16:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-2.1.ebuild,v 1.2 2010/06/20 12:27:52 ssuominen Exp $
 
 EAPI=2
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="gmp gnutls ipv6 socks5 ssl"
 
-DEPEND="sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
 	gmp? ( dev-libs/gmp )
 	ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl )
 		)"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P}.orig
 
