@@ -18,6 +18,7 @@ extensive list of features for more details.
 </longdescription>
   <use>
     <flag name="3ds">Enables support for .3DS files in CrystalSpace</flag>
+    <flag name="bullet">include support for Bullet library</flag>
     <flag name="cal3d">include support for skeleton animation</flag>
     <flag name="cegui">include support for Crazy Eddie GUI</flag>
     <flag name="cg">NVIDIA toolkit plugin</flag>

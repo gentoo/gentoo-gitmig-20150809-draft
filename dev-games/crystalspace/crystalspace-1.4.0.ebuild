@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.3 2010/06/19 19:25:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.4 2010/06/20 16:53:01 tupone Exp $
 
 EAPI=2
-inherit eutils flag-o-matic multilib wxwidgets
+inherit eutils flag-o-matic multilib autotools wxwidgets
 
 MY_P=${PN}-src-${PV}
 DESCRIPTION="Portable 3D Game Development Kit written in C++"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="3ds alsa cal3d cegui cg doc jpeg mng ode png python
+IUSE="3ds alsa bullet cal3d cegui cg doc jpeg mng ode png python
 sdl speex truetype vorbis wxwidgets"
 
 RDEPEND="virtual/opengl
@@ -24,6 +24,7 @@ RDEPEND="virtual/opengl
 	ode? ( dev-games/ode )
 	cal3d? ( >=media-libs/cal3d-0.11 )
 	jpeg? ( media-libs/jpeg )
+	bullet? ( sci-physics/bullet )
 	sdl? ( media-libs/libsdl )
 	vorbis? ( media-libs/libvorbis )
 	speex? ( media-libs/libogg
@@ -51,6 +52,9 @@ src_prepare() {
 		Jamfile.in \
 		docs/Jamfile \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-bullet.patch
+	AT_M4DIR=mk/autoconf
+	eautoreconf
 }
 
 src_configure() {
@@ -66,11 +70,11 @@ src_configure() {
 		--disable-separate-debug-info \
 		--without-lcms \
 		--without-caca \
-		--without-bullet \
 		--without-jackasyn \
 		--without-perl \
 		--without-java \
 		--disable-make-emulation \
+		$(use_with bullet) \
 		$(use_with python) \
 		$(use_with png) \
 		$(use_with jpeg) \
