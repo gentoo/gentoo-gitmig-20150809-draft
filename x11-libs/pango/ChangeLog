@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.285 2010/06/16 15:51:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.286 2010/06/20 09:49:48 nirbheek Exp $
+
+  20 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> pango-1.28.1.ebuild,
+  metadata.xml:
+  Add introspection support
 
 *pango-1.28.1 (16 Jun 2010)
 
