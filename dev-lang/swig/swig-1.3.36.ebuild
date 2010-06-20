@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.36.ebuild,v 1.8 2010/04/15 21:39:54 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.36.ebuild,v 1.9 2010/06/20 15:27:36 pchrist Exp $
 
 inherit flag-o-matic mono eutils #48511
 
@@ -21,7 +21,6 @@ guile? ( dev-scheme/guile )
 java? ( virtual/jdk )
 lua? ( dev-lang/lua )
 mono? ( dev-lang/mono )
-mzscheme? ( dev-scheme/plt-scheme )
 perl? ( dev-lang/perl )
 php? ( virtual/php )
 pike? ( dev-lang/pike )
@@ -33,17 +32,6 @@ ruby? ( virtual/ruby )
 tcl? ( dev-lang/tcl )
 tk? ( dev-lang/tk )
 "
-# gcj? ( sys-devel/gcc[+gcj] )
-
-src_unpack() {
-	unpack ${A};cd "${S}"
-
-	if has_version '>=dev-scheme/plt-scheme-4'; then
-		epatch "${FILESDIR}"/fix-for-PLT4.patch
-		./autogen.sh
-	fi
-}
-
 src_compile() {
 	strip-flags
 
