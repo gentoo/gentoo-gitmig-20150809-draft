@@ -1,10 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-mbpurple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.1 2010/06/17 09:00:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.2 2010/06/20 14:05:40 fauli Exp $
 
 *pidgin-mbpurple-0.3.0 (17 Jun 2010)
 
-  17 Jun 2010; <fauli@gentoo.org> +pidgin-mbpurple-0.3.0.ebuild,
+  17 Jun 2010; Christian Faulhammer <fauli@gentoo.org> +pidgin-mbpurple-0.3.0.ebuild,
   +metadata.xml:
   initial commit for bug 242942, ebuild provided by Nils Andresen <nils AT
   nils-andresen DOT de>, who will be proxied by me
