@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11669 2010/06/20 14:45:01 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11670 2010/06/20 16:55:15 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (20 Jun 2010)
+# No upstream, last release from 2002, libpng 1.4.x problems,
+# uses EDITOR var at build time.
+#
+# bugs 309003, 294764, 324155
+#
+# Pending removal in 2010-07-20
+net-nntp/knews
 
 # Markos Chandras <hwoarang@gentoo.org> (20 Jun 2010)
 # Bundles ffmpeg copy, doens't work with systems' ffmpeg
