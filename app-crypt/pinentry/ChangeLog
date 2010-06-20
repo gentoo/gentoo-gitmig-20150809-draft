@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.100 2010/05/30 19:58:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.101 2010/06/20 14:17:13 fauli Exp $
+
+  20 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  pinentry-0.8.0.ebuild:
+  stable x86, bug 299388
 
   30 May 2010; Fabian Groffen <grobian@gentoo.org> pinentry-0.8.0.ebuild:
   Marked ~sparc-solaris, ~sparc64-solaris
