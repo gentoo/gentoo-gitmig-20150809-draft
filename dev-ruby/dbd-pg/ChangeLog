@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/dbd-pg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/ChangeLog,v 1.4 2009/12/20 12:42:03 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/ChangeLog,v 1.5 2010/06/20 18:04:21 graaff Exp $
+
+*dbd-pg-0.3.9 (20 Jun 2010)
+
+  20 Jun 2010; Hans de Graaff <graaff@gentoo.org> +dbd-pg-0.3.9.ebuild:
+  Version bump. Convert to ruby-ng.
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> dbd-pg-0.3.8.ebuild:
   Remove obsolete virtual/ruby dependency.
