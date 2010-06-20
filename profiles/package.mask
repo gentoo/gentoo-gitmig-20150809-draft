@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11671 2010/06/20 17:11:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11672 2010/06/20 18:55:19 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -806,11 +806,6 @@ dev-db/postgresql
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
 media-sound/teamspeak-server-bin
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (20 Dec 2009)
-# Only needed and works for ruby 1.9 so for now no need to
-# bring it in on any dependency tree
-dev-ruby/test-unit
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Dec 2009)
 # Mask nvidia-drivers-71.x.y since it will not work
