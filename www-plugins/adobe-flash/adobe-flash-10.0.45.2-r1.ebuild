@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.45.2-r1.ebuild,v 1.5 2010/06/11 20:13:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.45.2-r1.ebuild,v 1.6 2010/06/20 16:54:41 keytoaster Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -169,7 +169,7 @@ pkg_postinst() {
 	fi
 
 	ewarn "Flash player is closed-source, and this version has a known major"
-	ewarn "security exploit[1].  Please consider only running flash applets"
+	ewarn "security vulnerability[1]. Please consider only running flash applets"
 	ewarn "you know to be safe.  The 'flashblock' extension may help for"
 	ewarn "mozilla users:"
 	ewarn "  https://addons.mozilla.org/en-US/firefox/addon/433"

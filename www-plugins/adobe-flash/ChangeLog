@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.31 2010/06/20 15:11:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.32 2010/06/20 16:54:41 keytoaster Exp $
+
+  20 Jun 2010; Tobias Heinlein <keytoaster@gentoo.org>
+  adobe-flash-10.0.45.2.ebuild, adobe-flash-10.0.45.2-r1.ebuild,
+  adobe-flash-10.1.53.64.ebuild:
+  Use proper security terms.
 
   20 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   adobe-flash-10.1.53.64.ebuild:
@@ -31,12 +36,12 @@
   adobe-flash-10.0.45.2-r1.ebuild, adobe-flash-10.1.53.64.ebuild:
   Major issues for amd64 with nspluginwrapper for 10.1: Removing ~amd64 from
   that version until a better solution presents itself. Note: This means
-  that the 10.0 version for amd64 users has a known security exploit.
+  that the 10.0 version for amd64 users has a known security bug.
 
 *adobe-flash-10.1.53.64 (11 Jun 2010)
 
   11 Jun 2010; Jim Ramsay <lack@gentoo.org> +adobe-flash-10.1.53.64.ebuild:
-  Adobe-flash 10.1.53.64 is released, and fixes security exploit
+  Adobe-flash 10.1.53.64 is released, and fixes security vulnerability
   CVE-2010-1297 (Bug #322855). Unfortunately there is no native 64bit
   version, so amd64 users are going back to a 32bit plugin plus
   nspluginwrapper.
