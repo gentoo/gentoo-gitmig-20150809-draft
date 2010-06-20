@@ -7,8 +7,8 @@ depend() {
 }
 
 BINARY="/usr/%libdir%/heartbeat/ha_logd"
-USER="cluster"
-GROUP="cluster"
+USER="hacluster"
+GROUP="haclient"
 CONFIG="/etc/logd.cf"
 LOGFILE="/var/log/ha_logger.log"
 
