@@ -1,13 +1,13 @@
 # ChangeLog for mail-client/claws-mail-att-remover
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.35 2010/06/20 11:34:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.36 2010/06/20 12:56:14 fauli Exp $
 
-  20 Jun 2010; <fauli@gentoo.org> -claws-mail-att-remover-1.0.10.ebuild:
+  20 Jun 2010; Christian Faulhammer <fauli@gentoo.org> -claws-mail-att-remover-1.0.10.ebuild:
   clean up
 
 *claws-mail-att-remover-1.0.12 (12 Jun 2010)
 
-  12 Jun 2010; <fauli@gentoo.org> +claws-mail-att-remover-1.0.12.ebuild:
+  12 Jun 2010; Christian Faulhammer <fauli@gentoo.org> +claws-mail-att-remover-1.0.12.ebuild:
   version bump, bug 319161
 
   11 May 2010; Brent Baude <ranger@gentoo.org>
