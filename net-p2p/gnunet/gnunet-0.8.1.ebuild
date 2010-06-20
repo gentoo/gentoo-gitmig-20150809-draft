@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1.ebuild,v 1.1 2010/01/28 11:48:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1.ebuild,v 1.2 2010/06/20 13:56:46 xarthisius Exp $
 
 EAPI=2
 
-inherit eutils autotools
+inherit autotools eutils
 
 S="${WORKDIR}/GNUnet-${PV}"
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
@@ -13,7 +13,7 @@ SRC_URI="http://gnunet.org/download/GNUnet-${PV}.tar.gz"
 #tests don't work
 RESTRICT="test"
 
-IUSE="ipv6 mysql +sqlite ncurses nls gtk"
+IUSE="gtk mysql nls +sqlite"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,7 +27,7 @@ DEPEND=">=dev-libs/libgcrypt-1.2.0
 	gtk? ( >=x11-libs/gtk+-2.6.10 )
 	sys-apps/sed
 	>=dev-scheme/guile-1.8.0
-	ncurses? ( sys-libs/ncurses )
+	sys-libs/ncurses
 	mysql? ( >=virtual/mysql-4.0 )
 	sqlite? ( >=dev-db/sqlite-3.0.8 )
 	nls? ( sys-devel/gettext )"
@@ -59,31 +59,29 @@ src_prepare() {
 		sed -i "s:AC_DEFINE_UNQUOTED..HAVE_GTK.*:true:" configure.ac
 	fi
 
-	AT_M4DIR="${S}/m4" eautoreconf
+	epatch "${FILESDIR}"/${PV}-asneeded.patch
+	epatch "${FILESDIR}"/${PV}-parallel-build.patch
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	use mysql || myconf="${myconf} --without-mysql"
 
 	econf \
 		$(use_with sqlite) \
-		$(use_enable ipv6) \
 		$(use_enable nls) \
-		$(use_enable ncurses) \
 		${myconf} || die "econf failed"
-
-	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" -j1 install || die "make install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS PLATFORMS README README.fr UPDATING
+	emake DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog INSTALL NEWS PLATFORMS README UPDATING || die
 	insinto /etc
-	newins contrib/gnunet.root gnunet.conf
+	newins contrib/gnunet.conf gnunet.conf
 	docinto contrib
-	dodoc contrib/*
+	dodoc contrib/* || die
 	newinitd "${FILESDIR}"/${PN}.initd gnunet
 	dodir /var/lib/gnunet
 	chown gnunetd:gnunetd "${D}"/var/lib/gnunet
@@ -93,7 +91,6 @@ pkg_postinst() {
 	# make sure permissions are ok
 	chown -R gnunetd:gnunetd "${ROOT}"/var/lib/gnunet
 
-	use ipv6 && ewarn "ipv6 support is -very- experimental and prone to bugs"
 	einfo
 	einfo "To configure"
 	einfo "	 1) Add user(s) to the gnunetd group"
