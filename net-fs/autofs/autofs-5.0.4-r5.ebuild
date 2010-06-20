@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.4 2010/06/01 09:19:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.5 2010/06/20 17:55:09 maekke Exp $
 
 inherit eutils multilib autotools
 
@@ -83,7 +83,7 @@ DEPEND="ldap? ( >=net-nds/openldap-2.0
 RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
