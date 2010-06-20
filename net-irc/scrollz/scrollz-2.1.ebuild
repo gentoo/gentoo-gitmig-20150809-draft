@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-2.1.ebuild,v 1.2 2010/06/20 12:27:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-2.1.ebuild,v 1.3 2010/06/20 12:29:00 ssuominen Exp $
 
 EAPI=2
 
@@ -48,6 +48,6 @@ src_install() {
 	einstall \
 		sharedir="${D}/usr/share" \
 		mandir="${D}/usr/share/man/man1" || die
-	
+
 	dodoc ChangeLog* NEWS README* todo || die
 }
