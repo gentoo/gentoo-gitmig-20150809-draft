@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.539 2010/05/12 21:44:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.540 2010/06/20 19:27:54 zzam Exp $
+
+*udev-157 (20 Jun 2010)
+*udev-156 (20 Jun 2010)
+
+  20 Jun 2010; Matthias Schwarzott <zzam@gentoo.org>
+  +files/156/40-gentoo.rules, +files/156/90-network.rules,
+  +files/156/shell-compat-KV.sh, +files/156/shell-compat-addon.sh,
+  +files/156/udev.confd, +files/156/udev-dev-tarball.initd,
+  +udev-157.ebuild, +files/156/udev.initd, +files/156/udev-mount.initd,
+  +files/156/udev-postmount.initd, udev-9999.ebuild,
+  +files/156/udev-start.sh, +files/156/udev-stop.sh, +udev-156.ebuild:
+  Add version udev-156 and udev-157. These contain some rule changes.
+  Init-scripts improved a bit. Fix udev-postmount on selinux, Bug #317573.
 
 *udev-154 (12 May 2010)
 
