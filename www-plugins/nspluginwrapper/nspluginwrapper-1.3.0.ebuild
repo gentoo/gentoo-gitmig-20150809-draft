@@ -1,14 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.2.2-r1.ebuild,v 1.1 2009/07/20 20:26:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.3.0.ebuild,v 1.1 2010/06/20 10:07:01 pacho Exp $
 
 EAPI=2
 
-inherit eutils nsplugins multilib
+inherit eutils nsplugins multilib flag-o-matic
 
 DESCRIPTION="Netscape Plugin Wrapper - Load 32bit plugins on 64bit browser"
 HOMEPAGE="http://www.gibix.net/projects/nspluginwrapper/"
-SRC_URI="http://www.gibix.net/projects/${PN}/files/${P}.tar.bz2"
+#SRC_URI="http://www.gibix.net/projects/${PN}/files/${P}.tar.bz2"
+SRC_URI="mirror://debian/pool/contrib/n/${PN}/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,12 +45,19 @@ autoinstall() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gcc44.patch"
-	epatch "${FILESDIR}/${P}-npidentifiers.patch"
+	epatch "${FILESDIR}/${P}-gdk-native-windows.patch"
+	epatch "${FILESDIR}/${P}-ldflags.patch"
+	epatch "${FILESDIR}/${P}-inst-crash.patch"
+	epatch "${FILESDIR}/${P}-make.patch"
+	epatch "${FILESDIR}/${P}-fix-npident-array-sending.patch"
+	epatch "${FILESDIR}/${P}-fortify.patch"
+	epatch "${FILESDIR}/${P}-offsetof.patch"
 }
 
 src_configure() {
-	econf --enable-biarch \
+	replace-flags -O3 -O2
+
+	./configure --enable-biarch \
 		--target-cpu=i386 \
 		--with-lib32=$(ABI=x86 get_libdir) \
 		--with-lib64=$(get_libdir) \
@@ -57,7 +65,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake LDFLAGS_32="-m32 ${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {

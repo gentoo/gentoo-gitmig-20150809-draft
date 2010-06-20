@@ -1,0 +1,22 @@
+diff -up nspluginwrapper-1.3.0/configure.conf nspluginwrapper-1.3.0/configure
+--- nspluginwrapper-1.3.0/configure.conf	2009-01-02 15:22:29.000000000 +0100
++++ nspluginwrapper-1.3.0/configure	2009-01-07 12:06:21.000000000 +0100
+@@ -559,10 +559,6 @@ for dir in $x_base_dirs; do
+ 	fi
+     fi
+ done
+-if test -z "$x_base_dir"; then
+-    echo "X11/Xt environment not found"
+-    exit 1
+-fi
+ 
+ # big/little endian test
+ cat > $TMPC << EOF
+@@ -763,6 +759,7 @@ echo "COMPILER=$compiler" >> $config_mak
+ echo "CC=$cc" >> $config_mak
+ echo "CXX=$cxx" >> $config_mak
+ echo "CFLAGS=$CFLAGS" >> $config_mak
++echo "LDFLAGS=$LDFLAGS" >> $config_mak
+ echo "GLIB_CFLAGS=$GLIB_CFLAGS" >> $config_mak
+ echo "GLIB_LDFLAGS=$GLIB_LDFLAGS" >> $config_mak
+ echo "GTK_CFLAGS=$GTK_CFLAGS" >> $config_mak

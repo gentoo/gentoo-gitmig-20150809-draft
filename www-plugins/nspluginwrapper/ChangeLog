@@ -1,6 +1,23 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.4 2010/02/13 12:29:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.5 2010/06/20 10:07:01 pacho Exp $
+
+*nspluginwrapper-1.3.0 (20 Jun 2010)
+
+  20 Jun 2010; Pacho Ramos <pacho@gentoo.org> -nspluginwrapper-1.0.0.ebuild,
+  -nspluginwrapper-1.2.2.ebuild, -nspluginwrapper-1.2.2-r1.ebuild,
+  +nspluginwrapper-1.3.0.ebuild,
+  +files/nspluginwrapper-1.3.0-fix-npident-array-sending.patch,
+  +files/nspluginwrapper-1.3.0-fortify.patch,
+  +files/nspluginwrapper-1.3.0-gdk-native-windows.patch,
+  +files/nspluginwrapper-1.3.0-inst-crash.patch,
+  +files/nspluginwrapper-1.3.0-ldflags.patch,
+  +files/nspluginwrapper-1.3.0-make.patch,
+  +files/nspluginwrapper-1.3.0-offsetof.patch:
+  Version bump to 1.3.0 (provided by most distributions) with bugfixes over
+  1.2.2. Also including some patches from Mandriva, Fedora and OpenSUSE to
+  set GDK_NATIVE_WINDOWS=1 (bug #324773 by Alexander E. Patrakov), LDFLAGS
+  fixes, prevent some crashes and others. Removing old versions.
 
   13 Feb 2010; Pacho Ramos <pacho@gentoo.org>
   nspluginwrapper-1.2.2-r2.ebuild:
