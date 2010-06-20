@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.309 2010/06/20 04:43:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.310 2010/06/20 04:48:15 vapier Exp $
+
+  20 Jun 2010; Mike Frysinger <vapier@gentoo.org> wine-1.1.44.ebuild:
+  Stabilize.
 
   20 Jun 2010; Mike Frysinger <vapier@gentoo.org> wine-1.1.39.ebuild,
   wine-1.1.40.ebuild, wine-1.1.41.ebuild, wine-1.1.42.ebuild,
