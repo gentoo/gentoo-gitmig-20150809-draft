@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.402 2010/05/27 10:47:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.403 2010/06/20 18:24:58 maekke Exp $
+
+*imagemagick-6.6.2.5 (20 Jun 2010)
+
+  20 Jun 2010; Markus Meier <maekke@gentoo.org> +imagemagick-6.6.2.5.ebuild:
+  version bump, adds opencl support via VIDEO_CARDS="nvidia" by Francisco
+  Javier in bug #322161
 
   27 May 2010; Markus Meier <maekke@gentoo.org> -imagemagick-6.5.8.8.ebuild:
   old
