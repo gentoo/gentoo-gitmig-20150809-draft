@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/enter
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/enter/ChangeLog,v 1.1 2010/06/20 21:22:49 ssuominen Exp $
+
+*enter-0.0.9 (20 Jun 2010)
+
+  20 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> +enter-0.0.9.ebuild:
+  Initial commit wrt #172739 by Anatoly.
+
