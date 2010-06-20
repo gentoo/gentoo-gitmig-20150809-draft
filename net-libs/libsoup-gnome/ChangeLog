@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.27 2010/06/20 14:07:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.28 2010/06/20 14:19:54 ford_prefect Exp $
+
+  20 Jun 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  libsoup-gnome-2.30.1.ebuild:
+  Apply g-i patches unconditionally os the system lib patch always applies.
 
   20 Jun 2010; Arun Raghavan <ford_prefect@gentoo.org>
   libsoup-gnome-2.30.1.ebuild, files/libsoup-gnome-2.30.1-system-lib.patch,
