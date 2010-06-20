@@ -1,15 +1,13 @@
-diff -ur plt-4.2.2.orig/src/wxcommon/wxJPEG.cxx plt-4.2.2/src/wxcommon/wxJPEG.cxx
---- plt-4.2.2.orig/src/wxcommon/wxJPEG.cxx	2009-09-17 06:08:52.000000000 +0300
-+++ plt-4.2.2/src/wxcommon/wxJPEG.cxx	2010-05-11 13:17:28.000000000 +0300
-@@ -726,7 +726,11 @@
+http://bugs.gentoo.org/319253
+
+--- src/wxcommon/wxJPEG.cxx
++++ src/wxcommon/wxJPEG.cxx
+@@ -726,7 +726,7 @@
         png_set_strip_16(png_ptr);
  
       /* Expand grayscale images to the full 8 bits from 1, 2, or 4 bits/pixel */
-+     #if PNG_LIBPNG_VER < 10400
-      png_set_gray_1_2_4_to_8(png_ptr);
-+     #else
+-     png_set_gray_1_2_4_to_8(png_ptr);
 +     png_set_expand_gray_1_2_4_to_8(png_ptr);
-+     #endif
     }
  
     /* Set the background color to draw transparent and alpha images over.
