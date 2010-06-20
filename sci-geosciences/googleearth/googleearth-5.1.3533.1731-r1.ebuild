@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.3 2010/04/26 19:06:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3533.1731-r1.ebuild,v 1.4 2010/06/20 08:51:30 caster Exp $
 
 EAPI=2
 
@@ -10,13 +10,12 @@ DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
 # no upstream versioning, version determined from help/about
 # incorrect digest means upstream bumped and thus needs version bump
-SRC_URI="http://dl.google.com/earth/client/current/GoogleEarthLinux.bin
-			-> GoogleEarthLinux-${PV}.bin"
+SRC_URI="GoogleEarthLinux-${PV}.bin"
 
 LICENSE="googleearth MIT SGI-B-1.1 openssl as-is ZLIB"
 SLOT="0"
 KEYWORDS="amd64 x86"
-RESTRICT="mirror strip"
+RESTRICT="fetch strip"
 IUSE="qt-bundled"
 
 GCC_NEEDED="4.2"
@@ -69,6 +68,15 @@ opt/googleearth/libmoduleframework.so
 "
 
 QA_DT_HASH="opt/${PN}/.*"
+
+pkg_nofetch() {
+	elog "This version is no longer available from Google and the license prevents mirroring."
+	elog "This ebuild is meant for those who already downloaded it, until the current version is stabilized."
+	elog "If you can get the distfile from e.g. another computer of yours,"
+	elog "copy the file ${SRC_URI} to ${DISTDIR}."
+	elog "Otherwise, you need to unmask the 5.1.3535.3218-r1 version,"
+	elog "stabilization is tracked at https://bugs.gentoo.org/show_bug.cgi?id=320065"
+}
 
 pkg_setup() {
 	GCC_VER="$(gcc-version)"
