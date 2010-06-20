@@ -1,6 +1,7 @@
-Fixing as-needed issues and respect LDFLAGS
+Fixing as-needed issues, respect LDFLAGS and use system libs
 
 http://bugs.gentoo.org/show_bug.cgi?id=321867
+http://bugs.gentoo.org/show_bug.cgi?id=269250
 
 --- configure
 +++ configure
@@ -94,7 +95,16 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  echo "CFLAGS_32=$CFLAGS_32" >> $config_mak
 --- Makefile
 +++ Makefile
-@@ -51,16 +51,16 @@
+@@ -41,6 +41,8 @@
+ STRIP_OPT = -s
+ endif
+ 
++USE_SYSTEM_LIBS=1
++
+ LN_S = ln -sf
+ 
+ ifeq ($(LD_soname),)
+@@ -51,16 +53,16 @@
  endif
  
  ifneq (,$(findstring $(OS),linux))
@@ -114,7 +124,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  endif
  
  PIC_CFLAGS = -fPIC
-@@ -71,7 +71,7 @@
+@@ -71,7 +73,7 @@
  endif
  
  X_CFLAGS  = -I$(x11prefix)/include
@@ -123,7 +133,27 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  ifneq (,$(findstring $(OS),netbsd dragonfly))
  X_LDFLAGS += -Wl,--rpath,$(x11prefix)/$(lib64)
  endif
-@@ -107,8 +107,9 @@
+@@ -79,6 +81,11 @@
+ ARCH_32 = $(ARCH)
+ ifeq ($(build_biarch), yes)
+ ARCH_32 = $(TARGET_ARCH)
++endif
++
++ifneq (1, $(USE_SYSTEM_LIBS))
++
++ifeq ($(build_biarch), yes)
+ LSB_LIBS = $(LSB_OBJ_DIR)/libc.so $(LSB_OBJ_DIR)/libgcc_s_32.so
+ LSB_LIBS += $(LSB_CORE_STUBS:%=$(LSB_OBJ_DIR)/%.so)
+ LSB_LIBS += $(LSB_CORE_STATIC_STUBS:%=$(LSB_OBJ_DIR)/%.a)
+@@ -92,6 +99,7 @@
+ LSB_CORE_STUBS = $(shell cat $(LSB_SRC_DIR)/core_filelist)
+ LSB_CORE_STATIC_STUBS = $(shell cat $(LSB_SRC_DIR)/core_static_filelist)
+ LSB_DESKTOP_STUBS = $(shell cat $(LSB_SRC_DIR)/desktop_filelist)
++endif
+ 
+ ifeq (i386,$(TARGET_ARCH))
+ TARGET_ELF_ARCH = elf32-i386
+@@ -107,8 +115,9 @@
  npwrapper_SOURCES = $(npwrapper_RAWSRCS:%.c=$(SRC_PATH)/src/%.c)
  npwrapper_OBJECTS = $(npwrapper_RAWSRCS:%.c=npwrapper-%.os)
  npwrapper_CFLAGS  = $(CFLAGS) $(X_CFLAGS) $(MOZILLA_CFLAGS) $(GLIB_CFLAGS)
@@ -135,11 +165,20 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  
  npviewer_PROGRAM = npviewer.bin
  npviewer_RAWSRCS = npw-viewer.c npw-common.c npw-malloc.c npw-rpc.c rpc.c debug.c utils.c npruntime.c
-@@ -120,13 +121,14 @@
+@@ -116,17 +125,23 @@
+ npviewer_OBJECTS = $(npviewer_RAWSRCS:%.c=npviewer-%.o)
+ ifeq ($(build_biarch),yes)
+ npviewer_CFLAGS  = $(CFLAGS_32)
++ifneq (1, $(USE_SYSTEM_LIBS))
+ npviewer_CFLAGS += -I$(LSB_INC_DIR)
  npviewer_CFLAGS += -I$(LSB_INC_DIR)/glib-2.0
  npviewer_CFLAGS += -I$(LSB_INC_DIR)/gtk-2.0
  npviewer_LDFLAGS = $(LDFLAGS_32) -L$(LSB_OBJ_DIR)
 -npviewer_LDFLAGS += -lgtk-x11-2.0 -lgdk-x11-2.0 -lgobject-2.0 -ldl -lglib-2.0 -lX11 -lXt
++else
++npviewer_CFLAGS += $(shell pkg-config --cflags gtk+-2.0 glib-2.0)
++npviewer_LDFLAGS = $(LDFLAGS_32)
++endif
 +npviewer_LIBS += -lgtk-x11-2.0 -lgdk-x11-2.0 -lgobject-2.0 -ldl -lglib-2.0 -lX11 -lXt
  else
  npviewer_CFLAGS += $(GTK_CFLAGS)
@@ -153,7 +192,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  ifeq ($(TARGET_OS):$(TARGET_ARCH),linux:i386)
  npviewer_MAPFILE = $(SRC_PATH)/src/npw-viewer.map
  endif
-@@ -137,18 +139,19 @@
+@@ -137,18 +152,19 @@
  ifeq ($(TARGET_OS):$(TARGET_ARCH),linux:i386)
  npviewer_SOURCES += $(SRC_PATH)/src/cxxabi-compat.cpp
  npviewer_OBJECTS += npviewer-cxxabi-compat.o
@@ -177,7 +216,34 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  
  libxpcom_LIBRARY = libxpcom.so
  libxpcom_RAWSRCS = libxpcom.c debug.c
-@@ -174,12 +177,13 @@
+@@ -156,8 +172,11 @@
+ libxpcom_OBJECTS = $(libxpcom_RAWSRCS:%.c=libxpcom-%.o)
+ libxpcom_CFLAGS  = $(PIC_CFLAGS)
+ ifeq ($(build_biarch),yes)
++libxpcom_LDFLAGS = $(LDFLAGS_32)
++ifneq (1, $(USE_SYSTEM_LIBS))
+ libxpcom_CFLAGS += -I$(LSB_INC_DIR)
+-libxpcom_LDFLAGS = $(LDFLAGS_32) -L$(LSB_OBJ_DIR)
++libxpcom_LDFLAGS = -L$(LSB_OBJ_DIR)
++endif
+ endif
+ 
+ libnoxshm_LIBRARY = libnoxshm.so
+@@ -165,21 +184,25 @@
+ libnoxshm_SOURCES = $(libnoxshm_RAWSRCS:%.c=$(SRC_PATH)/src/%.c)
+ libnoxshm_OBJECTS = $(libnoxshm_RAWSRCS:%.c=libnoxshm-%.o)
+ libnoxshm_CFLAGS  = $(PIC_CFLAGS)
+-ifeq ($(biarch),yes)
++ifeq ($(build_biarch),yes)
++libnoxshm_LDFLAGS = $(LDFLAGS_32)
++ifneq (1, $(USE_SYSTEM_LIBS))
+ libnoxshm_CFLAGS += -I$(LSB_INC_DIR)
+-libnoxshm_LDFLAGS = $(LDFLAGS_32) -L$(LSB_OBJ_DIR)
++libnoxshm_LDFLAGS = -L$(LSB_OBJ_DIR)
++endif
+ endif
+ 
+ npconfig_PROGRAM = npconfig
  npconfig_RAWSRCS = npw-config.c
  npconfig_SOURCES = $(npconfig_RAWSRCS:%.c=$(SRC_PATH)/src/%.c)
  npconfig_OBJECTS = $(npconfig_RAWSRCS:%.c=npconfig-%.o)
@@ -193,7 +259,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  endif
  
  nploader_PROGRAM = npviewer.sh
-@@ -192,7 +196,8 @@
+@@ -192,7 +215,8 @@
  test_rpc_client_CPPFLAGS = $(CPPFLAGS) -I$(SRC_PATH)/src -DBUILD_CLIENT -DNPW_COMPONENT_NAME="\"Client\""
  test_rpc_server_CPPFLAGS = $(CPPFLAGS) -I$(SRC_PATH)/src -DBUILD_SERVER -DNPW_COMPONENT_NAME="\"Server\""
  test_rpc_CFLAGS			 = -I$(SRC_PATH)/src $(GLIB_CFLAGS)
@@ -203,7 +269,33 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  test_rpc_RAWPROGS		 = \
  	test-rpc-types \
  	test-rpc-nested-1 \
-@@ -364,13 +369,13 @@
+@@ -230,6 +254,7 @@
+ FILES		+= $(wildcard tests/*.html)
+ FILES		+= $(wildcard tests/*.c tests/*.h)
+ FILES		+= $(wildcard npapi/*.h npapi/nspr/*.h npapi/nspr/obsolete/*.h)
++ifneq (1, $(USE_SYSTEM_LIBS))
+ FILES		+= $(LSB_TOP_DIR)/headers/core_filelist
+ FILES		+= $(addprefix $(LSB_TOP_DIR)/headers/,$(shell cat $(LSB_TOP_DIR)/headers/core_filelist))
+ FILES		+= $(LSB_TOP_DIR)/headers/desktop_filelist
+@@ -243,13 +268,15 @@
+ FILES		+= $(patsubst %,$(LSB_SRC_DIR)/%.c,$(LSB_CORE_STATIC_STUBS))
+ FILES		+= $(patsubst %,$(LSB_SRC_DIR)/%.c,$(LSB_DESKTOP_STUBS))
+ FILES		+= $(patsubst %,$(LSB_SRC_DIR)/%.Version,$(LSB_DESKTOP_STUBS))
++endif
+ 
+ all: $(TARGETS)
+ 
+ clean:
+-	rm -f $(TARGETS) *.o *.os
++	rm -f $(TARGETS) *.o *.os]
++ifneq (1, $(USE_SYSTEM_LIBS))
+ 	rm -rf $(LSB_OBJ_DIR)
+-
++endif
+ distclean: clean
+ 	rm -f config-host.* config.*
+ 
+@@ -364,13 +391,13 @@
  	svn commit -m "Generated by svn2cl." ChangeLog
  
  $(npwrapper_LIBRARY): $(npwrapper_OBJECTS)
@@ -219,7 +311,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  
  npviewer-%.o: $(SRC_PATH)/src/%.c
  	$(CC) $(CFLAGS_32) -o $@ -c $< $(CPPFLAGS) $(npviewer_CFLAGS) -DBUILD_VIEWER
-@@ -379,7 +384,7 @@
+@@ -379,7 +406,7 @@
  	$(CXX) $(CFLAGS_32) -o $@ -c $< $(CPPFLAGS) $(npviewer_CFLAGS) -DBUILD_VIEWER
  
  $(npplayer_PROGRAM): $(npplayer_OBJECTS) $(npplayer_MAPFILE) $(LSB_OBJ_DIR) $(LSB_LIBS)
@@ -228,7 +320,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  
  npplayer-%.o: $(SRC_PATH)/src/%.c
  	$(CC) $(CFLAGS) -o $@ -c $< $(CPPFLAGS) $(npplayer_CFLAGS) -DBUILD_PLAYER
-@@ -387,19 +392,19 @@
+@@ -387,19 +414,19 @@
  	$(CC) $(CFLAGS) -o $@ -c $< $(CPPFLAGS) $(npplayer_CFLAGS) -DBUILD_PLAYER
  
  $(libxpcom_LIBRARY): $(libxpcom_OBJECTS) $(LSB_OBJ_DIR) $(LSB_LIBS)
@@ -251,7 +343,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=321867
  
  npconfig-%.o: $(SRC_PATH)/src/%.c
  	$(CC) -o $@ -c $< $(CPPFLAGS) $(CFLAGS)
-@@ -425,18 +430,18 @@
+@@ -425,18 +452,18 @@
  	$(LN_S) libgcc_s.so $@
  
  $(LSB_OBJ_DIR)/%.so: $(LSB_OBJ_DIR)/%.o
