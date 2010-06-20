@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.4 2009/01/14 05:20:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.5 2010/06/20 11:47:11 hwoarang Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="implementation of the BitTorrent core protocols in C"
 HOMEPAGE="http://libbt.sourceforge.net/"
@@ -23,6 +23,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-build.patch #248034
 	epatch "${FILESDIR}"/${PV}-btlist.patch # 152489
 	sed -i -e '/CFLAGS/s|:=|+=|' src/Makefile.in || die
+	# fix force as-needed. Bug #315213
+	sed -i -e "/^LIBS/s:-lm:& -lcrypto:" src/Makefile.in || die
+	eautoreconf
 }
 
 src_install() {
