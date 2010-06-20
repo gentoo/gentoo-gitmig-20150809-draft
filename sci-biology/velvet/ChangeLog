@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/velvet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.10 2010/05/05 07:14:47 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.11 2010/06/20 18:05:05 xarthisius Exp $
+
+  20 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> velvet-0.7.62.ebuild,
+  +files/velvet-0.7.62-gentoo.diff:
+  Fix parallel build, respect FLAGS, fix --as-needed issues wrt bug 277938.
+  Thanks Diego for reporting.
 
 *velvet-0.7.62 (05 May 2010)
 

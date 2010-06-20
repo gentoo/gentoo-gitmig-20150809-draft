@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-0.7.62.ebuild,v 1.1 2010/05/05 07:14:47 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-0.7.62.ebuild,v 1.2 2010/06/20 18:05:05 xarthisius Exp $
 
 EAPI="2"
 
-MY_P="${PN}_${PV}"
+inherit eutils toolchain-funcs
+
+MY_P=${PN}_${PV}
 
 DESCRIPTION="A sequence assembler for very short reads"
 HOMEPAGE="http://www.ebi.ac.uk/~zerbino/velvet/"
@@ -18,32 +20,27 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="doc? ( virtual/latex-base )"
 RDEPEND=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	rm -rf "${S}"/third-party/zlib*
-	sed -i -e '/\(CFLAGS\|LDFLAGS\|Z_LIB_DIR\|Z_LIB_FILES\) *= */d' \
-		-e '1 a CFLAGS+= -Wall' -e '1 a LDFLAGS+= -lm -lz' \
-		-e '/default :/ s/zlib//' -e '/color :/ s/zlib//' \
-		-e '/obj:/ s/zlib//' -e '/obj_de:/ s/zlib//' \
-		"${S}"/Makefile || die
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 	use doc || sed -i -e '/default :/ s/doc//' "${S}"/Makefile || die
-	sed -i -e '/zlib.h/d' -e '1 i #include <zlib.h>' "${S}"/src/readSet.c || die
 }
 
 src_compile() {
+	tc-export CC
 	MAKE_XOPTS=""
 	if [[ $VELVET_MAXKMERLENGTH != "" ]]; then MAKE_XOPTS="$MAKE_XOPTS MAXKMERLENGTH=$VELVET_MAXKMERLENGTH"; fi
 	if [[ $VELVET_CATEGORIES != "" ]]; then MAKE_XOPTS="$MAKE_XOPTS CATEGORIES=$VELVET_CATEGORIES"; fi
-	emake -j1 $MAKE_XOPTS || die
-	emake -j1 $MAKE_XOPTS color || die
+	emake $MAKE_XOPTS || die
+	emake $MAKE_XOPTS color || die
 }
 
 src_install() {
 	dobin velvet{g,h,g_de,h_de} || die
 	insinto /usr/share/${PN}
 	doins -r contrib || die
-	dodoc Manual.pdf CREDITS.txt
+	dodoc Manual.pdf CREDITS.txt ChangeLog || die
 }
 
 pkg_postinst() {
