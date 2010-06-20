@@ -1,7 +1,7 @@
-Index: asymptote-1.96/settings.cc
+Index: asymptote-1.99/settings.cc
 ===================================================================
---- asymptote-1.96.orig/settings.cc
-+++ asymptote-1.96/settings.cc
+--- asymptote-1.99.orig/settings.cc
++++ asymptote-1.99/settings.cc
 @@ -89,14 +89,14 @@ bool msdos=false;
  string HOME="HOME";
  string docdir=ASYMPTOTE_DOCDIR;
