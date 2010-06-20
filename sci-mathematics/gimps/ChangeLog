@@ -1,8 +1,8 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.34 2010/06/20 10:01:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.35 2010/06/20 13:55:37 fauli Exp $
 
-  20 Jun 2010; <fauli@gentoo.org> gimps-25.11.ebuild:
+  20 Jun 2010; Christian Faulhammer <fauli@gentoo.org> gimps-25.11.ebuild:
   stable x86, bug 316801
 
   13 Jun 2010; Christoph Mende <angelos@gentoo.org> gimps-25.11.ebuild:
