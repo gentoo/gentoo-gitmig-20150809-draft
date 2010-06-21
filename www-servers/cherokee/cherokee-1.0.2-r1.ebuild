@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.2-r1.ebuild,v 1.1 2010/06/16 11:54:54 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.2-r1.ebuild,v 1.2 2010/06/21 21:10:05 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -111,8 +111,6 @@ src_install () {
 
 	# Puts logs in /var/log/cherokee/
 	dosed "s:/var/log/cherokee\.:/var/log/cherokee/cherokee\.:g" /etc/cherokee/cherokee.conf
-
-
 
 }
 
