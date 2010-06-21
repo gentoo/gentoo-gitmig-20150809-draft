@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1-r3.ebuild,v 1.1 2010/06/11 18:13:09 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1-r3.ebuild,v 1.2 2010/06/21 16:56:05 mabi Exp $
 
 EAPI="2"
 
@@ -48,18 +48,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	cd "${S}"
-	# see bug 232538 for details:
-	# this is needed so that autoconf can find the m4 gtk files (non-standard
-	# location)
-	export AT_M4DIR="${S}"
-	# phpize will invoke autoconf/autoheader (which will fail); we are replacing
-	# these calls with dummies as we call eautoreconf shortly afterwards
-	# anyway
-	export PHP_AUTOCONF="true"
-	export PHP_AUTOHEADER="true"
-	php-ext-source-r1_phpize
-
 	cd "${WORKDIR}"
 	for lang in ${LANGS} ; do
 		if use doc && use linguas_${lang} ; then
@@ -78,6 +66,17 @@ src_prepare() {
 
 	# depends on newer gtkhtml
 	epatch "${FILESDIR}"/${PN}-2.0.1-gtkhtml314.patch
+
+	# see bug 232538 for details:
+	# this is needed so that autoconf can find the m4 gtk files (non-standard
+	# location)
+	export AT_M4DIR="${S}"
+	# phpize will invoke autoconf/autoheader (which will fail); we are replacing
+	# these calls with dummies as we call eautoreconf shortly afterwards
+	# anyway
+	export PHP_AUTOCONF="true"
+	export PHP_AUTOHEADER="true"
+	php-ext-source-r1_phpize
 }
 
 src_compile() {
