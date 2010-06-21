@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libknotificationitem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.28 2010/03/31 23:21:36 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.29 2010/06/21 15:53:07 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libknotificationitem-4.3.3.ebuild, libknotificationitem-4.3.5.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org>
   -libknotificationitem-4.3.4.ebuild:

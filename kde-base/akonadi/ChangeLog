@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.62 2010/06/06 16:15:29 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.63 2010/06/21 15:53:21 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -akonadi-4.3.3.ebuild, akonadi-4.3.5.ebuild, akonadi-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   akonadi-4.4.4.ebuild:

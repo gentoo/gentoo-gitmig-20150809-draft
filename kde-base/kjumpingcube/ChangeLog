@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kjumpingcube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.149 2010/06/06 14:41:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.150 2010/06/21 15:53:43 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kjumpingcube-4.3.3.ebuild, kjumpingcube-4.3.5.ebuild,
+  kjumpingcube-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *kjumpingcube-4.4.4 (06 Jun 2010)
 

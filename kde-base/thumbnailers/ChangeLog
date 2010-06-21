@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/thumbnailers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.31 2010/06/06 14:41:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.32 2010/06/21 15:53:12 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -thumbnailers-4.3.3.ebuild, thumbnailers-4.3.5.ebuild,
+  thumbnailers-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *thumbnailers-4.4.4 (06 Jun 2010)
 

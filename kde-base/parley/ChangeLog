@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.62 2010/06/06 14:41:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.63 2010/06/21 15:53:16 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -parley-4.3.3-r1.ebuild, parley-4.3.5.ebuild, parley-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *parley-4.4.4 (06 Jun 2010)
 

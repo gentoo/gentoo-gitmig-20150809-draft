@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.32 2010/06/06 21:25:55 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.33 2010/06/21 15:52:58 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -mplayerthumbs-4.3.3.ebuild, mplayerthumbs-4.3.5.ebuild,
+  mplayerthumbs-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   mplayerthumbs-4.3.3.ebuild, mplayerthumbs-4.3.5.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.121 2010/06/06 14:42:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.122 2010/06/21 15:53:45 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdesdk-misc-4.3.3.ebuild, kdesdk-misc-4.3.5.ebuild,
+  kdesdk-misc-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *kdesdk-misc-4.4.4 (06 Jun 2010)
 

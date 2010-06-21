@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.149 2010/06/06 16:45:51 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.150 2010/06/21 15:53:29 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -klinkstatus-4.3.3.ebuild, klinkstatus-4.3.5.ebuild,
+  klinkstatus-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   klinkstatus-4.4.4.ebuild:

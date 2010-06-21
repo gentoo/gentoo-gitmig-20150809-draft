@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.156 2010/06/06 16:30:35 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.157 2010/06/21 15:53:43 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kaddressbook-4.3.3.ebuild, kaddressbook-4.3.5-r1.ebuild,
+  kaddressbook-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kaddressbook-4.4.4.ebuild:

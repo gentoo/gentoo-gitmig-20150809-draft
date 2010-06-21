@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.252 2010/06/07 02:37:57 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.253 2010/06/21 15:53:11 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kopete-4.3.3.ebuild,
+  kopete-4.3.5.ebuild, kopete-4.4.4-r1.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   07 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kopete-4.4.4-r1.ebuild:

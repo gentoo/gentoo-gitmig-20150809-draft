@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.78 2010/06/06 14:42:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.79 2010/06/21 15:53:28 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kde-env-4.3.3.ebuild, kde-env-4.3.5-r1.ebuild, kde-env-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *kde-env-4.4.4 (06 Jun 2010)
 

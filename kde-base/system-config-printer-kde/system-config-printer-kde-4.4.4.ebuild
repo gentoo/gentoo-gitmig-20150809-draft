@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.4.4.ebuild,v 1.1 2010/06/06 14:42:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.4.4.ebuild,v 1.2 2010/06/21 15:53:52 scarabeus Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ PYTHON_DEPEND="2"
 inherit python kde4-meta
 
 DESCRIPTION="KDE port of Red Hat's Gnome system-config-printer"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="

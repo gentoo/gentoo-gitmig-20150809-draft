@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solidautoeject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solidautoeject/ChangeLog,v 1.26 2010/03/31 23:33:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solidautoeject/ChangeLog,v 1.27 2010/06/21 15:53:15 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -solidautoeject-4.3.3.ebuild, solidautoeject-4.3.5.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -solidautoeject-4.3.4.ebuild:
   Remove old KDE versions.

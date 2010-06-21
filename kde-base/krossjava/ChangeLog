@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krossjava
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.31 2010/06/11 02:01:46 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.32 2010/06/21 15:53:53 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -krossjava-4.3.3.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   11 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   krossjava-4.3.3.ebuild, krossjava-4.3.5.ebuild, krossjava-4.4.4.ebuild:

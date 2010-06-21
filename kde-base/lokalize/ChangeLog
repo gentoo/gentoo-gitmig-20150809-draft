@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/lokalize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.46 2010/06/06 14:41:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.47 2010/06/21 15:53:29 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -lokalize-4.3.3.ebuild, lokalize-4.3.5.ebuild, lokalize-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *lokalize-4.4.4 (06 Jun 2010)
 

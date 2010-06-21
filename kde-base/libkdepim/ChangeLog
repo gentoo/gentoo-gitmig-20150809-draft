@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.160 2010/06/06 16:53:59 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.161 2010/06/21 15:53:36 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libkdepim-4.3.3.ebuild, libkdepim-4.3.5.ebuild, libkdepim-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   06 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   libkdepim-4.4.4.ebuild:

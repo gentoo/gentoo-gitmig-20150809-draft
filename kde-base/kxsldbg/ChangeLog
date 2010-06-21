@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kxsldbg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.146 2010/03/31 23:17:56 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxsldbg/ChangeLog,v 1.147 2010/06/21 15:53:16 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kxsldbg-4.3.3.ebuild, kxsldbg-4.3.5.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kxsldbg-4.3.4.ebuild:
   Remove old KDE versions.

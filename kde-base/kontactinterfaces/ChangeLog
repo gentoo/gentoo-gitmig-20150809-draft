@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontactinterfaces
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontactinterfaces/ChangeLog,v 1.42 2010/03/31 22:57:07 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontactinterfaces/ChangeLog,v 1.43 2010/06/21 15:53:14 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kontactinterfaces-4.3.3.ebuild, kontactinterfaces-4.3.5.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org>
   -kontactinterfaces-4.3.4.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.204 2010/06/06 14:42:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.205 2010/06/21 15:53:10 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdebase-startkde-4.3.3-r1.ebuild, kdebase-startkde-4.3.5.ebuild,
+  kdebase-startkde-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *kdebase-startkde-4.4.4 (06 Jun 2010)
 

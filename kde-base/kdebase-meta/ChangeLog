@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.165 2010/06/21 14:24:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.166 2010/06/21 15:53:27 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdebase-meta-4.3.3.ebuild, kdebase-meta-4.3.5.ebuild,
+  kdebase-meta-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   kdebase-meta-4.3.3.ebuild:

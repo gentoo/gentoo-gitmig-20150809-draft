@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpilot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.115 2010/03/31 22:59:08 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.116 2010/06/21 15:53:39 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kpilot-4.3.3.ebuild,
+  kpilot-4.3.5.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
   31 Mar 2010; Dror Levin <spatz@gentoo.org> -kpilot-4.3.4.ebuild:
   Remove old KDE versions.

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.144 2010/06/06 14:41:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.145 2010/06/21 15:53:01 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -knotes-4.3.3.ebuild,
+  knotes-4.3.5.ebuild, knotes-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *knotes-4.4.4 (06 Jun 2010)
 

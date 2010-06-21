@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.158 2010/06/06 14:41:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.159 2010/06/21 15:53:39 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kig-4.3.3.ebuild,
+  kig-4.3.5.ebuild, kig-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *kig-4.4.4 (06 Jun 2010)
 

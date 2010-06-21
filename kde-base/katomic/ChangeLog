@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/katomic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.149 2010/06/06 14:41:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.150 2010/06/21 15:53:34 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -katomic-4.3.3.ebuild, katomic-4.3.5.ebuild, katomic-4.4.4.ebuild:
+  Drop 4.3.3. Drop hppa keywords per bug #304363
 
 *katomic-4.4.4 (06 Jun 2010)
 
