@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.5 2010/06/18 18:41:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.6 2010/06/21 11:37:19 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  thunderbird-3.0.5.ebuild, thunderbird-3.1_rc2-r1.ebuild:
+  Restrict media-libs/lcms depend to old version.
 
 *thunderbird-3.1_rc2-r1 (18 Jun 2010)
 
