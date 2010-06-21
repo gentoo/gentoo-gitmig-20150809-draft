@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.39 2010/06/07 17:42:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.40 2010/06/21 13:41:41 angelos Exp $
+
+  21 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  xf86-input-virtualbox-3.1.8-r1.ebuild:
+  Stable on amd64 wrt bug #320595
 
 *xf86-input-virtualbox-3.2.4 (07 Jun 2010)
 
