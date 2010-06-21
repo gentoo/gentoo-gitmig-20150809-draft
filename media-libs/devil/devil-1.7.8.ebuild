@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.2 2010/06/19 09:39:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.3 2010/06/21 09:07:22 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -19,7 +19,7 @@ IUSE="openexr gif jpeg lcms mng png tiff xpm allegro opengl sdl X"
 RDEPEND="gif? ( media-libs/giflib )
 	openexr? ( media-libs/openexr )
 	jpeg? ( media-libs/jpeg )
-	lcms? ( media-libs/lcms )
+	lcms? ( =media-libs/lcms-1* )
 	mng? ( media-libs/libmng )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )

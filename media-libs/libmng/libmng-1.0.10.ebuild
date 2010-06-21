@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10.ebuild,v 1.10 2010/01/22 17:02:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10.ebuild,v 1.11 2010/06/21 09:08:41 ssuominen Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ IUSE="lcms"
 
 DEPEND=">=media-libs/jpeg-6b:0
 	>=sys-libs/zlib-1.1.4
-	lcms? ( >=media-libs/lcms-1.0.8 )"
+	lcms? ( =media-libs/lcms-1* )"
 
 src_unpack() {
 	unpack ${A}
