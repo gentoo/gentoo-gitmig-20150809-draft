@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.403 2010/06/20 18:24:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.404 2010/06/21 09:19:45 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  imagemagick-6.6.2.5.ebuild:
+  Use lcms2 instead of lcms because upstream ./configure logic prefers new
+  version.
 
 *imagemagick-6.6.2.5 (20 Jun 2010)
 
