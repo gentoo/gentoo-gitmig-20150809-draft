@@ -10,10 +10,6 @@ included. Geometry optimization, molecular dynamics and a large set of
 visualization tools are currently available.
 </longdescription>
 <use>
-  <flag name='gamess'>Add GAMESS interface for QM/MM
-    (<pkg>sci-chemistry/gamess</pkg>)</flag>
-  <flag name='mopac7'>Apply compilation fix for
-    <pkg>sci-chemistry/mopac7</pkg> support</flag>
   <flag name='openbabel'>Use <pkg>sci-chemistry/openbabel</pkg> for file
     conversions</flag>
   <flag name='toolbar'>Build the shortcuts toolbar</flag>
