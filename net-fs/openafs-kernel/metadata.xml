@@ -6,4 +6,8 @@
   	<email>stefaan@gentoo.org</email>
 	<name>Stefaan De Roeck</name>
 </maintainer>
+<maintainer>
+	<email>andrej.filipcic@ijs.si</email>
+	<name>Andrej Filipcic</name>
+</maintainer>
 </pkgmetadata>
