@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.0.ebuild,v 1.2 2010/04/28 20:53:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.0.ebuild,v 1.3 2010/06/21 20:11:51 maekke Exp $
 
 EAPI=2
 inherit versionator games
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/warzone2100/${P}.tar.gz
 
 LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 # upstream requested debug support
 IUSE="debug nls videos"
 
