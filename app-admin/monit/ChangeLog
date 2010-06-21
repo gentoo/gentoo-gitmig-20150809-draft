@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.47 2010/06/18 08:41:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.48 2010/06/21 20:33:23 maekke Exp $
+
+  21 Jun 2010; Markus Meier <maekke@gentoo.org> monit-5.1.1.ebuild:
+  x86 stable, bug #324565
 
   18 Jun 2010; Patrick Lauer <patrick@gentoo.org> -monit-4.8.1.ebuild,
   -monit-4.8.2.ebuild, -monit-5.0_beta6.ebuild, -monit-5.0.3.ebuild:
