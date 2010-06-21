@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.437.3.ebuild,v 1.1 2010/06/21 07:12:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.437.3.ebuild,v 1.2 2010/06/21 09:25:10 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -125,6 +125,10 @@ src_configure() {
 	# Disable tcmalloc memory allocator. It causes problems,
 	# for example bug #320419.
 	myconf="${myconf} -Dlinux_use_tcmalloc=0"
+
+	# Disable gpu rendering, it is incompatible with nvidia-drivers,
+	# bug #319331.
+	myconf="${myconf} -Denable_gpu=0"
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
