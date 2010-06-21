@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eiwic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.6 2010/05/21 19:52:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.7 2010/06/21 17:04:35 angelos Exp $
+
+  21 Jun 2010; Christoph Mende <angelos@gentoo.org> eiwic-1.1.4.ebuild:
+  Stable on amd64
 
 *eiwic-1.1.4 (21 May 2010)
 
