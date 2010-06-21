@@ -10,6 +10,5 @@
 </longdescription>
 <use>
   <flag name='hlapi'>Enable support for high-level library</flag>
-  <flag name='tools'>Install support and test tools</flag>
 </use>
 </pkgmetadata>
