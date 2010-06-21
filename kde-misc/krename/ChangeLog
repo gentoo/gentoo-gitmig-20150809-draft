@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/krename
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.57 2009/12/28 11:33:32 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.58 2010/06/21 17:42:22 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/4.0.0-fix_automagicness.patch, -krename-4.0.2.ebuild,
+  -files/4.0.0-fix_exiv2_support.patch, krename-4.0.3.ebuild,
+  -files/4.0.0-fix_taglib_support.patch, -krename-4.0.1.ebuild:
+  Stable on amd64 and x86. Per bug #324573. Drop old.
 
 *krename-4.0.3 (28 Dec 2009)
 
