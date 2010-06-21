@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.7.ebuild,v 1.3 2010/02/28 10:43:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.7.ebuild,v 1.4 2010/06/21 12:48:05 ssuominen Exp $
 
 EAPI="2"
 
@@ -54,6 +54,8 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	# workaround for bug 282838
 	append-flags "-fno-visibility-inlines-hidden"
+
+	append-flags -D__STDC_CONSTANT_MACROS #324323
 
 	# need >=gcc-3
 	if [[ $(gcc-major-version) -lt 3 ]]; then
