@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.259 2010/06/15 16:16:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.260 2010/06/21 11:48:28 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> eog-2.30.1.ebuild:
+  Restrict media-libs/lcms depend to old version.
 
 *eog-2.30.1 (15 Jun 2010)
 

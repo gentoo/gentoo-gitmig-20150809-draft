@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.1.ebuild,v 1.1 2010/06/15 16:16:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.1.ebuild,v 1.2 2010/06/21 11:48:28 ssuominen Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.17.5
 		media-libs/jpeg )
 	jpeg? ( media-libs/jpeg
 			x11-libs/gtk+[jpeg] )
-	lcms? ( media-libs/lcms )
+	lcms? ( =media-libs/lcms-1* )
 	python? (
 		>=dev-lang/python-2.3
 		>=dev-python/pygobject-2.15.1
