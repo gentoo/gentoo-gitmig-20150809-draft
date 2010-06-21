@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/extlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/ChangeLog,v 1.2 2010/06/03 05:38:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extlib/ChangeLog,v 1.3 2010/06/21 05:21:46 graaff Exp $
+
+  21 Jun 2010; Hans de Graaff <graaff@gentoo.org> -extlib-0.9.14.ebuild:
+  Remove old version.
 
 *extlib-0.9.15 (03 Jun 2010)
 
