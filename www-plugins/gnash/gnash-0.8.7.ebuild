@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.5 2010/05/01 00:58:17 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.6 2010/06/21 13:12:39 ssuominen Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="never"
@@ -8,7 +8,7 @@ KDE_REQUIRED="optional"
 KDE_MINIMAL="4.2"
 AT_M4DIR="cygnal"
 
-inherit autotools eutils kde4-base multilib nsplugins
+inherit autotools eutils kde4-base multilib nsplugins flag-o-matic
 
 DESCRIPTION="GNU Flash movie player that supports many SWF v7,8,9 features"
 HOMEPAGE="http://www.gnu.org/software/gnash/"
@@ -151,6 +151,8 @@ src_prepare() {
 	eautoreconf
 }
 src_configure() {
+	append-flags -D__STDC_CONSTANT_MACROS #324357
+
 	local myconf myext gui
 
 	# Set nsplugin install directory.
