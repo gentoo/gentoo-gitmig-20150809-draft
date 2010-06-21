@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.2 2010/05/30 17:21:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.3 2010/06/21 10:30:16 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="doc examples"
 
-RDEPEND="media-libs/lcms"
+RDEPEND="=media-libs/lcms-1*"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
