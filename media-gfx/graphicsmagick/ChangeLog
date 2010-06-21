@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.71 2010/05/30 18:32:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.72 2010/06/21 10:21:34 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  graphicsmagick-1.3.12.ebuild:
+  Restrict media-libs/lcms depend to old version.
 
   30 May 2010; Raúl Porcel <armin76@gentoo.org>
   graphicsmagick-1.3.12.ebuild:

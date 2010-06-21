@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.2 2010/05/17 17:54:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.3 2010/06/21 10:24:49 ssuominen Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="doc exif lcms lirc xmp"
 RDEPEND=">=x11-libs/gtk+-2.4.0
 	virtual/libintl
 	doc? ( app-text/gnome-doc-utils )
-	lcms? ( media-libs/lcms )
+	lcms? ( =media-libs/lcms-1* )
 	lirc? ( app-misc/lirc )
 	xmp? ( >=media-gfx/exiv2-0.17[xmp] )
 	!xmp? ( exif? ( >=media-gfx/exiv2-0.17 ) )"

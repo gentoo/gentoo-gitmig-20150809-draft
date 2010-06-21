@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.11 2010/05/30 18:32:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12.ebuild,v 1.12 2010/06/21 10:21:34 ssuominen Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="app-text/ghostscript-gpl
 	jbig? ( media-libs/jbigkit )
 	jpeg? ( media-libs/jpeg )
 	jpeg2k? ( >=media-libs/jasper-1.701.0 )
-	lcms? ( media-libs/lcms )
+	lcms? ( =media-libs/lcms-1* )
 	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng )
 	svg? ( dev-libs/libxml2 )
