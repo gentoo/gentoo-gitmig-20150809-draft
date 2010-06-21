@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/resource-agents
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.1 2010/06/21 07:37:28 xarthisius Exp $
+
+*resource-agents-1.0.3 (21 Jun 2010)
+
+  21 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/1.0.3-docs.patch, +files/1.0.3-respect_cflags.patch,
+  +resource-agents-1.0.3.ebuild, +metadata.xml:
+  Initial import. Ebuild written by Tomáš Chvátal <scarabeus@gentoo.org>
+
