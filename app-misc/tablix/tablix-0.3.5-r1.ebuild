@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.5-r1.ebuild,v 1.2 2010/06/16 17:39:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tablix/tablix-0.3.5-r1.ebuild,v 1.3 2010/06/21 21:08:12 mr_bones_ Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -42,7 +42,6 @@ src_prepare() {
 	sed -i -e '32 d' -e '34 d' src/master.c || die "sed failed"
 	sed -i -e '31 d' -e '33 d' src/main.c || die "sed failed"
 	sed -i -e '30 d' -e '32 d' src/output.c || die "sed failed"
-
 
 }
 
