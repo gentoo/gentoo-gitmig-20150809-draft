@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/dbd-sqlite-0.1.2-r1.ebuild,v 1.1 2010/06/20 18:08:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/dbd-sqlite-0.1.2-r1.ebuild,v 1.2 2010/06/21 21:08:53 mr_bones_ Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -19,7 +19,6 @@ IUSE="test"
 ruby_add_rdepend "
 	>=dev-ruby/ruby-dbi-0.4.2
 	dev-ruby/sqlite-ruby"
-
 
 src_test() {
 	elog "The tests require additional configuration."
