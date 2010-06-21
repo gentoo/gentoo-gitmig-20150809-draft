@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.58 2010/05/20 10:30:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.59 2010/06/21 12:08:41 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> dcraw-8.99.ebuild:
+  Restrict media-libs/lcms depend to old version.
 
   20 May 2010; Peter Volkov <pva@gentoo.org> -dcraw-8.73.ebuild:
   Drop old.
