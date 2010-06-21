@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.3.3.ebuild,v 1.7 2010/01/19 01:35:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.3.3.ebuild,v 1.8 2010/06/21 14:24:41 ssuominen Exp $
 
 EAPI="2"
 inherit kde4-functions
@@ -33,7 +33,6 @@ RDEPEND="
 	$(add_kdebase_dep kdepasswd)
 	$(add_kdebase_dep kdesu)
 	$(add_kdebase_dep kdialog)
-	$(add_kdebase_dep kdm)
 	$(add_kdebase_dep keditbookmarks)
 	$(add_kdebase_dep keditfiletype)
 	$(add_kdebase_dep kephal)
