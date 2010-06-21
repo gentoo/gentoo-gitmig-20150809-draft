@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r4.ebuild,v 1.2 2010/05/23 20:47:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r4.ebuild,v 1.3 2010/06/21 20:01:32 vapier Exp $
 
 EAPI="2"
 
-inherit eutils python
+inherit eutils python flag-o-matic
 
 # Use XBMC_ESVN_REPO_URI to track a different branch
 ESVN_REPO_URI=${XBMC_ESVN_REPO_URI:-http://xbmc.svn.sourceforge.net/svnroot/xbmc/trunk}
@@ -133,6 +133,11 @@ src_prepare() {
 		eautoreconf
 		popd >/dev/null
 	done
+
+	# fix building with ffmpeg-0.6+ #324293
+	# latest svn solves this in a more specific way, but we'll just
+	# kludge the whole system for the last release
+	append-cxxflags -D__STDC_CONSTANT_MACROS
 
 	local squish #290564
 	use altivec && squish="-DSQUISH_USE_ALTIVEC=1 -maltivec"
