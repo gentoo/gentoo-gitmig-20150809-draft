@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.229 2010/06/08 14:54:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.230 2010/06/21 11:25:41 chainsaw Exp $
+
+*mpg123-1.12.2 (21 Jun 2010)
+
+  21 Jun 2010; <chainsaw@gentoo.org> +mpg123-1.12.2.ebuild:
+  Version bump, this upstream release is more resilient against large-file
+  mismatches between library & application and fixes an invalid memory
+  access bug resulting from a bad alignment algorithm.
 
   08 Jun 2010; <chainsaw@gentoo.org> mpg123-1.9.2.ebuild,
   -mpg123-1.10.1.ebuild:
