@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.62 2010/06/08 19:22:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.63 2010/06/21 13:45:47 angelos Exp $
+
+  21 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  virtualbox-ose-3.1.8.ebuild:
+  Stable on amd64 wrt bug #320595
 
   08 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-ose-3.1.8.ebuild:
