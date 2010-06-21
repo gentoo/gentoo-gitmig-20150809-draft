@@ -35,26 +35,6 @@
       logging (using <pkg>sys-cluster/gearman</pkg>).
     </flag>
 
-    <flag name="gnutls" restrict="&lt;dev-db/drizzle-2010.03.1412">
-      Enable the MD5 plugin for user-defined functions (using
-      <pkg>net-libs/gnutls</pkg>).
-
-      Note: when enabling both this flag and the curl flag,
-      <pkg>net-misc/curl</pkg> has to be built with the gnutls USE
-      flag or with no SSL support at all to avoid runtime linking
-      conflicts.
-    </flag>
-
-    <flag name="openssl" restrict="&lt;dev-db/drizzle-2010.03.1412">
-      Enable the MD5 plugin for user-defined functions (using
-      <pkg>dev-libs/openssl</pkg>).
-
-      Note: when enabling both this flag and the curl flag,
-      <pkg>net-misc/curl</pkg> has to be built with the openssl USE
-      flag or with no SSL support at all to avoid runtime linking
-      conflicts.
-    </flag>
-
     <flag name="curl">
       Enable the HTTP authentication plugin (using
       <pkg>net-misc/curl</pkg>). This is needed for the tests to apply
