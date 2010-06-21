@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-2.1.2.ebuild,v 1.1 2010/03/31 21:47:28 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-2.1.2.ebuild,v 1.2 2010/06/21 13:55:43 ssuominen Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KPlato is a project management application."
 
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 KMEXTRACTONLY="libs/"

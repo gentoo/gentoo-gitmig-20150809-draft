@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/kpresenter-2.1.1.ebuild,v 1.1 2010/02/27 22:07:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/kpresenter-2.1.1.ebuild,v 1.2 2010/06/21 13:56:13 ssuominen Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KOffice presentation program."
 
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/boost-1.35.0"
