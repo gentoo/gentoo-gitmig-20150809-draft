@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.315 2010/05/31 19:24:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.316 2010/06/21 12:00:03 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xulrunner-1.9.2.3-r1.ebuild:
+  Restrict media-libs/lcms depend to old version.
 
   31 May 2010; Joseph Jezak <josejx@gentoo.org> xulrunner-1.9.2.3-r1.ebuild:
   Marked ppc/ppc64 stable for bug #314025.
