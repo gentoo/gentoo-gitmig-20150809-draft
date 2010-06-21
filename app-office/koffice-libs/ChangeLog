@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.109 2010/03/31 21:52:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.110 2010/06/21 13:50:53 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  koffice-libs-2.1.2.ebuild:
+  Fix media-libs/lcms depend to old version.
 
 *koffice-libs-2.1.2 (31 Mar 2010)
 
