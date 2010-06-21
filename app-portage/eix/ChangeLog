@@ -1,9 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.336 2010/06/21 15:30:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.337 2010/06/21 15:32:38 darkside Exp $
 
   21 Jun 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
-  tweak USE=debug description by Martin VÃ¤t
+  tweak USE=debug description by Martin Väth
 
   20 Jun 2010; Markos Chandras <hwoarang@gentoo.org> eix-0.20.5.ebuild:
   Stable on amd64 wrt bug #323703
