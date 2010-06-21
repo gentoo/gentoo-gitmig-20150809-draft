@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.53.64.ebuild,v 1.8 2010/06/20 16:54:41 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.53.64.ebuild,v 1.9 2010/06/21 17:46:24 truedfx Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -116,7 +116,7 @@ pkg_postinst() {
 		elog "64-bit browser with nspluginwrapper.  The current recommended"
 		elog "configuration is to use a 32-bit browser such as"
 		elog "www-client/firefox-bin:"
-		elog "  http://bugs.gentoo.org/324356"
+		elog "  http://bugs.gentoo.org/324365"
 		elog
 		# Temporarily skip automatic nspluginwrapper stuff, since it is fraught
 		# with peril (Bug #324365):
