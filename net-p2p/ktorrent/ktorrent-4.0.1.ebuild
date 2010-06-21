@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.1.ebuild,v 1.1 2010/06/21 22:19:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.1.ebuild,v 1.2 2010/06/21 22:24:18 polynomial-c Exp $
 
 EAPI="2"
 
@@ -80,8 +80,4 @@ src_configure() {
 		$(cmake-utils_use_enable zeroconf ZEROCONF_PLUGIN)
 	)
 	kde4-base_src_configure
-}
-
-src_compile() {
-	kde-base_src_compile
 }
