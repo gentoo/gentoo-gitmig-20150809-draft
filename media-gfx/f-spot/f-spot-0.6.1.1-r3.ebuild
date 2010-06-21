@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.6.1.1-r3.ebuild,v 1.3 2009/11/05 23:19:46 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.6.1.1-r3.ebuild,v 1.4 2010/06/21 14:40:04 ssuominen Exp $
 
 EAPI=2
 
@@ -33,8 +33,8 @@ RDEPEND=">=dev-lang/mono-2.0
 	>=dev-libs/dbus-glib-0.71
 	>=dev-dotnet/dbus-sharp-0.4.2
 	>=dev-dotnet/dbus-glib-sharp-0.3.0
-	media-libs/jpeg
-	>=media-libs/lcms-1.12
+	>=media-libs/jpeg-8a
+	=media-libs/lcms-1*
 	>=media-libs/libgphoto2-2.1.4
 	>=dev-db/sqlite-3
 	flickr? ( dev-dotnet/flickrnet-bin )"
