@@ -9,8 +9,4 @@
 </maintainer>
 <longdescription>TIFF image library and tools, mostly for scanner and fax
  support, but also used by GIS and other imaging tools.</longdescription>
-<use>
-  <flag name="bigtiff">Provide support for very large tiff files.</flag>
-  <flag name="mdi">Provide support for MDI format graphics.</flag>
-</use>
 </pkgmetadata>
