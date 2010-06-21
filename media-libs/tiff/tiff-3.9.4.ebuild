@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.4.ebuild,v 1.2 2010/06/21 22:04:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.4.ebuild,v 1.3 2010/06/21 22:10:48 ssuominen Exp $
 
 EAPI=3
 inherit libtool
@@ -25,7 +25,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		$(use_enable static.libs static) \
+		$(use_enable static-libs static) \
 		$(use_enable cxx) \
 		$(use_enable zlib) \
 		$(use_enable jpeg) \
