@@ -24,7 +24,6 @@
 	<pkg>net-libs/libpcap</pkg>.</flag>
 <flag name='inline-init-failopen'>Enable inline-init-failopen support</flag>
 <flag name='linux-smp-stats'>Enable statistics reporting through proc on smp systems</flag>
-<flag name='memory-cleanup'>Enable memory-cleanup support</flag>
 <flag name='mpls'>Enable support for mpls networks</flag>
 <flag name='perfprofiling'>Enable preprocessor and rule performance profiling</flag>
 <flag name='ppm'>Enable ppm support</flag>
