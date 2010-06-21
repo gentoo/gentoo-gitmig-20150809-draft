@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11676 2010/06/21 14:30:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11677 2010/06/21 14:38:50 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kacper Kowalik <xarthisius@gentoo.org> (21 Jun 2010)
+# New version modular version of heartbeat
+# Waiting for migration guide and extensive set of tests
+#
+>=sys-cluster/heartbeat-3.0.3
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2010)
 #  on behalf of QA team
