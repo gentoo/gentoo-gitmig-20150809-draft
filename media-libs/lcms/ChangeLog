@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.113 2010/03/24 18:12:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.114 2010/06/21 09:04:51 ssuominen Exp $
+
+*lcms-2.0a (21 Jun 2010)
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> +lcms-2.0a.ebuild:
+  Version bump wrt #324909 by Peter Volkov.
 
   24 Mar 2010; Brent Baude <ranger@gentoo.org> lcms-1.19.ebuild:
   stable ppc, bug 302647
