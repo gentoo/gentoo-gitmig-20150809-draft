@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcave/xcave-2.3.2.ebuild,v 1.1 2010/06/20 10:48:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcave/xcave-2.3.2.ebuild,v 1.2 2010/06/21 15:54:25 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 src_prepare() {
+	echo src/xcave_supp.c > po/POTFILES.skip
 #	intltoolize --force --copy --automake || die
 	eautoreconf
 }
