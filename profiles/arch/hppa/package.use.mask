@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.36 2010/06/13 17:24:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.37 2010/06/21 19:31:38 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -24,11 +24,6 @@ media-gfx/imagemagick openmp
 # dev-lang/swi-prolog fails some tests but would be pulled in by dev-libs/ppl
 # (bug #269556)
 dev-libs/ppl prolog
-
-# Jeroen Roovers <jer@gentoo.org> (06 May 2009)
-# Mask USE=solver for kde-base/kalzium or dev-ml/facile[ocamlopt]
-# would be required:
-kde-base/kalzium solver
 
 # Jeroen Roovers <jer@gentoo.org> (06 May 2009)
 # Mask webkit-gtk dependency for net-libs/libproxy:
@@ -71,10 +66,6 @@ sci-libs/hdf5 mpi
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux,bad} not keyworded
 media-plugins/gst-plugins-meta dvb mythtv
-
-# Jeroen Roovers <jer@gentoo.org> (04 Mar 2008)
-# app-mobilephone/gsmlib fails to compile
-kde-base/kopete sms
 
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
 # This pulls in dev-scheme/drscheme which needs the (yet unported) libffi to

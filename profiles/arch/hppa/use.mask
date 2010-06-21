@@ -1,5 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.17 2010/06/17 19:20:44 jer Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.18 2010/06/21 19:31:38 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (5 Apr 2010)
@@ -147,10 +147,6 @@ mono
 # 19 Jun 2005 Guy Martin <gmsoft@gentoo.org>
 # dmalloc is broken on hppa
 dmalloc
-
-# 14 May 2005 Guy Martin <gmsoft@gentoo.org>
-# kde-base/libkcal doesn't compile yet on hppa and is a needed dep
-irmc
 
 # 10 Mar 2005 Stefan Knoblich <stkn@gentoo.org>
 # This needs zaptel and pri

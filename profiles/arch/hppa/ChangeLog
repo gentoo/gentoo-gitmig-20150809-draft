@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.55 2010/06/21 19:29:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.56 2010/06/21 19:31:38 jer Exp $
+
+  21 Jun 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask, use.mask:
+  Remove more KDE references (bug #304363).
 
   21 Jun 2010; Jeroen Roovers <jer@gentoo.org> -package.mask:
   Remove dev-db/metakit mask (bug #169509) and the rest of the file.
