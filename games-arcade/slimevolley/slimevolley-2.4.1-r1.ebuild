@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.1-r1.ebuild,v 1.2 2010/05/05 17:03:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/slimevolley-2.4.1-r1.ebuild,v 1.3 2010/06/21 20:13:00 maekke Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.tuxfamily.org/slime/debian/dists/stable/main/source/${
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="net"
 
 RDEPEND="media-libs/libsdl[X,audio,video]
