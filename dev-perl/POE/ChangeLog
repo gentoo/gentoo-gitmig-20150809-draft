@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/POE
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.107 2010/06/15 05:41:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.108 2010/06/21 20:15:55 armin76 Exp $
+
+  21 Jun 2010; Raúl Porcel <armin76@gentoo.org> POE-1.289.ebuild:
+  sparc stable wrt #323529
 
   15 Jun 2010; Torsten Veller <tove@gentoo.org> POE-1.289.ebuild:
   Stable on amd64 and x86 (#323529)

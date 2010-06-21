@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.28.ebuild,v 1.2 2010/06/15 05:20:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.28.ebuild,v 1.3 2010/06/21 20:24:40 armin76 Exp $
 
 MODULE_AUTHOR=PETDANCE
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Testing-specific WWW::Mechanize subclass"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND=">=dev-perl/WWW-Mechanize-1.24
