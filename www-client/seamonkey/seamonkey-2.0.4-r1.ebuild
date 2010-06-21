@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.4-r1.ebuild,v 1.1 2010/04/09 03:56:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.4-r1.ebuild,v 1.2 2010/06/21 20:12:38 fauli Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -19,7 +19,7 @@ MY_P="${PN}-${MY_PV}"
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa +chatzilla +composer +crypt java ldap +mailclient +roaming system-sqlite"
