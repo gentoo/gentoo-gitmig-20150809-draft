@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.1.0-r1.ebuild,v 1.5 2010/05/25 21:31:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.1.0-r1.ebuild,v 1.6 2010/06/21 14:07:32 ssuominen Exp $
 
 EAPI=2
 KDE_LINGUAS="ar be bg ca ca@valencia cs da de el en_GB eo es et eu fa fi fr ga
@@ -25,7 +25,7 @@ RDEPEND=">=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop?]
 	>=kde-base/solid-${KDE_MINIMAL}
 	media-libs/jasper
 	>=media-libs/jpeg-8a:0
-	media-libs/lcms
+	=media-libs/lcms-1*
 	media-libs/liblqr
 	media-libs/libpng
 	media-libs/tiff
