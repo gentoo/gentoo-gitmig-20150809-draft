@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.4.0.ebuild,v 1.3 2010/06/10 19:19:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.4.0.ebuild,v 1.4 2010/06/21 21:23:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -41,6 +41,7 @@ src_prepare() {
 }
 
 src_compile() {
+	# Python 2 breaks strict aliasing. Don't use this flag with Python 3.
 	append-flags -fno-strict-aliasing
 
 	distutils_src_compile
