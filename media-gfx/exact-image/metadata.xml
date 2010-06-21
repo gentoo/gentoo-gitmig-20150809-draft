@@ -7,7 +7,6 @@
 <name>Markos Chandras</name>
 </maintainer>
 <use>
-	<flag name='agg'>Adds Anti-Grain Geometry support<pkg>x11-libs/agg</pkg></flag>
 	<flag name='swig'>Adds Swig support <pkg>dev-lang/swig</pkg></flag>
 </use>
 </pkgmetadata>
