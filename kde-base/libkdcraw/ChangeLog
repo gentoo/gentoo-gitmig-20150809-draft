@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.51 2010/06/06 14:42:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.52 2010/06/21 14:04:20 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libkdcraw-4.3.5.ebuild, libkdcraw-4.4.4.ebuild:
+  Restrict media-libs/lcms depend to old version.
 
 *libkdcraw-4.4.4 (06 Jun 2010)
 
