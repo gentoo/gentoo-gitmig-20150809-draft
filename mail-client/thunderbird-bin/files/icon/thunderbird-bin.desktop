@@ -2,7 +2,7 @@
 Name=Mozilla Thunderbird (bin)
 Comment=Mail & News Reader
 Exec=/usr/bin/thunderbird-bin
-Icon=mozilla-thunderbird-bin-icon
+Icon=thunderbird-bin-icon
 Terminal=false
 Type=Application
 Categories=Office;Email;

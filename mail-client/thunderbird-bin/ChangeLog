@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.2 2010/06/19 20:28:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.3 2010/06/21 13:07:01 anarchy Exp $
+
+  21 Jun 2010; <anarchy@gentoo.org> files/icon/thunderbird-bin.desktop:
+  Fix bug #324927, icon name wrong in desktop file
 
 *thunderbird-bin-3.0.5 (19 Jun 2010)
 
