@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.59 2010/05/26 11:15:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.60 2010/06/21 20:41:36 gmsoft Exp $
+
+  21 Jun 2010; Guy Martin <gmsoft@gentoo.org> puppet-0.25.5.ebuild:
+  added ~hppa to KEYWORDS
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org> puppet-0.25.4-r1.ebuild:
   stable amd64, bug 306195
