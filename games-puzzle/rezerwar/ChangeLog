@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/rezerwar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/ChangeLog,v 1.5 2010/05/10 06:26:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/rezerwar/ChangeLog,v 1.6 2010/06/21 20:14:25 maekke Exp $
+
+  21 Jun 2010; Markus Meier <maekke@gentoo.org> rezerwar-0.4.2.ebuild:
+  amd64/x86 stable, bug #323467
 
 *rezerwar-0.4.2 (10 May 2010)
 
