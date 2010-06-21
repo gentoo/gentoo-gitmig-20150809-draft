@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.6 2010/05/24 15:45:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.7 2010/06/21 11:33:54 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,7 @@ COMMON_DEPEND="dev-libs/hyphen
 	media-libs/fontconfig
 	>=media-libs/freetype-2
 	>=media-libs/jpeg-8a
-	media-libs/lcms
+	=media-libs/lcms-1*
 	media-libs/libpng
 	media-libs/tiff
 	net-print/cups
