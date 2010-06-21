@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3.4.ebuild,v 1.6 2010/05/26 08:35:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3.4.ebuild,v 1.7 2010/06/21 17:02:51 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ else
 	KDE_LINGUAS="ar be bg ca cs da de el en_GB es et eu fr ga gl hi hne hr hu is it
 		ja km lt lv mai ms nb nds nl nn oc pl pt pt_BR ro ru se sk sl sr sv
 		tr uk zh_CN zh_TW"
-	KEYWORDS="amd64 ~hppa ppc ~ppc64 x86"
+	KEYWORDS="amd64 ppc ~ppc64 x86"
 	SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
 	S="${WORKDIR}"/"${MY_P}"
 fi
