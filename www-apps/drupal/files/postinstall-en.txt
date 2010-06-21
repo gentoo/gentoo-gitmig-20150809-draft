@@ -14,7 +14,7 @@ http://${VHOST_HOSTNAME}/${VHOST_APPDIR}
 and provide the credential required for the database access.
 
 SECURITY NOTICE: If you use SSL on your Drupal installation, you
-should enable the PHP configuration option `session.cookie-secure'
+should enable the PHP configuration option 'session.cookie-secure'
 to make it harder for attackers to sniff session cookies.
 
 References:

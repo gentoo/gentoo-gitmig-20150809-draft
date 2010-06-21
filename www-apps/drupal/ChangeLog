@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.63 2010/03/05 13:03:22 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.64 2010/06/21 15:01:09 jmbsvicetto Exp $
+
+  21 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  files/postinstall-en.txt:
+  [www-apps/drupal] Replaced a typo ` with '.
 
 *drupal-6.16 (05 Mar 2010)
 *drupal-5.22 (05 Mar 2010)
