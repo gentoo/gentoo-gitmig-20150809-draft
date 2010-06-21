@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.85 2010/06/17 21:06:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.86 2010/06/21 17:03:00 maekke Exp $
+
+  21 Jun 2010; Markus Meier <maekke@gentoo.org> gdal-1.6.3-r1.ebuild:
+  x86 stable, bug #315659
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> gdal-1.5.2.ebuild,
   gdal-1.5.3.ebuild, gdal-1.6.0-r1.ebuild, gdal-1.6.1.ebuild,

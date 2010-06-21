@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.7 2010/06/17 21:06:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.8 2010/06/21 17:03:00 maekke Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -16,7 +16,7 @@ SRC_URI="http://download.osgeo.org/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 # need to get these arches updated on several libs first
 #KEYWORDS="~alpha ~hppa"
 
