@@ -2,7 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ha-cluster</herd>
-<maintainer>
-  <email>ha-cluster@gentoo.org</email>
-</maintainer>
+  <maintainer>
+    <email>ultrabug@ultrabug.net</email>
+    <description>maintainer</description>
+  </maintainer>
+  <maintainer>
+    <email>xarthisius@gentoo.org</email>
+    <name>Kacper Kowalik</name>
+    <description>proxy maintainer</description>
+  </maintainer>
 </pkgmetadata>

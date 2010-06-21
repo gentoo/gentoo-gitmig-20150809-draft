@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/csync2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.29 2010/06/19 20:12:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.30 2010/06/21 10:08:24 xarthisius Exp $
+
+  21 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Adding Ultrabug as maintainer.
 
   19 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> +files/csync2.initd,
   csync2-1.34-r1.ebuild:
