@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.46 2010/04/04 21:36:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.47 2010/06/21 19:27:23 jer Exp $
+
+  21 Jun 2010; Jeroen Roovers <jer@gentoo.org> metakit-2.4.9.6.ebuild,
+  metakit-2.4.9.7.ebuild:
+  Remove HPPA keywording (bug #169509).
 
   04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   metakit-2.4.9.6.ebuild, metakit-2.4.9.7.ebuild:
