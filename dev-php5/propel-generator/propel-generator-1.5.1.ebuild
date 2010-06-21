@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-generator/propel-generator-1.5.1.ebuild,v 1.1 2010/05/29 18:22:37 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-generator/propel-generator-1.5.1.ebuild,v 1.2 2010/06/21 21:19:12 mabi Exp $
 
 EAPI="2"
 inherit php-pear-lib-r1
@@ -9,7 +9,7 @@ KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Object Persistence Layer for PHP 5 (Generator)."
 HOMEPAGE="http://propel.phpdb.org/trac/wiki/"
-SRC_URI="http://files.propelorm.org/propel-${PV}.tar.gz"
+SRC_URI="http://pear.propelorm.org/get/propel_generator-${PV}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
