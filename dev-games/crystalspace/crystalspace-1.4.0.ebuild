@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.4 2010/06/20 16:53:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.5 2010/06/21 15:59:07 tupone Exp $
 
 EAPI=2
-inherit eutils flag-o-matic multilib autotools wxwidgets
+inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets
 
 MY_P=${PN}-src-${PV}
 DESCRIPTION="Portable 3D Game Development Kit written in C++"
@@ -13,10 +13,10 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="3ds alsa bullet cal3d cegui cg doc jpeg mng ode png python
+IUSE="3ds alsa bullet cal3d cegui cg doc java jpeg mng ode png python
 sdl speex truetype vorbis wxwidgets"
 
-RDEPEND="virtual/opengl
+COMMON_DEP="virtual/opengl
 	media-libs/openal
 	x11-libs/libXt
 	x11-libs/libXxf86vm
@@ -37,7 +37,12 @@ RDEPEND="virtual/opengl
 	cegui? ( >=dev-games/cegui-0.5.0 )
 	3ds? ( media-libs/lib3ds )"
 
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEP}
+	java? ( >=virtual/jre-1.5 )"
+
+DEPEND="${COMMON_DEP}
+	java? ( >=virtual/jdk-1.5
+		dev-java/ant-core )
 	dev-util/ftjam
 	dev-lang/swig
 	dev-util/pkgconfig"
@@ -72,7 +77,7 @@ src_configure() {
 		--without-caca \
 		--without-jackasyn \
 		--without-perl \
-		--without-java \
+		$(use_with java) \
 		--disable-make-emulation \
 		$(use_with bullet) \
 		$(use_with python) \
@@ -102,11 +107,10 @@ src_compile() {
 }
 
 src_install() {
-	for installTarget in install_bin install_plugin install_lib \
-		install_include install_data install_config
+	for installTarget in bin plugin lib include data config bindings
 	do
-		jam -q -s DESTDIR="${D}" ${installTarget} \
-			|| die "jam ${installTarget} failed"
+		jam -q -s DESTDIR="${D}" install_${installTarget} \
+			|| die "jam install_${installTarget} failed"
 	done
 	if use doc; then
 		jam -q -s DESTDIR="${D}" install_doc || die "jam install_doc failed"
