@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.0a.ebuild,v 1.1 2010/06/21 09:04:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.0a.ebuild,v 1.2 2010/06/21 09:05:31 ssuominen Exp $
 
 EAPI=2
 inherit libtool
@@ -40,7 +40,7 @@ src_install() {
 	doins testbed/*.icm || die
 
 	dodoc AUTHORS ChangeLog || die
-	
+
 	insinto /usr/share/doc/${PF}/pdf
 	doins doc/*.pdf || die
 
