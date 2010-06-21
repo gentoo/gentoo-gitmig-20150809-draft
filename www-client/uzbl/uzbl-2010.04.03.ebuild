@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.04.03.ebuild,v 1.3 2010/04/04 15:36:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.04.03.ebuild,v 1.4 2010/06/21 17:27:01 fauli Exp $
 
 EAPI="2"
 
@@ -10,14 +10,14 @@ IUSE=""
 if [[ ${PV} == *9999* ]]; then
 	inherit git
 	EGIT_REPO_URI=${EGIT_REPO_URI:-"git://github.com/Dieterbe/uzbl.git"}
-	KEYWORDS=""
+	KEYWORDS="x86"
 	SRC_URI=""
 	IUSE="experimental"
 	use experimental &&
 		EGIT_BRANCH="experimental" &&
 		EGIT_COMMIT="experimental"
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 x86"
 	SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${PV} -> ${P}.tar.gz"
 fi
 
