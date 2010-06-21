@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/kdeartwork-wallpapers-4.4.4.ebuild,v 1.1 2010/06/06 14:41:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/kdeartwork-wallpapers-4.4.4-r1.ebuild,v 1.1 2010/06/21 10:43:10 reavertm Exp $
 
 EAPI="3"
 
@@ -14,4 +14,9 @@ DESCRIPTION="Wallpapers from kde"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
+# Please bump this as needed (probably at least for every minor version)
 add_blocker kdebase-wallpapers '<4.4.0'
+
+KMEXTRA="
+	HighResolutionWallpapers/
+"
