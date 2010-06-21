@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.04.03.ebuild,v 1.4 2010/06/21 17:27:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.04.03.ebuild,v 1.5 2010/06/21 17:37:34 scarabeus Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ IUSE=""
 if [[ ${PV} == *9999* ]]; then
 	inherit git
 	EGIT_REPO_URI=${EGIT_REPO_URI:-"git://github.com/Dieterbe/uzbl.git"}
-	KEYWORDS="x86"
+	KEYWORDS=""
 	SRC_URI=""
 	IUSE="experimental"
 	use experimental &&

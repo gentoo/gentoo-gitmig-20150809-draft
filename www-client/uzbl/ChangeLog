@@ -1,6 +1,10 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.28 2010/06/21 17:27:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.29 2010/06/21 17:37:34 scarabeus Exp $
+
+  21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  uzbl-2010.04.03.ebuild:
+  QA: Fix keywording. Ekeyword gets confused with multiple KEYWORDS lines.
 
   21 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   uzbl-2010.04.03.ebuild:
