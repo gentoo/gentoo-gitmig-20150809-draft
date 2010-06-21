@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.2-r2.ebuild,v 1.1 2010/03/15 15:37:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.2-r2.ebuild,v 1.2 2010/06/21 16:50:20 ssuominen Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
-PATCHES="${FILESDIR}/directory_listing_gcc44.patch"
+PATCHES=( "${FILESDIR}/directory_listing_gcc44.patch" )
 DOCS="AUTHORS README THANKSTO Changelog"
 
 src_prepare() {
