@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.163 2010/06/21 15:53:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.164 2010/06/21 19:26:57 ssuominen Exp $
+
+  21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> -kget-4.3.5.ebuild:
+  Remove vulnerable kget from tree wrt #319719.
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kget-4.3.3.ebuild,
   -kget-4.3.3-r1.ebuild, kget-4.3.5.ebuild, kget-4.3.5-r1.ebuild,
