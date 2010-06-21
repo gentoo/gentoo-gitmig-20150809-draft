@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.761 2010/06/19 01:53:09 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.762 2010/06/21 22:49:21 zorry Exp $
+
+  21 Jun 2010; Magnus Granberg <zorry@gentoo.org> gcc-4.5.0.ebuild:
+  Add hardened support #318171
 
 *gcc-4.4.4-r1 (19 Jun 2010)
 *gcc-4.4.3-r3 (19 Jun 2010)

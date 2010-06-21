@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.5.0.ebuild,v 1.6 2010/05/17 20:02:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.5.0.ebuild,v 1.7 2010/06/21 22:49:21 zorry Exp $
 
 PATCH_VER="1.1"
 UCLIBC_VER="1.0"
@@ -8,18 +8,16 @@ UCLIBC_VER="1.0"
 ETYPE="gcc-compiler"
 
 # Hardened gcc 4 stuff
-#PIE_VER="10.1.5"
-#SPECS_VER="0.9.4"
-
-# arch/libc configurations known to be stable or untested with {PIE,SSP,FORTIFY}-by-default
-#PIE_GLIBC_STABLE="x86 amd64 ~ppc ~ppc64 ~arm ~sparc"
-#PIE_UCLIBC_STABLE="x86 arm"
-#SSP_STABLE="amd64 x86 ppc ppc64 ~arm ~sparc"
-#SSP_UCLIBC_STABLE=""
-
-# whether we should split out specs files for multiple {PIE,SSP}-by-default
-# and vanilla configurations.
-SPLIT_SPECS=no #${SPLIT_SPECS-true} hard disable until #106690 is fixed
+PIE_VER="0.4.5"
+SPECS_VER="0.2.0"
+SPECS_GCC_VER="4.4.3"
+# arch/libc configurations known to be stable with {PIE,SSP}-by-default
+PIE_GLIBC_STABLE="x86 amd64 ppc ppc64 arm ia64"
+PIE_UCLIBC_STABLE="x86 arm amd64 ppc ppc64"
+SSP_STABLE="amd64 x86 ppc ppc64 arm
+# uclibc need tls and nptl support for SSP support"
+SSP_UCLIBC_STABLE=""
+#end Hardened stuff
 
 inherit toolchain
 
