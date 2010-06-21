@@ -5,8 +5,8 @@
 	<use>
 		<flag name='empathy'>Enables support for <pkg>net-im/empathy</pkg></flag>
 		<flag name='gajim'>Enables support for <pkg>net-im/gajim</pkg></flag>
-		<!-- <flag name='mail'>Enables support for mailto using
-			<pkg>gnome-extra/evolution-data-server</pkg></flag> -->
+		<flag name='mail'>Enables support for mailto using
+			<pkg>gnome-extra/evolution-data-server</pkg></flag>
 		<flag name='pidgin'>Enables support for <pkg>net-im/pidgin</pkg></flag>
 		<flag name='upnp'>Enables support for sending files over upnp using
 			<pkg>net-libs/gupnp-av</pkg></flag>
