@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.12 2010/04/16 10:44:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.47.ebuild,v 1.13 2010/06/21 15:14:55 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic gnome2
@@ -41,7 +41,7 @@ COMMON_DEPEND="
 	>=x11-libs/pango-1.4.0
 	|| ( dev-lang/python[xml] dev-python/pyxml )
 	gnome? ( >=gnome-base/gnome-vfs-2.0 )
-	lcms? ( >=media-libs/lcms-1.14 )
+	lcms? ( =media-libs/lcms-1* )
 	spell? (
 		app-text/aspell
 		app-text/gtkspell
