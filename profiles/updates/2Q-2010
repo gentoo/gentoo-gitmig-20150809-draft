@@ -34,3 +34,4 @@ move dev-util/cvsq dev-vcs/cvsq
 move dev-util/cvsutils dev-vcs/cvsutils
 move dev-util/gitosis dev-vcs/gitosis
 move dev-util/gitosis-gentoo dev-vcs/gitosis-gentoo
+move dev-util/tkcvs dev-vcs/tkcvs
