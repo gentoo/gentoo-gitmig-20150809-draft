@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FreezeThaw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.24 2010/06/15 05:28:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/ChangeLog,v 1.25 2010/06/21 19:58:35 armin76 Exp $
+
+  21 Jun 2010; Raúl Porcel <armin76@gentoo.org> FreezeThaw-0.50.01.ebuild:
+  alpha/ia64/s390/sparc stable wrt #323529
 
   15 Jun 2010; Torsten Veller <tove@gentoo.org> FreezeThaw-0.50.01.ebuild:
   Stable on amd64 and x86 (#323529)
