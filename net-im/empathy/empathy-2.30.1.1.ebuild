@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.1.1.ebuild,v 1.3 2010/06/16 09:08:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.1.1.ebuild,v 1.4 2010/06/21 19:27:38 pacho Exp $
 
 EAPI="2"
 
@@ -35,7 +35,10 @@ RDEPEND=">=dev-libs/glib-2.22.0
 	x11-libs/libX11
 	net-voip/telepathy-connection-managers
 
-	nautilus? ( >=gnome-extra/nautilus-sendto-2.28.1[-empathy] )
+	nautilus? ( || (
+		>=gnome-extra/nautilus-sendto-2.28.1[-empathy]
+		>=gnome-extra/nautilus-sendto-2.28.4-r1 ) )
+
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	spell? (
 		app-text/enchant
