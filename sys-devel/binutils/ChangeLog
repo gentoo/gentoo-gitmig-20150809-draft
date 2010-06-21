@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.390 2010/06/13 22:06:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.391 2010/06/21 17:04:52 maekke Exp $
+
+  21 Jun 2010; Markus Meier <maekke@gentoo.org> binutils-2.20.1-r1.ebuild:
+  arm stable, bug #298571
 
   13 Jun 2010; Christoph Mende <angelos@gentoo.org>
   binutils-2.20.1-r1.ebuild:
