@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.4.4.ebuild,v 1.2 2010/06/21 15:53:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.4.4.ebuild,v 1.3 2010/06/21 21:30:07 reavertm Exp $
 
 EAPI="3"
 
@@ -84,6 +84,7 @@ src_configure() {
 		$(cmake-utils_use_with python PyKDE4)
 		$(cmake-utils_use_with rss KdepimLibs)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
+		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with xinerama X11_Xinerama)
 		-DWITH_Xmms=OFF
 	)
