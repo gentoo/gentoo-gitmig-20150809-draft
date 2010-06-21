@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.5.ebuild,v 1.2 2010/06/20 21:58:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.5.ebuild,v 1.3 2010/06/21 07:45:41 xarthisius Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://hg.linux-ha.org/glue/archive/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc static-libs"
 
 RDEPEND="app-arch/bzip2
 	net-libs/libnet:1.1
@@ -45,7 +45,7 @@ src_configure() {
 
 	use doc && myopts=" --enable-doc"
 	econf \
-		--disable-static \
+		$(use_enable static-libs static) \
 		--disable-fatal-warnings \
 		--disable-dependency-tracking \
 		--docdir=/usr/share/doc/${PF} \
