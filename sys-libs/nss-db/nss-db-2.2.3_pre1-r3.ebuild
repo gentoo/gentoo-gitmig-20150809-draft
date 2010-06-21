@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r3.ebuild,v 1.1 2010/06/18 06:23:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r3.ebuild,v 1.2 2010/06/21 21:09:44 mr_bones_ Exp $
 
 inherit eutils versionator multilib autotools
 
@@ -76,7 +76,7 @@ src_unpack() {
 
 	# Fixes thanks to Flameeyes
 	# missing
-	cp /usr/share/gettext/config.rpath . 
+	cp /usr/share/gettext/config.rpath .
 	sed -i -e '/makedb_LDADD/i makedb_CFLAGS=$(AM_CFLAGS)' src/Makefile.am
 	sed -i -e '/AC_PROG_CC/a AC_PROG_CC_C_O' configure.in
 	eautoreconf
