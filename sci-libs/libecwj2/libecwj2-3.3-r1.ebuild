@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.3 2010/06/21 10:30:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.4 2010/06/21 17:00:14 maekke Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ermapper.com/ProductView.aspx?t=28"
 
 LICENSE="ECWPL"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples"
 
 RDEPEND="=media-libs/lcms-1*"
