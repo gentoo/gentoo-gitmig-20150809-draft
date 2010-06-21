@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.7-r2.ebuild,v 1.2 2010/06/19 01:15:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.7-r2.ebuild,v 1.3 2010/06/21 15:39:32 gmsoft Exp $
 
 EAPI="2"
 # jruby failed to install
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.puppetlabs.com/puppet/related-projects/facter/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 
 RUBY_PATCHES=(
 	"${FILESDIR}/${P}-fqdn.patch"

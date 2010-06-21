@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.27 2010/06/19 01:15:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.28 2010/06/21 15:39:32 gmsoft Exp $
+
+  21 Jun 2010; Guy Martin <gmsoft@gentoo.org> facter-1.5.7-r2.ebuild:
+  added ~hppa to KEYWORDS
 
   19 Jun 2010; MATSUU Takuto <matsuu@gentoo.org> facter-1.5.7-r2.ebuild:
   Fixed doc handling, bug #324341.
