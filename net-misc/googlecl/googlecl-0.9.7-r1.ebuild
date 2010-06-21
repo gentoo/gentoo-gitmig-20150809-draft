@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/googlecl/googlecl-0.9.7.ebuild,v 1.1 2010/06/20 13:50:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/googlecl/googlecl-0.9.7-r1.ebuild,v 1.1 2010/06/21 18:57:41 wired Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.5:2.6"
@@ -29,4 +29,5 @@ src_install() {
 	distutils_src_install
 
 	dodoc changelog || die "dodoc failed"
+	doman man/*.1 || die "doman failed"
 }
