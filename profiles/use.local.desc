@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5686 2010/06/21 14:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5687 2010/06/21 15:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -512,7 +512,7 @@ app-pda/synce:serial - Enable serial port support (installs app-pda/synce-serial
 app-pda/synce-fur:void-chmod - enable a fake fuse hook for "chmod" that just returns 0
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
 app-portage/eix:bzip2 - Support for parsing of environment.bz2 to guess repository name of packages installed with ancient portage versions (requires app-arch/bzip2). This flag is safe to disable for portage users that have re-merged all packages since 2007. This flag will be phased out.
-app-portage/eix:debug - Build with CXXFLAGS/LDFLAGS for debugging support. Only makes sense in combination with FEATURES=nostrip.
+app-portage/eix:debug - Build with CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.
 app-portage/eix:deprecated - Installs wrapper scripts for all the previous executable names that will soon be going away. Enabled by default in 0.17.0, optional in 0.18.0, removed in next major release.
 app-portage/eix:doc - Create description of the eix cache file additionally in html format
 app-portage/eix:hardened - Add CXXFLAGS/LDFLAGS enhancing security at the cost of a slight speed loss. If a hardened gcc is used, these flags should not make a difference.
@@ -3044,6 +3044,8 @@ sci-biology/hmmer:pvm - Add support for parallel virtual machine (sys-cluster/pv
 sci-biology/mcl:blast -  add support for NCBI BLAST data 
 sci-biology/plink:webcheck -  add support for online update checking every time the program starts 
 sci-biology/ucsc-genome-browser:server - Install genome browser Web application. If this flag is off, only libraries and utilities from the suite are installed.
+sci-biology/yass:dmalloc - Enable debugging with the dmalloc library
+sci-biology/yass:lowmem - Build for environments with low amounts of memory
 sci-chemistry/apbs:arpack - Include support for arpack libs
 sci-chemistry/apbs:tinker - Provide support for sci-chemistry/tinker
 sci-chemistry/apbs:tools - Install optional tools
@@ -3056,7 +3058,7 @@ sci-chemistry/eden:double-precision - More precise calculations at the expense o
 sci-chemistry/gamess:qmmm-tinker - Enable tinker qmmm code
 sci-chemistry/ghemical:openbabel - Use sci-chemistry/openbabel for file conversions
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
-sci-chemistry/gromacs:dmalloc - Enable use of Debug Malloc
+sci-chemistry/gromacs:dmalloc - Enable debugging with the dmalloc library
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
 sci-chemistry/gromacs:fkernels - Enable building of Fortran Kernels for platforms that dont have assembly loops
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs
