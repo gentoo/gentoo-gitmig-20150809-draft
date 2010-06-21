@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.162 2010/02/06 10:50:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.163 2010/06/21 23:08:05 vapier Exp $
+
+*openafs-1.4.12.1 (21 Jun 2010)
+
+  21 Jun 2010; Mike Frysinger <vapier@gentoo.org> +openafs-1.4.12.1.ebuild,
+  metadata.xml:
+  Version bump #310627 by William Throwe. Dont install kdump #222455 by
+  Gautam Iyer. Dont install lwp #200674 by John Gibson.
 
   06 Feb 2010; Ulrich Mueller <ulm@gentoo.org> openafs-1.4.6.ebuild,
   openafs-1.4.6_p20080222.ebuild, openafs-1.4.7.ebuild,
