@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.4.4.ebuild,v 1.2 2010/06/21 15:53:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.4.4.ebuild,v 1.3 2010/06/21 20:27:47 reavertm Exp $
 
 EAPI="3"
 inherit kde4-functions
@@ -15,7 +15,6 @@ IUSE="aqua kdeprefix policykit"
 
 RDEPEND="
 	$(add_kdebase_dep dolphin)
-	$(add_kdebase_dep kappfinder)
 	$(add_kdebase_dep kcheckpass)
 	$(add_kdebase_dep kcminit)
 	$(add_kdebase_dep kdebase-cursors)
