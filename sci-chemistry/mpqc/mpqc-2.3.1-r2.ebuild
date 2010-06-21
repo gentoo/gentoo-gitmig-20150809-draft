@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r2.ebuild,v 1.1 2010/05/23 10:40:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r2.ebuild,v 1.2 2010/06/21 13:32:33 jlec Exp $
 
 EAPI=2
 
-inherit autotools eutils fortran
+inherit autotools eutils fortran toolchain-funcs
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
@@ -44,6 +44,8 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-export CC
+	tc-export CXX
 	if use mpi; then
 		export CC=mpicc
 		export CXX=mpicxx
