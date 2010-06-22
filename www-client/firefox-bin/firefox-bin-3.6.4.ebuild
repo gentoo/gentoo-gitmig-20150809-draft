@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.4.ebuild,v 1.1 2010/06/22 21:36:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.4.ebuild,v 1.2 2010/06/22 22:02:29 nirbheek Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -157,8 +157,7 @@ pkg_postinst() {
 			einfo "gnome-base/orbit and net-misc/curl emerged."
 			einfo
 		fi
-		if has_version 'net-misc/curl' && built_with_use --missing \
-			true 'net-misc/curl' nss; then
+		if has_version 'net-misc/curl[nss]'; then
 			einfo
 			einfo "Crashreporter won't be able to send reports"
 			einfo "if you have curl emerged with the nss USE-flag"

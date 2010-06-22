@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.17 2010/06/22 21:36:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.18 2010/06/22 22:02:29 nirbheek Exp $
+
+  22 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  firefox-bin-3.6.4.ebuild:
+  Don't use built_with_use --missing anymore since all versions of curl
+  in-tree have USE=nss on them
 
 *firefox-bin-3.6.4 (22 Jun 2010)
 
