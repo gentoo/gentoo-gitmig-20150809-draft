@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.30.1.ebuild,v 1.2 2010/06/15 16:39:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.30.2.ebuild,v 1.1 2010/06/22 12:37:50 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
