@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/noegnud-nethack
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/ChangeLog,v 1.10 2007/03/14 18:19:31 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-nethack/ChangeLog,v 1.11 2010/06/22 13:47:54 fauli Exp $
+
+  22 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  noegnud-nethack-0.8.3.ebuild:
+  stable x86, bug 315301
 
   14 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
   +files/noegnud-nethack-0.8.2-gcc41.patch,
