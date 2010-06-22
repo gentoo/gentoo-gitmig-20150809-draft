@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.3.ebuild,v 1.2 2010/06/17 19:39:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.3.ebuild,v 1.3 2010/06/22 20:07:21 arfrever Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND="cgi? ( >=media-libs/gd-2[png] )
 		usb? ( =virtual/libusb-0* )
 		hal? ( >=sys-apps/hal-0.5.11 )
 		ssl? ( dev-libs/openssl )
-		xml? ( >=net-misc/neon-0.25.0 )
+		xml? ( >=net-libs/neon-0.25.0 )
 		>=sys-fs/udev-114"
 DEPEND="$RDEPEND
 		>=sys-apps/sed-4
