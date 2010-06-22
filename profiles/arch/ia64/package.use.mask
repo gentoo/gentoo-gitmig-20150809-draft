@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.26 2010/06/13 20:55:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.27 2010/06/22 18:23:55 arfrever Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs gnome-extra/nautilus-sendto, wait for bug 323851
@@ -16,7 +16,7 @@ kde-base/plasma-workspace rss
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jan 2010)
 # Needs kde4 stable
-dev-util/subversion kde
+dev-vcs/subversion kde
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded

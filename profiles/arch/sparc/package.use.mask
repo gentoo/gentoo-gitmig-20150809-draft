@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.48 2010/06/12 16:12:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.49 2010/06/22 18:23:55 arfrever Exp $
 
 # Steve Arnold <nerdboy@gentoo.org> (12 Jun 2010)
 # masking for gdal (see bug 315659)
@@ -39,7 +39,7 @@ media-libs/libxspf doc
 # Requires stable KDE4
 app-office/openoffice kde
 app-arch/p7zip kde
-dev-util/subversion kde
+dev-vcs/subversion kde
 
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.
@@ -56,7 +56,7 @@ dev-python/PyQt4 assistant
 # Ben de Groot <yngwin@gentoo.org> (20 Feb 2009)
 # needs kde4 keyworded
 x11-themes/qtcurve-qt4 kde
-dev-util/subversion kde
+dev-vcs/subversion kde
 
 # Raúl Porcel <armin76@gentoo.org>
 # Depends on dev-java/fop which requires java...

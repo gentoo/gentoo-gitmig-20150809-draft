@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.7 2010/02/10 19:23:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.8 2010/06/22 18:23:54 arfrever Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (30 Oct 2009)
 # X only
@@ -18,7 +18,7 @@ app-editors/emacs-vcs aqua
 # Fabian Groffen <grobian@gentoo.org> (06 Aug 2008)
 # runtime loading is horribly broken (it uses fixed .so.0, but when
 # that's fixed it still doesn't work)
-dev-util/subversion dso
+dev-vcs/subversion dso
 
 # Elias Pipping <pipping@gentoo.org> (25 Nov 2007)
 # there's no (official) java6 on macosx

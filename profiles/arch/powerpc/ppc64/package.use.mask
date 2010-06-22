@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.21 2010/06/21 16:26:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.22 2010/06/22 18:23:55 arfrever Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org> (21 Jun 2010)
 # These will need stable kdelibs-4.
 app-i18n/uim kde
-dev-util/subversion kde
+dev-vcs/subversion kde
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs >=dev-libs/libgdata-0.4.0 keyworded, bugs 323845 and 323847

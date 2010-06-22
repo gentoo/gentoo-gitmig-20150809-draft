@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.25 2010/06/13 17:16:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.26 2010/06/22 18:23:54 arfrever Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs app-mobilephone/obex-data-server keyworded, bug 305913
@@ -12,7 +12,7 @@ net-misc/mediatomb lastfm
 
 # Raúl Porcel <armin76@gentoo.org> (28 Mar 2010)
 # Needs kde-4 stable
-dev-util/subversion kde
+dev-vcs/subversion kde
 
 # Mark Loeser <halcy0n@gentoo.org> (15 Feb 2010)
 # need >=net-wireless/bluez-4.61 keyworded
