@@ -7,6 +7,8 @@
 		optimizations</flag>
 	<flag name='filepicker'>Enable old gtkfilepicker from 1.0.x firefox</flag>
 	<flag name='iceweasel'>Enable iceweasel branding</flag>
+	<flag name="ipc">Use inter-process communication between tabs and plugins.
+		Allows for greater stability in case of plugin crashes</flag>
 	<flag name='mozdevelop'>Enable features for web developers (e.g.
 		Venkman)</flag>
 	<flag name='moznopango'>Disable <pkg>x11-libs/pango</pkg> during

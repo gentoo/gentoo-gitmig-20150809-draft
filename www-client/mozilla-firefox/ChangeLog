@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.615 2010/06/19 18:38:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.616 2010/06/22 21:18:12 nirbheek Exp $
+
+*mozilla-firefox-3.6.4 (22 Jun 2010)
+
+  22 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +mozilla-firefox-3.6.4.ebuild, metadata.xml:
+  Bump to 3.6.4, fixes several security issues, stability issues, and adds
+  support for out-of-process plugins (USE=+ipc)
 
   19 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mozilla-firefox-3.6.3.ebuild:
