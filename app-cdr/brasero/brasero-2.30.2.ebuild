@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.30.1.ebuild,v 1.1 2010/06/13 19:25:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.30.2.ebuild,v 1.1 2010/06/22 13:59:22 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -68,6 +68,12 @@ pkg_setup() {
 	fi
 
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+	# Fix tests, bgo#622394
+	echo libbrasero-burn/brasero-data-session.c >> po/POTFILES.in
 }
 
 src_install() {
