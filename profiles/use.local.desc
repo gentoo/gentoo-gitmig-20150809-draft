@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5696 2010/06/22 18:07:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5697 2010/06/22 18:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1131,11 +1131,6 @@ dev-util/radare:vala -  Enable support for the vala programming language
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
 dev-util/schroot:lvm - Enable support for chroots on LVM.
 dev-util/strace:aio - Enable libaio support
-dev-util/subversion:ctypes-python - Build and install Ctypes Python bindings
-dev-util/subversion:dso - Enable runtime module search
-dev-util/subversion:extras - Install extra scripts (examples, tools, hooks)
-dev-util/subversion:webdav-neon - Enable WebDAV support using net-libs/neon
-dev-util/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 dev-util/universalindentgui:html - Add support for HTML files
 dev-vcs/bzr:sftp - Enable sftp support
 dev-vcs/bzr-gtk:gconf - Enable GConf support
@@ -1158,6 +1153,11 @@ dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
 dev-vcs/qct:bazaar -  Support for dev-vcs/bzr 
 dev-vcs/qct:mercurial -  Support for dev-vcs/mercurial 
 dev-vcs/qct:monotone -  Support for dev-vcs/monotone 
+dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
+dev-vcs/subversion:dso - Enable runtime module search
+dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
+dev-vcs/subversion:webdav-neon - Enable WebDAV support using net-libs/neon
+dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 dev-vcs/svk:log4p - Enable perl logger support
 dev-vcs/svk:pager - Enable perl pager selection support
 dev-vcs/svk:patch - Enable patch creation, import support
