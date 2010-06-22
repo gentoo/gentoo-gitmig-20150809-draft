@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0-r1.ebuild,v 1.1 2008/12/10 18:01:53 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0-r1.ebuild,v 1.2 2010/06/22 18:43:03 tomjbe Exp $
 
 inherit eutils versionator
 
@@ -23,7 +23,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
 
-DEPEND=">=x11-libs/gtk+-2.4
+DEPEND=">=x11-libs/gtk+-2.18.6
 	>=dev-scheme/guile-1.6.3
 	=sci-libs/libgeda-${PV}"
 
@@ -47,6 +47,9 @@ src_unpack() {
 		-e 's:>/tmp/\$\$:>${TMP}:' \
 		"${S}"/geda-gnetlist-${PV}/scripts/sch2eaglepos.sh \
 		|| die "sed failed"
+	# fix for renamed members of GTKEntry from gtk+-2.17 on (see bug 323127)
+	cd "${S}"/geda-gattrib-${PV}
+	epatch "${FILESDIR}"/geda-gattrib-${PV}-gtkentry.patch
 }
 
 src_compile() {

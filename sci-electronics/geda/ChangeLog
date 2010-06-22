@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.58 2010/03/28 16:12:35 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.59 2010/06/22 18:43:03 tomjbe Exp $
+
+  22 Jun 2010; Thomas Beierlein <tomjbe@gentoo.org> geda-1.4.0-r1.ebuild,
+  +files/geda-gattrib-1.4.0-gtkentry.patch:
+  fix for renamed members of GTKEntry from gtk+-2.17 on (see bug 323127)
 
   28 Mar 2010; Denis Dupeyron <calchan@gentoo.org> geda-1.6.1.ebuild:
   Fixed bug 311699, thanks to Kostya Sha.
