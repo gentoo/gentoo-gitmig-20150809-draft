@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.316 2010/06/21 12:00:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.317 2010/06/22 21:18:09 nirbheek Exp $
+
+*xulrunner-1.9.2.4 (22 Jun 2010)
+
+  22 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +xulrunner-1.9.2.4.ebuild, metadata.xml:
+  Bump to .4, fixes several security issues, stability issues, and adds
+  support for out-of-process plugins (USE=+ipc)
 
   21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   xulrunner-1.9.2.3-r1.ebuild:
