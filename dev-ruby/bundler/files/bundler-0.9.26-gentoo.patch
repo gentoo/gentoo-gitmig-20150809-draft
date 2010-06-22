@@ -1,0 +1,62 @@
+diff --git a/bin/bundle b/bin/bundle
+index d2e5081..17db3f0 100755
+--- a/bin/bundle
++++ b/bin/bundle
+@@ -1,9 +1,14 @@
+ #!/usr/bin/env ruby
+ 
+ # Check if an older version of bundler is installed
++mybasedir = __FILE__.gsub(/\/bin\/bundle/, '')
++
+ require 'bundler'
+ $:.each do |path|
+-  if path =~ %r'/bundler-0.(\d+)' && $1.to_i < 9
++  # ignore the directory we're running from, in the tests
++  path = path.gsub(%r"^#{mybasedir}", '')
++
++  if path =~ %r'/bundler-0\.(\d+)' && $1.to_i < 9
+     abort "Please remove older versions of bundler. This can be done by running `gem cleanup bundler`."
+   end
+ end
+diff --git a/lib/bundler/rubygems_ext.rb b/lib/bundler/rubygems_ext.rb
+index bf74a60..c800827 100644
+--- a/lib/bundler/rubygems_ext.rb
++++ b/lib/bundler/rubygems_ext.rb
+@@ -26,7 +26,7 @@ module Gem
+     def git_version
+       if @loaded_from && File.exist?(File.join(full_gem_path, ".git"))
+         sha = Dir.chdir(full_gem_path){ `git rev-parse HEAD`.strip }
+-        branch = full_gem_path.split("-")[3]
++        branch = full_gem_path.match(/gems\/.*/).to_s.split("-")[3]
+         (branch && branch != sha) ? " #{branch}-#{sha[0...6]}" : " #{sha[0...6]}"
+       end
+     end
+diff --git a/spec/install/git_spec.rb b/spec/install/git_spec.rb
+index a732caa..4c1fc1a 100644
+--- a/spec/install/git_spec.rb
++++ b/spec/install/git_spec.rb
+@@ -301,7 +301,7 @@ describe "bundle install with git sources" do
+     should_be_installed "forced 1.1"
+ 
+     Dir.chdir(lib_path('forced-1.0')) do
+-      `git reset --hard head^`
++      `git reset --hard HEAD^`
+     end
+     bundle :install
+     should_be_installed "forced 1.0"
+diff --git a/spec/runtime/environment_rb_spec.rb b/spec/runtime/environment_rb_spec.rb
+index 73a388c..34417dc 100644
+--- a/spec/runtime/environment_rb_spec.rb
++++ b/spec/runtime/environment_rb_spec.rb
+@@ -204,6 +204,11 @@ describe "environment.rb file" do
+     end
+ 
+     it "warns you if it's from an old bundler but read-only" do
++      if Process.euid == 0
++        pending "this test cannot succeed as root"
++        return
++      end
++
+       env_file(env_file.read.gsub("by Bundler #{Bundler::VERSION}", "by Bundler 0.9.0"))
+       FileUtils.chmod 0444, env_file
+       ruby <<-R, :expect_err => true
