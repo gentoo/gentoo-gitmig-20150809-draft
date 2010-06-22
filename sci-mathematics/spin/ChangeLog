@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/spin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/ChangeLog,v 1.2 2010/06/11 14:31:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/ChangeLog,v 1.3 2010/06/22 17:49:59 phajdan.jr Exp $
+
+*spin-5.2.5-r1 (22 Jun 2010)
+
+  22 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +spin-5.2.5-r1.ebuild, +files/spin-font-size.patch:
+  Apply a patch to make the font size more sane. Otherwise the toolbar
+  buttons are not visible in default configuration.
 
 *spin-5.2.5 (11 Jun 2010)
 
