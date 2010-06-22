@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-vcs-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/ChangeLog,v 1.9 2010/03/17 16:51:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/ChangeLog,v 1.10 2010/06/22 18:56:28 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  thunar-vcs-plugin-0.1.2.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   thunar-vcs-plugin-0.1.2.ebuild, metadata.xml:
