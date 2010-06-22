@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.22 2010/06/05 22:55:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.23 2010/06/22 16:58:38 tommy Exp $
+
+  22 Jun 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  aufs2-0_p20100524.ebuild, +files/pax.patch:
+  Fix bug 321653, bug 323029 and a compile error with hardened-sources
 
   05 Jun 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   aufs2-0_p20100524.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100524.ebuild,v 1.2 2010/06/05 22:55:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100524.ebuild,v 1.3 2010/06/22 16:58:38 tommy Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug inotify kernel-patch nfs ramfs"
+IUSE="debug inotify hardened kernel-patch nfs ramfs"
 
 DEPEND="dev-vcs/git"
 RDEPEND="!sys-fs/aufs"
@@ -65,6 +65,9 @@ src_prepare() {
 	if use ramfs; then
 		sed -i  "s:RAMFS =:RAMFS = y:g" config.mk || die
 	fi
+	if use hardened ; then
+		epatch "${FILESDIR}"/pax.patch
+	fi
 
 	cd "${WORKDIR}"/${PN}-util
 	sed -i "/LDFLAGS += -static -s/d" Makefile || die
@@ -86,7 +89,7 @@ src_install() {
 	docinto design
 	dodoc design/*.txt || die
 	cd "${WORKDIR}"/${PN}-util
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" KDIR=${KV_DIR} install || die
 	docinto
 	newdoc README README-utils || die
 }
