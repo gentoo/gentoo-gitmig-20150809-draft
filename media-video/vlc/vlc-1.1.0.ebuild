@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.0.ebuild,v 1.2 2010/06/22 08:56:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.0.ebuild,v 1.3 2010/06/22 12:26:03 aballier Exp $
 
 EAPI="2"
 
@@ -359,11 +359,6 @@ src_install() {
 	fi
 
 	use skins || rm -rf "${D}/usr/share/vlc/skins2"
-
-	for res in 16 32 48; do
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
-		newins "${S}"/share/vlc${res}x${res}.png vlc.png
-	done
 }
 
 pkg_postinst() {
