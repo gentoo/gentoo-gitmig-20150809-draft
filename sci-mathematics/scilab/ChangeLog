@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/scilab
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.47 2009/08/10 13:41:15 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.48 2010/06/22 12:50:37 jlec Exp $
+
+  22 Jun 2010; Justin Lecher <jlec@gentoo.org> -scilab-4.0.ebuild:
+  Removed broken version, #147900 & #155893
 
 *scilab-4.1.2-r2 (10 Aug 2009)
 
