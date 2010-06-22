@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.66 2010/06/02 06:40:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.67 2010/06/22 09:17:08 hwoarang Exp $
+
+  22 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +obconf-9999.ebuild:
+  Moved live ebuild from lxde-overlay
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove omp from metadata.xml (#147119)
