@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/corkscrew
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.7 2010/05/28 14:10:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.8 2010/06/22 17:41:00 angelos Exp $
+
+  22 Jun 2010; Christoph Mende <angelos@gentoo.org> corkscrew-2.0.ebuild:
+  QA: Respect CC and use emake
 
   28 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove klieber from metadata.xml (#317393)
