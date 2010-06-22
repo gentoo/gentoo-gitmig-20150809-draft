@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.235 2010/06/13 15:51:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.236 2010/06/22 12:49:37 pacho Exp $
+
+*libwnck-2.30.2 (22 Jun 2010)
+
+  22 Jun 2010; Pacho Ramos <pacho@gentoo.org> -libwnck-2.30.0.ebuild,
+  +libwnck-2.30.2.ebuild:
+  Version bump with translation updates and many GSeal-related fixes. Remove
+  old testing.
 
 *libwnck-2.30.0 (13 Jun 2010)
 
