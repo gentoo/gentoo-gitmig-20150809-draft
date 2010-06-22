@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9_beta-r1.ebuild,v 1.2 2010/06/22 18:41:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.ebuild,v 1.1 2010/06/22 21:16:57 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -12,11 +12,11 @@ HOMEPAGE="http://www.netbeans.org"
 SLOT="6.9"
 # netbeans distributes sources without jar files now so we need our own tarball
 # netbeans does not distribute tarball with localizations at all
-SRC_URI="mirror://gentoo/netbeans-6.9_beta.tar.bz2
-	mirror://gentoo/netbeans-6.9-l10n-20100421122556.tar.bz2"
+SRC_URI="mirror://gentoo/netbeans-6.9.tar.bz2
+	mirror://gentoo/netbeans-6.9-l10n.tar.bz2"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 IUSE_NETBEANS_MODULES="
 	+netbeans_modules_apisupport
@@ -36,17 +36,21 @@ IUSE_NETBEANS_MODULES="
 	netbeans_modules_ruby
 	+netbeans_modules_websvccommon"
 IUSE_LINGUAS="
+	linguas_af
 	linguas_ar
 	linguas_ca
 	linguas_cs
 	linguas_de
+	linguas_el
 	linguas_es
 	linguas_fr
 	linguas_gl
+	linguas_hi_IN
 	linguas_id
 	linguas_it
 	linguas_ja
 	linguas_ko
+	linguas_lt
 	linguas_nl
 	linguas_pl
 	linguas_pt_BR
@@ -54,8 +58,11 @@ IUSE_LINGUAS="
 	linguas_ro
 	linguas_ru
 	linguas_sq
+	linguas_sr
 	linguas_sv
+	linguas_tl
 	linguas_tr
+	linguas_vi
 	linguas_zh_CN
 	linguas_zh_TW"
 IUSE="debug doc ${IUSE_NETBEANS_MODULES} ${IUSE_LINGUAS}"
@@ -154,7 +161,7 @@ RDEPEND=">=virtual/jdk-1.6
 		dev-java/jna-posix:0
 		dev-java/joda-time:0
 		dev-java/joni:0
-		dev-java/jruby:0
+		>=dev-java/jruby-1.5:0
 		dev-util/jay:0[java]
 	)"
 
@@ -440,7 +447,8 @@ pkg_setup() {
 src_prepare () {
 	# We need to disable downloading of jars
 	epatch "${FILESDIR}"/${SLOT}/nbbuild_build.xml.patch \
-		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch
+		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch \
+		"${FILESDIR}"/${SLOT}/o.jruby.distro_disable.patch
 
 	# Clean up nbbuild
 	einfo "Removing prebuilt *.class files from nbbuild"
@@ -486,8 +494,7 @@ src_prepare () {
 			filter_file "libs.glassfish_logging/external/glassfish-logging-2.0.jar" ${tmpfile}
 			# http://www.netbeans.org/issues/show_bug.cgi?id=164334
 			filter_file "servletjspapi/external/servlet2.5-jsp2.1-api.jar" ${tmpfile}
-			filter_file "spring.webmvc/external/spring-webmvc-2.5.jar" ${tmpfile}
-			filter_file "spring.webmvc/external/spring-webmvc-3.0.0.RELEASE.jar" ${tmpfile}
+			filter_file "spring.webmvc/external/spring-webmvc-2.5.6.SEC01.jar" ${tmpfile}
 			filter_file "web.jspparser/external/glassfish-jspparser-2.0.jar" ${tmpfile}
 			# api documentation packaged as jar
 			filter_file "websvc.restlib/external/jersey-client-1.1.5.1-javadoc.jar" ${tmpfile}
@@ -541,7 +548,7 @@ src_prepare () {
 		fi
 
 		if use netbeans_modules_java ; then
-			filter_file "j2ee.eclipselink/external/eclipselink-2.0.1.jar" ${tmpfile}
+			filter_file "j2ee.eclipselink/external/eclipselink-2.0.2.jar" ${tmpfile}
 			filter_file "j2ee.eclipselink/external/eclipselink-javax.persistence-2.0.jar" ${tmpfile}
 			# netbeans bundles also toplink-essentials in the jar
 			filter_file "j2ee.toplinklib/external/glassfish-persistence-v2ur1-build-09d.jar" ${tmpfile}
@@ -553,7 +560,7 @@ src_prepare () {
 			filter_file "libs.javacapi/external/javac-api-nb-7.0-b07.jar" ${tmpfile}
 			# some netbeans stuff
 			filter_file "libs.javacimpl/external/javac-impl-nb-7.0-b07.jar" ${tmpfile}
-			filter_file "libs.springframework/external/spring-2.5.jar" ${tmpfile}
+			filter_file "libs.springframework/external/spring-2.5.6.SEC01.jar" ${tmpfile}
 			# maven stuff - ignoring for now
 			filter_file "maven.embedder/external/maven-dependency-tree-1.2.jar" ${tmpfile}
 			# maven stuff - ignoring for now
@@ -649,13 +656,22 @@ src_compile() {
 	local locales=""
 	for lang in ${IUSE_LINGUAS} ; do
 		local mylang=${lang/linguas_/}
-		if use ${lang} ; then
-			if [ "${mylang}" = "gl" ] ; then
-				mylang="gl_ES"
-			elif [ "${mylang}" = "id" ] ; then
-				mylang="in_ID"
-			fi
 
+		if [[ "${mylang}" = "ar" ]] ; then
+			mylang="ar_EG,ar_SA"
+		elif [[ "${mylang}" = "es" ]] ; then
+			mylang="es,es_CO"
+		elif [[ "${mylang}" = "gl" ]] ; then
+			mylang="gl_ES"
+		elif [[ "${mylang}" = "id" ]] ; then
+			mylang="in_ID"
+		elif [[ "${mylang}" = "nl" ]] ; then
+			mylang="nl_BE,nl_NL"
+		elif [[ "${mylang}" = "tl" ]] ; then
+			mylang="fil_PH"
+		fi
+
+		if use ${lang} ; then
 			if [ -z "${locales}" ] ; then
 				locales="${mylang}"
 			else
@@ -686,9 +702,10 @@ src_compile() {
 
 	# Use the system ant
 	if use netbeans_modules_java ; then
-		cd "${BUILDDESTINATION}"/java/ant || die "Cannot cd to "${BUILDDESTINATION}"/java3/ant"
+		cd "${BUILDDESTINATION}"/java/ant || die "Cannot cd to "${BUILDDESTINATION}"/java/ant"
 		rm -fr lib
 		rm -fr bin
+		rm -fr etc
 	fi
 
 	# Set initial default jdk
@@ -698,8 +715,8 @@ src_compile() {
 
 	# Install Gentoo Netbeans ID
 	# This ID is used to identify our netbeans package while contacting update center
-	mkdir -p  "${BUILDDESTINATION}"/nb${SLOT}/config || die
-	echo "NBGNT" > "${BUILDDESTINATION}"/nb${SLOT}/config/productid || die "Could not set Gentoo Netbeans ID"
+	mkdir -p  "${BUILDDESTINATION}"/nb/config || die
+	echo "NBGNT" > "${BUILDDESTINATION}"/nb/config/productid || die "Could not set Gentoo Netbeans ID"
 
 	# fix paths per bug# 163483
 	if [[ -e "${BUILDDESTINATION}"/bin/netbeans ]]; then
@@ -760,12 +777,15 @@ src_install() {
 			fperms 755 ${file} || die
 		done
 	fi
-	if use netbeans_modules_ruby ; then
-		cd "${D}"/${DESTINATION}/ruby/jruby-1.4.0/bin || die
-		for file in * ; do
-			fperms 755 ${file} || die
-		done
-	fi
+
+	# this is disabled because we have issue with building jruby-1.5.0, so we do not
+	# build jruby at all and instead users will have to use only system jruby
+	#if use netbeans_modules_ruby ; then
+	#	cd "${D}"/${DESTINATION}/ruby/jruby-1.5.0/bin || die
+	#	for file in * ; do
+	#		fperms 755 ${file} || die
+	#	done
+	#fi
 
 	# Link netbeans executable from bin
 	if [[ -f "${D}"/${DESTINATION}/bin/netbeans ]]; then
@@ -798,7 +818,7 @@ src_install() {
 	if use netbeans_modules_nb ; then
 		einfo "Installing icon..."
 		dodir /usr/share/icons/hicolor/32x32/apps
-		dosym ${DESTINATION}/nb${SLOT}/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
+		dosym ${DESTINATION}/nb/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
 	fi
 
 	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans-${SLOT} Development
@@ -811,6 +831,36 @@ pkg_postinst() {
 		einfo "If you want to force specific locale, use --locale argument, for example:"
 		einfo "${PN}-${SLOT} --locale de"
 		einfo "${PN}-${SLOT} --locale pt:BR"
+	fi
+
+	if use linguas_ar ; then
+		einfo "You selected Arabic locale so you can choose either ar:EG or ar:SA variant."
+	fi
+
+	if use linguas_es ; then
+		einfo "You selected Spanish locale so you can choose either es or es:CO variant."
+	fi
+
+	if use linguas_gl ; then
+		einfo "You selected Galician locale which has locale code gl:ES in Netbeans."
+	fi
+
+	if use linguas_id ; then
+		einfo "You selected Indonesian locale which has locale code in:ID in Netbeans."
+	fi
+
+	if use linguas_nl ; then
+		einfo "You selected Dutch locale so you can choose either nl:BE or nl:NL variant."
+	fi
+
+	if use linguas_tl ; then
+		einfo "You selected Tagalog locale which has for Filipino locale code fil:PH in Netbeans."
+	fi
+
+	if use netbeans_modules_ruby ; then
+		ewarn "Due to issue with building jruby-1.5.0, bundled jruby is completely removed from"
+		ewarn "build, and also Glassfish JRuby module is removed. Nevertheless you should be able"
+		ewarn "to use Gentoo JRuby package with Netbeans without any problems."
 	fi
 }
 

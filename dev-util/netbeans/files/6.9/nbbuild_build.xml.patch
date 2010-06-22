@@ -1,6 +1,6 @@
---- nbbuild/build.xml.orig	2010-04-23 03:36:06.000000000 +0200
-+++ nbbuild/build.xml	2010-04-23 03:36:49.000000000 +0200
-@@ -82,13 +82,6 @@
+--- nbbuild/build.xml.orig	2010-06-22 18:39:18.000000000 +0200
++++ nbbuild/build.xml	2010-06-22 19:05:03.000000000 +0200
+@@ -85,13 +85,6 @@
      <validate-hg-configuration root=".."/>
      <taskdef name="deregisterexternalhook" classname="org.netbeans.nbbuild.extlibs.DeregisterExternalHook" classpath="build/antclasses"/>
      <deregisterexternalhook root=".."/>
@@ -14,7 +14,7 @@
  
      <echo message="Bootstrapping NetBeans-specific Ant extensions..."/>
      <path id="bootstrap-cp">
-@@ -121,12 +114,6 @@
+@@ -124,12 +117,6 @@
  
    <target name="download-all-extbins" unless="ext.binaries.downloaded" depends="bootstrap">
      <echo>Downloading external binaries (*/external/ directories)...</echo>
@@ -27,7 +27,7 @@
      <property name="ext.binaries.downloaded" value="true"/>
    </target>
  
-@@ -139,9 +126,6 @@
+@@ -142,9 +129,6 @@
          <map from="${nb_all}/" to=""/>
          <globmapper from="*" to="*/external/binaries-list"/>
      </pathconvert>
@@ -37,7 +37,7 @@
    </target>
  
    <target name="init-module-list" depends="bootstrap,init-tasks">
-@@ -1060,13 +1044,6 @@
+@@ -1064,13 +1048,6 @@
          <include name="contrib/*/external/build.xml"/>
        </fileset>
      </subant>
