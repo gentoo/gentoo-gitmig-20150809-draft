@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.67 2010/06/17 21:09:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.68 2010/06/22 16:07:52 bicatali Exp $
+
+  22 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  root-5.26.00-r3.ebuild:
+  Removed cint7 flag, discontinued effort, and does not compile (bug
+  #324957])
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> root-5.22.00-r2.ebuild,
   root-5.22.00-r3.ebuild, root-5.24.00-r1.ebuild, root-5.26.00-r2.ebuild,

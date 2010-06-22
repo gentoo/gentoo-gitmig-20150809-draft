@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r3.ebuild,v 1.2 2010/06/17 21:09:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r3.ebuild,v 1.3 2010/06/22 16:07:52 bicatali Exp $
 
 EAPI=2
 inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs
@@ -23,7 +23,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
-IUSE="afs cint7 clarens doc emacs examples fftw geant4 gsl kerberos ldap
+IUSE="afs clarens doc emacs examples fftw geant4 gsl kerberos ldap
 	+math mysql	odbc +opengl openmp oracle postgres pythia6 pythia8 python
 	+reflex	ruby qt4 ssl xft xml xinetd xrootd"
 
@@ -163,7 +163,6 @@ src_configure() {
 		--enable-table \
 		--with-afs-shared=yes \
 		$(use_enable afs) \
-		$(use_enable cint7) \
 		$(use_enable clarens) \
 		$(use_enable clarens peac) \
 		$(use_enable fftw fftw3) \
