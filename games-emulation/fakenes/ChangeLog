@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fakenes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.17 2010/03/16 13:59:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.18 2010/06/22 13:18:15 fauli Exp $
+
+  22 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  fakenes-0.5.8-r1.ebuild:
+  stable x86, bug 315493
 
 *fakenes-0.5.8-r1 (16 Mar 2010)
 
