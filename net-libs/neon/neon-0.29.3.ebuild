@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.3.ebuild,v 1.1 2010/06/22 19:58:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.3.ebuild,v 1.2 2010/06/22 20:10:59 arfrever Exp $
 
 EAPI="2"
 
@@ -99,7 +99,7 @@ pkg_postinst() {
 	ewarn "updating. They will remain broken until they are ported to the"
 	ewarn "new API. You can downgrade Neon to the previous version by doing:"
 	ewarn
-	ewarn "  emerge --oneshot '<net-misc/neon-$(get_version_component_range 1-2 ${PV})'"
+	ewarn "  emerge --oneshot '<${CATEGORY}/${PN}-$(get_version_component_range 1-2 ${PV})'"
 	ewarn
 	ewarn "You may also have to downgrade any package that has not been"
 	ewarn "ported to the new API yet."
