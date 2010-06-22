@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/opentyrian
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.7 2009/10/25 19:05:51 chainsaw Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.8 2010/06/22 18:52:36 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  opentyrian-20090702.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
 *opentyrian-20091025 (25 Oct 2009)
 
