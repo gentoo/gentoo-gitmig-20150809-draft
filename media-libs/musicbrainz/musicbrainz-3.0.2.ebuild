@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.9 2010/03/11 22:59:10 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.10 2010/06/22 20:01:54 arfrever Exp $
 
 inherit cmake-utils
 
@@ -13,7 +13,7 @@ SLOT="3"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="test"
 
-RDEPEND="net-misc/neon
+RDEPEND="net-libs/neon
 	media-libs/libdiscid"
 
 DEPEND="${RDEPEND}

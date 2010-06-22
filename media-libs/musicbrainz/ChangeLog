@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.96 2010/03/11 22:59:10 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.97 2010/06/22 20:01:54 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  musicbrainz-3.0.2.ebuild:
+  net-misc/neon renamed to net-libs/neon.
 
   11 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   musicbrainz-2.1.5.ebuild, musicbrainz-3.0.2.ebuild:
