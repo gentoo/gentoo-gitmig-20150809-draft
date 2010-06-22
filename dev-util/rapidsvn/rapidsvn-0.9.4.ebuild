@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.21 2008/06/15 23:13:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.4.ebuild,v 1.22 2010/06/22 18:42:44 arfrever Exp $
 
 WANT_AUTOCONF="2.5"
 inherit eutils autotools wxwidgets flag-o-matic fdo-mime
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="doc static"
 
-COMMON_DEP=">=dev-util/subversion-1.4.0
+COMMON_DEP=">=dev-vcs/subversion-1.4.0
 	>=net-misc/neon-0.26
 	=x11-libs/wxGTK-2.6*
 	>=dev-libs/apr-1.2.10
@@ -39,9 +39,9 @@ src_unpack() {
 
 src_compile() {
 	einfo "Checking for subversion compiled with WebDAV support..."
-	if ! built_with_use --missing true -o dev-util/subversion webdav-neon webdav-serf || \
-	built_with_use --missing false dev-util/subversion nowebdav; then
-		ewarn "SVN (dev-util/subversion) must be compiled with WebDAV support."
+	if ! built_with_use --missing true -o dev-vcs/subversion webdav-neon webdav-serf || \
+	built_with_use --missing false dev-vcs/subversion nowebdav; then
+		ewarn "SVN (dev-vcs/subversion) must be compiled with WebDAV support."
 		ewarn "Please re-emerge subversion with webdav-neon or webdav-serf USE flag"
 		ewarn "and without the nowebdav USE flag."
 		die "SVN merged without WebDAV support"

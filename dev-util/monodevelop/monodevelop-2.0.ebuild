@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.0.ebuild,v 1.2 2010/01/01 18:01:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.0.ebuild,v 1.3 2010/06/22 18:41:01 arfrever Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ RDEPEND="sys-apps/dbus[X]
 		www-client/seamonkey
 	)
 	>=dev-dotnet/xsp-2
-	subversion? ( dev-util/subversion )
+	subversion? ( dev-vcs/subversion )
 	dev-util/ctags
 	!<dev-util/monodevelop-boo-${PV}
 	!<dev-util/monodevelop-java-${PV}

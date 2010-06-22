@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.5-r1.ebuild,v 1.8 2010/06/19 00:42:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.5-r1.ebuild,v 1.9 2010/06/22 18:40:19 arfrever Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-vcs/cvs
-	dev-util/subversion
+	dev-vcs/subversion
 	sys-devel/gettext"
 RDEPEND=""
 

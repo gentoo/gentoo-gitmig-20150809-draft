@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r1.ebuild,v 1.1 2010/06/22 11:09:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r1.ebuild,v 1.2 2010/06/22 18:41:49 arfrever Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 	git? ( dev-vcs/git )
 	mercurial? ( dev-vcs/mercurial )
 	qtscript? ( >=x11-libs/qt-script-4.6.1:4 )
-	subversion? ( dev-util/subversion )"
+	subversion? ( dev-vcs/subversion )"
 
 PLUGINS="bookmarks bineditor cmake cvs designer fakevim git mercurial perforce qml qtscript subversion"
 

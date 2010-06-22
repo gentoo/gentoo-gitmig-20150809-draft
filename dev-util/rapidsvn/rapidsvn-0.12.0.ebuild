@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.2 2010/02/16 01:32:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.12.0.ebuild,v 1.3 2010/06/22 18:42:44 arfrever Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-COMMON_DEP=">=dev-util/subversion-1.5.0
+COMMON_DEP=">=dev-vcs/subversion-1.5.0
 	x11-libs/wxGTK:2.8[X]
 	>=dev-libs/apr-1.2.10
 	>=dev-libs/apr-util-1.2.10"
@@ -39,7 +39,7 @@ S="${WORKDIR}/${P}-${MY_REL}"
 pkg_setup() {
 	einfo "Checking for subversion compiled with WebDAV support..."
 	confutils_require_built_with_any \
-		dev-util/subversion webdav-serf webdav-neon
+		dev-vcs/subversion webdav-serf webdav-neon
 	einfo "Found WebDAV support; continuing..."
 
 	# if you compiled subversion without (the) apache2 (flag) and with the

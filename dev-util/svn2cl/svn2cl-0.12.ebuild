@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/svn2cl-0.12.ebuild,v 1.1 2009/10/09 01:54:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/svn2cl-0.12.ebuild,v 1.2 2010/06/22 18:42:53 arfrever Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxslt
-	dev-util/subversion"
+	dev-vcs/subversion"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.78 2010/05/04 06:46:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.79 2010/06/22 18:41:01 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  monodevelop-2.0.ebuild, monodevelop-2.1.1.ebuild,
+  monodevelop-2.2.1.ebuild, monodevelop-2.2.2.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
 *monodevelop-2.2.2 (04 May 2010)
 

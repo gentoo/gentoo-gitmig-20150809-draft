@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/svn2cl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.9 2009/10/09 01:54:26 zmedico Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.10 2010/06/22 18:42:53 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  svn2cl-0.9.ebuild, svn2cl-0.12.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
 *svn2cl-0.12 (09 Oct 2009)
 

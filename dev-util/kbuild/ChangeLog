@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.15 2010/06/19 00:42:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.16 2010/06/22 18:40:19 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kbuild-0.1.5-r1.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> kbuild-0.1.5-r1.ebuild:
   Moving dev-util/cvs* to dev-vcs/cvs*

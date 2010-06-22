@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97-r1.ebuild,v 1.9 2010/06/21 16:29:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97-r1.ebuild,v 1.10 2010/06/22 18:40:49 arfrever Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ IUSE="cvs debug mercurial subversion"
 
 DEPEND="
 	dev-libs/boost
-	subversion? ( >=dev-util/subversion-1.3 )
+	subversion? ( >=dev-vcs/subversion-1.3 )
 "
 # Moved to playground for now
 # bazaar? ( dev-util/bzr )

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9_beta-r1.ebuild,v 1.1 2010/05/26 11:28:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9_beta-r1.ebuild,v 1.2 2010/06/22 18:41:49 arfrever Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -109,7 +109,7 @@ RDEPEND=">=virtual/jdk-1.6
 		dev-java/sun-jaf:0
 		~dev-java/tomcat-servlet-api-3:2.2
 		>=dev-java/xerces-2.8.1:2
-		>=dev-util/subversion-1.6:0[java]
+		>=dev-vcs/subversion-1.6:0[java]
 	)
 	netbeans_modules_java? (
 		>=dev-java/ant-1.7:0
@@ -203,7 +203,7 @@ DEPEND=">=virtual/jdk-1.6
 		dev-java/sun-jaf:0
 		~dev-java/tomcat-servlet-api-3:2.2
 		>=dev-java/xerces-2.8.1:2
-		>=dev-util/subversion-1.6:0[java]
+		>=dev-vcs/subversion-1.6:0[java]
 	)
 	netbeans_modules_java? (
 		>=dev-java/appframework-1.03:0
