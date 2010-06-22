@@ -1,6 +1,20 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.59 2010/06/19 11:07:14 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.60 2010/06/22 22:08:33 flameeyes Exp $
+
+  22 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/jruby-1.5.0-bindir.patch, files/jruby-1.5.0-system-jars.patch,
+  -jruby-1.5.1.ebuild, +jruby-1.5.1-r1.ebuild:
+  Fix bindir definition, or rather workaround since the properties don't
+  seem to get respected from the file.
+
+*jruby-1.5.1-r1 (22 Jun 2010)
+
+  22 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/jruby-1.5.0-bindir.patch, files/jruby-1.5.0-system-jars.patch,
+  -jruby-1.5.1.ebuild, +jruby-1.5.1-r1.ebuild:
+  Make sure that the reported bindir is correct, otherwise rake will always
+  fail.
 
 *jruby-1.5.1 (17 Jun 2010)
 

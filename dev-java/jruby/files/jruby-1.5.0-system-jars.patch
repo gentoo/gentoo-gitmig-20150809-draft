@@ -176,7 +176,8 @@ diff -Naur jruby-1.5.1.bak/bin/jruby.sh jruby-1.5.1/bin/jruby.sh
          JAVA_VM=-client ;;
 @@ -275,51 +202,16 @@
  
- JAVA_OPTS="$JAVA_OPTS $JAVA_MEM $JAVA_STACK"
+-JAVA_OPTS="$JAVA_OPTS $JAVA_MEM $JAVA_STACK"
++JAVA_OPTS="$JAVA_OPTS $JAVA_MEM $JAVA_STACK -Djruby.bindir=/usr/bin"
  
 -JFFI_BOOT=""
 -if [ -d $JRUBY_HOME/lib/native/ ]; then

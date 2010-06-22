@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.5.1.ebuild,v 1.1 2010/06/19 11:07:14 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.5.1-r1.ebuild,v 1.1 2010/06/22 22:08:33 flameeyes Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -95,7 +95,6 @@ java_prepare() {
 	#epatch "${FILESDIR}/ftype-test-fixes.patch"
 	#epatch "${FILESDIR}/user-test-fixes.patch"
 	epatch "${FILESDIR}"/${PN}-1.5.0-system-jars.patch
-	epatch "${FILESDIR}"/${PN}-1.5.0-bindir.patch
 
 	# We don't need to use Retroweaver. There is a jarjar and a regular jar
 	# target but even with jarjarclean, both are a pain. The latter target
@@ -112,6 +111,11 @@ java_prepare() {
 	# No source is available and it's only a dummy anyway.
 	find build_lib -name "*.jar" ! -name "jsr292-mock.jar" -delete || die
 	rm lib/profile.jar || die
+
+	# change some defaults for Gentoo to work properly
+	cat - >> src/org/jruby/jruby.properties <<EOF
+jruby.bindir = /usr/bin
+EOF
 }
 
 src_compile() {
