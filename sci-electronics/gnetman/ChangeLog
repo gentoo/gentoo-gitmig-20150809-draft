@@ -1,6 +1,13 @@
 # ChangeLog for sci-electronics/gnetman
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.10 2009/06/06 22:48:09 calchan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.11 2010/06/22 19:46:34 scarabeus Exp $
+
+*gnetman-0.0.1_pre20060522-r2 (22 Jun 2010)
+
+  22 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -gnetman-0.0.1_pre20060522-r1.ebuild,
+  +gnetman-0.0.1_pre20060522-r2.ebuild:
+  QA: Revbump to depend on unsplit geda.
 
 *gnetman-0.0.1_pre20060522-r1 (06 Jun 2009)
 
