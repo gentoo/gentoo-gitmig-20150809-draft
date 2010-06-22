@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.286 2010/06/13 21:47:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.287 2010/06/22 13:12:59 pacho Exp $
+
+*gnome-games-2.30.2 (22 Jun 2010)
+
+  22 Jun 2010; Pacho Ramos <pacho@gentoo.org> -gnome-games-2.30.1.ebuild,
+  +gnome-games-2.30.2.ebuild:
+  Version bump with translation updates and bugfixes, no longer apply
+  unneeded patch and remove old testing.
 
 *gnome-games-2.30.1 (13 Jun 2010)
 

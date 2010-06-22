@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.1.ebuild,v 1.1 2010/06/13 21:47:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.30.2.ebuild,v 1.1 2010/06/22 13:12:59 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="1.11"
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
-inherit games games-ggz eutils gnome2 python virtualx
+inherit games games-ggz gnome2 python virtualx
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/GnomeGames/"
@@ -16,7 +16,7 @@ HOMEPAGE="http://live.gnome.org/GnomeGames/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="artworkextra guile opengl sound test" # introspection
+IUSE="artworkextra guile opengl +sound test" # introspection
 
 # Introspection support needs
 #	media-libs/clutter
@@ -110,9 +110,6 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
-
-	# Fix bug #281718 -- *** glibc detected *** gtali: free(): invalid pointer
-	epatch "${FILESDIR}/${PN}-2.26.3-gtali-invalid-pointer.patch"
 }
 
 src_test() {
