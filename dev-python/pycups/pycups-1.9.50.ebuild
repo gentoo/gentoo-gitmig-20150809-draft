@@ -1,12 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.11 2010/06/22 21:09:22 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.50.ebuild,v 1.1 2010/06/22 21:09:22 reavertm Exp $
 
 EAPI="2"
 
-PYTHON_DEPEND="2:2.5"
+RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
-
 inherit distutils flag-o-matic
 
 DESCRIPTION="Python bindings for the CUPS API"
@@ -14,7 +13,7 @@ HOMEPAGE="http://cyberelk.net/tim/data/pycups/"
 SRC_URI="http://cyberelk.net/tim/data/pycups/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="doc examples"
 
@@ -24,8 +23,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc )
 "
-
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 src_compile() {
 	append-cflags -DVERSION=\\\"${PV}\\\"
@@ -47,5 +44,4 @@ src_install() {
 		insinto /usr/share/doc/"${P}"
 		doins -r examples/ || die "installing examples failed"
 	fi
-
 }
