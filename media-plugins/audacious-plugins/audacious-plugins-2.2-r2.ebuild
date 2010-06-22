@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2-r2.ebuild,v 1.13 2010/03/01 19:06:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2-r2.ebuild,v 1.14 2010/06/22 20:02:41 arfrever Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
 	>=media-sound/audacious-2.2
-	>=net-misc/neon-0.26.4
+	>=net-libs/neon-0.26.4
 	>=x11-libs/gtk+-2.14
 	aac? ( >=media-libs/faad2-2.7 )
 	adplug? ( >=dev-cpp/libbinio-1.4 )
