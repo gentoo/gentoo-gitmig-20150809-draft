@@ -1,6 +1,17 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.67 2010/06/20 17:47:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.68 2010/06/22 13:11:19 chithanh Exp $
+
+*syslinux-4.00_pre55 (22 Jun 2010)
+
+  22 Jun 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -syslinux-1.76.ebuild, -syslinux-3.11.ebuild,
+  -files/syslinux-3.11-nopie.patch, -files/syslinux-3.11-nossp.patch,
+  -syslinux-3.20.ebuild, -syslinux-3.31.ebuild, -syslinux-3.52.ebuild,
+  -files/syslinux-3.70-nopie.patch, -files/syslinux-3.70-nostrip.patch,
+  -syslinux-3.71.ebuild, -syslinux-3.84.ebuild, -syslinux-3.85.ebuild,
+  -syslinux-4.00_pre50.ebuild, +syslinux-4.00_pre55.ebuild:
+  New prerelease. Remove old.
 
   20 Jun 2010; Markus Meier <maekke@gentoo.org> syslinux-3.86.ebuild:
   x86 stable, bug #305435
