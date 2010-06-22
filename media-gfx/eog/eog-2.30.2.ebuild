@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.1.ebuild,v 1.2 2010/06/21 11:48:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.2.ebuild,v 1.1 2010/06/22 14:06:19 pacho Exp $
 
 EAPI=2
 
-inherit eutils gnome2 autotools
+inherit gnome2
 
 DESCRIPTION="The Eye of GNOME image viewer"
 HOMEPAGE="http://www.gnome.org/projects/eog/"
@@ -55,13 +55,4 @@ pkg_setup() {
 		$(use_with xmp)
 		--disable-scrollkeeper
 		--disable-schemas-install"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Fix build without libjpeg, bug #319157
-	epatch "${FILESDIR}/${P}-libjpeg-configure.patch"
-
-	eautoreconf
 }
