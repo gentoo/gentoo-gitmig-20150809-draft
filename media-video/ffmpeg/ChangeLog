@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.358 2010/06/22 07:28:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.359 2010/06/22 08:57:42 fauli Exp $
+
+  22 Jun 2010; Christian Faulhammer <fauli@gentoo.org> ffmpeg-0.6.ebuild:
+  add ~x86, bug 324941
 
   22 Jun 2010; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999-r1.ebuild:
   faad support has been removed
