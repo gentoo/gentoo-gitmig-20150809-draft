@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.141 2010/06/12 23:10:34 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.142 2010/06/22 11:11:25 hwoarang Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -24,12 +24,6 @@ sys-power/pm-utils video_cards_intel video_cards_radeon
 # Zac Medico <zmedico@gentoo.org> (24 Jan 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
 =sys-apps/portage-2.1.7* python3
-
-# Markos Chandras <hwoarang@gentoo.org> (20 Jan 2010)
-# Masking qml use flag since qt-declarative-4.6.0 doesn't build
-# with Qt-4.6.1. This mask entry must remain until qt-declarative-4.6.1
-# package is released
-=dev-util/qt-creator-1.3.1 qml
 
 # Diego E. Pettenò <flameeyes@gmail.com> (18 Jan 2010)
 # Don't use system-wide mode unless you *really* know what you're doing.

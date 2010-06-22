@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.151 2010/06/13 10:07:52 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.152 2010/06/22 11:11:25 hwoarang Exp $
+
+  22 Jun 2010; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Drop qml use flag masking from qt-creator
 
   13 Jun 2010; Dror Levin <spatz@gentoo.org> use.mask:
   Remove vpx USE mask.
