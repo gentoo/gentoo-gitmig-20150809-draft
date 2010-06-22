@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.9.ebuild,v 1.1 2009/12/09 08:37:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.9-r1.ebuild,v 1.1 2010/06/22 21:26:59 mabi Exp $
+
+EAPI="2"
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="ZendOptimizer"
@@ -27,7 +29,9 @@ IUSE=""
 RESTRICT="mirror fetch strip"
 
 DEPEND=""
-RDEPEND="!dev-php5/xdebug !dev-php5/pecl-apc"
+RDEPEND="!dev-php5/xdebug
+		 !dev-php5/pecl-apc
+		 <dev-lang/php-5.3[-debug,-threads]"
 
 need_php_by_category
 
@@ -56,12 +60,7 @@ src_install() {
 		die "Unable to find an installed dev-lang/php-5* package."
 	fi
 
-	# Detect if we use ZTS and change the file path accordingly
-	if has_zts ; then
-		ZENDOPT_SO_FILE="data/${ZENDOPT_VERSION_DIR}/TS/${PHP_EXT_NAME}.so"
-	else
-		ZENDOPT_SO_FILE="data/${ZENDOPT_VERSION_DIR}/${PHP_EXT_NAME}.so"
-	fi
+	ZENDOPT_SO_FILE="data/${ZENDOPT_VERSION_DIR}/${PHP_EXT_NAME}.so"
 
 	# Install the binary
 	insinto ${EXT_DIR}
@@ -72,7 +71,7 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "zend_optimizer.enable_loader" "1"
 	php-ext-base-r1_addtoinifiles "zend_optimizer.disable_licensing" "0"
 
-	dodoc-php README-${PN} data/doc/Zend_Optimizer_User_Guide.pdf
+	dodoc-php README-${PN}
 }
 
 pkg_postinst() {
