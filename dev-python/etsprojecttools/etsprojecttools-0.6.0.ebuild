@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsprojecttools/etsprojecttools-0.6.0.ebuild,v 1.2 2010/03/25 21:06:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsprojecttools/etsprojecttools-0.6.0.ebuild,v 1.3 2010/06/22 18:36:48 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
-RDEPEND="dev-util/subversion"
+RDEPEND="dev-vcs/subversion"
 DEPEND="dev-python/setuptools
 	test? ( >=dev-python/nose-0.10.3 )"
 RESTRICT_PYTHON_ABIS="3.*"

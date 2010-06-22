@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.7.2.ebuild,v 1.4 2010/02/08 20:40:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.7.2.ebuild,v 1.5 2010/06/22 18:38:12 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
 
-RDEPEND=">=dev-util/subversion-1.4
+RDEPEND=">=dev-vcs/subversion-1.4
 	!<dev-util/bzr-svn-0.5.0_rc2"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose )"

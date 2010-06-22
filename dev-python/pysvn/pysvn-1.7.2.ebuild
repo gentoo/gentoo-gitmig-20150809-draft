@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.2.ebuild,v 1.3 2010/03/15 18:16:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.2.ebuild,v 1.4 2010/06/22 18:38:00 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-freebsd ~ppc-macos"
 IUSE="doc examples"
 
 DEPEND="dev-lang/python
-	dev-util/subversion
+	dev-vcs/subversion
 	>=dev-python/pycxx-6.1.0"
 RDEPEND="${DEPEND}"
 
