@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4313 2010/06/21 14:38:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4314 2010/06/22 05:57:48 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jun 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask vlc 1.1.0
 
   21 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Mask new version of sys-cluster/heartbeat
