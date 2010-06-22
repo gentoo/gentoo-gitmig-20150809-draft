@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.66 2010/04/27 16:13:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.67 2010/06/22 14:30:06 jlec Exp $
+
+  22 Jun 2010; Justin Lecher <jlec@gentoo.org> netcdf-3.6.3.ebuild,
+  +files/netcdf-3.6.3-parallel.patch:
+  Parallel build fix, #187759
 
 *netcdf-4.1.1 (27 Apr 2010)
 
