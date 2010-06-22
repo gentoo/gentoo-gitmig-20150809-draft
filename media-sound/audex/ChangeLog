@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.9 2010/06/20 19:14:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.10 2010/06/22 18:19:45 hwoarang Exp $
+
+  22 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  audex-0.72_beta1.ebuild, +files/audex-0.72_beta1-gcc45.patch:
+  Fix gcc-4.5 build failures wrt bug #323547
 
   20 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   audex-0.72_beta1.ebuild, +files/audex-0.72_beta1-MkdirJob.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.72_beta1.ebuild,v 1.3 2010/06/20 19:14:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.72_beta1.ebuild,v 1.4 2010/06/22 18:19:45 hwoarang Exp $
 
 EAPI="2"
 
@@ -24,4 +24,7 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
-PATCHES=( "${FILESDIR}/${P}-MkdirJob.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-MkdirJob.patch"
+	"${FILESDIR}/${P}-gcc45.patch"
+)
