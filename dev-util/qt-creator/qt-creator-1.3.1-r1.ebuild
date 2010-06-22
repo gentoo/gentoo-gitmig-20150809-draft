@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1.ebuild,v 1.11 2010/06/19 00:45:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r1.ebuild,v 1.1 2010/06/22 11:09:57 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -34,7 +34,6 @@ RDEPEND="${DEPEND}
 	examples? ( >=x11-libs/qt-demo-4.6.1:4 )
 	git? ( dev-vcs/git )
 	mercurial? ( dev-vcs/mercurial )
-	qml? ( >=x11-libs/qt-declarative-4.6.0:4 )
 	qtscript? ( >=x11-libs/qt-script-4.6.1:4 )
 	subversion? ( dev-util/subversion )"
 
@@ -98,13 +97,10 @@ src_install() {
 		'Qt;Development;IDE' || die "make_desktop_entry failed"
 
 	# install translations
-	insinto /usr/share/${MY_PN}/translations/
-	for x in ${LINGUAS};do
-		for lang in ${LANGS};do
-			if [[ ${x} == ${lang} ]];then
-				doins share/${MY_PN}/translations/${MY_PN}_${x}.qm \
-					|| die "failed to install translations"
-			fi
-		done
+	for lang in ${LANGS};do
+		if ! hasq ${lang} ${LINGUAS}; then
+			rm "${D}"/usr/share/${MY_PN}/translations/${MY_PN}_${lang}.qm \
+					|| die "failed to remove ${lang} translation"
+		fi
 	done
 }
