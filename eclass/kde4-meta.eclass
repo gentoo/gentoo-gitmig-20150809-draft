@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.37 2010/05/17 01:16:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.38 2010/06/22 13:49:08 reavertm Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -714,7 +714,7 @@ kde4-meta_src_install() {
 	# Search ${S}/${KMMODULE} and install common documentation files found
 	local doc
 	for doc in "${S}/${KMMODULE}"/{AUTHORS,CHANGELOG,ChangeLog*,README*,NEWS,TODO,HACKING}; do
-		[[ -s "${doc}" ]] && dodoc "${doc}"
+		[[ -f "${doc}" ]] && [[ -s "${doc}" ]] && dodoc "${doc}"
 	done
 
 	kde4-base_src_install

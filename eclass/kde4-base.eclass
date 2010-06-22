@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.62 2010/05/17 01:16:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.63 2010/06/22 13:49:08 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -726,10 +726,10 @@ kde4-base_src_install() {
 	local doc
 	if ! has kde4-meta ${INHERITED}; then
 		for doc in "${S}"/{AUTHORS,CHANGELOG,ChangeLog*,README*,NEWS,TODO,HACKING}; do
-			[[ -s "${doc}" ]] && dodoc "${doc}"
+			[[ -f "${doc}" ]] && [[ -s "${doc}" ]] && dodoc "${doc}"
 		done
 		for doc in "${S}"/*/{AUTHORS,CHANGELOG,ChangeLog*,README*,NEWS,TODO,HACKING}; do
-			[[ -s "${doc}" ]] && newdoc "${doc}" "$(basename $(dirname ${doc})).$(basename ${doc})"
+			[[ -f "${doc}" ]] && [[ -s "${doc}" ]] && newdoc "${doc}" "$(basename $(dirname ${doc})).$(basename ${doc})"
 		done
 	fi
 
