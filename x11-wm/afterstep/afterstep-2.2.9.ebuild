@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.8 2010/06/22 14:36:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.9 2010/06/22 16:10:08 ssuominen Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils
@@ -43,7 +43,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/AfterStep-${PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/no-alternatives-${PV}.patch
+	epatch "${FILESDIR}"/no-alternatives-${PV}.patch \
+		"${FILESDIR}"/${P}-make_session_data_file.patch
 
 	# Do not strip binaries, bug #252119
 	sed -e "/STRIP_BINARIES/s/-s//" \
