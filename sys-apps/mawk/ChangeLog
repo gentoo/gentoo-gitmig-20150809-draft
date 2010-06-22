@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mawk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.15 2010/06/15 23:07:09 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.16 2010/06/22 01:32:39 sping Exp $
+
+  22 Jun 2010; Sebastian Pipping <sping@gentoo.org>
+  mawk-1.3.4_p20100507-r1.ebuild:
+  Add comment as proposed by vapier
 
 *mawk-1.3.4_p20100507-r1 (15 Jun 2010)
 

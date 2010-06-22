@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.4_p20100507-r1.ebuild,v 1.1 2010/06/15 23:07:09 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.4_p20100507-r1.ebuild,v 1.2 2010/06/22 01:32:39 sping Exp $
 
 EAPI="2"
 
@@ -28,5 +28,5 @@ src_install() {
 	dodoc ACKNOWLEDGMENT CHANGES INSTALL README
 
 	exeinto /usr/share/${PN}/examples
-	doexe examples/*
+	doexe examples/*  # avoid compression of dodoc + make executable
 }
