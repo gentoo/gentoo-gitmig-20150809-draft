@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.8 2009/09/14 02:27:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.9 2010/06/22 20:06:35 arfrever Exp $
 
 inherit autotools eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 IUSE="nls"
 
-DEPEND=">=net-misc/neon-0.27.0"
+DEPEND=">=net-libs/neon-0.27.0"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.53 2010/01/07 15:58:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.54 2010/06/22 20:06:49 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sitecopy-0.16.3_p17.ebuild:
+  net-misc/neon renamed to net-libs/neon.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   sitecopy-0.16.3_p17.ebuild:

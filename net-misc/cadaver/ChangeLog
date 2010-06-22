@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.36 2010/02/03 21:44:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.37 2010/06/22 20:06:35 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cadaver-0.23.2.ebuild, cadaver-0.23.3.ebuild:
+  net-misc/neon renamed to net-libs/neon.
 
   03 Feb 2010; Markus Meier <maekke@gentoo.org> cadaver-0.23.3.ebuild:
   x86 stable, bug #301404
