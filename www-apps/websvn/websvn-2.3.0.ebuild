@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.3.0.ebuild,v 1.5 2010/02/09 14:51:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.3.0.ebuild,v 1.6 2010/06/22 18:55:54 arfrever Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="enscript"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 
 DEPEND=""
-RDEPEND="dev-util/subversion
+RDEPEND="dev-vcs/subversion
 	enscript? ( app-text/enscript )"
 RESTRICT="mirror"
 

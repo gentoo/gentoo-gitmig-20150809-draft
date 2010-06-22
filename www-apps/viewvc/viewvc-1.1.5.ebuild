@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.5.ebuild,v 1.6 2010/06/19 01:00:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.5.ebuild,v 1.7 2010/06/22 18:55:52 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,7 +27,7 @@ RDEPEND="
 
 	subversion? (
 		>=dev-lang/python-2.0
-		>=dev-util/subversion-1.3.1[python]
+		>=dev-vcs/subversion-1.3.1[python]
 	)
 
 	mod_python? ( www-apache/mod_python )

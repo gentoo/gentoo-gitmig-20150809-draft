@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.104 2010/06/14 08:47:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.105 2010/06/22 18:55:13 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  trac-0.11.7.ebuild, trac-0.12.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   14 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> trac-0.12.ebuild:
   Forgot to bump Genshi dependency.

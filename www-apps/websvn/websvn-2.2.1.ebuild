@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.2.1.ebuild,v 1.5 2009/11/20 14:41:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.2.1.ebuild,v 1.6 2010/06/22 18:55:54 arfrever Exp $
 
 inherit depend.php eutils webapp
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 IUSE="enscript"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 
-RDEPEND="dev-util/subversion
+RDEPEND="dev-vcs/subversion
 	enscript? ( app-text/enscript )"
 
 need_httpd_cgi

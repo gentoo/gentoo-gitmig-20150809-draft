@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.38 2010/02/09 14:51:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.39 2010/06/22 18:55:54 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  websvn-2.2.1.ebuild, websvn-2.3.0.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   09 Feb 2010; Christian Faulhammer <fauli@gentoo.org> websvn-2.3.0.ebuild:
   stable x86, bug 301144
