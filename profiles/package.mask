@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11683 2010/06/22 17:12:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11684 2010/06/22 17:36:06 tomjbe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -52,8 +52,8 @@ x11-misc/gaia
 >=sys-cluster/heartbeat-3.0.3
 
 # Thomas Beierlein <tomjbe@gentoo.org> (22 Jun 2010)
-# Restrict mask to only sci-libs/libgeda-1.4.3 as otherwise the stable 
-# sci-electronics/geda-1.4.0 misses a dep.
+# Restrict mask to only the sci-libs/libgeda-1.4.3* ebuilds as 
+# otherwise the stable sci-electronics/geda-1.4.0 misses a dep.
 #
 # Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2010)
 #  on behalf of QA team
@@ -67,7 +67,7 @@ x11-misc/gaia
 #
 # Removal on 2010-08-20
 =sci-electronics/geda-1.4.3-r1
-=sci-libs/libgeda-1.4.3
+=sci-libs/libgeda-1.4.3*
 sci-electronics/geda-gattrib
 sci-electronics/geda-gnetlist
 sci-electronics/geda-gschem
