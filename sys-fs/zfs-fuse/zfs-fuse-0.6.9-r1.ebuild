@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.6.9.ebuild,v 1.1 2010/06/05 23:46:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.6.9-r1.ebuild,v 1.1 2010/06/22 20:13:43 ssuominen Exp $
 
 EAPI=2
 
@@ -49,8 +49,8 @@ src_install() {
 
 	dodir /etc/zfs
 	keepdir /var/{lock,run}/zfs
-	fowners daemon.disk /var/{lock,run}/zfs
-	newinitd "${FILESDIR}"/${PN}.rc ${PN}
+	fowners root.disk /var/{lock,run}/zfs
+	doinitd "${FILESDIR}"/${PN}
 
 	dodoc ../{BUGS,CHANGES,HACKING,README*,STATUS,TESTING,TODO}
 }
