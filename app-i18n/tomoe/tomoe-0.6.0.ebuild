@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0.ebuild,v 1.3 2008/09/23 16:35:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/tomoe-0.6.0.ebuild,v 1.4 2010/06/22 18:30:59 arfrever Exp $
 
 DESCRIPTION="Japanese handwriting recognition engine"
 HOMEPAGE="http://tomoe.sourceforge.jp/"
@@ -16,7 +16,7 @@ RDEPEND=">=dev-libs/glib-2.4
 	hyperestraier? ( app-text/hyperestraier )
 	subversion? (
 		>=dev-libs/apr-1
-		dev-util/subversion
+		dev-vcs/subversion
 	)
 	mysql? ( dev-db/mysql )"
 # python? ( dev-python/pygobject )
