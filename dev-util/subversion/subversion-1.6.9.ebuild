@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.9.ebuild,v 1.8 2010/03/28 18:17:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.9.ebuild,v 1.9 2010/06/22 16:49:37 arfrever Exp $
 
 EAPI="2"
 
@@ -603,11 +603,7 @@ EOF
 
 	# Install svnserve init-script and xinet.d snippet, bug 43245.
 	newinitd "${FILESDIR}"/svnserve.initd svnserve
-	if use apache2; then
-		newconfd "${FILESDIR}"/svnserve.confd svnserve
-	else
-		newconfd "${FILESDIR}"/svnserve.confd2 svnserve
-	fi
+	newconfd "${FILESDIR}"/svnserve.confd svnserve
 	insinto /etc/xinetd.d
 	newins "${FILESDIR}"/svnserve.xinetd svnserve
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.429 2010/05/26 21:28:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.430 2010/06/22 16:49:37 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  subversion-1.6.9.ebuild, subversion-1.6.11.ebuild, files/svnserve.confd,
+  -files/svnserve.confd2:
+  Merge svnserve.confd and svnserve.confd2.
 
 *subversion-1.6.11 (26 May 2010)
 

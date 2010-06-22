@@ -6,5 +6,5 @@
 #SVNSERVE_OPTS="--root=/var/svn"
 
 # User and group as which to run svnserve
-#SVNSERVE_USER="apache"
-#SVNSERVE_GROUP="apache"
+#SVNSERVE_USER="svn"
+#SVNSERVE_GROUP="svnusers"
