@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.6-r1.ebuild,v 1.8 2010/06/22 18:42:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.6-r1.ebuild,v 1.9 2010/06/22 20:04:56 arfrever Exp $
 
 WANT_AUTOCONF="2.5"
 WX_GTK_VER=2.8
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="doc static"
 
 COMMON_DEP=">=dev-vcs/subversion-1.4.4
-	>=net-misc/neon-0.26
+	>=net-libs/neon-0.26
 	=x11-libs/wxGTK-2.8*
 	>=dev-libs/apr-1.2.10
 	>=dev-libs/apr-util-1.2.10"

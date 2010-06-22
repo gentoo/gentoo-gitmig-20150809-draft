@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.24.2.ebuild,v 1.6 2010/06/22 18:40:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.24.2.ebuild,v 1.7 2010/06/22 20:01:02 arfrever Exp $
 
 inherit eutils gnome2
 
@@ -45,7 +45,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 		>=x11-libs/gtksourceview-2.3.1 )
 	subversion? (
 		>=dev-vcs/subversion-1.4.0
-		>=net-misc/neon-0.24.5
+		>=net-libs/neon-0.24.5
 		>=dev-libs/apr-1
 		>=dev-libs/apr-util-1 )
 	valgrind? ( dev-util/valgrind )"
