@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/hexcalc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.9 2008/11/17 22:05:07 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.10 2010/06/22 13:40:00 jlec Exp $
+
+*hexcalc-1.11-r2 (22 Jun 2010)
+
+  22 Jun 2010; Justin Lecher <jlec@gentoo.org> -hexcalc-1.11-r1.ebuild,
+  +hexcalc-1.11-r2.ebuild, +files/hexcalc-keypad.diff:
+  Including patch for Keypad, #156390; respecting users choices of CC and
+  FLAGS
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/hexcalc-order.diff:
