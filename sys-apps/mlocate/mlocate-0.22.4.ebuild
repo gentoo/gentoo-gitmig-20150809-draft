@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.22.4.ebuild,v 1.2 2010/06/12 19:35:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.22.4.ebuild,v 1.3 2010/06/22 13:01:37 fauli Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/m/l/mlocate/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="!sys-apps/slocate
