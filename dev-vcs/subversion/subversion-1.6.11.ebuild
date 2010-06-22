@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.11.ebuild,v 1.1 2010/06/22 18:17:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.11.ebuild,v 1.2 2010/06/22 20:01:56 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -31,7 +31,7 @@ CDEPEND=">=dev-db/sqlite-3.4[threadsafe]
 	python? ( =dev-lang/python-2* )
 	ruby? ( >=dev-lang/ruby-1.8.2 )
 	sasl? ( dev-libs/cyrus-sasl )
-	webdav-neon? ( >=net-misc/neon-0.28 )
+	webdav-neon? ( >=net-libs/neon-0.28 )
 	webdav-serf? ( =net-libs/serf-0.3* )"
 RDEPEND="${CDEPEND}
 	apache2? ( www-servers/apache[apache2_modules_dav] )

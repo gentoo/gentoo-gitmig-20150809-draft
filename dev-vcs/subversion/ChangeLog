@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.1 2010/06/22 18:17:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.2 2010/06/22 20:01:56 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  subversion-1.6.9.ebuild, subversion-1.6.11.ebuild:
+  net-misc/neon renamed to net-libs/neon.
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   subversion-1.6.9.ebuild, subversion-1.6.11.ebuild, files/svnserve.confd,
