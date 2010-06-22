@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.30.0.ebuild,v 1.1 2010/06/13 21:29:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.30.2.ebuild,v 1.1 2010/06/22 12:55:27 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -17,7 +17,6 @@ IUSE=""
 
 RDEPEND=">=dev-python/pygtk-2.13.0
 	dev-python/pygobject
-	>=dev-python/gconf-python-2.17.2
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
