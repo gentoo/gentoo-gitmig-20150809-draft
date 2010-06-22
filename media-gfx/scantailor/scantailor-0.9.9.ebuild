@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/scantailor-0.9.9.ebuild,v 1.1 2010/06/22 11:57:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/scantailor-0.9.9.ebuild,v 1.2 2010/06/22 11:59:39 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -31,13 +31,13 @@ src_configure() {
 		$(cmake-utils_use_enable dewarping)
 		$(cmake-utils_use_enable opengl)
 		)
-	
+
 	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
-	
+
 	newicon resources/appicon.svg ${PN}.svg
 	make_desktop_entry ${PN} "Scan Tailor"
 }
