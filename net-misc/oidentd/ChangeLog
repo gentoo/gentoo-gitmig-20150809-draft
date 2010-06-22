@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.51 2010/06/19 17:14:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.52 2010/06/22 14:39:46 jer Exp $
+
+  22 Jun 2010; Jeroen Roovers <jer@gentoo.org> oidentd-2.0.8-r3.ebuild:
+  Stable for HPPA (bug #320931).
 
   19 Jun 2010; Raúl Porcel <armin76@gentoo.org> oidentd-2.0.8-r3.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #320931
