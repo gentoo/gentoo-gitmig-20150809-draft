@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.22 2010/03/09 12:20:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.23 2010/06/22 21:43:32 hwoarang Exp $
+
+  22 Jun 2010; Markos Chandras <hwoarang@gentoo.org> italc-1.0.9.ebuild,
+  +files/italc-1.0.9-gcc45.patch:
+  Fix gcc-4.5 build failures wrt bug #322523
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> italc-1.0.9.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension
