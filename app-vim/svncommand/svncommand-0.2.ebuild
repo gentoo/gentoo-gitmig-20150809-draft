@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/svncommand-0.2.ebuild,v 1.3 2007/07/11 05:14:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/svncommand/svncommand-0.2.ebuild,v 1.4 2010/06/22 18:33:50 arfrever Exp $
 
 inherit vim-plugin
 
@@ -12,7 +12,7 @@ IUSE=""
 
 # vimspell map conflict, bug #91965
 RDEPEND="${RDEPEND}
-	dev-util/subversion
+	dev-vcs/subversion
 	!app-vim/vimspell"
 
 VIM_PLUGIN_HELPURI="http://www.vim.org/scripts/script.php?script_id=922"
