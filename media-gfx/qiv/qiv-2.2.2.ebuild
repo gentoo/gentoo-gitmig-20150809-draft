@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.2.2.ebuild,v 1.1 2009/12/23 12:35:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.2.2.ebuild,v 1.2 2010/06/22 08:36:27 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -17,7 +17,7 @@ IUSE="xinerama"
 RDEPEND="x11-libs/gtk+:2
 	media-libs/imlib2
 	media-libs/libexif
-	!media-gfx/pqiv
+	!<media-gfx/pqiv-0.11
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
