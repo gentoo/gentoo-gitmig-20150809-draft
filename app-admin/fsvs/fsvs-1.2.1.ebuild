@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/fsvs-1.2.1.ebuild,v 1.2 2009/12/23 09:05:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/fsvs-1.2.1.ebuild,v 1.3 2010/06/22 18:29:14 arfrever Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-util/subversion-1.2
+DEPEND=">=dev-vcs/subversion-1.2
 	>=dev-libs/libpcre-6.4
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/apr-util-1.2
