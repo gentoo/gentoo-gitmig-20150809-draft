@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/vdpau-video-0.6.9.ebuild,v 1.1 2010/05/11 09:29:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/vdpau-video-0.6.9.ebuild,v 1.2 2010/06/22 08:46:46 fauli Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.splitted-desktop.com/~gbeauchesne/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl"
 
 RDEPEND="x11-libs/libva[opengl?]
