@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.4-r2.ebuild,v 1.1 2010/06/16 18:00:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.5.ebuild,v 1.1 2010/06/22 21:41:14 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -10,8 +10,8 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mi
 PATCH="${PN}-2.0.5-patches-01"
 EMVER="1.0.1"
 
-LANGS="be ca cs de en-US es-AR es-ES fr gl hu it ja ka lt nb-NO nl pl pt-PT ru sk sv-SE tr"
-NOSHORTLANGS="es-AR es-ES nb-NO pt-PT sv-SE"
+LANGS="be ca cs de en-GB en-US es-AR es-ES fr gl hu it ja ka lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN"
+NOSHORTLANGS="en-GB es-AR es-ES nb-NO pt-PT sv-SE zh-CN"
 
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
