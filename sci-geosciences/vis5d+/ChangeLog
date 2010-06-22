@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/vis5d+
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/vis5d+/ChangeLog,v 1.5 2009/08/12 14:10:16 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/vis5d+/ChangeLog,v 1.6 2010/06/22 13:11:24 jlec Exp $
+
+  22 Jun 2010; Justin Lecher <jlec@gentoo.org> vis5d+-1.2.1.ebuild:
+  Added missing deps #155248, respecting CC
 
   12 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> vis5d+-1.2.1.ebuild,
   +files/vis5d+-1.2.1-round.patch:
