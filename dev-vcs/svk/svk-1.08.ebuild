@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-1.08.ebuild,v 1.2 2010/05/18 09:55:27 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-1.08.ebuild,v 1.3 2010/06/22 18:51:20 arfrever Exp $
 
 inherit eutils perl-module bash-completion
 
@@ -18,7 +18,7 @@ IUSE="crypt nls pager patch"
 
 DEPEND="
 	>=dev-lang/perl-5.8.7
-	>=dev-util/subversion-1.0.7
+	>=dev-vcs/subversion-1.0.7
 	dev-perl/Algorithm-Annotate
 	dev-perl/Algorithm-Diff
 	>=dev-perl/yaml-0.38
@@ -57,7 +57,7 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	if ! perl -MSVN::Core < /dev/null 2> /dev/null; then
 		eerror "SVN::Core missing or outdated. Please emerge \
-		dev-util/subversion ith the perl USE flag."
+		dev-vcs/subversion ith the perl USE flag."
 		die "Need Subversion compiled with Perl bindings"
 	fi
 }

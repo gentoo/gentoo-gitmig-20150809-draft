@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/colorsvn-0.3.2.ebuild,v 1.1 2010/03/20 22:21:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/colorsvn-0.3.2.ebuild,v 1.2 2010/06/22 18:43:26 arfrever Exp $
 
 DESCRIPTION="Subversion output colorizer"
 HOMEPAGE="http://colorsvn.tigris.org"
@@ -12,7 +12,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-	dev-util/subversion"
+	dev-vcs/subversion"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

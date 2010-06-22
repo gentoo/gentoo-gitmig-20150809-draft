@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rsvndump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.3 2010/03/20 11:47:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.4 2010/06/22 18:50:37 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  rsvndump-0.5.2-r3.ebuild, rsvndump-0.5.3.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   20 Mar 2010; Sebastian Pipping <sping@gentoo.org> metadata.xml:
   Put myself in as maintainer

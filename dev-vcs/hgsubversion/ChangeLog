@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/hgsubversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.6 2010/05/22 13:05:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.7 2010/06/22 18:48:33 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  hgsubversion-1.0.ebuild, hgsubversion-1.0.1.ebuild,
+  hgsubversion-1.1.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   22 May 2010; Fabian Groffen <grobian@gentoo.org> hgsubversion-1.1.ebuild:
   Marked ~ppc-macos

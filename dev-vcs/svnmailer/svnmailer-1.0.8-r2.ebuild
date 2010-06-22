@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/svnmailer-1.0.8-r2.ebuild,v 1.1 2010/03/06 20:48:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/svnmailer-1.0.8-r2.ebuild,v 1.2 2010/06/22 18:51:58 arfrever Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=">=dev-lang/python-2.3"
 RDEPEND="${DEPEND}
-	dev-util/subversion[python]
+	dev-vcs/subversion[python]
 	virtual/mta"
 
 DOCS="CHANGES NOTICE CREDITS"

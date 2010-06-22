@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/qsvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/ChangeLog,v 1.3 2010/03/30 23:41:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/ChangeLog,v 1.4 2010/06/22 18:50:23 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  qsvn-0.8.3.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   30 Mar 2010; Theo Chatzimichos <tampakrap@gentoo.org> qsvn-0.8.3.ebuild,
   +files/qsvn-0.8.3-static-lib.patch:

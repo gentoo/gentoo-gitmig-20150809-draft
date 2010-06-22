@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.16 2010/06/19 00:51:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.17 2010/06/22 18:49:45 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mercurial-1.4.1.ebuild, mercurial-1.5.ebuild, mercurial-1.5.2.ebuild,
+  mercurial-1.5.3.ebuild, mercurial-1.5.4.ebuild, mercurial-9999.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> mercurial-1.4.1.ebuild,
   mercurial-1.5.ebuild, mercurial-1.5.2.ebuild, mercurial-1.5.3.ebuild,

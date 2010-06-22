@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/svn2git-0_pre20100324.ebuild,v 1.1 2010/03/24 00:41:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/svn2git-0_pre20100324.ebuild,v 1.2 2010/06/22 18:51:38 arfrever Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ SLOT="0"
 IUSE=""
 # KEYWORDS way up
 
-DEPEND="dev-util/subversion
+DEPEND="dev-vcs/subversion
 	x11-libs/qt-core"
 RDEPEND="${DEPEND}
 	dev-vcs/git"

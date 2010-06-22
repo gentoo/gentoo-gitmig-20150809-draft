@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-2.0.2.ebuild,v 1.2 2010/05/18 09:55:27 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svk/svk-2.0.2.ebuild,v 1.3 2010/06/22 18:51:20 arfrever Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ IUSE="crypt nls pager patch log4p bash-completion"
 
 DEPEND="
 	>=dev-lang/perl-5.8.7
-	>=dev-util/subversion-1.3.0[perl]
+	>=dev-vcs/subversion-1.3.0[perl]
 	virtual/perl-version
 	dev-perl/Algorithm-Annotate
 	>=dev-perl/Algorithm-Diff-1.1901

@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/svnmailer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/ChangeLog,v 1.1 2010/03/06 20:48:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/ChangeLog,v 1.2 2010/06/22 18:51:58 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  svnmailer-1.0.8-r2.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   06 Mar 2010; Ulrich Mueller <ulm@gentoo.org> +svnmailer-1.0.8-r2.ebuild,
   +files/svnmailer-1.0.8-python2.5.diff, +metadata.xml:

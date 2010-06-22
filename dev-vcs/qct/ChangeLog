@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/qct
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/ChangeLog,v 1.6 2010/06/19 00:54:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/ChangeLog,v 1.7 2010/06/22 18:50:01 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  qct-1.7.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> qct-1.7.ebuild:
   Moving dev-util/cvs* to dev-vcs/cvs*

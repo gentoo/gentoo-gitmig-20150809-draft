@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/statsvn/statsvn-0.5.0.ebuild,v 1.2 2010/06/18 18:36:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/statsvn/statsvn-0.5.0.ebuild,v 1.3 2010/06/22 18:51:00 arfrever Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -27,7 +27,7 @@ DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPEND}"
 
 RDEPEND=">=virtual/jre-1.4
-	>=dev-util/subversion-1.3.0
+	>=dev-vcs/subversion-1.3.0
 	dev-java/xerces:2
 	${COMMON_DEPEND}"
 

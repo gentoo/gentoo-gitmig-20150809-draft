@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs2svn/cvs2svn-2.2.0.ebuild,v 1.2 2010/06/16 00:58:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs2svn/cvs2svn-2.2.0.ebuild,v 1.3 2010/06/22 18:43:49 arfrever Exp $
 
 EAPI="2"
 PYTHON_USE_WITH_OR="berkdb gdbm"
@@ -20,7 +20,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="bazaar git test"
 
 DEPEND="dev-lang/python
-	>=dev-util/subversion-1.0.9"
+	>=dev-vcs/subversion-1.0.9"
 RDEPEND="${DEPEND}
 	bazaar? ( >=dev-vcs/bzr-1.13 )
 	git? ( >=dev-vcs/git-1.5.4.4 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/rsvndump-0.5.2-r3.ebuild,v 1.1 2010/03/17 19:28:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/rsvndump-0.5.2-r3.ebuild,v 1.2 2010/06/22 18:50:37 arfrever Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-RDEPEND="dev-util/subversion"
+RDEPEND="dev-vcs/subversion"
 DEPEND="${RDEPEND}
 	doc? ( app-text/xmlto
 	>=app-text/asciidoc-8.4 )"
