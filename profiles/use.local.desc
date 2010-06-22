@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5694 2010/06/22 12:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5695 2010/06/22 12:47:56 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1430,6 +1430,7 @@ kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system throug
 kde-base/pykde4:akonadi - Builds Akonadi python language bindings
 kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
 kde-base/smoke:akonadi - Compile bindings for Akonadi.
+kde-base/smoke:attica - Compile bindings for dev-libs/libattica.
 kde-base/smoke:multimedia - Compile bindings for x11-libs/qt-multimedia.
 kde-base/smoke:okular - Compile bindings for kde-base/okular.
 kde-base/smoke:phonon - Compile bindings for Phonon.
