@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-sunbird/libopensync-plugin-sunbird-0.22.ebuild,v 1.3 2010/05/23 20:49:28 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-sunbird/libopensync-plugin-sunbird-0.22.ebuild,v 1.4 2010/06/22 20:00:38 arfrever Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 IUSE=""
 
 RDEPEND="=app-pda/libopensync-${PV}*
-	net-misc/neon"
+	net-libs/neon"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
