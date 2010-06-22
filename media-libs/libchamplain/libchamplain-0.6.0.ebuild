@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.2 2010/06/18 09:29:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.3 2010/06/22 07:32:06 jlec Exp $
 
 EAPI="3"
 
@@ -29,6 +29,7 @@ RDEPEND="
 		media-libs/memphis:0.2
 		>=media-libs/clutter-gtk-0.10:1.0 )
 	python? (
+		media-libs/pymemphis
 		dev-python/pyclutter
 		dev-python/pyclutter-gtk )"
 DEPEND="${RDEPEND}
