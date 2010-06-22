@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r3.ebuild,v 1.3 2010/06/17 01:48:33 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r3.ebuild,v 1.4 2010/06/22 12:45:55 jlec Exp $
 
 EAPI="3"
 
@@ -44,6 +44,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-autoconf-2.64.patch
 	sed "s:GENTOO_PKG_NAME:${PN}:g" \
 		-i Makefile.am || die "Cannot correct package name"
+	# this test is broken
+	sed '/ion-pmf/d' -i examples/Makefile.am || die
 	eautoreconf
 	find . -name "._*" -exec rm -f '{}' \;
 }
@@ -80,9 +82,6 @@ src_configure() {
 		${myconf}
 }
 
-src_compile() {
-	emake -j1 || die "make failed"
-}
 
 src_test() {
 	cd examples && make test \

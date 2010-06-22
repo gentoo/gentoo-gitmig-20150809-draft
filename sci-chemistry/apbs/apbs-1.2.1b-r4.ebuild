@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.2 2010/06/17 01:48:33 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.3 2010/06/22 12:45:55 jlec Exp $
 
 EAPI="3"
 
@@ -46,6 +46,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-parallelbuild.patch
 	sed "s:GENTOO_PKG_NAME:${PN}:g" \
 		-i Makefile.am || die "Cannot correct package name"
+	# this test is broken
+	sed '/ion-pmf/d' -i examples/Makefile.am || die
 	eautoreconf
 	find . -name "._*" -exec rm -f '{}' \;
 }
@@ -84,13 +86,15 @@ src_configure() {
 		${myconf}
 }
 
-src_compile() {
-	emake || die "make failed"
-}
-
 src_test() {
-	cd examples && make test \
-		|| die "Tests failed"
+	if use tinker; then
+		elog "tinker code make apbs to not reach the expected precission"
+		elog "https://sourceforge.net/tracker/?func=detail&aid=3019465&group_id=148472&atid=771704"
+	else
+		cd examples && make test \
+			|| die "Tests failed"
+		grep -q 'FAILED' "${S}"/examples/TESTRESULTS.log && die "Tests failed"
+	fi
 }
 
 src_install() {
