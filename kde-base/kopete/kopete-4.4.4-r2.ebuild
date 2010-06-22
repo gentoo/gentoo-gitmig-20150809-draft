@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.4.4-r1.ebuild,v 1.3 2010/06/21 15:53:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.4.4-r2.ebuild,v 1.1 2010/06/22 15:50:01 reavertm Exp $
 
 EAPI="3"
 
@@ -121,8 +121,11 @@ src_configure() {
 	)
 	# enable protocols
 	for x in ${PROTOCOLS}; do
-		[[ ${x/+/} = msn ]] && x2=Libmsn || x2=""
-		[[ ${x/+/} = zeroconf ]] && x2=bonjour || x2=""
+		case ${x/+/} in
+			msn) x2=Libmsn ;;
+			zeroconf) x2=bonjour ;;
+			*) x2='' ;;
+		esac
 		mycmakeargs+=($(cmake-utils_use_with ${x/+/} ${x2}))
 	done
 
