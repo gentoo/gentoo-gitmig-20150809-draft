@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11679 2010/06/22 08:50:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11680 2010/06/22 13:12:44 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -757,10 +757,6 @@ dev-perl/Class-XSAccessor-Array
 # by upstream. Annoying automount error messages on startup.
 =x11-libs/libfm-0.1*
 =x11-misc/pcmanfm-0.9*
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (18 Feb 2010)
-# Mask prerelease versions
-=sys-boot/syslinux-4.00_pre*
 
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
 # Upstream discontinued the split of -community and -enterprise specific
