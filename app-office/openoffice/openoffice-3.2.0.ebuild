@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.26 2010/05/25 16:42:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.27 2010/06/22 20:00:18 arfrever Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -92,7 +92,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 		>=dev-libs/nss-3.11-r1 )
 	opengl? ( virtual/opengl
 		virtual/glu )
-	>=net-misc/neon-0.24.7
+	>=net-libs/neon-0.24.7
 	>=dev-libs/openssl-0.9.8g
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.3.0
