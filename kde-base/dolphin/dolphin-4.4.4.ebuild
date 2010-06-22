@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.4.4.ebuild,v 1.2 2010/06/21 15:53:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.4.4.ebuild,v 1.3 2010/06/22 18:53:46 arfrever Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ DEPEND="
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kfind)
 	subversion? (
-		dev-util/subversion
+		dev-vcs/subversion
 		$(add_kdebase_dep kompare)
 	)
 "
