@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.4.ebuild,v 1.3 2010/06/21 15:53:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.4.ebuild,v 1.4 2010/06/22 16:16:49 reavertm Exp $
 
 EAPI="3"
 
@@ -47,6 +47,9 @@ KMEXTRA="
 KMLOADLIBS="libkdepim"
 
 src_configure() {
+	# Bug 308903
+	use ppc64 && append-flags -mminimal-toc
+
 	mycmakeargs=(
 		-DWITH_IndicateQt=OFF
 	)

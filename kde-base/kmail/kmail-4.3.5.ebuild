@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.3.5.ebuild,v 1.5 2010/06/21 15:53:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.3.5.ebuild,v 1.6 2010/06/22 16:16:49 reavertm Exp $
 
 EAPI="2"
 
@@ -40,6 +40,9 @@ KMLOADLIBS="libkdepim"
 PATCHES=( "${FILESDIR}/${PN}-4.1.72-fix.patch" )
 
 src_configure() {
+	# Bug 308903
+	use ppc64 && append-flags -mminimal-toc
+
 	mycmakeargs=(
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 	)
