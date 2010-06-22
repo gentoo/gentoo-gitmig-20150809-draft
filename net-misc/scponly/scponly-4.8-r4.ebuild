@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.5 2010/04/11 11:16:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.6 2010/06/22 18:54:31 arfrever Exp $
 
 EAPI="1"
 inherit eutils multilib toolchain-funcs
@@ -20,7 +20,7 @@ RDEPEND="sys-apps/sed
 	!mips? ( passwd? ( sys-apps/shadow ) )
 	rsync? ( net-misc/rsync )
 	!mips? ( unison? ( net-misc/unison ) )
-	subversion? ( dev-util/subversion )"
+	subversion? ( dev-vcs/subversion )"
 DEPEND="${RDEPEND}"
 
 myuser="scponly"

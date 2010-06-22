@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pmsvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/ChangeLog,v 1.1 2010/06/13 23:34:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/ChangeLog,v 1.2 2010/06/22 18:54:37 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pmsvn-1.0.2.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
 *pmsvn-1.0.2 (13 Jun 2010)
 
