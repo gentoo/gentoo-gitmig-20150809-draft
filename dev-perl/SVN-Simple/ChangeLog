@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SVN-Simple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.20 2010/02/05 22:02:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.21 2010/06/22 18:36:06 arfrever Exp $
+
+  22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  SVN-Simple-0.27.ebuild:
+  dev-util/subversion renamed to dev-vcs/subversion.
 
   05 Feb 2010; Torsten Veller <tove@gentoo.org> SVN-Simple-0.27.ebuild:
   Fix LICENSE (#301969)
