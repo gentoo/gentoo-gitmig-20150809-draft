@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/323079
+
+--- src/Applet.hh
++++ src/Applet.hh
+@@ -77,7 +77,7 @@
+ 		std::auto_ptr<Gnome::UI::About>		m_pAboutBox;
+ 		
+ 		Gtk::EventBox						m_GtkEventBox;
+-		Gtk::Image::Image					m_GtkImage;
++		Gtk::Image						m_GtkImage;
+ 		Gtk::Tooltips						m_GtkTooltips;
+ 
+ 		Glib::RefPtr<Gdk::Pixbuf>			m_pGdkIcon;
