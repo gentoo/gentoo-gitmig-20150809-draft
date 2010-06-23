@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r1.ebuild,v 1.10 2009/09/23 20:11:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r1.ebuild,v 1.11 2010/06/23 09:32:45 jlec Exp $
 
 inherit flag-o-matic fortran autotools
 
@@ -59,25 +59,24 @@ src_compile() {
 	# octave links agains -lmpi by default
 	# mpich needs -lmpich instead
 	if use mpi ; then
-		if built_with_use sys-cluster/mpich2 cxx ; then
-		elog "mpich2 must be built without C++ support!"
-		die "please rebuild mpich2 with USE=-cxx..."
-		else
 		CC="mpicc"
 		if has_version 'sys-cluster/mpich' ; then
-			CXX="mpiCC"
-			myconf="${myconf} --with-mpi=mpich"
+				CXX="mpiCC"
+				myconf="${myconf} --with-mpi=mpich"
 		elif has_version 'sys-cluster/mpich2' ; then
-			F77="mpif77"
-			myconf="${myconf} --with-mpi=mpich"
+			if built_with_use sys-cluster/mpich2 cxx ; then
+				elog "mpich2 must be built without C++ support!"
+				die "please rebuild mpich2 with USE=-cxx..."
+			fi
+		    F77="mpif77"
+		    myconf="${myconf} --with-mpi=mpich"
 		else
-			myconf="${myconf} --with-mpi=mpi"
-		fi
+		    myconf="${myconf} --with-mpi=mpi"
 		fi
 	else
-		CC="$(tc-getCC)"
-		CXX="$(tc-getCXX)"
-		myconf="${myconf} --without-mpi"
+	    CC="$(tc-getCC)"
+	    CXX="$(tc-getCXX)"
+	    myconf="${myconf} --without-mpi"
 	fi
 
 	CC="${CC}" CXX="${CXX}" F77="${F77}" \
