@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/xmpppy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.17 2010/02/07 20:49:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.18 2010/06/23 18:19:37 arfrever Exp $
+
+  23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xmpppy-0.5.0_rc1.ebuild, files/xmpppy-hashlib_ssl_deprecation.patch:
+  Unconditionally apply fix for deprecation warnings.
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> xmpppy-0.5.0_rc1.ebuild:
   Add inherit eutils: epatch is defined there.

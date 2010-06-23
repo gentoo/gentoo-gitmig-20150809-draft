@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.5.0_rc1.ebuild,v 1.5 2010/02/07 20:49:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.5.0_rc1.ebuild,v 1.6 2010/06/23 18:19:37 arfrever Exp $
 
 EAPI="2"
 inherit eutils distutils
@@ -29,11 +29,8 @@ S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME="xmpp"
 
 src_prepare(){
-
-	python_version
-	[[ ${PYVER} == 2.6 ]] && \
-		epatch "${FILESDIR}/${PN}-hashlib_ssl_deprecation.patch"
-
+	distutils_src_prepare
+	epatch "${FILESDIR}/${PN}-hashlib_ssl_deprecation.patch"
 }
 
 src_install(){

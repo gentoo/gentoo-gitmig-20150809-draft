@@ -1,32 +1,32 @@
-#Patch by Jesus Rivero (neurogeek)
-#Added on 01-27-2010
-#Sent to upstream on 01-27-2010
-
-diff -uNr xmpppy-0.5.0-rc1.org/xmpp/auth.py xmpppy-0.5.0-rc1/xmpp/auth.py
---- xmpppy-0.5.0-rc1.org/xmpp/auth.py	2010-01-28 01:00:03.000000000 +0000
-+++ xmpppy-0.5.0-rc1/xmpp/auth.py	2010-01-28 01:03:30.000000000 +0000
-@@ -21,11 +21,11 @@
+--- xmpp/auth.py
++++ xmpp/auth.py
+@@ -21,11 +21,16 @@
  
  from protocol import *
  from client import PlugIn
 -import sha,base64,random,dispatcher,re
-+from hashlib import sha1 as sha, md5
 +import base64,random,dispatcher,re
  
 -import md5
 -def HH(some): return md5.new(some).hexdigest()
 -def H(some): return md5.new(some).digest()
++try:
++    from hashlib import md5, sha1
++except ImportError:
++    from md5 import new as md5
++    from sha import new as sha1
++
 +def HH(some): return md5(some).hexdigest()
 +def H(some): return md5(some).digest()
  def C(some): return ':'.join(some)
  
  class NonSASL(PlugIn):
-@@ -54,15 +54,15 @@
+@@ -54,15 +59,15 @@
  
          if query.getTag('digest'):
              self.DEBUG("Performing digest authentication",'ok')
 -            query.setTagData('digest',sha.new(owner.Dispatcher.Stream._document_attrs['id']+self.password).hexdigest())
-+            query.setTagData('digest',sha(owner.Dispatcher.Stream._document_attrs['id']+self.password).hexdigest())
++            query.setTagData('digest',sha1(owner.Dispatcher.Stream._document_attrs['id']+self.password).hexdigest())
              if query.getTag('password'): query.delChild('password')
              method='digest'
          elif query.getTag('token'):
@@ -35,42 +35,35 @@ diff -uNr xmpppy-0.5.0-rc1.org/xmpp/auth.py xmpppy-0.5.0-rc1/xmpp/auth.py
              self.DEBUG("Performing zero-k authentication",'ok')
 -            hash = sha.new(sha.new(self.password).hexdigest()+token).hexdigest()
 -            for foo in xrange(int(seq)): hash = sha.new(hash).hexdigest()
-+            hash = sha(sha(self.password).hexdigest()+token).hexdigest()
-+            for foo in xrange(int(seq)): hash = sha(hash).hexdigest()
++            hash = sha1(sha1(self.password).hexdigest()+token).hexdigest()
++            for foo in xrange(int(seq)): hash = sha1(hash).hexdigest()
              query.setTagData('hash',hash)
              method='0k'
          else:
-@@ -81,7 +81,7 @@
+@@ -81,7 +86,7 @@
      def authComponent(self,owner):
          """ Authenticate component. Send handshake stanza and wait for result. Returns "ok" on success. """
          self.handshake=0
 -        owner.send(Node(NS_COMPONENT_ACCEPT+' handshake',payload=[sha.new(owner.Dispatcher.Stream._document_attrs['id']+self.password).hexdigest()]))
-+        owner.send(Node(NS_COMPONENT_ACCEPT+' handshake',payload=[sha(owner.Dispatcher.Stream._document_attrs['id']+self.password).hexdigest()]))
++        owner.send(Node(NS_COMPONENT_ACCEPT+' handshake',payload=[sha1(owner.Dispatcher.Stream._document_attrs['id']+self.password).hexdigest()]))
          owner.RegisterHandler('handshake',self.handshakeHandler,xmlns=NS_COMPONENT_ACCEPT)
          while not self.handshake:
              self.DEBUG("waiting on handshake",'notify')
-
-diff -uNr xmpppy-0.5.0-rc1.org/xmpp/transports.py xmpppy-0.5.0-rc1/xmpp/transports.py
---- xmpppy-0.5.0-rc1.org/xmpp/transports.py	2010-01-28 01:00:03.000000000 +0000
-+++ xmpppy-0.5.0-rc1/xmpp/transports.py	2010-01-28 02:35:09.000000000 +0000
+--- xmpp/transports.py
++++ xmpp/transports.py
 @@ -31,6 +31,7 @@
  from simplexml import ustr
  from client import PlugIn
  from protocol import *
-+import ssl
++import warnings
  
  # determine which DNS resolution library is available
  HAVE_DNSPYTHON = False
-@@ -312,9 +313,9 @@
+@@ -312,6 +313,7 @@
          """ Immidiatedly switch socket to TLS mode. Used internally."""
          """ Here we should switch pending_data to hint mode."""
          tcpsock=self._owner.Connection
--        tcpsock._sslObj    = socket.ssl(tcpsock._sock, None, None)
--        tcpsock._sslIssuer = tcpsock._sslObj.issuer()
--        tcpsock._sslServer = tcpsock._sslObj.server()
-+        tcpsock._sslObj    = ssl.wrap_socket(tcpsock._sock, cert_reqs=ssl.CERT_NONE)
-+        #tcpsock._sslIssuer = tcpsock._sslObj.issuer()
-+        #tcpsock._sslServer = tcpsock._sslObj.server()
-         tcpsock._recv = tcpsock._sslObj.read
-         tcpsock._send = tcpsock._sslObj.write
- 
++        warnings.filterwarnings("ignore", "socket\.ssl.*ssl\.wrap_socket", DeprecationWarning)
+         tcpsock._sslObj    = socket.ssl(tcpsock._sock, None, None)
+         tcpsock._sslIssuer = tcpsock._sslObj.issuer()
+         tcpsock._sslServer = tcpsock._sslObj.server()
