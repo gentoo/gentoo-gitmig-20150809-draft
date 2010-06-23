@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4319 2010/06/22 20:00:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4320 2010/06/23 09:16:48 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jun 2010; Justin Lecher <jlec@gentoo.org> package.mask:
+  Masked dev-libs/ccmath sci-calculators/rpc for removal in 14 days
 
   22 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask >=sci-mathematics/nusmv-2.5.0 for testing.
