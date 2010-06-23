@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.3.0.ebuild,v 1.4 2010/06/23 14:24:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.5.0.ebuild,v 1.1 2010/06/23 14:24:31 jlec Exp $
 
-inherit toolchain-funcs eutils versionator
+EAPI="3"
+
+inherit autotools eutils toolchain-funcs versionator
 
 MY_PN="${PN/m/M}"
 MY_PV=$(get_version_component_range 1-2)
@@ -18,26 +20,20 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="doc"
 
-RDEPEND="sci-libs/buddy
+RDEPEND="
+	>=dev-libs/gmp-4.1.3
+	dev-libs/libsigsegv
 	dev-libs/libtecla
-	>=dev-libs/gmp-4.1.3"
-
+	sci-libs/buddy"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
 S="${WORKDIR}"/${MY_PN}-${MY_PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-gcc43.patch
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake -j1 || die "emake failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-prll.patch
+	eautoreconf
 }
 
 src_install() {
@@ -49,11 +45,11 @@ src_install() {
 		|| die "failed to install data files"
 
 	# Sets the full maude library path.
-	doenvd "${FILESDIR}"/23maude
+	doenvd "${FILESDIR}"/23maude || die
 
 	# install full maude
 	cd "${WORKDIR}"/${P}-extras
-	doins full-maude.maude
+	doins full-maude.maude || die
 
 	# install docs and examples
 	if use doc; then
