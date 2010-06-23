@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/cons-2.2.0.ebuild,v 1.14 2007/02/27 16:00:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/cons-2.2.0.ebuild,v 1.15 2010/06/23 12:06:50 jlec Exp $
 
 DESCRIPTION="Extensible perl-based build utility"
 SRC_URI="http://www.dsmit.com/cons/stable/${P}.tgz"
@@ -11,12 +11,16 @@ LICENSE="GPL-2"
 KEYWORDS="alpha ~amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND="dev-lang/perl
+DEPEND="
+	dev-lang/perl
 	virtual/perl-Digest-MD5"
+RDEPEND="
+	${DEPEND}
+	!sci-biology/emboss"
 
 src_install() {
-	dobin cons
-	dodoc CHANGES COPYING COPYRIGHT INSTALL MANIFEST README RELEASE TODO
-	dohtml *.html
-	doman cons.1.gz
+	dobin cons || die
+	dodoc CHANGES INSTALL MANIFEST README RELEASE TODO || die
+	dohtml *.html || die
+	doman cons.1.gz || die
 }
