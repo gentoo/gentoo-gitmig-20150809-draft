@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.1.1.ebuild,v 1.4 2010/06/21 19:27:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.2.ebuild,v 1.1 2010/06/23 12:33:13 pacho Exp $
 
 EAPI="2"
 
-inherit eutils gnome2 multilib
+inherit gnome2 multilib
 
 DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
@@ -76,17 +76,11 @@ pkg_setup() {
 		--disable-favourite_contacts
 		--disable-tpl
 		$(use_enable debug)
+		$(use_enable nautilus nautilus-sendto)
 		$(use_with networkmanager connectivity nm)
 		$(use_enable spell)
 		$(use_enable test coding-style-checks)
 		$(use_enable webkit)"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Fix uninitialized GError*s causing tests to break, bug #323751
-	epatch "${FILESDIR}/${P}-init-gerror.patch"
 }
 
 src_test() {
