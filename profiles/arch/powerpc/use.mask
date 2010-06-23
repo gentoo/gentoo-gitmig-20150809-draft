@@ -1,3 +1,6 @@
+# No keyworded versions of openafs
+afs
+
 # These use-flags won't work neither on ppc32 nor on ppc64
 
 3dfx
