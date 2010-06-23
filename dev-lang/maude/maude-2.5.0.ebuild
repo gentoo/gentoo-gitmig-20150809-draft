@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.5.0.ebuild,v 1.1 2010/06/23 14:24:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.5.0.ebuild,v 1.2 2010/06/23 14:28:14 jlec Exp $
 
 EAPI="3"
 
@@ -34,6 +34,10 @@ S="${WORKDIR}"/${MY_PN}-${MY_PV}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-prll.patch
 	eautoreconf
+}
+
+src_configure() {
+	econf --datadir="${EPREFIX}/usr/share/${PN}"
 }
 
 src_install() {
