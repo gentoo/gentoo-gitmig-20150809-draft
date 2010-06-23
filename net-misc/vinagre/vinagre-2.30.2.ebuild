@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.1.ebuild,v 1.2 2010/06/15 08:57:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.2.ebuild,v 1.1 2010/06/23 10:28:46 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="VNC Client for the GNOME Desktop"
 HOMEPAGE="http://www.gnome.org/projects/vinagre/"
@@ -49,13 +49,6 @@ pkg_setup() {
 		$(use_enable applet)
 		$(use_enable ssh)
 		$(use_enable telepathy)"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Updated Spanish translation, fixes bug #323767
-	epatch "${FILESDIR}/${P}-fix-es_ES.patch"
 }
 
 src_install() {

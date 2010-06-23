@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.53 2010/06/15 08:57:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.54 2010/06/23 10:28:46 pacho Exp $
+
+*vinagre-2.30.2 (23 Jun 2010)
+
+  23 Jun 2010; Pacho Ramos <pacho@gentoo.org> -vinagre-2.30.1.ebuild,
+  -files/vinagre-2.30.1-fix-es_ES.patch, +vinagre-2.30.2.ebuild:
+  Version bump with updated translations and minor fixes, remove old.
 
   15 Jun 2010; Pacho Ramos <pacho@gentoo.org> vinagre-2.30.1.ebuild,
   +files/vinagre-2.30.1-fix-es_ES.patch:
