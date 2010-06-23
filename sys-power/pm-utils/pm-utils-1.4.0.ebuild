@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.0.ebuild,v 1.1 2010/06/23 09:36:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.0.ebuild,v 1.2 2010/06/23 11:06:33 ssuominen Exp $
 
 EAPI=2
 inherit autotools multilib
@@ -22,7 +22,7 @@ RDEPEND="
 	sys-power/pm-quirks
 	alsa? ( media-sound/alsa-utils )
 	networkmanager? ( net-misc/networkmanager )
-	ntp? ( net-misc/ntp )
+	ntp? ( || ( net-misc/ntp net-misc/openntpd ) )
 	amd64? ( ${vbetool} )
 	x86? ( ${vbetool} )
 	video_cards_radeon? ( app-laptop/radeontool )"

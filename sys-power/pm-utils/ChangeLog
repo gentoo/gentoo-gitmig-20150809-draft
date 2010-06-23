@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.44 2010/06/23 09:36:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.45 2010/06/23 11:06:33 ssuominen Exp $
+
+  23 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> pm-utils-1.4.0.ebuild:
+  Make net-misc/openntpd option for USE="ntp" wrt #314891 by Thomas Kahle.
 
 *pm-utils-1.4.0 (23 Jun 2010)
 
