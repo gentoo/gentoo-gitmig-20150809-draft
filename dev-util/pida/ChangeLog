@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pida
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.22 2010/01/15 21:49:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.23 2010/06/23 23:57:05 arfrever Exp $
+
+*pida-0.6.1 (23 Jun 2010)
+
+  23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pida-0.5.1.ebuild, -pida-0.5.1-r1.ebuild, +pida-0.6.1.ebuild,
+  +files/pida-0.6.1-fix_implicit_declaration.patch:
+  Version bump (bug #323863). Set SUPPORT_PYTHON_ABIS.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pida-0.5.1-r1.ebuild:
   Transfer Prefix keywords
