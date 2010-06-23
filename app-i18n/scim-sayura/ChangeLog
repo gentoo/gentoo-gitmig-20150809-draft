@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-sayura
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sayura/ChangeLog,v 1.1 2009/04/23 13:59:27 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sayura/ChangeLog,v 1.2 2010/06/23 15:05:56 hwoarang Exp $
+
+  23 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  scim-sayura-0.3.3.ebuild, +files/scim-sayura-0.3.3-gcc45.patch:
+  Fix gcc-4.5 compilation wrt bug #320879 thanks to Kacper Kowalik
+  (Xarthisius)
 
 *scim-sayura-0.3.3 (23 Apr 2009)
 
