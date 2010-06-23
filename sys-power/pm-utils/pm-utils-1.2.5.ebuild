@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.9 2010/06/05 19:06:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.10 2010/06/23 11:55:02 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="Suspend and hibernation utilities for HAL"
@@ -12,7 +11,7 @@ SRC_URI="http://pm-utils.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="ppc64"
 IUSE="alsa debug networkmanager ntp video_cards_intel video_cards_radeon"
 
 RDEPEND=">=sys-apps/hal-0.5.10
