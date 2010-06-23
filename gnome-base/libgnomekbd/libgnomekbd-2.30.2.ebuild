@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.30.1.ebuild,v 1.1 2010/06/13 16:47:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.30.2.ebuild,v 1.1 2010/06/23 11:57:48 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2 multilib
+inherit gnome2 multilib
 
 DESCRIPTION="Gnome keyboard configuration library"
 HOMEPAGE="http://www.gnome.org"
@@ -30,16 +30,6 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	# Only user interaction required graphical tests at the time of 2.22.0 - not useful for us
 	G2CONF="${G2CONF} --disable-tests --disable-static"
-}
-
-src_prepare() {
-	gnome2_src_prepare
-
-	# Do not crash on kbd plug in; upstream bug 617643
-	epatch "${FILESDIR}/${P}-kbd-crash.patch"
-
-	# Provide the proper place in NA by using the name
-	epatch "${FILESDIR}/${P}-notification-area.patch"
 }
 
 src_compile() {

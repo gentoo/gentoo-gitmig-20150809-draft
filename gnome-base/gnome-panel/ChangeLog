@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.303 2010/06/13 17:59:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.304 2010/06/23 11:54:31 pacho Exp $
+
+*gnome-panel-2.30.2 (23 Jun 2010)
+
+  23 Jun 2010; Pacho Ramos <pacho@gentoo.org> -gnome-panel-2.30.0-r1.ebuild,
+  -files/gnome-panel-2.30.0-panels-unhidden.patch,
+  +gnome-panel-2.30.2.ebuild:
+  Version bump with updated translations and fixes, remove old.
 
 *gnome-panel-2.30.0-r1 (13 Jun 2010)
 
