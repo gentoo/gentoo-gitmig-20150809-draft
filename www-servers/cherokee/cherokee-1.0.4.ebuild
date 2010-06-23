@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.0.ebuild,v 1.2 2010/05/17 16:47:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.4.ebuild,v 1.1 2010/06/23 09:56:09 bass Exp $
 
-inherit eutils pam versionator libtool
+EAPI=2
+PYTHON_DEPEND="admin? 2"
+
+inherit python eutils pam versionator libtool
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="http://www.cherokee-project.com/download/$(get_version_component_range 1-2)/${PV}/${P}.tar.gz"
@@ -19,13 +22,16 @@ RDEPEND="
 	nls? ( sys-devel/gettext )
 	ssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
-	admin? ( dev-lang/python )
 	geoip? ( dev-libs/geoip )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	fastcgi? ( www-servers/spawn-fcgi )
 	ffmpeg? ( media-video/ffmpeg )"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	python_convert_shebangs -r 2 .
+}
 
 src_compile() {
 	local myconf
@@ -72,7 +78,7 @@ src_compile() {
 		--localstatedir=/var \
 		|| die "configure failed"
 
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install () {
@@ -106,6 +112,10 @@ src_install () {
 	# Puts logs in /var/log/cherokee/
 	dosed "s:/var/log/cherokee\.:/var/log/cherokee/cherokee\.:g" /etc/cherokee/cherokee.conf
 
+}
+
+pkg_setup() {
+	python_set_active_version 2
 }
 
 pkg_postinst() {

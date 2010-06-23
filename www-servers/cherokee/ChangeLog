@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.67 2010/06/16 11:54:54 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.68 2010/06/23 09:56:09 bass Exp $
+
+*cherokee-1.0.4 (23 Jun 2010)
+
+  23 Jun 2010; J. Alberto Suárez López <bass@gentoo.org>
+  -cherokee-0.99.30.ebuild, -cherokee-0.99.42.ebuild,
+  -cherokee-0.99.44.ebuild, -cherokee-0.99.48.ebuild,
+  -cherokee-1.0.0.ebuild, +cherokee-1.0.4.ebuild:
+  version bump. remove old ebuilds
 
 *cherokee-1.0.2-r1 (16 Jun 2010)
 
