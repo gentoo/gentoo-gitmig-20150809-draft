@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.4 2010/05/18 11:19:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.5 2010/06/23 09:43:19 fauli Exp $
+
+*bzr-2.1.2 (23 Jun 2010)
+
+  23 Jun 2010; Christian Faulhammer <fauli@gentoo.org> -bzr-2.1.0.ebuild,
+  +bzr-2.1.2.ebuild, -files/bzr-2.1-no-pyrex-citon.patch:
+  version bump and clean up
 
   18 May 2010; Fabian Groffen <grobian@gentoo.org> bzr-2.1.1.ebuild:
   Marked ~ppc-macos
