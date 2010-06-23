@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs-fuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.12 2010/06/22 20:13:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.13 2010/06/23 08:56:57 ssuominen Exp $
+
+  23 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  zfs-fuse-0.6.9-r1.ebuild:
+  Install bash completion wrt #325177 by Marcin Mirosław.
 
 *zfs-fuse-0.6.9-r1 (22 Jun 2010)
 

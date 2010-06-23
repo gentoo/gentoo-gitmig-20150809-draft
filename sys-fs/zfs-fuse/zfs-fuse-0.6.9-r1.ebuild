@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.6.9-r1.ebuild,v 1.1 2010/06/22 20:13:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.6.9-r1.ebuild,v 1.2 2010/06/23 08:56:57 ssuominen Exp $
 
 EAPI=2
+inherit bash-completion
 
 DESCRIPTION="An implementation of the ZFS filesystem for FUSE/Linux"
 HOMEPAGE="http://zfs-fuse.net/"
@@ -53,4 +54,6 @@ src_install() {
 	doinitd "${FILESDIR}"/${PN}
 
 	dodoc ../{BUGS,CHANGES,HACKING,README*,STATUS,TESTING,TODO}
+
+	dobashcompletion ../contrib/zfs_completion.bash ${PN}
 }
