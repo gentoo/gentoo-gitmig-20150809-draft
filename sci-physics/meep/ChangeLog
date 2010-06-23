@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/meep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.15 2010/05/28 20:13:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.16 2010/06/23 20:18:30 bicatali Exp $
+
+  23 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> meep-1.1.1.ebuild:
+  Removed bindist flag, should be compatible GPL-3 anyway
 
   28 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
   -files/meep-0.10.1-gcc4.3.patch, -meep-0.20.3.ebuild, -meep-0.20.4.ebuild,

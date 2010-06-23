@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-1.1.1.ebuild,v 1.3 2010/01/31 18:04:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-1.1.1.ebuild,v 1.4 2010/06/23 20:18:30 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -12,11 +12,10 @@ SRC_URI="http://ab-initio.mit.edu/meep/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="bindist examples hdf5 guile mpi"
+IUSE="examples hdf5 guile mpi"
 
 DEPEND="sci-libs/fftw
-	!bindist? ( sci-libs/gsl )
-	bindist? ( <sci-libs/gsl-1.10 )
+	sci-libs/gsl
 	sci-physics/harminv
 	guile? ( >=sci-libs/libctl-3.0.3 )
 	hdf5? ( sci-libs/hdf5 )
