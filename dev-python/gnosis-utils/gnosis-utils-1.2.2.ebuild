@@ -1,27 +1,27 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.2.ebuild,v 1.3 2009/09/23 18:22:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.2.ebuild,v 1.4 2010/06/23 15:14:51 arfrever Exp $
 
-EAPI="2"
-NEED_PYTHON="2.1"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
 MY_P=Gnosis_Utils-${PV}
 
 DESCRIPTION="XML pickling and objectification with Python."
-SRC_URI="http://www.gnosis.cx/download/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gnosis.cx/download/"
+SRC_URI="http://www.gnosis.cx/download/${MY_P}.tar.gz"
+
+LICENSE="PYTHON"
 SLOT="0"
 KEYWORDS="~amd64 ia64 x86"
-LICENSE="PYTHON"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-RESTRICT_PYTHON_ABIS="3*"
 
 PYTHON_MODNAME="gnosis"
 
@@ -45,7 +45,7 @@ src_prepare() {
 
 src_test() {
 	testing() {
-		cd "${S}"/gnosis/xml/pickle/test
+		cd gnosis/xml/pickle/test
 		PYTHONPATH="${S}/build-${PYTHON_ABI}/lib" "$(PYTHON)" test_all.py
 	}
 	python_execute_function testing
@@ -58,5 +58,8 @@ src_install() {
 
 	distutils_src_install
 
-	rm -f "${D}"usr/lib*/python*/site-packages/README
+	delete_README() {
+		rm -f "${ED}$(python_get_sitedir)/README"
+	}
+	python_execute_function -q delete_README
 }

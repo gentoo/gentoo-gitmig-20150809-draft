@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnosis-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.17 2009/09/23 18:22:43 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.18 2010/06/23 15:14:51 arfrever Exp $
+
+  23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnosis-utils-1.2.2.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   23 Sep 2009; Raúl Porcel <armin76@gentoo.org> gnosis-utils-1.2.2.ebuild:
   ia64 stable wrt #284986
