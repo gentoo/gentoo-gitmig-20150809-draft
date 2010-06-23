@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/beagle
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.10 2009/03/03 17:08:11 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/ChangeLog,v 1.11 2010/06/23 11:23:11 jlec Exp $
+
+  23 Jun 2010; Justin Lecher <jlec@gentoo.org> beagle-2.2.0.ebuild,
+  beagle-3.0.3.ebuild:
+  Blocking dev-libs/libbeagle, #248331
 
   03 Mar 2009; Raúl Porcel <armin76@gentoo.org> beagle-3.0.3.ebuild:
   x86 stable wrt #259031
