@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.4 2010/06/22 09:16:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.5 2010/06/23 20:08:09 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
-inherit autotools eutils git
+inherit multilib autotools eutils git
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
 HOMEPAGE="http://openbox.org/"
@@ -13,7 +13,7 @@ EGIT_REPO_URI="git://git.openbox.org/dana/openbox"
 LICENSE="GPL-2"
 SLOT="3"
 KEYWORDS=""
-IUSE="imlib nls startup-notification"
+IUSE="debug imlib nls session startup-notification static-libs"
 
 RDEPEND="dev-libs/glib:2
 	>=dev-libs/libxml2-2.0
@@ -44,15 +44,19 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir=/usr/share/doc/${PF} \
+		$(use_enable debug) \
 		$(use_enable imlib imlib2) \
 		$(use_enable nls) \
-		$(use_enable startup-notification)
+		$(use_enable startup-notification) \
+		$(use_enable session session-management) \
+		$(use_enable static-libs static) \
+		--with-x
 }
 
 src_install() {
 	dodir /etc/X11/Sessions
 	echo "/usr/bin/openbox-session" > "${D}/etc/X11/Sessions/${PN}"
 	fperms a+x /etc/X11/Sessions/${PN}
-
 	emake DESTDIR="${D}" install || die "emake install failed"
+	! use static-libs && rm "${D}"/usr/$(get_libdir)/lib{obt,obrender}.la
 }

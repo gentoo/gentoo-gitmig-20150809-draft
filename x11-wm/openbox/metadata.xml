@@ -7,6 +7,9 @@
   	<email>hwoarang@gentoo.org</email>
 	<name>Markos Chandras</name>
   </maintainer>
+  <use>
+ 	 <flag name="session">Enables support for session managers</flag>
+  </use>
   <upstream>
     <maintainer status='active'>
       <email>danakj@orodu.net</email>
