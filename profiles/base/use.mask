@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.103 2010/06/13 10:07:52 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.104 2010/06/23 20:50:17 abcd Exp $
 
 # These need libieee1284 which is amd64/x86 only.
 sane_backends_canon_pp
@@ -260,3 +260,7 @@ ruby_targets_ree18
 # introspection is not mature yet. 
 # gir-repository especially is a big pile of junk
 introspection
+
+# Jonathan Callen <abcd@gentoo.org> (23 Jun 2010)
+# x11-libs/gtk+:3 is not yet in the tree
+gtk3

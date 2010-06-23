@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.152 2010/06/22 11:11:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.153 2010/06/23 20:50:17 abcd Exp $
+
+  23 Jun 2010; Jonathan Callen <abcd@gentoo.org> use.mask:
+  Mask gtk3 USE flag
 
   22 Jun 2010; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   Drop qml use flag masking from qt-creator
