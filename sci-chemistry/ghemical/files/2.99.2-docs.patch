@@ -6,7 +6,7 @@ index 030f67c..dcb207b 100644
  SUBDIRS = images
  
 -helpfilesdir = $(datadir)/ghemical/@APPVERSION@/user-docs
-+helpfilesdir = $(datadir)/docs/ghemical-@APPVERSION@/html
++helpfilesdir = $(datadir)/doc/ghemical-@APPVERSION@/html
  helpfiles_DATA = *.css *.html
  
  EXTRA_DIST = $(helpfiles_DATA)
@@ -16,7 +16,7 @@ index fae0ffd..a569151 100644
 +++ b/docs/user-docs/images/Makefile.am
 @@ -1,4 +1,4 @@
 -helpimagesdir = $(datadir)/ghemical/@APPVERSION@/user-docs/images
-+helpimagesdir = $(datadir)/docs/ghemical-@APPVERSION@/html/images
++helpimagesdir = $(datadir)/doc/ghemical-@APPVERSION@/html/images
  helpimages_DATA = *.png
  
  EXTRA_DIST = $(helpimages_DATA)
