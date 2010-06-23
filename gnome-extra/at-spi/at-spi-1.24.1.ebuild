@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.24.1.ebuild,v 1.14 2010/05/03 22:18:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.24.1.ebuild,v 1.15 2010/06/23 14:58:13 arfrever Exp $
 
 WANT_AUTOMAKE="1.10"
 
@@ -63,8 +63,7 @@ src_test() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/pyatspi
+	python_mod_optimize $(python_get_sitedir)/pyatspi
 }
 
 pkg_postrm() {
