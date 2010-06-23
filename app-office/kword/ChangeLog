@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.146 2010/03/31 21:53:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.147 2010/06/23 18:05:39 hwoarang Exp $
+
+  23 Jun 2010; Markos Chandras <hwoarang@gentoo.org> kword-2.1.2.ebuild,
+  +files/kword-2.1.2-gcc45.patch:
+  Fix gcc-4.5 compilation wrt bug #322725
 
 *kword-2.1.2 (31 Mar 2010)
 
