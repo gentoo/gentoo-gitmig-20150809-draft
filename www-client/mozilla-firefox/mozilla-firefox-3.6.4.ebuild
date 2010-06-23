@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.4.ebuild,v 1.1 2010/06/22 21:18:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.4.ebuild,v 1.2 2010/06/23 00:46:26 nirbheek Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -127,7 +127,11 @@ src_prepare() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
+	EPATCH_EXCLUDE="137-bz460917_att350845_reload_new_plugins-gentoo-update.patch" \
 	epatch "${WORKDIR}"
+
+	# The patch excluded above failed, ported patch is applied below
+	epatch "${FILESDIR}/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch"
 
 	# Fix media build failure
 	epatch "${FILESDIR}/xulrunner-1.9.2-noalsa-fixup.patch"

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.616 2010/06/22 21:18:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.617 2010/06/23 00:46:26 nirbheek Exp $
+
+  23 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild,
+  +files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch:
+  Fix patch that was failing, thanks to galtgendo for reporting
 
 *mozilla-firefox-3.6.4 (22 Jun 2010)
 
