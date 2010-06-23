@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.62 2010/06/21 09:25:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.63 2010/06/23 15:19:52 voyageur Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	media-video/ffmpeg[threads]
+	>=media-video/ffmpeg-0.6[threads,vpx]
 	cups? ( >=net-print/cups-1.3.5 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
@@ -102,12 +102,6 @@ remove_bundled_lib() {
 }
 
 src_prepare() {
-	# Disable VP8 until we have a recent enough system-provided ffmpeg.
-	epatch "${FILESDIR}"/${PN}-disable-vp8-r1.patch
-
-	# Make dependency on cups optional, bug #324105.
-	epatch "${FILESDIR}"/${PN}-optional-cups-r1.patch
-
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/libevent"
 	remove_bundled_lib "third_party/libjpeg"
@@ -224,6 +218,7 @@ src_install() {
 
 	insinto ${CHROMIUM_HOME}
 	doins out/Release/chrome.pak
+	doins out/Release/resources.pak
 
 	doins -r out/Release/locales
 	doins -r out/Release/resources

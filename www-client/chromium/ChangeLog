@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.124 2010/06/21 09:25:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.125 2010/06/23 15:19:52 voyageur Exp $
+
+  23 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org> chromium-9999.ebuild:
+  Install resources.pak, bug #324645 by Mike Gilbert
+  <floppymaster@gmail.com>. Drop cups patch, it's merged usptream, and
+  enable WebM support
 
   21 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   -chromium-5.0.375.70.ebuild, chromium-5.0.375.70-r1.ebuild,
