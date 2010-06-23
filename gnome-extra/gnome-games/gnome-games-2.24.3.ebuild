@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.15 2010/01/14 23:02:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.16 2010/06/23 15:01:20 arfrever Exp $
 
 GCONF_DEBUG="no"
 
@@ -129,8 +129,7 @@ pkg_postinst() {
 	games_pkg_postinst
 	games-ggz_update_modules
 	gnome2_pkg_postinst
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_mod_optimize $(python_get_sitedir)
 }
 
 pkg_postrm() {
