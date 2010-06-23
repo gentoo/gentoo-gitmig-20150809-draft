@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.211 2010/06/13 16:06:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.212 2010/06/23 12:38:46 pacho Exp $
+
+*gtkhtml-3.30.2 (23 Jun 2010)
+
+  23 Jun 2010; Pacho Ramos <pacho@gentoo.org> -gtkhtml-3.30.1-r1.ebuild,
+  -files/gtkhtml-3.30.1-crash-attachment.patch,
+  -files/gtkhtml-3.30.1-crash-table.patch,
+  -files/gtkhtml-3.30.1-magic-spacebar.patch, +gtkhtml-3.30.2.ebuild:
+  Version bump with updated translations and fixes, remove old.
 
 *gtkhtml-3.30.1-r1 (13 Jun 2010)
 
