@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.3.ebuild,v 1.4 2009/12/07 03:41:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.11.ebuild,v 1.1 2010/06/23 08:29:31 jlec Exp $
 
 inherit eutils flag-o-matic fortran perl-module toolchain-funcs
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${P}/src
 SP=${WORKDIR}/${P}/src/perl
 DESCRIPTION="The UCAR/Unidata Units library"
 HOMEPAGE="http://www.unidata.ucar.edu/packages/udunits/"
-SRC_URI="ftp://unidata.ucar.edu/pub/udunits/udunits-${PV}.tar.Z"
+SRC_URI="ftp://ftp.unidata.ucar.edu/pub/udunits/udunits-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="UCAR-Unidata"
