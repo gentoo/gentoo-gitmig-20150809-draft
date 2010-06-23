@@ -1,26 +1,25 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.2.0.ebuild,v 1.10 2009/08/05 19:42:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.2.0.ebuild,v 1.11 2010/06/23 13:10:09 jlec Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Intelligent algorithms for DNA searches"
-LICENSE="BSD"
 HOMEPAGE="http://www.ebi.ac.uk/Wise2/"
 SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/${PN}2/${PN}${PV}.tar.gz"
 
+LICENSE="BSD"
 SLOT="0"
 IUSE=""
 KEYWORDS="~alpha ia64 ~sparc x86 ~amd64"
 
 RDEPEND="=sci-biology/hmmer-2.3.2-r1"
-
 DEPEND="${RDEPEND}
 	app-shells/tcsh
 	dev-lang/perl
 	virtual/latex-base"
 
-S=${WORKDIR}/${PN}${PV}
+S="${WORKDIR}"/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
