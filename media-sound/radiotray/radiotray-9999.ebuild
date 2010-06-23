@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiotray/radiotray-9999.ebuild,v 1.4 2010/06/23 08:32:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiotray/radiotray-9999.ebuild,v 1.5 2010/06/23 17:44:04 hwoarang Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -16,6 +16,13 @@ LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
+
+LANGS="ca de el en_GB es fi fr gl gu hu it ko lt pl pt_BR pt ro ru sk sl sv te
+tr uk zh_CN"
+
+for x in ${LANGS}; do
+	IUSE="${IUSE} linguas_${x}"
+done
 
 RDEPEND="dev-python/gst-python
 	dev-python/pygtk
@@ -42,4 +49,10 @@ S="${WORKDIR}"/${PN}
 src_prepare() {
 	python_convert_shebangs -r 2 .
 	distutils_src_prepare
+	# remove LINUGAS file so we can create our
+	rm "${S}"/po/LINGUAS
+	for x in ${LANGS}; do
+		use "linguas_${x}" && echo "${x}" >> "${S}"/po/LINGUAS
+		! use "linguas_${x}" && rm "${S}"/po/${x}.po
+	done
 }
