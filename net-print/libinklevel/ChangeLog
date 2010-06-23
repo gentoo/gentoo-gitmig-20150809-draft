@@ -1,6 +1,10 @@
 # ChangeLog for net-print/libinklevel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.22 2010/05/23 09:17:16 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.23 2010/06/23 21:52:50 hwoarang Exp $
+
+  23 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  libinklevel-0.8.0-r1.ebuild:
+  Stable on amd64 wrt bug #321151
 
   23 May 2010; <firari@gentoo.org> libinklevel-0.8.0-r1.ebuild:
   Fix bug #298524
