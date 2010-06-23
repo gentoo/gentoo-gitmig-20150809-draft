@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.257 2010/06/13 18:13:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.258 2010/06/23 11:22:22 pacho Exp $
+
+*gnome-session-2.30.2 (23 Jun 2010)
+
+  23 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  -gnome-session-2.30.0-r1.ebuild,
+  -files/gnome-session-2.30.0-session-saving-button.patch,
+  +gnome-session-2.30.2.ebuild:
+  Version bump with updated translations and fixes, remove old. Move large
+  patch to mirrors (bug #323825).
 
 *gnome-session-2.30.0-r1 (13 Jun 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.30.0-r1.ebuild,v 1.1 2010/06/13 18:13:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.30.2.ebuild,v 1.1 2010/06/23 11:22:22 pacho Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit eutils gnome2
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-2.26.2-session-saving-button.patch.bz2
+	mirror://gentoo/${PN}-2.30.0-session-saving-button.patch
 	branding? ( mirror://gentoo/gentoo-splash.png )"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
@@ -72,7 +72,7 @@ src_prepare() {
 	#epatch "${FILESDIR}/${PN}-2.26.2-shutdown.patch"
 
 	# Add "session saving" button back, upstream bug #575544
-	epatch "${FILESDIR}/${PN}-2.30.0-session-saving-button.patch"
+	epatch "${DISTDIR}/${PN}-2.30.0-session-saving-button.patch"
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
