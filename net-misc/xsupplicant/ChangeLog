@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/xsupplicant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.16 2010/05/26 11:41:53 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.17 2010/06/23 21:38:41 hwoarang Exp $
+
+  23 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  xsupplicant-2.2.0.ebuild:
+  Keyworded for amd64 wrt bug #322345
 
 *xsupplicant-2.2.0 (26 May 2010)
 
