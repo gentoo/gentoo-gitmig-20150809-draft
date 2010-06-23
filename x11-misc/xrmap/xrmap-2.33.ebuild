@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33.ebuild,v 1.3 2010/06/11 18:36:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33.ebuild,v 1.4 2010/06/23 12:24:47 hwoarang Exp $
 
 EAPI=2
 inherit eutils
@@ -52,7 +52,8 @@ src_compile() {
 	sed -i -e 's,^\(#define RCFILE \)SHAREDIR\",\1\"/etc/xrmap,g'  \
 		   -e 's,^\(#define SHAREDIR \"/usr/share/\),\1x,g' xrmap.h || die
 	# bug #323065
-	emake -j1 || die
+	sed -i "/^image.o/s/image.o:/& numdefs.h/" Makefile || die
+	emake || die
 	cd tools
 	emake || die
 	cd jpd2else
