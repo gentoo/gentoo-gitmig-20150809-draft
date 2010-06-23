@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.4.4.ebuild,v 1.3 2010/06/21 20:27:47 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.4.4.ebuild,v 1.4 2010/06/23 23:01:48 reavertm Exp $
 
 EAPI="3"
 inherit kde4-functions
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="4.4"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="aqua kdeprefix policykit"
+IUSE="aqua kdeprefix"
 
 RDEPEND="
 	$(add_kdebase_dep dolphin)
@@ -56,6 +56,5 @@ RDEPEND="
 	$(add_kdebase_dep solid)
 	$(add_kdebase_dep systemsettings)
 	!prefix? ( $(add_kdebase_dep kdm) )
-	policykit? ( >=sys-auth/polkit-kde-0.95.1 )
 	$(block_other_slots)
 "
