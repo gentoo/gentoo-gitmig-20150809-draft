@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.8 2010/06/23 19:46:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.9 2010/06/23 19:46:51 ssuominen Exp $
 
 inherit alternatives eutils
 
@@ -101,11 +101,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# w3mman and manpages conflict with those from w3m
-	mv ${D}/usr/share/man/ja/man1/w3m{,mee}.1 || die
-	mv ${D}/usr/share/man/man1/w3m{,mee}.1 || die
+	mv "${D}"/usr/share/man/ja/man1/w3m{,mee}.1 || die
+	mv "${D}"/usr/share/man/man1/w3m{,mee}.1 || die
 
 	dodoc ChangeLog NEWS* README
 	dohtml 00INCOMPATIBLE.html
