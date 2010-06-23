@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.294 2010/06/14 00:46:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.295 2010/06/23 14:05:13 pacho Exp $
+
+*evolution-2.30.2 (23 Jun 2010)
+
+  23 Jun 2010; Pacho Ramos <pacho@gentoo.org> -evolution-2.30.1.2-r1.ebuild,
+  +evolution-2.30.2.ebuild, +files/evolution-2.30.2-call-function.patch,
+  +files/evolution-2.30.2-drag-message.patch,
+  +files/evolution-2.30.2-proper-faq.patch:
+  Version bump with updated translations and fixes, remove old. Drop pst
+  references in RDEPEND, thanks to Michael Sterrett for reporting.
 
   14 Jun 2010; <chainsaw@gentoo.org>
   files/evolution-2.30.1.2-configure.patch:
