@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.7 2010/06/23 20:22:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.8 2010/06/23 21:00:32 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -14,7 +14,6 @@ KEYWORDS="x86"
 IUSE="double-precision"
 RDEPEND="=sci-libs/fftw-2*
 	sci-libs/gsl"
-
 
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"
