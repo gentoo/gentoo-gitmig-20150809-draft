@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.186 2010/06/19 01:13:16 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.187 2010/06/23 12:11:41 grobian Exp $
+
+  23 Jun 2010; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  emacs-23.2 is segfaulting too, extend mask
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> package.mask:
   Finish move of dev-util/cvs* to dev-vcs/cvs*
