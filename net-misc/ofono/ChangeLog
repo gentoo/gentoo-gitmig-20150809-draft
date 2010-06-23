@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ofono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.17 2010/06/14 14:43:11 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.18 2010/06/23 11:43:48 flameeyes Exp $
+
+  23 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> ofono-0.23.ebuild:
+  Re-apply the same QA fixes done to 0.21 to 0.23. Why the ChangeLog is
+  messed up?
 
   07 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> ofono-0.21.ebuild:
   QA fixes: inherit multilib to avoid failing the removal because of
