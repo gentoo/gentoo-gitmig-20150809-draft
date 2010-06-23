@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.4.ebuild,v 1.2 2010/06/21 15:53:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.4.ebuild,v 1.3 2010/06/23 22:58:17 reavertm Exp $
 
 EAPI="3"
 
@@ -99,6 +99,7 @@ RDEPEND="${COMMONDEPEND}
 	)
 "
 PDEPEND="
+	policykit? ( >=sys-auth/polkit-kde-0.95.1 )
 	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
 "
 
