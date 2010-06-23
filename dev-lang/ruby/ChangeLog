@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.452 2010/05/19 19:42:23 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.453 2010/06/23 22:40:52 flameeyes Exp $
+
+*ruby-1.8.7_p299 (23 Jun 2010)
+
+  23 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ruby-1.8.7_p299.ebuild:
+  Version bump.
 
   19 May 2010; Alex Legler <a3li@gentoo.org> ruby-1.8.6_p388-r1.ebuild,
   ruby-1.8.7_p249-r2.ebuild, ruby-1.9.1_p376.ebuild:
