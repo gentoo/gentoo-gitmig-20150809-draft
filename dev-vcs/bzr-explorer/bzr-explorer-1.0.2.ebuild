@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/bzr-explorer-1.0.0.ebuild,v 1.1 2010/03/08 08:51:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/bzr-explorer-1.0.2.ebuild,v 1.1 2010/06/23 08:15:18 fauli Exp $
 
 inherit distutils versionator
 
