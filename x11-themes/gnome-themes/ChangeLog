@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.226 2010/06/13 16:22:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.227 2010/06/23 11:09:11 pacho Exp $
+
+*gnome-themes-2.30.2 (23 Jun 2010)
+
+  23 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  -gnome-themes-2.30.1-r1.ebuild,
+  -files/gnome-themes-2.30.1-evolution-workaround.patch,
+  +gnome-themes-2.30.2.ebuild:
+  Version bump with updated translations and fixes, remove old.
 
 *gnome-themes-2.30.1-r1 (13 Jun 2010)
 

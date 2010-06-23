@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.30.1-r1.ebuild,v 1.1 2010/06/13 16:22:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.30.2.ebuild,v 1.1 2010/06/23 11:09:11 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -36,9 +36,6 @@ G2CONF="${G2CONF}
 src_prepare() {
 	# Fix bashisms, bug #256337
 	epatch "${FILESDIR}/${PN}-2.24.3-bashism.patch"
-
-	# Fix evolution table header workaround for new evo versions
-	epatch "${FILESDIR}/${P}-evolution-workaround.patch"
 
 	# Do not build/install accessibility themes, bug #274515
 	if ! use accessibility; then
