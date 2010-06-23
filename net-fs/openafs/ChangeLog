@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.163 2010/06/21 23:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.164 2010/06/23 18:09:41 halcy0n Exp $
+
+  23 Jun 2010; Mark Loeser <halcy0n@gentoo.org> +openafs-1.4.6.ebuild:
+  Add back only stable ppc/ppc64 version
 
 *openafs-1.4.12.1 (21 Jun 2010)
 
