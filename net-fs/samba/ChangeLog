@@ -1,6 +1,24 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.423 2010/06/05 19:11:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.424 2010/06/23 17:10:59 vostorga Exp $
+
+*samba-3.2.15-r1 (23 Jun 2010)
+*samba-3.0.37-r1 (23 Jun 2010)
+
+  23 Jun 2010; Víctor Ostorga <vostorga@gentoo.org>
+  +files/3.0.37-CVE-2010-2063.patch,
+  +files/3.2.15-smbclient-file-corruption-NT4.patch,
+  +samba-3.0.37-r1.ebuild, +samba-3.2.15-r1.ebuild,
+  +files/3.2.15-CVE-2010-2063.patch,
+  +files/3.0.37-allow-non-ASCII-netbios-names.patch,
+  +files/3.2.15-core-dump-overlapping-byte-lock-test.patch:
+  Samba 3.0.37 and 3.2.15
+  Adding patches fixing CVE-2010-2063 , bug #323785
+  Samba 3.0.37
+  Fixing domain and netbios name in DOS charset
+  Samba 3.2.15
+  Fix file corruption using smbclient with NT4 server
+  Fix core dump when running overlapping Byte Lock test
 
   05 Jun 2010; Raúl Porcel <armin76@gentoo.org> samba-3.4.6.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #300158
