@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pygtkhelpers
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkhelpers/ChangeLog,v 1.1 2010/06/23 23:29:26 arfrever Exp $
+
+*pygtkhelpers-0.4.1 (23 Jun 2010)
+
+  23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pygtkhelpers-0.4.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
