@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bicyclerepair
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.26 2009/05/15 20:14:02 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.27 2010/06/23 16:31:28 arfrever Exp $
+
+  23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bicyclerepair-0.9-r2.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Add src_test().
 
   15 May 2009; Markus Meier <maekke@gentoo.org> bicyclerepair-0.9-r2.ebuild:
   amd64 stable, bug #267338

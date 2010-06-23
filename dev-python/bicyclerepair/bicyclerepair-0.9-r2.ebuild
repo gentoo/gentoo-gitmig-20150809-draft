@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9-r2.ebuild,v 1.5 2009/05/15 20:14:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9-r2.ebuild,v 1.6 2010/06/23 16:31:28 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils elisp-common eutils
 
@@ -13,50 +18,46 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86"
 IUSE="emacs"
 
-DEPEND="virtual/python
-	emacs? ( app-emacs/pymacs
-		app-emacs/python-mode )"
+DEPEND="emacs? (
+		app-emacs/pymacs
+		app-emacs/python-mode
+	)"
+RDEPEND="${DEPEND}"
 
-SITEFILE=50${PN}-gentoo.el
-PYTHON_MODNAME="bike"
+SITEFILE="50${PN}-gentoo.el"
+PYTHON_MODNAME="BicycleRepairMan_Idle.py bike bikeemacs.py"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# bikeemacs.py contains non-ascii characters in comments
-	sed -i -e '1s/$/\t-*- coding: latin-1 -*-/' ide-integration/bikeemacs.py
-	epatch "${FILESDIR}"/${P}-idle.patch
-	epatch "${FILESDIR}"/${P}-invalid-syntax.patch
+src_prepare() {
+	distutils_src_prepare
+
+	# bikeemacs.py contains non-ASCII characters in comments.
+	sed -e '1s/$/\t-*- coding: latin-1 -*-/' -i ide-integration/bikeemacs.py || die "sed failed"
+
+	epatch "${FILESDIR}/${P}-idle.patch"
+	epatch "${FILESDIR}/${P}-invalid-syntax.patch"
+}
+
+src_test() {
+	testing() {
+		"$(PYTHON)" testall.py
+	}
+	python_execute_function testing
 }
 
 src_install() {
 	distutils_src_install
+
 	if use emacs; then
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die "elisp-site-file-install failed"
 	fi
 }
 
 pkg_postinst() {
-	python_version
-	# Enable IDLE integration if Python was compiled with tcltk.
-	config_txt="${ROOT}"/usr/lib/python${PYVER}/tools/idle/config.txt
-	if [ -f "${config_txt}" ];
-	then
-		if [ -z "`grep BicycleRepairMan_Idle ${config_txt}`" ]; then
-			elog "Appending BicycleRepairman to IDLE.."
-			echo "[BicycleRepairMan_Idle]" >> ${config_txt}
-		fi
-	else
-		elog "BicycleRepairMan won't integrate with IDLE"
-	fi
-	use emacs && elisp-site-regen
-
 	distutils_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/bikeemacs.py
-	python_mod_optimize $(python_get_sitedir)/BicycleRepairMan_Idle.py
+	use emacs && elisp-site-regen
 }
 
 pkg_postrm() {
+	distutils_pkg_postrm
 	use emacs && elisp-site-regen
-	python_mod_cleanup
 }
