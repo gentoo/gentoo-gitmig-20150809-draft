@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.7 2009/07/25 20:09:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.8 2010/06/23 19:46:02 ssuominen Exp $
 
 inherit alternatives eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-w3mman-gentoo.diff \
-		"${FILESDIR}"/${PN}-gcc44.patch
+		"${FILESDIR}"/${PN}-gcc4{4,5}.patch
 }
 
 src_compile() {
