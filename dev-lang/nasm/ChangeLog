@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.64 2010/06/12 11:10:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.65 2010/06/23 22:05:52 hwoarang Exp $
+
+  23 Jun 2010; Markos Chandras <hwoarang@gentoo.org> nasm-2.08.01.ebuild:
+  Stable on amd64 wrt bug #322695
 
   12 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> nasm-2.08.01.ebuild:
   x86 stable wrt bug #322695
