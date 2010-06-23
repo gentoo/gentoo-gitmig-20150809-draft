@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/spectromatic-1.0-r1.ebuild,v 1.1 2008/11/26 10:48:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/spectromatic-1.0-r1.ebuild,v 1.2 2010/06/23 20:13:47 bicatali Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bindist"
 
 DEPEND="media-libs/libpng
-	!bindist? ( sci-libs/gsl )
-	bindist? ( <sci-libs/gsl-1.10 )"
+	sci-libs/gsl"
 
 src_unpack() {
 	unpack ${A}

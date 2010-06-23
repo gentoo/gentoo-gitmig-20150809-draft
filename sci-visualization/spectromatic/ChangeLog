@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/spectromatic
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.5 2008/11/26 10:48:57 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.6 2010/06/23 20:13:47 bicatali Exp $
+
+  23 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  spectromatic-1.0.ebuild, spectromatic-1.0-r1.ebuild:
+  Removed bindist flag, should be compatible GPL-3 anyway
 
 *spectromatic-1.0-r1 (26 Nov 2008)
 
