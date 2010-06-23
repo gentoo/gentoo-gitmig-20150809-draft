@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.30.1.ebuild,v 1.1 2010/06/13 16:34:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.30.2.ebuild,v 1.1 2010/06/23 10:51:16 pacho Exp $
 
 PYTHON_DEPEND="2" # Support for Python 3 not verified
 GCONF_DEBUG="no"
