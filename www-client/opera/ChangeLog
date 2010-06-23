@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.496 2010/06/23 11:39:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.497 2010/06/23 16:40:46 angelos Exp $
+
+  23 Jun 2010; Christoph Mende <angelos@gentoo.org> opera-10.11.ebuild:
+  Stable on amd64 wrt bug #325199
 
   23 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> opera-10.11.ebuild:
   x86 stable wrt security bug #325199

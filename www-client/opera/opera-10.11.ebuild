@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.11.ebuild,v 1.2 2010/06/23 11:39:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.11.ebuild,v 1.3 2010/06/23 16:40:46 angelos Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-10.10"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 RESTRICT="mirror test"
 
