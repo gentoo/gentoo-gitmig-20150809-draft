@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.156 2010/06/22 07:16:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.157 2010/06/23 16:26:39 angelos Exp $
+
+  23 Jun 2010; Christoph Mende <angelos@gentoo.org> tiff-3.9.4.ebuild:
+  Stable on amd64 wrt bug #324885
 
   22 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tiff-3.9.4.ebuild:
   x86 stable wrt security bug #324885
