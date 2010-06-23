@@ -1,24 +1,31 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/corkscrew-2.0.ebuild,v 1.9 2010/06/22 17:41:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/corkscrew-2.0.ebuild,v 1.10 2010/06/23 09:53:44 angelos Exp $
 
-EAPI=2
-inherit toolchain-funcs
+EAPI=3
+inherit autotools
 
-DESCRIPTION="Corkscrew is a tool for tunneling SSH through HTTP proxies."
+DESCRIPTION="a tool for tunneling SSH through HTTP proxies."
 HOMEPAGE="http://www.agroman.net/corkscrew/"
-LICENSE="GPL-2"
-DEPEND=""
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE=""
-SLOT="0"
-SRC_URI="http://www.agroman.net/corkscrew/${P}.tar.gz"
+SRC_URI="http://www.agroman.net/${PN}/${P}.tar.gz"
 
-src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
+IUSE=""
+
+DEPEND=""
+
+src_prepare() {
+	# Christoph Mende <angelos@gentoo.org (23 Jun 2010)
+	# Shipped configure doesn't work with some locales (bug #305771)
+	# Shipped missing doesn't work with new configure, so we'll force
+	# regeneration
+	rm -f install-sh missing mkinstalldirs || die
+	eautoreconf
 }
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS README TODO || die "dodoc failed"
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
 }

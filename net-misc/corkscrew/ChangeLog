@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/corkscrew
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.8 2010/06/22 17:41:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/corkscrew/ChangeLog,v 1.9 2010/06/23 09:53:44 angelos Exp $
+
+  23 Jun 2010; Christoph Mende <angelos@gentoo.org> corkscrew-2.0.ebuild:
+  Regenerate autotools to fix bug #305771, also stable on amd64 wrt bug
+  #284604
 
   22 Jun 2010; Christoph Mende <angelos@gentoo.org> corkscrew-2.0.ebuild:
   QA: Respect CC and use emake
