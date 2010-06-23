@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.ebuild,v 1.1 2009/02/25 21:39:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.ebuild,v 1.2 2010/06/23 14:31:35 arfrever Exp $
 
 inherit gnome2 python
 
@@ -80,11 +80,10 @@ pkg_postinst() {
 	ewarn
 	ewarn "AWN will be of no use if you do not have a compositing manager."
 
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/awn
+	python_mod_optimize $(python_get_sitedir)/awn
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/awn
+	python_mod_cleanup $(python_get_sitedir)/awn
 }
