@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.30.1-r1.ebuild,v 1.1 2010/06/14 12:08:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.30.2.ebuild,v 1.1 2010/06/23 11:28:08 pacho Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit autotools eutils gnome2
 DESCRIPTION="Gnome Settings Daemon"
 HOMEPAGE="http://www.gnome.org"
 SRC_URI="${SRC_URI}
-mirror://gentoo/${PN}-2.28.2-gst-vol-control-support.patch.lzma"
+	mirror://gentoo/${PN}-2.30.0-gst-vol-control-support.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -68,16 +68,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# Restore gstreamer volume control support, upstream bug #571145
-	epatch "${FILESDIR}/${PN}-2.30.0-gst-vol-control-support.patch"
-
-	# Adjust XF86Display timestamps if they are out of order with RANDR timestamps, upstream bug 610482
-	epatch "${FILESDIR}/${P}-XF86Display.patch"
-
-	# Fix loading OSD icons when there's no SVG version, upstream bug 618023
-	epatch "${FILESDIR}/${P}-osd-icons.patch"
-
-	# housekeeping: Only check for baobob if we're about to show a dialog
-	epatch "${FILESDIR}/${P}-baobob-check.patch"
+	epatch "${DISTDIR}/${PN}-2.30.0-gst-vol-control-support.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
