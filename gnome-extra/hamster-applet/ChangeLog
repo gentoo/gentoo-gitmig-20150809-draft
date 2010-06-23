@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/hamster-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.25 2010/06/22 12:37:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.26 2010/06/23 15:04:20 arfrever Exp $
+
+  23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  hamster-applet-2.24.3.ebuild:
+  Delete deprecation warning (bug #313465).
 
 *hamster-applet-2.30.2 (22 Jun 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.3.ebuild,v 1.4 2009/03/21 12:35:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.3.ebuild,v 1.5 2010/06/23 15:04:20 arfrever Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -48,8 +48,7 @@ src_prepare() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/hamster
+	python_mod_optimize $(python_get_sitedir)/hamster
 }
 
 pkg_postrm() {
