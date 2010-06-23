@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5706 2010/06/23 20:27:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5707 2010/06/23 23:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -995,6 +995,9 @@ dev-python/PyQt4:sql - Build the QtSql module
 dev-python/PyQt4:svg - Build the QtSvg module
 dev-python/PyQt4:webkit - Build the QtWebKit module
 dev-python/PyQt4:xmlpatterns - Build the QtXmlPatterns module
+dev-python/anyvc:bazaar - Add support for Bazaar
+dev-python/anyvc:git - Add support for Git
+dev-python/anyvc:mercurial - Add support for Mercurial
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/dap:server - Enable OpenDAP server support
 dev-python/docutils:glep - Install support for GLEPs
