@@ -1,13 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.5.0_rc1.ebuild,v 1.6 2010/06/23 18:19:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.5.0_rc1.ebuild,v 1.7 2010/06/23 18:27:15 arfrever Exp $
 
-EAPI="2"
-inherit eutils distutils
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit distutils eutils
 
 MY_P="${P/_/-}"
 
-DESCRIPTION="python library that is targeted to provide easy scripting with Jabber"
+DESCRIPTION="Python library providing easy scripting with Jabber"
 HOMEPAGE="http://xmpppy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xmpppy/${MY_P}.tar.gz"
 
@@ -16,24 +20,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
-RDEPEND="${DEPEND}
-	|| (
+RDEPEND="|| (
 		dev-python/dnspython
 		dev-python/pydns
 	)"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="xmpp"
 
-src_prepare(){
+src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/${PN}-hashlib_ssl_deprecation.patch"
 }
 
-src_install(){
+src_install() {
 	distutils_src_install
 	use doc && dohtml -A py -r doc/.
 }
