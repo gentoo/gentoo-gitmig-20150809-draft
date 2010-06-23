@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/guidance-power-manager/guidance-power-manager-4.4.0.ebuild,v 1.1 2010/02/21 16:03:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/guidance-power-manager/guidance-power-manager-4.4.0.ebuild,v 1.2 2010/06/23 14:26:57 arfrever Exp $
 
 EAPI=2
 KDE_MINIMAL=4.4
@@ -24,11 +24,10 @@ DEPEND=">=kde-base/pykde4-${KDE_MINIMAL}
 
 pkg_postinst() {
 	kde4-base_pkg_postinst
-	python_version
-	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/xf86misc.py
+	python_mod_optimize $(python_get_sitedir)/xf86misc.py
 }
 
 pkg_postrm() {
 	kde4-base_pkg_postrm
-	python_mod_cleanup
+	python_mod_cleanup $(python_get_sitedir)/xf86misc.py
 }
