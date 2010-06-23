@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.4 2010/06/09 15:51:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.5 2010/06/23 17:00:01 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils gnome2-utils flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gstreamer vlc +xine"
+IUSE="gstreamer +xine"
 
 COMMON_DEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
@@ -22,9 +22,8 @@ COMMON_DEPEND="x11-libs/qt-gui:4
 	dev-libs/glib:2
 	gstreamer? ( >=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
-	vlc? ( media-video/vlc )
 	xine? ( media-libs/xine-lib )
-	!gstreamer? ( !vlc? ( media-libs/xine-lib ) )"
+	!gstreamer? ( media-libs/xine-lib )"
 RDEPEND="${COMMON_DEPEND}
 	gstreamer? ( >=media-plugins/gst-plugins-meta-0.10
 		>=media-plugins/gst-plugins-gio-0.10 )"
@@ -35,19 +34,16 @@ DEPEND="${COMMON_DEPEND}
 DOCS="Changelog TODO"
 
 src_configure() {
-	# -DENGINE_QT_PHONON_ENABLED=ON doesn't compile
-
-	# Harmless workaround for bug 320699.
-	append-cppflags $(pkg-config --cflags-only-I glib-2.0)
+	append-cppflags "$(pkg-config --cflags-only-I glib-2.0)" #320699
 
 	mycmakeargs=(
 		$(cmake-utils_use gstreamer ENGINE_GSTREAMER_ENABLED)
-		$(cmake-utils_use vlc ENGINE_LIBVLC_ENABLED)
+		"-DENGINE_LIBVLC_ENABLED=OFF"
 		$(cmake-utils_use xine ENGINE_LIBXINE_ENABLED)
 		"-DENGINE_QT_PHONON_ENABLED=OFF"
 		)
 
-	if ! use gstreamer && ! use vlc; then
+	if ! use gstreamer; then
 		mycmakeargs+=(
 			"-DENGINE_LIBXINE_ENABLED=ON"
 			)
