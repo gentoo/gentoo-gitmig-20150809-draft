@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0-r1.ebuild,v 1.1 2010/03/07 20:58:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0-r1.ebuild,v 1.2 2010/06/23 12:03:44 jlec Exp $
 
 EAPI="3"
 
@@ -26,7 +26,8 @@ DEPEND="X? ( x11-libs/libXt )
 		sci-biology/clustalw
 	)"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!sys-devel/cons"
 
 PDEPEND="!minimal? (
 		sci-biology/aaindex

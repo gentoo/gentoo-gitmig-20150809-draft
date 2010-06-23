@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0.ebuild,v 1.2 2009/09/01 21:16:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0.ebuild,v 1.3 2010/06/23 12:03:44 jlec Exp $
 
 inherit eutils
 
@@ -24,7 +24,8 @@ DEPEND="X? ( x11-libs/libXt )
 		sci-biology/clustalw
 	)"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!sys-devel/cons"
 
 PDEPEND="!minimal? (
 		sci-biology/aaindex
