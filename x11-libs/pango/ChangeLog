@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.286 2010/06/20 09:49:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.287 2010/06/23 15:09:33 pacho Exp $
+
+  23 Jun 2010; Pacho Ramos <pacho@gentoo.org> pango-1.28.1.ebuild:
+  Bump gtk-doc dependencies as reported in bug #324601 (by Geoff Madden)
 
   20 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> pango-1.28.1.ebuild,
   metadata.xml:
