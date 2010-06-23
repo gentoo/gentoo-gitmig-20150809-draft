@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-2.28.1.ebuild,v 1.6 2010/05/22 15:59:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-2.28.1.ebuild,v 1.7 2010/06/23 12:03:12 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -60,7 +60,6 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_version
 	python_need_rebuild
 	python_mod_optimize /usr/$(get_libdir)/gedit-2/plugins/devhelp
 }

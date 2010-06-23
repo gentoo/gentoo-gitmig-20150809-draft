@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.13 2010/05/22 10:53:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.14 2010/06/23 12:03:12 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -73,7 +73,6 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	python_version
 	python_mod_optimize /usr/$(get_libdir)/gedit-2/plugins/devhelp
 }
 
