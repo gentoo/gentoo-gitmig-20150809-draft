@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.1.ebuild,v 1.2 2010/06/15 08:20:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.2.ebuild,v 1.1 2010/06/23 14:33:26 pacho Exp $
 
 EAPI="2"
 
-inherit autotools eutils gnome2
+inherit autotools gnome2
 
 DESCRIPTION="Evolution module for connecting to Microsoft Exchange"
 HOMEPAGE="http://www.novell.com/products/desktop/features/evolution.html"
@@ -45,18 +45,6 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# Add LDAP build flags to the EPlugin.
-	epatch "${FILESDIR}/${P}-ldap-flags.patch"
-
-	# bgo#403903:Appointments don't display in Windows Mobile 5
-	epatch "${FILESDIR}/${P}-windows-mobile.patch"
-
-	# bgo#616913: Unnecessary check producing false critical warnings
-	epatch "${FILESDIR}/${P}-fix-warnings.patch"
-
-	# bgo#617510: Displays source of a message sent by RoadSync 5
-	epatch "${FILESDIR}/${P}-message-source.patch"
 
 	# FIXME: Fix compilation flags crazyness
 	sed 's/CFLAGS="$CFLAGS $WARNING_FLAGS"//' \
