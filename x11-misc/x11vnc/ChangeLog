@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.83 2010/06/10 03:26:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.84 2010/06/24 20:08:44 swegener Exp $
+
+*x11vnc-0.9.10 (24 Jun 2010)
+
+  24 Jun 2010; Sven Wegener <swegener@gentoo.org> +x11vnc-0.9.10.ebuild:
+  Version bump, bug #321901.
 
   10 Jun 2010; Jeroen Roovers <jer@gentoo.org> x11vnc-0.9.9.ebuild:
   Stable for HPPA (bug #304493).
