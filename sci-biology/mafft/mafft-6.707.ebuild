@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-6.707.ebuild,v 1.1 2009/07/27 05:53:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/mafft-6.707.ebuild,v 1.2 2010/06/24 19:30:59 jlec Exp $
 
 inherit toolchain-funcs multilib eutils
 
@@ -17,6 +17,11 @@ RDEPEND=""
 DEPEND="${RDEPEND}"
 S=${WORKDIR}/${P}${EXTENSIONS}
 
+src_unpack() {
+	unpack ${A}
+	sed -i -e "s/(PREFIX)\/man/(PREFIX)\/share\/man/" "${S}"/core/Makefile || die "sed failed"
+}
+
 src_compile() {
 	pushd core
 	emake \
@@ -31,5 +36,5 @@ src_install() {
 	pushd core
 	emake PREFIX="${D}usr" install || die "install failed"
 	popd
-	dodoc readme
+	dodoc readme || die
 }
