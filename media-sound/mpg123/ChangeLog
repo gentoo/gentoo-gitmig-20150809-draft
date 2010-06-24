@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.230 2010/06/21 11:25:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.231 2010/06/24 16:36:11 armin76 Exp $
+
+  24 Jun 2010; Raúl Porcel <armin76@gentoo.org> mpg123-1.12.1.ebuild:
+  alpha/arm/ia64/sparc stable wrt #317125
 
 *mpg123-1.12.2 (21 Jun 2010)
 
