@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.68 2010/06/20 09:31:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.69 2010/06/24 21:45:15 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> xdvik-22.84.16.ebuild:
+  stable amd64, bug 323373
 
   20 Jun 2010; Alexis Ballier <aballier@gentoo.org> xdvik-22.84.16.ebuild:
   fix find args order, by vapier, bug #324775
