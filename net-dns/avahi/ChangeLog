@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.174 2010/05/19 19:14:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.175 2010/06/24 21:13:41 swegener Exp $
+
+  24 Jun 2010; Sven Wegener <swegener@gentoo.org> avahi-0.6.25-r1.ebuild:
+  Fix broken intltool rules, bug #319057.
 
   19 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   avahi-0.6.24-r2.ebuild, avahi-0.6.25.ebuild, avahi-0.6.25-r1.ebuild:
