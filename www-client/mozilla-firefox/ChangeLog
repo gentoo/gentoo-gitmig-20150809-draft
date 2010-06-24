@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.618 2010/06/23 20:42:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.619 2010/06/24 00:49:28 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild:
+  Stable on amd64 wrt bug #324735
 
   23 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   mozilla-firefox-3.6.4.ebuild:
