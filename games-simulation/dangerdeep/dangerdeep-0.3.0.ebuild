@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.7 2010/05/24 18:53:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.8 2010/06/24 17:46:35 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ IUSE="sse debug"
 RDEPEND="virtual/opengl
 	virtual/glu
 	sci-libs/fftw:3.0
-	media-libs/libsdl
+	media-libs/libsdl[video]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-net"
@@ -39,12 +39,14 @@ src_prepare() {
 
 src_compile() {
 	local sse=-1
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[:space:]*[0-9]\+\).*/\1/; p }")
 
 	if use sse ; then
 		use amd64 && sse=3 || sse=1
 	fi
 
 	scons \
+		${sconsopts} \
 		usex86sse=${sse} \
 		datadir="${GAMES_DATADIR}"/${PN} \
 		$(use debug && echo debug=1) \
