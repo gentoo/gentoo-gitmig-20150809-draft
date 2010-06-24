@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/radare
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.12 2010/03/18 11:29:29 deathwing00 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.13 2010/06/24 12:39:39 hwoarang Exp $
+
+*radare-1.5-r1 (24 Jun 2010)
+
+  24 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +radare-1.5-r1.ebuild,
+  +files/radare-1.5-ldflags.patch:
+  Respect LDFLAGS, fix documentation installation wrt bug #296746
 
 *radare-1.5 (14 Dec 2009)
 
