@@ -1,6 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/pyao-0.82-r1.ebuild,v 1.1 2009/04/23 13:05:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/pyao-0.82-r2.ebuild,v 1.1 2010/06/24 19:41:30 ssuominen Exp $
+
+EAPI=2
+
+PYTHON_DEPEND="2"
 
 inherit eutils distutils
 
@@ -13,22 +17,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc -sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/python
-	>=media-libs/libao-0.8.3"
-RDEPEND="${DEPEND}"
+DEPEND=">=media-libs/libao-1.0.0"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}/pyao-fix-deallocation.patch" || die
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-new_api.patch
+	distutils_src_prepare
 }
 
-src_compile() {
+src_configure() {
 	./config_unix.py || die
-	distutils_src_compile
 }
 
 src_install() {
 	distutils_src_install
 	insinto /usr/share/doc/${PF}/examples
-	doins test.py
+	doins test.py || die
 }

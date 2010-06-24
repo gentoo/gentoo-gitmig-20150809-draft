@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyao
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.14 2009/04/23 13:05:04 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.15 2010/06/24 19:41:30 ssuominen Exp $
+
+*pyao-0.82-r2 (24 Jun 2010)
+
+  24 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> +pyao-0.82-r2.ebuild,
+  +files/pyao-0.82-new_api.patch:
+  Fix building with libao >= 1.0.0 wrt #314627 by Juergen Rose.
 
 *pyao-0.82-r1 (23 Apr 2009)
 
