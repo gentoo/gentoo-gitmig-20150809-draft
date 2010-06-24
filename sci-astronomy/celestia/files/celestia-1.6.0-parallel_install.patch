@@ -1,0 +1,16 @@
+--- data/Makefile.am
++++ data/Makefile.am
+@@ -11,12 +11,11 @@
+ 
+ pkgdata_DATA = \
+ 	$(wildcard *.ssc) \
+-	$(wildcard *.dat) \
+ 	$(wildcard *.xyz) \
+ 	$(wildcard *.xyzv) \
+ 	$(wildcard *.dsc) \
+ 	$(wildcard *.stc) \
+-	stars.dat
++	asterisms.dat boundaries.dat hdxindex.dat saoxindex.dat starnames.dat stars.dat
+ 
+ EXTRA_DIST = \
+ 	$(pkgdata_DATA) \

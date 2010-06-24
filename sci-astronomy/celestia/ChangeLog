@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.62 2010/03/08 18:24:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.63 2010/06/24 17:20:48 xarthisius Exp $
+
+  24 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> celestia-1.6.0.ebuild,
+  +files/celestia-1.6.0-gcc45.patch,
+  +files/celestia-1.6.0-parallel_install.patch:
+  Fix parallel install, fix build with GCC-4.5 wrt bug 317507. Thanks to
+  Philipp <sefi@s-e-f-i.de> for reporting and patch.
 
   08 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> celestia-1.6.0.ebuild,
   +files/celestia-1.6.0-libpng14.patch:
