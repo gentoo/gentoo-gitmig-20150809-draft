@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14.ebuild,v 1.1 2010/04/09 01:31:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14.ebuild,v 1.2 2010/06/24 21:07:08 pacho Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="cblas"
 
 RDEPEND="cblas? ( virtual/cblas )"
