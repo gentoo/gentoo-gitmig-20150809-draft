@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6_p17-r1.ebuild,v 1.1 2010/06/15 12:00:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6_p17-r2.ebuild,v 1.1 2010/06/24 08:14:08 jlec Exp $
 
 EAPI="3"
 
@@ -37,7 +37,9 @@ src_prepare() {
 	# Needed under Interix too
 	# now replaced by the -new.patch ...
 	# epatch "${FILESDIR}"/${MY_P}-ppc-macos.diff
-	epatch "${FILESDIR}"/${MY_P}-ppc-macos-new.diff
+	if use x86-fbsd || use x86-interix || use ppc-macos; then
+		epatch "${FILESDIR}"/${MY_P}-ppc-macos-new.diff
+	fi
 	[[ ${CHOST} == *-interix[35]* ]] && epatch "${FILESDIR}"/${PN}-3.6-interix-getopt.patch
 	cp lib/error.c lib/xstrdup.c lib/getopt.c lib/getopt1.c src/ || die "file copy failed"
 
