@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.4 2010/06/19 14:50:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.5 2010/06/24 21:29:40 pacho Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Interconverts file formats used in molecular modeling"
 HOMEPAGE="http://openbabel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="doc python swig"
