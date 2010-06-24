@@ -1,17 +1,20 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.4.ebuild,v 1.3 2009/09/05 23:18:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.8.ebuild,v 1.1 2010/06/24 05:46:31 grozin Exp $
 
 EAPI=2
+SUPPORT_PYTHON_ABIS=1
+RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_DEPEND="2"
 inherit eutils distutils fdo-mime
 
 DESCRIPTION="Qt based scientific plotting package with good Postscript output"
-HOMEPAGE="http://home.gna.org/veusz/"
+HOMEPAGE="http://home.gna.org/veusz/ http://pypi.python.org/pypi/veusz"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 
 IUSE="doc examples fits"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 
 DEPEND="dev-python/numpy"
@@ -21,7 +24,6 @@ RDEPEND="${DEPEND}
 
 src_install() {
 	distutils_src_install
-	dodoc Interface.txt
 	insinto /usr/share/doc/${PF}
 	if use examples; then
 		doins -r examples || die "examples install failed"
