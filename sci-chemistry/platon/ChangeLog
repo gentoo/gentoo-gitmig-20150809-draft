@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/platon
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.16 2009/07/07 23:30:21 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.17 2010/06/24 12:28:41 jlec Exp $
+
+*platon-20100615 (24 Jun 2010)
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> -platon-20080702.ebuild,
+  -platon-20080725.ebuild, +platon-20100615.ebuild:
+  Version Bump, #255619; reduced optimization to prevend bufferoverflows;
+  #325065
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   platon-20080725.ebuild:
