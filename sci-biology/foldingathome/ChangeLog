@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.29 2010/06/22 06:29:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.30 2010/06/24 11:47:44 jlec Exp $
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  -foldingathome-5.0.2-r3.ebuild:
+  Cleaned uneeded version
 
   22 Jun 2010; Justin Lecher <jlec@gentoo.org> foldingathome-6.29.ebuild:
   Dropping ~x86 as upstream only provides 64bit for this version, 324611
