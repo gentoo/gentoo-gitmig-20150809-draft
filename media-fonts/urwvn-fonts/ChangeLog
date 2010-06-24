@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urwvn-fonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.27 2010/05/12 18:52:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.28 2010/06/24 21:54:22 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> urwvn-fonts-3.05.ebuild:
+  stable amd64, bug 323575
 
   12 May 2010; Peter Volkov <pva@gentoo.org> urwvn-fonts-3.05.ebuild:
   Fixed SRC_URI, bug #319073, thank David Zaslavsky for report.
