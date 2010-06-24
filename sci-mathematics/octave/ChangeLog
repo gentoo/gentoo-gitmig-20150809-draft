@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.92 2010/06/23 09:32:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.93 2010/06/24 17:12:17 bicatali Exp $
+
+  24 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/octave-2.1.72-gcc4.1-gentoo.patch, -octave-2.1.73.ebuild,
+  -octave-2.1.73-r2.ebuild, -files/octave-2.1.73-gcc-4.3.patch,
+  -files/octave-3.0.0-pkg.patch,
+  -files/octave-3.0.1-fix_handle_for_plotyy.patch,
+  -files/octave-3.0.1-no_helvetica.patch, -octave-3.0.3.ebuild,
+  -files/octave-3.0.3-test-fix.patch, -files/octave-3.2.0-dlmwrite.patch:
+  Cleaning old versions
 
   23 Jun 2010; Justin Lecher <jlec@gentoo.org> octave-2.1.73.ebuild,
   octave-2.1.73-r1.ebuild:
