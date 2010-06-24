@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.1 2009/08/10 13:41:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.2 2010/06/24 16:09:15 xarthisius Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -49,6 +49,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.1-examples.patch
 	epatch "${FILESDIR}"/${P}-java-config.patch
 	epatch "${FILESDIR}"/${P}-tmp-fix.patch
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 	eautoconf
 
 	sed -e '/^ATLAS_LAPACKBLAS\>/s,=.*,= $(ATLASDIR)/liblapack.so $(ATLASDIR)/libblas.so $(ATLASDIR)/libcblas.so,' \
