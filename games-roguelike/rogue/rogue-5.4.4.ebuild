@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/rogue/rogue-5.4.4.ebuild,v 1.1 2010/05/03 19:45:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/rogue/rogue-5.4.4.ebuild,v 1.2 2010/06/24 21:17:54 pacho Exp $
 
 EAPI=2
 inherit games
@@ -12,7 +12,7 @@ SRC_URI="http://rogue.rogueforge.net/files/rogue5.4/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
