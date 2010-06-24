@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11694 2010/06/24 10:39:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11695 2010/06/24 11:50:58 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kacper Kowalik <xarthisius@gentoo.org> (24 Jun 2010)
+# Last release in 2002. fails with --as-needed Bug 248356
+# Build system beyond repair, automagic dependency on Tcl
+# Fails to build with fortran
+#
+# masked for removal in 30 days
+sci-geosciences/vis5d+
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Jun 2010)
 # these are included in KDE 4.4, so no need for separate ebuilds
