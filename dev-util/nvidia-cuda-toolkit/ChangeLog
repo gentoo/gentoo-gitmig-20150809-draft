@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.24 2010/05/23 20:11:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.25 2010/06/24 10:48:09 spock Exp $
+
+  24 Jun 2010; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-3.0.ebuild:
+  Add a missing dependency on libpng-1.2 (bug #323985).
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org>
   nvidia-cuda-toolkit-2.3.ebuild:
