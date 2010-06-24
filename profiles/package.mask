@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11689 2010/06/24 01:32:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11690 2010/06/24 06:16:29 bangert Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1244,10 +1244,6 @@ sys-fs/redirfs
 >=net-analyzer/nessus-core-2.3.1
 >=net-analyzer/nessus-plugins-2.3.1
 >=net-analyzer/nessus-2.3.1
-
-# Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
-# Masking net-misc/xsupplicant due to security bug 154995
-<net-misc/xsupplicant-2.2
 
 # Stefaan De Roeck <stefaan@gentoo.org> (09 Sep 2006)
 # 1.5.x is a development branch, people should test 1.4.x by default
