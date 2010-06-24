@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.42 2010/05/19 06:12:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.43 2010/06/24 21:45:12 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> camlp5-5.14.ebuild:
+  stable amd64, bug 324811
 
 *camlp5-5.14 (19 May 2010)
 
