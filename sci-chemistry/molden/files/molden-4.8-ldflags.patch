@@ -1,7 +1,8 @@
-diff -Naur molden4.8.old/makefile molden4.8/makefile
---- molden4.8.old/makefile	2009-09-21 12:01:33.000000000 -0400
-+++ molden4.8/makefile	2010-02-26 00:11:28.000000000 -0500
-@@ -224,7 +224,7 @@
+diff --git a/makefile b/makefile
+index 81147a3..9e2353e 100644
+--- a/makefile
++++ b/makefile
+@@ -224,10 +224,10 @@ all:	molden gmolden ambfor/ambfor ambfor/ambmd surf/surf
  
  
  molden:	$(OBJS) mpdum.o xwin.o 
@@ -9,8 +10,12 @@ diff -Naur molden4.8.old/makefile molden4.8/makefile
 +	$(LDR) $(LDFLAGS) -o molden $(OBJS) mpdum.o xwin.o $(LIBS)
  
  gmolden:	$(OBJS) mpdum.o xwingl.o 
- 	$(LDR) -o gmolden $(OBJS) mpdum.o xwingl.o $(LIBSG)
-@@ -269,7 +269,7 @@
+-	$(LDR) -o gmolden $(OBJS) mpdum.o xwingl.o $(LIBSG)
++	$(LDR) $(LDFLAGS)  -o gmolden $(OBJS) mpdum.o xwingl.o $(LIBSG)
+ 
+ ambfor/ambfor:	ambfor/*.f ambfor/*.c
+ 	$(MAKE) -C ambfor FC=${FC} FFLAGS="${FFLAGS}" LDR="${LDR}" CFLAGS="${CFLAGS}"
+@@ -269,7 +269,7 @@ short_wrl:	short_wrl.o
  # Moldens OpenGL helper program
  
  moldenogl:	oglmol.o silly.o

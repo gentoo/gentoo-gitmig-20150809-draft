@@ -1,0 +1,116 @@
+diff --git a/xwin.c b/xwin.c
+index d38f87c..d328ee6 100644
+--- a/xwin.c
++++ b/xwin.c
+@@ -3776,7 +3776,7 @@ static int imoptm = 0;
+ static int ibopth = 0;
+ static int iboptl = 0;
+ static int iboptm = 0;
+-static int linkat = 0;
++static int lnkat = 0;
+ 
+ static QBOXSTRU IANZboxes[MAXAT];
+ static QBOXSTRU IZboxes[MAXAT][4];
+@@ -19234,7 +19234,7 @@ int i;
+ 		if (ioniom == 1) {
+ 		  int ism, isl;
+ 
+-		  linkat = 0;
++		  lnkat = 0;
+ 
+ 		  /* Counting the number of Link atoms between H and lower 
+ 		     levels*/
+@@ -19247,10 +19247,10 @@ int i;
+ 		     if (ionij != 0) continue;
+ 		     nconn = xyzp->iconn[j*(MXCON+1)];
+ 		     for (k=1;k<=nconn;k++) {
+-		       if (xyzp->ityp[xyzp->iconn[j*(MXCON+1)+k]-1]/10000 > 0) linkat++;
++		       if (xyzp->ityp[xyzp->iconn[j*(MXCON+1)+k]-1]/10000 > 0) lnkat++;
+ 		     }
+ 		  }
+-		  linkat += 20000;
++		  lnkat += 20000;
+ 		  jobcom->itotc = jobcom->icopth;
+ 		  jobcom->imult = jobcom->ispopth;
+ 		  if (CheckChargeMult()) {
+@@ -19271,7 +19271,7 @@ int i;
+ 
+ 		}  else if (ioniom == 2) {
+ 
+-	          linkat = 0;
++	          lnkat = 0;
+ 
+ 		  /* Counting the number of Link atoms between H and 
+ 		       lower levels*/
+@@ -19281,10 +19281,10 @@ int i;
+ 			 if(ionij != 0) continue;
+ 		         nconn = xyzp->iconn[j*(MXCON+1)];
+ 		         for (k=1;k<=nconn;k++) {
+-		           if (xyzp->ityp[xyzp->iconn[j*(MXCON+1)+k]-1]/10000 > 0) linkat++;
++		           if (xyzp->ityp[xyzp->iconn[j*(MXCON+1)+k]-1]/10000 > 0) lnkat++;
+ 		         }
+ 		  }
+-		  linkat += 20000;
++		  lnkat += 20000;
+ 		  jobcom->itotc = jobcom->icopth;
+ 		  jobcom->imult = jobcom->ispopth;
+ 		  if (CheckChargeMult()) {
+@@ -19296,7 +19296,7 @@ int i;
+ 	               break;
+ */
+ 		  }
+-	          linkat = 0;
++	          lnkat = 0;
+ 
+ 		  /* Counting the number of Link atoms between H+M and 
+ 		     lower levels*/
+@@ -19306,10 +19306,10 @@ int i;
+ 			if (ionij == 2) continue;
+ 			nconn = xyzp->iconn[j*(MXCON+1)];
+ 			for (k=1;k<=nconn;k++) {
+-			   if (xyzp->ityp[xyzp->iconn[j*(MXCON+1)+k]-1]/10000 == 2) linkat++;
++			   if (xyzp->ityp[xyzp->iconn[j*(MXCON+1)+k]-1]/10000 == 2) lnkat++;
+ 			}
+ 		  }
+-		  linkat += 20000;
++		  lnkat += 20000;
+ 		  jobcom->itotc = jobcom->icoptm;
+ 		  jobcom->imult = jobcom->ispoptm;
+ 		  if (CheckChargeMult()) {
+@@ -19324,7 +19324,7 @@ int i;
+ 		  icopt = jobcom->icoptl+3;
+ 		  ispopt = jobcom->ispoptl-1;
+ 		}
+-		linkat = 0;
++		lnkat = 0;
+ 		jobcom->itotc = icopt - 3;
+ 		jobcom->imult = ispopt + 1;
+ 		jobcom->ito = itopt[jmode] + 1;
+@@ -19576,10 +19576,10 @@ int CheckChargeMult()
+    ionil = 0;
+ 
+    if (ioniom) {
+-     ionil = 3 - (linkat / 10000);
+-     linkat -= (linkat / 10000) * 10000;
++     ionil = 3 - (lnkat / 10000);
++     lnkat -= (lnkat / 10000) * 10000;
+    } else {
+-     linkat = 0;
++     lnkat = 0;
+    }
+ 
+    if (*zmptrp->ihaszm) {
+@@ -19602,10 +19602,10 @@ int CheckChargeMult()
+       }
+    }
+ /*
+-   fprintf(stderr,"ionil %d ne %d itotc %d linkat %d mult %d\n",
+-                   ionil,ne,jobcom->itotc,linkat,jobcom->imult);
++   fprintf(stderr,"ionil %d ne %d itotc %d lnkat %d mult %d\n",
++                   ionil,ne,jobcom->itotc,lnkat,jobcom->imult);
+ */
+-   ne = ne - jobcom->itotc + linkat;
++   ne = ne - jobcom->itotc + lnkat;
+    if (ne % 2 == jobcom->imult % 2) return(1);
+    return(0);
+ }

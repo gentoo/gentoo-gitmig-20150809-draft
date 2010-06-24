@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/molden
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.32 2010/02/26 05:33:34 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.33 2010/06/24 16:03:06 jlec Exp $
+
+*molden-4.8-r1 (24 Jun 2010)
+*molden-4.7-r1 (24 Jun 2010)
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> +molden-4.7-r1.ebuild,
+  +files/molden-4.7-glibc-2.11.patch, +files/molden-4.7-implicit-dec.patch,
+  +files/molden-4.7-ldflags.patch, +molden-4.8-r1.ebuild,
+  files/molden-4.8-ldflags.patch:
+  Fix for glibc-2.11, fix for bug #315595
 
 *molden-4.8 (26 Feb 2010)
 
