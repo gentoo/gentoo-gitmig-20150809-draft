@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/gst-plugins-libpng-0.10.21.ebuild,v 1.1 2010/04/05 04:38:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/gst-plugins-libpng-0.10.21.ebuild,v 1.2 2010/06/24 10:29:02 hwoarang Exp $
 
 inherit gst-plugins-good
 
 DESCRIPTION="GStreamer encoder/decoder for PNG images"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libpng-1.2
