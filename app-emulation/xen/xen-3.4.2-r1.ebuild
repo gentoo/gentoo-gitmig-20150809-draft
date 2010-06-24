@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.4.2-r1.ebuild,v 1.2 2010/01/16 17:31:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.4.2-r1.ebuild,v 1.3 2010/06/24 01:40:04 angelos Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="debug custom-cflags pae acm flask xsm"
 
 RDEPEND="|| ( sys-boot/grub
