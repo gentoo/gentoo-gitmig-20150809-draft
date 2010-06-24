@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-j2me-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/ChangeLog,v 1.12 2010/06/24 14:28:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/ChangeLog,v 1.13 2010/06/24 22:00:09 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> sun-j2me-bin-2.5.2.01.ebuild:
+  stable amd64, bug 323757
 
   24 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   sun-j2me-bin-2.5.2.01.ebuild:
