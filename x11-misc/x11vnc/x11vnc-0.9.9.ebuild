@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.8 2010/06/10 03:26:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.9 2010/06/24 20:14:42 swegener Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zli
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libX11
-	x11-libs/libXtst
+	>=x11-libs/libXtst-1.1.0
 	x11-libs/libXdamage
 	x11-libs/libXext"
 
