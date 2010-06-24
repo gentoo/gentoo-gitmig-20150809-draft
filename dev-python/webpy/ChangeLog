@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.15 2010/06/01 08:57:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.16 2010/06/24 18:10:43 arfrever Exp $
+
+  24 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  webpy-0.34.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> webpy-0.32.ebuild:
   x86 stable wrt bug #321431
