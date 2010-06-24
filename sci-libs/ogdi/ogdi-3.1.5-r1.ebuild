@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.12 2010/01/01 17:42:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.5-r1.ebuild,v 1.13 2010/06/24 14:49:17 jlec Exp $
 
 inherit toolchain-funcs eutils
 
@@ -19,8 +19,8 @@ DEPEND="sci-libs/proj
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-fpic.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-fpic.patch
 }
 
 src_compile() {
@@ -37,11 +37,11 @@ src_compile() {
 }
 
 src_install() {
-	mv ${S}/bin/Linux/*.so ${S}/lib/Linux/. || die "lib move failed"
-	dobin ${S}/bin/Linux/*
+	mv "${S}"/bin/Linux/*.so "${S}"/lib/Linux/. || die "lib move failed"
+	dobin "${S}"/bin/Linux/*
 	insinto /usr/include
 	doins ogdi/include/ecs.h ogdi/include/ecs_util.h
 	dolib.so lib/Linux/*.so
 	dosym libogdi31.so /usr/$(get_libdir)/libogdi.so || die "symlink failed"
-	dodoc ChangeLog LICENSE NEWS README VERSION
+	dodoc ChangeLog NEWS README VERSION
 }
