@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11687 2010/06/23 09:16:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11688 2010/06/24 00:50:35 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -129,9 +129,7 @@ virtual/postgresql-server
 # Jeroen Roovers <jer@gentoo.org> (17 Jun 2010)
 # Snapshots and alpha builds are to be used with care,
 # see <http://my.opera.com/desktopteam/blog/>
-=www-client/opera-10.60_pre6372
-=www-client/opera-10.60_pre6374
-=www-client/opera-10.60_pre6378
+=www-client/opera-10.60*
 
 # Alexis Ballier <aballier@gentoo.org> (17 Jun 2010)
 # Beta release
