@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.1.6.ebuild,v 1.3 2010/06/14 20:11:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.1.6.ebuild,v 1.4 2010/06/24 21:01:55 pacho Exp $
 
 EAPI=2
 inherit eutils versionator autotools
@@ -14,7 +14,7 @@ SRC_URI="mirror://mysql/Downloads/Connector-ODBC/${MAJOR}/${MY_P}.tar.gz"
 RESTRICT="primaryuri"
 LICENSE="GPL-2"
 SLOT="${MAJOR}"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug doc static qt4"
 RDEPEND=">=virtual/mysql-4.0
 		 dev-db/unixODBC

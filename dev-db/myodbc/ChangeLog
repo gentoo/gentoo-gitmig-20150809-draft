@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/myodbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.27 2010/06/20 12:15:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.28 2010/06/24 21:01:55 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> myodbc-5.1.6.ebuild:
+  stable amd64, bug 322277
 
   14 Jun 2010; Christian Faulhammer <fauli@gentoo.org> myodbc-5.1.6.ebuild:
   stable x86, bug 322277
