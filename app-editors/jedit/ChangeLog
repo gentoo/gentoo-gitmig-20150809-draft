@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.92 2010/06/24 15:08:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.93 2010/06/24 21:58:57 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> jedit-4.3.2.ebuild:
+  stable amd64, bug 323755
 
   24 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jedit-4.3.2.ebuild:
   x86 stable wrt bug #323755
