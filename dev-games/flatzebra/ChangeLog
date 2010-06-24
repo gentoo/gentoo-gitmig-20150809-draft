@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/flatzebra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.21 2010/05/21 18:42:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.22 2010/06/24 20:55:18 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> flatzebra-0.1.5.ebuild:
+  stable amd64, bug 325135
 
   21 May 2010; Pacho Ramos <pacho@gentoo.org> flatzebra-0.1.4.ebuild:
   stable amd64, bug 318891
