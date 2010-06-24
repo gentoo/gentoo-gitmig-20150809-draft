@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.4 2010/06/24 10:43:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.5 2010/06/24 10:44:53 jlec Exp $
 
 inherit eutils cvs
 
@@ -59,7 +59,7 @@ src_install () {
 		README Stuarts_Poly_Notes || die "failed to install documentation"
 
 	# We don't need makeidx to be installed
-	rm ${D}/usr/bin/makeidx
+	rm "${D}"/usr/bin/makeidx
 }
 
 src_test () {
