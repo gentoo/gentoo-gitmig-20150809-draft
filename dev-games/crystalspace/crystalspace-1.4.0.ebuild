@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.5 2010/06/21 15:59:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.6 2010/06/24 11:33:47 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="3ds alsa bullet cal3d cegui cg doc java jpeg mng ode png python
+IUSE="3ds alsa bullet cal3d cegui cg doc java jpeg mng ode png
 sdl speex truetype vorbis wxwidgets"
 
 COMMON_DEP="virtual/opengl
@@ -68,9 +68,6 @@ src_configure() {
 		need-wxwidgets gtk2
 	fi
 
-	# -O3 is hanging compilation of python script plugin
-	# trying -O2 just in case
-	replace-flags -O3 -O2
 	econf --enable-cpu-specific-optimizations=no \
 		--disable-separate-debug-info \
 		--without-lcms \
@@ -80,7 +77,7 @@ src_configure() {
 		$(use_with java) \
 		--disable-make-emulation \
 		$(use_with bullet) \
-		$(use_with python) \
+		--without-python \
 		$(use_with png) \
 		$(use_with jpeg) \
 		$(use_with mng) \
