@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.133 2010/06/24 10:21:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.134 2010/06/24 16:50:25 jer Exp $
+
+  24 Jun 2010; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-theora-0.10.25.ebuild:
+  Stable for HPPA (bug #308379).
 
   24 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-theora-0.10.28.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mpeg2dec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2dec/ChangeLog,v 1.105 2010/04/18 15:52:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2dec/ChangeLog,v 1.106 2010/06/24 16:59:37 jer Exp $
+
+  24 Jun 2010; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-mpeg2dec-0.10.13.ebuild:
+  Stable for HPPA (bug #308379).
 
   18 Apr 2010; <nixnut@gentoo.org> gst-plugins-mpeg2dec-0.10.13.ebuild:
   ppc stable #308379
