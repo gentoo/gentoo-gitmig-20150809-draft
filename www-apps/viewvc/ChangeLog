@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.57 2010/06/22 18:55:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.58 2010/06/24 16:45:35 armin76 Exp $
+
+  24 Jun 2010; Raúl Porcel <armin76@gentoo.org> viewvc-1.1.6.ebuild:
+  Add ~sparc wrt #322685
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   viewvc-1.1.5.ebuild, viewvc-1.1.6.ebuild:
