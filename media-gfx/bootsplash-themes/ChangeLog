@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/bootsplash-themes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/ChangeLog,v 1.14 2009/05/29 11:01:12 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/ChangeLog,v 1.15 2010/06/24 10:42:04 spock Exp $
+
+  24 Jun 2010; Michał Januszewski <spock@gentoo.org>
+  bootsplash-themes-20060913.ebuild:
+  Fix symlink creation (bug #323473).
 
   29 May 2009; Christian Faulhammer <fauli@gentoo.org>
   bootsplash-themes-20060913.ebuild:
