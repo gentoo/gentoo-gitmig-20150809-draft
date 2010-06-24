@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.3.ebuild,v 1.1 2010/06/21 07:37:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.3.ebuild,v 1.2 2010/06/24 12:45:01 xarthisius Exp $
 
 EAPI="2"
 
@@ -18,8 +18,7 @@ IUSE="doc"
 
 DEPEND="sys-apps/iproute2
 	sys-cluster/cluster-glue"
-RDEPEND="${DEPEND}
-	app-emulation/libvirt"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Cluster-Resource-Agents-${MY_P}"
 
@@ -48,4 +47,13 @@ src_configure() {
 src_install() {
 	base_src_install
 	rm -rf "${D}"/etc/init.d/ldirectord || die
+}
+
+pkg_postinst() {
+	elog "To use Resource Agents installed in /usr/$(get_libdir)/ocf/resource.d"
+	elog "you have to emerge required runtime dependencies manually."
+	elog ""
+	elog "Description and dependencies of all Agents can be found on"
+	elog "http://www.linux-ha.org/wiki/Resource_Agents"
+	elog "or in the documentation of this package."
 }
