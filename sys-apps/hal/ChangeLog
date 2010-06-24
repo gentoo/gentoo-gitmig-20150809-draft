@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.316 2010/03/17 13:14:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.317 2010/06/24 22:03:22 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> hal-0.5.14-r2.ebuild:
+  stable amd64, bug 323943
 
   17 Mar 2010; Alexis Ballier <aballier@gentoo.org> hal-0.5.14-r2.ebuild:
   keyword ~x86-fbsd
