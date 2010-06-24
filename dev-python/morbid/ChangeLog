@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/morbid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.8 2010/06/02 11:24:04 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.9 2010/06/24 21:10:43 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> morbid-0.8.7.3.ebuild:
+  stable amd64, bug 322463
 
   02 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   python takes over maintainership.
