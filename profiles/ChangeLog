@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4321 2010/06/24 00:50:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4322 2010/06/24 01:32:04 spock Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jun 2010; Michał Januszewski <spock@gentoo.org> package.mask:
+  Temporarily mask the latest NVIDIA drivers as the new ebuild needs to be
+  confirmed to work on all supported architectures.
 
   24 Jun 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak mask to include all =www-client/opera-10.60*.
