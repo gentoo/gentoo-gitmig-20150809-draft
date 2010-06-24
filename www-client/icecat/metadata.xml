@@ -5,7 +5,9 @@
 <use>
 	<flag name='custom-optimization'>Fine-tune custom compiler
 		optimizations</flag>
-	<flag name='mozdevelop'>Enable features for web developers (e.g.
+        <flag name="ipc">Use inter-process communication between tabs and plugins.
+                Allows for greater stability in case of plugin crashes</flag>
+    	<flag name='mozdevelop'>Enable features for web developers (e.g.
 		Venkman)</flag>
 	<flag name='sqlite'>Enable/Disable system sqlite support</flag>
 	<flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
