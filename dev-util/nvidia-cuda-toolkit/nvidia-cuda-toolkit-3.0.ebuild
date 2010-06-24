@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.0.ebuild,v 1.4 2010/06/24 10:48:09 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.0.ebuild,v 1.5 2010/06/24 11:02:37 spock Exp $
 
 EAPI=2
 
@@ -126,6 +126,12 @@ EOF
 				doins ${target}/doc/*
 				insinto ${DEST}/${target}/projects
 				doins ${target}/projects/*
+			fi
+
+			if [ "$target" == "cudaprof" ]; then
+				make_desktop_entry /opt/cuda/cudaprof/bin/cudaprof "CUDA Visual Profiler"
+			else
+				make_desktop_entry /opt/cuda/openclprof/bin/openclprof "OpenCL Visual Profiler"
 			fi
 		done
 	fi

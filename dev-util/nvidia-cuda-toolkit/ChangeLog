@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.26 2010/06/24 10:50:53 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.27 2010/06/24 11:02:37 spock Exp $
+
+  24 Jun 2010; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-3.0.ebuild:
+  Add desktop entries for cudaprof and openclprof (no icons so far, as
+  NVIDIA does not provide any) (bug #323995).
 
   24 Jun 2010; Michał Januszewski <spock@gentoo.org>
   -nvidia-cuda-toolkit-2.0.ebuild, -nvidia-cuda-toolkit-2.1.ebuild,
