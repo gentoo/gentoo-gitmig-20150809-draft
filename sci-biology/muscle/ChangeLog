@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/muscle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.10 2010/06/24 19:03:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.11 2010/06/24 20:47:35 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> muscle-3.7.ebuild:
+  Stable on amd64 wrt bug #277980
 
 *muscle-3.8.31 (24 Jun 2010)
 
