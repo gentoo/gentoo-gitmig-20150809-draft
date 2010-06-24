@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3.2.ebuild,v 1.1 2010/05/13 08:50:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3.2.ebuild,v 1.2 2010/06/24 15:08:24 phajdan.jr Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
 SRC_URI="mirror://sourceforge/${PN}/${PN}${MY_PV}source.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 SLOT="0"
 IUSE="doc"
 
