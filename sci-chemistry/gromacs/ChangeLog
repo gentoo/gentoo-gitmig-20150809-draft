@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.49 2010/01/24 19:39:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.50 2010/06/24 13:08:43 jlec Exp $
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> gromacs-3.3.1-r1.ebuild,
+  gromacs-3.3.3.ebuild:
+  Blocking sci-mathematics/num-utils, #257566
 
 *gromacs-4.0.7-r1 (24 Jan 2010)
 

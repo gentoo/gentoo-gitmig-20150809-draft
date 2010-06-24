@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.13 2009/01/22 04:14:36 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.1-r1.ebuild,v 1.14 2010/06/24 13:08:43 jlec Exp $
 
 inherit eutils fortran multilib
 
@@ -29,7 +29,8 @@ DEPEND=">=sci-libs/fftw-3.0.1
 		x11-proto/xproto
 		x11-libs/openmotif )"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!sci-mathematics/num-utils"
 
 src_unpack() {
 
