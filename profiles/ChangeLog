@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4331 2010/06/24 16:44:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4332 2010/06/24 17:25:19 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Removing masked entry for octave-forge, now gone
 
   24 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking mail-client/nmh for QA removal.

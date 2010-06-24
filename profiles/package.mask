@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11698 2010/06/24 16:44:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11699 2010/06/24 17:25:20 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -499,13 +499,6 @@ media-libs/libdjconsole
 # Stanislav Ochotnicky <sochotnicky@gentoo.org> (05 May 2010)
 # Masked for testing.
 =app-arch/rpm-4.8.0
-
-# Sebastien Fabbro <bicataligentoo.org> (05 May 2010)
-# Fails to build. Obsolete with octave>=3, unsupported.
-# Replaced by split octave forge ebuilds (in science overlay)
-# Also g-octave in progress for final substitute
-# Removal mid June.
-sci-mathematics/octave-forge
 
 # Tony Vroon <chainsaw@gentoo.org> (02 May 2010)
 # Fails to build, 1.6.1/1.6.2 patched to provide equivalent functionality.
