@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netperf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.43 2009/08/26 00:49:05 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.44 2010/06/24 16:00:42 jer Exp $
+
+  24 Jun 2010; Jeroen Roovers <jer@gentoo.org> netperf-2.4.4.ebuild,
+  netperf-2.4.5.ebuild:
+  Marked ~hppa too.
 
 *netperf-2.4.5 (26 Aug 2009)
 
