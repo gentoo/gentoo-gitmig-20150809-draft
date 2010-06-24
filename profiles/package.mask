@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11697 2010/06/24 14:42:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11698 2010/06/24 16:44:41 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,25 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2010)
+#  on behalf of QA team
+#
+# Fails to build with Berkeley DB 5.0 (#319937); current
+# stable fails to build with current stable glibc (bug
+# #320645), last activity in both ebuild and upstream in 2008
+# (and even then it wasn't from maintainers); uses $EDITOR
+# and $PAGER at build-time (bug #294762, and slightly related
+# bug #262150. One configure test becomes interactive if
+# app-editors/elvis is installed (bug #323541). Multiple
+# collisions.
+#
+# Feel free to pick this up and maintain it properly, but
+# unless a new maintainer can be found, this package is
+# slated for removal.
+#
+# Removal on 2010-08-23
+mail-client/nmh
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Jun 2010)
 # poorly written ebuild and sources are no longer available,
