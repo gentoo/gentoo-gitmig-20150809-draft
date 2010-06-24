@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4329 2010/06/24 12:37:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4330 2010/06/24 14:42:23 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask app-editors/xxe for removal.
 
   24 Jun 2010; Justin Lecher <jlec@gentoo.org> package.mask:
   last rite app-misc/gato
