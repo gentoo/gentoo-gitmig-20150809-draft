@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygsl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.15 2010/04/28 04:12:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.16 2010/06/24 21:03:06 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> pygsl-0.9.5.ebuild:
+  stable amd64, bug 322289
 
 *pygsl-0.9.5 (28 Apr 2010)
 
