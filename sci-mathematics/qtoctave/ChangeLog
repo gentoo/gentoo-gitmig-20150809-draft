@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/qtoctave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.9 2010/06/16 15:30:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.10 2010/06/24 13:50:00 jlec Exp $
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> qtoctave-0.8.2.ebuild,
+  +files/qtoctave-0.8.2-rpath.patch:
+  Added fix for insecure runpaths, #291595, some QA
 
   16 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
   qtoctave-0.9.1.ebuild, +files/qtoctave-0.9.1-qtinfo.patch:

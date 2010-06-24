@@ -1,0 +1,17 @@
+diff --git a/qtoctave/src/CMakeLists.txt b/qtoctave/src/CMakeLists.txt
+index 77f7438..6e32a70 100644
+--- a/qtoctave/src/CMakeLists.txt
++++ b/qtoctave/src/CMakeLists.txt
+@@ -28,12 +28,6 @@ add_executable(qtoctave
+ 	${qtoctave_sources} ${qtoctave_moc_sources} ${qtoctave_ui_headers} ${qtoctave_moc_headers}
+ )
+ 
+-SET_TARGET_PROPERTIES(qtoctave
+-	PROPERTIES INSTALL_RPATH ":usr/lib"
+-	BUILD_WITH_INSTALL_RPATH true
+-	INSTALL_RPATH_USE_LINK_PATH true
+-)
+-
+ TARGET_LINK_LIBRARIES(qtoctave ${Qt4_LIBRARIES} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTSVG_LIBRARY})
+ 
+ install (

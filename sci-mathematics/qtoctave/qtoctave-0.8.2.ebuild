@@ -1,11 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.2.ebuild,v 1.3 2009/12/04 04:37:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.2.ebuild,v 1.4 2010/06/24 13:50:00 jlec Exp $
 
 EAPI="2"
 
 CMAKE_IN_SOURCE_BUILD=1
-inherit cmake-utils
+
+inherit cmake-utils multilib
 
 DESCRIPTION="QtOctave is a Qt4 front-end for Octave"
 HOMEPAGE="http://forja.rediris.es/projects/csl-qtoctave/"
@@ -24,16 +25,9 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}"/${P}/${PN}
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.8.1-gcc4.4.patch
-}
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.8.1-gcc4.4.patch
+	"${FILESDIR}"/${P}-rpath.patch
+	)
 
-src_compile() {
-	mycmakeargs="-DCMAKE_SKIP_RPATH:BOOL=YES"
-	cmake-utils_src_compile
-}
-
-src_install() {
-	cmake-utils_src_install
-	dodoc readme.txt news.txt
-}
+DOCS=(readme.txt news.txt)
