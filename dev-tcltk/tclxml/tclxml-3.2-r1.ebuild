@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.2-r1.ebuild,v 1.3 2010/06/15 07:53:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.2-r1.ebuild,v 1.4 2010/06/24 09:08:48 jlec Exp $
 
 EAPI="3"
 
@@ -17,9 +17,9 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="
 	>=dev-lang/tcl-8.2
+	dev-libs/libxslt
 	>=dev-tcltk/tcllib-1.2
 	>=dev-libs/libxml2-2.6.9
-	dev-tcltk/tclxml
 	dev-libs/expat
 	!dev-tcltk/tclxml-expat
 	!dev-tcltk/tcldom"
