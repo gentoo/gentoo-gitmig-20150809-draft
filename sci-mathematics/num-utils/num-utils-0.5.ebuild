@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.5 2009/03/28 20:17:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.6 2010/06/24 13:00:56 jlec Exp $
 
 IUSE=""
 
@@ -13,6 +13,8 @@ RDEPEND="dev-lang/perl"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
+
+RDEPEND="!<sci-chemistry/gromacs-4"
 
 src_compile() {
 	# bug #248324

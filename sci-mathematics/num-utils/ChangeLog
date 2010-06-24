@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/num-utils
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/ChangeLog,v 1.7 2009/03/28 19:28:58 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/ChangeLog,v 1.8 2010/06/24 13:00:56 jlec Exp $
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> num-utils-0.3.ebuild,
+  num-utils-0.5.ebuild:
+  Blocking <sci-chemistry/gromacs-4, #257566
 
   28 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> num-utils-0.5.ebuild:
   Renamed normalize to nnormalize, bug #248324
