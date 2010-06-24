@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.60 2010/06/24 10:35:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.61 2010/06/24 16:59:53 jer Exp $
+
+  24 Jun 2010; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-bad-0.10.17.ebuild:
+  Stable for HPPA (bug #308379).
 
   24 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-bad-0.10.18.ebuild:
