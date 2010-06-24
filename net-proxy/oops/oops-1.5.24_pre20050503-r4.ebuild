@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r4.ebuild,v 1.2 2010/06/16 14:26:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r4.ebuild,v 1.3 2010/06/24 21:33:09 pacho Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://zipper.paco.net/~igor/oops/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-libs/libpcre
