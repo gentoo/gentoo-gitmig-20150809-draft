@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/xsupplicant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.17 2010/06/23 21:38:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.18 2010/06/24 06:12:30 bangert Exp $
+
+  24 Jun 2010; Thilo Bangert <bangert@gentoo.org> -xsupplicant-0.8b.ebuild,
+  -xsupplicant-1.0.ebuild, -xsupplicant-1.0.1.ebuild,
+  -xsupplicant-1.2.2.ebuild, -files/xsupplicant.conf.d,
+  -files/xsupplicant.init.d:
+  remove insecure/old ebuilds (#154995)
 
   23 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   xsupplicant-2.2.0.ebuild:
