@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.3 2007/01/31 18:14:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-9999.ebuild,v 1.4 2010/06/24 10:43:57 jlec Exp $
 
 inherit eutils cvs
 
@@ -19,15 +19,15 @@ KEYWORDS=""
 
 DEPEND="readline? ( >=sys-libs/readline-5.0 )"
 
-S=${WORKDIR}/ngspice/ng-spice-rework
+S="${WORKDIR}"/ngspice/ng-spice-rework
 
 src_unpack() {
 	cvs_src_unpack
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-com_let.patch
-	epatch ${FILESDIR}/${PN}-numparam.patch
-	epatch ${FILESDIR}/${PN}-pipemode.patch
-	epatch ${FILESDIR}/${PN}-postscript.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-com_let.patch
+	epatch "${FILESDIR}"/${PN}-numparam.patch
+	epatch "${FILESDIR}"/${PN}-pipemode.patch
+	epatch "${FILESDIR}"/${PN}-postscript.patch
 
 	# Getting rid of this for now
 	sed -i -e "/src\/spicelib\/devices\/adms\//d" configure.in
