@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.230 2010/06/24 01:37:36 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.231 2010/06/24 15:21:28 spock Exp $
+
+  24 Jun 2010; Michał Januszewski <spock@gentoo.org>
+  +files/256.35-unified-arch.patch, nvidia-drivers-256.35.ebuild:
+  Add a patch for the 'x86' unified kernel architecture.
 
 *nvidia-drivers-256.35 (24 Jun 2010)
 
