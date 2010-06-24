@@ -1,0 +1,23 @@
+diff --git a/src/Makefile.am b/src/Makefile.am
+index f0c4779..4257b5a 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -127,6 +127,9 @@ endif
+ winmain.o: winmain.c ../config.h
+ 	$(COMPILE) -DSIMULATOR -o winmain.o  -c $(srcdir)/winmain.c
+ 
++mkdepdir:
++	test -d $(DEPDIR) || mkdir $(DEPDIR)
++
+ spice.lo: main.c ../config.h
+ 	$(LTCOMPILE) -DSIMULATOR -c -o spice.o $<
+ 
+@@ -307,7 +310,7 @@ install-tclspice:
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir)/spice
+ 	$(INSTALL_DATA) pkgIndex.tcl $(DESTDIR)$(libdir)/spice
+ 
+-tclspice.lo: tclspice.c
++tclspice.lo: tclspice.c mkdepdir
+ 	$(LTCOMPILE) -DTCLSPICE_version="\"$(TCLSPICE_VERSION)\"" -MT tclspice.lo -MD -MP -MF $(DEPDIR)/tclspice.Tpo -c -o tclspice.o $<
+ 	mv -f $(DEPDIR)/tclspice.Tpo $(DEPDIR)/tclspice.Plo
+ 

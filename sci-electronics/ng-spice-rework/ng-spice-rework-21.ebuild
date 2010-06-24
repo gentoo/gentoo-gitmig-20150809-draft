@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-17-r2.ebuild,v 1.1 2007/05/26 20:57:56 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-21.ebuild,v 1.1 2010/06/24 10:41:52 jlec Exp $
 
-inherit eutils
+EAPI="3"
+
+inherit autotools eutils
 
 DESCRIPTION="The Next Generation Spice (Electronic Circuit Simulator)."
 SRC_URI="mirror://sourceforge/ngspice/${P}.tar.gz
@@ -24,24 +26,24 @@ DEPEND="readline? ( >=sys-libs/readline-5.0 )
 		x11-libs/libX11
 		sci-visualization/xgraph )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-com_let.patch
-	epatch ${FILESDIR}/${PN}-numparam.patch
-	epatch ${FILESDIR}/${PN}-pipemode.patch
-	epatch ${FILESDIR}/${PN}-postscript.patch
-	sed -i -e 's/CFLAGS=" "/CFLAGS="\${CFLAGS}"/' configure
+S="${WORKDIR}"/ngspice-${PV}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nostrip.patch
+	rm -rf xgraph
+	epatch "${FILESDIR}"/${P}-src_makefile.patch
+	sed -i -e 's/\-O2//' configure.in || die "sed failed"
 	if use doc ; then
-		cp ${DISTDIR}/Xspice_Users_Manual.pdf ${S}
-		cp ${DISTDIR}/XSpice_SoftwareDesignDoc_Sep92.pdf ${S}
-		cp ${DISTDIR}/XSpice_InterfaceDesignDoc_Sep92.pdf ${S}
-		cp ${DISTDIR}/XSpice_CodeModelSubsysSoftwareDesign.pdf ${S}
-		cp ${DISTDIR}/XSpice_CodeModelSubsysInterfaceDesign.pdf ${S}
+		cp "${DISTDIR}"/Xspice_Users_Manual.pdf "${S}"
+		cp "${DISTDIR}"/XSpice_SoftwareDesignDoc_Sep92.pdf "${S}"
+		cp "${DISTDIR}"/XSpice_InterfaceDesignDoc_Sep92.pdf "${S}"
+		cp "${DISTDIR}"/XSpice_CodeModelSubsysSoftwareDesign.pdf "${S}"
+		cp "${DISTDIR}"/XSpice_CodeModelSubsysInterfaceDesign.pdf "${S}"
 	fi
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local MYCONF
 	if use debug ; then
 		MYCONF="--enable-debug \
@@ -64,7 +66,8 @@ src_compile() {
 		--disable-blktmsdebug \
 		--disable-smltmsdebug"
 
-	econf ${MYCONF} \
+	econf \
+		${MYCONF} \
 		--enable-intnoise \
 		--enable-xspice \
 		--enable-numparam \
@@ -72,9 +75,7 @@ src_compile() {
 		--disable-xgraph \
 		--disable-dependency-tracking \
 		$(use_with X x) \
-		$(use_with readline) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_with readline)
 }
 
 src_install () {
@@ -97,7 +98,7 @@ src_install () {
 	fi
 
 	# We don't need makeidx to be installed
-	rm ${D}/usr/bin/makeidx
+	rm "${D}"/usr/bin/makeidx
 }
 
 src_test () {

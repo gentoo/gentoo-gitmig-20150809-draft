@@ -1,6 +1,20 @@
 # ChangeLog for sci-electronics/ng-spice-rework
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.18 2008/12/10 16:27:25 calchan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.19 2010/06/24 10:41:52 jlec Exp $
+
+*ng-spice-rework-21 (24 Jun 2010)
+*ng-spice-rework-18-r1 (24 Jun 2010)
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> -ng-spice-rework-15.ebuild,
+  -files/ng-spice-rework-15.gcc-3.4.patch, -ng-spice-rework-17-r1.ebuild,
+  -ng-spice-rework-17-r2.ebuild, +ng-spice-rework-18-r1.ebuild,
+  +files/ng-spice-rework-18-nostrip.patch, +ng-spice-rework-21.ebuild,
+  +files/ng-spice-rework-21-nostrip.patch,
+  +files/ng-spice-rework-21-src_makefile.patch,
+  -files/ng-spice-rework-com_let.patch,
+  -files/ng-spice-rework-numparam.patch,
+  -files/ng-spice-rework-pipemode.patch:
+  Version Bump, #270876; Prevend stripping, #252036, removed old versions
 
 *ng-spice-rework-18 (10 Dec 2008)
 
