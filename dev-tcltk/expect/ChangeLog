@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.74 2010/06/24 01:28:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.75 2010/06/24 21:47:17 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> expect-5.44.1.15.ebuild:
+  stable amd64, bug 324951
 
   24 Jun 2010; Jeroen Roovers <jer@gentoo.org> expect-5.44.1.15.ebuild:
   Stable for HPPA (bug #324951).
