@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.38 2010/06/03 19:46:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.39 2010/06/24 21:12:41 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> yasm-1.0.1.ebuild:
+  stable amd64, bug 325273
 
 *yasm-1.0.1 (03 Jun 2010)
 
