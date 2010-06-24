@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.7.ebuild,v 1.1 2010/04/01 19:05:59 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.7.ebuild,v 1.2 2010/06/24 01:05:10 arfrever Exp $
 
 EAPI=2
 SUPPORT_PYTHON_ABIS=1
@@ -9,7 +9,7 @@ PYTHON_DEPEND="2"
 inherit eutils distutils fdo-mime
 
 DESCRIPTION="Qt based scientific plotting package with good Postscript output"
-HOMEPAGE="http://home.gna.org/veusz/"
+HOMEPAGE="http://home.gna.org/veusz/ http://pypi.python.org/pypi/veusz"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 
 IUSE="doc examples fits"
