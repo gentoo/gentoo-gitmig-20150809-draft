@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.4.ebuild,v 1.3 2010/06/24 08:23:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.4.ebuild,v 1.4 2010/06/24 21:30:51 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -33,21 +33,19 @@ IUSE="+alsa +ipc java libnotify system-sqlite wifi"
 
 SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.xz
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
-#LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/"
-# 3.6.4 didn't have own language packs when this ebuild was initially created
-FF_LANGPACK_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
+LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( ${FF_LANGPACK_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${FIREFOX_P}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${LANGPACK_URI}/${MY_PV}/${X}.xpi -> ${P}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${FF_LANGPACK_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${FIREFOX_P}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${LANGPACK_URI}/${MY_PV}/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
@@ -113,7 +111,7 @@ src_unpack() {
 	linguas
 	for X in ${linguas}; do
 		# FIXME: Add support for unpacking xpis to portage
-		[[ ${X} != "en" ]] && xpi_unpack "${FIREFOX_P}-${X}.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
 	done
 }
 
@@ -244,7 +242,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${FIREFOX_P}-${X}"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
 	done
 
 	# Install icon and .desktop for menu entry

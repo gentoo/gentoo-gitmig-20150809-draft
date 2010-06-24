@@ -1,6 +1,12 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.25 2010/06/24 08:23:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.26 2010/06/24 21:30:51 polynomial-c Exp $
+
+  24 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -files/000_flex-configure-LANG.patch, -icecat-3.5.6.ebuild,
+  icecat-3.6.4.ebuild:
+  Use icecat language packs instead of those from mozilla. Removed 3.5.6
+  version as language packs are no longer available.
 
   24 Jun 2010; Christian Faulhammer <fauli@gentoo.org> icecat-3.6.4.ebuild:
   stable x86, security bug 324735
