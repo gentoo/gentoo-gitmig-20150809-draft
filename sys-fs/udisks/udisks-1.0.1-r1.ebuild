@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1.ebuild,v 1.4 2010/05/13 17:29:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1-r1.ebuild,v 1.1 2010/06/24 13:59:01 ssuominen Exp $
 
 EAPI=3
-inherit bash-completion
+inherit eutils bash-completion
 
 DESCRIPTION="Daemon providing interfaces to work with storage devices"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
@@ -20,7 +20,7 @@ COMMON_DEPEND=">=sys-fs/udev-147[extras]
 	>=dev-libs/dbus-glib-0.82
 	>=sys-auth/polkit-0.92
 	>=sys-apps/parted-1.8.8[device-mapper]
-	>=sys-fs/lvm2-2.02.61
+	>=sys-fs/lvm2-2.02.66
 	>=dev-libs/libatasmart-0.14
 	>=sys-apps/sg3_utils-1.27.20090411
 	!sys-apps/devicekit-disks"
@@ -36,6 +36,10 @@ DEPEND="${COMMON_DEPEND}
 
 # This would require running dbus and also sudo.
 RESTRICT="test"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-lvm2_api_support.patch
+}
 
 src_configure() {
 	econf \
@@ -54,7 +58,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS HACKING NEWS README
 
-	rm -f "${D}"/etc/profile.d/udisks-bash-completion.sh
+	rm -f "${ED}"/etc/profile.d/udisks-bash-completion.sh
 	dobashcompletion tools/udisks-bash-completion.sh ${PN}
 
 	find "${ED}" -name '*.la' -delete
