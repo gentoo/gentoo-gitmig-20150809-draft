@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo-ng/procinfo-ng-2.0.304.ebuild,v 1.2 2010/06/24 16:00:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo-ng/procinfo-ng-2.0.304.ebuild,v 1.3 2010/06/24 21:11:18 pacho Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
