@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.30 2010/05/31 23:47:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.31 2010/06/24 19:44:02 nixnut Exp $
+
+*yaboot-1.3.14-r2 (24 Jun 2010)
+
+  24 Jun 2010; nixnut <nixnut@gentoo.org> +files/yaboot-nopiessp-gcc4.patch,
+  +yaboot-1.3.14-r2.ebuild:
+  Added nopiessp support for gcc-4
 
 *yaboot-1.3.14-r1 (31 May 2010)
 
