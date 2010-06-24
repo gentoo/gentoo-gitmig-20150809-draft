@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r4.ebuild,v 1.1 2010/06/16 08:45:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r4.ebuild,v 1.2 2010/06/24 18:04:40 jlec Exp $
 
 EAPI="3"
 
@@ -330,7 +330,7 @@ src_install() {
 		-e "s~^\(.*setenv MOLREPLIB .*\)\$CCP4.*~\1\$CCP4/share/ccp4/data/monomers/~g" \
 		-e "s~^\(.*setenv CLIB .*\)\$CCP4.*~\1\$CCP4/$(get_libdir)~g" \
 		-e "s~^\(.*setenv CBIN .*\)\$CCP4.*~\1\$CCP4/libexec/ccp4/bin/~g" \
-		-e "s~^\(export CCP4_MASTER.*\)${WORKDIR}~\1/usr~g" \
+		-e "s~^\(export CCP4_MASTER.*\)${WORKDIR}~\1${EPREFIX}/usr~g" \
 		-e "s~^\(export CCP4.*\$CCP4_MASTER\).*~\1~g" \
 		-e "s~^\(export CCP4I_TOP\).*~\1=\$CCP4/$(get_libdir)/ccp4/ccp4i~g" \
 		-e "s~^\(export DBCCP4I_TOP\).*~\1=\$CCP4/share/ccp4/dbccp4i~g" \
