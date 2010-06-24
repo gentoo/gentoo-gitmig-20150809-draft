@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.2 2010/05/21 20:51:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/burgerspace-1.9.0.ebuild,v 1.3 2010/06/24 20:56:22 pacho Exp $
 
 EAPI=2
 inherit autotools games
@@ -11,7 +11,7 @@ SRC_URI="http://perso.b2b2c.ca/sarrazip/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="network"
 RESTRICT="test"  # doesn't really test anything
 
