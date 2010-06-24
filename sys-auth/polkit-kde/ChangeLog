@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/polkit-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.5 2010/05/19 13:33:21 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.6 2010/06/24 00:05:36 reavertm Exp $
+
+*polkit-kde-0.95.1-r1 (23 Jun 2010)
+
+  23 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -polkit-kde-0.95.1.ebuild, +polkit-kde-0.95.1-r1.ebuild,
+  +files/polkit-kde-0.95.1-autostart-dir.patch:
+  Fix autostart location, see bug 310999
 
   19 May 2010; Robert Piasek <dagger@gentoo.org> polkit-kde-0.95.1.ebuild:
   added ~arm keyword
