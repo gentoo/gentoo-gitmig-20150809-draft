@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r4.ebuild,v 1.1 2010/05/31 22:05:20 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r5.ebuild,v 1.1 2010/06/24 18:10:39 jlec Exp $
 
 EAPI="3"
 
@@ -97,7 +97,7 @@ src_install() {
 	# File collisions with sci-biology/ncbi-tools
 	rm -f "${ED}"/usr/bin/{asn2asn,rpsblast,test_regexp}
 
-	echo "LD_LIBRARY_PATH=${EPREFIX}/usr/$(get_libdir)/${PN}" > ${S}/99${PN}
+	echo "LDPATH=${EPREFIX}/usr/$(get_libdir)/${PN}" > ${S}/99${PN}
 	doenvd "${S}/99${PN}"
 }
 
