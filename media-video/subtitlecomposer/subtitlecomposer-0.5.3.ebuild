@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3.ebuild,v 1.2 2010/06/08 03:16:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3.ebuild,v 1.3 2010/06/24 18:44:27 xarthisius Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ src_prepare() {
 
 	# linkage issue
 	epatch "${FILESDIR}/${PN}-linkage-patch.patch"
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 
 	sed -e '/ADD_SUBDIRECTORY( api )/s/^/# DISABLED/' \
 		-i src/main/scripting/examples/CMakeLists.txt \
