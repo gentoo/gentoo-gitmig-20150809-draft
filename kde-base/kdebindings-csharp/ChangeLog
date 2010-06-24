@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-csharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.34 2010/06/16 06:35:37 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.35 2010/06/24 07:35:21 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  kdebindings-csharp-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   16 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   kdebindings-csharp-4.4.4.ebuild:

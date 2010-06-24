@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmahjongg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.151 2010/06/21 15:53:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmahjongg/ChangeLog,v 1.152 2010/06/24 08:43:38 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> kmahjongg-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -kmahjongg-4.3.3.ebuild, kmahjongg-4.3.5.ebuild, kmahjongg-4.4.4.ebuild:

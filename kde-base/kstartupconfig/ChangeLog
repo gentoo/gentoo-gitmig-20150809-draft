@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstartupconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.61 2010/06/21 15:53:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.62 2010/06/24 09:32:01 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  kstartupconfig-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -kstartupconfig-4.3.3.ebuild, kstartupconfig-4.3.5.ebuild,

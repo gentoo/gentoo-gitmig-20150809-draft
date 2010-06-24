@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksplash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.66 2010/06/21 15:53:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.67 2010/06/24 09:28:24 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> ksplash-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -ksplash-4.3.3.ebuild, ksplash-4.3.5.ebuild, ksplash-4.4.4.ebuild:

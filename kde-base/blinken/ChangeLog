@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.128 2010/06/21 15:53:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.129 2010/06/24 06:41:15 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> blinken-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -blinken-4.3.3.ebuild, blinken-4.3.5.ebuild, blinken-4.4.4.ebuild:

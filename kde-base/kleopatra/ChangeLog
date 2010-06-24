@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.51 2010/06/21 16:18:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.52 2010/06/24 08:38:36 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> kleopatra-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/kleopatra-4.4.3-assuan2.patch, kleopatra-4.4.4.ebuild:

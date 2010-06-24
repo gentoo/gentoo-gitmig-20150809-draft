@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.12 2010/06/06 20:05:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.13 2010/06/24 08:31:52 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> kigo-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   06 Jun 2010; Joseph Jezak <josejx@gentoo.org> kigo-4.4.4.ebuild:
   Marked ~ppc/~ppc64.

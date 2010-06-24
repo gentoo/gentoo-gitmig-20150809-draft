@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.164 2010/06/22 16:18:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.165 2010/06/24 09:29:55 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> kstars-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   22 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> kstars-4.3.5.ebuild,
   kstars-4.4.4.ebuild:

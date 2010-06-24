@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krossruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.38 2010/06/21 15:52:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.39 2010/06/24 09:15:57 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> krossruby-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -krossruby-4.3.3.ebuild, krossruby-4.3.5.ebuild, krossruby-4.4.4.ebuild:
