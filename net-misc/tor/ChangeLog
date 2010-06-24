@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.205 2010/06/06 14:43:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.206 2010/06/24 07:29:23 fauli Exp $
+
+*tor-0.2.1.26 (24 Jun 2010)
+
+  24 Jun 2010; Christian Faulhammer <fauli@gentoo.org> -tor-0.2.1.22.ebuild,
+  +tor-0.2.1.26.ebuild:
+  version bump for bug 325243 by Michael <gentoo AT scribeofthenile DOT
+  com>, and clean up
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> tor-0.2.1.25.ebuild:
   arm stable wrt #300830
