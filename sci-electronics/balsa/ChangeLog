@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/balsa
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.13 2009/09/23 19:59:23 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.14 2010/06/24 17:26:10 jlec Exp $
+
+*balsa-4.0 (24 Jun 2010)
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/4.0-datadir.patch,
+  balsa-3.5.ebuild, +files/4.0-libdir.patch, +balsa-4.0.ebuild:
+  Version Bump and restricting gtk+ version, #273237
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> balsa-3.5.ebuild:
   Remove virtual/libc
