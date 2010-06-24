@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/halibut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.8 2010/06/16 04:03:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.9 2010/06/24 21:28:22 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> halibut-1.0.ebuild:
+  stable amd64, bug 324211
 
   16 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org> halibut-1.0.ebuild:
   work around parallel make issue (bug #299502)
