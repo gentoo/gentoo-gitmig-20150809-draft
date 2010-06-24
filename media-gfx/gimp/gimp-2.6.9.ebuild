@@ -1,21 +1,19 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.28 2010/06/24 10:45:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.9.ebuild,v 1.1 2010/06/24 10:45:22 scarabeus Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit git eutils gnome2 fdo-mime multilib python
-
-EGIT_REPO_URI="git://git.gnome.org/gimp"
+inherit eutils gnome2 fdo-mime multilib python
 
 DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
-SRC_URI=""
+SRC_URI="mirror://gimp/v2.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec curl dbus debug doc exif gnome hal jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
 
@@ -40,7 +38,7 @@ RDEPEND=">=dev-libs/glib-2.18.1
 	webkit? ( net-libs/webkit-gtk )
 	jpeg? ( >=media-libs/jpeg-6b-r2:0 )
 	exif? ( >=media-libs/libexif-0.6.15 )
-	lcms? ( media-libs/lcms )
+	lcms? ( =media-libs/lcms-1* )
 	mng? ( media-libs/libmng )
 	pdf? ( >=app-text/poppler-0.12.3-r3[cairo] )
 	png? ( >=media-libs/libpng-1.2.2 )
@@ -55,16 +53,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
-
-src_prepare() {
-	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
-	./autogen.sh
-	gnome2_src_prepare
-}
-
-src_unpack() {
-	git_src_unpack
-}
 
 pkg_setup() {
 	G2CONF="--enable-default-binary \
