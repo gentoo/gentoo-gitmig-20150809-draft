@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.9 2010/06/22 16:10:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.10 2010/06/24 09:28:21 angelos Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
 # libAfterBase/libAfterImage are LGPL
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86"
 IUSE="alsa debug dbus gif gtk jpeg mmx nls png svg tiff xinerama"
 
 RDEPEND="media-libs/freetype
