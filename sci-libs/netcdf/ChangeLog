@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.68 2010/06/22 14:33:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.69 2010/06/24 20:51:07 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> netcdf-4.1.1.ebuild:
+  stable amd64, bug 325069
 
   22 Jun 2010; Justin Lecher <jlec@gentoo.org> netcdf-4.1.1.ebuild:
   Cleaning unused eclass
