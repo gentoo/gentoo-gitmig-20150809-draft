@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/konq-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.9 2010/02/21 15:46:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.10 2010/06/24 21:17:05 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> konq-plugins-4.4.0.ebuild:
+  stable amd64, bug 325311
 
 *konq-plugins-4.4.0 (21 Feb 2010)
 

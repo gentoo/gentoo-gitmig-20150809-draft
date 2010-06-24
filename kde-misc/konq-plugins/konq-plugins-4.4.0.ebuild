@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.4.0.ebuild,v 1.1 2010/02/21 15:46:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.4.0.ebuild,v 1.2 2010/06/24 21:17:05 pacho Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/extragear/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug +handbook tidy"
 
 DEPEND=">=kde-base/libkonq-${KDE_MINIMAL}
