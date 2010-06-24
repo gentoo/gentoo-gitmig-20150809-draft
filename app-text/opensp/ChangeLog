@@ -1,6 +1,12 @@
 # ChangeLog for app-text/opensp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.44 2007/06/19 13:56:08 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.45 2010/06/24 20:02:13 mr_bones_ Exp $
+
+*opensp-1.5.2-r2 (24 Jun 2010)
+
+  24 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +opensp-1.5.2-r2.ebuild:
+  EAPI=2; add static-libs support; tidy
 
   19 Jun 2007; Raúl Porcel <armin76@gentoo.org> opensp-1.5.2-r1.ebuild:
   alpha stable wrt #152364
