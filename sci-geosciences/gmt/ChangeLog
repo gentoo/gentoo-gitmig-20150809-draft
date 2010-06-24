@@ -1,6 +1,14 @@
 # ChangeLog for sci-geosciences/gmt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.20 2010/06/17 09:48:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.21 2010/06/24 19:48:35 jlec Exp $
+
+*gmt-4.5.0-r2 (24 Jun 2010)
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> gmt-4.0.ebuild,
+  gmt-4.1.1.ebuild, -gmt-4.5.0-r1.ebuild, +gmt-4.5.0-r2.ebuild,
+  files/gmt-4.5.0-no-strip.patch:
+  Correct handling of *FLAGS, thanks Martin von Gagern for providing the
+  patch
 
   17 Jun 2010; Justin Lecher <jlec@gentoo.org> gmt-4.0.ebuild,
   gmt-4.1.1.ebuild, gmt-4.5.0-r1.ebuild:

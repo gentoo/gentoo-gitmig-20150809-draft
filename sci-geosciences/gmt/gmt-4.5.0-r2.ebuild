@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.0-r1.ebuild,v 1.2 2010/06/17 09:48:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.0-r2.ebuild,v 1.1 2010/06/24 19:48:35 jlec Exp $
 
 inherit multilib autotools eutils
 
@@ -8,14 +8,14 @@ GSHHS="GSHHS2.0"
 
 DESCRIPTION="Powerful map generator"
 HOMEPAGE="http://gmt.soest.hawaii.edu/"
-SRC_URI="ftp://falcon.grdl.noaa.gov/pub/gmt/GMT${PV}_src.tar.bz2
-	ftp://falcon.grdl.noaa.gov/pub/gmt/GMT${PV}_share.tar.bz2
-	ftp://falcon.grdl.noaa.gov/pub/gmt/${GSHHS}_coast.tar.bz2
-	doc? ( ftp://falcon.grdl.noaa.gov/pub/gmt/GMT${PV}_doc.tar.bz2 )
-	gmtsuppl? ( ftp://falcon.grdl.noaa.gov/pub/gmt/GMT${PV}_suppl.tar.bz2 )
-	gmtfull? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${GSHHS}_full.tar.bz2 )
-	gmthigh? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${GSHHS}_high.tar.bz2 )
-	gmttria? ( ftp://falcon.grdl.noaa.gov/pub/gmt/GMT${PV}_triangle.tar.bz2 )"
+SRC_URI="mirror://gmt/GMT${PV}_src.tar.bz2
+	mirror://gmt/GMT${PV}_share.tar.bz2
+	mirror://gmt/${GSHHS}_coast.tar.bz2
+	doc? ( mirror://gmt/GMT${PV}_doc.tar.bz2 )
+	gmtsuppl? ( mirror://gmt/GMT${PV}_suppl.tar.bz2 )
+	gmtfull? ( mirror://gmt/${GSHHS}_full.tar.bz2 )
+	gmthigh? ( mirror://gmt/${GSHHS}_high.tar.bz2 )
+	gmttria? ( mirror://gmt/GMT${PV}_triangle.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"

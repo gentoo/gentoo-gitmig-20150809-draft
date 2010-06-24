@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.7 2010/06/17 09:48:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.0.ebuild,v 1.8 2010/06/24 19:48:35 jlec Exp $
 
 inherit multilib
 
@@ -8,16 +8,16 @@ MAINV="${PV:0:1}"
 
 DESCRIPTION="Powerful map generator"
 HOMEPAGE="http://gmt.soest.hawaii.edu/"
-SRC_URI="ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_progs.tar.bz2
-	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT_share.tar.bz2
-	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_tut.tar.bz2
-	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_scripts.tar.bz2
-	ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_man.tar.bz2
-	doc? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_pdf.tar.bz2 )
-	gmtsuppl? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT${PV}_suppl.tar.bz2 )
-	gmtfull? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT_full.tar.bz2 )
-	gmthigh? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/GMT_high.tar.bz2 )
-	gmttria? ( ftp://falcon.grdl.noaa.gov/pub/gmt/${MAINV}/triangle.tar.bz2 )"
+SRC_URI="mirror://gmt/${MAINV}/GMT${PV}_progs.tar.bz2
+	mirror://gmt/${MAINV}/GMT_share.tar.bz2
+	mirror://gmt/${MAINV}/GMT${PV}_tut.tar.bz2
+	mirror://gmt/${MAINV}/GMT${PV}_scripts.tar.bz2
+	mirror://gmt/${MAINV}/GMT${PV}_man.tar.bz2
+	doc? ( mirror://gmt/${MAINV}/GMT${PV}_pdf.tar.bz2 )
+	gmtsuppl? ( mirror://gmt/${MAINV}/GMT${PV}_suppl.tar.bz2 )
+	gmtfull? ( mirror://gmt/${MAINV}/GMT_full.tar.bz2 )
+	gmthigh? ( mirror://gmt/${MAINV}/GMT_high.tar.bz2 )
+	gmttria? ( mirror://gmt/${MAINV}/triangle.tar.bz2 )"
 # Needed because GMT_share in version 3 is different of that one in version 4, but they have same name.
 
 # Emailed one of the authors (Paul Wessel) who gave us permission to mirror
