@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/gato
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.12 2010/06/04 16:20:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.13 2010/06/24 12:51:38 jlec Exp $
+
+*gato-1.02 (24 Jun 2010)
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> gato-0.99c.ebuild,
+  -files/gato-0.99c-python.patch, +gato-1.02.ebuild:
+  Version Bump, QA cleanup
 
   04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gato-0.99c.ebuild:
