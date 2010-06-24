@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.5.2.01.ebuild,v 1.1 2010/05/13 21:13:34 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.5.2.01.ebuild,v 1.2 2010/06/24 14:28:20 phajdan.jr Exp $
 
 inherit java-pkg-2
 
@@ -13,7 +13,7 @@ BINARY="sun_java_wireless_toolkit-2.5.2_01-linuxi486.bin.sh"
 SRC_URI="${BINARY}"
 LICENSE="sun-bcla-j2me"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc examples"
 RESTRICT="fetch"
 
