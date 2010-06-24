@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.689 2010/06/23 22:58:17 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.690 2010/06/24 05:46:39 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> kdelibs-4.4.4.ebuild:
+  Stable on amd64 wrt bug #322791
 
   23 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> kdelibs-4.4.4.ebuild:
   Move polkit-kde dependency from kdebase-meta to kdelibs, see bug 310999
