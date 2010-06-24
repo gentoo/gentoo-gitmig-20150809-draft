@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.25 2010/06/24 10:48:09 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.26 2010/06/24 10:50:53 spock Exp $
+
+  24 Jun 2010; Michał Januszewski <spock@gentoo.org>
+  -nvidia-cuda-toolkit-2.0.ebuild, -nvidia-cuda-toolkit-2.1.ebuild,
+  -nvidia-cuda-toolkit-2.2-r2.ebuild:
+  Remove old ebuilds.
 
   24 Jun 2010; Michał Januszewski <spock@gentoo.org>
   nvidia-cuda-toolkit-3.0.ebuild:
