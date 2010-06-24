@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.49 2010/06/16 05:25:17 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.50 2010/06/24 05:39:43 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> soprano-2.4.3.ebuild:
+  Stable on amd64 wrt bug #322791
 
   16 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> soprano-2.4.3.ebuild:
   Added qt-test dependency
