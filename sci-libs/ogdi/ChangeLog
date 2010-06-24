@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.25 2010/01/01 17:42:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.26 2010/06/24 14:46:47 jlec Exp $
+
+*ogdi-3.1.6 (24 Jun 2010)
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> -ogdi-3.1.4-r1.ebuild,
+  +ogdi-3.1.6.ebuild, +files/ogdi-3.1.6-fpic.patch,
+  +files/ogdi-3.1.6-unbundle-libs.patch:
+  Version Bump, hopefully fixing bug 264724
 
   01 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ogdi-3.1.5-r1.ebuild:
