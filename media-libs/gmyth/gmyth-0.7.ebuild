@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.7 2009/05/21 19:01:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.8 2010/06/24 10:03:00 hwoarang Exp $
 
-inherit libtool
+inherit libtool autotools eutils
 
 IUSE="debug"
 LICENSE="LGPL-2"
@@ -19,6 +19,13 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	AT_M4DIR="m4" eautoreconf
+}
 
 src_compile() {
 	econf   $(use_enable debug)
