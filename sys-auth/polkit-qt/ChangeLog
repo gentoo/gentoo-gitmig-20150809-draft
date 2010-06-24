@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.5 2010/05/19 13:31:10 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.6 2010/06/24 05:34:11 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org> polkit-qt-0.95.1.ebuild:
+  Stable on amd64 wrt bug #322791
 
   19 May 2010; Robert Piasek <dagger@gentoo.org> polkit-qt-0.95.1.ebuild:
   Added ~arm keyword

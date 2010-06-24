@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1-r1.ebuild,v 1.1 2010/06/24 00:05:36 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1-r1.ebuild,v 1.2 2010/06/24 05:35:18 angelos Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ DESCRIPTION="PolicyKit integration module for KDE."
 HOMEPAGE="http://kde.org"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 SLOT="4"
 IUSE="debug"
 

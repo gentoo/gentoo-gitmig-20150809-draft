@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit-kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.6 2010/06/24 00:05:36 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/ChangeLog,v 1.7 2010/06/24 05:35:18 angelos Exp $
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  polkit-kde-0.95.1-r1.ebuild:
+  Stable on amd64 wrt bug #322791
 
 *polkit-kde-0.95.1-r1 (23 Jun 2010)
 
