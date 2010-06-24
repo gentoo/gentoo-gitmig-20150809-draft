@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.106 2010/06/12 11:26:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.107 2010/06/24 21:21:55 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> windowmaker-0.92.0-r8.ebuild:
+  stable amd64, bug 322741
 
   12 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   windowmaker-0.92.0-r8.ebuild:
