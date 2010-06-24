@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.22 2010/06/20 18:24:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.23 2010/06/24 21:06:24 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> lksctp-tools-1.0.10.ebuild:
+  stable amd64, bug 322321
 
   20 Jun 2010; Raúl Porcel <armin76@gentoo.org> lksctp-tools-1.0.10.ebuild:
   alpha/sparc stable wrt #322321
