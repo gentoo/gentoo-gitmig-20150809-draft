@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.3_beta3.ebuild,v 1.1 2010/06/15 22:17:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.3_beta4.ebuild,v 1.1 2010/06/24 13:38:03 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -151,6 +151,8 @@ src_compile() {
 	einfo "...done."
 
 	# XXX: --disable-path-info closes an info leak, but may be confusing.
+	# audit: somebody got to explain me how I can test this before I
+	# enable it.. — Diego
 	econf --with-secure-path="${ROOTPATH}" \
 		--with-editor=/usr/libexec/gentoo-editor \
 		--with-env-editor \
@@ -159,7 +161,8 @@ src_compile() {
 		$(use_with pam) \
 		$(use_with skey) \
 		$(use_with ldap ldap_conf_file /etc/ldap.conf.sudo) \
-		$(use_with ldap) || die
+		$(use_with ldap) \
+		--without-linux-audit
 
 	emake || die
 }

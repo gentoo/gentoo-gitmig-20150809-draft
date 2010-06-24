@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.226 2010/06/15 22:17:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.227 2010/06/24 13:38:03 flameeyes Exp $
+
+*sudo-1.7.3_beta4 (24 Jun 2010)
+
+  24 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  sudo-1.7.2_p2-r1.ebuild, -files/sudo-1.7.2p1-securepath.patch,
+  -sudo-1.7.3_beta3.ebuild, +sudo-1.7.3_beta4.ebuild:
+  Update to latest beta; drop all keywords but the two that haven't updated
+  from the (very) old and unsafe sudo version. Remove a stray file.
 
 *sudo-1.7.3_beta3 (15 Jun 2010)
 
