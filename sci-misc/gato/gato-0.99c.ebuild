@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.7 2010/06/24 12:51:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-0.99c.ebuild,v 1.8 2010/06/24 12:52:40 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,6 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
-
 
 S="${WORKDIR}/${MY_PN}"
 
