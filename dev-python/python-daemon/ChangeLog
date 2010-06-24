@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.3 2010/05/10 16:54:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/ChangeLog,v 1.4 2010/06/24 21:57:15 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> python-daemon-1.6.ebuild:
+  stable amd64, bug 323693
 
 *python-daemon-1.6 (10 May 2010)
 

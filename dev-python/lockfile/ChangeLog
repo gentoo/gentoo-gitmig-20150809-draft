@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lockfile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.3 2010/05/10 16:18:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.4 2010/06/24 21:56:08 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> lockfile-0.9.ebuild:
+  stable amd64, bug 323693
 
 *lockfile-0.9 (10 May 2010)
 
