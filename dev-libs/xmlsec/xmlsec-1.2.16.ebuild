@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.16.ebuild,v 1.3 2010/06/17 19:54:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/xmlsec-1.2.16.ebuild,v 1.4 2010/06/24 15:03:53 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.aleksey.com/xmlsec/download/${PN}1-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="gcrypt gnutls nss +openssl"
 
 RDEPEND=">=dev-libs/libxml2-2.7.4
