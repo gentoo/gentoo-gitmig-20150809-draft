@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.2.1.ebuild,v 1.4 2010/05/08 17:53:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.4.2.1.ebuild,v 1.5 2010/06/24 20:43:39 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_P:0:1}/${MY_PN}/${MY_P}.tar
 
 LICENSE="PSF-2.2"
 IUSE=""
-KEYWORDS="alpha ~amd64 ia64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 SLOT="0"
 
 RDEPEND="dev-python/markdown"
