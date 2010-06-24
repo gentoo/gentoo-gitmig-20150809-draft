@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.5 2010/06/23 17:00:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.3.ebuild,v 1.6 2010/06/24 11:43:53 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils gnome2-utils flag-o-matic
@@ -52,6 +52,19 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-pkg_preinst() { gnome2_icon_savelist; }
-pkg_postinst() { gnome2_icon_cache_update; }
-pkg_postrm() { gnome2_icon_cache_update; }
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	if use gstreamer; then
+		echo
+		elog "Install libsoup gstreamer plug-in for internet radio support."
+		echo
+	fi
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
+}
