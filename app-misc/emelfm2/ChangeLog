@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.35 2010/05/13 17:31:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.36 2010/06/24 21:25:56 pacho Exp $
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> emelfm2-0.7.2-r1.ebuild:
+  stable amd64, bug 324099
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> emelfm2-0.7.2-r1.ebuild:
   Marked ~ppc/~ppc64 for bug #316277.
