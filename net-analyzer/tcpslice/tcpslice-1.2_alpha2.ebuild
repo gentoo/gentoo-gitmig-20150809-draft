@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.2_alpha2.ebuild,v 1.6 2009/09/23 18:24:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.2_alpha2.ebuild,v 1.7 2010/06/24 05:33:29 jer Exp $
 
 inherit eutils versionator
 
@@ -8,9 +8,8 @@ MY_P="${PN}_$(get_version_component_range 1-2)a2"
 
 DESCRIPTION="Tcpslice is a program for extracting portions of packet-trace files generated using tcpdump's -w flag. It can also be used to glue together pcap dump files."
 HOMEPAGE="http://www.tcpdump.org/"
-SRC_URI="mirror://debian/pool/main/t/tcpslice/${MY_P}.orig.tar.gz
-	mirror://debian/pool/main/t/tcpslice/${MY_P}-4.diff.gz"
-RESTRICT="mirror"
+SRC_URI="mirror://gentoo/${MY_P}.orig.tar.gz
+	mirror://gentoo/${MY_P}-4.diff.gz"
 
 LICENSE="BSD"
 SLOT="0"
