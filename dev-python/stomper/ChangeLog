@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/stomper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.8 2010/06/02 07:00:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.9 2010/06/25 18:29:54 arfrever Exp $
+
+  25 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  stomper-0.2.2-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove caleb from metadata.xml (#317071)
