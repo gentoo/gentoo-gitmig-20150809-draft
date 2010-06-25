@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fattr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/ChangeLog,v 1.6 2010/02/13 08:47:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fattr/ChangeLog,v 1.7 2010/06/25 06:57:53 graaff Exp $
+
+  25 Jun 2010; Hans de Graaff <graaff@gentoo.org> -fattr-2.1.0.ebuild,
+  -fattr-2.1.0-r1.ebuild:
+  Remove old versions.
 
 *fattr-2.1.0-r2 (13 Feb 2010)
 
