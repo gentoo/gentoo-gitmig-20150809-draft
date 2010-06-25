@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.0.ebuild,v 1.5 2010/06/24 13:14:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.0.ebuild,v 1.6 2010/06/25 13:05:13 betelgeuse Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-COMMON_DEP="dev-java/jaffl:0"
+COMMON_DEP=">=dev-java/jaffl-0.5.1:0"
 
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"

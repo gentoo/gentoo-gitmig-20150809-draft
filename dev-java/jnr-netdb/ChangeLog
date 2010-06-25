@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnr-netdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.4 2010/06/24 13:14:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.5 2010/06/25 13:05:13 betelgeuse Exp $
+
+  25 Jun 2010; Petteri Räty <betelgeuse@gentoo.org> jnr-netdb-1.0.ebuild:
+  Raise jaffl minimum to 0.5.1. See bug #322739.
 
   24 Jun 2010; Christian Faulhammer <fauli@gentoo.org> jnr-netdb-1.0.ebuild:
   keyworded ~arch for x86, bug 322739
