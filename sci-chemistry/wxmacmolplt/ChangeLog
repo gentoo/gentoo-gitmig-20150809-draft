@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/wxmacmolplt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.5 2010/03/09 11:39:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.6 2010/06/25 09:57:43 jlec Exp $
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> wxmacmolplt-7.4.ebuild:
+  Restrict ming to <0.4
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> wxmacmolplt-7.3.ebuild,
   wxmacmolplt-7.3-r1.ebuild, wxmacmolplt-7.4.ebuild:
