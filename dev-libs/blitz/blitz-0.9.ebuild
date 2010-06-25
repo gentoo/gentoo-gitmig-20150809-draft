@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.10 2009/02/05 22:00:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.11 2010/06/25 13:21:11 jlec Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -41,7 +41,7 @@ src_test() {
 
 src_install () {
 	dodir /usr/share/doc/${PF}
-	emake DESTDIR=${D} docdir=/usr/share/doc/${PF} install || die
-	dodoc ChangeLog ChangeLog.1 LICENSE README README.binutils \
-		  TODO COPYING LEGAL AUTHORS NEWS
+	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} install || die
+	dodoc ChangeLog ChangeLog.1 README README.binutils \
+		  TODO AUTHORS NEWS || die
 }

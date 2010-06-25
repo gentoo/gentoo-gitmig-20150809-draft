@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.1 2010/06/25 13:13:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.2 2010/06/25 13:21:11 jlec Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_compile() {
 		$(use_enable debug) \
 		|| die "econf failed"
 	emake \
- 		LDFLAGS="${LDFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
 		lib || die "emake lib failed"
 }
 
