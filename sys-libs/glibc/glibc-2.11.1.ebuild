@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.1.ebuild,v 1.5 2010/06/25 02:49:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.1.ebuild,v 1.6 2010/06/25 19:53:44 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -83,7 +83,7 @@ fi
 DEPEND=">=sys-devel/gcc-3.4.4
 	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
 	x86? ( >=sys-devel/gcc-4.3 )
-	amd64? ( >=sys-devel/binutils-2.19 multilib? ( >=sys-devel/gcc-4.3 ) )
+	amd64? ( >=sys-devel/binutils-2.19 >=sys-devel/gcc-4.3 )
 	ppc? ( >=sys-devel/gcc-4.1.0 )
 	ppc64? ( >=sys-devel/gcc-4.1.0 )
 	>=sys-devel/binutils-2.15.94
