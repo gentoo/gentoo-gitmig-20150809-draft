@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/coin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.30 2010/06/25 12:15:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.31 2010/06/25 20:26:39 reavertm Exp $
+
+*coin-3.1.3 (25 Jun 2010)
+
+  25 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> -coin-3.1.2.ebuild,
+  +coin-3.1.3.ebuild, metadata.xml:
+  Take over maintenance, version bump 3.1.3: static-libs, la files removal,
+  install manual pages in private location (bug 312043), install headers
+  in own subdir (bug 297644)
 
   25 Jun 2010; Justin Lecher <jlec@gentoo.org> coin-3.1.0.ebuild,
   coin-3.1.2.ebuild:
@@ -111,11 +119,11 @@
   update to later snapshot (bug 20541)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *coin-20010601-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

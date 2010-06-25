@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.4 2010/06/25 12:15:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.5 2010/06/25 20:26:39 reavertm Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 LICENSE="|| ( GPL-2 PEL )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="debug doc java javascript openal"
+IUSE="debug doc javascript openal"
 
 RDEPEND="
 	!x11-libs/qwt[doc]
@@ -29,7 +29,6 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXext
-	java? ( virtual/jdk )
 	javascript? ( dev-lang/spidermonkey )
 	openal? ( media-libs/openal )"
 
@@ -44,6 +43,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		htmldir=/usr/share/doc/${PF}/html				\
+		--disable-java-wrapper							\
 		--enable-3ds-import								\
 		--enable-threadsafe								\
 		--with-fontconfig								\
@@ -52,7 +52,6 @@ src_configure() {
 		$(use_enable debug symbols)						\
 		$(use_enable doc html)							\
 		$(use_enable doc man)							\
-		$(use_enable java java-wrapper)					\
 		$(use_enable javascript javascript-api)			\
 		$(use_enable openal sound)						\
 		$(use_with javascript spidermonkey)				\
