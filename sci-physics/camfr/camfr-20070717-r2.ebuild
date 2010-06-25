@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r2.ebuild,v 1.1 2010/06/25 13:25:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r2.ebuild,v 1.2 2010/06/25 22:37:22 arfrever Exp $
 
 EAPI=2
 
@@ -73,11 +73,13 @@ src_prepare() {
 }
 
 src_test() {
-	# trick to avoid X in testing (bug #229753)
-	echo "backend : Agg" > matplotlibrc
-	PYTHONPATH=".:visualisation" "$(PYTHON)" testsuite/camfr_test.py \
-		|| die "tests failed"
-	rm -f matplotlibrc
+	testing() {
+		# trick to avoid X in testing (bug #229753)
+		echo "backend : Agg" > matplotlibrc
+		PYTHONPATH=".:visualisation" "$(PYTHON)" testsuite/camfr_test.py
+		rm -f matplotlibrc
+	}
+	python_execute_function -s testing
 }
 
 src_install() {
