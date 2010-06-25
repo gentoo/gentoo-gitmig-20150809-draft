@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/krename
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.58 2010/06/21 17:42:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.59 2010/06/25 10:12:30 scarabeus Exp $
+
+*krename-4.0.4 (25 Jun 2010)
+
+  25 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.0.4-podofo_automagic.patch, +krename-4.0.4.ebuild:
+  Version bump. Introduce new pdf useflag.
 
   21 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/4.0.0-fix_automagicness.patch, -krename-4.0.2.ebuild,
