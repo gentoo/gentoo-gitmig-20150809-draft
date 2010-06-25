@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.7.ebuild,v 1.1 2010/06/11 15:09:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.8.ebuild,v 1.1 2010/06/25 17:18:08 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -16,7 +16,7 @@ IUSE="xinerama"
 
 COMMON_DEPEND=">=media-libs/giblib-1.2.4
 	media-libs/imlib2
-	media-libs/libpng
+	>=media-libs/libpng-1.2.43
 	x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${COMMON_DEPEND}
@@ -28,8 +28,8 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	fehopts=(
 		"DESTDIR=${D}"
-		"doc_dir=${D}/usr/share/doc/${PF}"
 		"PREFIX=/usr"
+		"doc_dir=${D}/usr/share/doc/${PF}"
 		)
 }
 
@@ -37,13 +37,6 @@ src_prepare() {
 	if ! use xinerama; then
 		sed -i -e '/^xinerama/d' config.mk || die
 	fi
-
-	sed -i -e 's:LDFLAGS +=:LDLIBS =:' config.mk || die
-
-	sed -i \
-		-e 's:${LDFLAGS}:${LDLIBS}:' \
-		-e 's:${CC} ${CFLAGS}:${CC} ${LDFLAGS} ${CFLAGS}:' \
-		src/Makefile || die
 }
 
 src_compile() {
