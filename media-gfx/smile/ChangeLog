@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/smile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/ChangeLog,v 1.5 2010/01/07 12:17:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/ChangeLog,v 1.6 2010/06/25 23:34:29 hwoarang Exp $
+
+  25 Jun 2010; Markos Chandras <hwoarang@gentoo.org> smile-1.0.ebuild:
+  Fix imagemagick dependency wrt bug #314289
 
   07 Jan 2010; <hwoarang@gentoo.org> smile-1.0.ebuild:
   migrate to qt4-r2 eclass
