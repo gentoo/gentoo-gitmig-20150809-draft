@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.25 2010/03/07 12:28:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.26 2010/06/25 13:57:14 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	gsm? ( media-sound/gsm )"
 
-DOCS="ChangeLog TODO"
+DOCS="ChangeLog doc/FAQ"
 
 pkg_setup() {
 	if use audiofile && ! use oss; then
