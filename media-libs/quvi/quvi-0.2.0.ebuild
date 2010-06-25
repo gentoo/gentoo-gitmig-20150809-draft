@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.2.0.ebuild,v 1.1 2010/06/12 20:45:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.2.0.ebuild,v 1.2 2010/06/25 11:35:52 aballier Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="doc examples test offensive"
 
 RDEPEND=">=net-misc/curl-7.18.0
 	>=dev-libs/libpcre-7.9[cxx]
-	dev-lang/lua"
+	dev-lang/lua[deprecated]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
