@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.48 2010/05/27 22:26:02 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.49 2010/06/25 18:10:39 spatz Exp $
+
+  25 Jun 2010; Dror Levin <spatz@gentoo.org> knemo-0.6.2.ebuild:
+  Stable on amd64, bug 325535.
 
 *knemo-0.6.2 (27 May 2010)
 
