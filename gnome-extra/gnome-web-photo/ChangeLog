@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-web-photo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.7 2010/05/16 20:33:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.8 2010/06/25 23:41:54 hwoarang Exp $
+
+  25 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  -gnome-web-photo-0.8-r1.ebuild:
+  Drop old ebuild
 
   16 May 2010; Markos Chandras <hwoarang@gentoo.org>
   gnome-web-photo-0.9.ebuild:
