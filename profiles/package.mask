@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11701 2010/06/24 19:54:47 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11702 2010/06/25 08:42:47 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -83,10 +83,6 @@ sci-geosciences/vis5d+
 kde-misc/qalculate-applet
 x11-themes/aurorae
 kde-misc/blogilo
-
-# Christian Faulhammer <fauli@gentoo.org> (24 Jun 2010)
-# Temp mask for testing
-=app-misc/alexandria-0.6.6
 
 # Michał Januszewski <spock@gentoo.org> (24 Jun 2010)
 # Temporary mask to be removed once the ebuild is confirmed to work
