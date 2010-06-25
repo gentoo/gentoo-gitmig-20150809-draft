@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.42 2010/06/21 09:07:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.43 2010/06/25 17:14:35 armin76 Exp $
+
+  25 Jun 2010; Raúl Porcel <armin76@gentoo.org> devil-1.7.7.ebuild,
+  devil-1.7.8.ebuild:
+  Drop ia64/sparc keywords
 
   21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> devil-1.7.8.ebuild:
   Restrict media-libs/lcms depend to old version.
