@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.2 2010/06/25 20:38:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.3 2010/06/25 22:13:38 arfrever Exp $
 
 EAPI=3
 
@@ -100,7 +100,7 @@ pkg_setup() {
 		export USE_OPENMP=1
 		use math && export USE_PARALLEL_MINUIT2=1
 	fi
-	python_set_active_version 2
+	use python && python_set_active_version 2
 }
 
 src_prepare() {
@@ -298,10 +298,10 @@ src_install() {
 pkg_postinst() {
 	use ruby && elog "ROOT Ruby module is available as libRubyROOT"
 	fdo-mime_desktop_database_update
-	use python && python_mod_optimize "${EPREFIX}"/usr/$(get_libdir)/root
+	use python && python_mod_optimize /usr/$(get_libdir)/root
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
-	use python && python_mod_optimize "${EPREFIX}"/usr/$(get_libdir)/root
+	use python && python_mod_cleanup /usr/$(get_libdir)/root
 }
