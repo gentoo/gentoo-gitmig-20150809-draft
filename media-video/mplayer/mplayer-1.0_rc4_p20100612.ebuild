@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100612.ebuild,v 1.2 2010/06/13 10:07:24 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100612.ebuild,v 1.3 2010/06/25 14:46:40 ssuominen Exp $
 
 EAPI="2"
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 [[ ${PV} = *9999* ]] && SVN_ECLASS="subversion" || SVN_ECLASS=""
 
-inherit eutils flag-o-matic multilib base ${SVN_ECLASS}
+inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r30554
 
@@ -550,7 +550,7 @@ src_configure() {
 
 	use debug && myconf+=" --enable-debug=3"
 
-	if use x86; then
+	if use x86 && gcc-specs-pie; then
 		filter-flags -fPIC -fPIE
 		append-ldflags -nopie
 	fi

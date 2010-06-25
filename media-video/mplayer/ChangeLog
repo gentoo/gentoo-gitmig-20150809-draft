@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.750 2010/06/25 11:53:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.751 2010/06/25 14:46:39 ssuominen Exp $
+
+  25 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mplayer-1.0_rc4_p20100612.ebuild, mplayer-9999.ebuild:
+  Missing gcc-specs-pie check wrt #325517 by Toralf Förster and Magnus
+  Granberg.
 
   25 Jun 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   propagate enca useflag to libass, by Alexey Shildyakov
