@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2_rc3.ebuild,v 1.3 2010/06/22 03:05:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2_rc3.ebuild,v 1.4 2010/06/25 21:06:04 vapier Exp $
 
 EAPI="2"
 
@@ -142,7 +142,7 @@ src_configure() {
 		$(use_with oss) \
 		$(use_with png) \
 		$(use_with threads pthread) \
-		$(use pulse && use_with pulseaudio pulse) \
+		$(use pulseaudio && use_with pulseaudio pulse) \
 		$(use_with scanner sane) \
 		$(use_enable test tests) \
 		$(use_with truetype freetype) \
