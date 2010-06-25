@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.12 2010/05/25 20:01:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.13 2010/06/25 17:44:56 ssuominen Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ PHP_EXT_NAME=ming
 
 inherit eutils multilib autotools libtool perl-module distutils python php-ext-source-r1
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="hppa"
 DESCRIPTION="An Open Source library for Flash movie generation."
 HOMEPAGE="http://ming.sourceforge.net/"
 SRC_URI="mirror://debian/pool/main/m/ming/ming_0.3.0.orig.tar.gz

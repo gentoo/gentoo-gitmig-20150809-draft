@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.72 2010/06/25 10:07:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.73 2010/06/25 17:44:56 ssuominen Exp $
+
+  25 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> -ming-0.2a.ebuild,
+  -files/ming-0.2a-fpic.patch, -files/ming-0.2a-gentoo.diff:
+  Remove old.
 
   25 Jun 2010; Justin Lecher <jlec@gentoo.org>
   -files/ming-0.2a-linking.patch, -files/ming-0.2a-make.patch,
