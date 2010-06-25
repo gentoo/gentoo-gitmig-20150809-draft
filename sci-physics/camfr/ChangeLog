@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.16 2010/06/04 16:34:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.17 2010/06/25 13:25:00 jlec Exp $
+
+*camfr-20070717-r2 (25 Jun 2010)
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> +camfr-20070717-r2.ebuild,
+  +files/camfr-20070717-python.patch:
+  Fixes for PYTHON ABIs, #316245
 
   04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   camfr-20070717-r1.ebuild:
