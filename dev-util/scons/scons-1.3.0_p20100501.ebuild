@@ -1,40 +1,54 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.3.0_p20100501.ebuild,v 1.1 2010/05/19 20:40:14 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.3.0_p20100501.ebuild,v 1.2 2010/06/25 23:05:57 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="threads"
 
-inherit eutils distutils
+inherit distutils eutils
 
 MY_PV="${PV/_p/.d}"
 DOC_PV="${PV/_p*/}"
 
 DESCRIPTION="Extensible Python-based build utility"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz
-	doc? ( http://www.scons.org/doc/${DOC_PV}/PDF/${PN}-user.pdf -> ${P}-user.pdf
-		   http://www.scons.org/doc/${DOC_PV}/HTML/${PN}-user.html -> ${P}-user.html )"
-
 HOMEPAGE="http://www.scons.org/"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz
+	doc? (
+		http://www.scons.org/doc/${DOC_PV}/PDF/${PN}-user.pdf -> ${P}-user.pdf
+		http://www.scons.org/doc/${DOC_PV}/HTML/${PN}-user.html -> ${P}-user.html
+	)"
 
-SLOT="0"
 LICENSE="MIT"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
-DEPEND=">=dev-lang/python-2.5[threads]"
-RDEPEND="${DEPEND}"
-DOCS="RELEASE.txt CHANGES.txt"
+
+DEPEND=""
+RDEPEND=""
+
+DOCS="CHANGES.txt RELEASE.txt"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
-	epatch "${FILESDIR}"/scons-1.2.0-popen.patch
+	distutils_src_prepare
+	epatch "${FILESDIR}/scons-1.2.0-popen.patch"
 }
 
 src_install () {
 	distutils_src_install
-	# move man pages from /usr/man to /usr/share/man
+	python_convert_shebangs -r 2 "${ED}"
+
+	# Move man pages from /usr/man to /usr/share/man
 	dodir /usr/share
-	mv "${D}"/usr/man "${D}"/usr/share
+	mv "${ED}usr/man" "${ED}usr/share"
+
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins "${DISTDIR}"/${P}-user.{pdf,html}
