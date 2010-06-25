@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/pngcheck-2.3.0.ebuild,v 1.3 2009/09/22 13:50:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/pngcheck-2.3.0.ebuild,v 1.4 2010/06/25 11:34:22 ssuominen Exp $
 
+EAPI=2
 inherit toolchain-funcs
 
 DESCRIPTION="verifies the integrity of PNG, JNG and MNG files with internal checksums"
@@ -16,12 +17,13 @@ IUSE=""
 DEPEND="sys-libs/zlib"
 
 src_compile() {
-	emake -f Makefile.unx CC="$(tc-getCC)" \
+	emake -f Makefile.unx \
+		CC="$(tc-getCC)" \
 		CFLAGS="${LDFLAGS} ${CFLAGS} -DUSE_ZLIB" \
-		ZLIB="-lz" || die "emake failed."
+		ZLIB="-lz" || die
 }
 
 src_install() {
-	dobin ${PN} pngsplit png-fix-IDAT-windowsize || die "dobin failed."
+	dobin png{check,split,-fix-IDAT-windowsize} || die
 	dodoc CHANGELOG README
 }
