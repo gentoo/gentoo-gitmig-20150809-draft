@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5715 2010/06/25 14:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5716 2010/06/25 23:47:55 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1667,6 +1667,7 @@ media-libs/clutter:introspection - Use dev-libs/gobject-introspection for intros
 media-libs/clutter:opengl - Use virtual/opengl as the backend for rendering (default). If disabled, media-libs/libsdl is used.
 media-libs/clutter-gst:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/clutter-gtk:introspection - Use dev-libs/gobject-introspection for introspection
+media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
 media-libs/esdl:image - Enable image support
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
