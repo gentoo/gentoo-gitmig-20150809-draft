@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.16 2009/12/07 18:24:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.17 2010/06/25 13:33:00 jlec Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -18,7 +18,7 @@ SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 
 KEYWORDS="amd64 hppa sparc x86"
 SLOT="0"
-IUSE=""
+IUSE="static"
 
 RDEPEND="sci-physics/cernlib
 	x11-libs/libXaw
@@ -63,6 +63,7 @@ src_compile() {
 }
 
 src_install() {
+	use static || rm -vf bin/*.static
 	emake DESTDIR="${D}" install || die "emake install failed"
 	cd "${S}"/debian
 	dodoc changelog README.* deadpool.txt copyright || die "dodoc failed"
