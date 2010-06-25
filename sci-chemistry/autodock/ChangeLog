@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/autodock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/ChangeLog,v 1.7 2010/02/04 13:03:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/ChangeLog,v 1.8 2010/06/25 10:41:06 jlec Exp $
+
+*autodock-4.2.3-r1 (25 Jun 2010)
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> -autodock-4.0.1.ebuild,
+  -autodock-4.0.1-r1.ebuild, -autodock-4.2.3.ebuild,
+  +autodock-4.2.3-r1.ebuild:
+  Fixed installation issue when csh is not present, #303463; fix src_test,
+  #320345; removed old, fixed PYTHON ABIs stuff
 
 *autodock-4.2.3 (04 Feb 2010)
 

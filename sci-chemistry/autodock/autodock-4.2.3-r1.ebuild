@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.2.3.ebuild,v 1.1 2010/02/04 13:03:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.2.3-r1.ebuild,v 1.1 2010/06/25 10:41:06 jlec Exp $
 
 EAPI="2"
 
-inherit autotools eutils
+PYTHON_DEPEND="test? 2"
+
+inherit autotools eutils python
 
 MY_PN="autodocksuite"
 MY_P="${MY_PN}-${PV}"
@@ -20,19 +22,25 @@ IUSE=""
 
 S="${WORKDIR}/src"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
+	sed -i -e "s/\tcsh/\tsh/" \
+		autodock/Makefile.am autogrid/Makefile.am || die "sed failed"
 	for i in autodock autogrid; do
-		pushd $i
+		pushd $i &>/dev/null
 		eautoreconf
-		popd
+		popd &>/dev/null
 	done
 }
 
 src_configure() {
 	for i in autodock autogrid; do
-		pushd $i
-		econf || die "AutoDock econf failed."
-		popd
+		pushd $i &>/dev/null
+		econf
+		popd &>/dev/null
 	done
 }
 
@@ -54,10 +62,13 @@ src_install() {
 }
 
 src_test() {
+	einfo "Testing autodock"
 	cd "${S}/autodock/Tests"
-	python test_autodock4.py || die "AutoDock tests failed."
+	cp ../*.dat .
+	$(PYTHON) test_autodock4.py || die "AutoDock tests failed."
+	einfo "Testing autogrid"
 	cd "${S}/autogrid/Tests"
-	python test_autogrid4.py || die "AutoGrid tests failed."
+	$(PYTHON) test_autogrid4.py || die "AutoGrid tests failed."
 }
 
 pkg_postinst() {
