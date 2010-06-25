@@ -1,5 +1,25 @@
---- xen-3.4.2.orig/tools/libxc/Makefile	2009-11-10 16:12:56.000000000 +0100
-+++ xen-3.4.2/tools/libxc/Makefile	2009-12-12 18:46:27.547714651 +0100
+--- tools/xenpaging/Makefile
++++ tools/xenpaging/Makefile
+@@ -4,7 +4,7 @@
+ CFLAGS   += -I $(XEN_XC)
+ CFLAGS   += -I ./
+ CFLAGS   += $(CFLAGS_libxenctrl) $(CFLAGS_libxenstore)
+-LDFLAGS  += $(LDFLAGS_libxenctrl) $(LDFLAGS_libxenstore)
++xenpaging_LIBS = $(LDFLAGS_libxenctrl) $(LDFLAGS_libxenstore)
+ 
+ POLICY    = default
+ 
+@@ -27,7 +27,7 @@
+ all: $(IBINS)
+ 
+ xenpaging: $(OBJS)
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(xenpaging_LIBS)
+ 
+ install: all
+ 	$(INSTALL_DIR) $(DESTDIR)$(SBINDIR)
+--- tools/libxc/Makefile
++++ tools/libxc/Makefile
 @@ -167,9 +167,8 @@
  xc_dom_bzimageloader.o: CFLAGS += $(call zlib-options,D)
  xc_dom_bzimageloader.opic: CFLAGS += $(call zlib-options,D)

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.62 2010/06/24 01:39:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.63 2010/06/25 16:43:55 xarthisius Exp $
+
+  25 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  xen-tools-4.0.0.ebuild, -files/xen-tools-4.0.0-as-needed.patch,
+  +files/xen-tools-4.0.0-asneeded.patch:
+  Fixing build with --as-neeed wrt bug 320339. Thanks to Diego for
+  reporting.
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> xen-tools-3.4.2.ebuild:
   Stable on amd64 wrt bug #293714
