@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/pyao-0.82-r2.ebuild,v 1.2 2010/06/25 14:30:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/pyao-0.82-r2.ebuild,v 1.3 2010/06/25 14:41:00 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,16 +22,16 @@ DEPEND=">=media-libs/libao-1.0.0"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-new_api.patch"
+	epatch "${FILESDIR}"/${P}-new_api.patch
 	distutils_src_prepare
 }
 
 src_configure() {
-	"$(PYTHON -f)" ./config_unix.py || die "config_unix.py failed"
+	"$(PYTHON -f)" ./config_unix.py || die
 }
 
 src_install() {
 	distutils_src_install
 	insinto /usr/share/doc/${PF}/examples
-	doins test.py || die "doins failed"
+	doins test.py || die
 }
