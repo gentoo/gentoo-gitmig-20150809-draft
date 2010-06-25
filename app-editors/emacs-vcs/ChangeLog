@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.20 2010/05/18 08:41:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.21 2010/06/25 17:46:48 ulm Exp $
+
+  25 Jun 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-23.2.9999.ebuild,
+  emacs-vcs-24.0.9999.ebuild:
+  Workaround for gcc 4.4 on ia64, bug 325373.
 
   18 May 2010; Ulrich Mueller <ulm@gentoo.org> emacs-vcs-24.0.9999.ebuild:
   Version information is now in src/emacs.c, thanks to Tassilo Horn
