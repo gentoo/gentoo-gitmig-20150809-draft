@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.18-r1.ebuild,v 1.9 2010/05/22 15:16:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.18-r1.ebuild,v 1.10 2010/06/25 17:07:07 ssuominen Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -65,7 +65,7 @@ src_install() {
 		for dir in sample samples example examples; do
 			if [ -d ${dir} ] ; then
 				dodir /usr/share/doc/${PF}
-				cp -pPR ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
+				cp -pPR ${dir} "${D}"/usr/share/doc/${PF} || die "cp failed"
 			fi
 		done
 	fi

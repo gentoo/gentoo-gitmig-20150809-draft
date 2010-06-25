@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.20.ebuild,v 1.1 2010/06/25 09:37:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.20.ebuild,v 1.2 2010/06/25 17:07:07 ssuominen Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -12,7 +12,6 @@ RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_EXTRADOC="History.txt index.html README README.txt TODO"
 
 inherit multilib ruby-fakegem
-
 
 DESCRIPTION="Ruby language binding to the FOX GUI toolkit"
 HOMEPAGE="http://www.fxruby.org/"
