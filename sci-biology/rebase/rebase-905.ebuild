@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-905.ebuild,v 1.3 2009/09/01 18:17:52 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-905.ebuild,v 1.4 2010/06/25 09:12:07 jlec Exp $
 
 DESCRIPTION="A restriction enzyme database"
 LICENSE="public-domain"
@@ -16,6 +16,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 DEPEND="emboss? ( >=sci-biology/emboss-5.0.0 )"
 RDEPEND="${DEPEND}"
 
+RESTRICT="binchecks strip"
 src_compile() {
 	if use emboss; then
 		echo; einfo "Indexing Rebase for usage with EMBOSS."

@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.94 2010/06/25 09:09:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.95 2010/06/25 09:12:07 jlec Exp $
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> rebase-610.ebuild,
+  rebase-905.ebuild, rebase-1006.ebuild:
+  It's a db, so we will have RESTRICT=binchecks strip
 
 *rebase-1006 (25 Jun 2010)
 
