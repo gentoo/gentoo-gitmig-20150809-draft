@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3.ebuild,v 1.1 2010/06/25 20:26:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3.ebuild,v 1.2 2010/06/25 21:26:52 reavertm Exp $
 
 EAPI=2
 
@@ -50,7 +50,8 @@ PATCHES=(
 
 src_configure() {
 	MANDIR=/usr/share/Coin/man
-	append-cppflags -I/usr/include/freetype2
+	# Unforunately it links to static expat...
+	append-cppflags -I/usr/include/freetype2 -DUSE_SYSTEM_EXPAT
 	# Prefer link-time linking over dlopen
 	econf \
 		htmldir="/usr/share/doc/${PF}/html" \
