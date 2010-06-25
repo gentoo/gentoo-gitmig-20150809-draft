@@ -6,6 +6,14 @@
   <email>tanderson@gentoo.org</email>
   <name>Thomas Anderson</name>
 </maintainer>
+<maintainer>
+  <email>fauli@gentoo.org</email>
+  <name>Christian Faulhammer</name>
+</maintainer>
+<maintainer>
+  <email>mlangc@gmx.at</email>
+  <name>Matthias Langer (upstream)</name>
+</maintainer>
 <use>
   <flag name='libpaludis'>Do some dependency resolution by using a
     <pkg>sys-apps/paludis</pkg> interface</flag>
