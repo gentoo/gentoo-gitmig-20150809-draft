@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_tablet/kcm_tablet-1.2.ebuild,v 1.1 2010/03/01 11:28:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_tablet/kcm_tablet-1.2.ebuild,v 1.2 2010/06/25 11:50:33 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="de en_GB"
+KDE_MINIMAL="4.4"
 inherit kde4-base
 
 DESCRIPTION="KControl module for wacom tablets"
