@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3.ebuild,v 1.3 2010/06/25 21:53:04 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3.ebuild,v 1.4 2010/06/25 23:41:48 reavertm Exp $
 
 EAPI=2
 
-inherit eutils base flag-o-matic
+inherit flag-o-matic base
 
 MY_P=${P/c/C}
 S="${WORKDIR}/${MY_P}"
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 LICENSE="|| ( GPL-2 PEL )"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE="bzip2 debug doc javascript openal static-libs threads zlib"
+IUSE="bzip2 debug doc javascript openal simage static-libs threads zlib"
 
 RDEPEND="
 	dev-libs/expat
@@ -31,6 +31,7 @@ RDEPEND="
 	bzip2? ( app-arch/bzip2 )
 	javascript? ( dev-lang/spidermonkey )
 	openal? ( media-libs/openal )
+	simage? ( media-libs/simage )
 	zlib? ( sys-libs/zlib )
 "
 DEPEND="${RDEPEND}
@@ -59,6 +60,7 @@ src_configure() {
 		--disable-dl-freetype \
 		--disable-dl-libbzip2 \
 		--disable-dl-openal \
+		--disable-dl-simage \
 		--disable-dl-zlib \
 		--disable-dyld \
 		--disable-loadlibrary \
@@ -81,6 +83,7 @@ src_configure() {
 		$(use_with javascript spidermonkey) \
 		$(use_enable openal sound) \
 		$(use_with openal) \
+		$(use_with simage) \
 		$(use_enable static-libs static) \
 		$(use_enable threads threadsafe) \
 		$(use_with zlib)

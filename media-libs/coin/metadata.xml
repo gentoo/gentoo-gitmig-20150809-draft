@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>reavertm@gentoo.org</email>
+	<email>reavertm@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name="simage">Texture loading via <pkg>media-libs/simage</pkg> library</flag>
+</use>
 </pkgmetadata>
