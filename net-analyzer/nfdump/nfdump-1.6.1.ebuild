@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1.ebuild,v 1.4 2010/06/18 11:09:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.6.1.ebuild,v 1.5 2010/06/25 10:12:45 pva Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -38,7 +38,7 @@ src_configure() {
 	# --without-ftconf is not handled well #322201
 	econf \
 		$(use ftconv && echo "--with-ftconf --with-ftpath=/usr") \
-		$(use_enable nfprofile) \
+		$(use nfprofile && echo "--enable-nfprofile") \
 		$(use_enable sflow)
 	#	$(use_enable readpcap) \
 }
