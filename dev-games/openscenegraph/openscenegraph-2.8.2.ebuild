@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.9 2010/03/11 15:08:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.2.ebuild,v 1.10 2010/06/25 11:57:20 tupone Exp $
 
 EAPI=2
 inherit eutils versionator base cmake-utils
@@ -15,7 +15,7 @@ SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/${MY_P}/source/
 LICENSE="wxWinLL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="curl gif jpeg jpeg2k osgapps pdf png svg tiff truetype xine xrandr xulrunner"
+IUSE="curl gif jpeg jpeg2k osgapps pdf png svg tiff truetype xine xrandr"
 
 RDEPEND="virtual/opengl
 	virtual/glu
@@ -28,7 +28,6 @@ RDEPEND="virtual/opengl
 	x11-libs/libXext
 	xrandr? ( x11-libs/libXrandr )
 	curl? ( net-misc/curl )
-	xulrunner? ( net-libs/xulrunner:1.8 )
 	svg? ( gnome-base/librsvg )
 	jpeg2k? ( media-libs/jasper )
 	xine? ( media-libs/xine-lib )
@@ -49,7 +48,7 @@ PATCHES=(
 src_configure() {
 	mycmakeargs="
 		$(cmake-utils_use_build osgapps OSG_APPLICATIONS)
-		$(cmake-utils_use_enable xulrunner XUL)
+		-DENABLE_XUL=OFF
 		$(cmake-utils_use_enable pdf)
 		$(cmake-utils_use_enable xine)
 		$(cmake-utils_use_enable jpeg2k JPEG2K)
