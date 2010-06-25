@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.392 2010/06/24 06:01:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.393 2010/06/25 02:48:56 vapier Exp $
+
+  25 Jun 2010; Mike Frysinger <vapier@gentoo.org> binutils-2.20.1-r1.ebuild:
+  Mark ia64 stable #298571.
 
   24 Jun 2010; Jeroen Roovers <jer@gentoo.org> binutils-2.20.1-r1.ebuild:
   Stable for HPPA (bug #298571).
