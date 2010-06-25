@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.76 2010/06/22 12:26:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.77 2010/06/25 09:13:28 aballier Exp $
 
 EAPI="2"
 
@@ -82,7 +82,7 @@ RDEPEND="
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		ggi? ( media-libs/libggi )
 		gnome? ( gnome-base/gnome-vfs )
-		gnutls? ( >=net-libs/gnutls-1.7.4 )
+		gnutls? ( >=net-libs/gnutls-1.7.4 >=dev-libs/libgcrypt-1.2.0 )
 		id3tag? ( media-libs/libid3tag sys-libs/zlib )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1 >=sys-libs/libavc1394-0.5.3 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
@@ -185,6 +185,7 @@ pkg_setup() {
 
 	# Useflags we need to forcefuly enable
 	vlc_use_force remoteosd gcrypt
+	vlc_use_force gnutls gcrypt
 	vlc_use_force skins truetype
 	vlc_use_force skins qt4
 	vlc_use_force vlm stream
@@ -340,6 +341,7 @@ src_configure() {
 		$(vlc_use_enable_force skins qt4) \
 		$(vlc_use_enable_force skins freetype) \
 		$(vlc_use_enable_force remoteosd libgcrypt) \
+		$(vlc_use_enable_force gnutls libgcrypt) \
 		$(vlc_use_enable_force vaapi avcodec)
 }
 
