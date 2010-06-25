@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.71 2010/06/25 10:00:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.72 2010/06/25 10:07:03 jlec Exp $
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  -files/ming-0.2a-linking.patch, -files/ming-0.2a-make.patch,
+  -files/ming-0.4.x-libpng14.patch:
+  Cleaned uneeded patches
 
   25 Jun 2010; Justin Lecher <jlec@gentoo.org> -ming-0.4.0_rc2.ebuild:
   Cleaned uneeded version
