@@ -1,6 +1,19 @@
-# ChangeLog for net-misc/asterisk
+\# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.260 2010/06/17 20:56:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.261 2010/06/25 15:14:09 chainsaw Exp $
+
+*asterisk-1.6.2.9 (25 Jun 2010)
+
+  25 Jun 2010; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.1.18.ebuild,
+  -asterisk-1.6.1.19.ebuild, asterisk-1.6.1.20.ebuild,
+  -asterisk-1.6.2.6.ebuild, -asterisk-1.6.2.7.ebuild,
+  asterisk-1.6.2.8.ebuild, +asterisk-1.6.2.9.ebuild,
+  +files/1.6.2/asterisk-1.6.2.9-gsm-pic.patch:
+  New upstream version. A DTMF crasher has been fixed, several off-by-one
+  errors have been addressed. Also the build system has seen some
+  improvements. With thanks to Oliver Jacksch for a rebased patch, closes
+  bug #324657. Research by Jaco Kroon closes bug #325231 by Kerin Millar.
+  Cleaned up old ebuilds.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> asterisk-1.2.37.ebuild,
   asterisk-1.2.40.ebuild, asterisk-1.6.1.18.ebuild,

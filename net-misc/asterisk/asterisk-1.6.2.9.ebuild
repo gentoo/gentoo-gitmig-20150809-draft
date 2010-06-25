@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.19.ebuild,v 1.2 2010/06/17 20:56:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.9.ebuild,v 1.1 2010/06/25 15:14:09 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info
@@ -9,12 +9,12 @@ MY_P="${PN}-${PV/_/-}"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://downloads.digium.com/pub/telephony/asterisk/releases/${MY_P}.tar.gz"
+SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="alsa +caps curl dahdi debug freetds iconv jabber ldap keepsrc misdn newt +samples oss postgres radius snmp span speex ssl sqlite static vorbis"
+IUSE="alsa +caps curl dahdi debug freetds iconv jabber ldap lua keepsrc misdn newt +samples oss postgres radius snmp span speex ssl sqlite static vorbis"
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
@@ -28,6 +28,7 @@ RDEPEND="sys-libs/ncurses
 	iconv? ( virtual/libiconv )
 	jabber? ( dev-libs/iksemel )
 	ldap?	( net-nds/openldap )
+	lua? ( dev-lang/lua )
 	misdn? ( net-dialup/misdnuser )
 	newt? ( dev-libs/newt )
 	postgres? ( dev-db/postgresql-base )
@@ -47,8 +48,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
-	"${FILESDIR}/1.6.1/${PN}-1.6.1-var_rundir.patch"
-	"${FILESDIR}/1.6.1/${P}-gsm-pic.patch"
+	"${FILESDIR}/1.6.2/${P}-gsm-pic.patch"
+	"${FILESDIR}/1.6.2/${PN}-1.6.2.8-pri-missing-keyword.patch"
+	"${FILESDIR}/1.6.2/${PN}-1.6.2.8-inband-indications.patch"
 	"${FILESDIR}/1.6.1/${PN}-1.6.1-uclibc.patch"
 	"${FILESDIR}/1.6.1/${PN}-1.6.1.6-fxsks-hookstate.patch"
 	"${FILESDIR}/1.6.2/${PN}-1.6.2.2-nv-faxdetect.patch"
@@ -74,9 +76,9 @@ pkg_setup() {
 		ewarn "You are overriding ASTERISK_MODULES. We will assume you know what you are doing. There is no support for this option, try without if you see breakage."
 	fi
 	CONFIG_CHECK="~!NF_CONNTRACK_SIP"
-	local WARNING_NF_CONNTRACK_SIP="SIP (NAT) connection tracking is a module written for a single SIP client talking to a
-	remote server. It is not able to track multiple remote SIP clients registering with
-	a local server. Critical SIP packets may be dropped."
+	local WARNING_NF_CONNTRACK_SIP="SIP (NAT) connection tracking is enabled. Some users
+	have reported that this module dropped critical SIP packets in their deployments. You
+	may want to disable it if you see such problems."
 	check_extra_config
 
 	# parse modules list
@@ -128,6 +130,7 @@ src_configure() {
 		$(use_with freetds tds) \
 		$(use_with iconv) \
 		$(use_with jabber iksemel) \
+		$(use_with lua) \
 		$(use_with misdn isdnnet) \
 		$(use_with misdn suppserv) \
 		$(use_with misdn) \
@@ -213,8 +216,8 @@ src_install() {
 		emake DESTDIR="${D}" samples || die "emake samples failed"
 		for conffile in "${D}"etc/asterisk/*.*
 		do
-			fowners asterisk:asterisk $conffile
-			fperms 0660 $conffile
+			chown asterisk:asterisk $conffile
+			chmod 0660 $conffile
 		done
 		einfo "Sample files have been installed"
 	else
@@ -290,6 +293,11 @@ pkg_postinst() {
 	elog "#gentoo-voip @ irc.freenode.net"
 	echo
 	echo
+	elog "1.6.1 -> 1.6.2 changes that you may care about:"
+	elog "canreinvite -> directmedia (sip.conf)"
+	elog "extensive T.38 (fax) changes"
+	elog "http://svn.asterisk.org/svn/${PN}/tags/${PV}/UPGRADE.txt"
+	elog "or: bzless ${ROOT}usr/share/doc/${PF}/UPGRADE.txt.bz2"
 }
 
 pkg_config() {
