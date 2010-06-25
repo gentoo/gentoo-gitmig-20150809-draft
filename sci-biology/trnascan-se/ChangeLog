@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/trnascan-se
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.10 2009/08/05 18:45:47 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.11 2010/06/25 09:40:04 jlec Exp $
+
+*trnascan-se-1.23-r2 (25 Jun 2010)
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> +trnascan-se-1.23-r2.ebuild,
+  +files/trnascan-se-1.23-ldflags.patch:
+  Fixed test, #318641; multilib, LDFLAGS, PREFIX awareness
 
   05 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   trnascan-se-1.23-r1.ebuild, +files/trnascan-se-1.23-glibc-2.10.patch:
