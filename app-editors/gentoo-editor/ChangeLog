@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gentoo-editor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.13 2010/02/01 16:30:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gentoo-editor/ChangeLog,v 1.14 2010/06/25 08:40:08 aballier Exp $
+
+  25 Jun 2010; Alexis Ballier <aballier@gentoo.org> gentoo-editor-2.ebuild:
+  keyword ~sparc-fbsd
 
   01 Feb 2010; Markos Chandras <hwoarang@gentoo.org> gentoo-editor-2.ebuild:
   Stable on amd64 wrt bug #301313
