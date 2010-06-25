@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11702 2010/06/25 08:42:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11703 2010/06/25 10:52:33 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (25 Jun 2010)
+# Depends on old unslotted media-libs/ming which fails to build
+# Ignores build flags wrt bug 240820
+# Needs version bump wrt bug 272974, still using old ming
+# built_with_use cleanup, bug 286253
+# masked for removal in 30 days
+media-libs/ploticus
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2010)
 #  on behalf of QA team
