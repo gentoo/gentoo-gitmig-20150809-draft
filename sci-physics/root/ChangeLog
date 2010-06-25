@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.69 2010/06/25 17:12:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.70 2010/06/25 20:38:40 bicatali Exp $
+
+  25 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -root-5.22.00-r3.ebuild, -root-5.24.00-r1.ebuild, -root-5.26.00-r3.ebuild,
+  root-5.26.00-r4.ebuild, -files/root-5.26.00-nobyte-compile.patch:
+  Patch bump and removed useless gsl flag
 
 *root-5.26.00-r4 (25 Jun 2010)
 

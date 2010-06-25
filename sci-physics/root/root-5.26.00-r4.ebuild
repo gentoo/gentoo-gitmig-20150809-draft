@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.1 2010/06/25 17:12:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.2 2010/06/25 20:38:40 bicatali Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit versionator eutils qt4 elisp-common fdo-mime python toolchain-funcs
 DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4
-PATCH_PV=p04
+PATCH_PV=p05
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
@@ -26,7 +26,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
-IUSE="afs clarens doc emacs examples fftw geant4 gsl kerberos ldap
+IUSE="afs clarens doc emacs examples fftw geant4 kerberos ldap
 	+math mysql	odbc +opengl openmp oracle postgres pythia6 pythia8 python
 	+reflex	ruby qt4 ssl xft xml xinetd xrootd"
 
@@ -49,9 +49,9 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	emacs? ( virtual/emacs )
 	fftw? ( sci-libs/fftw:3.0 )
 	geant4? ( sci-physics/geant:4 )
-	gsl? ( >=sci-libs/gsl-1.8 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
+	math? ( >=sci-libs/gsl-1.8 )
 	mysql? ( virtual/mysql )
 	odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )
 	opengl? ( virtual/opengl virtual/glu )
@@ -104,11 +104,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-svn33855.patch
+	epatch "${WORKDIR}"/${P}-svn34137.patch
 	epatch "${WORKDIR}"/${P}-prop-ldflags.patch
 	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-configure-paths.patch
-	epatch "${FILESDIR}"/${P}-nobyte-compile.patch
+	epatch "${WORKDIR}"/${P}-nobyte-compile.patch
 
 	# use system cfortran
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
@@ -173,7 +173,7 @@ src_configure() {
 		$(use_enable geant4 g4root) \
 		$(use_enable kerberos krb5) \
 		$(use_enable ldap) \
-		$(use_enable gsl gsl-shared) \
+		$(use_enable math gsl-shared) \
 		$(use_enable math genvector) \
 		$(use_enable math mathmore) \
 		$(use_enable math minuit2) \
