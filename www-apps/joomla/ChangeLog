@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.38 2010/06/03 12:46:47 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.39 2010/06/25 21:25:19 fauli Exp $
+
+  25 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  -joomla-1.5.17.ebuild:
+  clean up
 
 *joomla-1.5.18 (03 Jun 2010)
 
