@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/blitz
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.32 2009/02/05 22:00:56 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.33 2010/06/25 13:13:44 jlec Exp $
+
+*blitz-0.9-r3 (25 Jun 2010)
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> +blitz-0.9-r3.ebuild:
+  Respecting LDFLAGS
 
   05 Feb 2009; Ulrich Mueller <ulm@gentoo.org> blitz-0.9.ebuild:
   Remove virtual/tetex from comment in old version, in order to avoid false
