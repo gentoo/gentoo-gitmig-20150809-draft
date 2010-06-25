@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.77 2010/06/02 07:09:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.78 2010/06/25 12:11:23 jlec Exp $
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> qwt-5.2.0.ebuild,
+  qwt-5.2.1.ebuild:
+  Blocking media-libs/coin when USE=doc
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove caleb from metadata.xml (#317071)
