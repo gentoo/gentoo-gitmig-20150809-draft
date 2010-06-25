@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.78 2010/06/25 09:18:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.79 2010/06/25 11:30:50 aballier Exp $
 
 EAPI="2"
 
@@ -67,16 +67,14 @@ RDEPEND="
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		cdda? (	cddb? ( >=media-libs/libcddb-1.2.0 ) )
 		dbus? ( >=sys-apps/dbus-1.0.2 )
-		dc1394? ( >=sys-libs/libraw1394-2.0.1
-			>=media-libs/libdc1394-2.0.2 )
+		dc1394? ( >=sys-libs/libraw1394-2.0.1 >=media-libs/libdc1394-2.0.2 )
 		dirac? ( >=media-video/dirac-0.10.0 )
 		directfb? ( dev-libs/DirectFB sys-libs/zlib )
 		dts? ( media-libs/libdca )
 		dvd? (	media-libs/libdvdread >=media-libs/libdvdnav-0.1.9 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8 )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20090201 )
-		flac? ( media-libs/libogg
-			>=media-libs/flac-1.1.2 )
+		flac? ( media-libs/libogg >=media-libs/flac-1.1.2 )
 		fluidsynth? ( media-sound/fluidsynth )
 		fontconfig? ( media-libs/fontconfig )
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
@@ -95,9 +93,7 @@ RDEPEND="
 		lirc? ( app-misc/lirc )
 		live? ( >=media-plugins/live-2008.07.06 )
 		lua? ( >=dev-lang/lua-5.1 )
-		matroska? (
-			>=dev-libs/libebml-0.7.6
-			>=media-libs/libmatroska-0.8.0 )
+		matroska? (	>=dev-libs/libebml-0.7.6 >=media-libs/libmatroska-0.8.0 )
 		modplug? ( >=media-libs/libmodplug-0.8 )
 		mp3? ( media-libs/libmad )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
@@ -113,8 +109,7 @@ RDEPEND="
 			!X? ( >=media-sound/pulseaudio-0.9.11[-X] ) )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libX11 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
-		samba? ( || ( >=net-fs/samba-3.4.6[smbclient]
-			<net-fs/samba-3.4 ) )
+		samba? ( || ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.4 ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.6 )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
@@ -130,8 +125,7 @@ RDEPEND="
 		svga? ( media-libs/svgalib )
 		taglib? ( >=media-libs/taglib-1.5 sys-libs/zlib )
 		theora? ( >=media-libs/libtheora-1.0_beta3 )
-		truetype? ( media-libs/freetype
-			media-fonts/dejavu )
+		truetype? ( media-libs/freetype media-fonts/dejavu )
 		twolame? ( media-sound/twolame )
 		udev? ( >=sys-fs/udev-142 )
 		upnp? ( net-libs/libupnp )
