@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.748 2010/06/13 10:07:24 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.749 2010/06/25 11:51:10 aballier Exp $
+
+  25 Jun 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  disable faac with use bindist, by Nikoli <nikoli@lavabit.com>, bug #323353
 
   13 Jun 2010; Dror Levin <spatz@gentoo.org>
   mplayer-1.0_rc4_p20100612.ebuild:
