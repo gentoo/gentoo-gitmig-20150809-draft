@@ -16,7 +16,4 @@
     field, raytracing, scan-line rendering, occlusion culling, global
     illumination, caustics ...
   </longdescription>
-  <use>
-    <flag name="static-libs">Compile static archives</flag>
-  </use>
 </pkgmetadata>
