@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.749 2010/06/25 11:51:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.750 2010/06/25 11:53:40 aballier Exp $
+
+  25 Jun 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  propagate enca useflag to libass, by Alexey Shildyakov
+  <ashl1future@gmail.com>, bug #321863
 
   25 Jun 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   disable faac with use bindist, by Nikoli <nikoli@lavabit.com>, bug #323353

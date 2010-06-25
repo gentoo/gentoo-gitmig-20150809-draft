@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.66 2010/06/25 11:51:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.67 2010/06/25 11:53:40 aballier Exp $
 
 EAPI="2"
 
@@ -94,7 +94,7 @@ RDEPEND+="
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	amr? ( !bindist? ( media-libs/opencore-amr ) )
-	ass? ( ${FONT_RDEPS} media-libs/libass )
+	ass? ( ${FONT_RDEPS} media-libs/libass[enca?] )
 	bidi? ( dev-libs/fribidi )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
