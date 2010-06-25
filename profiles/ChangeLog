@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4336 2010/06/25 08:42:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4337 2010/06/25 09:19:06 zorry Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jun 2010; Magnus Granberg <zorry@gentoo.org> hardened/linux/package.mask:
+  Unmask gcc-4.4.X for hardened
 
   25 Jun 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
   lift mask for app-misc/alexandria, works
