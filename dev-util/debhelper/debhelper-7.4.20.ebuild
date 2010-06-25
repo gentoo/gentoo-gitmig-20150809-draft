@@ -1,28 +1,30 @@
-# Copyright 2008-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.0.17.ebuild,v 1.1 2008/10/20 20:19:00 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.4.20.ebuild,v 1.1 2010/06/25 04:32:41 yvasilev Exp $
 
 inherit eutils
 
 DESCRIPTION="Collection of programs that can be used to automate common tasks in debian/rules"
 HOMEPAGE="http://packages.qa.debian.org/d/debhelper.html http://kitenet.net/~joey/code/debhelper.html"
-SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/main/${PV}/+download/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
-IUSE="nls linguas_es linguas_fr"
+IUSE="nls linguas_es linguas_fr test"
 
 RDEPEND="app-arch/dpkg
 	dev-perl/TimeDate
-	dev-lang/perl"
+	virtual/perl-Getopt-Long
+	>=dev-lang/perl-5.10"
 
 DEPEND="${RDEPEND}
-	nls? ( >=app-text/po4a-0.24 )"
+	nls? ( >=app-text/po4a-0.24 )
+	test? ( dev-perl/Test-Pod )"
 
 S="${WORKDIR}"/${PN}
 
-PATCH_VER=7.0.9
+PATCH_VER=7.4.13
 
 src_unpack() {
 	unpack ${A}
