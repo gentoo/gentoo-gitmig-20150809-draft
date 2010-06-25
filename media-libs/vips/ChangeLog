@@ -1,11 +1,12 @@
 # ChangeLog for media-libs/vips
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.27 2010/06/25 09:20:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.28 2010/06/25 09:53:32 pva Exp $
 
 *vips-7.22.1 (25 Jun 2010)
 
-  25 Jun 2010; Peter Volkov <pva@gentoo.org> +vips-7.22.1.ebuild:
-  Version bump.
+  25 Jun 2010; Peter Volkov <pva@gentoo.org> +vips-7.22.1.ebuild, metadata.xml:
+  Version bump. Improved python related code, #313549, thank Arfrever Frehtes
+  Taifersar Arahesis for report. Took maintaining.
 
   21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> vips-7.20.7.ebuild:
   Restrict media-libs/lcms depend to old version.
