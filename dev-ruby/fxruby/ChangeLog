@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.83 2010/05/22 15:16:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.84 2010/06/25 09:37:17 graaff Exp $
+
+*fxruby-1.6.20 (25 Jun 2010)
+
+  25 Jun 2010; Hans de Graaff <graaff@gentoo.org> +fxruby-1.6.20.ebuild:
+  Version bump. Convert to ruby-fakegem. Restrict tests for now since they
+  fail with memory corruption and then hang. Drop alpha keyword due to new
+  dev-ruby/hoe dependency, bug 325465.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   fxruby-1.6.18-r1.ebuild, fxruby-1.6.19.ebuild:
