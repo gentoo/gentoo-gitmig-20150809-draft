@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1.ebuild,v 1.13 2010/06/25 01:57:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1.ebuild,v 1.14 2010/06/25 02:00:18 mr_bones_ Exp $
 
 EAPI=2
-inherit libtool
+inherit multilib libtool
 
 DESCRIPTION="Functions for accessing ISO-IEC:14496-1:2001 MPEG-4 standard"
 HOMEPAGE="http://code.google.com/p/mp4v2"
