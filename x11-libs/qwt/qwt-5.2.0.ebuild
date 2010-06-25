@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.0.ebuild,v 1.9 2010/06/25 12:11:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.0.ebuild,v 1.10 2010/06/25 20:31:15 reavertm Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -15,7 +15,7 @@ SLOT="5"
 IUSE="doc examples svg"
 
 DEPEND="x11-libs/qt-gui:4
-	doc? ( !media-libs/coin )
+	doc? ( !<media-libs/coin-3.1.3[doc] )
 	svg? ( x11-libs/qt-svg:4 )"
 RDEPEND="${DEPEND}"
 
