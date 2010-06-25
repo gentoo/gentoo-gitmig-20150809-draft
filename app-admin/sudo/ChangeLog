@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.229 2010/06/25 09:25:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.230 2010/06/25 09:28:09 flameeyes Exp $
+
+  25 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -sudo-1.7.2_p2-r1.ebuild:
+  Remove the old vulnerable ebuild.
 
   25 Jun 2010; Peter Volkov <pva@gentoo.org> sudo-1.7.2_p7.ebuild,
   sudo-1.7.3_beta4.ebuild:
