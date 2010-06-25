@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.7 2010/06/24 21:39:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.8 2010/06/25 13:54:03 fauli Exp $
+
+  25 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  uncrustify-0.55.ebuild:
+  stable x86, bug 323221
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> uncrustify-0.55.ebuild:
   stable amd64, bug 323221
