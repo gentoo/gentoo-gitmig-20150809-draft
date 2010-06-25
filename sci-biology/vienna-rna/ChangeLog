@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.30 2010/04/03 21:41:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.31 2010/06/25 09:22:36 jlec Exp $
+
+*vienna-rna-1.8.4-r1 (25 Jun 2010)
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> -vienna-rna-1.7.2.ebuild,
+  -vienna-rna-1.8.3.ebuild, +vienna-rna-1.8.4-r1.ebuild,
+  +files/vienna-rna-1.8.4-bindir.patch:
+  Install ELFs in correct place, #300012
 
   03 Apr 2010; Justin Lecher <jlec@gentoo.org> vienna-rna-1.8.4.ebuild,
   +files/vienna-rna-1.8.4-jobserver-fix.patch:
