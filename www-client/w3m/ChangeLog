@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.55 2010/06/25 06:56:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.56 2010/06/25 15:15:58 angelos Exp $
+
+  25 Jun 2010; Christoph Mende <angelos@gentoo.org> w3m-0.5.2-r4.ebuild:
+  Stable on amd64 wrt bug #325431
 
   25 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> w3m-0.5.2-r4.ebuild:
   x86 stable wrt bug #325431
