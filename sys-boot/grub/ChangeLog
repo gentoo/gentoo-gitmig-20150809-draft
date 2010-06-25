@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.134 2010/05/08 17:21:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.135 2010/06/25 06:19:58 robbat2 Exp $
+
+*grub-0.97-r10 (25 Jun 2010)
+
+  25 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> +grub-0.97-r10.ebuild:
+  New spin of 0.97 patchset fixes bugs: #160731 - DHCP vendorclass ;
+  #200505, #231039 - garbled text with missing gfx ; #230905 - chainloading
+  syslinux on logical partitions ; #259613 - KVM virtio device support ;
+  #281246, #305283 - PaX/SSP/PIE support.
 
   08 May 2010; Mike Frysinger <vapier@gentoo.org> grub-1.98.ebuild,
   grub-9999.ebuild:
