@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.2.ebuild,v 1.1 2009/12/10 17:20:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.2.ebuild,v 1.2 2010/06/25 12:15:47 jlec Exp $
 
 EAPI=2
 
@@ -18,22 +18,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc java javascript openal"
 
-RDEPEND="media-libs/fontconfig
-		media-libs/freetype
-		virtual/opengl
-		virtual/glu
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXext
-		java? ( virtual/jdk )
-		javascript? ( dev-lang/spidermonkey )
-		openal? ( media-libs/openal )"
+RDEPEND="
+	!x11-libs/qwt[doc]
+	media-libs/fontconfig
+	media-libs/freetype
+	virtual/opengl
+	virtual/glu
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXext
+	java? ( virtual/jdk )
+	javascript? ( dev-lang/spidermonkey )
+	openal? ( media-libs/openal )"
 
 DEPEND="${RDEPEND}
-		doc? ( app-doc/doxygen )
-		dev-util/pkgconfig"
+	doc? ( app-doc/doxygen )
+	dev-util/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.0-javascript.patch

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/coin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.29 2009/12/10 17:25:16 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.30 2010/06/25 12:15:47 jlec Exp $
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> coin-3.1.0.ebuild,
+  coin-3.1.2.ebuild:
+  Blocking x11-libs/qwt[doc], #312043
 
 *coin-3.1.2 (10 Dec 2009)
 
