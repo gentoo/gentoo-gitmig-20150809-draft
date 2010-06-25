@@ -1,4 +1,4 @@
-/var/log/chrony/*.log
+/var/log/chrony/*.log {
 	sharedscripts
 	postrotate
                 PASSWORD=`awk '$1 ~ /^1$/ {print $2; exit}' /etc/chrony/chrony.keys`

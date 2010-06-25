@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.58 2010/06/10 02:50:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.59 2010/06/25 09:50:57 klausman Exp $
+
+  25 Jun 2010; Tobias Klausmann <klausman@gentoo.org>
+  files/chrony.logrotate:
+  Fixed missing { in logrotate script
 
   10 Jun 2010; Jeroen Roovers <jer@gentoo.org> chrony-1.24-r2.ebuild,
   metadata.xml:
