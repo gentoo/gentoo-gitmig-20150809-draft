@@ -1,11 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-909.ebuild,v 1.2 2010/01/01 21:41:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-1006.ebuild,v 1.1 2010/06/25 09:09:03 jlec Exp $
+
+EAPI="3"
+
+MY_PV=${PV#1}
 
 DESCRIPTION="A restriction enzyme database"
 LICENSE="public-domain"
 HOMEPAGE="http://rebase.neb.com"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 SLOT="0"
 # Minimal build keeps only the indexed files (if applicable) and the
@@ -13,15 +17,16 @@ SLOT="0"
 IUSE="emboss minimal"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 
-DEPEND="emboss? ( >=sci-biology/emboss-5.0.0 )"
-RDEPEND="${DEPEND}"
+RDEPEND="emboss? ( >=sci-biology/emboss-5.0.0 )"
+DEPEND="${RDEPEND}
+	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 
 src_compile() {
 	if use emboss; then
 		echo; einfo "Indexing Rebase for usage with EMBOSS."
 		mkdir REBASE
-		EMBOSS_DATA="." rebaseextract -auto -infile withrefm.${PV} \
-				-protofile proto.${PV} -equivalences \
+		EMBOSS_DATA="." rebaseextract -auto -infile withrefm.${MY_PV} \
+				-protofile proto.${MY_PV} -equivalences \
 				|| die "Indexing Rebase failed."
 		echo
 	fi
@@ -30,7 +35,7 @@ src_compile() {
 src_install() {
 	if ! use minimal; then
 		insinto /usr/share/${PN}
-		doins withrefm.${PV} proto.${PV} || die \
+		doins withrefm.${MY_PV} proto.${MY_PV} || die \
 				"Failed to install raw database."
 	fi
 	newdoc REBASE.DOC README || die "Failed to install documentation."
