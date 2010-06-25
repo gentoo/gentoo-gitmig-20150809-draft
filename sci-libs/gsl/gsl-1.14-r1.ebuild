@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.1 2010/06/25 16:03:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.2 2010/06/25 17:21:17 bicatali Exp $
 
 EAPI="3"
 
@@ -51,7 +51,6 @@ src_configure() {
 		export CBLAS_CFLAGS="$(pkg-config --cflags cblas)"
 	fi
 	econf \
-		--with-pic \
 		--enable-shared \
 		$(use_with cblas) \
 		$(use_enable static-libs static)
