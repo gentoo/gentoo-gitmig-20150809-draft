@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.0.10.ebuild,v 1.1 2010/02/26 21:41:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.0.10.ebuild,v 1.2 2010/06/25 14:14:56 nirbheek Exp $
 
 EAPI="2"
 
@@ -10,11 +10,11 @@ DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 SLOT="1.0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc +gtk introspection +opengl"
+IUSE="debug doc +gtk +introspection +opengl"
 
 RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/cairo-1.4
-	>=x11-libs/pango-1.20
+	>=x11-libs/pango-1.20[introspection?]
 
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	opengl? (
@@ -36,9 +36,7 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-1.11
 		>=app-text/docbook-sgml-utils-0.6.14[jadetex]
 		app-text/xmlto )
-	introspection? (
-		>=dev-libs/gobject-introspection-0.6.4
-		>=dev-libs/gir-repository-0.6.3[pango] )"
+	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )"
 
 src_configure() {
 	local myconf=""

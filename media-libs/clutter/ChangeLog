@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.1 2010/02/26 21:41:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.2 2010/06/25 14:14:56 nirbheek Exp $
+
+*clutter-1.2.10 (25 Jun 2010)
+
+  25 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> clutter-1.0.10.ebuild,
+  +clutter-1.2.10.ebuild:
+  Bump to 1.2.10 (no more SDL, uses external json-glib, API/ABI compatible
+  with 1.0.10, etc.), fix introspection deps for 1.0.10
 
 *clutter-1.0.10 (26 Feb 2010)
 
