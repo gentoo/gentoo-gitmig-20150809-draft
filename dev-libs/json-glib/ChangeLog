@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/json-glib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.5 2009/11/02 20:19:10 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.6 2010/06/25 14:12:14 nirbheek Exp $
+
+*json-glib-0.10.2 (25 Jun 2010)
+
+  25 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -json-glib-0.6.2.ebuild, -files/json-glib-0.6.2-fixtests.patch,
+  +json-glib-0.10.2.ebuild, metadata.xml:
+  Bump to 0.10.2, add +introspection support, remove old+unused 0.6.2
+  version
 
 *json-glib-0.8.2 (02 Nov 2009)
 
