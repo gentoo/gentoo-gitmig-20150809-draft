@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.76 2010/06/18 13:11:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.77 2010/06/25 17:21:03 robbat2 Exp $
+
+  25 Jun 2010; Robin H. Johnson <robbat2@gentoo.org>
+  files/nut.powerfail.initd:
+  Bug #324609: more BL1 compat.
 
   18 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org> Manifest:
   Remove .orig file from Manifest (it's not in CVS, likely caused by a fuzzy
