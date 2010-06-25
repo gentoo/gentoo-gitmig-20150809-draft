@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.2 2010/06/18 09:12:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.3 2010/06/25 06:52:43 jlec Exp $
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> memphis-0.2.2.ebuild:
+  Bumped automake dep to 1.11, 324933
 
   18 Jun 2010; Justin Lecher <jlec@gentoo.org> memphis-0.2.2.ebuild,
   metadata.xml:
