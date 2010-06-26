@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r5.ebuild,v 1.1 2010/06/24 18:10:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r5.ebuild,v 1.2 2010/06/26 07:28:40 jlec Exp $
 
 EAPI="3"
 
@@ -56,6 +56,9 @@ src_prepare() {
 src_configure() {
 	# required with gcc-4.4 and code turned on by --with-mt
 	export CPPFLAGS="${CPPFLAGS} -fpermissive"
+
+	# I add this until the as-needed fix is in the tree
+	append-ldflags $(no-as-needed)
 
 	# econf fails
 	# --with-bin-release and --without-ftds are workarounds for build system bugs
