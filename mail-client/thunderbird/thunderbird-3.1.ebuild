@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1_rc2-r1.ebuild,v 1.2 2010/06/21 11:37:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.ebuild,v 1.1 2010/06/26 04:48:48 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -8,9 +8,9 @@ WANT_AUTOCONF="2.1"
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools
 
 # This list can be updated using get_langs.sh from the mozilla overlay
-LANGS="af ar be bg bn-BD ca cs da de el en en-GB en-US en-US es-AR es-ES et eu
-fi fr fy-NL ga-IE he hu id is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro
-ru si sk sl sq sv-SE tr uk zh-CN zh-TW"
+LANGS="af ar be bg bn-BD ca cs da de el en en-GB en-US es-AR es-ES et eu fi fr
+fy-NL ga-IE he hu id is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru si
+sk sl sq sv-SE tr uk zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 
 MY_PV="${PV/_rc/rc}"
