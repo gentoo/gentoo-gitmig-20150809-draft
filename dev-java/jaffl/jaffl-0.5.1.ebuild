@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.5.1.ebuild,v 1.1 2010/06/03 11:24:59 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.5.1.ebuild,v 1.2 2010/06/26 15:06:13 betelgeuse Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ DEPEND=">=virtual/jdk-1.5
 	test? (
 		dev-java/junit:4
 		dev-java/ant-junit4:0
+		dev-java/hamcrest-core:0
 	)"
 
 src_unpack() {
@@ -66,8 +67,8 @@ src_install() {
 }
 
 src_test() {
-	java-pkg_jar-from --build-only --into lib/junit_4 junit-4 junit.jar junit-4.1.jar
 	local paths="$(java-config -di jnr-x86asm,jffi-0.4):${S}/build"
 	ANT_TASKS="ant-junit4 ant-nodeps" eant test \
-		-Drun.jvmargs="-Djava.library.path=${paths}" ${EANT_EXTRA_ARGS}
+		-Drun.jvmargs="-Djava.library.path=${paths}" \
+		-Dlibs.junit_4.classpath="$(java-pkg_getjars junit-4,hamcrest-core)" ${EANT_EXTRA_ARGS}
 }
