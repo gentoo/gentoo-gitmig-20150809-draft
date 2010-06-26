@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.23.1-r1.ebuild,v 1.1 2010/06/26 10:46:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.23.1-r1.ebuild,v 1.2 2010/06/26 15:46:38 arfrever Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ SRC_URI="
 LICENSE="as-is"
 SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="debug doc extensions +fts3 icu +readline secure-delete soundex tcl +threadsafe test unlock-notify"
+IUSE="debug doc extensions +fts3 icu +readline secure-delete soundex tcl test +threadsafe unlock-notify"
 
 RDEPEND="icu? ( dev-libs/icu )
 	readline? ( sys-libs/readline )
@@ -88,10 +88,8 @@ src_configure() {
 		append-cppflags -DNDEBUG
 	fi
 
-	# Needed for >=net-libs/xulrunner-1.9.3,
-	# >=www-client/mozilla-firefox-3.6_alpha6 and
-	# >=www-client/seamonkey-2.1_alpha2
-	if use unlock-notify ; then
+	# Enable unlock notification
+	if use unlock-notify; then
 		append-cppflags -DSQLITE_ENABLE_UNLOCK_NOTIFY
 	fi
 
