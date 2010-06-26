@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.4.ebuild,v 1.1 2010/03/05 19:24:41 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.4.ebuild,v 1.2 2010/06/26 07:49:08 ssuominen Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ CDEPEND="
 	dev-python/pygtk:2
 	media-libs/xine-lib
 	>=net-libs/rb_libtorrent-0.14.1[python]
-	|| ( net-libs/xulrunner:1.9 net-libs/xulrunner:1.8 )
+	net-libs/xulrunner:1.9
 	x11-libs/gtk+:2
 	x11-libs/libX11"
 RDEPEND="${CDEPEND}
