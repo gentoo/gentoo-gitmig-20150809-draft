@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.153 2010/06/23 20:50:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.154 2010/06/26 01:47:49 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Mask clutter-gst introspection till gstreamer and gst-plugins-base get
+  introspection support
 
   23 Jun 2010; Jonathan Callen <abcd@gentoo.org> use.mask:
   Mask gtk3 USE flag

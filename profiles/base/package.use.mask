@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.142 2010/06/22 11:11:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.143 2010/06/26 01:47:49 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
+# Mask till gstreamer and gst-plugins-base get introspection support
+media-libs/clutter-gst introspection
 
 # Tomas Touceda <chiiph@gentoo.org> (13 Apr 2010)
 # Masked because libsvm module is broken with this release on every arch.
