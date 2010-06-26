@@ -3,8 +3,6 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>tommy@gentoo.org</email>
-		<name>Thomas Sachau</name>
-		<description>Previous proxy committer, maintaining user left, feel free to take over</description>
+		<email>reavertm@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>

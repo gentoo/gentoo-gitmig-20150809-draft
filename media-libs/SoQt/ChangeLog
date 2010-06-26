@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.29 2010/04/04 11:45:56 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.30 2010/06/26 14:13:54 reavertm Exp $
+
+*SoQt-1.5.0-r1 (26 Jun 2010)
+
+  26 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> -SoQt-1.5.0.ebuild,
+  +SoQt-1.5.0-r1.ebuild, metadata.xml:
+  Install within coin include dir, add static-libs, debug support, .la files
+  removal, take over maintenance
 
 *SoQt-1.5.0 (04 Apr 2010)
 
@@ -99,11 +106,11 @@
   Version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *SoQt-20010601-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
