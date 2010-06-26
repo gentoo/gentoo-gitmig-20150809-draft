@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.42 2010/01/12 20:09:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.43 2010/06/26 11:50:13 jlec Exp $
+
+*geos-3.2.0-r1 (26 Jun 2010)
+
+  26 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/3.2.0-multipy.patch,
+  geos-3.1.1.ebuild, geos-3.2.0.ebuild, +geos-3.2.0-r1.ebuild:
+  Fix for Python ABIs, #316221; corrected HOMEPAGE
 
   12 Jan 2010; Sébastien Fabbro <bicatali@gentoo.org> geos-3.2.0.ebuild:
   Fixed for strict amd64

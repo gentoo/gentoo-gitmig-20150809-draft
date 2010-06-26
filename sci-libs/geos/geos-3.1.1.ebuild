@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.1.1.ebuild,v 1.8 2010/01/07 02:50:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.1.1.ebuild,v 1.9 2010/06/26 11:50:13 jlec Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="Geometry engine library for Geographic Information Systems"
-HOMEPAGE="http://geos.refractions.net"
+HOMEPAGE="http://trac.osgeo.org/geos/"
 SRC_URI="http://download.osgeo.org/geos/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
