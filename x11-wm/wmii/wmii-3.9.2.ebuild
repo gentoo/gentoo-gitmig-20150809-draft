@@ -1,16 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.ebuild,v 1.4 2010/06/22 15:10:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2.ebuild,v 1.1 2010/06/26 14:01:17 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic multilib
 
 MY_P=wmii+ixp-${PV}
-PVER=4
 
 DESCRIPTION="A dynamic window manager for X11"
 HOMEPAGE="http://wmii.suckless.org/"
-SRC_URI="http://dl.suckless.org/wmii/${MY_P}-${PVER}.tbz"
+SRC_URI="http://dl.suckless.org/wmii/${MY_P}.tbz"
 
 LICENSE="MIT"
 SLOT="0"
