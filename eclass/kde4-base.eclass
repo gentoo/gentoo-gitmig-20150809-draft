@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.64 2010/06/26 01:33:21 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.65 2010/06/26 16:02:18 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -75,17 +75,29 @@ case ${KDEBASE} in
 		;;
 	kdevelop)
 		if [[ ${BUILD_TYPE} = live ]]; then
-			KDEVELOP_VERSION="9999"
-			KDEVPLATFORM_VERSION="9999"
+			# @ECLASS-VARIABLE: KDEVELOP_VERSION
+			# @DESCRIPTION:
+			# Specifies KDevelop version. Default is 4.0.0 for tagged packages and 9999 for live packages.
+			# Applies to KDEBASE=kdevelop only.
+			KDEVELOP_VERSION="${KDEVELOP_VERSION:-9999}"
+			# @ECLASS-VARIABLE: KDEVPLATFORM_VERSION
+			# @DESCRIPTION:
+			# Specifies KDevplatform version. Default is 1.0.0 for tagged packages and 9999 for live packages.
+			# Applies to KDEBASE=kdevelop only.
+			KDEVPLATFORM_VERSION="${KDEVPLATFORM_VERSION:-9999}"
 		else
 			case ${PN} in
 				kdevelop|quanta)
 					KDEVELOP_VERSION=${PV}
 					KDEVPLATFORM_VERSION="$(($(get_major_version)-3)).$(get_after_major_version)"
 					;;
-				*)
+				kdevplatform)
 					KDEVELOP_VERSION="$(($(get_major_version)+3)).$(get_after_major_version)"
 					KDEVPLATFORM_VERSION=${PV}
+					;;
+				*)
+					KDEVELOP_VERSION="${KDEVELOP_VERSION:-4.0.0}"
+					KDEVPLATFORM_VERSION="${KDEVPLATFORM_VERSION:-1.0.0}"
 			esac
 		fi
 		SLOT="4"
@@ -259,6 +271,7 @@ esac
 unset cppuintdepend
 
 # KDE dependencies
+# Qt accessibility classes are needed in various places, bug 325461
 kdecommondepend="
 	>=x11-libs/qt-core-${QT_MINIMAL}:4[qt3support,ssl]
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4[accessibility,dbus]
@@ -288,9 +301,19 @@ if [[ ${PN} != kdelibs ]]; then
 		"
 		if [[ ${KDEBASE} = kdevelop ]]; then
 			if [[ ${PN} != kdevplatform ]]; then
-				kdecommondepend+="
-					>=dev-util/kdevplatform-${KDEVPLATFORM_VERSION}
-				"
+				# @ECLASS-VARIABLE: KDEVPLATFORM_REQUIRED
+				# @DESCRIPTION:
+				# Specifies whether kdevplatform is required. Possible values are 'always' (default) and 'never'.
+				# Applies to KDEBASE=kdevelop only.
+				KDEVPLATFORM_REQUIRED="${KDEVPLATFORM_REQUIRED:-always}"
+				case ${KDEVPLATFORM_REQUIRED} in
+					always)
+						kdecommondepend+="
+							>=dev-util/kdevplatform-${KDEVPLATFORM_VERSION}
+						"
+						;;
+					*) ;;
+				esac
 			fi
 		fi
 	fi
