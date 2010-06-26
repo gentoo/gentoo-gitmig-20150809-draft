@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.303.ebuild,v 1.3 2010/06/20 17:40:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.303.ebuild,v 1.4 2010/06/26 17:07:34 nixnut Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linux-france.org/prj/imapsync/dist/${P}.tgz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
