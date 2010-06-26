@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/tidy_table
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.7 2010/05/22 16:04:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.8 2010/06/26 09:55:12 graaff Exp $
+
+*tidy_table-0.0.5-r2 (26 Jun 2010)
+
+  26 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  tidy_table-0.0.5-r1.ebuild, +tidy_table-0.0.5-r2.ebuild:
+  Bump revision to provide a stabilization path for dev-ruby/sparklines,
+  #321217.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   tidy_table-0.0.5-r1.ebuild:
