@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ucarp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.15 2010/03/06 20:06:06 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ChangeLog,v 1.16 2010/06/26 19:29:15 xarthisius Exp $
+
+*ucarp-1.5.2 (26 Jun 2010)
+
+  26 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> ucarp-1.2.ebuild,
+  ucarp-1.3.ebuild, +ucarp-1.5.2.ebuild:
+  Version bump wrt bug 307167. Thanks to Terra
+  <gentoo.org@tech.FutureQuest.net> for reporting. Minor syntax cleaning.
 
   06 Mar 2010; Sebastian Pipping <sping@gentoo.org> metadata.xml:
   Fix metadata.xml (bug #307209)
