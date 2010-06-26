@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.82 2010/05/11 10:02:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.83 2010/06/26 16:28:32 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  gnustep-gui-0.18.0.ebuild:
+  Stable on amd64 wrt bug #325577
 
   11 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-gui-0.18.0.ebuild:
