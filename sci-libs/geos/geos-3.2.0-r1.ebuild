@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0-r1.ebuild,v 1.2 2010/06/26 15:33:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0-r1.ebuild,v 1.3 2010/06/26 18:11:29 xarthisius Exp $
 
 EAPI=2
 
@@ -32,7 +32,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-multipy.patch
+	epatch "${FILESDIR}"/${PV}-multipy.patch \
+		"${FILESDIR}"/${PV}-swig2.0.patch
 	eautoreconf
 	echo "#!/bin/bash" > py-compile
 }
