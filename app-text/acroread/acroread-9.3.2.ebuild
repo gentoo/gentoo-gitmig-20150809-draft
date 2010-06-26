@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.3.2.ebuild,v 1.3 2010/05/31 19:45:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.3.2.ebuild,v 1.4 2010/06/26 14:21:00 ssuominen Exp $
 
 inherit eutils gnome2-utils nsplugins
 
@@ -36,14 +36,9 @@ RDEPEND="media-libs/fontconfig
 	x86? ( >=x11-libs/gtk+-2.0
 			ldap? ( net-nds/openldap )
 			!minimal? ( || ( net-libs/xulrunner
-						net-libs/xulrunner-bin
 						www-client/mozilla-firefox
-						www-client/seamonkey
-						www-client/seamonkey-bin ) ) )
-	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.4.2
-			>=app-emulation/emul-linux-x86-gtklibs-2.0
-			!minimal? ( || ( net-libs/xulrunner-bin
-						www-client/seamonkey-bin ) ) )"
+						www-client/seamonkey ) ) )
+	amd64? ( app-emulation/emul-linux-x86-gtklibs )"
 
 QA_EXECSTACK="opt/Adobe/Reader9/Reader/intellinux/bin/acroread
 	opt/Adobe/Reader9/Reader/intellinux/lib/libauthplay.so.0.0.0
@@ -189,16 +184,6 @@ src_install() {
 	if ! use minimal ; then
 		if use x86 ; then
 			for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox ; do
-				if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
-					echo "MOZILLA_COMP_PATH=${lib}" >> "${D}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
-					elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
-					elog "your system in ${lib}, and configured in ${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config."
-					break # don't search any more libraries
-				fi
-			done
-		fi
-		if use amd64 ; then
-			for lib in /opt/seamonkey ; do
 				if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
 					echo "MOZILLA_COMP_PATH=${lib}" >> "${D}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
 					elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
