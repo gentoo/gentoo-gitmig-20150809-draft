@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/coin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.34 2010/06/25 23:41:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.35 2010/06/26 14:26:12 reavertm Exp $
+
+*coin-3.1.3-r1 (26 Jun 2010)
+
+  26 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> -coin-3.1.3.ebuild,
+  +coin-3.1.3-r1.ebuild:
+  Do not install manpages (just htmldocs), revbump for previous changes
 
   25 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> coin-3.1.3.ebuild,
   metadata.xml:

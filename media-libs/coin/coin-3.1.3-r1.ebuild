@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3.ebuild,v 1.4 2010/06/25 23:41:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.1 2010/06/26 14:26:12 reavertm Exp $
 
 EAPI=2
 
@@ -50,7 +50,6 @@ PATCHES=(
 )
 
 src_configure() {
-	MANDIR=/usr/share/Coin/man
 	# Unforunately it links to static expat...
 	append-cppflags -I/usr/include/freetype2 -DUSE_SYSTEM_EXPAT
 	# Prefer link-time linking over dlopen
@@ -64,6 +63,7 @@ src_configure() {
 		--disable-dl-zlib \
 		--disable-dyld \
 		--disable-loadlibrary \
+		--disable-man \
 		--disable-java-wrapper \
 		--enable-3ds-import \
 		--enable-compact \
@@ -71,14 +71,12 @@ src_configure() {
 		--enable-dl-spidermonkey \
 		--enable-system-expat \
 		--includedir="/usr/include/${PN}" \
-		--mandir="${MANDIR}" \
 		--with-fontconfig \
 		--with-freetype \
 		$(use_with bzip2) \
 		$(use_enable debug) \
 		$(use_enable debug symbols) \
 		$(use_enable doc html) \
-		$(use_enable doc man) \
 		$(use_enable javascript javascript-api) \
 		$(use_with javascript spidermonkey) \
 		$(use_enable openal sound) \
@@ -91,13 +89,6 @@ src_configure() {
 
 src_install() {
 	base_src_install
-
-	if use doc; then
-		cat >"${T}/50coin" <<-__EOF__
-MANPATH=${MANDIR}
-__EOF__
-		doenvd "${T}/50coin"
-	fi
 
 	# Remove libtool files when not needed.
 	use static-libs || rm -f "${D}"/usr/lib*/*.la
