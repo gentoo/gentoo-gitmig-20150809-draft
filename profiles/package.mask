@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11704 2010/06/26 08:32:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11705 2010/06/26 10:35:15 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (26 Jun 2010)
+#  on behalf of QA team
+#
+# Debian-related package; no maintainer; no ebuild activity
+# since 2005. Broken install phase as per bug #294975.
+#
+# Removal on 2010-08-25
+dev-util/pbuilder
 
 # Samuli Suominen <ssuominen@gentoo.org> (26 Jun 2010)
 # Masked for QA
