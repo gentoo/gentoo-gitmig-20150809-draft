@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-demodata
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.7 2007/12/26 21:58:24 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.8 2010/06/26 17:58:58 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  quake1-demodata-1.06.ebuild:
+  Stable on amd64 wrt bug #325141
 
   26 Dec 2007; Christian Heim <phreak@gentoo.org> Manifest:
   Fixing digestentry.unused (quake1-demodata-1.06.ebuild.rej).

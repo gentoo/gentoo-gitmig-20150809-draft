@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/darkplaces
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.7 2010/04/18 05:50:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.8 2010/06/26 17:59:59 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  darkplaces-20100408.ebuild:
+  Stable on amd64 wrt bug #325141
 
 *darkplaces-20100408 (18 Apr 2010)
 
