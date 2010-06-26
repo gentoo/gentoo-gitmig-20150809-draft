@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.8 2010/03/03 19:07:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.9 2010/06/26 23:45:36 ssuominen Exp $
 
 inherit eutils
 
-MY_PN="FSViewer"
+MY_PN=FSViewer
 
 DESCRIPTION="file system viewer for Window Maker"
 HOMEPAGE="http://www.bayernline.de/~gscholz/linux/fsviewer/"
@@ -13,7 +13,6 @@ SRC_URI="http://www.bayernline.de/~gscholz/linux/${PN}/${MY_PN}.app-${PV}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-
 IUSE=""
 
 DEPEND=">=x11-wm/windowmaker-0.92.0-r3
@@ -40,21 +39,20 @@ DEPEND=">=x11-wm/windowmaker-0.92.0-r3
 	dev-libs/expat
 	sys-libs/zlib"
 
-S="${WORKDIR}/${MY_PN}.app-${PV}"
+S=${WORKDIR}/${MY_PN}.app-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-windowmaker.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-windowmaker.patch
 }
 
 src_compile() {
 	econf --with-appspath=/usr/lib/GNUstep \
-		--with-extralibs=-lXft \
-		|| die "econf failed"
-	emake || die "emake failed"
+		--with-extralibs=-lXft
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 }
