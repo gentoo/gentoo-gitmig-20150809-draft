@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.8.1.ebuild,v 1.3 2010/06/09 17:59:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.8.1.ebuild,v 1.4 2010/06/26 13:11:28 nixnut Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xca/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/openssl-0.9.8
