@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r3.ebuild,v 1.1 2010/02/12 10:07:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r3.ebuild,v 1.2 2010/06/26 20:25:17 angelos Exp $
 
 inherit flag-o-matic toolchain-funcs versionator autotools java-pkg-2
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.qbang.org/pub/rxtx/${MY_P}.zip"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc source lfd"
 
 RDEPEND=">=virtual/jre-1.4"
@@ -37,9 +37,10 @@ src_unpack() {
 	sed -i -e "s:\(\$(JAVADOC)\):\1 -d api:g" Makefile.am
 
 	# some patches
-	epatch "${FILESDIR}/${MY_P}-lfd.diff"
-	epatch "${FILESDIR}/${MY_P}-nouts.diff"
-	epatch "${FILESDIR}/${MY_P}-add-ttyACM.diff"
+	epatch "${FILESDIR}/${MY_P}-lfd.diff" \
+		"${FILESDIR}/${MY_P}-nouts.diff" \
+		"${FILESDIR}/${MY_P}-add-ttyACM.diff" \
+		"${FILESDIR}/${MY_P}-lfd-include-limits.diff"
 
 	# update autotools stuff
 	rm acinclude.m4
