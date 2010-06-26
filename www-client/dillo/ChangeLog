@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.89 2010/06/14 16:53:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.90 2010/06/26 13:13:47 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> dillo-2.2.ebuild:
+  ppc stable #320665
 
   14 Jun 2010; Christoph Mende <angelos@gentoo.org> dillo-2.2.ebuild:
   Stable on amd64 wrt bug #320665
