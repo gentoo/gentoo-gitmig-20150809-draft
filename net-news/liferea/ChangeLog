@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.189 2010/06/01 12:11:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.190 2010/06/26 14:25:45 armin76 Exp $
+
+  26 Jun 2010; Raúl Porcel <armin76@gentoo.org> liferea-1.6.3.ebuild:
+  sparc stable wrt #321565
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> liferea-1.6.3.ebuild:
   x86 stable wrt bug #321565
