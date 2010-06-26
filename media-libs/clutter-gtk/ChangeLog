@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/clutter-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.1 2010/02/26 22:06:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.2 2010/06/26 01:52:17 nirbheek Exp $
+
+*clutter-gtk-0.10.4 (26 Jun 2010)
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -clutter-gtk-0.10.2.ebuild, +clutter-gtk-0.10.4.ebuild:
+  Bump to 0.10.4, needs clutter-1.2, gtk+-2.19.5, no longer uses
+  gir-repository. Remove old.
 
 *clutter-gtk-0.10.2 (26 Feb 2010)
 

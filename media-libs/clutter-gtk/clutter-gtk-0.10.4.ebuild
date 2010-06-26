@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-0.10.2.ebuild,v 1.1 2010/02/26 22:06:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-0.10.4.ebuild,v 1.1 2010/06/26 01:52:17 nirbheek Exp $
 
 EAPI="2"
 
@@ -11,18 +11,15 @@ DESCRIPTION="Clutter-GTK - GTK+ Integration library for Clutter"
 
 SLOT="1.0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug examples introspection"
+IUSE="doc debug examples +introspection"
 
 # XXX: Needs gtk with X support (!directfb)
 RDEPEND="
-	>=x11-libs/gtk+-2.12
-	media-libs/clutter:1.0[opengl]"
+	>=x11-libs/gtk+-2.19.5[introspection?]
+	>=media-libs/clutter-1.2:1.0[introspection?]
+	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-util/gtk-doc-1.11 )
-	introspection? (
-		media-libs/clutter[introspection]
-		>=dev-libs/gobject-introspection-0.6.3
-		>=dev-libs/gir-repository-0.6.3[gtk] )"
+	doc? ( >=dev-util/gtk-doc-1.11 )"
 EXAMPLES="examples/{*.c,redhand.png}"
 
 pkg_setup() {
