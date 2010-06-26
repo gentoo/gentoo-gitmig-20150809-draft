@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/shunit2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/ChangeLog,v 1.3 2010/06/26 07:40:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/ChangeLog,v 1.4 2010/06/26 11:02:00 jlec Exp $
+
+  26 Jun 2010; Justin Lecher <jlec@gentoo.org> shunit2-2.1.4.ebuild,
+  shunit2-2.1.5.ebuild, +files/test.patch:
+  Fixed src_test, #277097
 
 *shunit2-2.1.5 (26 Jun 2010)
 

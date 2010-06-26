@@ -1,8 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/shunit2-2.1.4.ebuild,v 1.2 2008/10/25 13:15:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shunit2/shunit2-2.1.4.ebuild,v 1.3 2010/06/26 11:02:00 jlec Exp $
 
-DESCRIPTION="shUnit2 is a unit-test framework for Bourne-based shell scripts."
+EAPI="3"
+
+inherit eutils
+
+DESCRIPTION="Unit-test framework for Bourne-based shell scripts."
 HOMEPAGE="http://code.google.com/p/shunit2/wiki/ProjectInfo"
 SRC_URI="http://shunit2.googlecode.com/files/${P}.tgz"
 
@@ -16,16 +20,14 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	net-misc/curl"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e '/^__SHUNIT_SHELL_FLAGS/s:u::' src/shell/shunit2
+src_prepare() {
+	epatch "${FILESDIR}"/test.patch
+	sed -i -e '/^__SHUNIT_SHELL_FLAGS/s:u::' src/shell/shunit2 || die
 }
 
 src_compile() {
 	local myconf="build"
 	use doc && myconf="${myconf} docs"
-	use test && myconf="${myconf} test"
 
 	emake ${myconf} || die
 }
@@ -39,6 +41,7 @@ src_install() {
 	fi
 
 	dodoc doc/*.txt || die
+	dohtml doc/*.html || die
 
 	insinto /usr/share/${PN}
 	doins build/* || die
