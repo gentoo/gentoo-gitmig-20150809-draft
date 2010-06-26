@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-dns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.6 2010/01/24 14:08:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.7 2010/06/26 18:39:07 graaff Exp $
+
+  26 Jun 2010; Hans de Graaff <graaff@gentoo.org> -net-dns-0.6.0.ebuild:
+  Remove old version.
 
   24 Jan 2010; Hans de Graaff <graaff@gentoo.org> net-dns-0.6.1.ebuild:
   Fix repoman warning.
