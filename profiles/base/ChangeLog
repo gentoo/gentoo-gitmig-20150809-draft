@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.156 2010/06/26 15:21:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.157 2010/06/26 15:28:03 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Forgot to mask icecat too
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Mask USE=ipc for firefox/xulrunner due to bug 325185
