@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-ng-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.43 2010/04/12 18:57:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.44 2010/06/26 17:38:57 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org>
+  madwifi-ng-tools-0.9.4.4119.20100201.ebuild:
+  ppc stable #306851
 
   12 Apr 2010; Markus Meier <maekke@gentoo.org>
   madwifi-ng-tools-0.9.4.4119.20100201.ebuild:
