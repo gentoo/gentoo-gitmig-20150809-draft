@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/piccolo2d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo2d/ChangeLog,v 1.5 2010/06/26 14:33:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo2d/ChangeLog,v 1.6 2010/06/26 14:41:20 betelgeuse Exp $
+
+*piccolo2d-1.2.1-r2 (26 Jun 2010)
+
+  26 Jun 2010; Petteri Räty <betelgeuse@gentoo.org>
+  +piccolo2d-1.2.1-r2.ebuild:
+  Use the latest slot of swt.
 
   26 Jun 2010; Petteri Räty <betelgeuse@gentoo.org>
   -piccolo2d-1.2.1.ebuild:
