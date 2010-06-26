@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paste
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.9 2010/06/26 03:18:58 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.10 2010/06/26 03:38:16 sping Exp $
+
+  26 Jun 2010; Sebastian Pipping <sping@gentoo.org> paste-1.7.2.ebuild:
+  Revert previous commit, shooting too fast, sorry
 
   26 Jun 2010; Sebastian Pipping <sping@gentoo.org> paste-1.7.2.ebuild:
   Make USE="doc -flup" require flup, too (bug #318757)
