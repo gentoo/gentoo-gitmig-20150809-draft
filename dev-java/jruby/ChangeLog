@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.60 2010/06/22 22:08:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.61 2010/06/26 11:58:41 ali_bush Exp $
+
+*jruby-1.5.1-r2 (26 Jun 2010)
+
+  26 Jun 2010; Alistair Bush <ali_bush@gentoo.org>
+  +files/1.5.1/build.xml.patch, jruby-1.4.1.ebuild, +jruby-1.5.1-r2.ebuild,
+  +files/1.5.1/testfixes.patch, -jruby-1.5.1-r1.ebuild:
+  Fix #305459 in both 1.4.1 and 1.5.1. Fix bug 325191 for 1.5.1 and progress
+  towards getting tests working for 1.5.1.
 
   22 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/jruby-1.5.0-bindir.patch, files/jruby-1.5.0-system-jars.patch,

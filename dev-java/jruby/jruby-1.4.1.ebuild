@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.1.ebuild,v 1.2 2010/06/19 11:07:14 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.4.1.ebuild,v 1.3 2010/06/26 11:58:41 ali_bush Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -112,6 +112,9 @@ java_prepare() {
 	find build_lib -name "*.jar" ! -name "jsr292-mock.jar" -delete || die
 	rm lib/profile.jar || die
 
+	use bsf && java-pkg_jar-from --into build_lib \
+		--build-only bsf-2.3
+
 	if ! use bsf; then
 		# Remove BSF test cases.
 		cd "${S}/test/org/jruby"
@@ -123,7 +126,8 @@ java_prepare() {
 }
 
 src_compile() {
-	eant jar $(use_doc apidocs) -Djdk1.5+=true
+	eant jar $(use_doc apidocs) $(use bsf && echo "-Dbsf.present") \
+		-Djdk1.5+=true
 }
 
 src_test() {

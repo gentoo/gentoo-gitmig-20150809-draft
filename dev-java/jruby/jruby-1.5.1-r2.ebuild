@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.5.1-r1.ebuild,v 1.1 2010/06/22 22:08:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.5.1-r2.ebuild,v 1.1 2010/06/26 11:58:41 ali_bush Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="bsf ssl"
 
-CDEPEND=">=dev-java/bytelist-1.0.2:0
+CDEPEND=">=dev-java/bytelist-1.0.6:0
 	>=dev-java/constantine-0.6:0
 	>=dev-java/jline-0.9.94:0
 	>=dev-java/joni-1.1.3:0
@@ -44,13 +44,16 @@ DEPEND="${CDEPEND}
 		dev-java/ant-trax:0
 		dev-java/junit:4
 		java-virtuals/jdk-with-com-sun
+		dev-java/commons-logging:0
+		dev-java/xalan:0
+		>=dev-java/jna-posix-1.0.1:0
 	)
 	!!<dev-ruby/jruby-1.3.1-r1"
 
 PDEPEND="ssl? ( dev-ruby/jruby-openssl )"
 
-# Tests fail completely.
-# Complaining about missing auto_gem
+# Tests fail.
+# Need to stop injecting jar's into classpath.
 RESTRICT="test"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -92,9 +95,9 @@ pkg_setup() {
 }
 
 java_prepare() {
-	#epatch "${FILESDIR}/ftype-test-fixes.patch"
-	#epatch "${FILESDIR}/user-test-fixes.patch"
 	epatch "${FILESDIR}"/${PN}-1.5.0-system-jars.patch
+	epatch "${FILESDIR}/${PV}/build.xml.patch"
+	epatch "${FILESDIR}/${PV}/testfixes.patch"
 
 	# We don't need to use Retroweaver. There is a jarjar and a regular jar
 	# target but even with jarjarclean, both are a pain. The latter target
@@ -119,7 +122,10 @@ EOF
 }
 
 src_compile() {
-	eant jar $(use_doc apidocs) -Djdk1.5+=true
+	local flags=""
+	use bsf && flags="-Dbsf.present=true"
+
+	eant jar $(use_doc apidocs) -Djdk1.5+=true ${flags}
 }
 
 src_test() {
@@ -128,29 +134,29 @@ src_test() {
 		ewarn 'Enable FEATURES="userpriv" if you want to run them.'
 		return
 	fi
-
-	mkdir -p usr
-
-	ln -s "${S}/bin" "${S}/usr/bin"
-
-	# TODO check this.
-	# ali_bush was getting crashes while attempting to run a test.
-	# No info about why it crashed seemed to be produced.
-	# remove it as temp fix.
-	#sed -i -e '/MRI/d' build.xml || die "Failed to sed build.xml"
-
 	# Our jruby.jar is unbundled so we need to add the classpath to this test.
 	sed -i "s:java -jar:java -Xbootclasspath/a\:#{ENV['JRUBY_CP']} -jar:g" test/test_load_compiled_ruby_class_from_classpath.rb || die
+	sed -i "s@:refid => 'build.classpath'@:path =>\"#{ENV['JRUBY_CP']}:lib/jruby.jar\"@g" \
+		rakelib/commands.rake || die
+	#sed -i "s@:refid => 'test.class.path'@:path => \"#{ENV['JRUBY_CP']}@g" \
+	#	rakelib/commands.rake || die
 
 	#bsf optionally depends on jruby, which means that the previously
 	#installed jruby will be added to classpath, nasty things will happen.
 	local cpath=`java-pkg_getjars ${EANT_GENTOO_CLASSPATH// /,},junit-4`
 	cpath="$(echo ${cpath} | sed -e "s_${ROOT}/usr/share/jruby/lib/jruby.jar:__g")"
+	cpath="${cpath}:$(java-pkg_getjars --build-only commons-logging,xalan)"
 	EANT_GENTOO_CLASSPATH=""
+
+	local flags=""
+	use bsf && flags="-Dbsf.present=true"
+
+	#Clear RUBYOPT
+	export RUBYOPT=""
+	export JRUBY_CP="${cpath}"
 	ANT_TASKS="ant-junit4 ant-trax" \
-		JRUBY_CP="${cpath}" \
 		JRUBY_OPTS="" eant test -Djdk1.5+=true -Djruby.bindir=bin \
-		-Dgentoo.classpath="${cpath}"
+		-Dgentoo.classpath="${cpath}" ${flags}
 }
 
 src_install() {
