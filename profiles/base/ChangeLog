@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.157 2010/06/26 15:28:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.158 2010/06/26 16:20:03 xarthisius Exp $
+
+  26 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Mask USE=infiniband for sys-cluster/corosync
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Forgot to mask icecat too
