@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2007.0/amd64/hardened/package.mask,v 1.5 2010/04/08 13:46:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2007.0/amd64/hardened/package.mask,v 1.6 2010/06/26 10:06:47 zorry Exp $
 
 # Hardened versions of gcc-4.0* through gcc-4.2* are not available.
 =sys-devel/gcc-4.0*
@@ -10,5 +10,8 @@
 # Mask non-hardened+non-testing gcc-4.3.x releases.
 =sys-devel/gcc-4.3.2*
 
-# No hardened >=sys-devel/gcc-4.4 available.
->=sys-devel/gcc-4.4
+# hardened >=sys-devel/gcc-4.4.3-r3 >=gcc-4.4.4-r1 available.
+=sys-devel/gcc-4.4.1*
+=sys-devel/gcc-4.4.2*
+=sys-devel/gcc-4.4.3-r2
+=sys-devel/gcc-4.4.4
