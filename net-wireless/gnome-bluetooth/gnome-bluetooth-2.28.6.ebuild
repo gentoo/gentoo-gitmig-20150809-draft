@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.28.6.ebuild,v 1.6 2010/06/04 21:20:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.28.6.ebuild,v 1.7 2010/06/26 14:13:58 nixnut Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
 IUSE="doc"
-KEYWORDS="amd64 ~hppa ~ppc x86"
+KEYWORDS="amd64 ~hppa ppc x86"
 
 # XXX: gtk+-2.18 required, configure.ac lies, bug 298534
 COMMON_DEPEND=">=dev-libs/glib-2.16
