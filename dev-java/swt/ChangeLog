@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.126 2010/06/26 10:55:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.127 2010/06/26 14:46:17 ssuominen Exp $
+
+  26 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> swt-3.3.1.1-r1.ebuild:
+  Comment out support for vulnerable firefox and xulrunner (only in deps).
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   +swt-3.3.1.1-r1.ebuild, +files/swt-3.3-manifest:

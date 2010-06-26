@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.11 2010/06/26 10:55:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.12 2010/06/26 14:46:17 ssuominen Exp $
 
 EAPI="1"
 
@@ -39,19 +39,22 @@ COMMON=">=dev-libs/glib-2.6
 					=gnome-base/gnome-vfs-2*
 					=gnome-base/libgnomeui-2*
 				)
-		firefox? ( !xulrunner? (
-			=www-client/mozilla-firefox-2*
-			>=dev-libs/nspr-4.6.2
-		) )
-		xulrunner? (
-			net-libs/xulrunner:1.8
-			>=dev-libs/nspr-4.6.2
-		)
 		opengl?	(
 			virtual/opengl
 			virtual/glu
 		)
 		x11-libs/libXtst"
+
+# Masked in base/package.use.mask
+#
+# firefox? ( !xulrunner? (
+# 	=www-client/mozilla-firefox-2*
+# 	>=dev-libs/nspr-4.6.2
+# ) )
+# xulrunner? (
+# 	net-libs/xulrunner:1.8
+# 	>=dev-libs/nspr-4.6.2
+# )
 
 # libXtst/xextproto is done like this due to the XTest.h move - bug #292244
 DEPEND=">=virtual/jdk-1.4
