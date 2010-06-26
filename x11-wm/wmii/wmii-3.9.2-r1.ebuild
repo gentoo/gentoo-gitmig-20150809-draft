@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r1.ebuild,v 1.1 2010/06/26 16:58:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r1.ebuild,v 1.2 2010/06/26 18:04:37 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic multilib toolchain-funcs
@@ -40,12 +40,11 @@ pkg_setup() {
 		"DOC=/usr/share/doc/${PF}"
 		"ETC=/etc"
 		"LIBDIR=/usr/$(get_libdir)"
+		"CC=$(tc-getCC) -c"
+		"LD=$(tc-getCC)"
+		"AR=$(tc-getAR) crs"
 		"DESTDIR=${D}"
 		)
-}
-
-src_prepare() {
-	sed -i config.mk -e "/^\(CC\|LD\)/s|cc|$(tc-getCC)|g" || die "sed failed"
 }
 
 src_compile() {
