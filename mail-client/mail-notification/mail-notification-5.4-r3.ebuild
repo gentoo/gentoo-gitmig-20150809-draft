@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r3.ebuild,v 1.5 2010/05/18 06:28:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r3.ebuild,v 1.6 2010/06/26 14:30:51 nixnut Exp $
 
 EAPI=1
 
@@ -10,7 +10,7 @@ DESCRIPTION="A GNOME trayicon which checks for email, with support for many onli
 HOMEPAGE="http://www.nongnu.org/mailnotify/"
 SRC_URI="http://savannah.nongnu.org/download/mailnotify/${P}.tar.bz2"
 
-KEYWORDS="amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86"
 SLOT="0"
 LICENSE="GPL-3"
 
