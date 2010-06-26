@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.38 2010/06/17 21:26:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.39 2010/06/26 10:39:09 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -vuze-3.0.4.2-r2.ebuild:
+  Remove vuze-3 as per bug 218584, bug 282289, bug 324953
 
 *vuze-4.4.0.6 (17 Jun 2010)
 
