@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/socnetv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.6 2010/03/09 12:16:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/socnetv/ChangeLog,v 1.7 2010/06/26 21:42:18 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> socnetv-0.80.ebuild:
+  Stable on amd64 wrt bug #325627
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> socnetv-0.51.ebuild,
   socnetv-0.60.ebuild, socnetv-0.70.ebuild, socnetv-0.80.ebuild:
