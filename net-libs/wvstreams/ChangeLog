@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.134 2010/06/06 14:20:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.135 2010/06/26 13:07:04 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> wvstreams-4.6.1.ebuild:
+  ppc stable #321637
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> wvstreams-4.6.1.ebuild:
   alpha/sparc stable wrt #321637
