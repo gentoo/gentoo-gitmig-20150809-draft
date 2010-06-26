@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.6.ebuild,v 1.9 2010/05/19 07:32:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.6.ebuild,v 1.10 2010/06/26 09:22:11 nirbheek Exp $
 
 EAPI="2"
 
@@ -111,7 +111,7 @@ RDEPEND="
 		mtp? ( >=media-libs/libmtp-0.3.0 )
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses )
-		nsplugin? ( >=net-libs/xulrunner-1.8 x11-libs/libXpm x11-libs/libXt )
+		nsplugin? ( >=net-libs/xulrunner-1.9 x11-libs/libXpm x11-libs/libXt )
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
@@ -247,11 +247,7 @@ src_configure() {
 	local MOZILLA_PC
 
 	if use nsplugin; then
-		if has_version 'net-libs/xulrunner:1.9' ; then
-			MOZILLA_PC=libxul
-		else
-			MOZILLA_PC=xulrunner-plugin
-		fi
+		MOZILLA_PC=libxul
 	fi
 
 	econf \
