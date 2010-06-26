@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/qconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.8 2010/06/22 14:23:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.9 2010/06/26 15:23:17 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> qconf-1.5_pre717.ebuild:
+  ppc stable #323353
 
   22 Jun 2010; Jeroen Roovers <jer@gentoo.org> qconf-1.5_pre717.ebuild:
   Stable for HPPA (bug #322353).
