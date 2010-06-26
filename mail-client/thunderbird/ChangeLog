@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.10 2010/06/26 04:48:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.11 2010/06/26 15:32:57 ssuominen Exp $
+
+  26 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  thunderbird-3.1.ebuild, +files/thunderbird-3.1-gcc45.patch:
+  Fix buffer overflow with GCC 4.5 and _U_FORTIFY_SOURCE=2 wrt #324863 by
+  Harald van Dijk.
 
 *thunderbird-3.1 (26 Jun 2010)
 
