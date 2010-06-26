@@ -1,6 +1,3 @@
-
-;;; calc site-lisp configuration
-
 ;; Emacs 22 and later include the calc package
 (unless (fboundp 'calc-dispatch)
   (add-to-list 'load-path "@SITELISP@")

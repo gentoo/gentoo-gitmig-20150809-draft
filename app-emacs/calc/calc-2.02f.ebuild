@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.7 2009/03/29 21:16:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.8 2010/06/26 12:31:38 ulm Exp $
 
-inherit elisp versionator
+inherit elisp
 
 DESCRIPTION="Advanced calculator and mathematical tool within Emacs"
 HOMEPAGE="http://www.gnu.org/software/emacs/calc.html"
@@ -14,10 +14,11 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 ELISP_PATCHES="${P}-emacs-21.patch ${P}-info-dir.patch"
-SITEFILE="50calc-gentoo.el"
+SITEFILE="50${PN}-gentoo.el"
 
 pkg_setup() {
-	if version_is_at_least 22 "$(elisp-emacs-version)"; then
+	local have_emacs=$(elisp-emacs-version)
+	if [ "${have_emacs%%.*}" -ge 22 ]; then
 		echo
 		elog "Please note that \"${PN}\" is already included with Emacs 22 or"
 		elog "later, so ${CATEGORY}/${PN} is only needed for lower versions."
