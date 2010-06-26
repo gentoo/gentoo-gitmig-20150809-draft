@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/syncevolution
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncevolution/ChangeLog,v 1.1 2010/06/26 03:19:47 tester Exp $
+
+*syncevolution-1.0 (26 Jun 2010)
+
+  26 Jun 2010; Olivier Crête <tester@gentoo.org> +syncevolution-1.0.ebuild,
+  +metadata.xml:
+  Initial import, fixes bug #225221
+
