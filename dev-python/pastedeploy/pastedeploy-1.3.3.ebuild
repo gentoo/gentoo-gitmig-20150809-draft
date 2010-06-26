@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.3.3.ebuild,v 1.6 2010/02/06 15:38:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.3.3.ebuild,v 1.7 2010/06/26 04:41:35 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit eutils distutils multilib
 
@@ -22,33 +23,36 @@ IUSE="doc test"
 
 RDEPEND=""
 DEPEND="dev-python/setuptools
-	doc? ( dev-python/buildutils dev-python/pygments dev-python/pudge )
-	test? ( dev-python/nose dev-python/py )"
+	doc? ( dev-python/pygments dev-python/sphinx )"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="paste/deploy"
 
-src_compile() {
-	distutils_src_compile
-	if use doc; then
-		einfo "Generating docs as requested..."
-		PYTHONPATH=. "$(PYTHON -f)" setup.py pudge || die "Generation of documentation failed"
-	fi
-}
+src_prepare() {
+	distutils_src_prepare
 
-src_test() {
 	# Delete broken test.
 	rm -f tests/test_config_middleware.py
+}
 
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests-${PYTHON_ABI}
-	}
-	python_execute_function testing
+src_compile() {
+	distutils_src_compile
+
+	if use doc; then
+		einfo "Generation of documentation"
+		PYTHONPATH="." "$(PYTHON -f)" setup.py build_sphinx || die "Generation of documentation failed"
+	fi
 }
 
 src_install() {
 	distutils_src_install
-	use doc && dohtml -r docs/html/*
+
+	if use doc; then
+		pushd build/sphinx/html > /dev/null
+		docinto html
+		cp -R [a-z]*  _static "${ED}usr/share/doc/${PF}/html" || die "Installation of documentation failed"
+		popd > /dev/null
+	fi
 }
