@@ -6,4 +6,7 @@
 <email>dberkholz@gentoo.org</email>
 <name>Donnie Berkholz</name>
 </maintainer>
+<use>
+  <flag name='plugins'>Build all plugins</flag>
+</use>
 </pkgmetadata>

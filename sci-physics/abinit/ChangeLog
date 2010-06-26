@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/abinit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.10 2009/12/18 01:26:24 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.11 2010/06/26 10:53:30 jlec Exp $
+
+*abinit-6.0.4 (26 Jun 2010)
+
+  26 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  +files/6.0.4-change-default-directories.patch, +files/6.0.4-test.patch,
+  +abinit-6.0.4.ebuild, metadata.xml:
+  Version Bump
 
 *abinit-5.4.4-r1 (18 Dec 2009)
 
