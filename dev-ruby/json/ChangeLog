@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.33 2010/06/12 10:43:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.34 2010/06/26 11:48:40 graaff Exp $
+
+*json-1.4.3-r2 (26 Jun 2010)
+
+  26 Jun 2010; Hans de Graaff <graaff@gentoo.org> json-1.4.3-r1.ebuild,
+  +json-1.4.3-r2.ebuild:
+  Revision bump to make 1.4.3-r1 the new stable candidate with support for
+  ruby18 and jruby.
 
   12 Jun 2010; Hans de Graaff <graaff@gentoo.org> json-1.4.3-r1.ebuild:
   Fix static modname and add x64-macos keyword, fixing bug 323371. Thanks to
