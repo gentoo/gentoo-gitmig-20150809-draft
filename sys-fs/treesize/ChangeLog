@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/treesize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/treesize/ChangeLog,v 1.2 2010/04/25 11:33:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/treesize/ChangeLog,v 1.3 2010/06/26 22:21:08 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> treesize-0.54.1.ebuild:
+  Stable on amd64 wrt bug #325641
 
 *treesize-0.54.1 (16 Jan 2010)
 
