@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.95 2010/06/25 09:12:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.96 2010/06/26 20:54:45 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> rebase-1006.ebuild:
+  Stable on amd64 wrt bug #325457
 
   25 Jun 2010; Justin Lecher <jlec@gentoo.org> rebase-610.ebuild,
   rebase-905.ebuild, rebase-1006.ebuild:
