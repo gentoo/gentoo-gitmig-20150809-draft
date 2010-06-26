@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.36 2010/06/20 10:17:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.37 2010/06/26 13:22:12 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> xsnap-1.5.6.ebuild:
+  ppc stable #322989
 
   20 Jun 2010; Markos Chandras <hwoarang@gentoo.org> xsnap-1.5.6.ebuild:
   Stable on amd64 wrt bug #322989
