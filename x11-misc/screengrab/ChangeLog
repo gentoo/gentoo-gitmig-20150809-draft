@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/screengrab
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.2 2010/04/13 17:20:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.3 2010/06/26 22:22:38 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  screengrab-0.6.1-r1.ebuild:
+  Stable on amd64 wrt bug #325643
 
 *screengrab-0.6.1-r1 (13 Apr 2010)
 
