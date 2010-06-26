@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.129 2010/06/16 08:23:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.130 2010/06/26 09:34:50 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -epiphany-extensions-2.24.3.ebuild,
+  -epiphany-extensions-2.24.3-r10.ebuild:
+  Nuke old 2.24 versions because of bug 324953 and because we should
 
   16 Jun 2010; Pacho Ramos <pacho@gentoo.org>
   epiphany-extensions-2.30.1.ebuild,
