@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r5.ebuild,v 1.2 2010/06/26 07:28:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r6.ebuild,v 1.1 2010/06/26 11:04:59 jlec Exp $
 
 EAPI="3"
 
-inherit eutils multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 MY_TAG="May_15_2009"
 MY_Y="${MY_TAG/*_/}"
@@ -47,7 +47,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 	sed -i -e 's/-print-file-name=libstdc++.a//' \
 		-e '/sed/ s/\([gO]\[0-9\]\)\*/\1\\+/' \
 		src/build-system/configure || die
@@ -55,10 +56,9 @@ src_prepare() {
 
 src_configure() {
 	# required with gcc-4.4 and code turned on by --with-mt
-	export CPPFLAGS="${CPPFLAGS} -fpermissive"
+	append-cxxflags -fpermissive
 
-	# I add this until the as-needed fix is in the tree
-	append-ldflags $(no-as-needed)
+	tc-export CXX CC
 
 	# econf fails
 	# --with-bin-release and --without-ftds are workarounds for build system bugs
