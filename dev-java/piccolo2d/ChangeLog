@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/piccolo2d
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo2d/ChangeLog,v 1.4 2010/06/24 20:49:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/piccolo2d/ChangeLog,v 1.5 2010/06/26 14:33:33 betelgeuse Exp $
+
+  26 Jun 2010; Petteri Räty <betelgeuse@gentoo.org>
+  -piccolo2d-1.2.1.ebuild:
+  Remove old revision.
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> piccolo2d-1.2.1-r1.ebuild:
   stable amd64, bug 313623
