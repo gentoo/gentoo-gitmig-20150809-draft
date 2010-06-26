@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/shm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.6 2010/06/02 06:29:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.7 2010/06/26 01:41:01 sping Exp $
+
+  26 Jun 2010; Sebastian Pipping <sping@gentoo.org> shm-1.2.2.ebuild,
+  +files/shm-1.2.2-compiler.patch:
+  Fix setup.py to respect CC variable (bug #243966)
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove chtekk from metadata.xml (#103720)
