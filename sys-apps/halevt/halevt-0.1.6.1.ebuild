@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/halevt-0.1.6.1.ebuild,v 1.3 2010/06/13 14:48:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/halevt-0.1.6.1.ebuild,v 1.4 2010/06/26 18:23:32 ssuominen Exp $
 EAPI="2"
 
 inherit eutils
 
 DESCRIPTION="A daemon built on ivman that executes arbitrary commands on HAL events"
-HOMEPAGE="http://www.environnement.ens.fr/perso/dumas/halevt.html"
+HOMEPAGE="http://www.nongnu.org/halevt/"
 SRC_URI="http://savannah.nongnu.org/download/halevt/${P}.tar.gz"
 
 LICENSE="GPL-2"
