@@ -12,6 +12,7 @@
 	</maintainer>
 	<use>
 		<flag name='nss'>Enable NSS support for cryptography</flag>
+		<flag name='infiniband'>Enable Infiniband RDMA transport support</flag>
 	</use>
 </pkgmetadata>
 
