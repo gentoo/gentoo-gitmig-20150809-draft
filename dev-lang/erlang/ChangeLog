@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.190 2010/05/21 16:09:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.191 2010/06/26 14:59:05 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> erlang-13.2.4.ebuild:
+  ppc stable #313849
 
   21 May 2010; Peter Volkov <pva@gentoo.org> erlang-13.2.4.ebuild:
   amd64 stable, bug 313849
