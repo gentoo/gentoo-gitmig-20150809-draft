@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.190 2010/06/26 14:25:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.191 2010/06/26 22:11:58 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -liferea-1.4.15.ebuild:
+  Remove 1.4.15 which uses vulnerable xulrunner:1.8 (bug 324953). BSD
+  keywords were dropped to do this, bug 279241
 
   26 Jun 2010; Raúl Porcel <armin76@gentoo.org> liferea-1.6.3.ebuild:
   sparc stable wrt #321565
