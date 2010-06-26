@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/gdmodule
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.1 2010/06/26 09:21:10 jlec Exp $
+
+*gdmodule-0.56 (26 Jun 2010)
+
+  26 Jun 2010; Justin Lecher <jlec@gentoo.org> +gdmodule-0.56.ebuild,
+  +metadata.xml:
+  New addition from bug 100123
+
