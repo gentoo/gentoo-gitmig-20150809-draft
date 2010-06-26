@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/jruby-openssl-0.6-r1.ebuild,v 1.2 2010/06/26 06:29:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/jruby-openssl-0.7.ebuild,v 1.1 2010/06/26 06:29:05 graaff Exp $
 
 EAPI=2
 
@@ -23,8 +23,8 @@ HOMEPAGE="http://rubyforge.org/projects/jruby-extras"
 
 LICENSE="MIT || ( CPL-1.0 GPL-2	LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 ruby_add_bdepend doc dev-ruby/hoe
-#ruby_add_bdepend test dev-ruby/hoe
+#ruby_add_bdepend "test? ( dev-ruby/hoe dev-ruby/mocha )"
