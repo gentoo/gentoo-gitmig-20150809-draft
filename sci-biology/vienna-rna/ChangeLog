@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.31 2010/06/25 09:22:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.32 2010/06/26 21:00:32 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  vienna-rna-1.8.4-r1.ebuild:
+  Stable on amd64 wrt bug #325459
 
 *vienna-rna-1.8.4-r1 (25 Jun 2010)
 
