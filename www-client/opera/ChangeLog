@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.500 2010/06/26 12:08:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.501 2010/06/26 15:45:03 jer Exp $
+
+*opera-10.60_pre6382 (26 Jun 2010)
+
+  26 Jun 2010; Jeroen Roovers <jer@gentoo.org> +opera-10.60_pre6382.ebuild:
+  <http://my.opera.com/desktopteam/blog/2010/06/25/stability-font-work-and-g
+  eolocation-for-linux>
 
 *opera-10.60_pre6383 (26 Jun 2010)
 
