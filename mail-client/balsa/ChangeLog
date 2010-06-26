@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.99 2010/06/26 14:19:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.100 2010/06/26 16:51:15 armin76 Exp $
+
+  26 Jun 2010; Raúl Porcel <armin76@gentoo.org> balsa-2.4.7.ebuild:
+  alpha/sparc stable wrt #315361
 
   26 Jun 2010; <nixnut@gentoo.org> balsa-2.4.7.ebuild:
   ppc stable #315361
