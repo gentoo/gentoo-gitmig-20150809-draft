@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.63 2010/05/28 13:51:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.64 2010/06/26 13:41:30 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> dbus-glib-0.86.ebuild:
+  ppc stable #319965
 
   28 May 2010; Markus Meier <maekke@gentoo.org> dbus-glib-0.86.ebuild:
   arm/x86 stable, bug #319965
