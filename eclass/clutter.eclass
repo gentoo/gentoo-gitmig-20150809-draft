@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/clutter.eclass,v 1.1 2010/02/26 21:15:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/clutter.eclass,v 1.2 2010/06/26 01:26:39 nirbheek Exp $
 
 #
 # @ECLASS: clutter.eclass
@@ -19,8 +19,8 @@ HOMEPAGE="http://www.clutter-project.org/"
 RV=($(get_version_components))
 SRC_URI="http://www.clutter-project.org/sources/${PN}/${RV[0]}.${RV[1]}/${P}.tar.bz2"
 
-# All official clutter packages use LGPL-2
-LICENSE="LGPL-2"
+# All official clutter packages use LGPL-2.1
+LICENSE="${LICENSE:-LGPL-2.1}"
 
 # This will be used by all clutter packages
 DEPEND="dev-util/pkgconfig"
