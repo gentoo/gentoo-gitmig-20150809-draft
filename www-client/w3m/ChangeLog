@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.56 2010/06/25 15:15:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.57 2010/06/26 14:52:56 armin76 Exp $
+
+  26 Jun 2010; Raúl Porcel <armin76@gentoo.org> w3m-0.5.2-r4.ebuild:
+  alpha/ia64/sparc stable wrt #325431
 
   25 Jun 2010; Christoph Mende <angelos@gentoo.org> w3m-0.5.2-r4.ebuild:
   Stable on amd64 wrt bug #325431
