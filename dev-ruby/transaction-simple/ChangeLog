@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/transaction-simple
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/ChangeLog,v 1.16 2009/08/07 17:28:31 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/ChangeLog,v 1.17 2010/06/26 19:14:51 graaff Exp $
+
+*transaction-simple-1.4.0-r1 (26 Jun 2010)
+
+  26 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  +transaction-simple-1.4.0-r1.ebuild:
+  Convert to ruby-fakegem.
 
   07 Aug 2009; Hans de Graaff <graaff@gentoo.org>
   -transaction-simple-1.3.0.ebuild:
