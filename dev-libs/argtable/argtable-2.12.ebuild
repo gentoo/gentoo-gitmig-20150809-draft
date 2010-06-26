@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/argtable-2.12.ebuild,v 1.3 2010/06/19 19:01:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/argtable-2.12.ebuild,v 1.4 2010/06/26 12:29:52 nixnut Exp $
 
 inherit versionator
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc debug examples"
 
 S="${WORKDIR}/${MY_P}"
