@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/log4r
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.18 2010/06/09 06:24:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.19 2010/06/26 06:44:06 graaff Exp $
+
+  26 Jun 2010; Hans de Graaff <graaff@gentoo.org> -log4r-1.1.5-r1.ebuild,
+  -log4r-1.1.7.ebuild:
+  Remove old versions.
 
 *log4r-1.1.8 (09 Jun 2010)
 
