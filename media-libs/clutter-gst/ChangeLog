@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/clutter-gst
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.1 2010/02/26 22:02:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.2 2010/06/26 01:54:10 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  clutter-gst-1.0.0.ebuild:
+  Fix USE=introspection deps, and package.use.mask it in the base profile
+  since gstreamer doesn't have introspection yet
 
 *clutter-gst-1.0.0 (26 Feb 2010)
 
