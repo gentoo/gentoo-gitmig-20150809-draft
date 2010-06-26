@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.23 2010/06/14 08:26:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.24 2010/06/26 16:26:35 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> metagen-0.5.2.ebuild:
+  ppc stable #322781
 
   14 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> metagen-0.5.2.ebuild:
   x86 stable wrt bug #322781
