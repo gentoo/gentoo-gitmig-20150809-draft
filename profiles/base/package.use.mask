@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.143 2010/06/26 01:47:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.144 2010/06/26 14:39:45 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Samuli Suominen <ssuominen@gentoo.org> (26 Jun 2010)
+# Masking support for vulnerable firefox and xulrunner.
+=dev-java/swt-3.3* firefox xulrunner
 
 # Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
 # Mask till gstreamer and gst-plugins-base get introspection support

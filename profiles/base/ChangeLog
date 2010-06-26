@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.154 2010/06/26 01:47:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.155 2010/06/26 14:39:45 ssuominen Exp $
+
+  26 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Masking USE firefox and xulrunner for =dev-java/swt-3.3*.
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Mask clutter-gst introspection till gstreamer and gst-plugins-base get
