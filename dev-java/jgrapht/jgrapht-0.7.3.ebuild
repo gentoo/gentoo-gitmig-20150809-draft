@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/jgrapht-0.7.3.ebuild,v 1.3 2010/05/09 23:11:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/jgrapht-0.7.3.ebuild,v 1.4 2010/06/26 15:16:22 angelos Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -10,7 +10,7 @@ inherit java-pkg-2 java-ant-2
 DESCRIPTION="Graph library that is a simpler and faster alternative to JGraph"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://jgrapht.sourceforge.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="test"
