@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/viewnior
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.2 2010/04/11 20:52:54 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.3 2010/06/26 21:48:36 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> viewnior-1.0.ebuild:
+  Stable on amd64 wrt bug #325631
 
 *viewnior-1.0 (11 Apr 2010)
 
