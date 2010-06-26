@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.6 2010/06/20 10:47:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.7 2010/06/26 17:13:53 angelos Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ MY_PN="mailx"
 MY_P="${MY_PN}-${PV}"
 SRC_URI="mirror://sourceforge/project/heirloom/heirloom-${MY_PN}/${PV}/${MY_P}.tar.bz2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~x86-interix"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~x86-interix"
 IUSE="ssl net kerberos"
 
 PROVIDE="virtual/mailx"
