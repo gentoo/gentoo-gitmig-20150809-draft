@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.10 2010/05/22 03:02:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.11 2010/06/26 09:46:52 graaff Exp $
+
+  26 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  ruby-test-unit-0-r1.ebuild:
+  Drop ruby19 target to allow stabilization.
 
 *ruby-test-unit-0-r2 (22 May 2010)
 
