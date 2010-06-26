@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.124 2010/04/13 20:09:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.125 2010/06/26 10:45:18 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -swt-3.3.1.1-r1.ebuild, -files/swt-3.3-manifest:
+  Remove swt:3 as per bug 282289 and bug 324953
 
   13 Apr 2010; Vlastimil Babka <caster@gentoo.org> -swt-3.5.1.ebuild:
   remove old
