@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/jwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.18 2010/06/16 14:19:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.19 2010/06/26 13:31:17 nixnut Exp $
+
+  26 Jun 2010; <nixnut@gentoo.org> jwm-2.0.1.ebuild:
+  ppc stable #322913
 
   16 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jwm-2.0.1.ebuild:
   x86 stable wrt bug #322913
