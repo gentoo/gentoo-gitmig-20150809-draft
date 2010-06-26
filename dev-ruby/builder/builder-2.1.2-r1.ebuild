@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-2.1.2-r1.ebuild,v 1.11 2010/06/14 19:22:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-2.1.2-r1.ebuild,v 1.12 2010/06/26 13:50:56 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 jruby"
@@ -27,4 +27,5 @@ all_ruby_prepare() {
 	sed -i -e '/rdoc\.template .*jamis/d' Rakefile || die
 
 	epatch "${FILESDIR}"/${P}-activesupport.patch
+	epatch "${FILESDIR}"/${P}-fix-tests.patch
 }
