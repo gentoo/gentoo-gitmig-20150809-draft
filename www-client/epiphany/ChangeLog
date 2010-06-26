@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.243 2010/06/13 21:20:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.244 2010/06/26 09:35:06 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -epiphany-2.24.3.ebuild:
+  Nuke old 2.24 version because of bug 324953 -- permission received from
+  BSD team
 
   13 Jun 2010; Pacho Ramos <pacho@gentoo.org> +epiphany-2.26.3-r2.ebuild:
   Recover the last stable version on hppa.
