@@ -1,6 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.27 2010/06/22 18:23:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.28 2010/06/26 17:25:21 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
+# custom-optimization doesn't work on ia64
+mail-client/thunderbird custom-optimization
+net-libs/xulrunner custom-optimization
+www-client/icecat custom-optimization
+www-client/mozilla-firefox custom-optimization
+www-client/seamonkey custom-optimization
+x11-plugins/enigmail custom-optimization
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs gnome-extra/nautilus-sendto, wait for bug 323851
