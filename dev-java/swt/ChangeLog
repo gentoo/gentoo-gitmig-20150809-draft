@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.125 2010/06/26 10:45:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.126 2010/06/26 10:55:35 nirbheek Exp $
+
+  26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +swt-3.3.1.1-r1.ebuild, +files/swt-3.3-manifest:
+  Revert swt:3 removal; bug 282289 was outdated, two new packages depend on
+  it now
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   -swt-3.3.1.1-r1.ebuild, -files/swt-3.3-manifest:
