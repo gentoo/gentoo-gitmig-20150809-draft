@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.9 2010/06/15 14:00:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.10 2010/06/26 18:31:48 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> rst2pdf-0.15.ebuild:
+  Stable on amd64 wrt bug #325381
 
   15 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer
