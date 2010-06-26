@@ -1,16 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.3.0_beta1.ebuild,v 1.1 2010/06/02 14:27:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.2.10.ebuild,v 1.1 2010/06/26 23:35:58 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
-
 inherit python confutils qt4-r2 versionator
 
-MY_P="${P/_/}"
 DESCRIPTION="BitTorrent client in C++ and Qt"
 HOMEPAGE="http://www.qbittorrent.org/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,8 +28,6 @@ RDEPEND="${CDEPEND}
 	libnotify? ( x11-libs/libnotify )"
 
 DOCS="AUTHORS Changelog NEWS README TODO"
-
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	confutils_use_depend_all libnotify X

@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.91 2010/06/20 19:15:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.92 2010/06/26 23:35:58 hwoarang Exp $
+
+*qbittorrent-2.3.0_beta3 (26 Jun 2010)
+*qbittorrent-2.2.10 (26 Jun 2010)
+
+  26 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +qbittorrent-2.2.10.ebuild, -qbittorrent-2.3.0_beta1.ebuild,
+  +qbittorrent-2.3.0_beta3.ebuild:
+  Version bump to 2.2.10 and 2.3.0_beta3
 
   20 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   +files/moc_bug_workaround2.patch, qbittorrent-2.2.9-r1.ebuild:
