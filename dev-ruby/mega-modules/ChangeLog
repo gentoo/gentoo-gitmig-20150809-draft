@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mega-modules
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mega-modules/ChangeLog,v 1.5 2010/05/22 15:23:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mega-modules/ChangeLog,v 1.6 2010/06/26 12:13:48 graaff Exp $
+
+*mega-modules-0.3.1-r1 (26 Jun 2010)
+
+  26 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  +mega-modules-0.3.1-r1.ebuild:
+  Convert to ruby-fakegem.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   mega-modules-0.3.1.ebuild:
