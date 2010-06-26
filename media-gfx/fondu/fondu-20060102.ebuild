@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/fondu-20060102.ebuild,v 1.3 2010/05/24 19:09:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fondu/fondu-20060102.ebuild,v 1.4 2010/06/26 13:36:13 nixnut Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://fondu.sourceforge.net/${PN}_src-${MY_PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}-${MY_PV}
