@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.31 2010/06/26 15:24:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.32 2010/06/26 15:27:58 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -9,6 +9,7 @@
 # due to lack of atomic ops, bug 325185
 net-libs/xulrunner -ipc
 www-client/mozilla-firefox -ipc
+www-client/icecat -ipc
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Apr 2010)
 # xf86-video-nouveau is supported on x86.
