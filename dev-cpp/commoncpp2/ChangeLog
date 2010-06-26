@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.52 2010/06/26 13:09:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.53 2010/06/26 16:47:05 angelos Exp $
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> commoncpp2-1.8.0.ebuild:
+  Stable on amd64 wrt bug #321931
 
   26 Jun 2010; <nixnut@gentoo.org> commoncpp2-1.8.0.ebuild:
   ppc stable #321931
