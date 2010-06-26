@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0-r1.ebuild,v 1.1 2010/06/26 11:50:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.0-r1.ebuild,v 1.2 2010/06/26 15:33:18 arfrever Exp $
 
 EAPI=2
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit autotools eutils python
 
@@ -18,17 +19,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc python ruby"
 
-RDEPEND="ruby? ( virtual/ruby )
-	python? ( virtual/python )"
+RDEPEND="ruby? ( virtual/ruby )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	ruby?  ( dev-lang/swig )
 	python? ( dev-lang/swig )"
 
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-multipy.patch
 	eautoreconf
-	echo "#!/${EPREFIX}/bin/bash" > py-compile
+	echo "#!/bin/bash" > py-compile
 }
 
 src_configure() {

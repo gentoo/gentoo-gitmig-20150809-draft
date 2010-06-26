@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.43 2010/06/26 11:50:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.44 2010/06/26 15:33:18 arfrever Exp $
+
+  26 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  geos-3.2.0-r1.ebuild:
+  Fix dependencies, set RESTRICT_PYTHON_ABIS and call python_pkg_setup()
+  (bug #316221).
 
 *geos-3.2.0-r1 (26 Jun 2010)
 
