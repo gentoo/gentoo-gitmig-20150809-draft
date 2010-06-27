@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.83 2010/05/08 18:16:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.84 2010/06/27 19:26:14 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> yaml-0.71.ebuild:
+  ppc stable #323529
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> yaml-0.71.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #314467

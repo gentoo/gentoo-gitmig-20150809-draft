@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/regexp-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.25 2010/05/08 18:15:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.26 2010/06/27 19:25:19 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> regexp-common-2010010201.ebuild:
+  ppc stable #323529
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org>
   regexp-common-2010010201.ebuild:

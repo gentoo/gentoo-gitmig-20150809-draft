@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVG
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.34 2010/06/21 20:21:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.35 2010/06/27 19:19:44 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> SVG-2.50.ebuild:
+  ppc stable #323529
 
   21 Jun 2010; Raúl Porcel <armin76@gentoo.org> SVG-2.50.ebuild:
   alpha/ia64/sparc stable wrt #323529

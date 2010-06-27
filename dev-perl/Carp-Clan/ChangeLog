@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.43 2010/05/08 17:50:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.44 2010/06/27 19:00:44 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> Carp-Clan-6.04.ebuild:
+  ppc stable #323529
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> Carp-Clan-6.04.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #314467

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.59 2010/03/23 18:29:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.60 2010/06/27 19:01:08 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> Clone-0.31.ebuild:
+  ppc stable #323529
 
   23 Mar 2010; Fabian Groffen <grobian@gentoo.org> Clone-0.31.ebuild:
   Marked ~x64-macos

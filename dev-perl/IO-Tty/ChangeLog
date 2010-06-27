@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tty
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.33 2010/05/08 17:59:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.34 2010/06/27 19:12:15 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> IO-Tty-1.08.ebuild:
+  ppc stable #323529
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> IO-Tty-1.08.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #314467

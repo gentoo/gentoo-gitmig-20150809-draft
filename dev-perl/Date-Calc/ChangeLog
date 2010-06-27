@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Calc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.46 2010/06/06 14:44:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.47 2010/06/27 19:03:15 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> Date-Calc-6.3.ebuild:
+  ppc stable #323529
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> Date-Calc-6.3.ebuild:
   arm stable wrt #300828

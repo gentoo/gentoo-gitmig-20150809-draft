@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Tagset
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.41 2010/04/17 09:03:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/ChangeLog,v 1.42 2010/06/27 19:11:29 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> HTML-Tagset-3.20.ebuild:
+  ppc stable #323529
 
   17 Apr 2010; Torsten Veller <tove@gentoo.org> HTML-Tagset-3.20.ebuild:
   Stable on amd64 (#314467)

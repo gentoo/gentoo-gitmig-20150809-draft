@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.60 2010/05/08 17:57:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.61 2010/06/27 19:11:05 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> Graph-0.94.ebuild:
+  ppc stable #323529
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> Graph-0.94.ebuild:
   alpha/ia64/sparc stable wrt #314467

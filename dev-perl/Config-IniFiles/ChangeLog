@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.43 2010/05/18 06:46:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.44 2010/06/27 19:01:37 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> Config-IniFiles-2.57.ebuild:
+  ppc stable #323529
 
 *Config-IniFiles-2.58 (18 May 2010)
 

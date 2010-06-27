@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.77 2010/05/08 17:59:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.78 2010/06/27 19:12:36 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> ImageInfo-1.30.ebuild:
+  ppc stable #323529
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> ImageInfo-1.30.ebuild:
   alpha/ia64/sparc stable wrt #314467

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Lite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.31 2010/05/08 18:01:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/ChangeLog,v 1.32 2010/06/27 19:13:20 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> MIME-Lite-3.027.ebuild:
+  ppc stable #323529
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org> MIME-Lite-3.027.ebuild:
   alpha/ia64/sparc stable wrt #314467
