@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.2.ebuild,v 1.2 2010/06/07 08:30:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.1 2010/06/27 08:21:40 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-62298
+MY_PV=${PV}-63112
 MY_P=VirtualBox-${MY_PV}-Linux
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
@@ -164,7 +164,7 @@ src_install() {
 
 	if ! use headless ; then
 		newicon VBox.png ${PN}.png
-		newmenu "${FILESDIR}"/${PN}.desktop ${PN}.desktop
+		newmenu "${FILESDIR}"/${PN}-2.desktop ${PN}.desktop
 	fi
 
 	insinto /opt/VirtualBox
