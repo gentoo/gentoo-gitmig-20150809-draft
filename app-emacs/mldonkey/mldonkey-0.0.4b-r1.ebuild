@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/mldonkey-0.0.4b-r1.ebuild,v 1.6 2008/08/28 08:15:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/mldonkey-0.0.4b-r1.ebuild,v 1.7 2010/06/27 07:31:35 fauli Exp $
 
 inherit elisp eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=net-p2p/mldonkey-2.9.2"
+RDEPEND=""
+DEPEND=""
 
 SITEFILE=51${PN}-gentoo.el
 S="${WORKDIR}/${MY_P}"
@@ -36,4 +37,6 @@ pkg_postinst() {
 	ewarn "If your network gets really slow when you use mldonkey,"
 	ewarn "consider reducing the max number of connections. See bug #50510."
 	ewarn
+	einfo "Remember to install net-p2p/mldonkey separately if you want to work"
+	einfo "with a local instance."
 }
