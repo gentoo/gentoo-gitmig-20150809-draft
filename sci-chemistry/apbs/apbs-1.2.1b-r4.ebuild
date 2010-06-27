@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.4 2010/06/26 18:29:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.5 2010/06/27 14:16:21 nixnut Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.gz"
 SLOT="0"
 LICENSE="BSD"
 IUSE="arpack doc mpi openmp python tinker tools"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="dev-libs/maloc[mpi=]
 	virtual/blas
