@@ -1,6 +1,10 @@
 # ChangeLog for net-im/openfire
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.35 2009/05/22 19:47:16 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.36 2010/06/27 21:46:33 caster Exp $
+
+  27 Jun 2010; Vlastimil Babka <caster@gentoo.org> openfire-3.6.4.ebuild,
+  +files/buildxml-ant.patch:
+  Fix building with ant 1.8, bug #305929.
 
   22 May 2009; Markus Meier <maekke@gentoo.org> openfire-3.6.4.ebuild:
   amd64 stable, bug #266129
