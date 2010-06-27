@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.103 2010/06/24 01:15:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.104 2010/06/27 09:35:23 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  pinentry-0.8.0.ebuild:
+  add ~x86-freebsd
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> pinentry-0.8.0.ebuild:
   Stable on amd64 wrt bug #299388
