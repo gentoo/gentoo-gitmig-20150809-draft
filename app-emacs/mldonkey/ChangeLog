@@ -1,12 +1,12 @@
 # ChangeLog for app-emacs/mldonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.22 2010/06/27 07:31:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.23 2010/06/27 07:37:02 fauli Exp $
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   mldonkey-0.0.4b-r1.ebuild:
   remove dependency on net-p2p/mldonkey as a remote instance can be
   controlled without any version locally, see bug 325777 by Pascal
-  Bourguignon <pjb AT informatimago DOT com>
+  Bourguignon <pjb AT informatimago DOT com>.
 
   28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> mldonkey-0.0.4b-r1.ebuild:
   Use elisp-compile instead of elisp-comp, bug 235442.
