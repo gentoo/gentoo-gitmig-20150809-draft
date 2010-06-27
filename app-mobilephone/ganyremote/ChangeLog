@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/ganyremote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.3 2010/03/23 18:01:39 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.4 2010/06/27 11:57:21 angelos Exp $
+
+  27 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  ganyremote-5.11.3-r1.ebuild:
+  Stable on amd64 wrt bug #325803
 
 *ganyremote-5.11.3-r1 (22 Mar 2010)
 
