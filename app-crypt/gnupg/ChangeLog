@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.373 2010/05/30 20:01:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.374 2010/06/27 08:18:35 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> gnupg-2.0.15.ebuild:
+  stable x86, bug 320037
 
   30 May 2010; Fabian Groffen <grobian@gentoo.org> gnupg-2.0.15.ebuild:
   Marked ~sparc-solaris, ~sparc64-solaris, ~x64-macos
