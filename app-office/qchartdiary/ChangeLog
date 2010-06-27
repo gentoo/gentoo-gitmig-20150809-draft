@@ -1,6 +1,10 @@
 # ChangeLog for app-office/qchartdiary
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/ChangeLog,v 1.3 2010/01/01 11:32:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/ChangeLog,v 1.4 2010/06/27 09:11:20 angelos Exp $
+
+  27 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  qchartdiary-0.6.4.1-r2.ebuild:
+  Stable on amd64 wrt bug #325713
 
 *qchartdiary-0.6.4.1-r2 (01 Jan 2010)
 
