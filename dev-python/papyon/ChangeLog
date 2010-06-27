@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/papyon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.8 2010/05/16 18:19:02 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.9 2010/06/27 12:27:23 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> papyon-0.4.2.ebuild:
+  ppc stable #321591
 
 *papyon-0.4.6 (16 May 2010)
 

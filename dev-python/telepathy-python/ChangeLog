@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/telepathy-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.23 2010/05/16 18:20:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.24 2010/06/27 12:28:47 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> telepathy-python-0.15.17.ebuild:
+  ppc stable #321591
 
 *telepathy-python-0.15.17 (16 May 2010)
 
