@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5720 2010/06/26 16:47:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5721 2010/06/27 19:07:56 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3060,10 +3060,12 @@ sci-chemistry/eden:double-precision - More precise calculations at the expense o
 sci-chemistry/gamess:qmmm-tinker - Enable tinker qmmm code
 sci-chemistry/ghemical:openbabel - Use sci-chemistry/openbabel for file conversions
 sci-chemistry/ghemical:toolbar - Build the shortcuts toolbar
-sci-chemistry/gromacs:dmalloc - Enable debugging with the dmalloc library
+sci-chemistry/gromacs:dmalloc - Enable use of Debug Malloc
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
+sci-chemistry/gromacs:ffamber - Enable ffamber ports for gromacs
 sci-chemistry/gromacs:fkernels - Enable building of Fortran Kernels for platforms that dont have assembly loops
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs
+sci-chemistry/gromacs:zsh-completion - Enable zsh completion support
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd 
 sci-chemistry/mopac7:gmxmopac7 - Add support library for gromacs
 sci-chemistry/oasis:minimal - Restricts functionality on free software
