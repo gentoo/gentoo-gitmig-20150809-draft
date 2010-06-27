@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.83 2010/06/24 21:32:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.84 2010/06/27 12:05:49 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> worker-2.17.6.ebuild:
+  ppc stable #324373
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> worker-2.17.6.ebuild:
   stable amd64, bug 324373
