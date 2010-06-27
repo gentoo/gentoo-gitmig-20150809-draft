@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjsw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.19 2010/06/24 21:03:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.20 2010/06/27 12:20:05 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> libjsw-1.5.8.ebuild:
+  ppc stable #325157
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> libjsw-1.5.8.ebuild:
   stable amd64, bug 325157
