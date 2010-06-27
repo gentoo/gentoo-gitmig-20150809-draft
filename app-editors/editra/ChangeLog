@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.14 2010/05/22 20:34:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.15 2010/06/27 02:51:52 dirtyepic Exp $
+
+*editra-0.5.72 (27 Jun 2010)
+
+  27 Jun 2010; Ryan Hill <dirtyepic@gentoo.org> +editra-0.5.72.ebuild:
+  Version bump. Improved HTML/XML autoindent and autocomp. Bug fixes.
 
 *editra-0.5.60 (22 May 2010)
 
