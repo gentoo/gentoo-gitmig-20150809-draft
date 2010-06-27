@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.49 2010/06/27 10:03:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.50 2010/06/27 10:56:23 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> feh-1.8.ebuild:
+  stable x86, security bug 325531
 
   27 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> feh-1.8.ebuild:
   Run testsuite only if perl is at least 5.10 wrt #325531 (Comment #5) by
