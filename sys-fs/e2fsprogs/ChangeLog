@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.212 2010/06/23 21:43:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.213 2010/06/27 11:51:17 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> e2fsprogs-1.41.11.ebuild:
+  ppc stable #323893
 
   23 Jun 2010; Christoph Mende <angelos@gentoo.org>
   e2fsprogs-1.41.11.ebuild:
