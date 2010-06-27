@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.3.3.ebuild,v 1.7 2010/06/26 04:41:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/pastedeploy-1.3.3.ebuild,v 1.8 2010/06/27 23:09:47 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,8 +21,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="doc test"
 
-RDEPEND=""
-DEPEND="dev-python/setuptools
+RDEPEND="dev-python/paste
+	dev-python/setuptools"
+DEPEND="${RDEPEND}
 	doc? ( dev-python/pygments dev-python/sphinx )"
 RESTRICT_PYTHON_ABIS="3.*"
 

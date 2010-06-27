@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/pastescript-1.7.3.ebuild,v 1.5 2010/06/27 22:59:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/pastescript-1.7.3.ebuild,v 1.6 2010/06/27 23:10:13 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,11 +22,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc"
 
-RDEPEND=">=dev-python/paste-1.3
+RDEPEND="dev-python/cheetah
+	>=dev-python/paste-1.3
 	dev-python/pastedeploy
-	dev-python/cheetah"
+	dev-python/setuptools"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
 	doc? ( dev-python/pygments dev-python/sphinx )"
 
 # Tests are broken.
