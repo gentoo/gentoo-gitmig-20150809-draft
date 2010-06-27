@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.4 2010/06/27 08:31:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.5 2010/06/27 11:47:09 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> subversion-1.6.11.ebuild:
+  ppc stable #325425
 
   27 Jun 2010; Christoph Mende <angelos@gentoo.org>
   subversion-1.6.11.ebuild:
