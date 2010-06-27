@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.288 2010/06/13 20:36:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.289 2010/06/27 10:19:33 pacho Exp $
+
+  27 Jun 2010; Pacho Ramos <pacho@gentoo.org> totem-2.30.0-r1.ebuild:
+  Drop bluez-libs dependency for the last one, thanks to Samuli for
+  reporting.
 
 *totem-2.30.0-r1 (13 Jun 2010)
 
