@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.65 2010/06/26 15:28:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.66 2010/06/27 13:38:31 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,13 +34,9 @@ x11-base/xorg-drivers -video_cards_nouveau
 sys-power/pm-utils -video_cards_intel -video_cards_radeon
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Feb 2009)
-# esd, bug 301824
-# mp3, bug 283860, bug 299490
-# capi, bug 292938
-# ghoto2, bug 286563
-# scanner, bug 299505
-# hal, bug 299149
-app-emulation/wine capi esd gphoto2 hal mp3 scanner
+# esd (#301824), capi (#292938), ghoto2 (#286563),
+# scanner (#299505), hal (#299149)
+app-emulation/wine capi esd gphoto2 hal scanner
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka closurecl) is only available on x86 and amd64

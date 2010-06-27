@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.91 2010/06/26 15:28:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.92 2010/06/27 13:38:31 ssuominen Exp $
+
+  27 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE="mp3" for app-emulation/wine because
+  emul-linux-x86-soundlibs-20100611 is stable and has working libmpg123.so
+  for multilib.
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Forgot to unmask icecat too
