@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/fusefs-0.6.0-r1.ebuild,v 1.1 2010/06/25 07:14:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fusefs/fusefs-0.6.0-r1.ebuild,v 1.2 2010/06/27 04:33:13 mr_bones_ Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -26,7 +26,6 @@ each_ruby_install() {
 	${RUBY} setup.rb config --prefix="${D}" || die
 	${RUBY} setup.rb install || die
 }
-
 
 all_ruby_install() {
 	dodoc API.txt Changes.txt README.txt TODO || die
