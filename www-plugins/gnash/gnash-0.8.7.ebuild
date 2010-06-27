@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.6 2010/06/21 13:12:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7.ebuild,v 1.7 2010/06/27 12:52:11 chithanh Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="never"
@@ -58,6 +58,7 @@ RDEPEND=">=dev-libs/boost-1.35.0
 	gtk? ( x11-libs/gtkglext )
 	)
 	sdl? ( media-libs/libsdl[X] )
+	!kde? ( !gtk? ( media-libs/libsdl[X] ) )
 	nsplugin? ( net-libs/xulrunner:1.9 )
 	media-libs/speex[ogg]
 	sys-libs/zlib
@@ -84,8 +85,8 @@ pkg_setup() {
 
 	if ! ( use kde || use gtk || use sdl ); then
 		ewarn "You are trying to build Gnash without choosing a gui frontend [gtk,kde,sdl]."
-		has_version media-libs/libsdl[X] && ewarn "sdl enabled as default" \
-			|| die "Please enable at least one of these USE flags."
+		ewarn "sdl enabled as default"
+#		die "Please enable at least one of these USE flags."
 	fi
 
 	if use python && use !gtk; then
