@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-Command
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.1 2010/06/27 00:10:03 ssuominen Exp $
+
+*Test-Command-0.08 (27 Jun 2010)
+
+  27 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +Test-Command-0.08.ebuild:
+  Initial commit wrt #325781 by Markos Chandras.
+
