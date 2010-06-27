@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.4.ebuild,v 1.1 2010/06/26 04:27:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.4.ebuild,v 1.2 2010/06/27 23:17:11 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,10 +22,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris"
 IUSE="doc flup openid"
 
-RDEPEND="flup? ( dev-python/flup )
+RDEPEND="dev-python/setuptools
+	flup? ( dev-python/flup )
 	openid? ( dev-python/python-openid )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 
 S="${WORKDIR}/${MY_P}"
@@ -58,10 +58,7 @@ src_compile() {
 
 # Define custom src_test() due to requirement of PYTHONPATH=".".
 src_test() {
-	testing() {
-		PYTHONPATH="." nosetests
-	}
-	python_execute_function testing
+	python_execute_nosetests -P .
 }
 
 src_install() {
