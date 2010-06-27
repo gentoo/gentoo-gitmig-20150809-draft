@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.321 2010/06/25 17:56:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.322 2010/06/27 12:27:27 polynomial-c Exp $
+
+*xulrunner-1.9.2.6 (27 Jun 2010)
+
+  27 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +xulrunner-1.9.2.6.ebuild:
+  Version bump. Thanks to tman who reported this in bug #325817.
 
   25 Jun 2010; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.2.4.ebuild:
   alpha/arm/ia64/sparc stable wrt #324735
