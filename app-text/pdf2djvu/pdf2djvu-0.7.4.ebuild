@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.4.ebuild,v 1.1 2010/06/23 10:22:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.4.ebuild,v 1.2 2010/06/27 00:41:15 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -32,6 +32,12 @@ src_configure() {
 		--${openmp}-openmp \
 		$(use_enable nls) \
 		$(use_with graphicsmagick)
+}
+
+src_test() {
+	if use graphicsmagick; then
+		emake test || die
+	fi
 }
 
 src_install() {
