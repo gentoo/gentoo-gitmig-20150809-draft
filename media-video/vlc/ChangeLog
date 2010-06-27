@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.599 2010/06/26 09:22:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.600 2010/06/27 18:06:11 armin76 Exp $
+
+  27 Jun 2010; Raúl Porcel <armin76@gentoo.org> vlc-1.1.0.ebuild:
+  Re-add ~alpha/~arm/~sparc wrt #325007
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> vlc-1.0.6.ebuild:
   Increase the minimum dependency of xulrunner to 1.9, remove configure
