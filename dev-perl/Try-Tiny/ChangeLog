@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.5 2010/05/28 06:28:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.6 2010/06/27 16:29:34 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> Try-Tiny-0.02.ebuild:
+  ppc stable #323529
 
 *Try-Tiny-0.06 (28 May 2010)
 

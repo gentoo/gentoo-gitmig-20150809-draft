@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Exporter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.5 2009/12/02 09:41:44 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.6 2010/06/27 16:30:38 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> Sub-Exporter-0.982.ebuild:
+  ppc stable #323529
 
   02 Dec 2009; Torsten Veller <tove@gentoo.org> Sub-Exporter-0.982.ebuild:
   Stable on amd64 and x86 (#293622)
