@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/plruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.13 2010/06/17 19:54:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plruby/ChangeLog,v 1.14 2010/06/27 07:38:03 graaff Exp $
+
+*plruby-0.5.4 (27 Jun 2010)
+
+  27 Jun 2010; Hans de Graaff <graaff@gentoo.org> +plruby-0.5.4.ebuild,
+  +files/plruby-0.5.4-fix-build-system.patch:
+  Version bump. Convert to ruby-ng. Fix build system to work with other ruby
+  versions installed.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> plruby-0.4.2.ebuild,
   plruby-0.5.3.ebuild:
