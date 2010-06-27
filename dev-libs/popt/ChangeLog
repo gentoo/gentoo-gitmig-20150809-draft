@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.86 2010/06/24 21:40:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.87 2010/06/27 11:52:50 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> popt-1.16.ebuild:
+  ppc stable #324619
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> popt-1.16.ebuild:
   stable amd64, bug 324619
