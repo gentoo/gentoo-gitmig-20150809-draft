@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/podcast
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.6 2010/05/22 15:35:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.7 2010/06/27 17:47:56 graaff Exp $
+
+*podcast-0.0.4-r1 (27 Jun 2010)
+
+  27 Jun 2010; Hans de Graaff <graaff@gentoo.org> +podcast-0.0.4-r1.ebuild:
+  Convert to ruby-fakegem.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   podcast-0.0.4.ebuild:
