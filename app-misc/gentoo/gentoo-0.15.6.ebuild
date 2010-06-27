@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.15.6.ebuild,v 1.1 2010/02/08 09:25:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.15.6.ebuild,v 1.2 2010/06/27 21:52:28 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -19,6 +19,12 @@ RDEPEND="x11-libs/gtk+:2
 	fam? ( virtual/fam )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+src_prepare() {
+	sed -i \
+		-e '/GTK_DISABLE_DEPRECATED/d' \
+		src/odmultibutton.c || die
+}
 
 src_configure() {
 	econf \
@@ -41,9 +47,4 @@ src_install() {
 	make_desktop_entry ${PN} Gentoo \
 		/usr/share/${PN}/icons/${PN}.png \
 		"System;FileTools;FileManager"
-}
-
-pkg_postinst() {
-	elog "This package doesn't have anything to do with the Gentoo Foundation"
-	elog "or Gentoo Linux in general. The name is just a coincidence."
 }
