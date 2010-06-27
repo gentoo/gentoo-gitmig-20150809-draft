@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/gst-plugins-dv-0.10.21.ebuild,v 1.2 2010/06/24 10:26:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/gst-plugins-dv-0.10.21.ebuild,v 1.3 2010/06/27 13:30:20 nixnut Exp $
 
 inherit gst-plugins-good
 
 DESCRIPTION="GStreamer plugin to demux and decode DV"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libdv-0.100
