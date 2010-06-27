@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/syslog-notify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/ChangeLog,v 1.1 2010/03/02 16:43:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/ChangeLog,v 1.2 2010/06/27 09:19:47 angelos Exp $
+
+  27 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  syslog-notify-0.1.ebuild:
+  Stable on amd64 wrt bug #325755
 
 *syslog-notify-0.1 (02 Mar 2010)
 
