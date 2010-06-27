@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.3 2010/06/17 21:23:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.4 2010/06/27 18:20:47 angelos Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde libsamplerate melt
 mmx qt4 quicktime sdl sse sse2 vorbis xine xml lua python ruby vdpau" # java perl php tcl
 

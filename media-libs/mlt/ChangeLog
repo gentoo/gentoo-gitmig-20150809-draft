@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.60 2010/06/17 21:23:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.61 2010/06/27 18:20:47 angelos Exp $
+
+  27 Jun 2010; Christoph Mende <angelos@gentoo.org> mlt-0.5.4.ebuild:
+  Stable on amd64 wrt bug #325727
 
   17 Jun 2010; Sebastian Pipping <sping@gentoo.org> mlt-0.4.6.ebuild,
   mlt-0.5.4.ebuild:
