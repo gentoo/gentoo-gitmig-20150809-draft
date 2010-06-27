@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20100615.ebuild,v 1.1 2010/06/24 12:28:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20100625.ebuild,v 1.1 2010/06/27 13:27:10 jlec Exp $
 
 EAPI="3"
 
-inherit flag-o-matic fortran multilib toolchain-funcs
+inherit eutils flag-o-matic fortran multilib toolchain-funcs
 
 FORTRAN="g77 gfortran"
 
@@ -38,14 +38,18 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	gunzip platon.f.Z xdrvr.c.gz
+	gunzip platon.f.Z xdrvr.c.gz || die
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-buffer-overflow.patch
 }
 
 src_compile() {
 	# easy to ICE, at least on gcc 4.3
 	strip-flags
 
-	COMMAND="$(tc-getCC) -c ${CFLAGS} -O0 xdrvr.c"
+	COMMAND="$(tc-getCC) -c ${CFLAGS} xdrvr.c"
 	echo ${COMMAND}
 	${COMMAND} || die "Compilation of xdrvr.c failed"
 	COMMAND="${FORTRANC} -c ${FFLAGS:- -O2} -fno-second-underscore platon.f"

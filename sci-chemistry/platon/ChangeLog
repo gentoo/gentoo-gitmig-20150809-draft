@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.17 2010/06/24 12:28:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.18 2010/06/27 13:27:10 jlec Exp $
+
+*platon-20100625 (27 Jun 2010)
+
+  27 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  +files/20100625-buffer-overflow.patch, -platon-20100615.ebuild,
+  +platon-20100625.ebuild:
+  Version Bump, fix for bufferoverflow, #325065
 
 *platon-20100615 (24 Jun 2010)
 
