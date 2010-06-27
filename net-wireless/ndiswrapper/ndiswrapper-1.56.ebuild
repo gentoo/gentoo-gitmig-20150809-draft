@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.56.ebuild,v 1.1 2010/06/22 21:42:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.56.ebuild,v 1.2 2010/06/27 09:05:43 angelos Exp $
 
 EAPI=2
 inherit base linux-mod toolchain-funcs
@@ -31,6 +31,7 @@ pkg_setup() {
 	CONFIG_CHECK="WIRELESS_EXT"
 	use usb && CONFIG_CHECK="${CONFIG_CHECK} USB"
 	ERROR_USB="You need to enable USB support in your kernel to use usb support in ndiswrapper."
+	ERROR_WIRELESS_EXT="Starting with 2.6.33 it is not possible to select WIRELESS_EXT anymore, you have to enable a wireless driver that enables WIRELESS_EXT, for example PRISM54 or IPW2200"
 	linux-mod_pkg_setup
 }
 

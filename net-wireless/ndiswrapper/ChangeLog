@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.109 2010/06/22 21:42:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.110 2010/06/27 09:05:43 angelos Exp $
+
+  27 Jun 2010; Christoph Mende <angelos@gentoo.org> ndiswrapper-1.56.ebuild:
+  Added a more verbose error message for WIRELESS_EXT (bug 325783)
 
 *ndiswrapper-1.56 (22 Jun 2010)
 
