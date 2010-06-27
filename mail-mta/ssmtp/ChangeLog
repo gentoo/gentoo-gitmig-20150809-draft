@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.94 2010/04/25 23:28:42 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.95 2010/06/27 09:18:44 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> ssmtp-2.62-r8.ebuild:
+  add ~x86-freebsd
 
 *ssmtp-2.62-r8 (25 Apr 2010)
 
