@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.63 2010/06/27 17:52:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.64 2010/06/27 18:08:33 armin76 Exp $
 
   27 Jun 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Use.mask vaapi
+  Use.mask vaapi/rtmp/vpx
 
   26 Jun 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Use.mask custom-optimization
