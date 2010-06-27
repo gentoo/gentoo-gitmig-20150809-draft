@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/ExtUtils-ParseXS
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ChangeLog,v 1.27 2010/06/21 19:48:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ChangeLog,v 1.28 2010/06/27 19:06:55 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> ExtUtils-ParseXS-2.22.05.ebuild:
+  ppc stable #323529
 
   21 Jun 2010; Raúl Porcel <armin76@gentoo.org>
   ExtUtils-ParseXS-2.22.05.ebuild:
