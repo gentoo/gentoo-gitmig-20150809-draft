@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-farsight
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.8 2010/02/19 19:21:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.9 2010/06/27 12:25:39 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> telepathy-farsight-0.0.11.ebuild:
+  ppc stable #321591
 
   19 Feb 2010; Raúl Porcel <armin76@gentoo.org>
   telepathy-farsight-0.0.9.ebuild, telepathy-farsight-0.0.11.ebuild:
