@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gsoap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.10 2010/06/03 22:02:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.11 2010/06/27 16:03:18 xarthisius Exp $
+
+  27 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> gsoap-2.7.17.ebuild:
+  Adding missing dependency on app-arch/unzip.
 
   03 Jun 2010; Lars Wendler <polynomial-c@gentoo.org> -gsoap-2.7.14.ebuild,
   gsoap-2.7.17.ebuild:
