@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.66 2010/05/26 15:37:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.67 2010/06/27 08:14:04 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  libassuan-2.0.0.ebuild:
+  stable x86, bug 320037
 
   26 May 2010; Markos Chandras <hwoarang@gentoo.org> libassuan-2.0.0.ebuild:
   Stable on amd64 wrt bug #320037
