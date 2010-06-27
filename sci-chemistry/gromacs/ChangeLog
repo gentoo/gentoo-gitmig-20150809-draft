@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.50 2010/06/24 13:08:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.51 2010/06/27 19:06:33 alexxy Exp $
+
+*gromacs-4.0.7-r3 (27 Jun 2010)
+
+  27 Jun 2010; Alexey Shvetsov <alexxy@gentoo.org> -gromacs-4.0.7.ebuild,
+  -gromacs-4.0.7-r1.ebuild, +gromacs-4.0.7-r3.ebuild,
+  -files/gromacs-4.0.7-docdir.patch,
+  +files/gromacs-4.0.7_upstream2010-06-08.patch:
+  Added patches from upstream stable branch. Added ffamber ports. Also fixed
+  bugs #301854 and #284431. Big thank to Christoph Junghans
 
   24 Jun 2010; Justin Lecher <jlec@gentoo.org> gromacs-3.3.1-r1.ebuild,
   gromacs-3.3.3.ebuild:
