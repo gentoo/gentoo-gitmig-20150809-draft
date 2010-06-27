@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/maloc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.17 2010/06/22 06:31:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.18 2010/06/27 14:14:27 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> maloc-0.2.1-r3.ebuild:
+  ppc stable #324321
 
   22 Jun 2010; Justin Lecher <jlec@gentoo.org> -maloc-0.1.3.ebuild:
   Dropping old version having issues on 64bit, 324321

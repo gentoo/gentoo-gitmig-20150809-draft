@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.2.1-r3.ebuild,v 1.2 2010/06/21 20:27:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.2.1-r3.ebuild,v 1.3 2010/06/27 14:14:27 nixnut Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI=" http://cam.ucsd.edu/~mholst/codes/${PN}/${PN}-${MY_PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="mpi static-libs"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 
 DEPEND="
 	sys-libs/readline
