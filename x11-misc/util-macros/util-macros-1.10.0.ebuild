@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/util-macros-1.5.0.ebuild,v 1.6 2010/02/26 09:32:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/util-macros-1.10.0.ebuild,v 1.1 2010/06/27 08:46:11 scarabeus Exp $
 
-inherit x-modular
+EAPI=3
+inherit xorg-2
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/util/macros"
 DESCRIPTION="X.Org autotools utility macros"
