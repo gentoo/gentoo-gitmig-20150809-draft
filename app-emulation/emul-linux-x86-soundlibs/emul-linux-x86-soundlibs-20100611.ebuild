@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20100611.ebuild,v 1.1 2010/06/11 14:42:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20100611.ebuild,v 1.2 2010/06/27 13:20:26 ssuominen Exp $
 
 inherit emul-linux-x86
 
 LICENSE="as-is BSD GPL-2 LGPL-2 LGPL-2.1 gsm"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="alsa pulseaudio"
 
 RDEPEND="pulseaudio? ( media-sound/pulseaudio )
