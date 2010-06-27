@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.56 2010/06/24 22:01:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.57 2010/06/27 14:06:49 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> openresolv-3.3.4.ebuild:
+  ppc stable #323887
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> openresolv-3.3.4.ebuild:
   stable amd64, bug 323887
