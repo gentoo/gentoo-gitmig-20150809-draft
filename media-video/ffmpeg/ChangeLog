@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.359 2010/06/22 08:57:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.360 2010/06/27 18:20:53 armin76 Exp $
+
+  27 Jun 2010; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.6.ebuild:
+  Re-add ~alpha/~arm/~ia64/~sparc wrt #324941
 
   22 Jun 2010; Christian Faulhammer <fauli@gentoo.org> ffmpeg-0.6.ebuild:
   add ~x86, bug 324941
