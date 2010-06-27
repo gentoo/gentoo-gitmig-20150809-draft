@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.25 2010/03/11 13:55:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.26 2010/06/27 13:58:11 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> mpeg-tools-1.5b-r3.ebuild:
+  ~ppc added
 
   11 Mar 2010; Joseph Jezak <josejx@gentoo.org> mpeg-tools-1.5b-r4.ebuild,
   +files/mpeg-tools-1.5b-powerpc.patch:
