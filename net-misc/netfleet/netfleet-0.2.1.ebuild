@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netfleet/netfleet-0.2.1.ebuild,v 1.1 2010/05/21 15:30:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netfleet/netfleet-0.2.1.ebuild,v 1.2 2010/06/27 11:37:28 angelos Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://netfleet.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 DEPEND=">=x11-libs/qt-gui-4.5.0:4"
