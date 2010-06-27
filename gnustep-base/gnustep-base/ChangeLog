@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.97 2010/06/26 16:27:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.98 2010/06/27 13:50:51 phajdan.jr Exp $
+
+  27 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnustep-base-1.20.1.ebuild:
+  x86 stable wrt security bug #325577
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org>
   gnustep-base-1.20.1.ebuild:

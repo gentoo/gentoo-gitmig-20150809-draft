@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.22 2010/06/26 16:36:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.23 2010/06/27 13:55:59 phajdan.jr Exp $
+
+  27 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnustep-back-cairo-0.18.0.ebuild:
+  x86 stable wrt security bug #325577
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org>
   gnustep-back-cairo-0.18.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.90 2010/06/26 16:26:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.91 2010/06/27 13:49:22 phajdan.jr Exp $
+
+  27 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnustep-make-2.4.0.ebuild:
+  x86 stable wrt security bug #325577
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org>
   gnustep-make-2.4.0.ebuild:
