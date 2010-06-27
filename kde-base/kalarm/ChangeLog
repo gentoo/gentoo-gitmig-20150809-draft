@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.149 2010/06/24 06:50:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.150 2010/06/27 09:44:04 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> kalarm-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> kalarm-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.150 2010/06/24 06:59:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.151 2010/06/27 10:12:09 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> kbounce-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> kbounce-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

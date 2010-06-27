@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.143 2010/06/24 07:05:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.144 2010/06/27 10:30:52 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> kcminit-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> kcminit-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

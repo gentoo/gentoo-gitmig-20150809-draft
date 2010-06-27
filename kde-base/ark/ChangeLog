@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.158 2010/06/24 06:40:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.159 2010/06/27 09:08:31 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> ark-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> ark-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791
