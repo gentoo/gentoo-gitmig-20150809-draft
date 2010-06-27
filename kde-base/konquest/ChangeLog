@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.151 2010/06/24 09:03:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.152 2010/06/27 21:16:00 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  konquest-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> konquest-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

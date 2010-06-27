@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.13 2010/06/26 02:05:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.14 2010/06/27 17:45:12 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  kdebindings-ruby-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   26 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   kdebindings-ruby-4.4.4.ebuild:

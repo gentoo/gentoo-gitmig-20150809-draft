@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.75 2010/06/24 07:58:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.76 2010/06/27 18:25:35 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  kdepimlibs-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> kdepimlibs-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

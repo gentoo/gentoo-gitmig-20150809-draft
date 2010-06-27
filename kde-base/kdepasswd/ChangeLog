@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.164 2010/06/24 07:55:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.165 2010/06/27 18:18:27 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  kdepasswd-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> kdepasswd-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791
