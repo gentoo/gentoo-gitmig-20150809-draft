@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.1 2010/06/27 08:21:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.2 2010/06/27 13:33:26 polynomial-c Exp $
 
 EAPI=2
 
@@ -51,7 +51,7 @@ RDEPEND="!!app-emulation/virtualbox-ose
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXdmcp
-	python? ( dev-lang/python )"
+	python? ( || ( dev-lang/python:2.4 dev-lang/python:2.6 ) )"
 
 S=${WORKDIR}
 
@@ -204,10 +204,6 @@ src_install() {
 	if use python; then
 		if has_version "=dev-lang/python-2.4*"; then
 			doins VBoxPython2_4.so || die
-		fi
-
-		if has_version "=dev-lang/python-2.5*"; then
-			doins VBoxPython2_5.so || die
 		fi
 
 		if has_version "=dev-lang/python-2.6*"; then
