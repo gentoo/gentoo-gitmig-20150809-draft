@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.50 2010/06/24 05:39:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.51 2010/06/27 08:52:40 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> soprano-2.4.3.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> soprano-2.4.3.ebuild:
   Stable on amd64 wrt bug #322791
