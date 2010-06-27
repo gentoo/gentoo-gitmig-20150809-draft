@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/squeezeboxserver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/ChangeLog,v 1.7 2010/06/10 14:30:34 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/ChangeLog,v 1.8 2010/06/27 08:06:09 lavajoe Exp $
+
+*squeezeboxserver-7.5.1 (27 Jun 2010)
+
+  27 Jun 2010; Joe Peterson <lavajoe@gentoo.org>
+  +squeezeboxserver-7.5.1.ebuild,
+  +files/squeezeboxserver-7.5.1-build-perl-modules-gentoo.patch,
+  +files/squeezeboxserver-7.5.1-squeezeslave.patch,
+  +files/squeezeboxserver-7.5.1-uuid-gentoo.patch:
+  Add new version 7.5.1
 
 *squeezeboxserver-7.4.2-r2 (10 Jun 2010)
 
