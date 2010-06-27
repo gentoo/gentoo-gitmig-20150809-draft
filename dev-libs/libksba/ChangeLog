@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.111 2010/05/30 19:54:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.112 2010/06/27 09:26:19 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> libksba-1.0.7.ebuild:
+  add ~x86-freebsd
 
   30 May 2010; Fabian Groffen <grobian@gentoo.org> libksba-1.0.7.ebuild:
   Marked ~sparc-solaris, ~sparc64-solaris
