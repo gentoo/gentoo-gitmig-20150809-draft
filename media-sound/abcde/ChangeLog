@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/abcde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.46 2010/06/24 21:29:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.47 2010/06/27 11:58:33 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> abcde-2.4.1.ebuild:
+  ppc stable #322861
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> abcde-2.4.1.ebuild:
   stable amd64, bug 322861
