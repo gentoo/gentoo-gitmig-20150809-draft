@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/starparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/ChangeLog,v 1.3 2010/06/24 11:02:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/ChangeLog,v 1.4 2010/06/27 12:33:35 xarthisius Exp $
+
+*starparse-1.0-r1 (27 Jun 2010)
+
+  27 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +starparse-1.0-r1.ebuild, +files/starparse-1.0-guile1.8.patch:
+  Fix building with guile-1.8 and tests wrt bug 325731. Thanks to Diego for
+  reporting.
 
 *starparse-1.0 (24 Jun 2010)
 
