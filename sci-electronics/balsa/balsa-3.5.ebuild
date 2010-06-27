@@ -1,11 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.5.ebuild,v 1.4 2010/06/24 17:26:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-3.5.ebuild,v 1.5 2010/06/27 04:33:54 mr_bones_ Exp $
 
 EAPI="1"
 
 inherit eutils
-
 
 DESCRIPTION="The Balsa asynchronous synthesis system"
 HOMEPAGE="http://www.cs.manchester.ac.uk/apt/projects/tools/balsa/"
