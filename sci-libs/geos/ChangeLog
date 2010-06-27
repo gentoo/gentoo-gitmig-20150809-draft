@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.45 2010/06/26 18:11:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.46 2010/06/27 18:28:03 jlec Exp $
+
+  27 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/3.2.0-python.patch,
+  geos-3.2.0-r1.ebuild:
+  More inteligent search in configure for python stuff
 
   26 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   +files/3.2.0-swig2.0.patch, geos-3.2.0-r1.ebuild:
