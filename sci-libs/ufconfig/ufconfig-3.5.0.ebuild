@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.5.0.ebuild,v 1.4 2010/06/24 21:08:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.5.0.ebuild,v 1.5 2010/06/27 10:08:31 xarthisius Exp $
 
 inherit multilib toolchain-funcs
 
@@ -26,7 +26,7 @@ src_compile() {
 		echo "$(tc-getCC) ${CFLAGS} -c UFconfig.c -o UFconfig.o"
 		$(tc-getCC) ${CFLAGS} -c UFconfig.c -o UFconfig.o || die
 		echo "$(tc-getAR) libufconfig.a UFconfig.o"
-		$(tc-getAR) libufconfig.a UFconfig.o
+		$(tc-getAR) cr libufconfig.a UFconfig.o
 	fi
 }
 
