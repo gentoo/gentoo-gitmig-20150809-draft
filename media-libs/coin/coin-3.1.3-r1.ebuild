@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.1 2010/06/26 14:26:12 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.2 2010/06/27 05:37:07 reavertm Exp $
 
 EAPI=2
 
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE="bzip2 debug doc javascript openal simage static-libs threads zlib"
 
+# NOTE: expat is not really needed as --enable-system-expat is broken
 RDEPEND="
 	dev-libs/expat
 	media-libs/fontconfig
@@ -50,8 +51,7 @@ PATCHES=(
 )
 
 src_configure() {
-	# Unforunately it links to static expat...
-	append-cppflags -I/usr/include/freetype2 -DUSE_SYSTEM_EXPAT
+	append-cppflags -I/usr/include/freetype2
 	# Prefer link-time linking over dlopen
 	econf \
 		htmldir="/usr/share/doc/${PF}/html" \
