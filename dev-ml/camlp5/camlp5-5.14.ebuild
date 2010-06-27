@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.14.ebuild,v 1.2 2010/06/24 21:45:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.14.ebuild,v 1.3 2010/06/27 14:18:00 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://pauillac.inria.fr/~ddr/camlp5/distrib/src/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="doc +ocamlopt"
 
 DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]"
