@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.1.ebuild,v 1.1 2009/03/18 20:02:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/an-0.95.3.2.ebuild,v 1.1 2010/06/27 20:34:25 jer Exp $
 
 EAPI="2"
+
 inherit eutils toolchain-funcs versionator
 
 DESCRIPTION="Very fast anagram generator with dictionary lookup"
@@ -24,23 +25,25 @@ RDEPEND="sys-apps/miscfiles[-minimal]"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
+src_prepare() {
 	MY_PL="$(replace_version_separator 2 -)"
 	epatch "${WORKDIR}"/${PN}_${MY_PV}-${DEB_REV}.diff
-	epatch "${FILESDIR}"/${PN}-${MY_PV}-make.patch
 
 	# sys-apps/miscfiles doesn't have /usr/dict/words:
-	sed \
+	sed -i README \
 		-e 's:/usr/dict/words:/usr/share/dict/words:' \
-		-i README || die "sed failed"
+		|| die "sed README failed"
+	sed -i Makefile \
+		-e 's|^CC=gcc|#CC=gcc|g' \
+		-e 's|^CFLAGS=-O2|CFLAGS := $(CFLAGS)|g' \
+		-e 's|$(CC) $(CFLAGS)|$(CC) $(CFLAGS) $(LDFLAGS)|g' \
+		-e 's|&& make|\&\& $(MAKE)|g' \
+		|| die "sed Makefile failed"
 }
 
 src_compile() {
 	tc-export CC
-	emake || die "make failed"
+	emake LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
@@ -52,7 +55,6 @@ src_install() {
 		DICTIONARY \
 		EXAMPLE.ANAGRAMS \
 		HINTS \
-		INSTALL \
 		README \
 		TODO || die
 }

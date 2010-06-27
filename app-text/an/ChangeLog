@@ -1,6 +1,14 @@
 # ChangeLog for app-text/an
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.26 2009/03/18 20:02:59 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.27 2010/06/27 20:34:25 jer Exp $
+
+*an-0.95.3.2 (27 Jun 2010)
+
+  27 Jun 2010; Jeroen Roovers <jer@gentoo.org> -an-0.95.3.1.ebuild,
+  +an-0.95.3.2.ebuild:
+  Bump the Debian patch set. Replace the Makefile patch with a compatible
+  set of sed scripts. Respect LDFLAGS. Do not patch lib/Makefile since we do
+  not use it. Do not install INSTALL. Properly use EAPI=2.
 
 *an-0.95.3.1 (18 Mar 2009)
 
