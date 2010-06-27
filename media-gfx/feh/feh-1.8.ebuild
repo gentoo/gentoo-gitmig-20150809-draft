@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.8.ebuild,v 1.2 2010/06/25 20:45:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.8.ebuild,v 1.3 2010/06/27 00:14:10 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://www.chaosdorf.de/~derf/feh/${P}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="xinerama"
+IUSE="test xinerama"
 
 COMMON_DEPEND=">=media-libs/giblib-1.2.4
 	media-libs/imlib2
@@ -23,7 +23,8 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-libs/jpeg-8a"
 DEPEND="${COMMON_DEPEND}
 	x11-libs/libXt
-	x11-proto/xproto"
+	x11-proto/xproto
+	test? ( dev-perl/Test-Command )"
 
 pkg_setup() {
 	fehopts=(
