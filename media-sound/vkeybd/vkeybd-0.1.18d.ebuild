@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.18d.ebuild,v 1.2 2010/06/27 17:53:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.18d.ebuild,v 1.3 2010/06/27 17:54:41 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -61,6 +61,6 @@ pkg_postinst() {
 	elog "The system-wide keymap is locale-sensitive now. A file"
 	elog "vkeybdmap-\$LANG is searched in prior. For example, /etc/vkeybdmap-de"
 	elog "can be used for the german locale. See the localization guide:"
-	elog 
+	elog
 	elog "http://www.gentoo.org/doc/en/guide-localization.xml"
 }
