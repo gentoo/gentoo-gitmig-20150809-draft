@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.3.5.ebuild,v 1.1 2010/06/19 22:10:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.3.5.ebuild,v 1.2 2010/06/27 20:08:25 spatz Exp $
 
 EAPI="3"
 
@@ -25,5 +25,9 @@ DEPEND="
 	>=x11-libs/qt-test-${QT_DEPEND}:4
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-qt-4.7.patch"
+)
 
 DOCS="NEWS README"
