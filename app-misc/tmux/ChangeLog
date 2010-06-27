@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.42 2010/05/17 17:38:50 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.43 2010/06/27 01:43:51 jmbsvicetto Exp $
+
+  27 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  tmux-1.2.ebuild:
+  [app-misc/tmux-1.2] Changed the dep order for vim / gvim by Tiago's
+  request - fixes bug 325251.
 
   17 May 2010; Kenneth Prugh <ken69267@gentoo.org> tmux-1.2.ebuild:
   amd64 stable, bug #317535

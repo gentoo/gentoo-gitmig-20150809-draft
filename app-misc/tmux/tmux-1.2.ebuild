@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.2.ebuild,v 1.7 2010/05/17 17:38:50 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.2.ebuild,v 1.8 2010/06/27 01:43:51 jmbsvicetto Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,8 +17,8 @@ DEPEND="dev-libs/libevent
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	vim-syntax? ( || (
-			app-editors/gvim
-			app-editors/vim ) )"
+			app-editors/vim
+			app-editors/gvim ) )"
 
 src_unpack() {
 	unpack ${A}
