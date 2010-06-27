@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.93 2010/06/24 16:41:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.94 2010/06/27 17:54:01 armin76 Exp $
+
+  27 Jun 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask vaapi
 
   24 Jun 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask mod_wsgi

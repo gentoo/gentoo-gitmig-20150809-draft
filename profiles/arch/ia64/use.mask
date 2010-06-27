@@ -73,6 +73,7 @@ tokyocabinet
 schroedinger
 ots
 eclipse
+vaapi
 
 # Stuff that doesn't compile on ia64
 chicken
