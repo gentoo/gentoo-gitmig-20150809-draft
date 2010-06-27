@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/customizable-weather-1.0.4.ebuild,v 1.1 2010/06/02 23:04:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/customizable-weather/customizable-weather-1.0.5.ebuild,v 1.1 2010/06/27 15:52:12 scarabeus Exp $
 
 EAPI="2"
 
+KDE_LINGUAS="br de es fr hu it nb nl pl ro ru sr sr@latin tr zh_CN"
 inherit kde4-base
 
 MY_P="cwp-${PV}"
