@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.92.ebuild,v 1.3 2009/12/02 10:05:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.92.ebuild,v 1.4 2010/06/27 18:31:42 nixnut Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="A postmodern object system for Perl 5"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="test"
 
 RDEPEND="dev-perl/Data-OptList
