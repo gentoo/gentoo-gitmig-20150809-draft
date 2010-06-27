@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pastescript
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.8 2009/10/11 08:28:57 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/ChangeLog,v 1.9 2010/06/27 22:59:32 arfrever Exp $
+
+  27 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pastescript-1.7.3.ebuild:
+  Fix building with USE="doc".
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pastescript-1.7.3.ebuild:
   Merge from Prefix
