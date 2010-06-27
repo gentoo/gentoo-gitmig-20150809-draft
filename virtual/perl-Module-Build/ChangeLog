@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Module-Build
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.37 2010/06/20 20:04:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.38 2010/06/27 19:06:00 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> perl-Module-Build-0.36.07.ebuild:
+  ppc stable #323529
 
   20 Jun 2010; Raúl Porcel <armin76@gentoo.org>
   perl-Module-Build-0.36.07.ebuild:
