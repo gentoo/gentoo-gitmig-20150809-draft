@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.9 2010/05/23 21:08:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.10 2010/06/27 13:44:36 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> guile-cairo-1.4.0.ebuild:
+  ppc stable #317159
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> guile-cairo-1.4.0.ebuild:
   stable amd64, bug 314167
