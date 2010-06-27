@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.38 2010/06/24 21:39:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.39 2010/06/27 14:04:15 nixnut Exp $
+
+  27 Jun 2010; <nixnut@gentoo.org> libspectre-0.2.5.ebuild:
+  ppc stable #324571
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> libspectre-0.2.5.ebuild:
   stable amd64, bug 324571
