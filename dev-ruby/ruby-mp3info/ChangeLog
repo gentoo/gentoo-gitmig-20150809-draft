@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-mp3info
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.13 2009/08/24 19:26:05 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.14 2010/06/27 17:40:34 graaff Exp $
+
+*ruby-mp3info-0.6.13-r1 (27 Jun 2010)
+
+  27 Jun 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-mp3info-0.6.13-r1.ebuild:
+  Convert to ruby-fakegem.
 
   24 Aug 2009; Hans de Graaff <graaff@gentoo.org>
   -ruby-mp3info-0.6.10.ebuild:
