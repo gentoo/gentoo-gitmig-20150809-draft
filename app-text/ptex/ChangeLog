@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ptex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.92 2010/05/24 13:37:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.93 2010/06/27 11:08:30 ssuominen Exp $
+
+  27 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  ptex-3.1.10_p20090610-r1.ebuild:
+  amd64 stable wrt #319509
 
   24 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ptex-3.1.10_p20090610-r1.ebuild:
