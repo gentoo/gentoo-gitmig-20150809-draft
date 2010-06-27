@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bytelist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.9 2010/05/17 10:19:36 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.10 2010/06/27 07:20:44 ali_bush Exp $
+
+  27 Jun 2010; Alistair Bush <ali_bush@gentoo.org> bytelist-1.0.6.ebuild:
+  Fix #325189 by creating lib dir manually.
 
 *bytelist-1.0.6 (17 May 2010)
 
