@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/nerdtree
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nerdtree/ChangeLog,v 1.1 2010/06/27 16:36:22 spatz Exp $
+
+*nerdtree-4.1.0 (27 Jun 2010)
+
+  27 Jun 2010; Dror Levin <spatz@gentoo.org> +nerdtree-4.1.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
