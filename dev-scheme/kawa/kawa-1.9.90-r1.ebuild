@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/kawa-1.9.90.ebuild,v 1.1 2009/11/30 19:51:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/kawa-1.9.90-r1.ebuild,v 1.1 2010/06/28 23:30:54 chiiph Exp $
 
-EAPI="1"
+EAPI="3"
 
 JAVA_PKG_IUSE="source"
 
@@ -25,7 +25,7 @@ COMMON_DEPEND="( >=virtual/jdk-1.5 )
 			   frontend? ( sys-libs/readline:0 )
 			   sax? ( dev-java/sax:0 )
 			   echo2? ( dev-java/echo2 )
-			   swt? ( dev-java/swt:3 )
+			   swt? ( dev-java/swt:3.5 )
 			   servlets? ( dev-java/servletapi:2.4 )"
 DEPEND="${COMMON_DEPEND}
 		xqtests? ( app-arch/unzip:0 )"
@@ -35,9 +35,6 @@ xtestsuite="XQTS_${XQTS_Ver}"
 
 src_unpack () {
 	unpack kawa-${PV}.tar.gz || die
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}.patch
-
 	if use xqtests; then
 		mkdir "${WORKDIR}/${xtestsuite}" || die
 		cd "${WORKDIR}/${xtestsuite}" || die
@@ -45,7 +42,11 @@ src_unpack () {
 	fi
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}.patch
+}
+
+src_configure() {
 	# speeds up one-shot ebuilds.
 	myconf="--disable-dependency-tracking"
 	if use jemacs && ! use swing; then
@@ -64,7 +65,7 @@ src_compile() {
 		myconf="${myconf} --with-servlet=$(java-pkg_getjar servletapi-2.4 servlet-api.jar)"
 	fi
 	if use swt; then
-		myconf="${myconf} --with-swt=$(java-pkg_getjar swt-3 swt.jar)"
+		myconf="${myconf} --with-swt=$(java-pkg_getjar swt-3.5 swt.jar)"
 	fi
 
 	econf ${myconf} $(use_enable frontend kawa-frontend) \
@@ -75,7 +76,9 @@ src_compile() {
 		  $(use_with awt) \
 		  $(use_with sax sax2) \
 		  --with-java-source=$(java-pkg_get-source) || die "econf failed."
+}
 
+src_compile() {
 	emake -j1 || die "emake failed."
 }
 
@@ -88,8 +91,10 @@ src_install () {
 	java-pkg_dolauncher "kawa" --main kawa.repl || die "dolauncher failed"
 	java-pkg_dolauncher "qexo" --main kawa.repl --pkg_args \
 		"--xquery" || die "dolauncher qexo failed"
-	java-pkg_dolauncher "kawa-cgi-servlet" --main \
-		gnu.kawa.servlet.CGIServletWrapper || die
+	if use servlets; then
+		java-pkg_dolauncher "kawa-cgi-servlet" --main \
+			gnu.kawa.servlet.CGIServletWrapper || die
+	fi
 	if use jemacs; then
 		java-pkg_dolauncher "jemacs" --main \
 			gnu.jemacs.lang.ELisp || die
