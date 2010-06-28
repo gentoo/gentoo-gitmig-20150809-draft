@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qguiplatformplugin_kde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.11 2010/06/24 10:27:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.12 2010/06/28 03:47:28 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  qguiplatformplugin_kde-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org>
   qguiplatformplugin_kde-4.4.4.ebuild:

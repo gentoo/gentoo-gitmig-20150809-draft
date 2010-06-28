@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/thumbnailers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.33 2010/06/24 10:38:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.34 2010/06/28 04:11:00 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  thumbnailers-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org>
   thumbnailers-4.4.4.ebuild:

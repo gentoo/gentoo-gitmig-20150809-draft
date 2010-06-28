@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.4.4.ebuild,v 1.3 2010/06/24 10:13:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.4.4.ebuild,v 1.4 2010/06/28 03:10:55 fauli Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ PYTHON_DEPEND="2"
 inherit python kde4-meta
 
 DESCRIPTION="KDE4 translation tool"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
 
 # Althrought they are purely runtime, its too useless without them

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.4.4.ebuild,v 1.4 2010/06/24 10:24:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.4.4.ebuild,v 1.5 2010/06/28 03:41:04 fauli Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ PYTHON_DEPEND="python? 2"
 inherit python kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook google-gadgets python rss semantic-desktop xinerama"
 
 COMMONDEPEND="

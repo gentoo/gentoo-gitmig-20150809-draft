@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.53 2010/06/24 10:33:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.54 2010/06/28 04:00:12 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org> step-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> step-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

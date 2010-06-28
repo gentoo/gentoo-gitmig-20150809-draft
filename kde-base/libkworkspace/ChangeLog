@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.71 2010/06/24 10:10:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.72 2010/06/28 03:02:14 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  libkworkspace-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org>
   libkworkspace-4.4.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/nepomuk-4.4.4.ebuild,v 1.4 2010/06/24 05:45:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/nepomuk-4.4.4.ebuild,v 1.5 2010/06/28 03:19:32 fauli Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ KMNAME="kdebase-runtime"
 inherit kde4-meta
 
 DESCRIPTION="Nepomuk KDE4 client"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
 
 DEPEND="
