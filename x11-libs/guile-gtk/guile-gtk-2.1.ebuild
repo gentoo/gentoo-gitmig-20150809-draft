@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1.ebuild,v 1.3 2010/06/28 18:42:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1.ebuild,v 1.4 2010/06/28 21:35:34 angelos Exp $
 
 inherit virtualx eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/guile-gtk/"
 SRC_URI="ftp://ftp.gnu.org/gnu/guile-gtk/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-scheme/guile

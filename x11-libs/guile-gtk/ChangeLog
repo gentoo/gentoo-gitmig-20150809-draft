@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/guile-gtk
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.33 2009/12/28 23:34:11 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.34 2010/06/28 21:35:34 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org> guile-gtk-2.1.ebuild:
+  Stable on amd64 wrt bug #326019
 
   28 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   guile-gtk-2.1.ebuild:
