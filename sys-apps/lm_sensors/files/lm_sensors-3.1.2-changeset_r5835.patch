@@ -1,9 +1,7 @@
-http://bugs.gentoo.org/325083
-http://www.lm-sensors.org/changeset/5835
-
 --- prog/sensord/rrd.c
 +++ prog/sensord/rrd.c
-@@ -138,7 +138,9 @@
+@@ -137,9 +137,11 @@
+ 	}
  }
  
 +/* Returns the number of features processed, or -1 on error */
@@ -14,14 +12,18 @@ http://www.lm-sensors.org/changeset/5835
 +			    int labelOffset)
  {
  	int i;
-@@ -148,5 +150,5 @@
+ 	const FeatureDescriptor *features = desc->features;
+@@ -147,7 +149,7 @@
+ 	const char *rawLabel;
  	char *label;
  
 -	for (i = 0; i < MAX_RRD_SENSORS && features[i].format; ++i) {
 +	for (i = 0; labelOffset + i < MAX_RRD_SENSORS && features[i].format; ++i) {
  		feature = features + i;
  		rawLabel = feature->feature->name;
-@@ -159,9 +161,9 @@
+ 
+@@ -158,11 +160,11 @@
+ 			return -1;
  		}
  
 -		rrdCheckLabel(rawLabel, i);
@@ -34,14 +36,18 @@ http://www.lm-sensors.org/changeset/5835
 +	return i;
  }
  
-@@ -185,5 +187,5 @@
+ static ChipDescriptor *lookup_known_chips(const sensors_chip_name *chip)
+@@ -184,7 +186,7 @@
+ 
  static int applyToFeatures(FeatureFN fn, void *data)
  {
 -	int i, i_detected, ret;
 +	int i, i_detected, ret, labelOffset = 0;
  	const sensors_chip_name *chip, *chip_arg;
  	ChipDescriptor *desc;
-@@ -198,7 +200,8 @@
+ 
+@@ -197,9 +199,10 @@
+ 			if (!desc)
  				continue;
  
 -			ret = _applyToFeatures(fn, data, chip, desc);
@@ -52,3 +58,4 @@ http://www.lm-sensors.org/changeset/5835
 +			labelOffset += ret;
  		}
  	}
+ 	return 0;
