@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwmouse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.10 2010/01/25 01:30:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.11 2010/06/28 22:15:48 mr_bones_ Exp $
+
+  28 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  nwmouse-20090906.183839.ebuild:
+  stable for x86 and amd64 (bug #307369)
 
 *nwmouse-20090906.183839 (25 Jan 2010)
 
