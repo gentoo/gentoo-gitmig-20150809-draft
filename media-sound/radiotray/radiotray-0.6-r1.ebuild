@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiotray/radiotray-0.6-r1.ebuild,v 1.1 2010/06/16 09:40:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiotray/radiotray-0.6-r1.ebuild,v 1.2 2010/06/28 16:24:45 hwoarang Exp $
 
 EAPI=3
 
@@ -22,6 +22,9 @@ RDEPEND="dev-python/gst-python
 	dev-python/pyxdg
 	dev-python/pygobject
 	dev-python/notify-python
+	media-libs/gst-plugins-good
+	media-libs/gst-plugins-ugly
+	media-plugins/gst-plugins-alsa
 	media-plugins/gst-plugins-libmms
 	media-plugins/gst-plugins-ffmpeg
 	media-plugins/gst-plugins-mad
