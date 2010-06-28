@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/probe
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.8 2009/05/29 00:44:23 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.9 2010/06/28 15:49:57 jlec Exp $
+
+  28 Jun 2010; Justin Lecher <jlec@gentoo.org> probe-2.12.071128.ebuild:
+  Keyworded for linux prefix, some QA (die missing)
 
   29 May 2009; Donnie Berkholz <dberkholz@gentoo.org>;
   probe-2.12.071128.ebuild:
