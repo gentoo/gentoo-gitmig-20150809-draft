@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Safe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Safe/ChangeLog,v 1.20 2010/06/26 14:43:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Safe/ChangeLog,v 1.21 2010/06/28 05:39:09 jer Exp $
+
+  28 Jun 2010; Jeroen Roovers <jer@gentoo.org> Safe-2.27.ebuild:
+  Stable for HPPA (bug #325563).
 
   26 Jun 2010; Raúl Porcel <armin76@gentoo.org> Safe-2.27.ebuild:
   alpha/ia64/sparc/x86 stable wrt #325563
