@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.23 2010/06/25 11:57:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.24 2010/06/28 19:57:46 reavertm Exp $
+
+*openscenegraph-2.8.3 (25 Jun 2010)
+
+  25 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  +openscenegraph-2.8.3.ebuild, +files/openscenegraph-2.8.3-cmake.patch,
+  metadata.xml:
+  Version bump 2.8.3, fixes bug 316919 and 263839, ebuild by me.
 
   25 Jun 2010; Tupone Alfredo <tupone@gentoo.org>
   openscenegraph-2.8.2.ebuild:
