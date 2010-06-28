@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pymmlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.18 2010/06/26 07:18:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.19 2010/06/28 08:40:13 phajdan.jr Exp $
+
+  28 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pymmlib-1.0.0-r1.ebuild:
+  x86 stable wrt bug #321873
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org> pymmlib-1.0.0-r1.ebuild:
   Stable on amd64 wrt bug #321873
