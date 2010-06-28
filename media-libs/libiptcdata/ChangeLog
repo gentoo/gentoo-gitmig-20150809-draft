@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libiptcdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.17 2010/06/27 23:20:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.18 2010/06/28 07:12:28 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  libiptcdata-1.0.4.ebuild:
+  Stable on amd64 wrt bug #320275
 
   27 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libiptcdata-1.0.4.ebuild:
