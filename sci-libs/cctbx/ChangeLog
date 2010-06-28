@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.4 2010/06/16 07:03:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.5 2010/06/28 16:09:22 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  cctbx-2010.03.29.2334.ebuild:
+  Stable on amd64 wrt bug #325965
 
   16 Jun 2010; Justin Lecher <jlec@gentoo.org>
   cctbx-2009.11.01.0123-r1.ebuild, cctbx-2010.03.29.2334.ebuild:
