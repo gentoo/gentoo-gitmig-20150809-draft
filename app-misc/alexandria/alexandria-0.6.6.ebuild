@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.6.ebuild,v 1.2 2010/06/25 08:38:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.6.ebuild,v 1.3 2010/06/28 11:40:00 fauli Exp $
 
 inherit gnome2 ruby
 
@@ -37,10 +37,8 @@ src_compile() {
 }
 
 src_install() {
-	export PREFIX="${D}/usr"
-	# Prevent regeneration of config.rb with wrongly set path entries
-	sed -e 's:lib/alexandria/config.rb:tempfile:' -i Rakefile || die
-	rake install || die
+	export DESTDIR="${D}" PREFIX=/usr
+	rake install_package_staging || die
 
 	[ -n "${DOCS}" ] && dodoc ${DOCS}
 

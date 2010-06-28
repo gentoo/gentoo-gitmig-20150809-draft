@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.6-r1.ebuild,v 1.1 2010/06/25 21:30:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.6-r1.ebuild,v 1.2 2010/06/28 11:40:00 fauli Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -40,10 +40,8 @@ each_ruby_compile() {
 }
 
 each_ruby_install() {
-	export PREFIX="${D}/usr"
-	# Prevent regeneration of config.rb with wrongly set path entries
-	sed -e 's:lib/alexandria/config.rb:tempfile:' -i Rakefile || die
-	${RUBY} -S rake install || die
+	export DESTDIR="${D}" PREFIX=/usr
+	rake install_package_staging || die
 }
 
 all_ruby_install() {
