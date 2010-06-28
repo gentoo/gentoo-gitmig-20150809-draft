@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cbflib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.8 2010/04/28 19:56:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.9 2010/06/28 22:41:23 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org> cbflib-0.9.0.ebuild:
+  Stable on amd64 wrt bug #326035
 
 *cbflib-0.9.0 (28 Apr 2010)
 
