@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.11.ebuild,v 1.1 2010/06/28 18:40:16 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.11.ebuild,v 1.2 2010/06/28 19:33:59 idl0r Exp $
 
 EAPI="3"
 
@@ -37,7 +37,6 @@ S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_enable battery BATTERY)
 		$(cmake-utils_use_enable battery BATTERY)
 		$(cmake-utils_use_enable examples EXAMPLES)
 		$(cmake-utils_use_enable tint2conf TINT2CONF)
