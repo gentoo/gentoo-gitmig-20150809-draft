@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.5 2010/02/06 21:49:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.6 2010/06/28 21:05:46 jlec Exp $
 
 inherit eutils fortran toolchain-funcs versionator flag-o-matic
 
@@ -17,8 +17,7 @@ LICENSE="cns"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE="openmp"
-RDEPEND="app-shells/tcsh
-	!app-text/dos2unix"
+RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
@@ -171,6 +170,8 @@ src_install() {
 		-A iq,cgi,csh,cv,def,fm,gif,hkl,inp,jpeg,lib,link,list,mask,mtf,param,pdb,pdf,pl,ps,sc,sca,sdb,seq,tbl,top \
 		-f all_cns_info_template,omac,def \
 		-r doc/html/*
+	# Conflits with app-text/dos2unix
+	rm -f "${D}"/usr/bin/dos2unix
 }
 
 pkg_info() {

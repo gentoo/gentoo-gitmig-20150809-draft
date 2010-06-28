@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r4.ebuild,v 1.1 2010/04/05 21:15:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r4.ebuild,v 1.2 2010/06/28 21:05:46 jlec Exp $
 
 EAPI="3"
 
@@ -20,8 +20,7 @@ LICENSE="cns"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="aria openmp"
 
-RDEPEND="app-shells/tcsh
-	!app-text/dos2unix"
+RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
 PDEPEND="aria? ( ~sci-chemistry/aria-2.3.1 )"
 
@@ -207,6 +206,8 @@ src_install() {
 		-A iq,cgi,csh,cv,def,fm,gif,hkl,inp,jpeg,lib,link,list,mask,mtf,param,pdb,pdf,pl,ps,sc,sca,sdb,seq,tbl,top \
 		-f all_cns_info_template,omac,def \
 		-r doc/html/* || die
+	# Conflits with app-text/dos2unix
+	rm -f "${D}"/usr/bin/dos2unix
 }
 
 pkg_info() {
