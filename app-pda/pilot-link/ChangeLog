@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.59 2010/06/11 21:30:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.60 2010/06/28 11:01:11 jer Exp $
+
+  28 Jun 2010; Jeroen Roovers <jer@gentoo.org> pilot-link-0.12.3-r2.ebuild:
+  Stable for HPPA (bug #319517).
 
   11 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pilot-link-0.12.3-r1.ebuild, pilot-link-0.12.3-r2.ebuild:
