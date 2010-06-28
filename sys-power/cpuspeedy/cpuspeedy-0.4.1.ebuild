@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/cpuspeedy-0.4.1.ebuild,v 1.4 2010/05/02 21:48:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpuspeedy/cpuspeedy-0.4.1.ebuild,v 1.5 2010/06/28 23:24:15 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -17,10 +17,12 @@ IUSE=""
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
 	rm -f Makefile || die
+	python_convert_shebangs -r $(python_get_version) .
 }
 
 src_install() {
