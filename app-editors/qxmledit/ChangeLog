@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qxmledit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.8 2010/06/26 21:46:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.9 2010/06/28 19:30:11 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  qxmledit-0.4.3-r1.ebuild:
+  stable x86, bug 325629
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org>
   qxmledit-0.4.3-r1.ebuild:
