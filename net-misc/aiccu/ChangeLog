@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/aiccu
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.21 2008/08/12 20:27:50 bluebird Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.22 2010/06/28 20:36:34 idl0r Exp $
+
+*aiccu-2007.01.15-r1 (28 Jun 2010)
+
+  28 Jun 2010; Christian Ruppert <idl0r@gentoo.org>
+  -aiccu-2005.01.31.ebuild, -aiccu-2005.01.31-r1.ebuild,
+  -aiccu-2006.07.25.ebuild, -aiccu-2007.01.07.ebuild,
+  aiccu-2007.01.15.ebuild, +aiccu-2007.01.15-r1.ebuild,
+  +files/aiccu-2007.01.15-Makefile.patch, +files/aiccu.init.gentoo.patch,
+  -files/init-after-ntp-client.patch,
+  -files/patch_aiccu_ticservpar_2005.01.31:
+  Revbump. Fix bug 248669 and 318033. Some QA fixes. Add a Makefile patch to
+  use LDFLAGS properly, make stripping optional and respect CFLAGS properly.
+  Remove old ebuilds.
 
   12 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
   aiccu-2007.01.15.ebuild:
