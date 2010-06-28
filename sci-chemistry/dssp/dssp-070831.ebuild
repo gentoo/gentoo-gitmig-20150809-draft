@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-070831.ebuild,v 1.1 2010/03/07 10:13:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-070831.ebuild,v 1.2 2010/06/28 22:21:39 angelos Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="${P}cmbi.tar.gz"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 RESTRICT="fetch"
 
