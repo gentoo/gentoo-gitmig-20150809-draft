@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.2-r3.ebuild,v 1.5 2009/10/18 18:27:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.2-r3.ebuild,v 1.6 2010/06/28 06:58:51 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/kid3/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 x86"
 IUSE="flac mp3 mp4 +musicbrainz +taglib vorbis"
 
 RDEPEND="mp3? ( media-libs/id3lib )
