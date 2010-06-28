@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.1.ebuild,v 1.1 2010/06/19 11:16:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.1.ebuild,v 1.2 2010/06/28 20:10:45 idl0r Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
-	resolvconf urandom sdb-ldap xml geoip"
+	resolvconf urandom sdb-ldap xml geoip gssapi"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -37,7 +37,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	postgres? ( dev-db/postgresql-base )
 	threads? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
-	geoip? ( >=dev-libs/geoip-1.4.6 )"
+	geoip? ( >=dev-libs/geoip-1.4.6 )
+	gssapi? ( || ( >=app-crypt/heimdal-1.2.1-r4 >=app-crypt/mit-krb5-1.6.3-r6 ) )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -153,6 +154,7 @@ src_configure() {
 		$(use_with idn) \
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
+		$(use_with gssapi) \
 		${myconf}
 
 	# bug #151839
