@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-gui
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gui/ChangeLog,v 1.8 2009/04/20 20:56:15 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gui/ChangeLog,v 1.9 2010/06/28 21:39:40 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org> guile-gui-0.2.ebuild:
+  Stable on amd64 wrt bug #326005
 
   20 Apr 2009; Markus Meier <maekke@gentoo.org> guile-gui-0.2:
   add ~amd64, bug #259599
