@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.60 2010/06/19 18:50:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.61 2010/06/28 09:02:55 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org> buildbot-0.8.0.ebuild:
+  Stable on amd64 wrt bug #325899
 
   19 Jun 2010; Raúl Porcel <armin76@gentoo.org> buildbot-0.7.12.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #321601
