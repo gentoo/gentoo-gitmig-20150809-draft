@@ -1,6 +1,19 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.5 2010/06/17 06:33:35 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.6 2010/06/28 18:53:32 kolmodin Exp $
+
+*darcs-2.4.4-r1 (28 Jun 2010)
+
+  28 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +darcs-2.4.4-r1.ebuild,
+  +files/darcs-2.4.4-issue1770-curl_multi_perform-no-running-handles.patch:
+  Attempt to solve issue1770 ( http://bugs.darcs.net/issue1770 ) which stops
+  users from fetching the Gentoo Haskell overlay. The patch is taken from
+  darcs HEAD and is written by Dmitry Kurochkin
+  <dmitry.kurochkin@gmail.com>.
+
+  Also, remove test case that required hlint. If the user would have a
+  recent version of hlint installed it would break the tests. Fix by slyfox.
 
   16 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   -darcs-1.1.0_pre1.ebuild, darcs-2.1.0-r1.ebuild, darcs-2.2.1.ebuild,
