@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-gio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.54 2010/06/27 13:25:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.55 2010/06/28 09:18:42 leio Exp $
+
+*gst-plugins-gio-0.10.29 (28 Jun 2010)
+
+  28 Jun 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-gio-0.10.29.ebuild:
+  Version bump. gst-plugins-gio elements are now preferred over
+  gst-plugins-gnomevfs, as the latter is deprecated.
 
   27 Jun 2010; <nixnut@gentoo.org> gst-plugins-gio-0.10.28.ebuild:
   ppc stable #324691
