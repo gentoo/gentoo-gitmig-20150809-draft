@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r5.ebuild,v 1.4 2010/06/26 14:36:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r5.ebuild,v 1.5 2010/06/28 07:19:06 ssuominen Exp $
 
 EAPI=1
 inherit autotools eutils
@@ -13,12 +13,12 @@ SRC_URI="mirror://sourceforge/autotrace/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
-IUSE="+imagemagick +pdf"
+IUSE="+imagemagick"
 
 RDEPEND="media-libs/libexif
 	>=media-libs/libpng-1.2.43-r2:0
 	>=media-libs/ming-0.3.0
-	pdf? ( >=media-gfx/pstoedit-3.45-r1 )
+	>=media-gfx/pstoedit-3.45-r1
 	imagemagick? ( >=media-gfx/imagemagick-6 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -40,12 +40,13 @@ src_unpack() {
 }
 
 src_compile() {
-	# Autotrace will autolink to ming if present. Forcing on.
+	# Autotrace will autolink to ming if present. And fail to autoconf, and then
+	# ./configure without pstoedit. Forcing on.
 	econf \
 		--disable-dependency-tracking \
 		--with-ming \
 		$(use_with imagemagick magick) \
-		$(use_with pdf pstoedit)
+		--with-pstoedit
 
 	emake || die
 }
