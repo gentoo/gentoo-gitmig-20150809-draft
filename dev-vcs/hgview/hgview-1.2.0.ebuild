@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.1.3.ebuild,v 1.2 2010/03/06 12:26:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.2.0.ebuild,v 1.1 2010/06/28 11:48:48 tampakrap Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	distutils_src_prepare
 
+	# fix mercurial extension install path
 	if ! use doc; then
 		sed -i '/make -C doc/d' "${S}/setup.py" || die "sed failed"
 		sed -i '/share\/man\/man1/,+1 d' "${S}/hgviewlib/__pkginfo__.py" || die "sed failed"
