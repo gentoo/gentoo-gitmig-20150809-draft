@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/reduce
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.14 2010/04/22 20:32:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.15 2010/06/28 17:14:02 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  reduce-3.13.080428-r1.ebuild:
+  Stable on amd64 wrt bug #325999
 
   22 Apr 2010; Justin Lecher <jlec@gentoo.org> reduce-3.13.080428-r1.ebuild:
   Keyworded for ~*-linux
