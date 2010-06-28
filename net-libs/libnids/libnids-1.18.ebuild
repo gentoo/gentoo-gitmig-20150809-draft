@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.14 2009/05/29 17:06:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.18.ebuild,v 1.15 2010/06/28 04:09:08 jer Exp $
 
 inherit eutils
 
@@ -18,8 +18,8 @@ DEPEND="net-libs/libpcap
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-chksum.c-ebx.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-chksum.c-ebx.patch
 }
 
 src_compile() {
@@ -29,5 +29,5 @@ src_compile() {
 
 src_install() {
 	make install_prefix="${D}" install || die "make install failed"
-	dodoc CHANGES COPYING CREDITS MISC README
+	dodoc CHANGES CREDITS MISC README
 }
