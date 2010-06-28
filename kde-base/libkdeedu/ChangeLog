@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.153 2010/06/24 10:01:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.154 2010/06/28 00:36:23 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  libkdeedu-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> libkdeedu-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

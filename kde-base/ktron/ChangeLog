@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.126 2010/06/24 09:43:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.127 2010/06/27 23:51:24 fauli Exp $
+
+  27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> ktron-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> ktron-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

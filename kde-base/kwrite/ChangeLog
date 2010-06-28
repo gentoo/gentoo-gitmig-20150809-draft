@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.63 2010/06/24 09:58:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.64 2010/06/28 00:27:50 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org> kwrite-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> kwrite-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791

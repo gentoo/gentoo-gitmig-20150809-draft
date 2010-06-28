@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kvtml-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvtml-data/ChangeLog,v 1.22 2010/06/24 09:53:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvtml-data/ChangeLog,v 1.23 2010/06/28 00:12:51 fauli Exp $
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  kvtml-data-4.4.4.ebuild:
+  x86 stable, bug 322791
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org> kvtml-data-4.4.4.ebuild:
   Stable on amd64 wrt bug #322791
