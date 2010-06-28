@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.20 2010/05/19 17:44:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.21 2010/06/28 05:32:58 nirbheek Exp $
+
+  28 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> vala-0.8.1.ebuild:
+  Don't have coverage on by default, and add warning about coverage+ccache
 
   19 May 2010; Mark Loeser <halcy0n@gentoo.org> +vala-0.7.10.ebuild:
   Adding back vala-0.7.10 since media-gfx/shotwell depends on it
