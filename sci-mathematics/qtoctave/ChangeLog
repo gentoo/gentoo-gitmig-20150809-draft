@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/qtoctave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.10 2010/06/24 13:50:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.11 2010/06/28 16:51:11 jlec Exp $
+
+*qtoctave-0.9.1-r1 (28 Jun 2010)
+
+  28 Jun 2010; Justin Lecher <jlec@gentoo.org> -qtoctave-0.9.1.ebuild,
+  +qtoctave-0.9.1-r1.ebuild:
+  Wrong default path during compilation, thanks Alexander Goomenyuk for
+  reporting
 
   24 Jun 2010; Justin Lecher <jlec@gentoo.org> qtoctave-0.8.2.ebuild,
   +files/qtoctave-0.8.2-rpath.patch:
