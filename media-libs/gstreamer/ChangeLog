@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.257 2010/06/27 13:24:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.258 2010/06/28 07:30:45 leio Exp $
+
+*gstreamer-0.10.29 (28 Jun 2010)
+
+  28 Jun 2010; Mart Raudsepp <leio@gentoo.org> +gstreamer-0.10.29.ebuild:
+  Version bump
 
   27 Jun 2010; <nixnut@gentoo.org> gstreamer-0.10.28.ebuild:
   ppc stable #324691
