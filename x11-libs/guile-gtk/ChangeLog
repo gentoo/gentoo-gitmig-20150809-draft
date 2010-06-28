@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/guile-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.34 2010/06/28 21:35:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.35 2010/06/28 22:28:32 jlec Exp $
+
+  28 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/2.1-brokentest.patch,
+  guile-gtk-2.1.ebuild, +files/2.1-prll-install.patch:
+  Fix prrll installation, 298803 and remoed broken test, #298802
 
   28 Jun 2010; Christoph Mende <angelos@gentoo.org> guile-gtk-2.1.ebuild:
   Stable on amd64 wrt bug #326019

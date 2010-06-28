@@ -1,0 +1,18 @@
+diff --git a/tests/gdk.scm b/tests/gdk.scm
+index 6e08f9f..36941f5 100644
+--- a/tests/gdk.scm
++++ b/tests/gdk.scm
+@@ -1106,13 +1106,6 @@
+ ;; gdk-selection-property-get
+ ;;
+ 
+-(malloced-steady  ;; with nothing ever requested
+- (lambda ()
+-   (let* ((win    sample-win)
+-	  (want   '(#f NONE 0))
+-	  (got    (gdk-selection-property-get win)))
+-     (test "gdk-selection-property-get" sample-win want got))))
+-
+ (malloced-steady  ;; on a destroyed window
+  (lambda ()
+    (let* ((win    (gdk-window-new #f 100 100 '() 'input-output 'toplevel))
