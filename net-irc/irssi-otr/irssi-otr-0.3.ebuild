@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.3.ebuild,v 1.2 2010/04/20 19:05:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-0.3.ebuild,v 1.3 2010/06/28 09:13:06 polynomial-c Exp $
 
-inherit cmake-utils eutils
+EAPI=2
+inherit cmake-utils
 
 DESCRIPTION="Off-The-Record messaging (OTR) for irssi"
 HOMEPAGE="http://irssi-otr.tuxfamily.org"
@@ -11,7 +12,7 @@ HOMEPAGE="http://irssi-otr.tuxfamily.org"
 CMAKE_BINARY_DIR="${WORKDIR}"/${PN}_build
 mycmakeargs="-DDOCDIR=/usr/share/doc/${PF}"
 
-SRC_URI="ftp://download.tuxfamily.org/irssiotr/${PF}.tar.gz"
+SRC_URI="ftp://download.tuxfamily.org/irssiotr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +20,7 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND="net-libs/libotr
-	dev-libs/glib
+	dev-libs/glib:2
 	dev-libs/libgcrypt
 	dev-libs/libgpg-error
 	|| (
@@ -28,7 +29,6 @@ RDEPEND="net-libs/libotr
 	)"
 
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4.7
 	dev-util/pkgconfig
 	dev-lang/python"
 
