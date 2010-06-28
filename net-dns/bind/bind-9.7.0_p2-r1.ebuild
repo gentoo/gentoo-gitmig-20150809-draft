@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.6 2010/06/28 21:00:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.0_p2-r1.ebuild,v 1.7 2010/06/28 21:07:36 idl0r Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	threads? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
-	gssapi? ( || ( app-crypt/heimdal virtual/krb5 ) )"
+	gssapi? ( virtual/krb5 )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
