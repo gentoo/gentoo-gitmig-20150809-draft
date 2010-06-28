@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.4.ebuild,v 1.9 2010/06/24 16:00:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.4.ebuild,v 1.10 2010/06/28 15:32:49 gmsoft Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -10,7 +10,7 @@ DESCRIPTION="Network performance benchmark including tests for TCP, UDP, sockets
 #SRC_URI="ftp://ftp.netperf.org/netperf/experimental/${MY_P}.tar.gz"
 SRC_URI="ftp://ftp.netperf.org/netperf/${MY_P}.tar.gz
 		mirror://gentoo/netperf-2.4.4-svn_trunk_20071205.patch.bz2"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 HOMEPAGE="http://www.netperf.org/"
 LICENSE="netperf"
