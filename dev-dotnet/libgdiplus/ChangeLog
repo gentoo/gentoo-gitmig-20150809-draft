@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.110 2010/05/04 19:11:34 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.111 2010/06/28 09:32:32 ssuominen Exp $
+
+  28 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libgdiplus-2.4.2.ebuild:
+  Backport libpng14 patch from 2.6 to 2.4.2 wrt #325953 by Dustin Polke.
 
   04 May 2010; Dror Levin <spatz@gentoo.org> libgdiplus-2.6.4.ebuild:
   Drop libpng14 patch, fixed upstream.
