@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-lib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.18 2009/09/27 13:59:07 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.19 2010/06/28 21:38:59 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org> guile-lib-0.1.6.ebuild:
+  Stable on amd64 wrt bug #326007
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> guile-lib-0.1.6.ebuild:
   ppc stable #272675
