@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnids
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.41 2010/06/28 04:18:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.42 2010/06/28 05:52:12 jer Exp $
+
+*libnids-1.24-r1 (28 Jun 2010)
+
+  28 Jun 2010; Jeroen Roovers <jer@gentoo.org> +libnids-1.24-r1.ebuild,
+  metadata.xml:
+  Make dev-libs/glib and net-libs/libnet optional thanks to Rafał Mużyło
+  (bug #325005).
 
 *libnids-1.18-r1 (28 Jun 2010)
 
