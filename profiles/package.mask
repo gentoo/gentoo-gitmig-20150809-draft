@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11711 2010/06/28 11:15:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11712 2010/06/28 14:03:47 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Jun 2010)
+# Fails to compile, bug #274385
+# Internal copy of old libpcap and libtomcrypt, bug #278419
+# File collision with dev-lang/mono, bug #303957
+# Masked for removal in 30 days
+net-analyzer/paketto
 
 # Christian Faulhammer <fauli@gentoo.org> (28 Jun 2010)
 # Beta version

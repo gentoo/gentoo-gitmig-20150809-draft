@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4347 2010/06/28 11:15:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4348 2010/06/28 14:03:47 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask paketto for removal.
 
   28 Jun 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Mask beta version of dev-lang/erlang
