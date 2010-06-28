@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.1 2010/06/28 08:34:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-otr/xchat-otr-0.3.ebuild,v 1.2 2010/06/28 08:41:36 polynomial-c Exp $
 
-inherit cmake-utils eutils
+EAPI="2"
+inherit cmake-utils
 
 DESCRIPTION="Off-The-Record messaging (OTR) for xchat"
 HOMEPAGE="http://irssi-otr.tuxfamily.org"
@@ -20,12 +21,11 @@ IUSE="debug"
 
 RDEPEND="net-libs/libotr
 	net-irc/xchat
-	dev-libs/glib
+	dev-libs/glib:2
 	dev-libs/libgcrypt
 	dev-libs/libgpg-error"
 
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4.7
 	dev-util/pkgconfig
 	dev-lang/python"
 
