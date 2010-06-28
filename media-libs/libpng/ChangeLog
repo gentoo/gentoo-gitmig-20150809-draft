@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.264 2010/06/28 05:55:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.265 2010/06/28 10:50:17 jer Exp $
+
+  28 Jun 2010; Jeroen Roovers <jer@gentoo.org> libpng-1.2.44.ebuild:
+  Stable for HPPA (bug #324153).
 
   28 Jun 2010; Jeroen Roovers <jer@gentoo.org> libpng-1.4.3.ebuild:
   Stable for HPPA (bug #324153).
