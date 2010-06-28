@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5725 2010/06/28 20:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5726 2010/06/28 22:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3727,6 +3727,7 @@ x11-plugins/gkrellm-plugins:audacious - Enable the audacious plugin x11-plugins/
 x11-plugins/gkrellmbups:nut - Enable monitoring Network-UPS via sys-power/nut
 x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talklfilters
 x11-plugins/screenlets:svg - Highly Recommended: Enable SVG graphics via dev-python/librsvg-python
+x11-plugins/wmfire:session - Enable session management
 x11-plugins/wmhdplop:gkrellm - Enable building of app-admin/gkrellm module
 x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts. Useful on SMP machines
 x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
