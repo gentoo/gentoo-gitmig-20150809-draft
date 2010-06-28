@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0076.ebuild,v 1.2 2010/06/16 14:27:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0078.ebuild,v 1.1 2010/06/28 04:48:15 jlec Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 PATCHES=(
-	"${FILESDIR}"/5.6.0075-allow-dynamic-linking.patch
+	"${FILESDIR}"/${PV}-allow-dynamic-linking.patch
 	)
 
 src_prepare() {
