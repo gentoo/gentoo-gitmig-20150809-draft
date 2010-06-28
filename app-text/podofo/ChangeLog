@@ -1,6 +1,11 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.10 2010/06/05 21:37:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.11 2010/06/28 00:26:34 zmedico Exp $
+
+*podofo-0.8.1 (27 Jun 2010)
+
+  27 Jun 2010; Zac Medico <zmedico@gentoo.org> +podofo-0.8.1.ebuild:
+  0.8.1 version bump.
 
   05 Jun 2010; Zac Medico <zmedico@gentoo.org> podofo-0.7.0.ebuild,
   podofo-0.8.0.ebuild:
