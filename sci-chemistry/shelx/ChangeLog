@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/shelx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.15 2009/07/07 23:04:21 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.16 2010/06/28 08:37:10 jlec Exp $
+
+  28 Jun 2010; Justin Lecher <jlec@gentoo.org> -shelx-20060317.ebuild,
+  shelx-20060317-r1.ebuild:
+  Removed old, stabled for x86 & amd64, tested it in action routinely at
+  work, permission granted in #325943
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   shelx-20060317-r1.ebuild:
