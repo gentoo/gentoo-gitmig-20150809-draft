@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.2.0.ebuild,v 1.1 2010/06/28 11:48:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.2.0.ebuild,v 1.2 2010/06/28 16:48:31 tampakrap Exp $
 
 EAPI="2"
 
@@ -38,5 +38,5 @@ src_install() {
 
 	# install the mercurial extension config
 	insinto /etc/mercurial/hgrc.d || die
-	doins hgext/hgview.rc || die
+	doins "${FILESDIR}"/hgview.rc || die
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/hgview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/ChangeLog,v 1.2 2010/06/28 11:48:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/ChangeLog,v 1.3 2010/06/28 16:48:31 tampakrap Exp $
+
+  28 Jun 2010; Theo Chatzimichos <tampakrap@gentoo.org> hgview-1.2.0.ebuild,
+  +files/hgview.rc:
+  Upstream forgot to add hgview.rc to the tarball, manually adding it in
+  $FILESDIR
 
 *hgview-1.2.0 (28 Jun 2010)
 
