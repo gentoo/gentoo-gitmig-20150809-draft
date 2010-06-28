@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.4 2010/02/08 08:49:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.5 2010/06/28 19:42:27 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="2.5"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit eutils distutils
 
@@ -22,7 +22,6 @@ RDEPEND="mysql? ( >=dev-python/mysql-python-1.2.2 )
 	postgres? ( dev-python/psycopg )
 	sqlite? ( || ( dev-lang/python[sqlite] >=dev-python/pysqlite-2 ) )"
 DEPEND="${RDEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="openid"
 
@@ -51,7 +50,7 @@ src_install() {
 
 	use doc && dohtml doc/*
 
-	if use examples ; then
+	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
