@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.12 2010/06/20 20:29:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.13 2010/06/28 00:00:08 flameeyes Exp $
+
+*lxc-0.7.1 (28 Jun 2010)
+
+  28 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/lxc-0.6.4-fix-full-system.patch,
+  -files/lxc-0.6.4-lxc.network.pair.patch,
+  -files/lxc-0.6.4-move-rcfile.patch, -files/lxc-0.6.4-tty-malloc.patch,
+  -lxc-0.6.5.ebuild, -lxc-0.7.0.ebuild, +lxc-0.7.1.ebuild:
+  Version bump, remove old versions, remove stray patch files.
 
 *lxc-0.7.0 (20 Jun 2010)
 

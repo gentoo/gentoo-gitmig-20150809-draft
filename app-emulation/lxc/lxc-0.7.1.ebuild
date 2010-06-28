@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.0.ebuild,v 1.1 2010/06/20 20:29:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.1.ebuild,v 1.1 2010/06/28 00:00:08 flameeyes Exp $
 
 EAPI="2"
 
