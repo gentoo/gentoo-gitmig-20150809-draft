@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmfishtime
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.21 2008/01/15 12:50:06 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/ChangeLog,v 1.22 2010/06/28 09:09:44 voyageur Exp $
+
+*wmfishtime-1.24-r2 (28 Jun 2010)
+
+  28 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +wmfishtime-1.24-r2.ebuild, +files/wmfishtime-1.24-no_display.patch:
+  Fix support with gtk+ >= 2.18, bug #310779
 
   15 Jan 2008; Raúl Porcel <armin76@gentoo.org> wmfishtime-1.24-r1.ebuild:
   sparc stable wrt #205466, thanks to Tiago Cunha for testing
