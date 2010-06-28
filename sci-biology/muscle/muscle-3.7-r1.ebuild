@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.7-r1.ebuild,v 1.1 2010/06/28 20:30:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.7-r1.ebuild,v 1.2 2010/06/28 21:00:46 jlec Exp $
 
 EAPI="3"
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_prepare() {
-	epatch"${FILESDIR}"/${PV}-bufferoverflow.patch
+	edos2unix progress.cpp globalslinux.cpp
+	epatch "${FILESDIR}"/${PV}-bufferoverflow.patch
 	sed -i \
 		"s:-static::g" \
 		"${S}/Makefile"
