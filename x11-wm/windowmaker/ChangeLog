@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.108 2010/06/26 14:27:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.109 2010/06/28 15:04:00 voyageur Exp $
+
+*windowmaker-0.92.0-r9 (28 Jun 2010)
+
+  28 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +windowmaker-0.92.0-r9.ebuild:
+  Do not use alloca in libwraster, patch from AltLinux, fixes bug #265465
 
   26 Jun 2010; <nixnut@gentoo.org> windowmaker-0.92.0-r8.ebuild:
   ppc stable #324153
