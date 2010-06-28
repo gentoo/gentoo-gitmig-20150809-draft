@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.3.ebuild,v 1.1 2010/03/18 15:32:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.0.3.ebuild,v 1.2 2010/06/28 21:32:20 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 MIRA_3RDPARTY_PV="06-03-2010"
 
-inherit base autotools
+inherit autotools base multilib
 
 DESCRIPTION="Whole Genome Shotgun and EST Sequence Assembler for Sanger, 454 and Solexa / Illumina"
 HOMEPAGE="http://www.chevreux.org/projects_mira.html"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/mira-assembler/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 CDEPEND=">=dev-libs/boost-1.35.0"
 DEPEND="${CDEPEND}
@@ -28,6 +28,13 @@ src_prepare() {
 	find -name 'configure*' -or -name 'Makefile*' | xargs sed -i 's/flex++/flex -+/' || die
 	epatch "${FILESDIR}"/${PN}-3.0.0-asneeded.patch
 	AT_M4DIR="config/m4" eautoreconf
+}
+
+src_configure() {
+	econf \
+		--with-boost="${EPREFIX}"/usr/$(get_libdir) \
+		--with-boost-libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--with-boost-thread=boost_thread-mt
 }
 
 src_compile() {
