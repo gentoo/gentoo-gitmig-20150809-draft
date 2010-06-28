@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/guile-www-2.23.ebuild,v 1.7 2010/01/06 20:24:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/guile-www-2.23.ebuild,v 1.8 2010/06/28 16:17:34 jlec Exp $
 
 DESCRIPTION="Guile Scheme modules to facilitate HTTP, URL and CGI programming"
-HOMEPAGE="http://www.gnuvola.org/software/guile-www/"
+HOMEPAGE="http://www.nongnu.org/guile-www/"
 SRC_URI="http://www.gnuvola.org/software/guile-www/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
