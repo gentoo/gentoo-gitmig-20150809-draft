@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-dxr3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.17 2010/06/16 12:16:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.18 2010/06/28 18:14:10 hd_brummy Exp $
+
+*vdr-dxr3-0.2.10 (28 Jun 2010)
+
+  28 Jun 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-dxr3-0.2.10.ebuild:
+  version bump
 
   16 Jun 2010; Alexis Ballier <aballier@gentoo.org> vdr-dxr3-0.2.9.ebuild:
   fix build with ffmpeg >= 0.6
