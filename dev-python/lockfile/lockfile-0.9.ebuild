@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.ebuild,v 1.2 2010/06/24 21:56:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.ebuild,v 1.3 2010/06/28 08:45:42 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="http://smontanaro.dyndns.org/python/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 DEPEND="doc? ( dev-python/sphinx )"
