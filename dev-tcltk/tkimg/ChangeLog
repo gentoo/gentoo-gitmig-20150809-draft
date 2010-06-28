@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.16 2010/06/15 12:41:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.17 2010/06/28 19:19:09 jlec Exp $
+
+  28 Jun 2010; Justin Lecher <jlec@gentoo.org> -tkimg-1.3.20081202.ebuild,
+  -tkimg-1.3.20081202-r1.ebuild:
+  Cleaned versions depending illegally on <libpng-1.4
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> tkimg-1.4.20100510.ebuild:
   QA, imported prefix changes
