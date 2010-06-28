@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.5.0.ebuild,v 1.1 2010/05/27 22:04:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.5.0.ebuild,v 1.2 2010/06/28 21:58:09 angelos Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs linux-info
@@ -12,7 +12,7 @@ SRC_URI="http://pingus.seul.org/~grumbel/xboxdrv/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="daemon"
 
 RDEPEND="dev-libs/boost
