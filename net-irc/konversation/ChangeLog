@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.99 2010/06/15 09:27:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.100 2010/06/28 14:22:02 scarabeus Exp $
+
+  28 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -konversation-1.2.ebuild:
+  Drop old.
 
   15 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   konversation-1.2.3.ebuild:
