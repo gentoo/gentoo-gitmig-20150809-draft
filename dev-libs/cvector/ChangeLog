@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cvector
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/ChangeLog,v 1.4 2010/04/25 11:23:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/ChangeLog,v 1.5 2010/06/28 22:40:51 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org> cvector-1.0.3-r1.ebuild:
+  Stable on amd64 wrt bug #326041
 
 *cvector-1.0.3-r1 (07 Mar 2010)
 
