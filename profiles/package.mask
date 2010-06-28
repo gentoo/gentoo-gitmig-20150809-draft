@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11710 2010/06/28 10:26:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11711 2010/06/28 11:15:01 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <fauli@gentoo.org> (28 Jun 2010)
+# Beta version
+~dev-lang/erlang-14.1
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Jun 2010)
 # Wrongly stripping -Wl, from LDFLAGS causing sane-compiler-check
