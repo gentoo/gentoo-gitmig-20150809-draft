@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/xgraph-12.1-r2.ebuild,v 1.6 2010/01/06 01:21:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/xgraph-12.1-r2.ebuild,v 1.7 2010/06/28 21:34:25 jlec Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils autotools
 
 DEB_PR=10
@@ -13,7 +13,7 @@ SRC_URI="http://www.isi.edu/nsnam/dist/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="examples"
 DEPEND="x11-libs/libSM
 		x11-libs/libX11"
@@ -36,9 +36,9 @@ src_install() {
 	fi
 
 	dodir /usr/share/man/man1
-	mv "${D}"/usr/share/man/manm/xgraph.man \
-		"${D}"/usr/share/man/man1/xgraph.1 || \
+	mv "${ED}"/usr/share/man/manm/xgraph.man \
+		"${ED}"/usr/share/man/man1/xgraph.1 || \
 		die "Failed to correct man page location."
-	rm -Rf "${D}"/usr/share/man/manm/ || \
+	rm -Rf "${ED}"/usr/share/man/manm/ || \
 		die "Failed to remove bogus manm directory."
 }
