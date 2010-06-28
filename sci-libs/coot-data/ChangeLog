@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coot-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.9 2010/02/05 23:31:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.10 2010/06/28 15:44:51 jlec Exp $
+
+  28 Jun 2010; Justin Lecher <jlec@gentoo.org> coot-data-2.ebuild:
+  Keyworded for linux prefix
 
 *coot-data-2 (05 Feb 2010)
 
