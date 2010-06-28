@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/neartree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.3 2010/06/15 13:31:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/ChangeLog,v 1.4 2010/06/28 22:42:50 angelos Exp $
+
+  28 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  neartree-2.1.4-r2.ebuild:
+  Stable on amd64 wrt bug #326039
 
 *neartree-2.1.4-r2 (15 Jun 2010)
 
