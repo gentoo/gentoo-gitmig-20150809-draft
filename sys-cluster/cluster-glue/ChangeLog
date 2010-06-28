@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/cluster-glue
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.4 2010/06/21 07:45:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.5 2010/06/28 10:28:52 xarthisius Exp $
+
+  28 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  cluster-glue-1.0.5.ebuild:
+  Adding missing dependency on dev-libs/glib:2. Thanks to Ultrabug for
+  noticing.
 
   21 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   cluster-glue-1.0.5.ebuild:
