@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.38 2010/06/24 21:29:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.39 2010/06/28 07:09:18 jlec Exp $
+
+  28 Jun 2010; Justin Lecher <jlec@gentoo.org> openbabel-2.2.3.ebuild:
+  Keyworded for *-linux prefix
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> openbabel-2.2.3.ebuild:
   stable amd64, bug 324283
