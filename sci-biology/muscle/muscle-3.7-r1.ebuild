@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.7-r1.ebuild,v 1.2 2010/06/28 21:00:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.7-r1.ebuild,v 1.3 2010/06/28 23:03:40 angelos Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.drive5.com/muscle/downloads${PV}/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="!sci-libs/libmuscle"
