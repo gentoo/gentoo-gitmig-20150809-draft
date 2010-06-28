@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.68 2010/06/01 14:34:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.69 2010/06/28 20:09:57 voyageur Exp $
+
+*chromium-bin-6.0.451.0_p51005 (28 Jun 2010)
+
+  28 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-5.0.308.0_p37385.ebuild,
+  +chromium-bin-6.0.451.0_p51005.ebuild, chromium-bin-9999.ebuild:
+  Bump to try a version working with flash 10.1.53.64, bug #324807. Also a
+  few fixes/cleanups
 
   01 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-bin-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.42 2010/06/01 14:34:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.43 2010/06/28 20:09:57 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -16,7 +16,7 @@ DEPEND="app-arch/unzip"
 RDEPEND="app-arch/bzip2
 	>=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12.3
-	gnome-base/gconf
+	>=gnome-base/gconf-2.24.0
 	>=media-libs/alsa-lib-1.0.19
 	<media-libs/jpeg-7
 	=media-libs/libpng-1.2*
@@ -29,15 +29,9 @@ RDEPEND="app-arch/bzip2
 	virtual/ttf-fonts
 	|| (
 		x11-themes/gnome-icon-theme
+		x11-themes/oxygen-molecule
 		x11-themes/tango-icon-theme
 		x11-themes/xfce4-icon-theme
-	)"
-
-# Incompatible system plugins:
-# www-plugins/gecko-mediaplayer, bug #309231.
-RDEPEND+="
-	plugins-symlink? (
-		!www-plugins/gecko-mediaplayer[gnome]
 	)"
 
 S=${WORKDIR}
