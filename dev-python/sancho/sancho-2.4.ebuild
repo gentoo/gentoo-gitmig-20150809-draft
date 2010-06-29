@@ -1,15 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.4.ebuild,v 1.11 2009/12/27 12:01:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/sancho-2.4.ebuild,v 1.12 2010/06/29 04:45:57 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="2.4"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
-MY_P=${P/s/S}
+MY_P="Sancho-${PV}"
+
 DESCRIPTION="Sancho is a unit testing framework"
 HOMEPAGE="http://www.mems-exchange.org/software/sancho/"
 SRC_URI="http://www.mems-exchange.org/software/files/${PN}/${MY_P}.tar.gz"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sancho
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.46 2009/12/27 12:01:41 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.47 2010/06/29 04:45:57 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sancho-2.4.ebuild:
+  Don't use NEED_PYTHON.
 
   27 Dec 2009; Raúl Porcel <armin76@gentoo.org> sancho-2.4.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #288563
