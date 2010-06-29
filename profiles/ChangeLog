@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4354 2010/06/29 07:51:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4355 2010/06/29 09:44:02 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jun 2010; Peter Volkov <pva@gentoo.org> package.mask:
+  Drop autogen prerelease mask, affected ebuilds are not in the tree
 
   29 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Mask dev-libs/seed till ebuild issues are resolved
