@@ -2,13 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>crypto</herd>
-	<maintainer>
-		<email>crypto@gentoo.org</email>
-		<name>Crypto Herd</name>
-	</maintainer>
 	<use>
-		<flag name='nousb'>Disable USB support via
-			<pkg>sys-apps/pcsc-lite</pkg></flag>
-		<flag name='twinserial'>Enable twinserial reader</flag>
+		<flag name="twinserial">Enable twinserial reader</flag>
 	</use>
 </pkgmetadata>
