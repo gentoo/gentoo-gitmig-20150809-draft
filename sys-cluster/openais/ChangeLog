@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openais
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.8 2010/06/26 16:32:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.9 2010/06/29 08:34:20 gmsoft Exp $
+
+  29 Jun 2010; Guy Martin <gmsoft@gentoo.org> openais-1.1.3.ebuild:
+  Added ~hppa to KEYWORDS.
 
 *openais-1.1.3 (26 Jun 2010)
 
