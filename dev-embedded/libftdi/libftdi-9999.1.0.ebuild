@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-9999.1.0.ebuild,v 1.1 2010/06/22 23:10:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-9999.1.0.ebuild,v 1.2 2010/06/29 23:32:22 vapier Exp $
 
 EAPI="2"
 
 if [[ ${PV} == 9999* ]] ; then
+	EGIT_PROJECT="libftdi-1.0"
 	EGIT_REPO_URI="git://developer.intra2net.com/libftdi-1.0"
 	inherit git autotools
 else
@@ -19,7 +20,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 IUSE="cxx doc examples python"
 
-RDEPEND="virtual/libusb:0
+RDEPEND="virtual/libusb:1
 	cxx? ( dev-libs/boost )
 	python? ( dev-lang/python )"
 DEPEND="${RDEPEND}
@@ -27,23 +28,22 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	if [[ ${PV} == 9999* ]] ; then
+		mkdir -p m4
 		eautoreconf
 	fi
-
-	# don't bother building examples as we dont want the binaries
-	# installed and the Makefile has broken install targets
-	sed -i '/^SUBDIRS =/s:examples::' Makefile.in
 }
 
 src_configure() {
-	use doc || export ac_cv_path_DOXYGEN=true
 	econf \
+		--with-async-mode \
 		$(use_enable cxx libftdipp) \
+		$(use_with doc docs) \
+		$(use_with examples) \
 		$(use_enable python python-binding)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog README
 
 	if use doc ; then
