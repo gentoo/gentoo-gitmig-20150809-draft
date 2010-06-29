@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparsing
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.51 2009/11/14 16:56:15 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.52 2010/06/29 04:49:49 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyparsing-1.5.2.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   14 Nov 2009; Raúl Porcel <armin76@gentoo.org> pyparsing-1.5.2.ebuild:
   ia64 stable wrt #287627

@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.5.2.ebuild,v 1.12 2009/12/30 00:59:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-1.5.2.ebuild,v 1.13 2010/06/29 04:49:49 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="2.6"
+EAPI="3"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 2.5"
 
 inherit distutils
 
@@ -20,7 +20,6 @@ IUSE="doc examples"
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="2.4 2.5"
 
 PYTHON_MODNAME="pyparsing.py"
 
