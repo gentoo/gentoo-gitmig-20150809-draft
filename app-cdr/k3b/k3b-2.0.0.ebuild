@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.93.0_rc4.ebuild,v 1.1 2010/06/18 09:54:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.0.ebuild,v 1.1 2010/06/29 13:23:06 scarabeus Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
