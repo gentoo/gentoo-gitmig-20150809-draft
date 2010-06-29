@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.10.3.ebuild,v 1.2 2010/06/29 09:34:58 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.10.3.ebuild,v 1.3 2010/06/29 09:39:36 lxnay Exp $
 
 EAPI="2"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="*"
 
 inherit multilib python
 
