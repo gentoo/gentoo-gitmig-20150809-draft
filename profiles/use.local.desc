@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5727 2010/06/29 00:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5728 2010/06/29 08:47:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -915,6 +915,10 @@ dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP 
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
 dev-libs/ppl:prolog - Build SWI Prolog interface
 dev-libs/ppl:watchdog - Build the PPL Watchdog library - a C++ library for multiple, concurrent watchdog timers
+dev-libs/seed:dbus - Build the JS module for sys-apps/dbus and dev-libs/dbus-glib
+dev-libs/seed:mpfr - Build the JS module for dev-libs/mpfr
+dev-libs/seed:profile - Build support for profiling dev-libs/seed for development purposes
+dev-libs/seed:xml - Build JS module for dev-libs/libxml2
 dev-libs/soprano:clucene - Enable dev-cpp/clucene backend support.
 dev-libs/soprano:java - Enables support for virtual/jre-1.6.0 (sesame2) storage backend.
 dev-libs/soprano:raptor - Enables support for media-libs/raptor RDF parser/serializer.
@@ -1317,7 +1321,8 @@ gnome-extra/file-browser-applet:gtkhotkey - Enable hotkey support via x11-libs/g
 gnome-extra/gget:epiphany - Install epiphany extensions
 gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee) plugin
 gnome-extra/gnome-games:artworkextra - Installs extra artwork for various games
-gnome-extra/gnome-games:sound - Enable sound using libcanberra
+gnome-extra/gnome-games:clutter - Build games that use media-libs/clutter and are written in JavaScript using dev-libs/seed
+gnome-extra/gnome-games:sound - Enable sound using media-libs/libcanberra
 gnome-extra/gnome-lirc-properties:policykit - Use sys-auth/policykit to gain privileges to change configuration files
 gnome-extra/gnome-media:gnomecd - Builds the GNOME CD Player
 gnome-extra/gnome-media:sound - Adds support for sound notification themes using media-libs/libcanberra
