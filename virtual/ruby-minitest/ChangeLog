@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.10 2010/05/22 22:58:11 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.11 2010/06/29 10:35:01 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> ruby-minitest-0.ebuild:
+  Stable on amd64 wrt bug #321043
 
   22 May 2010; Alex Legler <a3li@gentoo.org> ruby-minitest-0-r1.ebuild:
   Add REE18 support
