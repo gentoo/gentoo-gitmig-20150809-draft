@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/molecule
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/ChangeLog,v 1.2 2010/06/29 08:55:37 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/ChangeLog,v 1.3 2010/06/29 09:03:46 lxnay Exp $
+
+*molecule-0.9.10.1 (29 Jun 2010)
+
+  29 Jun 2010; Fabio Erculiani <lxnay@gentoo.org> -molecule-0.9.10.ebuild,
+  +molecule-0.9.10.1.ebuild:
+  version bump, upstream fixed more Python 3.x bugs, fix ebuild
+  DEPEND/RDEPEND, thanks to ssuominen@gentoo.org
 
 *molecule-0.9.10 (29 Jun 2010)
 
