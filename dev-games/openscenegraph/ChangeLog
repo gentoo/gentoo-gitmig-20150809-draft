@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.25 2010/06/28 22:12:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.26 2010/06/29 09:48:22 tupone Exp $
+
+  29 Jun 2010; Tupone Alfredo <tupone@gentoo.org> metadata.xml:
+  Removing me as a mantainer
 
   28 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   openscenegraph-2.8.3.ebuild:
