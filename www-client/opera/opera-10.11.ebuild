@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.11.ebuild,v 1.3 2010/06/23 16:40:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.11.ebuild,v 1.4 2010/06/29 03:17:32 jer Exp $
 
 EAPI="2"
 
@@ -56,6 +56,7 @@ DEPEND=">=sys-apps/sed-4"
 
 RDEPEND="
 	media-libs/jpeg
+	media-libs/libpng
 	media-libs/libexif
 	>=media-libs/fontconfig-2.1.94-r1
 	x11-libs/libXrandr
