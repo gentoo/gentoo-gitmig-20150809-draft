@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8-r1.ebuild,v 1.4 2010/06/22 18:41:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.8-r1.ebuild,v 1.5 2010/06/29 10:44:30 angelos Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -14,7 +14,7 @@ SRC_URI="http://download.netbeans.org/netbeans/6.8/final/zip/netbeans-6.8-200912
 	mirror://gentoo/netbeans-6.8-l10n-20091209164706.tar.bz2"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE_NETBEANS_MODULES="
 	+netbeans_modules_apisupport
