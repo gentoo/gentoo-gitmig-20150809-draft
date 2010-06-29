@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sparklines
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.7 2010/02/28 09:17:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.8 2010/06/29 10:41:01 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  sparklines-0.5.2-r2.ebuild:
+  Stable on amd64 wrt bug #321217
 
   28 Feb 2010; Hans de Graaff <graaff@gentoo.org>
   -sparklines-0.5.2-r1.ebuild:

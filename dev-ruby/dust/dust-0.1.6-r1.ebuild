@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/dust-0.1.6-r1.ebuild,v 1.1 2010/01/12 18:58:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dust/dust-0.1.6-r1.ebuild,v 1.2 2010/06/29 10:38:23 angelos Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ DESCRIPTION="Descriptive block syntax definition for Test::Unit."
 HOMEPAGE="http://dust.rubyforge.org/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE=""
 

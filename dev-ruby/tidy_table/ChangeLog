@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tidy_table
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.8 2010/06/26 09:55:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.9 2010/06/29 10:40:21 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  tidy_table-0.0.5-r1.ebuild:
+  Stable on amd64 wrt bug #321217
 
 *tidy_table-0.0.5-r2 (26 Jun 2010)
 

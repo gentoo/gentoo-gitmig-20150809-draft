@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.70 2010/06/26 09:58:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.71 2010/06/29 10:39:53 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> rspec-1.2.9-r1.ebuild:
+  Stable on amd64 wrt bug #321217
 
   26 Jun 2010; Hans de Graaff <graaff@gentoo.org> rspec-1.2.9-r1.ebuild:
   Drop ruby targets to provide a stabilization path for dev-ruby/sparklines,
