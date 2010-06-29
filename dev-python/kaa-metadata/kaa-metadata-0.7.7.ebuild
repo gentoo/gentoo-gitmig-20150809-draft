@@ -1,9 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/kaa-metadata-0.7.7.ebuild,v 1.4 2009/12/31 16:35:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/kaa-metadata-0.7.7.ebuild,v 1.5 2010/06/29 04:29:54 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
+PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit distutils
 
@@ -16,14 +19,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="css dvd"
 
-DEPEND="dev-lang/python[threads]
-	>=dev-python/kaa-base-0.3.0
+DEPEND=">=dev-python/kaa-base-0.3.0
 	css? ( media-libs/libdvdcss )
 	dvd? ( media-libs/libdvdread )"
-RDEPEND="${DEPEND}
-	!dev-python/mmpython"
-
-RESTRICT_PYTHON_ABIS="2.4 3*"
+RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="kaa"
 

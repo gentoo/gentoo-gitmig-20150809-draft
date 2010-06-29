@@ -1,9 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/kaa-display-0.1.0.ebuild,v 1.3 2009/11/30 16:36:11 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/kaa-display-0.1.0.ebuild,v 1.4 2010/06/29 04:33:12 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit distutils
 
@@ -22,6 +24,5 @@ DEPEND=">=dev-python/kaa-base-0.3.0
 	>=media-libs/imlib2-1.2.1
 	>=x11-libs/libX11-1.0.0"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 PYTHON_MODNAME="kaa/display"

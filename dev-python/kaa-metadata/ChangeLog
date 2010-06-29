@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kaa-metadata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.19 2010/01/18 15:51:14 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.20 2010/06/29 04:29:54 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kaa-metadata-0.7.7.ebuild:
+  Set PYTHON_DEPEND.
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Dropping maintenance

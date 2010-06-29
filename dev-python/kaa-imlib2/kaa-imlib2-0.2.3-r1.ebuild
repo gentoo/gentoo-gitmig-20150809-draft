@@ -1,9 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/kaa-imlib2-0.2.3-r1.ebuild,v 1.5 2009/12/31 16:32:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/kaa-imlib2-0.2.3-r1.ebuild,v 1.6 2010/06/29 04:36:45 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit distutils eutils
 
@@ -20,8 +22,6 @@ DEPEND=">=dev-python/kaa-base-0.3.0
 	dev-libs/libxml2[python]
 	media-libs/imlib2"
 RDEPEND="${DEPEND}"
-
-RESTRICT_PYTHON_ABIS="2.4 3*"
 
 PYTHON_MODNAME="kaa"
 
