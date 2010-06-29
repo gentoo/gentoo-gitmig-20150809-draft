@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/demjson
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.7 2009/11/25 09:49:52 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.8 2010/06/29 23:55:46 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  demjson-1.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> demjson-1.4.ebuild:
   amd64 stable, bug #281571

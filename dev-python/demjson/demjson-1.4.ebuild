@@ -1,34 +1,42 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/demjson-1.4.ebuild,v 1.3 2009/11/25 09:49:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/demjson-1.4.ebuild,v 1.4 2010/06/29 23:55:46 arfrever Exp $
 
-EAPI=1
-NEED_PYTHON=2.3
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-KEYWORDS="amd64 x86"
-
 DESCRIPTION="Read and write JSON-encoded data, compliant with RFC 4627"
-HOMEPAGE="http://deron.meranda.us/python/demjson/"
+HOMEPAGE="http://deron.meranda.us/python/demjson/ http://pypi.python.org/pypi/demjson"
 SRC_URI="http://deron.meranda.us/python/${PN}/dist/${P}.tar.gz"
+
 LICENSE="LGPL-3"
 SLOT="0"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools"
 RDEPEND=""
 
 DOCS="AUTHORS.txt CHANGES.txt NEWS.txt THANKS.txt"
+PYTHON_MODNAME="demjson.py"
+
+src_test() {
+	cd test
+
+	testing() {
+		PYTHONPATH="../build-${PYTHON_ABI}/lib" "$(PYTHON)" test_demjson.py
+	}
+	python_execute_function testing
+}
 
 src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml -r docs/* || die "Failed to install docs"
+		dohtml -r docs/* || die "Installation of documentation failed"
 	fi
-}
-
-src_test() {
-	cd test && PYTHONPATH=.. python test_demjson.py || die "Test failed"
 }
