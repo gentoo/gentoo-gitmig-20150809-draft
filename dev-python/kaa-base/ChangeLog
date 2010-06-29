@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.21 2010/01/18 15:49:56 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.22 2010/06/29 04:18:23 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kaa-base-0.6.0.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Dropping maintenance

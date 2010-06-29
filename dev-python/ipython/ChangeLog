@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.74 2010/04/30 15:25:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.75 2010/06/29 04:14:36 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ipython-0.10.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   30 Apr 2010; Fabian Groffen <grobian@gentoo.org> ipython-0.10.ebuild:
   Marked ~x64-macos (bug #316787) and ~ppc-macos

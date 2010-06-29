@@ -1,16 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.ebuild,v 1.11 2010/04/30 15:25:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.ebuild,v 1.12 2010/06/29 04:14:36 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="2.4"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils elisp-common
+inherit distutils elisp-common eutils
 
 DESCRIPTION="An advanced interactive shell for Python."
-HOMEPAGE="http://ipython.scipy.org/"
+HOMEPAGE="http://ipython.scipy.org/ http://pypi.python.org/pypi/ipython"
 SRC_URI="http://ipython.scipy.org/dist/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -30,10 +30,9 @@ RDEPEND="${CDEPEND}
 DEPEND="${CDEPEND}
 	test? ( dev-python/nose )"
 
-RESTRICT_PYTHON_ABIS="3*"
-
-PYTHON_MODNAME="IPython"
 SITEFILE="62ipython-gentoo.el"
+DOCS="docs/source/changes.txt"
+PYTHON_MODNAME="IPython"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.1-globalpath.patch
@@ -75,7 +74,6 @@ src_test() {
 }
 
 src_install() {
-	DOCS="docs/source/changes.txt"
 	distutils_src_install
 	if use emacs; then
 		pushd docs/emacs
