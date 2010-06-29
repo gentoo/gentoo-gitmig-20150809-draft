@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/beaglefs-1.0.3.ebuild,v 1.3 2008/07/25 07:43:32 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/beaglefs-1.0.3.ebuild,v 1.4 2010/06/29 14:42:02 ssuominen Exp $
 
 inherit eutils
 
@@ -19,9 +19,11 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	if has_version dev-libs/libbeagle; then
 		epatch "${FILESDIR}/${P}-libbeagle-0.3.patch"
 	fi
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {
