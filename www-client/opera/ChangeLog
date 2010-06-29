@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.504 2010/06/29 13:38:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.505 2010/06/29 15:37:48 jer Exp $
+
+  29 Jun 2010; Jeroen Roovers <jer@gentoo.org> opera-10.11.ebuild:
+  But only whe USE=qt-static thanks to Rafał Mużyło (bug #325569).
 
   29 Jun 2010; Jeroen Roovers <jer@gentoo.org> opera-10.11.ebuild:
   Specifically use =media-libs/libpng-1.2* (bug #325569).
