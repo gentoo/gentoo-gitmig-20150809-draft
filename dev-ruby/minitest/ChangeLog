@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.16 2010/06/26 09:49:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.17 2010/06/29 10:37:45 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> minitest-1.5.0.ebuild:
+  Stable on amd64 wrt bug #321043
 
   26 Jun 2010; Hans de Graaff <graaff@gentoo.org> -minitest-1.4.2.ebuild:
   Remove old version.

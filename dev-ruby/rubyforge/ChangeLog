@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.62 2010/05/22 22:56:01 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.63 2010/06/29 10:36:19 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> rubyforge-2.0.4.ebuild:
+  Stable on amd64 wrt bug #321043
 
   22 May 2010; Alex Legler <a3li@gentoo.org> rubyforge-2.0.4-r1.ebuild:
   Add REE18 support
