@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.2.ebuild,v 1.2 2010/05/31 21:56:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.2.ebuild,v 1.3 2010/06/29 21:52:17 robbat2 Exp $
 
 EAPI="2"
 CMAKE_MIN_VERSION="2.8"
@@ -44,6 +44,8 @@ src_prepare() {
 	else
 	  sed "s/-g -Wall -Werror / /" CMakeLists.txt -i
 	fi
+	# Stop using xulrunner 1.8 when both are installed
+	epatch "${FILESDIR}"/libproxy-0.4.2-mozjs-search-order.patch
 }
 
 src_configure() {

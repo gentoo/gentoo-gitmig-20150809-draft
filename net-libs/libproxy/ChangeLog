@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.33 2010/05/31 21:56:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.34 2010/06/29 21:52:17 robbat2 Exp $
+
+  29 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> libproxy-0.4.2.ebuild,
+  +files/libproxy-0.4.2-mozjs-search-order.patch:
+  Minor patch to compile when both 1.8 and 1.9 slots of xulrunner are
+  present.
 
   31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> libproxy-0.4.2.ebuild:
   Preserve old lib, bug #320511. Install perl binding in vendor directory,
