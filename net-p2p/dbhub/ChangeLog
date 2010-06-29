@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/dbhub
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.28 2008/06/30 12:52:45 corsair Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dbhub/ChangeLog,v 1.29 2010/06/29 19:53:52 ssuominen Exp $
+
+  29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> dbhub-0.451.ebuild,
+  files/dbhub-gentoo.patch:
+  Fix building with -Wl,--as-needed wrt #276928 by Diego E. Pettenò.
 
   30 Jun 2008; Markus Rothe <corsair@gentoo.org> dbhub-0.451.ebuild:
   Added ~ppc
