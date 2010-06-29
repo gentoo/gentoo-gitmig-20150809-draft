@@ -15,6 +15,10 @@
 		<email>chainsaw@gentoo.org</email>
 		<name>Tony Vroon</name>
 	</maintainer>
+	<maintainer>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
+	</maintainer>
 	<longdescription>
 		hardened-sources is based upon genpatches, and adds the grsecurity
 		patch from http://www.grsecurity.net, which also includes PaX.

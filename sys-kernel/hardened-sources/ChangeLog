@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.316 2010/06/11 23:27:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.317 2010/06/29 19:22:09 blueness Exp $
+
+  29 Jun 2010; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Added myself to the metadata.xml
 
 *hardened-sources-2.6.32-r9 (11 Jun 2010)
 
