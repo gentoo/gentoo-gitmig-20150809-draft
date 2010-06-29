@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.6 2010/06/29 18:42:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-1.0.ebuild,v 1.7 2010/06/29 19:09:55 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -19,7 +19,8 @@ RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-doc_install_path.patch \
-		"${FILESDIR}"/${PV}-gcc43.patch
+		"${FILESDIR}"/${PV}-gcc43.patch \
+		"${FILESDIR}"/${PV}-asneeded.patch
 
 	AT_M4DIR="m4" eautoreconf
 }

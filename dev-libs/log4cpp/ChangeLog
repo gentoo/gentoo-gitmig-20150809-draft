@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/log4cpp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.17 2008/05/10 11:47:06 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.18 2010/06/29 19:09:55 ssuominen Exp $
+
+  29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +files/1.0-asneeded.patch, log4cpp-1.0.ebuild:
+  Fix building with -Wl,--as-needed wrt #247067 by Diego E. Pettenò and
+  Kacper Kowalik.
 
   10 May 2008; nixnut <nixnut@gentoo.org> log4cpp-1.0.ebuild:
   Stable on ppc wrt bug 220711
