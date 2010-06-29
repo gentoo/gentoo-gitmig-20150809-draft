@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.12 2010/06/10 05:08:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.13 2010/06/29 10:27:36 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> rubygems-0-r2.ebuild:
+  Stable on amd64 wrt bug #320733
 
   10 Jun 2010; Jeroen Roovers <jer@gentoo.org> rubygems-0-r2.ebuild:
   Stable for HPPA (bug #321153).
