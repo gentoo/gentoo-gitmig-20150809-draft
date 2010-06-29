@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-archive-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/ChangeLog,v 1.4 2010/05/27 02:27:41 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/ChangeLog,v 1.5 2010/06/29 07:15:12 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  Stable on amd64 wrt bug #323729
 
 *thunar-archive-plugin-0.2.4-r2 (27 May 2010)
 

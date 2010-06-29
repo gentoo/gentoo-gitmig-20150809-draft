@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-sensors-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.9 2010/05/23 10:43:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.10 2010/06/29 07:23:54 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  xfce4-sensors-plugin-1.0.0.ebuild:
+  Stable on amd64 wrt bug #323729
 
   23 May 2010; Christoph Mende <angelos@gentoo.org>
   xfce4-sensors-plugin-1.0.0.ebuild:
