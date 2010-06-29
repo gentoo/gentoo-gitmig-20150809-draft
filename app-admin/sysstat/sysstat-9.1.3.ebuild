@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.1.1.ebuild,v 1.4 2010/03/16 01:53:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.1.3.ebuild,v 1.1 2010/06/29 13:47:47 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cron +doc isag nls"
 
-SYSSTAT_LINGUAS="af da de es fi fr id it ja ky lv mt nb nl nn pl pt_BR pt ro ru sk sv vi zh_CN zh_TW"
+SYSSTAT_LINGUAS="af da de es eu fi fr id it ja ky lv mt nb nl nn pl pt_BR pt ro ru sk sv vi zh_CN zh_TW"
 
 for SYSSTAT_LINGUA in ${SYSSTAT_LINGUAS}; do
 	IUSE="${IUSE} linguas_${SYSSTAT_LINGUA}"
@@ -34,7 +34,9 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-nls.patch"
+	cp -av Makefile.in{,.orig}
+	epatch "${FILESDIR}/${PN}-9.1.2-nls.patch"
+
 	local lingua NLSDIR="${S}/nls"
 	einfo "Keeping these locales: ${LINGUAS}."
 	for lingua in ${SYSSTAT_LINGUAS}; do
