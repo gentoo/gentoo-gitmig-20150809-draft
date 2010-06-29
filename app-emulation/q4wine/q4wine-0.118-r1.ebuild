@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-0.118-r1.ebuild,v 1.1 2010/06/29 10:56:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-0.118-r1.ebuild,v 1.2 2010/06/29 16:24:44 hwoarang Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -29,8 +29,6 @@ RDEPEND="x11-libs/qt-gui:4
 	gnome? ( x11-libs/gksu )"
 
 DOCS="README AUTHORS ChangeLog"
-
-S="${WORKDIR}/${PF}"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs} \
