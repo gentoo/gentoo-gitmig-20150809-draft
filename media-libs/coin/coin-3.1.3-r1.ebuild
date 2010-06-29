@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.2 2010/06/27 05:37:07 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.3 2010/06/29 06:29:26 reavertm Exp $
 
 EAPI=2
 
@@ -48,6 +48,7 @@ DOCS=(
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.1.0-javascript.patch"
+	"${FILESDIR}/${PN}-3.1.3-pkgconfig-partial.patch"
 )
 
 src_configure() {
@@ -88,6 +89,9 @@ src_configure() {
 }
 
 src_install() {
+	# Remove Coin from Libs.private
+	sed -e '/Libs.private/s/ -lCoin//' -i Coin.pc || die
+
 	base_src_install
 
 	# Remove libtool files when not needed.
