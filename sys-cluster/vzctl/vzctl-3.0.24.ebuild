@@ -1,18 +1,18 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.5 2010/06/29 09:26:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.24.ebuild,v 1.1 2010/06/29 09:26:42 pva Exp $
 
 EAPI="2"
 
-inherit bash-completion autotools git
+inherit bash-completion eutils
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
-EGIT_REPO_URI="git://git.openvz.org/pub/vzctl"
+SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="bash-completion"
 
 RDEPEND="
@@ -27,16 +27,15 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	# Set default OSTEMPLATE on gentoo
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
-	eautoreconf
 }
 
-src_configure() {
+src_compile() {
 	econf \
 		--localstatedir=/var \
 		--enable-cron \
 		--enable-udev \
-		--enable-logrotate \
-		$(use_enable bash-completion bashcomp)
+		$(use_enable bash-completion bashcomp) \
+		--enable-logrotate
 }
 
 src_install() {

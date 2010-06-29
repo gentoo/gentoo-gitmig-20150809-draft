@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/vzctl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.68 2009/11/21 12:30:27 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.69 2010/06/29 09:26:42 pva Exp $
+
+*vzctl-3.0.24 (29 Jun 2010)
+
+  29 Jun 2010; Peter Volkov <pva@gentoo.org> +vzctl-3.0.24.ebuild,
+  vzctl-9999.ebuild:
+  Version bump. Everything we did is finally upstream! Dropped old warn
+  message from 9999 version.
 
   21 Nov 2009; Peter Volkov <pva@gentoo.org> -vzctl-3.0.22-r2.ebuild,
   -files/vzctl-3.0.22-adjust-meminfo.patch,
