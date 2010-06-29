@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.2 2010/06/29 15:05:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.3 2010/06/29 15:06:47 ssuominen Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -24,8 +24,8 @@ KEYWORDS="~alpha ~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/wxGTK:2.8
-		>=dev-libs/xerces-c-2.7
-		net-analyzer/nmap"
+	>=dev-libs/xerces-c-2.7
+	net-analyzer/nmap"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}_${PV}
