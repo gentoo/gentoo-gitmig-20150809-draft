@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.158 2010/06/26 16:20:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.159 2010/06/29 07:55:38 nirbheek Exp $
+
+  29 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Mask clutter on gnome-extra/gnome-games till introspection is unmasked
 
   26 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Mask USE=infiniband for sys-cluster/corosync

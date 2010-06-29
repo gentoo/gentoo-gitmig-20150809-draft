@@ -1,15 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.147 2010/06/26 16:20:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.148 2010/06/29 07:55:38 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
+# Mask clutter till introspection is unmasked
+gnome-extra/gnome-games clutter
 
 # Kacper Kowalik <xarthisius@gentoo.org> (26 Jun 2010)
 # Mask infiniband until we've libibverbs and librdmacm with pc file
 sys-cluster/corosync infiniband
 
-# Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
+# Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
 net-libs/xulrunner ipc
