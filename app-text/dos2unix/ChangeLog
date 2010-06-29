@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.49 2010/06/27 14:01:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.50 2010/06/29 03:54:03 jer Exp $
+
+  29 Jun 2010; Jeroen Roovers <jer@gentoo.org> dos2unix-5.1.ebuild:
+  Stable for HPPA (bug #324553).
 
   27 Jun 2010; <nixnut@gentoo.org> dos2unix-5.1.ebuild:
   ppc stable #324553
