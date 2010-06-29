@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97-r1.ebuild,v 1.10 2010/06/22 18:40:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.97-r1.ebuild,v 1.11 2010/06/29 00:21:07 reavertm Exp $
 
 EAPI="2"
+
+# Bug 276208
+RESTRICT="test"
 
 KMNAME="extragear/sdk"
 inherit kde4-base
