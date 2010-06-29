@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.3 2010/06/29 06:29:26 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.3-r1.ebuild,v 1.4 2010/06/29 06:40:51 reavertm Exp $
 
 EAPI=2
 
@@ -41,14 +41,14 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 "
 
-DOCS=(
-	AUTHORS FAQ FAQ.legal NEWS README RELNOTES THANKS
-	docs/{ChangeLog.v${PV},HACKING,oiki-launch.txt}
-)
-
 PATCHES=(
 	"${FILESDIR}/${PN}-3.1.0-javascript.patch"
 	"${FILESDIR}/${PN}-3.1.3-pkgconfig-partial.patch"
+)
+
+DOCS=(
+	AUTHORS FAQ FAQ.legal NEWS README RELNOTES THANKS
+	docs/{ChangeLog.v${PV},HACKING,oiki-launch.txt}
 )
 
 src_configure() {
