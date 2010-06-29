@@ -1,32 +1,32 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/turbojson-1.1.4.ebuild,v 1.2 2009/12/20 12:34:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/turbojson-1.1.4.ebuild,v 1.3 2010/06/29 22:31:07 arfrever Exp $
 
-NEED_PYTHON=2.4
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-
-MY_PN=TurboJson
-MY_P=${MY_PN}-${PV}
+MY_PN="TurboJson"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="TurboGears JSON file format support plugin"
 HOMEPAGE="http://www.turbogears.org/docs/plugins/template.html"
-#SRC_URI="http://files.turbogears.org/eggs/${MY_P}.tar.gz"
-SRC_URI="http://pypi.python.org/packages/source/T/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
-RDEPEND="dev-python/ruledispatch
-	dev-python/simplejson"
+RDEPEND=">=dev-python/decoratortools-1.4
+	dev-python/ruledispatch
+	>=dev-python/simplejson-1.3"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( dev-python/nose )"
 
-S=${WORKDIR}/${MY_P}
-
-src_test() {
-	PYTHONPATH=. "${python}" setup.py test || die "tests failed"
-}
+S="${WORKDIR}/${MY_P}"
