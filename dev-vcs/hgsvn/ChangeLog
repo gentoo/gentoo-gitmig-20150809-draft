@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/hgsvn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/ChangeLog,v 1.2 2010/06/22 18:48:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/ChangeLog,v 1.3 2010/06/29 23:11:12 arfrever Exp $
+
+*hgsvn-0.1.8 (29 Jun 2010)
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -hgsvn-0.1.3.ebuild, -hgsvn-0.1.4.ebuild, -hgsvn-0.1.6.ebuild,
+  -hgsvn-0.1.7.ebuild, +hgsvn-0.1.8.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   hgsvn-0.1.3.ebuild, hgsvn-0.1.4.ebuild, hgsvn-0.1.6.ebuild,
