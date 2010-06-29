@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.1 2010/06/26 14:13:54 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/SoQt-1.5.0-r1.ebuild,v 1.2 2010/06/29 06:50:56 reavertm Exp $
 
 EAPI="2"
 
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 "
 
+PATCHES=(
+	"${FILESDIR}/${PN}-1.5.0-pkgconfig-partial.patch"
+)
+
 DOCS=(AUTHORS ChangeLog FAQ HACKING NEWS README)
 
 src_configure() {
@@ -46,6 +50,9 @@ src_configure() {
 }
 
 src_install() {
+	# Remove SoQt from Libs.private
+	sed -e '/Libs.private/s/ -lSoQt//' -i SoQt.pc || die
+
 	base_src_install
 
 	# Remove libtool files when not needed.

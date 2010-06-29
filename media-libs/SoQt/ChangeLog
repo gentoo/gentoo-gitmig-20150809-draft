@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.30 2010/06/26 14:13:54 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.31 2010/06/29 06:50:56 reavertm Exp $
+
+  29 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> SoQt-1.5.0-r1.ebuild,
+  +files/SoQt-1.5.0-pkgconfig-partial.patch:
+  Remove excessive linking in pkgconfig (move link deps to Libs.private)
 
 *SoQt-1.5.0-r1 (26 Jun 2010)
 
