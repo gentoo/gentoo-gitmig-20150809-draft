@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.6 2010/06/26 16:51:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.7 2010/06/29 16:04:45 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Email client for GNOME"
 HOMEPAGE="http://pawsa.fedorapeople.org/balsa/"
@@ -55,6 +55,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=app-text/scrollkeeper-0.1.4
 	app-text/gnome-doc-utils
+	dev-util/gtk-doc-am
 	doc? ( dev-util/gtk-doc )"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO docs/*"
@@ -104,4 +105,10 @@ src_prepare() {
 
 	# Fix build failure with USE="-libnotify", bug #314123
 	epatch "${FILESDIR}/${P}-build-failure-notify.patch"
+
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+
+	mkdir m4
+	intltoolize --force --copy --automake || die
+	eautoreconf
 }
