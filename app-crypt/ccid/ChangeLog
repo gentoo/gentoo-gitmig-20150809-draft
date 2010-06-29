@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.46 2010/06/29 00:20:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.47 2010/06/29 00:22:29 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ccid-1.3.10.ebuild, +ccid-1.3.13.ebuild:
+  Version bump.
 
 *ccid-1.3.13 (29 Jun 2010)
 
