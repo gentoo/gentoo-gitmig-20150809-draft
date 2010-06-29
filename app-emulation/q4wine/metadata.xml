@@ -7,8 +7,10 @@
 <name>Markos Chandras</name>
 </maintainer>
 <use>
+<flag name="gnome">Use the gksu sudo GUI for managing the devices</flag>
 <flag name="icotools"> Enable icotools support</flag>
 <flag name="icoutils"> Enable icoutils support </flag>
+<flag name="kde">Use the kdesu sudo GUI for managing the devices</flag>
 <flag name="winetools"> Enable winetools support</flag>
 <flag name="wineappdb"> Enable Win AppDB browser subsystem</flag>
 <flag name="winetriks"> Enable winetricks support </flag>

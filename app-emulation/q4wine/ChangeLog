@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.15 2010/04/15 18:18:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.16 2010/06/29 10:56:37 hwoarang Exp $
+
+*q4wine-0.118-r1 (29 Jun 2010)
+
+  29 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +q4wine-0.118-r1.ebuild, metadata.xml:
+  Add sudo GUI dependecies according to use flag selection. Fix bug #321843
 
 *q4wine-0.118 (15 Apr 2010)
 
