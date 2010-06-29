@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/batti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.7 2010/06/27 19:50:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.8 2010/06/29 09:31:58 fauli Exp $
+
+  29 Jun 2010; Christian Faulhammer <fauli@gentoo.org> batti-0.3.7.ebuild:
+  stable x86, bug 325715
 
   27 Jun 2010; Christoph Mende <angelos@gentoo.org> batti-0.3.7.ebuild:
   Stable on amd64 wrt bug #325715
