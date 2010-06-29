@@ -1,15 +1,21 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-9999.ebuild,v 1.6 2009/12/29 16:51:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-9999.ebuild,v 1.7 2010/06/29 19:04:07 ssuominen Exp $
 
-inherit distutils
+EAPI=3
+
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit distutils fdo-mime gnome2-utils
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://gitorious.org/nfoview/mainline.git"
 	inherit git
 	SRC_URI=""
 	#KEYWORDS=""
 else
-	SRC_URI="http://download.gna.org/nfoview/${PV}/${P}.tar.bz2"
+	SRC_URI="http://download.gna.org/nfoview/1.9/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -23,3 +29,19 @@ IUSE=""
 DEPEND="dev-python/pygtk"
 RDEPEND="${DEPEND}
 	media-fonts/terminus-font"
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+	distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+	distutils_pkg_postrm
+}
