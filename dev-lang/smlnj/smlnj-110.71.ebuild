@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.71.ebuild,v 1.1 2009/10/09 14:33:22 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.71.ebuild,v 1.2 2010/06/29 12:13:03 ssuominen Exp $
 
 EAPI=2
 
@@ -59,7 +59,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE=""
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	mkdir -p "${S}"
@@ -68,6 +68,20 @@ src_unpack() {
 	done
 	unpack ${P}-config.tgz && rm config/*.bat
 	echo SRCARCHIVEURL=\"file:/${S}\" > "${S}"/config/srcarchiveurl
+
+	# Required for sed in src_prepare
+	mkdir base || die
+	./config/unpack "${S}" runtime || die
+}
+
+src_prepare() {
+	# Use environment wrt #243886
+	sed -i \
+		-e "/^AS/s:as:$(tc-getAS):" \
+		-e "/^CC/s:gcc:$(tc-getCC):" \
+		-e "/^CPP/s:gcc:$(tc-getCC):" \
+		-e "/^CFLAGS/{s:-O[0123s]:: ; s:=:= ${CFLAGS}:}" \
+		base/runtime/objs/mk.x86-linux || die
 }
 
 src_compile() {
