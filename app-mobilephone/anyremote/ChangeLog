@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/anyremote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.4 2010/06/27 11:56:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.5 2010/06/29 09:22:11 fauli Exp $
+
+  29 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  anyremote-5.1.2.ebuild:
+  stable x86, bug 325717
 
   27 Jun 2010; Christoph Mende <angelos@gentoo.org> anyremote-5.1.2.ebuild:
   Stable on amd64 wrt bug #325719
