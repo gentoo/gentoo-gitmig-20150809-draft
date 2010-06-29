@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.24 2010/06/17 21:52:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/ChangeLog,v 1.25 2010/06/29 21:39:43 ssuominen Exp $
+
+  29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> cvm-0.96.ebuild:
+  Force MAKEOPTS="-j1" wrt #310843.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> cvm-0.76.ebuild,
   cvm-0.82.ebuild, cvm-0.96.ebuild:
