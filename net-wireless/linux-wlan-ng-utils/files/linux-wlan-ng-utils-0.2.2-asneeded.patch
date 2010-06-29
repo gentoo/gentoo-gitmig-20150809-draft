@@ -1,0 +1,21 @@
+--- add-ons/keygen/Makefile
++++ add-ons/keygen/Makefile
+@@ -44,6 +44,6 @@
+ 
+ 
+ keygen:
+-	gcc -o keygen keygen.c -lcrypto
++	$(CC) $(CFLAGS) $(LDFLAGS) -o keygen keygen.c -lcrypto
+ 
+ 
+--- add-ons/lwepgen/Makefile
++++ add-ons/lwepgen/Makefile
+@@ -1,7 +1,7 @@
+ default: lwepgen
+ 
+ lwepgen: lwepgen.c
+-	 gcc -Wl,/usr/lib/libcrypto.so -o lwepgen lwepgen.c
++	 $(CC) $(CFLAGS) $(LDFLAGS) -o lwepgen lwepgen.c -lcrypto
+ 	 
+ lwepgen.c:
+ 	echo lwepgen.c missing!
