@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.257 2010/06/27 21:24:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.258 2010/06/29 04:39:55 reavertm Exp $
+
+  29 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> kopete-4.3.5.ebuild:
+  Depend on qimageblitz (backport from 4.4.4, bug 324123)
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   kopete-4.4.4-r2.ebuild:
