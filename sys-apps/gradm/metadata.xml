@@ -10,4 +10,8 @@
 		<email>kerframil@gmail.com</email>
 		<name>Kerin Millar</name>
 	</maintainer>
+	<maintainer>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
+	</maintainer>
 </pkgmetadata>
