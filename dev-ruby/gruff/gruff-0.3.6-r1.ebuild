@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.6-r1.ebuild,v 1.3 2010/05/22 15:17:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.6-r1.ebuild,v 1.4 2010/06/29 10:41:28 angelos Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -28,7 +28,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 ~x86"
 IUSE=""
 
 RUBY_PATCHES=(
