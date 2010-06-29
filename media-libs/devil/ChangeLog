@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.43 2010/06/25 17:14:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.44 2010/06/29 21:38:46 mr_bones_ Exp $
+
+  29 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org> devil-1.7.8.ebuild:
+  add static-libs support
 
   25 Jun 2010; Raúl Porcel <armin76@gentoo.org> devil-1.7.7.ebuild,
   devil-1.7.8.ebuild:

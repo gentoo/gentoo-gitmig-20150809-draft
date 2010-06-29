@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.4 2010/06/25 17:14:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.5 2010/06/29 21:38:46 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/openil/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="openexr gif jpeg lcms mng png tiff xpm allegro opengl sdl X"
+IUSE="openexr gif jpeg lcms mng png tiff xpm allegro opengl sdl static-libs X"
 
 RDEPEND="gif? ( media-libs/giflib )
 	openexr? ( media-libs/openexr )
@@ -57,6 +57,7 @@ src_configure() {
 		$(use_enable X x11) \
 		$(use_enable X shm) \
 		$(use_enable X render) \
+		$(use_enable static-libs static) \
 		--disable-directx8 \
 		--disable-directx9
 }
@@ -64,4 +65,8 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS CREDITS ChangeLog NEWS README* TODO || die
+	if ! use static-libs ; then
+		find "${D}" -type f -name '*.la' -exec rm {} + \
+			|| die "la removal failed"
+	fi
 }
