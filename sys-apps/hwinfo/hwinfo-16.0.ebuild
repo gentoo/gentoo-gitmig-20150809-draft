@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-16.0.ebuild,v 1.4 2010/02/23 17:30:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-16.0.ebuild,v 1.5 2010/06/29 18:29:21 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -51,6 +51,10 @@ src_prepare() {
 	echo 'libs: subdirs' >>"${S}"/Makefile
 	echo 'ranlib: $(LIBHD) subdirs' >>"${S}"/Makefile
 	echo -e "\tranlib \$(LIBHD)" >>"${S}"/Makefile
+
+	sed -i -e 's/LDFLAGS	= /LDFLAGS := $(LDFLAGS) /' "${S}"/Makefile.common || die
+	sed -i -e 's/(CFLAGS)/& $(LDFLAGS)/' "${S}"/src/ids/Makefile || die
+	epatch "${FILESDIR}"/${PN}-16.0-asneeded.patch
 }
 
 src_compile(){
