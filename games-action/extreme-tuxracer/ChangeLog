@@ -1,6 +1,10 @@
 # ChangeLog for games-action/extreme-tuxracer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.9 2010/06/24 21:30:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.10 2010/06/29 06:29:26 fauli Exp $
+
+  29 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  extreme-tuxracer-0.5_beta.ebuild:
+  stable x86, bug 322907
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org>
   extreme-tuxracer-0.5_beta.ebuild:
