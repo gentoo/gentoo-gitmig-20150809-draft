@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.10 2010/06/27 18:19:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.11 2010/06/29 09:25:55 fauli Exp $
+
+  29 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  kanyremote-5.11.ebuild:
+  stable x86, bug 325717
 
   27 Jun 2010; Christoph Mende <angelos@gentoo.org> kanyremote-5.11.ebuild:
   Stable on amd64 wrt bug #325717
