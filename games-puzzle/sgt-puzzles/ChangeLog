@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/sgt-puzzles
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.3 2010/04/01 16:41:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.4 2010/06/29 17:09:46 mr_bones_ Exp $
+
+  29 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  sgt-puzzles-8906.ebuild, sgt-puzzles-99999999.ebuild:
+  Fix building with live ebuild (bug #323629); honor CC and LDFLAGS; make
+  release and live ebuild converge a bit more
 
 *sgt-puzzles-8906 (01 Apr 2010)
 

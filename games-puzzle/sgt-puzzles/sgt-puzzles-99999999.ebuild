@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.3 2010/04/02 18:23:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.4 2010/06/29 17:09:46 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
 if [[ ${PV} == "99999999" ]] ; then
-	ESVN_REPO_URI="svn://svn.tartarus.org/sgt/puzzles/trunk"
+	ESVN_REPO_URI="svn://svn.tartarus.org/sgt/puzzles"
 	inherit subversion
 	SRC_URI=""
 	KEYWORDS=""
@@ -24,15 +24,20 @@ IUSE="doc"
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
+	dev-lang/perl
 	dev-util/pkgconfig
 	doc? ( >=app-doc/halibut-1.0 )"
 
 src_prepare() {
 	sed -i \
+		-e 's/-O2 -Wall -Werror -ansi -pedantic -g//' \
+		-e "s/libstr =/libstr = '\$(LDFLAGS) ' ./" \
+		mkfiles.pl \
+		|| die
+	./mkfiles.pl
+	sed -i \
 		-e '1iPKG_CONFIG ?= pkg-config' \
 		-e '/^GTK_CONFIG/s:=.*:= $(PKG_CONFIG) gtk+-2.0:' \
-		-e 's:= -O2 -Wall -Werror -ansi -pedantic -g:+= $(CPPFLAGS):' \
-		-e '/LDFLAGS/s:=:=$(LDFLAGS) :' \
 		Makefile || die
 }
 
@@ -46,21 +51,26 @@ src_compile() {
 src_install() {
 	dodir "${GAMES_BINDIR}"
 	emake DESTDIR="${D}" gamesdir="${GAMES_BINDIR}" install || die
-	dodoc README HACKING
+	dodoc README
 
-	local file name size
+	local file name
 	for file in *.R ; do
 		[[ ${file} == "nullgame.R" ]] && continue
 		name=$(sed -n 's/^[a-z]*\.exe://p' "${file}")
 		file=${file%.R}
-		newicon icons/${file}-48d24.png ${PN}-${file}.png || die
-		make_desktop_entry "${GAMES_BINDIR}/${file}" "${name}" "${PN}-${file}"
+		if [[ ${PV} -lt 99999999 ]] ; then
+			newicon icons/${file}-48d24.png ${PN}-${file}.png || die
+			make_desktop_entry "${GAMES_BINDIR}/${file}" "${name}" "${PN}-${file}"
+		else
+			# No icons with the live version
+			make_desktop_entry "${GAMES_BINDIR}/${file}" "${name}"
+		fi
 	done
 
 	if use doc ; then
 		dohtml *.html
 		doinfo puzzles.info
-		dodoc puzzles.txt puzzles.pdf puzzles.ps
+		dodoc puzzles.pdf puzzles.ps puzzles.txt puzzles.chm
 	fi
 
 	prepgamesdirs
