@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.2 2010/06/27 13:33:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.3 2010/06/29 05:47:35 polynomial-c Exp $
 
 EAPI=2
 
@@ -51,7 +51,7 @@ RDEPEND="!!app-emulation/virtualbox-ose
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXdmcp
-	python? ( || ( dev-lang/python:2.4 dev-lang/python:2.6 ) )"
+	python? ( || ( dev-lang/python:2.6 dev-lang/python:2.4 ) )"
 
 S=${WORKDIR}
 
