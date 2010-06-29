@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.15 2010/05/25 21:12:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.16 2010/06/29 18:00:08 xarthisius Exp $
+
+  29 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> -bullet-2.75.ebuild:
+  Remove old
 
   25 May 2010; Pacho Ramos <pacho@gentoo.org> bullet-2.76-r1.ebuild:
   stable amd64, bug 318455
