@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/mlterm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.72 2009/10/10 15:12:14 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.73 2010/06/29 16:23:19 matsuu Exp $
+
+*mlterm-3.0.1 (29 Jun 2010)
+
+  29 Jun 2010; MATSUU Takuto <matsuu@gentoo.org> +mlterm-3.0.1.ebuild:
+  Version bumped, bug #326051. Fixed dependency.
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> mlterm-2.9.4-r4.ebuild:
   sparc stable wrt #282924
