@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.4 2010/06/27 18:20:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.4.ebuild,v 1.5 2010/06/29 19:00:34 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -56,6 +56,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_configure() {
