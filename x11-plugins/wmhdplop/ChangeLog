@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmhdplop
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.16 2009/08/16 08:47:55 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.17 2010/06/29 09:53:56 voyageur Exp $
+
+*wmhdplop-0.9.9-r1 (29 Jun 2010)
+
+  29 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +wmhdplop-0.9.9-r1.ebuild, +files/wmhdplop-0.9.9-64bit.patch:
+  Fix dockapp neeeding a restart after a long time, patch by Mikael
+  Magnusson <mikachu@gmail.com> in bug #325615
 
   16 Aug 2009; Petteri Räty <betelgeuse@gentoo.org> wmhdplop-0.9.9.ebuild:
   Migrate to EAPI 2 in order to get rid of built_with_use for bug #261562.
