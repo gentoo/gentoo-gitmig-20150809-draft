@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/scmxlate
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/ChangeLog,v 1.2 2008/01/18 18:06:21 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/ChangeLog,v 1.3 2010/06/29 00:27:07 chiiph Exp $
+
+*scmxlate-20090410 (29 Jun 2010)
+
+  29 Jun 2010; Tomas Touceda <chiiph@gentoo.org> +scmxlate-20090410.ebuild:
+  Version bump
 
   18 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   scmxlate-20060613.ebuild:
