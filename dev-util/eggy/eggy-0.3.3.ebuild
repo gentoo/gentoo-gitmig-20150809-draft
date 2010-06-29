@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eggy/eggy-0.3.3.ebuild,v 1.1 2010/01/11 21:34:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eggy/eggy-0.3.3.ebuild,v 1.2 2010/06/29 23:20:28 arfrever Exp $
 
 EAPI="2"
-NEED_PYTHON=2.4
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
