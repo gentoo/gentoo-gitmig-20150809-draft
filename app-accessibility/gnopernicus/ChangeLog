@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnopernicus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.102 2008/11/23 17:49:10 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.103 2010/06/29 20:17:43 ssuominen Exp $
+
+  29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gnopernicus-1.0.7.ebuild, +files/gnopernicus-1.0.7-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #246729 by Diego E. Pettenò.
 
   23 Nov 2008; Patrick Lauer <patrick@gentoo.org> gnopernicus-1.0.7.ebuild:
   Fixing homepage
