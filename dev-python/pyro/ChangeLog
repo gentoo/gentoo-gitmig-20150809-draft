@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.25 2010/03/07 13:18:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.26 2010/06/29 03:54:50 arfrever Exp $
+
+*pyro-4.1 (29 Jun 2010)
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pyro-3.9.1.ebuild, +pyro-4.1.ebuild:
+  Version bump.
 
   07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> pyro-3.10.ebuild:
   amd64 stable wrt #300243
