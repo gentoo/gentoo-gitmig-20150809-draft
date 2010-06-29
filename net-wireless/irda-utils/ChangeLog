@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.35 2010/04/28 22:27:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.36 2010/06/29 16:08:39 ssuominen Exp $
+
+  29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  irda-utils-0.9.18-r3.ebuild, +files/irda-utils-0.9.18-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #318135 by Kacper Kowalik.
 
   28 Apr 2010; Jeroen Roovers <jer@gentoo.org> irda-utils-0.9.18-r3.ebuild,
   +files/irda-utils-0.9.18-dofail.patch:
