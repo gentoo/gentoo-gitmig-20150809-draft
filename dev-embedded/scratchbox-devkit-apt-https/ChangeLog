@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-apt-https
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-apt-https/ChangeLog,v 1.6 2010/01/18 13:00:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-apt-https/ChangeLog,v 1.7 2010/06/29 17:36:26 ayoy Exp $
+
+*scratchbox-devkit-apt-https-1.0.11 (29 Jun 2010)
+
+  29 Jun 2010; Dominik Kapusta <ayoy@gentoo.org>
+  +scratchbox-devkit-apt-https-1.0.11.ebuild:
+  Version bump (bug #325659). Thanks to David King <amigadave@amigadave.com>
+  for the new ebuild.
 
   18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   scratchbox-devkit-apt-https-1.0.10.ebuild:

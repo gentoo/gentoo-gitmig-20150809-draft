@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-git/ChangeLog,v 1.5 2010/01/18 13:02:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-git/ChangeLog,v 1.6 2010/06/29 17:38:39 ayoy Exp $
+
+*scratchbox-devkit-git-1.0.2 (29 Jun 2010)
+
+  29 Jun 2010; Dominik Kapusta <ayoy@gentoo.org>
+  +scratchbox-devkit-git-1.0.2.ebuild:
+  Version bump (bug #325659). Thanks to David King <amigadave@amigadave.com>
+  for the new ebuild.
 
   18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   scratchbox-devkit-git-1.0.1.ebuild:
