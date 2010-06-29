@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.100 2010/06/26 16:51:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.101 2010/06/29 02:02:33 nirbheek Exp $
+
+  29 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> -balsa-2.4.2.ebuild:
+  Remove old version, also fails with --as-needed in LDFLAGS
 
   26 Jun 2010; Raúl Porcel <armin76@gentoo.org> balsa-2.4.7.ebuild:
   alpha/sparc stable wrt #315361
