@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyprotocols
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.22 2010/01/10 18:57:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.23 2010/06/29 20:40:49 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyprotocols-1.0_pre2306.ebuild:
+  Set PYTHON_DEPEND. Simplify src_test(). Use -fno-strict-aliasing.
 
   10 Jan 2010; nixnut <nixnut@gentoo.org> pyprotocols-1.0_pre2306.ebuild:
   ppc stable #297680
