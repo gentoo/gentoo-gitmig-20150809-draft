@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.4 2010/06/12 22:59:05 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.5 2010/06/29 01:31:44 chiiph Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 
-inherit eutils versionator toolchain-funcs elisp-common flag-o-matic python
+inherit eutils versionator toolchain-funcs elisp-common flag-o-matic python autotools
 
 DESCRIPTION="GNU Music Typesetter"
 SRC_URI="http://download.linuxaudio.org/lilypond/sources/v$(get_version_component_range 1-2)/${P}.tar.gz"
@@ -44,7 +44,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-qa_pyc_fix.patch
+	epatch "${FILESDIR}/${P}-qa_pyc_fix.patch"
+	epatch "${FILESDIR}/${P}-python-cflags.patch"
+	epatch "${FILESDIR}/${P}-gcc45.patch"
+	eautoreconf
 }
 
 src_configure() {
