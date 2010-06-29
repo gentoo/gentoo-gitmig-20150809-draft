@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-testutil
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ChangeLog,v 1.2 2010/05/15 21:05:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ChangeLog,v 1.3 2010/06/29 09:13:50 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  ant-testutil-1.8.1.ebuild:
+  Stable on amd64 wrt bug #305929
 
 *ant-testutil-1.8.1 (15 May 2010)
 

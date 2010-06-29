@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.123 2010/05/15 21:06:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.124 2010/06/29 09:11:52 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> ant-1.8.1.ebuild:
+  Stable on amd64 wrt bug #305929
 
 *ant-1.8.1 (15 May 2010)
 

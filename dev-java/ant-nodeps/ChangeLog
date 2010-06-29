@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-nodeps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.20 2010/05/15 21:04:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.21 2010/06/29 08:55:16 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> ant-nodeps-1.8.1.ebuild:
+  Stable on amd64 wrt bug #305929
 
 *ant-nodeps-1.8.1 (15 May 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-commons-logging
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.18 2010/05/15 21:01:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.19 2010/06/29 09:01:42 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  ant-commons-logging-1.8.1.ebuild:
+  Stable on amd64 wrt bug #305929
 
 *ant-commons-logging-1.8.1 (15 May 2010)
 
