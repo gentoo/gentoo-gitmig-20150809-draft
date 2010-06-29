@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.6.ebuild,v 1.3 2010/06/29 08:44:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.6.ebuild,v 1.4 2010/06/29 08:54:27 caster Exp $
 
 EAPI=2
 
-inherit eutils versionator
+inherit multilib versionator
 
 DESCRIPTION="An implementation of encrypted filesystem in user-space using FUSE"
 HOMEPAGE="http://www.arg0.net/encfs/"
@@ -31,7 +31,7 @@ src_configure() {
 	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
 	BOOST_INC="/usr/include/boost-${BOOST_VER}"
 	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
-	ewarn "Building with ${BOOST_PKG} support."
+	einfo "Building against ${BOOST_PKG}."
 
 	econf \
 		--with-boost=${BOOST_INC} \
