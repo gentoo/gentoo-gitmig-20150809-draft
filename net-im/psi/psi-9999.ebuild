@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.2 2010/06/02 07:46:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.3 2010/06/29 13:21:24 pva Exp $
 
 EAPI="2"
 
@@ -87,8 +87,13 @@ src_unpack() {
 	mkdir "${WORKDIR}/psi-l10n"
 	for x in ${LANGS}; do
 		if use linguas_${x}; then
-			EGIT_REPO_URI="${LANGS_URI}-${x}"
-			EGIT_PROJECT="psi-l10n/${x}"
+			if use extras && [ "${x}" = "ru" ]; then
+				EGIT_REPO_URI="git://mva.name/psi-l10n-${x}"
+				EGIT_PROJECT="psiplus-l10n/${x}"
+			else
+				EGIT_REPO_URI="${LANGS_URI}-${x}"
+				EGIT_PROJECT="psi-l10n/${x}"
+			fi
 			S="${WORKDIR}/psi-l10n/${x}"
 			git_fetch
 			S="${WORKDIR}/${P}"
@@ -174,13 +179,23 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	rm "${D}"/usr/share/psi/{COPYING,README}
+	rm -f "${D}"/usr/share/psi/{COPYING,README}
 
 	# this way the docs will be installed in the standard gentoo dir
 	newdoc iconsets/roster/README README.roster || die
 	newdoc iconsets/system/README README.system || die
 	newdoc certs/README README.certs || die
 	dodoc README || die
+
+	if use extras && use plugins; then
+		insinto /usr/share/psi/plugins
+		doins src/plugins/plugins.pri || die
+		doins src/plugins/psiplugin.pri || die
+		doins -r src/plugins/include || die
+		dosed "s:target.path.*:target.path = /usr/$(get_libdir)/psi/plugins:" \
+			/usr/share/psi/plugins/psiplugin.pri \
+			|| die "sed failed"
+	fi
 
 	if use doc; then
 		cd doc
@@ -197,17 +212,4 @@ src_install() {
 			newins "${x}/INFO" "INFO.${x}" || die
 		fi
 	done
-
-	if use extras; then
-		if use plugins; then
-			cd "${S}"
-			insinto /usr/share/psi/plugins
-			doins src/plugins/plugins.pri || die
-			doins src/plugins/psiplugin.pri || die
-			doins -r src/plugins/include || die
-			dosed "s:target.path.*:target.path = /usr/$(get_libdir)/psi/plugins:" \
-				/usr/share/psi/plugins/psiplugin.pri \
-				|| die "sed failed"
-		fi
-	fi
 }
