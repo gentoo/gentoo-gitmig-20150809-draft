@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4356 2010/06/29 13:22:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4357 2010/06/29 14:36:33 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jun 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove iptraf-ng mask (bug #305781).
 
   29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask blueproxy for removal.
