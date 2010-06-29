@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.29 2010/04/17 18:25:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.30 2010/06/29 18:09:33 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  libmemcached-0.39.ebuild:
+  Stable on amd64 wrt bug #326163
 
 *libmemcached-0.39 (17 Apr 2010)
 
