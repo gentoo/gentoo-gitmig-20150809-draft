@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dnetstats
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.2 2010/03/09 12:19:40 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.3 2010/06/29 12:00:13 hwoarang Exp $
+
+*dnetstats-1.2.6 (29 Jun 2010)
+
+  29 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +dnetstats-1.2.6.ebuild, metadata.xml:
+  Version bump. Refactor sudo logic. Introduced a new gnome use flag which
+  pulls gksu for gnome users. Added extended ewarn message to warn uses
+  about the expected behavior
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> dnetstats-1.2.5.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension

@@ -8,6 +8,7 @@
 </maintainer>
 <use>
 <flag name="kde">Use kdesu to gain root access</flag>
+<flag name="gnome">Use gksu to gain root access</flag>
 </use>
 <longdescription lang="en">
 </longdescription>
