@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nailgun
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.5 2010/06/26 12:34:31 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.6 2010/06/29 10:21:15 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> nailgun-0.7.1.ebuild:
+  Stable on amd64 wrt bug #325667
 
   26 Jun 2010; Alistair Bush <ali_bush@gentoo.org> nailgun-0.7.1.ebuild:
   Block app-editor/ng due to file collision. see #295840.
