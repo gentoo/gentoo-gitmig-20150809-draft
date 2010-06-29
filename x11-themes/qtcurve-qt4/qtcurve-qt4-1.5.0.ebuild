@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.5.0.ebuild,v 1.1 2010/06/28 11:39:34 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.5.0.ebuild,v 1.2 2010/06/29 15:50:40 wired Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -29,6 +29,15 @@ DOCS="ChangeLog README TODO"
 pkg_setup() {
 	confutils_use_depend_all windeco kde
 	use kde && kde4-base_pkg_setup
+}
+
+src_prepare() {
+	if use kde && ! use windeco; then
+		sed -e "/#include <kdecoration.h>/d" \
+			-e "s/if(KDecorationDefines::BorderTiny==size)/if(0==size)/" \
+			-i "${S}"/kwin/qtcurveconfig.cpp ||
+				die "sed failed"
+	fi
 }
 
 src_configure() {
