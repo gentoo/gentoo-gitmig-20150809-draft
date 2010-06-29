@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/paxtest
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.33 2009/10/11 23:39:34 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.34 2010/06/29 19:18:33 ssuominen Exp $
+
+  29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> files/Makefile.psm5:
+  Fix building of paxtest-0.9.7_pre4 with -Wl,--as-needed wrt #246755.
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> paxtest-0.9.5-r1.ebuild,
   paxtest-0.9.6.ebuild, paxtest-0.9.7_pre4.ebuild:
