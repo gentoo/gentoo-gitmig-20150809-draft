@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.2 2010/05/12 20:52:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.3 2010/06/29 07:33:26 angelos Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/projects/xfprint"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="cups debug"
 
 RDEPEND="app-text/a2ps

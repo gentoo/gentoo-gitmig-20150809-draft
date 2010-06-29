@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xfprint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.24 2010/05/12 20:52:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.25 2010/06/29 07:33:26 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> xfprint-4.6.1-r1.ebuild:
+  Stable on amd64 wrt bug #323729
 
   12 May 2010; Jeremy Olexa <darkside@gentoo.org> xfprint-4.6.1-r1.ebuild:
   Use correct PATCHES syntax
