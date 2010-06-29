@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/simpletal-5.0.ebuild,v 1.1 2009/11/22 19:32:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/simpletal-5.0.ebuild,v 1.2 2010/06/29 04:39:57 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="3.0"
+EAPI="3"
+PYTHON_DEPEND="3"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.*"
 
 inherit distutils
 
@@ -23,7 +23,6 @@ IUSE="examples"
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="2.*"
 
 S="${WORKDIR}/${MY_P}"
 

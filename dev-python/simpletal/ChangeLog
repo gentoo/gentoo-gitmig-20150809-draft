@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simpletal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/ChangeLog,v 1.8 2009/11/22 19:32:06 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/ChangeLog,v 1.9 2010/06/29 04:39:57 arfrever Exp $
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  simpletal-4.2.ebuild, simpletal-5.0.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
 *simpletal-5.0 (22 Nov 2009)
 *simpletal-4.2 (22 Nov 2009)
