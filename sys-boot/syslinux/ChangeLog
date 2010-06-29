@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.68 2010/06/22 13:11:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.69 2010/06/29 21:59:46 chithanh Exp $
+
+*syslinux-4.00 (29 Jun 2010)
+
+  29 Jun 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -syslinux-4.00_pre55.ebuild, +syslinux-4.00.ebuild:
+  Version bump. Adds support for booting from ext4 and btrfs, as well as
+  booting from GPT >2TB.
 
 *syslinux-4.00_pre55 (22 Jun 2010)
 
