@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/seed
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/ChangeLog,v 1.1 2010/06/29 08:27:36 nirbheek Exp $
+
+*seed-2.30.0 (29 Jun 2010)
+
+  29 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> +seed-2.30.0.ebuild,
+  +files/seed-fix-gnome-js-common-circular-dep.patch, +metadata.xml:
+  Add new ebuild for dev-libs/seed, needed by gnome-games. Masked for now
+  till the issues mentioned in the ebuild are fixed
+
