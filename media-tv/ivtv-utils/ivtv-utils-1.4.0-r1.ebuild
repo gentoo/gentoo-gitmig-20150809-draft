@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r1.ebuild,v 1.3 2010/05/21 01:55:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r1.ebuild,v 1.4 2010/06/29 19:32:00 xarthisius Exp $
 
 EAPI=2
 
-inherit eutils linux-mod linux-info
+inherit eutils linux-mod linux-info toolchain-funcs
 
 DESCRIPTION="IVTV utilities for Hauppauge PVR PCI cards"
 HOMEPAGE="http://www.ivtvdriver.org"
@@ -57,20 +57,22 @@ pkg_setup() {
 	BUILD_PARAMS="KDIR=${KV_DIR}"
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
+
+src_compile() {
+	tc-export CC CXX
+	emake || die
+}
+
 src_install() {
-	make DESTDIR="${D}" PREFIX="/usr" install || die "failed to install"
-	use perl && dobin utils/perl/*.pl
-
-	# Shouldn't be installing linux headers, bug 273165
-	rm "${D}"/usr/include/linux/ivtv.h
-	rm "${D}"/usr/include/linux/ivtvfb.h
-
-	# Installed separately now
-	rm "${D}"/usr/bin/v4l2-ctl
-
-	cd "${S}"
-	dodoc README doc/* ChangeLog
-	use perl && dodoc utils/perl/README.ptune
+	emake DESTDIR="${D}" PREFIX="/usr" install || die "failed to install"
+	dodoc README doc/* ChangeLog || die
+	if use perl; then
+		dobin utils/perl/*.pl || die
+		dodoc utils/perl/README.ptune || die
+	fi
 }
 
 pkg_postinst() {

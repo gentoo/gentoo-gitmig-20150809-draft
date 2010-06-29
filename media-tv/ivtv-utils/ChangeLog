@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.9 2010/05/21 01:55:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.10 2010/06/29 19:32:00 xarthisius Exp $
+
+  29 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  ivtv-utils-1.4.0-r1.ebuild, +files/ivtv-utils-1.4.0-gentoo.patch:
+  QA clean up and fixing build with --as-needed wrt bug 321303. Thanks to
+  Diego for reporting.
 
   21 May 2010; Steve Dibb <beandog@gentoo.org> ivtv-utils-1.4.0-r1.ebuild:
   Add dep on v4l2-ctl
