@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20090628-r1.ebuild,v 1.2 2010/06/27 18:24:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20090628-r1.ebuild,v 1.3 2010/06/29 09:15:39 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.sourceforge.net/projects/omnibook"
 # Revision 280 from upstream SVN repository
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="amd64 -ppc ~x86"
+KEYWORDS="amd64 -ppc x86"
 IUSE=""
 
 MODULE_NAMES="omnibook(char:)"
