@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.6 2010/05/22 10:04:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.7 2010/06/29 19:55:41 jlec Exp $
+
+*ccp4-libs-6.1.3-r3 (29 Jun 2010)
+
+  29 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/6.1.3-destdir.patch,
+  files/6.1.3-dont-build-mmdb.patch, +files/6.1.3-noinstall.patch,
+  +ccp4-libs-6.1.3-r3.ebuild:
+  Change way of installation, fixed insecure runpaths
 
 *ccp4-libs-6.1.3-r2 (22 May 2010)
 
