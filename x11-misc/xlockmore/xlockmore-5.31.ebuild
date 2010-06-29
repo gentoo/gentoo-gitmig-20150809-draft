@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.31.ebuild,v 1.1 2010/06/29 19:34:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.31.ebuild,v 1.2 2010/06/29 20:11:54 hwoarang Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic pam
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.tux.org/pub/tux/bagleyd/${PN}/${P}/${P}.tar.bz2"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="crypt debug esd gtk motif nas opengl pam truetype xinerama xlockrc X"
+IUSE="crypt debug esd gtk motif nas opengl pam truetype xinerama xlockrc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
