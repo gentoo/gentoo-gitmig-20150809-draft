@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.7 2010/06/14 01:07:34 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.8 2010/06/29 07:14:08 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> xfce4-meta-4.6.2.ebuild:
+  Stable on amd64 wrt bug #323729
 
 *xfce4-meta-4.6.2 (14 Jun 2010)
 

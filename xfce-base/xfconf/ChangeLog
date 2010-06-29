@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.31 2010/05/22 17:07:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.32 2010/06/29 06:58:10 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> xfconf-4.6.2.ebuild:
+  Stable on amd64 wrt bug #323729
 
 *xfconf-4.6.2 (22 May 2010)
 

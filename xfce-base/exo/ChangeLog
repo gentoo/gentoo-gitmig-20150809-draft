@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.31 2010/05/22 15:16:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.32 2010/06/29 06:53:31 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> exo-0.3.107.ebuild:
+  Stable on amd64 wrt bug #323729
 
 *exo-0.3.107 (22 May 2010)
 

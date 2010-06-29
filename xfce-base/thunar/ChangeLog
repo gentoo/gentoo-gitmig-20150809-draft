@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.89 2010/05/22 16:25:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.90 2010/06/29 07:04:01 angelos Exp $
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org> thunar-1.0.2.ebuild:
+  Stable on amd64 wrt bug #323729
 
 *thunar-1.0.2 (22 May 2010)
 
