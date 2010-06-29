@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.0.2.ebuild,v 1.1 2010/03/24 18:30:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.0.2.ebuild,v 1.2 2010/06/29 13:51:43 jer Exp $
 
 EAPI=2
 
@@ -12,13 +12,12 @@ SRC_URI="https://fedorahosted.org/releases/i/p/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="unicode"
 
 DEPEND="
 	!net-analyzer/iptraf
-	sys-libs/ncurses
-	unicode? ( sys-libs/ncurses[unicode] )
+	unicode? ( sys-libs/ncurses[unicode=] )
 "
 RDEPEND="${DEPEND}"
 
