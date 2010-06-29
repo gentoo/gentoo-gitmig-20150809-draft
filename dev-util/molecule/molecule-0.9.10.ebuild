@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.6.3.ebuild,v 1.1 2010/06/28 14:07:54 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.10.ebuild,v 1.1 2010/06/29 08:55:37 lxnay Exp $
 
 EAPI="2"
-PYTHON_DEPEND="2"
 
 inherit eutils multilib python base
 
@@ -14,10 +13,9 @@ SRC_URI="http://distfiles.sabayon.org/dev-util/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+doc"
+IUSE=""
 
-DEPEND="${DEPEND}
-	sys-devel/gettext"
+DEPEND="${DEPEND} sys-devel/gettext"
 RDEPEND="${RDEPEND}
 	app-cdr/cdrtools
 	net-misc/rsync
@@ -27,6 +25,10 @@ src_install() {
 	emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" \
 		PREFIX="/usr" SYSCONFDIR="/etc" install \
 		|| die "emake install failed"
+}
+
+pkg_postinst() {
+	python_mod_optimize "/usr/$(get_libdir)/molecule"
 }
 
 pkg_postrm() {
