@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.1 2010/06/25 23:17:24 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.2 2010/06/29 06:22:10 reavertm Exp $
 
 EAPI=2
 
@@ -34,6 +34,10 @@ DEPEND="${RDEPEND}
 
 DOCS=(AUTHORS ChangeLog NEWS README)
 
+PATCHES=(
+	"${FILESDIR}/${PN}-1.7.0-pkgconfig-partial.patch"
+)
+
 # --with-pic, two defined (PIC and one for image format, sillyt), no not pass
 # --enable-qimage, broken Qt checks, unable to locate FHS-compliant Qt install
 # --with-x, not used anywhere
@@ -61,7 +65,11 @@ src_configure() {
 }
 
 src_install() {
+	# Remove simage from Libs.private
+	sed -e '/Libs.private/s/ -lsimage//' -i simage.pc || die
+
 	base_src_install
+
 	# Remove libtool files when not needed.
 	use static-libs || rm -f "${D}"/usr/lib*/*.la
 }
