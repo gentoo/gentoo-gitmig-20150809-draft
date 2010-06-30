@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.88 2010/05/19 15:58:14 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.89 2010/06/30 14:32:59 neurogeek Exp $
+
+  30 Jun 2010; Jesus Rivero <neurogeek@gentoo.org>
+  festival-1.96_beta.ebuild, festival-1.96_beta-r1.ebuild:
+  Changed DEPS on app-accessibility/speech-tools to prepare for the new
+  speech-tools/festival versions.
 
   19 May 2010; Jesus Rivero <neurogeek@gentoo.org>
   festival-1.96_beta-r1.ebuild:
