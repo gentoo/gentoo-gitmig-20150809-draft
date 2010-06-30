@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pymssql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.17 2010/02/08 08:38:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.18 2010/06/30 01:41:26 arfrever Exp $
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pymssql-1.0.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> pymssql-0.7.4.ebuild:
   Add inherit eutils for built_with_use.
