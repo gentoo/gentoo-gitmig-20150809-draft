@@ -1,7 +1,19 @@
-=== modified file '3rdparty/liborigin/liborigin.pro'
---- 3rdparty/liborigin/liborigin.pro	2010-04-22 17:58:49 +0000
-+++ 3rdparty/liborigin/liborigin.pro	2010-04-23 04:34:41 +0000
-@@ -22,5 +22,10 @@
+Index: liborigin.pro
+===================================================================
+--- liborigin.pro	(revision 1751)
++++ liborigin.pro	(working copy)
+@@ -17,10 +17,20 @@
+ HEADERS += OriginFile.h
+ HEADERS += OriginParser.h
+ HEADERS += OriginDefaultParser.h
+-HEADERS += Origin750Parser.h
++SOURCES += Origin600Parser.h
++SOURCES += Origin610Parser.h
++SOURCES += Origin700Parser.h
++SOURCES += Origin750Parser.h
++SOURCES += Origin800Parser.h
++SOURCES += Origin810Parser.h
+ 
  SOURCES += OriginFile.cpp
  SOURCES += OriginParser.cpp
  SOURCES += OriginDefaultParser.cpp
@@ -12,4 +24,3 @@
 +SOURCES += Origin800Parser.cpp
 +SOURCES += Origin810Parser.cpp
  
-

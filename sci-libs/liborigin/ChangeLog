@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.18 2010/05/05 16:49:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.19 2010/06/30 06:45:14 jlec Exp $
+
+*liborigin-20100630 (30 Jun 2010)
+
+  30 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  files/liborigin-20100420-build-parsers.patch, +liborigin-20100630.ebuild,
+  +files/liborigin-20100630-gcc45.patch:
+  Version Bump
 
   05 May 2010; Sébastien Fabbro <bicatali@gentoo.org>
   liborigin-20100420.ebuild, +files/liborigin-20100420-gcc45.patch:
