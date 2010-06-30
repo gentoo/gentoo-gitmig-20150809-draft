@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/pcsc-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.6 2010/06/29 00:29:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.7 2010/06/30 01:38:56 flameeyes Exp $
+
+  30 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  pcsc-tools-1.4.16.ebuild:
+  Multiple fixes, partly for QA: fix install with USE=-gtk; avoid patching,
+  both for USE=-gtk and for install paths, by not using the Makefile for
+  install; avoid building the all target (simply build pcsc_scan so that the
+  man pages are not compressed before portage gets to them); don't change
+  the files in src_compile, but still respect the CFLAGS settings; respect
+  CC settings; use emake; update the smartcard_list.txt as we were
+  installing a very old copy; properly move the perl dependencies to runtime
+  rather than build-time and run-time (ccid dependency still sounds shady,
+  but nevermind that for now); drop debug USE flag that simply set a
+  pointless -g; only rebuild mime database when gtk is used (during install;
+  always on remove).
 
 *pcsc-tools-1.4.16 (29 Jun 2010)
 

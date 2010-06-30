@@ -1,65 +1,68 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.16.ebuild,v 1.1 2010/06/29 00:29:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.16.ebuild,v 1.2 2010/06/30 01:38:56 flameeyes Exp $
 
 EAPI="3"
 
-inherit eutils fdo-mime multilib
+SMARTCARD_DATE=20100630
+
+inherit eutils fdo-mime multilib toolchain-funcs
 
 DESCRIPTION="PC/SC Architecture smartcard tools"
 HOMEPAGE="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/"
 SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz
-	mirror://gentoo/smartcard_list.txt"
+	mirror://gentoo/${PN}-smartcard_list-${SMARTCARD_DATE}.txt.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 ## ~arm waiting for keywords
-IUSE="debug gtk usb"
+IUSE="gtk usb"
 
-RDEPEND="usb? ( app-crypt/ccid )
-	>=sys-apps/pcsc-lite-1.4.14
-	dev-perl/pcsc-perl
-	gtk? ( dev-perl/gtk2-perl )"
+RDEPEND=">=sys-apps/pcsc-lite-1.4.14"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+RDEPEND="${RDEPEND}
+	usb? ( app-crypt/ccid )
+	dev-perl/pcsc-perl
+	gtk? ( dev-perl/gtk2-perl )"
+
+src_prepare() {
+	sed -i -e 's:-Wall -O2:${CFLAGS}:g' Makefile
+}
 
 src_compile() {
-	if ! use gtk; then
-	    epatch "${FILESDIR}"/${PN}_no-gtk.patch
-	fi
-
-	if use debug; then
-	    sed -i -e "s:-Wall -O2:${CFLAGS}:g" Makefile
-	else
-	    sed -i -e "s:-Wall -O2 -g:${CFLAGS}:g" Makefile
-	fi
-
-	sed -i -e "s:/usr/local:/usr:" Makefile
-
-	make DESTDIR="${D}usr" all || die
+	tc-export CC
+	# explicitly only build the pcsc_scan application, or the man
+	# pages will be gzipped first, and then unpacked.
+	emake pcsc_scan || die
 }
 
 src_install() {
-	make DESTDIR="${D}usr" install || die
+	# install manually, makes it much easier since the Makefile
+	# requires fiddling with
+	dobin ATR_analysis scriptor pcsc_scan || die
+	doman pcsc_scan.1 scriptor.1p ATR_analysis.1p || die
 
-	# prepalldocs isn't supported any more?
-	dodoc README Changelog
+	dodoc README Changelog || die
 
 	if use gtk; then
-	    doicon "${FILESDIR}"/smartcard.svg
-	    domenu gscriptor.desktop
-	    dosed "s:Categories=Utility;GTK;:Icon=smartcard.svg\\nCategories=System;:g" \
-	        /usr/share/applications/gscriptor.desktop
+		doicon "${FILESDIR}"/smartcard.svg
+		domenu gscriptor.desktop
+		dosed "s:Categories=Utility;GTK;:Icon=smartcard.svg\\nCategories=System;:g" \
+			/usr/share/applications/gscriptor.desktop
+
+		dobin gscriptor || die
+		doman gscriptor.1p || die
 	fi
 
 	insinto /usr/share/pcsc
-	doins "${DISTDIR}"/smartcard_list.txt
+	newins "${WORKDIR}"/${PN}-smartcard_list-${SMARTCARD_DATE}.txt smartcard_list.txt || die
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
+	use gtk && fdo-mime_desktop_database_update
 
 	elog ""
 	elog "If your card reader isn't recognized, you should make sure you"
