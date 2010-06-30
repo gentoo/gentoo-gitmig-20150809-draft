@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.232 2010/06/26 19:09:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.233 2010/06/30 14:32:03 jer Exp $
+
+  30 Jun 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Correct description.
 
   26 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   nvidia-drivers-195.36.24.ebuild:
