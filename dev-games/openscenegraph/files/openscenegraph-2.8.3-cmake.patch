@@ -1,6 +1,6 @@
 diff -ruN ../OpenSceneGraph-2.8.3/CMakeLists.txt ./CMakeLists.txt
 --- ../OpenSceneGraph-2.8.3/CMakeLists.txt	2010-04-01 11:02:54.000000000 +0200
-+++ ./CMakeLists.txt	2010-06-25 17:28:40.905021853 +0200
++++ ./CMakeLists.txt	2010-06-30 02:37:36.491242970 +0200
 @@ -27,6 +27,7 @@
  endif(COMMAND cmake_policy)
  
@@ -159,6 +159,32 @@ diff -ruN ../OpenSceneGraph-2.8.3/CMakeLists.txt ./CMakeLists.txt
  
      # Process our other doxyfiles but don't create targets for these
      CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/doc/Doxyfiles/all_Doxyfile
+diff -ruN ../OpenSceneGraph-2.8.3/CMakeModules/COPYING-CMAKE-SCRIPTS ./CMakeModules/COPYING-CMAKE-SCRIPTS
+--- ../OpenSceneGraph-2.8.3/CMakeModules/COPYING-CMAKE-SCRIPTS	1970-01-01 01:00:00.000000000 +0100
++++ ./CMakeModules/COPYING-CMAKE-SCRIPTS	2010-01-11 06:29:35.000000000 +0100
+@@ -0,0 +1,22 @@
++Redistribution and use in source and binary forms, with or without
++modification, are permitted provided that the following conditions
++are met:
++
++1. Redistributions of source code must retain the copyright
++   notice, this list of conditions and the following disclaimer.
++2. Redistributions in binary form must reproduce the copyright
++   notice, this list of conditions and the following disclaimer in the
++   documentation and/or other materials provided with the distribution.
++3. The name of the author may not be used to endorse or promote products 
++   derived from this software without specific prior written permission.
++
++THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
++IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
++OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
++IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
++INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
++NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
++THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 diff -ruN ../OpenSceneGraph-2.8.3/CMakeModules/FindFLTK.cmake ./CMakeModules/FindFLTK.cmake
 --- ../OpenSceneGraph-2.8.3/CMakeModules/FindFLTK.cmake	2010-03-13 11:40:00.000000000 +0100
 +++ ./CMakeModules/FindFLTK.cmake	1970-01-01 01:00:00.000000000 +0100
@@ -225,7 +251,7 @@ diff -ruN ../OpenSceneGraph-2.8.3/CMakeModules/FindFLTK.cmake ./CMakeModules/Fin
 -ENDIF(FLTK_LIBRARY AND FLTK_INCLUDE_DIR)
 diff -ruN ../OpenSceneGraph-2.8.3/CMakeModules/MacroOptionalFindPackage.cmake ./CMakeModules/MacroOptionalFindPackage.cmake
 --- ../OpenSceneGraph-2.8.3/CMakeModules/MacroOptionalFindPackage.cmake	1970-01-01 01:00:00.000000000 +0100
-+++ ./CMakeModules/MacroOptionalFindPackage.cmake	2010-06-16 14:27:36.000000000 +0200
++++ ./CMakeModules/MacroOptionalFindPackage.cmake	2010-06-30 02:37:36.494250349 +0200
 @@ -0,0 +1,28 @@
 +# - MACRO_OPTIONAL_FIND_PACKAGE() combines FIND_PACKAGE() with an OPTION()
 +# MACRO_OPTIONAL_FIND_PACKAGE( <name> [QUIT] )
@@ -257,7 +283,7 @@ diff -ruN ../OpenSceneGraph-2.8.3/CMakeModules/MacroOptionalFindPackage.cmake ./
 +
 diff -ruN ../OpenSceneGraph-2.8.3/CMakeModules/OsgMacroUtils.cmake ./CMakeModules/OsgMacroUtils.cmake
 --- ../OpenSceneGraph-2.8.3/CMakeModules/OsgMacroUtils.cmake	2010-03-13 11:40:02.000000000 +0100
-+++ ./CMakeModules/OsgMacroUtils.cmake	2010-06-25 09:03:22.295913047 +0200
++++ ./CMakeModules/OsgMacroUtils.cmake	2010-06-30 02:37:36.523281953 +0200
 @@ -305,9 +305,9 @@
          SETUP_EXE(${IS_COMMANDLINE_APP})
          
@@ -272,7 +298,7 @@ diff -ruN ../OpenSceneGraph-2.8.3/CMakeModules/OsgMacroUtils.cmake ./CMakeModule
  ENDMACRO(SETUP_EXAMPLE)
 diff -ruN ../OpenSceneGraph-2.8.3/examples/osgviewerFLTK/CMakeLists.txt ./examples/osgviewerFLTK/CMakeLists.txt
 --- ../OpenSceneGraph-2.8.3/examples/osgviewerFLTK/CMakeLists.txt	2010-03-13 11:40:18.000000000 +0100
-+++ ./examples/osgviewerFLTK/CMakeLists.txt	2010-06-25 16:39:50.863920026 +0200
++++ ./examples/osgviewerFLTK/CMakeLists.txt	2010-06-30 02:37:36.524321902 +0200
 @@ -1,6 +1,6 @@
  SET(TARGET_SRC osgviewerFLTK.cpp )
  
