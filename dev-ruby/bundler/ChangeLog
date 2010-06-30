@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.4 2010/06/22 21:35:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.5 2010/06/30 12:05:31 flameeyes Exp $
+
+  30 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  bundler-0.9.26.ebuild:
+  Add ~x86 keyword, tested in development container.
 
 *bundler-0.9.26 (22 Jun 2010)
 
