@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/unieject
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.47 2009/10/23 16:12:16 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.48 2010/06/30 01:56:14 flameeyes Exp $
+
+  30 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  unieject-5.3.2.ebuild, unieject-6.ebuild:
+  Block eject as the two collides.
 
   23 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> unieject-5.3.2.ebuild:
   Adding die to emake install
