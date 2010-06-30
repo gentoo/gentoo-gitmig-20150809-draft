@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.2 2010/01/05 23:58:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.11.1.ebuild,v 1.3 2010/06/30 21:46:32 truedfx Exp $
 
 EAPI="2"
 
@@ -121,7 +121,7 @@ src_configure() {
 
 	./configure ${conf_opts} \
 		--audio-drv-list="$audio_opts" \
-		--cc=$(tc-getCC) --host-cc=$(tc-getCC) \
+		--cc="$(tc-getCC)" --host-cc="$(tc-getCC)" \
 		--target-list="${target_list}" \
 		|| die "configure failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.1.ebuild,v 1.3 2010/02/12 17:52:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.1.ebuild,v 1.4 2010/06/30 21:46:32 truedfx Exp $
 
 EAPI="2"
 
@@ -144,8 +144,8 @@ src_configure() {
 		${conf_opts} \
 		--audio-drv-list="$audio_opts" \
 		--target-list="${softmmu_targets} ${user_targets}" \
-		--cc=$(tc-getCC) \
-		--host-cc=$(tc-getCC) \
+		--cc="$(tc-getCC)" \
+		--host-cc="$(tc-getCC)" \
 		|| die "configure failed"
 }
 
