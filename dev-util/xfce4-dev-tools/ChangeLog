@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xfce4-dev-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.28 2010/06/29 07:35:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.29 2010/06/30 16:30:10 fauli Exp $
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  xfce4-dev-tools-4.7.2.ebuild:
+  x86 stable, bug 323729
 
   29 Jun 2010; Christoph Mende <angelos@gentoo.org>
   xfce4-dev-tools-4.7.2.ebuild:
