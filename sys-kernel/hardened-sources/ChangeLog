@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.317 2010/06/29 19:22:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.318 2010/06/30 16:37:15 blueness Exp $
+
+*hardened-sources-2.6.32-r10 (30 Jun 2010)
+
+  30 Jun 2010; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r10.ebuild:
+  New patchset based on mainline 2.6.32.15 and grsec-2.2.0. Bug #325227.
 
   29 Jun 2010; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Added myself to the metadata.xml
