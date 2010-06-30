@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.8.ebuild,v 1.3 2010/06/25 15:14:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.8.ebuild,v 1.4 2010/06/30 20:42:53 jlec Exp $
 
 EAPI=3
-inherit autotools base eutils linux-info
+inherit autotools base eutils linux-info multilib
 
 MY_P="${PN}-${PV/_/-}"
 
@@ -208,7 +208,7 @@ src_compile() {
 src_install() {
 	# setup directory structure
 	#
-	mkdir -p "${D}"usr/lib/pkgconfig
+	mkdir -p "${D}"usr/$(get_libdir)/pkgconfig
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 

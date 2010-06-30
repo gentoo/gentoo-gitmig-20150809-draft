@@ -1,6 +1,10 @@
 \# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.261 2010/06/25 15:14:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.262 2010/06/30 20:42:53 jlec Exp $
+
+  30 Jun 2010; Justin Lecher <jlec@gentoo.org> asterisk-1.6.1.20.ebuild,
+  asterisk-1.6.2.8.ebuild, asterisk-1.6.2.9.ebuild:
+  Add more multilib compatibility
 
 *asterisk-1.6.2.9 (25 Jun 2010)
 
