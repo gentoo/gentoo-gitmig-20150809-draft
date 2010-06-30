@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/jruby-openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/ChangeLog,v 1.7 2010/06/29 10:23:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/ChangeLog,v 1.8 2010/06/30 15:42:37 phajdan.jr Exp $
+
+  30 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  jruby-openssl-0.6-r1.ebuild:
+  x86 stable wrt bug #312547
 
   29 Jun 2010; Christoph Mende <angelos@gentoo.org>
   jruby-openssl-0.6-r1.ebuild:
