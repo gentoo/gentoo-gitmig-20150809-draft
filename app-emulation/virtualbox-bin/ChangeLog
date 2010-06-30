@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.86 2010/06/29 05:47:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.87 2010/06/30 07:13:03 polynomial-c Exp $
+
+  30 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-bin-3.1.8.ebuild, virtualbox-bin-3.2.4-r1.ebuild,
+  virtualbox-bin-3.2.6.ebuild:
+  Removed license check.
 
   29 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-bin-3.2.6.ebuild:
