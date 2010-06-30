@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.44 2010/06/25 20:06:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.45 2010/06/30 19:17:22 graaff Exp $
+
+*haml-3.0.13-r1 (30 Jun 2010)
+
+  30 Jun 2010; Hans de Graaff <graaff@gentoo.org> haml-3.0.13.ebuild,
+  +haml-3.0.13-r1.ebuild:
+  Fix tests by adding a dependency on dev-ruby/erubis, bug 326303. Restrict
+  tests in haml-3.0.13 and fix them in -r1. Drop ppc, ppc64 keywords for -r1
+  due to new dependency: bug 326353.
 
 *haml-3.0.13 (25 Jun 2010)
 
