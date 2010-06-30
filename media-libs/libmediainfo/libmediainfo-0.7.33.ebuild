@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.33.ebuild,v 1.1 2010/06/04 02:29:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.33.ebuild,v 1.2 2010/06/30 06:57:23 fauli Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="curl debug doc libmms static-libs"
 
 RDEPEND="sys-libs/zlib
