@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.3.1-r1.ebuild,v 1.5 2010/06/28 19:17:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.3.1-r1.ebuild,v 1.6 2010/06/30 20:53:35 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="http://dist.codehaus.org/${PN}/${MY_PV}/${PN}-src-${MY_PV}.tar.gz"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~ppc"
 IUSE="bsf java6 ssl"
 
 CDEPEND=">=dev-java/bytelist-1.0.2:0
