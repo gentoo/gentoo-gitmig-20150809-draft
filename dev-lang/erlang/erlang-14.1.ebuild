@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.1.ebuild,v 1.1 2010/06/28 11:16:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-14.1.ebuild,v 1.2 2010/06/30 07:41:13 ssuominen Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -65,6 +65,9 @@ src_prepare() {
 		ewarn "Don't cry, don't file bugs, just disable it! If you have a fix, tell us though on Bugzilla."
 		ewarn
 	fi
+
+	epatch "${FILESDIR}"/${P}-lm.patch
+
 	eautoreconf
 }
 

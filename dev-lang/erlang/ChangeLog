@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.193 2010/06/28 11:16:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.194 2010/06/30 07:41:13 ssuominen Exp $
+
+  30 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> erlang-14.1.ebuild,
+  +files/erlang-14.1-lm.patch:
+  Fix building with -Wl,--as-needed wrt #325969 by Christian Faulhammer.
 
 *erlang-14.1 (28 Jun 2010)
 
