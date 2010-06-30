@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.13 2010/06/16 23:13:15 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.14 2010/06/30 17:57:45 kolmodin Exp $
+
+  30 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +missingh-1.1.0.3.ebuild:
+  Bump version. Builds with newer versions of HUnit. See bug #326259.
 
   16 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   missingh-0.18.6.ebuild:
