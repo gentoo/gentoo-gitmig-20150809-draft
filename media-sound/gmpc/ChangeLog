@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.66 2010/05/19 13:31:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.67 2010/06/30 20:18:50 angelos Exp $
+
+  30 Jun 2010; Christoph Mende <angelos@gentoo.org> gmpc-0.20.0.ebuild:
+  Bumped vala dep to 0.7.10
 
 *gmpc-0.20.0 (19 May 2010)
 
