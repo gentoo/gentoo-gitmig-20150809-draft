@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.1 2010/06/03 18:24:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.2 2010/06/30 06:47:06 fauli Exp $
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org> libzen-0.4.15.ebuild:
+  keyworded ~arch for x86, bug 324205
 
 *libzen-0.4.15 (03 Jun 2010)
 

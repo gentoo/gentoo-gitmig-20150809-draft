@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.15.ebuild,v 1.1 2010/06/03 18:24:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.15.ebuild,v 1.2 2010/06/30 06:47:06 fauli Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_PN}/Project/GNU/Library"
 
 LICENSE="as-is ZLIB"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc static-libs wxwidgets"
 
 RDEPEND="sys-libs/zlib
