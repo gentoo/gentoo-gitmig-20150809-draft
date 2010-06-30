@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgrapht
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/ChangeLog,v 1.4 2010/06/26 15:16:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/ChangeLog,v 1.5 2010/06/30 15:27:05 phajdan.jr Exp $
+
+  30 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jgrapht-0.7.3.ebuild:
+  x86 stable wrt bug #325669
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org> jgrapht-0.7.3.ebuild:
   Stable on amd64 wrt bug #325669

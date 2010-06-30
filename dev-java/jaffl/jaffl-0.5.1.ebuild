@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.5.1.ebuild,v 1.3 2010/06/26 15:14:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.5.1.ebuild,v 1.4 2010/06/30 15:26:06 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://github.com/wmeissner/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 CDEPEND="dev-java/jffi:0.4
