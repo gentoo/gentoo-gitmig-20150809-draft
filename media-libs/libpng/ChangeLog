@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.267 2010/06/30 14:43:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.268 2010/06/30 17:12:15 darkside Exp $
+
+  30 Jun 2010; Jeremy Olexa <darkside@gentoo.org> libpng-1.4.3.ebuild,
+  files/libpng-1.4.x-update.sh:
+  Migrate Gentoo Prefix changes as tested in the Gentoo Prefix overlay. Add
+  keywords, eprefixify update script. Approved by ssuominen.
 
   30 Jun 2010; Christian Faulhammer <fauli@gentoo.org> libpng-1.4.3.ebuild:
   stable x86, security bug 324153
