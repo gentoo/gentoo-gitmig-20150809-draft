@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.2.ebuild,v 1.1 2010/06/29 20:46:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.2.ebuild,v 1.2 2010/06/30 17:09:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="aplaymidi debug dedicated iconv icu lzo +openmedia +png +timidity +truetype zlib"
-RESTRICT="test"
 
 DEPEND="
 	!dedicated? (
@@ -96,6 +95,11 @@ src_configure() {
 
 src_compile() {
 	emake VERBOSE=1 || die
+}
+
+src_test() {
+	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
+	emake -j1 test || die "Make test failed. See above for details."
 }
 
 src_install() {
