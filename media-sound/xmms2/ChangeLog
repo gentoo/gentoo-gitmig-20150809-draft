@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/xmms2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.1 2010/06/30 05:30:53 slyfox Exp $
+
+*xmms2-0.7 (30 Jun 2010)
+
+  30 Jun 2010; Sergei Trofimovich <slyfox@gentoo.org> +xmms2-0.7.ebuild,
+  +files/xmms2-0.7DrNo-windres-build-fix.patch, +metadata.xml:
+  Initial commit. Thanks everyone, who conributed to resolve bug #93583.
+  Special thanks to Mike Frysinger <vapier@gentoo.org> for help to cleanup
+  an ebuild.
+
