@@ -1,13 +1,7 @@
-diff -ru ../system-config-printer-1.2.3/Makefile.am ./Makefile.am
---- ../system-config-printer-1.2.3/Makefile.am	2010-06-24 17:49:35.000000000 +0200
-+++ ./Makefile.am	2010-06-30 04:38:40.435974659 +0200
-@@ -1,4 +1,4 @@
--AM_CFLAGS=-g -O2 -Wall $(GLIB_CFLAGS)
-+AM_CFLAGS=-Wall $(GLIB_CFLAGS)
- 
- SUBDIRS=po
- 
-@@ -70,155 +70,45 @@
+diff -ru ../system-config-printer-1.2.2/Makefile.am ./Makefile.am
+--- ../system-config-printer-1.2.2/Makefile.am	2010-05-07 16:19:03.000000000 +0200
++++ ./Makefile.am	2010-05-17 20:36:37.657216914 +0200
+@@ -70,91 +70,20 @@
  	rm -f .stamp-distutils-in-builddir
  
  nobase_pkgdata_SCRIPTS=				\
@@ -100,17 +94,8 @@ diff -ru ../system-config-printer-1.2.3/Makefile.am ./Makefile.am
 +	XmlHelper.py
  
  if UDEV_RULES
--udevrulesdir=$(sysconfdir)/udev/rules.d
-+udevrulesdir=/lib/udev/rules.d
- udevrules_DATA=udev/70-printers.rules
- udev_udev_configure_printer_SOURCES=\
- 	udev/udev-configure-printer.c
- udev_udev_configure_printer_LDADD=-lcups -ludev -lusb $(GLIB_LIBS)
--udevhelperdir=$(sysconfdir)/udev
-+udevhelperdir=/lib/udev
- udevhelper_PROGRAMS=\
- 	udev/udev-configure-printer
- udevhelper_SCRIPTS=\
+ udevrulesdir=/lib/udev/rules.d
+@@ -169,56 +98,17 @@
  	udev/udev-add-printer
  endif
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.2.3.ebuild,v 1.1 2010/06/30 02:47:51 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.2.3.ebuild,v 1.2 2010/06/30 03:33:09 reavertm Exp $
 
 EAPI="3"
 
@@ -74,7 +74,10 @@ src_install() {
 		dohtml -r html/ || die "installing html docs failed"
 	fi
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install \
+		udevrulesdir=/lib/udev/rules.d \
+		udevhelperdir=/lib/udev \
+		|| die "emake install failed"
 
 	python_convert_shebangs -q -r $(python_get_version) "${D}"
 }
