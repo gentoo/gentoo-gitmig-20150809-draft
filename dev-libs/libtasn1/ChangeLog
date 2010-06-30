@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.119 2010/06/28 07:04:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.120 2010/06/30 15:42:36 fauli Exp $
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org> libtasn1-2.7.ebuild:
+  stable x86, bug 325897
 
   28 Jun 2010; Christoph Mende <angelos@gentoo.org> libtasn1-2.7.ebuild:
   Stable on amd64 wrt bug #325897
