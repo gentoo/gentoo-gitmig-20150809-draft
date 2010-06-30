@@ -1,34 +1,36 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.1-r1.ebuild,v 1.2 2009/05/18 15:45:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/pyclamav-0.4.1-r1.ebuild,v 1.3 2010/06/30 03:09:24 arfrever Exp $
 
-EAPI=2
-
-NEED_PYTHON=2.2
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
 DESCRIPTION="Python binding for libclamav"
-HOMEPAGE="http://xael.org/norman/python/pyclamav/"
+HOMEPAGE="http://xael.org/norman/python/pyclamav/ http://pypi.python.org/pypi/pyclamav"
 SRC_URI="http://xael.org/norman/python/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ia64 ~ppc x86"
-DEPEND=">=app-antivirus/clamav-0.90"
 SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~ppc x86"
 IUSE=""
 
+DEPEND=">=app-antivirus/clamav-0.90"
+RDEPEND="${DEPEND}"
+
 src_prepare() {
+	distutils_src_prepare
+
 	# Patch from Debian to build w/ >=clamav-0.95
 	epatch "${FILESDIR}/${P}-clamav-0.95.patch"
 }
 
 src_install() {
 	distutils_src_install
-	insinto /usr/share/doc/${PF} && doins example.py
-}
 
-pkg_postinst() {
-	elog "Due to removal of cl_scanbuff in libclamav, pyclamav.scanthis()"
-	elog "has been removed in this release. Authors strongly encourage to use"
-	elog "pyClamd (http://xael.org/norman/python/pyclamd)."
+	insinto /usr/share/doc/${PF}
+	doins example.py
 }
