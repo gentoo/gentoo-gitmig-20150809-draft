@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100506.ebuild,v 1.3 2010/05/20 14:39:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20100506.ebuild,v 1.4 2010/06/30 16:41:24 lxnay Exp $
 
 EAPI="2"
 
@@ -294,6 +294,7 @@ src_configure() {
 	use nut || myconf+=" --disable-libnut"
 	use rar || myconf+=" --disable-unrarexec"
 	use samba || myconf+=" --disable-smb"
+	use svga || myconf+=" --disable-svga --enable-svgalib_helper"
 	if ! use lirc; then
 		myconf+="
 			--disable-lirc

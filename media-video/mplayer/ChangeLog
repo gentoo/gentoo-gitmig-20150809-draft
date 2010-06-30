@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.752 2010/06/27 18:29:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.753 2010/06/30 16:41:24 lxnay Exp $
+
+  30 Jun 2010; Fabio Erculiani <lxnay@gentoo.org>
+  mplayer-1.0_rc4_p20091026-r1.ebuild, mplayer-1.0_rc4_p20100506.ebuild,
+  mplayer-1.0_rc4_p20100612.ebuild, mplayer-9999.ebuild:
+  fix automagic dependency against svgalib, add --disable-svgalib
+  --disable-svgalib_helper
 
   27 Jun 2010; Raúl Porcel <armin76@gentoo.org>
   mplayer-1.0_rc4_p20100612.ebuild:
