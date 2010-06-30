@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.148 2010/06/29 07:10:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.149 2010/06/30 15:46:57 fauli Exp $
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  xfce-utils-4.6.2.ebuild:
+  x86 stable, bug 323729
 
   29 Jun 2010; Christoph Mende <angelos@gentoo.org> xfce-utils-4.6.2.ebuild:
   Stable on amd64 wrt bug #323729
