@@ -1,15 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.9.ebuild,v 1.2 2009/09/08 20:45:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.9.ebuild,v 1.3 2010/06/30 02:16:42 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
 DESCRIPTION="Guppy-PE -- A Python Programming Environment"
-HOMEPAGE="http://guppy-pe.sourceforge.net/"
-SRC_URI="http://pypi.python.org/packages/source/g/${PN}/${P}.tar.gz"
+HOMEPAGE="http://guppy-pe.sourceforge.net/ http://pypi.python.org/pypi/guppy"
+SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -18,7 +20,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="ANNOUNCE ChangeLog"
 
