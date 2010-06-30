@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/moserial
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/ChangeLog,v 1.8 2010/06/26 15:01:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/ChangeLog,v 1.9 2010/06/30 15:23:09 fauli Exp $
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  moserial-2.30.0.ebuild:
+  stable x86, bug 319843
 
   26 Jun 2010; <nixnut@gentoo.org> moserial-2.30.0.ebuild:
   ppc stable #319843
