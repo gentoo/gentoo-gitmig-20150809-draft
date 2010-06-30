@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.4.ebuild,v 1.5 2010/06/28 03:45:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.4.4.ebuild,v 1.6 2010/06/30 01:07:22 reavertm Exp $
 
 EAPI="3"
 
@@ -37,6 +37,9 @@ src_prepare() {
 		sed -e '/^ADD_SUBDIRECTORY(examples)/s/^/# DISABLED /' -i python/${PN}/CMakeLists.txt \
 			|| die "Failed to disable examples"
 	fi
+
+	# See bug 322351
+	use arm && epatch "${FILESDIR}/${P}-4.4.4-arm-sip.patch"
 }
 
 src_configure() {
