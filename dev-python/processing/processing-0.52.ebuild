@@ -1,23 +1,26 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/processing/processing-0.52.ebuild,v 1.3 2008/07/02 02:36:25 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/processing/processing-0.52.ebuild,v 1.4 2010/06/30 02:58:23 arfrever Exp $
 
-NEED_PYTHON=2.4
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
 KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Package for using processes, which mimics the threading module API."
-HOMEPAGE="http://py${PN}.berlios.de/"
-SRC_URI="http://cheeseshop.python.org/packages/source/${PN:0:1}/${PN}/${P}.zip"
+HOMEPAGE="http://pyprocessing.berlios.de/ http://pypi.python.org/pypi/processing"
+SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-RDEPEND="!>=dev-lang/python-2.6"
+DEPEND="app-arch/unzip
+	dev-python/setuptools"
+RDEPEND=""
 
-DEPEND="${RDEPEND}
-		app-arch/unzip
-		dev-python/setuptools"
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
