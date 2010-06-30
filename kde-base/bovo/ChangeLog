@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.60 2010/06/27 09:19:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.61 2010/06/30 15:36:35 alexxy Exp $
+
+*bovo-4.4.5 (30 Jun 2010)
+
+  30 Jun 2010; Alexey Shvetsov <alexxy@gentoo.org> +bovo-4.4.5.ebuild:
+  Version bump
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> bovo-4.4.4.ebuild:
   x86 stable, bug 322791

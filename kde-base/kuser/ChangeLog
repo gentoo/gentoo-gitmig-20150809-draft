@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.151 2010/06/28 00:10:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.152 2010/06/30 15:36:46 alexxy Exp $
+
+*kuser-4.4.5 (30 Jun 2010)
+
+  30 Jun 2010; Alexey Shvetsov <alexxy@gentoo.org> +kuser-4.4.5.ebuild:
+  Version bump
 
   28 Jun 2010; Christian Faulhammer <fauli@gentoo.org> kuser-4.4.4.ebuild:
   x86 stable, bug 322791

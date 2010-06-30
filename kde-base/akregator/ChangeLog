@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.162 2010/06/27 09:04:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.163 2010/06/30 15:37:03 alexxy Exp $
+
+*akregator-4.4.5 (30 Jun 2010)
+
+  30 Jun 2010; Alexey Shvetsov <alexxy@gentoo.org> +akregator-4.4.5.ebuild:
+  Version bump
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   akregator-4.4.4.ebuild:

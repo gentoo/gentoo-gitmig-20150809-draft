@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.156 2010/06/27 23:08:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.157 2010/06/30 15:37:04 alexxy Exp $
+
+*ksmserver-4.4.5 (30 Jun 2010)
+
+  30 Jun 2010; Alexey Shvetsov <alexxy@gentoo.org> +ksmserver-4.4.5.ebuild:
+  Version bump
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   ksmserver-4.4.4.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.155 2010/06/27 21:33:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.156 2010/06/30 15:36:28 alexxy Exp $
+
+*kppp-4.4.5 (30 Jun 2010)
+
+  30 Jun 2010; Alexey Shvetsov <alexxy@gentoo.org> +kppp-4.4.5.ebuild:
+  Version bump
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> kppp-4.4.4.ebuild:
   x86 stable, bug 322791

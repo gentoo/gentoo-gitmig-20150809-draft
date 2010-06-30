@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.73 2010/06/28 03:25:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.74 2010/06/30 15:36:59 alexxy Exp $
+
+*okular-4.4.5 (30 Jun 2010)
+
+  30 Jun 2010; Alexey Shvetsov <alexxy@gentoo.org> +okular-4.4.5.ebuild:
+  Version bump
 
   28 Jun 2010; Christian Faulhammer <fauli@gentoo.org> okular-4.4.4.ebuild:
   x86 stable, bug 322791
