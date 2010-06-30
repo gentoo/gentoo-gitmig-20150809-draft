@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rdtool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.38 2009/10/23 14:46:04 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.39 2010/06/30 19:44:09 graaff Exp $
+
+*rdtool-0.6.22-r1 (30 Jun 2010)
+
+  30 Jun 2010; Hans de Graaff <graaff@gentoo.org> +rdtool-0.6.22-r1.ebuild:
+  Convert to ruby-ng.
 
   23 Oct 2009; Hans de Graaff <graaff@gentoo.org> +rdtool-0.6.22.ebuild:
   Version bump to latest upstream version. Install documentation.
