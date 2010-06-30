@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.4.1.ebuild,v 1.1 2010/04/22 19:26:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.4.1.ebuild,v 1.2 2010/06/30 01:59:25 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator
 
@@ -29,7 +31,6 @@ DEPEND="${RDEPEND}
 	lapack? ( dev-util/pkgconfig )
 	test? ( >=dev-python/nose-0.10 )
 	doc? ( app-arch/unzip )"
-RESTRICT_PYTHON_ABIS="3.*"
 
 pkg_setup() {
 	# See progress in http://projects.scipy.org/scipy/numpy/ticket/573
