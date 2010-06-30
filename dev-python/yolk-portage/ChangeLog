@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/yolk-portage
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk-portage/ChangeLog,v 1.4 2008/03/13 04:52:48 pythonhead Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk-portage/ChangeLog,v 1.5 2010/06/30 00:28:01 arfrever Exp $
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  yolk-portage-0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   13 Mar 2008; Rob Cakebread <pythonhead@gentoo.org>
   yolk-portage-0.1.ebuild:
