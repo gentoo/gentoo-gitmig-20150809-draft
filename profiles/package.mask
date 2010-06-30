@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11726 2010/06/30 21:13:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11727 2010/06/30 21:28:37 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vlastimil Babka <caster@gentoo.org> (30 Jun 2010)
+# Masked for removal due to EOL and security, bug #292001.
+# Do this to avoid pulling other 1.5 JDK:
+#   emerge -av --depclean sun-jdk:1.5 jdk:1.5 jre:1.5
+=dev-java/sun-jdk-1.5*
+
+# Vlastimil Babka <caster@gentoo.org> (30 Jun 2010)
+# Masked for removal due to 1.5 JDK removal, bug #292001.
+# Use dev-java/tijmp for the 1.6 java replacement.
+dev-java/jmp
 
 # Alexey Shvetsov <alexxy@gentoo.org> (30 Jun 10)
 # Mask for adding

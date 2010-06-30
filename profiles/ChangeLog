@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4362 2010/06/30 21:13:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4363 2010/06/30 21:28:37 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jun 2010; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Mask sun-jdk-1.5 for removal due to EOL and security, bug #292001.
 
   30 Jun 2010; Vlastimil Babka <caster@gentoo.org> package.mask:
   Delete removed packages from mask.
