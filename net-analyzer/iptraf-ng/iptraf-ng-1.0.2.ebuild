@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.0.2.ebuild,v 1.7 2010/06/29 15:51:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.0.2.ebuild,v 1.8 2010/06/30 04:26:48 jer Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable static-libs static) || die "econf failed"
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
