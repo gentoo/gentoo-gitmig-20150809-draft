@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.19 2010/06/30 16:41:24 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20091026-r1.ebuild,v 1.20 2010/06/30 17:10:21 lxnay Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -247,7 +247,7 @@ src_configure() {
 	use rar || myconf="${myconf} --disable-unrarexec"
 	use rtc || myconf="${myconf} --disable-rtc"
 	use samba || myconf="${myconf} --disable-smb"
-	use svga || myconf="${myconf} --disable-svga --enable-svgalib_helper"
+	use svga || myconf="${myconf} --disable-svga --disable-svgalib_helper"
 	# use nemesi && myconf="${myconf} --enable-nemesi"
 	myconf="${myconf} $(use_enable joystick)"
 
