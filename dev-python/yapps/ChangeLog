@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/yapps
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapps/ChangeLog,v 1.1 2009/04/23 21:40:48 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapps/ChangeLog,v 1.2 2010/06/30 02:28:13 arfrever Exp $
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  yapps-2.1.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *yapps-2.1.1 (23 Apr 2009)
 
