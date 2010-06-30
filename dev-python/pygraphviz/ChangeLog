@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygraphviz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.3 2010/06/01 15:15:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.4 2010/06/30 01:03:35 arfrever Exp $
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygraphviz-0.99.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org> pygraphviz-0.99.1.ebuild:
   Marked ~ppc for bug #317225.
