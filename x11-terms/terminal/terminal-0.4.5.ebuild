@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.5.ebuild,v 1.2 2010/06/29 07:31:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.5.ebuild,v 1.3 2010/06/30 16:25:51 fauli Exp $
 
 EAPI=3
 MY_P=${P/t/T}
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.4/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 IUSE="dbus debug doc"
 
 RDEPEND=">=dev-libs/glib-2.16:2
