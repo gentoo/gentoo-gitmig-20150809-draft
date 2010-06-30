@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r3.ebuild,v 1.1 2010/06/29 19:55:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r3.ebuild,v 1.2 2010/06/30 18:44:58 jlec Exp $
 
 EAPI="3"
 
@@ -92,8 +92,6 @@ src_prepare() {
 	ccp_patch "${FILESDIR}"/${PV}-unbundle-libs.patch
 
 	# Fix missing DESTIDR
-	ccp_patch "${FILESDIR}"/${PV}-destdir.patch
-
 	# not installing during build
 	ccp_patch "${FILESDIR}"/${PV}-noinstall.patch
 	sed \
