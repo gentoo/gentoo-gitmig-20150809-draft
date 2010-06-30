@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbutils/dbutils-1.0.ebuild,v 1.2 2009/09/08 20:03:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbutils/dbutils-1.0.ebuild,v 1.3 2010/06/30 00:00:41 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="2.4"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -13,7 +13,7 @@ MY_PN="DBUtils"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Database connections for multi-threaded environments."
-HOMEPAGE="http://www.webwareforpython.org/DBUtils"
+HOMEPAGE="http://www.webwareforpython.org/DBUtils http://pypi.python.org/pypi/DBUtils"
 SRC_URI="http://www.webwareforpython.org/downloads/DBUtils/${MY_P}.tar.gz"
 
 LICENSE="OSL-2.0"
@@ -23,7 +23,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 

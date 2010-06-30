@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/fusil-1.3.2.ebuild,v 1.3 2010/02/28 13:39:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/fusil-1.3.2.ebuild,v 1.4 2010/06/30 00:03:15 arfrever Exp $
 
-EAPI="2"
-NEED_PYTHON="2.5"
+EAPI="3"
+PYTHON_DEPEND="*:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4"
 
 inherit distutils eutils
 
@@ -19,7 +20,6 @@ IUSE="doc examples"
 
 DEPEND=">=dev-python/python-ptrace-0.6"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="2.4"
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
