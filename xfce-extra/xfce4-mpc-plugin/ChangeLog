@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-mpc-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/ChangeLog,v 1.6 2010/06/29 07:18:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/ChangeLog,v 1.7 2010/06/30 16:08:27 fauli Exp $
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  xfce4-mpc-plugin-0.3.5.ebuild:
+  x86 stable, bug 323729
 
   29 Jun 2010; Christoph Mende <angelos@gentoo.org>
   xfce4-mpc-plugin-0.3.5.ebuild:

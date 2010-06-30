@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.8 2010/06/29 07:23:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.0.0.ebuild,v 1.9 2010/06/30 16:19:06 fauli Exp $
 
 EAUTORECONF=yes
 EAPI=2
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/panel-plugins/${PN}/1.0/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="acpi debug hddtemp libnotify lm_sensors"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2
