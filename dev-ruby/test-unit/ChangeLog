@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.19 2010/06/20 18:59:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.20 2010/06/30 06:27:16 fauli Exp $
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  test-unit-2.0.9.ebuild:
+  keyworded ~arch for x86, bug 324867
 
   20 Jun 2010; Hans de Graaff <graaff@gentoo.org> +test-unit-2.0.9.ebuild,
   +files/test-unit-2.0.9-disable-tests.patch:
