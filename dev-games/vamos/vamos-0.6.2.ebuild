@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.2.ebuild,v 1.2 2010/03/03 16:18:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.2.ebuild,v 1.3 2010/06/30 03:19:54 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils
@@ -18,11 +18,9 @@ RDEPEND="virtual/opengl
 	virtual/glu
 	virtual/glut
 	media-libs/libpng
-	media-libs/libsdl
-	media-libs/sdl-ttf
+	media-libs/libsdl[joystick,video]
 	media-libs/openal
-	media-libs/freealut
-	dev-libs/libsigc++:1.2"
+	media-libs/freealut"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

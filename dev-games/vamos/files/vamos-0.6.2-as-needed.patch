@@ -10,15 +10,3 @@ diff -ru vamos-0.6.2.orig/media/Makefile.in vamos-0.6.2/media/Makefile.in
  am_libvamos_media_la_OBJECTS = Ac3d.lo Sample.lo Texture_Image.lo \
  	XML_Parser.lo
  libvamos_media_la_OBJECTS = $(am_libvamos_media_la_OBJECTS)
-diff -ru vamos-0.6.2.orig/world/Makefile.in vamos-0.6.2/world/Makefile.in
---- vamos-0.6.2.orig/world/Makefile.in	2009-06-12 21:38:15.000000000 -0400
-+++ vamos-0.6.2/world/Makefile.in	2009-10-12 13:42:01.310744776 -0400
-@@ -181,7 +181,7 @@
- LTLIBRARIES = $(lib_LTLIBRARIES)
- 
- libvamos_world_la_LDFLAGS =
--libvamos_world_la_LIBADD =
-+libvamos_world_la_LIBADD = `pkg-config --libs sigc++-1.2`
- am_libvamos_world_la_OBJECTS = Atmosphere.lo Interactive_Driver.lo \
- 	Robot_Driver.lo World.lo Controls.lo Gl_World.lo Sounds.lo
- libvamos_world_la_OBJECTS = $(am_libvamos_world_la_OBJECTS)
