@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.6.5.ebuild,v 1.3 2010/05/22 15:11:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.6.5.ebuild,v 1.4 2010/06/30 06:43:11 fauli Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.kuwata-lab.com/erubis/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
