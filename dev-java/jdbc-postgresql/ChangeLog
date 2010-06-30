@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.40 2010/06/17 19:56:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.41 2010/06/30 20:48:03 caster Exp $
+
+  30 Jun 2010; Vlastimil Babka <caster@gentoo.org>
+  jdbc-postgresql-8.3_p605.ebuild, -jdbc-postgresql-8.4_p701.ebuild:
+  Cleanup.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   jdbc-postgresql-8.3_p603.ebuild, jdbc-postgresql-8.3_p605.ebuild,
