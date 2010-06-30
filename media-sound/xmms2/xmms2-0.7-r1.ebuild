@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7.ebuild,v 1.1 2010/06/30 05:30:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r1.ebuild,v 1.1 2010/06/30 17:20:13 slyfox Exp $
 
 EAPI=2
 inherit base eutils python
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="aac airplay +alsa ao asf avahi cdda curl cxx ffmpeg flac gvfs ices
-jack mac mlib-update mms +mp3 mp4 modplug mpg123 musepack ofa oss
+jack mac mlib-update mms +mad modplug mp3 musepack ofa oss
 perl phonehome pulseaudio python ruby
 samba +server sid speex +vorbis vocoder wavpack xml"
 
@@ -42,9 +42,8 @@ RDEPEND="server? (
 		mms? ( media-video/ffmpeg
 			>=media-libs/libmms-0.3 )
 		modplug? ( media-libs/libmodplug )
-		mp3? ( media-sound/madplay )
-		mp4? ( >=media-libs/faad2-2.0 )
-		mpg123? ( >=media-sound/mpg123-1.5.1 )
+		mad? ( media-sound/madplay )
+		mp3? ( >=media-sound/mpg123-1.5.1 )
 		musepack? ( media-sound/musepack-tools )
 		ofa? ( media-libs/libofa )
 		pulseaudio? ( media-sound/pulseaudio )
@@ -162,9 +161,9 @@ src_configure() {
 					"ENABLED	m3u"
 					"		mac"
 					"		mms"
-					"mp3		mad"
-					"		mp4"
-					"		mpg123"
+					"		mad"
+					"aac		mp4"
+					"mp3		mpg123"
 					"		modplug"
 					"		musepack"
 					"DISABLED	nms" # not in tree

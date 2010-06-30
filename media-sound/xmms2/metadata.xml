@@ -38,7 +38,6 @@
 		<flag name="ices">Icecast source output plugin</flag>
 		<flag name="mac">Support for Monkey's Audio (APE) format with help of <pkg>media-sound/mac</pkg></flag>
 		<flag name="mms">Support for Microsoft Media Server (MMS) streams via libmms</flag>
-		<flag name="mpg123">Support for libmpg123 decoder for MPEG 1.0/2.0/2.5 layer 1/2/3</flag>
 		<flag name="ofa">Support for Open Fingerprint Architecture (OFA)</flag>
 		<flag name="phonehome">This client sends anonymous usage-statistics to the xmms2</flag>
 		<flag name="server">Build xmms2 player daemon (otherwise only clients are built)</flag>

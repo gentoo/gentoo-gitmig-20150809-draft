@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.1 2010/06/30 05:30:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.2 2010/06/30 17:20:13 slyfox Exp $
+
+*xmms2-0.7-r1 (30 Jun 2010)
+
+  30 Jun 2010; Sergei Trofimovich <slyfox@gentoo.org> -xmms2-0.7.ebuild,
+  +xmms2-0.7-r1.ebuild, metadata.xml:
+  Revision bump. Renamed USE flags to comform to other packages in tree:
+  libmad: 'mp3' -> 'mad'
+  mpg123: 'libmpg123' -> 'mp3'
+  faad2: 'mp4' -> 'aac'
+  Thanks to Samuli Suominen.
 
 *xmms2-0.7 (30 Jun 2010)
 
