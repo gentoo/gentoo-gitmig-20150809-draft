@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.72 2010/06/13 20:50:37 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.73 2010/06/30 23:00:47 kolmodin Exp $
+
+  29 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> haddock-2.6.1.ebuild:
+  Remove some keywords until those arches have ghc-6.12.3 keyworded.
 
 *haddock-2.6.1 (13 Jun 2010)
 
