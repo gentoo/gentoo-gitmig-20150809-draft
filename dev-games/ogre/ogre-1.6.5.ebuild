@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.2 2010/03/26 02:06:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.3 2010/07/01 12:24:25 ssuominen Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -50,7 +50,8 @@ src_prepare() {
 	sed -i -e '/CPPUNIT/d' configure.in || die "sed failed"
 	epatch "${FILESDIR}"/${P}-boost.patch \
 		"${FILESDIR}"/${P}-automake.patch \
-		"${FILESDIR}"/${P}-cegui.patch
+		"${FILESDIR}"/${P}-cegui.patch \
+		"${FILESDIR}"/${PN}-1.4.9-as-needed.patch
 	eautoreconf
 }
 

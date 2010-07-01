@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.64 2010/03/26 02:06:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.65 2010/07/01 12:24:25 ssuominen Exp $
+
+  01 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> ogre-1.6.5.ebuild:
+  Apply ogre-1.4.9-as-needed.patch also to 1.6.5 wrt #308387 by Mik B.
+  Shvets.
 
   26 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.6.5.ebuild,
   +files/ogre-1.6.5-cegui.patch:
