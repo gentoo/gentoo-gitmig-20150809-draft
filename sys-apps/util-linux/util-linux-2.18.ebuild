@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.18.ebuild,v 1.2 2010/07/01 17:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.18.ebuild,v 1.3 2010/07/01 17:20:11 vapier Exp $
 
 EAPI="2"
 
@@ -78,7 +78,6 @@ src_configure() {
 		--disable-mesg \
 		--enable-partx \
 		--enable-raw \
-		--enable-rdev \
 		--enable-rename \
 		--disable-reset \
 		--disable-login-utils \
