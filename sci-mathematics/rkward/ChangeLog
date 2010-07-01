@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/rkward
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.22 2010/07/01 12:42:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.23 2010/07/01 14:34:48 hwoarang Exp $
+
+  01 Jul 2010; Markos Chandras <hwoarang@gentoo.org> rkward-0.5.3.ebuild:
+  Stable on amd64 wrt bug #326047
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org> rkward-0.5.3.ebuild:
   stable x86, bug 326047
