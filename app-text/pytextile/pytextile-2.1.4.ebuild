@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.1.4.ebuild,v 1.5 2010/01/20 18:01:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/pytextile-2.1.4.ebuild,v 1.6 2010/07/01 03:26:54 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-NEED_PYTHON="2.5"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
@@ -18,19 +20,11 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
-IUSE="test"
+IUSE=""
 
-DEPEND="test? ( dev-python/nose )"
+DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="${MY_PN}"
-
-src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests-${PYTHON_ABI}
-	}
-	python_execute_function testing
-}

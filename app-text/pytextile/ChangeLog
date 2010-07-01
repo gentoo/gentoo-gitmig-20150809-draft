@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.23 2010/01/20 18:01:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.24 2010/07/01 03:26:54 arfrever Exp $
+
+  01 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pytextile-2.1.4.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON. Simplify src_test().
 
   20 Jan 2010; <hwoarang@gentoo.org> pytextile-2.1.4.ebuild:
   Stable on amd64 wrt bug #300240
