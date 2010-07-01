@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-textures
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.8 2010/05/24 19:12:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-textures/ChangeLog,v 1.9 2010/07/01 13:31:11 fauli Exp $
+
+  01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  quake1-textures-20050820.ebuild:
+  stable x86, bug 317689
 
   24 May 2010; Pacho Ramos <pacho@gentoo.org>
   quake1-textures-20050820.ebuild:
