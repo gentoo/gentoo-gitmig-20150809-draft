@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.509 2010/07/01 10:32:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.510 2010/07/01 18:51:55 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> opera-10.60.ebuild:
+  Make gstreamer support optional but preferred.
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org> opera-10.60.ebuild:
   stable x86, security bug 326413
