@@ -1,11 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.20.ebuild,v 1.3 2010/02/07 20:50:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.20.ebuild,v 1.4 2010/07/01 01:15:20 arfrever Exp $
 
-EAPI="2"
-NEED_PYTHON=2.3
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils
+inherit distutils eutils
 
 MY_PV=${PV//./}
 MY_P=${PN/-py/}-${MY_PV}
@@ -19,21 +21,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="mysql postgres sqlite"
 
-RDEPEND="postgres? ( <dev-python/psycopg-1.99 )
+RDEPEND="postgres? ( dev-python/psycopg:0 )
 	mysql? ( >=dev-python/mysql-python-0.9.2 )
-	sqlite? ( >=dev-python/pysqlite-2.0 ) "
+	sqlite? ( dev-python/pysqlite:2 ) "
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
+S="${WORKDIR}/${MY_P}"
+
 PYTHON_MODNAME="adodb"
 
-S=${WORKDIR}/${MY_P}
-
 src_prepare(){
+	distutils_src_prepare
 	epatch "${FILESDIR}/${PN}_sandbox_violation.patch"
 }
 
 src_install() {
 	distutils_src_install
-	dohtml adodb-py-docs.htm icons/*.gif
+	dohtml adodb-py-docs.htm *.gif || die "dohtml failed"
 }
