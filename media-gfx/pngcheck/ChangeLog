@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pngcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/ChangeLog,v 1.3 2010/06/25 15:00:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/ChangeLog,v 1.4 2010/07/01 12:36:25 fauli Exp $
+
+  01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  pngcheck-2.3.0.ebuild:
+  stable x86, bug 286584
 
   25 Jun 2010; Christoph Mende <angelos@gentoo.org> pngcheck-2.3.0.ebuild:
   Stable on amd64 wrt bug #286584

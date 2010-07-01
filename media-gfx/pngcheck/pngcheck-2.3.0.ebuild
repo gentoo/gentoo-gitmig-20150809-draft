@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/pngcheck-2.3.0.ebuild,v 1.5 2010/06/25 15:00:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/pngcheck-2.3.0.ebuild,v 1.6 2010/07/01 12:36:25 fauli Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/png-mng/${P}.tar.gz"
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib"
