@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.8.ebuild,v 1.4 2009/08/04 05:39:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.8.ebuild,v 1.5 2010/07/01 19:10:06 jer Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 
@@ -13,7 +13,7 @@ IUSE=""
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 
 DEPEND="dev-haskell/mtl
 	>=dev-haskell/x11-1.4.1
