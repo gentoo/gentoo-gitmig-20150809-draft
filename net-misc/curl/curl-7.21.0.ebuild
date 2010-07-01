@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.0.ebuild,v 1.1 2010/07/01 20:14:54 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.0.ebuild,v 1.2 2010/07/01 20:46:53 darkside Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
-EAPI=2
+EAPI=3
 
-inherit multilib eutils
+inherit multilib eutils libtool prefix
 
 #MY_P=${P/_pre/-}
 DESCRIPTION="A Client that groks URLs"
@@ -17,7 +17,7 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="ares gnutls idn ipv6 kerberos ldap libssh2 nss ssl test threads"
 
 RDEPEND="ldap? ( net-nds/openldap )
@@ -56,14 +56,19 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.20.0-strip-ldflags.patch \
-		"${FILESDIR}"/${PN}-7.19.7-test241.patch
+		"${FILESDIR}"/${PN}-7.19.7-test241.patch \
+		"${FILESDIR}"/${PN}-7.18.2-prefix.patch
+
+	eprefixify curl-config.in
+	# for FreeMiNT
+	elibtoolize
 }
 
 src_configure() {
 	myconf="$(use_enable ldap)
 		$(use_enable ldap ldaps)
 		$(use_with idn libidn)
-		$(use_with kerberos gssapi /usr)
+		$(use_with kerberos gssapi "${EPREFIX}"/usr)
 		$(use_with libssh2)
 		$(use_enable ipv6)
 		$(use_enable ares)
@@ -89,13 +94,13 @@ src_configure() {
 	if use ssl ; then
 		if use gnutls; then
 			myconf="${myconf} --without-ssl --with-gnutls --without-nss"
-			myconf="${myconf} --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt"
+			myconf="${myconf} --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
 		elif use nss; then
 			myconf="${myconf} --without-ssl --without-gnutls --with-nss"
-			myconf="${myconf} --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt"
+			myconf="${myconf} --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
 		else
 			myconf="${myconf} --without-gnutls --without-nss --with-ssl"
-			myconf="${myconf} --without-ca-bundle --with-ca-path=/etc/ssl/certs"
+			myconf="${myconf} --without-ca-bundle --with-ca-path=${EPREFIX}/etc/ssl/certs"
 		fi
 	else
 		myconf="${myconf} --without-gnutls --without-nss --without-ssl"
@@ -106,7 +111,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "installed failed for current version"
-	rm -rf "${D}"/etc/
+	rm -rf "${ED}"/etc/
 
 	# https://sourceforge.net/tracker/index.php?func=detail&aid=1705197&group_id=976&atid=350976
 	insinto /usr/share/aclocal
