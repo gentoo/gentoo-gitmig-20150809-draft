@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.56 2010/06/21 19:31:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.57 2010/07/01 19:06:53 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Drop support for ghc and darcs.
 
   21 Jun 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask, use.mask:
   Remove more KDE references (bug #304363).
