@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.88 2010/05/26 16:26:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.89 2010/07/01 13:58:32 ssuominen Exp $
+
+  01 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  nessus-libraries-2.2.9.ebuild,
+  +files/nessus-libraries-2.2.9-asneeded.patch:
+  Link libnessus.so to -lcrypto and -lssl wrt #247931 by Diego E. Pettenò.
 
   26 May 2010; Jonathan Callen <abcd@gentoo.org>
   nessus-libraries-2.3.1-r1.ebuild:

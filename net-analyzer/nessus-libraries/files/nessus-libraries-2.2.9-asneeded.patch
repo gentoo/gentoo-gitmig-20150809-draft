@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/247931
+
+--- libnessus/Makefile
++++ libnessus/Makefile
+@@ -101,7 +101,7 @@
+ 	$(LIBTOOL) $(CC) $(CIPHER) $(DEFS) $(INCLUDE) $(CFLAGS) -c snprintf.c	
+ libnessus.la: $(OBJS)
+ 	$(LIBTOOL) $(CC) -o libnessus.la $(LO_OBJS) -rpath ${libdir} \
+-	-version-info ${PACKAGE_VERSION}
++	-version-info ${PACKAGE_VERSION} -lcrypto -lssl
+ 
+ install : libnessus.la
+ 	test -d $(DESTDIR)${libdir} || $(INSTALL_DIR) -m 755 $(DESTDIR)${libdir}
