@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.8 2010/06/27 13:45:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.9 2010/07/01 16:27:53 chiiph Exp $
 
-inherit eutils multilib
+EAPI="3"
+
+inherit autotools eutils multilib
 
 DESCRIPTION="Guile Scheme code that wraps the GNOME developer platform"
 HOMEPAGE="http://www.gnu.org/software/guile-gnome"
@@ -34,14 +36,17 @@ DEPEND="${RDEPEND}
 #needs guile with networking
 RESTRICT=test
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PV}-conflicting-types.patch"
+	epatch "${FILESDIR}/${PV}-gcc45.patch"
+	eautoreconf
+}
+
+src_configure() {
+	econf --disable-Werror
 }
 
 src_compile() {
-	econf --disable-Werror
 	emake -j1 guilegnomedir=/usr/share/guile/site \
 		guilegnomelibdir=/usr/$(get_libdir) || die "emake failed."
 }
