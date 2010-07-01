@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.4.ebuild,v 1.2 2010/07/01 12:10:36 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.4.ebuild,v 1.3 2010/07/01 15:32:18 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -32,7 +32,6 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	python_convert_shebangs -r 2 .
 }
-
 
 src_configure() {
 	local myconf
