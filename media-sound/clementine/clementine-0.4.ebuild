@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.4.ebuild,v 1.1 2010/07/01 08:27:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.4.ebuild,v 1.2 2010/07/01 09:59:27 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils gnome2-utils flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gstreamer +xine"
+IUSE="xine"
 
 COMMON_DEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
@@ -22,13 +22,12 @@ COMMON_DEPEND="x11-libs/qt-gui:4
 	dev-libs/glib:2
 	dev-libs/libxml2
 	media-libs/glew
-	gstreamer? ( >=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10 )
-	xine? ( media-libs/xine-lib )
-	!gstreamer? ( media-libs/xine-lib )"
+	>=media-libs/gstreamer-0.10
+	>=media-libs/gst-plugins-base-0.10
+	xine? ( media-libs/xine-lib )"
 RDEPEND="${COMMON_DEPEND}
-	gstreamer? ( >=media-plugins/gst-plugins-meta-0.10
-		>=media-plugins/gst-plugins-gio-0.10 )"
+	>=media-plugins/gst-plugins-meta-0.10
+	>=media-plugins/gst-plugins-gio-0.10"
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.39
 	dev-util/pkgconfig"
@@ -38,18 +37,12 @@ DOCS="Changelog TODO"
 src_configure() {
 	append-cppflags "$(pkg-config --cflags-only-I glib-2.0)" #320699
 
-	mycmakeargs=(
-		$(cmake-utils_use gstreamer ENGINE_GSTREAMER_ENABLED)
+	local mycmakeargs=(
+		"-DENGINE_GSTREAMER_ENABLED=ON"
 		"-DENGINE_LIBVLC_ENABLED=OFF"
 		$(cmake-utils_use xine ENGINE_LIBXINE_ENABLED)
 		"-DENGINE_QT_PHONON_ENABLED=OFF"
 		)
-
-	if ! use gstreamer; then
-		mycmakeargs+=(
-			"-DENGINE_LIBXINE_ENABLED=ON"
-			)
-	fi
 
 	cmake-utils_src_configure
 }
@@ -59,12 +52,10 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if use gstreamer; then
-		elog
-		elog "Install libsoup gstreamer plug-in for internet radio support."
-		elog
-	fi
 	gnome2_icon_cache_update
+	elog
+	elog "Install libsoup gstreamer plug-in for internet radio support."
+	elog
 }
 
 pkg_postrm() {
