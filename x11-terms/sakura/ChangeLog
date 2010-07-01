@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/sakura
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.6 2009/07/26 19:18:06 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.7 2010/07/01 17:24:32 phajdan.jr Exp $
+
+*sakura-2.3.8 (01 Jul 2010)
+
+  01 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> +sakura-2.3.8.ebuild:
+  Version bump wrt bug #309449 by Yuan Ye <yuanyelele@gmail.com>
 
   26 Jul 2009; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd> tag
