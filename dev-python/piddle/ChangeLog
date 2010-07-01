@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/piddle
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.11 2009/02/15 22:34:30 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.12 2010/07/01 02:48:47 arfrever Exp $
+
+  01 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  piddle-1.0.15.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   15 Feb 2009; Patrick Lauer <patrick@gentoo.org> piddle-1.0.15.ebuild:
   Adding ~amd64 keyword
