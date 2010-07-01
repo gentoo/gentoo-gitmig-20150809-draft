@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.439 2010/07/01 08:29:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.440 2010/07/01 17:07:35 pva Exp $
 
 # Keep them sorted
 
@@ -142,6 +142,7 @@ gstreamer - Adds support for media-libs/gstreamer (Streaming media)
 gtk - Adds support for x11-libs/gtk+ (The GIMP Toolkit)
 gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for the guile Scheme interpreter
+gzip - Compress files with Lempel-Ziv coding (LZ77)
 hal - Enable Hardware Abstraction Layer (HAL) support
 handbook - Enable handbooks generation for KDE4.
 hardened - activate default security enhancements for toolchain (gcc, glibc, binutils)
