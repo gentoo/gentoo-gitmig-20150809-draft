@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r1.ebuild,v 1.1 2010/06/30 17:20:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.1 2010/07/01 08:22:28 slyfox Exp $
 
-EAPI=2
+EAPI=3
+
 inherit base eutils python
 
 MY_P="${P}DrNo"
@@ -62,11 +63,12 @@ RDEPEND="server? (
 	cxx? ( >=dev-libs/boost-1.32 )
 	mlib-update? ( app-admin/gamin )
 	perl? ( >=dev-lang/perl-5.8.8 )
-	python? ( >=dev-python/pyrex-0.9.5.1 )
+	python? ( =dev-lang/python-2* )
 	ruby? ( >=dev-lang/ruby-1.8.5 ) "
 
 DEPEND="${RDEPEND}
-	>=dev-lang/python-2.4.3"
+	=dev-lang/python-2*
+	python? ( dev-python/pyrex )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -91,6 +93,11 @@ xmms2_flag() {
 			use $1 && echo ",${UWORD}"
 			;;
 	esac
+}
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_configure() {
@@ -162,7 +169,7 @@ src_configure() {
 					"		mac"
 					"		mms"
 					"		mad"
-					"aac		mp4"
+					"DISABLED	mp4" # uses bundled patched faad2
 					"mp3		mpg123"
 					"		modplug"
 					"		musepack"
@@ -233,9 +240,9 @@ pkg_postinst() {
 		einfo "Disable the phonehome useflag if you don't like that"
 	fi
 
-	use python && python_mod_optimize "$(python_get_sitedir)/xmmsclient"
+	use python && python_mod_optimize xmmsclient
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup "$(python_get_sitedir)/xmmsclient"
+	use python && python_mod_cleanup xmmsclient
 }
