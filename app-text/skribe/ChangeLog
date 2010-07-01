@@ -1,0 +1,11 @@
+# ChangeLog for app-text/skribe
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/skribe/ChangeLog,v 1.1 2010/07/01 23:04:44 chiiph Exp $
+
+*skribe-1.2l (02 Jul 2010)
+
+  02 Jul 2010; Tomas Touceda <chiiph@gentoo.org> +skribe-1.2l.ebuild,
+  +metadata.xml:
+  Skibe initial commit wrt bug 191495. Thanks Austen for the initial layout
+  of the ebuild
+
