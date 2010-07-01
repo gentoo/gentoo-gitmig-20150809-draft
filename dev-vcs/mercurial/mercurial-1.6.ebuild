@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.6.ebuild,v 1.1 2010/07/01 19:27:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.6.ebuild,v 1.2 2010/07/01 23:10:20 arfrever Exp $
 
 EAPI=3
 
@@ -116,7 +116,7 @@ pkg_postinst() {
 	elog "  dev-vcs/darcs"
 	elog "  dev-vcs/git"
 	elog "  dev-vcs/monotone"
-	elog "  dev-util/subversion"
+	elog "  dev-vcs/subversion"
 }
 
 pkg_postrm() {
