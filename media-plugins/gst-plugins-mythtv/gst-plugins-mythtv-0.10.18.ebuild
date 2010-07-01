@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mythtv/gst-plugins-mythtv-0.10.18.ebuild,v 1.3 2010/06/27 13:37:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mythtv/gst-plugins-mythtv-0.10.18.ebuild,v 1.4 2010/07/01 12:31:17 fauli Exp $
 
 inherit gst-plugins-bad
 
 DESCRIPION="plugin to allow retrieving from a mythbackend"
 
-KEYWORDS="amd64 ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/gmyth-0.4

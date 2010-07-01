@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.136 2010/06/27 13:31:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.137 2010/07/01 11:43:38 fauli Exp $
+
+  01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-flac-0.10.21.ebuild:
+  x86 stable, bug 324691
 
   27 Jun 2010; <nixnut@gentoo.org> gst-plugins-flac-0.10.21.ebuild:
   ppc stable #324691
