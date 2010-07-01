@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.13 2010/04/01 08:50:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.14 2010/07/01 19:57:11 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> http-3001.0.0.ebuild,
+  http-4000.0.5.ebuild, http-4000.0.6.ebuild, http-4000.0.8.ebuild:
+  Drop support for ghc and darcs.
 
   01 Apr 2010; Fabian Groffen <grobian@gentoo.org> http-4000.0.8.ebuild:
   Marked ~ppc-macos, ~x86-macos, bug #310869

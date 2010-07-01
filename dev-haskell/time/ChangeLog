@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/time
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.21 2010/06/30 17:50:04 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.22 2010/07/01 19:59:18 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> time-1.1.2.0.ebuild,
+  time-1.1.2.4.ebuild:
+  Drop support for ghc and darcs.
 
   30 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> time-1.1.4.ebuild:
   Bump to new version, which unfortunately does not build with <ghc-6.10.

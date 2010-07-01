@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.44 2010/03/28 13:56:24 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.45 2010/07/01 19:56:36 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> happy-1.17.ebuild,
+  happy-1.18.2.ebuild, happy-1.18.4.ebuild:
+  Drop support for ghc and darcs.
 
   28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> happy-1.18.4.ebuild:
   Bundle dev-haskell/mtl. mtl requires haddock if built with USE=doc, and

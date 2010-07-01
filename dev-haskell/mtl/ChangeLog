@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.34 2010/03/27 08:53:27 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.35 2010/07/01 19:57:35 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> mtl-1.0.ebuild,
+  mtl-1.1.0.0.ebuild, mtl-1.1.0.2.ebuild:
+  Drop support for ghc and darcs.
 
   27 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> mtl-1.1.0.2.ebuild:
   Add ~ppc64 keyword. Tested by Sergei Trofimovich <slyfox@inbox.ru>.

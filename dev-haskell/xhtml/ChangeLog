@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/xhtml
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.17 2009/04/17 12:36:33 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.18 2010/07/01 19:59:41 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> xhtml-3000.0.2.1.ebuild,
+  xhtml-3000.2.0.1.ebuild:
+  Drop support for ghc and darcs.
 
 *xhtml-3000.2.0.1 (17 Apr 2009)
 

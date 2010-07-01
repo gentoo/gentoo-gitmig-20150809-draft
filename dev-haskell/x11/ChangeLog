@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.20 2010/04/25 09:03:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.21 2010/07/01 19:59:30 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> x11-1.4.2.ebuild,
+  x11-1.4.5.ebuild, x11-1.4.6.1.ebuild:
+  Drop support for ghc and darcs.
 
   25 Apr 2010; Fabian Groffen <grobian@gentoo.org> x11-1.4.6.1.ebuild:
   Marked ~amd64-linux ~x86-linux ~ppc-macos, bug #301709

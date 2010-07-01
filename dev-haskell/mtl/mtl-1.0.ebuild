@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/mtl-1.0.ebuild,v 1.14 2007/12/13 00:50:15 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/mtl-1.0.ebuild,v 1.15 2010/07/01 19:57:35 jer Exp $
 
 inherit ghc-package
 
@@ -10,7 +10,7 @@ SRC_URI=""
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="=dev-lang/ghc-6.4*"
