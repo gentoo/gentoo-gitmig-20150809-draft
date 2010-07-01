@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.41 2010/06/24 21:24:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.42 2010/07/01 19:01:01 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> libgadu-1.9.0-r1.ebuild:
+  Stable for HPPA (bug #324023).
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> libgadu-1.9.0-r1.ebuild:
   stable amd64, bug 322813
