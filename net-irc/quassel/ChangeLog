@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.88 2010/06/17 20:48:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.89 2010/07/01 10:34:03 scarabeus Exp $
+
+  01 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> quassel-9999.ebuild,
+  +files/quasselcore.conf, +files/quasselcore.init:
+  Redo the live ebuild quite bit. Do not die in pkg_setup. Move confighome
+  to system location.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> quassel-0.5.1.ebuild,
   quassel-0.5.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.35 2010/06/07 16:33:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.36 2010/07/01 10:34:03 scarabeus Exp $
 
 EAPI="2"
 
@@ -46,6 +46,14 @@ RDEPEND="
 		X? ( ${GUI_RDEPEND} )
 	)
 	ssl? ( x11-libs/qt-core:4[ssl] )
+	!monolithic? (
+		!server? (
+			!X? (
+				${SERVER_RDEPEND}
+				${GUI_RDEPEND}
+			)
+		)
+	)
 	"
 DEPEND="${RDEPEND}"
 
@@ -53,14 +61,16 @@ DOCS="AUTHORS ChangeLog README"
 
 pkg_setup() {
 	if ! use monolithic && ! use server && ! use X ; then
-		eerror "You have to build at least one of the monolithic client (USE=monolithic),"
-		eerror "the quasselclient (USE=X) or the quasselcore (USE=server)."
-		die "monolithic, server and X flag unset."
+		ewarn "You have to build at least one of the monolithic client (USE=monolithic),"
+		ewarn "the quasselclient (USE=X) or the quasselcore (USE=server)."
+		echo
+		ewarn "Enabling monolithic by default."
+		FORCED_MONO="yes"
 	fi
 }
 
 src_configure() {
-	local mycmakeargs="
+	local mycmakeargs=(
 		$(cmake-utils_use_with ayatana LIBINDICATE)
 		$(cmake-utils_use_want X QTCLIENT)
 		$(cmake-utils_use_want server CORE)
@@ -71,8 +81,10 @@ src_configure() {
 		$(cmake-utils_use_with dbus)
 		$(cmake-utils_use_with ssl OPENSSL)
 		$(cmake-utils_use_with !kde OXYGEN)
-		-DEMBED_DATA=OFF
-	"
+		"-DEMBED_DATA=OFF"
+	)
+
+	[[ ${FORCED_MONO} == "yes" ]] && mycmakeargs+=( '-DWANT_MONO=ON' )
 
 	cmake-utils_src_configure
 }
@@ -81,26 +93,47 @@ src_install() {
 	cmake-utils_src_install
 
 	if use server ; then
-		newinitd "${FILESDIR}"/quasselcore-2.init quasselcore || die "newinitd failed"
-		newconfd "${FILESDIR}"/quasselcore-2.conf quasselcore || die "newconfd failed"
+		# prepare folders in /var/
+		dodir /var/lib/${PN}/
+		keepdir /var/lib/${PN}/
+		fowners ${PN}:${PN} /var/lib/${PN}/
 
+		# init scripts
+		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
+		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
+
+		# logrotate
 		insinto /etc/logrotate.d
-		newins "${FILESDIR}/quassel.logrotate" quassel
+		newins "${FILESDIR}/quassel.logrotate" quassel || die "newins failed"
 	fi
 }
 
+pkg_preinst() {
+	# create quassel user
+	enewuser ${PN} -1 -1 /var/lib/${PN} "${PN}"
+}
+
 pkg_postinst() {
-	if use server ; then
-		ewarn
-		ewarn "In order to use the quassel init script you must set the"
-		ewarn "QUASSEL_USER variable in ${ROOT%/}/etc/conf.d/quasselcore to your username."
-		ewarn "Note: This is the user who runs the quasselcore and is independent"
-		ewarn "from the users you set up in the quasselclient."
+	if use server && use ssl; then
+		# inform about genreating ssl certificate
+		elog "If you want to use ssl connection to your core, please generate ssl key, with folowing command:"
+		elog "# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /var/lib/${PN}/quasselCert.pem -ou"
+		echo
+		elog "Also remember that with the above command the key is valid only for 1 year."
 	fi
 
-	if ( use server || use monolithic ) && use ssl ; then
-		elog
+	if ( use monolithic || [[ ${FORCED_MONO} == "yes" ]] ) && use ssl ; then
+		echo
 		elog "Information on how to enable SSL support for client/core connections"
 		elog "is available at http://bugs.quassel-irc.org/wiki/quassel-irc."
+	fi
+
+	# temporary info mesage
+	if use server; then
+		ewarn "Please note that all configuration moved from"
+		ewarn "/home/\${QUASSEL_USER}/.config/quassel-irc.org/"
+		ewarn "to: /var/lib/${PN}/."
+		echo
+		ewarn "For migration. Stop the core, move the files to new location and then start server again."
 	fi
 }
