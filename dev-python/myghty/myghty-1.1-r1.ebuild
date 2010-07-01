@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/myghty/myghty-1.1-r1.ebuild,v 1.2 2010/06/07 22:31:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/myghty/myghty-1.1-r1.ebuild,v 1.3 2010/07/01 02:22:51 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -41,7 +41,7 @@ src_compile() {
 	if use doc; then
 		einfo "Generation of documentation"
 		cd doc
-		PYTHONPATH=./lib/ python genhtml.py || die "Generation of documentation failed"
+		PYTHONPATH="lib" "$(PYTHON -f)" genhtml.py || die "Generation of documentation failed"
 	fi
 }
 
