@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21-r3.ebuild,v 1.1 2010/07/01 08:32:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21-r3.ebuild,v 1.2 2010/07/01 08:33:36 jlec Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# create missing mmdb.pc
-	cat >> ${T}/mmdb.pc <<- EOF
+	cat >> "${T}"/mmdb.pc <<- EOF
 	prefix=${EPREFIX}/usr
 	exec_prefix=${EPREFIX}/usr
 	libdir=${EPREFIX}/usr/$(get_libdir)
@@ -44,5 +44,5 @@ src_install() {
 	EOF
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins ${T}/mmdb.pc || die
+	doins "${T}"/mmdb.pc || die
 }
