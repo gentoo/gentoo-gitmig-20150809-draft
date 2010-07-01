@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.160 2010/06/30 13:49:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.161 2010/07/01 14:02:34 pva Exp $
+
+  01 Jul 2010; Peter Volkov <pva@gentoo.org> package.use.mask:
+  Masked mod_srl USE for ejabberd until we test it better
 
   30 Jun 2010; Justin Lecher <jlec@gentoo.org> ChangeLog:
   Use-masked xls for sci-visualization/qtiplot-0.9.8, because
