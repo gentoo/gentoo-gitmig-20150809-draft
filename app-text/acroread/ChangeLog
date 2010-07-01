@@ -1,6 +1,11 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.147 2010/06/26 14:21:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.148 2010/07/01 20:52:02 tgurr Exp $
+
+*acroread-9.3.3 (01 Jul 2010)
+
+  01 Jul 2010; Timo Gurr <tgurr@gentoo.org> +acroread-9.3.3.ebuild:
+  Version bump, wrt security bug #322857.
 
   26 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> acroread-9.3.2.ebuild:
   Remove support for vulnerable seamonkey (#305789) and xulrunner (#324953).
