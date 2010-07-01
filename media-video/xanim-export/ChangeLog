@@ -1,6 +1,14 @@
 # ChangeLog for media-video/xanim-export
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/ChangeLog,v 1.15 2008/11/17 20:48:35 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/ChangeLog,v 1.16 2010/07/01 19:52:41 xarthisius Exp $
+
+*xanim-export-2.80.1-r5 (01 Jul 2010)
+
+  01 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/2.80.1-gentoo.patch, +xanim-export-2.80.1-r5.ebuild,
+  +files/2.80.1-implicit_funcs.patch:
+  Fix building with as-needed wrt bug 247919, debundle libquicktime, respect
+  FLAGS, fix implicit function declarations.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/2.80.1-makefile.patch:
