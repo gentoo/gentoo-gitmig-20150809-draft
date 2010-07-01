@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.68 2010/06/23 09:56:09 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.69 2010/07/01 12:10:36 bass Exp $
+
+  01 Jul 2010; J. Alberto Suárez López <bass@gentoo.org>
+  cherokee-1.0.4.ebuild:
+  Fixed QA bug #325617
 
 *cherokee-1.0.4 (23 Jun 2010)
 

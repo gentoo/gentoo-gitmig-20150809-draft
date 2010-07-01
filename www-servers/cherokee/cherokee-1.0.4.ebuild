@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.4.ebuild,v 1.1 2010/06/23 09:56:09 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.4.ebuild,v 1.2 2010/07/01 12:10:36 bass Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -33,7 +33,8 @@ src_prepare() {
 	python_convert_shebangs -r 2 .
 }
 
-src_compile() {
+
+src_configure() {
 	local myconf
 
 	if use static ; then
@@ -77,7 +78,9 @@ src_compile() {
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		|| die "configure failed"
+}
 
+src_compile() {
 	emake -j1 || die "emake failed"
 }
 
