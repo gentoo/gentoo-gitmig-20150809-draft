@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pymazon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/ChangeLog,v 1.1 2010/06/28 16:03:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/ChangeLog,v 1.2 2010/07/01 13:17:10 lack Exp $
+
+  01 Jul 2010; Jim Ramsay <lack@gentoo.org> pymazon-0.9.ebuild:
+  Additional python.eclass fixes (Bug #326045)
 
 *pymazon-0.9 (28 Jun 2010)
 

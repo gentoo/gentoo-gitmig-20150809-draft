@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/pymazon-0.9.ebuild,v 1.1 2010/06/28 16:03:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/pymazon-0.9.ebuild,v 1.2 2010/07/01 13:17:10 lack Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -21,6 +21,11 @@ DEPEND="gtk? ( dev-python/pygtk )
 	qt4? ( dev-python/PyQt4 )"
 REPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_install() {
 	distutils_src_install
