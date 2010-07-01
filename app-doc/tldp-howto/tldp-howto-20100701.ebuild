@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20100101.ebuild,v 1.4 2010/07/01 17:26:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20100701.ebuild,v 1.1 2010/07/01 17:26:29 dirtyepic Exp $
 
 RESTRICT="binchecks strip"
 
