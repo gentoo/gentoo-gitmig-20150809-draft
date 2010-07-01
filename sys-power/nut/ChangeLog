@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.77 2010/06/25 17:21:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.78 2010/07/01 19:19:30 ssuominen Exp $
+
+  01 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> nut-2.4.3-r2.ebuild,
+  +files/nut-2.4.3-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #318481 by Diego E. Pettenò.
 
   25 Jun 2010; Robin H. Johnson <robbat2@gentoo.org>
   files/nut.powerfail.initd:
