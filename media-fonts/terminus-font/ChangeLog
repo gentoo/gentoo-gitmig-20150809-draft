@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.77 2010/06/19 14:14:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.78 2010/07/01 08:23:52 pva Exp $
+
+  01 Jul 2010; Peter Volkov <pva@gentoo.org> -terminus-font-4.28.ebuild,
+  terminus-font-4.30.ebuild:
+  Drop old. Update HOMEPAGE, thank upstream developer Dimitar Zhekov for
+  notification.
 
   19 Jun 2010; Raúl Porcel <armin76@gentoo.org> terminus-font-4.30.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #320303
