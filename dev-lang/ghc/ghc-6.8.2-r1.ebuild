@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.8.2-r1.ebuild,v 1.2 2009/09/10 09:01:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.8.2-r1.ebuild,v 1.3 2010/07/01 20:27:50 jer Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -197,9 +197,9 @@ src_compile() {
 	# portage logging) reported as bug #111183
 	echo "SRC_HC_OPTS+=-w" >> mk/build.mk
 
-	# GHC build system knows to build unregisterised on alpha and hppa,
+	# GHC build system knows to build unregisterised on alpha,
 	# but we have to tell it to build unregisterised on some arches
-	if use alpha || use hppa || use ia64 || use ppc64 || use sparc; then
+	if use alpha || use ia64 || use ppc64 || use sparc; then
 		echo "GhcUnregisterised=YES" >> mk/build.mk
 		echo "GhcWithInterpreter=NO" >> mk/build.mk
 		echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
