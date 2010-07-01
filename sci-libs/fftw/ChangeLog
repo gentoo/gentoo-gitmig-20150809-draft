@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.103 2010/05/22 09:06:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.104 2010/07/01 06:58:03 grobian Exp $
+
+  01 Jul 2010; Fabian Groffen <grobian@gentoo.org> fftw-2.1.5-r6.ebuild:
+  Marked ~x86-macos and ~ppc-macos, bug #326391
 
   22 May 2010; Justin Lecher <jlec@gentoo.org> fftw-2.1.5-r6.ebuild:
   Removed epause in EAPI=3 ebuilds
