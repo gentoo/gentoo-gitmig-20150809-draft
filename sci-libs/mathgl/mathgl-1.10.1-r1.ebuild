@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.1-r1.ebuild,v 1.1 2010/06/30 22:14:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.1-r1.ebuild,v 1.2 2010/07/01 10:09:36 jlec Exp $
 
 EAPI=3
 
@@ -47,6 +47,8 @@ pkg_setup() {
 		export CC=mpicc
 		export CXX=mpicxx
 	fi
+	use python && python_pkg_setup
+	use wxwidgets && wxwidgets_pkg_setup
 }
 
 src_unpack() {
