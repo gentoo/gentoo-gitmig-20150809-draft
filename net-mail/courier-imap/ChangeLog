@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.185 2010/06/28 22:02:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.186 2010/07/01 11:51:11 voyageur Exp $
+
+  01 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  courier-imap-4.8.0.ebuild:
+  Drop nls USE flag, --disable-unicode is no longer supported, bug #326335
 
 *courier-imap-4.8.0 (28 Jun 2010)
 

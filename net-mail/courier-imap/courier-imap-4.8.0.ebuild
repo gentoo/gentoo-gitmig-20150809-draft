@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0.ebuild,v 1.1 2010/06/28 22:02:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0.ebuild,v 1.2 2010/07/01 11:51:11 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib libtool
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="berkdb debug fam gdbm ipv6 nls selinux gnutls trashquota"
+IUSE="berkdb debug fam gdbm ipv6 selinux gnutls trashquota"
 
 RDEPEND="gnutls? ( net-libs/gnutls )
 		!gnutls? ( >=dev-libs/openssl-0.9.6 )
@@ -77,19 +77,16 @@ src_configure() {
 		myconf="${myconf} --with-db=db"
 	fi
 
-	# The default character set is ISO-8859-1/US-ASCII.
-	# USE 'nls' will enable all available character sets.
+	# Disabling unicode is no longer supported
+	# By default all available character sets are included
 	# Set ENABLE_UNICODE=iso-8859-1,utf-8,iso-8859-10
 	# to include only specified translation tables.
-	if use nls && [[ -z "${ENABLE_UNICODE}" ]] ; then
+	if [[ -z "${ENABLE_UNICODE}" ]] ; then
 		einfo "ENABLE_UNICODE is not set, building with all available character sets"
 		myconf="${myconf} --enable-unicode"
-	elif use nls ; then
+	else
 		einfo "ENABLE_UNICODE is set, building with unicode=${ENABLE_UNICODE}"
 		myconf="${myconf} --enable-unicode=${ENABLE_UNICODE}"
-	else
-		einfo "Disabling unicode support"
-		myconf="${myconf} --disable-unicode"
 	fi
 
 	if use trashquota ; then
