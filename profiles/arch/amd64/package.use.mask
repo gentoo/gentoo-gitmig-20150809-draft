@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.67 2010/07/01 10:45:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.68 2010/07/01 10:50:53 xarthisius Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -20,7 +20,7 @@
 
 # Kacper Kowalik <xarthisius@gentoo.org> (1 Jul 2010)
 # >=heartbeat-3.0 is pmasked
-sys-cluster/pacemaker -heartbeat
+sys-cluster/pacemaker heartbeat
 
 # Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm

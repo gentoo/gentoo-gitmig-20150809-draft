@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.93 2010/07/01 10:45:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.94 2010/07/01 10:50:53 xarthisius Exp $
+
+  01 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Correct masking sys-cluster/pacemaker[heartbeat]
 
   01 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Masking sys-cluster/pacemaker[heartbeat]
