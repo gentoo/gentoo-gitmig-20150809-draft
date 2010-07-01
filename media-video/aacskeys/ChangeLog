@@ -1,6 +1,10 @@
 # ChangeLog for media-video/aacskeys
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.1 2010/02/17 01:48:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.2 2010/07/01 09:22:08 fauli Exp $
+
+  01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  aacskeys-0.4.0c.ebuild:
+  keyworded ~arch for x86, bug 323211
 
 *aacskeys-0.4.0c (17 Feb 2010)
 

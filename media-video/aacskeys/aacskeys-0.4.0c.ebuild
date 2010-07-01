@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/aacskeys-0.4.0c.ebuild,v 1.1 2010/02/17 01:48:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/aacskeys-0.4.0c.ebuild,v 1.2 2010/07/01 09:22:08 fauli Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"
