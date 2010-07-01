@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/gworkspace
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.29 2008/10/09 14:36:11 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.30 2010/07/01 09:21:42 voyageur Exp $
+
+*gworkspace-0.8.8 (01 Jul 2010)
+
+  01 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +gworkspace-0.8.8.ebuild:
+  Version bump, EAPI3, disable GWMetadata for now (does not build)
 
 *gworkspace-0.8.7 (09 Oct 2008)
 
