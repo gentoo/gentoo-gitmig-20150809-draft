@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11727 2010/06/30 21:28:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11728 2010/07/01 09:13:20 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (01 Jul 2010)
+# Fails to compile with asneeded, bug 247768
+# Fails to compile with dcParser errors, bug 253381
+# Needs a version bump, bug 277620 with proper python.eclass
+# handling, bug 313543
+# Masked for removal in 30 days
+media-libs/panda3d
 
 # Vlastimil Babka <caster@gentoo.org> (30 Jun 2010)
 # Masked for removal due to EOL and security, bug #292001.
