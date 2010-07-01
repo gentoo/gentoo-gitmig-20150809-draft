@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.32 2010/05/28 09:39:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.33 2010/07/01 16:39:28 jer Exp $
+
+  01 Jul 2010; Jeroen Roovers <jer@gentoo.org> oregano-0.69.0.ebuild:
+  Stable for HPPA (bug #325169).
 
   28 May 2010; Markus Meier <maekke@gentoo.org> oregano-0.69.0.ebuild:
   amd64/x86 stable, bug #219031
