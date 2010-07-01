@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.8 2010/03/05 09:35:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.9 2010/07/01 09:23:37 fauli Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -211,11 +211,6 @@ bzr_fetch() {
 	# before or if the existing local copy is a full checkout (as did
 	# an older version of bzr.eclass)
 	if [[ ! -d ${EBZR_BRANCH_DIR} ]] ; then
-		bzr_initial_fetch "${EBZR_REPO_URI}" "${EBZR_BRANCH_DIR}"
-	elif [[ ${EBZR_FETCH_CMD} == *lightweight* \
-		&& -d ${EBZR_BRANCH_DIR}/.bzr/repository ]]; then
-		einfo "Re-fetching the branch to save space..."
-		rm -rf "${EBZR_BRANCH_DIR}"
 		bzr_initial_fetch "${EBZR_REPO_URI}" "${EBZR_BRANCH_DIR}"
 	else
 		bzr_update "${EBZR_REPO_URI}" "${EBZR_BRANCH_DIR}"
