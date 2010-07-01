@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.438 2010/05/24 16:30:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.439 2010/07/01 08:29:14 pva Exp $
 
 # Keep them sorted
 
@@ -136,7 +136,6 @@ gphoto2 - Adds digital camera support
 gpm - Adds support for sys-libs/gpm (Console-based mouse driver)
 gps - Adds support for Global Positioning System
 graphviz - Adds support for the Graphviz library
-gzip - just to commit
 gsl - Use the GNU scientific library for calculations
 gsm - Adds support for the gsm lossy speech compression codec
 gstreamer - Adds support for media-libs/gstreamer (Streaming media)

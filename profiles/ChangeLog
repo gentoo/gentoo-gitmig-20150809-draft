@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4363 2010/06/30 21:28:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4364 2010/07/01 08:29:13 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jul 2010; Peter Volkov <pva@gentoo.org> use.desc:
+  Drop gzip gloable USE flag, bug 326405
 
   30 Jun 2010; Vlastimil Babka <caster@gentoo.org> package.mask:
   Mask sun-jdk-1.5 for removal due to EOL and security, bug #292001.
