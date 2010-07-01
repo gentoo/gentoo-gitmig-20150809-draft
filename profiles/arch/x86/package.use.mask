@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.32 2010/06/26 15:27:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.33 2010/07/01 10:44:18 xarthisius Exp $
 
 # This file requires >=portage-2.1.1
+
+# Kacper Kowalik <xarthisius@gentoo.org> (1 Jul 2010)
+# >=heartbeat-3.0 is pmasked
+sys-cluster/pacemaker -heartbeat
 
 # Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm

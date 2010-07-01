@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.43 2010/06/26 15:27:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.44 2010/07/01 10:44:18 xarthisius Exp $
+
+  01 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Masking sys-cluster/pacemaker[heartbeat]
 
   26 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Forgot to unmask icecat too
