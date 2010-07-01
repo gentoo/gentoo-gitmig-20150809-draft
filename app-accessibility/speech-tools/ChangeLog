@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.68 2010/06/30 14:40:52 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.69 2010/07/01 12:39:22 ssuominen Exp $
+
+  01 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  speech-tools-1.2.96_beta-r2.ebuild, speech-tools-2.0.95_beta.ebuild:
+  Fix -Wl,--no-as-needed to $(no-as-needed) in -1.2.96_beta-r2.ebuild and
+  remove it entirely from -2.0.95_beta.ebuild wrt #246726.
 
 *speech-tools-2.0.95_beta (30 Jun 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta-r2.ebuild,v 1.2 2010/05/19 16:20:50 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta-r2.ebuild,v 1.3 2010/07/01 12:39:22 ssuominen Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ src_configure() {
 	if [ ! use X ]; then
 		sed -i -e "s/-lX11 -lXt//" config/modules/esd_audio.mak
 	fi
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 	econf || die
 }
 
