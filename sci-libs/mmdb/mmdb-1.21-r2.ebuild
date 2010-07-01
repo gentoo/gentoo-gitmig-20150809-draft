@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21-r1.ebuild,v 1.1 2010/06/30 20:55:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21-r2.ebuild,v 1.1 2010/07/01 08:16:21 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit autotools eutils
 
@@ -28,7 +28,7 @@ src_install() {
 
 	# create missing mmdb.pc
 	cat >> ${T}/mmdb.pc <<- EOF
-	prefix="${EPREFIX}"
+	prefix=${EPREFIX}
 	exec_prefix=\$prefix
 	libdir=\$prefix/$(get_libdir)
 	includedir=\$prefix/include

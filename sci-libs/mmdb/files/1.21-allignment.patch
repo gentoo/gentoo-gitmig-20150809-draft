@@ -1,13 +1,7 @@
 diff --git a/src/file_.cpp b/src/file_.cpp
-index 4071886..a50e2ad 100644
+index 4071886..6bfa648 100644
 --- a/src/file_.cpp
 +++ b/src/file_.cpp
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -347,10 +347,10 @@ int  i;
            if (i>0)  sleep ( 1 );
  #endif
@@ -22,15 +16,9 @@ index 4071886..a50e2ad 100644
            }
  #ifndef _MVS
 diff --git a/src/machine_.h b/src/machine_.h
-index 2e81264..c658981 100644
+index 2e81264..7b18675 100644
 --- a/src/machine_.h
 +++ b/src/machine_.h
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -127,8 +127,12 @@
  # define CALL_LIKE_VMS  1
  
@@ -92,15 +80,9 @@ index 2e81264..c658981 100644
  
  # error  Unknown machine!!!
 diff --git a/src/mmdb_atom.h b/src/mmdb_atom.h
-index 45049c8..672e11a 100644
+index 45049c8..5d0af2a 100644
 --- a/src/mmdb_atom.h
 +++ b/src/mmdb_atom.h
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -290,7 +290,7 @@ class CAtom : public CUDData  {
      void  CalcAtomStatistics ( RSAtomStat AS );
      realtype GetDist2 ( PCAtom a );
@@ -111,15 +93,9 @@ index 45049c8..672e11a 100644
  
      // GetCosine(a1,a2) calculates cosine of angle a1-this-a2,
 diff --git a/src/mmdb_chain.cpp b/src/mmdb_chain.cpp
-index a6f66c2..1fa165b 100644
+index a6f66c2..24baa37 100644
 --- a/src/mmdb_chain.cpp
 +++ b/src/mmdb_chain.cpp
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -672,7 +672,8 @@ int  i,k,sN;
      i  = 0;
      sN = 1;
@@ -131,15 +107,9 @@ index a6f66c2..1fa165b 100644
        while ((i<numRes) && (k<70))  {
          if (resName[i][0])
 diff --git a/src/mmdb_rwbrook.cpp b/src/mmdb_rwbrook.cpp
-index dc33086..ef58641 100644
+index dc33086..5d319c3 100644
 --- a/src/mmdb_rwbrook.cpp
 +++ b/src/mmdb_rwbrook.cpp
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -1478,7 +1478,6 @@ AltLoc   altLoc;
  SegID    sgID;
  Element  element;
@@ -180,15 +150,9 @@ index dc33086..ef58641 100644
  
  
 diff --git a/src/mmdb_sbase0.cpp b/src/mmdb_sbase0.cpp
-index a210d62..3bf0d52 100644
+index a210d62..cb8d719 100644
 --- a/src/mmdb_sbase0.cpp
 +++ b/src/mmdb_sbase0.cpp
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -1320,7 +1320,11 @@ PPCSBIndex Index1;
      dirpath = new char[i+10];
      strcpy ( dirpath,path );
@@ -202,15 +166,9 @@ index a210d62..3bf0d52 100644
    }
  
 diff --git a/src/mmdb_selmngr.cpp b/src/mmdb_selmngr.cpp
-index b923529..3a9e249 100644
+index b923529..4395dde 100644
 --- a/src/mmdb_selmngr.cpp
 +++ b/src/mmdb_selmngr.cpp
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -1158,7 +1158,7 @@ void  CMMDBSelManager::Select (
               int   selKey    // selection key
                      )  {
@@ -221,15 +179,9 @@ index b923529..3a9e249 100644
  PCChain   chain;
  PCResidue res;
 diff --git a/src/mmdb_title.cpp b/src/mmdb_title.cpp
-index b0b2ae5..1033ae5 100644
+index b0b2ae5..627173f 100644
 --- a/src/mmdb_title.cpp
 +++ b/src/mmdb_title.cpp
-@@ -1,4 +1,4 @@
--//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
-+//  $Id: 1.21-allignment.patch,v 1.2 2010/07/01 07:07:35 jlec Exp $
- //  =================================================================
- //
- //   CCP4 Coordinate Library: support of coordinate-related
 @@ -1381,6 +1381,10 @@ MakeStreamFunctions(CRemark)
  #define  R350_CHAINS         2
  #define  R350_BIOMT          3
