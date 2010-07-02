@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.5.ebuild,v 1.3 2010/04/23 19:56:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.5.ebuild,v 1.4 2010/07/02 00:09:27 hanno Exp $
 
-NEED_PYTHON=2.3
+EAPI="3"
 
 inherit eutils python
 
@@ -25,6 +25,10 @@ RDEPEND="${DEPEND}
 	>=dev-python/twisted-web-0.5.0
 	webinterface? ( >=dev-python/nevow-0.4.1 )
 	>=dev-python/imaging-1.1"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-python26-warnings.diff"
+}
 
 src_install() {
 	local inspath
@@ -50,7 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/${PN}
+	python_mod_optimize ${PN}
 
 	elog "A sample configuration file has been installed in /etc/jabber/${PN}.xml."
 	elog "Please edit it and the configuration of your Jabber server to match."
@@ -65,5 +69,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/${PN}
+	python_mod_cleanup ${PN}
 }
