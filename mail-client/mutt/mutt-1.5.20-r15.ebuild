@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r15.ebuild,v 1.2 2010/06/12 09:15:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r15.ebuild,v 1.3 2010/07/02 08:14:30 grobian Exp $
 
 EAPI="3"
 
@@ -83,7 +83,21 @@ src_prepare() {
 		epatch "${FILESDIR}"/mutt-1.5.18-solaris-ncurses-chars.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-1.2.0.patch
 
-	if use !vanilla ; then
+	local pristine=$(use vanilla && echo yes)
+	if use sidebar && use !vanilla ; then
+		ewarn "due to the complexity of the sidebar patch and requests"
+		ewarn "from the author of the patch, USE=sidebar implies USE=vanilla"
+		pristine=yes
+	fi
+	if [[ ${pristine} == yes ]] ; then
+		ewarn "USE=vanilla excludes any post-release or feature patches!"
+		use sidebar && ewarn "(except the sidebar patch you requested)"
+		ewarn "you are very likely to encounter known bugs due to upstream's"
+		ewarn "\"almost never\" release policy, please only use USE=vanilla"
+		ewarn "if you have to test an (almost) pristine mutt tarball."
+	fi
+
+	if [[ ${pristine} != yes ]] ; then
 		# fixes that are not yet upstream, or that upstream doesn't like
 		epatch "${FILESDIR}"/mutt-1.5.20-dont-reveal-bbc.patch
 		epatch "${FILESDIR}"/mutt-1.5.20-realpath-slowness.patch
@@ -102,18 +116,12 @@ src_prepare() {
 
 		# the big feature patches that upstream doesn't want to include, but
 		# nearly every distro has due to their usefulness
-		if use !sidebar ; then
-			use nntp || rm "${PATCHDIR}"/06-nntp.patch
-			for p in "${PATCHDIR}"/[0-9][0-9]-*.patch ; do
-				epatch "${p}"
-			done
-		fi
-	fi
-
-	if use sidebar ; then
-		use vanilla || \
-			ewarn "the sidebar patch is only applied to a vanilla mutt tree"
-		epatch "${DISTDIR}"/${SIDEBAR_PATCH_N}
+		use nntp || rm "${PATCHDIR}"/06-nntp.patch
+		for p in "${PATCHDIR}"/[0-9][0-9]-*.patch ; do
+			epatch "${p}"
+		done
+	else
+		use sidebar && epatch "${DISTDIR}"/${SIDEBAR_PATCH_N}
 	fi
 
 	AT_M4DIR="m4" eautoreconf
