@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.510 2010/07/01 18:51:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.511 2010/07/02 01:28:31 jer Exp $
+
+  02 Jul 2010; Jeroen Roovers <jer@gentoo.org> opera-10.60.ebuild:
+  Fix libpng dependency wrt desktop environment.
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> opera-10.60.ebuild:
   Make gstreamer support optional but preferred.
