@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/codeblocks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.17 2010/05/06 06:08:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.18 2010/07/02 22:04:11 dirtyepic Exp $
+
+*codeblocks-10.05 (02 Jul 2010)
+
+  02 Jul 2010; Ryan Hill <dirtyepic@gentoo.org>
+  -codeblocks-1.0_pre20070618.ebuild, -codeblocks-8.02.ebuild,
+  +codeblocks-10.05.ebuild:
+  Version bump (bug #322315). Clean up ebuild and remove old.
 
   06 May 2010; Ryan Hill <dirtyepic@gentoo.org> codeblocks-8.02-r1.ebuild,
   +files/codeblocks-8.02-gsocket.patch, metadata.xml:
