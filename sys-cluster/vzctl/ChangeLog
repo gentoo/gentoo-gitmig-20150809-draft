@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.69 2010/06/29 09:26:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.70 2010/07/02 15:11:05 pva Exp $
+
+  02 Jul 2010; Peter Volkov <pva@gentoo.org> vzctl-3.0.24.ebuild:
+  Fix QA warning: econf should be in src_configure.
 
 *vzctl-3.0.24 (29 Jun 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.24.ebuild,v 1.1 2010/06/29 09:26:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.24.ebuild,v 1.2 2010/07/02 15:11:05 pva Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ src_prepare() {
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--localstatedir=/var \
 		--enable-cron \
