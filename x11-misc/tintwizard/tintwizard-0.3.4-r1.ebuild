@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/tintwizard-0.3.3b.ebuild,v 1.2 2010/05/08 13:27:15 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/tintwizard-0.3.4-r1.ebuild,v 1.1 2010/07/02 13:10:18 idl0r Exp $
 
 EAPI="3"
 
@@ -27,5 +27,7 @@ src_prepare() {
 
 src_install() {
 	dodoc ChangeLog
-	newbin tintwizard.py tintwizard || die
+
+	dobin tintwizard.py || die
+	dosym /usr/bin/tintwizard.py /usr/bin/tintwizard || die
 }

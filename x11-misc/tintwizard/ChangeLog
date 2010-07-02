@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/tintwizard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.4 2010/06/30 19:41:56 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.5 2010/07/02 13:10:18 idl0r Exp $
+
+*tintwizard-0.3.4-r1 (02 Jul 2010)
+
+  02 Jul 2010; Christian Ruppert <idl0r@gentoo.org>
+  -tintwizard-0.3.3b.ebuild, -tintwizard-0.3.4.ebuild,
+  +tintwizard-0.3.4-r1.ebuild:
+  Link /usr/bin/tintwizard to /usr/bin/tintwizard.py, bug 326357.
 
 *tintwizard-0.3.4 (30 Jun 2010)
 
