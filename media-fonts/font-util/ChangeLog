@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-util
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.42 2010/03/16 15:03:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.43 2010/07/02 16:51:37 darkside Exp $
+
+  02 Jul 2010; Jeremy Olexa <darkside@gentoo.org> font-util-1.1.1-r1.ebuild:
+  Add ~x64-macos, as tested in bug 323945
 
   16 Mar 2010; Jeremy Olexa <darkside@gentoo.org> font-util-1.1.1-r1.ebuild:
   Add prefix keywords as tested in the prefix overlay, add EPREFIX to

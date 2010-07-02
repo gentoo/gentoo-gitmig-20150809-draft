@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/inconsolata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.5 2010/06/11 21:17:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.6 2010/07/02 16:51:04 darkside Exp $
+
+  02 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
+  inconsolata-20090222.ebuild:
+  Add ~x64-macos, as tested in bug 323945
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer
