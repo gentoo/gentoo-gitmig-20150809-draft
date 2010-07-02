@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5734 2010/07/01 10:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5735 2010/07/02 10:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3335,6 +3335,7 @@ sys-auth/pambase:mktemp -  Enable pam_mktemp module on system auth stack for ses
 sys-auth/pambase:passwdqc -  Enable pam_passwdqc module on system auth stack for password quality validation. This is an alternative to pam_cracklib producing warnings, rejecting or providing example passwords when changing your system password. It is used by default by OpenWall GNU/*/Linux and by FreeBSD. 
 sys-auth/pambase:sha512 -  Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires >=sys-libs/pam-1.0.1 built against >=sys-libs/glibc-2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version. 
 sys-auth/pambase:ssh -  Enable pam_ssh module on system auth stack for authentication and session handling. This module will accept as password the passphrase of a private SSH key (one of ~/.ssh/id_rsa, ~/.ssh/id_dsa or ~/.ssh/identity), and will spawn an ssh-agent instance to cache the open key. 
+sys-auth/polkit:introspection - Use dev-libs/gobject-introspection for introspection
 sys-block/gparted:dmraid - Support for dmraid devices, also known as ATA-RAID, or Fake RAID.
 sys-block/gparted:fat - Include FAT16/FAT32 support (sys-fs/dosfstools) 
 sys-block/gparted:hfs - Include HFS support (sys-fs/hfsutils)
