@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.60.ebuild,v 1.5 2010/07/02 01:32:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.60.ebuild,v 1.6 2010/07/02 15:53:37 jer Exp $
 
 EAPI="2"
 
@@ -49,8 +49,6 @@ RDEPEND="
 		dev-libs/atk
 		dev-libs/glib
 		media-libs/glitz
-		gtk? ( =media-libs/libpng-1.4* )
-		kde? ( =media-libs/libpng-1.2* )
 		x11-libs/cairo
 		x11-libs/pango
 		x11-libs/pixman
