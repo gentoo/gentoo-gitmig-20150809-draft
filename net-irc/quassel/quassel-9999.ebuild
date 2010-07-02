@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.36 2010/07/01 10:34:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.37 2010/07/02 07:12:50 scarabeus Exp $
 
 EAPI="2"
 
@@ -109,8 +109,10 @@ src_install() {
 }
 
 pkg_preinst() {
-	# create quassel user
-	enewuser ${PN} -1 -1 /var/lib/${PN} "${PN}"
+	if use server; then
+		# create quassel user
+		enewuser ${PN} -1 -1 /var/lib/${PN} "${PN}"
+	fi
 }
 
 pkg_postinst() {
