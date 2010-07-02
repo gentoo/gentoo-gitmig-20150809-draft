@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.21 2010/05/24 09:40:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.22 2010/07/02 07:49:20 tupone Exp $
+
+*mednafen-0.8.13 (02 Jul 2010)
+
+  02 Jul 2010; Tupone Alfredo <tupone@gentoo.org> +mednafen-0.8.13.ebuild:
+  Version bump to 0.8.13 Bug #326141 by Sergey Kondakov
 
   24 May 2010; Tupone Alfredo <tupone@gentoo.org> mednafen-0.8.12.ebuild,
   +files/mednafen-0.8.12-gcc45.patch:
