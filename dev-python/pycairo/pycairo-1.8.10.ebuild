@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.10.ebuild,v 1.1 2010/06/18 17:53:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.10.ebuild,v 1.2 2010/07/02 23:49:24 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -34,13 +34,13 @@ src_prepare() {
 }
 
 src_configure() {
-	if use doc; then
-		econf
-	fi
-
 	if ! use svg; then
 		export PYCAIRO_DISABLE_SVG="1"
 	fi
+}
+
+distutils_src_compile_post_hook() {
+	cp src/__init__.py "$(ls -d build-${PYTHON_ABI}/lib.*/cairo)" || die "Copying of src/__init__.py failed"
 }
 
 src_compile() {
@@ -48,8 +48,21 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc; then
-		emake html || die "emake html failed"
+		einfo "Generation of documentation"
+		pushd doc > /dev/null
+		sphinx-build -b html -d .build/doctrees . .build/html || die "Generation of documentation failed"
+		popd > /dev/null
 	fi
+}
+
+src_test() {
+	# python_execute_py.test -P '$(ls -d build-${PYTHON_ABI}/lib.*):../../$(ls -d build-${PYTHON_ABI}/lib.*)'
+
+	testing() {
+		echo PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*):../../$(ls -d build-${PYTHON_ABI}/lib.*)" py.test
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*):../../$(ls -d build-${PYTHON_ABI}/lib.*)" py.test
+	}
+	python_execute_function testing
 }
 
 src_install() {
