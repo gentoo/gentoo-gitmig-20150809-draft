@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ruby-test-unit-0-r1.ebuild,v 1.5 2010/06/29 10:29:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ruby-test-unit-0-r1.ebuild,v 1.6 2010/07/02 18:22:53 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 jruby"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="ruby_targets_ruby18? ( dev-lang/ruby:1.8 )
