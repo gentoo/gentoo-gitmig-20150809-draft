@@ -1,18 +1,21 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.16 2010/06/17 18:31:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21.ebuild,v 1.17 2010/07/02 02:16:10 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit python
 
-DESCRIPTION="PostgreSQL database adapter for Python" # best one
-SRC_URI="http://initd.org/pub/software/${PN}/${P}.tar.gz"
+DESCRIPTION="PostgreSQL database adapter for Python"
 HOMEPAGE="http://www.initd.org/software/psycopg"
+SRC_URI="http://initd.org/pub/software/${PN}/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86"
-LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=dev-python/egenix-mx-base-2.0.3
@@ -22,23 +25,32 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# fix for bug #134873
 	sed -e '1245s/static //' -i cursor.c
+
+	sed -e 's:$(PY_MOD_DIR):$(D)&/$$mod:' -i Makefile.pre.in
+
+	python_copy_sources
 }
 
 src_configure() {
-	econf \
-		--with-mxdatetime-includes="$(python_get_includedir)/mx" \
-		--with-postgres-includes="/usr/include/postgresql/server"
+	configuration() {
+		econf \
+			--with-mxdatetime-includes="$(python_get_includedir)/mx" \
+			--with-postgres-includes="/usr/include/postgresql/server" || return 1
+		sed -e 's:$(BLDSHARED):& $(LDFLAGS):' -i Makefile
+	}
+	python_execute_function -s configuration
+}
+
+src_compile() {
+	python_src_compile OPT="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_install () {
-	sed -e 's:\(echo "  install -m 555 $$mod \)\($(PY_MOD_DIR)\)\("; \\\):\1${D}\2/$$mod\3:' \
-		-e 's:\($(INSTALL)  -m 555 $$mod \)\($(PY_MOD_DIR)\)\(; \\\):\1${D}\2/$$mod\3:' \
-		-i Makefile
-	emake install || die "emake install failed"
+	python_src_install
 
 	dodoc AUTHORS ChangeLog CREDITS README NEWS RELEASE-1.0 SUCCESS TODO
 	docinto doc
-	dodoc   doc/*
+	dodoc doc/*
 	insinto /usr/share/doc/${PF}/examples
-	doins   doc/examples/*
+	doins doc/examples/*
 }
