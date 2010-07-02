@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/codeblocks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.18 2010/07/02 22:04:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.19 2010/07/02 23:23:04 dirtyepic Exp $
+
+*codeblocks-9999 (02 Jul 2010)
+
+  02 Jul 2010; Ryan Hill <dirtyepic@gentoo.org> +codeblocks-9999.ebuild:
+  Add live ebuild from keenblade for bug #296484.
 
 *codeblocks-10.05 (02 Jul 2010)
 
