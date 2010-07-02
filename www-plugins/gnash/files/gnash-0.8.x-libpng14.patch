@@ -1,0 +1,11 @@
+--- libbase/GnashImagePng.cpp
++++ libbase/GnashImagePng.cpp
+@@ -164,7 +164,7 @@
+     if (type == PNG_COLOR_TYPE_GRAY && bitDepth < 8)
+     {
+         log_debug("Setting grey bit depth(%d) to 8", bitDepth);
+-        png_set_gray_1_2_4_to_8(_pngPtr);
++        png_set_expand_gray_1_2_4_to_8(_pngPtr);
+     }
+ 
+     // Apply the transparency block if it exists.

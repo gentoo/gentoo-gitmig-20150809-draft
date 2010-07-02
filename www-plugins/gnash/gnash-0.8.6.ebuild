@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.10 2010/05/01 00:58:17 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.11 2010/07/02 11:01:42 ssuominen Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="never"
@@ -130,6 +130,8 @@ src_prepare() {
 	# Fix build failure due to missing headers sub-directory in libcore/asClass.h
 	# when AS3 support is enabled (as default)
 	epatch "${FILESDIR}"/${P}-libcore-as3-headers.patch
+
+	epatch "${FILESDIR}"/${PN}-0.8.x-libpng14.patch
 
 	# Conflict headers with npapi.h from mozilla-sdk embedded stuffs and libxul-unstable header
 	# in case where xpcom (implicitly added with gtk) is enabled, we use the system header
