@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.5 2010/04/07 16:34:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.6 2010/07/02 15:42:55 idl0r Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.6"
@@ -19,7 +19,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="sys-apps/portage
-	dev-lang/perl"
+	dev-lang/perl
+	sys-apps/diffutils"
 
 ESVN_REPO_URI="svn://anonsvn.gentoo.org/gentoolkit/trunk/${PN}"
 
