@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.706 2010/06/27 18:24:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.707 2010/07/02 00:59:06 jer Exp $
+
+  02 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  gentoo-sources-2.6.34-r1.ebuild:
+  Stable for HPPA (bug #325335).
 
   27 Jun 2010; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.33-r2.ebuild:
