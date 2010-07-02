@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.79.ebuild,v 1.1 2010/06/15 16:09:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.79.ebuild,v 1.2 2010/07/02 18:27:02 darkside Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.bitwizard.nl/mtr/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="gtk ipv6"
+IUSE="gtk ipv6 suid"
 
 RDEPEND="sys-libs/ncurses
 	gtk? ( >=x11-libs/gtk+-2.4.0 )"
@@ -37,7 +37,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	fowners root:0 /usr/sbin/mtr
-	fperms 4710 /usr/sbin/mtr
-
+	if use suid; then
+		fperms 4711 /usr/sbin/mtr
+	else
+		fperms 0710 /usr/sbin/mtr
+	fi
 	dodoc AUTHORS ChangeLog FORMATS NEWS README SECURITY TODO || die
 }
