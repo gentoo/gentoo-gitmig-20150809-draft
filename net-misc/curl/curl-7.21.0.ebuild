@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.0.ebuild,v 1.3 2010/07/02 13:33:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.0.ebuild,v 1.4 2010/07/02 13:34:48 spatz Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -27,7 +27,7 @@ RDEPEND="ldap? ( net-nds/openldap )
 		!gnutls? ( !nss? ( dev-libs/openssl ) )
 	)
 	idn? ( net-dns/libidn )
-	ares? ( >=net-dns/c-ares-1.4.0 )
+	!threads? ( ares? ( >=net-dns/c-ares-1.4.0 ) )
 	kerberos? ( virtual/krb5 )
 	libssh2? ( >=net-libs/libssh2-0.16 )"
 
