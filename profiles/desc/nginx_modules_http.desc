@@ -1,6 +1,6 @@
 # Copyright 2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.5 2010/05/30 07:20:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.6 2010/07/02 05:29:01 dev-zero Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -35,6 +35,7 @@ realip - This module allows to change the client's IP address to value from requ
 referer - This module makes it possible to block access to the site with the incorrect values of line "Referer" in the request header.
 rewrite - This module makes it possible to change URI using regular expressions (PCRE), and to redirect and select configuration depending on variables.
 secure_link - This module computes and checks request URLs for a required security token.
+scgi - An implementation of the Simple Common Gateway Interface.
 split_clients - This module provides A/B testing support.
 ssi - This module provides a filter which processes Server-Side Includes (SSI) in the input.
 stub_status - This module provides the ability to get some status from nginx.
