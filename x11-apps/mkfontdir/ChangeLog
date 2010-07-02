@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mkfontdir
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontdir/ChangeLog,v 1.61 2010/01/19 18:14:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontdir/ChangeLog,v 1.62 2010/07/02 16:50:42 darkside Exp $
+
+  02 Jul 2010; Jeremy Olexa <darkside@gentoo.org> mkfontdir-1.0.5.ebuild:
+  Add ~x64-macos, as tested in bug 323945
 
   19 Jan 2010; Raúl Porcel <armin76@gentoo.org> mkfontdir-1.0.5.ebuild:
   s390 stable wrt #294958
