@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.322 2010/06/27 12:27:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.323 2010/07/02 09:16:36 gmsoft Exp $
+
+  02 Jul 2010; Guy Martin <gmsoft@gentoo.org> xulrunner-1.9.2.4.ebuild:
+  hppa stable, #324735
 
 *xulrunner-1.9.2.6 (27 Jun 2010)
 
