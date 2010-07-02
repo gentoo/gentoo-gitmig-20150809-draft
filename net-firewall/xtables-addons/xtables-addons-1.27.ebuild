@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.27.ebuild,v 1.1 2010/06/01 09:01:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.27.ebuild,v 1.2 2010/07/02 10:07:02 pva Exp $
 
 EAPI="3"
 
@@ -110,10 +110,10 @@ src_prepare() {
 		fi
 	done
 
-	sed -e 's/depmod -a/true/' -i Makefile.{in,am} || die
+	sed -e 's/depmod -a/true/' -i Makefile.in || die
 	sed -e '/^all-local:/{s: modules::}' \
 		-e '/^install-exec-local:/{s: modules_install::}' \
-			-i extensions/Makefile.{in,am} || die
+			-i extensions/Makefile.in || die
 }
 
 src_configure() {
@@ -125,12 +125,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" V=1 || die
 	use modules && BUILD_TARGETS="modules" linux-mod_src_compile
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die
+	emake DESTDIR="${D}" install || die
 	use modules && linux-mod_src_install
 	dodoc README doc/* || die
 	find "${ED}" -type f -name '*.la' -exec rm -rf '{}' '+'

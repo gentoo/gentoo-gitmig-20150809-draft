@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.3 2010/06/01 09:01:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.4 2010/07/02 10:07:02 pva Exp $
+
+  02 Jul 2010; Peter Volkov <pva@gentoo.org> -xtables-addons-1.26.ebuild,
+  xtables-addons-1.27.ebuild:
+  Avoid maintainer mode, make build verbose, fix ED->D typo. Drop old.
 
 *xtables-addons-1.27 (01 Jun 2010)
 
