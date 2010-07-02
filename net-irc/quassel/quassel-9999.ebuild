@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.37 2010/07/02 07:12:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.38 2010/07/02 07:21:41 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,26 +17,29 @@ KEYWORDS=""
 SLOT="0"
 IUSE="ayatana dbus debug kde monolithic phonon postgres +server +ssl webkit X"
 
+QT_MINIMAL="4.6.0"
+KDE_MINIMAL="4.4"
+
 SERVER_RDEPEND="
-	!postgres? ( x11-libs/qt-sql:4[sqlite] dev-db/sqlite[threadsafe] )
-	postgres? ( x11-libs/qt-sql:4[postgres] )
+	!postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite[threadsafe] )
+	postgres? ( >=x11-libs/qt-sql-${QT_MINIMAL}:4[postgres] )
 	x11-libs/qt-script:4
 "
 
 GUI_RDEPEND="
-	x11-libs/qt-gui:4
+	>=x11-libs/qt-gui-${QT_MINIMAL}:4
 	ayatana? ( dev-libs/libindicate-qt )
 	kde? (
-		>=kde-base/kdelibs-4.3
-		>=kde-base/oxygen-icons-4.3
+		>=kde-base/kdelibs-${KDE_MINIMAL}
+		>=kde-base/oxygen-icons-${KDE_MINIMAL}
 		ayatana? ( kde-misc/plasma-widget-message-indicator )
 	)
-	phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
-	webkit? ( x11-libs/qt-webkit:4 )
+	phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-${QT_MINIMAL} ) )
+	webkit? ( >=x11-libs/qt-webkit-${QT_MINIMAL}:4 )
 "
 
 RDEPEND="
-	dbus? ( x11-libs/qt-dbus:4 )
+	dbus? ( >=x11-libs/qt-dbus-${QT_MINIMAL}:4 )
 	monolithic? (
 		${SERVER_RDEPEND}
 		${GUI_RDEPEND}
