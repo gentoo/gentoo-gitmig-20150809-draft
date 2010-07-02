@@ -1,0 +1,10 @@
+# ChangeLog for dev-scheme/jscheme
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/jscheme/ChangeLog,v 1.1 2010/07/02 00:51:06 chiiph Exp $
+
+*jscheme-7.2 (02 Jul 2010)
+
+  02 Jul 2010; Tomas Touceda <chiiph@gentoo.org> +jscheme-7.2.ebuild,
+  +metadata.xml:
+  JScheme initial commit
+
