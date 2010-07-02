@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.43 2010/06/27 01:43:51 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.44 2010/07/02 12:22:11 grobian Exp $
+
+  02 Jul 2010; Fabian Groffen <grobian@gentoo.org> tmux-1.2.ebuild:
+  Marked ~x64-macos, bug #326157
 
   27 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   tmux-1.2.ebuild:
