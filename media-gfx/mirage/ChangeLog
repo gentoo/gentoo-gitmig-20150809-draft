@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.32 2010/06/02 06:37:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.33 2010/07/02 15:43:42 ssuominen Exp $
+
+*mirage-0.9.4 (02 Jul 2010)
+
+  02 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +mirage-0.9.4.ebuild:
+  Version bump.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove omp from metadata.xml (#147119)
