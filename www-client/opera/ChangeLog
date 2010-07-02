@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.513 2010/07/02 15:53:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.514 2010/07/02 21:59:40 pacho Exp $
+
+  02 Jul 2010; Pacho Ramos <pacho@gentoo.org> opera-10.60.ebuild:
+  stable amd64, security bug 326413
 
   02 Jul 2010; Jeroen Roovers <jer@gentoo.org> opera-10.60.ebuild:
   Remove libpng dependency thanks to ssuominen (bug #326583).
