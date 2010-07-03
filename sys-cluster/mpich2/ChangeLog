@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.52 2010/06/14 21:44:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.53 2010/07/03 01:35:41 jsbronder Exp $
+
+  03 Jul 2010; Justin Bronder <jsbronder@gentoo.org> mpich2-1.2.1_p1.ebuild:
+  Update python handling (#316937). Cleanup deps. Automatically turn on
+  threads if mpi-threads are requested.
 
   14 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mpich2-1.0.8.ebuild:

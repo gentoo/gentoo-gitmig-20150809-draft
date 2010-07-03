@@ -1,9 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.2 2010/03/14 18:09:44 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.3 2010/07/03 01:35:41 jsbronder Exp $
 
 EAPI=2
-inherit eutils fortran
+PYTHON_DEPEND="*:2.4"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit eutils fortran python
+
 MY_PV=${PV/_/}
 DESCRIPTION="MPICH2 - A portable MPI implementation"
 HOMEPAGE="http://www.mcs.anl.gov/research/projects/mpich2/index.php"
@@ -14,32 +18,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+cxx debug doc fortran pvfs2 threads romio mpi-threads"
 
-COMMON_DEPEND="dev-lang/perl
-	>=dev-lang/python-2.3
+COMMON_DEPEND="dev-libs/libaio
 	romio? ( net-fs/nfs-utils )
-	pvfs2? ( >=sys-cluster/pvfs2-2.7.0 )
-	dev-libs/libaio
-	!media-sound/mpd
-	!sys-cluster/mpiexec
-	!sys-cluster/openmpi
-	!sys-cluster/lam-mpi
-	!sys-cluster/mpich"
+	pvfs2? ( >=sys-cluster/pvfs2-2.7.0 )"
 
 DEPEND="${COMMON_DEPEND}
+	dev-lang/perl
 	sys-devel/libtool"
 
 RDEPEND="${COMMON_DEPEND}
-	net-misc/openssh"
+	!media-sound/mpd
+	!sys-cluster/openmpi
+	!sys-cluster/lam-mpi"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
 
 pkg_setup() {
-	if [ -n "${MPICH_CONFIGURE_OPTS}" ]; then
-	    elog "User-specified configure options are ${MPICH_CONFIGURE_OPTS}."
-	else
-	    elog "User-specified configure options are not set."
-	    elog "If needed, see the docs and set MPICH_CONFIGURE_OPTS."
-	fi
+	python_set_active_version 2
+	python_pkg_setup
 
 	if use fortran ; then
 		FORTRAN="g77 gfortran ifort ifc"
@@ -47,9 +43,8 @@ pkg_setup() {
 	fi
 
 	if use mpi-threads && ! use threads; then
-		die "USE=mpi-threads requires USE=threads"
+		ewarn "mpi-threads requires threads, assuming that's what you want"
 	fi
-
 	MPD_CONF_FILE_DIR=/etc/${PN}
 }
 
@@ -83,7 +78,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local c="${MPICH_CONFIGURE_OPTS} --enable-sharedlibs=gcc"
+	local c="--enable-sharedlibs=gcc"
 	local romio_conf
 
 	# The configure statements can be somewhat confusing, as they
@@ -92,10 +87,17 @@ src_configure() {
 
 	use debug && c="${c} --enable-g=all --enable-debuginfo"
 
-	if use threads ; then
+	if use mpi-threads; then
+		# MPI-THREAD requries threading.
 	    c="${c} --with-thread-package=pthreads"
+		c="${c} --enable-threads=default"
 	else
-	    c="${c} --with-thread-package=none"
+		if use threads ; then
+	    	c="${c} --with-thread-package=pthreads"
+		else
+	    	c="${c} --with-thread-package=none"
+		fi
+		c="${c} --enable-threads=single"
 	fi
 
 	# enable f90 support for appropriate compilers
@@ -106,14 +108,8 @@ src_configure() {
 			c="${c} --enable-f77 --disable-f90";;
 	esac
 
-	if use mpi-threads; then
-		c="${c} --enable-threads=default"
-	else
-		c="${c} --enable-threads=single"
-	fi
-
 	if use pvfs2; then
-		# nfs and ufs are defaults in 1.0.8 at least.
+		# nfs and ufs are default.
 	    romio_conf="--with-file-system=pvfs2+nfs+ufs --with-pvfs2=/usr"
 	fi
 
@@ -186,4 +182,10 @@ pkg_postinst() {
 	elog "MPE2 has been removed from this ebuild and now stands alone"
 	elog "as sys-cluster/mpe2."
 	elog ""
+
+	python_mod_optimize /usr/bin/
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/bin/
 }
