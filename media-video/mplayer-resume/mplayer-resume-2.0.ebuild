@@ -1,10 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-2.0.ebuild,v 1.1 2009/08/12 03:19:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/mplayer-resume-2.0.ebuild,v 1.2 2010/07/03 15:24:23 mabi Exp $
 
 EAPI="2"
-
-inherit depend.php
 
 DESCRIPTION="MPlayer wrapper script to save/resume playback position"
 HOMEPAGE="http://www.spaceparanoids.org/trac/bend/wiki/mplayer-resume"
@@ -16,13 +14,9 @@ IUSE="+lirc"
 DEPEND=""
 RDEPEND="lirc? ( app-misc/lirc
 		media-video/mplayer[lirc] )
+		 dev-lang/php[cli]
+		 || ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )
 	media-video/mplayer"
-
-need_php_cli
-
-pkg_setup() {
-	require_php_with_use pcre cli
-}
 
 src_compile() {
 	return;
