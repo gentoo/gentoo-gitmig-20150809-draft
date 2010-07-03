@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.80 2010/06/11 15:43:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.81 2010/07/03 13:42:08 mabi Exp $
+
+  03 Jul 2010; Matti Bickel <mabi@gentoo.org> mythweb-0.23_p25065.ebuild:
+  update RDEPEND for php-5.3 (bug #298205)
 
   11 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
   mythweb-0.23_p25065.ebuild:
