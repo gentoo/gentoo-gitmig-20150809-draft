@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/smuxi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.5 2010/02/21 11:23:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.6 2010/07/03 18:52:38 pacho Exp $
+
+*smuxi-0.7.1-r1 (03 Jul 2010)
+
+  03 Jul 2010; Pacho Ramos <pacho@gentoo.org> -smuxi-0.6.4.ebuild,
+  -smuxi-0.7.1.ebuild, +smuxi-0.7.1-r1.ebuild,
+  +files/smuxi-0.7.1-mono26.patch:
+  Revision bump fixing building against mono-2.6 (bug #310735 by Diego and
+  Steev) and allowing to build only server (bug #293952 by Ayron Jungren).
+  Remove old testing.
 
 *smuxi-0.7.1 (21 Feb 2010)
 
