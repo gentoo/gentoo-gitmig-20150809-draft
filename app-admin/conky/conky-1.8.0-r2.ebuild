@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0.ebuild,v 1.2 2010/04/07 19:05:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r2.ebuild,v 1.1 2010/07/03 20:07:57 billie Exp $
 
 EAPI="2"
 
-inherit base
+inherit autotools eutils
 
 DESCRIPTION="An advanced, highly configurable system monitor for X"
 HOMEPAGE="http://conky.sourceforge.net/"
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax ncurses nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
+KEYWORDS="~amd64 ~x86"
+IUSE="apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax ncurses nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X xmms2"
 
 DEPEND_COMMON="
 	X? (
@@ -37,6 +37,7 @@ DEPEND_COMMON="
 	weather-metar? ( net-misc/curl )
 	weather-xoap? ( dev-libs/libxml2 net-misc/curl )
 	virtual/libiconv
+	xmms2? ( media-sound/xmms2 )
 	"
 RDEPEND="
 	${DEPEND_COMMON}
@@ -51,7 +52,11 @@ DEPEND="
 	dev-util/pkgconfig
 	"
 
-PATCHES=( "${FILESDIR}/conky-1.8.0-ncurses.patch" )
+src_prepare() {
+	epatch "${FILESDIR}/conky-1.8.0-ncurses.patch" \
+		"${FILESDIR}/conky-1.8.0-audacious-2.3.patch"
+	eautoreconf
+}
 
 src_configure() {
 	local myconf
@@ -86,7 +91,8 @@ src_configure() {
 		$(use_enable rss) \
 		$(use_enable weather-metar) \
 		$(use_enable weather-xoap) \
-		$(use_enable wifi wlan)
+		$(use_enable wifi wlan) \
+		$(use_enable xmms2)
 }
 
 src_install() {

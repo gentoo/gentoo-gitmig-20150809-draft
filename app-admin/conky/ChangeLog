@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.134 2010/06/12 21:20:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.135 2010/07/03 20:07:57 billie Exp $
+
+*conky-1.8.0-r2 (03 Jul 2010)
+
+  03 Jul 2010; Daniel Pielmeier <billie@gentoo.org> -conky-1.8.0.ebuild,
+  +conky-1.8.0-r2.ebuild, metadata.xml:
+  Add xmms2 use flag to fix bug #326463. Thanks Steve for reporting. Remove
+  old.
 
 *conky-1.8.0-r1 (12 Jun 2010)
 
