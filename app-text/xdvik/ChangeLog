@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.69 2010/06/24 21:45:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.70 2010/07/03 23:49:44 ssuominen Exp $
+
+  03 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> xdvik-22.84.16.ebuild:
+  ppc64 stable wrt #323373
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> xdvik-22.84.16.ebuild:
   stable amd64, bug 323373
