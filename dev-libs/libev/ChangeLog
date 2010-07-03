@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.25 2010/05/31 18:27:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.26 2010/07/03 16:55:04 matsuu Exp $
+
+*libev-3.90-r2 (03 Jul 2010)
+
+  03 Jul 2010; MATSUU Takuto <matsuu@gentoo.org> +libev-3.90-r2.ebuild,
+  +files/libev-3.90-ev++.patch:
+  Fixed compilation error in ev++.h, bug #325391.
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org> libev-3.90-r1.ebuild:
   Added ~hppa to KEYWORDS
