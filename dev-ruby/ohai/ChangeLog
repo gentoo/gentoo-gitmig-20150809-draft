@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ohai
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.1 2010/07/03 12:10:38 hollow Exp $
+
+*ohai-0.5.6 (03 Jul 2010)
+
+  03 Jul 2010; Benedikt Böhm <hollow@gentoo.org> +ohai-0.5.6.ebuild,
+  +files/ohai-lsb-release.patch, +metadata.xml:
+  initial ebuild, thanks to Gábor Vészi
+

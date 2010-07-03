@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/moneta
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/moneta/ChangeLog,v 1.1 2010/07/03 12:03:22 hollow Exp $
+
+*moneta-0.6.0 (03 Jul 2010)
+
+  03 Jul 2010; Benedikt Böhm <hollow@gentoo.org> +moneta-0.6.0.ebuild,
+  +metadata.xml:
+  initial ebuild, thanks to Gábor Vészi
+
