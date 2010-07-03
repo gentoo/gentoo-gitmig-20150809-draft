@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-ximagesrc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.31 2010/07/01 12:11:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.32 2010/07/03 02:22:03 leio Exp $
+
+*gst-plugins-ximagesrc-0.10.22 (03 Jul 2010)
+
+  03 Jul 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-ximagesrc-0.10.22.ebuild:
+  Version bump. Sends new segment events in TIME format to make it work with
+  input-selector and probably some others
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-ximagesrc-0.10.21.ebuild:
