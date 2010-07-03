@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Command
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.3 2010/06/27 11:00:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.4 2010/07/03 12:42:51 armin76 Exp $
+
+  03 Jul 2010; Raúl Porcel <armin76@gentoo.org> Test-Command-0.08.ebuild:
+  alpha/sparc stable wrt #325531
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   Test-Command-0.08.ebuild:
