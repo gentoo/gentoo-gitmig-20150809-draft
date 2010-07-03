@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.3 2010/07/03 01:35:41 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.4 2010/07/03 04:41:26 jsbronder Exp $
 
 EAPI=2
-PYTHON_DEPEND="*:2.4"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_DEPEND="2"
 
 inherit eutils fortran python
 
@@ -152,6 +151,7 @@ src_test() {
 }
 
 src_install() {
+	local f
 	emake DESTDIR="${D}" install || die
 
 	dodir ${MPD_CONF_FILE_DIR}
@@ -171,6 +171,12 @@ src_install() {
 		dodir /usr/share/doc/${PF}/www
 		mv "${D}"/usr/share/doc/www*/* "${D}"/usr/share/doc/${PF}/www/
 	fi
+
+	# See #316937
+	MPD_PYTHON_MODULES=""
+	for f in "${D}"/usr/bin/*.py; do
+		MPD_PYTHON_MODULES="${MPD_PYTHON_MODULES} ${f##${D}}"
+	done
 }
 
 pkg_postinst() {
@@ -183,9 +189,13 @@ pkg_postinst() {
 	elog "as sys-cluster/mpe2."
 	elog ""
 
-	python_mod_optimize /usr/bin/
+	for f in ${MPD_PYTHON_MODULES}; do
+		python_mod_optimize ${f}
+	done
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/bin/
+	for f in ${MPD_PYTHON_MODULES}; do
+		python_mod_cleanup ${f}
+	done
 }
