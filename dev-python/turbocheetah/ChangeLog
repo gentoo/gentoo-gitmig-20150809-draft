@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/turbocheetah
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/ChangeLog,v 1.5 2009/01/09 19:03:01 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/ChangeLog,v 1.6 2010/07/03 23:15:33 arfrever Exp $
+
+  03 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  turbocheetah-1.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   09 Jan 2009; Patrick Lauer <patrick@gentoo.org>
   -turbocheetah-0.9.5.ebuild:

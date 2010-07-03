@@ -1,30 +1,29 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/turbocheetah-1.0.ebuild,v 1.1 2008/07/02 05:38:35 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/turbocheetah-1.0.ebuild,v 1.2 2010/07/03 23:15:33 arfrever Exp $
 
-NEED_PYTHON=2.4
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
-KEYWORDS="~amd64 ~x86"
-
-MY_PN=TurboCheetah
-MY_P=${MY_PN}-${PV}
+MY_PN="TurboCheetah"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="TurboGears plugin to support use of Cheetah templates."
-HOMEPAGE="http://www.turbogears.org/docs/plugins/template.html"
-SRC_URI="http://cheeseshop.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+HOMEPAGE="http://docs.turbogears.org/TurboCheetah http://pypi.python.org/pypi/TurboCheetah"
+SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
-IUSE="test"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND=">=dev-python/cheetah-1.0"
 DEPEND="${RDEPEND}
-	test? ( dev-python/nose )
 	dev-python/setuptools"
 
-S=${WORKDIR}/${MY_P}
-
-src_test() {
-	PYTHONPATH=. nosetests || die "tests failed"
-}
+S="${WORKDIR}/${MY_P}"
