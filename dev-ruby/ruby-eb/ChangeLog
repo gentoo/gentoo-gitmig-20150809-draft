@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-eb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ChangeLog,v 1.11 2009/12/09 21:20:11 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ChangeLog,v 1.12 2010/07/03 08:05:12 graaff Exp $
+
+*ruby-eb-2.6-r1 (03 Jul 2010)
+
+  03 Jul 2010; Hans de Graaff <graaff@gentoo.org> +ruby-eb-2.6-r1.ebuild:
+  Convert to ruby-ng.
 
   09 Dec 2009; Hans de Graaff <graaff@gentoo.org> -ruby-eb-2.3.ebuild,
   -ruby-eb-2.5a.ebuild:
