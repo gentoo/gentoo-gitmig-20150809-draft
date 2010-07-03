@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-raw1394
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.58 2010/07/01 11:56:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.59 2010/07/03 01:49:55 leio Exp $
+
+*gst-plugins-raw1394-0.10.22 (03 Jul 2010)
+
+  03 Jul 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-raw1394-0.10.22.ebuild:
+  Version bump. Fixes internal clock in dv1394src to fix some live streaming
+  problems with it
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-raw1394-0.10.21.ebuild:
