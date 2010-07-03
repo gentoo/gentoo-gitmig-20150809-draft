@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.73 2010/06/04 05:33:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.74 2010/07/03 17:58:12 vapier Exp $
+
+*autoconf-wrapper-9 (03 Jul 2010)
+
+  03 Jul 2010; Mike Frysinger <vapier@gentoo.org>
+  +autoconf-wrapper-9.ebuild, +files/ac-wrapper-9.sh:
+  Support autoconf-2.66.
 
   04 Jun 2010; Jeroen Roovers <jer@gentoo.org> autoconf-wrapper-8.ebuild:
   Stable for HPPA (bug #311967).
