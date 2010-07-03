@@ -1,0 +1,94 @@
+diff --git a/makefile_refmac.inc1 b/makefile_refmac.inc1
+index 3f858c8..04e6790 100644
+--- a/makefile_refmac.inc1
++++ b/makefile_refmac.inc1
+@@ -89,9 +89,7 @@ messy_pdb.o                 \
+ bridge.o                    \
+ i0.o                        \
+ i1.o                        \
+-chbevl.o                    \
+-$(LLIBCIF)                  \
+-$(LLIBLAPACK)
++chbevl.o
+ 
+ 
+ SUBL =                      \
+@@ -124,9 +122,7 @@ cell_symm_subrs.o           \
+ iheap_sort.o                \
+ linalgebra.o                \
+ math_refmac.o               \
+-subnumrec.o                 \
+-$(LLIBLAPACK)               \
+-$(LLIBCCP)
++subnumrec.o
+ 
+ #--------------------------------------------------------------------------------
+ 
+@@ -150,7 +146,7 @@ twin77mod.o:  twin77mod.f
+ 	$(FC) $(FFLAGS) -c twin77mod.f
+ 
+ 
+-optimise_solvent_all.o: optimise_solvent_all.f90
++optimise_solvent_all.o: optimise_solvent_all.f90 atomf77mod.o
+ 	$(FC) $(FFLAGS) -c optimise_solvent_all.f90
+ 
+ ncs_rest.o: ncs_ncs_generate.f90 ncs_rest.f
+@@ -178,7 +174,7 @@ align_refmac.o: align_refmac.f90
+ 	$(FC) $(FFLAGS) -c align_refmac.f90
+ 
+ 
+-hkon_secder_tch.o: hkon_secder_tch.f local_tls.f90 ncs_simil.f90 optimise_solvent_all.f90
++hkon_secder_tch.o: hkon_secder_tch.f local_tls.f90 ncs_simil.f90 optimise_solvent_all.f90 optimise_solvent_all.o
+ 	$(FC) $(FFLAGS) -c optimise_solvent_all.f90 ncs_simil.f90 local_tls.f90 hkon_secder_tch.f
+ 
+ oppro_allocate.o: oppro_allocate.f filter_params.f90 optimise_solvent_all.f90
+@@ -220,8 +216,8 @@ refall_twin.o: refall_twin.f optimise_solvent_all.f90
+ rharvest.o: rharvest.f optimise_solvent_all.f90
+ 	$(FC) $(FFLAGS) -c optimise_solvent_all.f90 rharvest.f
+ 
+-solvent_contr_mask.o: solvent_contr_mask.f optimise_solvent_all.f90
+-	$(FC) $(FFLAGS) -c optimise_solvent_all.f90 solvent_contr_mask.f
++solvent_contr_mask.o: solvent_contr_mask.f optimise_solvent_all.f90 atomf77mod.o
++	$(FC) $(FFLAGS) -c  atomf77mod.f optimise_solvent_all.f90 solvent_contr_mask.f
+ 
+ subag_scale_hessian.o: subag_scale_hessian.f optimise_solvent_all.f90
+ 	$(FC) $(FFLAGS) -c optimise_solvent_all.f90 subag_scale_hessian.f
+@@ -229,7 +225,7 @@ subag_scale_hessian.o: subag_scale_hessian.f optimise_solvent_all.f90
+ subcf_scale1.o: subcf_scale1.f optimise_solvent_all.f90
+ 	$(FC) $(FFLAGS) -c optimise_solvent_all.f90 subcf_scale1.f
+ 
+-refmac_xml.o: refmac_xml.f optimise_solvent_all.f90
++refmac_xml.o: refmac_xml.f optimise_solvent_all.f90 optimise_solvent_all.o
+ 	$(FC) $(FFLAGS) -c optimise_solvent_all.f90 refmac_xml.f
+ 
+ hkl_pack.o:  hkl_pack.f90
+@@ -239,9 +235,9 @@ subvag.o: subvag.f hkl_pack.f90
+ 	$(FC) $(FFLAGS) -c hkl_pack.f90 subvag.f
+ 
+ refmac:	$(SUBR)
+-	$(FC) $(FFLAGS) -o refmac${VERSION}   ${SUBR} $(LLIBOTHERS) $(LLIBCCP)
++	$(FC) $(FFLAGS) $(LDFLAGS) -o refmac${VERSION}   ${SUBR} $(LLIBOTHERS) $(LLIBCCP) $(LLIBCIF) $(LLIBLAPACK)
+ 
+-mol2_file.o:	mol2_file.f odb_files.f90
++mol2_file.o:	mol2_file.f odb_files.o
+ 	$(FC) $(FFLAGS) -c odb_files.f90 mol2_file.f
+ 
+ odb_files.o:	odb_files.f90 elements_module.f90 enerf77mod.f
+@@ -250,7 +246,7 @@ odb_files.o:	odb_files.f90 elements_module.f90 enerf77mod.f
+ elements_module.o:	elements_module.f90
+ 	$(FC) $(FFLAGS) -c elements_module.f90
+ 
+-make_lib2.o:	make_lib2.f odb_files.f90 
++make_lib2.o:	make_lib2.f odb_files.o
+ 	$(FC) $(FFLAGS) -c odb_files.f90 make_lib2.f
+ 
+ pdb2libcheck.o:	pdb2libcheck.f90
+@@ -260,7 +256,7 @@ libcheck.o:	libcheck.f elements_module.f90 pdb2libcheck.f90
+ 	$(FC) $(FFLAGS) -c elements_module.f90 pdb2libcheck.f90 libcheck.f
+ 
+ libcheck:	$(SUBL)
+-	$(FC) $(FFLAGS) -o libcheck${VERSION} $(SUBL)
++	$(FC) $(FFLAGS) $(LDFLAGS) -o libcheck${VERSION} $(SUBL) $(LLIBCCP) $(LLIBCIF) $(LLIBLAPACK)
+ 
+ clean:
+ 	/bin/rm *.o
