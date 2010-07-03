@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.171 2010/06/01 15:22:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.172 2010/07/03 13:25:29 mabi Exp $
+
+*cacti-0.8.7e-r3 (03 Jul 2010)
+
+  03 Jul 2010; Matti Bickel <mabi@gentoo.org> +cacti-0.8.7e-r3.ebuild:
+  eapi bump for php-5.3 (bug #298205)
 
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org> cacti-0.8.7e-r2.ebuild:
   Marked ppc stable for bug #317615.
