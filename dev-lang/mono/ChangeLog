@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.189 2010/05/19 18:32:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.190 2010/07/03 22:10:12 pacho Exp $
+
+*mono-2.6.4-r1 (03 Jul 2010)
+
+  03 Jul 2010; Pacho Ramos <pacho@gentoo.org> -mono-2.4.3.ebuild,
+  -mono-2.6.1.ebuild, -mono-2.6.3.ebuild, -mono-2.6.4.ebuild,
+  +mono-2.6.4-r1.ebuild, +files/mono-2.6.4-require-glib.patch:
+  Revision bump to fix openoffice building problem against mono-2.6.4 (bug
+  #321139 by Brian Beardall, Aaron Haviland and others). Remove old.
 
 *mono-2.6.4 (19 May 2010)
 
