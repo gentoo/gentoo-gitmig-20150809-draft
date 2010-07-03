@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.79 2010/06/25 11:30:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.80 2010/07/03 04:48:09 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
@@ -56,7 +56,6 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
-		!!<=media-video/vlc-1.0.99999
 		sys-libs/zlib
 		>=media-libs/libdvbpsi-0.1.6
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
@@ -144,6 +143,7 @@ RDEPEND="
 		"
 
 DEPEND="${RDEPEND}
+	!!<=media-video/vlc-1.0.99999
 	dvb? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
 	v4l? ( sys-kernel/linux-headers )
@@ -170,13 +170,6 @@ vlc_use_enable_force() {
 }
 
 pkg_setup() {
-	if has_version '<=media-video/vlc-1.0.99999'; then
-		eerror "Please unmerge vlc-1.0.x first before installing ${P}"
-		eerror "If you don't do that, some plugins will get linked against"
-		eerror "the old ${PN} version and will not work."
-		die "Unmerge vlc 1.0.x first"
-	fi
-
 	# Useflags we need to forcefuly enable
 	vlc_use_force remoteosd gcrypt
 	vlc_use_force gnutls gcrypt

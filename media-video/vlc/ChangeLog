@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.600 2010/06/27 18:06:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.601 2010/07/03 04:48:09 zmedico Exp $
+
+  03 Jul 2010; Zac Medico <zmedico@gentoo.org> vlc-1.1.0.ebuild,
+  vlc-1.1.9999.ebuild, vlc-9999.ebuild:
+  Bug #326179 - Move vlc blockers to DEPEND and bump to EAPI 3 so that die
+  in pkg_setup is unnecessary.
 
   27 Jun 2010; Raúl Porcel <armin76@gentoo.org> vlc-1.1.0.ebuild:
   Re-add ~alpha/~arm/~sparc wrt #325007
