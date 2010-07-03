@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.87 2010/05/25 17:27:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.88 2010/07/03 14:17:45 mabi Exp $
+
+*mantisbt-1.2.1-r1 (03 Jul 2010)
+
+  03 Jul 2010; Matti Bickel <mabi@gentoo.org> +mantisbt-1.2.1-r1.ebuild:
+  eapi bump for php-5.3 (bug #298205)
 
   25 May 2010; Peter Volkov <pva@gentoo.org> mantisbt-1.2.1.ebuild:
   Update ezc dependencies to make to make graphs work, bug #319461, thank
