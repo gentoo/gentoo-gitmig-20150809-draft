@@ -1,0 +1,27 @@
+--- qp8.11.orig/src/objects.h	2010-06-18 11:51:05.000000000 +1200
++++ qp8.11/src/objects.h	2010-06-29 19:04:14.000000000 +1200
+@@ -1234,18 +1234,12 @@
+        << this->getName() << "\" ";
+   
+ #ifndef WIN32
+-  switch (hasAssociatedItem())
+-    {
+-    case AssociatedNone:
+-	    std::cerr << "(no info)";
+-      break;
+-    case AssociatedInteger:
+-      std::cerr << "int: " << getAssociatedInteger();
+-      break;
+-    case AssociatedAtom:
+-      std::cerr << "atom: [" << std::hex << (wordptr) getAssociatedAtom() << std::dec << "]";
+-      break;
+-    }
++  if (hasAssociatedInteger())
++    std::cerr << "int: " << getAssociatedInteger();
++  else if (hasAssociatedAtom())
++    std::cerr << "atom: [" << std::hex << (wordptr) getAssociatedAtom() << std::dec << "]";
++  else
++    std::cerr << "(no info)";
+ #endif
+ }
+ #endif
