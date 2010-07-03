@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.99 2010/06/13 21:34:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.100 2010/07/03 17:20:00 pacho Exp $
+
+  03 Jul 2010; Pacho Ramos <pacho@gentoo.org> tomboy-0.12.2.ebuild,
+  tomboy-1.0.1.ebuild, tomboy-1.2.1.ebuild:
+  app-text/rarian is required at build time, thanks to Alex Brandt for
+  reporting bug #305421
 
 *tomboy-1.2.1 (13 Jun 2010)
 

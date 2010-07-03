@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.0.1.ebuild,v 1.3 2010/06/04 21:00:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.0.1.ebuild,v 1.4 2010/07/03 17:20:00 pacho Exp $
 
 EAPI=2
 
@@ -32,6 +32,7 @@ RDEPEND=">=dev-lang/mono-2
 	galago? ( =dev-dotnet/galago-sharp-0.5* )"
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
+	app-text/rarian
 	dev-libs/libxml2[python]
 	sys-devel/gettext
 	dev-util/pkgconfig
