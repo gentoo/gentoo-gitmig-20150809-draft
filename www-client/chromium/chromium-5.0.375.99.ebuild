@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.70-r1.ebuild,v 1.4 2010/06/21 09:25:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.99.ebuild,v 1.1 2010/07/03 07:47:57 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -8,11 +8,11 @@ inherit eutils flag-o-matic multilib pax-utils toolchain-funcs
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+plugins-symlink"
 
 RDEPEND="app-arch/bzip2
@@ -61,9 +61,6 @@ src_prepare() {
 
 	# Fix build failure with libpng-1.4, bug 310959.
 	epatch "${FILESDIR}"/${PN}-libpng-1.4.patch
-
-	# Work around a flash hang, bug #324365.
-	epatch "${FILESDIR}"/${PN}-flash-hang-workaround-r1.patch
 }
 
 src_configure() {
