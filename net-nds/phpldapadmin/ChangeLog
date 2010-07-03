@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/phpldapadmin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.50 2009/11/03 17:37:09 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.51 2010/07/03 15:41:09 mabi Exp $
+
+*phpldapadmin-1.2.0.4-r1 (03 Jul 2010)
+
+  03 Jul 2010; Matti Bickel <mabi@gentoo.org> -phpldapadmin-1.2.0.4.ebuild,
+  +phpldapadmin-1.2.0.4-r1.ebuild:
+  eapi bump for php-5.3 (bug #298205)
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org>
   phpldapadmin-1.2.0.4.ebuild:
