@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.153 2010/06/30 15:37:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.154 2010/07/03 01:22:35 jmbsvicetto Exp $
+
+  03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  klinkstatus-4.4.5.ebuild:
+  [kde-base/klinkstatus-4.4.5] Synced keywords from 4.4.4 ebuilds dropping
+  ~alpha and ~ia64 keywords as these arches don't have semantic-desktop
+  support.
 
 *klinkstatus-4.4.5 (30 Jun 2010)
 
