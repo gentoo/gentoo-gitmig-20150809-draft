@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334.ebuild,v 1.4 2010/06/28 16:09:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r1.ebuild,v 1.1 2010/07/03 07:16:02 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -47,6 +47,8 @@ pkg_setup() {
 src_prepare() {
 	local opts
 	local optsld
+
+	epatch "${FILESDIR}"/${PV}-tst_server.py.patch
 
 	rm -rf "${MY_S}/scons"
 
