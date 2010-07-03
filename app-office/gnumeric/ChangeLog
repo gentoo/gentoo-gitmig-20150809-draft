@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.202 2010/06/17 19:18:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.203 2010/07/03 15:12:57 pacho Exp $
+
+*gnumeric-1.10.7 (03 Jul 2010)
+
+  03 Jul 2010; Pacho Ramos <pacho@gentoo.org> -gnumeric-1.10.5.ebuild,
+  +gnumeric-1.10.7.ebuild:
+  Version bump, remove old testing.
 
 *gnumeric-1.10.6 (17 Jun 2010)
 
