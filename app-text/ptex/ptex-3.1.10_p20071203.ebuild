@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.11 2008/10/31 21:08:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.12 2010/07/03 23:33:41 ssuominen Exp $
 
 TETEX_PV=3.0_p1
 
@@ -28,7 +28,7 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	mirror://gentoo/${PN}-3.1.10_p20071122-dviljk-security-fixes.patch.bz2"
 #	mirror://gentoo/tetex-${TETEX_PV}-gentoo.tar.gz
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86"
 
 BUILD_DIR="${WORKDIR}/build/usr"
 
