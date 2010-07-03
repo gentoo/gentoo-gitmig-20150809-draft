@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.8.2.ebuild,v 1.1 2010/06/11 15:57:04 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-0.8.4.ebuild,v 1.1 2010/07/03 19:52:31 billie Exp $
 
 EAPI=2
 
