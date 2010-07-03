@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.9.6.ebuild,v 1.1 2010/07/03 12:42:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.9.6.ebuild,v 1.2 2010/07/03 13:00:42 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "=app-admin/chef-${PV}
+ruby_add_rdepend "~app-admin/chef-${PV}
 	<=dev-ruby/json-1.4.2
 	>=dev-ruby/merb-assets-1.1.0
 	>=dev-ruby/merb-core-1.1.0

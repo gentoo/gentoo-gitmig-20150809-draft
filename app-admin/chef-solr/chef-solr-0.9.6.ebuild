@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/chef-solr-0.9.6.ebuild,v 1.1 2010/07/03 12:54:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/chef-solr-0.9.6.ebuild,v 1.2 2010/07/03 12:59:55 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -21,7 +21,7 @@ IUSE=""
 RDEPEND=">=net-misc/rabbitmq-server-1.7.0
 	=virtual/jre-1.6.0"
 
-ruby_add_rdepend "=app-admin/chef-${PV}
+ruby_add_rdepend "~app-admin/chef-${PV}
 	>=dev-ruby/libxml-1.1.3
 	>=dev-ruby/uuidtools-2.0.0"
 
