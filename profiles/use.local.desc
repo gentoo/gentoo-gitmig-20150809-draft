@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5739 2010/07/02 21:47:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5740 2010/07/03 00:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -842,6 +842,7 @@ dev-lang/php:zip - Enable ZIP file support
 dev-lang/python:threads - Enable threading support. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wide-unicode - Enable wide Unicode implementation which uses 4-byte Unicode characters. Switching of this USE flag changes ABI of Python and requires reinstallation of many Python modules. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows.
+dev-lang/qu-prolog:pedro - Pedro subscription/notification communications system
 dev-lang/ruby:libedit -  Use the dev-libs/libedit library to provide the readline extension, used for instance by the irb tool. This flag will take precedence over the readline USE flag. If neither libedit nor readline USE flags are enabled, the readline extension will not be built (and irb will lose line editing functionality). 
 dev-lang/ruby:readline -  Use the sys-libs/readline library to provide the readline extension, used for instance by the irb tool. This flag is meaningful only if the libedit USE flag is disabled. If neither libedit nor readline USE flags are enabled, the readline extension will not be built (and irb will lose line editing functionality). 
 dev-lang/ruby:rubytests -  Install ruby tests that can only be run after ruby is installed 
