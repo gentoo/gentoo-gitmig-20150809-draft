@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-augeas
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.10 2010/06/21 20:40:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.11 2010/07/03 06:58:47 graaff Exp $
+
+*ruby-augeas-0.3.0-r1 (03 Jul 2010)
+
+  03 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-augeas-0.3.0-r1.ebuild:
+  Convert to ruby-fakegem. Make dependencies more specific to avoid
+  compilation problems.
 
   21 Jun 2010; Guy Martin <gmsoft@gentoo.org> ruby-augeas-0.3.0.ebuild:
   added ~hppa to KEYWORDS
