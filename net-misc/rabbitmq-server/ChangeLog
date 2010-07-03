@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.4 2010/06/02 07:04:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.5 2010/07/03 08:21:06 hollow Exp $
+
+*rabbitmq-server-1.8.0 (03 Jul 2010)
+
+  03 Jul 2010; Benedikt Böhm <hollow@gentoo.org>
+  -rabbitmq-server-1.5.4.ebuild, -rabbitmq-server-1.5.4-r1.ebuild,
+  +rabbitmq-server-1.8.0.ebuild, metadata.xml:
+  version bump
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove caleb from metadata.xml (#317071)

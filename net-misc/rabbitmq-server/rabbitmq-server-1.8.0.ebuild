@@ -1,42 +1,47 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-1.5.4-r1.ebuild,v 1.2 2009/04/23 03:37:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-1.8.0.ebuild,v 1.1 2010/07/03 08:21:06 hollow Exp $
+
+EAPI="2"
 
 inherit eutils
 
 DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang."
 HOMEPAGE="http://www.rabbitmq.com/"
 SRC_URI="http://www.rabbitmq.com/releases/rabbitmq-server/v${PV}/rabbitmq-server-${PV}.tar.gz"
+
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-# Q: is RDEPEND-only sufficient for a binary package, since we don't compile?
-DEPEND="dev-lang/erlang"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-lang/erlang"
+DEPEND="${RDEPEND}
+	dev-libs/libxslt
+	dev-python/simplejson
+"
+
+pkg_setup() {
+	enewgroup rabbitmq
+	enewuser rabbitmq -1 -1 -1 rabbitmq
+}
 
 src_install() {
 	# erlang module
 	local targetdir="/usr/$(get_libdir)/erlang/lib/${P}"
 
-	einfo "Correcting additional Erlang code path in scripts"
-	sed -i -e "s:\`dirname \$0\`\/..\/ebin:${targetdir}:g" scripts/* || die "sed failed"
+	einfo "Setting correct RABBITMQ_HOME in scripts"
+	sed -e "s:^RABBITMQ_HOME=.*:RABBITMQ_HOME=\"${targetdir}\":g" \
+		-i scripts/rabbitmq_env
 
 	einfo "Installing Erlang module to ${targetdir}"
-	dodir "${targetdir}"
-	cp -dpR ebin include "${D}/${targetdir}"
+	insinto "${targetdir}"
+	doins -r ebin include
 
 	einfo "Installing server scripts to /usr/sbin"
-	# Install server scripts to sbin
-	dosbin scripts/rabbitmq-multi scripts/rabbitmq-server
-
-	einfo "Installing rabbitmqctl to /usr/bin"
-	# Install control script to bin
-	dobin scripts/rabbitmqctl
-
-	# Docs
-	dodoc README
+	dosbin scripts/rabbitmq-multi scripts/rabbitmq-server scripts/rabbitmq-env \
+		scripts/rabbitmq-activate-plugins scripts/rabbitmq-deactivate-plugins \
+		scripts/rabbitmqctl
 
 	# create the directory where our log file will go.
 	diropts -m 0770 -o rabbitmq -g rabbitmq
@@ -48,9 +53,6 @@ src_install() {
 
 	# Install the init script
 	newinitd "${FILESDIR}"/rabbitmq-server.init rabbitmq
-}
 
-pkg_setup() {
-	enewgroup rabbitmq
-	enewuser rabbitmq -1 -1 -1 rabbitmq
+	dodoc README
 }
