@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.437.1.ebuild,v 1.5 2010/06/21 09:25:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.453.1.ebuild,v 1.1 2010/07/03 09:34:47 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -17,8 +17,6 @@ IUSE="cups sse2"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
-	dev-libs/libxml2
-	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
 	>=media-libs/alsa-lib-1.0.19
@@ -46,6 +44,10 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
+get_chromium_home() {
+	echo "/usr/$(get_libdir)/chromium-browser"
+}
+
 remove_bundled_lib() {
 	einfo "Removing bundled library $1 ..."
 	local out
@@ -60,37 +62,28 @@ src_prepare() {
 	# Disable VP8 until we have a recent enough system-provided ffmpeg.
 	epatch "${FILESDIR}"/${PN}-disable-vp8-r1.patch
 
-	# Make dependency on cups optional, bug #324105.
-	epatch "${FILESDIR}"/${PN}-optional-cups-r1.patch
-
-	# Fix gyp files to correctly support system-provided libraries.
-	epatch "${FILESDIR}"/${PN}-gyp-fixes-r2.patch
-
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/libevent"
 	remove_bundled_lib "third_party/libjpeg"
 	remove_bundled_lib "third_party/libpng"
-	remove_bundled_lib "third_party/libxml"
-	remove_bundled_lib "third_party/libxslt"
+	# TODO: also remove third_party/libxml and third_party/libxslt when
+	# http://crbug.com/29333 is fixed.
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
 	# remove it (minizip-related).
 }
 
 src_configure() {
-	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
-
-	# Workaround for bug #318969.
-	# TODO: remove when http://crbug.com/43778 is fixed.
-	append-flags -D__STDC_CONSTANT_MACROS
-
 	local myconf=""
 
 	# Make it possible to build chromium on non-sse2 systems.
-	if ! use sse2; then
+	if use sse2; then
+		myconf="${myconf} -Ddisable_sse2=0"
+	else
 		myconf="${myconf} -Ddisable_sse2=1"
 	fi
 
 	# Use system-provided libraries.
+	# TODO: use_system_libxml (http://crbug.com/29333).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_icu, use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl when we have a recent enough system NSS.
@@ -100,7 +93,6 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
-		-Duse_system_libxml=1
 		-Duse_system_zlib=1"
 
 	# The system-provided ffmpeg supports more codecs. Enable them in chromium.
@@ -115,8 +107,8 @@ src_configure() {
 
 	# Enable sandbox.
 	myconf="${myconf}
-		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
-		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
+		-Dlinux_sandbox_path=$(get_chromium_home)/chrome_sandbox
+		-Dlinux_sandbox_chrome_path=$(get_chromium_home)/chrome"
 
 	# Disable the V8 snapshot. It breaks the build on hardened (bug #301880),
 	# and the performance gain isn't worth it.
@@ -168,20 +160,19 @@ src_compile() {
 }
 
 src_install() {
-	export CHROMIUM_HOME=/usr/$(get_libdir)/chromium-browser
+	dodir "$(get_chromium_home)"
 
-	dodir ${CHROMIUM_HOME}
-
-	exeinto ${CHROMIUM_HOME}
+	exeinto "$(get_chromium_home)"
 	pax-mark m out/Release/chrome
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox
-	fperms 4755 ${CHROMIUM_HOME}/chrome_sandbox
+	fperms 4755 "$(get_chromium_home)/chrome_sandbox"
 	doexe out/Release/xdg-settings
 	doexe "${FILESDIR}"/chromium-launcher.sh
 
-	insinto ${CHROMIUM_HOME}
-	doins out/Release/chrome.pak
+	insinto "$(get_chromium_home)"
+	doins out/Release/chrome.pak || die "installing chrome.pak failed"
+	doins out/Release/resources.pak || die "installing resources.pak failed"
 
 	doins -r out/Release/locales
 	doins -r out/Release/resources
@@ -192,16 +183,16 @@ src_install() {
 
 	# Chromium looks for these in its folder
 	# See media_posix.cc and base_paths_linux.cc
-	dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
-	dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
+	dosym /usr/$(get_libdir)/libavcodec.so.52 "$(get_chromium_home)"
+	dosym /usr/$(get_libdir)/libavformat.so.52 "$(get_chromium_home)"
+	dosym /usr/$(get_libdir)/libavutil.so.50 "$(get_chromium_home)"
 
 	# Use system plugins by default.
-	dosym /usr/$(get_libdir)/nsbrowser/plugins ${CHROMIUM_HOME}/plugins
+	dosym /usr/$(get_libdir)/nsbrowser/plugins "$(get_chromium_home)/plugins"
 
 	# Install icon and desktop entry.
 	newicon out/Release/product_logo_48.png ${PN}-browser.png
-	dosym ${CHROMIUM_HOME}/chromium-launcher.sh /usr/bin/chromium
+	dosym "$(get_chromium_home)/chromium-launcher.sh" /usr/bin/chromium
 	make_desktop_entry chromium "Chromium" ${PN}-browser "Network;WebBrowser"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop \
 		|| die "desktop file sed failed"
