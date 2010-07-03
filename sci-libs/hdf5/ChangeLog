@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.59 2010/06/20 11:45:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.60 2010/07/03 16:36:27 xarthisius Exp $
+
+  03 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> hdf5-1.8.5.ebuild,
+  metadata.xml:
+  Adding debug flag
 
   20 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -files/hdf5-1.6.6-gcc4.3.patch, -hdf5-1.6.7.ebuild,

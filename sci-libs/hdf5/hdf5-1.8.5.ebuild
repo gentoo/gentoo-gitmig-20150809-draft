@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.5.ebuild,v 1.1 2010/06/16 19:17:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.5.ebuild,v 1.2 2010/07/03 16:36:27 xarthisius Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ LICENSE="NCSA-HDF"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="cxx examples fortran mpi szip threads zlib"
+IUSE="cxx debug examples fortran mpi szip threads zlib"
 
 RDEPEND="mpi? ( virtual/mpi[romio] )
 	szip? ( >=sci-libs/szip-2.1 )
@@ -65,6 +65,7 @@ src_prepare() {
 src_configure() {
 	# threadsafe incompatible with many options
 	local myconf="--disable-threadsafe"
+	use debug && myconf="${myconf} --enable-codestack"
 	use threads && ! use fortran && ! use cxx && ! use mpi \
 		&& myconf="--enable-threadsafe"
 
@@ -83,10 +84,10 @@ src_configure() {
 	econf \
 		--disable-sharedlib-rpath \
 		--enable-production \
-		--enable-strict-format-checks \
 		--docdir=/usr/share/doc/${PF} \
 		--enable-deprecated-symbols \
 		--enable-shared \
+		$(use_enable debug debug all) \
 		$(use_enable fortran) \
 		$(use_enable mpi parallel) \
 		$(use_with szip szlib) \
