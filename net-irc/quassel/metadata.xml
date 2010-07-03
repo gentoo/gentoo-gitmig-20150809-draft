@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>net-irc</herd>
 	<maintainer>
-		<email>billie@gentoo.org</email>
-		<name>Daniel Pielmeier</name>
-	</maintainer>
-	<maintainer>
 		<email>patrick@gentoo.org</email>
 	</maintainer>
 	<maintainer>
