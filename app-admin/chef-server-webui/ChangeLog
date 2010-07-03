@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/chef-server-webui
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/ChangeLog,v 1.1 2010/07/03 12:47:24 hollow Exp $
+
+*chef-server-webui-0.9.6 (03 Jul 2010)
+
+  03 Jul 2010; Benedikt Böhm <hollow@gentoo.org>
+  +chef-server-webui-0.9.6.ebuild, +files/confd/chef-server-webui,
+  +files/initd/chef-server-webui, +files/webui.rb, +metadata.xml:
+  initial ebuild, thanks to Gábor Vészi
+
