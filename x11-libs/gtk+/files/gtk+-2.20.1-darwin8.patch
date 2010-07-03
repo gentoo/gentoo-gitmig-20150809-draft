@@ -1,0 +1,13 @@
+NSUInteger is available starting from OSX 10.5 (Leopard)
+
+--- gtk/gtkquartz.c
++++ gtk/gtkquartz.c
+@@ -260,7 +260,7 @@
+   GdkDisplay *display;
+   gint format;
+   const guchar *data;
+-  NSUInteger length;
++  guint length;
+ 
+   target = gdk_atom_name (gtk_selection_data_get_target (selection_data));
+   display = gtk_selection_data_get_display (selection_data);
