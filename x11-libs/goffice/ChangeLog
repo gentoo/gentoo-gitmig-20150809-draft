@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.69 2010/06/17 19:18:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.70 2010/07/03 14:39:59 pacho Exp $
+
+*goffice-0.8.7 (03 Jul 2010)
+
+  03 Jul 2010; Pacho Ramos <pacho@gentoo.org> -goffice-0.8.5.ebuild,
+  +goffice-0.8.7.ebuild:
+  Version bump: Implement cumulative histograms, make histogram able to use
+  raw data, implement equations rotation. Remove old testing.
 
 *goffice-0.8.6 (17 Jun 2010)
 
