@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.38 2010/07/02 07:21:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.39 2010/07/03 08:26:39 reavertm Exp $
 
 EAPI="2"
 
@@ -70,6 +70,14 @@ pkg_setup() {
 		ewarn "Enabling monolithic by default."
 		FORCED_MONO="yes"
 	fi
+
+	if use server; then
+		QUASSEL_DIR=/var/lib/${PN}
+		QUASSEL_USER=${PN}
+		# create quassel:quassel user
+		enewgroup "${QUASSEL_USER}"
+		enewuser "${QUASSEL_USER}" -1 -1 "${QUASSEL_DIR}" "${QUASSEL_USER}"
+	fi
 }
 
 src_configure() {
@@ -97,9 +105,8 @@ src_install() {
 
 	if use server ; then
 		# prepare folders in /var/
-		dodir /var/lib/${PN}/
-		keepdir /var/lib/${PN}/
-		fowners ${PN}:${PN} /var/lib/${PN}/
+		keepdir "${QUASSEL_DIR}"
+		fowners "${QUASSEL_USER}":"${QUASSEL_USER}" "${QUASSEL_DIR}"
 
 		# init scripts
 		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
@@ -111,23 +118,16 @@ src_install() {
 	fi
 }
 
-pkg_preinst() {
-	if use server; then
-		# create quassel user
-		enewuser ${PN} -1 -1 /var/lib/${PN} "${PN}"
-	fi
-}
-
 pkg_postinst() {
 	if use server && use ssl; then
 		# inform about genreating ssl certificate
 		elog "If you want to use ssl connection to your core, please generate ssl key, with folowing command:"
-		elog "# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /var/lib/${PN}/quasselCert.pem -ou"
+		elog "# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${QUASSEL_DIR}/quasselCert.pem -ou"
 		echo
 		elog "Also remember that with the above command the key is valid only for 1 year."
 	fi
 
-	if ( use monolithic || [[ ${FORCED_MONO} == "yes" ]] ) && use ssl ; then
+	if ( use monolithic || [[ "${FORCED_MONO}" == "yes" ]] ) && use ssl ; then
 		echo
 		elog "Information on how to enable SSL support for client/core connections"
 		elog "is available at http://bugs.quassel-irc.org/wiki/quassel-irc."
@@ -137,7 +137,7 @@ pkg_postinst() {
 	if use server; then
 		ewarn "Please note that all configuration moved from"
 		ewarn "/home/\${QUASSEL_USER}/.config/quassel-irc.org/"
-		ewarn "to: /var/lib/${PN}/."
+		ewarn "to: ${QUASSEL_DIR}."
 		echo
 		ewarn "For migration. Stop the core, move the files to new location and then start server again."
 	fi
