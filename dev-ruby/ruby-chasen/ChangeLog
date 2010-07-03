@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-chasen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ChangeLog,v 1.8 2010/01/10 21:02:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ChangeLog,v 1.9 2010/07/03 07:51:29 graaff Exp $
+
+*ruby-chasen-1.7-r1 (03 Jul 2010)
+
+  03 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-chasen-1.7-r1.ebuild:
+  Convert to ruby-ng.
 
   10 Jan 2010; Markus Meier <maekke@gentoo.org> ruby-chasen-1.7.ebuild:
   amd64/x86 stable, bug #298234
