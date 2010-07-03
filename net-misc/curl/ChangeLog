@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.163 2010/07/02 13:33:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.164 2010/07/03 14:09:40 armin76 Exp $
+
+  03 Jul 2010; Raúl Porcel <armin76@gentoo.org> curl-7.20.0-r2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #308645
 
   02 Jul 2010; Dror Levin <spatz@gentoo.org> curl-7.21.0.ebuild:
   Don't die on USE="ares threads", silently disable ares instead, bug
