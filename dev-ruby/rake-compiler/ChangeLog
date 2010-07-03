@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.16 2010/05/28 20:23:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.17 2010/07/03 14:01:05 flameeyes Exp $
+
+  03 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  rake-compiler-0.7.0-r1.ebuild:
+  Add rake as runtime dependency of rake-compiler (it was obvious).
 
   28 May 2010; Joseph Jezak <josejx@gentoo.org>
   rake-compiler-0.7.0-r1.ebuild:
