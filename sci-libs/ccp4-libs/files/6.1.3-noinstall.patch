@@ -74,7 +74,7 @@ index 975f1d9..75eda9f 100755
  
  uninstall :
 diff --git a/lib/data/Makefile.in b/lib/data/Makefile.in
-index cc25c5c..f51ccbe 100755
+index cc25c5c..017502d 100755
 --- a/lib/data/Makefile.in
 +++ b/lib/data/Makefile.in
 @@ -30,9 +30,9 @@ font84.dat : fontpack $(srcdir)/font84.ascii
@@ -91,7 +91,7 @@ index cc25c5c..f51ccbe 100755
  uninstall :
  	-rm -f $(libdir)/font84.dat
 diff --git a/lib/src/Makefile.in b/lib/src/Makefile.in
-index b32dd1e..cfa8852 100755
+index b32dd1e..6aa107d 100755
 --- a/lib/src/Makefile.in
 +++ b/lib/src/Makefile.in
 @@ -685,7 +685,7 @@ testlib : $(srcdir)/testlib.f  $(LF)
@@ -103,14 +103,16 @@ index b32dd1e..cfa8852 100755
  	@list='$(ccp4_HEADERS)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  f="`echo $$p | sed -e 's|^.*/||'`"; \
-@@ -717,10 +717,10 @@ uninstall-mmdbHEADERS:
+@@ -716,11 +716,11 @@ uninstall-mmdbHEADERS:
+ 	  rm -f $(DESTDIR)$(includedir)/mmdb/$$f; \
  	done
  
- install : all install-ccp4HEADERS install-mmdbHEADERS
+-install : all install-ccp4HEADERS install-mmdbHEADERS
 -	$(INSTALL_DATA) `pwd`/$(LC) $(libdir)/$(LC)
 -	$(INSTALL_DATA) `pwd`/$(LF) $(libdir)/$(LF)
 -	$(RANLIB) $(libdir)/$(LC)
 -	$(RANLIB) $(libdir)/$(LF)
++install : all install-ccp4HEADERS
 +	$(RANLIB) $(LC)
 +	$(RANLIB) $(LF)
 +	$(INSTALL_DATA) `pwd`/$(LC) $(DESTDIR)/$(libdir)/$(LC)
