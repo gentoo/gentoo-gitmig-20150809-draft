@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.7 2010/07/01 17:24:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.8 2010/07/03 09:50:50 phajdan.jr Exp $
+
+  03 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> sakura-2.3.8.ebuild:
+  Explicitly depend on perl-5.10, pointed out by Nikoli <nikoli@lavabit.com>
+  in bug #309449.
 
 *sakura-2.3.8 (01 Jul 2010)
 
