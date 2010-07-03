@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11.ebuild,v 1.1 2009/09/13 20:17:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.11-r1.ebuild,v 1.1 2010/07/03 16:46:30 pacho Exp $
 
 EAPI=2
 
@@ -26,10 +26,8 @@ RDEPEND="
 	>=dev-dotnet/gnomevfs-sharp-2.6
 	>=dev-dotnet/dbus-sharp-0.4
 	>=dev-dotnet/dbus-glib-sharp-0.3
+	>=dev-dotnet/taglib-sharp-2.0.3
 	sys-libs/gdbm
-	>=media-libs/flac-1.1.2
-	>=media-libs/libvorbis-1
-	>=media-libs/libid3tag-0.15.0b
 	=media-libs/gstreamer-0.10*
 	=media-libs/gst-plugins-base-0.10*
 	=media-libs/gst-plugins-good-0.10*
@@ -51,8 +49,28 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS PLUGINS README TODO"
 
-src_configure() {
-	gnome2_src_configure --enable-compile-warnings=yes
+pkg_setup() {
+	G2CONF="${G2CONF}
+		--enable-compile-warnings=yes
+		--docdir=/usr/share/doc/"${PF}"
+	"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix multimedia key support for >=Gnome-2.22
+	epatch "${FILESDIR}/${P}-multimedia-keys.patch"
+
+	# Replace some deprecated gtk functions
+	epatch "${FILESDIR}/${P}-drop-deprecated.patch"
+
+	# Update icons, upstream bug #623480
+	sed "s:stock_timer:list-add:g" -i src/AddWindow.cs src/StockIcons.cs || die
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
+		|| die "sed failed"
 }
 
 src_install() {
@@ -62,6 +80,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	elog
 	elog "Upstream no longer packages the tray icon plugin by default."
 	elog "The Gentoo ebuilds will continue to install the plugin, if you don't"

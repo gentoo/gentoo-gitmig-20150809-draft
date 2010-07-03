@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/muine
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.57 2009/09/27 16:35:35 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.58 2010/07/03 16:46:30 pacho Exp $
+
+*muine-0.8.11-r1 (03 Jul 2010)
+
+  03 Jul 2010; Pacho Ramos <pacho@gentoo.org> -muine-0.8.10.ebuild,
+  -muine-0.8.11.ebuild, +muine-0.8.11-r1.ebuild,
+  +files/muine-0.8.11-drop-deprecated.patch,
+  +files/muine-0.8.11-multimedia-keys.patch:
+  Revision bump: fix dependencies (bug #292912 by gentoo_m), install docs in
+  proper place (bug #295173 by Diego E. 'Flameeyes' Pettenò), fix
+  multimedia key support broken since Gnome 2.22, replace deprecated gtk
+  functions letting this work with gtk+-2.20, fix missing icons and
+  intltoolize broken file, install gconf schemas properly. Remove old.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> muine-0.8.10-r1.ebuild:
   ppc stable #283739
