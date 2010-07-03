@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/pecl-dbx-1.1.0.ebuild,v 1.8 2007/12/06 01:06:43 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/pecl-dbx-1.1.0.ebuild,v 1.9 2010/07/03 19:25:31 mabi Exp $
 
 PHP_EXT_NAME="dbx"
 PHP_EXT_INI="yes"
@@ -15,7 +15,7 @@ LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="<dev-lang/php-5.3"
+RDEPEND="${DEPEND}"
 
 need_php_by_category

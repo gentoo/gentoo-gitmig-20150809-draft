@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-dbx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.8 2007/12/06 01:06:43 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-dbx/ChangeLog,v 1.9 2010/07/03 19:25:31 mabi Exp $
+
+  03 Jul 2010; Matti Bickel <mabi@gentoo.org> pecl-dbx-1.1.0.ebuild:
+  does not compile with php-5.3
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-dbx-1.1.0.ebuild:
   LICENSE fix from project overlay
