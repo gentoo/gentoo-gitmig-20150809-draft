@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.50 2010/06/29 03:54:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.51 2010/07/03 16:14:14 armin76 Exp $
+
+  03 Jul 2010; Raúl Porcel <armin76@gentoo.org> dos2unix-5.1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #324553
 
   29 Jun 2010; Jeroen Roovers <jer@gentoo.org> dos2unix-5.1.ebuild:
   Stable for HPPA (bug #324553).
