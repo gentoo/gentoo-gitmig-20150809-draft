@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/phaser
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/phaser/ChangeLog,v 1.1 2010/07/03 13:32:41 jlec Exp $
+
+*phaser-2.1.4 (03 Jul 2010)
+
+  03 Jul 2010; Justin Lecher <jlec@gentoo.org> +phaser-2.1.4.ebuild,
+  +files/phaser-2.1.4-chmod.patch, +metadata.xml:
+  Initial addition
+
