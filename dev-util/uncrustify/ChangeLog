@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.8 2010/06/25 13:54:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.9 2010/07/03 07:36:58 grobian Exp $
+
+  03 Jul 2010; Fabian Groffen <grobian@gentoo.org> uncrustify-0.52.ebuild,
+  uncrustify-0.53.ebuild, uncrustify-0.55.ebuild, uncrustify-0.56.ebuild:
+  Tests seem not to work with python3, depend on python2.
 
   25 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   uncrustify-0.55.ebuild:

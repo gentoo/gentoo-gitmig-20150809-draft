@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/uncrustify-0.55.ebuild,v 1.3 2010/06/25 13:54:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/uncrustify-0.55.ebuild,v 1.4 2010/07/03 07:36:58 grobian Exp $
 
 DESCRIPTION="C/C++/C#/D/Java/Pawn code indenter and beautifier"
 HOMEPAGE="http://uncrustify.sourceforge.net/"
@@ -11,12 +11,12 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~ppc-macos ~x86-solaris"
 IUSE="test"
 
-DEPEND="test? ( dev-lang/python )"
+DEPEND="test? ( =dev-lang/python-2* )"
 RDEPEND=""
 
 src_test() {
 	cd tests
-	./run_tests.py || die "tests failed"
+	python2 run_tests.py || die "tests failed"
 }
 
 src_install() {
