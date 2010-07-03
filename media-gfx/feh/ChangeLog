@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.50 2010/06/27 10:56:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.51 2010/07/03 13:07:10 armin76 Exp $
+
+  03 Jul 2010; Raúl Porcel <armin76@gentoo.org> feh-1.8.ebuild:
+  alpha/sparc stable wrt #325531
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> feh-1.8.ebuild:
   stable x86, security bug 325531
