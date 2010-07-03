@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0.ebuild,v 1.2 2010/06/28 22:41:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0.ebuild,v 1.3 2010/07/03 08:18:45 jlec Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ IUSE=""
 S="${WORKDIR}/${MY_P1}"
 
 src_prepare(){
-	rm -rvf Py*
+	rm -rf Py*
 	epatch "${FILESDIR}"/${PV}-Makefile.patch
 	cp Makefile_LINUX_gcc42 Makefile
 

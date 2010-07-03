@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cbflib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.9 2010/06/28 22:41:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.10 2010/07/03 08:18:45 jlec Exp $
+
+  03 Jul 2010; Justin Lecher <jlec@gentoo.org> cbflib-0.9.0.ebuild:
+  Remove spaming during emerge
 
   28 Jun 2010; Christoph Mende <angelos@gentoo.org> cbflib-0.9.0.ebuild:
   Stable on amd64 wrt bug #326035
