@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.5.ebuild,v 1.2 2010/07/03 01:22:34 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.5.ebuild,v 1.3 2010/07/03 01:27:06 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -61,7 +61,8 @@ src_compile() {
 	# Bug #276377: kontact/ can build before kmail/, causing a dependency not to be built
 	# Upstream as KDE Bug #198807
 	# (setting MAKEOPTS to trigger a repoman warning)
-	: || MAKEOPTS="-j1"
+	# : || MAKEOPTS="-j1"
+	# commented out so this gets more testing again - dilfridge 4/6/2010	: || MAKEOPTS="-j1"
 	kde4-meta_src_compile kmail_xml
 	kde4-meta_src_compile
 }
