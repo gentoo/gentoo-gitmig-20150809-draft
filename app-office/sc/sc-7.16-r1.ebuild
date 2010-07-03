@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.16-r1.ebuild,v 1.5 2008/03/07 23:09:14 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.16-r1.ebuild,v 1.6 2010/07/03 07:15:19 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,9 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
-
+RDEPEND="${DEPEND}
+	!dev-lang/stratego
+	!<sci-chemistry/ccp4-apps-6.1.3-r4"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
