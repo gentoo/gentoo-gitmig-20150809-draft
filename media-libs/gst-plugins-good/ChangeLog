@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.90 2010/07/01 11:34:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.91 2010/07/03 00:16:01 leio Exp $
+
+*gst-plugins-good-0.10.22 (03 Jul 2010)
+
+  03 Jul 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-good-0.10.22.ebuild:
+  Version bump, compatible with gst-plugins-base-0.10.29, fixing bug 326231
+  Huge amount of upstream improvements, some highlights:
+  Many more color formats supported in various elements (alpha, alphacolor,
+  videobox, videomixer, shapewipe) directly to avoid temporary conversions.
+  Matroska and FLV demuxers: backwards playback support in pull mode.
+  qtdemux: XMP parsing support, replaygain tag reading, etc
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-good-0.10.21.ebuild:
