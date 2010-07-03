@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-0.10.11.ebuild,v 1.1 2010/04/30 20:47:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-0.10.11.ebuild,v 1.2 2010/07/03 07:25:58 fauli Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ S="${WORKDIR}/btakita-${PN}-*"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend test "dev-ruby/rspec dev-ruby/session"
