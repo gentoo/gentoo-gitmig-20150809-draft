@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.1 2010/04/30 20:33:41 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.2 2010/07/03 12:11:48 tomjbe Exp $
+
+EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="a GTK+ TCP/IP DX-cluster and ON4KST chat client."
 HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/ham"
@@ -16,9 +20,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
+src_prepare() {
+	# fix for bug #326627 - deprecated macro in gtk+ from 2.20 on
+	if has_version ">=x11-libs/gtk+-2.20" ; then
+		epatch "${FILESDIR}"/${PN}-gtk-2.20.patch
+	fi
+}
+
+src_configure() {
 	econf $(use_enable nls)
-	emake || die "emake failed."
 }
 
 src_install() {
