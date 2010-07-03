@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.51 2010/06/27 11:50:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.52 2010/07/03 02:10:57 vapier Exp $
+
+  03 Jul 2010; Mike Frysinger <vapier@gentoo.org>
+  e2fsprogs-libs-1.41.11.ebuild:
+  Mark alpha/arm/ia64/s390/sh stable #323893.
 
   27 Jun 2010; <nixnut@gentoo.org> e2fsprogs-libs-1.41.11.ebuild:
   ppc stable #323893
