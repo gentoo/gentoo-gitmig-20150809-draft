@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4370 2010/07/03 16:10:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4371 2010/07/03 22:53:09 spock Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jul 2010; Michał Januszewski <spock@gentoo.org> package.mask:
+  Add a temporary mask on CUDA 3.1 until the 256 series nvidia-drivers are
+  unmasked.
 
   03 Jul 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Remove lessfs beta masking
