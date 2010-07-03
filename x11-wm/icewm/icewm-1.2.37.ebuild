@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.6 2010/06/07 15:31:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.37.ebuild,v 1.7 2010/07/03 17:14:49 armin76 Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86"
 
 IUSE="esd gnome imlib nls truetype xinerama minimal debug uclibc"
 

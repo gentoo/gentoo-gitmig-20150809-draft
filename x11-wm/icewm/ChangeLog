@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.142 2010/06/07 15:31:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.143 2010/07/03 17:14:49 armin76 Exp $
+
+  03 Jul 2010; Raúl Porcel <armin76@gentoo.org> icewm-1.2.37.ebuild:
+  sparc/x86 stable wrt #266700
 
   07 Jun 2010; Markos Chandras <hwoarang@gentoo.org> icewm-1.2.37.ebuild:
   Stable on amd64 wrt bug #266700
