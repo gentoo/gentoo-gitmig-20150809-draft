@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5740 2010/07/03 00:27:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5741 2010/07/03 20:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -52,6 +52,7 @@ app-admin/conky:portmon - enable support for tcp (ip4) port monitoring
 app-admin/conky:thinkpad - enable support for IBM/Lenovo notebooks
 app-admin/conky:weather-metar - enable support for metar weather service
 app-admin/conky:weather-xoap - enable support for metar and xoap weather service
+app-admin/conky:xmms2 - enable monitoring of music played by media-sound/xmms2
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
 app-admin/gkrellm:X - Build both the X11 gui (gkrellm) and the server (gkrellmd). Disabling this flag builds the server only.
