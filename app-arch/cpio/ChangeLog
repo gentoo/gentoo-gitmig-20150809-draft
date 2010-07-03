@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.107 2010/05/21 16:59:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.108 2010/07/03 07:49:21 fauli Exp $
+
+  03 Jul 2010; Christian Faulhammer <fauli@gentoo.org> cpio-2.11.ebuild:
+  stable x86, security bug 314663
 
   21 May 2010; Markos Chandras <hwoarang@gentoo.org> cpio-2.10-r1.ebuild:
   Stable on amd64 wrt bug #308827
