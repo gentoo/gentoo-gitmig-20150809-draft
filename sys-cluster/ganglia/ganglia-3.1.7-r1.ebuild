@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.7-r1.ebuild,v 1.1 2010/07/03 02:44:24 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.7-r1.ebuild,v 1.2 2010/07/03 15:34:23 mabi Exp $
 
 EAPI="3"
 WEBAPP_OPTIONAL="yes"
@@ -29,7 +29,8 @@ RDEPEND="
 	${DEPEND}
 	!minimal? ( net-analyzer/rrdtool
 		${WEBAPP_DEPEND}
-		dev-lang/php[gd,xml,ctype,pcre,cgi]
+		dev-lang/php[gd,xml,ctype,cgi]
+		|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )
 		media-fonts/dejavu
 	)"
 
