@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4368 2010/07/02 14:31:44 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4369 2010/07/03 08:01:48 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Mask www-client/chromium dev channel release.
 
   02 Jul 2010; Paul Varner <fuzzyray@gentoo.org> package.mask:
   Remove entry for app-text/manedit. Removed from tree on June 1
