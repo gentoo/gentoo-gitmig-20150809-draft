@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktimezoned
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimezoned/ChangeLog,v 1.64 2010/06/30 15:36:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimezoned/ChangeLog,v 1.65 2010/07/03 03:23:09 jmbsvicetto Exp $
+
+  03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ktimezoned-4.4.5.ebuild:
+  [kde-base/ktimezoned-4.4.5] Restored ~x86-fbsd keyword.
 
 *ktimezoned-4.4.5 (30 Jun 2010)
 

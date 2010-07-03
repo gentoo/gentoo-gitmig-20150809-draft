@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.76 2010/06/30 15:37:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.77 2010/07/03 03:23:08 jmbsvicetto Exp $
+
+  03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  solid-4.4.5.ebuild:
+  [kde-base/solid-4.4.5] Restored ~x86-fbsd keyword.
 
 *solid-4.4.5 (30 Jun 2010)
 

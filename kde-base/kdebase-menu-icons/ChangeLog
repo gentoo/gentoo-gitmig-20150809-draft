@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-menu-icons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.40 2010/06/30 15:37:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu-icons/ChangeLog,v 1.41 2010/07/03 03:23:11 jmbsvicetto Exp $
+
+  03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdebase-menu-icons-4.4.5.ebuild:
+  [kde-base/kdebase-menu-icons-4.4.5] Restored ~x86-fbsd keyword.
 
 *kdebase-menu-icons-4.4.5 (30 Jun 2010)
 

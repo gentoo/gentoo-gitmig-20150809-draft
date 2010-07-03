@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.193 2010/06/30 15:36:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.194 2010/07/03 03:23:07 jmbsvicetto Exp $
+
+  03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kcontrol-4.4.5.ebuild:
+  [kde-base/kcontrol-4.4.5] Restored ~x86-fbsd keyword.
 
 *kcontrol-4.4.5 (30 Jun 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.73 2010/06/30 15:37:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.74 2010/07/03 03:23:09 jmbsvicetto Exp $
+
+  03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libkworkspace-4.4.5.ebuild:
+  [kde-base/libkworkspace-4.4.5] Restored ~x86-fbsd keyword.
 
 *libkworkspace-4.4.5 (30 Jun 2010)
 
