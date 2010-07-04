@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.64 2010/02/27 21:06:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.65 2010/07/04 18:53:33 pacho Exp $
+
+*mod_mono-2.6.3 (04 Jul 2010)
+
+  04 Jul 2010; Pacho Ramos <pacho@gentoo.org> -files/1.2.1/70_mod_mono.conf,
+  -mod_mono-1.2.1.ebuild, -mod_mono-2.6.ebuild, +mod_mono-2.6.3.ebuild:
+  Version bump, remove old.
 
   27 Feb 2010; Patrick Lauer <patrick@gentoo.org>
   +files/mono26_auto_application_aspnet2.patch, mod_mono-2.6.ebuild:
