@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.5 2009/05/15 21:48:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.6 2010/07/04 22:11:55 hwoarang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/${P}.tar.gz"
 LICENSE="BSD as-is"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=""
 RDEPEND=""
