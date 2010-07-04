@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.54 2010/06/02 07:57:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.55 2010/07/04 08:46:54 xarthisius Exp $
+
+  04 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> pekwm-0.1.12.ebuild,
+  +files/pekwm-0.1.12-configure.patch:
+  Properly detect libpng if USE="-truetype" wrt bug 326803. Thanks to Carlo
+  Marcelo Arenas Belon <carenas@sajinet.com.pe> for report and patch.
 
 *pekwm-0.1.12 (02 Jun 2010)
 

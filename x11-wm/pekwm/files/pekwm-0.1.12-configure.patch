@@ -1,0 +1,15 @@
+Allows to properly detect libpng if USE="-truetype"
+
+https://bugs.gentoo.org/show_bug.cgi?id=326803
+
+Patch written by Carlo Marcelo Arenas Belon <carenas@sajinet.com.pe>
+--- configure.ac
++++ configure.ac
+@@ -10,6 +10,7 @@
+ AC_PROG_CXX
+ AC_PROG_INSTALL
+ AC_PROG_SED
++PKG_PROG_PKG_CONFIG
+ 
+ AC_LANG_CPLUSPLUS
+ 
