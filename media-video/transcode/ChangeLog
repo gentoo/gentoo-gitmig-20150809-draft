@@ -1,6 +1,14 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.276 2010/02/15 20:51:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.277 2010/07/04 19:00:51 je_fro Exp $
+
+*transcode-1.1.5-r2 (04 Jul 2010)
+
+  04 Jul 2010; Jeff Gardner <je_fro@gentoo.org> +transcode-1.1.5-r2.ebuild,
+  +files/transcode-1.1.5-mpa.patch:
+  Fix mpa codec error. See
+  http://www.mail-archive.com/transcode-users@exit1.org/msg02236.html Thanks
+  to Harry in bug #318525.
 
   15 Feb 2010; Joseph Jezak <josejx@gentoo.org> transcode-1.1.5-r1.ebuild:
   Marked ppc stable for bug #297851.
