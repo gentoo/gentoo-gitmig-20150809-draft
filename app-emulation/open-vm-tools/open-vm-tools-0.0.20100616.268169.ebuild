@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100320.243334.ebuild,v 1.2 2010/07/04 00:50:52 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20100616.268169.ebuild,v 1.1 2010/07/04 00:50:52 vadimk Exp $
 
 EAPI="2"
 
@@ -40,30 +40,32 @@ RDEPEND="app-emulation/open-vm-tools-kmod
 	icu? ( dev-libs/icu )
 	unity? (
 		dev-libs/uriparser
+		media-libs/libpng
 		x11-libs/libXScrnSaver
 	)
 	xinerama? ( x11-libs/libXinerama )
 	"
 
 DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig
 	virtual/linux-sources
-	doc? ( app-doc/doxygen )
+	sys-apps/findutils
 	"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	use unity && ! use xinerama && die 'The Unity USE flag requires USE="xinerama" as well'
+	use unity && ! use X && die 'The Unity USE flag requires "X" USE flag as well'
+	use unity && ! use xinerama && die 'The Unity USE flag requires xinerame USE="xinerama" as well'
 
 	enewgroup vmware
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/default-scripts1.patch"
+	#epatch "${FILESDIR}/default-scripts1.patch"
 	epatch "${FILESDIR}/checkvm-pie-safety.patch"
-	epatch "${FILESDIR}/vmguestlib-pkg-config.patch"
-	sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
+	#sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
 	# Do not filter out Werror
 	# Upstream Bug  http://sourceforge.net/tracker/?func=detail&aid=2959749&group_id=204462&atid=989708
 	# sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
@@ -85,9 +87,8 @@ src_configure() {
 		$(use_enable unity) \
 		$(use_enable xinerama multimon)
 
-		# Bugs 260878, 326761
-	    find ./ -name Makefile | xargs sed -i -e 's/-Werror//g'  || die "sed out Werror failed"
-
+	# Bugs 260878, 326761
+	find ./ -name Makefile | xargs sed -i -e 's/-Werror//g'  || die "sed out Werror failed"
 }
 
 src_compile() {
