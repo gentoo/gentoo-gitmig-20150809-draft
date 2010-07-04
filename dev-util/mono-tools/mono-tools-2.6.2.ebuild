@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.6.1.ebuild,v 1.1 2010/02/27 01:33:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.6.2.ebuild,v 1.1 2010/07/04 20:43:37 pacho Exp $
 
 EAPI=2
 

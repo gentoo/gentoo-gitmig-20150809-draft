@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.68 2010/03/27 08:54:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.69 2010/07/04 20:43:37 pacho Exp $
+
+*mono-tools-2.6.2 (04 Jul 2010)
+
+  04 Jul 2010; Pacho Ramos <pacho@gentoo.org> -mono-tools-2.6.ebuild,
+  -mono-tools-2.6.1.ebuild, +mono-tools-2.6.2.ebuild:
+  Version bump, remove old.
 
   27 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   mono-tools-1.2.1.ebuild, mono-tools-1.2.4.ebuild, mono-tools-1.2.6.ebuild:
