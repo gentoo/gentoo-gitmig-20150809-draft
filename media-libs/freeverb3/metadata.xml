@@ -11,5 +11,6 @@
 		<flag name='forcefpu'>Disable assembly code</flag>
 		<flag name='plugdouble'>Build plugins in double precision mode
 			(default is float)</flag>
+		<flag name='sse3'>Enable SSE3 support</flag>
 	</use>
 </pkgmetadata>
