@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.9 2010/06/04 19:23:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.10 2010/07/04 17:43:29 ssuominen Exp $
+
+  04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libatasmart-0.17.ebuild:
+  ppc64 stable wrt #314899
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> libatasmart-0.17.ebuild:
   x86 stable, bug #314899
