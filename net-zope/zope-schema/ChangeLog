@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-schema
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-schema/ChangeLog,v 1.7 2010/05/18 13:37:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-schema/ChangeLog,v 1.8 2010/07/04 06:14:50 arfrever Exp $
+
+*zope-schema-3.6.4 (04 Jul 2010)
+
+  04 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-schema-3.6.3.ebuild, +zope-schema-3.6.4.ebuild:
+  Version bump.
 
 *zope-schema-3.6.3 (18 May 2010)
 
