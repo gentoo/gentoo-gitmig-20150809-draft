@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.18.ebuild,v 1.12 2010/07/04 20:48:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.19.ebuild,v 1.1 2010/07/04 20:48:04 polynomial-c Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PATCH="${P}-patches-0.1"
+PATCH="${PN}-1.1.18-patches-0.1"
 EMVER="0.96.0"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
@@ -15,7 +15,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.s
 	mirror://gentoo/${PATCH}.tar.bz2
 	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
 
-KEYWORDS="arm ppc ppc64"
+KEYWORDS="~arm"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt xforms"
@@ -68,7 +68,7 @@ src_unpack() {
 	# Fix crash without -fno-strict-aliasing, bug 265642
 	epatch "${FILESDIR}/${PN}-1.1.17-fix-fno-strict-aliasing.patch"
 
-	epatch "${FILESDIR}"/${P}-libpng14.patch
+	epatch "${FILESDIR}"/${PN}-1.1.18-libpng14.patch
 
 	# Unpack the enigmail plugin
 	if use crypt && ! use moznomail; then

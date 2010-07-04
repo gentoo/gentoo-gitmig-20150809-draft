@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.227 2010/07/04 20:12:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.228 2010/07/04 20:48:04 polynomial-c Exp $
+
+*seamonkey-1.1.19 (04 Jul 2010)
+
+  04 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-1.1.18.ebuild, +seamonkey-1.1.19.ebuild:
+  Added latest seamonkey-1 for arm which has no keyword for seamonkey-2.
+  Removed x86-fbsd from KEYWORDS.
 
   04 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
   seamonkey-1.1.18.ebuild:
