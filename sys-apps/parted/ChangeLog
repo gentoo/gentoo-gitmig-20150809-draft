@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.150 2010/07/01 17:40:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.151 2010/07/04 08:29:09 hwoarang Exp $
+
+  04 Jul 2010; Markos Chandras <hwoarang@gentoo.org> parted-2.3.ebuild:
+  Stable on amd64 wrt bug #316453
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> parted-2.3.ebuild:
   Remove more tests that do FAIL instead of SKIP. Do not die when emake
