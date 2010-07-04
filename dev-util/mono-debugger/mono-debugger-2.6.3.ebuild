@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.6.ebuild,v 1.2 2010/02/21 14:58:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.6.3.ebuild,v 1.1 2010/07/04 19:19:32 pacho Exp $
 
 # bah, tests fail. Needs to be fixed ...
 RESTRICT="test"
@@ -30,9 +30,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	go-mono_src_prepare
 
-	epatch "${FILESDIR}/${P}-respect-cflags.patch" \
-		"${FILESDIR}/${P}-system-bfd.patch" \
-		"${FILESDIR}/${P}-system-libedit.patch"
+	epatch "${FILESDIR}/${PN}-2.6-respect-cflags.patch" \
+		"${FILESDIR}/${PN}-2.6-system-bfd.patch" \
+		"${FILESDIR}/${PN}-2.6-system-libedit.patch"
 
 	eautoreconf
 }

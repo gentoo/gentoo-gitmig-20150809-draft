@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.37 2010/02/21 12:41:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.38 2010/07/04 19:19:32 pacho Exp $
+
+*mono-debugger-2.6.3 (04 Jul 2010)
+
+  04 Jul 2010; Pacho Ramos <pacho@gentoo.org> -mono-debugger-2.6.ebuild,
+  +mono-debugger-2.6.3.ebuild:
+  Version bump, remove old 2.6.
 
 *mono-debugger-2.6 (21 Feb 2010)
 
