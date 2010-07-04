@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubyfilter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyfilter/ChangeLog,v 1.5 2009/06/13 08:13:43 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyfilter/ChangeLog,v 1.6 2010/07/04 18:23:02 graaff Exp $
+
+*rubyfilter-0.12-r1 (04 Jul 2010)
+
+  04 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +rubyfilter-0.12-r1.ebuild:
+  Convert to ruby-ng.
 
   13 Jun 2009; Hans de Graaff <graaff@gentoo.org> rubyfilter-0.12.ebuild:
   Fix quoting. ruby16 is no longer suppported.
