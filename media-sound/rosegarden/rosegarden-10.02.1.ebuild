@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.02.1.ebuild,v 1.4 2010/05/24 15:07:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.02.1.ebuild,v 1.5 2010/07/04 18:33:13 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils fdo-mime multilib
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/qt-gui:4[qt3support]
 	app-misc/lirc
 	media-sound/jack-audio-connection-kit
 	media-libs/alsa-lib
-	media-libs/dssi
+	>=media-libs/dssi-1.0.0
 	media-libs/liblo
 	media-libs/liblrdf
 	=sci-libs/fftw-3*
