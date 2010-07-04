@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.5.ebuild,v 1.6 2010/07/04 18:27:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.6.ebuild,v 1.1 2010/07/04 18:27:02 jlec Exp $
 
 EAPI="2"
 
@@ -11,8 +11,7 @@ inherit eutils cmake-utils python toolchain-funcs wxwidgets java-pkg-opt-2
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="http://plplot.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	mirror://gentoo/${P}-wxwidgets-cmake.patch.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -75,10 +74,7 @@ pkg_setup() {
 
 src_prepare() {
 	# path for python independent of python version
-	epatch "${FILESDIR}"/${PN}-5.9.0-python.patch
-
-	# bug #242212
-	epatch "${WORKDIR}"/${P}-wxwidgets-cmake.patch
+	epatch "${FILESDIR}"/${P}-python.patch
 
 	# remove license
 	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
@@ -101,6 +97,9 @@ src_prepare() {
 	sed -i \
 		-e 's:xml/declaration:sgml:' \
 		cmake/modules/docbook.cmake || die
+
+	# Problem if old version is installed
+	sed "/TEST_DYNDRIVERS/s:ON:OFF:g" -i drivers/CMakeLists.txt
 
 	use java && java-utils-2_src_prepare
 }
