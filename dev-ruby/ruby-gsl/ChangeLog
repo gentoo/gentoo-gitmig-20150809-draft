@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gsl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gsl/ChangeLog,v 1.1 2007/08/26 20:20:39 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gsl/ChangeLog,v 1.2 2010/07/04 18:48:35 graaff Exp $
+
+*ruby-gsl-0.2.0-r1 (04 Jul 2010)
+
+  04 Jul 2010; Hans de Graaff <graaff@gentoo.org> +ruby-gsl-0.2.0-r1.ebuild,
+  +files/ruby-gsl-0.2.0-remove-const.patch:
+  Convert to ruby-ng. Fix compilation against >=dev-libs/gsl-1.1.13.
 
 *ruby-gsl-0.2.0 (26 Aug 2007)
 
