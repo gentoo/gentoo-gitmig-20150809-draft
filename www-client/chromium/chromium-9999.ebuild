@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.64 2010/07/03 09:34:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.65 2010/07/04 17:33:18 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -235,7 +235,8 @@ src_install() {
 	# Install icon and desktop entry.
 	newicon out/Release/product_logo_48.png ${PN}-browser.png
 	dosym "$(get_chromium_home)/chromium-launcher.sh" /usr/bin/chromium
-	make_desktop_entry chromium "Chromium" ${PN}-browser "Network;WebBrowser"
+	make_desktop_entry chromium "Chromium" ${PN}-browser "Network;WebBrowser" \
+		"MimeType=text/html;text/xml;application/xhtml+xml;"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop \
 		|| die "desktop file sed failed"
 

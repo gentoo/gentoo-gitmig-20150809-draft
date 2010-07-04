@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.131 2010/07/03 14:25:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.132 2010/07/04 17:33:18 phajdan.jr Exp $
+
+  04 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-6.0.453.1.ebuild, chromium-9999.ebuild:
+  Added MimeType field to the .desktop file, so that .html and other files
+  can be opened with Chromium. Patch by Daniel Schoemer
+  <daniel.schoemer@gmx.net>, bug #326863.
 
   03 Jul 2010; Pacho Ramos <pacho@gentoo.org> chromium-5.0.375.99.ebuild:
   amd64 stable, security bug #326717
