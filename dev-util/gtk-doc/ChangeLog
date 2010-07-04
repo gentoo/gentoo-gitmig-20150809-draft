@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.120 2010/06/13 15:56:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.121 2010/07/04 17:57:05 ssuominen Exp $
+
+  04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gtk-doc-1.13-r2.ebuild:
+  ppc64 stable wrt #314899
 
 *gtk-doc-1.15 (13 Jun 2010)
 
