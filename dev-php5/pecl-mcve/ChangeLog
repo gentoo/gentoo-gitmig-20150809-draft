@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-mcve
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.28 2008/05/09 12:53:23 hoffie Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-mcve/ChangeLog,v 1.29 2010/07/04 22:44:59 mabi Exp $
+
+*pecl-mcve-7.0.3 (04 Jul 2010)
+
+  04 Jul 2010; Matti Bickel <mabi@gentoo.org> -pecl-mcve-5.2.0.ebuild,
+  +pecl-mcve-7.0.3.ebuild:
+  version bump thanks to Ole Markus With (bug #324835)
 
   09 May 2008; Christian Hoffmann <hoffie@gentoo.org>
   pecl-mcve-5.2.2-r1.ebuild:
