@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.0.3203-r1.ebuild,v 1.1 2009/05/06 11:07:45 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.3.3457.ebuild,v 1.1 2010/07/04 18:31:23 pacho Exp $
 
 EAPI=2
 
@@ -8,15 +8,15 @@ inherit multilib mono fdo-mime eutils
 
 DESCRIPTION="A wrist friendly language for the CLI"
 HOMEPAGE="http://boo.codehaus.org/"
-SRC_URI="http://dist.codehaus.org/boo/distributions/${P}-2-src.zip"
+SRC_URI="http://dist.codehaus.org/boo/distributions/${P}-src.zip"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.0
-	x11-libs/gtksourceview:1.0"
+	x11-libs/gtksourceview:2.0"
 DEPEND="${RDEPEND}
 	x11-misc/shared-mime-info
 	app-arch/unzip
@@ -34,13 +34,17 @@ pkg_setup() {
 		eerror "Please run: emerge -C ${CATEGORY}/${PN} and try again."
 		die "Please run: emerge -C ${CATEGORY}/${PN} and try again."
 	fi
+
+	# gacutil may generate a root-owned directory in ${T} which makes nant fail afterwards (bug #269907)
+	rm -rf "${T}/.wapi"
 }
 
 src_prepare() {
 	sed -i -e 's: Boo.Microsoft.Build.Tasks, update-vs2005-env,::' default.build || die
 	sed -i -e 's@${libdir}/boo@${libdir}/mono/boo@g' \
 		extras/boo.pc.in || die
-	epatch "${FILESDIR}/boo-0.9.1.3287-GACproblems.patch"
+	epatch "${FILESDIR}/${PN}-0.9.1.3287-GACproblems.patch"
+	epatch "${FILESDIR}/${PN}-0.7.8.2559-gtksourceview2.patch"
 }
 
 src_compile() {

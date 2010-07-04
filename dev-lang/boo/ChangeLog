@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/boo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.32 2009/09/27 17:09:01 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.33 2010/07/04 18:31:23 pacho Exp $
+
+*boo-0.9.3.3457 (04 Jul 2010)
+
+  04 Jul 2010; Pacho Ramos <pacho@gentoo.org> -boo-0.7.6.2237-r1.ebuild,
+  +files/boo-0.7.8.2559-gtksourceview2.patch, -boo-0.8.2.2960.ebuild,
+  -boo-0.9.0.3203-r1.ebuild, +boo-0.9.3.3457.ebuild:
+  Version bump with lots of fixes, also include Mandriva patch to make it
+  work with newer x11-libs/gtksourceview. Remove old.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> boo-0.9.1.3287-r1.ebuild:
   ppc stable #284337
