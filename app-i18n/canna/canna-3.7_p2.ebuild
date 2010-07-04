@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.20 2009/12/31 21:39:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.21 2010/07/04 19:09:00 ssuominen Exp $
 
 inherit cannadic eutils multilib
 
@@ -13,12 +13,12 @@ SRC_URI="mirror://sourceforge.jp/canna/9558/${MY_P/_/}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="doc"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4
 	x11-misc/gccmakedep
-	x11-misc/imake
-	doc? ( app-text/ptex )"
+	x11-misc/imake"
+#	doc? ( app-text/ptex )"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P/_/}"
@@ -47,21 +47,21 @@ src_compile() {
 	#make libCannaDir=../lib/canna canna || die
 	make canna || die
 
-	if use doc ; then
-		einfo "Compiling DVI, PS (and PDF) document"
-		cd doc/man/guide/tex
-		xmkmf || die
-		make JLATEXCMD=platex \
-			DVI2PSCMD="dvips -f" \
-			canna.dvi canna.ps || die
-		if has_version 'app-text/dvipdfmx' && \
-			( has_version 'app-text/acroread' \
-			|| has_version 'app-text/xpdf-japanese' ); then
-			make JLATEXCMD=platex \
-				DVI2PSCMD="dvips -f" \
-				canna.pdf || die
-		fi
-	fi
+	#if use doc ; then
+	#	einfo "Compiling DVI, PS (and PDF) document"
+	#	cd doc/man/guide/tex
+	#	xmkmf || die
+	#	make JLATEXCMD=platex \
+	#		DVI2PSCMD="dvips -f" \
+	#		canna.dvi canna.ps || die
+	#	if has_version 'app-text/dvipdfmx' && \
+	#		( has_version 'app-text/acroread' \
+	#		|| has_version 'app-text/xpdf-japanese' ); then
+	#		make JLATEXCMD=platex \
+	#			DVI2PSCMD="dvips -f" \
+	#			canna.pdf || die
+	#	fi
+	#fi
 }
 
 src_install() {
@@ -84,10 +84,10 @@ src_install() {
 
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*
 
-	if use doc ; then
-		insinto /usr/share/doc/${PF}
-		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
-	fi
+	#if use doc ; then
+	#	insinto /usr/share/doc/${PF}
+	#	doins doc/man/guide/tex/canna.{dvi,ps,pdf}
+	#fi
 
 	newinitd "${FILESDIR}"/canna.initd canna || die
 	newconfd "${FILESDIR}"/canna.confd canna || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3-r1.ebuild,v 1.8 2010/01/31 15:39:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3-r1.ebuild,v 1.9 2010/07/04 19:09:00 ssuominen Exp $
 
 inherit cannadic eutils multilib
 
@@ -14,12 +14,12 @@ SRC_URI="mirror://sourceforge.jp/canna/9565/${MY_P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="doc"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4
 	x11-misc/gccmakedep
-	x11-misc/imake
-	doc? ( app-text/ptex )"
+	x11-misc/imake"
+#	doc? ( app-text/ptex )
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
@@ -54,21 +54,21 @@ src_compile() {
 	# bug #279706
 	emake -j1 CDEBUGFLAGS="${CFLAGS}" canna || die
 
-	if use doc ; then
-		einfo "Compiling DVI, PS (and PDF) document"
-		cd doc/man/guide/tex
-		xmkmf || die
-		emake -j1 JLATEXCMD=platex \
-			DVI2PSCMD="dvips -f" \
-			canna.dvi canna.ps || die
-		if has_version 'app-text/dvipdfmx' && \
-			( has_version 'app-text/acroread' \
-			|| has_version 'app-text/xpdf-japanese' ); then
-			emake -j1 JLATEXCMD=platex \
-				DVI2PSCMD="dvips -f" \
-				canna.pdf || die
-		fi
-	fi
+	#if use doc ; then
+	#	einfo "Compiling DVI, PS (and PDF) document"
+	#	cd doc/man/guide/tex
+	#	xmkmf || die
+	#	emake -j1 JLATEXCMD=platex \
+	#		DVI2PSCMD="dvips -f" \
+	#		canna.dvi canna.ps || die
+	#	if has_version 'app-text/dvipdfmx' && \
+	#		( has_version 'app-text/acroread' \
+	#		|| has_version 'app-text/xpdf-japanese' ); then
+	#		emake -j1 JLATEXCMD=platex \
+	#			DVI2PSCMD="dvips -f" \
+	#			canna.pdf || die
+	#	fi
+	#fi
 }
 
 src_install() {
@@ -91,10 +91,10 @@ src_install() {
 
 	dodoc CHANGES.jp ChangeLog INSTALL* README* WHATIS*
 
-	if use doc ; then
-		insinto /usr/share/doc/${PF}
-		doins doc/man/guide/tex/canna.{dvi,ps,pdf}
-	fi
+	#if use doc ; then
+	#	insinto /usr/share/doc/${PF}
+	#	doins doc/man/guide/tex/canna.{dvi,ps,pdf}
+	#fi
 
 	newinitd "${FILESDIR}"/${P}.initd canna || die
 	newconfd "${FILESDIR}"/${P}.confd canna || die

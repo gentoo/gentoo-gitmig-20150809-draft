@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/canna
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.67 2010/01/31 15:39:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.68 2010/07/04 19:09:00 ssuominen Exp $
+
+  04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> canna-3.7_p2.ebuild,
+  canna-3.7_p3-r1.ebuild:
+  Remove USE="doc" to fix deptree for stable because of bugs 319509 and
+  323559.
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org> canna-3.7_p3-r1.ebuild:
   sparc stable wrt #297441
