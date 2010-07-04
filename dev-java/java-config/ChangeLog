@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.244 2010/06/27 18:57:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.245 2010/07/04 11:19:44 phajdan.jr Exp $
+
+  04 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  java-config-2.1.11.ebuild:
+  x86 stable wrt bug #321767
 
   27 Jun 2010; Pacho Ramos <pacho@gentoo.org> java-config-2.1.11.ebuild:
   stable amd64, bug 321767
