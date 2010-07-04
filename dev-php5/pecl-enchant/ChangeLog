@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-enchant
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/ChangeLog,v 1.4 2008/02/23 18:06:12 swegener Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/ChangeLog,v 1.5 2010/07/04 22:50:37 mabi Exp $
+
+*pecl-enchant-1.1.0 (04 Jul 2010)
+
+  04 Jul 2010; Matti Bickel <mabi@gentoo.org> -pecl-enchant-1.0.1.ebuild,
+  +pecl-enchant-1.1.0.ebuild:
+  version bump thanks to Ole Markus With (bug #324837)
 
   23 Feb 2008; Sven Wegener <swegener@gentoo.org> pecl-enchant-1.0.1.ebuild:
   Add ~amd64 keyword.

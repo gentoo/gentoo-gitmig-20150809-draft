@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/pecl-enchant-1.0.1.ebuild,v 1.3 2008/02/23 18:06:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-enchant/pecl-enchant-1.1.0.ebuild,v 1.1 2010/07/04 22:50:37 mabi Exp $
 
 PHP_EXT_NAME="enchant"
 PHP_EXT_INI="yes"
