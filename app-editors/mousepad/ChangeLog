@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mousepad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.24 2010/05/07 18:13:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.25 2010/07/04 09:19:13 ssuominen Exp $
+
+  04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mousepad-0.2.16-r1.ebuild:
+  ppc64 stable wrt #310121
 
   07 May 2010; Raúl Porcel <armin76@gentoo.org> mousepad-0.2.16-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #310121
