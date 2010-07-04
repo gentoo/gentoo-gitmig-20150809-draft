@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.37 2010/06/22 20:06:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.38 2010/07/04 07:59:38 arfrever Exp $
+
+  04 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cadaver-0.23.3.ebuild:
+  Fix building with gettext-0.18 (bug #321915).
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cadaver-0.23.2.ebuild, cadaver-0.23.3.ebuild:
