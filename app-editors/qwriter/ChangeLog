@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qwriter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/ChangeLog,v 1.2 2010/06/24 20:41:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/ChangeLog,v 1.3 2010/07/04 17:07:38 phajdan.jr Exp $
+
+  04 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> qwriter-0.1.9.ebuild:
+  x86 stable wrt bug #325029
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> qwriter-0.1.9.ebuild:
   stable amd64, bug 325029
