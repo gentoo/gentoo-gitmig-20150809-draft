@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.52 2010/03/08 00:52:31 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.53 2010/07/04 20:37:35 dirtyepic Exp $
+
+*wxglade-0.6.3-r1 (04 Jul 2010)
+
+  04 Jul 2010; Ryan Hill <dirtyepic@gentoo.org> +wxglade-0.6.3-r1.ebuild:
+  Support multiple python ABIs. (bug #326125)
 
   08 Mar 2010; Jonathan Callen <abcd@gentoo.org> wxglade-0.6.3.ebuild:
   Move PYTHON_DEPEND before inherit(), so that the dep is actually added
