@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.5.2.ebuild,v 1.3 2010/05/20 17:17:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.5.2.ebuild,v 1.4 2010/07/04 17:51:39 pacho Exp $
 
 EAPI="1"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="dmraid fat gnome hfs jfs kde mdadm ntfs reiserfs reiser4 xfs xfce"
 
 common_depends=">=sys-apps/parted-2.2
