@@ -1,40 +1,16 @@
-diff -Naur wxdfast-0.6.0-orig/src/Makefile.am wxdfast-0.6.0/src/Makefile.am
---- wxdfast-0.6.0-orig/src/Makefile.am	2007-03-11 16:45:24.000000000 -0600
-+++ wxdfast-0.6.0/src/Makefile.am	2007-12-23 20:19:08.000000000 -0600
-@@ -17,11 +17,9 @@
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -17,11 +17,9 @@ if PORTABLE
  PORTABLE_FLAGS = -D WXDFAST_PORTABLE
  endif
  
 -CFLAGS =\
 -	 -Wall -O2 $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
-+CFLAGS += $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
++CFLAGS += $(XRC_FLAGS) $(PORTABLE_FLAGS)
  
 -CXXFLAGS =\
 -	 -Wall -O2 $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
-+CXXFLAGS += $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
++CXXFLAGS += $(XRC_FLAGS) $(PORTABLE_FLAGS)
  
  wxdfast_SOURCES = \
  	BoxFind.cpp\
-diff -Naur wxdfast-0.6.0-orig/src/Makefile.in wxdfast-0.6.0/src/Makefile.in
---- wxdfast-0.6.0-orig/src/Makefile.in	2007-12-23 20:16:41.000000000 -0600
-+++ wxdfast-0.6.0/src/Makefile.in	2007-12-23 20:20:56.000000000 -0600
-@@ -95,17 +95,13 @@
- AWK = @AWK@
- CC = @CC@
- CCDEPMODE = @CCDEPMODE@
--CFLAGS = \
--	 -Wall -O2 $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
--
-+CFLAGS += $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
- CPP = @CPP@
- CPPFLAGS = @CPPFLAGS@
- CXX = @CXX@
- CXXCPP = @CXXCPP@
- CXXDEPMODE = @CXXDEPMODE@
--CXXFLAGS = \
--	 -Wall -O2 $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
--
-+CXXFLAGS += $(DEBUG_FLAGS) $(XRC_FLAGS) $(PORTABLE_FLAGS)
- CYGPATH_W = @CYGPATH_W@
- DEFS = @DEFS@
- DEPDIR = @DEPDIR@
