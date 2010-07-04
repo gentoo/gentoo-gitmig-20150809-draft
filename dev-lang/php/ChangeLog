@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.385 2010/06/14 17:03:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.386 2010/07/04 22:40:19 mabi Exp $
+
+  04 Jul 2010; Matti Bickel <mabi@gentoo.org> php-5.3.2.ebuild:
+  include patch to compile with gmp-5* (bug #322303)
 
   14 Jun 2010; <mabi@gentoo.org> files/eblits/src_install-v1.eblit,
   php-5.3.2.ebuild:
