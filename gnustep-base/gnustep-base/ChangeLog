@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.98 2010/06/27 13:50:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.99 2010/07/04 16:49:20 armin76 Exp $
+
+  04 Jul 2010; Raúl Porcel <armin76@gentoo.org> gnustep-base-1.20.1.ebuild:
+  sparc stable wrt #325577
 
   27 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnustep-base-1.20.1.ebuild:

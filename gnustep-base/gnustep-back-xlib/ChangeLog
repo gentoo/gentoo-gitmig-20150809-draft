@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.57 2010/06/27 13:54:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.58 2010/07/04 16:51:33 armin76 Exp $
+
+  04 Jul 2010; Raúl Porcel <armin76@gentoo.org>
+  gnustep-back-xlib-0.18.0.ebuild:
+  sparc stable wrt #325577
 
   27 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnustep-back-xlib-0.18.0.ebuild:
