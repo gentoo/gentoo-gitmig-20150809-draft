@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.1.ebuild,v 1.2 2010/03/09 13:06:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.1.ebuild,v 1.3 2010/07/04 19:56:23 halcy0n Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="+pdf +xft"
 DEPEND="x11-libs/fltk:1.1
 	pdf? ( media-libs/pdflib )
 	xft? (	x11-libs/libXft
-			x11-libs/fltk[-noxft] )"
+			x11-libs/fltk[xft] )"
 RDEPEND="${DEPEND}
 	sci-biology/clustalw
 	|| ( sci-libs/libmuscle sci-biology/muscle )

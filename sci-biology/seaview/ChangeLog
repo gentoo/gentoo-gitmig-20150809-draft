@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.33 2010/05/16 17:14:55 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.34 2010/07/04 19:56:23 halcy0n Exp $
+
+  04 Jul 2010; Mark Loeser <halcy0n@gentoo.org> seaview-4.1.ebuild:
+  Change x11-libs/fltk[-noxft] dep to fltk[xft] as the useflag has been
+  renamed
 
 *seaview-4.2.5 (16 May 2010)
 
