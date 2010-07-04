@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.51 2010/06/27 19:06:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.52 2010/07/04 16:48:12 alexxy Exp $
+
+*gromacs-4.0.7-r4 (04 Jul 2010)
+
+  04 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> +gromacs-4.0.7-r4.ebuild:
+  Fix bug #326331. thanks to Christoph Junghans
 
 *gromacs-4.0.7-r3 (27 Jun 2010)
 
