@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/spice
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.11 2009/06/07 05:43:47 calchan Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.12 2010/07/04 06:32:18 tomjbe Exp $
+
+  04 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> spice-3.5.5-r1.ebuild:
+  fix for default editor (see bug #294766)
 
 *spice-3.5.5-r1 (07 Jun 2009)
 
