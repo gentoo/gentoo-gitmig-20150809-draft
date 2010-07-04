@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.39 2010/05/25 17:09:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.40 2010/07/04 21:14:58 arfrever Exp $
 
 EAPI="1"
 
 inherit autotools eutils flag-o-matic multilib python toolchain-funcs
 
 MY_P="Python-${PV}"
-S="${WORKDIR}/${MY_P}"
 
 PATCHSET_REVISION="0"
 
@@ -31,7 +30,6 @@ RDEPEND=">=app-admin/eselect-python-20091230
 				sys-libs/db:4.3
 				sys-libs/db:4.2
 			) )
-			doc? ( dev-python/python-docs:${SLOT} )
 			gdbm? ( sys-libs/gdbm )
 			ncurses? (
 				>=sys-libs/ncurses-5.2
@@ -39,13 +37,15 @@ RDEPEND=">=app-admin/eselect-python-20091230
 			)
 			ssl? ( dev-libs/openssl )
 			tk? ( >=dev-lang/tk-8.0 )
-		)"
-#			xml? ( dev-libs/expat )
+		)
+		doc? ( dev-python/python-docs:${SLOT} )"
 DEPEND="${RDEPEND}"
 RDEPEND+=" !build? ( app-misc/mime-types )"
 PDEPEND="app-admin/python-updater"
 
 PROVIDE="virtual/python"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	python_pkg_setup
@@ -187,8 +187,7 @@ src_test() {
 	# Otherwise test_import fails.
 	python_enable_pyc
 
-	# Skip all tests that fail during emerge but pass without emerge:
-	# (See bug #67970)
+	# Skip failing tests.
 	local skip_tests="cookielib distutils global hotshot mimetools minidom mmap posix sax strptime subprocess syntax tcl time urllib urllib2"
 
 	for test in ${skip_tests}; do

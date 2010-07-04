@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.12 2010/06/04 19:09:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r3.ebuild,v 1.13 2010/07/04 21:14:58 arfrever Exp $
 
 EAPI="3"
 
 inherit autotools eutils flag-o-matic multilib pax-utils python toolchain-funcs
 
 MY_P="Python-${PV}"
-S="${WORKDIR}/${MY_P}"
 
 PATCHSET_REVISION="5"
 
@@ -27,7 +26,6 @@ RDEPEND=">=app-admin/eselect-python-20091230
 		virtual/libffi
 		virtual/libintl
 		!build? (
-			doc? ( dev-python/python-docs:${SLOT} )
 			gdbm? ( sys-libs/gdbm )
 			ncurses? (
 				>=sys-libs/ncurses-5.2
@@ -37,7 +35,8 @@ RDEPEND=">=app-admin/eselect-python-20091230
 			ssl? ( dev-libs/openssl )
 			tk? ( >=dev-lang/tk-8.0 )
 			xml? ( >=dev-libs/expat-2 )
-		)"
+		)
+		doc? ( dev-python/python-docs:${SLOT} )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		!sys-devel/gcc[libffi]"
@@ -49,6 +48,8 @@ PDEPEND=">=app-admin/python-updater-0.8
 		)"
 
 PROVIDE="virtual/python"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	python_pkg_setup
@@ -188,8 +189,7 @@ src_test() {
 	# Otherwise test_import fails.
 	python_enable_pyc
 
-	# Skip all tests that fail during emerge but pass without emerge:
-	# (See bug #67970)
+	# Skip failing tests.
 	local skip_tests="distutils"
 
 	# test_ctypes fails with PAX kernel (bug #234498).
