@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono-addins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.16 2009/09/16 13:16:57 loki_val Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.17 2010/07/04 19:01:42 pacho Exp $
+
+*mono-addins-0.5 (04 Jul 2010)
+
+  04 Jul 2010; Pacho Ramos <pacho@gentoo.org> +mono-addins-0.5.ebuild:
+  Version bump.
 
 *mono-addins-0.4-r1 (16 Sep 2009)
 
