@@ -13,6 +13,6 @@ Information Solutions.
 </longdescription>
 <use>
 	<flag name='hdf'>Adds support for the Hierarchical Data Format</flag>
-	<flag name='proj'>Adds proj library support (geographic projections)</flag>
+	<flag name='udunits'>Support for manipulating units of physical quantities</flag>
 </use>
 </pkgmetadata>
