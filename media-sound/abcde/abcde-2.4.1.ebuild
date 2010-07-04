@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.4.1.ebuild,v 1.5 2010/06/27 11:58:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.4.1.ebuild,v 1.6 2010/07/04 12:14:43 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="aac cdparanoia flac id3 lame normalize replaygain speex vorbis"
 
 RDEPEND="media-sound/cd-discid
