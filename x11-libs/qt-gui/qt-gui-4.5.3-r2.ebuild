@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.3-r2.ebuild,v 1.7 2009/11/10 22:38:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.3-r2.ebuild,v 1.8 2010/07/04 11:51:56 ssuominen Exp $
 
 EAPI="2"
 inherit eutils qt4-build
@@ -90,6 +90,9 @@ src_prepare() {
 	# fixing hardcoded fonts, bug #252312
 	EPATCH_OPTS="--ignore-whitespace"
 	epatch "${FILESDIR}"/hardcoded_fonts.patch
+
+	has_version ">=media-libs/libpng-1.4" && epatch \
+		"${FILESDIR}"/${P}-libpng14.patch
 }
 
 src_configure() {
