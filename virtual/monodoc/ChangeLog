@@ -1,6 +1,11 @@
 # ChangeLog for virtual/monodoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.26 2010/05/20 11:38:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.27 2010/07/04 20:35:41 pacho Exp $
+
+  04 Jul 2010; Pacho Ramos <pacho@gentoo.org> -monodoc-2.4.3.ebuild,
+  -monodoc-2.6.1.ebuild, -monodoc-2.6.3.ebuild:
+  Remove old versions no longer available. Thanks to Mark Loeser for
+  reporting.
 
 *monodoc-2.6.4 (20 May 2010)
 
