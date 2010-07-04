@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.9.6.ebuild,v 1.1 2010/07/03 12:36:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.9.6.ebuild,v 1.2 2010/07/04 07:36:51 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -31,6 +31,7 @@ ruby_add_rdepend ">=dev-ruby/bunny-0.6.0
 	>=dev-ruby/ohai-0.5.0
 	>=dev-ruby/rest-client-1.0.4
 	<=dev-ruby/rest-client-1.5.1
+	dev-ruby/ruby-shadow
 	dev-ruby/uuidtools"
 
 all_ruby_install() {
