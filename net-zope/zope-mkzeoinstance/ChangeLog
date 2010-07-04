@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-mkzeoinstance
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-mkzeoinstance/ChangeLog,v 1.1 2010/07/04 05:15:53 arfrever Exp $
+
+*zope-mkzeoinstance-3.9.4 (04 Jul 2010)
+
+  04 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-mkzeoinstance-3.9.4.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
