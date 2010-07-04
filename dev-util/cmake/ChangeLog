@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.134 2010/05/27 09:27:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.135 2010/07/04 12:06:53 ssuominen Exp $
+
+  04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> cmake-2.8.1-r2.ebuild:
+  ppc64 stable wrt #325845
 
 *cmake-2.8.1-r2 (27 May 2010)
 
