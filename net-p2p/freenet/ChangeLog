@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.82 2010/06/15 22:42:36 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.83 2010/07/04 12:04:09 tommy Exp $
+
+*freenet-0.7.5_p1257 (04 Jul 2010)
+
+  04 Jul 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -freenet-0.7.5_p1250.ebuild, +freenet-0.7.5_p1257.ebuild:
+  Version bump
 
 *freenet-0.7.5_p1253 (15 Jun 2010)
 
