@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.431 2010/06/27 03:54:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.432 2010/07/04 01:44:11 zorry Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -510,7 +510,9 @@ want_pie() {
 }
 want_ssp() { _want_stuff PP_VER !nossp ; }
 
+# SPLIT_SPECS are deprecated for >=GCC 4.4
 want_split_specs() {
+	tc_version_is_at_least 4.4 && return 1
 	[[ ${SPLIT_SPECS} == "true" ]] && want_pie
 }
 want_minispecs() {
