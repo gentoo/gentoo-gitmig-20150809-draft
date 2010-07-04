@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.49.00.ebuild,v 1.7 2010/06/19 16:51:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.49.00.ebuild,v 1.8 2010/07/04 09:58:27 ssuominen Exp $
 
 EAPI=1
 inherit toolchain-funcs eutils multilib
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.lzma
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="jbig jpeg jpeg2k png rle svga tiff X xml zlib"
 
 RDEPEND="jpeg? ( >=media-libs/jpeg-7:0 )
