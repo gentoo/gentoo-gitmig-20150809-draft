@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/rosetta-fragments-3.1.ebuild,v 1.1 2010/05/18 20:40:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/rosetta-fragments-3.1.ebuild,v 1.2 2010/07/04 08:07:04 jlec Exp $
 
 EAPI="2"
 
 inherit flag-o-matic fortran
 
 DESCRIPTION="Fragment library for rosetta"
-HOMEPAGE="www.rosettacommons.org"
+HOMEPAGE="http://www.rosettacommons.org"
 SRC_URI="rosetta3.1_fragments.tgz"
 
 LICENSE="rosetta"
