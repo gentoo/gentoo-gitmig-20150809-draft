@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djview4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.28 2010/06/26 17:34:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.29 2010/07/04 17:06:07 ssuominen Exp $
+
+  04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> djview4-4.5-r1.ebuild:
+  ppc64 stable wrt #299574
 
   26 Jun 2010; <nixnut@gentoo.org> djview4-4.5-r1.ebuild:
   ~ppc #299574
