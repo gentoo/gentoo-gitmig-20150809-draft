@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.15.5.ebuild,v 1.1 2007/05/28 19:01:46 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.15.5.ebuild,v 1.2 2010/07/04 21:48:24 mabi Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_INI="yes"
@@ -17,8 +17,8 @@ LICENSE="dbgphp"
 SLOT="0"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="<dev-lang/php-5.3"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/dbg-${PV}"
 
