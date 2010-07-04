@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/missing
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/missing/ChangeLog,v 1.1 2010/07/04 04:48:30 arfrever Exp $
+
+*missing-2.13.1 (04 Jul 2010)
+
+  04 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +missing-2.13.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
