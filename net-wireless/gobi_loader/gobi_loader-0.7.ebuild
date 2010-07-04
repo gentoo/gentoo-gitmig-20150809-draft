@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gobi_loader/gobi_loader-0.7.ebuild,v 1.1 2010/06/27 12:49:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gobi_loader/gobi_loader-0.7.ebuild,v 1.2 2010/07/04 22:00:51 polynomial-c Exp $
 
 EAPI="2"
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.codon.org.uk/~mjg59/${PN}/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/libusb:0"

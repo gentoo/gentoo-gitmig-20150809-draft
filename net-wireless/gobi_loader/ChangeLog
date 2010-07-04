@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gobi_loader
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gobi_loader/ChangeLog,v 1.1 2010/06/27 12:49:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gobi_loader/ChangeLog,v 1.2 2010/07/04 22:00:51 polynomial-c Exp $
+
+  04 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  gobi_loader-0.7.ebuild:
+  Added ~x86 keyword. Thanks to Roland Imme for testing the package on x86.
 
 *gobi_loader-0.7 (27 Jun 2010)
 
