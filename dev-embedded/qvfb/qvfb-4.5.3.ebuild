@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/qvfb-4.5.3.ebuild,v 1.1 2009/11/12 15:20:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/qvfb-4.5.3.ebuild,v 1.2 2010/07/04 08:31:49 hwoarang Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -8,7 +8,7 @@ inherit qt4-build
 DESCRIPTION="The Qt Embedded Virtual Framebuffer emulator."
 HOMEPAGE="http://www.trolltech.com/"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="~x11-libs/qt-gui-${PV}"
