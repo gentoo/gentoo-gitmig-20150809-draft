@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.22 2010/07/02 07:49:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.23 2010/07/04 21:08:43 hanno Exp $
+
+  04 Jul 2010; Hanno Boeck <hanno@gentoo.org> mednafen-0.8.13.ebuild,
+  +files/mednafen-0.8.13-gcc45.patch:
+  Re-add gcc 4.5 patch.
 
 *mednafen-0.8.13 (02 Jul 2010)
 

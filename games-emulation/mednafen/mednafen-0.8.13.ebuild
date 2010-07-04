@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.ebuild,v 1.1 2010/07/02 07:49:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.ebuild,v 1.2 2010/07/04 21:08:43 hanno Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -39,6 +39,7 @@ src_prepare() {
 		-e '/-ffast-math/d' \
 		configure.ac \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 	eautoreconf
 }
 
