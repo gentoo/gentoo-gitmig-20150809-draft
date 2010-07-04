@@ -1,8 +1,13 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.149 2010/07/04 20:08:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.150 2010/07/04 20:12:44 arfrever Exp $
 
 *python-docs-2.7 (04 Jul 2010)
+
+  04 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -python-docs-2.4.4.ebuild, -python-docs-2.5.4.ebuild,
+  +python-docs-2.7.ebuild, -python-docs-3.1.1.ebuild:
+  Version bump.
 
   04 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-docs-2.4.4-r1.ebuild, python-docs-2.5.4-r1.ebuild:
