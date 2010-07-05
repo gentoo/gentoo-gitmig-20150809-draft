@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-git/trac-git-8215.ebuild,v 1.1 2010/07/05 08:56:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-git/trac-git-8215.ebuild,v 1.2 2010/07/05 11:00:44 hollow Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
+DEPEND="dev-python/setuptools
+	app-arch/unzip"
 RDEPEND=">=www-apps/trac-0.12
 	dev-vcs/git"
 
