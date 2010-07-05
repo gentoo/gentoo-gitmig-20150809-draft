@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.303 2010/06/13 19:34:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.304 2010/07/05 12:35:36 pacho Exp $
+
+  05 Jul 2010; Pacho Ramos <pacho@gentoo.org> gedit-2.30.2.ebuild,
+  +files/gedit-2.30.2-tests-skip.patch:
+  Fix tests: Do not fail if remote mounting is not supported (bug #323659)
 
 *gedit-2.30.2 (13 Jun 2010)
 
