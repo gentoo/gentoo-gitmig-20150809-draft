@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r1.ebuild,v 1.1 2010/07/05 11:36:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r2.ebuild,v 1.1 2010/07/05 12:45:05 jlec Exp $
 
 EAPI="3"
 
@@ -10,6 +10,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils flag-o-matic toolchain-funcs
 
+PYTHON_MODNAME="pycbf.py"
 MY_P1="CBFlib-${PV}"
 MY_P2="CBFlib_${PV}"
 
@@ -35,6 +36,8 @@ S="${WORKDIR}/${MY_P1}"
 src_prepare(){
 	rm -rf Py* drel* dRel* ply*
 	epatch "${FILESDIR}"/${PV}-Makefile.patch
+	edos2unix pycbf/setup.py
+	epatch "${FILESDIR}"/${PV}-python.patch
 	cp Makefile_LINUX_gcc42 Makefile
 
 	append-fflags -fno-range-check
@@ -82,4 +85,12 @@ src_install() {
 		cd pycbf
 		distutils_src_install
 	fi
+}
+
+pkg_postinst() {
+	use python && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }

@@ -1,0 +1,10 @@
+diff --git a/pycbf/setup.py b/pycbf/setup.py
+index 0763f06..f55a42f 100644
+--- a/pycbf/setup.py
++++ b/pycbf/setup.py
+@@ -14,4 +14,4 @@ e = Extension('_pycbf',
+          include_dirs = ["../include"] )
+             
+ # Build it
+-setup(name="_pycbf",ext_modules=[e],)
++setup(name="_pycbf",ext_modules=[e],py_modules=["pycbf"],)
