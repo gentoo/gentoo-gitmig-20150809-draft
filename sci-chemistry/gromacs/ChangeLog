@@ -1,11 +1,16 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.52 2010/07/04 16:48:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.53 2010/07/05 10:41:17 alexxy Exp $
 
 *gromacs-4.0.7-r4 (04 Jul 2010)
 
   04 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> +gromacs-4.0.7-r4.ebuild:
   Fix bug #326331. thanks to Christoph Junghans
+
+  05 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> -gromacs-3.3.1-r1.ebuild,
+  -gromacs-3.3.3.ebuild:
+  Gromacs 3.x moved to sci overlay since its unmaintained and no longer
+  supported
 
 *gromacs-4.0.7-r3 (27 Jun 2010)
 
