@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0.4-r1.ebuild,v 1.1 2010/04/08 18:41:06 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.3.ebuild,v 1.1 2010/07/05 21:21:27 wired Exp $
 
 EAPI=3
 
@@ -33,8 +33,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}
-
-PATCHES=( "${FILESDIR}/${PN}-4.7_mcedit_fix.patch" )
 
 src_configure() {
 	local myscreen=ncurses

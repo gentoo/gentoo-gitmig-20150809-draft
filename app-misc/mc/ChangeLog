@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.200 2010/06/07 17:44:32 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.201 2010/07/05 21:21:27 wired Exp $
+
+*mc-4.7.3 (05 Jul 2010)
+*mc-4.7.0.7 (05 Jul 2010)
+
+  05 Jul 2010; Alex Alexander <wired@gentoo.org> -mc-4.7.0.2.ebuild,
+  -mc-4.7.0.2-r1.ebuild, -mc-4.7.0.4.ebuild, -mc-4.7.0.4-r1.ebuild,
+  -mc-4.7.0.5.ebuild, +mc-4.7.0.7.ebuild, -mc-4.7.1-r2.ebuild,
+  +mc-4.7.3.ebuild:
+  version bumps, removed old versions
 
 *mc-4.7.0.6 (07 Jun 2010)
 
