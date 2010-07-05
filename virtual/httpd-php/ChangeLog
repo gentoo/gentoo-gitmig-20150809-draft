@@ -1,0 +1,11 @@
+# ChangeLog for virtual/httpd-php
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.1 2010/07/05 14:05:34 mabi Exp $
+
+*httpd-php-5.3 (05 Jul 2010)
+*httpd-php-5.2 (05 Jul 2010)
+
+  05 Jul 2010; Matti Bickel <mabi@gentoo.org> +httpd-php-5.2.ebuild,
+  +httpd-php-5.3.ebuild, +metadata.xml:
+  initial import (bug #319623)
+
