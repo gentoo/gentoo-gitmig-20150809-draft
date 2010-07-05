@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.20.1-r1.ebuild,v 1.3 2010/07/03 13:08:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.20.1-r1.ebuild,v 1.4 2010/07/05 18:49:45 grobian Exp $
 
 EAPI="3"
 
@@ -80,7 +80,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.14.3-limit-gtksignal-includes.patch"
 
 	# Fix for missing NSUInteger on Darwin8 (10.4)
-	[[ ${CHOST} == *-darwin8 ]] && epatch "${FILESDIR}"/${P}-darwin8.patch
+	epatch "${FILESDIR}"/${P}-darwin8.patch
 
 	# Remove the definition of libpixbufloader_gdip_png_la_*
 	epatch "${FILESDIR}/${P}-libpixbufloader-warning.patch"
