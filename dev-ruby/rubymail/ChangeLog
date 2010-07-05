@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubymail
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.39 2009/12/20 14:15:14 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.40 2010/07/05 18:39:21 graaff Exp $
+
+*rubymail-1.0.0-r1 (04 Jul 2010)
+
+  04 Jul 2010; Hans de Graaff <graaff@gentoo.org> +rubymail-1.0.0-r1.ebuild:
+  Convert to ruby-ng
 
   20 Dec 2009; Hans de Graaff <graaff@gentoo.org> rubymail-1.0.0.ebuild:
   Remove obsolete virtual/ruby dependency.
