@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.247 2010/03/31 18:10:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.248 2010/07/05 19:26:19 ssuominen Exp $
+
+  05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> busybox-1.16.0.ebuild:
+  Remove -mminimal-toc wrt #130943.
 
   31 Mar 2010; <solar@gentoo.org> busybox-1.14.2.ebuild,
   busybox-1.15.2.ebuild, busybox-1.15.3.ebuild, busybox-1.16.0.ebuild:
