@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-oci8
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.17 2010/05/26 18:17:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.18 2010/07/05 18:52:32 graaff Exp $
+
+  05 Jul 2010; Hans de Graaff <graaff@gentoo.org> -ruby-oci8-1.0.3.ebuild,
+  -ruby-oci8-1.0.7.ebuild:
+  Remove old versions.
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org> ruby-oci8-1.0.7-r1.ebuild:
   stable amd64, bug 305993
