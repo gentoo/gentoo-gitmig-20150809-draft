@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r3.ebuild,v 1.2 2010/05/30 16:34:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r3.ebuild,v 1.3 2010/07/05 07:31:13 xarthisius Exp $
 
 inherit versionator toolchain-funcs eutils linux-info
 
@@ -26,12 +26,13 @@ CONFIG_CHECK="~TUN"
 
 src_unpack() {
 	unpack "${MY_P}.tgz"
-	epatch "${DISTDIR}"/${DEBIAN_A}
-	epatch "${FILESDIR}"/${PN}-1.1_beta6_00-linux-tuntap.patch
-	epatch "${FILESDIR}"/${PN}-1.1_beta6_01-bind-interface-name.patch
-	epatch "${FILESDIR}"/${PN}-1.1_beta6_02-warn-on-frag.patch
-	epatch "${FILESDIR}"/${PN}-1.1_beta6_03-delete-dwrite.patch
-	epatch "${FILESDIR}"/${PN}-1.1_beta6_04-delete-werror.patch
+	epatch "${DISTDIR}"/${DEBIAN_A} \
+		"${FILESDIR}"/${PN}-1.1_beta6_00-linux-tuntap.patch \
+		"${FILESDIR}"/${PN}-1.1_beta6_01-bind-interface-name.patch \
+		"${FILESDIR}"/${PN}-1.1_beta6_02-warn-on-frag.patch \
+		"${FILESDIR}"/${PN}-1.1_beta6_03-delete-dwrite.patch \
+		"${FILESDIR}"/${PN}-1.1_beta6_04-delete-werror.patch \
+		"${FILESDIR}"/${PN}-1.1_beta6_05-respect-ldflags.patch
 }
 
 src_compile() {
@@ -40,9 +41,9 @@ src_compile() {
 
 src_install() {
 	into /usr
-	dosbin nstxcd nstxd
-	dodoc README Changelog
-	doman *.8
+	dosbin nstxcd nstxd || die
+	dodoc README Changelog || die
+	doman *.8 || die
 
 	newinitd "${FILESDIR}"/nstxd.init nstxd
 	newconfd "${FILESDIR}"/nstxd.conf nstxd
