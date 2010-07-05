@@ -1,10 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0.ebuild,v 1.3 2010/07/03 08:18:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r1.ebuild,v 1.1 2010/07/05 11:36:51 jlec Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic toolchain-funcs
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit distutils eutils flag-o-matic toolchain-funcs
 
 MY_P1="CBFlib-${PV}"
 MY_P2="CBFlib_${PV}"
@@ -21,7 +25,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P1}_14Feb10.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="doc python"
 
 #RDEPEND=""
 #DEPEND="test? ( sys-process/time )"
@@ -29,7 +33,7 @@ IUSE=""
 S="${WORKDIR}/${MY_P1}"
 
 src_prepare(){
-	rm -rf Py*
+	rm -rf Py* drel* dRel* ply*
 	epatch "${FILESDIR}"/${PV}-Makefile.patch
 	cp Makefile_LINUX_gcc42 Makefile
 
@@ -51,6 +55,11 @@ src_prepare(){
 
 src_compile() {
 	emake -j1 shared || die
+
+	if use python; then
+		cd pycbf
+		distutils_src_compile
+	fi
 }
 
 # test app is borked in this version
@@ -61,7 +70,16 @@ src_compile() {
 
 src_install() {
 	insinto /usr/include/${PN}
-	doins include/* || die
+	doins include/*.h || die
 
-	dolib.so solib/* || die
+	dolib.so solib/lib* || die
+
+	dodoc README || die
+	if use doc; then
+		dohtml -r README.html html_graphics doc || die
+	fi
+	if use python; then
+		cd pycbf
+		distutils_src_install
+	fi
 }

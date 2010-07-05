@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cbflib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.10 2010/07/03 08:18:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.11 2010/07/05 11:36:51 jlec Exp $
+
+*cbflib-0.9.0-r1 (05 Jul 2010)
+
+  05 Jul 2010; Justin Lecher <jlec@gentoo.org> files/0.9.0-Makefile.patch,
+  -cbflib-0.9.0.ebuild, +cbflib-0.9.0-r1.ebuild:
+  Don't install obj files #326933; add python support
 
   03 Jul 2010; Justin Lecher <jlec@gentoo.org> cbflib-0.9.0.ebuild:
   Remove spaming during emerge
