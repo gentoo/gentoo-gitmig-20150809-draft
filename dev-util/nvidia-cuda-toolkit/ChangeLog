@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.28 2010/07/03 22:54:09 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.29 2010/07/05 12:55:49 spock Exp $
+
+  05 Jul 2010; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-3.0.ebuild, nvidia-cuda-toolkit-3.1.ebuild:
+  Add env-update calls so that the CUDA libraries are picked up by other
+  ebuilds and apps (bug #320853).
 
 *nvidia-cuda-toolkit-3.1 (03 Jul 2010)
 
