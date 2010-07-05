@@ -1,0 +1,22 @@
+From cfc31a3dc7924286e60246399957732baf1691b6 Mon Sep 17 00:00:00 2001
+From: Claude Paroz <claude@2xlibre.net>
+Date: Sat, 03 Jul 2010 20:44:08 +0000
+Subject: Fix XML syntax error in French translation
+
+Fixes bug #623477
+---
+diff --git a/gnome2-accessibility-guide/fr/fr.po b/gnome2-accessibility-guide/fr/fr.po
+index a914b7b..32d955e 100644
+--- a/gnome2-accessibility-guide/fr/fr.po
++++ b/gnome2-accessibility-guide/fr/fr.po
+@@ -8809,7 +8809,7 @@ msgid ""
+ "\"Say all\" command; reads from the current position of the caret to the end "
+ "of the document."
+ msgstr ""
+-"<keycombo><keycap>Verr. Maj</keycap><keycap>point-virgule<keycap> </"
++"<keycombo><keycap>Verr. Maj</keycap><keycap>point-virgule</keycap> </"
+ "keycombo> : commande « Tout lire », lit depuis la position actuelle du "
+ "curseur jusqu'à la fin du document."
+ 
+--
+cgit v0.8.3.1

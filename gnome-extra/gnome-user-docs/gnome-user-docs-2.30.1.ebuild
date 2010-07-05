@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.30.1.ebuild,v 1.1 2010/06/13 22:05:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/gnome-user-docs-2.30.1.ebuild,v 1.2 2010/07/05 11:54:26 pacho Exp $
+
+EAPI=2
 
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="GNOME end user documentation"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,4 +31,11 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix XML syntax error in French translation
+	epatch "${FILESDIR}/${P}-fr_FR.patch"
 }
