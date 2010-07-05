@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.50 2010/03/31 21:32:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.51 2010/07/05 19:43:34 vapier Exp $
+
+*cpufrequtils-008 (05 Jul 2010)
+
+  05 Jul 2010; Mike Frysinger <vapier@gentoo.org> +cpufrequtils-008.ebuild:
+  Version bump.
 
   31 Mar 2010; Jonathan Callen <abcd@gentoo.org> cpufrequtils-007.ebuild:
   Bump to EAPI=3, add prefix keywords
