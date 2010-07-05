@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4371 2010/07/03 22:53:09 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4372 2010/07/05 15:33:49 keytoaster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jul 2010; Tobias Heinlein <keytoaster@gentoo.org> package.mask:
+  Added overdue mask on adobe-flash for bug 322855.
 
   03 Jul 2010; Michał Januszewski <spock@gentoo.org> package.mask:
   Add a temporary mask on CUDA 3.1 until the 256 series nvidia-drivers are
