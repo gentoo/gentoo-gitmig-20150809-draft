@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.387 2010/07/05 14:10:06 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.388 2010/07/05 23:17:04 mabi Exp $
+
+  05 Jul 2010; Matti Bickel <mabi@gentoo.org> -php-5.2.9-r2.ebuild,
+  -php-5.2.10.ebuild, -php-5.2.10-r1.ebuild, -php-5.2.10-r2.ebuild,
+  -php-5.2.11.ebuild, -php-5.2.11-r1.ebuild, -php-5.2.12.ebuild:
+  remove old
 
   05 Jul 2010; Matti Bickel <mabi@gentoo.org> php-5.3.2.ebuild:
   introduced new style virtual httpd-php (bug #319623)
