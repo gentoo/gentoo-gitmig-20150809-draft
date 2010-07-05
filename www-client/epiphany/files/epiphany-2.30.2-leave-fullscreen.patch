@@ -1,0 +1,25 @@
+From 7f5202b49a8015bc09faa6e10c9f78c3e97ab83b Mon Sep 17 00:00:00 2001
+From: Diego Escalante Urrelo <descalante@igalia.com>
+Date: Mon, 01 Mar 2010 03:05:43 +0000
+Subject: ephy-toolbar: fix leave-fullscreen item visibility
+
+We were explicitely setting the separator and toolbar visibility but not the
+exit_button item. This meant the fixed_toolbar was shown but the exit_button
+remained hidden.
+
+Bug #611445
+---
+diff --git a/src/ephy-toolbar.c b/src/ephy-toolbar.c
+index a721831..9bb1e61 100644
+--- a/src/ephy-toolbar.c
++++ b/src/ephy-toolbar.c
+@@ -135,6 +135,7 @@ ephy_toolbar_update_fixed_visibility (EphyToolbar *toolbar)
+ 
+ 	show = priv->leave_fullscreen_visible;
+ 	g_object_set (priv->sep_item, "visible", show, NULL);
++	g_object_set (priv->exit_button, "visible", show, NULL);
+ 	g_object_set (priv->fixed_toolbar, "visible", show, NULL);
+ }
+ 
+--
+cgit v0.8.3.1

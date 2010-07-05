@@ -1,0 +1,50 @@
+From 0739487127652cf544257e7a0d48caa580f98ad2 Mon Sep 17 00:00:00 2001
+From: Diego Escalante Urrelo <descalante@igalia.com>
+Date: Tue, 20 Apr 2010 22:18:12 +0000
+Subject: ephy-location-entry: reenable favicons in completion
+
+Favicons in the completion popup were hidden because of an ugly flashing. It
+turns out it is caused by gtk_entry_set_icon_from_* functions. They queue a
+resize if the GtkEntry is visible, hence we see this ugly flash which is
+actually the completion obeying to the resize.
+
+The side effect is that when you start typying a new address in the location
+entry, the favicon of the current location will still be displayed. The
+previous behaviour was to set a 'text/html' icon when the user edited the
+location entry. Note that such icon will disappear as soon as you activate the
+location entry.
+
+Bug #616345
+---
+diff --git a/lib/widgets/ephy-location-entry.c b/lib/widgets/ephy-location-entry.c
+index cf34789..1f03810 100644
+--- a/lib/widgets/ephy-location-entry.c
++++ b/lib/widgets/ephy-location-entry.c
+@@ -466,8 +466,6 @@ editable_changed_cb (GtkEditable *editable,
+ 		g_regex_unref (quote_regex);
+ 	}
+ 
+-	update_favicon (entry);
+-
+ 	g_signal_emit (entry, signals[USER_CHANGED], 0);
+ }
+ 
+@@ -1253,16 +1251,11 @@ ephy_location_entry_set_completion (EphyLocationEntry *entry,
+ 	g_signal_connect_after (completion, "action-activated",
+ 				G_CALLBACK (action_activated_after_cb), entry);
+ 
+-	/* FIXME: this works fine, but the favicons seem to be
+-	 * added-removed the view constantly, and the visual effect is
+-	 * very ugly */
+-#if 0
+ 	cell = gtk_cell_renderer_pixbuf_new ();
+ 	gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (completion),
+ 				    cell, FALSE);
+ 	gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (completion),
+ 				       cell, "pixbuf", favicon_col);
+-#endif
+ 
+ 	cell = gtk_cell_renderer_text_new ();
+ 	g_object_set (cell,
+--
+cgit v0.8.3.1

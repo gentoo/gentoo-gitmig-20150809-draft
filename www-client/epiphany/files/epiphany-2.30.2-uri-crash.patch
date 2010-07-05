@@ -1,0 +1,23 @@
+From 6a4715b8a9df0bc16394c890cd734bc0601bfd03 Mon Sep 17 00:00:00 2001
+From: Gustavo Noronha Silva <gns@gnome.org>
+Date: Mon, 17 May 2010 15:17:46 +0000
+Subject: Fix crash when trying to load URIs with no path
+
+Trying to load file:, for instance, will crash Epiphany. This commit
+fixes this. See http://bugs.debian.org/554595.
+---
+diff --git a/embed/ephy-web-view.c b/embed/ephy-web-view.c
+index 2e08480..d8604cb 100644
+--- a/embed/ephy-web-view.c
++++ b/embed/ephy-web-view.c
+@@ -2688,7 +2688,7 @@ ephy_web_view_can_go_up (EphyWebView *view)
+     return FALSE;
+   }
+ 
+-  result = (uri->fragment || uri->query || strlen (uri->path) > 1);
++  result = uri->fragment || uri->query || (uri->path && (strlen (uri->path) > 1));
+   soup_uri_free (uri);
+ 
+   return result;
+--
+cgit v0.8.3.1

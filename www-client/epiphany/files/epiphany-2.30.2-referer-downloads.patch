@@ -1,0 +1,69 @@
+From b30cf3d0e24c51b0f77979af49f200bbac5bd050 Mon Sep 17 00:00:00 2001
+From: Mario Sanchez Prada <msanchez@igalia.com>
+Date: Wed, 14 Apr 2010 16:06:36 +0000
+Subject: Send 'Referer' on headers sent for context menu HTTP downloads
+
+Make sure the EphyEmbedPersist object is created specifying the
+EphyEmbed object, and create the network request inside of it
+using the URL from the associated web view as 'Referer'
+
+Bug #136292
+
+Signed-off-by: Xan Lopez <xan@gnome.org>
+---
+diff --git a/embed/ephy-embed-persist.c b/embed/ephy-embed-persist.c
+index 44910fe..8ee3df3 100644
+--- a/embed/ephy-embed-persist.c
++++ b/embed/ephy-embed-persist.c
+@@ -763,7 +763,36 @@ ephy_embed_persist_save (EphyEmbedPersist *persist)
+ 	 */
+ 	g_object_ref (persist);
+ 
+-	request = webkit_network_request_new (priv->source);
++	if (priv->embed)
++	{
++		EphyWebView *web_view;
++		SoupMessage *msg;
++		gchar *referer;
++
++		/* Get the webview associated to the embed */
++		web_view = ephy_embed_get_web_view (priv->embed);
++
++		/* Create the request with a SoupMessage to allow
++		   setting the 'Referer' as got from the embed */
++		msg = soup_message_new (SOUP_METHOD_GET, priv->source);
++		request = WEBKIT_NETWORK_REQUEST (
++			g_object_new (WEBKIT_TYPE_NETWORK_REQUEST,
++				      "message", msg,
++				      NULL));
++
++		/* Add the referer to the request headers */
++		referer = ephy_web_view_get_location (web_view, FALSE);
++		soup_message_headers_append (msg->request_headers,
++					     "Referer", referer);
++		g_free (referer);
++		g_object_unref (msg);
++	}
++	else
++	{
++		/* Create a normal network request otherwise */
++		request = webkit_network_request_new (priv->source);
++	}
++
+ 	priv->download = webkit_download_new (request);
+ 	g_object_unref (request);
+ 
+diff --git a/src/popup-commands.c b/src/popup-commands.c
+index 8930d83..c620d08 100644
+--- a/src/popup-commands.c
++++ b/src/popup-commands.c
+@@ -237,6 +237,7 @@ save_property_url (GtkAction *action,
+ 	ephy_embed_persist_set_persist_key
+ 		(persist, CONF_STATE_SAVE_DIR);
+ 	ephy_embed_persist_set_source (persist, location);
++	ephy_embed_persist_set_embed (persist, embed);
+ 
+ 	g_signal_connect (persist, "completed",
+ 			  G_CALLBACK (save_property_url_completed_cb), NULL);
+--
+cgit v0.8.3.1
