@@ -1,0 +1,138 @@
+=== modified file 'CMakeLists.txt'
+--- CMakeLists.txt	2010-07-01 01:24:10 +0000
++++ CMakeLists.txt	2010-07-04 16:57:13 +0000
+@@ -123,9 +123,9 @@
+ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wnon-virtual-dtor -Woverloaded-virtual -pipe -fvisibility=hidden")
+ SET(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -DEXPENSIVE_DEBUG")
+ SET(CMAKE_CXX_FLAGS_PROFILE "-g -pg -O2")
+-SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
+-SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-g -O2")
+-SET(CMAKE_CXX_FLAGS_DEBIAN "-O2")
++SET(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
++SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-g -O2 -DNDEBUG")
++SET(CMAKE_CXX_FLAGS_DEBIAN "-O2 -DNDEBUG")
+ 
+ ADD_DEFINITIONS(-DDATADIR="${CMAKE_INSTALL_PREFIX}/share/lightspark")
+ 
+
+=== modified file 'abc_opcodes.cpp'
+--- abc_opcodes.cpp	2010-06-20 15:00:39 +0000
++++ abc_opcodes.cpp	2010-07-04 16:57:13 +0000
+@@ -644,11 +644,15 @@
+ 		ret=Class<ASObject>::getInstanceS();
+ 		if(sf->mi->body)
+ 		{
++#ifndef NDEBUG
+ 			ret->initialized=false;
++#endif
+ 			LOG(LOG_CALLS,"Building method traits");
+ 			for(unsigned int i=0;i<sf->mi->body->trait_count;i++)
+ 				th->context->buildTrait(ret,&sf->mi->body->traits[i],false);
++#ifndef NDEBUG
+ 			ret->initialized=true;
++#endif
+ 			ret->incRef();
+ 			assert_and_throw(sf->closure_this==NULL);
+ 			ASObject* ret2=sf->call(ret,args,m,0);
+@@ -1913,11 +1917,15 @@
+ 		ret=Class<ASObject>::getInstanceS();
+ 		if(sf->mi->body)
+ 		{
++#ifndef NDEBUG
+ 			ret->initialized=false;
++#endif
+ 			LOG(LOG_CALLS,"Building method traits");
+ 			for(unsigned int i=0;i<sf->mi->body->trait_count;i++)
+ 				th->context->buildTrait(ret,&sf->mi->body->traits[i],false);
++#ifndef NDEBUG
+ 			ret->initialized=true;
++#endif
+ 			ret->incRef();
+ 			assert_and_throw(sf->closure_this==NULL);
+ 			ASObject* ret2=sf->call(ret,args,m,0);
+@@ -2181,10 +2189,14 @@
+ 	//TODO: Should create a real activation object
+ 	//TODO: Should method traits be added to the activation context?
+ 	ASObject* act=Class<ASObject>::getInstanceS();
++#ifndef NDEBUG
+ 	act->initialized=false;
++#endif
+ 	for(unsigned int i=0;i<info->body->trait_count;i++)
+ 		th->context->buildTrait(act,&info->body->traits[i],false);
++#ifndef NDEBUG
+ 	act->initialized=true;
++#endif
+ 
+ 	return act;
+ }
+
+=== modified file 'asobjects.cpp'
+--- asobjects.cpp	2010-06-30 01:41:37 +0000
++++ asobjects.cpp	2010-07-04 16:57:13 +0000
+@@ -1727,7 +1727,9 @@
+ 	}*/
+ 	if(buildAndLink)
+ 	{
++	#ifndef NDEBUG
+ 		assert_and_throw(!target->initialized);
++	#endif
+ 		//HACK: suppress implementation handling of variables just now
+ 		bool bak=target->implEnable;
+ 		target->implEnable=false;
+
+=== modified file 'swf.cpp'
+--- swf.cpp	2010-07-03 21:26:00 +0000
++++ swf.cpp	2010-07-04 16:57:13 +0000
+@@ -653,7 +653,7 @@
+ 			break;
+ 		case ButtonPress:
+ 		{
+-			cout << "Press" << endl;
++			//cout << "Press" << endl;
+ 			Locker locker(th->mutexListeners);
+ 			th->m_sys->renderThread->requestInput();
+ 			float selected=th->m_sys->renderThread->getIdAt(xevent->xbutton.x,xevent->xbutton.y);
+@@ -674,7 +674,7 @@
+ 		}
+ 		case ButtonRelease:
+ 		{
+-			cout << "Release" << endl;
++			//cout << "Release" << endl;
+ 			Locker locker(th->mutexListeners);
+ 			sys->renderThread->requestInput();
+ 			float selected=sys->renderThread->getIdAt(xevent->xbutton.x,xevent->xbutton.y);
+
+=== modified file 'swftypes.cpp'
+--- swftypes.cpp	2010-06-30 01:23:30 +0000
++++ swftypes.cpp	2010-07-04 16:57:13 +0000
+@@ -263,7 +263,9 @@
+ void ASObject::setGetterByQName(const tiny_string& name, const tiny_string& ns, IFunction* o)
+ {
+ 	check();
++#ifndef NDEBUG
+ 	assert_and_throw(!initialized);
++#endif
+ 	//Getters are inserted with the current level of the prototype chain
+ 	int level=cur_level;
+ 	obj_var* obj=Variables.findObjVar(name,ns,level,true,false);
+@@ -279,7 +281,9 @@
+ void ASObject::setSetterByQName(const tiny_string& name, const tiny_string& ns, IFunction* o)
+ {
+ 	check();
++#ifndef NDEBUG
+ 	assert_and_throw(!initialized);
++#endif
+ 	//Setters are inserted with the current level of the prototype chain
+ 	int level=cur_level;
+ 	obj_var* obj=Variables.findObjVar(name,ns,level,true,false);
+@@ -579,7 +583,9 @@
+ void ASObject::initSlot(unsigned int n,const tiny_string& name, const tiny_string& ns)
+ {
+ 	//Should be correct to use the level on the prototype chain
++#ifndef NDEBUG
+ 	assert_and_throw(!initialized);
++#endif
+ 	Variables.initSlot(n,cur_level,name,ns);
+ }
+ 
+
