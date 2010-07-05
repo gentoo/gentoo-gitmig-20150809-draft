@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.85 2010/06/19 00:34:18 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.86 2010/07/05 08:38:59 ssuominen Exp $
+
+  05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> unixODBC-2.3.0.ebuild:
+  ppc64 stable wrt #320711
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> unixODBC-2.2.12.ebuild:
   Moving dev-util/cvs* to dev-vcs/cvs*
@@ -14,13 +17,6 @@
 
   24 May 2010; <nixnut@gentoo.org> unixODBC-2.3.0.ebuild:
   ppc stable #320711
-
-  03 May 2010; Samuli Suominen <ssuominen@gentoo.org> unixODBC-2.3.0.ebuild,
-  metadata.xml:
-  New USE flag odbcmanual to control documentation installation (we don't
-  want to pollute USE doc). Link to unixODBC Qt4 GUI project. Install PREFIX
-  related docs only when required. Make ebuild readable and leave it to
-  maintainer-needed.
 
   02 May 2010; Samuli Suominen <ssuominen@gentoo.org> unixODBC-2.3.0.ebuild:
   Pass --disable-drivers and --disable-driver-conf per upstream default in
