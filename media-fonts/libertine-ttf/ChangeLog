@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/libertine-ttf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.24 2009/04/26 19:18:35 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.25 2010/07/05 03:19:25 dirtyepic Exp $
+
+*libertine-ttf-4.7.5 (05 Jul 2010)
+
+  05 Jul 2010; Ryan Hill <dirtyepic@gentoo.org>
+  -libertine-ttf-2.8.14.ebuild, -libertine-ttf-4.1.8.ebuild,
+  +libertine-ttf-4.7.5.ebuild:
+  Version bump. (bug #324455 by Lars Wendler)
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> libertine-ttf-4.4.1.ebuild:
   stable ppc, bug 267040
