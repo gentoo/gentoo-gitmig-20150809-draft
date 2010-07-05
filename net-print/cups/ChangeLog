@@ -1,6 +1,6 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.385 2010/07/04 11:09:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.386 2010/07/05 18:47:34 tove Exp $
 
   04 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   cups-1.3.11-r2.ebuild:
@@ -52,7 +52,7 @@
   -cups-1.4.2.ebuild, +cups-1.4.2-r1.ebuild,
   +files/cups-1.4.2-str3200.patch:
   Revbumps fixing security issue CVE-2009-3553. Fix linguas handling bug
-  #293217 thanks to RafaÅ MuÅ¼yÅo, remove zeroconf of cups 1.4 since it's
+  #293217 thanks to Rafał Mużyło, remove zeroconf of cups 1.4 since it's
   missing an avahi implementation, bug #293295. Remove old.
 
   24 Nov 2009; Jeroen Roovers <jer@gentoo.org> cups-1.3.11-r1.ebuild:
@@ -61,7 +61,7 @@
   23 Nov 2009; Brent Baude <ranger@gentoo.org> cups-1.3.11-r1.ebuild:
   Marking cups-1.3.11-r1 ppc64 for bug 293865
 
-  23 Nov 2009; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.11-r1.ebuild:
+  23 Nov 2009; Raúl Porcel <armin76@gentoo.org> cups-1.3.11-r1.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #293865
 
   23 Nov 2009; Markus Meier <maekke@gentoo.org> cups-1.3.11-r1.ebuild:
@@ -107,7 +107,7 @@
   <arfrever@gentoo.org> in bug #275685. Tested on a Core2 Duo with a Hewlett
   Packard 4250dtn.
 
-  12 Jul 2009; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.10-r2.ebuild:
+  12 Jul 2009; Raúl Porcel <armin76@gentoo.org> cups-1.3.10-r2.ebuild:
   arm/ia64/m68k/s390/sh stable wrt #275685
 
 *cups-1.3.11 (08 Jul 2009)
@@ -154,7 +154,7 @@
   21 Apr 2009; Tobias Klausmann <klausman@gentoo.org> cups-1.3.10:
   Stable on alpha, bug #263070
 
-  20 Apr 2009; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.10.ebuild:
+  20 Apr 2009; Raúl Porcel <armin76@gentoo.org> cups-1.3.10.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #263070
 
   18 Apr 2009; Jeroen Roovers <jer@gentoo.org> cups-1.3.10:
@@ -184,13 +184,13 @@
   cups-1.3.9-r1.ebuild:
   Update dependencies w.r.t. bug 264230, fully-split-out poppler transition.
 
-  09 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.9-r1.ebuild:
+  09 Mar 2009; Raúl Porcel <armin76@gentoo.org> cups-1.3.9-r1.ebuild:
   Add workaround for sh
 
   11 Dec 2008; Tobias Klausmann <klausman@gentoo.org> cups-1.3.9-r1.ebuild:
   Stable on alpha, bug #249727
 
-  10 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.9-r1.ebuild:
+  10 Dec 2008; Raúl Porcel <armin76@gentoo.org> cups-1.3.9-r1.ebuild:
   arm/ia64 stable wrt #249727
 
   09 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> cups-1.3.9-r1.ebuild:
@@ -234,7 +234,7 @@
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> Manifest:
   Fixed manifest for cups-1.3.8-source.tar.bz2
 
-  09 Nov 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.8-r2.ebuild:
+  09 Nov 2008; Raúl Porcel <armin76@gentoo.org> cups-1.3.8-r2.ebuild:
   ia64 stable
 
   08 Nov 2008; Tobias Klausmann <klausman@gentoo.org> cups-1.3.8-r2.ebuild:
@@ -271,7 +271,7 @@
   12 Sep 2008; Markus Meier <maekke@gentoo.org> cups-1.3.8-r1.ebuild:
   x86 stable, bug #235907
 
-  08 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.8-r1.ebuild:
+  08 Sep 2008; Raúl Porcel <armin76@gentoo.org> cups-1.3.8-r1.ebuild:
   ia64 stable wrt #235907
 
   06 Sep 2008; nixnut <nixnut@gentoo.org> cups-1.3.8-r1.ebuild:
@@ -280,7 +280,7 @@
   02 Sep 2008; Ferris McCormick <fmccor@gentoo.org> cups-1.3.8-r1.ebuild:
   Sparc stable, Bug #235907.
 
-  01 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.8-r1.ebuild:
+  01 Sep 2008; Raúl Porcel <armin76@gentoo.org> cups-1.3.8-r1.ebuild:
   Fix SRC_URI
 
   01 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
@@ -337,7 +337,7 @@
   12 May 2008; Brent Baude <ranger@gentoo.org> cups-1.3.7-r1.ebuild:
   stable ppc, bug 221065
 
-  12 May 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.3.7-r1.ebuild:
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> cups-1.3.7-r1.ebuild:
   alpha/ia64/sparc stable wrt #221065
 
   12 May 2008; Jeroen Roovers <jer@gentoo.org> cups-1.3.7-r1.ebuild:
@@ -346,7 +346,7 @@
   11 May 2008; Markus Rothe <corsair@gentoo.org> cups-1.3.7-r1.ebuild:
   Stable on ppc64; bug #221065
 
-  17 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.12-r8.ebuild:
+  17 Apr 2008; Raúl Porcel <armin76@gentoo.org> cups-1.2.12-r8.ebuild:
   ia64 stable
 
   17 Apr 2008; Markus Meier <maekke@gentoo.org> cups-1.2.12-r8.ebuild:
@@ -390,7 +390,7 @@
   -cups-1.3.6-r1.ebuild, -cups-1.3.6-r2.ebuild, cups-1.3.6-r3.ebuild:
   gimp-print -> gutenprint
 
-  02 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.12-r7.ebuild:
+  02 Apr 2008; Raúl Porcel <armin76@gentoo.org> cups-1.2.12-r7.ebuild:
   ia64 stable
 
 *cups-1.3.6-r3 (01 Apr 2008)
@@ -418,7 +418,7 @@
   22 Mar 2008; Tobias Klausmann <klausman@gentoo.org> cups-1.2.12-r6.ebuild:
   Stable on alpha, bug #212364
 
-  22 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.12-r6.ebuild:
+  22 Mar 2008; Raúl Porcel <armin76@gentoo.org> cups-1.2.12-r6.ebuild:
   ia64 stable wrt #212364
 
 *cups-1.3.6-r2 (19 Mar 2008)
@@ -440,7 +440,7 @@
   02 Mar 2008; Markus Rothe <corsair@gentoo.org> cups-1.2.12-r5.ebuild:
   Stable on ppc64; bug #211449
 
-  02 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.12-r5.ebuild:
+  02 Mar 2008; Raúl Porcel <armin76@gentoo.org> cups-1.2.12-r5.ebuild:
   alpha/ia64 stable wrt #211449
 
   29 Feb 2008; Ferris McCormick <fmccor@gentoo.org> cups-1.2.12-r5.ebuild:
@@ -491,7 +491,7 @@
   Add cups ebuilds with security fixes for bug #201042 and bug #201570.
   Cleanup older ones.
 
-  10 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.12-r3.ebuild:
+  10 Dec 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.12-r3.ebuild:
   alpha/ia64 stable wrt security #199195
 
   10 Dec 2007; Ferris McCormick <fmccor@gentoo.org> cups-1.2.12-r3.ebuild:
@@ -534,7 +534,7 @@
   Revbump to fix remaining broken init scripts out there, fixes bug #198661.
   Thanks vapier for the fix.
 
-  10 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.12-r2.ebuild:
+  10 Nov 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.12-r2.ebuild:
   alpha/ia64 stable wrt #196736
 
   09 Nov 2007; Mike Frysinger <vapier@gentoo.org> cups-1.3.4-r1.ebuild:
@@ -628,10 +628,10 @@
   Fix pdftops with poppler-0.6 thanks to Christian Aistleitner <tmgisi@gmx.at>
   in bug 195278
 
-  07 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
+  07 Aug 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
   ia64 stable wrt #180906
 
-  21 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
+  21 Jul 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
   alpha stable wrt #180909, thanks to Brian Evans and Tobias Klausmann for
   testing
 
@@ -657,7 +657,7 @@
   cups-1.2.10-r1.ebuild:
   stable x86, bug 180909
 
-  06 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
+  06 Jun 2007; Raúl Porcel <armin76@gentoo.org> cups-1.2.10-r1.ebuild:
   Restore ~x86 as it needs some dep that isn't stable
 
   06 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
@@ -828,7 +828,7 @@
 
   19 Aug 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.2.ebuild:
   make gnutls mandatory because it does not work with openssl, thanks to
-  Jari-Matti MÃ¤kelÃ¤ <jmjmak@utu.fi> and Bret Towe <magnade@gmail.com> in bug
+  Jari-Matti Mäkelä <jmjmak@utu.fi> and Bret Towe <magnade@gmail.com> in bug
   138275
 
   18 Aug 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.1.23-r8.ebuild,
@@ -954,18 +954,18 @@
   08 May 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.0_pre.ebuild:
   Add libpaper depend and remove config file sed
 
-  08 May 2006; Diego PettenÃ² <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
+  08 May 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
   Provide a lpadmin group as debian does, and use that as system group for
   cups. Restrict test instead of providing a fake src_test.
 
-  07 May 2006; Diego PettenÃ² <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
+  07 May 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
   Install inside /usr/libexec to workaround multilib problems, and fix
   cups-config file, too.
 
-  07 May 2006; Diego PettenÃ² <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
+  07 May 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
   Make sure that the cups-lpd xinetd file is safe for FreeBSD, too.
 
-  06 May 2006; Diego PettenÃ² <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
+  06 May 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.2.0_pre.ebuild:
   Fix SERVERBIN path and fix multilib-strictness. Add optional dbus useflag.
 
 *cups-1.2.0_pre (05 May 2006)
@@ -974,10 +974,10 @@
   +cups-1.2.0_pre.ebuild:
   Preview version of cups-1.2, masked for now
 
-  02 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org> cups-1.1.23-r7.ebuild:
+  02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.1.23-r7.ebuild:
   Fix nls dependencies and add ~x86-fbsd keyword.
 
-  18 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  18 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/cups-1.1.23-respectldflags.patch, cups-1.1.23-r7.ebuild:
   Add patch to respect LDFLAGS while building shared libraries.
 
@@ -993,7 +993,7 @@
   Add post-einfo note suggesting to emerge ghsotscript with USE=cups thanks to
   Corvus Corax <corvus-gentoo@cybertrench.com> in bug 96985
 
-  13 Jan 2006; Diego PettenÃ² <flameeyes@gentoo.org> cups-1.1.23-r7.ebuild:
+  13 Jan 2006; Diego Pettenò <flameeyes@gentoo.org> cups-1.1.23-r7.ebuild:
   The name of the function is bindnow-flags, not bindnow_flags.
 
   13 Jan 2006; Mark Loeser <halcy0n@gentoo.org> cups-1.1.23-r7.ebuild:
@@ -1128,7 +1128,7 @@
   20 Jan 2005; Markus Rothe <corsair@gentoo.org> cups-1.1.23-r1.ebuild:
   Stable on ppc64; bug #78249
 
-  20 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> cups-1.1.23-r1.ebuild:
+  20 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> cups-1.1.23-r1.ebuild:
   Stable on alpha, bug 78249.
 
   20 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> :
@@ -1146,7 +1146,7 @@
   19 Jan 2005; Joshua Kinard <kumba@gentoo.org> cups-1.1.23.ebuild:
   Marked stable on mips.
 
-  11 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org> cups-1.1.23.ebuild:
+  11 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> cups-1.1.23.ebuild:
   Stable on alpha, bug 77023.
 
   11 Jan 2005; Guy Martin <gmsoft@gentoo.org> cups-1.1.23.ebuild:
@@ -1182,7 +1182,7 @@
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
-  27 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> cups-1.1.23_rc1.ebuild:
+  27 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> cups-1.1.23_rc1.ebuild:
   Stable on alpha, bug 74479.
 
   27 Dec 2004; <SeJo@gentoo.org> cups-1.1.23_rc1.ebuild:
@@ -1211,7 +1211,7 @@
   04 Nov 2004; Travis Tilley <lv@gentoo.org> cups-1.1.20-r5.ebuild:
   stable on amd64
 
-  03 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> cups-1.1.20-r5.ebuild:
+  03 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> cups-1.1.20-r5.ebuild:
   Stable on alpha, bug 69662.
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> cups-1.1.20-r5.ebuild:
@@ -1251,7 +1251,7 @@
   07 Oct 2004; Lars Weiler <pylon@gentoo.org> cups-1.1.20-r3.ebuild:
   Stable on ppc as requested in bug #66501.
 
-  07 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> cups-1.1.20-r3.ebuild:
+  07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> cups-1.1.20-r3.ebuild:
   Stable on alpha, bug 66501.
 
   06 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> cups-1.1.20-r3.ebuild:
@@ -1272,7 +1272,7 @@
   18 Sep 2004; Thomas Matthijs <axxo@gentoo.org> cups-1.1.21.ebuild:
   Added some more mirrors since i was unable to fetch it
 
-  17 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> cups-1.1.20-r2.ebuild:
+  17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> cups-1.1.20-r2.ebuild:
   Stable on alpha, bug 64168.
 
   17 Sep 2004; <SeJo@gentoo.org> cups-1.1.20-r2.ebuild:
