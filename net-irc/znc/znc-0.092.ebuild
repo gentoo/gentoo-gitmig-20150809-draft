@@ -1,6 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.076.ebuild,v 1.2 2009/12/28 20:35:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.092.ebuild,v 1.1 2010/07/05 21:58:38 wired Exp $
+
+EAPI=2
+
+inherit base
 
 DESCRIPTION="An advanced IRC Bouncer"
 HOMEPAGE="http://znc.sourceforge.net"
@@ -9,31 +13,33 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="ares debug ipv6 nomodules perl ssl sasl"
+IUSE="ares debug extras ipv6 perl ssl sasl tcl"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.7d )
+DEPEND="
+	ares? ( net-dns/c-ares )
 	perl? ( dev-lang/perl )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	ares? ( net-dns/c-ares )"
+	ssl? ( >=dev-libs/openssl-0.9.7d )
+	tcl? ( dev-lang/tcl )
+"
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	econf \
-		$(use_enable debug) \
-		$(use_enable ipv6) \
-		$(use_enable !nomodules modules) \
-		$(use_enable perl) \
-		$(use_enable ssl openssl) \
-		$(use_enable sasl) \
 		$(use_enable ares c-ares) \
+		$(use_enable debug) \
+		$(use_enable extras extra) \
+		$(use_enable ipv6) \
+		$(use_enable perl) \
+		$(use_enable sasl) \
+		$(use_enable ssl openssl) \
+		$(use_enable tcl tcl) \
 		|| die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed."
-	dodoc AUTHORS znc.conf || die "dodoc failed"
+	dodoc AUTHORS README || die "dodoc failed"
 }
 
 pkg_postinst() {
