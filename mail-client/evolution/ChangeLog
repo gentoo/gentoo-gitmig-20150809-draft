@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.295 2010/06/23 14:05:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.296 2010/07/05 21:38:09 pacho Exp $
+
+*evolution-2.30.2-r1 (05 Jul 2010)
+
+  05 Jul 2010; Pacho Ramos <pacho@gentoo.org> -evolution-2.30.2.ebuild,
+  +evolution-2.30.2-r1.ebuild, -files/evolution-2.30.2-call-function.patch,
+  -files/evolution-2.30.2-drag-message.patch,
+  -files/evolution-2.30.2-proper-faq.patch:
+  Revision bump to include more upstream fixes, this will also fix itip
+  segfaults (bug #324895 by Iain) and fix e-d-s dependencies (bug #325453 by
+  Priit Laes). Remove old testing.
 
 *evolution-2.30.2 (23 Jun 2010)
 
