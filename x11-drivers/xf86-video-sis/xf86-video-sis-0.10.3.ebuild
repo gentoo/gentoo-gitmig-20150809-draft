@@ -1,17 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/xf86-video-sis-0.10.3.ebuild,v 1.1 2010/07/05 08:40:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/xf86-video-sis-0.10.3.ebuild,v 1.2 2010/07/05 08:42:31 scarabeus Exp $
 
-EAPI="2"
-
-# Must be before x-modular eclass is inherited
-#SNAPSHOT="yes"
-
-inherit x-modular
+EAPI=3
+inherit xorg-2
 
 DESCRIPTION="SiS and XGI video driver"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
 IUSE="dri"
+
 RDEPEND="dri? ( x11-base/xorg-server[-minimal] )
 	!dri? ( x11-base/xorg-server )
 "
