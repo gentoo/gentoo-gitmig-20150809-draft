@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ots
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.27 2008/07/14 16:55:56 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.28 2010/07/05 17:35:51 ssuominen Exp $
+
+  05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> ots-0.5.0.ebuild:
+  Keyword ~ppc64 wrt #316219
 
   14 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org> +ots-0.4.2.ebuild:
   resurrect ots-0.4.2.ebuild which is still used by
