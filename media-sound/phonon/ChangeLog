@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.53 2010/06/27 08:00:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.54 2010/07/05 14:12:19 ssuominen Exp $
+
+  05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  phonon-4.4.1-r1.ebuild:
+  Raise Qt4 depend to 4.6.0 wrt #326859.
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   phonon-4.4.1-r1.ebuild:
