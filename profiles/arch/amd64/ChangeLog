@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.94 2010/07/01 10:50:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.95 2010/07/05 19:40:46 halcy0n Exp $
+
+  05 Jul 2010; Mark Loeser <halcy0n@gentoo.org> +package.mask:
+  adobe-flash-10.0 has been masked for security reasons, which huludesktop
+  depends upon
 
   01 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Correct masking sys-cluster/pacemaker[heartbeat]
