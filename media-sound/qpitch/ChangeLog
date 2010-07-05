@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qpitch
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qpitch/ChangeLog,v 1.2 2009/08/15 08:23:18 hwoarang Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qpitch/ChangeLog,v 1.3 2010/07/05 16:34:03 reavertm Exp $
+
+  05 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org> qpitch-1.0.1.ebuild:
+  DOCS is array now.
 
   15 Aug 2009; Markos Chandras <hwoarang@gentoo.org> qpitch-1.0.1.ebuild:
   Update homepage
