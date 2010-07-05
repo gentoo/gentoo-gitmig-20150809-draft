@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.432 2010/07/04 01:44:11 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.433 2010/07/05 22:22:20 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -248,7 +248,7 @@ gcc_get_s_dir() {
 #	SPECS_GCC_VER
 #			This is for the minispecs files included in the hardened gcc-4.x
 #			The specs files for hardenedno*, vanilla and for building the "specs" file.
-#			SPECS_VER is expected to be the version of this patch, SPECS_GCC_VER 
+#			SPECS_VER is expected to be the version of this patch, SPECS_GCC_VER
 #			the gcc version of the patch.
 #			An example:
 #					SPECS_VER="8.7.6.5"
@@ -345,7 +345,7 @@ get_gcc_src_uri() {
 	[[ -n ${PIE_VER} ]] && \
 		PIE_CORE=${PIE_CORE:-gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2} && \
 		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls ${PIE_CORE})"
-		
+
 	# gcc minispec for the hardened gcc 4 compiler
 	[[ -n ${SPECS_VER} ]] && \
 		GCC_SRC_URI="${GCC_SRC_URI} $(gentoo_urls gcc-${SPECS_GCC_VER}-specs-${SPECS_VER}.tar.bz2)"
@@ -754,10 +754,10 @@ copy_minispecs_gcc_specs() {
 	if hardened_gcc_works ; then
 		create_gcc_env_entry hardenednopiessp
 	fi
-	if hardened_gcc_works pie ; then 
+	if hardened_gcc_works pie ; then
 		create_gcc_env_entry hardenednopie
 	fi
-	if hardened_gcc_works ssp ; then 
+	if hardened_gcc_works ssp ; then
 		create_gcc_env_entry hardenednossp
 	fi
 	create_gcc_env_entry vanilla
@@ -770,7 +770,7 @@ copy_minispecs_gcc_specs() {
 		$(XGCC) -dumpspecs > "${WORKDIR}"/specs/specs
 		cat "${WORKDIR}"/build.specs >> "${WORKDIR}"/specs/specs
 		doins "${WORKDIR}"/specs/specs || die "failed to install the specs file"
-	fi	
+	fi
 }
 add_profile_eselect_conf() {
 	local compiler_config_file=$1
@@ -1267,8 +1267,8 @@ gcc-compiler-configure() {
 		#
 		#  --with-python-dir=DIR
 		#    Specifies where to install the Python modules used for aot-compile. DIR
-		#  should not include the prefix used in installation. For example, if the 
-		#  Python modules are to be installed in /usr/lib/python2.5/site-packages, 
+		#  should not include the prefix used in installation. For example, if the
+		#  Python modules are to be installed in /usr/lib/python2.5/site-packages,
 		#  then –with-python-dir=/lib/python2.5/site-packages should be passed.
 		#
 		# This should translate into "/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}/python"
@@ -1748,7 +1748,7 @@ gcc_src_compile() {
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
 
-	# For hardened gcc 4.3 piepatchset to build the hardened specs 
+	# For hardened gcc 4.3 piepatchset to build the hardened specs
 	# file (build.specs) to use when building gcc.
 	if ! tc_version_is_at_least 4.4 && want_minispecs ; then
 		setup_minispecs_gcc_build_specs
