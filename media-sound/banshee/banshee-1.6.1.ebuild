@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.6.1.ebuild,v 1.1 2010/06/18 19:51:56 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.6.1.ebuild,v 1.2 2010/07/05 22:07:36 pacho Exp $
 
 EAPI=2
 
@@ -21,10 +21,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test wikipedia youtube"
 
+# Hal is required until upstream bug 612616 is solved
 RDEPEND=">=dev-lang/mono-2.4.3
 	gnome-base/gnome-settings-daemon
 	x11-themes/gnome-icon-theme
 	sys-apps/dbus
+	sys-apps/hal
 	>=dev-dotnet/gtk-sharp-2.12
 	>=dev-dotnet/gconf-sharp-2.24.0
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1
