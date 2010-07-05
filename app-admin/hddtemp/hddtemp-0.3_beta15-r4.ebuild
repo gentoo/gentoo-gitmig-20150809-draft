@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r4.ebuild,v 1.1 2009/07/03 19:24:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r4.ebuild,v 1.2 2010/07/05 13:17:20 spock Exp $
 
 inherit eutils autotools
 
@@ -66,6 +66,9 @@ src_install() {
 pkg_postinst() {
 	einfo "In order to update your hddtemp database, run:"
 	einfo "  update-hddtemp.db"
+	einfo "If your hard drive is not recognized by hddtemp, please consider"
+	einfo "submitting your HDD info for inclusion into the Gentoo hddtemp"
+	einfo "database by filing a bug at https://bugs.gentoo.org/"
 }
 
 update_db() {

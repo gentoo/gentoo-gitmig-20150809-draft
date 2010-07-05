@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.86 2010/06/23 22:23:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.87 2010/07/05 13:17:20 spock Exp $
+
+  05 Jul 2010; Michał Januszewski <spock@gentoo.org>
+  hddtemp-0.3_beta15-r4.ebuild, files/update-hddtemp.db:
+  Display info about the gentoo HDD database in the ebuild. Make
+  update-hddtemp.db try to fetch the latest version of the Gentoo database
+  from the web. Thanks to Peter Gantner for these useful suggestions (bug
+  #324563).
 
   23 Jun 2010; <spock@gentoo.org> files/hddgentoo.db:
   Add two additional hdd DB entries from bug #324213.
