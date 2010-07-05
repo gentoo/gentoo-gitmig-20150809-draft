@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.5 2010/07/03 12:11:48 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.6 2010/07/05 22:01:20 mr_bones_ Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ src_unpack(){
 	cd "${S}"
 	# fix for deprecated macro in GTK+-2.14 and later
 	epatch "${FILESDIR}"/xdx-2.4-gtk.patch
-	# fix for bug #326627 - deprecated macro in gtk+ from 2.20 on 
+	# fix for bug #326627 - deprecated macro in gtk+ from 2.20 on
 	if has_version ">=x11-libs/gtk+-2.20" ; then
 		epatch "${FILESDIR}"/${PN}-gtk-2.20.patch
 	fi
