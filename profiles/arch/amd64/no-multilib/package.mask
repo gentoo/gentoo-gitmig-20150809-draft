@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.82 2010/06/18 18:24:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.83 2010/07/05 22:05:19 hwoarang Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -158,6 +158,7 @@ media-fonts/acroread-asianfonts
 media-gfx/picasa
 media-libs/realcodecs
 media-libs/win32codecs
+media-plugins/mythnetvision
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/ventrilo-server-bin
