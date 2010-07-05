@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/eventlog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.41 2009/11/18 17:54:22 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.42 2010/07/05 16:05:07 mr_bones_ Exp $
+
+*eventlog-0.2.12 (05 Jul 2010)
+
+  05 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +eventlog-0.2.12.ebuild:
+  version bump
 
   18 Nov 2009; Brent Baude <ranger@gentoo.org> eventlog-0.2.10.ebuild:
   Marking eventlog-0.2.10 ppc64 for bug 289958
