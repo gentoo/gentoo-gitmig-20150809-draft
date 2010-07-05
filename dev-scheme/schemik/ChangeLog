@@ -1,0 +1,10 @@
+# ChangeLog for dev-scheme/schemik
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schemik/ChangeLog,v 1.1 2010/07/05 00:45:38 chiiph Exp $
+
+*schemik-1.2.40.0 (05 Jul 2010)
+
+  05 Jul 2010; Tomas Touceda <chiiph@gentoo.org> +schemik-1.2.40.0.ebuild,
+  +metadata.xml:
+  Schemik initial commit. Thanks to Petr Pisar for the ebuild
+
