@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.14.201005041005.ebuild,v 1.1 2010/06/04 01:02:36 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.14.201005041005.ebuild,v 1.2 2010/07/05 13:39:29 blueness Exp $
 
 EAPI=2
 
@@ -10,13 +10,12 @@ MY_PV="$(replace_version_separator 3 -)"
 
 DESCRIPTION="Administrative interface for the grsecurity Role Based Access Control system"
 HOMEPAGE="http://www.grsecurity.net/"
-#SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.gz"
-SRC_URI="http://grsecurity.org/stable/${PN}-${MY_PV}.tar.gz"
+SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="-pam"
+IUSE="pam"
 
 RDEPEND=""
 DEPEND="sys-devel/bison
