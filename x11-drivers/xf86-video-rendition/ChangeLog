@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-rendition
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-rendition/ChangeLog,v 1.49 2010/07/05 08:28:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-rendition/ChangeLog,v 1.50 2010/07/05 08:30:32 scarabeus Exp $
+
+  05 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/rendition.xinf:
+  Drop useless patch
 
 *xf86-video-rendition-4.2.4 (05 Jul 2010)
 
