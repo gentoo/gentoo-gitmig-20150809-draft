@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.4-r1.ebuild,v 1.5 2010/07/06 14:24:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.4-r1.ebuild,v 1.6 2010/07/06 14:41:06 polynomial-c Exp $
 
 EAPI=2
 
@@ -50,7 +50,11 @@ RDEPEND="!!app-emulation/virtualbox-ose
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXdmcp
-	python? ( dev-lang/python )"
+	python? ( || (
+			dev-lang/python:2.6
+			dev-lang/python:2.5
+			dev-lang/python:2.4
+		 ) )"
 
 S=${WORKDIR}
 
@@ -202,9 +206,10 @@ src_install() {
 	fi
 
 	if use python; then
-		for vboxpyver in 2.4 2.5 2.6 2.7 3.0 3.1 ; do
-			if has_version "=dev-lang/python-${vboxpyver}*" && [[ -f ${S}/VBoxPython${vboxpyver/./_}.so ]] ; then
-				doins VBoxPython${vboxpyver/./_}.so || die
+		local pyver
+		for pyver in 2.4 2.5 2.6 2.7 3.0 3.1 ; do
+			if has_version "=dev-lang/python-${pyver}*" && [[ -f ${S}/VBoxPython${pyver/./_}.so ]] ; then
+				doins VBoxPython${pyver/./_}.so || die
 			fi
 		done
 	fi

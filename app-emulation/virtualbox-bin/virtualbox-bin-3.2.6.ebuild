@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.7 2010/07/06 14:24:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.6.ebuild,v 1.8 2010/07/06 14:41:06 polynomial-c Exp $
 
 EAPI=2
 
@@ -202,6 +202,7 @@ src_install() {
 	fi
 
 	if use python; then
+		local pyver
 		for pyver in 2.4 2.5 2.6 2.7 3.0 3.1 ; do
 			if has_version "=dev-lang/python-${pyver}*" && [ -f "${S}/VBoxPython${pyver/./_}.so" ] ; then
 				doins VBoxPython${pyver/./_}.so || die
