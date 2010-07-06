@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.12 2008/05/12 11:27:42 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.13 2010/07/06 10:53:09 ssuominen Exp $
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> pax-3.3.4.ebuild:
+  Keyword ~ppc64 wrt #324521 by Andreas Thalhammer.
 
   12 May 2008; Samuli Suominen <drac@gentoo.org> pax-3.3.4.ebuild:
   Set empty RDEPEND wrt #220213.
