@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.103 2010/07/02 02:16:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.104 2010/07/06 20:32:07 ssuominen Exp $
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> psycopg-2.0.14.ebuild:
+  ppc64 stable wrt #320033
 
   02 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   psycopg-1.1.21.ebuild:
