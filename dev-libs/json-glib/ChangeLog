@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/json-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.6 2010/06/25 14:12:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.7 2010/07/06 16:06:27 ssuominen Exp $
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  json-glib-0.10.2.ebuild:
+  Keyword ~ppc64 wrt #318691
 
 *json-glib-0.10.2 (25 Jun 2010)
 

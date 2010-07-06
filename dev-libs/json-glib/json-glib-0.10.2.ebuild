@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.10.2.ebuild,v 1.1 2010/06/25 14:12:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.10.2.ebuild,v 1.2 2010/07/06 16:06:27 ssuominen Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/JsonGlib"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc +introspection"
 
 RDEPEND=">=dev-libs/glib-2.15"
