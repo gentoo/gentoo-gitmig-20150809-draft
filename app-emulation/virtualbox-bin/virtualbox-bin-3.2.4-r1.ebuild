@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.4-r1.ebuild,v 1.4 2010/07/06 13:47:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.4-r1.ebuild,v 1.5 2010/07/06 14:24:27 polynomial-c Exp $
 
 EAPI=2
 
@@ -214,7 +214,7 @@ src_install() {
 		VirtualBox.tar.bz2 LICENSE VBoxSysInfo.sh rdesktop* vboxwebsrv \
 		webtest kchmviewer VirtualBox.chm vbox-create-usb-node.sh \
 		90-vbox-usb.fdi uninstall.sh vboxshell.py vboxdrv-pardus.py \
-		VBoxPython2_*.so
+		VBoxPython?_*.so
 
 	if use headless ; then
 		rm -rf VBoxSDL VirtualBox VBoxKeyboard.so
