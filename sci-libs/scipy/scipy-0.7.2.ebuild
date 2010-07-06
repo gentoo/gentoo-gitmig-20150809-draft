@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.2.ebuild,v 1.2 2010/04/23 00:09:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.2.ebuild,v 1.3 2010/07/06 14:32:23 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils distutils flag-o-matic toolchain-funcs versionator
 
@@ -37,8 +39,6 @@ DEPEND="${CDEPEND}
 
 RDEPEND="${CDEPEND}
 	dev-python/imaging"
-
-RESTRICT_PYTHON_ABIS="3.*"
 
 # buggy tests
 RESTRICT="test"
