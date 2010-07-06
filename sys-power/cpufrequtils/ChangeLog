@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.51 2010/07/05 19:43:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.52 2010/07/06 21:12:34 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  cpufrequtils-007.ebuild:
+  Stable on amd64 wrt bug #327035
 
 *cpufrequtils-008 (05 Jul 2010)
 
