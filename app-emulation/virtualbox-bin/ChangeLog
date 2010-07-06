@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.87 2010/06/30 07:13:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.88 2010/07/06 13:47:09 polynomial-c Exp $
+
+  06 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-bin-3.2.4-r1.ebuild, virtualbox-bin-3.2.6.ebuild:
+  Simplified installation of VBoxPython.so files.
 
   30 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-bin-3.1.8.ebuild, virtualbox-bin-3.2.4-r1.ebuild,
