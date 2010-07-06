@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.14 2010/06/30 18:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.15 2010/07/06 03:53:27 vapier Exp $
 
 EAPI="2"
 
@@ -66,6 +66,7 @@ lfs_fallocate_test() {
 src_configure() {
 	lfs_fallocate_test
 	econf \
+		--enable-fs-paths-extra=/usr/sbin \
 		$(use_enable nls) \
 		--enable-agetty \
 		--enable-cramfs \
@@ -76,7 +77,6 @@ src_configure() {
 		--disable-mesg \
 		--enable-partx \
 		--enable-raw \
-		--enable-rdev \
 		--enable-rename \
 		--disable-reset \
 		--disable-login-utils \
