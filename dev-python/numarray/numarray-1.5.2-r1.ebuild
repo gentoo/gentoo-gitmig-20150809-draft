@@ -1,8 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.14 2010/06/11 22:58:00 arfrever Exp $
-
-NEED_PYTHON=2.3
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.5.2-r1.ebuild,v 1.15 2010/07/06 14:19:53 arfrever Exp $
 
 inherit eutils distutils
 
