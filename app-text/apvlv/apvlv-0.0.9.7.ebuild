@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.0.9.6.ebuild,v 1.1 2010/04/21 09:29:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.0.9.7.ebuild,v 1.1 2010/07/06 17:03:31 xarthisius Exp $
 
 EAPI=2
 inherit eutils
