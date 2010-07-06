@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.17 2010/06/04 21:09:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.18 2010/07/06 21:07:11 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> sqliteodbc-0.86.ebuild:
+  Stable on amd64 wrt bug #326821
 
 *sqliteodbc-0.86 (04 Jun 2010)
 
