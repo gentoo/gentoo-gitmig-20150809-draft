@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.6 2010/05/26 17:58:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.7 2010/07/06 13:28:19 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -57,15 +57,9 @@ src_compile() {
 
 src_test() {
 	testing() {
-		cat >> tests/settings.py << __EOF__
-DATABASE_ENGINE='sqlite3'
-DATABASE_NAME='test.db'
-ROOT_URLCONF='tests/urls.py'
-SITE_ID=1
-__EOF__
 		# Tests have non-standard assumptions about PYTHONPATH and
 		# don't work with usual "build-${PYTHON_ABI}/lib".
-		PYTHONPATH="." "$(PYTHON)" tests/runtests.py --settings=settings -v1
+		PYTHONPATH="." "$(PYTHON)" tests/runtests.py --settings=test_sqlite -v1
 	}
 	python_execute_function testing
 }
