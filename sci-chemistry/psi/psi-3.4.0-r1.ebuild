@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0.ebuild,v 1.1 2010/06/24 21:08:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0-r1.ebuild,v 1.1 2010/07/06 11:36:22 jlec Exp $
 
 EAPI="3"
 
@@ -27,17 +27,24 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}${PV:0:1}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-dont-build-libint.patch
-	epatch "${FILESDIR}"/use-external-libint.patch
-	epatch "${FILESDIR}"/${PV}-gcc-4.3.patch
-	epatch "${FILESDIR}"/${PV}-destdir.patch
-	epatch "${FILESDIR}"/${P}-parallel-make.patch
-	sed "s:^LDFLAGS=:LDFLAGS=${LDFLAGS}:g" -i configure.ac || die
+	epatch "${FILESDIR}"/${PV}-dont-build-libint.patch \
+		"${FILESDIR}"/use-external-libint.patch \
+		"${FILESDIR}"/${PV}-gcc-4.3.patch \
+		"${FILESDIR}"/${PV}-destdir.patch \
+		"${FILESDIR}"/${P}-parallel-make.patch \
+		"${FILESDIR}"/${PV}-man_paths.patch \
+		"${FILESDIR}"/${PV}-ldflags.patch \
+		"${FILESDIR}"/${PV}-parallel_fix.patch
+
 	# Broken test
 	sed \
 		-e 's:scf-mvd-opt ::g' \
 		-e 's:scf-mvd-opt-puream ::g' \
 		-i tests/Makefile.in || die
+
+	sed \
+		-e "/LIBPATTERNS/d" \
+		-i src/{bin,util,samples}/MakeVars.in || die
 	eautoreconf
 }
 
@@ -46,26 +53,19 @@ src_configure() {
 	unset CLIBS
 
 	econf \
-		--with-opt="${CFLAGS}" \
+		--with-opt="${CXXFLAGS}" \
 		--datadir="${EPREFIX}"/usr/share/${PN} \
 		--with-blas="$(pkg-config blas --libs)"
 }
 
 src_compile() {
-	emake -j1 \
-		SCRATCH="${WORKDIR}/libint" \
-		|| die "make failed"
+	emake SCRATCH="${WORKDIR}/libint" DODEPEND="no" || die
 }
 
 src_test() {
-	emake \
-		EXECDIR="${S}"/bin \
-		TESTFLAGS="" \
-		-j1 tests || die
+	emake EXECDIR="${S}"/bin TESTFLAGS="" -j1 tests || die
 }
 
 src_install() {
-	emake -j1 \
-		DESTDIR="${D}" \
-		install || die "install failed"
+	emake DESTDIR="${D}" DODEPEND="no" install || die
 }
