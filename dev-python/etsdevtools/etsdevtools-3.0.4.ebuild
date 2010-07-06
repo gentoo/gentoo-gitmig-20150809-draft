@@ -1,18 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.0.4.ebuild,v 1.2 2010/03/25 21:22:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.0.4.ebuild,v 1.3 2010/07/06 18:27:23 arfrever Exp $
 
-EAPI="2"
-
-NEED_PYTHON="2.5"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
 MY_PN="ETSDevTools"
 MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="Enthought Tool Suite to support Python development"
-HOMEPAGE="http://code.enthought.com/projects/ets_dev_tools.php"
+HOMEPAGE="http://code.enthought.com/projects/ets_dev_tools.php http://pypi.python.org/pypi/ETSDevTools"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 IUSE="doc examples test wxwidgets"
@@ -33,7 +35,6 @@ DEPEND="dev-python/setuptools
 	>=dev-python/numpy-1.1
 	x11-libs/libXtst
 	test? ( >=dev-python/nose-0.10.3 )"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -44,13 +45,6 @@ src_prepare() {
 		-e "s/self.run_command('build_docs')/pass/" \
 		-e "s/setupdocs>=1.0//" \
 		setup.py || die
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
 }
 
 src_install() {

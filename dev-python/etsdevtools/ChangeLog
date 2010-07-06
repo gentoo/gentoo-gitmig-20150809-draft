@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/etsdevtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/ChangeLog,v 1.5 2010/03/25 21:22:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/ChangeLog,v 1.6 2010/07/06 18:27:23 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  etsdevtools-3.0.4.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   25 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
   etsdevtools-3.0.4.ebuild:
