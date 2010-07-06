@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.57 2010/07/06 17:19:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.58 2010/07/06 17:20:49 cardoe Exp $
+
+  06 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  -files/libvirt-0.7.6-virt-pki-validate-sysconfdir.patch, metadata.xml:
+  Remove unnecessary USE flag description. Remove old patch.
 
   06 Jul 2010; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.7.5.ebuild,
   -libvirt-0.7.6-r1.ebuild, -libvirt-0.8.1.ebuild:
