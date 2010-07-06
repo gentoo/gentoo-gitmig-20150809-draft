@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.15-r1.ebuild,v 1.14 2010/06/13 19:15:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.15-r1.ebuild,v 1.15 2010/07/06 18:35:40 arfrever Exp $
 
 EAPI=2
-NEED_PYTHON=2.4
+PYTHON_DEPEND="2"
 inherit autotools eutils multilib python
 
 DESCRIPTION="A Python Interface to GStreamer"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.85 2010/06/13 19:15:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.86 2010/07/06 18:35:40 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gst-python-0.10.15-r1.ebuild, gst-python-0.10.16.ebuild,
+  gst-python-0.10.17.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   13 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gst-python-0.10.15-r1.ebuild, gst-python-0.10.16.ebuild,
