@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.2.ebuild,v 1.2 2010/06/03 17:14:47 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.2.ebuild,v 1.3 2010/07/06 22:32:39 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://qa.coreboot.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="buspiratespi drkaiser dummy ftdi +internal nic3com nvidia satasii serprog wiki"
 
 COMMON_DEPEND="drkaiser? ( sys-apps/pciutils )
