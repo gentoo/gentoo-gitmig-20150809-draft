@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2010h.ebuild,v 1.8 2010/07/06 19:35:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2010h.ebuild,v 1.9 2010/07/06 20:07:17 arfrever Exp $
 
 EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
 DESCRIPTION="World Timezone Definitions for Python"
-HOMEPAGE="http://pypi.python.org/pypi/pytz/ http://pytz.sourceforge.net/"
+HOMEPAGE="http://pypi.python.org/pypi/pytz http://pytz.sourceforge.net/"
 SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
@@ -19,7 +21,6 @@ IUSE=""
 RDEPEND="dev-python/setuptools
 	>=sys-libs/timezone-data-${PV}"
 DEPEND="${RDEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="CHANGES.txt"
 
@@ -37,5 +38,9 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	rm -fr "${ED}"usr/lib*/python*/site-packages/pytz/zoneinfo
+
+	delete_zoneinfo() {
+		rm -fr "${ED}$(python_get_sitedir)/pytz/zoneinfo"
+	}
+	python_execute_function -q delete_zoneinfo
 }
