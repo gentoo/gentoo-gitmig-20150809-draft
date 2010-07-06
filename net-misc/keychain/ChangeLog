@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.86 2010/05/12 14:56:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.87 2010/07/06 20:57:29 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> keychain-2.7.1.ebuild:
+  Stable on amd64 wrt bug #327169
 
 *keychain-2.7.1 (12 May 2010)
 
