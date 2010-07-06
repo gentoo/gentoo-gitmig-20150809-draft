@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.66 2010/06/27 14:08:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.67 2010/07/06 19:16:09 ssuominen Exp $
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> gdata-2.0.10.ebuild:
+  ppc64 stable wrt #324463
 
   27 Jun 2010; <nixnut@gentoo.org> gdata-2.0.10.ebuild:
   ppc stable #324463
