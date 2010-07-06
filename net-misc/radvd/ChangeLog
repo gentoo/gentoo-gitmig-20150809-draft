@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/radvd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.56 2009/11/16 09:15:46 wschlich Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.57 2010/07/06 14:37:11 flameeyes Exp $
+
+*radvd-1.6 (06 Jul 2010)
+
+  06 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> radvd-1.1.ebuild,
+  +radvd-1.6.ebuild:
+  Version bump to 1.6, smaller cleanup. Add -j1 for 1.1 since it's not
+  parallel-build safe (it's fixed in 1.4 and later).
 
 *radvd-1.5 (16 Nov 2009)
 
