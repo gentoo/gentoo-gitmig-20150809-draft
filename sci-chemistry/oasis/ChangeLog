@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/oasis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.6 2010/06/15 14:31:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.7 2010/07/06 11:18:46 jlec Exp $
+
+*oasis-4.0-r2 (06 Jul 2010)
+
+  06 Jul 2010; Justin Lecher <jlec@gentoo.org> -oasis-4.0.ebuild,
+  -oasis-4.0-r1.ebuild, +oasis-4.0-r2.ebuild:
+  Use FFLAGS instead of CFLAGS for compilation, Xarthisius on irc
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> oasis-4.0-r1.ebuild:
   Installing html at correct place

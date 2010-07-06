@@ -1,11 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r1.ebuild,v 1.2 2010/06/15 14:31:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r2.ebuild,v 1.1 2010/07/06 11:18:46 jlec Exp $
 
 EAPI="3"
 
-inherit eutils multilib toolchain-funcs
+inherit eutils fortran multilib
 
+FORTRANC="ifc gfortran"
 MY_P="${PN}${PV}_Linux"
 
 DESCRIPTION="A direct-method program for SAD/SIR phasing"
@@ -39,7 +40,8 @@ src_prepare() {
 src_compile() {
 	emake \
 		-C src \
-		F77="$(tc-getFC)" \
+		F77="${FORTRANC}" \
+		CFLAGS="${FFLAGS}" \
 		CCP4_LIB="${EPREFIX}/usr/$(get_libdir)" \
 		Linux || die
 }
