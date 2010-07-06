@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.2.0.ebuild,v 1.3 2010/02/01 20:22:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.2.0.ebuild,v 1.4 2010/07/06 16:55:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
-NEED_PYTHON="2.4"
-inherit multilib python
+inherit python
 
 DESCRIPTION="Client of cdemu suite, which mounts all kinds of cd images"
 HOMEPAGE="http://cdemu.org"
@@ -23,6 +23,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/cdemu-client-${PV}
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
 	# disable compilation of python modules
 	rm py-compile && \
@@ -35,10 +40,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "$(python_get_sitedir)/cdemu"
+	python_mod_optimize cdemu
 	python_need_rebuild
 }
 
 pkg_postrm() {
-	python_mod_cleanup "/usr/$(get_libdir)/python*/site-packages/cdemu"
+	python_mod_cleanup cdemu
 }

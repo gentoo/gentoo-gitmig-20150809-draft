@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.21 2010/02/01 20:22:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.22 2010/07/06 16:55:16 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cdemu-1.2.0.ebuild:
+  Use Python 2 (bug #308321).
 
   01 Feb 2010; Peter Volkov <pva@gentoo.org> -cdemu-0.8.ebuild,
   -cdemu-1.1.0.ebuild, -cdemu-1.1.0-r1.ebuild, cdemu-1.2.0.ebuild:
