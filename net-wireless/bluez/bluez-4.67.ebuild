@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.65.ebuild,v 1.2 2010/06/11 22:25:13 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.67.ebuild,v 1.1 2010/07/06 10:02:08 pacho Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ CDEPEND="alsa? (
 		>=media-libs/gst-plugins-base-0.10 )
 	usb? ( dev-libs/libusb )
 	cups? ( net-print/cups )
-	sys-fs/udev
+	>=sys-fs/udev-146[extras]
 	>=dev-libs/glib-2.14
 	sys-apps/dbus
 	media-libs/libsndfile
@@ -76,7 +76,6 @@ src_configure() {
 		--enable-netlink \
 		--enable-tools \
 		--enable-bccmd \
-		--enable-hid2hci \
 		--enable-dfutool \
 		$(use_enable old-daemons hidd) \
 		$(use_enable old-daemons pand) \
