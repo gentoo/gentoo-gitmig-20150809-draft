@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/minimock/minimock-1.2.5.ebuild,v 1.3 2010/06/28 08:44:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/minimock/minimock-1.2.5.ebuild,v 1.4 2010/07/06 19:48:04 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -21,12 +23,8 @@ IUSE=""
 
 DEPEND="dev-python/setuptools"
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
 DOCS="docs/changelog.txt docs/index.txt"
-
-pkg_postinst() {
-	python_mod_optimize minimock.py
-}
+PYTHON_MODNAME="minimock.py"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/minimock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/minimock/ChangeLog,v 1.3 2010/06/28 08:44:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/minimock/ChangeLog,v 1.4 2010/07/06 19:48:04 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  minimock-1.2.5.ebuild:
+  Set PYTHON_DEPEND and PYTHON_MODNAME.
 
   28 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   minimock-1.2.5.ebuild:
