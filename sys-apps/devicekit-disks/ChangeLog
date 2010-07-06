@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/devicekit-disks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/ChangeLog,v 1.7 2010/06/04 21:05:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/ChangeLog,v 1.8 2010/07/06 12:59:36 ssuominen Exp $
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  devicekit-disks-009.ebuild:
+  Keyword ~ppc64 wrt #313563
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> devicekit-disks-009.ebuild:
   x86 stable, bug #314899
