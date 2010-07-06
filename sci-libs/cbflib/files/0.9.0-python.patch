@@ -1,8 +1,14 @@
 diff --git a/pycbf/setup.py b/pycbf/setup.py
-index 0763f06..f55a42f 100644
+index 0763f06..7fe9ccc 100644
 --- a/pycbf/setup.py
 +++ b/pycbf/setup.py
-@@ -14,4 +14,4 @@ e = Extension('_pycbf',
+@@ -9,9 +9,9 @@ from distutils.core import setup, Extension
+ e = Extension('_pycbf',
+               sources = ["pycbf_wrap.c","../src/cbf_simple.c"],
+          extra_compile_args=["-g"],
+-         library_dirs=["../lib/"],
++         library_dirs=["../solib/"],
+          libraries=["cbf"],
           include_dirs = ["../include"] )
              
  # Build it
