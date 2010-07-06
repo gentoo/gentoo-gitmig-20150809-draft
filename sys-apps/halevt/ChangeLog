@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/halevt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/ChangeLog,v 1.14 2010/06/28 20:46:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/ChangeLog,v 1.15 2010/07/06 22:27:26 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  -halevt-0.1.4-r2.ebuild, -halevt-0.1.5.ebuild:
+  Remove old ebuilds
 
 *halevt-0.1.6.2-r1 (28 Jun 2010)
 
