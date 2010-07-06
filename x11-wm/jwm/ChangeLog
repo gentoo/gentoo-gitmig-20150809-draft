@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/jwm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.19 2010/06/26 13:31:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.20 2010/07/06 15:24:37 jer Exp $
+
+  06 Jul 2010; Jeroen Roovers <jer@gentoo.org> jwm-2.0.1.ebuild:
+  Stable for HPPA (bug #322913).
 
   26 Jun 2010; <nixnut@gentoo.org> jwm-2.0.1.ebuild:
   ppc stable #322913
