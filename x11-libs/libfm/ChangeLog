@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.8 2010/06/22 14:27:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.9 2010/07/06 20:54:30 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> -libfm-0.1.5.ebuild,
+  -libfm-0.1.9.ebuild, -libfm-0.1.11.ebuild:
+  Remove old ebuilds
 
 *libfm-9999 (22 Jun 2010)
 
