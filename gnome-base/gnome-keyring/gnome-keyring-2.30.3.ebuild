@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.30.3.ebuild,v 1.2 2010/07/06 13:59:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.30.3.ebuild,v 1.3 2010/07/06 20:36:08 pacho Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="debug doc pam test"
 # USE=valgrind is probably not a good idea for the tree
 
 RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.20.0
 	gnome-base/gconf
 	>=sys-apps/dbus-1.0
 	pam? ( virtual/pam )
