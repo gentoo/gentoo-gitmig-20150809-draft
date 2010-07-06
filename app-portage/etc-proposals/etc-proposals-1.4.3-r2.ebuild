@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.3-r2.ebuild,v 1.1 2010/03/09 21:08:40 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.3-r2.ebuild,v 1.2 2010/07/06 17:58:20 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
-NEED_PYTHON="2.5"
+PYTHON_DEPEND="2:2.5"
 
 inherit distutils
 
@@ -21,6 +21,13 @@ DEPEND="gtk? ( >=dev-python/pygtk-2.10 )
 		qt4? ( >=dev-python/PyQt4-4.1.1[X] )"
 RDEPEND="${DEPEND}"
 
+PYTHON_MODNAME="etcproposals"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_install(){
 	distutils_src_install
 	dosbin "${D}"/usr/bin/etc-proposals
@@ -32,6 +39,7 @@ src_install(){
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	elog "The configuration file has been installed to /etc/etc-proposals.conf"
 	elog "If you are installing etc-proposals for the first time or updating"
 	elog "from a version < 1.3 you should run the following command once:"

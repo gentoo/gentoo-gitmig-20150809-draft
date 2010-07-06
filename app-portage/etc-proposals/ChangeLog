@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/etc-proposals
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.11 2010/03/09 21:08:40 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.12 2010/07/06 17:58:20 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  etc-proposals-1.4.3.ebuild, etc-proposals-1.4.3-r1.ebuild,
+  etc-proposals-1.4.3-r2.ebuild:
+  Use Python 2 (bug #311775).
 
 *etc-proposals-1.4.3-r2 (09 Mar 2010)
 
