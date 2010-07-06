@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r2.ebuild,v 1.1 2010/07/06 11:18:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r2.ebuild,v 1.2 2010/07/06 18:35:48 jlec Exp $
 
 EAPI="3"
 
@@ -55,9 +55,10 @@ src_install() {
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe bin/*.*sh || die
 
-	dohtml bin/html/* || die
-	dosym ../share/doc/${PF}/html /usr/$(get_libdir)/${PN}/html
-	chmod 755 "${ED}"/usr/$(get_libdir)/${PN}/html/*.{csh,awk} || die
+	insinto /usr/share/doc/${PF}/html
+	doins bin/html/* || die
+	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/${PN}/html
+	chmod 755 "${ED}"/usr/share/doc/${PF}/html/*.{*sh,awk} || die
 
 	if use examples; then
 		insinto /usr/share/${PN}
