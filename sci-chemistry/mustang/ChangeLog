@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mustang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/ChangeLog,v 1.6 2010/07/06 12:07:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/ChangeLog,v 1.7 2010/07/06 13:31:28 jlec Exp $
+
+  06 Jul 2010; Justin Lecher <jlec@gentoo.org> mustang-3.2.1.ebuild:
+  Keyworded for *-linux prefix
 
 *mustang-3.2.1 (06 Jul 2010)
 
