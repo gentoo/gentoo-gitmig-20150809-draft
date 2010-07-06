@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.37.ebuild,v 1.1 2010/03/10 23:13:23 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.37.ebuild,v 1.2 2010/07/06 14:56:37 arfrever Exp $
 
-NEED_PYTHON=2.3
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils distutils versionator
 
@@ -12,9 +15,9 @@ MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="CAD program written in PyGTK"
 HOMEPAGE="http://www.pythoncad.org/"
-LICENSE="GPL-2"
 SRC_URI="mirror://sourceforge/pythoncad/${MY_P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -26,9 +29,7 @@ PYTHON_MODNAME=${MY_PN}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-png.patch"
 
 	sed -i \
@@ -39,7 +40,13 @@ src_unpack() {
 
 src_install() {
 	distutils_src_install
-	newbin gtkpycad.py pythoncad
+
+	install_pythoncad() {
+		newbin gtkpycad.py pythoncad-${PYTHON_ABI}
+	}
+	python_execute_function -q install_pythoncad
+	python_generate_wrapper_scripts "${ED}usr/bin/pythoncad"
+
 	insinto /etc/"${PN}"
 	doins prefs.py
 	domenu pythoncad.desktop
