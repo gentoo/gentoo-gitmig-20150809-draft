@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/asio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.23 2010/07/05 18:01:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.24 2010/07/06 14:14:41 jer Exp $
+
+  06 Jul 2010; Jeroen Roovers <jer@gentoo.org> asio-1.4.5.ebuild:
+  Marked ~ppc (bug #316219).
 
   05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> asio-1.4.5.ebuild:
   Keyword ~ppc64 wrt #316219
