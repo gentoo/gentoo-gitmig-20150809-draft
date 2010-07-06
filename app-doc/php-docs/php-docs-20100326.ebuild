@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20100326.ebuild,v 1.1 2010/03/31 22:02:32 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20100326.ebuild,v 1.2 2010/07/06 18:31:11 darkside Exp $
 
-EAPI="1"
+EAPI="3"
 
 DESCRIPTION="HTML documentation for PHP"
 HOMEPAGE="http://www.php.net/download-docs.php"
@@ -39,7 +39,7 @@ src_unpack() {
 
 pkg_preinst() {
 	# remove broken/stale symlink created by previous ebuilds
-	[[ -L ${ROOT}/usr/share/php-docs ]] && rm -f "${ROOT}"/usr/share/php-docs
+	[[ -L ${EROOT}/usr/share/php-docs ]] && rm -f "${EROOT}"/usr/share/php-docs
 }
 
 src_install() {
@@ -48,7 +48,7 @@ src_install() {
 	for lang in en ${LANGS} ; do
 		if use linguas_${lang} ; then
 			ebegin "Installing ${lang} manual, will take a while"
-			cp -R "${WORKDIR}"/${lang} "${D}"/usr/share/doc/${PF} || die "cp failed on ${lang}"
+			cp -R "${WORKDIR}"/${lang} "${ED}"/usr/share/doc/${PF} || die "cp failed on ${lang}"
 			eend $?
 		fi
 	done
