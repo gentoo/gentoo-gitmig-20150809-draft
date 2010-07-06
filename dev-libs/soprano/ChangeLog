@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.51 2010/06/27 08:52:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.52 2010/07/06 01:40:04 reavertm Exp $
+
+*soprano-2.4.4 (06 Jul 2010)
+
+  06 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  soprano-2.3.1-r1.ebuild, +soprano-2.4.4.ebuild,
+  +files/soprano-2.4.4-make-broken-redland-fatal.cmake:
+  Version bump 2.4.4, backport qt-test deps to 2.3.1, add patch to make
+  broken Redland fatal (bug 318861)
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> soprano-2.4.3.ebuild:
   x86 stable, bug 322791
