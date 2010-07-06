@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.12c.ebuild,v 1.3 2009/07/02 19:50:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.12c.ebuild,v 1.4 2010/07/06 15:16:10 arfrever Exp $
 
-NEED_PYTHON=2.4
+PYTHON_DEPEND="2"
 
 inherit multilib python
 

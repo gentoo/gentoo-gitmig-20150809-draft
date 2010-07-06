@@ -1,6 +1,11 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.26 2010/03/20 20:27:25 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.27 2010/07/06 15:16:10 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  devede-3.12c.ebuild, devede-3.13.1.ebuild, devede-3.14.0.ebuild,
+  devede-3.15.2.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
 *devede-3.16.6 (20 Mar 2010)
 
