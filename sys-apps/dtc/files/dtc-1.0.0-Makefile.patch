@@ -1,0 +1,25 @@
+Respect environment flags per http://bugs.gentoo.org/241986
+
+--- Makefile
++++ Makefile
+@@ -44,9 +44,8 @@
+ endef
+ 
+ 
+-CPPFLAGS = -I libfdt
+-CFLAGS = -Wall -g
+-LDFLAGS = -Llibfdt
++CPPFLAGS += -Ilibfdt
++CFLAGS += -Wall -Llibfdt
+ 
+ BISON = bison
+ 
+@@ -64,7 +63,7 @@
+ VECHO = :
+ else
+ VECHO = echo "	"
+-ARFLAGS = rc
++ARFLAGS ?= rc
+ .SILENT:
+ endif
+ 
