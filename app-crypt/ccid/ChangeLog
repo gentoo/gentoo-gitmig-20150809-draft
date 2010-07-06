@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.47 2010/06/29 00:22:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.48 2010/07/06 22:37:56 flameeyes Exp $
+
+*ccid-1.3.13-r1 (06 Jul 2010)
+
+  06 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ccid-1.3.13-r1.ebuild, +files/ccid-1.3.13-bcm5880v3.patch:
+  Revision bump with support for the third revision of Broadcom BCM5880
+  smartcard reader, as found on Dell Latitude E6510 laptops (sent upstream
+  as well).
 
   29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -ccid-1.3.10.ebuild, +ccid-1.3.13.ebuild:
