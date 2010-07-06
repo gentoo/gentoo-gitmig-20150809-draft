@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.61 2010/06/28 09:02:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.62 2010/07/06 19:18:12 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  buildbot-0.7.11_p3.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   28 Jun 2010; Christoph Mende <angelos@gentoo.org> buildbot-0.8.0.ebuild:
   Stable on amd64 wrt bug #325899
