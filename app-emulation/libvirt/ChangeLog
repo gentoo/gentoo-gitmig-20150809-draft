@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.55 2010/06/16 16:15:51 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.56 2010/07/06 17:09:47 cardoe Exp $
+
+*libvirt-0.8.2 (06 Jul 2010)
+
+  06 Jul 2010; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.8.2.ebuild,
+  metadata.xml:
+  Version bump. Add support for macvtap and pcap. Fixed policykit message
+  and tried to fix polkit vs policykit support again. bug #322093, bug
+  #326319, bug #322085
 
   16 Jun 2010; Lance Albertson <ramereth@gentoo.org> metadata.xml:
   Remove myself as a maintainer since I don't use libvirt as much anymore nor
