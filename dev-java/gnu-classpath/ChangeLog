@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.111 2010/06/27 18:58:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.112 2010/07/06 19:26:20 caster Exp $
+
+  06 Jul 2010; Vlastimil Babka <caster@gentoo.org>
+  -files/0.93-nsplugin.patch, -gnu-classpath-0.97-r1.ebuild,
+  -gnu-classpath-0.97.2.ebuild, -gnu-classpath-0.97.2-r1.ebuild,
+  -gnu-classpath-0.98-r1.ebuild:
+  Remove the now unused 0.97 slot, bug #316477.
 
   27 Jun 2010; Pacho Ramos <pacho@gentoo.org> gnu-classpath-0.98-r3.ebuild:
   stable amd64, bug 321953
