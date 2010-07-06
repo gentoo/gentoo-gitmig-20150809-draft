@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.24 2010/07/02 22:56:07 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.25 2010/07/06 16:59:58 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ganeti-1.2.9.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
 *ganeti-2.1.5 (02 Jul 2010)
 
