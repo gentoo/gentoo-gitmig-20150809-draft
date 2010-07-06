@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.136 2010/07/06 00:33:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.137 2010/07/06 00:41:18 vapier Exp $
+
+  06 Jul 2010; Mike Frysinger <vapier@gentoo.org> grub-1.98.ebuild,
+  grub-9999.ebuild:
+  Rename grub-install manpage and grub2-set-default script for USE=multislot
+  #288877 by pyon.
 
   06 Jul 2010; Mike Frysinger <vapier@gentoo.org> grub-1.98.ebuild,
   +files/grub-1.99-genkernel.patch, grub-9999.ebuild:

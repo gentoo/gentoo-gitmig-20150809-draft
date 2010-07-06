@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.98.ebuild,v 1.3 2010/07/06 00:33:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.98.ebuild,v 1.4 2010/07/06 00:41:18 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -80,6 +80,8 @@ src_install() {
 	if use multislot ; then
 		sed -i "s:grub-install:grub2-install:" "${D}"/sbin/grub-install || die
 		mv "${D}"/sbin/grub{,2}-install || die
+		mv "${D}"/sbin/grub{,2}-set-default || die
+		mv "${D}"/usr/share/man/man8/grub{,2}-install.8 || die
 		mv "${D}"/usr/share/info/grub{,2}.info || die
 	fi
 }
