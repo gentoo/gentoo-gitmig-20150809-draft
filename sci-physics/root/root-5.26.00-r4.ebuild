@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.3 2010/06/25 22:13:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r4.ebuild,v 1.4 2010/07/06 15:59:37 bicatali Exp $
 
 EAPI=3
 
@@ -26,7 +26,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
-IUSE="afs clarens doc emacs examples fftw geant4 kerberos ldap
+IUSE="afs clarens doc emacs examples fftw geant4 graphviz kerberos ldap
 	+math mysql	odbc +opengl openmp oracle postgres pythia6 pythia8 python
 	+reflex	ruby qt4 ssl xft xml xinetd xrootd"
 
@@ -49,6 +49,7 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	emacs? ( virtual/emacs )
 	fftw? ( sci-libs/fftw:3.0 )
 	geant4? ( sci-physics/geant:4 )
+	graphviz? ( media-gfx/graphviz )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
 	math? ( >=sci-libs/gsl-1.8 )
@@ -171,6 +172,7 @@ src_configure() {
 		$(use_enable clarens peac) \
 		$(use_enable fftw fftw3) \
 		$(use_enable geant4 g4root) \
+		$(use_enable graphviz gviz) \
 		$(use_enable kerberos krb5) \
 		$(use_enable ldap) \
 		$(use_enable math gsl-shared) \
