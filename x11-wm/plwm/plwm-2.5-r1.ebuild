@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5-r1.ebuild,v 1.5 2007/08/27 13:44:50 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5-r1.ebuild,v 1.6 2010/07/06 15:08:47 arfrever Exp $
 
-NEED_PYTHON="2.2"
+PYTHON_DEPEND="2"
 
 inherit eutils python
 
