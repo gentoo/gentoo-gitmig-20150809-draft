@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.110 2010/07/03 15:21:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.111 2010/07/06 16:09:44 ssuominen Exp $
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> gthumb-2.11.3.ebuild,
+  gthumb-2.11.4.ebuild:
+  Keyword ~ppc64 wrt #318691
 
 *gthumb-2.11.4 (03 Jul 2010)
 
