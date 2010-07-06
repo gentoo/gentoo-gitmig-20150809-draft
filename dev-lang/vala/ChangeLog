@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.21 2010/06/28 05:32:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.22 2010/07/06 14:41:01 ssuominen Exp $
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> vala-0.8.1.ebuild:
+  Keyword ~ppc64 wrt #320429
 
   28 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org> vala-0.8.1.ebuild:
   Don't have coverage on by default, and add warning about coverage+ccache
