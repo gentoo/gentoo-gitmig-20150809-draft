@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.19 2010/06/24 01:00:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.20 2010/07/06 22:31:11 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> mako-0.3.3.ebuild:
+  Stable on amd64 wrt bug #326813
 
 *mako-0.3.4 (24 Jun 2010)
 
