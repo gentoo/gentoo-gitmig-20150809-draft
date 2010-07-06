@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bashish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.21 2010/03/22 17:07:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.22 2010/07/06 22:45:39 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> bashish-2.2.4.ebuild:
+  Stable on amd64 wrt bug #327065
 
 *bashish-2.2.4 (22 Mar 2010)
 
