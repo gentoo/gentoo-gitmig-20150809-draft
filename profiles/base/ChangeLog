@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.161 2010/07/01 14:02:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.162 2010/07/06 00:34:26 mabi Exp $
+
+  05 Jul 2010; Matti Bickel <mabi@gentoo.org> virtuals:
+  virtual/httpd-php is now a new style virtual
 
   01 Jul 2010; Peter Volkov <pva@gentoo.org> package.use.mask:
   Masked mod_srl USE for ejabberd until we test it better
