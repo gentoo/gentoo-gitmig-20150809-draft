@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.4.ebuild,v 1.2 2010/06/05 18:58:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.4.ebuild,v 1.3 2010/07/06 07:55:05 ssuominen Exp $
 
 EAPI=3
 inherit eutils linux-info
@@ -11,8 +11,8 @@ SRC_URI="http://upower.freedesktop.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd"
-IUSE="debug doc nls introspection kernel_FreeBSD kernel_linux test"
+KEYWORDS="~amd64 ~arm ~ppc64 ~x86 ~x86-fbsd"
+IUSE="debug doc nls introspection kernel_FreeBSD kernel_linux"
 
 COMMON_DEPEND=">=dev-libs/glib-2.21.5:2
 	>=sys-apps/dbus-1
@@ -31,6 +31,8 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc
 		app-text/docbook-xml-dtd:4.1.2 )
 	nls? ( >=dev-util/intltool-0.40.0 )"
+
+RESTRICT="test" # error getting system bus
 
 pkg_setup() {
 	if use kernel_linux; then
@@ -68,7 +70,7 @@ src_configure() {
 		$(use_enable debug verbose-mode) \
 		--enable-man-pages \
 		$(use_enable doc gtk-doc) \
-		$(use_enable test tests) \
+		--disable-tests \
 		$(use_enable nls) \
 		--with-html-dir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--with-backend=${backend}
