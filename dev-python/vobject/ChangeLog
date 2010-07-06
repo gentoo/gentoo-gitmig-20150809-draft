@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vobject
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.9 2010/06/30 00:41:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.10 2010/07/06 21:04:23 hwoarang Exp $
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> vobject-0.8.1c.ebuild:
+  Stable on amd64 wrt bug #326245
 
   30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   vobject-0.8.1c.ebuild:
