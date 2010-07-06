@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/promise/promise-0.2.1.ebuild,v 1.1 2010/01/06 12:04:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/promise/promise-0.2.1.ebuild,v 1.2 2010/07/06 21:37:41 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
@@ -18,14 +21,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="LICENSE.txt README.txt"
 
 # test suite fails, http://github.com/rfk/promise/issues/#issue/2
 src_test() {
-	testing() {
-		PROMISE_SKIP_TIMING_TESTS=1 PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests-${PYTHON_ABI}
-	}
-	python_execute_function testing
+	PROMISE_SKIP_TIMING_TESTS="1" distutils_src_test
 }
