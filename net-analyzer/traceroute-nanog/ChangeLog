@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/traceroute-nanog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.17 2010/07/06 14:35:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.18 2010/07/06 14:41:01 jer Exp $
+
+  06 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  traceroute-nanog-6.3.10-r1.ebuild:
+  Move old source files from mirror://debian to mirror://gentoo (bug
+  #327089).
 
 *traceroute-nanog-6.4.2 (06 Jul 2010)
 
