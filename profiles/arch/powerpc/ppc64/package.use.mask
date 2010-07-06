@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.22 2010/06/22 18:23:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.23 2010/07/06 14:06:53 ssuominen Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org> (21 Jun 2010)
 # These will need stable kdelibs-4.
@@ -8,13 +8,8 @@ app-i18n/uim kde
 dev-vcs/subversion kde
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
-# Needs >=dev-libs/libgdata-0.4.0 keyworded, bugs 323845 and 323847
-media-video/totem iplayer youtube
-
-# Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs app-mobilephone/obex-data-server keyworded, bug 305913
-# Needs sys-apps/gnome-disk-utility keyworded, bug 323803     
-gnome-base/gvfs bluetooth gdu
+gnome-base/gvfs bluetooth
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
 # requires more keywording per bug #323003
