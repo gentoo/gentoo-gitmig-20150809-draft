@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.4.ebuild,v 1.2 2010/04/14 15:24:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.13.4.ebuild,v 1.3 2010/07/06 16:04:23 arfrever Exp $
 
 EAPI="2"
 
-NEED_PYTHON="2.5"
+PYTHON_DEPEND="2:2.5"
 inherit python eutils autotools versionator
 
 DESCRIPTION="Jabber client written in PyGTK"

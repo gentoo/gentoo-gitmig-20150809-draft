@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pymsn-t
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.19 2010/06/08 16:05:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.20 2010/07/06 16:08:47 arfrever Exp $
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pymsn-t-0.11.3.ebuild, pymsn-t-0.11.3-r1.ebuild, pymsn-t-0.11.3-r2.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   08 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pymsn-t-0.11.3.ebuild, pymsn-t-0.11.3-r1.ebuild, pymsn-t-0.11.3-r2.ebuild:

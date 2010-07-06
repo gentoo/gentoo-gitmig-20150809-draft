@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8a.ebuild,v 1.7 2010/06/08 15:59:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8a.ebuild,v 1.8 2010/07/06 16:06:48 arfrever Exp $
 
-NEED_PYTHON=2.3
+PYTHON_DEPEND="2"
 
 inherit eutils multilib python
 
