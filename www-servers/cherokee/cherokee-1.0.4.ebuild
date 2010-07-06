@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.4.ebuild,v 1.3 2010/07/01 15:32:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.4.ebuild,v 1.4 2010/07/06 12:27:37 bass Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -14,11 +14,12 @@ HOMEPAGE="http://www.cherokee-project.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="ipv6 nls ssl static pam coverpage threads kernel_linux admin debug geoip ldap mysql ffmpeg fastcgi"
+IUSE="ipv6 nls ssl static pam coverpage threads kernel_linux admin debug geoip
+ldap mysql ffmpeg fastcgi rrdtool"
 
 RDEPEND="
 	>=sys-libs/zlib-1.1.4-r1
-	net-analyzer/rrdtool
+	rrdtool? ( net-analyzer/rrdtool )
 	nls? ( sys-devel/gettext )
 	ssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
