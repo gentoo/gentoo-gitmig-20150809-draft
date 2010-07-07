@@ -1,18 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.2.ebuild,v 1.1 2010/05/31 07:00:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.2.ebuild,v 1.2 2010/07/07 03:50:18 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
 MY_PN="AppTools"
 MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="Enthought Tool Suite application tools"
-HOMEPAGE="http://code.enthought.com/projects/app_tools.php"
+HOMEPAGE="http://code.enthought.com/projects/app_tools.php http://pypi.python.org/pypi/AppTools"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 IUSE="doc examples"
@@ -30,7 +32,6 @@ DEPEND="dev-python/setuptools
 # Tests require X display.
 #	test? ( >=dev-python/nose-0.10.3
 #			>=dev-python/enthoughtbase-3.0.4 )
-RESTRICT_PYTHON_ABIS="3.*"
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
