@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.2.1.ebuild,v 1.3 2010/07/06 13:31:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.2.1.ebuild,v 1.4 2010/07/07 08:58:06 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,8 @@ MY_P="${MY_PN}_v${PV}"
 
 DESCRIPTION="MUltiple STructural AligNment AlGorithm."
 HOMEPAGE="http://www.cs.mu.oz.au/~arun/mustang/"
-SRC_URI="http://www.csse.unimelb.edu.au/~arun/${PN}/${SRC_P}.tgz -> ${P}.tar"
+#SRC_URI="http://www.csse.unimelb.edu.au/~arun/${PN}/${SRC_P}.tgz -> ${P}.tar"
+SRC_URI="mirror://gentoo/${P}.tar"
 
 LICENSE="BSD"
 SLOT="0"
