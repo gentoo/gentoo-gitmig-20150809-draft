@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.33.ebuild,v 1.1 2010/06/21 00:46:41 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.33.ebuild,v 1.2 2010/07/07 05:41:40 ramereth Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.21-libwrap.patch"
-	use xforward && epatch "${FILESDIR}/${P}-x-forwarded-for.patch"
+	use xforward && epatch "${FILESDIR}/${PN}-4.31-x-forwarded-for.patch"
 	eautoreconf
 
 	# Hack away generation of certificate
