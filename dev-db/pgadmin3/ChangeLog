@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.46 2010/07/05 20:18:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.47 2010/07/07 09:18:36 hwoarang Exp $
+
+  07 Jul 2010; Markos Chandras <hwoarang@gentoo.org> pgadmin3-1.10.2.ebuild:
+  Stable on amd64 wrt bug #327045
 
   05 Jul 2010; Patrick Lauer <patrick@gentoo.org> -pgadmin3-1.4.3.ebuild,
   -pgadmin3-1.8.4.ebuild, -pgadmin3-1.10.0.ebuild, -pgadmin3-1.10.1.ebuild,
