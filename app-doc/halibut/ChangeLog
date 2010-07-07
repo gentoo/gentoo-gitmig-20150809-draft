@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/halibut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.9 2010/06/24 21:28:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.10 2010/07/07 13:30:15 phajdan.jr Exp $
+
+  07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> halibut-1.0.ebuild:
+  x86 stable wrt bug #324211
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> halibut-1.0.ebuild:
   stable amd64, bug 324211
