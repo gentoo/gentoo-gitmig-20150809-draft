@@ -38,7 +38,7 @@ stop() {
         for DOM_ID in $(libvirtd_dom_list) ; do
             NAME="$(libvirtd_virsh domname ${DOM_ID} | head -n 1)"
             einfo "   ${NAME}"
-            libvirtd_virsh managedsave ${DOM_ID} > /dev/null
+            libvirtd_virsh ${LIBVIRTD_KVM_SHUTDOWN} ${DOM_ID} > /dev/null
         done
 
         if [ -n "${LIBVIRTD_KVM_SHUTDOWN_MAXWAIT}" ] ; then
