@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.4.ebuild,v 1.2 2010/07/06 16:09:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.4.ebuild,v 1.3 2010/07/07 11:58:06 pacho Exp $
 
 EAPI="3"
 
@@ -40,6 +40,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	app-text/gnome-doc-utils
+	gnome-base/gnome-common
 	test? ( ~app-text/docbook-xml-dtd-4.1.2 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
