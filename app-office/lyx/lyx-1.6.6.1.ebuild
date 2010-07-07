@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.6.1.ebuild,v 1.4 2010/07/01 20:35:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.6.1.ebuild,v 1.5 2010/07/07 17:28:06 ssuominen Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ SRC_URI="ftp://ftp.devel.lyx.org/pub/lyx/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="cups debug nls latex monolithic-build html rtf dot docbook dia subversion rcs svg"
 
 LANGS="ar ca cs de el en es eu fi fr gl he hu id it ja nb nn pl pt ro ru sk tr uk zh_CN zh_TW"
@@ -144,12 +144,6 @@ pkg_postinst() {
 		elog "and make sure the \"Right-to-left language support\" is checked"
 		elog
 	fi
-
-	elog
-	elog "Be warned that LyX 1.6.x series do not play nicely with Qt 4.6."
-	elog "If you encounter random crashes consider to build LyX"
-	elog "with Qt 4.5."
-	elog
 }
 
 pkg_postrm() {
