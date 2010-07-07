@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.8.ebuild,v 1.1 2010/07/01 10:10:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.8.ebuild,v 1.2 2010/07/07 11:53:55 xarthisius Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ PYTHON_DEPEND="2"
 inherit python autotools multilib eutils base flag-o-matic
 
 DESCRIPTION="Pacemaker CRM"
-HOMEPAGE="http://www.linux-ha.org/wiki/Pacemaker"
+HOMEPAGE="http://www.clusterlabs.org/"
 SRC_URI="http://hg.clusterlabs.org/${PN}/stable-1.0/archive/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
