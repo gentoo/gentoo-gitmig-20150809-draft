@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/NaturalDocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.28 2010/06/21 20:39:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.29 2010/07/07 17:27:45 cardoe Exp $
+
+  07 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  NaturalDocs-1.40-r1.ebuild:
+  Prevent bash errors when emerging
 
   21 Jun 2010; Guy Martin <gmsoft@gentoo.org> NaturalDocs-1.40-r1.ebuild:
   added ~hppa to KEYWORDS

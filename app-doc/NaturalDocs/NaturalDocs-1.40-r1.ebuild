@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.40-r1.ebuild,v 1.2 2010/06/21 20:39:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.40-r1.ebuild,v 1.3 2010/07/07 17:27:45 cardoe Exp $
 
 inherit perl-module
 
@@ -48,7 +48,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ -e /usr/share/${PN}/Config && ! -L /usr/share/${PN}/Config ] ; then
+	if [[ -e /usr/share/${PN}/Config && ! -L /usr/share/${PN}/Config ]] ; then
 		mkdir -p /etc/${PN}
 		mv /usr/share/${PN}/Config/* /etc/${PN}/
 		rm -rf /usr/share/${PN}/Config
