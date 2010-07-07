@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.5 2010/06/19 01:29:57 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r1.ebuild,v 1.6 2010/07/07 20:35:18 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="4"
 IUSE="cdda daap debug embedded ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
 
