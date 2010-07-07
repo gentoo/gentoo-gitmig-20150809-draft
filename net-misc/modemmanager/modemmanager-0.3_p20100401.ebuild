@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.3_p20100401.ebuild,v 1.1 2010/04/01 11:24:01 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.3_p20100401.ebuild,v 1.2 2010/07/07 16:55:56 ssuominen Exp $
 
 EAPI="2"
 
@@ -22,7 +22,9 @@ RDEPEND=">=dev-libs/glib-2.18
 	>=dev-libs/dbus-glib-0.75
 	net-dialup/ppp"
 DEPEND=">=sys-fs/udev-145[extras]
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-util/intltool
+	sys-devel/gettext"
 
 S="${WORKDIR}/${MY_P}"
 

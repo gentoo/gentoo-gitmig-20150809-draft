@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.10 2010/04/01 11:24:01 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.11 2010/07/07 16:55:56 ssuominen Exp $
+
+  07 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  modemmanager-0.3_p20100401.ebuild:
+  Missing dev-util/intltool and sys-devel/gettext DEPEND wrt #312887 by
+  Bjoern Ottervik.
 
 *modemmanager-0.3_p20100401 (01 Apr 2010)
 
