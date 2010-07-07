@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.5-r2.ebuild,v 1.2 2010/05/01 11:02:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.5-r2.ebuild,v 1.3 2010/07/07 21:24:14 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,10 +25,9 @@ src_unpack() {
 	# +if (...) 2>/dev/null; then
 	sed -i 's|\<test "`\([^"]*\) 2>&1`" = ""|\1 2>/dev/null|' configure || die
 
-	# bug #316377
-	epatch "${FILESDIR}"/${P}-lfs-decls.patch
-	# bug #316841
-	epatch "${FILESDIR}"/${P}-fbsd_chosts.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch #319661
+	epatch "${FILESDIR}"/${P}-lfs-decls.patch #316377
+	epatch "${FILESDIR}"/${P}-fbsd_chosts.patch #316841
 }
 
 src_compile() {
