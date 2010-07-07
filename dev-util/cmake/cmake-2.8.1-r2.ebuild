@@ -71,6 +71,10 @@ src_configure() {
 		append-flags "-fno-stack-protector"
 	fi
 
+	# make things work with gentoo java setup
+	# in case java-config cannot be run, the variable just becomes unset
+	export JAVA_HOME=$(java-config -g JAVA_HOME 2> /dev/null)
+
 	bootstrap=0
 	has_version ">=dev-util/cmake-2.6.1" || bootstrap=1
 	if [[ ${bootstrap} = 0 ]]; then

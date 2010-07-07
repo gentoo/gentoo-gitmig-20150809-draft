@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.136 2010/07/06 21:58:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.137 2010/07/07 00:47:22 reavertm Exp $
+
+  07 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org> cmake-2.8.1-r2.ebuild:
+  export JAVA_HOME gathered from java-config, bug 315229
 
   06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> cmake-2.8.1-r2.ebuild:
   Stable on amd64 wrt bug #325845
