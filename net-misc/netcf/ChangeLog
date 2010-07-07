@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/netcf
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcf/ChangeLog,v 1.1 2010/07/07 17:46:20 cardoe Exp $
+
+*netcf-0.1.6 (07 Jul 2010)
+
+  07 Jul 2010; Doug Goldstein <cardoe@gentoo.org> +netcf-0.1.6.ebuild,
+  +metadata.xml:
+  Add netcf to the tree but it doesn't actually support Gentoo yet
+
