@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/traceroute-nanog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.18 2010/07/06 14:41:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.19 2010/07/07 16:58:44 jer Exp $
+
+*traceroute-nanog-6.4.2-r1 (07 Jul 2010)
+
+  07 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  -traceroute-nanog-6.4.2.ebuild, +traceroute-nanog-6.4.2-r1.ebuild:
+  Respect LDFLAGS. Add a define to please the compiler. Install
+  traceroute-nanog.genuine.8 thanks to Olivier Huber (bug #327227).
 
   06 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   traceroute-nanog-6.3.10-r1.ebuild:
