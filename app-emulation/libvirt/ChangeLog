@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.58 2010/07/06 17:20:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.59 2010/07/07 18:17:02 cardoe Exp $
+
+*libvirt-0.8.2-r1 (07 Jul 2010)
+
+  07 Jul 2010; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.8.2.ebuild,
+  +libvirt-0.8.2-r1.ebuild, +files/libvirtd.confd-r1,
+  +files/libvirtd.init-r1:
+  Updated initscript to support managedsave as well as ACPI shutdown.
+  Additionally support a reload operation that just restarts libvirt without
+  killing your VMs
 
   06 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
   -files/libvirt-0.7.6-virt-pki-validate-sysconfdir.patch, metadata.xml:

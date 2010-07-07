@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.2.ebuild,v 1.2 2010/07/06 17:10:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.2-r1.ebuild,v 1.1 2010/07/07 18:17:02 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -164,8 +164,8 @@ src_install() {
 		EXAMPLE_DIR=/usr/share/doc/${PF}/python/examples \
 		|| die "emake install failed"
 
-	newinitd "${FILESDIR}/libvirtd.init" libvirtd || die
-	newconfd "${FILESDIR}/libvirtd.confd" libvirtd || die
+	newinitd "${FILESDIR}/libvirtd.init-r1" libvirtd || die
+	newconfd "${FILESDIR}/libvirtd.confd-r1" libvirtd || die
 
 	keepdir /var/lib/libvirt/images
 
