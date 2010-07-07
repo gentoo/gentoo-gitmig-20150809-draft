@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_beta1.ebuild,v 1.1 2010/07/07 09:07:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_beta1.ebuild,v 1.2 2010/07/07 09:08:17 ssuominen Exp $
 
 EAPI=2
 
@@ -22,7 +22,6 @@ DEPEND="
 	dev-db/sqlite:3
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=kde-base/kdelibs-${KDE_MINIMAL}
 	media-libs/qimageblitz
 "
 RDEPEND="${DEPEND}"
