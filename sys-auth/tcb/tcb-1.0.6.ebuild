@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/tcb-1.0.4.ebuild,v 1.1 2010/02/12 10:00:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tcb/tcb-1.0.6.ebuild,v 1.1 2010/07/07 09:39:55 phajdan.jr Exp $
 
 EAPI="2"
 
