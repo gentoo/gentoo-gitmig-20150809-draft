@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-trax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.20 2010/06/29 09:10:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ChangeLog,v 1.21 2010/07/07 12:45:57 fauli Exp $
+
+  07 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  ant-trax-1.8.1.ebuild:
+  stable x86, bug 305929
 
   29 Jun 2010; Christoph Mende <angelos@gentoo.org> ant-trax-1.8.1.ebuild:
   Stable on amd64 wrt bug #305929
