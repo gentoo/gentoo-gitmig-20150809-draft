@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_alpha6.ebuild,v 1.3 2010/05/15 17:16:08 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_beta1.ebuild,v 1.1 2010/07/07 09:07:04 ssuominen Exp $
 
 EAPI=2
 
-KDE_LINGUAS="ca ca@valencia cs da de el en_GB eo es et fr ga gl hi hne is it ja
-lt nb nds nl nn pl pt pt_BR ro sk sv tr uk zh_TW"
+KDE_LINGUAS="bg ca ca@valencia cs da de el en_GB eo es et fr ga gl hi hne hr hu
+is it ja lt nb nds nl nn pl pt pt_BR ro sk sv tr uk zh_TW"
 KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
 inherit kde4-base
 
@@ -22,7 +22,7 @@ DEPEND="
 	dev-db/sqlite:3
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop]
+	>=kde-base/kdelibs-${KDE_MINIMAL}
 	media-libs/qimageblitz
 "
 RDEPEND="${DEPEND}"
