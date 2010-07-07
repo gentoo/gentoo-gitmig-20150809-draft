@@ -1,0 +1,13 @@
+diff --git a/modules.d/40network/parse-ip-opts.sh b/modules.d/40network/parse-ip-opts.sh
+index 7362669..a3c9597 100755
+--- a/modules.d/40network/parse-ip-opts.sh
++++ b/modules.d/40network/parse-ip-opts.sh
+@@ -74,7 +74,7 @@ for p in $(getargs ip=); do
+ 		die "Sorry, automatic calculation of netmask is not yet supported"
+ 	    ;;
+ 	auto6);;
+-	dhcp|on|any) \
++	dhcp|dhcp6|on|any) \
+ 	    [ -n "$NEEDBOOTDEV" ] && [ -z "$dev" ] && \
+ 	        die "Sorry, 'ip=$p' does not make sense for multiple interface configurations"
+ 	    [ -n "$ip" ] && \

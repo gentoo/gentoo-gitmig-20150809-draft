@@ -15,6 +15,10 @@
 		<flag name="nbd">Add support for network block devices</flag>
 		<flag name="nfs">Add support for NFS</flag>
 		<flag name="md">Add support for MD devices, also known as software raid devices</flag>
+		<flag name="btrfs">Add support for btrfs</flag>
+		<flag name="multipath">Add support for multipath</flag>
+		<flag name="uswsusp">Add support for userspace software suspend</flag>
+		<flag name="xen">Add support for Xen</flag>
 	</use>
 	<longdescription lang="en">
 	Generic, modular initramfs generation tool that can be used across various

@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.4 2010/03/22 01:27:20 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.5 2010/07/07 05:32:16 ramereth Exp $
+
+*dracut-006 (07 Jul 2010)
+
+  07 Jul 2010; Lance Albertson <ramereth@gentoo.org> +dracut-006.ebuild,
+  +files/dracut-006-dhcp6.patch, +files/dracut-006-lc-all-c.patch,
+  metadata.xml:
+  Version bump, resolves bug #324705
+
+  Thanks to Amadeusz Żołnowski for submitting the ebuild and patches.
 
   22 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
