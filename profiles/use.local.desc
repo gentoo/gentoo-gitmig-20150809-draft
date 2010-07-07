@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5749 2010/07/07 08:07:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5750 2010/07/07 13:47:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3538,6 +3538,7 @@ sys-process/htop:vserver - Enable vserver support
 sys-process/procps:n32 - Enable n32 ABI support on mips
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 www-apache/mod_mono:aspnet2 - Handle all applications using ASP.NET 2.0 engine by default
+www-apache/mod_nss:ecc - enable Elliptical Curve Cyptography
 www-apache/mod_security:perl -  Add a dependency upon Perl and install the script to update the Core Rule Set. Please note that this script will use the original Core Rule Set, and it's currently mostly untested. 
 www-apache/mod_security:vanilla -  Provide the original ModSecurity Core Rule Set without Gentoo-specific relaxation. When this flag is enabled, we install the unadulterated Core Rule Set. Warning! The original Core Rule Set is draconic and most likely will break your web applications, including Rails-based web applications and Bugzilla. 
 www-apache/mod_suphp:checkpath - Check if script resides in DOCUMENT_ROOT
