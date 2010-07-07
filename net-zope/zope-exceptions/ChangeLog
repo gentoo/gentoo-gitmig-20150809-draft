@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-exceptions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-exceptions/ChangeLog,v 1.5 2010/05/07 00:23:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-exceptions/ChangeLog,v 1.6 2010/07/07 00:09:09 arfrever Exp $
+
+*zope-exceptions-3.6.1 (07 Jul 2010)
+
+  07 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zope-exceptions-3.6.0.ebuild, +zope-exceptions-3.6.1.ebuild:
+  Version bump. Fixed tests with Python 2.7 and Python 3.2 (bug #318807).
 
 *zope-exceptions-3.6.0 (07 May 2010)
 
