@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-libs/pantomime
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.23 2009/07/07 15:53:18 voyageur Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.24 2010/07/07 20:52:11 voyageur Exp $
+
+  07 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  pantomime-1.2.0_pre3-r1.ebuild,
+  +files/pantomime-1.2.0_pre3-gscategories.patch:
+  Drop unused include (removed from recent gnustep base), fix bug #327357
 
 *pantomime-1.2.0_pre3-r1 (07 Jul 2009)
 
