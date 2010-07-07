@@ -1,6 +1,6 @@
 # ChangeLog for net-nds/389-ds-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.1 2010/07/07 14:31:36 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.2 2010/07/07 14:34:47 lxnay Exp $
 
 *389-ds-base-1.2.6_rc3 (07 Jul 2010)
 
@@ -11,5 +11,5 @@
   +metadata.xml:
   new ebuild, 389 Directory Server server package, thanks to
   Andreis_Vinogradovs ( slepnoga ) <spamslepnoga@inbox.ru> for the base
-  ebuild, closing #309553
+  ebuild, will close #104554
 
