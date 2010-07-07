@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.41 2010/06/26 20:52:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.42 2010/07/07 13:35:27 darkside Exp $
+
+  07 Jul 2010; Jeremy Olexa <darkside@gentoo.org> rpy-2.1.3.ebuild:
+  Add ~x86-linux prefix keyword, as tested in bug 327243
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org> rpy-2.1.3.ebuild:
   Stable on amd64 wrt bug #325429
