@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/jvgs-0.5.ebuild,v 1.2 2010/04/28 09:26:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/jvgs-0.5.ebuild,v 1.3 2010/07/07 14:42:48 phajdan.jr Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/jvgs/${P}-src.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
