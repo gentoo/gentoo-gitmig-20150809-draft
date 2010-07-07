@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-2.6.32.7.ebuild,v 1.1 2010/02/01 08:38:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-2.6.34.1.ebuild,v 1.1 2010/07/07 18:01:38 cardoe Exp $
 
 EAPI="2"
 
