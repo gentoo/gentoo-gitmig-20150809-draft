@@ -1,17 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.1.2.ebuild,v 1.2 2010/03/23 17:57:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.1.2.ebuild,v 1.3 2010/07/07 01:00:16 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
 MY_PN="EnvisageCore"
 MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="Enthought Tool Suite extensible application framework"
-HOMEPAGE="http://code.enthought.com/projects/envisage/"
+HOMEPAGE="http://code.enthought.com/projects/envisage/ http://pypi.python.org/pypi/EnvisageCore"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 IUSE="doc examples test"
@@ -27,7 +30,6 @@ DEPEND="dev-python/setuptools
 	test? ( >=dev-python/nose-0.10.3
 			>=dev-python/apptools-3.3.1
 			>=dev-python/enthoughtbase-3.0.4 )"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -45,13 +47,6 @@ src_compile() {
 	if use doc; then
 		"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
 	fi
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
-	}
-	python_execute_function testing
 }
 
 src_install() {
