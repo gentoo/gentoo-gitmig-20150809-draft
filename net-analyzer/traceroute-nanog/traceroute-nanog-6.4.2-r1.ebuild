@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.4.2-r1.ebuild,v 1.1 2010/07/07 16:58:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.4.2-r1.ebuild,v 1.2 2010/07/07 17:00:22 jer Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ S="${S}.orig"
 
 src_prepare() {
 	EPATCH_SUFFIX="dpatch" epatch "${WORKDIR}/${MY_P}-${DEB_PL}.diff" \
-		"${WORKDIR}/${P/.1}.orig/${P/.1/}/debian/patches/"
+		"${WORKDIR}/${P}.orig/${P}/debian/patches/"
 }
 
 src_compile() {
