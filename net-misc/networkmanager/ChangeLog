@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.73 2010/06/04 10:44:43 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.74 2010/07/07 17:57:32 nirbheek Exp $
+
+  07 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  networkmanager-0.8.ebuild, networkmanager-0.8-r1.ebuild:
+  Fix postinst message about reloading dbus as per bug 322805
 
   04 Jun 2010; Robert Piasek <dagger@gentoo.org> networkmanager-0.8.ebuild,
   networkmanager-0.8-r1.ebuild:
