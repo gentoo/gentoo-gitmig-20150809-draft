@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.27 2010/06/05 21:28:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.28 2010/07/07 09:01:33 hwoarang Exp $
+
+  07 Jul 2010; Markos Chandras <hwoarang@gentoo.org> pyinotify-0.9.0.ebuild:
+  Stable on amd64 wrt bug #327153
 
 *pyinotify-0.9.0 (05 Jun 2010)
 
