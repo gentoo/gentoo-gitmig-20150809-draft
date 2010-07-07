@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netkit-bootpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.20 2010/01/23 10:01:11 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/ChangeLog,v 1.21 2010/07/07 12:01:56 ssuominen Exp $
+
+*netkit-bootpd-2.4-r1 (07 Jul 2010)
+
+  07 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +netkit-bootpd-2.4-r1.ebuild, +files/netkit-bootpd-2.4.patch:
+  Fix building for 64bit wrt #327283 by Michael Weber and misc. build system
+  issues.
 
   23 Jan 2010; Dawid Węgliński <cla@gentoo.org> netkit-bootpd-2.4.ebuild:
   Respect user CFLAGS (bug #241072)
