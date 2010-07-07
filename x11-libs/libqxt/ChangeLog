@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.13 2010/04/30 17:32:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.14 2010/07/07 23:41:49 hwoarang Exp $
+
+*libqxt-0.6.0-r1 (07 Jul 2010)
+
+  07 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  +libqxt-0.6.0-r1.ebuild:
+  Revbump to fix documenation installation. New elog message wrt
+  qt-assistant. Fixes bug #327129
 
 *libqxt-0.6.0 (30 Apr 2010)
 
