@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.180 2010/07/01 20:27:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.181 2010/07/07 22:18:57 slyfox Exp $
+
+  07 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> -ghc-6.10.4.ebuild,
+  ghc-6.10.4-r1.ebuild, ghc-6.12.3.ebuild,
+  +files/ghc-6.12.3-alpha-use-libffi-for-foreign-import-wrapper.patch:
+  Added alpha binary for ghc-6.10.4-r1 (thanks to Martin Rosenberg
+  <mjrosenb@andrew.cmu.edu>);
+  added alpha binary for ghc-6.12.3, removed old ghc-6.10.4 in favour of
+  -r1.
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> ghc-6.4.2.ebuild,
   ghc-6.6.ebuild, ghc-6.6.1.ebuild, ghc-6.8.2.ebuild, ghc-6.8.2-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.5 2010/07/01 20:27:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.6 2010/07/07 22:18:57 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -40,6 +40,7 @@ EXTRA_SRC_URI="${PV}"
 
 arch_binaries=""
 
+arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~ivanm/ghc-bin-${PV}-alpha.tbz2 )"
 arch_binaries="$arch_binaries x86?   ( http://code.haskell.org/~ivanm/ghc-bin-${PV}-x86.tbz2 )"
 arch_binaries="$arch_binaries amd64? ( http://haskell.org/~kolmodin/ghc-bin-${PV}-amd64.tbz2 )"
 arch_binaries="$arch_binaries sparc? ( http://haskell.org/~duncan/ghc/ghc-bin-${PV}-sparc.tbz2 )"
@@ -57,7 +58,7 @@ SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${P}-src.tar.bz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="binary doc ghcbootstrap"
 
 RDEPEND="

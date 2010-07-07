@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.3 2010/07/01 20:27:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.4 2010/07/07 22:18:57 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -35,6 +35,7 @@ HOMEPAGE="http://www.haskell.org/ghc/"
 
 arch_binaries=""
 
+arch_binaries="$arch_binaries alpha? ( http://code.haskell.org/~slyfox/ghc-alpha/ghc-bin-${PV}-alpha.tbz2 )"
 arch_binaries="$arch_binaries x86?   ( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )"
 arch_binaries="$arch_binaries amd64? ( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )"
 #arch_binaries="$arch_binaries sparc? ( http://haskell.org/~duncan/ghc/ghc-bin-${PV}-sparc.tbz2 )"
@@ -50,7 +51,7 @@ SRC_URI="!binary? ( http://darcs.haskell.org/download/dist/${PV}/${P}-src.tar.bz
 	!ghcbootstrap? ( $arch_binaries )"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc64 ~x86"
 IUSE="binary doc ghcbootstrap"
 
 RDEPEND="
@@ -200,6 +201,9 @@ src_unpack() {
 
 		epatch "${FILESDIR}/ghc-6.12.1-configure-CHOST.patch"
 		epatch "${FILESDIR}/ghc-6.12.2-configure-CHOST-part2.patch"
+
+		# fixes build failure of adjustor code
+		epatch "${FILESDIR}/ghc-6.12.3-alpha-use-libffi-for-foreign-import-wrapper.patch"
 
 		# as we have changed the build system with the readline patch
 		eautoreconf
