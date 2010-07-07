@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5747 2010/07/06 17:27:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5748 2010/07/07 05:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3471,12 +3471,16 @@ sys-fs/udev:old-hd-rules - Install rules for /dev/hd* devices, removed upstream 
 sys-fs/udisks:remote-access - Control whether connections from other clients over LAN are allowed
 sys-fs/unionfs:nfs - Adds support for NFS file system
 sys-kernel/ck-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+sys-kernel/dracut:btrfs - Add support for btrfs
 sys-kernel/dracut:dmraid - Add support for dmraid devices, also known as ATA-RAID, or Fake RAID.
 sys-kernel/dracut:iscsi - Add support for iSCSI
 sys-kernel/dracut:lvm - Add support for the Logical Volume Manager sys-apps/lvm2
 sys-kernel/dracut:md - Add support for MD devices, also known as software raid devices
+sys-kernel/dracut:multipath - Add support for multipath
 sys-kernel/dracut:nbd - Add support for network block devices
 sys-kernel/dracut:nfs - Add support for NFS
+sys-kernel/dracut:uswsusp - Add support for userspace software suspend
+sys-kernel/dracut:xen - Add support for Xen
 sys-kernel/gentoo-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/gentoo-sources:ultra1 - Enable if you have a SUN Ultra 1 with a HME interface
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
