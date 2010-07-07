@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <use>
-  <flag name='nologin'>Do not include login support</flag>
+  <flag name='nologin'>Do not include login support when connecting partimaged</flag>
 </use>
 </pkgmetadata>
