@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4378 2010/07/07 12:03:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4379 2010/07/07 21:24:59 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Last rites for some gnustep packages, bugs #318137, #327371, #327389
 
   07 Jul 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask dev-dotnet/heap-buddy for removal.
