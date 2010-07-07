@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.6 2010/07/06 15:55:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.7 2010/07/07 08:57:46 hwoarang Exp $
+
+  07 Jul 2010; Markos Chandras <hwoarang@gentoo.org> hg-git-0.2.2.ebuild:
+  Stable on amd64 wrt bug #327149
 
   06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   hg-git-0.2.2.ebuild:
