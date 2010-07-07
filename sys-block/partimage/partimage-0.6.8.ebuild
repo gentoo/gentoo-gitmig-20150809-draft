@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.8.ebuild,v 1.1 2010/07/07 22:53:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.8.ebuild,v 1.2 2010/07/07 22:58:44 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils flag-o-matic pam
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="nls pam ssl static"
+IUSE="nls nologin pam ssl static"
 
 LIBS_DEPEND="app-arch/bzip2
 	>=dev-libs/newt-0.52
@@ -28,7 +28,7 @@ DEPEND="${PAM_DEPEND}
 
 pkg_setup() {
 	enewgroup partimag 91
-	enewuser partimag 91 -1 /var/log/partimage partimag
+	enewuser partimag 91 -1 /var/lib/partimage partimag
 }
 
 src_prepare() {
@@ -42,8 +42,11 @@ src_configure() {
 	use ppc && append-flags -fsigned-char
 
 	local myconf
+
+	use nologin && myconf="${myconf} --disable-login"
+
 	if use pam && ! use static; then
-		myconf="--enable-pam"
+		myconf="${myconf} --enable-pam"
 	fi
 
 	econf \
@@ -63,6 +66,7 @@ src_install() {
 	dodoc BOOT-ROOT.txt FORMAT FUTURE THANKS
 	prepalldocs
 
+	keepdir /var/lib/partimage
 	keepdir /var/log/partimage
 
 	insinto /etc/partimaged
