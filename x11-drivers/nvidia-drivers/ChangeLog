@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.233 2010/06/30 14:32:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.234 2010/07/07 12:27:17 phajdan.jr Exp $
+
+  07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  nvidia-drivers-195.36.24.ebuild:
+  x86 stable wrt bug #325513
 
   30 Jun 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Correct description.
