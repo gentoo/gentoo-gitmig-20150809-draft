@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bashish
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.22 2010/07/06 22:45:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.23 2010/07/07 15:56:01 jer Exp $
+
+  07 Jul 2010; Jeroen Roovers <jer@gentoo.org> bashish-2.2.4.ebuild:
+  Stable for HPPA (bug #327065).
 
   06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> bashish-2.2.4.ebuild:
   Stable on amd64 wrt bug #327065
