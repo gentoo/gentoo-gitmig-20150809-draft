@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rxtx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.14 2010/06/26 20:25:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.15 2010/07/07 14:40:33 phajdan.jr Exp $
+
+  07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rxtx-2.1.7.2-r3.ebuild:
+  x86 stable wrt bug #309111
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org>
   +files/rxtx-2.1-7r2-lfd-include-limits.diff, rxtx-2.1.7.2-r3.ebuild:
