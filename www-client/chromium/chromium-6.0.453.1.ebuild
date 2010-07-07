@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.453.1.ebuild,v 1.2 2010/07/04 17:33:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.453.1.ebuild,v 1.3 2010/07/07 07:37:06 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -131,7 +131,10 @@ src_configure() {
 	elif [[ $myarch = x86 ]] ; then
 		myconf="${myconf} -Dtarget_arch=ia32"
 	elif [[ $myarch = arm ]] ; then
+		# TODO: check this again after
+		# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=39509 is fixed.
 		append-flags -fno-tree-sink
+
 		myconf="${myconf} -Dtarget_arch=arm -Ddisable_nacl=1 -Dlinux_use_tcmalloc=0"
 	else
 		die "Failed to determine target arch, got '$myarch'."
