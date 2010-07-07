@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.85 2010/06/26 19:13:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.86 2010/07/07 12:30:31 phajdan.jr Exp $
+
+  07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  nvidia-settings-195.36.24.ebuild:
+  x86 stable wrt bug #323639
 
   26 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   nvidia-settings-195.36.24.ebuild:
