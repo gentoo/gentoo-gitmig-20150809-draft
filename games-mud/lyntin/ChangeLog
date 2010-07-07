@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/lyntin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/ChangeLog,v 1.14 2010/05/22 15:03:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/ChangeLog,v 1.15 2010/07/07 19:59:08 tupone Exp $
+
+  07 Jul 2010; Tupone Alfredo <tupone@gentoo.org> lyntin-4.2.ebuild:
+  Adding dependency on dev-python/setuptools Bug #327021 by
+  flameeyes@gentoo.org
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> lyntin-4.2.ebuild:
   stable amd64, bug 303485
