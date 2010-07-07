@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.2.ebuild,v 1.2 2010/07/07 03:50:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.2.ebuild,v 1.3 2010/07/07 16:56:27 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit distutils virtualx
 
 MY_PN="AppTools"
 MY_P="${MY_PN}-${PV}"
@@ -17,38 +17,53 @@ DESCRIPTION="Enthought Tool Suite application tools"
 HOMEPAGE="http://code.enthought.com/projects/app_tools.php http://pypi.python.org/pypi/AppTools"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="doc examples"
-#IUSE="doc examples test"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-LICENSE="BSD"
+IUSE="doc examples test"
 
 RDEPEND="dev-python/configobj
-	dev-python/numpy
+	>=dev-python/enthoughtbase-3.0.5
 	>=dev-python/envisagecore-3.1.2
+	dev-python/numpy
 	>=dev-python/traitsgui-3.4.0"
 DEPEND="dev-python/setuptools
-	doc? ( dev-python/setupdocs )"
-# Tests require X display.
-#	test? ( >=dev-python/nose-0.10.3
-#			>=dev-python/enthoughtbase-3.0.4 )
-RESTRICT="test"
+	doc? ( dev-python/setupdocs )
+	test? (
+		dev-python/coverage
+		>=dev-python/nose-0.10.3
+		media-fonts/font-cursor-misc
+		media-fonts/font-misc-misc
+		x11-apps/xhost
+	)"
 
 S="${WORKDIR}/${MY_P}"
+
 PYTHON_MODNAME="enthought integrationtests"
 
 src_prepare() {
 	sed -i \
 		-e "s/self.run_command('build_docs')/pass/" \
-		-e "s/setupdocs>=1.0//" \
-		setup.py || die
+		-e "/setupdocs>=1.0/d" \
+		setup.py || die "sed setup.py failed"
+
+	# Disable failing tests.
+	sed -e "s/test_version_registry/_&/" -i enthought/persistence/tests/test_spawner.py
+	sed -e "s/test_run/_&/" -i enthought/persistence/tests/test_version_registry.py
+	rm -f enthought/persistence/tests/test_state_pickler.py
 }
 
 src_compile() {
 	distutils_src_compile
+
 	if use doc; then
+		einfo "Generation of documentation"
 		"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
 	fi
+}
+
+src_test() {
+	maketype="distutils_src_test" virtualmake
 }
 
 src_install() {

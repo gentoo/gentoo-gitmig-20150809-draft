@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apptools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.7 2010/05/31 07:00:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.8 2010/07/07 16:56:27 arfrever Exp $
+
+  07 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  apptools-3.3.2.ebuild:
+  Unrestrict tests.
 
 *apptools-3.3.2 (31 May 2010)
 
