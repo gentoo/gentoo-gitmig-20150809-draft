@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.2 2010/06/27 18:58:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.3 2010/07/07 09:36:44 phajdan.jr Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnu.org/software/classpath"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0.98"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 IUSE="alsa debug doc dssi examples gconf gjdoc gmp gtk gstreamer qt4 xml"
 
