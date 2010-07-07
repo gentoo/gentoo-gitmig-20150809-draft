@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.18 2010/07/02 10:02:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.19 2010/07/07 21:20:06 nirbheek Exp $
+
+  07 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> polkit-0.96-r1.ebuild,
+  polkit-0.96-r2.ebuild:
+  Add ewarn about ensuring that consolekit sessions are working. Either the
+  user needs to login using a login-manager with consolekit support, or use
+  ck-launch-session to launch the DE as suggested in bug 291116 comment 13
 
 *polkit-0.96-r2 (02 Jul 2010)
 
