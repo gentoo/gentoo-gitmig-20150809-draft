@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nstx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.11 2010/07/05 07:31:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/ChangeLog,v 1.12 2010/07/07 09:21:44 hwoarang Exp $
+
+  07 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  nstx-1.1_beta6-r3.ebuild:
+  Stable on amd64 wrt bug #320439
 
   05 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
   nstx-1.1_beta6-r3.ebuild, +files/nstx-1.1_beta6_05-respect-ldflags.patch:
