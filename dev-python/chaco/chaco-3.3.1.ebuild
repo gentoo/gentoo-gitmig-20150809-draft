@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.1.ebuild,v 1.1 2010/07/07 15:13:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.1.ebuild,v 1.2 2010/07/07 16:09:39 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,17 +22,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-python/enable-3.3.1"
-DEPEND="dev-python/setuptools
-	dev-python/numpy
+RDEPEND=">=dev-python/enable-3.3.1
+	>=dev-python/enthoughtbase-3.0.5
+	dev-python/numpy"
+DEPEND="${RDEPEND}
+	dev-python/setuptools
 	doc? ( dev-python/setupdocs )
-	test? ( >=dev-python/nose-0.10.3
-			dev-python/coverage
-			>=dev-python/enable-3.3.1
-			>=dev-python/enthoughtbase-3.0.5
-			x11-apps/xhost
-			media-fonts/font-misc-misc
-			media-fonts/font-cursor-misc )"
+	test? (
+		dev-python/coverage
+		>=dev-python/nose-0.10.3
+		media-fonts/font-cursor-misc
+		media-fonts/font-misc-misc
+		x11-apps/xhost
+	)"
 
 S="${WORKDIR}/${MY_P}"
 
