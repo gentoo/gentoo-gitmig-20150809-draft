@@ -11,6 +11,7 @@
 	<name>Alex Alexander</name>
 </maintainer>
 <use>
+	<flag name="bfq">Make the BFQ IO Scheduler available by applying upstream patches</flag>
 	<flag name="stable">Clone stable git tree</flag>
 	<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
 </use>

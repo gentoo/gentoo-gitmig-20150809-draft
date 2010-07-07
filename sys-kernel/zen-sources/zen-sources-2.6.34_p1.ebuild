@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.34_p1.ebuild,v 1.1 2010/06/23 20:40:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.34_p1.ebuild,v 1.2 2010/07/07 08:04:05 wired Exp $
 
 COMPRESSTYPE=".lzma"
 K_USEPV="yes"
@@ -21,10 +21,15 @@ ZEN_KERNEL="${PV/_p[0-9]*}"
 ZEN_KERNEL="${ZEN_KERNEL/_/-}"
 ZEN_FILE="${ZEN_KERNEL}-zen${ZEN_PATCHSET}.patch${COMPRESSTYPE}"
 ZEN_URI="http://downloads.zen-kernel.org/$(get_version_component_range 1-3)/${ZEN_FILE}"
-SRC_URI="${KERNEL_URI} ${ZEN_URI}"
+ZEN_PATCHES="
+	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/2.6.34-zen1/0001-block-prepare-I-O-context-code-for-BFQ.patch
+	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/2.6.34-zen1/0002-block-add-cgroups-kconfig-and-build-bits-for-BFQ.patch
+	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/2.6.34-zen1/0003-block-introduce-the-BFQ-I-O-scheduler.patch
+"
+SRC_URI="${KERNEL_URI} ${ZEN_URI} bfq? ( ${ZEN_PATCHES} )"
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="bfq"
 
 DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )"
 
@@ -46,6 +51,11 @@ src_unpack(){
 	kernel-2_src_unpack
 	cd "${S}"
 	epatch "${DISTDIR}"/"${ZEN_FILE}"
+	if use bfq; then
+		for p in ${ZEN_PATCHES}; do
+			epatch "${DISTDIR}/${p/*\/}"
+		done
+	fi
 }
 
 K_EXTRAEINFO="For more info on zen-sources and details on how to report problems, see: \
