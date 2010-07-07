@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/envisagecore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/ChangeLog,v 1.5 2010/03/23 05:12:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/ChangeLog,v 1.6 2010/07/07 15:56:24 arfrever Exp $
+
+  07 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  envisagecore-3.1.2.ebuild:
+  Fix tests.
 
 *envisagecore-3.1.2 (21 Mar 2010)
 
