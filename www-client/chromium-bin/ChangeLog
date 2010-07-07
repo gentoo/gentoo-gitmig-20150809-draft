@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.69 2010/06/28 20:09:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.70 2010/07/07 15:34:18 phajdan.jr Exp $
+
+  07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> metadata.xml:
+  Transfer ownership to the new chromium herd.
 
 *chromium-bin-6.0.451.0_p51005 (28 Jun 2010)
 

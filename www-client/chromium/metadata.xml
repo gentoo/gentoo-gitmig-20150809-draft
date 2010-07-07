@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>voyageur@gentoo.org</email>
-		<name>Bernard Cafarelli</name>
-	</maintainer>
-	<maintainer>
-		<email>phajdan.jr@gentoo.org</email>
-		<name>Pawel Hajdan</name>
-	</maintainer>
+	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
 	<use>
 		<flag name='plugins-symlink'>Add support for system web browser plugins out of the box</flag>
