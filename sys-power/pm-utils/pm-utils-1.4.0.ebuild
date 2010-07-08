@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.0.ebuild,v 1.2 2010/06/23 11:06:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.0.ebuild,v 1.3 2010/07/08 01:40:16 ssuominen Exp $
 
 EAPI=2
 inherit autotools multilib
@@ -15,8 +15,9 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="alsa debug networkmanager ntp video_cards_intel video_cards_radeon"
 
 vbetool="!video_cards_intel? ( sys-apps/vbetool )"
-RDEPEND="
-	!sys-power/powermgmt-base
+DEPEND="!app-laptop/laptop-mode-tools
+	!sys-power/powermgmt-base"
+RDEPEND="${DEPEND}
 	sys-apps/dbus
 	>=sys-apps/util-linux-2.13
 	sys-power/pm-quirks
@@ -26,7 +27,6 @@ RDEPEND="
 	amd64? ( ${vbetool} )
 	x86? ( ${vbetool} )
 	video_cards_radeon? ( app-laptop/radeontool )"
-DEPEND=""
 
 src_prepare() {
 	local ignore="01grub"
