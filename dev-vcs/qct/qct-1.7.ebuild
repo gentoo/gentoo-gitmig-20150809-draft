@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.7 2010/06/22 18:50:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/qct-1.7.ebuild,v 1.8 2010/07/08 12:38:15 arfrever Exp $
 
-EAPI="2"
-NEED_PYTHON="2.4"
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
 inherit distutils
 
 DESCRIPTION="PyQt based commit tool for many VCSs"
@@ -26,6 +29,8 @@ DEPEND="app-text/asciidoc
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
+
+PYTHON_MODNAME="qctlib"
 
 src_prepare() {
 	distutils_src_prepare
