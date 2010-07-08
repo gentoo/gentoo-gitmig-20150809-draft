@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.6 2010/06/27 12:53:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.7 2010/07/08 18:24:24 armin76 Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -13,7 +13,7 @@ SRC_URI="http://openbox.org/dist/openbox/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha amd64 ~arm ~hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="nls +startup-notification"
 
 RDEPEND="dev-libs/glib:2
