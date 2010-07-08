@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/shm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.7 2010/06/26 01:41:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.8 2010/07/08 15:20:12 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  shm-1.2.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   26 Jun 2010; Sebastian Pipping <sping@gentoo.org> shm-1.2.2.ebuild,
   +files/shm-1.2.2-compiler.patch:
