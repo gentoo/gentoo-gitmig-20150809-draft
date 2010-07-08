@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/powermgmt-base-1.31.ebuild,v 1.1 2010/07/08 07:37:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/powermgmt-base-1.31.ebuild,v 1.2 2010/07/08 08:44:09 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -39,7 +39,7 @@ src_install() {
 	doman man/{acpi,apm}_available.1 || die
 
 	if ! use pm-utils; then
-		man/on_ac_power.1 || die
+		doman man/on_ac_power.1 || die
 	else
 		rm -f "${D}"/sbin/on_ac_power || die
 	fi
