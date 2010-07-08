@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/fastjar-0.98-r1.ebuild,v 1.3 2010/07/04 22:03:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/fastjar-0.98-r1.ebuild,v 1.4 2010/07/08 15:54:31 ranger Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ppc64 x86"
 
 IUSE=""
 
