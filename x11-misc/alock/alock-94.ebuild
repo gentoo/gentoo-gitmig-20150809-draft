@@ -1,17 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-94.ebuild,v 1.2 2010/06/05 10:50:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-94.ebuild,v 1.3 2010/07/08 11:45:16 ssuominen Exp $
 
-EAPI="2"
-
-inherit eutils
+EAPI=2
+inherit eutils toolchain-funcs
 
 DESCRIPTION="locks the local X display until a password is entered"
 HOMEPAGE="http://code.google.com/p/alock/
 	http://darkshed.net/projects/alock"
 SRC_URI="http://alock.googlecode.com/files/alock-svn-${PV}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="imlib pam"
@@ -23,38 +22,39 @@ DEPEND="x11-libs/libX11
 	x11-libs/libXcursor
 	imlib? ( media-libs/imlib2[X] )
 	pam? ( virtual/pam )"
-RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/alock-svn-${PV}
+S=${WORKDIR}/${PN}-svn-${PV}
 
 src_prepare() {
-	# fix pointer declaration for amd64
 	epatch "${FILESDIR}"/implicit_pointer_conversion_fix_amd64.patch
 }
 
 src_configure() {
-	econf --with-all \
+	tc-export CC
+
+	./configure \
+		--prefix=/usr \
+		--with-all \
 		$(use_with pam) \
-		$(use_with imlib imlib2) \
-	|| die "configure failed"
+		$(use_with imlib imlib2) || die
+}
+
+src_compile() {
+	emake XMLTO=true || die
 }
 
 src_install() {
 	dobin src/alock || die
 	doman alock.1 || die
-	dodoc README.txt CHANGELOG.txt || die
+	dodoc {CHANGELOG,README,TODO}.txt || die
 
 	insinto /usr/share/alock/xcursors
 	doins contrib/xcursor-* || die
 
 	insinto /usr/share/alock/bitmaps
 	doins bitmaps/* || die
-}
 
-pkg_postinst() {
 	if ! use pam; then
-		einfo "pam support disabled"
-		einfo "In order to authenticate against /etc/passwd, "
-		einfo "/usr/bin/alock will need to be SUID"
+		fperms 4755 /usr/bin/alock
 	fi
 }
