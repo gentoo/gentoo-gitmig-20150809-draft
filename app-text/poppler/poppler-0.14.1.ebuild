@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.0-r1.ebuild,v 1.4 2010/06/21 15:32:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.14.1.ebuild,v 1.1 2010/07/08 22:02:57 reavertm Exp $
 
 EAPI="2"
 
@@ -8,13 +8,12 @@ inherit cmake-utils
 
 DESCRIPTION="PDF rendering library based on the xpdf-3.0 code base"
 HOMEPAGE="http://poppler.freedesktop.org/"
-SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.bz2"
+SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
-IUSE="+abiword cairo cjk curl cxx debug exceptions jpeg jpeg2k +lcms png qt4 +utils +xpdf-headers"
-# doc, see src_install
+IUSE="+abiword cairo cjk curl cxx debug doc exceptions jpeg jpeg2k +lcms png qt4 +utils +xpdf-headers"
 
 # No test data provided
 RESTRICT="test"
@@ -51,7 +50,7 @@ RDEPEND="${COMMON_DEPEND}
 	cjk? ( >=app-text/poppler-data-0.2.1 )
 "
 
-DOCS=(AUTHORS NEWS README README-XPDF TODO)
+DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
 
 src_configure() {
 	mycmakeargs=(
@@ -82,11 +81,11 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-# Restore with 0.14.1 per http://bugs.gentoo.org/323409
-#	if use cairo && use doc; then
-#		insinto /usr/share/doc/${PF}/html
-#		doins -r "${S}"/glib/reference/html/* || die
-#	fi
+	if use cairo && use doc; then
+		# For now install gtk-doc there
+		insinto /usr/share/gtk-doc/html/poppler
+		doins -r "${S}"/glib/reference/html/* || die 'failed to install API documentation'
+	fi
 }
 
 pkg_preinst() {
