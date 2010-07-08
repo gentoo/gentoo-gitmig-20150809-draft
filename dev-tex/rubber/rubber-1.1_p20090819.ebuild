@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/rubber-1.1_p20090819.ebuild,v 1.3 2010/01/10 18:36:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/rubber-1.1_p20090819.ebuild,v 1.4 2010/07/08 12:19:02 arfrever Exp $
 
-EAPI="2"
-NEED_PYTHON="2.5"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 
 inherit distutils
 
@@ -23,6 +23,11 @@ DEPEND="virtual/latex-base"
 
 S=${WORKDIR}/${P/_p*/}
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_configure() {
 	# configure script is not created by GNU autoconf
 	./configure --prefix=/usr \
@@ -33,5 +38,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	distutils_src_compile
+
+	cd doc
+	emake all || die "emake failed"
 }

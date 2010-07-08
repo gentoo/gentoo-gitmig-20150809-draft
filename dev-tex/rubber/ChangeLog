@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/rubber
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.19 2010/05/05 07:21:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/rubber/ChangeLog,v 1.20 2010/07/08 12:19:02 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  rubber-1.1_p20090819.ebuild:
+  Use Python 2 (bug #312223).
 
   05 May 2010; Alexis Ballier <aballier@gentoo.org> -rubber-0.99.8.ebuild,
   -rubber-1.1.ebuild, -rubber-1.1_p20080323.ebuild,
