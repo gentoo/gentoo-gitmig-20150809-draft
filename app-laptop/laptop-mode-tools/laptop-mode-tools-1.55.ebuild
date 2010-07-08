@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.55.ebuild,v 1.1 2010/07/08 05:58:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.55.ebuild,v 1.2 2010/07/08 10:06:14 ssuominen Exp $
 
 EAPI=2
 
@@ -41,7 +41,6 @@ src_install() {
 	dodoc Documentation/*.txt README || die
 	newinitd "${FILESDIR}"/laptop_mode.init-1.4 laptop_mode
 
-	# XXX: Figure this out with pm-utils-1.4.0
 	exeinto /etc/pm/power.d
 	newexe "${FILESDIR}"/laptop_mode_tools.pmutils laptop_mode_tools
 
