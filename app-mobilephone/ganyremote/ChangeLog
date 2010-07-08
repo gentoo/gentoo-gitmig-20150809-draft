@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/ganyremote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.4 2010/06/27 11:57:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.5 2010/07/08 18:27:16 serkan Exp $
+
+*ganyremote-5.11.4 (08 Jul 2010)
+
+  08 Jul 2010; <firari@gentoo.org> +ganyremote-5.11.4.ebuild:
+  Version bump.
 
   27 Jun 2010; Christoph Mende <angelos@gentoo.org>
   ganyremote-5.11.3-r1.ebuild:
