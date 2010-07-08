@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1.ebuild,v 1.3 2010/07/08 07:39:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1.ebuild,v 1.4 2010/07/08 10:09:22 ssuominen Exp $
 
 EAPI=2
 inherit multilib
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="alsa debug networkmanager ntp video_cards_intel video_cards_radeon"
 
 vbetool="!video_cards_intel? ( sys-apps/vbetool )"
-DEPEND="!app-laptop/laptop-mode-tools
+DEPEND="!<app-laptop/laptop-mode-tools-1.55-r1
 	!<sys-power/powermgmt-base-1.31
 	!>=sys-power/powermgmt-base-1.31[-pm-utils]"
 RDEPEND="${DEPEND}
