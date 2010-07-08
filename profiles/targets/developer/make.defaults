@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/developer/make.defaults,v 1.4 2010/06/09 17:03:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/developer/make.defaults,v 1.5 2010/07/08 08:18:21 zmedico Exp $
 
-FEATURES="collision-protect cvs digest multilib-strict sign splitdebug stricter test test-fail-continue userpriv usersandbox"
+FEATURES="collision-protect digest multilib-strict sign splitdebug stricter test test-fail-continue userpriv usersandbox"
 
 # Disable branding (from desktop)
 USE="-branding"
