@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.1 2010/06/22 14:27:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.2 2010/07/08 09:50:19 hwoarang Exp $
 
 EAPI="2"
 
@@ -24,6 +24,11 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
+	for file in app-chooser.ui ask-rename.ui file-prop.ui preferred-apps.ui \
+		progress.ui;do
+			echo "data/ui/${file}" >> po/POTFILES.in
+	done
+	echo "src/udisks/g-udisks-device.c" >> po/POTFILES.in
 	eautoreconf
 	einfo "Running intltoolize ..."
 	intltoolize --force --copy --automake || die
