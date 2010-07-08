@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/wnn7sdk-20011017-r1.ebuild,v 1.2 2008/12/08 14:04:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/wnn7sdk-20011017-r1.ebuild,v 1.3 2010/07/08 17:50:44 hwoarang Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -37,7 +37,8 @@ src_unpack() {
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" \
-		World -f Makefile.ini || die "make World failed"
+			SHLIBGLOBALSFLAGS="${LDFLAGS}" \
+			World -f Makefile.ini || die "make World failed"
 }
 
 src_install() {

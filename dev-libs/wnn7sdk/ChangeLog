@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/wnn7sdk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.7 2008/12/08 14:04:13 matsuu Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.8 2010/07/08 17:50:44 hwoarang Exp $
+
+  08 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  wnn7sdk-20011017-r1.ebuild:
+  Respect LDFLAGS wrt bug #325947
 
   08 Dec 2008; MATSUU Takuto <matsuu@gentoo.org> wnn7sdk-20011017-r1.ebuild:
   Fixed xorg build issue, bug #250211.
