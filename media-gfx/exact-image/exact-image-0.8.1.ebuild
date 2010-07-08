@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.1 2010/06/21 20:47:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.2 2010/07/08 21:22:08 hwoarang Exp $
 
 EAPI=2
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit eutils python
+inherit eutils multilib python
 
 DESCRIPTION="A fast, modern and generic image processing library"
 HOMEPAGE="http://www.exactcode.de/site/open_source/exactimage/"
@@ -48,7 +48,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	python_convert_shebangs -r 2 .
 	epatch "${FILESDIR}"/${PN}-0.7.5-libpng14.patch
+	# fix python hardcoded path wrt bug #327171
+	sed -i -e "s:python2.5:python$(python_get_version):" \
+		-e "s:\$(libdir):usr/$(get_libdir):" \
+		"${S}"/api/python/Makefile
 }
 
 src_configure() {
@@ -58,6 +63,7 @@ src_configure() {
 
 	./configure \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		$(use_with X x11) \
 		$(use_with truetype freetype) \
 		--without-evas \
