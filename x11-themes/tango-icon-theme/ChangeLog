@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.51 2010/01/06 19:43:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.52 2010/07/08 02:01:01 ssuominen Exp $
+
+  08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  tango-icon-theme-0.8.90.ebuild:
+  Fix imagemagick vs. graphicsmagick depend wrt #314421 by Wojciech Porczyk.
 
   06 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   tango-icon-theme-0.8.90.ebuild:
