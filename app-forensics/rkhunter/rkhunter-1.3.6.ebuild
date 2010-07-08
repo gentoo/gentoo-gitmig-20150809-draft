@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.4-r2.ebuild,v 1.3 2009/07/29 15:50:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.6.ebuild,v 1.1 2010/07/08 04:25:34 jer Exp $
 
 EAPI=2
 
@@ -12,19 +12,21 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="virtual/mta
+RDEPEND="
 	app-shells/bash
 	dev-lang/perl
-	sys-process/lsof"
+	sys-process/lsof
+	virtual/cron
+	virtual/mailx
+"
 
 S="${WORKDIR}/${P}/files"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}.conf.patch"
-	epatch "${FILESDIR}/${PN}-ppc64.patch"
 }
 
 src_install() {
@@ -47,7 +49,7 @@ src_install() {
 	doins i18n/*
 
 	doman ${PN}.8 || die "doman failed"
-	dodoc ACKNOWLEDGMENTS CHANGELOG FAQ README WISHLIST || die "dodoc failed"
+	dodoc ACKNOWLEDGMENTS CHANGELOG FAQ README || die "dodoc failed"
 
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}/${PN}-1.3.cron" ${PN} || \
