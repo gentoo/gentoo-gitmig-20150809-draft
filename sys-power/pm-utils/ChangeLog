@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.48 2010/07/08 02:54:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.49 2010/07/08 07:39:31 ssuominen Exp $
+
+  08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> pm-utils-1.4.1.ebuild:
+  Don't block sys-power/powermgmt-base anymore if USE="pm-utils" is enabled
+  wrt #255249.
 
 *pm-utils-1.4.1 (08 Jul 2010)
 
