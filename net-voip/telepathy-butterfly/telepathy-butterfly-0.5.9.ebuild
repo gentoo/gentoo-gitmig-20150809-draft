@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.9.ebuild,v 1.2 2010/06/27 12:30:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.9.ebuild,v 1.3 2010/07/08 15:03:23 arfrever Exp $
 
 EAPI="2"
-NEED_PYTHON="2.5"
+PYTHON_DEPEND="2:2.5"
 
 inherit python multilib eutils
 
