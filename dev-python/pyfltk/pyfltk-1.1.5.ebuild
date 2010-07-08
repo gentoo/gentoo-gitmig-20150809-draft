@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.5.ebuild,v 1.4 2010/06/27 12:00:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.5.ebuild,v 1.5 2010/07/08 18:30:00 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils
+inherit distutils eutils
 
 MY_P="pyFltk-${PV}"
 
@@ -23,12 +24,12 @@ IUSE="doc"
 RDEPEND=">=x11-libs/fltk-1.1.9:1.1[opengl]"
 DEPEND="${RDEPEND}
 	dev-lang/swig"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS="CHANGES"
+PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing")
 
+DOCS="CHANGES"
 PYTHON_MODNAME="fltk"
 
 src_prepare() {
@@ -47,6 +48,7 @@ src_compile() {
 
 src_install() {
 	distutils_src_install --install-data /usr/share/doc/${PF}
+
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins "${DISTDIR}"/pyfltkmanual.pdf || die

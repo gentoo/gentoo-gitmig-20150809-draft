@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyfltk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.20 2010/06/27 12:00:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.21 2010/07/08 18:30:00 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyfltk-1.1.5.ebuild:
+  Use -fno-strict-aliasing to avoid breaking strict-aliasing rules.
 
   27 Jun 2010; <nixnut@gentoo.org> pyfltk-1.1.5.ebuild:
   ppc stable #306113
