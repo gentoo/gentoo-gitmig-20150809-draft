@@ -1,0 +1,9 @@
+# ChangeLog for sys-power/yacpi
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/yacpi/ChangeLog,v 1.1 2010/07/08 14:00:40 ssuominen Exp $
+
+*yacpi-3.0.1 (08 Jul 2010)
+
+  08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +yacpi-3.0.1.ebuild:
+  Initial commit wrt #163148 by Henning Schild.
+
