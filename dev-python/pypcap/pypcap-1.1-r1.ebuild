@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1-r1.ebuild,v 1.3 2010/07/08 13:22:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1-r1.ebuild,v 1.4 2010/07/08 14:26:03 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -28,7 +28,11 @@ DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 DOCS="CHANGES"
 
 src_prepare() {
+	# Work around broken exception handling (bug #318401).
+	sed -e "s/raise exc\[0\], exc\[1\], exc\[2\]/raise NotImplementedError/" -i pcap.pyx || die "sed failed"
+
 	epatch "${FILESDIR}/include_path.patch"
+
 	distutils_src_prepare
 }
 
