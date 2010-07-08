@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.38 2010/06/24 21:42:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.39 2010/07/08 03:07:38 ssuominen Exp $
+
+  08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> eagle-5.10.0.ebuild:
+  Missing QA_DT_HASH to prevent warning about LDFLAGS not being respected.
+  Missing libpng12.so.0 RDEPEND wrt #327275 by Juergen Rose.
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> eagle-5.9.0.ebuild:
   stable amd64, bug 323275

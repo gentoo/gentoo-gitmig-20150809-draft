@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.10.0.ebuild,v 1.1 2010/06/09 02:22:34 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.10.0.ebuild,v 1.2 2010/07/08 03:07:38 ssuominen Exp $
 
 inherit eutils
 
@@ -18,12 +18,15 @@ MY_PV=${PV/_p/r}
 
 SRC_URI="ftp://ftp.cadsoft.de/eagle/program/${PV%\.[0-9]}/${PN}-lin-${MY_PV}.run"
 
+QA_DT_HASH="opt/eagle-${PV}/bin/eagle"
+
 RDEPEND="sys-libs/glibc
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
-	x86? ( <media-libs/jpeg-7 )
+	x86? ( =media-libs/jpeg-6*
+		=media-libs/libpng-1.2* )
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 		 app-emulation/emul-linux-x86-xlibs )"
 
