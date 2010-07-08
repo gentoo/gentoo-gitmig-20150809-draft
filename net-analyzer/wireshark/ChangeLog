@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.237 2010/07/08 17:39:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.238 2010/07/08 20:37:28 jer Exp $
+
+  08 Jul 2010; Jeroen Roovers <jer@gentoo.org> wireshark-1.2.9.ebuild:
+  Stable for PPC (bug #323859).
 
   08 Jul 2010; Brent Baude <ranger@gentoo.org> wireshark-1.2.9.ebuild:
   Marking wireshark-1.2.9 ppc64 for bug 323859
