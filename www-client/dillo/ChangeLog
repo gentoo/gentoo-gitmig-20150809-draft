@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.90 2010/06/26 13:13:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.91 2010/07/08 18:15:04 armin76 Exp $
+
+  08 Jul 2010; Raúl Porcel <armin76@gentoo.org> dillo-2.2.ebuild:
+  alpha/arm/sparc stable wrt #320665
 
   26 Jun 2010; <nixnut@gentoo.org> dillo-2.2.ebuild:
   ppc stable #320665
