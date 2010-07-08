@@ -1,15 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.23 2010/07/06 14:06:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.24 2010/07/08 17:31:22 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
+# Needs app-mobilephone/obex-data-server keyworded, bug 305913
+# Needs libimobiledevice keyworded (bug 325839)
+gnome-base/gvfs bluetooth iphone
 
 # Samuli Suominen <ssuominen@gentoo.org> (21 Jun 2010)
 # These will need stable kdelibs-4.
 app-i18n/uim kde
 dev-vcs/subversion kde
-
-# Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
-# Needs app-mobilephone/obex-data-server keyworded, bug 305913
-gnome-base/gvfs bluetooth
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (06 June 2010)
 # requires more keywording per bug #323003

@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.28 2010/06/26 17:25:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.29 2010/07/08 17:27:50 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
+# Needs libimobiledevice keyworded (bug 325839)     
+gnome-base/gvfs iphone
 
 # Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
 # custom-optimization doesn't work on ia64

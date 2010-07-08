@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.28 2010/06/26 15:29:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.29 2010/07/08 17:26:15 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
+# Needs libimobiledevice keyworded (bug 325839)     
+gnome-base/gvfs iphone
 
 # Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm

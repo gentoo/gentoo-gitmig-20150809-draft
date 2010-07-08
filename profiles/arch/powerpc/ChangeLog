@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.71 2010/07/04 09:23:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.72 2010/07/08 17:31:21 pacho Exp $
+
+  08 Jul 2010; Pacho Ramos <pacho@gentoo.org> ppc32/package.use.mask,
+  ppc64/package.use.mask:
+  Use mask iphone gvfs USE flag until bug #325839 is fixed.
 
   04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask USE="schroedinger" wrt #316553.

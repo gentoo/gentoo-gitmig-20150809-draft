@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.95 2010/06/27 18:19:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.96 2010/07/08 17:33:16 pacho Exp $
+
+  08 Jul 2010; Pacho Ramos <pacho@gentoo.org> package.use.mask:
+  Use mask iphone gvfs USE flag until bug #325839 is fixed.
 
   27 Jun 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask vaapi, rtmp, vpx
