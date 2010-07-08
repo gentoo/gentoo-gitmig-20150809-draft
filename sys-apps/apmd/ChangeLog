@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/apmd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.38 2007/07/22 06:22:14 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.39 2010/07/08 11:25:40 ssuominen Exp $
+
+*apmd-3.2.2_p14 (08 Jul 2010)
+
+  08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +apmd-3.2.2_p14.ebuild:
+  Use latest Debian patchset. Respect CFLAGS and LDFLAGS. Strip X11R6
+  directories.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; apmd-3.0.2-r3.ebuild,
   apmd-3.2.0.ebuild, apmd-3.2.1_p4.ebuild, apmd-3.2.2_p5.ebuild:
