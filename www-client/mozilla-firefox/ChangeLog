@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.622 2010/06/27 12:28:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.623 2010/07/08 20:13:13 ranger Exp $
+
+  08 Jul 2010; Brent Baude <ranger@gentoo.org> mozilla-firefox-3.6.4.ebuild:
+  Marking mozilla-firefox-3.6.4 ppc64 and ppc for bug 324735
 
 *mozilla-firefox-3.6.6 (27 Jun 2010)
 
