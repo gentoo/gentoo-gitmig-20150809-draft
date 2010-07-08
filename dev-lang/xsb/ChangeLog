@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.19 2009/07/04 20:52:49 keri Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.20 2010/07/08 08:38:56 keri Exp $
+
+  08 Jul 2010; <keri@gentoo.org> xsb-3.2.ebuild:
+  Filter temporary c -> XSB files during install
 
   04 Jul 2009; <keri@gentoo.org> xsb-3.2.ebuild:
   Fix SRC_URI. Reported by B Johnston in #276318.
