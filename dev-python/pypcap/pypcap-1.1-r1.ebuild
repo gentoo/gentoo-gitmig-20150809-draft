@@ -1,10 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1-r1.ebuild,v 1.2 2010/02/07 21:03:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/pypcap-1.1-r1.ebuild,v 1.3 2010/07/08 13:22:15 arfrever Exp $
 
-NEED_PYTHON=2.3
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils
+inherit distutils eutils
 
 DESCRIPTION="Simplified object-oriented Python extension module for libpcap"
 HOMEPAGE="http://code.google.com/p/pypcap/"
@@ -19,31 +22,40 @@ RDEPEND="virtual/libpcap"
 DEPEND="${RDEPEND}
 	>=dev-python/pyrex-0.9.5.1a"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/include_path.patch" || die
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
+DOCS="CHANGES"
+
+src_prepare() {
+	epatch "${FILESDIR}/include_path.patch"
+	distutils_src_prepare
 }
 
-src_compile() {
-	# pcap.c was generated with pyrex-0.9.3
-	# and <=pyrex-0.9.5.1a is incompatible with python-2.5.
-	# So we regenerate it. Bug #180039
-	pyrexc pcap.pyx || die "pyrexc failed"
-	"${python}" setup.py config || die "config failed"
-	distutils_src_compile
-}
-
-src_install() {
-	DOCS="CHANGES"
-	distutils_src_install
-	if use examples ; then
-		insinto /usr/share/doc/${PF}
-		doins testsniff.py
-	fi
+src_configure() {
+	configuration() {
+		# pcap.c was generated with pyrex-0.9.3
+		# and <=pyrex-0.9.5.1a is incompatible with python-2.5.
+		# So we regenerate it. Bug #180039
+		pyrexc pcap.pyx || die "pyrexc failed"
+		"$(PYTHON)" setup.py config
+	}
+	python_execute_function -s configuration
 }
 
 src_test() {
-	# PYTHONPATH is set correctly in the test itself
-	"${python}" test.py || die "tests failed"
+	testing() {
+		# PYTHONPATH is set correctly in the test itself
+		"$(PYTHON)" test.py
+	}
+	python_execute_function -s testing
+}
+
+src_install() {
+	distutils_src_install
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins testsniff.py || die "doins failed"
+	fi
 }

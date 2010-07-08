@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypcap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.6 2010/02/07 21:03:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.7 2010/07/08 13:22:15 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pypcap-1.1-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> pypcap-1.1-r1.ebuild:
   Add inherit eutils: epatch is defined there.
