@@ -1,13 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.0.ebuild,v 1.1 2010/07/07 22:28:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.0.ebuild,v 1.2 2010/07/08 12:41:34 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 WX_GTK_VER="2.8"
 
-inherit eutils distutils wxwidgets flag-o-matic
+inherit distutils
 
 PDOC="users_guide_${PV}"
 
@@ -60,7 +61,9 @@ RDEPEND="${CDEPEND}
 		app-text/poppler[utils]
 		|| ( dev-texlive/texlive-fontsrecommended
 			 app-text/ptex ) )"
-RESTRICT_PYTHON_ABIS="3.*"
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="INTERACTIVE"
 
@@ -160,7 +163,6 @@ src_install() {
 		-e "s:os.path.dirname(__file__):'${EPREFIX}/usr/share/${PN}':g"  \
 		build-*/lib*/matplotlib/__init__.py \
 		|| die "sed init for FHS failed"
-	[[ -z ${ED} ]] && local ED="${D}"
 	distutils_src_install
 
 	# Respect FHS
