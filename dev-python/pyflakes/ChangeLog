@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.15 2010/03/07 12:40:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.16 2010/07/08 15:29:36 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyflakes-0.4.0.ebuild:
+  Set PYTHON_DEPEND. Simplify src_test().
 
   07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> pyflakes-0.4.0.ebuild:
   amd64 stable wrt #298977
