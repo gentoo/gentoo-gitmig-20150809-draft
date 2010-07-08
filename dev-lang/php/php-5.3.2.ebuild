@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.11 2010/07/05 14:10:06 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.12 2010/07/08 22:39:52 mabi Exp $
 
 EAPI=2
 
@@ -123,10 +123,7 @@ DEPEND="app-admin/php-toolkit
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( >=dev-libs/gmp-4.1.2 )
 	iconv? ( virtual/libiconv )
-	imap? (
-		virtual/imap-c-client[ssl=]
-		virtual/imap-c-client[kolab=]
-	)
+	imap? ( virtual/imap-c-client )
 	intl? ( dev-libs/icu )
 	iodbc? ( dev-db/libiodbc )
 	kerberos? ( virtual/krb5 )
