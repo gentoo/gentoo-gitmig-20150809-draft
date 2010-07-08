@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.36 2010/06/01 08:05:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.37 2010/07/08 19:13:50 armin76 Exp $
+
+  08 Jul 2010; Raúl Porcel <armin76@gentoo.org> mpdscribble-0.19.ebuild:
+  sparc stable wrt #320929
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   mpdscribble-0.19.ebuild:
