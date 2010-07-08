@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4.ebuild,v 1.10 2009/07/11 16:24:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/bmf-0.9.4.ebuild,v 1.11 2010/07/08 16:25:41 hwoarang Exp $
+
+inherit toolchain-funcs
 
 IUSE="mysql berkdb"
 
@@ -22,7 +24,7 @@ src_compile() {
 	use berkdb || myconf="${myconf} --without-libdb"
 
 	./configure ${myconf} || die "configure failed"
-	emake
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
