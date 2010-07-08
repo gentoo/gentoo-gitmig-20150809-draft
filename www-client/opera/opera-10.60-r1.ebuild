@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.60-r1.ebuild,v 1.1 2010/07/08 22:32:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.60-r1.ebuild,v 1.2 2010/07/08 23:29:29 jer Exp $
 
 EAPI="2"
 
@@ -117,7 +117,7 @@ src_unpack() {
 src_install() {
 	# Remove "license directory" (bug #315473)
 	rm -rf "share/doc/opera"
-	
+
 	# Leave libopera*.so only if the user chooses
 	if ! use gtk; then
 		rm lib/opera/liboperagtk.so || die "rm liboperagtk.so failed"
