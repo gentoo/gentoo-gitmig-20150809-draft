@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdialog
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.28 2009/02/22 15:56:19 nelchael Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.29 2010/07/08 08:26:04 ssuominen Exp $
+
+  08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> xdialog-2.3.1.ebuild,
+  +files/xdialog-2.3.1-install.patch:
+  Fix "make install" with latest coreutils wrt #327353 by Michael M. Tung.
 
   22 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   -xdialog-2.2.1-r1.ebuild:
