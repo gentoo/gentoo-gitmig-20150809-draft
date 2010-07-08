@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.3.ebuild,v 1.1 2010/07/07 22:25:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.3.ebuild,v 1.2 2010/07/08 10:02:30 hwoarang Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Open source command-line RTMP client intended to stream audio or video flash content"
 HOMEPAGE="http://rtmpdump.mplayerhq.hu/"
@@ -50,13 +50,14 @@ src_compile() {
 			crypto="OPENSSL"
 		fi
 	fi
-
+	#fix multilib-script support. Bug #327449
+	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile
 	emake CC=$(tc-getCC) LD=$(tc-getLD) \
 		OPT="${CFLAGS}" XLDFLAGS="${LDFLAGS}" CRYPTO="${crypto}" SYS=posix || die "emake failed"
 }
 
 src_install() {
-	mkdir -p "${D}"/${DESTTREE}/lib
+	mkdir -p "${D}"/${DESTTREE}/$(get_libdir)
 	emake DESTDIR="${D}" prefix="${DESTTREE}" mandir="${DESTTREE}/share/man" \
 	CRYPTO="${crypto}" install 	|| die "emake install failed"
 	dodoc README ChangeLog rtmpdump.1.html rtmpgw.8.html || die "dodoc failed"
