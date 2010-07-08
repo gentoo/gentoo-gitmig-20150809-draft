@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.229 2010/07/08 07:30:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.230 2010/07/08 20:17:16 ranger Exp $
+
+  08 Jul 2010; Brent Baude <ranger@gentoo.org> seamonkey-2.0.5.ebuild:
+  Marking seamonkey-2.0.5 ppc64 and ppc for bug 324735
 
   08 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
   -files/1002_fix-system-hunspell-dict-detections.patch,
