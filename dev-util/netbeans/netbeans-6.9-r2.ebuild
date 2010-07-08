@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9-r1.ebuild,v 1.1 2010/07/08 20:45:25 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9-r2.ebuild,v 1.1 2010/07/08 22:10:01 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -819,8 +819,11 @@ src_install() {
 	# Icons and shortcuts
 	if use netbeans_modules_nb ; then
 		einfo "Installing icon..."
+		dodir /usr/share/icons/hicolor/32x32/apps
+		dosym ${DESTINATION}/nb/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
 		dodir /usr/share/icons/hicolor/128x128/apps
-		dosym "${FILESDIR}"/${SLOT}/netbeans.png /usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png
+		cp "${FILESDIR}"/${SLOT}/netbeans.png "${D}"/usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png
+		dosym /usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png /usr/share/pixmaps/netbeans-${SLOT}.png
 	fi
 
 	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans-${SLOT} Development
