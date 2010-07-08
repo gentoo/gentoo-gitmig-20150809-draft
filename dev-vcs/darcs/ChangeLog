@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.7 2010/07/01 19:08:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.8 2010/07/08 13:04:48 slyfox Exp $
+
+  08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.4.4.ebuild,
+  darcs-2.4.4-r1.ebuild:
+  ~alpha keyworded
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> darcs-1.0.9.ebuild,
   darcs-2.0.2.ebuild, darcs-2.1.0-r1.ebuild, darcs-2.2.1.ebuild:
