@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.13 2010/02/24 14:12:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.14 2010/07/08 02:21:20 ssuominen Exp $
 
 EAPI=2
-inherit eutils gnome2-utils
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="Tango icons for iPod Digital Audio Player (DAP) devices and the Dell Pocket DJ DAP."
 HOMEPAGE="http://tango.freedesktop.org"
@@ -16,12 +16,17 @@ IUSE="png"
 
 RESTRICT="binchecks strip"
 
-RDEPEND=">=x11-misc/icon-naming-utils-0.6.0
-	>=gnome-base/librsvg-2.12.3
-	>=x11-themes/tango-icon-theme-0.8"
+RDEPEND=">=x11-themes/tango-icon-theme-0.8.90"
 DEPEND="${RDEPEND}
-	media-gfx/imagemagick[png?]
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=gnome-base/librsvg-2.12.3
+	|| ( media-gfx/imagemagick[png?] media-gfx/graphicsmagick[imagemagick,png?] )
+	>=x11-misc/icon-naming-utils-0.8.90"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-graphicsmagick.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
