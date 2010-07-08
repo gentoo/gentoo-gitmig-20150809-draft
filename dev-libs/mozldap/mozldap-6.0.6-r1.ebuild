@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r1.ebuild,v 1.1 2010/07/07 13:52:54 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r1.ebuild,v 1.2 2010/07/08 14:42:57 lxnay Exp $
 
 EAPI="2"
 
@@ -101,13 +101,13 @@ src_install () {
 	cd "${D}"/usr/$(get_libdir)/mozldap
 
 	#create compatibility Link
-	dosym libldap$(get_major_version ${PV})$(get_version_component_range 2 ${PV}).so \
+	ln -sf libldap$(get_major_version ${PV})$(get_version_component_range 2 ${PV}).so \
 		liblber$(get_major_version ${PV})$(get_version_component_range 2 ${PV}).so || die
 	#so lets move
 	for file in *.so; do
 		mv ${file} ${file}.$(get_major_version ${PV}).$(get_version_component_range 2 ${PV}) || die
-		dosym ${file}.$(get_major_version ${PV}).$(get_version_component_range 2 ${PV}) ${file} || die
-		dosym ${file}.$(get_major_version ${PV}).$(get_version_component_range 2 ${PV}) \
+		ln -sf ${file}.$(get_major_version ${PV}).$(get_version_component_range 2 ${PV}) ${file} || die
+		ln -sf ${file}.$(get_major_version ${PV}).$(get_version_component_range 2 ${PV}) \
 			${file}.$(get_major_version ${PV}) || die
 	done
 
