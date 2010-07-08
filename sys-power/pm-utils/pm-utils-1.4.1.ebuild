@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1.ebuild,v 1.1 2010/07/08 02:54:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1.ebuild,v 1.2 2010/07/08 02:55:18 ssuominen Exp $
 
 EAPI=2
-inherit autotools multilib
+inherit multilib
 
 DESCRIPTION="Suspend and hibernation utilities"
 HOMEPAGE="http://pm-utils.freedesktop.org/"
