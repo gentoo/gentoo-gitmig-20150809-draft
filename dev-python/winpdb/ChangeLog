@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/winpdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.17 2010/07/04 01:34:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.18 2010/07/08 12:21:25 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  winpdb-1.4.4.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
 *winpdb-1.4.6 (04 Jul 2010)
 
