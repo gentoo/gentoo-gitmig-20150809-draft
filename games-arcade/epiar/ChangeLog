@@ -1,9 +1,15 @@
 # ChangeLog for games-arcade/epiar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.14 2010/01/07 21:52:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.15 2010/07/08 13:13:07 nyhm Exp $
+
+*epiar-0.5-r1 (08 Jul 2010)
+
+  08 Jul 2010; Tristan Heaven <nyhm@gentoo.org> +epiar-0.5-r1.ebuild,
+  +files/epiar-0.5-paths.patch:
+  Fix segfault caused by our patch, bug #326861
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> epiar-0.5.ebuild:
-  Marked ppc stable for bug #295639.
+  Marked ppc stable for bug #294554.
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> epiar-0.5.ebuild:
   x86 stable, bug #294554
