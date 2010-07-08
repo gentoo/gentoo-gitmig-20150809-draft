@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/pysyck-0.61.2.ebuild,v 1.3 2007/10/16 01:09:40 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/pysyck-0.61.2.ebuild,v 1.4 2010/07/08 15:09:20 arfrever Exp $
 
-NEED_PYTHON="2.3"
+PYTHON_DEPEND="2"
 
 inherit distutils
 

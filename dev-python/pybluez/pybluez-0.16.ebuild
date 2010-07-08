@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/pybluez-0.16.ebuild,v 1.6 2010/06/11 11:29:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/pybluez-0.16.ebuild,v 1.7 2010/07/08 15:06:26 arfrever Exp $
 
-NEED_PYTHON="2.5"
+PYTHON_DEPEND="2"
 
 inherit distutils
 
