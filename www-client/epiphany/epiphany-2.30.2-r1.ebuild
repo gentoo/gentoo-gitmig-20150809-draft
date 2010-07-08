@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.1 2010/07/05 21:43:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.2 2010/07/08 13:46:56 pacho Exp $
 
 EAPI="2"
 
@@ -79,9 +79,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-uri-crash.patch"
 }
 
-#src_compile() {
-	# Fix sandbox error with USE="introspection"
+src_compile() {
+	# Fix sandbox error with USE="introspection" and "doc"
 	# https://bugs.webkit.org/show_bug.cgi?id=35471
-#	addpredict "$(unset HOME; echo ~)/.local"
-#	emake || die "Compile failed"
-#}
+	addpredict "$(unset HOME; echo ~)/.local"
+	emake || die "Compile failed"
+}

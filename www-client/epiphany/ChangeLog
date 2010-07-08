@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.245 2010/07/05 21:43:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.246 2010/07/08 13:46:56 pacho Exp $
+
+  08 Jul 2010; Pacho Ramos <pacho@gentoo.org> -epiphany-2.30.2.ebuild,
+  epiphany-2.30.2-r1.ebuild:
+  addpredict is needed to prevent sandbox violation (bug #323977). Remove
+  old.
 
 *epiphany-2.30.2-r1 (05 Jul 2010)
 
