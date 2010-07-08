@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.2.ebuild,v 1.1 2010/06/30 18:36:56 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.2.ebuild,v 1.2 2010/07/08 14:55:53 jsbronder Exp $
 
 EAPI=3
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
@@ -61,7 +61,7 @@ src_prepare() {
 
 src_configure() {
 	local myconf="
-		--sysconfdir=/etc/${PN}
+		--sysconfdir=${EPREFIX}/etc/${PN}
 		--without-xgrid
 		--enable-pretty-print-stacktrace
 		--enable-orterun-prefix-by-default
