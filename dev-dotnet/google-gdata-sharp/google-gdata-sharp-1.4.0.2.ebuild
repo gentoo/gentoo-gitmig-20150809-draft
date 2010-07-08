@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/google-gdata-sharp-1.4.0.2.ebuild,v 1.1 2010/03/11 18:44:20 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/google-gdata-sharp-1.4.0.2.ebuild,v 1.2 2010/07/08 12:15:02 pacho Exp $
 
 EAPI=3
 
@@ -16,6 +16,9 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
+
+# tests are completely broken (bug #310101), revisit in future bumps.
+RESTRICT="test"
 
 DEPEND=">=dev-lang/mono-2.0"
 RDEPEND="${DEPEND}"
