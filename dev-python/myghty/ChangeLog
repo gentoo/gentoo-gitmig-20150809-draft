@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/myghty
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/myghty/ChangeLog,v 1.3 2009/10/01 02:53:03 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/myghty/ChangeLog,v 1.4 2010/07/08 19:24:58 arfrever Exp $
+
+*myghty-1.2 (08 Jul 2010)
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -myghty-1.1-r1.ebuild, -files/myghty-1.1-python-2.6.patch,
+  +myghty-1.2.ebuild:
+  Version bump.
 
 *myghty-1.1-r1 (01 Oct 2009)
 
