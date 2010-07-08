@@ -1,0 +1,38 @@
+From dc894da891c37c30b0acb648da9d49e2bc9c6d61 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Wed, 16 Jun 2010 13:49:14 +0000
+Subject: Initialise the GType system when called into
+
+Add calls to g_type_init() in the plugin entry points so that
+GThread is initialised if not already, so that GIO calls work
+as expected.
+
+Note that this requires GLib 2.24 to work properly, so only
+done in master (gnome-2-30 depends on GLib 2.22)
+
+https://bugzilla.gnome.org/show_bug.cgi?id=621771
+---
+diff --git a/browser-plugin/totemPluginGlue.cpp b/browser-plugin/totemPluginGlue.cpp
+index fc5afc1..f14b913 100644
+--- a/browser-plugin/totemPluginGlue.cpp
++++ b/browser-plugin/totemPluginGlue.cpp
+@@ -315,6 +315,8 @@ NP_GetMIMEDescription (void)
+ 	if (mime_list != NULL)
+ 		return mime_list;
+ 
++	g_type_init ();
++
+ 	list = g_string_new (NULL);
+ 
+ 	/* Load the configuration files for the enabled plugins */
+@@ -396,6 +398,8 @@ NP_Initialize (NPNetscapeFuncs *aMozillaVTable,
+ {
+ 	g_debug ("NP_Initialize");
+ 
++	g_type_init ();
++
+ 	if (aMozillaVTable == NULL || aPluginVTable == NULL)
+ 		return NPERR_INVALID_FUNCTABLE_ERROR;
+ 
+--
+cgit v0.8.3.1
