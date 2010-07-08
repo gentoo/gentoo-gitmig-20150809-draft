@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.25.ebuild,v 1.1 2009/07/10 21:44:58 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.25.ebuild,v 1.2 2010/07/08 16:29:57 hwoarang Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 IUSE=""
 DESCRIPTION="A very small C compiler for ix86/amd64"
@@ -44,7 +44,7 @@ src_compile() {
 	use x86 && myopts="--cpu=x86"
 	use amd64 && myopts="--cpu=x86-64"
 	econf ${myopts}
-	emake || die "make failed"
+	emake CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {

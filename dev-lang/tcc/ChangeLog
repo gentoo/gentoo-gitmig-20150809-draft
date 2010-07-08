@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.29 2009/07/10 21:44:58 truedfx Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.30 2010/07/08 16:29:57 hwoarang Exp $
+
+  08 Jul 2010; Markos Chandras <hwoarang@gentoo.org> tcc-0.9.25.ebuild:
+  Make it respect CC variable wrt bug #243892
 
 *tcc-0.9.25 (10 Jul 2009)
 
