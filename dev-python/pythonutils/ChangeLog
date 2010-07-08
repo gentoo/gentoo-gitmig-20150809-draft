@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pythonutils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonutils/ChangeLog,v 1.8 2007/04/24 08:10:58 lucass Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonutils/ChangeLog,v 1.9 2010/07/08 17:36:14 arfrever Exp $
+
+*pythonutils-0.4.0 (08 Jul 2010)
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pythonutils-0.3.0.ebuild, +pythonutils-0.4.0.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   24 Apr 2007; Lukasz Strzygowski <lucass@gentoo.org>
   -pythonutils-0.2.0.ebuild, -pythonutils-0.2.2.ebuild,
