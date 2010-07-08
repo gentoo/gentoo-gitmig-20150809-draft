@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.112 2010/07/04 22:18:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.113 2010/07/08 02:17:20 williamh Exp $
+
+  08 Jul 2010; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  changed the live ebuild to refer to gentoo's git repository.
 
   04 Jul 2010; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Update metadata.xml now that Roy isnt working on things.

@@ -1,17 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.69 2010/01/23 19:00:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.70 2010/07/08 02:17:20 williamh Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://roy.marples.name/openrc.git"
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/openrc.git"
 	inherit git
 	KEYWORDS=""
 else
-	SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 fi
 
@@ -67,8 +67,6 @@ src_unpack() {
 	sed -i 's:0444:0644:' mk/sys.mk
 	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile #241342
 	sed -i '/^CFLAGS+=.*_CC_FLAGS_SH/d' mk/cc.mk #289264
-	epatch "${FILESDIR}"/openrc-9999-msg-style.patch
-	epatch "${FILESDIR}"/openrc-9999-pause.patch
 }
 
 src_compile() {
