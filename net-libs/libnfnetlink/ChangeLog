@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.33 2010/05/30 16:14:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.34 2010/07/08 19:16:43 armin76 Exp $
+
+  08 Jul 2010; Raúl Porcel <armin76@gentoo.org> libnfnetlink-1.0.0.ebuild:
+  sparc stable wrt #320219
 
   30 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libnfnetlink-1.0.0.ebuild:

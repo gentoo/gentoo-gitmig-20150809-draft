@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.101.ebuild,v 1.4 2010/05/30 16:16:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.101.ebuild,v 1.5 2010/07/08 19:17:40 armin76 Exp $
 
 inherit linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=net-libs/libnfnetlink-1.0.0"
