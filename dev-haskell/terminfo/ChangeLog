@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/terminfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.2 2010/04/01 10:34:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.3 2010/07/08 13:00:25 slyfox Exp $
+
+  08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  terminfo-0.3.1.1.ebuild:
+  ~alpha keyworded
 
   01 Apr 2010; Fabian Groffen <grobian@gentoo.org> terminfo-0.3.1.1.ebuild:
   Marked ~ppc-macos
