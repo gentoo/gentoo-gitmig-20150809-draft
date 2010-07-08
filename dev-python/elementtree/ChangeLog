@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elementtree
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.38 2009/10/10 15:43:29 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.39 2010/07/08 15:43:42 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  elementtree-1.2.6-r2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   elementtree-1.2.6-r2.ebuild:
