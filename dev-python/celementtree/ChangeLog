@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/celementtree
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.27 2009/10/10 12:29:26 grobian Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celementtree/ChangeLog,v 1.28 2010/07/08 15:56:49 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  celementtree-1.0.5-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   celementtree-1.0.5-r1.ebuild:
