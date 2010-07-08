@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.18 2010/06/11 19:45:04 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.19 2010/07/08 21:47:38 spatz Exp $
+
+*droid-113-r1 (08 Jul 2010)
+
+  08 Jul 2010; Dror Levin <spatz@gentoo.org> +droid-113-r1.ebuild:
+  Revbump, add Hebrew and Arabic versions.
 
   11 Jun 2010; Dror Levin <spatz@gentoo.org> metadata.xml:
   Take maintainership over.
