@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gget
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/ChangeLog,v 1.1 2009/10/16 16:53:27 mrpouet Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/ChangeLog,v 1.2 2010/07/08 12:48:53 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gget-0.0.4.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
 *gget-0.0.4 (16 Oct 2009)
 

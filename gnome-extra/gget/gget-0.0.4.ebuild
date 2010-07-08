@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/gget-0.0.4.ebuild,v 1.1 2009/10/16 16:53:27 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/gget-0.0.4.ebuild,v 1.2 2010/07/08 12:48:53 arfrever Exp $
 
 EAPI="1"
 GCONF_DEBUG="no"
-NEED_PYTHON="2.5"
+PYTHON_DEPEND="2:2.5"
 
 inherit gnome2 python
 
