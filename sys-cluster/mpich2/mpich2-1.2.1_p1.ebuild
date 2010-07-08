@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.4 2010/07/03 04:41:26 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.5 2010/07/08 12:58:23 arfrever Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -189,13 +189,9 @@ pkg_postinst() {
 	elog "as sys-cluster/mpe2."
 	elog ""
 
-	for f in ${MPD_PYTHON_MODULES}; do
-		python_mod_optimize ${f}
-	done
+	python_mod_optimize ${MPD_PYTHON_MODULES}
 }
 
 pkg_postrm() {
-	for f in ${MPD_PYTHON_MODULES}; do
-		python_mod_cleanup ${f}
-	done
+	python_mod_cleanup ${MPD_PYTHON_MODULES}
 }

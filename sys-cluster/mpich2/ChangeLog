@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.55 2010/07/03 04:41:26 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.56 2010/07/08 12:58:23 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mpich2-1.2.1_p1.ebuild:
+  Simplify usage of python_mod_optimize() and python_mod_cleanup() (bug
+  #316937).
 
   03 Jul 2010; Justin Bronder <jsbronder@gentoo.org> mpich2-1.2.1_p1.ebuild:
   Isolate mpich2 specific python files in /usr/bin, simplify python deps.
