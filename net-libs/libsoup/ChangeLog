@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.223 2010/07/06 21:07:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.224 2010/07/08 13:35:20 pacho Exp $
+
+  08 Jul 2010; Pacho Ramos <pacho@gentoo.org> -libsoup-2.30.2.ebuild,
+  libsoup-2.30.2-r1.ebuild:
+  We need addpredict to workaround bug #324779 until root cause (bug
+  #249496) is solved. Remove old.
 
   06 Jul 2010; Pacho Ramos <pacho@gentoo.org> libsoup-2.28.2-r1.ebuild:
   amd64 stable, bug 326589
