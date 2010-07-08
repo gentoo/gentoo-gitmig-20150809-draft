@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/digest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.1 2010/03/28 17:10:18 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.2 2010/07/08 12:43:21 slyfox Exp $
+
+  08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> digest-0.0.0.8.ebuild:
+  ~alpha keyworded
 
 *digest-0.0.0.8 (28 Mar 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.1.0.3.ebuild,v 1.1 2010/03/28 15:36:44 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.1.0.3.ebuild,v 1.2 2010/07/08 12:50:08 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -14,7 +14,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.10
