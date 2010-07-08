@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5752 2010/07/07 23:27:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5753 2010/07/08 07:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1093,6 +1093,8 @@ dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/ctags:ada - Enable Ada support
 dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
+dev-util/geany-plugins:enchant - Enable spell checking using enchant
+dev-util/geany-plugins:gtkspell - Use gtkspell for dictionary support
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/kdevelop:cmake - Enable support for CMAKE build system
 dev-util/kdevelop:qmake - Enable support for Qmake build system
@@ -3534,6 +3536,7 @@ sys-power/cpufreqd:pmu - Enable Power Management Unit plug-in
 sys-power/pm-utils:ntp - Install support for net-misc/ntp
 sys-power/powerman:genders -  Add support for selecting power control targets using genders (-g option) 
 sys-power/powerman:httppower -  Add support for HTTP based power controllers 
+sys-power/powermgmt-base:pm-utils - Adds support for on_ac_power through sys-power/pm-utils
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
 sys-power/suspend:fbsplash - Add support for framebuffer splash
 sys-power/upower:introspection - Use dev-libs/gobject-introspection for introspection
