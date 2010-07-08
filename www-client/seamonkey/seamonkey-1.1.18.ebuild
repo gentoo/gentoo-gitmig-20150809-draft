@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.18.ebuild,v 1.12 2010/07/04 20:48:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.18.ebuild,v 1.13 2010/07/08 21:02:22 polynomial-c Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -15,7 +15,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.s
 	mirror://gentoo/${PATCH}.tar.bz2
 	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
 
-KEYWORDS="arm ppc ppc64"
+KEYWORDS="arm"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt xforms"

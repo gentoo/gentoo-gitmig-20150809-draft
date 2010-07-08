@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.230 2010/07/08 20:17:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.231 2010/07/08 21:02:22 polynomial-c Exp $
+
+  08 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-1.1.18.ebuild:
+  Removed remaining KEYWORDS for which we now have stable ones in
+  seamonkey-2.
 
   08 Jul 2010; Brent Baude <ranger@gentoo.org> seamonkey-2.0.5.ebuild:
   Marking seamonkey-2.0.5 ppc64 and ppc for bug 324735
