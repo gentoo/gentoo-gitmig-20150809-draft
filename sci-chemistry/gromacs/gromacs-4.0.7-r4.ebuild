@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.1 2010/07/04 16:48:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.2 2010/07/08 13:50:25 alexxy Exp $
 
 EAPI="3"
 
@@ -223,10 +223,10 @@ src_test() {
 src_install() {
 	for x in ${GMX_DIRS}; do
 		cd "${S}-${x}"
-		emake DESTDIR="${ED}" install || die "emake install for ${x} failed"
+		emake DESTDIR="${D}" install || die "emake install for ${x} failed"
 		use mpi || continue
 		cd "${S}-${x}_mpi"
-		emake DESTDIR="${ED}" install-mdrun || die "emake install-mdrun for ${x} failed"
+		emake DESTDIR="${D}" install-mdrun || die "emake install-mdrun for ${x} failed"
 	done
 
 	sed -n -e '/^GMXBIN/,/^GMXDATA/p' "${ED}"/usr/bin/GMXRC.bash > "${T}/80gromacs"

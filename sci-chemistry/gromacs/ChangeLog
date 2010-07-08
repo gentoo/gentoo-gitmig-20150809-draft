@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.53 2010/07/05 10:41:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.54 2010/07/08 13:50:25 alexxy Exp $
+
+  08 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> gromacs-4.0.7-r4.ebuild:
+  Fix typo in ebuild for prefix setup
 
 *gromacs-4.0.7-r4 (04 Jul 2010)
 
