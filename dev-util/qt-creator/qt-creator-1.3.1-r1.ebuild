@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r1.ebuild,v 1.3 2010/06/24 20:45:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r1.ebuild,v 1.4 2010/07/08 14:32:48 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -58,6 +58,11 @@ src_prepare() {
 				einfo "Disabling qmlprojectmanager support"
 				sed -i "/plugin_qmlprojectmanager/s:^:#:" src/plugins/plugins.pro \
 					|| die "Failed to disable qmlprojectmanager plugin"
+			fi
+			if [[ ${plugin} == "designer" ]]; then
+				sed -i "/plugin_qt4projectmanager/s:^:#:" \
+					src/plugins/plugins.pro \
+					|| die "Failed to disable qt4projectmanager plugin"
 			fi
 			sed -i "/plugin_${plugin}/s:^:#:" src/plugins/plugins.pro \
 				|| die "Failed to disable ${plugin} plugin"

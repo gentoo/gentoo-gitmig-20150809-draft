@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.51 2010/06/24 20:45:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.52 2010/07/08 14:32:48 hwoarang Exp $
+
+  08 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  qt-creator-1.3.1-r1.ebuild:
+  Disable qt4projectmanager when designer use flag is disabled. Fixes bug
+  #327477
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> qt-creator-1.3.1-r1.ebuild:
   stable amd64, bug 325041
