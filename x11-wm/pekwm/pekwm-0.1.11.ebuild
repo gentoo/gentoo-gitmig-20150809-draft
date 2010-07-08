@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.11.ebuild,v 1.6 2010/05/25 21:17:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.11.ebuild,v 1.7 2010/07/08 18:14:03 armin76 Exp $
 
 EAPI=2
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="http://pekwm.org/projects/pekwm/files/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~mips ppc sparc x86 ~x86-fbsd"
 IUSE="debug truetype xinerama"
 
 DEPEND="media-libs/jpeg:0
