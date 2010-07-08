@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.14.ebuild,v 1.2 2010/06/17 20:05:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.14.2.ebuild,v 1.1 2010/07/08 16:39:23 matsuu Exp $
 
 EAPI="3"
 
@@ -13,23 +13,19 @@ SRC_URI="mirror://sourceforge/aide/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="acl curl mhash nls postgres selinux static xattr zlib"
-#IUSE="acl audit curl mhash nls postgres prelink selinux static xattr zlib"
+IUSE="acl audit curl mhash nls postgres prelink selinux static xattr zlib"
 
-# libsandbox:  Can't dlopen libc: (null)
-#RESTRICT="test"
-
-DEPEND="acl? ( sys-apps/acl )
+DEPEND="acl? ( virtual/acl )
+	audit? ( sys-process/audit )
 	curl? ( net-misc/curl )
 	mhash? ( >=app-crypt/mhash-0.9.2 )
 	!mhash? ( dev-libs/libgcrypt )
 	nls? ( virtual/libintl )
 	postgres? ( dev-db/postgresql-base )
+	prelink? ( sys-devel/prelink )
 	selinux? ( sys-libs/libselinux )
 	xattr? ( sys-apps/attr )
 	zlib? ( sys-libs/zlib )"
-#	audit? ( sys-process/audit )
-#	prelink? ( sys-devel/prelink )
 
 RDEPEND="!static? ( ${DEPEND} )"
 
@@ -44,49 +40,32 @@ pkg_config() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-
-	# fix libgcrypt issue, bug #266175
-	epatch "${FILESDIR}/${PN}-0.13.1-libgrypt_init.patch"
+	epatch "${FILESDIR}/${PN}-0.14-gentoo.patch"
 
 	# fix as-need issue, bug #271326
-	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${PN}-0.14-as-needed.patch"
 
-	# fix zlib issue, bug #316665
-	epatch "${FILESDIR}/${PN}-0.13.1-zlib.patch"
-
-	if ! use selinux ; then
-		sed -i -e 's/\+selinux//' doc/aide.conf.in || die
-	fi
-
-	if ! use xattr ; then
-		sed -i -e 's/\+xattrs//' doc/aide.conf.in || die
-	fi
-
-	if ! use acl ; then
-		sed -i -e 's/\+acl//' doc/aide.conf.in || die
-	fi
+	# fix configure issue, bug #323187
+	epatch "${FILESDIR}/${PN}-0.14-configure.patch"
 
 	eautoreconf
 }
 
 src_configure() {
-	local myconf="
-		$(use_with acl posix-acl)
-		$(use_with curl)
-		$(use_with !mhash gcrypt)
-		$(use_with mhash mhash)
-		$(use_with nls locale)
-		$(use_with postgres psql)
-		$(use_with selinux)
-		$(use_enable static)
-		$(use_with xattr)
-		$(use_with zlib)
-		--sysconfdir=${EPREFIX}/etc/aide"
-#		$(use_with audit)
-#		$(use_with prelink)
-
-	econf ${myconf} || die "econf failed"
+	econf \
+		$(use_with acl posix-acl) \
+		$(use_with audit) \
+		$(use_with curl) \
+		$(use_with !mhash gcrypt) \
+		$(use_with mhash mhash) \
+		$(use_with nls locale) \
+		$(use_with postgres psql) \
+		$(use_with prelink) \
+		$(use_with selinux) \
+		$(use_enable static) \
+		$(use_with xattr) \
+		$(use_with zlib) \
+		--sysconfdir="${EPREFIX}/etc/aide" || die "econf failed"
 }
 
 src_install() {
@@ -103,7 +82,7 @@ src_install() {
 
 	dosbin "${FILESDIR}"/aideinit || die
 
-	dodoc ChangeLog AUTHORS NEWS README "${FILESDIR}"/aide.cron || die
+	dodoc AUTHORS ChangeLog NEWS README Todo "${FILESDIR}"/aide.cron || die
 	dohtml doc/manual.html || die
 }
 
