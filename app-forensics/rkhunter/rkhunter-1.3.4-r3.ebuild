@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.4-r3.ebuild,v 1.6 2010/01/19 22:37:48 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.4-r3.ebuild,v 1.7 2010/07/08 04:27:50 jer Exp $
 
 EAPI=2
 
@@ -15,10 +15,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~mips ppc sparc x86"
 IUSE=""
 
-RDEPEND="virtual/mta
+RDEPEND="
 	app-shells/bash
 	dev-lang/perl
-	sys-process/lsof"
+	sys-process/lsof
+	virtual/cron
+	virtual/mailx
+"
 
 S="${WORKDIR}/${P}/files"
 
