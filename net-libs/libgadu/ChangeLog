@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.43 2010/07/03 16:04:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.44 2010/07/08 17:41:24 ranger Exp $
+
+  08 Jul 2010; Brent Baude <ranger@gentoo.org> libgadu-1.9.0-r1.ebuild:
+  Marking libgadu-1.9.0-r1 ppc64 for bug 324023
 
   03 Jul 2010; Raúl Porcel <armin76@gentoo.org> libgadu-1.9.0-r1.ebuild:
   alpha/ia64/sparc stable wrt #322813
