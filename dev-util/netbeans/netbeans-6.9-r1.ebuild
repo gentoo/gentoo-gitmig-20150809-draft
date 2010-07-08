@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.ebuild,v 1.2 2010/06/30 12:16:56 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9-r1.ebuild,v 1.1 2010/07/08 20:45:25 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -351,24 +351,26 @@ pkg_setup() {
 
 	# currently we require all clusters when building javadoc, can be tested
 	# what clusters are really needed to build javadoc
-	if use doc ; then
-		need_apisupport="1"
-		need_cnd="1"
-		need_dlight="1"
-		need_enterprise="1"
-		need_ergonomics="1"
-		need_groovy="1"
-		need_harness="1"
-		need_ide="1"
-		need_identity="1"
-		need_java="1"
-		need_mobility="1"
-		need_nb="1"
-		need_php="1"
-		need_profiler="1"
-		need_ruby="1"
-		need_websvccommon="1"
-	fi
+	# disabled for now as building javadoc now fails with providing clusters
+	# so trying to drop this requirement
+	#if use doc ; then
+	#	need_apisupport="1"
+	#	need_cnd="1"
+	#	need_dlight="1"
+	#	need_enterprise="1"
+	#	need_ergonomics="1"
+	#	need_groovy="1"
+	#	need_harness="1"
+	#	need_ide="1"
+	#	need_identity="1"
+	#	need_java="1"
+	#	need_mobility="1"
+	#	need_nb="1"
+	#	need_php="1"
+	#	need_profiler="1"
+	#	need_ruby="1"
+	#	need_websvccommon="1"
+	#fi
 
 	if [ -n "${need_apisupport}" ] ; then
 		need_harness="1"
@@ -430,7 +432,7 @@ pkg_setup() {
 
 	if [ -n "${missing}" ] ; then
 		eerror "You need to add these modules to NETBEANS_MODULES because they are needed by modules you have selected."
-		use doc && eerror "With \"doc\" USE flag enabled, all modules are required."
+		# use doc && eerror "With \"doc\" USE flag enabled, all modules are required."
 		eerror "   Missing NETBEANS_MODULES:${missing}"
 		die "Missing NETBEANS_MODULES"
 	fi
@@ -447,8 +449,11 @@ pkg_setup() {
 src_prepare () {
 	# We need to disable downloading of jars
 	epatch "${FILESDIR}"/${SLOT}/nbbuild_build.xml.patch \
-		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch \
-		"${FILESDIR}"/${SLOT}/o.jruby.distro_disable.patch
+		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch
+
+	if [ -z "${JAVA_PKG_NB_TRY_JRUBY}" ] ; then
+		epatch "${FILESDIR}"/${SLOT}/o.jruby.distro_disable.patch
+	fi
 
 	# Clean up nbbuild
 	einfo "Removing prebuilt *.class files from nbbuild"
@@ -640,18 +645,13 @@ src_compile() {
 	# Fails to compile
 	java-pkg_filter-compiler ecj-3.2 ecj-3.3 ecj-3.4 ecj-3.5
 
-	# Build the clusters
-	local heap=""
+	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="-Xmx1g -Djava.awt.headless=true" \
+		eant ${antflags} ${clusters} -f nbbuild/build.xml ${extra_flags} ${build_target}
+
 	if use doc ; then
-		heap="-Xmx1536m"
-	else
-		heap="-Xmx1g"
+		ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="-Xmx1536m -Djava.awt.headless=true" \
+			eant ${antflags} -f nbbuild/build.xml ${extra_flags} build-javadoc
 	fi
-
-	local extra_tasks=""
-
-	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="${heap} -Djava.awt.headless=true" \
-		eant ${antflags} ${clusters} -f nbbuild/build.xml ${extra_flags} ${build_target} $(use_doc build-javadoc)
 
 	local locales=""
 	for lang in ${IUSE_LINGUAS} ; do
@@ -778,14 +778,16 @@ src_install() {
 		done
 	fi
 
-	# this is disabled because we have issue with building jruby-1.5.0, so we do not
-	# build jruby at all and instead users will have to use only system jruby
-	#if use netbeans_modules_ruby ; then
-	#	cd "${D}"/${DESTINATION}/ruby/jruby-1.5.0/bin || die
-	#	for file in * ; do
-	#		fperms 755 ${file} || die
-	#	done
-	#fi
+	# DISABLED FOR NOW BECAUSE BUILDING BUNDLED JRUBY FAILS
+	# see: http://netbeans.org/bugzilla/show_bug.cgi?id=186736
+	if [ -n "${JAVA_PKG_NB_TRY_JRUBY}" ] ; then
+		if use netbeans_modules_ruby ; then
+			cd "${D}"/${DESTINATION}/ruby/jruby-1.5.0/bin || die
+			for file in * ; do
+				fperms 755 ${file} || die
+			done
+		fi
+	fi
 
 	# Link netbeans executable from bin
 	if [[ -f "${D}"/${DESTINATION}/bin/netbeans ]]; then
@@ -817,8 +819,8 @@ src_install() {
 	# Icons and shortcuts
 	if use netbeans_modules_nb ; then
 		einfo "Installing icon..."
-		dodir /usr/share/icons/hicolor/32x32/apps
-		dosym ${DESTINATION}/nb/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
+		dodir /usr/share/icons/hicolor/128x128/apps
+		dosym "${FILESDIR}"/${SLOT}/netbeans.png /usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png
 	fi
 
 	make_desktop_entry netbeans-${SLOT} "Netbeans ${SLOT}" netbeans-${SLOT} Development
