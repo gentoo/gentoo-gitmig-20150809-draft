@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.50 2010/05/15 05:25:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.51 2010/07/09 03:44:19 dirtyepic Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
@@ -86,28 +86,43 @@ font_fontconfig() {
 # Remove font directories containing only generated files.
 font_cleanup_dirs() {
 	local genfiles="encodings.dir fonts.alias fonts.cache-1 fonts.dir fonts.scale"
+	# fonts.alias isn't generated but it's a special case (see below).
 	local d f g generated candidate otherfile
 
-	ebegin "Purging empty font directories"
+	ebegin "Cleaning up font directories"
 	find -L "${EROOT}"usr/share/fonts/ -type d -print0 | while read -d $'\0' d; do
 		candidate=false
 		otherfile=false
 		for f in "${d}"/*; do
 			generated=false
+			# make sure this is a file and not a subdir
 			[[ -e ${f} || -L ${f} ]] || continue
 			for g in ${genfiles}; do
 				if [[ ${f##*/} == ${g} ]]; then
+					# this is a generated file
 					generated=true
 					break
 				fi
 			done
+			# if the file is a generated file then we know this is a font dir (as
+			# opposed to something like encodings or util) and  a candidate for
+			# removal.  if it's not generated then it's an "otherfile".
 			${generated} && candidate=true || otherfile=true
-			[[ ${candidate} == ${otherfile} ]] && break # both are true, keep the dir
+			# if the directory is both a candidate for removal and contains at
+			# least one "otherfile" then don't remove it.
+			[[ ${candidate} == ${otherfile} ]] && break
 		done
+		# if we only have generated files, purge the directory.
 		if [[ ${candidate} == true && ${otherfile} == false ]]; then
-			ebegin "Removing ${d}"
-			rm -rf "${d}"
-			eend $?
+			# we don't want to remove fonts.alias files that were installed by
+			# media-fonts/font-alias. any other fonts.alias files will have
+			# already been unmerged with their packages.
+			for g in ${genfiles}; do
+				[[ ${g} != fonts.alias && ( -e ${d}/${g} || -L ${d}/${g} ) ]] \
+					&& rm "${d}"/${g}
+			done
+			# if there's nothing left remove the directory
+			find "${d}" -maxdepth 0 -type d -empty -exec rmdir '{}' \;
 		fi
 	done
 	eend 0
