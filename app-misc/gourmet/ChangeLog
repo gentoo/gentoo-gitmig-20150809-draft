@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.8 2010/06/24 20:54:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.9 2010/07/09 13:20:18 scarabeus Exp $
+
+  09 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -gourmet-0.13.8.ebuild:
+  Drop masked version.
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> gourmet-0.15.4.ebuild:
   stable amd64, bug 325133
