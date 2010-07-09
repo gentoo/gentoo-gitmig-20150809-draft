@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.78 2010/07/08 04:27:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.79 2010/07/09 02:26:38 jer Exp $
+
+  09 Jul 2010; Jeroen Roovers <jer@gentoo.org> rkhunter-1.3.4-r3.ebuild,
+  rkhunter-1.3.6.ebuild:
+  Replace RDEPEND on virtual/mailx to elog advice thanks to Aaron Slunt (bug
+  #327547, replace einfo with elog as well).
 
   08 Jul 2010; Jeroen Roovers <jer@gentoo.org> rkhunter-1.3.4-r3.ebuild:
   RDEPEND on virtual/cron and virtual/mailx thanks to p0 (bug #301707).

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.4-r3.ebuild,v 1.7 2010/07/08 04:27:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.4-r3.ebuild,v 1.8 2010/07/09 02:26:38 jer Exp $
 
 EAPI=2
 
@@ -20,7 +20,6 @@ RDEPEND="
 	dev-lang/perl
 	sys-process/lsof
 	virtual/cron
-	virtual/mailx
 "
 
 S="${WORKDIR}/${P}/files"
@@ -60,10 +59,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "A cron script has been installed to /etc/cron.daily/rkhunter."
-	einfo "To enable it, edit /etc/cron.daily/rkhunter and follow the"
-	einfo "directions."
-	einfo
+	elog "A cron script has been installed to /etc/cron.daily/rkhunter."
+	elog "To enable it, edit /etc/cron.daily/rkhunter and follow the"
+	elog "directions."
+	elog "If you want ${PN} to send mail, you will need to install"
+	elog "virtual/mailx as well."
 	bash-completion_pkg_postinst
 }
