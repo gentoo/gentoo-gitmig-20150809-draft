@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<!-- 
-$Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/metadata.xml,v 1.1 2008/03/09 07:40:02 antarus Exp $
--->
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>antarus@gentoo.org</email>
-  <description>I do stuff, also this is very well tested code and will not have many release.</description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
