@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.54 2010/06/26 17:55:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.55 2010/07/09 16:31:27 reavertm Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -101,19 +101,12 @@ _use_me_now_inverted() {
 	fi
 }
 
-# @ECLASS-VARIABLE: PREFIX
+# @ECLASS-VARIABLE: CMAKE_BUILD_DIR
 # @DESCRIPTION:
-# Eclass respects PREFIX variable, though it's not recommended way to set
-# install/lib/bin prefixes.
-# Use -DCMAKE_INSTALL_PREFIX=... CMake variable instead.
-
-# @ECLASS-VARIABLE: CMAKE_IN_SOURCE_BUILD
-# @DESCRIPTION:
-# Set to enable in-source build.
-
-# @ECLASS-VARIABLE: CMAKE_VERBOSE
-# @DESCRIPTION:
-# Set to enable verbose messages during compilation.
+# Build directory where all cmake processed files should be generated.
+# For in-source build it's fixed to ${CMAKE_USE_DIR}.
+# For out-of-source build it can be overriden, by default it uses
+# ${WORKDIR}/${P}_build.
 
 # @ECLASS-VARIABLE: CMAKE_BUILD_TYPE
 # @DESCRIPTION:
@@ -124,22 +117,30 @@ _use_me_now_inverted() {
 # specific compiler flags overriding make.conf.
 : ${CMAKE_BUILD_TYPE:=Gentoo}
 
+# @ECLASS-VARIABLE: CMAKE_IN_SOURCE_BUILD
+# @DESCRIPTION:
+# Set to enable in-source build.
+
+# @ECLASS-VARIABLE: CMAKE_USE_DIR
+# @DESCRIPTION:
+# Sets the directory where we are working with cmake.
+# For example when application uses autotools and only one
+# plugin needs to be done by cmake.
+# By default it uses ${S}.
+
+# @ECLASS-VARIABLE: CMAKE_VERBOSE
+# @DESCRIPTION:
+# Set to enable verbose messages during compilation.
+
+# @ECLASS-VARIABLE: PREFIX
+# @DESCRIPTION:
+# Eclass respects PREFIX variable, though it's not recommended way to set
+# install/lib/bin prefixes.
+# Use -DCMAKE_INSTALL_PREFIX=... CMake variable instead.
+
 # Determine using IN or OUT source build
 _check_build_dir() {
-	# @ECLASS-VARIABLE: CMAKE_USE_DIR
-	# @DESCRIPTION:
-	# Sets the directory where we are working with cmake.
-	# For example when application uses autotools and only one
-	# plugin needs to be done by cmake.
-	# By default it uses ${S}.
 	: ${CMAKE_USE_DIR:=${S}}
-
-	# @ECLASS-VARIABLE: CMAKE_BUILD_DIR
-	# @DESCRIPTION:
-	# Specify the build directory where all cmake processed
-	# files should be located.
-	#
-	# For installing binary doins "${CMAKE_BUILD_DIR}/${PN}"
 	if [[ -n ${CMAKE_IN_SOURCE_BUILD} ]]; then
 		# we build in source dir
 		CMAKE_BUILD_DIR="${CMAKE_USE_DIR}"
@@ -234,7 +235,9 @@ _modify-cmakelists() {
 	# TODO Add QA checker - inform when variable being checked for below is set in CMakeLists.txt
 	find "${CMAKE_USE_DIR}" -name CMakeLists.txt \
 		-exec sed -i -e '/^[[:space:]]*[sS][eE][tT][[:space:]]*([[:space:]]*CMAKE_BUILD_TYPE.*)/{s/^/#IGNORE /g}' {} + \
+		-exec sed -i -e '/^[[:space:]]*[sS][eE][tT][[:space:]]*([[:space:]]*CMAKE_COLOR_MAKEFILE.*)/{s/^/#IGNORE /g}' {} + \
 		-exec sed -i -e '/^[[:space:]]*[sS][eE][tT][[:space:]]*([[:space:]]*CMAKE_INSTALL_PREFIX.*)/{s/^/#IGNORE /g}' {} + \
+		-exec sed -i -e '/^[[:space:]]*[sS][eE][tT][[:space:]]*([[:space:]]*CMAKE_VERBOSE_MAKEFILE.*)/{s/^/#IGNORE /g}' {} + \
 		|| die "${LINENO}: failed to disable hardcoded settings"
 
 	# NOTE Append some useful summary here
@@ -339,7 +342,6 @@ enable_cmake-utils_src_configure() {
 	debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: mycmakeargs is ${mycmakeargs_local[*]}"
 	echo cmake "${cmakeargs[@]}" "${CMAKE_USE_DIR}"
 	cmake "${cmakeargs[@]}" "${CMAKE_USE_DIR}" || die "cmake failed"
-
 	popd > /dev/null
 }
 
@@ -353,12 +355,12 @@ enable_cmake-utils_src_compile() {
 # @FUNCTION: cmake-utils_src_make
 # @DESCRIPTION:
 # Function for building the package. Automatically detects the build type.
-# All arguments are passed to emake
+# All arguments are passed to emake.
 cmake-utils_src_make() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${CMAKE_BUILD_DIR}" &> /dev/null
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 	# first check if Makefile exist otherwise die
 	[[ -e Makefile ]] || die "Makefile not found. Error during configure stage."
 	if [[ -n ${CMAKE_VERBOSE} ]]; then
@@ -366,16 +368,16 @@ cmake-utils_src_make() {
 	else
 		emake "$@" || die "Make failed!"
 	fi
-	popd &> /dev/null
+	popd > /dev/null
 }
 
 enable_cmake-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${CMAKE_BUILD_DIR}" &> /dev/null
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 	base_src_install
-	popd &> /dev/null
+	popd > /dev/null
 
 	# Backward compatibility, for non-array variables
 	if [[ -n "${DOCS}" ]] && [[ "$(declare -p DOCS 2>/dev/null 2>&1)" != "declare -a"* ]]; then
@@ -390,22 +392,11 @@ enable_cmake-utils_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${CMAKE_BUILD_DIR}" &> /dev/null
-	# Standard implementation of src_test
-	if emake -j1 check -n &> /dev/null; then
-		einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
-		if ! emake -j1 check; then
-			die "Make check failed. See above for details."
-		fi
-	elif emake -j1 test -n &> /dev/null; then
-		einfo ">>> Test phase [test]: ${CATEGORY}/${PF}"
-		if ! emake -j1 test; then
-			die "Make test failed. See above for details."
-		fi
-	else
-		einfo ">>> Test phase [none]: ${CATEGORY}/${PF}"
-	fi
-	popd &> /dev/null
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
+	local ctestargs
+	[[ -n ${TEST_VERBOSE} ]] && ctestargs="--extra-verbose --output-on-failure"
+	ctest ${ctestargs} || die "Tests failed."
+	popd > /dev/null
 }
 
 # @FUNCTION: cmake-utils_src_configure
