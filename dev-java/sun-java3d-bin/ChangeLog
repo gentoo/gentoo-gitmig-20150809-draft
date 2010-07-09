@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-java3d-bin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/ChangeLog,v 1.12 2008/11/16 13:17:46 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/ChangeLog,v 1.13 2010/07/09 15:27:45 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  sun-java3d-bin-1.4.0_pre5-r1.ebuild:
+  stable amd64, bug 324585
 
   16 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   sun-java3d-bin-1.4.0_pre5-r1.ebuild:

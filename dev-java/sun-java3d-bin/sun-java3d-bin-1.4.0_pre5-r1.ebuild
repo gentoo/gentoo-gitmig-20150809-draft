@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.4.0_pre5-r1.ebuild,v 1.4 2008/11/16 13:17:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.4.0_pre5-r1.ebuild,v 1.5 2010/07/09 15:27:45 pacho Exp $
 
 inherit java-pkg-2
 
@@ -17,7 +17,7 @@ SRC_URI="
 	x86? (
 		http://download.java.net/media/java3d/builds/stable/${MY_PV}/java3d-${MY_PV}-linux-i586.zip
 	)"
-KEYWORDS="~amd64 ~x86 -*"
+KEYWORDS="-* amd64 ~x86"
 SLOT="0"
 LICENSE="sun-jrl sun-jdl"
 IUSE=""
