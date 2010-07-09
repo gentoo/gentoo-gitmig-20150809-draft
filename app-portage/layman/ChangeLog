@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.117 2010/07/08 11:27:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.118 2010/07/09 18:52:25 sping Exp $
+
+*layman-1.4.1 (09 Jul 2010)
+
+  09 Jul 2010; Sebastian Pipping <sping@gentoo.org> +layman-1.4.1.ebuild:
+  Bump to 1.4.1
 
 *layman-1.4.0 (08 Jul 2010)
 
