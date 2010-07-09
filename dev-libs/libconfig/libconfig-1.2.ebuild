@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.2.ebuild,v 1.5 2008/03/31 21:22:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.2.ebuild,v 1.6 2010/07/09 00:28:45 jer Exp $
 
 inherit autotools
 
@@ -20,7 +20,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e 's#^SUBDIRS = . samples doc$#SUBDIRS = . doc#' Makefile.am
+	sed -i Makefile.am \
+		-e 's#^SUBDIRS = . samples doc$#SUBDIRS = . doc#' \
+		-e '/^libinc_cpp/s: $(libinc) ::g' || die "sed failed"
 
 	eautoreconf || die
 }
