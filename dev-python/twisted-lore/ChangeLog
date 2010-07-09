@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.40 2010/03/17 10:40:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.41 2010/07/09 20:15:14 arfrever Exp $
+
+*twisted-lore-10.1.0 (09 Jul 2010)
+
+  09 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +twisted-lore-10.1.0.ebuild:
+  Version bump.
 
 *twisted-lore-10.0.0 (17 Mar 2010)
 
