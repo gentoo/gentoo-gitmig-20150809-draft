@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11753 2010/07/09 13:23:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11754 2010/07/09 13:31:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -393,14 +393,6 @@ sci-biology/mpiblast
 # Removal on 2010-07-13
 dev-php5/jargon
 dev-php5/creole
-
-# Samuli Suominen <ssuominen@gentoo.org> (13 Jun 2010)
-# Masked for QA, bugs 252122, 297956 and 297958.
-#
-# Replaced by oroborus-desklaunch, oroborus-deskmenu and oroborus-keylaunch.
-#
-# Removal in 30 days.
-x11-wm/oroborus-extras
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
 # Use in-kernel drivers. Removed in 60 days by treecleaners. bug 321535
