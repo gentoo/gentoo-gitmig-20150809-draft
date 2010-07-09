@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/grip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.86 2009/06/25 17:55:58 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.87 2010/07/09 10:40:39 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> grip-3.3.1-r2.ebuild:
+  Drop hppa stable keyword per bug #324511 because they won't stabilize yelp
+  any longer.
 
   25 Jun 2009; Raúl Porcel <armin76@gentoo.org> grip-3.3.1-r2.ebuild:
   ia64/sparc stable wrt #272802
