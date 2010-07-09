@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-docs/gtk-sharp-docs-2.12.10.ebuild,v 1.1 2010/06/17 17:59:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-docs/gtk-sharp-docs-2.12.10.ebuild,v 1.2 2010/07/09 17:13:21 pacho Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ GTK_SHARP_MODULE_DIR="doc"
 inherit gtk-sharp-module
 
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 RESTRICT="test"

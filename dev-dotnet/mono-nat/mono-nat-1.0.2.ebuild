@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.0.2.ebuild,v 1.1 2009/08/31 14:48:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.0.2.ebuild,v 1.2 2010/07/09 17:06:01 pacho Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://projects.qnetp.net/attachments/download/22/${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 RDEPEND=">=dev-lang/mono-2.0.1"
 DEPEND="${RDEPEND}

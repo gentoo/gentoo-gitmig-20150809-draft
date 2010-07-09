@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gluezilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.15 2010/02/21 14:34:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.16 2010/07/09 17:00:36 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> gluezilla-2.6.ebuild:
+  amd64 stable, bug 327279
 
 *gluezilla-2.6 (21 Feb 2010)
 

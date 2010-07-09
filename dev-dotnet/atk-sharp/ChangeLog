@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/atk-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/atk-sharp/ChangeLog,v 1.9 2010/06/17 17:53:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/atk-sharp/ChangeLog,v 1.10 2010/07/09 17:07:42 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> atk-sharp-2.12.10.ebuild:
+  amd64 stable, bug 327279
 
 *atk-sharp-2.12.10 (17 Jun 2010)
 

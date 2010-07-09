@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.75 2010/06/18 08:10:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.76 2010/07/09 17:09:21 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> glade-sharp-2.12.10.ebuild:
+  amd64 stable, bug 327279
 
 *glade-sharp-2.12.10 (18 Jun 2010)
 
