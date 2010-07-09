@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/qdiskusage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/ChangeLog,v 1.7 2010/06/02 14:04:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qdiskusage/ChangeLog,v 1.8 2010/07/09 15:34:56 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> qdiskusage-1.0.4.ebuild:
+  stable amd64, bug 327225
 
 *qdiskusage-1.0.4 (02 Jun 2010)
 
