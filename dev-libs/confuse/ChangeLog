@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/confuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.41 2010/03/19 16:33:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/ChangeLog,v 1.42 2010/07/09 10:20:20 scarabeus Exp $
+
+  09 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> confuse-2.7.ebuild:
+  QA: introduce static-libs useflag.
 
 *confuse-2.7 (19 Mar 2010)
 
