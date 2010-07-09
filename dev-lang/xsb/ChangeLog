@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.20 2010/07/08 08:38:56 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.21 2010/07/09 10:38:01 keri Exp $
+
+  09 Jul 2010; <keri@gentoo.org> xsb-3.2.ebuild:
+  Parallelize compile; filter install files; install examples to
+  /usr/share/doc; use correct libdir
 
   08 Jul 2010; <keri@gentoo.org> xsb-3.2.ebuild:
   Filter temporary c -> XSB files during install

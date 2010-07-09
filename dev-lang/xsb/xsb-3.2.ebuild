@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2.ebuild,v 1.3 2010/07/08 08:38:56 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2.ebuild,v 1.4 2010/07/09 10:38:01 keri Exp $
 
 MY_P="XSB"
 
-PATCHSET_VER="1"
+PATCHSET_VER="2"
 
 inherit eutils autotools java-pkg-opt-2
 
@@ -16,7 +16,7 @@ SRC_URI="http://xsb.sourceforge.net/downloads/${MY_P}.tar.gz
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug iodbc java libwww mysql odbc perl threads xml"
+IUSE="debug examples iodbc java libwww mysql odbc perl threads xml"
 
 RDEPEND="iodbc? ( dev-db/libiodbc )
 	java? ( >=virtual/jdk-1.4 )
@@ -57,7 +57,7 @@ src_compile() {
 		$(use_enable debug debug-verbose) \
 		$(use_enable debug profile) \
 		|| die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	if use libwww ; then
 		cd "${S}"/packages/libwww
@@ -78,6 +78,9 @@ src_compile() {
 		cd "${S}"/packages/xpath
 		econf || die "econf xpath package failed"
 	fi
+
+	# All XSB Packages are compiled using a single Prolog engine.
+	# Consequently they must all be compiled using a single make job.
 
 	cd "${S}"/packages
 	rm -rf *.xwam
@@ -108,10 +111,11 @@ src_install() {
 	cd "${S}"/build
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dosym /usr/lib/xsb/bin/xsb /usr/bin/xsb
+	local XSB_INSTALL_DIR=/usr/$(get_libdir)/xsb-${PV}
+	dosym ${XSB_INSTALL_DIR}/bin/xsb /usr/bin/xsb
 
 	cd "${S}"/packages
-	local PACKAGES=/usr/lib/xsb/packages
+	local PACKAGES=${XSB_INSTALL_DIR}/packages
 	insinto ${PACKAGES}
 	doins *.xwam
 
@@ -187,6 +191,14 @@ src_install() {
 		doins xpath/*xwam
 		insinto ${PACKAGES}/xpath/cc
 		doins xpath/cc/*.H
+	fi
+
+	if use examples ; then
+		cd "${S}"/build
+		make \
+			DESTDIR="${D}" \
+			install_examples="${D}"/usr/share/doc/${PF}/examples \
+			install_examples || die "make install_examples failed"
 	fi
 
 	cd "${S}"
