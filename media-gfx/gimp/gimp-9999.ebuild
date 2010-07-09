@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.28 2010/06/24 10:45:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.29 2010/07/09 15:21:01 scarabeus Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,7 +13,7 @@ DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
 SRC_URI=""
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="2"
 KEYWORDS=""
 
