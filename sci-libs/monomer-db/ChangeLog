@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/monomer-db
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.5 2010/07/04 08:06:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.6 2010/07/09 15:29:10 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> monomer-db-5.21.ebuild:
+  stable amd64, bug 326073
 
   04 Jul 2010; Justin Lecher <jlec@gentoo.org> monomer-db-0.090729.ebuild,
   monomer-db-5.16.ebuild, monomer-db-5.21.ebuild:

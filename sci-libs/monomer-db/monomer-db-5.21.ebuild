@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.21.ebuild,v 1.2 2010/07/04 08:06:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.21.ebuild,v 1.3 2010/07/09 15:29:10 pacho Exp $
 
 MY_PN="refmac_dictionary"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ysbl.york.ac.uk/~garib/refmac/data/refmac_experimental/${MY_
 
 SLOT="0"
 LICENSE="ccp4"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
