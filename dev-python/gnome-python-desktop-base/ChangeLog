@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-python-desktop-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.31 2010/06/14 14:29:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.32 2010/07/09 20:58:56 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  -gnome-python-desktop-base-2.24.1.ebuild,
+  gnome-python-desktop-base-2.26.0.ebuild:
+  Drop hppa keywords and old versions per bug 324511
 
 *gnome-python-desktop-base-2.30.2 (14 Jun 2010)
 
