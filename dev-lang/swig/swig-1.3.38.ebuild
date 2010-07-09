@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.38.ebuild,v 1.1 2009/02/05 00:29:15 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.38.ebuild,v 1.2 2010/07/09 18:40:33 pchrist Exp $
 
 inherit flag-o-matic mono eutils autotools #48511
 
@@ -26,7 +26,7 @@ lua? ( dev-lang/lua )
 mono? ( dev-lang/mono )
 mzscheme? ( dev-scheme/plt-scheme )
 perl? ( dev-lang/perl )
-php? ( virtual/php )
+php? ( dev-lang/php )
 pike? ( dev-lang/pike )
 python? ( virtual/python )
 R? ( dev-lang/R )
