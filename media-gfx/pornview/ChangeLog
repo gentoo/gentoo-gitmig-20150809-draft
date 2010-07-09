@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pornview
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.35 2009/09/28 23:40:36 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.36 2010/07/09 08:41:13 tove Exp $
+
+  09 Jul 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update metadata.xml. antarus is staffer now (#119161)
 
   28 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   pornview-0.2.0_pre1-r1.ebuild,
