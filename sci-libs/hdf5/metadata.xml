@@ -8,7 +8,4 @@
   has a more powerful and flexible data model, supports files larger
   than 2 GB, and supports parallel I/O.
 </longdescription>
-<use>
-  <flag name='hlapi'>Enable support for high-level library</flag>
-</use>
 </pkgmetadata>
