@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ufconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.22 2010/06/27 10:08:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.23 2010/07/09 10:04:36 ssuominen Exp $
+
+  09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> ufconfig-3.1.0.ebuild:
+  ppc64 stable wrt #318649
 
   27 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> ufconfig-3.5.0.ebuild:
   Fix building static lib wrt bug 325821. Thanks to Markus Peloquin
