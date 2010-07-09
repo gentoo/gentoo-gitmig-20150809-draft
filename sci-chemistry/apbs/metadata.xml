@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>sci-chemistry</herd>
     <maintainer>
         <email>markusle@gentoo.org</email>
         <name>Markus Dittrich</name>
@@ -10,10 +11,16 @@
 		<name>Justin Lecher</name>
 		<description>Ebuild Crasher</description>
 	</maintainer>			
-	<herd>sci-chemistry</herd>
 	<use>
 		<flag name='arpack'>Include support for arpack libs</flag>
         <flag name='tinker'>Provide support for sci-chemistry/tinker</flag>
 		<flag name='tools'>Install optional tools</flag>
 	</use>
+<longdescription>
+APBS is a software package for modeling biomolecular solvation through solution 
+of the Poisson-Boltzmann equation (PBE), one of the most popular continuum 
+models for describing electrostatic interactions between molecular solutes in 
+salty, aqueous media. Continuum electrostatics plays an important role in 
+several areas of biomolecular simulation
+</longdescription>
 </pkgmetadata>
