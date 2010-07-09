@@ -1,6 +1,9 @@
 # ChangeLog for virtual/monodoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.27 2010/07/04 20:35:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.28 2010/07/09 16:59:47 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> monodoc-2.6.4.ebuild:
+  amd64 stable, bug 327279
 
   04 Jul 2010; Pacho Ramos <pacho@gentoo.org> -monodoc-2.4.3.ebuild,
   -monodoc-2.6.1.ebuild, -monodoc-2.6.3.ebuild:
