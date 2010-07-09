@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libisds
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.3 2010/06/29 14:22:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.4 2010/07/09 10:37:37 scarabeus Exp $
+
+  09 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> libisds-0.3.1.ebuild,
+  libisds-9999.ebuild:
+  Whitespace a bit.
 
   29 Jun 2010; Tomáš Chvátal <scarabeus@gentoo.org> libisds-0.3.1.ebuild,
   libisds-9999.ebuild:

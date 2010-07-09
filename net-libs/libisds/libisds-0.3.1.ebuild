@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-0.3.1.ebuild,v 1.3 2010/06/29 14:22:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-0.3.1.ebuild,v 1.4 2010/07/09 10:37:37 scarabeus Exp $
 
 EAPI=3
 
@@ -14,11 +14,11 @@ if [[ ${PV} = 9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://xpisar.wz.cz/libisds/dist/${P}.tar.bz2"
+	SRC_URI="http://xpisar.wz.cz/${PN}/dist/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 fi
-LICENSE="LGPL-3"
 
+LICENSE="LGPL-3"
 SLOT="0"
 IUSE="debug nls static-libs test"
 
