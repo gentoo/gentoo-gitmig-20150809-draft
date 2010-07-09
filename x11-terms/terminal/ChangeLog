@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.50 2010/06/30 16:25:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.51 2010/07/09 17:03:32 ssuominen Exp $
+
+  09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> terminal-0.4.5.ebuild:
+  ppc64 stable wrt #323729
 
   30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   terminal-0.4.5.ebuild:
