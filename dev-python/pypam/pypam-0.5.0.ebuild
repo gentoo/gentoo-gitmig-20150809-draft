@@ -1,10 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/pypam-0.5.0.ebuild,v 1.2 2007/06/24 14:18:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/pypam-0.5.0.ebuild,v 1.3 2010/07/09 22:10:37 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
-MY_P=${P/pypam/PyPAM}
+MY_PN="PyPAM"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Python Bindings for PAM (Pluggable Authentication Modules)"
 HOMEPAGE="http://www.pangalactic.org/PyPAM"
@@ -18,13 +24,14 @@ IUSE=""
 DEPEND=">=sys-libs/pam-0.64"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="AUTHORS examples/pamtest.py"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	distutils_src_prepare
 
 	# Fix a PyObject/PyMEM mixup.
 	epatch "${FILESDIR}/${P}-python-2.5.patch"
@@ -33,20 +40,8 @@ src_unpack() {
 }
 
 src_test() {
-	"${python}" setup.py install --home="${T}/test" \
-		|| die "testinstall failed"
-	PYTHONPATH="${T}/test/$(get_libdir)/python" "${python}" tests/PamTest.py \
-		|| die "tests failed"
-}
-
-pkg_postinst() {
-	# HACK: we do not install any .py files, so there is no reason to
-	# run python_mod_optimize here, like distutils_pkg_postrm does.
-	:
-}
-
-pkg_postrm() {
-	# HACK: we do not install any .py files, so there is no reason to
-	# run python_mod_cleanup here, like distutils_pkg_postrm does.
-	:
+	testing() {
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" tests/PamTest.py
+	}
+	python_execute_function testing
 }

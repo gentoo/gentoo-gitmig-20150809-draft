@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypam
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/ChangeLog,v 1.4 2008/03/12 18:12:49 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/ChangeLog,v 1.5 2010/07/09 22:10:37 arfrever Exp $
+
+  09 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pypam-0.5.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
