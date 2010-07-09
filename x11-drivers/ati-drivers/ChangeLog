@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.216 2010/06/18 23:20:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.217 2010/07/09 13:03:44 scarabeus Exp $
+
+  09 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/ati-drivers-2.6.19.patch, -ati-drivers-8.552-r2.ebuild,
+  -ati-drivers-8.593.ebuild, -ati-drivers-8.721.ebuild,
+  -ati-drivers-9.9-r2.ebuild, -ati-drivers-9.10.ebuild,
+  -ati-drivers-9.11.ebuild, -files/kernel/2.6.32-9.11-fix_compilation.patch,
+  -ati-drivers-10.2.ebuild, ati-drivers-10.6.ebuild,
+  -files/kernel/2.6.31-fglrx_find_task_by_vpid.patch,
+  -ati-drivers-10.1.ebuild, -ati-drivers-10.3.ebuild,
+  ati-drivers-10.4.ebuild, ati-drivers-10.5.ebuild:
+  Stable latest 3 releases. Drop old that dont have xorg-server to play with
+  around.
 
 *ati-drivers-10.6 (18 Jun 2010)
 
