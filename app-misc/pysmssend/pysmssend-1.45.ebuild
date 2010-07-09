@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.45.ebuild,v 1.1 2010/05/29 11:47:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.45.ebuild,v 1.2 2010/07/09 15:32:56 pacho Exp $
 
 PYTHON_DEPEND="2:2.5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://pysmssend.silverarrow.org/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="qt4"
 
 RDEPEND=">dev-python/mechanize-0.1.7b
