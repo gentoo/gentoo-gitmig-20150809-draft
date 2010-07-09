@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/colubrid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/ChangeLog,v 1.4 2010/02/08 08:50:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/ChangeLog,v 1.5 2010/07/09 08:40:28 tove Exp $
+
+  09 Jul 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update metadata.xml. antarus is staffer now (#119161)
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> colubrid-0.10-r1.ebuild:
   Add inherit eutils for epatch.

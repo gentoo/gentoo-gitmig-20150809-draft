@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<!-- 
-$Header: /var/cvsroot/gentoo-x86/dev-python/colubrid/metadata.xml,v 1.1 2008/03/09 10:10:28 antarus Exp $
--->
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>antarus@gentoo.org</email>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
