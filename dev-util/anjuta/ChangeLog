@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.115 2010/06/22 20:01:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.116 2010/07/09 10:15:14 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> -anjuta-2.24.2.ebuild,
+  metadata.xml:
+  HPPA team wants to drop keywording of GNOME packages.
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   anjuta-2.24.2.ebuild, anjuta-2.28.2.0.ebuild, anjuta-2.30.2.1.ebuild:
