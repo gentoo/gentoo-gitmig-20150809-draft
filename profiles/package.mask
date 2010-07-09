@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11751 2010/07/09 10:18:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11752 2010/07/09 13:14:16 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -740,11 +740,6 @@ dev-perl/perlmenu
 # Unmaintained and probably broken (see rt bugs and cpanratings) (#276745)
 dev-perl/Net-XWhois
 
-# Mounir Lamouri <volkmar@gentoo.org> (18 Apr 2010)
-# The add-on/extension manager should now be used instead of the package
-# from the tree, bug 315999. Masked for removal in 30 days.
-www-plugins/noscript
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (16 Apr 2010)
 # Masked to enforce upgrade which looks like downgrade.
 >=dev-python/drpython-160
@@ -814,12 +809,6 @@ net-fs/samba-server
 net-fs/samba-client
 >net-fs/samba-4
 
-# Michael Sterrett <mr_bones_@gentoo.org> (05 Apr 2010)
-# Needs dev-python/numeric which is going away.
-# No release since 2006
-# Masked for removal on 20100505
-games-strategy/castle-combat
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (05 Apr 2010)
 # Mask misversioned ebuilds.
 =dev-python/visual-5.12
@@ -838,16 +827,6 @@ games-strategy/castle-combat
 # Masked due to producing build failures in stable
 # lucene and possibly others. see #309961
 =dev-java/javacc-5.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2010)
-# Masked for QA and security.
-#
-# Several symlink vulnerabilities
-#
-# http://bugs.gentoo.org/show_bug.cgi?id=253657#c6
-#
-# Removal in 30 days
-mail-filter/MailScanner
 
 # Torsten Veller <tove@gentoo.org> (14 Mar 2010)
 # Mask "End Of Life" versions
@@ -879,18 +858,6 @@ sys-libs/ss
 <sys-libs/e2fsprogs-libs-1.41.8
 <sys-fs/e2fsprogs-1.41.9
 
-# Samuli Suominen <ssuominen@gentoo.org> (03 Mar 2010)
-# Masked for QA, security
-#
-# After more than a year of no word from maintainers
-#
-# Internal copy of vulnerable libpcre, bug 258330
-# Remote command execution, CVE-2009-4016, bug 303735
-# Build issues, bug 212255
-#
-# Masked for removal in 60 days.
-net-irc/ircd-hybrid
-
 # Jeroen Roovers <jer@gentoo.org> (28 Feb 2010)
 # Development release
 =app-admin/sysstat-9.1*
@@ -900,28 +867,9 @@ net-irc/ircd-hybrid
 # heavy development, and snapshot
 =kde-misc/knetworkmanager-4.4*
 
-# Torsten Veller <tove@gentoo.org> (25 Feb 2010)
-# Masked for removal as soon as possible
-# Merged in dev-perl/Email-MIME
-dev-perl/Email-MIME-Modifier
-dev-perl/Email-MIME-Creator
-# Merged in dev-perl/Email-Simple (#304683)
-dev-perl/Email-Simple-Creator
-# Merged in dev-perl/XML-LibXML (#304685)
-dev-perl/XML-LibXML-Common
-# Merged in dev-perl/Class-XSAccessor (#275520)
-dev-perl/Class-XSAccessor-Array
-
 # Robert Piasek <dagger@gentoo.org> (23 Feb 2010)
 # Masking libmapi as it depends on masked samba4
 =net-libs/libmapi-0.9
-
-# Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
-# Upstream discontinued the split of -community and -enterprise specific
-# tarballs of source. You must move to dev-db/mysql as the -community split has
-# security vulnerabilities only fixed in the main package.
-# To be removed 2010/07/01.
-dev-db/mysql-community
 
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
 # Mask 5.4 series that is nearly a release candidate upstream (expected within the next 6 months)
@@ -1149,13 +1097,6 @@ dev-lisp/gcl
 <dev-db/mysql-5.0.60-r1
 <virtual/mysql-5.0
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (28 Jul 2009)
-# Upstream decided to support only r600 and newer.
-# We should no longer use them or depend on them.
-# For more info:
-#  http://dev.gentoo.org/~scarabeus/ati-mask-reason.txt
-<x11-drivers/ati-drivers-9.6
-
 # Jim Ramsay <lack@gentoo.org> (1 Feb 2008)
 # Weird boost dependencies, need to solve this in a different way: Probably by
 # actually doing 'amazonmp3-libcompat' for both x86 and amd64. (bug #272699)
@@ -1296,11 +1237,6 @@ gnome-extra/gnome-lirc-properties
 # Markus Ullmann <jokey@gentoo.org> (7 Jul 2008)
 # mask for security bug #190667
 net-irc/bitchx
-
-# Rémi Cardona <remi@gentoo.org> (14 Nov 2009)
-# Masked for removal, until there is 2.0 branch release this must go.
-# See bug #156583.
-<app-text/gtranslator-1.9
 
 # Vlastimil Babka <caster@gentoo.org> (20 May 2008)
 # Masked for testing
