@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.11 2010/06/20 11:19:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.12 2010/07/09 14:11:45 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.hdfgroup.org/ftp/HDF5/prev-releases/${P}/src/${P}.tar.gz"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 IUSE="cxx examples fortran mpi szip threads zlib"
 
