@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.41 2010/06/17 18:50:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.42 2010/07/09 10:31:16 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> gdl-2.24.0.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *gdl-2.30.0 (17 Jun 2010)
 
