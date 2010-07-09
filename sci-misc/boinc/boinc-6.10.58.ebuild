@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.18.ebuild,v 1.5 2010/03/23 03:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.58.ebuild,v 1.1 2010/07/09 16:49:01 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	!app-admin/quickswitch
 	>=app-misc/ca-certificates-20080809
 	dev-libs/openssl
-	net-misc/curl
+	net-misc/curl[ssl,-gnutls]
 	sys-apps/util-linux
 	sys-libs/zlib
 	cuda? (

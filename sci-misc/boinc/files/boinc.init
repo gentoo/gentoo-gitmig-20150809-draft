@@ -57,27 +57,32 @@ start() {
 	fi
 
 	if [ "${ALLOW_REMOTE_RPC}" = "yes" ]; then
-		ARGS="${ARGS} -allow_remote_gui_rpc"
+		ARGS="${ARGS} --allow_remote_gui_rpc"
 	fi
 
 	if [ -n "${RC_UNAME}" ]; then
-		PARAMS="--background --stdout '${LOGFILE}' --stderr '${LOGFILE}' -- ${ARGS}"
+		PARAMS="--background --stdout '${LOGFILE}' --stderr '${LOGFILE}' ${ARGS}"
 	else
-		PARAMS="-- ${ARGS} >> '${LOGFILE}' 2>&1 &"
+		PARAMS="${ARGS} >> '${LOGFILE}' 2>&1"
 	fi
 
 	generate_logs
 
-	# sys-apps/util-linux
-	CHRT="/usr/bin/chrt ${SCHED_PARAM}"
+	# sys-apps/util-linux (setup scheduling policy if specified, otherwise blank out
+    if [ "${SCHED_PARAM}" = "" ]; then
+        CHRT=""
+    else
+    	CHRT="/usr/bin/chrt ${SCHED_PARAM}"
+    fi
 
 	eval ${CHRT} start-stop-daemon \
-		--quiet --start --chdir "${RUNTIMEDIR}" \
-		--pidfile "${PIDFILE}" \
+		--start --quiet --chdir "${RUNTIMEDIR}" \
+        --background \
 		--make-pidfile \
-		--exec "${BOINCBIN}" --chuid "${USER}:${GROUP}" \
+		--pidfile "${PIDFILE}" \
+        --chuid "${USER}:${GROUP}" \
 		--nicelevel "${NICELEVEL}" \
-		${PARAMS}
+		--exec "${BOINCBIN}" -- ${PARAMS}
 
 	RESULT=$?
 
