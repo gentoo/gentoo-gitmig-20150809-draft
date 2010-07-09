@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.93 2010/06/24 17:12:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.94 2010/07/09 10:19:55 ssuominen Exp $
+
+  09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  octave-3.2.4-r1.ebuild:
+  ppc64 stable wrt #318649
 
   24 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org>
   -files/octave-2.1.72-gcc4.1-gentoo.patch, -octave-2.1.73.ebuild,

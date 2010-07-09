@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.8 2010/06/13 15:07:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.9 2010/07/09 10:19:55 ssuominen Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 IUSE="curl doc emacs fltk fftw opengl readline sparse test xemacs zlib"
-KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 
 RDEPEND="dev-libs/libpcre
 	media-gfx/graphicsmagick[cxx]
