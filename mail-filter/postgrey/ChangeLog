@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/postgrey
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.62 2009/10/01 14:55:36 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.63 2010/07/09 19:28:18 dertobi123 Exp $
+
+*postgrey-1.33 (09 Jul 2010)
+
+  09 Jul 2010; Tobias Scherbaum <dertobi123@gentoo.org>
+  +postgrey-1.33.ebuild:
+  Version bump, #325401. Remove targrey as no current patch is available.
 
   01 Oct 2009; Jeroen Roovers <jer@gentoo.org> postgrey-1.32.ebuild:
   Stable for HPPA (LuckyLuke).
