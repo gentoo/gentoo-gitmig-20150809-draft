@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.1 2010/07/09 10:38:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.2 2010/07/09 10:51:23 scarabeus Exp $
 
 EAPI=3
 
@@ -30,6 +30,7 @@ RDEPEND=">=net-libs/libisds-0.3
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-libs/libxslt
+	dev-util/pkgconfig
 	app-text/docbook-xsl-stylesheets"
 
 DOCS=( "NEWS" "README" "AUTHORS" "ChangeLog" )
@@ -41,7 +42,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-fatalwarnings
+		--disable-fatalwarnings \
 		$(use_enable debug) \
 		$(use_enable nls) \
 		$(use_enable xattr)
