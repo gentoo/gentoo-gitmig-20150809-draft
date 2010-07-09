@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.9.ebuild,v 1.1 2010/06/08 21:32:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.9.ebuild,v 1.2 2010/07/09 16:47:29 arfrever Exp $
 
 EAPI="3"
 
@@ -45,8 +45,6 @@ src_install() {
 
 	insinto /etc
 	doins gtags.conf
-	insinto /usr/share/${PN}
-	doins gtags.pl globash.rc
 
 	if use vim; then
 		insinto /usr/share/vim/vimfiles/plugin
