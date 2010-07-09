@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.123 2010/07/04 21:58:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.124 2010/07/09 20:37:44 ssuominen Exp $
+
+  09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> p7zip-9.13.ebuild:
+  ppc64 stable wrt #326831
 
   04 Jul 2010; Markos Chandras <hwoarang@gentoo.org> p7zip-9.13.ebuild:
   Stable on amd64 wrt bug #326831
