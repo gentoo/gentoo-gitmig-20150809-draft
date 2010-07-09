@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.153 2010/06/21 14:07:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.154 2010/07/09 23:32:27 reavertm Exp $
+
+*digikam-1.2.0-r2 (09 Jul 2010)
+
+  09 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  +digikam-1.2.0-r2.ebuild, +files/digikam-1.2.0-lapack.patch,
+  +files/digikam-1.2.0-libpgf.patch,
+  +files/digikam-1.2.0-ratingwidget.patch, metadata.xml:
+  Version bump 1.2.0, fixes bug 206934 and 306679. Thanks to all involved in
+  those bugs.
 
   21 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   digikam-1.1.0-r1.ebuild:

@@ -7,6 +7,7 @@
 	<flag name="geolocation">Add support for marble</flag>
 	<flag name="glib">Enable support for liquid rescale tool</flag>
 	<flag name="lensfun">Enable support for lens-correnction library</flag>
-	<flag name="thumbnails">Allow thumbnail previews for images/photos</flag>
+	<flag name="thumbnails">Enable thumbnails database support</flag>
+	<flag name="video">Pull in mplayerthumbs to enable video thumbnails</flag>
 </use>
 </pkgmetadata>
