@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/turbokid
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/ChangeLog,v 1.6 2009/01/08 23:33:25 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/ChangeLog,v 1.7 2010/07/09 13:32:00 arfrever Exp $
+
+*turbokid-1.0.5 (09 Jul 2010)
+
+  09 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -turbokid-1.0.4.ebuild, +turbokid-1.0.5.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -turbokid-1.0.2.ebuild:
   Remove old
