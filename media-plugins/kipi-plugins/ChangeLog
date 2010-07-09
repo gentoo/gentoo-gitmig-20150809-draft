@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.67 2010/02/04 21:26:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.68 2010/07/09 23:14:42 reavertm Exp $
+
+*kipi-plugins-1.2.0-r2 (09 Jul 2010)
+
+  09 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -kipi-plugins-1.1.0.ebuild, +kipi-plugins-1.2.0-r2.ebuild,
+  +files/kipi-plugins-1.2.0-expoblending.patch,
+  +files/kipi-plugins-1.2.0-jpeg.patch.bz2, metadata.xml:
+  Remove old.
+  Version bump 1.2.0, also fixes bug 321613 and 313241.
+  Ebuild by Andreas K. Huettel.
 
   04 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
   kipi-plugins-1.1.0.ebuild:
