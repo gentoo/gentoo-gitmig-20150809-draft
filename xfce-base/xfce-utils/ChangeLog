@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.149 2010/06/30 15:46:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.150 2010/07/09 16:41:29 ssuominen Exp $
+
+  09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce-utils-4.6.2.ebuild:
+  ppc64 stable wrt #323729
 
   30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   xfce-utils-4.6.2.ebuild:
