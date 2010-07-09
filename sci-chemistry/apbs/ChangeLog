@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.38 2010/07/09 13:36:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.39 2010/07/09 16:03:33 jlec Exp $
+
+  09 Jul 2010; Justin Lecher <jlec@gentoo.org> -apbs-1.0.0-r1.ebuild,
+  -files/apbs-1.0.0-LDFLAGS.patch, -files/apbs-1.0.0-install-fix.patch,
+  -files/apbs-1.0.0-libmaloc-noinstall.patch,
+  -files/apbs-1.0.0-openmpi.patch, -apbs-1.2.1b-r3.ebuild:
+  Cleaned old after stabilization
 
   09 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   apbs-1.2.1b-r4.ebuild:
