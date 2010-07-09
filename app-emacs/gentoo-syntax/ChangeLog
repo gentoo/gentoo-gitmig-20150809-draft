@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.67 2010/05/22 08:06:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.68 2010/07/09 18:15:44 ulm Exp $
+
+*gentoo-syntax-1.17 (09 Jul 2010)
+
+  09 Jul 2010; Ulrich Mueller <ulm@gentoo.org> +gentoo-syntax-1.17.ebuild:
+  Version bump. Many font-lock keywords for eclasses have been added.
+  List of architectures is now initialised from profiles.desc, bug 304133.
 
   22 May 2010; Ulrich Mueller <ulm@gentoo.org> -gentoo-syntax-1.12.ebuild,
   -files/50gentoo-syntax-gentoo-1.12.el, -gentoo-syntax-1.15-r1.ebuild:
