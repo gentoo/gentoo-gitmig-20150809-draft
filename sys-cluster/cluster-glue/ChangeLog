@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/cluster-glue
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.6 2010/06/29 08:25:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.7 2010/07/09 14:36:09 xarthisius Exp $
+
+  09 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  cluster-glue-1.0.5.ebuild:
+  Add blocker for <sys-cluster/heartbeat-3.0
 
   29 Jun 2010; Guy Martin <gmsoft@gentoo.org> cluster-glue-1.0.5.ebuild:
   Added ~hppa to KEYWORDS.

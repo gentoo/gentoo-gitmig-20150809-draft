@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.5.ebuild,v 1.5 2010/06/29 08:25:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.5.ebuild,v 1.6 2010/07/09 14:36:09 xarthisius Exp $
 
 EAPI="2"
 
@@ -22,7 +22,8 @@ RDEPEND="app-arch/bzip2
 	net-misc/curl
 	net-misc/iputils
 	|| ( net-misc/netkit-telnetd net-misc/telnet-bsd )
-	dev-libs/libxml2"
+	dev-libs/libxml2
+	!<sys-cluster/heartbeat-3.0"
 DEPEND="${RDEPEND}
 	doc? (
 		dev-libs/libxslt
