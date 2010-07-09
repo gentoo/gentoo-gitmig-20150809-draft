@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.ebuild,v 1.1 2010/07/08 20:38:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.ebuild,v 1.2 2010/07/09 13:15:47 arfrever Exp $
 
 EAPI=3
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -39,13 +40,20 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install --install-data="${EPREFIX}/usr/share/${PN}"
+
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples || die
 	fi
-	# clean up collision with matplotlib
-	rm "${D%/}${EPREFIX}"/usr/lib*/python*/site-packages/mpl_toolkits/__init__.py || die
+
 	# respect FHS
-	mv "${D%/}${EPREFIX}"/usr/lib*/python*/site-packages/mpl_toolkits/basemap/data \
-		"${D%/}${EPREFIX}"/usr/share/basemap || die
+	mv "${ED}$(python_get_sitedir -f)/mpl_toolkits/basemap/data" "${ED}usr/share/basemap"
+
+	cleaning() {
+		# clean up collision with matplotlib
+		rm "${ED}$(python_get_sitedir)/mpl_toolkits/__init__.py" || return 1
+		# respect FHS
+		rm -r "${ED}$(python_get_sitedir)/mpl_toolkits/basemap/data"
+	}
+	python_execute_function -q cleaning
 }
