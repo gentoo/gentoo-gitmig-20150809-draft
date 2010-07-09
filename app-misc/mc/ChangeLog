@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.201 2010/07/05 21:21:27 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.202 2010/07/09 08:16:06 wired Exp $
+
+*mc-4.7.3-r1 (09 Jul 2010)
+
+  09 Jul 2010; Alex Alexander <wired@gentoo.org> +mc-4.7.3-r1.ebuild,
+  +files/mc-4.7.3_advanced_chown_segfault_fix.patch,
+  +files/mc-4.7.3_mcedit_quit_dialog_default.patch:
+  added patches: chown dialog segfault fix (mc ticket 2264), mcedit quit
+  dialog -> change default to cancel (mc ticket 2265). fixes bug #327573
 
 *mc-4.7.3 (05 Jul 2010)
 *mc-4.7.0.7 (05 Jul 2010)
