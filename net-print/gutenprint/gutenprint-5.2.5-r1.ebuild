@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.5-r1.ebuild,v 1.1 2010/02/23 14:59:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.5-r1.ebuild,v 1.2 2010/07/09 05:58:34 jer Exp $
 
 EAPI="2"
 
@@ -28,8 +28,9 @@ LICENSE="GPL-2"
 SLOT="0"
 
 src_prepare() {
-	# Respect gentoo CFLAGS
-	epatch "${FILESDIR}/${PN}-5.2.4-CFLAGS.patch"
+	epatch \
+		"${FILESDIR}/${PN}-5.2.4-CFLAGS.patch" \
+		"${FILESDIR}/${P}-Makefile.patch"
 	# IJS Patch
 	sed -i -e "s:<ijs\([^/]\):<ijs/ijs\1:g" src/ghost/ijsgutenprint.c || die "sed failed"
 	# Regen configure
@@ -75,7 +76,7 @@ src_install () {
 
 	dodoc AUTHORS ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt}
 	dohtml doc/FAQ.html
-	dohtml -r doc/users_guide/html doc/developer/developer-html
+	dohtml -r doc/gutenprintui2/html doc/gutenprint/developer-html
 	rm -fR "${D}"/usr/share/gutenprint/doc
 	if ! use gtk && ! use gimp; then
 		rm -f "${D}"/usr/$(get_libdir)/pkgconfig/gutenprintui2.pc

@@ -1,6 +1,11 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.10 2010/02/23 14:59:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.11 2010/07/09 05:58:34 jer Exp $
+
+  09 Jul 2010; Jeroen Roovers <jer@gentoo.org> gutenprint-5.2.5-r1.ebuild,
+  +files/gutenprint-5.2.5-Makefile.patch:
+  Do not install sequence.h twice by Dominik Köppl, patch by Fabian Henze
+  (bug #317985).
 
 *gutenprint-5.2.5-r1 (23 Feb 2010)
 
