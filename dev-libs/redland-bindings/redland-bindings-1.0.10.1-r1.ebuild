@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1-r1.ebuild,v 1.2 2010/02/10 20:42:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.10.1-r1.ebuild,v 1.3 2010/07/09 18:57:55 mabi Exp $
 
 EAPI=2
 inherit multilib
@@ -17,7 +17,7 @@ IUSE="perl python php ruby"
 RDEPEND=">=dev-libs/redland-1.0.10-r1
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
-	php? ( virtual/php )
+	php? ( dev-lang/php )
 	ruby? ( dev-lang/ruby dev-ruby/log4r )"
 DEPEND="${RDEPEND}
 	dev-lang/swig
