@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.775 2010/07/05 20:28:14 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.776 2010/07/09 10:59:34 fauli Exp $
+
+  09 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  vanilla-sources-2.6.34.ebuild:
+  stable x86, bug 325333
 
 *vanilla-sources-2.6.35_rc4 (05 Jul 2010)
 
