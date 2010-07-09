@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-1.6.1.ebuild,v 1.1 2010/06/18 20:01:23 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-1.6.1.ebuild,v 1.2 2010/07/09 17:19:48 pacho Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.banshee-project.org/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="lirc lyrics mirage telepathy"
 
 DEPEND=">=dev-lang/mono-2.0
