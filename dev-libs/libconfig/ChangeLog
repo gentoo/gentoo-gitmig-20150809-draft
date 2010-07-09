@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.21 2010/07/09 00:28:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.22 2010/07/09 00:41:56 jer Exp $
+
+*libconfig-1.4.5 (09 Jul 2010)
+
+  09 Jul 2010; Jeroen Roovers <jer@gentoo.org> +libconfig-1.4.5.ebuild:
+  Version bump.
 
   09 Jul 2010; Jeroen Roovers <jer@gentoo.org> libconfig-1.2.ebuild,
   libconfig-1.3.2.ebuild:
