@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.10.ebuild,v 1.4 2010/01/20 23:45:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.14.ebuild,v 1.1 2010/07/09 08:48:46 spatz Exp $
 
 EAPI="2"
 
