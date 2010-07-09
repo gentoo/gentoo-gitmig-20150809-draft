@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4383 2010/07/09 10:18:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4384 2010/07/09 16:44:59 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask Opera 10.11 (bug #326571 and bug #326413).
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask dev-libs/gnome-build for removal
