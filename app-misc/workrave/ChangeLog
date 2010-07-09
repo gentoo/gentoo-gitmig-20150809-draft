@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.66 2010/06/26 13:53:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.67 2010/07/09 09:13:18 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  -files/workrave-1.8.4-nls_macros.patch, -workrave-1.8.5.ebuild,
+  -files/workrave-1.8.5-gcc43.patch,
+  -files/workrave-1.8.5-libsigc++-2.2.2.patch, workrave-1.9.1-r1.ebuild,
+  +files/workrave-1.9.1-gtkmm_api.patch:
+  Fix build with new gtkmm due API break reported in bug #327471 (by
+  Laurento Frittella). Remove old.
 
   26 Jun 2010; <nixnut@gentoo.org> workrave-1.9.1-r1.ebuild:
   ppc stable #310261
