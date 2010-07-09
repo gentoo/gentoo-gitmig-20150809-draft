@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy-migrate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/ChangeLog,v 1.2 2009/07/16 14:31:48 flameeyes Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/ChangeLog,v 1.3 2010/07/09 12:28:58 arfrever Exp $
+
+  09 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sqlalchemy-migrate-0.5.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   16 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   sqlalchemy-migrate-0.5.4.ebuild:
