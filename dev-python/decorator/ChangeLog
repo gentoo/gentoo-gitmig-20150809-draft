@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.17 2010/07/06 14:51:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.18 2010/07/09 13:27:59 fauli Exp $
+
+  09 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  decorator-3.2.0.ebuild:
+  stable x86, bug 325901
 
   06 Jul 2010; Jeroen Roovers <jer@gentoo.org> decorator-3.2.0.ebuild:
   Stable for HPPA (bug #325901).
