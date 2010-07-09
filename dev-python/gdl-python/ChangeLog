@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.26 2010/06/15 07:39:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.27 2010/07/09 10:29:18 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> gdl-python-2.19.1-r1.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *gdl-python-2.25.3 (15 Jun 2010)
 
