@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.2.ebuild,v 1.3 2010/07/07 16:56:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.3.2.ebuild,v 1.4 2010/07/09 16:25:22 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,7 +24,6 @@ IUSE="doc examples test"
 
 RDEPEND="dev-python/configobj
 	>=dev-python/enthoughtbase-3.0.5
-	>=dev-python/envisagecore-3.1.2
 	dev-python/numpy
 	>=dev-python/traitsgui-3.4.0"
 DEPEND="dev-python/setuptools
@@ -36,6 +35,9 @@ DEPEND="dev-python/setuptools
 		media-fonts/font-misc-misc
 		x11-apps/xhost
 	)"
+# dev-python/envisagecore depends on dev-python/apptools, so dev-python/envisagecore
+# cannot be specified in DEPEND/RDEPEND due to circular dependencies.
+PDEPEND=">=dev-python/envisagecore-3.1.2"
 
 S="${WORKDIR}/${MY_P}"
 
