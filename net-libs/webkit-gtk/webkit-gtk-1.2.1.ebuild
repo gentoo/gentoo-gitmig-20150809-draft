@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.1.ebuild,v 1.3 2010/06/13 22:12:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.1.ebuild,v 1.4 2010/07/09 08:07:36 pacho Exp $
 
 EAPI="2"
 
@@ -99,6 +99,8 @@ src_configure() {
 
 src_test() {
 	unset DISPLAY
+	# Tests can fail without it, bug 323669
+	export XDG_DATA_HOME="${T}"
 	# Tests will fail without it, bug 294691, bug 310695
 	Xemake check || die "Test phase failed"
 }
