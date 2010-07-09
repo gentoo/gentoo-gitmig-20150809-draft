@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.4.0.ebuild,v 1.1 2010/05/14 20:37:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.5.1.ebuild,v 1.1 2010/07/09 13:19:19 wired Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
