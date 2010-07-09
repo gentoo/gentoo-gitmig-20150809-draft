@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.86 2010/07/02 23:49:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.87 2010/07/09 02:53:18 jer Exp $
+
+  09 Jul 2010; Jeroen Roovers <jer@gentoo.org> pycairo-1.8.10.ebuild:
+  Marked ~hppa (bug #324617).
 
   02 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pycairo-1.8.10.ebuild:
