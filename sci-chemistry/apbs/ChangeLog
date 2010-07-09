@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.37 2010/06/27 16:53:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.38 2010/07/09 13:36:47 fauli Exp $
+
+  09 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  apbs-1.2.1b-r4.ebuild:
+  stable x86, bug 324613
 
   27 Jun 2010; Justin Lecher <jlec@gentoo.org> apbs-1.2.1b-r4.ebuild:
   Force LC_NUMERIC to C during test, should fix problem with decimal
