@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.230 2010/07/04 01:04:32 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.231 2010/07/09 21:21:06 keri Exp $
+
+*swi-prolog-5.11.3 (09 Jul 2010)
+
+  09 Jul 2010; <keri@gentoo.org> +swi-prolog-5.11.3.ebuild:
+  bump -5.11 development version
 
   04 Jul 2010; <keri@gentoo.org> swi-prolog-5.11.2.ebuild:
   Fix X-diplay check for XPCE unit tests
