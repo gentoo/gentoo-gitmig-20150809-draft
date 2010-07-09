@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/soundconverter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.14 2009/12/27 14:13:23 hanno Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.15 2010/07/09 15:25:44 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> soundconverter-1.4.4.ebuild:
+  stable amd64, bug 302189
 
   27 Dec 2009; Hanno Boeck <hanno@gentoo.org> soundconverter-1.4.4.ebuild:
   Switch to gnome2 eclass, fixes icon caching issues.
