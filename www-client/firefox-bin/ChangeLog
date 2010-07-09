@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.20 2010/06/24 00:47:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.21 2010/07/09 19:55:23 nirbheek Exp $
+
+  09 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> -files/71firefox-bin:
+  Remove unused env.d file
 
   24 Jun 2010; Christoph Mende <angelos@gentoo.org>
   firefox-bin-3.6.4.ebuild:
