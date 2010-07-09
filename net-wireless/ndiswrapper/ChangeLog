@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.111 2010/07/09 11:01:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.112 2010/07/09 15:38:43 pacho Exp $
+
+  09 Jul 2010; Pacho Ramos <pacho@gentoo.org> ndiswrapper-1.56.ebuild:
+  stable amd64, bug 327299
 
   09 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   ndiswrapper-1.56.ebuild:
