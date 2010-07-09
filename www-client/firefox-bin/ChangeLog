@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.21 2010/07/09 19:55:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.22 2010/07/09 20:16:52 nirbheek Exp $
+
+  09 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  firefox-bin-3.6.4.ebuild:
+  Add '\' to LANGS at EOL to allow proper ${LANG} matching. Add note about
+  get_langs.sh
 
   09 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> -files/71firefox-bin:
   Remove unused env.d file
