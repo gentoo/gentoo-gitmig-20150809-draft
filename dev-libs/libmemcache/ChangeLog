@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmemcache
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.26 2010/01/14 21:33:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.27 2010/07/10 20:21:39 ssuominen Exp $
+
+  10 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libmemcache-1.4.0_rc2-r1.ebuild,
+  +files/libmemcache-1.4.0_rc2-inline.patch:
+  Export required symbols wrt #276571 by Ryan Hill.
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libmemcache-1.4.0_rc2-r1.ebuild:
