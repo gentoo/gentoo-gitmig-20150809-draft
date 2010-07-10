@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libspf2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.37 2009/09/23 17:54:31 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.38 2010/07/10 10:56:15 idl0r Exp $
+
+  10 Jul 2010; Christian Ruppert <idl0r@gentoo.org>
+  -files/libspf2-1.2.5-64bit.patch, -files/patch-libspf2-1.2.5-nointernal:
+  Remove obsolete patches.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libspf2-1.2.8.ebuild:
   Remove virtual/libc
