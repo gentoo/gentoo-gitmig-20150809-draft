@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/ansi-wl-pprint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ChangeLog,v 1.2 2010/07/08 12:18:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ChangeLog,v 1.3 2010/07/10 18:33:54 slyfox Exp $
+
+  10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ChangeLog:
+  marked ~ia64
 
   08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
   ansi-wl-pprint-0.5.1.ebuild:
