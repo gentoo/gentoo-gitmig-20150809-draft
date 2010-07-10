@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.18 2010/07/10 05:53:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.19 2010/07/10 05:56:56 graaff Exp $
+
+*gentoo-syntax-1.17 (10 Jul 2010)
+
+  10 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +gentoo-syntax-1.17.ebuild:
+  Version bump.
 
   10 Jul 2010; Hans de Graaff <graaff@gentoo.org>
   -gentoo-syntax-1.14.ebuild, -gentoo-syntax-1.15.ebuild:
