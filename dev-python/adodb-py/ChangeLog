@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/adodb-py
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.27 2010/07/01 01:15:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.28 2010/07/10 14:35:27 fauli Exp $
+
+  10 Jul 2010; Christian Faulhammer <fauli@gentoo.org> adodb-py-2.20.ebuild:
+  stable x86, bug 326381
 
   01 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   adodb-py-2.20.ebuild:
