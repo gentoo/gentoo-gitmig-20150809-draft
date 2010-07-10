@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5760 2010/07/09 23:47:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5761 2010/07/10 19:28:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1645,7 +1645,8 @@ media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
 media-gfx/nip2:goffice - use x11-libs/goffice to show plots
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/potrace:metric -  default to a4 paper size and metric measurement 
-media-gfx/pstoedit:emf -  enables media-libs/libemf support 
+media-gfx/pstoedit:emf - Enable media-libs/libemf support
+media-gfx/pstoedit:flash - Enable media-libs/ming SWF support
 media-gfx/scantailor:dewarping - Enable experimental dewarping support
 media-gfx/splashutils:fbcondecor -  Support for the fbcondecor kernel patch. 
 media-gfx/ufraw:contrast -  enable contrast setting option 
