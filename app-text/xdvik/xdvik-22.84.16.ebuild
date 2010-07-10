@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.8 2010/07/10 13:26:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.9 2010/07/10 13:29:24 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic elisp-common toolchain-funcs
@@ -82,7 +82,7 @@ src_install() {
 
 	use emacs && elisp-install tex-utils *.el *.elc
 
-	doicon "${FILESDIR}/${PN}.png"
+	doicon "${FILESDIR}"/${PN}.xpm
 	make_desktop_entry xdvi "XDVI" xdvik "Graphics;Viewer"
 	echo "MimeType=application/x-dvi;" >> "${ED}"usr/share/applications/xdvi-"${PN}".desktop
 }
