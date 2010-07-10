@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.3.1.ebuild,v 1.5 2010/05/26 18:39:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.8.3.1.ebuild,v 1.6 2010/07/10 21:37:12 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils gnome2-utils games
@@ -48,14 +48,13 @@ src_configure() {
 
 	egamesconf \
 		--enable-initscripts=/usr/share/doc/${PF}/examples \
+		--disable-uninstall \
 		${myconf}
 }
 
 src_install() {
 	emake DESTDIR="${D}" armadocdir="/usr/share/doc/${PF}" install || die
 	dodoc AUTHORS ChangeLog NEWS README*
-
-	rm -f "${D}/${GAMES_BINDIR}"/${PN}{,-dedicated}-uninstall
 
 	if ! use dedicated; then
 		local hidir="/usr/share/icons/hicolor"
