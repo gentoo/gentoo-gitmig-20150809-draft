@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libmatchbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/ChangeLog,v 1.15 2010/05/04 12:01:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/ChangeLog,v 1.16 2010/07/10 19:46:35 yvasilev Exp $
+
+  10 Jul 2010; Yuri Vasilevski <yvasilev@gentoo.org> libmatchbox-1.9.ebuild:
+  Explicitly disabling tests as they are very broken (missing files and
+  such).
 
   04 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libmatchbox-1.9.ebuild:

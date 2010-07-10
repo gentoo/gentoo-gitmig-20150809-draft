@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.10 2010/05/04 12:01:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.11 2010/07/10 19:46:35 yvasilev Exp $
 
 inherit eutils libtool
 
@@ -23,6 +23,9 @@ RDEPEND="x11-libs/libXext
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-libs/check )"
+
+# Test suite broken, missing files and such.
+RESTRICT="test"
 
 pkg_setup() {
 	# Bug #138135
