@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50-r1.ebuild,v 1.1 2010/07/10 19:17:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.50-r1.ebuild,v 1.2 2010/07/10 19:19:30 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -46,7 +46,7 @@ src_configure() {
 		$(use_with flash swf)
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" install || die
 	doman doc/pstoedit.1 || die
 	dodoc doc/*.txt
