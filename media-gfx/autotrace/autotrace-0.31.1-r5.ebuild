@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r5.ebuild,v 1.7 2010/07/03 23:47:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r5.ebuild,v 1.8 2010/07/10 17:19:34 armin76 Exp $
 
 EAPI=1
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/autotrace/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="+imagemagick"
 
 RDEPEND="media-libs/libexif
