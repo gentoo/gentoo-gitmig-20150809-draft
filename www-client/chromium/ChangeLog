@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.135 2010/07/07 15:33:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.136 2010/07/10 19:01:48 phajdan.jr Exp $
+
+*chromium-6.0.458.1 (10 Jul 2010)
+
+  10 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -files/chromium-flash-hang-workaround-r1.patch,
+  -chromium-5.0.375.86.ebuild, -files/chromium-gyp-fixes-r1.patch,
+  -chromium-6.0.437.3.ebuild, -files/chromium-gyp-fixes-r2.patch,
+  +chromium-6.0.458.1.ebuild, -files/chromium-optional-cups-r1.patch:
+  Version bump for dev channel release. Removed old ebuilds and patches.
 
   07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> metadata.xml:
   Transfer ownership to the new chromium herd.
