@@ -1,7 +1,5 @@
-diff --git a/src/Makefile.am b/src/Makefile.am
-index d6178df..66f377b 100755
---- a/src/Makefile.am
-+++ b/src/Makefile.am
+--- src/Makefile.am
++++ src/Makefile.am
 @@ -86,6 +86,7 @@ libp2edrvstd_la_SOURCES=			\
          $(sample_drivers_src)                   
  libp2edrvstd_la_LIBADD=-L. libpstoedit.la
