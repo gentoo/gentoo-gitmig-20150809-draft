@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/389-ds-console-1.2.3.ebuild,v 1.1 2010/07/10 14:27:35 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/389-ds-console-1.2.3.ebuild,v 1.2 2010/07/10 19:57:02 lxnay Exp $
 
 EAPI="2"
 
@@ -8,11 +8,12 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils versionator
 
-MY_V=${PV}
+MY_PV=${PV/_alpha/.a}
+MY_PV=${MY_PV/_rc/.rc}
 MY_MV="$(get_version_component_range 1-2)"
 
-DESCRIPTION="A Java based remote management console used for Managing 389 Administration and Directory Server."
-HOMEPAGE="http://port389.org/"
+DESCRIPTION="Java based remote management console used for Managing 389-admin 389-ds"
+HOMEPAGE="http://directory.fedoraproject.org"
 SRC_URI="http://directory.fedoraproject.org/sources/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
@@ -23,14 +24,13 @@ IUSE=""
 COMMON_DEP="dev-java/jss:3.4
 	dev-java/ldapsdk:4.1
 	>=dev-java/idm-console-framework-1.1"
-
 RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.6
 	${COMMON_DEP}"
 
 src_prepare() {
-	# gentoo java rules say no jars with version number
+	# Gentoo java rules say no jars with version number
 	# so sed away the version indicator '-'
 	sed -e "s!-\*!\*!g" -i build.xml || die "sed failed"
 
@@ -43,39 +43,30 @@ src_compile() {
 	eant -Dbuilt.dir="${S}"/build \
 	     -Dldapjdk.location="${S}" \
 	     -Djss.location="${S}" \
-	     -Dconsole.location="${S}" ${antflags} || die "eant failed"
-
-	if use doc;then
-		eant -Dbuilt.dir="${S}"/build \
+	     -Dconsole.location="${S}" ${antflags}
+	use doc && eant -Dbuilt.dir="${S}"/build \
 	     -Dldapjdk.location="${S}" \
 	     -Djss.location="${S}" \
-	     -Dconsole.location="${S}" ${antflags} javadoc \
-		 				|| die "eant javadoc failed"
-	fi
+	     -Dconsole.location="${S}" ${antflags} javadoc
 }
 
 src_install() {
 	java-pkg_jarinto /usr/share/dirsrv/html/java
-	java-pkg_newjar "${S}"/build/package/389-ds-${MY_V}.jar 389-ds-${MY_V}.jar
-	java-pkg_newjar "${S}"/build/package/389-ds-${MY_V}_en.jar 389-ds-${MY_V}_en.jar
+	java-pkg_newjar "${S}"/build/package/389-ds-${MY_PV}.jar 389-ds-${MY_PV}.jar
+	java-pkg_newjar "${S}"/build/package/389-ds-${MY_PV}_en.jar 389-ds-${MY_PV}_en.jar
 
-	dosym 389-ds-${MY_V}.jar /usr/share/dirsrv/html/java/389-ds.jar
-	dosym 389-ds-${MY_V}_en.jar /usr/share/dirsrv/html/java/389-ds_en.jar
-	dosym 389-ds-${MY_V}.jar /usr/share/dirsrv/html/java/389-ds-${MY_MV}.jar
-	dosym 389-ds-${MY_V}_en.jar /usr/share/dirsrv/html/java/389-ds-${MY_MV}_en.jar
+	dosym 389-ds-${MY_PV}.jar /usr/share/dirsrv/html/java/389-ds.jar
+	dosym 389-ds-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-ds_en.jar
+	dosym 389-ds-${MY_PV}.jar /usr/share/dirsrv/html/java/389-ds-${MY_MV}.jar
+	dosym 389-ds-${MY_PV}_en.jar /usr/share/dirsrv/html/java/389-ds-${MY_MV}_en.jar
 
 	insinto /usr/share/dirsrv/manual/en/slapd
-	doins "${S}"/help/en/*.html || die
-	doins "${S}"/help/en/tokens.map || die
+	doins "${S}"/help/en/*.html
+	doins "${S}"/help/en/tokens.map
 
 	insinto /usr/share/dirsrv/manual/en/slapd/help
-	doins "${S}"/help/en/help/*.html || die
+	doins "${S}"/help/en/help/*.html
 
-	if use doc; then
-		java-pkg_dojavadoc build/doc || die
-	fi
-
-	if use source; then
-		java-pkg_dosrc src/com || die
-	fi
+	use doc && java-pkg_dojavadoc build/doc
+	use source && java-pkg_dosrc src/com
 }
