@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ptex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.96 2010/07/10 17:28:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.97 2010/07/10 17:50:50 ssuominen Exp $
+
+  10 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -ptex-3.1.10_p20071203.ebuild, -ptex-3.1.10_p20090610.ebuild,
+  -files/ptex-3.1.10_p20071122-fmtutil-etex.patch,
+  -files/ptex-3.1.10_p20071203-gentoo.patch, -files/psfonts-ja.map:
+  Remove old wrt #319509 (leave only libpng14 compatible version in tree).
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org>
   ptex-3.1.10_p20090610-r1.ebuild:
