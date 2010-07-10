@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.3.0.ebuild,v 1.7 2010/07/05 08:38:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.3.0.ebuild,v 1.8 2010/07/10 09:47:03 grobian Exp $
 
 EAPI=3
 inherit libtool
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/unixodbc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="+minimal odbcmanual static-libs"
 
 RDEPEND=">=sys-devel/libtool-2.2.6b
