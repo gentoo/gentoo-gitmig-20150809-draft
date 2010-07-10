@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.542 2010/07/07 21:46:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.543 2010/07/10 11:47:15 armin76 Exp $
+
+  10 Jul 2010; Raúl Porcel <armin76@gentoo.org> udev-147-r1.ebuild,
+  udev-149.ebuild, udev-150-r1.ebuild, udev-151-r1.ebuild,
+  udev-151-r2.ebuild, udev-151-r3.ebuild, udev-151-r4.ebuild,
+  udev-154.ebuild, udev-156.ebuild, udev-157.ebuild, udev-158.ebuild,
+  udev-159.ebuild:
+  Rekeyword ~alpha now that the glibc issues have been fixed
 
 *udev-159 (07 Jul 2010)
 
