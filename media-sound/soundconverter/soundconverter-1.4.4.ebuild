@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.4.4.ebuild,v 1.3 2010/07/09 15:25:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.4.4.ebuild,v 1.4 2010/07/10 14:39:09 fauli Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="aac flac mp3 vorbis"
 
 RDEPEND=">=dev-python/pygtk-2.12
