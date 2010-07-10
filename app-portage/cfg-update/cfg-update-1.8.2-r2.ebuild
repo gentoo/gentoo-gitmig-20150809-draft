@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/cfg-update-1.8.2-r2.ebuild,v 1.1 2010/02/15 07:55:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/cfg-update-1.8.2-r2.ebuild,v 1.2 2010/07/10 22:30:03 truedfx Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-xxdiff-to-beediff.patch
+	epatch "${FILESDIR}"/${P}-bashrc.patch
 }
 
 pkg_prerm() {
