@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.0.1.ebuild,v 1.1 2010/03/05 09:33:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.0.1.ebuild,v 1.2 2010/07/10 18:54:19 arfrever Exp $
 
 EAPI=1
 
-NEED_PYTHON=2.4
+PYTHON_DEPEND="2"
 
 inherit distutils bash-completion elisp-common eutils versionator
 
