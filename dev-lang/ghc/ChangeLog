@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.182 2010/07/09 15:03:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.183 2010/07/10 17:59:16 slyfox Exp $
+
+  10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
+  +files/ghc-6.12.3-ia64-use-libffi-for-foreign-import-wrapper.patch:
+  Fixed darcs-2.4.4 miscompilation on ia64. Rebuilt ia64 binary with the
+  patch.
 
   09 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.10.4-r1.ebuild,
   +files/ghc-6.10.4-ia64-fixed-relax.patch,
