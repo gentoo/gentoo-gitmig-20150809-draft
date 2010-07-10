@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.150 2010/07/01 14:02:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.151 2010/07/10 06:10:01 grozin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Andrey Grozin <grozin@gentoo.org> (7 Jul 2010)
+# Doesn't work with the current qt
+app-office/texmacs qt4
 
 # Peter Volkov <pva@gentoo.org> (1 Jul 2010)
 # Masked until we test it better
