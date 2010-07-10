@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.230 2010/06/06 12:32:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.231 2010/07/10 18:53:47 betelgeuse Exp $
+
+*tomcat-6.0.28 (10 Jul 2010)
+
+  10 Jul 2010; Petteri Räty <betelgeuse@gentoo.org> +tomcat-6.0.28.ebuild:
+  Version bump. Includes security fixes according to upstream ChangeLog.
 
 *tomcat-6.0.26-r1 (06 Jun 2010)
 
