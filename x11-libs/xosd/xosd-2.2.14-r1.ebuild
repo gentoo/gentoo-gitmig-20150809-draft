@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.22 2009/03/29 00:05:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.23 2010/07/10 13:39:24 sochotnicky Exp $
 
 inherit eutils autotools
 
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 	epatch "${DISTDIR}"/${PN}_${PV}-1.diff.gz
 
 	AT_M4DIR="${WORKDIR}/m4" eautoreconf
