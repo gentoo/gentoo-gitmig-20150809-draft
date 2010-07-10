@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.15.ebuild,v 1.2 2010/06/17 20:05:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.15.ebuild,v 1.3 2010/07/10 15:18:12 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.taxbird.de/"
 SRC_URI="http://www.taxbird.de/download/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
