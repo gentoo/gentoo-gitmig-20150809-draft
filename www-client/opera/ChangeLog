@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.518 2010/07/10 14:29:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.519 2010/07/10 15:52:14 jer Exp $
+
+  10 Jul 2010; Jeroen Roovers <jer@gentoo.org> opera-10.70_pre6396.ebuild:
+  Remove share/opera/package. Use O_ instead of MY_ variable prefix. Move
+  opera_linguas function to src_prepare(). Remove unneeded quoting.
 
 *opera-10.70_pre6396 (10 Jul 2010)
 

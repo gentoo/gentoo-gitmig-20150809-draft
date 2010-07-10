@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre6396.ebuild,v 1.1 2010/07/10 14:29:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre6396.ebuild,v 1.2 2010/07/10 15:52:14 jer Exp $
 
 EAPI="2"
 
@@ -21,14 +21,14 @@ OPREFIX="/usr/$(get_libdir)"
 QA_DT_HASH="${OPREFIX}/${PN}/.*"
 QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
 
-MY_LINGUAS="
+O_LINGUAS="
 	be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka
 	ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk vi zh-CN zh-HK
 	zh-TW
 "
 
-for MY_LINGUA in ${MY_LINGUAS}; do
-	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
+for O_LINGUA in ${O_LINGUAS}; do
+	IUSE="${IUSE} linguas_${O_LINGUA/-/_}"
 done
 
 O_V="${PV/_pre/-}"
@@ -82,19 +82,6 @@ RDEPEND="
 	x11-libs/xcb-util
 	"
 
-opera_linguas() {
-	# Remove unwanted LINGUAS:
-	local LINGUA
-	local LNGDIR="share/${PN}/locale"
-	einfo "Keeping these locales: ${LINGUAS}."
-	for LINGUA in ${MY_LINGUAS}; do
-		if ! use linguas_${LINGUA/-/_}; then
-			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
-			rm -r "${LINGUA}"
-		fi
-	done
-}
-
 pkg_setup() {
 	echo -e \
 		" ${GOOD}****************************************************${NORMAL}"
@@ -116,7 +103,10 @@ src_unpack() {
 
 src_prepare() {
 	# Remove "license directory" (bug #315473)
-	rm -rf "share/doc/opera"
+	rm -rf share/doc/opera
+
+	# Remove package directory
+	rm -rf share/opera/package
 
 	# Leave libopera*.so only if the user chooses
 	if ! use gtk; then
@@ -141,19 +131,27 @@ src_prepare() {
 		share/applications/opera-widget-manager.desktop \
 		|| die "sed failed"
 
-	# Sed libdir in opera script
-	sed "${FILESDIR}"/opera \
+	# Fix libdir in opera script
+	sed \
+		"${FILESDIR}"/opera \
 		-e "s|OPERA_LIBDIR|${OPREFIX}|g" > opera \
 		|| die "sed opera script failed"
 
-	# Sed libdir in defaults/pluginpath.ini
+	# Fix libdir in defaults/pluginpath.ini
 	sed -i \
-		-e "s|/usr/lib32|${OPREFIX}|g" \
 		share/opera/defaults/pluginpath.ini \
+		-e "s|/usr/lib32|${OPREFIX}|g" \
 		|| die "sed pluginpath.ini failed"
 
-	# Remove linguas only when the user sets no linguas
-	[[ -z MY_LINGUAS ]] || opera_linguas
+	# Remove unwanted linguas
+	LNGDIR="share/${PN}/locale"
+	einfo "Keeping these locales (linguas): ${LINGUAS}."
+	for LINGUA in ${O_LINGUAS}; do
+		if ! use linguas_${LINGUA/-/_}; then
+			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
+			rm -r "${LINGUA}"
+		fi
+	done
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
 	if use elibc_FreeBSD; then
@@ -164,7 +162,9 @@ src_prepare() {
 				export SANITY_CHECK_LIBZ_FAILED=1
 				break
 			fi
-			sed -i -e 's/libz\.so\.3/libz.so.1/g' "$i"
+			sed -i \
+				"$i" \
+				-e 's/libz\.so\.3/libz.so.1/g'
 		done
 		[[ "$SANITY_CHECK_LIBZ_FAILED" = "1" ]] && die "failed to change libz.so.3 to libz.so.1"
 	fi
