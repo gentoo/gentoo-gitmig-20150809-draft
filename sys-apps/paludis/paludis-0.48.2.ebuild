@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.48.2.ebuild,v 1.1 2010/07/10 13:46:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.48.2.ebuild,v 1.2 2010/07/10 14:33:58 peper Exp $
 
 inherit bash-completion eutils
 
@@ -63,7 +63,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local repositories=`echo default unavailable unpackaged $(usev cran ) $(usev gems ) | tr -s \  ,`
+	local repositories=`echo default unavailable unpackaged | tr -s \  ,`
 	local clients=`echo default accerso adjutrix appareo cave importare inquisitio instruo paludis reconcilio | tr -s \  ,`
 	local environments=`echo default $(usev portage ) | tr -s \  ,`
 	econf \
