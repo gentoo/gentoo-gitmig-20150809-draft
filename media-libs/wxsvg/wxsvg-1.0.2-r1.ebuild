@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.2-r1.ebuild,v 1.2 2010/07/04 22:15:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.2-r1.ebuild,v 1.3 2010/07/10 15:15:00 fauli Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
