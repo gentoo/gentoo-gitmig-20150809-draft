@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.47 2010/07/10 09:42:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.48 2010/07/10 09:44:45 ssuominen Exp $
+
+  10 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  kicad-20090320.1666-r2.ebuild:
+  Move dev-util/cmake and dev-libs/boost out of RDEPEND wrt #293082 by
+  Sebastian Luther.
 
   10 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   kicad-20090320.1666-r2.ebuild:
