@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.3.0.ebuild,v 1.2 2010/06/28 10:26:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.3.0.ebuild,v 1.3 2010/07/10 14:40:07 fauli Exp $
 
 EAPI=2
 inherit eutils cmake-utils games
@@ -11,7 +11,7 @@ SRC_URI="http://violetland.googlecode.com/files/${PN}-v${PV}-src.zip"
 
 LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[audio,video]
