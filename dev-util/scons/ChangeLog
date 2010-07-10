@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.79 2010/07/06 22:02:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.80 2010/07/10 15:01:35 fauli Exp $
+
+  10 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  scons-1.3.0_p20100501.ebuild:
+  stable x86, bug 326241
 
   06 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   scons-1.3.0_p20100501.ebuild:
