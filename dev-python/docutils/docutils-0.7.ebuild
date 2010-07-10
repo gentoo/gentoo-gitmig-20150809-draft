@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.2 2010/07/10 14:10:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.3 2010/07/10 14:13:27 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -80,7 +80,7 @@ src_install() {
 
 	declare -A tools=()
 
-	postinstallation_preparation() {
+	postinstallational_preparation() {
 		# Install tools.
 		pushd $([[ -d build-${PYTHON_ABI}/lib/tools ]] && echo build-${PYTHON_ABI}/lib/tools || echo tools) > /dev/null
 		local tool
@@ -94,7 +94,7 @@ src_install() {
 		# Delete useless files, which are installed only with Python 3.
 		rm -fr "${ED}$(python_get_sitedir)/"{test,tools}
 	}
-	python_execute_function -q postinstallation_preparation
+	python_execute_function -q postinstallational_preparation
 
 	python_generate_wrapper_scripts -f -q "${!tools[@]}"
 
