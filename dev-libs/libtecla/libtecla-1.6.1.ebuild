@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.1.ebuild,v 1.6 2010/06/24 21:09:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.1.ebuild,v 1.7 2010/07/10 14:37:57 fauli Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.astro.caltech.edu/~mcs/tecla/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 DEPEND="sys-libs/ncurses"
