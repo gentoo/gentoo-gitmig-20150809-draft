@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgeier
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.16 2010/06/17 20:02:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.17 2010/07/10 15:17:24 fauli Exp $
+
+  10 Jul 2010; Christian Faulhammer <fauli@gentoo.org> libgeier-0.11.ebuild:
+  stable x86, bug 319827
 
   17 Jun 2010; Christoph Mende <angelos@gentoo.org> libgeier-0.11.ebuild:
   Stable on amd64 wrt bug #319827
