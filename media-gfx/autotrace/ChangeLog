@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.43 2010/07/10 17:19:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.44 2010/07/10 18:31:44 ssuominen Exp $
+
+*autotrace-0.31.1-r6 (10 Jul 2010)
+
+  10 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +autotrace-0.31.1-r6.ebuild, +files/autotrace-0.31.1-GetOnePixel.patch,
+  +files/autotrace-0.31.1-libpng14.patch:
+  Fix to new ImageMagick API. Upgrade to latest Debian patchset version.
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org> autotrace-0.31.1-r5.ebuild:
   alpha/ia64/sparc stable wrt #322745

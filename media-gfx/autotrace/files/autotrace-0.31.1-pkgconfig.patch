@@ -1,7 +1,7 @@
-diff --git a/configure.in b/configure.in
-index 564b32f..b396b26 100644
---- a/configure.in
-+++ b/configure.in
+http://bugs.gentoo.org/283534
+
+--- configure.in
++++ configure.in
 @@ -223,7 +223,7 @@ if test "${swf_header_found}" = yes ; then
  	AC_CHECK_LIB(ming, Ming_init, 
  		     HAVE_LIBSWF=yes,,-lm)

@@ -1,5 +1,7 @@
---- output-swf.c.old	2006-04-01 21:50:06.000000000 -0500
-+++ output-swf.c	2006-04-01 21:50:28.000000000 -0500
+http://bugs.gentoo.org/122035
+
+--- output-swf.c
++++ output-swf.c
 @@ -24,7 +24,6 @@
  #include "spline.h"
  #include "color.h"
@@ -9,8 +11,8 @@
  #define FPS 24.0
  #define IMGID 1
 
---- output-swf.h.old	2006-04-01 21:50:12.000000000 -0500
-+++ output-swf.h	2006-04-01 21:50:59.000000000 -0500
+--- output-swf.h
++++ output-swf.h
 @@ -23,6 +23,7 @@
  #define OUTPUTSWF_H 
  
