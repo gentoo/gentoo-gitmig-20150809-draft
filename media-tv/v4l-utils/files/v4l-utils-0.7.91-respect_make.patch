@@ -1,6 +1,5 @@
-diff -ur v4l-utils-0.7.91/utils/Makefile v4l-utils-0.7.91.orig/utils/Makefile
---- v4l-utils-0.7.91/utils/Makefile	2010-03-12 12:32:09.000000000 +0200
-+++ v4l-utils-0.7.91.orig/utils/Makefile	2010-07-10 22:47:39.000000000 +0300
+--- utils/Makefile
++++ utils/Makefile
 @@ -2,12 +2,12 @@
  
  all install: 
@@ -36,4 +35,3 @@ diff -ur v4l-utils-0.7.91/utils/Makefile v4l-utils-0.7.91.orig/utils/Makefile
  	if [ -f qv4l2-qt3/Makefile ]; then make -C qv4l2-qt3 $@; fi
  	if [ -f qv4l2-qt4/Makefile ]; then make -C qv4l2-qt4 $@; fi
  	rm -f qv4l2-qt?/Makefile qv4l2-qt?/qv4l2
-Only in v4l-utils-0.7.91.orig/utils: Makefile.orig
