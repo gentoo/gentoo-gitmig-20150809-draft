@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1.ebuild,v 1.5 2010/06/26 13:07:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1.ebuild,v 1.6 2010/07/10 15:54:54 jer Exp $
 
 EAPI=2
 inherit autotools toolchain-funcs versionator
@@ -11,7 +11,7 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE="pam doc +ssl +dbus debug"
 
 #Tests fail if openssl is not compiled with -DPURIFY. Gentoo's isn't. FAIL!
