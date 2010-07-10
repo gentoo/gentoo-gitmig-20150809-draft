@@ -1,14 +1,12 @@
-From 49f223f74e5557321afdefebd48cdec4f625b97d Mon Sep 17 00:00:00 2001
+From 2bd7907aef02530680cfd795f3f757613777c064 Mon Sep 17 00:00:00 2001
 From: Stanislav Ochotnicky <sochotnicky@gmail.com>
-Date: Fri, 18 Jun 2010 23:01:32 +0200
+Date: Sat, 10 Jul 2010 15:50:13 +0200
 Subject: [PATCH] Remove MacOS GUI references
 
 ---
- src/phex/gui/common/FileDialogHandler.java |   45 +---------
- src/phex/gui/common/GUIRegistry.java       |    5 -
- src/phex/gui/macosx/MacOsxGUIUtils.java    |  140 ----------------------------
- 3 files changed, 2 insertions(+), 188 deletions(-)
- delete mode 100644 src/phex/gui/macosx/MacOsxGUIUtils.java
+ src/phex/gui/common/FileDialogHandler.java |   45 +--------------------------
+ src/phex/gui/common/GUIRegistry.java       |    5 ---
+ 2 files changed, 2 insertions(+), 48 deletions(-)
 
 diff --git a/src/phex/gui/common/FileDialogHandler.java b/src/phex/gui/common/FileDialogHandler.java
 index a5ee4f7..530f374 100644
@@ -110,152 +108,6 @@ index 852722e..3c28f2e 100644
          initializeGlobalActions();
          chatFrameManager = new ChatFrameManager();
          try 
-diff --git a/src/phex/gui/macosx/MacOsxGUIUtils.java b/src/phex/gui/macosx/MacOsxGUIUtils.java
-deleted file mode 100644
-index bc6f1d9..0000000
---- a/src/phex/gui/macosx/MacOsxGUIUtils.java
-+++ /dev/null
-@@ -1,140 +0,0 @@
--/*
-- *  PHEX - The pure-java Gnutella-servent.
-- *  Copyright (C) 2001 - 2006 Phex Development Group
-- *
-- *  This program is free software; you can redistribute it and/or modify
-- *  it under the terms of the GNU General Public License as published by
-- *  the Free Software Foundation; either version 2 of the License, or
-- *  (at your option) any later version.
-- *
-- *  This program is distributed in the hope that it will be useful,
-- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-- *  GNU General Public License for more details.
-- *
-- *  You should have received a copy of the GNU General Public License
-- *  along with this program; if not, write to the Free Software
-- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-- * 
-- *  Created on 28.08.2005
-- *  --- CVS Information ---
-- *  $Id: 0001-Remove-MacOS-GUI-references.patch,v 1.1 2010/06/18 21:10:52 sochotnicky Exp $
-- */
--package phex.gui.macosx;
--
--import java.awt.FileDialog;
--import java.awt.event.ActionEvent;
--import java.awt.event.ActionListener;
--import java.io.File;
--
--import net.roydesign.event.ApplicationEvent;
--import net.roydesign.mac.MRJAdapter;
--import net.roydesign.ui.FolderDialog;
--import phex.gui.actions.ExitPhexAction;
--import phex.gui.actions.NewDownloadAction;
--import phex.gui.common.GUIRegistry;
--import phex.gui.dialogs.AboutDialog;
--import phex.gui.dialogs.options.OptionsDialog;
--import phex.utils.NLogger;
--import phex.utils.NLoggerNames;
--
--public class MacOsxGUIUtils
--{
--    public static final void installEventHandlers()
--    {
--        MRJAdapter.addQuitApplicationListener( new ActionListener()
--        {
--            public void actionPerformed( ActionEvent evt )
--            {
--                try
--                {
--                    NLogger.debug( NLoggerNames.NATIV_MACOSX,
--                        "Called MacOsX quit handler." );
--                    ExitPhexAction.performCloseGUIAction();
--                }
--                catch (Throwable th)
--                {
--                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
--                }
--            }
--        } );
--
--        MRJAdapter.setPreferencesEnabled( true );
--        MRJAdapter.addPreferencesListener( new ActionListener()
--        {
--            public void actionPerformed( ActionEvent evt )
--            {
--                try
--                {
--                    NLogger.debug( NLoggerNames.NATIV_MACOSX,
--                        "Called MacOsX preferences handler." );
--                    OptionsDialog dialog = new OptionsDialog();
--                    dialog.show();
--                }
--                catch (Throwable th)
--                {
--                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
--                }
--            }
--        } );
--
--        MRJAdapter.addAboutListener( new ActionListener()
--        {
--            public void actionPerformed( ActionEvent evt )
--            {
--                try
--                {
--                    AboutDialog dialog = new AboutDialog();
--                    dialog.setVisible( true );
--                }
--                catch (Throwable th)
--                {
--                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
--                }
--            }
--        } );
--
--        MRJAdapter.addOpenDocumentListener( new ActionListener()
--        {
--            public void actionPerformed( ActionEvent evt )
--            {
--                try
--                {
--                    File file = ((ApplicationEvent) evt).getFile();
--                    NLogger.debug( NLoggerNames.NATIV_MACOSX,
--                        "Called MacOsX open file handler: " + file );
--
--                    String absFileName = file.getAbsolutePath();
--                    if ( absFileName.endsWith( ".magma" ) )
--                    {
--                        NewDownloadAction action = (NewDownloadAction) GUIRegistry
--                            .getInstance().getGlobalAction(
--                                GUIRegistry.NEW_DOWNLOAD_ACTION );
--                        action.incommingMagmaDownload( absFileName );
--                    }
--                    if ( absFileName.endsWith( ".xml" ) )
--                    {
--                        NewDownloadAction action = (NewDownloadAction) GUIRegistry
--                            .getInstance().getGlobalAction(
--                                GUIRegistry.NEW_DOWNLOAD_ACTION );
--                        action.incommingRSSDownload( absFileName );
--                    }
--                }
--                catch (Throwable th)
--                {
--                    NLogger.error( NLoggerNames.USER_INTERFACE, th, th );
--                }
--            }
--        } );
--    }
--
--    /**
--     * Create folder dialog here. This prevents 
--     * NoClassDefFoundError on Windows systems since the import of the
--     * required OS X classes is elsewhere.
--     */
--    public static final FileDialog createFolderDialog()
--    {
--        return new FolderDialog( GUIRegistry.getInstance().getMainFrame() );
--    }
--}
 -- 
 1.7.1
 

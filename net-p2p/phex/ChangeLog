@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/phex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.15 2010/06/18 21:10:52 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phex/ChangeLog,v 1.16 2010/07/10 15:18:22 sochotnicky Exp $
+
+  10 Jul 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  files/0001-Remove-MacOS-GUI-references.patch, phex-3.2.0.102-r1.ebuild:
+  Move file removal from patch to ebuild to prevent failure on some systems
 
 *phex-3.2.0.102-r1 (18 Jun 2010)
 
