@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.47 2010/06/14 17:08:19 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.48 2010/07/10 11:26:02 grobian Exp $
+
+  10 Jul 2010; Fabian Groffen <grobian@gentoo.org> freetds-0.82-r3.ebuild:
+  Fix for Prefix, marked ~ppc-macos, bug #276045
 
 *freetds-0.82-r3 (14 Jun 2010)
 
