@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.346 2010/07/10 06:02:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.347 2010/07/10 09:52:47 nyhm Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1552,7 +1552,7 @@ cdrom_get_cds() {
 		einfo "If you do not have the CDs, but have the data files"
 		einfo "mounted somewhere on your filesystem, just export"
 		einfo "the following variables so they point to the right place:"
-		einfo ""
+		einfon ""
 		cdcnt=0
 		while [[ ${cdcnt} -lt ${CDROM_TOTAL_CDS} ]] ; do
 			((++cdcnt))
