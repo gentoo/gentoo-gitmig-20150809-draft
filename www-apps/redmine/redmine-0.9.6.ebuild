@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-0.9.6.ebuild,v 1.1 2010/07/08 16:33:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-0.9.6.ebuild,v 1.2 2010/07/10 04:54:33 matsuu Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -23,9 +23,10 @@ ruby_add_rdepend ">=dev-ruby/rails-2.3.5:2.3
 ruby_add_rdepend fastcgi dev-ruby/ruby-fcgi
 ruby_add_rdepend imagemagick dev-ruby/rmagick
 ruby_add_rdepend openid dev-ruby/ruby-openid
-ruby_add_rdepend passenger "=dev-ruby/rack-1.0.1* www-apache/passenger"
+#ruby_add_rdepend passenger "=dev-ruby/rack-1.0.1* www-apache/passenger"
 
 RDEPEND="${RDEPEND}
+	passenger? ( =dev-ruby/rack-1.0.1* www-apache/passenger )
 	dev-ruby/activerecord:2.3[mysql?,postgres?,sqlite3?]
 	cvs? ( >=dev-vcs/cvs-1.12 )
 	darcs? ( dev-vcs/darcs )
