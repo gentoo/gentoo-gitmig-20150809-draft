@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.7.ebuild,v 1.9 2010/05/02 09:20:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.7.ebuild,v 1.10 2010/07/10 12:00:36 grobian Exp $
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 
 DESCRIPTION="ODBC Interface for Linux."
 HOMEPAGE="http://www.iodbc.org/"
@@ -27,6 +27,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--with-layout=gentoo \
+		--with-iodbc-inidir=yes \
 		$(use_enable gtk gui) \
 		|| die "econf failed"
 
