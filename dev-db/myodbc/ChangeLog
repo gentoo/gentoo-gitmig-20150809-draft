@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/myodbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.29 2010/06/26 15:14:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.30 2010/07/10 23:47:49 robbat2 Exp $
+
+  10 Jul 2010; Robin H. Johnson <robbat2@gentoo.org> -myodbc-3.51.06.ebuild,
+  -myodbc-3.51.11.ebuild, -myodbc-3.51.12.ebuild,
+  -myodbc-3.51.26_p1127.ebuild, -myodbc-3.51.26_p1127-r1.ebuild,
+  -myodbc-3.51.27_p695.ebuild, -myodbc-5.1.5_p1144.ebuild:
+  Old versions don't work on newer unixODBC, so clean them up. Latest is
+  stable anyway.
 
   26 Jun 2010; <nixnut@gentoo.org> myodbc-5.1.6.ebuild:
   ppc stable #322277
