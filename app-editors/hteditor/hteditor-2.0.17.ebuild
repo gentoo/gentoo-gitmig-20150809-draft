@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.17.ebuild,v 1.5 2010/06/26 12:24:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.17.ebuild,v 1.6 2010/07/10 13:21:30 ssuominen Exp $
 
 MY_PV=${PV/_/}
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hte/ht-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="ppc"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
