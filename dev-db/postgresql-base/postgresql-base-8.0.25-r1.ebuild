@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.0.25-r1.ebuild,v 1.4 2010/06/23 20:31:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.0.25-r1.ebuild,v 1.5 2010/07/10 19:24:44 armin76 Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="none"
 
 inherit eutils multilib versionator autotools
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc s390 sh sparc ~x86"
 
 DESCRIPTION="PostgreSQL libraries and clients"
 HOMEPAGE="http://www.postgresql.org/"
