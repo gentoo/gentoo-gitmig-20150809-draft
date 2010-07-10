@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.4 2010/07/08 12:33:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.5 2010/07/10 18:52:44 slyfox Exp $
+
+  10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> mmap-0.4.1.ebuild:
+  marked ~ia64
 
   08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> mmap-0.4.1.ebuild:
   ~alpha keyworded
