@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.18.6.ebuild,v 1.1 2010/06/23 08:05:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.18.6.ebuild,v 1.2 2010/07/10 19:15:14 arfrever Exp $
 
-EAPI=2
-
-NEED_PYTHON=2.4
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils
 

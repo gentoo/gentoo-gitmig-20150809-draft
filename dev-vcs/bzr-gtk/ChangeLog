@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.1 2010/03/08 08:47:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.2 2010/07/10 19:09:16 arfrever Exp $
+
+  10 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bzr-gtk-0.98.0.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
 *bzr-gtk-0.98.0 (08 Mar 2010)
 

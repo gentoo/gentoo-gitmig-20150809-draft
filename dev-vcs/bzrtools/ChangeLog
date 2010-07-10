@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzrtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.4 2010/06/15 17:56:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.5 2010/07/10 19:12:32 arfrever Exp $
+
+  10 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bzrtools-2.0.1.ebuild, bzrtools-2.1.0.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
 
   15 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bzrtools-2.0.1.ebuild, bzrtools-2.1.0.ebuild:
