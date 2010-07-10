@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.50 2010/07/08 17:33:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.51 2010/07/10 19:15:58 armin76 Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs libimobiledevice keyworded (bug 325839)
@@ -61,6 +61,7 @@ dev-python/PyQt4 assistant
 # needs kde4 keyworded
 x11-themes/qtcurve-qt4 kde
 dev-vcs/subversion kde
+app-i18n/uim kde
 
 # Raúl Porcel <armin76@gentoo.org>
 # Depends on dev-java/fop which requires java...
