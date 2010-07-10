@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/libdomainkeys
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.16 2009/06/24 13:30:23 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.17 2010/07/10 22:12:47 hwoarang Exp $
+
+*libdomainkeys-0.68-r2 (10 Jul 2010)
+
+  10 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  +libdomainkeys-0.68-r2.ebuild:
+  Respect CC/CFLAGS/LDFLAGS wrt bug #244142 and bug #240782. Thanks to Arttu
+  Valo <arttuv69@gmail.com>
 
   24 Jun 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   New maintainer needed as peitolm retires (#203843)
