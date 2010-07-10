@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.6 2009/09/20 12:52:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.7 2010/07/10 15:00:26 xarthisius Exp $
 
 EAPI="2"
 
@@ -30,6 +30,10 @@ RDEPEND=">=x11-libs/gtk+-2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc45.patch
+}
 
 src_configure() {
 	default

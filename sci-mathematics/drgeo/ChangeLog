@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/drgeo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/ChangeLog,v 1.18 2009/09/20 12:52:43 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/ChangeLog,v 1.19 2010/07/10 15:00:26 xarthisius Exp $
+
+  10 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> drgeo-1.1.0.ebuild,
+  +files/drgeo-1.1.0-gcc45.patch:
+  Fix build with GCC 4.5 wrt bug 322211. Thanks to Diego for reporting.
+  Apply fedora patch to fix random SIGSEGV
 
   20 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> drgeo-1.1.0.ebuild:
   Migrate to EAPI 2 in order to nuke built_with_use.
