@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/389-ds-console
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/ChangeLog,v 1.1 2010/07/10 14:27:35 lxnay Exp $
+
+*389-ds-console-1.2.3 (07 Jul 2010)
+
+  07 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
+  +389-ds-console-1.2.3.ebuild, +metadata.xml:
+  new ebuild, thanks to Andreis_Vinogradovs ( slepnoga )
+  <spamslepnoga@inbox.ru> for reporting, close bug #309553
+
