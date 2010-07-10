@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r2.ebuild,v 1.6 2010/06/17 21:09:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r2.ebuild,v 1.7 2010/07/10 19:05:23 armin76 Exp $
 
 EAPI=2
 inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs flag-o-matic
@@ -21,7 +21,7 @@ HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 hppa ~sparc x86"
+KEYWORDS="amd64 hppa sparc x86"
 
 IUSE="afs cint7 clarens doc emacs examples fftw geant4 kerberos ldap
 	+math mysql	odbc +opengl openmp oracle postgres pythia6 pythia8 python
