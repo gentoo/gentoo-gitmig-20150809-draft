@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.1 2010/07/07 19:57:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.2 2010/07/10 14:10:14 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,6 +23,7 @@ RDEPEND=""
 PDEPEND="emacs? ( || ( >=app-emacs/rst-0.4 >=virtual/emacs-23 ) )"
 
 DOCS="*.txt"
+PYTHON_MODNAME="docutils roman.py"
 
 GLEP_SRC="${WORKDIR}/glep-0.4-r1"
 
@@ -77,17 +78,30 @@ install_txt_doc() {
 src_install() {
 	distutils_src_install
 
-	# Tools
-	cd tools
-	local tool
-	for tool in *.py; do
-		dobin "${tool}"
-	done
+	declare -A tools=()
 
-	# Docs
-	cd "${S}"
+	postinstallation_preparation() {
+		# Install tools.
+		pushd $([[ -d build-${PYTHON_ABI}/lib/tools ]] && echo build-${PYTHON_ABI}/lib/tools || echo tools) > /dev/null
+		local tool
+		for tool in *.py; do
+			newbin "${tool}" "${tool}-${PYTHON_ABI}"
+			python_convert_shebangs -q $(python_get_version) "${ED}usr/bin/${tool}-${PYTHON_ABI}"
+			tools+=(["${ED}usr/bin/${tool}"]=)
+		done
+		popd > /dev/null
+
+		# Delete useless files, which are installed only with Python 3.
+		rm -fr "${ED}$(python_get_sitedir)/"{test,tools}
+	}
+	python_execute_function -q postinstallation_preparation
+
+	python_generate_wrapper_scripts -f -q "${!tools[@]}"
+
+	# Install documentation.
 	dohtml -r docs tools
-	# Manually install the stylesheet file
+
+	# Install stylesheet file.
 	insinto /usr/share/doc/${PF}/html
 	doins docutils/writers/html4css1/html4css1.css
 	local doc
@@ -95,26 +109,18 @@ src_install() {
 		install_txt_doc "${doc}"
 	done
 
-	# installing Gentoo GLEP tools. Uses versioned GLEP distribution
+	# Install Gentoo GLEP tools.
 	if use glep; then
-		dobin ${GLEP_SRC}/glep.py || die "dobin failed"
+		dobin "${GLEP_SRC}/glep.py" || die "dobin failed"
 
 		installation_of_glep_tools() {
 			insinto $(python_get_sitedir)/docutils/readers
-			newins ${GLEP_SRC}/glepread.py glep.py || die "newins reader failed"
+			newins "${GLEP_SRC}/glepread.py" glep.py || die "newins reader failed"
 			insinto $(python_get_sitedir)/docutils/transforms
-			newins ${GLEP_SRC}/glepstrans.py gleps.py || die "newins transform failed"
+			newins "${GLEP_SRC}/glepstrans.py" gleps.py || die "newins transform failed"
 			insinto $(python_get_sitedir)/docutils/writers
-			doins -r ${GLEP_SRC}/glep_html || die "doins writer failed"
+			doins -r "${GLEP_SRC}/glep_html" || die "doins writer failed"
 		}
 		python_execute_function --action-message 'Installation of GLEP tools with $(python_get_implementation) $(python_get_version)...' installation_of_glep_tools
 	fi
-}
-
-pkg_postinst() {
-	python_mod_optimize docutils roman.py
-}
-
-pkg_postrm() {
-	python_mod_cleanup docutils roman.py
 }
