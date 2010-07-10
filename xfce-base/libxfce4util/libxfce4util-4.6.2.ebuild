@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.6.2.ebuild,v 1.4 2010/07/09 16:38:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.6.2.ebuild,v 1.5 2010/07/10 19:32:28 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -17,7 +17,8 @@ IUSE="debug"
 RDEPEND=">=dev-libs/glib-2.12:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	dev-util/intltool"
 
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
