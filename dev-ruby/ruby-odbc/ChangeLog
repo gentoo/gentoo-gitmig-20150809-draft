@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-odbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.17 2010/05/02 06:44:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.18 2010/07/10 07:32:33 graaff Exp $
+
+*ruby-odbc-0.99991-r1 (10 Jul 2010)
+
+  10 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-odbc-0.99991-r1.ebuild:
+  Force --disable-dlopen per discussion in #179764.
 
   02 May 2010; Hans de Graaff <graaff@gentoo.org> -ruby-odbc-0.9997.ebuild:
   Remove old version.
