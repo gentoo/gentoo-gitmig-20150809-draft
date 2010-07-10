@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  10 Jul 2010; Jeroen Roovers <jer@gentoo.org> dash-0.5.5.1.2.ebuild:
+  Stable for HPPA (bug #324753).
+
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> dash-0.5.5.1.2.ebuild:
   ppc64 stable wrt #324753
 
