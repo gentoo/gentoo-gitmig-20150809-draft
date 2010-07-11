@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/389-ds-console-1.2.3-r1.ebuild,v 1.2 2010/07/11 10:06:12 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/389-ds-console-1.2.3-r1.ebuild,v 1.3 2010/07/11 10:07:05 lxnay Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ MY_PV=${MY_PV/_rc/.rc}
 MY_MV="$(get_version_component_range 1-2)"
 
 DESCRIPTION="Java based remote management console used for Managing 389-admin 389-ds"
-HOMEPAGE="http://port389.org"
+HOMEPAGE="http://port389.org/"
 SRC_URI="http://directory.fedoraproject.org/sources/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
