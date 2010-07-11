@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.296 2010/07/05 21:38:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.297 2010/07/11 11:27:50 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> evolution-2.26.3.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *evolution-2.30.2-r1 (05 Jul 2010)
 
