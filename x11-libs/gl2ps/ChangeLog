@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gl2ps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/ChangeLog,v 1.7 2010/02/20 17:24:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/ChangeLog,v 1.8 2010/07/11 16:14:17 jlec Exp $
+
+*gl2ps-1.3.5-r1 (11 Jul 2010)
+
+  11 Jul 2010; Justin Lecher <jlec@gentoo.org> +gl2ps-1.3.5-r1.ebuild:
+  Imported doc building patch from sci overlay, #327599
 
   20 Feb 2010; Raúl Porcel <armin76@gentoo.org> gl2ps-1.3.5.ebuild:
   Add ~alpha wrt #303675
