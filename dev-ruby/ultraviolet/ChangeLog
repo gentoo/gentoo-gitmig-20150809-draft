@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ultraviolet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.5 2010/05/22 16:05:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.6 2010/07/11 20:27:32 graaff Exp $
+
+*ultraviolet-0.10.2-r1 (11 Jul 2010)
+
+  11 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +ultraviolet-0.10.2-r1.ebuild:
+  Convert to ruby-fakegem.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ultraviolet-0.10.2.ebuild:
