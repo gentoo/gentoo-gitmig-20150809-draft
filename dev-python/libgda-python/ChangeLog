@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libgda-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/ChangeLog,v 1.10 2010/06/14 13:20:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/ChangeLog,v 1.11 2010/07/11 15:14:35 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> libgda-python-2.19.1.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *libgda-python-2.25.3 (14 Jun 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.24 2010/06/14 13:23:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.25 2010/07/11 15:08:49 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  gtkmozembed-python-2.19.1-r11.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *gtkmozembed-python-2.25.3 (14 Jun 2010)
 
