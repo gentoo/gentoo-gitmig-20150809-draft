@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14-r1.ebuild,v 1.6 2010/06/25 21:44:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14-r1.ebuild,v 1.7 2010/07/11 13:53:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,7 +25,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-glut.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
-	touch * */*
+	touch -r . * */*
 }
 
 src_configure() {

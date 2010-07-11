@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/crack-attack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.24 2010/06/25 21:44:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.25 2010/07/11 13:53:59 mr_bones_ Exp $
+
+  11 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  crack-attack-1.1.14-r1.ebuild:
+  work around lesser file systems (bug #324699)
 
   25 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
   crack-attack-1.1.14-r1.ebuild:
