@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-keyring-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-keyring-python/ChangeLog,v 1.30 2010/06/14 14:38:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-keyring-python/ChangeLog,v 1.31 2010/07/11 15:01:51 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  -gnome-keyring-python-2.24.1.ebuild, gnome-keyring-python-2.26.0.ebuild:
+  Drop hppa keywords and old versions per bug 324511
 
 *gnome-keyring-python-2.30.2 (14 Jun 2010)
 
