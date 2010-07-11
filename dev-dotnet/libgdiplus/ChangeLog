@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.112 2010/07/09 17:04:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.113 2010/07/11 17:51:20 armin76 Exp $
+
+  11 Jul 2010; Raúl Porcel <armin76@gentoo.org> libgdiplus-1.2.4.ebuild,
+  libgdiplus-1.2.6.ebuild, libgdiplus-2.0.ebuild:
+  Drop sparc keywords
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> libgdiplus-2.6.4.ebuild:
   amd64 stable, bug 327279
