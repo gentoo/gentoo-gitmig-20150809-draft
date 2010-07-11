@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-yadis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.2 2010/05/22 15:55:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.3 2010/07/11 18:53:30 graaff Exp $
+
+*ruby-yadis-0.3.4-r1 (11 Jul 2010)
+
+  11 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-yadis-0.3.4-r1.ebuild:
+  Convert to ruby-fakegem.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-yadis-0.3.4.ebuild:
