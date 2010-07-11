@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.85 2010/07/07 13:40:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.86 2010/07/11 19:03:11 armin76 Exp $
+
+  11 Jul 2010; Raúl Porcel <armin76@gentoo.org> worker-2.17.6.ebuild:
+  alpha/ia64/sparc stable wrt #324373
 
   07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> worker-2.17.6.ebuild:
   x86 stable wrt bug #324373
