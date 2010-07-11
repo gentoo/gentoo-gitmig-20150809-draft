@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11758 2010/07/11 11:07:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11759 2010/07/11 11:16:18 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (11 Jul 2010)
+# Upstream has EOL'ed 7.4 and 8.0. EOL for 8.1 is November.
+# Migration to supported / new versions recommended.
+=dev-db/postgresql-base-7.4*
+=dev-db/postgresql-base-8.0*
+=dev-db/postgresql-server-7.4*
+=dev-db/postgresql-server-8.0*
+=dev-db/postgresql-docs-7.4*
+=dev-db/postgresql-docs-8.0*
 
 # Jeroen Roovers <jer@gentoo.org> (08 Jul 2010)
 # Unmask this only if you need to import certificates
