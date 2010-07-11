@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20090709.ebuild,v 1.2 2009/11/18 04:24:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20090709.ebuild,v 1.3 2010/07/11 11:17:40 armin76 Exp $
 
 # the tar.bz2 was ripped from this rpm:
 # http://mirrors.kernel.org/fedora/development/source/SRPMS/prelink-0.4.2-1.fc12.src.rpm
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-arm ~alpha ~amd64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 -arm ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/elfutils-0.100
