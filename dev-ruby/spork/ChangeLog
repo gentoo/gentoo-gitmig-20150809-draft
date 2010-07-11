@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/spork
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.1 2010/07/11 17:49:04 graaff Exp $
+
+*spork-0.8.4 (11 Jul 2010)
+
+  11 Jul 2010; Hans de Graaff <graaff@gentoo.org> +spork-0.8.4.ebuild,
+  +metadata.xml:
+  Initial import. Dependency of forthcoming rspec-2 and useful tool in its
+  own right.
+
