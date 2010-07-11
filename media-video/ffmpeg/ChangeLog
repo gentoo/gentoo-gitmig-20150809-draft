@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.360 2010/06/27 18:20:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.361 2010/07/11 15:15:15 jer Exp $
+
+  11 Jul 2010; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.6.ebuild:
+  Marked ~hppa (bug #324941).
 
   27 Jun 2010; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.6.ebuild:
   Re-add ~alpha/~arm/~ia64/~sparc wrt #324941
