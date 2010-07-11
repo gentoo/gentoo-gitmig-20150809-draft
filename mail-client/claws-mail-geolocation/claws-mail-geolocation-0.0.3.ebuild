@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/claws-mail-geolocation-0.0.3.ebuild,v 1.2 2010/06/22 08:04:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/claws-mail-geolocation-0.0.3.ebuild,v 1.3 2010/07/11 07:36:06 fauli Exp $
 
 EAPI=2
+
+inherit autotools
 
 MY_P="geolocation_plugin-${PV}"
 
@@ -14,11 +16,23 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND=">=mail-client/claws-mail-3.7.6"
+
+# Check if other versions of libchamplain ship the same pc file
+RDEPEND=">=mail-client/claws-mail-3.7.6
+	=media-libs/libchamplain-0.6*[gtk]
+	sys-devel/gettext"
+
 DEPEND="${RDEPEND}
-		>=media-libs/libchamplain-0.4.0[gtk]"
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	# geolocation checks for the exact version, so fix the code
+	# see bug 326981
+	sed -e "s:champlain-gtk-0.4:champlain-gtk-0.6:" -i "${S}"/configure.ac || die
+	eautoconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install
