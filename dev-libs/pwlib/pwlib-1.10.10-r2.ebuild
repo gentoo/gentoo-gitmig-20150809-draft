@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r2.ebuild,v 1.7 2010/03/29 06:44:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r2.ebuild,v 1.8 2010/07/11 03:01:48 ssuominen Exp $
 
 EAPI="1"
 
@@ -52,6 +52,8 @@ src_unpack() {
 
 	# security - we obviousl need to patch..
 	epatch "${FILESDIR}"/pwlib-1.10.1-vsprintf.patch
+
+	epatch "${FILESDIR}"/${P}-openssl-1.patch
 
 	eautoconf || die "autoconf failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.153 2010/03/29 06:44:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.154 2010/07/11 03:01:48 ssuominen Exp $
+
+  11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  pwlib-1.10.10-r2.ebuild, +files/pwlib-1.10.10-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #326797 by Diego E. 'FPettenò.
 
   29 Mar 2010; Jeroen Roovers <jer@gentoo.org> pwlib-1.10.10-r2.ebuild:
   Stable for HPPA (bug #307739).

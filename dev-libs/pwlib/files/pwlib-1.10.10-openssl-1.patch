@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/326797
+
+--- src/ptclib/pssl.cxx
++++ src/ptclib/pssl.cxx
+@@ -888,7 +888,7 @@
+   InitialisationMutex.Signal();
+ 
+   // create the new SSL context
+-  SSL_METHOD * meth = SSLv23_method();
++  const SSL_METHOD * meth = SSLv23_method();
+   context  = SSL_CTX_new(meth);
+   if (context == NULL)
+     PSSLAssert("Error creating context: ");
