@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4-r1.ebuild,v 1.4 2010/06/26 13:00:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4-r1.ebuild,v 1.5 2010/07/11 03:26:29 ssuominen Exp $
 
 EAPI="3"
 
@@ -27,7 +27,8 @@ pkg_setup() {
 
 src_prepare() {
 	# respect ldflags, bug #284191
-	epatch "${FILESDIR}/ldflags.patch"
+	epatch "${FILESDIR}"/ldflags.patch \
+		"${FILESDIR}"/${P}-openssl-1.patch
 
 	sed -i -e 's/^CXXDEBUGFLAGS.*/CXXDEBUGFLAGS = $(OPTCXXFLAGS)/' \
 		-e 's/^CDEBUGFLAGS.*/CDEBUGFLAGS = $(OPTCFLAGS)/' \

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/omniORB
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.67 2010/06/26 13:00:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.68 2010/07/11 03:26:29 ssuominen Exp $
+
+  11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  omniORB-4.1.4-r1.ebuild, +files/omniORB-4.1.4-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #326791 by Diego E. Pettenò.
 
   26 Jun 2010; <nixnut@gentoo.org> omniORB-4.1.4-r1.ebuild:
   ppc stable #322295
