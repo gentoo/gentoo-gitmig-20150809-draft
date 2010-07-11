@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.23 2010/06/24 21:51:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.24 2010/07/11 12:26:57 fauli Exp $
+
+  11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  alienarena-20100504.ebuild:
+  stable x86, bug 323471
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> alienarena-20100504.ebuild:
   stable amd64, bug 323471
