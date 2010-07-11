@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5763 2010/07/11 11:08:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5764 2010/07/11 15:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3474,6 +3474,7 @@ sys-fs/owfs:fuse - Enable building the FUSE-based OWFS client (owfs)
 sys-fs/owfs:httpd - Enable building the OWFS web server (owhttpd)
 sys-fs/owfs:parport - Enable support for the DS1410E parallel port adapter
 sys-fs/owfs:server - Enable building the OWFS server (owserver)
+sys-fs/pysize:psyco - Adds psyco support
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/udev:devfs-compat - Install rules for devfs compatible device names
 sys-fs/udev:extras - Compile udev-extras requiring external dependencies
