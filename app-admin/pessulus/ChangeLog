@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.76 2010/06/22 12:55:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.77 2010/07/11 10:04:16 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> pessulus-2.26.2.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *pessulus-2.30.2 (22 Jun 2010)
 
