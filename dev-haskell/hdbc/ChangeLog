@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdbc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.11 2007/12/13 17:17:58 dcoutts Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.12 2010/07/11 21:21:59 slyfox Exp $
+
+  11 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> hdbc-1.1.3.ebuild:
+  Fixed building against newer ghc (bug #296529). Thanks to Diego E.
+  'Flameeyes' Pettenò <flameeyes@gentoo.org> and Emil Karlson
+  <jekarlson@gmail.com> for report and proposed fix.
 
 *hdbc-1.1.3 (13 Dec 2007)
 

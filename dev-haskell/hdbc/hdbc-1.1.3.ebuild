@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-1.1.3.ebuild,v 1.1 2007/12/13 17:17:58 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-1.1.3.ebuild,v 1.2 2010/07/11 21:21:59 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal versionator
@@ -38,3 +38,5 @@ src_unpack() {
 		echo "GHC-Options: -fglasgow-exts" >> "${S}/HDBC.cabal"
 	fi
 }
+
+CABAL_CONFIGURE_FLAGS="--constraint=base<4"
