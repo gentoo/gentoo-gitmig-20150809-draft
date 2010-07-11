@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.26.3.ebuild,v 1.8 2010/03/07 15:38:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.26.3.ebuild,v 1.9 2010/07/11 15:23:31 pacho Exp $
 
 PYTHON_DEPEND="2" # Support for Python 3 not verified
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/orca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 # liblouis is not in portage yet
