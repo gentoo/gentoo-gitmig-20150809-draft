@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.0.ebuild,v 1.2 2010/07/08 12:41:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.0.ebuild,v 1.3 2010/07/11 19:55:14 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -66,6 +66,7 @@ PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="INTERACTIVE"
+PYTHON_MODNAME="matplotlib mpl_toolkits pylab.py"
 
 use_setup() {
 	local uword="${2}"
