@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/hdbc-sqlite-1.1.3.0.ebuild,v 1.1 2007/12/13 17:20:20 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/hdbc-sqlite-1.1.3.0.ebuild,v 1.2 2010/07/11 21:36:50 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal versionator
@@ -42,3 +42,5 @@ src_unpack() {
 		echo "GHC-Options: -XPatternSignatures" >> "${S}/${MY_PN}.cabal"
 	fi
 }
+
+CABAL_CONFIGURE_FLAGS="--constraint=base<4"
