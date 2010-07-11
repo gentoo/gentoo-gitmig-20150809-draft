@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.40 2010/07/11 14:05:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.41 2010/07/11 14:07:10 pacho Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -9,6 +9,7 @@
 app-i18n/uim gnome
 dev-ml/lablgtk gnome
 net-im/pidgin eds
+net-voip/ekiga gnome
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs sys-apps/gnome-disk-utility keyworded, bug 323803
