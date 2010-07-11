@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgeier
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.17 2010/07/10 15:17:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/ChangeLog,v 1.18 2010/07/11 07:52:10 ssuominen Exp $
+
+  11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> libgeier-0.11.ebuild,
+  +files/libgeier-0.11-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #324959.
 
   10 Jul 2010; Christian Faulhammer <fauli@gentoo.org> libgeier-0.11.ebuild:
   stable x86, bug 319827
