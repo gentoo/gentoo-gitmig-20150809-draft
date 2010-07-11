@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.60 2010/06/21 20:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.61 2010/07/11 19:35:11 vapier Exp $
+
+  11 Jul 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9.11-r4.ebuild,
+  xbmc-9999.ebuild:
+  Only require libsdl[alsa] when xbmc is being built with USE=alsa #327727
+  by Džen.
 
   21 Jun 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9.11-r4.ebuild:
   Fix building with ffmpeg-0.6 #324293 by Alexis Ballier.

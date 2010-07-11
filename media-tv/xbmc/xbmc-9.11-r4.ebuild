@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r4.ebuild,v 1.3 2010/06/21 20:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9.11-r4.ebuild,v 1.4 2010/07/11 19:35:11 vapier Exp $
 
 EAPI="2"
 
@@ -60,7 +60,8 @@ RDEPEND="virtual/opengl
 	media-libs/libmpeg2
 	media-libs/libogg
 	media-libs/libsamplerate
-	media-libs/libsdl[alsa,audio,opengl,video,X]
+	media-libs/libsdl[audio,opengl,video,X]
+	alsa? ( media-libs/libsdl[alsa] )
 	media-libs/libvorbis
 	media-libs/sdl-gfx
 	media-libs/sdl-image[gif,jpeg,png]
