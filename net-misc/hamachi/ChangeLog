@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/hamachi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.15 2009/09/08 17:11:21 ikelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.16 2010/07/11 10:01:26 hwoarang Exp $
+
+*hamachi-0.9.9.9_p20-r5 (11 Jul 2010)
+
+  11 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  -hamachi-0.9.9.9_p20-r4.ebuild, +hamachi-0.9.9.9_p20-r5.ebuild,
+  +files/tuncfg-forcebuild.patch:
+  Revbump. Fixes multiple issues. Bug #261745. Thanks to René Kjellerup
+  <rk.katana.steel@gmail.com> for the patches and all the ebuild QA fixes
 
   08 Sep 2009; Mike Auty <ikelos@gentoo.org> hamachi-0.9.9.9_p20-r4.ebuild:
   Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.

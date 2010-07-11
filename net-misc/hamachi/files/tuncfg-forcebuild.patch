@@ -1,0 +1,23 @@
+diff -u --unidirectional-new-file tuncfg-old/Makefile tuncfg/Makefile
+--- tuncfg-old/Makefile	2006-06-20 21:47:28.000000000 +0200
++++ tuncfg/Makefile	2010-06-19 17:03:25.000000000 +0200
+@@ -1,5 +1,5 @@
+ tuncfg:
+-
++	${CC} ${CFLAGS} -O0 -o tuncfg tuncfg.c
+ clean:
+ 	rm -f tuncfg
+ 
+Only in tuncfg-old/: tuncfg
+diff -u --unidirectional-new-file tuncfg-old/tuncfg.c tuncfg/tuncfg.c
+--- tuncfg-old/tuncfg.c	2006-06-20 21:47:28.000000000 +0200
++++ tuncfg/tuncfg.c	2010-06-19 17:03:25.000000000 +0200
+@@ -272,7 +272,7 @@
+ skip:
+ 		for (i=0; i<ctx_n; i++)
+ 		{
+-			unsigned long v[2];
++			unsigned int v[2];
+ 			char cmd[256];
+ 			
+ 			if (! FD_ISSET(ctx[i].fd, &fdr))

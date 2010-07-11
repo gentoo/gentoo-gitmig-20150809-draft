@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r4.ebuild,v 1.3 2009/09/08 17:11:21 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r5.ebuild,v 1.1 2010/07/11 10:01:26 hwoarang Exp $
 
 inherit eutils linux-info
 
@@ -17,14 +17,9 @@ SRC_URI="sse? ( http://files.hamachi.cc/linux/${MY_P}.tar.gz )
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="sse"
-RESTRICT="strip mirror"
+RESTRICT="mirror"
+QA_PRESTRIPPED="/opt/${PN}/bin/hamachi"
 
-# Set workdir for both hamachi versions
-if use sse; then
-	S=${WORKDIR}/${MY_P}
-else
-	S=${WORKDIR}/${MY_P}-pentium
-fi
 
 pkg_preinst() {
 	# Add group "hamachi" & user "hamachi"
@@ -36,26 +31,38 @@ pkg_setup() {
 	einfo "Checking your kernel configuration for TUN/TAP support."
 	CONFIG_CHECK="~TUN"
 	check_extra_config
+# Set workdir for both hamachi versions
+	if use sse; then
+		S=${WORKDIR}/${MY_P}
+	else
+		S=${WORKDIR}/${MY_P}-pentium
+	fi
 }
 
 src_compile() {
+	# Patching Makefile and tuncfg source code
+	epatch ${FILESDIR}/tuncfg-forcebuild.patch
+	# forcing compile of tuncfg
+	rm -f ${S}/tuncfg/tuncfg
 	# Compile Tuncfg
-	make -sC "${S}"/tuncfg || die "Compiling of tunecfg failed"
+	emake -sC ${S}/tuncfg || die "Compiling of tunecfg failed"
 }
 
 src_install() {
 	# Hamachi
 	einfo "Installing Hamachi"
-	insinto /usr/bin
+	dodir /opt/${PN}/bin
+	insinto /opt/${PN}/bin
 	insopts -m0755
-	doins hamachi
-	dosym /usr/bin/hamachi /usr/bin/hamachi-init
+	doins hamachi || die "Couldn't Install hamachi"
+	dosym /opt/${PN}/bin/hamachi /usr/bin/hamachi || die "Couldn't create hamachi symlinks"
+	dosym /opt/${PN}/bin/hamachi /usr/bin/hamachi-init || die "Couldn't create hamachi symlinks"
 
 	# Tuncfg
 	einfo "Installing Tuncfg"
-	insinto /usr/sbin
 	insopts -m0700
 	doins tuncfg/tuncfg
+	dosym /opt/${PN}/bin/tuncfg /usr/sbin/tuncfg
 
 	# Create log directory
 	dodir /var/log/${PN}
@@ -67,7 +74,11 @@ src_install() {
 	newinitd "${FILESDIR}"/hamachi.initd.2 hamachi
 
 	# Docs
-	dodoc CHANGES README LICENSE LICENSE.openssh LICENSE.openssl LICENSE.tuncfg
+	dodir /opt/${PN}/licenses
+	insinto /opt/${PN}/licenses
+	insopts -m0644
+	doins LICENSE LICENSE.openssh LICENSE.openssl LICENSE.tuncfg
+	dodoc CHANGES README
 
 }
 
@@ -79,5 +90,5 @@ pkg_postinst() {
 	einfo "If the 'hamachi' command shows no output, use the following command"
 	einfo "to extract the hamachi executable either with app-arch/upx or"
 	einfo "app-arch/upx-ucl:"
-	einfo "/opt/bin/upx -d /usr/bin/hamachi"
+	einfo "/opt/bin/upx -d /opt/${PN}/bin/hamachi"
 }
