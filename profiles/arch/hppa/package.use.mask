@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.37 2010/06/21 19:31:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.38 2010/07/11 11:31:38 pacho Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Pacho Ramos <pacho@gentoo.org> (11 Jul 2010)
+# Mask due bug #324511, this will be general once needed by more packages.
+app-i18n/uim gnome
 
 # Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
 # Needs sys-apps/gnome-disk-utility keyworded, bug 323803
