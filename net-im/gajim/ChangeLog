@@ -1,6 +1,18 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.97 2010/07/09 20:52:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.98 2010/07/11 14:49:45 jlec Exp $
+
+  11 Jul 2010; Justin Lecher <jlec@gentoo.org>
+  -files/0.11.3-misc-fixes.patch, -gajim-0.11.4.ebuild,
+  -files/gajim-0.11.4-test_fix.patch, -gajim-0.12.1.ebuild,
+  -files/0.12.1-roster_window.py_r10934.patch, -gajim-0.13.2.ebuild,
+  gajim-0.13.3.ebuild, gajim-0.13.4.ebuild, gajim-0.13.4-r1.ebuild,
+  -files/gajim-0.13-autotools--enable-site-packages_option.patch,
+  -files/0.12.1-sound-path-fix.patch,
+  +files/gajim-0.13-autotools-enable-site-packages_option.patch,
+  -files/0.12.1_autotools_install_pyfiles_in_pkglibdir.patch,
+  -files/fix_autotools_and_search_dirs.patch:
+  Cleaned old version, #285663
 
   09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> gajim-0.13.3.ebuild:
   ppc64 stable wrt #307425
