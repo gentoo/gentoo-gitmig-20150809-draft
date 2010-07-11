@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.5 2010/06/16 02:10:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.2.2.ebuild,v 1.6 2010/07/11 01:24:58 mr_bones_ Exp $
 
 EAPI=2
 
@@ -57,6 +57,20 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
 	cp /usr/share/gettext/config.rpath .
+	if has_version '>=x11-libs/gtk+-2.20:2' ; then
+		sed -i \
+			-e 's:GTK_WIDGET_REALIZED:gtk_widget_get_realized:g'    \
+			-e 's:GTK_WIDGET_VISIBLE:gtk_widget_get_visible:g'      \
+			-e 's:GTK_WIDGET_DRAWABLE:gtk_widget_is_drawable:g'     \
+			-e 's:GTK_WIDGET_HAS_FOCUS:gtk_widget_has_focus:g'      \
+			-e 's:GTK_WIDGET_HAS_FOCUS:gtk_widget_has_focus:g'      \
+			-e 's:GTK_WIDGET_MAPPED:gtk_widget_get_mapped:g'        \
+			./src/goocanvas/src/goocanvaswidget.c \
+			./src/goocanvas/src/goocanvas.c \
+			./src/goocanvas/src/goocanvasatk.c \
+			|| die 'sed failed'
+	fi
+
 	eautoreconf
 }
 
