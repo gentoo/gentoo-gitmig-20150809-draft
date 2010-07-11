@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20070826-r1.ebuild,v 1.1 2009/11/10 16:40:54 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20070826-r1.ebuild,v 1.2 2010/07/11 22:01:52 hwoarang Exp $
 
 inherit eutils
 
@@ -22,6 +22,13 @@ IUSE="binary doc"
 DEPEND="dev-libs/gmp
 		!dev-lang/mlton-bin
 		doc? ( virtual/latex-base )"
+
+QA_PRESTRIPPED="
+	usr/bin/mlnlffigen
+ 	usr/bin/mllex
+  	usr/bin/mlprof
+   	usr/bin/mlyacc
+	usr/lib/mlton/mlton-compile"
 
 src_compile() {
 	if use !binary; then
