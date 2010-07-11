@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.220 2010/07/06 14:18:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.221 2010/07/11 14:20:09 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> abiword-2.4.6.ebuild,
+  -abiword-2.6.4.ebuild, abiword-2.6.8.ebuild:
+  Drop hppa keywords and old versions per bug 324511
 
   06 Jul 2010; Jeroen Roovers <jer@gentoo.org> abiword-2.8.6.ebuild:
   Marked ~ppc (bug #316219).
