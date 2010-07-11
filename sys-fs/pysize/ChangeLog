@@ -1,0 +1,11 @@
+# ChangeLog for sys-fs/pysize
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.1 2010/07/11 15:16:05 jlec Exp $
+
+*pysize-0.2 (11 Jul 2010)
+
+  11 Jul 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.2-setuptools-automagic.patch, +pysize-0.2.ebuild,
+  +files/psyco-0.2-automagic.patch, +metadata.xml:
+  Import from sunrise
+
