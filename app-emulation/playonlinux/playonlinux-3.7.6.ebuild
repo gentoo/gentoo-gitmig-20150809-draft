@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7.3.ebuild,v 1.2 2010/06/08 21:17:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.7.6.ebuild,v 1.1 2010/07/11 11:09:15 lxnay Exp $
 
 EAPI="2"
 
@@ -18,14 +18,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="
-		app-emulation/wine
-		app-arch/cabextract
-		app-arch/unzip
-		dev-python/wxpython:2.8
-		|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
-		x11-apps/mesa-progs
-		x11-terms/xterm"
+RDEPEND="app-emulation/wine
+	app-arch/cabextract
+	app-arch/unzip
+	dev-python/wxpython:2.8
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+	x11-apps/mesa-progs
+	x11-terms/xterm"
 
 S=${WORKDIR}/${PN}
 
