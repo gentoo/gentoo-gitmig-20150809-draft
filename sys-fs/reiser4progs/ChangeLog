@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiser4progs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.40 2010/04/18 14:04:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.41 2010/07/11 00:34:26 ranger Exp $
+
+  11 Jul 2010; Brent Baude <ranger@gentoo.org> reiser4progs-1.0.7.ebuild:
+  stable ppc64, bug 302479
 
   18 Apr 2010; <nixnut@gentoo.org> reiser4progs-1.0.7.ebuild:
   ppc stable #302479
