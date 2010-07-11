@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/vobject-0.8.1c.ebuild,v 1.3 2010/07/06 21:04:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/vobject-0.8.1c.ebuild,v 1.4 2010/07/11 12:43:51 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://vobject.skyhouseconsulting.com/${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-python/python-dateutil-1.1"
