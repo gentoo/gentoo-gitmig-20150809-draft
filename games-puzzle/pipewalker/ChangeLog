@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pipewalker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipewalker/ChangeLog,v 1.5 2010/06/24 21:00:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pipewalker/ChangeLog,v 1.6 2010/07/11 12:30:40 fauli Exp $
+
+  11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  pipewalker-0.8.2.ebuild:
+  stable x86, bug 325151
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> pipewalker-0.8.2.ebuild:
   stable amd64, bug 325151
