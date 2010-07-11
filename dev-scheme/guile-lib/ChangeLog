@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.19 2010/06/28 21:38:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.20 2010/07/11 17:35:18 armin76 Exp $
+
+  11 Jul 2010; Raúl Porcel <armin76@gentoo.org> guile-lib-0.1.6.ebuild:
+  sparc/x86 stable wrt #326007
 
   28 Jun 2010; Christoph Mende <angelos@gentoo.org> guile-lib-0.1.6.ebuild:
   Stable on amd64 wrt bug #326007
