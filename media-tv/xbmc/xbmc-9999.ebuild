@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.58 2010/07/11 19:35:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.59 2010/07/11 19:39:07 vapier Exp $
 
 EAPI="2"
 
@@ -141,7 +141,7 @@ src_prepare() {
 
 	# Avoid lsb-release dependency
 	sed -i \
-		-e 's:/usr/bin/lsb_release -d:cat /etc/gentoo-release:' \
+		-e 's:lsb_release -d:cat /etc/gentoo-release:' \
 		xbmc/utils/SystemInfo.cpp
 
 	# Do not use termcap #262822
