@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.40 2010/07/06 19:14:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.41 2010/07/11 18:06:39 armin76 Exp $
+
+  11 Jul 2010; Raúl Porcel <armin76@gentoo.org> libspectre-0.2.5.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #324571
 
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   libspectre-0.2.5.ebuild:
