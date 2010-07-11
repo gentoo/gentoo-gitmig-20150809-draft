@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/389-ds-console
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/ChangeLog,v 1.4 2010/07/11 09:14:45 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-ds-console/ChangeLog,v 1.5 2010/07/11 09:49:26 lxnay Exp $
+
+*389-ds-console-1.2.3-r1 (11 Jul 2010)
+
+  11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
+  -389-ds-console-1.2.3.ebuild, +389-ds-console-1.2.3-r1.ebuild:
+  add net-nds/389-ds-base to DEPEND/RDEPEND
 
   11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
   389-ds-console-1.2.3.ebuild:
