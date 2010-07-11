@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-sdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.28 2010/07/11 08:32:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.29 2010/07/11 08:40:25 graaff Exp $
+
+*ruby-sdl-2.1.1.1 (11 Jul 2010)
+
+  11 Jul 2010; Hans de Graaff <graaff@gentoo.org> +ruby-sdl-2.1.1.1.ebuild:
+  Version bump. Convert to ruby-ng.
 
   11 Jul 2010; Hans de Graaff <graaff@gentoo.org> -ruby-sdl-1.2.0.ebuild:
   Remove old version.
