@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.54 2010/07/10 14:45:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.55 2010/07/11 15:58:34 jlec Exp $
+
+  11 Jul 2010; Justin Lecher <jlec@gentoo.org> scipy-0.7.1.ebuild,
+  scipy-0.7.2.ebuild, scipy-0.7.2-r1.ebuild:
+  Restricted py-2.7, #321587
 
   10 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   scipy-0.7.2-r1.ebuild:
