@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.103 2010/06/29 20:17:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.104 2010/07/11 14:10:21 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> gnopernicus-1.0.7.ebuild:
+  Drop hppa keyword per bug #324511.
 
   29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
   gnopernicus-1.0.7.ebuild, +files/gnopernicus-1.0.7-asneeded.patch:
