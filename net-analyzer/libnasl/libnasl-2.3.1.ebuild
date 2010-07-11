@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.3.1.ebuild,v 1.6 2010/01/01 17:38:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.3.1.ebuild,v 1.7 2010/07/11 03:46:26 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="~net-analyzer/nessus-libraries-${PV}"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	export CC=$(tc-getCC)
@@ -26,5 +26,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Install failed libnasl"
+	emake DESTDIR="${D}" install || die
 }
