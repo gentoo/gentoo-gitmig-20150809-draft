@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/apache2_modules.desc,v 1.2 2008/04/19 09:03:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/apache2_modules.desc,v 1.3 2010/07/11 08:22:39 lxnay Exp $
 
 # This file contains descriptions of APACHE2_MODULES USE_EXPAND flags.
 
@@ -26,6 +26,8 @@ autoindex - Generates directory indexes, automatically, similar to the Unix ls c
 cache - Content cache keyed to URIs
 cern_meta - CERN httpd metafile semantics
 charset_lite - Specify character set translation or recoding
+cgi - Enable CGI module (used by non-multithreaded MPMs, for eg. prefork)
+cgid - Enable CGI module (used by multithreaded MPMs, for eg. worker)
 dav - Distributed Authoring and Versioning (WebDAV) functionality
 dav_fs - filesystem provider for mod_dav
 dav_lock - generic locking module for mod_dav
