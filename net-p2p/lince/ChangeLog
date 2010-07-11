@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/lince
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/ChangeLog,v 1.19 2010/05/05 21:47:39 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/ChangeLog,v 1.20 2010/07/11 17:40:17 sochotnicky Exp $
+
+*lince-1.2-r1 (11 Jul 2010)
+
+  11 Jul 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +lince-1.2-r1.ebuild:
+  Remove dbus useflag, no longer supported upstream (#320809)
+  Fix doc installation (#298899)
 
 *lince-1.2 (05 May 2010)
 
