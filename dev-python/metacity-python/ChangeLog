@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/metacity-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.34 2010/06/14 14:49:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.35 2010/07/11 15:24:46 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  -metacity-python-2.24.1.ebuild, metacity-python-2.26.0.ebuild:
+  Drop hppa keywords and old versions per bug 324511
 
 *metacity-python-2.30.2 (14 Jun 2010)
 
