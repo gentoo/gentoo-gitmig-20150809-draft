@@ -1,0 +1,24 @@
+http://bugs.gentoo.org/326879
+
+--- src/client/netclient.h
++++ src/client/netclient.h
+@@ -35,7 +35,7 @@
+ #ifdef HAVE_SSL
+   SSL_CTX * ctx;
+   X509 * server_cert;
+-  SSL_METHOD * meth;
++  const SSL_METHOD * meth;
+ #endif
+   bool m_bUseSSL;
+   bool m_bMustLogin;
+--- src/server/netserver.h
++++ src/server/netserver.h
+@@ -41,7 +41,7 @@
+ #ifdef HAVE_SSL
+   SSL_CTX * ctx;
+   X509 * client_cert;
+-  SSL_METHOD * meth; 
++  const SSL_METHOD * meth; 
+   int err;
+ #endif
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.8.ebuild,v 1.2 2010/07/07 22:58:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.8.ebuild,v 1.3 2010/07/11 02:53:05 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils flag-o-matic pam
@@ -32,7 +32,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-destdir.patch
+	epatch "${FILESDIR}"/${P}-destdir.patch \
+		"${FILESDIR}"/${P}-openssl-1.patch
 	eautoreconf
 }
 
