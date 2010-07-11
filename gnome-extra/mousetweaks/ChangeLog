@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/mousetweaks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.43 2010/06/23 10:41:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.44 2010/07/11 13:41:38 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> mousetweaks-2.26.3.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *mousetweaks-2.30.2 (23 Jun 2010)
 
