@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.347 2010/07/10 09:52:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.348 2010/07/11 17:29:10 betelgeuse Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -61,6 +61,17 @@ epause() {
 	ewarn "QA Notice: epause is not defined in EAPI=${EAPI}, please file a bug at http://bugs.gentoo.org"
 }
 
+fi
+
+# @FUNCTION: eqawarn
+# @USAGE: [message]
+# @DESCRIPTION:
+# Proxy to einfo for package managers that don't provide eqawarn and use the PM
+# implementation if available.
+if ! declare -F eqawarn >/dev/null ; then
+	eqawarn() {
+		einfo "$@"
+	}
 fi
 
 # @FUNCTION: ecvs_clean
