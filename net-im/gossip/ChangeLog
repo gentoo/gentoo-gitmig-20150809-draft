@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gossip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.86 2009/06/17 21:32:01 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.87 2010/07/11 14:02:52 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> gossip-0.31.ebuild:
+  Drop hppa keyword per bug #324511.
 
   17 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org> -gossip-0.22.ebuild:
   Clean up old revision.
