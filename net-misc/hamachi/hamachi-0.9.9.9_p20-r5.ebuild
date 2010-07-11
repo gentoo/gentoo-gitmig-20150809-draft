@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r5.ebuild,v 1.1 2010/07/11 10:01:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/hamachi-0.9.9.9_p20-r5.ebuild,v 1.2 2010/07/11 13:50:49 mr_bones_ Exp $
 
 inherit eutils linux-info
 
@@ -19,7 +19,6 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE="sse"
 RESTRICT="mirror"
 QA_PRESTRIPPED="/opt/${PN}/bin/hamachi"
-
 
 pkg_preinst() {
 	# Add group "hamachi" & user "hamachi"
