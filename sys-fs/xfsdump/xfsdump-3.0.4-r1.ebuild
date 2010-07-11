@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.0.4.ebuild,v 1.1 2010/03/26 03:03:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.0.4-r1.ebuild,v 1.1 2010/07/11 21:22:52 patrick Exp $
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="xfs dump/restore utilities"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
@@ -28,6 +28,7 @@ src_unpack() {
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		include/builddefs.in \
 		|| die
+	epatch "${FILESDIR}/${P}-no-symlink.patch"
 }
 
 src_compile() {

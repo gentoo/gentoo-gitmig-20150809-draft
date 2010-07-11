@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.76 2010/05/11 20:51:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.77 2010/07/11 21:22:52 patrick Exp $
+
+*xfsdump-3.0.4-r1 (11 Jul 2010)
+
+  11 Jul 2010; Patrick Lauer <patrick@gentoo.org> -xfsdump-3.0.4.ebuild,
+  +xfsdump-3.0.4-r1.ebuild, +files/xfsdump-3.0.4-no-symlink.patch:
+  Fix for #311881, actually installs xfsdump/xfsrestore now. Thanks to Yuri
+  Karaban
 
   11 May 2010; Joseph Jezak <josejx@gentoo.org> xfsdump-3.0.1.ebuild:
   Marked ppc/ppc64 stable for bug #311383.
