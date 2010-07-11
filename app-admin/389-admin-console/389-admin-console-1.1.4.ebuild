@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.4.ebuild,v 1.1 2010/07/11 09:35:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.4.ebuild,v 1.2 2010/07/11 09:59:19 lxnay Exp $
 
 EAPI="2"
 
@@ -22,14 +22,13 @@ IUSE=""
 
 COMMON_DEP="dev-java/jss:3.4
 	dev-java/ldapsdk:4.1
-	>=dev-java/idm-console-framework-1.1
-	!app-admin/fedora-ds-admin-console"
-
+	>=dev-java/idm-console-framework-1.1"
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
 DEPEND="sys-apps/sed
 	>=virtual/jdk-1.5
 	${COMMON_DEP}"
+PDEPEND="net-nds/389-admin"
 
 src_prepare() {
 	# Gentoo java rules say no jars with version number

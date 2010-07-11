@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/389-admin-console
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.1 2010/07/11 09:35:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.2 2010/07/11 09:59:19 lxnay Exp $
+
+  11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
+  389-admin-console-1.1.4.ebuild:
+  add net-nds/389-admin as post dependency
 
 *389-admin-console-1.1.4 (11 Jul 2010)
 
