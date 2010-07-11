@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.382 2010/07/11 01:54:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.383 2010/07/11 16:00:08 jmbsvicetto Exp $
+
+  11 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.3.1-r2.ebuild, files/amarok-2.3.1-fix-trayicon.patch:
+  Updated the fix-trayicon patch to include all the 4 commits by Kevin Funk
+  available from http://krf.kollide.net/files/work/amarok/
 
 *amarok-2.3.1-r2 (11 Jul 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r2.ebuild,v 1.1 2010/07/11 01:54:44 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.1-r2.ebuild,v 1.2 2010/07/11 16:00:08 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -75,9 +75,14 @@ RDEPEND="${COMMONDEPEND}
 	player? ( >=kde-base/phonon-kde-${KDE_MINIMAL} )
 "
 
-# The fix trayicon patch is amarok.git-26104cd35fd50222c354f3afc9fce6bba093c05f.patch
-# from https://bugs.kde.org/show_bug.cgi?id=232578#c13 and
-# http://gitweb.kde.org/amarok/amarok.git/commitdiff/26104cd35fd50222c354f3afc9fce6bba093c05f
+# The fix trayicon patch was assembled from the 4 patches committed by Kevin Funk to fix
+# upstream bug at https://bugs.kde.org/show_bug.cgi?id=232578#c13 and available from
+# http://krf.kollide.net/files/work/amarok/
+# They correspond to the following 4 git commits:
+# http://gitweb.kde.org/amarok/amarok.git/commit/e959e75a8f028eb36406d65118885c32e3eff3c8
+# http://gitweb.kde.org/amarok/amarok.git/commit/26104cd35fd50222c354f3afc9fce6bba093c05f
+# http://gitweb.kde.org/amarok/amarok.git/commit/4995f14cefbbe78e9dd3c42af00188e6c82e6f94
+# http://gitweb.kde.org/amarok/amarok.git/commit/74ea4c1f9e69952ac274be44ab37ed073e61c1e6
 PATCHES=( "${FILESDIR}/${PN}-fix-accessibility-dep.patch" "${FILESDIR}/${P}-fix-trayicon.patch")
 
 src_prepare() {

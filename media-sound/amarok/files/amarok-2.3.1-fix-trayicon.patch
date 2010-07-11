@@ -1,29 +1,33 @@
-From 26104cd35fd50222c354f3afc9fce6bba093c05f Mon Sep 17 00:00:00 2001
-From: Kevin Funk <krf@electrostorm.net>
-Date: Thu, 8 Jul 2010 12:13:00 +0200
-Subject: [PATCH] Some TrayIcon changes:
- * Remove track progress effect (this is because KSNI has some bogus
- implementation of the setIconByPixmap() function causing the overlay
- icon being wrong sized
- * Fix overlay icon size
- * Tooltip album cover is now updated if changed in Amarok
- * Cleanup
- CCBUG: 231539
- CCBUG: 232578
- CCBUG: 232312
- BUG: 233506
- BUG: 240463
-
----
- src/TrayIcon.cpp |  106 ++++++++++++------------------------------------------
- src/TrayIcon.h   |   11 +-----
- 2 files changed, 25 insertions(+), 92 deletions(-)
-
-diff --git a/src/TrayIcon.cpp b/src/TrayIcon.cpp
-index fb97483..4bd46e4 100644
---- a/src/TrayIcon.cpp
-+++ b/src/TrayIcon.cpp
-@@ -52,7 +52,6 @@
+diff -urN amarok-2.3.1/src/TrayIcon.cpp amarok-2.3.1-new//src/TrayIcon.cpp
+--- amarok-2.3.1/src/TrayIcon.cpp	2010-05-27 18:37:20.000000000 +0000
++++ amarok-2.3.1-new//src/TrayIcon.cpp	2010-07-11 15:21:36.000000000 +0000
+@@ -26,33 +26,24 @@
+ #include "EngineController.h"
+ #include "amarokconfig.h"
+ #include "GlobalCurrentTrackActions.h"
+-#include "core/meta/support/MetaConstants.h"
+ #include "core/capabilities/CurrentTrackActionsCapability.h"
+ #include "playlist/PlaylistActions.h"
+-#include "playlist/PlaylistModelStack.h"
+ #include "SvgHandler.h"
+ #include <KAboutData>
+ #include <KAction>
+ #include <KCmdLineArgs>
+-#include <KIcon>
+-#include <KIconEffect>
+ #include <KLocale>
+ #include <KMenu>
+ #include <KStandardDirs>
+ 
+ #include <QAction>
+-#include <QEvent>
+ #include <QFontMetrics>
+-#include <QMouseEvent>
+-#include <QPainter>
+ #include <QPixmap>
+-#include <QTime>
+ #include <QToolTip>
+ 
  Amarok::TrayIcon::TrayIcon( QObject *parent )
          : KStatusNotifierItem( parent )
          , Engine::EngineObserver( The::engineController() )
@@ -31,26 +35,54 @@ index fb97483..4bd46e4 100644
          , m_separator( 0 )
  {
      DEBUG_BLOCK
-@@ -80,7 +79,7 @@ Amarok::TrayIcon::TrayIcon( QObject *parent )
+@@ -64,13 +55,13 @@
+ 
+     PERF_LOG( "Before adding actions" );
+ 
+-    #ifdef Q_WS_MAC
++#ifdef Q_WS_MAC
+     // Add these functions to the dock icon menu in OS X
+     extern void qt_mac_set_dock_menu(QMenu *);
+     qt_mac_set_dock_menu( contextMenu() );
+     contextMenu()->addAction( ac->action( "playlist_playmedia" ) );
+     contextMenu()->addSeparator();
+-    #endif
++#endif
+ 
+     contextMenu()->addAction( ac->action( "prev"       ) );
+     contextMenu()->addAction( ac->action( "play_pause" ) );
+@@ -79,105 +70,87 @@
+     contextMenu()->setObjectName( "TrayIconContextMenu" );
  
      PERF_LOG( "Adding system tray icon" );
-+    setIconByName( "amarok" );
 -    paintIcon();
  
-     setupToolTip();
+-    setupToolTip();
++    setIconByName( "amarok" );
++
++    setupToolTip( true );
  
      connect( this, SIGNAL( scrollRequested( int, Qt::Orientation ) ), SLOT( slotScrollRequested(int, Qt::Orientation) ) );
-@@ -102,22 +95,13 @@ Amarok::TrayIcon::setupToolTip()
+     connect( this, SIGNAL( secondaryActivateRequested( const QPoint & ) ), SLOT( slotActivated() ) );
+ }
+ 
+ void
+-Amarok::TrayIcon::setupToolTip()
++Amarok::TrayIcon::setupToolTip( bool updateIcon )
+ {
+     if( m_track )
+     {
          setToolTipTitle( The::engineController()->prettyNowPlaying() );
  
-         QStringList tooltip;
+-        QStringList tooltip;
 -        // TODO: Use Observer to get notified about changed album art
 -        if( m_track->album() )
-+        if( m_track->album() && m_track->album()->hasImage() )
++        // check if we really need to update the icon (performance tweak)
++        if( updateIcon )
          {
-             const QString uid = m_track->uidUrl();
-             if ( uid != m_toolTipIconUid ) {
-                 const QPixmap image = The::svgHandler()->imageWithBorder( m_track->album(), KIconLoader::SizeLarge, 5 );
+-            const QString uid = m_track->uidUrl();
+-            if ( uid != m_toolTipIconUid ) {
+-                const QPixmap image = The::svgHandler()->imageWithBorder( m_track->album(), KIconLoader::SizeLarge, 5 );
 -                if ( image.isNull() )
 -                {
 -                    setToolTipIconByName( "amarok" );
@@ -61,24 +93,99 @@ index fb97483..4bd46e4 100644
 -                    setToolTipIconByPixmap( image );
 -                    m_toolTipIconUid = uid;
 -                }
++            if( m_track->album() && m_track->album()->hasImage() )
++            {
++                QPixmap image = The::svgHandler()->imageWithBorder( m_track->album(), KIconLoader::SizeLarge, 5 );
 +                setToolTipIconByPixmap( image );
-+                m_toolTipIconUid = uid;
++            }
++            else
++            {
++                setToolTipIconByName( "amarok" );
              }
+-        }
+-        else
+-        {
+-            setToolTipIconByName( "amarok" );
+-            m_toolTipIconUid.clear();
          }
+ 
+-        QStringList left, right;
++        QStringList tooltip;
+ 
+-        // TODO: Replace block by some other useful information
+         QString volume;
+         if ( The::engineController()->isMuted() )
++        {
+             volume = i18n( "Muted" );
++        }
          else
-@@ -184,9 +168,10 @@ Amarok::TrayIcon::setupToolTip()
++        {
+             volume = QString( "%1%" ).arg( The::engineController()->volume() );
+-        right << QString("<i>%1</i>").arg( volume );
+-        left << QString( "<i>%1</i>" ).arg( i18n( "Volume" ) );
++        }
++        tooltip << QString("<i>%1: %2</i>").arg( i18n( "Volume" ) ).arg( volume );
+ 
+         const float score = m_track->score();
+         if( score > 0.f )
+         {
+-            right << QString::number( score, 'f', 2 );  // 2 digits after decimal point
+-            left << i18n( "Score" );
++            tooltip << QString( "%1: %2" ).arg( i18n( "Score" ) ).arg( QString::number( score, 'f', 2 ) );
+         }
+ 
+         const int rating = m_track->rating();
+         if( rating > 0 )
+         {
+-            QString s;
++            QString stars;
+             for( int i = 0; i < rating / 2; ++i )
+-                s += QString( "<img src=\"%1\" height=\"%2\" width=\"%3\">" )
++                stars += QString( "<img src=\"%1\" height=\"%2\" width=\"%3\">" )
+                         .arg( KStandardDirs::locate( "data", "amarok/images/star.png" ) )
+                         .arg( QFontMetrics( QToolTip::font() ).height() )
+                         .arg( QFontMetrics( QToolTip::font() ).height() );
+             if( rating % 2 )
+-                s += QString( "<img src=\"%1\" height=\"%2\" width=\"%3\">" )
++                stars += QString( "<img src=\"%1\" height=\"%2\" width=\"%3\">" )
+                         .arg( KStandardDirs::locate( "data", "amarok/images/smallstar.png" ) )
+                         .arg( QFontMetrics( QToolTip::font() ).height() )
+                         .arg( QFontMetrics( QToolTip::font() ).height() );
+-            right << s;
+-            left << i18n( "Rating" );
++
++            tooltip << QString( "%1: %2" ).arg( i18n( "Rating" ) ).arg( stars );
+         }
+ 
+         const int count = m_track->playCount();
+         if( count > 0 )
+         {
+-            right << QString::number( count );
+-            left << i18n( "Play Count" );
++            tooltip << QString( "%1: %2" ).arg( i18n( "Play Count" ) ).arg( QString::number( count ) );
+         }
+ 
+         const uint lastPlayed = m_track->lastPlayed();
+-        right << Amarok::verboseTimeSince( lastPlayed );
+-        left << i18n( "Last Played" );
+-
+-        // NOTE: It seems to be necessary to <center> each element indivdually
+-        const QString row = "- %1: %2";
+-        for( int x = 0; x < left.count(); ++x )
+-            if ( !right[x].isEmpty() )
+-                tooltip << row.arg( left[x] ).arg( right[x] );
++        tooltip << QString( "%1: %2" ).arg( i18n( "Last played" ) ).arg( Amarok::verboseTimeSince( lastPlayed ) );
+ 
+         setToolTipSubTitle( tooltip.join("<br>") );
+     }
      else
      {
          setToolTipIconByName( "amarok" );
 -        m_toolTipIconUid.clear();
          setToolTipTitle( KCmdLineArgs::aboutData()->programName() );
          setToolTipSubTitle( The::engineController()->prettyNowPlaying() );
-+
-+        m_toolTipIconUid.clear();
      }
- }
- 
-@@ -206,20 +191,26 @@ Amarok::TrayIcon::engineStateChanged( Phonon::State state, Phonon::State /*oldSt
+@@ -199,20 +172,26 @@
      switch( state )
      {
          case Phonon::PlayingState:
@@ -111,7 +218,7 @@ index fb97483..4bd46e4 100644
              setupMenu(); // remove custom track actions on stop
              break;
  
-@@ -230,6 +221,7 @@ Amarok::TrayIcon::engineStateChanged( Phonon::State state, Phonon::State /*oldSt
+@@ -223,21 +202,19 @@
          case Phonon::LoadingState:
          case Phonon::ErrorState:
          case Phonon::BufferingState:
@@ -119,7 +226,11 @@ index fb97483..4bd46e4 100644
              break;
      }
  
-@@ -240,9 +232,6 @@ void
+-    setupToolTip();
++    setupToolTip( true );
+ }
+ 
+ void
  Amarok::TrayIcon::engineNewTrackPlaying()
  {
      m_track = The::engineController()->currentTrack();
@@ -127,9 +238,18 @@ index fb97483..4bd46e4 100644
 -
 -    paintIcon( 0 );
  
-     setupToolTip();
+-    setupToolTip();
++    setupToolTip( true );
      setupMenu();
-@@ -258,12 +247,12 @@ Amarok::TrayIcon::metadataChanged( Meta::TrackPtr track )
+ }
+ 
+@@ -246,17 +223,17 @@
+ {
+     Q_UNUSED( track )
+ 
+-    setupToolTip();
++    setupToolTip( false );
+     setupMenu();
  }
  
  void
@@ -141,15 +261,28 @@ index fb97483..4bd46e4 100644
  
 -    if( m_trackLength )
 -        paintIcon( position );
-+    setupToolTip();
++    setupToolTip( true );
 +    setupMenu();
  }
  
  void
-@@ -283,71 +272,6 @@ Amarok::TrayIcon::engineMuteStateChanged( bool mute )
+@@ -264,7 +241,7 @@
+ {
+     Q_UNUSED( percent );
+ 
+-    setupToolTip();
++    setupToolTip( false );
  }
  
  void
+@@ -272,72 +249,7 @@
+ {
+     Q_UNUSED( mute );
+ 
+-    setupToolTip();
+-}
+-
+-void
 -Amarok::TrayIcon::paletteChange( const QPalette & op )
 -{
 -    Q_UNUSED( op );
@@ -212,17 +345,53 @@ index fb97483..4bd46e4 100644
 -
 -    setIconByPixmap( m_icon );
 -    setOverlayIconByName( "media-playback-start" );
--}
++    setupToolTip( false );
+ }
+ 
+ void
+diff -urN amarok-2.3.1/src/TrayIcon.h amarok-2.3.1-new//src/TrayIcon.h
+--- amarok-2.3.1/src/TrayIcon.h	2010-05-27 18:37:20.000000000 +0000
++++ amarok-2.3.1-new//src/TrayIcon.h	2010-07-11 15:21:36.000000000 +0000
+@@ -1,7 +1,7 @@
+ /****************************************************************************************
+  * Copyright (c) 2003 Stanislav Karchebny <berkus@users.sf.net>                         *
+- * Copyright (c) 2009 Kevin Funk <krf@electrostorm.net>                                 *
+  * Copyright (c) 2009 Mark Kretschmann <kretschmann@kde.org>                            *
++ * Copyright (c) 2009,2010 Kevin Funk <krf@electrostorm.net>                            *
+  *                                                                                      *
+  * This program is free software; you can redistribute it and/or modify it under        *
+  * the terms of the GNU General Public License as published by the Free Software        *
+@@ -19,18 +19,15 @@
+ #ifndef AMAROK_TRAYICON_H
+ #define AMAROK_TRAYICON_H
+ 
+-#include "core/engine/EngineObserver.h" //baseclass
++#include "core/engine/EngineObserver.h" // baseclass
+ #include "core/meta/Meta.h"
+ #include "core/support/SmartPointerList.h"
+ 
+-#include <KStatusNotifierItem> //baseclass
++#include <KStatusNotifierItem> // baseclass
+ 
+ #include <QAction>
+ #include <QPointer>
+ 
+-class QEvent;
+-class App;
 -
--void
- Amarok::TrayIcon::setupMenu()
- {
-     foreach( QAction* action, m_extraActions )
-diff --git a/src/TrayIcon.h b/src/TrayIcon.h
-index c2602df..d590b5f 100644
---- a/src/TrayIcon.h
-+++ b/src/TrayIcon.h
-@@ -49,16 +49,13 @@ protected:
+ 
+ namespace Amarok {
+ 
+@@ -40,24 +37,20 @@
+ 
+ public:
+     TrayIcon( QObject *parent );
+-    friend class ::App;
+-    
++
+     void setVisible( bool visible );
+ 
+ protected:
      // reimplemented from engineobserver
      virtual void engineStateChanged( Phonon::State state, Phonon::State oldState = Phonon::StoppedState );
      virtual void engineNewTrackPlaying();
@@ -241,20 +410,20 @@ index c2602df..d590b5f 100644
  
  private slots:
      void slotActivated();
-@@ -68,13 +65,9 @@ private:
-     void setupMenu();
-     void setupToolTip();
+@@ -65,15 +58,10 @@
  
--    void paintIcon( qint64 trackPosition = -1 );
+ private:
+     void setupMenu();
+-    void setupToolTip();
 -
+-    void paintIcon( qint64 trackPosition = -1 );
++    void setupToolTip( bool updateIcon );
+ 
      Meta::TrackPtr m_track;
 -    qint64 m_trackLength;
-     QString m_toolTipIconUid;
+-    QString m_toolTipIconUid;
  
 -    QPixmap m_baseIcon, m_grayedIcon, m_icon;
      SmartPointerList<QAction> m_extraActions;
      QPointer<QAction> m_separator;
  };
--- 
-1.7.1
-
