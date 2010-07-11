@@ -1,0 +1,16 @@
+http://bugs.gentoo.org/326959
+
+--- src/encryption/CSymmetricSSLEncryption.cpp
++++ src/encryption/CSymmetricSSLEncryption.cpp
+@@ -48,9 +48,11 @@
+     memcpy(m_key, key, sizeof(m_key));
+     memcpy(m_vec, vec, sizeof(m_vec));
+     EVP_CipherInit_ex(&m_ctx, cipher, NULL, m_key, m_vec, direction);
++#if OPENSSL_VERSION_NUMBER < 0x10000000L
+ #ifdef EVP_CIPH_FLAG_LENGTH_BITS
+     M_EVP_CIPHER_CTX_set_flags(&m_ctx, EVP_CIPH_FLAG_LENGTH_BITS);
+ #endif
++#endif
+ }
+ 
+ CSymmetricSSLCipher::~CSymmetricSSLCipher()

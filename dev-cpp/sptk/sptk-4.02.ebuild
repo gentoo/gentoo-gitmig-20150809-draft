@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.02.ebuild,v 1.2 2010/06/17 20:09:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.02.ebuild,v 1.3 2010/07/11 06:35:48 ssuominen Exp $
 
 EAPI=1
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 IUSE="fltk odbc doc sqlite excel postgres aspell mysql gnutls"
 
@@ -28,6 +28,12 @@ DEPEND="${RDEPEND}
 	doc?      ( app-doc/doxygen )"
 
 CMAKE_IN_SOURCE_BUILD=1
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-openssl-1.patch
+}
 
 src_compile() {
 	local mycmakeargs="$(cmake-utils_use_no postgres POSTGRESQL)
