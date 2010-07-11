@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.61 2010/06/24 10:52:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.62 2010/07/11 18:56:04 armin76 Exp $
+
+  11 Jul 2010; Raúl Porcel <armin76@gentoo.org> geda-1.6.1.ebuild:
+  sparc stable wrt #285470
 
   24 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> geda-1.6.1.ebuild:
   x86 stable wrt bug #285470
