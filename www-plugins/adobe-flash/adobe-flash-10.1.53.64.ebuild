@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.53.64.ebuild,v 1.9 2010/06/21 17:46:24 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.53.64.ebuild,v 1.10 2010/07/11 10:46:49 lxnay Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -25,10 +25,8 @@ NATIVE_DEPS="x11-libs/gtk+:2
 	net-misc/curl
 	>=sys-libs/glibc-2.4"
 
-EMUL_DEPS=">=app-emulation/emul-linux-x86-baselibs-20100409
-	app-emulation/emul-linux-x86-gtklibs
-	app-emulation/emul-linux-x86-soundlibs
-	app-emulation/emul-linux-x86-xlibs"
+EMUL_DEPS=">=app-emulation/emul-linux-x86-gtklibs-20100409-r1
+	app-emulation/emul-linux-x86-soundlibs"
 
 RDEPEND="x86? ( $NATIVE_DEPS )
 	amd64? ( $EMUL_DEPS )

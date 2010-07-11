@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.34 2010/06/28 19:35:40 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.35 2010/07/11 10:46:49 lxnay Exp $
+
+  11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
+  adobe-flash-10.1.53.64.ebuild:
+  fix EMUL_DEPS, just list direct dependencies
 
   28 Jun 2010; Jim Ramsay <lack@gentoo.org> files/mms.cfg:
   Fix typo in /etc/adobe/mms.cfg file header
