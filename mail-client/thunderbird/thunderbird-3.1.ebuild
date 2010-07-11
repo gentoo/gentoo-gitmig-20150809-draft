@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.ebuild,v 1.3 2010/06/26 21:42:09 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.ebuild,v 1.4 2010/07/11 12:53:10 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -121,6 +121,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.1-noalsa-fixup.patch"
 
 	epatch "${FILESDIR}"/${PN}-3.1-gcc45.patch
+
+	# ARM fixes, bug 327783
+	epatch "${FILESDIR}/${PN}-xul-1.9.2-arm-fixes.patch"
 
 	eautoreconf
 
