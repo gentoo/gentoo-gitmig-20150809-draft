@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/idm-console-framework/idm-console-framework-1.1.5.ebuild,v 1.2 2010/07/10 20:00:12 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/idm-console-framework/idm-console-framework-1.1.5.ebuild,v 1.3 2010/07/11 09:47:34 lxnay Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc examples source"
 
 inherit java-pkg-2 eutils java-ant-2
 
-DESCRIPTION="A Java Management Console framework used for remote server management."
+DESCRIPTION="A Java Management Console framework used for remote server management"
 HOMEPAGE="http://directory.fedoraproject.org/"
 SRC_URI="http://directory.fedoraproject.org/sources/${P}.tar.bz2"
 

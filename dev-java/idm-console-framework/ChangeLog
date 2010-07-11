@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/idm-console-framework
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/idm-console-framework/ChangeLog,v 1.2 2010/07/10 20:00:12 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/idm-console-framework/ChangeLog,v 1.3 2010/07/11 09:47:34 lxnay Exp $
+
+  11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
+  idm-console-framework-1.1.5.ebuild:
+  fix DESCRIPTION
 
   10 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
   idm-console-framework-1.1.5.ebuild:
