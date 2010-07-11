@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.10.2.ebuild,v 1.4 2010/07/07 09:18:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.10.2.ebuild,v 1.5 2010/07/11 18:47:45 armin76 Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ WX_GTK_VER="2.8"
 
 inherit wxwidgets eutils autotools
 
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~ppc sparc x86 ~x86-fbsd"
 
 DESCRIPTION="wxWidgets GUI for PostgreSQL."
 HOMEPAGE="http://www.pgadmin.org/"
