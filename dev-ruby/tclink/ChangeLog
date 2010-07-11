@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tclink
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tclink/ChangeLog,v 1.1 2008/01/24 00:07:34 caleb Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tclink/ChangeLog,v 1.2 2010/07/11 19:55:16 graaff Exp $
+
+*tclink-3.4.4-r1 (11 Jul 2010)
+
+  11 Jul 2010; Hans de Graaff <graaff@gentoo.org> +tclink-3.4.4-r1.ebuild:
+  Convert to ruby-ng.
 
 *tclink-3.4.4 (23 Jan 2008)
 
