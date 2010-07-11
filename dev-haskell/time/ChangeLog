@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/time
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.22 2010/07/01 19:59:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.23 2010/07/11 15:45:55 slyfox Exp $
+
+  11 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> time-1.1.2.0.ebuild,
+  +files/time-1.1.2.0-remove-werror.patch, time-1.1.2.4.ebuild,
+  time-1.1.4.ebuild:
+  Fixed bug #305853 reported by Christian Axelsson <smiler@lanil.mine.nu>.
+  Propagated keywords ~alpha ~amd64-linux ~ia64 ~x86-linux ~x86-macos. Added
+  RESTRICT=test to older ebuilds (to avoid bug #314587 poping up again).
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> time-1.1.2.0.ebuild,
   time-1.1.2.4.ebuild:

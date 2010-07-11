@@ -1,0 +1,246 @@
+Original report: https://bugs.gentoo.org/show_bug.cgi?id=305853
+new ghc hates old '-ffi' style flags:
+> Data/Time/Clock/CTimeval.hs:1:11:
+>     Warning: -ffi is deprecated: use -XForeignFunctionInterface or pragma {-# LANGUAGE ForeignFunctionInterface #-} instead
+> <no location info>:
+> Failing due to -Werror.
+diff --git a/Data/Time.hs b/Data/Time.hs
+index 4167ec6..e55f25a 100644
+--- a/Data/Time.hs
++++ b/Data/Time.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ module Data.Time
+ (
+diff --git a/Data/Time/Calendar.hs b/Data/Time/Calendar.hs
+index 30dd9bf..9d6cf1a 100644
+--- a/Data/Time/Calendar.hs
++++ b/Data/Time/Calendar.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ module Data.Time.Calendar
+ (
+diff --git a/Data/Time/Calendar/Days.hs b/Data/Time/Calendar/Days.hs
+index 4b563bf..8816e80 100644
+--- a/Data/Time/Calendar/Days.hs
++++ b/Data/Time/Calendar/Days.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Calendar.Days
+diff --git a/Data/Time/Calendar/Easter.hs b/Data/Time/Calendar/Easter.hs
+index 66283d2..dd45363 100644
+--- a/Data/Time/Calendar/Easter.hs
++++ b/Data/Time/Calendar/Easter.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ module Data.Time.Calendar.Easter
+ 	(
+diff --git a/Data/Time/Calendar/Gregorian.hs b/Data/Time/Calendar/Gregorian.hs
+index 2d3546c..52a7c43 100644
+--- a/Data/Time/Calendar/Gregorian.hs
++++ b/Data/Time/Calendar/Gregorian.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Calendar.Gregorian
+diff --git a/Data/Time/Calendar/Julian.hs b/Data/Time/Calendar/Julian.hs
+index 5b389fb..7c2ede4 100644
+--- a/Data/Time/Calendar/Julian.hs
++++ b/Data/Time/Calendar/Julian.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ module Data.Time.Calendar.Julian
+ (
+diff --git a/Data/Time/Calendar/JulianYearDay.hs b/Data/Time/Calendar/JulianYearDay.hs
+index ba10c8f..c7f38ae 100644
+--- a/Data/Time/Calendar/JulianYearDay.hs
++++ b/Data/Time/Calendar/JulianYearDay.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Calendar.JulianYearDay
+diff --git a/Data/Time/Calendar/MonthDay.hs b/Data/Time/Calendar/MonthDay.hs
+index ac0c4d3..f823cae 100644
+--- a/Data/Time/Calendar/MonthDay.hs
++++ b/Data/Time/Calendar/MonthDay.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ module Data.Time.Calendar.MonthDay
+ 	(
+diff --git a/Data/Time/Calendar/OrdinalDate.hs b/Data/Time/Calendar/OrdinalDate.hs
+index 9dbdd96..139fbd3 100644
+--- a/Data/Time/Calendar/OrdinalDate.hs
++++ b/Data/Time/Calendar/OrdinalDate.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- | ISO 8601 Ordinal Date format
+ module Data.Time.Calendar.OrdinalDate where
+diff --git a/Data/Time/Calendar/Private.hs b/Data/Time/Calendar/Private.hs
+index f57599c..b9a6af1 100644
+--- a/Data/Time/Calendar/Private.hs
++++ b/Data/Time/Calendar/Private.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Calendar.Private where
+diff --git a/Data/Time/Calendar/WeekDate.hs b/Data/Time/Calendar/WeekDate.hs
+index 0568a32..8399cb1 100644
+--- a/Data/Time/Calendar/WeekDate.hs
++++ b/Data/Time/Calendar/WeekDate.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- | ISO 8601 Week Date format
+ module Data.Time.Calendar.WeekDate where
+diff --git a/Data/Time/Clock.hs b/Data/Time/Clock.hs
+index 5adcaaa..ec10d6e 100644
+--- a/Data/Time/Clock.hs
++++ b/Data/Time/Clock.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- | Types and functions for UTC and UT1
+ module Data.Time.Clock
+diff --git a/Data/Time/Clock/CTimeval.hs b/Data/Time/Clock/CTimeval.hs
+index 8025bdb..bc03f2f 100644
+--- a/Data/Time/Clock/CTimeval.hs
++++ b/Data/Time/Clock/CTimeval.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -ffi -Wall -Werror -cpp #-}
++{-# OPTIONS -ffi -Wall -cpp #-}
+ 
+ -- #hide
+ module Data.Time.Clock.CTimeval where
+diff --git a/Data/Time/Clock/POSIX.hs b/Data/Time/Clock/POSIX.hs
+index b877bf7..1809792 100644
+--- a/Data/Time/Clock/POSIX.hs
++++ b/Data/Time/Clock/POSIX.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror -cpp #-}
++{-# OPTIONS -Wall -cpp #-}
+ 
+ -- | POSIX time, if you need to deal with timestamps and the like.
+ -- Most people won't need this module.
+diff --git a/Data/Time/Clock/Scale.hs b/Data/Time/Clock/Scale.hs
+index 053c515..5fe3fff 100644
+--- a/Data/Time/Clock/Scale.hs
++++ b/Data/Time/Clock/Scale.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Clock.Scale
+diff --git a/Data/Time/Clock/TAI.hs b/Data/Time/Clock/TAI.hs
+index b1c37c1..f03efeb 100644
+--- a/Data/Time/Clock/TAI.hs
++++ b/Data/Time/Clock/TAI.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- | TAI and leap-second tables for converting to UTC: most people won't need this module.
+ module Data.Time.Clock.TAI
+diff --git a/Data/Time/Clock/UTC.hs b/Data/Time/Clock/UTC.hs
+index 57daa6b..9b2a701 100644
+--- a/Data/Time/Clock/UTC.hs
++++ b/Data/Time/Clock/UTC.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Clock.UTC
+diff --git a/Data/Time/Clock/UTCDiff.hs b/Data/Time/Clock/UTCDiff.hs
+index 66a2a48..6e1d912 100644
+--- a/Data/Time/Clock/UTCDiff.hs
++++ b/Data/Time/Clock/UTCDiff.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Clock.UTCDiff where
+diff --git a/Data/Time/Format.hs b/Data/Time/Format.hs
+index 5e10cd1..0c4fe59 100644
+--- a/Data/Time/Format.hs
++++ b/Data/Time/Format.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ module Data.Time.Format
+ 	(
+diff --git a/Data/Time/Format/Parse.hs b/Data/Time/Format/Parse.hs
+index c4a258d..37055cb 100644
+--- a/Data/Time/Format/Parse.hs
++++ b/Data/Time/Format/Parse.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.Format.Parse 
+diff --git a/Data/Time/LocalTime.hs b/Data/Time/LocalTime.hs
+index 5676b58..9ddf942 100644
+--- a/Data/Time/LocalTime.hs
++++ b/Data/Time/LocalTime.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ module Data.Time.LocalTime
+ (
+diff --git a/Data/Time/LocalTime/LocalTime.hs b/Data/Time/LocalTime/LocalTime.hs
+index c902bb6..3d8b7e2 100644
+--- a/Data/Time/LocalTime/LocalTime.hs
++++ b/Data/Time/LocalTime/LocalTime.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.LocalTime.LocalTime
+diff --git a/Data/Time/LocalTime/TimeOfDay.hs b/Data/Time/LocalTime/TimeOfDay.hs
+index ac2de14..c9da692 100644
+--- a/Data/Time/LocalTime/TimeOfDay.hs
++++ b/Data/Time/LocalTime/TimeOfDay.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -Wall -Werror #-}
++{-# OPTIONS -Wall #-}
+ 
+ -- #hide
+ module Data.Time.LocalTime.TimeOfDay
+diff --git a/Data/Time/LocalTime/TimeZone.hs b/Data/Time/LocalTime/TimeZone.hs
+index d80671e..577a658 100644
+--- a/Data/Time/LocalTime/TimeZone.hs
++++ b/Data/Time/LocalTime/TimeZone.hs
+@@ -1,4 +1,4 @@
+-{-# OPTIONS -ffi -Wall -Werror #-}
++{-# OPTIONS -ffi -Wall #-}
+ 
+ -- #hide
+ module Data.Time.LocalTime.TimeZone
