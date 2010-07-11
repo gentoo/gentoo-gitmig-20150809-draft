@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.296 2010/07/10 15:57:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.297 2010/07/11 00:27:23 ranger Exp $
+
+  10 Jul 2010; Brent Baude <ranger@gentoo.org> coreutils-8.5.ebuild:
+  Marking coreutils-8.5 ppc64 for bug 327147
 
   10 Jul 2010; Jeroen Roovers <jer@gentoo.org> coreutils-8.5.ebuild:
   Stable for HPPA (bug #327147).
