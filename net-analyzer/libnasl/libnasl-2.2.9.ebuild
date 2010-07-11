@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9.ebuild,v 1.2 2007/04/11 13:50:23 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9.ebuild,v 1.3 2010/07/11 03:43:28 ssuominen Exp $
 
-inherit toolchain-funcs
+EAPI=2
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A remote security scanner for Linux (libnasl)"
 HOMEPAGE="http://www.nessus.org/"
@@ -15,16 +16,23 @@ IUSE=""
 
 DEPEND="=net-analyzer/nessus-libraries-${PV}"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-openssl-1.patch
+}
+
+src_configure() {
+	tc-export CC
+	econf
+}
 
 src_compile() {
-	export CC="$(tc-getCC)"
-	econf || die "configuration failed"
 	# emake fails for >= -j2. bug #16471.
-	emake -C nasl cflags
-	emake || die "make failed"
+	emake -C nasl cflags || die
+	emake || die
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install failed libnasl"
+	emake DESTDIR="${D}" install || die
 }

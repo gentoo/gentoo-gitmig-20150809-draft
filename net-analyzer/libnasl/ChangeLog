@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.85 2010/01/01 17:38:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.86 2010/07/11 03:43:28 ssuominen Exp $
+
+  11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> libnasl-2.2.9.ebuild,
+  +files/libnasl-2.2.9-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #326545.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> libnasl-2.3.1.ebuild:
   Transfer Prefix keywords
