@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.213 2010/07/11 19:28:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.214 2010/07/11 22:07:36 hwoarang Exp $
+
+  11 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  -openbox-3.4.7.2.ebuild, -openbox-3.4.10.ebuild, -openbox-3.4.11.ebuild,
+  -openbox-3.4.11.1.ebuild:
+  Remove old ebuilds
 
   11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   openbox-3.4.11.2.ebuild:
