@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.133 2010/06/13 21:38:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.134 2010/07/11 13:56:58 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> deskbar-applet-2.26.2.ebuild:
+  Drop hppa keyword per bug #324511.
 
 *deskbar-applet-2.30.1 (13 Jun 2010)
 
