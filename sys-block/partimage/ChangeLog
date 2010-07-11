@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partimage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.44 2010/07/11 02:53:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.45 2010/07/11 04:25:58 ssuominen Exp $
+
+  11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  files/partimage-0.6.8-openssl-1.patch:
+  Missing #ifdef in patch, thanks to Michael Sterrett for noticing.
 
   11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   partimage-0.6.8.ebuild, +files/partimage-0.6.8-openssl-1.patch:
