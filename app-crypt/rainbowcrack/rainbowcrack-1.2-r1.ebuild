@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.8 2009/03/29 13:46:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.9 2010/07/11 06:58:44 ssuominen Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Hash cracker that precomputes plaintext - ciphertext pairs in advance"
 HOMEPAGE="http://project-rainbowcrack.com/"
@@ -30,11 +30,14 @@ src_unpack() {
 		"${FILESDIR}/${P}-share.patch" \
 		"${FILESDIR}/${P}-types.patch" \
 		"${FILESDIR}/${P}+gcc-4.3.patch" \
-		"${FILESDIR}/${P}-asneeded.patch"
+		"${FILESDIR}/${P}-asneeded.patch" \
+		"${FILESDIR}/${P}-openssl-1.patch"
 	sed -i "s#@@SHARE@@#/usr/share/${P}#g" ChainWalkContext.cpp || die
 }
 
 src_compile() {
+	# No ./configure script so we assume md2.h is missing if OpenSSL >= 1.0.0
+	has_version ">=dev-libs/openssl-1.0.0" && append-flags -Dno_md2_h
 	emake -f makefile.linux CXX=$(tc-getCXX) || die "make failed"
 }
 
