@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/mailx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.54 2010/01/11 17:57:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.55 2010/07/11 23:12:53 sping Exp $
+
+*mailx-8.1.2.20050715-r2 (11 Jul 2010)
+
+  11 Jul 2010; Sebastian Pipping <sping@gentoo.org>
+  +mailx-8.1.2.20050715-r2.ebuild,
+  +files/mailx-8.1.2.20050715-offsetof.patch:
+  Apply patch 225901 by Vasiliy A. Balkanov renaming internal macro
+  offsetof() to offsetofmailx() to fix a compile error (bug #310493)
 
   11 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   mailx-8.1.2.20040524-r1.ebuild, mailx-8.1.2.20050715.ebuild,
