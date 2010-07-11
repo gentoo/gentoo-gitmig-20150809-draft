@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.3 2010/06/07 17:45:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.4 2010/07/11 15:03:05 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -19,23 +19,27 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="boost cg doc examples java mpi patented python qt4 tcl theora tk threads R"
+IUSE="boost cg doc examples ffmpeg java mpi mysql odbc patented postgres python qt4 tcl theora tk threads R"
 RDEPEND="
-	mpi? ( virtual/mpi[cxx,romio] )
 	cg? ( media-gfx/nvidia-cg-toolkit )
-	tcl? ( >=dev-lang/tcl-8.2.3 )
-	tk? ( >=dev-lang/tk-8.2.3 )
+	examples? (
+			x11-libs/qt-core:4[qt3support]
+			x11-libs/qt-gui:4[qt3support] )
+	ffmpeg? ( media-video/ffmpeg )
 	java? ( >=virtual/jre-1.5 )
+	mpi? ( virtual/mpi[cxx,romio] )
+	mysql? ( virtual/mysql )
+	odbc? ( dev-db/unixODBC )
+	postgres? ( dev-db/postgresql-base )
 	qt4? (
 			x11-libs/qt-core:4
 			x11-libs/qt-gui:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-sql:4
 			x11-libs/qt-webkit:4 )
-	examples? (
-			x11-libs/qt-core:4[qt3support]
-			x11-libs/qt-gui:4[qt3support] )
+	tcl? ( >=dev-lang/tcl-8.2.3 )
 	theora? ( media-libs/libtheora )
+	tk? ( >=dev-lang/tk-8.2.3 )
 	R? ( dev-lang/R )
 	dev-libs/expat
 	dev-libs/libxml2
@@ -77,6 +81,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-boost-property_map.patch
 	epatch "${FILESDIR}"/${P}-libpng14.patch
 	epatch "${FILESDIR}"/${P}-R.patch
+	epatch "${FILESDIR}"/${P}-odbc.patch
 	sed -e "s:@VTK_TCL_LIBRARY_DIR@:/usr/$(get_libdir):" \
 		-i Wrapping/Tcl/pkgIndex.tcl.in \
 		|| die "Failed to fix tcl pkgIndex file"
@@ -118,9 +123,13 @@ src_configure() {
 		$(cmake-utils_use qt4 VTK_USE_QT)
 		$(cmake-utils_use tcl VTK_WRAP_TCL)
 		$(cmake-utils_use theora VTK_USE_OGGTHEORA_ENCODER)
+		$(cmake-utils_use ffmpeg VTK_USE_FFMPEG_ENCODER)
 		$(cmake-utils_use tk VTK_USE_TK)
 		$(cmake-utils_use threads VTK_USE_PARALLEL)
-		$(cmake-utils_use R VTK_USE_GNU_R) )
+		$(cmake-utils_use R VTK_USE_GNU_R)
+		$(cmake-utils_use mysql VTK_USE_MYSQL)
+		$(cmake-utils_use postgres VTK_USE_POSTGRES)
+		$(cmake-utils_use odbc VTK_USE_ODBC) )
 
 	use theora &&
 	mycmakeargs+=(-DVTK_USE_SYSTEM_OGGTHEORA=ON)
