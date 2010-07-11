@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/camomile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.20 2010/06/27 14:19:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.21 2010/07/11 12:46:17 fauli Exp $
+
+  11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  camomile-0.7.3.ebuild:
+  stable x86, bug 324815
 
   27 Jun 2010; <nixnut@gentoo.org> camomile-0.7.3.ebuild:
   ppc stable #324815
