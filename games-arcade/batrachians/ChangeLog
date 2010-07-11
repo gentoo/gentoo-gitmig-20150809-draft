@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/batrachians
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/ChangeLog,v 1.1 2010/05/18 04:31:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/ChangeLog,v 1.2 2010/07/11 12:31:48 fauli Exp $
+
+  11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  batrachians-0.1.4.ebuild:
+  stable x86, bug 325145
 
 *batrachians-0.1.4 (18 May 2010)
 
