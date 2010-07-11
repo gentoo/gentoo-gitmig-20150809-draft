@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-password
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-password/ChangeLog,v 1.6 2009/08/13 06:23:45 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-password/ChangeLog,v 1.7 2010/07/11 08:10:24 graaff Exp $
+
+*ruby-password-0.5.3-r1 (11 Jul 2010)
+
+  11 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-password-0.5.3-r1.ebuild:
+  Convert to ruby-ng. Fix dependencies. Run tests.
 
   13 Aug 2009; Hans de Graaff <graaff@gentoo.org>
   -ruby-password-0.5.2.ebuild:
