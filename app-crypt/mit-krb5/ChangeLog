@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.224 2010/07/08 15:48:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.225 2010/07/11 10:14:26 klausman Exp $
+
+  11 Jul 2010; Tobias Klausmann <klausman@gentoo.org> mit-krb5-1.8.2.ebuild:
+  Stable on alpha, bug #323525
 
   08 Jul 2010; Brent Baude <ranger@gentoo.org> mit-krb5-1.8.2.ebuild:
   Marking mit-krb5-1.8.2 ppc64 for bug 323525
