@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.11_rc1.ebuild,v 1.2 2010/07/11 11:42:32 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.11_rc1.ebuild,v 1.3 2010/07/11 11:56:31 lxnay Exp $
 
 EAPI="2"
 
@@ -45,10 +45,7 @@ COMMON_DEPEND=">=app-admin/389-admin-console-1.1.0
 	www-servers/apache:2"
 RDEPEND="${COMMON_DEPEND}
 	www-client/lynx
-	www-servers/apache:2[apache2_modules_actions,apache2_modules_alias]
-	www-servers/apache:2[apache2_modules_auth_basic,apache2_modules_authz_default]
-	www-servers/apache:2[apache2_modules_cgi,apache2_modules_mime_magic,apache2_modules_rewrite]
-	www-servers/apache:2[apache2_modules_setenvif,suexec,threads]"
+	www-servers/apache:2[apache2_modules_actions,apache2_modules_alias,apache2_modules_auth_basic,apache2_modules_authz_default,apache2_modules_cgi,apache2_modules_mime_magic,apache2_modules_rewrite,apache2_modules_setenvif,suexec,threads]"
 
 DEPEND="sys-apps/sed ${COMMON_DEPEND}"
 
