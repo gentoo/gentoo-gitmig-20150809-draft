@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.27 2010/06/20 15:25:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.28 2010/07/11 12:01:01 maekke Exp $
+
+  11 Jul 2010; Markus Meier <maekke@gentoo.org> sphinx-0.9.9.ebuild:
+  x86 stable, bug #322751
 
 *sphinx-0.9.9-r1 (20 Jun 2010)
 
