@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1-r1.ebuild,v 1.14 2010/05/03 22:16:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1-r1.ebuild,v 1.15 2010/07/12 09:58:48 pacho Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 LICENSE="LGPL-2 GPL-2 FDL-1.1"
 SLOT="2"
 KEYWORDS="arm sh"
-IUSE="esd gnomecd ipv6"
+IUSE="esd ipv6"
 
 RDEPEND=">=dev-libs/glib-2.16.0:2
 	>=gnome-base/libgnome-2.13.7
@@ -24,11 +24,6 @@ RDEPEND=">=dev-libs/glib-2.16.0:2
 	>=media-libs/gst-plugins-base-0.10.3
 	>=media-libs/gst-plugins-good-0.10
 	>=gnome-base/orbit-2
-	gnomecd? (
-		>=gnome-extra/nautilus-cd-burner-2.12
-		|| (
-			>=media-plugins/gst-plugins-cdio-0.10
-			>=media-plugins/gst-plugins-cdparanoia-0.10 ) )
 	>=gnome-base/libglade-2
 	dev-libs/libxml2
 	>=gnome-base/gconf-2
@@ -46,11 +41,11 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable esd esound)
 		$(use_enable esd vumeter)
-		$(use_enable gnomecd cddbslave)
-		$(use_enable gnomecd)
 		$(use_enable ipv6)
 		--enable-gstmix
 		--enable-gstprops
+		--disable-cddbslave
+		--disable-gnomecd
 		--disable-esdtest
 		--disable-scrollkeeper
 		--disable-schemas-install"

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.26.0-r1.ebuild,v 1.9 2010/05/03 22:16:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.26.0-r1.ebuild,v 1.10 2010/07/12 09:58:48 pacho Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 LICENSE="LGPL-2 GPL-2 FDL-1.1"
 SLOT="2"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="+sound esd gnomecd ipv6 pulseaudio"
+IUSE="+sound esd ipv6 pulseaudio"
 
 RDEPEND=">=dev-libs/glib-2.18.2:2
 	>=x11-libs/gtk+-2.15.1:2
@@ -25,12 +25,6 @@ RDEPEND=">=dev-libs/glib-2.18.2:2
 	>=media-libs/gst-plugins-good-0.10
 	>=gnome-base/orbit-2
 	>=dev-libs/libunique-1
-	gnomecd? (
-		>=gnome-extra/nautilus-cd-burner-2.12
-		>=gnome-base/libbonobo-2
-		|| (
-			>=media-plugins/gst-plugins-cdio-0.10
-			>=media-plugins/gst-plugins-cdparanoia-0.10 ) )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.15[glib] )
 	sound? (
 		>=media-libs/libcanberra-0.4[gtk]
@@ -49,14 +43,14 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--enable-gstprops
+		--disable-cddbslave
+		--disable-gnomecd
 		--disable-esdtest
 		--disable-static
 		--disable-scrollkeeper
 		--disable-schemas-install
 		$(use_enable esd esound)
 		$(use_enable esd vumeter)
-		$(use_enable gnomecd cddbslave)
-		$(use_enable gnomecd)
 		$(use_enable ipv6)
 		$(use_enable pulseaudio)
 		$(use_enable !pulseaudio gstmix)
