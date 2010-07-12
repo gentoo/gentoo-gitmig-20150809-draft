@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/p3scan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.14 2009/05/16 00:39:52 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.15 2010/07/12 09:05:02 hwoarang Exp $
+
+*p3scan-2.3.2-r1 (12 Jul 2010)
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  +p3scan-2.3.2-r1.ebuild:
+  Rebump which fixes CC/C{XX}FLAGS/LDFLAGS. Unbundles ripmime library. 
+  Fixes bug #244144. Many thanks to Kevin Pyle for all the work 
+  and the patches he provided
 
   16 May 2009; Mark Loeser <halcy0n@gentoo.org> p3scan-2.3.2.ebuild:
   Fix elog statement; bug #260792
