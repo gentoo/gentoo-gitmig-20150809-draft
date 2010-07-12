@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/developer/make.defaults,v 1.7 2010/07/11 21:19:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/developer/make.defaults,v 1.8 2010/07/12 08:53:08 ssuominen Exp $
 
 FEATURES="collision-protect digest multilib-strict sign splitdebug stricter test test-fail-continue userpriv usersandbox"
 
@@ -11,7 +11,7 @@ USE="-branding"
 I_KNOW_WHAT_I_AM_DOING="yes"
 
 # Enable asneeded for GNU ld.
-LDFLAGS="-Wl,--as-needed ${LDFLAGS}"
+LDFLAGS="-Wl,-O1 -Wl,--as-needed"
 
 # Log eqawarn messages
 PORTAGE_ELOG_CLASSES="${PORTAGE_ELOG_CLASSES} qa"
