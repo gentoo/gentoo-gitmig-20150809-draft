@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/gentoo-syntax-1.16.ebuild,v 1.2 2010/07/12 17:25:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/gentoo-syntax-1.16.ebuild,v 1.3 2010/07/12 21:51:59 hwoarang Exp $
 
 inherit xemacs-elisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/index.xml"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=app-editors/xemacs-21.4.20-r5
