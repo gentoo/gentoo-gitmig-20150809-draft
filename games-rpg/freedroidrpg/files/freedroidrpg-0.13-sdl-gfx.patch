@@ -1,0 +1,21 @@
+diff -ru freedroidrpg-0.13.orig/src/struct.h freedroidrpg-0.13/src/struct.h
+--- freedroidrpg-0.13.orig/src/struct.h	2010-01-21 07:31:29.000000000 -0500
++++ freedroidrpg-0.13/src/struct.h	2010-01-25 11:35:34.764604580 -0500
+@@ -30,16 +30,7 @@
+ #include "system.h"
+ #include "defs.h"
+ 
+-typedef struct tColorRGBA {
+-	Uint8 r;
+-	Uint8 g;
+-	Uint8 b;
+-	Uint8 a;
+-} tColorRGBA, myColor;
+-
+-typedef struct tColorY {
+-	Uint8 y;
+-} tColorY;
++typedef tColorRGBA myColor;
+ 
+ /**
+  * Simple doubly linked list implementation.

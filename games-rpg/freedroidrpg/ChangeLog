@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/freedroidrpg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.26 2010/04/19 07:19:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.27 2010/07/12 21:40:55 mr_bones_ Exp $
+
+  12 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  freedroidrpg-0.13.ebuild, +files/freedroidrpg-0.13-sdl-gfx.patch,
+  files/freedroidrpg-0.13-syslibs.patch:
+  avoid compile breakage with newer sdl-gfx (bug #324483)
 
   19 Apr 2010; Tupone Alfredo <tupone@gentoo.org> freedroidrpg-0.13.ebuild:
   Force python2 version. Fix bug #312275 by arfrever@gentoo.org

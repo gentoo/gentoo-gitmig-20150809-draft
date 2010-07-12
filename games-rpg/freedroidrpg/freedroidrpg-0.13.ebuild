@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.13.ebuild,v 1.4 2010/04/19 07:19:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.13.ebuild,v 1.5 2010/07/12 21:40:55 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="opengl"
 
-RDEPEND="media-libs/libsdl[video]
+RDEPEND="media-libs/libsdl[opengl?,video]
 	dev-lang/lua
 	media-libs/jpeg
 	media-libs/libpng
@@ -39,6 +39,7 @@ pkg_setup() {
 src_prepare() {
 	rm -rf lua src/SDL_rotozoom*
 	epatch "${FILESDIR}"/${P}-syslibs.patch
+	has_version '<media-libs/sdl-gfx-2.0.21' && epatch "${FILESDIR}"/${P}-sdl-gfx.patch
 
 	python_convert_shebangs -r 2 .
 
