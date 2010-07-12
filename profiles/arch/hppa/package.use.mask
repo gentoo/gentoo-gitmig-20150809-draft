@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.41 2010/07/11 14:07:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.42 2010/07/12 22:59:27 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
+# Mask sys-cluster/heartbeat since it is untested (bug #326423)
+sys-cluster/pacemaker heartbeat
 
 # Pacho Ramos <pacho@gentoo.org> (11 Jul 2010)
 # Mask due bug #324511, this will be general once needed by more packages.
