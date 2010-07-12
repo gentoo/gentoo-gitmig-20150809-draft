@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8.ebuild,v 1.4 2010/07/06 15:46:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8.ebuild,v 1.5 2010/07/12 10:14:02 pacho Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="+brasero cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
+IUSE="cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
@@ -32,9 +32,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18
 		>=media-libs/gst-plugins-base-0.10.24
 		>=media-libs/gst-plugins-bad-0.10.6 )
 
-	cdr? (
-		brasero? ( >=app-cdr/brasero-0.9.1 )
-		!brasero? ( >=gnome-extra/nautilus-cd-burner-2.21.6 ) )
+	cdr? ( >=app-cdr/brasero-0.9.1 )
 	daap? ( >=net-dns/avahi-0.6 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	udev? (
@@ -109,6 +107,8 @@ pkg_setup() {
 	if ! use cdr ; then
 		ewarn "You have cdr USE flag disabled."
 		ewarn "You will not be able to burn CDs."
+	else
+		G2CONF="${G2CONF} $(use_with cdr libbrasero-media) --without-libnautilus-burn"
 	fi
 
 	if ! use python; then
@@ -120,12 +120,6 @@ pkg_setup() {
 		if use upnp; then
 			ewarn "You need python support in addition to upnp"
 		fi
-	fi
-
-	if use brasero; then
-		G2CONF="${G2CONF} $(use_with cdr libbrasero-media) --without-libnautilus-burn"
-	else
-		G2CONF="${G2CONF} $(use_with cdr libnautilus-burn) --without-libbrasero-media"
 	fi
 
 	G2CONF="${G2CONF}

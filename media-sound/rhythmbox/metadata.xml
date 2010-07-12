@@ -4,8 +4,7 @@
   <herd>gnome</herd>
   <herd>gstreamer</herd>
   <use>
-    <flag name="daap">Enable support for local network music sharing via daap</flag>
-	<flag name="brasero">Enable CD burning via <pkg>app-cdr/brasero</pkg> rather than <pkg>gnome-extra/nautilus-cd-burner</pkg></flag>
+  	<flag name="daap">Enable support for local network music sharing via daap</flag>
 	<flag name="udev">Enable hardware detection via <pkg>sys-fs/udev</pkg>
 	replacing the deprecated <pkg>sys-apps/hal</pkg> code.</flag>
 	<flag name="upnp">Enable support for local network music sharing via upnp</flag>
