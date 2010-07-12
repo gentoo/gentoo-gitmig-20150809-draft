@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.45 2010/06/29 08:54:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.46 2010/07/12 19:55:55 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> encfs-1.6.ebuild:
+  Stable on amd64 wrt bug #327929
 
   29 Jun 2010; Vlastimil Babka <caster@gentoo.org> encfs-1.6.ebuild:
   Inherit multilib instead of eutils. Make boost message einfo instead of
