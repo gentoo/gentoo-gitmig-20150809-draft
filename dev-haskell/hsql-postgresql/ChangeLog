@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hsql-postgresql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.11 2010/06/17 18:22:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.12 2010/07/12 15:49:30 slyfox Exp $
+
+  12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  hsql-postgresql-1.7.ebuild:
+  Fixed bug #278897 (build failure on ghc-6.10+). Thanks to Nikolay Orlyuk
+  <virkony@gmail.com> for the report and fix.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   hsql-postgresql-1.7.ebuild, hsql-postgresql-1.7.3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-odbc/hsql-odbc-1.7.ebuild,v 1.7 2007/12/13 05:43:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-odbc/hsql-odbc-1.7.ebuild,v 1.8 2010/07/12 15:48:39 slyfox Exp $
 
 CABAL_FEATURES="lib haddock"
 inherit haskell-cabal versionator
@@ -18,8 +18,10 @@ DEPEND=">=dev-lang/ghc-6.4.1
 	~dev-haskell/hsql-${PV}
 	>=dev-db/unixODBC-2.2"
 
+CABAL_CONFIGURE_FLAGS="--constraint=base<4"
+
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	cabal-mksetup
 	sed -i -e  '/cc-options:/d' "${S}/${PN}.cabal"

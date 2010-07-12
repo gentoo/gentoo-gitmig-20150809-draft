@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hsql
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.12 2009/08/05 18:07:58 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.13 2010/07/12 15:46:39 slyfox Exp $
+
+  12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> hsql-1.7.ebuild,
+  hsql-1.7.1.ebuild:
+  Fixed bug #278897 (build failure on ghc-6.10+). Thanks to Nikolay Orlyuk
+  <virkony@gmail.com> for the report and fix.
 
 *hsql-1.7.1 (05 Aug 2009)
 

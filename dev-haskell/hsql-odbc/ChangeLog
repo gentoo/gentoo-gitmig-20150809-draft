@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hsql-odbc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-odbc/ChangeLog,v 1.8 2007/12/13 05:43:36 dcoutts Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-odbc/ChangeLog,v 1.9 2010/07/12 15:48:39 slyfox Exp $
+
+  12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> hsql-odbc-1.7.ebuild:
+  Fixed bug #278897 (build failure on ghc-6.10+). Thanks to Nikolay Orlyuk
+  <virkony@gmail.com> for the report and fix.
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hsql-odbc-1.7.ebuild:
   Updates for upward compatability with cabal-1.2 and ghc-6.8

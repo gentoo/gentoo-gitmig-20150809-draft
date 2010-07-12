@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/hsql-postgresql-1.7.ebuild,v 1.9 2010/06/17 18:22:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/hsql-postgresql-1.7.ebuild,v 1.10 2010/07/12 15:49:30 slyfox Exp $
 
 CABAL_FEATURES="lib haddock"
 inherit haskell-cabal versionator
@@ -18,8 +18,10 @@ DEPEND=">=dev-lang/ghc-6.4.1
 	~dev-haskell/hsql-${PV}
 	dev-db/postgresql-base"
 
+CABAL_CONFIGURE_FLAGS="--constraint=base<4"
+
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	cabal-mksetup
 	echo >> "${S}/${PN}.cabal"
