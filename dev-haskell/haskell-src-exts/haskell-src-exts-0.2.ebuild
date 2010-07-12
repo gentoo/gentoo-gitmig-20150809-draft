@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.11 2007/12/13 05:41:30 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.12 2010/07/12 18:53:17 slyfox Exp $
 
 CABAL_FEATURES="lib happy"
 inherit base haskell-cabal eutils versionator
@@ -18,6 +18,8 @@ DEPEND=">=dev-lang/ghc-6.2
 		dev-haskell/happy"
 
 S=${WORKDIR}/haskell-src-exts/src/haskell-src-exts
+
+CABAL_CONFIGURE_FLAGS="--constraint=base<4"
 
 src_unpack() {
 	base_src_unpack
