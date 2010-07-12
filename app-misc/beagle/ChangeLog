@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.114 2010/07/09 17:22:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.115 2010/07/12 18:01:11 fauli Exp $
+
+  12 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  beagle-0.3.9-r3.ebuild:
+  stable x86, bug 324723
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> beagle-0.3.9-r3.ebuild:
   amd64 stable, bug 324723
