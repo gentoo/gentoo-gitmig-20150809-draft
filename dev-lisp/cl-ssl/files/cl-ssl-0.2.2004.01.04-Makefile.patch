@@ -1,0 +1,11 @@
+--- cl-ssl/Makefile
++++ cl-ssl/Makefile
+@@ -24,7 +24,7 @@
+ all: $(shared_lib)
+ 
+ linux: $(source) Makefile
+-	gcc -shared /usr/lib/libcrypto.so /usr/lib/libssl.so -o $(shared_lib)
++	$(CC) $(LDFLAGS) $(CFLAGS) -shared -lcrypto -lssl -o $(shared_lib)
+ 
+ mac:
+ 	ld -bundle /usr/lib/bundle1.o /usr/lib/libcrypto.dylib /usr/lib/libssl.dylib -flat_namespace -undefined suppress -o $(base).dylib  

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-ssl
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/ChangeLog,v 1.7 2008/03/27 16:27:41 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ssl/ChangeLog,v 1.8 2010/07/12 23:37:30 ssuominen Exp $
+
+  12 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  cl-ssl-0.2.2004.01.04.ebuild, +files/cl-ssl-0.2.2004.01.04-Makefile.patch:
+  Respect environment CC, CFLAGS and LDFLAGS. Fix installation with
+  multilib-strict.
 
   27 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   cl-ssl-0.2.2004.01.04.ebuild:
