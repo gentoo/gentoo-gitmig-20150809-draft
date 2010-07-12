@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXrender
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.72 2010/06/14 17:37:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXrender/ChangeLog,v 1.73 2010/07/12 11:13:00 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  libXrender-0.9.6.ebuild:
+  Stable on amd64 wrt bug #327777
 
   14 Jun 2010; Fabian Groffen <grobian@gentoo.org> libXrender-0.9.6.ebuild:
   Marked ~x64-macos, bug #323945
