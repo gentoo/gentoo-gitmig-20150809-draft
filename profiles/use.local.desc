@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5764 2010/07/11 15:27:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5765 2010/07/12 10:07:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1312,7 +1312,6 @@ gnome-extra/gnome-games:artworkextra - Installs extra artwork for various games
 gnome-extra/gnome-games:clutter - Build games that use media-libs/clutter and are written in JavaScript using dev-libs/seed
 gnome-extra/gnome-games:sound - Enable sound using media-libs/libcanberra
 gnome-extra/gnome-lirc-properties:policykit - Use sys-auth/policykit to gain privileges to change configuration files
-gnome-extra/gnome-media:gnomecd - Builds the GNOME CD Player
 gnome-extra/gnome-media:sound - Adds support for sound notification themes using media-libs/libcanberra
 gnome-extra/gnome-power-manager:policykit - Enable sys-auth/policykit authentication support
 gnome-extra/gtkhtml:glade - Provide integration with dev-util/glade.
@@ -1323,7 +1322,6 @@ gnome-extra/libgda:xbase - Enables support for xbase databases (dBase, FoxPro, e
 gnome-extra/libgsf:gtk - Enable use of gdk in thumbnailer
 gnome-extra/libgsf:thumbnail - Enable libgsf supported formats thumbnailer
 gnome-extra/music-applet:mpd - Enable MPD support
-gnome-extra/nautilus-sendto:empathy - Enables support for net-im/empathy
 gnome-extra/nautilus-sendto:gajim - Enables support for net-im/gajim
 gnome-extra/nautilus-sendto:mail - Enables support for mailto using gnome-extra/evolution-data-server
 gnome-extra/nautilus-sendto:pidgin - Enables support for net-im/pidgin
