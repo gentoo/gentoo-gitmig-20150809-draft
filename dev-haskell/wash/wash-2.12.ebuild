@@ -1,9 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.12.ebuild,v 1.1 2007/12/13 17:33:09 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.12.ebuild,v 1.2 2010/07/12 14:23:37 slyfox Exp $
+
+EAPI=1
 
 CABAL_FEATURES="profile haddock lib bin"
-inherit haskell-cabal check-reqs
+inherit check-reqs eutils haskell-cabal
 
 MY_PN="WashNGo"
 MY_P="${MY_PN}-${PV}"
@@ -18,6 +20,7 @@ KEYWORDS="~amd64 ~x86 ~sparc"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6
+		dev-haskell/parsec:0
 		dev-haskell/regex-compat"
 
 S="${WORKDIR}/${MY_P}"
@@ -37,7 +40,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	cabal-mksetup
 	sed -i -e "/Extensions/aGhc-Options: -O +RTS -M${CHECKREQS_MEMORY}m -RTS" \
@@ -51,6 +54,14 @@ src_unpack() {
 			,containers' \
 		"${S}/WASH.cabal"
 	fi
+
+	# dislikes parsec-3
+	sed -i -e 's/parsec/parsec < 3/' \
+		"${S}/WASH.cabal"
+
+	cd "${S}"
+	epatch "${FILESDIR}/wash-2.12-ghc-io.patch"
+
 }
 
 src_install() {
