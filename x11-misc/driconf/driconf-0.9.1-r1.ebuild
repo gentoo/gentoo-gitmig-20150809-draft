@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1-r1.ebuild,v 1.1 2010/03/16 11:19:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1-r1.ebuild,v 1.2 2010/07/12 11:16:41 hwoarang Exp $
 
 EAPI=2
 inherit distutils eutils
@@ -11,7 +11,7 @@ SRC_URI="http://freedesktop.org/~fxkuehl/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4

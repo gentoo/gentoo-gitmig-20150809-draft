@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtscal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtscal/ChangeLog,v 1.1 2009/03/15 21:50:52 solar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtscal/ChangeLog,v 1.2 2010/07/12 11:19:06 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> xtscal-0.6.3.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *xtscal-0.6.3 (15 Mar 2009)
 
