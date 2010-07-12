@@ -1,0 +1,21 @@
+diff -ur gnash-0.8.7_p20100706/macros/kde4.m4 gnash-0.8.7_p20100706.new/macros/kde4.m4
+--- gnash-0.8.7_p20100706/macros/kde4.m4	2010-07-06 17:01:50.987903174 +0200
++++ gnash-0.8.7_p20100706.new/macros/kde4.m4	2010-07-12 14:05:10.859918495 +0200
+@@ -136,7 +136,7 @@
+     dnl Look for the libraries
+     AC_CACHE_VAL(ac_cv_path_kde4_lib, [
+       if test x"${with_kde4_lib}" != x ; then
+-        if test -f ${with_kde4_lib}/libkdeui.la; then
++        if test -f ${with_kde4_lib}/libkdeui.so; then
+ 	        ac_cv_path_kde4_lib="-L`(cd ${with_kde4_lib}; pwd)`"
+         else
+ 	        AC_MSG_ERROR([${with_kde4_lib} directory doesn't contain KDE 4.x libraries.])
+@@ -201,7 +201,7 @@
+     KDE4_PLUGINDIR="${KDE4_PREFIX}/lib/kde4"
+     KDE4_SERVICESDIR="${KDE4_PREFIX}/share/kde4/services"
+     KDE4_CONFIGDIR="${KDE4_PREFIX}/share/kde4/config"
+-    KDE4_APPSDATADIR="${KDE4_PREFIX}/share/kde4/apps/klash"
++    KDE4_APPSDATADIR="${KDE4_PREFIX}/share/apps/klash"
+   fi                            dnl end of build_kparts4
+ 
+   if test x"${ac_cv_path_kde4_incl}" != x ; then
