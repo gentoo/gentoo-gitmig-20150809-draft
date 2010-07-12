@@ -7,8 +7,4 @@
     <name>Denis Dupeyron</name>
     <description>maintainer</description>
   </maintainer>
-  <use>
-    <flag name="hou">Adds support for the Hordes of the Underdark expansion pack</flag>
-    <flag name="sou">Adds support for the Shadows of Undrentide expension pack</flag>
-  </use>
 </pkgmetadata>

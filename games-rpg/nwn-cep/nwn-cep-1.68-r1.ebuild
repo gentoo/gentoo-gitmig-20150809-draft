@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-1.68-r1.ebuild,v 1.2 2010/06/28 22:03:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-1.68-r1.ebuild,v 1.3 2010/07/12 17:07:46 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="The Community Expansion Pack for Neverwinter Nights"
@@ -19,8 +20,7 @@ RDEPEND=">=games-rpg/nwn-1.68"
 
 pkg_setup() {
 	games_pkg_setup
-	if ! built_with_use games-rpg/nwn-data sou || ! built_with_use games-rpg/nwn-data hou
-	then
+	if ! has_version 'games-rpg/nwn-data[hou,sou]' ; then
 		eerror "${P} requires NWN v1.68, Shadows of Undrentide, and Hordes of"
 		eerror "the Underdark. Please make sure you have all three before using"
 		eerror "this patch."
