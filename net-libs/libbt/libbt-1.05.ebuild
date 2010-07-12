@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.5 2010/06/20 11:47:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.6 2010/07/12 20:14:36 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 	net-misc/curl
-	sys-fs/e2fsprogs"
+	>=sys-apps/util-linux-2.16.2
+	!x11-wm/blackbox"
 
 src_unpack() {
 	unpack ${A}
