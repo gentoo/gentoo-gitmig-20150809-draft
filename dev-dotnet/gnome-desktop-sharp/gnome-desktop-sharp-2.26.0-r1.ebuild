@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/gnome-desktop-sharp-2.26.0-r1.ebuild,v 1.2 2010/06/21 23:45:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/gnome-desktop-sharp-2.26.0-r1.ebuild,v 1.3 2010/07/12 17:43:55 pacho Exp $
 
 EAPI=2
 
@@ -14,6 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="test"
+
+add_rdepend ">=gnome-base/gnome-desktop-2.30"
 
 src_prepare() {
 	# Update soname to fit with gnome-desktop-2.30
