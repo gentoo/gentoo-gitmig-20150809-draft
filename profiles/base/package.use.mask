@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.151 2010/07/10 06:10:01 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.152 2010/07/12 14:44:20 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (12 Jul 2010)
+# lirc support is broken in the snapshot
+>=www-plugins/gnash-0.8.7_p20100706 lirc
 
 # Andrey Grozin <grozin@gentoo.org> (7 Jul 2010)
 # Doesn't work with the current qt

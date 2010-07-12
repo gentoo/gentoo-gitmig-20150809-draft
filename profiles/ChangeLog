@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4395 2010/07/12 10:17:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4396 2010/07/12 14:44:18 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jul 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  base/package.use.mask:
+  mask USE=lirc for gnash snapshot
 
   12 Jul 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask eel and nautilus-cd-burner stuff for removal.
