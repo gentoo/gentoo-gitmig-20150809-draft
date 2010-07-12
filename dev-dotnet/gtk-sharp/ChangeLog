@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.107 2010/07/09 17:12:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.108 2010/07/12 17:59:29 fauli Exp $
+
+  12 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  gtk-sharp-2.12.10.ebuild:
+  stable x86, bug 327279
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> gtk-sharp-2.12.10.ebuild:
   amd64 stable, bug 327279

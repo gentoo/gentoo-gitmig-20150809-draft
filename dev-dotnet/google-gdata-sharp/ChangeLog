@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/google-gdata-sharp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.3 2010/07/09 17:10:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.4 2010/07/12 17:49:04 fauli Exp $
+
+  12 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  google-gdata-sharp-1.4.0.2.ebuild:
+  stable x86, bug 327279
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org>
   google-gdata-sharp-1.4.0.2.ebuild:

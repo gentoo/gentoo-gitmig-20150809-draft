@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/google-gdata-sharp-1.4.0.2.ebuild,v 1.3 2010/07/09 17:10:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/google-gdata-sharp-1.4.0.2.ebuild,v 1.4 2010/07/12 17:49:04 fauli Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://google-gdata.googlecode.com/files/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # tests are completely broken (bug #310101), revisit in future bumps.
