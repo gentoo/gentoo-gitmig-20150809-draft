@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-1.1.3.0.ebuild,v 1.2 2010/07/12 13:16:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-1.1.3.0.ebuild,v 1.3 2010/07/12 13:18:10 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal versionator
@@ -29,7 +29,7 @@ S="${WORKDIR}/${MY_P}"
 CABAL_CONFIGURE_FLAGS="--constraint=base<4"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	cp "${FILESDIR}/hdbc-odbc-helper.h" "${S}/"
 
