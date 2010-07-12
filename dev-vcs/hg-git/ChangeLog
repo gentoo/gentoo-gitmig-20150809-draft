@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.8 2010/07/10 15:27:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.9 2010/07/12 06:51:22 djc Exp $
+
+*hg-git-0.2.3 (12 Jul 2010)
+
+  12 Jul 2010; Dirkjan Ochtman <djc@gentoo.org> +hg-git-0.2.3.ebuild:
+  Version bump to 0.2.3 (for hg 1.6 compatibility).
 
   10 Jul 2010; Christian Faulhammer <fauli@gentoo.org> hg-git-0.2.2.ebuild:
   stable x86, bug 327149
