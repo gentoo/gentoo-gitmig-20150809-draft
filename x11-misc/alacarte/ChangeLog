@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.95 2010/06/14 20:12:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.96 2010/07/12 10:48:56 pacho Exp $
+
+  11 Jul 2010; Pacho Ramos <pacho@gentoo.org> -alacarte-0.11.10.ebuild,
+  alacarte-0.12.1.ebuild:
+  Drop hppa keywords and old versions per bug 324511
 
   14 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   alacarte-0.11.10.ebuild:
