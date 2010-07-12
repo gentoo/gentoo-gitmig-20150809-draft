@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fatsort
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.9 2010/04/16 18:32:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.10 2010/07/12 20:32:26 billie Exp $
+
+  12 Jul 2010; Daniel Pielmeier <billie@gentoo.org>
+  -fatsort-0.9.12.199.ebuild:
+  Remove old.
 
   16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   fatsort-0.9.13.1.206.ebuild:
