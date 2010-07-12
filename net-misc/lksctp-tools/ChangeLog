@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/lksctp-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.25 2010/07/11 00:33:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.26 2010/07/12 17:06:51 flameeyes Exp $
+
+  12 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -lksctp-tools-1.0.6.ebuild, -lksctp-tools-1.0.8.ebuild:
+  Drop older versions.
 
   11 Jul 2010; Brent Baude <ranger@gentoo.org> lksctp-tools-1.0.10.ebuild:
   stable ppc64, bug 322321
