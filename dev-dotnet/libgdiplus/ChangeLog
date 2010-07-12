@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.113 2010/07/11 17:51:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.114 2010/07/12 17:31:53 fauli Exp $
+
+  12 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  libgdiplus-2.6.4.ebuild:
+  stable x86, bug 327279
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org> libgdiplus-1.2.4.ebuild,
   libgdiplus-1.2.6.ebuild, libgdiplus-2.0.ebuild:
