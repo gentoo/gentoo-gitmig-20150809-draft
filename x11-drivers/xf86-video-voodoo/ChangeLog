@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-voodoo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-voodoo/ChangeLog,v 1.49 2010/07/05 08:35:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-voodoo/ChangeLog,v 1.50 2010/07/12 11:09:26 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  xf86-video-voodoo-1.2.4.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *xf86-video-voodoo-1.2.4 (05 Jul 2010)
 
