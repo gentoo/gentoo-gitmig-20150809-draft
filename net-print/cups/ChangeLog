@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.389 2010/07/11 09:28:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.390 2010/07/12 17:38:47 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> cups-1.3.11-r2.ebuild:
+  Stable on amd64 wrt bug #295256
 
   11 Jul 2010; Tobias Klausmann <klausman@gentoo.org> cups-1.3.11-r2.ebuild:
   Stable on alpha, bug #295256
