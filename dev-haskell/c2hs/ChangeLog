@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.33 2010/06/16 22:37:13 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.34 2010/07/12 19:38:45 slyfox Exp $
+
+  12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> c2hs-0.16.2.ebuild:
+  Marked ~alpha and ~ia64
 
   16 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org> c2hs-0.15.1.ebuild,
   c2hs-0.16.0.ebuild:

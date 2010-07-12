@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/language-c
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.5 2010/06/16 22:33:23 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.6 2010/07/12 19:36:26 slyfox Exp $
+
+  12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  language-c-0.3.1.1.ebuild:
+  Marked ~alpha and ~ia64
 
   16 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   language-c-0.3.1.1.ebuild:
