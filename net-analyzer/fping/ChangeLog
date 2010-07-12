@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.28 2010/06/03 04:28:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.29 2010/07/12 18:39:32 jer Exp $
+
+*fping-2.4_beta2_p161 (12 Jul 2010)
+
+  12 Jul 2010; Jeroen Roovers <jer@gentoo.org> +fping-2.4_beta2_p161.ebuild:
+  Version bump of sorts using Debian patches. Add USE=ipv6 thanks to Bruno
+  Redondi (bug #319413).
 
   03 Jun 2010; Jeroen Roovers <jer@gentoo.org> fping-2.4_beta2-r2.ebuild:
   Fix SRC_URI thanks to Jeff Sweeney (bug #321715).
