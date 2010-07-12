@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.27 2010/07/12 11:26:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.28 2010/07/12 12:12:21 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Taking over maintainership
 
   12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> pcmanfm-9999.ebuild:
   Add sys-fs/udisks as dependency and remove gnome-mount.
