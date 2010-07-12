@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.70.ebuild,v 1.1 2008/06/15 12:23:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.70.ebuild,v 1.2 2010/07/12 16:00:52 ssuominen Exp $
 
 inherit autotools eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}/02_${P}-nossl.patch"
 	epatch "${FILESDIR}/03_${P}-c++0x-integrated.patch"
 	epatch "${FILESDIR}/04_${P}-warnings.patch"
+	epatch "${FILESDIR}/05_${P}-openssl-1.patch"
 	eautoreconf
 }
 
