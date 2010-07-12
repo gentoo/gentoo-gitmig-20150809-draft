@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/uuagc-0.9.5.ebuild,v 1.1 2007/12/13 17:29:17 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/uuagc-0.9.5.ebuild,v 1.2 2010/07/12 13:41:29 slyfox Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal
@@ -11,14 +11,15 @@ SRC_URI="http://abaris.zoo.cs.uu.nl:8080/wiki/pub/HUT/Download/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6
+	dev-haskell/mtl
 	>=dev-haskell/uulib-0.9.2"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	sed -i -e '/Extensions:/a \
 		, MultiParamTypeClasses' \
