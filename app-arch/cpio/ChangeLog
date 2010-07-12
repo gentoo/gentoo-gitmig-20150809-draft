@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.111 2010/07/08 18:12:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.112 2010/07/12 17:28:26 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> cpio-2.11.ebuild:
+  Stable on amd64 wrt bug #314663
 
   08 Jul 2010; Raúl Porcel <armin76@gentoo.org> cpio-2.11.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #314663
