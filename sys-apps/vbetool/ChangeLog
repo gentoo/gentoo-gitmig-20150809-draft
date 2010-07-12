@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/vbetool
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.17 2009/11/09 13:38:37 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.18 2010/07/12 10:59:30 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> vbetool-1.1.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *vbetool-1.1 (09 Nov 2009)
 
