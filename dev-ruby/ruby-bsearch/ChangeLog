@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-bsearch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.20 2010/07/09 15:57:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.21 2010/07/12 17:50:00 fauli Exp $
+
+  12 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  ruby-bsearch-1.5-r2.ebuild:
+  stable x86, bug 327525
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> ruby-bsearch-1.5-r2.ebuild:
   stable amd64, bug 327525
