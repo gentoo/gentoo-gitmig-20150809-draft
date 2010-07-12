@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.10 2010/07/12 20:35:16 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.11 2010/07/12 20:37:36 billie Exp $
+
+  12 Jul 2010; Daniel Pielmeier <billie@gentoo.org>
+  -files/vdradmin-am-config-autoflush.diff:
+  Remove unused patch.
 
   12 Jul 2010; Daniel Pielmeier <billie@gentoo.org>
   -vdradmin-am-3.6.6.ebuild:
