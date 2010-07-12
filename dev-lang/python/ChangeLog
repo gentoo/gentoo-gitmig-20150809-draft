@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.476 2010/07/04 21:16:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.477 2010/07/12 19:11:19 arfrever Exp $
+
+*python-2.6.5-r3 (12 Jul 2010)
+
+  12 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.6.5-r3.ebuild:
+  Fix building with Linux <2.6.9 headers (bug #317937). Fix httplib.HTTPResponse.read()
+  (bug #321545). Fix vulnerabilities in audioop module (bug #325593). Backport some
+  fixes from 2.6 branch.
 
 *python-2.7 (04 Jul 2010)
 
