@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.26.3.ebuild,v 1.10 2009/12/03 17:28:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.26.3.ebuild,v 1.11 2010/07/12 09:48:25 pacho Exp $
 
 EAPI="1"
 
@@ -121,14 +121,8 @@ RDEPEND="
 	>=net-analyzer/gnome-netstatus-2.26.0
 	>=net-analyzer/gnome-nettool-2.26.2
 
-	cdr? (
-		|| (
-			>=app-cdr/brasero-2.26.3
-			>=gnome-extra/nautilus-cd-burner-2.24.0 ) )
-	dvdr? (
-		|| (
-			>=app-cdr/brasero-2.26.3
-			>=gnome-extra/nautilus-cd-burner-2.24.0 ) )
+	cdr? ( >=app-cdr/brasero-2.26.3 )
+	dvdr? (	>=app-cdr/brasero-2.26.3 )
 
 	>=gnome-extra/gtkhtml-3.26.3
 	>=mail-client/evolution-2.26.3
