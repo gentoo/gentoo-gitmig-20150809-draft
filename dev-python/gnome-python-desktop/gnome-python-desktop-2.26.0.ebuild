@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.26.0.ebuild,v 1.7 2009/12/03 17:27:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.26.0.ebuild,v 1.8 2010/07/12 09:54:19 pacho Exp $
 
 DESCRIPTION="Meta build which provides python interfacing modules for some GNOME desktop libraries"
 HOMEPAGE="http://pygtk.org/"
@@ -22,5 +22,4 @@ RDEPEND="~dev-python/bug-buddy-python-${PV}
 	~dev-python/librsvg-python-${PV}
 	~dev-python/libwnck-python-${PV}
 	~dev-python/metacity-python-${PV}
-	~dev-python/nautilus-cd-burner-python-${PV}
 	~dev-python/totem-python-${PV}"
