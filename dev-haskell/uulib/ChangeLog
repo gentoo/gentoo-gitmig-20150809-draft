@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/uulib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.17 2010/06/14 17:43:01 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.18 2010/07/12 13:48:38 slyfox Exp $
+
+  12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> uulib-0.9.10.ebuild:
+  Restored ~ppc64 for newer versions as we have ppc64 binaries for latest
+  ghc.
 
 *uulib-0.9.12 (14 Jun 2010)
 
