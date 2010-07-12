@@ -7,6 +7,7 @@
   <flag name='nfprofile'>Build nfprofile used by NfSen</flag>
   <!--<flag name='readpcap'>Build nfcapd collector to read from pcap file instead ofnetwork data</flag>-->
   <flag name='sflow'>Build sflow collector sfcpad</flag>
+  <flag name='compat15'>Enable read support for nfdump data files created with nfdump 1.5.x</flag>
 </use>
 <longdescription>The nfdump tools collect and process netflow data on the command line</longdescription>
 </pkgmetadata>
