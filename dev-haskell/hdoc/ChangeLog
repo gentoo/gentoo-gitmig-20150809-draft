@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdoc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.17 2007/12/13 18:03:17 dcoutts Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.18 2010/07/12 09:47:09 slyfox Exp $
+
+  12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> hdoc-0.8.3.ebuild,
+  +files/hdoc-0.8.3-remove-strip.patch:
+  Fixed QA warning (pre-stripped files found) found by Diego E. 'Flameeyes'
+  Pettenò <flameeyes@gentoo.org> (bug #251888)
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hdoc-0.8.3.ebuild:
   Fix quoting in ebuild.
