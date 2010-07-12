@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.2.ebuild,v 1.4 2010/06/24 13:50:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.2.ebuild,v 1.5 2010/07/12 18:03:03 fauli Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://forja.rediris.es/frs/download.php/1383/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4
