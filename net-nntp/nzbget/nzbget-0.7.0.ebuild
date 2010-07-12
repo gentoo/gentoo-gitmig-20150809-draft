@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.1 2010/05/09 08:43:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.2 2010/07/12 07:49:09 ssuominen Exp $
 
 EAPI="2"
 
@@ -44,6 +44,8 @@ src_prepare() {
 		-e 's:^LogFile=.*:LogFile=/var/log/nzbget/nzbget.log:' \
 		"${S}"/nzbget.conf.example >"${S}"/nzbgetd.conf.example \
 		|| die "sed nzbgetd.conf.example failed"
+
+	epatch "${FILESDIR}"/${P}-openssl-1.patch
 }
 
 src_configure() {

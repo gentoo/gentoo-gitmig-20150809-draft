@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.30 2010/05/09 08:43:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.31 2010/07/12 07:49:09 ssuominen Exp $
+
+  12 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> nzbget-0.7.0.ebuild,
+  +files/nzbget-0.7.0-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #326995 by Diego E. Pettenò.
 
 *nzbget-0.7.0 (09 May 2010)
 
