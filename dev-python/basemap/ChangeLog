@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.18 2010/07/09 13:15:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.19 2010/07/12 10:17:17 arfrever Exp $
+
+  12 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  basemap-1.0.ebuild:
+  Ignore nonexistent files (bug #327875).
 
   09 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   basemap-1.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.ebuild,v 1.2 2010/07/09 13:15:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.ebuild,v 1.3 2010/07/12 10:17:17 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -51,9 +51,9 @@ src_install() {
 
 	cleaning() {
 		# clean up collision with matplotlib
-		rm "${ED}$(python_get_sitedir)/mpl_toolkits/__init__.py" || return 1
+		rm -f "${ED}$(python_get_sitedir)/mpl_toolkits/__init__.py"
 		# respect FHS
-		rm -r "${ED}$(python_get_sitedir)/mpl_toolkits/basemap/data"
+		rm -fr "${ED}$(python_get_sitedir)/mpl_toolkits/basemap/data"
 	}
 	python_execute_function -q cleaning
 }
