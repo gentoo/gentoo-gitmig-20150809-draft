@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0.ebuild,v 1.1 2010/06/13 18:55:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0.ebuild,v 1.2 2010/07/12 13:14:51 pacho Exp $
 
 inherit eutils gnome2 python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
-IUSE="acpi apm doc gnome gstreamer hal ipv6 networkmanager policykit"
+IUSE="battstat doc gnome gstreamer hal ipv6 networkmanager policykit"
 
 # TODO: configure says python stuff is optional
 # my secret script says cpufrequtils might be needed in RDEPEND
@@ -32,8 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.13
 	>=virtual/python-2.4
 	x11-libs/libX11
 
-	apm? ( sys-apps/apmd $HALDEPEND )
-	acpi? ( $HALDEPEND )
+	battstat? ( $HALDEPEND )
 	gnome?	(
 		>=gnome-base/libgnomekbd-2.21.4.1
 		gnome-base/gnome-settings-daemon
@@ -86,18 +85,15 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-scrollkeeper
 		--disable-schemas-install
+		--without-hal
 		$(use_enable gstreamer mixer-applet)
-		$(use_with hal)
+		$(use_enable battstat)
 		$(use_enable ipv6)
 		$(use_enable networkmanager)
 		$(use_enable policykit polkit)"
 
-	if ! use ppc && ! use apm && ! use acpi; then
-		G2CONF="${G2CONF} --disable-battstat"
-	fi
-
-	if use ppc && ! use apm; then
-		G2CONF="${G2CONF} --disable-battstat"
+	if use battstat; then
+		G2CONF="${G2CONF} $(use_with hal)"
 	fi
 }
 
@@ -127,7 +123,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	if use acpi && ! use hal ; then
+	if use battstat && ! use hal ; then
 		elog "It is highly recommended that you install acpid if you use the"
 		elog "battstat applet to prevent any issues with other applications"
 		elog "trying to read acpi information."
