@@ -3,7 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name='empathy'>Enables support for <pkg>net-im/empathy</pkg></flag>
 		<flag name='gajim'>Enables support for <pkg>net-im/gajim</pkg></flag>
 		<flag name='mail'>Enables support for mailto using
 			<pkg>gnome-extra/evolution-data-server</pkg></flag>
