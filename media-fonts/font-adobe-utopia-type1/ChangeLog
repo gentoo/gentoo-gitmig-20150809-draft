@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-adobe-utopia-type1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-type1/ChangeLog,v 1.26 2010/03/15 22:24:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-utopia-type1/ChangeLog,v 1.27 2010/07/12 10:42:37 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  font-adobe-utopia-type1-1.0.2.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *font-adobe-utopia-type1-1.0.2 (15 Mar 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-alias
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.26 2010/03/16 14:47:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.27 2010/07/12 10:43:06 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  font-alias-1.0.2.ebuild:
+  Stable on amd64 wrt bug #327777
 
   16 Mar 2010; Jeremy Olexa <darkside@gentoo.org> font-alias-1.0.2.ebuild:
   Add prefix keywords as tested in the prefix overlay

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-speedo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-speedo/ChangeLog,v 1.19 2010/03/15 22:24:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-speedo/ChangeLog,v 1.20 2010/07/12 10:48:14 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  font-bitstream-speedo-1.0.1.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *font-bitstream-speedo-1.0.1 (15 Mar 2010)
 

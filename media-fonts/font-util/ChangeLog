@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-util
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.43 2010/07/02 16:51:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.44 2010/07/12 10:57:28 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  font-util-1.1.1-r1.ebuild:
+  Stable on amd64 wrt bug #327777
 
   02 Jul 2010; Jeremy Olexa <darkside@gentoo.org> font-util-1.1.1-r1.ebuild:
   Add ~x64-macos, as tested in bug 323945

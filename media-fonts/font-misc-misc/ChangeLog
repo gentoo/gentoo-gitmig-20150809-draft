@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-misc-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.35 2010/03/15 22:24:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.36 2010/07/12 10:54:35 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  font-misc-misc-1.1.0.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *font-misc-misc-1.1.0 (15 Mar 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-daewoo-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-daewoo-misc/ChangeLog,v 1.24 2010/03/15 22:24:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-daewoo-misc/ChangeLog,v 1.25 2010/07/12 10:50:13 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  font-daewoo-misc-1.0.1.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *font-daewoo-misc-1.0.1 (15 Mar 2010)
 
