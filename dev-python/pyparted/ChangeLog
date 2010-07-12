@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.52 2010/07/09 13:32:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.53 2010/07/12 09:33:17 klausman Exp $
+
+  12 Jul 2010; Tobias Klausmann <klausman@gentoo.org> pyparted-3.4.ebuild:
+  Stable on alpha, bug #316539
 
   09 Jul 2010; Christian Faulhammer <fauli@gentoo.org> pyparted-3.4.ebuild:
   stable x86, bug 316539
