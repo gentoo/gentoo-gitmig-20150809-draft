@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlsatoms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsatoms/ChangeLog,v 1.36 2010/06/08 16:29:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsatoms/ChangeLog,v 1.37 2010/07/12 11:01:09 hwoarang Exp $
+
+  12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> xlsatoms-1.1.0.ebuild:
+  Stable on amd64 wrt bug #327777
 
 *xlsatoms-1.1.0 (08 Jun 2010)
 
