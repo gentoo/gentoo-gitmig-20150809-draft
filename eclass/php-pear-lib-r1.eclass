@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.16 2010/06/09 11:11:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.17 2010/07/12 17:48:32 mabi Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 
@@ -51,22 +51,22 @@ php-pear-lib-r1_src_install() {
 		mv -f "${WORKDIR}/package2.xml" "${S}"
 		if has_version '>=dev-php/PEAR-PEAR-1.7.0' ; then
 			local WWW_DIR="/usr/share/webapps/${PN}/${PVR}/htdocs"
-			pear -d php_bin="${PHP_BIN}" -d www_dir="${WWW_DIR}" \
+			peardev -d php_bin="${PHP_BIN}" -d www_dir="${WWW_DIR}" \
 				install --force --loose --nodeps --offline --packagingroot="${D}" \
 				"${S}/package2.xml" || die "Unable to install PEAR package"
 		else
-			pear -d php_bin="${PHP_BIN}" install --force --loose --nodeps --offline --packagingroot="${D}" \
+			peardev -d php_bin="${PHP_BIN}" install --force --loose --nodeps --offline --packagingroot="${D}" \
 				"${S}/package2.xml" || die "Unable to install PEAR package"
 		fi
 	else
 		mv -f "${WORKDIR}/package.xml" "${S}"
 		if has_version '>=dev-php/PEAR-PEAR-1.7.0' ; then
 			local WWW_DIR="/usr/share/webapps/${PN}/${PVR}/htdocs"
-			pear -d php_bin="${PHP_BIN}" -d www_dir="${WWW_DIR}" \
+			peardev -d php_bin="${PHP_BIN}" -d www_dir="${WWW_DIR}" \
 				install --force --loose --nodeps --offline --packagingroot="${D}" \
 					"${S}/package.xml" || die "Unable to install PEAR package"
 		else
-			pear -d php_bin="${PHP_BIN}" install --force --loose --nodeps --offline --packagingroot="${D}" \
+			peardev -d php_bin="${PHP_BIN}" install --force --loose --nodeps --offline --packagingroot="${D}" \
 				"${S}/package.xml" || die "Unable to install PEAR package"
 		fi
 	fi
