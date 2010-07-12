@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r4.ebuild,v 1.4 2008/11/03 11:21:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r4.ebuild,v 1.5 2010/07/12 20:39:36 ssuominen Exp $
 
 inherit eutils
 
@@ -38,10 +38,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-sha1-byteorder.patch"
 
 	# print correct version in manpage
-	sed -i -e "s/VERSION/${PV}/g" otpCalc.man
+	sed -i -e "s/VERSION/${PV}/g" otpCalc.man || die
 
-	# override hardcoded CFLAGS
-	sed -i -e "s#-s -O3#${CFLAGS}#g" Makefile.in
+	# override hardcoded FLAGS
+	sed -i \
+		-e 's:$(CC) $(CFLAGS) $^:$(CC) $(LDFLAGS) $(CFLAGS) $^:' \
+		-e "s#-s -O3#${CFLAGS}#g" \
+		Makefile.in || die
 }
 
 src_install() {
