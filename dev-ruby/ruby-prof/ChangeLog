@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.24 2010/05/22 15:53:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.25 2010/07/12 06:03:56 graaff Exp $
+
+*ruby-prof-0.8.2 (12 Jul 2010)
+
+  12 Jul 2010; Hans de Graaff <graaff@gentoo.org> +ruby-prof-0.8.2.ebuild:
+  Version bump.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-prof-0.7.10.ebuild, ruby-prof-0.8.1.ebuild:
