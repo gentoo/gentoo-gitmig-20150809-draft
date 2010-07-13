@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/jpilot-Mail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-Mail/ChangeLog,v 1.1 2007/09/18 17:11:15 philantrop Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-Mail/ChangeLog,v 1.2 2010/07/13 13:38:01 ssuominen Exp $
+
+  13 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  jpilot-Mail-0.1.7.ebuild:
+  Upstream doc/Makefile.am is using datadir instead of docdir or htmldir for
+  .html manual path wrt #246924 by Diego E. Pettenò.
 
 *jpilot-Mail-0.1.7 (18 Sep 2007)
 

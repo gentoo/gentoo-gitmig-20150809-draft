@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-Mail/jpilot-Mail-0.1.7.ebuild,v 1.1 2007/09/18 17:11:15 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-Mail/jpilot-Mail-0.1.7.ebuild,v 1.2 2010/07/13 13:38:01 ssuominen Exp $
 
+EAPI=2
 inherit eutils multilib
 
 DESCRIPTION="jpilot-Mail is a jpilot plugin to deliver mail from the pilot and upload mail to it."
@@ -13,22 +14,31 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2
-		>=app-pda/jpilot-0.99.7-r1"
-RDEPEND="${DEPEND}"
+RDEPEND=">=x11-libs/gtk+-2
+	>=app-pda/jpilot-0.99.7-r1"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}/${P}.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}.patch
+}
+
+src_configure() {
+	econf \
+		--enable-gtk2
 }
 
 src_compile() {
-	econf --enable-gtk2 || die "configure failed"
-	emake -j1 || die "make failed"
+	emake -j1 || die
 }
 
 src_install() {
-	make install DESTDIR="${D}" \
-		libdir=/usr/$(get_libdir)/jpilot/plugins \
-		|| die "install failed"
+	emake DESTDIR="${D}" \
+		datadir="/usr/share/doc/${PF}/html" \
+		libdir="/usr/$(get_libdir)/jpilot/plugins" \
+		install || die
+
+	dodoc AUTHORS ChangeLog README TODO
+
+	find "${D}" -name '*.la' -delete
 }
