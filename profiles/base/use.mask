@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.104 2010/06/23 20:50:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.105 2010/07/13 08:34:38 mduft Exp $
 
 # These need libieee1284 which is amd64/x86 only.
 sane_backends_canon_pp
@@ -232,12 +232,6 @@ kdeprefix
 #  on behalf of QA Team
 # Removal of cman is scheduled for 2009-10-06
 cman
-
-# Markus Duft <mduft@gentoo.org> (7 Jul 2009)
-# This use flag only applies to _one_ version of interix (all
-# versions share the same keyword, that's why i need a USE flag).
-# Since this is meaningless for all others, it's globally masked.
-i6fork
 
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2009)
 # RealMagic Hollywood+/Creative DXR3 support
