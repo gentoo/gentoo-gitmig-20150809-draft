@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.8 2010/07/04 20:03:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.9 2010/07/13 12:46:36 jmbsvicetto Exp $
+
+  13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Added missing herd tag to metadata.xml
 
 *terminator-0.94 (04 Jul 2010)
 
