@@ -237,11 +237,13 @@ mips-irix		prefix/irix/6.5/mips				exp
 x86-interix		prefix/windows/interix/3.5/x86			exp
 x86-interix		prefix/windows/interix/5.2/x86			exp
 x86-interix		prefix/windows/interix/6.0/x86			exp
+x86-interix		prefix/windows/interix/6.1/x86			exp
 
 # Windows Profiles
 x86-winnt		prefix/windows/winnt/3.5/x86 			exp
 x86-winnt		prefix/windows/winnt/5.2/x86			exp
 x86-winnt		prefix/windows/winnt/6.0/x86			exp
+x86-winnt		prefix/windows/winnt/6.1/x86			exp
 
 # HP-UX Profiles
 ia64-hpux		prefix/hpux/B.11.23/ia64			exp
