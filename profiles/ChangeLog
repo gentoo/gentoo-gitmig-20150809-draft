@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4399 2010/07/13 12:08:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4400 2010/07/13 18:53:40 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask net-analyzer/net-snmp-5.5 (bug #317325) for now.
 
   13 Jul 2010; Pacho Ramos <pacho@gentoo.org> arch/powerpc/ChangeLog,
   arch/powerpc/ppc32/package.use.mask:
