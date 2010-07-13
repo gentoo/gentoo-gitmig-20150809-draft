@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.14 2010/06/04 13:56:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.15 2010/07/13 15:18:20 chithanh Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -44,6 +44,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_mga
 	video_cards_neomagic
 	video_cards_newport
+	video_cards_nouveau
 	video_cards_nv
 	video_cards_r128
 	video_cards_radeon
@@ -110,6 +111,7 @@ PDEPEND="
 	video_cards_mga?           ( x11-drivers/xf86-video-mga )
 	video_cards_neomagic?      ( x11-drivers/xf86-video-neomagic )
 	video_cards_newport?       ( x11-drivers/xf86-video-newport )
+	video_cards_nouveau?       ( x11-drivers/xf86-video-nouveau )
 	video_cards_nv?            ( x11-drivers/xf86-video-nv )
 	video_cards_nvidia?        ( x11-drivers/nvidia-drivers )
 	video_cards_fglrx?         ( x11-drivers/ati-drivers )
