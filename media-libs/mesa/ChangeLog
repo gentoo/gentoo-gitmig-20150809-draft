@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.275 2010/07/12 10:59:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.276 2010/07/13 13:16:57 fauli Exp $
+
+  13 Jul 2010; Christian Faulhammer <fauli@gentoo.org> mesa-7.8.2.ebuild:
+  x86 stable, bug 327777
 
   12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> mesa-7.8.2.ebuild:
   Stable on amd64 wrt bug #327777
