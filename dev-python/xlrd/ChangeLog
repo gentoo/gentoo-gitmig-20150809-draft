@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/xlrd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.1 2010/04/16 09:38:45 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.2 2010/07/13 13:07:13 jmbsvicetto Exp $
+
+  13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fix herd tag in metadata.xml
 
 *xlrd-0.7.1 (16 Apr 2010)
 
