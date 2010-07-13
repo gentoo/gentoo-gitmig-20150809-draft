@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11763 2010/07/12 20:22:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11764 2010/07/13 11:53:46 mabi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -416,12 +416,6 @@ sci-biology/mpiblast
 # Peter Volkov <pva@gentoo.org> (13 Jun 2010)
 # Mask release candidate
 =net-analyzer/wireshark-1.4.0*
-
-# Matti Bickel <mabi@gentoo.org> (13 Jun 2010)
-# Dead upstream (bug #321685)
-# Removal on 2010-07-13
-dev-php5/jargon
-dev-php5/creole
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
 # Use in-kernel drivers. Removed in 60 days by treecleaners. bug 321535
