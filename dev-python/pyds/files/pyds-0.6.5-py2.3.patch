@@ -1,5 +1,5 @@
---- a/DownstreamTool.py	2003-10-07 05:15:01.000000000 -0400
-+++ b/DownstreamTool.py	2004-02-10 16:05:19.000000000 -0500
+--- PyDS/DownstreamTool.py
++++ PyDS/DownstreamTool.py
 @@ -36,6 +36,7 @@
  import urllib
  import gzip
