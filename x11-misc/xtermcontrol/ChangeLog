@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xtermcontrol
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.28 2010/07/12 11:18:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.29 2010/07/13 13:48:51 fauli Exp $
+
+  13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  xtermcontrol-2.10.ebuild:
+  x86 stable, bug 327777
 
   12 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   xtermcontrol-2.10.ebuild:
