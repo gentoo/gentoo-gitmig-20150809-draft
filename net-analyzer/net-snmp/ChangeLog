@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.213 2010/07/13 21:03:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.214 2010/07/13 22:08:03 jer Exp $
+
+  13 Jul 2010; Jeroen Roovers <jer@gentoo.org> net-snmp-5.5.ebuild:
+  Remove unneeded autotools eclass.
 
 *net-snmp-5.5 (13 Jul 2010)
 *net-snmp-5.4.3 (13 Jul 2010)

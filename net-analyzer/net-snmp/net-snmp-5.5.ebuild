@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.5.ebuild,v 1.1 2010/07/13 21:03:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.5.ebuild,v 1.2 2010/07/13 22:08:03 jer Exp $
 
 EAPI=2
 
-inherit fixheadtails flag-o-matic perl-module python autotools
+inherit fixheadtails flag-o-matic perl-module python
 
 DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
