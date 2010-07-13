@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.4.1.ebuild,v 1.3 2010/06/18 11:09:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.4.1.ebuild,v 1.4 2010/07/13 18:01:35 scarabeus Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ IUSE="avahi doc gtk server static-libs"
 RDEPEND="dev-libs/glib:2
 	dev-libs/libxml2
 	net-libs/gnutls
-	>=net-misc/gsasl-0.2.21
+	>=virtual/gsasl-0.2.21
 	avahi? ( net-dns/avahi )
 	gtk? ( >=x11-libs/gtk+-2.12:2 )"
 DEPEND="${RDEPEND}

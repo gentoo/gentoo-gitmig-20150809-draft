@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libinfinity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.7 2010/06/18 11:09:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.8 2010/07/13 18:01:35 scarabeus Exp $
+
+  13 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  libinfinity-0.4.1.ebuild:
+  QA: Depend on virtual rather on net-misc.
 
   18 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   libinfinity-0.4.1.ebuild:
