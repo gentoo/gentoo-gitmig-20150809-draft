@@ -12,8 +12,8 @@
 		shopping lists from recipes. Gourmet imports recipes from a
 		number of sources, including MealMaster and MasterCook
 		archives and several popular websites. Gourmet can export
-		recipes as text, MealMaster files, HTML web pages, and a
-		custom XML format for exchange with other Gourmet users.
+		recipes as text, MealMaster files, HTML web pages, PDF, and
+		a custom XML format for exchange with other Gourmet users.
 		Gourmet supports linking images with recipes.
 	</longdescription>
 	<upstream>
@@ -24,7 +24,7 @@
 	</upstream>
 	<use>
 		<flag name='rtf'>Enable export to RTF</flag>
-		<flag name='gnome-print'>Enable printing support using
+		<flag name='gnome-print'>Enable pretty Python printing with
 			gnome-print</flag>
 	</use>
 </pkgmetadata>

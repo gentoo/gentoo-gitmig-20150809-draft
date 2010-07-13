@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.4-r1.ebuild,v 1.2 2010/07/13 00:51:50 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.5.ebuild,v 1.1 2010/07/13 00:51:50 nixphoeni Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.4"

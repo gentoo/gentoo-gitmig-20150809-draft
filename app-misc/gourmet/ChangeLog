@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.10 2010/07/12 01:43:54 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.11 2010/07/13 00:51:50 nixphoeni Exp $
+
+*gourmet-0.15.5 (13 Jul 2010)
+
+  13 Jul 2010; Joe Sapp <nixphoeni@gentoo.org> gourmet-0.15.4-r1.ebuild,
+  +gourmet-0.15.5.ebuild, metadata.xml:
+  Version bump; changed dependencies so python-poppler is only required for
+  PDF export or printing
 
 *gourmet-0.15.4-r1 (12 Jul 2010)
 
