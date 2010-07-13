@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20100629.ebuild,v 1.1 2010/06/29 19:26:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20100712.ebuild,v 1.1 2010/07/13 07:23:11 jlec Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	gunzip platon.f.Z xdrvr.c.gz || die
+	gunzip platon.f.gz xdrvr.c.gz || die
 }
 
 src_prepare() {
