@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5770 2010/07/12 22:47:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5771 2010/07/13 01:08:12 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -396,7 +396,7 @@ app-misc/freemind:pdf - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/freemind:svg - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/geneweb:ocamlopt - Enable ocamlopt support (dev-lang/ocaml native code compiler)
 app-misc/gnote:applet - Enable gnote applet for gnome-base/gnome-panel
-app-misc/gourmet:gnome-print - Enable printing support using gnome-print
+app-misc/gourmet:gnome-print - Enable pretty Python printing with gnome-print
 app-misc/gourmet:rtf - Enable export to RTF
 app-misc/gpsdrive:garmin - Adds specific support for Garmin GPS receivers (pre-2.10 only)
 app-misc/gpsdrive:gdal - Include gdal and ogr support for format conversions.
