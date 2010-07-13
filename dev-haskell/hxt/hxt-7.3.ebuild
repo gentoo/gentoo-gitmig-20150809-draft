@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-7.3.ebuild,v 1.2 2007/12/15 16:35:38 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/hxt-7.3.ebuild,v 1.3 2010/07/13 08:49:11 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal versionator
@@ -20,7 +20,7 @@ DEPEND=">=dev-lang/ghc-6.6
 	>=dev-haskell/network-1.0"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# Oh ffs! The name of the licence file in the cabal file does not match
 	# the name of the file in the tarball so it fails at the install step.
