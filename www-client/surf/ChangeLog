@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.8 2010/06/09 05:47:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.9 2010/07/13 18:32:38 hwoarang Exp $
+
+  13 Jul 2010; Markos Chandras <hwoarang@gentoo.org> surf-0.4.1.ebuild:
+  keyworded for amd64 wrt bug #328123
 
 *surf-0.4.1 (09 Jun 2010)
 
