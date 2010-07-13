@@ -1,0 +1,13 @@
+--- configure.orig	2010-06-06 12:54:45.000000000 -0400
++++ configure	2010-06-06 13:28:06.000000000 -0400
+@@ -410,6 +410,10 @@
+ [ -z "${DOCDIR_set}" ] && DOCDIR="${PREFIX}/share/doc"
+ [ -z "${MANDIR_set}" ] && MANDIR="${PREFIX}/share/man/man1"
+ 
++# Append man1 if a autobuild style --mandir=/usr/share/man path was given
++MANDIR=${MANDIR%/}
++MANDIR=${MANDIR/\/share\/man//share/man/man1}
++
+ # Install support files in our own sub-dir, so as not to mangle (system)
+ # files and dirs, but only if not --local
+ if [ -z "${LOCAL_set}" ]; then
