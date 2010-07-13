@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.2 2010/07/13 00:09:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.3 2010/07/13 14:51:03 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -74,6 +74,11 @@ DEPEND="${RDEPEND}
 	gnome? ( app-text/rarian )"
 
 pkg_setup() {
+	if use xv && use !opengl; then
+		eerror "Support for xvideo currently requires the opengl renderer."
+		die "xv requires the opengl USE flag."
+	fi
+
 	if use vaapi && use !ffmpeg; then
 		eerror "Support for VAAPI currently requires the ffmpeg media handler."
 		die "vaapi requires the ffmpeg USE flag."
