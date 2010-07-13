@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-gnomevfs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.19 2009/08/05 13:14:25 mescalinum Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.20 2010/07/13 16:59:49 ssuominen Exp $
+
+  13 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  synce-gnomevfs-0.13.ebuild:
+  Missing dev-util/pkgconfig DEPEND wrt #227599 by Evil Compile Person.
 
   05 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
   -synce-gnomevfs-0.2.ebuild, -synce-gnomevfs-0.8.ebuild,
