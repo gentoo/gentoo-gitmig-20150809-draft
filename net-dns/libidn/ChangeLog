@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.121 2010/07/12 17:45:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.122 2010/07/13 02:04:47 jer Exp $
+
+  13 Jul 2010; Jeroen Roovers <jer@gentoo.org> libidn-1.19.ebuild:
+  Stable for HPPA (bug #327485).
 
   12 Jul 2010; Christian Faulhammer <fauli@gentoo.org> libidn-1.19.ebuild:
   stable x86, bug 327485
