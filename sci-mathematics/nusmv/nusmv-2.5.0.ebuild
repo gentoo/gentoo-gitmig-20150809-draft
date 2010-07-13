@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.5.0.ebuild,v 1.1 2010/06/22 20:03:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.5.0.ebuild,v 1.2 2010/07/13 02:22:15 phajdan.jr Exp $
 
 inherit eutils toolchain-funcs
 
@@ -57,6 +57,13 @@ src_unpack() {
 		epatch "${FILESDIR}"/${MINISAT_P}-optimizedlib.patch
 		epatch "${FILESDIR}"/${MINISAT_P}_gcc41.patch
 	fi
+
+	cd "${CUDD_S}"
+	epatch "${FILESDIR}"/${CUDD_PN}-no-pentium4.patch
+	if [[ "$(tc-arch)" = amd64 ]] ; then
+		mv Makefile_64bit Makefile || die
+	fi
+
 	for i in ${NUSMV_S}/doc/{user-man,tutorial}/Makefile.in ; do
 		sed -i.orig \
 			'/install_sh_DATA/s!$(datadir)!$(DESTDIR)$(datadir)!g' \
