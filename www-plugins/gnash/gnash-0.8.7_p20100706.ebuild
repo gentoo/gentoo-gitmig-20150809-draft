@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.1 2010/07/12 14:45:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.2 2010/07/13 00:09:45 jer Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -12,7 +12,7 @@ inherit autotools eutils kde4-base multilib nsplugins flag-o-matic
 
 DESCRIPTION="GNU Flash movie player that supports many SWF v7,8,9 features"
 HOMEPAGE="http://www.gnu.org/software/gnash/"
-SRC_URI="mirror://gentoo//${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.30 2010/07/12 14:45:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.31 2010/07/13 00:09:46 jer Exp $
+
+  13 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnash-0.8.7_p20100706.ebuild:
+  Remove extra slash.
 
 *gnash-0.8.7_p20100706 (12 Jul 2010)
 
