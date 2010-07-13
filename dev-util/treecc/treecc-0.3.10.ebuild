@@ -1,11 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.10.ebuild,v 1.6 2010/07/13 01:48:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.10.ebuild,v 1.7 2010/07/13 01:55:00 jer Exp $
 
 DESCRIPTION="compiler-compiler tool for aspect-oriented programming"
-HOMEPAGE="http://www.southern-storm.com.au/treecc.html"
-SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz
-		 http://download.savannah.gnu.org/releases/dotgnu-pnet/${P}.tar.gz"
+HOMEPAGE="http://www.gnu.org/software/dotgnu"
+SRC_URI="http://download.savannah.gnu.org/releases/dotgnu-pnet/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
