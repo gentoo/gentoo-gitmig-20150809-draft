@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd></herd>
+<herd>no-herd</herd>
 <maintainer>
-<email>pva@gentoo.org</email>
-<name>Peter Volkov</name>
+	<email>pva@gentoo.org</email>
+	<name>Peter Volkov</name>
 </maintainer>
 <maintainer>
-<email>nikoli@lavabit.com</email>
-<name>Nikoli</name>
+	<email>nikoli@lavabit.com</email>
+	<name>Nikoli</name>
 </maintainer>
 <longdescription lang="en">
 	fcgiwrap is a simple server for running CGI applications over FastCGI. It
@@ -16,4 +16,3 @@
 	need it). 
 </longdescription>
 </pkgmetadata>
-
