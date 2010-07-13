@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/luaevent-prosody
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luaevent-prosody/ChangeLog,v 1.1 2010/07/12 07:50:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luaevent-prosody/ChangeLog,v 1.2 2010/07/13 12:50:28 jmbsvicetto Exp $
+
+  13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Added missing herd tag to metadata.xml
 
 *luaevent-prosody-0.1.1 (12 Jul 2010)
 
