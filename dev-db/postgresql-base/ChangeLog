@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.61 2010/07/10 19:24:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.62 2010/07/13 14:15:38 fauli Exp $
+
+  13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  postgresql-base-8.1.21-r1.ebuild:
+  stable x86, security bug 320967
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org>
   postgresql-base-7.4.29-r1.ebuild, postgresql-base-8.0.25-r1.ebuild,
