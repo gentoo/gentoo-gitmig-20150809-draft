@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.59 2010/07/07 18:17:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.60 2010/07/13 02:52:58 cardoe Exp $
+
+  13 Jul 2010; Doug Goldstein <cardoe@gentoo.org> libvirt-0.8.2-r1.ebuild:
+  Fixed configure script's detection of virtualbox-ose, based on patch from
+  Jan Vansteenkiste <jan@vstone.eu> bug #327255
 
 *libvirt-0.8.2-r1 (07 Jul 2010)
 

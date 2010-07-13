@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.2-r1.ebuild,v 1.1 2010/07/07 18:17:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.2-r1.ebuild,v 1.2 2010/07/13 02:52:58 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -84,7 +84,11 @@ src_configure() {
 	fi
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
-	myconf="${myconf} $(use_with virtualbox vbox)"
+	if use virtualbox && has_version app-emulation/virtualbox-ose; then
+		myconf="${myconf} --with-vbox=/usr/lib/virtualbox-ose/"
+	else
+		myconf="${myconf} $(use_with virtualbox vbox)"
+	fi
 	myconf="${myconf} $(use_with uml)"
 	myconf="${myconf} $(use_with qemu)"
 	# doesn't belong with hypervisors but links to libvirtd for some reason
