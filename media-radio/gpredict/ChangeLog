@@ -1,0 +1,10 @@
+# ChangeLog for media-radio/gpredict
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/ChangeLog,v 1.1 2010/07/13 18:26:41 tomjbe Exp $
+
+*gpredict-1.1 (13 Jul 2010)
+
+  13 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> +gpredict-1.1.ebuild,
+  +files/gpredict-1.1-doc.patch, +metadata.xml:
+  Initial portage version. Moved from sunrise. Bug #125342
+
