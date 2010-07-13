@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/arrows
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.13 2007/12/16 20:13:02 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/ChangeLog,v 1.14 2010/07/13 15:46:22 slyfox Exp $
+
+*arrows-0.4.2.0 (13 Jul 2010)
+
+  13 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> arrows-0.2.ebuild,
+  arrows-0.2.1.ebuild, +arrows-0.4.2.0.ebuild:
+  Version bump. Fixed build failre on ghc-6.10+ (bug #296530). Thanks to
+  Diego E. 'Flameeyes' Pettenò <flameeyes@gentoo.org> for the report.
 
   16 Dec 2007; Samuli Suominen <drac@gentoo.org> arrows-0.2.1.ebuild:
   amd64 stable wrt #201984
