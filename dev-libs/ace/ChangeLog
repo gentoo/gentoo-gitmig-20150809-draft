@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.59 2010/06/02 06:43:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.60 2010/07/13 00:19:11 ssuominen Exp $
+
+  13 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> ace-5.7.2.ebuild:
+  Fix OpenSSL >= 1.0.0 detection (broken m4/tls.m4 check) wrt #328027.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tantive from metadata.xml (#200343)
