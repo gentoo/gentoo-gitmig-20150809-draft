@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-4.ebuild,v 1.1 2010/01/23 20:22:51 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-4.ebuild,v 1.2 2010/07/13 07:24:31 nelchael Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 MY_P="android-sdk_r0${PV}-linux_86"
 
-DESCRIPTION="Open Handset Alliance's Android SDK/"
+DESCRIPTION="Open Handset Alliance's Android SDK"
 HOMEPAGE="http://developer.android.com"
 SRC_URI="http://dl.google.com/android/${MY_P}.tgz"
 IUSE=""
@@ -69,6 +69,7 @@ pkg_postinst() {
 	elog "The Android SDK now uses its own manager for the development	environment."
 	elog "You must be in the android group to manage the development environment."
 	elog "Just run 'gpasswd -a <USER> android', then have <USER> re-login."
-	elog "See http://dev.android.com/sdk/adding-components.html for more information."
+	elog "See http://developer.android.com/sdk/adding-components.html for more"
+	elog "information."
 	elog "If you have problems downloading the SDK, see http://code.google.com/p/android/issues/detail?id=4406"
 }
