@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.10 2010/07/13 11:20:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.11 2010/07/13 11:25:29 ssuominen Exp $
 
 inherit common-lisp eutils multilib toolchain-funcs
 
@@ -27,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 	epatch ${PN}_${PV}-${DEB_PV}.diff
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-{gentoo,Makefile}.patch
+	epatch "${FILESDIR}"/${PV}-{gentoo,Makefile,openssl-1}.patch
 }
 
 src_compile() {
