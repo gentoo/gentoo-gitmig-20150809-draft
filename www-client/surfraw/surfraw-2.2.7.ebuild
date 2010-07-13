@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.2.7.ebuild,v 1.3 2010/07/11 11:58:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.2.7.ebuild,v 1.4 2010/07/13 02:02:23 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.alioth.debian.org/dist/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 hppa ~ppc ~sparc x86"
 IUSE=""
 RESTRICT="test"
 
