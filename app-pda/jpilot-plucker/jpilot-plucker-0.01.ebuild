@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.01.ebuild,v 1.7 2006/08/29 04:31:12 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.01.ebuild,v 1.8 2010/07/13 13:58:30 ssuominen Exp $
 
 DESCRIPTION="Plucker plugin for jpilot"
-SRC_URI="http://jasonday.home.att.net/code/jpilot-plucker/${P}.tar.gz"
-HOMEPAGE="http://jasonday.home.att.net/code/jpilot-plucker/jpilot-plucker.html"
+HOMEPAGE="http://www.jlogday.com/code/jpilot-plucker/index.html"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="alpha amd64 ~ppc x86"
 IUSE="gtk"
 
@@ -17,10 +17,10 @@ DEPEND="${RDEPEND}
 	gtk? ( dev-util/pkgconfig )"
 
 src_compile() {
-	econf $(use_enable gtk gtk2) || die "configure failed"
-	emake -j1 || die "make failed"
+	econf $(use_enable gtk gtk2)
+	emake -j1 || die
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	emake DESTDIR="${D}" install || die
 }
