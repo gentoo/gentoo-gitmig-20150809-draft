@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-tclink
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/ChangeLog,v 1.10 2008/09/03 20:58:09 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/ChangeLog,v 1.11 2010/07/13 11:20:18 ssuominen Exp $
+
+  13 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +files/3.3.1-Makefile.patch, cl-tclink-3.3.1-r1.ebuild:
+  Fix dodoc from ChangeLog to Changelog. Fix installation with
+  multilib-strict. Respect CC and LDFLAGS.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   cl-tclink-3.3.1-r1.ebuild:

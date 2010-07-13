@@ -1,0 +1,13 @@
+--- libtclink/Makefile
++++ libtclink/Makefile
+@@ -1,7 +1,7 @@
+-LDFLAGS=-lssl
+-CFLAGS=-fPIC
++LIBS=-lssl
++CFLAGS+=-fPIC
+ 
+ libtclink.so: tclinkc.o
+-	        $(CC) $(LDFLAGS) -shared -o $@ $<
++	        $(CC) $(LDFLAGS) $(CFLAGS) -shared -o $@ $< $(LIBS)
+ 
+ tclinkc.o: tclinkc.c

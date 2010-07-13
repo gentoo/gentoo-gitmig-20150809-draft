@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.9 2008/09/03 20:58:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.10 2010/07/13 11:20:18 ssuominen Exp $
 
-inherit common-lisp eutils
+inherit common-lisp eutils multilib toolchain-funcs
 
 DEB_PV=3
 
@@ -26,20 +26,21 @@ CLPACKAGE=tclink
 src_unpack() {
 	unpack ${A}
 	epatch ${PN}_${PV}-${DEB_PV}.diff
-	epatch "${FILESDIR}/${PV}-gentoo.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-{gentoo,Makefile}.patch
 }
 
 src_compile() {
-	make -C libtclink CFLAGS="-fPIC ${CFLAGS}" || die
+	tc-export CC
+	emake -C libtclink || die
 #	use doc && make -C doc || die
 }
 
 src_install() {
 	common-lisp-install *.asd *.lisp
 	common-lisp-system-symlink
-	dodoc ChangeLog
-	dodoc doc/cl-tclink.txt
-	exeinto /usr/lib/cl-tclink
-	doexe libtclink/libtclink.so
+	dodoc Changelog doc/cl-tclink.txt
+	exeinto /usr/$(get_libdir)/cl-tclink
+	doexe libtclink/libtclink.so || die
 	do-debian-credits
 }
