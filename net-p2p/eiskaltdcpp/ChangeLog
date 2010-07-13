@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.8 2010/06/11 16:41:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.9 2010/07/13 13:09:56 jmbsvicetto Exp $
+
+  13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fix herd tag in metadata.xml
 
 *eiskaltdcpp-2.0.3 (11 Jun 2010)
 
