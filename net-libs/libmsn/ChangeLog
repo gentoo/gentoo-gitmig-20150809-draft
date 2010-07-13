@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmsn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.24 2010/06/27 08:55:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.25 2010/07/13 08:03:58 ssuominen Exp $
+
+  13 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> libmsn-4.1.ebuild,
+  +files/libmsn-4.1-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #328031 by Alec M.
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org> libmsn-4.1.ebuild:
   x86 stable, bug 322791
