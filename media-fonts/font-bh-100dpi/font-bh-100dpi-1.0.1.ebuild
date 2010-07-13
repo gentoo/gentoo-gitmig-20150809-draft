@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-100dpi/font-bh-100dpi-1.0.1.ebuild,v 1.2 2010/07/12 10:44:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-100dpi/font-bh-100dpi-1.0.1.ebuild,v 1.3 2010/07/13 12:55:07 fauli Exp $
 
 EAPI=3
 inherit xorg-2
 
 DESCRIPTION="X.Org Bigelow & Holmes bitmap fonts"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""
