@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.10.ebuild,v 1.7 2010/07/13 01:55:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.10.ebuild,v 1.8 2010/07/13 08:56:16 pacho Exp $
 
 DESCRIPTION="compiler-compiler tool for aspect-oriented programming"
 HOMEPAGE="http://www.gnu.org/software/dotgnu"
@@ -37,10 +37,6 @@ src_install() {
 		docinto examples
 		dodoc examples/README
 		dodoc examples/{expr_c.tc,gram_c.y,scan_c.l}
-		dodoc examples/{expr_cpp.tc,gram_cpp.yy,scan_cpp.ll}
-		dodoc examples/{expr_java.tc,eval_value.java,mkjava}
-		dodoc examples/{expr_cs.tc,mkcsharp}
-		dodoc examples/expr_ruby.tc
 	fi
 
 	if use doc ; then
