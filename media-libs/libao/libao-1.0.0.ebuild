@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.0.0.ebuild,v 1.5 2010/07/04 17:15:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.0.0.ebuild,v 1.6 2010/07/13 14:45:01 fauli Exp $
 
 EAPI=2
 inherit libtool
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/ao/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="alsa nas mmap pulseaudio static-libs"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
