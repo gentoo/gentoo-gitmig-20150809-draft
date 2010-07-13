@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.3 2010/02/08 08:56:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.4 2010/07/13 11:57:23 mduft Exp $
 
 EAPI=2
 
@@ -34,9 +34,9 @@ src_prepare() {
 # does not apply to trunk anymore
 #	epatch "${FILESDIR}"/2.1.0/CALL_RESCAN_HACK.patch
 	# add .exe extension to TESTS
-	epatch "${FILESDIR}"/2.2.0/exeext.patch
+	epatch "${FILESDIR}"/2.3.0/exeext.patch
 	# use external autoconf archive
-	epatch "${FILESDIR}"/2.2.0/ext-ac-archive.patch
+	epatch "${FILESDIR}"/2.3.0/ext-ac-archive.patch
 	# enable SET_FILE_PROPERTIES(file, { 'PRIVATE_CINCLUDE', 1 })
 # does not apply to trunk anymore
 #	epatch "${FILESDIR}"/2.1.0/private-headers.patch
