@@ -1,8 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3.ebuild,v 1.1 2008/02/28 21:53:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3.ebuild,v 1.2 2010/07/13 17:59:41 arfrever Exp $
 
-NEED_PYTHON="2.3"
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
@@ -11,31 +14,31 @@ MY_P="PyDS-${PV}"
 DESCRIPTION="Python Desktop Server"
 HOMEPAGE="http://pyds.muensterland.org/"
 SRC_URI="http://simon.bofh.ms/~gb/${MY_P}.tar.gz"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
-SLOT="0"
+
 LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="media-libs/jpeg
-	sys-libs/zlib
-	>=dev-python/medusa-0.5.4
-	>=dev-db/metakit-2.4.9.2
+RDEPEND="app-text/silvercity
+	>=dev-db/metakit-2.4.9.2[python]
 	>=dev-python/cheetah-0.9.15
-	>=dev-python/pyxml-0.8.2
-	>=dev-python/pyrex-0.5
 	>=dev-python/docutils-0.3
 	>=dev-python/imaging-1.1.3
+	>=dev-python/medusa-0.5.4
+	>=dev-python/pyrex-0.5
+	>=dev-python/pyxml-0.8.2
 	>=dev-python/soappy-0.11.1
-	app-text/silvercity"
+	media-libs/jpeg
+	sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 DOCS="OVERVIEW"
+PYTHON_MODNAME="PyDS"
 
-src_unpack() {
-	distutils_src_unpack
-
-	cd "${S}/PyDS"
+src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/${PN}-0.6.5-py2.3.patch"
 }
