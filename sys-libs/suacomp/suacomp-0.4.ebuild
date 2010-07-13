@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.4.ebuild,v 1.1 2010/07/13 08:33:06 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.4.ebuild,v 1.2 2010/07/13 15:13:17 mr_bones_ Exp $
 
 EAPI=2
 
@@ -32,4 +32,3 @@ src_install() {
 	# falls into the category "low-level-system-library" :)
 	emake install PREFIX="${EPREFIX}/usr" DESTDIR="${D}"
 }
-
