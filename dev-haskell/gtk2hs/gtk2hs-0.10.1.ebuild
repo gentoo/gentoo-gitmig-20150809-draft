@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.10.1.ebuild,v 1.3 2010/06/28 14:28:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.10.1.ebuild,v 1.4 2010/07/13 11:00:26 slyfox Exp $
 
 EAPI="2"
 
@@ -40,6 +40,12 @@ src_prepare() {
 	epatch "${FILESDIR}/gtk2hs-0.10.1-ghc-6.12-packages.patch"
 	epatch "${FILESDIR}/gtk2hs-0.10.1-ghc-6.12-c2hs.patch"
 	cd "${S}"
+
+	# In GHC 6.12.2, qualified imports is now an error
+	sed -i -e "s/Map.findWithDefault, empty/findWithDefault, empty/" \
+		tools/c2hs/base/syms/Attributes.hs \
+		|| die "Can't remove qualified import"
+
 	eautoreconf
 }
 
