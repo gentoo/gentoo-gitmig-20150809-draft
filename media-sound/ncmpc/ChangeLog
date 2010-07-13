@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.52 2010/06/03 19:09:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.53 2010/07/13 19:02:44 xarthisius Exp $
+
+  13 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  ncmpc-0.16.1-r1.ebuild, +files/ncmpc-0.16.1-asneeded.patch:
+  Fixing build with --as-needed wrt bug 327865. Thanks to Diego for
+  reporting. Dropped ~x86-fbsd as media-libs/libmpdclient is not keyworded
 
 *ncmpc-0.16.1-r1 (03 Jun 2010)
 
