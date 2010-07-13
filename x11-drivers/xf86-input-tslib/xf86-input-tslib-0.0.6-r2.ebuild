@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r2.ebuild,v 1.2 2010/07/12 11:03:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r2.ebuild,v 1.3 2010/07/13 13:24:03 fauli Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.pengutronix.de/software/xf86-input-tslib/index_en.html"
 SRC_URI="ftp://cdn.debian.net/debian/pool/main/x/${PN}/${DEBSOURCES}"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-base/xorg-server
