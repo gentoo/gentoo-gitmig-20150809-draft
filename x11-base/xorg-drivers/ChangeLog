@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.27 2010/07/13 15:18:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.28 2010/07/14 09:32:28 lxnay Exp $
+
+  14 Jul 2010; Fabio Erculiani <lxnay@gentoo.org> xorg-drivers-1.7.ebuild,
+  xorg-drivers-1.8.ebuild:
+  re-enable xf86-input-fpit, ABI issues have been fixed, not revbumping for
+  now, close bug #321175
 
   13 Jul 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-drivers-1.7.ebuild:

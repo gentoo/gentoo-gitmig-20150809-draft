@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.15 2010/07/13 15:18:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.16 2010/07/14 09:32:28 lxnay Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -14,6 +14,7 @@ IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
 	input_devices_evdev
+	input_devices_fpit
 	input_devices_joystick
 	input_devices_keyboard
 	input_devices_mouse
@@ -84,6 +85,7 @@ PDEPEND="
 	input_devices_acecad?      ( x11-drivers/xf86-input-acecad )
 	input_devices_aiptek?      ( x11-drivers/xf86-input-aiptek )
 	input_devices_evdev?       ( x11-drivers/xf86-input-evdev )
+	input_devices_fpit?        ( x11-drivers/xf86-input-fpit )
 	input_devices_joystick?    ( x11-drivers/xf86-input-joystick )
 	input_devices_keyboard?    ( x11-drivers/xf86-input-keyboard )
 	input_devices_mouse?       ( x11-drivers/xf86-input-mouse )
@@ -141,7 +143,6 @@ PDEPEND="
 
 	!x11-drivers/xf86-input-citron
 	!x11-drivers/xf86-input-elographics
-	!x11-drivers/xf86-input-fpit
 	!x11-drivers/xf86-input-hyperpen
 	!x11-drivers/xf86-input-mutouch
 	!x11-drivers/xf86-video-cyrix
