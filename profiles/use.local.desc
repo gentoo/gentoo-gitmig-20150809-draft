@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5772 2010/07/13 12:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5773 2010/07/14 16:07:56 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2711,6 +2711,7 @@ net-mail/dbmail:sieve - Enable sieve filter support
 net-mail/dovecot:cydir - Adds cydir storage support
 net-mail/dovecot:dbox - Adds dbox storage support
 net-mail/dovecot:managesieve - Adds managesieve protocol support
+net-mail/dovecot:mdbox - Adds mdbox storage support
 net-mail/dovecot:pop3d - Build pop3d support
 net-mail/dovecot:sieve - Build the sieve plugin
 net-mail/dovecot:vpopmail - Add vpopmail support
