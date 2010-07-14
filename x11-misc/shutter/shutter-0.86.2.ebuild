@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.86.2.ebuild,v 1.2 2010/06/24 21:43:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.86.2.ebuild,v 1.3 2010/07/14 12:51:28 fauli Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://shutter-project.org/wp-content/uploads/releases/tars/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="drawing webphoto"
 
 RDEPEND="dev-lang/perl
