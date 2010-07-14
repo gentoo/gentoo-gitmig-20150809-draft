@@ -1,6 +1,11 @@
 # ChangeLog for app-office/rabbit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.10 2010/02/27 07:55:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.11 2010/07/14 05:54:30 graaff Exp $
+
+*rabbit-0.6.4-r1 (14 Jul 2010)
+
+  14 Jul 2010; Hans de Graaff <graaff@gentoo.org> +rabbit-0.6.4-r1.ebuild:
+  Convert to ruby-ng.
 
 *rabbit-0.6.4 (27 Feb 2010)
 
