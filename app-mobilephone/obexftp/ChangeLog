@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.59 2010/06/11 11:51:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.60 2010/07/14 16:12:48 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  obexftp-0.22.ebuild, obexftp-0.23.ebuild, obexftp-0.23-r1.ebuild:
+  Fix pkg_postrm().
 
   11 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> obexftp-0.22.ebuild,
   obexftp-0.23-r1.ebuild:
