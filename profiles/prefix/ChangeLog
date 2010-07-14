@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.189 2010/07/13 08:59:30 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.190 2010/07/14 13:50:18 darkside Exp $
+
+  14 Jul 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Preemptive mask for python-updater-0.8
 
   13 Jul 2010; Markus Duft <mduft@gentoo.org>
   windows/interix/6.1/x86/make.defaults:
