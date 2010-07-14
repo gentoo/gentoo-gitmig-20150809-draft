@@ -1,0 +1,12 @@
+diff -ur onak-0.3.7.orig/configure.ac onak-0.3.7/configure.ac
+--- onak-0.3.7.orig/configure.ac	2009-06-02 18:15:08.000000000 +0300
++++ onak-0.3.7/configure.ac	2010-07-14 14:53:51.000000000 +0300
+@@ -17,7 +17,7 @@
+ printf "#include <db.h>\nDB_VERSION_MAJOR DB_VERSION_MINOR\n" >conftest.c
+ set `eval $ac_cpp conftest.c | egrep '^ *[[0-9]] *'`; v="$1"; vv="$2"
+ AC_MSG_RESULT($v.$vv)
+-if test "$v" -eq 4; then
++if test "$v" -ge 4; then
+ 	for db in "db-$v.$vv" "db$v.$vv" "db-$v" "db$v" "db"; do
+ 		AC_MSG_CHECKING(for db_create in lib$db)
+ 		oldLIBS="$LIBS"

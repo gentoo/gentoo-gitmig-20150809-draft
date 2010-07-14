@@ -1,19 +1,26 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/onak-0.3.7.ebuild,v 1.2 2010/06/17 21:22:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/onak-0.3.7.ebuild,v 1.3 2010/07/14 11:56:37 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="onak is an OpenPGP keyserver"
 HOMEPAGE="http://www.earth.li/projectpurple/progs/onak.html"
 SRC_URI="http://www.earth.li/projectpurple/files/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="berkdb postgres"
-RDEPEND="berkdb? ( =sys-libs/db-4* )
+
+DEPEND="berkdb? ( >=sys-libs/db-4 )
 	postgres? ( dev-db/postgresql-server )"
-DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-berkdb-5.0.patch
+	eautoreconf
+}
 
 src_configure() {
 	local backend="fs"
