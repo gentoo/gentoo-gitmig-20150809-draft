@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/decoratortools-1.8.ebuild,v 1.2 2010/06/24 21:36:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/decoratortools-1.8.ebuild,v 1.3 2010/07/14 12:57:18 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.zi
 
 LICENSE="|| ( PSF-2.4 ZPL )"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ~ia64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="app-arch/unzip

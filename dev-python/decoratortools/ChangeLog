@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/decoratortools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.17 2010/06/24 21:36:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.18 2010/07/14 12:57:18 fauli Exp $
+
+  14 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  decoratortools-1.8.ebuild:
+  stable x86, bug 324467
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> decoratortools-1.8.ebuild:
   stable amd64, bug 324467
