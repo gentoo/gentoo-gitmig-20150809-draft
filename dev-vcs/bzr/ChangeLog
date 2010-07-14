@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.6 2010/07/10 18:54:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.7 2010/07/14 20:06:15 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bzr-2.1.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   10 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bzr-2.0.1.ebuild:
