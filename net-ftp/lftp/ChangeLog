@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.263 2010/07/08 23:52:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.264 2010/07/14 08:47:34 hwoarang Exp $
+
+  14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> lftp-4.0.9.ebuild:
+  Stable on amd64 wrt bug #327979
 
   08 Jul 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix metadata to reflect reality.
