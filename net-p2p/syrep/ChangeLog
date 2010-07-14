@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/syrep
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/syrep/ChangeLog,v 1.4 2008/01/16 16:06:54 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/syrep/ChangeLog,v 1.5 2010/07/14 11:35:38 ssuominen Exp $
+
+  14 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> syrep-0.9.ebuild:
+  Fix BerkDB detection code to be compatible with 5.0 wrt #319953 by Diego
+  E. Pettenò.
 
 *syrep-0.9 (16 Jan 2008)
 
