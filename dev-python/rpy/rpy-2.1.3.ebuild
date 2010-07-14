@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.1.3.ebuild,v 1.3 2010/07/07 13:35:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.1.3.ebuild,v 1.4 2010/07/14 12:59:18 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SRC_URI="http://pypi.python.org/packages/source/r/${MYPN}/${MYP}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~x86 ~x86-linux"
+KEYWORDS="amd64 ~ia64 x86 ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-lang/R-2.8
