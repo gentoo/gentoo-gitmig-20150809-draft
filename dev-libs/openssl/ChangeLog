@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.337 2010/06/21 20:43:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.338 2010/07/14 20:52:37 ssuominen Exp $
+
+  14 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> openssl-1.0.0a.ebuild:
+  Release OpenSSL 1.x to testing. Known issues have been resolved wrt
+  #304279.
 
   21 Jun 2010; Markus Meier <maekke@gentoo.org> openssl-0.9.8o.ebuild:
   amd64 stable, bug #322575
