@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3.ebuild,v 1.1 2010/07/08 14:50:58 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3.ebuild,v 1.2 2010/07/14 11:19:26 fauli Exp $
 
 EAPI=3
 
@@ -31,6 +31,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# Autodetection of dependencies may fail in the case of:
+	# USE=emacs disabled, app-editors/emacs not installed, app-editors/xemacs installed
+	use emacs || export EMACS=no
 	econf \
 		$(use_enable xml) \
 		$(use_enable ofx) \
@@ -46,14 +49,14 @@ src_install() {
 	insinto /usr/share/${P}
 	doins scripts/entry scripts/getquote scripts/bal scripts/bal-huquq || die
 
-	einstall || die "Installation failed!"
+	einstall || die
 
 	# Remove timeclock since it is part of Emacs
 	rm -f "${ED}${SITELISP}/${PN}"/timeclock.*
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
-			|| die "elisp-site-file-install failed"
+			|| die
 	fi
 
 	if use gnuplot; then
