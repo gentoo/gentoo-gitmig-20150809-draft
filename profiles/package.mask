@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11766 2010/07/13 18:53:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11767 2010/07/14 17:39:35 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (14 Jul 2010)
+# No longer working. Masked for deletion in 30 days (bug #322069).
+dev-python/pygoogle
 
 # Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
 # The ebuild still needs work, but if you can help testing
