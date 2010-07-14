@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/cynthiune
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.29 2010/02/10 21:41:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.30 2010/07/14 17:12:56 voyageur Exp $
+
+  14 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  cynthiune-0.9.5-r5.ebuild, +files/cynthiune-0.9.5-NSWindow.patch:
+  Fix compilation with new gnustep-base, bug #328191
 
   10 Feb 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -cynthiune-0.9.5-r4.ebuild, -files/cynthiune-0.9.5-libmpcdecsv7.patch:

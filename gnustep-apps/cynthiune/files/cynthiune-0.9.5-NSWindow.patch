@@ -1,0 +1,12 @@
+--- CynthiuneController.m.orig	2010-07-14 19:09:33.000000000 +0200
++++ CynthiuneController.m	2010-07-14 19:09:14.000000000 +0200
+@@ -28,9 +28,6 @@
+ #import <AppKit/NSPasteboard.h>
+ #import <AppKit/NSToolbar.h>
+ #import <AppKit/NSWindow.h>
+-#ifdef GNUSTEP
+-#import <AppKit/NSWindow+Toolbar.h>
+-#endif
+ #import <Foundation/NSArray.h>
+ #import <Foundation/NSBundle.h>
+ #import <Foundation/NSFileManager.h>
