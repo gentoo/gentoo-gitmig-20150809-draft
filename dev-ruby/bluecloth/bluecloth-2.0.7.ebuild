@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.7.ebuild,v 1.4 2010/06/13 06:23:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.0.7.ebuild,v 1.5 2010/07/14 20:30:31 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19"
@@ -29,6 +29,9 @@ ruby_add_bdepend "
 	)"
 
 all_ruby_prepare() {
+	# for Ruby 1.9.2 compatibility
+	sed -i -e '1i $: << "."' Rakefile || die
+
 	# The Rakefile uses the rubygems' package_task unconditionally,
 	# but this breaks when we don't install rubygems proper (like for
 	# Ruby 1.9 or JRuby). For this reason, patch it away. It should
