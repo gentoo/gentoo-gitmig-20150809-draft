@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlsfonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsfonts/ChangeLog,v 1.31 2010/07/13 13:22:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsfonts/ChangeLog,v 1.32 2010/07/14 17:09:43 jer Exp $
+
+  14 Jul 2010; Jeroen Roovers <jer@gentoo.org> xlsfonts-1.0.3.ebuild:
+  Stable for HPPA (bug #327777).
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   xlsfonts-1.0.3.ebuild:
