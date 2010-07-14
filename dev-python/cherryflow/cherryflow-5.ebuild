@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherryflow/cherryflow-5.ebuild,v 1.7 2009/02/15 22:04:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherryflow/cherryflow-5.ebuild,v 1.8 2010/07/14 17:12:47 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -12,8 +17,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
-RDEPEND="virtual/python"
+
 DEPEND="app-arch/unzip"
+RDEPEND=""
 
 S="${WORKDIR}"
 
