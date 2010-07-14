@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.5.ebuild,v 1.1 2010/07/13 12:12:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.5.ebuild,v 1.2 2010/07/14 18:18:48 pacho Exp $
 
 EAPI="3"
 
@@ -49,7 +49,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
 		--disable-clutter
-		$(use_enable cdr brasero)
+		$(use_enable cdr libbrasero)
 		$(use_enable exif exiv2)
 		$(use_enable gstreamer)
 		$(use_enable gnome-keyring)
@@ -65,6 +65,9 @@ src_prepare() {
 
 	# Do not require unstable libunique
 	epatch "${FILESDIR}/${PN}-2.11.2.1-configure.patch"
+
+	# Do not link to the exiv2 extension if it's not built
+	epatch "${FILESDIR}/${P}-configure-exiv2.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf

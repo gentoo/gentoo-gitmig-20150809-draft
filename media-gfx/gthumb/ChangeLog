@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.113 2010/07/13 12:12:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.114 2010/07/14 18:18:48 pacho Exp $
+
+  14 Jul 2010; Pacho Ramos <pacho@gentoo.org> gthumb-2.11.5.ebuild,
+  +files/gthumb-2.11.5-configure-exiv2.patch:
+  Apply upstream patch to fix building without exif USE flag (bug #328221 by
+  Diego E. 'Flameeyes' Pettenò and Alexander Goetz), fix libbrasero
+  configure option.
 
 *gthumb-2.11.5 (13 Jul 2010)
 
