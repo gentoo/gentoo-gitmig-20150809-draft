@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/q7z
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.7 2010/03/20 19:03:20 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.8 2010/07/14 16:06:45 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  q7z-0.8.0.ebuild:
+  Pass path to python_mod_cleanup().
 
   20 Mar 2010; Dror Levin <spatz@gentoo.org> -q7z-0.7.1.ebuild,
   -q7z-0.7.1-r1.ebuild, q7z-0.8.0.ebuild:
