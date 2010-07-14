@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyaudio/ChangeLog,v 1.3 2010/06/02 11:16:03 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyaudio/ChangeLog,v 1.4 2010/07/14 17:59:26 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyaudio-0.2.3.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   02 Jun 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   python team takes over maintainership.
