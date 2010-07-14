@@ -1,0 +1,13 @@
+--- configure.in
++++ configure.in
+@@ -222,10 +222,6 @@
+       CPPFLAGS="$CPPFLAGS -DBDB_V4"
+ 	fi
+ 
+-	if test $db_major -ne 3 -a $db_major -ne 4; then
+-		AC_MSG_ERROR(no supported BerkeleyDB found (4.x or 3.x). Your version is $db_version)
+-	fi
+-
+ 	AC_CHECK_LIB(db-$db_version,db_env_create,HAVE_DB=yes)
+ 	if test "x$HAVE_DB" = "xyes"; then
+ 		AC_SUBST(berkeleydb_libs)

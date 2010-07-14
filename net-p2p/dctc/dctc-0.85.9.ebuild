@@ -1,13 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.18 2007/03/02 09:24:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.19 2010/07/14 11:16:34 ssuominen Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit eutils autotools
-
-IUSE=""
+inherit autotools eutils
 
 DESCRIPTION="Direct Connect Text Client, almost famous file share program"
 HOMEPAGE="http://brainz.servebeer.com/dctc/"
@@ -16,6 +11,7 @@ SRC_URI="http://brainz.servebeer.com/dctc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64 ~sparc"
+IUSE=""
 
 RDEPEND="=dev-libs/glib-2*
 	>=sys-libs/db-3
@@ -29,6 +25,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/dctc-0.85.6-passive.patch
 	epatch "${FILESDIR}"/dctc-0.85.9-gcc41.patch
+	epatch "${FILESDIR}"/dctc-0.85.9-skip_db_ver_check.patch
 
 	eautoreconf
 
@@ -42,7 +39,7 @@ src_unpack() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc Documentation/Documentation/* Documentation/Documentation/DCextensions/*
 	dodoc AUTHORS ChangeLog KNOWN_BUGS NEWS README TODO
 }
