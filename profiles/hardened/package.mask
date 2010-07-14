@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.69 2010/06/25 09:21:28 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.70 2010/07/14 18:13:15 blueness Exp $
 
 # Hardened versions of gcc-4.0* through gcc-4.2* are not available.
 =sys-devel/gcc-4.0*
@@ -22,3 +22,6 @@
 # =sys-devel/gdb-7.0 is not hardened-ready according to xake & Zorry.
 # gdb-7.1 works fine.
 =sys-devel/gdb-7.0*
+
+# sys-kernel/hardened-sources-2.6.34 in tree for testing Bug 328275
+=sys-kernel/hardened-sources-2.6.34*
