@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.217 2010/07/09 13:03:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.218 2010/07/14 10:58:44 scarabeus Exp $
+
+  14 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-10.4.ebuild, ati-drivers-10.5.ebuild, ati-drivers-10.6.ebuild,
+  -files/libGL.la.in:
+  Drop .la file generating. Not required for quite time now.
 
   09 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/ati-drivers-2.6.19.patch, -ati-drivers-8.552-r2.ebuild,
