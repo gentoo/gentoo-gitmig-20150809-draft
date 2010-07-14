@@ -1,6 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.5 2010/06/21 19:27:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.6 2010/07/14 13:30:26 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils multilib python
 
@@ -13,28 +18,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~s390 ~sparc ~x86"
 IUSE="python static tcl"
 
-DEPEND=">=sys-apps/sed-4
-	python? ( >=dev-lang/python-2.2.1 )
-	tcl? ( >=dev-lang/tcl-8.3.3-r2 )"
+DEPEND="tcl? ( >=dev-lang/tcl-8.3.3-r2 )"
+RDEPEND="${DEPEND}"
 
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Fix all hardcoded python2.5 paths
-	for name in python/scxx/PWOBase.h python/PyHead.h python/PyStorage.cpp; do
-		sed -i -e "s:Python.h:python$(python_get_version)/Python.h:" ${name}
-	done
-	sed -i -e "s:python2.5:python$(python_get_version):" unix/configure
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
 }
 
-src_compile() {
+src_configure() {
 	local myconf mycxxflags
-	use python && myconf="--with-python=$(python_get_includedir),$(python_get_sitedir)"
-	use tcl && myconf="${myconf} --with-tcl=/usr/include,/usr/$(get_libdir)"
-	use static && myconf="${myconf} --disable-shared"
+	use tcl && myconf+=" --with-tcl=/usr/include,/usr/$(get_libdir)"
+	use static && myconf+=" --disable-shared"
 	use static || mycxxflags="-fPIC"
 
 	sed -i -e "s:^\(CXXFLAGS = \).*:\1${CXXFLAGS} ${mycxxflags} -I\$(srcdir)/../include:" unix/Makefile.in
@@ -45,16 +43,51 @@ src_compile() {
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+		--mandir=/usr/share/man || die "configure failed"
+}
 
-	emake || die
+src_compile() {
+	default
+
+	if use python; then
+		python_copy_sources
+
+		building() {
+			emake \
+				pyincludedir="$(python_get_includedir)" \
+				python
+		}
+		python_execute_function -s building
+	fi
 }
 
 src_install () {
-	use python && dodir $(python_get_sitedir)
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
+
+	if use python; then
+		installation() {
+			dodir "$(python_get_sitedir)" || return 1
+			emake \
+				DESTDIR="${D}" \
+				pylibdir="$(python_get_sitedir)" \
+				install-python
+		}
+		python_execute_function -s installation
+	fi
 
 	dodoc CHANGES README
 	dohtml Metakit.html
 	dohtml -a html,gif,png,jpg -r doc/*
+}
+
+pkg_postinst() {
+	if use python; then
+		python_mod_optimize metakit.py
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		python_mod_cleanup metakit.py
+	fi
 }
