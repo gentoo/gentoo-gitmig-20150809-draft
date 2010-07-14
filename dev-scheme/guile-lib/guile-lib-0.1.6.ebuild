@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.6.ebuild,v 1.8 2010/07/11 17:35:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.6.ebuild,v 1.9 2010/07/14 01:09:27 jer Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://home.gna.org/guile-lib/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 RDEPEND="dev-scheme/guile"
 DEPEND="${RDEPEND} !<dev-libs/g-wrap-1.9.8"
