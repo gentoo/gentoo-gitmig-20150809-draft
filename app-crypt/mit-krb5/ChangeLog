@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.225 2010/07/11 10:14:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.226 2010/07/14 15:28:13 darkside Exp $
+
+*mit-krb5-1.8.2-r1 (14 Jul 2010)
+
+  14 Jul 2010; Jeremy Olexa <darkside@gentoo.org> -mit-krb5-1.6.3-r7.ebuild,
+  -mit-krb5-1.7-r2.ebuild, -mit-krb5-1.8.1.ebuild,
+  -mit-krb5-1.8.1-r1.ebuild, +mit-krb5-1.8.2-r1.ebuild:
+  Rev bump for: sys-apps/keyutils added to DEPEND - bug #326201. Remove
+  vulnerable versions
 
   11 Jul 2010; Tobias Klausmann <klausman@gentoo.org> mit-krb5-1.8.2.ebuild:
   Stable on alpha, bug #323525
