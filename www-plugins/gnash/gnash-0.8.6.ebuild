@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.11 2010/07/02 11:01:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.12 2010/07/14 01:03:00 jer Exp $
 
 EAPI="2"
 CMAKE_REQUIRED="never"
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="+agg cairo cygnal dbus doc +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl python +sdl ssh ssl test video_cards_intel"
 
 RDEPEND=">=dev-libs/boost-1.35.0

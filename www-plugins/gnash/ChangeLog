@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.32 2010/07/13 14:51:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.33 2010/07/14 01:03:00 jer Exp $
+
+  14 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnash-0.8.5.ebuild,
+  gnash-0.8.6.ebuild, gnash-0.8.7.ebuild, gnash-0.8.7_p20100706.ebuild:
+  Remove HPPA keywording.
 
   13 Jul 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.7_p20100706.ebuild:
