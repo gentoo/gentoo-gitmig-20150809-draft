@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/suitename
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/suitename/ChangeLog,v 1.1 2010/07/14 20:15:22 jlec Exp $
+
+*suitename-0.3.070628 (14 Jul 2010)
+
+  14 Jul 2010; Justin Lecher <jlec@gentoo.org> +suitename-0.3.070628.ebuild,
+  +metadata.xml:
+  New addition
+
