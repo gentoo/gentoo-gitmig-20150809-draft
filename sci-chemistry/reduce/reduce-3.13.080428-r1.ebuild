@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.13.080428-r1.ebuild,v 1.3 2010/06/28 17:14:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.13.080428-r1.ebuild,v 1.4 2010/07/14 19:27:22 jlec Exp $
 
 EAPI="3"
 
@@ -28,7 +28,7 @@ src_prepare() {
 }
 
 src_compile() {
-	DICT_DIR="${EPREFIX}/usr/share/reduce"
+	DICT_DIR="/usr/share/reduce"
 	DICT_FILE="reduce_het_dict.txt"
 
 	emake \

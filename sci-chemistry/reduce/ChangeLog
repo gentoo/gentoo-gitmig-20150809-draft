@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/reduce
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.15 2010/06/28 17:14:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.16 2010/07/14 19:27:22 jlec Exp $
+
+  14 Jul 2010; Justin Lecher <jlec@gentoo.org> reduce-3.13.080428-r1.ebuild:
+  You should not use EPREFIX with helpers
 
   28 Jun 2010; Christoph Mende <angelos@gentoo.org>
   reduce-3.13.080428-r1.ebuild:
