@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/syrep/syrep-0.9.ebuild,v 1.2 2010/07/14 11:35:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/syrep/syrep-0.9.ebuild,v 1.3 2010/07/14 11:37:11 ssuominen Exp $
 
 EAPI=2
 inherit autotools
 
-DESCRIPTION="A p2p generic file repository synchronization tool that may be used to synchronize large file hierarchies bidirectionally by exchanging patch files."
+DESCRIPTION="A generic file repository synchronization tool"
 HOMEPAGE="http://0pointer.de/lennart/projects/syrep/"
 SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
