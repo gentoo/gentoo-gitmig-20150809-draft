@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.92 2010/07/02 18:27:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.93 2010/07/14 15:46:55 jer Exp $
+
+  14 Jul 2010; Jeroen Roovers <jer@gentoo.org> mtr-0.79.ebuild:
+  Stable for HPPA (bug #327985).
 
   02 Jul 2010; Jeremy Olexa <darkside@gentoo.org> mtr-0.79.ebuild:
   Fix suid/permission handling. Bug 296413, approved by pva
