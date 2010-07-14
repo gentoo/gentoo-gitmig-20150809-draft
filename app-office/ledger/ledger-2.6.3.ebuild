@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3.ebuild,v 1.3 2010/07/14 13:18:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3.ebuild,v 1.4 2010/07/14 16:40:35 hwoarang Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://wiki.github.com/jwiegley/ledger"
 SRC_URI="http://cloud.github.com/downloads/jwiegley/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x64-macos"
 SLOT="0"
 IUSE="emacs debug gnuplot ofx xml"
 
