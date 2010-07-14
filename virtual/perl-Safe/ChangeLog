@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Safe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/ChangeLog,v 1.21 2010/06/28 05:39:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/ChangeLog,v 1.22 2010/07/14 06:42:01 tove Exp $
+
+  14 Jul 2010; Torsten Veller <tove@gentoo.org> perl-Safe-2.27.ebuild:
+  Add perl-5.12 as provider
 
   28 Jun 2010; Jeroen Roovers <jer@gentoo.org> perl-Safe-2.27.ebuild:
   Stable for HPPA (bug #325563).

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-podlators
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-podlators/ChangeLog,v 1.3 2010/02/19 13:30:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-podlators/ChangeLog,v 1.4 2010/07/14 06:48:10 tove Exp $
+
+  14 Jul 2010; Torsten Veller <tove@gentoo.org> perl-podlators-2.3.1.ebuild:
+  Add perl-5.12 as provider
 
 *perl-podlators-2.3.1 (19 Feb 2010)
 
