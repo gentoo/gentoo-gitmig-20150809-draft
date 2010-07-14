@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypgsql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.19 2010/06/17 18:32:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.20 2010/07/14 17:51:58 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pypgsql-2.5.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> pypgsql-2.4.ebuild,
   pypgsql-2.5.1.ebuild:

@@ -1,14 +1,20 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.5.1.ebuild,v 1.5 2010/06/17 18:32:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/pypgsql-2.5.1.ebuild,v 1.6 2010/07/14 17:51:58 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
 MY_P="pyPgSQL-${PV}"
 
 DESCRIPTION="Python Interface to PostgreSQL"
-HOMEPAGE="http://pypgsql.sourceforge.net/"
+HOMEPAGE="http://pypgsql.sourceforge.net/ http://pypi.python.org/pypi/pyPgSQL"
 SRC_URI="mirror://sourceforge/pypgsql/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ia64 x86"
@@ -19,10 +25,12 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+
+DOCS="Announce"
 PYTHON_MODNAME="pyPgSQL"
 
 src_install() {
-	DOCS="Announce"
 	distutils_src_install
 
 	insinto /usr/share/doc/${PF}
