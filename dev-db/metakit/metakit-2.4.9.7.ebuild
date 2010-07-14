@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.6 2010/07/14 13:30:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.7 2010/07/14 13:42:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils multilib python
+inherit eutils multilib python toolchain-funcs
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -29,6 +29,10 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-LDFLAGS.patch"
+}
+
 src_configure() {
 	local myconf mycxxflags
 	use tcl && myconf+=" --with-tcl=/usr/include,/usr/$(get_libdir)"
@@ -47,13 +51,14 @@ src_configure() {
 }
 
 src_compile() {
-	default
+	emake SHLIB_LD="$(tc-getCXX) -shared" || die "emake failed"
 
 	if use python; then
 		python_copy_sources
 
 		building() {
 			emake \
+				SHLIB_LD="$(tc-getCXX) -shared"
 				pyincludedir="$(python_get_includedir)" \
 				python
 		}

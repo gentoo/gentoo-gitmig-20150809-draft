@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.48 2010/07/14 13:30:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.49 2010/07/14 13:42:44 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  metakit-2.4.9.7.ebuild, +files/metakit-2.4.9.7-LDFLAGS.patch:
+  Respect CXX during linking and LDFLAGS.
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   metakit-2.4.9.7.ebuild:
