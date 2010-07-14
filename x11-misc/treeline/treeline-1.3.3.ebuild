@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.3.3.ebuild,v 1.1 2010/07/05 21:44:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.3.3.ebuild,v 1.2 2010/07/14 16:33:48 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -43,7 +43,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	# let's leave compiling to python_mod_optimize
+	# Let's leave compiling to python_mod_optimize().
 	epatch "${FILESDIR}"/${PN}-1.2.3-nocompile.patch
 
 	rm doc/LICENSE
