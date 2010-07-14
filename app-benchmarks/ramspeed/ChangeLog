@@ -1,0 +1,11 @@
+# ChangeLog for app-benchmarks/ramspeed
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.1 2010/07/14 14:43:34 hwoarang Exp $
+
+*ramspeed-2.6.0 (14 Jul 2010)
+
+  14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> +ramspeed-2.6.0.ebuild,
+  +metadata.xml:
+  Moved from sunrise overlay. Fixes bug #304101. Thanks to Dane Smith
+  <smithdanea@gmail.com> for the ebuild. He will proxy-maintain this one
+
