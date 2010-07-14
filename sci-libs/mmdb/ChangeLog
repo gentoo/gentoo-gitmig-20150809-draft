@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mmdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.10 2010/07/01 08:32:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.11 2010/07/14 08:49:58 hwoarang Exp $
+
+  14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> mmdb-1.21-r3.ebuild:
+  Stable on amd64 wrt bug #326031
 
   01 Jul 2010; Justin Lecher <jlec@gentoo.org> -mmdb-1.21-r2.ebuild,
   +mmdb-1.21-r3.ebuild:
