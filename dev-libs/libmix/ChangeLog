@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmix
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.9 2009/01/08 19:11:40 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.10 2010/07/14 03:46:16 jer Exp $
+
+*libmix-2.05-r2 (14 Jul 2010)
+
+  14 Jul 2010; Jeroen Roovers <jer@gentoo.org> +libmix-2.05-r2.ebuild:
+  Respect CC, CXX, LDFLAGS.
 
 *libmix-2.05-r1 (08 Jan 2009)
 
