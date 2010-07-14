@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.412 2010/07/10 19:26:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.413 2010/07/14 10:43:32 pacho Exp $
+
+  14 Jul 2010; Pacho Ramos <pacho@gentoo.org> glib-2.24.1-r1.ebuild:
+  Add a comment in ebuild for remembering to keep eautoreconf in the future
+  due bug #267603 (by Andrei Slavoiu).
 
   10 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> glib-2.24.1-r1.ebuild:
   Add gtk-doc-am to DEPEND for eautoreconf. Fixes bug 327559
