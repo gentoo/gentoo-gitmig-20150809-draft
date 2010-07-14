@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.ebuild,v 1.3 2010/07/12 10:17:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.ebuild,v 1.4 2010/07/14 17:05:33 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit eutils distutils
 
 DESCRIPTION="matplotlib toolkit to plot map projections"
-HOMEPAGE="http://matplotlib.sourceforge.net/basemap/doc/html/"
+HOMEPAGE="http://matplotlib.sourceforge.net/basemap/doc/html/ http://pypi.python.org/pypi/basemap"
 SRC_URI="mirror://sourceforge/matplotlib/${P}.tar.gz"
 
 IUSE="examples"
