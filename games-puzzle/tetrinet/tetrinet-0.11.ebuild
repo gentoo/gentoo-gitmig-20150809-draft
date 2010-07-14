@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.13 2009/05/31 02:28:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.14 2010/07/14 17:38:21 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -17,14 +17,11 @@ IUSE="ipv6"
 DEPEND=">=sys-libs/ncurses-5"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-no-ipv6.patch
+	epatch \
+		"${FILESDIR}"/${P}-no-ipv6.patch \
+		"${FILESDIR}"/${P}-build.patch
 
 	use ipv6 && append-flags -DHAVE_IPV6
-	sed -i \
-		-e '/^CC/d' \
-		-e 's/-DHAVE_IPV6//' \
-		-e "s:-O2:${CFLAGS}:" Makefile \
-		|| die "sed Makefile failed"
 }
 
 src_install() {
