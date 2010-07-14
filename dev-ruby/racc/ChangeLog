@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.50 2010/05/22 22:45:52 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.51 2010/07/14 20:37:20 flameeyes Exp $
+
+  14 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> racc-1.4.6.ebuild:
+  Make sure that the . is in the library loading paths (for 1.9.2).
 
   22 May 2010; Alex Legler <a3li@gentoo.org> racc-1.4.6.ebuild:
   Add REE18 support

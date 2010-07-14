@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.7 2010/05/22 22:45:52 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.8 2010/07/14 20:37:20 flameeyes Exp $
 
 EAPI=2
 
@@ -23,6 +23,9 @@ IUSE=""
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
+	# for Ruby 1.9.2 compatibility
+	sed -i -e '1i $: << "."' Rakefile || die
+
 	sed -i -e '/tasks\/email/s:^:#:' Rakefile || die "rakefile fix failed"
 	sed -i -e '/prerequisites/s:^:#:' tasks/test.rb || die "test task fix failed"
 	sed -i -e 's|/tmp/out|${TMPDIR:-/tmp}/out|' test/helper.rb || die "tests fix failed"
