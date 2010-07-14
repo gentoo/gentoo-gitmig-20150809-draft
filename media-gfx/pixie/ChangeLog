@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pixie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.51 2010/01/04 22:27:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.52 2010/07/14 08:48:14 flameeyes Exp $
+
+  14 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  pixie-2.2.6-r1.ebuild:
+  Apply patch by Mauro for rebuilding autotools with automake 1.10 rather
+  than 1.11. Closes bug #328219.
 
   04 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   pixie-2.2.6-r1.ebuild:
