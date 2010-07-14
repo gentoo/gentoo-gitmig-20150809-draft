@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.455 2010/07/04 15:47:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.456 2010/07/14 20:44:46 flameeyes Exp $
+
+*ruby-1.9.2_rc2 (14 Jul 2010)
+
+  14 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ruby-1.9.2_rc2.ebuild:
+  Bump to 1.9.2 release candidate, that works with OpenSSL 1. This version
+  might cause _further_ build failures as it changed slightly behaviour.
+  You're going to need to rebuild rubygems and then all the packages
+  previously installed after upgrading to this.
 
   04 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -ruby-1.8.7_p249-r1.ebuild, -ruby-1.8.7_p249-r2.ebuild,
