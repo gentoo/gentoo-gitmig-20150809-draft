@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.7 2010/07/14 13:42:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7.ebuild,v 1.8 2010/07/14 13:45:56 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -58,7 +58,7 @@ src_compile() {
 
 		building() {
 			emake \
-				SHLIB_LD="$(tc-getCXX) -shared"
+				SHLIB_LD="$(tc-getCXX) -shared" \
 				pyincludedir="$(python_get_includedir)" \
 				python
 		}
