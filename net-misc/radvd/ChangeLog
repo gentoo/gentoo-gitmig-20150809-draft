@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.59 2010/07/11 18:41:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.60 2010/07/14 11:00:55 hwoarang Exp $
+
+  14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> radvd-1.6.ebuild:
+  Stable on amd64 wrt bug #327163
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org> radvd-1.6.ebuild:
   arm/sparc/x86 stable wrt #327163
