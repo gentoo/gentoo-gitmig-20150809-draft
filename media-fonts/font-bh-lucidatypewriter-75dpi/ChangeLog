@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-lucidatypewriter-75dpi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-75dpi/ChangeLog,v 1.21 2010/07/13 12:57:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-75dpi/ChangeLog,v 1.22 2010/07/14 16:55:03 jer Exp $
+
+  14 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  font-bh-lucidatypewriter-75dpi-1.0.1.ebuild:
+  Stable for HPPA (bug #327777).
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   font-bh-lucidatypewriter-75dpi-1.0.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-dec-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.28 2010/07/13 13:04:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-dec-misc/ChangeLog,v 1.29 2010/07/14 16:58:54 jer Exp $
+
+  14 Jul 2010; Jeroen Roovers <jer@gentoo.org> font-dec-misc-1.0.1.ebuild:
+  Stable for HPPA (bug #327777).
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   font-dec-misc-1.0.1.ebuild:
