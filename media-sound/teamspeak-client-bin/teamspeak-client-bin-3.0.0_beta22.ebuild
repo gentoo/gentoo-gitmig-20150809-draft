@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.0_beta22.ebuild,v 1.1 2010/06/20 08:37:05 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.0_beta22.ebuild,v 1.2 2010/07/14 06:28:18 trapni Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -31,6 +31,7 @@ SRC_URI="
 
 DEPEND=""
 RDEPEND="${DEPEND}
+		=media-libs/libpng-1.2*
 		>=x11-libs/libXinerama-1.0.2"
 
 src_unpack() {
