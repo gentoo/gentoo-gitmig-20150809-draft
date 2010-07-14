@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_beta6.ebuild,v 1.2 2010/06/17 20:52:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc2.ebuild,v 1.1 2010/07/14 16:07:14 darkside Exp $
 
 EAPI="2"
 
@@ -8,9 +8,12 @@ inherit eutils versionator ssl-cert
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
-sieve_snapshot="b877a1db00a5"
-SRC_URI="http://dovecot.org/releases/${major_minor}/beta/${MY_P}.tar.gz
+sieve_snapshot="37b0ecfb4de7"
+SRC_URI="http://dovecot.org/releases/${major_minor}/rc/${MY_P}.tar.gz
 	sieve? (
+	http://hg.rename-it.nl/dovecot-2.0-pigeonhole/archive/${sieve_snapshot}.tar.gz
+	)
+	managesieve? (
 	http://hg.rename-it.nl/dovecot-2.0-pigeonhole/archive/${sieve_snapshot}.tar.gz
 	) "
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
@@ -20,7 +23,8 @@ SLOT="0"
 LICENSE="LGPL-2.1" # MIT too?
 KEYWORDS="~alpha ~amd64 ~arm ~sparc ~x86"
 
-IUSE="berkdb bzip2 caps cydir dbox doc ipv6 kerberos ldap +maildir managesieve mbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
+IUSE="berkdb bzip2 caps cydir dbox doc ipv6 kerberos ldap +maildir managesieve
+mbox mdbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
 
 DEPEND="berkdb? ( sys-libs/db )
 	caps? ( sys-libs/libcap )
@@ -38,13 +42,10 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	if use managesieve && ! use sieve; then
-		eerror "managesieve USE flag selected but sieve USE flag unselected"
-		die "USE flag problem"
-	fi
-
-	if use dbox && ! use maildir; then
-		eerror "dbox USE flag needs maildir USE flag enabled"
-		die "USE flag problem"
+		ewarn "managesieve USE flag selected but sieve USE flag unselected"
+		ewarn "sieve USE flag will be turned on"
+		ewarn "Hit Control-C now if you want to abort"
+		epause 10
 	fi
 
 	# Add user and group for login process (same as for fedora/redhat)
@@ -67,7 +68,7 @@ src_configure() {
 	fi
 
 	local storages=""
-	for storage in cydir dbox maildir mbox; do
+	for storage in cydir dbox mdbox maildir mbox; do
 		use ${storage} && storages="${storage} ${storages}"
 	done
 	[ "${storages}" ] || storages="maildir"
@@ -91,7 +92,7 @@ src_configure() {
 		--disable-rpath \
 		${conf}
 
-	if use sieve; then
+	if use sieve || use managesieve ; then
 		# The sieve plugin needs this file to be build to determine the plugin
 		# directory and the list of libraries to link to.
 		emake dovecot-config || die "emake dovecot-config failed"
@@ -112,7 +113,7 @@ src_compile() {
 	cd "${MY_P}"
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
 
-	if use sieve; then
+	if use sieve || use managesieve ; then
 		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
 		emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make sieve failed"
 	fi
@@ -137,14 +138,14 @@ src_install () {
 	rm -rf "${D}"/usr/share/aclocal
 
 	dodoc AUTHORS NEWS README TODO || die "basic dodoc failed"
-	rm -f doc/Makefile*
-	dodoc doc/* || die "dodoc doc failed"
+	dodoc doc/*.{txt,cnf,xml,sh} || die "dodoc doc failed"
 	docinto example-config
 	dodoc doc/example-config/*.{conf,ext} || die "dodoc example failed"
 	docinto example-config/conf.d
 	dodoc doc/example-config/conf.d/*.{conf,ext} || die "dodoc conf.d failed"
 	docinto wiki
 	dodoc doc/wiki/* || die "dodoc wiki failed"
+	doman doc/man/*.{1,7}
 
 	# Create the dovecot.conf file from the dovecot-example.conf file that
 	# the dovecot folks nicely left for us....
@@ -159,13 +160,19 @@ src_install () {
 	sed -i -e "s:/usr/share/doc/dovecot/:/usr/share/doc/${PF}/:" \
 	"${confd}/../README" || die "sed failed"
 
-	# .maildir is the Gentoo default, but we need to support mbox too
+	# .maildir is the Gentoo default
 	local mail_location="maildir:~/.maildir"
-	if use mbox; then
-		mail_location="mbox:/var/spool/mail/%u:INDEX=/var/dovecot/%u"
-		keepdir /var/dovecot
-		sed -i -e 's|#mail_privileged_group =|mail_privileged_group = mail|' \
-		"${confd}/10-mail.conf" || die "sed failed"
+	if ! use maildir; then
+		if use mbox; then
+			mail_location="mbox:/var/spool/mail/%u:INDEX=/var/dovecot/%u"
+			keepdir /var/dovecot
+			sed -i -e 's|#mail_privileged_group =|mail_privileged_group = mail|' \
+			"${confd}/10-mail.conf" || die "sed failed"
+		elif use dbox ; then
+			mail_location="dbox:~/.dbox"
+		elif use mdbox ; then
+			mail_location="mdbox:~/.dbox"
+		fi
 	fi
 	sed -i -e \
 		"s|#mail_location =|mail_location = ${mail_location}|" \
@@ -223,7 +230,7 @@ src_install () {
 			|| die "failed to update vpopmail settings in 10-auth.conf"
 	fi
 
-	if use sieve; then
+	if use sieve || use managesieve ; then
 		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
 		emake DESTDIR="${D}" install || die "make install failed (sieve)"
 		sed -i -e \

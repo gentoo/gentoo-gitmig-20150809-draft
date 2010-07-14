@@ -14,6 +14,7 @@
     <flag name="cydir">Adds cydir storage support</flag>
     <flag name="dbox">Adds dbox storage support</flag>
     <flag name="managesieve">Adds managesieve protocol support</flag>
+    <flag name="mdbox">Adds mdbox storage support</flag>
     <flag name="pop3d">Build pop3d support</flag>
     <flag name="sieve">Build the sieve plugin</flag>
     <flag name="vpopmail">Add vpopmail support</flag>
