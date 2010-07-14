@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.3.9.ebuild,v 1.1 2009/09/06 15:15:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.1.ebuild,v 1.1 2010/07/14 11:44:36 pacho Exp $
 
 EAPI="2"
 
@@ -17,13 +17,16 @@ IUSE="examples python sasl"
 # libview is used in examples/gvncviewer -- no need
 # TODO: review nsplugin when it will be considered less experimental
 
-RDEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.18
 	>=net-libs/gnutls-1.4
 	x11-libs/cairo
 	python? ( >=dev-python/pygtk-2 )
 	sasl? ( dev-libs/cyrus-sasl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	>=dev-lang/perl-5
+	dev-util/pkgconfig
+	sys-devel/gettext
+	>=dev-util/intltool-0.35"
 
 src_configure() {
 	econf \
@@ -32,4 +35,9 @@ src_configure() {
 		$(use_with sasl) \
 		--with-coroutine=gthread \
 		--without-libview
+}
+
+src_install() {
+	base_src_install
+	dodoc AUTHORS ChangeLog NEWS README
 }
