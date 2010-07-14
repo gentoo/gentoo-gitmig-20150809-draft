@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cegui
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.27 2009/11/05 01:40:28 nyhm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.28 2010/07/14 17:51:25 mr_bones_ Exp $
+
+  14 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.6.2b.ebuild,
+  +files/cegui-0.6.2b-dups.patch:
+  remove dups to work with newer coreutils with patch from Thomas Fischer
+  via bug #327779
 
   05 Nov 2009; Tristan Heaven <nyhm@gentoo.org> cegui-0.6.2b.ebuild:
   Remove masked freeimage USE flag
