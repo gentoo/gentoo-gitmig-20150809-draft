@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.6 2010/07/10 17:59:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.7 2010/07/14 09:02:35 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -28,7 +28,7 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-inherit base autotools bash-completion eutils flag-o-matic toolchain-funcs ghc-package versionator
+inherit base autotools bash-completion eutils flag-o-matic multilib toolchain-funcs ghc-package versionator
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -141,6 +141,8 @@ src_unpack() {
 	use binary && mkdir "${S}"
 
 	base_src_unpack
+	source "${FILESDIR}/ghc-apply-gmp-hack" "$(get_libdir)"
+
 	ghc_setup_cflags
 
 	if ! use ghcbootstrap; then
@@ -256,7 +258,7 @@ src_compile() {
 		# we have to tell it to build unregisterised on some arches
 		# ppc64: EvilMangler currently does not understand some TOCs
 		# ia64: EvilMangler bitrot
-		if use alpha || use hppa || use ia64 || use ppc64; then
+		if use alpha || use ia64 || use ppc64; then
 			echo "GhcUnregisterised=YES" >> mk/build.mk
 			echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
 			echo "SplitObjs=NO" >> mk/build.mk

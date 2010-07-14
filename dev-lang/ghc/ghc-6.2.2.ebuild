@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.27 2008/01/26 19:53:25 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.28 2010/07/14 09:02:35 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -25,7 +25,7 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-inherit base eutils flag-o-matic toolchain-funcs ghc-package
+inherit base eutils flag-o-matic multilib toolchain-funcs ghc-package
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -149,6 +149,8 @@ src_unpack() {
 	use binary && mkdir "${S}"
 
 	base_src_unpack
+	source "${FILESDIR}/ghc-apply-gmp-hack" "$(get_libdir)"
+
 	ghc_setup_cflags
 
 	if use binary; then

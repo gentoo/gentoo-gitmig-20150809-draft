@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.183 2010/07/10 17:59:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.184 2010/07/14 09:02:35 slyfox Exp $
+
+  14 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.2.2.ebuild,
+  ghc-6.4.2.ebuild, ghc-6.6.ebuild, ghc-6.6.1.ebuild, ghc-6.8.2.ebuild,
+  ghc-6.8.2-r1.ebuild, ghc-6.10.4-r1.ebuild, ghc-6.12.1.ebuild,
+  ghc-6.12.3.ebuild, +files/ghc-apply-gmp-hack:
+  Added ability to bootstrap ghc on systems with gmp-5. Thanks to David
+  Brown (davidbCaf at freenode://#gentoo-haskell) for the report.
 
   10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
   +files/ghc-6.12.3-ia64-use-libffi-for-foreign-import-wrapper.patch:
