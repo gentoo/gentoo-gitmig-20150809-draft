@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.0.0.ebuild,v 1.3 2010/06/21 16:38:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.0.0.ebuild,v 1.4 2010/07/14 14:53:40 reavertm Exp $
 
 EAPI="2"
+
+# Bug 328269
+RESTRICT="test"
 
 if [[ ${PV} != *9999* ]]; then
 	KDE_LINGUAS="ca ca@valencia da de en_GB es et fr gl it nds pt pt_BR sv tr uk zh_CN zh_TW"
