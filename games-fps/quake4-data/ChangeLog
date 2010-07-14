@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake4-data
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/ChangeLog,v 1.9 2008/09/26 18:57:08 zmedico Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/ChangeLog,v 1.10 2010/07/14 18:06:34 mr_bones_ Exp $
+
+  14 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  quake4-data-1.0.2147.12.ebuild:
+  Fix quoting on CDROM_ROOT with patch from Jared in bug #326823
 
   26 Sep 2008; Zac Medico <zmedico@gentoo.org>
   quake4-data-1.0.2147.12.ebuild:

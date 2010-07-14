@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/quake4-data-1.0.2147.12.ebuild,v 1.9 2008/09/26 18:57:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/quake4-data-1.0.2147.12.ebuild,v 1.10 2010/07/14 18:06:34 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -33,20 +33,20 @@ src_install() {
 		Setup/Data/q4base/pak007.pk4
 	insinto "${dir}"/q4base
 	einfo "Copying files from Disk 1..."
-	doins ${CDROM_ROOT}/Setup/Data/q4base/pak01{0,1,2}.pk4 \
-		${CDROM_ROOT}/Setup/Data/q4base/zpak*.pk4 \
+	doins "${CDROM_ROOT}"/Setup/Data/q4base/pak01{0,1,2}.pk4 \
+		"${CDROM_ROOT}"/Setup/Data/q4base/zpak*.pk4 \
 		|| die "copying pak010->pak012 and zpack*"
 	cdrom_load_next_cd
 	einfo "Copying files from Disk 2..."
-	doins ${CDROM_ROOT}/Setup/Data/q4base/pak00{1,2,3}.pk4 \
+	doins "${CDROM_ROOT}"/Setup/Data/q4base/pak00{1,2,3}.pk4 \
 		|| die "copying pak001->pak003"
 	cdrom_load_next_cd
 	einfo "Copying files from Disk 3..."
-	doins ${CDROM_ROOT}/Setup/Data/q4base/pak00{4,5,6}.pk4 \
+	doins "${CDROM_ROOT}"/Setup/Data/q4base/pak00{4,5,6}.pk4 \
 		|| die "copying pak004->pak006"
 	cdrom_load_next_cd
 	einfo "Copying files from Disk 4..."
-	doins ${CDROM_ROOT}/Setup/Data/q4base/pak00{7,8,9}.pk4 \
+	doins "${CDROM_ROOT}"/Setup/Data/q4base/pak00{7,8,9}.pk4 \
 		|| die "copying pak007->pak009"
 
 	find ${Ddir} -exec touch '{}' \;
