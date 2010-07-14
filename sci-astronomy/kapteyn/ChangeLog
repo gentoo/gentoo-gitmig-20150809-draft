@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/kapteyn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.1 2010/07/13 19:25:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.2 2010/07/14 14:33:22 xarthisius Exp $
+
+  14 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> kapteyn-1.9.2.ebuild:
+  Install user guide docs by default
 
 *kapteyn-1.9.2 (13 Jul 2010)
 
