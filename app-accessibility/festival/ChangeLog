@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.90 2010/06/30 15:09:12 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.91 2010/07/14 00:12:02 neurogeek Exp $
+
+  13 Jul 2010; Jesus Rivero <neurogeek@gentoo.org>
+  festival-2.0.95_beta.ebuild:
+  Reverted change to emake -j1. Parallel make does not work. Closes bug
+  #326453
 
 *festival-2.0.95_beta (30 Jun 2010)
 

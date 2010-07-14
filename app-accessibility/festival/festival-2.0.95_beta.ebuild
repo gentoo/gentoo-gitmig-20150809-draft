@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.0.95_beta.ebuild,v 1.1 2010/06/30 15:09:12 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.0.95_beta.ebuild,v 1.2 2010/07/14 00:12:02 neurogeek Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs
@@ -66,7 +66,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake PROJECT_LIBDEPS="" REQUIRED_LIBDEPS="" LOCAL_LIBDEPS="" \
+	emake -j1 PROJECT_LIBDEPS="" REQUIRED_LIBDEPS="" LOCAL_LIBDEPS="" \
 		OPTIMISE_CXXFLAGS="${CXXFLAGS}" OPTIMISE_CCFLAGS="${CFLAGS}" \
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die "emake failed"
 }
