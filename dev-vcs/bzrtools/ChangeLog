@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzrtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.5 2010/07/10 19:12:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.6 2010/07/14 21:44:57 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bzrtools-2.1.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Restrict tests (bug #313363). Fix src_test() (bug #324931).
 
   10 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bzrtools-2.0.1.ebuild, bzrtools-2.1.0.ebuild:
