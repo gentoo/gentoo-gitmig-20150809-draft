@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.1.ebuild,v 1.1 2010/06/13 12:20:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.4.1.ebuild,v 1.2 2010/07/14 15:38:44 hwoarang Exp $
 
 EAPI="2"
 
@@ -58,12 +58,7 @@ DOCS="AUTHORS ChangeLog README"
 CMAKE_IN_SOURCE_BUILD="1"
 
 qmmp_use_enable() {
-	# uses completely non standard cmake options...
-	if use ${1}; then
-		echo "-DUSE_${2}:BOOL=TRUE"
-	else
-		echo "-DUSE_${2}:BOOL=FALSE"
-	fi
+	$(cmake-utils_use ${1} USE_${2})
 }
 
 src_configure() {
