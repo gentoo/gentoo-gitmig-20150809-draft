@@ -1,9 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.18.6.ebuild,v 1.2 2010/07/10 19:15:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.18.6.ebuild,v 1.3 2010/07/14 20:22:50 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -22,11 +24,10 @@ DEPEND=">=dev-vcs/bzr-1.14
 		>=dev-python/PyQt4-4.1[X]"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/${PN}"
+
 DOCS="AUTHORS.txt NEWS.txt README.txt TODO.txt"
-
-S=${WORKDIR}/${PN}
-
-PYTHON_MODNAME=bzrlib
+PYTHON_MODNAME="bzrlib/plugins/qbzr"
 
 src_test() {
 	elog "It's impossible to run tests at this point. If you wish to run tests"
@@ -36,6 +37,7 @@ src_test() {
 
 pkg_postinst() {
 	distutils_pkg_postinst
+
 	elog
 	elog "To enable spellchecking in qcommit, please, install >=dev-python/pyenchant-1.5.0"
 	elog " # emerge -a >=dev-python/pyenchant-1.5.0"
