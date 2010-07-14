@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gramps
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.129 2010/07/13 22:10:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.130 2010/07/14 05:44:22 fauli Exp $
+
+  14 Jul 2010; Christian Faulhammer <fauli@gentoo.org> gramps-3.2.3.ebuild:
+  add dev-util/intltool as dependency as reported by Nikoli <nikoli AT
+  lavabit DOT com> in bug 328203
 
   13 Jul 2010; Markos Chandras <hwoarang@gentoo.org> gramps-3.2.3.ebuild:
   Stable on amd64 wrt bug #328105
