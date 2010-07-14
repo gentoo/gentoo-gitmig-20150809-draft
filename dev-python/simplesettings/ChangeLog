@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simplesettings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplesettings/ChangeLog,v 1.2 2010/06/09 21:38:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplesettings/ChangeLog,v 1.3 2010/07/14 19:04:28 arfrever Exp $
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  simplesettings-0.5.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   09 Jun 2010; Patrick Lauer <patrick@gentoo.org> simplesettings-0.5.ebuild:
   Adding ~amd64 keyword
