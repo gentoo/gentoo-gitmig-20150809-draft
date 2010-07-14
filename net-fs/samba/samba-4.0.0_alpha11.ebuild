@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.3 2010/02/28 16:03:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.4 2010/07/14 16:20:24 arfrever Exp $
 
 EAPI="2"
 
@@ -145,7 +145,7 @@ src_test() {
 
 pkg_postinst() {
 	# Optimize the python modules so they get properly removed
-	python_mod_optimize $(python_get_sitedir)/${PN}
+	use python && python_mod_optimize $(python_get_sitedir)/${PN}
 
 	# Warn that it's an alpha
 	ewarn "Samba 4 is an alpha and therefore not considered stable. It's only"
@@ -154,5 +154,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	# Clean up the python modules
-	python_mod_cleanup
+	use python && python_mod_cleanup $(python_get_sitedir)/${PN}
 }
