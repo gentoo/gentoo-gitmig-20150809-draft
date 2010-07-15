@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.8 2010/06/26 17:58:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/quake1-demodata-1.06.ebuild,v 1.9 2010/07/15 09:00:24 fauli Exp $
 
 inherit eutils versionator games
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://idsoftware/${MY_PN}/${MY_PN}${MY_PV}.zip"
 # See licinfo.txt
 LICENSE="quake1-demodata"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="symlink"
 
 RDEPEND=""

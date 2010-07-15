@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-demodata
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.8 2010/06/26 17:58:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.9 2010/07/15 09:00:24 fauli Exp $
+
+  15 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  quake1-demodata-1.06.ebuild:
+  stable x86, bug 325141
 
   26 Jun 2010; Christoph Mende <angelos@gentoo.org>
   quake1-demodata-1.06.ebuild:
