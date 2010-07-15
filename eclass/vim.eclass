@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.187 2010/06/09 18:35:45 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.188 2010/07/15 13:11:50 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -773,9 +773,6 @@ vim_src_test() {
 
 	# We don't want to rebuild vim before running the tests
 	sed -i -e 's,: \$(VIMPROG),: ,' Makefile
-
-	# Give the user time to read the "what to do if these break" messages
-	epause 10
 
 	# Don't try to do the additional GUI test
 	make VIMPROG=${testprog} nongui \
