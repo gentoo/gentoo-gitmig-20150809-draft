@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/git-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.5 2010/04/24 21:22:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.6 2010/07/15 17:16:50 jlec Exp $
+
+  15 Jul 2010; Justin Lecher <jlec@gentoo.org> git-python-0.1.7.ebuild:
+  Keyworded for *-linux prefix, tested by me
 
 *git-python-0.1.7 (24 Apr 2010)
 
