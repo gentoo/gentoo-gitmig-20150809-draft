@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.66 2010/07/15 16:35:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.67 2010/07/15 17:48:39 jer Exp $
+
+  15 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=gnome for net-libs/libsoup (bug #324511).
 
   15 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Unmask USE=vala for net-libs/libproxy again (bug #320429).
