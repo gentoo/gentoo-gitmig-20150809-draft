@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.36 2010/07/15 15:57:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.37 2010/07/15 16:19:15 jer Exp $
+
+  15 Jul 2010; Jeroen Roovers <jer@gentoo.org> libproxy-0.4.2.ebuild:
+  Marked ~hppa (bug #320429).
 
   15 Jul 2010; Jeroen Roovers <jer@gentoo.org> libproxy-0.2.3-r3.ebuild:
   Stable for HPPA (bug #314007).
