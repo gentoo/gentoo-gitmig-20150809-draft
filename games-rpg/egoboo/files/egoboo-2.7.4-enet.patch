@@ -59,7 +59,7 @@ diff -ur egoboo-2.7.4.orig/game/Makefile.unix egoboo-2.7.4/game/Makefile.unix
 -	rm -f ${ENET_OBJ} ${EGO_OBJ} ${EGO_BIN}
 +INC     := -I. -I.. ${SDLCONF_I} -DENET11
 +CFLAGS  := ${CFLAGS} ${INC}
-+LDFLAGS := ${SDLCONF_L} -lenet -lSDL_ttf -lSDL_mixer -lGL -lGLU -lSDL_image
++LDFLAGS += ${SDLCONF_L} -lenet -lSDL_ttf -lSDL_mixer -lGL -lGLU -lSDL_image
 +
 +EGO_BIN := egoboo
 +

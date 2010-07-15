@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/egoboo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.21 2010/07/14 21:52:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.22 2010/07/15 04:24:03 mr_bones_ Exp $
+
+  15 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  files/egoboo-2.7.4-enet.patch:
+  honor LDFLAGS (bug #328313)
 
   14 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> egoboo-2.7.4.ebuild:
   Block dependency on the enet version.
