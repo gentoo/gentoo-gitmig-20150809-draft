@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.125 2010/06/16 08:54:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.126 2010/07/15 11:44:48 tove Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 
@@ -100,8 +100,8 @@ perl-module_src_prep() {
 	if [[ ${PREFER_BUILDPL} == yes && -f Build.PL ]] ; then
 		einfo "Using Module::Build"
 		if [[ ${DEPEND} != *virtual/perl-Module-Build* && ${PN} != Module-Build ]] ; then
-			ewarn "QA Notice: The ebuild uses Module::Build but doesn't depend on it."
-			ewarn "           Add virtual/perl-Module-Build to DEPEND!"
+			eqawarn "QA Notice: The ebuild uses Module::Build but doesn't depend on it."
+			eqawarn "           Add virtual/perl-Module-Build to DEPEND!"
 		fi
 		set -- \
 			--installdirs=vendor \
