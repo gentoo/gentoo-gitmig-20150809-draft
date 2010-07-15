@@ -1,16 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-3.4.1.ebuild,v 1.1 2010/07/15 16:00:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-3.4.1.ebuild,v 1.2 2010/07/15 21:57:01 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 DESCRIPTION="Meta package for the Enthought Tool Suite"
-HOMEPAGE="http://code.enthought.com/projects/"
+HOMEPAGE="http://code.enthought.com/projects/ http://pypi.python.org/pypi/ETS"
+SRC_URI=""
 
-IUSE="doc examples"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-LICENSE="BSD"
+IUSE="doc examples"
 
 RDEPEND="
 	>=dev-python/apptools-3.3.2[doc?,examples?]
@@ -26,4 +27,4 @@ RDEPEND="
 	>=sci-visualization/mayavi-3.3.2:2[doc?]
 	>=dev-python/scimath-3.0.5
 	>=dev-python/traits-3.4.0[doc?,examples?]
-	>=dev-python/traitsgui-3.3.0[doc?,examples?]"
+	>=dev-python/traitsgui-3.4.0[doc?,examples?]"
