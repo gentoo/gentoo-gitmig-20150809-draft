@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/maui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.15 2010/03/24 22:30:13 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.16 2010/07/15 07:06:30 jlec Exp $
+
+*maui-3.3 (14 Jul 2010)
+
+  14 Jul 2010; Justin Lecher <jlec@gentoo.org> +maui-3.3.ebuild:
+  Version Bump and prefix support
 
 *maui-3.2.6_p21-r1 (24 Mar 2010)
 
