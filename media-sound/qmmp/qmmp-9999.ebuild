@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.7 2010/07/14 15:38:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.8 2010/07/15 11:15:00 hwoarang Exp $
 
 EAPI="2"
 
@@ -57,42 +57,38 @@ DOCS="AUTHORS ChangeLog README"
 
 CMAKE_IN_SOURCE_BUILD="1"
 
-qmmp_use_enable() {
-	$(cmake-utils_use ${1} USE_${2})
-}
-
 src_configure() {
 	mycmakeargs="${mycmakeargs}
-		$(qmmp_use_enable alsa ALSA)
-		$(qmmp_use_enable aac AAC)
-		$(qmmp_use_enable bs2b BS2B)
-		$(qmmp_use_enable cover COVER)
-		$(qmmp_use_enable cdda CDA)
-		$(qmmp_use_enable dbus DBUS)
-		$(qmmp_use_enable enca ENCA)
-		$(qmmp_use_enable ffmpeg FFMPEG)
-		$(qmmp_use_enable flac FLAC)
-		$(qmmp_use_enable hal HAL)
-		$(qmmp_use_enable jack JACK)
-		$(qmmp_use_enable kde KDENOTIFY)
-		$(qmmp_use_enable ladspa LADSPA)
-		$(qmmp_use_enable lyrics LYRICS)
-		$(qmmp_use_enable mad MAD)
-		$(qmmp_use_enable mplayer MPLAYER)
-		$(qmmp_use_enable mms MMS)
-		$(qmmp_use_enable modplug MODPLUG)
-		$(qmmp_use_enable mpris MPRIS)
-		$(qmmp_use_enable musepack MPC)
-		$(qmmp_use_enable notifier NOTIFIER)
-		$(qmmp_use_enable oss OSS)
-		$(qmmp_use_enable projectm PROJECTM)
-		$(qmmp_use_enable pulseaudio PULSE)
-		$(qmmp_use_enable scrobbler SCROBBLER)
-		$(qmmp_use_enable sndfile SNDFILE)
-		$(qmmp_use_enable tray STATICON)
-		$(qmmp_use_enable libsamplerate SRC)
-		$(qmmp_use_enable vorbis VORBIS)
-		$(qmmp_use_enable wavpack WAVPACK)"
+		$(cmake-utils_use_use alsa)
+		$(cmake-utils_use_use aac)
+		$(cmake-utils_use_use bs2b)
+		$(cmake-utils_use_use cover)
+		$(cmake-utils_use_use cdda CDA)
+		$(cmake-utils_use_use dbus)
+		$(cmake-utils_use_use enca)
+		$(cmake-utils_use_use ffmpeg)
+		$(cmake-utils_use_use flac)
+		$(cmake-utils_use_use hal)
+		$(cmake-utils_use_use jack)
+		$(cmake-utils_use_use kde KDENOTIFY)
+		$(cmake-utils_use_use ladspa)
+		$(cmake-utils_use_use lyrics)
+		$(cmake-utils_use_use mad)
+		$(cmake-utils_use_use mplayer)
+		$(cmake-utils_use_use mms)
+		$(cmake-utils_use_use modplug)
+		$(cmake-utils_use_use mpris)
+		$(cmake-utils_use_use musepack MPC)
+		$(cmake-utils_use_use notifier)
+		$(cmake-utils_use_use oss)
+		$(cmake-utils_use_use projectm)
+		$(cmake-utils_use_use pulseaudio PULSE)
+		$(cmake-utils_use_use scrobbler)
+		$(cmake-utils_use_use sndfile)
+		$(cmake-utils_use_use tray STATICON)
+		$(cmake-utils_use_use libsamplerate SRC)
+		$(cmake-utils_use_use vorbis)
+		$(cmake-utils_use_use wavpack)"
 
 	cmake-utils_src_configure
 }
