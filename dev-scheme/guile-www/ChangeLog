@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-www
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.16 2010/07/11 00:31:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.17 2010/07/15 20:22:11 maekke Exp $
+
+  15 Jul 2010; Markus Meier <maekke@gentoo.org> guile-www-2.27.ebuild:
+  x86 stable, bug #326013
 
   11 Jul 2010; Brent Baude <ranger@gentoo.org> guile-www-2.27.ebuild:
   stable ppc64, bug 326013
