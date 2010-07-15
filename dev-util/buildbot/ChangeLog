@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.64 2010/07/09 00:43:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.65 2010/07/15 09:58:59 fauli Exp $
+
+  15 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  buildbot-0.8.0.ebuild:
+  stable x86, bug 325899
 
   09 Jul 2010; Jeroen Roovers <jer@gentoo.org> buildbot-0.8.0.ebuild:
   Stable for PPC (bug #325899).
