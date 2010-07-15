@@ -1,25 +1,25 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.3.8.ebuild,v 1.1 2009/11/17 18:49:57 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.1.ebuild,v 1.1 2010/07/15 17:22:49 billie Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit autotools eutils fdo-mime
+PYTHON_DEPEND=2
 
-IUSE="nls spell gnome python"
+inherit autotools eutils fdo-mime python
 
-MY_P="${PN}-unstable-${PV}"
+MY_P=${P/_/-}
 
 DESCRIPTION="A GTK HTML editor for the experienced web designer or programmer."
-SRC_URI="http://www.bennewitz.com/bluefish/devel/source/${MY_P}.tar.bz2"
+SRC_URI="http://www.bennewitz.com/bluefish/stable/source/${MY_P}.tar.bz2"
 HOMEPAGE="http://bluefish.openoffice.nl/"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
+IUSE="gucharmap nls python spell"
 
 RDEPEND="
-	dev-libs/libpcre
 	x11-libs/gtk+:2
 	spell? ( app-text/enchant[aspell] )"
 
@@ -28,16 +28,15 @@ DEPEND="${RDEPEND}
 	dev-libs/libxml2
 	dev-util/pkgconfig
 	x11-libs/pango
-	gnome? ( gnome-extra/gucharmap )
-	nls? ( sys-devel/gettext dev-util/intltool )
-	python? ( dev-lang/python )"
+	gucharmap? ( gnome-extra/gucharmap )
+	nls? ( sys-devel/gettext dev-util/intltool )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare () {
 	# Fixes automagic installation of charmap plugin
 	# Upstream bug: https://bugzilla.gnome.org/show_bug.cgi?id=570990
-	epatch "${FILESDIR}"/${P}-gucharmap-automagic.patch
+	epatch "${FILESDIR}"/${PN}-2.0.0-gucharmap-automagic.patch
 	eautoreconf
 }
 
@@ -48,7 +47,7 @@ src_configure() {
 		--disable-xml-catalog-update \
 		$(use_enable nls) \
 		$(use_enable spell spell-check) \
-		$(use_enable gnome charmap) \
+		$(use_enable gucharmap charmap) \
 		$(use_enable python)
 }
 
@@ -70,6 +69,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 	einfo "Removing XML catalog entries..."
 	/usr/bin/xmlcatalog  --noout \
 		--del 'Bluefish/DTD/Bflang' \
