@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.4.ebuild,v 1.1 2010/07/13 08:10:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.7.4.ebuild,v 1.2 2010/07/15 11:19:50 hwoarang Exp $
 
 EAPI="2"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
@@ -20,7 +20,7 @@ LICENSE="|| ( GPL-2 GPL-3 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="X assistant +dbus debug doc examples kde multimedia opengl phonon sql svg webkit xmlpatterns"
 
-DEPEND=">=dev-python/sip-4.10
+DEPEND=">=dev-python/sip-4.10.3
 	>=x11-libs/qt-core-${QTVER}:4
 	>=x11-libs/qt-script-${QTVER}:4
 	>=x11-libs/qt-test-${QTVER}:4
@@ -60,7 +60,7 @@ src_prepare() {
 
 	# Patch to support qreal for arm architecture
 	# wrt bug #322349
-	use arm && epatch "${FILESDIR}/${P}-qreal_float_support.patch"
+	use arm && epatch "${FILESDIR}/${PN}-4.7.3-qreal_float_support.patch"
 
 	qt4-r2_src_prepare
 
