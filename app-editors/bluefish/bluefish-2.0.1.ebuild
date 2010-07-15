@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.1.ebuild,v 1.1 2010/07/15 17:22:49 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.1.ebuild,v 1.2 2010/07/15 20:22:16 billie Exp $
 
 EAPI=2
 
-PYTHON_DEPEND=2
+PYTHON_DEPEND="python? 2"
 
 inherit autotools eutils fdo-mime python
 
@@ -32,6 +32,13 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext dev-util/intltool )"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	if use python ; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
 
 src_prepare () {
 	# Fixes automagic installation of charmap plugin
