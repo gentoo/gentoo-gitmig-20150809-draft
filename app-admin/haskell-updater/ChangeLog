@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.9 2010/07/09 14:57:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.10 2010/07/15 19:08:34 slyfox Exp $
+
+  15 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-updater-1.1.0.0.ebuild:
+  Marked ~x86-fbsd. Tested by Naohiro Aota (naota at
+  freenode://#gentoo-haskell)
 
   09 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
   haskell-updater-0.9.1.0.ebuild, haskell-updater-1.1.0.0.ebuild:
