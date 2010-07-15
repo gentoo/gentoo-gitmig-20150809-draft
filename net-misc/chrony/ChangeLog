@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.59 2010/06/25 09:50:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.60 2010/07/15 11:36:25 hwoarang Exp $
+
+  15 Jul 2010; Markos Chandras <hwoarang@gentoo.org> chrony-1.24-r2.ebuild:
+  Stable on amd64 wrt bug #328279
 
   25 Jun 2010; Tobias Klausmann <klausman@gentoo.org>
   files/chrony.logrotate:
