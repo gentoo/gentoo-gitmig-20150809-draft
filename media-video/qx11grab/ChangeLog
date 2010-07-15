@@ -1,0 +1,13 @@
+# ChangeLog for media-video/qx11grab
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.1 2010/07/15 17:47:35 hwoarang Exp $
+
+*qx11grab-0.2.1_rc4 (15 Jul 2010)
+
+  15 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  +qx11grab-0.2.1_rc4.ebuild, +files/qx11grab-0.2.1_rc4-as-needed.patch,
+  +metadata.xml:
+  Moved from sunrise overlay. Bug #297309. Thanks to Ondrej Sukup
+  <mimi.vx@gmail.com> for the initial commit and to Michał Górny
+  (sedzimir) for the fixes
+
