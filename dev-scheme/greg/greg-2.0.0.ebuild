@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/greg/greg-2.0.0.ebuild,v 1.4 2010/06/28 21:37:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/greg/greg-2.0.0.ebuild,v 1.5 2010/07/15 20:10:15 maekke Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gna.org/projects/greg/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 IUSE=""
 
