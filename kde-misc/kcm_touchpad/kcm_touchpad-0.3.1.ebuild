@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_touchpad/kcm_touchpad-0.3.1.ebuild,v 1.2 2010/06/22 17:47:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_touchpad/kcm_touchpad-0.3.1.ebuild,v 1.3 2010/07/15 08:58:14 fauli Exp $
 
 EAPI=2
 KDE_LINGUAS="de es nl pl"
@@ -14,7 +14,7 @@ SRC_URI="http://github.com/mishaaq/kcm_touchpad/tarball/${P} -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="x11-libs/libXi"
