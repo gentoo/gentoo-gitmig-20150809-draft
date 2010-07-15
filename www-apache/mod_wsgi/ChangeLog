@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.21 2010/07/12 21:56:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.22 2010/07/15 09:09:48 fauli Exp $
+
+  15 Jul 2010; Christian Faulhammer <fauli@gentoo.org> mod_wsgi-3.2.ebuild:
+  stable x86, bug 325417
 
   12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> mod_wsgi-3.2.ebuild:
   Stable on amd64 wrt bug #325417
