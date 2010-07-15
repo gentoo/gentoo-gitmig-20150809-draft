@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.184 2010/07/14 09:02:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.185 2010/07/15 19:13:33 slyfox Exp $
+
+  15 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
+  +files/ghc-6.12.3-configure-CHOST-freebsd.patch:
+  Restored ~x86-fbsd (bug #283531). Built and tested by Naohiro Aota (naota
+  at freenode://#gentoo-haskell) on i686-gentoo-freebsd8.
 
   14 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.2.2.ebuild,
   ghc-6.4.2.ebuild, ghc-6.6.ebuild, ghc-6.6.1.ebuild, ghc-6.8.2.ebuild,
