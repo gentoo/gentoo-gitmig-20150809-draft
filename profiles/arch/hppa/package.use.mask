@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.42 2010/07/12 22:59:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.43 2010/07/15 16:08:39 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -38,7 +38,7 @@ dev-libs/ppl prolog
 
 # Jeroen Roovers <jer@gentoo.org> (06 May 2009)
 # Mask webkit-gtk dependency for net-libs/libproxy:
-net-libs/libproxy webkit
+net-libs/libproxy webkit vala
 
 # Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
 # build fails (bug #210880):
