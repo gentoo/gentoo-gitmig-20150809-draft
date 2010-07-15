@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8-r1.ebuild,v 1.2 2010/02/28 16:53:57 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8-r1.ebuild,v 1.3 2010/07/15 08:54:53 fauli Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -14,7 +14,7 @@ SRC_URI="http://audicle.cs.princeton.edu/mini/release/files/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="+alsa jack oss"
 
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
