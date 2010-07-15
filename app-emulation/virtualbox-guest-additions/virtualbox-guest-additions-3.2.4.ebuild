@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.4.ebuild,v 1.3 2010/06/08 17:52:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.4.ebuild,v 1.4 2010/07/15 12:30:43 lxnay Exp $
 
 inherit eutils linux-mod
 
@@ -25,8 +25,7 @@ RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
 			 x11-libs/libXau
 			 x11-libs/libXdmcp
 			 x11-libs/libSM
-			 x11-libs/libICE
-			 amd64? ( app-emulation/emul-linux-x86-xlibs ) )"
+			 x11-libs/libICE )"
 DEPEND="${RDEPEND}
 		>=dev-util/kbuild-0.1.5-r1
 		>=dev-lang/yasm-0.6.2

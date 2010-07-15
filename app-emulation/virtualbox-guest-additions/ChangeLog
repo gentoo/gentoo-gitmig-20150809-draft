@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.48 2010/07/14 13:08:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.49 2010/07/15 12:30:43 lxnay Exp $
+
+  15 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
+  virtualbox-guest-additions-3.2.4.ebuild,
+  virtualbox-guest-additions-3.2.6.ebuild:
+  drop app-emulation/emul-linux-x86-xlibs dependency from 3.2.x ebuilds, not
+  needed
 
   14 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   virtualbox-guest-additions-3.1.8-r2.ebuild:
