@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4402 2010/07/14 18:51:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4403 2010/07/15 00:35:03 anarchy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jul 2010; <anarchy@gentoo.org> package.mask:
+  remove seamonkey-bin from p.mask
 
   14 Jul 2010; Anthony G. Basile <blueness@gentoo.org> ChangeLog,
   hardened/package.mask:
