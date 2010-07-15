@@ -1,6 +1,18 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.259 2010/06/30 15:36:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.260 2010/07/15 02:46:53 jmbsvicetto Exp $
+
+*kopete-4.4.5-r1 (15 Jul 2010)
+*kopete-4.4.4-r3 (15 Jul 2010)
+
+  15 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kopete-4.4.4-r3.ebuild, +kopete-4.4.5-r1.ebuild,
+  +files/kopete-4.4.5-openssl-1.patch:
+  Bumped kopete-4.4.4-r2 and kopete-4.4.5 to add fix for building wlm
+  protocol support. Thanks to Alin Năstac <mrness@gentoo.org> - fixes bug
+  328229.
+  Added patch to allow kopete-4.4.5 to build against openssl-1 based on
+  Samuli Suominen's patch for libmsn-4.1.
 
 *kopete-4.4.5 (30 Jun 2010)
 
