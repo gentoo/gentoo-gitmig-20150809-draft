@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.426 2010/07/14 16:20:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.427 2010/07/15 12:34:43 scarabeus Exp $
+
+  15 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  samba-4.0.0_alpha11.ebuild:
+  Do variable adjustments based on useflag in pkg_setup.
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   samba-4.0.0_alpha11.ebuild:

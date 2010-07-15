@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.4 2010/07/14 16:20:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.5 2010/07/15 12:34:43 scarabeus Exp $
 
 EAPI="2"
 
@@ -37,27 +37,26 @@ RESTRICT="mirror"
 
 S="${WORKDIR}/${MY_P}/source4"
 
-SBINPROGS=""
-if use server ; then
-	SBINPROGS="${SBINPROGS} bin/samba"
-fi
-if use client ; then
-	SBINPROGS="${SBINPROGS} bin/mount.cifs bin/umount.cifs"
-fi
-
-BINPROGS=""
-if use client ; then
-	BINPROGS="${BINPROGS} bin/smbclient bin/net bin/nmblookup bin/ntlm_auth"
-fi
-if use server ; then
-	BINPROGS="${BINPROGS} bin/testparm bin/smbtorture"
-fi
-if use tools ; then
-	# Should be in sys-libs/ldb, but there's no ldb release yet
-	BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename"
-fi
-
 pkg_setup() {
+	SBINPROGS=""
+	if use server ; then
+		SBINPROGS="${SBINPROGS} bin/samba"
+	fi
+	if use client ; then
+		SBINPROGS="${SBINPROGS} bin/mount.cifs bin/umount.cifs"
+	fi
+
+	BINPROGS=""
+	if use client ; then
+		BINPROGS="${BINPROGS} bin/smbclient bin/net bin/nmblookup bin/ntlm_auth"
+	fi
+	if use server ; then
+		BINPROGS="${BINPROGS} bin/testparm bin/smbtorture"
+	fi
+	if use tools ; then
+		# Should be in sys-libs/ldb, but there's no ldb release yet
+		BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename"
+	fi
 	confutils_use_depend_all server python
 }
 
