@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.10 2010/07/12 17:16:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-12.4.ebuild,v 1.11 2010/07/15 09:00:01 ssuominen Exp $
 
 EAPI="3"
 
@@ -39,7 +39,8 @@ remove_sockets() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-debian.patch
+	epatch "${FILESDIR}"/${P}-debian.patch \
+		"${FILESDIR}"/${P}-openssl-1.patch
 	# Do not strip the binary
 	sed -i -e '/STRIP/d' Makefile
 }

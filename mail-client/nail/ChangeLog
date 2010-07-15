@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/nail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.66 2010/07/12 17:16:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.67 2010/07/15 09:00:01 ssuominen Exp $
+
+  15 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> nail-12.4.ebuild,
+  +files/nail-12.4-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #328363 by "thanasis".
 
   12 Jul 2010; Jeroen Roovers <jer@gentoo.org> nail-12.4.ebuild:
   Stable for HPPA (bug #324127).
