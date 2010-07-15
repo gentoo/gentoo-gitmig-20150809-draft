@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.0_alpha3.ebuild,v 1.2 2010/01/02 10:03:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.0.5.ebuild,v 1.1 2010/07/15 00:31:31 anarchy Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -8,7 +8,7 @@ MY_PV="${PV/_alpha/a}"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${MY_PV}/seamonkey-${MY_PV}.en-US.linux-i686.tar.bz2"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${MY_PV}/linux-i686/en-US/seamonkey-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip"
 QA_EXECSTACK="opt/seamonkey/*"
@@ -73,9 +73,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use amd64 && einfo "NB: You just installed a 32-bit seamonkey"
-	update_mozilla_launcher_symlinks
-}
 
-pkg_postrm() {
-	update_mozilla_launcher_symlinks
+	einfo
+	einfo "If you want/need native language support please download"
+	einfo "and install the language pack that you need from :"
+	einfo "http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${MY_PV}/langpack/"
 }

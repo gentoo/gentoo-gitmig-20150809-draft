@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.73 2010/01/02 10:03:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.74 2010/07/15 00:31:31 anarchy Exp $
+
+*seamonkey-bin-2.0.5 (15 Jul 2010)
+
+  15 Jul 2010; <anarchy@gentoo.org> -seamonkey-bin-1.1.17.ebuild,
+  -seamonkey-bin-2.0_alpha3.ebuild, +seamonkey-bin-2.0.5.ebuild:
+  remove stale ebuild, update 2.x release
 
   02 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   seamonkey-bin-2.0_alpha3.ebuild:
