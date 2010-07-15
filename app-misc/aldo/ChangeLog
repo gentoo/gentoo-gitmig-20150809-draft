@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/aldo
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.18 2008/06/05 12:09:51 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.19 2010/07/15 13:14:43 tomjbe Exp $
+
+*aldo-0.7.6 (15 Jul 2010)
+
+  15 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> +aldo-0.7.6.ebuild:
+  Version bump wrt bug #328323. Thanks to Tim Harder <radhermit@gmail.com>
 
   05 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/aldo-0.0.11-iostream.diff, -aldo-0.7.0.ebuild:
