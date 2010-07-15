@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.187 2010/07/02 08:14:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.188 2010/07/15 22:20:58 hwoarang Exp $
+
+  15 Jul 2010; Markos Chandras <hwoarang@gentoo.org> mutt-1.5.20-r15.ebuild,
+  +files/mutt-1.5.20_ssl.patch:
+  Apply upstream patch to fix compilation with openssl-1.0.0. Bug #328487
 
   02 Jul 2010; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r15.ebuild:
   Cleanup logic for USE=sidebar. Add big fat warnings that USE=sidebar

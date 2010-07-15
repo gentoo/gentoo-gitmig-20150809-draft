@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r15.ebuild,v 1.3 2010/07/02 08:14:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r15.ebuild,v 1.4 2010/07/15 22:20:58 hwoarang Exp $
 
 EAPI="3"
 
@@ -82,6 +82,9 @@ src_prepare() {
 	built_with_use sys-libs/ncurses unicode && \
 		epatch "${FILESDIR}"/mutt-1.5.18-solaris-ncurses-chars.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-gpgme-1.2.0.patch
+	
+	#openssl-1.0.0 patch. bug #328487
+	epatch "${FILESDIR}"/${P}_ssl.patch
 
 	local pristine=$(use vanilla && echo yes)
 	if use sidebar && use !vanilla ; then
