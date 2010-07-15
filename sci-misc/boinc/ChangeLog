@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.89 2010/07/09 16:49:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.90 2010/07/15 21:28:30 scarabeus Exp $
+
+  15 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
+  Attempt to fix the initsystem. Blind commit as i dont have my hands on my
+  desktop for at least 14 days.
 
 *boinc-6.10.58 (09 Jul 2010)
 

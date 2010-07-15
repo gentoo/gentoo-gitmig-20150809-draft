@@ -61,9 +61,9 @@ start() {
 	fi
 
 	if [ -n "${RC_UNAME}" ]; then
-		PARAMS="--background --stdout '${LOGFILE}' --stderr '${LOGFILE}' ${ARGS}"
+		PARAMS="--background --stdout '${LOGFILE}' --stderr '${LOGFILE}' -- ${ARGS}"
 	else
-		PARAMS="${ARGS} >> '${LOGFILE}' 2>&1"
+		PARAMS="-- ${ARGS} >> '${LOGFILE}' 2>&1"
 	fi
 
 	generate_logs
@@ -77,12 +77,11 @@ start() {
 
 	eval ${CHRT} start-stop-daemon \
 		--start --quiet --chdir "${RUNTIMEDIR}" \
-        --background \
 		--make-pidfile \
 		--pidfile "${PIDFILE}" \
         --chuid "${USER}:${GROUP}" \
 		--nicelevel "${NICELEVEL}" \
-		--exec "${BOINCBIN}" -- ${PARAMS}
+		--exec "${BOINCBIN}" ${PARAMS}
 
 	RESULT=$?
 
