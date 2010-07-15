@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.0.0.ebuild,v 1.4 2010/07/14 14:53:40 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.0.0.ebuild,v 1.5 2010/07/15 09:16:03 fauli Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ inherit kde4-base
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+cmake +cxx debug +qmake qthelp"
 
 DEPEND="
