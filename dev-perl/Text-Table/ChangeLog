@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Text-Table
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Table/ChangeLog,v 1.1 2010/07/15 08:01:42 dev-zero Exp $
+
+*Text-Table-1.114 (15 Jul 2010)
+
+  15 Jul 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +Text-Table-1.114.ebuild, +metadata.xml:
+  Initial commit. Needed for dev-perl/Mail-Builder.
+
