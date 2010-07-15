@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.11 2010/05/16 20:38:39 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.12 2010/07/15 10:43:30 joker Exp $
+
+*mupen64plus-1.5-r2 (15 Jul 2010)
+
+  15 Jul 2010; Christian Birchinger <joker@gentoo.org>
+  +mupen64plus-1.5-r2.ebuild, +files/README.gentoo-patches-20100507:
+  Updated Debian patches to dfsg1-10. Fixed the dejavu font hardcoded
+  location patch and added media-fonts/dejavu as dependency.
 
   16 May 2010; Christian Birchinger <joker@gentoo.org>
   mupen64plus-1.5-r1.ebuild, +files/ftbfs-gvariant-type-conflicts.patch:
