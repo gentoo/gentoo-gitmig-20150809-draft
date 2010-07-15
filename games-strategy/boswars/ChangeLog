@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/boswars
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.14 2010/05/24 20:39:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.15 2010/07/15 08:51:23 fauli Exp $
+
+  15 Jul 2010; Christian Faulhammer <fauli@gentoo.org> boswars-2.6.1.ebuild:
+  stable x86, bug 325915
 
 *boswars-2.6.1 (24 May 2010)
 
