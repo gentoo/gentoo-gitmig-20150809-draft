@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.185 2010/07/15 19:13:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.186 2010/07/16 20:23:27 slyfox Exp $
+
+  16 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.10.4-r1.ebuild,
+  +files/ghc-6.10.4-disable-strip.patch:
+  Disable stripping of compiled ghc (and related) binary. Fixes bug #299492.
+  Thanks to Davide Pesavento <davidepesa@gmail.com> for the report.
 
   15 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
   +files/ghc-6.12.3-configure-CHOST-freebsd.patch:

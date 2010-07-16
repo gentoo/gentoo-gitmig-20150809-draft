@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.8 2010/07/14 09:02:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4-r1.ebuild,v 1.9 2010/07/16 20:23:27 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -185,6 +185,10 @@ src_unpack() {
 	                "${S}/ghc/ghc.wrapper"
 
 		cd "${S}"
+
+		# disable cabal built binary stripping (solves bug #299492)
+		# as installPackage strips them by default
+		epatch "${FILESDIR}/ghc-6.10.4-disable-strip.patch"
 
 		# patch aclocal.m4 and configure.ac to work with >=autoconf-2.64
 		epatch "${FILESDIR}/${P}-autoconf.patch"
