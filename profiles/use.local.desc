@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5776 2010/07/16 09:27:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5777 2010/07/16 10:07:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2682,6 +2682,13 @@ net-libs/opal:x264-static - Install x264 plugin statically linked with x264
 net-libs/openh323:noaudio - Disable audio codecs
 net-libs/openh323:novideo - Disable video codecs
 net-libs/ortp:srtp - Add support for Secure RTP
+net-libs/pjsip:epoll - epoll system call support
+net-libs/pjsip:ext-sound - External sound device support
+net-libs/pjsip:g711 - Builds the G711 codec
+net-libs/pjsip:g722 - Builds the G722 codec
+net-libs/pjsip:g7221 - Builds the G7221 codec
+net-libs/pjsip:ilbc - Builds the ilbc codec
+net-libs/pjsip:l16 - Builds the L16 codec
 net-libs/ptlib:asn - Enable ASN decoding/encoding support
 net-libs/ptlib:audio - Enable audio support
 net-libs/ptlib:dtmf - Enable DTMF encoding/decoding support
