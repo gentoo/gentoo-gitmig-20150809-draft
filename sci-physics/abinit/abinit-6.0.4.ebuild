@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-6.0.4.ebuild,v 1.1 2010/06/26 10:53:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-6.0.4.ebuild,v 1.2 2010/07/16 22:27:55 bicatali Exp $
 
 EAPI="3"
 
-inherit fortran toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Find total energy, charge density and electronic structure using density functional theory"
 HOMEPAGE="http://www.abinit.org/"
@@ -13,32 +13,25 @@ SRC_URI="http://ftp.abinit.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug mpi plugins test"
+IUSE="debug mpi netcdf plugins test"
 
-RDEPEND="
-	virtual/blas
+RDEPEND="virtual/blas
 	virtual/lapack"
-DEPEND="${RDEPEND}"
-
-# F90 code, g77 won't work
-FORTRAN="gfortran ifc"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
-	fortran_pkg_setup
-
 	# Doesn't compile with gcc-4.0, only >=4.1
-	local diemsg="Requires gcc-4.1 or newer"
-	if [[ "${FORTRANC}" = "gfortran" ]]; then
+	if [[ $(tc-getFC) == *gfortran ]]; then
 		if [[ $(gcc-major-version) -eq 4 ]] \
 			&& [[ $(gcc-minor-version) -lt 1  ]]; then
-				die "${diemsg}"
+				die "Requires gcc-4.1 or newer"
 		fi
 	fi
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-change-default-directories.patch
-#	epatch "${FILESDIR}"/5.2.3-fix-64bit-detection.patch
 	epatch "${FILESDIR}"/${PV}-test.patch
 
 	# bug #223111: Our eautoreconf directory detection breaks
@@ -56,20 +49,22 @@ src_prepare() {
 	if has_version '>=sys-devel/autoconf-2.60'; then
 		sed -i -e "s:_AC_SRCPATHS:_AC_SRCDIRS:g" config/scripts/make-macros-autotools
 	fi
-
 	eautoreconf
+	use mpi && export CC=mpicc FC=mpif90
 }
 
 src_configure() {
 	econf \
 		--disable-config-file \
+		--with-linalg-includes="$(pkg-config --cflags blas lapack)" \
+		--with-linalg-libs="$(pkg-config --libs blas lapack)" \
+		--with-cc-optflags="${CFLAGS}" \
+		--with-fc-optflags="${FFLAGS}" \
 		$(use_enable mpi) \
 		$(use_enable plugins all-plugins) \
 		$(use_enable netcdf) \
 		$(use_enable debug) \
-		--with-cc-optflags="${CFLAGS}" \
-		--with-fc-optflags="${FFLAGS}" \
-		FC="${FORTRANC}" \
+		FC="$(tc-getFC)" \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getLD)"
 }
