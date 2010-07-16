@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.44 2010/07/06 22:43:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.45 2010/07/16 09:27:28 pacho Exp $
+
+*bluez-4.69 (16 Jul 2010)
+
+  16 Jul 2010; Pacho Ramos <pacho@gentoo.org> +bluez-4.69.ebuild,
+  metadata.xml:
+  Version bump with lots of bugfixes, new features and addition of maemo6
+  plugin. Also fix elog information when consolekit is disabled per bug
+  #327815 (by Nuno J. Silva).
 
   06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> bluez-4.66-r1.ebuild:
   Stable on amd64 wrt bug #326897
