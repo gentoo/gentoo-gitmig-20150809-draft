@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.142 2010/07/08 22:10:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.143 2010/07/16 01:38:37 fordfrog Exp $
+
+  16 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.9-r2.ebuild:
+  Removed error message when no class files are found (bug #328357)
 
 *netbeans-6.9-r2 (08 Jul 2010)
 

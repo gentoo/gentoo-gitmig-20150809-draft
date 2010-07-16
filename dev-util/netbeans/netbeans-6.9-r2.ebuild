@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9-r2.ebuild,v 1.1 2010/07/08 22:10:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9-r2.ebuild,v 1.2 2010/07/16 01:38:37 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -457,7 +457,11 @@ src_prepare () {
 
 	# Clean up nbbuild
 	einfo "Removing prebuilt *.class files from nbbuild"
-	find "${S}" -name "*.class" | xargs rm -v
+	local class_files=`find "${S}" -name "*.class"`
+
+	if [ -n "${class_files}" ] ; then
+		rm -v ${class_files}
+	fi
 
 	if [ -z "${JAVA_PKG_NB_USE_BUNDLED}" ] ; then
 		place_unpack_symlinks
