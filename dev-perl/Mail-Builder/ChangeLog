@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-Builder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Builder/ChangeLog,v 1.1 2010/07/15 08:02:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Builder/ChangeLog,v 1.2 2010/07/16 13:54:23 dev-zero Exp $
+
+  16 Jul 2010; Tiziano Müller <dev-zero@gentoo.org>
+  Mail-Builder-1.16.ebuild, +files/1.16-escape-at-for-perl-5.8.patch:
+  Require perl-core/{version,parent} with perl-5.8.x and a newer version of
+  Email-MessageID. Fixed tests with perl-5.8.x.
 
 *Mail-Builder-1.16 (15 Jul 2010)
 
