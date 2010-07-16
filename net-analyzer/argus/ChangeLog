@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/argus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.24 2010/05/31 17:23:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.25 2010/07/16 09:19:29 fauli Exp $
+
+  16 Jul 2010; Christian Faulhammer <fauli@gentoo.org> argus-3.0.3.8.ebuild:
+  stable x86, bug 323577
 
   31 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> argus-3.0.2.ebuild:
   x86 stable wrt bug #318619
