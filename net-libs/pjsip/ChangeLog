@@ -1,0 +1,12 @@
+# ChangeLog for net-libs/pjsip
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/ChangeLog,v 1.1 2010/07/16 09:47:34 elvanor Exp $
+
+*pjsip-1.6 (16 Jul 2010)
+
+  16 Jul 2010; Jean-Noël Rivasseau <elvanor@gentoo.org> +pjsip-1.6.ebuild,
+  +metadata.xml:
+  Initial import from bug #188056. Cleaned up a bit the ebuild from Atman
+  Sense (atman.sense@zise.de).
+  Thanks!
+
