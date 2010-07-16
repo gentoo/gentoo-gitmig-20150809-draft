@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.2.ebuild,v 1.1 2010/07/16 21:58:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/virt-what-1.2.ebuild,v 1.2 2010/07/16 22:01:56 cardoe Exp $
 
 EAPI=3
 
@@ -24,4 +24,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-vmware-cpuid-check.patch
 
 	eautoreconf
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "make install failed"
 }
