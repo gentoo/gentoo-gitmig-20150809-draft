@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.335 2010/07/15 21:47:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.336 2010/07/16 05:07:20 darkside Exp $
+
+  16 Jul 2010; Jeremy Olexa <darkside@gentoo.org> vim-core-7.2.442.ebuild:
+  QA: Revert previous commit because a) the manifest is broke, b) will
+  create circular deps since app-editors/vim wasn't keyworded at the same
+  time
 
   15 Jul 2010; Markus Meier <maekke@gentoo.org> vim-core-7.2.442.ebuild:
   arm/x86 stable, bug #328261
