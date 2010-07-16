@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre6396.ebuild,v 1.2 2010/07/10 15:52:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.70_pre6396.ebuild,v 1.3 2010/07/16 11:56:47 jer Exp $
 
 EAPI="2"
 
@@ -141,6 +141,7 @@ src_prepare() {
 	sed -i \
 		share/opera/defaults/pluginpath.ini \
 		-e "s|/usr/lib32|${OPREFIX}|g" \
+		-e '/netscape/{s|[0-1]|2|g}' \
 		|| die "sed pluginpath.ini failed"
 
 	# Remove unwanted linguas
