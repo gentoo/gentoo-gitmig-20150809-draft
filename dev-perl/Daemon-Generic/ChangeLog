@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Daemon-Generic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/ChangeLog,v 1.4 2009/12/10 21:14:23 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/ChangeLog,v 1.5 2010/07/16 06:15:05 tove Exp $
+
+*Daemon-Generic-0.71 (16 Jul 2010)
+
+  16 Jul 2010; Torsten Veller <tove@gentoo.org> +Daemon-Generic-0.71.ebuild:
+  Version bump
 
   10 Dec 2009; Brent Baude <ranger@gentoo.org> Daemon-Generic-0.61.ebuild:
   Marking Daemon-Generic-0.61 ~ppc64 for bug 284166
