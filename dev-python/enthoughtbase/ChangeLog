@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/enthoughtbase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.13 2010/07/15 11:47:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.14 2010/07/16 09:25:00 fauli Exp $
+
+  16 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  enthoughtbase-3.0.5.ebuild:
+  stable x86, bug 326809
 
   15 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   enthoughtbase-3.0.5.ebuild:
