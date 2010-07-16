@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymssql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.20 2010/07/08 14:29:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.21 2010/07/16 09:21:43 fauli Exp $
+
+  16 Jul 2010; Christian Faulhammer <fauli@gentoo.org> pymssql-1.0.2.ebuild:
+  stable x86, bug 326249
 
   08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pymssql-0.7.4.ebuild:
