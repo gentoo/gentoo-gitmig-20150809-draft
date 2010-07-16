@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/virt-what
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.1 2010/07/16 21:58:40 cardoe Exp $
+
+*virt-what-1.2 (16 Jul 2010)
+
+  16 Jul 2010; Doug Goldstein <cardoe@gentoo.org> +virt-what-1.2.ebuild,
+  +metadata.xml:
+  Add initial version to Gentoo
+
