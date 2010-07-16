@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.1 2010/07/16 06:54:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.2 2010/07/16 18:51:33 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -62,4 +62,3 @@ src_install() {
 	rm -rf "${D}/usr/share/doc"
 	dodoc ${DOCS}
 }
-
