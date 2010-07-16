@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bowtie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/ChangeLog,v 1.10 2010/07/16 09:42:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/ChangeLog,v 1.11 2010/07/16 17:22:29 hwoarang Exp $
+
+  16 Jul 2010; Markos Chandras <hwoarang@gentoo.org> bowtie-0.12.3.ebuild:
+  Stable on amd64 wrt bug #328413
 
   16 Jul 2010; Christian Faulhammer <fauli@gentoo.org> bowtie-0.12.3.ebuild:
   stable x86, bug 328413
