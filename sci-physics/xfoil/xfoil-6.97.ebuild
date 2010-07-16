@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.5 2008/12/20 14:53:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.6 2010/07/16 21:56:01 bicatali Exp $
 
-inherit eutils fortran
+EAPI=3
+inherit eutils
 
 DESCRIPTION="Design and analysis of subsonic isolated airfoils"
 HOMEPAGE="http://raphael.mit.edu/xfoil/"
@@ -14,14 +15,12 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc examples"
 
-DEPEND="x11-libs/libX11"
+RDEPEND="x11-libs/libX11"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/Xfoil"
-FORTRAN="gfortran ifc g77"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^FC/d' \
 		-e '/^CC/d' \
@@ -32,16 +31,16 @@ src_unpack() {
 		|| die "sed for flags and compilers failed"
 
 	# fix bug #147033
-	[[ ${FORTRANC} == gfortran ]] && \
+	[[ $(tc-getFC) == *gfortran ]] && \
 		epatch "${FILESDIR}"/${PN}-6.96-gfortran.patch
 	epatch "${FILESDIR}"/${P}-overflow.patch
 	sed -i \
-		-e 's:/var/local/codes/orrs/osmap.dat:/usr/share/xfoil/orrs/osmap.dat:' \
+		-e "s:/var/local/codes/orrs/osmap.dat:${EPREFIX}/usr/share/xfoil/orrs/osmap.dat:" \
 		orrs/src/osmap.f || die "sed osmap.f failed"
 }
 
 src_compile() {
-	export FC="${FORTRANC}" F77="${FORTRANC}"
+	export FC="$(tc-getFC)" F77="$(tc-getF77)"
 	cd "${S}"/orrs/bin
 	emake FLG="${FFLAGS}" FTNLIB="${LDFLAGS}" OS || die "failed to build orrs"
 	cd "${S}"/orrs
@@ -65,5 +64,5 @@ src_install() {
 	dodoc *.txt README || die "dodoc failed"
 	insinto /usr/share/doc/${PF}/
 	use examples && { doins -r runs || die "examples install failed"; }
-	use doc && { doins "${DISTDIR}"/dataflow.pdf || die "doc install failed"; }
+	use doc && dodoc "${DISTDIR}"/dataflow.pdf
 }
