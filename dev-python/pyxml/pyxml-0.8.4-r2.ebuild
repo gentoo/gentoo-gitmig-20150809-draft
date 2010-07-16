@@ -1,11 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.4-r2.ebuild,v 1.14 2010/07/16 19:26:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.4-r2.ebuild,v 1.15 2010/07/16 21:24:07 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils distutils
+inherit distutils eutils
 
 MY_P=${P/pyxml/PyXML}
 
@@ -20,7 +22,6 @@ IUSE="doc examples"
 
 DEPEND=">=dev-libs/expat-1.95.6"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -57,7 +58,6 @@ src_test() {
 }
 
 src_install() {
-	[[ -z "${ED}" ]] && local ED="${D}"
 	distutils_src_install
 
 	doman doc/man/*
