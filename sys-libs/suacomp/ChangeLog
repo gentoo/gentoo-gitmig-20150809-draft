@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/suacomp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.1 2010/07/13 08:33:06 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.2 2010/07/16 02:41:11 jmbsvicetto Exp $
+
+  16 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed herd tag on metadata.xml.
 
 *suacomp-0.4 (13 Jul 2010)
 
