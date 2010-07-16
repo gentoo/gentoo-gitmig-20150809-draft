@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.188 2010/07/15 22:20:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.189 2010/07/16 07:11:48 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r15.ebuild,
+  -files/mutt-1.5.20_ssl.patch:
+  Undo last commit, as it broke unpacking, since -r10 the patch is already
+  included.
 
   15 Jul 2010; Markos Chandras <hwoarang@gentoo.org> mutt-1.5.20-r15.ebuild,
   +files/mutt-1.5.20_ssl.patch:
