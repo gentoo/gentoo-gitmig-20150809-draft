@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.18 2010/06/02 10:12:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.19 2010/07/16 17:32:30 xarthisius Exp $
+
+  16 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  hippodraw-1.21.3-r3.ebuild, +files/hippodraw-1.21.3-automake-1.11.patch:
+  Fix install with automake-1.11 wrt bug 328545. Thanks to Diego for
+  reporting
 
   02 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
   hippodraw-1.21.3-r3.ebuild, +files/hippodraw-1.21.3-gcc45.patch:

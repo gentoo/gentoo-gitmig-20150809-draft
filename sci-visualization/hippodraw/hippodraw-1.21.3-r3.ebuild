@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.4 2010/06/02 10:12:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.5 2010/07/16 17:32:30 xarthisius Exp $
 
 EAPI="3"
 
@@ -40,7 +40,7 @@ RDEPEND="${CDEPEND}
 	numpy? ( fits? ( dev-python/pyfits ) )"
 RESTRICT_PYTHON_ABIS="3.*"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
+S=${WORKDIR}/${MY_PN}-${PV}
 
 pkg_setup() {
 	python_pkg_setup
@@ -55,7 +55,8 @@ src_prepare() {
 	  "${FILESDIR}"/${P}-minuit2.patch \
 	  "${FILESDIR}"/${P}-wcslib.patch \
 	  "${FILESDIR}"/${P}-qt4.patch \
-	  "${FILESDIR}"/${P}-autoconf-2.64.patch
+	  "${FILESDIR}"/${P}-autoconf-2.64.patch \
+	  "${FILESDIR}"/${P}-automake-1.11.patch
 
 	echo "#!${EPREFIX}/bin/sh" > config/py-compile
 

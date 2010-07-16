@@ -1,0 +1,12 @@
+http://bugs.gentoo.org/show_bug.cgi?id=328545
+
+--- pattern/Makefile.am
++++ pattern/Makefile.am
+@@ -17,7 +17,6 @@
+ 	Factory.h				\
+ 	FactoryException.h			\
+ 	Observer.h				\
+-	Observer.h				\
+ 	Observable.h				\
+ 	string_convert.h			\
+ 	libhippo.h
