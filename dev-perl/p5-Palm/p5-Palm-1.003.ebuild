@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/p5-Palm-1.3.0.ebuild,v 1.12 2007/07/10 23:33:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/p5-Palm-1.003.ebuild,v 1.1 2010/07/16 07:40:05 tove Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ MY_P="${PN}-${MY_PV}"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Perl Module for Palm Pilots"
-SRC_URI="mirror://cpan/authors/id/A/AR/ARENSB/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/A/AR/ARENSB/${PN}-1.3.0.tar.gz"
 HOMEPAGE="http://search.cpan.org/~arensb/"
 
 SLOT="0"
