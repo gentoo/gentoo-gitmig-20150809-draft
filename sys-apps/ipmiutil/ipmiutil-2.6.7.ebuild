@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.6.7.ebuild,v 1.1 2010/07/16 11:42:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.6.7.ebuild,v 1.2 2010/07/16 18:42:12 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -25,6 +25,10 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake \
+		DESTDIR="${D}" \
+		initto="${D}/usr/share/doc/${PF}/examples" \
+		install || die
+
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/UserGuide
 }
