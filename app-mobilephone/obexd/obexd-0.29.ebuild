@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.27.ebuild,v 1.2 2010/06/12 16:45:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.29.ebuild,v 1.1 2010/07/16 09:32:15 pacho Exp $
 
 EAPI="2"
 
@@ -12,13 +12,13 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
-IUSE="debug -eds -server"
+IUSE="debug -eds nokia -server usb"
 
 RDEPEND="eds? ( gnome-extra/evolution-data-server )
 	!eds? ( dev-libs/libical )
 	net-wireless/bluez
 	>=dev-libs/openobex-1.4
-	dev-libs/glib:2
+	>=dev-libs/glib-2.16:2
 	sys-apps/dbus
 	server? ( !app-mobilephone/obex-data-server )"
 
@@ -29,7 +29,9 @@ src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_with eds phonebook ebook) \
-		$(use_enable server)
+		$(use_enable nokia nokia-backup) \
+		$(use_enable server) \
+		$(use_enable usb)
 }
 
 src_install() {
