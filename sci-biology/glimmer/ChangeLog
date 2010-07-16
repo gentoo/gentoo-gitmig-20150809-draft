@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/glimmer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.7 2010/04/03 22:26:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.8 2010/07/16 09:45:44 fauli Exp $
+
+  16 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  glimmer-3.02-r2.ebuild:
+  stable x86, bug 328415
 
 *glimmer-3.02-r2 (03 Apr 2010)
 
