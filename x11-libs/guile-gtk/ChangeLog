@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/guile-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.36 2010/07/16 06:49:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.37 2010/07/16 09:56:16 fauli Exp $
+
+  16 Jul 2010; Christian Faulhammer <fauli@gentoo.org> guile-gtk-2.1.ebuild:
+  stable x86, bug 326019
 
   16 Jul 2010; Justin Lecher <jlec@gentoo.org> files/2.1-brokentest.patch:
   Fix for brokentest fix
