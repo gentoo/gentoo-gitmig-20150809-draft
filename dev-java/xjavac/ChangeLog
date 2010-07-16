@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.31 2010/01/23 12:07:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.32 2010/07/16 20:00:00 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org>
+  xjavac-20041208-r5.ebuild:
+  Marked ~x64-macos
 
   23 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   files/xjavac-more-vendors.patch:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.67 2010/01/15 20:24:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.68 2010/07/16 19:46:37 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org>
+  commons-logging-1.1.1.ebuild:
+  Marked ~x64-macos
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org>
   commons-logging-1.1.1.ebuild:

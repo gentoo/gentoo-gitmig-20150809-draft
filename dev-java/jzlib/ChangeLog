@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.32 2010/01/15 19:15:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.33 2010/07/16 19:55:01 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org> jzlib-1.0.7-r1.ebuild:
+  Marked ~x64-macos
 
   15 Jan 2010; Ulrich Mueller <ulm@gentoo.org> jzlib-1.0.7-r1.ebuild:
   LICENSE is identical with BSD, bug 301123.
