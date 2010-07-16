@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/newick-utils/newick-utils-1.3.0.ebuild,v 1.1 2010/06/06 07:14:05 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/newick-utils/newick-utils-1.3.0.ebuild,v 1.2 2010/07/16 09:49:50 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="http://cegg.unige.ch/pub/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND=""
 RDEPEND=""
