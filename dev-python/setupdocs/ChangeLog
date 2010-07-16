@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setupdocs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.11 2010/07/15 22:04:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.12 2010/07/16 23:11:18 hwoarang Exp $
+
+  16 Jul 2010; Markos Chandras <hwoarang@gentoo.org> setupdocs-1.0.4.ebuild:
+  Stable on amd64 wrt bug #328485
 
   15 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   setupdocs-1.0.4.ebuild:
