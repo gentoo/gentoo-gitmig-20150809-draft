@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.77 2010/06/30 15:36:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.78 2010/07/16 11:22:56 scarabeus Exp $
+
+  16 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> pykde4-4.4.4.ebuild,
+  pykde4-4.4.5.ebuild:
+  Fix arm patch refferencing. Thanks to Wizzleby.
 
 *pykde4-4.5.9999 (30 Jun 2010)
 
