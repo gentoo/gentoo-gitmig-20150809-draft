@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.316 2010/07/15 17:29:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.317 2010/07/16 06:02:00 maekke Exp $
+
+  16 Jul 2010; Markus Meier <maekke@gentoo.org> gvim-7.2.442.ebuild:
+  x86 stable, bug #328261
 
   15 Jul 2010; Markos Chandras <hwoarang@gentoo.org> gvim-7.2.442.ebuild:
   Stable on amd64 wrt bug #328261
