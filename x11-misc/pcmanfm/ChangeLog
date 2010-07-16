@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.28 2010/07/12 12:12:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.29 2010/07/16 12:26:55 hwoarang Exp $
+
+  16 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  pcmanfm-0.9.7-r1.ebuild:
+  Add gnome-base/gnome-mount dependency wrt bug #328567
 
   12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Taking over maintainership
