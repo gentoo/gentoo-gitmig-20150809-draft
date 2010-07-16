@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.4 2010/05/27 05:47:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.5 2010/07/16 06:54:46 dev-zero Exp $
+
+*pino-0.2.11 (16 Jul 2010)
+
+  16 Jul 2010; Tiziano Müller <dev-zero@gentoo.org> +pino-0.2.11.ebuild:
+  Version bump (finally works with cmake).
 
 *pino-0.2.10 (27 May 2010)
 
