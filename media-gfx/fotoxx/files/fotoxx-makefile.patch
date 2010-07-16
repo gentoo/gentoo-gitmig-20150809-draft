@@ -1,0 +1,16 @@
+diff -U2 -r fotoxx-10.7.orig//Makefile fotoxx-10.7//Makefile
+--- fotoxx-10.7.orig//Makefile	2010-07-07 23:31:04.000000000 +0700
++++ fotoxx-10.7//Makefile	2010-07-16 19:06:59.000000000 +0700
+@@ -17,5 +17,5 @@
+ ICONDIR = $(DATADIR)/icons
+ DESKTOP = $(DATADIR)/kornelix-$(PROGRAM).desktop
+-DOCDIR = $(PREFIX)/share/doc/$(PROGRAM)
++DOCDIR = $(PREFIX)/share/doc/$(PF)
+ MANDIR = $(PREFIX)/share/man/man1
+ 
+@@ -39,5 +39,4 @@
+ 	mkdir -p $(DESTDIR)$(DATADIR)/locales
+ 	mkdir -p $(DESTDIR)$(MANDIR) 
+-	cp -R doc/* $(DESTDIR)$(DOCDIR)
+ 	cp icons/* $(DESTDIR)$(ICONDIR)
+ 	cp -R locales/* $(DESTDIR)$(DATADIR)/locales
