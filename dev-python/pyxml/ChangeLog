@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxml
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.61 2010/02/07 20:39:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/ChangeLog,v 1.62 2010/07/16 19:26:11 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org> pyxml-0.8.4-r2.ebuild:
+  Marked ~x64-macos
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> pyxml-0.8.4-r2.ebuild:
   Add inherit eutils: epatch is defined there.
