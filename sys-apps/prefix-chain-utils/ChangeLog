@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/prefix-chain-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/prefix-chain-utils/ChangeLog,v 1.1 2010/07/13 09:51:24 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/prefix-chain-utils/ChangeLog,v 1.2 2010/07/16 02:39:28 jmbsvicetto Exp $
+
+  16 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed herd tag on metadata.xml.
 
 *prefix-chain-utils-0.2-r5 (13 Jul 2010)
 
