@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.89 2010/01/03 21:45:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.90 2010/07/16 20:49:02 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org> xalan-2.7.1.ebuild:
+  Marked ~x64-macos
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> xalan-2.7.1.ebuild:
   Transfer Prefix keywords

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-net
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.45 2010/01/03 20:30:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.46 2010/07/16 20:36:48 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org>
+  commons-net-1.4.1-r1.ebuild:
+  Marked ~x64-macos
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   commons-net-1.4.1-r1.ebuild:

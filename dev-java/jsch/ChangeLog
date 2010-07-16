@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.76 2010/01/03 20:49:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.77 2010/07/16 20:34:50 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org> jsch-0.1.41.ebuild:
+  Marked ~x64-macos
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> jsch-0.1.41.ebuild:
   Transfer Prefix keywords

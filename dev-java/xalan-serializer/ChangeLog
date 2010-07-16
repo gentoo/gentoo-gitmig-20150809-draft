@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xalan-serializer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan-serializer/ChangeLog,v 1.10 2010/01/03 21:44:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan-serializer/ChangeLog,v 1.11 2010/07/16 20:15:07 grobian Exp $
+
+  16 Jul 2010; Fabian Groffen <grobian@gentoo.org>
+  xalan-serializer-2.7.1.ebuild:
+  Marked ~x64-macos
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   xalan-serializer-2.7.1.ebuild:
