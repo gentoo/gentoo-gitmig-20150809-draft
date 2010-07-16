@@ -7,12 +7,9 @@
 		<email>dev-zero@gentoo.org</email>
 	</maintainer>
 	<maintainer>
-		<email>betelgeuse@gentoo.org</email>
-	</maintainer>
-	<maintainer>
 		<email>pacho@gentoo.org</email>
 		<description>
-			Taking care of this until Petteri and Tiziano have
+			Taking care of this until Tiziano has
 			enough time for maintaing bluez.
 		</description>
 	</maintainer>

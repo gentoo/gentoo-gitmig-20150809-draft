@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.45 2010/07/16 09:27:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.46 2010/07/16 09:37:31 betelgeuse Exp $
+
+  16 Jul 2010; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Removing myself from metadata.xml as I don't have enough time for bluez.
 
 *bluez-4.69 (16 Jul 2010)
 
