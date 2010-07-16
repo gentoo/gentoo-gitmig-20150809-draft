@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.136 2010/07/10 19:01:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.137 2010/07/16 00:27:44 phajdan.jr Exp $
+
+*chromium-6.0.466.0 (16 Jul 2010)
+
+  16 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-6.0.453.1.ebuild, +chromium-6.0.466.0.ebuild,
+  chromium-9999.ebuild:
+  Version bump for dev channel release. Added run-time dependency on
+  gnome-keyring if gnome USE-flag is set. Removed old ebuild.
 
 *chromium-6.0.458.1 (10 Jul 2010)
 

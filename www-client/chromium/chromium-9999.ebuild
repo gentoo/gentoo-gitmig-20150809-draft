@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.66 2010/07/07 07:37:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.67 2010/07/16 00:27:44 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -15,12 +15,13 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="cups sse2"
+IUSE="cups gnome sse2"
 
 RDEPEND="app-arch/bzip2
 	>=dev-libs/libevent-1.4.13
 	>=dev-libs/nss-3.12.3
 	>=gnome-base/gconf-2.24.0
+	gnome? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
