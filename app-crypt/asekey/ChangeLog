@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/asekey
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.8 2009/10/14 00:49:50 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.9 2010/07/16 16:36:42 scarabeus Exp $
+
+  16 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Maintainer should not be the herd. Remove wrong entry from metadata. Thx
+  to leio and his grumpy for reporting.
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> asekey-3.3.ebuild:
   QA fixes; remove useless dodoc LICENSE
