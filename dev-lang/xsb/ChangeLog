@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.21 2010/07/09 10:38:01 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.22 2010/07/16 19:25:49 keri Exp $
+
+  16 Jul 2010; <keri@gentoo.org> Manifest:
+  Regenerate manifest for patchset-2. Closes #328577
 
   09 Jul 2010; <keri@gentoo.org> xsb-3.2.ebuild:
   Parallelize compile; filter install files; install examples to
