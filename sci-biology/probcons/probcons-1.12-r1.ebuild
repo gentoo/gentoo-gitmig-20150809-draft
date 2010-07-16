@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12-r1.ebuild,v 1.3 2010/07/16 09:51:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12-r1.ebuild,v 1.4 2010/07/16 22:01:47 hwoarang Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://probcons.stanford.edu/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 # Gnuplot is explicitly runtime-only, it's run using system()
