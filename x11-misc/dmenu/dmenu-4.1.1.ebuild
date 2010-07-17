@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.1.1.ebuild,v 1.1 2010/07/03 15:23:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/dmenu-4.1.1.ebuild,v 1.2 2010/07/17 10:49:21 jer Exp $
 
-inherit toolchain-funcs savedconfig
+EAPI="2"
+
+inherit savedconfig toolchain-funcs
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the X Window System"
 HOMEPAGE="http://www.suckless.org/programs/dmenu.html"
@@ -17,10 +19,7 @@ DEPEND="x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND=${DEPEND}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall -g/" \
 		-e "s/LDFLAGS = -s/LDFLAGS += -g/" \
@@ -28,9 +27,7 @@ src_unpack() {
 		-e "s/XINERAMAFLAGS =/XINERAMAFLAGS ?=/" \
 		config.mk || die "sed failed"
 
-	if use savedconfig; then
-		restore_config config.h
-	fi
+	restore_config config.h
 }
 
 src_compile() {
