@@ -1,6 +1,12 @@
 # ChangeLog for app-text/webgen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/ChangeLog,v 1.9 2008/12/26 14:32:48 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/ChangeLog,v 1.10 2010/07/17 07:24:13 graaff Exp $
+
+*webgen-0.5.13 (17 Jul 2010)
+
+  17 Jul 2010; Hans de Graaff <graaff@gentoo.org> +webgen-0.5.13.ebuild:
+  Version bump. This version is not a drop-in replacement for the 0.4.x
+  series. Convert to ruby-fakegem.
 
   26 Dec 2008; Hans de Graaff <graaff@gentoo.org> -webgen-0.4.2.ebuild,
   -webgen-0.4.6.ebuild:
