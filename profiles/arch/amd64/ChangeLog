@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.95 2010/07/05 19:40:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.96 2010/07/17 18:04:28 ssuominen Exp $
+
+  17 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.force:
+  Remove old USE="sse" force for libsoundtouch.
 
   05 Jul 2010; Mark Loeser <halcy0n@gentoo.org> +package.mask:
   adobe-flash-10.0 has been masked for security reasons, which huludesktop
