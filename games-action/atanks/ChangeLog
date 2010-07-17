@@ -1,6 +1,9 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.52 2010/07/09 15:41:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.53 2010/07/17 09:17:22 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> atanks-4.6.ebuild:
+  stable x86, bug 327343
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> atanks-4.6.ebuild:
   stable amd64, bug 327343
