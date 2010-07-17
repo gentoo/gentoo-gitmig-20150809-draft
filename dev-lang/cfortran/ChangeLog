@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cfortran
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.23 2010/04/25 11:22:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.24 2010/07/17 18:58:16 armin76 Exp $
+
+  17 Jul 2010; Raúl Porcel <armin76@gentoo.org> cfortran-4.4-r2.ebuild:
+  ia64 stable
 
   15 Feb 2010; Justin Lecher <jlec@gentoo.org>
   cfortran-4.4-r2.ebuild:
