@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libbluray
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.1 2010/07/17 02:55:14 beandog Exp $
+
+*libbluray-9999 (17 Jul 2010)
+
+  17 Jul 2010; Steve Dibb <beandog@gentoo.org> +libbluray-9999.ebuild,
+  +metadata.xml:
+  Initial commit; original ebuild from gentoo multimedia overlay
+
