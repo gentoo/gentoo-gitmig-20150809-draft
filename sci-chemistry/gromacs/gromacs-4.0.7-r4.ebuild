@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.4 2010/07/10 14:26:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.5 2010/07/17 12:40:20 xarthisius Exp $
 
 EAPI="3"
 
@@ -12,6 +12,7 @@ inherit autotools bash-completion eutils fortran multilib toolchain-funcs
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 HOMEPAGE="http://www.gromacs.org/"
 SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz
+		mirror://gentoo/${P}_upstream2010-06-08.patch.gz
 		test? ( ftp://ftp.gromacs.org/pub/tests/gmxtest-${TEST_PV}.tgz )
 		doc? ( ftp://ftp.gromacs.org/pub/manual/manual-4.0.pdf )
 		ffamber? ( http://ffamber.cnsm.csulb.edu/ffamber_v4.0-doc.tar.gz )"
@@ -54,7 +55,7 @@ src_prepare() {
 		(see bug #306479), disable xml or static"
 	fi
 
-	epatch "${FILESDIR}/${P}_upstream2010-06-08.patch.gz"
+	epatch "${WORKDIR}/${P}_upstream2010-06-08.patch"
 	sed -e '/AC_INIT/s/4\.0\.7/&-2010-06-08/' -i configure.ac \
 		|| die "Failed to change version in configure.ac"
 	epatch "${FILESDIR}/${PN}-4.0.9999-docdir.patch"
