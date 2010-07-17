@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.61 2010/07/17 10:49:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.62 2010/07/17 11:14:00 jer Exp $
 
   17 Jul 2010; Jeroen Roovers <jer@gentoo.org> dmenu-4.1.1.ebuild:
   Remove duplicate savedconfig.eclass code.
@@ -54,7 +54,9 @@
   27 Oct 2008; Torsten Veller <tove@gentoo.org> dmenu-3.9.ebuild:
   Stable on x86 (#244528)
 
-  11 Sep 2008; Cédric Krier <cedk@gentoo.org> ChangeLog:
+*dmenu-3.9 (11 Sep 2008)
+
+  11 Sep 2008; Cédric Krier <cedk@gentoo.org> dmenu-3.9.ebuild:
   Version bump
 
   30 Jul 2008; Cédric Krier <cedk@gentoo.org> -dmenu-3.2.ebuild:
