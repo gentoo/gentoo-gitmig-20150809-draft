@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/restrictedpython-3.6.0.ebuild,v 1.1 2010/07/09 22:45:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restrictedpython/restrictedpython-3.6.0.ebuild,v 1.2 2010/07/17 16:30:36 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -31,11 +31,6 @@ S="${WORKDIR}/${MY_P}"
 DOCS="CHANGES.txt src/RestrictedPython/README.txt"
 PYTHON_MODNAME="${MY_PN}"
 
-src_install() {
-	distutils_src_install
-
-	delete_tests() {
-		rm -fr "${ED}$(python_get_sitedir)/RestrictedPython/tests"
-	}
-	python_execute_function delete_tests
+pkg_postinst() {
+	python_mod_optimize -x /tests/ ${MY_PN}
 }
