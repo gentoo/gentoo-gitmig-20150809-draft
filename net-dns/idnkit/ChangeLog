@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.25 2010/07/14 01:07:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.26 2010/07/17 12:50:06 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> idnkit-1.0-r1.ebuild:
+  stable x86, bug 328139
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> idnkit-1.0-r1.ebuild:
   Stable for HPPA (bug #328139).
