@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.144 2010/07/17 17:46:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.145 2010/07/17 18:54:42 fordfrog Exp $
+
+  17 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/6.9/netbeans-keychain.patch, metadata.xml:
+  Added support for keychain in netbeans
 
   17 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org>
   -files/5.5.1/jdbcstorage-build.xml-comments.patch,
