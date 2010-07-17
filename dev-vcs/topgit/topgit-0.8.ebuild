@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/topgit-0.8.ebuild,v 1.1 2010/06/05 09:16:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/topgit-0.8.ebuild,v 1.2 2010/07/17 12:41:08 fauli Exp $
 
 inherit bash-completion
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="bash-completion"
 
 DEPEND="sys-apps/sed
