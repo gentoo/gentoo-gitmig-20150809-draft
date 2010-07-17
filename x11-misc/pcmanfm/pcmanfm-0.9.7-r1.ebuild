@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r1.ebuild,v 1.4 2010/07/16 12:26:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r1.ebuild,v 1.5 2010/07/17 10:15:52 hwoarang Exp $
 
 EAPI="2"
 inherit eutils fdo-mime
@@ -16,7 +16,7 @@ IUSE="debug hal udev"
 
 RDEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
-	gnome-base/gnome-mount
+	hal? ( gnome-base/gnome-mount )
 	gnome-base/gvfs[hal?,udev?]
 	>=lxde-base/menu-cache-0.3.2
 	x11-misc/shared-mime-info
