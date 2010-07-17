@@ -1,20 +1,0 @@
---- SConstruct
-+++ SConstruct
-@@ -1,6 +1,16 @@
- # -*- python -*-
- 
--env = Environment(CPPFLAGS=['-g', '-O2', '-Wall', '-ansi', '-pedantic'])
-+import os
-+import SCons.Util
-+
-+env = Environment(CPPFLAGS=['-Wall', '-ansi', '-pedantic'])
-+if os.environ.has_key('CXX'):
-+    env['CXX'] = os.environ['CXX']
-+if os.environ.has_key('CXXFLAGS'):
-+    env['CXXFLAGS'] = SCons.Util.CLVar(os.environ['CXXFLAGS'])
-+if os.environ.has_key('LDFLAGS'):
-+    env['LINKFLAGS'] = SCons.Util.CLVar(os.environ['LDFLAGS'])
-+
- conf = Configure(env)
- 
- if not conf.env['CXX']:
