@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.21 2010/07/16 09:32:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.22 2010/07/17 13:01:36 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> obexd-0.28.ebuild:
+  stable x86, bug 328579
 
 *obexd-0.29 (16 Jul 2010)
 
