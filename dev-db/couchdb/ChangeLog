@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.30 2010/07/16 10:59:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.31 2010/07/17 09:26:02 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  couchdb-0.11.0-r1.ebuild:
+  stable x86, bug 327877
 
   16 Jul 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.10.1.ebuild:
   Clean up old version.
