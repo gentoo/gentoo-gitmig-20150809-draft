@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/powder-114.ebuild,v 1.2 2010/07/09 15:42:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/powder-114.ebuild,v 1.3 2010/07/17 09:19:06 fauli Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -13,7 +13,7 @@ SRC_URI="http://www.zincland.com/powder/release/${MY_P}.tar.gz"
 
 LICENSE="CCPL-Sampling-Plus-1.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[video]"
