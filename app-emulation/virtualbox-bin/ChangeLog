@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.89 2010/07/14 13:03:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.90 2010/07/17 10:52:07 polynomial-c Exp $
+
+  17 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/virtualbox-bin.desktop-2, -files/virtualbox-bin-2.desktop,
+  -virtualbox-bin-3.0.12.ebuild, virtualbox-bin-3.1.8.ebuild,
+  virtualbox-bin-3.2.4-r1.ebuild, virtualbox-bin-3.2.6.ebuild,
+  -files/virtualbox-bin-interfaces:
+  Removed old. Fixed bug #325173. Small cleanups.
 
   14 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   virtualbox-bin-3.1.8.ebuild:

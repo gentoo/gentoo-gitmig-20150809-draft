@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.4-r1.ebuild,v 1.1 2010/06/08 19:01:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.4-r1.ebuild,v 1.2 2010/07/17 10:53:18 polynomial-c Exp $
 
 EAPI=2
 
@@ -230,7 +230,7 @@ src_install() {
 		fi
 
 		newicon	"${S}"/src/VBox/Frontends/VirtualBox/images/OSE/VirtualBox_32px.png ${PN}.png
-		domenu "${FILESDIR}"/${PN}.desktop
+		newmenu "${FILESDIR}"/${PN}.desktop-2 ${PN}.desktop
 	else
 		doins VBoxHeadless || die
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxHeadless
@@ -268,6 +268,10 @@ pkg_postinst() {
 	elog ""
 	elog "For advanced networking setups you should emerge:"
 	elog "net-misc/bridge-utils and sys-apps/usermode-utilities"
+	elog ""
+	elog "Please visit http://www.virtualbox.org/wiki/Editions for"
+	elog "an overview about the different features of ${PN}"
+	elog "and virtualbox-bin"
 }
 
 pkg_postrm() {
