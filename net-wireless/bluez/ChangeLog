@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.46 2010/07/16 09:37:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.47 2010/07/17 09:09:54 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> bluez-4.66-r1.ebuild:
+  stable x86, bug 326897
 
   16 Jul 2010; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Removing myself from metadata.xml as I don't have enough time for bluez.
