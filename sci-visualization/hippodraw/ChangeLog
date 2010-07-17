@@ -1,6 +1,17 @@
 # ChangeLog for sci-visualization/hippodraw
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.20 2010/07/16 17:33:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.21 2010/07/17 12:45:27 xarthisius Exp $
+
+  17 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  hippodraw-1.21.3-r3.ebuild, -files/hippodraw-1.21.3-autoconf-2.64.patch,
+  -files/hippodraw-1.21.3-automake-1.11.patch,
+  -files/hippodraw-1.21.3-gcc4.3.patch,
+  -files/hippodraw-1.21.3-gcc4.4.patch, -files/hippodraw-1.21.3-gcc45.patch,
+  -files/hippodraw-1.21.3-minuit2.patch,
+  -files/hippodraw-1.21.3-numarray.patch, -files/hippodraw-1.21.3-qt4.patch,
+  -files/hippodraw-1.21.3-test-fix.patch,
+  -files/hippodraw-1.21.3-wcslib.patch:
+  Moved patches to gentoo mirrors
 
   16 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -hippodraw-1.21.3-r2.ebuild:

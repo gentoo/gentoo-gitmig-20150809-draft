@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.5 2010/07/16 17:32:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.6 2010/07/17 12:45:27 xarthisius Exp $
 
 EAPI="3"
 
@@ -14,7 +14,8 @@ MY_PN=HippoDraw
 
 DESCRIPTION="Highly interactive data analysis Qt environment for C++ and python"
 HOMEPAGE="http://www.slac.stanford.edu/grp/ek/hippodraw/"
-SRC_URI="ftp://ftp.slac.stanford.edu/users/pfkeb/${PN}/${MY_PN}-${PV}.tar.gz"
+SRC_URI="ftp://ftp.slac.stanford.edu/users/pfkeb/${PN}/${MY_PN}-${PV}.tar.gz
+	mirror://gentoo/${P}-gentoo.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -47,16 +48,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc4.3.patch \
-	  "${FILESDIR}"/${P}-gcc4.4.patch \
-	  "${FILESDIR}"/${P}-gcc45.patch \
-	  "${FILESDIR}"/${P}-numarray.patch \
-	  "${FILESDIR}"/${P}-test-fix.patch \
-	  "${FILESDIR}"/${P}-minuit2.patch \
-	  "${FILESDIR}"/${P}-wcslib.patch \
-	  "${FILESDIR}"/${P}-qt4.patch \
-	  "${FILESDIR}"/${P}-autoconf-2.64.patch \
-	  "${FILESDIR}"/${P}-automake-1.11.patch
+	epatch "${WORKDIR}"/${P}-gcc4.3.patch \
+	  "${WORKDIR}"/${P}-gcc4.4.patch \
+	  "${WORKDIR}"/${P}-gcc45.patch \
+	  "${WORKDIR}"/${P}-numarray.patch \
+	  "${WORKDIR}"/${P}-test-fix.patch \
+	  "${WORKDIR}"/${P}-minuit2.patch \
+	  "${WORKDIR}"/${P}-wcslib.patch \
+	  "${WORKDIR}"/${P}-qt4.patch \
+	  "${WORKDIR}"/${P}-autoconf-2.64.patch \
+	  "${WORKDIR}"/${P}-automake-1.11.patch
 
 	echo "#!${EPREFIX}/bin/sh" > config/py-compile
 
