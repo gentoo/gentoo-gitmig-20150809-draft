@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.143 2010/07/16 01:38:37 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.144 2010/07/17 17:46:33 fordfrog Exp $
+
+  17 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/5.5.1/jdbcstorage-build.xml-comments.patch,
+  -files/5.5.1/jspparser-build.xml.patch,
+  -files/5.5.1/mdrant-build.xml-comments.patch, -files/5.5.1/startscript.sh,
+  -files/netbeans.desktop, -files/netbeans.png, -files/startscript.sh,
+  metadata.xml:
+  removed some really old versions of netbeans (3.6 and 5.5.1) and redundant
+  version (6.7)
 
   16 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.9-r2.ebuild:
   Removed error message when no class files are found (bug #328357)
