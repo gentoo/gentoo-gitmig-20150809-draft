@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.6.ebuild,v 1.5 2010/07/12 19:55:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.6.ebuild,v 1.6 2010/07/17 09:34:52 fauli Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://encfs.googlecode.com/files/${P}-1.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/boost-1.34
