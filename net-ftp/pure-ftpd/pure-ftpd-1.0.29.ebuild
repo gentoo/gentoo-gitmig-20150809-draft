@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.29.ebuild,v 1.3 2010/06/17 20:46:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.29.ebuild,v 1.4 2010/07/17 12:22:29 polynomial-c Exp $
 
 EAPI=2
 inherit eutils confutils flag-o-matic
@@ -88,7 +88,7 @@ src_install() {
 
 	newconfd "${FILESDIR}/pure-ftpd.conf_d" pure-ftpd
 
-	newinitd "${FILESDIR}/pure-ftpd.rc8" pure-ftpd
+	newinitd "${FILESDIR}/pure-ftpd.rc9" pure-ftpd
 
 	if use xinetd ; then
 		insinto /etc/xinetd.d
