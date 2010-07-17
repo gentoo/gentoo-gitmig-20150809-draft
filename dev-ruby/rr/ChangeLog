@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.7 2010/07/03 07:25:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.8 2010/07/17 17:16:07 armin76 Exp $
+
+  17 Jul 2010; Raúl Porcel <armin76@gentoo.org> rr-0.10.11.ebuild:
+  Add ~sparc wrt #322053
 
   03 Jul 2010; Christian Faulhammer <fauli@gentoo.org> rr-0.10.11.ebuild:
   added ~x86, bug 322053

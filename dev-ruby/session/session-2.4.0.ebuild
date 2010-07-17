@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-2.4.0.ebuild,v 1.5 2010/06/30 06:42:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-2.4.0.ebuild,v 1.6 2010/07/17 17:15:23 armin76 Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ SRC_URI="http://codeforpeople.com/lib/ruby/session/${P}.tgz"
 # by author.
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="test"
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
