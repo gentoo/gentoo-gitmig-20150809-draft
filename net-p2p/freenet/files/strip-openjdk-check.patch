@@ -1,6 +1,6 @@
---- src/freenet/node/Node.java	2010-04-25 14:54:26.000000000 +0200
-+++ src/freenet/node/Node.java.new	2010-04-25 14:55:51.000000000 +0200
-@@ -3647,43 +3647,6 @@
+--- src/freenet/node/Node.java	2010-07-17 02:53:39.633185065 +0200
++++ src/freenet/node/Node.java.new	2010-07-17 02:58:31.246061950 +0200
+@@ -3726,43 +3726,6 @@
  
  		boolean isOpenJDK = false;
  
@@ -41,6 +41,6 @@
 -			}
 -		}
 -
- 		boolean isApple;
+ 		if(logMINOR) Logger.minor(this, "JVM vendor: "+jvmVendor+", JVM name: "+jvmName+", JVM version: "+javaVersion+", OS name: "+osName+", OS version: "+osVersion);
  
- 		if(logMINOR) Logger.minor(this, "JVM vendor: "+jvmVendor+", JVM version: "+javaVersion+", OS name: "+osName+", OS version: "+osVersion);
+ 		if((!isOpenJDK) && (jvmVendor.startsWith("Sun ") || (jvmVendor.startsWith("The FreeBSD Foundation") && jvmSpecVendor.startsWith("Sun ")) || (jvmVendor.startsWith("Apple ")))) {
