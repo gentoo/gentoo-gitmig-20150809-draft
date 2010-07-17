@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.8 2010/06/30 04:26:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.9 2010/07/17 15:59:21 klausman Exp $
+
+  17 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  iptraf-ng-1.0.2.ebuild:
+  Keyworded on alpha, bug #305781
 
   30 Jun 2010; Jeroen Roovers <jer@gentoo.org> iptraf-ng-1.0.2.ebuild:
   econf dies on its own.
