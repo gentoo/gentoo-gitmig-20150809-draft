@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9x
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.44 2010/07/09 15:54:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.45 2010/07/17 09:29:18 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  snes9x-1.52-r1.ebuild:
+  stable x86, bug 327495
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> snes9x-1.52-r1.ebuild:
   stable amd64, bug 327495
