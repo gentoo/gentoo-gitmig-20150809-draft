@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.4 2010/06/21 17:00:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.5 2010/07/17 13:46:52 xarthisius Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -21,6 +21,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-nolcms.patch
 	rm -rf Source/C/libjpeg Source/C/NCSEcw/lcms
+	# bug 328075
+	sed -i -e "s:includeHEADERS_INSTALL:INSTALL_HEADER:" \
+		Source/NCSBuildGnu/Makefile.am || die
 	eautoreconf
 }
 

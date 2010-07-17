@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/libecwj2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.8 2010/06/21 17:00:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.9 2010/07/17 13:46:52 xarthisius Exp $
+
+  17 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  libecwj2-3.3-r1.ebuild:
+  Fix install of the header file wrt bug 328075. Thanks to pier
+  <pier_carla@yahoo.it> for report and Francois Bissey
+  <f.r.bissey@massey.ac.nz> for the fix.
 
   21 Jun 2010; Markus Meier <maekke@gentoo.org> libecwj2-3.3-r1.ebuild:
   x86 stable, bug #318825
