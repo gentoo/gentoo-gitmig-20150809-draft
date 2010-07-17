@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/deltarpm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.5 2010/05/18 08:58:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.6 2010/07/17 11:02:14 hwoarang Exp $
+
+  17 Jul 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Fix metadata.xml. maintainer-needed is not a herd
 
 *deltarpm-3.5 (18 May 2010)
 
