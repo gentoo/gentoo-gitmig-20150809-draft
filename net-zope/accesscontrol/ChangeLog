@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/accesscontrol
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/accesscontrol/ChangeLog,v 1.1 2010/07/17 16:49:11 arfrever Exp $
+
+*accesscontrol-2.13.2 (17 Jul 2010)
+
+  17 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +accesscontrol-2.13.2.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
