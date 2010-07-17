@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.756 2010/07/17 03:47:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.757 2010/07/17 16:36:23 beandog Exp $
+
+  17 Jul 2010; Steve Dibb <beandog@gentoo.org> mplayer-9999.ebuild:
+  Revert libass change; Always use external versions where possible
 
   17 Jul 2010; Steve Dibb <beandog@gentoo.org> mplayer-9999.ebuild,
   metadata.xml:
