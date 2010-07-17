@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1.ebuild,v 1.5 2010/07/09 14:12:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.1.ebuild,v 1.6 2010/07/17 18:59:11 armin76 Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE="dap doc fortran hdf5 static-libs szip cxx"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	hdf5? ( >=sci-libs/hdf5-1.8[zlib,szip?,fortran?] )
