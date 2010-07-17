@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.29 2010/06/20 19:27:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.30 2010/07/17 19:14:18 zzam Exp $
 
 EAPI="1"
 
@@ -151,7 +151,7 @@ src_unpack() {
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
-		-i rules/{rules.d,arch,gentoo}/*.rules \
+		-i rules/{rules.d,arch}/*.rules \
 	|| die "failed to change group dialout to uucp"
 
 	if [[ ${PV} != 9999 ]]; then
