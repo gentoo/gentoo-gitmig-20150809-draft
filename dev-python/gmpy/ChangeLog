@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.15 2010/06/17 19:50:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.16 2010/07/17 22:46:31 arfrever Exp $
+
+  17 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gmpy-1.11.ebuild:
+  Use -fno-strict-aliasing to avoid breaking strict-aliasing rules. Simplify
+  usage of distutils.eclass.
 
   17 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gmpy-1.11.ebuild, +files/gmpy-1.11-tests.patch:

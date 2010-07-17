@@ -1,14 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.11.ebuild,v 1.4 2010/06/17 19:50:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.11.ebuild,v 1.5 2010/07/17 22:46:31 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
 DESCRIPTION="Python bindings for dev-libs/gmp"
-HOMEPAGE="http://www.aleax.it/gmpy.html http://code.google.com/p/gmpy/"
+HOMEPAGE="http://www.aleax.it/gmpy.html http://code.google.com/p/gmpy/ http://pypi.python.org/pypi/gmpy"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.zip"
 
 LICENSE="LGPL-2.1"
@@ -20,19 +20,13 @@ RDEPEND="dev-libs/gmp"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+
+DISTUTILS_SETUP_FILES=("setup.py" "setes.py")
+
 src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-tests.patch"
-
-	# HACK: distutils only support 'setup.py', so
-	# we symlink what we need to 'setup.py' later
-	mv setup.py setmp.py
-}
-
-src_compile() {
-	local i
-	for i in mp es; do
-		ln -snf "set${i}.py" "setup.py" && distutils_src_compile
-	done
 }
 
 src_test() {
@@ -49,10 +43,7 @@ src_test() {
 }
 
 src_install() {
-	local i
-	for i in mp es; do
-		ln -snf "set${i}.py" "setup.py" && distutils_src_install
-	done
+	distutils_src_install
 	dohtml doc/index.html
 	dodoc doc/gmpydoc.txt
 }
