@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.1.ebuild,v 1.2 2010/07/17 01:42:31 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.1.ebuild,v 1.3 2010/07/17 10:01:17 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nsplugin"
 
-RDEPEND="dev-libs/libpcre
+RDEPEND="dev-libs/libpcre[cxx]
 	media-fonts/liberation-fonts
 	media-video/ffmpeg
 	media-libs/ftgl
@@ -46,7 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		$(cmake-utils_use nsplugin COMPILE_PLUGIN)
 		-DPLUGIN_DIRECTORY=/usr/$(get_libdir)/${PN}/plugins
 	)

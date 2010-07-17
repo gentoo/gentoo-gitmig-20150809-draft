@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.8 2010/07/17 01:42:31 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.9 2010/07/17 10:01:17 chithanh Exp $
+
+  17 Jul 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lightspark-0.4.1.ebuild, lightspark-0.4.2_rc2.ebuild:
+  adjust libpcre dependency, declare mycmakeargs local
 
   17 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org>
   lightspark-0.4.1.ebuild, lightspark-0.4.2_rc2.ebuild:
