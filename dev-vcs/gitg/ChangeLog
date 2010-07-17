@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.2 2010/03/17 16:13:43 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.3 2010/07/17 09:16:13 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> gitg-0.0.6.ebuild:
+  stable x86, bug 327337
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> gitg-0.0.1.ebuild,
   gitg-0.0.2.ebuild, gitg-0.0.3.ebuild, gitg-0.0.4.ebuild,

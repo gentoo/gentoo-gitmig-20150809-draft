@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.6.ebuild,v 1.2 2010/03/17 16:13:43 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.6.ebuild,v 1.3 2010/07/17 09:16:13 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://trac.novowork.com/gitg/"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.16
