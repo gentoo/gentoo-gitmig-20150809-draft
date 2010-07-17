@@ -10,6 +10,7 @@
     <flag name="amr">Enables Adaptive Multi-Rate format support</flag>
     <flag name="ass">Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support</flag>
     <flag name="bl">Blinkenlights video output</flag>
+    <flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
     <flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
     <flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)</flag>

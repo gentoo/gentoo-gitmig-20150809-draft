@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.70 2010/06/30 16:45:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.71 2010/07/17 03:09:49 beandog Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r30554
 
-IUSE="3dnow 3dnowext +a52 aalib +alsa altivec +ass bidi bindist bl bs2b
+IUSE="3dnow 3dnowext +a52 aalib +alsa altivec +ass bidi bindist bl bluray bs2b
 +cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac directfb
 doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon ftp
 gif ggi -gmplayer +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
@@ -95,6 +95,7 @@ RDEPEND+="
 	amr? ( !bindist? ( media-libs/opencore-amr ) )
 	ass? ( ${FONT_RDEPS} media-libs/libass[enca?] )
 	bidi? ( dev-libs/fribidi )
+	bluray? ( media-libs/libbluray )
 	bs2b? ( media-libs/libbs2b )
 	cdio? ( dev-libs/libcdio )
 	cdparanoia? ( !cdio? ( media-sound/cdparanoia ) )
@@ -290,6 +291,7 @@ src_configure() {
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use bidi || myconf+=" --disable-fribidi"
+	use bluray || myconf+=" --disable-bluray"
 	use ipv6 || myconf+=" --disable-inet6"
 	use nut || myconf+=" --disable-libnut"
 	use rar || myconf+=" --disable-unrarexec"
