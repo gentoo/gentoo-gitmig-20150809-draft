@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/tucnak2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.22 2010/07/17 09:38:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.23 2010/07/17 10:45:02 tomjbe Exp $
+
+  17 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org>
+  -files/tucnak2-2.25-appname.diff, -tucnak2-2.26.ebuild,
+  -tucnak2-2.31.ebuild, -tucnak2-2.32.ebuild:
+  Cleanup old versions.
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> tucnak2-2.34.ebuild:
   stable x86, bug 328015
