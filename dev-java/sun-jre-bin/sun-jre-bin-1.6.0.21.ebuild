@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.21.ebuild,v 1.1 2010/07/08 22:26:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.21.ebuild,v 1.2 2010/07/17 09:16:29 betelgeuse Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -26,7 +26,6 @@ IUSE="X alsa jce nsplugin odbc"
 DEPEND="jce? ( =dev-java/sun-jce-bin-1.6.0* )"
 RDEPEND="${DEPEND}
 	sys-libs/glibc
-	x86? ( =virtual/libstdc++-3.3 )
 	alsa? ( media-libs/alsa-lib )
 	X? (
 		x11-libs/libXext
