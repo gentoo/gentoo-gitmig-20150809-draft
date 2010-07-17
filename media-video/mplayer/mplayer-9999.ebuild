@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.72 2010/07/17 03:47:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.73 2010/07/17 03:48:29 beandog Exp $
 
 EAPI="2"
 
@@ -303,7 +303,7 @@ src_configure() {
 			--disable-apple-ir
 		"
 	fi
-	
+
 	###########
 	#Subtitles#
 	###########
