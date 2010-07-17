@@ -1,9 +1,6 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.28 2010/07/17 17:38:21 armin76 Exp $
-
-  17 Jul 2010; Raúl Porcel <armin76@gentoo.org> pythia-8.1.35.ebuild:
-  sparc stable wrt #318467
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.29 2010/07/17 17:39:46 armin76 Exp $
 
 *pythia-6.4.23 (13 Jul 2010)
 
