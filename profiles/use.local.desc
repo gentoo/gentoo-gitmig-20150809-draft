@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5779 2010/07/17 03:35:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5780 2010/07/17 03:47:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2111,6 +2111,7 @@ media-video/mplayer:external-ffmpeg - Use shared FFmpeg libraries instead of sta
 media-video/mplayer:faac - Use external faac library for AAC encoding
 media-video/mplayer:faad - Use external faad library for AAC decoding
 media-video/mplayer:gmplayer - Build gmplayer, a GTK+ MPlayer gui (UNSUPPORTED)
+media-video/mplayer:libass - External SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support through libass
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mmxext - Enables mmx2 support
