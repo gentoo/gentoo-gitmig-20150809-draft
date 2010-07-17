@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.33 2010/07/01 16:39:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.34 2010/07/17 17:12:33 armin76 Exp $
+
+  17 Jul 2010; Raúl Porcel <armin76@gentoo.org> oregano-0.69.0.ebuild:
+  sparc stable wrt #325169
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> oregano-0.69.0.ebuild:
   Stable for HPPA (bug #325169).
