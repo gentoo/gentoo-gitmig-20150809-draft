@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/collectl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.9 2010/01/08 12:42:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.10 2010/07/17 19:17:45 vapier Exp $
+
+*collectl-3.4.1 (17 Jul 2010)
+
+  17 Jul 2010; Mike Frysinger <vapier@gentoo.org> +collectl-3.4.1.ebuild,
+  +files/collectl-3.4.1-install.patch:
+  Version bump.
 
   08 Jan 2010; Mike Frysinger <vapier@gentoo.org> files/collectl.initd:
   Add a "flush" init.d operation #292864#18 by Mark Seger.
