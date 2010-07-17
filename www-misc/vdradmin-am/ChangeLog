@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/vdradmin-am
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.12 2010/07/12 20:40:07 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.13 2010/07/17 12:51:20 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  vdradmin-am-3.6.7.ebuild:
+  stable x86, bug 328155
 
   12 Jul 2010; Daniel Pielmeier <billie@gentoo.org>
   +files/vdradmin-am-config-autoflush.diff:

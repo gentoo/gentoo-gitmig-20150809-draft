@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7.ebuild,v 1.1 2010/04/11 17:22:39 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7.ebuild,v 1.2 2010/07/17 12:51:20 fauli Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="WWW Admin for the Video Disk Recorder"
 HOMEPAGE="http://andreas.vdr-developer.org/vdradmin-am/index.html"
 SRC_URI="http://andreas.vdr-developer.org/download/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="ipv6 ssl +vdr"
