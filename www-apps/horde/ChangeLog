@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.99 2010/01/06 13:34:00 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.100 2010/07/17 12:02:44 a3li Exp $
+
+*horde-3.3.8 (17 Jul 2010)
+
+  17 Jul 2010; Alex Legler <a3li@gentoo.org> +horde-3.3.8.ebuild:
+  Version bump
 
   06 Jan 2010; Alex Legler <a3li@gentoo.org> -horde-3.3.5.ebuild:
   Removing vulnerable ebuild, bug 297306
