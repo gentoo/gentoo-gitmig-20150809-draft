@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.41 2010/07/09 15:55:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.42 2010/07/17 09:30:48 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> munin-1.4.5.ebuild:
+  stable x86, bug 327501
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> munin-1.4.5.ebuild:
   stable amd64, bug 327501
