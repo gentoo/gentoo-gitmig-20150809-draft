@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.3.1.ebuild,v 1.2 2010/07/04 22:01:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.3.1.ebuild,v 1.3 2010/07/17 09:03:20 fauli Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.stsci.edu/resources/software_hardware/pyfits"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 LICENSE="BSD"
 
 RDEPEND="dev-python/numpy"
