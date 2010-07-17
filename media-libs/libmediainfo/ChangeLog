@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.2 2010/06/30 06:57:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.3 2010/07/17 03:53:48 beandog Exp $
+
+*libmediainfo-0.7.34 (17 Jul 2010)
+
+  17 Jul 2010; Steve Dibb <beandog@gentoo.org> +libmediainfo-0.7.34.ebuild:
+  Version bump, bug 327995
 
   30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   libmediainfo-0.7.33.ebuild:
