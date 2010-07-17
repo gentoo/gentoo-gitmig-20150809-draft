@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.4 2010/07/15 11:43:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.5 2010/07/17 13:00:29 fauli Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-src-${PV}.tgz"
 LICENSE="GPL-2"
 IUSE="X static-libs"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 
 RDEPEND="media-libs/jpeg
 	media-libs/tiff
