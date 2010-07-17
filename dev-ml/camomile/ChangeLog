@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camomile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.21 2010/07/11 12:46:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/ChangeLog,v 1.22 2010/07/17 12:31:21 aballier Exp $
+
+  17 Jul 2010; Alexis Ballier <aballier@gentoo.org> -camomile-0.7.2.ebuild:
+  remove old
 
   11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   camomile-0.7.3.ebuild:
