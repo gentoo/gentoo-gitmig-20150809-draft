@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.34 2010/07/14 15:33:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.35 2010/07/17 09:32:09 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> eigen-2.0.13.ebuild:
+  stable x86, bug 327581
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> eigen-2.0.13.ebuild:
   Stable for HPPA (bug #327581).
