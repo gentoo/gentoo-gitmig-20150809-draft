@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.61 2010/07/14 01:20:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.62 2010/07/17 12:45:22 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  xdg-utils-1.0.2_p20100618.ebuild:
+  stable x86, bug 328091
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   xdg-utils-1.0.2_p20100618.ebuild:
