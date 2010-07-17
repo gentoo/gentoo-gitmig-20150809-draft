@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.94 2010/07/14 15:52:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.95 2010/07/17 09:36:27 fauli Exp $
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> mtr-0.79.ebuild:
+  stable x86, bug 327985
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> mtr-0.79.ebuild:
   Stable for PPC (bug #327985).
