@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5777 2010/07/16 10:07:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5778 2010/07/17 03:11:56 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1677,6 +1677,7 @@ media-libs/glide-v3:voodoo2 - Support 3DFX Voodoo2 video cards
 media-libs/glide-v3:voodoo5 - Support 3DFX Voodoo4 and Voodoo5 video cards
 media-libs/imlib:deprecated - Enable deprecated GTK+-1.2 support
 media-libs/libass:enca - Enables support for charset discovery and conversion.
+media-libs/libbluray:aacs - Add support for decryption of AACS
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
 media-libs/libcanberra:gstreamer - Enables gstreamer sound driver. Not useful when alsa or pulseaudio is available.
 media-libs/libcanberra:gtk - Enables building of gtk+ helper library, gtk+ runtime sound effects and the canberra-gtk-play utility. To enable the gtk+ sound effects add canberra-gtk-module to the colon separated list of modules in the GTK_MODULES environment variable.
