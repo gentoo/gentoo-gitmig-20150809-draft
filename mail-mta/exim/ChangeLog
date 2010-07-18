@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.169 2010/07/08 20:22:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.170 2010/07/18 20:49:46 josejx Exp $
+
+  18 Jul 2010; Joseph Jezak <josejx@gentoo.org> exim-4.72.ebuild:
+  Marked ppc stable for bug #322665.
 
   08 Jul 2010; Brent Baude <ranger@gentoo.org> exim-4.72.ebuild:
   Marking exim-4.72 ppc64 for bug 322665
