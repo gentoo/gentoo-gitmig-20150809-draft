@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.0-r1.ebuild,v 1.1 2010/07/18 11:38:49 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.10.0-r1.ebuild,v 1.2 2010/07/18 11:41:02 idl0r Exp $
 
 EAPI=3
 
@@ -24,10 +24,10 @@ done;
 
 RDEPEND="crypt? ( >=app-crypt/gpgme-1.0.0 )
 	otr? ( >=net-libs/libotr-3.1.0 )
-	spell? ( app-text/aspell )
+	aspell? ( app-text/aspell )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	idn? ( net-dns/libidn  )
-	enchant? ( app-text/enchant )
+	spell? ( app-text/enchant )
 	dev-libs/glib:2
 	sys-libs/ncurses
 	>=net-libs/loudmouth-1.4.3-r1[ssl?]"
