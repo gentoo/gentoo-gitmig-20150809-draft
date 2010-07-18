@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.37 2010/06/08 19:20:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.38 2010/07/18 12:29:52 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> highline-1.5.2.ebuild:
+  ppc stable #316881
 
   08 Jun 2010; Christoph Mende <angelos@gentoo.org> highline-1.5.2.ebuild:
   Stable on amd64 wrt bug #316881
