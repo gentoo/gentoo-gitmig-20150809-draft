@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.85 2010/07/08 17:26:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.86 2010/07/18 18:58:06 armin76 Exp $
+
+  18 Jul 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Unmask v4l/v4l2
 
   08 Jul 2010; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Use mask iphone gvfs USE flag until bug #325839 is fixed.

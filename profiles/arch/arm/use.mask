@@ -88,8 +88,6 @@ scanner
 madwifi
 libupnp
 zvbi
-v4l
-v4l2
 dvd
 fluidsynth
 gnomecd
