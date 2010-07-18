@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtecla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.15 2010/07/10 14:37:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.16 2010/07/18 13:59:46 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> libtecla-1.6.1.ebuild:
+  ppc stable #325201
 
   10 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   libtecla-1.6.1.ebuild:
