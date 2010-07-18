@@ -1,6 +1,16 @@
 # ChangeLog for mail-filter/pypolicyd-spf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.9 2009/11/19 16:18:54 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.10 2010/07/18 08:47:07 dragonheart Exp $
+
+*pypolicyd-spf-0.8.0 (18 Jul 2010)
+*pypolicyd-spf-0.7.3 (18 Jul 2010)
+
+  18 Jul 2010; Daniel Black <dragonheart@gentoo.org>
+  -pypolicyd-spf-0.7.ebuild, +pypolicyd-spf-0.7.3.ebuild,
+  +pypolicyd-spf-0.8.0.ebuild, +files/0.7.3-2to3.patch,
+  +files/0.8.0-2to3.patch:
+  version bump. python3 friendlyness as per #313479. Homepage/URL move as
+  per bug #312457 thanks Matthias Dahl
 
   19 Nov 2009; Markus Meier <maekke@gentoo.org> pypolicyd-spf-0.7.1.ebuild:
   amd64/x86 stable, bug #293032

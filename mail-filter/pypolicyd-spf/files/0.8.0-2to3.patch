@@ -1,0 +1,114 @@
+--- ./policydspfsupp.py (original)
++++ ./policydspfsupp.py (refactored)
+@@ -24,7 +24,7 @@
+ import sys
+ import string
+ import re
+-import urllib
++import urllib.request, urllib.parse, urllib.error
+ import stat
+ 
+ 
+@@ -57,7 +57,7 @@
+     if filename != None:
+         try:
+             readConfigFile(filename, config)
+-        except Exception, e:
++        except Exception as e:
+             if useSyslog:
+                 syslog.syslog(e.args[0])
+             if useStderr:
+@@ -75,7 +75,7 @@
+    def __call__(self, etype, evalue, etb):
+       import traceback
+       tb = traceback.format_exception(*(etype, evalue, etb))
+-      tb = map(string.rstrip, tb)
++      tb = list(map(string.rstrip, tb))
+       tb = string.join(tb, '\n')
+       for line in string.split(tb, '\n'):
+          if self.useSyslog:
+@@ -122,7 +122,7 @@
+     #  check to see if it's a file
+     try:
+         mode = os.stat(path)[0]
+-    except OSError, e:
++    except OSError as e:
+         syslog.syslog('ERROR stating "%s": %s' % ( path, e.strerror ))
+         return(configData)
+     if not stat.S_ISREG(mode):
+@@ -138,7 +138,7 @@
+         #  parse line
+         line = string.strip(string.split(line, '#', 1)[0])
+         if not line: continue
+-        data = map(string.strip, string.split(line, '=', 1))
++        data = list(map(string.strip, string.split(line, '=', 1)))
+         if len(data) != 2:
+             if len(data) == 1:
+                 if debugLevel >= 1:
+--- ./policydspfuser.py (original)
++++ ./policydspfuser.py (refactored)
+@@ -52,7 +52,7 @@
+     #  check to see if it's a file
+     try:
+         mode = os.stat(path)[0]
+-    except OSError, e:
++    except OSError as e:
+         syslog.syslog('ERROR stating "%s": %s' % ( path, e.strerror ))
+         return(configData)
+ 
+@@ -65,7 +65,7 @@
+         #  parse line
+         line = string.strip(string.split(line, '#', 1)[0])
+         if not line: continue
+-        data = map(string.strip, string.split(line, ',', 1))
++        data = list(map(string.strip, string.split(line, ',', 1)))
+         user, value = data
+         if user != recipient:
+             peruser = False
+@@ -75,7 +75,7 @@
+         for valuepair in valuelist:
+             key, item = string.split(valuepair, '=')
+             values[key] = item
+-        for config in values.iteritems():
++        for config in values.items():
+             #  check validity of name
+             conversion = nameConversion.get(config[0])
+             name, value = config
+--- policyd-spf (original)
++++ policyd-spf (refactored)
+@@ -241,7 +241,7 @@
+                 else:
+                     # Reverse lookup didn't find any records, so don't continue with the check
+                     rDNSName = None
+-            except spf.TempError, e:
++            except spf.TempError as e:
+                 # DNS timeout - continue with the base SPF check.
+                 rDNSName = None
+             if (rDNSName is not None):
+@@ -275,7 +275,7 @@
+         instance = str(int(random.random()*100000))
+     # This is to prevent multiple headers being prepended
+     # for multi-recipient mail.
+-    if instance_dict.has_key(instance):
++    if instance in instance_dict:
+         found_instance = instance_dict[instance]
+     else:
+         found_instance = []
+@@ -570,7 +570,7 @@
+ configFile = '/etc/python-policyd-spf/policyd-spf.conf'
+ if len(sys.argv) > 1:
+     if sys.argv[1] in ( '-?', '--help', '-h' ):
+-        print 'usage: policyd-spf [<configfilename>]'
++        print('usage: policyd-spf [<configfilename>]')
+         sys.exit(1)
+     configFile = sys.argv[1]
+ 
+@@ -593,7 +593,7 @@
+     if not line:
+         peruser = False
+         if debugLevel >= 4: syslog.syslog('Found the end of entry')
+-        configData = dict(configGlobal.items())
++        configData = dict(list(configGlobal.items()))
+         if configData.get('Per_User'):
+             import policydspfuser
+             configData, peruser = policydspfuser.datacheck(configData, data.get('recipient'))
