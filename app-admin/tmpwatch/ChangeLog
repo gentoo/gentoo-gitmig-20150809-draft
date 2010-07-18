@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.96 2010/07/10 19:39:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.97 2010/07/18 13:54:20 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> tmpwatch-2.10.1.ebuild:
+  ppc stable #325057
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org> tmpwatch-2.10.1.ebuild:
   alpha/ia64/sparc stable wrt #325057
