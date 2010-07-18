@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.66 2010/07/10 15:54:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.67 2010/07/18 10:59:46 armin76 Exp $
+
+  18 Jul 2010; Raúl Porcel <armin76@gentoo.org> dbus-glib-0.86.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #319965
 
   10 Jul 2010; Jeroen Roovers <jer@gentoo.org> dbus-glib-0.86.ebuild:
   Stable for HPPA (bug #319965).
