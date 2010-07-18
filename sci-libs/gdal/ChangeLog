@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.90 2010/07/11 17:30:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.91 2010/07/18 20:08:22 nerdboy Exp $
+
+  18 Jul 2010; Steve Arnold <nerdboy@gentoo.org> gdal-1.6.3-r1.ebuild:
+  Updated for a couple of minor/weird bugs (320237 and 325193). Suspect 
+  random cosmic ray-induced bit-rot on the second one...
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org> gdal-1.6.3-r1.ebuild:
   sparc stable wrt #315659

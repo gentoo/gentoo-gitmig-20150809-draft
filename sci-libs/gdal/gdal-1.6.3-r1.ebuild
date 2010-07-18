@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.10 2010/07/11 17:30:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.11 2010/07/18 20:08:22 nerdboy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -101,14 +101,14 @@ src_configure() {
 	elif useq hdf && ! useq netcdf; then
 		use_conf="--with-netcdf=no --with-hdf4"
 	else
-		$(use_with netcdf)
+		use_conf="$(use_with netcdf)"
 	fi
 
 	use_conf="$(use_with jpeg) $(use_with png) $(use_with mysql) \
 	    $(use_with gml xerces) $(use_with hdf5) $(use_with curl) \
 	    $(use_with postgres pg) $(use_with python) $(use_with ruby) \
 	    $(use_with threads) $(use_with fits cfitsio) $(use_with perl) \
-	    $(use_with sqlite sqlite3 ="${EPREFIX}"/usr) $(use_with geos) \
+	    $(use_with sqlite sqlite3 =${EPREFIX}/usr) $(use_with geos) \
 	    $(use_with jpeg2k jasper) $(use_with odbc) $(use_enable debug)"
 
 	# It can't find this
@@ -136,6 +136,12 @@ src_configure() {
 	    GDALmake.opt.in || die "sed gdalmake.opt failed"
 
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
+
+	# mysql-config puts this in (and boy is it a PITA to get it out)
+	sed \
+	    -i -r -e '/^LDFLAGS/ s/(-(Wl|O1),|,-(Wl|O1))//g' \
+	    -i -e '/^MYSQL_LIB/ s:-Wl,-O1 -rdynamic::' \
+	    GDALmake.opt || die "sed LIBS failed"
 }
 
 src_compile() {
