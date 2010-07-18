@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pybluez
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.29 2010/07/08 15:06:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.30 2010/07/18 12:37:21 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> pybluez-0.18.ebuild:
+  ppc stable #317947
 
   08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pybluez-0.16.ebuild:
