@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-1.0.0.0.ebuild,v 1.5 2010/07/01 19:57:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-1.0.0.0.ebuild,v 1.6 2010/07/18 13:28:02 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 CABAL_MIN_VERSION=1.2
@@ -11,7 +11,7 @@ HOMEPAGE="http://haskell.org/ghc/"
 SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="1"
 KEYWORDS="amd64 sparc x86"
 IUSE=""
 

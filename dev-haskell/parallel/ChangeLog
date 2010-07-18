@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/parallel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.7 2010/07/01 19:57:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.8 2010/07/18 13:28:02 slyfox Exp $
+
+  18 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  parallel-1.0.0.0.ebuild, parallel-1.1.0.1.ebuild:
+  Slotmove 0 -> 1. Restored ~sparc for new version as we have binary for it.
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> parallel-1.0.0.0.ebuild:
   Drop support for ghc and darcs.
