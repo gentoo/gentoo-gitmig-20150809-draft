@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3-r1.ebuild,v 1.2 2010/06/18 22:09:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3-r1.ebuild,v 1.3 2010/07/18 18:04:52 ssuominen Exp $
 
 EAPI=2
 
@@ -29,10 +29,12 @@ src_prepare() {
 }
 
 src_compile() {
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
+
 	local myconf=""
 	use debug && myconf="${myconf} debug=1"
 
-	scons ${myconf} ${MAKEOPTS} CXXFLAGS="${CXXFLAGS}" PREFIX=/usr || die "scons failed"
+	scons ${myconf} ${sconsopts} CXXFLAGS="${CXXFLAGS}" PREFIX=/usr || die "scons failed"
 }
 
 src_install() {

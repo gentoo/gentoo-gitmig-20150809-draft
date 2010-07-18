@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.13 2010/06/18 19:28:36 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.14 2010/07/18 18:04:52 ssuominen Exp $
 
 inherit bzr eutils
 
@@ -14,7 +14,7 @@ IUSE="debug"
 
 EBZR_REPO_URI="lp:linuxdcpp"
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 
 RDEPEND=">=gnome-base/libglade-2.4
 	>=x11-libs/gtk+-2.6
@@ -27,10 +27,12 @@ DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.35.0-r2"
 
 src_compile() {
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[[:space:]]*[0-9]\+\).*/\1/; p }")
+
 	local myconf=""
 	use debug && myconf="${myconf} debug=1"
 
-	scons ${myconf} ${MAKEOPTS} CXXFLAGS="${CXXFLAGS}" PREFIX=/usr || die "scons failed"
+	scons ${myconf} ${sconsopts} CXXFLAGS="${CXXFLAGS}" PREFIX=/usr || die "scons failed"
 }
 
 src_install() {
