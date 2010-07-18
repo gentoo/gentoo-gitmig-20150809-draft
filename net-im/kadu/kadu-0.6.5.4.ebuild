@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.4.ebuild,v 1.3 2010/06/24 21:26:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.4.ebuild,v 1.4 2010/07/18 13:10:52 nixnut Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.kadu.net"
 SRC_URI="http://www.kadu.net/download/stable/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE="alsa ao dbus kde oss phonon speech spell +ssl"
 
