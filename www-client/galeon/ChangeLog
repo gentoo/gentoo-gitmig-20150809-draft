@@ -1,6 +1,10 @@
 # ChangeLog for www-client/galeon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.57 2010/05/06 21:37:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.58 2010/07/18 13:06:04 fauli Exp $
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  galeon-2.0.7-r2.ebuild:
+  stable x86, bug 328811
 
   06 May 2010; Pacho Ramos <pacho@gentoo.org> galeon-2.0.7-r2.ebuild:
   Add elog message for suggesting people to remove old compreg.dat file as
