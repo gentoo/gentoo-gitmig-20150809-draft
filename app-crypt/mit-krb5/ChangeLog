@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.226 2010/07/14 15:28:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.227 2010/07/18 17:42:19 armin76 Exp $
+
+  18 Jul 2010; Raúl Porcel <armin76@gentoo.org> mit-krb5-1.8.2.ebuild:
+  arm/ia64/m68k/s390/sh/sparc stable wrt #323525
 
 *mit-krb5-1.8.2-r1 (14 Jul 2010)
 
