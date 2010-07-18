@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tktable
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/ChangeLog,v 1.10 2010/05/31 18:11:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/ChangeLog,v 1.11 2010/07/18 12:34:58 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> tktable-2.10.ebuild:
+  ppc stable #317253
 
   31 May 2010; Markus Meier <maekke@gentoo.org> tktable-2.10.ebuild:
   amd64 stable
