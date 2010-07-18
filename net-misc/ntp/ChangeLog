@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.159 2010/06/07 09:48:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.160 2010/07/18 21:53:24 vapier Exp $
+
+  18 Jul 2010; Mike Frysinger <vapier@gentoo.org> files/ntpd.rc:
+  Have ntpd init.d "use net" rather than "depend net" since it can handle
+  interfaces coming & going #321063 by Łukasz Stelmach.
 
 *ntp-4.2.6_p1-r1 (07 Jun 2010)
 
