@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/hmmer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.30 2010/07/18 10:20:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.31 2010/07/18 11:38:27 fauli Exp $
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org> hmmer-3.0.ebuild:
+  stable x86, bug 328419
 
   18 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> hmmer-2.3.2-r1.ebuild,
   hmmer-2.3.2-r2.ebuild, hmmer-3.0.ebuild, +files/hmmer-3.0-fix_tests.patch:
