@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.29 2010/02/14 18:38:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.30 2010/07/18 20:10:57 vapier Exp $
+
+*mtd-utils-20100718 (18 Jul 2010)
+
+  18 Jul 2010; Mike Frysinger <vapier@gentoo.org>
+  +mtd-utils-20100718.ebuild, mtd-utils-99999999.ebuild:
+  Update snapshot and merge the live/snap ebuilds #327775 by Raúl Porcel.
 
   14 Feb 2010; Robin H. Johnson <robbat2@gentoo.org>
   mtd-utils-20090630.ebuild:
