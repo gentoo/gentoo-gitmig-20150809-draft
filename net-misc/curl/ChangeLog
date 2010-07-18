@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.165 2010/07/03 14:17:25 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.166 2010/07/18 04:42:35 dragonheart Exp $
+
+  18 Jul 2010; Daniel Black <dragonheart@gentoo.org> curl-7.20.0-r2.ebuild,
+  curl-7.20.1.ebuild, curl-7.21.0.ebuild:
+  remove planetmirror as valid homepage
 
   03 Jul 2010; Dror Levin <spatz@gentoo.org> -curl-7.19.6.ebuild:
   Remove vulnerable version, bug 308645.
