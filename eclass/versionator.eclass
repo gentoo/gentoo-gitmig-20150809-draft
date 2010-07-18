@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.15 2008/06/12 12:48:34 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.16 2010/07/18 21:24:33 vapier Exp $
 
 # @ECLASS: versionator.eclass
 # @MAINTAINER:
@@ -468,6 +468,24 @@ version_sort() {
 	done
 	echo ${items[@]}
 	__versionator_shopt_toggle off
+}
+
+# @FUNCTION: version_format_string
+# @USAGE: <format> [version]
+# @DESCRIPTION:
+# Reformat complicated version strings.  The first argument is the string
+# to reformat with while the rest of the args are passed on to the
+# get_version_components function.  You should make sure to single quote
+# the first argument since it'll have variables that get delayed expansion.s
+# @EXAMPLE:
+# P="cow-hat-1.2.3_p4"
+# MY_P=$(version_format_string '${PN}_source_$1_$2-$3_$4')
+# Now MY_P will be: cow-hat_source_1_2-3_p4
+version_format_string() {
+	local fstr=$1
+	shift
+	set -- $(get_version_components "$@")
+	eval echo "${fstr}"
 }
 
 __versionator__test_version_compare() {
