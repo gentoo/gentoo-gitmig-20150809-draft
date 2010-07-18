@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libao
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.89 2010/07/13 14:45:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.90 2010/07/18 13:42:31 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> libao-1.0.0.ebuild:
+  ppc stable #324265
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org> libao-1.0.0.ebuild:
   stable x86, bug 324265
