@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/bashish-2.2.4.ebuild,v 1.4 2010/07/11 12:35:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/bashish-2.2.4.ebuild,v 1.5 2010/07/18 18:09:41 armin76 Exp $
 
 DESCRIPTION="Text console theme engine"
 HOMEPAGE="http://bashish.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/bashish/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-util/dialog-1.0"
