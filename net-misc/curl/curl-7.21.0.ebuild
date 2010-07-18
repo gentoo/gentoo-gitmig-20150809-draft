@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.0.ebuild,v 1.5 2010/07/18 04:42:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.0.ebuild,v 1.6 2010/07/18 09:35:29 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -30,6 +30,7 @@ RDEPEND="ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
 	libssh2? ( >=net-libs/libssh2-0.16 )"
 
+# rtmpdump ( media-video/rtmpdump )  / --with-librtmp
 # fbopenssl (not in gentoo) --with-spnego
 # krb4 http://web.mit.edu/kerberos/www/krb4-end-of-life.html
 
@@ -86,6 +87,7 @@ src_configure() {
 		--enable-maintainer-mode
 		--disable-sspi
 		--without-krb4
+		--without-librtmp
 		--without-spnego"
 
 	if use ssl ; then
