@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.26 2010/07/10 10:25:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.27 2010/07/18 12:21:56 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> pyxattr-0.5.0.ebuild:
+  ppc stable #315147
 
   10 Jul 2010; Markos Chandras <hwoarang@gentoo.org> pyxattr-0.5.0.ebuild:
   Stable on amd64 wrt bug #315147
