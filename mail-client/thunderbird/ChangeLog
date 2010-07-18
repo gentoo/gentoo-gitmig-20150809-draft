@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.15 2010/07/17 16:18:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.16 2010/07/18 23:55:10 anarchy Exp $
+
+  18 Jul 2010; Jory A. Pratt <anarchy@gentoo.org> thunderbird-3.0.5.ebuild,
+  thunderbird-3.1.ebuild:
+  remove lcms dep as it should not be there
 
   17 Jul 2010; Raúl Porcel <armin76@gentoo.org> thunderbird-3.1.ebuild:
   Add ~arm
