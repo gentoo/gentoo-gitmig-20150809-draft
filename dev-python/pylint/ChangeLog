@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.71 2010/07/15 09:08:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.72 2010/07/18 14:07:33 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> pylint-0.21.0.ebuild:
+  ppc stable #325377
 
   15 Jul 2010; Christian Faulhammer <fauli@gentoo.org> pylint-0.21.0.ebuild:
   stable x86, bug 325377
