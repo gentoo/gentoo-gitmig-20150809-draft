@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.32.52.ebuild,v 1.2 2010/01/07 16:00:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.32.52.ebuild,v 1.3 2010/07/18 14:38:34 fauli Exp $
 
 EAPI="2"
 
 inherit eutils versionator
 
-IUSE="gtk doc static debug threads +ocamlopt"
+IUSE="gtk doc static debug threads +ocamlopt test"
 
 DESCRIPTION="Two-way cross-platform file synchronizer"
 HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos 
 
 # ocaml version so we are sure it has ocamlopt use flag
 DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
-	gtk? ( >=dev-ml/lablgtk-2.2 )"
+	gtk? ( >=dev-ml/lablgtk-2.2 )
+	test? ( || ( dev-util/ctags virtual/emacs ) )"
 
 RDEPEND="gtk? ( >=dev-ml/lablgtk-2.2
 	|| ( net-misc/x11-ssh-askpass net-misc/ssh-askpass-fullscreen ) )
