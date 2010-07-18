@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.38 2010/07/14 13:21:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.39 2010/07/18 17:56:40 ssuominen Exp $
+
+*emelfm2-0.7.3 (18 Jul 2010)
+
+  18 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +emelfm2-0.7.3.ebuild:
+  Version bump.
 
   14 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   emelfm2-0.7.2-r1.ebuild:
