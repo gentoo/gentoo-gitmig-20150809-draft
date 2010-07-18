@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6_pre1.ebuild,v 1.1 2010/07/17 11:37:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6_pre1.ebuild,v 1.2 2010/07/18 18:17:16 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -14,9 +14,9 @@ LANGS="be ca cs de en-GB en-US es-AR es-ES fr gl hu it ja ka lt nb-NO nl pl pt-P
 NOSHORTLANGS="en-GB es-AR es-ES nb-NO pt-PT sv-SE zh-CN"
 
 MY_PV="${PV/_pre*}"
-MY_PV="${MY_PV/_rc/rc}"
 MY_PV="${MY_PV/_alpha/a}"
 MY_PV="${MY_PV/_beta/b}"
+MY_PV="${MY_PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
 # release versions usually have language packs. So be careful with changing this.
