@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4.ebuild,v 1.7 2010/05/24 18:31:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4.ebuild,v 1.8 2010/07/18 12:28:48 nixnut Exp $
 
 EAPI=2
 MY_P=${P/_/-}
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/unstable/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="oss alsa aac jack mad vorbis flac wavpack sndfile modplug musepack
 timidity sid ffmpeg speex libsamplerate curl debug"
 
