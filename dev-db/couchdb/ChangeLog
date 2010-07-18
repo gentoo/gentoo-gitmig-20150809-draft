@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.31 2010/07/17 09:26:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.32 2010/07/18 21:36:21 jer Exp $
+
+  18 Jul 2010; Jeroen Roovers <jer@gentoo.org> couchdb-0.11.0-r1.ebuild:
+  Stable for PPC (bug #327877).
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   couchdb-0.11.0-r1.ebuild:
