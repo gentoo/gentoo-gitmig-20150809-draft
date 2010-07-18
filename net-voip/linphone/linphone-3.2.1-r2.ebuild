@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.2.1-r2.ebuild,v 1.4 2010/06/10 06:55:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.2.1-r2.ebuild,v 1.5 2010/07/18 12:33:58 nixnut Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~ppc-macos ~x86-macos"
 IUSE="doc gtk ipv6 ncurses nls video"
 
 RDEPEND=">=media-libs/mediastreamer-2.3.0[video?]
