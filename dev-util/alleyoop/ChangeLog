@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/alleyoop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.16 2010/07/18 09:00:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.17 2010/07/18 10:06:07 fauli Exp $
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  alleyoop-0.9.5.ebuild:
+  stable x86, bug 320705
 
 *alleyoop-0.9.7 (18 Jul 2010)
 
