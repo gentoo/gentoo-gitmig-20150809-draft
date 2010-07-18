@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.24 2010/05/30 18:33:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.25 2010/07/18 12:36:09 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> proj-4.7.0.ebuild:
+  ppc stable #317381
 
   30 May 2010; Raúl Porcel <armin76@gentoo.org> proj-4.7.0.ebuild:
   alpha/s390/sparc stable wrt #317381
