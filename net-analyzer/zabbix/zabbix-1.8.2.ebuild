@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.2.ebuild,v 1.7 2010/07/14 13:14:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.2.ebuild,v 1.8 2010/07/18 13:03:18 nixnut Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://prdownloads.sourceforge.net/zabbix/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="agent curl frontend ipv6 jabber ldap mysql oracle postgres proxy server snmp +sqlite3 openipmi"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )

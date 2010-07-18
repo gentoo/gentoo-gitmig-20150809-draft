@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.32 2010/07/14 13:14:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.33 2010/07/18 13:03:18 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> zabbix-1.8.2.ebuild:
+  ppc stable #322445
 
   14 Jul 2010; Christian Faulhammer <fauli@gentoo.org> zabbix-1.8.2.ebuild:
   stable x86, bug 322445
