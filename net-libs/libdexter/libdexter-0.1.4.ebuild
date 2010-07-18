@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/libdexter-0.1.4.ebuild,v 1.3 2008/02/14 05:38:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/libdexter-0.1.4.ebuild,v 1.4 2010/07/18 06:13:39 dragonheart Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="Libdexter is a plugin-based, distributed sampling library"
-HOMEPAGE="http://www.libdexter.org"
+HOMEPAGE="http://libdexter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libdexter/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
