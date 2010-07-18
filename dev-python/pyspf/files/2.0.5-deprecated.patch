@@ -1,0 +1,16 @@
+--- /tmp/spf.py	2010-07-18 18:15:57.000000000 +1000
++++ spf.py	2010-07-18 18:16:22.000000000 +1000
+@@ -209,13 +209,6 @@
+                 'ambiguous': 'No error, but results may vary'
+         }
+ 
+-# support pre 2.2.1....
+-try:
+-    bool, True, False = bool, True, False
+-except NameError:
+-    False, True = 0, 1
+-    def bool(x): return not not x
+-# ...pre 2.2.1
+ 
+ DELEGATE = None
+ 
