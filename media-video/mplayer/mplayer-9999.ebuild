@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.74 2010/07/17 16:36:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.75 2010/07/18 09:47:30 aballier Exp $
 
 EAPI="2"
 
@@ -281,7 +281,7 @@ src_configure() {
 		--disable-svga --enable-svgalib_helper
 		--disable-arts
 		--disable-kai
-		$(use_enable network)
+		$(use_enable network networking)
 		$(use_enable joystick)
 	"
 	uses="ass bl enca ftp rtc" # nemesi <- not working with in-tree ebuild

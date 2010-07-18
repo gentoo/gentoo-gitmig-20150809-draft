@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.757 2010/07/17 16:36:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.758 2010/07/18 09:47:30 aballier Exp $
+
+  18 Jul 2010; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  network configure option has been renamed to networking
 
   17 Jul 2010; Steve Dibb <beandog@gentoo.org> mplayer-9999.ebuild:
   Revert libass change; Always use external versions where possible
