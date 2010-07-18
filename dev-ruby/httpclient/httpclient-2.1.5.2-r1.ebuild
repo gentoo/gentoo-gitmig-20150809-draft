@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.1.5.2-r1.ebuild,v 1.7 2010/06/26 14:26:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.1.5.2-r1.ebuild,v 1.8 2010/07/18 12:49:58 nixnut Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ SRC_URI="http://dev.ctor.org/download/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
 
-KEYWORDS="amd64 ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="${RDEPEND}
