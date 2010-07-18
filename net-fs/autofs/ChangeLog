@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.95 2010/06/25 17:42:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.96 2010/07/18 12:14:26 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> autofs-5.0.4-r5.ebuild:
+  ppc stable #292147
 
   25 Jun 2010; Raúl Porcel <armin76@gentoo.org> autofs-5.0.4-r5.ebuild:
   alpha/arm/ia64/sparc stable wrt #292147
