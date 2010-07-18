@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/claws-mail-rssyl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.71 2010/06/20 13:36:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.72 2010/07/18 06:44:24 fauli Exp $
+
+*claws-mail-rssyl-0.27-r1 (18 Jul 2010)
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-rssyl-0.27-r1.ebuild,
+  +files/claws-mail-rssyl-0.27-newline_hiccup.patch:
+  fix newline display errors with patch from upstream, reported in bug
+  328369 by Anna Z <chaotic.anna AT gmail DOT com>
 
   20 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-rssyl-0.25.ebuild:
