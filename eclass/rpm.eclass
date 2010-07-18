@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.19 2009/10/05 06:14:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.20 2010/07/18 21:57:20 vapier Exp $
 
 # @ECLASS: rpm.eclass
 # @MAINTAINER:
@@ -47,8 +47,7 @@ srcrpm_unpack() {
 	# no .src.rpm files, then nothing to do
 	[[ "$* " != *".src.rpm " ]] && return 0
 
-	local old_shopts=$(shopt -p nullglob)
-	shopt -s nullglob
+	eshopts_push -s nullglob
 
 	# unpack everything
 	local a
@@ -57,7 +56,7 @@ srcrpm_unpack() {
 		rm -f "${a}"
 	done
 
-	eval "${old_shopts}"
+	eshopts_pop
 
 	return 0
 }
