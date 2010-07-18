@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.74 2010/07/10 14:28:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.75 2010/07/18 11:22:44 armin76 Exp $
+
+  18 Jul 2010; Raúl Porcel <armin76@gentoo.org> gsl-1.14.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #325179
 
   10 Jul 2010; Christian Faulhammer <fauli@gentoo.org> gsl-1.14.ebuild:
   stable x86, bug 325179
