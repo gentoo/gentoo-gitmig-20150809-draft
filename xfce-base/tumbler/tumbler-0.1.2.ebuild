@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/tumbler/tumbler-0.1.2.ebuild,v 1.2 2010/07/18 16:11:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/tumbler/tumbler-0.1.2.ebuild,v 1.3 2010/07/18 16:12:07 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	media-libs/freetype:2
 	ffmpeg? ( >=media-video/ffmpegthumbnailer-2 )
 	jpeg? ( >=media-libs/jpeg-8b )
-	pdf? ( >=app-text/poppler-0.12.4 )"
+	pdf? ( >=app-text/poppler-0.12.4[cairo] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
