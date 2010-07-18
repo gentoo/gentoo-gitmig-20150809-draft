@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.98 2010/07/09 20:30:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.99 2010/07/18 14:18:40 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> rebase-1006.ebuild:
+  ppc stable #325457
 
   09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> rebase-1006.ebuild:
   ppc64 stable wrt #325457

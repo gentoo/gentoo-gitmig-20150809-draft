@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.0.1.ebuild,v 1.5 2010/07/09 20:29:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.0.1.ebuild,v 1.6 2010/07/18 14:17:56 nixnut Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://${PN}.open-bio.org/pub/EMBOSS/EMBOSS-${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="X png minimal"
 
 DEPEND="X? ( x11-libs/libXt )
