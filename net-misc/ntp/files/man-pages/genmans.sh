@@ -5,10 +5,13 @@
 
 VERSION=$1
 if [[ -z ${VERSION} ]] ; then
-	VERSION=$(ls -1d ntp-*/ | LC_COLLATE=C sort | sed -n '${s:/::;p;Q}')
+	VERSION=$(ls -1d ntp-*/ 2>/dev/null | LC_COLLATE=C sort | sed -n '${s:/::;p;Q}')
 	if [[ -z ${VERSION} ]] ; then
-		echo "Usage: $0 <version>"
-		exit 1
+		VERSION=$(ls "${0%/*}"/../../ntp-*.ebuild | LC_COLLATE=C sort | sed -n '${s:.*/::;s:_::;s:[.]ebuild::;p;Q}')
+		if [[ -z ${VERSION} ]] ; then
+			echo "Usage: $0 <version>"
+			exit 1
+		fi
 	fi
 fi
 [[ ${VERSION} != ntp-* ]] && VERSION="ntp-${VERSION}"
