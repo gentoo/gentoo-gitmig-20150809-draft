@@ -1,0 +1,11 @@
+--- /tmp/imagjpg.cpp	2010-07-18 15:46:11.000000000 +1000
++++ ./wxVillaLib/imagjpg.cpp	2010-07-18 15:46:29.000000000 +1000
+@@ -226,7 +226,7 @@
+ 
+ bool wxJPGHandler::LoadFile( wxImage *image, wxInputStream& stream, bool verbose, int WXUNUSED(index) )
+ {
+-    wxCHECK_MSG( image, false, "NULL image pointer" );
++    wxCHECK_MSG( image, false, wxT("NULL image pointer") );
+ 
+     struct jpeg_decompress_struct cinfo;
+     wx_error_mgr jerr;
