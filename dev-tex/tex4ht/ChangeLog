@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.74 2010/06/12 16:19:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.75 2010/07/18 12:25:15 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> tex4ht-20090611_p1038-r1.ebuild:
+  ppc stable #316143
 
   12 Jun 2010; Alexis Ballier <aballier@gentoo.org>
   -tex4ht-20081103_p0302.ebuild, -tex4ht-20090513_p1511.ebuild:
