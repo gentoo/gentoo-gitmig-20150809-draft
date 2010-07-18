@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.15.ebuild,v 1.1 2010/06/13 15:56:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.15.ebuild,v 1.2 2010/07/18 17:44:36 pacho Exp $
 
 EAPI="2"
 
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug doc emacs test"
 
+# dev-tex/tex4ht blocker needed due bug #315287
 RDEPEND=">=dev-libs/glib-2.6
 	>=dev-lang/perl-5.6
 	>=app-text/openjade-1.3.1
@@ -23,7 +24,8 @@ RDEPEND=">=dev-libs/glib-2.6
 	app-text/docbook-xsl-stylesheets
 	~app-text/docbook-sgml-dtd-3.0
 	>=app-text/docbook-dsssl-stylesheets-1.40
-	emacs? ( virtual/emacs )"
+	emacs? ( virtual/emacs )
+	!!<dev-tex/tex4ht-20090611_p1038-r1"
 
 DEPEND="${RDEPEND}
 	~dev-util/gtk-doc-am-${PV}

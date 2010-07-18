@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.121 2010/07/04 17:57:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.122 2010/07/18 17:44:36 pacho Exp $
+
+  18 Jul 2010; Pacho Ramos <pacho@gentoo.org> gtk-doc-1.15.ebuild:
+  Add needed blockers to prevent runtime failures shown in broken tests due
+  old and broken dev-tex/tex4ht versions (bug #315287).
 
   04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   gtk-doc-1.13-r2.ebuild:
