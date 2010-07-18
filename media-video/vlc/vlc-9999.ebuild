@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.81 2010/07/17 15:38:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.82 2010/07/18 10:16:06 aballier Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="85"
+PATCHLEVEL="86"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
