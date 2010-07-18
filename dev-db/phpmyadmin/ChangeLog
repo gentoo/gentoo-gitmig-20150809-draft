@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.387 2010/06/21 20:18:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.388 2010/07/18 20:24:58 josejx Exp $
+
+  18 Jul 2010; Joseph Jezak <josejx@gentoo.org> phpmyadmin-2.11.10.ebuild:
+  Marked ppc/ppc64 stable for bug #303761.
 
   21 Jun 2010; Markus Meier <maekke@gentoo.org> phpmyadmin-2.11.10.ebuild:
   amd64 stable, bug #303761
