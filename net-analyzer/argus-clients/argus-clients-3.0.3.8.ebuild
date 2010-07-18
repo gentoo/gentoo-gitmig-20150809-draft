@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.3.8.ebuild,v 1.2 2010/07/16 09:20:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.3.8.ebuild,v 1.3 2010/07/18 13:28:42 nixnut Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://qosient.com/argus/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="debug geoip mysql"
 
 #sasl? ( >=dev-libs/cyrus-sasl-1.5.24 )
