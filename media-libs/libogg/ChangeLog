@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libogg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.68 2010/07/04 17:09:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.69 2010/07/18 13:39:55 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> libogg-1.2.0.ebuild:
+  ppc stable #324261
 
   04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> libogg-1.2.0.ebuild:
   ppc64 stable wrt #324261
