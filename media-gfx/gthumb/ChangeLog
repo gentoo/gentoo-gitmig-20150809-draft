@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.114 2010/07/14 18:18:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.115 2010/07/18 18:06:07 pacho Exp $
+
+*gthumb-2.11.5-r1 (18 Jul 2010)
+
+  18 Jul 2010; Pacho Ramos <pacho@gentoo.org> -gthumb-2.11.5.ebuild,
+  +gthumb-2.11.5-r1.ebuild, +files/gthumb-2.11.5-exif-rotation.patch,
+  +files/gthumb-2.11.5-jpeg8-rotation.patch:
+  Revision bump applying upstream patches to fix jpeg8 rotation bug #309251.
+  Remove old.
 
   14 Jul 2010; Pacho Ramos <pacho@gentoo.org> gthumb-2.11.5.ebuild,
   +files/gthumb-2.11.5-configure-exiv2.patch:

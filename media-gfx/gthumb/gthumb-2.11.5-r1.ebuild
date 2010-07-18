@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.5.ebuild,v 1.2 2010/07/14 18:18:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.11.5-r1.ebuild,v 1.1 2010/07/18 18:06:07 pacho Exp $
 
 EAPI="3"
 
@@ -68,6 +68,12 @@ src_prepare() {
 
 	# Do not link to the exiv2 extension if it's not built
 	epatch "${FILESDIR}/${P}-configure-exiv2.patch"
+
+	# Fixed lossless rotation with libjpeg8
+	epatch "${FILESDIR}/${P}-jpeg8-rotation.patch"
+
+	# Preserve the exif data after a lossless rotation
+	epatch "${FILESDIR}/${P}-exif-rotation.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
