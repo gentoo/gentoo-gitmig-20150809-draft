@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-mbpurple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.3 2010/07/13 12:43:44 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.4 2010/07/18 13:55:35 xarthisius Exp $
+
+  18 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  pidgin-mbpurple-0.3.0.ebuild:
+  Respect CC and LDFLAGS
 
   13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:

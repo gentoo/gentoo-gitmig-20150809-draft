@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/pidgin-mbpurple-0.3.0.ebuild,v 1.1 2010/06/17 09:00:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/pidgin-mbpurple-0.3.0.ebuild,v 1.2 2010/07/18 13:55:35 xarthisius Exp $
 
 EAPI=2
 
-inherit base
+inherit base toolchain-funcs
 
 DESCRIPTION="Libpurple (Pidgin) plug-in supporting microblog services like Twitter or identi.ca"
 HOMEPAGE="http://code.google.com/p/microblog-purple/"
@@ -19,4 +19,12 @@ IUSE=""
 RDEPEND="net-im/pidgin[gtk]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	tc-export CC
+}
+
+src_prepare() {
+	sed -i "/^LDFLAGS/d" global.mak || die
+}
