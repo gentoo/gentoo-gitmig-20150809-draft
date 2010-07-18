@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.101 2010/07/17 23:02:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.102 2010/07/18 20:45:50 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -165,19 +165,12 @@ elif [[ -n "${NEED_PYTHON}" ]]; then
 		die "NEED_PYTHON variable cannot be used in this EAPI"
 	fi
 
-	if [[ "${NOCOLOR:-false}" =~ ^(false|no)$ ]]; then
-		_RED=$'\e[1;31m'
-		_NORMAL=$'\e[0m'
-	else
-		_RED=
-		_NORMAL=
-	fi
-
-	echo
-	echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: NEED_PYTHON variable is deprecated and will be banned on 2010-10-01.${_NORMAL}"
-	echo " ${_RED}*${_NORMAL} ${_RED}Use PYTHON_DEPEND variable instead of NEED_PYTHON variable.${_NORMAL}"
-	echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
-	echo
+	ewarn
+	ewarn "\"${EBUILD}\":"
+	ewarn "Deprecation Warning: NEED_PYTHON variable is deprecated and will be banned on 2010-10-01."
+	ewarn "Use PYTHON_DEPEND variable instead of NEED_PYTHON variable."
+	ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+	ewarn
 
 	unset _BOLD _NORMAL
 
@@ -317,8 +310,13 @@ _python_final_sanity_checks() {
 	PYTHON_SANITY_CHECKS_EXECUTED="1"
 }
 
+# @ECLASS-VARIABLE: PYTHON_COLORS
+# @DESCRIPTION:
+# User-configurable colored output.
+PYTHON_COLORS="${PYTHON_COLORS:-0}"
+
 _python_set_color_variables() {
-	if [[ "${NOCOLOR:-false}" =~ ^(false|no)$ ]]; then
+	if [[ "${PYTHON_COLORS}" != "0" && "${NOCOLOR:-false}" =~ ^(false|no)$ ]]; then
 		_BOLD=$'\e[1m'
 		_RED=$'\e[1;31m'
 		_GREEN=$'\e[1;32m'
@@ -968,7 +966,7 @@ python_execute_function() {
 
 			if [[ "${nonfatal}" == "1" ]]; then
 				if [[ "${quiet}" == "0" ]]; then
-					ewarn "${_RED}${failure_message}${_NORMAL}"
+					ewarn "${failure_message}"
 				fi
 			elif [[ "${final_ABI}" == "0" ]] && has "${PYTHON_ABI}" ${FAILURE_TOLERANT_PYTHON_ABIS}; then
 				if [[ "${EBUILD_PHASE}" != "test" ]] || ! has test-fail-continue ${FEATURES}; then
@@ -979,7 +977,7 @@ python_execute_function() {
 					export PYTHON_ABIS="${enabled_PYTHON_ABIS}"
 				fi
 				if [[ "${quiet}" == "0" ]]; then
-					ewarn "${_RED}${failure_message}${_NORMAL}"
+					ewarn "${failure_message}"
 				fi
 				if [[ -z "${PYTHON_ABIS}" ]]; then
 					die "${function}() function failed with all enabled Python ABIs"
@@ -2267,19 +2265,11 @@ python_mod_optimize() {
 		done
 
 		if [[ "$#" -eq 0 ]]; then
-			_python_set_color_variables
-
-			echo
-			echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be${_NORMAL}"
-			echo " ${_RED}*${_NORMAL} ${_RED}disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules.${_NORMAL}"
-			echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
-			echo
-
-			einfo &> /dev/null
-			einfo "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be" &> /dev/null
-			einfo "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules." &> /dev/null
-			einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
-			einfo &> /dev/null
+			ewarn
+			ewarn "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be"
+			ewarn "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules."
+			ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+			ewarn
 		fi
 
 		while (($#)); do
@@ -2411,19 +2401,11 @@ python_mod_optimize() {
 		done
 
 		if [[ "$#" -eq 0 ]]; then
-			_python_set_color_variables
-
-			echo
-			echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be${_NORMAL}"
-			echo " ${_RED}*${_NORMAL} ${_RED}disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules.${_NORMAL}"
-			echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
-			echo
-
-			einfo &> /dev/null
-			einfo "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be" &> /dev/null
-			einfo "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules." &> /dev/null
-			einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
-			einfo &> /dev/null
+			ewarn
+			ewarn "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be"
+			ewarn "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules."
+			ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+			ewarn
 		fi
 
 		while (($#)); do
@@ -2524,19 +2506,11 @@ python_mod_cleanup() {
 			search_paths=("${search_paths[@]/#/${root}/}")
 		fi
 	else
-		_python_set_color_variables
-
-		echo
-		echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be${_NORMAL}"
-		echo " ${_RED}*${_NORMAL} ${_RED}disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules.${_NORMAL}"
-		echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
-		echo
-
-		einfo &> /dev/null
-		einfo "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be" &> /dev/null
-		einfo "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules." &> /dev/null
-		einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
-		einfo &> /dev/null
+		ewarn
+		ewarn "Deprecation Warning: Not passing of paths to ${FUNCNAME}() is deprecated and will be"
+		ewarn "disallowed on 2010-09-01. Call ${FUNCNAME}() with paths to Python modules."
+		ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+		ewarn
 
 		for dir in "${root}"/usr/lib*; do
 			if [[ -d "${dir}" && ! -L "${dir}" ]]; then
@@ -2598,17 +2572,11 @@ python_mod_compile() {
 	_python_set_color_variables
 
 	if [[ "${FUNCNAME[1]}" != "python_mod_optimize" ]]; then
-		echo
-		echo " ${_RED}*${_NORMAL} ${_RED}Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01.${_NORMAL}"
-		echo " ${_RED}*${_NORMAL} ${_RED}Use python_mod_optimize() instead of ${FUNCNAME}().${_NORMAL}"
-		echo " ${_RED}*${_NORMAL} ${_RED}The ebuild needs to be fixed. Please report a bug, if it has not been already reported.${_NORMAL}"
-		echo
-
-		einfo &> /dev/null
-		einfo "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01." &> /dev/null
-		einfo "Use python_mod_optimize() instead of ${FUNCNAME}()." &> /dev/null
-		einfo "The ebuild needs to be fixed. Please report a bug, if it has not been already reported." &> /dev/null
-		einfo &> /dev/null
+		ewarn
+		ewarn "Deprecation Warning: ${FUNCNAME}() is deprecated and will be banned on 2010-09-01."
+		ewarn "Use python_mod_optimize() instead of ${FUNCNAME}()."
+		ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+		ewarn
 	fi
 
 	local f myroot myfiles=()
