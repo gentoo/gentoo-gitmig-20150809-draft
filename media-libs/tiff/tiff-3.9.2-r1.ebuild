@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.2-r1.ebuild,v 1.7 2010/03/09 21:46:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.2-r1.ebuild,v 1.8 2010/07/18 21:18:15 nerdboy Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -20,7 +20,8 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b:0 )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.8.2-CVE-2009-2285.patch \
-		"${FILESDIR}"/${P}-CVE-2009-2347.patch
+		"${FILESDIR}"/${P}-CVE-2009-2347.patch \
+		"${FILESDIR}"/${P}-CVE-2010-1411.patch
 	elibtoolize
 }
 
