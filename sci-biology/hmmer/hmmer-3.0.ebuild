@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.2 2010/07/16 21:56:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.3 2010/07/18 10:20:59 xarthisius Exp $
 
 EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="Sequence analysis using profile hidden Markov models"
 HOMEPAGE="http://hmmer.janelia.org/"
@@ -17,22 +19,22 @@ DEPEND="mpi? ( virtual/mpi )
 	gsl? ( >=sci-libs/gsl-1.12 )"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix_tests.patch
+}
+
 src_configure() {
 	econf $(use_enable sse) \
 		$(use_enable mpi) \
 		$(use_enable threads) \
-		$(use_with gsl) || die
+		$(use_with gsl)
 }
 
 src_install() {
-	einstall || die
+	emake DESTDIR="${D}" install || die
 	dolib src/libhmmer.a || die
 	dolib easel/libeasel.a || die
 	insinto /usr/share/${PN}
 	doins -r tutorial || die
 	dodoc RELEASE-NOTES Userguide.pdf
-}
-
-src_test() {
-	emake check || die
 }

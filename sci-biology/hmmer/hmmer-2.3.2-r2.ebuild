@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-2.3.2-r2.ebuild,v 1.7 2008/02/07 14:39:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-2.3.2-r2.ebuild,v 1.8 2010/07/18 10:20:59 xarthisius Exp $
 
 DESCRIPTION="Sequence analysis using profile hidden Markov models"
 LICENSE="GPL-2"
@@ -16,9 +16,9 @@ DEPEND="pvm? ( sys-cluster/pvm )"
 src_compile() {
 	econf \
 		--host=${CHOST} \
-		--prefix=${D}/usr \
-		--exec_prefix=${D}/usr \
-		--mandir=${D}/usr/share/man \
+		--prefix="${D}"/usr \
+		--exec_prefix="${D}"/usr \
+		--mandir="${D}"/usr/share/man \
 		--enable-lfs \
 		$(use_enable pvm) \
 		$(use_enable threads) || die

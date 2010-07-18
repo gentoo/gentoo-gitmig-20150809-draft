@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/hmmer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.29 2010/07/16 21:56:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/ChangeLog,v 1.30 2010/07/18 10:20:59 xarthisius Exp $
+
+  18 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> hmmer-2.3.2-r1.ebuild,
+  hmmer-2.3.2-r2.ebuild, hmmer-3.0.ebuild, +files/hmmer-3.0-fix_tests.patch:
+  Fix tests that use gsl. Make repoman happy.
 
   16 Jul 2010; Markos Chandras <hwoarang@gentoo.org> hmmer-3.0.ebuild:
   Stable on amd64 wrt bug #328419
