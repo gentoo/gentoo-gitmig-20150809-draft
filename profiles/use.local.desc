@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5787 2010/07/18 09:07:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5788 2010/07/18 11:48:03 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2528,7 +2528,8 @@ net-im/jabberd2:memdebug - Enable nad and pool debug. Requires USE="debug" to be
 net-im/kadu:phonon - Enable phonon audio plugin
 net-im/kadu:speech - Enables speech module
 net-im/kmess:konqueror - Enable integration with konqueror
-net-im/mcabber:otr -  Enable encrypted conversations using Off-The-Records messaging 
+net-im/mcabber:aspell - Adds support for app-text/aspell spell checker.
+net-im/mcabber:otr - Enable encrypted conversations using Off-The-Records messaging 
 net-im/minbif:video - Add video support
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support
 net-im/pidgin:groupwise - Enable Novell Groupwise protocol support
