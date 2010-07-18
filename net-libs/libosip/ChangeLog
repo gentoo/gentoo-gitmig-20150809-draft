@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libosip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.41 2010/06/10 06:52:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.42 2010/07/18 12:31:35 nixnut Exp $
+
+  18 Jul 2010; <nixnut@gentoo.org> libosip-3.3.0.ebuild:
+  ppc stable #317235
 
   10 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> libosip-3.3.0.ebuild:
   x86 stable wrt bug #317235
