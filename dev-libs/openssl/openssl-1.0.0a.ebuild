@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a.ebuild,v 1.2 2010/07/14 20:52:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a.ebuild,v 1.3 2010/07/18 19:39:21 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,10 +27,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
-	#epatch "${FILESDIR}"/${PN}-0.9.8j-parallel-build.patch
-	#epatch "${FILESDIR}"/${PN}-0.9.8b-doc-updates.patch
-	#epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
-	#epatch "${FILESDIR}"/${PN}-0.9.8h-ldflags.patch #181438
 	epatch "${FILESDIR}"/${PN}-0.9.8l-binutils.patch #289130
 
 	# disable fips in the build
@@ -165,9 +161,11 @@ src_install() {
 }
 
 pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.{6,7,8}
+	has_version ${CATEGORY}/${PN}:0.9.8 && return 0
+	preserve_old_lib /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.8
 }
 
 pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.{6,7,8}
+	has_version ${CATEGORY}/${PN}:0.9.8 && return 0
+	preserve_old_lib_notify /usr/$(get_libdir)/lib{crypto,ssl}.so.0.9.8
 }
