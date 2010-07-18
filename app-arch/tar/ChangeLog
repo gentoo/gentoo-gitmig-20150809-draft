@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.152 2010/07/18 20:26:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.153 2010/07/18 21:05:50 vapier Exp $
+
+*tar-1.23-r3 (18 Jul 2010)
+
+  18 Jul 2010; Mike Frysinger <vapier@gentoo.org> +tar-1.23-r3.ebuild,
+  +files/tar-1.23-symlink-k-hang.patch, +files/tar-1.23-tests.patch:
+  Fix from upstream for hang with symlinks/-k #327641. Fix from upstream for
+  skipping remfiles01 test as root #326785 by David Abbott <.
 
   18 Jul 2010; Joseph Jezak <josejx@gentoo.org> tar-1.23-r2.ebuild:
   Marked ppc stable for bug #313333.
