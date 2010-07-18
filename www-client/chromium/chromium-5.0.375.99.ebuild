@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.99.ebuild,v 1.3 2010/07/06 19:04:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.99.ebuild,v 1.4 2010/07/18 11:49:53 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -44,13 +44,6 @@ RDEPEND+="
 	x11-apps/xmessage
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
-
-# Incompatible system plugins:
-# www-plugins/gecko-mediaplayer, bug #309231.
-RDEPEND+="
-	plugins-symlink? (
-		!www-plugins/gecko-mediaplayer[gnome]
-	)"
 
 src_prepare() {
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
