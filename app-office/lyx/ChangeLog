@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.203 2010/07/11 12:49:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.204 2010/07/18 09:13:00 aballier Exp $
+
+*lyx-1.6.7 (18 Jul 2010)
+
+  18 Jul 2010; Alexis Ballier <aballier@gentoo.org> +lyx-1.6.7.ebuild:
+  version bump, thanks Pavel
 
   11 Jul 2010; Christian Faulhammer <fauli@gentoo.org> lyx-1.6.6.1.ebuild:
   stable x86, bug 321447
