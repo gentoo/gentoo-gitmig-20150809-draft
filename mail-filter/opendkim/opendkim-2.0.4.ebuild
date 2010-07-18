@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.4.ebuild,v 1.3 2010/07/18 09:41:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.0.4.ebuild,v 1.4 2010/07/18 16:38:00 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="asyncdns +db opendbx ldap lua sasl unbound"
 
 # FUTURE: diffheaders (libtre error) - bug #296813
