@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/magit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.3 2010/06/20 12:01:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.4 2010/07/18 06:25:52 fauli Exp $
+
+*magit-0.8.2 (18 Jul 2010)
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org> +magit-0.8.2.ebuild:
+  version bump for bug 328345 by f <zhixun.lin AT gmail DOT com>
 
 *magit-0.8.1 (13 Jun 2010)
 
