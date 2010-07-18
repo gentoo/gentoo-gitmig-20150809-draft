@@ -1,6 +1,10 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.9 2010/07/06 12:47:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.10 2010/07/18 13:46:05 scarabeus Exp $
+
+  18 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> -rekonq-0.4.0.ebuild,
+  rekonq-0.5.0.ebuild:
+  Remove old. Restrict test per bug #295869.
 
 *rekonq-0.5.0 (06 Jul 2010)
 

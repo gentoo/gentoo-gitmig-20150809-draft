@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.5.0.ebuild,v 1.1 2010/07/06 12:47:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.5.0.ebuild,v 1.2 2010/07/18 13:46:05 scarabeus Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
@@ -23,3 +23,5 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog TODO"
+
+RESTRICT="test"
