@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/l7-filter-userspace
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.10 2009/03/01 09:40:59 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.11 2010/07/18 02:47:57 dragonheart Exp $
+
+  18 Jul 2010; Daniel Black <dragonheart@gentoo.org>
+  -l7-filter-userspace-0.7.ebuild, -l7-filter-userspace-0.8.ebuild,
+  l7-filter-userspace-0.11.ebuild,
+  +files/l7-filter-userspace-0.11-libnetfilter_conntrack-0.0.100.patch,
+  -files/l7-filter-userspace-in-fix.patch,
+  -files/l7-filter-userspace-order-in-fix.patch,
+  -l7-filter-userspace-0.10.ebuild:
+  build fix as per bug #280747 thanks to niv. Patch thanks to Debian
 
 *l7-filter-userspace-0.11 (01 Mar 2009)
 
