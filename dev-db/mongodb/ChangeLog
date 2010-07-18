@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.7 2010/06/16 20:35:15 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.8 2010/07/18 12:58:58 lu_zero Exp $
+
+*mongodb-1.5.5 (18 Jul 2010)
+*mongodb-1.4.4 (18 Jul 2010)
+
+  18 Jul 2010; Luca Barbato <lu_zero@gentoo.org> +mongodb-1.4.4.ebuild,
+  +mongodb-1.5.5.ebuild:
+  Version Bump
 
 *mongodb-1.5.2 (16 Jun 2010)
 *mongodb-1.4.3 (16 Jun 2010)
