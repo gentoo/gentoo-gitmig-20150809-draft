@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r2.ebuild,v 1.3 2010/06/17 20:13:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.10-r2.ebuild,v 1.4 2010/07/18 19:55:47 scarabeus Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
-IUSE="berkdb iodbc mysql odbc postgres sqlite ssl xml"
+IUSE="berkdb iodbc mysql odbc postgres sqlite ssl static-libs xml"
 
 RDEPEND="mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-3* )
@@ -53,6 +53,7 @@ src_configure() {
 
 	econf \
 		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
 		$(use_with berkdb bdb) \
 		--with-xml-parser=${parser} \
 		$(use_with ssl openssl-digests) \
@@ -75,6 +76,6 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README TODO
-	dohtml {FAQS,NEWS,README,RELEASE,TODO}.html
+	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	dohtml {FAQS,NEWS,README,RELEASE,TODO}.html || die
 }
