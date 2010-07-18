@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0.ebuild,v 1.8 2010/07/11 10:30:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0.ebuild,v 1.9 2010/07/18 22:14:21 jmbsvicetto Exp $
 
 EAPI=3
 
@@ -37,6 +37,9 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.7.5-grab.patch"
+
+	# https://bugs.g10code.com/gnupg/issue1162
+	epatch "${FILESDIR}/${P}-qt-fix.patch"
 
 	if use qt4; then
 		local file

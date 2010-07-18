@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.106 2010/07/11 10:30:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.107 2010/07/18 22:14:21 jmbsvicetto Exp $
+
+  18 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  pinentry-0.8.0.ebuild, +files/pinentry-0.8.0-qt-fix.patch:
+  Non-maintainer commit - this has been affecting me for a long time and
+  it's quite upsetting.
+  Added upstream patch to ensure pinentry is displayed in the foreground
+  with qt - https://bugs.g10code.com/gnupg/issue1162
+  Thanks to rubik's cube <daniel.hornung@gmx.de> - fixes bug 328189.
 
   11 Jul 2010; Tobias Klausmann <klausman@gentoo.org> pinentry-0.8.0.ebuild:
   Stable on alpha, bug #299388
