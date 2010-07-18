@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.0.ebuild,v 1.5 2009/10/10 16:24:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.0.ebuild,v 1.6 2010/07/18 11:08:19 xarthisius Exp $
 
 EAPI=2
 
@@ -18,6 +18,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_prepare() {
+	# bug 326713
+	sed -i '/"type", GTK_WINDOW_TOPLEVEL/d' src/xpad-pad.c || die
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

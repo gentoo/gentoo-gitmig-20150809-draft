@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xpad
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.68 2009/10/10 16:24:22 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.69 2010/07/18 11:08:19 xarthisius Exp $
+
+  18 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> -xpad-2.14.ebuild,
+  -xpad-3.0.ebuild, xpad-4.0.ebuild:
+  Fix bug 326713. Thanks to sap@ausdruckswelt.de for the report and patch.
+  Remove old.
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> xpad-4.0.ebuild:
   sparc stable wrt #282313
