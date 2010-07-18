@@ -1,23 +1,16 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/files/atop.rc,v 1.1 2005/06/14 23:01:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/files/atop.rc,v 1.2 2010/07/18 22:19:26 vapier Exp $
 
-start(){
+start() {
 	ebegin "Starting atop"
-	if [ -f /etc/cron.d/atop ] ; then
-		start-stop-daemon --start --quiet --exec /etc/atop/atop.daily
-		eend $?
-	else
-		eend 1 "/etc/cron.d/atop doesnt exist!"
-	fi
+	start-stop-daemon --start --quiet --exec /etc/atop/atop.daily
+	eend $?
 }
 
-stop(){
+stop() {
 	ebegin "Stopping atop"
-	PIDATOP=`ps -lef | grep -- '-w /var/log/atop/atop_' | grep -v grep | awk '{print $4}'`
-	if [ "$PIDATOP" != "" ] ; then
-		kill $PIDATOP
-	fi
+	start-stop-daemon --stop --exec /usr/bin/atop --pidfile /var/run/atop.pid
 	eend $?
 }

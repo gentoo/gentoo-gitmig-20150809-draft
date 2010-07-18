@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/atop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.33 2010/05/18 17:17:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.34 2010/07/18 22:19:27 vapier Exp $
+
+*atop-1.25-r1 (18 Jul 2010)
+
+  18 Jul 2010; Mike Frysinger <vapier@gentoo.org> +atop-1.25-r1.ebuild,
+  files/atop.rc:
+  Delete copies of binaries with -${PV} suffix and rewrite init.d script
+  #320433 by Jeroen Roovers.
 
 *atop-1.25 (18 May 2010)
 
