@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.234 2010/07/17 11:37:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.235 2010/07/19 00:24:16 polynomial-c Exp $
+
+  19 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-2.0.5.ebuild, seamonkey-2.0.6_pre1.ebuild:
+  Removed --enable-system-lcms
 
 *seamonkey-2.0.6_pre1 (17 Jul 2010)
 
