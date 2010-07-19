@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.2 2010/07/05 17:51:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.3 2010/07/19 19:14:13 jer Exp $
+
+  19 Jul 2010; Jeroen Roovers <jer@gentoo.org> httpd-php-5.3.ebuild:
+  Marked ~hppa (bug #321743).
 
   05 Jul 2010; Mark Loeser <halcy0n@gentoo.org> httpd-php-5.2.ebuild:
   Make keywords match the PHP keywords so the stable tree doesn't break
