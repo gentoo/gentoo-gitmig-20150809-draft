@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-1.9.9.ebuild,v 1.1 2010/07/19 14:05:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-1.9.9.ebuild,v 1.2 2010/07/19 15:42:16 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 #SLOT empty due to webapp
 IUSE="${PHPFLAGS} vhosts"
 
-# No forced dependency on 
+# No forced dependency on
 #  mysql? ( virtual/mysql )
 #  postgres? ( dev-db/postgresql-server-7* )
 # which may live on another server
