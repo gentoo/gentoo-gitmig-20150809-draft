@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.5 2010/06/29 21:38:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8.ebuild,v 1.6 2010/07/19 00:54:12 josejx Exp $
 
 EAPI=2
 inherit eutils
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/openil/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="openexr gif jpeg lcms mng png tiff xpm allegro opengl sdl static-libs X"
 
 RDEPEND="gif? ( media-libs/giflib )
