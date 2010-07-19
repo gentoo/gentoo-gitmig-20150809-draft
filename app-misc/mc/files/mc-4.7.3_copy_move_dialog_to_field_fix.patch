@@ -1,0 +1,37 @@
+Index: src/file.c
+===================================================================
+--- a/src/file.c
++++ b/src/file.c
+@@ -2067,5 +2067,4 @@
+         else
+             dest_dir = panel->cwd;
+-
+         /*
+          * Add trailing backslash only when do non-local ops.
+@@ -2073,20 +2072,14 @@
+          * dir is deleted)
+          */
+-        if (force_single || dest_dir[0] == '\0')
++        if (!force_single && dest_dir[0] != '\0' && dest_dir[strlen (dest_dir) - 1] != PATH_SEP)
++        {
++            /* add trailing separator */
++            dest_dir_ = g_strconcat (dest_dir, PATH_SEP_STR, (char *) NULL);
++        }
++        else
+         {
+             /* just copy */
+             dest_dir_ = g_strdup (dest_dir);
+         }
+-        else if (single_entry)
+-        {
+-            /* add filename to dest path */
+-            dest_dir_ = g_build_filename (dest_dir, source, (char *) NULL);
+-        }
+-        else
+-        {
+-            /* add trailing separator */
+-            dest_dir_ = g_strconcat (dest_dir, PATH_SEP_STR, (char *) NULL);
+-        }
+-
+         if (dest_dir_ == NULL)
+         {
