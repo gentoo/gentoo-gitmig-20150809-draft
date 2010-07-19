@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.6 2010/07/17 17:15:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.7 2010/07/19 09:30:44 graaff Exp $
+
+*session-3.1.0 (19 Jul 2010)
+
+  19 Jul 2010; Hans de Graaff <graaff@gentoo.org> +session-3.1.0.ebuild,
+  +files/session-3.1.0-jruby.patch:
+  Version bump. Remove part of patches that got applied upstream.
 
   17 Jul 2010; Raúl Porcel <armin76@gentoo.org> session-2.4.0.ebuild:
   Add ~sparc wrt #322053
