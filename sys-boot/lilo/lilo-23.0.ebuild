@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.0.ebuild,v 1.1 2010/07/15 17:09:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.0.ebuild,v 1.2 2010/07/19 23:57:20 jer Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ src_prepare() {
 	use pxeserial && epatch "${FILESDIR}/${PN}-22.8-novga.patch"
 
 	# Do not strip
-	sed -i src/Makefile -e 's| -s | |g' -e '/strip/d' || die "sed strip failed"
+	sed -i src/Makefile -e '/strip/d' || die "sed strip failed"
 }
 
 src_compile() {
