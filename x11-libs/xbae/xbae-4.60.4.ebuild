@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.12 2008/09/17 14:49:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.13 2010/07/19 18:32:04 bicatali Exp $
 
+EAPI=3
 inherit eutils
 
 DESCRIPTION="Motif-based widget to display a grid of cells as a spreadsheet"
@@ -23,20 +24,14 @@ RDEPEND="x11-libs/openmotif
 
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-tmpl.patch
 	epatch "${FILESDIR}"/${P}-lxmp.patch
 	epatch "${FILESDIR}"/${P}-Makefile.in.patch
 }
 
-src_compile() {
-	econf \
-	  --enable-production \
-		|| die "econf failed"
-
-	emake || die "emake failed"
+src_configure() {
+	econf --enable-production
 }
 
 src_test() {
@@ -49,13 +44,15 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	insinto /usr/share/aclocal
-	doins ac_find_xbae.m4
+	doins ac_find_xbae.m4 || die
 	dodoc README NEWS ChangeLog AUTHORS
-	use doc && dohtml -r doc/*
+	if use doc; then
+		dohtml -r doc/* || die
+	fi
 	if use examples; then
 		find examples -name '*akefile*' -exec rm -f {} \;
 		rm -f examples/{testall,extest}
 		insinto /usr/share/doc/${PF}
-		doins -r examples
+		doins -r examples || die
 	fi
 }

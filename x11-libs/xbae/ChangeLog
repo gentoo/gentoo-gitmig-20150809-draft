@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xbae
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.13 2008/09/18 01:01:59 ranger Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/ChangeLog,v 1.14 2010/07/19 18:32:04 bicatali Exp $
+
+  19 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> xbae-4.60.4.ebuild,
+  metadata.xml:
+  Switch to EAPI=3, and maintainer from me to sci herd
 
   18 Sep 2008; Brent Baude <ranger@gentoo.org> ChangeLog:
   stable ppc64, bug 235754
