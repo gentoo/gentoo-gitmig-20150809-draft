@@ -1,0 +1,20 @@
+--- src/hid/png/png.c.orig	2010-07-19 15:36:17.000000000 +0200
++++ src/hid/png/png.c	2010-07-19 15:37:53.000000000 +0200
+@@ -137,6 +137,8 @@
+   NULL
+ };
+ 
++#define NUM_FILETYPES (sizeof(filetypes)/sizeof(filetypes[0]) - 1)
++
+ HID_Attribute png_attribute_list[] = {
+   /* other HIDs expect this to be first.  */
+   {"outfile", "Graphics output file",
+@@ -176,7 +178,7 @@
+ #define HA_use_alpha 8
+ 
+   {"format", "Graphics file format",
+-   HID_Enum, 0, 0, {2, 0, 0}, filetypes, 0},
++   HID_Enum, 0, 0, {NUM_FILETYPES-1, 0, 0}, filetypes, 0},
+ #define HA_filetype 9
+ 
+   {"png-bloat", "Amount (in/mm/mil/pix) to add to trace/pad/pin edges (1 = 1/100 mil)",

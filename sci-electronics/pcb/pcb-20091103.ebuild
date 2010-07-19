@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.1 2010/02/19 23:37:58 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.2 2010/07/19 14:00:19 tomjbe Exp $
 
 EAPI="2"
 
-inherit fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils eutils
 
 DESCRIPTION="GPL Electronic Design Automation: Printed Circuit Board editor"
 HOMEPAGE="http://www.gpleda.org/"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/pcb/files/pcb/${P}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="dbus doc gif gtk jpeg m4lib-png motif nelma nls png xrender tk toporouter"
+IUSE="dbus doc gif gtk jpeg m4lib-png motif nelma nls png xrender test tk toporouter"
 # toporouter-output USE flag removed for pcb-20091103 (output was disabled always)
 # debug USE flag removed for pcb-20091103 (many crashes, should be fixed for next release)
 
@@ -29,6 +29,10 @@ CDEPEND="gif? ( >=media-libs/gd-2.0.23 )
 	nls? ( virtual/libintl )
 	png? ( >=media-libs/gd-2.0.23[png] )
 	m4lib-png? ( >=media-libs/gd-2.0.23[png] )
+	test? (
+		|| ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick )
+		sci-electronics/gerbv
+	)
 	tk? ( >=dev-lang/tk-8 )"
 #toporouter-output? ( x11-libs/cairo )
 
@@ -60,12 +64,18 @@ src_prepare() {
 	if use m4lib-png; then
 		rm -f lib/pcblib-newlib.stamp
 	fi
+	if ! use png; then
+		sed -i '/^hid_png1/d' tests/tests.list || die
+	fi
 	sed -i -e 's/example//' -e 's/tutorial//' -e 's/ win32//' Makefile.in || die "sed failed"
 	sed -i -e 's/DOC=doc/DOC="doc example tutorial"/' configure || die "sed failed"
 	sed -i -e 's/$(pkgdatadir)/$(docdir)/' {example,tutorial}/Makefile.in || die "sed failed"
 
 	# fix bug in pcb-20091103, should be fixed in next release
 	sed -i -e 's/free (&pd);/free (pd);/' src/hid/lesstif/main.c || die "sed failed"
+
+	# fix segfault during 'pcb -h' if USE=-gif or -jpeg or -png
+	epatch "${FILESDIR}"/${P}-png.patch
 }
 
 src_configure() {
