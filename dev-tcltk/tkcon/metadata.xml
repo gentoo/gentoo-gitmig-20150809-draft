@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>bicatali@gentoo.org</email>
-  <name>Sébastien Fabbro</name>
-  <description>Feel free to take over</description>
-</maintainer>
 <herd>tcltk</herd>
 <longdescription lang="en">
   tkcon is a replacement for the standard console that comes with
