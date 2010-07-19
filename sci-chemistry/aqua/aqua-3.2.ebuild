@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2.ebuild,v 1.1 2010/07/18 19:13:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2.ebuild,v 1.2 2010/07/19 06:14:48 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,9 @@ inherit eutils prefix toolchain-funcs
 
 DESCRIPTION="Program suite in this distribution calculates restraint violations"
 HOMEPAGE="http://www.biochem.ucl.ac.uk/~roman/procheck/procheck.html"
-SRC_URI="${PN}${PV}.tar.gz"
+SRC_URI="
+	${PN}${PV}.tar.gz
+	doc? ( ${P}-nmr_manual.tar.gz )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
@@ -24,7 +26,7 @@ S="${WORKDIR}"/${PN}${PV}
 
 pkg_nofetch() {
    elog "Please visit http://www.ebi.ac.uk/thornton-srv/software/PROCHECK/download.html"
-   elog "And follow the instruction for downloading ${A} ->  ${DISTDIR}/aqua3.2.tar.gz."
+   elog "And follow the instruction for downloading ${PN}${PV}.tar.gz ->  ${DISTDIR}/${PN}${PV}.tar.gz."
    if use doc; then
       elog "nmr_manual.tar.gz  ->  ${DISTDIR}/${P}-nmr_manual.tar.gz"
    fi

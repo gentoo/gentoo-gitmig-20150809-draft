@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/procheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.1 2010/07/18 18:16:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.2 2010/07/19 06:12:43 jlec Exp $
+
+  19 Jul 2010; Justin Lecher <jlec@gentoo.org> procheck-3.5.4.ebuild:
+  Cleaned SRC_URI
 
 *procheck-3.5.4 (18 Jul 2010)
 
