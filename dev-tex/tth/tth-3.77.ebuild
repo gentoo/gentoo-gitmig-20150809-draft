@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/tth-3.77.ebuild,v 1.3 2009/12/26 19:25:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/tth-3.77.ebuild,v 1.4 2010/07/19 08:07:24 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 SLOT="0"
 LICENSE="free-noncomm"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin tth latex2gif ps2gif ps2png
+	dobin tth latex2gif ps2gif ps2png || die
 	dodoc CHANGES
 	doman tth.1
 	dohtml *
