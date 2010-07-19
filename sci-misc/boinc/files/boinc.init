@@ -79,7 +79,7 @@ start() {
 		--start --quiet --chdir "${RUNTIMEDIR}" \
 		--make-pidfile \
 		--pidfile "${PIDFILE}" \
-        --chuid "${USER}:${GROUP}" \
+		--chuid "${USER}:${GROUP}" \
 		--nicelevel "${NICELEVEL}" \
 		--exec "${BOINCBIN}" ${PARAMS}
 

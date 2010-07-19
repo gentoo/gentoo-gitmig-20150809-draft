@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.90 2010/07/15 21:28:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.91 2010/07/19 20:34:45 scarabeus Exp $
+
+  19 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
+  Whitespace.
 
   15 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
   Attempt to fix the initsystem. Blind commit as i dont have my hands on my
