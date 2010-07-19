@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.10 2008/05/13 14:50:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.11 2010/07/19 21:51:23 maekke Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://jeremy.chartier.free.fr/snortalog/${MY_P}.tgz
 	tk? ( mirror://gentoo/${P}-fix-gui.diff.gz )"
 HOMEPAGE="http://jeremy.chartier.free.fr/snortalog/"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="tk"

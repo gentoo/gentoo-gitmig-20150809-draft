@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortalog
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.23 2008/05/13 14:50:32 fmccor Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.24 2010/07/19 21:51:23 maekke Exp $
+
+  19 Jul 2010; Markus Meier <maekke@gentoo.org> snortalog-2.4.0.ebuild:
+  add ~arm, bug #301084
 
   13 May 2008; Ferris McCormick <fmccor@gentoo.org> snortalog-2.4.0.ebuild:
   Add ~sparc --- Bug #221917 (request by Dustin Surawicz) --- it can generate
