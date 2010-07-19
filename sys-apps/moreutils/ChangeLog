@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.17 2010/07/18 20:42:53 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.18 2010/07/19 06:42:36 fauli Exp $
+
+  19 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  moreutils-0.39.ebuild:
+  stable x86, bug 328831
 
   18 Jul 2010; Thomas Anderson <tanderson@gentoo.org> moreutils-0.39.ebuild:
   stable amd64, bug 328831
