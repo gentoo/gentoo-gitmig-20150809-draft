@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xpa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/ChangeLog,v 1.6 2010/01/31 21:33:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/ChangeLog,v 1.7 2010/07/19 18:35:36 bicatali Exp $
+
+  19 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> -xpa-2.1.10.ebuild,
+  metadata.xml:
+  Switch from me to sci herd maintainship
 
 *xpa-2.1.12 (31 Jan 2010)
 
