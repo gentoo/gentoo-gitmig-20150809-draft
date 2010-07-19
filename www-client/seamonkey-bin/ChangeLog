@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.76 2010/07/19 06:38:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.77 2010/07/19 13:23:51 hwoarang Exp $
+
+  19 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  seamonkey-bin-2.0.5.ebuild:
+  Stable on amd64 wrt bug #324735
 
   19 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   seamonkey-bin-2.0.5.ebuild:
