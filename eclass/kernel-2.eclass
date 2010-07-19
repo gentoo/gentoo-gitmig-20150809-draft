@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.236 2010/06/05 18:49:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.237 2010/07/19 20:19:18 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -758,14 +758,6 @@ postinst_sources() {
 	fi
 }
 
-postinst_headers() {
-	elog "Kernel headers are usually only used when recompiling your system libc, as"
-	elog "such, following the installation of newer headers, it is advised that you"
-	elog "re-merge your system libc."
-	elog "Failure to do so will cause your system libc to not make use of newer"
-	elog "features present in the updated kernel headers."
-}
-
 # pkg_setup functions
 #==============================================================
 setup_headers() {
@@ -1159,7 +1151,6 @@ kernel-2_src_install() {
 }
 
 kernel-2_pkg_postinst() {
-	[[ ${ETYPE} == headers ]] && postinst_headers
 	[[ ${ETYPE} == sources ]] && postinst_sources
 }
 
