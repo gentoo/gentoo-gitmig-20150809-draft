@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.8 2010/03/14 12:31:41 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.9 2010/07/19 02:52:14 slyfox Exp $
 #
 # darcs eclass author:  Andres Loeh <kosmikus@gentoo.org>
 # tla eclass author:    <rphillips@gentoo.org>
@@ -18,6 +18,8 @@
 # ebuild.
 
 # TODO: support for tags, ...
+
+inherit eutils # eshopts_{push,pop}
 
 # Don't download anything other than the darcs repository
 SRC_URI=""
@@ -122,7 +124,6 @@ darcs_src_unpack() {
 	[ -z "$EDARCS_LOCALREPO" ] && [ -n "$EDARCS_REPOSITORY" ] \
 		&& EDARCS_LOCALREPO=${EDARCS_REPOSITORY%/} \
 		&& EDARCS_LOCALREPO=${EDARCS_LOCALREPO##*/}
-	local EDARCS_SHOPT
 
 	debug-print-function $FUNCNAME $*
 
@@ -146,10 +147,9 @@ darcs_src_unpack() {
 	# Use ${WORKDIR}/${P} rather than ${S} so user can point ${S} to something inside.
 	mkdir -p "${WORKDIR}/${P}"
 
-	EDARCS_SHOPT=$(shopt -p dotglob)
-	shopt -s dotglob	# get any dotfiles too.
+	eshopts_push -s dotglob	# get any dotfiles too.
 	rsync -rlpgo --exclude="_darcs/"  "$EDARCS_TOP_DIR/$EDARCS_LOCALREPO"/* "${WORKDIR}/${P}"
-	eval ${EDARCS_SHOPT}    # reset shopt
+	eshopts_pop
 
 	einfo "Darcs repository contents are now in ${WORKDIR}/${P}"
 
