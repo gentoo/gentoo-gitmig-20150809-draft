@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.20 2010/07/19 16:27:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.21 2010/07/19 16:30:23 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
@@ -15,8 +15,8 @@ KEYWORDS="amd64 hppa ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-l
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	epatch "${FILESDIR}"/${P}-amd64.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${P}-amd64.patch
 }
 
 src_configure() {
