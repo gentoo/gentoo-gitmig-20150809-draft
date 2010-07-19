@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.327 2010/07/18 23:34:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.328 2010/07/19 06:44:39 ssuominen Exp $
+
+  19 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  -files/xulrunner-1.8-gcc-4.4.patch, -xulrunner-1.8.1.19.ebuild,
+  -files/xulrunner-1.8.1.19-glibc-2.10-support.patch,
+  -files/xulrunner-1.8.1.19-libpng14.patch, -files/xulrunner.conf:
+  Remove xulrunner:1.8 wrt #282162 and #324953.
 
   18 Jul 2010; Jory A. Pratt <anarchy@gentoo.org> xulrunner-1.9.2.4.ebuild,
   xulrunner-1.9.2.6.ebuild:
