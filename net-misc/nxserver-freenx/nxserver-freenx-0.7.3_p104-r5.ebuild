@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r4.ebuild,v 1.5 2010/07/19 15:15:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r5.ebuild,v 1.1 2010/07/19 15:15:10 voyageur Exp $
 
 EAPI=2
 
@@ -15,13 +15,12 @@ HOMEPAGE="http://freenx.berlios.de/ https://launchpad.net/~freenx-team"
 SRC_URI="http://ppa.launchpad.net/freenx-team/ppa/ubuntu/pool/main/f/${MY_PN}/freenx-server_${MAJOR_PV}+teambzr${PATCH_VER/p}.orig.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+nxclient rdesktop vnc"
 
 DEPEND="x11-misc/gccmakedep
 	x11-misc/imake"
-RDEPEND="!>=dev-libs/openssl-1.0
-	dev-tcltk/expect
+RDEPEND="dev-tcltk/expect
 	media-fonts/font-cursor-misc
 	media-fonts/font-misc-misc
 	net-analyzer/gnu-netcat
@@ -54,6 +53,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7.3_p102-cflags.patch
 	epatch "${FILESDIR}"/${PN}-0.7.2-cups.patch
 	epatch "${FILESDIR}"/${P}-jobserver_fix.patch
+	epatch "${FILESDIR}"/${P}-md5sum.patch
 
 	# Path to net-misc/nx files, support for nx 3.4.0
 	sed	-e "/PATH_LIB=/s/lib/$(get_libdir)/g" \

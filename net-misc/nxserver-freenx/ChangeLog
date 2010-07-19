@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.74 2010/05/26 19:15:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.75 2010/07/19 15:15:10 voyageur Exp $
+
+*nxserver-freenx-0.7.3_p104-r5 (19 Jul 2010)
+
+  19 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freenx-0.7.3_p104-r4.ebuild,
+  +nxserver-freenx-0.7.3_p104-r5.ebuild,
+  +files/nxserver-freenx-0.7.3_p104-md5sum.patch:
+  openssl 1.0 changed output of 'openssl md5', fall back to md5sum and block
+  1.0 in current version, bug #328965
 
   26 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -nxserver-freenx-0.7.3_p104-r2.ebuild,
