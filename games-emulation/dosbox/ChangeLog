@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.53 2010/07/15 09:02:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.54 2010/07/19 19:16:05 josejx Exp $
+
+  19 Jul 2010; Joseph Jezak <josejx@gentoo.org> dosbox-0.74.ebuild:
+  Marked ppc/ppc64 stable for bug #325153.
 
   15 Jul 2010; Christian Faulhammer <fauli@gentoo.org> dosbox-0.74.ebuild:
   stable x86, bug 325153
