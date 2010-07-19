@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>bicatali@gentoo.org</email>
-  <description>
-    Not really a maitainer, just helping out. Feel free to do anything
-    with the package, or to take over maintainership.
-  </description>
-</maintainer>
 <herd>graphics</herd>
 <longdescription lang='en'>
   This is a port of GraphicsMagick(TM), the "swiss army knife" of
