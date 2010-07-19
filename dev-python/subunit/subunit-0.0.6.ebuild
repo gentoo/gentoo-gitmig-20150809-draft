@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.6.ebuild,v 1.1 2010/07/18 06:50:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.6.ebuild,v 1.2 2010/07/19 23:52:53 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 inherit python
 
 DESCRIPTION="A streaming protocol for test results"
-HOMEPAGE="https://launchpad.net/subunit"
+HOMEPAGE="https://launchpad.net/subunit http://pypi.python.org/pypi/python-subunit"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0 BSD"
