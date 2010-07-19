@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/procheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.2 2010/07/19 06:12:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.3 2010/07/19 17:16:04 jlec Exp $
+
+*procheck-3.5.4-r1 (19 Jul 2010)
+
+  19 Jul 2010; Justin Lecher <jlec@gentoo.org> -procheck-3.5.4.ebuild,
+  +procheck-3.5.4-r1.ebuild:
+  install 30procheck into env.d not profile.d
 
   19 Jul 2010; Justin Lecher <jlec@gentoo.org> procheck-3.5.4.ebuild:
   Cleaned SRC_URI
