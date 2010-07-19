@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/universalindentgui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.9 2010/05/24 22:03:39 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/ChangeLog,v 1.10 2010/07/19 19:43:38 wired Exp $
+
+*universalindentgui-1.1.0-r3 (19 Jul 2010)
+
+  19 Jul 2010; Alex Alexander <wired@gentoo.org>
+  +universalindentgui-1.1.0-r3.ebuild,
+  +files/universalindentgui-1.1.0-astyle_pwd_fix.patch:
+  fixed bug #325811 and bug #326123
 
   24 May 2010; Alex Alexander <wired@gentoo.org>
   universalindentgui-1.1.0-r2.ebuild,
