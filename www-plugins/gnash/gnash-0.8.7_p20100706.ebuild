@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.4 2010/07/14 01:03:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.5 2010/07/19 21:32:22 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -82,6 +82,11 @@ pkg_setup() {
 	if use vaapi && use !ffmpeg; then
 		eerror "Support for VAAPI currently requires the ffmpeg media handler."
 		die "vaapi requires the ffmpeg USE flag."
+	fi
+
+	if use vaapi && use !agg; then
+		eerror "Support for VAAPI currently requires the agg renderer."
+		die "vaapi requires the agg USE flag."
 	fi
 
 	if ! ( use agg || use cairo || use opengl ); then
