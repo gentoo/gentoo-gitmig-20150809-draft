@@ -1,0 +1,114 @@
+diff -ur mercury-compiler-10.04.orig/compiler/make.program_target.c mercury-compiler-10.04/compiler/make.program_target.c
+--- mercury-compiler-10.04.orig/compiler/make.program_target.c	2010-07-19 02:00:13.000000000 +1200
++++ mercury-compiler-10.04/compiler/make.program_target.c	2010-07-19 21:00:29.000000000 +1200
+@@ -5422,7 +5422,7 @@
+ 		make__program_target__install_grade_init_6_0_i2);
+ MR_def_label(make__program_target__install_grade_init_6_0,2)
+ 	MR_MAYBE_INIT_LOCAL_THREAD_ENGINE_BASE
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__install_grade_init_6_0_i3);
+ MR_def_label(make__program_target__install_grade_init_6_0,3)
+@@ -5873,7 +5873,7 @@
+ 		make__program_target__make_grade_install_dirs_6_0_i2);
+ MR_def_label(make__program_target__make_grade_install_dirs_6_0,2)
+ 	MR_MAYBE_INIT_LOCAL_THREAD_ENGINE_BASE
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__make_grade_install_dirs_6_0_i3);
+ MR_def_label(make__program_target__make_grade_install_dirs_6_0,3)
+@@ -6318,7 +6318,7 @@
+ 		MR_GOTO_LAB(make__program_target__install_library_grade_files_10_0_i11);
+ 	}
+ 	MR_r1 = MR_sv(10);
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__install_library_grade_files_10_0_i14);
+ MR_def_label(make__program_target__install_library_grade_files_10_0,14)
+@@ -6382,7 +6382,7 @@
+ 		MR_GOTO_LAB(make__program_target__install_library_grade_files_10_0_i20);
+ 	}
+ 	MR_r1 = MR_sv(10);
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__install_library_grade_files_10_0_i23);
+ MR_def_label(make__program_target__install_library_grade_files_10_0,23)
+@@ -6448,7 +6448,7 @@
+ MR_def_label(make__program_target__install_library_grade_files_10_0,20)
+ 	MR_MAYBE_INIT_LOCAL_THREAD_ENGINE_BASE
+ 	MR_r1 = MR_sv(10);
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__install_library_grade_files_10_0_i30);
+ MR_def_label(make__program_target__install_library_grade_files_10_0,30)
+@@ -6585,7 +6585,7 @@
+ 		make__program_target__make_install_dirs_5_0_i2);
+ MR_def_label(make__program_target__make_install_dirs_5_0,2)
+ 	MR_MAYBE_INIT_LOCAL_THREAD_ENGINE_BASE
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__make_install_dirs_5_0_i3);
+ MR_def_label(make__program_target__make_install_dirs_5_0,3)
+@@ -6806,7 +6806,7 @@
+ 		make__program_target__install_library_7_0_i11);
+ MR_def_label(make__program_target__install_library_7_0,11)
+ 	MR_MAYBE_INIT_LOCAL_THREAD_ENGINE_BASE
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__install_library_7_0_i12);
+ MR_def_label(make__program_target__install_library_7_0,12)
+@@ -10596,7 +10596,7 @@
+ 		make__program_target__install_ints_and_headers_8_0_i13);
+ MR_def_label(make__program_target__install_ints_and_headers_8_0,13)
+ 	MR_MAYBE_INIT_LOCAL_THREAD_ENGINE_BASE
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__install_ints_and_headers_8_0_i14);
+ MR_def_label(make__program_target__install_ints_and_headers_8_0,14)
+@@ -11222,7 +11222,7 @@
+ 		make__program_target__install_grade_ints_and_headers_9_0_i5);
+ MR_def_label(make__program_target__install_grade_ints_and_headers_9_0,5)
+ 	MR_MAYBE_INIT_LOCAL_THREAD_ENGINE_BASE
+-	MR_r2 = (MR_Word) MR_string_const("lib", 3);
++	MR_r2 = (MR_Word) MR_string_const("@libdir@", 3);
+ 	MR_np_call_localret_ent(fn__f_100_105_114_95_95_47_2_0,
+ 		make__program_target__install_grade_ints_and_headers_9_0_i6);
+ MR_def_label(make__program_target__install_grade_ints_and_headers_9_0,6)
+diff -ur mercury-compiler-10.04.orig/scripts/Mmake.vars.in mercury-compiler-10.04/scripts/Mmake.vars.in
+--- mercury-compiler-10.04.orig/scripts/Mmake.vars.in	2010-05-20 21:29:31.000000000 +1200
++++ mercury-compiler-10.04/scripts/Mmake.vars.in	2010-07-19 21:00:29.000000000 +1200
+@@ -688,17 +688,17 @@
+ INSTALL_PREFIX		= @prefix@
+ FINAL_INSTALL_PREFIX	= @prefix@
+ INSTALL_BINDIR		= $(INSTALL_PREFIX)/bin
+-INSTALL_LIBDIR		= $(INSTALL_PREFIX)/lib/mercury
+-FINAL_INSTALL_LIBDIR	= $(FINAL_INSTALL_PREFIX)/lib/mercury
++INSTALL_LIBDIR		= $(INSTALL_PREFIX)/@libdir@/mercury
++FINAL_INSTALL_LIBDIR	= $(FINAL_INSTALL_PREFIX)/@libdir@/mercury
+ INSTALL_INFO_DIR	= $(INSTALL_PREFIX)/info
+-INSTALL_DVI_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_TEXT_DIR	= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_PS_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
+-INSTALL_PDF_DIR		= $(INSTALL_PREFIX)/lib/mercury/doc
++INSTALL_DVI_DIR		= $(INSTALL_PREFIX)/@libdir@/mercury/doc
++INSTALL_TEXT_DIR	= $(INSTALL_PREFIX)/@libdir@/mercury/doc
++INSTALL_PS_DIR		= $(INSTALL_PREFIX)/@libdir@/mercury/doc
++INSTALL_PDF_DIR		= $(INSTALL_PREFIX)/@libdir@/mercury/doc
+ INSTALL_MAN_DIR		= $(INSTALL_PREFIX)/man
+-INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/lib/mercury/html
+-INSTALL_MDB_DOC_DIR	= $(INSTALL_PREFIX)/lib/mercury/mdb
+-INSTALL_ELISP_DIR	= $(INSTALL_PREFIX)/lib/mercury/elisp
++INSTALL_HTML_DIR	= $(INSTALL_PREFIX)/@libdir@/mercury/html
++INSTALL_MDB_DOC_DIR	= $(INSTALL_PREFIX)/@libdir@/mercury/mdb
++INSTALL_ELISP_DIR	= $(INSTALL_PREFIX)/@libdir@/mercury/elisp
+ INSTALL_CGI_DIR		= @CGIDIR@
+ 
+ # You should not need to override anything below here

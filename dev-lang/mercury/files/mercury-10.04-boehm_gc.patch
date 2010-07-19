@@ -1,0 +1,14 @@
+diff -ur mercury-compiler-10.04.orig/boehm_gc/Makefile.direct mercury-compiler-10.04/boehm_gc/Makefile.direct
+--- mercury-compiler-10.04.orig/boehm_gc/Makefile.direct	2010-02-24 20:04:32.000000000 +1300
++++ mercury-compiler-10.04/boehm_gc/Makefile.direct	2010-07-19 21:01:24.000000000 +1200
+@@ -407,6 +407,7 @@
+ 	./if_mach SPARC SOLARIS $(CC) -c -o mach_dep2.o $(srcdir)/sparc_mach_dep.S
+ 	./if_mach SPARC OPENBSD $(AS) -o mach_dep2.o $(srcdir)/sparc_sunos4_mach_dep.s
+ 	./if_mach SPARC NETBSD $(AS) -o mach_dep2.o $(srcdir)/sparc_netbsd_mach_dep.s
++	./if_mach SPARC LINUX $(CC) -o mach_dep2.o $(SPECIALCFLAGS) $(srcdir)/sparc_generic_mach_dep.c
+ 	./if_mach SPARC "" $(CC) -c -o mach_dep1.o $(SPECIALCFLAGS) $(srcdir)/mach_dep.c
+ 	./if_mach SPARC "" ld -r -o mach_dep.o mach_dep1.o mach_dep2.o
+ 	./if_mach IA64 "" as $(AS_ABI_FLAG) -o ia64_save_regs_in_stack.o $(srcdir)/ia64_save_regs_in_stack.s
+Only in mercury-compiler-10.04/boehm_gc: sparc_generic_mach_dep.c
+Only in mercury-compiler-10.04/compiler: make.program_target.c.orig
+Only in mercury-compiler-10.04/scripts: Mmake.vars.in.orig
