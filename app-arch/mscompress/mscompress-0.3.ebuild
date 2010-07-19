@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.19 2010/01/01 19:36:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.20 2010/07/19 16:27:57 ssuominen Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+EAPI=2
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Microsoft compress.exe/expand.exe compatible (de)compressor"
 HOMEPAGE="http://gnuwin32.sourceforge.net/packages/mscompress.htm"
@@ -10,23 +11,18 @@ SRC_URI="ftp://ftp.penguin.cz/pub/users/mhi/mscompress/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 hppa ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	epatch "${FILESDIR}"/${P}-amd64.patch
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC
-	[ "${ARCH}" == "ppc" ] && append-flags -fsigned-char
-	econf || die
-	emake || die
+	[[ $(tc-arch) == ppc* ]] && append-flags -fsigned-char
+	econf
 }
 
 src_install() {
