@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/pypolicyd-spf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.11 2010/07/19 00:31:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.12 2010/07/19 01:00:44 dragonheart Exp $
+
+  19 Jul 2010; Daniel Black <dragonheart@gentoo.org>
+  pypolicyd-spf-0.7.3.ebuild, pypolicyd-spf-0.8.0.ebuild,
+  -files/0.7.3-2to3.patch, -files/0.8.0-2to3.patch:
+  purge 2to3 patches - they break python2
 
   19 Jul 2010; Daniel Black <dragonheart@gentoo.org>
   pypolicyd-spf-0.7.3.ebuild, pypolicyd-spf-0.8.0.ebuild:
