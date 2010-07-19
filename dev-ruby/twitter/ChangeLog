@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/twitter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.19 2010/01/10 08:56:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.20 2010/07/19 10:48:56 graaff Exp $
+
+*twitter-0.9.8 (19 Jul 2010)
+
+  19 Jul 2010; Hans de Graaff <graaff@gentoo.org> +twitter-0.9.8.ebuild:
+  Version bump.
 
   10 Jan 2010; Hans de Graaff <graaff@gentoo.org> -twitter-0.7.6.ebuild:
   Remove old version.
