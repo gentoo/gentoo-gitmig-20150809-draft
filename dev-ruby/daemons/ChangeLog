@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.46 2010/05/24 21:51:55 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.47 2010/07/19 06:53:23 graaff Exp $
+
+*daemons-1.1.0 (19 Jul 2010)
+
+  19 Jul 2010; Hans de Graaff <graaff@gentoo.org> +daemons-1.1.0.ebuild:
+  Version bump.
 
   24 May 2010; Alex Legler <a3li@gentoo.org> daemons-1.0.10-r1.ebuild:
   Add REE18 support
