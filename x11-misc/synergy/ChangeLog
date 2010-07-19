@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/synergy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.60 2009/10/30 09:24:21 wired Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.61 2010/07/19 18:07:30 wired Exp $
+
+*synergy-1.3.1-r2 (19 Jul 2010)
+
+  19 Jul 2010; Alex Alexander <wired@gentoo.org> +synergy-1.3.1-r2.ebuild,
+  +files/synergy-1.3.1-infinite-timeout-fix.patch:
+  fixed bug #291713. Thanks to Jozef Siska for pointing to the patch :)
 
 *synergy-1.3.1-r1 (30 Oct 2009)
 
