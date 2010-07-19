@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.70 2010/07/07 15:34:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.71 2010/07/19 08:21:57 voyageur Exp $
+
+*chromium-bin-6.0.470.0_p52843 (19 Jul 2010)
+
+  19 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-5.0.376.0_p44230.ebuild,
+  +chromium-bin-6.0.470.0_p52843.ebuild:
+  Version bump, previous version did not work with nvidia-drivers
 
   07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> metadata.xml:
   Transfer ownership to the new chromium herd.
