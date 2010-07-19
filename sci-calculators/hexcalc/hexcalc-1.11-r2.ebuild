@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/hexcalc-1.11-r2.ebuild,v 1.3 2010/07/17 10:38:47 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/hexcalc-1.11-r2.ebuild,v 1.4 2010/07/19 19:09:21 josejx Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.x.org/R5contrib/"
 SRC_URI="ftp://ftp.x.org/R5contrib/${PN}.tar.Z"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXaw"
