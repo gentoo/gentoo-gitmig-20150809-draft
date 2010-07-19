@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2-r1.ebuild,v 1.1 2010/07/19 06:27:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2-r1.ebuild,v 1.2 2010/07/19 06:33:52 jlec Exp $
 
 EAPI="3"
 
@@ -25,11 +25,11 @@ RESTRICT="fetch"
 S="${WORKDIR}"/${PN}${PV}
 
 pkg_nofetch() {
-   elog "Please visit http://www.ebi.ac.uk/thornton-srv/software/PROCHECK/download.html"
-   elog "And follow the instruction for downloading ${PN}${PV}.tar.gz ->  ${DISTDIR}/${PN}${PV}.tar.gz."
-   if use doc; then
-      elog "nmr_manual.tar.gz  ->  ${DISTDIR}/${P}-nmr_manual.tar.gz"
-   fi
+	elog "Please visit http://www.ebi.ac.uk/thornton-srv/software/PROCHECK/download.html"
+	elog "And follow the instruction for downloading ${PN}${PV}.tar.gz ->  ${DISTDIR}/${PN}${PV}.tar.gz."
+	if use doc; then
+		elog "nmr_manual.tar.gz  ->  ${DISTDIR}/${P}-nmr_manual.tar.gz"
+	fi
 }
 
 src_prepare() {
