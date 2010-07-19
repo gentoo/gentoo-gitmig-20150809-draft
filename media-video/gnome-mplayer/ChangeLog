@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.43 2010/05/11 20:54:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.44 2010/07/19 22:10:51 jer Exp $
+
+  19 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome-mplayer-0.9.9.2.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   11 May 2010; Joseph Jezak <josejx@gentoo.org>
   gnome-mplayer-0.9.9.2.ebuild:
