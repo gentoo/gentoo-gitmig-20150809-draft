@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.5 2010/07/19 21:32:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.6 2010/07/19 23:16:32 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -150,7 +150,7 @@ src_configure() {
 	local gui hwaccel myconf myext renderers
 
 	# Set nsplugin install directory.
-	use nsplugin && myconf="${myconf} --with-npapi-plugindir=/opt/netscape/plugins"
+	use nsplugin && myconf="${myconf} --with-npapi-plugindir=/usr/$(get_libdir)/gnash/npapi/"
 
 	# Set hardware acceleration
 	use xv && hwaccel+=",xv"
@@ -255,8 +255,8 @@ src_install() {
 		popd >& /dev/null
 	fi
 	# Create a symlink in /usr/$(get_libdir)/nsbrowser/plugins to the nsplugin install directory.
-	use nsplugin && inst_plugin /opt/netscape/plugins/libgnashplugin.so \
-		|| rm -rf "${D}/opt"
+	use nsplugin && inst_plugin /usr/$(get_libdir)/gnash/npapi/libgnashplugin.so \
+
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
 pkg_postinst() {
