@@ -1,0 +1,75 @@
+Only in mercury-extras-10.04/cgi: Mmakefile.orig
+Only in mercury-extras-10.04/complex_numbers: Mmakefile.orig
+Only in mercury-extras-10.04/curs: Mmakefile.orig
+Only in mercury-extras-10.04/curses: Mmakefile.orig
+Only in mercury-extras-10.04/dynamic_linking: Mmakefile.orig
+Only in mercury-extras-10.04/graphics/mercury_glut: Mmakefile.orig
+Only in mercury-extras-10.04/graphics/mercury_opengl: Mmakefile.orig
+Only in mercury-extras-10.04/graphics/mercury_tcltk: Mmakefile.orig
+Only in mercury-extras-10.04/graphics/mercury_tcltk: mtcltk.m.orig
+Only in mercury-extras-10.04/lazy_evaluation: Mmakefile.orig
+Only in mercury-extras-10.04/moose: Mmakefile.orig
+diff -ur mercury-extras-10.04.orig/odbc/Mmakefile mercury-extras-10.04/odbc/Mmakefile
+--- mercury-extras-10.04.orig/odbc/Mmakefile	2006-04-03 18:19:54.000000000 +1200
++++ mercury-extras-10.04/odbc/Mmakefile	2010-07-20 06:50:22.000000000 +1200
+@@ -41,17 +41,20 @@
+ 	# The following are for Debian.
+ 
+ 	# for unixODBC
+-	MLLIBS=-lodbc -lpthread -lltdl -ldl
+-
++	MLLIBS=`odbc_config --libs`
++	ODBC_CFLAGS=`odbc_config --cflags`
+ 	# for iODBC
+ 	# MLLIBS=-liodbc l-pthread -ldl
+ 	# note: on a DEC Alpha using OSF1 remove the -ldl.
+ endif
+ 
+-MAIN_TARGET=odbc_test
++MAIN_TARGET=libodbc
+ 
+ .PHONY: depend
+-depend: odbc_test.depend
++depend: odbc.depend
++
++.PHONY: install
++install: libodbc.install
+ 
+ .PHONY: check
+ check:
+@@ -62,7 +65,7 @@
+ # `--no-ansi' is needed because the ODBC header files include C++-style
+ # "//" comments.  `--no-ansi' allows recognition of C++-style "//" comments,
+ # presuming you have gcc version 2.7.1 or greater.
+-MGNUCFLAGS=--no-ansi -D$(MODBC_DRIVER) -D$(MODBC_DB) -I$(ODBC_INCL_DIR)
++MGNUCFLAGS=--no-ansi -D$(MODBC_DRIVER) -D$(MODBC_DB) $(ODBC_CFLAGS)
+ 
+ #-----------------------------------------------------------------------------#
+ #-----------------------------------------------------------------------------#
+Only in mercury-extras-10.04/odbc: Mmakefile.orig
+diff -ur mercury-extras-10.04.orig/odbc/odbc.m mercury-extras-10.04/odbc/odbc.m
+--- mercury-extras-10.04.orig/odbc/odbc.m	2006-08-31 23:09:50.000000000 +1200
++++ mercury-extras-10.04/odbc/odbc.m	2010-07-20 06:50:22.000000000 +1200
+@@ -2000,8 +2000,8 @@
+             ** Arbitrary size, only needs to hold a 
+             ** descriptive string like ""SQL Server"".
+             */
+-    String new_dsn;
+-    String new_desc;
++    LPSTR new_dsn;
++    LPSTR new_desc;
+     SWORD dsn_len;
+     SWORD desc_len;
+     SQLRETURN rc;
+@@ -2335,7 +2335,7 @@
+     SQLSMALLINT msg_len;
+     UCHAR       message[SQL_MAX_MESSAGE_LENGTH];
+     UCHAR       sql_state[SQL_SQLSTATE_SIZE + 1];
+-    String      mercury_message;
++    LPSTR       mercury_message;
+     MR_Word     new_message;
+ 
+     MR_ASSERT_IMPLY(connection_handle == SQL_NULL_HDBC, 
+Only in mercury-extras-10.04/posix: Mmakefile.orig
+Only in mercury-extras-10.04/quickcheck: Mmakefile.orig
+Only in mercury-extras-10.04/xml: Mmakefile.orig
