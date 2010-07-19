@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.35 2010/06/18 11:09:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.36 2010/07/19 06:41:20 fauli Exp $
+
+  19 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  beautifulsoup-3.0.8.1.ebuild:
+  stable x86, bug 328885
 
 *beautifulsoup-3.0.8.1 (18 Jun 2010)
 
