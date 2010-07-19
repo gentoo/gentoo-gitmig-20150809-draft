@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.299 2010/07/14 09:20:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.300 2010/07/19 20:14:47 vapier Exp $
+
+  19 Jul 2010; Mike Frysinger <vapier@gentoo.org> coreutils-8.5.ebuild:
+  Workaround stdbuf build failure when USE=static #321821 by Igor
+  Novgorodov.
 
   14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> coreutils-8.5.ebuild:
   Stable on amd64 wrt bug #327147
