@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14-r1.ebuild,v 1.1 2010/05/31 23:53:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.14-r1.ebuild,v 1.2 2010/07/19 19:11:41 josejx Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://penguinppc.org/projects/yaboot/"
 SRC_URI="mirror://gentoo/yaboot-static-${PV}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~ppc64"
+KEYWORDS="-* ppc64"
 IUSE="ibm"
 DEPEND="!sys-boot/yaboot
 		sys-apps/powerpc-utils"
@@ -21,7 +21,7 @@ PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}"/sysfs-ofpath.patch
 }
 
