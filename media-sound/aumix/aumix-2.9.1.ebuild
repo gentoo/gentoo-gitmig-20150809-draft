@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.9.1.ebuild,v 1.3 2010/07/12 17:48:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.9.1.ebuild,v 1.4 2010/07/19 07:48:16 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://jpj.net/~trevor/aumix/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sh ~sparc x86"
 IUSE="gpm gtk nls"
 
 RDEPEND="sys-libs/ncurses
