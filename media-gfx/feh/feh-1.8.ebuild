@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.8.ebuild,v 1.7 2010/07/04 10:06:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.8.ebuild,v 1.8 2010/07/19 01:10:37 josejx Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.chaosdorf.de/~derf/feh/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="test xinerama"
 
 COMMON_DEPEND=">=media-libs/giblib-1.2.4
