@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.25 2010/07/19 21:53:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.26 2010/07/19 22:03:59 jer Exp $
+
+  19 Jul 2010; Jeroen Roovers <jer@gentoo.org> Babel-0.9.5.ebuild:
+  Stable for PPC (bug #328881).
 
   19 Jul 2010; Jeroen Roovers <jer@gentoo.org> Babel-0.9.5.ebuild:
   Stable for HPPA (bug #328881).
