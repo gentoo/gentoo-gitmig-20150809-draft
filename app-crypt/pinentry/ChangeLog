@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.108 2010/07/19 18:51:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.109 2010/07/19 21:34:11 maekke Exp $
+
+  19 Jul 2010; Markus Meier <maekke@gentoo.org> pinentry-0.8.0.ebuild:
+  arm stable, bug #299388
 
   19 Jul 2010; Joseph Jezak <josejx@gentoo.org> pinentry-0.8.0.ebuild:
   Marked ppc stable for bug #299388.
