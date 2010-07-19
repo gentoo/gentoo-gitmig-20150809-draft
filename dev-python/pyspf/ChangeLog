@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.10 2010/07/19 00:33:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.11 2010/07/19 16:21:52 arfrever Exp $
+
+  19 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyspf-2.0.5.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   19 Nov 2009; Markus Meier <maekke@gentoo.org> pyspf-2.0.5.ebuild:
   amd64/x86 stable, bug #293032
