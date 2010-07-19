@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.624 2010/07/11 12:25:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.625 2010/07/19 00:24:51 anarchy Exp $
+
+  19 Jul 2010; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild, mozilla-firefox-3.6.6.ebuild:
+  remove lcms dep as it is not valid
 
   11 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   +files/xulrunner-1.9.2-arm-fixes.patch, mozilla-firefox-3.6.4.ebuild,
