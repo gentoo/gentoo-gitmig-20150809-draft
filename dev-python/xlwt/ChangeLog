@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlwt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.9 2010/02/06 14:22:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.10 2010/07/19 17:26:01 bicatali Exp $
+
+  19 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Removing myself as maintainer
 
   06 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   xlwt-0.7.2.ebuild:
