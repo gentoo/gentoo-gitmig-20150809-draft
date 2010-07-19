@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.10.ebuild,v 1.1 2010/06/07 14:15:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logcheck/logcheck-1.3.10.ebuild,v 1.2 2010/07/19 13:43:05 phajdan.jr Exp $
 
 inherit eutils
 
@@ -42,10 +42,6 @@ pkg_postinst() {
 	chown -R logcheck:logcheck /etc/logcheck /var/{lib,lock}/logcheck \
 		|| die "chown failed"
 
-	elog "The configuration files are located in /etc/logcheck. The most"
-	elog "important files are /etc/logcheck/logcheck.conf"
-	elog "and /etc/logcheck/logcheck.logfiles. Also, make sure that"
-	elog "the logcheck user has access to your log files."
-	elog "Finally, uncomment the logcheck line"
-	elog "/etc/cron.hourly/logcheck.cron to enable periodic log checks."
+	elog "Please read the guide ad http://www.gentoo.org/doc/en/logcheck.xml"
+	elog "for installation instructions."
 }
