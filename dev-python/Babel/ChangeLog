@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.23 2010/06/14 07:31:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.24 2010/07/19 16:00:19 ssuominen Exp $
+
+  19 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> Babel-0.9.5.ebuild:
+  ppc64 stable wrt #328881
 
 *Babel-0.9.5 (14 Jun 2010)
 
