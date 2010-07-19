@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11774 2010/07/18 13:40:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11775 2010/07/19 06:47:35 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -201,15 +201,6 @@ dev-libs/seed
 dev-haskell/filepath
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Jun 2010)
-# Vulnerable xulrunner, bug #324953
-#
-# himerge needs gtk2hs compiled with xulrunner:1.8
-#
-# Masked for removal in 30 days
-=net-libs/xulrunner-1.8*
-app-portage/himerge
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Jun 2010)
 # Fails to compile, bug #274385
 # Internal copy of old libpcap and libtomcrypt, bug #278419
 # File collision with dev-lang/mono, bug #303957
@@ -235,12 +226,6 @@ media-libs/libdecodeqr
 # Masked for removal in 30 days
 =sys-apps/lm_sensors-2*
 sys-apps/lm_sensors-modules
-
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jun 2010)
-# Vulnerable and now unused xulrunner-bin, support was dropped from acroread.
-#
-# Masked for removal in 30 days, bug 324953.
-net-libs/xulrunner-bin
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (26 Jun 2010)
 #  on behalf of QA team
