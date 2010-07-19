@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.3 2010/06/04 20:55:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.4 2010/07/19 23:48:35 jer Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ DESCRIPTION="Simple GNOME menu editor"
 HOMEPAGE="http://live.gnome.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 SLOT=0
 
