@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.7.91.ebuild,v 1.2 2010/07/10 20:11:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.7.91.ebuild,v 1.3 2010/07/19 18:02:31 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs qt4-r2
 
-DESCRIPTION="Separate libraries ebuild from upstream v4l-utils package"
+DESCRIPTION="Separate utilities ebuild from upstream v4l-utils package"
 HOMEPAGE="http://people.fedoraproject.org/~jwrdegoede/"
 SRC_URI="http://people.fedoraproject.org/~jwrdegoede/${P}.tar.bz2"
 
