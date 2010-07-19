@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/sqldeveloper-1.5.4.59.40.ebuild,v 1.2 2009/07/05 08:48:54 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/sqldeveloper-1.5.4.59.40.ebuild,v 1.3 2010/07/19 06:00:51 betelgeuse Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils java-pkg-2
 
 DESCRIPTION="Oracle SQL Developer is a graphical tool for database development"
 HOMEPAGE="http://www.oracle.com/technology/products/database/sql_developer/"
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="mssql mysql sybase"
 
-DEPEND="mssql? ( dev-java/jtds )
-	mysql? ( dev-java/jdbc-mysql )
-	sybase? ( dev-java/jtds )"
-RDEPEND=">=virtual/jdk-1.5.0
+DEPEND="mssql? ( dev-java/jtds:1.2 )
+	mysql? ( dev-java/jdbc-mysql:0 )
+	sybase? ( dev-java/jtds:1.2 )"
+RDEPEND=">=virtual/jre-1.5.0
 	${DEPEND}"
 
 S="${WORKDIR}/${PN}"
@@ -48,26 +48,12 @@ src_configure() {
 	fi
 
 	if use mssql || use sybase; then
-		jtds_version="$(best_version dev-java/jtds)"
-		jtds_version="${jtds_version/dev-java\/jtds-/}"
-		jtds_version="${jtds_version/-*/}"
-
-		if [ ! -e "${ROOT}/usr/share/jtds-${jtds_version}/lib/jtds.jar" ]; then
-			eerror "$(best_version dev-java/jtds) does not provide jtds.jar!"
-			die "Cannot find jtds.jar"
-		fi
-
-		echo "AddJavaLibFile /usr/share/jtds-${jtds_version}/lib/jtds.jar" \
+		echo "AddJavaLibFile $(java-pkg_getjars jtds-1.2)"
 			>> sqldeveloper/bin/sqldeveloper.conf
 	fi
 
 	if use mysql; then
-		if [ ! -e "${ROOT}"/usr/share/jdbc-mysql/lib/jdbc-mysql.jar ]; then
-			eerror "$(best_version jdbc-mysql) does not provide jdbc-mysql.jar!"
-			die "Cannot find jdbc-mysql.jar"
-		fi
-
-		echo "AddJavaLibFile /usr/share/jdbc-mysql/lib/jdbc-mysql.jar" \
+		echo "AddJavaLibFile $(java-pkg_getjars jdbc-mysql)"
 			>> sqldeveloper/bin/sqldeveloper.conf
 	fi
 }

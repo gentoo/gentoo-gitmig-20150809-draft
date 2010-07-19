@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqldeveloper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.7 2010/06/02 06:46:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.8 2010/07/19 06:00:51 betelgeuse Exp $
+
+  19 Jul 2010; Petteri Räty <betelgeuse@gentoo.org>
+  sqldeveloper-1.5.4.59.40.ebuild:
+  Use java eclasses to find jars. Fixes bug #300852.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove bluebird from metadata.xml (#223101)
