@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.61 2010/07/19 18:07:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.62 2010/07/19 18:49:43 darkside Exp $
+
+  19 Jul 2010; Jeremy Olexa <darkside@gentoo.org> synergy-1.3.1-r2.ebuild:
+  Migrate changes from Gentoo Prefix overlay. Convert to EAPI3, add
+  KEYWORDS, adjust econf call. Signed off by wired in #gentoo-dev
 
 *synergy-1.3.1-r2 (19 Jul 2010)
 
