@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.1.ebuild,v 1.2 2010/03/20 13:36:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.1.ebuild,v 1.3 2010/07/19 06:59:06 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,6 +20,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND="
+	sci-chemistry/clashlist
+	sci-chemistry/procheck
 	dev-python/numpy
 	dev-python/matplotlib[tk]
 	>=sci-chemistry/cns-1.2.1-r3[aria,openmp]

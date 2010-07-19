@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.4 2010/04/04 07:06:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.5 2010/07/19 06:59:06 jlec Exp $
+
+  19 Jul 2010; Justin Lecher <jlec@gentoo.org> aria-2.3.1.ebuild:
+  Fixed DEPS
 
   04 Apr 2010; Justin Lecher <jlec@gentoo.org> Manifest:
   distfile digest fix
