@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/moodle
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.1 2010/07/19 14:05:32 blueness Exp $
+
+*moodle-1.9.9 (19 Jul 2010)
+
+  19 Jul 2010; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.9.ebuild,
+  +files/config.php, +files/postinstall-en.txt,
+  +files/postinstall-nodb-en.txt, +metadata.xml:
+  New ebuild by Anthony G. Basile. Bug #104275
+

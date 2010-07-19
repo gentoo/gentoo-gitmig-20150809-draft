@@ -1,0 +1,172 @@
+NEW INSTALLS
+
+0  Check to see if webapp-config automatically installed
+   moodle for you in /var/www/localhost/htdocs. You should
+   see a directory in there called moodle.  If it didn't
+   install it manually:
+
+	webapp-config -d moodle -I moodle 1.9.9
+
+1  Edit the config.php file found at
+
+	/var/www/localhost/htdocs/moodle/config.php
+
+   You should probably change the database password,
+   $CFG->dbpass = 'moodle_pass' to something more
+   obscure.  Also, if your system has a FQDN, change
+   the $CFG->wwwroot = 'http://localhost/moodle'
+   to match the URL of your moodle installation.
+   
+   
+   IF YOU ARE USING MYSQL,      do step 2a
+   IF YOU ARE USING POSTGRESQL, do step 2b
+
+
+2a Create a new mysql database and account with the
+   appropriate privileges.  Make sure the username,
+   password and database match their values in
+   config.php from step 1.
+   
+   Connect to your mysql server using
+   
+	mysql -p -u root
+
+   and at the mysql> prompt issue the following commands
+
+	CREATE DATABASE moodle_db;
+	GRANT ALL ON moodle_db.*
+		TO moodle_user@localhost
+		IDENTIFIED BY 'moodle_pass';
+	flush privileges;
+
+2b Issue the following commands at a shell, making sure
+   the username, password and database match their values
+   in config.php from step 1.
+
+   su - postgres
+   psql -c "create user moodle_user createdb;" template1
+   psql -c "alter user moodle_user with encrypted password 'moodle_pass';" template1
+   psql -c "create database moodle_db with encoding 'unicode';" -U moodle_user template1
+   psql -c "alter user moodle_user nocreatedb;" template1
+   su - root
+   /etc/init.d/postgresql-8.4 reload
+
+   NOTE: Moodle docs say that moodle only works with
+   postgresql-7, but I've used it with 8 no problems.
+
+3  Direct your browser to the URL in step 1.  You should see
+   the license agreement.  Click "Yes" to continue.
+
+4  You are now about to install.  Click the checkbox for
+   "Unattended operation" and "Continue" to start.  Follow
+   the wizard as you "Setup administrator account" and configure
+   the "Front Page settings".
+
+5  You now have a working installation.  Before putting it
+   into production, you'll probably want to check that
+   everything is sane.  In the "Site Administration" block,
+   click on
+
+   	Server -> Environment
+
+   Make sure that you've got the green okay on all the
+   Server Checks.  If you don't, click on the ? icons for
+   popup help.
+
+6  Add a cron-job to root's crontab.
+
+   	su - root
+	crontab -e  # fcrontab -e if you use fcron
+
+   then add the line
+
+	*/30 * * * *  root  php -q /var/www/localhost/htdocs/moodle/admin/cron.php  > /dev/null
+
+7  For more information on installing moodle, see
+
+   	http://docs.moodle.org/en/Installing_Moodle
+
+   For information on working with moodle, see
+
+	http://moodle.org/support/
+
+=================================================================
+
+UPGRADES
+
+   TODO - When the next release is out, I will fill this
+   section in.
+
+=================================================================
+
+UNINSTALL
+
+1  Make sure you really want to do this.  I mean REALLY!
+   After step 3 you will be past the point of no return.
+
+2  If you just want to uninstall the webapp, do the following
+   and no more!
+
+	emerge --unmerge moodle
+
+   Your data is still in the db and in the moodledata dir.
+
+
+   !!!!!!!!! POINT OF NO RETURN !!!!!!!!!
+
+3  Uninstall the uploaded files
+
+	rm -rf /var/lib/moodledata
+
+
+   IF YOU ARE USING MYSQL,      do step 4a
+   IF YOU ARE USING POSTGRESQL, do step 4b
+
+
+4a Connect to your mysql server using 'mysql -p -u root' and
+   at the mysql> prompt issue the following commands:
+
+	DROP DATABASE moodle_db;
+	DROP USER moodle_user@localhost ;
+
+4b Issue the following commands
+
+	su - postgres
+	psql -c "drop database moodle_db;" template1
+	psql -c "drop user moodle_user;" template1
+
+5  Remove the root cron-job
+
+	su - root
+	crontab -e  # fcrontab -e if you use fcron
+
+   and delete the line added above.
+
+=================================================================
+
+ADDITIONAL PHP REQUIREMENTS
+
+   Moodle allows for many method of authentication.  To see
+   what these are, in the "Site Administration" block, click
+   on
+
+	Users -> Authentication -> Manage Authentication
+
+   Moodle will try to authenticate by each method in order
+   until it either succeeds or exhausts the list and fails.
+
+   In order to use some of these methods, you need to make
+   sure PHP was compiled with the correct support.  You will
+   know that you do not have the correct support compiled in
+   if authentication by all previous methods fails, and you
+   encounter a method for which PHP does not have support.
+   An error will be thrown and reported in the web page.
+   
+   Currently, the ebuild has support for the following
+
+   	Auth Method		USE flag
+
+	IMAP(S) or POP3(S)	imap
+   	LDAP or CAS		ldap
+	External database	odbc
+	RADIUS			radius
