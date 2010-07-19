@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.5-r1.ebuild,v 1.2 2010/07/19 00:26:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.5-r1.ebuild,v 1.3 2010/07/19 00:28:44 dragonheart Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 # needs python3 compatible net-dns/pydns version to work with version 3
+# also uses urllib.request which doesnt exist
 inherit distutils eutils
 
 DESCRIPTION="Python implementation of the Sender Policy Framework (SPF) protocol"
