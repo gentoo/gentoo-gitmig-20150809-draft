@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9-r3.ebuild,v 1.1 2010/07/17 18:54:42 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9-r3.ebuild,v 1.2 2010/07/19 20:24:40 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -461,6 +461,19 @@ src_prepare () {
 
 	if [ -z "${JAVA_PKG_NB_TRY_JRUBY}" ] ; then
 		epatch "${FILESDIR}"/${SLOT}/o.jruby.distro_disable.patch
+	fi
+
+	# Support for custom patches
+	if [ -n "{NETBEANS_PATCHES_DIR}" -a -d "${NETBEANS_PATCHES_DIR}" ] ; then
+		local files=`find "${NETBEANS_PATCHES_DIR}" -type f`
+
+		if [ -n "${files}" ] ; then
+			einfo "Applying custom patches:"
+
+			for file in ${files} ; do
+				epatch "${file}"
+			done
+		fi
 	fi
 
 	# Clean up nbbuild
