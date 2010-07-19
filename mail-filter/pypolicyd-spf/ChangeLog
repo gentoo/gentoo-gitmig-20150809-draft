@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/pypolicyd-spf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.10 2010/07/18 08:47:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.11 2010/07/19 00:31:05 dragonheart Exp $
+
+  19 Jul 2010; Daniel Black <dragonheart@gentoo.org>
+  pypolicyd-spf-0.7.3.ebuild, pypolicyd-spf-0.8.0.ebuild:
+  pydns/pyspf dependencies cannot handle python3. bug #328851.
 
 *pypolicyd-spf-0.8.0 (18 Jul 2010)
 *pypolicyd-spf-0.7.3 (18 Jul 2010)
