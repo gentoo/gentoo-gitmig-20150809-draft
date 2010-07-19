@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.93 2010/07/05 19:10:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.94 2010/07/19 18:39:11 idl0r Exp $
+
+*gentoolkit-dev-0.2.7 (19 Jul 2010)
+
+  19 Jul 2010; Christian Ruppert <idl0r@gentoo.org>
+  -gentoolkit-dev-0.2.6.12.ebuild, +gentoolkit-dev-0.2.7.ebuild:
+  Version bump to 0.2.7, bug 326651. Remove gentoolkit-dev-0.2.6.12.
 
   05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   gentoolkit-dev-0.2.6.14.ebuild:
