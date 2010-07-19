@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.47 2010/01/14 01:28:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.48 2010/07/19 22:11:12 jer Exp $
+
+  19 Jul 2010; Jeroen Roovers <jer@gentoo.org> bluez-gnome-1.8.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> bluez-gnome-1.8.ebuild:
   Stable for HPPA (bug #284661).

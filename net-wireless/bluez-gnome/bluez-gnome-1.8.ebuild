@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-1.8.ebuild,v 1.8 2010/01/14 01:28:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-1.8.ebuild,v 1.9 2010/07/19 22:11:12 jer Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.bluez.org/"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE="gnome"
 COMMON_DEPEND="dev-libs/glib:2
