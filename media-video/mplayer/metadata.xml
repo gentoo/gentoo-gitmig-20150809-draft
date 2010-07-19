@@ -8,7 +8,7 @@
   <use>
     <flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
     <flag name="amr">Enables Adaptive Multi-Rate format support</flag>
-    <flag name="ass">Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support</flag>
+    <flag name="ass">SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support</flag>
     <flag name="bl">Blinkenlights video output</flag>
     <flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
@@ -23,7 +23,6 @@
     <flag name="faac">Use external faac library for AAC encoding</flag>
     <flag name="faad">Use external faad library for AAC decoding</flag>
 	<flag name="gmplayer">Build gmplayer, a GTK+ MPlayer gui (UNSUPPORTED)</flag>
-    <flag name="libass">External SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support through libass</flag>
     <flag name="live">Enables live.com streaming media support</flag>
     <flag name="md5sum">Enables md5sum video output</flag>
     <flag name="mmxext">Enables mmx2 support</flag>
