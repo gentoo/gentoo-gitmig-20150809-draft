@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.4 2010/05/12 17:59:02 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.5 2010/07/19 16:15:14 reavertm Exp $
 
 # @ECLASS: virtuoso.eclass
 # @MAINTAINER:
@@ -12,7 +12,7 @@
 
 case ${EAPI:-0} in
 	2|3) : ;;
-	*) DEPEND='EAPI-TOO-OLD' ;;
+	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
 inherit base autotools flag-o-matic multilib

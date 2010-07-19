@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.31 2010/05/15 15:19:04 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.32 2010/07/19 16:15:14 reavertm Exp $
 
 inherit versionator
 
@@ -18,7 +18,7 @@ inherit versionator
 # versions.
 case ${EAPI:-0} in
 	2|3) : ;;
-	*) DEPEND="EAPI-TOO-OLD" ;;
+	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
 # @ECLASS-VARIABLE: KDEBASE
