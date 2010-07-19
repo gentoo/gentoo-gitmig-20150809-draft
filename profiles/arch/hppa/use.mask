@@ -1,6 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.22 2010/07/19 21:12:04 jer Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.23 2010/07/19 22:15:56 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (19 Jul 2010)
+# Masked because of missing gnome-base/gnome-panel
+# dependency (bug #324511)
+applet
 
 # Jeroen Roovers <jer@gentoo.org> (19 Jul 2010)
 # New media-libs/schroedinger depends on dev-lang/orc
