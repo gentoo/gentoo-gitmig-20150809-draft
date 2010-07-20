@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.1 2009/04/28 16:14:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.2 2010/07/20 18:41:51 jer Exp $
 
 EAPI="2"
 inherit gnome2 eutils flag-o-matic
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ekiga.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="avahi dbus doc gnome sdl"
 
 RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-2][ldap]

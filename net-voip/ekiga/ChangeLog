@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.16 2010/05/01 00:54:12 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.17 2010/07/20 18:41:51 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> ekiga-2.0.12.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   01 May 2010; Maciej Mrozowski <reavertm@gentoo.org> ekiga-3.2.5-r2.ebuild,
   ekiga-3.2.6.ebuild:
