@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.84 2010/07/18 10:43:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.85 2010/07/20 06:54:30 aballier Exp $
 
 EAPI="3"
 
@@ -47,7 +47,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
-	+gcrypt gnome gnutls httpd id3tag ieee1394 jack kate kde libass libcaca
+	+gcrypt gnome gnutls httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
@@ -79,7 +79,6 @@ RDEPEND="
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		gnome? ( gnome-base/gnome-vfs )
 		gnutls? ( >=net-libs/gnutls-1.7.4 >=dev-libs/libgcrypt-1.2.0 )
-		id3tag? ( media-libs/libid3tag sys-libs/zlib )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1 >=sys-libs/libavc1394-0.5.3 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		kate? ( >=media-libs/libkate-0.1.1 )
@@ -244,7 +243,6 @@ src_configure() {
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
 		$(use_enable httpd) \
-		$(use_enable id3tag) \
 		$(use_enable ieee1394 dv) \
 		$(use_enable jack) \
 		$(use_enable kate) \

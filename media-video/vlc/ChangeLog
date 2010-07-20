@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.605 2010/07/18 10:43:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.606 2010/07/20 06:54:30 aballier Exp $
+
+  20 Jul 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  id3tag module has been removed upstream, superseded by taglib
 
   18 Jul 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   block up to 1.1 for master, we still have the relink issue
