@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.62 2010/07/20 17:43:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.63 2010/07/20 17:47:39 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -18,16 +18,7 @@ media-libs/libcanberra gtk
 gnome-extra/libgsf thumbnail
 dev-vcs/git gtk
 app-cdr/cdrdao gcdmaster
-media-gfx/gimp gnome
-net-libs/libsoup gnome
-app-i18n/uim gnome
-dev-ml/lablgtk gnome
 net-im/pidgin eds
-net-voip/ekiga gnome
-
-# Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
-# Needs sys-apps/gnome-disk-utility keyworded, bug 323803
-gnome-base/gvfs gdu
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded
@@ -71,10 +62,6 @@ media-video/mplayer cpudetection custom-cpuopts
 # Jeroen Roovers <jer@gentoo.org> (16 Sep 2008)
 # app-text/xindy needs dev-lisp/clisp and clisp does not build (bug #229217)
 app-text/texlive xindy
-
-# Jeroen Roovers <jer@gentoo.org> (10 Sep 2008)
-# app-misc/tracker isn't keyworded and doesn't work:
-gnome-base/nautilus tracker
 
 # Tobias Scherbaum <dertobi123@gentoo.org> (31 May 2008)
 # Mask ups for nagios-plugins which would pull in sys-power/nut
