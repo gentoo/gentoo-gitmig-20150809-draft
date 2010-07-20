@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-10.7.ebuild,v 1.1 2010/07/16 04:47:16 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-10.7.ebuild,v 1.2 2010/07/20 03:57:01 grozin Exp $
 EAPI=3
 inherit eutils
 
@@ -10,10 +10,11 @@ SRC_URI="http://kornelix.squarespace.com/storage/downloads/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+"
+DEPEND="x11-libs/gtk+:2
+	media-libs/tiff"
 RDEPEND="${DEPEND}
 	media-libs/exiftool
 	media-gfx/ufraw
@@ -28,16 +29,13 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install || die "emake install failed"
-	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png "Application;Graphics;2DGraphics;"
-
-	# Documentation
-	cd doc
+	pushd doc > /dev/null
 	mv ${PN}.man ${PN}.1
 	doman ${PN}.1
-	dodoc userguide-changes
-	insinto /usr/share/doc/${PF}
-	doins README CHANGES TRANSLATIONS userguide-*.html
-	insinto /usr/share/doc/${PF}/images
-	doins images/*.jpeg
+	rm COPYING ${PN}.1
+	bzip2 -9 userguide-changes
+	popd > /dev/null
+
+	emake DESTDIR="${D}" PREFIX=/usr install || die "emake install failed"
+	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png "Application;Graphics;2DGraphics;"
 }

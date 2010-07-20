@@ -8,9 +8,3 @@ diff -U2 -r fotoxx-10.7.orig//Makefile fotoxx-10.7//Makefile
 +DOCDIR = $(PREFIX)/share/doc/$(PF)
  MANDIR = $(PREFIX)/share/man/man1
  
-@@ -39,5 +39,4 @@
- 	mkdir -p $(DESTDIR)$(DATADIR)/locales
- 	mkdir -p $(DESTDIR)$(MANDIR) 
--	cp -R doc/* $(DESTDIR)$(DOCDIR)
- 	cp icons/* $(DESTDIR)$(ICONDIR)
- 	cp -R locales/* $(DESTDIR)$(DATADIR)/locales
