@@ -4,7 +4,7 @@
 	<herd>no-herd</herd>
 	<upstream>
 		<bugs-to>mailto:dev-portage@gentoo.org</bugs-to>
-		<changelog>http://sources.gentoo.org/viewcvs.py/*checkout*/portage/main/trunk/RELEASE-NOTES</changelog>
+		<changelog>http://git.overlays.gentoo.org/gitweb/?p=proj/portage.git;a=blob_plain;f=RELEASE-NOTES</changelog>
 	</upstream>
 	<maintainer><email>dev-portage@gentoo.org</email></maintainer>
 	<use>
