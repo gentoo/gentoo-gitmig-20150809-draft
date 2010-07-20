@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.1.ebuild,v 1.1 2008/03/16 21:15:34 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.1.ebuild,v 1.2 2010/07/20 23:55:38 sbriesen Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -12,12 +14,9 @@ SRC_URI="http://panteltje.com/panteltje/dvd/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# fix makefile
 	sed -i -e "s:gcc:\$(CC):g" -e "s:= -O2:+=:g" \
 		-e "s:\( -o \): \$(LDFLAGS)\1:g" Makefile
