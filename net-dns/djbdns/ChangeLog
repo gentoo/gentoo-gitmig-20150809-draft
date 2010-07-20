@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/djbdns
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.117 2009/03/23 05:13:21 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.118 2010/07/20 18:34:59 mr_bones_ Exp $
+
+  20 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  -djbdns-1.05-r17.ebuild, -djbdns-1.05-r19.ebuild, -djbdns-1.05-r21.ebuild,
+  -djbdns-1.05-r22.ebuild:
+  clean old cruft
 
   23 Mar 2009; Jeroen Roovers <jer@gentoo.org> djbdns-1.05-r23.ebuild:
   Stable for HPPA (bug #260975).
