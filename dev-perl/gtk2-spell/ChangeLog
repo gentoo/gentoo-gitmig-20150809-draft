@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-spell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.20 2010/04/19 11:28:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.21 2010/07/20 07:37:33 tove Exp $
+
+  20 Jul 2010; Torsten Veller <tove@gentoo.org> gtk2-spell-1.03.ebuild:
+  Fix invalid version format bug (#328723)
 
   19 Apr 2010; Torsten Veller <tove@gentoo.org> gtk2-spell-1.03.ebuild:
   Maintenance. Add missing deps. Fix LICENSE. EAPI=3
