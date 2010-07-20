@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.70 2010/01/10 18:43:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.71 2010/07/20 15:49:48 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  notification-daemon-0.4.0-r1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   notification-daemon-0.4.0-r1.ebuild:
