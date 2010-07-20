@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.ebuild,v 1.1 2010/07/20 19:43:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.ebuild,v 1.2 2010/07/20 19:58:31 bicatali Exp $
 
 EAPI=3
 SUPPORT_PYTHON_ABIS="1"
@@ -80,4 +80,12 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README
 	for r in */README; do newdoc ${r} README.$(dirname ${r}); done
+}
+
+pkg_postinst() {
+	use python && python_mod_optimize ${PN}.py
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup ${PN}.py
 }
