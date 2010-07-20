@@ -1,0 +1,76 @@
+diff -ru cdw-0.5.0.orig/src/Makefile.am cdw-0.5.0/src/Makefile.am
+--- cdw-0.5.0.orig/src/Makefile.am	2010-07-08 18:04:33.000000000 -0400
++++ cdw-0.5.0/src/Makefile.am	2010-07-20 11:30:58.666077875 -0400
+@@ -3,18 +3,11 @@
+ # tools" convenience library will be built
+ SUBDIRS = external_tools
+ 
+-
+-
+ # define common AM_CPPFLAGS and AM_CFLAGS
+ # define common target used by flymake
+ # use $(top_srcdir); $(top_builddir) would fail during "make distcheck"
+ include $(top_srcdir)/Makefile.cdw.am
+ 
+-
+-# define common linker flags
+-AM_LDFLAGS = -lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio
+-
+-
+ # list source files
+ cdw_source_files = blank_wizard.c cdda2wav.c cddb.c cdrecord_interface.c \
+ 	cdrecord_pipe_regexp.c cdw_drive.c cdw_burn_disc.c cdw_cdio.c \
+@@ -47,8 +40,6 @@
+ 	cdw_config_ui_internals.h cdw_dll.h cdw_debug.h cdw_config.h \
+ 	cdw_list_display.h cdw_file.h cdw_ncurses.h cdw_fs_browser.h
+ 
+-
+-
+ # below we define two distinct build targets, list of definitions has this format:
+ #
+ # xxx_PROGRAMS = yyy - lists binaries to be built by "make"; e.g. program "yyy";
+@@ -68,42 +59,30 @@
+ #             "make distcheck"
+ # yyy_SOURCES - lists all source files needed to build given target;
+ 
+-
+-
+ ## target 1: cdw - program that will be installed in user's system
+ bin_PROGRAMS = cdw
+ cdw_CPPFLAGS = $(AM_CPPFLAGS)
+-cdw_LDADD = $(top_builddir)/gnulib/lib/libgnulib.a $(top_builddir)/src/external_tools/libcdwexternaltools.a
++cdw_LDADD = $(top_builddir)/gnulib/lib/libgnulib.a $(top_builddir)/src/external_tools/libcdwexternaltools.a -lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -lm
+ cdw_SOURCES = $(cdw_source_files)
+ 
+-
+-
+ # target 2: cdw_tests - program that will be run in build directory
+ check_PROGRAMS = cdw_tests
+ cdw_tests_CPPFLAGS = -DCDW_UNIT_TEST_CODE $(AM_CPPFLAGS)
+-cdw_tests_LDADD = $(top_builddir)/gnulib/lib/libgnulib.a $(top_builddir)/src/external_tools/libcdwexternaltools_check.a
++cdw_tests_LDADD = $(top_builddir)/gnulib/lib/libgnulib.a $(top_builddir)/src/external_tools/libcdwexternaltools_check.a -lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -lm
+ cdw_tests_SOURCES = $(cdw_source_files)
+ 
+-
+-
+ # something related to cdw_tests
+ check_SCRIPTS = greptest.sh
+ greptest.sh:
+ 	echo './cdw_tests | grep "cdw test result: success"' > greptest.sh
+ 	chmod +x greptest.sh
+ 
+-
+-
+ # CLEANFILES extends list of files that need to be removed when
+ # calling "make clean"
+ CLEANFILES = greptest.sh
+ 
+-
+ TESTS = $(check_SCRIPTS)
+ 
+-
+-
+-
+ # sources, references
+ #
+ # source of snippet related to "check_SCRIPTS" and greptests.sh:
