@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.1.ebuild,v 1.8 2008/12/24 12:54:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.1.ebuild,v 1.9 2010/07/20 15:49:01 jer Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ RDEPEND="x11-wm/metacity"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 src_unpack() {
