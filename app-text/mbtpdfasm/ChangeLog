@@ -1,6 +1,12 @@
 # ChangeLog for app-text/mbtpdfasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/ChangeLog,v 1.7 2010/07/20 23:18:09 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/ChangeLog,v 1.8 2010/07/20 23:20:53 sbriesen Exp $
+
+*mbtpdfasm-1.0.28-r1 (20 Jul 2010)
+
+  20 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +mbtpdfasm-1.0.28-r1.ebuild, +files/mbtpdfasm-1.0.28-zlib.diff:
+  use system zlib. solving bug #246968.
 
   20 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
   -files/mbtpdfasm-1.0.26-64bit.patch:
