@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.240 2010/07/17 10:11:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.241 2010/07/20 21:39:14 cardoe Exp $
+
+  20 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-173.14.27.ebuild:
+  Conditionally install CUDA support if it was found in the package.
+  Apparently 173.14.27 drops CUDA. fixes bug #328681
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   nvidia-drivers-173.14.25.ebuild:

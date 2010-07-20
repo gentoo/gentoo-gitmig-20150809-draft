@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.27.ebuild,v 1.1 2010/07/16 20:28:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.27.ebuild,v 1.2 2010/07/20 21:39:14 cardoe Exp $
 
 EAPI="2"
 
@@ -327,7 +327,7 @@ src_install() {
 		die "failed to create libXvMCNVIDIA.so symlink"
 
 	# CUDA headers (driver to come)
-	if use kernel_linux; then
+	if use kernel_linux && [[ -d ${S}/usr/include/cuda ]]; then
 		dodir /usr/include/cuda
 		insinto /usr/include/cuda
 		doins usr/include/cuda/*.h || die "failed to install cuda headers"
