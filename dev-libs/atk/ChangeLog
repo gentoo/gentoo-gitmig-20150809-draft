@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.197 2010/07/20 01:53:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.198 2010/07/20 04:31:33 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> atk-1.26.0.ebuild,
+  atk-1.28.0.ebuild, atk-1.30.0.ebuild:
+  Stable for HPPA (bug #314899).
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> atk-1.26.0.ebuild,
   atk-1.28.0.ebuild, atk-1.30.0.ebuild:
