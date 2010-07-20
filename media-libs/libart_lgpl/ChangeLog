@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.67 2010/06/04 19:22:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.68 2010/07/20 02:23:01 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libart_lgpl-2.3.20.ebuild,
+  libart_lgpl-2.3.21-r1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org>
   libart_lgpl-2.3.21-r1.ebuild:
