@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4409 2010/07/18 13:40:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4410 2010/07/20 09:21:25 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2010; Torsten Veller <tove@gentoo.org> license_groups:
+  Add CC0-1.0-Universal to MISC-FREE (#326085)
 
   18 Jul 2010; Markus Meier <maekke@gentoo.org> package.mask:
   mask hugin beta versions for testing (needs masked libpano13)
