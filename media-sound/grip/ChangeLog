@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/grip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.87 2010/07/09 10:40:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.88 2010/07/20 15:38:45 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> grip-3.3.1.ebuild,
+  grip-3.3.1-r2.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> grip-3.3.1-r2.ebuild:
   Drop hppa stable keyword per bug #324511 because they won't stabilize yelp
