@@ -1,22 +1,23 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.3 2010/07/20 09:35:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r1.ebuild,v 1.1 2010/07/20 09:35:43 voyageur Exp $
 
 EAPI=2
 
 RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit subversion eutils multilib python
+inherit eutils multilib python
 
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
-SRC_URI=""
-ESVN_REPO_URI="http://llvm.org/svn/llvm-project/cfe/trunk"
+# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
+SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tgz
+	http://llvm.org/releases/${PV}/${P}.tgz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +static-analyzer test"
 
 # Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
@@ -24,15 +25,11 @@ DEPEND="static-analyzer? ( dev-lang/perl )
 	test? ( dev-util/dejagnu )"
 RDEPEND="~sys-devel/llvm-${PV}"
 
-S="${WORKDIR}/llvm"
-
-src_unpack() {
-	# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-	ESVN_PROJECT=llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
-	ESVN_PROJECT=clang S="${S}"/tools/clang subversion_fetch
-}
+S="${WORKDIR}/llvm-2.7"
 
 src_prepare() {
+	mv "${WORKDIR}"/clang-2.7 "${S}"/tools/clang || die "clang source directory not found"
+
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
