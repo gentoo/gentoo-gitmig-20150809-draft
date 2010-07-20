@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/ez-ipupdate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.29 2009/09/23 18:28:39 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.30 2010/07/20 20:31:31 sbriesen Exp $
+
+*ez-ipupdate-3.0.11_beta8-r6 (20 Jul 2010)
+
+  20 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +ez-ipupdate-3.0.11_beta8-r6.ebuild,
+  +files/ez-ipupdate-3.0.11_beta8-linux.diff:
+  added special linux netlink patch from Martin Väth. solving bug# 318905.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   ez-ipupdate-3.0.11_beta8-r4.ebuild, ez-ipupdate-3.0.11_beta8-r5.ebuild:
