@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.11 2010/07/18 06:48:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.12 2010/07/20 07:31:17 fauli Exp $
+
+  20 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  testtools-0.9.4.ebuild, +files/testtools-0.9.4-fix_test.patch:
+  fix tests with upstream patch
 
 *testtools-0.9.4 (18 Jul 2010)
 
