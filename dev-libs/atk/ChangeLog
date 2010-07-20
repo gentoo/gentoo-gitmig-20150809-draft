@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.196 2010/06/20 09:54:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.197 2010/07/20 01:53:35 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> atk-1.26.0.ebuild,
+  atk-1.28.0.ebuild, atk-1.30.0.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   20 Jun 2010; Arun Raghavan <ford_prefect@gentoo.org> atk-1.30.0.ebuild,
   metadata.xml:
