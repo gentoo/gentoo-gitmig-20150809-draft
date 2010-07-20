@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-3.0.47.ebuild,v 1.1 2009/07/31 08:58:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-3.0.47.ebuild,v 1.2 2010/07/20 04:44:24 jer Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -26,7 +26,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2"
 
 src_prepare() {
-	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.0.47-icu-automagic.patch
 	AT_M4DIR="m4" eautoreconf
 }
