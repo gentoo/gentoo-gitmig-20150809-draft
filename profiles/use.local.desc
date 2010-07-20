@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5793 2010/07/20 07:27:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5794 2010/07/20 18:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2386,15 +2386,6 @@ net-dns/bind:resolvconf - Enable support for net-dns/openresolv
 net-dns/bind:sdb-ldap - Enables ldap-sdb backend
 net-dns/bind:urandom - Use /dev/urandom instead of /dev/random
 net-dns/bind-tools:urandom - Use /dev/urandom instead of /dev/random
-net-dns/djbdns:aliaschain - Enables a fix for the truncation of alias chains
-net-dns/djbdns:cnamefix - Changes the CNAME behavior of dnscache
-net-dns/djbdns:datadir - Enables tinydns-data to read a directory with multiple data files
-net-dns/djbdns:fwdonly - Enable JDP's dnscache-strict-forwardonly patch
-net-dns/djbdns:fwdzone - Enables the forward zone patch
-net-dns/djbdns:multidata - Enables command line parameters for tinydns-data to specify the data file(s)
-net-dns/djbdns:multipleip - Enables multi-IP patch
-net-dns/djbdns:roundrobin - Enables round robin patch
-net-dns/djbdns:semanticfix - Makes tinydns=data handle more semantic errors
 net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting
 net-dns/maradns:authonly - Allows one to build only authoritative DNS server
