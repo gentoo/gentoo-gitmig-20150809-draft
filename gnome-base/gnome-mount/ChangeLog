@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-mount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.73 2010/06/19 16:57:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.74 2010/07/20 01:38:24 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome-mount-0.8-r1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   19 Jun 2010; Pacho Ramos <pacho@gentoo.org> gnome-mount-0.8-r1.ebuild:
   Depend on gnome-base/libgnome-keyring when needed instead of recent
