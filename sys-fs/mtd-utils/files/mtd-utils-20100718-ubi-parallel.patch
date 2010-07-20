@@ -1,0 +1,27 @@
+From 52aa25079d6d5116a8bf3b24b32abe210f37f08f Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Mon, 19 Jul 2010 23:06:37 -0400
+Subject: [PATCH] fix parallel build between ubi-utils and mkfs.ubifs
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ Makefile |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index b558705..8457654 100644
+--- a/Makefile
++++ b/Makefile
+@@ -9,6 +9,9 @@ endif
+ 
+ SUBDIRS = lib ubi-utils mkfs.ubifs
+ 
++# mkfs.ubifs needs -lubi which is in ubi-utils/
++subdirs_mkfs.ubifs_all: subdirs_ubi-utils_all
++
+ TARGETS = ftl_format flash_erase flash_eraseall nanddump doc_loadbios \
+ 	ftl_check mkfs.jffs2 flash_lock flash_unlock flash_info \
+ 	flash_otp_info flash_otp_dump mtd_debug flashcp nandwrite nandtest \
+-- 
+1.7.1.1
+

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.30 2010/07/18 20:10:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.31 2010/07/20 03:13:34 vapier Exp $
+
+  20 Jul 2010; Mike Frysinger <vapier@gentoo.org> mtd-utils-20100718.ebuild,
+  +files/mtd-utils-20100718-ubi-parallel.patch:
+  Fix parallel build issues with libubi and mkfs.ubifs #276374.
 
 *mtd-utils-20100718 (18 Jul 2010)
 

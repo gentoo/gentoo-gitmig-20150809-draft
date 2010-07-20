@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20100718.ebuild,v 1.1 2010/07/18 20:10:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20100718.ebuild,v 1.2 2010/07/20 03:13:34 vapier Exp $
 
 EAPI="3"
+
+inherit eutils
 
 if [[ ${PV} == "99999999" ]] ; then
 	EGIT_REPO_URI="git://git.infradead.org/mtd-utils.git"
@@ -34,6 +36,10 @@ DEPEND="${RDEPEND}
 	xattr? ( sys-apps/acl )"
 
 S=${WORKDIR}/${PN}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-ubi-parallel.patch #276374
+}
 
 makeopts() {
 	echo CROSS=${CHOST}-
