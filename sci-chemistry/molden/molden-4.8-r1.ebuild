@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8-r1.ebuild,v 1.1 2010/06/24 16:03:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8-r1.ebuild,v 1.2 2010/07/20 11:03:31 jlec Exp $
 
 EAPI="3"
 
@@ -24,6 +24,7 @@ RDEPEND="
 		virtual/glut
 		virtual/opengl )"
 DEPEND="${RDEPEND}
+	x11-misc/gccmakedep
 	app-editors/vim"
 	# vim provides ex, which the build system uses (surf/Makefile, at least)
 
