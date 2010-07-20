@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.6.ebuild,v 1.8 2010/01/15 21:35:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.6.6.ebuild,v 1.9 2010/07/20 15:47:50 jer Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://freshmeat.net/projects/goffice/"
 
 LICENSE="GPL-2"
 SLOT="0.6"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
 IUSE="doc gnome"
 
 # Raising glib dep to 2.14 to drop pcre dependency

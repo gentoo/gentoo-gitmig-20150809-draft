@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.69 2010/01/12 12:39:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.70 2010/07/20 15:48:35 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libgksu-2.0.9.ebuild,
+  libgksu-2.0.12.ebuild, libgksu-2.0.12-r1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
 *libgksu-2.0.12-r1 (12 Jan 2010)
 
