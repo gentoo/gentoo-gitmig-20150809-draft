@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gemcutter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.4 2010/06/25 19:45:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.5 2010/07/20 07:37:01 fauli Exp $
+
+  20 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  gemcutter-0.5.0.ebuild:
+  add ~x86, bug 328915
 
 *gemcutter-0.5.0 (25 Jun 2010)
 

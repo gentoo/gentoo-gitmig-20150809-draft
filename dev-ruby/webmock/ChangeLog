@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.6 2010/06/03 05:18:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.7 2010/07/20 07:35:47 fauli Exp $
+
+  20 Jul 2010; Christian Faulhammer <fauli@gentoo.org> webmock-0.9.1.ebuild:
+  add ~x86, bug 328915
 
   03 Jun 2010; Hans de Graaff <graaff@gentoo.org> -webmock-0.8.0.ebuild,
   -webmock-0.8.1.ebuild, -webmock-0.8.2.ebuild:

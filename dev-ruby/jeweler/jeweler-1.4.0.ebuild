@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-1.4.0.ebuild,v 1.1 2010/04/30 07:27:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-1.4.0.ebuild,v 1.2 2010/07/20 07:37:41 fauli Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -21,7 +21,7 @@ HOMEPAGE="http://wiki.github.com/technicalpickles/jeweler"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/rubyforge dev-ruby/gemcutter"

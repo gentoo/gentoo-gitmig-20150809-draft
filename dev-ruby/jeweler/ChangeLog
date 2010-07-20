@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.1 2010/04/30 07:27:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.2 2010/07/20 07:37:42 fauli Exp $
+
+  20 Jul 2010; Christian Faulhammer <fauli@gentoo.org> jeweler-1.4.0.ebuild:
+  add ~x86, bug 328915
 
 *jeweler-1.4.0 (30 Apr 2010)
 

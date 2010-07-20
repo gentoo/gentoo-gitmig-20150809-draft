@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-0.9.1.ebuild,v 1.1 2010/02/03 07:18:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-0.9.1.ebuild,v 1.2 2010/07/20 07:35:47 fauli Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://github.com/bblimke/webmock"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_rdepend dev-ruby/addressable
