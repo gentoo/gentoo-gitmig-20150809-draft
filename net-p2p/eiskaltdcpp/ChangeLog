@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.9 2010/07/13 13:09:56 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.10 2010/07/20 07:10:10 pva Exp $
+
+  20 Jul 2010; Peter Volkov <pva@gentoo.org> -eiskaltdcpp-2.0.2.ebuild,
+  eiskaltdcpp-2.0.3.ebuild, eiskaltdcpp-9999.ebuild, metadata.xml:
+  Cleanup, added upnp USE flag in 9999, thank Nikoli for this job.
 
   13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
