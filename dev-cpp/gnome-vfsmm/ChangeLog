@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.65 2009/10/19 22:59:07 eva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.66 2010/07/20 15:15:19 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome-vfsmm-2.22.0.ebuild,
+  gnome-vfsmm-2.26.0.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   12 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-vfsmm-1.3.5.ebuild, -gnome-vfsmm-2.24.0.ebuild:
