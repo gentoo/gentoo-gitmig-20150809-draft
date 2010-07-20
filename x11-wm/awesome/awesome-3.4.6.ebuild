@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.3.ebuild,v 1.4 2010/03/02 11:56:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.6.ebuild,v 1.1 2010/07/20 23:16:48 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
 inherit cmake-utils eutils
 
 DESCRIPTION="A dynamic floating and tiling window manager"
@@ -11,9 +11,8 @@ SRC_URI="http://awesome.naquadah.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
-#IUSE="dbus doc elibc_FreeBSD bash-completion"
-IUSE="dbus doc elibc_FreeBSD"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="dbus doc elibc_FreeBSD bash-completion"
 
 RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	dev-libs/libev
@@ -29,7 +28,7 @@ RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	elibc_FreeBSD? ( dev-libs/libexecinfo )"
 
 DEPEND="${RDEPEND}
-	app-text/asciidoc
+	>=app-text/asciidoc-8.4.5
 	app-text/xmlto
 	>=dev-util/cmake-2.6
 	dev-util/gperf
@@ -45,16 +44,16 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	app-shells/bash
+	bash-completion? ( app-shells/bash-completion )
 	|| (
 		x11-misc/gxmessage
 		x11-apps/xmessage
 	)"
-#	bash-completion? ( app-shells/bash-completion )
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
 
-mycmakeargs="-DPREFIX=/usr
-	-DSYSCONFDIR=/etc
+mycmakeargs="-DPREFIX=${EPREFIX}/usr
+	-DSYSCONFDIR=${EPREFIX}/etc
 	$(cmake-utils_use_with dbus DBUS)
 	$(cmake-utils_use doc GENERATE_LUADOC)"
 
@@ -80,9 +79,9 @@ src_install() {
 			mv html doxygen
 			dohtml -r doxygen || die
 		)
-		mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
+		mv "${ED}"/usr/share/doc/${PN}/luadoc "${ED}"/usr/share/doc/${PF}/html/luadoc || die
 	fi
-	rm -rf "${D}"/usr/share/doc/${PN} || die
+	rm -rf "${ED}"/usr/share/doc/${PN} || die
 
 	exeinto /etc/X11/Sessions
 	newexe "${FILESDIR}"/${PN}-session ${PN} || die
