@@ -5,19 +5,4 @@
 <maintainer>
 	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
-<use>
-	<flag name='aliaschain'>Enables a fix for the truncation of alias
-		chains</flag>
-	<flag name='cnamefix'>Changes the CNAME behavior of dnscache</flag>
-	<flag name='datadir'>Enables tinydns-data to read a directory with multiple
-		data files</flag>
-	<flag name='fwdonly'>Enable JDP's dnscache-strict-forwardonly patch</flag>
-	<flag name='fwdzone'>Enables the forward zone patch</flag>
-	<flag name='multidata'>Enables command line parameters for tinydns-data to
-		specify the data file(s)</flag>
-	<flag name='multipleip'>Enables multi-IP patch</flag>
-	<flag name='roundrobin'>Enables round robin patch</flag>
-	<flag name='semanticfix'>Makes tinydns=data handle more semantic
-		errors</flag>
-</use>
 </pkgmetadata>
