@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.172 2010/06/04 20:33:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.173 2010/07/20 01:54:53 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome-mag-0.15.9.ebuild,
+  gnome-mag-0.15.9-r1.ebuild, gnome-mag-0.16.0.ebuild,
+  gnome-mag-0.16.1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> gnome-mag-0.16.1.ebuild:
   x86 stable, bug #314899

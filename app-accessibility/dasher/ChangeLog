@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.153 2010/06/04 20:26:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.154 2010/07/20 01:54:42 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> dasher-4.10.1.ebuild,
+  dasher-4.11.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   04 Jun 2010; Markus Meier <maekke@gentoo.org> dasher-4.11.ebuild:
   x86 stable, bug #314899
