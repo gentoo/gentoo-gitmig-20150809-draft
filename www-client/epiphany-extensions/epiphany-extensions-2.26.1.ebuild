@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1.ebuild,v 1.9 2010/03/04 20:27:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1.ebuild,v 1.10 2010/07/20 15:46:36 jer Exp $
 
 inherit autotools eutils gnome2 python versionator
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/${PN}-2.21.92-sessionsaver-v4.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="dbus examples pcre python"
 
 RDEPEND="=www-client/epiphany-${MY_MAJORV}*
