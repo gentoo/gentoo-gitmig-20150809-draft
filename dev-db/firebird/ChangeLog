@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/firebird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.102 2010/06/16 19:25:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.103 2010/07/20 18:21:50 mr_bones_ Exp $
+
+  20 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  -firebird-2.0.3.12981.0-r7.ebuild, -firebird-2.0.4.13130.1.ebuild,
+  -firebird-2.1.1.17910.0.ebuild, -firebird-2.1.2.18118.0.ebuild:
+  clean old ebuilds
 
   16 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   firebird-2.0.3.12981.0-r6.ebuild, firebird-2.0.3.12981.0-r7.ebuild,
