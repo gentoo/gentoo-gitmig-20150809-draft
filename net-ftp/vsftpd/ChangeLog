@@ -1,6 +1,16 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.124 2010/03/18 19:52:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.125 2010/07/20 17:07:25 mr_bones_ Exp $
+
+  20 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/vsftpd-2.0.3-gentoo.patch, -files/vsftpd-2.0.6-caps.patch,
+  -files/vsftpd-2.0.6-libcap1.patch, -vsftpd-2.0.7-r1.ebuild,
+  -files/vsftpd-2.0.7-uclibc.patch, -vsftpd-2.1.0-r1.ebuild,
+  -files/vsftpd-2.1.0-dont-link-caps.patch,
+  -files/vsftpd-2.1.0-gentoo.patch, -vsftpd-2.1.2.ebuild,
+  -files/vsftpd-2.1.2-dont-link-caps.patch, -vsftpd-2.2.0.ebuild,
+  -vsftpd-2.2.1.ebuild:
+  clean out old cruft
 
   18 Mar 2010; Raúl Porcel <armin76@gentoo.org> vsftpd-2.2.2.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #307817
