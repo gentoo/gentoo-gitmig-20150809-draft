@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.143 2010/05/31 20:55:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.144 2010/07/20 14:56:53 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome-speech-0.4.25.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   31 May 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-speech-0.4.20.ebuild, -gnome-speech-0.4.22.ebuild:
