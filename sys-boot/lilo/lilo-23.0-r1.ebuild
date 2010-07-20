@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.0-r1.ebuild,v 1.1 2010/07/20 00:06:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.0-r1.ebuild,v 1.2 2010/07/20 00:09:24 jer Exp $
 
 EAPI="2"
 
@@ -74,7 +74,6 @@ src_install() {
 
 		newconfd "${WORKDIR}"/dolilo/dolilo.conf.d dolilo.example || die
 
-		doman manPages/*.[5-8]
 		dodoc CHANGELOG* readme/README.* readme/INCOMPAT README
 		docinto samples ; dodoc sample/*
 	fi
