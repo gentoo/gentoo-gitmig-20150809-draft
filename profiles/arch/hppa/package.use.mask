@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.49 2010/07/20 02:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.50 2010/07/20 15:02:54 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -10,7 +10,6 @@ sys-cluster/pacemaker heartbeat
 
 # Pacho Ramos <pacho@gentoo.org> (11 Jul 2010)
 # Mask due bug #324511, this will be general once needed by more packages.
-sys-auth/consolekit policykit
 media-gfx/gimp gnome
 net-libs/libsoup gnome
 app-i18n/uim gnome
