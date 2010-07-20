@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.97 2010/06/13 22:02:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.98 2010/07/20 02:26:54 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome-nettool-2.22.1.ebuild,
+  gnome-nettool-2.26.2.ebuild, gnome-nettool-2.28.0.ebuild,
+  gnome-nettool-2.30.0.ebuild:
+  Drop HPPA keywording (bug #324511).
 
 *gnome-nettool-2.30.0 (13 Jun 2010)
 
