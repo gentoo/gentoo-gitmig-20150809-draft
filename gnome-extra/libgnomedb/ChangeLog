@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.66 2010/07/11 14:00:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.67 2010/07/20 15:35:47 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libgnomedb-1.2.2.ebuild,
+  libgnomedb-3.0.0.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   11 Jul 2010; Pacho Ramos <pacho@gentoo.org> libgnomedb-1.2.2.ebuild,
   libgnomedb-3.0.0.ebuild:
