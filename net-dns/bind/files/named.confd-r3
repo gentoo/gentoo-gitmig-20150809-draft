@@ -6,17 +6,17 @@ OPTIONS=""
 # Leave this unchanged if you want bind to automatically detect the number
 #CPU="1"
 
-# RNDC needs to be told what server we're using sometimes.
-#SERVER="-s 127.0.0.1"
-# rndc key to use
-RNDC_KEY="${CHROOT}/etc/bind/rndc.key"
-
 # If you wish to run bind in a chroot:
 # 1) un-comment the CHROOT= assignment, below. You may use
 #    a different chroot directory but MAKE SURE it's empty.
 # 2) run: emerge --config =<bind-version>
 #
 # CHROOT="/chroot/dns"
+
+# RNDC needs to be told what server we're using sometimes.
+#SERVER="-s 127.0.0.1"
+# rndc key to use
+RNDC_KEY="${CHROOT}/etc/bind/rndc.key"
 
 # Default pid file location
 PIDFILE="${CHROOT}/var/run/named/named.pid"

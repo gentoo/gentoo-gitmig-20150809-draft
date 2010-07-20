@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.284 2010/07/15 20:27:20 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.285 2010/07/20 16:59:06 idl0r Exp $
+
+  20 Jul 2010; Christian Ruppert <idl0r@gentoo.org> files/named.confd-r3:
+  Fix a typo in conf.d/named, bug 329111.
 
 *bind-9.7.1_p2 (15 Jul 2010)
 
