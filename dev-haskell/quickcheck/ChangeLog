@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.42 2010/07/10 18:44:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.43 2010/07/20 13:44:28 josejx Exp $
+
+  20 Jul 2010; Joseph Jezak <josejx@gentoo.org> quickcheck-2.1.0.3.ebuild:
+  Marked ~ppc.
 
   10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
   quickcheck-2.1.0.3.ebuild:
