@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.081.ebuild,v 1.2 2010/01/10 09:46:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.081.ebuild,v 1.3 2010/07/20 15:19:05 jer Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=gnome-base/gnome-vfs-2

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-perl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.44 2009/01/02 21:07:57 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.45 2010/07/20 15:17:41 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome2-perl-1.041.ebuild,
+  gnome2-perl-1.042.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   02 Jan 2009; <ssuominen@gentoo.org> gnome2-perl-1.041.ebuild:
   x86 stable too.
