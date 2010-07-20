@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.50 2010/07/13 09:16:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.51 2010/07/20 01:51:31 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  gnome-settings-daemon-2.26.1-r2.ebuild,
+  gnome-settings-daemon-2.28.1.ebuild, gnome-settings-daemon-2.28.2.ebuild,
+  gnome-settings-daemon-2.30.2.ebuild,
+  gnome-settings-daemon-2.30.2-r1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
 *gnome-settings-daemon-2.30.2-r1 (13 Jul 2010)
 
