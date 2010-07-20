@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/bookmarksync
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.10 2009/09/23 21:08:04 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/bookmarksync/ChangeLog,v 1.11 2010/07/20 18:13:34 mr_bones_ Exp $
+
+  20 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  -bookmarksync-0.3.1.ebuild, -bookmarksync-0.3.2.ebuild,
+  -bookmarksync-0.3.3.ebuild, -bookmarksync-0.3.4.ebuild:
+  clean old cruft
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> bookmarksync-0.3.1.ebuild,
   bookmarksync-0.3.2.ebuild, bookmarksync-0.3.3.ebuild,
