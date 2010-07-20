@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.53 2010/01/07 15:54:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.54 2010/07/20 18:18:25 mr_bones_ Exp $
+
+  20 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  -mDNSResponder-98.ebuild, -files/mDNSResponder-98-Makefiles.patch,
+  -mDNSResponder-107.1.ebuild, -files/mDNSResponder-107.1-Makefiles.patch,
+  -mDNSResponder-107.5.ebuild, -files/mDNSResponder-107.5-Makefiles.patch,
+  -mDNSResponder-107.6-r5.ebuild, -files/mDNSResponder-107.6-Makefiles.diff:
+  clean old cruft
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mDNSResponder-212.1.ebuild:
