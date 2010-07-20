@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.58 2010/07/20 16:59:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.59 2010/07/20 17:03:08 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -10,6 +10,7 @@ sys-cluster/pacemaker heartbeat
 
 # Pacho Ramos <pacho@gentoo.org> (11 Jul 2010)
 # Mask due bug #324511, this will be general once needed by more packages.
+x11-libs/wxGTK gstreamer
 x11-libs/vte glade
 net-p2p/mldonkey guionly gtk
 media-libs/libcanberra gtk
