@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.24 2010/07/20 04:37:28 jer Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.25 2010/07/20 15:44:46 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (20 Jul 2010)
 # Mask USE=gnome entirely (bug #324511)
 gnome
+gnome-keyring
 
 # Jeroen Roovers <jer@gentoo.org> (19 Jul 2010)
 # Masked because of missing gnome-base/gnome-panel
