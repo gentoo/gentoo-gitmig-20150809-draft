@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-gconf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.29 2009/07/02 20:07:18 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.30 2010/07/20 16:36:09 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome2-gconf-1.043.ebuild,
+  gnome2-gconf-1.044.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> gnome2-gconf-1.043.ebuild:
   Stable for HPPA too.
