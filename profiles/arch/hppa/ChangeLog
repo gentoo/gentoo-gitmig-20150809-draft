@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.86 2010/07/20 17:09:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.87 2010/07/20 17:38:12 jer Exp $
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask:
-  Mask USE=libnotify for x11-misc/xscreensaver (bug #324511).
+  Mask USE=new-login for x11-misc/xscreensaver (bug #324511).
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> use.mask:
   Generally mask USE=libnotify (bug #324511).
