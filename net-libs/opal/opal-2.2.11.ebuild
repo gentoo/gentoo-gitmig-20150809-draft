@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.11.ebuild,v 1.8 2008/10/09 22:29:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.11.ebuild,v 1.9 2010/07/20 18:41:58 jer Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ekiga.org/admin/downloads/latest/sources/sources/${P}.tar.gz
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="novideo noaudio debug"
 
 RDEPEND="~dev-libs/pwlib-1.10.$((${PV##*.}-1))
