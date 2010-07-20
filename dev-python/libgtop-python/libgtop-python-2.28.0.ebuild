@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/libgtop-python-2.28.0.ebuild,v 1.4 2010/06/11 09:10:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/libgtop-python-2.28.0.ebuild,v 1.5 2010/07/20 15:27:25 jer Exp $
 
 GCONF_DEBUG="no"
 G_PY_PN="gnome-python-desktop"
@@ -11,7 +11,7 @@ inherit gnome-python-common
 DESCRIPTION="Python bindings for the libgtop library"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgtop-2.13.0

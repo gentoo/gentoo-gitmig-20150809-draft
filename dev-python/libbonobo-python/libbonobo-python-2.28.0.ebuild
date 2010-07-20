@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libbonobo-python/libbonobo-python-2.28.0.ebuild,v 1.4 2010/06/11 09:26:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libbonobo-python/libbonobo-python-2.28.0.ebuild,v 1.5 2010/07/20 15:26:14 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -12,7 +12,7 @@ inherit gnome-python-common
 DESCRIPTION="Python bindings for the Bonobo framework"
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="examples"
 
 RDEPEND=">=dev-python/pyorbit-2.24.0
