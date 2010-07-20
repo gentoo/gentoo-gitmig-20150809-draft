@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ggv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.113 2010/05/31 21:16:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.114 2010/07/20 15:14:50 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> ggv-2.8.5.ebuild,
+  ggv-2.12.0.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   31 May 2010; Gilles Dartiguelongue <eva@gentoo.org> -ggv-2.8.3.ebuild:
   Clean up old revisions.
