@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.19 2010/07/07 21:20:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.20 2010/07/20 02:03:53 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> polkit-0.96.ebuild,
+  polkit-0.96-r1.ebuild, polkit-0.96-r2.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   07 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> polkit-0.96-r1.ebuild,
   polkit-0.96-r2.ebuild:
