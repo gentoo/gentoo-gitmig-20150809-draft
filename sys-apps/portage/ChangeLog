@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.703 2010/04/30 14:40:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.704 2010/07/20 22:56:45 zmedico Exp $
+
+  20 Jul 2010; Zac Medico <zmedico@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml since I'm reachable via the dev-portage
+  alias anyway.
 
   30 Apr 2010; Brent Baude <ranger@gentoo.org> portage-2.1.8.3.ebuild:
   Marking portage-2.1.8.3 ppc64 for bug 314247
