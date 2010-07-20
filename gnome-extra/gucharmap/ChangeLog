@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gucharmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.138 2010/06/22 14:15:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.139 2010/07/20 02:20:33 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gucharmap-2.26.3.1.ebuild,
+  gucharmap-2.28.2.ebuild, gucharmap-2.30.2.ebuild:
+  Drop HPPA keywording (bug #324511).
 
 *gucharmap-2.30.2 (22 Jun 2010)
 

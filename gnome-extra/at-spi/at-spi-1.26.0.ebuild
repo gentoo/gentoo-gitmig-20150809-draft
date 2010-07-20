@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.26.0.ebuild,v 1.11 2010/05/03 22:18:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.26.0.ebuild,v 1.12 2010/07/20 02:14:03 jer Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/atk-1.17
