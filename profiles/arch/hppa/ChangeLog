@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.75 2010/07/20 15:02:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.76 2010/07/20 15:32:13 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=gnome-keyring for dev-vcs/subversion (bug #324511).
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove USE=policykit mask for sys-auth/consolekit.
