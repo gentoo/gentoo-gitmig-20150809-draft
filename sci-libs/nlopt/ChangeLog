@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/nlopt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.3 2009/11/24 13:52:00 markusle Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.4 2010/07/20 19:43:50 bicatali Exp $
+
+*nlopt-2.2 (20 Jul 2010)
+
+  20 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> -nlopt-1.0.1.ebuild,
+  -files/nlopt-1.0.1-qsort.patch, +nlopt-2.2.ebuild, metadata.xml:
+  Version bump. Adds python and guile bindings as well as algorithms.
+  Switched to EAPI3, added support for multiple python
 
   24 Nov 2009; Markus Dittrich <markusle@gentoo.org> nlopt-1.2.ebuild:
   Added missing configure switch for octave use flag.
