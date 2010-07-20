@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.23 2010/07/18 23:33:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.24 2010/07/20 15:10:46 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> obexd-0.23.ebuild,
+  obexd-0.28.ebuild, obexd-0.29.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   18 Jul 2010; Markos Chandras <hwoarang@gentoo.org> obexd-0.28.ebuild:
   Stable on amd64 wrt bug #328579

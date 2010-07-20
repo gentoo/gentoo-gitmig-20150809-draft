@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.23.ebuild,v 1.5 2010/07/14 13:19:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.23.ebuild,v 1.6 2010/07/20 15:10:46 jer Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.bluez.org/"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug -eds -server"
 
 RDEPEND="eds? ( gnome-extra/evolution-data-server )
