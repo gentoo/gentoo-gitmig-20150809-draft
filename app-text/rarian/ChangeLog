@@ -1,6 +1,10 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.46 2010/07/20 02:02:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.47 2010/07/20 15:07:11 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> rarian-0.8.1.ebuild,
+  rarian-0.8.1-r1.ebuild:
+  Stable for HPPA (bug #314899).
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> rarian-0.8.1.ebuild,
   rarian-0.8.1-r1.ebuild:
