@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.11 2008/11/29 12:11:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.12 2010/07/20 17:40:04 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://perldude.de/projects/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl

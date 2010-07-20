@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/filer
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.25 2008/11/29 12:11:16 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.26 2010/07/20 17:40:04 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> filer-0.0.12.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   29 Nov 2008; <ssuominen@gentoo.org> filer-0.0.12.ebuild:
   Move extutils-pkgconfig to DEPEND wrt #223075.
