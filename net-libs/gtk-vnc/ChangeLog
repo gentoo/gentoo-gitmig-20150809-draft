@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.47 2010/07/14 11:44:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.48 2010/07/20 02:27:00 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gtk-vnc-0.3.8-r1.ebuild,
+  gtk-vnc-0.3.10.ebuild, gtk-vnc-0.4.1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
 *gtk-vnc-0.4.1 (14 Jul 2010)
 
