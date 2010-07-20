@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.122 2010/07/18 17:44:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.123 2010/07/20 15:08:03 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gtk-doc-1.13-r2.ebuild:
+  Stable for HPPA (bug #314899).
 
   18 Jul 2010; Pacho Ramos <pacho@gentoo.org> gtk-doc-1.15.ebuild:
   Add needed blockers to prevent runtime failures shown in broken tests due
