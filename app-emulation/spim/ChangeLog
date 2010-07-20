@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.52 2010/04/18 13:14:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.53 2010/07/20 04:18:15 phajdan.jr Exp $
+
+  20 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> spim-8.0.ebuild:
+  x86 stable wrt bug #328973
 
   18 Apr 2010; Fabian Groffen <grobian@gentoo.org> spim-8.0.ebuild:
   Fix Prefix support
