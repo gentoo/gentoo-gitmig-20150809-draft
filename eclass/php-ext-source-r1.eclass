@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.19 2008/05/09 13:02:04 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.20 2010/07/20 10:49:21 mabi Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -14,10 +14,6 @@
 # @DESCRIPTION:
 # This eclass provides a unified interface for compiling and installing standalone
 # PHP extensions (modules) from source code.
-
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 
 inherit php-ext-base-r1 flag-o-matic autotools depend.php
 
