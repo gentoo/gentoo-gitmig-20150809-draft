@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.2.0.ebuild,v 1.6 2008/09/30 17:25:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-2.2.0.ebuild,v 1.7 2010/07/20 16:35:05 jer Exp $
 
 inherit gnome2
 
 DESCRIPTION="C++ bindings for gtksourceview"
 HOMEPAGE="http://home.gna.org/gtksourceviewmm/"
 
-KEYWORDS="amd64 hppa ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 SLOT="2.0"
 LICENSE="LGPL-2"
