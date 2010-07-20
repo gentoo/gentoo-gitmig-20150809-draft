@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.705 2010/07/20 23:03:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.706 2010/07/20 23:10:32 zmedico Exp $
+
+  20 Jul 2010; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc62.ebuild:
+  Remove old version.
 
   20 Jul 2010; Zac Medico <zmedico@gentoo.org> metadata.xml:
   Update the changelog link to point to git instead of svn.
