@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.9.0-r1.ebuild,v 1.7 2010/07/18 13:08:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.9.0-r1.ebuild,v 1.8 2010/07/20 02:16:01 reavertm Exp $
 
 EAPI="2"
 
 MY_P="${P/_/-}"
 
-inherit base
+inherit autotools-utils
 
 DESCRIPTION="This library implements the client side of the Gadu-Gadu protocol"
 HOMEPAGE="http://toxygen.net/libgadu/"
@@ -34,22 +34,19 @@ PATCHES=(
 	"${FILESDIR}/${P}-memleak.patch"
 )
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
 DOCS=(AUTHORS ChangeLog NEWS README)
 
 src_configure() {
-	econf \
-		--enable-shared \
-		$(use_enable static-libs static) \
-		$(use_with threads pthread) \
+	myeconfargs=(
 		$(use_with ssl openssl)
+		$(use_with threads pthread)
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
 	use doc && HTML_DOCS=(docs/html/)
-	base_src_install
-
-	if ! use static-libs; then
-		find "${D}" -type f -name '*.la' -exec rm -f {} + \
-			|| die "la removal failed"
-	fi
+	autotools-utils_src_install
 }
