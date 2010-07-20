@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.85 2010/07/20 06:54:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.86 2010/07/20 07:38:47 aballier Exp $
 
 EAPI="3"
 
@@ -342,6 +342,9 @@ src_install() {
 	fi
 
 	use skins || rm -rf "${D}/usr/share/vlc/skins2"
+
+	# Punt useless libtool's .la files
+	find "${D}" -name '*.la' -delete
 }
 
 pkg_postinst() {
