@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.19.1.ebuild,v 1.11 2010/07/09 21:01:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.19.1.ebuild,v 1.12 2010/07/20 22:12:06 maekke Exp $
 
 inherit versionator eutils autotools gnome2
 
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

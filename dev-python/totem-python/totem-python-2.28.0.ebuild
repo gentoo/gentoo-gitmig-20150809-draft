@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/totem-python-2.28.0.ebuild,v 1.5 2010/07/20 15:29:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/totem-python-2.28.0.ebuild,v 1.6 2010/07/20 22:35:26 maekke Exp $
 
 GCONF_DEBUG="no"
 G_PY_PN="gnome-python-desktop"
@@ -11,7 +11,7 @@ inherit gnome-python-common
 DESCRIPTION="Python bindings for the Totem Playlist Parser"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=media-video/totem-1.4.0

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/librsvg-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.31 2010/07/11 15:20:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.32 2010/07/20 22:29:36 maekke Exp $
+
+  20 Jul 2010; Markus Meier <maekke@gentoo.org>
+  librsvg-python-2.28.0.ebuild:
+  arm stable, bug #320247
 
   11 Jul 2010; Pacho Ramos <pacho@gentoo.org> -librsvg-python-2.24.1.ebuild,
   librsvg-python-2.26.0.ebuild:

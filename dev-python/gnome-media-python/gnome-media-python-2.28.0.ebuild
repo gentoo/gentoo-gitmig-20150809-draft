@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/gnome-media-python-2.28.0.ebuild,v 1.5 2010/07/20 15:24:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/gnome-media-python-2.28.0.ebuild,v 1.6 2010/07/20 22:23:09 maekke Exp $
 
 GCONF_DEBUG="no"
 G_PY_PN="gnome-python-desktop"
@@ -11,7 +11,7 @@ inherit gnome-python-common
 DESCRIPTION="Python bindings for GNOME media profiles"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=">=gnome-extra/gnome-media-2.10.0
