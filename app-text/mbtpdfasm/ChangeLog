@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mbtpdfasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/ChangeLog,v 1.5 2010/01/02 12:17:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/ChangeLog,v 1.6 2010/07/20 23:16:16 sbriesen Exp $
+
+  20 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  -mbtpdfasm-1.0.26-r1.ebuild, -mbtpdfasm-1.0.26-r2.ebuild,
+  -files/mbtpdfasm-1.0.26-gcc4.patch:
+  removed old version
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mbtpdfasm-1.0.28.ebuild:
