@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.12.0.ebuild,v 1.7 2009/10/24 12:41:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.12.0.ebuild,v 1.8 2010/07/20 15:17:23 jer Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-libgnomeui.patch"
