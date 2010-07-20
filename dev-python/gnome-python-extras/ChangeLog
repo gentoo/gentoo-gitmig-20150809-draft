@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.99 2010/07/09 21:04:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.100 2010/07/20 16:40:11 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  gnome-python-extras-2.19.1-r3.ebuild,
+  gnome-python-extras-2.19.1-r4.ebuild, gnome-python-extras-2.25.3.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org>
   gnome-python-extras-2.19.1-r3.ebuild:

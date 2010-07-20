@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.101 2010/07/12 09:54:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.102 2010/07/20 16:39:13 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  gnome-python-desktop-2.26.0.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   12 Jul 2010; Pacho Ramos <pacho@gentoo.org>
   gnome-python-desktop-2.26.0.ebuild, gnome-python-desktop-2.28.0.ebuild:
