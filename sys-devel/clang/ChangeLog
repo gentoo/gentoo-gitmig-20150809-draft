@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.15 2010/06/02 08:29:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.16 2010/07/20 09:28:09 voyageur Exp $
+
+  20 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org> -clang-2.6-r3.ebuild,
+  -files/llvm-2.6-cflags.patch, -files/clang-2.6-fixdoc.patch,
+  -files/clang-2.6-gcc45.patch:
+  Drop 2.6 version
 
   02 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org> clang-9999.ebuild:
   Set ESVN_REPO_URI to fix subversion_pkg_preinst

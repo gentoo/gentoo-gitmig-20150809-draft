@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.14 2010/06/01 21:25:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.15 2010/07/20 09:25:26 voyageur Exp $
+
+  20 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org> -llvm-2.6-r2.ebuild,
+  -files/llvm-2.6-cflags.patch:
+  Drop 2.6 version
 
 *llvm-9999 (01 Jun 2010)
 
