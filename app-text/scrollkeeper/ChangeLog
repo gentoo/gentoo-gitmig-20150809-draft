@@ -1,6 +1,11 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.95 2010/03/22 18:57:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.96 2010/07/20 02:54:28 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  scrollkeeper-0.3.14-r2.ebuild, scrollkeeper-9999.ebuild,
+  scrollkeeper-9999-r1.ebuild:
+  Drop HPPA keywording (bug #324511).
 
   22 Mar 2010; Fabian Groffen <grobian@gentoo.org>
   scrollkeeper-9999-r1.ebuild:

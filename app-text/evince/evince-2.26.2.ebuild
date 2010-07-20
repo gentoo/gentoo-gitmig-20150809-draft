@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.26.2.ebuild,v 1.8 2010/02/10 17:41:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.26.2.ebuild,v 1.9 2010/07/20 02:51:29 jer Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/evince/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus debug djvu doc dvi gnome-keyring nautilus t1lib tiff"
 
 # FIXME: enable gobject-introspection when we have an ebuild for it.
