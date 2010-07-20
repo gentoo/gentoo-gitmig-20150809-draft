@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.24.0.ebuild,v 1.9 2010/05/03 22:11:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ghex-2.24.0.ebuild,v 1.10 2010/07/20 14:59:56 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="amd64 hppa ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.13.0
