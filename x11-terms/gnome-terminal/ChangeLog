@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.219 2010/06/22 14:12:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.220 2010/07/20 02:30:17 jer Exp $
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
+  gnome-terminal-2.26.3.1-r2.ebuild, gnome-terminal-2.28.2.ebuild,
+  gnome-terminal-2.30.2.ebuild:
+  Drop HPPA keywording (bug #324511).
 
 *gnome-terminal-2.30.2 (22 Jun 2010)
 
