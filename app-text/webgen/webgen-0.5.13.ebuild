@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/webgen-0.5.13.ebuild,v 1.1 2010/07/17 07:24:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/webgen-0.5.13.ebuild,v 1.2 2010/07/21 08:32:41 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -26,6 +26,7 @@ IUSE="builder highlight markdown"
 # http://rubyforge.org/tracker/index.php?func=detail&aid=28393&group_id=296&atid=1207
 RESTRICT="test"
 
+ruby_add_bdepend "doc? ( dev-ruby/rdoc )"
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 ruby_add_rdepend ">=dev-ruby/cmdparse-2.0.0
