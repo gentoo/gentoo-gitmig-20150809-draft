@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/shivavg
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/shivavg/ChangeLog,v 1.1 2010/07/21 16:13:39 lu_zero Exp $
+
+*shivavg-0.2.1 (21 Jul 2010)
+
+  21 Jul 2010; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +shivavg-0.2.1.ebuild:
+  First commit
+
