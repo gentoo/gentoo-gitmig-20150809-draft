@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5799 2010/07/21 14:07:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5800 2010/07/21 18:07:56 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1677,6 +1677,7 @@ media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/glide-v3:voodoo1 - Support 3DFX Voodoo1 video cards
 media-libs/glide-v3:voodoo2 - Support 3DFX Voodoo2 video cards
 media-libs/glide-v3:voodoo5 - Support 3DFX Voodoo4 and Voodoo5 video cards
+media-libs/gstreamer:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/imlib:deprecated - Enable deprecated GTK+-1.2 support
 media-libs/libass:enca - Enables support for charset discovery and conversion.
 media-libs/libbluray:aacs - Add support for decryption of AACS
