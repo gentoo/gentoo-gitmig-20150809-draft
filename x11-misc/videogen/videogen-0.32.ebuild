@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.12 2007/10/17 06:48:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/videogen-0.32.ebuild,v 1.13 2010/07/21 15:18:37 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -15,12 +15,12 @@ DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	sed -i 's:CFLAGS = :# CFLAGS = :' ${S}/Makefile
-	sed -i "s:CC = gcc:CC = $(tc-getCC):" ${S}/Makefile
+	sed -i 's:CFLAGS = :# CFLAGS = :' "${S}"/Makefile
+	sed -i "s:CC = gcc:CC = $(tc-getCC):" "${S}"/Makefile
 }
 
 src_install() {
-	dobin videogen
+	dobin videogen || die
 	doman videogen.1x
 	dodoc BUGS CHANGES README THANKS videogen.sample
 }

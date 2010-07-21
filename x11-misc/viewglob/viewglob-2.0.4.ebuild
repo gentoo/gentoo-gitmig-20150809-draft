@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.2 2008/10/04 15:30:16 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.3 2010/07/21 15:18:13 ssuominen Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ RDEPEND=">=dev-libs/glib-2.2.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_install () {
-	make DESTDIR=${D} install || die "install failed"
+src_install() {
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog HACKING NEWS README TODO
 }
 
