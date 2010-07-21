@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.17 2010/02/03 10:13:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.18 2010/07/21 13:16:49 ssuominen Exp $
+
+*libcuefile-465 (21 Jul 2010)
+
+  21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +libcuefile-465.ebuild:
+  Version bump.
 
   03 Feb 2010; Fabian Groffen <grobian@gentoo.org> libcuefile-458.ebuild:
   Marked ~x86-macos, drop install_name_tool hack, I managed to fix the issue

@@ -1,16 +1,17 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-458.ebuild,v 1.5 2010/02/03 10:13:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-465.ebuild,v 1.1 2010/07/21 13:16:49 ssuominen Exp $
 
-inherit cmake-utils multilib
+EAPI=3
+inherit cmake-utils
 
-# svn co http://svn.musepack.net/libcuefile/trunk libcuefile-${PV}
-# find ./libcuefile-${PV} -type d -name .svn | xargs rm -rf
+# svn export http://svn.musepack.net/libcuefile/trunk libcuefile-${PV}
 # tar -cjf libcuefile-${PV}.tar.bz2 libcuefile-${PV}
 
 DESCRIPTION="Cue File library from Musepack"
 HOMEPAGE="http://www.musepack.net"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+#SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
