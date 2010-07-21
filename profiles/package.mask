@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11776 2010/07/19 19:55:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11777 2010/07/21 00:40:40 sbriesen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,26 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Stefan Briesenick <sbriesen@gentoo.org> (21 Jul 2010)
+# Abandoned upstream. Won't work with current kernels.
+net-dialup/e2220pc
+net-dialup/e5520pc
+net-dialup/fcclassic
+net-dialup/fcdsl
+net-dialup/fcdsl2
+net-dialup/fcdslsl
+net-dialup/fcdslslusb
+net-dialup/fcdslusb
+net-dialup/fcdslusba
+net-dialup/fcpci
+net-dialup/fcpcmcia
+net-dialup/fcpnp
+net-dialup/fcusb
+net-dialup/fcusb2
+net-dialup/fritzcapi
+net-dialup/fxusb
+net-dialup/fxusb_CZ 
 
 # Markus Meier <maekke@gentoo.org> (18 Jul 2010)
 # mask hugin beta versions for testing (needs masked libpano13)
