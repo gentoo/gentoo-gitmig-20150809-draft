@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/xtoolwait-1.3-r1.ebuild,v 1.13 2007/07/13 05:09:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/xtoolwait-1.3-r1.ebuild,v 1.14 2010/07/21 15:14:47 ssuominen Exp $
 
 DESCRIPTION="Xtoolwait notably decreases the startup time of an X session"
 HOMEPAGE="http://www.hacom.nl/~richard/software/xtoolwait.html"
