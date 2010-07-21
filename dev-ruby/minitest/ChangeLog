@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.18 2010/07/21 07:39:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.19 2010/07/21 12:29:44 fauli Exp $
+
+  21 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  minitest-1.5.0.ebuild:
+  stable x86, bug 321043
 
 *minitest-1.7.0 (21 Jul 2010)
 
