@@ -1,11 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.3.ebuild,v 1.4 2010/04/20 09:23:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.7.ebuild,v 1.1 2010/07/21 10:09:41 polynomial-c Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
 
-LANGS="af ar be bg bn-IN ca cs cy da de el en-GB en-US eo es-AR es-ES et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hu id is it ja ka kk kn ko ku lt lv mk mr nb-NO nl nn-NO oc pa-IN pl pt-BR pt-PT ro ru si sk sl sq sr sv-SE ta te th uk vi zh-CN zh-TW"
+# Can be updated using scripts/get_langs.sh from mozilla overlay
+# '\' at EOL is needed for ${LANG} matching in linguas() below
+LANGS="af ar as be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR \
+es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it \
+ja ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm \
+ro ru si sk sl sq sr sv-SE ta ta-LK te th tr uk vi zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
 
 MY_PV="${PV/_rc/rc}"
@@ -18,7 +23,7 @@ SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="startup-notification"
@@ -26,14 +31,14 @@ IUSE="startup-notification"
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${MY_P}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> mozilla-${MY_P}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${MY_P}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> mozilla-${MY_P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
@@ -90,7 +95,7 @@ src_unpack() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_unpack "${MY_P}-${X}.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "mozilla-${MY_P}-${X}.xpi"
 	done
 	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
@@ -115,7 +120,7 @@ src_install() {
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P/-bin/}-${X}"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"mozilla-${MY_P}-${X}"
 	done
 
 	local LANG=${linguas%% *}
@@ -154,8 +159,7 @@ pkg_postinst() {
 			einfo "gnome-base/orbit and net-misc/curl emerged."
 			einfo
 		fi
-		if has_version 'net-misc/curl' && built_with_use --missing \
-			true 'net-misc/curl' nss; then
+		if has_version 'net-misc/curl[nss]'; then
 			einfo
 			einfo "Crashreporter won't be able to send reports"
 			einfo "if you have curl emerged with the nss USE-flag"
