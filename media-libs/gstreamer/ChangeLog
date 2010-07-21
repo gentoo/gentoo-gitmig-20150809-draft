@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.260 2010/07/12 22:36:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.261 2010/07/21 17:59:43 ford_prefect Exp $
+
+*gstreamer-0.10.30 (21 Jul 2010)
+
+  21 Jul 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +gstreamer-0.10.30.ebuild, metadata.xml:
+  Bump to 0.10.30. Mostly bug fixes and deprecated API cleanup. Also add
+  introspection support.
 
   12 Jul 2010; Jeroen Roovers <jer@gentoo.org> gstreamer-0.10.28.ebuild:
   Stable for HPPA (bug #324691).
