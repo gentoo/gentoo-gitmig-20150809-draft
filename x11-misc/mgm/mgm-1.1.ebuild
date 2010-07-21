@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.15 2005/06/19 20:56:57 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/mgm-1.1.ebuild,v 1.16 2010/07/21 14:54:31 ssuominen Exp $
 
 inherit eutils
 
@@ -16,12 +16,12 @@ IUSE=""
 RDEPEND=">=dev-lang/perl-5.6.1
 	>=dev-perl/perl-tk-800.024"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_install() {
