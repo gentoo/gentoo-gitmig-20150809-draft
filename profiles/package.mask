@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11779 2010/07/21 10:25:31 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11780 2010/07/21 12:39:01 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -262,17 +262,6 @@ app-i18n/adaptit
 #
 # Removal on 2010-08-25
 dev-util/pbuilder
-
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jun 2010)
-# Masked for QA
-# 
-# Fails to compile with stable xulrunner, see bug 317275
-# Fails to compile with GTK+-2.20, see bug 325661
-# Ignores LDFLAGS, see bug 268491
-# Current stable is using vulnerable xulrunner, see bug 324953
-#
-# Removal in 30 days
-www-client/kazehakase
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Jun 2010)
 # Depends on old unslotted media-libs/ming which fails to build
