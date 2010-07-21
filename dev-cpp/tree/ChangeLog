@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.6 2010/04/26 20:33:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.7 2010/07/21 20:15:22 ssuominen Exp $
+
+  21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> tree-2.65.ebuild:
+  ppc64 stable wrt #315687
 
   26 Apr 2010; Markus Meier <maekke@gentoo.org> tree-2.65.ebuild:
   amd64/x86 stable, bug #315687
