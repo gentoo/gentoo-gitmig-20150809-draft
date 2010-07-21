@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.100 2010/01/22 03:47:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.101 2010/07/21 13:18:02 darkside Exp $
+
+*diffstat-1.53 (21 Jul 2010)
+
+  21 Jul 2010; Jeremy Olexa <darkside@gentoo.org> +diffstat-1.53.ebuild:
+  Version bump for small bug fixes, bug 328663
 
   22 Jan 2010; Jeroen Roovers <jer@gentoo.org> diffstat-1.51.ebuild:
   Stable for HPPA (bug #296265).
