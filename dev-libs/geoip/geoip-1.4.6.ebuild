@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.6.ebuild,v 1.11 2009/11/26 17:31:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.6.ebuild,v 1.12 2010/07/21 21:12:01 ssuominen Exp $
 
 EAPI=2
 inherit libtool
@@ -14,7 +14,7 @@ SRC_URI="http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz"
 # GPL-2 for md5.c - part of libGeoIPUpdate, MaxMind for GeoLite Country db
 LICENSE="LGPL-2.1 GPL-2 MaxMind"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="perl-geoipupdate"
 
 DEPEND=""
