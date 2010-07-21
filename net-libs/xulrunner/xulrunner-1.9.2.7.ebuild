@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.7.ebuild,v 1.1 2010/07/21 10:01:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.7.ebuild,v 1.2 2010/07/21 11:28:17 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -66,12 +66,6 @@ src_prepare() {
 
 	# Fix broken mozilla-plugin.pc
 	epatch "${FILESDIR}/${PN}-1.9.2-fix-pkgconfig-file.patch"
-
-	# Fix broken media support
-	epatch "${FILESDIR}/${PN}-1.9.2-noalsa-fixup.patch"
-
-	# Fix broken alignment
-	epatch "${FILESDIR}/1000_fix_alignment.patch"
 
 	# Ensure we find myspell dict.
 	epatch "${FILESDIR}/1002_fix-system-hunspell-dict-detections.patch"
