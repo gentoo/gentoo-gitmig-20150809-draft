@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitler-yuv/subtitler-yuv-0.6.5.ebuild,v 1.3 2007/07/22 08:40:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitler-yuv/subtitler-yuv-0.6.5.ebuild,v 1.4 2010/07/21 00:01:16 sbriesen Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs
 
@@ -11,14 +13,12 @@ HOMEPAGE="http://home.zonnet.nl/panteltje/subtitles/"
 SRC_URI="http://www.ibiblio.org/pub/linux/apps/video/subtitler-yuv-0.6.5.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 DEPEND="x11-libs/libXaw"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i -e 's:/usr/X11R6:/usr:' \
 		-e 's:gcc:$(CC):g' \
 		Makefile || die "sed failed in Makefile"
