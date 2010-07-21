@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4-r1.ebuild,v 1.14 2010/07/21 15:16:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4-r1.ebuild,v 1.15 2010/07/21 15:17:18 ssuominen Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}.parse-color.patch
+	epatch "${FILESDIR}"/${P}.parse-color.patch
 }
 
 src_install() {
