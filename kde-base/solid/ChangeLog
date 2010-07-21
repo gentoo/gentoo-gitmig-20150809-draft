@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.77 2010/07/03 03:23:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.78 2010/07/21 23:44:25 tampakrap Exp $
+
+  21 Jul 2010; Theo Chatzimichos <tampakrap@gentoo.org> solid-4.4.5.ebuild:
+  Add HAL RDEP. It might work without but stuff like PM and NM won't work
+  properly until the backend is switched to the u* daemons. Patch by
+  Christian Schmitt
 
   03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   solid-4.4.5.ebuild:

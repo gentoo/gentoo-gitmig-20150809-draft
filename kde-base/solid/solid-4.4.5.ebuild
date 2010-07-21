@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.4.5.ebuild,v 1.2 2010/07/03 03:23:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.4.5.ebuild,v 1.3 2010/07/21 23:44:25 tampakrap Exp $
 
 EAPI="3"
 
@@ -20,7 +20,9 @@ DEPEND="
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	wicd? ( net-misc/wicd )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	sys-apps/hal
+"
 
 KMEXTRA="
 	libs/solid/
