@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nca/nca-0.9.0.ebuild,v 1.1 2007/05/25 20:44:52 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nca/nca-0.9.0.ebuild,v 1.2 2010/07/21 00:29:13 sbriesen Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.xenoclast.org/nca/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl
@@ -19,10 +21,7 @@ RDEPEND="dev-libs/openssl
 DEPEND="dev-lang/perl
 	${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i -e "s:^\([[:space:]]\+\$(MAKE) install\):\1 DESTDIR=\$(DESTDIR):g" \
 		-e "s:=\(\$(CFLAGS)\):=\"\1\":g" -e "s:=\(\$(CC)\):=\"\1\":g" Makefile
 
