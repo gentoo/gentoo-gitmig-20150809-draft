@@ -1,14 +1,16 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20090709.ebuild,v 1.3 2010/07/11 11:17:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100714.ebuild,v 1.1 2010/07/21 05:26:21 dirtyepic Exp $
 
-# the tar.bz2 was ripped from this rpm:
-# http://mirrors.kernel.org/fedora/development/source/SRPMS/prelink-0.4.2-1.fc12.src.rpm
+EAPI="2"
 
 inherit eutils
 
 DESCRIPTION="Modifies ELFs to avoid runtime symbol resolutions resulting in faster load times"
 HOMEPAGE="http://people.redhat.com/jakub/prelink"
+#SRC_URI="http://people.redhat.com/jakub/prelink/${P}.tar.bz2"
+# if not on http://people.redhat.com/jakub/prelink/, releases can usually be ripped from
+# http://mirrors.kernel.org/fedora/development/source/SRPMS/prelink-<blah>.src.rpm
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -18,24 +20,26 @@ IUSE=""
 
 DEPEND=">=dev-libs/elfutils-0.100
 	!dev-libs/libelf
-	>=sys-libs/glibc-2.3.4"
+	>=sys-libs/glibc-2.8"
 RDEPEND="${DEPEND}
-	>=sys-devel/binutils-2.15.90.0.1"
+	>=sys-devel/binutils-2.18"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-20061201-prelink-conf.patch
+
 	sed -i -e 's:undosyslibs.sh::' testsuite/Makefile.in #254201
-	sed -i \
-		-e '/^CC=/s: : -Wl,--disable-new-dtags :' \
-		testsuite/functions.sh #100147
+	sed -i -e '/^CC=/s: : -Wl,--disable-new-dtags :' testsuite/functions.sh #100147
+}
+
+src_test() {
+	unset LD_AS_NEEDED # 303797
+	emake -j1 check
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "Install Failed"
+	emake DESTDIR="${D}" install || die "Install Failed"
 
 	insinto /etc
 	doins doc/prelink.conf || die
@@ -50,7 +54,7 @@ src_install() {
 	touch "${D}/var/lib/misc/prelink.force"
 	touch "${D}/var/log/prelink.log"
 
-	dodoc INSTALL TODO ChangeLog THANKS README AUTHORS NEWS
+	dodoc TODO ChangeLog
 }
 
 pkg_postinst() {
