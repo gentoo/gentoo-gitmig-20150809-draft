@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.4.3.ebuild,v 1.1 2009/09/09 16:15:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.5.ebuild,v 1.1 2010/07/21 16:25:40 bicatali Exp $
 
 EAPI=2
 inherit eutils virtualx flag-o-matic
@@ -14,25 +14,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND="sci-libs/pgplot
-	sci-libs/cfitsio"
+RDEPEND="sci-libs/cfitsio
+	sci-libs/pgplot"
 DEPEND="${RDEPEND}
-	test? (
-		media-fonts/font-misc-misc
-		media-fonts/font-cursor-misc )"
+	test? ( media-fonts/font-misc-misc
+			media-fonts/font-cursor-misc )"
 
 src_prepare() {
-	sed -i \
-		-e 's/$(SHRLD)/$(SHRLD) $(LDFLAGS)/' \
-		C/GNUmakefile || die
 	epatch "${FILESDIR}"/${PN}-4.4.2-flibs.patch
-	epatch "${FILESDIR}"/${PN}-4.4.2-destdir.patch
+	epatch "${FILESDIR}"/${PN}-4.4.4-destdir.patch
+	epatch "${FILESDIR}"/${PN}-4.4.4-ldflags.patch
 	append-flags -U_FORTIFY_SOURCE
 }
 
 src_compile() {
 	# -j1 forced. build system too crappy to be worth debugging
-	# does not really fix anything
 	emake -j1 || die "emake failed"
 }
 
@@ -42,7 +38,7 @@ src_test() {
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README
+	dodoc README || die
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins -r *.pdf html || die
