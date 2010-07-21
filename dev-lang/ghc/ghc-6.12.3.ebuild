@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.9 2010/07/20 13:28:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.10 2010/07/21 21:49:33 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -216,6 +216,9 @@ src_unpack() {
 		# native adjustor (NA) code is broken: interactive darcs-2.4 coredumps on NA
 		epatch "${FILESDIR}/ghc-6.12.3-ia64-use-libffi-for-foreign-import-wrapper.patch"
 
+		# same with NA on ppc
+		epatch "${FILESDIR}/ghc-6.12.3-ppc-use-libffi-for-foreign-import-wrapper.patch"
+
 		# as we have changed the build system
 		eautoreconf
 	fi
@@ -284,7 +287,9 @@ src_compile() {
 
 		econf || die "econf failed"
 
-		emake all || die "make failed"
+		# LC_ALL needs to workaround ghc's ParseCmm failure on some (es) locales
+		# bug #202212 / http://hackage.haskell.org/trac/ghc/ticket/4207
+		LC_ALL=C emake all || die "make failed"
 
 	fi # ! use binary
 }

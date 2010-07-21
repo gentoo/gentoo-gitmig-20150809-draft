@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.8.2-r1.ebuild,v 1.4 2010/07/14 09:02:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.8.2-r1.ebuild,v 1.5 2010/07/21 21:49:33 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -218,7 +218,9 @@ src_compile() {
 
 	econf || die "econf failed"
 
-	emake all || die "make failed"
+	# LC_ALL needs to workaround ghc's ParseCmm failure on some (es) locales
+	# bug #202212 / http://hackage.haskell.org/trac/ghc/ticket/4207
+	LC_ALL=C emake all || die "make failed"
 }
 
 src_install() {

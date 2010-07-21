@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.28 2010/07/14 09:02:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.29 2010/07/21 21:49:33 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -232,8 +232,10 @@ src_compile() {
 			$(use opengl && echo "--enable-hopengl") \
 			|| die "econf failed"
 
+		# LC_ALL needs to workaround ghc's ParseCmm failure on some (es) locales
+		# bug #202212 / http://hackage.haskell.org/trac/ghc/ticket/4207
 		# ghc-6.2.x build system does not support parallel make
-		emake -j1 datadir="/usr/share/doc/${P}" || die "make failed"
+		LC_ALL=C emake -j1 datadir="/usr/share/doc/${P}" || die "make failed"
 		# the explicit datadir is required to make the haddock entries
 		# in the package.conf file point to the right place ...
 

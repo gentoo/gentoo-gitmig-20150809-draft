@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.187 2010/07/20 13:28:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.188 2010/07/21 21:49:33 slyfox Exp $
+
+  21 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.2.2.ebuild,
+  ghc-6.4.2.ebuild, ghc-6.6.ebuild, ghc-6.6.1.ebuild, ghc-6.8.2.ebuild,
+  ghc-6.8.2-r1.ebuild, ghc-6.10.4-r1.ebuild, ghc-6.12.1.ebuild,
+  ghc-6.12.3.ebuild,
+  +files/ghc-6.12.3-ppc-use-libffi-for-foreign-import-wrapper.patch:
+  Fixed build faiures on 'es' locale (bug #202212). Thanks to Jesús
+  Guerrero <i92guboj@gentoo.org> and Francisco Lloret <fcolloret@terra.es>
+  for the report. Fixed f.i.w on ppc this time. Thanks to Joseph Jezak
+  <josejx@gentoo.org> for the failure report.
 
   20 Jul 2010; Joseph Jezak <josejx@gentoo.org> ghc-6.12.3.ebuild:
   Added ppc build for 6.12.3. Marked ~ppc.
