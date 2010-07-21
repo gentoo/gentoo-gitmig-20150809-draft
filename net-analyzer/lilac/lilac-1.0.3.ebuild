@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lilac/lilac-1.0.2.ebuild,v 1.1 2009/07/10 21:13:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lilac/lilac-1.0.3.ebuild,v 1.1 2010/07/21 17:24:28 dertobi123 Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit eutils webapp depend.php
 
 DESCRIPTION="Web-based configuration tool written to configure Nagios"
 HOMEPAGE="http://www.lilacplatform.com"
-SRC_URI="http://www.lilacplatform.com/downloads/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
