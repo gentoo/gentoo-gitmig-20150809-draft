@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.1.ebuild,v 1.5 2010/06/05 14:48:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.1.ebuild,v 1.6 2010/07/21 10:54:06 jer Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="http://icculus.org/physfs/downloads/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc grp hog mvl qpak static-libs wad +zip"
 
 RDEPEND=""
