@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.280 2010/06/01 08:13:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.281 2010/07/21 00:58:57 polynomial-c Exp $
+
+  21 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/xchat-input-box3.patch, xchat-2.8.8.ebuild:
+  Added a patch to make the input box a bit smaller. Thanks to s0ulslack for
+  reporting this in bug #301161 and to Rafał Mużyło for the patch.
 
 *xchat-2.8.8 (01 Jun 2010)
 
