@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.28 2010/07/11 12:01:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.29 2010/07/21 13:02:45 graaff Exp $
+
+*sphinx-1.10_beta (21 Jul 2010)
+
+  21 Jul 2010; Hans de Graaff <graaff@gentoo.org> +sphinx-1.10_beta.ebuild:
+  Version bump with many new features, including real-time indexing. See
+  http://sphinxsearch.com/docs/current.html#rel110
 
   11 Jul 2010; Markus Meier <maekke@gentoo.org> sphinx-0.9.9.ebuild:
   x86 stable, bug #322751
