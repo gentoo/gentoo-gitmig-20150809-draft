@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/capi4k-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.65 2009/08/31 22:32:26 ikelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.66 2010/07/21 14:03:38 sbriesen Exp $
+
+*capi4k-utils-20050718-r4 (21 Jul 2010)
+
+  21 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +capi4k-utils-20050718-r4.ebuild, metadata.xml:
+  major ebuild cleanup, removing hotplug-stuff (bug #209966), respect
+  LDFLAGS (bug #293209), removing obsolete fritzcapi stuff.
 
   31 Aug 2009; Mike Auty <ikelos@gentoo.org>
   capi4k-utils-20050718-r3.ebuild:
