@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>A network tool to gather ip traffic informations</longdescription>
+<longdescription>A network tool to gather IP traffic information</longdescription>
 <use>
   <flag name='64bit'>Use 64bit counters instead of 32bit ones</flag>
   <flag name='ulog'>Enable ULOG support</flag>
