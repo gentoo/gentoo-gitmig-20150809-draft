@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.7.ebuild,v 1.1 2010/07/21 10:04:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.7.ebuild,v 1.2 2010/07/21 11:32:21 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -132,12 +132,6 @@ src_prepare() {
 
 	# The patch excluded above failed, ported patch is applied below
 	epatch "${FILESDIR}/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch"
-
-	# Fix media build failure
-	epatch "${FILESDIR}/xulrunner-1.9.2-noalsa-fixup.patch"
-
-	# Fix broken alignment
-	epatch "${FILESDIR}/1000_fix_alignment.patch"
 
 	# ARM fixes, bug 327783
 	epatch "${FILESDIR}/xulrunner-1.9.2-arm-fixes.patch"
