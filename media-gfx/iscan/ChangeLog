@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.37 2010/07/21 22:43:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.38 2010/07/21 22:50:47 sbriesen Exp $
+
+  21 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org> iscan-2.25.0.ebuild:
+  added missing dependency (bug #292538).
 
 *iscan-2.25.0 (21 Jul 2010)
 
