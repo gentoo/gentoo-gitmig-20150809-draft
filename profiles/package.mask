@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11781 2010/07/21 12:43:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11782 2010/07/21 12:54:05 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -230,24 +230,9 @@ dev-libs/seed
 # See bug #324411.
 dev-haskell/filepath
 
-# Samuli Suominen <ssuominen@gentoo.org> (28 Jun 2010)
-# Fails to compile, bug #274385
-# Internal copy of old libpcap and libtomcrypt, bug #278419
-# File collision with dev-lang/mono, bug #303957
-# Masked for removal in 30 days
-net-analyzer/paketto
-
 # Christian Faulhammer <fauli@gentoo.org> (28 Jun 2010)
 # Beta version
 ~dev-lang/erlang-14.1
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Jun 2010)
-# Wrongly stripping -Wl, from LDFLAGS causing sane-compiler-check
-# to fail from autoconf based script.
-# Broken OpenCV check, doesn't find the cvCreateImage symbol it's looking 
-# from -lcv. Orphaned library and ebuild been broken since 2008.
-# Masked for removal in 30 days. Bug 280922.
-media-libs/libdecodeqr
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (26 Jun 2010)
 #  on behalf of QA team
@@ -266,14 +251,6 @@ app-i18n/adaptit
 #
 # Removal on 2010-08-25
 dev-util/pbuilder
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Jun 2010)
-# Depends on old unslotted media-libs/ming which fails to build
-# Ignores build flags wrt bug 240820
-# Needs version bump wrt bug 272974, still using old ming
-# built_with_use cleanup, bug 286253
-# masked for removal in 30 days
-media-libs/ploticus
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2010)
 #  on behalf of QA team
@@ -295,12 +272,6 @@ media-libs/ploticus
 mail-client/exmh
 mail-client/nmh
 
-# Samuli Suominen <ssuominen@gentoo.org> (24 Jun 2010)
-# poorly written ebuild and sources are no longer available,
-# mirror restricted
-# masked for removal in 30 days
-app-editors/xxe
-
 # Kacper Kowalik <xarthisius@gentoo.org> (24 Jun 2010)
 # Last release in 2002. fails with --as-needed Bug 248356
 # Build system beyond repair, automagic dependency on Tcl
@@ -308,18 +279,6 @@ app-editors/xxe
 #
 # masked for removal in 30 days
 sci-geosciences/vis5d+
-
-# Samuli Suominen <ssuominen@gentoo.org> (24 Jun 2010)
-# these are included in KDE 4.4, so no need for separate ebuilds
-#
-# qalculate-applet, bug 321255
-# aurorae, bug 325061
-# blogilo is now kde-base/blogilo
-#
-# masked for removal in 30 days
-kde-misc/qalculate-applet
-x11-themes/aurorae
-kde-misc/blogilo
 
 # Michał Januszewski <spock@gentoo.org> (24 Jun 2010)
 # Temporary mask to be removed once the ebuild is confirmed to work
@@ -330,14 +289,6 @@ kde-misc/blogilo
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (22 Jun 2010)
 # Masked for testing. It's quite "challenging" to package.
 >=sci-mathematics/nusmv-2.5.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Jun 2010)
-# Replaced by sys-kernel/dracut
-#
-# Unresolved bugs 127542, 144365, 174068, 181685, 268285
-#
-# Removal in 30 days, see bug 324741
-sys-apps/mkinitrd
 
 # Christian Faulhammer <fauli@gentoo.org> (22 Jun 2010)
 # Masked for removal in 30 days
