@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gupnp-av
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.6 2009/12/09 04:10:09 ford_prefect Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.7 2010/07/21 10:51:29 ford_prefect Exp $
+
+*gupnp-av-0.5.7 (21 Jul 2010)
+
+  21 Jul 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +gupnp-av-0.5.7.ebuild, metadata.xml:
+  Bump to 0.5.7. Several bug fixes, some enhancements, introspection
+  support.
 
 *gupnp-av-0.5.2 (09 Dec 2009)
 
