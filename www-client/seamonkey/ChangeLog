@@ -1,6 +1,6 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.236 2010/07/21 09:53:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.237 2010/07/21 12:26:23 jer Exp $
 
 *seamonkey-2.0.6 (21 Jul 2010)
 
@@ -52,6 +52,9 @@
   04 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
   seamonkey-1.1.18.ebuild:
   Removed KEYWORDS for which we now have stable ones in seamonkey-2.
+
+  02 Jul 2010; Guy Martin <gmsoft@gentoo.org> seamonkey-2.0.5.ebuild:
+  Stable for HPPA (bug #324735).
 
   26 Jun 2010; Raúl Porcel <armin76@gentoo.org> seamonkey-2.0.5.ebuild:
   alpha/ia64/sparc stable wrt #324735
