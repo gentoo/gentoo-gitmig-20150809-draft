@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/i855crt-0.4-r1.ebuild,v 1.1 2006/09/20 14:56:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/i855crt-0.4-r1.ebuild,v 1.2 2010/07/21 14:41:33 ssuominen Exp $
 
 inherit eutils
 
@@ -14,21 +14,20 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="x11-libs/libXext
-		x11-libs/libXv"
+	x11-libs/libXv"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/${PN}-i915support.diff || die "failed to apply patch"
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-i915support.diff
 
 	# upstream ships it with the binary, we want to make sure we compile it
-	make clean || die "make clean failed"
+	make clean || die
 }
 
 src_install() {
-	dobin i855crt
+	dobin i855crt || die
 	insinto /etc
-	doins i855crt.conf
+	doins i855crt.conf || die
 }
