@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/gtksourceviewmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.6 2010/07/20 16:35:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.7 2010/07/21 16:30:34 pacho Exp $
+
+*gtksourceviewmm-2.10.1 (21 Jul 2010)
+
+  21 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  +gtksourceviewmm-2.10.1.ebuild:
+  Version bump (bug #266221 by Tim Harder), also update homepage, update
+  license, fix doc configure options...
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gtksourceviewmm-2.2.0.ebuild:
   Drop HPPA keywording (bug #324511).
