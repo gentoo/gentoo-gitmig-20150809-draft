@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.325 2010/07/21 11:31:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.326 2010/07/21 12:47:12 chainsaw Exp $
+
+  21 Jul 2010; <chainsaw@gentoo.org> metadata.xml:
+  Address metadata concerns by Jeroen "rej" Roovers <rej@gentoo.org> raised
+  on gentoo-dev.
 
   21 Jul 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Correct mail address.

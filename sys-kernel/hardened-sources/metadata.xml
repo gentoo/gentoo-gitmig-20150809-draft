@@ -4,18 +4,6 @@
 	<herd>kernel</herd>
 	<herd>hardened</herd>
 	<maintainer>
-		<email>quantumsummers@gentoo.org</email>
-		<name>Matthew Summers</name>
-	</maintainer>
-	<maintainer>
-		<email>robbat2@gentoo.org</email>
-		<name>Robin H. Johnson</name>
-	</maintainer>
-	<maintainer>
-		<email>chainsaw@gentoo.org</email>
-		<name>Tony Vroon</name>
-	</maintainer>
-	<maintainer>
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
 	</maintainer>
