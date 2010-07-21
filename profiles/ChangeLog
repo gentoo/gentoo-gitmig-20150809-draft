@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4413 2010/07/21 19:31:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4414 2010/07/21 19:31:42 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   21 Jul 2010; <chainsaw@gentoo.org> package.mask:
-  Remove masking of obselete Asterisk packages now that they are removed
+  Remove masking of obsolete Asterisk packages now that they are removed
   from the tree. Bug #298682, #299338, #312433, #313663, #316365 & #316761.
 
   21 Jul 2010; Luca Barbato <lu_zero@gentoo.org> package.mask:
