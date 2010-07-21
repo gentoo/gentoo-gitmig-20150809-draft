@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.7.ebuild,v 1.2 2010/07/21 11:28:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.7.ebuild,v 1.3 2010/07/21 13:18:52 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -72,6 +72,9 @@ src_prepare() {
 
 	# ARM fixes, bug 327783
 	epatch "${FILESDIR}/${PN}-1.9.2-arm-fixes.patch"
+
+	# Enable tracemonkey for amd64 (bug #315997)
+	epatch "${FILESDIR}/801-enable-x86_64-tracemonkey.patch"
 
 	# Allow user to apply additional patches without modifing ebuild
 	epatch_user
