@@ -1,15 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.3.ebuild,v 1.7 2010/06/19 18:38:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.7.ebuild,v 1.1 2010/07/21 10:04:35 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib pax-utils fdo-mime autotools mozextension java-pkg-opt-2 python
 
-LANGS="af ar as be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR
-es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it ja
-ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro ru
-si sk sl sq sr sv-SE ta ta-LK te th tr uk vi zh-CN zh-TW"
+LANGS="af ar as be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR \
+es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it \
+ja ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm \
+ro ru si sk sl sq sr sv-SE ta ta-LK te th tr uk vi zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
 
 MAJ_XUL_PV="1.9.2"
@@ -22,10 +22,10 @@ PATCH="${PN}-3.6-patches-0.6"
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa bindist java libnotify system-sqlite wifi"
+IUSE="+alsa bindist +ipc java libnotify system-sqlite wifi"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2
@@ -58,7 +58,7 @@ RDEPEND="
 	x11-libs/pango[X]
 	wifi? ( net-wireless/wireless-tools )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
-	~net-libs/xulrunner-${XUL_PV}[java=,wifi=,libnotify=,system-sqlite=]"
+	~net-libs/xulrunner-${XUL_PV}[ipc=,java=,wifi=,libnotify=,system-sqlite=]"
 
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.4 )
@@ -127,13 +127,20 @@ src_prepare() {
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
+	EPATCH_EXCLUDE="137-bz460917_att350845_reload_new_plugins-gentoo-update.patch" \
 	epatch "${WORKDIR}"
+
+	# The patch excluded above failed, ported patch is applied below
+	epatch "${FILESDIR}/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch"
 
 	# Fix media build failure
 	epatch "${FILESDIR}/xulrunner-1.9.2-noalsa-fixup.patch"
 
 	# Fix broken alignment
 	epatch "${FILESDIR}/1000_fix_alignment.patch"
+
+	# ARM fixes, bug 327783
+	epatch "${FILESDIR}/xulrunner-1.9.2-arm-fixes.patch"
 
 	# Allow user to apply additional patches without modifing ebuild
 	epatch_user
@@ -187,11 +194,11 @@ src_configure() {
 	mozconfig_annotate '' --enable-system-hunspell
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
-	mozconfig_annotate '' --enable-system-lcms
 	mozconfig_annotate '' --with-system-bz2
 	mozconfig_annotate '' --with-system-libxul
 	mozconfig_annotate '' --with-libxul-sdk=/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
 
+	mozconfig_use_enable ipc # +ipc, upstream default
 	mozconfig_use_enable libnotify
 	mozconfig_use_enable java javaxpcom
 	mozconfig_use_enable wifi necko-wifi
