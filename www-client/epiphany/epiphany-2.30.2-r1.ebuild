@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.2 2010/07/08 13:46:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.3 2010/07/21 15:58:56 pacho Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.19.7
 	>=gnome-base/gconf-2
 	>=app-text/iso-codes-0.35
 	>=net-libs/webkit-gtk-1.1.22
-	>=net-libs/libsoup-2.29.91[gnome]
+	>=net-libs/libsoup-gnome-2.29.91
 	>=gnome-base/gnome-keyring-2.26.0
 
 	x11-libs/libICE
