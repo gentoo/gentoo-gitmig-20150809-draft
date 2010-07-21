@@ -1,13 +1,13 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/xoo-0.7.ebuild,v 1.3 2007/07/22 03:58:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xoo/xoo-0.7.ebuild,v 1.4 2010/07/21 15:01:34 ssuominen Exp $
 
-DESCRIPTION="Xoo is a graphical wrapper around xnest. You can make Xnest look like a particular device's display and set up buttons on that device."
+DESCRIPTION="A graphical wrapper around xnest"
 HOMEPAGE="http://projects.o-hand.com/xoo"
 SRC_URI="http://projects.o-hand.com/sources/xoo/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="~x86"
 IUSE="gnome"
 
@@ -18,21 +18,18 @@ DEPEND="gnome? ( gnome-base/gconf )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	# Fix default Xnest binary path.
-	sed -e "s:/usr/X11R6/bin/Xnest:$(type -P Xnest):" -i src/main.c || die "sed failed."
+	sed -e "s:/usr/X11R6/bin/Xnest:$(type -P Xnest):" -i src/main.c || die
 }
 
 src_compile() {
-	econf $(use_enable gnome gconf) \
-		|| die "Configuration failed"
-
-	emake || die "Compilation failed"
+	econf \
+		$(use_enable gnome gconf)
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Installation failed"
-
-	dodoc AUTHORS Changelog INSTALL NEWS README TODO
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS Changelog NEWS README TODO
 }
