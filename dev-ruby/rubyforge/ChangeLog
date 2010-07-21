@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.63 2010/06/29 10:36:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.64 2010/07/21 12:38:34 fauli Exp $
+
+  21 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  rubyforge-2.0.4.ebuild:
+  stable x86, bug 321043
 
   29 Jun 2010; Christoph Mende <angelos@gentoo.org> rubyforge-2.0.4.ebuild:
   Stable on amd64 wrt bug #321043
