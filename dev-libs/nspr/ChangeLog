@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.144 2010/07/02 09:14:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.145 2010/07/21 14:00:18 darkside Exp $
+
+  21 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
+  +files/nspr-4.7.1-solaris.patch, +files/nspr-4.7.4-solaris.patch,
+  +files/nspr-4.8.3-aix-gcc.patch, +files/nspr-4.8.3-aix-soname.patch,
+  nspr-4.8.4-r1.ebuild, +files/nspr-4.8.4-darwin-install_name.patch:
+  Migrate changes from Gentoo Prefix overlay. Convert to EAPI3, add patches,
+  etc. Approved by mozilla team in IRC, reference bug 328119
 
   02 Jul 2010; Guy Martin <gmsoft@gentoo.org> nspr-4.8.4.ebuild:
   hppa stable, #324735
