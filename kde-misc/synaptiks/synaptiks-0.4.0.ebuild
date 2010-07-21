@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.4.0.ebuild,v 1.2 2010/04/11 21:51:58 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.4.0.ebuild,v 1.3 2010/07/21 21:29:27 scarabeus Exp $
 
 EAPI=2
-KDE_LINGUAS="da de en_GB ru tr"
+KDE_LINGUAS="cs da de es ga lt nds pt pt_BR ru sv uk"
 inherit kde4-base
 
 DESCRIPTION="A simple touchpad management service for KDE"

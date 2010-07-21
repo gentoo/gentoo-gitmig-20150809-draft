@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.11 2010/04/11 21:51:58 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.12 2010/07/21 21:29:26 scarabeus Exp $
+
+  21 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  synaptiks-0.4.0.ebuild:
+  Update linguas per bug #329337.
 
   11 Apr 2010; Dror Levin <spatz@gentoo.org> synaptiks-0.4.0.ebuild:
   Remove DOCS as they don't exist in newer version, bug 314745.
