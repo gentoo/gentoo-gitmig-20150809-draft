@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.22 2010/02/19 18:58:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.23 2010/07/21 10:47:29 ford_prefect Exp $
+
+*gupnp-0.13.4 (21 Jul 2010)
+
+  21 Jul 2010; Arun Raghavan <ford_prefect@gentoo.org> +gupnp-0.13.4.ebuild,
+  metadata.xml:
+  Bump to 0.13.4. Several bug fixes, some enhancement, introspection
+  support.
 
   19 Feb 2010; Raúl Porcel <armin76@gentoo.org> gupnp-0.12.8.ebuild:
   ia64/sparc stable
