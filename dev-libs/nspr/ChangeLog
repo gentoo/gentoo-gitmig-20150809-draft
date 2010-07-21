@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.145 2010/07/21 14:00:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.146 2010/07/21 23:18:27 anarchy Exp $
+
+  21 Jul 2010; Jory A. Pratt <anarchy@gentoo.org> nspr-4.8.4-r1.ebuild:
+  Fix src_compile() so we are not failing to build
 
   21 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
   +files/nspr-4.7.1-solaris.patch, +files/nspr-4.7.4-solaris.patch,
