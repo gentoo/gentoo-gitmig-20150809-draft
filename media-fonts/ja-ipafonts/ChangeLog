@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ja-ipafonts
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ChangeLog,v 1.28 2010/07/20 00:59:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ChangeLog,v 1.29 2010/07/21 20:12:10 ssuominen Exp $
+
+  21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  ja-ipafonts-003.02-r1.ebuild:
+  ppc64 stable wrt #320597
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> ja-ipafonts-003.02-r1.ebuild:
   Stable for HPPA (bug #320597).
