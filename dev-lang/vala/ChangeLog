@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.23 2010/07/15 16:31:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.24 2010/07/21 09:50:14 ford_prefect Exp $
+
+*vala-0.9.3 (21 Jul 2010)
+
+  21 Jul 2010; Arun Raghavan <ford_prefect@gentoo.org> +vala-0.9.3.ebuild:
+  Bump to 0.9.3. Lots of enhancements, bug fixes and vapi fixes.
 
   15 Jul 2010; Jeroen Roovers <jer@gentoo.org> vala-0.8.1.ebuild:
   Marked ~hppa (bug #320429).
