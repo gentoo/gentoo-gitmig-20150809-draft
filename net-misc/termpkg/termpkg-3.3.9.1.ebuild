@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/termpkg-3.3.9.1.ebuild,v 1.1 2008/09/23 19:34:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/termpkg-3.3.9.1.ebuild,v 1.2 2010/07/21 00:17:26 sbriesen Exp $
+
+EAPI="2"
 
 inherit eutils versionator
 
@@ -22,10 +24,7 @@ RDEPEND="sys-process/procps"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# apply debian patches
 	epatch "${WORKDIR}/${PN}_${MY_PF}.diff"
 
