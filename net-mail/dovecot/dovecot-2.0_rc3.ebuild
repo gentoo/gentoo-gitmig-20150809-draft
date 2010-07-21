@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc2.ebuild,v 1.2 2010/07/18 20:44:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc3.ebuild,v 1.1 2010/07/21 12:10:59 darkside Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils versionator ssl-cert
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
-sieve_snapshot="37b0ecfb4de7"
+sieve_snapshot="01ee63b788c9"
 SRC_URI="http://dovecot.org/releases/${major_minor}/rc/${MY_P}.tar.gz
 	sieve? (
 	http://hg.rename-it.nl/dovecot-2.0-pigeonhole/archive/${sieve_snapshot}.tar.gz
@@ -23,7 +23,7 @@ SLOT="0"
 LICENSE="LGPL-2.1" # MIT too?
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
 
-IUSE="berkdb bzip2 caps cydir dbox doc ipv6 kerberos ldap +maildir managesieve
+IUSE="berkdb bzip2 caps cydir sdbox doc ipv6 kerberos ldap +maildir managesieve
 mbox mdbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
 
 DEPEND="berkdb? ( sys-libs/db )
@@ -39,6 +39,8 @@ DEPEND="berkdb? ( sys-libs/db )
 
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00-r8"
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use managesieve && ! use sieve; then
@@ -68,12 +70,11 @@ src_configure() {
 	fi
 
 	local storages=""
-	for storage in cydir dbox mdbox maildir mbox; do
+	for storage in cydir sdbox mdbox maildir mbox; do
 		use ${storage} && storages="${storage} ${storages}"
 	done
 	[ "${storages}" ] || storages="maildir"
 
-	cd ${MY_P}
 	econf \
 		--localstatedir=/var \
 		--with-moduledir="/usr/$( get_libdir )/dovecot" \
@@ -100,6 +101,8 @@ src_configure() {
 		# snapshot. should not be necessary for 2.0 release
 		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
 		./autogen.sh || die "autogen failed"
+		# stupid no-op check in Makefile
+		#sed -i -e 's/^check: check-recursive/check: test/' Makefile*
 
 		econf \
 			--localstatedir=/var \
@@ -110,7 +113,6 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${MY_P}"
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
 
 	if use sieve || use managesieve ; then
@@ -119,8 +121,18 @@ src_compile() {
 	fi
 }
 
+src_test() {
+	default_src_test
+	# not yet.  WIP upstream
+	#if use sieve || use managesieve ; then
+		#einfo "Beginning sieve tests..."
+		## snapshot. should not be necessary for 2.0 release
+		#cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
+		#default_src_test
+	#fi
+}
+
 src_install () {
-	cd "${MY_P}"
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	# insecure:
@@ -168,10 +180,10 @@ src_install () {
 			keepdir /var/dovecot
 			sed -i -e 's|#mail_privileged_group =|mail_privileged_group = mail|' \
 			"${confd}/10-mail.conf" || die "sed failed"
-		elif use dbox ; then
-			mail_location="dbox:~/.dbox"
+		elif use sdbox ; then
+			mail_location="sdbox:~/.sdbox"
 		elif use mdbox ; then
-			mail_location="mdbox:~/.dbox"
+			mail_location="mdbox:~/.mdbox"
 		fi
 	fi
 	sed -i -e \
@@ -247,6 +259,7 @@ src_install () {
 		dodoc doc/rfc/*.txt
 		docinto sieve/devel
 		dodoc doc/devel/DESIGN
+		doman doc/man/*.1
 	fi
 
 }
@@ -265,8 +278,9 @@ pkg_preinst() {
 		elog "in ${ROOT}etc/dovecot"
 	elif [[ $dovecot_upgrade_from_1_x = 0 ]] ; then
 		elog "There are a lot of changes in configuration files in dovecot-2.0."
-		elog "Please check the conf files in ${ROOT}etc/dovecot."
-		elog "You can run doveconf -n before running etc-update or"
+		elog "Please read http://wiki2.dovecot.org/Upgrading/2.0 and"
+		elog "check the conf files in ${ROOT}etc/dovecot."
+		elog "You can also run doveconf -n before running etc-update or"
 		elog "dispatch-conf to get an idea about what needs to be changed."
 		ewarn "Do not {re}start dovecot without checking your conf files"
 		ewarn "and making the necessary changes."

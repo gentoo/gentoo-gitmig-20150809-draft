@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.247 2010/07/18 20:44:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.248 2010/07/21 12:10:59 darkside Exp $
+
+*dovecot-2.0_rc3 (21 Jul 2010)
+
+  21 Jul 2010; Jeremy Olexa <darkside@gentoo.org> -dovecot-1.2.8.ebuild,
+  -dovecot-2.0_rc2.ebuild, +dovecot-2.0_rc3.ebuild, metadata.xml:
+  Version bump bug #329241 by Eray Aslan. dbox USE flag changed to sdbox to
+  follow upstream.
 
   18 Jul 2010; Joseph Jezak <josejx@gentoo.org> dovecot-1.2.11-r2.ebuild,
   dovecot-1.2.12.ebuild, dovecot-2.0_rc2.ebuild:
