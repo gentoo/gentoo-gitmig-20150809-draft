@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.69 2010/07/19 21:42:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.70 2010/07/21 16:54:55 ssuominen Exp $
+
+  21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libassuan-2.0.0.ebuild:
+  ppc64 stable wrt #320037
 
   19 Jul 2010; Markus Meier <maekke@gentoo.org> libassuan-2.0.0.ebuild:
   arm stable, bug #320037
