@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20090609.ebuild,v 1.4 2009/10/30 11:05:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20090609.ebuild,v 1.5 2010/07/21 15:17:45 ssuominen Exp $
 
 EAPI=2
 
@@ -21,7 +21,6 @@ DEPEND="x11-libs/libXtst
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	cd "${S}"
 	sed -i -e "s:^CFLAGS=.*:CFLAGS=-std=c99 ${CFLAGS}:" \
 		-e "s:^LIBS=.*:LIBS=$(pkg-config --libs x11 xtst):" \
 		-e "s:^INC=.*:INC=$(pkg-config --cflags x11 xtst):" \
