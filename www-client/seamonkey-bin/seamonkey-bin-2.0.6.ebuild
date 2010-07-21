@@ -1,34 +1,38 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-1.1.18.ebuild,v 1.3 2009/09/29 22:23:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.0.6.ebuild,v 1.1 2010/07/21 10:14:43 polynomial-c Exp $
 
 inherit eutils mozilla-launcher multilib
 
+MY_PV="${PV/_alpha/a}"
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${PV}/seamonkey-${PV}.en-US.linux-i686.tar.gz"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${MY_PV}/linux-i686/en-US/seamonkey-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip"
 QA_EXECSTACK="opt/seamonkey/*"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="x11-libs/libXrender
+RDEPEND="dev-libs/dbus-glib
+	x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
-		=virtual/libstdc++-3.3
+		>=media-libs/alsa-lib-1.0.16
 	)
 	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-1.0
-		>=app-emulation/emul-linux-x86-gtklibs-1.0
-		app-emulation/emul-linux-x86-compat
+		>=app-emulation/emul-linux-x86-baselibs-20081109
+		>=app-emulation/emul-linux-x86-gtklibs-20081109
+		>=app-emulation/emul-linux-x86-soundlibs-20081109
 	)
-	>=www-client/mozilla-launcher-1.56"
+	!<www-client/seamonkey-bin-2"
 
 S="${WORKDIR}/seamonkey"
 
@@ -46,8 +50,14 @@ src_install() {
 	dodir ${MOZILLA_FIVE_HOME%/*}
 	mv "${S}" "${D}${MOZILLA_FIVE_HOME}"
 
-	# Install /usr/bin/seamonkey-bin
-	install_mozilla_launcher_stub seamonkey-bin ${MOZILLA_FIVE_HOME}
+	# Create /usr/bin/seamonkey-bin
+	dodir /usr/bin/
+	cat <<EOF >"${D}"/usr/bin/seamonkey-bin
+#!/bin/sh
+unset LD_PRELOAD
+exec /opt/seamonkey/seamonkey "\$@"
+EOF
+	fperms 0755 /usr/bin/seamonkey-bin
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}/icon/${PN}.png"
@@ -64,9 +74,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use amd64 && einfo "NB: You just installed a 32-bit seamonkey"
-	update_mozilla_launcher_symlinks
-}
 
-pkg_postrm() {
-	update_mozilla_launcher_symlinks
+	einfo
+	einfo "If you want/need native language support please download"
+	einfo "and install the language pack that you need from :"
+	einfo "http://releases.mozilla.org/pub/mozilla.org/seamonkey/releases/${MY_PV}/langpack/"
 }
