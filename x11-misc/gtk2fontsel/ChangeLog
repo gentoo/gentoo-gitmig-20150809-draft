@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/gtk2fontsel
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtk2fontsel/ChangeLog,v 1.1 2010/07/21 19:20:51 ssuominen Exp $
+
+*gtk2fontsel-0.1 (21 Jul 2010)
+
+  21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gtk2fontsel-0.1.ebuild:
+  Initial commit.
+
