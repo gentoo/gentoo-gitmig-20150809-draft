@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.3-r1.ebuild,v 1.9 2010/06/21 12:00:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.7.ebuild,v 1.1 2010/07/21 10:01:57 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -17,10 +17,10 @@ HOMEPAGE="http://developer.mozilla.org/en/docs/XULRunner"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
 
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="1.9"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa debug libnotify system-sqlite wifi"
+IUSE="+alsa debug +ipc libnotify system-sqlite wifi"
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	>=sys-devel/binutils-2.16.1
@@ -29,10 +29,10 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
 	>=app-text/hunspell-1.2
-	=media-libs/lcms-1*
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]
 	x11-libs/libXt
+	x11-libs/pixman
 	wifi? ( net-wireless/wireless-tools )
 	libnotify? ( >=x11-libs/libnotify-0.4 )"
 
@@ -75,6 +75,9 @@ src_prepare() {
 
 	# Ensure we find myspell dict.
 	epatch "${FILESDIR}/1002_fix-system-hunspell-dict-detections.patch"
+
+	# ARM fixes, bug 327783
+	epatch "${FILESDIR}/${PN}-1.9.2-arm-fixes.patch"
 
 	# Allow user to apply additional patches without modifing ebuild
 	epatch_user
@@ -144,9 +147,9 @@ src_configure() {
 	mozconfig_annotate '' --enable-system-hunspell
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
-	mozconfig_annotate '' --enable-system-lcms
 	mozconfig_annotate '' --with-system-bz2
 
+	mozconfig_use_enable ipc # +ipc, upstream default
 	mozconfig_use_enable libnotify
 	mozconfig_use_enable java javaxpcom
 	mozconfig_use_enable wifi necko-wifi
@@ -192,6 +195,13 @@ src_install() {
 
 	MOZLIBDIR="/usr/$(get_libdir)/${PN}-${MAJ_PV}"
 	SDKDIR="/usr/$(get_libdir)/${PN}-devel-${MAJ_PV}/sdk"
+
+	if has_multilib_profile; then
+		local config
+		for config in "${D}"/etc/gre.d/*.system.conf ; do
+			mv "${config}" "${config%.conf}.${CHOST}.conf"
+		done
+	fi
 
 	dodir /usr/bin
 	dosym "${MOZLIBDIR}/xulrunner" "/usr/bin/xulrunner-${MAJ_PV}" || die
