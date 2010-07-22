@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.17 2007/07/22 04:38:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpinboard/wmpinboard-1.0.ebuild,v 1.18 2010/07/22 14:37:17 ssuominen Exp $
 
 inherit eutils
 
@@ -20,14 +20,12 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc alpha amd64 ppc"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/wmpinboard-1.0-segfault.patch
+	epatch "${FILESDIR}"/wmpinboard-1.0-segfault.patch
 }
 
-src_install ()
-{
-	make DESTDIR="${D}" install || die "install failed"
+src_install() {
+	emake DESTDIR="${D}" install || die
 }
