@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.5 2010/07/19 06:59:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.6 2010/07/22 07:08:44 jlec Exp $
+
+  22 Jul 2010; Justin Lecher <jlec@gentoo.org> aria-2.3.1.ebuild:
+  Added clashscore as DEP
 
   19 Jul 2010; Justin Lecher <jlec@gentoo.org> aria-2.3.1.ebuild:
   Fixed DEPS
