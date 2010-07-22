@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.7.ebuild,v 1.7 2007/06/02 17:02:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.7.ebuild,v 1.8 2010/07/22 14:42:11 ssuominen Exp $
 
 inherit gkrellm-plugin
 
@@ -20,12 +20,12 @@ DEPEND=">=sys-apps/sed-4.0.5"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e "s:GrabWeather:GrabWeather2:g" \
 		-e "s:/usr/share/gkrellm:/usr/bin:g" \
-		gkrellweather.c
+		gkrellweather.c || die
 }
 
 src_compile() {
@@ -36,5 +36,5 @@ src_install () {
 	gkrellm-plugin_src_install
 
 	exeinto /usr/bin
-	newexe GrabWeather GrabWeather2
+	newexe GrabWeather GrabWeather2 || die
 }
