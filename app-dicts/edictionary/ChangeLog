@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/edictionary
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.14 2010/04/06 15:35:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.15 2010/07/22 20:50:49 pva Exp $
+
+*edictionary-2.6 (22 Jul 2010)
+
+  22 Jul 2010; Peter Volkov <pva@gentoo.org> +edictionary-2.6.ebuild:
+  Version bump, bug #324857, thank Dean Matzkov for report. Fixes word
+  lookup, bug #313553, thank urcindalo for report.
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> edictionary-2.2.ebuild:
   Bump to EAPI=3, add prefix keywords
