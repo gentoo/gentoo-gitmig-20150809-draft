@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.1.ebuild,v 1.1 2010/07/21 07:48:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.1.ebuild,v 1.2 2010/07/22 06:39:54 aballier Exp $
 
 EAPI="3"
 
@@ -99,7 +99,7 @@ RDEPEND="
 		mtp? ( >=media-libs/libmtp-1.0.0 )
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses )
-		nsplugin? ( >=net-libs/xulrunner-1.9.2 x11-libs/libXpm x11-libs/libXt )
+		nsplugin? ( >=net-libs/xulrunner-1.9.2 x11-libs/libXpm x11-libs/libXt x11-libs/libxcb x11-libs/xcb-util )
 		ogg? ( media-libs/libogg )
 		opengl? ( virtual/opengl x11-libs/libX11[xcb] )
 		png? ( media-libs/libpng sys-libs/zlib )
@@ -177,6 +177,7 @@ pkg_setup() {
 	vlc_use_force skins qt4
 	vlc_use_force vlm stream
 	vlc_use_force vaapi ffmpeg
+	vlc_use_force nsplugin xcb
 
 	# Useflags that will be automagically discarded if deps are not met
 	vlc_use_needs bidi truetype
@@ -329,7 +330,8 @@ src_configure() {
 		$(vlc_use_enable_force skins freetype) \
 		$(vlc_use_enable_force remoteosd libgcrypt) \
 		$(vlc_use_enable_force gnutls libgcrypt) \
-		$(vlc_use_enable_force vaapi avcodec)
+		$(vlc_use_enable_force vaapi avcodec) \
+		$(vlc_use_enable_force nsplugin xcb)
 }
 
 src_install() {
