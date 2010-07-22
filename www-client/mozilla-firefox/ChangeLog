@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.628 2010/07/21 22:47:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.629 2010/07/22 16:58:20 jer Exp $
+
+  22 Jul 2010; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.6.7.ebuild:
+  Stable for PPC (bug #329279).
 
   21 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   mozilla-firefox-3.6.7.ebuild:
