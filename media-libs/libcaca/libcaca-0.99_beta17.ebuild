@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.4 2010/07/22 09:14:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.5 2010/07/22 09:19:32 ssuominen Exp $
 
 EAPI=2
 inherit autotools mono multilib java-pkg-opt-2
@@ -52,7 +52,7 @@ src_prepare() {
 }
 
 src_configure() {
-	export JAVACFLAGS="$(java-pkg_javac-args)"
+	use java && export JAVACFLAGS="$(java-pkg_javac-args)"
 
 	export VARTEXFONTS="${T}/fonts" #44128
 
