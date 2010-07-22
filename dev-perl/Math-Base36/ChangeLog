@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Math-Base36
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Base36/ChangeLog,v 1.1 2010/07/22 19:49:59 tove Exp $
+
+*Math-Base36-0.07 (22 Jul 2010)
+
+  22 Jul 2010; Torsten Veller <tove@gentoo.org> +Math-Base36-0.07.ebuild,
+  +metadata.xml:
+  Initial commit for DBIx-Class
+
