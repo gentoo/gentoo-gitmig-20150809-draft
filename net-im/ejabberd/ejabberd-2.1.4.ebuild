@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.4.ebuild,v 1.4 2010/07/12 17:34:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.4.ebuild,v 1.5 2010/07/22 15:24:24 pva Exp $
 
 EAPI=3
 
@@ -86,7 +86,10 @@ src_prepare() {
 	fi
 
 	if use mod_srl; then
+		ewarn "mod_srl is not a part of upstream tarball but is a third-party module"
+		ewarn "taken from here: https://alioth.debian.org/projects/ejabberd-msrl/"
 		cp "${WORKDIR}"/src/mod_shared_roster_ldap{.{e,h}rl,_helpers.erl} "${S}" || die
+		epatch "${FILESDIR}/ejabberd-2.1.4-mod_shared_roster_ldap.patch" #328533
 	fi
 }
 
