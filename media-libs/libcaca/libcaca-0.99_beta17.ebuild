@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.2 2010/07/22 08:12:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.3 2010/07/22 08:20:57 ssuominen Exp $
 
 EAPI=2
 inherit libtool mono multilib java-pkg-opt-2
@@ -68,4 +68,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS NOTES README THANKS
+	find "${D}" -name '*.la' -delete
 }
