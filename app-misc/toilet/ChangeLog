@@ -1,11 +1,16 @@
 # ChangeLog for app-misc/toilet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.14 2009/10/16 17:09:55 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.15 2010/07/22 10:57:05 ssuominen Exp $
+
+*toilet-0.2 (22 Jul 2010)
+
+  22 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +toilet-0.2.ebuild:
+  Version bump wrt #329367 by Tim Harder.
 
   16 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   files/toilet-0.1-asneeded-and-cflags-2.patch:
-  Fix building with LD_AS_NEEDED wrt #272274, thanks to Kacper Kowalik and
-  Diego E. 'Flameeyes' Pettenò.
+  Fix building with -Wl,--as-needed wrt #272274, thanks to Kacper Kowalik and
+  Diego E. Pettenò.
 
   11 Jul 2009; <chainsaw@gentoo.org> toilet-0.1-r1.ebuild:
   Marked stable on AMD64 for bug #275982; tested on a dual Opteron 2354.
