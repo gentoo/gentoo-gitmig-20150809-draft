@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.1 2010/07/22 08:07:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.2 2010/07/22 08:12:48 ssuominen Exp $
 
 EAPI=2
-inherit eutils libtool mono java-pkg-opt-2
+inherit libtool mono multilib java-pkg-opt-2
 
 MY_P=${P/_/.}
 
