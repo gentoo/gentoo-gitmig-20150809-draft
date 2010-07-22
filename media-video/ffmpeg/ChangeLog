@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.361 2010/07/11 15:15:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.362 2010/07/22 20:31:30 aballier Exp $
+
+  22 Jul 2010; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999-r1.ebuild:
+  sort rdepend, use same detection of live ebuild everywhere, cosmetics, by
+  Nikoli <nikoli@lavabit.com> in bug #324453
 
   11 Jul 2010; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.6.ebuild:
   Marked ~hppa (bug #324941).

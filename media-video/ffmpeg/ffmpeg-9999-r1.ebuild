@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.44 2010/06/22 07:28:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.45 2010/07/22 20:31:30 aballier Exp $
 
 EAPI="2"
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
-	SCM=subversion
+	SCM="subversion"
 	ESVN_REPO_URI="svn://svn.ffmpeg.org/ffmpeg/trunk"
 fi
 
@@ -25,7 +25,7 @@ FFMPEG_REVISION="${PV#*_p}"
 
 LICENSE="GPL-3"
 SLOT="0"
-if [[ ${PV} == *9999* ]]; then
+if [ "${PV#9999}" != "${PV}" ] ; then
 	KEYWORDS=""
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -41,32 +41,33 @@ for x in ${VIDEO_CARDS}; do
 	IUSE="${IUSE} video_cards_${x}"
 done
 
-RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
+RDEPEND="
 	alsa? ( media-libs/alsa-lib )
+	amr? ( media-libs/opencore-amr )
+	dirac? ( media-video/dirac )
 	encode? (
 		faac? ( media-libs/faac )
 		mp3? ( media-sound/lame )
-		vorbis? ( media-libs/libvorbis media-libs/libogg )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
+		vorbis? ( media-libs/libvorbis media-libs/libogg )
 		x264? ( >=media-libs/x264-0.0.20100605 )
-		xvid? ( >=media-libs/xvid-1.1.0 ) )
-	zlib? ( sys-libs/zlib )
-	ieee1394? ( media-libs/libdc1394
-				sys-libs/libraw1394 )
-	dirac? ( media-video/dirac )
+		xvid? ( >=media-libs/xvid-1.1.0 )
+	)
+	faad? ( >=media-libs/faad2-2.6.1 )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
+	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
+	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
-	amr? ( media-libs/opencore-amr )
 	rtmp? ( media-video/rtmpdump )
+	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
-	jack? ( media-sound/jack-audio-connection-kit )
-	X? ( x11-libs/libX11 x11-libs/libXext )
 	vaapi? ( x11-libs/libva )
+	video_cards_nvidia? ( vdpau? ( x11-libs/libvdpau ) )
 	vpx? ( media-libs/libvpx )
-	video_cards_nvidia? (
-		vdpau? ( x11-libs/libvdpau )
-	)"
+	X? ( x11-libs/libX11 x11-libs/libXext )
+	zlib? ( sys-libs/zlib )
+"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
@@ -81,7 +82,7 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	if [[ ${PV} = *9999* ]]; then
+	if [ "${PV#9999}" != "${PV}" ] ; then
 		# Set SVN version manually
 		subversion_wc_info
 		sed -i -e "s/UNKNOWN/SVN-r${ESVN_WC_REVISION}/" "${S}/version.sh" || die
