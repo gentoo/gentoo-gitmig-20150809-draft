@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.3 2010/07/22 08:20:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.4 2010/07/22 09:14:59 ssuominen Exp $
 
 EAPI=2
-inherit libtool mono multilib java-pkg-opt-2
+inherit autotools mono multilib java-pkg-opt-2
 
 MY_P=${P/_/.}
 
@@ -38,16 +38,22 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	sed -i \
 		-e 's:-g -O2 -fno-strength-reduce -fomit-frame-pointer::' \
-		configure || die
+		configure.ac || die
+
+	sed -i -e 's:$(JAVAC):$(JAVAC) $(JAVACFLAGS):' java/Makefile.am || die
 
 	if ! use truetype; then
-		sed -i -e '/PKG_CONFIG/s:ftgl:dIsAbLe&:' configure || die
+		sed -i -e '/PKG_CHECK_MODULES/s:ftgl:dIsAbLe&:' configure.ac || die
 	fi
 
-	elibtoolize
+	eautoreconf
+
+	java-pkg-opt-2_src_prepare
 }
 
 src_configure() {
+	export JAVACFLAGS="$(java-pkg_javac-args)"
+
 	export VARTEXFONTS="${T}/fonts" #44128
 
 	econf \
