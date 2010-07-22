@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.148 2010/07/14 17:10:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.149 2010/07/22 16:03:57 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org>
+  xf86-input-evdev-2.4.0.ebuild:
+  arm stable, bug #327777
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   xf86-input-evdev-2.4.0.ebuild:
