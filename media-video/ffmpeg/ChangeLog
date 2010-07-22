@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.363 2010/07/22 20:44:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.364 2010/07/22 20:57:23 aballier Exp $
+
+  22 Jul 2010; Alexis Ballier <aballier@gentoo.org> +ffmpeg-9999.ebuild,
+  -ffmpeg-9999-r1.ebuild:
+  go back to revision less for the live ebuild, revisions make no sense at
+  all there
 
   22 Jul 2010; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999-r1.ebuild:
   Add bzip2 and static-libs useflag, by Nikoli <nikoli@lavabit.com> in bug
