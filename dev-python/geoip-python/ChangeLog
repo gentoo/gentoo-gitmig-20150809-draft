@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/geoip-python
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.16 2009/01/24 18:08:09 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.17 2010/07/22 15:36:39 arfrever Exp $
+
+  22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  geoip-python-1.2.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *geoip-python-1.2.4 (24 Jan 2009)
 
