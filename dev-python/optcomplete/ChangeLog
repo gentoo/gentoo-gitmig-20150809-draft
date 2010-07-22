@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/optcomplete
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/ChangeLog,v 1.2 2009/03/26 20:12:47 jmbsvicetto Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/ChangeLog,v 1.3 2010/07/22 16:47:43 arfrever Exp $
+
+  22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  optcomplete-1.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   26 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
