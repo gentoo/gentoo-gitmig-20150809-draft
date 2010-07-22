@@ -1,6 +1,12 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.177 2010/07/22 13:29:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.178 2010/07/22 14:16:07 pva Exp $
+
+*pidgin-2.7.2 (22 Jul 2010)
+
+  22 Jul 2010; Peter Volkov <pva@gentoo.org> -pidgin-2.6.6.ebuild,
+  -pidgin-2.7.1.ebuild, +pidgin-2.7.2.ebuild:
+  Version bump, bug #329401, thank tman for report.
 
   22 Jul 2010; Peter Volkov <pva@gentoo.org> pidgin-2.7.1-r1.ebuild,
   metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1.ebuild,v 1.4 2010/06/10 13:20:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.2.ebuild,v 1.1 2010/07/22 14:16:07 pva Exp $
 
 EAPI=2
 
@@ -106,10 +106,6 @@ pkg_setup() {
 		elog "will be built."
 		einfo
 	fi
-	if ! use xscreensaver; then
-		elog "Note: xscreensaver USE flag is disabled. Thus pidgin will be unable"
-		elog "to monitor idle/active status based on mouse/keyboard events"
-	fi
 	if use dbus && ! use python; then
 		elog "It's impossible to disable linkage with python in case dbus is enabled."
 	fi
@@ -189,5 +185,19 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
+	if use gtk; then
+		# Fix tray pathes for kde-3.5, e16 (x11-wm/enlightenment) and other
+		# implementations that are not complient with new hicolor theme yet, #323355
+		local pixmapdir
+		for d in 16 22 32 48; do
+			pixmapdir=${D}/usr/share/pixmaps/pidgin/tray/hicolor/${d}x${d}/actions
+			mkdir "${pixmapdir}" || die
+			pushd "${pixmapdir}" >/dev/null || die
+			for f in ../status/*; do
+				ln -s ${f} || die
+			done
+			popd >/dev/null
+		done
+	fi
 	use perl && fixlocalpod
 }
