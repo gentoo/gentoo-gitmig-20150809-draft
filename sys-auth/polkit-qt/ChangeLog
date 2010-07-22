@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.7 2010/06/27 08:59:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.8 2010/07/22 19:49:06 reavertm Exp $
+
+*polkit-qt-0.96.1 (22 Jul 2010)
+
+  22 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  polkit-qt-0.95.1.ebuild, +polkit-qt-0.96.1.ebuild:
+  Version bump 0.96.1, update SRC_URI for 0.95.1 (they moved tarball
+  elsewhere)
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   polkit-qt-0.95.1.ebuild:
