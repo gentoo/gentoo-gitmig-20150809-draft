@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/lsyncd-1.33.ebuild,v 1.2 2010/06/29 15:49:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/lsyncd-1.33.ebuild,v 1.3 2010/07/22 14:40:16 darkside Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://lsyncd.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="xml"
 
 DEPEND="xml? ( dev-libs/libxml2 )"

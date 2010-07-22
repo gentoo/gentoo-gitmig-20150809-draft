@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.4 2010/06/29 15:49:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.5 2010/07/22 14:40:16 darkside Exp $
+
+  22 Jul 2010; Jeremy Olexa <darkside@gentoo.org> lsyncd-1.33.ebuild:
+  Add ~amd64-linux, tested in bug 328331
 
   29 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> lsyncd-1.33.ebuild,
   +files/lsyncd-1.33-libxml2.patch:
