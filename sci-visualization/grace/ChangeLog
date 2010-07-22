@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.41 2008/09/23 13:23:33 bicatali Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.42 2010/07/22 19:21:49 bicatali Exp $
+
+  22 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  grace-5.1.22-r1.ebuild:
+  Got rid of fortran eclass, switched to EAPI=3
 
   23 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/grace-5.1.21-stdc99.patch, -files/grace.desktop,

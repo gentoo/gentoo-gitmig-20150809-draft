@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.6 2008/09/18 01:03:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.7 2010/07/22 19:21:49 bicatali Exp $
 
-EAPI="1"
-inherit eutils fortran
+EAPI=3
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Motif based XY-plotting tool"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
@@ -28,18 +28,7 @@ DEPEND="x11-libs/openmotif
 RDEPEND="${DEPEND}
 	x11-misc/xdg-utils"
 
-pkg_setup() {
-	if use fortran; then
-		FORTRAN="gfortran g77 ifc"
-		fortran_pkg_setup
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-
+src_prepare() {
 	# move tmpnam to mkstemp (adapted from debian)
 	epatch "${FILESDIR}"/${P}-mkstemp.patch
 	# fix configure instead of aclocal.m4
@@ -49,10 +38,6 @@ src_unpack() {
 	# fix a leak and pdf driver (from freebsd)
 	epatch "${FILESDIR}"/${P}-dlmodule.patch
 	epatch "${FILESDIR}"/${P}-pdfdrv.patch
-
-	# fix for glibc-2.7 (bug #217971)
-	# removed (bug #231607)
-	# epatch "${FILESDIR}"/${P}-stdc99.patch
 
 	# don't strip if not asked for
 	sed -i \
@@ -75,7 +60,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	if use fortran; then
-		myconf="--with-f77=${FORTRANC}"
+		myconf="--with-f77=$(tc-getFC)"
 	else
 		myconf="--without-f77"
 	fi
@@ -96,22 +81,18 @@ src_compile() {
 		$(use_enable jpeg jpegdrv) \
 		$(use_enable png pngdrv) \
 		$(use_enable pdf pdfdrv) \
-		${myconf} \
-		|| die "econf failed"
-
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc CHANGES ChangeLog DEVELOPERS README COPYRIGHT \
-		|| die "dodoc failed"
+	dodoc CHANGES ChangeLog DEVELOPERS README COPYRIGHT
 
 	dosym ../../${PN}/examples /usr/share/doc/${PF}/examples
 	dosym ../../${PN}/doc /usr/share/doc/${PF}/html
 
-	doman "${D}"/usr/share/doc/${PF}/html/*.1
-	rm -f "${D}"/usr/share/doc/${PF}/html/*.1
+	doman "${ED}"/usr/share/doc/${PF}/html/*.1
+	rm -f "${ED}"/usr/share/doc/${PF}/html/*.1
 	doicon "${FILESDIR}"/${PN}.png || die "failed installing icon"
 	make_desktop_entry xmgrace Grace grace
 }
