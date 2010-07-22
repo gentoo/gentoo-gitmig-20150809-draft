@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-util
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.46 2010/07/14 16:50:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/ChangeLog,v 1.47 2010/07/22 14:45:02 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org> font-util-1.1.1-r1.ebuild:
+  arm stable, bug #327777
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> font-util-1.1.1-r1.ebuild:
   Stable for HPPA (bug #327777).

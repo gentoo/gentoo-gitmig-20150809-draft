@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-schumacher-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.27 2010/07/14 17:03:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.28 2010/07/22 15:30:01 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org>
+  font-schumacher-misc-1.1.0.ebuild:
+  arm stable, bug #327777
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   font-schumacher-misc-1.1.0.ebuild:

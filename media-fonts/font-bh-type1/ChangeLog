@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-type1
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-type1/ChangeLog,v 1.27 2010/07/13 12:58:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-type1/ChangeLog,v 1.28 2010/07/22 15:04:49 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org> font-bh-type1-1.0.1.ebuild:
+  arm stable, bug #327777
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   font-bh-type1-1.0.1.ebuild:

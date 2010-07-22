@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-misc-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.38 2010/07/14 17:02:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-misc-misc/ChangeLog,v 1.39 2010/07/22 15:27:13 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org> font-misc-misc-1.1.0.ebuild:
+  arm stable, bug #327777
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> font-misc-misc-1.1.0.ebuild:
   Stable for HPPA (bug #327777).

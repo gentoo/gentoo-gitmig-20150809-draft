@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-ttf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.37 2010/07/14 16:55:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.38 2010/07/22 15:03:26 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org> font-bh-ttf-1.0.1.ebuild:
+  arm stable, bug #327777
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> font-bh-ttf-1.0.1.ebuild:
   Stable for HPPA (bug #327777).
