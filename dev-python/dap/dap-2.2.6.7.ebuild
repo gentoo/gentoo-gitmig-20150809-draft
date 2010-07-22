@@ -1,32 +1,36 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.7.ebuild,v 1.3 2009/09/14 02:46:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.7.ebuild,v 1.4 2010/07/22 15:24:23 arfrever Exp $
 
-EAPI=2
-inherit eutils distutils
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit distutils
 
 DESCRIPTION="Data Access Protocol client and server"
-HOMEPAGE="http://pydap.org"
+HOMEPAGE="http://pydap.org http://pypi.python.org/pypi/dap http://pypi.python.org/pypi/Pydap"
+SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 
-SRC_URI="http://cheeseshop.python.org/packages/source/d/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="server"
 
 RDEPEND="dev-python/httplib2
-	server? ( dev-python/paste
-			  dev-python/pastedeploy
-			  dev-python/pastescript
-			  dev-python/cheetah )"
-
+	server? (
+		dev-python/cheetah
+		dev-python/paste
+		dev-python/pastedeploy
+		dev-python/pastescript
+	)"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 DOCS="docs/bugs docs/Changelog docs/history"
 
 src_prepare() {
-	sed -i \
-		-e "s/'dap.plugins'/'dap','dap.plugins'/" \
-		setup.py  || die
+	distutils_src_prepare
+	sed -e "s/'dap.plugins'/'dap', 'dap.plugins'/" -i setup.py || die "sed failed"
 }
