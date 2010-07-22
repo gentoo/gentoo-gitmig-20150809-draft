@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.4.4.ebuild,v 1.4 2010/06/28 03:58:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.4.4.ebuild,v 1.5 2010/07/22 13:11:50 reavertm Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="Solid: the KDE hardware library"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="bluetooth debug networkmanager wicd"
+IUSE="bluetooth debug +hal networkmanager wicd"
 
 # solid/CMakeLists.txt has an add_subdirectory statement that depends on
 # networkmanager-0.7, referring to a non-existant directory, restricted to =0.6*
@@ -20,7 +20,10 @@ DEPEND="
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	wicd? ( net-misc/wicd )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	$(add_kdebase_dep solid-runtime)
+	hal? ( sys-apps/hal )
+"
 
 KMEXTRA="
 	libs/solid/
