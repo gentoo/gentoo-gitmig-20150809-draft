@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.178 2010/07/22 14:16:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.179 2010/07/22 21:58:52 phajdan.jr Exp $
+
+  22 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pidgin-2.7.2.ebuild:
+  x86 stable wrt security bug #328667
 
 *pidgin-2.7.2 (22 Jul 2010)
 
