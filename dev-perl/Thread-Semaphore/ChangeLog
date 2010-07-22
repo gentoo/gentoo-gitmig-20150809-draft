@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Thread-Semaphore
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Thread-Semaphore/ChangeLog,v 1.1 2010/02/15 19:48:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Thread-Semaphore/ChangeLog,v 1.2 2010/07/22 20:01:33 tove Exp $
+
+*Thread-Semaphore-2.11 (22 Jul 2010)
+
+  22 Jul 2010; Torsten Veller <tove@gentoo.org>
+  +Thread-Semaphore-2.11.ebuild:
+  Version bump
 
 *Thread-Semaphore-2.09 (15 Feb 2010)
 
