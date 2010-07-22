@@ -1,6 +1,13 @@
 # ChangeLog for app-text/aspell
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.123 2010/06/05 15:45:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.124 2010/07/22 21:08:57 pva Exp $
+
+*aspell-0.60.6-r2 (22 Jul 2010)
+
+  22 Jul 2010; Peter Volkov <pva@gentoo.org> +aspell-0.60.6-r2.ebuild,
+  +files/aspell-0.60.6-replace-fix.patch:
+  Added patch to fix replace with accented characters, bug 327405, thank
+  Rafael for report.
 
   05 Jun 2010; Raúl Porcel <armin76@gentoo.org> aspell-0.60.6-r1.ebuild:
   alpha/arm/ia64/s390/sh stable wrt #310015
