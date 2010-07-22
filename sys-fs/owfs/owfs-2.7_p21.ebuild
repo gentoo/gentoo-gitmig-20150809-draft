@@ -1,10 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.3 2010/01/15 12:04:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.4 2010/07/22 19:45:32 arfrever Exp $
 
 EAPI="2"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
-inherit eutils depend.php perl-module
+inherit depend.php distutils eutils perl-module
 
 MY_P=${P/_/}
 
@@ -15,7 +18,6 @@ LICENSE="GPL-2"
 RDEPEND="fuse? ( sys-fs/fuse )
 	perl? ( dev-lang/perl )
 	php? ( dev-lang/php )
-	python? ( dev-lang/python )
 	tcl? ( dev-lang/tcl )
 	usb? ( dev-libs/libusb )
 	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )"
@@ -32,9 +34,15 @@ S=${WORKDIR}/${MY_P}
 OWUID=${OWUID:-owfs}
 OWGID=${OWGID:-owfs}
 
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+PYTHON_MODNAME="ow ownet"
+
 pkg_setup() {
 	if use php; then
 		require_php_cli
+	fi
+	if use python; then
+		python_pkg_setup
 	fi
 	enewgroup ${OWGID} 150
 	enewuser  ${OWUID} 150 -1 -1 ${OWGID}
@@ -46,6 +54,13 @@ src_unpack() {
 
 src_prepare() {
 	base_src_prepare
+
+	sed -e 's/ \$(OWNET_SUBDIRPYTHON)//' -i module/ownet/Makefile.{am,in} || die "sed failed"
+	sed -e 's/ \$(SWIG_SUBDIRPYTHON)//' -i module/swig/Makefile.{am,in} || die "sed failed"
+	sed \
+		-e "s/@PYCFLAGS@//" \
+		-e "s/@PYLDFLAGS@//" \
+		-i module/swig/python/setup.py.in || die "sed failed"
 }
 
 src_configure() {
@@ -66,6 +81,17 @@ src_configure() {
 
 src_compile() {
 	base_src_compile
+
+	if use python; then
+		pushd module/ownet/python > /dev/null
+		distutils_src_compile
+		popd > /dev/null
+
+		pushd module/swig/python > /dev/null
+		emake ow_wrap.c || die "emake ow_wrap.c failed"
+		distutils_src_compile
+		popd > /dev/null
+	fi
 }
 
 src_test() { :; }
@@ -90,6 +116,16 @@ src_install() {
 		fi
 	fi
 	use perl && fixlocalpod
+
+	if use python; then
+		pushd module/ownet/python > /dev/null
+		distutils_src_install
+		popd > /dev/null
+
+		pushd module/swig/python > /dev/null
+		distutils_src_install
+		popd > /dev/null
+	fi
 }
 
 pkg_postinst() {
@@ -128,4 +164,10 @@ pkg_postinst() {
 			echo
 		fi
 	fi
+
+	use python && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }

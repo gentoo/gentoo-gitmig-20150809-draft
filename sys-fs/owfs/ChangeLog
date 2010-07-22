@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.14 2010/01/15 12:04:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.15 2010/07/22 19:45:32 arfrever Exp $
+
+  22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  owfs-2.7_p21.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #316949).
 
   15 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org> owfs-2.7_p21.ebuild:
   Use base_src_unpack without arguments.
