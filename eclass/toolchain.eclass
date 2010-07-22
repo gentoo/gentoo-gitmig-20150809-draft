@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.435 2010/07/21 20:19:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.436 2010/07/22 01:26:33 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1166,14 +1166,14 @@ gcc-compiler-configure() {
 		if tc_version_is_at_least "4.4" ; then
 			confgcc="${confgcc} --with-python-dir=${DATAPATH/$PREFIX/}/python"
 		fi
+	fi
 
-		# For newer versions of gcc, use the default ("release"), because no
-		# one (even upstream apparently) tests with it disabled. #317217
-		if tc_version_is_at_least 4 || [[ -n ${GCC_CHECKS_LIST} ]] ; then
-			confgcc="${confgcc} --enable-checking=${GCC_CHECKS_LIST:-release}"
-		else
-			confgcc="${confgcc} --disable-checking"
-		fi
+	# For newer versions of gcc, use the default ("release"), because no
+	# one (even upstream apparently) tests with it disabled. #317217
+	if tc_version_is_at_least 4 || [[ -n ${GCC_CHECKS_LIST} ]] ; then
+		confgcc="${confgcc} --enable-checking=${GCC_CHECKS_LIST:-release}"
+	else
+		confgcc="${confgcc} --disable-checking"
 	fi
 
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
