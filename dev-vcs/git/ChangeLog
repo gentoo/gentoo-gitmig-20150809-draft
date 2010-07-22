@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.18 2010/07/22 16:56:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.19 2010/07/22 21:34:50 darkside Exp $
+
+*git-1.7.2-r1 (22 Jul 2010)
+
+  22 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
+  +files/git-1.6.6.1-interix6.patch, +files/git-1.7.1-interix.patch,
+  +git-1.7.2-r1.ebuild:
+  Migrate changes from Gentoo Prefix overlay. Convert to EAPI3, add patches,
+  modify paths, etc. Approved by maintainer, reference bug 329273. Revbump
+  per request but no substantial changes for the end user
 
 *git-1.7.2 (22 Jul 2010)
 
