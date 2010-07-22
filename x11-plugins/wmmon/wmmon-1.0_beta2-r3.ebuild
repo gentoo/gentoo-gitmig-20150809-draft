@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.8 2008/06/29 13:56:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.9 2010/07/22 14:39:39 ssuominen Exp $
 
 inherit eutils
 

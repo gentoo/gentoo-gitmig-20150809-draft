@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-trayicons/gkrellm-trayicons-1.03.ebuild,v 1.9 2009/02/22 23:44:03 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-trayicons/gkrellm-trayicons-1.03.ebuild,v 1.10 2010/07/22 14:39:25 ssuominen Exp $
 
 inherit gkrellm-plugin
 

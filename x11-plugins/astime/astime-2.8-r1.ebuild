@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8-r1.ebuild,v 1.6 2007/07/11 20:39:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/astime/astime-2.8-r1.ebuild,v 1.7 2010/07/22 14:39:04 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
