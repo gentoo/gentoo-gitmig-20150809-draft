@@ -1,7 +1,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.7.ebuild,v 1.5 2010/07/22 16:58:20 jer Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.6.7.ebuild,v 1.6 2010/07/22 22:47:44 darkside Exp $
+EAPI="3"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib pax-utils fdo-mime autotools mozextension java-pkg-opt-2 python
@@ -22,7 +22,7 @@ PATCH="${PN}-3.6-patches-0.6"
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa bindist +ipc java libnotify system-sqlite wifi"
@@ -130,6 +130,8 @@ src_prepare() {
 	EPATCH_EXCLUDE="137-bz460917_att350845_reload_new_plugins-gentoo-update.patch" \
 	epatch "${WORKDIR}"
 
+	epatch "${FILESDIR}"/${PN}-3.0-solaris64.patch
+
 	# The patch excluded above failed, ported patch is applied below
 	epatch "${FILESDIR}/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch"
 
@@ -139,7 +141,7 @@ src_prepare() {
 	# Enable tracemonkey for amd64 (bug #315997)
 	epatch "${FILESDIR}/801-enable-x86_64-tracemonkey.patch"
 
-    	# Allow user to apply additional patches without modifing ebuild
+	# Allow user to apply additional patches without modifing ebuild
 	epatch_user
 
 	eautoreconf
@@ -189,11 +191,12 @@ src_configure() {
 	# Use system libraries
 	mozconfig_annotate '' --enable-system-cairo
 	mozconfig_annotate '' --enable-system-hunspell
-	mozconfig_annotate '' --with-system-nspr
-	mozconfig_annotate '' --with-system-nss
+	mozconfig_annotate '' --with-system-nspr --with-nspr-prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --with-system-nss --with-nss-prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --x-includes="${EPREFIX}"/usr/include	--x-libraries="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --with-system-bz2
 	mozconfig_annotate '' --with-system-libxul
-	mozconfig_annotate '' --with-libxul-sdk=/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
+	mozconfig_annotate '' --with-libxul-sdk="${EPREFIX}"/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
 
 	mozconfig_use_enable ipc # +ipc, upstream default
 	mozconfig_use_enable libnotify
@@ -249,19 +252,19 @@ src_install() {
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5-unbranded.desktop \
 			${PN}-${DESKTOP_PV}.desktop
 		sed -i -e "s:Bon Echo:Namoroka:" \
-			"${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop || die "sed failed!"
+			"${ED}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop || die "sed failed!"
 	fi
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification ; then
-		echo "StartupNotify=true" >> "${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
+		echo "StartupNotify=true" >> "${ED}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
 	fi
 
-	pax-mark m "${D}"/${MOZILLA_FIVE_HOME}/firefox
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/firefox
 
 	# Enable very specific settings not inherited from xulrunner
 	cp "${FILESDIR}"/firefox-default-prefs.js \
-		"${D}/${MOZILLA_FIVE_HOME}/defaults/preferences/all-gentoo.js" || \
+		"${ED}/${MOZILLA_FIVE_HOME}/defaults/preferences/all-gentoo.js" || \
 		die "failed to cp firefox-default-prefs.js"
 
 	# Plugins dir
@@ -270,7 +273,7 @@ src_install() {
 
 	# very ugly hack to make firefox not sigbus on sparc
 	use sparc && { sed -e 's/Firefox/FirefoxGentoo/g' \
-					 -i "${D}/${MOZILLA_FIVE_HOME}/application.ini" || \
+					 -i "${ED}/${MOZILLA_FIVE_HOME}/application.ini" || \
 					 die "sparc sed failed"; }
 }
 
