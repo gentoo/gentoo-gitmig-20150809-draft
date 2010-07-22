@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1-r1.ebuild,v 1.8 2010/07/19 00:40:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1-r1.ebuild,v 1.9 2010/07/22 13:29:31 pva Exp $
 
 EAPI=2
 
@@ -105,10 +105,6 @@ pkg_setup() {
 		elog "You did not pick the ncurses or gtk use flags, only libpurple"
 		elog "will be built."
 		einfo
-	fi
-	if ! use xscreensaver; then
-		elog "Note: xscreensaver USE flag is disabled. Thus pidgin will be unable"
-		elog "to monitor idle/active status based on mouse/keyboard events"
 	fi
 	if use dbus && ! use python; then
 		elog "It's impossible to disable linkage with python in case dbus is enabled."
