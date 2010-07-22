@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.2.0.ebuild,v 1.6 2007/07/22 04:55:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.2.0.ebuild,v 1.7 2010/07/22 14:32:39 ssuominen Exp $
 
 DESCRIPTION="A dockapp to monitor LongRun on a Transmeta Crusoe processor"
 HOMEPAGE="http://seiichisato.jp/dockapps/"
@@ -19,12 +19,7 @@ DEPEND="${RDEPEND}
 # the functionality is only available on x86.
 KEYWORDS="x86 -*"
 
-src_compile() {
-	econf || die "Configuration failed"
-	emake || die "Compilation failed"
-}
-
 src_install() {
-	make DESTDIR=${D} install || die "Installation failed"
+	emake DESTDIR="${D}" install || die
 	dodoc README AUTHORS TODO MAKEDEV-cpuid-msr
 }

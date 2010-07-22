@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/wmsvencd-0.5.0.ebuild,v 1.7 2006/10/25 10:54:59 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/wmsvencd-0.5.0.ebuild,v 1.8 2010/07/22 14:36:12 ssuominen Exp $
 
 inherit eutils
 
@@ -20,8 +20,8 @@ KEYWORDS="x86 ~ppc"
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/wmsvencd-compile.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/wmsvencd-compile.patch
 }
 
 src_compile() {
@@ -37,5 +37,5 @@ src_install() {
 	dodoc README
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	doins "${FILESDIR}"/${PN}.desktop
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.11 2009/06/04 00:27:18 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.12 2010/07/22 14:32:07 ssuominen Exp $
 
 IUSE=""
 
@@ -24,19 +24,19 @@ LICENSE="GPL-2"
 KEYWORDS="ppc sparc x86"
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 	make clean
-	emake CFLAGS="${CFLAGS}" || die "Compilation failed"
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
-	cd ${S}/src
-	dobin wmjsql
+	cd "${S}"/src
+	dobin wmjsql || die
 	newdoc conf sample.wmjsql
 
-	cd ${S}
+	cd "${S}"
 	dodoc CREDITS README TODO
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	doins "${FILESDIR}"/${PN}.desktop
 }

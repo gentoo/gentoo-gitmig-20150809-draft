@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/wmmon+smp-1.0-r1.ebuild,v 1.11 2007/07/22 04:49:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/wmmon+smp-1.0-r1.ebuild,v 1.12 2010/07/22 14:33:25 ssuominen Exp $
 
 IUSE=""
 
@@ -21,13 +21,13 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 src_compile() {
-	cd ${S2}
+	cd "${S2}"
 	emake || die
 }
 
 src_install () {
 	exeinto /usr/bin
-	cp ${S2}/wmmon ${S2}/wmmon+smp
-	doexe ${S2}/wmmon+smp
-	dodoc ${S}/README ${S}/COPYING ${S}/INSTALL
+	cp "${S2}"/wmmon "${S2}"/wmmon+smp
+	doexe "${S2}"/wmmon+smp
+	dodoc "${S}"/README
 }

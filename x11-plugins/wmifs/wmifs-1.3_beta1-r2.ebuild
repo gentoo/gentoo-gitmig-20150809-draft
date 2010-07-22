@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.8 2007/07/22 05:01:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifs/wmifs-1.3_beta1-r2.ebuild,v 1.9 2010/07/22 14:35:19 ssuominen Exp $
 
 inherit eutils
 
@@ -25,11 +25,11 @@ KEYWORDS="x86 ppc sparc alpha hppa ~mips ia64 amd64"
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# patch to allow for longer interface names
 	# and prettify program output for long names
-	epatch ${WORKDIR}/${PN}_${MY_PV}-11.diff
+	epatch "${WORKDIR}"/${PN}_${MY_PV}-11.diff
 }
 
 src_compile()

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.8 2009/02/22 23:45:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.9 2010/07/22 14:28:57 ssuominen Exp $
 
 inherit gkrellm-plugin
 
@@ -23,7 +23,7 @@ PLUGIN_DOCS="doc/ChangeLog"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix the TEXTREL error, by linking with the shared version of libXxf86vm
 	# instead of the static

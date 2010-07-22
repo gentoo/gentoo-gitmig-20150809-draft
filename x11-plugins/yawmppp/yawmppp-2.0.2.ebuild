@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.6 2006/01/24 23:31:59 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/yawmppp/yawmppp-2.0.2.ebuild,v 1.7 2010/07/22 14:35:43 ssuominen Exp $
 
 inherit eutils
 
@@ -17,10 +17,10 @@ DEPEND=">=net-dialup/ppp-2.3.11
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src/dockapp
+	cd "${S}"/src/dockapp
 
 	#Fix bug #95959
-	epatch ${FILESDIR}/${P}-Makefile.in.patch
+	epatch "${FILESDIR}"/${P}-Makefile.in.patch
 }
 
 src_compile() {
