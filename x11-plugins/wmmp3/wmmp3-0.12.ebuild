@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.11 2009/06/04 00:31:52 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.12 2010/07/22 14:34:40 ssuominen Exp $
 
 inherit eutils
 
@@ -19,31 +19,27 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
-	>=media-sound/mpg123-0.59s-r2"
+	media-sound/mpg123"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix #103531
-	epatch ${FILESDIR}/${P}-x_includes_n_libraries.patch
+	epatch "${FILESDIR}"/${P}-x_includes_n_libraries.patch
 }
 
-src_compile()
-{
+src_compile() {
 	# override wmmp3 self-calculated cflags
-	econf || die "Configuration failed"
-	emake prefix="/usr/" || die "Compilation failed"
+	econf
+	emake prefix="/usr/" || die
 }
 
-src_install()
-{
-	einstall || die "Installation failed"
+src_install() {
+	einstall || die
 	dodoc AUTHORS ChangeLog sample.wmmp3 README TODO
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	einfo "Please copy the sample.wmmp3 to your home directory and change it to fit your needs."
 }
