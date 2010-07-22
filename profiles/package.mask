@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11786 2010/07/22 00:12:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11787 2010/07/22 20:01:20 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (22 Jul 2010)
+# Development versions.
+=net-libs/gnutls-2.11*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Jul 2010)
 # Merged into >=dev-python/mechanize-0.2.0. Masked for deletion in 30 days.
@@ -1026,10 +1030,6 @@ net-misc/amazonmp3
 # Torsten Veller <tove@gentoo.org> (10 Jun 2009)
 # Mask unstable releases. Read the warning!
 =app-office/gnucash-2.3*
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (30 May 2009)
-# Development versions.
-=net-libs/gnutls-2.9*
 
 # Peter Alfredsen <loki_val@gentoo.org> (01 June 2009)
 # Development version, Work-In-Progress
