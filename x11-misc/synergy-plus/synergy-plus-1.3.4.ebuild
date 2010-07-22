@@ -1,11 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/synergy-plus-1.3.4.ebuild,v 1.4 2010/06/11 19:52:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/synergy-plus-1.3.4.ebuild,v 1.5 2010/07/22 11:32:34 ssuominen Exp $
 
 EAPI="2"
 
-DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple
-computers. An active fork of synergy"
+DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple computers"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 #SRC_URI="mirror://google/files/${PN}/${P}.tar.gz"
 HOMEPAGE="http://code.google.com/p/synergy-plus/"

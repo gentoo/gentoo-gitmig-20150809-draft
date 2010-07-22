@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.21.ebuild,v 1.17 2007/08/02 13:44:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/xwrits-2.21.ebuild,v 1.18 2010/07/22 11:31:15 ssuominen Exp $
 
-DESCRIPTION="Xwrits reminds you to take wrist breaks, which will hopefully help you prevent repetitive stress injury."
+DESCRIPTION="Reminds you to take wrist breaks, which will hopefully help you prevent repetitive stress injury."
 HOMEPAGE="http://www.lcdf.org/xwrits/"
 SRC_URI="http://www.lcdf.org/${PN}/${P}.tar.gz"
 
@@ -18,12 +18,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xineramaproto"
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
-
-src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+src_install() {
+	emake DESTDIR="${D}" install || die
 	dodoc GESTURES NEWS README
 }

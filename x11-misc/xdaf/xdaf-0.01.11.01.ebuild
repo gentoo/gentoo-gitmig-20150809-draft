@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/xdaf-0.01.11.01.ebuild,v 1.8 2006/10/22 00:28:08 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaf/xdaf-0.01.11.01.ebuild,v 1.9 2010/07/22 11:32:06 ssuominen Exp $
 
 MY_P=${P/-0/-A}
 
-DESCRIPTION="Small tool to provide visual feedback of local disks activity by changing the default X11 mouse pointer"
+DESCRIPTION="A tool to provide visual feedback of local disks activity by changing the default X11 mouse pointer"
 HOMEPAGE="http://ezix.sourceforge.net/software/xdaf.html"
 SRC_URI="mirror://sourceforge/ezix/${MY_P}.tar.gz"
 
