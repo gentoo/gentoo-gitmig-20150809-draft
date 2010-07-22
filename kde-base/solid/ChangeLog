@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.78 2010/07/21 23:44:25 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.79 2010/07/22 08:07:01 tampakrap Exp $
+
+  22 Jul 2010; Theo Chatzimichos <tampakrap@gentoo.org> solid-4.4.5.ebuild:
+  Add hal useflag to avoid the harddep, thanks to polynomial-c for pointing
+  out
 
   21 Jul 2010; Theo Chatzimichos <tampakrap@gentoo.org> solid-4.4.5.ebuild:
   Add HAL RDEP. It might work without but stuff like PM and NM won't work
