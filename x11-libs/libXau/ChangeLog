@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.73 2010/06/14 17:21:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.74 2010/07/22 19:53:24 scarabeus Exp $
+
+*libXau-1.0.6 (22 Jul 2010)
+
+  22 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> +libXau-1.0.6.ebuild:
+  Version bump.
 
   14 Jun 2010; Fabian Groffen <grobian@gentoo.org> libXau-1.0.5.ebuild:
   Marked ~x64-macos, bug #323945
