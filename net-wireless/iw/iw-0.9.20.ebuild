@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.19.ebuild,v 1.1 2010/04/03 12:36:52 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.20.ebuild,v 1.1 2010/07/22 11:34:18 gurligebis Exp $
 
 inherit toolchain-funcs
 
