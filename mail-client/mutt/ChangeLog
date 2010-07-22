@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.189 2010/07/16 07:11:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.190 2010/07/22 20:56:20 grobian Exp $
+
+*mutt-1.5.20-r16 (22 Jul 2010)
+
+  22 Jul 2010; Fabian Groffen <grobian@gentoo.org> +mutt-1.5.20-r16.ebuild:
+  Bump, next to a little bugfix from upstream, this revision no longer has
+  USE=vanilla (because vanilla Mutt is simply useless these days), always
+  has the nntp patch applied (but enabled/disabled per configure), and has
+  (most people were longing for this) the sidebar patch applied on top of
+  all other fixes and features.
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> mutt-1.5.20-r15.ebuild,
   -files/mutt-1.5.20_ssl.patch:
