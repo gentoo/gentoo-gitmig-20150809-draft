@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.46 2010/02/15 19:04:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.47 2010/07/22 16:19:59 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org> libpciaccess-0.11.0.ebuild:
+  arm stable, bug #327777
 
   15 Feb 2010; Joseph Jezak <josejx@gentoo.org> libpciaccess-0.11.0.ebuild:
   Marked ppc/ppc64 stable for bug #302046.
