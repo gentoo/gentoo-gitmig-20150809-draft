@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.14.ebuild,v 1.6 2010/07/20 18:23:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.14.ebuild,v 1.7 2010/07/22 20:19:32 pva Exp $
 
 EAPI="2"
 
@@ -27,15 +27,14 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
-	myconf="$(use_enable debug) \
-			$(use_enable nls)"
-
-	econf ${myconf} || die "configure failed"
+	econf \
+		--disable-static \
+		$(use_enable debug) \
+		$(use_enable nls)
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
+	find "${D}" -name '*.la' -delete
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO VERSION || die
 }

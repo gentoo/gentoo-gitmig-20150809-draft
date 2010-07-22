@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-libnotify
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.21 2010/07/20 18:23:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.22 2010/07/22 20:19:32 pva Exp $
+
+  22 Jul 2010; Peter Volkov <pva@gentoo.org> pidgin-libnotify-0.14.ebuild:
+  Don't build static libs: for plugins they are useless, bug #327237, thank
+  Bruno Yporti for report.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> pidgin-libnotify-0.14.ebuild:
   Drop HPPA keywording (bug #324511).
