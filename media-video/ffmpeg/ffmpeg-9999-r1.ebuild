@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.45 2010/07/22 20:31:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.46 2010/07/22 20:44:05 aballier Exp $
 
 EAPI="2"
 
@@ -30,9 +30,9 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
-IUSE="+3dnow +3dnowext alsa altivec amr bindist cpudetection custom-cflags
+IUSE="+3dnow +3dnowext alsa altivec amr bindist +bzip2 cpudetection custom-cflags
 debug dirac doc +encode faac gsm +hardcoded-tables ieee1394 jack jpeg2k
-+mmx +mmxext mp3 network oss pic rtmp schroedinger sdl speex +ssse3 test theora
++mmx +mmxext mp3 network oss pic rtmp schroedinger sdl speex +ssse3 static-libs test theora
 threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 VIDEO_CARDS="nvidia"
@@ -44,6 +44,7 @@ done
 RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
+	bzip2? ( app-arch/bzip2 )
 	dirac? ( media-video/dirac )
 	encode? (
 		faac? ( media-libs/faac )
@@ -53,7 +54,6 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20100605 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
-	faad? ( >=media-libs/faad2-2.6.1 )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -98,7 +98,9 @@ src_configure() {
 	for i in debug doc network vaapi zlib; do
 		use ${i} || myconf="${myconf} --disable-${i}"
 	done
+	use bzip2 || myconf="${myconf} --disable-bzlib"
 	use sdl || myconf="${myconf} --disable-ffplay"
+	use static-libs || myconf="${myconf} --disable-static"
 
 	use custom-cflags && myconf="${myconf} --disable-optimizations"
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
