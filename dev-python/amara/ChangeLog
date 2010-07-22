@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/amara
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amara/ChangeLog,v 1.1 2008/11/14 03:31:29 marineam Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amara/ChangeLog,v 1.2 2010/07/22 14:39:48 arfrever Exp $
+
+  22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  amara-1.2.0.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *amara-1.2.0.2 (14 Nov 2008)
 

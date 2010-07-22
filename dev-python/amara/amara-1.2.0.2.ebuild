@@ -1,13 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amara/amara-1.2.0.2.ebuild,v 1.1 2008/11/14 03:31:29 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amara/amara-1.2.0.2.ebuild,v 1.2 2010/07/22 14:39:48 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-MY_P=${P/amara/Amara}
+MY_P="${P/amara/Amara}"
 
 DESCRIPTION="Python tools for XML processing."
-HOMEPAGE="http://uche.ogbuji.net/tech/4suite/amara/"
+HOMEPAGE="http://uche.ogbuji.net/tech/4suite/amara/ http://pypi.python.org/pypi/Amara"
 SRC_URI="ftp://ftp.4suite.org/pub/Amara/${MY_P}.tar.bz2"
 
 LICENSE="Apache-1.1"
@@ -19,28 +24,28 @@ RDEPEND=">=dev-python/4suite-1.0.2"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS="ACKNOWLEDGEMENTS CHANGES README TODO docs/quickref.txt"
 
-	# We would get 'unknown module amara' if amara is not yet installed
-	ln -s lib amara
+src_compile() {
+	distutils_src_compile
+
+	if use doc; then
+		einfo "Generation of documentation"
+		epydoc build-$(PYTHON -f --ABI)/lib/amara || die "Generation of documentation failed"
+	fi
 }
 
 src_install() {
 	distutils_src_install
 
-	dodoc ACKNOWLEDGEMENTS CHANGES README TODO quickref.txt
-	dohtml manual.html
-
 	if use doc; then
-		epydoc build/lib/amara && dohtml -r html/*
+		dohtml -r html/* || die "dohtml failed"
 	fi
 
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r demo
+		doins -r demo || die "doins failed"
 	fi
 }
