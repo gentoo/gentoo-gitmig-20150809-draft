@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.31 2010/07/14 17:14:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.32 2010/07/22 16:24:21 maekke Exp $
+
+  22 Jul 2010; Markus Meier <maekke@gentoo.org> imake-1.0.3.ebuild:
+  arm stable, bug #327777
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> imake-1.0.3.ebuild:
   Stable for HPPA (bug #327777).
