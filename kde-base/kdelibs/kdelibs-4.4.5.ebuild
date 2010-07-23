@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.5.ebuild,v 1.2 2010/07/03 03:23:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.5.ebuild,v 1.3 2010/07/23 23:00:29 ssuominen Exp $
 
 EAPI="3"
 
@@ -30,8 +30,8 @@ COMMONDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/giflib
-	media-libs/jpeg:0
-	media-libs/libpng
+	virtual/jpeg
+	>=media-libs/libpng-1.4
 	sys-libs/zlib
 	>=x11-misc/shared-mime-info-0.60
 	acl? ( virtual/acl )
