@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.2.ebuild,v 1.1 2010/07/22 10:57:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.2.ebuild,v 1.2 2010/07/23 11:52:22 maekke Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://caca.zoy.org/raw-attachment/wiki/${PN}/${P}.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=media-libs/libcaca-0.99_beta17"
