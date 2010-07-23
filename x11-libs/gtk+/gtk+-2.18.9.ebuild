@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.18.9.ebuild,v 1.7 2010/07/20 04:32:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.18.9.ebuild,v 1.8 2010/07/23 20:33:03 ssuominen Exp $
 
 EAPI="3"
 
@@ -40,7 +40,7 @@ RDEPEND="!aqua? (
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.43-r2:0
 	cups? ( net-print/cups )
-	jpeg? ( >=media-libs/jpeg-6b-r2:0 )
+	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	!<gnome-base/gail-1000"
