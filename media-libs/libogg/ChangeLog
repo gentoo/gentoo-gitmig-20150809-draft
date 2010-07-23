@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libogg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.69 2010/07/18 13:39:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.70 2010/07/23 11:25:58 maekke Exp $
+
+  23 Jul 2010; Markus Meier <maekke@gentoo.org> libogg-1.2.0.ebuild:
+  arm stable, bug #324261
 
   18 Jul 2010; <nixnut@gentoo.org> libogg-1.2.0.ebuild:
   ppc stable #324261
