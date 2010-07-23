@@ -1,0 +1,13 @@
+https://code.google.com/p/h5py/issues/detail?id=123
+
+--- detect.py
++++ detect.py
+@@ -9,7 +9,7 @@
+     """
+ 
+     from distutils import ccompiler
+-    from distutils.core import CompileError, LinkError
++    from distutils.errors import CompileError, LinkError
+     import subprocess
+ 
+     cc = ccompiler.new_compiler()
