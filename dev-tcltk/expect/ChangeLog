@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.78 2010/07/18 13:52:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.79 2010/07/23 12:35:15 maekke Exp $
+
+  23 Jul 2010; Markus Meier <maekke@gentoo.org> expect-5.44.1.15.ebuild:
+  arm stable, bug #324951
 
   18 Jul 2010; <nixnut@gentoo.org> expect-5.44.1.15.ebuild:
   ppc stable #324951
