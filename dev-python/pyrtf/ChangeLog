@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyrtf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.5 2009/12/28 21:19:04 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.6 2010/07/23 21:23:58 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyrtf-0.45.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   28 Dec 2009; Markus Meier <maekke@gentoo.org> pyrtf-0.45.ebuild:
   amd64/x86 stable, bug #294499
