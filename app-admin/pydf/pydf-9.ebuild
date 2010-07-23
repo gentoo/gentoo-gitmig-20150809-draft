@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-9.ebuild,v 1.3 2010/07/20 21:55:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/pydf-9.ebuild,v 1.4 2010/07/23 09:30:05 pva Exp $
 
 EAPI="3"
 
@@ -13,11 +13,11 @@ SRC_URI="http://kassiopeia.juls.savba.sk/~garabik/software/pydf/${PN}_${PV}.tar.
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 src_prepare() {
-	sed "s:/etc/pydfrc:${EPREFIX}/etc/pydfrc:g" ${PN} || die
+	sed "s:/etc/pydfrc:${EPREFIX}/etc/pydfrc:g" -i ${PN} || die
 }
 
 src_install() {

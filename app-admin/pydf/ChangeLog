@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.31 2010/07/20 21:55:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.32 2010/07/23 09:30:05 pva Exp $
+
+  23 Jul 2010; Peter Volkov <pva@gentoo.org> pydf-9.ebuild:
+  amd64 stable, bug 329087. Fix missed -i in sed, typo introduced in PREFIX
+  fixes.
 
   20 Jul 2010; Christian Faulhammer <fauli@gentoo.org> pydf-9.ebuild:
   stable x86, bug 329087
