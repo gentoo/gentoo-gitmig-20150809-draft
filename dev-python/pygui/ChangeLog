@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/ChangeLog,v 1.3 2010/06/09 21:12:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/ChangeLog,v 1.4 2010/07/23 21:29:41 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygui-2.2-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   09 Jun 2010; Patrick Lauer <patrick@gentoo.org> pygui-2.2-r1.ebuild:
   Adding ~amd64 keyword

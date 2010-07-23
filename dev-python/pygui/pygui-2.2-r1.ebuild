@@ -1,26 +1,31 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/pygui-2.2-r1.ebuild,v 1.2 2010/06/09 21:12:22 patrick Exp $
-EAPI=3
-PYTHON_DEPEND=2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygui/pygui-2.2-r1.ebuild,v 1.3 2010/07/23 21:29:41 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+
 inherit distutils eutils
+
+MY_P="PyGUI-${PV}"
 
 DESCRIPTION="A cross-platform pythonic GUI API"
 HOMEPAGE="http://www.cosc.canterbury.ac.nz/greg.ewing/python_gui/"
-
-MY_P=PyGUI-${PV}
-PYTHON_MODNAME=GUI
 SRC_URI="http://www.cosc.canterbury.ac.nz/greg.ewing/python_gui/${MY_P}.tar.gz"
+
 LICENSE="as-is"
 SLOT=0
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
-RDEPEND="dev-python/pygtk"
-DEPEND=""
+DEPEND="dev-python/pygtk"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${MY_P}
+
+PYTHON_MODNAME="GUI"
 
 src_prepare() {
 	distutils_src_prepare
