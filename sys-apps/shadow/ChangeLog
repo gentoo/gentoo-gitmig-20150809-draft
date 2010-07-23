@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.236 2010/07/13 22:08:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.237 2010/07/23 13:51:28 flameeyes Exp $
+
+*shadow-4.1.4.2-r5 (23 Jul 2010)
+
+  23 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +shadow-4.1.4.2-r5.ebuild, files/pam.d-include/passwd:
+  Add a new revision of shadow that should fix bug #275555.
 
   13 Jul 2010; Jeroen Roovers <jer@gentoo.org> shadow-4.1.4.2-r4.ebuild:
   Stable for HPPA PPC (bug #327987).
