@@ -1,22 +1,28 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.6.3.ebuild,v 1.1 2007/06/14 14:10:47 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.6.3.ebuild,v 1.2 2010/07/23 22:22:52 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-MY_P=${PN}-${PV:0:3}-${PV:4:1}
+MY_P="${PN}-${PV:0:3}-${PV:4:1}"
 
 DESCRIPTION="Python interface to scientific netCDF library."
 HOMEPAGE="http://pysclint.sourceforge.net/pycdf/"
 SRC_URI="mirror://sourceforge/pysclint/${MY_P}.tar.gz"
 
-IUSE="examples"
+LICENSE="PYTHON"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
-LICENSE="PYTHON"
+IUSE="examples"
 
-DEPEND=">=sci-libs/netcdf-3.6.1
-	dev-python/numpy"
+DEPEND="dev-python/numpy
+	>=sci-libs/netcdf-3.6.1"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -28,6 +34,6 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples
+		doins -r examples || die "doins failed"
 	fi
 }

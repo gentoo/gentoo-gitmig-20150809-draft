@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycdf
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.9 2007/06/14 14:10:47 lucass Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.10 2010/07/23 22:22:52 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycdf-0.6.3.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *pycdf-0.6.3 (14 Jun 2007)
 
