@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.323 2010/07/23 23:21:24 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.324 2010/07/23 23:29:28 rich0 Exp $
+
+  23 Jul 2010; Richard Freeman <rich0@gentoo.org> mythtv-0.22_p24255.ebuild:
+  amd64 stable - 323745
 
   23 Jul 2010; Richard Freeman <rich0@gentoo.org> mythtv-0.22_p24255.ebuild:
   fix for mmx bug in 323745
