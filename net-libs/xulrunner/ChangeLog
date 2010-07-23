@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.334 2010/07/23 07:44:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.335 2010/07/23 12:45:10 polynomial-c Exp $
+
+*xulrunner-1.9.2.7-r1 (23 Jul 2010)
+
+  23 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -xulrunner-1.9.2.7.ebuild, +xulrunner-1.9.2.7-r1.ebuild:
+  Increased revision to fix GRE issues caused by bug #329529 and requested
+  in bug #329563.
 
   23 Jul 2010; Fabian Groffen <grobian@gentoo.org> xulrunner-1.9.2.7.ebuild:
   Add inherit prefix for eprefixify, bug #329529
