@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/orm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.8 2009/02/03 22:15:52 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.9 2010/07/23 23:36:00 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  orm-1.0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   03 Feb 2009; Patrick Lauer <patrick@gentoo.org> orm-1.0.1.ebuild:
   Adding ~amd64 keyword, fixing default IUSE for bug #254759
