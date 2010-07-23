@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.3-r2.ebuild,v 1.9 2010/07/04 11:53:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.3-r2.ebuild,v 1.10 2010/07/23 22:27:02 ssuominen Exp $
 
 EAPI="2"
 inherit eutils qt4-build
@@ -12,8 +12,8 @@ IUSE="+accessibility cups dbus +glib gtk mng nas nis raster tiff qt3support xine
 
 RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2
-	media-libs/jpeg
-	media-libs/libpng
+	virtual/jpeg
+	>=media-libs/libpng-1.4
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXext
