@@ -11,7 +11,7 @@
 	<flag name='chatzilla'>Build Mozilla's IRC client (default on)</flag>
 	<flag name='composer'>Build Mozilla's HTML editor component (default on)</flag>
 	<flag name='mailclient'>Build Mozilla's Mail client (default on)</flag>
-	<flag name='roaming'>Build sroaming extension support (default on)</flag>
+	<flag name='roaming'>Build roaming extension support (default on)</flag>
 
 	<!-- Other USE-flags -->
 	<flag name='custom-optimization'>Fine-tune custom compiler
