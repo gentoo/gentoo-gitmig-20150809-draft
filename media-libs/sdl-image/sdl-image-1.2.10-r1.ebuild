@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.10-r1.ebuild,v 1.9 2010/07/21 10:52:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.10-r1.ebuild,v 1.10 2010/07/23 22:07:30 ssuominen Exp $
 
 EAPI=2
 MY_P="${P/sdl-/SDL_}"
@@ -15,8 +15,8 @@ IUSE="gif jpeg tiff png"
 
 DEPEND="sys-libs/zlib
 	media-libs/libsdl
-	png? ( media-libs/libpng )
-	jpeg? ( >=media-libs/jpeg-7:0 )
+	png? ( >=media-libs/libpng-1.4 )
+	jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff )"
 RDEPEND="${DEPEND}"
 
