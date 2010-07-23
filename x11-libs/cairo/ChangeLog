@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.248 2010/07/21 19:46:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.249 2010/07/23 09:22:01 pva Exp $
+
+  23 Jul 2010; Peter Volkov <pva@gentoo.org> cairo-1.8.10.ebuild:
+  amd64 stable, bug 329175
 
   21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> cairo-1.8.10.ebuild:
   ppc64 stable wrt #329175
