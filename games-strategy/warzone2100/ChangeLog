@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.44 2010/07/17 12:40:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.45 2010/07/23 11:32:02 pva Exp $
+
+  23 Jul 2010; Peter Volkov <pva@gentoo.org> warzone2100-2.3.1.ebuild:
+  amd64 stable, bug 328277
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   warzone2100-2.3.1.ebuild:
