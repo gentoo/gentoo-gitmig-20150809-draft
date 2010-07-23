@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.29 2010/07/23 12:32:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.30 2010/07/23 12:56:10 ssuominen Exp $
+
+*liboggz-1.1.1 (23 Jul 2010)
+
+  23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +liboggz-1.1.1.ebuild,
+  +files/liboggz-1.1.1-destdir.patch:
+  Version bump.
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> liboggz-1.1.0.ebuild:
   stabilize the correct version on arm
