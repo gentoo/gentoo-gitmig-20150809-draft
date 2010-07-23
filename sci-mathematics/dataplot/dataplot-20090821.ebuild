@@ -1,0 +1,83 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20090821.ebuild,v 1.1 2010/07/23 18:28:47 bicatali Exp $
+
+EAPI=3
+inherit eutils toolchain-funcs autotools
+
+#     YEAR         MONTH    DAY
+MY_PV=${PV:0:4}_${PV:4:2}_${PV:6:2}
+MY_P=dpsrc_${MY_PV}
+# MY_PV_AUX usually ${MY_PV}
+MY_PV_AUX=2009_07_15
+MY_P_AUX=dplib.${MY_PV_AUX}
+
+DESCRIPTION="A program for scientific visualization and statistical analyis"
+HOMEPAGE="http://www.itl.nist.gov/div898/software/dataplot/"
+SRC_URI="ftp://ftp.nist.gov/pub/dataplot/unix/${MY_P}.tar.gz
+	ftp://ftp.nist.gov/pub/dataplot/unix/${MY_P_AUX}.tar.gz"
+
+LICENSE="public-domain"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="examples gd opengl X"
+
+COMMON_DEPEND="media-libs/plotutils
+	opengl? ( virtual/opengl )
+	gd? ( media-libs/gd[png,jpeg] )"
+DEPEND="${COMMON_DEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${COMMON_DEPEND}
+	X? ( x11-misc/xdg-utils )"
+
+S="${WORKDIR}/${MY_P}"
+S_AUX="${WORKDIR}/${MY_P_AUX}"
+
+src_unpack() {
+	# unpacking and renaming because
+	# upstream does not use directories
+	mkdir "${S_AUX}"
+	pushd "${S_AUX}"
+	unpack ${MY_P_AUX}.tar.gz
+	popd
+	mkdir ${MY_P}
+	cd "${S}"
+	unpack ${MY_P}.tar.gz
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-opengl.patch
+	cp "${FILESDIR}"/Makefile.am.${PV} Makefile.am
+	cp "${FILESDIR}"/configure.ac.${PV} configure.ac
+	sed -e "s:IHOST1='SUN':IHOST1='@HOST@:" \
+		-e "s:/usr/local/lib:@datadir@:g" \
+		dp1_linux.f > dp1_linux.f.in || die
+	sed -e "s/(MAXOBV=.*)/(MAXOBV=@MAXOBV@)/" \
+		-e "s:/usr/local/lib:@datadir@:g" \
+		DPCOPA.INC > DPCOPA.INC.in || die
+	eautoreconf
+}
+
+src_configure() {
+	econf \
+		$(use_enable gd) \
+		$(use_enable opengl gl) \
+		$(use_enable X)
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins -r "${S_AUX}"/data/* || die "installing examples failed"
+	fi
+	insinto /usr/share/dataplot
+	doins "${S_AUX}"/dp{mes,sys,log}f.tex || die "doins failed."
+	doenvd "${FILESDIR}"/90${PN} || die "doenvd failed"
+}
+
+pkg_postinst() {
+	elog "Before using dataplot, please run (as root):"
+	elog "env-update && source /etc/profile"
+}

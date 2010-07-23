@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/dataplot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.8 2009/12/26 17:45:37 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.9 2010/07/23 18:28:47 bicatali Exp $
+
+*dataplot-20090821 (23 Jul 2010)
+
+  23 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +dataplot-20090821.ebuild, +files/dataplot-20090821-opengl.patch,
+  +files/Makefile.am.20090821, +files/configure.ac.20090821:
+  Version bump. Still rough (untested fully). No more use of fortran eclass,
+  updated patches, dependencies, some work to make it easier to maintain
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> dataplot-20080225.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
