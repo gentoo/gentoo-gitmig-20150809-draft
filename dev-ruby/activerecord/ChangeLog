@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.135 2010/05/31 06:07:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.136 2010/07/23 07:04:25 graaff Exp $
+
+*activerecord-2.3.8-r1 (23 Jul 2010)
+
+  23 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +activerecord-2.3.8-r1.ebuild,
+  +files/activerecord-2.3.8-add-index-with-symbol.patch:
+  Fix add_index regression as reported in bug 329435 by matsuu.
 
 *activerecord-2.3.8 (31 May 2010)
 
