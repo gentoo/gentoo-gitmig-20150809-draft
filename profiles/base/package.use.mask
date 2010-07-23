@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.152 2010/07/12 14:44:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.153 2010/07/23 07:28:50 pva Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -12,10 +12,6 @@
 # Andrey Grozin <grozin@gentoo.org> (7 Jul 2010)
 # Doesn't work with the current qt
 app-office/texmacs qt4
-
-# Peter Volkov <pva@gentoo.org> (1 Jul 2010)
-# Masked until we test it better
-net-im/ejabberd mod_srl
 
 # Justin Lecher <jlec@gentoo.org> (30 Jun 2010)
 # dev-libs/excelformat does not work

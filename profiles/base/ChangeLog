@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.165 2010/07/14 19:10:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.166 2010/07/23 07:28:50 pva Exp $
+
+  23 Jul 2010; Peter Volkov <pva@gentoo.org> package.use.mask:
+  Unmasked mod_srl USE flag for net-im/ejabberd: it workd now, thank NN
 
   14 Jul 2010; Benedikt Böhm <hollow@gentoo.org> make.defaults:
   fix #328215
