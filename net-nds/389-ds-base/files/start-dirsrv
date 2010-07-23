@@ -10,4 +10,4 @@ rc-config stop 389-ds
 rc=$(rc-config start 389-ds)
 # give the daemon a chance to start
 sleep 8
-exit ${rc}
+exit "${rc:-1}"
