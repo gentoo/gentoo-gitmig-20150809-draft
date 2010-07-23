@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.0.2.ebuild,v 1.5 2010/07/23 07:44:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.0.2.ebuild,v 1.6 2010/07/23 21:08:23 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/t/T}
@@ -19,8 +19,8 @@ RDEPEND=">=dev-lang/perl-5.6
 	>=dev-libs/glib-2.6:2
 	>=dev-util/desktop-file-utils-0.14
 	>=media-libs/freetype-2
-	>=media-libs/jpeg-6b:0
-	>=media-libs/libpng-1.2.0
+	virtual/jpeg
+	>=media-libs/libpng-1.4
 	virtual/fam
 	>=x11-libs/gtk+-2.6:2
 	x11-libs/libSM
