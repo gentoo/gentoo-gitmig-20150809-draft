@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.16.ebuild,v 1.9 2010/07/23 09:46:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.16.ebuild,v 1.10 2010/07/23 16:49:58 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -45,6 +45,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.15-no-nls.patch
+	epatch "${FILESDIR}"/${P}-python.patch
 	elibtoolize #269003
 	use python && do_python
 }

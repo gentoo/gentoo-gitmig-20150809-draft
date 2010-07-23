@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.152 2010/07/23 09:46:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.153 2010/07/23 16:49:58 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cracklib-2.8.16.ebuild, +files/cracklib-2.8.16-python.patch:
+  Fix building of Python bindings when cracklib isn't already installed.
+  Approved by Chainsaw.
 
   23 Jul 2010; Peter Volkov <pva@gentoo.org> cracklib-2.8.16.ebuild:
   amd64 stable, bug 329149
