@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/clashscore-db
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clashscore-db/ChangeLog,v 1.1 2010/07/22 07:05:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clashscore-db/ChangeLog,v 1.2 2010/07/23 11:41:45 jlec Exp $
+
+  23 Jul 2010; Justin Lecher <jlec@gentoo.org> clashscore-db-3.17.ebuild:
+  Keyworded for *-linux prefix
 
 *clashscore-db-3.17 (22 Jul 2010)
 
