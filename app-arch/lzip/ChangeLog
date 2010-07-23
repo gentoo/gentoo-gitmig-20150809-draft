@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.10 2010/07/22 03:51:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.11 2010/07/23 09:49:58 pva Exp $
+
+  23 Jul 2010; Peter Volkov <pva@gentoo.org> lzip-1.10.ebuild:
+  amd64 stable, bug 329319
 
   22 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> lzip-1.10.ebuild:
   x86 stable wrt bug #329319
