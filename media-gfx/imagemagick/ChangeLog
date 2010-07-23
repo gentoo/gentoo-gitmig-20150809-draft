@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.407 2010/07/18 16:19:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.408 2010/07/23 21:28:34 ssuominen Exp $
+
+  23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  imagemagick-6.6.2.5.ebuild:
+  Use virtual/jpeg.
 
   18 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   imagemagick-6.6.2.5.ebuild:
