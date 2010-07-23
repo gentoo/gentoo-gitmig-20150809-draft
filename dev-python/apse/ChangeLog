@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.9 2008/05/12 07:36:30 hawking Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.10 2010/07/23 19:53:35 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  apse-0.2-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *apse-0.2-r1 (12 May 2008)
 
