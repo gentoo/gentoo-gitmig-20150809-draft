@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.8.ebuild,v 1.8 2010/07/19 01:10:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.8.ebuild,v 1.9 2010/07/23 20:25:10 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -16,11 +16,11 @@ IUSE="test xinerama"
 
 COMMON_DEPEND=">=media-libs/giblib-1.2.4
 	media-libs/imlib2
-	>=media-libs/libpng-1.2.43
+	>=media-libs/libpng-1.4
 	x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${COMMON_DEPEND}
-	>=media-libs/jpeg-8a"
+	virtual/jpeg"
 DEPEND="${COMMON_DEPEND}
 	x11-libs/libXt
 	x11-proto/xproto
