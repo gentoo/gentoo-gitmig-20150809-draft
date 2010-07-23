@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitstats/gitstats-100711.ebuild,v 1.1 2010/07/11 15:37:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitstats/gitstats-100711.ebuild,v 1.2 2010/07/23 07:46:04 jlec Exp $
 
 EAPI="2"
 
@@ -21,6 +21,10 @@ RDEPEND="
 	sci-visualization/gnuplot[gd]
 	dev-vcs/git"
 DEPEND=""
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	sed "s:basedir = os.path.dirname(os.path.abspath(__file__)):basedir = '/usr/share/gitstats':g" \
