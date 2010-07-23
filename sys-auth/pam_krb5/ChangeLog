@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.29 2010/06/11 18:09:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.30 2010/07/23 14:16:05 flameeyes Exp $
+
+  23 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pam_krb5-3.13.ebuild, -pam_krb5-4.2.ebuild:
+  Remove older versions.
 
 *pam_krb5-4.3 (11 Jun 2010)
 
