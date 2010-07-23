@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.3 2010/04/22 18:51:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.4 2010/07/23 07:36:02 djc Exp $
+
+*tornado-1.0 (23 Jul 2010)
+
+  23 Jul 2010; Dirkjan Ochtman <djc@gentoo.org> +tornado-1.0.ebuild:
+  Version bump to 1.0.
 
   22 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tornado-0.2.ebuild:
