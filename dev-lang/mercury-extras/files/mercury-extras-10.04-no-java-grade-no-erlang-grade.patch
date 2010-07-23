@@ -1,11 +1,12 @@
 diff -ur mercury-extras-10.04.orig/cgi/Mmakefile mercury-extras-10.04/cgi/Mmakefile
 --- mercury-extras-10.04.orig/cgi/Mmakefile	2004-07-30 19:01:07.000000000 +1200
 +++ mercury-extras-10.04/cgi/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -12,6 +12,8 @@
+@@ -12,6 +12,9 @@
  
  MAIN_TARGET = $(LIBRARY)
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  MCFLAGS-mercury_www = --no-warn-nothing-exported
  
@@ -13,11 +14,12 @@ diff -ur mercury-extras-10.04.orig/cgi/Mmakefile mercury-extras-10.04/cgi/Mmakef
 diff -ur mercury-extras-10.04.orig/complex_numbers/Mmakefile mercury-extras-10.04/complex_numbers/Mmakefile
 --- mercury-extras-10.04.orig/complex_numbers/Mmakefile	2003-01-16 23:44:11.000000000 +1300
 +++ mercury-extras-10.04/complex_numbers/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -10,6 +10,8 @@
+@@ -10,6 +10,9 @@
  
  MAIN_TARGET = all
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  all:	libcomplex_numbers
  
@@ -25,23 +27,25 @@ diff -ur mercury-extras-10.04.orig/complex_numbers/Mmakefile mercury-extras-10.0
 diff -ur mercury-extras-10.04.orig/curs/Mmakefile mercury-extras-10.04/curs/Mmakefile
 --- mercury-extras-10.04.orig/curs/Mmakefile	2003-01-16 23:44:14.000000000 +1300
 +++ mercury-extras-10.04/curs/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -26,7 +26,7 @@
+@@ -26,7 +26,8 @@
  # Omit this line if you want to install the default grades.
  # Edit this line if you want to install with different grades.
  #
 -#LIBGRADES = asm_fast.gc hlc.gc
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
  
  # The following standard libraries must be linked against in any
  # application using the curs library (i.e. MLLIBS must include
 diff -ur mercury-extras-10.04.orig/curses/Mmakefile mercury-extras-10.04/curses/Mmakefile
 --- mercury-extras-10.04.orig/curses/Mmakefile	2003-01-16 23:44:15.000000000 +1300
 +++ mercury-extras-10.04/curses/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -13,6 +13,8 @@
+@@ -13,6 +13,9 @@
  # this line to include the appropriate curses library for your OS. 
  MLLIBS = -lncurses
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  -include ../Mmake.params
  
@@ -49,11 +53,12 @@ diff -ur mercury-extras-10.04.orig/curses/Mmakefile mercury-extras-10.04/curses/
 diff -ur mercury-extras-10.04.orig/dynamic_linking/Mmakefile mercury-extras-10.04/dynamic_linking/Mmakefile
 --- mercury-extras-10.04.orig/dynamic_linking/Mmakefile	2005-01-25 20:49:05.000000000 +1300
 +++ mercury-extras-10.04/dynamic_linking/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -17,6 +17,8 @@
+@@ -17,6 +17,9 @@
  CFLAGS = -g
  MLFLAGS += --no-strip
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  -include ../Mmake.params
  
@@ -61,51 +66,51 @@ diff -ur mercury-extras-10.04.orig/dynamic_linking/Mmakefile mercury-extras-10.0
 diff -ur mercury-extras-10.04.orig/graphics/mercury_glut/Mmakefile mercury-extras-10.04/graphics/mercury_glut/Mmakefile
 --- mercury-extras-10.04.orig/graphics/mercury_glut/Mmakefile	2006-03-30 14:52:44.000000000 +1200
 +++ mercury-extras-10.04/graphics/mercury_glut/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -10,6 +10,8 @@
+@@ -10,6 +10,9 @@
  
  MAIN_TARGET = libmercury_glut
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  # The following libraries are for X on Linux (Debian) using Mesa.
  	
  # Libaries required by X windows.
-Only in mercury-extras-10.04/graphics/mercury_glut: Mmakefile.orig
 diff -ur mercury-extras-10.04.orig/graphics/mercury_opengl/Mmakefile mercury-extras-10.04/graphics/mercury_opengl/Mmakefile
 --- mercury-extras-10.04.orig/graphics/mercury_opengl/Mmakefile	2007-10-11 19:21:31.000000000 +1300
 +++ mercury-extras-10.04/graphics/mercury_opengl/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -15,6 +15,8 @@
+@@ -15,6 +15,9 @@
  
  MAIN_TARGET = libmercury_opengl
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  # Specify what libraries we need to link against for OpenGL on this system.
  # (The following works on Debian with mesa as the OpenGL implementation).
  GL_LIBS = -lGL -lGLU -L/usr/X11R6/lib -lX11 -lXt -lICE -lXext -lSM
-Only in mercury-extras-10.04/graphics/mercury_opengl: Mmakefile.orig
 diff -ur mercury-extras-10.04.orig/graphics/mercury_tcltk/Mmakefile mercury-extras-10.04/graphics/mercury_tcltk/Mmakefile
 --- mercury-extras-10.04.orig/graphics/mercury_tcltk/Mmakefile	2005-08-15 16:11:42.000000000 +1200
 +++ mercury-extras-10.04/graphics/mercury_tcltk/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -21,6 +21,8 @@
+@@ -21,6 +21,9 @@
  
  MAIN_TARGET = $(LIBRARY)
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  depend: mercury_tcltk.depend
  
  install: libmercury_tcltk.install
-Only in mercury-extras-10.04/graphics/mercury_tcltk: Mmakefile.orig
-Only in mercury-extras-10.04/graphics/mercury_tcltk: mtcltk.m.orig
 diff -ur mercury-extras-10.04.orig/lazy_evaluation/Mmakefile mercury-extras-10.04/lazy_evaluation/Mmakefile
 --- mercury-extras-10.04.orig/lazy_evaluation/Mmakefile	2003-01-16 23:44:17.000000000 +1300
 +++ mercury-extras-10.04/lazy_evaluation/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -4,6 +4,8 @@
+@@ -4,6 +4,9 @@
  # Public License - see the file COPYING.LIB in the Mercury distribution.
  #-----------------------------------------------------------------------------#
  INSTALL_PREFIX := $(INSTALL_PREFIX)/extras
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  -include ../Mmake.params
  default_target: all
@@ -113,33 +118,36 @@ diff -ur mercury-extras-10.04.orig/lazy_evaluation/Mmakefile mercury-extras-10.0
 diff -ur mercury-extras-10.04.orig/moose/Mmakefile mercury-extras-10.04/moose/Mmakefile
 --- mercury-extras-10.04.orig/moose/Mmakefile	2003-01-16 23:44:20.000000000 +1300
 +++ mercury-extras-10.04/moose/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -6,6 +6,7 @@
+@@ -6,6 +6,8 @@
  
  # GRADE = asm_fast.gc.debug
  # GRADE = asm_fast.gc.prof
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
  
  # MCFLAGS = -O6
  # MCFLAGS = --intermodule-optimization -O6
 diff -ur mercury-extras-10.04.orig/odbc/Mmakefile mercury-extras-10.04/odbc/Mmakefile
 --- mercury-extras-10.04.orig/odbc/Mmakefile	2006-04-03 18:19:54.000000000 +1200
 +++ mercury-extras-10.04/odbc/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -8,6 +8,7 @@
+@@ -8,6 +8,8 @@
  
  #-----------------------------------------------------------------------------#
  # Configuration
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
  
  # The driver manager.
  # Legal values for MODBC_DRIVER are MODBC_IODBC, MODBC_UNIX, and MODBC_MS.
 diff -ur mercury-extras-10.04.orig/posix/Mmakefile mercury-extras-10.04/posix/Mmakefile
 --- mercury-extras-10.04.orig/posix/Mmakefile	2008-09-02 21:45:54.000000000 +1200
 +++ mercury-extras-10.04/posix/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -8,6 +8,8 @@
+@@ -8,6 +8,9 @@
  
  -include ../Mmake.params
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  # The following is needed (on some systems) to enable declarations of
  # Posix functions in standard C header files.
@@ -147,11 +155,12 @@ diff -ur mercury-extras-10.04.orig/posix/Mmakefile mercury-extras-10.04/posix/Mm
 diff -ur mercury-extras-10.04.orig/quickcheck/Mmakefile mercury-extras-10.04/quickcheck/Mmakefile
 --- mercury-extras-10.04.orig/quickcheck/Mmakefile	2003-01-16 23:44:24.000000000 +1300
 +++ mercury-extras-10.04/quickcheck/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -10,6 +10,8 @@
+@@ -10,6 +10,9 @@
  
  MAIN_TARGET = all
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  .PHONY: depend
  depend:	qcheck.depend test_qcheck.depend
@@ -159,11 +168,12 @@ diff -ur mercury-extras-10.04.orig/quickcheck/Mmakefile mercury-extras-10.04/qui
 diff -ur mercury-extras-10.04.orig/xml/Mmakefile mercury-extras-10.04/xml/Mmakefile
 --- mercury-extras-10.04.orig/xml/Mmakefile	2002-03-06 23:10:31.000000000 +1300
 +++ mercury-extras-10.04/xml/Mmakefile	2010-07-20 06:49:40.000000000 +1200
-@@ -8,6 +8,8 @@
+@@ -8,6 +8,9 @@
  
  INSTALL_PREFIX := $(INSTALL_PREFIX)/extras
  
 +LIBGRADES := $(filter-out java,$(LIBGRADES))
++LIBGRADES := $(filter-out erlang,$(LIBGRADES))
 +
  .PHONY: default_target
  default_target: tryit libxml
