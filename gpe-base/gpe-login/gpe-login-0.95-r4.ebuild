@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/gpe-login-0.95-r3.ebuild,v 1.2 2010/02/13 11:58:49 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/gpe-login-0.95-r4.ebuild,v 1.1 2010/07/23 11:37:59 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit gpe eutils autotools
@@ -13,6 +13,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
 IUSE="branding"
+
+# Options for gpe-login-min-uid.patch
+GPECONF="${GPECONF}
+--with-min-valid-uid=1000
+--with-min-valid-gid=1000"
 
 DEPEND="${DEPEND} gpe-base/libgpewidget"
 RDEPEND="${RDEPEND} ${DEPEND}
@@ -44,6 +49,11 @@ src_unpack() {
 	# This patch removes a lot of ugly files and fixes
 	# the X11/Xinit.d path
 	epatch "${FILESDIR}/${P}-cleanup.patch"
+
+	# Patch to allow filtering system accounts from login window,
+	# cortesy of yvasilev: #312743
+	# This should be merged with upstream at some point.
+	epatch "${FILESDIR}/${PN}-min-uid.patch"
 
 	eautoreconf
 }

@@ -1,6 +1,14 @@
 # ChangeLog for gpe-base/gpe-login
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.8 2010/02/13 11:58:49 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.9 2010/07/23 11:37:59 miknix Exp $
+
+*gpe-login-0.95-r4 (23 Jul 2010)
+
+  23 Jul 2010; Angelo Arrifano <miknix@gentoo.org>
+  -gpe-login-0.95-r3.ebuild, +gpe-login-0.95-r4.ebuild,
+  +files/gpe-login-min-uid.patch:
+  Apply patch to select correct min UID/GID for users. Hardcoded values
+  were 100/100 while Gentoo uses 1000/1000. See #312743
 
   13 Feb 2010; Angelo Arrifano <miknix@gentoo.org> -files/gentoo-badge2.png,
   gpe-login-0.95-r3.ebuild, +files/windowmanager.xsessiond-gentoo:
