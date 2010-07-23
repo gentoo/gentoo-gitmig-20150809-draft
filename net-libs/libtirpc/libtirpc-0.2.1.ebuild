@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.1.ebuild,v 1.1 2010/07/23 01:53:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.1.ebuild,v 1.2 2010/07/23 03:21:43 vapier Exp $
 
-EAPI=2
+EAPI="2"
 
 inherit eutils
 
@@ -20,12 +20,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
-	econf $(use_enable kerberos gss) --disable-static || die
+	econf $(use_enable kerberos gss) --disable-static
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	insinto /etc
 	newins doc/etc_netconfig netconfig || die
 
