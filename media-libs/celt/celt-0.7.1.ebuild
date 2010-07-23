@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.7.1.ebuild,v 1.1 2010/01/29 17:51:07 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.7.1.ebuild,v 1.2 2010/07/23 10:19:17 fauli Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.us.xiph.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc x86"
 IUSE="ogg"
 
 DEPEND="ogg? ( media-libs/libogg )"
