@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.60 2010/07/19 17:09:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.61 2010/07/23 11:30:45 djc Exp $
+
+*sphinx-1.0 (23 Jul 2010)
+
+  23 Jul 2010; Dirkjan Ochtman <djc@gentoo.org> -sphinx-1.0_beta2.ebuild,
+  +sphinx-1.0.ebuild:
+  Version bump to the 1.0 final.
 
   19 Jul 2010; Jeroen Roovers <jer@gentoo.org> sphinx-0.6.7.ebuild:
   Stable for HPPA (bug #327145).
