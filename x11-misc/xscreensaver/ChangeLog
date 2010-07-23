@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.274 2010/07/21 10:46:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.275 2010/07/23 21:12:35 ssuominen Exp $
+
+  23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xscreensaver-5.11.ebuild:
+  Use virtual/jpeg.
 
   21 Jul 2010; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.11.ebuild:
   Stable for HPPA (bug #327367).
