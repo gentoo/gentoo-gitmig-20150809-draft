@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/abcde
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.50 2010/07/17 18:31:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.51 2010/07/23 19:38:39 beandog Exp $
+
+*abcde-2.4.2-r1 (23 Jul 2010)
+
+  23 Jul 2010; Steve Dibb <beandog@gentoo.org> -abcde-2.4.2.ebuild,
+  +abcde-2.4.2-r1.ebuild:
+  Add atomicparsley dep for AAC tagging; bug 326171
 
 *abcde-2.4.2 (17 Jul 2010)
 

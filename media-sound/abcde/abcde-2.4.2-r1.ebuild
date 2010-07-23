@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.4.2.ebuild,v 1.1 2010/07/17 18:31:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.4.2-r1.ebuild,v 1.1 2010/07/23 19:38:39 beandog Exp $
 
 EAPI=2
 inherit eutils
@@ -17,7 +17,8 @@ IUSE="aac cdparanoia flac id3 lame normalize replaygain speex vorbis"
 RDEPEND="media-sound/cd-discid
 	net-misc/wget
 	virtual/eject
-	aac? ( media-libs/faac )
+	aac? ( media-libs/faac
+		media-video/atomicparsley )
 	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( media-libs/flac )
 	id3? (
