@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.168 2010/06/28 21:03:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.169 2010/07/23 01:33:58 flameeyes Exp $
+
+*nfs-utils-1.2.2-r2 (23 Jul 2010)
+
+  23 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nfs-utils-1.2.2-r2.ebuild, +files/nfs-utils-1.2.2-nfsv4.patch:
+  Fix configure script when enabling NFSv4 and Kerberos, some tests would
+  have been skipped.
 
   28 Jun 2010; Mike Frysinger <vapier@gentoo.org> files/nfsmount.initd:
   Fix idmapd/gssd dep calculation with nfs mounts #324725 by Михаил.
