@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10.ebuild,v 1.12 2010/07/23 20:59:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10.ebuild,v 1.13 2010/07/23 21:02:22 ssuominen Exp $
 
-EAPI=1
+EAPI=2
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.9
@@ -21,23 +21,21 @@ DEPEND="virtual/jpeg
 	>=sys-libs/zlib-1.1.4
 	lcms? ( =media-libs/lcms-1* )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	ln -s makefiles/configure.in .
 	ln -s makefiles/Makefile.am .
 
 	eautoreconf
 }
 
-src_compile() {
-	econf --with-jpeg $(use_with lcms) || die "econf failed"
-	emake || die "emake failed"
+src_configure() {
+	econf \
+		--with-jpeg \
+		$(use_with lcms)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 
 	dodoc CHANGES README*
 	dodoc doc/doc.readme doc/libmng.txt
