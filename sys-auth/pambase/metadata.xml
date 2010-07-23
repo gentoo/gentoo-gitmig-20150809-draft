@@ -61,5 +61,12 @@
       will not be compatible with systems using an earlier glibc
       version.
     </flag>
+    <flag name="kerberos">
+      Enable pam_krb5 module on system auth stack, as an alternative
+      to pam_unix. If Kerberos authentication succeed, only pam_unix
+      will be ignore, and all the other modules will proceed as usual,
+      including Gnome Keyring and other session modules. It requires
+      <pkg>sys-libs/pam</pkg> as PAM implementation.
+    </flag>
   </use>
 </pkgmetadata>
