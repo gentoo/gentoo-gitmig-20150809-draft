@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.138 2010/07/22 22:13:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.139 2010/07/24 08:45:56 vapier Exp $
+
+  24 Jul 2010; Mike Frysinger <vapier@gentoo.org> grub-1.98.ebuild,
+  grub-9999.ebuild:
+  Add grub-fstest to the exec stack list #329221 by Simon Shapiro.
 
   22 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> grub-0.97-r10.ebuild:
   x86 stable wrt bug #329325
