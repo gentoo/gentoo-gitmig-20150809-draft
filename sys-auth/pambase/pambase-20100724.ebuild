@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100723.ebuild,v 1.1 2010/07/23 14:14:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20100724.ebuild,v 1.1 2010/07/24 01:54:51 flameeyes Exp $
 
 EAPI=3
 
