@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.4.2.ebuild,v 1.4 2009/06/10 15:05:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/gtick-0.4.2.ebuild,v 1.5 2010/07/24 10:03:04 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86 ~x86-fbsd"
 IUSE="nls sndfile"
 
-RDEPEND=">=x11-libs/gtk+-2:2
+RDEPEND="x11-libs/gtk+:2
 	sndfile? ( media-libs/libsndfile )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -29,8 +29,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	newicon src/icon48x48.xpm ${PN}.xpm
-	make_desktop_entry ${PN} "GTick" ${PN}
+	make_desktop_entry ${PN} "GTick"
 }
