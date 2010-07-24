@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/opengl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.9 2008/10/03 23:08:15 fmccor Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.10 2010/07/24 19:10:21 slyfox Exp $
+
+  24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> -opengl-2.0.ebuild,
+  -opengl-2.1.ebuild, -opengl-2.2.1.ebuild:
+  Removed old versions.
 
   03 Oct 2008; Ferris McCormick <fmccor@gentoo.org> opengl-2.2.1.1.ebuild:
   Sparc stable --- Bug #230919 and Bug #239368.

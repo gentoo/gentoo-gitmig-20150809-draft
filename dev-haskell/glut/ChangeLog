@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/glut
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.10 2009/04/19 11:57:43 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.11 2010/07/24 19:12:54 slyfox Exp $
+
+  24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> -glut-2.0.ebuild,
+  -glut-2.0-r1.ebuild, -glut-2.1.1.ebuild:
+  Removed old versions.
 
 *glut-2.1.1.2 (19 Apr 2009)
 
