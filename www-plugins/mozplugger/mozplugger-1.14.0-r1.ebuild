@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/mozplugger-1.14.0-r1.ebuild,v 1.1 2010/07/24 03:48:49 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/mozplugger-1.14.0-r1.ebuild,v 1.2 2010/07/24 04:17:59 chutzpah Exp $
 
 EAPI=2
 inherit nsplugins multilib toolchain-funcs
 
-DESCRIPTION="Streaming media plugin for Mozilla, based on netscape-plugger"
+DESCRIPTION="Configurable browser plugin to launch streaming media players."
 SRC_URI="http://mozplugger.mozdev.org/files/${P}.tar.gz"
 HOMEPAGE="http://mozplugger.mozdev.org/"
 
