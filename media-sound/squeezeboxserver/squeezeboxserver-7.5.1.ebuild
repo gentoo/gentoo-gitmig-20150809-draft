@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.1.ebuild,v 1.2 2010/07/23 23:03:05 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.1.ebuild,v 1.3 2010/07/24 16:29:15 lavajoe Exp $
 
 EAPI="2"
 
@@ -154,7 +154,7 @@ src_prepare() {
 
 	# Copy in the module builder - can't run it from the files directory in case
 	# Portage is mounted 'noexec'.
-	cp "${FILESDIR}/build-modules.sh" "${S}"	|| die
+	cp "${FILESDIR}/build-modules-${PV}.sh" "${S}/build-modules.sh"	|| die
 	chmod 555 "${S}/build-modules.sh"			|| die
 }
 
