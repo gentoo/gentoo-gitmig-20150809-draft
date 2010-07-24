@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r1.ebuild,v 1.2 2010/05/18 08:06:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r1.ebuild,v 1.3 2010/07/24 17:27:05 jlec Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="vmd"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="tachyon"
 
 RESTRICT="fetch"
@@ -98,10 +98,10 @@ src_prepare() {
 		-i configure || die "failed to set up netcdf"
 
 	local NUMPY_INCLUDE="numpy/core/include"
-	sed -e "s:gentoo-python-include:$(python_get_includedir):" \
-		-e "s:gentoo-python-lib:$(python_get_libdir):" \
+	sed -e "s:gentoo-python-include:${EPREFIX}$(python_get_includedir):" \
+		-e "s:gentoo-python-lib:${EPREFIX}$(python_get_libdir):" \
 		-e "s:gentoo-python-link:$(PYTHON):" \
-		-e "s:gentoo-numpy-include:$(python_get_sitedir)/${NUMPY_INCLUDE}:" \
+		-e "s:gentoo-numpy-include:${EPREFIX}$(python_get_sitedir)/${NUMPY_INCLUDE}:" \
 		-i configure || die "failed setting up python"
 
 	sed -e "s:LINUXPPC:LINUX:g" \
@@ -137,7 +137,7 @@ src_compile() {
 src_install() {
 	# install plugins
 	cd "${WORKDIR}"/plugins
-	PLUGINDIR=${D}/usr/$(get_libdir)/${PN}/plugins make distrib || \
+	PLUGINDIR=${ED}/usr/$(get_libdir)/${PN}/plugins make distrib || \
 		die "failed to install plugins"
 
 	# install vmd

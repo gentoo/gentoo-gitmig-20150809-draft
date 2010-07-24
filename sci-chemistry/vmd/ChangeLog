@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.29 2010/05/28 18:21:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.30 2010/07/24 17:27:05 jlec Exp $
+
+  24 Jul 2010; Justin Lecher <jlec@gentoo.org> vmd-1.8.7-r1.ebuild:
+  Added prefix changes, thanks rei4dan #327517; keyworded for ~-linux prefix
 
   28 May 2010; Justin Lecher <jlec@gentoo.org> -vmd-1.8.6.ebuild,
   -vmd-1.8.6-r1.ebuild, -vmd-1.8.7.ebuild:
