@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/ghdl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ChangeLog,v 1.12 2010/05/20 03:10:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ChangeLog,v 1.13 2010/07/24 15:39:14 tomjbe Exp $
+
+  24 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> ghdl-0.27.ebuild,
+  ghdl-0.29.ebuild:
+  Add missing 'emake -j1' for install, as per bug #277644.
 
   20 May 2010; Jeremy Olexa <darkside@gentoo.org> ghdl-0.27.ebuild:
   QA: Fix SRC_URI

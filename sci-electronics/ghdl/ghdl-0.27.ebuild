@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.27.ebuild,v 1.4 2010/05/20 03:10:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.27.ebuild,v 1.5 2010/07/24 15:39:14 tomjbe Exp $
 
 EAPI="2"
 
@@ -61,7 +61,7 @@ src_compile() {
 
 src_install() {
 	# bug #277644
-	PATH="${GNATGCC_PATH}:${PATH}" emake DESTDIR="${D}" install || die "Installation failed"
+	PATH="${GNATGCC_PATH}:${PATH}" emake -j1 DESTDIR="${D}" install || die "Installation failed"
 
 	cd "${D}"/usr/bin ; rm `ls --ignore=ghdl`
 	rm -rf "${D}"/usr/include
