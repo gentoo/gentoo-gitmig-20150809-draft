@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.122 2010/07/13 02:00:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.123 2010/07/24 15:18:52 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> debootstrap-1.0.23.ebuild:
+  alpha/arm/ia64/sparc stable wrt #327631
 
   13 Jul 2010; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.23.ebuild:
   Stable for HPPA (bug #327631).
