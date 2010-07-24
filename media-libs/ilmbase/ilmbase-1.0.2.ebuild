@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ilmbase-1.0.2.ebuild,v 1.1 2010/07/24 15:54:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ilmbase-1.0.2.ebuild,v 1.2 2010/07/24 16:20:04 ssuominen Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -18,7 +18,8 @@ RDEPEND="!<media-libs/openexr-1.5.0"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.0.0-asneeded.patch
+	epatch "${FILESDIR}"/${PN}-1.0.0-asneeded.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	elibtoolize
 }
 
