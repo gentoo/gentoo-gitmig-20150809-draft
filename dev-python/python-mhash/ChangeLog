@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-mhash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.10 2010/07/23 23:17:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mhash/ChangeLog,v 1.11 2010/07/24 18:01:47 phajdan.jr Exp $
+
+  24 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  python-mhash-1.4.ebuild:
+  x86 stable wrt bug #329653
 
   23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-mhash-1.4.ebuild:
