@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/alut
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.12 2009/10/03 11:24:58 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.13 2010/07/24 17:56:02 slyfox Exp $
+
+  24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> -alut-2.0.ebuild,
+  -alut-2.0.1.ebuild:
+  Removed old versions.
 
   03 Oct 2009; Petteri Räty <betelgeuse@gentoo.org> -alut-1.0.ebuild:
   Remove old version with built_with_use. Fixes bug #285202.
