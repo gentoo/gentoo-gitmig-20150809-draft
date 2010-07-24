@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.164 2010/07/12 20:50:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.165 2010/07/24 21:06:18 billie Exp $
+
+*hplip-3.10.6 (24 Jul 2010)
+
+  24 Jul 2010; Daniel Pielmeier <billie@gentoo.org> +hplip-3.10.6.ebuild:
+  Version bump.
 
   12 Jul 2010; Daniel Pielmeier <billie@gentoo.org> -hplip-3.10.2-r4.ebuild,
   -files/hplip-3.10.2-systray-segfault.patch,
