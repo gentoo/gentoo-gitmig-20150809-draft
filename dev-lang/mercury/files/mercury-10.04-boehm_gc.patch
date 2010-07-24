@@ -1,14 +1,133 @@
-diff -ur mercury-compiler-10.04.orig/boehm_gc/Makefile.direct mercury-compiler-10.04/boehm_gc/Makefile.direct
+diff -urN mercury-compiler-10.04.orig/boehm_gc/Makefile.direct mercury-compiler-10.04/boehm_gc/Makefile.direct
 --- mercury-compiler-10.04.orig/boehm_gc/Makefile.direct	2010-02-24 20:04:32.000000000 +1300
-+++ mercury-compiler-10.04/boehm_gc/Makefile.direct	2010-07-19 21:01:24.000000000 +1200
++++ mercury-compiler-10.04/boehm_gc/Makefile.direct	2010-07-24 14:11:41.000000000 +1200
 @@ -407,6 +407,7 @@
  	./if_mach SPARC SOLARIS $(CC) -c -o mach_dep2.o $(srcdir)/sparc_mach_dep.S
  	./if_mach SPARC OPENBSD $(AS) -o mach_dep2.o $(srcdir)/sparc_sunos4_mach_dep.s
  	./if_mach SPARC NETBSD $(AS) -o mach_dep2.o $(srcdir)/sparc_netbsd_mach_dep.s
-+	./if_mach SPARC LINUX $(CC) -o mach_dep2.o $(SPECIALCFLAGS) $(srcdir)/sparc_generic_mach_dep.c
++	./if_mach SPARC LINUX $(CC) -c -o mach_dep2.o $(SPECIALCFLAGS) $(srcdir)/sparc_generic_mach_dep.c
  	./if_mach SPARC "" $(CC) -c -o mach_dep1.o $(SPECIALCFLAGS) $(srcdir)/mach_dep.c
  	./if_mach SPARC "" ld -r -o mach_dep.o mach_dep1.o mach_dep2.o
  	./if_mach IA64 "" as $(AS_ABI_FLAG) -o ia64_save_regs_in_stack.o $(srcdir)/ia64_save_regs_in_stack.s
-Only in mercury-compiler-10.04/boehm_gc: sparc_generic_mach_dep.c
-Only in mercury-compiler-10.04/compiler: make.program_target.c.orig
-Only in mercury-compiler-10.04/scripts: Mmake.vars.in.orig
+diff -urN mercury-compiler-10.04.orig/boehm_gc/libatomic_ops/src/atomic_ops/sysdeps/gcc/sparc.h mercury-compiler-10.04/boehm_gc/libatomic_ops/src/atomic_ops/sysdeps/gcc/sparc.h
+--- mercury-compiler-10.04.orig/boehm_gc/libatomic_ops/src/atomic_ops/sysdeps/gcc/sparc.h	2010-02-23 19:28:41.000000000 +1300
++++ mercury-compiler-10.04/boehm_gc/libatomic_ops/src/atomic_ops/sysdeps/gcc/sparc.h	2010-07-24 13:56:06.000000000 +1200
+@@ -39,32 +39,6 @@
+ 
+ #define AO_HAVE_test_and_set_full
+ 
+-#ifndef AO_NO_SPARC_V9
+-/* Returns nonzero if the comparison succeeded. */
+-AO_INLINE int
+-AO_compare_and_swap_full(volatile AO_t *addr, AO_t old, AO_t new_val) {
+-  char ret;
+-  __asm__ __volatile__ ("membar #StoreLoad | #LoadLoad\n\t"
+-#                       if defined(__arch64__)
+-                          "casx [%2],%0,%1\n\t"
+-#                       else
+-                          "cas [%2],%0,%1\n\t" /* 32-bit version */
+-#                       endif
+-                        "membar #StoreLoad | #StoreStore\n\t"
+-                        "cmp %0,%1\n\t"
+-                        "be,a 0f\n\t"
+-                        "mov 1,%0\n\t"/* one insn after branch always executed */
+-                        "clr %0\n\t"
+-                        "0:\n\t"
+-                        : "=r" (ret), "+r" (new_val)
+-                        : "r" (addr), "0" (old)
+-                        : "memory", "cc");
+-  return (int)ret;
+-}
+-
+-#define AO_HAVE_compare_and_swap_full
+-#endif /* AO_NO_SPARC_V9 */
+-
+ /* FIXME: This needs to be extended for SPARC v8 and v9.        */
+ /* SPARC V8 also has swap.  V9 has CAS.                         */
+ /* There are barriers like membar #LoadStore.                   */
+diff -urN mercury-compiler-10.04.orig/boehm_gc/sparc_generic_mach_dep.c mercury-compiler-10.04/boehm_gc/sparc_generic_mach_dep.c
+--- mercury-compiler-10.04.orig/boehm_gc/sparc_generic_mach_dep.c	1970-01-01 12:00:00.000000000 +1200
++++ mercury-compiler-10.04/boehm_gc/sparc_generic_mach_dep.c	2010-07-24 14:12:18.000000000 +1200
+@@ -0,0 +1,82 @@
++# include "private/gc_priv.h"
++
++/* On register window machines, we need a way to force registers into 	*/
++/* the stack.	Return sp.						*/
++# ifdef SPARC
++    asm("	.seg 	\"text\"");
++#   if defined(SVR4) || defined(NETBSD) || defined(FREEBSD)
++      asm("	.globl	GC_save_regs_in_stack");
++      asm("GC_save_regs_in_stack:");
++      asm("	.type GC_save_regs_in_stack,#function");
++#   else
++      asm("	.globl	_GC_save_regs_in_stack");
++      asm("_GC_save_regs_in_stack:");
++#   endif
++#   if defined(__arch64__) || defined(__sparcv9)
++      asm("	save	%sp,-128,%sp");
++      asm("	flushw");
++      asm("	ret");
++      asm("	restore %sp,2047+128,%o0");
++#   else
++      asm("	ta	0x3   ! ST_FLUSH_WINDOWS");
++      asm("	retl");
++      asm("	mov	%sp,%o0");
++#   endif
++#   ifdef SVR4
++      asm("	.GC_save_regs_in_stack_end:");
++      asm("	.size GC_save_regs_in_stack,.GC_save_regs_in_stack_end-GC_save_regs_in_stack");
++#   endif
++#   ifdef LINT
++	word GC_save_regs_in_stack() { return(0 /* sp really */);}
++#   endif
++# endif
++
++/* GC_clear_stack_inner(arg, limit) clears stack area up to limit and	*/
++/* returns arg.  Stack clearing is crucial on SPARC, so we supply	*/
++/* an assembly version that's more careful.  Assumes limit is hotter	*/
++/* than sp, and limit is 8 byte aligned.				*/
++#if defined(ASM_CLEAR_CODE)
++# ifdef SUNOS4
++    asm(".globl _GC_clear_stack_inner");
++    asm("_GC_clear_stack_inner:");
++# else
++    asm(".globl GC_clear_stack_inner");
++    asm("GC_clear_stack_inner:");
++    asm(".type GC_save_regs_in_stack,#function");
++# endif
++#if defined(__arch64__) || defined(__sparcv9)
++  asm("mov %sp,%o2");		/* Save sp			*/
++  asm("add %sp,2047-8,%o3");	/* p = sp+bias-8		*/
++  asm("add %o1,-2047-192,%sp");	/* Move sp out of the way,	*/
++  				/* so that traps still work.	*/
++  				/* Includes some extra words	*/
++  				/* so we can be sloppy below.	*/
++  asm("loop:");
++  asm("stx %g0,[%o3]");		/* *(long *)p = 0		*/
++  asm("cmp %o3,%o1");
++  asm("bgu,pt %xcc, loop");	/* if (p > limit) goto loop	*/
++    asm("add %o3,-8,%o3");	/* p -= 8 (delay slot) */
++  asm("retl");
++    asm("mov %o2,%sp");		/* Restore sp., delay slot	*/
++#else
++  asm("mov %sp,%o2");		/* Save sp	*/
++  asm("add %sp,-8,%o3");	/* p = sp-8	*/
++  asm("clr %g1");		/* [g0,g1] = 0	*/
++  asm("add %o1,-0x60,%sp");	/* Move sp out of the way,	*/
++  				/* so that traps still work.	*/
++  				/* Includes some extra words	*/
++  				/* so we can be sloppy below.	*/
++  asm("loop:");
++  asm("std %g0,[%o3]");		/* *(long long *)p = 0	*/
++  asm("cmp %o3,%o1");
++  asm("bgu loop	");		/* if (p > limit) goto loop	*/
++    asm("add %o3,-8,%o3");	/* p -= 8 (delay slot) */
++  asm("retl");
++    asm("mov %o2,%sp");		/* Restore sp., delay slot	*/
++#endif /* old SPARC */
++  /* First argument = %o0 = return value */
++#   ifdef SVR4
++      asm("	.GC_clear_stack_inner_end:");
++      asm("	.size GC_clear_stack_inner,.GC_clear_stack_inner_end-GC_clear_stack_inner");
++#   endif  
++#endif
