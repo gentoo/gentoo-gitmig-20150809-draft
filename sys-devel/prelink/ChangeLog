@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.75 2010/07/21 05:26:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.76 2010/07/24 18:00:03 dirtyepic Exp $
+
+  24 Jul 2010; Ryan Hill <dirtyepic@gentoo.org> prelink-20100106.ebuild,
+  prelink-20100413.ebuild, prelink-20100714.ebuild:
+  Workaround for building with < gcc-4. (bug #325269 by Gef Lebster)
 
 *prelink-20100714 (21 Jul 2010)
 
