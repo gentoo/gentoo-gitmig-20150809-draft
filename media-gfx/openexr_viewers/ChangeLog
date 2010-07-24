@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/openexr_viewers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.19 2010/03/10 03:02:03 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openexr_viewers/ChangeLog,v 1.20 2010/07/24 16:52:40 ssuominen Exp $
+
+*openexr_viewers-1.0.2 (24 Jul 2010)
+
+  24 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +openexr_viewers-1.0.2.ebuild,
+  +files/openexr_viewers-1.0.2-nvidia-automagic.patch:
+  Version bump wrt #329713 by Arfrever Frehtes Taifersar Arahesis.
 
   10 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   openexr_viewers-1.0.1.ebuild:
