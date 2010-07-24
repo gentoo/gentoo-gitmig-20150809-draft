@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.36 2010/07/20 15:42:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.37 2010/07/24 06:44:44 tomjbe Exp $
+
+  24 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> -oregano-0.40.5.ebuild,
+  -oregano-0.60.0.ebuild, -files/oregano-0.60.0-install-icon.patch:
+  removing old versions, which does not compile anymore (bug #193690)
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> oregano-0.60.0.ebuild,
   oregano-0.69.0.ebuild:
