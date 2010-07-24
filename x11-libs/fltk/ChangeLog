@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.162 2010/06/26 17:47:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.163 2010/07/24 16:08:54 jlec Exp $
+
+  24 Jul 2010; Justin Lecher <jlec@gentoo.org> fltk-1.1.9.ebuild,
+  fltk-1.1.9-r1.ebuild, fltk-1.1.9-r2.ebuild, fltk-1.1.10.ebuild,
+  fltk-1.1.10-r1.ebuild:
+  Added prefix changes, thanks rei4dan #327519; keyworded for ~-linux prefix
 
   26 Jun 2010; Raúl Porcel <armin76@gentoo.org> fltk-2.0_pre6970.ebuild:
   alpha/arm/ia64/sparc stable wrt #319541

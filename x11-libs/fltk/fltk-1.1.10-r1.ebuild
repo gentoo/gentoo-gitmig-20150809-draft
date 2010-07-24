@@ -1,15 +1,15 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r1.ebuild,v 1.1 2010/05/30 17:03:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r1.ebuild,v 1.2 2010/07/24 16:08:54 jlec Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils autotools versionator fdo-mime
 
-DESCRIPTION="C++ user interface toolkit for X and OpenGL."
+DESCRIPTION="C++ user interface toolkit for X and OpenGL"
 HOMEPAGE="http://www.fltk.org"
 SRC_URI="mirror://easysw/${PN}/${PV}/${P}-source.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="FLTK LGPL-2"
 
 SLOT="$(get_version_component_range 1-2)"
@@ -26,14 +26,14 @@ RDEPEND="x11-libs/libXext
 	opengl? ( virtual/opengl virtual/glu )
 	xinerama? ( x11-libs/libXinerama )
 	xft? ( x11-libs/libXft )
-	>=sys-libs/glibc-2.10"   # glibc-2.10 patch breaks with 2.9, bug 276695
+	!prefix? ( >=sys-libs/glibc-2.10 )"   # glibc-2.10 patch breaks with 2.9, bug 276695
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	doc? ( app-text/htmldoc )
 	xinerama? ( x11-proto/xineramaproto )"
 
-INCDIR=/usr/include/fltk-${SLOT}
-LIBDIR=/usr/$(get_libdir)/fltk-${SLOT}
+INCDIR=${EPREFIX}/usr/include/fltk-${SLOT}
+LIBDIR=${EPREFIX}/usr/$(get_libdir)/fltk-${SLOT}
 
 src_prepare() {
 	epatch "${FILESDIR}"/fltk-1.1.9-share.patch
@@ -67,7 +67,7 @@ src_configure() {
 	econf \
 		--includedir=${INCDIR}\
 		--libdir=${LIBDIR} \
-		--docdir=/usr/share/doc/${PF}/html \
+		--docdir=${EPREFIX}/usr/share/doc/${PF}/html \
 		--enable-largefile \
 		--enable-shared \
 		--enable-xdbe \
@@ -124,7 +124,7 @@ src_install() {
 	doins CMake/FLTK*.cmake
 
 	echo "LDPATH=${LIBDIR}" > 99fltk-${SLOT}
-	echo "FLTK_DOCDIR=/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
+	echo "FLTK_DOCDIR=${EPREFIX}/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
 	doenvd 99fltk-${SLOT}
 }
 
