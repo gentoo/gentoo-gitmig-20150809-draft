@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0i.ebuild,v 1.1 2010/01/10 16:34:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0i.ebuild,v 1.2 2010/07/24 15:40:51 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI} mirror://debian/pool/main/g/gnu-efi/gnu-efi_3.0i-2.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ia64 ~x86"
 IUSE=""
 
 DEPEND="sys-apps/pciutils"
