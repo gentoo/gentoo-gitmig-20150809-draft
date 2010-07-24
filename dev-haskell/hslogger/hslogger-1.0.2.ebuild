@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/hslogger-1.0.2.ebuild,v 1.2 2007/12/15 16:33:12 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/hslogger-1.0.2.ebuild,v 1.3 2010/07/24 19:02:14 slyfox Exp $
 
 CABAL_FEATURES="profile haddock lib"
 inherit haskell-cabal versionator
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/ghc-6.4.2
 		dev-haskell/mtl"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cabal-mksetup
 	sed -i -e "s/mtl/mtl, unix/" \
 		"${S}/hslogger.cabal"

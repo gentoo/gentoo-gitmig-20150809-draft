@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.3.ebuild,v 1.1 2007/12/30 20:27:06 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.3.ebuild,v 1.2 2010/07/24 19:00:05 slyfox Exp $
 
 CABAL_FEATURES="lib bin profile haddock"
 inherit haskell-cabal versionator
@@ -23,7 +23,7 @@ DEPEND=">=dev-lang/ghc-6.2"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# Don't warn so much, and don't compile with -O2
 	sed -i 's/GHC-Options: -Wall -O2/GHC-Options: -O/' "${S}/HaXml.cabal"
