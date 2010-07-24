@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.5.ebuild,v 1.2 2010/04/16 22:01:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.5.ebuild,v 1.3 2010/07/24 19:38:30 phajdan.jr Exp $
 
 EAPI=2
 KDE_LINGUAS="ca cs de el es_AR es fr it nl pl pt_BR ru sr@Latn sr tr zh_TW"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug +handbook"
 
 DEPEND="media-libs/libdvdread
