@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.6.ebuild,v 1.3 2010/07/24 14:39:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.6.ebuild,v 1.4 2010/07/24 22:11:55 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 	    -i "${S}/helium/src/Makefile.in"
 
 	# file has non-ASCII syms and it's pulled to ghc for dependency generaton
-	# ghc w/UTF-8 dislikes it: 
+	# ghc w/UTF-8 dislikes it:
 	sed -e 's/\xCA//g' \
 	    -i "${S}/helium/src/Makefile.in"
 
