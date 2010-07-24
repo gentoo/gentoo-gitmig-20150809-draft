@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.114 2010/07/02 22:45:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.115 2010/07/24 15:13:16 arfrever Exp $
+
+  24 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  icu-4.4.1.ebuild, +files/icu-4.4.1-arm.patch:
+  Fix building on arm (bug #329439).
 
   02 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   icu-4.4.1.ebuild, +files/icu-4.4.1-et_EE.patch:

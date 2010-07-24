@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-4.4.1.ebuild,v 1.8 2010/07/02 22:45:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-4.4.1.ebuild,v 1.9 2010/07/24 15:13:16 arfrever Exp $
 
 EAPI="3"
 
@@ -52,6 +52,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-pkgdata.patch"
 	epatch "${FILESDIR}/${P}-et_EE.patch"
+	epatch "${FILESDIR}/${P}-arm.patch"
 }
 
 src_configure() {
