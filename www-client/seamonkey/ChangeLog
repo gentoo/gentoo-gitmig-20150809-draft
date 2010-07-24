@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.239 2010/07/23 16:27:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.240 2010/07/24 09:05:17 polynomial-c Exp $
+
+  24 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-2.0.6.ebuild:
+  Removed stable x86 keyword from _pre KEYWORDS section.
 
   23 Jul 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Spelling.
