@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.47 2010/05/22 21:03:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.48 2010/07/24 19:24:52 arfrever Exp $
+
+*cython-0.13_beta0 (24 Jul 2010)
+
+  24 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cython-0.12.ebuild, -files/cython-0.12-report_test_failures.patch,
+  +cython-0.13_beta0.ebuild:
+  Version bump. Fixed test failures with Python 2.7 (bug #294869).
 
   22 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cython-0.12.1.ebuild:
