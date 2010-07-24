@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.5 2009/12/17 16:38:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.6 2010/07/24 16:47:03 pchrist Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ RDEPEND=">=net-libs/ptlib-2.0.0[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-3
-	java? ( swig? ( dev-lang/swig[java] )
+	java? ( swig? ( dev-lang/swig )
 		>=virtual/jdk-1.4 )"
 
 # NOTES:
