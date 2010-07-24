@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.205 2010/07/23 19:21:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.206 2010/07/24 15:55:48 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> lyx-1.6.6.1.ebuild:
+  ia64/sparc stable wrt #321447
 
   23 Jul 2010; Tobias Klausmann <klausman@gentoo.org> lyx-1.6.6.1.ebuild:
   Stable on alpha, bug #321447
