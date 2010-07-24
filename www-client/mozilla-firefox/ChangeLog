@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.630 2010/07/22 22:47:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.631 2010/07/24 11:49:32 polynomial-c Exp $
+
+*mozilla-firefox-3.6.8 (24 Jul 2010)
+
+  24 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -mozilla-firefox-3.6.6.ebuild, +mozilla-firefox-3.6.8.ebuild:
+  Version bump. Removed old.
 
   22 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
   +files/mozilla-firefox-3.0-solaris64.patch, mozilla-firefox-3.6.7.ebuild:
