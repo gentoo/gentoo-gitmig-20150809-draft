@@ -1,10 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.1.ebuild,v 1.2 2010/03/15 04:48:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.1.ebuild,v 1.3 2010/07/24 18:37:44 jlec Exp $
 
-inherit toolchain-funcs multilib
+EAPI="3"
 
-DESCRIPTION="machine-learning library, written in simple C++"
+inherit eutils multilib toolchain-funcs
+
+DESCRIPTION="Machine-learning library, written in simple C++"
 HOMEPAGE="http://www.torch.ch/"
 SRC_URI="http://www.torch.ch/archives/Torch${PV%.1}src.tgz
 	doc? ( http://www.torch.ch/archives/Torch3doc.tgz )"
@@ -18,6 +20,10 @@ S=${WORKDIR}/Torch${PV%.1}
 
 TORCH_PACKAGES="convolutions datasets decoder distributions gradients kernels matrix nonparametrics speech"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-prll.patch
+}
+
 src_compile() {
 	local shalldebug="OPT"
 	use debug && shalldebug="DBG"
@@ -27,10 +33,10 @@ src_compile() {
 	sed -i \
 		-e "s:^PACKAGES.*:PACKAGES = ${TORCH_PACKAGES}:" \
 		-e "s:^DEBUG.*:DEBUG = ${shalldebug}:" \
-		-e "s:^CFLAGS_OPT_FLOAT.*:CFLAGS_OPT_FLOAT = ${CFLAGS} -ffast-math ${extraflags}:" \
-		Makefile_options_Linux
+		-e "s:^CFLAGS_OPT_FLOAT.*:CFLAGS_OPT_FLOAT = ${CXXFLAGS} -ffast-math ${extraflags} -fPIC:" \
+		-e "s:g++:$(tc-getCXX):g" \
+		Makefile_options_Linux || die
 
-	emake -j1 depend || die
 	emake || die "emake failed"
 }
 

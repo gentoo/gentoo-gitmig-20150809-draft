@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.5 2009/09/23 20:09:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.6 2010/07/24 18:37:44 jlec Exp $
 
 inherit toolchain-funcs multilib
 
@@ -52,11 +52,10 @@ src_install() {
 	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
 	doins Makefile_options_Linux
-	dodoc LICENSE
 	dodir /usr/share/doc/${PF}
 	insinto /usr/share/doc/${PF}
-	cp -pPR examples ${D}/usr/share/doc/${PF}
-	cd ${D}/usr/share/doc/${PF}
+	cp -pPR examples "${D}"/usr/share/doc/${PF}
+	cd "${D}"/usr/share/doc/${PF}
 	sed -i \
 		-e 's|^TORCHDIR.*|TORCHDIR := /usr/share/torch|' \
 		-e '/MAKE/c\\' -e '/VERSION_KEY/c\\' \
@@ -65,7 +64,7 @@ src_install() {
 		echo -e '\t$(CC) $(CFLAGS_$(MODE)) $(INCS) -o $@ $< $(LIBS)' >> ${ex}
 	done
 	if use doc; then
-		cd ${WORKDIR}/docs
+		cd "${WORKDIR}"/docs
 		doins *.pdf
 		dohtml -r manual/.
 	fi
