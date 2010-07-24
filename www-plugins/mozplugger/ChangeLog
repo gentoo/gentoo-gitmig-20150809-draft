@@ -1,6 +1,15 @@
 # ChangeLog for www-plugins/mozplugger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/ChangeLog,v 1.5 2010/07/21 00:16:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/ChangeLog,v 1.6 2010/07/24 03:48:49 chutzpah Exp $
+
+*mozplugger-1.14.0-r1 (24 Jul 2010)
+
+  24 Jul 2010; Patrick McLean <chutzpah@gentoo.org>
+  -mozplugger-1.10.2.ebuild, -mozplugger-1.12.1.ebuild,
+  -mozplugger-1.14.0.ebuild, +mozplugger-1.14.0-r1.ebuild:
+  Revision bump, remove useless /usr/lib/mozilla/plugins symlink and make
+  sure that the plugins go to the right libdir. Clean out some older
+  versions.
 
 *mozplugger-1.14.0 (21 Jul 2010)
 
