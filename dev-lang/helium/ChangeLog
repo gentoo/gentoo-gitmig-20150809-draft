@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/helium
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.23 2009/04/17 20:07:20 caster Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.24 2010/07/24 14:39:07 slyfox Exp $
+
+  24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> helium-1.6.ebuild:
+  Fixed build breakage against ghc-6.8+ (bug #247044). Thanks to Diego E.
+  'Flameeyes' Pettenò <flameeyes@gentoo.org> for the report.
 
   17 Apr 2009; Vlastimil Babka <caster@gentoo.org> helium-1.1,
   helium-1.2-r1:
