@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11787 2010/07/22 20:01:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11788 2010/07/24 08:14:49 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -449,12 +449,6 @@ x11-plugins/gkacpi
 # Old, useless, no maintainer
 # Removed in 60 days by treecleaners, bug 185292
 net-wireless/ieee80211
-
-# Hans de Graaff <graaff@gentoo.org> (12 Jun 2010)
-# Abandoned by upstream, no releases since 2003. Test suite fails and
-# generates many deprecation warnings.
-# Masked for removal in 30 days.
-dev-ruby/amrita
 
 # Ben de Groot <yngwin@gentoo.org> (11 Jun 2010)
 # Masked for removal in 30 days, see bug #315067
