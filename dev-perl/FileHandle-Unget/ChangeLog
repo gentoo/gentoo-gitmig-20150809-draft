@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/FileHandle-Unget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.20 2010/07/23 15:24:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.21 2010/07/24 17:42:55 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org>
+  FileHandle-Unget-0.16.23.ebuild:
+  ia64/sparc stable wrt #329525
 
   23 Jul 2010; Torsten Veller <tove@gentoo.org>
   FileHandle-Unget-0.16.23.ebuild:
