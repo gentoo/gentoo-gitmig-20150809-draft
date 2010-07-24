@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/eunuchs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eunuchs/ChangeLog,v 1.4 2008/03/12 17:59:53 phreak Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eunuchs/ChangeLog,v 1.5 2010/07/24 03:25:43 arfrever Exp $
+
+  24 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  eunuchs-20050320.1.ebuild, +files/eunuchs-20050320.1-python-2.5.patch:
+  Set SUPPORT_PYTHON_ABIS. Fix building with Python >=2.5 on 64-bit
+  architectures. Fix tests (bug #318405).
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
