@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.106 2010/07/22 07:01:16 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.107 2010/07/24 00:05:31 keri Exp $
+
+  24 Jul 2010; <keri@gentoo.org> mercury-10.04.ebuild,
+  +files/mercury-10.04-tests-mercury-float.patch:
+  Update hlc grade testsuites for MR_sprintf_float fix
 
   22 Jul 2010; <keri@gentoo.org> +files/50mercury-gentoo.el:
   Add mercury site-lisp configuration
