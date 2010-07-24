@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/libdca-0.0.5-r2.ebuild,v 1.10 2010/07/24 11:13:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/libdca-0.0.5-r2.ebuild,v 1.11 2010/07/24 11:14:00 ssuominen Exp $
 
 EAPI=3
-inherit autotools eutils flag-o-matic
+inherit autotools eutils flag-o-matic multilib
 
 DESCRIPTION="library for decoding DTS Coherent Acoustics streams used in DVD"
 HOMEPAGE="http://www.videolan.org/developers/libdca.html"
