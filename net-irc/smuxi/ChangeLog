@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/smuxi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.8 2010/07/11 12:52:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.9 2010/07/24 19:08:37 pacho Exp $
+
+*smuxi-0.7.2.1 (24 Jul 2010)
+
+  24 Jul 2010; Pacho Ramos <pacho@gentoo.org> -smuxi-0.6.3.ebuild,
+  +smuxi-0.7.2.1.ebuild:
+  Version bump with lots of bugfixes and some new features. Remove old.
 
   11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   smuxi-0.7.1-r1.ebuild:
