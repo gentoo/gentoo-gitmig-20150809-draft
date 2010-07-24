@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.66 2010/07/10 19:15:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.67 2010/07/24 17:13:41 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Use.mask kde
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Add app-i18n/uim kde to p.use.mask

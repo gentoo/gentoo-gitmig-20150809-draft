@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.36 2010/07/10 19:15:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.37 2010/07/24 17:13:41 armin76 Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs libimobiledevice keyworded (bug 325839)
@@ -41,12 +41,6 @@ dev-libs/soprano virtuoso
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need sys-auth/polkit keyworded
 app-admin/system-config-printer-common	policykit
-
-# Raúl Porcel <armin76@gentoo.org> (25 Jan 2010)
-# Needs kde4 stable
-x11-themes/qtcurve-qt4 kde
-dev-vcs/subversion kde
-app-i18n/uim kde
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
 # qt-multimedia is not keyworded, bug 293671

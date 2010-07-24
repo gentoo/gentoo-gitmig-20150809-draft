@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.51 2010/07/10 19:15:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.52 2010/07/24 17:15:24 armin76 Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs libimobiledevice keyworded (bug 325839)
@@ -39,29 +39,13 @@ dev-python/PyQt4 multimedia
 dev-libs/uriparser doc
 media-libs/libxspf doc
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (27 Oct 2009)
-# Requires stable KDE4
-app-office/openoffice kde
-app-arch/p7zip kde
-dev-vcs/subversion kde
-
 # Romain Perier <mrpouet@gentoo.org> (18 Oct. 2009)
 # >=networkmanager-0.7.0 is not keyworded.
 gnome-base/gnome-applets networkmanager
 
-# Romain Perier <mrpouet@gentoo.org> (06 Sep 2009)
-# depends on >=kde-base/kdebase-startkde-4.2
-www-plugins/gnash kde
-
 # Raúl Porcel <armin76@gentoo.org> (09 Jun 2009)
 # Needs qt-assistant
 dev-python/PyQt4 assistant
-
-# Ben de Groot <yngwin@gentoo.org> (20 Feb 2009)
-# needs kde4 keyworded
-x11-themes/qtcurve-qt4 kde
-dev-vcs/subversion kde
-app-i18n/uim kde
 
 # Raúl Porcel <armin76@gentoo.org>
 # Depends on dev-java/fop which requires java...

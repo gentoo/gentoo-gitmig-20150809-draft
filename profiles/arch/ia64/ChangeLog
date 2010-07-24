@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.82 2010/07/08 17:27:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.83 2010/07/24 17:14:36 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Use.mask kde
 
   08 Jul 2010; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Use mask iphone gvfs USE flag until bug #325839 is fixed.
