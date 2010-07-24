@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.316 2010/07/17 19:22:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.317 2010/07/24 04:34:37 vapier Exp $
+
+  24 Jul 2010; Mike Frysinger <vapier@gentoo.org> wine-9999.ebuild:
+  Add support for win32 and win64 at the same time by Alexandre Borges
+  Marcelo #296608 by Michael Weber.
 
 *wine-1.2 (17 Jul 2010)
 
