@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/readline
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readline/ChangeLog,v 1.1 2010/07/24 13:59:26 slyfox Exp $
+
+*readline-1.0.1.0 (24 Jul 2010)
+
+  24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  +readline-1.0.1.0.ebuild, +metadata.xml:
+  initial commit. The library was shipped with ghc up to 6.10.2 but now it's
+  a separate package.
+
