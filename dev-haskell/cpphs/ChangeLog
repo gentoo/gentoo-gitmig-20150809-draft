@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cpphs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.22 2009/07/15 18:07:49 kolmodin Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.23 2010/07/24 18:10:59 slyfox Exp $
+
+  24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> -cpphs-1.1.ebuild,
+  -cpphs-1.3.ebuild, -cpphs-1.5.ebuild, cpphs-1.7.ebuild:
+  Marked ~alpha, remarked ~ppc64 (have ghc binary). Removed old versions.
 
 *cpphs-1.7 (15 Jul 2009)
 

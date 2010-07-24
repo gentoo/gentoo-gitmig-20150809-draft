@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/cpphs-1.7.ebuild,v 1.1 2009/07/15 18:07:49 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/cpphs-1.7.ebuild,v 1.2 2010/07/24 18:10:59 slyfox Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 inherit haskell-cabal
@@ -11,11 +11,11 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6.1
-        dev-haskell/cabal"
+	dev-haskell/cabal"
 RDEPEND=""
 
 src_install() {
