@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5.ebuild,v 1.2 2010/05/19 07:19:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5-r1.ebuild,v 1.1 2010/07/24 21:12:11 wschlich Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic

@@ -1,4 +1,4 @@
-ACTION=="add", BUS=="usb", SYSFS{idVendor}=="0c4b", GROUP="cyberjack", MODE="660"
+ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0c4b", GROUP="cyberjack", MODE="660"
 
 # using the cyberJack libusb driver
 ACTION=="add", SUBSYSTEM=="usb", ENV{PRODUCT}=="c4b/100/*", RUN+="cyberjack.sh"
