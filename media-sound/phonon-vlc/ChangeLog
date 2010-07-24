@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/phonon-vlc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/ChangeLog,v 1.1 2010/07/24 22:56:09 jmbsvicetto Exp $
+
+*phonon-vlc-0.2.0 (24 Jul 2010)
+
+  24 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phonon-vlc-0.2.0.ebuild, +metadata.xml:
+  Initial import of the first phonon vlc backend release (0.2.0).
+
