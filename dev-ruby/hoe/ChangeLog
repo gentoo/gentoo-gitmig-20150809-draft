@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.82 2010/07/21 12:32:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.83 2010/07/24 16:59:48 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> hoe-2.5.0.ebuild:
+  ia64/sparc stable wrt #321043
 
   21 Jul 2010; Christian Faulhammer <fauli@gentoo.org> hoe-2.5.0.ebuild:
   stable x86, bug 321043

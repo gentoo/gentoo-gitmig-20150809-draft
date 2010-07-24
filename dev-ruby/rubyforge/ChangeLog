@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.64 2010/07/21 12:38:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.65 2010/07/24 17:00:40 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> rubyforge-2.0.4.ebuild:
+  ia64/sparc stable wrt #321043
 
   21 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   rubyforge-2.0.4.ebuild:
