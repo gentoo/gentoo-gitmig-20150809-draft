@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.77 2010/07/11 15:03:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.78 2010/07/24 18:25:18 jlec Exp $
+
+  24 Jul 2010; Justin Lecher <jlec@gentoo.org> vtk-5.6.0-r2.ebuild:
+  Fix for compilation with USE=ffmpeg, #327517
 
   11 Jul 2010; Justin Lecher <jlec@gentoo.org> vtk-5.6.0-r2.ebuild,
   +files/vtk-5.6.0-odbc.patch:
