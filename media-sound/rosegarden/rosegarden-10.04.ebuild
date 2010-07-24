@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.04.ebuild,v 1.3 2010/07/04 18:33:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-10.04.ebuild,v 1.4 2010/07/24 19:07:03 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools fdo-mime multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug lirc"
 
 RDEPEND="x11-libs/qt-gui:4[qt3support]
