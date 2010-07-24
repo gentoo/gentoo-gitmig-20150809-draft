@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/ntfsprogs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.70 2009/10/18 11:35:26 volkmar Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.71 2010/07/24 06:29:22 vapier Exp $
+
+*ntfsprogs-2.0.0-r2 (24 Jul 2010)
+
+  24 Jul 2010; Mike Frysinger <vapier@gentoo.org>
+  +ntfsprogs-2.0.0-r2.ebuild, +files/ntfsprogs-2.0.0-erange.patch:
+  Add fix from upstream for running utils on an ntfs mount #329445 by Victor
+  Gaydov.
 
   18 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
   ntfsprogs-2.0.0-r1.ebuild:
