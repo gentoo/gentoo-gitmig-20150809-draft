@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.204 2010/07/20 16:32:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.205 2010/07/24 16:29:02 phajdan.jr Exp $
+
+  24 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnumeric-1.10.6.ebuild:
+  x86 stable wrt bug #326503
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnumeric-1.8.4-r2.ebuild,
   gnumeric-1.10.6.ebuild, gnumeric-1.10.7.ebuild:
