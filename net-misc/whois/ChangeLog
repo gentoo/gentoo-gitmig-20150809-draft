@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.136 2010/06/24 04:35:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.137 2010/07/24 05:57:32 vapier Exp $
+
+*whois-5.0.6 (24 Jul 2010)
+
+  24 Jul 2010; Mike Frysinger <vapier@gentoo.org> +whois-5.0.6.ebuild:
+  Version bump #329455 by Petr Pisar.
 
 *whois-5.0.5 (24 Jun 2010)
 
