@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.1.ebuild,v 1.6 2010/02/03 11:36:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.1.ebuild,v 1.7 2010/07/24 16:54:56 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -39,21 +39,5 @@ src_install() {
 
 		insinto /usr/share/vim/vimfiles/ftdetect
 		doins "${FILESDIR}"/tmux.vim || die "doins ftdetect failed"
-	fi
-}
-
-pkg_preinst() {
-	has_version "<${CATEGORY}/${PN}-1.1"
-	PREVIOUS_LESS_THAN_1_1=$?
-}
-
-pkg_postinst() {
-	if [[ ${PREVIOUS_LESS_THAN_1_1} -eq 0 ]]; then
-		ewarn "The 1.1 release replaced the internal locking mechanism by"
-		ewarn "executing an external command (you might want to install"
-		ewarn "app-misc/vlock and set the lock-command session option"
-		ewarn "accordingly), so the set-password command, and the -U command"
-		ewarn "line flag were removed, as well as -d, since tmux will now"
-		ewarn "automatically detect default colours."
 	fi
 }
