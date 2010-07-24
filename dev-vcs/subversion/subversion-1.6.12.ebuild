@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.12.ebuild,v 1.1 2010/06/22 20:20:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.12.ebuild,v 1.2 2010/07/24 02:04:02 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -44,7 +44,7 @@ APACHE_TEST_DEPEND="|| (
 	=www-servers/apache-2.2*[apache2_modules_auth_basic,apache2_modules_authn_file,apache2_modules_dav,apache2_modules_log_config]
 	)"
 DEPEND="${CDEPEND}
-	>=sys-apps/sandbox-1.6
+	!!<sys-apps/sandbox-1.6
 	ctypes-python? ( dev-python/ctypesgen )
 	doc? ( app-doc/doxygen )
 	gnome-keyring? ( dev-util/pkgconfig )
@@ -65,7 +65,7 @@ S="${WORKDIR}/${P/_/-}"
 
 # Allow for custom repository locations.
 # This can't be in pkg_setup() because the variable needs to be available to pkg_config().
-: ${SVN_REPOS_LOC:=/var/svn}
+: ${SVN_REPOS_LOC:=${EPREFIX}/var/svn}
 
 pkg_setup() {
 	if use kde && ! use nls; then
@@ -82,7 +82,7 @@ pkg_setup() {
 		einfo "Using: Berkeley DB ${SVN_BDB_VERSION}"
 		einfo
 
-		local apu_bdb_version="$(scanelf -nq "${ROOT}usr/$(get_libdir)/libaprutil-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
+		local apu_bdb_version="$(scanelf -nq "${EROOT}usr/$(get_libdir)/libaprutil-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
 		if [[ -n "${apu_bdb_version}" && "${SVN_BDB_VERSION}" != "${apu_bdb_version}" ]]; then
 			eerror "APR-Util is linked against Berkeley DB ${apu_bdb_version}, but you are trying"
 			eerror "to build Subversion with support for Berkeley DB ${SVN_BDB_VERSION}."
@@ -218,16 +218,16 @@ src_configure() {
 
 	if use java; then
 		if use test && [[ -n "${SVN_TEST_BINDINGS}" ]]; then
-			myconf+=" --with-junit=/usr/share/junit-4/lib/junit.jar"
+			myconf+=" --with-junit=${EPREFIX}/usr/share/junit-4/lib/junit.jar"
 		else
 			myconf+=" --without-junit"
 		fi
 	fi
 
-	econf --libdir="/usr/$(get_libdir)" \
+	econf --libdir="${EPREFIX}/usr/$(get_libdir)" \
 		$(use_with apache2 apxs "${APXS}") \
-		$(use_with berkdb berkeley-db "db.h:/usr/include/db${SVN_BDB_VERSION}::db-${SVN_BDB_VERSION}") \
-		$(use_with ctypes-python ctypesgen /usr) \
+		$(use_with berkdb berkeley-db "db.h:${EPREFIX}/usr/include/db${SVN_BDB_VERSION}::db-${SVN_BDB_VERSION}") \
+		$(use_with ctypes-python ctypesgen "${EPREFIX}/usr") \
 		$(use_enable dso runtime-module-search) \
 		$(use_with gnome-keyring) \
 		$(use_enable java javahl) \
@@ -236,16 +236,16 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_with sasl) \
 		$(use_with webdav-neon neon) \
-		$(use_with webdav-serf serf /usr) \
+		$(use_with webdav-serf serf "${EPREFIX}/usr") \
 		${myconf} \
-		--with-apr=/usr/bin/apr-1-config \
-		--with-apr-util=/usr/bin/apu-1-config \
+		--with-apr="${EPREFIX}/usr/bin/apr-1-config" \
+		--with-apr-util="${EPREFIX}/usr/bin/apu-1-config" \
 		--disable-experimental-libtool \
 		--without-jikes \
 		--enable-local-library-preloading \
 		--disable-mod-activation \
 		--disable-neon-version-check \
-		--with-sqlite=/usr
+		--with-sqlite="${EPREFIX}/usr"
 }
 
 src_compile() {
@@ -281,10 +281,10 @@ src_compile() {
 			rm -f subversion/bindings/swig/python
 			ln -s python-${PYTHON_ABI} subversion/bindings/swig/python
 			emake \
-				PYTHON_INCLUDES="-I$(python_get_includedir)" \
+				PYTHON_INCLUDES="-I${EPREFIX}$(python_get_includedir)" \
 				PYTHON_VERSION="$(python_get_version)" \
-				swig_pydir="$(python_get_sitedir)/libsvn" \
-				swig_pydir_extra="$(python_get_sitedir)/svn" \
+				swig_pydir="${EPREFIX}$(python_get_sitedir)/libsvn" \
+				swig_pydir_extra="${EPREFIX}$(python_get_sitedir)/svn" \
 				swig-py
 		}
 		python_execute_function \
@@ -603,8 +603,8 @@ src_install() {
 			emake -j1 \
 				DESTDIR="${D}" \
 				PYTHON_VERSION="$(python_get_version)" \
-				swig_pydir="$(python_get_sitedir)/libsvn" \
-				swig_pydir_extra="$(python_get_sitedir)/svn" \
+				swig_pydir="${EPREFIX}$(python_get_sitedir)/libsvn" \
+				swig_pydir_extra="${EPREFIX}$(python_get_sitedir)/svn" \
 				install-swig-py
 		}
 		python_execute_function \
@@ -623,7 +623,7 @@ src_install() {
 		einfo
 		emake -j1 DESTDIR="${D}" INSTALLDIRS="vendor" install-swig-pl || die "Installation of Subversion SWIG Perl bindings failed"
 		fixlocalpod
-		find "${D}" "(" -name .packlist -o -name "*.bs" ")" -print0 | xargs -0 rm -fr
+		find "${ED}" "(" -name .packlist -o -name "*.bs" ")" -print0 | xargs -0 rm -fr
 	fi
 
 	if use ruby; then
@@ -638,14 +638,14 @@ src_install() {
 		einfo "Installation of Subversion JavaHL library"
 		einfo
 		emake -j1 DESTDIR="${D}" install-javahl || die "Installation of Subversion JavaHL library failed"
-		java-pkg_regso "${D}"usr/$(get_libdir)/libsvnjavahl*.so
-		java-pkg_dojar "${D}"usr/$(get_libdir)/svn-javahl/svn-javahl.jar
-		rm -fr "${D}"usr/$(get_libdir)/svn-javahl/*.jar
+		java-pkg_regso "${ED}"usr/$(get_libdir)/libsvnjavahl*.so
+		java-pkg_dojar "${ED}"usr/$(get_libdir)/svn-javahl/svn-javahl.jar
+		rm -fr "${ED}"usr/$(get_libdir)/svn-javahl/*.jar
 	fi
 
 	# Install Apache module configuration.
 	if use apache2; then
-		dodir "${APACHE_MODULES_CONFDIR}"
+		mkdir -p "${D}${APACHE_MODULES_CONFDIR}"
 		cat << EOF > "${D}${APACHE_MODULES_CONFDIR}"/47_mod_dav_svn.conf
 <IfDefine SVN>
 LoadModule dav_svn_module modules/mod_dav_svn.so
@@ -702,7 +702,7 @@ EOF
 	if use emacs; then
 		elisp-install ${PN} contrib/client-side/emacs/{dsvn,psvn}.{el,elc} doc/svn-doc.{el,elc} doc/tools/svnbook.{el,elc} || die "Installation of Emacs modules failed"
 		elisp-install ${PN}/compat contrib/client-side/emacs/vc-svn.{el,elc} || die "Installation of Emacs modules failed"
-		touch "${D}${SITELISP}/${PN}/compat/.nosearch"
+		touch "${ED}${SITELISP}/${PN}/compat/.nosearch"
 		elisp-site-file-install "${FILESDIR}/70svn-gentoo.el" || die "Installation of Emacs site-init file failed"
 	fi
 	rm -fr contrib/client-side/emacs
@@ -714,8 +714,8 @@ EOF
 		einfo
 
 		cat << EOF > 80subversion-extras
-PATH="/usr/$(get_libdir)/subversion/bin"
-ROOTPATH="/usr/$(get_libdir)/subversion/bin"
+PATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
+ROOTPATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
 EOF
 		doenvd 80subversion-extras
 
@@ -755,9 +755,9 @@ EOF
 
 pkg_preinst() {
 	# Compare versions of Berkeley DB, bug 122877.
-	if use berkdb && [[ -f "${ROOT}usr/bin/svn" ]]; then
-		OLD_BDB_VERSION="$(scanelf -nq "${ROOT}usr/$(get_libdir)/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
-		NEW_BDB_VERSION="$(scanelf -nq "${D}usr/$(get_libdir)/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
+	if use berkdb && [[ -f "${EROOT}usr/bin/svn" ]]; then
+		OLD_BDB_VERSION="$(scanelf -nq "${EROOT}usr/$(get_libdir)/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
+		NEW_BDB_VERSION="$(scanelf -nq "${ED}usr/$(get_libdir)/libsvn_subr-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
 		if [[ "${OLD_BDB_VERSION}" != "${NEW_BDB_VERSION}" ]]; then
 			CHANGED_BDB_VERSION="1"
 		fi
@@ -864,20 +864,20 @@ pkg_postrm() {
 }
 
 pkg_config() {
-	einfo ">>> Initializing the database in ${ROOT}${SVN_REPOS_LOC} ..."
-	if [[ -e "${ROOT}${SVN_REPOS_LOC}/repos" ]]; then
+	einfo ">>> Initializing the database in ${EROOT}${SVN_REPOS_LOC} ..."
+	if [[ -e "${EROOT}${SVN_REPOS_LOC}/repos" ]]; then
 		echo "A Subversion repository already exists and I will not overwrite it."
-		echo "Delete \"${ROOT}${SVN_REPOS_LOC}/repos\" first if you're sure you want to have a clean version."
+		echo "Delete \"${EROOT}${SVN_REPOS_LOC}/repos\" first if you're sure you want to have a clean version."
 	else
-		mkdir -p "${ROOT}${SVN_REPOS_LOC}/conf"
+		mkdir -p "${EROOT}${SVN_REPOS_LOC}/conf"
 
 		einfo ">>> Populating repository directory ..."
 		# Create initial repository.
-		"${ROOT}usr/bin/svnadmin" create "${ROOT}${SVN_REPOS_LOC}/repos"
+		"${EROOT}usr/bin/svnadmin" create "${EROOT}${SVN_REPOS_LOC}/repos"
 
 		einfo ">>> Setting repository permissions ..."
-		SVNSERVE_USER="$(. "${ROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_USER}")"
-		SVNSERVE_GROUP="$(. "${ROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_GROUP}")"
+		SVNSERVE_USER="$(. "${EROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_USER}")"
+		SVNSERVE_GROUP="$(. "${EROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_GROUP}")"
 		if use apache2; then
 			[[ -z "${SVNSERVE_USER}" ]] && SVNSERVE_USER="apache"
 			[[ -z "${SVNSERVE_GROUP}" ]] && SVNSERVE_GROUP="apache"
@@ -887,8 +887,8 @@ pkg_config() {
 			enewgroup "${SVNSERVE_GROUP}"
 			enewuser "${SVNSERVE_USER}" -1 -1 "${SVN_REPOS_LOC}" "${SVNSERVE_GROUP}"
 		fi
-		chown -Rf "${SVNSERVE_USER}:${SVNSERVE_GROUP}" "${ROOT}${SVN_REPOS_LOC}/repos"
-		chmod -Rf go-rwx "${ROOT}${SVN_REPOS_LOC}/conf"
-		chmod -Rf o-rwx "${ROOT}${SVN_REPOS_LOC}/repos"
+		chown -Rf "${SVNSERVE_USER}:${SVNSERVE_GROUP}" "${EROOT}${SVN_REPOS_LOC}/repos"
+		chmod -Rf go-rwx "${EROOT}${SVN_REPOS_LOC}/conf"
+		chmod -Rf o-rwx "${EROOT}${SVN_REPOS_LOC}/repos"
 	fi
 }
