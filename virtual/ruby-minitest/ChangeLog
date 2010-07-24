@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.12 2010/07/21 12:42:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.13 2010/07/24 16:58:00 armin76 Exp $
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> ruby-minitest-0.ebuild:
+  ia64/sparc stable wrt #321043
 
   21 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   ruby-minitest-0.ebuild:
