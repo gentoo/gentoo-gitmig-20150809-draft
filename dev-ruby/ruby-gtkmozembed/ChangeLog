@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkmozembed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.25 2010/07/25 17:35:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.26 2010/07/25 17:47:18 graaff Exp $
+
+  25 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  -ruby-gtkmozembed-0.19.4.ebuild:
+  Remove version still referencing firefox-2.
 
 *ruby-gtkmozembed-0.19.4-r1 (25 Jul 2010)
 
