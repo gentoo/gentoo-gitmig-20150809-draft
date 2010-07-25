@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.153 2010/07/23 07:28:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.154 2010/07/25 19:07:27 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -29,7 +29,7 @@ sys-cluster/corosync infiniband
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
 net-libs/xulrunner ipc
-www-client/mozilla-firefox ipc
+www-client/firefox ipc
 www-client/icecat ipc
 
 # Samuli Suominen <ssuominen@gentoo.org> (26 Jun 2010)

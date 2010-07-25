@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.68 2010/07/01 10:50:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.69 2010/07/25 19:07:20 nirbheek Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -26,7 +26,7 @@ sys-cluster/pacemaker heartbeat
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
 net-libs/xulrunner -ipc
-www-client/mozilla-firefox -ipc
+www-client/firefox -ipc
 www-client/icecat -ipc
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Apr 2010)

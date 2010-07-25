@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.87 2010/07/24 15:49:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.88 2010/07/25 19:07:21 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Fix atom for pkgmove from www-client/mozilla-firefox -> www-client/firefox
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask ipod

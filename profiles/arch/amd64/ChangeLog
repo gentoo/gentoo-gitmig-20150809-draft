@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.96 2010/07/17 18:04:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.97 2010/07/25 19:07:20 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Fix atom for pkgmove from www-client/mozilla-firefox -> www-client/firefox
 
   17 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> package.use.force:
   Remove old USE="sse" force for libsoundtouch.

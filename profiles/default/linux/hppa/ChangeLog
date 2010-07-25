@@ -1,6 +1,9 @@
 # ChangeLog for profiles/default/linux/hppa
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.7 2008/08/15 14:58:03 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.8 2010/07/25 19:07:28 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Fix atom for pkgmove from www-client/mozilla-firefox -> www-client/firefox
 
   15 Aug 2008; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask custom-optimisation USE flag for net-libs/xulrunner and

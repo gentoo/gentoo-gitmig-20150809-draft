@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.37 2010/07/24 17:13:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.38 2010/07/25 19:07:20 nirbheek Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs libimobiledevice keyworded (bug 325839)
@@ -11,7 +11,7 @@ gnome-base/gvfs iphone
 mail-client/thunderbird custom-optimization
 net-libs/xulrunner custom-optimization
 www-client/icecat custom-optimization
-www-client/mozilla-firefox custom-optimization
+www-client/firefox custom-optimization
 www-client/seamonkey custom-optimization
 x11-plugins/enigmail custom-optimization
 
