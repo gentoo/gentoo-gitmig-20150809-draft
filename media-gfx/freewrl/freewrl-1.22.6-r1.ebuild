@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.6-r1.ebuild,v 1.2 2010/03/10 14:13:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.6-r1.ebuild,v 1.3 2010/07/25 19:17:49 nirbheek Exp $
 
 EAPI="2"
 
@@ -32,12 +32,12 @@ COMMONDEPEND="x11-libs/libXau
 	!xulrunner? (
 		spidermonkey? ( dev-lang/spidermonkey )
 		!spidermonkey? ( || (
-			=www-client/mozilla-firefox-3*[-xulrunner]
-			=www-client/mozilla-firefox-2*
+			=www-client/firefox-3*[-xulrunner]
+			=www-client/firefox-2*
 		) )
 	)
 	nsplugin? ( || ( xulrunner? ( net-libs/xulrunner )
-		>=www-client/mozilla-firefox-2.0 ) )"
+		>=www-client/firefox-2.0 ) )"
 DEPEND="${COMMONDEPEND}
 	>=dev-util/pkgconfig-0.22"
 RDEPEND="${COMMONDEPEND}
@@ -107,7 +107,7 @@ src_configure() {
 		# disable checks for xulrunner libs, in case they are installed
 		myconf="${myconf} --disable-mozilla-js --disable-xulrunner-js"
 		# not using xulrunner, so ./configure grabs js directly from firefox/mozilla/thunderbird/wherever
-		if has_version =www-client/mozilla-firefox-3* ; then
+		if has_version =www-client/firefox-3* ; then
 			# override ./configure for firefox-3 as pkg-config doesn't detect the right settings
 			export MOZILLA_PLUGIN_CFLAGS="-I/usr/include/mozilla-firefox/stable $(pkg-config --cflags nspr)"
 			export MOZILLA_PLUGIN_LIBS=" "
