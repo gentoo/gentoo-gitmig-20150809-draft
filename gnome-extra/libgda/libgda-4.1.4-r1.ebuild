@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.4-r1.ebuild,v 1.3 2010/06/17 20:21:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.4-r1.ebuild,v 1.4 2010/07/25 10:29:54 fauli Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 # experimental IUSE: introspection
 IUSE="berkdb bindist canvas doc firebird freetds gtk graphviz ldap mysql oci8 odbc postgres sourceview xbase"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 # FIXME: sqlite is automagic, but maybe it is a hard-dep
 # FIXME: autoconf is a hell of inconsistencies
