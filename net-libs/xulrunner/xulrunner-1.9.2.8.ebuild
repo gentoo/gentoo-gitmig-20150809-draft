@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.8.ebuild,v 1.3 2010/07/25 13:44:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.8.ebuild,v 1.4 2010/07/25 15:32:39 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -10,12 +10,12 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib java-p
 MY_PV="${PV/_rc/rc}" # Handle beta
 MY_PV="${MY_PV/1.9.2/3.6}"
 MAJ_PV="1.9.2" # from mozilla-* branch name
-PATCH="${PN}-1.9.2-patches-0.4"
+PATCH="${PN}-1.9.2-patches-0.5"
 
 DESCRIPTION="Mozilla runtime package that can be used to bootstrap XUL+XPCOM applications"
 HOMEPAGE="http://developer.mozilla.org/en/docs/XULRunner"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2
-	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="1.9"
@@ -61,31 +61,11 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	# Fix build error for xpctools
-	epatch "${FILESDIR}/301-xulrunner-xpctools.diff"
-
-	# Fix broken mozilla-plugin.pc
-	epatch "${FILESDIR}/${PN}-1.9.2-fix-pkgconfig-file.patch"
-
-	epatch "${FILESDIR}"/${PN}-1.9-no_sunstudio.patch # breaks sunstudio
-	epatch "${FILESDIR}"/${PN}-1.9-solaris64.patch
-	epatch "${FILESDIR}"/${PN}-1.9.1.5-solaris-undef-regs.patch
-	epatch "${FILESDIR}"/${PN}-1.9.2-solaris-madvise.patch
-	epatch "${FILESDIR}"/${PN}-1.9_beta5-prefix.patch
 	eprefixify \
 		extensions/java/xpcom/interfaces/org/mozilla/xpcom/Mozilla.java \
 		xpcom/build/nsXPCOMPrivate.h \
 		xulrunner/installer/Makefile.in \
 		xulrunner/app/nsRegisterGREUnix.cpp
-
-	# Ensure we find myspell dict.
-	epatch "${FILESDIR}/1002_fix-system-hunspell-dict-detections.patch"
-
-	# ARM fixes, bug 327783
-	epatch "${FILESDIR}/${PN}-1.9.2-arm-fixes.patch"
-
-	# Enable tracemonkey for amd64 (bug #315997)
-	epatch "${FILESDIR}/801-enable-x86_64-tracemonkey.patch"
 
 	# Allow user to apply additional patches without modifing ebuild
 	epatch_user
