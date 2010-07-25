@@ -1,6 +1,14 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.31 2010/07/25 13:46:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.32 2010/07/25 15:42:46 polynomial-c Exp $
+
+*icecat-3.6.7-r1 (25 Jul 2010)
+
+  25 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/mozilla-1.9.2.8.diff, -icecat-3.6.7.ebuild,
+  +icecat-3.6.7-r1.ebuild:
+  Added the fixes from firefox-3.6.8 to icecat-3.6.7. It's now technically
+  icecat-3.6.8 which still wasn't released at the time of this change.
 
   25 Jul 2010; Jeroen Roovers <jer@gentoo.org> icecat-3.6.7.ebuild:
   Stable for PPC (bug #329279).

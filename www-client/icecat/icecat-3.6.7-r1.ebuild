@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.7.ebuild,v 1.3 2010/07/25 13:46:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.7-r1.ebuild,v 1.1 2010/07/25 15:42:46 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -18,7 +18,8 @@ MAJ_XUL_PV="1.9.2"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
-XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
+#XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
+XUL_PV="${MAJ_XUL_PV}.8"
 FIREFOX_PN="mozilla-firefox"
 FIREFOX_P="${FIREFOX_PN}-${PV}"
 PATCH="${FIREFOX_PN}-3.6-patches-0.6"
@@ -134,6 +135,9 @@ src_prepare() {
 
 	# Enable tracemonkey for amd64 (bug #315997)
 	epatch "${FILESDIR}/801-enable-x86_64-tracemonkey.patch"
+
+	# Convert 3.6.7 into 3.6.8
+	epatch "${FILESDIR}/mozilla-1.9.2.8.diff"
 
 	# Fix rebranding
 	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in
