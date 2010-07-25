@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-gtkmozembed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.24 2010/04/25 15:51:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.25 2010/07/25 17:35:50 graaff Exp $
+
+*ruby-gtkmozembed-0.19.4-r1 (25 Jul 2010)
+
+  25 Jul 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-gtkmozembed-0.19.4-r1.ebuild:
+  Firefox 2.x is no longer in the tree, so always use xulrunner. Drop
+  firefox and xulrunner USE flags as a consequence.
 
 *ruby-gtkmozembed-0.19.4 (25 Apr 2010)
 
