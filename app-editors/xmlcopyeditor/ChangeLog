@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xmlcopyeditor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.14 2010/06/02 06:26:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.15 2010/07/25 18:39:22 tove Exp $
+
+*xmlcopyeditor-1.2.0.6 (25 Jul 2010)
+
+  25 Jul 2010; Torsten Veller <tove@gentoo.org>
+  +xmlcopyeditor-1.2.0.6.ebuild, metadata.xml:
+  Version bump (#327693). dabbott maintains xmlcopyeditor
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove yoswink from metadata.xml (#78785)

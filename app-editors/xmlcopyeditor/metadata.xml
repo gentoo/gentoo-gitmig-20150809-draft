@@ -3,7 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>dabbott@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>tove@gentoo.org</email>
 </maintainer>
 <longdescription>
 	Fast, free, validating XML editor.
