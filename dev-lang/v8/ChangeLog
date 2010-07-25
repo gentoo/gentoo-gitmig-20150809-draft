@@ -1,0 +1,13 @@
+# ChangeLog for dev-lang/v8
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.1 2010/07/25 21:50:36 phajdan.jr Exp $
+
+*v8-2.2.24 (25 Jul 2010)
+
+  25 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/v8-no-werror-r0.patch, +v8-2.2.24.ebuild,
+  +files/v8-upstream-bug-773-r0.patch:
+  Initial import, bug #299976 by Luke-Jr <luke-jr+gentoobugs@utopios.org>.
+  Notable suggestions by solar, Priit Laes <plaes@plaes.org> and Johan
+  Bergstroem <bugs@bergstroem.nu>.
+
