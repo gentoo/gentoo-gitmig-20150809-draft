@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.11 2010/07/20 16:01:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.12 2010/07/25 10:18:03 fauli Exp $
+
+  25 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  udisks-1.0.1-r1.ebuild:
+  stable x86, bug 329621
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> udisks-1.0.1-r1.ebuild:
   Marked ~hppa too.
