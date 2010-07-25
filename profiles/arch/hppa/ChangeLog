@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.89 2010/07/20 17:47:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.90 2010/07/25 14:00:03 jer Exp $
+
+  25 Jul 2010; Jeroen Roovers <jer@gentoo.org> +package.mask, use.mask:
+  Mask >=sys-fs/udev-147 (bug #294470).
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Clean up unused entries in {package.,}use.mask.
