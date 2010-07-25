@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r6.ebuild,v 1.12 2010/01/14 23:23:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r6.ebuild,v 1.13 2010/07/25 17:57:06 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -27,6 +27,7 @@ src_prepare() {
 
 src_configure() {
 	filter-flags -fprefetch-loop-arrays
+	filter-flags -fPIE
 
 	local myconf="--enable-shared"
 	use oss || myconf="${myconf} --disable-oss"
@@ -37,11 +38,6 @@ src_configure() {
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
-}
-
-src_test() {
-	filter-flags -fPIE
-	emake check || die "emake check failed"
 }
 
 src_install() {
