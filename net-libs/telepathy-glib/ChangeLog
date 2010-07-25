@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.43 2010/06/27 12:25:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.44 2010/07/25 15:21:45 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  telepathy-glib-0.10.1.ebuild:
+  Stable on alpha, bug #321591
 
   27 Jun 2010; <nixnut@gentoo.org> telepathy-glib-0.8.1.ebuild:
   ppc stable #321519
