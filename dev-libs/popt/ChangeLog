@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.89 2010/07/23 11:47:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.90 2010/07/25 16:18:08 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> popt-1.16.ebuild:
+  Stable on alpha, bug #324619
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> popt-1.16.ebuild:
   arm stable, bug #324619
