@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r3.ebuild,v 1.3 2010/07/12 18:01:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r3.ebuild,v 1.4 2010/07/25 19:19:25 nirbheek Exp $
 
 EAPI=2
 
@@ -60,7 +60,7 @@ RDEPEND="!!sci-libs/beagle
 	)
 	firefox? (
 			|| (
-				>=www-client/mozilla-firefox-1.5
+				>=www-client/firefox-1.5
 				>=www-client/firefox-bin-1.5
 			)
 	)
@@ -141,10 +141,10 @@ src_install() {
 		|| die "Unable to find Beagle Firefox Extension"
 		mv "${WORKDIR}"/beagle "${WORKDIR}"/firefox-beagle
 
-		if has_version '>=www-client/mozilla-firefox-1.5'; then
+		if has_version '>=www-client/firefox-1.5'; then
 			MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
 			xpi_install "${WORKDIR}"/firefox-beagle \
-			|| die "xpi install for mozilla-firefox failed!"
+			|| die "xpi install for firefox failed!"
 		fi
 		if has_version '>=www-client/firefox-bin-1.5'; then
 			MOZILLA_FIVE_HOME="/opt/firefox"
