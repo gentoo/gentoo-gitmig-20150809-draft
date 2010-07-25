@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.10 2010/07/20 19:38:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.11 2010/07/25 21:32:03 chithanh Exp $
+
+  25 Jul 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lightspark-0.4.2.ebuild:
+  Add missing dependency on pulseaudio, bug #329649
 
 *lightspark-0.4.2 (20 Jul 2010)
 

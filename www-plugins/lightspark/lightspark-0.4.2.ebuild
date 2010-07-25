@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.2.ebuild,v 1.1 2010/07/20 19:38:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.2.ebuild,v 1.2 2010/07/25 21:32:03 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
@@ -21,6 +21,9 @@ RDEPEND="dev-libs/libpcre[cxx]
 	media-libs/ftgl
 	>=media-libs/glew-1.5.3
 	media-libs/libsdl
+	pulseaudio? (
+		media-sound/pulseaudio
+	)
 	net-misc/curl
 	>=sys-devel/llvm-2.7
 	virtual/opengl
