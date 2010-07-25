@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/picasa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.19 2010/05/28 09:42:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.20 2010/07/25 19:09:37 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  picasa-3.0.0.57.4402.0_beta.ebuild:
+  Fix deps for pkgmove from www-client/mozilla-firefox -> www-client/firefox
 
   28 May 2010; Markus Meier <maekke@gentoo.org>
   picasa-3.0.0.57.4402.0_beta.ebuild:

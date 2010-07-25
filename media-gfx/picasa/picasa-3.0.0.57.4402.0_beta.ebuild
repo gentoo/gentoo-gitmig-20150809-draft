@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.4 2010/05/28 09:42:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.5 2010/07/25 19:09:37 nirbheek Exp $
 
 # needs SRC_URI arrows
 EAPI=2
@@ -36,7 +36,7 @@ RDEPEND="x86? (
 	)
 	nsplugin? ( || (
 		>=net-libs/xulrunner-1.9
-		>=www-client/mozilla-firefox-3.0.0
+		>=www-client/firefox-3.0.0
 	) )
 	"
 DEPEND=""
