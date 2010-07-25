@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  25 Jul 2010; Raúl Porcel <armin76@gentoo.org> dash-0.5.5.1.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #324753
+
   23 Jul 2010; Markus Meier <maekke@gentoo.org> dash-0.5.5.1.2.ebuild:
   arm stable, bug #324753
 
