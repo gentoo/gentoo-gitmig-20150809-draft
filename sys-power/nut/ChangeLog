@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.80 2010/07/14 13:11:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.81 2010/07/25 12:55:28 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> nut-2.4.3-r2.ebuild:
+  Stable on alpha, bug #321493
 
   14 Jul 2010; Christian Faulhammer <fauli@gentoo.org> nut-2.4.3-r2.ebuild:
   stable x86, bug 321493
