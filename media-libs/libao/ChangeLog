@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libao
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.91 2010/07/23 11:31:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.92 2010/07/25 15:30:09 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> libao-1.0.0.ebuild:
+  Stable on alpha, bug #324265
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> libao-1.0.0.ebuild:
   arm stable, bug #324265
