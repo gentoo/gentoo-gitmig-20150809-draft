@@ -1,60 +1,40 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-9999.ebuild,v 1.5 2010/07/25 13:29:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.10-r1.ebuild,v 1.1 2010/07/25 13:29:03 alexxy Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs qt4
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://w1.fi/srv/git/hostap.git"
-	inherit git
-	SRC_URI=""
-	S="${WORKDIR}/${P}/${PN}/${PN}"
-else
-	SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
-	S="${WORKDIR}/${P}/${PN}"
-fi
-
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
-
+SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
-KEYWORDS=""
-IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wimax wps kernel_linux kernel_FreeBSD"
 
-DEPEND="dev-libs/libnl
-	dbus? ( sys-apps/dbus )
+RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
 		madwifi? ( ||
 			( >net-wireless/madwifi-ng-tools-0.9.3
 			net-wireless/madwifi-old )
 		)
+		dev-libs/libnl
 	)
 	!kernel_linux? ( net-libs/libpcap )
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? ( x11-libs/qt-gui:4
+		x11-libs/qt-svg:4 )
 	readline? ( sys-libs/ncurses sys-libs/readline )
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
-S="${WORKDIR}/${P}/${PN}/${PN}"
-
-src_unpack() {
-	einfo "src dir ${S}/"
-	if [[ ${PV} == "9999" ]] ; then
-		S="${WORKDIR}/${P}/${PN}"
-		git_src_unpack
-		S="${WORKDIR}/${P}/${PN}/${PN}"
-	  else
-		unpack ${A}
-	fi
-	cd "${S}"
-}
+S="${WORKDIR}/${P}/${PN}"
 
 pkg_setup() {
 	if use fasteap && (use gnutls || use ssl) ; then
@@ -67,8 +47,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	einfo "src dir ${S}/"
-
 	# net/bpf.h needed for net-libs/libpcap on Gentoo/FreeBSD
 	sed -i \
 		-e "s:\(#include <pcap\.h>\):#include <net/bpf.h>\n\1:" \
@@ -87,11 +65,15 @@ src_prepare() {
 		-e "s:/usr/lib/pkcs11:/usr/$(get_libdir):" \
 		wpa_supplicant.conf || die
 
-	epatch "${FILESDIR}"/${P}-dbus_path_fix.patch
+	epatch "${FILESDIR}"/dbus_path_fix.patch
+
+	if use wimax; then
+		cd "${WORKDIR}/${P}"
+		epatch "${FILESDIR}/${P}-generate-libeap-peer.patch"
+	fi
 }
 
 src_configure() {
-# 	cd ${S}/${PN}
 	# Toolchain setup
 	echo "CC = $(tc-getCC)" > .config
 
@@ -192,7 +174,6 @@ src_configure() {
 }
 
 src_compile() {
-# 	cd ${S}/${PN}
 	emake || die "emake failed"
 
 	if use qt4 ; then
@@ -203,9 +184,6 @@ src_compile() {
 }
 
 src_install() {
-
-# 	cd ${S}/${PN}
-
 	dosbin wpa_supplicant || die
 	dobin wpa_cli wpa_passphrase || die
 
@@ -217,11 +195,18 @@ src_install() {
 		dosym /usr/bin/wpa_cli /bin/wpa_cli || die
 	fi
 
+	if has_version ">=sys-apps/openrc-0.5.0"; then
+		newinitd "$FILESDIR"/${PN}-init.d wpa_supplicant
+		newconfd "$FILESDIR"/${PN}-conf.d wpa_supplicant
+	fi
+
 	exeinto /etc/wpa_supplicant/
 	newexe "${FILESDIR}"/wpa_cli.sh wpa_cli.sh
 
 	dodoc ChangeLog {eap_testing,todo}.txt README{,-WPS} \
 		wpa_supplicant.conf || die "dodoc failed"
+
+	doman doc/docbook/*.{5,8} || die "doman failed"
 
 	if use qt4 ; then
 		into /usr
@@ -231,6 +216,27 @@ src_install() {
 	if use qt4 ; then
 		doicon wpa_gui-qt4/icons/wpa_gui.svg || die "Icon not found"
 		make_desktop_entry wpa_gui "WPA Supplicant Administration GUI" "wpa_gui" "Qt;Network;"
+	fi
+
+	if use wimax; then
+		insinto /usr/include/eap_peer
+		doins	../src/utils/includes.h
+		doins	../src/utils/common.h
+		doins	../src/eap_peer/eap.h
+		doins	../src/common/defs.h
+		doins	../src/eap_peer/eap_methods.h
+		doins	../src/eap_peer/eap_config.h
+		doins	../src/utils/wpabuf.h
+		doins	../src/crypto/tls.h
+		doins	../src/utils/build_config.h
+		doins	../src/utils/os.h
+		doins	../src/utils/wpa_debug.h
+		insinto /usr/include/eap_peer/eap_common
+		doins ../src/eap_common/eap_defs.h || die
+		insinto /usr/lib/pkgconfig
+		doins ../src/eap_peer/libeap0.pc
+		dolib.so ../src/eap_peer/libeap.so.0.0.0
+		dosym /usr/$(get_libdir)/libeap.so.0.0.0 /usr/$(get_libdir)/libeap.so.0
 	fi
 
 	if use dbus ; then
@@ -262,10 +268,4 @@ pkg_postinst() {
 		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
 		einfo "You should re-emerge ${PN} after upgrading these packages."
 	fi
-}
-
-pkg_postinst() {
-	ewarn "You are installing a live ebuild of wpa_supplicant"
-	ewarn "Since this is a moving target, bug reports must be"
-	ewarn "reported on a regular ebuild instead."
 }
