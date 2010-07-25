@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.13.ebuild,v 1.2 2010/02/14 22:26:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.13.ebuild,v 1.3 2010/07/25 16:26:40 klausman Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gtk.org/gtk-doc/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug doc emacs test"
 
 RDEPEND=">=dev-libs/glib-2.6
