@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.546 2010/07/22 03:38:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.547 2010/07/25 15:35:57 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> udev-151-r4.ebuild:
+  Stable on alpha, bug #324507
 
   22 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> udev-151-r4.ebuild:
   x86 stable wrt bug #324507
