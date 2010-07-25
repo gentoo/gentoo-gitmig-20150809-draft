@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/telepathy-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.24 2010/06/27 12:28:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.25 2010/07/25 15:22:30 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  telepathy-python-0.15.17.ebuild:
+  Stable on alpha, bug #321591
 
   27 Jun 2010; <nixnut@gentoo.org> telepathy-python-0.15.17.ebuild:
   ppc stable #321591
