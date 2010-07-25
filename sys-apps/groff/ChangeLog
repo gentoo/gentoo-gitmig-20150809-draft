@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.104 2010/07/24 08:18:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.105 2010/07/25 21:29:44 jer Exp $
+
+  25 Jul 2010; Jeroen Roovers <jer@gentoo.org> groff-1.20.1-r3.ebuild:
+  Fix patch name thanks to Bobby Bingham (bug #329819).
 
 *groff-1.20.1-r3 (24 Jul 2010)
 

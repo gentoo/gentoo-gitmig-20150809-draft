@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r3.ebuild,v 1.1 2010/07/24 08:18:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r3.ebuild,v 1.2 2010/07/25 21:29:44 jer Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -58,7 +58,7 @@ src_unpack() {
 	EOF
 
 	if use linguas_ja ; then
-		epatch "${WORKDIR}"/${PF}-japanese.patch #255292
+		epatch "${WORKDIR}"/${P}-r2-japanese.patch #255292
 		eautoconf
 		eautoheader
 	fi
