@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.80 2010/07/04 20:57:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.81 2010/07/25 19:11:00 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  monodevelop-2.0.ebuild, monodevelop-2.1.1.ebuild,
+  monodevelop-2.2.1.ebuild, monodevelop-2.2.2.ebuild,
+  monodevelop-2.4.ebuild:
+  Fix deps for pkgmove from www-client/mozilla-firefox -> www-client/firefox
 
 *monodevelop-2.4 (04 Jul 2010)
 
