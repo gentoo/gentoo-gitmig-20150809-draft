@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5806 2010/07/25 13:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5807 2010/07/25 16:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3604,13 +3604,8 @@ www-client/lynx:ssl - Enable HTTPS support.
 www-client/midori:html - Install HTML documentation
 www-client/midori:unique - Optional libunique support
 www-client/mozilla-firefox:custom-optimization - Fine-tune custom compiler optimizations
-www-client/mozilla-firefox:filepicker - Enable old gtkfilepicker from 1.0.x firefox
-www-client/mozilla-firefox:iceweasel - Enable iceweasel branding
 www-client/mozilla-firefox:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
-www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
-www-client/mozilla-firefox:moznopango - Disable x11-libs/pango during runtime
 www-client/mozilla-firefox:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
-www-client/mozilla-firefox:xforms - XForms is a standard to split up XHTML into XForms, instance data, and user interface
 www-client/opera:gtk - Set runtime dependencies to support GTK+/GNOME desktop integration
 www-client/opera:kde - Set runtime dependencies to support KDE desktop integration
 www-client/opera:qt-static - Install binaries statically linked to Qt
