@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.ebuild,v 1.2 2010/07/24 00:05:32 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-10.04.ebuild,v 1.3 2010/07/25 08:45:23 keri Exp $
 
 inherit elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -35,6 +35,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}"/${P}-multilib.patch
+	epatch "${FILESDIR}"/${P}-libgrades.patch
 	epatch "${FILESDIR}"/${P}-boehm_gc.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
 	epatch "${FILESDIR}"/${P}-no-reconf.patch
@@ -73,11 +74,25 @@ src_compile() {
 		PARALLEL=${MAKEOPTS} \
 		EXTRA_MLFLAGS=--no-strip \
 		|| die "emake failed"
+
+	emake \
+		PARALLEL=${MAKEOPTS} \
+		EXTRA_MLFLAGS=--no-strip \
+		MERCURY_COMPILER="${S}"/compiler/mercury_compile \
+		libgrades || die "emake libgrades failed"
 }
 
 src_test() {
 	TEST_GRADE=`scripts/ml --print-grade`
-	TWS="${S}"
+	if [ -d "${S}"/install_grade_dir.${TEST_GRADE} ] ; then
+		TWS="${S}"/install_grade_dir.${TEST_GRADE}
+		cp browser/mer_browser.init "${TWS}"/browser/
+		cp mdbcomp/mer_mdbcomp.init "${TWS}"/mdbcomp/
+		cp runtime/mer_rt.init "${TWS}"/runtime/
+		cp ssdb/mer_ssdb.init "${TWS}"/ssdb/
+	else
+		TWS="${S}"
+	fi
 
 	cd "${TESTDIR}"
 	sed -i -e "s:@WORKSPACE@:${TWS}:" WS_FLAGS.ws
@@ -126,7 +141,7 @@ src_install() {
 	fi
 
 	if use java; then
-		dodoc README.java
+		dodoc README.Java
 	fi
 }
 
