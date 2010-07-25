@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.28.ebuild,v 1.1 2010/07/10 18:53:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.28.ebuild,v 1.2 2010/07/25 17:31:33 betelgeuse Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -27,7 +27,9 @@ COMMON_DEPEND="dev-java/eclipse-ecj:3.3
 	~dev-java/tomcat-servlet-api-${PV}
 	examples? ( dev-java/jakarta-jstl )"
 
-RDEPEND=">=virtual/jre-1.5
+RDEPEND="
+	!<dev-java/tomcat-native-1.1.20
+	>=virtual/jre-1.5
 	>=dev-java/commons-daemon-1.0.1
 	dev-java/ant-core
 	${COMMON_DEPEND}"

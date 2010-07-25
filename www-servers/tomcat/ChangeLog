@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.231 2010/07/10 18:53:47 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.232 2010/07/25 17:31:33 betelgeuse Exp $
+
+  25 Jul 2010; Petteri Räty <betelgeuse@gentoo.org> tomcat-6.0.28.ebuild:
+  Block tomcat-native older than 1.1.20. Fixes bug #316545.
 
 *tomcat-6.0.28 (10 Jul 2010)
 
