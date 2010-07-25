@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/libhx-3.4.ebuild,v 1.2 2010/06/08 00:05:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/libhx-3.4.ebuild,v 1.3 2010/07/25 10:10:33 fauli Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/libHX-${PV}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="app-arch/xz-utils"
