@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.163 2010/07/25 15:05:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.164 2010/07/25 15:19:15 ssuominen Exp $
+
+  25 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> apr-1.4.2.ebuild:
+  ppc64 stable wrt #322681
 
   25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> apr-1.4.2.ebuild:
   Stable on alpha, bug #322681
