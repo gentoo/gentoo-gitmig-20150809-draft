@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04_p19.ebuild,v 1.6 2008/03/22 16:45:46 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/wmSpaceWeather-1.04_p19.ebuild,v 1.7 2010/07/25 19:11:11 nirbheek Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -56,7 +56,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You need to emerge www-client/mozilla-firefox or www-client/mozilla-firefox-bin"
+	elog "You need to emerge www-client/firefox or www-client/firefox-bin"
 	elog "to use the -url functionality - see man ${PN} for more info."
 	elog
 	elog "This version uses curl instead of wget. You may edit /usr/share/wmspaceweather/GetKp"

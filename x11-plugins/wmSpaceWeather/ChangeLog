@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmSpaceWeather
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.18 2008/03/22 16:48:41 coldwind Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSpaceWeather/ChangeLog,v 1.19 2010/07/25 19:11:11 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  wmSpaceWeather-1.04_p19.ebuild:
+  Fix references for pkgmove from www-client/mozilla-firefox ->
+  www-client/firefox
 
   22 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> -files/getkp.patch:
   Old getkp patch removed.
