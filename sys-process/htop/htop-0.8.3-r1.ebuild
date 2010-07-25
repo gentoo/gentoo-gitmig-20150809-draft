@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3-r1.ebuild,v 1.1 2010/05/03 18:46:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3-r1.ebuild,v 1.2 2010/07/25 12:35:26 idl0r Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib
@@ -12,9 +12,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
-IUSE="debug openvz vserver"
+IUSE="debug openvz unicode vserver"
 
-DEPEND="sys-libs/ncurses[unicode]"
+DEPEND="sys-libs/ncurses[unicode?]"
 
 pkg_setup() {
 	if use elibc_FreeBSD && ! [[ -f ${ROOT}/proc/stat && -f ${ROOT}/proc/meminfo ]]; then
@@ -42,8 +42,8 @@ src_configure() {
 	econf \
 		$(use_enable openvz) \
 		$(use_enable vserver) \
-		--enable-taskstats \
-		--enable-unicode
+		$(use_enable unicode) \
+		--enable-taskstats
 }
 
 src_install() {
