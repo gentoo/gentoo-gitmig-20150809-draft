@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/shrimp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.8 2010/01/03 14:19:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.9 2010/07/25 18:01:15 weaver Exp $
+
+*shrimp-2.0.1 (25 Jul 2010)
+
+  25 Jul 2010; Andrey Kislyuk <weaver@gentoo.org> +shrimp-2.0.1.ebuild:
+  Version bump
 
   03 Jan 2010; Pacho Ramos <pacho@gentoo.org> shrimp-1.3.1.ebuild:
   amd64 stable, bug 298764
