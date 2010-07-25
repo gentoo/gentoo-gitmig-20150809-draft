@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-connection-managers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-connection-managers/ChangeLog,v 1.6 2010/04/17 11:47:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-connection-managers/ChangeLog,v 1.7 2010/07/25 15:25:44 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  telepathy-connection-managers-1.ebuild:
+  Stable on alpha, bug #321591
 
   17 Apr 2010; Raúl Porcel <armin76@gentoo.org>
   telepathy-connection-managers-1.ebuild:
