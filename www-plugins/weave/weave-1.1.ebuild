@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/weave-1.1.ebuild,v 1.2 2010/04/10 14:35:18 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/weave-1.1.ebuild,v 1.3 2010/07/25 19:10:58 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="|| (
-		>=www-client/mozilla-firefox-3.5
+		>=www-client/firefox-3.5
 		>=www-client/firefox-bin-3.5
 		>=www-client/seamonkey-2.0_alpha3
 		>=www-client/seamonkey-bin-2.0_alpha3
@@ -69,10 +69,10 @@ src_install() {
 	xpi_unpack "${S}/dist/xpi/${xpiname}.xpi"
 
 	# FIXME: Hard-coded MOZILLA_FIVE_HOME dirs
-	if has_version '>=www-client/mozilla-firefox-3.5'; then
+	if has_version '>=www-client/firefox-3.5'; then
 		MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
 		xpi_install "${WORKDIR}/${xpiname}"
-		mozillas="$(best_version www-client/mozilla-firefox) ${mozillas}"
+		mozillas="$(best_version www-client/firefox) ${mozillas}"
 	fi
 	if has_version '>=www-client/firefox-bin-3.5'; then
 		MOZILLA_FIVE_HOME="/opt/firefox"

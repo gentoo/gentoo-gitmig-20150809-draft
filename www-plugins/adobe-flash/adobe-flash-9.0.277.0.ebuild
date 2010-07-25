@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.277.0.ebuild,v 1.1 2010/06/17 13:42:44 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.277.0.ebuild,v 1.2 2010/07/25 19:10:37 nirbheek Exp $
 
 inherit nsplugins
 
@@ -47,7 +47,7 @@ pkg_postinst() {
 	ewarn "issues.  Please consider only running flash applets you know to"
 	ewarn "be safe."
 
-	if has_version 'www-client/mozilla-firefox'; then
+	if has_version 'www-client/firefox'; then
 		elog "The firefox 'flashblock' extension may help:"
 		elog "  https://addons.mozilla.org/en-US/firefox/addon/433"
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/weave
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/ChangeLog,v 1.4 2010/04/10 14:35:18 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/weave/ChangeLog,v 1.5 2010/07/25 19:10:58 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> weave-1.1.ebuild:
+  Fix references for pkgmove from www-client/mozilla-firefox ->
+  www-client/firefox
 
   10 Apr 2010; Mounir Lamouri <volkmar@gentoo.org> -weave-1.0_beta2.ebuild,
   weave-1.1.ebuild:

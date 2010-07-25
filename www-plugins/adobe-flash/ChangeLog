@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.36 2010/07/20 14:49:58 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.37 2010/07/25 19:10:37 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  adobe-flash-9.0.277.0.ebuild, adobe-flash-9.0.277.0-r1.ebuild:
+  Fix references for pkgmove from www-client/mozilla-firefox ->
+  www-client/firefox
 
 *adobe-flash-10.1.53.64-r1 (20 Jul 2010)
 *adobe-flash-10.0.45.2-r2 (20 Jul 2010)
