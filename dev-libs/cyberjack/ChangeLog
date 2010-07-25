@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.13 2010/07/24 21:12:11 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.14 2010/07/25 12:45:21 wschlich Exp $
+
+*cyberjack-3.3.5-r2 (25 Jul 2010)
+
+  25 Jul 2010; Wolfram Schlich <wschlich@gentoo.org>
+  -cyberjack-3.3.5-r1.ebuild, +cyberjack-3.3.5-r2.ebuild:
+  this time really fix udev rules
 
 *cyberjack-3.3.5-r1 (14 Jul 2010)
 

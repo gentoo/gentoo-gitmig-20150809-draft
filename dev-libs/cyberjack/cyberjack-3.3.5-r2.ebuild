@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5-r1.ebuild,v 1.1 2010/07/24 21:12:11 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5-r2.ebuild,v 1.1 2010/07/25 12:45:21 wschlich Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -33,7 +33,7 @@ src_prepare() {
 	if use udev; then
 		epatch "${FILESDIR}"/${PN}-3.3.2-udev.patch
 		cp "${FILESDIR}"/cyberjack.sh etc/udev/ || die
-		cp "${FILESDIR}"/cyberjack.rules etc/udev/rules.new || die
+		cp "${FILESDIR}"/cyberjack.rules-r1 etc/udev/rules.new || die
 		AT_M4DIR="m4" eautoreconf
 	fi
 }
