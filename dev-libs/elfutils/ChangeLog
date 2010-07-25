@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.139 2010/07/22 14:37:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.140 2010/07/25 18:14:41 armin76 Exp $
+
+  25 Jul 2010; Raúl Porcel <armin76@gentoo.org> elfutils-0.146.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #321943
 
   22 Jul 2010; Markus Meier <maekke@gentoo.org> elfutils-0.146.ebuild:
   arm stable, bug #321943
