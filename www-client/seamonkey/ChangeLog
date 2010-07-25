@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.240 2010/07/24 09:05:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.241 2010/07/25 13:45:13 jer Exp $
+
+  25 Jul 2010; Jeroen Roovers <jer@gentoo.org> seamonkey-2.0.6.ebuild:
+  Stable for HPPA PPC (bug #329279).
 
   24 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
   seamonkey-2.0.6.ebuild:
