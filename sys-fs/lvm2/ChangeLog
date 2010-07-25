@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.216 2010/07/23 07:25:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.217 2010/07/25 15:39:54 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  lvm2-2.02.67-r2.ebuild:
+  Stable on alpha, bug #324485
 
   23 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   lvm2-2.02.67-r2.ebuild:
