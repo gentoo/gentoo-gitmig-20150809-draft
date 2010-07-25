@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.246 2010/07/10 20:21:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.247 2010/07/25 13:38:11 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  java-config-2.1.11.ebuild:
+  Stable on alpha, bug #321767
 
   10 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   java-config-2.1.10.ebuild:
