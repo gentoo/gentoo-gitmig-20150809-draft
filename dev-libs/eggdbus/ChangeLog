@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eggdbus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/ChangeLog,v 1.18 2010/07/20 15:01:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/ChangeLog,v 1.19 2010/07/25 16:06:25 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> eggdbus-0.6.ebuild:
+  Stable on alpha, bug #329621
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> eggdbus-0.6.ebuild:
   Stable for HPPA (bug #314899).
