@@ -33,7 +33,7 @@ options {
 	/* https://www.isc.org/solutions/dlv >=bind-9.7.x only */
 	//bindkeys-file "/etc/bind/bind.keys";
 
-	listen-on-v6 { none; };
+	listen-on-v6 { ::1; };
 	listen-on { 127.0.0.1; };
 
 	allow-query {
@@ -203,6 +203,7 @@ view "public" in {
 };
 
 /* Hide the bind version */
+/*
 view "chaos" chaos {
 	match-clients { any; };
 	allow-query { none; };
@@ -211,3 +212,4 @@ view "chaos" chaos {
 		file "/dev/null";  // or any empty file
 	};
 };
+*/
