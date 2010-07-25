@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.85 2010/07/24 08:14:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.86 2010/07/25 16:26:09 ssuominen Exp $
+
+  25 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libcaca-0.99_beta17.ebuild:
+  Use java-pkg_get-jni-cflags to get jni.h location wrt #329783, thanks to
+  Petr Gregor and Petteri Räty.
 
   24 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   libcaca-0.99_beta17.ebuild:

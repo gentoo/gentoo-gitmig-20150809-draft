@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.10 2010/07/24 08:14:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta17.ebuild,v 1.11 2010/07/25 16:26:09 ssuominen Exp $
 
 EAPI=2
-inherit autotools mono multilib java-pkg-opt-2
+inherit autotools flag-o-matic mono multilib java-pkg-opt-2
 
 MY_P=${P/_/.}
 
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="cxx doc imlib java mono ncurses opengl ruby slang static-libs truetype X"
 
-RDEPEND="imlib? ( media-libs/imlib2 )
-	java? ( >=virtual/jre-1.5 )
+COMMON_DEPEND="imlib? ( media-libs/imlib2 )
 	mono? ( dev-lang/mono )
 	ncurses? ( >=sys-libs/ncurses-5.3 )
 	opengl? ( virtual/opengl
@@ -26,7 +25,9 @@ RDEPEND="imlib? ( media-libs/imlib2 )
 	ruby? ( virtual/ruby )
 	slang? ( >=sys-libs/slang-2 )
 	X? ( x11-libs/libX11 x11-libs/libXt )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	java? ( >=virtual/jre-1.5 )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen
 		virtual/latex-base
@@ -55,7 +56,11 @@ src_prepare() {
 }
 
 src_configure() {
-	use java && export JAVACFLAGS="$(java-pkg_javac-args)"
+	if use java; then
+		export JAVACFLAGS="$(java-pkg_javac-args)"
+		append-cflags "$(java-pkg_get-jni-cflags)"
+	fi
+
 	use mono && export CSC=gmcs #329651
 	export VARTEXFONTS="${T}/fonts" #44128
 
@@ -79,9 +84,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS NOTES README THANKS
 
 	if use java; then
-		rm -rf "${D}"/usr/share/java
 		java-pkg_newjar java/libjava.jar
 	fi
 
+	rm -rf "${D}"/usr/share/java
 	find "${D}" -name '*.la' -delete
 }
