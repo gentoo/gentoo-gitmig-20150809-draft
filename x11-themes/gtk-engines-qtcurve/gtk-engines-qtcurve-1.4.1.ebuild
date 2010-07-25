@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-1.4.1.ebuild,v 1.1 2010/05/27 07:46:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-1.4.1.ebuild,v 1.2 2010/07/25 19:11:46 nirbheek Exp $
 
 EAPI=1
 inherit eutils cmake-utils
@@ -18,7 +18,7 @@ IUSE="mozilla firefox3"
 
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/cairo
-	firefox3? ( || ( >=www-client/mozilla-firefox-3.0
+	firefox3? ( || ( >=www-client/firefox-3.0
 		>=www-client/firefox-bin-3.0 ) )"
 DEPEND="x11-libs/gtk+:2
 	x11-libs/cairo

@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.91 2010/07/19 20:22:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.92 2010/07/25 19:11:46 nirbheek Exp $
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gtk-engines-qtcurve-0.65.2.ebuild, gtk-engines-qtcurve-0.69.2.ebuild,
+  gtk-engines-qtcurve-1.4.1.ebuild, gtk-engines-qtcurve-1.5.0.ebuild,
+  gtk-engines-qtcurve-1.5.1.ebuild, gtk-engines-qtcurve-1.5.2.ebuild,
+  metadata.xml:
+  Fix references for pkgmove from www-client/mozilla-firefox ->
+  www-client/firefox
 
 *gtk-engines-qtcurve-1.5.2 (19 Jul 2010)
 
