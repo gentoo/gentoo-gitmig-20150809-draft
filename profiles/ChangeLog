@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4420 2010/07/25 18:43:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4421 2010/07/25 21:44:44 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Hard mask new experimental package dev-lang/v8.
 
   25 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite GTK+-1.2 consumers: smurf, swami, soundtracker and surf.
