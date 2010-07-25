@@ -1,0 +1,11 @@
+--- examples/hotplug.c.orig	2010-07-23 21:32:12.000000000 -0400
++++ examples/hotplug.c	2010-07-25 16:39:22.000000000 -0400
+@@ -54,7 +54,7 @@
+   extern int optind;
+   extern char *optarg;
+   char *udev_action = NULL;
+-  char default_udev_action[] = "SYMLINK+=\"libmtp-%k\", MODE=\"666\"";
++  char default_udev_action[] = "SYMLINK+=\"libmtp-%k\", MODE=\"0660\", GROUP=\"plugdev\"";
+   char *action; // To hold the action actually used.
+   uint16_t last_vendor = 0x0000U;  
+ 
