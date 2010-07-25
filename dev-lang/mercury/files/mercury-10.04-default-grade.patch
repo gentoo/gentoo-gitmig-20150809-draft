@@ -11,58 +11,51 @@ diff -ur mercury-compiler-10.04.orig/Makefile mercury-compiler-10.04/Makefile
  #-----------------------------------------------------------------------------#
 diff -ur mercury-compiler-10.04.orig/Mmakefile mercury-compiler-10.04/Mmakefile
 --- mercury-compiler-10.04.orig/Mmakefile	2009-10-20 17:07:24.000000000 +1300
-+++ mercury-compiler-10.04/Mmakefile	2010-07-25 20:05:55.000000000 +1200
-@@ -286,6 +286,54 @@
++++ mercury-compiler-10.04/Mmakefile	2010-07-25 21:18:31.000000000 +1200
+@@ -286,6 +286,47 @@
  		mdbcomp browser ssdb trace
  	+cd deep_profiler && $(SUBDIR_MMAKE)
  
-+.PHONY: libgrades
-+libgrades:
-+	+for grade in x $(LIBGRADES); do                                      \
-+	    if [ "$${grade}" = "x" -o "$${grade}" = "$(GRADE)" ]; then        \
-+		continue;                                                     \
-+	    fi;                                                               \
-+	    case $${grade} in                                                 \
-+		java*|erlang*) continue;                                      \
-+	    esac;                                                             \
-+	    gc_grade=`scripts/ml --grade $${grade} --print-gc-grade`;         \
-+	    IWS=`/bin/pwd`/install_grade_dir.$${grade};                       \
-+	    (                                                                 \
-+		scripts/prepare_install_dir $${IWS} &&                        \
-+		( cd $${IWS}/boehm_gc &&                                      \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			GC_GRADE=$${gc_grade} libgrade ) &&                   \
-+		( cd $${IWS}/runtime &&                                       \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			libgrade ) &&                                         \
-+		( cd $${IWS}/library &&                                       \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			depend &&                                             \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			libgrade ) &&                                         \
-+		( cd $${IWS}/mdbcomp &&                                       \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			depend &&                                             \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			libgrade ) &&                                         \
-+		( cd $${IWS}/browser &&                                       \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			depend &&                                             \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			libgrade ) &&                                         \
-+		( cd $${IWS}/ssdb &&                                          \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			depend &&                                             \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			libgrade ) &&                                         \
-+		( cd $${IWS}/trace &&                                         \
-+		  $(SUBDIR_MMAKE) MC=mmc GRADE=$${grade} WORKSPACE=$${IWS}    \
-+			libgrade ) &&                                         \
-+		true                                                          \
-+	    ) ||                                                              \
-+	    { echo "To clean up from failed install, remove $${IWS}";         \
-+	      exit 1; };                                                      \
-+	done;
++.PHONY: default_grade
++default_grade:
++	+if test "$(DEFAULT_GRADE)" != "$(GRADE)"; then                              \
++	    gc_grade=`scripts/ml --grade $(DEFAULT_GRADE) --print-gc-grade`;         \
++	    IWS=`/bin/pwd`/install_grade_dir.$(DEFAULT_GRADE);                       \
++	    (                                                                        \
++		scripts/prepare_install_dir $${IWS} &&                               \
++		( cd $${IWS}/boehm_gc &&                                             \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			GC_GRADE=$${gc_grade} libgrade ) &&                          \
++		( cd $${IWS}/runtime &&                                              \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			libgrade ) &&                                                \
++		( cd $${IWS}/library &&                                              \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			depend &&                                                    \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			libgrade ) &&                                                \
++		( cd $${IWS}/mdbcomp &&                                              \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			depend &&                                                    \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			libgrade ) &&                                                \
++		( cd $${IWS}/browser &&                                              \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			depend &&                                                    \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			libgrade ) &&                                                \
++		( cd $${IWS}/ssdb &&                                                 \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			depend &&                                                    \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			libgrade ) &&                                                \
++		( cd $${IWS}/trace &&                                                \
++		  $(SUBDIR_MMAKE) MC=mmc GRADE=$(DEFAULT_GRADE) WORKSPACE=$${IWS}    \
++			libgrade ) &&                                                \
++		true                                                                 \
++	    ) ||                                                                     \
++	    { exit 1; };                                                             \
++	fi;
 +
  #-----------------------------------------------------------------------------#
  

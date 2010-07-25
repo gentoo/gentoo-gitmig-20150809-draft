@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.109 2010/07/25 08:45:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.110 2010/07/25 18:51:57 keri Exp $
+
+  25 Jul 2010; <keri@gentoo.org> mercury-10.04.ebuild,
+  +files/mercury-10.04-default-grade.patch,
+  -files/mercury-10.04-libgrades.patch:
+  Compile default-grade after default llds grade in case default llds grade
+  != default grade (used in testsuite). Only default-grade and default llds
+  grade are needed prior to running src_test() and src_install().
 
   25 Jul 2010; <keri@gentoo.org> mercury-10.04.ebuild,
   +files/mercury-10.04-libgrades.patch:
