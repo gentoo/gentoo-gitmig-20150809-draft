@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/kdevelop-php-docs-1.0.1.ebuild,v 1.1 2010/07/21 16:54:26 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/kdevelop-php-docs-1.0.1.ebuild,v 1.2 2010/07/25 06:41:21 reavertm Exp $
 
 EAPI="2"
 
@@ -10,6 +10,7 @@ fi
 
 KMNAME="kdevelop"
 KMMODULE="php-docs"
+KDEVELOP_VERSION="4.0.1"
 inherit kde4-base
 
 DESCRIPTION="PHP documentation plugin for KDevelop 4"
