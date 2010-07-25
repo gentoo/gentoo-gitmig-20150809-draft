@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.27 2010/04/16 18:53:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.28 2010/07/25 11:45:22 volkmar Exp $
+
+  25 Jul 2010; <volkmar@gentoo.org> -tesseract-2.03.ebuild,
+  -files/tesseract-2.03-gcc44.patch, -tesseract-2.04.ebuild:
+  Removing old ebuilds.
 
   16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
   tesseract-2.04-r1.ebuild:
