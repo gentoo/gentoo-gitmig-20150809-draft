@@ -1,3 +1,4 @@
 slotmove =net-libs/enet-1.3.0 0 1.3
 move media-sound/radiotray media-radio/radiotray
 slotmove =dev-haskell/parallel-1* 0 1
+move www-client/mozilla-firefox www-client/firefox
