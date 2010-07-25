@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.1.ebuild,v 1.7 2010/07/22 22:06:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.1.ebuild,v 1.8 2010/07/25 14:55:57 klausman Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://compression.ca/${PN}/${P}.tar.gz"
 
 LICENSE="PBZIP2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="static symlink"
 
 DEPEND="app-arch/bzip2"
