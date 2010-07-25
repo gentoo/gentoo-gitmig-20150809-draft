@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.2.24.ebuild,v 1.1 2010/07/25 21:50:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.2.24.ebuild,v 1.2 2010/07/25 23:39:10 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -29,13 +29,13 @@ src_prepare() {
 }
 
 src_configure() {
-	# GCC issues multiple warning about strict-aliasing issues in v8 code.
+	# GCC issues multiple warnings about strict-aliasing issues in v8 code.
 	append-flags -fno-strict-aliasing
 }
 
 src_compile() {
 	# TODO: use SONAME, but in a way more consistent
-	# with the rest of a Linux system. Currently the nme
+	# with the rest of a Linux system. Currently the name
 	# looks like libv8-2.2.24.so, but should be more like
 	# libv8.so.2.2.24.
 	scons library=shared . || die
