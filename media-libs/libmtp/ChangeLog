@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.82 2010/07/25 15:34:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.83 2010/07/25 15:39:38 jer Exp $
+
+  25 Jul 2010; Jeroen Roovers <jer@gentoo.org> libmtp-1.0.3.ebuild:
+  Stable for PPC (bug #327675).
 
   25 Jul 2010; Jeroen Roovers <jer@gentoo.org> libmtp-1.0.3.ebuild:
   Stable for HPPA (bug #327675).
