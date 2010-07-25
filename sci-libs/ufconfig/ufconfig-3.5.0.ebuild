@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.5.0.ebuild,v 1.9 2010/07/18 13:58:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ufconfig-3.5.0.ebuild,v 1.10 2010/07/25 14:27:19 jer Exp $
 
 inherit multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cise.ufl.edu/research/sparse/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="static-libs"
 DEPEND=""
 

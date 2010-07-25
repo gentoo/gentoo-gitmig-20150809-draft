@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ufconfig
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.27 2010/07/18 13:58:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.28 2010/07/25 14:27:19 jer Exp $
+
+  25 Jul 2010; Jeroen Roovers <jer@gentoo.org> ufconfig-3.5.0.ebuild:
+  Stable for HPPA (bug #325183).
 
   18 Jul 2010; <nixnut@gentoo.org> ufconfig-3.5.0.ebuild:
   ppc stable #325183
