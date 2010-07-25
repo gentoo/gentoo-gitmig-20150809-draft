@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.1.2-r1.ebuild,v 1.4 2010/07/23 16:21:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-1.1.2-r1.ebuild,v 1.5 2010/07/25 21:41:50 polynomial-c Exp $
 
 WANT_AUTOCONF="2.1"
 EAPI="2"
@@ -96,6 +96,8 @@ src_configure() {
 	mozconfig_annotate '' \
 		--with-system-nspr \
 		--with-system-nss \
+		--disable-wave \
+		--disable-ogg \
 		--with-default-mozilla-five-home=${MOZILLA_FIVE_HOME} \
 		--with-user-appdir=.thunderbird \
 		--enable-application=mail \

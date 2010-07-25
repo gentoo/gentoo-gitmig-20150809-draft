@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.194 2010/07/23 16:21:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.195 2010/07/25 21:41:50 polynomial-c Exp $
+
+  25 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  enigmail-1.1.2-r1.ebuild:
+  Disabled sound support in 1.1.x as well. Thanks to Dirk Sondermann for
+  reporting this in bug #329831.
 
   23 Jul 2010; Jeroen Roovers <jer@gentoo.org> enigmail-1.1.2-r1.ebuild:
   Stable for PPC (bug #329279).
