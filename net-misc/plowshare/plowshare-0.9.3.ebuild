@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.9.2.ebuild,v 1.2 2010/06/03 23:26:03 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.9.3.ebuild,v 1.1 2010/07/25 12:13:49 volkmar Exp $
 
 EAPI="2"
 
@@ -21,7 +21,6 @@ RDEPEND="
 	app-shells/bash
 	app-text/recode
 	app-text/tesseract[tiff]
-	|| ( app-text/tesseract[linguas_en] >=app-text/tesseract-2.04-r1 )
 	|| ( media-gfx/imagemagick[tiff] media-gfx/graphicsmagick[imagemagick,tiff] )
 	net-misc/curl
 	sys-apps/util-linux"
@@ -29,7 +28,6 @@ DEPEND=""
 
 # NOTES:
 # spidermonkey dep should be any javascript interpreter using /usr/bin/js
-# linguas_en is a workaround for bug 287373 and bug 297991
 
 # TODO:
 # dev-java/rhino could probably be an alternative for spidermonkey
@@ -38,14 +36,18 @@ src_prepare() {
 	if ! use javascript; then
 		sed -i -e 's:^\(MODULES=".*\)mediafire:\1:' \
 			-e 's:^\(MODULES=".*\)zshare:\1:' \
+			-e 's:^\(MODULES=\".*\)badongo:\1:' \
+			-e 's:^\(MODULES=\".*\)filefactory:\1:' \
 			src/{delete,download,list,upload}.sh || die "sed failed"
-		rm src/modules/{mediafire,zshare}.sh || die "rm failed"
+		rm src/modules/{mediafire,zshare,badongo,filefactory}.sh || die "rm failed"
 	fi
 	if ! use perl; then
 		sed -i -e 's:^\(MODULES=\".*\)netload_in:\1:' \
-			-e 's:^\(MODULES=\".*\)loadfiles:\1:' \
+			-e 's:^\(MODULES=\".*\)badongo:\1:' \
 			src/{delete,download,list,upload}.sh || die "sed failed"
 		rm src/modules/netload_in.sh || die "rm failed"
+		# Forcing remove of badongo.sh because it may have been removed before.
+		rm -f src/modules/badongo.sh || die "rm failed"
 	fi
 }
 
@@ -62,7 +64,7 @@ src_install() {
 	doins src/lib.sh || die "doins failed"
 
 	if use perl; then
-		doins src/strip_single_color.pl || die "doins failed"
+		doins src/strip_{single_color,threshold}.pl || die "doins failed"
 	fi
 
 	insinto /usr/share/${PN}/modules
@@ -92,9 +94,11 @@ src_install() {
 
 pkg_postinst() {
 	if ! use javascript; then
-		ewarn "Without javascript you will not be able to use zshare and mediafire"
+		ewarn "Without javascript you will not be able to use:"
+		ewarn " zshare, mediafire, badongo and filefactory"
 	fi
 	if ! use perl; then
-		ewarn "Without perl you will not be able to use netload.in"
+		ewarn "Without perl you will not be able to use:"
+		ewarn " netload.in and badongo"
 	fi
 }
