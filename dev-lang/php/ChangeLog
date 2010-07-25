@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.392 2010/07/19 19:13:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.393 2010/07/25 13:32:23 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> php-5.3.2.ebuild:
+  Keyworded on alpha, bug #321743
 
   19 Jul 2010; Jeroen Roovers <jer@gentoo.org> php-5.3.2.ebuild:
   Marked ~hppa (bug #321743).
