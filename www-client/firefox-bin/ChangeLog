@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.25 2010/07/24 11:57:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.26 2010/07/25 09:22:41 fauli Exp $
+
+  25 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  firefox-bin-3.6.8.ebuild:
+  stable x86, security bug 329279
 
 *firefox-bin-3.6.8 (24 Jul 2010)
 
