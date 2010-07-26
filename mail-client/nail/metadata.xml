@@ -3,7 +3,20 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <use>
-	<flag name='net'>Enable network support (thus enabling POP, IMAP and
-		SMTP)</flag>
+  <flag name='net'>
+    Enable support for network protocols (POP, IMAP and SMTP). If you
+    only need to send mail with the local Transport Agent, disabling
+    this will get you support for only /usr/sbin/sendmail call.
+  </flag>
+
+  <flag name='ssl'>
+    If network is enabled, this adds support for S/MIME and
+    SSL/TLS-powered protocols through <pkg>dev-libs/openssl</pkg>.
+  </flag>
+
+  <flag name='kerberos'>
+    If network is enabled, this adds support for GSSAPI login on IMAP
+    through <pkg>virtual/kerberos</pkg>.
+  </flag>
 </use>
 </pkgmetadata>

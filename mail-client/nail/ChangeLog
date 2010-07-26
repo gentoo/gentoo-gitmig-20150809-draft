@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/nail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.69 2010/07/25 15:24:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.70 2010/07/26 22:50:28 flameeyes Exp $
+
+*nail-12.4-r1 (26 Jul 2010)
+
+  26 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nail-12.4-r1.ebuild, metadata.xml:
+  Make ssl and kerberos USE flags to be dependent on net; make sure that
+  kerberos is disabled (to avoid automagic dependencies); describe the USE
+  flags better.
 
   25 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> nail-12.4.ebuild:
   ppc64 stable wrt #324127
