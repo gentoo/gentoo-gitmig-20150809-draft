@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/libeap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libeap/ChangeLog,v 1.1 2010/07/26 22:05:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libeap/ChangeLog,v 1.2 2010/07/26 22:39:29 alexxy Exp $
+
+  26 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> libeap-0.6.10.ebuild:
+  Fix typo in deps
 
 *libeap-0.6.10 (26 Jul 2010)
 
