@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.87 2010/06/13 07:31:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.88 2010/07/26 13:55:07 fauli Exp $
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  mythvideo-0.22_p23469.ebuild:
+  stable x86, bug 323745
 
   13 Jun 2010; Doug Goldstein <cardoe@gentoo.org>
   mythvideo-0.22_p23469.ebuild, mythvideo-0.23_p25065.ebuild:
