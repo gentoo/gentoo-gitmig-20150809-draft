@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.1-r2.ebuild,v 1.4 2010/05/22 09:09:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.1-r2.ebuild,v 1.5 2010/07/26 15:42:50 flameeyes Exp $
 
 EAPI="3"
 
@@ -99,6 +99,9 @@ src_prepare() {
 	# fix building with Berkeley DB 5.0 and later; now defining
 	# DB_DBM_HSEARCH is not enough; bug #319831
 	epatch "${FILESDIR}/${MY_PN}-1.1.1+berkdb-5.patch"
+
+	# fix tally file created executable, see bug #329885
+	epatch "${FILESDIR}/${MY_PN}-1.1.1-pam_tally2-mode.patch"
 
 	# Remove libtool-2 libtool macros, see bug 261167
 	rm m4/libtool.m4 m4/lt*.m4 || die "rm libtool macros failed."
