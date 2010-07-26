@@ -4,5 +4,6 @@
 <herd>xfce</herd>
 <use>
 	<flag name='trash-plugin'>Build Trash plug-in for panel</flag>
+	<flag name='udev'>Enable gudev support (required by <pkg>xfce-extra/thunar-volman</pkg>)</flag>
 </use>
 </pkgmetadata>
