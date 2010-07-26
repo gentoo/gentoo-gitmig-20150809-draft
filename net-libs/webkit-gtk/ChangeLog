@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.75 2010/07/18 17:36:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.76 2010/07/26 14:23:26 pacho Exp $
+
+  26 Jul 2010; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.2.3.ebuild,
+  +files/webkit-gtk-1.2.3-fix-pool-sparc.patch:
+  Update to debian patch letting webkit to keep working on sparc. Thanks a
+  lot to Raúl Porcel in bug #329107 (by Possum) for finding the fix.
 
 *webkit-gtk-1.2.3 (18 Jul 2010)
 

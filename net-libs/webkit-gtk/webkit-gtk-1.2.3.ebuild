@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.3.ebuild,v 1.1 2010/07/18 17:36:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.3.ebuild,v 1.2 2010/07/26 14:23:26 pacho Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
 	# https://bugs.webkit.org/show_bug.cgi?id=19775
-	use sparc && epatch "${FILESDIR}"/${PN}-1.1.15.2-unaligned.patch
+	use sparc && epatch "${FILESDIR}"/${PN}-1.2.3-fix-pool-sparc.patch
 
 	# Darwin/Aqua build is broken, needs autoreconf
 	# XXX: BROKEN. Patch does not apply anymore.
