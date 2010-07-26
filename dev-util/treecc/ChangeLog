@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/treecc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.34 2010/07/17 09:15:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.35 2010/07/26 19:31:45 maekke Exp $
+
+  26 Jul 2010; Markus Meier <maekke@gentoo.org> treecc-0.3.10.ebuild:
+  arm stable, bug #327293
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> treecc-0.3.10.ebuild:
   stable x86, bug 327293
