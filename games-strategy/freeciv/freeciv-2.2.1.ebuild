@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.1.ebuild,v 1.1 2010/07/22 01:16:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.2.1.ebuild,v 1.2 2010/07/26 16:01:49 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games-ggz games
@@ -102,8 +102,7 @@ src_install() {
 	fi
 
 	dodoc ChangeLog NEWS doc/{BUGS,CodingStyle,HACKING,HOWTOPLAY,README*,TODO}
-	find "${D}" -type f -name '*.la' -exec rm {} + \
-		|| die "la removal failed"
+	rm -rf "${D}$(games_get_libdir)"
 
 	prepgamesdirs
 }
