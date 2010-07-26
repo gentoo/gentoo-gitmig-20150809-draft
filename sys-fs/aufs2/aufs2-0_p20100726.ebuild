@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100405.ebuild,v 1.3 2010/05/17 17:04:58 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100726.ebuild,v 1.1 2010/07/26 11:33:14 tommy Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug inotify kernel-patch nfs ramfs"
+IUSE="debug inotify hardened kernel-patch nfs ramfs"
 
 DEPEND="dev-vcs/git"
 RDEPEND="!sys-fs/aufs"
@@ -28,7 +28,7 @@ pkg_setup() {
 
 	get_version
 	kernel_is lt 2 6 27 && die "kernel too old"
-	kernel_is gt 2 6 33 && die "kernel too new"
+	kernel_is gt 2 6 34 && die "kernel too new"
 
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null && \
 		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null ); then
@@ -59,10 +59,14 @@ src_prepare() {
 		sed -i "s:DEBUG = y:DEBUG =:g" config.mk || die
 	fi
 	if use inotify; then
-		sed -i  "s:HNOTIFY =:HNOTIFY = y:g" config.mk || die
+		sed -i  -e "s:AUFS_HNOTIFY =:AUFS_HNOTIFY = y:g" \
+			-e "s:AUFS_HINOTIFY =:AUFS_HINOTIFY = y:g"  config.mk || die
 	fi
 	if use ramfs; then
 		sed -i  "s:RAMFS =:RAMFS = y:g" config.mk || die
+	fi
+	if use hardened ; then
+		epatch "${FILESDIR}"/pax.patch
 	fi
 
 	cd "${WORKDIR}"/${PN}-util
@@ -85,7 +89,7 @@ src_install() {
 	docinto design
 	dodoc design/*.txt || die
 	cd "${WORKDIR}"/${PN}-util
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" KDIR=${KV_DIR} install || die
 	docinto
 	newdoc README README-utils || die
 }
