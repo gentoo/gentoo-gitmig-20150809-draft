@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.11 2010/07/20 16:01:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.12 2010/07/26 17:03:23 klausman Exp $
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  libatasmart-0.17.ebuild:
+  Stable on alpha, bug #329621
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libatasmart-0.17.ebuild:
   Marked ~hppa too.
