@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11795 2010/07/26 08:05:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11796 2010/07/26 08:14:13 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -214,14 +214,6 @@ dev-php5/znf
 # Temporary mask until the 256 series nvidia-drivers are unmasked.
 >=dev-util/nvidia-cuda-sdk-3.1
 >=dev-util/nvidia-cuda-toolkit-3.1
-
-# Samuli Suominen <ssuominen@gentoo.org> (01 Jul 2010)
-# Fails to compile with asneeded, bug 247768
-# Fails to compile with dcParser errors, bug 253381
-# Needs a version bump, bug 277620 with proper python.eclass
-# handling, bug 313543
-# Masked for removal in 30 days
-media-libs/panda3d
 
 # Vlastimil Babka <caster@gentoo.org> (30 Jun 2010)
 # Masked for removal due to EOL and security, bug #292001.
@@ -444,11 +436,6 @@ net-firewall/ipp2p
 # Dead upstream, last release from 2005. Nothing depends on it. Multiple open
 # bugs. Removed in 60 days by treecleaners, bug 309113
 app-pda/pilot-mailsync
-
-# Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
-# Fails with forced as-needed but most importantly no maintainer.
-# Removed in 60 days by treecleaners, bug 277640
-app-text/fmt-ptrn
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Jun 2010)
 # Depends on deprecated gtk functionality in media-libs/imlib
