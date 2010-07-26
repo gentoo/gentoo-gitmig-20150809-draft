@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.60 2010/06/10 14:44:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.61 2010/07/26 13:46:14 fauli Exp $
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  mythgallery-0.22_p22763.ebuild:
+  stable x86, bug 323745
 
 *mythgallery-0.23_p25065 (10 Jun 2010)
 

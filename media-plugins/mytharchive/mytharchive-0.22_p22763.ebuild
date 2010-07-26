@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.22_p22763.ebuild,v 1.2 2010/03/03 15:40:27 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.22_p22763.ebuild,v 1.3 2010/07/26 13:41:58 fauli Exp $
 
 EAPI=2
 inherit qt4 mythtv-plugins
 
 DESCRIPTION="Allows for archiving your videos to DVD."
 IUSE=""
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=dev-lang/python-2.3.5
 		dev-python/mysql-python

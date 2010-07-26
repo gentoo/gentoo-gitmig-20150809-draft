@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythgame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.59 2010/06/10 14:46:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.60 2010/07/26 13:47:29 fauli Exp $
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  mythgame-0.22_p22763.ebuild:
+  stable x86, bug 323745
 
 *mythgame-0.23_p25065 (10 Jun 2010)
 
