@@ -3,8 +3,15 @@
 <pkgmetadata>
   <herd>virtualization</herd>
   <use>
-	  <flag name='policykit'>Enables <pkg>sys-auth/polkit</pkg> authentication
-		  support, required when using <pkg>app-emulation/libvirt</pkg> with
-		  PolicyKit authentication</flag>
+    <flag name='policykit'>
+      Enables <pkg>sys-auth/polkit</pkg> authentication support,
+      required when using <pkg>app-emulation/libvirt</pkg> with
+      PolicyKit authentication
+    </flag>
+
+    <flag name='sasl'>
+      Depend on the proper libraries needed to connect to SASL-enabled
+      libvirtd instances (e.g. Kerberos-protected instances).
+    </flag>
   </use>
 </pkgmetadata>
