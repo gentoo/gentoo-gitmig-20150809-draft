@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.16 2010/06/13 16:10:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.17 2010/07/26 18:57:14 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -138,6 +138,9 @@ xfconf_src_install() {
 	if [[ -n ${DOCS} ]]; then
 		dodoc ${DOCS} || die "dodoc failed"
 	fi
+
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && ED="${D}"
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 # @FUNCTION: xfconf_pkg_preinst
