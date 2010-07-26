@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.ebuild,v 1.1 2010/07/25 14:18:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.ebuild,v 1.2 2010/07/26 22:13:27 alexxy Exp $
 
 EAPI="3"
 
-inherit linux-info multilib
+inherit linux-info
 
 DESCRIPTION="Intel WiMAX daemon used to interface to the hardware"
 HOMEPAGE="http://www.linuxwimax.org/"
@@ -12,28 +12,38 @@ SRC_URI="http://www.linuxwimax.org/Download?action=AttachFile&do=get&target=${P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/libnl-1.1
+DEPEND="|| ( >=dev-libs/libnl-1.1 >=app-emulation/emul-linux-x86-baselibs-20100611 )
 		>=sys-kernel/linux-headers-2.6.34"
 RDEPEND="${DEPEND}
-	net-wireless/wimax-tools
-	net-wireless/wpa_supplicant[wimax]"
+		net-wireless/wimax-tools
+		|| ( net-wireless/wpa_supplicant[wimax] net-wireless/libeap )"
 
-src_prepare() {
-	use amd64 && sed -i 's:REG_EIP:REG_RIP:g' \
-		InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericConsole.c \
-			|| die "Sed failed"
+pkg_setup() {
+	use amd64 && multilib_toolchain_setup x86
+	linux-info_pkg_setup
 }
 
 src_configure() {
 	econf \
 		--with-libwimaxll=/usr/$(get_libdir) \
+		--localstatedir=/var \
 		--with-i2400m=/usr || die "econf failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
+	dodir /usr/lib
+	mv "${D}/usr/lib32/pkgconfig" "${D}/usr/lib/pkgconfig"
 	doinitd "${FILESDIR}"/wimax || die "failed to place the init daemon"
+	sed -e "s:/usr/lib/libeap.so.0:/usr/$(get_libdir)/libeap.so.0:g" \
+		-e "s:<GetDeviceTraces>3</GetDeviceTraces>:<GetDeviceTraces>0</GetDeviceTraces>:g" \
+		-e "s:<OutputTarget>console</OutputTarget>:<OutputTarget>daemon</OutputTarget>:g" \
+		-e "s:<IPRenew>1</IPRenew>:<IPRenew>0</IPRenew>:g" \
+		-e "s:<ModeOfOperationProduction>0</ModeOfOperationProduction>:<ModeOfOperationProduction>1</ModeOfOperationProduction>:g" \
+		-i "${D}/etc/wimax/config.xml" || die "Fixing config failed"
+	# Drop udev rusles for now
+	rm -rf  "${D}/etc/udev"
 }

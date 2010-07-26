@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/files/wimax,v 1.1 2010/07/25 14:18:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/files/wimax,v 1.2 2010/07/26 22:13:27 alexxy Exp $
 
 description="WiMAX Network Service"
 
@@ -13,7 +13,7 @@ depend() {
 start() {
 	ebegin "Starting WiMAX Network Service"
 	[ -e /var/run/wimaxd.pid ] && rm -f /var/run/wimaxd.pid
-	start-stop-daemon --start --quiet --pidfile /var/run/wimax.pid --exec /usr/bin/wimaxd
+	start-stop-daemon --start --quiet --pidfile /var/run/wimax.pid --exec /usr/bin/wimaxd -b
 	eend $?
 }
 

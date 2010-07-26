@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wimax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.1 2010/07/25 14:18:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.2 2010/07/26 22:13:27 alexxy Exp $
+
+  26 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> wimax-1.5.ebuild,
+  files/wimax, metadata.xml:
+  Make wimax always builds as 32bit app since it doesnt suport 64bit mode.
+  Also it fixes bug #329935
 
 *wimax-1.5 (25 Jul 2010)
 
