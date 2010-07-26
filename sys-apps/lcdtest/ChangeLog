@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lcdtest
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.17 2009/12/12 13:58:37 chainsaw Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.18 2010/07/26 11:27:00 flameeyes Exp $
+
+  26 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  lcdtest-1.08-r1.ebuild:
+  Fix over-quoting of variables, close bug #329881.
 
   12 Dec 2009; <chainsaw@gentoo.org> lcdtest-1.08-r1.ebuild:
   Reorder build sequence, improve visual feedback of build process. Respect

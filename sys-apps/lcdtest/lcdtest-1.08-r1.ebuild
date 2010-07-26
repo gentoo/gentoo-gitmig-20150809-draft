@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.08-r1.ebuild,v 1.9 2009/12/12 13:58:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/lcdtest-1.08-r1.ebuild,v 1.10 2010/07/26 11:27:00 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,12 +32,12 @@ src_compile() {
 	sed 's/static //;s/black/#000000/;s/magenta/#FF00FF/;s/#E40808/#009900/' > help_font.c || ppmtoxpm or sed failed
 	eend $?
 	ebegin "Running first stage compilation"
-	"${CC}" -o lcdtest.o -c ${CFLAGS} -DRELEASE=${PV} lcdtest.c || die lcdtest compilation failed
-	"${CC}" -o SFont.o -c ${CFLAGS} -DRELEASE=${PV} SFont.c || die SFont compilation failed
+	${CC} -o lcdtest.o -c ${CFLAGS} -DRELEASE=${PV} lcdtest.c || die lcdtest compilation failed
+	${CC} -o SFont.o -c ${CFLAGS} -DRELEASE=${PV} SFont.c || die SFont compilation failed
 	eend $?
 	ebegin "Running final stage compilation"
-	"${CC}" -o help_font.o -c ${CFLAGS} -DRELEASE=${PV} help_font.c || die help_font compilation failed
-	"${CC}" "${LDFLAGS}" -o lcdtest lcdtest.o SFont.o help_font.o -lSDL -lSDL_image || die final link failed
+	${CC} -o help_font.o -c ${CFLAGS} -DRELEASE=${PV} help_font.c || die help_font compilation failed
+	${CC} ${LDFLAGS} -o lcdtest lcdtest.o SFont.o help_font.o -lSDL -lSDL_image || die final link failed
 	eend $?
 }
 
