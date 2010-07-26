@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.1.ebuild,v 1.3 2010/07/26 15:39:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.1.ebuild,v 1.4 2010/07/26 15:48:00 ssuominen Exp $
 
 EAPI=3
 inherit virtualx xfconf
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="dbus debug exif libnotify pcre startup-notification test +trash-plugin udev"
 
-COMMON_DEPEND=">=xfce-base/exo-0.5.1
+COMMON_DEPEND=">=xfce-base/exo-0.5.3
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.14:2
 	>=xfce-base/libxfce4util-4.6
