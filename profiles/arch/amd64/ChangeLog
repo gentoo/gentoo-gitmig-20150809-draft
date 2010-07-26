@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.97 2010/07/25 19:07:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.98 2010/07/26 22:31:41 alexxy Exp $
+
+  26 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> no-multilib/package.mask:
+  Mask wimax stack on no-multilib systems
 
   25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Fix atom for pkgmove from www-client/mozilla-firefox -> www-client/firefox
