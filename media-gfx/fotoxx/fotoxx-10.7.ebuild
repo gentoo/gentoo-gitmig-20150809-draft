@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-10.7.ebuild,v 1.2 2010/07/20 03:57:01 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-10.7.ebuild,v 1.3 2010/07/26 14:01:33 ssuominen Exp $
 EAPI=3
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Program for improving image files made with a digital camera."
 HOMEPAGE="http://kornelix.squarespace.com/fotoxx"
@@ -25,7 +25,8 @@ src_prepare() {
 }
 
 src_compile() {
-	emake PREFIX=/usr || die "emake failed"
+	tc-export CXX
+	emake PREFIX=/usr || die
 }
 
 src_install() {
@@ -36,6 +37,7 @@ src_install() {
 	bzip2 -9 userguide-changes
 	popd > /dev/null
 
-	emake DESTDIR="${D}" PREFIX=/usr install || die "emake install failed"
-	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png "Application;Graphics;2DGraphics;"
+	emake DESTDIR="${D}" PREFIX=/usr install || die
+	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png \
+		"Application;Graphics;2DGraphics"
 }

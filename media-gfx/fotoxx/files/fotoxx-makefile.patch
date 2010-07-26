@@ -1,10 +1,43 @@
-diff -U2 -r fotoxx-10.7.orig//Makefile fotoxx-10.7//Makefile
---- fotoxx-10.7.orig//Makefile	2010-07-07 23:31:04.000000000 +0700
-+++ fotoxx-10.7//Makefile	2010-07-16 19:06:59.000000000 +0700
-@@ -17,5 +17,5 @@
+http://bugs.gentoo.org/329901 and misc fixes
+
+--- Makefile
++++ Makefile
+@@ -5,30 +5,30 @@
+ SOURCE = $(PROGRAM)-$(VERSION).cc
+ 
+ # defaults for parameters that may be pre-defined
+-CXXFLAGS ?= -O3 -g -Wall 
+-LDFLAGS ?= -O3 -g -Wall -rdynamic
++CXXFLAGS += -Wall 
++LDFLAGS += -rdynamic
+ PREFIX ?= /usr/local
+ 
+-CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-2.0`
+-LFLAGS = $(LDFLAGS) `pkg-config --libs gtk+-2.0 gthread-2.0`
++CXXFLAGS += -c `pkg-config --cflags gtk+-2.0`
++LIBS = `pkg-config --libs gtk+-2.0 gthread-2.0`
+ 
+ BINDIR = $(PREFIX)/bin
+ DATADIR = $(PREFIX)/share/$(PROGRAM)
  ICONDIR = $(DATADIR)/icons
  DESKTOP = $(DATADIR)/kornelix-$(PROGRAM).desktop
 -DOCDIR = $(PREFIX)/share/doc/$(PROGRAM)
 +DOCDIR = $(PREFIX)/share/doc/$(PF)
  MANDIR = $(PREFIX)/share/man/man1
  
+ $(PROGRAM): $(PROGRAM).o zfuncs.o
+ 	@ ./dependencies.sh
+-	$(CXX) $(LFLAGS) -ltiff -o $(PROGRAM) $(PROGRAM).o zfuncs.o
++	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o -ltiff $(LIBS)
+ 
+ $(PROGRAM).o: $(SOURCE)
+-	$(CXX) $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
++	$(CXX) $(CXXFLAGS) -o $(PROGRAM).o $(SOURCE)		\
+ 	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\""
+ 
+ zfuncs.o: zfuncs.cc
+-	$(CXX) $(CFLAGS) zfuncs.cc	\
++	$(CXX) $(CXXFLAGS) zfuncs.cc	\
+ 	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\"" -D "BINDIR=\"$(BINDIR)\""
+ 
+ install: $(PROGRAM)
