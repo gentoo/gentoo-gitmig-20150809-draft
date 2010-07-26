@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/os-prober
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.4 2010/06/04 02:31:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.5 2010/07/26 11:00:51 lxnay Exp $
+
+*os-prober-1.39 (26 Jul 2010)
+
+  26 Jul 2010; Fabio Erculiani <lxnay@gentoo.org> +os-prober-1.39.ebuild:
+  Version bump
 
 *os-prober-1.38 (04 Jun 2010)
 
