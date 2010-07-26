@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.88 2010/07/05 13:24:09 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.89 2010/07/26 23:48:41 spock Exp $
+
+  26 Jul 2010; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
+  Add a new drive to the Gentoo HDD DB (bug #328473).
 
   05 Jul 2010; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
   Add a new entry to the Gentoo HDD database.
