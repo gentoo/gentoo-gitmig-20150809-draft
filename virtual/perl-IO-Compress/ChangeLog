@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-IO-Compress
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/ChangeLog,v 1.32 2010/07/14 11:55:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/ChangeLog,v 1.33 2010/07/26 05:44:25 tove Exp $
+
+*perl-IO-Compress-2.030 (26 Jul 2010)
+
+  26 Jul 2010; Torsten Veller <tove@gentoo.org>
+  +perl-IO-Compress-2.030.ebuild:
+  Version bump
 
   14 Jul 2010; Torsten Veller <tove@gentoo.org>
   perl-IO-Compress-2.024.ebuild:
