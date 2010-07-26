@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wimax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.2 2010/07/26 22:13:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.3 2010/07/26 22:42:40 alexxy Exp $
+
+  26 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> wimax-1.5.ebuild:
+  Fix typo in deps
 
   26 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> wimax-1.5.ebuild,
   files/wimax, metadata.xml:
