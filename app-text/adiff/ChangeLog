@@ -1,6 +1,9 @@
 # ChangeLog for app-text/adiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/adiff/ChangeLog,v 1.8 2010/04/05 21:32:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/adiff/ChangeLog,v 1.9 2010/07/26 11:58:05 jer Exp $
+
+  26 Jul 2010; Jeroen Roovers <jer@gentoo.org> adiff-1.4.ebuild:
+  Fake src_unpack() to suppress unpack() warning.
 
   05 Apr 2010; Jonathan Callen <abcd@gentoo.org> adiff-1.4.ebuild:
   Add prefix keywords
