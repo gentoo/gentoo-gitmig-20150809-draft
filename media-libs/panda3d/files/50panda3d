@@ -1,6 +1,0 @@
-# /etc/env.d/50panda3d:
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/files/50panda3d,v 1.1 2005/06/24 05:28:52 chriswhite Exp $
-
-PATH="/opt/panda3d/bin"
-ROOTPATH="/opt/panda3d/bin"
-LDPATH="/opt/panda3d/lib"
