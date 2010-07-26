@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Package-DeprecationManager
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.1 2010/07/26 06:01:10 tove Exp $
+
+*Package-DeprecationManager-0.04 (26 Jul 2010)
+
+  26 Jul 2010; Torsten Veller <tove@gentoo.org>
+  +Package-DeprecationManager-0.04.ebuild, +metadata.xml:
+  Initial commit for dev-perl/Class-MOP
+
