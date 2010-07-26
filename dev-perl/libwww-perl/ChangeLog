@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.130 2010/06/27 19:24:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.131 2010/07/26 20:49:23 maekke Exp $
+
+  26 Jul 2010; Markus Meier <maekke@gentoo.org> libwww-perl-5.836.ebuild:
+  amd64/arm/x86 stable, bug #329943
 
   27 Jun 2010; <nixnut@gentoo.org> libwww-perl-5.834-r1.ebuild:
   ppc stable #323529
