@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/markupsafe-0.9.2.ebuild,v 1.2 2010/07/07 13:31:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/markupsafe-0.9.2.ebuild,v 1.3 2010/07/26 04:21:06 phajdan.jr Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
