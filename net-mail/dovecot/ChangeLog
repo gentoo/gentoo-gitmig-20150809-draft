@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.249 2010/07/24 15:34:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.250 2010/07/26 23:21:59 darkside Exp $
+
+*dovecot-1.2.13 (26 Jul 2010)
+
+  26 Jul 2010; Jeremy Olexa <darkside@gentoo.org> +dovecot-1.2.13.ebuild:
+  Upstream version bump for misc fixes, bug 329821 by Eray Aslan
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> dovecot-2.0_rc3.ebuild:
   Add ~ia64 wrt #328319
