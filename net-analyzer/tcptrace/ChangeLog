@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcptrace
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.22 2007/09/06 18:39:38 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.23 2010/07/26 22:56:17 jer Exp $
+
+  26 Jul 2010; Jeroen Roovers <jer@gentoo.org> tcptrace-6.6.7.ebuild:
+  Set -DBSD_SOURCE by Nico Baggus (bug #325277).
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -tcptrace-6.6.1-r1.ebuild:
   Cleanup

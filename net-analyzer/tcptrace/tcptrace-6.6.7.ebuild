@@ -1,6 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7.ebuild,v 1.8 2007/05/01 22:41:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/tcptrace-6.6.7.ebuild,v 1.9 2010/07/26 22:56:17 jer Exp $
+
+EAPI="2"
+
+inherit flag-o-matic
 
 IUSE=""
 
@@ -14,6 +18,10 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ppc64 x86"
 
 DEPEND="net-libs/libpcap"
+
+src_prepare() {
+	append-flags -D_BSD_SOURCE
+}
 
 src_install() {
 	dobin tcptrace xpl2gpl
