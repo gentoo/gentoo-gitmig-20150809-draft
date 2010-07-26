@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.3 2010/07/05 23:22:43 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.4 2010/07/26 13:42:12 mabi Exp $
 
 eblit-php-src_configure() {
 	PHP_DESTDIR="/usr/$(get_libdir)/php${PHP_MV}"
@@ -216,6 +216,11 @@ eblit-php-src_configure() {
 	if use pic ; then
 		my_conf="${my_conf} --with-pic"
 	fi
+
+	if has fpm ${IUSE//+} && use fpm ; then
+		my_conf="${my_conf} --with-libevent-dir=/usr/lib"
+	fi
+
 
 	# we use the system copy of pcre
 	# --with-pcre-regex affects ext/pcre

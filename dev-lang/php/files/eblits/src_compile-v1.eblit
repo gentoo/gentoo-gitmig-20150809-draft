@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_compile-v1.eblit,v 1.3 2010/06/11 17:15:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_compile-v1.eblit,v 1.4 2010/07/26 13:42:12 mabi Exp $
 
 eblit-php-src_compile() {
 	SAPI_DIR="${WORKDIR}/sapis"
@@ -30,7 +30,7 @@ php_sapi_build() {
 
 	for one_sapi in $SAPIS ; do
 		case "$one_sapi" in
-			cli|cgi|embed)
+			cli|cgi|embed|fpm)
 				if [[ "${one_sapi}" == "${sapi}" ]] ; then
 					sapi_conf="${sapi_conf} --enable-${one_sapi}"
 				else
@@ -63,6 +63,9 @@ php_sapi_copy() {
 			;;
 		cgi)
 			source="sapi/cgi/php-cgi"
+			;;
+		fpm)
+			source="sapi/fpm/php-fpm"
 			;;
 		embed)
 			source="libs/libphp${PHP_MV}.so"

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.3 2010/06/14 17:03:22 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.4 2010/07/26 13:42:12 mabi Exp $
 
 eblit-php-src_install() {
 	# Makefile forgets to create this before trying to write to it...
@@ -124,5 +124,17 @@ php_install_ini() {
 			newins "${FILESDIR}/70_mod_php${PHP_MV}.conf-apache2" \
 				"70_mod_php${PHP_MV}.conf"
 		fi
+	fi
+
+	if [[ "${sapi}" == "fpm" ]] ; then
+		einfo "Installing FPM CGI config file php-fpm.conf"
+		epatch "${FILESDIR}/php-fpm-gentooified.patch"
+		insinto ${PHP_INI_DIR}
+		doins "${S}/sapi/fpm/php-fpm.conf"
+		dodir "/etc/init.d"
+		insinto "/etc/init.d"
+		newins  "${FILESDIR}/php-fpm.init" "php-fpm"
+		fperms 755 "/etc/init.d/php-fpm"
+		dosym "${PHP_DESTDIR}/bin/php-fpm" "/usr/bin/php-fpm"
 	fi
 }
