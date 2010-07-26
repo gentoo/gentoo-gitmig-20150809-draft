@@ -1,6 +1,11 @@
 \# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.263 2010/07/19 15:48:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.264 2010/07/26 10:41:29 chainsaw Exp $
+
+*asterisk-1.6.2.10 (26 Jul 2010)
+
+  26 Jul 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.10.ebuild:
+  Bugfix release, closes bug #329771 by Oliver Jaksch.
 
 *asterisk-1.6.2.9-r1 (19 Jul 2010)
 
