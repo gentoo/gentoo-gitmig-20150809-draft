@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.4.1.1.ebuild,v 1.1 2010/06/26 12:50:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-4.4.1.1.ebuild,v 1.2 2010/07/26 14:14:22 phajdan.jr Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ SRC_URI="http://download.icu-project.org/files/${PN}/${PV}/${PN}-${MY_PV}-src.ja
 HOMEPAGE="http://www.icu-project.org/"
 LICENSE="icu"
 SLOT="4.4"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 # Tests only work with JDK-1.6, severe out of memory problems appear with 1.5
