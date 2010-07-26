@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.88 2010/07/26 13:55:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.89 2010/07/26 15:51:29 cardoe Exp $
+
+*mythvideo-0.23.1_p25367 (26 Jul 2010)
+
+  26 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythvideo-0.23.1_p25367.ebuild:
+  Upstream fix for artwork downloading and URL redirection.
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   mythvideo-0.22_p23469.ebuild:
