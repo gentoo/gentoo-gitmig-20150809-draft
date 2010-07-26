@@ -1,23 +1,24 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.44.1.ebuild,v 1.4 2010/04/07 04:23:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.50.1.ebuild,v 1.1 2010/07/26 13:07:40 dagger Exp $
 
-inherit bash-completion eutils flag-o-matic
+inherit bash-completion eutils
 
 DESCRIPTION="paludis, the other package mangler"
 HOMEPAGE="http://paludis.pioto.org/"
 SRC_URI="http://paludis.pioto.org/download/${P}.tar.bz2"
 
-IUSE="doc inquisitio portage pink python-bindings ruby-bindings vim-syntax visibility xml zsh-completion"
+IUSE="doc portage pink python-bindings ruby-bindings vim-syntax visibility xml zsh-completion"
 LICENSE="GPL-2 vim-syntax? ( vim )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~x86"
 
 COMMON_DEPEND="
 	>=app-admin/eselect-1.2_rc1
 	>=app-shells/bash-3.2
-	inquisitio? ( dev-libs/libpcre )
-	python-bindings? ( >=dev-lang/python-2.4 >=dev-libs/boost-1.33.1-r1 )
+	>=sys-devel/gcc-4.4
+	dev-libs/libpcre
+	python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 )
 	ruby-bindings? ( >=dev-lang/ruby-1.8 )
 	xml? ( >=dev-libs/libxml2-2.6 )"
 
@@ -33,7 +34,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/sandbox"
 
-# Keep this as a PDEPEND. It avoids issues when Paludis is used as the
+# Keep syntax as a PDEPEND. It avoids issues when Paludis is used as the
 # default virtual/portage provider.
 PDEPEND="
 	vim-syntax? ( >=app-editors/vim-core-7 )"
@@ -42,11 +43,11 @@ PROVIDE="virtual/portage"
 
 create-paludis-user() {
 	enewgroup "paludisbuild"
-	enewuser "paludisbuild" "-1" "-1" "/var/tmp/paludis" "paludisbuild"
+	enewuser "paludisbuild" -1 -1 "/var/tmp/paludis" "paludisbuild"
 }
 
 pkg_setup() {
-	if use inquisitio && ! built_with_use dev-libs/libpcre cxx ; then
+	if ! built_with_use dev-libs/libpcre cxx ; then
 		eerror "Paludis needs dev-libs/libpcre built with C++ support"
 		eerror "Please build dev-libs/libpcre with USE=cxx support"
 		die "Rebuild dev-libs/libpcre with USE=cxx"
@@ -60,13 +61,11 @@ pkg_setup() {
 	fi
 
 	create-paludis-user
-	replace-flags -O? -O2
 }
 
 src_compile() {
-	local repositories=`echo default unpackaged | tr -s \  ,`
-	local clients=`echo default accerso adjutrix appareo importare \
-		$(usev inquisitio ) instruo paludis reconcilio | tr -s \  ,`
+	local repositories=`echo default unavailable unpackaged | tr -s \  ,`
+	local clients=`echo default accerso adjutrix appareo cave importare inquisitio instruo paludis reconcilio | tr -s \  ,`
 	local environments=`echo default $(usev portage ) | tr -s \  ,`
 	econf \
 		$(use_enable doc doxygen ) \
@@ -75,13 +74,14 @@ src_compile() {
 		$(useq ruby-bindings && useq doc && echo --enable-ruby-doc ) \
 		$(use_enable python-bindings python ) \
 		$(useq python-bindings && useq doc && echo --enable-python-doc ) \
-		$(use_enable xml ) \
 		$(use_enable vim-syntax vim ) \
 		$(use_enable visibility ) \
+		$(use_enable xml ) \
 		--with-vim-install-dir=/usr/share/vim/vimfiles \
 		--with-repositories=${repositories} \
 		--with-clients=${clients} \
-		--with-environments=${environments}
+		--with-environments=${environments} \
+		|| die "econf failed"
 
 	emake || die "emake failed"
 }
@@ -96,9 +96,8 @@ src_install() {
 	BASHCOMPLETION_NAME="importare" dobashcompletion bash-completion/importare
 	BASHCOMPLETION_NAME="instruo" dobashcompletion bash-completion/instruo
 	BASHCOMPLETION_NAME="reconcilio" dobashcompletion bash-completion/reconcilio
-	use inquisitio && \
-		BASHCOMPLETION_NAME="inquisitio" \
-		dobashcompletion bash-completion/inquisitio
+	BASHCOMPLETION_NAME="inquisitio" dobashcompletion bash-completion/inquisitio
+	BASHCOMPLETION_NAME="cave" dobashcompletion bash-completion/cave
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
@@ -106,8 +105,9 @@ src_install() {
 		doins zsh-completion/_adjutrix
 		doins zsh-completion/_importare
 		doins zsh-completion/_reconcilio
-		use inquisitio && doins zsh-completion/_inquisitio
+		doins zsh-completion/_inquisitio
 		doins zsh-completion/_paludis_packages
+		doins zsh-completion/_cave
 	fi
 }
 
@@ -117,22 +117,16 @@ src_test() {
 	export BASH_ENV=/dev/null
 
 	if [[ `id -u` == 0 ]] ; then
+		# hate
 		export PALUDIS_REDUCED_UID=0
 		export PALUDIS_REDUCED_GID=0
 	fi
 
 	if ! emake check ; then
-		eerror "Tests failed. Looking for file for you to add to your bug report..."
+		eerror "Tests failed. Looking for files for you to add to your bug report..."
 		find "${S}" -type f -name '*.epicfail' -or -name '*.log' | while read a ; do
-			eerror "	$a"
+			eerror "    $a"
 		done
-		die "Make check failed."
-	fi
-}
-
-pkg_postinst() {
-	# Remove the symlink created by app-admin/eselect-news
-	if [[ -L "${ROOT}/var/lib/paludis/news" ]] ; then
-		rm "${ROOT}/var/lib/paludis/news"
+		die "Make check failed"
 	fi
 }
