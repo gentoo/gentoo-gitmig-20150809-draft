@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5811 2010/07/26 08:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5812 2010/07/26 12:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -814,6 +814,7 @@ dev-lang/php:fdftk - Add supports for Adobe's FDF toolkit.
 dev-lang/php:fileinfo - Add fileinfo extension support
 dev-lang/php:filter - Add filter extension support
 dev-lang/php:force-cgi-redirect - Switch on common security setting for CGI SAPI
+dev-lang/php:fpm - Enable fpm SAPI
 dev-lang/php:hash - Enable the hash extension
 dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:java-external - Use the external java extension rather than the bundled one
