@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/fceux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.4 2010/06/25 18:50:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.5 2010/07/26 21:28:36 mr_bones_ Exp $
+
+*fceux-2.1.4a (26 Jul 2010)
+
+  26 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org> +fceux-2.1.4a.ebuild:
+  version bump
 
 *fceux-2.1.4 (25 Jun 2010)
 
