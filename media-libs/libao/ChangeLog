@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libao
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.92 2010/07/25 15:30:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.93 2010/07/26 08:06:02 ssuominen Exp $
+
+*libao-1.0.0-r1 (26 Jul 2010)
+
+  26 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +libao-1.0.0-r1.ebuild, +files/libao-1.0.0-pulseaudio.patch:
+  Fix pulseaudio module wrt #329737 by Reuben Martin. Remove -O20 from
+  upstream default CFLAGS.
 
   25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> libao-1.0.0.ebuild:
   Stable on alpha, bug #324265
