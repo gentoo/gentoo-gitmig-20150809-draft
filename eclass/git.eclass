@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.45 2010/07/26 02:22:18 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.46 2010/07/26 02:51:33 reavertm Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -34,7 +34,7 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 
 # @ECLASS-VARIABLE: EGIT_QUIET
 # @DESCRIPTION:
-# Set to nonempty value to supress some eclass messages.
+# Set to non-empty value to supress some eclass messages.
 : ${EGIT_QUIET:=${ESCM_QUIET}}
 
 # @ECLASS-VARIABLE: EGIT_STORE_DIR
@@ -45,7 +45,7 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 
 # @ECLASS-VARIABLE: EGIT_HAS_SUBMODULES
 # @DESCRIPTION:
-# Set this to nonzero value to enable submodule support (slower).
+# Set this to non-empty value to enable submodule support (slower).
 : ${EGIT_HAS_SUBMODULES:=}
 
 # @ECLASS-VARIABLE: EGIT_FETCH_CMD
@@ -146,14 +146,14 @@ fi
 
 # @ECLASS-VARIABLE: EGIT_REPACK
 # @DESCRIPTION:
-# git eclass will repack objects to save disk space. However this can take a
-# long time with VERY big repositories.
+# Set to non-empty value to repack objects to save disk space. However this can
+# take a long time with VERY big repositories.
 : ${EGIT_REPACK:=}
 
 # @ECLASS-VARIABLE: EGIT_PRUNE
 # @DESCRIPTION:
-# git eclass can prune the local clone. This is useful if upstream rewinds and
-# rebases branches too often.
+# Set to non-empty value to prune loose objects on each fetch. This is useful
+# if upstream rewinds and rebases branches often.
 : ${EGIT_PRUNE:=}
 
 # @FUNCTION: git_submodules
@@ -343,7 +343,9 @@ git_fetch() {
 	pushd "${GIT_DIR}" &> /dev/null
 	if [[ -n ${EGIT_REPACK} ]] || [[ -n ${EGIT_PRUNE} ]]; then
 		ebegin "Garbage collecting the repository"
-		git gc $(${EGIT_PRUNE} && echo '--prune')
+		local args
+		[[ -n ${EGIT_PRUNE} ]] && args='--prune'
+		git gc ${args}
 		eend $?
 	fi
 	popd &> /dev/null
