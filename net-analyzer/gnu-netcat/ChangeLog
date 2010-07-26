@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/gnu-netcat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.20 2010/05/26 16:08:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.21 2010/07/26 22:42:46 jer Exp $
+
+*gnu-netcat-0.7.1-r3 (26 Jul 2010)
+
+  26 Jul 2010; Jeroen Roovers <jer@gentoo.org> +gnu-netcat-0.7.1-r3.ebuild,
+  +files/gnu-netcat-LC_CTYPE.patch:
+  Add LC_CTYPE patch by Михаил (bug #200875). Drop unused eclasses.
+  Call epatch once.
 
   26 May 2010; Jonathan Callen <abcd@gentoo.org> gnu-netcat-0.7.1-r2.ebuild:
   Bump to EAPI=3, add prefix keywords
