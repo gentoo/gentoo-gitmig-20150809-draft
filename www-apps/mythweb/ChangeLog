@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.82 2010/07/26 05:06:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.83 2010/07/26 19:19:34 cardoe Exp $
+
+  26 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.23_p25065.ebuild, mythweb-0.23.1_p25367.ebuild:
+  Fix execute permissions for streaming script correctly
 
 *mythweb-0.23.1_p25367 (26 Jul 2010)
 
