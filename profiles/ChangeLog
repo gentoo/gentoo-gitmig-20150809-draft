@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4423 2010/07/26 07:28:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4424 2010/07/26 08:05:44 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  Remove mask entry for x11-misc/gaia, is gone from the tree
 
   26 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Remove sci-geosciences/vis5d+ mask
