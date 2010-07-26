@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.40 2010/06/28 11:40:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.41 2010/07/26 13:22:22 fauli Exp $
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  alexandria-0.6.6.ebuild:
+  stable x86, bug 329877
 
   28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   alexandria-0.6.6.ebuild, alexandria-0.6.6-r1.ebuild:
