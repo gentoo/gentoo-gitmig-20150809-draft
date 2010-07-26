@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.89 2010/07/22 20:06:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.90 2010/07/26 09:56:55 aballier Exp $
 
 EAPI="3"
 
@@ -52,11 +52,11 @@ fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gnome gnutls httpd ieee1394 jack kate kde libass libcaca
-	libnotify libproxy libtiger libv4l libv4l2 lirc live lua matroska mmx
+	libnotify libproxy libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout skins speex sqlite sse stream
-	svg taglib theora truetype twolame udev upnp v4l v4l2 vaapi vcdx vlm
+	svg taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
 	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
@@ -130,7 +130,6 @@ RDEPEND="
 		udev? ( >=sys-fs/udev-142 )
 		upnp? ( net-libs/libupnp )
 		v4l2? ( libv4l2? ( media-libs/libv4l ) )
-		v4l? ( libv4l? ( media-libs/libv4l ) )
 		vaapi? ( x11-libs/libva >=media-video/ffmpeg-0.6 )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
@@ -147,7 +146,6 @@ DEPEND="${RDEPEND}
 	!!<=media-video/vlc-1.1.99999
 	dvb? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
-	v4l? ( sys-kernel/linux-headers )
 	v4l2? ( >=sys-kernel/linux-headers-2.6.25 )
 	xcb? ( x11-proto/xproto )
 	dev-util/pkgconfig"
@@ -185,7 +183,6 @@ pkg_setup() {
 	vlc_use_needs cddb cdda
 	vlc_use_needs fontconfig truetype
 	vlc_use_needs libv4l2 v4l2
-	vlc_use_needs libv4l v4l
 	vlc_use_needs libtiger kate
 	vlc_use_needs xv xcb
 
@@ -259,7 +256,6 @@ src_configure() {
 		$(use_enable libproxy) \
 		--disable-libtar \
 		$(use_enable libtiger tiger) \
-		$(use_enable libv4l) \
 		$(use_enable libv4l2) \
 		$(use_enable lirc) \
 		$(use_enable live live555) \
@@ -304,7 +300,6 @@ src_configure() {
 		$(use_enable twolame) \
 		$(use_enable udev) \
 		$(use_enable upnp) \
-		$(use_enable v4l) \
 		$(use_enable v4l2) \
 		$(use_enable vcdx) \
 		$(use_enable vaapi libva) \
