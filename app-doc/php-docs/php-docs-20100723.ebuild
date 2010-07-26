@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20100326.ebuild,v 1.2 2010/07/06 18:31:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20100723.ebuild,v 1.1 2010/07/26 12:57:45 mabi Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="+linguas_en"
-SRC_URI="linguas_en? ( mirror://php/distributions/manual/${MY_PN}_en.tar.gz )"
+SRC_URI="linguas_en? ( http://www.php.net/distributions/manual/${MY_PN}_en.tar.gz )"
 
 RESTRICT="strip binchecks"
 
@@ -21,7 +21,7 @@ LANGS="bg de fr ja ko pl pt_BR ro tr"
 for lang in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${lang}"
 	SRC_URI="${SRC_URI}
-		linguas_${lang}? ( mirror://php/distributions/manual/${MY_PN}_${lang}.tar.gz )"
+		linguas_${lang}? ( http://www.php.net/distributions/manual/${MY_PN}_${lang}.tar.gz )"
 done
 
 S=${WORKDIR}
