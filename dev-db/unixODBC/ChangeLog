@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.90 2010/07/20 18:59:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.91 2010/07/26 11:03:24 jer Exp $
+
+  26 Jul 2010; Jeroen Roovers <jer@gentoo.org> unixODBC-2.3.0.ebuild:
+  Stable for HPPA (bug #320711).
 
   20 Jul 2010; Fabian Groffen <grobian@gentoo.org> unixODBC-2.3.0.ebuild:
   Marked ~sparc-solaris and ~sparc64-solaris
