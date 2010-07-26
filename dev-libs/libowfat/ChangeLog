@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libowfat
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.27 2009/09/12 02:41:31 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.28 2010/07/26 16:28:25 gmsoft Exp $
+
+  26 Jul 2010; Guy Martin <gmsoft@gentoo.org> libowfat-0.28-r1.ebuild:
+  Added ~hppa to KEYWORDS.
 
   12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   -files/libowfat-0.10-gentoo.diff:
