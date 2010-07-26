@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.71 2010/06/10 03:39:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.72 2010/07/26 13:39:58 fauli Exp $
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  mythtv-themes-0.22_p23473.ebuild:
+  stable x86, bug 323745
 
 *mythtv-themes-0.23_p24661 (10 Jun 2010)
 
