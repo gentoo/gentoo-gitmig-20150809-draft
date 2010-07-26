@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.408 2010/07/23 21:28:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.409 2010/07/26 15:10:05 ssuominen Exp $
+
+*imagemagick-6.6.3.0 (26 Jul 2010)
+
+  26 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +imagemagick-6.6.3.0.ebuild, metadata.xml:
+  Version bump with reintroduced coreutils USE flag wrt #323309 by Dennis
+  Schridde.
 
   23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   imagemagick-6.6.2.5.ebuild:
