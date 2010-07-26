@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11799 2010/07/26 21:25:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11800 2010/07/26 21:58:47 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 # Discontinued by upstream and superseded by Thunderbird with Lightning
 app-office/mozilla-sunbird
 app-office/mozilla-sunbird-bin
+www-client/mozilla-launcher
 
 # Jim Ramsay <lack@gentoo.org> (26 Jul 2010)
 # Deprecated in favour of opensource alternatives:
