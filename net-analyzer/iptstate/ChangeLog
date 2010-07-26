@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/iptstate
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.32 2009/01/11 21:42:55 caleb Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.33 2010/07/26 22:29:25 jer Exp $
+
+*iptstate-2.2.2 (26 Jul 2010)
+
+  26 Jul 2010; Jeroen Roovers <jer@gentoo.org> +iptstate-2.2.2.ebuild:
+  Version bump by Marcin Mirosław (bug #329277). Respect LDFLAGS and CXX.
 
   11 Jan 2009; Caleb Tennis <caleb@gentoo.org> iptstate-2.2.1.ebuild:
   amd64 stable
