@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.93 2010/07/03 19:36:15 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.94 2010/07/26 13:59:23 scarabeus Exp $
+
+  26 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> quassel-9999.ebuild:
+  Fix the dep order + fix elog information per bug #329845.
 
   03 Jul 2010; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
   Too many cooks spoil the broth.
