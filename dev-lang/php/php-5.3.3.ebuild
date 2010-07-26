@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.2.ebuild,v 1.15 2010/07/26 12:26:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.3.ebuild,v 1.1 2010/07/26 12:26:41 mabi Exp $
 
 EAPI=2
 
@@ -9,7 +9,8 @@ PHPCONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use phpconfutils php-common-r1 libtool
 
 PHP_PATCHSET="1"
-SUHOSIN_VERSION="$PV-0.9.9.1"
+SUHOSIN_VERSION="${PV}-0.9.10"
+FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
 KEYWORDS="~alpha ~amd64 ~hppa ~x86"
@@ -42,11 +43,14 @@ PHP_MV="$(get_major_version)"
 PHP_PV="${PV}"
 PHP_RELEASE="php"
 PHP_P="${PN}-${PHP_PV}"
+
+PHP_PATCHSET_LOC="gentoo"
+
 PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 
 PHP_PATCHSET="${PHP_PATCHSET:-${PR/r/}}"
 PHP_PATCHSET_URI="
-	$(php_get_uri gentoo "php-patchset-${PV}-r${PHP_PATCHSET}.tar.bz2")"
+	$(php_get_uri "${PHP_PATCHSET_LOC}" "php-patchset-${PV}-r${PHP_PATCHSET}.tar.bz2")"
 
 if [[ ${SUHOSIN_VERSION} == *-gentoo ]]; then
 	# in some cases we use our own suhosin patch (very recent version,
@@ -56,27 +60,33 @@ else
 	SUHOSIN_TYPE="suhosin"
 fi
 
-SUHOSIN_PATCH="suhosin-patch-${SUHOSIN_VERSION}.patch"
-SUHOSIN_URI="$(php_get_uri ${SUHOSIN_TYPE} ${SUHOSIN_PATCH}.gz )"
+if [[ -n ${SUHOSIN_VERSION} ]]; then
+	SUHOSIN_PATCH="suhosin-patch-${SUHOSIN_VERSION}.patch";
+	SUHOSIN_URI="$(php_get_uri ${SUHOSIN_TYPE} ${SUHOSIN_PATCH}.gz )"
+fi
 
 SRC_URI="
 	${PHP_SRC_URI}
-	${PHP_PATCHSET_URI}
-	suhosin? ( ${SUHOSIN_URI} )"
+	${PHP_PATCHSET_URI}"
 
-DESCRIPTION="The PHP language runtime engine: CLI, CGI, Apache2 and embed SAPIs."
+if [[ -n ${SUHOSIN_VERSION} ]]; then
+	SRC_URI="${SRC_URI}
+		suhosin? ( ${SUHOSIN_URI} )"
+fi
+
+DESCRIPTION="The PHP language runtime engine: CLI, CGI, FPM/FastCGI, Apache2 and embed SAPIs."
 HOMEPAGE="http://php.net/"
 LICENSE="PHP-3"
 
 # We can build the following SAPIs in the given order
-SAPIS="cli cgi embed apache2"
+SAPIS="cli cgi fpm embed apache2"
 
 # Gentoo-specific, common features
 IUSE="kolab"
 
 # SAPIs and SAPI-specific USE flags (cli SAPI is default on):
 IUSE="${IUSE}
-	+${SAPIS}
+	${SAPIS/cli/+cli}
 	concurrentmodphp threads"
 
 IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
@@ -118,6 +128,7 @@ DEPEND="app-admin/php-toolkit
 		sys-libs/zlib
 	) ) )
 	firebird? ( dev-db/firebird )
+	fpm? ( >=dev-libs/libevent-1.4.12 )
 	gd? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )

@@ -13,6 +13,7 @@
 		<flag name='fileinfo'>Add fileinfo extension support</flag>
 		<flag name='filter'>Add filter extension support</flag>
 		<flag name='force-cgi-redirect'>Switch on common security setting for CGI SAPI</flag>
+		<flag name='fpm'>Enable fpm SAPI</flag>
 		<flag name='hash'>Enable the hash extension</flag>
 		<flag name='intl'>Enables the intl extension for extended internalization support</flag>
 		<flag name='java-external'>Use the external java extension rather than the bundled one</flag>
