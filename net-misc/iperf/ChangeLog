@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.34 2010/01/07 15:48:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.35 2010/07/26 22:02:08 jer Exp $
+
+*iperf-2.0.5 (26 Jul 2010)
+
+  26 Jul 2010; Jeroen Roovers <jer@gentoo.org> +iperf-2.0.5.ebuild:
+  Version bump by Tim Harder (bug #329185).
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> iperf-2.0.4.ebuild:
   Transfer Prefix keywords
