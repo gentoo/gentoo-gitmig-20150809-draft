@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.8.ebuild,v 1.4 2010/07/25 15:32:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.8.ebuild,v 1.5 2010/07/26 18:44:56 grobian Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -66,6 +66,10 @@ src_prepare() {
 		xpcom/build/nsXPCOMPrivate.h \
 		xulrunner/installer/Makefile.in \
 		xulrunner/app/nsRegisterGREUnix.cpp
+
+	# fix double symbols due to double -ljemalloc
+	sed -i -e '/^LIBS += $(JEMALLOC_LIBS)/s/^/#/' \
+		xulrunner/stub/Makefile.in || die
 
 	# Allow user to apply additional patches without modifing ebuild
 	epatch_user
