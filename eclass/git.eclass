@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.44 2010/03/17 15:17:10 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.45 2010/07/26 02:22:18 reavertm Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -34,9 +34,8 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 
 # @ECLASS-VARIABLE: EGIT_QUIET
 # @DESCRIPTION:
-# Enables user specified verbosity for the eclass elog informations.
-# The user just needs to add EGIT_QUIET="ON" to the /etc/make.conf.
-: ${EGIT_QUIET:="OFF"}
+# Set to nonempty value to supress some eclass messages.
+: ${EGIT_QUIET:=${ESCM_QUIET}}
 
 # @ECLASS-VARIABLE: EGIT_STORE_DIR
 # @DESCRIPTION:
@@ -46,9 +45,8 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 
 # @ECLASS-VARIABLE: EGIT_HAS_SUBMODULES
 # @DESCRIPTION:
-# Set this to "true" to enable the (slower) submodule support.
-# This variable should be set before inheriting git.eclass
-: ${EGIT_HAS_SUBMODULES:=false}
+# Set this to nonzero value to enable submodule support (slower).
+: ${EGIT_HAS_SUBMODULES:=}
 
 # @ECLASS-VARIABLE: EGIT_FETCH_CMD
 # @DESCRIPTION:
@@ -58,7 +56,7 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 # @ECLASS-VARIABLE: EGIT_UPDATE_CMD
 # @DESCRIPTION:
 # Git fetch command.
-if ${EGIT_HAS_SUBMODULES}; then
+if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
 	EGIT_UPDATE_CMD="git pull -f -u"
 else
 	EGIT_UPDATE_CMD="git fetch -f -u"
@@ -118,7 +116,7 @@ fi
 # Set this variable to a non-empty value to disable the automatic updating of
 # an GIT source tree. This is intended to be set outside the git source
 # tree by users.
-EGIT_OFFLINE="${EGIT_OFFLINE:-${ESCM_OFFLINE}}"
+: ${EGIT_OFFLINE:=${ESCM_OFFLINE}}
 
 # @ECLASS-VARIABLE: EGIT_PATCHES
 # @DESCRIPTION:
@@ -150,19 +148,19 @@ fi
 # @DESCRIPTION:
 # git eclass will repack objects to save disk space. However this can take a
 # long time with VERY big repositories.
-: ${EGIT_REPACK:=false}
+: ${EGIT_REPACK:=}
 
 # @ECLASS-VARIABLE: EGIT_PRUNE
 # @DESCRIPTION:
 # git eclass can prune the local clone. This is useful if upstream rewinds and
 # rebases branches too often.
-: ${EGIT_PRUNE:=false}
+: ${EGIT_PRUNE:=}
 
 # @FUNCTION: git_submodules
 # @DESCRIPTION:
 # Internal function wrapping the submodule initialisation and update
 git_submodules() {
-	if ${EGIT_HAS_SUBMODULES}; then
+	if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
 		debug-print "git submodule init"
 		git submodule init
 		debug-print "git submodule update"
@@ -193,10 +191,10 @@ git_fetch() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local GIT_DIR EGIT_CLONE_DIR oldsha1 cursha1 extra_clone_opts upstream_branch
-	${EGIT_HAS_SUBMODULES} || export GIT_DIR
+	[[ -z ${EGIT_HAS_SUBMODULES} ]] && export GIT_DIR
 
 	# choose if user wants elog or just einfo.
-	if [[ ${EGIT_QUIET} != OFF ]]; then
+	if [[ -n ${EGIT_QUIET} ]]; then
 		elogcmd="einfo"
 	else
 		elogcmd="elog"
@@ -254,16 +252,16 @@ git_fetch() {
 		einfo "The ${EGIT_CLONE_DIR} was shallow copy. Refetching."
 	fi
 	# repack from bare copy to normal one
-	if ${EGIT_HAS_SUBMODULES} && [[ -d ${GIT_DIR} && ! -d "${GIT_DIR}/.git/" ]]; then
+	if [[ -n ${EGIT_HAS_SUBMODULES} ]] && [[ -d ${GIT_DIR} && ! -d "${GIT_DIR}/.git/" ]]; then
 		rm -rf "${GIT_DIR}"
 		einfo "The ${EGIT_CLONE_DIR} was bare copy. Refetching."
 	fi
-	if ! ${EGIT_HAS_SUBMODULES} && [[ -d ${GIT_DIR} && -d ${GIT_DIR}/.git ]]; then
+	if [[ -z ${EGIT_HAS_SUBMODULES} ]] && [[ -d ${GIT_DIR} && -d ${GIT_DIR}/.git ]]; then
 		rm -rf "${GIT_DIR}"
 		einfo "The ${EGIT_CLONE_DIR} was not a bare copy. Refetching."
 	fi
 
-	if ${EGIT_HAS_SUBMODULES}; then
+	if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
 		upstream_branch=origin/${EGIT_BRANCH}
 	else
 		upstream_branch=${EGIT_BRANCH}
@@ -303,7 +301,7 @@ git_fetch() {
 
 		oldsha1=$(git rev-parse ${upstream_branch})
 
-		if ${EGIT_HAS_SUBMODULES}; then
+		if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
 			debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS}"
 			# fix branching
 			git checkout ${EGIT_MASTER}
@@ -343,7 +341,7 @@ git_fetch() {
 	fi
 
 	pushd "${GIT_DIR}" &> /dev/null
-	if ${EGIT_REPACK} || ${EGIT_PRUNE} ; then
+	if [[ -n ${EGIT_REPACK} ]] || [[ -n ${EGIT_PRUNE} ]]; then
 		ebegin "Garbage collecting the repository"
 		git gc $(${EGIT_PRUNE} && echo '--prune')
 		eend $?
@@ -358,7 +356,7 @@ git_fetch() {
 	${elogcmd} "   branch: 			${EGIT_BRANCH}"
 	${elogcmd} "   storage directory: 	\"${GIT_DIR}\""
 
-	if ${EGIT_HAS_SUBMODULES}; then
+	if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
 		pushd "${GIT_DIR}" &> /dev/null
 		debug-print "rsync -rlpgo . \"${S}\""
 		time rsync -rlpgo . "${S}"
