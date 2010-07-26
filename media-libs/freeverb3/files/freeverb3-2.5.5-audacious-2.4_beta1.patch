@@ -1,0 +1,486 @@
+From 043ff2f4406e1d09ac2a813fafa84b6ba54ca6df Mon Sep 17 00:00:00 2001
+From: Sebastian Pipping <sebastian@pipping.org>
+Date: Mon, 26 Jul 2010 01:58:59 +0200
+Subject: [PATCH] Fix compilation for Audacious API v16
+
+---
+ xmms/compressor.cpp    |   44 +++++++++++++++++++++++------
+ xmms/freeverb3.cpp     |   55 ++++++++++++++++++++++++++++++-------
+ xmms/impulser2.cpp     |   71 ++++++++++++++++++++++++++++++++++++++---------
+ xmms/libxmmsplugin.hpp |   11 +++++++-
+ xmms/revmodel.cpp      |   41 ++++++++++++++++++++++-----
+ xmms/stenh.cpp         |   41 ++++++++++++++++++++++-----
+ 6 files changed, 213 insertions(+), 50 deletions(-)
+
+diff --git a/xmms/compressor.cpp b/xmms/compressor.cpp
+index 9d6a431..d5e5c78 100755
+--- a/xmms/compressor.cpp
++++ b/xmms/compressor.cpp
+@@ -276,20 +276,46 @@ extern "C" EffectPlugin *get_eplugin_info(void)
+ }
+ #else
+ static EffectPlugin epe = {
+-  NULL, NULL, (char*)productString,
+-  init, cleanup, about, configure,
++  NULL, /* handle */
++  NULL, /* filename */
++  (gchar*)productString, /* description */
++  init,
++  cleanup,
++  about,
++  configure,
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 10
+-  NULL,
++  NULL, /* settings */
+ #endif
+-  FALSE,
+-#if __AUDACIOUS_PLUGIN_API__ >= 13
+-  NULL, NULL,
+-#else
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  NULL, /* sendmsg */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++  FALSE, /* enabled */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++# if __AUDACIOUS_PLUGIN_API__ >= 13
++  NULL, NULL, /* mod_samples, query_format */
++# else
+   mod_samples, query_format,
++# endif
+ #endif
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 13
+-  compressor_start, compressor_process, compressor_flush, compressor_finish,
+-  decoder_to_output_time, output_to_decoder_time,
++  compressor_start,
++  compressor_process,
++  compressor_flush,
++  compressor_finish,
++  decoder_to_output_time,
++  output_to_decoder_time,
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  0, /* order */
++  TRUE, /* preserves_format */
+ #endif
+ };
+ static EffectPlugin *eplist[] = {&epe, NULL};
+diff --git a/xmms/freeverb3.cpp b/xmms/freeverb3.cpp
+index 575331a..65cc5af 100755
+--- a/xmms/freeverb3.cpp
++++ b/xmms/freeverb3.cpp
+@@ -39,7 +39,6 @@
+ #include <bmp/configdb.h>
+ #else
+ #include <audacious/plugin.h>
+-#include <audacious/util.h>
+ #include <audacious/configdb.h>
+ #endif
+ #endif
+@@ -215,7 +214,11 @@ static void write_config(void)
+   bmp_cfg_db_set_float(cfg, "freeverb3_plugin", "idelay", conf_idelay);
+   bmp_cfg_db_close(cfg);
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+   ConfigDb * cfg = aud_cfg_db_open();
++# else
++  mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++# endif
+   aud_cfg_db_set_int  (cfg, "freeverb3_plugin", "maxvfs", maxvfs);
+   aud_cfg_db_set_float(cfg, "freeverb3_plugin", "wet", reverbm.getwet());
+   aud_cfg_db_set_float(cfg, "freeverb3_plugin", "dry", reverbm.getdry());
+@@ -466,11 +469,13 @@ static void configure(void)
+ 
+ static void about(void)
+ {
++#if __AUDACIOUS_PLUGIN_API__ < 16
+   static GtkWidget *about_dialog = NULL;
+   if (about_dialog != NULL) return;
+   about_dialog =
+     _XMMS_DIALOG(const_cast<char*>("About Plugin"),const_cast<char*>(about_text),const_cast<char*>("Ok"),FALSE,NULL,NULL);
+   gtk_signal_connect(GTK_OBJECT(about_dialog), "destroy", GTK_SIGNAL_FUNC(gtk_widget_destroyed), &about_dialog);
++#endif
+ }
+ 
+ static void init(void)
+@@ -515,7 +520,11 @@ static void init(void)
+   bmp_cfg_db_get_float(cfg, "freeverb3_plugin", "idelay", &conf_idelay);
+   bmp_cfg_db_close(cfg);
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+   ConfigDb * cfg = aud_cfg_db_open();
++# else
++  mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++# endif
+   gboolean ok = 
+     aud_cfg_db_get_float(cfg, "freeverb3_plugin", "wet", &conf_wet);
+   aud_cfg_db_get_int(cfg, "freeverb3_plugin", "maxvfs", &maxvfs);
+@@ -722,20 +731,46 @@ static void freeverb3_finish(gfloat ** data, gint * samples)
+ #endif
+ 
+ static EffectPlugin epe = {
+-  NULL, NULL, (char*)productString,
+-  init, cleanup, about, configure,
++  NULL, /* handle */
++  NULL, /* filename */
++  (gchar*)productString, /* description */
++  init,
++  cleanup,
++  about,
++  configure,
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 10
+-  NULL,
++  NULL, /* settings */
+ #endif
+-  FALSE,
+-#if __AUDACIOUS_PLUGIN_API__ >= 13
+-  NULL, NULL,
+-#else
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  NULL, /* sendmsg */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++  FALSE, /* enabled */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++# if __AUDACIOUS_PLUGIN_API__ >= 13
++  NULL, NULL, /* mod_samples, query_format */
++# else
+   mod_samples, query_format,
++# endif
+ #endif
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 13
+-  freeverb3_start, freeverb3_process, freeverb3_flush, freeverb3_finish,
+-  decoder_to_output_time, output_to_decoder_time,
++  freeverb3_start,
++  freeverb3_process,
++  freeverb3_flush,
++  freeverb3_finish,
++  decoder_to_output_time,
++  output_to_decoder_time,
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  0, /* order */
++  TRUE, /* preserves_format */
+ #endif
+ };
+ 
+diff --git a/xmms/impulser2.cpp b/xmms/impulser2.cpp
+index 6da7ecc..0037dd3 100755
+--- a/xmms/impulser2.cpp
++++ b/xmms/impulser2.cpp
+@@ -49,7 +49,6 @@
+ #include <bmp/configdb.h>
+ #else
+ #include <audacious/plugin.h>
+-#include <audacious/util.h>
+ #include <audacious/configdb.h>
+ #endif
+ #endif
+@@ -299,7 +298,11 @@ static void slot_save(SlotConfiguration * slot, int i)
+   bmp_cfg_db_set_string(cfg, configSectionString, key_i("file",i), (gchar*)slot->filename.c_str());
+   bmp_cfg_db_close(cfg);
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+   ConfigDb * cfg = aud_cfg_db_open();
++# else
++  mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++#endif
+   aud_cfg_db_set_float (cfg, configSectionString, key_i("wet",i), slot->wet);
+   aud_cfg_db_set_float (cfg, configSectionString, key_i("dry",i), slot->dry);
+   aud_cfg_db_set_float (cfg, configSectionString, key_i("width",i), slot->width);
+@@ -355,7 +358,11 @@ static void slot_load(SlotConfiguration * slot, int i)
+   else slot_init(slot);
+   bmp_cfg_db_close(cfg);
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+   ConfigDb * cfg = aud_cfg_db_open();
++# else
++  mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++#endif
+   gchar * filename;
+   aud_cfg_db_get_float (cfg, configSectionString, key_i("wet",i), &slot->wet);
+   aud_cfg_db_get_float (cfg, configSectionString, key_i("dry",i), &slot->dry);
+@@ -493,11 +500,13 @@ static void store_filename(GtkFileSelection *selector, gpointer user_data)
+   selected_filename = (gchar*)gtk_file_selection_get_filename (GTK_FILE_SELECTION(file_selector));
+   if(store_inf(selected_filename) != 0)
+     {
++#if __AUDACIOUS_PLUGIN_API__ < 16
+       if (err_dialog == NULL)
+-	{
+-	  err_dialog = _XMMS_DIALOG((gchar*)"Error", (gchar*)"Could not load IR file.", (gchar*)"Ok",FALSE,NULL,NULL);
+-	  gtk_signal_connect(GTK_OBJECT(err_dialog), "destroy", GTK_SIGNAL_FUNC(error_d), NULL);
+-	}
++        {
++          err_dialog = _XMMS_DIALOG((gchar*)"Error", (gchar*)"Could not load IR file.", (gchar*)"Ok",FALSE,NULL,NULL);
++          gtk_signal_connect(GTK_OBJECT(err_dialog), "destroy", GTK_SIGNAL_FUNC(error_d), NULL);
++        }
++#endif
+     }
+   else
+     {
+@@ -575,7 +584,11 @@ static void write_config(void)
+   bmp_cfg_db_close(cfg);
+   for(int i = 0;i < slotNumber;i ++) slot_save(&(*slotVector)[i], i+1);
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+   ConfigDb * cfg = aud_cfg_db_open();
++# else
++  mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++#endif
+   aud_cfg_db_set_int(cfg, configSectionString, "latency_index", conf_latency_index);
+   aud_cfg_db_set_int(cfg, configSectionString, "dithering_mode", conf_dithering);
+   aud_cfg_db_set_int(cfg, configSectionString, "zero_latency", conf_rev_zl);
+@@ -1058,7 +1071,11 @@ static void init(void)
+   bmp_cfg_db_close(cfg);
+   if(ok == FALSE) slotNumber = 1;
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+   ConfigDb * cfg = aud_cfg_db_open();
++# else
++  mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++#endif
+   aud_cfg_db_get_int(cfg, configSectionString, "dithering_mode", &conf_dithering);
+   aud_cfg_db_get_int(cfg, configSectionString, "latency_index", &conf_latency_index);
+   aud_cfg_db_get_int(cfg, configSectionString, "zero_latency", &conf_rev_zl);
+@@ -1408,20 +1425,46 @@ static void impulser2_finish(gfloat ** data, gint * samples)
+ #endif
+ 
+ static EffectPlugin epe = {
+-  NULL, NULL, (gchar*)productString,
+-  init, cleanup, about, configure,
++  NULL, /* handle */
++  NULL, /* filename */
++  (gchar*)productString, /* description */
++  init,
++  cleanup,
++  about,
++  configure,
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 10
+-  NULL,
++  NULL, /* settings */
+ #endif
+-  FALSE,
+-#if __AUDACIOUS_PLUGIN_API__ >= 13
+-  NULL, NULL,
+-#else
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  NULL, /* sendmsg */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++  FALSE, /* enabled */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++# if __AUDACIOUS_PLUGIN_API__ >= 13
++  NULL, NULL, /* mod_samples, query_format */
++# else
+   mod_samples, query_format,
++# endif
+ #endif
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 13
+-  impulser2_start, impulser2_process, impulser2_flush, impulser2_finish,
+-  impulser2_decoder_to_output_time, impulser2_output_to_decoder_time,
++  impulser2_start,
++  impulser2_process,
++  impulser2_flush,
++  impulser2_finish,
++  impulser2_decoder_to_output_time,
++  impulser2_output_to_decoder_time,
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  0, /* order */
++  TRUE, /* preserves_format */
+ #endif
+ };
+ 
+diff --git a/xmms/libxmmsplugin.hpp b/xmms/libxmmsplugin.hpp
+index 24cd4d5..8883755 100755
+--- a/xmms/libxmmsplugin.hpp
++++ b/xmms/libxmmsplugin.hpp
+@@ -41,7 +41,6 @@
+ #include <bmp/configdb.h>
+ #else
+ #include <audacious/plugin.h>
+-#include <audacious/util.h>
+ #include <audacious/configdb.h>
+ #endif
+ #endif
+@@ -235,10 +234,12 @@ namespace fv3
+ 
+     void about(void)
+     {
++#if __AUDACIOUS_PLUGIN_API__ < 16
+       static GtkWidget *about_dialog = NULL;
+       if (about_dialog != NULL) return;
+       about_dialog = _XMMS_DIALOG((gchar*)"About Plugin",(gchar*)aboutString,(gchar*)"Ok",FALSE,NULL,NULL);
+       gtk_signal_connect(GTK_OBJECT(about_dialog), "destroy", GTK_SIGNAL_FUNC(gtk_widget_destroyed), &about_dialog);
++#endif
+     }
+     
+     void configure(void)
+@@ -442,7 +443,11 @@ namespace fv3
+ 	}
+       bmp_cfg_db_close(cfg);
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+       ConfigDb * cfg = aud_cfg_db_open();
++# else
++      mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++# endif
+       switch(pp->typeOfParameter)
+ 	{
+ 	case kFloat:
+@@ -531,7 +536,11 @@ namespace fv3
+ 	}
+       bmp_cfg_db_close(cfg);
+ #else
++# if __AUDACIOUS_PLUGIN_API__ < 16
+       ConfigDb * cfg = aud_cfg_db_open();
++# else
++      mcs_handle_t * cfg = _aud_api_table->configdb_api->cfg_db_open();
++# endif
+       switch(pp->typeOfParameter)
+ 	{
+ 	case kFloat:
+diff --git a/xmms/revmodel.cpp b/xmms/revmodel.cpp
+index 77aa46f..baa6136 100755
+--- a/xmms/revmodel.cpp
++++ b/xmms/revmodel.cpp
+@@ -182,22 +182,47 @@ extern "C" EffectPlugin *get_eplugin_info(void)
+ 
+ #else
+ static EffectPlugin epe = {
+-  NULL, NULL, (char*)productString,
+-  init, cleanup, about, configure,
++  NULL, /* handle */
++  NULL, /* filename */
++  (gchar*)productString, /* description */
++  init,
++  cleanup,
++  about,
++  configure,
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 10
+-  NULL,
++  NULL, /* settings */
+ #endif
+-  FALSE,
+-#if __AUDACIOUS_PLUGIN_API__ >= 13
+-  NULL, NULL,
+-#else
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  NULL, /* sendmsg */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++  FALSE, /* enabled */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++# if __AUDACIOUS_PLUGIN_API__ >= 13
++  NULL, NULL, /* mod_samples, query_format */
++# else
+   mod_samples, query_format,
++# endif
+ #endif
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 13
+-  stenh_start, stenh_process, stenh_flush, stenh_finish,
++  stenh_start,
++  stenh_process,
++  stenh_flush,
++  stenh_finish,
+   decoder_to_output_time,
+   output_to_decoder_time,
+ #endif
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  0, /* order */
++  TRUE, /* preserves_format */
++#endif
+ };
+ 
+ static EffectPlugin *eplist[] = {&epe, NULL};
+diff --git a/xmms/stenh.cpp b/xmms/stenh.cpp
+index a36209b..e6c3510 100755
+--- a/xmms/stenh.cpp
++++ b/xmms/stenh.cpp
+@@ -193,22 +193,47 @@ extern "C" EffectPlugin *get_eplugin_info(void)
+ 
+ #else
+ static EffectPlugin epe = {
+-  NULL, NULL, (char*)productString,
+-  init, cleanup, about, configure,
++  NULL, /* handle */
++  NULL, /* filename */
++  (gchar*)productString, /* description */
++  init,
++  cleanup,
++  about,
++  configure,
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 10
+-  NULL,
++  NULL, /* settings */
+ #endif
+-  FALSE,
+-#if __AUDACIOUS_PLUGIN_API__ >= 13
+-  NULL, NULL,
+-#else
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  NULL, /* sendmsg */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++  FALSE, /* enabled */
++#endif
++
++#if __AUDACIOUS_PLUGIN_API__ < 16
++# if __AUDACIOUS_PLUGIN_API__ >= 13
++  NULL, NULL, /* mod_samples, query_format */
++# else
+   mod_samples, query_format,
++# endif
+ #endif
++
+ #if __AUDACIOUS_PLUGIN_API__ >= 13
+-  stenh_start, stenh_process, stenh_flush, stenh_finish,
++  stenh_start,
++  stenh_process,
++  stenh_flush,
++  stenh_finish,
+   decoder_to_output_time,
+   output_to_decoder_time,
+ #endif
++
++#if __AUDACIOUS_PLUGIN_API__ >= 16
++  0, /* order */
++  TRUE, /* preserves_format */
++#endif
+ };
+ 
+ static EffectPlugin *eplist[] = {&epe, NULL};
+-- 
+1.7.2
+
