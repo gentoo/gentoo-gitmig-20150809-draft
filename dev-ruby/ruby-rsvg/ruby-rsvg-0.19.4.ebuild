@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ruby-rsvg-0.19.4.ebuild,v 1.2 2010/05/22 15:53:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ruby-rsvg-0.19.4.ebuild,v 1.3 2010/07/26 13:41:52 fauli Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -8,7 +8,7 @@ USE_RUBY="ruby18"
 inherit ruby-ng-gnome2
 
 DESCRIPTION="Ruby bindings for librsvg"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc x86"
 IUSE="cairo"
 
 RDEPEND="${RDEPEND}

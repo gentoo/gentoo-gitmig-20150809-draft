@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ruby-gdkpixbuf2-0.19.4.ebuild,v 1.1 2010/04/25 09:31:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ruby-gdkpixbuf2-0.19.4.ebuild,v 1.2 2010/07/26 13:29:48 fauli Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -8,7 +8,7 @@ USE_RUBY="ruby18"
 inherit ruby-ng-gnome2
 
 DESCRIPTION="Ruby GdkPixbuf2 bindings"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="${RDEPEND} >=x11-libs/gtk+-2"

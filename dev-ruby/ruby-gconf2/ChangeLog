@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gconf2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.48 2010/04/25 09:49:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.49 2010/07/26 13:29:09 fauli Exp $
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  ruby-gconf2-0.19.4.ebuild:
+  x86 stable, bug 329807
 
 *ruby-gconf2-0.19.4 (25 Apr 2010)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-vte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.13 2010/04/25 15:21:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.14 2010/07/26 13:42:35 fauli Exp $
+
+  26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  ruby-vte-0.19.4.ebuild:
+  x86 stable, bug 329807
 
 *ruby-vte-0.19.4 (25 Apr 2010)
 
