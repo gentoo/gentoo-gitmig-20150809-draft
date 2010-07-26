@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.2 2010/07/16 18:51:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.3 2010/07/26 20:43:25 nirbheek Exp $
 
 EAPI="3"
 
@@ -25,8 +25,9 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	dev-libs/libunique
 	app-text/gtkspell
 	indicate? ( dev-libs/libindicate )"
+# vala-0.9 required due to bug 328703
 DEPEND="${RDEPEND}
-	>=dev-lang/vala-0.7.9
+	>=dev-lang/vala-0.9
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool"
