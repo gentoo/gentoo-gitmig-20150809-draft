@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r6.ebuild,v 1.14 2010/07/26 01:15:00 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r6.ebuild,v 1.15 2010/07/26 01:22:16 zorry Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -21,7 +21,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-freebsd.patch \
 		"${FILESDIR}"/${P}-tests-optional.patch \
-		"${FILESDIR}"/${P}-tests-hidden-symbols.patch
+		"${FILESDIR}"/${P}-test-hidden-symbols.patch
 	eautoreconf
 	epunt_cxx
 }
