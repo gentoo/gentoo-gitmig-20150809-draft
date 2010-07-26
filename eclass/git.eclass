@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.46 2010/07/26 02:51:33 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.47 2010/07/26 03:24:19 reavertm Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -41,7 +41,7 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 # @DESCRIPTION:
 # Storage directory for git sources.
 # Can be redefined.
-[[ -z ${EGIT_STORE_DIR} ]] && EGIT_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/git-src"
+: ${EGIT_STORE_DIR:="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/git-src"}
 
 # @ECLASS-VARIABLE: EGIT_HAS_SUBMODULES
 # @DESCRIPTION:
@@ -91,7 +91,7 @@ EGIT_DIFFSTAT_CMD="git --no-pager diff --stat"
 #   ssh://
 eval X="\$${PN//[-+]/_}_LIVE_REPO"
 if [[ ${X} = "" ]]; then
-	EGIT_REPO_URI=${EGIT_REPO_URI:=}
+	: ${EGIT_REPO_URI:=}
 else
 	EGIT_REPO_URI="${X}"
 fi
@@ -128,8 +128,8 @@ fi
 # @DESCRIPTION:
 # git eclass can fetch any branch in git_fetch().
 eval X="\$${PN//[-+]/_}_LIVE_BRANCH"
-if [[ ${X} = "" ]]; then
-	EGIT_BRANCH=${EGIT_BRANCH:=master}
+if [[ "${X}" = "" ]]; then
+	: ${EGIT_BRANCH:=master}
 else
 	EGIT_BRANCH="${X}"
 fi
@@ -138,7 +138,7 @@ fi
 # @DESCRIPTION:
 # git eclass can checkout any commit.
 eval X="\$${PN//[-+]/_}_LIVE_COMMIT"
-if [[ ${X} = "" ]]; then
+if [[ "${X}" = "" ]]; then
 	: ${EGIT_COMMIT:=${EGIT_BRANCH}}
 else
 	EGIT_COMMIT="${X}"
@@ -174,7 +174,7 @@ git_submodules() {
 # EGIT_BRANCH variables.
 git_branch() {
 	local branchname=branch-${EGIT_BRANCH} src=origin/${EGIT_BRANCH}
-	if [[ ${EGIT_COMMIT} != ${EGIT_BRANCH} ]]; then
+	if [[ "${EGIT_COMMIT}" != "${EGIT_BRANCH}" ]]; then
 		branchname=tree-${EGIT_COMMIT}
 		src=${EGIT_COMMIT}
 	fi
@@ -206,7 +206,7 @@ git_fetch() {
 	# folder.
 	#[[ ${EGIT_COMMIT} = ${EGIT_BRANCH} ]] && \
 	#	EGIT_FETCH_CMD="${EGIT_FETCH_CMD} --depth 1"
-	if [[ ! -z ${EGIT_TREE} ]] ; then
+	if [[ -n ${EGIT_TREE} ]] ; then
 		EGIT_COMMIT=${EGIT_TREE}
 		ewarn "QA: Usage of deprecated EGIT_TREE variable detected."
 		ewarn "QA: Use EGIT_COMMIT variable instead."
@@ -252,7 +252,7 @@ git_fetch() {
 		einfo "The ${EGIT_CLONE_DIR} was shallow copy. Refetching."
 	fi
 	# repack from bare copy to normal one
-	if [[ -n ${EGIT_HAS_SUBMODULES} ]] && [[ -d ${GIT_DIR} && ! -d "${GIT_DIR}/.git/" ]]; then
+	if [[ -n ${EGIT_HAS_SUBMODULES} ]] && [[ -d ${GIT_DIR} && ! -d ${GIT_DIR}/.git ]]; then
 		rm -rf "${GIT_DIR}"
 		einfo "The ${EGIT_CLONE_DIR} was bare copy. Refetching."
 	fi
@@ -320,7 +320,7 @@ git_fetch() {
 		cursha1=$(git rev-parse ${upstream_branch})
 
 		# write out message based on the revisions
-		if [[ ${oldsha1} != ${cursha1} ]]; then
+		if [[ "${oldsha1}" != "${cursha1}" ]]; then
 			${elogcmd} "   updating from commit:	${oldsha1}"
 			${elogcmd} "   to commit:		${cursha1}"
 		else
@@ -354,7 +354,7 @@ git_fetch() {
 	export EGIT_VERSION="${cursha1}"
 
 	# log the repo state
-	[[ ${EGIT_COMMIT} != ${EGIT_BRANCH} ]] && elog "   commit:			${EGIT_COMMIT}"
+	[[ "${EGIT_COMMIT}" != "${EGIT_BRANCH}" ]] && ${elogcmd} "   commit:			${EGIT_COMMIT}"
 	${elogcmd} "   branch: 			${EGIT_BRANCH}"
 	${elogcmd} "   storage directory: 	\"${GIT_DIR}\""
 
@@ -372,7 +372,7 @@ git_fetch() {
 	pushd "${S}" &> /dev/null
 	git_branch
 	# submodules always reqire net (thanks to branches changing)
-	[[ -n ${EGIT_OFFLINE} ]] || git_submodules
+	[[ -z ${EGIT_OFFLINE} ]] && git_submodules
 	popd &> /dev/null
 
 	echo ">>> Unpacked to ${S}"
@@ -418,7 +418,7 @@ git_bootstrap() {
 # @FUNCTION: git_apply_patches
 # @DESCRIPTION:
 # Apply patches from EGIT_PATCHES bash array.
-# Preffered is using the variable as bash array but for now it allows to write
+# Preferred is using the variable as bash array but for now it allows to write
 # it also as normal space separated string list. (This part of code should be
 # removed when all ebuilds get converted on bash array).
 git_apply_patches() {
@@ -430,7 +430,7 @@ git_apply_patches() {
 			debug-print "$FUNCNAME: git_autopatch: patching from ${i}"
 			epatch "${i}"
 		done
-	elif [[ ${EGIT_PATCHES} != "" ]]; then
+	elif [[ -n ${EGIT_PATCHES} ]]; then
 		# no need for loop if space separated string is passed.
 		debug-print "$FUNCNAME: git_autopatch: patching from ${EGIT_PATCHES}"
 		epatch "${EGIT_PATCHES}"
