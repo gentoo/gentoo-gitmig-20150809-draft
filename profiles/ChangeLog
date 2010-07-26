@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4421 2010/07/25 21:44:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4422 2010/07/26 00:10:06 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jul 2010; Sebastian Pipping <sping@gentoo.org> package.mask:
+  Mask upcoming =media-libs/freeverb3-2.5.5-r1
 
   25 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Hard mask new experimental package dev-lang/v8.
