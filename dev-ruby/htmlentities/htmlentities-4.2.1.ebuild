@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/htmlentities-4.2.1.ebuild,v 1.2 2010/05/22 15:19:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/htmlentities-4.2.1.ebuild,v 1.3 2010/07/26 15:52:32 flameeyes Exp $
 
 EAPI=2
 
@@ -24,5 +24,5 @@ IUSE=""
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 each_ruby_test() {
-	${RUBY} -Ilib test/test_all.rb || die "tests failed"
+	${RUBY} -Ilib:. test/test_all.rb || die "tests failed"
 }
