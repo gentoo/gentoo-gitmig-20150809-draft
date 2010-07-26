@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.191 2010/07/26 15:00:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.192 2010/07/26 20:55:21 grobian Exp $
+
+  26 Jul 2010; Fabian Groffen <grobian@gentoo.org> darwin/make.defaults:
+  Add -dead_strip_dylibs to LDFLAGS on Darwin (equivalent of --as-needed on
+  ELF)
 
   26 Jul 2010; Jeremy Olexa <darkside@gentoo.org> mint/use.mask:
   Mask USE=ipv6 on mint, bug 329883
