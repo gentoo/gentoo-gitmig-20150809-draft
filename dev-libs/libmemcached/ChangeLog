@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.33 2010/07/24 18:48:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.34 2010/07/26 01:46:17 jer Exp $
+
+  26 Jul 2010; Jeroen Roovers <jer@gentoo.org> libmemcached-0.39.ebuild:
+  Stable for HPPA (bug #326163).
 
   24 Jul 2010; Markus Meier <maekke@gentoo.org> libmemcached-0.39.ebuild:
   arm stable, bug #326163
