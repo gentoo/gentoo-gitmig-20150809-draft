@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.19 2010/06/13 10:08:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.20 2010/07/27 22:59:38 mabi Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -8,6 +8,10 @@
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
 # profile have a USE flag associated with (such as altivec, mmx, etc).
+
+# 2010/07/27 - Matti Bickel <mabi@gentoo.org>
+# app-text/fdf is only supported on x86
+-fdftk
 
 # 2010/02/14 - Samuli Suominen <ssuominen@gentoo.org>
 # Unmask amd64/x86 only SANE_BACKENDS
