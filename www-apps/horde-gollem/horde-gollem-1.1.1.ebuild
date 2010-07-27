@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/horde-gollem-1.0.4.ebuild,v 1.1 2008/10/27 21:11:21 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-gollem/horde-gollem-1.1.1.ebuild,v 1.1 2010/07/27 22:27:38 a3li Exp $
 
 HORDE_MAJ="-h3"
 inherit horde
