@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.1 2010/07/27 19:19:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.2 2010/07/27 19:24:09 ssuominen Exp $
 
 EAPI=3
 
@@ -54,6 +54,7 @@ src_prepare() {
 		CMakeLists.txt || die
 
 	epatch "${FILESDIR}"/${P}-multilib.patch \
+		"${FILESDIR}"/${P}-mmap.patch \
 		"${FILESDIR}"/${PN}-2.0.0-libpng14.patch
 }
 
