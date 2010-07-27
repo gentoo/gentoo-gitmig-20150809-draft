@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.35 2010/01/12 16:13:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.36 2010/07/27 14:03:26 lack Exp $
+
+*roxterm-1.18.5 (27 Jul 2010)
+
+  27 Jul 2010; Jim Ramsay <lack@gentoo.org> +roxterm-1.18.5.ebuild,
+  +files/roxterm-1.18.5-docdir.patch:
+  Version bump: 1.18.5 is released
 
   12 Jan 2010; Jim Ramsay <lack@gentoo.org> roxterm-1.16.3.ebuild,
   +files/roxterm-1.16.3-docdir.patch:
