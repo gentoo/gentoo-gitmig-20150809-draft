@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr-xmloutput
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.1 2010/03/30 23:03:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.2 2010/07/27 21:08:19 fauli Exp $
+
+  27 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  bzr-xmloutput-0.8.6.ebuild:
+  fix bug 329471 by restricting Python ABIs to 2.*, Bazaar itself has no
+  Python 3 support
 
 *bzr-xmloutput-0.8.6 (30 Mar 2010)
 
