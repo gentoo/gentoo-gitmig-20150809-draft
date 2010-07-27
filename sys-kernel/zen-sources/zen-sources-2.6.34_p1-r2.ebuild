@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.34_p1-r1.ebuild,v 1.1 2010/07/07 12:18:20 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-2.6.34_p1-r2.ebuild,v 1.1 2010/07/27 14:03:21 wired Exp $
+
+EAPI="2"
 
 COMPRESSTYPE=".lzma"
 K_USEPV="yes"
@@ -24,7 +26,7 @@ ZEN_URI="http://downloads.zen-kernel.org/$(get_version_component_range 1-3)/${ZE
 ZEN_PATCHES="
 	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/2.6.34-zen1/0001-block-prepare-I-O-context-code-for-BFQ.patch
 	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/2.6.34-zen1/0002-block-add-cgroups-kconfig-and-build-bits-for-BFQ.patch
-	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/2.6.34-zen1/0003-block-introduce-the-BFQ-I-O-scheduler.patch
+	http://algo.ing.unimo.it/people/paolo/disk_sched/patches/2.6.34-zen1/0003-block-introduce-the-BFQ-I-O-scheduler.patch -> 0003-block-introduce-the-BFQ-I-O-scheduler-r1.patch
 "
 SRC_URI="${KERNEL_URI} ${ZEN_URI} bfq? ( ${ZEN_PATCHES} )"
 
@@ -47,15 +49,13 @@ pkg_setup(){
 	kernel-2_pkg_setup
 }
 
-src_unpack(){
-	kernel-2_src_unpack
-	cd "${S}"
+src_prepare(){
 	epatch "${DISTDIR}"/"${ZEN_FILE}"
 	if use bfq; then
 		EPATCH_OPTS="-p1"
-		for p in ${ZEN_PATCHES}; do
-			epatch "${DISTDIR}/${p/*\/}"
-		done
+		epatch "${DISTDIR}/0001-block-prepare-I-O-context-code-for-BFQ.patch"
+		epatch "${DISTDIR}/0002-block-add-cgroups-kconfig-and-build-bits-for-BFQ.patch"
+		epatch "${DISTDIR}/0003-block-introduce-the-BFQ-I-O-scheduler-r1.patch"
 	fi
 }
 

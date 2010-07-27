@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.39 2010/07/07 12:18:20 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.40 2010/07/27 14:03:21 wired Exp $
+
+*zen-sources-2.6.34_p1-r2 (27 Jul 2010)
+
+  27 Jul 2010; Alex Alexander <wired@gentoo.org>
+  zen-sources-2.6.34_p1.ebuild, -zen-sources-2.6.34_p1-r1.ebuild,
+  +zen-sources-2.6.34_p1-r2.ebuild:
+  new revision with updated bfq patch. bug #327415. removed bfq from
+  2.6.34_p1. switched to EAPI 2.
 
 *zen-sources-2.6.34_p1-r1 (07 Jul 2010)
 
