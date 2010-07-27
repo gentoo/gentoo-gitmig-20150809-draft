@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythzoneminder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/ChangeLog,v 1.7 2010/06/10 14:54:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/ChangeLog,v 1.8 2010/07/27 16:04:50 cardoe Exp $
+
+*mythzoneminder-0.23.1_p25396 (27 Jul 2010)
+
+  27 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythzoneminder-0.23.1_p25396.ebuild:
+  Update to version that properly identifies itself as 0.23.1
 
 *mythzoneminder-0.23_p25065 (10 Jun 2010)
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythnetvision
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnetvision/ChangeLog,v 1.3 2010/06/23 19:40:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnetvision/ChangeLog,v 1.4 2010/07/27 16:01:57 cardoe Exp $
+
+*mythnetvision-0.23.1_p25396 (27 Jul 2010)
+
+  27 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythnetvision-0.23.1_p25396.ebuild:
+  Update to version that properly identifies itself as 0.23.1
 
   23 Jun 2010; Mark Loeser <halcy0n@gentoo.org>
   mythnetvision-0.23_p25065.ebuild:
