@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.137 2010/07/07 00:47:22 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.138 2010/07/27 02:14:55 jer Exp $
+
+  27 Jul 2010; Jeroen Roovers <jer@gentoo.org> cmake-2.8.1-r2.ebuild:
+  Stable for HPPA PPC (bug #325845).
 
   07 Jul 2010; Maciej Mrozowski <reavertm@gentoo.org> cmake-2.8.1-r2.ebuild:
   export JAVA_HOME gathered from java-config, bug 315229
