@@ -1,6 +1,18 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.30 2010/07/24 17:27:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.31 2010/07/27 18:47:37 jlec Exp $
+
+*vmd-1.8.7-r2 (27 Jul 2010)
+
+  27 Jul 2010; Justin Lecher <jlec@gentoo.org>
+  -files/vmd-1.8.5-config-gentoo.patch,
+  -files/vmd-1.8.6-config-gentoo.patch,
+  -files/vmd-1.8.6-fix-crash-on-tcl8.5.patch,
+  -files/vmd-1.8.6-python-2.5.patch, -files/vmd-1.8.6-tcltk8.5.patch,
+  vmd-1.8.7-r1.ebuild, +vmd-1.8.7-r2.ebuild, -files/vmd-1.8.7-config.patch,
+  files/vmd-1.8.7-gentoo.patch, +files/vmd-1.8.7-respect-flags.patch,
+  -files/vmd-1.8.7-use-bash-startup.patch:
+  Make it really prefix ready, don't mix CFLAGS/CXXFLAGS,clean old patches
 
   24 Jul 2010; Justin Lecher <jlec@gentoo.org> vmd-1.8.7-r1.ebuild:
   Added prefix changes, thanks rei4dan #327517; keyworded for ~-linux prefix

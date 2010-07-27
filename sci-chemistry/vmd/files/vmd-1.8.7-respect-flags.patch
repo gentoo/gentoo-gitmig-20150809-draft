@@ -1,0 +1,28 @@
+diff --git a/plugins/molfile_plugin/Makefile b/plugins/molfile_plugin/Makefile
+index 18fb6dc..8659573 100644
+--- a/plugins/molfile_plugin/Makefile
++++ b/plugins/molfile_plugin/Makefile
+@@ -14,8 +14,8 @@ INCDIR = -I../include -I${SRCDIR}
+ 
+ VPATH = src ../include ${ARCHDIR}
+ 
+-SCCFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
+-SCXXFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
++SCCFLAGS = $(CFLAGS) $(DEF)"STATIC_PLUGIN"
++SCXXFLAGS = $(CXXFLAGS) $(DEF)"STATIC_PLUGIN"
+ 
+ #
+ # Rules
+diff --git a/plugins/molfile_plugin/src/cifplugin/Makefile b/plugins/molfile_plugin/src/cifplugin/Makefile
+index 1dfa768..9de3f6b 100644
+--- a/plugins/molfile_plugin/src/cifplugin/Makefile
++++ b/plugins/molfile_plugin/src/cifplugin/Makefile
+@@ -14,7 +14,7 @@ INCDIR = -I../include -I${SRCDIR}
+ VPATH = src ../include ${ARCHDIR}
+ 
+ SCCFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
+-SCXXFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
++SCXXFLAGS = $(CXXFLAGS) $(DEF)"STATIC_PLUGIN"
+ 
+ #
+ # Rules

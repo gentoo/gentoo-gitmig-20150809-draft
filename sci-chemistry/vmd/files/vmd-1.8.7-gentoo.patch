@@ -40,7 +40,7 @@ index 1b6ea67..d13aca1 100644
 +++ b/plugins/Makefile.rej
 @@ -3,7 +3,6 @@
    # Makefile for molecule file readers
-   # $Id: vmd-1.8.7-gentoo.patch,v 1.1 2010/05/18 07:22:51 jlec Exp $
+   # $Id: vmd-1.8.7-gentoo.patch,v 1.2 2010/07/27 18:47:33 jlec Exp $
    
 -- .SILENT:
    
@@ -48,7 +48,7 @@ index 1b6ea67..d13aca1 100644
    
 @@ -17,7 +16,6 @@
    # Makefile for molecule file readers
-   # $Id: vmd-1.8.7-gentoo.patch,v 1.1 2010/05/18 07:22:51 jlec Exp $
+   # $Id: vmd-1.8.7-gentoo.patch,v 1.2 2010/07/27 18:47:33 jlec Exp $
    
 -+ .SILENT:
    
@@ -543,19 +543,30 @@ index 96e70dc..8d10ef4 100644
  VMFILES = molefacture.tcl molefacture_builder.tcl \
  	molefacture_edit.tcl molefacture_geometry.tcl molefacture_gui.tcl \
 diff --git a/plugins/molfile_plugin/Makefile b/plugins/molfile_plugin/Makefile
-index 18fb6dc..f17bdda 100644
+index 18fb6dc..e32b130 100644
 --- a/plugins/molfile_plugin/Makefile
 +++ b/plugins/molfile_plugin/Makefile
 @@ -1,7 +1,6 @@
  # Makefile for molecule file readers
- # $Id: vmd-1.8.7-gentoo.patch,v 1.1 2010/05/18 07:22:51 jlec Exp $
+ # $Id: vmd-1.8.7-gentoo.patch,v 1.2 2010/07/27 18:47:33 jlec Exp $
  
 -.SILENT:
  
  .SUFFIXES:
  
+@@ -14,8 +13,8 @@ INCDIR = -I../include -I${SRCDIR}
+ 
+ VPATH = src ../include ${ARCHDIR}
+ 
+-SCCFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
+-SCXXFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
++SCCFLAGS = $(CFLAGS) $(DEF)"STATIC_PLUGIN"
++SCXXFLAGS = $(CXXFLAGS) $(DEF)"STATIC_PLUGIN"
+ 
+ #
+ # Rules
 diff --git a/plugins/molfile_plugin/src/cifplugin/Makefile b/plugins/molfile_plugin/src/cifplugin/Makefile
-index 1dfa768..88f4b7b 100644
+index 1dfa768..e3f380b 100644
 --- a/plugins/molfile_plugin/src/cifplugin/Makefile
 +++ b/plugins/molfile_plugin/src/cifplugin/Makefile
 @@ -1,6 +1,5 @@
@@ -565,6 +576,15 @@ index 1dfa768..88f4b7b 100644
  
  .SUFFIXES:
  
+@@ -14,7 +13,7 @@ INCDIR = -I../include -I${SRCDIR}
+ VPATH = src ../include ${ARCHDIR}
+ 
+ SCCFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
+-SCXXFLAGS = $(CCFLAGS) $(DEF)"STATIC_PLUGIN"
++SCXXFLAGS = $(CXXFLAGS) $(DEF)"STATIC_PLUGIN"
+ 
+ #
+ # Rules
 diff --git a/plugins/moltoptools/Makefile b/plugins/moltoptools/Makefile
 index 3599cb7..8d80ec2 100644
 --- a/plugins/moltoptools/Makefile
@@ -1018,7 +1038,7 @@ index aa95b41..66ee516 100644
  VMFILES = zoomseq.tcl pkgIndex.tcl
  VMVERSION = 1.1
 diff --git a/vmd-1.8.7/configure b/vmd-1.8.7/configure
-index f01944a..2763347 100755
+index f01944a..b04bade 100755
 --- a/vmd-1.8.7/configure
 +++ b/vmd-1.8.7/configure
 @@ -13,10 +13,10 @@
@@ -1170,6 +1190,22 @@ index f01944a..2763347 100755
  
        if ($config_static) {
          # link everything statically (this won't work due to libGL issues)
+@@ -2714,11 +2691,11 @@ LIBDIRS     = $LIBDIRS
+ DEFINES     = $DEFINES
+ 
+ # compiler and compiler directives 
+-CC          = $arch_cc
+-CFLAGS      = $arch_copts -DARCH_$config_arch \$(DEFINES) \$(INCDIRS) $rpm_optflags
++CC          = gentoo-gcc
++CFLAGS      = gentoo-cflags -DARCH_$config_arch \$(DEFINES) \$(INCDIRS) $rpm_optflags
+ 
+-CCPP	    = $arch_ccpp
+-CPPFLAGS    = $arch_opt_flag $arch_cppopts -DARCH_$config_arch \$(DEFINES) \$(INCDIRS) $rpm_optflags
++CCPP	    = gentoo-g++
++CPPFLAGS    = gentoo-cxxflags $arch_cppopts -DARCH_$config_arch \$(DEFINES) \$(INCDIRS) $rpm_optflags
+ 
+ NVCC        = $arch_nvcc
+ NVCCFLAGS   = $arch_nvccflags -DARCH_$config_arch \$(DEFINES) \$(INCDIRS)
 @@ -2766,7 +2743,7 @@ $config_progname: y.tab.h \$(VMD_OBJS)
  	if [ ! -r ./$arch_template_repository ]; then \\
  	  ln -s $vmd_src_dir/$arch_template_repository ./$arch_template_repository ; \\
