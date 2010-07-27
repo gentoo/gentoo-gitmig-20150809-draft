@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythmovies
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmovies/ChangeLog,v 1.16 2010/07/26 13:48:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmovies/ChangeLog,v 1.17 2010/07/27 15:53:03 cardoe Exp $
+
+*mythmovies-0.23.1_p25396 (27 Jul 2010)
+
+  27 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythmovies-0.23.1_p25396.ebuild:
+  Update to version that properly identifies itself as 0.23.1
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   mythmovies-0.22_p23469.ebuild:
