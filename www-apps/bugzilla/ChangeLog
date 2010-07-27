@@ -1,6 +1,6 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.167 2010/07/27 04:58:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.168 2010/07/27 06:19:36 tove Exp $
 
   27 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   bugzilla-3.2.7.ebuild:
@@ -19,7 +19,7 @@
   Version bump. Fixes CVE-2010-1204 (3.2, 3.4, 3.6) and CVE-2010-0180 (3.6
   only)
 
-  08 May 2010; RaÃºl Porcel <armin76@gentoo.org> bugzilla-3.6.ebuild:
+  08 May 2010; Raúl Porcel <armin76@gentoo.org> bugzilla-3.6.ebuild:
   Add ~alpha/~ia64/~sparc wrt #315793
 
 *bugzilla-3.6 (15 Apr 2010)
@@ -53,7 +53,7 @@
   08 Mar 2010; Torsten Veller <tove@gentoo.org> +bugzilla-3.4.6.ebuild:
   Version bump
 
-  25 Feb 2010; RaÃºl Porcel <armin76@gentoo.org> bugzilla-3.0.11.ebuild,
+  25 Feb 2010; Raúl Porcel <armin76@gentoo.org> bugzilla-3.0.11.ebuild,
   bugzilla-3.2.6.ebuild:
   alpha/ia64/sparc stable wrt #303725
 
@@ -80,7 +80,7 @@
   bugzilla-3.2.5.ebuild:
   Marked ppc stable for bug #284824.
 
-  26 Dec 2009; RaÃºl Porcel <armin76@gentoo.org> bugzilla-3.0.10.ebuild,
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> bugzilla-3.0.10.ebuild,
   bugzilla-3.2.5.ebuild:
   alpha/ia64/sparc/x86 stable wrt #284824
 
@@ -119,14 +119,14 @@
   bugzilla-3.0.8.ebuild, bugzilla-3.2.4.ebuild:
   ppc stable #258592
 
-  01 Oct 2009; RaÃºl Porcel <armin76@gentoo.org> bugzilla-3.2.4.ebuild:
+  01 Oct 2009; Raúl Porcel <armin76@gentoo.org> bugzilla-3.2.4.ebuild:
   ia64/sparc stable wrt #258592
 
   30 Sep 2009; Markus Meier <maekke@gentoo.org> bugzilla-2.22.7.ebuild,
   bugzilla-3.0.8.ebuild, bugzilla-3.2.4.ebuild:
   amd64 stable, bug #258592
 
-  30 Sep 2009; RaÃºl Porcel <armin76@gentoo.org> bugzilla-3.4.1-r1.ebuild:
+  30 Sep 2009; Raúl Porcel <armin76@gentoo.org> bugzilla-3.4.1-r1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #284166
 
   30 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
@@ -166,7 +166,7 @@
 *bugzilla-3.0.8 (29 Aug 2009)
 *bugzilla-2.22.7 (29 Aug 2009)
 
-  29 Aug 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  29 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/3.4/bugzilla.cron.daily, +bugzilla-2.22.7.ebuild,
   -bugzilla-3.2.ebuild, +files/3.4/bugzilla.cron.tab,
   +bugzilla-3.0.8.ebuild, -bugzilla-3.2.3.ebuild,
@@ -177,13 +177,13 @@
   renaming of the current stable version.
   Note: this is non-maintainer commit.
 
-  26 Jun 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  26 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   bugzilla-3.2.3.ebuild:
   Adjust a deps bit and also add +x bit on checksetup.pl. Per bug #258738.
 
 *bugzilla-3.2.3 (24 Jun 2009)
 
-  24 Jun 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  24 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   +bugzilla-3.2.3.ebuild:
   Version bump for security bugs 257923 and 258592. Request itself is in bug
   273821. de lingua commented cause not able to test. This is non-maintainer
@@ -214,7 +214,7 @@
   bugzilla-3.0.5.ebuild:
   Stable on ppc/ppc64; bug #239564
 
-  13 Oct 2008; RaÃºl Porcel <armin76@gentoo.org> bugzilla-2.22.5.ebuild,
+  13 Oct 2008; Raúl Porcel <armin76@gentoo.org> bugzilla-2.22.5.ebuild,
   bugzilla-3.0.5.ebuild:
   alpha/ia64 stable wrt #239564
 
@@ -247,7 +247,7 @@
   bugzilla-2.20.6.ebuild, bugzilla-2.22.4.ebuild, bugzilla-3.0.4.ebuild:
   ppc stable, bug #220799
 
-  20 May 2008; RaÃºl Porcel <armin76@gentoo.org> bugzilla-2.20.6.ebuild,
+  20 May 2008; Raúl Porcel <armin76@gentoo.org> bugzilla-2.20.6.ebuild,
   bugzilla-2.22.4.ebuild, bugzilla-3.0.4.ebuild:
   alpha/ia64/sparc stable wrt security #220799
 
@@ -272,24 +272,24 @@
   +bugzilla-2.22.4.ebuild, -bugzilla-3.0.3.ebuild, +bugzilla-3.0.4.ebuild:
   Added bugzilla-2.20.6,2.22.4,3.0.4 in response to sec issue #220799.
 
-  20 Feb 2008; Benedikt BÃ¶hm <hollow@gentoo.org> bugzilla-2.20.5.ebuild,
+  20 Feb 2008; Benedikt Böhm <hollow@gentoo.org> bugzilla-2.20.5.ebuild,
   bugzilla-2.22.3.ebuild, bugzilla-3.0.2.ebuild, bugzilla-3.0.3.ebuild:
   use ecvs_clean; fix quoting
 
 *bugzilla-3.0.3 (17 Feb 2008)
 
-  17 Feb 2008; Benedikt BÃ¶hm <hollow@gentoo.org>
+  17 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
   +files/3.0/bugzilla.cron.daily, +files/3.0/bugzilla.cron.tab,
   -files/bugzilla.cron.daily, -files/bugzilla.cron.tab,
   bugzilla-2.20.5.ebuild, bugzilla-2.22.3.ebuild, bugzilla-3.0.2.ebuild,
   +bugzilla-3.0.3.ebuild:
   version bump; major ebuild cleanup wrt #208584
 
-  05 Feb 2008; Benedikt BÃ¶hm <hollow@gentoo.org> bugzilla-2.20.5.ebuild,
+  05 Feb 2008; Benedikt Böhm <hollow@gentoo.org> bugzilla-2.20.5.ebuild,
   bugzilla-2.22.3.ebuild:
   fix depend.apache usage wrt #208584
 
-  10 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> bugzilla-3.0.2.ebuild:
+  10 Dec 2007; Raúl Porcel <armin76@gentoo.org> bugzilla-3.0.2.ebuild:
   alpha/ia64/sparc stable wrt #198075
 
   06 Dec 2007; Steve Dibb <beandog@gentoo.org> bugzilla-3.0.2.ebuild:
@@ -327,7 +327,7 @@
   08 Sep 2007; Steve Dibb <beandog@gentoo.org> bugzilla-2.20.5.ebuild:
   amd64 stable, bug 190112
 
-  04 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> bugzilla-2.20.5.ebuild,
+  04 Sep 2007; Raúl Porcel <armin76@gentoo.org> bugzilla-2.20.5.ebuild,
   bugzilla-2.22.3.ebuild:
   alpha/ia64 stable wrt security #190112
 
@@ -363,7 +363,7 @@
   Fixing the DEPEND/RDEPEND for the move of net-www/apache to
   www-servers/apache (#78622).
 
-  30 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> bugzilla-3.0.ebuild:
+  30 Jun 2007; Raúl Porcel <armin76@gentoo.org> bugzilla-3.0.ebuild:
   Add ~alpha wrt #165190
 
   06 Jun 2007; Markus Rothe <corsair@gentoo.org> bugzilla-3.0.ebuild:
@@ -384,7 +384,7 @@
   bugzilla-2.20.4.ebuild, bugzilla-2.22.2.ebuild:
   Apache 1.X masking (fix ebuilds to not require apache-1*).
 
-  23 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> bugzilla-2.22.2.ebuild:
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> bugzilla-2.22.2.ebuild:
   ia64 stable
 
   16 Apr 2007; Markus Rothe <corsair@gentoo.org> bugzilla-2.22.2.ebuild:
@@ -435,10 +435,10 @@
   22 Oct 2006; Markus Rothe <corsair@gentoo.org> bugzilla-2.18.6.ebuild:
   Stable on ppc64; bug #151563
 
-  21 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org> bugzilla-2.18.6.ebuild:
+  21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> bugzilla-2.18.6.ebuild:
   Stable on ia64, bug 151563.
 
-  21 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org> bugzilla-2.18.6.ebuild:
+  21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> bugzilla-2.18.6.ebuild:
   Stable on Alpha, bug 151563.
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
@@ -482,7 +482,7 @@
   26 Feb 2006; Renat Lumpau <rl03@gentoo.org> -bugzilla-2.18.4.ebuild:
   Cleaned out old version
 
-  26 Feb 2006; Bryan Ãstergaard <kloeri@gentoo.org bugzilla-2.18.5.ebuild:
+  26 Feb 2006; Bryan Østergaard <kloeri@gentoo.org bugzilla-2.18.5.ebuild:
   Stable on alpha, bug 123646.
 
   25 Feb 2006; Mark Loeser <halcy0n@gentoo.org> bugzilla-2.18.5.ebuild:
