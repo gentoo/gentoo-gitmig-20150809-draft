@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/tatt
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.1 2010/07/27 12:36:56 fauli Exp $
+
+*tatt-9999 (27 Jul 2010)
+
+  27 Jul 2010; Christian Faulhammer <fauli@gentoo.org> +tatt-9999.ebuild,
+  +metadata.xml:
+  initial import, ebuild written by Thomas Kahle, who is upstream
+
