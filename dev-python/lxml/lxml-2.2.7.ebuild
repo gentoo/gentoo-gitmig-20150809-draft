@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.7.ebuild,v 1.1 2010/07/24 23:22:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.2.7.ebuild,v 1.2 2010/07/27 18:42:12 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*::3.1"
@@ -36,9 +36,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local myconf
-	use threads || myconf+=" --without-threading"
-	distutils_src_compile ${myconf}
+	distutils_src_compile $(use threads || echo --without-threading)
 }
 
 src_test() {
