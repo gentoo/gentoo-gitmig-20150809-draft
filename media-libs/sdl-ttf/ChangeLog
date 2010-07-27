@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-ttf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.47 2010/01/15 09:49:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/ChangeLog,v 1.48 2010/07/27 02:16:18 mr_bones_ Exp $
+
+  27 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org> sdl-ttf-2.0.9.ebuild:
+  EAPI=2; add support for USE=static-libs
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> sdl-ttf-2.0.9.ebuild:
   Transfer Prefix keywords
