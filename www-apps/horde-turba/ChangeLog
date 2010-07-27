@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/horde-turba
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.42 2009/12/17 17:51:58 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.43 2010/07/27 22:16:56 a3li Exp $
+
+*horde-turba-2.3.4 (27 Jul 2010)
+
+  27 Jul 2010; Alex Legler <a3li@gentoo.org> -horde-turba-2.3.2.ebuild,
+  horde-turba-2.3.3.ebuild, +horde-turba-2.3.4.ebuild:
+  Version bump, closes bug 329253. No longer try to install docs/vcf
+  directory which resulted in a bzip2 failure. Removing old version.
 
 *horde-turba-2.3.3 (17 Dec 2009)
 
