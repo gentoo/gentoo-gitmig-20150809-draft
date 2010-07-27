@@ -1,9 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.5.0-r1.ebuild,v 1.6 2009/12/15 18:41:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.5.0-r1.ebuild,v 1.7 2010/07/27 16:49:25 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="gdbm"
+PYTHON_USE_WITH_OPT="pyzord"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
@@ -16,9 +20,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="pyzord"
 
-DEPEND="pyzord? ( dev-lang/python[gdbm] )"
-RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
+DEPEND=""
+RDEPEND=""
 
 DOCS="THANKS UPGRADING"
 
@@ -43,13 +46,13 @@ src_install () {
 	distutils_src_install
 
 	dohtml docs/usage.html
-	rm -rf "${D}usr/share/doc/pyzor"
+	rm -rf "${ED}usr/share/doc/pyzor"
 
 	if use pyzord; then
 		dodir /usr/sbin
-		mv "${D}usr/bin/pyzord" "${D}usr/sbin/"
+		mv "${ED}"usr/bin/pyzord* "${ED}usr/sbin"
 	else
-		rm "${D}usr/bin/pyzord"
+		rm "${ED}"usr/bin/pyzord*
 	fi
 }
 
