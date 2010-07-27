@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/pymazon-0.9.ebuild,v 1.2 2010/07/01 13:17:10 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pymazon/pymazon-0.9-r1.ebuild,v 1.1 2010/07/27 00:35:04 lack Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -16,10 +16,10 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="+gtk +qt4"
 
-DEPEND=""
 DEPEND="gtk? ( dev-python/pygtk )
 	qt4? ( dev-python/PyQt4 )"
-REPEND="${DEPEND}"
+REPEND="${DEPEND}
+	dev-python/pycrypto"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
