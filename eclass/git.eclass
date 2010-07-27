@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.47 2010/07/26 03:24:19 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.48 2010/07/27 12:39:34 reavertm Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -97,14 +97,10 @@ else
 fi
 # @ECLASS-VARIABLE: EGIT_PROJECT
 # @DESCRIPTION:
-# Project name of your ebuild.
-# Git eclass will check out the git repository like:
-#	${EGIT_STORE_DIR}/${EGIT_PROJECT}/${EGIT_REPO_URI##*/}
-# so if you define EGIT_REPO_URI as http://git.collab.net/repo/git or
-# http://git.collab.net/repo/git. and PN is subversion-git.
-# it will check out like:
-#	${EGIT_STORE_DIR}/subversion
-: ${EGIT_PROJECT:=${PN/-git}}
+# Project name, it must be unique across EGIT_STORE_DIR.
+# Git eclass will check out the git repository into ${EGIT_STORE_DIR}/${EGIT_PROJECT}/${EGIT_REPO_URI##*/}
+# Default is ${PN}.
+: ${EGIT_PROJECT:=${PN}}
 
 # @ECLASS-VARIABLE: EGIT_BOOTSTRAP
 # @DESCRIPTION:
