@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnfsidmap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.32 2009/03/25 18:45:38 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.33 2010/07/27 00:18:22 flameeyes Exp $
+
+*libnfsidmap-0.23 (27 Jul 2010)
+
+  27 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libnfsidmap-0.19.ebuild, +libnfsidmap-0.23.ebuild:
+  Remove old version, add a new one that does not build useless static
+  archives and does not install .la files.
 
   25 Mar 2009; Raúl Porcel <armin76@gentoo.org> libnfsidmap-0.21-r1.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #261334
