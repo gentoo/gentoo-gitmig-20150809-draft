@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/xia2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.3 2010/04/22 19:29:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.4 2010/07/27 18:57:43 jlec Exp $
+
+*xia2-0.3.1.7 (27 Jul 2010)
+
+  27 Jul 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.3.1.7-fix-syntax.patch, +xia2-0.3.1.7.ebuild:
+  Version bump
 
   22 Apr 2010; Justin Lecher <jlec@gentoo.org> xia2-0.3.1.6.ebuild:
   Keyworded for ~*-linux
