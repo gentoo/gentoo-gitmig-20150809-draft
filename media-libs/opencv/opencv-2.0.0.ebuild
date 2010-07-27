@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0.ebuild,v 1.7 2010/05/12 11:33:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.0.0.ebuild,v 1.8 2010/07/27 19:27:49 ssuominen Exp $
 
 EAPI=2
-inherit cmake-utils
+
+PYTHON_DEPEND="python? 2:2.6"
+
+inherit cmake-utils python
 
 MY_P=OpenCV-${PV}
 
@@ -18,8 +21,6 @@ IUSE="debug +deprecated examples ffmpeg gstreamer gtk ieee1394 jpeg jpeg2k
 mmx octave openmp png python sse sse2 sse3 test tiff v4l xine"
 
 RDEPEND="sys-libs/zlib
-	python? ( >=dev-lang/python-2.5
-		deprecated? ( dev-lang/swig ) )
 	ieee1394? ( sys-libs/libraw1394
 		media-libs/libdc1394:2 )
 	ffmpeg? ( >=media-video/ffmpeg-0.5 )
@@ -30,9 +31,10 @@ RDEPEND="sys-libs/zlib
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	xine? ( media-libs/xine-lib )
-	octave? ( sci-mathematics/octave
-		dev-lang/swig )"
+	octave? ( sci-mathematics/octave )"
 DEPEND="${RDEPEND}
+	octave? ( dev-lang/swig )
+	python? ( deprecated? ( dev-lang/swig ) )
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}

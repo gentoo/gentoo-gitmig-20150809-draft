@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.2 2010/07/27 19:24:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.3 2010/07/27 19:27:49 ssuominen Exp $
 
 EAPI=3
 
@@ -21,7 +21,6 @@ IUSE="debug +deprecated examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k o
 
 RDEPEND="sys-libs/zlib
 	ipp? ( sci-libs/ipp )
-	python? ( deprecated? ( dev-lang/swig ) )
 	ieee1394? ( sys-libs/libraw1394
 		media-libs/libdc1394:2 )
 	ffmpeg? ( >=media-video/ffmpeg-0.5 )
@@ -32,9 +31,10 @@ RDEPEND="sys-libs/zlib
 	png? ( >=media-libs/libpng-1.4 )
 	tiff? ( media-libs/tiff )
 	xine? ( media-libs/xine-lib )
-	octave? ( sci-mathematics/octave
-		dev-lang/swig )"
+	octave? ( sci-mathematics/octave )"
 DEPEND="${RDEPEND}
+	octave? ( dev-lang/swig )
+	python? ( deprecated? ( dev-lang/swig ) )
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
@@ -107,7 +107,7 @@ src_configure() {
 pkg_postinst() {
 	use python && python_mod_optimize opencv
 }
-		
+
 pkg_postrm() {
 	use python && python_mod_cleanup opencv
 }
