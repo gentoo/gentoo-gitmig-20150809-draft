@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r1.ebuild,v 1.1 2010/07/20 09:35:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.7-r2.ebuild,v 1.1 2010/07/27 13:06:47 voyageur Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tgz
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug +static-analyzer test"
+IUSE="debug +static-analyzer system-cxx-headers test"
 
 # Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
 DEPEND="static-analyzer? ( dev-lang/perl )
@@ -80,12 +80,15 @@ src_configure() {
 	# Skip llvm-gcc parts even if installed
 	CONF_FLAGS="${CONF_FLAGS} --with-llvmgccdir=/dev/null"
 
-	# Try to get current C++ headers path
-	CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=$(gcc-config -X| cut -d: -f1)/include/g++-v4"
-	CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
-	if has_multilib_profile; then
-		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=32"
+	if use system-cxx-headers; then
+		# Try to get current C++ headers path
+		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=$(gcc-config -X| cut -d: -f1 | sed '/-v4$/! s,$,/include/g++-v4,')"
+		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
+		if has_multilib_profile; then
+			CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=32"
+		fi
 	fi
+
 	econf ${CONF_FLAGS} || die "econf failed"
 }
 
@@ -132,9 +135,15 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize clang
-	elog "C++ headers search path is hardcoded to the active gcc profile one"
-	elog "If you change the active gcc profile, or update gcc to a new version,"
-	elog "you will have to remerge this package to update the search path"
+	if use system-cxx-headers; then
+		elog "C++ headers search path is hardcoded to the active gcc profile one"
+		elog "If you change the active gcc profile, or update gcc to a new version,"
+		elog "you will have to remerge this package to update the search path"
+	else
+		elog "If clang++ fails to find C++ headers on your system,"
+		elog "you can remerge clang with USE=system-cxx-headers to use C++ headers"
+		elog "from the active gcc profile"
+	fi
 }
 
 pkg_postrm() {
