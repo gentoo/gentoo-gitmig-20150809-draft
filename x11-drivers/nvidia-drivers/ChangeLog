@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.241 2010/07/20 21:39:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.242 2010/07/27 00:05:19 spock Exp $
+
+  27 Jul 2010; Michał Januszewski <spock@gentoo.org>
+  nvidia-drivers-256.35.ebuild:
+  Add a dependency on x11-libs/libXvMC (bug #321061).
 
   20 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-173.14.27.ebuild:
