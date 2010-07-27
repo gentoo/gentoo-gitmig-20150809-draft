@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11802 2010/07/27 11:40:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11803 2010/07/27 17:38:52 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jim Ramsay <lack@gentoo.org> (26 Jul 2010)
+# No longer works (Bug #284182), and no longer needed since app-admin/gkrellm
+# with USE="hddtemp" supports reading drive temperatures natively.
+#
+# Removal in 30 days.
+x11-plugins/gkrellm-hddtemp
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Jul 2010)
 #  on behalf of QA team
