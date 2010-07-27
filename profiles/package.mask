@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11800 2010/07/26 21:58:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11801 2010/07/27 00:14:52 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -914,6 +914,8 @@ x11-apps/xfsinfo
 >=xfce-extra/thunar-media-tags-plugin-0.1.2-r1
 >=xfce-base/xfce4-panel-4.7.0
 xfce-extra/thunar-vfs
+# bug 330005 - needs newer xfce4-panel release
+>=xfce-base/libxfce4util-4.7.2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (23 Oct 2009)
 #

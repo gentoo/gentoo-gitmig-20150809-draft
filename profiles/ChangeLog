@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4426 2010/07/26 20:16:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4427 2010/07/27 00:14:51 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2010; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Add libxfce4util-4.7.2 to the xfce masking block, bug 330005
 
   26 Jul 2010; Jim Ramsay <lack@gentoo.org> package.mask:
   Lastrite: net-misc/amazonmp3
