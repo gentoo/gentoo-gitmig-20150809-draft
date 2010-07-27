@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.48 2010/07/19 22:11:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.49 2010/07/27 15:26:07 pacho Exp $
+
+  27 Jul 2010; Pacho Ramos <pacho@gentoo.org> bluez-gnome-1.8.ebuild:
+  It collides with gnome-bluetooth, thanks to Diego for reporting in bug
+  #330083.
 
   19 Jul 2010; Jeroen Roovers <jer@gentoo.org> bluez-gnome-1.8.ebuild:
   Drop HPPA keywording (bug #324511).
