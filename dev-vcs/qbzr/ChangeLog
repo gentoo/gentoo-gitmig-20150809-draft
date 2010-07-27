@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qbzr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.9 2010/07/14 20:22:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.10 2010/07/27 21:08:35 fauli Exp $
+
+  27 Jul 2010; Christian Faulhammer <fauli@gentoo.org> -qbzr-0.18.5.ebuild:
+  clean up
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   qbzr-0.18.6.ebuild:
