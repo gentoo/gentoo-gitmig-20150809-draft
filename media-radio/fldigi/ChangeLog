@@ -1,6 +1,13 @@
 # ChangeLog for media-radio/fldigi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.4 2010/07/03 12:56:44 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.5 2010/07/27 10:45:26 tomjbe Exp $
+
+*fldigi-3.20.21 (27 Jul 2010)
+
+  27 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> -fldigi-3.20.13.ebuild,
+  fldigi-3.20.18.ebuild, +fldigi-3.20.21.ebuild:
+  Version bump. fltk now built with USE=xft (see bug #329757). Thanks to
+  <epinephrineaddict@gmail.com>
 
 *fldigi-3.20.18 (03 Jul 2010)
 
