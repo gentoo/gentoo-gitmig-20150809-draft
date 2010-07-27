@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.183 2010/07/21 14:21:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.184 2010/07/27 09:01:31 grobian Exp $
+
+  27 Jul 2010; Fabian Groffen <grobian@gentoo.org> nss-3.12.6-r2.ebuild:
+  Call generate_chk with correct args for Prefix
 
   21 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
   +files/nss-3.12.4-solaris-gcc.patch, nss-3.12.6-r2.ebuild:
