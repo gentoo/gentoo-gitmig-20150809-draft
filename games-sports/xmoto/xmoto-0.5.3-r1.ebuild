@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.3-r1.ebuild,v 1.1 2010/06/23 02:44:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.3-r1.ebuild,v 1.2 2010/07/27 13:59:48 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -14,7 +14,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${PN}/${PV}/${P}-src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="editor nls"
 
 RDEPEND="
