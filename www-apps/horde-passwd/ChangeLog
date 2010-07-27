@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-passwd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.26 2010/01/06 13:29:25 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.27 2010/07/27 22:19:48 a3li Exp $
+
+*horde-passwd-3.1.3 (27 Jul 2010)
+
+  27 Jul 2010; Alex Legler <a3li@gentoo.org> +horde-passwd-3.1.3.ebuild:
+  Version bump, closes bug 297738
 
 *horde-passwd-3.1.2 (06 Jan 2010)
 
