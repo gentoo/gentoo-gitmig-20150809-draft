@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-kronolith
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.54 2009/12/17 20:15:53 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.55 2010/07/27 21:45:22 a3li Exp $
+
+*horde-kronolith-2.3.4 (27 Jul 2010)
+
+  27 Jul 2010; Alex Legler <a3li@gentoo.org> +horde-kronolith-2.3.4.ebuild:
+  Version bump, closing bug 329251
 
 *horde-kronolith-2.3.3 (17 Dec 2009)
 
