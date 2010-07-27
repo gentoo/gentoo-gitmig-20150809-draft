@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-remote
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/ChangeLog,v 1.21 2010/07/27 16:13:06 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remote/ChangeLog,v 1.22 2010/07/27 16:32:42 billie Exp $
+
+  27 Jul 2010; Daniel Pielmeier <billie@gentoo.org>
+  vdr-remote-0.4.0-r2.ebuild:
+  Use linux-info eclass as it defines the kernel_is function.
 
 *vdr-remote-0.4.0-r2 (27 Jul 2010)
 
