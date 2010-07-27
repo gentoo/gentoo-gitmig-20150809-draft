@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.4.ebuild,v 1.1 2010/01/05 10:30:42 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.4.ebuild,v 1.2 2010/07/27 21:27:33 a3li Exp $
 
 EAPI="2"
-
-inherit autotools
 
 DESCRIPTION="Multiuser IRC proxy with ssl support"
 HOMEPAGE="http://bip.t1r.net/"
