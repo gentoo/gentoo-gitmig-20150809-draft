@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-annodex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-annodex/ChangeLog,v 1.36 2010/07/27 10:35:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-annodex/ChangeLog,v 1.37 2010/07/27 17:36:52 pacho Exp $
+
+  27 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-annodex-0.10.22.ebuild:
+  amd64 stable, bug 329703
 
   27 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-annodex-0.10.22.ebuild:
