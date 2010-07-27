@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.36 2010/07/27 14:03:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.37 2010/07/27 20:36:33 fauli Exp $
+
+  27 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  roxterm-1.16.3.ebuild:
+  stable x86, bug 330075
 
 *roxterm-1.18.5 (27 Jul 2010)
 
