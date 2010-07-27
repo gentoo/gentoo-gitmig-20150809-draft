@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.177 2010/07/26 07:49:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.178 2010/07/27 01:58:20 nerdboy Exp $
+
+  27 Jul 2010; Steve Arnold <nerdboy@gentoo.org>
+  +files/doxygen-1.7.1-dot-eps.patch:
+  Commiting lost patch (fixes bug 329915).
 
 *doxygen-1.7.1 (26 Jul 2010)
 
