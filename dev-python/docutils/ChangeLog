@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.115 2010/07/25 00:41:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.116 2010/07/27 15:30:43 grobian Exp $
+
+  27 Jul 2010; Fabian Groffen <grobian@gentoo.org> docutils-0.7.ebuild:
+  Add missing Prefix keywords, bug #290700
 
   25 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   docutils-0.7.ebuild:
