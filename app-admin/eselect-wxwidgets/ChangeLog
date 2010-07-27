@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.49 2010/04/07 15:36:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.50 2010/07/27 01:46:52 jer Exp $
+
+  27 Jul 2010; Jeroen Roovers <jer@gentoo.org> eselect-wxwidgets-1.3.ebuild:
+  Stable for HPPA (bug #305331).
 
   07 Apr 2010; Brent Baude <ranger@gentoo.org> eselect-wxwidgets-1.3.ebuild:
   Marking eselect-wxwidgets-1.3 ppc64 for bug 305331
