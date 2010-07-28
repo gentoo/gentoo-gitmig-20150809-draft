@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.28 2010/04/05 02:06:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.29 2010/07/28 05:01:50 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -9,17 +9,25 @@
 # plugin rather than in a single package.
 #
 
+inherit eutils gst-plugins10 versionator
+
 # This list is current for gst-plugins-bad-0.10.18.
 my_gst_plugins_bad="directsound directdraw osx_video quicktime vcd
 alsa assrender amrwb apexsink bz2 cdaudio celt cog directfb dirac dts divx
 dvdnav metadata faac faad fbdev flite gsm jack jp2k kate ladspa lv2 libmms
 modplug mimic mpeg2enc mplex musepack musicbrainz mythtv nas neon ofa rsvg
 timidity wildmidi sdl sdltest sndfile soundtouch spc gme swfdec theoradec xvid
-dvb oss4 wininet acm vdpau schro zbar
-ivorbis"
-# ivorbis  gone since 0.10.18 (moved to -base-0.10.27 as part of vorbis plugin)
+dvb oss4 wininet acm vdpau schro zbar"
 
-inherit eutils gst-plugins10
+# When adding conditionals like this, be careful about having leading spaces
+if version_is_at_least "0.10.19"; then
+	my_gst_plugins_bad+=" vp8"
+fi
+
+# ivorbis gone since 0.10.18 (moved to -base-0.10.27 as part of vorbis plugin)
+if ! version_is_at_least "0.10.18"; then
+	my_gst_plugins_bad+=" ivorbis"
+fi
 
 MY_PN="gst-plugins-bad"
 MY_P=${MY_PN}-${PV}
