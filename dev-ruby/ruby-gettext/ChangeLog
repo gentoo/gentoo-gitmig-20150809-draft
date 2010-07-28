@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.68 2010/07/28 13:31:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.69 2010/07/28 15:41:10 a3li Exp $
+
+*ruby-gettext-2.1.0_p20100728-r1 (28 Jul 2010)
+
+  28 Jul 2010; Alex Legler <a3li@gentoo.org>
+  -ruby-gettext-2.1.0_p20100728.ebuild,
+  +ruby-gettext-2.1.0_p20100728-r1.ebuild:
+  Fix gemspec generation by setting FAKEGEM_VERSION.
 
 *ruby-gettext-2.1.0_p20100728 (28 Jul 2010)
 

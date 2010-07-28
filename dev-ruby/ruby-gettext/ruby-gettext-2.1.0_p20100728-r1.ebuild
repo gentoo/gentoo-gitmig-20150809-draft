@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.1.0_p20100728.ebuild,v 1.1 2010/07/28 13:31:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.1.0_p20100728-r1.ebuild,v 1.1 2010/07/28 15:41:10 a3li Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18 ruby19 jruby ree18"
 
 RUBY_FAKEGEM_NAME="${PN/ruby-/}"
+RUBY_FAKEGEM_VERSION="${PV%_*}"
 
 RUBY_FAKEGEM_TASK_DOC="rerdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
