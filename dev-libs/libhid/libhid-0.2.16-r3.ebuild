@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16-r3.ebuild,v 1.1 2010/07/17 00:10:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16-r3.ebuild,v 1.2 2010/07/28 13:15:22 flameeyes Exp $
 
 EAPI="2"
 
@@ -53,11 +53,6 @@ src_configure() {
 		# "python" use flag is not set
 		econf ${myconf} || die
 	fi
-}
-
-src_compile() {
-	append-ldflags
-	emake || die
 }
 
 src_install() {
