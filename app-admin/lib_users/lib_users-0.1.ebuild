@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/lib_users-0.1.ebuild,v 1.1 2010/07/28 13:14:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/lib_users-0.1.ebuild,v 1.2 2010/07/28 13:19:30 jer Exp $
 
 EAPI=3
 
@@ -18,7 +18,11 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_test() {
-	python test_libusers.py || echo "test failed"
+	if python test_libusers.py; then
+		einfo "test_libusers.py succeeded"
+	else
+		ewarn "test_libusers.py failed"
+	fi
 }
 
 src_install() {
