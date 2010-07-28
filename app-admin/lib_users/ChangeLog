@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.5 2010/07/28 13:42:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.6 2010/07/28 14:02:09 jer Exp $
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
+  Use dev-python/nose to run tests thanks to arfrever.
 
   28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
   Hail to the python overlords (arfrever): use python.eclass to convert
