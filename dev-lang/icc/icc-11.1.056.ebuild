@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.7 2010/05/30 18:17:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.8 2010/07/28 13:05:36 flameeyes Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="eclipse +idb ipp mkl"
 KEYWORDS="~amd64 ~ia64 ~x86"
 
-RESTRICT="mirror strip binchecks"
+RESTRICT="mirror strip"
 
 DEPEND=""
 RDEPEND="~virtual/libstdc++-3.3
