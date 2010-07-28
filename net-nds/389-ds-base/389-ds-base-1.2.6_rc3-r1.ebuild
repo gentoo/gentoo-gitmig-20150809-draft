@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.5.ebuild,v 1.1 2010/07/23 15:15:53 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.6_rc3-r1.ebuild,v 1.1 2010/07/28 13:57:00 lxnay Exp $
 
 EAPI=2
 
@@ -66,6 +66,9 @@ src_prepare() {
 	# enable nsslapd-allow-unauthenticated-binds by default
 	sed -i '/^nsslapd-allow-unauthenticated-binds/ s/off/on/' "${S}"/ldap/ldif/template-dse.ldif.in || \
 		die "cannot tweak default setting: nsslapd-allow-unauthenticated-binds"
+
+	# Fix buggy .ldiff, see RedHat #617629
+	epatch "${FILESDIR}/0001-Bug-617629-Missing-aliases-in-new-schema-files.patch"
 
 }
 
