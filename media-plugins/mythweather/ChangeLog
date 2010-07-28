@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.64 2010/07/27 15:30:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.65 2010/07/28 21:11:59 cardoe Exp $
+
+  28 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythweather-0.23.1_p25396.ebuild:
+  Added two new dependencies of mythweather. bug #330057
 
 *mythweather-0.23.1_p25396 (27 Jul 2010)
 
