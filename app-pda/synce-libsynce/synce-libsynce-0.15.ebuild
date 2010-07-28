@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/synce-libsynce-0.15.ebuild,v 1.1 2010/07/28 09:44:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-libsynce/synce-libsynce-0.15.ebuild,v 1.2 2010/07/28 09:51:22 ssuominen Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/synce/libsynce-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="dbus static-libs"
 
 RDEPEND=">=dev-libs/check-0.9
