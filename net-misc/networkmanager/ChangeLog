@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.74 2010/07/07 17:57:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.75 2010/07/28 09:34:45 dagger Exp $
+
+*networkmanager-0.8.1 (28 Jul 2010)
+
+  28 Jul 2010; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-0.7.1-r3.ebuild, -networkmanager-0.7.1_p20090824.ebuild,
+  -networkmanager-0.8.ebuild, +networkmanager-0.8.1.ebuild,
+  +files/networkmanager-0.8.1-confchanges.patch:
+  Bump version to 0.8.1. Added Gentoo specyfic plugin - ifnet plugin by Qiao
+  Mu
 
   07 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   networkmanager-0.8.ebuild, networkmanager-0.8-r1.ebuild:
