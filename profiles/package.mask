@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11804 2010/07/28 22:35:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11805 2010/07/28 23:24:05 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,7 @@
 
 #--- END OF EXAMPLES ---
 
-# Markos Chandras <hwoarang@gentoo.org> (08 Jul 2010)
+# Markos Chandras <hwoarang@gentoo.org> (28 Jul 2010)
 # Masking for extensive testing
 =net-p2p/qbittorrent-2.3.0
 
