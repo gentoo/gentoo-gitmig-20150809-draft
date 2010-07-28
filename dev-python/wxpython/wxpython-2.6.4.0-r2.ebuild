@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r2.ebuild,v 1.13 2010/07/27 03:13:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r2.ebuild,v 1.14 2010/07/28 13:56:51 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -88,12 +88,12 @@ src_install() {
 
 	rename_files() {
 		for file in "${D}$(python_get_sitedir)"/wx{version.*,.pth}; do
-			mv "${file}" "${file}-${SLOT}"
+			mv "${file}" "${file}-${SLOT}" || return 1
 		done
 
 		for dir in "${D}$(python_get_sitedir)"/wx-${SLOT}-gtk2-{ansi,unicode}; do
 			if [[ -d ${dir} ]]; then
-				cp -R "${D}$(python_get_sitedir)"/wxaddons/ "${dir}"
+				cp -R "${D}$(python_get_sitedir)"/wxaddons/ "${dir}" || return 1
 				wxaddons_copied=1
 			fi
 		done
