@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/rbot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.42 2009/11/07 20:28:12 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.43 2010/07/28 07:58:09 a3li Exp $
+
+*rbot-0.9.15 (28 Jul 2010)
+
+  28 Jul 2010; Alex Legler <a3li@gentoo.org> +rbot-0.9.15.ebuild,
+  +files/rbot.conf2, +files/rbot.init2:
+  Version bump, closes bug 330125 by Jens Pranaitis. Ebuild now uses the
+  ruby-ng eclass. Adds support for specifying a Ruby interpreter for rbot.
+  Add fi to LINGUAS.
 
   07 Nov 2009; Alex Legler <a3li@gentoo.org> -rbot-0.9.11_rc2.ebuild,
   rbot-0.9.14.ebuild, metadata.xml:
