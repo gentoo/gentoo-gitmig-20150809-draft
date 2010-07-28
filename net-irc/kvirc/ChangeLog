@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.111 2010/07/27 20:52:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.112 2010/07/28 03:29:33 phajdan.jr Exp $
+
+  28 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kvirc-4.1_pre4696.ebuild:
+  x86 stable wrt security bug #330111
 
 *kvirc-4.1_pre4696 (27 Jul 2010)
 
