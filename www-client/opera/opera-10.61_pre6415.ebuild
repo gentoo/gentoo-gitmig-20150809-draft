@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.61_pre6415.ebuild,v 1.2 2010/07/28 16:20:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.61_pre6415.ebuild,v 1.3 2010/07/28 16:21:22 jer Exp $
 
 EAPI="2"
 
@@ -81,7 +81,7 @@ RDEPEND="
 	x11-libs/libXt
 	x11-libs/libxcb
 	x11-libs/xcb-util
-	"
+"
 
 pkg_setup() {
 	echo -e \
