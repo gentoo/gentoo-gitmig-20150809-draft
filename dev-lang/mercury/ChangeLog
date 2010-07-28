@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.111 2010/07/26 07:30:19 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.112 2010/07/28 08:24:55 keri Exp $
+
+  28 Jul 2010; <keri@gentoo.org> mercury-10.04.ebuild,
+  +files/mercury-10.04-tests-static-link.patch:
+  Disable hard-coded static link tests
 
   26 Jul 2010; <keri@gentoo.org> mercury-10.04.ebuild,
   +files/mercury-10.04-sparc-llds-base-grade.patch:
