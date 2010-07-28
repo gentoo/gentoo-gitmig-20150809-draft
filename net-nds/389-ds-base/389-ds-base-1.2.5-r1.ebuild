@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.5-r1.ebuild,v 1.1 2010/07/28 13:57:00 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.5-r1.ebuild,v 1.2 2010/07/28 15:43:57 mr_bones_ Exp $
 
 EAPI=2
 
@@ -69,7 +69,6 @@ src_prepare() {
 
 	# Fix buggy .ldiff, see RedHat #617629
 	epatch "${FILESDIR}/0001-Bug-617629-Missing-aliases-in-new-schema-files.patch"
-
 
 }
 
