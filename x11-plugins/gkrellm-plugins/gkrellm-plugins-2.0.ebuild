@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.5 2008/01/31 16:33:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-2.0.ebuild,v 1.6 2010/07/28 16:23:50 lack Exp $
 
 DESCRIPTION="emerge this package to install all of the gkrellm plugins"
 HOMEPAGE="http://www.gkrellm.net/"
@@ -15,7 +15,6 @@ RDEPEND="!<app-admin/gkrellm-2
 		x11-plugins/gkrellflynn
 		>=x11-plugins/gkrellkam-2.0.0
 		>=x11-plugins/gkrellm-bgchanger-0.0.8
-		>=x11-plugins/gkrellm-hddtemp-0.2_beta
 		>=x11-plugins/gkrellm-leds-0.8.0
 		>=x11-plugins/gkrellm-mailwatch-2.4.2
 		>=x11-plugins/gkrellm-reminder-2.0.0
