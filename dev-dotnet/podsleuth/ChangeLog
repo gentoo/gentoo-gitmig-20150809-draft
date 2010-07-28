@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/podsleuth
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.13 2009/09/27 14:06:30 nixnut Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.14 2010/07/28 08:41:55 ssuominen Exp $
+
+*podsleuth-0.6.7 (28 Jul 2010)
+
+  28 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +podsleuth-0.6.7.ebuild:
+  Version bump.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> podsleuth-0.6.4-r1.ebuild:
   ppc stable #273262
