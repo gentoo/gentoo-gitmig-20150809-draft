@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.18 2010/07/28 05:17:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.19 2010/07/28 06:24:44 leio Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -14,7 +14,7 @@
 # Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer
 # or the gstreamer team.
 
-inherit eutils gst-plugins10
+inherit eutils versionator gst-plugins10
 
 
 ###
@@ -25,9 +25,13 @@ MY_PN=gst-plugins-ugly
 MY_P=${MY_PN}-${PV}
 # All relevant configure options for gst-plugins-ugly
 # need a better way to extract these.
-# Not necessary since -ugly-0.10.13: id3tag dvdnav
-my_gst_plugins_ugly="a52dec amrnb amrwb cdio dvdread dvdnav lame id3tag mad
-mpeg2dec sidplay twolame x264"
+my_gst_plugins_ugly="a52dec amrnb amrwb cdio dvdread lame mad mpeg2dec sidplay
+twolame x264"
+
+# dvdnav and id3tag disabled/removed since -ugly-0.10.13
+if ! version_is_at_least "0.10.13"; then
+	my_gst_plugins_bad+=" dvdnav id3tag"
+fi
 
 #SRC_URI="mirror://gnome/sources/gst-plugins/${PV_MAJ_MIN}/${MY_P}.tar.bz2"
 SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-ugly/${MY_P}.tar.bz2"
