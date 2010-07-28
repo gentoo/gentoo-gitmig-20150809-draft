@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/attic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/attic/ChangeLog,v 1.7 2010/05/24 05:57:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/attic/ChangeLog,v 1.8 2010/07/28 23:13:24 flameeyes Exp $
+
+  28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> attic-0.5.2.ebuild:
+  Depend on slotted tryouts.
 
   24 May 2010; Hans de Graaff <graaff@gentoo.org> attic-0.5.2.ebuild:
   Declare test USE flag.
