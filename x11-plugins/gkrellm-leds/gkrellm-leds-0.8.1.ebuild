@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.8.1.ebuild,v 1.12 2008/01/11 23:04:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/gkrellm-leds-0.8.1.ebuild,v 1.13 2010/07/28 13:47:36 lack Exp $
 
 inherit gkrellm-plugin
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://heim.ifi.uio.no/~oyvinha/gkleds/"
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64"
+RESTRICT="test"
 
 DEPEND="x11-proto/inputproto"
 RDEPEND="x11-libs/libXtst"
