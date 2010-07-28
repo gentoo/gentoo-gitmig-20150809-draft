@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.14 2010/05/29 00:20:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.15 2010/07/28 11:41:26 dagger Exp $
+
+*connman-0.55 (28 Jul 2010)
+
+  28 Jul 2010; Robert Piasek <dagger@gentoo.org> -connman-0.51.ebuild,
+  +connman-0.55.ebuild:
+  Version bump. Added WiMAX support
 
   29 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> connman-0.51.ebuild,
   connman-0.53.ebuild:
