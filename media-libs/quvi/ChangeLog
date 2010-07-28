@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.4 2010/06/25 11:35:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.5 2010/07/28 20:25:54 hanno Exp $
+
+*quvi-0.2.1 (28 Jul 2010)
+
+  28 Jul 2010; Hanno Boeck <hanno@gentoo.org> +quvi-0.2.1.ebuild:
+  Version bump, restrict tests as they depend on live websites.
 
   25 Jun 2010; Alexis Ballier <aballier@gentoo.org> quvi-0.2.0.ebuild:
   depend on lua[deprecated] by Arseny Solokha <b0ntrict0r@yandex.ru>, bug
