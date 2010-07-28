@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/lib_users
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.1 2010/07/28 13:14:59 jer Exp $
+
+*lib_users-0.1 (28 Jul 2010)
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> +lib_users-0.1.ebuild,
+  +metadata.xml:
+  Initial commit.
+
