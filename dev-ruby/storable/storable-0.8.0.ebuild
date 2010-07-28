@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.7.4.ebuild,v 1.3 2010/07/28 23:22:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/storable-0.8.0.ebuild,v 1.1 2010/07/28 23:22:35 flameeyes Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 jruby"
+# jruby → yajl-ruby won't work, as it's compiled extension
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST=""
 
@@ -27,16 +28,20 @@ S="${WORKDIR}/delano-${PN}-*"
 
 # technically, it could work without either; on the other hand, it
 # would break a bit of stuff.
-ruby_add_rdepend "|| ( dev-ruby/json dev-ruby/yajl-ruby )"
+#ruby_add_rdepend "|| ( dev-ruby/json dev-ruby/yajl-ruby )"
 
-ruby_add_bdepend "test? ( dev-ruby/tryouts:0 )"
+# Somehow it infinite-recurse if JSON is used, see issue #1, so use
+# yajl directly.
+ruby_add_rdepend dev-ruby/yajl-ruby
+
+ruby_add_bdepend "test? ( dev-ruby/tryouts:2 )"
 
 all_ruby_prepare() {
 	mv bin examples || die
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib -S sergeant || die "tests failed"
+	${RUBY} -S try || die "tests failed"
 }
 
 all_ruby_install() {
