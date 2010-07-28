@@ -4,6 +4,8 @@
 
 EAPI="2"
 
+inherit multilib
+
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="http://connman.net"
 SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
@@ -65,7 +67,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dobin client/cm || die "client installation failed"
 
-	keepdir /var/lib/${PN} || die
+	keepdir /var/"$(get_libdir)"/${PN} || die
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
 }
