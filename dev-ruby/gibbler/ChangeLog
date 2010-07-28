@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gibbler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/ChangeLog,v 1.9 2010/06/19 19:50:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/ChangeLog,v 1.10 2010/07/28 23:16:55 flameeyes Exp $
+
+  28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -gibbler-0.8.3.ebuild, gibbler-0.8.4.ebuild:
+  Drop old version, fix tryouts dependency to slot.
 
 *gibbler-0.8.4 (19 Jun 2010)
 
