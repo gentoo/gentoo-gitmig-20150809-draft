@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.7.999.ebuild,v 1.1 2010/01/28 15:49:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.8.1.ebuild,v 1.1 2010/07/28 10:08:02 dagger Exp $
 
 EAPI="2"
 
