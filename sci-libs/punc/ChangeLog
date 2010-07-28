@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/punc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.2 2010/06/09 11:41:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.3 2010/07/28 15:16:45 flameeyes Exp $
+
+  28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> punc-0.2_p1.ebuild,
+  +files/punc-0.2_p1-libdir.patch:
+  Pre-patch the Makefile rather tha after econf (might fix an install
+  failure).
 
   09 Jun 2010; Justin Lecher <jlec@gentoo.org> punc-0.2_p1.ebuild:
   Force mpi USE to be equal with deps

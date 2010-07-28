@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.3 2010/06/09 11:41:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.4 2010/07/28 15:16:46 flameeyes Exp $
 
 EAPI="3"
 
@@ -31,10 +31,12 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	rm -rf src/{blas,lapack,arpack,superlu}
 	epatch "${FILESDIR}"/${PV}-underlinking.patch
+	epatch "${FILESDIR}"/${P}-libdir.patch
 
 	cp tools/tests/pmg/*.f src/pmg/ -f
 	cp tools/tests/pmg/*.c src/pmg/ -f
 	cp src/pmg/vpmg.h src/vf2c/punc/vpmg.h
+
 	eautoreconf
 }
 
@@ -53,10 +55,6 @@ src_configure() {
 		--enable-pmgforce \
 		--enable-cgcodeforce \
 		--enable-vf2cforce
-
-	sed -e "s|libdir = \${prefix}/lib/\${fetk_cpu_vendor_os}|libdir = \${prefix}/$(get_libdir)/|" \
-	-i src/aaa_lib/Makefile || \
-	die "failed to patch lib Makefile"
 }
 
 src_install() {
