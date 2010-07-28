@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.30 2010/06/19 10:32:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.31 2010/07/28 22:32:35 flameeyes Exp $
+
+  28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  nokogiri-1.4.2.ebuild, +files/nokogiri-1.4.2+ruby-1.9.2.patch:
+  Fix building with Ruby 1.9.2 (bug #330275).
 
 *nokogiri-1.4.2 (19 Jun 2010)
 
