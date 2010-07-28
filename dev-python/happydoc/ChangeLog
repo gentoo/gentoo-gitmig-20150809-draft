@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.24 2010/07/28 21:50:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.25 2010/07/28 22:14:39 arfrever Exp $
+
+*happydoc-3.1-r1 (28 Jul 2010)
+
+  28 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -happydoc-3.1.ebuild, +happydoc-3.1-r1.ebuild,
+  +files/happydoc-3.1-python-2.6.patch:
+  Fix raising of exceptions for compatibility with Python 2.6.
 
   28 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   happydoc-3.1.ebuild:
