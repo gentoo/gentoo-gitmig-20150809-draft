@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11803 2010/07/27 17:38:52 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11804 2010/07/28 22:35:34 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (08 Jul 2010)
+# Masking for extensive testing
+=net-p2p/qbittorrent-2.3.0
 
 # Jim Ramsay <lack@gentoo.org> (26 Jul 2010)
 # No longer works (Bug #284182), and no longer needed since app-admin/gkrellm
@@ -197,10 +201,6 @@ dev-libs/gnome-build
 # Alphas and snapshots are not for everyday use
 # <http://my.opera.com/desktopteam/blog>
 =www-client/opera-10.70*
-
-# Markos Chandras <hwoarang@gentoo.org> (08 Jul 2010)
-# Masking rc releases
-=net-p2p/qbittorrent-2.3.0_rc*
 
 # Bernard Cafarelli <voyageur@gentoo.org> (07 Jul 2010)
 # Broken with current stable gnustep base packages
