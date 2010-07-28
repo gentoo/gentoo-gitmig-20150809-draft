@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.3.0-r3.ebuild,v 1.1 2010/07/13 11:57:23 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-2.3.0-r3.ebuild,v 1.2 2010/07/28 12:56:32 flameeyes Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Confix: A Build Tool on Top of GNU Automake"
 HOMEPAGE="http://confix.sourceforge.net"
