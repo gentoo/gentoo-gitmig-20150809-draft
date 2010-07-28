@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/389-ds-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.5 2010/07/28 13:57:00 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.6 2010/07/28 14:15:11 lxnay Exp $
+
+  28 Jul 2010; Fabio Erculiani <lxnay@gentoo.org> files/restart-dirsrv,
+  files/start-dirsrv:
+  fix start/stop scripts
 
 *389-ds-base-1.2.6_rc3-r1 (28 Jul 2010)
 *389-ds-base-1.2.5-r1 (28 Jul 2010)
