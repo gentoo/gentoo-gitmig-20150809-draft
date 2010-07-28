@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.17 2009/11/16 06:04:12 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.18 2010/07/28 05:17:58 leio Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -55,12 +55,10 @@ gst-plugins-ugly_src_configure() {
 
 	einfo "Configuring to build ${GST_PLUGINS_BUILD} plugin(s) ..."
 
-	for plugin in ${GST_PLUGINS_BUILD}; do
-		my_gst_plugins_ugly=${my_gst_plugins_ugly/${plugin}/}
-	done
 	for plugin in ${my_gst_plugins_ugly}; do
 		gst_conf="${gst_conf} --disable-${plugin} "
 	done
+
 	for plugin in ${GST_PLUGINS_BUILD}; do
 		gst_conf="${gst_conf} --enable-${plugin} "
 	done

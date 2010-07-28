@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.29 2010/07/28 05:01:50 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.30 2010/07/28 05:17:58 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -87,10 +87,6 @@ gst-plugins-bad_src_configure() {
 	local plugin gst_conf
 
 	einfo "Configuring to build ${GST_PLUGINS_BUILD} plugin(s) ..."
-
-	for plugin in ${GST_PLUGINS_BUILD} ; do
-		my_gst_plugins_bad="${my_gst_plugins_bad/${plugin}/}"
-	done
 
 	for plugin in ${my_gst_plugins_bad} ; do
 		gst_conf="${gst_conf} --disable-${plugin}"
