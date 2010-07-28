@@ -1,0 +1,10 @@
+# ChangeLog for media-video/tsmuxer
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.1 2010/07/28 00:54:12 sbriesen Exp $
+
+*tsmuxer-1.10.6 (28 Jul 2010)
+
+  28 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +tsmuxer-1.10.6.ebuild, +files/icon.png, +metadata.xml:
+  initial commit
+
