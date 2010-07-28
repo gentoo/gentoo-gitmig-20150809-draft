@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.2 2010/01/09 16:57:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.3 2010/07/28 13:00:06 flameeyes Exp $
 
 EAPI=2
 
@@ -36,7 +36,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	# bug #330203
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
