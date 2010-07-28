@@ -1,6 +1,6 @@
 --- src/fe-gtk/maingui.c.old	2010-05-16 05:15:55.000000000 +0200
-+++ src/fe-gtk/maingui.c	2010-07-20 23:49:11.000000000 +0200
-@@ -2828,13 +2828,13 @@
++++ src/fe-gtk/maingui.c	2010-07-27 05:10:22.000000000 +0200
+@@ -2828,7 +2828,7 @@
  static void
  mg_create_entry (session *sess, GtkWidget *box)
  {
@@ -9,13 +9,6 @@
  	session_gui *gui = sess->gui;
  
  	hbox = gtk_hbox_new (FALSE, 0);
- 	gtk_box_pack_start (GTK_BOX (box), hbox, 0, 0, 0);
- 
--	gui->nick_box = gtk_hbox_new (FALSE, 0);
-+	gui->nick_box = gtk_vbox_new (FALSE, 0);
- 	gtk_box_pack_start (GTK_BOX (hbox), gui->nick_box, 0, 0, 0);
- 
- 	gui->nick_label = but = gtk_button_new_with_label (sess->server->nick);
 @@ -2846,7 +2846,7 @@
  
  #ifdef USE_GTKSPELL

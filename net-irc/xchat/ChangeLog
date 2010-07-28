@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.282 2010/07/26 13:33:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.283 2010/07/28 11:27:43 polynomial-c Exp $
+
+  28 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -files/xchat-input-box3.patch, xchat-2.8.8.ebuild,
+  +files/xchat-input-box4.patch:
+  Fixed placement of channelstatus dot at the left side of the input box.
+  Thanks to Westly Ward for reporting this issue in bug #330007 and Rafał
+  Mużyło for providing a fixed patch.
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org> xchat-2.8.8.ebuild:
   stable x86, bug 329835
