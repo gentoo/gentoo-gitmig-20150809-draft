@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.5 2010/07/27 15:30:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.6 2010/07/29 22:58:43 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,6 +27,10 @@ DOCS="*.txt"
 PYTHON_MODNAME="docutils roman.py"
 
 GLEP_SRC="${WORKDIR}/glep-0.4-r1"
+
+pkg_setup() {
+	python_pkg_setup
+}
 
 src_prepare() {
 	# Delete internal copies of optparse and textwrap modules.
