@@ -1,0 +1,17 @@
+# ChangeLog for virtual/perl-XSLoader
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.1 2010/07/29 20:17:16 tove Exp $
+
+  29 Jul 2010; Torsten Veller <tove@gentoo.org> +perl-XSLoader-0.10.ebuild,
+  +metadata.xml:
+  Initial import from perl-experimental for Mouse
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add empty HOMEPAGE and LICENSE. Add mandatory SRC_URI
+
+*perl-XSLoader-0.10 (18 Dec 2009)
+
+  18 Dec 2009; Torsten Veller <tove@gentoo.org> +perl-XSLoader-0.10.ebuild,
+  +metadata.xml:
+  Initial commit
+
