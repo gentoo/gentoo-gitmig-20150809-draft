@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.9 2010/07/29 17:29:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.10 2010/07/29 20:21:21 tove Exp $
+
+*Mouse-0.64 (29 Jul 2010)
+
+  29 Jul 2010; Torsten Veller <tove@gentoo.org> +files/0.64-ppport.patch,
+  +Mouse-0.64.ebuild:
+  Version bump. Use provided ppport.h
 
   29 Jul 2010; Jeroen Roovers <jer@gentoo.org> Mouse-0.40.ebuild:
   Stable for HPPA (bug #321235).
