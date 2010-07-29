@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.6.ebuild,v 1.1 2010/01/08 13:57:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.6.ebuild,v 1.2 2010/07/29 22:41:48 ssuominen Exp $
 
-inherit multilib
+EAPI=2
+inherit autotools multilib
 
-MY_P="fweelin-${PV/_/}"
+MY_P=fweelin-${PV/_}
 
 DESCRIPTION="A live looping instrument using SDL and jack."
 HOMEPAGE="http://freewheeling.sourceforge.net"
@@ -15,35 +16,44 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="fluidsynth"
 
-RDEPEND="x11-libs/libXt
-	net-libs/gnutls
-	media-libs/freetype
-	media-libs/sdl-gfx
-	>=media-libs/sdl-ttf-2.0.0
-	dev-libs/libxml2
+RDEPEND="dev-libs/libxml2
 	media-libs/alsa-lib
-	media-sound/jack-audio-connection-kit
-	fluidsynth? ( media-sound/fluidsynth )
+	media-libs/freetype:2
 	media-libs/libvorbis
-	media-libs/libsndfile"
+	media-libs/libsdl[audio,video,joystick]
+	media-libs/libsndfile
+	media-libs/sdl-gfx
+	media-libs/sdl-ttf
+	media-sound/jack-audio-connection-kit
+	net-libs/gnutls
+	x11-libs/libXt
+	fluidsynth? ( media-sound/fluidsynth )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e "s:/usr/local/lib/jack:/usr/$(get_libdir)/jack:" src/Makefile.{am,in}
+src_prepare() {
+	sed -i -e 's:-L/usr/X11R6/lib::' configure.ac || die
+
+	sed -i \
+		-e '/CFLAGS/s:-g::' \
+		-e '/CFLAGS/s:-funroll-loops.*::' \
+		-e "s:local/lib/jack:$(get_libdir)/jack:" \
+		src/Makefile.am || die
+
+	eautoreconf
 }
 
-src_compile() {
-	econf $(use_enable fluidsynth)
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		$(use_enable fluidsynth) \
+		--disable-dependency-tracking
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TUNING
+
 	docinto examples
 	dodoc examples/*
 }
