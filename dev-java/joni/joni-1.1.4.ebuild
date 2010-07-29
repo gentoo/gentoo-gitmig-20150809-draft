@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/joni-1.1.4.ebuild,v 1.1 2010/06/28 11:51:59 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/joni-1.1.4.ebuild,v 1.2 2010/07/29 08:09:26 fauli Exp $
 
 EAPI="3"
 JAVA_PKG_IUSE="source"
@@ -11,7 +11,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="http://github.com/jruby/joni/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 CDEPEND="dev-java/asm:3
