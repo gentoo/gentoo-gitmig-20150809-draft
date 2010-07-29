@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.initd,v 1.1 2010/02/17 12:28:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.initd,v 1.2 2010/07/29 21:50:32 voyageur Exp $
 
 opts="reload"
 
@@ -16,9 +16,13 @@ check_configuration() {
 		eerror "file. In /etc/proftpd you can find a sample configuration."
 		return 1
 	fi
-	ebegin "Checking ProFTPD configuration"
-	/usr/sbin/proftpd -t
-	eend $? "A configuration error was found. You have to fix your configuration file."
+ 	/usr/sbin/proftpd -t &>/dev/null
+ 	if [ $? -ne 0 ] ; then
+ 		eerror "The ProFTPD configuration file /etc/proftpd/proftpd.conf is invalid! You have to"
+ 		eerror "fix your configuration in order to run the ProFTPD server. For more information"
+ 		eerror "you may execute the ProFTPD configuration check '/usr/sbin/proftpd -t'."
+ 		return 2
+ 	fi
 }
 
 start() {
