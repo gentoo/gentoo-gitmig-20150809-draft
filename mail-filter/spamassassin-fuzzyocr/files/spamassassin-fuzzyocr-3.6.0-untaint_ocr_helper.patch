@@ -4,7 +4,8 @@ Description: untaint config entries
 Forwarded: Christian Holler <decoder@own-hero.net>
 Author: Arjan Opmeer <arjan.opmeer@gmail.com>
 Bug-Debian: http://bugs.debian.org/568560
-Last-Update: 2010-02-18
+Bug-Debian: http://bugs.debian.org/568233
+Last-Update: 2010-05-18
 
 --- a/FuzzyOcr/Config.pm
 +++ b/FuzzyOcr/Config.pm
@@ -25,3 +26,17 @@ Last-Update: 2010-02-18
              debuglog("Using $a => $conf->{$b}");
          } else {
              foreach my $p (@paths) {
+diff --git a/FuzzyOcr/Logging.pm b/FuzzyOcr/Logging.pm
+index bed9ff5..ef02b32 100644
+--- a/FuzzyOcr/Logging.pm
++++ b/FuzzyOcr/Logging.pm
+@@ -31,7 +31,8 @@ sub logfile {
+     my $time = strftime("%Y-%m-%d %H:%M:%S",localtime(time));
+     $logtext =~ s/\n/\n                      /g;
+ 
+-    unless ( open LOGFILE, ">>", $conf->{focr_logfile} ) {
++    my $fname = Mail::SpamAssassin::Util::untaint_file_path($conf->{focr_logfile});
++    unless ( open LOGFILE, ">>", $fname ) {
+        warn "Can't open $conf->{focr_logfile} for writing, check permissions";
+        return;
+     }
