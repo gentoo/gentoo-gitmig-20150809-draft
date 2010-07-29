@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.397 2010/07/29 16:27:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.398 2010/07/29 17:27:23 mabi Exp $
+
+  29 Jul 2010; Matti Bickel <mabi@gentoo.org>
+  files/eblits/src_install-v1.eblit:
+  use /tmp for session.save_path (bug #282768)
 
   29 Jul 2010; Matti Bickel <mabi@gentoo.org>
   files/eblits/src_install-v1.eblit:
