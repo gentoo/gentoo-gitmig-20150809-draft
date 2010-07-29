@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.283 2010/07/28 11:27:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.284 2010/07/29 22:19:05 hwoarang Exp $
+
+  29 Jul 2010; Markos Chandras <hwoarang@gentoo.org> xchat-2.8.8.ebuild:
+  Stable on amd64 wrt bug #329835
 
   28 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
   -files/xchat-input-box3.patch, xchat-2.8.8.ebuild,
