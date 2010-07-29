@@ -1,6 +1,15 @@
 # ChangeLog for media-video/dvbackup
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbackup/ChangeLog,v 1.5 2007/02/22 01:44:57 peper Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbackup/ChangeLog,v 1.6 2010/07/29 16:14:08 sbriesen Exp $
+
+*dvbackup-0.0.4-r1 (29 Jul 2010)
+
+  29 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +dvbackup-0.0.4-r1.ebuild, +files/dvbackup-0.0.4-gcc4.diff:
+  major ebuild cleanup. added amd64 keyword, fixed GCC4 compilation, respect
+  LDFLAGS, added missing dependencies, removed dvconnect (is already
+  included in media-libs/libdv) and install underrun-images under
+  /usr/share/dvbackup.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
