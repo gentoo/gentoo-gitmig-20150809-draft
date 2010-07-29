@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/png-1.2.0-r1.ebuild,v 1.1 2010/07/08 18:23:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/png-1.2.0-r1.ebuild,v 1.2 2010/07/29 00:14:22 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -19,12 +19,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_bdepend "doc? ( dev-ruby/hoe )"
-ruby_add_bdepend "test? ( dev-ruby/hoe dev-ruby/minitest )"
+ruby_add_bdepend "
+	doc? ( dev-ruby/hoe )
+	test? (
+		dev-ruby/hoe
+		dev-ruby/minitest
+	)"
+
 ruby_add_rdepend ">=dev-ruby/ruby-inline-3.5.0"
 
 src_test() {
-	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home."
+	chmod 0755 "${HOME}" || die "Failed to fix permissions on home."
 	ruby-ng_src_test
 }
 
