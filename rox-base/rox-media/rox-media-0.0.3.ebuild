@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/rox-media-0.0.3.ebuild,v 1.1 2010/07/28 12:25:45 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/rox-media-0.0.3.ebuild,v 1.2 2010/07/29 02:08:01 mr_bones_ Exp $
 
 EAPI=3
 inherit rox
 
 DESCRIPTION="Manage removable drives for ROX and other lightweight desktops"
 HOMEPAGE="http://rox.sourceforge.net"
-SRC_URI="mirrors://gentoo/Media-0.0.3.tar.bz2"
+SRC_URI="mirror://gentoo/Media-0.0.3.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
