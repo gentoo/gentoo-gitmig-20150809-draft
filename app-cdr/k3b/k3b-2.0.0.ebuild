@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.0.ebuild,v 1.2 2010/07/22 18:05:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.0.ebuild,v 1.3 2010/07/29 19:13:20 hwoarang Exp $
 
 EAPI=2
 WEBKIT_REQUIRED=always
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="debug dvd emovix encode ffmpeg flac mad lame musepack musicbrainz sndfile sox taglib vcd vorbis +wav"
 
 DEPEND=">=kde-base/libkcddb-${KDE_MINIMAL}
