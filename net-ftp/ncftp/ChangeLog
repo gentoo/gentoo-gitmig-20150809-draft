@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.104 2010/07/27 14:47:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.105 2010/07/29 15:08:30 jer Exp $
+
+*ncftp-3.2.4.1 (29 Jul 2010)
+
+  29 Jul 2010; Jeroen Roovers <jer@gentoo.org> ncftp-3.2.4.ebuild,
+  +ncftp-3.2.4.1.ebuild:
+  Version bump with SRC_URI arrow because upstream again changed the sources
+  without bumping the version, while CHANGELOG.txt does mention this, thanks
+  to lazy_bum for reporting the checksum failure.
 
   27 Jul 2010; Jeroen Roovers <jer@gentoo.org> ncftp-3.2.4.ebuild:
   Stable for HPPA (bug #330009).
