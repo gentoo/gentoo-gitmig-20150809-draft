@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.4/x86/package.use.mask,v 1.2 2009/10/30 20:40:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.4/x86/package.use.mask,v 1.3 2010/07/29 16:48:46 darkside Exp $
+
+# Jeremy Olexa <darkside@gentoo.org> (29 Jul 2010)
+# Issues on 32bit osx, bug 329859
+media-sound/mpg123 mmx sse
 
 # Fabian Groffen <grobian@gentoo.org> (28 Apr 2008)
 # http://www.erlang.org/pipermail/erlang-questions/2007-July/027870.html
