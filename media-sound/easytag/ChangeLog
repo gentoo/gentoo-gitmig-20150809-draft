@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.148 2010/07/04 09:27:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.149 2010/07/29 23:16:04 ssuominen Exp $
+
+*easytag-2.1.6-r4 (29 Jul 2010)
+
+  29 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +easytag-2.1.6-r4.ebuild, +files/easytag-2.1.6-load-from-txt.patch:
+  Include "load from txt" patch from Fedora wrt #329575 by Leonid Podolny.
 
   04 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   easytag-2.1.6-r3.ebuild:
