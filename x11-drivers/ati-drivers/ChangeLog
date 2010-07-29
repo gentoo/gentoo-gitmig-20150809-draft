@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.218 2010/07/14 10:58:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.219 2010/07/29 09:52:54 lu_zero Exp $
+
+*ati-drivers-10.7 (29 Jul 2010)
+
+  29 Jul 2010; Luca Barbato <lu_zero@gentoo.org> +ati-drivers-10.7.ebuild:
+  Version bump, thanks to Enrico Tagliavini <enrico.tagliavini@gmail.com>
 
   14 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-10.4.ebuild, ati-drivers-10.5.ebuild, ati-drivers-10.6.ebuild,
