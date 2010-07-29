@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.76 2010/05/25 17:24:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.77 2010/07/29 23:17:08 darkside Exp $
+
+  29 Jul 2010; Jeremy Olexa <darkside@gentoo.org> libmpeg2-0.5.1-r1.ebuild:
+  add ~x64-macos, bug 328183
 
   25 May 2010; Joseph Jezak <josejx@gentoo.org> libmpeg2-0.5.1-r1.ebuild,
   +files/libmpeg2-0.5.1-altivec.patch:
