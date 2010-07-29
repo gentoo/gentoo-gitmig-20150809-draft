@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.3.7.ebuild,v 1.2 2010/05/30 17:14:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.3.7.ebuild,v 1.3 2010/07/29 00:12:23 flameeyes Exp $
 
 EAPI=2
 
@@ -54,7 +54,7 @@ ruby_add_bdepend "
 
 src_compile() {
 	# permissions need to be stricter for Ruby-Inline to work properly.
-	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
+	chmod 0755 "${HOME}" || die "Failed to fix permissions on home"
 	ruby-ng_src_compile
 }
 
@@ -64,6 +64,6 @@ all_ruby_prepare() {
 
 src_test() {
 	# permissions need to be stricter for Ruby-Inline to work properly.
-	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
+	chmod 0755 "${HOME}" || die "Failed to fix permissions on home"
 	ruby-ng_src_test
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/heckle-1.4.3-r1.ebuild,v 1.7 2010/05/22 23:18:05 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/heckle-1.4.3-r1.ebuild,v 1.8 2010/07/29 00:08:58 flameeyes Exp $
 
 EAPI=2
 
@@ -31,11 +31,11 @@ ruby_add_bdepend "
 	)"
 
 src_compile() {
-	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
+	chmod 0755 ${HOME} || die "Failed to fix permissions on home"
 	ruby-ng_src_compile
 }
 
 src_test() {
-	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
+	chmod 0755 ${HOME} || die "Failed to fix permissions on home"
 	ruby-ng_src_test
 }
