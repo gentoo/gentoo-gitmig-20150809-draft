@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.8 2009/10/18 18:27:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.9 2010/07/29 23:08:35 darkside Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/kdiff3/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux"
 IUSE="debug handbook konqueror"
 
 PATCHES=( "${FILESDIR}/${P}-desktop-entry.patch" )
