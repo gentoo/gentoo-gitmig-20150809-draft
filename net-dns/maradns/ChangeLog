@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/maradns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.30 2010/04/11 12:18:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.31 2010/07/29 00:16:04 matsuu Exp $
+
+*maradns-1.4.03 (29 Jul 2010)
+
+  29 Jul 2010; MATSUU Takuto <matsuu@gentoo.org> -maradns-1.2.12.09.ebuild,
+  -maradns-1.3.07.08.ebuild, -maradns-1.3.07.09.ebuild,
+  +maradns-1.4.03.ebuild, files/maradns.rc6:
+  Version bumped, bug #307917, #329947. Fixed init.d handling, bug #217790.
+  Fixed CFLAGS issue, bug #240884. Removed old versions.
 
   11 Apr 2010; <nixnut@gentoo.org> maradns-1.2.12.10.ebuild:
   ppc stable #270908

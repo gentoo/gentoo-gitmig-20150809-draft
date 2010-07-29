@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/files/maradns.rc6,v 1.4 2008/01/06 03:10:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/files/maradns.rc6,v 1.5 2010/07/29 00:16:04 matsuu Exp $
 
 depend() {
 	need net
@@ -17,6 +17,7 @@ start() {
 
 stop() {
 	ebegin "Stopping maradns"
-	start-stop-daemon --stop --quiet --name maradns
+	start-stop-daemon --stop --quiet --name maradns \
+		--exec /usr/sbin/duende
 	eend $?
 }
