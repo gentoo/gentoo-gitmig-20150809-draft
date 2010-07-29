@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/gosa-core-2.6.10.ebuild,v 1.1 2010/07/29 09:58:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/gosa-core-2.6.10.ebuild,v 1.2 2010/07/29 10:00:10 dev-zero Exp $
 
 EAPI=3
 
@@ -44,7 +44,7 @@ src_install() {
 	dosbin \
 		update-gosa \
 		bin/gosa-encrypt-passwords
-	
+
 	dobin \
 		update-locale \
 		update-online-help \
@@ -71,7 +71,7 @@ src_install() {
 	insinto /etc/apache2/vhosts.d
 	doins "${FILESDIR}/gosa.include"
 
-	dodoc AUTHORS Changelog FAQ README README.safemode 
+	dodoc AUTHORS Changelog FAQ README README.safemode
 
 	keepdir /etc/gosa
 	keepdir /var/spool/gosa
