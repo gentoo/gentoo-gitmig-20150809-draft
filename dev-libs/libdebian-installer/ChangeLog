@@ -1,0 +1,13 @@
+# ChangeLog for dev-libs/libdebian-installer
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.1 2010/07/29 17:15:42 darkside Exp $
+
+*libdebian-installer-0.74 (29 Jul 2010)
+
+  29 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
+  +libdebian-installer-0.74.ebuild,
+  +files/libdebian-installer-0.74-dont-install-docs.patch,
+  +files/libdebian-installer-0.74-doubling-readsize-support-oe.patch,
+  +files/libdebian-installer-0.74-fix-warnings.patch, +metadata.xml:
+  Initial ebuild. Originally written by Ricardo Salveti
+
