@@ -1,0 +1,10 @@
+# ChangeLog for net-nds/gosa-plugin-samba
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-plugin-samba/ChangeLog,v 1.1 2010/07/29 10:01:12 dev-zero Exp $
+
+*gosa-plugin-samba-2.6.10 (29 Jul 2010)
+
+  29 Jul 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +gosa-plugin-samba-2.6.10.ebuild, +metadata.xml:
+  Initial commit, ebuild written by me (bug #224983).
+
