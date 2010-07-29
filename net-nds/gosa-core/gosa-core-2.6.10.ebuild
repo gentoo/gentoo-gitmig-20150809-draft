@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/gosa-core-2.6.10.ebuild,v 1.2 2010/07/29 10:00:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-core/gosa-core-2.6.10.ebuild,v 1.3 2010/07/29 14:38:39 dev-zero Exp $
 
 EAPI=3
 
@@ -22,7 +22,8 @@ DEPEND="dev-lang/php[iconv,imap,ldap,mysql,session,zip]
 	sys-devel/gettext"
 RDEPEND="${DEPEND}
 	virtual/httpd-php
-	dev-perl/Crypt-SmbHash"
+	dev-perl/Crypt-SmbHash
+	media-gfx/imagemagick"
 
 src_prepare() {
 	epatch \
