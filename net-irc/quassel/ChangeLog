@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.95 2010/07/29 13:36:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.96 2010/07/29 20:19:35 scarabeus Exp $
+
+  29 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> quassel-9999.ebuild:
+  Do not enable X by default. Spotted by Wizzleby.
 
   29 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> quassel-9999.ebuild:
   Introduce crypt option. Thanks to j0hu on #gentoo-kde for patch.
