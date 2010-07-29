@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/super_demux/super_demux-0.3.ebuild,v 1.1 2007/10/06 15:04:03 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/super_demux/super_demux-0.3.ebuild,v 1.2 2010/07/29 07:59:31 sbriesen Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,11 +14,9 @@ SRC_URI="http://panteltje.com/panteltje/dvd/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}.diff"
 }
 
