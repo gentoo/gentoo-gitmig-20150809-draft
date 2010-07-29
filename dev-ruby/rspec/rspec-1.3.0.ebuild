@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.9 2010/05/22 23:18:57 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-1.3.0.ebuild,v 1.10 2010/07/29 00:06:52 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -21,7 +21,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend doc dev-ruby/hoe
+# it's actually optional, but tests fail if it's not installed and
+# some other package might fail tests, so require it anyway.
+ruby_add_rdepend dev-ruby/diff-lcs
+
+ruby_add_bdepend "doc? ( dev-ruby/hoe )"
 
 RDEPEND="!<dev-ruby/rspec-rails-${PV}"
 
@@ -32,11 +36,11 @@ RDEPEND="!<dev-ruby/rspec-rails-${PV}"
 # possible, but since it's yet unported to 1.9 and the nokogiri-due
 # tests fail for sure, we'll be waiting on it.
 USE_RUBY="ruby18 ree18 ruby19" \
-	ruby_add_bdepend test "dev-ruby/hoe dev-ruby/zentest dev-ruby/fakefs"
+	ruby_add_bdepend "test? ( dev-ruby/hoe dev-ruby/zentest dev-ruby/fakefs )"
 
 # the testsuite skips over heckle for Ruby 1.9 so we only request it for 1.8
 USE_RUBY="ruby18 ree18" \
-	ruby_add_bdepend test "dev-ruby/heckle"
+	ruby_add_bdepend "test? ( dev-ruby/heckle )"
 
 all_ruby_prepare() {
 	# Replace reference to /tmp to our temporary directory to avoid
@@ -47,7 +51,7 @@ all_ruby_prepare() {
 }
 
 src_test() {
-	chmod 0755 ${WORKDIR/work/homedir} || die "Failed to fix permissions on home"
+	chmod 0755 "${HOME}" || die "Failed to fix permissions on home"
 	ruby-ng_src_test
 }
 
