@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fakeweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.6 2010/05/28 17:44:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.7 2010/07/29 01:54:05 flameeyes Exp $
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  fakeweb-1.2.8.ebuild:
+  Update to the new syntax.
 
   28 May 2010; Joseph Jezak <josejx@gentoo.org> fakeweb-1.2.8.ebuild:
   Marked ~ppc.
