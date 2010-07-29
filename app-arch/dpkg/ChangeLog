@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.133 2010/05/20 02:17:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.134 2010/07/29 16:51:47 jer Exp $
+
+*dpkg-1.15.8 (29 Jul 2010)
+
+  29 Jul 2010; Jeroen Roovers <jer@gentoo.org> +dpkg-1.15.8.ebuild:
+  Version bump. Reenable t-ar test now that it is fixed. Respect CC even in
+  src_test().
 
 *dpkg-1.15.7.2 (20 May 2010)
 
