@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.6.1.ebuild,v 1.1 2010/07/19 07:29:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.6.1.ebuild,v 1.2 2010/07/29 01:47:46 flameeyes Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ ruby_add_rdepend '~dev-ruby/crack-0.1.8'
 ruby_add_bdepend 'dev-ruby/rspec dev-ruby/fakeweb'
 
 USE_RUBY=ruby18 \
-	ruby_add_bdepend 'ruby_targets_ruby18 test' 'dev-util/cucumber dev-ruby/activesupport:2.3'
+	ruby_add_bdepend 'test? ( dev-util/cucumber dev-ruby/activesupport:2.3 )'
 
 all_ruby_prepare() {
 	# as often, Rakefile depends on Jeweler's presence
