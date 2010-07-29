@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libjwc_f
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/ChangeLog,v 1.2 2010/06/15 14:19:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/ChangeLog,v 1.3 2010/07/29 23:22:22 darkside Exp $
+
+  29 Jul 2010; Jeremy Olexa <darkside@gentoo.org> libjwc_f-1.1-r1.ebuild:
+  add ~x64-macos, bug 328151
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> libjwc_f-1.1-r1.ebuild:
   Fixed typo in DESCRIPTION
