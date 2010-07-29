@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.31 2010/07/18 16:34:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.32 2010/07/29 17:44:24 flameeyes Exp $
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  opendbx-1.4.5.ebuild:
+  Use -j1 for build/install (bug #322221).
 
   18 Jul 2010; Markos Chandras <hwoarang@gentoo.org> opendbx-1.4.5.ebuild:
   Stable on amd64 wrt bug #317981

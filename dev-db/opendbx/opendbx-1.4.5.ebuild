@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5.ebuild,v 1.4 2010/07/18 16:34:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5.ebuild,v 1.5 2010/07/29 17:44:24 flameeyes Exp $
 
 EAPI="2"
 
@@ -53,7 +53,12 @@ src_configure() {
 	econf --with-backends="${backends}" || die "econf failed"
 }
 
+src_compile() {
+	# bug #322221
+	emake -j1 || die "emake failed"
+}
+
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	emake -j1 install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog README
 }
