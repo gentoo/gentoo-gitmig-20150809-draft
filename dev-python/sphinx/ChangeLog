@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.62 2010/07/27 18:15:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.63 2010/07/29 16:11:56 ssuominen Exp $
+
+  29 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> sphinx-0.6.7.ebuild:
+  ppc64 stable wrt #327145
 
 *sphinx-1.0.1 (27 Jul 2010)
 
