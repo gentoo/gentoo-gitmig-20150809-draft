@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-shout
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.12 2010/01/29 12:38:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.13 2010/07/29 17:39:22 flameeyes Exp $
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-shout-2.1-r2.ebuild, -files/ruby-shout-2.1+ruby-1.9.patch:
+  Remove support for Ruby 1.9 (patch left undefined symbols), simplify
+  ebuild.
 
   29 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-shout-2.1-r2.ebuild:
