@@ -1,3 +1,7 @@
+# July 29 2010 Robert Piasek <dagger@gentoo.org>
+# wimax maked
+net-misc/connman wimax
+
 # Feb 06 2010 Justin LEcher <jlec@gentoo.org>
 # icc maked
 sci-biology/fasta icc
