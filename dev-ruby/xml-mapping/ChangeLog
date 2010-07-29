@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/xml-mapping
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/ChangeLog,v 1.5 2010/05/22 13:26:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/ChangeLog,v 1.6 2010/07/29 02:36:52 flameeyes Exp $
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -xml-mapping-0.8.1.ebuild:
+  Remove old non-fakegem ebuild.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   xml-mapping-0.9.1.ebuild:
