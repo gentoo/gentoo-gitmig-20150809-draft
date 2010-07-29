@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.20 2010/07/29 02:15:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.21 2010/07/29 02:23:56 flameeyes Exp $
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  mocha-0.9.8-r2.ebuild, -files/mocha-0.9.8+ruby-1.9.2.patch:
+  Move patch to dev.gentoo.org as it's quite big.
 
   29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   mocha-0.9.8-r2.ebuild, +files/mocha-0.9.8+ruby-1.9.2.patch:
