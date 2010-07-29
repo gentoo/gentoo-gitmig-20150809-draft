@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/tmail-1.2.3.1.ebuild,v 1.11 2010/05/22 22:40:08 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/tmail-1.2.7.1-r1.ebuild,v 1.1 2010/07/29 02:34:32 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -23,19 +23,37 @@ IUSE="debug"
 # need to be verified twice; code seems to work anyway.
 RESTRICT=test
 
+# Once it's added to portage, this should be added, right now it's
+# bundled.
+# ruby_add_rdepend dev-ruby/rchardet
+
 ruby_add_bdepend "
 	dev-ruby/racc
 	test? ( >=dev-ruby/mocha-0.9.5 )"
 
-each_ruby_compile() {
-	if [[ $(basename ${RUBY}) == "ruby18" ]]; then
-		pushd ext/tmailscanner/tmail
-		${RUBY} extconf.rb || die "extconf failed"
-		emake || die "emake extension failed"
-		popd
-	fi
+all_ruby_prepare() {
+	# Provide file that is no longer distributed but still needed
+	mkdir meta || die "Failed to mkdir meta."
+	echo "tmail" > meta/unixname || die "Failed to create unixname file."
+}
 
+each_ruby_configure() {
+	case ${RUBY} in
+		*ruby18 | *rubyee18)
+			${RUBY} -Cext/tmailscanner/tmail extconf.rb || die "extconf failed"
+			;;
+	esac
+}
+
+each_ruby_compile() {
 	emake -C lib/tmail $(use debug && echo DEBUG=true) parser.rb || die "emake failed"
+
+	case ${RUBY} in
+		*ruby18 | *rubyee18)
+			emake -Cext/tmailscanner/tmail extconf.rb \
+				CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" || die "emake extension failed"
+			;;
+	esac
 }
 
 each_ruby_install() {
@@ -45,16 +63,8 @@ each_ruby_install() {
 		ruby_fakegem_newins $file $file
 	done
 
-	if [[ $(basename ${RUBY}) == "ruby18" ]]; then
+	[[ -f ext/tmailscanner/tmail/tmailscanner.so ]] && \
 		ruby_fakegem_newins ext/tmailscanner/tmail/tmailscanner.so lib/tmail/tmailscanner.so
-	fi
 
 	ruby_fakegem_genspec
-}
-
-all_ruby_install() {
-	all_fakegem_install
-
-	docinto examples
-	dodoc sample/* || die
 }
