@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3.ebuild,v 1.4 2010/07/29 09:31:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3-r1.ebuild,v 1.1 2010/07/29 09:31:06 flameeyes Exp $
 
 EAPI=2
 
 # jruby → tests still fail with UTF-8 characters
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_NAME="RedCloth"
 
@@ -23,7 +23,8 @@ inherit ruby-fakegem versionator
 DESCRIPTION="A module for using Textile in Ruby"
 HOMEPAGE="http://redcloth.org/"
 
-SRC_URI="http://github.com/jgarber/redcloth/tarball/RELEASE_$(replace_all_version_separators _) -> ${RUBY_FAKEGEM_NAME}-git-${PV}.tgz"
+SRC_URI="http://github.com/jgarber/redcloth/tarball/RELEASE_$(replace_all_version_separators _) -> ${RUBY_FAKEGEM_NAME}-git-${PV}.tgz
+	http://dev.gentoo.org/~flameeyes/patches/${PN}/${P}+ruby-1.9.2.patch.bz2"
 
 LICENSE="MIT"
 SLOT="0"
@@ -44,15 +45,16 @@ ruby_add_bdepend "
 		dev-ruby/diff-lcs
 	)"
 
+RUBY_PATCHES=(
+	"${FILESDIR}"/${P}-gentoo.patch
+	"${DISTDIR}"/${P}+ruby-1.9.2.patch.bz2
+)
+
 pkg_setup() {
 	# Export the VERBOSE variable to avoid remapping of stdout and
 	# stderr, and that breaks because of bad interactions between
 	# echoe, Ruby and Gentoo.
 	export VERBOSE=1
-}
-
-all_ruby_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 each_ruby_compile() {

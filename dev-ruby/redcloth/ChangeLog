@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.45 2010/05/23 10:20:35 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.46 2010/07/29 09:31:06 flameeyes Exp $
+
+*redcloth-4.2.3-r1 (29 Jul 2010)
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  redcloth-4.2.3.ebuild, +redcloth-4.2.3-r1.ebuild:
+  Remove Ruby 1.9 and REE18 support from 4.2.3 so we can ask stable; add new
+  revision with those two, and a patch for Ruby 1.9.2 support.
 
   23 May 2010; Alex Legler <a3li@gentoo.org> redcloth-4.2.3.ebuild:
   Add REE18 support
