@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/gtk-g-rays2-1.20.ebuild,v 1.1 2010/04/27 10:59:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/gtk-g-rays2-1.20.ebuild,v 1.2 2010/07/29 11:42:27 ssuominen Exp $
 
 EAPI="3"
 
-inherit gnome2 base
+inherit eutils gnome2 base
 
 DESCRIPTION="GUI for accessing the Wintec WBT 201 / G-Rays 2 GPS device"
 HOMEPAGE="http://www.daria.co.uk/gps"
@@ -24,6 +24,7 @@ DEPEND="${DEPEND}
 
 src_prepare() {
 	rm -rf debian/
+	epatch "${FILESDIR}"/${P}-locale_h.patch
 }
 
 src_configure() {
