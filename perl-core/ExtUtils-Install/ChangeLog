@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/ExtUtils-Install
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Install/ChangeLog,v 1.4 2010/05/14 15:46:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Install/ChangeLog,v 1.5 2010/07/29 17:19:35 jer Exp $
+
+  29 Jul 2010; Jeroen Roovers <jer@gentoo.org> ExtUtils-Install-1.54.ebuild:
+  Stable for HPPA (bug #330387).
 
   14 May 2010; Jeroen Roovers <jer@gentoo.org> ExtUtils-Install-1.54.ebuild:
   Marked ~hppa (bug #317877).
