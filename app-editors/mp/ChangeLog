@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.73 2010/07/05 16:40:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.74 2010/07/29 17:46:39 flameeyes Exp $
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> mp-5.1.3.ebuild:
+  Use -j1 for build/install (bug #326987).
 
 *mp-5.1.3 (05 Jul 2010)
 
