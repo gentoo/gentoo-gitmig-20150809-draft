@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.60 2010/07/13 02:52:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.61 2010/07/29 21:31:58 cardoe Exp $
+
+  29 Jul 2010; Doug Goldstein <cardoe@gentoo.org> libvirt-0.8.1-r1.ebuild,
+  libvirt-0.8.2-r1.ebuild:
+  Fix SELinux support by depending on the proper version of libselinux. bug
+  #330223
 
   13 Jul 2010; Doug Goldstein <cardoe@gentoo.org> libvirt-0.8.2-r1.ebuild:
   Fixed configure script's detection of virtualbox-ose, based on patch from
