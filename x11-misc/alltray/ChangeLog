@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.35 2010/07/22 22:22:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.36 2010/07/29 19:04:11 hwoarang Exp $
+
+  29 Jul 2010; Markos Chandras <hwoarang@gentoo.org> alltray-0.74.ebuild:
+  Stable on amd64 wrt bug #329417
 
   22 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> alltray-0.74.ebuild:
   x86 stable wrt bug #329417
