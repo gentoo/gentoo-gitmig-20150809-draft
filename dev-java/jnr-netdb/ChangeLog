@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jnr-netdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.7 2010/06/27 07:53:18 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.8 2010/07/29 08:13:07 fauli Exp $
+
+  29 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  jnr-netdb-1.0.1.ebuild:
+  stable x86, bug 330103
 
   27 Jun 2010; Alistair Bush <ali_bush@gentoo.org> -jnr-netdb-1.0.ebuild:
   Clean up old jnr-netdb-1.0
