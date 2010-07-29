@@ -1,0 +1,526 @@
+commit b7ef80234de9a2242c11634618f24470a833b906
+Author: Eloy Duran <eloy.de.enige@gmail.com>
+Date:   Tue Oct 6 22:16:43 2009 +0200
+
+    Made the unit tests run on 1.9.2dev r25249.
+
+diff --git a/lib/mocha/mockery.rb b/lib/mocha/mockery.rb
+index 6fd5e5a..3b847db 100644
+--- a/lib/mocha/mockery.rb
++++ b/lib/mocha/mockery.rb
+@@ -1,5 +1,4 @@
+ require 'mocha/central'
+-require 'mocha/mock'
+ require 'mocha/names'
+ require 'mocha/state_machine'
+ require 'mocha/logger'
+diff --git a/lib/mocha/module_method.rb b/lib/mocha/module_method.rb
+index 0c3b180..7169e61 100644
+--- a/lib/mocha/module_method.rb
++++ b/lib/mocha/module_method.rb
+@@ -1,4 +1,4 @@
+-require 'mocha/module_method'
++require 'mocha/class_method'
+ 
+ module Mocha
+ 
+diff --git a/test/acceptance/acceptance_test_helper.rb b/test/acceptance/acceptance_test_helper.rb
+index 2341338..8a3d0aa 100644
+--- a/test/acceptance/acceptance_test_helper.rb
++++ b/test/acceptance/acceptance_test_helper.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'test_runner'
+ require 'mocha/configuration'
+ 
+diff --git a/test/acceptance/mocha_example_test.rb b/test/acceptance/mocha_example_test.rb
+index 34009c4..d2a476f 100644
+--- a/test/acceptance/mocha_example_test.rb
++++ b/test/acceptance/mocha_example_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha'
+ 
+ class MochaExampleTest < Test::Unit::TestCase
+diff --git a/test/acceptance/stubba_example_test.rb b/test/acceptance/stubba_example_test.rb
+index bd5a84d..092ce1f 100644
+--- a/test/acceptance/stubba_example_test.rb
++++ b/test/acceptance/stubba_example_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha'
+ 
+ class Widget
+diff --git a/test/acceptance/stubba_test.rb b/test/acceptance/stubba_test.rb
+index 1155ac5..6c7f386 100644
+--- a/test/acceptance/stubba_test.rb
++++ b/test/acceptance/stubba_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'deprecation_disabler'
+ 
+ class StubbaTest < Test::Unit::TestCase
+diff --git a/test/unit/any_instance_method_test.rb b/test/unit/any_instance_method_test.rb
+index 1bf4d2a..5b892f9 100644
+--- a/test/unit/any_instance_method_test.rb
++++ b/test/unit/any_instance_method_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'method_definer'
+ require 'mocha/mock'
+ require 'mocha/any_instance_method'
+diff --git a/test/unit/array_inspect_test.rb b/test/unit/array_inspect_test.rb
+index 8e555cd..0f6e349 100644
+--- a/test/unit/array_inspect_test.rb
++++ b/test/unit/array_inspect_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/inspect'
+ 
+ class ArrayInspectTest < Test::Unit::TestCase
+diff --git a/test/unit/backtrace_filter_test.rb b/test/unit/backtrace_filter_test.rb
+index 6d9379f..e744b70 100644
+--- a/test/unit/backtrace_filter_test.rb
++++ b/test/unit/backtrace_filter_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/backtrace_filter'
+ 
+ class BacktraceFilterTest < Test::Unit::TestCase
+diff --git a/test/unit/cardinality_test.rb b/test/unit/cardinality_test.rb
+index 2a5ef9b..782e3a4 100644
+--- a/test/unit/cardinality_test.rb
++++ b/test/unit/cardinality_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/cardinality'
+ 
+ class CardinalityTest < Test::Unit::TestCase
+diff --git a/test/unit/central_test.rb b/test/unit/central_test.rb
+index 03bff91..0aa999d 100644
+--- a/test/unit/central_test.rb
++++ b/test/unit/central_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/central'
+ require 'mocha/mock'
+diff --git a/test/unit/change_state_side_effect_test.rb b/test/unit/change_state_side_effect_test.rb
+index b48beaa..be49434 100644
+--- a/test/unit/change_state_side_effect_test.rb
++++ b/test/unit/change_state_side_effect_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/change_state_side_effect'
+ 
+diff --git a/test/unit/class_method_test.rb b/test/unit/class_method_test.rb
+index 47c5999..a0f8c1c 100644
+--- a/test/unit/class_method_test.rb
++++ b/test/unit/class_method_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'method_definer'
+ require 'mocha/mock'
+ 
+diff --git a/test/unit/configuration_test.rb b/test/unit/configuration_test.rb
+index a6f8958..62922e5 100644
+--- a/test/unit/configuration_test.rb
++++ b/test/unit/configuration_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require "mocha/configuration"
+ 
+ class ConfigurationTest < Test::Unit::TestCase
+diff --git a/test/unit/date_time_inspect_test.rb b/test/unit/date_time_inspect_test.rb
+index 8557365..f03c544 100644
+--- a/test/unit/date_time_inspect_test.rb
++++ b/test/unit/date_time_inspect_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/inspect'
+ 
+ class DateTimeInspectTest < Test::Unit::TestCase
+diff --git a/test/unit/exception_raiser_test.rb b/test/unit/exception_raiser_test.rb
+index 942300a..79cbeab 100644
+--- a/test/unit/exception_raiser_test.rb
++++ b/test/unit/exception_raiser_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/exception_raiser'
+ require 'timeout'
+diff --git a/test/unit/expectation_list_test.rb b/test/unit/expectation_list_test.rb
+index bc641c5..b53e073 100644
+--- a/test/unit/expectation_list_test.rb
++++ b/test/unit/expectation_list_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/expectation_list'
+ require 'mocha/expectation'
+ require 'set'
+diff --git a/test/unit/expectation_test.rb b/test/unit/expectation_test.rb
+index 3a37e54..c1af92b 100644
+--- a/test/unit/expectation_test.rb
++++ b/test/unit/expectation_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'method_definer'
+ require 'mocha/expectation'
+ require 'mocha/sequence'
+diff --git a/test/unit/hash_inspect_test.rb b/test/unit/hash_inspect_test.rb
+index 15ad415..388b0c1 100644
+--- a/test/unit/hash_inspect_test.rb
++++ b/test/unit/hash_inspect_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/inspect'
+ 
+ class HashInspectTest < Test::Unit::TestCase
+diff --git a/test/unit/in_state_ordering_constraint_test.rb b/test/unit/in_state_ordering_constraint_test.rb
+index 96e20c5..25f4ea2 100644
+--- a/test/unit/in_state_ordering_constraint_test.rb
++++ b/test/unit/in_state_ordering_constraint_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/in_state_ordering_constraint'
+ 
+diff --git a/test/unit/metaclass_test.rb b/test/unit/metaclass_test.rb
+index 956bcb4..6056142 100644
+--- a/test/unit/metaclass_test.rb
++++ b/test/unit/metaclass_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/metaclass'
+ 
+ class MetaclassTest < Test::Unit::TestCase
+diff --git a/test/unit/method_matcher_test.rb b/test/unit/method_matcher_test.rb
+index 0167433..8230b48 100644
+--- a/test/unit/method_matcher_test.rb
++++ b/test/unit/method_matcher_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/method_matcher'
+ 
+ class MethodMatcherTest < Test::Unit::TestCase
+diff --git a/test/unit/mock_test.rb b/test/unit/mock_test.rb
+index e04d7ec..f7f4aa1 100644
+--- a/test/unit/mock_test.rb
++++ b/test/unit/mock_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/mock'
+ require 'mocha/expectation_error'
+ require 'set'
+diff --git a/test/unit/mockery_test.rb b/test/unit/mockery_test.rb
+index db05ec2..cab0097 100644
+--- a/test/unit/mockery_test.rb
++++ b/test/unit/mockery_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/mockery'
+ require 'mocha/state_machine'
+ 
+diff --git a/test/unit/multiple_yields_test.rb b/test/unit/multiple_yields_test.rb
+index 65724a8..e8bf62c 100644
+--- a/test/unit/multiple_yields_test.rb
++++ b/test/unit/multiple_yields_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/multiple_yields'
+ 
+diff --git a/test/unit/no_yields_test.rb b/test/unit/no_yields_test.rb
+index 544d1ef..ee7c59b 100644
+--- a/test/unit/no_yields_test.rb
++++ b/test/unit/no_yields_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/no_yields'
+ 
+diff --git a/test/unit/object_inspect_test.rb b/test/unit/object_inspect_test.rb
+index 56d84a9..38e7428 100644
+--- a/test/unit/object_inspect_test.rb
++++ b/test/unit/object_inspect_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/inspect'
+ require 'method_definer'
+ 
+diff --git a/test/unit/object_test.rb b/test/unit/object_test.rb
+index 57262e4..5602e06 100644
+--- a/test/unit/object_test.rb
++++ b/test/unit/object_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/object'
+ require 'mocha/mockery'
+ require 'mocha/mock'
+diff --git a/test/unit/parameter_matchers/all_of_test.rb b/test/unit/parameter_matchers/all_of_test.rb
+index 14028f5..cb4aefa 100644
+--- a/test/unit/parameter_matchers/all_of_test.rb
++++ b/test/unit/parameter_matchers/all_of_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/all_of'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/any_of_test.rb b/test/unit/parameter_matchers/any_of_test.rb
+index 503d6dc..04af9ef 100644
+--- a/test/unit/parameter_matchers/any_of_test.rb
++++ b/test/unit/parameter_matchers/any_of_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/any_of'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/anything_test.rb b/test/unit/parameter_matchers/anything_test.rb
+index 42a88a1..f517e0d 100644
+--- a/test/unit/parameter_matchers/anything_test.rb
++++ b/test/unit/parameter_matchers/anything_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/anything'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/equals_test.rb b/test/unit/parameter_matchers/equals_test.rb
+index df1eb6e..e18df2c 100644
+--- a/test/unit/parameter_matchers/equals_test.rb
++++ b/test/unit/parameter_matchers/equals_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/equals'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/has_entries_test.rb b/test/unit/parameter_matchers/has_entries_test.rb
+index 181c9b2..df673c0 100644
+--- a/test/unit/parameter_matchers/has_entries_test.rb
++++ b/test/unit/parameter_matchers/has_entries_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/has_entries'
+ require 'mocha/parameter_matchers/object'
+diff --git a/test/unit/parameter_matchers/has_entry_test.rb b/test/unit/parameter_matchers/has_entry_test.rb
+index 5d30ee1..2735c3d 100644
+--- a/test/unit/parameter_matchers/has_entry_test.rb
++++ b/test/unit/parameter_matchers/has_entry_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/has_entry'
+ require 'mocha/parameter_matchers/object'
+diff --git a/test/unit/parameter_matchers/has_key_test.rb b/test/unit/parameter_matchers/has_key_test.rb
+index 76f4d05..90a452a 100644
+--- a/test/unit/parameter_matchers/has_key_test.rb
++++ b/test/unit/parameter_matchers/has_key_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/has_key'
+ require 'mocha/parameter_matchers/object'
+diff --git a/test/unit/parameter_matchers/has_value_test.rb b/test/unit/parameter_matchers/has_value_test.rb
+index be5fec2..d7a9024 100644
+--- a/test/unit/parameter_matchers/has_value_test.rb
++++ b/test/unit/parameter_matchers/has_value_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/has_value'
+ require 'mocha/parameter_matchers/object'
+diff --git a/test/unit/parameter_matchers/includes_test.rb b/test/unit/parameter_matchers/includes_test.rb
+index 6f4d1fa..2bca34c 100644
+--- a/test/unit/parameter_matchers/includes_test.rb
++++ b/test/unit/parameter_matchers/includes_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/includes'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/instance_of_test.rb b/test/unit/parameter_matchers/instance_of_test.rb
+index 415b79a..861cb85 100644
+--- a/test/unit/parameter_matchers/instance_of_test.rb
++++ b/test/unit/parameter_matchers/instance_of_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/instance_of'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/is_a_test.rb b/test/unit/parameter_matchers/is_a_test.rb
+index c9ef919..7904137 100644
+--- a/test/unit/parameter_matchers/is_a_test.rb
++++ b/test/unit/parameter_matchers/is_a_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/is_a'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/kind_of_test.rb b/test/unit/parameter_matchers/kind_of_test.rb
+index 1167e5c..1404fa8 100644
+--- a/test/unit/parameter_matchers/kind_of_test.rb
++++ b/test/unit/parameter_matchers/kind_of_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/kind_of'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/not_test.rb b/test/unit/parameter_matchers/not_test.rb
+index 4cb6790..21f50e2 100644
+--- a/test/unit/parameter_matchers/not_test.rb
++++ b/test/unit/parameter_matchers/not_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/not'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/regexp_matches_test.rb b/test/unit/parameter_matchers/regexp_matches_test.rb
+index 06022d9..f33e97d 100644
+--- a/test/unit/parameter_matchers/regexp_matches_test.rb
++++ b/test/unit/parameter_matchers/regexp_matches_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/regexp_matches'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/responds_with_test.rb b/test/unit/parameter_matchers/responds_with_test.rb
+index f32bf8b..7f5bf4e 100644
+--- a/test/unit/parameter_matchers/responds_with_test.rb
++++ b/test/unit/parameter_matchers/responds_with_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/responds_with'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameter_matchers/yaml_equivalent_test.rb b/test/unit/parameter_matchers/yaml_equivalent_test.rb
+index b163f30..8bc66e4 100644
+--- a/test/unit/parameter_matchers/yaml_equivalent_test.rb
++++ b/test/unit/parameter_matchers/yaml_equivalent_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "..", "test_helper")
++require File.expand_path('../../../test_helper', __FILE__)
+ 
+ require 'mocha/parameter_matchers/yaml_equivalent'
+ require 'mocha/inspect'
+diff --git a/test/unit/parameters_matcher_test.rb b/test/unit/parameters_matcher_test.rb
+index 612805e..3048d30 100644
+--- a/test/unit/parameters_matcher_test.rb
++++ b/test/unit/parameters_matcher_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/parameters_matcher'
+ 
+ class ParametersMatcherTest < Test::Unit::TestCase
+diff --git a/test/unit/return_values_test.rb b/test/unit/return_values_test.rb
+index 01ddfbc..dc61ca8 100644
+--- a/test/unit/return_values_test.rb
++++ b/test/unit/return_values_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/return_values'
+ 
+diff --git a/test/unit/sequence_test.rb b/test/unit/sequence_test.rb
+index 544b3fe..8637b64 100644
+--- a/test/unit/sequence_test.rb
++++ b/test/unit/sequence_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/sequence'
+ require 'mocha/expectation'
+ 
+diff --git a/test/unit/single_return_value_test.rb b/test/unit/single_return_value_test.rb
+index 9a94e09..7b4ff1b 100644
+--- a/test/unit/single_return_value_test.rb
++++ b/test/unit/single_return_value_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/single_return_value'
+ 
+diff --git a/test/unit/single_yield_test.rb b/test/unit/single_yield_test.rb
+index 12bd0a2..deb08a4 100644
+--- a/test/unit/single_yield_test.rb
++++ b/test/unit/single_yield_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/single_yield'
+ 
+diff --git a/test/unit/state_machine_test.rb b/test/unit/state_machine_test.rb
+index 4ccb229..c770921 100644
+--- a/test/unit/state_machine_test.rb
++++ b/test/unit/state_machine_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/state_machine'
+ 
+diff --git a/test/unit/string_inspect_test.rb b/test/unit/string_inspect_test.rb
+index 43b9c4e..6562015 100644
+--- a/test/unit/string_inspect_test.rb
++++ b/test/unit/string_inspect_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ require 'mocha/inspect'
+ 
+ class StringInspectTest < Test::Unit::TestCase
+diff --git a/test/unit/yield_parameters_test.rb b/test/unit/yield_parameters_test.rb
+index 4e93f13..a148058 100644
+--- a/test/unit/yield_parameters_test.rb
++++ b/test/unit/yield_parameters_test.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "test_helper")
++require File.expand_path('../../test_helper', __FILE__)
+ 
+ require 'mocha/yield_parameters'
+ require 'mocha/no_yields'
