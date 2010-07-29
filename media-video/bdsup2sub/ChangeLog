@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bdsup2sub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bdsup2sub/ChangeLog,v 1.1 2010/07/28 21:59:12 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bdsup2sub/ChangeLog,v 1.2 2010/07/29 11:14:40 sbriesen Exp $
+
+  29 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  bdsup2sub-4.0.0.ebuild:
+  removed subversion download
 
 *bdsup2sub-4.0.0 (28 Jul 2010)
 
