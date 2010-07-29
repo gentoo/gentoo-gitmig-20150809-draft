@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.30.0-r1.ebuild,v 1.2 2010/07/20 02:18:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.30.0-r1.ebuild,v 1.3 2010/07/29 20:02:42 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.18.2:2
 	>=media-libs/gst-plugins-good-0.10
 	>=dev-libs/libunique-1
 
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.15[glib] )
 	>=media-libs/libcanberra-0.4[gtk]
 	dev-libs/libxml2
 	>=media-libs/gst-plugins-base-0.10.23:0.10
