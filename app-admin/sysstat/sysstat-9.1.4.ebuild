@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.1.2.ebuild,v 1.1 2010/05/24 19:03:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-9.1.4.ebuild,v 1.1 2010/07/29 11:49:01 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cron +doc isag nls"
+IUSE="cron +doc isag nls lm_sensors"
 
 SYSSTAT_LINGUAS="af da de es eu fi fr id it ja ky lv mt nb nl nn pl pt_BR pt ro ru sk sv vi zh_CN zh_TW"
 
@@ -29,13 +29,14 @@ RDEPEND="
 		sci-visualization/gnuplot
 	)
 	nls? ( virtual/libintl )
+	lm_sensors? ( sys-apps/lm_sensors )
 "
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	cp -av Makefile.in{,.orig}
-	epatch "${FILESDIR}/${P}-nls.patch"
+	epatch "${FILESDIR}/${PN}-9.1.2-nls.patch"
 
 	local lingua NLSDIR="${S}/nls"
 	einfo "Keeping these locales: ${LINGUAS}."
@@ -55,6 +56,7 @@ src_configure() {
 			$(use_enable cron install-cron) \
 			$(use_enable isag install-isag) \
 			$(use_enable nls) \
+			$(use_enable lm_sensors sensors) \
 			conf_dir=/etc || die "econf failed"
 }
 
