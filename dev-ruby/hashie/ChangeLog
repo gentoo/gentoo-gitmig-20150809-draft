@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/hashie
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.7 2010/07/28 23:57:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.8 2010/07/29 09:47:18 flameeyes Exp $
+
+*hashie-0.2.2 (29 Jul 2010)
+
+  29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -hashie-0.2.1.ebuild, -files/hashie-0.2.1-gentoo.patch,
+  +hashie-0.2.2.ebuild:
+  Version bump, upstream fixed the 1.9.2 issue in this one.
 
   28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -hashie-0.1.8.ebuild, -hashie-0.2.0.ebuild, hashie-0.2.1.ebuild,
