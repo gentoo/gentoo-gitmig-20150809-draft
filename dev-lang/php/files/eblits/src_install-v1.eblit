@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.4 2010/07/26 13:42:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.5 2010/07/29 16:27:41 mabi Exp $
 
 eblit-php-src_install() {
+	# see bug #324739 for what happens when we don't have that
+	addpredict /usr/share/snmp/mibs/.index
+
 	# Makefile forgets to create this before trying to write to it...
 	dodir "${PHP_DESTDIR}/bin"
 
