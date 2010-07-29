@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.4.ebuild,v 1.2 2010/07/23 18:08:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/usbmuxd/usbmuxd-1.0.4.ebuild,v 1.3 2010/07/29 20:29:58 pacho Exp $
 
 EAPI="3"
 
@@ -21,5 +21,6 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P/_/-}
 
 pkg_setup() {
-	enewuser usbmux -1 -1 -1 "usb"
+	enewgroup plugdev
+	enewuser usbmux -1 -1 -1 "usb,plugdev"
 }
