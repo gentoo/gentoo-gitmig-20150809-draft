@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.6.0-r2.ebuild,v 1.1 2010/07/29 21:15:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/spamassassin-fuzzyocr-3.6.0-r2.ebuild,v 1.2 2010/07/30 14:56:35 voyageur Exp $
 
 EAPI=2
 inherit perl-module eutils
@@ -58,6 +58,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${P}-fix_tmpdir.patch
 		# Bug #313633
 		epatch "${FILESDIR}"/${P}-untaint_ocr_helper.patch
+		# Bug #330461
+		epatch "${FILESDIR}"/${P}-fix_tesseract.patch
 
 		# If no ocrad USE flag, remove it from Fuzzyocr.scansets / jni
 		use ocrad || epatch "${FILESDIR}"/disableocrad.patch

@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamassassin-fuzzyocr
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.22 2010/07/29 21:15:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-fuzzyocr/ChangeLog,v 1.23 2010/07/30 14:56:35 voyageur Exp $
+
+  30 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  spamassassin-fuzzyocr-3.6.0-r2.ebuild,
+  +files/spamassassin-fuzzyocr-3.6.0-fix_tesseract.patch:
+  Fix tesseract support with tiff images, bug #330461
 
 *spamassassin-fuzzyocr-3.6.0-r2 (29 Jul 2010)
 
