@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r1.ebuild,v 1.10 2010/06/17 20:32:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.15.ebuild,v 1.1 2010/07/30 14:34:41 dertobi123 Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+EAPI=1
 
 inherit eutils autotools
 
@@ -13,9 +12,8 @@ SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping
-nagios-ssh nagios-game ups ipv6 radius"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping nagios-ssh nagios-game ups ipv6 radius +suid jabber"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
@@ -38,7 +36,8 @@ RDEPEND="${DEPEND}
 	nagios-ping? ( >=net-analyzer/fping-2.4_beta2-r1 )
 	nagios-ssh? ( >=net-misc/openssh-3.5_p1 )
 	ups? ( >=sys-power/nut-1.4 )
-	!sparc? ( nagios-game? ( >=games-util/qstat-2.6 ) )"
+	!sparc? ( nagios-game? ( >=games-util/qstat-2.6 ) )
+	jabber? ( >=dev-perl/Net-Jabber-2.0 )"
 
 pkg_setup() {
 	enewgroup nagios
@@ -56,6 +55,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-1.4.10-contrib.patch
 	epatch "${FILESDIR}"/${PN}-1.4.12-pgsqlconfigure.patch
+	epatch "${FILESDIR}"/${P}-vserver.patch
 
 	eautoreconf
 }
@@ -93,6 +93,7 @@ src_install() {
 	chmod +x "${S}"/contrib/*.pl
 
 	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' "${S}"/contrib/*.pl || die "sed failed"
+	sed -i -e s#/usr/nagios/libexec#/usr/$(get_libdir)/nagios/plugins#g "${S}"/contrib/*.pl || die "sed failed"
 	sed -i -e '30s/use lib utils.pm;/use utils;/' \
 		"${S}"/plugins-scripts/check_file_age.pl || die "sed failed"
 
@@ -114,14 +115,22 @@ src_install() {
 
 	mv "${S}"/contrib "${D}"/usr/$(get_libdir)/nagios/plugins/contrib
 
+	if ! use jabber; then
+		rm "${D}"usr/$(get_libdir)/nagios/plugins/contrib/nagios_sendim.pl \
+			|| die "Failed to remove XMPP notification addon"
+	fi
+
 	chown -R root:nagios "${D}"/usr/$(get_libdir)/nagios/plugins \
 		|| die "Failed chown of ${D}usr/$(get_libdir)/nagios/plugins"
 
 	chmod -R o-rwx "${D}"/usr/$(get_libdir)/nagios/plugins \
 		|| die "Failed chmod of ${D}usr/$(get_libdir)/nagios/plugins"
 
-	chmod 04710 "${D}"/usr/$(get_libdir)/nagios/plugins/check_icmp \
-		|| die "Failed chmod of ${D}usr/$(get_libdir)/nagios/plugins/check_icmp"
+	if use suid ; then
+
+		chmod 04710 "${D}"/usr/$(get_libdir)/nagios/plugins/{check_icmp,check_ide_smart,check_dhcp} \
+			|| die "Failed setting the suid bit for various plugins"
+	fi
 
 	dosym /usr/$(get_libdir)/nagios/plugins/utils.sh /usr/$(get_libdir)/nagios/plugins/contrib/utils.sh
 	dosym /usr/$(get_libdir)/nagios/plugins/utils.pm /usr/$(get_libdir)/nagios/plugins/contrib/utils.pm
