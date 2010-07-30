@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.220 2010/07/30 21:36:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.221 2010/07/30 22:10:42 scarabeus Exp $
+
+  30 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-10.4.ebuild, ati-drivers-10.5.ebuild, ati-drivers-10.6.ebuild,
+  ati-drivers-10.7.ebuild:
+  Depend on proper emul lib to fix bug #330249.
 
   30 Jul 2010; Luca Barbato <lu_zero@gentoo.org> ati-drivers-10.7.ebuild:
   Relax dep, thanks to Caster for testing

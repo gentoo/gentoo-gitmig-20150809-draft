@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.16.ebuild,v 1.3 2010/07/15 12:14:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.16.ebuild,v 1.4 2010/07/30 22:14:19 scarabeus Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ EMULTILIB_PKG="true"
 
 COMMON="<x11-base/xorg-server-1.7.99
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
-	multilib? ( app-emulation/emul-linux-x86-xlibs )
+	multilib? ( app-emulation/emul-linux-x86-opengl )
 	>=app-admin/eselect-opengl-1.0.9"
 DEPEND="${COMMON}
 	kernel_linux? ( virtual/linux-sources )"
