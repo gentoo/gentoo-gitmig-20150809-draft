@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.20 2010/07/28 05:17:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.21 2010/07/30 11:08:44 leio Exp $
 
 # Author : foser <foser@gentoo.org>, zaheerm <zaheerm@gentoo.org>
 
@@ -14,7 +14,7 @@
 # Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer
 # or the gstreamer team.
 
-inherit eutils gst-plugins10
+inherit eutils versionator gst-plugins10
 
 
 ###
@@ -30,11 +30,19 @@ MY_P=${MY_PN}-${PV}
 # sys/ plugins; rest is split plugin options in order of ./configure --help output.
 # Good ways of validation are seeing diff of old and new configure.ac, and ./configure --help
 #
-# This list is current to gst-plugins-good-0.10.21:
+# This list is current to gst-plugins-good-0.10.23:
 my_gst_plugins_good="gconftool zlib bz2
 directsound oss sunaudio osx_audio osx_video gst_v4l2 x xshm xvideo
 aalib aalibtest annodex cairo esd esdtest flac gconf gdk_pixbuf hal jpeg
 libcaca libdv libpng pulse dv1394 shout2 shout2test soup speex taglib wavpack"
+
+# When adding conditionals like below, be careful about having leading spaces in concat
+
+# sys/oss4 moved here since 0.10.23
+if version_is_at_least "0.10.23"; then
+	my_gst_plugins_good+=" oss4"
+fi
+
 
 #SRC_URI="mirror://gnome/sources/gst-plugins/${PV_MAJ_MIN}/${MY_P}.tar.bz2"
 SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-good/${MY_P}.tar.bz2"
