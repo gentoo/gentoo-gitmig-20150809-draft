@@ -1,7 +1,16 @@
 diff --git a/makefile.in b/makefile.in
-index b1cef14..e91a0c5 100644
+index b1cef14..f8d2bca 100644
 --- a/makefile.in
 +++ b/makefile.in
+@@ -4,7 +4,7 @@ all: $(APPNAME) docs build-mo
+ 
+ PROJ=mp
+ 
+-ADD_DOCS=AUTHORS README COPYING RELEASE_NOTES \
++ADD_DOCS=AUTHORS README RELEASE_NOTES \
+ 	mp_templates.sample doc/mp_function_reference.html
+ GRUTATXT_DOCS=doc/mp_index.html doc/mp_cookbook.html doc/mp_internals.html \
+ 	doc/mp_configuration.html doc/mp_data_model.html \
 @@ -26,10 +26,10 @@ version:
  	$(CC) $(CFLAGS) -I. `cat config.cflags` -c $<
  
