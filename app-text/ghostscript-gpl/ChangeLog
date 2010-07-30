@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.97 2010/07/11 17:34:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.98 2010/07/30 22:09:04 tgurr Exp $
+
+*ghostscript-gpl-8.71-r5 (30 Jul 2010)
+
+  30 Jul 2010; Timo Gurr <tgurr@gentoo.org> -ghostscript-gpl-8.64-r3.ebuild,
+  -ghostscript-gpl-8.70-r1.ebuild, -ghostscript-gpl-8.71-r4.ebuild,
+  +ghostscript-gpl-8.71-r5.ebuild:
+  Revbump for CVE-2010-1628, add upstream libpng patch and remove old
+  versions.
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org>
   ghostscript-gpl-8.71-r1.ebuild:
