@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.5.ebuild,v 1.1 2010/07/23 19:49:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.5.ebuild,v 1.2 2010/07/30 14:48:37 flameeyes Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -82,6 +82,8 @@ src_prepare() {
 }
 
 src_install() {
-	gnome2_src_install
+	# bug #317607
+	MAKEOPTS="${MAKEOPTS} -j1" \
+		gnome2_src_install
 	find "${D}" -name '*.la' -delete
 }
