@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.23.1_p25396.ebuild,v 1.1 2010/07/27 15:27:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.23.1_p25396-r1.ebuild,v 1.1 2010/07/30 00:25:55 cardoe Exp $
 
 EAPI=2
 
@@ -29,6 +29,8 @@ src_install() {
 	# correct permissions so MythVideo is actually usable
 	fperms 755 /usr/share/mythtv/mythvideo/scripts/*.pl
 	fperms 755 /usr/share/mythtv/mythvideo/scripts/*.py
+	fperms 755 /usr/share/mythtv/mythvideo/scripts/*/*.pl
+	fperms 755 /usr/share/mythtv/mythvideo/scripts/*/*.py
 
 	# setup JAMU cron jobs
 	if use jamu; then

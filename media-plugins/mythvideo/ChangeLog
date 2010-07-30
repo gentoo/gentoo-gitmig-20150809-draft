@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.90 2010/07/27 15:27:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.91 2010/07/30 00:25:55 cardoe Exp $
+
+*mythvideo-0.23.1_p25396-r1 (30 Jul 2010)
+
+  30 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  -mythvideo-0.23.1_p25396.ebuild, +mythvideo-0.23.1_p25396-r1.ebuild:
+  Fix issue where some scripts required by mythvideo did not have execute
+  permissions. bug #330271
 
 *mythvideo-0.23.1_p25396 (27 Jul 2010)
 
