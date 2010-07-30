@@ -1,6 +1,23 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.95 2010/07/27 17:36:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.96 2010/07/30 11:55:46 leio Exp $
+
+*gst-plugins-good-0.10.23 (30 Jul 2010)
+
+  30 Jul 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-good-0.10.23.ebuild:
+  Version bump. Noteworthy changes in "Stylish Kids in Riot" release:
+  WebM demuxing support in matroskademux.
+  VP8 support in matroska muxer/demuxer, avimux and qtdemux.
+  Dedicated webmmux element for WebM muxing (restricted matroska).
+  Automatic interlacing detection now default in deinterlace element.
+  Push mode seeking support in matroskademux and qtdemux.
+  More color format support in alpha, deinterlace, gamma, smptealpha,
+  videobalance, videobox, videoflip, videomixer and y4menc elements
+  (to avoid unnecessary slow color format conversions).
+  Huge amount of RTP and RTSP improvements, as usual.
+  New imagefreeze plugin - still frame stream generator.
+  capssetter element moved from -bad to here (in debugutils).
 
   27 Jul 2010; Pacho Ramos <pacho@gentoo.org>
   gst-plugins-good-0.10.22.ebuild:
