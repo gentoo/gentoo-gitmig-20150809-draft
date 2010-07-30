@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/libmemcache-1.4.0_rc2-r1.ebuild,v 1.4 2010/07/10 20:21:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/libmemcache-1.4.0_rc2-r1.ebuild,v 1.5 2010/07/30 18:21:00 hwoarang Exp $
 
 EAPI=3
 inherit autotools eutils toolchain-funcs
@@ -20,7 +20,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-inline.patch
-
+	epatch "${FILESDIR}"/${P}-implicit_pointer.patch
+	
 	rm -rf test/unit || die
 	sed -i -e '/DIR/s,unit,,g' test/Makefile.am || die
 	sed -i \
