@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.4 2010/05/23 10:03:10 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.5 2010/07/30 14:55:14 darkside Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19"
@@ -18,7 +18,7 @@ HOMEPAGE="http://bitbucket.org/ged/ruby-pg/"
 
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="${RDEPEND}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.17 2010/07/29 10:00:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.18 2010/07/30 14:55:14 darkside Exp $
+
+  30 Jul 2010; Jeremy Olexa <darkside@gentoo.org> pg-0.9.0-r1.ebuild:
+  Add prefix keywords to match dev-ruby/ruby-postgres, bug 330337
 
   29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> -pg-0.8.0.ebuild:
   Cleanup old version.
