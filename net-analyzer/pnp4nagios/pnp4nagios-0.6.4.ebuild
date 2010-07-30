@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.4.ebuild,v 1.1 2010/06/03 18:25:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.4.ebuild,v 1.2 2010/07/30 15:56:07 dertobi123 Exp $
 
 EAPI="2"
 
@@ -16,12 +16,14 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-lang/php-4.3[gd-external,json,pcre,filter,reflection,spl,simplexml,xml,zlib]
+DEPEND=">=dev-lang/php-4.3[json,pcre,filter,reflection,spl,simplexml,xml,zlib]
+	|| ( >=dev-lang/php-4.3[gd-external] >=dev-lang/php-4.3[gd] )
 	>=net-analyzer/rrdtool-1.2
 	net-analyzer/nagios-core"
 RDEPEND="${DEPEND}
 	virtual/perl-Getopt-Long
 	virtual/perl-Time-HiRes
+	media-fonts/dejavu
 	apache2? ( www-servers/apache[apache2_modules_rewrite] )"
 
 want_apache2
