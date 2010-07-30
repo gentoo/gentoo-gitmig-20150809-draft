@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.42 2010/07/30 15:59:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.43 2010/07/30 19:52:09 fauli Exp $
+
+  30 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  -alexandria-0.6.5.ebuild:
+  clean up
 
   30 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   alexandria-0.6.6.ebuild:
