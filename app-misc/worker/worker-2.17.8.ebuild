@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.17.8.ebuild,v 1.1 2010/06/24 18:55:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.17.8.ebuild,v 1.2 2010/07/30 15:59:26 dertobi123 Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ IUSE="avfs"
 
 RDEPEND="x11-libs/libSM
 	dev-libs/dbus-glib
-	sys-apps/hal
 	avfs? ( sys-fs/avfs )"
 DEPEND="${RDEPEND}"
 

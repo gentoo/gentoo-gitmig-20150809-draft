@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.86 2010/07/11 19:03:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.87 2010/07/30 15:59:25 dertobi123 Exp $
+
+  30 Jul 2010; Tobias Scherbaum <dertobi123@gentoo.org>
+  -worker-2.17.3.ebuild, worker-2.17.8.ebuild:
+  Remove hal depend (#325467)
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org> worker-2.17.6.ebuild:
   alpha/ia64/sparc stable wrt #324373
