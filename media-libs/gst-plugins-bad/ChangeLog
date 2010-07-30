@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.64 2010/07/12 22:47:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.65 2010/07/30 10:11:28 leio Exp $
+
+*gst-plugins-bad-0.10.19 (30 Jul 2010)
+
+  30 Jul 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-bad-0.10.19.ebuild:
+  Version bump with the following most noteworthy upstream changes:
+  New invtelecine plugin - detects and reconstructs progressive content
+  from telecine video. New segmentclip plugin - add audio/video buffer
+  segment clip elements.
+  Capssetter element has moved to gst-plugins-good-0.10.23+.
+  Bitrate calculation and estimation for audioparsers and mpegvideoparse.
+  Support for muxing VP8 video codec and XMP tags into quicktime video with
+  qtmux. Various new API and properties for camerabin. Many other bug fixes
+  and improvements.
 
   12 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-bad-0.10.18.ebuild:
