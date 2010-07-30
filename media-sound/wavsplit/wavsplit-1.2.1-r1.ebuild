@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1-r1.ebuild,v 1.4 2009/06/30 08:30:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1-r1.ebuild,v 1.5 2010/07/30 00:28:14 ssuominen Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="WavSplit is a simple command line tool to split WAV files"
@@ -14,25 +15,21 @@ SLOT="0"
 KEYWORDS="~amd64 -sparc x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# remove precomplied binaries
-	rm "${S}"/{wavren,wavsplit} || die
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-	epatch "${FILESDIR}"/${P}-large-files.patch
-	epatch "${FILESDIR}"/${P}-64bit.patch
+src_prepare() {
+	emake clean || die
+	epatch "${FILESDIR}"/${P}-Makefile.patch \
+		"${FILESDIR}"/${P}-large-files.patch \
+		"${FILESDIR}"/${P}-64bit.patch
 }
 
-src_compile(){
-	emake CC="$(tc-getCC)" || die "emake failed"
+src_compile() {
+	emake CC="$(tc-getCC)" || die
 }
+
+src_test() { :; } #294302
 
 src_install() {
-	dobin wavren wavsplit || die "dobin failed"
-	doman wavren.1 wavsplit.1 || die "doman failed"
-	dodoc BUGS CHANGES CREDITS README README.wavren || die "dodoc failed"
+	dobin wav{ren,split} || die
+	doman wav{ren,split}.1 || die
+	dodoc BUGS CHANGES CREDITS README{,.wavren}
 }

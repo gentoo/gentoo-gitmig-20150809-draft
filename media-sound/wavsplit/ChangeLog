@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/wavsplit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.13 2009/06/30 08:30:06 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/ChangeLog,v 1.14 2010/07/30 00:28:14 ssuominen Exp $
+
+  30 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  wavsplit-1.2.1-r1.ebuild:
+  Empty src_test() wrt #294302 by Diego E. Pettenò.
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   wavsplit-1.2.1-r1.ebuild:
