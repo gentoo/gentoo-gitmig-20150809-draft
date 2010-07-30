@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/gst-plugins-vp8
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.1 2010/07/30 12:25:09 leio Exp $
+
+*gst-plugins-vp8-0.10.19 (30 Jul 2010)
+
+  30 Jul 2010; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +gst-plugins-vp8-0.10.19.ebuild:
+  Initial package for the vp8enc/vp8dec GStreamer elements from
+  gst-plugins-bad for VP8 video encode/decode support
+
