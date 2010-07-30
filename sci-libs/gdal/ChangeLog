@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.91 2010/07/18 20:08:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.92 2010/07/30 12:27:51 scarabeus Exp $
+
+*gdal-1.7.2 (30 Jul 2010)
+
+  30 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.7.2-ruby_cflags.patch, -gdal-1.5.2.ebuild, -gdal-1.5.3.ebuild,
+  -gdal-1.6.0-r1.ebuild, -gdal-1.6.2.ebuild, -gdal-1.6.3.ebuild,
+  +gdal-1.7.2.ebuild:
+  Version bump. Drop older. Grass support to be done.
 
   18 Jul 2010; Steve Arnold <nerdboy@gentoo.org> gdal-1.6.3-r1.ebuild:
   Updated for a couple of minor/weird bugs (320237 and 325193). Suspect 
