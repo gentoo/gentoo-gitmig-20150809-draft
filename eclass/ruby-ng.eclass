@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.23 2010/07/30 15:05:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.24 2010/07/30 16:56:21 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -53,7 +53,7 @@ EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_test src_i
 case ${EAPI} in
 	0|1)
 		die "Unsupported EAPI=${EAPI} (too old) for ruby-ng.eclass" ;;
-	2) ;;
+	2|3) ;;
 	*)
 		die "Unknown EAPI=${EAPI} for ruby-ng.eclass"
 esac
@@ -391,8 +391,14 @@ ruby-ng_src_test() {
 }
 
 _each_ruby_check_install() {
+	local scancmd=scanelf
+	# we have a Mach-O object here
+	[[ ${CHOST} == *-darwin ]] && scancmd=scanmacho
+
+	has "${EAPI}" 2 && ! use prefix && EPREFIX=
+
 	local libruby_basename=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["LIBRUBY_SO"]')
-	local libruby_soname=$(scanelf -F "%S#F" -qS "/usr/$(get_libdir)/${libruby_basename}")
+	local libruby_soname=$(basename $(${scancmd} -F "%S#F" -qS "${EPREFIX}/usr/$(get_libdir)/${libruby_basename}"))
 	local sitedir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitedir"]')
 	local sitelibdir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitelibdir"]')
 
@@ -413,7 +419,7 @@ _each_ruby_check_install() {
 	# extensions via ruby-fakegem; make sure to check only in sitelibdir, since
 	# that's what changes between two implementations (otherwise you'd get false
 	# positives now that Ruby 1.9.2 installs with the same sitedir as 1.8)
-	scanelf -qnR "${D}${sitelibdir}" "${D}${sitelibdir/site_ruby/gems}" \
+	${scancmd} -qnR "${D}${sitelibdir}" "${D}${sitelibdir/site_ruby/gems}" \
 		| fgrep -v "${libruby_soname}" \
 		> "${T}"/ruby-ng-${_ruby_implementation}-mislink.log
 
@@ -452,8 +458,10 @@ ruby_rbconfig_value() {
 # Installs the specified file(s) into the sitelibdir of the Ruby interpreter in ${RUBY}.
 doruby() {
 	[[ -z ${RUBY} ]] && die "\$RUBY is not set"
+	has "${EAPI}" 2 && ! use prefix && EPREFIX=
 	( # don't want to pollute calling env
-		insinto $(ruby_rbconfig_value 'sitelibdir')
+		sitelibdir=$(ruby_rbconfig_value 'sitelibdir')
+		insinto ${sitelibdir#${EPREFIX}}
 		insopts -m 0644
 		doins "$@"
 	) || die "failed to install $@"
