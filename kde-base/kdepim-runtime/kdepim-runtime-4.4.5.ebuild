@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.5.ebuild,v 1.1 2010/06/30 15:36:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.5.ebuild,v 1.2 2010/07/30 15:37:45 scarabeus Exp $
 
 EAPI="3"
 
@@ -31,4 +31,5 @@ RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdepim-icons)
 "
 
+add_blocker kdemaildir '<4.3.0'
 add_blocker akonadi '<4.3.90'
