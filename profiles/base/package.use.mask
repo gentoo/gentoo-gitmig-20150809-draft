@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.154 2010/07/25 19:07:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.155 2010/07/30 17:58:42 arfrever Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -48,17 +48,9 @@ dev-lisp/clisp svm
 # Masked because xf86-video-nouveau is not supported on most archs.
 x11-base/xorg-drivers video_cards_nouveau
 
-# Zac Medico <zmedico@gentoo.org> (9 Apr 2010)
-# Mask python3 for stable portage until python-3.x is marked stable.
-=sys-apps/portage-2.1.8* python3
-
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)
 # Masked because tools pulled in are not supported on most archs.
 sys-power/pm-utils video_cards_intel video_cards_radeon
-
-# Zac Medico <zmedico@gentoo.org> (24 Jan 2010)
-# Mask python3 for stable portage until python-3.x is marked stable.
-=sys-apps/portage-2.1.7* python3
 
 # Diego E. Pettenò <flameeyes@gmail.com> (18 Jan 2010)
 # Don't use system-wide mode unless you *really* know what you're doing.
