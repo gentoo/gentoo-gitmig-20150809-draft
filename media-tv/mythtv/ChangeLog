@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.327 2010/07/30 03:54:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.328 2010/07/30 16:48:55 cardoe Exp $
+
+*mythtv-0.23.1_p25496 (30 Jul 2010)
+
+  30 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.23.1_p25496.ebuild:
+  Add support to Python bindings (and jamu by extension) for a LocalHostName
+  (as specified in mysql.txt) setting for the backend.
 
 *mythtv-0.23.1_p25427 (30 Jul 2010)
 
