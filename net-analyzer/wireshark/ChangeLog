@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.238 2010/07/08 20:37:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.239 2010/07/30 10:27:15 pva Exp $
+
+*wireshark-1.4.0_rc2 (30 Jul 2010)
+*wireshark-1.2.10 (30 Jul 2010)
+
+  30 Jul 2010; Peter Volkov <pva@gentoo.org> -wireshark-1.2.8-r1.ebuild,
+  +wireshark-1.2.10.ebuild, -wireshark-1.4.0_rc1.ebuild,
+  +wireshark-1.4.0_rc2.ebuild:
+  Version bump. Fixes security vulnerabilities, bug #330479.
 
   08 Jul 2010; Jeroen Roovers <jer@gentoo.org> wireshark-1.2.9.ebuild:
   Stable for PPC (bug #323859).
