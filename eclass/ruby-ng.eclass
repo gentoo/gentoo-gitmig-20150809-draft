@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.22 2010/07/14 13:11:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.23 2010/07/30 15:05:08 flameeyes Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -392,7 +392,7 @@ ruby-ng_src_test() {
 
 _each_ruby_check_install() {
 	local libruby_basename=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["LIBRUBY_SO"]')
-	local libruby_soname=$(scanelf -qS "/usr/$(get_libdir)/${libruby_basename}" | awk '{ print $1 }')
+	local libruby_soname=$(scanelf -F "%S#F" -qS "/usr/$(get_libdir)/${libruby_basename}")
 	local sitedir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitedir"]')
 	local sitelibdir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitelibdir"]')
 
@@ -409,7 +409,11 @@ _each_ruby_check_install() {
 	# The current implementation lacks libruby (i.e.: jruby)
 	[[ -z ${libruby_soname} ]] && return 0
 
-	scanelf -qnR "${D}${sitedir}" \
+	# Check also the gems directory, since we could be installing compiled
+	# extensions via ruby-fakegem; make sure to check only in sitelibdir, since
+	# that's what changes between two implementations (otherwise you'd get false
+	# positives now that Ruby 1.9.2 installs with the same sitedir as 1.8)
+	scanelf -qnR "${D}${sitelibdir}" "${D}${sitelibdir/site_ruby/gems}" \
 		| fgrep -v "${libruby_soname}" \
 		> "${T}"/ruby-ng-${_ruby_implementation}-mislink.log
 
