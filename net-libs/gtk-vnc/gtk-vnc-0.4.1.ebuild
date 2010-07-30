@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.1.ebuild,v 1.2 2010/07/20 02:27:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.1.ebuild,v 1.3 2010/07/30 15:17:01 flameeyes Exp $
 
 EAPI="2"
 
@@ -38,6 +38,8 @@ src_configure() {
 }
 
 src_install() {
-	base_src_install
+	# bug #328273
+	MAKEOPTS="${MAKEOPTS} -j1" \
+		base_src_install
 	dodoc AUTHORS ChangeLog NEWS README
 }
