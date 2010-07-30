@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.22 2010/07/19 10:16:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.23 2010/07/30 17:32:33 flameeyes Exp $
+
+*test-unit-2.1.0-r1 (30 Jul 2010)
+
+  30 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -test-unit-2.0.7.ebuild, -test-unit-2.0.9.ebuild,
+  -files/test-unit-2.0.9-disable-tests.patch, -test-unit-2.1.0.ebuild,
+  +test-unit-2.1.0-r1.ebuild:
+  Fix install of testrb-2 wrapper, remove old versions.
 
 *test-unit-2.1.0 (19 Jul 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.1.0.ebuild,v 1.1 2010/07/19 10:16:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.1.0-r1.ebuild,v 1.1 2010/07/30 17:32:33 flameeyes Exp $
 
 EAPI=2
 # One test fails on jruby, might be a jruby bug
@@ -37,10 +37,10 @@ each_ruby_test() {
 	${RUBY} ${rubyflags} test/run-test.rb || die "testsuite failed"
 }
 
-all_ruby_intall() {
+all_ruby_install() {
 	all_fakegem_install
 
 	# Create a testrb2 wrapper similarly to the rdoc2 wrapper for
 	# rdoc-2* series.
-	ruby_fakegem_binwrapper testrb /usr/bint/testrb2
+	ruby_fakegem_binwrapper testrb /usr/bin/testrb-2
 }
