@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.3.0.ebuild,v 1.2 2010/06/20 11:30:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.3.0.ebuild,v 1.3 2010/07/30 15:50:04 hwoarang Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/contrib/n/${PN}/${P/-/_}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
