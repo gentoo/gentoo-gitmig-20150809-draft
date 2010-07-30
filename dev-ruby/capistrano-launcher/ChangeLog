@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/capistrano-launcher
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano-launcher/ChangeLog,v 1.9 2009/06/13 09:20:17 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano-launcher/ChangeLog,v 1.10 2010/07/30 15:25:01 darkside Exp $
+
+  30 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
+  capistrano-launcher-1.ebuild:
+  Add prefix keywords, as tested in prefix overlay
 
   13 Jun 2009; Hans de Graaff <graaff@gentoo.org>
   capistrano-launcher-1.ebuild:
