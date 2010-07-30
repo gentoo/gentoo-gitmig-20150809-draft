@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.326 2010/07/26 13:36:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.327 2010/07/30 03:54:49 cardoe Exp $
+
+*mythtv-0.23.1_p25427 (30 Jul 2010)
+
+  30 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.23.1_p25423.ebuild, +mythtv-0.23.1_p25427.ebuild:
+  Upstream fix for character encoding in some fields (e.g. actors). Fix
+  issue where some scripts didn't have execute and should. Potentially
+  actually fix issue where MythTV Branch wasn't shown in --version
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   mythtv-0.22_p24255.ebuild:
