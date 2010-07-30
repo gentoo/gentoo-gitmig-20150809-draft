@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.37 2010/07/26 13:43:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.38 2010/07/30 17:44:32 flameeyes Exp $
+
+*rcairo-1.8.1-r1 (30 Jul 2010)
+
+  30 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> rcairo-1.8.1.ebuild,
+  +rcairo-1.8.1-r1.ebuild:
+  Install within gems hierarchy, add tests support, ensure that svg is
+  coordinated with the original cairo package.
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org> rcairo-1.8.1.ebuild:
   x86 stable, bug 329807
