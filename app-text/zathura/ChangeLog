@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.6 2010/07/29 21:26:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.7 2010/07/30 08:33:38 fauli Exp $
+
+  30 Jul 2010; Christian Faulhammer <fauli@gentoo.org> zathura-0.0.7.ebuild:
+  stable x86, bug 330383
 
   29 Jul 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
   grabbed this ;)
