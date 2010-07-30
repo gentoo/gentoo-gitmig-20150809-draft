@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pm-quirks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-quirks/ChangeLog,v 1.8 2010/07/25 10:32:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-quirks/ChangeLog,v 1.9 2010/07/30 09:48:19 hwoarang Exp $
+
+  30 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  pm-quirks-20100619.ebuild:
+  Stable on amd64 wrt bug #329625
 
   25 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   pm-quirks-20100619.ebuild:
