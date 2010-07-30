@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.53 2010/07/27 16:15:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.54 2010/07/30 08:21:08 fauli Exp $
+
+  30 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  pyopenssl-0.10-r1.ebuild:
+  stable x86, bug 330441
 
   27 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyopenssl-0.10.ebuild, pyopenssl-0.10-r1.ebuild:
