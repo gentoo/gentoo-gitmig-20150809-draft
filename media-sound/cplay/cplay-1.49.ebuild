@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.49.ebuild,v 1.19 2010/07/30 00:03:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/cplay-1.49.ebuild,v 1.20 2010/07/30 00:04:53 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -28,7 +28,7 @@ src_prepare() {
 	python_convert_shebangs 2 cplay
 }
 
-src_install () {
+src_install() {
 	emake PREFIX="${D}/usr" recursive-install || die
 	dobin cplay || die
 	doman cplay.1
