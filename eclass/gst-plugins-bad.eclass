@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.32 2010/07/30 09:42:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.33 2010/07/30 09:45:50 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -13,7 +13,7 @@ inherit eutils versionator gst-plugins10
 
 # This list is current for gst-plugins-bad-0.10.18.
 my_gst_plugins_bad="directsound directdraw osx_video quicktime vcd
-alsa assrender amrwb apexsink bz2 cdaudio celt cog directfb dirac dts divx
+alsa assrender amrwb apexsink bz2 cdaudio celt cog dc1394 directfb dirac dts divx
 metadata faac faad fbdev flite gsm jack jp2k kate ladspa lv2 libmms
 modplug mimic mpeg2enc mplex musepack musicbrainz mythtv nas neon ofa rsvg
 timidity wildmidi sdl sdltest sndfile soundtouch spc gme swfdec theoradec xvid
