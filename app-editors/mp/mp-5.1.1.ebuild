@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.1.ebuild,v 1.7 2010/07/05 16:40:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.1.ebuild,v 1.8 2010/07/30 09:12:32 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="gtk ncurses nls pcre iconv"
 
-RDEPEND="ncurses? ( sys-libs/ncurses )
+RDEPEND="
+	ncurses? ( sys-libs/ncurses )
 	gtk? ( >=x11-libs/gtk+-2 >=x11-libs/pango-1.8.0 )
 	!gtk? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
@@ -28,8 +29,9 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_prepare() {
-	# fix force as-needed wrt bug #278086
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch \
+		"${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-prll.patch
 }
 
 src_configure() {
@@ -60,7 +62,7 @@ src_configure() {
 src_install() {
 	dodir /usr/bin
 	sh config.sh --prefix="${EPREFIX}/usr"
-	make DESTDIR="${D}" install || die "Install Failed"
+	emake DESTDIR="${D}" install || die "Install Failed"
 	use gtk && dosym mp-5 /usr/bin/gmp
 }
 

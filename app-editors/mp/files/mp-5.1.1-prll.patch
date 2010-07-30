@@ -1,0 +1,39 @@
+diff --git a/makefile.in b/makefile.in
+index b1cef14..e91a0c5 100644
+--- a/makefile.in
++++ b/makefile.in
+@@ -26,10 +26,10 @@ version:
+ 	$(CC) $(CFLAGS) -I. `cat config.cflags` -c $<
+ 
+ $(MPDM)/libmpdm.a:
+-	( cd $(MPDM); $(MAKE) )
++	$(MAKE) -C $(MPDM)
+ 
+ $(MPSL)/libmpsl.a:
+-	( cd $(MPSL); $(MAKE) )
++	$(MAKE) -C $(MPSL)
+ 
+ dep:
+ 	gcc -MM *.c `cat config.cflags` > makefile.depend
+@@ -88,8 +88,8 @@ $(APPNAME).1: doc/mp_man.txt
+ 	grutatxt -m man -t "Minimum Profit" < doc/mp_man.txt > $(APPNAME).1
+ 
+ docs: $(DOCS)
+-	(cd $(MPDM); $(MAKE) docs)
+-	(cd $(MPSL); $(MAKE) docs)
++	$(MAKE) -C $(MPDM) docs
++	$(MAKE) -C $(MPSL) docs
+ 
+ distcopy: distclean docs
+ 	mkdir -p $(DIST_TARGET) ; \
+@@ -134,8 +134,8 @@ install: $(INSTALL_MSG) installdoc install-mo
+ 
+ installdoc:
+ 	./mkinstalldirs $(PREFIX)/share/doc/$(APPNAME)
+-	( cd $(MPDM); $(MAKE) installdoc )
+-	( cd $(MPSL); $(MAKE) installdoc )
++	$(MAKE) -C $(MPDM) installdoc
++	$(MAKE) -C $(MPSL) installdoc
+ 	install -m 644 doc/* $(PREFIX)/share/doc/$(APPNAME)
+ 	install -m 644 $(ADD_DOCS) $(PREFIX)/share/doc/$(APPNAME)
+ 	[ -f doc/mp_index.html ] && install -m 644 doc/mp_index.html $(PREFIX)/share/doc/$(APPNAME)/index.html || true

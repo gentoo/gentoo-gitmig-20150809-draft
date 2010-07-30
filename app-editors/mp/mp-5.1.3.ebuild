@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.3.ebuild,v 1.2 2010/07/29 17:46:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.3.ebuild,v 1.3 2010/07/30 09:12:32 jlec Exp $
 
 EAPI="3"
 
@@ -29,8 +29,9 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_prepare() {
-	# fix force as-needed wrt bug #278086
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch \
+		"${FILESDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${PN}-5.1.1-prll.patch
 }
 
 src_configure() {
@@ -62,15 +63,10 @@ src_configure() {
 	sh config.sh ${myconf} || die "Configure failed"
 }
 
-src_compile() {
-	# bug #326987
-	emake -j1 || die "emake failed"
-}
-
 src_install() {
 	dodir /usr/bin
 	sh config.sh --prefix="${EPREFIX}/usr"
-	emake -j1 DESTDIR="${D}" install || die "Install Failed"
+	emake DESTDIR="${D}" install || die "Install Failed"
 #	use gtk && dosym mp-5 /usr/bin/gmp
 }
 
