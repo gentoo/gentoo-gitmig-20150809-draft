@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mytharchive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.44 2010/07/27 15:43:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.45 2010/07/30 04:00:04 cardoe Exp $
+
+*mytharchive-0.23.1_p25396-r1 (30 Jul 2010)
+
+  30 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
+  -mytharchive-0.23.1_p25396.ebuild, +mytharchive-0.23.1_p25396-r1.ebuild:
+  Fix up execute permission for a script that the plugin uses
 
 *mytharchive-0.23.1_p25396 (27 Jul 2010)
 

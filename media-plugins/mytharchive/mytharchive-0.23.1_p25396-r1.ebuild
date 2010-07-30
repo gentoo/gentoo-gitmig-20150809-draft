@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.23.1_p25396.ebuild,v 1.1 2010/07/27 15:43:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.23.1_p25396-r1.ebuild,v 1.1 2010/07/30 04:00:04 cardoe Exp $
 
 EAPI=2
 inherit qt4 mythtv-plugins
@@ -19,3 +19,10 @@ RDEPEND=">=dev-lang/python-2.3.5
 		virtual/cdrtools
 		media-video/transcode"
 DEPEND="${RDEPEND}"
+
+src_install() {
+	mythtv-plugins_src_install
+
+	# Fix up permissions for the scripts the plugin uses
+	fperms 755 /usr/share/mythtv/mytharchive/scripts/*.py
+}
