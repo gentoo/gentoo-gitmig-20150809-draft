@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.139 2010/07/24 08:45:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.140 2010/07/30 19:57:49 robbat2 Exp $
+
+  30 Jul 2010; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r10.ebuild:
+  Bug #329569: Bump the GRUB_MAX_KERNEL_SIZE as kernels have grown over
+  time.
 
   24 Jul 2010; Mike Frysinger <vapier@gentoo.org> grub-1.98.ebuild,
   grub-9999.ebuild:
