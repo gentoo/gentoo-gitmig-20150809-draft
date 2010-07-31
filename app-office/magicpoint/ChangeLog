@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.43 2010/07/23 10:26:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.44 2010/07/31 23:04:30 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  magicpoint-1.13a.ebuild:
+  Stable on amd64 wrt bug #329433
 
   23 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   magicpoint-1.13a.ebuild:
