@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.1 2010/06/30 21:12:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.2 2010/07/31 18:51:29 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -40,6 +40,9 @@ src_prepare() {
 	sed -e "s:gentoo-python:python$(python_get_version):g" \
 		-i Makefile Setup/Makefile Setup/bibus.cfg Setup/bibus.sh \
 		|| die "Failed to adjust python paths"
+
+	# Disable byte-compilation of Python modules.
+	sed -e '/\$(compile)/d' -i Makefile || die "sed failed"
 }
 
 src_install() {
