@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.521 2010/07/31 11:40:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.522 2010/07/31 12:30:23 chithanh Exp $
+
+  31 Jul 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.7.7-r1.ebuild:
+  Add patch to prefer nouveau over nv to 1.7.7 too
 
 *xorg-server-1.7.7-r1 (31 Jul 2010)
 
