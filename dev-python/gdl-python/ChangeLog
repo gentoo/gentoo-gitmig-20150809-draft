@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.29 2010/07/09 10:53:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.30 2010/07/31 18:12:17 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gdl-python-2.25.3.ebuild:
+  amd64 stable, bug 324077
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> -gdl-python-2.19.1-r1.ebuild:
   Drop old.

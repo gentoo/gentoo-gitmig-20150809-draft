@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.153 2010/07/20 22:45:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.154 2010/07/31 18:39:34 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gnome-python-2.28.1.ebuild:
+  amd64 stable, bug 324077
 
   20 Jul 2010; Markus Meier <maekke@gentoo.org> gnome-python-2.28.0.ebuild:
   arm stable, bug #320247

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libgda-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/ChangeLog,v 1.12 2010/07/20 16:40:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/ChangeLog,v 1.13 2010/07/31 18:16:47 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> libgda-python-2.25.3.ebuild:
+  amd64 stable, bug 324077
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libgda-python-2.19.1.ebuild,
   libgda-python-2.25.3.ebuild:
