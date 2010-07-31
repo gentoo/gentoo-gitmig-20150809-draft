@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.91 2010/07/20 00:57:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.92 2010/07/31 20:24:27 armin76 Exp $
+
+  31 Jul 2010; Raúl Porcel <armin76@gentoo.org> keychain-2.7.1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #327169
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> keychain-2.7.1.ebuild:
   Stable for HPPA (bug #327169).
