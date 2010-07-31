@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.66 2010/07/14 13:50:18 darkside Exp $
+# $Id: package.mask,v 1.67 2010/07/31 15:18:12 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -31,6 +31,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Fabian Groffen <grobian@gentoo.org> (31 Jul 2010)
+# We have perl-5.10 (5.12 even) so we can't afford this being masked
+->=dev-perl/DateManip-6.0
 
 # Jeremy Olexa <darkside@gentoo.org> (14 Jul 2010)
 # Needs testing from the brave users.
