@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.17.8.ebuild,v 1.3 2010/07/31 22:09:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.17.8.ebuild,v 1.4 2010/07/31 23:08:08 hwoarang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.boomerangsworld.de/worker/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE="avfs"
 
 RDEPEND="x11-libs/libSM
