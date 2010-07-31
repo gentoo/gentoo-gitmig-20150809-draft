@@ -1,6 +1,6 @@
 diff -u Gauche-cdb-0.3.1.orig/configure.ac Gauche-cdb-0.3.1/configure.ac
---- Gauche-cdb-0.3.1.orig/configure.ac	2004-02-25 11:40:16.000000000 +0900
-+++ Gauche-cdb-0.3.1/configure.ac	2004-07-18 23:48:00.540652808 +0900
+--- Gauche-cdb-0.3.1.orig/configure.ac
++++ Gauche-cdb-0.3.1/configure.ac
 @@ -16,6 +16,7 @@
  AC_LIB_LINKFLAGS(cdb)
  
