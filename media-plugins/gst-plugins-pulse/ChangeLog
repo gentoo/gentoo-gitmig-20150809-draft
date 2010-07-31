@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.38 2010/07/27 17:43:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.39 2010/07/31 11:09:00 leio Exp $
+
+*gst-plugins-pulse-0.10.23 (31 Jul 2010)
+
+  31 Jul 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-pulse-0.10.23.ebuild:
+  Version bump. Bug and multi-threading fixes, hopefully fixing rare crashes
+  with pidgin per bug 329361
 
   27 Jul 2010; Pacho Ramos <pacho@gentoo.org>
   gst-plugins-pulse-0.10.22.ebuild:
