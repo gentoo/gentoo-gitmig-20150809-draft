@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/tmail-1.2.7.1-r1.ebuild,v 1.1 2010/07/29 02:34:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/tmail-1.2.7.1-r2.ebuild,v 1.1 2010/07/31 17:13:04 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -50,7 +50,7 @@ each_ruby_compile() {
 
 	case ${RUBY} in
 		*ruby18 | *rubyee18)
-			emake -Cext/tmailscanner/tmail extconf.rb \
+			emake -Cext/tmailscanner/tmail \
 				CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" || die "emake extension failed"
 			;;
 	esac
