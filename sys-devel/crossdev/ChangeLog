@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.66 2010/06/20 05:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.67 2010/07/31 17:08:57 vapier Exp $
+
+  31 Jul 2010; Mike Frysinger <vapier@gentoo.org> crossdev-20100620.ebuild,
+  crossdev-99999999.ebuild:
+  Pull in xz-utils for tarball #322417 by david van rood.
 
 *crossdev-20100620 (20 Jun 2010)
 

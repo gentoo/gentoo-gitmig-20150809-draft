@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-99999999.ebuild,v 1.1 2009/11/23 04:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-99999999.ebuild,v 1.2 2010/07/31 17:08:57 vapier Exp $
 
 if [[ ${PV} == "99999999" ]] ; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/crossdev.git"
@@ -23,7 +23,7 @@ IUSE=""
 RDEPEND=">=sys-apps/portage-2.1
 	app-shells/bash
 	!sys-devel/crossdev-wrappers"
-DEPEND=""
+DEPEND="app-arch/xz-utils"
 
 src_install() {
 	emake install DESTDIR="${D}" || die
