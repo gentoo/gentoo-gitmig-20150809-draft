@@ -19,7 +19,7 @@
 			<pkg>www-client/epiphany</pkg>. This extension helps Beagle index the
 			websites you visit.</flag>
 		<flag name='firefox'>Compiles and installs the extension for either
-			<pkg>www-client/mozilla-firefox</pkg> or
+			<pkg>www-client/firefox</pkg> or
 			<pkg>www-client/firefox-bin</pkg>. This extension helps
 			Beagle index the websites you visit.</flag>
 		<flag name='galago'>Allows Beagle to get status information from
