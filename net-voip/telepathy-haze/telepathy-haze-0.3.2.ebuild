@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.3.2.ebuild,v 1.5 2010/07/25 15:24:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.3.2.ebuild,v 1.6 2010/07/31 12:56:11 pacho Exp $
 
 DESCRIPTION="Telepathy connection manager providing libpurple supported
 protocols."
@@ -9,7 +9,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
 RDEPEND=">=net-im/pidgin-2.1.1
