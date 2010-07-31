@@ -1,6 +1,13 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.16 2010/07/31 18:28:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.17 2010/07/31 18:31:40 graaff Exp $
+
+*rubygems-0-r4 (31 Jul 2010)
+
+  31 Jul 2010; Hans de Graaff <graaff@gentoo.org> rubygems-0-r3.ebuild,
+  +rubygems-0-r4.ebuild:
+  Revision bump to drop ruby19 from -r3 and make it a stable candidate for
+  bug 330643.
 
   31 Jul 2010; Hans de Graaff <graaff@gentoo.org> -rubygems-0-r1.ebuild:
   Remove old version.
