@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.179 2010/07/20 02:29:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.180 2010/07/31 18:58:34 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gtksourceview-2.10.4.ebuild:
+  amd64 stable, bug 324077
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   gtksourceview-1.8.5-r1.ebuild, gtksourceview-2.6.2.ebuild,
