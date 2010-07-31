@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2.ebuild,v 1.2 2010/07/31 13:35:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2.ebuild,v 1.3 2010/07/31 19:28:40 scarabeus Exp $
 
 EAPI="3"
 
@@ -161,7 +161,7 @@ src_configure() {
 	        -e "s:\$(DESTDIR)\$(prefix):\$(DESTDIR)\$(INST_PREFIX):g" \
 	        swig/python/GNUmakefile || die "sed python makefile failed"
 	    sed -i \
-			-e "s:library_dirs = :library_dirs = /usr/$(get_libdir)::g" \
+			-e "s:library_dirs = :library_dirs = /usr/$(get_libdir):g" \
 	        swig/python/setup.cfg || die "sed python setup.cfg failed"
 	fi
 }

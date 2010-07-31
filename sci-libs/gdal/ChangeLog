@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.93 2010/07/31 13:35:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.94 2010/07/31 19:28:40 scarabeus Exp $
+
+  31 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.7.2.ebuild:
+  Fix one too many : at sed line. Per bug #330515.
 
   31 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.7.2.ebuild:
   Upate to fix linking failitures. Tiff is harddep so dont useflag it.
