@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.43 2010/07/27 18:51:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.44 2010/07/31 14:52:55 hanno Exp $
+
+*pam_mount-2.4 (31 Jul 2010)
+
+  31 Jul 2010; Hanno Boeck <hanno@gentoo.org> +pam_mount-2.4.ebuild:
+  Version bump.
 
   27 Jul 2010; Pacho Ramos <pacho@gentoo.org> pam_mount-2.1.ebuild:
   amd64 stable, bug 264658
