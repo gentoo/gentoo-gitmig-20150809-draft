@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.484 2010/07/30 16:58:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.485 2010/07/31 19:14:08 arfrever Exp $
+
+  31 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.6.4-r1.ebuild, python-2.6.5-r2.ebuild, python-2.6.5-r3.ebuild,
+  python-2.7.ebuild, python-3.1.2-r3.ebuild, python-3.1.2-r4.ebuild:
+  Revert wrong change in _ctypes module (bug #329499).
 
   30 Jul 2010; Jeroen Roovers <jer@gentoo.org> python-3.1.2-r3.ebuild:
   Stable for HPPA (bug #320043).
