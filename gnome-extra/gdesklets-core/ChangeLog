@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.129 2010/07/31 17:26:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.130 2010/07/31 22:56:24 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  gdesklets-core-0.36.2-r3.ebuild:
+  Stable on amd64 wrt bug #329603
 
   31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gdesklets-core-0.36.2-r3.ebuild:
