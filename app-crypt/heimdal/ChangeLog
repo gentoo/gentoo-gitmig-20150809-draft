@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.159 2010/07/22 19:20:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.160 2010/07/31 18:20:43 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  heimdal-1.3.3-r1.ebuild:
+  Stable on amd64 wrt bug #330447
 
   22 Jul 2010; Raúl Porcel <armin76@gentoo.org> heimdal-1.3.3.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #322709
