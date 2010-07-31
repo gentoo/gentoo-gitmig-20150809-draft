@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.2_p2.ebuild,v 1.9 2010/07/25 18:57:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.2_p2.ebuild,v 1.10 2010/07/31 21:23:42 idl0r Exp $
 
 EAPI="3"
 
@@ -276,6 +276,9 @@ pkg_postinst() {
 		ewarn "NOTE: as of 'bind-9.6.1' the chroot part of the init-script got some major changes."
 	fi
 
+	ewarn
+	ewarn "NOTE: /var/bind/named.ca has been renamed to /var/bind/named.cache"
+	ewarn "you may need to fix your named.conf!"
 	ewarn
 	ewarn "NOTE: If you upgrade from net-dns/bind-9.4.x, you may encounter permission problems"
 	ewarn "To fix the permissions do:"
