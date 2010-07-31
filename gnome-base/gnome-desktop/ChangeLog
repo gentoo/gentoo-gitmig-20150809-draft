@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.275 2010/07/20 01:50:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.276 2010/07/31 18:43:45 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gnome-desktop-2.30.2.ebuild:
+  amd64 stable, bug 324077
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org>
   gnome-desktop-2.24.3-r1.ebuild, gnome-desktop-2.26.3.ebuild,
