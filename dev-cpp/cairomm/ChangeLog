@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.37 2010/01/01 17:58:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.38 2010/07/31 20:03:17 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> cairomm-1.8.2.ebuild:
+  amd64 stable, bug 324077
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cairomm-1.8.2.ebuild:
   Transfer Prefix keywords

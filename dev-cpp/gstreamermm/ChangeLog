@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gstreamermm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.6 2010/06/02 22:43:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/ChangeLog,v 1.7 2010/07/31 20:07:23 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gstreamermm-0.10.7.3.ebuild:
+  amd64 stable, bug 324077
 
 *gstreamermm-0.10.7.3 (03 Jun 2010)
 

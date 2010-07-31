@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.21 2010/06/17 17:12:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.22 2010/07/31 20:04:13 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> pangomm-2.26.2.ebuild:
+  amd64 stable, bug 324077
 
 *pangomm-2.26.2 (17 Jun 2010)
 

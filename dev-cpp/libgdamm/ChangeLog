@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgdamm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.10 2008/07/10 15:17:48 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.11 2010/07/31 20:06:03 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> libgdamm-1.3.7.ebuild:
+  amd64 stable, bug 324077
 
   10 Jul 2008; Rémi Cardona <remi@gentoo.org> libgdamm-1.3.7.ebuild:
   update HOMEPAGE
