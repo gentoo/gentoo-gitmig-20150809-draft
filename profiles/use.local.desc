@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5824 2010/07/30 15:01:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5825 2010/07/31 20:25:00 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -378,7 +378,7 @@ app-misc/beagle:debug - Enables debug XML dumps of all messages passed between t
 app-misc/beagle:doc - Builds programmer documentation for Beagle using app-doc/monodoc.
 app-misc/beagle:eds - Enables Beagle to index the Addressbook and Calendar from mail-client/evolution stored in gnome-extra/evolution-data-server. The information is accessed using dev-dotnet/evolution-sharp.
 app-misc/beagle:epiphany - Compiles and installs the extension for either www-client/epiphany. This extension helps Beagle index the websites you visit.
-app-misc/beagle:firefox - Compiles and installs the extension for either www-client/mozilla-firefox or www-client/firefox-bin. This extension helps Beagle index the websites you visit.
+app-misc/beagle:firefox - Compiles and installs the extension for either www-client/firefox or www-client/firefox-bin. This extension helps Beagle index the websites you visit.
 app-misc/beagle:galago - Allows Beagle to get status information from applications such as Pidgin to show in the search results.
 app-misc/beagle:google - Enables google (gmail etc.) indexing support.
 app-misc/beagle:gtk - Enables the GTK+ Beagle Search UI for showing search results. This is the default GUI for Beagle.
