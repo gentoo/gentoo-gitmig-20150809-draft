@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.132 2010/07/31 03:59:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.133 2010/07/31 22:58:04 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  enlightenment-1.0.2.ebuild:
+  Stable on amd64 wrt bug #330573
 
 *enlightenment-1.0.3 (31 Jul 2010)
 
