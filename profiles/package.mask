@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11807 2010/07/29 21:55:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11808 2010/07/31 01:09:25 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1098,6 +1098,7 @@ net-libs/libjingle
 ~www-client/chromium-6.0.466.0
 ~www-client/chromium-6.0.472.0
 ~www-client/chromium-6.0.472.11
+~www-client/chromium-6.0.472.14
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (07 Jan 2010)
 #  on behalf of QA team
