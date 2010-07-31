@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.349 2010/07/20 01:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.350 2010/07/31 19:15:35 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> nautilus-2.30.1-r1.ebuild:
+  amd64 stable, bug 324077
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> nautilus-2.26.4.ebuild,
   nautilus-2.26.4-r1.ebuild, nautilus-2.28.4-r1.ebuild,
