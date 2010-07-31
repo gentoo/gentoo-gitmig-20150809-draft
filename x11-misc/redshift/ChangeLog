@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.2 2010/07/30 08:32:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.3 2010/07/31 17:32:31 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> redshift-1.4.1.ebuild:
+  Stable on amd64 wrt bug #330347
 
   30 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   redshift-1.4.1.ebuild:
