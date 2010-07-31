@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.137 2010/07/26 06:52:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.138 2010/07/31 19:07:31 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gok-2.30.0.ebuild:
+  amd64 stable, bug 324077
 
   26 Jul 2010; Gilles Dartiguelongue <eva@gentoo.org> gok-2.30.0.ebuild:
   Fix dependencies.
