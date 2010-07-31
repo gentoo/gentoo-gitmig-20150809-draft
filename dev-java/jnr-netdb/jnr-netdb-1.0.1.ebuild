@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.0.1.ebuild,v 1.2 2010/07/29 08:13:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.0.1.ebuild,v 1.3 2010/07/31 22:06:48 hwoarang Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://github.com/wmeissner/jnr-netdb/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 COMMON_DEP=">=dev-java/jaffl-0.5.1:0"
