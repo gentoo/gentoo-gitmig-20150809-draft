@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.88 2010/07/20 16:22:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.89 2010/07/31 20:28:50 armin76 Exp $
+
+  31 Jul 2010; Raúl Porcel <armin76@gentoo.org> gentoo-0.15.6.ebuild:
+  alpha/ia64/sparc stable wrt #325877
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gentoo-0.15.6.ebuild:
   Stable for HPPA (bug #325877).
