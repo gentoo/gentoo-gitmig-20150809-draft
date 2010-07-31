@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.23 2010/06/15 15:47:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.24 2010/07/31 19:29:30 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  seahorse-plugins-2.30.1-r1.ebuild:
+  amd64 stable, bug 324077
 
 *seahorse-plugins-2.30.1-r1 (15 Jun 2010)
 
