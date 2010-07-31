@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.56 2010/06/16 16:42:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.57 2010/07/31 19:45:13 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  system-tools-backends-2.10.0.ebuild:
+  amd64 stable, bug 324077
 
 *system-tools-backends-2.10.0 (16 Jun 2010)
 
