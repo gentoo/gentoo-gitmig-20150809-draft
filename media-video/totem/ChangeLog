@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.293 2010/07/20 01:40:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.294 2010/07/31 19:40:56 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> totem-2.30.2.ebuild:
+  amd64 stable, bug 324077
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> totem-2.26.5-r1.ebuild:
   Drop HPPA keywording (bug #324511).
