@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/papyon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.10 2010/07/25 15:22:49 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.11 2010/07/31 12:50:39 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> papyon-0.4.6.ebuild:
+  amd64 stable, bug 321591
 
   25 Jul 2010; Tobias Klausmann <klausman@gentoo.org> papyon-0.4.6.ebuild:
   Stable on alpha, bug #321591
