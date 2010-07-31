@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.99.ebuild,v 1.4 2010/07/18 11:49:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-5.0.375.99.ebuild,v 1.5 2010/07/31 15:59:41 truedfx Exp $
 
 EAPI="2"
 
@@ -115,10 +115,10 @@ src_configure() {
 src_compile() {
 	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
 		rootdir="${S}" \
-		CC=$(tc-getCC) \
-		CXX=$(tc-getCXX) \
-		AR=$(tc-getAR) \
-		RANLIB=$(tc-getRANLIB) \
+		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
+		AR="$(tc-getAR)" \
+		RANLIB="$(tc-getRANLIB)" \
 		|| die "compilation failed"
 }
 

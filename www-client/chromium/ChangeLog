@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.145 2010/07/31 03:09:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.146 2010/07/31 15:59:41 truedfx Exp $
+
+  31 Jul 2010; Harald van Dĳk <truedfx@gentoo.org>
+  chromium-5.0.375.99.ebuild, chromium-5.0.375.125.ebuild,
+  chromium-6.0.472.11.ebuild, chromium-6.0.472.14.ebuild,
+  chromium-9999.ebuild:
+  Fix quoting
 
 *chromium-6.0.472.14 (31 Jul 2010)
 
