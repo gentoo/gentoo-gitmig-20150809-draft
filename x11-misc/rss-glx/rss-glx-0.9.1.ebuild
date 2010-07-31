@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.3 2010/07/30 08:30:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.1.ebuild,v 1.4 2010/07/31 18:54:50 hwoarang Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="+bzip2 openal quesoglc"
 
 RDEPEND="x11-libs/libX11
