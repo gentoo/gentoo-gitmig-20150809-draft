@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.77.ebuild,v 1.10 2009/12/19 14:59:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.77.ebuild,v 1.11 2010/07/31 10:28:55 hattya Exp $
 
 inherit eutils java-pkg-opt-2 multilib
 
@@ -16,7 +16,7 @@ SLOT="0"
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	perl? ( dev-lang/perl )
-	ruby? ( virtual/ruby )
+	ruby? ( dev-lang/ruby )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.4 )"
@@ -26,11 +26,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${PN}-runpath.diff
+	epatch "${FILESDIR}"/${PN}-perl-runpath-vendor.diff
+
 	sed -i "/^CFLAGS/s/$/ ${CFLAGS}/" Makefile.in || die
 	sed -i "/^JAVACFLAGS/s/$/ ${JAVACFLAGS}/" java/Makefile.in || die
-
-	epatch "${FILESDIR}"/${P}-runpath.diff
-	epatch "${FILESDIR}"/${PN}-perl-runpath-vendor.diff
 
 	# replace make -> $(MAKE)
 	sed -i "s/make\( \|$\)/\$(MAKE)\1/g" \
@@ -108,7 +108,8 @@ src_install() {
 				rm -f "${D}"/usr/$(get_libdir)/*.jar
 				;;
 			perl)
-				rm "${D}"/$(perl -V:installarchlib | cut -d\' -f2)/*.pod
+				rm -f "${D}"/$(perl -V:installarchlib | cut -d\' -f2)/*.pod
+				find "${D}" -name .packlist -print0 | xargs -0 rm -f
 				;;
 		esac
 		cd -

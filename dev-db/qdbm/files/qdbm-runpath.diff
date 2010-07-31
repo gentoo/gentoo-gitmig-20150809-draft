@@ -1,6 +1,6 @@
-diff -urN qdbm-1.8.77.orig/Makefile.in qdbm-1.8.77/Makefile.in
---- qdbm-1.8.77.orig/Makefile.in	2007-03-07 11:40:47.000000000 +0900
-+++ qdbm-1.8.77/Makefile.in	2007-12-15 22:02:36.719642580 +0900
+diff -ur qdbm-1.8.77.orig/Makefile.in qdbm-1.8.77/Makefile.in
+--- qdbm-1.8.77.orig/Makefile.in
++++ qdbm-1.8.77/Makefile.in
 @@ -61,7 +61,7 @@
  LIBS = -lqdbm @LIBS@
  LIBLDFLAGS = @LDFLAGS@ -L. -L$(MYLIBDIR) -L$(HOME)/lib -L/usr/local/lib @LIBS@

@@ -1,6 +1,6 @@
-diff -urN qdbm-1.8.62.orig/perl/Makefile.in qdbm-1.8.62/perl/Makefile.in
---- qdbm-1.8.62.orig/perl/Makefile.in	2006-01-17 17:25:15.000000000 +0900
-+++ qdbm-1.8.62/perl/Makefile.in	2006-07-23 22:52:23.000000000 +0900
+diff -ur qdbm-1.8.62.orig/perl/Makefile.in qdbm-1.8.62/perl/Makefile.in
+--- qdbm-1.8.62.orig/perl/Makefile.in
++++ qdbm-1.8.62/perl/Makefile.in
 @@ -42,16 +42,16 @@
  all :
  	cd depot && [ -f Makefile ] || \
