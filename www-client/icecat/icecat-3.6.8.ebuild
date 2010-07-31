@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.7-r1.ebuild,v 1.2 2010/07/26 19:30:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.8.ebuild,v 1.1 2010/07/31 23:23:41 polynomial-c Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -18,8 +18,7 @@ MAJ_XUL_PV="1.9.2"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
-#XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
-XUL_PV="${MAJ_XUL_PV}.8"
+XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
 FIREFOX_PN="mozilla-firefox"
 FIREFOX_P="${FIREFOX_PN}-${PV}"
 PATCH="${FIREFOX_PN}-3.6-patches-0.6"
@@ -32,7 +31,7 @@ SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa +ipc java libnotify system-sqlite wifi"
 
-SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.xz
+SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
 LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/"
 
@@ -106,8 +105,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	xz -dc -- "${DISTDIR}/icecat-${MY_PV}.tar.xz" | tar xof - || die "failed to unpack"
-	unpack ${PATCH}.tar.bz2
+	#xz -dc -- "${DISTDIR}/icecat-${MY_PV}.tar.xz" | tar xof - || die "failed to unpack"
+	unpack ${A} #${PATCH}.tar.bz2
 
 	linguas
 	for X in ${linguas}; do
@@ -135,9 +134,6 @@ src_prepare() {
 
 	# Enable tracemonkey for amd64 (bug #315997)
 	epatch "${FILESDIR}/801-enable-x86_64-tracemonkey.patch"
-
-	# Convert 3.6.7 into 3.6.8
-	epatch "${FILESDIR}/mozilla-1.9.2.8.diff"
 
 	# Fix rebranding
 	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in

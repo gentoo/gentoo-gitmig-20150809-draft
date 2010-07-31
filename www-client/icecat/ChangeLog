@@ -1,6 +1,14 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.33 2010/07/26 19:30:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.34 2010/07/31 23:23:41 polynomial-c Exp $
+
+*icecat-3.6.8 (31 Jul 2010)
+
+  31 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -files/mozilla-1.9.2.8.diff, -icecat-3.6.7-r1.ebuild,
+  +icecat-3.6.8.ebuild:
+  Version bump to stay in sync with xulrunner. Committed straight to stable
+  as it's identical to 3.6.7-r1 code-wise.
 
   26 Jul 2010; Markus Meier <maekke@gentoo.org> icecat-3.6.7-r1.ebuild:
   amd64 stable, bug #329279
