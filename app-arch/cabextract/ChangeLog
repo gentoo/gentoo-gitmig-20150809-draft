@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.58 2010/07/30 10:23:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.59 2010/07/31 04:35:02 phajdan.jr Exp $
+
+  31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cabextract-1.3.ebuild:
+  x86 stable wrt security bug #329891
 
 *cabextract-1.3 (30 Jul 2010)
 
