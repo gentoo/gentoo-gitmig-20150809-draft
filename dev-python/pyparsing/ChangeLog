@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.53 2010/06/29 05:43:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.54 2010/07/31 23:30:49 phajdan.jr Exp $
+
+  31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pyparsing-1.5.3.ebuild:
+  x86 stable wrt bug #330607
 
 *pyparsing-1.5.3 (29 Jun 2010)
 
