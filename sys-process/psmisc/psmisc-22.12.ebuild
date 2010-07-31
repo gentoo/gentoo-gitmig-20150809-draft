@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.12.ebuild,v 1.1 2010/07/30 23:01:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.12.ebuild,v 1.2 2010/07/31 00:27:32 ssuominen Exp $
 
 inherit autotools eutils
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	use nls || epatch "${FILESDIR}"/${PN}-22.5-no-nls.patch #193920
+	epatch "${FILESDIR}"/${P}-peekfd.patch
+	use nls || epatch "${FILESDIR}"/${PN}-22.12-no-nls.patch #193920
 	eautoreconf
 }
 
