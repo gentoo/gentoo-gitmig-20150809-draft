@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2-r1.ebuild,v 1.1 2010/07/22 21:34:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2-r1.ebuild,v 1.2 2010/07/31 10:17:23 grobian Exp $
 
 EAPI=3
 
@@ -123,11 +123,13 @@ exportmakeopts() {
 
 	# can't define this to null, since the entire makefile depends on it
 	sed -i -e '/\/usr\/local/s/BASIC_/#BASIC_/' Makefile
-	use !elibc_glibc && use iconv && myopts="${myopts} NEEDS_LIBICONV=YesPlease"
 
 	use iconv \
-		|| einfo "Forcing iconv for 1.7.1-r1 due to bugs #321895, #322205."
+		|| einfo "Forcing iconv for ${PVR} due to bugs #321895, #322205."
 	#	|| myopts="${myopts} NO_ICONV=YesPlease"
+	# because, above, we need to do this unconditionally (no "&& use iconv")
+	use !elibc_glibc && myopts="${myopts} NEEDS_LIBICONV=YesPlease"
+
 	use tk \
 		|| myopts="${myopts} NO_TCLTK=YesPlease"
 	use perl \
