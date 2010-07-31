@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2.ebuild,v 1.1 2010/07/30 12:27:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2.ebuild,v 1.2 2010/07/31 13:35:36 scarabeus Exp $
 
 EAPI="3"
 
@@ -18,10 +18,12 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x86-linux ~x86-macos"
 
-IUSE="curl debug doc ecwj2k fits geos gif gml hdf5 jpeg jpeg2k mysql netcdf odbc ogdi pam perl png postgres python ruby sqlite tiff threads"
+IUSE="curl debug doc ecwj2k fits geos gif gml hdf5 jpeg jpeg2k mysql netcdf odbc ogdi pam perl png postgres python ruby sqlite threads"
 
 RDEPEND="
 	dev-libs/expat
+	>=media-libs/tiff-4.0.0_beta6
+	sci-libs/libgeotiff
 	sys-libs/zlib
 	curl? ( net-misc/curl )
 	ecwj2k? ( sci-libs/libecwj2 )
@@ -48,10 +50,6 @@ RDEPEND="
 	python? ( dev-python/numpy )
 	ruby? ( >=dev-lang/ruby-1.8.4.20060226 )
 	sqlite? ( >=dev-db/sqlite-3 )
-	tiff? (
-		>=media-libs/tiff-4.0.0_beta6
-		sci-libs/libgeotiff
-	)
 "
 
 DEPEND="${RDEPEND}
@@ -96,6 +94,7 @@ src_configure() {
 	# bsb - legal issues
 	# oracle - disabled, i dont have and can't test
 	# ingres - same story as oracle oci
+	# tiff is a hard dep
 	econf \
 		--enable-shared \
 		--disable-static \
@@ -117,10 +116,13 @@ src_configure() {
 		--without-epsilon \
 		--without-idb \
 		--without-sde \
+		--without-libtool \
 		--with-libz="${EPREFIX}/usr/" \
 		--with-ogr \
 		--with-grib \
 		--with-vfk \
+		--with-libtiff \
+		--with-geotiff \
 		$(use_enable debug) \
 		$(use_with postgres pg) \
 		$(use_with fits cfitsio) \
@@ -128,8 +130,6 @@ src_configure() {
 		$(use_with png) \
 		$(use_with jpeg) \
 		$(use_with jpeg pcidsk) \
-		$(use_with tiff libtiff) \
-		$(use_with tiff geotiff) \
 		$(use_with gif) \
 		$(use_with ogdi ogdi "${EPREFIX}"/usr) \
 		$(use_with hdf5) \
