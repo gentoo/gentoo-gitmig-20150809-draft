@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partimage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.46 2010/07/31 15:31:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.47 2010/07/31 20:00:44 phajdan.jr Exp $
+
+  31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  partimage-0.6.8.ebuild:
+  x86 stable wrt bug #330449
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> partimage-0.6.8.ebuild:
   Stable on amd64 wrt bug #330449
