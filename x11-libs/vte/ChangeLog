@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.253 2010/07/16 12:05:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.254 2010/07/31 18:52:12 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> vte-0.24.3.ebuild:
+  amd64 stable, bug 324077
 
 *vte-0.24.3 (16 Jul 2010)
 
