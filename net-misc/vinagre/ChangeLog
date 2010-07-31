@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.56 2010/07/20 02:27:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.57 2010/07/31 19:59:59 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> vinagre-2.30.2.ebuild:
+  amd64 stable, bug 324077
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> vinagre-2.26.2.ebuild,
   vinagre-2.28.1.ebuild, vinagre-2.30.2.ebuild:
