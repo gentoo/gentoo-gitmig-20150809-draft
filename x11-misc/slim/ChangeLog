@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.50 2010/05/21 22:24:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.51 2010/07/31 02:58:39 darkside Exp $
+
+*slim-1.3.2 (31 Jul 2010)
+
+  31 Jul 2010; Jeremy Olexa <darkside@gentoo.org> +slim-1.3.2.ebuild,
+  +files/slim-1.3.2-config.diff:
+  Upstream version bump with minor changes, bug 328447. Drop screenshot USE
+  flag and suggest a method with comments in the conf file, bug 252241
 
   21 May 2010; Jeremy Olexa <darkside@gentoo.org> -slim-1.3.1-r4.ebuild,
   -slim-1.3.1-r5.ebuild, slim-1.3.1_p20091114.ebuild:
