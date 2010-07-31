@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.17 2010/07/27 10:22:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.18 2010/07/31 22:04:58 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  splash-themes-gentoo-20100302.ebuild:
+  Stable on amd64 wrt bug #329873
 
   27 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   splash-themes-gentoo-20100302.ebuild:
