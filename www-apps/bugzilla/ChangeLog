@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.169 2010/07/29 18:20:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.170 2010/07/31 15:44:06 armin76 Exp $
+
+  31 Jul 2010; Raúl Porcel <armin76@gentoo.org> bugzilla-2.22.7.ebuild,
+  bugzilla-3.2.7.ebuild:
+  alpha/ia64/sparc stable wrt #329923
 
   29 Jul 2010; Markos Chandras <hwoarang@gentoo.org> bugzilla-3.2.7.ebuild:
   Stable on amd64 wrt bug #329923
