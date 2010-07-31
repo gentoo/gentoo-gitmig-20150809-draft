@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.520 2010/07/22 19:54:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.521 2010/07/31 11:40:18 scarabeus Exp $
+
+*xorg-server-1.7.7-r1 (31 Jul 2010)
+
+  31 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xorg-server-1.7.7.ebuild, +xorg-server-1.7.7-r1.ebuild:
+  Add patches from nominations branch. So we can open stablerequest for
+  1.7.7-r1.
 
   22 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xorg-server-1.8.0.ebuild, -xorg-server-1.8.1.901.ebuild,

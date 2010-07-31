@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7.ebuild,v 1.2 2010/05/04 12:53:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7-r1.ebuild,v 1.1 2010/07/31 11:40:18 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,6 +13,9 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
 OPENGL_DIR="xorg-x11"
 
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~scarabeus/${P}-patches-01.tar.bz2
+"
 DESCRIPTION="X.Org X servers"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
@@ -120,7 +123,7 @@ EPATCH_SUFFIX="patch"
 
 # These have been sent upstream
 UPSTREAMED_PATCHES=(
-	#"${WORKDIR}/patches/"
+	"${WORKDIR}/patches/"
 	# Fix for bug #304067
 	"${FILESDIR}/1.7.5.902-fix-tslib-1.0-check.patch"
 	)
