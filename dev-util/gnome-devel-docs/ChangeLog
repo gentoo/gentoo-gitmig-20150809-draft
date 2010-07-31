@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gnome-devel-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/ChangeLog,v 1.1 2010/06/13 22:07:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/ChangeLog,v 1.2 2010/07/31 20:00:37 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  gnome-devel-docs-2.30.1.ebuild:
+  amd64 stable, bug 324077
 
 *gnome-devel-docs-2.30.1 (13 Jun 2010)
 
