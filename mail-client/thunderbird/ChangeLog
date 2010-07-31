@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.20 2010/07/26 19:27:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.21 2010/07/31 21:42:20 anarchy Exp $
+
+*thunderbird-3.1.1-r1 (31 Jul 2010)
+
+  31 Jul 2010; Jory A. Pratt <anarchy@gentoo.org>
+  -thunderbird-3.0.4-r1.ebuild, -thunderbird-3.1.ebuild,
+  +thunderbird-3.1.1-r1.ebuild:
+  Fix build for sparc, update patchset, install to /usr/$(get_libdir)/${PN}
 
   26 Jul 2010; Markus Meier <maekke@gentoo.org> thunderbird-3.1.1.ebuild:
   amd64 stable, bug #329279
