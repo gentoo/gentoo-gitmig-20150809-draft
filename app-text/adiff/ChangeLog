@@ -1,6 +1,9 @@
 # ChangeLog for app-text/adiff
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/adiff/ChangeLog,v 1.10 2010/07/26 13:48:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/adiff/ChangeLog,v 1.11 2010/07/31 22:08:52 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> adiff-1.4.ebuild:
+  Stable on amd64 wrt bug #329897
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org> adiff-1.4.ebuild:
   stable x86, bug 329897
