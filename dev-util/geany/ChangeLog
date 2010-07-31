@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.34 2010/07/26 13:34:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.35 2010/07/31 09:12:49 hwoarang Exp $
+
+  31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> geany-0.19.ebuild:
+  Stable on amd64 wrt bug #329841
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org> geany-0.19.ebuild:
   stable x86, bug 329841
