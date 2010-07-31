@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.26 2010/06/29 03:54:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.27 2010/07/31 23:27:28 phajdan.jr Exp $
+
+  31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyro-4.1.ebuild:
+  x86 stable wrt bug #330605
 
 *pyro-4.1 (29 Jun 2010)
 
