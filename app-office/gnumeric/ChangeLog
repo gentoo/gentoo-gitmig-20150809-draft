@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.205 2010/07/24 16:29:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.206 2010/07/31 14:09:03 pacho Exp $
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gnumeric-1.10.6.ebuild:
+  amd64 stable, bug 326503
 
   24 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnumeric-1.10.6.ebuild:
