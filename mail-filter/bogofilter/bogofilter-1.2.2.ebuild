@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.2.ebuild,v 1.4 2010/07/29 15:43:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.2.ebuild,v 1.5 2010/07/31 15:35:16 armin76 Exp $
 
 inherit db-use flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="berkdb sqlite tokyocabinet"
 
 DEPEND="virtual/libiconv
