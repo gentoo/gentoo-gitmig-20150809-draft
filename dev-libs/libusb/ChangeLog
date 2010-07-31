@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.103 2010/07/31 10:51:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.104 2010/07/31 16:42:26 phajdan.jr Exp $
+
+  31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> libusb-1.0.8.ebuild:
+  x86 stable wrt bug #304149
 
   31 Jul 2010; Pacho Ramos <pacho@gentoo.org> libusb-1.0.8.ebuild:
   amd64 stable, bug 304149
