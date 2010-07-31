@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.2.ebuild,v 1.2 2010/07/25 21:32:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.2.2.ebuild,v 1.1 2010/07/31 14:50:36 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="https://launchpad.net/lightspark/"
-SRC_URI="http://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${PN}-0.4.2/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -25,6 +25,7 @@ RDEPEND="dev-libs/libpcre[cxx]
 		media-sound/pulseaudio
 	)
 	net-misc/curl
+	>=sys-devel/gcc-4.4
 	>=sys-devel/llvm-2.7
 	virtual/opengl
 	nsplugin? (
@@ -40,6 +41,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P/_rc*/}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-disabled-plugin.diff
+}
+
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use nsplugin COMPILE_PLUGIN)
@@ -54,4 +59,17 @@ src_install() {
 	cmake-utils_src_install
 
 	use nsplugin && inst_plugin /usr/$(get_libdir)/${PN}/plugins/liblightsparkplugin.so
+}
+
+pkg_postinst() {
+	if use nsplugin && ! has_version www-plugins/gnash; then
+		elog "Lightspark now supports gnash fallback for its browser plugin."
+		elog "Install www-plugins/gnash to take advantage of it."
+	fi
+	if use nsplugin && has_version www-plugins/gnash[nsplugin]; then
+		elog "Having two plugins installed for the same MIME type may confuse"
+		elog "Mozilla based browsers. It is recommended to disable the nsplugin"
+		elog "USE flag for either gnash or lightspark. For details, see"
+		elog "https://bugzilla.mozilla.org/show_bug.cgi?id=581848"
+	fi
 }
