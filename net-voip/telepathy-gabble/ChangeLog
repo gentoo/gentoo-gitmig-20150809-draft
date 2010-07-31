@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.57 2010/07/25 15:23:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.58 2010/07/31 11:52:57 pacho Exp $
+
+*telepathy-gabble-0.8.14 (31 Jul 2010)
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org>
+  +telepathy-gabble-0.8.14.ebuild:
+  Version bump with important fixes, restrict tests since really a lot of
+  them are broken (upstream bugs #23168 and #20635).
 
   25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
   telepathy-gabble-0.8.8.ebuild:
