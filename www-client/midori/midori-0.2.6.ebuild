@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.6.ebuild,v 1.1 2010/05/24 18:06:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.6.ebuild,v 1.2 2010/07/31 23:34:34 hwoarang Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ppc ~x86 ~x86-fbsd"
 IUSE="doc gnome html idn libnotify nls +sqlite +unique"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
