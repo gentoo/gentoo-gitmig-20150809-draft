@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-13.1-r1.ebuild,v 1.1 2010/02/03 18:23:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-13.1-r1.ebuild,v 1.2 2010/07/31 22:42:14 hwoarang Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://openlab.ring.gr.jp/skk/maintrunk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=">=app-emacs/apel-10.7"
