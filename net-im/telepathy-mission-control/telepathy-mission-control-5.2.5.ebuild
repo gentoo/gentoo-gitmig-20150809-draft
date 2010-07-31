@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.2.5.ebuild,v 1.6 2010/07/25 15:26:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.2.5.ebuild,v 1.7 2010/07/31 12:44:40 pacho Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -22,6 +24,15 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	test? ( virtual/python
 		dev-python/twisted-words )"
+
+src_prepare() {
+	# See upstream bug #29334
+	sed -e 's:account-manager/avatar-refresh.py::' \
+		-e 's:account-manager/make-valid.py::' \
+		-e 's:crash-recovery/crash-recovery.py::' \
+		-e 's:dispatcher/create-at-startup.py::' \
+		-i test/twisted/Makefile.am test/twisted/Makefile.in || die 'sed failed'
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
