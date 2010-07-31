@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-9.11.ebuild,v 1.4 2010/01/16 01:50:14 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-9.11.ebuild,v 1.5 2010/07/31 10:41:14 ssuominen Exp $
 
 inherit multilib eutils versionator
 
@@ -28,7 +28,7 @@ RDEPEND="media-libs/audiofile
 	ladspa? ( media-libs/ladspa-sdk )
 	nls? ( sys-devel/gettext )
 	opengl? ( virtual/opengl )
-	ruby? ( virtual/ruby )
+	ruby? ( dev-lang/ruby )
 	xpm? ( x11-libs/libXpm )"
 
 #S=${WORKDIR}/${PN}-$(get_version_component_range 1)
