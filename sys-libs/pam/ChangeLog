@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.263 2010/07/31 21:56:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.264 2010/08/01 03:47:44 flameeyes Exp $
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> pam-1.1.1-r2.ebuild:
+  Add a 'few' more messages at postinst, one warning against common problems
+  with long-running software, and and the other about the bugged pam_tally2.
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> pam-1.1.1-r2.ebuild:
   Stable on amd64 wrt bug #329931

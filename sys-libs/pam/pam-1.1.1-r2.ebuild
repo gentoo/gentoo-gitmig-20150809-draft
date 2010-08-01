@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.1-r2.ebuild,v 1.7 2010/07/31 21:56:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.1-r2.ebuild,v 1.8 2010/08/01 03:47:44 flameeyes Exp $
 
 EAPI="3"
 
@@ -183,4 +183,21 @@ src_install() {
 
 pkg_preinst() {
 	check_old_modules || die "deprecated PAM modules still used"
+}
+
+pkg_postinst() {
+	ewarn "Some software with pre-loaded PAM libraries might experience"
+	ewarn "warnings or failures related to missing symbols and/or versions"
+	ewarn "after any update. While unfortunate this is a limit of the"
+	ewarn "implementation of PAM and the software, and it requires you to"
+	ewarn "restart the software manually after the update."
+	ewarn ""
+	ewarn "You can get a list of such software running a command like"
+	ewarn "  lsof / | egrep 'DEL.*libpam\\.so'"
+	elog ""
+	elog "Because of a bug present up to version 1.1.1-r2, you might have"
+	elog "an executable /var/log/tallylog file. If it is so, you can safely"
+	elog "correct it by running the command"
+	elog "  chmod -x /var/log/tallylog"
+	elog ""
 }
