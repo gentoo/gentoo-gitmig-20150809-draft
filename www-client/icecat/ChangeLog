@@ -1,6 +1,11 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.34 2010/07/31 23:23:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.35 2010/08/01 16:10:08 anarchy Exp $
+
+*icecat-3.6.8-r1 (01 Aug 2010)
+
+  01 Aug 2010; Jory A. Pratt <anarchy@gentoo.org> +icecat-3.6.8-r1.ebuild:
+  Fix bug #325469, new useflag to control printing support
 
 *icecat-3.6.8 (31 Jul 2010)
 
