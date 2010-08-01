@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/gnome-desktop-sharp-2.26.0-r1.ebuild,v 1.4 2010/07/31 18:45:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-desktop-sharp/gnome-desktop-sharp-2.26.0-r1.ebuild,v 1.5 2010/08/01 12:27:01 fauli Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ GTK_SHARP_MODULE_DIR="gnomedesktop"
 inherit eutils gtk-sharp-module
 
 SLOT="2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RESTRICT="test"
