@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.9 2010/05/05 16:14:38 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.10 2010/08/01 22:39:59 tommy Exp $
 
 EAPI="1"
-DATE=20091027
+DATE=20100701
 
 EGIT_REPO_URI="git://github.com/freenet/fred-official.git"
 EGIT_PROJECT="freenet/fred-official"
@@ -25,7 +25,7 @@ CDEPEND="dev-db/db-je:3.3
 	dev-java/db4o-jdk11
 	dev-java/db4o-jdk12
 	dev-java/db4o-jdk5
-	dev-java/ant-core
+	=dev-java/ant-core-1.7*
 	dev-java/lzma
 	dev-java/lzmajio
 	dev-java/mersennetwister"
