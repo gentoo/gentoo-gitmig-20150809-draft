@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.200 2010/07/31 18:51:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.201 2010/08/01 11:11:53 fauli Exp $
+
+  01 Aug 2010; Christian Faulhammer <fauli@gentoo.org> atk-1.30.0.ebuild:
+  x86 stable, bug 324077
 
   31 Jul 2010; Pacho Ramos <pacho@gentoo.org> atk-1.30.0.ebuild:
   amd64 stable, bug 324077
