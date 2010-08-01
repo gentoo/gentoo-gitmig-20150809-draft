@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-bdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.34 2010/01/28 13:01:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.35 2010/08/01 10:54:44 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  ruby-bdb-0.6.5-r1.ebuild:
+  Stable on amd64 wrt bug #330331
 
 *ruby-bdb-0.6.5-r1 (28 Jan 2010)
 
