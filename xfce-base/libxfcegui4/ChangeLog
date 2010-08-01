@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.148 2010/07/23 07:45:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.149 2010/08/01 18:39:42 armin76 Exp $
+
+  01 Aug 2010; Raúl Porcel <armin76@gentoo.org> libxfcegui4-4.6.4.ebuild:
+  alpha/ia64/sparc stable wrt #323729
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> libxfcegui4-4.6.4.ebuild:
   arm stable, bug #323729
