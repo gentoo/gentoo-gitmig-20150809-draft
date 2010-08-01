@@ -1,6 +1,13 @@
 # ChangeLog for media-video/bdsup2sub
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bdsup2sub/ChangeLog,v 1.2 2010/07/29 11:14:40 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bdsup2sub/ChangeLog,v 1.3 2010/08/01 00:45:48 sbriesen Exp $
+
+*bdsup2sub-4.0.0-r1 (01 Aug 2010)
+
+  01 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +bdsup2sub-4.0.0-r1.ebuild, +files/bdsup2sub-4.0.0-xdg.patch,
+  metadata.xml:
+  made a better XDG patch
 
   29 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
   bdsup2sub-4.0.0.ebuild:
