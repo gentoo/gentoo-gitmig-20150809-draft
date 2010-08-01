@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libmcpp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/ChangeLog,v 1.10 2010/08/01 21:46:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/ChangeLog,v 1.11 2010/08/01 23:58:56 phajdan.jr Exp $
+
+  01 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libmcpp-2.7.2-r1.ebuild:
+  x86 stable wrt bug #330599
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   libmcpp-2.7.2-r1.ebuild:
