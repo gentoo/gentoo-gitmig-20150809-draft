@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6.ebuild,v 1.6 2010/07/26 22:46:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6.ebuild,v 1.7 2010/08/01 12:22:27 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -44,7 +44,7 @@ LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa +chatzilla +composer +crypt java ldap +mailclient +roaming system-sqlite"
 
 SRC_URI="${REL_URI}/source/${MY_P}.source.tar.bz2
-	http://dev.gentoo.org/~polynomial-c/${PATCH}.tar.bz2
+	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.bz2
 	crypt? ( mailclient? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
 
 if ${HAS_LANGS} ; then
