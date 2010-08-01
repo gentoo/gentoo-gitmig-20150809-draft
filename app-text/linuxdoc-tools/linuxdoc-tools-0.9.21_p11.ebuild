@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.7 2010/01/25 18:53:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.8 2010/08/01 20:02:03 xarthisius Exp $
 
-inherit eutils sgml-catalog
+inherit eutils sgml-catalog toolchain-funcs
 
 MY_PV=${PV/_p/-0.}
 
@@ -38,12 +38,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.9.13-letter.patch"
 	epatch "${FILESDIR}/${PN}-0.9.20-lib64.patch"
 	epatch "${FILESDIR}/${PN}-0.9.21-malloc.patch"
+	epatch "${FILESDIR}/${PN}-0.9.21-ldflags.patch"
 }
 src_compile() {
 	local myconf="--with-installed-iso-entities"
 
 	econf $myconf || die "./configure failed"
-	emake CFLAGS="${CFLAGS}" || die "Compilation failed"
+	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" || die "Compilation failed"
 }
 
 src_install() {
