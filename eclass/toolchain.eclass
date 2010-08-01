@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.436 2010/07/22 01:26:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.437 2010/08/01 03:00:36 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1488,8 +1488,6 @@ gcc_do_make() {
 	elif [[ $(gcc-version) == "3.4" && ${GCC_BRANCH_VER} == "3.4" ]] && gcc-specs-ssp ; then
 		# See bug #79852
 		STAGE1_CFLAGS=${STAGE1_CFLAGS-"-O2"}
-	else
-		STAGE1_CFLAGS=${STAGE1_CFLAGS-"-O"}
 	fi
 
 	if is_crosscompile; then
