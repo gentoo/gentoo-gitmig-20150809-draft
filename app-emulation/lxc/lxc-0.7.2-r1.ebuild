@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.2.ebuild,v 1.1 2010/08/01 03:17:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.2-r1.ebuild,v 1.1 2010/08/01 21:13:45 flameeyes Exp $
 
 EAPI="2"
 
@@ -90,6 +90,7 @@ src_install() {
 
 	# Gentoo-specific additions!
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	keepdir /var/log/lxc
 }
 
 pkg_postinst() {

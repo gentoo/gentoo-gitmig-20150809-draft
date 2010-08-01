@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.14 2010/08/01 03:17:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.15 2010/08/01 21:13:45 flameeyes Exp $
+
+*lxc-0.7.2-r1 (01 Aug 2010)
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> -lxc-0.7.2.ebuild,
+  +lxc-0.7.2-r1.ebuild, files/lxc.initd:
+  New init script, with more thorough verification of the config, support
+  for mounting the cgroup pseudo-fs, proper network dependencies, improved
+  start-up (verifies that the container actually started up) and stop (won't
+  waste time if the container was externally stopped).
 
 *lxc-0.7.2 (01 Aug 2010)
 
