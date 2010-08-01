@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/text-hyphen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.18 2010/05/22 22:43:18 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.19 2010/08/01 18:33:47 flameeyes Exp $
+
+*text-hyphen-1.0.0-r2 (01 Aug 2010)
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  text-hyphen-1.0.0-r1.ebuild, +text-hyphen-1.0.0-r2.ebuild:
+  Move non-ruby18 support to a new revision to mark one stable. Update to
+  new syntax.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> text-hyphen-1.0.0-r1.ebuild:
   Add REE18 support
