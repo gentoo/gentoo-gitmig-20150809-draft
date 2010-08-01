@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.7.3.ebuild,v 1.2 2010/07/20 15:30:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.7.3.ebuild,v 1.3 2010/08/01 21:41:49 dirtyepic Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A gtkmm front end to the GNU Debugger (gdb)"
 HOMEPAGE="http://projects.gnome.org/nemiver/"
@@ -42,4 +42,8 @@ pkg_setup() {
 		--enable-sourceviewmm2
 		--enable-gio
 		--disable-static"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/nemiver-0.7.3-gcc45.patch
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nemiver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.29 2010/07/20 15:30:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.30 2010/08/01 21:41:49 dirtyepic Exp $
+
+  01 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> nemiver-0.7.3.ebuild,
+  +files/nemiver-0.7.3-gcc45.patch:
+  Fix building w/ GCC 4.5 (bug #319355, patch from Xarthisius).
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> nemiver-0.7.2.ebuild,
   nemiver-0.7.3.ebuild:

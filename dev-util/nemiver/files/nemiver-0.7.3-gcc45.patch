@@ -1,0 +1,24 @@
+https://bugs.gentoo.org/319355
+
+--- a/src/common/nmv-object.cc
++++ b/src/common/nmv-object.cc
+@@ -59,7 +59,7 @@ Object::Object (Object const &a_object):
+     *m_priv = *a_object.m_priv;
+ }
+ 
+-Object::Object&
++Object&
+ Object::operator= (Object const &a_object)
+ {
+     if (this == &a_object)
+--- a/src/langs/nmv-cpp-ast.cc
++++ b/src/langs/nmv-cpp-ast.cc
+@@ -64,7 +64,7 @@ Token::Token (const Token &a_t)
+     m_int_value = a_t.get_int_value ();
+ }
+ 
+-Token::Token&
++Token&
+ Token::operator= (const Token &a_t)
+ {
+     m_kind = a_t.get_kind ();
