@@ -1,12 +1,6 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.55 2010/08/01 21:28:27 idl0r Exp $
-
-*feh-1.8-r1 (01 Aug 2010)
-
-  01 Aug 2010; Christian Ruppert <idl0r@gentoo.org> +feh-1.8-r1.ebuild:
-  Revision bump. Fix dependencies, remove useless jpeg dependency and add
-  media-libs/imlib2 use dependencies.
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.56 2010/08/01 22:22:15 ssuominen Exp $
 
   23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> feh-1.8.ebuild:
   Use virtual/jpeg.
