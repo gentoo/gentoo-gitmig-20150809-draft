@@ -1,6 +1,17 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.41 2010/07/17 16:22:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.42 2010/08/01 00:55:09 sbriesen Exp $
+
+*projectx-0.90.4.00_p33-r1 (01 Aug 2010)
+
+  01 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +projectx-0.90.4.00_p33-r1.ebuild,
+  +files/projectx-0.90.4.00_p33-idctfast.patch,
+  files/projectx-0.90.4.00_p33-stdout-corrupt.patch,
+  +files/projectx-0.90.4.00_p33-xdg.patch, files/build-0.90.4.00_p33.xml,
+  +files/icon.png:
+  ebuild cleanup, added new IDCT patch (includes MMX/SSE also for amd64),
+  added XDG patch, installs icon, renamed projectx_nogui to projectx_cli.
 
   17 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   projectx-0.90.4.00_p33.ebuild:
