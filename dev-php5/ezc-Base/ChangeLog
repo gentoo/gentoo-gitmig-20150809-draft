@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.20 2010/08/01 11:40:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.21 2010/08/01 13:21:41 fauli Exp $
+
+  01 Aug 2010; Christian Faulhammer <fauli@gentoo.org> ezc-Base-1.8.ebuild:
+  stable x86, security bug 330481
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> ezc-Base-1.8.ebuild:
   Stable on amd64 wrt bug #330481
