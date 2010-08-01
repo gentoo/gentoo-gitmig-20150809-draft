@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.30.0.ebuild,v 1.2 2010/07/31 20:14:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.30.0.ebuild,v 1.3 2010/08/01 12:41:58 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
 IUSE="doc nautilus"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 COMMON_DEPEND=">=dev-libs/glib-2.19.1
 	>=x11-libs/gtk+-2.19.1
