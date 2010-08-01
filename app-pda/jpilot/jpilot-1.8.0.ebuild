@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-1.8.0.ebuild,v 1.1 2010/07/13 13:29:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-1.8.0.ebuild,v 1.2 2010/08/01 14:22:02 ssuominen Exp $
 
 EAPI=2
 
@@ -23,8 +23,10 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i \
-		-e "/^Icon/s:jpilot.xpm:/usr/share/pixmaps/jpilot/jpilot-icon1.xpm:" \
+		-e '/^Icon/s:jpilot.xpm:/usr/share/pixmaps/jpilot/jpilot-icon1.xpm:' \
 		jpilot.desktop || die
+
+	echo calendar.c > po/POTFILES.skip
 }
 
 src_configure() {
