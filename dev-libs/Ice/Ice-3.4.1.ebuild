@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.1.ebuild,v 1.2 2010/07/17 13:31:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.1.ebuild,v 1.3 2010/08/01 21:48:23 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,14 +18,14 @@ SRC_URI="http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${
 	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf.gz )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="doc examples +ncurses mono python ruby test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.5
 	>=dev-libs/openssl-0.9.8o
 	>=sys-libs/db-4.8.30:4.8[-nocxx]
-	=dev-cpp/libmcpp-2.7.2
+	~dev-cpp/libmcpp-2.7.2
 	ruby? ( $(ruby_implementation_depend ruby18) )
 	mono? ( dev-lang/mono )
 	!dev-python/IcePy

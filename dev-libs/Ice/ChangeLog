@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.5 2010/07/17 13:31:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.6 2010/08/01 21:48:23 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> Ice-3.4.1.ebuild:
+  Make libmcpp more flexible. Stable on amd64 wrt bug #328609
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> Ice-3.4.1.ebuild:
   stable x86, bug 328609
