@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.24 2010/07/27 20:40:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.25 2010/08/01 14:16:08 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  broadcom-sta-5.60.48.36-r1.ebuild:
+  Stable on amd64 wrt bug #322639
 
   27 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   broadcom-sta-5.60.48.36-r1.ebuild:
