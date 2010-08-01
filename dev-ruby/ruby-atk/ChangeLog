@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.45 2010/07/26 13:28:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.46 2010/08/01 09:47:39 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> ruby-atk-0.19.4.ebuild:
+  Stable on amd64 wrt bug #329807
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   ruby-atk-0.19.4.ebuild:

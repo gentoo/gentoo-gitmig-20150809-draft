@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-rsvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.17 2010/07/26 13:41:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.18 2010/08/01 09:58:02 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  ruby-rsvg-0.19.4.ebuild:
+  Stable on amd64 wrt bug #329807
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   ruby-rsvg-0.19.4.ebuild:
