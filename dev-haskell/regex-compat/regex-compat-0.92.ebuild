@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/regex-compat-0.92.ebuild,v 1.2 2010/07/01 19:58:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/regex-compat-0.92.ebuild,v 1.3 2010/08/01 09:37:47 slyfox Exp $
 
 CABAL_FEATURES="profile haddock lib"
 inherit haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6

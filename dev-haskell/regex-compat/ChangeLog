@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/regex-compat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/ChangeLog,v 1.23 2010/07/01 19:58:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-compat/ChangeLog,v 1.24 2010/08/01 09:37:47 slyfox Exp $
+
+  01 Aug 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  regex-compat-0.91.ebuild, regex-compat-0.92.ebuild:
+  Marked ~ppc. Thanks to Michael Mounteney (monty) for testing.
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> regex-compat-0.71.ebuild,
   regex-compat-0.91.ebuild, regex-compat-0.92.ebuild:
