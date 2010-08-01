@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mpg123-el
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.27 2010/07/31 22:40:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.28 2010/08/01 19:53:07 fauli Exp $
+
+  01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  mpg123-el-1.52.ebuild, mpg123-el-1.55.ebuild:
+  add media-sound/alsa-utils to dependencies, thanks to phajdan.jr for
+  spotting in bug 330317
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> mpg123-el-1.55.ebuild:
   Stable on amd64 wrt bug #330317

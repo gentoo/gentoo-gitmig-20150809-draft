@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.52.ebuild,v 1.4 2010/01/13 20:39:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.52.ebuild,v 1.5 2010/08/01 19:53:07 fauli Exp $
 
 inherit elisp toolchain-funcs
 
@@ -16,6 +16,7 @@ IUSE="vorbis"
 DEPEND=""
 RDEPEND="media-sound/mpg123
 	media-sound/aumix
+	media-sound/alsa-utils
 	vorbis? ( media-sound/vorbis-tools )"
 
 SITEFILE="50${PN}-gentoo.el"
