@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/text-format
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.35 2010/05/23 10:15:38 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.36 2010/08/01 18:29:42 flameeyes Exp $
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  text-format-1.0.0-r1.ebuild, +text-format-1.0.0-r2.ebuild:
+  Move non-ruby18 support to a new revision to mark one stable.
+
+*text-format-1.0.0-r2 (01 Aug 2010)
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +text-format-1.0.0-r2.ebuild:
+  Move non-ruby18 support to a new revision to mark one stable.
 
   23 May 2010; Alex Legler <a3li@gentoo.org> text-format-1.0.0-r1.ebuild:
   Add REE18 support
