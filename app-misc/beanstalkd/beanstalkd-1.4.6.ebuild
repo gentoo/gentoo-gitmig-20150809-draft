@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.4.6.ebuild,v 1.4 2010/07/10 16:39:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.4.6.ebuild,v 1.5 2010/08/01 14:08:25 flameeyes Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}"/usr/share/${PF} \
-		--with-event="${EPREFIX}"/usr
+		--with-event="${EPREFIX}"/usr \
 		$(use_enable debug)
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beanstalkd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.16 2010/07/10 16:39:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.17 2010/08/01 14:08:25 flameeyes Exp $
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  beanstalkd-1.4.6.ebuild:
+  Fix call to use_enable.
 
   10 Jul 2010; Jeroen Roovers <jer@gentoo.org> beanstalkd-1.3.ebuild,
   beanstalkd-1.4.6.ebuild:
