@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.49 2010/02/22 22:47:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.50 2010/08/01 23:25:32 caster Exp $
+
+  01 Aug 2010; Vlastimil Babka <caster@gentoo.org>
+  jrockit-jdk-bin-1.5.0.14.ebuild:
+  Remove amd64 and x86 keywords, as it's no longer fetchable, bug #228929.
+  The ia64 keyword likely to be removed as well.
 
   22 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   -files/jrockit-jdk-bin-1.4.2.08, -jrockit-jdk-bin-1.4.2.16.ebuild,
