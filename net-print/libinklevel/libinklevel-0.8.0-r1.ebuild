@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.8.0-r1.ebuild,v 1.3 2010/06/23 21:52:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/libinklevel-0.8.0-r1.ebuild,v 1.4 2010/08/01 20:23:04 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://libinklevel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libinklevel/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 amd64 ~ppc"
+KEYWORDS="amd64 ~ppc x86"
 LICENSE="GPL-2"
 IUSE="debug"
 
