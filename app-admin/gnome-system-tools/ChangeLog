@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.90 2010/07/31 19:46:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.91 2010/08/01 11:57:56 fauli Exp $
+
+  01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  gnome-system-tools-2.30.2.ebuild:
+  x86 stable, bug 324077
 
   31 Jul 2010; Pacho Ramos <pacho@gentoo.org>
   gnome-system-tools-2.30.2.ebuild:
