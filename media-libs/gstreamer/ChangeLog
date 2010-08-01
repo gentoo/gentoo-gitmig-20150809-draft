@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.265 2010/07/27 17:20:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.266 2010/08/01 20:18:07 klausman Exp $
+
+  01 Aug 2010; Tobias Klausmann <klausman@gentoo.org>
+  gstreamer-0.10.28.ebuild:
+  Stable on alpha, bug #324691
 
   27 Jul 2010; Pacho Ramos <pacho@gentoo.org> gstreamer-0.10.29.ebuild:
   amd64 stable, bug 329703
