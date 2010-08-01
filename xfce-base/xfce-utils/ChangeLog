@@ -1,9 +1,6 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.152 2010/08/01 18:47:47 armin76 Exp $
-
-  01 Aug 2010; Raúl Porcel <armin76@gentoo.org> xfce-utils-4.6.2.ebuild:
-  alpha/ia64/sparc stable wrt #323729
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.153 2010/08/01 18:56:43 armin76 Exp $
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> xfce-utils-4.6.2.ebuild:
   arm stable, bug #323729
