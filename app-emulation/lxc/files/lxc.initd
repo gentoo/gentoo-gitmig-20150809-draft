@@ -1,0 +1,67 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd,v 1.1 2010/08/01 03:17:51 flameeyes Exp $
+
+CONTAINER=${SVCNAME#*.}
+CONFIGFILE=${CONFIGFILE:-/etc/lxc/${CONTAINER}.conf}
+
+depend() {
+	 need net.lo localmount
+}
+
+checkconfig() {
+    if [ ${CONTAINER} = ${SVCNAME} ]; then
+	eerror "You have to create an init script for each container:"
+	eerror " ln -s lxc /etc/init.d/lxc.container"
+	return 1
+    fi
+}
+
+rootpath() {
+    sed -n -e 's:^[ \t]*lxc.rootfs[ \t]*=[ \t]*\(.*\)$:\1:p' ${CONFIGFILE}
+}
+
+start() {
+    checkconfig || return 1
+
+    rm /var/log/lxc/${CONTAINER}.log
+
+    # Check the format of our init and the chroot's init, to see if we
+    # have to use linux32 or linux64…
+    case $(scanelf -BF '%M#f' /sbin/init $(rootpath)/sbin/init | tr '\n' ':') in
+	ELFCLASS64:ELFCLASS64:) setarch=;;
+	ELFCLASS32:ELFCLASS32:) setarch=;;
+	ELFCLASS32:ELFCLASS64:) setarch=linux64;;
+	ELFCLASS64:ELFCLASS32:) setarch=linux32;;
+    esac
+
+    mkdir -p /var/log/lxc
+
+    ebegin "Starting ${CONTAINER}"
+    ${setarch} lxc-start -n ${CONTAINER} -f ${CONFIGFILE} -d -o /var/log/lxc/${CONTAINER}.log
+    eend $?
+}
+
+stop() {
+    checkconfig || return 1
+
+    local init_pid=$(head -n1 /cgroup/${CONTAINER}/tasks)
+
+    ebegin "Shutting down system in ${CONTAINER}"
+    kill -INT ${init_pid}
+    eend $?
+
+    sleep 15
+
+    missingprocs=$(pgrep -P ${init_pid})
+
+    if [ -n "${missingprocs}" ]; then
+	ewarn "Something failed to properly shut down in ${CONTAINER}"
+    fi
+
+    ebegin "Stopping ${CONTAINER}"
+    lxc-stop -n ${CONTAINER}
+    eend $?
+}
+

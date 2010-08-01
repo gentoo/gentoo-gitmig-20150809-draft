@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.13 2010/06/28 00:00:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.14 2010/08/01 03:17:50 flameeyes Exp $
+
+*lxc-0.7.2 (01 Aug 2010)
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> +lxc-0.7.2.ebuild,
+  +files/lxc.initd, metadata.xml:
+  Version bump, add the long-requested init script (protected with a
+  USE=vanilla for those preferring not to have it).
 
 *lxc-0.7.1 (28 Jun 2010)
 
