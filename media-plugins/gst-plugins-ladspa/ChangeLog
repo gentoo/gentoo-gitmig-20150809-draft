@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ladspa
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.28 2010/07/01 12:22:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ladspa/ChangeLog,v 1.29 2010/08/01 20:31:29 klausman Exp $
+
+  01 Aug 2010; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-ladspa-0.10.18.ebuild:
+  Stable on alpha, bug #324691
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-ladspa-0.10.18.ebuild:
