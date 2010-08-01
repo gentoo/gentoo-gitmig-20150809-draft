@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.113 2010/07/27 13:46:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.114 2010/08/01 14:05:23 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> freeciv-2.2.1.ebuild:
+  Stable on amd64 wrt bug #329957
 
   27 Jul 2010; Christian Faulhammer <fauli@gentoo.org> freeciv-2.2.1.ebuild:
   stable x86, bug 329957
