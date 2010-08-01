@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.345 2010/08/01 16:20:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.346 2010/08/01 18:53:24 polynomial-c Exp $
+
+  01 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  xulrunner-1.9.2.8.ebuild, xulrunner-1.9.2.8-r1.ebuild:
+  New patchset which incorporates armv4t-nanojit patch requested by armin76.
 
   01 Aug 2010; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.2.8.ebuild:
   alpha/arm/ia64/sparc stable wrt #329279
