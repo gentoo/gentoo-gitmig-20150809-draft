@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-romkan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.22 2010/07/25 16:44:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.23 2010/08/01 14:20:40 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  ruby-romkan-0.4-r2.ebuild:
+  Stable on amd64 wrt bug #329265
 
   25 Jul 2010; Jeroen Roovers <jer@gentoo.org> ruby-romkan-0.4-r2.ebuild:
   Stable for HPPA (bug #329265).
