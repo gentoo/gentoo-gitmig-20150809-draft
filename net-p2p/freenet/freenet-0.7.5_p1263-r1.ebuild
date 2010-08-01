@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1263.ebuild,v 1.1 2010/07/31 14:11:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1263-r1.ebuild,v 1.1 2010/08/01 19:52:46 tommy Exp $
 
 EAPI="2"
 DATE=20100701
@@ -23,7 +23,7 @@ CDEPEND="dev-db/db-je:3.3
 	dev-java/db4o-jdk11
 	dev-java/db4o-jdk12
 	dev-java/db4o-jdk5
-	dev-java/ant-core
+	=dev-java/ant-core-1.7*
 	dev-java/lzma
 	dev-java/lzmajio
 	dev-java/mersennetwister"
