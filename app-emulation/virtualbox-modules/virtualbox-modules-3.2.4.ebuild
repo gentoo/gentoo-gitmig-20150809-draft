@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-3.2.4.ebuild,v 1.1 2010/06/07 17:40:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-3.2.4.ebuild,v 1.2 2010/08/01 12:26:33 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -12,7 +12,7 @@ inherit eutils linux-mod
 MY_P=vbox-kernel-module-src-${PV}
 DESCRIPTION="Kernel Modules for Virtualbox"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="http://dev.gentoo.org/~polynomial-c/${MY_P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~polynomial-c/virtualbox/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
