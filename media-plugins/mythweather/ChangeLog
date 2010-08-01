@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythweather
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.65 2010/07/28 21:11:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/ChangeLog,v 1.66 2010/08/01 11:27:31 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  mythweather-0.22_p22991.ebuild:
+  Stable on amd64 wrt bug #323745
 
   28 Jul 2010; Doug Goldstein <cardoe@gentoo.org>
   mythweather-0.23.1_p25396.ebuild:
