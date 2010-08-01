@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.1-r1.ebuild,v 1.1 2010/07/03 14:17:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.2.ebuild,v 1.1 2010/08/01 05:35:50 pva Exp $
 
 EAPI="2"
 
@@ -8,8 +8,7 @@ inherit eutils webapp depend.php
 
 DESCRIPTION="PHP/MySQL/Web based bugtracking system"
 HOMEPAGE="http://www.mantisbt.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-mirror://gentoo/${P}-git20100511.patch.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -24,7 +23,6 @@ RDEPEND="
 	>=dev-php/adodb-5.10"
 
 src_prepare() {
-	epatch "${WORKDIR}/${P}-git20100511.patch"
 	# Drop external libraries
 	rm -r "${S}/library/adodb/"
 	rm -r "${S}/library/ezc/"{Base,Graph}
