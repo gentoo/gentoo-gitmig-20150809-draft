@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/fcron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.81 2010/05/14 11:11:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.82 2010/08/01 16:19:40 flameeyes Exp $
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> -fcron-3.0.6.ebuild,
+  fcron-3.0.6-r1.ebuild:
+  Remove old version and fix a message.
 
 *fcron-3.0.6-r1 (14 May 2010)
 
