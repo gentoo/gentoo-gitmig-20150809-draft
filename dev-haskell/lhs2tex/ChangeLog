@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/lhs2tex
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.24 2010/08/01 11:40:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.25 2010/08/01 12:10:47 slyfox Exp $
+
+  01 Aug 2010; Sergei Trofimovich <slyfox@gentoo.org> lhs2tex-1.11.ebuild:
+  Remove hugs98 from build depends (USE=doc case) and switch to prebult .pdf
+  documentation.
 
   01 Aug 2010; Sergei Trofimovich <slyfox@gentoo.org>
   -lhs2tex-1.10_pre.ebuild:

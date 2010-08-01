@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.11.ebuild,v 1.11 2008/09/03 21:03:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/lhs2tex-1.11.ebuild,v 1.12 2010/08/01 12:10:47 slyfox Exp $
 
 DESCRIPTION="Preprocessor for typesetting Haskell sources with LaTeX"
 HOMEPAGE="http://www.iai.uni-bonn.de/~loeh/lhs2tex"
@@ -15,8 +15,7 @@ S="${WORKDIR}/${P/_pre/pre}"
 
 DEPEND=">=dev-tex/polytable-0.8.2
 	<dev-lang/ghc-6.8
-	=dev-haskell/cabal-1.1.6*
-	doc? ( dev-lang/hugs98 virtual/latex-base )"
+	=dev-haskell/cabal-1.1.6*"
 
 RDEPEND=">=dev-tex/polytable-0.8.2"
 
@@ -28,14 +27,11 @@ src_unpack() {
 src_compile() {
 	# polytable is installed separately
 	econf --disable-polytable || die "econf failed"
-	# if doc is set, we build the documentation instead
-	# of using the prebuilt file
-	use doc && rm doc/Guide2.dontbuild
 	emake -j1 || die "make failed"
 }
 
 src_install () {
 	DESTDIR="${D}" emake -j1 install || die "installation failed"
-	dodoc doc/Guide2.pdf
+	use doc || rm "${D}/usr/share/doc/${P}/Guide2.pdf"
 	dodoc INSTALL RELEASE
 }
