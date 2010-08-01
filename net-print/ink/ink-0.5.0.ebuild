@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ink-0.5.0.ebuild,v 1.2 2010/01/02 11:49:16 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/ink/ink-0.5.0.ebuild,v 1.3 2010/08/01 20:25:14 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ink/${P/_}.tar.gz"
 HOMEPAGE="http://ink.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 LICENSE="GPL-2"
 IUSE=""
 
