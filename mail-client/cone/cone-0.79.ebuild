@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.79.ebuild,v 1.1 2009/07/11 11:44:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.79.ebuild,v 1.2 2010/08/01 22:04:13 dirtyepic Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -20,6 +22,10 @@ RDEPEND=">=dev-libs/openssl-0.9.6
 	spell? ( virtual/aspell-dict )"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
+
+src_prepare() {
+	epatch "${FILESDIR}"/cone-0.79-gcc45.patch
+}
 
 src_install() {
 	emake install DESTDIR="${D}" || die
