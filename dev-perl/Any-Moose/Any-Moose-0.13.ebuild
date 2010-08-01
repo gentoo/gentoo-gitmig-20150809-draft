@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/Any-Moose-0.13.ebuild,v 1.2 2010/07/29 17:30:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/Any-Moose-0.13.ebuild,v 1.3 2010/08/01 13:33:40 hwoarang Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Use Moose or Mouse modules"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="|| ( >=dev-perl/Mouse-0.40 dev-perl/Moose )
