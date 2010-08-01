@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.308 2010/07/31 19:30:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.309 2010/08/01 09:14:11 pacho Exp $
+
+  01 Aug 2010; Pacho Ramos <pacho@gentoo.org> gedit-2.30.3.ebuild:
+  Fix RDEPEND on glib per bug #325911 (by Chí-Thanh Christopher Nguyễn)
 
   31 Jul 2010; Pacho Ramos <pacho@gentoo.org> gedit-2.30.3.ebuild:
   amd64 stable, bug 324077
