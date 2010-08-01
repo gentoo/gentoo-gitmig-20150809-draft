@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.10 2009/10/03 17:09:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.11 2010/08/01 10:37:35 polynomial-c Exp $
 
 EAPI=1
 
@@ -56,6 +56,11 @@ pkg_setup() {
 		eerror "media-libs/libsdl was compiled without the \"X\" USE flag enabled."
 		eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
 		die "media-libs/libsdl should be compiled with the \"X\" USE flag."
+	fi
+	if use python && ! built_with_use dev-lang/python threads ; then
+		eerror "dev-lang/python was compiled without the \"threads\" USE flag enabled."
+		eerror "Please re-emerge dev-lang/python with USE=\"threads\"."
+		die "dev-lang/python should be compiled with the \"threads\" USE flag."
 	fi
 
 	linux-mod_pkg_setup

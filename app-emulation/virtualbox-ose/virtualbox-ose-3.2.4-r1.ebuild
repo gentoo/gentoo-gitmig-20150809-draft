@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.4-r1.ebuild,v 1.2 2010/07/17 10:53:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.4-r1.ebuild,v 1.3 2010/08/01 10:37:35 polynomial-c Exp $
 
 EAPI=2
 
@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 	hal? ( sys-apps/hal )
 	!headless? ( x11-libs/libXinerama )
 	pulseaudio? ( media-sound/pulseaudio )
-	python? ( >=dev-lang/python-2.3 )
+	python? ( >=dev-lang/python-2.3[threads] )
 	vboxwebsrv? ( >=net-libs/gsoap-2.7.13 )"
 RDEPEND="${RDEPEND}
 	additions? ( ~app-emulation/virtualbox-ose-additions-${PV} )"
