@@ -1,0 +1,22 @@
+Index: cmake/admCheckAudioDeviceLibs.cmake
+===================================================================
+--- cmake/admCheckAudioDeviceLibs.cmake	(revision 6442)
++++ cmake/admCheckAudioDeviceLibs.cmake	(working copy)
+@@ -145,6 +145,7 @@
+ 
+ 	MESSAGE(STATUS "Checking for PulseAudio Simple")
+ 	MESSAGE(STATUS "******************************")
++	IF (PULSEAUDIOSIMPLE)
+         IF (PULSEAUDIOSIMPLE_INCLUDE_DIR AND PULSEAUDIOSIMPLE_LIBRARIES)
+         # in cache already
+          SET(PULSEAUDIOSIMPLE_FIND_QUIETLY TRUE)
+@@ -186,6 +187,9 @@
+         MARK_AS_ADVANCED(PULSEAUDIOSIMPLE_INCLUDE_DIR PULSEAUDIOSIMPLE_LIBRARIES)
+ 
+ 		MESSAGE("")
++	ELSE (PULSEAUDIOSIMPLE)
++		MESSAGE("${MSG_DISABLE_OPTION}")
++	ENDIF (PULSEAUDIOSIMPLE)
+ ELSE (UNIX AND NOT APPLE)
+ 	SET(PULSEAUDIOSIMPLE_CAPABLE FALSE)
+ ENDIF (UNIX AND NOT APPLE)

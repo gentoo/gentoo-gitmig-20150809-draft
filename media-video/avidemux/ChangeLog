@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.167 2010/06/18 22:23:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.168 2010/08/01 10:27:52 hwoarang Exp $
+
+*avidemux-2.5.3-r2 (01 Aug 2010)
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +avidemux-2.5.3-r2.ebuild, +files/avidemux-pulseaudiosimple.patch:
+  Apply patch to fix pulseaudio automagic dependency. Fixes bug #327555.
+  Thanks to Mike Gilbert <floppymaster@gmail.com> for the patch
 
   18 Jun 2010; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.2.ebuild:
   Apply gcc-4.5 patch to previous ebuild
