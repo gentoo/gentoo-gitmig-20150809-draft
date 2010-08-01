@@ -46,12 +46,12 @@ diff -ur poco-1.3.6p2-all.orig//Data/ODBC/Makefile poco-1.3.6p2-all/Data/ODBC/Ma
  COMMONFLAGS += -DPOCO_UNIXODBC
  else
 -ifeq (0, $(shell test -e $(ODBCLIBDIR)/libiodbc$(SHAREDLIBLINKEXT); echo $$?))
-+ifeq (unixodbc, $(GENTOO_ODBC))
++ifeq (iodbc, $(GENTOO_ODBC))
  SYSLIBS += -liodbc -liodbcinst
  COMMONFLAGS += -DPOCO_IODBC
  else
 -ifeq (0, $(shell test -h $(ODBCLIBDIR)/libiodbc$(SHAREDLIBLINKEXT); echo $$?))
-+ifeq (unixodbc, $(GENTOO_ODBC))
++ifeq (iodbc, $(GENTOO_ODBC))
  SYSLIBS += -liodbc -liodbcinst
  COMMONFLAGS += -DPOCO_IODBC
  else
