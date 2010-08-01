@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.192 2010/07/31 19:09:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.193 2010/08/01 11:26:46 fauli Exp $
+
+  01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  libgnome-2.30.0.ebuild:
+  x86 stable, bug 324077
 
   31 Jul 2010; Pacho Ramos <pacho@gentoo.org> libgnome-2.30.0.ebuild:
   amd64 stable, bug 324077
