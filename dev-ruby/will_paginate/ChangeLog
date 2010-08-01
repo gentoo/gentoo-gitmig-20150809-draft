@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/will_paginate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.6 2010/07/11 20:29:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.7 2010/08/01 14:57:33 flameeyes Exp $
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  will_paginate-2.3.14.ebuild:
+  Add missing dependency over activerecord for testing purposes.
 
   11 Jul 2010; Hans de Graaff <graaff@gentoo.org>
   -will_paginate-2.3.11-r1.ebuild, -will_paginate-2.3.12.ebuild:
