@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/mailfilter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.29 2009/09/23 17:55:14 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.30 2010/08/01 14:27:53 ssuominen Exp $
+
+  01 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  mailfilter-0.8.2.ebuild, +files/0.8.2-openssl-1.patch:
+  Fix building with OpenSSL >= 1.0.0 wrt #330717 by Diego E. Pettenò.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mailfilter-0.7.1.ebuild:
   Remove virtual/libc
