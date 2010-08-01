@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.95 2010/05/08 15:01:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.96 2010/08/01 20:12:24 idl0r Exp $
+
+*mirrorselect-2.1.0-r2 (01 Aug 2010)
+
+  01 Aug 2010; Christian Ruppert <idl0r@gentoo.org>
+  +files/0002-Check-for-a-valid-mirrorselect-test-file.patch,
+  +mirrorselect-2.1.0-r2.ebuild:
+  Check for a valid mirrorselect-test file, fixes bug 330611, thanks to
+  Soren Harward <stharward@gmail.com>.
 
   08 May 2010; Raúl Porcel <armin76@gentoo.org>
   mirrorselect-2.1.0-r1.ebuild:
