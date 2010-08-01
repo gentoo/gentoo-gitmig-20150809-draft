@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.61 2010/07/29 21:31:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.62 2010/08/01 19:32:02 flameeyes Exp $
+
+  01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/libvirtd.init-r1:
+  Make the init script pass the KRB5_KTNAME variable to libvirtd so that it
+  actually works as documented for RedHat/Fedora with mit-krb5. Also use
+  more advanced awk commands to avoid greps and possibly misreading based on
+  domain names.
 
   29 Jul 2010; Doug Goldstein <cardoe@gentoo.org> libvirt-0.8.1-r1.ebuild,
   libvirt-0.8.2-r1.ebuild:
