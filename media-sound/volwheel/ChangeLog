@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/volwheel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/ChangeLog,v 1.1 2010/07/25 21:49:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/ChangeLog,v 1.2 2010/08/01 12:55:36 ssuominen Exp $
+
+*volwheel-0.2.8 (01 Aug 2010)
+
+  01 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +volwheel-0.2.8.ebuild:
+  Version bump wrt #329965, thanks to Torsten Veller and Kent Fredric for
+  analysis and Olivier Duclos (upstream) for the fix.
 
 *volwheel-0.2.7 (25 Jul 2010)
 
