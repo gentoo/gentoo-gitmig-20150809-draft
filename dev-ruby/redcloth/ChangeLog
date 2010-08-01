@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.46 2010/07/29 09:31:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.47 2010/08/01 19:09:40 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> redcloth-4.2.3.ebuild:
+  Stable on amd64 wrt bug #330327
 
 *redcloth-4.2.3-r1 (29 Jul 2010)
 
