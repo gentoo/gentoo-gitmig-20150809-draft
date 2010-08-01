@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/e16keyedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/ChangeLog,v 1.15 2010/07/31 23:19:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16keyedit/ChangeLog,v 1.16 2010/08/01 13:35:44 hwoarang Exp $
+
+  01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> e16keyedit-0.6.ebuild:
+  Stable on amd64 wrt bug #330575
 
   31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   e16keyedit-0.6.ebuild:
