@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Any-Moose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.11 2010/08/01 13:33:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.12 2010/08/01 17:22:17 phajdan.jr Exp $
+
+  01 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Any-Moose-0.13.ebuild:
+  x86 stable wrt bug #321235
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> Any-Moose-0.13.ebuild:
   Stable on amd64 wrt bug #321235
