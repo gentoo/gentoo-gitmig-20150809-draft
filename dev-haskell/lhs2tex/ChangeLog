@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/lhs2tex
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.23 2008/09/03 21:03:25 opfer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.24 2010/08/01 11:40:42 slyfox Exp $
+
+  01 Aug 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  -lhs2tex-1.10_pre.ebuild:
+  Removed old version.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   lhs2tex-1.10_pre.ebuild, lhs2tex-1.11.ebuild:
