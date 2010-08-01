@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dictd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.86 2010/05/21 15:42:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.87 2010/08/01 10:48:21 pva Exp $
+
+  01 Aug 2010; Peter Volkov <pva@gentoo.org> files/1.10.11/dictd.initd:
+  Do not use non-posix pushd/popd inside init script, bug #330679, thank
+  ferret for report.
 
   21 May 2010; Peter Volkov <pva@gentoo.org> dictd-1.11.2.ebuild:
   amd64 stable, bug 310023
