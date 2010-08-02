@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.485 2010/07/31 19:14:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.486 2010/08/02 19:24:35 arfrever Exp $
+
+*python-3.1.2_p20100801 (02 Aug 2010)
+*python-2.7_p20100801 (02 Aug 2010)
+*python-2.6.5_p20100801 (02 Aug 2010)
+
+  02 Aug 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.6.5_p20100801.ebuild, +python-2.7_p20100801.ebuild,
+  +python-3.1.2_p20100801.ebuild:
+  Improve usage of mmap in _ctypes module (bug #329499). Fix handling of
+  environmental variables (bug #329705). Backport some fixes from release
+  branches.
 
   31 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.6.4-r1.ebuild, python-2.6.5-r2.ebuild, python-2.6.5-r3.ebuild,
