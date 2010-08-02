@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.5.ebuild,v 1.6 2010/07/09 14:36:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.6.ebuild,v 1.1 2010/08/02 05:46:20 xarthisius Exp $
 
 EAPI="2"
 
@@ -33,8 +33,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/Reusable-Cluster-Components-${MY_P}"
 
 PATCHES=(
-	"${FILESDIR}/${PV}-docs.patch"
-	"${FILESDIR}/${PV}-respect_cflags.patch"
+	"${FILESDIR}/1.0.5-docs.patch"
+	"${FILESDIR}/1.0.5-respect_cflags.patch"
 )
 
 src_prepare() {
