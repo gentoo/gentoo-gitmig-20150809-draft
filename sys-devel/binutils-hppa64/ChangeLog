@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-hppa64
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.17 2010/07/15 03:20:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.18 2010/08/02 23:24:35 jer Exp $
+
+  02 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  binutils-hppa64-2.20.1.ebuild:
+  Mark -hppa as it cannot build a kernel (bug #330933).
 
 *binutils-hppa64-2.20.1 (15 Jul 2010)
 
