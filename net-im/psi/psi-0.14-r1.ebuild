@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.12 2010/07/11 15:05:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r1.ebuild,v 1.13 2010/08/02 09:58:16 pva Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ for LNG in ${LANGS}; do
 done
 
 RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
+	>=x11-libs/qt-qt3support-4.4:4
 	>=app-crypt/qca-2.0.2:2
 	spell? ( >=app-text/enchant-1.3.0 )
 	xscreensaver? ( x11-libs/libXScrnSaver )

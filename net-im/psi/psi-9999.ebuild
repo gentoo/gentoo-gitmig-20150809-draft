@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.4 2010/07/26 03:01:31 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.5 2010/08/02 09:58:16 pva Exp $
 
 EAPI="2"
 
@@ -25,6 +25,7 @@ IUSE="crypt dbus debug doc enchant extras jingle iconsets spell ssl xscreensaver
 plugins -whiteboarding webkit"
 
 RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
+	>=x11-libs/qt-qt3support-4.4:4
 	>=app-crypt/qca-2.0.2:2
 	whiteboarding? ( x11-libs/qt-svg:4 )
 	spell? (
