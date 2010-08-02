@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.71 2010/07/27 15:19:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.72 2010/08/02 21:33:21 maekke Exp $
+
+  02 Aug 2010; Markus Meier <maekke@gentoo.org> nail-12.4.ebuild:
+  add ~arm, bug #324129
 
   27 Jul 2010; Fabian Groffen <grobian@gentoo.org> nail-12.4-r1.ebuild:
   Marked ~x86-linux ~amd64-linux and ~ppc-macos, bug #324129, fixed
