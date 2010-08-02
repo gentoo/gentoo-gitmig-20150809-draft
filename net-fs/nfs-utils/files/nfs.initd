@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.20 2010/07/26 01:02:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.21 2010/08/02 11:08:49 flameeyes Exp $
 
 opts="reload"
 
@@ -18,7 +18,7 @@ smnotify=/usr/sbin/sm-notify
 depend() {
 	local myneed=""
 	if [ -e /etc/exports ] ; then
-		if awk '!/^[[:space:]]*#/ && $2 ~ /sec=/ { found=1; nextfile } END { exit !found }' /etc/exports ; then
+		if awk '!/^[[:space:]]*#/ && $2 ~ /sec=krb5/ { found=1; nextfile } END { exit !found }' /etc/exports ; then
 			myneed="${myneed} rpc.svcgssd"
 		fi
 	fi

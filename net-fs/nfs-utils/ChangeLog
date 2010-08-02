@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.170 2010/07/26 01:02:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.171 2010/08/02 11:08:49 flameeyes Exp $
+
+  02 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> files/nfs.initd:
+  Only require rpc.svcgssd if sec=krb is used rather than sec=sys (default).
+  Thanks to Jared in bug #330795.
 
   26 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> files/nfs.initd:
   Fix nfs init script dependency generation for kerberos exports.
