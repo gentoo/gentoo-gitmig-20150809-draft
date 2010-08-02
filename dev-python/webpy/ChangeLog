@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webpy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.18 2010/07/11 13:35:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webpy/ChangeLog,v 1.19 2010/08/02 14:59:29 jer Exp $
+
+  02 Aug 2010; Jeroen Roovers <jer@gentoo.org> webpy-0.34.ebuild:
+  Stable for HPPA too.
 
   11 Jul 2010; Markus Meier <maekke@gentoo.org> webpy-0.34.ebuild:
   x86 stable, bug #325383
