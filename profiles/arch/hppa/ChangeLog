@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.91 2010/07/26 20:05:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.92 2010/08/02 20:40:55 jer Exp $
+
+  02 Aug 2010; Jeroen Roovers <jer@gentoo.org> -package.mask:
+  Remove package.mask entries for udev and udisks again (bug #294470).
 
   26 Jul 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask sys-fs/udisks along with the udev it needs.

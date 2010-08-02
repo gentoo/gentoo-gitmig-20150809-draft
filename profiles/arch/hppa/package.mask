@@ -1,8 +1,0 @@
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.30 2010/07/26 20:05:18 jer Exp $
-# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Jeroen Roovers <jer@gentoo.org> (25 Jul 2010)
-# Masked until we have a glibc that returns the proper error (bug #294470)
->=sys-fs/udev-147
-sys-fs/udisks
