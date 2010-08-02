@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.398 2010/07/29 17:27:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.399 2010/08/02 16:56:41 mabi Exp $
+
+*php-5.2.14 (02 Aug 2010)
+
+  02 Aug 2010; Matti Bickel <mabi@gentoo.org>
+  +files/eblits/src_configure-v52.eblit, +php-5.2.14.ebuild:
+  version bump; this is a security update - see
+  http://www.php.net/archive/2010.php#id2010-07-22-1 for details
 
   29 Jul 2010; Matti Bickel <mabi@gentoo.org>
   files/eblits/src_install-v1.eblit:
