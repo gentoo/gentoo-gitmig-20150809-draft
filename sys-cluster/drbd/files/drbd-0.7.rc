@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-0.7.rc,v 1.2 2007/10/05 20:55:59 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/files/drbd-0.7.rc,v 1.3 2010/08/02 04:42:36 xarthisius Exp $
 
 opts="${opts} reload"
 
@@ -50,7 +50,9 @@ stop() {
 	if ! grep -q '^/dev/drbd' /proc/mounts &>/dev/null; then
 		if [ -f ${PROC_DRBD} ]; then
 			${DRBDADM} down all
-			${RMMOD} drbd
+         if grep -q '^drbd' /proc/modules ; then
+			   ${RMMOD} drbd
+         fi
 		fi
 		eend $?
 	else
