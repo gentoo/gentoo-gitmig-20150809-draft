@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.7 2010/04/22 12:02:43 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.8 2010/08/02 07:20:35 fauli Exp $
+
+  02 Aug 2010; Christian Faulhammer <fauli@gentoo.org> argparse-1.1.ebuild:
+  add Prefix keywords for bug 330569
 
   22 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> argparse-1.1.ebuild:
   amd64 stable, bug 313141
