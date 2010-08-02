@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/xf86-input-penmount-1.4.1.ebuild,v 1.7 2010/06/04 13:57:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/xf86-input-penmount-1.4.1.ebuild,v 1.8 2010/08/02 17:57:17 armin76 Exp $
 
 inherit x-modular
 
 DESCRIPTION="PenMount input driver"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-base/xorg-server-1.0.99"

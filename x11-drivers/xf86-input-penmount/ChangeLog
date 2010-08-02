@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-penmount
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/ChangeLog,v 1.64 2010/06/04 13:57:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-penmount/ChangeLog,v 1.65 2010/08/02 17:57:17 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  xf86-input-penmount-1.4.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #308521
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org>
   xf86-input-penmount-1.4.1.ebuild:
