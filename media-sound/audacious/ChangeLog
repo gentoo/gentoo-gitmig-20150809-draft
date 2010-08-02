@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.206 2010/07/19 22:14:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.207 2010/08/02 21:01:04 chainsaw Exp $
+
+*audacious-2.4_beta2 (02 Aug 2010)
+
+  02 Aug 2010; <chainsaw@gentoo.org> -audacious-2.4_alpha1.ebuild,
+  -audacious-2.4_alpha2.ebuild, -audacious-2.4_alpha3.ebuild,
+  +audacious-2.4_beta2.ebuild:
+  Bugfixes. Lots of bugfixes. To help make the final release perfect, please
+  file your bugs upstream unless they concern the ebuild.
 
 *audacious-2.4_beta1 (19 Jul 2010)
 
