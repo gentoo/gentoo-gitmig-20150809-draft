@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.8.ebuild,v 1.4 2010/07/16 10:49:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.9.1.ebuild,v 1.1 2010/08/02 12:57:48 scarabeus Exp $
 
 EAPI="2"
 
@@ -30,8 +30,8 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${P}-asneeded.patch"
-	"${FILESDIR}/${P}-installpaths.patch"
+	"${FILESDIR}/${PN}-1.0.8-asneeded.patch"
+	"${FILESDIR}/${PN}-1.0.8-installpaths.patch"
 )
 
 S="${WORKDIR}/${MY_PN}-1-0-${MY_P}"
