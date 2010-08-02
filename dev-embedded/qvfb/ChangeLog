@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/qvfb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/ChangeLog,v 1.4 2010/07/04 08:31:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/ChangeLog,v 1.5 2010/08/02 16:31:03 hwoarang Exp $
+
+*qvfb-4.6.3 (02 Aug 2010)
+
+  02 Aug 2010; Markos Chandras <hwoarang@gentoo.org> +qvfb-4.6.3.ebuild:
+  Version bump. Fixes bug #326329
 
   04 Jul 2010; Markos Chandras <hwoarang@gentoo.org> qvfb-4.5.3.ebuild:
   Stable on amd64 wrt bug #326371
