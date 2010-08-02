@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.1 2010/08/01 00:55:09 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.2 2010/08/02 02:24:00 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -58,7 +58,7 @@ java_prepare() {
 	# copy build.xml
 	cp -f "${FILESDIR}/build-${PV}.xml" build.xml || die
 
-	# patch executable and icon 
+	# patch executable and icon
 	sed -i -e "s:^\(Exec=\).*:\1${PN}_gui:g" \
 		-e "s:^\(Icon=\).*:\1${PN}:g" *.desktop || die
 
