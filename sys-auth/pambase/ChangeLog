@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.88 2010/07/24 01:54:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.89 2010/08/02 21:41:04 maekke Exp $
+
+  02 Aug 2010; Markus Meier <maekke@gentoo.org> pambase-20100724.ebuild:
+  add ~arm, bug #329585
 
 *pambase-20100724 (24 Jul 2010)
 
