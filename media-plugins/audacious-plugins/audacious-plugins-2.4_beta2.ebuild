@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.4_alpha2.ebuild,v 1.1 2010/06/25 11:15:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.4_beta2.ebuild,v 1.1 2010/08/02 21:01:06 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,13 +13,13 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
-IUSE="aac adplug alsa aqua bs2b cdda cue debug esd ffmpeg flac fluidsynth gnome ipv6 jack
+IUSE="aac adplug alsa aqua bs2b cdda cue debug ffmpeg flac fluidsynth gnome ipv6 jack
 lame lirc midi mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile sse2 vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
-	>=media-sound/audacious-2.4_alpha2
+	>=media-sound/audacious-2.4_beta2
 	>=net-libs/neon-0.26.4
 	>=x11-libs/gtk+-2.14
 	aac? ( >=media-libs/faad2-2.7 )
@@ -29,7 +29,6 @@ RDEPEND="app-arch/unzip
 	cdda? ( >=media-libs/libcddb-1.2.1
 		>=dev-libs/libcdio-0.79-r1 )
 	cue? ( media-libs/libcue )
-	esd? ( >=media-sound/esound-0.2.38-r1 )
 	ffmpeg? ( media-video/ffmpeg )
 	flac? ( >=media-libs/libvorbis-1.0
 		>=media-libs/flac-1.2.1-r1 )
@@ -80,7 +79,6 @@ src_compile() {
 		$(use_enable cdda cdaudio) \
 		$(use_enable cue) \
 		$(use_enable debug) \
-		$(use_enable esd) \
 		$(use_enable ffmpeg ffaudio) \
 		$(use_enable flac flacng) \
 		$(use_enable fluidsynth amidiplug-flsyn) \
