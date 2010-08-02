@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-sunffb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunffb/ChangeLog,v 1.27 2010/04/16 21:38:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunffb/ChangeLog,v 1.28 2010/08/02 18:01:47 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-sunffb-1.2.1.ebuild:
+  sparc stable wrt #308521
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org>
   xf86-video-sunffb-1.2.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-suncg6
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-suncg6/ChangeLog,v 1.20 2010/04/16 21:37:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-suncg6/ChangeLog,v 1.21 2010/08/02 18:01:11 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-suncg6-1.1.1.ebuild:
+  sparc stable wrt #308521
 
   16 Apr 2010; Pacho Ramos <pacho@gentoo.org>
   xf86-video-suncg6-1.1.0.ebuild, xf86-video-suncg6-1.1.1.ebuild:
