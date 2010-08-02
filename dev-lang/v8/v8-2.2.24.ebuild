@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.2.24.ebuild,v 1.2 2010/07/25 23:39:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-2.2.24.ebuild,v 1.3 2010/08/02 02:39:22 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -14,15 +14,22 @@ LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="readline"
 
-RDEPEND=""
+RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-1.3.0"
+
+v8_scons_opts() {
+	echo "$(echo ${MAKEOPTS} | sed -r 's/.*(-j\s*|--jobs=)([0-9]+).*/-j\2/')"
+}
 
 src_prepare() {
 	# Stop -Werror from breaking the build.
 	epatch "${FILESDIR}"/${PN}-no-werror-r0.patch
+
+	# Respect the user's CFLAGS, including the optimization level.
+	epatch "${FILESDIR}"/${PN}-no-O3-r0.patch
 
 	# Locally fix http://code.google.com/p/v8/issues/detail?id=773.
 	epatch "${FILESDIR}"/${PN}-upstream-bug-773-r0.patch
@@ -38,7 +45,16 @@ src_compile() {
 	# with the rest of a Linux system. Currently the name
 	# looks like libv8-2.2.24.so, but should be more like
 	# libv8.so.2.2.24.
-	scons library=shared . || die
+
+	local myconf=""
+
+	if use readline; then
+		myconf="${myconf} console=readline"
+	else
+		myconf="${myconf} console=dumb"
+	fi
+
+	scons library=shared $(v8_scons_opts) ${myconf} . || die
 }
 
 src_install() {
