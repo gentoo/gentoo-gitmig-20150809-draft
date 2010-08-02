@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/eaccelerator
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.23 2010/04/22 08:45:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.24 2010/08/02 17:32:01 mabi Exp $
+
+*eaccelerator-0.9.6.1 (02 Aug 2010)
+
+  02 Aug 2010; Matti Bickel <mabi@gentoo.org> +eaccelerator-0.9.6.1.ebuild:
+  version bump (bug #330465)
 
 *eaccelerator-0.9.6 (22 Apr 2010)
 
