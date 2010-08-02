@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXinerama
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.57 2010/06/04 14:01:55 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/ChangeLog,v 1.58 2010/08/02 18:25:12 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org> libXinerama-1.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #308521
 
   01 Jun 2010; Guy Martin <gmsoft@gentoo.org> libXinerama-1.1.ebuild:
   hppa stable, #308521
