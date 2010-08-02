@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.23 2010/08/01 16:25:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.24 2010/08/02 16:22:10 anarchy Exp $
+
+  02 Aug 2010; Jory A. Pratt <anarchy@gentoo.org>
+  thunderbird-3.1.1-r2.ebuild:
+  Fix patchset to apply double buffer patch
 
   01 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   thunderbird-3.1.1-r2.ebuild:
