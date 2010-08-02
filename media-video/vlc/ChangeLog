@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.614 2010/07/26 09:56:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.615 2010/08/02 05:04:43 aballier Exp $
+
+*vlc-1.1.2 (02 Aug 2010)
+
+  02 Aug 2010; Alexis Ballier <aballier@gentoo.org> +vlc-1.1.2.ebuild:
+  version bump
 
   26 Jul 2010; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   v4l support has been removed in favor of v4l2
