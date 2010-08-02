@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.364 2010/07/22 20:57:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.365 2010/08/02 05:12:05 aballier Exp $
+
+  02 Aug 2010; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  avfilter-lavf doesnt exist, bug #330247
 
   22 Jul 2010; Alexis Ballier <aballier@gentoo.org> +ffmpeg-9999.ebuild,
   -ffmpeg-9999-r1.ebuild:
