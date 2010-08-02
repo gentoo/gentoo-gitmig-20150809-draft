@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11810 2010/08/02 21:02:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11811 2010/08/02 21:26:04 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -649,18 +649,6 @@ sci-electronics/geda-utils
 sci-electronics/geda-docs
 sci-electronics/geda-examples
 
-# Markos Chandras <hwoarang@gentoo.org> (20 Jun 2010)
-# Bundles ffmpeg copy, doens't work with systems' ffmpeg
-# Bug #258042. Replacement is media-video/recordmydesktop
-# Pending removal in 2010-07-20
-x11-misc/xvidcap
-
-# Markos Chandras <hwoarang@gentoo.org> (19 Jun 2010)
-# Multiple failures. Look at bugs #197617, #297946, #297947. #299753
-# Not maintained by upstream anymore.
-# Pending removal in 2010-07-19
-app-doc/repodoc
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (18 Jun 2010)
 #  on behalf of QA team
 #
@@ -753,10 +741,6 @@ x11-plugins/gkacpi
 # Old, useless, no maintainer
 # Removed in 60 days by treecleaners, bug 185292
 net-wireless/ieee80211
-
-# Ben de Groot <yngwin@gentoo.org> (11 Jun 2010)
-# Masked for removal in 30 days, see bug #315067
-media-video/whaawmp
 
 # Markus Meier <maekke@gentoo.org> (10 Jun 2010)
 # mask inkscape prereleases for testing
