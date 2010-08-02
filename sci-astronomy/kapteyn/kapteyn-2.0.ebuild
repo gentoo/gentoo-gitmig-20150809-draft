@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/kapteyn-1.9.2.ebuild,v 1.2 2010/07/14 14:33:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/kapteyn-2.0.ebuild,v 1.1 2010/08/02 15:44:35 xarthisius Exp $
 
 EAPI="3"
 
