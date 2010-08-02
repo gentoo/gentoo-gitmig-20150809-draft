@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.66 2010/01/15 09:24:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.67 2010/08/02 14:59:02 scarabeus Exp $
+
+  02 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  freeglut-2.6.0.ebuild:
+  Depend on libXi unconditionaly. Per bug #298337
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   freeglut-2.6.0.ebuild:
