@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.548 2010/07/27 18:40:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.549 2010/08/02 20:52:59 zzam Exp $
+
+  02 Aug 2010; Matthias Schwarzott <zzam@gentoo.org> udev-149.ebuild,
+  udev-150-r1.ebuild, udev-151-r1.ebuild, udev-151-r2.ebuild,
+  udev-151-r3.ebuild, udev-151-r4.ebuild, udev-154.ebuild, udev-156.ebuild,
+  udev-157.ebuild, udev-158.ebuild, udev-159.ebuild, udev-160.ebuild:
+  Added pkgconfig dependency for udev-149 and newer when using extras
+  use-flag, Bug #327713.
 
   27 Jul 2010; Pacho Ramos <pacho@gentoo.org> udev-151-r4.ebuild:
   amd64 stable, bug 324507
