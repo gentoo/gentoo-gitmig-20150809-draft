@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.43 2010/07/30 19:52:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.44 2010/08/02 18:26:25 graaff Exp $
+
+*alexandria-0.6.6-r2 (02 Aug 2010)
+
+  02 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  +alexandria-0.6.6-r2.ebuild:
+  Fix QA notice about missing documentation, bug 330819.
 
   30 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   -alexandria-0.6.5.ebuild:
