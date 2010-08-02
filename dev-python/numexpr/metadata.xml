@@ -10,4 +10,8 @@
 <longdescription lang="en">
 	Fast numerical array expression evaluator for Python and NumPy.
 </longdescription>
+<use>
+	<flag name="mkl">Enable support for Intel Vector Math Library, part of
+		<pkg>sci-libs/mkl</pkg>.</flag>
+</use>
 </pkgmetadata>
