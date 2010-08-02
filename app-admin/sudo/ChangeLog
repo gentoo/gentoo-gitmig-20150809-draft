@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.232 2010/06/30 23:23:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.233 2010/08/02 03:45:54 flameeyes Exp $
+
+*sudo-1.7.4 (02 Aug 2010)
+
+  02 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> +sudo-1.7.4.ebuild:
+  Version bump (it installs documentation by itself now, needs
+  /var/db/sudo); drop the pam/skey conflict by enabling skey only if pam is
+  disabled; add HTTP mirror to the SRC_URI.
 
 *sudo-1.7.3 (30 Jun 2010)
 
