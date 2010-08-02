@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xineramaproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.41 2010/06/04 14:14:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.42 2010/08/02 18:16:31 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org> xineramaproto-1.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #308521
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org> xineramaproto-1.2.ebuild:
   hppa stable, #308521

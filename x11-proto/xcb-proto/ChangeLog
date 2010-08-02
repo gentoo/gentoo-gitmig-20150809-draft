@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.49 2010/06/14 17:49:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.50 2010/08/02 18:13:39 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org> xcb-proto-1.6.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #308521
 
   14 Jun 2010; Fabian Groffen <grobian@gentoo.org> xcb-proto-1.6.ebuild:
   Marked ~x64-macos, bug #323945

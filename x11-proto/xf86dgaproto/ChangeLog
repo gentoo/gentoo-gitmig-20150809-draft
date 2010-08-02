@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86dgaproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.48 2010/06/04 14:13:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.49 2010/08/02 18:14:35 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org> xf86dgaproto-2.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #308521
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org> xf86dgaproto-2.1.ebuild:
   hppa stable, #308521

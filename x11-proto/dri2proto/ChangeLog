@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dri2proto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.34 2010/06/04 14:08:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dri2proto/ChangeLog,v 1.35 2010/08/02 18:06:41 armin76 Exp $
+
+  02 Aug 2010; Raúl Porcel <armin76@gentoo.org> dri2proto-2.3.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #308521
 
   31 May 2010; Guy Martin <gmsoft@gentoo.org> dri2proto-2.3.ebuild:
   hppa stable, #308521
