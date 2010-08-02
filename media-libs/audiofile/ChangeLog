@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.76 2010/07/26 01:22:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.77 2010/08/02 21:35:11 maekke Exp $
+
+  02 Aug 2010; Markus Meier <maekke@gentoo.org> audiofile-0.2.7.ebuild:
+  arm stable, bug #327611
 
   26 Jul 2010; Jeroen Roovers <jer@gentoo.org> audiofile-0.2.7.ebuild:
   Stable for HPPA (bug #327611).
