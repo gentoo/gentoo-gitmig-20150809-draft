@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.5 2010/07/03 08:21:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.6 2010/08/02 23:56:57 hollow Exp $
+
+  02 Aug 2010; Benedikt Böhm <hollow@gentoo.org>
+  files/rabbitmq-server.init:
+  fix "erlexec: HOME must be set" when starting from init
 
 *rabbitmq-server-1.8.0 (03 Jul 2010)
 

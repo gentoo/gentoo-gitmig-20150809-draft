@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/files/rabbitmq-server.init,v 1.1 2009/04/19 12:42:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/files/rabbitmq-server.init,v 1.2 2010/08/02 23:56:58 hollow Exp $
 
 depend() {
 	need net
@@ -9,6 +9,7 @@ depend() {
 }
 
 start() {
+	export HOME=/var/empty
 	ebegin "Starting RabbitMQ..."
 	rabbitmq-server -detached
 	eend $?
