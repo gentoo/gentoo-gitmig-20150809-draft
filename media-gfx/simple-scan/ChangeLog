@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/simple-scan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.1 2010/06/04 15:18:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.2 2010/08/03 19:34:54 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  simple-scan-2.31.1.ebuild:
+  Add missing udev[extras] dependency ( bug #328145 ) and
+  >=media-gfx/sane-backends-1.0.20 dependency ( bug #328149 )
 
 *simple-scan-2.31.1 (04 Jun 2010)
 
