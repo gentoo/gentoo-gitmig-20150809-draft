@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-schroedinger
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/ChangeLog,v 1.4 2010/05/28 10:05:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/ChangeLog,v 1.5 2010/08/03 02:48:11 leio Exp $
+
+*gst-plugins-schroedinger-0.10.19 (03 Aug 2010)
+
+  03 Aug 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-schroedinger-0.10.19.ebuild:
+  Version bump. Adds posting of frame-stats messages if
+  media-libs/schroedinger-1.0.9 is available at compile time
 
   28 May 2010; Markus Meier <maekke@gentoo.org>
   gst-plugins-schroedinger-0.10.18.ebuild:
