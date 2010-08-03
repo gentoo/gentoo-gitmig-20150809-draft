@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.1-r2.ebuild,v 1.3 2010/08/02 16:22:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.1-r2.ebuild,v 1.4 2010/08/03 03:19:18 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -114,6 +114,8 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
+
+	epatch "${FILESDIR}/comm-1.9.2-disable-printing.patch"
 
 	eautoreconf
 

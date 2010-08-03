@@ -1,0 +1,154 @@
+diff --git a/mailnews/base/src/Makefile.in b/mailnews/base/src/Makefile.in
+--- a/mailnews/base/src/Makefile.in
++++ b/mailnews/base/src/Makefile.in
+@@ -110,17 +110,16 @@ CPPSRCS		= \
+ 		nsMsgFolderCache.cpp \
+ 		nsMsgFolderCacheElement.cpp \
+ 		nsMsgFolderCompactor.cpp \
+ 		nsMsgStatusFeedback.cpp \
+ 		nsMsgWindow.cpp \
+ 		nsMsgServiceProvider.cpp \
+ 		nsSubscribeDataSource.cpp \
+ 		nsSubscribableServer.cpp \
+-		nsMsgPrintEngine.cpp \
+ 		nsStatusBarBiffManager.cpp \
+ 		nsMsgDBView.cpp \
+ 		nsMsgThreadedDBView.cpp \
+ 		nsMsgSpecialViews.cpp \
+ 		nsMsgQuickSearchDBView.cpp \
+ 		nsMsgSearchDBView.cpp \
+ 		nsMsgXFVirtualFolderDBView.cpp \
+ 		nsMsgXFViewThread.cpp \
+@@ -132,16 +131,22 @@ CPPSRCS		= \
+ 		nsSpamSettings.cpp \
+ 		nsCidProtocolHandler.cpp \
+ 		nsMsgContentPolicy.cpp \
+ 		nsMsgTagService.cpp\
+                 nsMsgFolderNotificationService.cpp\
+ 		nsMailDirProvider.cpp\
+ 		$(NULL)
+ 
++ifdef NS_PRINTING
++CPPSRCS		+= \
++		nsMsgPrintEngine.cpp \
++		$(NULL)
++endif
++
+ ifeq (cocoa,$(MOZ_WIDGET_TOOLKIT))
+ CMMSRCS = nsMessengerOSXIntegration.mm
+ endif
+ 
+ ifeq ($(OS_ARCH),WINNT)
+ REQUIRES	+= appcomps \
+ 		   profile \
+ 		   $(NULL)
+diff --git a/mailnews/base/src/nsMessenger.cpp b/mailnews/base/src/nsMessenger.cpp
+--- a/mailnews/base/src/nsMessenger.cpp
++++ b/mailnews/base/src/nsMessenger.cpp
+@@ -74,17 +74,20 @@
+ #include "nsRDFCID.h"
+ 
+ // gecko
+ #include "nsLayoutCID.h"
+ #include "nsIMarkupDocumentViewer.h"
+ #include "nsIContentViewer.h"
+ 
+ // embedding
++#ifdef NS_PRINTING
+ #include "nsIWebBrowserPrint.h"
++#include "nsMsgPrintEngine.h"
++#endif
+ 
+ /* for access to docshell */
+ #include "nsPIDOMWindow.h"
+ #include "nsIDocShell.h"
+ #include "nsIDocShellLoadInfo.h"
+ #include "nsIDocShellTreeItem.h"
+ #include "nsIDocShellTreeNode.h"
+ #include "nsIWebNavigation.h"
+@@ -119,19 +122,16 @@
+ // undo
+ #include "nsITransaction.h"
+ #include "nsMsgTxn.h"
+ 
+ // charset conversions
+ #include "nsMsgMimeCID.h"
+ #include "nsIMimeConverter.h"
+ 
+-// Printing
+-#include "nsMsgPrintEngine.h"
+-
+ // Save As
+ #include "nsIFilePicker.h"
+ #include "nsIStringBundle.h"
+ #include "nsIPrefService.h"
+ #include "nsIPrefBranch.h"
+ #include "nsIPrefBranch2.h"
+ #include "nsCExternalHandlerService.h"
+ #include "nsIExternalProtocolService.h"
+diff --git a/mailnews/build/nsMailModule.cpp b/mailnews/build/nsMailModule.cpp
+--- a/mailnews/build/nsMailModule.cpp
++++ b/mailnews/build/nsMailModule.cpp
+@@ -104,17 +104,19 @@
+ #include "nsMsgCopyService.h"
+ #include "nsMsgFolderCache.h"
+ #include "nsMsgStatusFeedback.h"
+ #include "nsMsgFilterService.h"
+ #include "nsMsgWindow.h"
+ #include "nsMsgServiceProvider.h"
+ #include "nsSubscribeDataSource.h"
+ #include "nsSubscribableServer.h"
++#ifdef NS_PRINTING
+ #include "nsMsgPrintEngine.h"
++#endif
+ #include "nsMsgSearchSession.h"
+ #include "nsMsgSearchTerm.h"
+ #include "nsMsgSearchAdapter.h"
+ #include "nsMsgFolderCompactor.h"
+ #include "nsMsgThreadedDBView.h"
+ #include "nsMsgSpecialViews.h"
+ #include "nsMsgXFVirtualFolderDBView.h"
+ #include "nsMsgQuickSearchDBView.h"
+@@ -346,17 +348,19 @@ NS_GENERIC_FACTORY_CONSTRUCTOR_INIT(nsSt
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsCopyMessageStreamListener)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgCopyService)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgFolderCache)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgStatusFeedback)
+ NS_GENERIC_FACTORY_CONSTRUCTOR_INIT(nsMsgWindow,Init)
+ NS_GENERIC_FACTORY_CONSTRUCTOR_INIT(nsMsgServiceProviderService, Init)
+ NS_GENERIC_FACTORY_CONSTRUCTOR_INIT(nsSubscribeDataSource, Init)
+ NS_GENERIC_FACTORY_CONSTRUCTOR_INIT(nsSubscribableServer, Init)
++#ifdef NS_PRINTING
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgPrintEngine)
++#endif
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsFolderCompactState)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsOfflineStoreCompactState)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgThreadedDBView)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgThreadsWithUnreadDBView)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgWatchedThreadsWithUnreadDBView)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgSearchDBView)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgXFVirtualFolderDBView)
+ NS_GENERIC_FACTORY_CONSTRUCTOR(nsMsgQuickSearchDBView)
+@@ -800,20 +804,22 @@ static const nsModuleComponentInfo gComp
+     { "Mail/News Status Feedback", NS_MSGSTATUSFEEDBACK_CID,
+       NS_MSGSTATUSFEEDBACK_CONTRACTID,
+       nsMsgStatusFeedbackConstructor,
+     },
+     { "Mail/News MsgWindow", NS_MSGWINDOW_CID,
+       NS_MSGWINDOW_CONTRACTID,
+       nsMsgWindowConstructor,
+     },
++#ifdef NS_PRINTING
+     { "Mail/News Print Engine", NS_MSG_PRINTENGINE_CID,
+       NS_MSGPRINTENGINE_CONTRACTID,
+       nsMsgPrintEngineConstructor,
+     },
++#endif
+     { "Mail/News Service Provider Service", NS_MSGSERVICEPROVIDERSERVICE_CID,
+       NS_MSGSERVICEPROVIDERSERVICE_CONTRACTID,
+       nsMsgServiceProviderServiceConstructor,
+     },
+     { "Mail/News Subscribe Data Source", NS_SUBSCRIBEDATASOURCE_CID,
+       NS_SUBSCRIBEDATASOURCE_CONTRACTID,
+       nsSubscribeDataSourceConstructor,
+     },
