@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.4 2010/08/01 12:12:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.5 2010/08/03 05:32:25 nirbheek Exp $
 
 EAPI="2"
 
@@ -74,7 +74,7 @@ RDEPEND="
 
 	>=www-client/epiphany-2.30.2
 	>=app-arch/file-roller-2.30.2
-	>=gnome-extra/gcalctool-5.30.2
+	>=gnome-extra/gcalctool-5.28.2
 
 	>=gnome-extra/gconf-editor-2.30.0
 	>=gnome-base/gdm-2.20.11
@@ -106,7 +106,7 @@ RDEPEND="
 
 	>=gnome-extra/gnome-utils-2.30.0
 
-	>=gnome-extra/gnome-games-2.30.2
+	>=gnome-extra/gnome-games-2.28.2
 	>=gnome-base/librsvg-2.26.3
 
 	>=gnome-extra/gnome-system-monitor-2.28.1
