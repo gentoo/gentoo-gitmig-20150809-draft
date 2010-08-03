@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.524 2010/08/02 15:16:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.525 2010/08/03 14:54:32 jer Exp $
+
+  03 Aug 2010; Jeroen Roovers <jer@gentoo.org> opera-10.60.ebuild,
+  opera-10.61_pre6415.ebuild, opera-10.61_pre6422.ebuild,
+  opera-10.70_pre6395.ebuild, opera-10.70_pre6396.ebuild:
+  Remove unneeded media-libs/glitz from dependencies thanks to Matt Turner
+  (bug #330953).
 
 *opera-10.61_pre6422 (02 Aug 2010)
 
