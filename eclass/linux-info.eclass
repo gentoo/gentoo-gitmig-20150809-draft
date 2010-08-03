@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.84 2010/06/17 23:46:25 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.85 2010/08/03 07:03:39 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -535,21 +535,28 @@ get_version() {
 	then
 		qeinfo "Found kernel object directory:"
 		qeinfo "    ${KV_OUT_DIR}"
-
-		KV_LOCAL="$(get_localversion ${KV_OUT_DIR})"
 	fi
 	# and if we STILL have not got it, then we better just set it to KV_DIR
 	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
 
-	KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_DIR})"
 	if linux_config_src_exists; then
-		KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)"
-		KV_LOCAL="${KV_LOCAL//\"/}"
-
 		# For things like git that can append extra stuff:
-		[ -e ${KV_DIR}/scripts/setlocalversion ] &&
-			linux_chkconfig_builtin LOCALVERSION_AUTO &&
-			KV_LOCAL="${KV_LOCAL}$(sh ${KV_DIR}/scripts/setlocalversion ${KV_DIR})"
+		# This script is NOT posix-compliant. Running it with 'sh' when 'sh'
+		# is a real POSIX shell causes some breakages (bug #323717).
+		if [ -e ${KV_DIR}/scripts/setlocalversion ] ; then
+			KV_LOCAL="${KV_LOCAL}$(cd ${KV_OUT_DIR} ; bash ${KV_DIR}/scripts/setlocalversion ${KV_DIR})"
+		else
+			# localversion* files
+			KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_DIR})"
+
+			# CONFIG_LOCALVERSION + LOCALVERSION
+			KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)${LOCALVERSION}"
+			KV_LOCAL="${KV_LOCAL//\"/}"
+
+			# CONFIG_LOCALVERSION_AUTO logic ???
+		fi
+	else
+		KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_DIR})"
 	fi
 
 	# And we should set KV_FULL to the full expanded version
