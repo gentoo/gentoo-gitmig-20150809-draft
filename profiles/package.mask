@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11812 2010/08/03 01:03:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11813 2010/08/03 11:49:02 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -676,7 +676,8 @@ virtual/postgresql-base
 virtual/postgresql-server
 
 # Alexis Ballier <aballier@gentoo.org> (17 Jun 2010)
-# Beta release
+# New major release, some packages fail to build
+# Mask until they are fixed
 >=dev-lang/ocaml-3.12.0_beta
 
 # Justin Lecher <jlec@gentoo.org> (16 Jun 10)
