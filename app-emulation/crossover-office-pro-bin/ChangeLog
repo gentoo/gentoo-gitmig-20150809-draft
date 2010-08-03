@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/crossover-office-pro-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.18 2010/08/03 05:17:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/ChangeLog,v 1.19 2010/08/03 18:25:00 vapier Exp $
+
+  03 Aug 2010; Mike Frysinger <vapier@gentoo.org>
+  crossover-office-pro-bin-9.1.0.ebuild:
+  Add specific jpeg/png SONAME deps #331053.
 
 *crossover-office-pro-bin-9.1.0 (03 Aug 2010)
 
