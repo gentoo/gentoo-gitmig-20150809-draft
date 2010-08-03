@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.269 2010/07/31 16:15:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.270 2010/08/03 17:18:05 ranger Exp $
+
+  03 Aug 2010; Brent Baude <ranger@gentoo.org> lftp-4.0.9.ebuild:
+  Marking lftp-4.0.9 ppc64 for bug 329939
 
   31 Jul 2010; Raúl Porcel <armin76@gentoo.org> lftp-4.0.9.ebuild:
   alpha/arm/ia64/s390/sparc stable wrt #329939
