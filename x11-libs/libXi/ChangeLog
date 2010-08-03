@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.83 2010/08/03 06:15:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.84 2010/08/03 09:11:33 scarabeus Exp $
+
+  03 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> libXi-1.3.1.ebuild:
+  Drop the stupid forceenable i put there during debug. Thx to lmi on
+  #gentoo-desktop
 
 *libXi-1.3.1 (03 Aug 2010)
 
