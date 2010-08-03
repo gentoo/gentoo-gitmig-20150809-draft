@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.319 2010/08/03 06:42:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.320 2010/08/03 18:43:25 vapier Exp $
+
+  03 Aug 2010; Mike Frysinger <vapier@gentoo.org> wine-1.3.0.ebuild,
+  wine-9999.ebuild:
+  Add USE=pulseaudio to live versions and tweak multilib deps for USE="win32
+  win64" #331001 by Sven.
 
 *wine-1.3.0 (03 Aug 2010)
 
