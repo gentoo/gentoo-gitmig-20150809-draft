@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.82 2010/07/20 15:17:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.83 2010/08/03 20:38:28 aballier Exp $
+
+  03 Aug 2010; Alexis Ballier <aballier@gentoo.org> lablgtk-2.14.1.ebuild,
+  +files/lablgtk-2.14.1-ocaml312.patch:
+  fix build with ocaml 3.12, patch from upstream svn, bug #331083
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> lablgtk-2.12.0.ebuild,
   lablgtk-2.14.1.ebuild:
