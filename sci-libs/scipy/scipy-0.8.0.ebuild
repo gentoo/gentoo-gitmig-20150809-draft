@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.8.0.ebuild,v 1.1 2010/08/03 11:45:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.8.0.ebuild,v 1.2 2010/08/03 13:40:45 xarthisius Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.7 3.*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils distutils flag-o-matic toolchain-funcs versionator
 
@@ -68,7 +68,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.6.0-stsci.patch
+	epatch "${FILESDIR}"/${PN}-0.6.0-stsci.patch \
+		"${FILESDIR}"/${P}-python2.7.patch
 	local libdir="${EPREFIX}"/usr/$(get_libdir)
 	cat > site.cfg <<-EOF
 		[atlas]

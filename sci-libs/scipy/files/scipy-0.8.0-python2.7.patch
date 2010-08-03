@@ -1,0 +1,25 @@
+http://projects.scipy.org/scipy/changeset/6646
+
+--- scipy/sparse/sparsetools/setup.py
++++ scipy/sparse/sparsetools/setup.py
+@@ -9,7 +9,9 @@
+     for fmt in ['csr','csc','coo','bsr','dia']:
+         sources = [ fmt + '_wrap.cxx' ]
+         depends = [ fmt + '.h' ]
+-        config.add_extension('_' + fmt, sources=sources, depends=depends)
++        config.add_extension('_' + fmt, sources=sources,
++            define_macros=[('__STDC_FORMAT_MACROS', 1)],
++            depends=depends)
+ 
+     return config
+ 
+--- scipy/sparse/sparsetools/SConscript
++++ scipy/sparse/sparsetools/SConscript
+@@ -3,6 +3,7 @@
+ from numscons import GetNumpyEnvironment
+ 
+ env = GetNumpyEnvironment(ARGUMENTS)
++env.PrependUnique(CPPDEFINES = '__STDC_FORMAT_MACROS')
+ 
+ for fmt in ['csr','csc','coo','bsr','dia']:
+     sources = [ fmt + '_wrap.cxx' ]
