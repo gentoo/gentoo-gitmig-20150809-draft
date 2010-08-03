@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.1-r2.ebuild,v 1.4 2010/08/03 03:19:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.1-r2.ebuild,v 1.5 2010/08/03 13:20:11 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -23,7 +23,7 @@ KEYWORDS="alpha ~amd64 ~arm ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd ~amd64-linux ~
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+alsa ldap +cups +crypt bindist libnotify +lightning mozdom system-sqlite wifi"
-PATCH="${PN}-3.1-patches-0.6"
+PATCH="${PN}-3.1-patches-0.7"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
@@ -114,8 +114,6 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
-
-	epatch "${FILESDIR}/comm-1.9.2-disable-printing.patch"
 
 	eautoreconf
 
