@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.232 2010/07/31 21:52:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.233 2010/08/03 16:43:54 gmsoft Exp $
+
+  03 Aug 2010; Guy Martin <gmsoft@gentoo.org> nmap-5.21-r1.ebuild:
+  hppa stable wrt #330439
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> nmap-5.21-r1.ebuild:
   Stable on amd64 wrt bug #330439
