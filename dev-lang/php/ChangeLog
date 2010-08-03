@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.400 2010/08/03 08:55:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.401 2010/08/03 08:58:17 mabi Exp $
+
+  03 Aug 2010; Matti Bickel <mabi@gentoo.org> php-5.2.14.ebuild:
+  added missing mhash in IUSE
 
 *php-5.2.14 (02 Aug 2010)
 
