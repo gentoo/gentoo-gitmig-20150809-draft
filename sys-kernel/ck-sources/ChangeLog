@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.176 2010/07/13 18:02:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.177 2010/08/03 17:18:34 robbat2 Exp $
+
+  03 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  kernel-2 deblob support for 2.6.35; bug #324505: deblob-check usage.
 
   13 Jul 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   -ck-sources-2.6.34-r2.ebuild:
