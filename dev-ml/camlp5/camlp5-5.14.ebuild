@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.14.ebuild,v 1.4 2010/07/11 12:45:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-5.14.ebuild,v 1.5 2010/08/03 11:47:18 aballier Exp $
 
 EAPI="2"
 
@@ -17,6 +17,10 @@ IUSE="doc +ocamlopt"
 
 DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-ocaml312.patch"
+}
 
 src_configure() {
 	./configure \
