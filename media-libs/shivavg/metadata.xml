@@ -5,4 +5,9 @@
 <maintainer>
   <email>lu_zero@gentoo.org</email>
 </maintainer>
+<longdescription>
+ShivaVG is an open-source ANSI C implementation of the Khronos'
+OpenVG specification for hardware-accelerated vector graphics API. It is built
+entirely on top of OpenGL.
+</longdescription>
 </pkgmetadata>
