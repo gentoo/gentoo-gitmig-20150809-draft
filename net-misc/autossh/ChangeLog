@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/autossh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.25 2010/01/07 15:45:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.26 2010/08/03 18:18:40 xarthisius Exp $
+
+  03 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> autossh-1.2g.ebuild,
+  autossh-1.4b.ebuild:
+  Respect CC and LDFLAGS wrt bug 331103. Thanks to Olivier Huber
+  <oli.huber@gmail.com> for patch.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> autossh-1.4b.ebuild:
   Transfer Prefix keywords
