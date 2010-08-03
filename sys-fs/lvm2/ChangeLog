@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.218 2010/07/27 18:43:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.219 2010/08/03 06:51:20 ssuominen Exp $
+
+*lvm2-2.02.70-r1 (03 Aug 2010)
+
+  03 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +lvm2-2.02.70-r1.ebuild, +files/lvm2-2.02.70-asneeded.patch:
+  Link liblvm2app to libm even with LDFLAGS="-Wl,--as-needed" wrt #330255 by
+  Patrizio Bassi.
 
   27 Jul 2010; Pacho Ramos <pacho@gentoo.org> lvm2-2.02.67-r2.ebuild:
   amd64 stable, bug 324485
