@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.23.ebuild,v 1.1 2010/07/30 11:55:46 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.23.ebuild,v 1.2 2010/08/03 13:43:43 leio Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins-good gst-plugins10 gnome2 eutils flag-o-matic libtool
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.29
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
 	dev-util/pkgconfig
-	!<media-libs/gst-plugins-bad-0.10.18"
+	!<media-libs/gst-plugins-bad-0.10.19"
 
 # Always enable optional bz2 support for matroska
 # Always enable optional zlib support for qtdemux, id3demux and matroska
