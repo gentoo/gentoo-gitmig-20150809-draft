@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.198 2010/08/01 11:46:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.199 2010/08/03 05:34:30 nirbheek Exp $
+
+  03 Aug 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gcalctool-5.30.2.ebuild:
+  Drop stable keywords from 2.30, it has major regressions (scientific mode
+  is broken), and should have never gone stable
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   gcalctool-5.30.2.ebuild:
