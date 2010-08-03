@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-libmms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.40 2010/08/01 20:31:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.41 2010/08/03 00:58:10 leio Exp $
+
+*gst-plugins-libmms-0.10.19 (03 Aug 2010)
+
+  03 Aug 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-libmms-0.10.19.ebuild:
+  Version bump. URI parsing related bug fixes
 
   01 Aug 2010; Tobias Klausmann <klausman@gentoo.org>
   gst-plugins-libmms-0.10.18.ebuild:
