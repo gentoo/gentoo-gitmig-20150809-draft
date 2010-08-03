@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.1.ebuild,v 1.2 2010/07/15 20:22:16 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.1.ebuild,v 1.3 2010/08/03 23:09:25 hanno Exp $
 
 EAPI=2
 
@@ -41,6 +41,13 @@ pkg_setup() {
 }
 
 src_prepare () {
+	if use nls ; then
+		intltoolize --copy --force || die "intltoolize failed"
+		for po_dir in src/plugin_*/po ; do
+			cp po/Makefile.in.in ${po_dir}
+		done
+	fi
+
 	# Fixes automagic installation of charmap plugin
 	# Upstream bug: https://bugzilla.gnome.org/show_bug.cgi?id=570990
 	epatch "${FILESDIR}"/${PN}-2.0.0-gucharmap-automagic.patch
