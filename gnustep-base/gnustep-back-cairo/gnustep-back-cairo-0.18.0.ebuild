@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.18.0.ebuild,v 1.3 2010/06/27 13:55:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.18.0.ebuild,v 1.4 2010/08/03 09:15:02 voyageur Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-IUSE="opengl xim glitz"
+IUSE="opengl xim"
 RDEPEND="${GNUSTEP_CORE_DEPEND}
 	~gnustep-base/gnustep-gui-${PV}
 	opengl? ( virtual/opengl virtual/glu )
@@ -45,8 +45,6 @@ src_configure() {
 	myconf="$myconf $(use_enable xim)"
 	myconf="$myconf --enable-server=x11"
 	myconf="$myconf --enable-graphics=cairo"
-	# Seems broken for now
-	#myconf="$myconf $(use_enable glitz)"
 
 	econf $myconf || die "configure failed"
 }

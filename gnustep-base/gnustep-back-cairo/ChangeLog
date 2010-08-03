@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.23 2010/06/27 13:55:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.24 2010/08/03 09:15:02 voyageur Exp $
+
+  03 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-back-cairo-0.16.0.ebuild, gnustep-back-cairo-0.18.0.ebuild,
+  metadata.xml:
+  Drop media-libs/glitz support, was commented for ages, and glitz is
+  unmaintained, bug #330955
 
   27 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnustep-back-cairo-0.18.0.ebuild:
