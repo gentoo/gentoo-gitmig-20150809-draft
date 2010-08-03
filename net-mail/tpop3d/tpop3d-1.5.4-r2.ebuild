@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.4-r1.ebuild,v 1.3 2010/06/17 21:56:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.4-r2.ebuild,v 1.1 2010/08/03 21:00:10 hwoarang Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/tpop3d/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="authexternal debug drac flatfile gdbm ldap maildir mbox mysql offensive
+IUSE="authexternal debug flatfile gdbm ldap maildir mbox mysql offensive
 	pam passwd perl postgres +sha1 shadow ssl tcpd"
 
 RDEPEND="sha1?		( >=dev-libs/openssl-0.9.6 )
@@ -26,8 +26,7 @@ RDEPEND="sha1?		( >=dev-libs/openssl-0.9.6 )
 				  >=net-mail/mailbase-0.00-r8 )
 	tcpd?		( >=sys-apps/tcp-wrappers-7.6 )"
 
-DEPEND="${RDEPEND}
-	drac?		( mail-client/drac )"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	local myconf=""
@@ -66,9 +65,6 @@ src_compile() {
 	use sha1		|| myconf="${myconf} --disable-sha1-passwords"
 	use ssl			&& myconf="${myconf} --enable-tls"
 	use tcpd		&& myconf="${myconf} --enable-tcp-wrappers"
-
-	# Install mail-client/drac for integration with tpop3d
-	use drac		&& myconf="${myconf} --enable-drac"
 
 	econf ${myconf} || die "./configure failed"
 

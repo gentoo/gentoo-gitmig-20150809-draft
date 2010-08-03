@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.16.ebuild,v 1.4 2009/08/07 10:42:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.16.ebuild,v 1.5 2010/08/03 21:00:34 hwoarang Exp $
 
 EAPI="2"
 #inherit eutils flag-o-matic ssl-cert
@@ -15,13 +15,12 @@ SRC_URI="ftp://ftp.qualcomm.com/eudora/servers/unix/popper/${MY_P}.tar.gz"
 LICENSE="qpopper ISOC-rfc"
 SLOT="0"
 KEYWORDS="~amd64 sparc x86"
-IUSE="debug drac gdbm mailbox pam ssl xinetd apop"
+IUSE="debug gdbm mailbox pam ssl xinetd apop"
 
 DEPEND="virtual/mta
 	xinetd? ( virtual/inetd )
 	gdbm? ( sys-libs/gdbm )
 	!gdbm? ( ~sys-libs/db-1.85 )
-	drac? ( mail-client/drac )
 	pam? (
 		>=sys-libs/pam-0.72
 		>=net-mail/mailbase-0.00-r8
@@ -54,7 +53,6 @@ src_configure() {
 		$(use_with pam pam pop3)        \
 		$(use_enable apop apop /etc/pop.auth) \
 		$(use_enable mailbox home-dir-mail Mailbox) \
-		$(use_with drac) \
 		--enable-shy \
 		--enable-popuid=pop \
 		--enable-log-login \
