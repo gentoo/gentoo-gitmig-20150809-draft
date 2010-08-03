@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4441 2010/08/03 16:44:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4442 2010/08/03 21:19:11 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking mail-client/drac per bug #280933
 
   03 Aug 2010; Jeroen Roovers <jer@gentoo.org> package.mask:
   Readd www-client/opera-10.70 mask.
