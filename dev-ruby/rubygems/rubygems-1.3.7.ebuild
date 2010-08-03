@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7.ebuild,v 1.1 2010/05/14 19:04:17 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7.ebuild,v 1.2 2010/08/03 16:07:36 flameeyes Exp $
 
 EAPI="2"
 
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 jruby"
 
 inherit ruby-ng
 
@@ -22,10 +22,7 @@ SLOT="0"
 IUSE="doc server"
 
 # previous versions had rubygems bundled, so it would collide badly
-RDEPEND="
-	ruby_targets_jruby? ( >=dev-java/jruby-1.4.0-r5 )
-	ruby_targets_ruby19? ( >=dev-lang/ruby-1.9.1_p376 )
-"
+RDEPEND="ruby_targets_jruby? ( >=dev-java/jruby-1.4.0-r5 )"
 
 # index_gem_repository.rb
 PDEPEND="server? ( dev-ruby/builder[ruby_targets_ruby18] )"
@@ -35,16 +32,6 @@ all_ruby_prepare() {
 	# Fixes a new "feature" that would prevent us from recognizing installed
 	# gems inside the sandbox
 	epatch "${FILESDIR}/${PN}-1.3.3-gentoo.patch"
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*rubyee18)
-			epatch "${FILESDIR}/${P}-rubyee.patch" || die "ree patch failed"
-			;;
-		*)
-			;;
-	esac
 }
 
 each_ruby_install() {
@@ -67,8 +54,7 @@ each_ruby_install() {
 
 	${RUBY} setup.rb $myconf --destdir="${D}" || die "setup.rb install failed"
 
-	insinto $(ruby_rbconfig_value 'sitelibdir')
-	newins "${FILESDIR}/auto_gem.rb.$(basename ${RUBY})" auto_gem.rb || die	"newins auto_gem failed"
+	doruby "${FILESDIR}/auto_gem.rb"
 }
 
 all_ruby_install() {

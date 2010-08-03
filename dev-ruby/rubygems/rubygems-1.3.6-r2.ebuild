@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.6-r2.ebuild,v 1.8 2010/07/23 13:08:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.6-r2.ebuild,v 1.9 2010/08/03 16:07:36 flameeyes Exp $
 
 EAPI="2"
 
@@ -36,16 +36,6 @@ all_ruby_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.3-gentoo.patch"
 }
 
-each_ruby_prepare() {
-	case ${RUBY} in
-		*rubyee18)
-			epatch "${FILESDIR}/${PN}-rubyee.patch" || die "ree patch failed"
-			;;
-		*)
-			;;
-	esac
-}
-
 each_ruby_install() {
 	# Unset RUBYOPT to avoid interferences, bug #158455 et. al.
 	unset RUBYOPT
@@ -66,8 +56,7 @@ each_ruby_install() {
 
 	${RUBY} setup.rb $myconf --destdir="${D}" || die "setup.rb install failed"
 
-	insinto $(ruby_rbconfig_value 'sitelibdir')
-	newins "${FILESDIR}/auto_gem.rb.$(basename ${RUBY})" auto_gem.rb || die	"newins auto_gem failed"
+	doruby "${FILESDIR}/auto_gem.rb"
 }
 
 all_ruby_install() {
