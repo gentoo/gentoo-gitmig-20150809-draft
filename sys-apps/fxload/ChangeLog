@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/fxload
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.18 2009/09/23 20:23:29 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.19 2010/08/03 16:38:34 ssuominen Exp $
+
+  03 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  fxload-20081013.ebuild:
+  Respect CC and LDFLAGS wrt #331057 by Olivier Huber.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> fxload-20020411.ebuild,
   fxload-20081013.ebuild:

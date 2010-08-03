@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20081013.ebuild,v 1.2 2009/09/23 20:23:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20081013.ebuild,v 1.3 2010/08/03 16:38:34 ssuominen Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 # source maintainers named it fxload-YYYY_MM_DD instead of fxload-YYYYMMDD
 MY_P="${PN}-${PV:0:4}_${PV:4:2}_${PV:6:2}"
@@ -23,7 +23,14 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+src_prepare() {
+	sed -i \
+		-e 's:$(CC) -o:$(CC) $(LDFLAGS) -o:' \
+		Makefile || die
+}
+
 src_compile() {
+	tc-export CC
 	emake RPM_OPT_FLAGS="${CFLAGS}" || die
 }
 
