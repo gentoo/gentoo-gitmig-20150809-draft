@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.83 2010/05/10 17:00:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.84 2010/08/03 08:10:36 hwoarang Exp $
+
+*strongswan-4.4.1 (03 Aug 2010)
+*strongswan-4.3.7 (03 Aug 2010)
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  -strongswan-4.3.6-r2.ebuild, +strongswan-4.3.7.ebuild,
+  -strongswan-4.4.0.ebuild, +strongswan-4.4.1.ebuild, metadata.xml:
+  Version to bump to fix security problem. Bug #330845. Thanks to Matthias
+  Dahl <ua_bugz_gentoo@mortal-soul.de>
 
 *strongswan-4.4.0 (10 May 2010)
 
