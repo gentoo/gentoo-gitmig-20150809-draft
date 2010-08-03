@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.73 2010/08/01 11:02:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.74 2010/08/03 01:20:12 jer Exp $
+
+  03 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  libgnomecanvasmm-2.22.0.ebuild, libgnomecanvasmm-2.26.0.ebuild:
+  Remove HPPA keywording (bug 324511).
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   libgnomecanvasmm-2.26.0.ebuild:
