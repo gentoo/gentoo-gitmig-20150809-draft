@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.238 2010/07/30 00:44:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.239 2010/08/03 17:22:13 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -86,7 +86,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ ${HOMEPAGE}"
 
 # This is the latest KV_PATCH of the deblob tool available from the
 # libre-sources upstream.
-[[ -z ${DEBLOB_MAX_VERSION} ]] && DEBLOB_MAX_VERSION=34
+[[ -z ${DEBLOB_MAX_VERSION} ]] && DEBLOB_MAX_VERSION=35
 
 # No need to run scanelf/strip on kernel sources/headers (bug #134453).
 RESTRICT="binchecks strip"
@@ -338,12 +338,21 @@ if [[ ${ETYPE} == sources ]]; then
 
 			DEBLOB_PV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 			DEBLOB_A="deblob-${DEBLOB_PV}"
+			DEBLOB_CHECK_A="deblob-check-${DEBLOB_PV}"
 			DEBLOB_HOMEPAGE="http://www.fsfla.org/svnwiki/selibre/linux-libre/"
+			DEBLOB_URI_PATH="download/releases/LATEST-${DEBLOB_PV}.N"
+			if ! has "${EAPI:-0}" 0 1 ; then
+				DEBLOB_CHECK_URI="${DEBLOB_HOMEPAGE}/${DEBLOB_URI_PATH}/deblob-check -> ${DEBLOB_CHECK_A}"
+			else
+				DEBLOB_CHECK_URI="mirror://gentoo/${DEBLOB_CHECK_A}"
+			fi
+			DEBLOB_URI="${DEBLOB_HOMEPAGE}/${DEBLOB_URI_PATH}/${DEBLOB_A}"
 			HOMEPAGE="${HOMEPAGE} ${DEBLOB_HOMEPAGE}"
 				
 			KERNEL_URI="${KERNEL_URI}
 				deblob? (
-					${DEBLOB_HOMEPAGE}/download/releases/LATEST-${DEBLOB_PV}.N/${DEBLOB_A}
+					${DEBLOB_URI}
+					${DEBLOB_CHECK_URI}
 				)"
 		else
 			# We have no way to deblob older kernels, so just mark them as
@@ -1125,8 +1134,9 @@ kernel-2_src_unpack() {
 	fi
 
 	if [[ $K_DEBLOB_AVAILABLE == 1 ]] && use deblob ; then
-		cp "${DISTDIR}/${DEBLOB_A}" "${T}"
-		chmod +x "${T}/${DEBLOB_A}"
+		cp "${DISTDIR}/${DEBLOB_A}" "${T}" || die "cp ${DEBLOB_A} failed"
+		cp "${DISTDIR}/${DEBLOB_CHECK_A}" "${T}/deblob-check" || die "cp ${DEBLOB_CHECK_A} failed"
+		chmod +x "${T}/${DEBLOB_A}" "${T}/deblob-check" || die "chmod deblob scripts failed"
 	fi
 }
 
