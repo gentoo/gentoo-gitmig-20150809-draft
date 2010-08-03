@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/gst-plugins-jack
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.1 2010/08/03 03:17:01 leio Exp $
+
+*gst-plugins-jack-0.10.19 (03 Aug 2010)
+
+  03 Aug 2010; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +gst-plugins-jack-0.10.19.ebuild:
+  Initial package for the GStreamer plugin to transfer audio data with JACK
+  ports, bug 324711
+
