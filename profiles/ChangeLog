@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4438 2010/08/03 01:03:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4439 2010/08/03 11:50:59 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Aug 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask new type-conv as it depends on pmasked ocaml
 
   03 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask breaking-backports.
