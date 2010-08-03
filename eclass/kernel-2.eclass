@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.239 2010/08/03 17:22:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.240 2010/08/03 18:31:08 robbat2 Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -68,7 +68,7 @@
 #						  order, so they are applied in the order passed
 
 inherit eutils toolchain-funcs versionator multilib
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_preinst pkg_postinst
 
 # Added by Daniel Ostrow <dostrow@gentoo.org>
 # This is an ugly hack to get around an issue with a 32-bit userland on ppc64.
@@ -1150,6 +1150,14 @@ kernel-2_src_compile() {
 			die "Deblob script failed to run!!!"
 	fi
 }
+
+# if you leave it to the default src_test, it will run make to
+# find whether test/check targets are present; since "make test"
+# actually produces a few support files, they are installed even
+# though the package is binchecks-restricted.
+#
+# Avoid this altogether by making the function moot.
+kernel-2_src_test() { :; }
 
 kernel-2_pkg_preinst() {
 	[[ ${ETYPE} == headers ]] && preinst_headers
