@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.82 2010/08/02 18:24:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.83 2010/08/03 06:15:39 scarabeus Exp $
+
+*libXi-1.3.1 (03 Aug 2010)
+
+  03 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> -libXi-1.2.1.ebuild,
+  +libXi-1.3.1.ebuild,
+  +files/1.3.1-0001-Add-configure-switch-for-manpages-regenerating.patch:
+  Version bump. Fix manpages regenerating. Patch reported upstream. Drop
+  older.
 
   02 Aug 2010; Raúl Porcel <armin76@gentoo.org> libXi-1.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #308521
