@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.125 2010/06/30 15:37:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.126 2010/08/03 07:43:42 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  kdesdk-misc-4.4.5.ebuild:
+  Stable on amd64 wrt bug #322791
 
 *kdesdk-misc-4.4.5 (30 Jun 2010)
 

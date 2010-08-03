@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klinkstatus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.154 2010/07/03 01:22:35 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/ChangeLog,v 1.155 2010/08/03 07:43:44 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  klinkstatus-4.4.5.ebuild:
+  Stable on amd64 wrt bug #322791
 
   03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   klinkstatus-4.4.5.ebuild:

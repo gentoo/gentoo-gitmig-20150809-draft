@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.144 2010/06/30 15:36:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.145 2010/08/03 07:42:26 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org> kfloppy-4.4.5.ebuild:
+  Stable on amd64 wrt bug #322791
 
 *kfloppy-4.4.5 (30 Jun 2010)
 

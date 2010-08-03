@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.84 2010/07/03 03:23:10 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.85 2010/08/03 07:42:25 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  systemsettings-4.4.5.ebuild:
+  Stable on amd64 wrt bug #322791
 
   03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   systemsettings-4.4.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/krossruby-4.4.5.ebuild,v 1.1 2010/06/30 15:36:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/krossruby-4.4.5.ebuild,v 1.2 2010/08/03 07:43:09 hwoarang Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ USE_RUBY="ruby18"
 inherit kde4-meta ruby-ng
 
 DESCRIPTION="Ruby plugin for the kdelibs/kross scripting framework."
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
 pkg_setup() {

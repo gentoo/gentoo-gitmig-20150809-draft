@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.161 2010/07/03 01:22:34 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.162 2010/08/03 07:42:20 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  kaddressbook-4.4.5.ebuild:
+  Stable on amd64 wrt bug #322791
 
   03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kaddressbook-4.4.5.ebuild:

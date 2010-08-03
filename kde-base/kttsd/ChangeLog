@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.161 2010/06/30 15:36:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.162 2010/08/03 07:42:56 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org> kttsd-4.4.5.ebuild:
+  Stable on amd64 wrt bug #322791
 
 *kttsd-4.4.5 (30 Jun 2010)
 

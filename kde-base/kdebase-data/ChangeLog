@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.167 2010/07/03 03:23:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.168 2010/08/03 07:42:24 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  kdebase-data-4.4.5.ebuild:
+  Stable on amd64 wrt bug #322791
 
   03 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdebase-data-4.4.5.ebuild:

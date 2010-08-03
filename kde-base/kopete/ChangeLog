@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.260 2010/07/15 02:46:53 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.261 2010/08/03 07:43:09 hwoarang Exp $
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org> kopete-4.4.5-r1.ebuild:
+  Stable on amd64 wrt bug #322791
 
 *kopete-4.4.5-r1 (15 Jul 2010)
 *kopete-4.4.4-r3 (15 Jul 2010)
