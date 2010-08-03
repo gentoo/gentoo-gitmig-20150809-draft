@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.23.ebuild,v 1.1 2010/07/29 08:05:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.23.ebuild,v 1.2 2010/08/03 19:55:10 hwoarang Exp $
 
 EAPI=2
 inherit perl-module
@@ -32,6 +32,8 @@ myinst="DESTDIR=${D}"
 
 src_prepare() {
 	sed -i -e 's#^check:#test:#' Makefile || die
+	# remove failling test because of missing locales
+	rm t/utils.t
 }
 
 pkg_postinst() {
