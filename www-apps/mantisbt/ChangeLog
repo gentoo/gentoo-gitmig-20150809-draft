@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.91 2010/08/01 13:32:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.92 2010/08/03 12:16:53 pva Exp $
+
+  03 Aug 2010; Peter Volkov <pva@gentoo.org> metadata.xml:
+  Drop outdated postinst message about postgresql, bug #330833, thank David
+  Hicks for report. Added David into metadata.xml.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   mantisbt-1.2.2.ebuild:
