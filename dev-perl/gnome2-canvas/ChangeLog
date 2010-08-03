@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-canvas
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.30 2008/09/22 15:58:23 tove Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.31 2010/08/03 03:54:00 jer Exp $
+
+  03 Aug 2010; Jeroen Roovers <jer@gentoo.org> gnome2-canvas-1.002.ebuild:
+  Remove HPPA keywording (bug 324511).
 
   22 Sep 2008; Torsten Veller <tove@gentoo.org> gnome2-canvas-1.002.ebuild:
   Fix LICENSE. Move extutils-{pkgconfig,depends} to DEPEND only (#223075)
