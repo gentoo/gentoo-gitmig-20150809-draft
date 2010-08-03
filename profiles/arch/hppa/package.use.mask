@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.63 2010/07/20 17:47:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.64 2010/08/03 14:30:23 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -28,6 +28,7 @@ dev-libs/soprano virtuoso
 # qt-multimedia is not keyworded, bug 293671
 dev-python/PyQt4 multimedia
 
+# Jeroen Roovers <jer@gentoo.org> (31 May 2009)
 # Mask media-gfx/imagemagick[openmp] until we have a stable
 # sys-devel/gcc-4.3[openmp] (bug #225917).
 media-gfx/imagemagick openmp
