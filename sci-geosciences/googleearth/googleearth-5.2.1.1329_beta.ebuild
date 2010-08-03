@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.2.1.1329_beta.ebuild,v 1.1 2010/06/15 08:55:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.2.1.1329_beta.ebuild,v 1.2 2010/08/03 11:26:01 caster Exp $
 
 EAPI=2
 
@@ -158,5 +158,6 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 
 	elog "The qt-bundled flag is now enabled by default due to crashes on startup with system Qt."
-	elog "Testing and reporting outcome with/without the flag is welcome."
+	elog "Testing and reporting outcome with/without the flag is welcome (bug #319813)."
+	elog "If it crashes in both cases, put this version in your package.mask and revert to the stable 5.1.*"
 }

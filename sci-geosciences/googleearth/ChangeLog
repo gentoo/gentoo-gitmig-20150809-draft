@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.15 2010/06/20 16:41:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.16 2010/08/03 11:26:01 caster Exp $
+
+  03 Aug 2010; Vlastimil Babka <caster@gentoo.org>
+  -googleearth-5.1.3533.1731-r1.ebuild, googleearth-5.2.1.1329_beta.ebuild:
+  Remove the unfetchable version; more info in 5.2.1 postinst messages.
 
   20 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   googleearth-5.1.3535.3218-r1.ebuild:
