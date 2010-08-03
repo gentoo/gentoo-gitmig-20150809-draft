@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.189 2010/07/20 13:53:43 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.190 2010/08/03 15:50:02 flameeyes Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -86,13 +86,13 @@ else
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		acl?     ( kernel_linux? ( sys-apps/acl ) )
-		ruby?    ( virtual/ruby )"
+		ruby?    ( =dev-lang/ruby-1.8* )"
 	RDEPEND="${RDEPEND}
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		acl?     ( kernel_linux? ( sys-apps/acl ) )
-		ruby?    ( virtual/ruby )
+		ruby?    ( =dev-lang/ruby-1.8* )
 		!<app-vim/align-30-r1
 		!app-vim/vimspell
 		!<app-vim/vimbuddy-0.9.1-r1
