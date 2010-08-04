@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.46 2010/07/23 11:18:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.47 2010/08/04 08:06:22 hwoarang Exp $
+
+  04 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  libisoburn-0.6.0.ebuild:
+  Stable on amd64 wrt bug #331093
 
   23 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
   libisoburn-0.6.0.ebuild:

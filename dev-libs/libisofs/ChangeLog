@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.64 2010/07/12 20:30:06 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.65 2010/08/04 08:05:56 hwoarang Exp $
+
+  04 Aug 2010; Markos Chandras <hwoarang@gentoo.org> libisofs-0.6.34.ebuild:
+  Stable on amd64 wrt bug #331093
 
   12 Jul 2010; Daniel Pielmeier <billie@gentoo.org> -libisofs-0.6.24.ebuild:
   Remove old.
