@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11818 2010/08/04 07:30:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11819 2010/08/04 07:48:39 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,12 +38,12 @@
 # Masked for removal in 30 days
 mail-client/drac
 
-# Jeroen Roovers <jer@gentoo.org> (08 Jul 2010)
+# Jeroen Roovers <jer@gentoo.org> (03 Aug 2010)
 # Alphas and snapshots are not for everyday use
 # <http://my.opera.com/desktopteam/blog>
 =www-client/opera-10.70*
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Jul 2010)
+# Diego E. Pettenò <flameeyes@gentoo.org> (03 Aug 2010)
 #  on behalf of QA team
 #
 # Breaking portage is no fun. Doing so for the second year in a row in
