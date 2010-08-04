@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.70-r1.ebuild,v 1.2 2010/08/03 18:00:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.70-r1.ebuild,v 1.3 2010/08/04 07:56:26 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -72,7 +72,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.64-dmeventd-libs.patch
 	# bug 301331
 	epatch "${FILESDIR}"/${PN}-2.02.67-createinitrd.patch
-
+	# bug 330373
+	epatch "${FILESDIR}"/${PN}-2.02.70-locale-muck.patch
+	# --as-needed
 	epatch "${FILESDIR}"/${PN}-2.02.70-asneeded.patch
 
 	eautoreconf

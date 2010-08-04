@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.220 2010/08/03 18:00:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.221 2010/08/04 07:56:26 robbat2 Exp $
+
+  04 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.70.ebuild,
+  lvm2-2.02.70-r1.ebuild, +files/lvm2-2.02.70-locale-muck.patch,
+  lvm2-2.02.72.ebuild:
+  Bug #330373: fix locale problems.
 
 *lvm2-2.02.72 (03 Aug 2010)
 
