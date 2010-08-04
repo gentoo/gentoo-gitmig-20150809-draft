@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.7.ebuild,v 1.3 2010/04/11 18:24:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.7.ebuild,v 1.4 2010/08/04 14:52:26 jlec Exp $
 
 EAPI="3"
 
@@ -23,19 +23,23 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	echo "" > ENVIRONMENT
 
-	epatch "${FILESDIR}"/help-makefile.patch
+#	epatch "${FILESDIR}"/help-makefile.patch
+	epatch "${FILESDIR}"/${PV}-prll.patch
+	epatch "${FILESDIR}"/${PV}-impl-dec.patch
 }
 
 src_compile() {
 	local mymake
 	local xpmuse
+	local makeflags
 
 	mymake="${mymake} help nongui"
 	use X && mymake="${mymake} gui"
 	use opengl && mymake="${mymake} gl"
 	use xpm && XPMUSE="XPM_FLAG=-DUSE_XPM XPM_LIB=-lXpm"
 
-	emake -j1 CC=$(tc-getCC) \
+	emake \
+		CC=$(tc-getCC) \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="${LDFLAGS}" \
 		MATH_LIB="-lm" \
@@ -64,7 +68,7 @@ src_install() {
 		dobin "${bin}" || die "failed to install ${bin}"
 	done
 
-	mv "${D}"/usr/bin/{,azara-}extract || die "failed to fix extract collision"
+	mv "${ED}"/usr/bin/{,azara-}extract || die "failed to fix extract collision"
 
 	dodoc CHANGES* README* || die
 	dohtml -r html/* || die

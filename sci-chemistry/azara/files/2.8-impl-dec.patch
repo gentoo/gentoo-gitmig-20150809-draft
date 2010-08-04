@@ -1,0 +1,12 @@
+diff --git a/global/macros.h b/global/macros.h
+index 43fc43e..bb1d267 100644
+--- a/global/macros.h
++++ b/global/macros.h
+@@ -8,6 +8,7 @@
+ #include <math.h>
+ #include <string.h>
+ #include <stdlib.h>
++#include <ctype.h>
+ 
+ #ifdef WIN32
+ #include <ctype.h>

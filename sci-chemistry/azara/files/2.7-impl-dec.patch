@@ -1,0 +1,24 @@
+diff --git a/global/macros.h b/global/macros.h
+index ddeaffa..2bcc433 100644
+--- a/global/macros.h
++++ b/global/macros.h
+@@ -6,6 +6,7 @@
+ #include <math.h>
+ #include <string.h>
+ #include <stdlib.h>
++#include <ctype.h>
+ 
+ #ifdef WIN32
+ #include <ctype.h>
+diff --git a/plot2/script.c b/plot2/script.c
+index 2f55182..ef219cc 100644
+--- a/plot2/script.c
++++ b/plot2/script.c
+@@ -4,6 +4,7 @@
+ #include "stack.h"
+ #include "utility.h"
+ 
++
+ #define  SCRIPT_COMMENT		'!'
+ 
+ #define  LOOP_KEY		"loop"

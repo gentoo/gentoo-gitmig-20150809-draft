@@ -1,9 +1,12 @@
---- help/makefile	2002-11-01 13:27:27.000000000 +0100
-+++ help/makefile.new	2008-12-24 14:45:56.141225333 +0100
-@@ -37,102 +37,102 @@
+diff --git a/help/makefile b/help/makefile
+index aa9274f..d349286 100644
+--- a/help/makefile
++++ b/help/makefile
+@@ -36,103 +36,103 @@ globals:
+ 
  .c.o:;  $(CC) -c $(CFLAGS) $<
  
- hlp:
+-hlp:
 -	txt2hlp azara
 -	txt2hlp combine
 -	txt2hlp components
@@ -43,47 +46,8 @@
 -	txt2hlp plot1/region
 -	txt2hlp plot1/slider
 -	txt2hlp plot1/text
-+	./txt2hlp azara
-+	./txt2hlp combine
-+	./txt2hlp components
-+	./txt2hlp connect
-+	./txt2hlp contours
-+	./txt2hlp deflate
-+	./txt2hlp extract
-+	./txt2hlp peak_find
-+	./txt2hlp peak_fit
-+	./txt2hlp plot1
-+	./txt2hlp plot2
-+	./txt2hlp process
-+	./txt2hlp project
-+	./txt2hlp slides
-+	./txt2hlp reflate
-+	./txt2hlp unblock
-+	./txt2hlp viewer
-+	./txt2hlp plot2/baseline
-+	./txt2hlp plot2/data
-+	./txt2hlp plot2/extract
-+	./txt2hlp plot2/levels
-+	./txt2hlp plot2/object
-+	./txt2hlp plot2/output
-+	./txt2hlp plot2/peak
-+	./txt2hlp plot2/peaks
-+	./txt2hlp plot2/phase
-+	./txt2hlp plot2/property
-+	./txt2hlp plot2/region
-+	./txt2hlp plot2/rowcol
-+	./txt2hlp plot2/save
-+	./txt2hlp plot2/tracking
-+	./txt2hlp plot1/button
-+	./txt2hlp plot1/data
-+	./txt2hlp plot1/object
-+	./txt2hlp plot1/output
-+	./txt2hlp plot1/property
-+	./txt2hlp plot1/region
-+	./txt2hlp plot1/slider
-+	./txt2hlp plot1/text
- 
- html:
+-
+-html:
 -	txt2html azara
 -	txt2html combine
 -	txt2html components
@@ -134,6 +98,48 @@
 -	txt2html CHANGES-2.6-0
 -	txt2html CHANGES-2.7-0
 -	txt2html LICENSE
++hlp: txt2hlp
++	./txt2hlp azara
++	./txt2hlp combine
++	./txt2hlp components
++	./txt2hlp connect
++	./txt2hlp contours
++	./txt2hlp deflate
++	./txt2hlp extract
++	./txt2hlp peak_find
++	./txt2hlp peak_fit
++	./txt2hlp plot1
++	./txt2hlp plot2
++	./txt2hlp process
++	./txt2hlp project
++	./txt2hlp slides
++	./txt2hlp reflate
++	./txt2hlp unblock
++	./txt2hlp viewer
++	./txt2hlp plot2/baseline
++	./txt2hlp plot2/data
++	./txt2hlp plot2/extract
++	./txt2hlp plot2/levels
++	./txt2hlp plot2/object
++	./txt2hlp plot2/output
++	./txt2hlp plot2/peak
++	./txt2hlp plot2/peaks
++	./txt2hlp plot2/phase
++	./txt2hlp plot2/property
++	./txt2hlp plot2/region
++	./txt2hlp plot2/rowcol
++	./txt2hlp plot2/save
++	./txt2hlp plot2/tracking
++	./txt2hlp plot1/button
++	./txt2hlp plot1/data
++	./txt2hlp plot1/object
++	./txt2hlp plot1/output
++	./txt2hlp plot1/property
++	./txt2hlp plot1/region
++	./txt2hlp plot1/slider
++	./txt2hlp plot1/text
++
++html: txt2html
 +	./txt2html azara
 +	./txt2html combine
 +	./txt2html components
@@ -194,3 +200,102 @@
 -	rm txt2html
 +	rm ./txt2hlp
 +	rm ./txt2html
+diff --git a/makefile b/makefile
+index 752f31d..e12f9c4 100644
+--- a/makefile
++++ b/makefile
+@@ -14,7 +14,7 @@ all: help nongui gui gl
+ help: \
+ 	help_program
+ 
+-nongui: \
++nongui: help \
+ 	process_program \
+ 	peak_program \
+ 	extract_program \
+@@ -30,66 +30,66 @@ nongui: \
+ 	components_program \
+ 	azara_program
+ 
+-gui: \
++gui: help \
+ 	plot2_program \
+ 	plot1_program
+ 
+-gl: \
++gl: help \
+ 	viewer_program
+ 
+ process_program:
+-	cd process; $(MAKE)
++	$(MAKE) -C process
+ 
+ plot2_program:
+-	cd plot2; $(MAKE)
++	$(MAKE) -C plot2
+ 
+ plot1_program:
+-	cd plot1; $(MAKE)
++	$(MAKE) -C plot1
+ 
+ peak_program:
+-	cd peak; $(MAKE)
++	$(MAKE) -C peak
+ 
+ extract_program:
+-	cd extract; $(MAKE)
++	$(MAKE) -C extract
+ 
+ project_program:
+-	cd project; $(MAKE)
++	$(MAKE) -C project
+ 
+ unblock_program:
+-	cd unblock; $(MAKE)
++	$(MAKE) -C unblock
+ 
+ contours_program:
+-	cd contours; $(MAKE)
++	$(MAKE) -C contours
+ 
+ combine_program:
+-	cd combine; $(MAKE)
++	$(MAKE) -C combine
+ 
+ deflate_program:
+-	cd deflate; $(MAKE)
++	$(MAKE) -C deflate
+ 
+ reflate_program:
+-	cd reflate; $(MAKE)
++	$(MAKE) -C reflate
+ 
+ slides_program:
+-	cd slides; $(MAKE)
++	$(MAKE) -C slides
+ 
+ components_program:
+-	cd components; $(MAKE)
++	$(MAKE) -C components
+ 
+ utility_program:
+-	cd utility; $(MAKE)
++	$(MAKE) -C utility
+ 
+ connect_program:
+-	cd connect; $(MAKE)
++	$(MAKE) -C connect
+ 
+ viewer_program:
+-	cd viewer; $(MAKE)
++	$(MAKE) -C viewer
+ 
+ help_program:
+ 	cd help; $(MAKE)
+ 
+ azara_program:
+-	cd azara; $(MAKE)
++	$(MAKE) -C azara
+ 
+ clean: \
+ 	global_clean \

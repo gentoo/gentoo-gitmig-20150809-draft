@@ -1,0 +1,312 @@
+diff --git a/DataRows/makefile b/DataRows/makefile
+index 587e710..3d49953 100644
+--- a/DataRows/makefile
++++ b/DataRows/makefile
+@@ -39,7 +39,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) python_objects
++	$(MAKE) -C $(GLOBAL_DIR) python_objects
+ 
+ py_data_rows.o: py_data_rows.c
+ 	$(CC) -c $(CFLAGS) $(PYTHON_INCLUDE_DIR) $<
+diff --git a/azara/makefile b/azara/makefile
+index 3ba0cd9..4de1857 100644
+--- a/azara/makefile
++++ b/azara/makefile
+@@ -24,7 +24,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) azara_objects
++	$(MAKE) -C $(GLOBAL_DIR) azara_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/combine/makefile b/combine/makefile
+index a855236..11891f6 100644
+--- a/combine/makefile
++++ b/combine/makefile
+@@ -32,7 +32,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) combine_objects
++	$(MAKE) -C $(GLOBAL_DIR) combine_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/connect/makefile b/connect/makefile
+index d75e7da..4769266 100644
+--- a/connect/makefile
++++ b/connect/makefile
+@@ -35,7 +35,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) connect_objects
++	$(MAKE) -C $(GLOBAL_DIR) connect_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/contours/makefile b/contours/makefile
+index 5b832b8..895fd74 100644
+--- a/contours/makefile
++++ b/contours/makefile
+@@ -31,7 +31,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) contours_objects
++	$(MAKE) -C $(GLOBAL_DIR) contours_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/deflate/makefile b/deflate/makefile
+index 4c4e02e..0b2cdc4 100644
+--- a/deflate/makefile
++++ b/deflate/makefile
+@@ -30,7 +30,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) deflate_objects
++	$(MAKE) -C $(GLOBAL_DIR) deflate_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/extract/makefile b/extract/makefile
+index 3212cb9..b786746 100644
+--- a/extract/makefile
++++ b/extract/makefile
+@@ -30,7 +30,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) extract_objects
++	$(MAKE) -C $(GLOBAL_DIR) extract_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/help/makefile b/help/makefile
+index 9e99a7c..59a86a3 100644
+--- a/help/makefile
++++ b/help/makefile
+@@ -39,7 +39,7 @@ globals:
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+-hlp:
++hlp: txt2hlp
+ 	$(TXT2HLP) azara
+ 	$(TXT2HLP) combine
+ 	$(TXT2HLP) connect
+@@ -78,7 +78,7 @@ hlp:
+ 	$(TXT2HLP) plot1/text
+ 	$(TXT2HLP) DataRows
+ 
+-html:
++html: txt2html
+ 	$(TXT2HTML) azara
+ 	$(TXT2HTML) combine
+ 	$(TXT2HTML) connect
+diff --git a/makefile b/makefile
+index 9965b07..3cee572 100644
+--- a/makefile
++++ b/makefile
+@@ -14,7 +14,7 @@ all: help nongui DataRows gui
+ help: \
+ 	help_program
+ 
+-nongui: \
++nongui: help \
+ 	process_program \
+ 	plot2_nog_program \
+ 	peak_program \
+@@ -29,63 +29,63 @@ nongui: \
+ 	connect_program \
+ 	azara_program
+ 
+-gui: \
++gui: help \
+ 	plot2_program \
+ 	plot1_program
+ 
+-DataRows: \
++DataRows: help \
+ 	DataRows
+ 
+ process_program:
+-	cd process; $(MAKE)
++	$(MAKE) -C process
+ 
+ plot2_program:
+-	cd plot2; $(MAKE) plot2
++	$(MAKE) -C plot2
+ 
+ plot2_nog_program:
+-	cd plot2; $(MAKE) plot2_nog
++	$(MAKE) -C plot2 plot2_nog
+ 
+ plot1_program:
+-	cd plot1; $(MAKE)
++	$(MAKE) -C plot1
+ 
+ peak_program:
+-	cd peak; $(MAKE)
++	$(MAKE) -C peak
+ 
+ extract_program:
+-	cd extract; $(MAKE)
++	$(MAKE) -C extract
+ 
+ project_program:
+-	cd project; $(MAKE)
++	$(MAKE) -C project
+ 
+ unblock_program:
+-	cd unblock; $(MAKE)
++	$(MAKE) -C unblock
+ 
+ contours_program:
+-	cd contours; $(MAKE)
++	$(MAKE) -C contours
+ 
+ combine_program:
+-	cd combine; $(MAKE)
++	$(MAKE) -C combine
+ 
+ deflate_program:
+-	cd deflate; $(MAKE)
++	$(MAKE) -C deflate
+ 
+ reflate_program:
+-	cd reflate; $(MAKE)
++	$(MAKE) -C reflate
+ 
+ utility_program:
+-	cd utility; $(MAKE)
++	$(MAKE) -C utility
+ 
+ connect_program:
+-	cd connect; $(MAKE)
++	$(MAKE) -C connect
+ 
+ help_program:
+ 	cd help; $(MAKE)
+ 
+ azara_program:
+-	cd azara; $(MAKE)
++	$(MAKE) -C azara
+ 
+ DataRows:
+-	cd DataRows; $(MAKE)
++	$(MAKE) -C DataRows
+ 
+ clean: \
+ 	global_clean \
+diff --git a/peak/makefile b/peak/makefile
+index f3c13b7..77b3bac 100644
+--- a/peak/makefile
++++ b/peak/makefile
+@@ -116,7 +116,7 @@ local_find:
+ 	$(MAKE) local_find_objects
+ 
+ global_find:
+-	cd $(GLOBAL_DIR); $(MAKE) peak_find_objects
++	$(MAKE) -C $(GLOBAL_DIR) peak_find_objects
+ 
+ local_fit_objects: $(LOCAL_FIT_OBJS)
+ 
+@@ -124,10 +124,10 @@ local_fit:
+ 	$(MAKE) local_fit_objects
+ 
+ global_fit:
+-	cd $(GLOBAL_DIR); $(MAKE) peak_fit_objects
++	$(MAKE) -C $(GLOBAL_DIR) peak_fit_objects
+ 
+ commands:
+-	cd $(COMMAND_DIR); $(MAKE) peak
++	$(MAKE) -C $(COMMAND_DIR) peak
+ 
+ 
+ .c.o:;	$(CC) -c $(CFLAGS) $<
+diff --git a/plot1/makefile b/plot1/makefile
+index d1dce2d..73ed1ac 100644
+--- a/plot1/makefile
++++ b/plot1/makefile
+@@ -108,7 +108,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) plot1_objects
++	$(MAKE) -C $(GLOBAL_DIR) plot1_objects
+ 
+ .c.o:;	$(CC) $(X11_INCLUDE_DIR) $(MOTIF_INCLUDE_DIR) -c $(CFLAGS) $<
+ 
+diff --git a/plot2/makefile b/plot2/makefile
+index a6b7b4a..f1cd86c 100644
+--- a/plot2/makefile
++++ b/plot2/makefile
+@@ -149,7 +149,7 @@ local_plot2:
+ 	$(MAKE) local_plot2_objects
+ 
+ global_plot2:
+-	cd $(GLOBAL_DIR); $(MAKE) plot2_objects
++	$(MAKE) -C $(GLOBAL_DIR) plot2_objects
+ 
+ local_plot2_nog_objects: $(LOCAL_PLOT2_NOG_OBJS)
+ 
+diff --git a/process/makefile b/process/makefile
+index 22ceeed..33e811b 100644
+--- a/process/makefile
++++ b/process/makefile
+@@ -86,7 +86,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) process_objects
++	$(MAKE) -C $(GLOBAL_DIR) process_objects
+ 
+ peak:
+ 	$(MAKE) peak_objects
+diff --git a/project/makefile b/project/makefile
+index 78143fc..6d7745c 100644
+--- a/project/makefile
++++ b/project/makefile
+@@ -30,7 +30,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) project_objects
++	$(MAKE) -C $(GLOBAL_DIR) project_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/reflate/makefile b/reflate/makefile
+index 079a3fc..cdf8d8d 100644
+--- a/reflate/makefile
++++ b/reflate/makefile
+@@ -30,7 +30,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) reflate_objects
++	$(MAKE) -C $(GLOBAL_DIR) reflate_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
+diff --git a/unblock/makefile b/unblock/makefile
+index 510dc9e..e006685 100644
+--- a/unblock/makefile
++++ b/unblock/makefile
+@@ -30,7 +30,7 @@ locals:
+ 	$(MAKE) local_objects
+ 
+ globals:
+-	cd $(GLOBAL_DIR); $(MAKE) unblock_objects
++	$(MAKE) -C $(GLOBAL_DIR) unblock_objects
+ 
+ .c.o:;  $(CC) -c $(CFLAGS) $<
+ 
