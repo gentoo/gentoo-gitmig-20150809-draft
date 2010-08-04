@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.214 2010/07/13 22:08:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.215 2010/08/04 01:38:02 jer Exp $
+
+  04 Aug 2010; Jeroen Roovers <jer@gentoo.org> net-snmp-5.4.2.1-r4.ebuild,
+  +files/net-snmp-5.4.2.1-perlcc-hppa.patch:
+  Fix toolchain quadruplet detection (bug #330353).
 
   13 Jul 2010; Jeroen Roovers <jer@gentoo.org> net-snmp-5.5.ebuild:
   Remove unneeded autotools eclass.

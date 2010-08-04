@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.8 2010/07/12 19:56:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.9 2010/08/04 01:38:02 jer Exp $
 
 EAPI=2
 
@@ -77,6 +77,9 @@ src_prepare() {
 	# Fix version number:
 	sed -i -e "s:NetSnmpVersionInfo = \".*\":NetSnmpVersionInfo = \"${PV}\":" \
 		snmplib/snmp_version.c || die "sedding version failed"
+	
+	# Fix toolchain quadruplet detection, bug #330353
+	epatch "${FILESDIR}/${P}-perlcc-hppa.patch"
 
 	eautoreconf
 
