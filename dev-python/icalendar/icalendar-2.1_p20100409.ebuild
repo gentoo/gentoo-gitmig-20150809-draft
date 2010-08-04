@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.1_p20100409.ebuild,v 1.2 2010/04/26 15:11:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.1_p20100409.ebuild,v 1.3 2010/08/04 11:49:33 nixphoeni Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,7 +27,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 DOCS="CHANGES.txt CREDITS.txt doc/* HISTORY.txt README.txt TODO.txt"
 
 src_prepare() {
-	EPATCH_SUFFIX="patch" epatch "${FILESDIR}"
+	EPATCH_SUFFIX="patch" epatch "${FILESDIR}/${PV}"
 	distutils_src_prepare
 }
 
