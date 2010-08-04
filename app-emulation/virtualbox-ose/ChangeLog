@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.69 2010/08/01 10:37:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.70 2010/08/04 08:40:06 polynomial-c Exp $
+
+  04 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-ose-3.1.8.ebuild:
+  VBoxTestOGL is only available with USE="qt4". Thanks to Christoph
+  Safferling for reporting this issue in bug #330379.
 
   01 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-ose-3.1.8.ebuild, virtualbox-ose-3.2.4-r1.ebuild,

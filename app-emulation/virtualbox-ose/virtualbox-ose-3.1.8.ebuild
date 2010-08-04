@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.1.8.ebuild,v 1.9 2010/08/01 10:37:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.1.8.ebuild,v 1.10 2010/08/04 08:40:06 polynomial-c Exp $
 
 EAPI=2
 
@@ -206,10 +206,6 @@ src_install() {
 			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/${each}
 		done
 
-		doins VBoxTestOGL || die
-		fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxTestOGL
-		fperms 0750 /usr/$(get_libdir)/${PN}/VBoxTestOGL
-
 		dosym /usr/$(get_libdir)/${PN}/VBox /usr/bin/VBoxSDL
 
 		if use qt4 ; then
@@ -217,6 +213,10 @@ src_install() {
 			fowners root:vboxusers /usr/$(get_libdir)/${PN}/VirtualBox
 			fperms 4750 /usr/$(get_libdir)/${PN}/VirtualBox
 			pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VirtualBox
+
+			doins VBoxTestOGL || die
+			fowners root:vboxusers /usr/$(get_libdir)/${PN}/VBoxTestOGL
+			fperms 0750 /usr/$(get_libdir)/${PN}/VBoxTestOGL
 
 			dosym /usr/$(get_libdir)/${PN}/VBox /usr/bin/VirtualBox
 		fi
