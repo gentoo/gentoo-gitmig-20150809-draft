@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.6 2010/07/19 15:43:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.7 2010/08/04 22:23:35 bicatali Exp $
+
+*tbb-3.0.056 (04 Aug 2010)
+
+  04 Aug 2010; Sébastien Fabbro <bicatali@gentoo.org> -tbb-3.0.018.ebuild,
+  -files/tbb-3.0.018-tests.patch, -tbb-3.0.035.ebuild,
+  -files/tbb-3.0.035-tests.patch, +tbb-3.0.056.ebuild,
+  +files/tbb-3.0.056-tests.patch:
+  Version bump. Disabled buggy tests and reported upstream
 
 *tbb-3.0.035 (19 Jul 2010)
 

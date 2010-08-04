@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.035.ebuild,v 1.1 2010/07/19 15:43:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.056.ebuild,v 1.1 2010/08/04 22:23:35 bicatali Exp $
 
-EAPI=2
-inherit eutils versionator toolchain-funcs alternatives
+EAPI=3
+inherit eutils versionator toolchain-funcs
 #  url number
-MYU="78/155"
+MYU="78/157"
 # release update
-MYR="%20update%20"1
+MYR="%20update%20"2
 
 PV1="$(get_version_component_range 1)"
 PV2="$(get_version_component_range 2)"
@@ -31,8 +31,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-tests.patch
 	sed -i \
 		-e "s/-O2/${CXXFLAGS}/g" \
-		build/*.inc \
-		|| die
+		build/*.inc || die
 }
 
 src_compile() {
