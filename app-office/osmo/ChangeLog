@@ -1,6 +1,9 @@
 # ChangeLog for app-office/osmo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.10 2010/05/09 19:26:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.11 2010/08/04 14:09:39 hwoarang Exp $
+
+  04 Aug 2010; Markos Chandras <hwoarang@gentoo.org> osmo-0.2.10.ebuild:
+  Stable on amd64 wrt bug #331173
 
   09 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> osmo-0.2.8.ebuild:
   x86 stable wrt bug #316335
