@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11817 2010/08/03 21:19:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11818 2010/08/04 07:30:25 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -548,11 +548,6 @@ dev-php5/znf
 # Masked for removal due to 1.5 JDK removal, bug #292001.
 # Use dev-java/tijmp for the 1.6 java replacement.
 dev-java/jmp
-
-# Justin Lecher <jlec@gentoo.org> (30 Jun 10)
-# Not working
-# Hopefully to be rescued
-dev-libs/excelformat
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Jun 2010)
 #  on behalf of QA team
