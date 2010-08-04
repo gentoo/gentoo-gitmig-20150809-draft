@@ -1,11 +1,6 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.14 2010/08/04 04:05:41 reavertm Exp $
-
-  04 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org> upower-0.9.5.ebuild:
-  Do not filter out DISABLE_DEPRECATED, do not rebuild gtk docs, use
-  base.eclass, deps cleanup (intltool always required, gtk-doc related deps
-  removed), use POSIX find -exec rm instead of -delete
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.15 2010/08/04 06:03:53 ssuominen Exp $
 
   30 Jul 2010; Markos Chandras <hwoarang@gentoo.org> upower-0.9.4.ebuild:
   Stable on amd64 wrt bug #329623
