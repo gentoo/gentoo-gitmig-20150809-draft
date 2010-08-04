@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/lmarbles-1.0.8.ebuild,v 1.4 2010/01/23 15:47:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/lmarbles-1.0.8.ebuild,v 1.5 2010/08/04 21:11:25 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -27,5 +27,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 	newicon lmarbles48.gif ${PN}.gif
 	make_desktop_entry lmarbles LMarbles /usr/share/pixmaps/${PN}.gif
+	dohtml src/manual/*
 	prepgamesdirs
 }
