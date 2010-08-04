@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.155 2010/07/30 17:58:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.156 2010/08/04 06:30:41 jlec Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -12,10 +12,6 @@
 # Andrey Grozin <grozin@gentoo.org> (7 Jul 2010)
 # Doesn't work with the current qt
 app-office/texmacs qt4
-
-# Justin Lecher <jlec@gentoo.org> (30 Jun 2010)
-# dev-libs/excelformat does not work
->=sci-visualization/qtiplot-0.9.8 xls
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
 # Mask clutter till introspection is unmasked

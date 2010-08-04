@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.167 2010/07/25 19:07:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.168 2010/08/04 06:30:41 jlec Exp $
+
+  04 Aug 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
+  Use removed from package - sci-visualization/qtiplot xls
 
   25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Fix atom for pkgmove from www-client/mozilla-firefox -> www-client/firefox
