@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.60 2010/07/14 11:00:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.61 2010/08/04 03:15:03 jer Exp $
+
+  04 Aug 2010; Jeroen Roovers <jer@gentoo.org> radvd-1.6.ebuild:
+  Stable for HPPA (bug #327163).
 
   14 Jul 2010; Markos Chandras <hwoarang@gentoo.org> radvd-1.6.ebuild:
   Stable on amd64 wrt bug #327163
