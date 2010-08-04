@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.75 2010/07/28 09:34:45 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.76 2010/08/04 12:05:53 dagger Exp $
+
+*networkmanager-0.8.1-r1 (04 Aug 2010)
+
+  04 Aug 2010; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-0.8.1.ebuild, +networkmanager-0.8.1-r1.ebuild,
+  +files/networkmanager-0.8.1-dhcp-configure.patch:
+  Updated dhcp client configure option (bug #330659) - thanks Marco Paolone
+  Updated ISC dhcp client requirement to version 4.0 (bug #330319) - thanks
+  to Mike Auty  for providing patch
 
 *networkmanager-0.8.1 (28 Jul 2010)
 
