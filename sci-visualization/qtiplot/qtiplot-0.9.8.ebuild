@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.ebuild,v 1.1 2010/06/30 13:52:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.ebuild,v 1.2 2010/08/04 06:29:18 jlec Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc python ods xls"
+IUSE="doc python ods"
 
 LANGS="cn cz de es fr ro ru ja sv"
 for l in ${LANGS}; do
@@ -38,7 +38,6 @@ CDEPEND="
 	sci-libs/gsl
 	dev-libs/boost
 	dev-tex/qtexengine
-	xls? ( dev-libs/excelformat )
 	ods? ( dev-libs/quazip )"
 # Still unable to build
 #	emf? ( media-libs/libemf
