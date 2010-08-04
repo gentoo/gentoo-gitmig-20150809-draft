@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.01.ebuild,v 1.1 2010/07/08 13:48:02 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.03.ebuild,v 1.1 2010/08/04 07:25:39 grozin Exp $
 EAPI=3
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="python? 2"
@@ -68,19 +68,15 @@ src_compile() {
 		# info
 		einfo "Making info"
 		emake ${PN}.info || die "emake ${PN}.info failed"
-		# html
-		einfo "Making html docs"
-		emake ${PN}/index.html
-		einfo "Making FAQ"
 		cd FAQ
-		emake
+		emake || die "emake FAQ failed"
 		cd ..
 		# pdf
 		einfo "Making pdf docs"
 		export VARTEXFONTS="${T}"/fonts
 		# see bug #260606
-		emake -j1 asymptote.pdf
-		emake CAD.pdf
+		emake -j1 asymptote.pdf || die "emake asymptote.pdf failed"
+		emake CAD.pdf || die "emake CAD.pdf failed"
 	fi
 	cd ..
 
