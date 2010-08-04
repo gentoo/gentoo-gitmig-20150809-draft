@@ -29,21 +29,3 @@ diff -Nuar --exclude '*.S' --exclude Makefile libhugetlbfs-2.6.orig/tests/run_te
  
      # Accounting bug tests
      # reset free hpages because sharing will have held some
-@@ -555,7 +561,7 @@
-     """
-     Run the set of stress tests.
-     """
--    iterations = 10	# Number of iterations for looping tests
-+    iterations = 10 # Number of iterations for looping tests
- 
-     # Don't update NRPAGES every time like above because we want to catch the
-     # failures that happen when the kernel doesn't release all of the huge pages
-@@ -570,7 +576,7 @@
-     (rc, tot_pages) = total_hpages()
-     (rc, size) = hpage_size()
-     sysctls = setup_shm_sysctl(tot_pages * size)
--    threads = 10	# Number of threads for shm-fork
-+    threads = 10     # Number of threads for shm-fork
-     # Run shm-fork once using half available hugepages, then once using all
-     # This is to catch off-by-ones or races in the kernel allocated that
-     # can make allocating all hugepages a problem
