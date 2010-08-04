@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-485.ebuild,v 1.1 2010/06/21 19:41:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-485.ebuild,v 1.2 2010/08/04 07:52:51 hwoarang Exp $
 
 inherit qt4
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/unetbootin/${PN}-source-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 S="${WORKDIR}"
