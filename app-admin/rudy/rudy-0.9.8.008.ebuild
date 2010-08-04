@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.005.ebuild,v 1.1 2010/05/21 23:21:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/rudy-0.9.8.008.ebuild,v 1.1 2010/08/04 02:39:23 flameeyes Exp $
 
 EAPI=2
 
@@ -46,4 +46,4 @@ ruby_add_rdepend '
 	>=dev-ruby/drydock-0.6.9
 	>=dev-ruby/annoy-0.5.6
 	>=dev-ruby/attic-0.5.2
-	>=dev-ruby/rye-0.8.17'
+	>=dev-ruby/rye-0.8.19'

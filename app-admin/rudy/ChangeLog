@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/rudy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.12 2010/06/28 07:57:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.13 2010/08/04 02:39:23 flameeyes Exp $
+
+*rudy-0.9.8.008 (04 Aug 2010)
+
+  04 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/rudy-0.9.6.002+amazon-ec2-0.9.4.patch, -rudy-0.9.8.005.ebuild,
+  -rudy-0.9.8.007.ebuild, +rudy-0.9.8.008.ebuild:
+  Bump and cleanup.
 
 *rudy-0.9.8.007 (28 Jun 2010)
 
