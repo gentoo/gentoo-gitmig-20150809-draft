@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.1.ebuild,v 1.2 2010/07/07 16:09:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.3.1.ebuild,v 1.3 2010/08/04 23:28:21 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,10 @@ RDEPEND=">=dev-python/enable-3.3.1
 	dev-python/numpy"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	doc? ( dev-python/setupdocs )
+	doc? ( dev-python/setupdocs
+		media-fonts/font-cursor-misc
+		media-fonts/font-misc-misc
+		x11-apps/xhost )
 	test? (
 		dev-python/coverage
 		>=dev-python/nose-0.10.3
@@ -57,7 +60,10 @@ src_compile() {
 
 	if use doc; then
 		einfo "Generation of documentation"
-		"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
+		doc_generation() {
+			"$(PYTHON -f)" setup.py build_docs --formats=html,pdf || die "Generation of documentation failed"
+		}
+		maketype="doc_generation" virtualmake
 	fi
 }
 
