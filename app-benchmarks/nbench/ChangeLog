@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/nbench
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.26 2009/12/14 12:46:38 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.27 2010/08/04 14:00:51 hwoarang Exp $
+
+  04 Aug 2010; Markos Chandras <hwoarang@gentoo.org> nbench-2.2.3-r1.ebuild:
+  Stable on amd64 wrt bug #331147
 
   14 Dec 2009; Jeroen Roovers <jer@gentoo.org> nbench-2.2.3-r1.ebuild:
   Space.
