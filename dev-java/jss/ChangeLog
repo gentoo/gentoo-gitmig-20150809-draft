@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jss
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.23 2009/12/07 23:08:36 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.24 2010/08/04 09:11:57 xarthisius Exp $
+
+  04 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> jss-4.3.ebuild,
+  +files/jss-4.3-ldflags.patch:
+  Respect LDFLAGS wrt bug 327619. Thanks to Andreis Vinogradovs (slepnoga)
+  <spamslepnoga@inbox.ru> for the report.
 
   07 Dec 2009; Markus Meier <maekke@gentoo.org> jss-4.3.ebuild:
   amd64/x86 stable, bug #295590

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3.ebuild,v 1.2 2009/12/07 23:08:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3.ebuild,v 1.3 2010/08/04 09:11:57 xarthisius Exp $
 
 inherit base java-pkg-2 versionator
 
@@ -35,6 +35,7 @@ S=${WORKDIR}/mozilla
 PATCHES=(
 	"${FILESDIR}/${PN}-3.4-target_source.patch"
 	"${FILESDIR}/${PN}-4.2.5-use_pkg-config.patch"
+	"${FILESDIR}/${P}-ldflags.patch"
 )
 
 src_compile() {
