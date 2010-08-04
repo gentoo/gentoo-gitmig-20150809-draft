@@ -22,7 +22,7 @@ module Gem
 
     undef :ruby_engine
     def ruby_engine
-      if RUBY_DESCRIPTION =~ /Ruby Enterprise Edition/
+      if defined? RUBY_DESCRIPTION and RUBY_DESCRIPTION =~ /Ruby Enterprise Edition/
         "rubyee"
       else
         # Ruby 1.8 and Ruby 1.9.2_rc2 and later install here, and JRuby

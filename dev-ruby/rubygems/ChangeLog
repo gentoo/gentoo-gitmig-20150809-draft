@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.148 2010/08/03 16:07:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.149 2010/08/04 13:47:42 flameeyes Exp $
+
+*rubygems-1.3.7-r3 (04 Aug 2010)
+
+  04 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -rubygems-1.3.7-r2.ebuild, +rubygems-1.3.7-r3.ebuild,
+  files/gentoo-defaults.rb:
+  Bump to fix on MRI 1.8.6 where it failed before. Also drop hoe and rake
+  dependencies for tests by running them manually instead.
 
 *rubygems-1.3.7-r2 (03 Aug 2010)
 

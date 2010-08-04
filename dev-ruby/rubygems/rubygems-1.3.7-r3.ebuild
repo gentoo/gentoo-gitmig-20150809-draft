@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7-r2.ebuild,v 1.1 2010/08/03 16:07:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7-r3.ebuild,v 1.1 2010/08/04 13:47:42 flameeyes Exp $
 
 EAPI="3"
 
@@ -29,8 +29,6 @@ PDEPEND="server? ( dev-ruby/builder[ruby_targets_ruby18] )"
 # rdoc-related stuff, so it's not a mistake.
 ruby_add_bdepend "
 	test? (
-		dev-ruby/rake
-		dev-ruby/hoe
 		virtual/ruby-minitest
 		dev-ruby/builder
 		!dev-ruby/yard
@@ -64,7 +62,8 @@ each_ruby_test() {
 	# Unset RUBYOPT to avoid interferences, bug #158455 et. al.
 	unset RUBYOPT
 
-	RUBYLIB="$(pwd)/lib${RUBYLIB+:${RUBYLIB}}" ${RUBY} -S rake test || die "tests failed"
+	RUBYLIB="$(pwd)/lib${RUBYLIB+:${RUBYLIB}}" ${RUBY} -Ilib:test \
+		-e 'Dir["test/test_*.rb"].each { |tu| require tu }' || die "tests failed"
 }
 
 each_ruby_install() {
