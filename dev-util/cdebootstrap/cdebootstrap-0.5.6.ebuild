@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdebootstrap/cdebootstrap-0.5.6.ebuild,v 1.1 2010/07/29 17:21:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdebootstrap/cdebootstrap-0.5.6.ebuild,v 1.2 2010/08/05 15:21:25 darkside Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ src_install() {
 	dodoc doc/* debian/changelog debian/NEWS || die
 
 	# Install the keyrings
-	cd "${S}"
+	cd "${WORKDIR}"
 	insinto /usr/share/keyrings
 	doins debian-archive-keyring-2009.01.31/keyrings/*.gpg || die
 }
