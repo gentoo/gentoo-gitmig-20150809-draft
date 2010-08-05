@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.29 2010/08/01 11:05:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.30 2010/08/05 16:24:19 jer Exp $
+
+  05 Aug 2010; Jeroen Roovers <jer@gentoo.org> libunique-1.1.6.ebuild:
+  Stable for HPPA (bug #324077).
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   libunique-1.1.6.ebuild:
