@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/usermode-utilities
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.32 2010/04/10 13:20:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.33 2010/08/05 02:31:51 dang Exp $
+
+*usermode-utilities-20070815-r2 (05 Aug 2010)
+
+  05 Aug 2010; Daniel Gryniewicz <dang@gentoo.org>
+  -files/20040406-CAN-2004-1295.patch,
+  -files/usermode-utilities-20060323-nostrip.patch,
+  +usermode-utilities-20070815-r2.ebuild,
+  +files/usermode-utilities-20070815-rollup.patch:
+  Fix bug #331099 and consolidate patches
 
 *usermode-utilities-20070815-r1 (10 Apr 2010)
 
