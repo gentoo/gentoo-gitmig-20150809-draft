@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.17.0.ebuild,v 1.3 2010/05/21 08:32:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.19.0.ebuild,v 1.1 2010/08/05 06:45:56 pva Exp $
 
-EAPI="2"
+EAPI="3"
 
 DESCRIPTION="library to create GTK+ interfaces from GuiXml at runtime"
 HOMEPAGE="http://www.crowdesigner.org"
@@ -15,12 +15,12 @@ IUSE="nls"
 
 LANGS="ru"
 
-RDEPEND=">=x11-libs/gtk+-2.18:2
-	>=dev-libs/glib-2.22:2"
+RDEPEND=">=x11-libs/gtk+-2.20:2
+	>=dev-libs/glib-2.24:2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( >=sys-devel/gettext-0.17 )"
+	nls? ( >=sys-devel/gettext-0.18 )"
 
 for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"

@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/guiloader-c++-2.17.0.ebuild,v 1.3 2010/05/21 08:52:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/guiloader-c++-2.19.0.ebuild,v 1.1 2010/08/05 06:46:58 pva Exp $
 
-EAPI="2"
+EAPI="3"
 
 DESCRIPTION="C++ binding to GuiLoader library"
 HOMEPAGE="http://www.crowdesigner.org"
@@ -15,13 +15,13 @@ IUSE="nls"
 
 LANGS="ru"
 
-RDEPEND=">=dev-libs/guiloader-2.17
-	>=dev-cpp/gtkmm-2.18
-	>=dev-cpp/glibmm-2.22"
+RDEPEND=">=dev-libs/guiloader-2.19
+	>=dev-cpp/gtkmm-2.20
+	>=dev-cpp/glibmm-2.24"
 DEPEND="${RDEPEND}
 		dev-libs/boost
 		dev-util/pkgconfig
-		nls? ( >=sys-devel/gettext-0.17 )"
+		nls? ( >=sys-devel/gettext-0.18 )"
 
 for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"
