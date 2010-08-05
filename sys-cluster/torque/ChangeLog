@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.93 2010/08/05 03:11:59 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.94 2010/08/05 03:18:42 jsbronder Exp $
+
+  05 Aug 2010; Justin Bronder <jsbronder@gentoo.org>
+  -files/pbs_mom-init.d-2.2.1-r1, -files/pbs_sched-init.d-2.2.1-r1,
+  -files/pbs_server-init.d-2.2.1-r1, -files/torque-conf.d-2.2.1-r1,
+  -files/torque-env.d-2.2.1-r1, torque-2.3.6.ebuild, torque-2.3.11.ebuild,
+  torque-2.4.9.ebuild, +files/pbs_mom-init.d, +files/pbs_sched-init.d,
+  +files/pbs_server-init.d, +files/torque-conf.d, +files/torque-env.d:
+  Rename the init and env files, the versioning hasn't made sense for a
+  while.
 
 *torque-2.4.9 (05 Aug 2010)
 

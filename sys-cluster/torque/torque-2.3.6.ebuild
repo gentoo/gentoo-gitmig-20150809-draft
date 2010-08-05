@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.6.ebuild,v 1.9 2010/01/10 01:22:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.6.ebuild,v 1.10 2010/08/05 03:18:42 jsbronder Exp $
 
 inherit flag-o-matic eutils linux-info
 
@@ -138,12 +138,12 @@ src_install() {
 	done
 
 	if use server; then
-		newinitd "${FILESDIR}"/pbs_server-init.d-2.2.1-r1 pbs_server
-		newinitd "${FILESDIR}"/pbs_sched-init.d-2.2.1-r1 pbs_sched
+		newinitd "${FILESDIR}"/pbs_server-init.d pbs_server
+		newinitd "${FILESDIR}"/pbs_sched-init.d pbs_sched
 	fi
-	newinitd "${FILESDIR}"/pbs_mom-init.d-2.2.1-r1 pbs_mom
-	newconfd "${FILESDIR}"/torque-conf.d-2.2.1-r1 torque
-	newenvd "${FILESDIR}"/torque-env.d-2.2.1-r1 25torque
+	newinitd "${FILESDIR}"/pbs_mom-init.d pbs_mom
+	newconfd "${FILESDIR}"/torque-conf.d torque
+	newenvd "${FILESDIR}"/torque-env.d 25torque
 }
 
 pkg_preinst() {
