@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.250 2010/07/26 23:21:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.251 2010/08/05 13:20:44 darkside Exp $
+
+*dovecot-2.0_rc4 (05 Aug 2010)
+
+  05 Aug 2010; Jeremy Olexa <darkside@gentoo.org>
+  -files/dovecot-1.1.11-11112baa8592.patch,
+  -files/dovecot-1.1.11-4736327a8740.patch,
+  -files/dovecot-1.1.11-bdc5391e52df.patch,
+  -files/dovecot-1.1.11-c08c602ca0dc.patch, -dovecot-2.0_rc3.ebuild,
+  +dovecot-2.0_rc4.ebuild, +files/dovecot-2.0_rc4-asneeded.patch:
+  Version bump, bug #331285 by Eray Aslan. Service name changed to sieve for
+  pam. Reorder linking for --as-needed flag.
 
 *dovecot-1.2.13 (26 Jul 2010)
 

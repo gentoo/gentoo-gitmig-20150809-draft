@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc3.ebuild,v 1.2 2010/07/24 15:34:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc4.ebuild,v 1.1 2010/08/05 13:20:44 darkside Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils versionator ssl-cert
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
-sieve_snapshot="01ee63b788c9"
+sieve_snapshot="cac6acdc4d0e"
 SRC_URI="http://dovecot.org/releases/${major_minor}/rc/${MY_P}.tar.gz
 	sieve? (
 	http://hg.rename-it.nl/dovecot-2.0-pigeonhole/archive/${sieve_snapshot}.tar.gz
@@ -46,8 +46,6 @@ pkg_setup() {
 	if use managesieve && ! use sieve; then
 		ewarn "managesieve USE flag selected but sieve USE flag unselected"
 		ewarn "sieve USE flag will be turned on"
-		ewarn "Hit Control-C now if you want to abort"
-		epause 10
 	fi
 
 	# Add user and group for login process (same as for fedora/redhat)
@@ -60,6 +58,10 @@ pkg_setup() {
 	fi
 	# default login user
 	enewuser dovenull -1 -1 /dev/null
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/dovecot-2.0_rc4-asneeded.patch"
 }
 
 src_configure() {
@@ -123,10 +125,10 @@ src_compile() {
 
 src_test() {
 	default_src_test
-	# not yet.  WIP upstream
+	# not yet
 	#if use sieve || use managesieve ; then
 		#einfo "Beginning sieve tests..."
-		## snapshot. should not be necessary for 2.0 release
+		# snapshot. should not be necessary for 2.0 release
 		#cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
 		#default_src_test
 	#fi
@@ -197,7 +199,7 @@ src_install () {
 			"${confd}/auth-system.conf.ext" \
 			|| die "failed to update PAM settings in auth-system.conf.ext"
 		# mailbase does not provide a managesieve pam file
-		use managesieve && dosym imap /etc/pam.d/managesieve
+		use managesieve && dosym imap /etc/pam.d/sieve
 		sed -i -e \
 			's/#!include auth-system.conf.ext/!include auth-system.conf.ext/' \
 			"${confd}/10-auth.conf" \
