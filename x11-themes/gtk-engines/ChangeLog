@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.169 2010/08/01 11:20:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.170 2010/08/05 16:32:01 jer Exp $
+
+  05 Aug 2010; Jeroen Roovers <jer@gentoo.org> gtk-engines-2.20.1-r1.ebuild:
+  Stable for HPPA (bug #324077).
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   gtk-engines-2.20.1-r1.ebuild:
