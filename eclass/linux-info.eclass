@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.85 2010/08/03 07:03:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.86 2010/08/05 21:57:53 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -441,7 +441,7 @@ get_version_warning_done=
 # KBUILD_OUTPUT (in a decreasing priority list, we look for the env var, makefile var or the
 # symlink /lib/modules/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}/build).
 get_version() {
-	local kbuild_output mkfunc
+	local kbuild_output mkfunc tmplocal
 
 	# no need to execute this twice assuming KV_FULL is populated.
 	# we can force by unsetting KV_FULL
@@ -539,24 +539,28 @@ get_version() {
 	# and if we STILL have not got it, then we better just set it to KV_DIR
 	KV_OUT_DIR="${KV_OUT_DIR:-${KV_DIR}}"
 
-	if linux_config_src_exists; then
-		# For things like git that can append extra stuff:
-		# This script is NOT posix-compliant. Running it with 'sh' when 'sh'
-		# is a real POSIX shell causes some breakages (bug #323717).
-		if [ -e ${KV_DIR}/scripts/setlocalversion ] ; then
-			KV_LOCAL="${KV_LOCAL}$(cd ${KV_OUT_DIR} ; bash ${KV_DIR}/scripts/setlocalversion ${KV_DIR})"
-		else
-			# localversion* files
-			KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_DIR})"
-
-			# CONFIG_LOCALVERSION + LOCALVERSION
-			KV_LOCAL="${KV_LOCAL}$(linux_chkconfig_string LOCALVERSION)${LOCALVERSION}"
-			KV_LOCAL="${KV_LOCAL//\"/}"
-
-			# CONFIG_LOCALVERSION_AUTO logic ???
-		fi
+	# Grab the kernel release from the output directory.
+	# TODO: we MUST detect kernel.release being out of date, and 'return 1' from
+	# this function.
+	if [ -s "${KV_OUT_DIR}"/include/config/kernel.release ]; then
+		KV_LOCAL=$(<"${KV_OUT_DIR}"/include/config/kernel.release)
+	elif [ -s "${KV_OUT_DIR}"/.kernelrelease ]; then
+		KV_LOCAL=$(<"${KV_OUT_DIR}"/.kernelrelease)
 	else
-		KV_LOCAL="${KV_LOCAL}$(get_localversion ${KV_DIR})"
+		KV_LOCAL=
+	fi
+
+	# KV_LOCAL currently contains the full release; discard the first bits.
+	tmplocal=${KV_LOCAL#${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}}
+
+	# If the updated local version was not changed, the tree is not prepared.
+	# Clear out KV_LOCAL in that case.
+	# TODO: this does not detect a change in the localversion part between
+	# kernel.release and the value that would be generated.
+	if [ "$KV_LOCAL" = "$tmplocal" ]; then
+		KV_LOCAL=
+	else
+		KV_LOCAL=$tmplocal
 	fi
 
 	# And we should set KV_FULL to the full expanded version
