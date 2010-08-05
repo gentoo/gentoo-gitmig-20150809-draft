@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.1.ebuild,v 1.2 2009/10/08 17:31:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.1.ebuild,v 1.3 2010/08/05 23:05:49 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -25,5 +25,6 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS THANKS"
 	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
+		--disable-static
+		$(xfconf_use_debug)"
 }
