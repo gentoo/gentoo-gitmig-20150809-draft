@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.5-r1.ebuild,v 1.7 2010/04/01 17:16:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.5-r1.ebuild,v 1.8 2010/08/05 17:18:27 ssuominen Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="cracklib cups debug kerberos krb4 pam slp ssl tcpd xfs"
+IUSE="cracklib cups debug kerberos pam slp ssl tcpd xfs"
 
 RDEPEND=">=sys-libs/db-4.2.52
 	cracklib? ( sys-libs/cracklib )
@@ -23,7 +23,6 @@ RDEPEND=">=sys-libs/db-4.2.52
 	slp? ( net-libs/openslp )
 	cups? ( net-print/cups )
 	kerberos? ( virtual/krb5 )
-	krb4? ( virtual/krb5 )
 	>=sys-apps/coreutils-7.1
 	!app-text/yudit"
 DEPEND="${RDEPEND}
@@ -57,7 +56,7 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable tcpd tcp-wrappers) \
 		$(use_enable kerberos krbV-uam) \
-		$(use_enable krb4 krb4-uam) \
+		--disable-krb4-uam \
 		$(use_enable slp srvloc) \
 		$(use_with ssl ssl-dir) \
 		$(use_with cracklib) \
