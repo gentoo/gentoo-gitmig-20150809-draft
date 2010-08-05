@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.65 2010/07/24 17:00:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.66 2010/08/05 17:52:54 maekke Exp $
+
+  05 Aug 2010; Markus Meier <maekke@gentoo.org> rubyforge-2.0.4-r1.ebuild:
+  add ~arm, bug #331061
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> rubyforge-2.0.4.ebuild:
   ia64/sparc stable wrt #321043
