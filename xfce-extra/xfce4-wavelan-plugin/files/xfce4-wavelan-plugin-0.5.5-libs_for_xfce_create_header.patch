@@ -1,0 +1,37 @@
+Because xfce4-panel is using libxfce4ui instead of libxfcegui4 the flags won't get inherited anymore.
+
+xfce4_wavelan_plugin-wavelan.o: In function `wavelan_configure':
+wavelan.c:(.text+0xed9): undefined reference to `xfce_create_header'
+
+--- configure.in
++++ configure.in
+@@ -49,6 +49,7 @@
+ 
+ dnl configure the panel plugin
+ XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.3.20])
++XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.20])
+ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
+ XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.6.0])
+ 
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
+@@ -11,7 +11,8 @@
+ #	libwavelan.la
+ 
+ xfce4_wavelan_plugin_LDFLAGS =							\
+-				@LIBXFCE4PANEL_LIBS@
++				@LIBXFCE4PANEL_LIBS@ \
++				@LIBXFCEGUI4_LIBS@
+ 
+ xfce4_wavelan_plugin_SOURCES =							\
+ 	wavelan.c							\
+@@ -21,7 +22,8 @@
+ 	wi_linux.c
+ 
+ xfce4_wavelan_plugin_CFLAGS =							\
+-	@LIBXFCE4PANEL_CFLAGS@
++	@LIBXFCE4PANEL_CFLAGS@ \
++	@LIBXFCEGUI4_CFLAGS@
+ 
+ # .desktop file
+ #
