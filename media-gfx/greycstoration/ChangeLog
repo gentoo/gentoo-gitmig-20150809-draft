@@ -1,10 +1,14 @@
 # ChangeLog for media-gfx/greycstoration
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.6 2010/03/10 15:18:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.7 2010/08/05 19:39:59 ssuominen Exp $
+
+  05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  greycstoration-2.9.ebuild:
+  Remove USE="X" because it's always required wrt #247731.
 
   10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   greycstoration-2.9.ebuild, +files/greycstoration-2.9-libpng14.patch:
-  Fix building with -Wl,--as-needed wrt #247731. Fix building with libpng14.
+  Fix building with libpng14.
 
   15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
   metadata.xml: put required herd tag.

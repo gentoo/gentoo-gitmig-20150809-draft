@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/greycstoration-2.9.ebuild,v 1.2 2010/03/10 15:18:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/greycstoration-2.9.ebuild,v 1.3 2010/08/05 19:39:59 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cimg/GREYCstoration-${PV}.zip"
 LICENSE="CeCILL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fftw imagemagick jpeg lapack png tiff X"
+IUSE="fftw imagemagick jpeg lapack png tiff"
 
 RDEPEND="fftw? ( >=sci-libs/fftw-3 )
 	imagemagick? ( media-gfx/imagemagick )
@@ -20,9 +20,9 @@ RDEPEND="fftw? ( >=sci-libs/fftw-3 )
 	lapack? ( virtual/lapack )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	X? ( x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXrandr )"
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXrandr"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
@@ -37,9 +37,8 @@ src_prepare() {
 }
 
 src_compile() {
-	local myconf
+	local myconf="-Dcimg_use_xshm -Dcimg_use_xrandr -lX11 -lXext -lXrandr"
 
-	use X && myconf+=" -Dcimg_use_xshm -Dcimg_use_xrandr -lX11 -lXext -lXrandr"
 	use png && myconf+=" -Dcimg_use_png -lpng -lz"
 	use jpeg && myconf+=" -Dcimg_use_jpeg -ljpeg"
 	use tiff && myconf+=" -Dcimg_use_tiff -ltiff"
@@ -50,8 +49,7 @@ src_compile() {
 
 	$(tc-getCXX) ${LDFLAGS} ${CXXFLAGS} -fno-tree-pre \
 		-o greycstoration greycstoration.cpp \
-		${myconf} -lm -lpthread \
-		|| die
+		${myconf} -lm -lpthread || die
 }
 
 src_install() {
