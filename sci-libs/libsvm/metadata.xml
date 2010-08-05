@@ -10,6 +10,6 @@
  researchers and artificial intelligence application developers.
 </longdescription>
 <use>
-  <flag name='tools'>Install support tools</flag>
+  <flag name='tools'>Install python based tool scripts</flag>
 </use>
 </pkgmetadata>

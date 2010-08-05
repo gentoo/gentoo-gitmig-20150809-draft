@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.20 2010/04/18 17:37:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.21 2010/08/05 20:25:14 bicatali Exp $
+
+*libsvm-2.91 (05 Aug 2010)
+
+  05 Aug 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/2.91-makefile.patch, +libsvm-2.91.ebuild, metadata.xml:
+  Version bump. Now install library. Tools are installed as executables.
+  Clean-up.
 
   18 Apr 2010; <nixnut@gentoo.org> libsvm-2.90-r1.ebuild:
   ppc stable #313139
