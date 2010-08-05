@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.12.ebuild,v 1.2 2010/07/31 00:27:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.12.ebuild,v 1.3 2010/08/05 17:54:39 ssuominen Exp $
 
+EAPI=3
 inherit autotools eutils
 
 DESCRIPTION="A set of tools that use the proc filesystem"
@@ -10,7 +11,7 @@ SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="ipv6 nls selinux X"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
@@ -19,15 +20,13 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-peekfd.patch
-	use nls || epatch "${FILESDIR}"/${PN}-22.12-no-nls.patch #193920
+	use nls || epatch "${FILESDIR}"/${PN}-22.5-no-nls.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# the nls looks weird, but it's because we actually delete the nls stuff
 	# above when USE=-nls.  this should get cleaned up so we dont have to patch
 	# it out, but until then, let's not confuse users ... #220787
@@ -36,17 +35,15 @@ src_compile() {
 		$(use_enable selinux) \
 		$(use_enable ipv6) \
 		$(use nls && use_enable nls)
-
-	emake || die
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README
-	use X || rm "${D}"/usr/bin/pstree.x11
+	use X || rm "${ED}"/usr/bin/pstree.x11
 	# fuser is needed by init.d scripts
 	dodir /bin
-	mv "${D}"/usr/bin/fuser "${D}"/bin/ || die
+	mv "${ED}"/usr/bin/fuser "${ED}"/bin/ || die
 	# easier to do this than forcing regen of autotools
-	[[ -e ${D}/usr/bin/peekfd ]] || rm -f "${D}"/usr/share/man/man1/peekfd.1
+	[[ -e ${ED}/usr/bin/peekfd ]] || rm -f "${ED}"/usr/share/man/man1/peekfd.1
 }
