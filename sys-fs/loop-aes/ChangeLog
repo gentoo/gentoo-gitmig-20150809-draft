@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.56 2010/07/10 14:31:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.57 2010/08/05 21:39:28 hwoarang Exp $
+
+  05 Aug 2010; Markos Chandras <hwoarang@gentoo.org> loop-aes-3.4a.ebuild:
+  Apply patch from Dane Smith <smithdanea@gmail.com> to fix jobserver. Bug
+  #331367 and marked stable for amd64 wrt bug #331239
 
   10 Jul 2010; Christian Faulhammer <fauli@gentoo.org> loop-aes-3.3a.ebuild:
   stable x86, bug 326817

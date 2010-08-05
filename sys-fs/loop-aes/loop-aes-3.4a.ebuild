@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.4a.ebuild,v 1.1 2010/07/04 04:14:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.4a.ebuild,v 1.2 2010/08/05 21:39:28 hwoarang Exp $
 
 EAPI="2"
 
@@ -10,12 +10,12 @@ MY_P="${PN/aes/AES}-v${PV}"
 
 DESCRIPTION="Linux kernel module to encrypt local file systems and disk partitions with AES cipher."
 HOMEPAGE="http://loop-aes.sourceforge.net/loop-AES.README"
-SRC_URI="mirror://sourceforge/loop-aes/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="extra-ciphers keyscrub padlock"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 
 RDEPEND=">=sys-apps/util-linux-2.12r"
 RDEPEND="|| ( ${RDEPEND}[crypt] ${RDEPEND}[loop-aes] )"
@@ -44,6 +44,10 @@ pkg_setup() {
 			loop_twofish(block::tmp-d-kbuild)"
 		BUILD_PARAMS="${BUILD_PARAMS} EXTRA_CIPHERS=y"
 	fi
+}
+
+src_prepare() {
+	sed -i 's/make/$(MAKE)/g' Makefile
 }
 
 src_install() {
