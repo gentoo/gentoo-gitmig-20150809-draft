@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.440 2010/07/01 17:07:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.441 2010/08/05 17:20:34 ssuominen Exp $
 
 # Keep them sorted
 
@@ -179,7 +179,6 @@ kdeenablefinal - EXPERIMENTAL: KDE ebuilds will use the enable-final flag, yield
 kdeprefix - Makes a KDE prefixed install into /usr/kde/${SLOT} if enabled or into /usr (FHS compatible) otherwise
 kerberos - Adds kerberos support
 kolab - Adds support for the Kolab groupware server
-krb4 - Adds optional kerberos 4 compatibility support
 ladspa - Enables the ability to support ladspa plugins
 lame - Prefer using LAME libraries for MP3 encoding support
 lapack - Adds support for the virtual/lapack numerical library
