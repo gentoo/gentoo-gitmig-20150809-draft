@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.1.0.ebuild,v 1.1 2010/08/04 07:53:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.1.0.ebuild,v 1.2 2010/08/05 21:04:15 hwoarang Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	! use webkit && epatch "${FILESDIR}/${PN}-0.9.3-disable-webkit.patch"
-	! use spell && epatch "${FILESDIR}/${PN}-0.8.9_disable_spell.patch"
+	! use webkit && epatch "${FILESDIR}/${P}-disable-webkit.patch"
+	! use spell && epatch "${FILESDIR}/${P}-disable-spell.patch"
 	distutils_src_prepare
 }
