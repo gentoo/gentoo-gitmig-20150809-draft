@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.5.ebuild,v 1.5 2010/08/04 06:03:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.5.ebuild,v 1.6 2010/08/05 13:08:10 ssuominen Exp $
 
 EAPI=3
 inherit linux-info
@@ -12,11 +12,11 @@ SRC_URI="http://upower.freedesktop.org/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86 ~x86-fbsd"
-IUSE="debug doc nls introspection ipod kernel_FreeBSD kernel_linux"
+IUSE="debug doc introspection ipod kernel_FreeBSD kernel_linux"
 
-COMMON_DEPEND=">=dev-libs/glib-2.21.5:2
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.76
+	>=dev-libs/glib-2.21.5:2
 	>=sys-apps/dbus-1
-	>=dev-libs/dbus-glib-0.76
 	>=sys-auth/polkit-0.91
 	introspection? ( dev-libs/gobject-introspection )
 	kernel_linux? ( >=sys-fs/udev-151[extras]
@@ -26,12 +26,12 @@ COMMON_DEPEND=">=dev-libs/glib-2.21.5:2
 RDEPEND="${COMMON_DEPEND}
 	kernel_linux? ( >=sys-power/pm-utils-1.4.1 )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
+	>=dev-util/intltool-0.40.0
+	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc
-		app-text/docbook-xml-dtd:4.1.2 )
-	nls? ( >=dev-util/intltool-0.40.0 )"
+		app-text/docbook-xml-dtd:4.1.2 )"
 
 RESTRICT="test" # error getting system bus
 
@@ -72,7 +72,6 @@ src_configure() {
 		--enable-man-pages \
 		$(use_enable doc gtk-doc) \
 		--disable-tests \
-		$(use_enable nls) \
 		--with-html-dir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--with-backend=${backend}
 }
