@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1-r1.ebuild,v 1.9 2010/07/22 13:29:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.1-r1.ebuild,v 1.10 2010/08/05 16:15:09 ssuominen Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="dbus debug doc eds gadu gnutls +gstreamer +gtk idn krb4 meanwhile"
+IUSE="dbus debug doc eds gadu gnutls +gstreamer +gtk idn meanwhile"
 IUSE+=" networkmanager nls perl silc tcl tk spell qq sasl +startup-notification"
 IUSE+=" ncurses groupwise prediction python +xscreensaver zephyr zeroconf" # mono"
 
@@ -50,7 +50,6 @@ RDEPEND="
 	!gnutls? ( >=dev-libs/nss-3.11 )
 	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-1.0.1 )
-	zephyr? ( >=app-crypt/mit-krb5-1.3.6-r1[krb4?] )
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
 	sasl? ( dev-libs/cyrus-sasl:2 )
@@ -173,7 +172,6 @@ src_configure() {
 		$(use_enable sasl cyrus-sasl ) \
 		$(use_enable doc doxygen) \
 		$(use_enable networkmanager nm) \
-		$(use zephyr && use_with krb4) \
 		$(use_enable zeroconf avahi) \
 		$(use_enable idn) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
