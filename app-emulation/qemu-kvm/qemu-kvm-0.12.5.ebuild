@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5.ebuild,v 1.1 2010/07/27 23:40:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5.ebuild,v 1.2 2010/08/05 15:56:34 cardoe Exp $
 
 #BACKPORTS=2
 
@@ -122,7 +122,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.12.3-include-madvise-defines.patch
 
 	[[ -n ${BACKPORTS} ]] && \
-		EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" epatch
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
 }
 
 src_configure() {
