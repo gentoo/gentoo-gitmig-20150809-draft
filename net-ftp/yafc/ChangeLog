@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/yafc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.36 2008/05/30 04:50:23 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.37 2010/08/05 17:11:33 ssuominen Exp $
+
+  05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> yafc-1.1.1-r1.ebuild:
+  Remove built_with_use check for app-crypt/mit-krb5 because krb4 support
+  was dropped.
 
   30 May 2008; Jeremy Olexa <darkside@gentoo.org> yafc-1.1.1-r1.ebuild:
   fixed compilation with USE=kerberos. Thanks to Kevin Fullerton & Fredrik
