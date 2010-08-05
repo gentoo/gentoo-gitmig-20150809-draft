@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.16-r1.ebuild,v 1.3 2008/12/04 18:48:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.13.16-r1.ebuild,v 1.4 2010/08/05 06:16:50 aballier Exp $
 
 EAPI=1
 
@@ -44,6 +44,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i -e 's/tail -1/tail -n 1/' Makefile.OCaml
 	epatch "${FILESDIR}/${PN}-2.27.57-as-needed.patch"
+	epatch "${FILESDIR}/${PN}-mymap.patch"
 }
 
 src_compile() {
