@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.146 2010/07/19 20:24:40 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.147 2010/08/05 15:29:49 fordfrog Exp $
+
+*netbeans-6.9.1 (05 Aug 2010)
+
+  05 Aug 2010; Miroslav Šulc <fordfrog@gentoo.org> +netbeans-6.9.1.ebuild:
+  Version bump
 
   19 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.9-r3.ebuild:
   Added support for including custom patches when building netbeans
