@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.39 2010/03/23 20:19:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.40 2010/08/05 17:03:28 maekke Exp $
+
+  05 Aug 2010; Markus Meier <maekke@gentoo.org> ragel-6.6.ebuild:
+  add ~arm, bug #331061
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> ragel-6.6.ebuild:
   stable ppc, bug 302197
