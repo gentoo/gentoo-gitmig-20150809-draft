@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1.ebuild,v 1.5 2010/07/08 12:58:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.2.1_p1-r1.ebuild,v 1.1 2010/08/05 04:03:08 jsbronder Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -54,6 +54,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/0002-mpd_conf_file-search-order.patch
 	# Upstream trunk, r5845
 	epatch "${FILESDIR}"/0003-Fix-pkgconfig-for-mpich2-ch3-v1.2.1.patch
+	# Upstream trunk, r6848  #313045
+	epatch "${FILESDIR}"/mpich2-1.2.1-fix-missing-libs.patch
 
 	# We need f90 to include the directory with mods, and to
 	# fix hardcoded paths for src_test()
