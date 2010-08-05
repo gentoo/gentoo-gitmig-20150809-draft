@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.37 2010/07/24 17:00:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.38 2010/08/05 17:07:39 maekke Exp $
+
+  05 Aug 2010; Markus Meier <maekke@gentoo.org> json-1.4.3-r2.ebuild:
+  add ~arm, bug #331061
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> json-1.4.3-r1.ebuild:
   ia64/sparc stable wrt #325695
