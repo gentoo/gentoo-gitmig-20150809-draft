@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.10 2010/07/26 13:31:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.11 2010/08/05 16:40:32 jer Exp $
+
+  05 Aug 2010; Jeroen Roovers <jer@gentoo.org> subversion-1.6.12.ebuild:
+  Stable for PPC (bug #329795).
 
   26 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   subversion-1.6.12.ebuild:
