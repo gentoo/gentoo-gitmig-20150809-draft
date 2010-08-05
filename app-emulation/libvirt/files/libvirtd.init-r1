@@ -22,7 +22,9 @@ libvirtd_dom_list() {
 libvirtd_dom_count() {
     # Make sure that it wouldn't be confused if the domain name
     # contains the word running.
-    libvirtd_virsh list | awk '$3 == "running" { count++ } END { print count }'
+    libvirtd_virsh list | awk 'BEGIN { count = 0 } \
+		$3 == "running" { count++ } \
+		END { print count }'
 }
 
 start() {
