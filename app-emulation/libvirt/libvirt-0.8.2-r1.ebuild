@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.2-r1.ebuild,v 1.3 2010/07/29 21:31:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.2-r1.ebuild,v 1.4 2010/08/05 15:53:00 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -65,7 +65,8 @@ pkg_setup() {
 
 src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
-		EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" epatch
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
 }
 
 src_configure() {
