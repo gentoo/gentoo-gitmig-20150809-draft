@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.64 2010/08/05 19:33:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.65 2010/08/05 19:58:59 cardoe Exp $
+
+*libvirt-0.8.3 (05 Aug 2010)
+
+  05 Aug 2010; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.8.3.ebuild:
+  Version bump. Add some patches that I submitted upstream to fix #322107
 
   05 Aug 2010; Doug Goldstein <cardoe@gentoo.org> files/libvirtd.init-r1:
   Fix issue with init script when no virtual machines are running
