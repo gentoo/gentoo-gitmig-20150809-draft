@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.63 2010/07/20 08:58:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.64 2010/08/05 22:04:31 hwoarang Exp $
+
+*ivman-0.6.14-r1 (05 Aug 2010)
+
+  05 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +ivman-0.6.14-r1.ebuild, +files/ivman-0.6.14-no_xmlCleanupParser.patch:
+  Remove xmlCleanupParser calls. Fixes bug #327729. Thanks to Itay Perl
+  <itay.perl@gmail.com> for reporting
 
   20 Jul 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Taking over maintainership
