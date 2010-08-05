@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.28.3.1-r1.ebuild,v 1.3 2010/07/19 15:18:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.28.3.1-r1.ebuild,v 1.4 2010/08/05 16:54:14 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="crypt dbus hal kerberos krb4 ldap mono networkmanager nntp pda profile python ssl gstreamer exchange"
+IUSE="crypt dbus hal kerberos ldap mono networkmanager nntp pda profile python ssl gstreamer exchange"
 # pst
 
 # Pango dependency required to avoid font rendering problems
@@ -49,7 +49,6 @@ RDEPEND=">=dev-libs/glib-2.20
 		>=dev-libs/dbus-glib-0.74 )
 	>=net-libs/libsoup-2.4
 	kerberos? ( virtual/krb5 )
-	krb4? ( app-crypt/mit-krb5[krb4] )
 	>=gnome-base/orbit-2.9.8
 	crypt? ( || (
 				  ( >=app-crypt/gnupg-2.0.1-r2
@@ -97,8 +96,7 @@ pkg_setup() {
 		$(use_enable profile profiling)
 		$(use_enable python)
 		$(use_with ldap openldap)
-		$(use_with kerberos krb5 /usr)
-		$(use_with krb4 krb4 /usr)"
+		$(use_with kerberos krb5 /usr)"
 
 	# DBUS is required for NetworkManager support (Bug #317841)
 	use networkmanager && G2CONF="${G2CONF} --enable-dbus"
