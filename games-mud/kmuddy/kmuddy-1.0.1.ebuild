@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-1.0.1.ebuild,v 1.4 2010/06/08 16:01:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-1.0.1.ebuild,v 1.5 2010/08/05 15:15:06 ssuominen Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ IUSE="debug handbook"
 
 DOC="AUTHORS README CHANGELOG Scripting-HOWTO TODO DESIGN"
 
-PATCHES=( "${FILESDIR}"/${P}-gcc45.patch )
+PATCHES=( "${FILESDIR}"/${P}-{gcc,kde}45.patch )
 
 src_configure() {
 	# not in portage yet
