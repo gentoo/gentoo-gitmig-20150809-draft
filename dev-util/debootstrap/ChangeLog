@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.123 2010/07/24 15:18:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.124 2010/08/05 16:11:38 jer Exp $
+
+*debootstrap-1.0.23-r1 (05 Aug 2010)
+
+  05 Aug 2010; Jeroen Roovers <jer@gentoo.org> -debootstrap-1.0.22.ebuild,
+  debootstrap-1.0.23.ebuild, +debootstrap-1.0.23-r1.ebuild:
+  Stable for PPC (bug #327631). Add notice about validating Release files
+  against a keyring (bug #328647). Fix LICENSE. Install debian/changelog.
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> debootstrap-1.0.23.ebuild:
   alpha/arm/ia64/sparc stable wrt #327631
