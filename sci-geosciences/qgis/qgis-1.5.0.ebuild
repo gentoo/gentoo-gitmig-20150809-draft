@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.4.0-r1.ebuild,v 1.2 2010/06/17 21:07:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.5.0.ebuild,v 1.1 2010/08/06 19:06:20 scarabeus Exp $
 
 EAPI="2"
 
@@ -10,7 +10,6 @@ inherit python cmake-utils eutils
 
 DESCRIPTION="User friendly Geographic Information System"
 HOMEPAGE="http://www.qgis.org/"
-
 SRC_URI="http://download.osgeo.org/${PN}/src/${PN}_${PV}.tar.gz
 	examples? ( http://download.osgeo.org/qgis/data/qgis_sample_data.tar.gz )"
 
@@ -19,23 +18,26 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples gps grass gsl postgres python sqlite"
 
-RDEPEND=">=sci-libs/gdal-1.6.1
+RDEPEND=">=sci-libs/gdal-1.6.1[geos,postgres?,python?,sqlite?]
 	x11-libs/qt-core:4[qt3support]
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
 	x11-libs/qt-sql:4
 	x11-libs/qt-webkit:4
 	sci-libs/geos
-	sci-libs/proj
 	gps? (
 		dev-libs/expat
 		sci-geosciences/gpsbabel
+		x11-libs/qwt
 	)
-	grass? (
-		>=sci-geosciences/grass-6.4.0_rc6
-	)
+	grass? ( >=sci-geosciences/grass-6.4.0_rc6[postgres?,python?,sqlite?] )
 	gsl? ( sci-libs/gsl )
-	postgres? ( >=dev-db/postgresql-base-8 )
+	postgres? (
+		|| (
+			>=dev-db/postgresql-base-8.4
+			>=dev-db/postgresql-server-8.4
+		)
+	)
 	python? ( dev-python/PyQt4[sql,svg] )
 	sqlite? ( dev-db/sqlite:3 )"
 
@@ -48,21 +50,19 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc45.patch
-}
-
 src_configure() {
 	local mycmakeargs
 	mycmakeargs+=(
 		"-DQGIS_MANUAL_SUBDIR=/share/man/"
-		"-DBUILD_SHARED_LIBS:BOOL=ON"
-		"-DBINDINGS_GLOBAL_INSTALL:BOOL=ON"
+		"-DBUILD_SHARED_LIBS=ON"
+		"-DBINDINGS_GLOBAL_INSTALL=ON"
 		"-DQGIS_LIB_SUBDIR=$(get_libdir)"
 		"-DQGIS_PLUGIN_SUBDIR=$(get_libdir)/qgis"
+		"-DWITH_INTERNAL_SPATIALITE:BOOL=OFF"
 		$(cmake-utils_use_with postgres POSTGRESQL)
 		$(cmake-utils_use_with grass)
 		$(cmake-utils_use_with gps EXPAT)
+		$(cmake-utils_use_with gps QWT)
 		$(cmake-utils_use_with gsl)
 		$(cmake-utils_use_with python BINDINGS)
 		$(cmake-utils_use_with sqlite SPATIALITE)

@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.14 2010/06/17 21:07:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.15 2010/08/06 19:06:20 scarabeus Exp $
+
+*qgis-1.5.0 (06 Aug 2010)
+
+  06 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -qgis-1.4.0-r1.ebuild, +qgis-1.5.0.ebuild:
+  Version bump.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> qgis-1.4.0.ebuild,
   qgis-1.4.0-r1.ebuild:
