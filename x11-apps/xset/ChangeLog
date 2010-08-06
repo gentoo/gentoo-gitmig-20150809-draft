@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xset
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.61 2010/04/07 22:35:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.62 2010/08/06 14:26:45 scarabeus Exp $
+
+*xset-1.2.0 (06 Aug 2010)
+
+  06 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> +xset-1.2.0.ebuild:
+  Version bump.
 
   07 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xset-1.1.0.ebuild:
