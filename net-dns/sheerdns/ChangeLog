@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/sheerdns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/sheerdns/ChangeLog,v 1.7 2010/01/22 16:03:02 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/sheerdns/ChangeLog,v 1.8 2010/08/06 13:57:09 hwoarang Exp $
+
+*sheerdns-1.0.1-r1 (06 Aug 2010)
+
+  06 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -sheerdns-1.0.1.ebuild,
+  +sheerdns-1.0.1-r1.ebuild, files/sheerdns-1.0.1-makefile.patch:
+  Respect LDFLAGS + multilib support. Bug #309123. THanks to Doktor Notor
+  <notordoktor@gmail.com> for the patch
 
   22 Jan 2010; Dawid Węgliński <cla@gentoo.org> sheerdns-1.0.1.ebuild,
   +files/sheerdns-1.0.1-makefile.patch:

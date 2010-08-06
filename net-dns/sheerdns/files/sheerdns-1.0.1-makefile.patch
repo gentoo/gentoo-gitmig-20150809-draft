@@ -13,11 +13,11 @@ diff -Naur sheerdns.old/Makefile sheerdns/Makefile
  
  sheerdns: $(OBJECTS)
 -	gcc -o sheerdns $(OBJECTS)
-+	$(CC) -o sheerdns $(OBJECTS)
++	$(CC) -o sheerdns $(OBJECTS) $(LDFLAGS)
  
  sheerdnshash: hash.c
 -	gcc $(CFLAGS) -o sheerdnshash hash.c -DSTANDALONE -Wall
-+	$(CC) $(CFLAGS) -o sheerdnshash hash.c -DSTANDALONE -Wall
++	$(CC) $(CFLAGS) -o sheerdnshash hash.c -DSTANDALONE -Wall $(LDFLAGS)
  
  .c.o: $(SRCS)
 -	gcc $(CFLAGS) -c $<
