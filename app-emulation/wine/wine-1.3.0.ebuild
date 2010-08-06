@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.0.ebuild,v 1.2 2010/08/03 18:43:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.0.ebuild,v 1.3 2010/08/06 20:54:45 vapier Exp $
 
 EAPI="2"
 
@@ -169,7 +169,7 @@ src_configure() {
 		do_configure 64 --enable-win64
 		use win32 && ABI=x86 do_configure 32 --with-wine64=../wine64
 	else
-		do_configure 32 --disable-win64
+		ABI=x86 do_configure 32 --disable-win64
 	fi
 }
 

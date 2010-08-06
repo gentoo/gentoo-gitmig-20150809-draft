@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.320 2010/08/03 18:43:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.321 2010/08/06 20:54:45 vapier Exp $
+
+  06 Aug 2010; Mike Frysinger <vapier@gentoo.org> wine-1.3.0.ebuild,
+  wine-9999.ebuild:
+  Set ABI to x86 when building win32 only #331269 by ferret.
 
   03 Aug 2010; Mike Frysinger <vapier@gentoo.org> wine-1.3.0.ebuild,
   wine-9999.ebuild:
