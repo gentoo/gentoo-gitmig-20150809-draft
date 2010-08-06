@@ -1,0 +1,22 @@
+--- configure.ac
++++ configure.ac
+@@ -77,6 +77,8 @@
+     [ ENABLE_GNOME_VFS=$enableval ] )
+ 
+ if test "$ENABLE_GNOME_VFS" = "yes"; then
++    AC_CHECK_LIB([dl], [dlopen], DL_LIBS="-ldl")
++    AC_SUBST(DL_LIBS)
+     AC_DEFINE(HAVE_GNOME_VFS, [], "Gnome-vfs file uri support enabled")
+ fi
+ 
+--- Makefile.am
++++ Makefile.am
+@@ -39,7 +39,7 @@
+ libffmpegthumbnailer_includedir         = $(includedir)/libffmpegthumbnailer
+ libffmpegthumbnailer_la_CXXFLAGS        = $(AM_CXXFLAGS) $(FFMPEG_CFLAGS) $(PNG_CFLAGS)
+ libffmpegthumbnailer_la_LDFLAGS         = -version-info 4:3:0
+-libffmpegthumbnailer_la_LIBADD          = $(FFMPEG_LIBS) $(PNG_LIBS) $(JPEG_LIBS)
++libffmpegthumbnailer_la_LIBADD          = $(DL_LIBS) $(FFMPEG_LIBS) $(PNG_LIBS) $(JPEG_LIBS)
+ 
+ bin_PROGRAMS = ffmpegthumbnailer
+ 
