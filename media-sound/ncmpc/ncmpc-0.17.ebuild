@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.17.ebuild,v 1.1 2010/08/06 12:15:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.17.ebuild,v 1.2 2010/08/06 12:18:52 ssuominen Exp $
 
 EAPI=3
-inherit eutils multilib
+inherit autotools eutils multilib
 
 DESCRIPTION="A ncurses client for the Music Player Daemon (MPD)"
 HOMEPAGE="http://mpd.wikia.com/wiki/Client:Ncmpc"
@@ -22,7 +22,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-segfault-on-help-screen.patch
+	epatch "${FILESDIR}"/${PN}-0.16.1-asneeded.patch \
+		"${FILESDIR}"/${PN}-0.16.1-lyrics-backtrace.patch \
+		"${FILESDIR}"/${P}-fix-segfault-on-help-screen.patch
+	eautoreconf
 }
 
 src_configure() {
