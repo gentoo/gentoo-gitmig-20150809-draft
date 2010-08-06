@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.46 2010/03/07 22:38:56 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.47 2010/08/06 23:15:48 hwoarang Exp $
+
+*spidermonkey-1.7.0-r2 (06 Aug 2010)
+
+  06 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +spidermonkey-1.7.0-r2.ebuild, +files/spidermonkey-1.7.0-ldflags.patch:
+  Apply patch from Kacper Kowalik <xarthisius@gentoo.org> to respect
+  LDFLAGS. Bug #331129
 
 *spidermonkey-1.7.0-r1 (07 Mar 2010)
 
