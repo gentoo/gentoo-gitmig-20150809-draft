@@ -1,0 +1,26 @@
+Index: gstreamermm-0.10.7.3/gstreamer/gstreamermm/mixer.cc
+===================================================================
+--- gstreamermm-0.10.7.3.orig/gstreamer/gstreamermm/mixer.cc
++++ gstreamermm-0.10.7.3/gstreamer/gstreamermm/mixer.cc
+@@ -207,7 +207,7 @@ Glib::ArrayHandle<int> Mixer::get_volume
+   gst_mixer_get_volume(const_cast<GstMixer*>(gobj()),
+     const_cast<GstMixerTrack*>(Glib::unwrap(track)), volumes);
+ 
+-  return Glib::ArrayHandle<int>::ArrayHandle(volumes, num_channels,
++  return Glib::ArrayHandle<int>(volumes, num_channels,
+     Glib::OWNERSHIP_DEEP);
+ }
+ 
+Index: gstreamermm-0.10.7.3/gstreamer/src/mixer.ccg
+===================================================================
+--- gstreamermm-0.10.7.3.orig/gstreamer/src/mixer.ccg
++++ gstreamermm-0.10.7.3/gstreamer/src/mixer.ccg
+@@ -201,7 +201,7 @@ Glib::ArrayHandle<int> Mixer::get_volume
+   gst_mixer_get_volume(const_cast<GstMixer*>(gobj()),
+     const_cast<GstMixerTrack*>(Glib::unwrap(track)), volumes);
+ 
+-  return Glib::ArrayHandle<int>::ArrayHandle(volumes, num_channels,
++  return Glib::ArrayHandle<int>(volumes, num_channels,
+     Glib::OWNERSHIP_DEEP);
+ }
+ 

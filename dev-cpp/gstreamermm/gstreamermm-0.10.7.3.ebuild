@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.7.3.ebuild,v 1.3 2010/08/01 10:59:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.7.3.ebuild,v 1.4 2010/08/06 14:31:45 flameeyes Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="C++ interface for GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/bindings/cplusplus.html"
@@ -25,6 +25,10 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}+gcc-4.5.patch"
+}
 
 src_test() {
 	# explicitly allow parallel make of tests: they are not built in
