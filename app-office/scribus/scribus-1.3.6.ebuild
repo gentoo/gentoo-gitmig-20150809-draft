@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.8 2010/07/04 13:21:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.6.ebuild,v 1.9 2010/08/06 11:46:08 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -34,6 +34,8 @@ RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl"
 DEPEND="${COMMON_DEPEND}
 	dev-libs/boost"
+
+RESTRICT="mirror" #318643
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch"
