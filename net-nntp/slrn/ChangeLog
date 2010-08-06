@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/slrn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.19 2010/08/02 16:52:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.20 2010/08/06 11:59:14 fauli Exp $
+
+  06 Aug 2010; Christian Faulhammer <fauli@gentoo.org> slrn-0.9.9_p1.ebuild:
+  stable x86, bug 330849
 
   02 Aug 2010; Markos Chandras <hwoarang@gentoo.org> slrn-0.9.9_p1.ebuild:
   Stable on amd64 wrt bug #330849
