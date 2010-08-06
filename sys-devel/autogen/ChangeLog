@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.62 2010/06/29 09:39:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.63 2010/08/06 18:33:45 darkside Exp $
+
+  06 Aug 2010; Jeremy Olexa <darkside@gentoo.org> autogen-5.10.2.ebuild:
+  Migrate changes from Gentoo Prefix overlay. Keywords, EAPI3, use ED.
+  Approval by team member
 
 *autogen-5.10.2 (29 Jun 2010)
 
