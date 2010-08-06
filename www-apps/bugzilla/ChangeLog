@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.170 2010/07/31 15:44:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.171 2010/08/06 07:44:15 tove Exp $
+
+*bugzilla-3.6.2 (06 Aug 2010)
+*bugzilla-3.4.8 (06 Aug 2010)
+*bugzilla-3.2.8 (06 Aug 2010)
+
+  06 Aug 2010; Torsten Veller <tove@gentoo.org> +bugzilla-3.2.8.ebuild,
+  +bugzilla-3.4.8.ebuild, +bugzilla-3.6.2.ebuild:
+  Version bump.
+  Fixes: CVE-2010-2756, CVE-2010-2757, CVE-2010-2758, CVE-2010-2759.
 
   31 Jul 2010; Raúl Porcel <armin76@gentoo.org> bugzilla-2.22.7.ebuild,
   bugzilla-3.2.7.ebuild:
