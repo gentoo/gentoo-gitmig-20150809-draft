@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimmage
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.12 2008/11/30 17:51:59 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.13 2010/08/06 17:48:47 ssuominen Exp $
+
+  06 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> gimmage-0.2.3.ebuild,
+  +files/gimmage-0.2.3-desktop-entry.patch:
+  Fix desktop entry and USE debug handling.
 
   30 Nov 2008; Markus Meier <maekke@gentoo.org>
   +files/gimmage-0.2.3-as-needed.patch, gimmage-0.2.3.ebuild:

@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.6 2008/11/30 17:51:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.7 2010/08/06 17:48:47 ssuominen Exp $
 
-inherit eutils autotools
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="A slim GTK-based image browser"
 HOMEPAGE="http://gimmage.berlios.de/"
@@ -21,19 +22,21 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43.patch
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-desktop-entry.patch
 	eautoreconf
 }
 
-src_compile() {
-	econf $(use_enable debug) || die "econf failed"
-	emake || die "emake failed"
+src_configure() {
+	local myconf
+	use debug && myconf="--enable-debug"
+
+	econf ${myconf}
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
