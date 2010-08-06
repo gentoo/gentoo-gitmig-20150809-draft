@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11826 2010/08/05 21:51:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11827 2010/08/06 15:14:15 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (06 Aug 2010)
+#  on behalf of QA team
+#
+# bsfilter is dead upstream, not bumped since 2006;
+# current stable was added in 2005 (and is not the last one
+# available); claws-mail-bsfilter is the only user and also
+# has broken dependencies.
+#
+# Removal on 2010-10-05
+mail-filter/bsfilter
+mail-client/claws-mail-bsfilter
 
 # Markos Chandras <hwoarang@gentoo.org> (03 Aug 2010)
 # Uses old portmap, installs
