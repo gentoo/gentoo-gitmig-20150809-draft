@@ -1,13 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.5.ebuild,v 1.1 2010/02/12 10:23:21 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.5.ebuild,v 1.2 2010/08/06 18:02:32 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
+inherit eutils
 
-MY_P="${P/p/P}"
+MY_P=${P/p/P}
 DESCRIPTION="A http/https reverse-proxy and load-balancer."
-SRC_URI="http://www.apsis.ch/pound/${MY_P}.tgz"
 HOMEPAGE="http://www.apsis.ch/pound/"
+SRC_URI="http://www.apsis.ch/pound/${MY_P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -18,12 +19,15 @@ DEPEND="dev-libs/libpcre
 	dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-openssl-1.patch
+}
 
 src_configure() {
 	econf \
-		$(use_enable dynscaler) \
-		|| die "configure failed"
+		$(use_enable dynscaler)
 }
 
 src_install() {
