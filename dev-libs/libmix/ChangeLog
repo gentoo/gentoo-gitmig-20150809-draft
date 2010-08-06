@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libmix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.10 2010/07/14 03:46:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.11 2010/08/06 14:25:47 hwoarang Exp $
+
+*libmix-2.05-r3 (06 Aug 2010)
+
+  06 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -libmix-2.05-r1.ebuild,
+  -libmix-2.05-r2.ebuild, +libmix-2.05-r3.ebuild,
+  +files/libmix-2.05-autotools.patch:
+  Respect LDFLAGS + QA + autotools fixes from Doktor Notor
+  <notordoktor@gmail.com>. Bug #268444. Remove old ebuilds
 
 *libmix-2.05-r2 (14 Jul 2010)
 
