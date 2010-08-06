@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.5-r1.ebuild,v 1.1 2010/06/17 13:30:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.7.ebuild,v 1.1 2010/08/06 17:08:06 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
@@ -12,9 +12,8 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-#IUSE="doc +gconf gtk nls +python vala X"
-IUSE="doc +gconf gtk nls +python vala"
+KEYWORDS="~alpha ~amd64 ~x86"
+IUSE="doc +gconf gtk nls +python vala X"
 
 RDEPEND=">=dev-libs/glib-2.18
 	gconf? ( >=gnome-base/gconf-2.12 )
@@ -22,6 +21,9 @@ RDEPEND=">=dev-libs/glib-2.18
 	sys-apps/dbus
 	app-text/iso-codes
 	gtk? (
+		x11-libs/gtk+:2
+	)
+	X? (
 		x11-libs/libX11
 		x11-libs/gtk+:2
 	)
@@ -71,14 +73,14 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
+		$(use_enable doc gtk-doc-html) \
 		$(use_enable gconf) \
 		$(use_enable gtk gtk2) \
 		$(use_enable gtk xim) \
 		$(use_enable nls) \
 		$(use_enable python) \
-		$(use_enable vala) || die
-		# Bug 324339
-		#$(use_enable X xim) \
+		$(use_enable vala) \
+		$(use_enable X xim) || die
 		#$(use_enable gtk gtk3) \
 }
 
