@@ -1,6 +1,11 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.30 2010/06/24 21:43:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.31 2010/08/06 10:59:30 wired Exp $
+
+*uzbl-2010.08.05 (06 Aug 2010)
+
+  06 Aug 2010; Alex Alexander <wired@gentoo.org> +uzbl-2010.08.05.ebuild:
+  version bump, includes security fix, bug 331421
 
   24 Jun 2010; Pacho Ramos <pacho@gentoo.org> uzbl-2010.04.03.ebuild:
   stable amd64, bug 323327
