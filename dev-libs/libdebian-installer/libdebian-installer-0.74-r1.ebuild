@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/libdebian-installer-0.74.ebuild,v 1.1 2010/07/29 17:15:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/libdebian-installer-0.74-r1.ebuild,v 1.1 2010/08/06 02:41:34 darkside Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Library of common debian-installer functions"
 HOMEPAGE="http://packages.qa.debian.org/libd/libdebian-installer.html"
@@ -23,12 +23,17 @@ src_prepare() {
 		"${FILESDIR}/${P}-doubling-readsize-support-oe.patch"
 }
 
+src_configure() {
+	econf --disable-static
+}
+
 src_compile() {
 	emake || die "emake failed"
 
 	if use doc; then
 		emake -C doc doc || die "emake for docs failed"
 	fi
+	rm -f "${D}"/usr/$(get_libdir)/*la || die
 }
 
 src_install() {

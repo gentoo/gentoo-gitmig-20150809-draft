@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libdebian-installer
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.1 2010/07/29 17:15:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.2 2010/08/06 02:41:34 darkside Exp $
+
+*libdebian-installer-0.74-r1 (06 Aug 2010)
+
+  06 Aug 2010; Jeremy Olexa <darkside@gentoo.org>
+  -libdebian-installer-0.74.ebuild, +libdebian-installer-0.74-r1.ebuild:
+  Revision bump to disable static libs and remove la files because they are
+  not needed/used.
 
 *libdebian-installer-0.74 (29 Jul 2010)
 
