@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.7 2010/08/06 19:09:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.8 2010/08/06 20:46:08 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -212,7 +212,7 @@ xorg-2_reconf_source() {
 			;;
 		*)
 			# elibtoolize required for BSD
-			[[ ${XORG_EAUTORECONF} != no && ( -e "./configure.ac" || -e	"./configure.in" ) ]] && eautoreconf || elibtoolize
+			[[ ${XORG_EAUTORECONF} != no && ( -e "./configure.ac" || -e "./configure.in" ) ]] && eautoreconf || elibtoolize
 			;;
 	esac
 }
