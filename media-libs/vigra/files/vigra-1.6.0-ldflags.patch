@@ -1,0 +1,15 @@
+http://bugs.gentoo.org/show_bug.cgi?id=289922
+
+--- config/Makefile.include.in
++++ config/Makefile.include.in
+@@ -40,9 +40,9 @@
+ LIBTOOL = @LIBTOOL@
+ LIBCC = $(LIBTOOL) --mode=compile $(CC)
+ LIBCXX = $(LIBTOOL) --tag=CXX --mode=compile $(CXX)
+-LINKC = $(LIBTOOL) --mode=link $(CC)
+-LINKCXX = $(LIBTOOL) --tag=CXX --mode=link $(CXX)
++LINKC = $(LIBTOOL) --mode=link $(CC) $(LDFLAGS)
++LINKCXX = $(LIBTOOL) --tag=CXX --mode=link $(CXX) $(LDFLAGS)
+ LINKCLIB = $(LINKC) -rpath $(libdir)
+ LINKCXXLIB = $(LINKCXX) -rpath $(libdir)
+ INSTALL = @INSTALL@
