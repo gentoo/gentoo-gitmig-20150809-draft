@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.12 2010/05/18 10:42:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.13 2010/08/06 20:08:22 grobian Exp $
+
+*binutils-apple-3.2.3 (06 Aug 2010)
+
+  06 Aug 2010; Fabian Groffen <grobian@gentoo.org>
+  +binutils-apple-3.2.3.ebuild, +files/binutils-apple-3.2.3-as-dir.patch,
+  +files/binutils-apple-3.2.3-ranlib.patch:
+  Version bump to version from Develper Tools 3.2.3, thanks to Heiko Przybyl
+  for the patching and LTO support
 
 *binutils-apple-3.2.2 (18 May 2010)
 
