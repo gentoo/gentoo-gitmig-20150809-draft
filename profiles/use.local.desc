@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5839 2010/08/05 20:44:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5840 2010/08/06 00:09:02 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1093,6 +1093,9 @@ dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
 dev-util/geany-plugins:enchant - Enable spell checking using enchant
 dev-util/geany-plugins:gtkspell - Use gtkspell for dictionary support
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
+dev-util/google-perftools:debug -  Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc. 
+dev-util/google-perftools:largepages -  Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations. 
+dev-util/google-perftools:minimal -  Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers. 
 dev-util/kdevelop:cmake - Enable support for CMAKE build system
 dev-util/kdevelop:qmake - Enable support for Qmake build system
 dev-util/kdevelop:qthelp - Enable support for QtHelp documentation browsing
