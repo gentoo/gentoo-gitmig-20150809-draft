@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/stimg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/ChangeLog,v 1.9 2009/09/12 12:22:25 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/ChangeLog,v 1.10 2010/08/06 17:30:17 ssuominen Exp $
+
+  06 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> stimg-0.1.0.ebuild:
+  amd64 stable wrt #284501
 
   12 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> stimg-0.1.0.ebuild:
   Keyword ~amd64 wrt #284501
