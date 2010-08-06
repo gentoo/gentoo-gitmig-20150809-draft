@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gonzui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.12 2010/05/22 14:08:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.13 2010/08/06 17:25:50 flameeyes Exp $
+
+  06 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> gonzui-1.2.ebuild,
+  gonzui-1.2-r1.ebuild:
+  Change dependency from virtual/ruby to =dev-lang/ruby-1.8*, since we're
+  changing the meaning of virtual/ruby.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org> gonzui-1.2.ebuild,
   gonzui-1.2-r1.ebuild:

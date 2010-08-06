@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2-r1.ebuild,v 1.3 2010/05/22 14:08:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.2-r1.ebuild,v 1.4 2010/08/06 17:25:50 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ocaml perl"
 RESTRICT="test"
 
-DEPEND=">=virtual/ruby-1.8.2
+DEPEND="=dev-lang/ruby-1.8*
 	>=sys-libs/db-4.2
 	>=dev-ruby/ruby-bdb-0.5.2
 	dev-ruby/ruby-progressbar
