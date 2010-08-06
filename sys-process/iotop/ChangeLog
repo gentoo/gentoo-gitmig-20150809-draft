@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.36 2010/08/06 15:41:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.37 2010/08/06 15:49:53 jer Exp $
+
+  06 Aug 2010; Jeroen Roovers <jer@gentoo.org> iotop-0.4.1.ebuild:
+  Stable for PPC (bug #330263).
 
   06 Aug 2010; Jeroen Roovers <jer@gentoo.org> iotop-0.4.1.ebuild:
   Stable for HPPA (bug #330263).
