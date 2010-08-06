@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.17.ebuild,v 1.2 2010/08/06 12:18:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.17.ebuild,v 1.3 2010/08/06 12:20:12 ssuominen Exp $
 
-EAPI=3
+EAPI=2
 inherit autotools eutils multilib
 
 DESCRIPTION="A ncurses client for the Music Player Daemon (MPD)"
@@ -31,13 +31,13 @@ src_prepare() {
 src_configure() {
 	# upstream lirc doesn't have pkg-config file wrt #250015
 	if use lirc; then
-		export LIBLIRCCLIENT_CFLAGS="-I${EPREFIX}/usr/include/lirc"
+		export LIBLIRCCLIENT_CFLAGS="-I/usr/include/lirc"
 		export LIBLIRCCLIENT_LIBS="-llirc_client"
 	fi
 
 	# use_with lyrics-screen is for multilib
 	econf \
-		--docdir=${EPREFIX}/usr/share/doc/${PF} \
+		--docdir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
 		$(use_enable nls multibyte) \
 		$(use_enable nls locale) \
