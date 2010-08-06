@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.11.ebuild,v 1.2 2010/07/31 15:59:41 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.22.ebuild,v 1.1 2010/08/06 03:08:12 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -62,6 +62,9 @@ remove_bundled_lib() {
 src_prepare() {
 	# Disable VP8 until we have a recent enough system-provided ffmpeg.
 	epatch "${FILESDIR}"/${PN}-disable-vp8-r1.patch
+
+	# Workaround for upstream bug http://crbug.com/50678.
+	epatch "${FILESDIR}"/${PN}-ffmpeg-compatibility-r0.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/libevent"
@@ -184,12 +187,6 @@ src_install() {
 	# chrome.1 is for chromium --help
 	newman out/Release/chrome.1 chrome.1
 	newman out/Release/chrome.1 chromium.1
-
-	# Chromium looks for these in its folder
-	# See media_posix.cc and base_paths_linux.cc
-	dosym /usr/$(get_libdir)/libavcodec.so.52 "$(get_chromium_home)"
-	dosym /usr/$(get_libdir)/libavformat.so.52 "$(get_chromium_home)"
-	dosym /usr/$(get_libdir)/libavutil.so.50 "$(get_chromium_home)"
 
 	# Use system plugins by default.
 	dosym /usr/$(get_libdir)/nsbrowser/plugins "$(get_chromium_home)/plugins"
