@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3.ebuild,v 1.1 2010/08/05 19:58:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3.ebuild,v 1.2 2010/08/06 01:48:06 flameeyes Exp $
 
-BACKPORTS=1
+BACKPORTS=2
 
 EAPI="2"
 
@@ -20,12 +20,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="avahi caps iscsi +libvirtd lvm +lxc macvtap +network nfs nls numa openvz \
-	parted pcap phyp policykit python qemu sasl selinux uml virtualbox xen udev"
+	parted pcap phyp policykit python qemu sasl selinux uml virtualbox xen udev \
+	debug"
 # IUSE=one : bug #293416 & bug# 299011
-
-# Some tests are simply broken in the released tarball, ignore them
-# for now.
-RESTRICT=test
 
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
@@ -71,6 +68,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf=""
+
+	myconf="${myconf} $(use_enable debug)"
 
 	## enable/disable daemon, otherwise client only utils
 	myconf="${myconf} $(use_with libvirtd)"
