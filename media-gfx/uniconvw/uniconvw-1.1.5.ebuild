@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvw/uniconvw-1.1.5.ebuild,v 1.2 2010/08/06 15:16:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvw/uniconvw-1.1.5.ebuild,v 1.3 2010/08/06 15:27:02 jlec Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils
 
 DESCRIPTION="GUI for media-gfx/uniconvertor"
-HOMEPAGE="ttp://sk1project.org/modules.php?name=Products&product=uniconvertor"
+HOMEPAGE="http://sk1project.org/modules.php?name=Products&product=uniconvertor"
 SRC_URI="http://uniconvertor.googlecode.com/files/${P}.tar.gz"
 
 SLOT="0"
