@@ -1,6 +1,6 @@
 # Copyright 2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.6 2010/07/02 05:29:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.7 2010/08/06 12:57:38 dev-zero Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -10,6 +10,7 @@ addition - This module adds contents of other locations before and after the cur
 auth_basic - This module protects your site or parts of it with username and password based on HTTP Basic Authentication.
 autoindex - This module provides automatic directory listings.
 browser - This module creates variables, the values of which depend on the request header "User-agent".
+cache_purge - External module adding ability to purge content from nginx's FastCGI and proxy caches.
 charset - This module can reencode data of one encoding into another.
 dav - This module adds the HTTP and WebDAV methods PUT, DELETE, MKCOL, COPY and MOVE.
 degradation - Unknown
