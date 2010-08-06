@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.5.4.ebuild,v 1.7 2009/09/27 16:10:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.5.4.ebuild,v 1.8 2010/08/06 14:35:39 ssuominen Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="hppa ppc"
 IUSE="jpeg png"
 
 RDEPEND=">=media-video/ffmpeg-0.5
@@ -28,7 +28,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
 	find "${D}"/usr -name '*.la' -delete
 }
