@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkdiff/tkdiff-4.1.4.ebuild,v 1.3 2009/05/13 18:33:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkdiff/tkdiff-4.1.4.ebuild,v 1.4 2010/08/06 22:09:45 darkside Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tkdiff/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-lang/tk-8.4.18-r1"

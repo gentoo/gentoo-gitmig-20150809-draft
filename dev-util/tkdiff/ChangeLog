@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tkdiff
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkdiff/ChangeLog,v 1.3 2009/05/13 18:33:44 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkdiff/ChangeLog,v 1.4 2010/08/06 22:09:45 darkside Exp $
+
+  06 Aug 2010; Jeremy Olexa <darkside@gentoo.org> tkdiff-4.1.4.ebuild:
+  Add ~amd64-linux ~x86-linux, tested by myself
 
   13 May 2009; Markus Meier <maekke@gentoo.org> tkdiff-4.1.4.ebuild:
   amd64/x86 stable, bug #259833
