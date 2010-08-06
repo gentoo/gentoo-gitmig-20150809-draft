@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.39 2010/07/31 09:04:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.40 2010/08/06 15:51:23 jer Exp $
+
+  06 Aug 2010; Jeroen Roovers <jer@gentoo.org> beautifulsoup-3.0.8.1.ebuild:
+  Stable for HPPA (bug #328885).
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   beautifulsoup-3.0.8.1.ebuild:
