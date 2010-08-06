@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7-r1.ebuild,v 1.2 2010/07/31 12:30:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7-r1.ebuild,v 1.3 2010/08/06 11:50:01 fauli Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~scarabeus/${P}-patches-01.tar.bz2
 "
 DESCRIPTION="X.Org X servers"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 
 IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_SERVERS} tslib hal ipv6 minimal nptl sdl"
