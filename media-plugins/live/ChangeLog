@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/live
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.127 2010/04/24 17:23:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.128 2010/08/06 19:53:38 darkside Exp $
+
+  06 Aug 2010; Jeremy Olexa <darkside@gentoo.org> live-2010.04.09.ebuild:
+  Migrate changes from Gentoo Prefix overlay. Keywords, EAPI3, build system
+  tweaks for solaris/darwin, get_libname. Approved by team member
 
 *live-2010.04.09 (24 Apr 2010)
 

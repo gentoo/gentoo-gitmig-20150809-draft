@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2010.04.09.ebuild,v 1.1 2010/04/24 17:23:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2010.04.09.ebuild,v 1.2 2010/08/06 19:53:38 darkside Exp $
 
+EAPI=3
 inherit flag-o-matic eutils toolchain-funcs multilib
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
@@ -10,7 +11,7 @@ SRC_URI="http://www.live555.com/liveMedia/public/${P/-/.}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 S="${WORKDIR}"
@@ -20,8 +21,7 @@ S="${WORKDIR}"
 # If you don't know, ask someone.
 LIVE_ABI_VERSION=3
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${PN}-recursive.patch"
 
@@ -30,7 +30,36 @@ src_unpack() {
 
 	cp "${FILESDIR}/config.gentoo" live-static
 	cp "${FILESDIR}/config.gentoo-so-r1" live-shared
+
+	case ${CHOST} in
+		*-solaris*)
+			sed -i \
+				-e '/^COMPILE_OPTS /s/$/ -DSOLARIS/' \
+				-e '/^LIBS_FOR_CONSOLE_APPLICATION /s/$/ -lsocket -lnsl/' \
+				live-static/config.gentoo \
+				live-shared/config.gentoo-so-r1 \
+				|| die
+		;;
+		*-darwin*)
+			sed -i \
+				-e '/^COMPILE_OPTS /s/$/ -DBSD=1 -DHAVE_SOCKADDR_LEN=1/' \
+				-e '/^LINK /s/$/ /' \
+				-e '/^LIBRARY_LINK /s/$/ /' \
+				-e '/^LIBRARY_LINK_OPTS /s/-Bstatic//' \
+				live-static/config.gentoo \
+				|| die static
+			sed -i \
+				-e '/^COMPILE_OPTS /s/$/ -DBSD=1 -DHAVE_SOCKADDR_LEN=1/' \
+				-e '/^LINK /s/$/ /' \
+				-e '/^LIBRARY_LINK /s/=.*$/= $(CXX) -o /' \
+				-e '/^LIBRARY_LINK_OPTS /s:-shared.*$:-undefined suppress -flat_namespace -dynamiclib -install_name '"${EPREFIX}/usr/$(get_libdir)/"'$@:' \
+				live-shared/config.gentoo-so-r1 \
+				|| die shared
+		;;
+	esac
 }
+
+src_configure() { :; }
 
 src_compile() {
 	tc-export CC CXX LD
@@ -50,14 +79,15 @@ src_compile() {
 	cd "${WORKDIR}/live-shared"
 	einfo "Beginning shared library build"
 	./genMakefiles gentoo-so-r1
-	emake -j1 LINK_OPTS="-L. ${LDFLAGS}" LIB_SUFFIX="so.${LIVE_ABI_VERSION}" || die "failed to build shared libraries"
+	local suffix=$(get_libname ${LIVE_ABI_VERSION})
+	emake -j1 LINK_OPTS="-L. ${LDFLAGS}" LIB_SUFFIX="${suffix#.}" || die "failed to build shared libraries"
 }
 
 src_install() {
 	for library in UsageEnvironment liveMedia BasicUsageEnvironment groupsock; do
 		dolib.a live-static/${library}/lib${library}.a
-		dolib.so live-shared/${library}/lib${library}.so.${LIVE_ABI_VERSION}
-		dosym lib${library}.so.${LIVE_ABI_VERSION} /usr/$(get_libdir)/lib${library}.so
+		dolib.so live-shared/${library}/lib${library}$(get_libname ${LIVE_ABI_VERSION})
+		dosym lib${library}$(get_libname ${LIVE_ABI_VERSION}) /usr/$(get_libdir)/lib${library}$(get_libname)
 
 		insinto /usr/include/${library}
 		doins live-shared/${library}/include/*h
