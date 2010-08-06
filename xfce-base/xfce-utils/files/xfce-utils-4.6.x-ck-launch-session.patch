@@ -1,0 +1,17 @@
+http://git.xfce.org/xfce/xfce-utils/patch/?id=96af982828d767763640c84f38b80bf0d3eb52b1
+
+--- scripts/xinitrc.in.in
++++ scripts/xinitrc.in.in
+@@ -131,7 +131,11 @@
+ 	x|xno*)
+ 		;;
+ 	*)
+-		$xfcesm
++		if type ck-launch-session >/dev/null 2>&1; then
++			ck-launch-session $xfcesm
++		else
++			$xfcesm
++		fi
+ 
+ 		if test $kill_sshagent -eq 1; then
+ 			eval `$sshagent -k`
