@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.12.ebuild,v 1.1 2010/06/07 10:09:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.12.ebuild,v 1.2 2010/08/06 05:56:00 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="tools for managing linux kernel modules"
-HOMEPAGE="http://kerneltools.org/"
+HOMEPAGE="http://modules.wiki.kernel.org/"
 SRC_URI="mirror://kernel/linux/utils/kernel/module-init-tools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
