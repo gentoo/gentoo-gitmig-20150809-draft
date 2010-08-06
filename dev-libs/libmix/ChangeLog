@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.11 2010/08/06 14:25:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.12 2010/08/06 22:24:27 hwoarang Exp $
+
+*libmix-2.05-r4 (06 Aug 2010)
+
+  06 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -libmix-2.05-r3.ebuild,
+  +libmix-2.05-r4.ebuild, files/libmix-2.05-autotools.patch:
+  Fix path for library installation. Bug #331457. Remove old ebuild. Thanks
+  to Adam Stylinski <stylinae@mail.uc.edu> for reporting that
 
 *libmix-2.05-r3 (06 Aug 2010)
 

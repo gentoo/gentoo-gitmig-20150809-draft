@@ -5,7 +5,7 @@
 -INSTALL_LIBRARY_IN = /usr/lib
 -INSTALL_MANPAGE_IN = /usr/local/man
 +includedir = /usr/@includedir@
-+libdir = /usr/@libdir@
++libdir = @libdir@
 +mandir = @mandir@
  
  # Compiler to produce C/C++ libraries with (autodetected)

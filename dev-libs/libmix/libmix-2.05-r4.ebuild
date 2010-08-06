@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05-r3.ebuild,v 1.1 2010/08/06 14:25:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05-r4.ebuild,v 1.1 2010/08/06 22:24:27 hwoarang Exp $
 
 EAPI="2"
 inherit autotools eutils
