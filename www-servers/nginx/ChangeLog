@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.265 2010/07/30 07:18:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.266 2010/08/06 12:57:56 dev-zero Exp $
+
+*nginx-0.8.48 (06 Aug 2010)
+
+  06 Aug 2010; Tiziano Müller <dev-zero@gentoo.org> +nginx-0.8.48.ebuild:
+  Version bump, added cache_purge-module (bug #322061).
 
 *nginx-0.8.47 (29 Jul 2010)
 
