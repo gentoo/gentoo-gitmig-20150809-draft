@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.5.ebuild,v 1.1 2010/06/27 22:38:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.5.ebuild,v 1.2 2010/08/06 01:22:57 robbat2 Exp $
 
 EAPI="3"
 
@@ -14,10 +14,12 @@ SRC_URI="mirror://sourceforge/trousers/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc" # gtk
+
+# gtk support presently does NOT compile.
+#	gtk? ( >=x11-libs/gtk+-2 )
 
 RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/gtk+-2
 	>=dev-libs/openssl-0.9.7"
 
 DEPEND="${RDEPEND}
@@ -67,10 +69,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-nouseradd.patch"
+	epatch "${FILESDIR}/${PN}-0.3.5-nouseradd.patch"
 
 	sed -e "s/ -Werror//" -i configure.in
 	eautoreconf
+}
+
+src_configure() {
+	#econf --with-gui=$(usev gtk || echo openssl) || die "econf failed"
+	econf --with-gui=openssl || die "econf failed"
 }
 
 src_install() {
@@ -80,6 +87,9 @@ src_install() {
 	use doc && dodoc doc/*
 	newinitd "${FILESDIR}/tcsd.initd" tcsd
 	newconfd "${FILESDIR}/tcsd.confd" tcsd
+	insinto /etc/udev/rules.d
+	doins "${FILESDIR}"/61-trousers.rules
+	fowners tss:tss /var/lib/tpm
 }
 
 pkg_postinst() {

@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.25 2010/06/27 22:38:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.26 2010/08/06 01:22:57 robbat2 Exp $
+
+*trousers-0.3.6 (06 Aug 2010)
+
+  06 Aug 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +files/61-trousers.rules, -files/trousers-0.2.3-nouseradd.patch,
+  -trousers-0.3.2.1-r1.ebuild, trousers-0.3.5.ebuild,
+  +trousers-0.3.6.ebuild:
+  Bug #329451: version bump. Bug #330287: setup for USE=gtk, but disable for
+  now as USE=gtk does not even build for me, due to missing support.h. Bug
+  #232190: include udev rules.
 
 *trousers-0.3.5 (27 Jun 2010)
 

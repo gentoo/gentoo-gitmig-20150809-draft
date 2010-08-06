@@ -1,31 +1,31 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.2.1-r1.ebuild,v 1.1 2009/09/06 22:50:29 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6.ebuild,v 1.1 2010/08/06 01:22:57 robbat2 Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit autotools base eutils linux-info
+inherit autotools eutils linux-info
 
-MY_P="${PN}-${PV%.*}-${PV##*.}"
+#MY_P="${PN}-${PV%.*}-${PV##*.}"
 
 DESCRIPTION="An open-source TCG Software Stack (TSS) v1.1 implementation"
 HOMEPAGE="http://trousers.sf.net"
-SRC_URI="mirror://sourceforge/trousers/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/trousers/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc" # gtk
+
+# gtk support presently does NOT compile.
+#	gtk? ( >=x11-libs/gtk+-2 )
 
 RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/gtk+-2
 	>=dev-libs/openssl-0.9.7"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
-
-PATCHES=(	"${FILESDIR}/${PN}-0.2.3-nouseradd.patch" )
+# S="${WORKDIR}/${P}git"
 
 pkg_setup() {
 	# Check for driver (not sure it can be an rdep, because ot depends on the
@@ -39,16 +39,16 @@ pkg_setup() {
 		ewarn "No kernel configuration could be found."
 	fi
 	has_version app-crypt/tpm-emulator && tpm_module="yes"
-	if [[ -n "${tpm_kernel_present}" ]] ; then
+	if [[ -n "${tpm_kernel_present}" ]]; then
 		einfo "Good, you seem to have in-kernel TPM support."
-	elif [[ -n "${tpm_module}" ]] ; then
+	elif [[ -n "${tpm_module}" ]]; then
 		einfo "Good, you seem to have TPM support with the external module."
-		if [[ -n "${tpm_kernel_version}" ]] ; then
+		if [[ -n "${tpm_kernel_version}" ]]; then
 			elog
 			elog "Note that since you have a >=2.6.12 kernel, you could use"
 			elog "the in-kernel driver instead of (CONFIG_TCG_TPM)."
 		fi
-	elif [[ -n "${tpm_kernel_version}" ]] ; then
+	elif [[ -n "${tpm_kernel_version}" ]]; then
 		eerror
 		eerror "To use this package, you will have to activate TPM support"
 		eerror "in your kernel configuration. That's at least CONFIG_TCG_TPM,"
@@ -69,10 +69,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	base_src_prepare
+	epatch "${FILESDIR}/${PN}-0.3.5-nouseradd.patch"
 
-	sed -e "s/-Werror //" -i configure.in
+	sed -e "s/ -Werror//" -i configure.in
 	eautoreconf
+}
+
+src_configure() {
+	#econf --with-gui=$(usev gtk || echo openssl) || die "econf failed"
+	econf --with-gui=openssl || die "econf failed"
 }
 
 src_install() {
@@ -82,6 +87,9 @@ src_install() {
 	use doc && dodoc doc/*
 	newinitd "${FILESDIR}/tcsd.initd" tcsd
 	newconfd "${FILESDIR}/tcsd.confd" tcsd
+	insinto /etc/udev/rules.d
+	doins "${FILESDIR}"/61-trousers.rules
+	fowners tss:tss /var/lib/tpm
 }
 
 pkg_postinst() {
