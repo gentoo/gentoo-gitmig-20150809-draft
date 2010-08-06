@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.4-r1.ebuild,v 1.3 2010/08/01 10:37:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.2.8.ebuild,v 1.1 2010/08/06 23:51:23 polynomial-c Exp $
 
 EAPI=2
 
@@ -84,6 +84,7 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox-ose/VBoxPython2_4.so
 	usr/lib/virtualbox-ose/VBoxPython2_5.so
 	usr/lib/virtualbox-ose/VBoxPython2_6.so
+	usr/lib/virtualbox-ose/VBoxPython2_7.so
 	usr/lib/virtualbox-ose/VBoxXPCOMC.so
 	usr/lib/virtualbox-ose/VBoxOGLhostcrutil.so
 	usr/lib/virtualbox-ose/VBoxNetDHCP.so"
@@ -112,10 +113,10 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-3-localconfig > LocalConfig.kmk || die
 
 	# unset useless/problematic mesa checks in configure
-	epatch "${FILESDIR}/${PN}-3.2.0-mesa-check.patch"
+	epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch"
 
-	# fix with newer iasl (bug #319127)
-	epatch "${FILESDIR}/${PN}-3.1.8-iasl-length-calculation-fix.patch"
+	# fix build with --as-needed (bug #249295)
+	epatch "${FILESDIR}/${PN}-asneeded.patch"
 }
 
 src_configure() {

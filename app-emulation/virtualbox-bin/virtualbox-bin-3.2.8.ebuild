@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.4-r1.ebuild,v 1.7 2010/07/17 10:52:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.8.ebuild,v 1.1 2010/08/06 23:49:28 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-62467
+MY_PV=${PV}-64453
 MY_P=VirtualBox-${MY_PV}-Linux
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
@@ -51,10 +51,11 @@ RDEPEND="!!app-emulation/virtualbox-ose
 	x11-libs/libICE
 	x11-libs/libXdmcp
 	python? ( || (
+			dev-lang/python:2.7
 			dev-lang/python:2.6
 			dev-lang/python:2.5
 			dev-lang/python:2.4
-		 ) )"
+		) )"
 
 S=${WORKDIR}
 
@@ -208,7 +209,7 @@ src_install() {
 	if use python; then
 		local pyver
 		for pyver in 2.4 2.5 2.6 2.7 3.0 3.1 ; do
-			if has_version "=dev-lang/python-${pyver}*" && [[ -f ${S}/VBoxPython${pyver/./_}.so ]] ; then
+			if has_version "=dev-lang/python-${pyver}*" && [ -f "${S}/VBoxPython${pyver/./_}.so" ] ; then
 				doins VBoxPython${pyver/./_}.so || die
 			fi
 		done
