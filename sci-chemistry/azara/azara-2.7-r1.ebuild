@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.7.ebuild,v 1.4 2010/08/04 14:52:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.7-r1.ebuild,v 1.1 2010/08/06 10:50:04 jlec Exp $
 
 EAPI="3"
 
@@ -65,15 +65,13 @@ src_install() {
 		rm bin/viewer || die
 	fi
 	for bin in bin/*; do
-		dobin "${bin}" || die "failed to install ${bin}"
+		newbin "${bin}" "${PN}-${bin}" || die "failed to install ${bin}"
 	done
-
-	mv "${ED}"/usr/bin/{,azara-}extract || die "failed to fix extract collision"
 
 	dodoc CHANGES* README* || die
 	dohtml -r html/* || die
 }
 
 pkg_postinst() {
-	einfo "Due to collision we moved the extract binary to azara-extract"
+	einfo "Due to collision we moved all binary to azara-*"
 }
