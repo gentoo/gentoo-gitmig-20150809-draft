@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.48 2010/08/05 18:04:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.49 2010/08/06 12:02:49 fauli Exp $
+
+  06 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  libisoburn-0.6.0.ebuild:
+  stable x86, bug 331093
 
   05 Aug 2010; Markus Meier <maekke@gentoo.org> libisoburn-0.6.0.ebuild:
   add ~arm, bug #331091
