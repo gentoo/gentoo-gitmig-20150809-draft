@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.14.ebuild,v 1.2 2009/11/07 20:22:24 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.14.ebuild,v 1.3 2010/08/06 17:36:35 a3li Exp $
 
 inherit ruby eutils
 
@@ -20,7 +20,7 @@ for lang in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
-RDEPEND=">=virtual/ruby-1.8
+RDEPEND="=dev-lang/ruby-1.8*
 	dev-ruby/ruby-bdb
 	timezone? ( dev-ruby/tzinfo )
 	spell? (

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.10-r1.ebuild,v 1.3 2007/02/20 12:19:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.10-r1.ebuild,v 1.4 2010/08/06 17:36:35 a3li Exp $
 
 inherit ruby gems
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="spell"
 
-RDEPEND=">=virtual/ruby-1.8
+RDEPEND="=dev-lang/ruby-1.8*
 	dev-ruby/ruby-bdb"
 DEPEND="${RDEPEND}"
 
