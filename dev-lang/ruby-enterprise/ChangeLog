@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ruby-enterprise
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ChangeLog,v 1.4 2010/05/20 19:15:39 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ChangeLog,v 1.5 2010/08/06 17:00:59 a3li Exp $
+
+*ruby-enterprise-1.8.7.2010.02 (06 Aug 2010)
+
+  06 Aug 2010; Alex Legler <a3li@gentoo.org>
+  +ruby-enterprise-1.8.7.2010.02.ebuild:
+  Version bump. Package now builds correctly against OpenSSL-1 (bug 326633).
+  Fixing rubytests installation path. Adapting PATCHSET versioning setup
+  from other ruby ebuilds.
 
   20 May 2010; Alex Legler <a3li@gentoo.org>
   ruby-enterprise-1.8.7.2010.01-r2.ebuild:
