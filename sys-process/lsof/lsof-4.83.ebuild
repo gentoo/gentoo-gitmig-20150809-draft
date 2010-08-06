@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.83.ebuild,v 1.3 2010/08/05 16:41:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.83.ebuild,v 1.4 2010/08/06 12:08:03 fauli Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.bz2
 
 LICENSE="lsof"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="static selinux"
 
 DEPEND="selinux? ( sys-libs/libselinux )"
