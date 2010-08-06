@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/rbot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.44 2010/08/06 17:36:35 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.45 2010/08/06 19:06:01 a3li Exp $
+
+  06 Aug 2010; Alex Legler <a3li@gentoo.org> rbot-0.9.15.ebuild:
+  Enable Rakefile tracing
 
   06 Aug 2010; Alex Legler <a3li@gentoo.org> rbot-0.9.10-r1.ebuild,
   rbot-0.9.14.ebuild, rbot-9999-r10.ebuild:

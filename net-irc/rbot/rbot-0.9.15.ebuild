@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.1 2010/07/28 07:58:09 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.2 2010/08/06 19:06:01 a3li Exp $
 
 EAPI="2"
 # ruby19 needs ruby-gettext on 19 first
@@ -144,7 +144,7 @@ all_ruby_compile() {
 			done
 		fi
 
-		ruby18 /usr/bin/rake makemo || die "locale generation failed"
+		ruby18 /usr/bin/rake --trace makemo || die "locale generation failed"
 	fi
 }
 
