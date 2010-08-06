@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ruby-enterprise-1.8.7.2010.01-r2.ebuild,v 1.2 2010/05/20 19:15:39 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-enterprise/ruby-enterprise-1.8.7.2010.01-r2.ebuild,v 1.3 2010/08/06 17:04:32 a3li Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ IUSE="tcmalloc +berkdb debug doc examples +gdbm ipv6 rubytests ssl threads tk xe
 RDEPEND="
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
-	ssl? ( >=dev-libs/openssl-0.9.8m )
+	ssl? ( >=dev-libs/openssl-0.9.8m <dev-libs/openssl-1 )
 	tk? ( dev-lang/tk[threads=] )
 	ncurses? ( sys-libs/ncurses )
 	libedit? ( dev-libs/libedit )
@@ -154,7 +154,7 @@ src_install() {
 
 	if use rubytests; then
 		pushd test
-		insinto /usr/share/${PN}-${SLOT}
+		insinto /usr/share/${PN}-${SLOT}/test
 		doins -r .
 		popd
 	fi
