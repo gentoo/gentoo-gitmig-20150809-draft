@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.236 2010/08/03 01:08:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.237 2010/08/06 04:35:05 phajdan.jr Exp $
+
+  06 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> sudo-1.7.3.ebuild:
+  x86 stable wrt bug #330827
 
   03 Aug 2010; Jeroen Roovers <jer@gentoo.org> sudo-1.7.3.ebuild:
   Stable for PPC (bug #330827).
