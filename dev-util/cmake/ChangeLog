@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.138 2010/07/27 02:14:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.139 2010/08/06 12:34:09 ssuominen Exp $
+
+  06 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> cmake-2.8.1-r2.ebuild:
+  Run bootstrap with FEATURES="test" wrt #315223 by Thomas Kahle.
 
   27 Jul 2010; Jeroen Roovers <jer@gentoo.org> cmake-2.8.1-r2.ebuild:
   Stable for HPPA PPC (bug #325845).

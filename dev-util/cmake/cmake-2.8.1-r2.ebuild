@@ -82,6 +82,8 @@ src_configure() {
 		cmake --version &> /dev/null || bootstrap=1
 	fi
 
+	use test && bootstrap=1 #315223
+
 	if [[ ${bootstrap} = 1 ]]; then
 		local qt_arg par_arg
 		tc-export CC CXX LD
