@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.53 2010/07/13 19:02:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.54 2010/08/06 12:15:16 ssuominen Exp $
+
+*ncmpc-0.17 (06 Aug 2010)
+
+  06 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> +ncmpc-0.17.ebuild,
+  +files/ncmpc-0.17-fix-segfault-on-help-screen.patch:
+  Version bump wrt #328519 by Ihar Hrachyshka. Restore USE="lirc" wrt
+  #250015 by Michał Górny.
 
   13 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
   ncmpc-0.16.1-r1.ebuild, +files/ncmpc-0.16.1-asneeded.patch:
