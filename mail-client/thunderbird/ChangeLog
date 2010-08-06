@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.26 2010/08/03 13:20:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.27 2010/08/06 12:45:59 anarchy Exp $
+
+*thunderbird-3.1.2 (06 Aug 2010)
+
+  06 Aug 2010; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-3.1.2.ebuild:
+  version bump for minor issues with sound, indexing, and possible plugin
+  crashes
 
   03 Aug 2010; Jory A. Pratt <anarchy@gentoo.org>
   -files/comm-1.9.2-disable-printing.patch, thunderbird-3.1.1-r2.ebuild:
