@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.488 2010/08/03 02:15:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.489 2010/08/06 11:53:17 fauli Exp $
+
+  06 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  python-2.6.5-r3.ebuild:
+  stable x86, security bug 325593
 
   02 Aug 2010; Brian Harring <ferringb@gentoo.org>
   -python-2.6.5_p20100801.ebuild, -python-2.7_p20100801.ebuild,
