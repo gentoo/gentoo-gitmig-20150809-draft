@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.153 2010/06/20 13:01:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.154 2010/08/06 12:18:36 fauli Exp $
+
+  06 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-3.7.6.ebuild:
+  stable x86, bug 331395
 
   20 Jun 2010; Christian Faulhammer <fauli@gentoo.org> claws-mail-3.7.6.ebuild:
   don't inherit autotools, not needed anymore
