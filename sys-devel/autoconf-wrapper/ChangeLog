@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.76 2010/08/06 23:05:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.77 2010/08/07 20:43:35 vapier Exp $
+
+  07 Aug 2010; Mike Frysinger <vapier@gentoo.org> autoconf-wrapper-9-r1.ebuild,
+  files/ac-wrapper-9.sh:
+  Remove duplication between ebuild/wrapper.
 
 *autoconf-wrapper-9-r1 (06 Aug 2010)
 
