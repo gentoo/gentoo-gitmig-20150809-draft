@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.75 2010/06/03 10:42:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.76 2010/08/07 13:05:59 scarabeus Exp $
+
+*weechat-0.3.3 (07 Aug 2010)
+
+  07 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -weechat-0.2.6.2.ebuild, -weechat-0.2.6.3.ebuild, -weechat-0.3.2.ebuild,
+  +weechat-0.3.3.ebuild:
+  Version bump. Drop older. Per bug #331513
 
   03 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   weechat-0.3.1.1-r1.ebuild:

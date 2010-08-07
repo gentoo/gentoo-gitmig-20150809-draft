@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.2.ebuild,v 1.3 2010/04/19 17:51:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.3.ebuild,v 1.1 2010/08/07 13:05:59 scarabeus Exp $
 
 EAPI=2
 
@@ -18,13 +18,12 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 NETWORKS="+irc"
 PLUGINS="+charset +fifo +logger relay +scripts +spell"
-INTERFACES="+ncurses gtk"
+INTERFACES="+ncurses"
 SCRIPT_LANGS="lua +perl +python ruby tcl"
 IUSE="${SCRIPT_LANGS} ${PLUGINS} ${INTERFACES} ${NETWORKS} doc nls +ssl"
 
 RDEPEND="
 	charset? ( virtual/libiconv )
-	gtk? ( x11-libs/gtk+:2 )
 	lua? ( dev-lang/lua[deprecated] )
 	ncurses? ( sys-libs/ncurses )
 	perl? ( dev-lang/perl )
@@ -55,11 +54,7 @@ src_configure() {
 	local x
 
 	for x in ${IUSE}; do
-		if [[ "${x/+/}" = gtk ]]; then
-			mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable ${x/+/})"
-		else
-			mycmakeargs="${mycmakeargs} $(cmake-utils_use_disable ${x/+/})"
-		fi
+		mycmakeargs="${mycmakeargs} $(cmake-utils_use_disable ${x/+/})"
 	done
 
 	cmake-utils_src_configure
