@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11828 2010/08/06 23:17:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11829 2010/08/07 06:20:30 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1305,10 +1305,6 @@ dev-lisp/gcl
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Apr 2009)
 # Mask libopensync 0.38 since no plugin was fixed for this
 ~app-pda/libopensync-0.38
-
-# Alin Năstac <mrness@gentoo.org> (26 Apr 2009)
-# Beta version
-=net-proxy/squid-3.1*
 
 # Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
 # Masked until out of beta
