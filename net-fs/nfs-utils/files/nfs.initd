@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.21 2010/08/02 11:08:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.22 2010/08/07 21:13:02 vapier Exp $
 
 opts="reload"
 
@@ -18,9 +18,17 @@ smnotify=/usr/sbin/sm-notify
 depend() {
 	local myneed=""
 	if [ -e /etc/exports ] ; then
-		if awk '!/^[[:space:]]*#/ && $2 ~ /sec=krb5/ { found=1; nextfile } END { exit !found }' /etc/exports ; then
-			myneed="${myneed} rpc.svcgssd"
-		fi
+		# XXX: no way to detect NFSv4 is desired and so need rpc.idmapd
+		myneed="${myneed} $(
+			awk '!/^[[:space:]]*#/ {
+				# clear the path to avoid spurious matches
+				$1 = "";
+				if ($0 ~ /[(][^)]*sec=(krb|spkm)[^)]*[)]/) {
+					print "rpc.gssd"
+					exit 0
+				}
+				}' /etc/exports
+			)"
 	fi
 	config /etc/exports
 	need portmap rpc.statd ${myneed} ${NFS_NEEDED_SERVICES}
