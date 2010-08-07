@@ -1,6 +1,7 @@
-diff -ur xfce4-verve-plugin-0.3.6.orig/configure.in xfce4-verve-plugin-0.3.6/configure.in
---- xfce4-verve-plugin-0.3.6.orig/configure.in	2008-11-23 17:40:47.000000000 +0200
-+++ xfce4-verve-plugin-0.3.6/configure.in	2009-10-24 20:52:32.000000000 +0300
+http://bugzilla.xfce.org/show_bug.cgi?id=6616
+
+--- configure.in
++++ configure.in
 @@ -52,7 +52,8 @@
  dnl ***********************************
  dnl *** Check for required packages ***
