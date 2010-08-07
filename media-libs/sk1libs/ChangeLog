@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.1 2010/08/06 13:31:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.2 2010/08/07 17:38:50 jlec Exp $
+
+  07 Aug 2010; Justin Lecher <jlec@gentoo.org> sk1libs-0.9.1.ebuild:
+  Added missing deps, thanks to Nikoli
 
 *sk1libs-0.9.1 (06 Aug 2010)
 
