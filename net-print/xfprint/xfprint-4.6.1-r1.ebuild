@@ -1,13 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.6 2010/07/23 08:03:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.7 2010/08/07 15:46:29 ssuominen Exp $
 
-EAUTORECONF=yes
 EAPI=2
+EAUTORECONF=yes
 inherit xfconf
 
-DESCRIPTION="Frontend for printing, management and job queue."
-HOMEPAGE="http://www.xfce.org/projects/xfprint"
+DESCRIPTION="A graphical frontend for printing, a printer management, and a job queue management"
+HOMEPAGE="http://www.xfce.org/projects/xfprint/"
+SRC_URI="mirror://xfce/src/archive/${PN}/4.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,15 +27,15 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-xfconf_channel_fix.diff )
 	XFCONF="--disable-dependency-tracking
 		--enable-bsdlpr
 		$(use_enable cups)
 		$(xfconf_use_debug)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	PATCHES=( "${FILESDIR}/${P}-xfconf_channel_fix.diff" )
 }
 
 src_prepare() {
-	sed -i -e "/24x24/d" "${S}"/icons/Makefile.am || die "sed failed"
+	sed -i -e '/24x24/d' icons/Makefile.am || die
 	xfconf_src_prepare
 }
