@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgnomecanvas-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/ChangeLog,v 1.29 2010/08/01 10:52:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomecanvas-python/ChangeLog,v 1.30 2010/08/07 19:01:11 armin76 Exp $
+
+  07 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  libgnomecanvas-python-2.28.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #320247
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   libgnomecanvas-python-2.28.1.ebuild:
