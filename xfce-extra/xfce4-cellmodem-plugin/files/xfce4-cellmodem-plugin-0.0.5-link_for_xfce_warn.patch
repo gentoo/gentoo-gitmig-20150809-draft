@@ -1,3 +1,5 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6613
+
 xfce4_cellmodem_plugin-pin_helper.o: In function `pin_helper_pin_entry_callback':
 pin_helper.c:(.text+0xa6): undefined reference to `xfce_warn'
 

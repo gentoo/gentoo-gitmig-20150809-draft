@@ -1,6 +1,7 @@
-diff -ur xfce4-cellmodem-plugin-0.0.5.orig/panel-plugin/Makefile.am xfce4-cellmodem-plugin-0.0.5/panel-plugin/Makefile.am
---- xfce4-cellmodem-plugin-0.0.5.orig/panel-plugin/Makefile.am	2007-01-16 21:58:53.000000000 +0200
-+++ xfce4-cellmodem-plugin-0.0.5/panel-plugin/Makefile.am	2007-02-27 22:55:19.000000000 +0200
+http://bugzilla.xfce.org/show_bug.cgi?id=6613
+
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
 @@ -5,7 +5,7 @@
          -DPACKAGE_LOCALE_DIR=\"$(localedir)\" \
  	@LIBXFCE4PANEL_CFLAGS@
