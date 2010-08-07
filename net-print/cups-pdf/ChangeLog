@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups-pdf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.43 2009/12/26 17:42:38 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.44 2010/08/07 13:41:42 hwoarang Exp $
+
+*cups-pdf-2.5.0-r1 (07 Aug 2010)
+
+  07 Aug 2010; Markos Chandras <hwoarang@gentoo.org> -cups-pdf-2.5.0.ebuild,
+  +cups-pdf-2.5.0-r1.ebuild:
+  Respect LDFLAGS wrt bug #310403. Patch from Doktor Notor
+  <notordoktor@gmail.com>
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> cups-pdf-2.4.2.ebuild,
   cups-pdf-2.4.5.ebuild, cups-pdf-2.4.8.ebuild, cups-pdf-2.5.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.5.0.ebuild,v 1.3 2009/12/26 17:42:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.5.0-r1.ebuild,v 1.1 2010/08/07 13:41:42 hwoarang Exp $
 
 inherit toolchain-funcs multilib
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd "${S}"/src
-	$(tc-getCC) ${CFLAGS} -o cups-pdf cups-pdf.c || die "Compilation failed."
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o cups-pdf cups-pdf.c || die "Compilation failed."
 }
 
 src_install () {
