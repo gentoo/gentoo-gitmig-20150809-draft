@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.1.ebuild,v 1.1 2010/08/07 17:40:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/fbpanel-6.1.ebuild,v 1.2 2010/08/07 18:17:54 hwoarang Exp $
 
 EAPI=2
-inherit eutils
 
 DESCRIPTION="light-weight X11 desktop panel"
 HOMEPAGE="http://fbpanel.sourceforge.net/"

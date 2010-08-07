@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fbpanel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.47 2010/08/07 17:40:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.48 2010/08/07 18:17:54 hwoarang Exp $
+
+  07 Aug 2010; Markos Chandras <hwoarang@gentoo.org> fbpanel-6.1.ebuild:
+  Remove unused inherit eutils statement thanks to ssuominen for pointing
+  this out
 
 *fbpanel-6.1 (07 Aug 2010)
 
