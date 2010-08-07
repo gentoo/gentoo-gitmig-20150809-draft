@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/madwimax
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/ChangeLog,v 1.1 2010/08/07 21:20:12 alexxy Exp $
+
+*madwimax-0.1.1 (07 Aug 2010)
+
+  07 Aug 2010; Alexey Shvetsov <alexxy@gentoo.org> +madwimax-0.1.1.ebuild,
+  +metadata.xml:
+  Initial import. fix for bug #270869
+
