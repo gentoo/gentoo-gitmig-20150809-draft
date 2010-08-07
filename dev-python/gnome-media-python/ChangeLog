@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-media-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.35 2010/08/01 10:44:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.36 2010/08/07 17:31:03 armin76 Exp $
+
+  07 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  gnome-media-python-2.28.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #320247
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   gnome-media-python-2.30.2.ebuild:
