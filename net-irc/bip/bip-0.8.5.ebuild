@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.5.ebuild,v 1.1 2010/08/07 12:46:33 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.5.ebuild,v 1.2 2010/08/07 16:41:44 a3li Exp $
 
 EAPI="2"
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Multiuser IRC proxy with ssl support"
 HOMEPAGE="http://bip.t1r.net/"
@@ -21,6 +21,10 @@ RDEPEND="${DEPEND}
 	oidentd? ( >=net-misc/oidentd-2.0 )"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-configure.patch" || die
+
+	eautoreconf
+
 	if use noctcp; then
 		sed -i -e '/irc_privmsg_check_ctcp(server, line);/s:^://:' src/irc.c || die
 	fi
@@ -39,9 +43,7 @@ src_configure() {
 
 src_compile() {
 	# Parallel make fails.
-	# {C,CXX,LD}FLAGS aren't respected, bug 241030.
-	emake CFLAGS="${CFLAGS}" CPPFLAGS="${CXXFLAGS}" \
-		LDFLAGS="${LDFLAGS}" -j1 || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {

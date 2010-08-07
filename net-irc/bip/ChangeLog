@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/bip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.14 2010/08/07 12:46:33 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.15 2010/08/07 16:41:44 a3li Exp $
+
+  07 Aug 2010; Alex Legler <a3li@gentoo.org> bip-0.8.5.ebuild,
+  +files/bip-configure.patch:
+  Add a proper fix to respect user CFLAGS, thanks to flameeyes.
 
 *bip-0.8.5 (07 Aug 2010)
 

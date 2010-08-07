@@ -1,0 +1,28 @@
+Respecting user CFLAGS, removing unneded LDFLAGS.
+The -O0 stuff shouldn't be there as it disables fortifying.
+
+Upstream: to be submitted (2010-08-07)
+
+diff --git a/configure.ac b/configure.ac
+index f61a9ed..6720150 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -44,16 +44,14 @@ AC_ARG_ENABLE([pie], AS_HELP_STRING([--disable-pie], [Do not build a position in
+ 
+ AM_CONDITIONAL(DEBUG, test x$enable_debug = xyes)
+ AS_IF([test "x$enable_debug" = "xyes"], [
+-	CFLAGS="-O0 -g -W -Wall"
+-	LDFLAGS="-g"
++	CFLAGS="${CFLAGS} -g -W -Wall"
+ 	AC_CHECK_FUNC(backtrace_symbols_fd, [
+ 		AC_DEFINE(HAVE_BACKTRACE, [], [Use glibc backtrace on fatal()])
+ 		LDFLAGS="-rdynamic $LDFLAGS"
+ 		backtrace="(with backtrace)"
+ 	])
+ ], [
+-	CFLAGS="-O2 -g -W -Wall"
+-	LDFLAGS="-g"
++	CFLAGS="${CFLAGS} -g -W -Wall"
+ 	enable_debug=no
+ ])
+ 
