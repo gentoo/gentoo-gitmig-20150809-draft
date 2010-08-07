@@ -1,0 +1,34 @@
+--- install.sh
++++ install.sh
+@@ -14,8 +14,8 @@
+         exit 1
+     fi
+ 
+-    BINDIR="$1/bin/"
+-    DATADIR="$1/share/pingus/"
++    BINDIR="${1}GENTOO_BINDIR"
++    DATADIR="${1}GENTOO_DATADIR"
+ 
+     echo "Installing Pingus in: $1"
+ 
+--- SConstruct
++++ SConstruct
+@@ -406,7 +406,6 @@
+ 
+     config_h = open('config.h', 'w')
+     config_h.write('#define VERSION "0.7.2"\n')
+-    config_h.write('#define ENABLE_BINRELOC 1\n')
+     config_h.write('#define ICONV_CONST %s\n' % iconv_const)
+     for (v,k) in config_h_defines:
+         config_h.write('#define %s %s\n' % (v, k))
+--- src/pingus_main.cpp
++++ src/pingus_main.cpp
+@@ -583,7 +583,7 @@
+       path_manager.add_path("data"); // assume game is run from source dir, without any magic
+       free(exe_path);
+ #else
+-      path_manager.add_path("data"); // assume game is run from source dir
++      path_manager.add_path("GENTOO_DATADIR/data");
+ #endif
+ 
+       if (!path_manager.find_path("data/core.res"))
