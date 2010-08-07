@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-9999.ebuild,v 1.12 2010/08/07 17:40:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r1.ebuild,v 1.1 2010/08/07 17:40:01 flameeyes Exp $
 
 EAPI="2"
 

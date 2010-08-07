@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.156 2010/08/04 19:23:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.157 2010/08/07 17:40:01 flameeyes Exp $
+
+*iproute2-2.6.35-r1 (07 Aug 2010)
+
+  07 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +iproute2-2.6.35-r1.ebuild, iproute2-9999.ebuild:
+  Just symlink ip to /bin; this way it won't break if any software (wrongly)
+  use the full path. Add missing flex dependency.
 
 *iproute2-2.6.35 (04 Aug 2010)
 
