@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.5-r3.ebuild,v 1.4 2010/06/11 12:23:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.28.5-r3.ebuild,v 1.5 2010/08/07 16:40:25 armin76 Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~sparc x86 ~x86-fbsd"
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-patches.tar.bz2"
