@@ -1,0 +1,31 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6608
+http://bugs.gentoo.org/331501
+
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
+@@ -49,6 +49,7 @@
+ xfce4_mailwatch_plugin_CFLAGS = \
+ 	-I$(top_srcdir)/libmailwatch-core \
+ 	@GTHREAD_CFLAGS@ \
++	@LIBXFCEGUI4_CFLAGS@ \
+ 	@LIBXFCE4PANEL_CFLAGS@ \
+ 	-DDATADIR=\"$(datadir)\" \
+ 	-DLOCALEDIR=\"$(localedir)\"
+@@ -56,14 +57,15 @@
+ xfce4_mailwatch_plugin_DEPENDENCIES = \
+ 	$(top_builddir)/libmailwatch-core/libmailwatch-core.la
+ 
+-xfce4_mailwatch_plugin_LDFLAGS = \
++xfce4_mailwatch_plugin_LDADD = \
+ 	$(top_builddir)/libmailwatch-core/libmailwatch-core.la \
+ 	@GTHREAD_LIBS@ \
++	@LIBXFCEGUI4_LIBS@ \
+ 	@LIBXFCE4PANEL_LIBS@ \
+ 	@GNUTLS_LIBS@
+ 
+ if HAVE_CYGWIN
+-  xfce4_mailwatch_plugin_LDFLAGS += \
++  xfce4_mailwatch_plugin_LDFLAGS = \
+ 	-no-undefined
+ endif
+ 

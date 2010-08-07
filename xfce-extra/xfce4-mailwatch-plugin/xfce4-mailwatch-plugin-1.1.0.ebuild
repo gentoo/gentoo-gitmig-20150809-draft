@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/xfce4-mailwatch-plugin-1.1.0.ebuild,v 1.2 2009/10/08 17:36:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/xfce4-mailwatch-plugin-1.1.0.ebuild,v 1.3 2010/08/07 12:33:44 ssuominen Exp $
 
 EAPI=2
+EAUTORECONF=yes
 inherit xfconf
 
 DESCRIPTION="Mail notification panel plugin"
@@ -23,10 +24,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	PATCHES=(
+		"${FILESDIR}"/${P}-no-ssl.patch
+		"${FILESDIR}"/${P}-link_to_libxfcegui4.patch
+		)
 	XFCONF="--disable-dependency-tracking
 		$(use_enable ssl)
 		$(use_enable ipv6)
-		$(use_enable debug)"
-	PATCHES=( "${FILESDIR}/${P}-no-ssl.patch" )
+		$(xfconf_use_debug)"
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
