@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/yap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.37 2010/05/18 08:05:44 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/ChangeLog,v 1.38 2010/08/07 22:30:23 keri Exp $
+
+  07 Aug 2010; <keri@gentoo.org> yap-6.0.5.ebuild:
+  Remove redundant configure call to enable-cut-c
 
 *yap-6.0.5 (18 May 2010)
 

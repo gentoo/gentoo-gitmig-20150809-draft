@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.0.5.ebuild,v 1.1 2010/05/18 08:05:44 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.0.5.ebuild,v 1.2 2010/08/07 22:30:23 keri Exp $
 
 inherit eutils java-pkg-opt-2
 
@@ -47,7 +47,6 @@ src_compile() {
 
 	econf \
 		--libdir=/usr/$(get_libdir) \
-		--enable-cut-c \
 		$(use_enable !static dynamic-loading) \
 		$(use_enable threads) \
 		$(use_enable threads pthread-locking) \
