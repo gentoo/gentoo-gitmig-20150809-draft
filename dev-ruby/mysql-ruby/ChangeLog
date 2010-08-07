@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.77 2010/05/23 09:59:34 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.78 2010/08/07 14:33:19 graaff Exp $
+
+  07 Aug 2010; Hans de Graaff <graaff@gentoo.org> mysql-ruby-2.8.1.ebuild:
+  Change virtual/ruby to dev-lang/ruby, bug 265054.
 
   23 May 2010; Alex Legler <a3li@gentoo.org> mysql-ruby-2.8.1-r1.ebuild:
   Add REE18 support

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ruby-odbc-0.9995.ebuild,v 1.5 2009/06/24 15:20:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ruby-odbc-0.9995.ebuild,v 1.6 2010/08/07 14:36:38 graaff Exp $
 
 inherit ruby
 DESCRIPTION="RubyODBC - For accessing ODBC data sources from the Ruby language"
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ia64 ppc ~sparc x86"
 USE_RUBY="ruby18"
 IUSE="unicode"
 
-DEPEND="virtual/ruby
+DEPEND="dev-lang/ruby
 	>=dev-db/unixODBC-2.0.6"
 
 src_compile() {
