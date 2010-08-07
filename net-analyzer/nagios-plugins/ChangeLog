@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.133 2010/07/31 23:21:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.134 2010/08/07 11:18:01 hwoarang Exp $
+
+  07 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  nagios-plugins-1.4.14-r2.ebuild:
+  Apply ldap implicit pointer conversion patch again to fix failure on amd64
+  hosts
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   nagios-plugins-1.4.14-r2.ebuild:
