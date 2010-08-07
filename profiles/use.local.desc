@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5842 2010/08/07 13:04:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5843 2010/08/07 22:21:18 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3432,6 +3432,7 @@ sys-devel/gcc-apple:multislot - Allow for SLOTs to include minor version (3.3.4 
 sys-devel/gcc-apple:objc - Build support for the Objective C code language
 sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
+sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (eg. 3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
 sys-devel/llvm:alltargets - Build all host targets (default: host only)
