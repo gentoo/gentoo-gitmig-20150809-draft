@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2010.01.19.ebuild,v 1.1 2010/02/19 15:45:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2010.08.04.ebuild,v 1.1 2010/08/07 12:10:49 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
+PYTHON_DEPEND=2:2.4
+
+inherit python
 
 DESCRIPTION="A small command-line program to download videos from YouTube."
 HOMEPAGE="http://bitbucket.org/rg3/youtube-dl/"
@@ -13,9 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.4"
-RDEPEND="${DEPEND}"
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_install() {
 	newbin "${PN}/${PN}" ${PN}
+	python_convert_shebangs -r 2 "${D}"
 }
