@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-fancy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/ChangeLog,v 1.14 2010/08/06 12:27:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fancy/ChangeLog,v 1.15 2010/08/07 14:14:40 hwoarang Exp $
+
+  07 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  claws-mail-fancy-0.9.10.ebuild:
+  Stable on amd64 wrt bug #331395
 
   06 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-fancy-0.9.10.ebuild:
