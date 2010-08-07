@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/ekeyd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.12 2009/11/24 10:32:47 robbat2 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.13 2010/08/07 19:11:05 flameeyes Exp $
+
+*ekeyd-1.1.1-r1 (07 Aug 2010)
+
+  07 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> -ekeyd-1.1.1.ebuild,
+  +ekeyd-1.1.1-r1.ebuild, +files/ekeyd-1.1.1-earlyboot.patch:
+  Revision bump, add a patch to use /dev for sockets and pid files, inspired
+  by mdadm, so that it works even if the rule is started early when / is yet
+  to be pivoted or mounted r/w.
 
   24 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> ekeyd-1.1.1.ebuild:
   Diego reports that while it compiles against libusb-compat, it does not
