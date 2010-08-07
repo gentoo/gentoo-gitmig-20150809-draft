@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/style-check
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.10 2008/07/09 16:19:54 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.11 2010/08/07 13:28:35 graaff Exp $
+
+  07 Aug 2010; Hans de Graaff <graaff@gentoo.org> style-check-0.7.ebuild,
+  style-check-0.12.ebuild:
+  Change virtual/ruby to dev-lang/ruby, bug 265054.
 
   09 Jul 2008; Alexis Ballier <aballier@gentoo.org> style-check-0.7.ebuild:
   quote D
