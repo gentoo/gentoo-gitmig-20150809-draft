@@ -1,6 +1,26 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.297 2010/03/21 15:04:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.298 2010/08/07 06:18:01 mrness Exp $
+
+*squid-3.1.6 (07 Aug 2010)
+*squid-2.7.9 (07 Aug 2010)
+
+  07 Aug 2010; Alin Năstac <mrness@gentoo.org> -squid-2.7.6-r2.ebuild,
+  -files/squid-2.7.6-cve-2009-2855.patch, -files/squid-2.7.6-gentoo.patch,
+  -files/squid-2.7.6-heimdal.patch, +squid-2.7.9.ebuild,
+  +files/squid-2.7.9-gentoo.patch, -squid-3.0.18-r1.ebuild,
+  -files/squid-3.0.18-adapted-zph.patch,
+  -files/squid-3.0.18-cross-compile.patch,
+  -files/squid-3.0.18-cve-2009-2855.patch, -files/squid-3.0.18-gentoo.patch,
+  -squid-3.1.0.14_beta.ebuild, -files/squid-3.1.0.14_beta-gentoo.patch,
+  -files/squid-3.1.0.14_beta-qafixes.patch, -squid-3.1.0.15_beta-r1.ebuild,
+  -files/squid-3.1.0.15_beta-gentoo.patch,
+  -files/squid-3.1.0.15_beta-libmd5.patch,
+  -files/squid-3.1.0.15_beta-qafixes.patch, +squid-3.1.6.ebuild,
+  +files/squid-3.1.6-gentoo.patch, +files/squid-3.1.6-libmd5.patch,
+  +files/squid-3.1.6-qafixes.patch, metadata.xml:
+  Version bumps wrt security bugs #301828 and #304751. Simplify kerberos
+  dependency atom (#303979). Add tproxy USE flag (#313587).
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> squid-3.0.19.ebuild:
   Marking squid-3.0.19 ppc64 for bug 290185

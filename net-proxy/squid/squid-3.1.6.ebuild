@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.15_beta-r1.ebuild,v 1.1 2009/11/29 08:53:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.6.ebuild,v 1.1 2010/08/07 06:18:01 mrness Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils pam toolchain-funcs
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
-SRC_URI="http://www.squid-cache.org/Versions/v3/3.1/${P/_beta}.tar.gz"
+SRC_URI="http://www.squid-cache.org/Versions/v3/3.1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,13 +18,13 @@ IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrota
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
-	elibc_uclibc kernel_linux +epoll"
+	elibc_uclibc kernel_linux +epoll tproxy"
 RESTRICT=test
 
 COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	pam? ( virtual/pam )
 	ldap? ( net-nds/openldap )
-	kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
+	kerberos? ( virtual/krb5 )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
 	ecap? ( net-libs/libecap )
@@ -43,8 +43,6 @@ RDEPEND="${COMMON_DEPEND}
 	postgres? ( dev-perl/DBD-Pg )
 	sqlite? ( dev-perl/DBD-SQLite )"
 
-S="${WORKDIR}/${P/_beta}"
-
 pkg_setup() {
 	if grep -qs '^[[:space:]]*cache_dir[[:space:]]\+coss' "${ROOT}"etc/squid/squid.conf; then
 		eerror "coss store IO has been disabled by upstream due to stability issues!"
@@ -52,6 +50,13 @@ pkg_setup() {
 		eerror "before attempting to install this version again."
 
 		die "/etc/squid/squid.conf: cache_dir use a disabled store type"
+	fi
+
+	if use tproxy && ! use caps; then
+		eerror "libcap is required by Transparent Proxy support for Netfilter TPROXY!"
+		eerror "Please enable caps USE flag and try again."
+
+		die "invalid combination of USE flags"
 	fi
 
 	enewgroup squid 31
@@ -105,6 +110,7 @@ src_configure() {
 
 	if use kernel_linux; then
 		myconf="${myconf} --enable-linux-netfilter
+			$(use_enable tproxy linux-tproxy)
 			$(use_enable epoll)"
 	elif use kernel_FreeBSD || use kernel_OpenBSD || use kernel_NetBSD ; then
 		myconf="${myconf} $(use_enable kqueue)"

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.6-r2.ebuild,v 1.7 2009/08/31 00:04:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.9.ebuild,v 1.1 2010/08/07 06:18:01 mrness Exp $
 
 EAPI="2"
 
@@ -19,17 +19,17 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="caps pam ldap samba sasl kerberos nis ssl snmp selinux logrotate \
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
-	elibc_uclibc kernel_linux +epoll"
+	elibc_uclibc kernel_linux +epoll tproxy"
 
 DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	pam? ( virtual/pam )
 	ldap? ( net-nds/openldap )
-	kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
+	kerberos? ( virtual/krb5 )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sec-policy/selinux-squid )
@@ -45,6 +45,13 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${S_PP}"
 
 pkg_setup() {
+	if use tproxy && ! use caps; then
+		eerror "libcap is required by Transparent Proxy support for Netfilter TPROXY!"
+		eerror "Please enable caps USE flag and try again."
+
+		die "invalid combination of USE flags"
+	fi
+
 	if use zero-penalty-hit; then
 		ewarn "This version supports natively IP TOS/Priority mangling,"
 		ewarn "but it does not support zph_preserve_miss_tos."
@@ -55,10 +62,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2-capability.patch
-	epatch "${FILESDIR}"/${P}-cve-2009-2855.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	has_version app-crypt/mit-krb5 || epatch "${FILESDIR}"/${P}-heimdal.patch
+	has_version app-crypt/mit-krb5 || epatch "${FILESDIR}"/${PN}-2-heimdal.patch
 	eautoreconf
 }
 
@@ -96,6 +101,7 @@ src_configure() {
 
 	if use kernel_linux; then
 		myconf="${myconf} --enable-linux-netfilter
+			$(use_enable tproxy linux-tproxy)
 			$(use_enable epoll)"
 	elif use kernel_FreeBSD || use kernel_OpenBSD || use kernel_NetBSD ; then
 		myconf="${myconf} $(use_enable kqueue)"
@@ -132,7 +138,7 @@ src_configure() {
 		--enable-carp \
 		--enable-follow-x-forwarded-for \
 		--with-maxfd=8192 \
-		$(use_enable caps) \
+		$(use_with libcap) \
 		$(use_enable snmp) \
 		$(use_enable ssl) \
 		${myconf} || die "econf failed"

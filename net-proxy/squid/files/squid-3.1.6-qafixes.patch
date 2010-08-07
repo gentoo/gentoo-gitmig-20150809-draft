@@ -1,6 +1,6 @@
-diff -Nru squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.0.15/helpers/negotiate_auth/squid_kerb_auth/configure.in
---- squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-11-28 10:51:49.000000000 +0100
-+++ squid-3.1.0.15/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-11-28 10:52:03.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.6/helpers/negotiate_auth/squid_kerb_auth/configure.in
+--- squid-3.1.6.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-08-07 07:29:18.000000000 +0200
++++ squid-3.1.6/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-08-07 07:29:50.000000000 +0200
 @@ -94,7 +94,7 @@
                         else
                           ac_gssapi_libs=`krb5-config --libs gssapi 2>/dev/null`
@@ -37,20 +37,3 @@ diff -Nru squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.i
                       else
                           for lib in $ac_gss_libs; do
                              AC_CHECK_LIB($lib,main)
-diff -Nru squid-3.1.0.15.orig/src/forward.cc squid-3.1.0.15/src/forward.cc
---- squid-3.1.0.15.orig/src/forward.cc	2009-11-23 04:10:09.000000000 +0100
-+++ squid-3.1.0.15/src/forward.cc	2009-11-28 10:52:03.000000000 +0100
-@@ -999,7 +999,12 @@
-                         break;
- 
-                     if (o->cmsg_level == SOL_IP && o->cmsg_type == IP_TOS) {
--                        clientFde->upstreamTOS = (unsigned char)(*(int*)CMSG_DATA(o));
-+                        union {
-+                           unsigned char *pchar;
-+                           int  *pint;
-+                        } data;
-+                        data.pchar = CMSG_DATA(o);
-+                        clientFde->upstreamTOS = (unsigned char)*data.pint;
-                         break;
-                     }
-                     p += CMSG_LEN(o->cmsg_len);

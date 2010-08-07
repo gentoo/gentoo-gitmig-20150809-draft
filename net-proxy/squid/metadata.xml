@@ -15,6 +15,8 @@
 	<flag name='kqueue'>Enables *BSD kqueue() support</flag>
 	<flag name='pf-transparent'>Adds transparent proxy support for systems using
 		PF (only for *bsd)</flag>
+	<flag name='tproxy'>Enables real Transparent Proxy support for Linux Netfilter
+		TPROXY</flag>
 	<flag name='zero-penalty-hit'>Add Zero Penalty Hit patch
 		(http://zph.bratcheda.org)</flag>
 </use>

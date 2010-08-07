@@ -1,7 +1,7 @@
-diff -Nru squid-3.1.0.15.orig/acinclude.m4 squid-3.1.0.15/acinclude.m4
---- squid-3.1.0.15.orig/acinclude.m4	2009-11-23 04:09:49.000000000 +0100
-+++ squid-3.1.0.15/acinclude.m4	2009-11-28 10:40:46.000000000 +0100
-@@ -74,7 +74,7 @@
+diff -Nru squid-3.1.6.orig/acinclude.m4 squid-3.1.6/acinclude.m4
+--- squid-3.1.6.orig/acinclude.m4	2010-08-01 16:01:37.000000000 +0200
++++ squid-3.1.6/acinclude.m4	2010-08-07 07:24:05.000000000 +0200
+@@ -75,7 +75,7 @@
    AC_MSG_CHECKING([whether compiler accepts -fhuge-objects])
    AC_CACHE_VAL([ac_cv_test_checkforhugeobjects],[
      ac_cv_test_checkforhugeobjects=`echo "int main(int argc, char **argv) { int foo; }" > conftest.cc
@@ -10,9 +10,9 @@ diff -Nru squid-3.1.0.15.orig/acinclude.m4 squid-3.1.0.15/acinclude.m4
  res=$?
  rm -f conftest.*
  echo yes
-diff -Nru squid-3.1.0.15.orig/configure.in squid-3.1.0.15/configure.in
---- squid-3.1.0.15.orig/configure.in	2009-11-23 04:11:00.000000000 +0100
-+++ squid-3.1.0.15/configure.in	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/configure.in squid-3.1.6/configure.in
+--- squid-3.1.6.orig/configure.in	2010-08-01 16:03:14.000000000 +0200
++++ squid-3.1.6/configure.in	2010-08-07 07:24:05.000000000 +0200
 @@ -16,9 +16,9 @@
  PRESET_LDFLAGS="$LDFLAGS"
  
@@ -26,9 +26,9 @@ diff -Nru squid-3.1.0.15.orig/configure.in squid-3.1.0.15/configure.in
  
  dnl Check for GNU cc
  AC_PROG_CC
-diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/MSNT/confload.c squid-3.1.0.15/helpers/basic_auth/MSNT/confload.c
---- squid-3.1.0.15.orig/helpers/basic_auth/MSNT/confload.c	2009-11-23 04:09:55.000000000 +0100
-+++ squid-3.1.0.15/helpers/basic_auth/MSNT/confload.c	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/basic_auth/MSNT/confload.c squid-3.1.6/helpers/basic_auth/MSNT/confload.c
+--- squid-3.1.6.orig/helpers/basic_auth/MSNT/confload.c	2010-08-01 16:01:37.000000000 +0200
++++ squid-3.1.6/helpers/basic_auth/MSNT/confload.c	2010-08-07 07:24:05.000000000 +0200
 @@ -27,7 +27,7 @@
  
  /* Path to configuration file */
@@ -38,9 +38,9 @@ diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/MSNT/confload.c squid-3.1.0.15/
  #endif
  #define CONFIGFILE   SYSCONFDIR "/msntauth.conf"
  
-diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-3.1.0.15/helpers/basic_auth/MSNT/msntauth.conf.default
---- squid-3.1.0.15.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2009-11-23 04:09:55.000000000 +0100
-+++ squid-3.1.0.15/helpers/basic_auth/MSNT/msntauth.conf.default	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-3.1.6/helpers/basic_auth/MSNT/msntauth.conf.default
+--- squid-3.1.6.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2010-08-01 16:01:38.000000000 +0200
++++ squid-3.1.6/helpers/basic_auth/MSNT/msntauth.conf.default	2010-08-07 07:24:05.000000000 +0200
 @@ -8,6 +8,6 @@
  server other_PDC	other_BDC	otherdomain
  
@@ -50,9 +50,9 @@ diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/MSNT/msntauth.conf.default squi
 +#denyusers	/etc/squid/msntauth.denyusers
 +#allowusers	/etc/squid/msntauth.allowusers
  
-diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/SMB/Makefile.am squid-3.1.0.15/helpers/basic_auth/SMB/Makefile.am
---- squid-3.1.0.15.orig/helpers/basic_auth/SMB/Makefile.am	2009-11-23 04:09:56.000000000 +0100
-+++ squid-3.1.0.15/helpers/basic_auth/SMB/Makefile.am	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/basic_auth/SMB/Makefile.am squid-3.1.6/helpers/basic_auth/SMB/Makefile.am
+--- squid-3.1.6.orig/helpers/basic_auth/SMB/Makefile.am	2010-08-01 16:01:37.000000000 +0200
++++ squid-3.1.6/helpers/basic_auth/SMB/Makefile.am	2010-08-07 07:24:05.000000000 +0200
 @@ -16,7 +16,7 @@
  ## FIXME: autoconf should test for the samba path.
  
@@ -62,9 +62,9 @@ diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/SMB/Makefile.am squid-3.1.0.15/
  SMB_AUTH_HELPER_PATH = $(libexecdir)/$(SMB_AUTH_HELPER)
  
  libexec_SCRIPTS	= $(SMB_AUTH_HELPER)
-diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/SMB/smb_auth.sh squid-3.1.0.15/helpers/basic_auth/SMB/smb_auth.sh
---- squid-3.1.0.15.orig/helpers/basic_auth/SMB/smb_auth.sh	2009-11-23 04:09:56.000000000 +0100
-+++ squid-3.1.0.15/helpers/basic_auth/SMB/smb_auth.sh	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/basic_auth/SMB/smb_auth.sh squid-3.1.6/helpers/basic_auth/SMB/smb_auth.sh
+--- squid-3.1.6.orig/helpers/basic_auth/SMB/smb_auth.sh	2010-08-01 16:01:38.000000000 +0200
++++ squid-3.1.6/helpers/basic_auth/SMB/smb_auth.sh	2010-08-07 07:24:05.000000000 +0200
 @@ -24,7 +24,7 @@
  read AUTHSHARE
  read AUTHFILE
@@ -83,9 +83,9 @@ diff -Nru squid-3.1.0.15.orig/helpers/basic_auth/SMB/smb_auth.sh squid-3.1.0.15/
  echo "Domain controller IP address: $dcip"
  [ -n "$dcip" ] || exit 1
  
-diff -Nru squid-3.1.0.15.orig/helpers/external_acl/session/squid_session.8 squid-3.1.0.15/helpers/external_acl/session/squid_session.8
---- squid-3.1.0.15.orig/helpers/external_acl/session/squid_session.8	2009-11-23 04:09:57.000000000 +0100
-+++ squid-3.1.0.15/helpers/external_acl/session/squid_session.8	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/external_acl/session/squid_session.8 squid-3.1.6/helpers/external_acl/session/squid_session.8
+--- squid-3.1.6.orig/helpers/external_acl/session/squid_session.8	2010-08-01 16:01:37.000000000 +0200
++++ squid-3.1.6/helpers/external_acl/session/squid_session.8	2010-08-07 07:24:05.000000000 +0200
 @@ -35,7 +35,7 @@
  .P
  Configuration example using the default automatic mode
@@ -95,9 +95,9 @@ diff -Nru squid-3.1.0.15.orig/helpers/external_acl/session/squid_session.8 squid
  .IP
  acl session external session
  .IP
-diff -Nru squid-3.1.0.15.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-3.1.0.15/helpers/external_acl/unix_group/squid_unix_group.8
---- squid-3.1.0.15.orig/helpers/external_acl/unix_group/squid_unix_group.8	2009-11-23 04:09:57.000000000 +0100
-+++ squid-3.1.0.15/helpers/external_acl/unix_group/squid_unix_group.8	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-3.1.6/helpers/external_acl/unix_group/squid_unix_group.8
+--- squid-3.1.6.orig/helpers/external_acl/unix_group/squid_unix_group.8	2010-08-01 16:01:39.000000000 +0200
++++ squid-3.1.6/helpers/external_acl/unix_group/squid_unix_group.8	2010-08-07 07:24:05.000000000 +0200
 @@ -27,7 +27,7 @@
  This squid.conf example defines two Squid acls. usergroup1 matches users in group1, and usergroup2
  matches users in group2 or group3
@@ -107,9 +107,9 @@ diff -Nru squid-3.1.0.15.orig/helpers/external_acl/unix_group/squid_unix_group.8
  .IP
  acl usergroup1 external unix_group group1
  .IP
-diff -Nru squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.0.15/helpers/negotiate_auth/squid_kerb_auth/configure.in
---- squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-11-23 04:09:58.000000000 +0100
-+++ squid-3.1.0.15/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.6/helpers/negotiate_auth/squid_kerb_auth/configure.in
+--- squid-3.1.6.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-08-01 16:01:38.000000000 +0200
++++ squid-3.1.6/helpers/negotiate_auth/squid_kerb_auth/configure.in	2010-08-07 07:24:05.000000000 +0200
 @@ -17,6 +17,7 @@
  
  AC_INIT([squid_kerb_auth],[1.0.5],[markus_moeller@compuserve.com])
@@ -118,30 +118,30 @@ diff -Nru squid-3.1.0.15.orig/helpers/negotiate_auth/squid_kerb_auth/configure.i
  AC_CONFIG_SRCDIR([squid_kerb_auth.c])
  
  AC_PROG_CC
-@@ -529,7 +530,7 @@
- dnl set variable for use in automakefile(s)
- AM_CONDITIONAL(HAVE_SPNEGO, test x"$ac_cv_have_spnego" = x"yes" )
+@@ -467,7 +468,7 @@
+ echo "configure: ##"
+ echo "configure: ## -----------------------------##"
  
 -MY_CFLAGS="-Wall -Wextra -Werror -Wcomment -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -Wshadow"
 +MY_CFLAGS="-Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -Wshadow"
  for ac_cv_my_cflag in $MY_CFLAGS; do
  echo "int main()
    {
-diff -Nru squid-3.1.0.15.orig/lib/libTrie/acinclude.m4 squid-3.1.0.15/lib/libTrie/acinclude.m4
---- squid-3.1.0.15.orig/lib/libTrie/acinclude.m4	2009-11-23 04:09:59.000000000 +0100
-+++ squid-3.1.0.15/lib/libTrie/acinclude.m4	2009-11-28 10:40:46.000000000 +0100
-@@ -9,7 +9,7 @@
+diff -Nru squid-3.1.6.orig/lib/libTrie/acinclude.m4 squid-3.1.6/lib/libTrie/acinclude.m4
+--- squid-3.1.6.orig/lib/libTrie/acinclude.m4	2010-08-01 16:01:37.000000000 +0200
++++ squid-3.1.6/lib/libTrie/acinclude.m4	2010-08-07 07:28:11.000000000 +0200
+@@ -11,7 +11,7 @@
    AC_MSG_CHECKING([whether compiler accepts -fhuge-objects])
    AC_CACHE_VAL([ac_cv_test_checkforhugeobjects],[
-     ac_cv_test_checkforhugeobjects=`echo "int foo;" > conftest.cc
--${CXX} -Werror -fhuge-objects -c conftest.cc 2>/dev/null
-+${CXX} -fhuge-objects -c conftest.cc 2>/dev/null
+     ac_cv_test_checkforhugeobjects=`echo "int main(int argc, char **argv) { int foo; }" > conftest.cc
+-${CXX} -Werror -fhuge-objects -o conftest.bin conftest.cc 2>/dev/null
++${CXX} -fhuge-objects -o conftest.bin conftest.cc 2>/dev/null
  res=$?
  rm -f conftest.*
  echo yes
-diff -Nru squid-3.1.0.15.orig/lib/libTrie/configure.in squid-3.1.0.15/lib/libTrie/configure.in
---- squid-3.1.0.15.orig/lib/libTrie/configure.in	2009-11-23 04:09:59.000000000 +0100
-+++ squid-3.1.0.15/lib/libTrie/configure.in	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/lib/libTrie/configure.in squid-3.1.6/lib/libTrie/configure.in
+--- squid-3.1.6.orig/lib/libTrie/configure.in	2010-08-01 16:01:37.000000000 +0200
++++ squid-3.1.6/lib/libTrie/configure.in	2010-08-07 07:24:05.000000000 +0200
 @@ -59,8 +59,8 @@
  
  dnl set useful flags
@@ -153,10 +153,10 @@ diff -Nru squid-3.1.0.15.orig/lib/libTrie/configure.in squid-3.1.0.15/lib/libTri
  else
     TRIE_CFLAGS=
     TRIE_CXXFLAGS=
-diff -Nru squid-3.1.0.15.orig/src/cf.data.pre squid-3.1.0.15/src/cf.data.pre
---- squid-3.1.0.15.orig/src/cf.data.pre	2009-11-23 04:10:08.000000000 +0100
-+++ squid-3.1.0.15/src/cf.data.pre	2009-11-28 10:40:46.000000000 +0100
-@@ -718,6 +718,7 @@
+diff -Nru squid-3.1.6.orig/src/cf.data.pre squid-3.1.6/src/cf.data.pre
+--- squid-3.1.6.orig/src/cf.data.pre	2010-08-01 16:01:38.000000000 +0200
++++ squid-3.1.6/src/cf.data.pre	2010-08-07 07:24:05.000000000 +0200
+@@ -716,6 +716,7 @@
  acl Safe_ports port 488		# gss-http
  acl Safe_ports port 591		# filemaker
  acl Safe_ports port 777		# multiling http
@@ -164,7 +164,7 @@ diff -Nru squid-3.1.0.15.orig/src/cf.data.pre squid-3.1.0.15/src/cf.data.pre
  acl CONNECT method CONNECT
  NOCOMMENT_END
  DOC_END
-@@ -867,6 +868,9 @@
+@@ -864,6 +865,9 @@
  http_access allow localnet
  http_access allow localhost
  
@@ -174,7 +174,7 @@ diff -Nru squid-3.1.0.15.orig/src/cf.data.pre squid-3.1.0.15/src/cf.data.pre
  # And finally deny all other access to this proxy
  http_access deny all
  NOCOMMENT_END
-@@ -3969,11 +3973,11 @@
+@@ -4034,11 +4038,11 @@
  
  NAME: cache_mgr
  TYPE: string
@@ -188,7 +188,7 @@ diff -Nru squid-3.1.0.15.orig/src/cf.data.pre squid-3.1.0.15/src/cf.data.pre
  DOC_END
  
  NAME: mail_from
-@@ -6267,7 +6271,7 @@
+@@ -6350,7 +6354,7 @@
  NAME: forwarded_for
  COMMENT: on|off|transparent|truncate|delete
  TYPE: string
@@ -197,9 +197,9 @@ diff -Nru squid-3.1.0.15.orig/src/cf.data.pre squid-3.1.0.15/src/cf.data.pre
  LOC: opt_forwarded_for
  DOC_START
  	If set to "on", Squid will append your client's IP address
-diff -Nru squid-3.1.0.15.orig/src/debug.cc squid-3.1.0.15/src/debug.cc
---- squid-3.1.0.15.orig/src/debug.cc	2009-11-23 04:10:09.000000000 +0100
-+++ squid-3.1.0.15/src/debug.cc	2009-11-28 10:40:46.000000000 +0100
+diff -Nru squid-3.1.6.orig/src/debug.cc squid-3.1.6/src/debug.cc
+--- squid-3.1.6.orig/src/debug.cc	2010-08-01 16:01:37.000000000 +0200
++++ squid-3.1.6/src/debug.cc	2010-08-07 07:24:05.000000000 +0200
 @@ -452,7 +452,7 @@
  #if HAVE_SYSLOG && defined(LOG_LOCAL4)
  
@@ -209,10 +209,10 @@ diff -Nru squid-3.1.0.15.orig/src/debug.cc squid-3.1.0.15/src/debug.cc
  
  #endif /* HAVE_SYSLOG */
  
-diff -Nru squid-3.1.0.15.orig/src/main.cc squid-3.1.0.15/src/main.cc
---- squid-3.1.0.15.orig/src/main.cc	2009-11-23 04:10:10.000000000 +0100
-+++ squid-3.1.0.15/src/main.cc	2009-11-28 10:40:46.000000000 +0100
-@@ -1529,7 +1529,7 @@
+diff -Nru squid-3.1.6.orig/src/main.cc squid-3.1.6/src/main.cc
+--- squid-3.1.6.orig/src/main.cc	2010-08-01 16:01:39.000000000 +0200
++++ squid-3.1.6/src/main.cc	2010-08-07 07:24:05.000000000 +0200
+@@ -1556,7 +1556,7 @@
      if (*(argv[0]) == '(')
          return;
  
@@ -221,7 +221,7 @@ diff -Nru squid-3.1.0.15.orig/src/main.cc squid-3.1.0.15/src/main.cc
  
      if ((pid = fork()) < 0)
          syslog(LOG_ALERT, "fork failed: %s", xstrerror());
-@@ -1573,7 +1573,7 @@
+@@ -1600,7 +1600,7 @@
  
          if ((pid = fork()) == 0) {
              /* child */
@@ -230,7 +230,7 @@ diff -Nru squid-3.1.0.15.orig/src/main.cc squid-3.1.0.15/src/main.cc
              prog = xstrdup(argv[0]);
              argv[0] = xstrdup("(squid)");
              execvp(prog, argv);
-@@ -1581,7 +1581,7 @@
+@@ -1608,7 +1608,7 @@
          }
  
          /* parent */
@@ -239,9 +239,9 @@ diff -Nru squid-3.1.0.15.orig/src/main.cc squid-3.1.0.15/src/main.cc
  
          syslog(LOG_NOTICE, "Squid Parent: child process %d started", pid);
  
-diff -Nru squid-3.1.0.15.orig/src/Makefile.am squid-3.1.0.15/src/Makefile.am
---- squid-3.1.0.15.orig/src/Makefile.am	2009-11-23 04:10:01.000000000 +0100
-+++ squid-3.1.0.15/src/Makefile.am	2009-11-28 10:50:22.000000000 +0100
+diff -Nru squid-3.1.6.orig/src/Makefile.am squid-3.1.6/src/Makefile.am
+--- squid-3.1.6.orig/src/Makefile.am	2010-08-01 16:01:39.000000000 +0200
++++ squid-3.1.6/src/Makefile.am	2010-08-07 07:27:43.000000000 +0200
 @@ -638,7 +638,6 @@
  
  sysconf_DATA = \
@@ -250,7 +250,7 @@ diff -Nru squid-3.1.0.15.orig/src/Makefile.am squid-3.1.0.15/src/Makefile.am
  	mime.conf.default
  
  data_DATA = \
-@@ -718,8 +717,8 @@
+@@ -719,8 +718,8 @@
  DEFAULT_ACCESS_LOG      = $(DEFAULT_LOG_PREFIX)/access.log
  DEFAULT_STORE_LOG       = $(DEFAULT_LOG_PREFIX)/store.log
  DEFAULT_PID_FILE        = $(DEFAULT_PIDFILE)
@@ -276,6 +276,6 @@ diff -Nru squid-3.1.0.15.orig/src/Makefile.am squid-3.1.0.15/src/Makefile.am
 -	$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE).documented; \
 +	echo "$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE).default"; \
 +	$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE).default; \
- 	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX)
+ 	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX); \
+ 	$(mkinstalldirs) $(DESTDIR)`dirname $(DEFAULT_PIDFILE)`
  
- uninstall-local: squid.conf.default
