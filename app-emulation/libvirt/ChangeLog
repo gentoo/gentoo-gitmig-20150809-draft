@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.66 2010/08/06 01:48:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.67 2010/08/07 02:43:29 flameeyes Exp $
+
+  07 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  libvirt-0.8.3.ebuild:
+  Don't install the init script if we're not building the daemon; also don't
+  add logs about networking in that case.
 
   06 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libvirt-0.8.3.ebuild:

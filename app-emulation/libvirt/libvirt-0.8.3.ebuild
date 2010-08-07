@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3.ebuild,v 1.2 2010/08/06 01:48:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3.ebuild,v 1.3 2010/08/07 02:43:29 flameeyes Exp $
 
 BACKPORTS=2
 
@@ -168,12 +168,15 @@ src_install() {
 		EXAMPLE_DIR=/usr/share/doc/${PF}/python/examples \
 		|| die "emake install failed"
 
+	find "${D}" -name '*.la' -delete || die
+
+	use libvirtd || return 0
+	# From here, only libvirtd-related instructions, be warned!
+
 	newinitd "${FILESDIR}/libvirtd.init-r1" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r1" libvirtd || die
 
 	keepdir /var/lib/libvirt/images
-
-	find "${D}" -name '*.la' -delete || die
 }
 
 pkg_preinst() {
@@ -203,6 +206,10 @@ pkg_postinst() {
 		elog "To allow normal users to connect to libvirtd you must change the"
 		elog " unix sock group and/or perms in /etc/libvirt/libvirtd.conf"
 	fi
+
+	use libvirtd || return 0
+	# From here, only libvirtd-related instructions, be warned!
+
 	elog
 	elog "For the basic networking support (bridged and routed networks)"
 	elog "you don't need any extra software. For more complex network modes"
