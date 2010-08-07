@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lxmusic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lxmusic/ChangeLog,v 1.1 2010/08/07 17:07:28 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lxmusic/ChangeLog,v 1.2 2010/08/07 17:30:24 vostorga Exp $
+
+  07 Aug 2010; Víctor Ostorga <vostorga@gentoo.org> lxmusic-0.4.4.ebuild:
+  Adding x11-libs/libnotify as RDEPEND and fixing typo
 
 *lxmusic-0.4.4 (07 Aug 2010)
 
