@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.5.ebuild,v 1.1 2010/05/04 00:33:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.10.ebuild,v 1.1 2010/08/07 00:25:40 matsuu Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -25,6 +25,10 @@ RDEPEND=">=app-i18n/ibus-1.3
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/data/db/open-phrase/ || die
