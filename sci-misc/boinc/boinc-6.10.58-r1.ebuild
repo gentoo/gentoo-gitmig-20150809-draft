@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.58.ebuild,v 1.1 2010/07/09 16:49:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.58-r1.ebuild,v 1.1 2010/08/07 12:55:31 scarabeus Exp $
 
 EAPI="2"
 
-inherit flag-o-matic depend.apache eutils wxwidgets autotools base
+inherit flag-o-matic depend.apache eutils wxwidgets autotools autotools-utils
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
@@ -42,6 +42,8 @@ PATCHES=(
 	"${FILESDIR}"/6.4.5-glibc210.patch
 )
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
 src_prepare() {
 	# use system ssl certificates
 	mkdir "${S}"/curl
@@ -50,7 +52,7 @@ src_prepare() {
 	# prevent bad changes in compile flags, bug 286701
 	sed -i -e "s:BOINC_SET_COMPILE_FLAGS::" configure.ac || die "sed failed"
 
-	base_src_prepare
+	autotools-utils_src_prepare
 
 	eautoreconf
 }
@@ -76,17 +78,21 @@ src_configure() {
 	use client || conf+=" --disable-client"
 
 	# configure
-	econf \
-		--disable-dependency-tracking \
-		--enable-unicode \
-		--with-ssl \
-		$(use_with X x) \
-		${wxconf} \
+	myeconfargs=(
+		--disable-dependency-tracking
+		--disable-static
+		--enable-unicode
+		--with-ssl
+		$(use_with X x)
+		${wxconf}
 		${conf}
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	base_src_install
+	autotools-utils_src_install
+	remove_libtool_files all
 
 	dodir /var/lib/${PN}/
 	keepdir /var/lib/${PN}/

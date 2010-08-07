@@ -72,10 +72,10 @@ start() {
     if [ "${SCHED_PARAM}" = "" ]; then
         CHRT=""
     else
-    	CHRT="/usr/bin/chrt ${SCHED_PARAM}"
+    	CHRT="eval /usr/bin/chrt ${SCHED_PARAM}"
     fi
 
-	eval ${CHRT} start-stop-daemon \
+	${CHRT} start-stop-daemon \
 		--start --quiet --chdir "${RUNTIMEDIR}" \
 		--make-pidfile \
 		--pidfile "${PIDFILE}" \

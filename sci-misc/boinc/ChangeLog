@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.91 2010/07/19 20:34:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.92 2010/08/07 12:55:31 scarabeus Exp $
+
+*boinc-6.10.58-r1 (07 Aug 2010)
+
+  07 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/6.4.5-glibc210.patch, -boinc-6.10.58.ebuild,
+  +boinc-6.10.58-r1.ebuild, files/boinc.init:
+  Version bump. Fix bug #328999, #327695 and hopefully #320747.
 
   19 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
   Whitespace.
