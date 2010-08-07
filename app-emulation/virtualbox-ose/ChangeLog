@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.71 2010/08/06 23:51:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.72 2010/08/07 04:37:50 polynomial-c Exp $
+
+  07 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  files/virtualbox-ose-3.2.8-mesa-check.patch:
+  Fixed virtualbox-ose-3.2.8-mesa-check.patch which was fscked up by me.
+  Thanks to Willard Dawson (bug #331473).
 
 *virtualbox-ose-3.2.8 (06 Aug 2010)
 

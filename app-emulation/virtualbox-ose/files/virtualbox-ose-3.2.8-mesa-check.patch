@@ -1,5 +1,5 @@
---- VirtualBox-3.2.8_OSE/configure
-+++ VirtualBox-3.2.8_OSE/configure
+--- configure
++++ configure
 @@ -1225,10 +1225,7 @@
    XCloseDisplay(dpy);
  }
@@ -12,24 +12,25 @@
  }
  
  
-@@ -1345,20 +1342,6 @@
- #include <X11/Xmu/StdCmap.h>
+@@ -1382,21 +1379,6 @@
+ #include <GL/glu.h>
  extern "C" int main(void)
  {
 -  Display *dpy;
--  int scrn_num;
--  Screen *scrn;
+-  int major, minor;
 -
 -  dpy = XOpenDisplay(NULL);
 -  if (dpy)
 -  {
--    scrn_num = DefaultScreen(dpy);
--    scrn     = ScreenOfDisplay(dpy, scrn_num);
--    Status status = XmuLookupStandardColormap(dpy, RootWindowOfScreen(scrn), 0,
--                    24, XA_RGB_DEFAULT_MAP, False, True);
--    printf("Status = %x\n", status);
+-    Bool glx_version = glXQueryVersion(dpy, &major, &minor);
 -    XCloseDisplay(dpy);
+-    if (glx_version)
+-    {
+-      printf("found version %u.%u, OK.\n", major, minor);
+-      return 0;
+-    }
 -  }
+-  printf("found (inactive), OK.\n");
    return 0;
  }
  EOF
