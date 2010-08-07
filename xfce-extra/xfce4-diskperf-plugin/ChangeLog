@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-diskperf-plugin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.2 2009/10/08 17:32:40 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.3 2010/08/07 13:50:35 ssuominen Exp $
+
+  07 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-diskperf-plugin-2.2.0.ebuild,
+  +files/xfce4-diskperf-plugin-2.2.0-link_to_libxfcegui4.patch:
+  Link to libxfcegui4 (and fix missing AC_PROG_LIBTOOL in configure.in for
+  libtool-2.2) wrt #331505 by Diego E. Pettenò.
 
   08 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
   xfce4-diskperf-plugin-2.2.0.ebuild:
