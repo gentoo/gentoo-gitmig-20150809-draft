@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.46 2010/08/06 23:53:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.47 2010/08/07 04:38:35 polynomial-c Exp $
+
+  07 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  files/xf86-video-virtualbox-3.2.8-mesa-check.patch:
+  Fixed xf86-video-virtualbox-3.2.8-mesa-check.patch which was fscked up by
+  me. Thanks to Willard Dawson (bug #331473).
 
 *xf86-video-virtualbox-3.2.8 (06 Aug 2010)
 
