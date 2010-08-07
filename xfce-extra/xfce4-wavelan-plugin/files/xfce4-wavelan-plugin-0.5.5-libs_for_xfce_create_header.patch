@@ -1,3 +1,5 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6615
+
 Because xfce4-panel is using libxfce4ui instead of libxfcegui4 the flags won't get inherited anymore.
 
 xfce4_wavelan_plugin-wavelan.o: In function `wavelan_configure':
