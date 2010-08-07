@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.256 2010/07/20 16:19:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.257 2010/08/07 05:55:41 dirtyepic Exp $
+
+*freetype-2.4.2 (07 Aug 2010)
+
+  07 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> +freetype-2.4.2.ebuild:
+  Version bump. Fixes stack overflow and Type 42 font deallocation.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> freetype-2.3.12.ebuild:
   Stable for HPPA (bug #320715).
