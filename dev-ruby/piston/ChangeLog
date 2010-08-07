@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/piston
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/piston/ChangeLog,v 1.8 2010/05/22 20:02:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/piston/ChangeLog,v 1.9 2010/08/07 13:10:44 graaff Exp $
+
+*piston-2.0.9 (07 Aug 2010)
+
+  07 Aug 2010; Hans de Graaff <graaff@gentoo.org> +piston-2.0.9.ebuild:
+  Version bump.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -piston-2.0.6.ebuild, -piston-2.0.7.ebuild:
