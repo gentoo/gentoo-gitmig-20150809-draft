@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.14 2010/08/01 10:19:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.15 2010/08/07 16:56:20 armin76 Exp $
+
+  07 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  telepathy-haze-0.3.2.ebuild:
+  ia64/sparc stable wrt #321591
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   telepathy-haze-0.3.2.ebuild:

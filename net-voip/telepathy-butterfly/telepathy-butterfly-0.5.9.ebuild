@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.9.ebuild,v 1.6 2010/08/01 10:23:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.9.ebuild,v 1.7 2010/08/07 16:52:12 armin76 Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-python/telepathy-python-0.15.17
