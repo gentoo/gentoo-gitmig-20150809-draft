@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.298 2010/08/07 06:18:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.299 2010/08/07 06:37:27 mrness Exp $
+
+  07 Aug 2010; Alin Năstac <mrness@gentoo.org> squid-3.1.6.ebuild:
+  Add sys-apps/ed DEPEND (#311927).
 
 *squid-3.1.6 (07 Aug 2010)
 *squid-2.7.9 (07 Aug 2010)
