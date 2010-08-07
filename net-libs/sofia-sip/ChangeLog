@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/sofia-sip
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.15 2010/08/01 09:40:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.16 2010/08/07 16:38:44 armin76 Exp $
+
+  07 Aug 2010; Raúl Porcel <armin76@gentoo.org> sofia-sip-1.12.10.ebuild:
+  ia64/sparc stable wrt #328733
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   sofia-sip-1.12.10.ebuild:
