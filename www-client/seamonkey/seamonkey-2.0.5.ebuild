@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.5.ebuild,v 1.12 2010/08/01 16:42:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.5.ebuild,v 1.13 2010/08/07 04:14:29 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -100,6 +100,12 @@ src_unpack() {
 }
 
 pkg_setup() {
+	# Ensure we always build with C locale.
+	export LANG="C"
+	export LC_ALL="C"
+	export LC_MESSAGES="C"
+	export LC_CTYPE="C"
+
 	export BUILD_OFFICIAL=1
 	export MOZILLA_OFFICIAL=1
 

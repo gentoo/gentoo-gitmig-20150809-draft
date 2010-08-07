@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6.ebuild,v 1.9 2010/08/01 16:42:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6.ebuild,v 1.10 2010/08/07 04:14:29 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -127,6 +127,12 @@ pkg_setup() {
 		ewarn "Gentoo's Bugtracker against this package in case it breaks for you."
 		ewarn "Those belong to upstream: https://bugzilla.mozilla.org"
 	fi
+
+	# Ensure we always build with C locale.
+	export LANG="C"
+	export LC_ALL="C"
+	export LC_MESSAGES="C"
+	export LC_CTYPE="C"
 
 	export BUILD_OFFICIAL=1
 	export MOZILLA_OFFICIAL=1

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.246 2010/08/01 16:42:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.247 2010/08/07 04:14:29 polynomial-c Exp $
+
+  07 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-2.0.5.ebuild, seamonkey-2.0.6.ebuild:
+  Ensure we always build with C locale. Thanks to fauli for reporting this
+  issue in bug #331419.
 
   01 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
   seamonkey-2.0.5.ebuild, seamonkey-2.0.6.ebuild:
