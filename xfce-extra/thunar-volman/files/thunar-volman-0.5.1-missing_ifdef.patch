@@ -1,0 +1,27 @@
+http://bugs.gentoo.org/show_bug.cgi?id=331507
+http://bugzilla.xfce.org/show_bug.cgi?id=6607
+
+--- thunar-volman/tvm-input-device.c
++++ thunar-volman/tvm-input-device.c
+@@ -121,7 +121,9 @@
+       if (enabled)
+         {
+           /* display a detection notification */
++          #ifdef HAVE_LIBNOTIFY
+           tvm_notify (icon, summary, message);
++          #endif
+ 
+           /* fetch the command for the input device type and try to run it */
+           command = xfconf_channel_get_string (context->channel, command_property, NULL);
+--- thunar-volman/tvm-usb-device.c
++++ thunar-volman/tvm-usb-device.c
+@@ -80,7 +80,9 @@
+       if (enabled)
+         {
+           /* display a detection notification */
++          #ifdef HAVE_LIBNOTIFY
+           tvm_notify (icon, summary, message);
++          #endif
+ 
+           /* fetch the command for the input device type and try to run it */
+           command = xfconf_channel_get_string (context->channel, command_property, NULL);

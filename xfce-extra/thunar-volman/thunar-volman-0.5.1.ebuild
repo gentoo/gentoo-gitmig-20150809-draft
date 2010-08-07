@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.5.1.ebuild,v 1.2 2010/07/26 16:20:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.5.1.ebuild,v 1.3 2010/08/07 11:13:52 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -30,8 +30,9 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README THANKS"
+	PATCHES=( "${FILESDIR}"/${P}-missing_ifdef.patch )
 	XFCONF="--disable-dependency-tracking
 		$(use_enable libnotify notifications)
 		$(xfconf_use_debug)"
+	DOCS="AUTHORS ChangeLog NEWS README THANKS"
 }
