@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.8 2010/03/09 12:59:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.9 2010/08/07 15:51:25 jer Exp $
+
+  07 Aug 2010; Jeroen Roovers <jer@gentoo.org> nessus-client-1.0.2.ebuild:
+  Remove glitz dependency thanks to Matt Turner (bug #330949).
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> nessus-client-1.0.2.ebuild:
   QA: Do not use absolute path to icon when in standard dirs (in

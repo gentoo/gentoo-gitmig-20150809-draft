@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.5 2010/03/09 12:59:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2.ebuild,v 1.6 2010/08/07 15:51:25 jer Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ IUSE="doc"
 
 DEPEND="!net-analyzer/nessus-core
 	dev-libs/openssl
-	media-libs/glitz
 	>=x11-libs/gtk+-2.8.8"
 RDEPEND="doc? ( app-text/htmldoc )"
 
