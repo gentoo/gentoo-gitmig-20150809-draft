@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.1-r1.ebuild,v 1.1 2010/06/06 06:26:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.1-r1.ebuild,v 1.2 2010/08/07 14:27:28 hwoarang Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://guake.org/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2
