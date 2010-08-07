@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQrcodec
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQrcodec/ChangeLog,v 1.4 2009/07/26 19:16:23 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQrcodec/ChangeLog,v 1.5 2010/08/07 14:32:46 ferringb Exp $
+
+  07 Aug 2010; Brian Harring <ferringb@gentoo.org> PyQrcodec-1.0.ebuild,
+  +files/opencv-2.0-compat.patch:
+  bug 331433- update for opencv 2.0 header changes.
 
   26 Jul 2009; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd> tag
