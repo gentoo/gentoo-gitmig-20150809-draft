@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.51 2010/08/06 23:54:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.52 2010/08/07 00:11:05 polynomial-c Exp $
+
+  07 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-guest-additions-3.1.8-r2.ebuild,
+  virtualbox-guest-additions-3.2.6.ebuild,
+  virtualbox-guest-additions-3.2.8.ebuild:
+  Added pam to DEPEND. Thanks to rafnov_AT_gmail_DOT_com for reporting this
+  in bug #331383.
 
 *virtualbox-guest-additions-3.2.8 (06 Aug 2010)
 
