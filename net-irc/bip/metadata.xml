@@ -15,9 +15,11 @@
 		of what was said while you were away.
 	</longdescription>
 	<use>
-		<flag name="oidentd">Enable oidentd support</flag>
+		<flag name="freenode">Enables freenode-specific functionality.
+			Currently that is only support for mute lists (MODE #channel +q).</flag>
 		<flag name="noctcp">Disable the automatic CTCP VERSION reply which is often
 			exploited by malicious people to cause a DoS (reconnect due to flooding).
 		</flag>
+		<flag name="oidentd">Enable oidentd support</flag>
 	</use>
 </pkgmetadata>
