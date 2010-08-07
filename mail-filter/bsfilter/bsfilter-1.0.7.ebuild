@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/bsfilter-1.0.7.ebuild,v 1.5 2010/03/11 20:37:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/bsfilter-1.0.7.ebuild,v 1.6 2010/08/07 13:32:24 graaff Exp $
 
 DESCRIPTION="bayesian spam filter which distinguishes spam and non-spam mail"
 HOMEPAGE="http://bsfilter.org/index-e.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="mecab chasen"
 
-DEPEND="virtual/ruby"
+DEPEND="=dev-lang/ruby-1.8*"
 
 RDEPEND="${DEPEND}
 	mecab? ( dev-ruby/mecab-ruby )

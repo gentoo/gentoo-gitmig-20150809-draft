@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/bsfilter
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/ChangeLog,v 1.17 2010/03/11 20:37:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bsfilter/ChangeLog,v 1.18 2010/08/07 13:32:24 graaff Exp $
+
+  07 Aug 2010; Hans de Graaff <graaff@gentoo.org> bsfilter-1.0.7.ebuild,
+  bsfilter-1.0.9.ebuild, bsfilter-1.0.15.ebuild:
+  Change virtual/ruby to dev-lang/ruby, bug 265054.
 
   11 Mar 2010; Markus Meier <maekke@gentoo.org> bsfilter-1.0.7.ebuild:
   amd64 stable, bug #304353
