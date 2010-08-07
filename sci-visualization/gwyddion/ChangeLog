@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.22 2010/05/21 11:08:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.23 2010/08/07 13:50:21 graaff Exp $
+
+  07 Aug 2010; Hans de Graaff <graaff@gentoo.org> gwyddion-2.10.ebuild:
+  Change virtual/ruby to dev-lang/ruby, bug 265054.
 
   21 May 2010; Justin Lecher <jlec@gentoo.org> gwyddion-2.18.ebuild,
   gwyddion-2.19.ebuild:
