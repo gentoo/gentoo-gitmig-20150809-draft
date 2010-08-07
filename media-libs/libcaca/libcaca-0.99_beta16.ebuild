@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.10 2009/08/24 19:54:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.11 2010/08/07 13:35:57 graaff Exp $
 
 inherit eutils autotools libtool mono
 
@@ -21,7 +21,7 @@ RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	X? ( x11-libs/libX11 x11-libs/libXt )
 	opengl? ( virtual/opengl media-libs/freeglut )
 	mono? ( dev-lang/mono )
-	ruby? ( virtual/ruby )"
+	ruby? ( =dev-lang/ruby-1.8* )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen
