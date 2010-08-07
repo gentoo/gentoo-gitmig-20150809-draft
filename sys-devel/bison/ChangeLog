@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.87 2010/05/24 13:53:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.88 2010/08/07 22:37:15 vapier Exp $
+
+*bison-2.4.3 (07 Aug 2010)
+
+  07 Aug 2010; Mike Frysinger <vapier@gentoo.org> +bison-2.4.3.ebuild:
+  Version bump #331549 by Arfrever Frehtes Taifersar Arahesis.
 
   24 May 2010; Raúl Porcel <armin76@gentoo.org> bison-2.4.1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #311867
