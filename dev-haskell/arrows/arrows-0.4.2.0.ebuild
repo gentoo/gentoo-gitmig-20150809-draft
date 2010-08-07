@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.4.2.0.ebuild,v 1.1 2010/07/13 15:46:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.4.2.0.ebuild,v 1.2 2010/08/07 11:48:24 kolmodin Exp $
 
-CABAL_FEATURES="lib profile haddock hscolour"
+CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
 
 DESCRIPTION="Arrow classes and transformers"
