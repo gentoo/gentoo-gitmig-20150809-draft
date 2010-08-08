@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.12 2010/05/24 21:53:24 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.13 2010/08/08 13:34:17 graaff Exp $
+
+  08 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  -eventmachine-0.12.10.ebuild, -eventmachine-0.12.10-r1.ebuild:
+  Remove old versions.
 
   24 May 2010; Alex Legler <a3li@gentoo.org> eventmachine-0.12.10-r2.ebuild:
   Add REE18 support
