@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.5 2010/07/22 14:40:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.6 2010/08/08 15:55:46 jmbsvicetto Exp $
+
+  08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removed deathwing00 from metadata as he took an extended away.
 
   22 Jul 2010; Jeremy Olexa <darkside@gentoo.org> lsyncd-1.33.ebuild:
   Add ~amd64-linux, tested in bug 328331
