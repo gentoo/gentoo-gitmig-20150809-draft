@@ -1,6 +1,12 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.206 2010/07/24 15:55:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.207 2010/08/08 18:13:41 jlec Exp $
+
+*lyx-1.6.7-r1 (08 Aug 2010)
+
+  08 Aug 2010; Justin Lecher <jlec@gentoo.org> lyx-1.6.7.ebuild,
+  +lyx-1.6.7-r1.ebuild:
+  Do not byte-compile scripts, 247683, Fix code for PYTHON ABI, 311677
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> lyx-1.6.6.1.ebuild:
   ia64/sparc stable wrt #321447
