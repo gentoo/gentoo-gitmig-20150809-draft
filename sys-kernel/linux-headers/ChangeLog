@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.308 2010/06/12 05:36:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.309 2010/08/08 16:24:47 klausman Exp $
+
+  08 Aug 2010; Tobias Klausmann <klausman@gentoo.org>
+  linux-headers-2.6.33.ebuild:
+  Stable on alpha, so udev works
 
   12 Jun 2010; Joseph Jezak <josejx@gentoo.org> linux-headers-2.6.34.ebuild:
   Marked -ppc/-ppc64 due to bug #323435.
