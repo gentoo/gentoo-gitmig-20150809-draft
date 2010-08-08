@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.9.ebuild,v 1.1 2010/07/19 08:08:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.9.ebuild,v 1.2 2010/08/08 18:20:48 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -31,6 +31,11 @@ ruby_add_bdepend "
 		>=dev-ruby/hoe-2.5.0
 		virtual/ruby-minitest
 	)"
+
+all_ruby_prepare() {
+	# Other packages also have use for a nonexistent directory, bug 321059
+	sed -i -e 's#/nonexistent#/nonexistent_rdoc_tests#g' test/test_rdoc*.rb
+}
 
 all_ruby_install() {
 	all_fakegem_install
