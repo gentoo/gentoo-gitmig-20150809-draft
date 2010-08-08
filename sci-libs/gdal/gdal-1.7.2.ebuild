@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2.ebuild,v 1.3 2010/07/31 19:28:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.7.2.ebuild,v 1.4 2010/08/08 17:12:42 scarabeus Exp $
 
 EAPI="3"
 
@@ -60,6 +60,8 @@ DEPEND="${RDEPEND}
 "
 
 AT_M4DIR="${S}/m4"
+
+MAKEOPTS+=" -j1"
 
 pkg_setup() {
 	# only py2 is supported
@@ -177,7 +179,7 @@ src_compile() {
 	done
 
 	# parallel makes fail
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	if use perl ; then
 	    cd "${S}"/swig/perl
