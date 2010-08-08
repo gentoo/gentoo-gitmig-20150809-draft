@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.30 2010/07/23 11:49:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.31 2010/08/08 16:02:39 armin76 Exp $
+
+  08 Aug 2010; Raúl Porcel <armin76@gentoo.org> ftgl-2.1.3_rc5.ebuild:
+  Add ~ia64 wrt #329389
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> ftgl-2.1.3_rc5.ebuild:
   add ~arm, bug #329389

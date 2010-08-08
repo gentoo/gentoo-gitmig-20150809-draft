@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.87 2010/08/07 13:35:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.88 2010/08/08 16:03:57 armin76 Exp $
+
+  08 Aug 2010; Raúl Porcel <armin76@gentoo.org> libcaca-0.99_beta17.ebuild:
+  Add ~ia64 wrt #329389
 
   07 Aug 2010; Hans de Graaff <graaff@gentoo.org>
   libcaca-0.99_beta16.ebuild, libcaca-0.99_beta16-r1.ebuild,
