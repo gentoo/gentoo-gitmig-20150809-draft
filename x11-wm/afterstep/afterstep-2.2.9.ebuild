@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.14 2010/07/04 09:14:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.15 2010/08/08 18:58:15 xarthisius Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils
@@ -45,7 +45,8 @@ S=${WORKDIR}/AfterStep-${PV}
 src_prepare() {
 	epatch "${FILESDIR}"/no-alternatives-${PV}.patch \
 		"${FILESDIR}"/${P}-make_session_data_file.patch \
-		"${FILESDIR}"/${P}-alpha.patch
+		"${FILESDIR}"/${P}-alpha.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 
 	sed -i \
 		-e '/CFLAGS="-O3"/d' \
