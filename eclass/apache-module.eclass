@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.23 2008/03/23 12:11:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.24 2010/08/08 18:46:46 hollow Exp $
 
 # @ECLASS: apache-module.eclass
 # @MAINTAINER:
@@ -228,7 +228,7 @@ apache-module_pkg_postinst() {
 		set -- ${APACHE2_MOD_CONF}
 		einfo
 		einfo "Configuration file installed as"
-		einfo "    ${APACHE_MODULES_CONFDIR}/$(basename $1).conf"
+		einfo "    ${APACHE_MODULES_CONFDIR}/$(basename ${2:-$1}).conf"
 		einfo "You may want to edit it before turning the module on in /etc/conf.d/apache2"
 		einfo
 	fi
