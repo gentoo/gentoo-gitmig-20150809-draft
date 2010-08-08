@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-filemagic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.8 2010/07/03 10:11:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.9 2010/08/08 10:59:58 graaff Exp $
+
+*ruby-filemagic-0.2.2 (08 Aug 2010)
+
+  08 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  +ruby-filemagic-0.2.2.ebuild:
+  Version bump from new upstream. Switch to use the gem. Closes bug 262606.
 
 *ruby-filemagic-0.1.1-r1 (03 Jul 2010)
 
