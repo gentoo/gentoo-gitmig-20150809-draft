@@ -2,17 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <use>
-	<flag name='gui'>
+	<flag name="gui">
 	  Enable the graphical user interface of radare (broken)
 	</flag>
-	<flag name='vala'>
+	<flag name="vala">
 	  Enable support for the vala programming language
 	</flag>
   </use>
   <herd>no-herd</herd>
   <maintainer>
-	<email>deathwing00@gentoo.org</email>
-	<name>Ioannis Aslanidis</name>
+	<email>maintainer-needed@gentoo.org</email>
   </maintainer>
 </pkgmetadata>
 

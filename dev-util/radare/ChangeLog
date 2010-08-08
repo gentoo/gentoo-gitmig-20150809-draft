@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/radare
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.13 2010/06/24 12:39:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.14 2010/08/08 15:00:23 jmbsvicetto Exp $
+
+  08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removed deathwing00 from metadata as he took an extended away.
 
 *radare-1.5-r1 (24 Jun 2010)
 
