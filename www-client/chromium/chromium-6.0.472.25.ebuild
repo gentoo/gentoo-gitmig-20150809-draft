@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.25.ebuild,v 1.2 2010/08/08 16:09:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.25.ebuild,v 1.3 2010/08/08 18:41:53 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -119,6 +119,14 @@ src_configure() {
 		myconf="${myconf} -Duse_cups=1"
 	else
 		myconf="${myconf} -Duse_cups=0"
+	fi
+
+	if use gnome; then
+		myconf="${myconf} -Dlinux_link_gnome_keyring=1"
+	else
+		# TODO: we should also disable code trying to dlopen
+		# gnome-keyring in that case.
+		myconf="${myconf} -Dlinux_link_gnome_keyring=0"
 	fi
 
 	# Enable sandbox.

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.149 2010/08/08 16:09:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.150 2010/08/08 18:41:53 phajdan.jr Exp $
+
+  08 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-6.0.472.25.ebuild, chromium-9999.ebuild:
+  Link gnome-keyring at compile time when USE=gnome. Previously the code was
+  using dlopen.
 
   08 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-6.0.472.25.ebuild, chromium-9999.ebuild:
