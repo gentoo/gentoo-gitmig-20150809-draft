@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvw/uniconvw-1.1.5.ebuild,v 1.4 2010/08/07 18:01:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvw/uniconvw-1.1.5.ebuild,v 1.5 2010/08/08 17:53:44 jlec Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=media-libs/sk1libs-0.9.1
 	~media-gfx/uniconvertor-${PV}
 	dev-python/pygtk:2"
-DPEND="${RDEPEND}"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -i \
