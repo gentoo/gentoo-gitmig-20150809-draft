@@ -1,0 +1,10 @@
+# ChangeLog for media-video/subcheck
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subcheck/ChangeLog,v 1.1 2010/08/08 00:48:39 sbriesen Exp $
+
+*subcheck-0.78.2 (08 Aug 2010)
+
+  08 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +subcheck-0.78.2.ebuild, +metadata.xml:
+  initial commit.
+
