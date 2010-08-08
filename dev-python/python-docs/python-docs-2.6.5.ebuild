@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.6.5.ebuild,v 1.6 2010/07/22 16:36:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.6.5.ebuild,v 1.7 2010/08/08 16:07:00 armin76 Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.python.org/ftp/python/doc/${PV}/python-${PV}-docs-html.tar.b
 
 LICENSE="PSF-2.2"
 SLOT="2.6"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND=">=app-admin/eselect-python-20091230"
