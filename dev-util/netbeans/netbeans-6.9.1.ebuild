@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.1 2010/08/05 15:29:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.9.1.ebuild,v 1.2 2010/08/08 20:22:10 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -13,7 +13,8 @@ SLOT="6.9"
 # netbeans distributes sources without jar files now so we need our own tarball
 # netbeans does not distribute tarball with localizations at all
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-	mirror://gentoo/${P}-l10n.tar.bz2"
+	mirror://gentoo/${P}-l10n.tar.bz2
+	mirror://gentoo/${PN}-${SLOT}.png"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
 KEYWORDS="~amd64 ~x86"
@@ -847,7 +848,7 @@ src_install() {
 		dodir /usr/share/icons/hicolor/32x32/apps
 		dosym ${DESTINATION}/nb/netbeans.png /usr/share/icons/hicolor/32x32/apps/netbeans-${SLOT}.png
 		dodir /usr/share/icons/hicolor/128x128/apps
-		cp "${FILESDIR}"/${SLOT}/netbeans.png "${D}"/usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png
+		cp "${S}"/${PN}-${SLOT}.png "${D}"/usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png
 		dosym /usr/share/icons/hicolor/128x128/apps/netbeans-${SLOT}.png /usr/share/pixmaps/netbeans-${SLOT}.png
 	fi
 
@@ -1010,28 +1011,44 @@ symlink_extjars() {
 	einfo "Symlinking runtime jars"
 
 	targetdir="platform/modules/ext"
+	# felix-2.0.3.jar - not packaged
+	# felix-main-2.0.2.jar - not packaged
 	dosyminstjar ${targetdir} javahelp jh.jar jh-2.0_05.jar
 	dosyminstjar ${targetdir} jna jna.jar jna-3.0.9.jar
+	# junit-4.5.jar - out does not contain hamcrest classes
+	# osgi.core-4.2.jar - not packaged
+	# osgi.cmpn-4.2.jar - not packaged
 	dosyminstjar ${targetdir} swing-layout-1 swing-layout.jar swing-layout-1.0.4.jar
+
+	if use netbeans_module_cnd ; then
+		targetdir="cnd/modules/ext"
+		# antlr-3.1.3.jar - upstream contains more classes
+		# antlr-runtime-3.1.3.jar - subset of antlr classes
+		# stringtemplate-3.2.jar
+	fi
 
 	if use netbeans_modules_dlight ; then
 		targetdir="dlight/modules/ext"
-		# derby-10.2.2.0.jar
-		# h2-1.0.79.jar
+		# derby-10.2.2.0.jar - not packaged
+		# h2-1.0.79.jar - not packaged
 	fi
 
 	if use netbeans_modules_enterprise ; then
 		targetdir="/enterprise/modules/ext"
 		dosyminstjar ${targetdir} commons-fileupload commons-fileupload.jar commons-fileupload-1.0.jar
+		dosyminstjar ${targetdir} glassfish-deployment-api-1.2 glassfish-deployment-api.jar jsr88javax.jar
 		# glassfish-jspparser-2.0.jar
 		# glassfish-logging-2.0.jar
 		dosyminstjar ${targetdir} httpunit httpunit.jar httpunit-1.6.2.jar
 		dosyminstjar ${targetdir} jakarta-jstl jstl.jar jstl.jar
 		dosyminstjar ${targetdir} jakarta-jstl standard.jar standard.jar
-		dosyminstjar ${targetdir} glassfish-deployment-api-1.2 glassfish-deployment-api.jar jsr88javax.jar
+		# javaee-api-6.0.jar
+		# javaee-web-api-6.0.jar
 		# servlet2.5-jsp2.1-api.jar
-		targetdir="enterprise/modules/ext/spring"
-		# spring-webmvc-2.5.jar
+		targetdir="enterprise/modules/ext/javaee6-endorsed"
+		# javax.annotation.jar
+		# jaxb-api-osgi.jar
+		# webservices-api-osgi.jar
 		targetdir="enterprise/modules/ext/jsf-1_2"
 		dosyminstjar ${targetdir} commons-beanutils-1.7 commons-beanutils.jar commons-beanutils.jar
 		dosyminstjar ${targetdir} commons-collections commons-collections.jar commons-collections.jar
@@ -1039,6 +1056,29 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} commons-logging commons-logging.jar commons-logging.jar
 		# jsf-api.jar
 		# jsf-impl.jar
+		targetdir="enterprise/modules/ext/jsf-2_0"
+		# jsf-api.jar
+		# jsf-impl.jar
+		targetdir="enterprise/modules/ext/metro"
+		# webservices-api.jar
+		# webservices-extra-api.jar
+		# webservices-extra.jar
+		# webservices-rt.jar
+		# webservices-tools.jar
+		targetdir="enterprise/modules/ext/rest"
+		dosyminstjar ${targetdir} asm-3 asm.jar asm-3.1.jar
+		# jackson-core-asl-1.1.1.jar
+		# jersey-client-1.1.5.1.jar
+		# jersey-core-1.1.5.1.jar
+		# jersey-json-1.1.5.1.jar
+		# jersey-server-1.1.5.1.jar
+		# jersey-spring-1.1.5.1.jar
+		dosyminstjar ${targetdir} jettison jettison.jar jettison-1.1.jar
+		dosyminstjar ${targetdir} jsr311-api jsr311-api.jar jsr311-api-1.1.1.jar
+		# oauth-client-1.1.5.1.jar
+		# oauth-signature-1.1.5.1.jar
+		targetdir="enterprise/modules/ext/spring"
+		# servlet2.5-jsp2.1-api.jar
 		targetdir="enterprise/modules/ext/struts"
 		dosyminstjar ${targetdir} antlr antlr.jar antlr-2.7.2.jar
 		dosyminstjar ${targetdir} bsf-2.3 bsf.jar bsf-2.3.0.jar
@@ -1060,21 +1100,6 @@ symlink_extjars() {
 		# struts-scripting-1.3.8.jar
 		# struts-taglib-1.3.8.jar
 		# struts-tiles-1.3.8.jar
-		targetdir="enterprise/modules/ext/metro"
-		# webservices-api.jar
-		# webservices-extra.jar
-		# webservices-extra-api.jar
-		# webservices-rt.jar
-		# webservices-tools.jar
-		targetdir="/enterprise/modules/ext/rest"
-		dosyminstjar ${targetdir} asm-3 asm.jar asm-3.1.jar
-		# grizzly-servlet-webserver-1.7.3.2.jar
-		# http.jar - com.sun.net.httpserver - part of JavaSE 6
-		# jersey.jar
-		# jersey-spring.jar
-		dosyminstjar ${targetdir} jettison jettison.jar jettison-1.1.jar
-		dosyminstjar ${targetdir} jsr311-api jsr311-api.jar jsr311-api-1.1.1.jar
-		# wadl2java.jar - atm do not know what to do with it
 	fi
 
 	# if use netbeans_modules_groovy ; then
@@ -1083,10 +1108,10 @@ symlink_extjars() {
 
 	if use netbeans_modules_harness ; then
 		targetdir="harness/antlib"
+		# bindex-2.2.jar
 		dosyminstjar ${targetdir} javahelp jhall.jar jsearch-2.0_05.jar
-		# openjdk-javac-6-b12.jar
 		targetdir="harness/testcoverage/cobertura"
-		# cobertura-1.9.jar
+		# cobertura-1.9.3.jar
 		targetdir="harness/testcoverage/cobertura/lib"
 		dosyminstjar ${targetdir} asm-3 asm.jar asm-3.0.jar
 		dosyminstjar ${targetdir} asm-3 asm-tree.jar asm-tree-3.0.jar
@@ -1095,6 +1120,8 @@ symlink_extjars() {
 	fi
 
 	if use netbeans_modules_ide ; then
+		targetdir="ide/modules"
+		# org-mozilla-rhino-patched.jar - some patched stuff
 		targetdir="ide/modules/ext"
 		# bytelist-0.1.jar
 		dosyminstjar ${targetdir} commons-codec commons-codec.jar apache-commons-codec-1.3.jar
@@ -1113,24 +1140,27 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} jsch jsch.jar jsch-0.1.41.jar
 		dosyminstjar ${targetdir} jvyamlb jvyamlb.jar jvyamlb-0.2.3.jar
 		dosyminstjar ${targetdir} jzlib jzlib.jar jzlib-1.0.7.jar
+		# libpam4j-1.1.jar
 		dosyminstjar ${targetdir} lucene-2.4 lucene-core.jar lucene-core-2.4.1.jar
-		# org.eclipse.mylyn.bugzilla.core_3.0.5.jar
-		# org.eclipse.mylyn.commons.core_3.0.5.jar
-		# org.eclipse.mylyn.commons.net_3.0.5.jar
-		# org.eclipse.mylyn.tasks.core_3.0.5.jar
-		# org-mozilla-rhino-patched.jar - some patched stuff
+		# org.eclipse.mylyn.bugzilla.core_3.3.1.jar
+		# org.eclipse.mylyn.commons.core_3.3.1.jar
+		# org.eclipse.mylyn.commons.net_3.3.0.jar
+		# org.eclipse.mylyn.tasks.core_3.3.1.jar
 		dosyminstjar ${targetdir} sac sac.jar sac-1.3.jar
+		# resolver-1.2.jar - probably patched apache resolver
 		# smack.jar
 		# smackx.jar
-		# resolver-1.2.jar - probably patched apache resolver
 		# svnClientAdapter-1.6.0.jar
 		dosyminstjar ${targetdir} subversion svn-javahl.jar svnjavahl-1.6.0.jar
 		# swingx-0.9.5.jar
 		dosyminstjar ${targetdir} tomcat-servlet-api-2.2 servlet.jar servlet-2.2.jar
 		# webserver.jar
+		# winp-1.14-patched.jar
 		dosyminstjar ${targetdir} xerces-2 xercesImpl.jar xerces-2.8.0.jar
+		targetdir="ide/modules/ext/jaxb"
 		# jaxb-impl.jar
 		# jaxb-xjc.jar
+		# jaxb1-impl.jar
 		targetdir="ide/modules/ext/jaxb/api"
 		# jaxb-api.jar
 		dosyminstjar ${targetdir} jsr173 jsr173.jar jsr173_api.jar
@@ -1145,6 +1175,9 @@ symlink_extjars() {
 		# 72080.jar
 		targetdir="java/modules"
 		# org-apache-tools-ant-module.jar
+		targetdir="java/modules/ext/eclipselink"
+		# eclipselink-javax.persistence-2.0.jar
+		# eclipselink-2.0.2.jar
 		targetdir="java/modules/ext"
 		dosyminstjar ${targetdir} appframework appframework.jar appframework-1.0.3.jar
 		dosyminstjar ${targetdir} beansbinding beansbinding.jar beansbinding-1.2.1.jar
@@ -1157,24 +1190,6 @@ symlink_extjars() {
 		# nexus-indexer-2.0.0-shaded.jar
 		dosyminstjar ${targetdir} junit junit.jar junit-3.8.2.jar
 		dosyminstjar ${targetdir} swing-worker swing-worker.jar swing-worker-1.1.jar
-		targetdir="java/modules/ext/jaxws22"
-		dosyminstjar ${targetdir} fastinfoset fastinfoset.jar FastInfoset.jar
-		# gmbal-api-only.jar
-		# http.jar
-		# jaxws-rt.jar
-		# jaxws-tools.jar
-		# management-api.jar
-		# mimepull.jar - atm do not know what to do with it
-		# policy.jar
-		dosyminstjar ${targetdir} saaj saaj.jar saaj-impl.jar
-		dosyminstjar ${targetdir} stax-ex stax-ex.jar stax-ex.jar
-		dosyminstjar ${targetdir} xmlstreambuffer streambuffer.jar streambuffer.jar
-		# woodstox.jar
-		targetdir="java/modules/ext/jaxws22/api"
-		# jaxws-api.jar
-		dosyminstjar ${targetdir} jsr250 jsr250.jar jsr250-api.jar
-		dosyminstjar ${targetdir} jsr67 jsr67.jar saaj-api.jar
-		dosyminstjar ${targetdir} jsr181 jsr181.jar jsr181-api.jar
 		targetdir="java/modules/ext/hibernate"
 		dosyminstjar ${targetdir} antlr antlr.jar antlr-2.7.6.jar
 		dosyminstjar ${targetdir} asm-2.2 asm.jar asm.jar
@@ -1193,8 +1208,47 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} javassist-3 javassist.jar javassist.jar
 		# jdbc2_0-stdext.jar - obsolete package
 		dosyminstjar ${targetdir} jtidy Tidy.jar jtidy-r8-20060801.jar
+		targetdir="java/modules/ext/jaxws22"
+		dosyminstjar ${targetdir} fastinfoset fastinfoset.jar FastInfoset.jar
+		# gmbal-api-only.jar
+		# http.jar
+		# jaxws-rt.jar
+		# jaxws-tools.jar
+		# management-api.jar
+		# mimepull.jar - atm do not know what to do with it
+		# policy.jar
+		dosyminstjar ${targetdir} saaj saaj.jar saaj-impl.jar
+		dosyminstjar ${targetdir} stax-ex stax-ex.jar stax-ex.jar
+		dosyminstjar ${targetdir} xmlstreambuffer streambuffer.jar streambuffer.jar
+		# woodstox.jar
+		targetdir="java/modules/ext/jaxws22/api"
+		# jaxws-api.jar
+		dosyminstjar ${targetdir} jsr250 jsr250.jar jsr250-api.jar
+		dosyminstjar ${targetdir} jsr67 jsr67.jar saaj-api.jar
+		dosyminstjar ${targetdir} jsr181 jsr181.jar jsr181-api.jar
 		targetdir="java/modules/ext/spring"
-		# spring-2.5.jar
+		# spring-2.5.6.SEC01.jar
+		targetdir="java/modules/ext/spring-3.0"
+		# spring-aop-3.0.2.RELEASE.jar
+		# spring-asm-3.0.2.RELEASE.jar
+		# spring-aspects-3.0.2.RELEASE.jar
+		# spring-beans-3.0.2.RELEASE.jar
+		# spring-context-support-3.0.2.RELEASE.jar
+		# spring-context-3.0.2.RELEASE.jar
+		# spring-core-3.0.2.RELEASE.jar
+		# spring-expression-3.0.2.RELEASE.jar
+		# spring-instrument-tomcat-3.0.2.RELEASE.jar
+		# spring-instrument-3.0.2.RELEASE.jar
+		# spring-jdbc-3.0.2.RELEASE.jar
+		# spring-jms-3.0.2.RELEASE.jar
+		# spring-orm-3.0.2.RELEASE.jar
+		# spring-oxm-3.0.2.RELEASE.jar
+		# spring-struts-3.0.2.RELEASE.jar
+		# spring-test-3.0.2.RELEASE.jar
+		# spring-tx-3.0.2.RELEASE.jar
+		# spring-webmvc-portlet-3.0.2.RELEASE.jar
+		# spring-webmvc-3.0.2.RELEASE.jar
+		# spring-web-3.0.2.RELEASE.jar
 		targetdir="java/modules/ext/toplink"
 		# toplink-essentials.jar
 		# toplink-essentials-agent.jar
@@ -1225,6 +1279,10 @@ symlink_extjars() {
 	fi
 
 	if use netbeans_modules_ruby ; then
+		targetdir="ruby/modules"
+		# org-jruby.jar
+		# org-kxml2.jar
+		# org-rubyforge-debugcommons.jar
 		targetdir="ruby/modules/ext"
 		dosyminstjar ${targetdir} asm-3 asm.jar asm-3.0.jar
 		dosyminstjar ${targetdir} asm-3 asm-analysis.jar asm-analysis-3.0.jar
