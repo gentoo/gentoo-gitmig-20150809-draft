@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-radio-plugin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio-plugin/ChangeLog,v 1.4 2009/08/26 10:10:35 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio-plugin/ChangeLog,v 1.5 2010/08/08 15:55:37 ssuominen Exp $
+
+  08 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-radio-plugin-0.4.2.ebuild,
+  +files/xfce4-radio-plugin-0.4.2-link_to_libxfcegui4.patch:
+  Link to libxfcegui4 wrt #331495 by Diego E. Pettenò.
 
   26 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   xfce4-radio-plugin-0.4.2.ebuild:
