@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.78 2010/07/11 10:32:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.79 2010/08/08 11:34:20 armin76 Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -194,6 +194,12 @@ qt4-build_src_prepare() {
 	if [[ ${CHOST} == *86*-apple-darwin* ]] ; then
 		# qmake bus errors with -O2 but -O3 works
 		replace-flags -O2 -O3
+	fi
+
+	if [[ ${CHOST} == arm* ]] ; then
+		# Fails on arm with -Os, bug 331641
+		# This can be removed once qt-4.7 is stable or the bug on gcc is fixed
+		replace-flags -Os -O2
 	fi
 
 	# Bug 178652
