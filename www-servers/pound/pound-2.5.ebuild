@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.5.ebuild,v 1.2 2010/08/06 18:02:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.5.ebuild,v 1.3 2010/08/08 02:14:26 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="http://www.apsis.ch/pound/${MY_P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc x86"
 IUSE="dynscaler"
 
 DEPEND="dev-libs/libpcre
