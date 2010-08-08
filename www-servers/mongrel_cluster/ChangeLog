@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/mongrel_cluster
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.7 2010/07/17 08:02:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.8 2010/08/08 12:39:06 graaff Exp $
+
+  08 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  -mongrel_cluster-1.0.5.ebuild:
+  Remove old version.
 
 *mongrel_cluster-1.0.5-r1 (17 Jul 2010)
 
