@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20100615.ebuild,v 1.3 2010/07/13 13:29:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20100615.ebuild,v 1.4 2010/08/08 21:14:58 chithanh Exp $
 
 EAPI=2
 SNAPSHOT="yes"
@@ -17,6 +17,7 @@ RDEPEND=">=x11-base/xorg-server-1.7[-minimal]
 	>=x11-libs/libdrm-2.4.19"
 
 DEPEND="${RDEPEND}
+	x11-proto/dri2proto
 	x11-proto/fontsproto
 	x11-proto/randrproto
 	x11-proto/renderproto
