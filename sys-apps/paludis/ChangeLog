@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.168 2010/08/06 19:19:54 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.169 2010/08/08 10:58:19 peper Exp $
+
+*paludis-0.52.1 (08 Aug 2010)
+
+  08 Aug 2010; Piotr Jaroszyński <peper@gentoo.org> +paludis-0.52.1.ebuild:
+  Add 0.52.1
 
 *paludis-0.52.0 (06 Aug 2010)
 
