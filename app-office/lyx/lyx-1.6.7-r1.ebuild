@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.7-r1.ebuild,v 1.1 2010/08/08 18:13:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.7-r1.ebuild,v 1.2 2010/08/08 21:33:30 mr_bones_ Exp $
 
 EAPI=2
 
@@ -88,7 +88,6 @@ DEPEND="${COMMONDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
-
 
 pkg_setup() {
 	python_set_active_version 2
