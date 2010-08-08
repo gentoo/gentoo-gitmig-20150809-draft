@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.8 2010/08/08 11:59:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.9 2010/08/08 14:15:20 phajdan.jr Exp $
+
+  08 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> libecap-0.0.2.ebuild:
+  x86 stable wrt security bug #301828
 
   08 Aug 2010; Markos Chandras <hwoarang@gentoo.org> libecap-0.0.2.ebuild:
   Stable on amd64. Security bug #301828
