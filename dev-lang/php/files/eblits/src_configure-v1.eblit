@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.4 2010/07/26 13:42:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.5 2010/08/08 20:32:22 mabi Exp $
 
 eblit-php-src_configure() {
 	PHP_DESTDIR="/usr/$(get_libdir)/php${PHP_MV}"
@@ -241,6 +241,38 @@ eblit-php-src_configure() {
 			append-ldflags "-Wl,--version-script=${FILESDIR}/php${PHP_MV}-ldvs"
 		fi
 	fi
+
+	mkdir -p "${WORKDIR}/sapis-build"
+	for one_sapi in $SAPIS ; do
+		use "${one_sapi}" || continue
+		php_set_ini_dir "${one_sapi}"
+
+		cp -r "${S}" "${WORKDIR}/sapis-build/${one_sapi}"
+		cd "${WORKDIR}/sapis-build/${one_sapi}"
+
+		sapi_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR}
+			--with-config-file-scan-dir=${PHP_EXT_INI_DIR_ACTIVE}"
+
+		for sapi in $SAPIS ; do
+			case "$sapi" in
+				cli|cgi|embed|fpm)
+					if [[ "${one_sapi}" == "${sapi}" ]] ; then
+						sapi_conf="${sapi_conf} --enable-${sapi}"
+					else
+						sapi_conf="${sapi_conf} --disable-${sapi}"
+					fi
+					;;
+
+				apache2)
+					if [[ "${one_sapi}" == "${sapi}" ]] ; then
+						sapi_conf="${sapi_conf} --with-apxs2=/usr/sbin/apxs"
+					else
+						sapi_conf="${sapi_conf} --without-apxs2"
+					fi
+					;;
+			esac
+		done
+
+		econf ${sapi_conf}
+	done
 }
-
-

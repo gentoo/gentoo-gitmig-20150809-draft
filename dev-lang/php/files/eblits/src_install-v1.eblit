@@ -1,15 +1,25 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.6 2010/07/29 17:27:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.7 2010/08/08 20:32:22 mabi Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
 	addpredict /usr/share/snmp/mibs/.index
 
+	# grab the first SAPI that got built and install common files from there
+	local first_sapi=""
+	for sapi in $SAPIS ; do
+		if use $sapi ; then
+			first_sapi=$sapi
+			break
+		fi
+	done
+
 	# Makefile forgets to create this before trying to write to it...
 	dodir "${PHP_DESTDIR}/bin"
 
 	# Install php environment (without any sapis)
+	cd "${WORKDIR}/sapis-build/$first_sapi"
 	emake INSTALL_ROOT="${D}" \
 		install-build install-headers install-programs \
 		|| die "emake install failed"

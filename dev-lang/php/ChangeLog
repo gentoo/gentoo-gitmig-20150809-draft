@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.401 2010/08/03 08:58:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.402 2010/08/08 20:32:23 mabi Exp $
+
+*php-5.3.3-r1 (08 Aug 2010)
+
+  08 Aug 2010; Matti Bickel <mabi@gentoo.org>
+  files/eblits/src_compile-v1.eblit, -php-5.3.3.ebuild,
+  files/eblits/src_configure-v1.eblit, files/eblits/src_install-v1.eblit,
+  +php-5.3.3-r1.ebuild:
+  fix QA warnings by building each SAPI in its own dir, add patch to fix bug
+  #327589 (thanks to Martin von Gagern)
 
   03 Aug 2010; Matti Bickel <mabi@gentoo.org> php-5.2.14.ebuild:
   added missing mhash in IUSE
