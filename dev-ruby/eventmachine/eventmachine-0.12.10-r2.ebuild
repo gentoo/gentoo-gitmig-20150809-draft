@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-0.12.10-r2.ebuild,v 1.3 2010/05/24 21:53:24 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/eventmachine-0.12.10-r2.ebuild,v 1.4 2010/08/08 13:43:49 graaff Exp $
 
 EAPI="2"
 # jruby → has shims for Java handling but tests fail badly, remaining
@@ -31,6 +31,9 @@ all_ruby_prepare() {
 	# fix tests on non-FreeBSD (where kqueue is missing) — sent upstream
 	# fix building when git is not available — sent upstream
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	# Fix https test: bug 299782
+	epatch "${FILESDIR}/${P}-https-test.patch"
 }
 
 each_ruby_configure() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.13 2010/08/08 13:34:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.14 2010/08/08 13:43:49 graaff Exp $
+
+  08 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  eventmachine-0.12.10-r2.ebuild,
+  +files/eventmachine-0.12.10-https-test.patch:
+  Fix failing test, bug 299782.
 
   08 Aug 2010; Hans de Graaff <graaff@gentoo.org>
   -eventmachine-0.12.10.ebuild, -eventmachine-0.12.10-r1.ebuild:
