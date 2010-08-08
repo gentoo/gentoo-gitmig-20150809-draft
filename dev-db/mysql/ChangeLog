@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.534 2010/06/07 14:54:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.535 2010/08/08 23:40:06 robbat2 Exp $
+
+*mysql-5.1.49 (08 Aug 2010)
+
+  08 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.49.ebuild:
+  Version bump, should clear the way for security bug #321791.
 
   07 Jun 2010; Brent Baude <ranger@gentoo.org> mysql-5.0.90-r2.ebuild:
   Marking mysql-5.0.90-r2 ppc64 for bug 303747
