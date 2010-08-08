@@ -1,6 +1,10 @@
 # ChangeLog for media-video/flumotion
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.19 2010/07/04 06:05:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.20 2010/08/08 16:00:55 jmbsvicetto Exp $
+
+  08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removed deathwing00 from metadata as he took an extended away.
 
 *flumotion-0.6.2 (04 Jul 2010)
 
