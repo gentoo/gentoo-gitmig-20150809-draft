@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/email
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.29 2010/03/18 11:29:56 deathwing00 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.30 2010/08/08 16:03:18 jmbsvicetto Exp $
+
+  08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removed deathwing00 from metadata as he took an extended away.
 
   04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> email-3.0.5.ebuild:
   Replace -Wl,--no-as-needed with function from flag-o-matic eclass.

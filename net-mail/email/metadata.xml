@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>deathwing00@gentoo.org</email>
-  <name>Ioannis Aslanidis</name>
-</maintainer>
-<herd>net-mail</herd>
+  <herd>net-mail</herd>
   <longdescription lang="en">
-		Advanced CLI tool for sending mail.
+    Advanced CLI tool for sending mail.
   </longdescription>
 </pkgmetadata>
