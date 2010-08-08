@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.255 2010/01/06 19:13:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.256 2010/08/08 06:10:24 mrness Exp $
+
+  08 Aug 2010; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r23.ebuild,
+  ppp-2.4.4-r25.ebuild:
+  Build radius plugin only when correspondent USE flag is enabled (#296436).
 
   06 Jan 2010; Brent Baude <ranger@gentoo.org> ppp-2.4.4-r24.ebuild:
   Marking ppp-2.4.4-r24 ppc64 for bug 289593
