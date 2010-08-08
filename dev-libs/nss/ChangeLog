@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.185 2010/08/07 01:31:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.186 2010/08/08 17:49:20 anarchy Exp $
+
+  08 Aug 2010; Jory A. Pratt <anarchy@gentoo.org> nss-3.12.7.ebuild:
+  Fix nspr dep bug #331643
 
 *nss-3.12.7 (07 Aug 2010)
 
