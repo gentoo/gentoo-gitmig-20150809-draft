@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.31 2010/08/03 21:00:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.32 2010/08/09 07:43:18 pva Exp $
+
+  09 Aug 2010; Peter Volkov <pva@gentoo.org> -qpopper-4.0.5-r3.ebuild,
+  -qpopper-4.0.14.ebuild, qpopper-4.0.16.ebuild, metadata.xml:
+  Put back mail-client/drac, bug #280933. Took maintenance. Drop old.
 
   03 Aug 2010; Markos Chandras <hwoarang@gentoo.org> qpopper-4.0.14.ebuild,
   qpopper-4.0.16.ebuild, metadata.xml:
