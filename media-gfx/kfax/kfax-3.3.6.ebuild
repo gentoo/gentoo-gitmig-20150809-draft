@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kfax/kfax-3.3.6.ebuild,v 1.1 2010/02/21 18:45:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kfax/kfax-3.3.6.ebuild,v 1.2 2010/08/09 16:23:35 reavertm Exp $
 
 EAPI=2
-KDE_MINIMAL=4.4
+
 KDE_LINGUAS="af ar be bg br ca ca@valencia cs cy da de el en_GB eo es et eu fa
 fi fr ga gl he hi hne hr hu is it ja km ko lt lv mai mk ms nb nds ne nl nn oc pa
 pl pt pt_BR ro ru se sk sl sv ta tg th tr uk vi wa xh zh_CN zh_HK zh_TW"
@@ -22,8 +22,11 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
-RDEPEND="x11-libs/libX11"
+RDEPEND="
+	x11-libs/libX11
+"
 DEPEND="${RDEPEND}
-	x11-proto/xproto"
+	x11-proto/xproto
+"
 
 S=${WORKDIR}/${MY_P}
