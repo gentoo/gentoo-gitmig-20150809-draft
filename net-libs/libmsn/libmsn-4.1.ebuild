@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/libmsn-4.1.ebuild,v 1.6 2010/07/13 08:03:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/libmsn-4.1.ebuild,v 1.7 2010/08/09 02:00:40 josejx Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
