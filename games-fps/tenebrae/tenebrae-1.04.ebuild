@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.13 2010/03/10 21:46:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.14 2010/08/09 17:03:27 mr_bones_ Exp $
 
+EAPI=2
 #ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
 #ECVS_MODULE="tenebrae_0"
 #inherit cvs
@@ -22,7 +23,6 @@ RDEPEND="virtual/opengl
 	media-libs/libpng
 	x11-libs/libXxf86vm
 	x11-libs/libXxf86dga"
-#	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xf86dgaproto
@@ -37,6 +37,9 @@ src_unpack() {
 	else
 		cvs_src_unpack
 	fi
+}
+
+src_prepare() {
 	cd tenebrae_0
 
 	sed -i \
@@ -47,25 +50,20 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-glhax.patch \
 		"${FILESDIR}"/${P}-exec-stack.patch
 	cd linux
-	sed "s:-mpentiumpro -O6:${CFLAGS}:" Makefile.i386linux > Makefile
-	#if use sdl ; then
-	#	cd ../sdl
-	#	./autogen.sh
-	#fi
+	sed \
+		-e "/^LDFLAGS/s:=:+=:" \
+		-e "s:-mpentiumpro -O6:${CFLAGS}:" \
+		Makefile.i386linux > Makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
 	cd "${S}"/tenebrae_0/linux
-	make MASTER_DIR="${GAMES_DATADIR}/quake1" build_release || die
-	#if use sdl ; then
-	#	cd ${S}/tenebrae_0/sdl
-	#	egamesconf || die
-	#	make || die
-	#fi
+	emake MASTER_DIR="${GAMES_DATADIR}/quake1" build_release || die
 }
 
 src_install() {
-	newgamesbin tenebrae_0/linux/release*/bin/tenebrae.run tenebrae || die "newgamesbin"
+	newgamesbin tenebrae_0/linux/release*/bin/tenebrae.run tenebrae || die
 	insinto "${GAMES_DATADIR}/quake1/tenebrae"
 	doins "${WORKDIR}"/tenebrae/* || die "doins data"
 	dodoc tenebrae_0/linux/README "${WORKDIR}"/Tenebrae_Readme.txt
