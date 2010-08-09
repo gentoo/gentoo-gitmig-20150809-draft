@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.4-r1.ebuild,v 1.3 2010/06/28 06:13:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.4-r1.ebuild,v 1.4 2010/08/09 16:42:18 reavertm Exp $
 
 EAPI=2
-
-KDE_MINIMAL=4.4
 
 KDE_LINGUAS="be ca ca@valencia cs da de el en_GB eo es et fr ga gl hr is it ja
 km ko lt lv nb nds nl nn pa pl pt pt_BR ro ru sk sv tr uk wa zh_CN zh_TW"
@@ -24,7 +22,9 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="debug +handbook"
 
-DEPEND=">=kde-base/libksane-${KDE_MINIMAL}
-	!${CATEGORY}/${PN}:0"
+DEPEND="
+	>=kde-base/libksane-${KDE_MINIMAL}
+"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
