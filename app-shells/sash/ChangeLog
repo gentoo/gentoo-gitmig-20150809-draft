@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.36 2005/07/30 06:14:45 vapier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.37 2010/08/09 06:22:25 vapier Exp $
+
+  09 Aug 2010; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Orphan this old & largely obsolete shell.
 
 *sash-3.7-r1 (30 Jul 2005)
 
