@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/bcron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.14 2010/01/14 18:26:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.15 2010/08/09 09:41:21 bangert Exp $
+
+*bcron-0.09-r2 (09 Aug 2010)
+
+  09 Aug 2010; Thilo Bangert <bangert@gentoo.org> +bcron-0.09-r2.ebuild,
+  +files/bcron-0.09-fix-socket-permissions.patch:
+  fix socket permissions (#328013)
 
 *bcron-0.09-r1 (14 Jan 2010)
 
