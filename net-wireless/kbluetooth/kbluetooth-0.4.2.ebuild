@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4.2.ebuild,v 1.4 2010/08/09 11:38:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kbluetooth/kbluetooth-0.4.2.ebuild,v 1.5 2010/08/09 15:44:04 reavertm Exp $
 
 EAPI=2
-KDE_MINIMAL=4.4
+
 KDE_LINGUAS="cs da de en_GB eo es et fr ga gl it km lt nds nl pa pt pt_BR ro
 ru sv tr uk zh_CN zh_TW"
 inherit kde4-base
@@ -17,15 +17,16 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="debug semantic-desktop"
 
-COMMON_DEPEND=">=kde-base/solid-${KDE_MINIMAL}[bluetooth]
+COMMON_DEPEND="
+	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop?]
 	>=kde-base/libkworkspace-${KDE_MINIMAL}
-	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop?]"
+	>=kde-base/solid-${KDE_MINIMAL}[bluetooth]
+"
 RDEPEND="${COMMON_DEPEND}
 	app-mobilephone/obex-data-server
-	app-mobilephone/obexftp"
+	app-mobilephone/obexftp
+"
 DEPEND="${COMMON_DEPEND}"
-
-DOCS="AUTHORS ChangeLog TODO"
 
 src_prepare() {
 	sed -i \
@@ -36,7 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs+=(
+	mycmakeargs=(
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 	)
 
