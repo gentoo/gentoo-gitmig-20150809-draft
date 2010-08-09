@@ -1,6 +1,9 @@
 # ChangeLog for app-text/nfoview
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.13 2010/08/08 01:54:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/ChangeLog,v 1.14 2010/08/09 11:13:31 hwoarang Exp $
+
+  09 Aug 2010; Markos Chandras <hwoarang@gentoo.org> nfoview-1.9.1.ebuild:
+  Stable on amd64 wrt bug #331363
 
   08 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> nfoview-1.9.1.ebuild:
   x86 stable wrt bug #331363
