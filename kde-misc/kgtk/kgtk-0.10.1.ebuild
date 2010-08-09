@@ -1,11 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.5 2009/11/07 10:36:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.6 2010/08/09 13:05:10 scarabeus Exp $
 
 EAPI=2
 KDE_LINGUAS="cs de en_GB es fr pt_BR ru zh_CN"
 KDE_LINGUAS_DIR="kdialogd4/po"
-KDE_MINIMAL="4.2"
 inherit kde4-base
 
 DESCRIPTION="Allows *some* Gtk and Qt4 applications to use KDE's file dialogs when run under KDE"

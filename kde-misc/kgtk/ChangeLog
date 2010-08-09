@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.25 2010/05/22 11:45:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.26 2010/08/09 13:05:10 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> kgtk-0.10.1.ebuild:
+  Drop useless kde_minimal definition.
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)
