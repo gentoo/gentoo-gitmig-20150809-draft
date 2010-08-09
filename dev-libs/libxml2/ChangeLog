@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.293 2010/08/09 02:24:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.294 2010/08/09 04:09:07 zmedico Exp $
+
+  09 Aug 2010; Zac Medico <zmedico@gentoo.org> libxml2-2.7.6.ebuild,
+  libxml2-2.7.7.ebuild:
+  Fix python dep so that if pyxml is pulled in, it pulls in python too
+  (without requiring python[xml] in this case).
 
   09 Aug 2010; Zac Medico <zmedico@gentoo.org> libxml2-2.7.6.ebuild,
   libxml2-2.7.7.ebuild:

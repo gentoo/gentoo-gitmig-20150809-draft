@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.7.ebuild,v 1.12 2010/08/09 02:24:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.7.ebuild,v 1.13 2010/08/09 04:09:07 zmedico Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -28,7 +28,7 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz
 		${XSTS_HOME}/${XSTS_NAME_2}/${XSTS_TARBALL_2} )"
 
 RDEPEND="sys-libs/zlib
-	python? ( || ( <dev-lang/python-3[xml] dev-python/pyxml ) )
+	python? ( || ( <dev-lang/python-3[xml] ( <dev-lang/python-3 dev-python/pyxml ) ) )
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
