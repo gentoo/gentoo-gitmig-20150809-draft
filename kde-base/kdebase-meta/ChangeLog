@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.175 2010/08/09 11:31:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.176 2010/08/09 17:34:25 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdebase-meta-4.4.5.ebuild:
+  Drop alpha ia64 and sparc per the AT Lead permission.
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdebase-meta-4.3.5.ebuild, -kdebase-meta-4.4.4.ebuild:

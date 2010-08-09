@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.44 2010/08/09 11:30:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.45 2010/08/09 17:34:30 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  plasma-runtime-4.4.5.ebuild:
+  Drop alpha ia64 and sparc per the AT Lead permission.
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -plasma-runtime-4.3.5.ebuild, -plasma-runtime-4.4.4.ebuild:
