@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/prank-100701.ebuild,v 1.1 2010/07/15 15:56:45 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/prank-100701.ebuild,v 1.2 2010/08/09 17:26:54 xarthisius Exp $
 
 EAPI="2"
+
+inherit toolchain-funcs
 
 DESCRIPTION="Probabilistic Alignment Kit"
 HOMEPAGE="http://www.ebi.ac.uk/goldman-srv/prank/prank/"
@@ -13,12 +15,17 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_prepare() {
-	perl -i -pe 's/(CC|CXX|CFLAGS|CXXFLAGS)\s*=/#/' "${S}/Makefile" || die
+	sed -i -e "s/\$(LINK)/& \$(LDFLAGS)/" Makefile || die
+}
+
+src_compile() {
+	emake LINK="$(tc-getCXX)" CFLAGS="${CFLAGS}" \
+		CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" || die
 }
 
 src_install() {
-	dobin prank || die "dobin failed"
+	dobin prank || die
 }
