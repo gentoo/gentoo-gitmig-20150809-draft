@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.21 2010/07/31 10:17:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.22 2010/08/09 20:02:32 grobian Exp $
+
+*git-1.7.2-r2 (09 Aug 2010)
+
+  09 Aug 2010; Fabian Groffen <grobian@gentoo.org> -git-1.7.2-r1.ebuild,
+  +git-1.7.2-r2.ebuild:
+  Change SHELL_PATH from bash to sh to resolve problems with git's shell
+  scripts for some people, bug #331031
 
   31 Jul 2010; Fabian Groffen <grobian@gentoo.org> git-1.7.2-r1.ebuild:
   Fix compilation with USE=-iconv on non-glibc platforms since disabling of

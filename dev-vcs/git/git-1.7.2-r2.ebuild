@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2-r1.ebuild,v 1.2 2010/07/31 10:17:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2-r2.ebuild,v 1.1 2010/08/09 20:02:32 grobian Exp $
 
 EAPI=3
 
@@ -116,7 +116,7 @@ exportmakeopts() {
 	# broken assumptions, because of broken build system ...
 	myopts="${myopts} NO_FINK=YesPlease NO_DARWIN_PORTS=YesPlease"
 	myopts="${myopts} INSTALL=install TAR=tar"
-	myopts="${myopts} SHELL_PATH=${EPREFIX}/bin/bash"
+	myopts="${myopts} SHELL_PATH=${EPREFIX}/bin/sh"
 	myopts="${myopts} SANE_TOOL_PATH="
 	myopts="${myopts} OLD_ICONV="
 	myopts="${myopts} NO_EXTERNAL_GREP="
