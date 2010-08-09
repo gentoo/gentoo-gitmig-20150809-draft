@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/elph-1.0.1.ebuild,v 1.4 2010/01/01 21:33:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/elph/elph-1.0.1.ebuild,v 1.5 2010/08/09 18:24:26 xarthisius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,19 +13,11 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
-S="${WORKDIR}/ELPH/sources"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e "s/CC      := g++/CC      := $(tc-getCXX)/" \
-		-e "s/-D_REENTRANT -g/-D_REENTRANT ${CXXFLAGS}/" \
-		-e "s/LINKER    := g++/LINKER    := $(tc-getCXX)/" \
-		Makefile || die "Failed to patch Makefile."
-}
+S=${WORKDIR}/ELPH/sources
 
 src_compile() {
-	emake || die "Compilation failed."
+	emake CC="$(tc-getCXX)" LINKER="$(tc-getCXX)" \
+		CFLAGS="${CXXFLAGS} -D_REENTRANT" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
