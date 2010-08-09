@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/dawn-3.88a.ebuild,v 1.8 2009/07/06 21:50:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/dawn-3.88a.ebuild,v 1.9 2010/08/09 16:58:12 xarthisius Exp $
 
 #EAPI=0
-inherit eutils versionator
+inherit eutils toolchain-funcs versionator
 
 MYP=${PN}_$(replace_version_separator 1 _)
 
@@ -31,26 +31,28 @@ src_unpack() {
 	tar xfz "${DISTDIR}"/${MYP}.taz
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-no-interactive.patch
-	sed -i -e '/strip/d' Makefile*in || die "sed Makefile failed"
+	sed -i -e "s/\$(LIB_DIR)/\$(LDFLAGS) &/" \
+		-e '/strip/d' Makefile*in || die
 }
 
 src_compile() {
+	tc-export CXX
 	emake clean
 	emake guiclean
 	if ! use X && ! use opengl; then
-		./configure_min || die "configure failed"
+		./configure_min || die
 	elif ! use opengl; then
-		./configure_xwin || die "configure_xwin failed"
+		./configure_xwin || die
 	else
-		./configure || die "configure failed"
+		./configure || die
 	fi
 	einfo "Compiling"
-	emake  || die "emake failed"
+	emake || die
 }
 
 src_install() {
 	dodir /usr/bin
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc README.txt
 	if use doc; then
 		pdflatex DOC/G4PRIM_FORMAT_24.tex || die "pdf generation failed"
