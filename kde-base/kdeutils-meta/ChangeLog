@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.160 2010/08/09 07:31:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.161 2010/08/09 11:30:58 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdeutils-meta-4.3.5.ebuild, -kdeutils-meta-4.4.4.ebuild:
+  rm
 
   09 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   kdeutils-meta-4.4.5.ebuild:

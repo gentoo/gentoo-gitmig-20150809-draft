@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.112 2010/08/09 10:17:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.113 2010/08/09 11:31:16 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -smoke-4.4.4-r1.ebuild:
+  rm
 
   09 Aug 2010; Christian Faulhammer <fauli@gentoo.org> smoke-4.4.5.ebuild:
   x86 stable, bug 322791

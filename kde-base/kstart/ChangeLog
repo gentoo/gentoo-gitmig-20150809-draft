@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.138 2010/08/09 09:30:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.139 2010/08/09 11:30:33 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> -kstart-4.3.5.ebuild,
+  -kstart-4.4.4.ebuild:
+  rm
 
   09 Aug 2010; Christian Faulhammer <fauli@gentoo.org> kstart-4.4.5.ebuild:
   x86 stable, bug 322791

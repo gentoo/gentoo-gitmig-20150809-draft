@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kappfinder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.158 2010/06/21 20:29:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.159 2010/08/09 11:30:32 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kappfinder-4.3.5.ebuild:
+  rm
 
   21 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
   -kappfinder-4.4.4.ebuild:
