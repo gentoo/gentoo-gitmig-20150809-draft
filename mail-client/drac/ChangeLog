@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/drac
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/ChangeLog,v 1.16 2009/09/23 17:54:04 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/ChangeLog,v 1.17 2010/08/09 07:45:57 pva Exp $
+
+  09 Aug 2010; Peter Volkov <pva@gentoo.org> metadata.xml:
+  Took maintenance, bug #280933
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> drac-1.12.ebuild,
   drac-1.12-r1.ebuild:
