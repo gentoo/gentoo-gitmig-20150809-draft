@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>cluster</herd>
+	<herd>hp-cluster</herd>
+	<herd>ha-cluster</herd>
 	<maintainer>
 		<email>alexxy@gentoo.org</email>
 		<name>Alexey Shvetsov</name>
@@ -13,6 +14,6 @@
 		<flag name='fuse'>Add FUSE mount helper</flag>
 		<flag name='extras'>Install extra helper scripts</flag>
 		<flag name='infiniband'>Add support for Infiniband ibverbs transport.
-			Librarys can be found in science overlay</flag>
+			Libraries can be found in science overlay</flag>
 	</use>
 </pkgmetadata>
