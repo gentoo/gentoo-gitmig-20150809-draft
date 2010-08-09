@@ -1,0 +1,34 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6623
+http://bugs.gentoo.org/show_bug.cgi?id=331499
+
+--- configure.ac
++++ configure.ac
+@@ -40,7 +40,9 @@
+ 
+ dnl configure the panel plugin
+ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.22])
+-XDT_CHECK_PACKAGE([EXO], [exo-0.3], [0.3.1.1])
++XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.22])
++XDT_CHECK_PACKAGE([EXO], [exo-0.3], [0.3.1.1], [],
++  [XDT_CHECK_PACKAGE([EXO], [exo-1], [0.5.0])])
+ 
+ dnl check for libmpd presence
+ AC_ARG_WITH(libmpd,
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
+@@ -4,11 +4,13 @@
+ xfce4_mpc_plugin_CFLAGS =						\
+ 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
+ 	@EXO_CFLAGS@							\
+-	@LIBXFCE4PANEL_CFLAGS@
++	@LIBXFCE4PANEL_CFLAGS@						\
++	@LIBXFCEGUI4_CFLAGS@
+ 
+ xfce4_mpc_plugin_LDADD =						\
+ 	@EXO_LIBS@							\
+-	@LIBXFCE4PANEL_LIBS@
++	@LIBXFCE4PANEL_LIBS@						\
++	@LIBXFCEGUI4_LIBS@
+ 
+ 
+ xfce4_mpc_plugin_SOURCES = xfce4-mpc-plugin.c xfce4-mpc-plugin.h
