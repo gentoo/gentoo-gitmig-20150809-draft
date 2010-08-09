@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11830 2010/08/08 10:21:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11831 2010/08/09 07:24:32 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,13 +46,6 @@
 # Removal on 2010-10-05
 mail-filter/bsfilter
 mail-client/claws-mail-bsfilter
-
-# Markos Chandras <hwoarang@gentoo.org> (03 Aug 2010)
-# Uses old portmap, installs
-# static library but not the header files. Last 
-# release on 2007. Bug #280933
-# Masked for removal in 30 days
-mail-client/drac
 
 # Jeroen Roovers <jer@gentoo.org> (03 Aug 2010)
 # Alphas and snapshots are not for everyday use
