@@ -13,7 +13,7 @@
 -LDFLAGS = -lncurses -ltermcap
 -CFLAGS = -Wall -O2 -DLINUX20 $(DEBUGOPTS)
 +LDLIBS = -lncurses
-+CFLAGS ?= -Wall -O2 $(DEBUGOPTS)
++CFLAGS += -Wall $(DEBUGOPTS)
  
  # For Solaris
  #LDFLAGS = -lcurses -ltermcap
