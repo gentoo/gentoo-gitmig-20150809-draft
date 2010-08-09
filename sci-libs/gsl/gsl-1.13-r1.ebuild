@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.13-r1.ebuild,v 1.7 2010/04/09 08:48:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.13-r1.ebuild,v 1.8 2010/08/09 09:32:55 xarthisius Exp $
 
 EAPI=2
 inherit eutils flag-o-matic autotools
@@ -12,9 +12,9 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="cblas"
+IUSE="cblas-external"
 
-RDEPEND="cblas? ( virtual/cblas )"
+RDEPEND="cblas-external? ( virtual/cblas )"
 DEPEND="${RDEPEND}
 	app-admin/eselect-cblas
 	dev-util/pkgconfig"
@@ -23,8 +23,8 @@ pkg_setup() {
 	ESELECT_PROF="gsl"
 	# prevent to use external cblas from a previously installed gsl
 	local current_lib=$(eselect cblas show | cut -d' ' -f2)
-	if use cblas && [[ ${current_lib} == gsl ]]; then
-		ewarn "USE flag cblas is set: linking gsl with an external cblas."
+	if use cblas-external && [[ ${current_lib} == gsl ]]; then
+		ewarn "USE flag cblas-external is set: linking gsl with an external cblas."
 		ewarn "However the current selected external cblas is gsl."
 		ewarn "Please install and/or eselect another cblas"
 		die "Circular gsl dependency"
@@ -39,11 +39,11 @@ src_prepare() {
 }
 
 src_configure() {
-	if use cblas; then
+	if use cblas-external; then
 		export CBLAS_LIBS="$(pkg-config --libs cblas)"
 		export CBLAS_CFLAGS="$(pkg-config --cflags cblas)"
 	fi
-	econf $(use_with cblas)
+	econf $(use_with cblas-external cblas)
 }
 
 src_install() {

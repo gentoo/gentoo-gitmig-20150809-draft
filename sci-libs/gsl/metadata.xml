@@ -16,7 +16,7 @@
   functions, physical constants, and much more. 
 </longdescription>
 <use>
-  <flag name='cblas'>Link gsl with external cblas provided by
-    (<pkg>virtual/cblas</pkg>)</flag>
+  <flag name='cblas-external'>Link gsl with external cblas provided by
+    (<pkg>virtual/cblas</pkg>) instead of shipped internal version</flag>
 </use>
 </pkgmetadata>

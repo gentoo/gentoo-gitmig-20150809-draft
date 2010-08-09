@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.76 2010/07/18 13:57:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.77 2010/08/09 09:32:55 xarthisius Exp $
+
+  09 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -files/gsl-1.6-deps.diff, -files/gsl-1.12-cblas.patch, gsl-1.13-r1.ebuild,
+  gsl-1.13-r2.ebuild, gsl-1.14.ebuild, gsl-1.14-r1.ebuild, metadata.xml:
+  Renamed cblas to cblas-external wrt bug 330251. Dropped ~ppc-macos due to
+  unsolved deps. Remove old patches.
 
   18 Jul 2010; <nixnut@gentoo.org> gsl-1.14.ebuild:
   ppc stable #325179
