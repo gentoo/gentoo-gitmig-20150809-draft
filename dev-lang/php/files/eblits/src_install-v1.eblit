@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.7 2010/08/08 20:32:22 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.8 2010/08/09 10:27:53 mabi Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -44,6 +44,7 @@ eblit-php-src_install() {
 	for sapi in ${SAPIS}; do
 		if use "${sapi}" ; then
 			einfo "Installing SAPI: ${sapi}"
+			cd "${WORKDIR}/sapis-build/${sapi}"
 			# needed each time, php_install_ini would reset it
 			into "${PHP_DESTDIR}"
 			file=$(find "${SAPI_DIR}/${sapi}/" -type f | head -n 1)
