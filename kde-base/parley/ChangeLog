@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.67 2010/08/03 07:42:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.68 2010/08/09 04:23:39 josejx Exp $
+
+  09 Aug 2010; Joseph Jezak <josejx@gentoo.org> parley-4.4.5.ebuild:
+  Marked ppc stable for bug #322791.
 
   03 Aug 2010; Markos Chandras <hwoarang@gentoo.org> parley-4.4.5.ebuild:
   Stable on amd64 wrt bug #322791

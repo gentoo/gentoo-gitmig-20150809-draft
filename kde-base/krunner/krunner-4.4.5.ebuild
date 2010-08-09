@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.4.5.ebuild,v 1.2 2010/08/03 07:43:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.4.5.ebuild,v 1.3 2010/08/09 03:57:29 josejx Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE Command Runner"
 IUSE="debug"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 COMMONDEPEND="
 	$(add_kdebase_dep kephal)

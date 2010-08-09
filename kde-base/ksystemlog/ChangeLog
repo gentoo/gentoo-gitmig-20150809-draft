@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.53 2010/08/03 07:43:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.54 2010/08/09 04:04:23 josejx Exp $
+
+  09 Aug 2010; Joseph Jezak <josejx@gentoo.org> ksystemlog-4.4.5.ebuild:
+  Marked ppc stable for bug #322791.
 
   03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ksystemlog-4.4.5.ebuild:

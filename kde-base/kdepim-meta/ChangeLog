@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.157 2010/08/03 07:43:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.158 2010/08/09 03:21:53 josejx Exp $
+
+  09 Aug 2010; Joseph Jezak <josejx@gentoo.org> kdepim-meta-4.4.5.ebuild:
+  Marked ppc stable for bug #322791.
 
   03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   kdepim-meta-4.4.5.ebuild:
