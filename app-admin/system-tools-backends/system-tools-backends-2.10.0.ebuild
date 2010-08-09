@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.0.ebuild,v 1.3 2010/08/01 11:56:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.0.ebuild,v 1.4 2010/08/09 20:21:16 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit autotools eutils gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
 HOMEPAGE="http://www.gnome.org/projects/gst/"
@@ -46,9 +46,6 @@ src_prepare() {
 
 	# Apply fix from ubuntu for CVE 2008 4311
 	epatch "${FILESDIR}/${PN}-2.8.2-cve-2008-4311.patch"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
 }
 
 src_install() {
