@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.2.ebuild,v 1.1 2010/07/09 11:43:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.2.ebuild,v 1.2 2010/08/09 15:48:01 reavertm Exp $
 
 EAPI="2"
 
@@ -18,8 +18,6 @@ else
 	SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
 	S="${WORKDIR}"/"${MY_P}"
 fi
-
-KDE_MINIMAL="4.4"
 
 inherit kde4-base
 
@@ -41,8 +39,8 @@ COMMONDEPEND="
 		>=kde-base/kdepimlibs-${KDE_MINIMAL}
 	)
 	shutdown? (
-		>=kde-base/solid-${KDE_MINIMAL}
 		>=kde-base/libkworkspace-${KDE_MINIMAL}
+		>=kde-base/solid-${KDE_MINIMAL}
 	)
 "
 DEPEND="${COMMONDEPEND}

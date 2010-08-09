@@ -1,13 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.1.ebuild,v 1.3 2010/06/21 23:50:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.0.1.ebuild,v 1.4 2010/08/09 15:48:01 reavertm Exp $
 
 EAPI="2"
 
 KDE_LINGUAS="ar ast be bg ca cs da de el en_GB eo es et eu fi fr ga gl hi hne hr
 hu is it ja km lt lv mai ms nb nds nl nn oc pl pt pt_BR ro ru se si sk sl sr sv
 tr uk zh_CN zh_TW"
-KDE_MINIMAL="4.4"
 inherit kde4-base
 
 DESCRIPTION="A BitTorrent program for KDE."
@@ -29,8 +28,8 @@ COMMONDEPEND="
 		>=kde-base/kdepimlibs-${KDE_MINIMAL}
 	)
 	shutdown? (
-		>=kde-base/solid-${KDE_MINIMAL}
 		>=kde-base/libkworkspace-${KDE_MINIMAL}
+		>=kde-base/solid-${KDE_MINIMAL}
 	)
 "
 DEPEND="${COMMONDEPEND}
