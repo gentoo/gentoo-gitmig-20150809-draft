@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-2.1.15.ebuild,v 1.1 2010/06/23 08:29:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-2.1.15.ebuild,v 1.2 2010/08/09 15:10:14 hwoarang Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.unidata.ucar.edu/pub/udunits/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="UCAR-Unidata"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 
 RDEPEND="dev-libs/expat"
 DEPEND="${RDEPEND}"
