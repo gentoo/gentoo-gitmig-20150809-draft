@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/lphdisk-0.9.1-r2.ebuild,v 1.2 2008/12/14 16:57:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/lphdisk-0.9.1-r2.ebuild,v 1.3 2010/08/09 19:29:58 ssuominen Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="utility for preparing a hibernation partition for APM Suspend-To-Disk"
@@ -15,22 +16,15 @@ IUSE=""
 
 DEPEND="sys-libs/lrmi"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
 	tc-export CC
-	emake || die "emake failed."
+	emake || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-}
-
-pkg_postinst() {
-	ewarn "This package is now using system lrmi library instead of shipped"
-	ewarn "copy it came with. This package is untested, use at your own risk."
+	emake DESTDIR="${D}" install || die
 }
