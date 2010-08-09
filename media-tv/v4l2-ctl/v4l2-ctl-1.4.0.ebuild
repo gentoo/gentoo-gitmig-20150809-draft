@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l2-ctl/v4l2-ctl-1.4.0.ebuild,v 1.1 2010/05/21 01:51:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l2-ctl/v4l2-ctl-1.4.0.ebuild,v 1.2 2010/08/09 07:47:21 xarthisius Exp $
 
 EAPI=2
 
-MY_PN="ivtv-utils"
-MY_P="${MY_PN}-${PV}"
+MY_PN=ivtv-utils
+MY_P=${MY_PN}-${PV}
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Small utlility to access and change settings on V4L2 devices"
 HOMEPAGE="http://www.ivtvdriver.org"
@@ -18,16 +18,18 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="!<media-tv/ivtv-utils-1.4.0-r1"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-QA.patch
+}
 
 src_compile() {
-	cd "${S}"/utils
-	emake v4l2-ctl
+	tc-export CXX CC
+	emake -C utils v4l2-ctl || die
 }
 
 src_install() {
-	cd "${S}"
-	dobin "utils/v4l2-ctl"
-
-	dodoc doc/README.utils
+	dobin utils/v4l2-ctl || die
+	dodoc doc/README.utils || die
 }
