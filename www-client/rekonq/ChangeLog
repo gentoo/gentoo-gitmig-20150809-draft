@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.10 2010/07/18 13:46:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.11 2010/08/09 17:01:17 reavertm Exp $
+
+  09 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org> rekonq-0.5.0.ebuild:
+  Remove unnecessary KDE_MINIMAL, QA
 
   18 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> -rekonq-0.4.0.ebuild,
   rekonq-0.5.0.ebuild:
