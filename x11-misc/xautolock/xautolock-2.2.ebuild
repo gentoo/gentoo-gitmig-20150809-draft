@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.1 2008/03/23 15:11:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.2 2010/08/09 16:44:42 xarthisius Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="An automatic X screen-locker/screen-saver."
 SRC_URI="http://www.ibiblio.org/pub/Linux/X11/screensavers/${P}.tgz"
@@ -20,12 +22,12 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	xmkmf || die
-	emake || die
+	emake EXTRA_LDOPTIONS="${LDFLAGS}" CC="$(tc-getCC)" \
+		CDEBUGFLAGS="${CFLAGS}" || die
 }
 
 src_install () {
-	into /usr
 	dobin xautolock || die
 	newman xautolock.man xautolock.1
-	dodoc Changelog Readme Todo
+	dodoc Changelog Readme Todo || die
 }
