@@ -1,0 +1,339 @@
+--- configure.in.orig	2009-04-24 18:10:50.000000000 +0200
++++ configure.in	2010-02-23 23:25:50.000000000 +0100
+@@ -472,11 +472,18 @@
+ AC_CONFIG_FILES([doc/pcc.conf])
+ AC_CONFIG_FILES([sa-tests/pcc-test.conf])
+ AC_CONFIG_FILES([webconnect/Makefile])
++AC_CONFIG_FILES([webconnect/fastcgi/Makefile])
++AC_CONFIG_FILES([webconnect/micro/Makefile])
++AC_CONFIG_FILES([compiler/Makefile])
++AC_CONFIG_FILES([tools/c-interface/Makefile])
++AC_CONFIG_FILES([tools/profiler/Makefile])
++AC_CONFIG_FILES([tools/readline/Makefile])
++AC_CONFIG_FILES([runtime/Makefile])
+ AC_CONFIG_FILES([runtime/php-ext/pdo/Makefile])
+ AC_CONFIG_FILES([runtime/php-ext/pdo/pdo_class.php])
+ AC_CONFIG_FILES([compiler/config.scm])
+ 
+-#AC_CONFIG_SUBDIRS([tools/libwebserver])
++AC_CONFIG_SUBDIRS([tools/libwebserver])
+ AC_OUTPUT
+ 
+ dnl ==========================================================================
+--- Makefile.config.in.orig	2010-02-23 13:47:43.000000000 +0100
++++ Makefile.config.in	2010-02-23 14:07:38.000000000 +0100
+@@ -28,8 +28,8 @@
+ dllcmd = gcc -shared -o $(1) -Wl,--enable-auto-import,--enable-auto-image-base,--out-implib,$(1).a
+ dllcmd_i = gcc -shared -o $(1) -Wl,--enable-auto-import,--enable-auto-image-base,--out-implib,$(1).a
+ else
+-dllcmd = gcc -shared -o $(1)
+-dllcmd_i = gcc -shared -o $(1)
++dllcmd = $(CC) -shared -o $(1) $(LDFLAGS)
++dllcmd_i = $(CC) -shared -o $(1) $(LDFLAGS)
+ endif
+ endif
+ 
+@@ -72,6 +72,7 @@
+ # std
+ STD_CFLAGS = @STD_CFLAGS@
+ STD_LIBS = @STD_LIBS@
++STD_LDFLAGS = @STD_LDFLAGS@
+ 
+ # mysql
+ MYSQL_CFLAGS = @MYSQL_CFLAGS@
+--- bigloo-rules.mk.orig	2010-02-23 23:59:38.000000000 +0100
++++ bigloo-rules.mk	2010-02-23 23:56:23.000000000 +0100
+@@ -28,14 +28,17 @@
+ 
+ BHEAPFLAGS	= -unsafe -mkaddheap -mkaddlib -L $(BGL_DEFAULT_LIB_DIR)
+ 
++BCOMMONFLAGS	+= @@CFLAGS@@ @@LDFLAGS@@
++CCOMMONFLAGS	+= $(CFLAGS)
++
+ # -fsharing? 
+ # -mkaddlib shortens our startup time because it changes bigloo's constant allocation mode
+ BSAFEFLAGS	= -mkaddlib -L $(BGL_DEFAULT_LIB_DIR) -unsafev -copt -D$(PCC_OS) -srfi $(PCC_OS) -O3 -g -cg +rm $(PROFILEFLAGS) $(BCOMMONFLAGS)
+-BUNSAFEFLAGS	= -mkaddlib -L $(BGL_DEFAULT_LIB_DIR) -copt -D$(PCC_OS) -srfi $(PCC_OS) -srfi unsafe -O6 -unsafe $(BCOMMONFLAGS) 
++BUNSAFEFLAGS	= -mkaddlib -L $(BGL_DEFAULT_LIB_DIR) -copt -D$(PCC_OS) -srfi $(PCC_OS) -srfi unsafe -O6 -unsafe $(BCOMMONFLAGS)
+ 
+ # the -srfi bit makes cond-expand work in scheme code
+-CSAFEFLAGS    = -D$(PCC_OS) -O -g $(PROFILEFLAGS) $(CCOMMONFLAGS)
+-CUNSAFEFLAGS  = -D$(PCC_OS) -O4 $(CCOMMONFLAGS)
++CSAFEFLAGS    = -D$(PCC_OS) $(CFLAGS) $(PROFILEFLAGS) $(CCOMMONFLAGS)
++CUNSAFEFLAGS  = -D$(PCC_OS) $(CFLAGS) $(CCOMMONFLAGS) $(CCOMMONFLAGS)
+ 
+ CPPSAFEFLAGS  = $(CSAFEFLAGS)
+ CPPUNSAFEFLAGS  = $(CUNSAFEFLAGS)
+--- runtime/php-ext/php-extensions.mk.orig	2010-02-23 18:41:31.000000000 +0100
++++ runtime/php-ext/php-extensions.mk	2010-02-23 18:42:22.000000000 +0100
+@@ -21,7 +21,7 @@
+ MY_TESTDIR	= $(MY_DIR)tests/
+ MY_TESTOUTDIR	= $(MY_TESTDIR)testoutput/
+ 
+-PCC_COMMON	= -v -L $(PCC_ROOT)/libs -L $(BIGLOO_LIB_PATH)
++PCC_COMMON	= -v -L $(PCC_ROOT)/libs -L $(BIGLOO_LIB_PATH) @@CFLAGS@@ @@LDFLAGS@@ @@PCCCFLAGS@@ @@PCCLDFLAGS@@
+ 
+ TAGFILE		= $(LIBNAME).tags
+ APIDOCFILE	= $(TOPLEVEL)doc/api/ext-$(LIBNAME).texi
+--- tools/libwebserver/Makefile.in.orig	2007-08-07 14:18:32.000000000 +0200
++++ tools/libwebserver/Makefile.in	2010-02-23 20:49:28.000000000 +0100
+@@ -15,8 +15,8 @@
+ libdir=@libdir@
+ includedir=@includedir@
+ 
+-all: 
+-	cd src; $(MAKE)	
++all:
++	cd src; $(MAKE)
+ #	cd help; $(MAKE)
+ #	cd examples; $(MAKE) -i
+ 
+@@ -28,7 +28,7 @@
+ #	cd help; $(MAKE) clean
+ 
+ 
+-distclean: 
++distclean:
+ 	@rm -f config.cache
+ 	@rm -f config.log
+ 	@rm -f config.status
+--- tools/libwebserver/src/Makefile.in.orig	2007-08-19 03:46:26.000000000 +0200
++++ tools/libwebserver/src/Makefile.in	2010-02-24 02:10:09.000000000 +0100
+@@ -1,4 +1,7 @@
++AR=@AR@
+ CC=@CC@
++RANLIB=@RANLIB@
++LDFLAGS=@LDFLAGS@
+ INCLUDE=-I../include @INCLUDE@
+ BIN=../bin
+ LIBDIR=@LIBDIR@
+@@ -16,13 +19,13 @@
+ CFLAGS=@CFLAGS@ -I ../Win32 -O2 -fomit-frame-pointer -Wall
+ else
+ ifeq ($(MACOSX),yes)
+-CFLAGS=@CFLAGS@ -fPIC -O2 -fomit-frame-pointer -Wall
++CFLAGS=@CFLAGS@ -fPIC -Wall
+ DLL=libwebserver.dylib
+ SHAREDFLAG=-r -dynamiclib -undefined dynamic_lookup -single_module
+ LIBS=@LIBS@
+ DEFINES=@DEFS@ -D_SERVER_VERSION="\"@VERSION@\""
+ else
+-CFLAGS=@CFLAGS@ -fPIC -O2 -fomit-frame-pointer -Wall
++CFLAGS=@CFLAGS@ -fPIC -Wall
+ DLL=libwebserver.so
+ SHAREDFLAG=-shared
+ LIBS=@LIBS@
+@@ -31,9 +34,9 @@
+ endif
+ 
+ all: $(OBJS) $(WIN_OBJS)
+-	$(CC) $(WIN_LINKCMD) $(OBJS) $(WIN_OBJS) $(LIBS) $(LIBDIR) $(SHAREDFLAG) -o $(DLL)
+-	ar -r libwebserver.a *.o
+-	ranlib libwebserver.a  
++	$(CC) $(WIN_LINKCMD) $(OBJS) $(WIN_OBJS) $(LIBS) $(LIBDIR) $(SHAREDFLAG) -o $(DLL) $(LDFLAGS)
++	$(AR) -r libwebserver.a *.o
++	$(RANLIB) libwebserver.a
+ #ifeq ($(MINGW32),no)
+ #	mkdir -p $(BIN);
+ #	cp libwebserver.a $(DLL) $(BIN)
+@@ -41,15 +44,15 @@
+ 
+ 
+ .c.o:
+-	$(CC) -c $< $(CFLAGS) $(DEFINES) $(INCLUDE)
++	$(CC) -c $< $(CFLAGS) $(DEFINES) $(INCLUDE) $(LDFLAGS)
+ 
+ 
+ 
+ 
+ 
+ clean:
+-	@echo "Cleaning...";	
+-	@rm -f *.o 
++	@echo "Cleaning...";
++	@rm -f *.o
+ 	@rm Makefile
+ 	@rm -f $(DLL)
+ 	@rm -f libwebserver.a
+--- tools/libwebserver/configure.in.orig	2007-08-19 03:46:26.000000000 +0200
++++ tools/libwebserver/configure.in	2010-02-23 22:02:11.000000000 +0100
+@@ -4,7 +4,6 @@
+ AC_CONFIG_HEADER([include/config.h])
+ AC_CANONICAL_SYSTEM # for target_os
+ 
+-
+ openssl="disabled"
+ debug="disabled"
+ #VERSION="libwebserver v`pwd |sed \"s/^.*libwebserver\/\\(.*\\)$/\1/\"`"
+@@ -12,14 +11,19 @@
+ VERSION="libwebserver 0.53-RE"
+ RELEASE="0.53-RE"
+ 
+-
+ dnl Checks for programs.
+-CFLAGS="";
+ AC_PROG_CC
+ AC_PROG_MAKE_SET
+-AC_PROG_RANLIB
++AC_LIBTOOL_DLOPEN
++AC_PROG_LIBTOOL
+ AC_PROG_INSTALL
+ AC_MINGW32
++dnl AC_PROG_AR is not provided with autotools
++AC_ARG_VAR([AR],[path to ar])
++AC_PATH_PROGS(AR,ar)
++if test "$AR" = ""; then
++    AC_MSG_ERROR([ar is required])
++fi
+ 
+ case "$target_os" in 
+ darwin*)
+@@ -55,7 +59,6 @@
+ AC_ARG_ENABLE(debug, [ --enable-debug], 
+ [ 
+ AC_DEFINE(DEBUG,1)
+-CFLAGS="$CFLAGS -g"
+ debug="enabled"
+ VERSION="$VERSION (debug)"
+  ])
+--- runtime/Makefile.in.orig	2008-12-09 15:08:22.000000000 +0100
++++ runtime/Makefile.in	2010-02-24 00:02:56.000000000 +0100
+@@ -3,8 +3,8 @@
+ 
+ #-D_ISOC99_SOURCE is necessary for the isfinite and isnan macros
+ #-D_GNU_SOURCE includes _ISOC99_SOURCE and gives us some stuff for fstat
+-BCOMMONFLAGS	=  -L $(BGL_DEFAULT_LIB_DIR) -copt -D_GNU_SOURCE -L ../libs # -D_ISOC99_SOURCE
+-CCOMMONFLAGS	=  -I. -I$(BGL_DEFAULT_LIB_DIR)
++BCOMMONFLAGS	+=  -L $(BGL_DEFAULT_LIB_DIR) -copt -D_GNU_SOURCE -L ../libs
++CCOMMONFLAGS	+=  -I. -I$(BGL_DEFAULT_LIB_DIR)
+ 
+ SOURCE_LIST	= php-runtime php-hash php-object php-ini utils opaque-math-binding \
+                   grasstable url-rewriter signatures extended-streams constants finalizers \
+@@ -55,7 +55,7 @@
+ 	$(call dllcmd,../libs/libphp-runtime_$(SUV).$(SOEXT)) $(POPULATION) $(C_POPULATION) $(RUNTIME_DLL_LIBS)
+ 
+ ../libs/libphp-runtime_$(SUV).a: ../libs/php-runtime.heap $(STATIC_POPULATION) $(C_STATIC_POPULATION)
+-	ar ruv ../libs/libphp-runtime_$(SUV).a $(STATIC_POPULATION) $(C_STATIC_POPULATION)
++	$(AR) ruv ../libs/libphp-runtime_$(SUV).a $(STATIC_POPULATION) $(C_STATIC_POPULATION)
+ 
+ ../libs/php-runtime.heap: php-runtime.sch $(SOURCE_FILES)
+ 	$(BIGLOO) $(BHEAPFLAGS) -heap-library php-runtime make-lib.scm -addheap ../libs/php-runtime.heap
+--- compiler/Makefile.in.orig	2008-12-09 15:08:22.000000000 +0100
++++ compiler/Makefile.in	2010-02-23 23:04:02.000000000 +0100
+@@ -1,8 +1,8 @@
+ PCC_ROOT = ..
+ include $(PCC_ROOT)/bigloo-rules.mk
+ 
+-BCOMMONFLAGS	= $(READLINE_SRFI) -L $(BGL_DEFAULT_LIB_DIR) -L ../libs -I ../libs 
+-CCOMMONFLAGS	= -I. -I$(BGL_DEFAULT_LIB_DIR) 
++BCOMMONFLAGS	+= $(READLINE_SRFI) -L $(BGL_DEFAULT_LIB_DIR) -L ../libs -I ../libs 
++CCOMMONFLAGS	+= -I. -I$(BGL_DEFAULT_LIB_DIR) 
+ 
+ # for pcc
+ SOURCE_LIST	= ast lexers parser driver evaluate commandline containers \
+--- runtime/ext/extensions.mk.orig	2008-12-09 15:08:22.000000000 +0100
++++ runtime/ext/extensions.mk	2010-02-23 23:12:09.000000000 +0100
+@@ -38,8 +38,8 @@
+ MY_TESTDIR	= $(MY_DIR)tests/
+ MY_TESTOUTDIR	= $(MY_TESTDIR)testoutput/
+ 
+-CCOMMONFLAGS	= -I. -I$(BGL_DEFAULT_LIB_DIR) $(C_SOURCE_FLAGS)
+-BCOMMONFLAGS	=  -L $(BGL_DEFAULT_LIB_DIR) $(BCFLAGS) $(PHPOO_INC) $(PHPOO_LIBS)
++CCOMMONFLAGS	+= -I. -I$(BGL_DEFAULT_LIB_DIR) $(C_SOURCE_FLAGS)
++BCOMMONFLAGS	+=  -L $(BGL_DEFAULT_LIB_DIR) $(BCFLAGS) $(PHPOO_INC) $(PHPOO_LIBS)
+ 
+ 
+ TAGFILE		= $(LIBNAME).tags
+--- tools/profiler/Makefile.in.orig	2010-02-23 23:14:33.000000000 +0100
++++ tools/profiler/Makefile.in	2010-02-23 23:15:49.000000000 +0100
+@@ -1,8 +1,8 @@
+ PCC_ROOT = ../..
+ include $(PCC_ROOT)/bigloo-rules.mk
+ 
+-BCOMMONFLAGS	= -copt -D_ISOC99_SOURCE
+-CCOMMONFLAGS	=  -I. -I$(BGL_DEFAULT_LIB_DIR) -O -I/usr/local/include
++BCOMMONFLAGS	+= -copt -D_ISOC99_SOURCE
++CCOMMONFLAGS	+=  -I. -I$(BGL_DEFAULT_LIB_DIR) -I/usr/local/include
+ 
+ SOURCE_LIST	= profiler profiler-c-bindings
+ C_SOURCE_LIST   = $(WINDOWS_TIME_SUPPORT)
+@@ -37,7 +37,7 @@
+ 	$(call dllcmd,../../libs/libprofiler_$(SUV).$(SOEXT)) $(POPULATION) $(C_POPULATION) $(PROFILER_DLL_LIBS) 
+ 
+ ../../libs/libprofiler_$(SUV).a: ../../libs/profiler.heap $(STATIC_POPULATION) $(C_STATIC_POPULATION)
+-	ar ruv ../../libs/libprofiler_$(SUV).a $(STATIC_POPULATION) $(C_STATIC_POPULATION)
++	$(AR) ruv ../../libs/libprofiler_$(SUV).a $(STATIC_POPULATION) $(C_STATIC_POPULATION)
+ 
+ ../../libs/profiler.heap: $(SOURCE_FILES)
+ 	$(BIGLOO) $(BHEAPFLAGS) -heap-library profiler make-lib.scm -addheap ../../libs/profiler.heap
+--- tools/c-interface/Makefile.in.orig	2008-04-08 15:28:32.000000000 +0200
++++ tools/c-interface/Makefile.in	2010-02-23 23:18:42.000000000 +0100
+@@ -1,11 +1,11 @@
+ PCC_ROOT = ../..
+ include $(PCC_ROOT)/bigloo-rules.mk
+ 
+-BCOMMONFLAGS	= -I $(PCC_ROOT)/libs -L $(PCC_ROOT)/libs
++BCOMMONFLAGS	+= -I $(PCC_ROOT)/libs -L $(PCC_ROOT)/libs
+ SOURCE_LIST	= c-interface
+ C_SOURCE_LIST   = c-glue
+ 
+-CCOMMONFLAGS	=  -I. -I$(BGL_DEFAULT_LIB_DIR) -O -I/usr/local/include -L$(PCC_ROOT)/libs -I$(PCC_ROOT)/runtime
++CCOMMONFLAGS	+=  -I. -I$(BGL_DEFAULT_LIB_DIR) -I/usr/local/include -L$(PCC_ROOT)/libs -I$(PCC_ROOT)/runtime
+ 
+ C_SOURCE_FILES   := $(patsubst %,%.c,$(C_SOURCE_LIST))
+ C_POPULATION     := $(patsubst %,%_$(SU).o,$(C_SOURCE_LIST))
+--- tools/readline/Makefile.in.orig	2008-03-20 16:05:06.000000000 +0100
++++ tools/readline/Makefile.in	2010-02-23 23:22:19.000000000 +0100
+@@ -1,8 +1,8 @@
+ PCC_ROOT = ../..
+ include $(PCC_ROOT)/bigloo-rules.mk
+ 
+-BCOMMONFLAGS	= -copt -D_ISOC99_SOURCE
+-CCOMMONFLAGS	=  -I. -I$(BGL_DEFAULT_LIB_DIR) -O -I/usr/local/include
++BCOMMONFLAGS	+= -copt -D_ISOC99_SOURCE
++CCOMMONFLAGS	+=  -I. -I$(BGL_DEFAULT_LIB_DIR) -I/usr/local/include
+ 
+ SOURCE_LIST	= readline history
+ C_SOURCE_LIST   = 
+--- webconnect/Makefile.in.orig	2008-02-19 14:58:16.000000000 +0100
++++ webconnect/Makefile.in	2010-02-23 23:30:58.000000000 +0100
+@@ -5,7 +5,7 @@
+ 
+ BIGLOO_VERSION  = `bigloo -eval '(begin (print *bigloo-version*) (exit 0))'`     
+ PHPOO_INC	= -I ../.. -library profiler
+-BCOMMONFLAGS	= -L ../libs -copt -I/usr/local/include 
++BCOMMONFLAGS	+= -L ../libs -copt -I/usr/local/include 
+ 
+ SOURCE_LIST	= webconnect make-lib cgi
+ 
+--- webconnect/fastcgi/Makefile.in.orig	2008-03-20 16:05:06.000000000 +0100
++++ webconnect/fastcgi/Makefile.in	2010-02-23 23:36:58.000000000 +0100
+@@ -5,7 +5,7 @@
+ 
+ BIGLOO_VERSION  = `bigloo -eval '(begin (print *bigloo-version*) (exit 0))'`     
+ PHPOO_INC	= -I ../.. -library profiler
+-BCOMMONFLAGS	= -L ../../libs -copt -I$(PCC_ROOT)/../include  -copt -L$(PCC_ROOT)/../lib
++BCOMMONFLAGS	+= -L ../../libs -copt -I$(PCC_ROOT)/../include  -copt -L$(PCC_ROOT)/../lib
+ 
+ SOURCE_LIST	= fastcgi fcgi-binding c-fcgi-bindings
+ C_SOURCE_LIST	= c-fcgi
+--- webconnect/micro/Makefile.in.orig	2008-03-20 16:05:06.000000000 +0100
++++ webconnect/micro/Makefile.in	2010-02-24 00:22:14.000000000 +0100
+@@ -2,7 +2,7 @@
+ include $(PCC_ROOT)/bigloo-rules.mk
+ 
+ BIGLOO_VERSION  = `bigloo -eval '(begin (print *bigloo-version*) (exit 0))'`     
+-BCOMMONFLAGS	= -L $(PCC_ROOT)libs -copt -I$(PCC_ROOT)libs -copt -I$(PCC_ROOT)/tools/libwebserver/include
++BCOMMONFLAGS	+= -L $(PCC_ROOT)libs -copt -I$(PCC_ROOT)libs -copt -I$(PCC_ROOT)/tools/libwebserver/include
+ 
+ # cgen binary
+ CGEN		= $(shell which cgen)
+@@ -32,7 +32,7 @@
+ 	$(call dllcmd_i,$(PCC_ROOT)libs/libmhttpd_$(SUV).$(SOEXT)) $(M_POPULATION) $(MHTTPD_DLL_LIBS)
+ 
+ $(PCC_ROOT)libs/libmhttpd_$(SUV).a: $(PCC_ROOT)libs/mhttpd.heap $(M_STATIC_POPULATION)
+-	ar ruv $(PCC_ROOT)libs/libmhttpd_$(SUV).a $(M_STATIC_POPULATION)
++	$(AR) ruv $(PCC_ROOT)libs/libmhttpd_$(SUV).a $(M_STATIC_POPULATION)
+ 
+ $(PCC_ROOT)libs/mhttpd.heap: $(M_POPULATION)
+ 	$(BIGLOO) $(BHEAPFLAGS) make-mhttpd-lib.scm -heap-library mhttpd -addheap $(PCC_ROOT)libs/mhttpd.heap
