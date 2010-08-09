@@ -1,7 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.24 2010/02/10 10:20:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.25 2010/08/09 09:18:16 xarthisius Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
+
+# Kacper Kowalik <xarthisius@gentoo.org> (9 Aug 2010)
+# cblas-external as virtual/cblas is also masked
+cblas-external
 
 # Samuli Suominen <ssuominen@gentoo.org>
 # Media cannot be tested for MIPS at the moment.

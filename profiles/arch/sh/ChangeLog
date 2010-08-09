@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.49 2010/06/06 13:53:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.50 2010/08/09 09:19:12 xarthisius Exp $
+
+  09 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> use.mask:
+  Mask cblas-external
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask tokyocabinet

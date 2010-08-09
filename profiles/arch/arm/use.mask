@@ -1,6 +1,10 @@
 # Unmask the flag which corresponds to ARCH.
 -arm
 
+# Kacper Kowalik <xarthisius@gentoo.org> (9 Aug 2010)
+# cblas-external as virtual/cblas is also masked
+cblas-external
+
 # Samuli Suominen <ssuominen@gentoo.org> (17 Oct 2009)
 # Required package: media-sound/musepack-tools
 musepack

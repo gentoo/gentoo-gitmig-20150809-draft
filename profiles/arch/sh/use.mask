@@ -1,6 +1,10 @@
 # Unmask the flag which corresponds to ARCH.
 -sh
 
+# Kacper Kowalik <xarthisius@gentoo.org> (9 Aug 2010)
+# cblas-external as virtual/cblas is also masked
+cblas-external
+
 # Raúl Porcel <armin76@gentoo.org>
 # xulrunner doesn't work on sh yet
 xulrunner
