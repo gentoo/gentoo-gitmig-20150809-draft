@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mousetrap/gnome-mousetrap-0.3.ebuild,v 1.1 2009/11/22 17:06:12 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mousetrap/gnome-mousetrap-0.3.ebuild,v 1.2 2010/08/09 17:58:41 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -23,16 +23,19 @@ IUSE="doc"
 
 RDEPEND="gnome-extra/at-spi
 	media-libs/opencv[python]
+	dev-python/libgnome-python
 	dev-python/python-xlib"
 DEPEND="${RDEPEND}
-	dev-util/intltool"
+	>=dev-util/intltool-0.35"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
 pkg_setup() {
-	G2CONF="--disable-dependency-tracking
+	G2CONF="${G2CONF}
+		--disable-dependency-tracking
 		$(use_enable doc pydoc)"
 }
+
 src_prepare() {
 	gnome2_src_prepare
 	epatch "${WORKDIR}/${MY_P}-${PATCHLEVEL}.diff"
@@ -40,4 +43,7 @@ src_prepare() {
 	# Use a specific version of python is a bad thing
 	sed 's:/usr/bin/python2.5:/usr/bin/python:g' \
 		-i src/mouseTrap/mousetrap.in || die "sed failed"
+
+	# Fix intltool tests
+	echo "src/mouseTrap/scripts/profiles/dragProfile.py" >> po/POTFILES.skip
 }
