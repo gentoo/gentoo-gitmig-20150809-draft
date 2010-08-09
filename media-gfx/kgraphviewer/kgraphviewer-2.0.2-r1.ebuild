@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/kgraphviewer-2.0.2-r1.ebuild,v 1.1 2010/02/21 16:31:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgraphviewer/kgraphviewer-2.0.2-r1.ebuild,v 1.2 2010/08/09 16:14:13 reavertm Exp $
 
 EAPI=2
-KDE_MINIMAL=4.4
+
 KDE_LINGUAS="ar be bg ca ca@valencia cs da de el en_GB eo es et fr ga gl hi hne
 hr is it ja km ku lt mai nb nds nl nn pa pl pt pt_BR ro se sk sv th tr uk vi
 zh_CN zh_TW"
@@ -20,12 +20,13 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="
+	>=kde-base/kdepimlibs-${KDE_MINIMAL}
 	media-gfx/graphviz
-	>=kde-base/kdepimlibs-${KDE_MINIMAL}"
+	sys-libs/zlib
+"
 DEPEND="${RDEPEND}
-	>=dev-libs/boost-1.38"
+	>=dev-libs/boost-1.38
+"
 
 S=${WORKDIR}/${P}-kde${KDE_VERSION}
-
-DOCS="AUTHORS ChangeLog README TODO"
