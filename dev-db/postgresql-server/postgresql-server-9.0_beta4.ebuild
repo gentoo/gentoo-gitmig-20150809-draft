@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0_beta2.ebuild,v 1.2 2010/06/20 13:28:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0_beta4.ebuild,v 1.1 2010/08/09 19:27:57 patrick Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -57,8 +57,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-server.2.patch"
+	epatch "${FILESDIR}/postgresql-${SLOT}-common.3.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-server.3.patch"
 
 	if use test; then
 		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" -i src/test/regress/{input,output}/tablespace.source

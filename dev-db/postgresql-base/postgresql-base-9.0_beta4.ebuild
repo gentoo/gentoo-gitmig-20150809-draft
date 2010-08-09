@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0_beta2.ebuild,v 1.1 2010/06/09 18:27:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0_beta4.ebuild,v 1.1 2010/08/09 19:26:47 patrick Exp $
 
 EAPI="2"
 
@@ -52,9 +52,12 @@ DEPEND="${RDEPEND}
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 src_prepare() {
-	epatch "${FILESDIR}/postgresql-${SLOT}-common.patch" \
-		"${FILESDIR}/postgresql-${SLOT}-base.2.patch" \
-		"${FILESDIR}/postgresql-base-8.4-9.0-heimdal_strlcpy.patch"
+	epatch "${FILESDIR}/postgresql-9.0-common.3.patch" \
+		"${FILESDIR}/postgresql-${SLOT}-base.3.patch"
+
+	if use kerberos && has_version "<app-crypt/heimdal-1.3.2-r1" ; then
+		epatch "${FILESDIR}/postgresql-base-8.4-9.0-heimdal_strlcpy.patch"
+	fi
 
 	# to avoid collision - it only should be installed by server
 	rm "${S}/src/backend/nls.mk"
@@ -89,8 +92,8 @@ src_configure() {
 		$(use_with ldap) \
 		|| die "configure failed"
 }
-src_compile() {
 
+src_compile() {
 	emake || die "emake failed"
 
 	cd "${S}/contrib"
@@ -141,7 +144,16 @@ __EOF__
 pkg_postinst() {
 	eselect postgresql update
 	[[ "$(eselect postgresql show)" = "(none)" ]] && eselect postgresql set ${SLOT}
-	elog "If you need a global psqlrc-file, you can place it in '${ROOT}/etc/postgresql-${SLOT}/'."
+	elog "If you need a global psqlrc-file, you can place it in:"
+	elog "    '${ROOT}/etc/postgresql-${SLOT}/'"
+	elog
+	elog "The PostgreSQL community has called for more testers of the upcoming 9.0"
+	elog "release. This beta version of the PostgreSQL client applications and libraries,"
+	elog "while moved to ~arch, will never be marked stable. As such, you may not want to"
+	elog "use this package in an environment where incompatible changes are"
+	elog "unacceptable. Bear in mind, though, that these packages are slotted and that you"
+	elog "may have multiple installations simultaneously without conflict. However, you"
+	elog "may only use one set of client applications and libraries via 'eselect'."
 }
 
 pkg_postrm() {
