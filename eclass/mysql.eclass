@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.147 2010/08/08 23:31:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.148 2010/08/09 19:29:49 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -162,7 +162,18 @@ if [ -z "${SERVER_URI}" ]; then
 		"
 	# The community build is on the mirrors
 	elif [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ]; then
-		SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${MY_PV}.tar.gz"
+		if [[ "${PN}" == "mysql-cluster" ]] ; then
+			URI_DIR="MySQL-Cluster"
+			URI_FILE="mysql-cluster-gpl"
+		else
+			URI_DIR="MySQL"
+			URI_FILE="mysql"
+		fi
+		URI_A="${URI_FILE}-${MY_PV}.tar.gz"
+		MIRROR_PV=$(get_version_component_range 1-2 ${PV})
+		# Recently upstream switched to an archive site, and not on mirrors
+		SERVER_URI="http://downloads.mysql.com/archives/${URI_FILE}-${MIRROR_PV}/${URI_A}
+					mirror://mysql/Downloads/${URI_DIR}-${PV%.*}/${URI_A}"
 	# The (old) enterprise source is on the primary site only
 	elif [ "${PN}" == "mysql" ]; then
 		SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${MY_PV}.tar.gz"
