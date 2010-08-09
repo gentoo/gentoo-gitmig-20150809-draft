@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.5 2010/08/08 20:32:22 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v1.eblit,v 1.6 2010/08/09 13:02:23 mabi Exp $
 
 eblit-php-src_configure() {
 	PHP_DESTDIR="/usr/$(get_libdir)/php${PHP_MV}"
@@ -218,7 +218,7 @@ eblit-php-src_configure() {
 	fi
 
 	if has fpm ${IUSE//+} && use fpm ; then
-		my_conf="${my_conf} --with-libevent-dir=/usr/lib"
+		my_conf="${my_conf} --with-libevent-dir=/usr/`get_libdir`"
 	fi
 
 

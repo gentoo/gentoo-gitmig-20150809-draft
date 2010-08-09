@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.8 2010/08/09 10:27:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.9 2010/08/09 13:02:23 mabi Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -29,7 +29,7 @@ eblit-php-src_install() {
 	# And install the modules to it
 	if use sharedext ; then
 		insinto "${extension_dir}"
-		doins "${S}/modules/"*.so
+		doins "${WORKDIR}/sapis-build/${first_sapi}/modules/"*.so
 	fi
 
 	# Generate the USE file for PHP
@@ -117,8 +117,8 @@ php_install_ini() {
 		for extension in "${D}/${extension_dir}/"*.so ; do
 			extension="${extension##*/}"
 			inifilename="${extension/.so/.ini}"
-			echo "extension=${extension}" > "${S}/modules/$inifilename"
-			doins "${S}/modules/$inifilename"
+			echo "extension=${extension}" > "${WORKDIR}/sapis-build/${phpsapi}/modules/$inifilename"
+			doins "${WORKDIR}/sapis-build/${phpsapi}/modules/$inifilename"
 			dosym "${PHP_EXT_INI_DIR}/${inifilename}" "${PHP_EXT_INI_DIR_ACTIVE}/${inifilename}"
 		done
 	fi
@@ -147,7 +147,7 @@ php_install_ini() {
 		einfo "Installing FPM CGI config file php-fpm.conf"
 		epatch "${FILESDIR}/php-fpm-gentooified.patch"
 		insinto ${PHP_INI_DIR}
-		doins "${S}/sapi/fpm/php-fpm.conf"
+		doins "${WORKDIR}/sapis-build/fpm/sapi/fpm/php-fpm.conf"
 		dodir "/etc/init.d"
 		insinto "/etc/init.d"
 		newins  "${FILESDIR}/php-fpm.init" "php-fpm"
