@@ -1,10 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-message-indicator/plasma-widget-message-indicator-0.5.2.ebuild,v 1.3 2010/04/15 11:20:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-message-indicator/plasma-widget-message-indicator-0.5.2.ebuild,v 1.4 2010/08/09 16:34:39 reavertm Exp $
 
 EAPI=2
 
-KDE_MINIMAL="4.4"
 inherit kde4-base
 
 DESCRIPTION="Plasmoid for displaying Ayatana indications"
@@ -12,15 +11,14 @@ HOMEPAGE="https://launchpad.net/plasma-widget-message-indicator"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
-RDEPEND="
-	!kde-misc/plasma-indicatordisplay
-	>=dev-libs/libindicate-qt-0.2.5
+DEPEND="
 	>=dev-libs/libdbusmenu-qt-0.3.0
+	>=dev-libs/libindicate-qt-0.2.5
 "
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+RDEPEND="${DEPEND}
+	!kde-misc/plasma-indicatordisplay
 "
