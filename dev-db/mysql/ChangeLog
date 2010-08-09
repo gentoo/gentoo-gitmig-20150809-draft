@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.535 2010/08/08 23:40:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.536 2010/08/09 05:01:50 robbat2 Exp $
+
+*mysql-5.1.49-r1 (09 Aug 2010)
+*mysql-5.0.91 (09 Aug 2010)
+
+  09 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.0.91.ebuild,
+  +mysql-5.1.49-r1.ebuild:
+  Bug #312435: respin mysql 5.1 for GCC4.5. Bug #320539: avoid crash with
+  skip-innodb. Bug #303747: version bump for security.
 
 *mysql-5.1.49 (08 Aug 2010)
 
