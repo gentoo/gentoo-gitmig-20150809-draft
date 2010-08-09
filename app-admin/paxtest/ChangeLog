@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.36 2010/07/27 02:11:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.37 2010/08/09 12:31:06 blueness Exp $
+
+*paxtest-0.9.9 (09 Aug 2010)
+
+  09 Aug 2010; Anthony G. Basile <blueness@gentoo.org>
+  +paxtest-0.9.9.ebuild, +files/paxtest-0.9.9-Makefile.patch, metadata.xml:
+  Version bump to 0.9.9. See Bugs #322413 and #331599
 
   27 Jul 2010; Jeroen Roovers <jer@gentoo.org> paxtest-0.9.6.ebuild:
   Stable for HPPA too.
