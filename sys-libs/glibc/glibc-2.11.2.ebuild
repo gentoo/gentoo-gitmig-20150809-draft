@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.2.ebuild,v 1.12 2010/07/30 05:35:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.11.2.ebuild,v 1.13 2010/08/09 18:06:27 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -103,8 +103,10 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND} !crosscompile_opts_headers-only? ( ${CATEGORY}/gcc )"
 	[[ ${CATEGORY} == *-linux* ]] && DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
 else
-	DEPEND="${DEPEND} >=sys-libs/timezone-data-2007c"
-	RDEPEND="${RDEPEND} sys-libs/timezone-data"
+	DEPEND="${DEPEND} !vanilla? ( >=sys-libs/timezone-data-2007c )"
+	RDEPEND="${RDEPEND}
+		vanilla? ( !sys-libs/timezone-data )
+		!vanilla? ( sys-libs/timezone-data )"
 fi
 
 SRC_URI=$(
