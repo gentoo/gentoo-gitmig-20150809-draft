@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.292 2010/05/30 17:36:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.293 2010/08/09 02:24:43 zmedico Exp $
+
+  09 Aug 2010; Zac Medico <zmedico@gentoo.org> libxml2-2.7.6.ebuild,
+  libxml2-2.7.7.ebuild:
+  With USE=python, require either python[xml] or pyxml, in order to avoid
+  a "SAXReaderNotAvailable: No parsers found" exception raised from
+  xml.sax.make_parser(). This should solve stage3 libxml2 build failures.
 
   30 May 2010; Raúl Porcel <armin76@gentoo.org> libxml2-2.7.7.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #317819
