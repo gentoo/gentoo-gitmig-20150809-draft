@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/konq-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.11 2010/06/28 06:21:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.12 2010/08/09 16:29:08 reavertm Exp $
+
+  09 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  konq-plugins-4.4.0.ebuild:
+  Remove unnecessary KDE_MINIMAL, QA
 
   28 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   konq-plugins-4.4.0.ebuild:

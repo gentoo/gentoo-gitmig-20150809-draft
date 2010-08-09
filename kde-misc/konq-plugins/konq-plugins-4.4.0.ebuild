@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.4.0.ebuild,v 1.3 2010/06/28 06:21:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.4.0.ebuild,v 1.4 2010/08/09 16:29:08 reavertm Exp $
 
 EAPI=2
-
-KDE_MINIMAL=4.4
 
 # FIXME. Missing sr@ijekavian in desc.
 KDE_LINGUAS="af ar ast be bg bn br ca ca@valencia cs cy da de el en_GB eo es et
@@ -24,16 +22,19 @@ SLOT="4"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="debug +handbook tidy"
 
-DEPEND=">=kde-base/libkonq-${KDE_MINIMAL}
-	tidy? ( app-text/htmltidy )"
+DEPEND="
+	>=kde-base/libkonq-${KDE_MINIMAL}
+	tidy? ( app-text/htmltidy )
+"
 RDEPEND="${DEPEND}
 	>=kde-base/kcmshell-${KDE_MINIMAL}
-	>=kde-base/konqueror-${KDE_MINIMAL}"
+	>=kde-base/konqueror-${KDE_MINIMAL}
+"
 
 src_configure() {
-	mycmakeargs+=(
+	mycmakeargs=(
 		$(cmake-utils_use_with tidy LibTidy)
-		)
+	)
 
 	kde4-base_src_configure
 }
