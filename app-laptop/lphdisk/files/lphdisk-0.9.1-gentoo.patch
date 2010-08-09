@@ -226,7 +226,7 @@ diff -ur lphdisk-0.9.1.orig/Makefile lphdisk-0.9.1/Makefile
 -	cd $(LRMIDIR) && $(MAKE) $@
 -	cp $(LRMIDIR)/lrmi.o .
 +lphdisk:   lphdisk.o
-+	$(CC) $(CFLAGS) -o lphdisk lphdisk.o $(LIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) -o lphdisk lphdisk.o $(LIBS)
  
 -%.h: $(LRMIDIR)/%.h
 -	cp $^ $@
