@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.100 2010/07/18 08:23:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.101 2010/08/09 13:03:19 pva Exp $
+
+*mrtg-2.16.4 (09 Aug 2010)
+
+  09 Aug 2010; Peter Volkov <pva@gentoo.org> +mrtg-2.16.4.ebuild:
+  Version bump.
 
   18 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> mrtg-2.16.2-r1.ebuild:
   Keyword ~ppc64 wrt #321937.
