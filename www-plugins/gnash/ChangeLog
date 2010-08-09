@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.35 2010/07/19 23:16:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.36 2010/08/09 12:55:46 scarabeus Exp $
+
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> gnash-0.8.5.ebuild,
+  gnash-0.8.6.ebuild, gnash-0.8.7.ebuild, gnash-0.8.7_p20100706.ebuild:
+  Drop useless kde_minimal definition.
 
   19 Jul 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.7_p20100706.ebuild:

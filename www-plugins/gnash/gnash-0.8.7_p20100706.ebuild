@@ -1,11 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.6 2010/07/19 23:16:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100706.ebuild,v 1.7 2010/08/09 12:55:46 scarabeus Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
 KDE_REQUIRED="optional"
-KDE_MINIMAL="4.2"
 AT_M4DIR="cygnal"
 
 inherit autotools eutils kde4-base multilib nsplugins flag-o-matic
