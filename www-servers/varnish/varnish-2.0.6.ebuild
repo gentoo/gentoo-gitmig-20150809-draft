@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.6.ebuild,v 1.1 2010/04/13 09:20:39 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.6.ebuild,v 1.2 2010/08/09 10:39:26 bangert Exp $
 
 EAPI="2"
 
@@ -17,6 +17,7 @@ IUSE=""
 #varnish compiles stuff at run time
 RDEPEND="sys-devel/gcc"
 
+RESTRICT="test" #315725
 HTTP_HDR_MAX_VAL=${HTTP_HDR_MAX_VAL:-32}
 
 src_prepare() {
