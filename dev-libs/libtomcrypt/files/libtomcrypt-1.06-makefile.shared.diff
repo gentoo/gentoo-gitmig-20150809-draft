@@ -18,11 +18,3 @@
  	libtool --silent --mode=link gcc $(CFLAGS) `find . -type f | grep "[.]lo" | grep "src/" | xargs` $(EXTRALIBS) -o $(LIBNAME) -rpath $(LIBPATH) -version-info $(VERSION)
  	libtool --silent --mode=link gcc $(CFLAGS) `find . -type f | grep "[.]o" | grep "src/" | xargs`  $(EXTRALIBS) -o $(LIBNAME_S)
  	ranlib $(LIBNAME_S)
-@@ -233,5 +233,5 @@
- 	gcc -o $(TIMING) $(TIMINGS) -ltomcrypt_prof -ltomcrypt $(EXTRALIBS)
- 
- # $Source: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/files/libtomcrypt-1.06-makefile.shared.diff,v $   
--# $Revision: 1.1 $   
--# $Date: 2009/12/07 11:27:03 $ 
-+# $Revision: 1.1 $   
-+# $Date: 2009/12/07 11:27:03 $ 
