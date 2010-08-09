@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/kiconedit-4.4.0.ebuild,v 1.2 2010/05/15 18:52:27 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/kiconedit-4.4.0.ebuild,v 1.3 2010/08/09 16:16:08 reavertm Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KDE_LINGUAS="af ar be bg br ca ca@valencia cs cy da de el en_GB eo es et eu fa
 fi fr ga gl he hi hne hr hu is it ja km ko lt lv mai mk ms nb nds ne nl nn oc pa
 pl pt pt_BR ro ru se sk sl sv ta tg th tr uk vi wa xh zh_CN zh_HK zh_TW"
 KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
-KDE_MINIMAL="4.4"
+
 inherit kde4-base
 
 DESCRIPTION="KDE Icon Editor"

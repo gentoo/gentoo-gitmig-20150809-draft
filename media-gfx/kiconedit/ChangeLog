@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kiconedit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/ChangeLog,v 1.4 2010/05/15 18:52:27 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/ChangeLog,v 1.5 2010/08/09 16:16:08 reavertm Exp $
+
+  09 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  kiconedit-4.4.0.ebuild:
+  Remove unnecessary KDE_MINIMAL
 
 *kiconedit-4.3.1 (15 May 2010)
 

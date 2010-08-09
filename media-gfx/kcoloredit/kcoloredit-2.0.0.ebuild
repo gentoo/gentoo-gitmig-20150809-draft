@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kcoloredit/kcoloredit-2.0.0.ebuild,v 1.1 2010/02/21 17:13:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kcoloredit/kcoloredit-2.0.0.ebuild,v 1.2 2010/08/09 16:17:29 reavertm Exp $
 
 EAPI=2
-KDE_MINIMAL=4.4
+
 KDE_LINGUAS="af ar be bg br ca ca@valencia cs cy da de el en_GB eo es et eu fa
 fi fr ga gl he hi hne hr hu is it ja km ku lt lv mai mk ms nb nds ne nl nn oc pa
 pl pt pt_BR ro ru se sk sl sv ta tg th tr uk vi xh zh_CN zh_HK zh_TW"
