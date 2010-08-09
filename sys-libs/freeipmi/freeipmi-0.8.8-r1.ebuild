@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.8.8.ebuild,v 1.1 2010/08/08 03:46:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.8.8-r1.ebuild,v 1.1 2010/08/09 19:31:09 flameeyes Exp $
 
 EAPI=2
+
+inherit autotools
 
 DESCRIPTION="Provides Remote-Console and System Management Software as per IPMI v1.5/2.0"
 HOMEPAGE="http://www.gnu.org/software/freeipmi/"
@@ -11,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug syslog"
+IUSE="debug"
 
 RDEPEND="dev-libs/libgcrypt"
 DEPEND="${RDEPEND}
@@ -20,17 +22,20 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Fix build mistake, only causes warnings but at least stop it.
 	sed -i -e '/-module/d' "${S}"/libfreeipmi/src/Makefile.am || die
+
+	AT_M4DIR="config" eautoreconf
 }
 
 src_configure() {
 	econf \
-		--disable-init-scripts \
 		$(use_enable debug) \
-		--enable-logrotate-config \
-		$(use_enable syslog) \
-		--localstatedir=/var \
+		--disable-dependency-tracking \
+		--enable-fast-install \
 		--disable-static \
-		|| die "econf failed"
+		--disable-init-scripts \
+		--enable-logrotate-config \
+		--localstatedir=/var \
+		--sysconfdir=/etc/freeipmi
 }
 
 # There are no tests
@@ -39,6 +44,19 @@ src_test() { :; }
 src_install() {
 	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install || die "emake install failed"
 	find "${D}" -name '*.la' -delete
+
+	# freeipmi by defaults install _all_ commands to /usr/sbin, but
+	# quite a few can be run remotely as standard user, so move them
+	# in /usr/bin afterwards.
+	dodir /usr/bin
+	for file in ipmi{detect,ping,monitoring,power,console}; do
+		mv "${D}"/usr/{s,}bin/${file} || die
+	done
+
+	# We try not to use /etc/ directly for all its config files,
+	# instead use /etc/freeipmi, but then we got to move the
+	# logrotate.d directory...
+	mv "${D}"/etc/{freeipmi/,}logrotate.d || die
 
 	dodoc AUTHORS ChangeLog* DISCLAIMER* NEWS README* TODO doc/*.txt || die
 
