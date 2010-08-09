@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05-r4.ebuild,v 1.1 2010/08/06 22:24:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05-r4.ebuild,v 1.2 2010/08/09 15:50:28 hwoarang Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -25,7 +25,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_with no-net2) || die "econf failed"
+	econf --libdir=/usr/$(get_libdir) $(use_with no-net2) || die "econf failed"
 }
 
 src_install() {
