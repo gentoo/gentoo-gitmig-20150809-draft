@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.393 2010/07/30 22:32:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.394 2010/08/10 20:54:31 scarabeus Exp $
+
+  10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  cups-1.3.11-r1.ebuild, cups-1.3.11-r2.ebuild:
+  Fix deps per bug #328773.
 
   30 Jul 2010; Jory A. Pratt <anarchy@gentoo.org> cups-1.4.4.ebuild:
   make threads support optional, ack from scarabeus
