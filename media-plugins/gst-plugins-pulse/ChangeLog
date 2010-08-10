@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.40 2010/08/01 20:27:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.41 2010/08/10 16:24:33 jer Exp $
+
+  10 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-pulse-0.10.22.ebuild:
+  Stable for HPPA (bug #329703).
 
   01 Aug 2010; Tobias Klausmann <klausman@gentoo.org>
   gst-plugins-pulse-0.10.21.ebuild:
