@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/jove
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.27 2009/06/16 20:39:45 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.28 2010/08/10 13:11:07 ulm Exp $
+
+*jove-4.16.0.73 (10 Aug 2010)
+
+  10 Aug 2010; Ulrich Mueller <ulm@gentoo.org> +jove-4.16.0.73.ebuild,
+  +files/jove-4.16.0.73-build.patch, +files/jove-4.16.0.73-doc.patch,
+  +files/jove-4.16.0.73-sendmail.patch:
+  Version bump, bug 331931. Respect LDFLAGS, bug 331893.
 
   16 Jun 2009; Ulrich Mueller <ulm@gentoo.org> jove-4.16.0.70.3.1.ebuild,
   +files/jove-4.16.0.70.3.1-getline.patch:
