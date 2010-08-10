@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-systemload-plugin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/ChangeLog,v 1.7 2010/07/23 08:00:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/ChangeLog,v 1.8 2010/08/10 16:00:21 jer Exp $
+
+  10 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  xfce4-systemload-plugin-0.4.2-r1.ebuild:
+  Stable for HPPA (bug #323729).
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org>
   xfce4-systemload-plugin-0.4.2-r1.ebuild:
