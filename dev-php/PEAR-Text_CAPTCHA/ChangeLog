@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Text_CAPTCHA
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_CAPTCHA/ChangeLog,v 1.4 2010/08/10 12:59:19 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_CAPTCHA/ChangeLog,v 1.5 2010/08/10 13:27:44 fauli Exp $
+
+  10 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  PEAR-Text_CAPTCHA-0.4.0.ebuild:
+  stable x86, bug 291286
 
   10 Aug 2010; Matti Bickel <mabi@gentoo.org>
   PEAR-Text_CAPTCHA-0.4.0.ebuild:
