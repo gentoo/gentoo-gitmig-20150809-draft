@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4457 2010/08/09 14:15:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4458 2010/08/10 12:22:25 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Aug 2010; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  Mask for new Bazaar release
 
   09 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask pam_userdb.
