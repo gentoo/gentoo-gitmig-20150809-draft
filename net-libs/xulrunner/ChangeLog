@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.348 2010/08/10 15:53:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.349 2010/08/10 19:15:20 betelgeuse Exp $
+
+  10 Aug 2010; Petteri Räty <betelgeuse@gentoo.org>
+  xulrunner-1.9.2.8-r1.ebuild:
+  Removing virtual/jre from DEPEND. Fixes bug #325981.
 
   10 Aug 2010; Brent Baude <ranger@gentoo.org> xulrunner-1.9.2.8.ebuild:
   Marking xulrunner-1.9.2.8 ppc64 for bug 329279
