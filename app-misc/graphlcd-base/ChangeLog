@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/graphlcd-base
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.22 2009/02/01 22:03:34 hd_brummy Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.23 2010/08/10 17:25:32 hwoarang Exp $
+
+*graphlcd-base-0.1.5-r2 (10 Aug 2010)
+
+  10 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +graphlcd-base-0.1.5-r2.ebuild, +files/graphlcd-base-0.1.5-ldflags.patch:
+  Apply patch from Peter Alfredsen <loki_val@gentoo.org> to respect LDFLAGS.
+  Bug #227163
 
   01 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   graphlcd-base-0.1.5-r1.ebuild:
