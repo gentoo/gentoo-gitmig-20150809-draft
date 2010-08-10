@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.140 2010/08/06 14:26:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.141 2010/08/10 12:58:19 scarabeus Exp $
+
+  10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/cmake-2.8.0-more-no_host_paths.patch, -cmake-2.8.1.ebuild,
+  -cmake-2.8.1-r1.ebuild:
+  Drop older stuff.
 
   06 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   cmake-2.8.1-r2.ebuild:
