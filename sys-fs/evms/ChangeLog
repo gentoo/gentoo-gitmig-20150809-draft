@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.95 2010/01/24 21:13:01 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.96 2010/08/10 04:41:11 phajdan.jr Exp $
+
+  10 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  evms-2.5.5-r11.ebuild:
+  x86 stable wrt bug #302103
 
 *evms-2.5.5-r11 (24 Jan 2010)
 
