@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.104 2010/06/17 20:07:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.105 2010/08/10 13:13:34 fauli Exp $
+
+*gnokii-0.6.29 (10 Aug 2010)
+
+  10 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  +gnokii-0.6.29.ebuild, +files/gnokii-0.6.29-pcsc.patch:
+  version bump with pcsc patch from bug 319243
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> gnokii-0.6.27-r2.ebuild,
   gnokii-0.6.27-r4.ebuild, gnokii-0.6.28.1.ebuild, gnokii-9999.ebuild:
