@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.181 2010/08/03 20:09:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.182 2010/08/10 20:40:05 swegener Exp $
+
+*avahi-0.6.27-r1 (10 Aug 2010)
+
+  10 Aug 2010; Sven Wegener <swegener@gentoo.org> +avahi-0.6.27-r1.ebuild,
+  +files/avahi-0.6.27-no-auto-activated.patch:
+  Revert one commit that introduced compability for auto-activated services.
+  This fixes bug #331275.
 
 *avahi-0.6.27 (03 Aug 2010)
 
