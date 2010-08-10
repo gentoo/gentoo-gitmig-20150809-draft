@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.84 2010/08/09 17:34:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.85 2010/08/10 13:35:09 scarabeus Exp $
+
+  10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/pykde4-4.3.4-typedefs.sip.patch,
+  -files/pykde4-4.3.5-fix-pykdeuic4.patch:
+  Drop unused patch.
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> pykde4-4.4.5.ebuild,
   metadata.xml:

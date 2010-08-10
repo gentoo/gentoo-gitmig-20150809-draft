@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.59 2010/08/09 17:35:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.60 2010/08/10 13:30:37 scarabeus Exp $
+
+  10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/4.3.3-detect_changes_correctly.patch,
+  -files/4.3.3-fix_inverse_save_logic.patch,
+  -files/4.3.3-fix_variable_name.patch:
+  Drop unused patch.
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> okteta-4.4.5.ebuild:
   Drop alpha ia64 and sparc per the AT Lead permission.
