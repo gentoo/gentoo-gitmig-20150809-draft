@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/elfsh
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.12 2009/07/23 00:15:18 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.13 2010/08/10 20:41:20 hwoarang Exp $
+
+  10 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  elfsh-0.51_beta3.ebuild:
+  Respect CC,LDFLAGS. Bug #331863. Thanks to Diego E. 'Flameeyes' Pettenò
+  <flameeyes@gentoo.org> for reporting
 
   23 Jul 2009; Víctor Ostorga <vostorga@gentoo.org>
   files/elfsh-0.51_beta3-glibc210.patch:
