@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mcrypt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.27 2009/05/18 18:25:01 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/ChangeLog,v 1.28 2010/08/10 17:58:46 darkside Exp $
+
+*mcrypt-2.6.8-r1 (10 Aug 2010)
+
+  10 Aug 2010; Jeremy Olexa <darkside@gentoo.org> +mcrypt-2.6.8-r1.ebuild,
+  +files/mcrypt-2.6.8-stdlib.h.patch:
+  Add patch to use stdlib.h instead of malloc.h, add ~x86-macos keyword. Bug
+  331973 by Mark Kowarsky.
 
 *mcrypt-2.6.8 (18 May 2009)
 
