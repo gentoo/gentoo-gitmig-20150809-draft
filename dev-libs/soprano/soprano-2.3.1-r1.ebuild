@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1-r1.ebuild,v 1.8 2010/07/06 19:34:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1-r1.ebuild,v 1.9 2010/08/10 02:23:08 reavertm Exp $
 
 EAPI="2"
 
@@ -100,5 +100,5 @@ src_test() {
 	mycmakeargs+=(-DSOPRANO_BUILD_TESTS=ON)
 	cmake-utils_src_configure
 	cmake-utils_src_compile
-	ctest --extra-verbose || die "Tests failed."
+	cmake-utils_src_test
 }
