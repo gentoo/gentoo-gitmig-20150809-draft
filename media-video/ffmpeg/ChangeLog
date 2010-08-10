@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.365 2010/08/02 05:12:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.366 2010/08/10 09:57:39 ssuominen Exp $
+
+  10 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> ffmpeg-9999.ebuild:
+  USE="qt-faststart" to replace separate media-video/qt-faststart package.
 
   02 Aug 2010; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   avfilter-lavf doesnt exist, bug #330247
