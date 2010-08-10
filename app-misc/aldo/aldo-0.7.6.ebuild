@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.7.6.ebuild,v 1.1 2010/07/15 13:14:43 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.7.6.ebuild,v 1.2 2010/08/10 11:34:59 xarthisius Exp $
 
 EAPI=2
 
@@ -20,7 +20,11 @@ src_configure() {
 	econf --disable-dependency-tracking
 }
 
+src_compile() {
+	emake LDFLAGS="${LDFLAGS}" || die
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog NEWS README THANKS
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README THANKS || die
 }
