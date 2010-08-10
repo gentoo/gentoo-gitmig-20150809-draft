@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.3.ebuild,v 1.2 2009/01/05 10:05:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.3.ebuild,v 1.3 2010/08/10 13:19:15 hwoarang Exp $
 
-inherit eutils
+inherit toolchain-funcs autotools eutils
 
 DESCRIPTION="File integrity verification system"
 HOMEPAGE="http://osiris.shmoo.com/"
@@ -36,13 +36,25 @@ src_unpack()
 	unpack mod_ports.tar.gz
 	# Add the above modules
 	mv "${S}"/../mod_* "${S}"/src/osirisd/modules/
+	# Respect LDFLAGS
+	cd "${S}"
+	sed -i "s:\$CFLAGS:& ${LDFLAGS} :" "${S}"/configure.ac
+	sed -i -e "/^CPPFLAGS/s: =.* : = ${CXXFLAGS} :" \
+		-e "/^LDFLAGS/s: =.* : = ${LDFLAGS} :" \
+		"${S}"/src/osirisd/modules/Makefile.in
+	sed -i "/^COMPILE/{n; s:\$(CFLAGS):& \$(LDFLAGS) :}" \
+		"${S}"/src/osirisd/Makefile.in
+	for x in $(find "${S}/src/osirisd/modules/" -name "Makefile"); do
+		sed -i "s:\$(CFLAGS):& \$(LDFLAGS) :" $x
+	done
+	eautoconf
 }
 
 src_compile()
 {
 	econf --prefix=/var/lib --enable-fancy-cli=yes
-	emake agent || die "agent build failed"
-	emake console || die "management build failed"
+	emake CC=$(tc-getCC) agent || die "agent build failed"
+	emake CC=$(tc-getCC) console || die "management build failed"
 }
 
 src_install() {
