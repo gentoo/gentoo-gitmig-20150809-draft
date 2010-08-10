@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.6.9-r1.ebuild,v 1.3 2010/06/24 11:18:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.6.9-r1.ebuild,v 1.4 2010/08/10 10:31:00 ssuominen Exp $
 
 EAPI=2
 inherit bash-completion
@@ -14,12 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND="sys-fs/fuse
-	sys-libs/zlib
-	dev-libs/libaio
-	dev-libs/openssl"
+RDEPEND="dev-libs/libaio
+	dev-libs/openssl
+	sys-fs/fuse
+	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/scons"
+	dev-util/scons
+	sys-apps/acl
+	sys-apps/attr"
 
 S=${WORKDIR}/${P}/src
 
