@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.8-r1.ebuild,v 1.1 2008/07/09 18:15:47 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.8-r1.ebuild,v 1.2 2010/08/10 15:43:58 xarthisius Exp $
 
 inherit elisp-common multilib eutils flag-o-matic
 
@@ -21,11 +21,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-as-needed+fix_destdir.patch"
+	sed -i -e "s/\$(LD) /&\$(LFLAGS) /" Makefile.in || die #332007
 }
 
 src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
+	econf
+	emake LFLAGS="$(raw-ldflags)" || die
 	if use emacs; then
 		elisp-compile "${S}"/emacs/cmuscheme48.el
 	fi
@@ -40,12 +41,12 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	fi
 
-	dodoc README INSTALL
+	dodoc README || die
 	if use doc; then
-		dodoc doc/manual.ps doc/manual.pdf doc/*.txt
-		dohtml -r doc/html/*
+		dodoc doc/manual.ps doc/manual.pdf doc/*.txt || die
+		dohtml -r doc/html/* || die
 		docinto src
-		dodoc doc/src/*
+		dodoc doc/src/* || die
 	fi
 
 	#this symlink clashes with gambit
