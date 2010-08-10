@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.171 2010/08/06 07:44:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.172 2010/08/10 17:41:08 ranger Exp $
+
+  10 Aug 2010; Brent Baude <ranger@gentoo.org> bugzilla-3.2.7.ebuild:
+  Marking bugzilla-3.2.7 ppc64 for bug 329923
 
 *bugzilla-3.6.2 (06 Aug 2010)
 *bugzilla-3.4.8 (06 Aug 2010)
