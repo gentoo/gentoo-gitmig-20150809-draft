@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.385 2010/07/30 12:03:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.386 2010/08/10 12:55:46 scarabeus Exp $
+
+  10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -amarok-2.2.2-r1.ebuild, -files/amarok-2.2.2-nodebug.patch,
+  -files/amarok-2.2-mysql-libs.patch,
+  -files/amarok-2.3.0-crash_fix_info_applet.patch, -amarok-2.3.1.ebuild,
+  -amarok-2.3.1-r1.ebuild, -files/amarok-qtscriptcheck.patch:
+  Cleanup old stuff.
 
   30 Jul 2010; Markos Chandras <hwoarang@gentoo.org> amarok-2.3.1-r2.ebuild:
   Stable on amd64 wrt bug #329853
