@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/nlopt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.4 2010/07/20 19:43:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/ChangeLog,v 1.5 2010/08/10 22:04:02 bicatali Exp $
+
+  10 Aug 2010; Sébastien Fabbro <bicatali@gentoo.org> nlopt-2.2.ebuild:
+  Fixed for guile and multiple python, bug #331347
 
 *nlopt-2.2 (20 Jul 2010)
 

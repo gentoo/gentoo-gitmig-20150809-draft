@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.ebuild,v 1.2 2010/07/20 19:58:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.2.ebuild,v 1.3 2010/08/10 22:04:01 bicatali Exp $
 
 EAPI=3
 SUPPORT_PYTHON_ABIS="1"
@@ -45,20 +45,19 @@ src_configure() {
 		$(use_with guile) \
 		$(use_with octave) \
 		$(use_with python)
+	use python && python_copy_sources swig
 }
 
 src_compile() {
 	default
 	if use python; then
-		python_copy_sources swig
 		compilation() {
 			emake \
 				PYTHON_CPPFLAGS="-I$(python_get_includedir)" \
 				PYTHON_LDFLAGS="$(python_get_library -l)" \
 				PYTHON_SITE_PKG="$(python_get_sitedir)" \
 				PYTHON_VERSION="$(python_get_version)" \
-				pyexecdir="$(python_get_sitedir)" \
-				_nlopt.la
+				pyexecdir="$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir swig compilation
 	fi
