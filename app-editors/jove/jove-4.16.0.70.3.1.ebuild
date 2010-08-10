@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.7 2009/06/16 20:39:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.8 2010/08/10 19:29:17 ulm Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -12,7 +12,7 @@ HOMEPAGE="ftp://ftp.cs.toronto.edu/cs/ftp/pub/hugh/jove-dev/"
 SRC_URI="mirror://debian/pool/main/j/${PN}/${MY_P}.orig.tar.gz
 	mirror://debian/pool/main/j/${PN}/${MY_DIFFP}.diff.gz"
 
-LICENSE="BSD"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="unix98"

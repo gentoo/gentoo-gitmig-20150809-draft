@@ -109,8 +109,8 @@ Originally based on Debian patch jove_4.16.0.70-3.1.diff.gz
  TROFFPOST = | /usr/lib/lp/postscript/dpost -
  
 -MANUALS = $(JOVEM) $(TEACHJOVEM) $(XJOVEM) $(JOVETOOLM)
-+MANUALS = $(JOVEM) $(TEACHJOVEM) $(XJOVEM)
-+# $(JOVETOOLM)
++MANUALS = $(JOVEM) $(TEACHJOVEM)
++# $(XJOVEM) $(JOVETOOLM)
  
  C_SRC = commands.c commands.tab abbrev.c argcount.c ask.c buf.c c.c case.c jctype.c \
  	delete.c disp.c extend.c fp.c fmt.c insert.c io.c iproc.c \
@@ -177,7 +177,7 @@ Originally based on Debian patch jove_4.16.0.70-3.1.diff.gz
  	$(TINSTALL) doc/jove.$(MANEXT) $(JOVEM)
  
  # doc/jove.doc is the formatted manpage (only needed by DOS)
-@@ -427,10 +445,10 @@
+@@ -427,7 +445,7 @@
  	     -e 's;<SHAREDIR>;$(SHAREDIR);' \
  	     -e 's;<SHELL>;$(DFLTSHELL);' doc/teachjove.nr > doc/teachjove.$(MANEXT)
  
@@ -185,62 +185,4 @@ Originally based on Debian patch jove_4.16.0.70-3.1.diff.gz
 +$(TEACHJOVEM): $(MANDIR) doc/teachjove.$(MANEXT)
  	$(TINSTALL) doc/teachjove.$(MANEXT) $(TEACHJOVEM)
  
--$(XJOVEM): doc/xjove.nr
-+$(XJOVEM): $(MANDIR) doc/xjove.nr
- 	$(TINSTALL) doc/xjove.nr $(XJOVEM)
- 
- doc/jovetool.$(MANEXT): doc/jovetool.nr
---- jove4.16.0.73-orig/xjove/Makefile
-+++ jove4.16.0.73/xjove/Makefile
-@@ -28,18 +28,23 @@
- DEFINES=
- 
- # for Solaris 2.x:
--SYSDEFS=-DSYSVR4
-+#SYSDEFS=-DSYSVR4
- # -i: ignore any LD_LIBRARY_PATH setting
- # -L<dir>: add <dir> to library search path
- # -R<dir[:dir]>: specify library search directories to dynamic linker
--XJLDFLAGS= -i -L$$OPENWINHOME/lib -R$$OPENWINHOME/lib
-+#XJLDFLAGS= -i -L$$OPENWINHOME/lib -R$$OPENWINHOME/lib
- 
- # for Sun0s4.x:
- # XJLDFLAGS=-L$$OPENWINHOME/lib
- # SYSDEFS=-DSUNOS41
-+# XJCFLAGS = -I$$OPENWINHOME/include
-+
-+# for Linux
-+SYSDEFS=-DBSDPOSIX
-+XJLDFLAGS=-L/usr/lib
-+XJCFLAGS=-I/usr/include
- 
- CFLAGS = $(OPTFLAGS) -I.. $(SYSDEFS) $(DEFINES)
--XJCFLAGS = -I$$OPENWINHOME/include
- 
- BINDIR = /usr/local/bin
- 
-@@ -55,7 +60,7 @@
- INSTALLFLAGS = # -g bin -o root
- 
- # to install executable files
--XINSTALL=cp
-+XINSTALL=install -s -m 755
- #XINSTALL=/usr/ucb/install $(INSTALLFLAGS) -c -m 755 # -s
- 
- C_SRC = jovetool.c xjove.c jovewindows.c xjovewindows.c jovemenu.c \
-@@ -71,7 +76,7 @@
- .filelist: $(BACKUPS)
- 	@ls $(BACKUPS) >.filelist
- 
--installxjove:	xjove
-+installxjove:	$(BINDIR) xjove
- 		$(XINSTALL) xjove $(BINDIR)/xjove
- 
- installjovetool:	jovetool
-@@ -107,3 +112,6 @@
- 
- clobber:	clean
- 	rm -f *.orig *.rej
-+
-+$(BINDIR)::
-+	test -d $(BINDIR) || mkdir -p $(BINDIR)
+ $(XJOVEM): doc/xjove.nr

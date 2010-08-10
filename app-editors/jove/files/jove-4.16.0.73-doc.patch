@@ -32,39 +32,3 @@ Originally based on Debian patch jove_4.16.0.70-3.1.diff.gz
  _	
  [Point pushed]	<\ the Message Line
  =	
---- jove4.16.0.73-orig/doc/xjove.nr
-+++ jove4.16.0.73/doc/xjove.nr
-@@ -1,6 +1,6 @@
- .TH XJOVE 1 "8 July 1993"
- .SH NAME
--Xjove, Jovetool \- run JOVE under X-windows or Sunview with function-key and mouse support.
-+Xjove \- run JOVE under X-windows with function-key and mouse support.
- .SH SYNOPSIS
- .B xjove
- [
-@@ -13,23 +13,10 @@
- [
- args
- \&.\|.\|. ]
--.br
--.B jovetool
--[
--.I window_args
--] [
--.B \-nf
--] [
--.BI \-rc \ run_command_path
--]\&.\|.\|.
--[
--.I args
--\&.\|.\|. ]
-+
- .SH DESCRIPTION
- .I Xjove
--(or
--.IR Jovetool )
--creates an XView or SunView frame and a tty subwindow within which mouse events
-+creates an XView frame and a tty subwindow within which mouse events
- and function keys are translated to ASCII sequences which JOVE can
- parse.  The translated input events are sent to the process running in
- the tty subwindow, which is typically JOVE.
