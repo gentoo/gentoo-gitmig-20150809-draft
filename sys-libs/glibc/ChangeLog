@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.704 2010/08/09 18:06:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.705 2010/08/10 08:08:06 vapier Exp $
+
+  10 Aug 2010; Mike Frysinger <vapier@gentoo.org>
+  +files/eblits/src_compile-2.11.2.eblit,
+  +files/eblits/src_install-2.11.2.eblit, +files/eblits/src_test-2.11.2.eblit,
+  files/eblits/src_compile.eblit, files/eblits/src_install.eblit,
+  files/eblits/src_test.eblit:
+  Fork eblits for stable glibc, and convert unstable to `emake`.
 
   09 Aug 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.11.2.ebuild,
   glibc-2.12.1.ebuild:

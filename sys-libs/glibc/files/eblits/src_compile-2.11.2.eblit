@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.11 2010/08/10 08:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile-2.11.2.eblit,v 1.1 2010/08/10 08:08:05 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -113,14 +113,14 @@ toolchain-glibc_src_compile() {
 	if want_linuxthreads ; then
 		glibc_do_configure linuxthreads
 		einfo "Building GLIBC with linuxthreads..."
-		emake || die "make for ${ABI} failed"
+		make PARALLELMFLAGS="${MAKEOPTS}" || die "make for ${ABI} failed"
 	fi
 	if want_nptl ; then
 		# ... and then do the optional nptl build
 		unset LD_ASSUME_KERNEL
 		glibc_do_configure nptl
 		einfo "Building GLIBC with NPTL..."
-		emake || die "make for ${ABI} failed"
+		make PARALLELMFLAGS="${MAKEOPTS}" || die "make for ${ABI} failed"
 	fi
 }
 
