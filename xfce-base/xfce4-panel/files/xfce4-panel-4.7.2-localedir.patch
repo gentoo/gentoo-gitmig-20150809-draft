@@ -1,0 +1,13 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6629
+http://bugs.gentoo.org/show_bug.cgi?id=331371
+
+--- libxfce4panel/libxfce4panel-1.0.pc.in
++++ libxfce4panel/libxfce4panel-1.0.pc.in
+@@ -2,6 +2,7 @@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
++localedir=@localedir@
+ 
+ Name: libxfce4panel
+ Description: Library for the Xfce Panel
