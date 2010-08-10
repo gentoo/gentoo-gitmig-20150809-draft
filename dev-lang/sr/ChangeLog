@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/sr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/ChangeLog,v 1.8 2009/12/23 10:17:00 dev-zero Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/ChangeLog,v 1.9 2010/08/10 15:04:25 xarthisius Exp $
+
+  10 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> sr-2.3.3.ebuild,
+  +files/sr-2.3.3-ldflags.patch, +files/sr-2.3.3-parallel_build.patch:
+  Respect LDFLAGS wrt bug 322013. Thanks to Diego for report. Fix parallel
+  build.
 
   23 Dec 2009; Tiziano Müller <dev-zero@gentoo.org> sr-2.3.3.ebuild:
   Added blocker for app-misc/srm (bug #247402).

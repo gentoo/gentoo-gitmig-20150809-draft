@@ -1,0 +1,81 @@
+Respect LDFLAGS
+
+http://bugs.gentoo.org/show_bug.cgi?id=332013
+
+--- srtex/Makefile
++++ srtex/Makefile
+@@ -11,7 +11,7 @@
+ 
+ 
+ srtex:$& $(OBJ)
+-	. ../paths.sh; $(CC) $(CFLAGS) -o srtex $(OBJ) $$LIBC
++	. ../paths.sh; $(CC) $(LDFLAGS) $(CFLAGS) -o srtex $(OBJ) $$LIBC
+ 
+ lex.yy.c: scan.l
+ 	lex scan.l
+--- srlatex/Makefile
++++ srlatex/Makefile
+@@ -6,7 +6,7 @@
+ OBJ = print.o lex.yy.o
+ 
+ srlatex:$& $(OBJ)
+-	. ../paths.sh; $(CC) $(CFLAGS) -o srlatex $(OBJ) $$LIBC
++	. ../paths.sh; $(CC) $(LDFLAGS) $(CFLAGS) -o srlatex $(OBJ) $$LIBC
+ 
+ lex.yy.c: scan.l
+ 	lex scan.l
+--- srl/Makefile
++++ srl/Makefile
+@@ -13,7 +13,7 @@
+ 
+ 
+ srl:$&	$(OBJ)
+-	. ../paths.sh; $(CC) $(CFLAGS) -o srl $(OBJ) $$LIBC
++	. ../paths.sh; $(CC) $(LDFLAGS) $(CFLAGS) -o srl $(OBJ) $$LIBC
+ 
+ 
+ tar:
+--- srm/Makefile
++++ srm/Makefile
+@@ -15,7 +15,7 @@
+ 
+ 
+ srm:$&	$(OBJ)
+-	. ../paths.sh; $(CC) $(CFLAGS) -o srm $(OBJ) $$LIBC
++	. ../paths.sh; $(CC) $(LDFLAGS) $(CFLAGS) -o srm $(OBJ) $$LIBC
+ 
+ 
+ 
+--- sr/Makefile
++++ sr/Makefile
+@@ -42,7 +42,7 @@
+ 
+ 
+ sr:$&	$(OBJ) $(UTIL)
+-	. ../paths.sh; $(CC) $(CFLAGS) -o sr $(OBJ) $$LIBM $$LIBC
++	. ../paths.sh; $(CC) $(LDFLAGS) $(CFLAGS) -o sr $(OBJ) $$LIBM $$LIBC
+ 
+ tokens.c: tokens.l
+ 	lex tokens.l
+--- srprof/Makefile
++++ srprof/Makefile
+@@ -7,7 +7,7 @@
+ 
+ 
+ srprof:$& $(OBJ)
+-	. ../paths.sh; $(CC) $(CFLAGS) -o srprof $(OBJ) $$LIBC
++	. ../paths.sh; $(CC) $(LDFLAGS) $(CFLAGS) -o srprof $(OBJ) $$LIBC
+ 
+ 
+ clean:
+--- rts/Makefile
++++ rts/Makefile
+@@ -36,7 +36,7 @@
+ 
+ 
+ srx:	$(XOBJ)
+-	. ../paths.sh; $(CC) $(CFLAGS) -o srx $(XOBJ) $$LIBC
++	. ../paths.sh; $(CC) $(LDFLAGS) $(CFLAGS) -o srx $(XOBJ) $$LIBC
+ 
+ # defining SRX disables MultiSR to build the single threaded versions srx needs
+ # (dependencies on .o files force rebuild when .h files change)

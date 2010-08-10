@@ -1,0 +1,54 @@
+--- Makefile
++++ Makefile
+@@ -20,19 +20,19 @@
+ ##  Build the entire system.
+ 
+ all:	config
+-	cd sr;		$(RMAKE)
+-	cd srl;		$(RMAKE)
+-	cd csw;		$(RMAKE)
+-	cd rts;		$(RMAKE)
+-	cd library;	$(RMAKE)
+-	cd srm;		$(RMAKE)
+-	cd srprof;	$(RMAKE)
+-	cd srgrind;	$(RMAKE)
+-	cd srtex;	$(RMAKE)
+-	cd srlatex;	$(RMAKE)
+-	cd preproc;	$(RMAKE)
+-	cd srv;		$(RMAKE)	
+-	cd links;	$(RMAKE)
++	+$(RMAKE) -C sr
++	+$(RMAKE) -C srl
++	+$(RMAKE) -C csw
++	+$(RMAKE) -C rts
++	+$(RMAKE) -C library
++	+$(RMAKE) -C srm
++	+$(RMAKE) -C srprof
++	+$(RMAKE) -C srgrind
++	+$(RMAKE) -C srtex
++	+$(RMAKE) -C srlatex
++	+$(RMAKE) -C preproc
++	+$(RMAKE) -C srv
++	+$(RMAKE) -C links
+ 
+ 
+ 
+--- sr/Makefile
++++ sr/Makefile
+@@ -48,10 +48,14 @@
+ 	lex tokens.l
+ 	mv lex.yy.c tokens.c
+ 
+-grammar.c tokens.h: grammar.y
++y.tab.c: y.tab.h
++y.tab.h: grammar.y
+ 	@echo ...expect 4 shift/reduce conflicts:
+-	$(YACC) $(YFLAGS) -d grammar.y 
++	$(YACC) $(YFLAGS) -d grammar.y
++
++grammar.c: y.tab.c
+ 	mv y.tab.c grammar.c
++tokens.h: y.tab.h
+ 	mv y.tab.h tokens.h
+ 
+ tkflags.h: grammar.y

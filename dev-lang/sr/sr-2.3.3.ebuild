@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.3.ebuild,v 1.5 2009/12/23 10:17:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.3.ebuild,v 1.6 2010/08/10 15:04:25 xarthisius Exp $
 
-inherit eutils versionator
+inherit eutils versionator toolchain-funcs
 
 MY_PV=$(delete_all_version_separators)
 DESCRIPTION="SR (Synchronizing Resources) is a language for writing concurrent programs"
@@ -21,8 +21,9 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	#epatch ${FILESDIR}/${P}.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-parallel_build.patch
 	sed -i -e "s:SRSRC = /usr/local/src/sr:SRSRC = ${S}:" \
 		-e "s:/usr/local:/usr:" -e "s:/usr/X11/lib:/usr/lib:" \
 		-e "s:CCPATH = /bin/cc:CCPATH = /usr/bin/gcc:" \
@@ -32,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "make failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_test() {
