@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.150 2010/08/08 18:41:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.151 2010/08/10 01:28:34 phajdan.jr Exp $
+
+*chromium-6.0.472.25-r1 (10 Aug 2010)
+
+  10 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-6.0.472.22.ebuild, +chromium-6.0.472.25-r1.ebuild:
+  Switch to bundled ffmpeg for compatibility reasons. See also bug #331661
+  by Anthony Parsons <ant@specialops.ath.cx>. We are still getting some
+  crashes there. Removed older broken version.
 
   08 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-6.0.472.25.ebuild, chromium-9999.ebuild:
