@@ -1,8 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.82.ebuild,v 1.1 2010/08/09 07:06:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.82.ebuild,v 1.2 2010/08/10 08:32:49 vapier Exp $
 
-inherit flag-o-matic
+EAPI="2"
+
+inherit flag-o-matic eutils
 
 DESCRIPTION="Standard tool to compile source trees"
 HOMEPAGE="http://www.gnu.org/software/make/make.html"
@@ -16,13 +18,15 @@ IUSE="nls static"
 DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="nls? ( virtual/libintl )"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-MAKEFLAGS-reexec.patch #31975
+}
+
+src_configure() {
 	use static && append-ldflags -static
 	econf \
-		$(use_enable nls) \
 		--program-prefix=g \
-		|| die
-	emake || die
+		$(use_enable nls)
 }
 
 src_install() {
