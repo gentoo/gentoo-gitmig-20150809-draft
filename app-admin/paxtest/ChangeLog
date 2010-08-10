@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.37 2010/08/09 12:31:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.38 2010/08/10 15:14:13 xarthisius Exp $
+
+  10 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  files/paxtest-0.9.9-Makefile.patch:
+  Respect LDFLAGS wrt bug 332011. Thanks to Diego for report.
 
 *paxtest-0.9.9 (09 Aug 2010)
 

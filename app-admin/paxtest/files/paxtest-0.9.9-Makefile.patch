@@ -12,9 +12,10 @@ diff -Naur paxtest-0.9.9.orig/Makefile paxtest-0.9.9/Makefile
  # define stripping of binaries/libs here, or set these on make's commandline,
  # else you'll loose the chpax flags!
 -LDFLAGS :=
+-SHLDFLAGS :=
 +# Gentoo's LDFLAGS should be honored
 +LDFLAGS := $(LDFLAGS)
- SHLDFLAGS :=
++SHLDFLAGS := $(LDFLAGS)
  ifndef RUNDIR
  RUNDIR := .
 @@ -136,7 +138,7 @@
