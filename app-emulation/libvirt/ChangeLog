@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.67 2010/08/07 02:43:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.68 2010/08/10 21:23:37 cardoe Exp $
+
+*libvirt-0.8.3-r1 (10 Aug 2010)
+
+  10 Aug 2010; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.8.3-r1.ebuild:
+  Handful of upstream fixes for phyp overflows, documentation errors, qemu
+  PCI device deletion. Local fixes for LXC tun/tap manipulation (pushed
+  upstream).
 
   07 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libvirt-0.8.3.ebuild:
