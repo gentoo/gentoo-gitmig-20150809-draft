@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.4 2010/08/07 16:04:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.5 2010/08/10 15:54:52 ranger Exp $
+
+  10 Aug 2010; Brent Baude <ranger@gentoo.org> firefox-3.6.8.ebuild:
+  Marking firefox-3.6.8 ppc64 for bug 329279
 
   07 Aug 2010; Raúl Porcel <armin76@gentoo.org> firefox-3.6.8.ebuild:
   alpha/arm/ia64/sparc stable
