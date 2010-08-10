@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.71 2010/08/08 18:41:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.72 2010/08/10 19:36:59 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -205,6 +205,11 @@ src_configure() {
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
+	fi
+
+	# Work around a likely GCC bug, see bug #331945.
+	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "45" ]]; then
+		append-flags -fno-ipa-cp
 	fi
 
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.

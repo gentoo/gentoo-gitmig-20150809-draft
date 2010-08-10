@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.151 2010/08/10 01:28:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.152 2010/08/10 19:36:59 phajdan.jr Exp $
+
+  10 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-6.0.472.25-r1.ebuild, chromium-9999.ebuild:
+  Add workaround for bug #331945 by Evan Teran <eteran@alum.rit.edu>, also
+  confirmed by kernelOfTruth on forums. No bump because gcc-4.5 is not even
+  in ~arch.
 
 *chromium-6.0.472.25-r1 (10 Aug 2010)
 
