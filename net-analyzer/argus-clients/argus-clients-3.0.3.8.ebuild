@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.3.8.ebuild,v 1.4 2010/08/10 13:48:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.3.8.ebuild,v 1.5 2010/08/10 14:26:49 hwoarang Exp $
 
 EAPI="2"
 
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="Clients for net-analyzer/argus"
 HOMEPAGE="http://www.qosient.com/argus/"
@@ -33,7 +33,6 @@ src_prepare() {
 	for x in $(find . -name "Makefile.in"); do
 		sed -i "s:\$(CFLAGS):& \$(LDFLAGS) :" $x
 	done
-	eautomake
 }
 
 src_configure() {
