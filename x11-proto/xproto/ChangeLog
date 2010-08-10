@@ -1,6 +1,13 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.94 2010/07/22 16:28:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.95 2010/08/10 14:34:04 scarabeus Exp $
+
+*xproto-7.0.18 (10 Aug 2010)
+
+  10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xproto-7.0.10.ebuild, -xproto-7.0.14.ebuild, -xproto-7.0.15.ebuild,
+  +xproto-7.0.18.ebuild:
+  Version bump.
 
   22 Jul 2010; Markus Meier <maekke@gentoo.org> xproto-7.0.17.ebuild:
   arm stable, bug #327777
