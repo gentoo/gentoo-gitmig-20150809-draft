@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.29.ebuild,v 1.1 2010/08/10 13:13:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.29.ebuild,v 1.2 2010/08/10 13:21:52 fauli Exp $
 
 EAPI=2
 
@@ -111,7 +111,7 @@ src_install() {
 }
 
 src_test() {
-	echo common/phones/fake.c >> ${S}/po/POTFILES.in
+	echo common/phones/fake.c >> "${S}"/po/POTFILES.in
 	default
 }
 
