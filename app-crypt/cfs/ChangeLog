@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/cfs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.11 2008/12/17 00:15:51 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.12 2010/08/10 22:30:13 hwoarang Exp $
+
+*cfs-1.4.1.17-r1 (10 Aug 2010)
+
+  10 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +cfs-1.4.1.17-r1.ebuild:
+  Respect LDFLAGS. Bug #331939. Thanks to Dane Smith <smithdanea@gmail.com>
+  for the patch
 
   17 Dec 2008; Mark Loeser <halcy0n@gentoo.org> cfs-1.4.1.14.ebuild,
   cfs-1.4.1.17.ebuild:
