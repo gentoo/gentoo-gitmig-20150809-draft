@@ -1,6 +1,11 @@
 \# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.264 2010/07/26 10:41:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.265 2010/08/10 23:23:48 chainsaw Exp $
+
+*asterisk-1.6.2.11 (10 Aug 2010)
+
+  10 Aug 2010; <chainsaw@gentoo.org> +asterisk-1.6.2.11.ebuild:
+  Bugfix release, as per leifmadsen in #asterisk.
 
 *asterisk-1.6.2.10 (26 Jul 2010)
 
