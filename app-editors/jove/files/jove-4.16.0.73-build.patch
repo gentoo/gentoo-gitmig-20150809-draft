@@ -1,5 +1,15 @@
 Originally based on Debian patch jove_4.16.0.70-3.1.diff.gz
 
+--- jove4.16.0.73-orig/doc/jove.rc
++++ jove4.16.0.73/doc/jove.rc
+@@ -74,6 +74,6 @@
+ 1 source jove.rc.$TERM
+ 
+ # source local custom rc file, if present
+-1 source jove-local.rc
++1 source /etc/jove/jove-local.rc
+ 
+ popd
 --- jove4.16.0.73-orig/jove.c
 +++ jove4.16.0.73/jove.c
 @@ -1576,7 +1576,7 @@
