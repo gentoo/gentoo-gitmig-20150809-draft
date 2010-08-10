@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.8 2010/08/07 15:53:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/xfprint-4.6.1-r1.ebuild,v 1.9 2010/08/10 15:49:16 jer Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/archive/${PN}/4.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="cups debug"
 
 RDEPEND="app-text/a2ps
