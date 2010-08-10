@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmcrypt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.52 2009/05/24 18:47:16 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.53 2010/08/10 17:52:37 darkside Exp $
+
+*libmcrypt-2.5.8-r2 (10 Aug 2010)
+
+  10 Aug 2010; Jeremy Olexa <darkside@gentoo.org> -libmcrypt-2.5.8.ebuild,
+  +libmcrypt-2.5.8-r2.ebuild:
+  Migrate changes from Gentoo Prefix overlay. Add eautoreconf, KEYWORDS. bug
+  331973
 
   24 May 2009; Markus Meier <maekke@gentoo.org> libmcrypt-2.5.8-r1.ebuild:
   amd64 stable, bug #270322
