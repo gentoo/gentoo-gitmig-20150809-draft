@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/amap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.5 2009/07/27 05:52:01 dberkholz Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.6 2010/08/10 15:26:30 xarthisius Exp $
+
+  10 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -files/2.0-fix-cxxflags.patch, -amap-2.0.ebuild, -amap-2.2.ebuild,
+  -files/2.1-fix-cxxflags.patch, -amap-2.1.ebuild, amap-2.2-r1.ebuild:
+  Respect LDFLAGS wrt bug 332009. Thanks to Diego for report. Remove old.
 
 *amap-2.2-r1 (27 Jul 2009)
 

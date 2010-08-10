@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/amap-2.2-r1.ebuild,v 1.1 2009/07/27 05:52:01 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/amap-2.2-r1.ebuild,v 1.2 2010/08/10 15:26:30 xarthisius Exp $
 
 # Java is optional, don't force an ant dependency
 JAVA_ANT_DISABLE_ANT_CORE_DEP="yes"
@@ -32,6 +32,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-cxxflags.patch
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+	sed -i -e "s/\$(CXX)/& \$(LDFLAGS)/" "${S}"/align/Makefile || die #332009
 }
 
 src_compile() {
