@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.8 2010/08/02 07:20:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.9 2010/08/10 16:11:09 jer Exp $
+
+  10 Aug 2010; Jeroen Roovers <jer@gentoo.org> argparse-1.1.ebuild:
+  Marked ~hppa (bug #330569).
 
   02 Aug 2010; Christian Faulhammer <fauli@gentoo.org> argparse-1.1.ebuild:
   add Prefix keywords for bug 330569
