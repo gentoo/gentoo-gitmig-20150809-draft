@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.3.ebuild,v 1.3 2010/07/30 09:12:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.1.3.ebuild,v 1.4 2010/08/10 10:17:18 flameeyes Exp $
 
 EAPI="3"
 
@@ -63,10 +63,15 @@ src_configure() {
 	sh config.sh ${myconf} || die "Configure failed"
 }
 
+src_compile() {
+	# bug #326987
+	emake -j1 || die "emake failed"
+}
+
 src_install() {
 	dodir /usr/bin
 	sh config.sh --prefix="${EPREFIX}/usr"
-	emake DESTDIR="${D}" install || die "Install Failed"
+	emake -j1 DESTDIR="${D}" install || die "Install Failed"
 #	use gtk && dosym mp-5 /usr/bin/gmp
 }
 
