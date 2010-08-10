@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100524.ebuild,v 1.3 2010/06/22 16:58:38 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100809.ebuild,v 1.1 2010/08/10 20:43:17 tommy Exp $
 
 EAPI="2"
 
