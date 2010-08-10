@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6.ebuild,v 1.11 2010/08/10 15:54:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.6.ebuild,v 1.12 2010/08/10 15:58:28 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -26,7 +26,7 @@ if [[ ${PV} == *_pre* ]] ; then
 
 	REL_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${PN}/nightly/${MY_PV}-candidates/build${PV##*_pre}"
 	#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-	KEYWORDS="ppc64"
+	KEYWORDS=""
 	#HAS_LANGS="false"
 else
 	# This is where arch teams should change the KEYWORDS.

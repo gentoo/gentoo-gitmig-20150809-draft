@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.248 2010/08/10 15:54:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.249 2010/08/10 15:58:28 polynomial-c Exp $
+
+  10 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-2.0.6.ebuild:
+  Removed stable ppc64 keyword from _pre KEYWORDS section.
 
   10 Aug 2010; Brent Baude <ranger@gentoo.org> seamonkey-2.0.6.ebuild:
   Marking seamonkey-2.0.6 ppc64 for bug 329279
