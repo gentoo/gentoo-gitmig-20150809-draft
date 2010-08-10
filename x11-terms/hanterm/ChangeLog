@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.26 2010/02/11 16:10:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.27 2010/08/10 20:55:07 hwoarang Exp $
+
+  10 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  hanterm-3.1.6-r4.ebuild:
+  Respect LDFLAGS. Bug #331815. Thanks to Diego E. 'Flameeyes' Pettenò
+  <flameeyes@gentoo.org> for reporting
 
   11 Feb 2010; Ulrich Mueller <ulm@gentoo.org> hanterm-3.1.6-r2.ebuild,
   hanterm-3.1.6-r4.ebuild:

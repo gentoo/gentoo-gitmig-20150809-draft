@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r4.ebuild,v 1.2 2010/02/11 16:10:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r4.ebuild,v 1.3 2010/08/10 20:55:07 hwoarang Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,6 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+	sed -i -e "/^LDFLAGS/s:=:& ${LDFLAGS} :" \
+		-e "s:\$(CFLAGS):& \$(LDFLAGS) :" Makefile.in
 }
 
 src_compile() {
