@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libasyncns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.20 2010/07/14 02:53:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.21 2010/08/10 00:25:05 flameeyes Exp $
+
+  10 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libasyncns-0.3.ebuild, -libasyncns-0.4.ebuild:
+  Cleanup old versions.
 
   14 Jul 2010; Jeroen Roovers <jer@gentoo.org> libasyncns-0.7.ebuild:
   Stable for HPPA (bug #283362).
