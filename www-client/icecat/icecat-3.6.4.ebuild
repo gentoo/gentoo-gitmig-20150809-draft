@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.4.ebuild,v 1.5 2010/07/08 20:14:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.4.ebuild,v 1.6 2010/08/10 22:52:13 truedfx Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -70,6 +70,8 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.4 )"
 
+# This is a copy of the launcher program installed as part of xulrunner, so has
+# already been stripped. Bug #332071 for details.
 QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/${PN}"
 
 linguas() {
