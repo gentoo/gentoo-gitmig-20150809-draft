@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4460 2010/08/10 14:45:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4461 2010/08/10 18:53:34 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking app-admin/webmin for QA removal.
 
   10 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Masking sys-apps/gluelog for QA removal.

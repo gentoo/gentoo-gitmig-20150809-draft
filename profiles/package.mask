@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11836 2010/08/10 14:45:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11837 2010/08/10 18:53:35 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2010)
+#  on behalf of QA team
+#
+# Breaks about any QA policy regarding not touching
+# live filesystem as it writes to LVM configuration,
+# cron configuration, current-running kernel modules, RPM
+# library, ...
+#
+# Removal on 2010-10-09
+app-admin/webmin
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2010)
 #  on behalf of QA team
