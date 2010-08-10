@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.7.ebuild,v 1.1 2010/05/19 19:17:43 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-1.2.7.ebuild,v 1.2 2010/08/10 17:56:57 hwoarang Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs confutils
@@ -115,6 +115,7 @@ src_compile() {
 
 	sed -i \
 		-e "s/CFLAGS=.*$/CFLAGS=${CFLAGS}/" \
+		-e "/^EFLAGS/s:=:&${LDFLAGS} :" \
 		Makefile.settings || die "sed failed"
 
 	emake || die "make failed"
