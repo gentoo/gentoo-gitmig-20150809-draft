@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.185 2010/08/06 15:56:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.186 2010/08/10 16:08:17 ranger Exp $
+
+  10 Aug 2010; Brent Baude <ranger@gentoo.org> pidgin-2.7.2.ebuild:
+  Marking pidgin-2.7.2 ppc64 for bug 328667
 
   06 Aug 2010; Jeroen Roovers <jer@gentoo.org> pidgin-2.7.2.ebuild:
   Stable for PPC (bug #328667).
