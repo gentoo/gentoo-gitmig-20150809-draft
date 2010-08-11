@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.169 2010/08/08 23:33:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.170 2010/08/11 13:56:13 hwoarang Exp $
+
+  11 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  avidemux-2.5.3-r2.ebuild:
+  Reverting my previous commit about the media-plugins/swh-plugins
+  dependency. Bug #331695
 
   08 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   avidemux-2.5.3-r2.ebuild:
