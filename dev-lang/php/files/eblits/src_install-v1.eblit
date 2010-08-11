@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.9 2010/08/09 13:02:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v1.eblit,v 1.10 2010/08/11 19:13:32 mabi Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -136,7 +136,7 @@ php_install_ini() {
 			insinto "/var/lib/php-pkg/${CATEGORY}/${PN}-${PVR}/"
 			doins "${FILESDIR}/php${PHP_MV}-ldvs"
 		else
-			einfo "Installing Apache2 config 70_mod_php${PHP_MV}.conf)"
+			einfo "Installing Apache2 config 70_mod_php${PHP_MV}.conf"
 			insinto ${APACHE_MODULES_CONFDIR}
 			newins "${FILESDIR}/70_mod_php${PHP_MV}.conf-apache2" \
 				"70_mod_php${PHP_MV}.conf"
