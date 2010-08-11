@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/maradns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.34 2010/08/07 17:09:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.35 2010/08/11 22:37:14 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> maradns-1.4.03.ebuild:
+  Marked ppc stable for bug #329947.
 
   07 Aug 2010; Raúl Porcel <armin76@gentoo.org> maradns-1.4.03.ebuild:
   sparc stable wrt #329947
