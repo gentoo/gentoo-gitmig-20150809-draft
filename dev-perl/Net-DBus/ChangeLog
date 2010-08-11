@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DBus
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.15 2010/05/22 10:46:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.16 2010/08/11 15:59:11 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> Net-DBus-0.33.6.ebuild:
+  Marked ~ppc for bug #313563.
 
   22 May 2010; Raúl Porcel <armin76@gentoo.org> Net-DBus-0.33.6.ebuild:
   Add ~alpha/~ia64
