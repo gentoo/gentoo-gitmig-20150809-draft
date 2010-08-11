@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnuserv-programs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/ChangeLog,v 1.10 2010/04/30 14:13:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/ChangeLog,v 1.11 2010/08/11 21:38:43 hwoarang Exp $
+
+  11 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  gnuserv-programs-3.12.8-r1.ebuild:
+  Stable on amd64 wrt bug #332083
 
 *gnuserv-programs-3.12.8-r1 (30 Apr 2010)
 
