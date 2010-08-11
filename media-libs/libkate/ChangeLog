@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.50 2010/07/23 12:03:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.51 2010/08/11 08:02:58 aballier Exp $
+
+*libkate-0.3.8 (11 Aug 2010)
+
+  11 Aug 2010; Alexis Ballier <aballier@gentoo.org> +libkate-0.3.8.ebuild:
+  version bump
 
   23 Jul 2010; Markus Meier <maekke@gentoo.org> libkate-0.3.7.ebuild:
   arm stable, bug #324269
