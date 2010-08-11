@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.5 2010/08/11 18:50:45 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.6 2010/08/11 20:55:40 mabi Exp $
 
 EAPI=2
 
 PHPCONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob
 interbase msql oci8 sapdb solid"
 
+# inherit autotools, because we call eautoreconf in the eblits
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use phpconfutils php-common-r1 libtool
 
 PHP_PATCHSET=""
@@ -78,6 +79,7 @@ IUSE="kolab"
 # SAPIs and SAPI-specific USE flags (cli SAPI is default on):
 IUSE="${IUSE}
 	${SAPIS/cli/+cli}
+	discard-path force-cgi-redirect
 	concurrentmodphp threads"
 
 IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
