@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.175 2010/08/11 14:24:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.176 2010/08/11 22:20:04 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> bugzilla-3.2.7.ebuild,
+  bugzilla-3.2.8.ebuild, bugzilla-3.6.2.ebuild:
+  Marked ppc/ppc64 stable for bug #329923 and bug #332193. Marked
+  ~ppc/~ppc64 for bug #315793.
 
   11 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   bugzilla-3.2.8.ebuild:
