@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.3.ebuild,v 1.1 2010/07/13 21:03:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.3.ebuild,v 1.2 2010/08/11 02:08:34 jer Exp $
 
 EAPI=2
 
@@ -132,7 +132,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake -j1 OTHERLDFLAGS="${LDFLAGS}" || die "emake failed"
 
 	if use doc ; then
 		einfo "Building HTML Documentation"
