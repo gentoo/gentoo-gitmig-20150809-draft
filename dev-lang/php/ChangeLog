@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.409 2010/08/11 19:21:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.410 2010/08/11 22:30:23 mabi Exp $
+
+  11 Aug 2010; Matti Bickel <mabi@gentoo.org>
+  files/eblits/src_configure-v52.eblit, php-5.3.3-r1.ebuild:
+  5.3 does not need flex; also fix a compile error with
+  -Wimplicit-function-declaration (bug #332273)
 
   11 Aug 2010; Matti Bickel <mabi@gentoo.org> -php-5.3.2.ebuild:
   remove php-5.3.2 due to security issues (bug #332039)

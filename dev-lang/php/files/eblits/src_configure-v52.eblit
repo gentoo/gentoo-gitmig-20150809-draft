@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v52.eblit,v 1.3 2010/08/11 20:55:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v52.eblit,v 1.4 2010/08/11 22:30:23 mabi Exp $
 
 eblit-php-src_configure() {
+	export CFLAGS="${CFLAGS} -D_GNU_SOURCE"
 	PHP_DESTDIR="/usr/$(get_libdir)/php${SLOT}"
 
 	# This is a global variable and should be in caps. It isn't because the
