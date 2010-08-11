@@ -1,0 +1,20 @@
+--- bin/radiant.orig	2010-08-11 13:46:51.021730420 +0200
++++ bin/radiant	2010-08-11 13:47:11.678230437 +0200
+@@ -4,7 +4,7 @@
+ 
+ $LOAD_PATH << File.join(File.dirname(__FILE__), '..')
+ 
+-require 'lib/ruby_version_check'
++require 'ruby_version_check'
+ Signal.trap("INT") { puts; exit }
+ 
+ require 'lib/radiant'
+@@ -15,7 +15,7 @@
+ 
+ app_path = ARGV.first
+ 
+-require 'lib/rails_generator'
++require 'rails_generator'
+ require 'rails_generator/scripts/generate'
+ 
+ class Rails::Generator::Base

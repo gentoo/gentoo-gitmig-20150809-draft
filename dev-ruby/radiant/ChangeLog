@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/radiant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.18 2010/07/29 13:05:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.19 2010/08/11 12:02:26 graaff Exp $
+
+*radiant-0.9.1-r2 (11 Aug 2010)
+
+  11 Aug 2010; Hans de Graaff <graaff@gentoo.org> +radiant-0.9.1-r2.ebuild,
+  +files/radiant-0.9.1-unbundled.patch:
+  Fix radiant paths for unbundled rails, thanks to Daniel Bahrdt in bug
+  332119. Further fixes to make the generator work in this case.
 
 *radiant-0.9.1 (29 Jul 2010)
 
