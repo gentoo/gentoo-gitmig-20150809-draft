@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.28 2010/07/09 15:39:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.29 2010/08/11 14:04:23 ssuominen Exp $
+
+  11 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  btrfs-progs-0.19.ebuild, +files/btrfs-progs-0.19-glibc212.patch:
+  Fix building with GLIBC 2.12.
 
   09 Jul 2010; Pacho Ramos <pacho@gentoo.org> btrfs-progs-0.19.ebuild:
   stable amd64, bug 327333

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.19.ebuild,v 1.4 2010/07/09 15:39:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.19.ebuild,v 1.5 2010/08/11 14:04:23 ssuominen Exp $
 
 inherit eutils
 
@@ -27,7 +27,9 @@ src_unpack() {
 	# Remove code that updates the total used space, since
 	# btrfs_update_block_group does that work now.
 	# (patch that did not make 0.19 release)
-	epatch "${FILESDIR}/${P}-convert-remove-used-space-update.patch"
+	epatch "${FILESDIR}"/${P}-convert-remove-used-space-update.patch
+
+	epatch "${FILESDIR}"/${P}-glibc212.patch
 
 	# Fix hardcoded "gcc" and "make"
 	sed -i -e 's:gcc $(CFLAGS):$(CC) $(CFLAGS):' Makefile
