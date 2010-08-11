@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.193 2010/07/17 16:52:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.194 2010/08/11 17:56:13 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
+  pulseaudio-0.9.21.2-r1.ebuild:
+  Marked ~ppc/~ppc64 for bug #308971.
 
   17 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
   pulseaudio-0.9.21.2-r1.ebuild:
