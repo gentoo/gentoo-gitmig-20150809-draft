@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4462 2010/08/11 16:06:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4463 2010/08/11 16:19:06 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Aug 2010; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Added some more packages needed for spice to package.mask.
 
   11 Aug 2010; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Masked opennebula, spice and spiced qemu-kvm for testing.
