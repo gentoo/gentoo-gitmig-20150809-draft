@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.5 2010/07/28 20:22:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.6 2010/08/11 23:38:30 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> httpd-php-5.3.ebuild:
+  Marked ~ppc/~ppc64 for bug #321743.
 
   28 Jul 2010; Markus Meier <maekke@gentoo.org> httpd-php-5.3.ebuild:
   add ~arm, bug #321743
