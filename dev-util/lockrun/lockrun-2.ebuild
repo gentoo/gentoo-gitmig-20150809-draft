@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/lockrun-2.ebuild,v 1.6 2009/09/23 17:46:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/lockrun-2.ebuild,v 1.7 2010/08/11 01:00:23 jer Exp $
 
 inherit toolchain-funcs
 
@@ -24,10 +24,9 @@ src_unpack() {
 }
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS} lockrun.c -o lockrun
+	emake CC=$(tc-getCC) ${PN} || die "make failed"
 }
 
 src_install () {
-	dodir /usr/bin
-	cp lockrun "${D}"/usr/bin
+	dobin ${PN}
 }
