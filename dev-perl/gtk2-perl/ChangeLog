@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.111 2010/05/31 09:25:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.112 2010/08/11 20:01:16 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> gtk2-perl-1.222.ebuild:
+  Marked ~ppc/~ppc64 for bug #322187.
 
 *gtk2-perl-1.222 (31 May 2010)
 
