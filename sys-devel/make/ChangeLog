@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.69 2010/08/11 15:44:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.70 2010/08/11 16:24:15 vapier Exp $
+
+  11 Aug 2010; Mike Frysinger <vapier@gentoo.org> make-3.81-r2.ebuild:
+  Stabilize for alpha/arm/ia64/s390/sh #331717.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> make-3.81-r2.ebuild:
   Marked ppc/ppc64 stable for bug #331717.
