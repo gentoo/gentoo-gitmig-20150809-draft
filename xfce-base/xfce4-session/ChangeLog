@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.114 2010/08/10 15:53:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.115 2010/08/11 20:48:29 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> xfce4-session-4.6.2.ebuild:
+  Marked ppc stable for bug #323729.
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> xfce4-session-4.6.2.ebuild:
   Stable for HPPA (bug #323729).

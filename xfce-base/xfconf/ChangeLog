@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.39 2010/08/10 15:54:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.40 2010/08/11 20:45:41 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> xfconf-4.6.2.ebuild:
+  Marked ppc stable for bug #323729.
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> xfconf-4.6.2.ebuild:
   Stable for HPPA (bug #323729).

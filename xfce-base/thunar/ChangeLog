@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.97 2010/08/10 15:52:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.98 2010/08/11 20:46:44 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> thunar-1.0.2.ebuild:
+  Marked ppc stable for bug #323729.
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> thunar-1.0.2.ebuild:
   Stable for HPPA (bug #323729).

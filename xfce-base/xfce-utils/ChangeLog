@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.155 2010/08/10 15:54:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.156 2010/08/11 20:43:12 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> xfce-utils-4.6.2.ebuild:
+  Marked ppc stable for bug #323729.
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> xfce-utils-4.6.2.ebuild:
   Stable for HPPA (bug #323729).
