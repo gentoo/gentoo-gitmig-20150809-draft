@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.406 2010/08/10 21:19:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.407 2010/08/11 04:41:18 phajdan.jr Exp $
+
+  11 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> php-5.2.14.ebuild:
+  x86 stable wrt security bug #332039
 
   10 Aug 2010; Markos Chandras <hwoarang@gentoo.org> php-5.2.14.ebuild:
   Stable on amd64 wrt bug #332039
