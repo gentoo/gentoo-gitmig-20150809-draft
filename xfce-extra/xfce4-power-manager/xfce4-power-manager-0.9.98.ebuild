@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.9.98.ebuild,v 1.2 2010/08/06 20:41:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.9.98.ebuild,v 1.3 2010/08/11 08:49:52 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -52,4 +52,13 @@ pkg_setup() {
 		$(xfconf_use_debug)"
 
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
+}
+
+src_prepare() {
+	# http://bugzilla.xfce.org/show_bug.cgi?id=6630
+	sed -i \
+		-e '/libxfcegui4/d' \
+		panel-plugins/brightness/brightness-button.c || die
+
+	xfconf_src_prepare
 }

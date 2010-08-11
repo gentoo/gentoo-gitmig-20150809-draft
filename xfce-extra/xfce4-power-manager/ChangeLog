@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.23 2010/08/06 20:41:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.24 2010/08/11 08:49:52 ssuominen Exp $
+
+  11 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.9.98.ebuild:
+  Remove redudant libxfcegui4 include from brightness-button.c to fix
+  building with USE="debug".
 
   06 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-power-manager-0.9.98.ebuild,
