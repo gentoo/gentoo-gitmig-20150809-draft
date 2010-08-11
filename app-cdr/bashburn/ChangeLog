@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/bashburn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.37 2010/02/16 15:27:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.38 2010/08/11 22:04:32 hwoarang Exp $
+
+  11 Aug 2010; Markos Chandras <hwoarang@gentoo.org> bashburn-3.0.1.ebuild:
+  Stable on amd64 wrt bug #328505
 
 *bashburn-3.0.1 (16 Feb 2010)
 
