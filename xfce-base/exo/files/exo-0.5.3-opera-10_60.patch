@@ -1,0 +1,11 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=6604
+http://bugs.gentoo.org/327081
+
+--- exo-helper/helpers/opera-browser.desktop.in.in
++++ exo-helper/helpers/opera-browser.desktop.in.in
+@@ -8,4 +8,4 @@
+ X-XFCE-Binaries=opera;
+ X-XFCE-Category=WebBrowser
+ X-XFCE-Commands=%B;
+-X-XFCE-CommandsWithParameter=%B -remote "openURL(%s,new-window)";%B "%s";
++X-XFCE-CommandsWithParameter=%B "%s";

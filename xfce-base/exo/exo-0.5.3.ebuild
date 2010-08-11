@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.3.ebuild,v 1.1 2010/07/26 15:47:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.5.3.ebuild,v 1.2 2010/08/11 16:31:48 ssuominen Exp $
 
 EAPI=3
+
+PYTHON_DEPEND="python? 2"
+
 inherit xfconf python
 
 DESCRIPTION="Extensions, widgets and framework library with session management support"
@@ -26,6 +29,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+
+	PATCHES=( "${FILESDIR}"/${P}-opera-10_60.patch )
 	XFCONF="--disable-dependency-tracking
 		--disable-static
 		$(use_enable python)

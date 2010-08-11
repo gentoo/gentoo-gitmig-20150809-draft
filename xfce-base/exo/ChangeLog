@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.39 2010/08/10 15:50:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.40 2010/08/11 16:31:48 ssuominen Exp $
+
+  11 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> exo-0.5.3.ebuild,
+  +files/exo-0.5.3-opera-10_60.patch:
+  Set python_set_active_version to make sure Python 2.x is used. Fix
+  opera-browser.desktop for >= 10.60 wrt #327081 by Christopher Head.
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> exo-0.3.107.ebuild:
   Stable for HPPA (bug #323729).
