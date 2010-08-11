@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.141 2010/08/10 12:58:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.142 2010/08/11 21:57:08 maekke Exp $
+
+  11 Aug 2010; Markus Meier <maekke@gentoo.org> cmake-2.8.1-r2.ebuild:
+  arm stable, bug #325845
 
   10 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/cmake-2.8.0-more-no_host_paths.patch, -cmake-2.8.1.ebuild,
