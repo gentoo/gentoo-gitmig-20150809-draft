@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.19.ebuild,v 1.1 2010/04/25 13:33:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.19.ebuild,v 1.2 2010/08/11 15:49:17 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 inherit libtool
 
 DESCRIPTION="library that handles Resource Description Framework (RDF)"
@@ -29,7 +29,6 @@ src_prepare() {
 }
 
 src_configure() {
-	use prefix || EPREFIX=
 	local regex="posix"
 	local decimal="mpfr"
 
@@ -38,6 +37,7 @@ src_configure() {
 
 	econf \
 		--disable-dependency-tracking \
+		--disable-static \
 		--with-raptor=system \
 		$(use_enable pcre) \
 		$(use_enable xml xml2) \
