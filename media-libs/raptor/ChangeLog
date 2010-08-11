@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.82 2010/07/03 23:07:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.83 2010/08/11 15:56:33 scarabeus Exp $
+
+  11 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> raptor-1.4.21.ebuild:
+  Introduce static-libs useflag.
 
   03 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> raptor-1.4.20.ebuild:
   ppc64 stable wrt #301306
