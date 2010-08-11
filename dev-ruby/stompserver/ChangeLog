@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/stompserver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stompserver/ChangeLog,v 1.2 2010/07/11 19:39:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stompserver/ChangeLog,v 1.3 2010/08/11 05:35:09 graaff Exp $
+
+  11 Aug 2010; Hans de Graaff <graaff@gentoo.org> -stompserver-0.9.9.ebuild:
+  Remove old version.
 
 *stompserver-0.9.9-r1 (11 Jul 2010)
 
