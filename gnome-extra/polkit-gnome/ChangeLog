@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/polkit-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.12 2010/07/20 16:46:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.13 2010/08/11 06:24:01 ssuominen Exp $
+
+*polkit-gnome-0.96-r1 (11 Aug 2010)
+
+  11 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +polkit-gnome-0.96-r1.ebuild:
+  Replace OnlyShowIn=GNOME; with NotShowIn=KDE; because polkit-gnome is
+  useful also for LXDE, XFCE, and others.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> polkit-gnome-0.95.ebuild,
   polkit-gnome-0.96.ebuild:
