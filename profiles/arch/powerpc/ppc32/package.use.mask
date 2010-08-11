@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.12 2010/07/13 12:08:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.13 2010/08/11 11:59:40 josejx Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -9,9 +9,8 @@
 media-gfx/gthumb slideshow
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
-# Needs sys-apps/gnome-disk-utility keyworded, bug 323803
 # Needs libimobiledevice keyworded, bug 325839
-gnome-base/gvfs gdu iphone
+gnome-base/gvfs iphone
 
 # Maciej Mrozowski <reavertm@gentoo.org> (26 Jun 2010)
 # Needs media-libs/simage keyworded, bug 325623
