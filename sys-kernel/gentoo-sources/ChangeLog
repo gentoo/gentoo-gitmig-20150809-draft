@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.722 2010/08/10 00:01:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.723 2010/08/11 01:07:32 mpagano Exp $
+
+*gentoo-sources-2.6.35-r1 (11 Aug 2010)
+
+  11 Aug 2010; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.35-r1.ebuild:
+  Linux patch 2.6.35.1
 
   09 Aug 2010; Mike Pagano <mpagano@gentoo.org>
   -gentoo-sources-2.6.28-r5.ebuild, -gentoo-sources-2.6.32-r10.ebuild,
