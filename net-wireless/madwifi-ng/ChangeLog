@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.75 2010/06/26 17:39:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.76 2010/08/11 09:35:30 pva Exp $
+
+*madwifi-ng-0.9.4.4133.20100621 (11 Aug 2010)
+
+  11 Aug 2010; Peter Volkov <pva@gentoo.org>
+  -madwifi-ng-0.9.4.4030.20090529.ebuild,
+  -madwifi-ng-0.9.4.4100.20090929.ebuild,
+  +madwifi-ng-0.9.4.4133.20100621.ebuild:
+  Version bump to address 2.6.35 compatibility issue, bug #331125, thank
+  Oschtan for report and teidakankan for testing. Drop old.
 
   26 Jun 2010; <nixnut@gentoo.org> madwifi-ng-0.9.4.4119.20100201.ebuild:
   ppc stable #306851

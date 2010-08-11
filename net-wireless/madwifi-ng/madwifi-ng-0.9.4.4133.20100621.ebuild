@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.4100.20090929.ebuild,v 1.1 2009/10/10 10:36:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.4133.20100621.ebuild,v 1.1 2010/08/11 09:35:30 pva Exp $
 
 EAPI="2"
 
@@ -32,6 +32,8 @@ pkg_setup() {
 	kernel_is lt 2 6 29 && CONFIG_CHECK="${CONFIG_CHECK} KMOD"
 	ERROR_CRYPTO="${P} requires Cryptographic API support (CONFIG_CRYPTO)."
 	ERROR_WIRELESS_EXT="${P} requires CONFIG_WIRELESS_EXT selected by Wireless LAN drivers (non-hamradio) & Wireless Extensions"
+	kernel_is gt 2 6 33 && \
+	ERROR_WIRELESS_EXT="${P} requires CONFIG_WIRELESS_EXT selected by some Wireless LAN drivers (e.g CONFIG_IPW2100)"
 	ERROR_SYSCTL="${P} requires Sysctl support (CONFIG_SYSCTL)."
 	ERROR_KMOD="${F} requires CONFIG_KMOD to be set to y or m"
 	BUILD_TARGETS="all"
@@ -62,6 +64,7 @@ src_prepare() {
 		convert_to_m "${S}/${dir}/Makefile"
 	done
 	sed -e 's:-Werror ::' -i Makefile.inc || die "sed -Werror failed"
+	make svnversion.h || die
 }
 
 src_install() {
