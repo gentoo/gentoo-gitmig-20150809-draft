@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/rtkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.5 2010/08/11 17:53:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.6 2010/08/11 17:55:16 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> rtkit-0.6.ebuild,
+  rtkit-0.7.ebuild:
+  Marked ~ppc64 for bug #308971.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> rtkit-0.6.ebuild,
   rtkit-0.7.ebuild:
