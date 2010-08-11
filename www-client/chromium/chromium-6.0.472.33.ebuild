@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.25.ebuild,v 1.3 2010/08/08 18:41:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.33.ebuild,v 1.1 2010/08/11 21:20:29 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	media-video/ffmpeg[threads]
 	cups? ( >=net-print/cups-1.4.4 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
@@ -60,11 +59,11 @@ remove_bundled_lib() {
 }
 
 src_prepare() {
-	# Disable VP8 until we have a recent enough system-provided ffmpeg.
-	epatch "${FILESDIR}"/${PN}-disable-vp8-r1.patch
+	# Fix compilation, bug #332131.
+	epatch "${FILESDIR}"/${PN}-make-3.82-compatibility-r0.patch
 
-	# Workaround for upstream bug http://crbug.com/50678.
-	epatch "${FILESDIR}"/${PN}-ffmpeg-compatibility-r0.patch
+	# Add Gentoo plugin paths.
+	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
@@ -74,7 +73,6 @@ src_prepare() {
 	remove_bundled_lib "third_party/libevent"
 	remove_bundled_lib "third_party/libjpeg"
 	remove_bundled_lib "third_party/libpng"
-	remove_bundled_lib "third_party/libvpx"
 	remove_bundled_lib "third_party/lzma_sdk"
 	remove_bundled_lib "third_party/molokocacao"
 	remove_bundled_lib "third_party/ocmock"
@@ -99,20 +97,17 @@ src_configure() {
 	fi
 
 	# Use system-provided libraries.
+	# TODO: use_system_ffmpeg (http://crbug.com/50678).
 	# TODO: use_system_libxml (http://crbug.com/29333).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_icu, use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl when we have a recent enough system NSS.
 	myconf="${myconf}
 		-Duse_system_bzip2=1
-		-Duse_system_ffmpeg=1
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
 		-Duse_system_zlib=1"
-
-	# The system-provided ffmpeg supports more codecs. Enable them in chromium.
-	myconf="${myconf} -Dproprietary_codecs=1"
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then
@@ -168,6 +163,11 @@ src_configure() {
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
 	fi
 
+	# Work around a likely GCC bug, see bug #331945.
+	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "45" ]]; then
+		append-flags -fno-ipa-cp
+	fi
+
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
 	# Depending on GCC version the warnings are different and we don't want
 	# the build to fail because of that.
@@ -208,8 +208,8 @@ src_install() {
 	newman out/Release/chrome.1 chrome.1
 	newman out/Release/chrome.1 chromium.1
 
-	# Use system plugins by default.
-	dosym /usr/$(get_libdir)/nsbrowser/plugins "$(get_chromium_home)/plugins"
+	doexe out/Release/ffmpegsumo_nolink || die
+	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icon and desktop entry.
 	newicon out/Release/product_logo_48.png ${PN}-browser.png
