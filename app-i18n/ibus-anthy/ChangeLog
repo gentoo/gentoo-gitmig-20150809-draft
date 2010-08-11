@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.22 2010/05/26 10:32:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.23 2010/08/11 18:19:18 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
+  ibus-anthy-1.2.0.20100115.ebuild, ibus-anthy-1.2.1.ebuild:
+  Marked ~ppc for bug #303413.
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org>
   ibus-anthy-1.2.0.20100115.ebuild:
