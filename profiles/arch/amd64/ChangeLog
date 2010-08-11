@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.98 2010/07/26 22:31:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.99 2010/08/11 05:24:15 vapier Exp $
+
+  11 Aug 2010; Mike Frysinger <vapier@gentoo.org> -package.mask:
+  Drop hulu mask now that it has been switched to multilib.
 
   26 Jul 2010; Alexey Shvetsov <alexxy@gentoo.org> no-multilib/package.mask:
   Mask wimax stack on no-multilib systems
