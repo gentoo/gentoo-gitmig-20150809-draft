@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/GeoRuby
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/GeoRuby/ChangeLog,v 1.1 2010/08/11 01:04:52 flameeyes Exp $
+
+*GeoRuby-1.3.4 (11 Aug 2010)
+
+  11 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +GeoRuby-1.3.4.ebuild, +metadata.xml:
+  Add GeoRuby as needed by osmlib-base (for testing and part of runtime).
+
