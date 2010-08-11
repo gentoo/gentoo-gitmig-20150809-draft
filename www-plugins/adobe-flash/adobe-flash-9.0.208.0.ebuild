@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.277.0.ebuild,v 1.2 2010/07/25 19:10:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.208.0.ebuild,v 1.1 2010/08/11 11:47:37 lack Exp $
 
 inherit nsplugins
 
@@ -28,6 +28,9 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
 		media-libs/fontconfig )
 	|| ( media-fonts/liberation-fonts media-fonts/corefonts )"
 
+# Where should this all go? (Bug #328639)
+INSTALL_BASE="opt/Adobe/flash-player"
+
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86
 	# Please keep this in future versions
@@ -37,9 +40,9 @@ pkg_setup() {
 
 src_install() {
 	cd "${S}/install_flash_player_9_linux/"
-	exeinto /opt/netscape/plugins
+	exeinto /${INSTALL_BASE}
 	doexe libflashplayer.so
-	inst_plugin /opt/netscape/plugins/libflashplayer.so
+	inst_plugin /${INSTALL_BASE}/libflashplayer.so
 }
 
 pkg_postinst() {
@@ -47,7 +50,7 @@ pkg_postinst() {
 	ewarn "issues.  Please consider only running flash applets you know to"
 	ewarn "be safe."
 
-	if has_version 'www-client/firefox'; then
+	if has_version 'www-client/mozilla-firefox'; then
 		elog "The firefox 'flashblock' extension may help:"
 		elog "  https://addons.mozilla.org/en-US/firefox/addon/433"
 	fi
