@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/dragbox
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dragbox/ChangeLog,v 1.1 2010/08/11 13:41:36 hwoarang Exp $
+
+*dragbox-0.4.0 (11 Aug 2010)
+
+  11 Aug 2010; Markos Chandras <hwoarang@gentoo.org> +dragbox-0.4.0.ebuild,
+  +metadata.xml:
+  Moved from sunrise overaly. Thanks to Chad A. Simmons
+  <chad.simmons@member.fsf.org> for the initial ebuild. Fixes bug #237944
+
