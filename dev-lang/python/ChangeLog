@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.493 2010/08/08 16:02:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.494 2010/08/11 22:32:00 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> python-2.6.5-r3.ebuild,
+  python-3.1.2-r4.ebuild:
+  Marked ppc/ppc64 stable for bug #325593.
 
   08 Aug 2010; Raúl Porcel <armin76@gentoo.org> python-2.6.5-r3.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #325593
