@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-014.ebuild,v 1.7 2010/07/06 12:58:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-014.ebuild,v 1.8 2010/08/11 16:10:38 josejx Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="debug doc test"
 
 RDEPEND=">=dev-libs/glib-2.21.5
