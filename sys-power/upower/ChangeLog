@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.16 2010/08/05 13:08:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.17 2010/08/11 15:50:59 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> upower-0.9.4.ebuild,
+  upower-0.9.5.ebuild:
+  Marked ~ppc for bug #296548.
 
   05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.5.ebuild:
   Remove USE="nls" because intltool is always required by Maciej Mrozowski.
