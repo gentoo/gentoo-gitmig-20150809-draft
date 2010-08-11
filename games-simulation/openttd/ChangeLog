@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.96 2010/08/06 05:02:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.97 2010/08/11 18:09:08 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> openttd-1.0.3.ebuild:
+  Marked ppc/ppc64 stable for bug #330841.
 
   06 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> openttd-1.0.3.ebuild:
   x86 stable wrt bug #330841
