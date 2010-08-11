@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.1.ebuild,v 1.1 2010/02/23 16:52:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.7.ebuild,v 1.1 2010/08/11 23:58:25 alexxy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit flag-o-matic linux-info
 
@@ -22,6 +22,12 @@ DEPEND="dev-perl/config-general
 				)"
 RDEPEND="${DEPEND}
 		sys-apps/sg3_utils"
+
+pkg_setup() {
+	CONFIG_CHECK="~SCSI_TGT"
+	WARNING_SCSI_TGT="Your kernel needs CONFIG_SCSI_TGT"
+	linux-info_pkg_setup
+}
 
 src_configure() {
 	local myconf
