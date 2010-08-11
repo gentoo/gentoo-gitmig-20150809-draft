@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.27-r1.ebuild,v 1.1 2010/08/10 20:40:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.27-r1.ebuild,v 1.2 2010/08/11 14:18:15 ford_prefect Exp $
 
 EAPI="3"
 
@@ -116,6 +116,9 @@ src_configure() {
 	# We need to unset DISPLAY, else the configure script might have problems detecting the pygtk module
 	unset DISPLAY
 
+	# Upstream ships a gir file (AvahiCore.gir) which does not work with
+	# >=gobject-introspection-0.9, so we disable introspection for now.
+	# http://avahi.org/ticket/318
 	econf \
 		--localstatedir=/var \
 		--with-distro=gentoo \
@@ -123,6 +126,7 @@ src_configure() {
 		--disable-pygtk \
 		--disable-xmltoman \
 		--disable-monodoc \
+		--disable-introspection \
 		--enable-glib \
 		$(use_enable test tests) \
 		$(use_enable autoipd) \
