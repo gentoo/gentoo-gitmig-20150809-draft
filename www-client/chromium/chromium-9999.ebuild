@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.72 2010/08/10 19:36:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.73 2010/08/11 00:03:15 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -105,6 +105,9 @@ remove_bundled_lib() {
 }
 
 src_prepare() {
+	# Fix compilation, bug #332131.
+	epatch "${FILESDIR}"/${PN}-make-3.82-compatibility-r0.patch
+
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
 	remove_bundled_lib "third_party/cros"

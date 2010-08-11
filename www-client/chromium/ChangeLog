@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.152 2010/08/10 19:36:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.153 2010/08/11 00:03:15 phajdan.jr Exp $
+
+  11 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-make-3.82-compatibility-r0.patch,
+  chromium-6.0.472.25-r1.ebuild, chromium-9999.ebuild:
+  Fix compile with make-3.82, bug #332131 by polynomial-c.
 
   10 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-6.0.472.25-r1.ebuild, chromium-9999.ebuild:
