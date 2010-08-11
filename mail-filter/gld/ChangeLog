@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.43 2010/06/17 21:36:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.44 2010/08/11 01:35:43 jer Exp $
+
+*gld-1.7-r1 (11 Aug 2010)
+
+  11 Aug 2010; Jeroen Roovers <jer@gentoo.org> +gld-1.7-r1.ebuild:
+  Respect LDFLAGS (bug #331785). Move dosed scripts to src_prepare and make
+  sure they are run properly. Respect CC. Respect CFLAGS. Whitespace.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> gld-1.7.ebuild:
   Migrating away from deprecated postgres virtuals
