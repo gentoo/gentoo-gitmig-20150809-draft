@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-subtitles
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.26 2010/07/13 14:33:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.27 2010/08/11 21:20:14 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
+  gnome-subtitles-0.9.1.ebuild:
+  Marked ppc stable for bug # 310263.
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   gnome-subtitles-0.9.1.ebuild:
