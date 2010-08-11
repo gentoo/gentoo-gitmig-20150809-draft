@@ -1,8 +1,32 @@
 #!/bin/sh
-if [ ! -e ~/.huludesktop ] ; then
-	cat <<-EOF > ~/.huludesktop
+
+config_file=$(echo ~/.huludesktop)
+
+# 64bit support is dead ;(
+find_flash()
+{
+	for d in \
+		/usr/lib32/nsbrowser/plugins \
+		/usr/lib/nsbrowser/plugins \
+	; do
+		f="${d}/libflashplayer.so"
+		[ -e "${f}" ] && echo ${f} && return 0
+	done
+	echo ${f}
+}
+
+if [ ! -e ${config_file} ] ; then
+	# Create a stub file for people
+	cat <<-EOF > ${config_file}
 	[flash]
-	flash_location = /opt/netscape/plugins/libflashplayer.so
+	flash_location = $(find_flash)
 	EOF
+else
+	# Update the config file on the fly
+	curr_flash=$(awk '$1 == "flash_location" { print $NF }' ${config_file})
+	if [ ! -e "${curr_flash}" ] ; then
+		sed -i "/^flash_location/s:=.*:= $(find_flash):" ${config_file}
+	fi
 fi
+
 exec /opt/bin/huludesktop.bin "$@"
