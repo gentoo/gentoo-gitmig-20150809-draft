@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.407 2010/08/11 04:41:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.408 2010/08/11 18:50:45 mabi Exp $
+
+  11 Aug 2010; Matti Bickel <mabi@gentoo.org> php-5.2.14.ebuild,
+  php-5.3.3-r1.ebuild:
+  enable xml, xmlreader and xmlwriter per default, as upstream does, too
+  (bug #332311)
 
   11 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> php-5.2.14.ebuild:
   x86 stable wrt security bug #332039
