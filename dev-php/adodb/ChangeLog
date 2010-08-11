@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.109 2010/08/01 13:25:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.110 2010/08/11 22:41:16 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> adodb-5.11.ebuild:
+  Marked ppc stable for bug #330481.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org> adodb-5.11.ebuild:
   stable x86, security bug 330481
