@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.22.2.ebuild,v 1.2 2010/05/22 15:57:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-2.22.2.ebuild,v 1.3 2010/08/11 16:03:29 josejx Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 # FIXME: according to the ChangLog hal is optional but it doesn't

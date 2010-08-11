@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liboobs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.8 2010/08/01 11:57:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.9 2010/08/11 16:03:29 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> liboobs-2.22.2.ebuild,
+  liboobs-2.30.1.ebuild:
+  Marked ~ppc.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   liboobs-2.30.1.ebuild:
