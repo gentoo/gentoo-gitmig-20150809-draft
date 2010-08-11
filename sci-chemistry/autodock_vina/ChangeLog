@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/autodock_vina
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/ChangeLog,v 1.1 2010/05/18 11:43:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/ChangeLog,v 1.2 2010/08/11 16:46:14 jlec Exp $
+
+*autodock_vina-1.1.1-r1 (11 Aug 2010)
+
+  11 Aug 2010; Justin Lecher <jlec@gentoo.org> files/1.1.1-gentoo.patch,
+  -autodock_vina-1.1.1.ebuild, +autodock_vina-1.1.1-r1.ebuild:
+  Stop mixing CFLAGS and CXXFLAGS, stop using upstream flags, thanks
+  dberkholz pointing this out
 
 *autodock_vina-1.1.1 (18 May 2010)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/autodock_vina-1.1.1.ebuild,v 1.1 2010/05/18 11:43:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/autodock_vina-1.1.1-r1.ebuild,v 1.1 2010/08/11 16:46:14 jlec Exp $
 
 EAPI="3"
 
