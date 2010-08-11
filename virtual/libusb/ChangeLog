@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.11 2010/07/31 16:44:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.12 2010/08/11 18:12:38 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> libusb-1.ebuild:
+  Marked ppc/ppc64 stable for bug #304149.
 
   31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> libusb-1.ebuild:
   x86 stable wrt bug #304149
