@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.121 2009/11/14 13:06:33 scarabeus Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.122 2010/08/11 22:23:31 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> zaptel-1.2.27-r1.ebuild:
+  Marked ppc stable for bug #251324.
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -zaptel-1.2.18-r1.ebuild:
