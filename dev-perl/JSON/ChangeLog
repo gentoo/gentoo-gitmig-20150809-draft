@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.20 2010/06/11 06:09:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.21 2010/08/11 22:13:53 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> JSON-2.21.ebuild:
+  Marked ~ppc/~ppc64 for bug #315793.
 
   11 Jun 2010; Torsten Veller <tove@gentoo.org> -JSON-2.19.ebuild:
   Cleanup
