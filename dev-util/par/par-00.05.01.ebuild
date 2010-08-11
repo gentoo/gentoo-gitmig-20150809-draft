@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/par/par-00.05.01.ebuild,v 1.7 2009/05/30 02:04:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/par/par-00.05.01.ebuild,v 1.8 2010/08/11 01:12:34 jer Exp $
 
 inherit toolchain-funcs
 
@@ -20,7 +20,12 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/prc"
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die 'Failed to compile!'
+	emake \
+		CC="$(tc-getCC)" \
+		LD="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		|| die 'Failed to compile!'
 	emake par.man || die 'Failed to make man page!'
 }
 

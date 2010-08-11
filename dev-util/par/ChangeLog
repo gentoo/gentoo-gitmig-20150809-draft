@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/par
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/par/ChangeLog,v 1.6 2009/05/30 02:04:49 darkside Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/par/ChangeLog,v 1.7 2010/08/11 01:12:34 jer Exp $
+
+  11 Aug 2010; Jeroen Roovers <jer@gentoo.org> par-00.05.01.ebuild:
+  Respect CC even better. Respect LDFLAGS (bug #331937).
 
   30 May 2009; Jeremy Olexa <darkside@gentoo.org> par-00.05.01.ebuild:
   (non maintainer commit) Respect flags and QA fixes, bug 244014 by Espen Hustad
