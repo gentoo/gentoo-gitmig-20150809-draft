@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.10 2010/06/17 00:20:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.11 2010/08/11 00:15:33 matsuu Exp $
+
+*ldns-1.6.6 (11 Aug 2010)
+
+  11 Aug 2010; MATSUU Takuto <matsuu@gentoo.org> +ldns-1.6.6.ebuild:
+  Version bumped.
 
   17 Jun 2010; MATSUU Takuto <matsuu@gentoo.org> ldns-1.6.5.ebuild:
   Removed libtool archive files.
