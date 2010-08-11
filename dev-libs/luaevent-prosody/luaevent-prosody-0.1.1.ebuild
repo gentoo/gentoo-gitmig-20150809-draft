@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luaevent-prosody/luaevent-prosody-0.1.1.ebuild,v 1.1 2010/07/12 07:50:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luaevent-prosody/luaevent-prosody-0.1.1.ebuild,v 1.2 2010/08/11 10:22:11 hwoarang Exp $
 
 EAPI=2
 
@@ -31,7 +31,8 @@ src_prepare() {
 src_compile() {
 	append-flags -fPIC -c
 	emake \
-		CFLAGS="${CFLAGS}" \
+		CFLAGS="${LDFLAGS} ${CFLAGS}" \
+		LDFLAGS="${LDFLAGS} -shared" \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC) -shared" \
 		all \
@@ -39,5 +40,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake \
+		CFLAGS="${LDFLAGS} ${CFLAGS}" \
+		LDFLAGS="${LDFLAGS} -shared" \
+		CC="$(tc-getCC)" \
+		DESTDIR="${D}" install || die "Install failed"
 }
