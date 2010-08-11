@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.68 2010/08/10 21:26:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.69 2010/08/11 15:44:27 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> make-3.81-r2.ebuild:
+  Marked ppc/ppc64 stable for bug #331717.
 
   10 Aug 2010; Markos Chandras <hwoarang@gentoo.org> make-3.81-r2.ebuild:
   Stable on amd64 wrt bug #331717
