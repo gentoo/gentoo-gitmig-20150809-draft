@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/tarsync
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/ChangeLog,v 1.14 2009/10/12 16:50:07 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/ChangeLog,v 1.15 2010/08/11 08:30:41 ferringb Exp $
+
+*tarsync-0.2.1-r1 (11 Aug 2010)
+
+  11 Aug 2010; Brian Harring <ferringb@gentoo.org> +tarsync-0.2.1-r1.ebuild:
+
+
+  bug 331855, respect LDFLAGS
+
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> tarsync-0.2.1.ebuild:
   QA fixes; redundant "cd "
