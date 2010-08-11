@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/gkrellmss
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.32 2009/08/03 16:12:10 lack Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.33 2010/08/11 12:45:34 lack Exp $
+
+*gkrellmss-2.6-r2 (11 Aug 2010)
+
+  11 Aug 2010; Jim Ramsay <lack@gentoo.org> +gkrellmss-2.6-r2.ebuild,
+  +files/gkrellmss-2.6-Respect-LDFLAGS.patch:
+  Patch to respect LDFLAGS (Bug #331809)
 
   03 Aug 2009; Jim Ramsay <lack@gentoo.org> gkrellmss-2.6.ebuild,
   gkrellmss-2.6-r1.ebuild:
