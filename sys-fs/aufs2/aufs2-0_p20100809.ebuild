@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100809.ebuild,v 1.1 2010/08/10 20:43:17 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100809.ebuild,v 1.2 2010/08/11 21:11:37 tommy Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ pkg_setup() {
 
 	get_version
 	kernel_is lt 2 6 27 && die "kernel too old"
-	kernel_is gt 2 6 34 && die "kernel too new"
+	kernel_is gt 2 6 35 && die "kernel too new"
 
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null && \
 		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null ); then
