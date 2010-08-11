@@ -1,0 +1,19 @@
+diff --git a/SConstruct b/SConstruct
+index d27c759..7f7cfb4 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -27,6 +27,14 @@ cwd=os.getcwd()
+ main_env=Environment()
+ main_env['ENV']['PATH']=os.environ['PATH']
+ 
++# process env variables (thanks to robbat2 in ipager)
++for K in ['CPPFLAGS', 'CFLAGS', 'CXXFLAGS', 'LDFLAGS', 'CC', 'CXX']:
++  if K in os.environ.keys():
++    dict = main_env.ParseFlags(os.environ[K])
++    main_env.MergeFlags(dict)
++
++
++
+ # Add builders for flex and bison
+ add_lex(main_env)
+ add_bison(main_env)

@@ -1,0 +1,2 @@
+ONE_AUTH="/etc/one/one_auth"
+ONE_XMLRPC=http://localhost:2633/RPC2
