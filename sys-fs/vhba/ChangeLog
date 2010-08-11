@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.17 2010/04/26 19:40:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.18 2010/08/11 14:58:48 pva Exp $
+
+*vhba-1.2.1_p682 (11 Aug 2010)
+
+  11 Aug 2010; Peter Volkov <pva@gentoo.org> +vhba-1.2.1_p682.ebuild:
+  Fix udev deprecation warning, bug #304267, thank haarp for report. Fix
+  build problem on hppa, thank Jeroen Roovers for report and fix in bug
+  #305893.
 
   26 Apr 2010; Peter Volkov <pva@gentoo.org>
   +files/vhba-1.2.1-kernel-2.6.34.patch:
