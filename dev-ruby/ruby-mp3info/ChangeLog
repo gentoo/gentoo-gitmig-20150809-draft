@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-mp3info
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.14 2010/06/27 17:40:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.15 2010/08/11 18:04:34 graaff Exp $
+
+  11 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  -ruby-mp3info-0.6.13.ebuild:
+  Remove old version.
 
 *ruby-mp3info-0.6.13-r1 (27 Jun 2010)
 
