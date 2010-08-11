@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.1-r1.ebuild,v 1.2 2010/05/13 17:52:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.1-r1.ebuild,v 1.3 2010/08/11 18:15:25 josejx Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -12,7 +12,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc nls"
 
 RDEPEND=">=dev-libs/glib-2.18
