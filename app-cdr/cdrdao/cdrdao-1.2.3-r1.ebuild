@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.1 2010/07/16 15:50:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.2 2010/08/11 13:57:04 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
@@ -34,6 +35,10 @@ DEPEND="${RDEPEND}
 	pccts? ( >=dev-util/pccts-1.33.24-r1 )"
 
 S=${WORKDIR}/${P/_}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glibc212.patch
+}
 
 src_configure() {
 	econf \
