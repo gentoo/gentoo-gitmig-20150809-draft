@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/haskell-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.40 2010/07/10 13:02:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.41 2010/08/11 16:26:37 hwoarang Exp $
+
+  11 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  haskell-mode-2.8.0.ebuild:
+  Stable on amd64 wrt bug #332081
 
 *haskell-mode-2.8.0 (10 Jul 2010)
 
