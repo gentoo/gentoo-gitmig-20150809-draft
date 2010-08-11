@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/osmlib-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/osmlib-base/ChangeLog,v 1.8 2010/06/26 18:59:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/osmlib-base/ChangeLog,v 1.9 2010/08/11 01:07:40 flameeyes Exp $
+
+*osmlib-base-0.1.4-r1 (11 Aug 2010)
+
+  11 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +osmlib-base-0.1.4-r1.ebuild:
+  Port to ruby-fakegem.eclass; add missing dependency over GeoRuby; add
+  tests even though they are not passing green yet; JRuby and
+  Ruby-Enterprise support can be added at any time, to the maintainer's
+  discretion.
 
   26 Jun 2010; Hans de Graaff <graaff@gentoo.org> -osmlib-base-0.1.3.ebuild:
   Remove old version.
