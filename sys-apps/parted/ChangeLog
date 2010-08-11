@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.156 2010/08/01 10:55:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.157 2010/08/11 21:40:51 josejx Exp $
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> parted-2.3.ebuild:
+  Marked ppc/ppc64 stable for bug #316453.
 
   01 Aug 2010; Raúl Porcel <armin76@gentoo.org> parted-2.3.ebuild:
   ia64/s390/sh/sparc stable wrt #316453
