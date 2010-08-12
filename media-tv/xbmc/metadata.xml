@@ -4,8 +4,9 @@
 <herd>xbox</herd>
 <use>
  <flag name='midi'>Support MIDI files</flag>
- <flag name='xrandr'>Support X randr extension</flag>
+ <flag name="rtmp">Enable Real Time Messaging Protocol using librtmp</flag>
  <flag name='vaapi'>Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
  <flag name='vdpau'>enable support for Video Decode and Presentation API for Unix</flag>
+ <flag name='xrandr'>Support X randr extension</flag>
 </use>
 </pkgmetadata>

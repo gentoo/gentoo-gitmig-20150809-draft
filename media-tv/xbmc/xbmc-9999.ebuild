@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.59 2010/07/11 19:39:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.60 2010/08/12 05:12:04 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="aac alsa altivec avahi css debug hal joystick midi profile pulseaudio sse sse2 vaapi vdpau xrandr"
+IUSE="aac alsa altivec avahi css debug hal joystick midi profile pulseaudio rtmp sse sse2 vaapi vdpau xrandr"
 
 RDEPEND="virtual/opengl
 	app-arch/bzip2
@@ -72,6 +72,7 @@ RDEPEND="virtual/opengl
 	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
 	media-video/ffmpeg
+	rtmp? ( media-video/rtmpdump )
 	avahi? ( net-dns/avahi )
 	net-misc/curl
 	|| ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.3 )
@@ -118,7 +119,7 @@ src_prepare() {
 
 	# some dirs ship generated autotools, some dont
 	local d
-	for d in . xbmc/cores/dvdplayer/Codecs/{libbdnav,libdvd/lib*/} lib/cpluff ; do
+	for d in . xbmc/cores/dvdplayer/Codecs/{libdts,libdvd/lib*/} lib/cpluff ; do
 		[[ -e ${d}/configure ]] && continue
 		pushd ${d} >/dev/null
 		einfo "Generating autotools in ${d}"
@@ -176,6 +177,7 @@ src_configure() {
 		$(use_enable midi mid) \
 		$(use_enable profile profiling) \
 		$(use_enable pulseaudio pulse) \
+		$(use_enable rtmp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
 		$(use_enable xrandr)
