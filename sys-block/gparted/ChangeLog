@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.84 2010/08/11 21:49:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.85 2010/08/12 20:28:35 eva Exp $
+
+*gparted-0.6.2 (12 Aug 2010)
+
+  12 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org> +gparted-0.6.2.ebuild:
+  Version bump, closes #324715. Support disk with block size > 512.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> gparted-0.5.2.ebuild:
   Marked ppc stable for bug #316537.
