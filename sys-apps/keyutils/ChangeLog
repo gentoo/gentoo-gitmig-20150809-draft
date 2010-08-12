@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.19 2010/07/04 21:09:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.20 2010/08/12 01:25:16 josejx Exp $
+
+  12 Aug 2010; Joseph Jezak <josejx@gentoo.org> keyutils-1.2-r2.ebuild:
+  Marked ppc/ppc64 stable for bug #300158.
 
   04 Jul 2010; Mike Frysinger <vapier@gentoo.org> keyutils-1.4.ebuild:
   Add m68k #326709 by Eray Aslan.
