@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.29 2009/11/30 12:46:51 arfrever Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.30 2010/08/12 09:08:05 maekke Exp $
+
+  12 Aug 2010; Markus Meier <maekke@gentoo.org> axiom-0.6.0.ebuild:
+  amd64/x86 stable, bug #330773
 
 *axiom-0.6.0 (30 Nov 2009)
 

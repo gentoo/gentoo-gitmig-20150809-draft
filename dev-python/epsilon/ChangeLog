@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.17 2010/02/07 20:58:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.18 2010/08/12 09:07:05 maekke Exp $
+
+  12 Aug 2010; Markus Meier <maekke@gentoo.org> epsilon-0.6.0.ebuild:
+  amd64/x86 stable, bug #330773
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> epsilon-0.5.12.ebuild,
   epsilon-0.6.0.ebuild:
