@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimmage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.14 2010/08/09 07:01:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.15 2010/08/12 08:19:06 maekke Exp $
+
+  12 Aug 2010; Markus Meier <maekke@gentoo.org> gimmage-0.2.3.ebuild:
+  amd64 stable, bug #286401
 
   09 Aug 2010; Christian Faulhammer <fauli@gentoo.org> gimmage-0.2.3.ebuild:
   stable x86, bug 286401
