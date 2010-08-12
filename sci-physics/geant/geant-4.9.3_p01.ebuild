@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p01.ebuild,v 1.1 2010/04/27 06:46:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p01.ebuild,v 1.2 2010/08/12 16:26:56 bicatali Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="athena +data dawn debug examples gdml geant3 global minimal +motif
 	+opengl openinventor qt4 +raytracerx static-libs +vrml zlib"
 
-RDEPEND=">=sci-physics/clhep-2.0.4.2
+RDEPEND="<sci-physics/clhep-2.1
 	motif? ( x11-libs/openmotif )
 	athena? ( x11-libs/libXaw )
 	qt4? ( x11-libs/qt-gui:4 )
