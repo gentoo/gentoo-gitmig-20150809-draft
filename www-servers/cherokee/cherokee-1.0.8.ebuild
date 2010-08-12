@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.5.ebuild,v 1.1 2010/07/07 08:07:02 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.8.ebuild,v 1.1 2010/08/12 06:42:56 bass Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"

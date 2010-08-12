@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.74 2010/08/10 10:19:42 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.75 2010/08/12 06:42:56 bass Exp $
+
+*cherokee-1.0.8 (12 Aug 2010)
+
+  12 Aug 2010; J. Alberto Suárez López <bass@gentoo.org>
+  -cherokee-1.0.5.ebuild, -cherokee-1.0.6.ebuild, +cherokee-1.0.8.ebuild:
+  verssion bump
 
 *cherokee-1.0.7 (10 Aug 2010)
 
