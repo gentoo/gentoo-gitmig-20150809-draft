@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.ebuild,v 1.2 2010/07/04 21:08:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.ebuild,v 1.3 2010/08/12 03:53:21 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -17,8 +17,9 @@ IUSE="alsa altivec cjk debug jack nls"
 RDEPEND="virtual/opengl
 	media-libs/libsndfile
 	dev-libs/libcdio
-	media-libs/libsdl
+	media-libs/libsdl[audio,video]
 	media-libs/sdl-net
+	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	nls? ( virtual/libintl )"
@@ -37,6 +38,8 @@ src_prepare() {
 	sed -i \
 		-e '/-fomit-frame-pointer/d' \
 		-e '/-ffast-math/d' \
+		-e '/CPPFLAGS=.*CFLAGS/s/CFLAGS/CXXFLAGS/' \
+		-e '/^AX_CFLAGS_GCC_OPTION.*OPTIMIZER_FLAGS/d' \
 		configure.ac \
 		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-gcc45.patch
