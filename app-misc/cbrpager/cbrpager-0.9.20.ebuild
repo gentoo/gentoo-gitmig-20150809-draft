@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/cbrpager-0.9.20.ebuild,v 1.1 2010/04/07 20:31:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/cbrpager-0.9.20.ebuild,v 1.2 2010/08/12 10:43:13 fauli Exp $
 
 EAPI=3
 inherit base
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="|| ( app-arch/unrar app-arch/rar )
