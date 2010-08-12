@@ -11,8 +11,6 @@
   GUI toolkit, and a complete visualization framework.
 </longdescription>
 <use>
-  <flag name="cern">Build the HBOOK input/output functionality, needs
-    fortran or <pkg>sci-physics/cernlib</pkg></flag>
   <flag name="cint7">Build the *experimental* new C++ interpretor CINT7</flag>
   <flag name="clarens">
     Buld the Clarens and PEAC plug-ins, to use in a GRID enabled
