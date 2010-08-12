@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.14.ebuild,v 1.2 2010/07/31 15:59:41 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.33-r1.ebuild,v 1.1 2010/08/12 19:51:16 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/alsa-lib-1.0.19
 	media-libs/jpeg:0
 	media-libs/libpng
-	media-video/ffmpeg[threads]
 	cups? ( >=net-print/cups-1.4.4 )
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7
@@ -60,13 +59,31 @@ remove_bundled_lib() {
 }
 
 src_prepare() {
-	# Disable VP8 until we have a recent enough system-provided ffmpeg.
-	epatch "${FILESDIR}"/${PN}-disable-vp8-r1.patch
+	# Fix compilation, bug #332131.
+	epatch "${FILESDIR}"/${PN}-make-3.82-compatibility-r0.patch
+
+	# Add Gentoo plugin paths.
+	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
+
+	# Fix a renderer crash, bug #331661. This is a backport
+	# of the upstream patch.
+	epatch "${FILESDIR}"/${PN}-yuv-crash-r0.patch
 
 	remove_bundled_lib "third_party/bzip2"
+	remove_bundled_lib "third_party/codesighs"
+	remove_bundled_lib "third_party/cros"
+	remove_bundled_lib "third_party/jemalloc"
+	remove_bundled_lib "third_party/lcov"
 	remove_bundled_lib "third_party/libevent"
 	remove_bundled_lib "third_party/libjpeg"
 	remove_bundled_lib "third_party/libpng"
+	remove_bundled_lib "third_party/lzma_sdk"
+	remove_bundled_lib "third_party/molokocacao"
+	remove_bundled_lib "third_party/ocmock"
+	remove_bundled_lib "third_party/py"
+	remove_bundled_lib "third_party/pyftpdlib"
+	remove_bundled_lib "third_party/simplejson"
+	remove_bundled_lib "third_party/tlslite"
 	# TODO: also remove third_party/libxml and third_party/libxslt when
 	# http://crbug.com/29333 is fixed.
 	# TODO: also remove third_party/zlib. For now the compilation fails if we
@@ -84,26 +101,31 @@ src_configure() {
 	fi
 
 	# Use system-provided libraries.
+	# TODO: use_system_ffmpeg (http://crbug.com/50678).
 	# TODO: use_system_libxml (http://crbug.com/29333).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_icu, use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl when we have a recent enough system NSS.
 	myconf="${myconf}
 		-Duse_system_bzip2=1
-		-Duse_system_ffmpeg=1
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
 		-Duse_system_zlib=1"
-
-	# The system-provided ffmpeg supports more codecs. Enable them in chromium.
-	myconf="${myconf} -Dproprietary_codecs=1"
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then
 		myconf="${myconf} -Duse_cups=1"
 	else
 		myconf="${myconf} -Duse_cups=0"
+	fi
+
+	if use gnome; then
+		myconf="${myconf} -Dlinux_link_gnome_keyring=1"
+	else
+		# TODO: we should also disable code trying to dlopen
+		# gnome-keyring in that case.
+		myconf="${myconf} -Dlinux_link_gnome_keyring=0"
 	fi
 
 	# Enable sandbox.
@@ -143,6 +165,11 @@ src_configure() {
 
 	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "44" ]]; then
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
+	fi
+
+	# Work around a likely GCC bug, see bug #331945.
+	if [[ "$(gcc-major-version)$(gcc-minor-version)" == "45" ]]; then
+		append-flags -fno-ipa-cp
 	fi
 
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
@@ -185,14 +212,8 @@ src_install() {
 	newman out/Release/chrome.1 chrome.1
 	newman out/Release/chrome.1 chromium.1
 
-	# Chromium looks for these in its folder
-	# See media_posix.cc and base_paths_linux.cc
-	dosym /usr/$(get_libdir)/libavcodec.so.52 "$(get_chromium_home)"
-	dosym /usr/$(get_libdir)/libavformat.so.52 "$(get_chromium_home)"
-	dosym /usr/$(get_libdir)/libavutil.so.50 "$(get_chromium_home)"
-
-	# Use system plugins by default.
-	dosym /usr/$(get_libdir)/nsbrowser/plugins "$(get_chromium_home)/plugins"
+	doexe out/Release/ffmpegsumo_nolink || die
+	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icon and desktop entry.
 	newicon out/Release/product_logo_48.png ${PN}-browser.png
