@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.18.ebuild,v 1.2 2010/08/12 10:54:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/tramp-2.1.18.ebuild,v 1.3 2010/08/12 12:33:50 hwoarang Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 IUSE=""
 
 ELISP_PATCHES="${P}-fix-texinfo.patch"
