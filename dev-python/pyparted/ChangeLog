@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.54 2010/08/01 10:57:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.55 2010/08/12 01:03:41 josejx Exp $
+
+  12 Aug 2010; Joseph Jezak <josejx@gentoo.org> pyparted-3.4.ebuild:
+  Marked ppc stable for bug #316539.
 
   01 Aug 2010; Raúl Porcel <armin76@gentoo.org> pyparted-3.4.ebuild:
   ia64/sparc stable wrt #316539
