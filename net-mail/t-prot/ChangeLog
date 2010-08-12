@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/t-prot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.34 2010/07/06 15:01:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.35 2010/08/12 08:03:09 tove Exp $
+
+*t-prot-2.100 (12 Aug 2010)
+
+  12 Aug 2010; Torsten Veller <tove@gentoo.org> -t-prot-2.11.ebuild,
+  -t-prot-2.12.ebuild, -t-prot-2.97.1.ebuild, -t-prot-2.98.ebuild,
+  -t-prot-2.99.ebuild, +t-prot-2.100.ebuild:
+  Version bump (#332385). Cleanup
 
 *t-prot-2.99 (06 Jul 2010)
 

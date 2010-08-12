@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-2.11.ebuild,v 1.1 2010/01/06 22:12:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/t-prot-2.100.ebuild,v 1.1 2010/08/12 08:03:09 tove Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/Locale-gettext
-	dev-perl/Getopt-Mixed"
+	virtual/perl-Getopt-Long"
 
 src_prepare() {
 	epatch "${S}"/contrib/t-prot-r1.*-mutt*.diff
@@ -28,6 +28,6 @@ src_install() {
 	doman t-prot.1 || die "doman failed"
 	dodoc ChangeLog README TODO || die "dodoc failed"
 	docinto contrib
-	dodoc contrib/{README.examples,muttrc.t-prot,t-prot.sl*,filter_innd.pl} \
+	dodoc contrib/{README.examples,{muttrc,mailcap,nailrc}.t-prot*,t-prot.sl*,filter_innd.pl} \
 		|| die "dodoc contrib failed"
 }
