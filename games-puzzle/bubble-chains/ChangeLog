@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/bubble-chains
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/ChangeLog,v 1.4 2010/08/12 04:51:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/ChangeLog,v 1.5 2010/08/12 10:46:09 fauli Exp $
+
+  12 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  bubble-chains-0.1.1.ebuild:
+  stable x86, bug 332333
 
   12 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
   bubble-chains-0.1.1.ebuild:

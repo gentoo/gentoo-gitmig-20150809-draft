@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/bubble-chains-0.1.1.ebuild,v 1.2 2010/08/12 04:51:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/bubble-chains-0.1.1.ebuild,v 1.3 2010/08/12 10:46:09 fauli Exp $
 
 EAPI=2
 inherit eutils qt4 games
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.sintegrial.com/files/${MY_P}.7z"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXrandr
