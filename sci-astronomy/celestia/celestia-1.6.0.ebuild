@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.12 2010/06/24 17:20:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.13 2010/08/12 02:52:59 josejx Exp $
 
 EAPI=2
 inherit eutils flag-o-matic gnome2 autotools
@@ -79,6 +79,11 @@ src_prepare() {
 	fi
 	eautoreconf
 	filter-flags "-funroll-loops -frerun-loop-opt"
+	
+	### This version of Celestia has a bug in the font rendering and
+	### requires -fsigned-char. We should be able to force this flag
+	### on all architectures. See bug #316573.
+	append-flags "-fsigned-char"
 }
 
 src_configure() {

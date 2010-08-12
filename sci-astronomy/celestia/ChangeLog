@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.63 2010/06/24 17:20:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.64 2010/08/12 02:52:59 josejx Exp $
+
+  12 Aug 2010; Joseph Jezak <josejx@gentoo.org> celestia-1.6.0.ebuild:
+  Added -fsigned-char to CFLAGs to work around bug #316573.
 
   24 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> celestia-1.6.0.ebuild,
   +files/celestia-1.6.0-gcc45.patch,
