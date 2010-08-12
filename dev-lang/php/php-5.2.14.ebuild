@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.7 2010/08/11 23:36:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.8 2010/08/12 18:07:15 mabi Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ interbase msql oci8 sapdb solid"
 # inherit autotools, because we call eautoreconf in the eblits
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use phpconfutils php-common-r1 libtool
 
-PHP_PATCHSET=""
+PHP_PATCHSET="1"
 SUHOSIN_VERSION="$PV-0.9.7"
 EXPECTED_TEST_FAILURES=""
 
