@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20100325.2.ebuild,v 1.3 2010/05/30 07:00:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20100325.2.ebuild,v 1.4 2010/08/12 16:10:05 xarthisius Exp $
 
 EAPI="2"
 
@@ -24,12 +24,13 @@ IUSE="hardened mpi qmmm-tinker"
 
 RESTRICT="fetch"
 
-DEPEND="app-shells/tcsh
+CDEPEND="app-shells/tcsh
 	hardened? ( sys-apps/paxctl )
 	mpi? ( virtual/mpi )
 	virtual/blas"
-
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${CDEPEND}
 	net-misc/openssh"
 
 S="${WORKDIR}/${PN}"
