@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.4.5.ebuild,v 1.7 2010/01/31 15:37:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.1.0.0.ebuild,v 1.1 2010/08/12 16:33:52 bicatali Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -10,16 +10,16 @@ HOMEPAGE="http://www.cern.ch/clhep"
 SRC_URI="http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/tarFiles/${P}.tgz"
 LICENSE="public-domain"
 SLOT="2"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
-IUSE="exceptions"
+IUSE="exceptions static-libs"
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PV}/CLHEP"
 
 src_prepare() {
-	for d in $(find . -name configure.in); do
+	for d in $(find . -name configure.ac); do
 		# respect user flags and fix some compilers stuff
 		sed -i \
 			-e 's:^g++):*g++):g' \
@@ -36,12 +36,13 @@ src_prepare() {
 			${d} || die
 		# fixing parallel build
 	done
-	epatch "${FILESDIR}/${P}-gcc4.3.patch"
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable exceptions)
+	econf \
+		$(use_enable exceptions) \
+		$(use_enable static-libs static)
 }
 
 src_install() {

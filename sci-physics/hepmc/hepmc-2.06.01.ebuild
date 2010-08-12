@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.05.00.ebuild,v 1.5 2009/12/28 18:54:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.01.ebuild,v 1.1 2010/08/12 16:32:42 bicatali Exp $
 
 EAPI=2
 
@@ -12,15 +12,17 @@ SRC_URI="http://lcgapp.cern.ch/project/simu/HepMC/download/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa sparc x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE="doc examples gev cm"
 
-DEPEND=""
+RDEPEND=""
+DEPEND="${RDEPEND}
+   doc? ( app-doc/doxygen )"
 
 S="${WORKDIR}/${MYP}"
 
 src_configure() {
-	# random default choice: use MeV over GeV and mm over cm
+	# use MeV over GeV and mm over cm
 	local length_conf="MM"
 	use cm && length_conf="CM"
 	local momentum_conf="MEV"
@@ -28,6 +30,14 @@ src_configure() {
 	econf \
 		--with-length=${length_conf} \
 		--with-momentum=${momentum_conf}
+}
+
+src_compile() {
+	emake || die "emake failed"
+	if use doc; then
+		cd doc
+		doxygen doxygen.conf || die "doc building failed"
+	fi
 }
 
 src_install() {
@@ -40,7 +50,7 @@ src_install() {
 	dodoc README AUTHORS ChangeLog
 	insinto /usr/share/doc/${PF}
 	if use doc; then
-		doins -r doc/html || die
+		doins -r doc/html doc/*.pdf || die
 	else
 		rm -f "${D}"/usr/share/doc/${PF}/*pdf
 	fi

@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/hepmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.17 2010/07/10 19:00:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.18 2010/08/12 16:32:42 bicatali Exp $
+
+*hepmc-2.06.01 (12 Aug 2010)
+
+  12 Aug 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -hepmc-2.05.00.ebuild, -hepmc-2.06.00.ebuild, +hepmc-2.06.01.ebuild:
+  Version bump
 
   10 Jul 2010; Raúl Porcel <armin76@gentoo.org> hepmc-2.05.01.ebuild:
   sparc stable wrt #318461
