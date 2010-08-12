@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.120 2010/01/16 17:20:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.121 2010/08/12 21:37:57 hwoarang Exp $
+
+  12 Aug 2010; Markos Chandras <hwoarang@gentoo.org> mailman-2.1.13.ebuild,
+  +files/mailman-2.1.13-ldflags.patch:
+  Apply patch from Olivier Huber <oli.huber@gmail.com> to respect LDFLAGS.
+  Bug #331591
 
 *mailman-2.1.13 (16 Jan 2010)
 

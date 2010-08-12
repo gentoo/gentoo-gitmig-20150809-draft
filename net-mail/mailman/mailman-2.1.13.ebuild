@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.13.ebuild,v 1.1 2010/01/16 17:20:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.13.ebuild,v 1.2 2010/08/12 21:37:57 hwoarang Exp $
 
 inherit eutils python multilib
 
@@ -41,6 +41,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.1.12-directory-check.patch" || die "patch failed."
 	epatch "${FILESDIR}/${PN}-2.1.9-icons.patch" || die "patch failed."
+	epatch "${FILESDIR}/${P}-ldflags.patch"
 }
 
 src_compile() {
