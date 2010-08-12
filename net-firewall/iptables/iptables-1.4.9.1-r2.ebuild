@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.9.1-r1.ebuild,v 1.1 2010/08/11 07:58:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.9.1-r2.ebuild,v 1.1 2010/08/12 13:22:33 pva Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs autotools
@@ -62,5 +62,6 @@ src_install() {
 	find "${D}" -type f -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 	dodir /usr/$(get_libdir)/
 	mv "${D}"/$(get_libdir)/*.a "${D}"/usr/$(get_libdir)/ || die "failed to mv static libs"
+	mv "${D}"{/,/usr/}"$(get_libdir)"/pkgconfig || die "failed to mv pkg-config files"
 	gen_usr_ldscript libip4tc.so libip6tc.so libipq.so libiptc.so libxtables.so
 }

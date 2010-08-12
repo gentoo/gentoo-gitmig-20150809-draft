@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.221 2010/08/11 07:58:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.222 2010/08/12 13:22:33 pva Exp $
+
+*iptables-1.4.9.1-r2 (12 Aug 2010)
+
+  12 Aug 2010; Peter Volkov <pva@gentoo.org> -iptables-1.4.9.1-r1.ebuild,
+  +iptables-1.4.9.1-r2.ebuild:
+  Fix pkg-config's .pc file location (should be in /usr/...).
 
 *iptables-1.4.9.1-r1 (11 Aug 2010)
 
