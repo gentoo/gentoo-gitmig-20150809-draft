@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.1-r1.ebuild,v 1.3 2010/06/30 21:46:32 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.11.1-r1.ebuild,v 1.4 2010/08/12 08:49:51 dev-zero Exp $
 
 EAPI="2"
 
@@ -48,7 +48,8 @@ RDEPEND="sys-libs/zlib
 	!app-emulation/qemu-softmmu
 	!app-emulation/qemu-user
 	!app-emulation/qemu
-	!app-emulation/kqemu"
+	!app-emulation/kqemu
+	!app-emulation/qemu-kvm-spice"
 
 DEPEND="${RDEPEND}
 	app-text/texi2html

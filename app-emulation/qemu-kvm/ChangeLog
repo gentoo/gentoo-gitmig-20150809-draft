@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.35 2010/08/05 15:56:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.36 2010/08/12 08:49:51 dev-zero Exp $
+
+  12 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
+  qemu-kvm-0.11.1-r1.ebuild, qemu-kvm-0.12.3-r1.ebuild,
+  qemu-kvm-0.12.4-r1.ebuild, qemu-kvm-0.12.5.ebuild, qemu-kvm-9999.ebuild:
+  Disallow parallel installation with qemu-kvm-spice.
 
   05 Aug 2010; Doug Goldstein <cardoe@gentoo.org> -qemu-kvm-0.11.1.ebuild,
   -qemu-kvm-0.12.3.ebuild, -qemu-kvm-0.12.4.ebuild,
