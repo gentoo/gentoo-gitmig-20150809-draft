@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.9.1.ebuild,v 1.1 2010/08/02 12:57:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.9.1-r1.ebuild,v 1.1 2010/08/12 08:38:56 xarthisius Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://hg.clusterlabs.org/${PN}/stable-1.0/archive/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
-IUSE="+ais heartbeat snmp static-libs"
+IUSE="+ais heartbeat smtp snmp static-libs"
 
 RDEPEND="
 	dev-libs/libxslt
@@ -24,6 +24,7 @@ RDEPEND="
 	sys-cluster/resource-agents
 	ais? ( sys-cluster/openais )
 	heartbeat? ( >=sys-cluster/heartbeat-3.0.0 )
+	smtp? ( net-libs/libesmtp )
 	snmp? ( net-analyzer/net-snmp )
 	!heartbeat? ( !ais? ( sys-cluster/openais ) )
 "
@@ -61,9 +62,9 @@ src_configure() {
 		--localstatedir=/var \
 		--disable-dependency-tracking \
 		--disable-fatal-warnings \
-		--without-esnmp \
 		$(use_with ais) \
 		$(use_with heartbeat) \
+		$(use_with smtp esmtp) \
 		$(use_with snmp) \
 		$(use_enable static-libs static) \
 		${myopts}
