@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.95 2010/08/11 21:35:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.96 2010/08/12 22:16:40 hwoarang Exp $
+
+*qt-webkit-4.6.3-r1 (12 Aug 2010)
+
+  12 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +qt-webkit-4.6.3-r1.ebuild,
+  +files/qt-webkit-4.6.3-flash-plugin-segfault.patch:
+  Apply upstream patch to fix Qt-webkit based application crashes due to
+  glib. Upstream bug https://bugs.webkit.org/show_bug.cgi?id=40567. Fixes
+  bug #332155. Thanks to Christoph Erhardt <ChristophErhardt@gmx.de> for
+  backporting and attaching the patch
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> qt-webkit-4.5.3-r3.ebuild,
   qt-webkit-4.6.2-r1.ebuild:
