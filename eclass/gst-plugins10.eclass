@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.2 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.3 2010/08/12 10:48:59 pva Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -47,16 +47,16 @@ SLOT=${PV_MAJ_MIN}
 
 gst-plugins10_find_plugin_dir() {
 
-	if [ ! -d ${S}/ext/${GST_PLUGINS_BUILD_DIR} ]; then
-		if [ ! -d ${S}/sys/${GST_PLUGINS_BUILD_DIR} ]; then
+	if [[ ! -d ${S}/ext/${GST_PLUGINS_BUILD_DIR} ]]; then
+		if [[ ! -d ${S}/sys/${GST_PLUGINS_BUILD_DIR} ]]; then
 			ewarn "No such plugin directory"
 			die
 		fi
 		einfo "Building system plugin ..."
-		cd ${S}/sys/${GST_PLUGINS_BUILD_DIR}
+		cd "${S}"/sys/${GST_PLUGINS_BUILD_DIR}
 	else
 		einfo "Building external plugin ..."
-		cd ${S}/ext/${GST_PLUGINS_BUILD_DIR}
+		cd "${S}"/ext/${GST_PLUGINS_BUILD_DIR}
 	fi
 
 }
