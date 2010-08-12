@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/scsh
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.29 2009/03/28 22:24:00 vadimk Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.30 2010/08/12 14:25:48 hwoarang Exp $
+
+*scsh-0.6.7-r1 (12 Aug 2010)
+
+  12 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/0.6.7-Makefile.in-LDFLAGS.patch, +scsh-0.6.7-r1.ebuild,
+  +files/0.6.7-Missing-includes.patch:
+  Respect LDFLAGS. Add missing includes. Bug #331813. Thanks to Cyprien
+  Nicolas <c.nicolas+bugs@gmail.com> for the patch
 
   28 Mar 2009; Vadim Kuznetsov vadimk@gentoo.org scsh-0.6.7.ebuild:
   Bug 234691. Using multilib_toolchain_setup to enable amd64
