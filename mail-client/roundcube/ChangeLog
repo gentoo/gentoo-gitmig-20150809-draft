@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.21 2010/06/06 14:43:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.22 2010/08/12 08:06:46 a3li Exp $
+
+  12 Aug 2010; Alex Legler <a3li@gentoo.org> -roundcube-0.2.2.ebuild,
+  -roundcube-0.3.1.ebuild:
+  Non-maintainer commit: Removing vulnerable versions for bug 294679.
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> roundcube-0.3.1.ebuild:
   arm stable wrt #301090
