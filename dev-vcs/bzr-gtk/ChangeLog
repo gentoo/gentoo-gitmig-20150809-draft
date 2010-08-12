@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-gtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.3 2010/07/27 21:03:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.4 2010/08/12 21:23:05 fauli Exp $
+
+  12 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  bzr-gtk-0.98.0.ebuild:
+  limit to Bazaar versions below 2.2.0
 
   27 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   bzr-gtk-0.98.0.ebuild:
