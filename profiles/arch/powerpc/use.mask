@@ -1,3 +1,7 @@
+# Joseph Jezak <josejx@gentoo.org> (12 Aug 2010)
+# Masked vaapi for PowerPC until it works on hardware available to PowerPC users (cell, etc.)
+vaapi
+
 # No keyworded versions of openafs
 afs
 
