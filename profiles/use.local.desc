@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5853 2010/08/12 08:49:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5854 2010/08/12 09:21:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -292,6 +292,17 @@ app-emulation/qemu-kvm:qemu-ifup - Provides the qemu-ifup script for use with QE
 app-emulation/qemu-kvm:sdl - Enable the SDL-based console
 app-emulation/qemu-kvm:vde - Enable VDE-based networking
 app-emulation/qemu-kvm:xen - Enables support for Xen backends
+app-emulation/qemu-kvm-spice:aio - Enables support for Linux's Async IO
+app-emulation/qemu-kvm-spice:alsa - Enable alsa output for sound emulation
+app-emulation/qemu-kvm-spice:esd - Enable esound output for sound emulation
+app-emulation/qemu-kvm-spice:fdt - Enables firmware device tree support
+app-emulation/qemu-kvm-spice:gnutls - Enable TLS support for the VNC console server
+app-emulation/qemu-kvm-spice:kvm-trace - Allows you to use KVM tracing
+app-emulation/qemu-kvm-spice:ncurses - Enable the ncurses-based console
+app-emulation/qemu-kvm-spice:pulseaudio - Enable pulseaudio output for sound emulation
+app-emulation/qemu-kvm-spice:qemu-ifup - Provides the qemu-ifup script for use with QEMU's built in bridging
+app-emulation/qemu-kvm-spice:sdl - Enable the SDL-based console
+app-emulation/qemu-kvm-spice:vde - Enable VDE-based networking
 app-emulation/qemu-softmmu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu-softmmu:esd - Enable esound output for sound emulation
 app-emulation/qemu-softmmu:gnutls - Enable TLS support for the VNC console server
