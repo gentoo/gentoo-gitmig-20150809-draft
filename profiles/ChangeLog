@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4466 2010/08/12 18:53:30 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4467 2010/08/12 21:49:52 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  Masking media-tv/huludesktop on amd64/no-multilib. Thanks to Mr_Bones for
+  reporting
 
   12 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> base/package.use.mask:
   Unmask app-editors/nvi tcl flag, as tcl 8.5 has long been available now

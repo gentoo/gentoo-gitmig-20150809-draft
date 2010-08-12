@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.60 2010/08/03 23:44:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.61 2010/08/12 21:49:53 hwoarang Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org>
 # Mask wimax stack since it doesnt works correctly on 64bit systems (mainly net-wireless/wimax,
@@ -169,6 +169,7 @@ media-plugins/mythnetvision
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/ventrilo-server-bin
+media-tv/huludesktop
 media-tv/livestation
 media-video/binkplayer
 media-video/tsmuxer
