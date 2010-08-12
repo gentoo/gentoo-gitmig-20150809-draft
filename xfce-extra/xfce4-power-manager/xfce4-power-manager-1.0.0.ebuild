@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.9.98.ebuild,v 1.3 2010/08/11 08:49:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.0.0.ebuild,v 1.1 2010/08/12 16:38:51 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -8,12 +8,12 @@ inherit xfconf
 
 DESCRIPTION="Power manager for Xfce4"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-power-manager"
-SRC_URI="mirror://xfce/src/apps/${PN}/0.9/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/apps/${PN}/1.0/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="debug doc networkmanager +plugins +policykit"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="debug networkmanager +plugins policykit"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.18:2
 	>=dev-libs/glib-2.16:2
@@ -36,11 +36,10 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext
-	x11-proto/xproto
-	doc? ( dev-libs/libxslt )"
+	x11-proto/xproto"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-fix_polkit_switch.patch )
+	PATCHES=( "${FILESDIR}"/${PN}-0.9.98-fix_polkit_switch.patch )
 
 	XFCONF="--disable-dependency-tracking
 		$(use_enable policykit polkit)
@@ -48,17 +47,13 @@ pkg_setup() {
 		--enable-dpms
 		$(use_enable networkmanager network-manager)
 		$(use_enable plugins panel-plugins)
-		$(use_enable doc xsltproc)
 		$(xfconf_use_debug)"
 
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 
-src_prepare() {
-	# http://bugzilla.xfce.org/show_bug.cgi?id=6630
-	sed -i \
-		-e '/libxfcegui4/d' \
-		panel-plugins/brightness/brightness-button.c || die
-
-	xfconf_src_prepare
+src_install() {
+	xfconf_src_install \
+		docdir=/usr/share/doc/${PF}/html \
+		imagesdir=/usr/share/doc/${PF}/html/images
 }

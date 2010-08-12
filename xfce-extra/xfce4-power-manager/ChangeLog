@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.25 2010/08/11 20:49:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.26 2010/08/12 16:38:51 ssuominen Exp $
+
+*xfce4-power-manager-1.0.0 (12 Aug 2010)
+
+  12 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.0.0.ebuild:
+  Version bump.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
   xfce4-power-manager-0.8.5.ebuild:
