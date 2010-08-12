@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/bubble-chains-0.1.1.ebuild,v 1.1 2010/07/08 07:43:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/bubble-chains-0.1.1.ebuild,v 1.2 2010/08/12 04:51:09 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4 games
@@ -31,7 +31,7 @@ src_prepare() {
 		-e "s:/usr/local/bin:${GAMES_BINDIR}:g" \
 		-e "s:/usr/local/games:${GAMES_DATADIR}:g" \
 		-e "s:LIBS += -lSDLmain:LIBS += -lSDL:" \
-		Game.pro gamewidget.cpp || die
+		Game.pro main.cpp || die
 }
 
 src_configure() {
