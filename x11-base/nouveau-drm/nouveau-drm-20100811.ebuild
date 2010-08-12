@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/nouveau-drm-20100316.ebuild,v 1.2 2010/03/23 19:43:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/nouveau-drm-20100811.ebuild,v 1.1 2010/08/12 09:56:15 chithanh Exp $
 
 EAPI=2
 
@@ -25,14 +25,12 @@ CONFIG_CHECK="~BACKLIGHT_CLASS_DEVICE ~DEBUG_FS !DRM ~FB_CFB_FILLRECT ~FB_CFB_CO
 
 pkg_setup() {
 	linux-mod_pkg_setup
-	if kernel_is lt 2 6 32; then
-		eerror "You need kernel 2.6.32 for nouveau-drm"
+	if kernel_is lt 2 6 35; then
+		eerror "You need kernel 2.6.35 for this version of nouveau-drm"
 		die "Incompatible kernel version"
 	fi
-	if kernel_is ge 2 6 33; then
-		elog "For newer kernels newer than 2.6.32 there is integrated nouveau DRM."
-		elog "Use that if you experience build issues."
-	fi
+	elog "For newer kernels newer than 2.6.32 there is integrated nouveau DRM."
+	elog "Use that if you experience build issues."
 }
 
 src_compile() {
