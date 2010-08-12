@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.35 2010/07/25 19:07:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.36 2010/08/12 12:37:31 lack Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -29,9 +29,10 @@ sys-power/pm-utils -video_cards_intel -video_cards_radeon
 >=dev-java/ibm-jdk-bin-1.5 -nsplugin 
 >=dev-java/ibm-jre-bin-1.5 -nsplugin
 
-# Jim Ramsay <lack@gentoo.org> (16 March 2010)
-# The '64bit' and '32bit' USE flags are for amd64 only
-www-plugins/adobe-flash 64bit 32bit
+# Jim Ramsay <lack@gentoo.org> (12 August 2010)
+# '64bit' '32bit' 'nspluginwrapper' are for amd64 only
+=www-plugins/adobe-flash-10.0* 64bit 32bit
+=www-plugins/adobe-flash-10.1* nspluginwrapper
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka closurecl) is only available on x86 and amd64
