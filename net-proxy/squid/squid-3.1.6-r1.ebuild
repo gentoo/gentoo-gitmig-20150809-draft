@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.6.ebuild,v 1.6 2010/08/09 17:49:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.6-r1.ebuild,v 1.1 2010/08/12 06:29:32 mrness Exp $
 
 EAPI="2"
 
@@ -68,6 +68,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-qafixes.patch
 	epatch "${FILESDIR}"/${P}-libmd5.patch
+	epatch "${FILESDIR}"/${P}-bug3011.patch
 
 	# eautoreconf breaks lib/libLtdl/libtool script
 	./bootstrap.sh || die "autoreconf failed"
