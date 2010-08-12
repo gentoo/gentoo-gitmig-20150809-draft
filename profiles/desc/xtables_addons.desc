@@ -1,12 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/xtables_addons.desc,v 1.1 2010/04/29 09:25:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/xtables_addons.desc,v 1.2 2010/08/12 13:28:19 pva Exp $
 
 # This file contains descriptions of XTABLES_ADDONS USE-EXPANDED variables.
 # Keep it sorted.
 
 account - ACCOUNT target is a high performance accounting system for large local networks
 chaos - CHAOS target causes confusion on the other end by doing odd things with incoming packets
+checksum - CHECKSUM target computes and fills in the checksum in a packet that lacks a checksum
 condition - matches if a specific condition variable is (un)set
 delude - DELUDE target will reply to a SYN packet with SYN-ACK, and to all other packets with an RST
 dhcpmac - DHCPMAC target/match in conjunction with ebtables can be used to completely change all MAC addresses from and to a VMware-based virtual machine
