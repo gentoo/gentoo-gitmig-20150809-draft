@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.531 2010/08/12 15:46:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.532 2010/08/12 16:58:17 hwoarang Exp $
+
+  12 Aug 2010; Markos Chandras <hwoarang@gentoo.org> opera-10.61.ebuild:
+  Stable on amd64 wrt bug #332449
 
   12 Aug 2010; Jeroen Roovers <jer@gentoo.org> opera-10.61.ebuild:
   Restrict mirrorring again.
