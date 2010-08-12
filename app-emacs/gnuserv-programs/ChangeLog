@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnuserv-programs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/ChangeLog,v 1.12 2010/08/12 02:38:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/ChangeLog,v 1.13 2010/08/12 19:57:40 ulm Exp $
+
+  12 Aug 2010; Ulrich Mueller <ulm@gentoo.org>
+  -gnuserv-programs-3.12.8.ebuild:
+  Remove old.
 
   12 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnuserv-programs-3.12.8-r1.ebuild:
