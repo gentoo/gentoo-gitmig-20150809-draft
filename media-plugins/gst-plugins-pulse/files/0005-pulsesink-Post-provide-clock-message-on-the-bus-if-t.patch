@@ -1,0 +1,31 @@
+f5057a9 pulsesink: Post provide-clock message on the bus if the clock appears/disappears
+ ext/pulse/pulsesink.c |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+diff --git a/ext/pulse/pulsesink.c b/ext/pulse/pulsesink.c
+index 8d5f0fe..08a1d7e 100644
+--- a/ext/pulse/pulsesink.c
++++ b/ext/pulse/pulsesink.c
+@@ -2323,6 +2323,9 @@ gst_pulsesink_change_state (GstElement * element, GstStateChange transition)
+       GST_BASE_AUDIO_SINK (pulsesink)->provided_clock =
+           gst_audio_clock_new ("GstPulseSinkClock",
+           (GstAudioClockGetTimeFunc) gst_pulsesink_get_time, pulsesink);
++      gst_element_post_message (element,
++          gst_message_new_clock_provide (GST_OBJECT_CAST (element),
++              GST_BASE_AUDIO_SINK (pulsesink)->provided_clock, TRUE));
+       break;
+     default:
+       break;
+@@ -2332,6 +2335,9 @@ gst_pulsesink_change_state (GstElement * element, GstStateChange transition)
+ 
+   switch (transition) {
+     case GST_STATE_CHANGE_READY_TO_NULL:
++      gst_element_post_message (element,
++          gst_message_new_clock_provide (GST_OBJECT_CAST (element), NULL,
++              FALSE));
+       if (GST_BASE_AUDIO_SINK (pulsesink)->provided_clock)
+         gst_object_unref (GST_BASE_AUDIO_SINK (pulsesink)->provided_clock);
+       GST_BASE_AUDIO_SINK (pulsesink)->provided_clock = NULL;
+-- 
+1.7.2
+
