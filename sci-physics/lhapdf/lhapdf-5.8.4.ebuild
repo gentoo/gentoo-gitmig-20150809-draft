@@ -1,17 +1,24 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.3.ebuild,v 1.1 2010/06/07 15:21:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.4.ebuild,v 1.1 2010/08/12 16:40:58 bicatali Exp $
 
 EAPI=2
 
+inherit versionator
+
+MY_PV=$(get_version_component_range 1-3 ${PV})
+MY_PF=${PN}-${MY_PV}
+
 DESCRIPTION="Les Houches Parton Density Function unified library"
 HOMEPAGE="http://projects.hepforge.org/lhapdf/"
-SRC_URI="http://www.hepforge.org/archive/lhapdf/${P}.tar.gz
+SRC_URI="http://www.hepforge.org/archive/lhapdf/${MY_PF}.tar.gz
+	http://projects.hepforge.org/${PN}/updates-5.8.3/wrapheragrid.f
+	http://projects.hepforge.org/${PN}/updates-5.8.3/wrapheragrid-lite.f
 	test? (
-		http://svn.hepforge.org/${PN}/pdfsets/tags/${PV}/cteq61.LHgrid
-		http://svn.hepforge.org/${PN}/pdfsets/tags/${PV}/MRST2004nlo.LHgrid
-		http://svn.hepforge.org/${PN}/pdfsets/tags/${PV}/cteq61.LHpdf
-		octave? ( http://svn.hepforge.org/${PN}/pdfsets/tags/${PV}/cteq5l.LHgrid ) )"
+		http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/cteq61.LHgrid
+		http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/MRST2004nlo.LHgrid
+		http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/cteq61.LHpdf
+		octave? ( http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/cteq5l.LHgrid ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,6 +29,14 @@ RDEPEND="octave? ( sci-mathematics/octave )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[latex] )
 	python? ( dev-lang/swig )"
+
+S="${WORKDIR}/${MY_PF}"
+
+src_unpack() {
+	unpack ${MY_PF}.tar.gz
+	mv "${DISTDIR}"/wrapheragrid.f "${WORKDIR}/${MY_PF}"/src/wrapheragrid.f
+	mv "${DISTDIR}"/wrapheragrid-lite.f "${WORKDIR}/${MY_PF}"/src/wrapheragrid-lite.f
+}
 
 src_prepare() {
 	# do not create extra latex docs
