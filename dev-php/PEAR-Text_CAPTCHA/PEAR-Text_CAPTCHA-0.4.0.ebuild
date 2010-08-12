@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_CAPTCHA/PEAR-Text_CAPTCHA-0.4.0.ebuild,v 1.3 2010/08/10 13:27:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_CAPTCHA/PEAR-Text_CAPTCHA-0.4.0.ebuild,v 1.4 2010/08/12 08:49:54 maekke Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Generation of CAPTCHAs."
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="minimal"
 
 RDEPEND="dev-php/PEAR-Text_Password
