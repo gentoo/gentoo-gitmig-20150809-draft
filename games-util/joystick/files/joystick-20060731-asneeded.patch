@@ -5,7 +5,7 @@
  ffcfstress: ffcfstress.c
  	$(CC) $(CFLAGS) -funsigned-char \
 -	 -lm ffcfstress.c -o ffcfstress
-+	 ffcfstress.c -o ffcfstress -lm
++	 ffcfstress.c -o ffcfstress $(LDFLAGS) -lm
  
  ffmvforce.o: ffmvforce.c
  	$(CC) -c $(CFLAGS) $(CPPFLAGS) $^ -o $@ `sdl-config --cflags`
@@ -14,7 +14,7 @@
  
  jscal: jscal.o
 -	$(CC) $(CFLAGS) $(CPPFLAGS) -lm $^ -o $@
-+	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ -lm
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $^ -o $@ -lm
  
  gencodes: gencodes.c scancodes.h
  	$(CC) $(CFLAGS) $(CPPFLAGS) gencodes.c -o gencodes
