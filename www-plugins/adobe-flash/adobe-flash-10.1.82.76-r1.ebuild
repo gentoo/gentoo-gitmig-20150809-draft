@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.82.76-r1.ebuild,v 1.1 2010/08/12 12:36:51 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.1.82.76-r1.ebuild,v 1.2 2010/08/12 14:24:29 mr_bones_ Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -121,7 +121,7 @@ pkg_postinst() {
 				#  - Jim Ramsay <lack@gentoo.org>
 
 				# TODO: Perhaps parse the output of 'nspluginwrapper -l'
-				#       However, the 64b flash plugin makes 
+				#       However, the 64b flash plugin makes
 				#       'nspluginwrapper -l' segfault.
 				local FLASH_WRAPPER="${ROOT}/usr/lib64/nsbrowser/plugins/npwrapper.libflashplayer.so"
 				if [[ -f ${FLASH_WRAPPER} ]]; then
