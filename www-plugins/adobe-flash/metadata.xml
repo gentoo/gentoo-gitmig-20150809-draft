@@ -7,8 +7,14 @@
 		<name>Jim Ramsay</name>
 	</maintainer>
 	<use>
+		<!-- =www-plugins/adobe-flash-10.0* has both 32- and 64-bit versions -->
 		<flag name='64bit'>For amd64-multilib, installs the native 64-bit
 			plugin</flag>
 		<flag name='32bit'>For amd64-multilib, installs the 32-bit plugin</flag>
+
+		<!-- =www-plugins/adobe-flash-10.1* has 32-bit only -->
+		<flag name='nspluginwrapper'>For amd64-multilib, installs
+			<pkg>www-plugins/nspluginwrapper</pkg> to allow use in a 64-bit
+			browser. (Not recommended, see http://bugs.gentoo.org/324365)</flag>
 	</use>
 </pkgmetadata>
