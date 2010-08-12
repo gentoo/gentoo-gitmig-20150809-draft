@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.194 2010/07/31 15:18:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.195 2010/08/12 20:11:53 grobian Exp $
+
+  12 Aug 2010; Fabian Groffen <grobian@gentoo.org> linux/make.defaults:
+  Drop --as-needed from LDFLAGS, since it obviously is not ready to be
+  enabled globally judging by our bug-flow.
 
   31 Jul 2010; Fabian Groffen <grobian@gentoo.org> package.mask:
   Unmask >=dev-perl/DateManip-6.0 in Prefix, since we have Perl 5.10 (and
