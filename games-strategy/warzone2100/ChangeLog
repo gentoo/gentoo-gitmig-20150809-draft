@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.47 2010/08/02 16:05:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.48 2010/08/12 19:07:36 mr_bones_ Exp $
+
+  12 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  warzone2100-2.3.3.ebuild:
+  uncouple the video version from the game release (bug #330801)
 
   02 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
   +warzone2100-2.3.3.ebuild:
