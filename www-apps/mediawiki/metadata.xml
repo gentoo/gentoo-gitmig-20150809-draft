@@ -7,7 +7,5 @@
 	</maintainer>
 	<use>
 		<flag name='math'>Ads math rendering support</flag>
-		<flag name='restrict'>Initial setup will only allow sysop user to create
-			new accounts, read and edit any pages</flag>
 	</use>
 </pkgmetadata>
