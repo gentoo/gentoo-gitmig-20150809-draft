@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.12.ebuild,v 1.4 2010/06/25 14:09:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.12.ebuild,v 1.5 2010/08/12 04:32:45 josejx Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.tuxpaint.org/unix/x/${PN}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/sdl-mixer[mikmod]
