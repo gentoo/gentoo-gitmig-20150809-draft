@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mmm-mode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.17 2010/08/12 10:53:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.18 2010/08/12 12:31:23 hwoarang Exp $
+
+  12 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  mmm-mode-0.4.8-r2.ebuild:
+  Stable on amd64 wrt bug #332091
 
   12 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   mmm-mode-0.4.8-r2.ebuild:
