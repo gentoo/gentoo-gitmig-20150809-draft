@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.85 2010/08/12 20:28:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.86 2010/08/12 20:30:56 eva Exp $
+
+  12 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org> -gparted-0.4.3.ebuild,
+  -gparted-0.4.5.ebuild, -files/gparted-0.4.7-realpath-symlink-device.patch,
+  -gparted-0.4.8.ebuild, -gparted-0.5.0.ebuild, -gparted-0.5.1.ebuild:
+  Clean up old revisions.
 
 *gparted-0.6.2 (12 Aug 2010)
 
