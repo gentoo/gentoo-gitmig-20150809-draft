@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.2.2.ebuild,v 1.1 2010/07/31 14:50:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.3.ebuild,v 1.1 2010/08/12 10:03:42 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="https://launchpad.net/lightspark/"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PN}-0.4.2/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -40,10 +40,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P/_rc*/}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-disabled-plugin.diff
-}
 
 src_configure() {
 	local mycmakeargs=(
