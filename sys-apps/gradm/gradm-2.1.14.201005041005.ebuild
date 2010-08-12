@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.14.201005041005.ebuild,v 1.3 2010/08/05 21:32:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.14.201005041005.ebuild,v 1.4 2010/08/12 09:24:15 maekke Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="pam"
 
 RDEPEND=""
