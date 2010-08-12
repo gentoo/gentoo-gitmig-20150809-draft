@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.43 2010/08/12 10:44:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.44 2010/08/12 13:31:00 hwoarang Exp $
+
+  12 Aug 2010; Markos Chandras <hwoarang@gentoo.org> eventlog-0.2.12.ebuild:
+  Stable on amd64 wrt bug #332327
 
   12 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   eventlog-0.2.12.ebuild:
