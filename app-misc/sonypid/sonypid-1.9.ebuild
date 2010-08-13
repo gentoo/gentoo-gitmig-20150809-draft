@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/sonypid-1.9.ebuild,v 1.10 2008/12/30 20:27:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/sonypid-1.9.ebuild,v 1.11 2010/08/13 12:43:20 xarthisius Exp $
 
 inherit toolchain-funcs
 
@@ -13,14 +13,15 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="x11-libs/libXtst
+RDEPEND="x11-libs/libXtst"
+DEPEND="${RDEPEND}
 	x11-proto/inputproto"
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
-	dobin sonypid || die "dobin failed"
-	dodoc AUTHORS CHANGES
+	dobin sonypid || die
+	dodoc AUTHORS CHANGES || die
 }
