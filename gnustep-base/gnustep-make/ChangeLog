@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.93 2010/07/05 11:19:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.94 2010/08/13 17:28:28 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> gnustep-make-2.4.0.ebuild:
+  Marked ppc stable for bug #325577.
 
   05 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   gnustep-make-2.4.0.ebuild:

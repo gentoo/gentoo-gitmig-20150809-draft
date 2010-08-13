@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.76 2010/07/04 16:50:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.77 2010/08/13 17:30:57 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org>
+  gnustep-back-art-0.18.0.ebuild:
+  Marked ppc stable for bug #325577.
 
   04 Jul 2010; Raúl Porcel <armin76@gentoo.org>
   gnustep-back-art-0.18.0.ebuild:

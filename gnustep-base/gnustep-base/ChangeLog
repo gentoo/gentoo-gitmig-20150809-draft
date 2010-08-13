@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.100 2010/07/23 09:18:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.101 2010/08/13 17:29:16 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> gnustep-base-1.20.1.ebuild:
+  Marked ppc stable for bug #325577.
 
   23 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-base-1.20.0.ebuild, gnustep-base-1.20.1.ebuild:
