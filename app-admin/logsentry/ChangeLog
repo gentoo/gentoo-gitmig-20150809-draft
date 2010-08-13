@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logsentry
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.25 2009/10/11 23:35:09 halcy0n Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.26 2010/08/13 12:49:06 xarthisius Exp $
+
+  13 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  logsentry-1.1.1.ebuild:
+  Respect LDFLAGS wrt bug 332163. Thanks to Diego for report.
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> logsentry-1.1.1.ebuild:
   QA fixes; unquoted variables

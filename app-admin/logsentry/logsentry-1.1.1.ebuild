@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.28 2009/10/11 23:35:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.29 2010/08/13 12:49:06 xarthisius Exp $
 
 inherit toolchain-funcs
 
@@ -34,6 +34,7 @@ src_install() {
 	sed -i \
 		-e "s:/usr/local/bin:${D}/usr/bin:" \
 		-e "s:/usr/local/etc:${D}/etc/logcheck:" \
+		-e "s:\$(CC):& \$(LDFLAGS):" \
 		Makefile || die "sed Makefile failed"
 	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" linux || die
 
