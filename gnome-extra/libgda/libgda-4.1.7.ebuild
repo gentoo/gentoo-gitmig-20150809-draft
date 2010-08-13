@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.7.ebuild,v 1.1 2010/07/26 16:14:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.7.ebuild,v 1.2 2010/08/13 21:38:06 eva Exp $
 
 EAPI="2"
 
@@ -48,6 +48,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35.5
+	>=app-text/gnome-doc-utils-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
