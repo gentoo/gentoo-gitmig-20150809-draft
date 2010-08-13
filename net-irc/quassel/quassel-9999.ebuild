@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.43 2010/07/29 20:19:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.44 2010/08/13 09:35:39 scarabeus Exp $
 
 EAPI="2"
 
@@ -123,7 +123,7 @@ src_install() {
 pkg_postinst() {
 	if use server && use ssl; then
 		# inform about genreating ssl certificate
-		elog "If you want to use ssl connection to your core, please generate ssl key, with folowing command:"
+		elog "If you want to use ssl connection to your core, please generate ssl key, with following command:"
 		elog "# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${QUASSEL_DIR}/quasselCert.pem -out ${QUASSEL_DIR}/quasselCert.pem"
 		echo
 		elog "Also remember that with the above command the key is valid only for 1 year."
