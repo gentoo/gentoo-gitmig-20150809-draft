@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.6.1.ebuild,v 1.7 2010/06/19 20:49:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.8.ebuild,v 1.1 2010/08/13 13:04:34 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,8 +19,8 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.ta
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="doc"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND="dev-python/httplib2
 	|| ( >=dev-lang/python-2.6
@@ -31,11 +31,3 @@ DEPEND="dev-python/setuptools"
 S="${WORKDIR}/CouchDB-${PV}"
 
 PYTHON_MODNAME="couchdb"
-
-src_install() {
-	distutils_src_install
-
-	if use doc; then
-		dohtml -r doc/api/* || die "Installation of documentation failed"
-	fi
-}
