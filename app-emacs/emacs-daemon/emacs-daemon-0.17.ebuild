@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.17.ebuild,v 1.7 2010/05/22 14:58:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.17.ebuild,v 1.8 2010/08/13 07:27:36 ulm Exp $
 
 inherit elisp
 
@@ -36,6 +36,5 @@ src_install() {
 	exeinto /usr/libexec/emacs
 	doexe emacs-wrapper.sh || die
 	elisp-site-file-install "${SITEFILE}" || die
-	keepdir /var/run/emacs || die
 	dodoc README ChangeLog || die
 }

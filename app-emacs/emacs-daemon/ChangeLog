@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.38 2010/05/22 15:02:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.39 2010/08/13 07:27:36 ulm Exp $
+
+  12 Aug 2010; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.17.ebuild:
+  Don't create subdir of /var/run.
 
   22 May 2010; Ulrich Mueller <ulm@gentoo.org> -emacs-daemon-0.15.ebuild,
   -emacs-daemon-0.16.ebuild:
