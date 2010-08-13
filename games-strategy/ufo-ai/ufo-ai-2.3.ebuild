@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.ebuild,v 1.1 2010/07/07 21:06:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.ebuild,v 1.2 2010/08/13 14:52:59 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils flag-o-matic games
 
 MY_P="${P/o-a/oa}"
 
@@ -56,6 +56,7 @@ src_prepare() {
 }
 
 src_configure() {
+	strip-flags # bug #330381
 	egamesconf \
 		$(use_enable !debug release) \
 		$(use_enable editor ufo2map) \
