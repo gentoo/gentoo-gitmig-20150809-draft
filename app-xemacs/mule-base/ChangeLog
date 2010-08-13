@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/mule-base
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.21 2009/07/26 07:15:16 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.22 2010/08/13 09:07:55 graaff Exp $
+
+*mule-base-1.56 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +mule-base-1.56.ebuild:
+  Version bump: minor bug fixes.
 
 *mule-base-1.53 (26 Jul 2009)
 
