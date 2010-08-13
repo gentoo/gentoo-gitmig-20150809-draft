@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.69 2010/08/12 08:50:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.70 2010/08/13 10:59:09 dev-zero Exp $
+
+  13 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
+  libvirt-0.8.3-r1.ebuild:
+  Changed elog comment concerning iptables to make sure people install a
+  recent enough version.
 
   12 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
   libvirt-0.8.3-r1.ebuild:

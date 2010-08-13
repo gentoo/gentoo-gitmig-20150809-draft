@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3-r1.ebuild,v 1.2 2010/08/12 08:50:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3-r1.ebuild,v 1.3 2010/08/13 10:59:09 dev-zero Exp $
 
 BACKPORTS=3
 
@@ -219,7 +219,7 @@ pkg_postinst() {
 	elog "following packages":
 	elog
 	elog "	net-dns/dnsmasq"
-	elog "	net-firewall/iptables"
+	elog "	>=net-firewall/iptables-1.4.9"
 	elog "	net-firewall/ebtables"
 	elog
 	if has_version net-dns/dnsmasq; then
