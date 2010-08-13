@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100106.ebuild,v 1.7 2010/07/24 18:00:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100106.ebuild,v 1.8 2010/08/13 13:39:54 josejx Exp $
 
 # if not on http://people.redhat.com/jakub/prelink/, releases can usually be ripped from
 # http://mirrors.kernel.org/fedora/development/source/SRPMS/prelink-<blah>.src.rpm
@@ -13,7 +13,7 @@ SRC_URI="http://people.redhat.com/jakub/prelink/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 -arm ~ppc ~ppc64 s390 sparc x86"
+KEYWORDS="amd64 -arm ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/elfutils-0.100
