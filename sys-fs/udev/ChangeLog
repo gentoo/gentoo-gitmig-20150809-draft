@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.551 2010/08/12 15:13:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.552 2010/08/13 13:27:57 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> udev-151-r4.ebuild:
+  Marked ppc stable for bug #324507.
 
   12 Aug 2010; Brent Baude <ranger@gentoo.org> udev-151-r4.ebuild:
   stable ppc64, bug 324507
