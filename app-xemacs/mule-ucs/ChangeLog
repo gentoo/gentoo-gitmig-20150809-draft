@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/mule-ucs
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.14 2009/02/22 09:52:54 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-ucs/ChangeLog,v 1.15 2010/08/13 09:05:45 graaff Exp $
+
+*mule-ucs-1.18 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +mule-ucs-1.18.ebuild:
+  Version bump.
 
 *mule-ucs-1.17 (22 Feb 2009)
 
