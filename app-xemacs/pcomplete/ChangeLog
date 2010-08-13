@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/pcomplete
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcomplete/ChangeLog,v 1.14 2009/02/22 09:09:06 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcomplete/ChangeLog,v 1.15 2010/08/13 08:40:53 graaff Exp $
+
+*pcomplete-1.06 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +pcomplete-1.06.ebuild:
+  Version bump: XEmacs compatibility fixes.
 
 *pcomplete-1.05 (22 Feb 2009)
 
