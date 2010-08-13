@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.434 2010/08/13 12:16:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.435 2010/08/13 23:00:30 hwoarang Exp $
+
+  13 Aug 2010; Markos Chandras <hwoarang@gentoo.org> samba-3.4.8.ebuild:
+  Stable on amd64 wrt bug #332063
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> samba-3.4.8.ebuild:
   Marked ppc/ppc64 stable for bug #332063.
