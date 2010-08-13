@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.55 2010/08/11 10:07:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.56 2010/08/13 14:09:40 hwoarang Exp $
+
+  13 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  mDNSResponder-212.1-r1.ebuild:
+  Applied missing patch. Bug reported on Gentoo forums:
+  http://forums.gentoo.org/viewtopic-t-839948-highlight-.html
 
 *mDNSResponder-212.1-r1 (11 Aug 2010)
 

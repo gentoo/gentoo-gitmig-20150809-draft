@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-212.1-r1.ebuild,v 1.1 2010/08/11 10:07:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-212.1-r1.ebuild,v 1.2 2010/08/13 14:09:40 hwoarang Exp $
 
 EAPI="2"
 
@@ -34,10 +34,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Respect CFLAGS,LDFLAGS everywhere
-	sed -i "/\$(CFLAGS_DEBUG)$/s: = : & ${CFLAGS} ${LDFLAGS} :" "${S}"/mDNSPosix/Makefile
-	sed -i "s:cc:$(tc-getCC) ${CFLAGS} ${LDFLAGS} :" "${S}"/Clients/Makefile
 	java-pkg-opt-2_src_prepare
+	base_src_prepare
+	#Respect CFLAGS,LDFLAGS everywhere
+	sed -i "/\$(CFLAGS_DEBUG)$/s: = : & ${CFLAGS} ${LDFLAGS} :" "${S}"/mDNSPosix/Makefile
+	sed -i "s:cc:& ${CFLAGS} ${LDFLAGS} :" "${S}"/Clients/Makefile
 }
 
 mdnsmake() {
