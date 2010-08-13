@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90-r1.ebuild,v 1.2 2010/08/13 16:17:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90-r1.ebuild,v 1.3 2010/08/13 16:34:19 hwoarang Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-makefile.diff
-	epatch "${FILESDIR}"/${PN}-gentoo.diff
+	epatch "${FILESDIR}"/${PN}-gentoo-${PVR}.diff
 }
 
 src_compile() {
