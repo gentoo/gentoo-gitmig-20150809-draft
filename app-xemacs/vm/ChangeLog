@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/vm
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vm/ChangeLog,v 1.14 2009/02/21 14:16:40 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vm/ChangeLog,v 1.15 2010/08/13 07:32:38 graaff Exp $
+
+*vm-8.08 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +vm-8.08.ebuild:
+  Version bump: fix possible UTF-8 related corruption.
 
 *vm-8.07 (21 Feb 2009)
 
