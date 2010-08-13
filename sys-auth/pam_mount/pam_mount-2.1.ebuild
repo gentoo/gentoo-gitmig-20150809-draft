@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.1.ebuild,v 1.4 2010/07/27 18:51:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.1.ebuild,v 1.5 2010/08/13 13:33:09 josejx Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pam-mount/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE="crypt"
 DEPEND=">=sys-libs/pam-0.99
