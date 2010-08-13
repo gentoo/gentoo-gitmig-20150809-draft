@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.233 2010/07/12 16:58:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.234 2010/08/13 20:52:54 eva Exp $
+
+*pygtk-2.17.0 (13 Aug 2010)
+
+  13 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -pygtk-2.14.1-r1.ebuild, -pygtk-2.14.1-r2.ebuild,
+  -files/pygtk-2.14.1-fix-numpy-warning.patch,
+  -files/pygtk-2.14.1-gtktoggle.patch, -files/pygtk-2.14.1-ltihooks.patch,
+  -files/pygtk-2.14.1-numpy.patch, +pygtk-2.17.0.ebuild:
+  Version bump, closes #328713. Load of bug fixes, closes #301658. Clean up
+  old revisions.
 
   12 Jul 2010; Jeroen Roovers <jer@gentoo.org> pygtk-2.16.0-r1.ebuild:
   Stable for HPPA (bug #312881).
