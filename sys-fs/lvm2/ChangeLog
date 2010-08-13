@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.221 2010/08/04 07:56:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.222 2010/08/13 13:29:37 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> lvm2-2.02.67-r2.ebuild:
+  Marked ppc/ppc64 stable for bug #324485.
 
   04 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.70.ebuild,
   lvm2-2.02.70-r1.ebuild, +files/lvm2-2.02.70-locale-muck.patch,
