@@ -1,12 +1,13 @@
 #!/sbin/runscript
 
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-3.init,v 1.1 2010/03/23 22:54:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/files/vpnc-3.init,v 1.2 2010/08/13 08:39:48 fauli Exp $
 
 VPNDIR="/etc/vpnc"
 VPN="${SVCNAME#*.}"
 if [ -n ${VPN} ] && [ ${SVCNAME} != "vpnc" ]; then
+	mkdir -p /var/run/vpnc
 	VPNPID="/var/run/vpnc/${VPN}.pid"
 else
 	VPNPID="/var/run/vpnc.pid"
