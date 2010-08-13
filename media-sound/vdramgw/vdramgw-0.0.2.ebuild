@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vdramgw/vdramgw-0.0.2.ebuild,v 1.4 2009/07/30 11:03:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vdramgw/vdramgw-0.0.2.ebuild,v 1.5 2010/08/13 21:31:17 hwoarang Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P=vdr-amarok-${PV}
 
@@ -24,6 +24,10 @@ RDEPEND="media-sound/amarok"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	# Respect CC,CXXFLAGS, LDFLAGS
+	sed -i -e "/^CXX /s:?=.*:= $(tc-getCXX):" \
+		-e "/^CXXFLAGS/s:?=.*:= ${CFLAGS}:" \
+		-e "s:\$(CXXFLAGS):& \$(LDFLAGS) :" "${S}"/Makefile
 }
 
 src_install() {
