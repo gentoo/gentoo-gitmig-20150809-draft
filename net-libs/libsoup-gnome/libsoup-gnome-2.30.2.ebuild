@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.30.2.ebuild,v 1.4 2010/08/01 11:09:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.30.2.ebuild,v 1.5 2010/08/13 22:03:56 eva Exp $
 
 EAPI="2"
 
@@ -28,8 +28,8 @@ RDEPEND="~net-libs/libsoup-${PV}
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1 )"
+	>=dev-util/gtk-doc-am-1.10
+	doc? ( >=dev-util/gtk-doc-1.10 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -42,6 +42,7 @@ pkg_setup() {
 		--with-libsoup-system
 		--with-gnome"
 }
+
 src_prepare() {
 	gnome2_src_prepare
 
