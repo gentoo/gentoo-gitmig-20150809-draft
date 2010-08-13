@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.302 2010/07/19 20:42:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.303 2010/08/13 14:02:58 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> coreutils-8.5.ebuild:
+  Marked ppc stable for bug #327147.
 
 *coreutils-8.5-r1 (19 Jul 2010)
 
