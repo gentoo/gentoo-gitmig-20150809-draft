@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r2.ebuild,v 1.2 2010/07/24 21:44:53 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r2.ebuild,v 1.3 2010/08/13 19:30:33 billie Exp $
 
 EAPI="2"
 
@@ -25,8 +25,9 @@ DEPEND_COMMON="
 		x11-libs/libX11
 		x11-libs/libXdamage
 		x11-libs/libXext
+		audacious? ( >=media-sound/audacious-1.5 dev-libs/glib )
+		xmms2? ( media-sound/xmms2 )
 	)
-	audacious? ( >=media-sound/audacious-1.5 dev-libs/glib )
 	curl? ( net-misc/curl )
 	eve? ( net-misc/curl dev-libs/libxml2 )
 	portmon? ( dev-libs/glib )
@@ -37,7 +38,6 @@ DEPEND_COMMON="
 	weather-metar? ( net-misc/curl )
 	weather-xoap? ( dev-libs/libxml2 net-misc/curl )
 	virtual/libiconv
-	xmms2? ( media-sound/xmms2 )
 	"
 RDEPEND="
 	${DEPEND_COMMON}
@@ -53,30 +53,32 @@ DEPEND="
 	"
 
 src_prepare() {
-	epatch "${FILESDIR}/conky-1.8.0-ncurses.patch" \
-		"${FILESDIR}/conky-1.8.0-audacious-2.3.patch" \
-		"${FILESDIR}/conky-1.8.0-if-existing.patch"
+	epatch "${FILESDIR}/${P}-ncurses.patch" \
+		"${FILESDIR}/${P}-audacious-2.3.patch" \
+		"${FILESDIR}/${P}-if-existing.patch" \
+		"${FILESDIR}/${P}-ibm-x.patch"
 	eautoreconf
 }
 
 src_configure() {
 	local myconf
+
 	if use X; then
-		myconf="--enable-x11 --enable-double-buffer --enable-xdamage --enable-argb"
-		myconf="${myconf} --enable-own-window"
+		myconf="--enable-x11 --enable-double-buffer --enable-xdamage"
+		myconf="${myconf} --enable-argb --enable-own-window"
 		myconf="${myconf} $(use_enable imlib imlib2) $(use_enable lua-cairo)"
 		myconf="${myconf} $(use_enable lua-imlib lua-imlib2)"
-		myconf="${myconf}  $(use_enable nvidia) $(use_enable truetype xft)"
+		myconf="${myconf} $(use_enable nvidia) $(use_enable truetype xft)"
+		myconf="${myconf} $(use_enable audacious) $(use_enable xmms2)"
 	else
 		myconf="--disable-x11 --disable-own-window --disable-argb"
-		myconf="${myconf} --disable-imlib --disable-lua-cairo --disable-lua-imlib"
-		myconf="${myconf} --disable-nvidia --disable-xft"
+		myconf="${myconf} --disable-lua-cairo --disable-nvidia --disable-xft"
+		myconf="${myconf} --disable-audacious --disable-xmms2"
 	fi
 
 	econf \
 		${myconf} \
 		$(use_enable apcupsd) \
-		$(use_enable audacious) \
 		$(use_enable curl) \
 		$(use_enable debug) \
 		$(use_enable eve) \
@@ -92,8 +94,7 @@ src_configure() {
 		$(use_enable rss) \
 		$(use_enable weather-metar) \
 		$(use_enable weather-xoap) \
-		$(use_enable wifi wlan) \
-		$(use_enable xmms2)
+		$(use_enable wifi wlan)
 }
 
 src_install() {
