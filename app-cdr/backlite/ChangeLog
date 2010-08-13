@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/backlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.11 2010/07/12 20:27:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.12 2010/08/13 17:53:52 billie Exp $
+
+*backlite-1.0.1 (13 Aug 2010)
+
+  13 Aug 2010; Daniel Pielmeier <billie@gentoo.org>
+  -backlite-1.0.0-r1.ebuild, +backlite-1.0.1.ebuild:
+  Version bump. Remove old.
 
   12 Jul 2010; Daniel Pielmeier <billie@gentoo.org> -backlite-0.2.0.ebuild:
   Remove old.

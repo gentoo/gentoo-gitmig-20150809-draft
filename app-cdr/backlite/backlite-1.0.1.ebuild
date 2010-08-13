@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.0-r1.ebuild,v 1.2 2010/06/16 16:45:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.1.ebuild,v 1.1 2010/08/13 17:53:52 billie Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit flag-o-matic qt4-r2
+inherit qt4-r2
 
 DESCRIPTION="backlite is a pure QT4 version of k9copy"
 HOMEPAGE="http://k9copy.sourceforge.net/"
@@ -29,11 +29,7 @@ RDEPEND="${DEPEND}
 	media-video/dvdauthor
 	mplayer? ( media-video/mplayer )"
 
-PATCHES=( "${FILESDIR}"/backlite-1.0.0-qt3support.patch )
-
 src_configure() {
-	append-flags -D__STDC_CONSTANT_MACROS #324245
-
 	eqmake4 backlite.pro PREFIX="${D}"/usr
 }
 
