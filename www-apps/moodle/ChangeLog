@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/moodle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.1 2010/07/19 14:05:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.2 2010/08/13 19:04:30 blueness Exp $
+
+*moodle-1.9.9-r1 (13 Aug 2010)
+
+  13 Aug 2010; Anthony G. Basile <blueness@gentoo.org>
+  +moodle-1.9.9-r1.ebuild, files/postinstall-en.txt:
+  Ported to EAPI 2 USE deps. Bug #332165
 
 *moodle-1.9.9 (19 Jul 2010)
 

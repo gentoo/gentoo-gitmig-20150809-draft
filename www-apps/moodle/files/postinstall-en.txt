@@ -5,7 +5,9 @@ NEW INSTALLS
    see a directory in there called moodle.  If it didn't
    install it manually:
 
-	webapp-config -d moodle -I moodle 1.9.9
+	webapp-config -d moodle -I moodle X.Y.Z
+
+   Replace X.Y.Z with whatever version you just emerged.
 
 1  Edit the config.php file found at
 
@@ -49,7 +51,9 @@ NEW INSTALLS
    psql -c "create database moodle_db with encoding 'unicode';" -U moodle_user template1
    psql -c "alter user moodle_user nocreatedb;" template1
    su - root
-   /etc/init.d/postgresql-8.4 reload
+   /etc/init.d/postgresql-X.Y reload
+
+   Replace X.Y with your version postgresql.
 
    NOTE: Moodle docs say that moodle only works with
    postgresql-7, but I've used it with 8 no problems.
