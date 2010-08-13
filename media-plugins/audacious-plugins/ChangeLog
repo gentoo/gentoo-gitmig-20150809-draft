@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.178 2010/08/10 15:57:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.179 2010/08/13 21:30:11 chainsaw Exp $
+
+*audacious-plugins-2.4_rc2 (13 Aug 2010)
+
+  13 Aug 2010; <chainsaw@gentoo.org> -audacious-plugins-2.4_beta1.ebuild,
+  -audacious-plugins-2.4_beta2.ebuild, +audacious-plugins-2.4_rc2.ebuild:
+  Likely the final release candidate for the 2.4 release; now GTK+3
+  compatible. The ALSA output plugin should now use less CPU on previously
+  problematic sound drivers such as emu10k1.
 
 *audacious-plugins-2.4_rc1 (10 Aug 2010)
 
