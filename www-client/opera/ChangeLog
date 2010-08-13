@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.533 2010/08/12 20:37:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.534 2010/08/13 12:13:58 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> opera-10.61.ebuild:
+  Marked ppc stable for bug #332449.
 
   12 Aug 2010; Christian Faulhammer <fauli@gentoo.org> opera-10.61.ebuild:
   stable x86, security bug 332449
