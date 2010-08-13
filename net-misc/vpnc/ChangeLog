@@ -1,10 +1,10 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.89 2010/08/13 08:39:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.90 2010/08/13 08:40:53 fauli Exp $
 
   13 Aug 2010; Christian Faulhammer <fauli@gentoo.org> vpnc-0.5.3.ebuild,
   vpnc-0.5.3_p449-r1.ebuild, files/vpnc-2.init, files/vpnc-3.init:
-  create /var/run/vpnc on the fly in init script not by keepdir in ebuild
+  Create /var/run/vpnc on the fly in init script not by keepdir in ebuild
 
 *vpnc-0.5.3_p449-r1 (23 Mar 2010)
 
