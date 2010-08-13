@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.2.5-r1.ebuild,v 1.4 2010/05/25 14:42:30 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.2.5-r1.ebuild,v 1.5 2010/08/13 11:43:31 flameeyes Exp $
 
 EAPI=2
 
@@ -18,13 +18,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-DEPEND="dev-util/ragel"
-RDEPEND=""
+DEPEND="${DEPEND}
+	dev-util/ragel"
+RDEPEND="${RDEPEND}"
 
-ruby_add_rdepend ">=dev-ruby/daemons-1.0.9
-					>=dev-ruby/rack-1.0.0
-					>=dev-ruby/eventmachine-0.12.6"
-ruby_add_bdepend "dev-ruby/rake-compiler
+# The runtime dependencies are used at build-time as well since the
+# Rakefile loads thin!
+mydeps=">=dev-ruby/daemons-1.0.9
+	>=dev-ruby/rack-1.0.0
+	>=dev-ruby/eventmachine-0.12.6
+	virtual/ruby-ssl"
+
+ruby_add_rdepend "${mydeps}"
+ruby_add_bdepend "${mydeps}
+	dev-ruby/rake-compiler
 	test? ( dev-ruby/rspec )"
 
 all_ruby_prepare() {

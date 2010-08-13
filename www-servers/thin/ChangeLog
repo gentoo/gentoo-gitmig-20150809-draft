@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.13 2010/05/25 14:42:30 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.14 2010/08/13 11:43:31 flameeyes Exp $
+
+  13 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  thin-1.2.5-r1.ebuild:
+  Fix dependencies, thin requires the OpenSSL bindings, both at run- and
+  buildtime.
 
   25 May 2010; Alex Legler <a3li@gentoo.org> thin-1.2.5-r1.ebuild:
   Add REE18 support
