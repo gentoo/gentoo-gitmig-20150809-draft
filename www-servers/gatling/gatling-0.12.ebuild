@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.12.ebuild,v 1.2 2010/05/30 23:36:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.12.ebuild,v 1.3 2010/08/13 11:20:01 patrick Exp $
 
 inherit eutils
 
@@ -43,8 +43,8 @@ src_install() {
 	# FIX ME
 	#dobin tlsgatling || die "installing tlsgatling binary failed"
 
-	newconfd "${FILESDIR}/gatling.confd gatling"
-	newinitd "${FILESDIR}/gatling.initd gatling"
+	newconfd "${FILESDIR}/gatling.confd" gatling
+	newinitd "${FILESDIR}/gatling.initd" gatling
 	dodoc README.{ftp,http} || die "installing docs failed"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gatling
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.7 2010/06/18 07:27:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.8 2010/08/13 11:20:01 patrick Exp $
+
+  13 Aug 2010; Patrick Lauer <patrick@gentoo.org> gatling-0.12.ebuild:
+  Fixing init.d install quoting so it actually does something. Thanks to
+  Sebastian Lechte for noticing the problem. Fixes #332453
 
   18 Jun 2010; Patrick Lauer <patrick@gentoo.org> -gatling-0.9.ebuild,
   -gatling-0.11.ebuild, -gatling-0.11-r1.ebuild:
