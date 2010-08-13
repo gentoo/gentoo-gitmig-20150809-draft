@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.38 2010/07/31 14:51:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.39 2010/08/13 17:26:31 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> roxterm-1.16.3.ebuild:
+  Marked ppc stable for bug #330075.
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> roxterm-1.16.3.ebuild:
   Stable on amd64 wrt bug #330075
