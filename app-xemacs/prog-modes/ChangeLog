@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/prog-modes
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.23 2010/02/10 21:20:35 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.24 2010/08/13 08:32:28 graaff Exp $
+
+*prog-modes-2.20 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +prog-modes-2.20.ebuild:
+  Version bump: minor fixes to rpm-mode.
 
 *prog-modes-2.19 (22 Feb 2009)
 
