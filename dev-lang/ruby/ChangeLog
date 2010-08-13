@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.458 2010/07/21 12:18:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.459 2010/08/13 11:55:58 flameeyes Exp $
+
+  13 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ruby-1.9.1_p429.ebuild:
+  Remove ebuild that is not target for unmask anyway.
 
   21 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   ruby-1.9.2_rc2.ebuild:
