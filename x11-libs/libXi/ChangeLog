@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.84 2010/08/03 09:11:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.85 2010/08/13 12:05:30 chithanh Exp $
+
+  13 Aug 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libXi-1.3.1.ebuild:
+  Raise asciidoc dependency to 8.5.3, bug #331355
 
   03 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> libXi-1.3.1.ebuild:
   Drop the stupid forceenable i put there during debug. Thx to lmi on
