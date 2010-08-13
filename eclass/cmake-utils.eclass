@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.57 2010/08/12 19:27:42 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.58 2010/08/13 05:02:49 reavertm Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -30,7 +30,7 @@ WANT_CMAKE="${WANT_CMAKE:-always}"
 
 # @ECLASS-VARIABLE: CMAKE_MIN_VERSION
 # @DESCRIPTION:
-# Specify the minimum required CMake version.  Default is 2.6.2-r1
+# Specify the minimum allowable version of cmake.  Defaults to 2.6.2-r1
 CMAKE_MIN_VERSION="${CMAKE_MIN_VERSION:-2.6.2-r1}"
 
 CMAKEDEPEND=""
@@ -286,11 +286,9 @@ enable_cmake-utils_src_configure() {
 
 	# @SEE CMAKE_BUILD_TYPE
 	if [[ ${CMAKE_BUILD_TYPE} = Gentoo ]]; then
-		# Handle debug and release codepaths
-		if has debug ${IUSE//+} && use debug; then
-			append-cppflags -DDEBUG
-		else
-			append-cppflags -DNDEBUG -DQT_NO_DEBUG -DQT_NO_DEBUG_STREAM
+		# Handle release builds
+		if ! has debug ${IUSE//+} || ! use debug; then
+			append-cppflags -DNDEBUG
 		fi
 	fi
 
