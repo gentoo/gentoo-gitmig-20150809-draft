@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.350 2010/08/13 15:00:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.351 2010/08/13 19:38:39 polynomial-c Exp $
+
+  13 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
+  xulrunner-1.9.2.8.ebuild:
+  Added the new armv4t-nanjit patch to stable xulrunner as well. (Blame
+  armin76 if it breaks :P)
 
   13 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
   +files/1009-armv4t-nanojit-v2.patch, xulrunner-1.9.2.8-r1.ebuild:
