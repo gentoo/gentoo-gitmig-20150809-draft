@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.79 2010/08/08 11:34:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.80 2010/08/13 16:36:10 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -83,7 +83,7 @@ qt4-build_pkg_setup() {
 
 	if [[ "${PN}" == "qt-webkit" ]]; then
 		eshopts_push -s extglob
-		if is-flagq '-g?(gdb)?([0-9])'; then
+		if is-flagq '-g?(gdb)?([1-9])'; then
 			echo
 			ewarn "You have enabled debug info (probably have -g or -ggdb in your \$C{,XX}FLAGS)."
 			ewarn "You may experience really long compilation times and/or increased memory usage."
