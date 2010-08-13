@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.6 2008/02/24 17:21:37 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.7 2010/08/13 21:21:45 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,8 +30,8 @@ src_unpack() {
 
 src_compile() {
 	emake CC="$(tc-getCC)" \
-		CFLAGS="-Wall ${CFLAGS}" \
-		LFLAGS="-lncurses" || die "emake failed"
+		CFLAGS="${CFLAGS} -Wall" \
+		LFLAGS="${LDFLAGS} -lncurses" || die "emake failed"
 }
 
 src_install() {
