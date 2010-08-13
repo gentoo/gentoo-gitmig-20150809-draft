@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nano-methods
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nano-methods/ChangeLog,v 1.9 2010/06/26 07:46:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nano-methods/ChangeLog,v 1.10 2010/08/13 12:57:32 graaff Exp $
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  -nano-methods-0.8.2.ebuild:
+  Remove old version.
 
 *nano-methods-0.8.2-r1 (26 Jun 2010)
 
