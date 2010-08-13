@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.5.3.ebuild,v 1.1 2010/08/13 09:24:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.5.3.ebuild,v 1.2 2010/08/13 09:26:59 scarabeus Exp $
 
 EAPI="3"
 
@@ -24,6 +24,10 @@ RDEPEND=">=app-text/docbook-xsl-stylesheets-1.75
 		app-text/docbook-xml-dtd:4.5
 "
 DEPEND=""
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	if ! use vim-syntax; then
