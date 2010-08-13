@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.432 2010/08/11 19:52:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.433 2010/08/13 04:04:50 phajdan.jr Exp $
+
+  13 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> samba-3.4.8.ebuild:
+  x86 stable wrt security bug #332063
 
   11 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> files/samba-init:
   Rather pass -p to mkdir to avoid any chance of failiture.
