@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.70 2010/08/12 02:33:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.71 2010/08/13 12:56:55 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> gentoo-syntax-1.17.ebuild:
+  Marked ppc/ppc64 stable for bug #332079.
 
   12 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gentoo-syntax-1.17.ebuild:
