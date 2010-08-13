@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.4.ebuild,v 1.1 2010/07/08 01:05:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.4.ebuild,v 1.2 2010/08/13 07:14:15 fauli Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86"
 IUSE="doc policykit test"
 
 RDEPEND=">=dev-libs/glib-2.18
