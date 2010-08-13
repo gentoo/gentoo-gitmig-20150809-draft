@@ -1,6 +1,12 @@
 # ChangeLog for app-text/agrep
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.23 2010/01/02 10:52:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.24 2010/08/13 20:02:07 hwoarang Exp $
+
+*agrep-2.04-r1 (13 Aug 2010)
+
+  13 Aug 2010; Markos Chandras <hwoarang@gentoo.org> +agrep-2.04-r1.ebuild:
+  Respect LDFLAGS. Bug #332283. Thanks to Diego E. 'Flameeyes' Pettenò
+  <flameeyes@gentoo.org> for reporting
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> agrep-2.04.ebuild:
   Transfer Prefix keywords
