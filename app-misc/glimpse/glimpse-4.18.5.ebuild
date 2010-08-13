@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.13 2010/01/01 21:17:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.14 2010/08/13 12:46:30 hwoarang Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,20 +27,26 @@ src_unpack() {
 	sed -i \
 		-e '/^CFLAGS/s:$: $(OPTIMIZEFLAGS):' \
 		{agrep,compress,index}/Makefile.in \
-		Makefile.in \
 		libtemplate/{template,util}/Makefile.in \
 		|| die "inserting OPTIMIZEFLAGS failed"
 	sed -i \
 		-e 's:$(mandir):&/man1/:' \
-		Makefile.in agrep/Makefile.in \
+		agrep/Makefile.in \
 		|| die "adding man1 to man install dir failed"
+
+	sed -i \
+		-e '/^LDFLAGS/d' \
+		{agrep,compress,index}/Makefile.in \
+		|| die "LDFLAGS sed failed"
+
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
 	use static && append-ldflags -static
 
 	econf || die
-	emake -j1 OPTIMIZEFLAGS="${CFLAGS}" || die
+	emake OPTIMIZEFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
