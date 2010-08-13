@@ -1,0 +1,14 @@
+# ChangeLog for virtual/ruby-ssl
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.1 2010/08/13 23:37:28 flameeyes Exp $
+
+*ruby-ssl-3 (13 Aug 2010)
+*ruby-ssl-2 (13 Aug 2010)
+*ruby-ssl-1 (13 Aug 2010)
+*ruby-ssl-0 (13 Aug 2010)
+
+  13 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> +ruby-ssl-0.ebuild,
+  +ruby-ssl-1.ebuild, +ruby-ssl-2.ebuild, +ruby-ssl-3.ebuild, +metadata.xml:
+  Add virtual ebuild for the OpenSSL binding for all the Ruby
+  implementations.
+
