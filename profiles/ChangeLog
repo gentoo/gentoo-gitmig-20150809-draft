@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4468 2010/08/13 04:27:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4469 2010/08/13 11:26:34 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  base/package.use.force, package.mask:
+  Add support for a new-style ruby-ssl virtual needed when the OpenSSL
+  bindings are required by Ruby code.
 
   13 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Mask app-crypt/wxchecksums and media-gfx/zphoto for removal.
