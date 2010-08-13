@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20091203.ebuild,v 1.2 2010/01/01 16:37:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20091203.ebuild,v 1.3 2010/08/13 21:52:58 cla Exp $
 
 inherit eutils
 
 MY_PV="20080310"
 DESCRIPTION="Programmable Completion for zsh (includes emerge and ebuild commands)"
-HOMEPAGE="http://gzc.tuxfamily.org/"
-SRC_URI="http://download.tuxfamily.org/gzc/${PN}-${MY_PV}.tar.bz2"
+HOMEPAGE="http://gentoo.org"
+SRC_URI="mirror://${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="ZSH"
 SLOT="0"
