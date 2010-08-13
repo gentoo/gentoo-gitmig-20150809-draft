@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.11.ebuild,v 1.7 2010/07/24 16:48:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.11.ebuild,v 1.8 2010/08/13 13:57:43 josejx Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.jwz.org/xscreensaver"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="jpeg new-login opengl pam suid xinerama"
 
 RDEPEND="x11-libs/libXmu

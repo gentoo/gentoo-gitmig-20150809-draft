@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.276 2010/07/24 16:48:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.277 2010/08/13 13:57:43 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> xscreensaver-5.11.ebuild:
+  Marked ppc stable for bug #327367.
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> xscreensaver-5.11.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #327367
