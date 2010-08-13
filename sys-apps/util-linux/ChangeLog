@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.316 2010/07/24 16:03:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.317 2010/08/13 13:42:28 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> util-linux-2.17.2.ebuild:
+  Marked ppc stable for bug #326339.
 
   24 Jul 2010; Markus Meier <maekke@gentoo.org> util-linux-2.17.2.ebuild:
   arm stable, bug #326339
