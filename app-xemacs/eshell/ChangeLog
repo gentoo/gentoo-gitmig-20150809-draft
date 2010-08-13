@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/eshell
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eshell/ChangeLog,v 1.16 2009/02/22 13:31:21 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eshell/ChangeLog,v 1.17 2010/08/13 11:44:18 graaff Exp $
+
+*eshell-1.18 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +eshell-1.18.ebuild:
+  Version bump: XEmacs compatibility fixes.
 
 *eshell-1.17 (22 Feb 2009)
 

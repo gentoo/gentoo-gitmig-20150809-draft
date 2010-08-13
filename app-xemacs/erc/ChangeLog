@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/erc
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.5 2009/02/22 15:33:26 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.6 2010/08/13 11:46:52 graaff Exp $
+
+*erc-0.23 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +erc-0.23.ebuild:
+  Version bump: XEmacs compatibility fixes.
 
 *erc-0.22 (22 Feb 2009)
 
