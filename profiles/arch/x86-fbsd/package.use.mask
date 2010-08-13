@@ -1,6 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.19 2010/05/12 14:16:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.20 2010/08/13 10:23:32 jlec Exp $
+
+# Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
+# MKL not available on this arch
+media-gfx/povray mkl
 
 # Pacho Ramos <pacho@gentoo.org> (22 Mar 2010)
 # xulrunner:1.9 and libgda:3 not keyworded, bug 282291
