@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.67 2010/08/12 19:32:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.68 2010/08/13 05:05:40 reavertm Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -645,13 +645,12 @@ kde4-base_src_configure() {
 		cmakeargs+=(-DKDE4_ENABLE_FINAL=ON)
 	fi
 
-	if [[ ${CMAKE_BUILD_TYPE} = Gentoo ]]; then
-		# Handle debug and release codepaths
-		if has debug ${IUSE//+} && use debug; then
-			append-cppflags -DDEBUG
-		else
-			append-cppflags -DNDEBUG -DQT_NO_DEBUG -DQT_NO_DEBUG_STREAM
-		fi
+	if has debug ${IUSE//+} && use debug; then
+		# Set "real" debug mode
+		CMAKE_BUILD_TYPE="Debugfull"
+	else
+		# Handle common release builds
+		append-cppflags -DQT_NO_DEBUG
 	fi
 
 	# Set distribution name
