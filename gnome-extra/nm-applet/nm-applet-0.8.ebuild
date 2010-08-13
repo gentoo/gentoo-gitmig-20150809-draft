@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.2 2010/03/10 09:01:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.3 2010/08/13 07:16:40 fauli Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="bluetooth"
 
 # FIXME: bluetooth is automagic
