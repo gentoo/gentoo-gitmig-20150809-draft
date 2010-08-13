@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.74 2010/08/11 03:20:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.75 2010/08/13 16:43:20 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -187,10 +187,6 @@ src_configure() {
 	# for example bug #320419.
 	myconf="${myconf} -Dlinux_use_tcmalloc=0"
 
-	# Disable gpu rendering, it is incompatible with nvidia-drivers,
-	# bug #319331.
-	myconf="${myconf} -Denable_gpu=0"
-
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
 	[[ $myarch = "" ]] && myarch="$ARCH"
@@ -228,7 +224,6 @@ src_configure() {
 
 src_compile() {
 	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
-		rootdir="${S}" \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)" \
 		AR="$(tc-getAR)" \
@@ -273,7 +268,9 @@ src_install() {
 		|| die "desktop file sed failed"
 
 	# Install GNOME default application entry (bug #303100).
-	dodir /usr/share/gnome-control-center/default-apps
-	insinto /usr/share/gnome-control-center/default-apps
-	doins "${FILESDIR}"/chromium.xml
+	if use gnome; then
+		dodir /usr/share/gnome-control-center/default-apps
+		insinto /usr/share/gnome-control-center/default-apps
+		doins "${FILESDIR}"/chromium.xml
+	fi
 }

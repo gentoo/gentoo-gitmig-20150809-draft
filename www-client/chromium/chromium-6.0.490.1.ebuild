@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.33.ebuild,v 1.1 2010/08/11 21:20:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.490.1.ebuild,v 1.1 2010/08/13 16:43:20 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -64,6 +64,10 @@ src_prepare() {
 
 	# Add Gentoo plugin paths.
 	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
+
+	# Fix a renderer crash, bug #331661. This is a backport
+	# of the upstream patch.
+	epatch "${FILESDIR}"/${PN}-yuv-crash-r1.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
@@ -137,10 +141,6 @@ src_configure() {
 	# for example bug #320419.
 	myconf="${myconf} -Dlinux_use_tcmalloc=0"
 
-	# Disable gpu rendering, it is incompatible with nvidia-drivers,
-	# bug #319331.
-	myconf="${myconf} -Denable_gpu=0"
-
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
 	[[ $myarch = "" ]] && myarch="$ARCH"
@@ -178,7 +178,6 @@ src_configure() {
 
 src_compile() {
 	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
-		rootdir="${S}" \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)" \
 		AR="$(tc-getAR)" \
@@ -220,7 +219,9 @@ src_install() {
 		|| die "desktop file sed failed"
 
 	# Install GNOME default application entry (bug #303100).
-	dodir /usr/share/gnome-control-center/default-apps
-	insinto /usr/share/gnome-control-center/default-apps
-	doins "${FILESDIR}"/chromium.xml
+	if use gnome; then
+		dodir /usr/share/gnome-control-center/default-apps
+		insinto /usr/share/gnome-control-center/default-apps
+		doins "${FILESDIR}"/chromium.xml
+	fi
 }
