@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.13 2010/08/12 10:03:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.14 2010/08/13 19:47:56 hwoarang Exp $
+
+  13 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  lightspark-0.4.3.ebuild, +files/lightspark-0.4.3-cmakelists.patch:
+  Add patch to respect LDFLAGS. Bug #332115. Thanks to Diego E. 'Flameeyes'
+  Pettenò <flameeyes@gentoo.org> for reporting
 
 *lightspark-0.4.3 (12 Aug 2010)
 
