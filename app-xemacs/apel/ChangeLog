@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/apel
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.17 2009/02/22 15:12:03 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.18 2010/08/13 12:32:27 graaff Exp $
+
+*apel-1.34 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +apel-1.34.ebuild:
+  Version bump: sync to upstream 10.7.
 
 *apel-1.33 (22 Feb 2009)
 
