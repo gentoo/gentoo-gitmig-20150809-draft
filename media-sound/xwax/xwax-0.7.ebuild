@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.7.ebuild,v 1.4 2010/07/11 12:03:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.7.ebuild,v 1.5 2010/08/13 13:37:50 josejx Exp $
 
 EAPI=3
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.xwax.co.uk/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 # These make sure the user can decode the files he or she cares about by
 # setting appropriate runtime depends and (perhaps) configuring the import
 # script

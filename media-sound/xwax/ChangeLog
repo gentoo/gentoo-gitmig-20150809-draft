@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.18 2010/07/11 12:03:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.19 2010/08/13 13:37:50 josejx Exp $
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org> xwax-0.7.ebuild:
+  Marked ppc stable for bug #323501.
 
   11 Jul 2010; Markus Meier <maekke@gentoo.org> xwax-0.7.ebuild:
   x86 stable, bug #323501
