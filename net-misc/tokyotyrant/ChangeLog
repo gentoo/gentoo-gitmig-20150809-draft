@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tokyotyrant
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.8 2010/06/18 07:44:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.9 2010/08/13 10:49:15 patrick Exp $
+
+*tokyotyrant-1.1.41 (13 Aug 2010)
+
+  13 Aug 2010; Patrick Lauer <patrick@gentoo.org>
+  +tokyotyrant-1.1.41.ebuild, +files/fix_makefiles-1.4.41.patch:
+  Bump, fixes thanks to Johan Bergstroem. Fixes #331559
 
   18 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   -tokyotyrant-1.1.37.ebuild, -tokyotyrant-1.1.39.ebuild:
