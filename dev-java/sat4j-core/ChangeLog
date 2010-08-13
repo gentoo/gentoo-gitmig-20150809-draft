@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sat4j-core
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-core/ChangeLog,v 1.6 2010/05/29 16:33:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-core/ChangeLog,v 1.7 2010/08/13 10:22:57 ali_bush Exp $
+
+*sat4j-core-2.2.0 (13 Aug 2010)
+
+  13 Aug 2010; Alistair Bush <ali_bush@gentoo.org> +sat4j-core-2.2.0.ebuild:
+  Version Bump. Thanks to Matt Whitlock <matt@whitlock.name>
 
   29 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   sat4j-core-2.1.1.ebuild:

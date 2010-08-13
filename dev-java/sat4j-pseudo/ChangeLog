@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sat4j-pseudo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-pseudo/ChangeLog,v 1.6 2010/06/25 22:24:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sat4j-pseudo/ChangeLog,v 1.7 2010/08/13 10:24:36 ali_bush Exp $
+
+*sat4j-pseudo-2.2.0 (13 Aug 2010)
+
+  13 Aug 2010; Alistair Bush <ali_bush@gentoo.org>
+  +sat4j-pseudo-2.2.0.ebuild:
+  Version Bump. Thanks to Matt Whitlock <matt@whitlock.name>
 
   25 Jun 2010; Christoph Mende <angelos@gentoo.org>
   sat4j-pseudo-2.1.1.ebuild:
