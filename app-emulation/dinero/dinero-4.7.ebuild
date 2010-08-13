@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7.ebuild,v 1.9 2008/12/30 18:53:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7.ebuild,v 1.10 2010/08/13 12:21:33 xarthisius Exp $
 
 inherit toolchain-funcs
 
@@ -14,6 +14,13 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="as-is"
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -e "s/\$(CC)/& \$(LDFLAGS)/" \
+	  -i Makefile.in || die #331837
+}
 
 src_compile() {
 	tc-export AR CC RANLIB

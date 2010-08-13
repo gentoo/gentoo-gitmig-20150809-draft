@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dinero
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/ChangeLog,v 1.10 2008/12/30 18:53:51 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/ChangeLog,v 1.11 2010/08/13 12:21:33 xarthisius Exp $
+
+  13 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> dinero-4.7.ebuild:
+  Respect LDFLAGS wrt bug 331837. Thanks to Diego for report.
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> dinero-4.7.ebuild:
   QA: Respect AR/CC/RANLIB (bug 243576)
