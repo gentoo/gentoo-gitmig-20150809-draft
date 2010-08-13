@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pastebin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pastebin/ChangeLog,v 1.5 2010/08/13 13:55:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebin/ChangeLog,v 1.6 2010/08/13 13:59:24 darkside Exp $
+
+  13 Aug 2010; Jeremy Olexa <darkside@gentoo.org> -pastebin-0.5.ebuild:
+  remove old version
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> pastebin-0.6.1.ebuild:
   Marked ppc stable for bug #328049.
