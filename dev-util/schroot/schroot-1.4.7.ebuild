@@ -1,25 +1,28 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.1.ebuild,v 1.1 2010/02/27 02:06:47 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.7.ebuild,v 1.1 2010/08/13 09:04:04 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 WANT_AUTOMAKE="1.11"
 
 inherit autotools base pam
 
+MY_P=${PN}_${PV}
+
 DESCRIPTION="Utility to execute commands in a chroot environment"
 HOMEPAGE="http://packages.debian.org/source/sid/schroot"
-SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${PN}_${PV}.orig.tar.gz"
+SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${MY_P}.orig.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dchroot debug doc lvm nls pam test"
+IUSE="btrfs +dchroot debug doc lvm nls pam test"
 
 COMMON_DEPEND="
-	>=dev-libs/boost-1.39.0
+	>=dev-libs/boost-1.42.0
 	dev-libs/lockdev
 	>=sys-apps/util-linux-2.16
+	btrfs? ( sys-fs/btrfs-progs )
 	lvm? ( sys-fs/lvm2 )
 	pam? ( sys-libs/pam )
 "
@@ -39,7 +42,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.4.0-tests.patch"
+	"${FILESDIR}/${P}-tests.patch"
 )
 
 src_prepare() {
@@ -48,8 +51,6 @@ src_prepare() {
 	# Don't depend on cppunit unless we are testing
 	use test || sed -i '/AM_PATH_CPPUNIT/d' configure.ac
 
-	echo -e "Package: ${PN}\nVersion: ${PV}" > VERSION
-
 	eautoreconf
 }
 
@@ -57,6 +58,7 @@ src_configure() {
 	root_tests=no
 	use test && (( EUID == 0 )) && root_tests=yes
 	econf \
+		$(use_enable btrfs btrfs-snapshot) \
 		$(use_enable doc doxygen) \
 		$(use_enable dchroot) \
 		$(use_enable dchroot dchroot-dsa) \
@@ -70,8 +72,8 @@ src_configure() {
 		--enable-root-tests=$root_tests \
 		--enable-shared \
 		--disable-static \
-		--localstatedir=/var \
-		--with-bash-completion-dir=/usr/share/bash-completion
+		--localstatedir="${EPREFIX}"/var \
+		--with-bash-completion-dir="${EPREFIX}"/usr/share/bash-completion
 }
 
 src_test() {
@@ -85,10 +87,14 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
+	insinto /usr/share/doc/${PF}/contrib/setup.d
+	doins contrib/setup.d/09fsck contrib/setup.d/10mount-ssh || die "installation of contrib scripts failed"
+
 	newinitd "${FILESDIR}"/schroot.initd schroot || die "installation of init.d script failed"
 	newconfd "${FILESDIR}"/schroot.confd schroot || die "installation of conf.d file failed"
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die "installation of docs failed"
+
 	if use doc; then
 		docinto html/sbuild
 		dohtml doc/sbuild/html/* || die "installation of html docs failed"
@@ -97,7 +103,7 @@ src_install() {
 	fi
 
 	if use pam; then
-		rm -f "${D}"/etc/pam.d/schroot
+		rm -f "${ED}"etc/pam.d/schroot
 		pamd_mimic_system schroot auth account session
 	fi
 
@@ -110,7 +116,7 @@ pkg_preinst() {
 	has_version "<dev-util/schroot-1.4.1" && had_older_1_4_1=true
 	if ${had_older_1_4_1}; then
 		einfo "Moving config files to new location..."
-		mkdir "${ROOT}etc/schroot/default"
+		mkdir "${EROOT}etc/schroot/default"
 		mv_conffile etc/schroot/script-defaults etc/schroot/default/config
 		mv_conffile etc/schroot/mount-defaults etc/schroot/default/fstab
 		mv_conffile etc/schroot/copyfiles-defaults etc/schroot/default/copyfiles
@@ -119,8 +125,8 @@ pkg_preinst() {
 }
 
 mv_conffile() {
-	local OLDFILE=${ROOT}$1
-	local NEWFILE=${ROOT}$2
+	local OLDFILE=${EROOT}$1
+	local NEWFILE=${EROOT}$2
 
 	# if the old file doesn't exist, or is a symlink, stop
 	[[ -f ${OLDFILE} ]] || return 0
@@ -153,7 +159,7 @@ pkg_postinst() {
 	local x
 	if ${had_older_1_4_1}; then
 		for x in script:config mount:fstab copyfiles nssdatabases; do
-			if [[ ! -e ${ROOT}etc/schroot/${x%:*}-defaults && -f ${ROOT}etc/schroot/default/${x#*:} ]]; then
+			if [[ ! -e ${EROOT}etc/schroot/${x%:*}-defaults && -f ${EROOT}etc/schroot/default/${x#*:} ]]; then
 				einfo "Creating compatibility symlink for ${x%:*}-defaults"
 				ln -sf "default/${x#*:}" "${ROOT}etc/schroot/${x%:*}-defaults"
 			fi
