@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/easypg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/easypg/ChangeLog,v 1.1 2009/07/26 07:10:24 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/easypg/ChangeLog,v 1.2 2010/08/13 12:24:17 graaff Exp $
+
+*easypg-1.03 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +easypg-1.03.ebuild:
+  Version bump.
 
 *easypg-1.02 (26 Jul 2009)
 
