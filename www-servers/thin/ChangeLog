@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.14 2010/08/13 11:43:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.15 2010/08/13 18:08:46 lu_zero Exp $
+
+  13 Aug 2010; Luca Barbato <lu_zero@gentoo.org> thin-1.2.5-r1.ebuild:
+  Workaround on behalf of Diego
 
   13 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   thin-1.2.5-r1.ebuild:

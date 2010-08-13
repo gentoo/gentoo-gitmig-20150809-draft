@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.2.5-r1.ebuild,v 1.5 2010/08/13 11:43:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/thin-1.2.5-r1.ebuild,v 1.6 2010/08/13 18:08:46 lu_zero Exp $
 
 EAPI=2
 
@@ -26,8 +26,7 @@ RDEPEND="${RDEPEND}"
 # Rakefile loads thin!
 mydeps=">=dev-ruby/daemons-1.0.9
 	>=dev-ruby/rack-1.0.0
-	>=dev-ruby/eventmachine-0.12.6
-	virtual/ruby-ssl"
+	>=dev-ruby/eventmachine-0.12.6"
 
 ruby_add_rdepend "${mydeps}"
 ruby_add_bdepend "${mydeps}
