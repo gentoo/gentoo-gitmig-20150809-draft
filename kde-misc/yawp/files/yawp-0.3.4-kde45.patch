@@ -1,0 +1,113 @@
+diff -ur yawp-0.3.4-old/applet/configdialog/yawpconfig.cpp yawp-0.3.4/applet/configdialog/yawpconfig.cpp
+--- yawp-0.3.4-old/applet/configdialog/yawpconfig.cpp	2010-07-07 21:42:28.000000000 +0300
++++ yawp-0.3.4/applet/configdialog/yawpconfig.cpp	2010-08-13 20:33:19.827560364 +0300
+@@ -135,7 +135,7 @@
+ 	connect(checkBoxUseCustomColor,		SIGNAL(stateChanged(int)),	this,  SLOT(enableCustomFontColorOptions(int)));
+ 
+ 	//--- SETUP UNIT SYSTEM ---
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 	comboTemperature->insertItem( 0, i18n("Celsius"),	QVariant(KUnitConversion::Celsius) );
+ 	comboTemperature->insertItem( 1, i18n("Fahrenheit"),	QVariant(KUnitConversion::Fahrenheit) );
+ 
+Only in yawp-0.3.4/applet/configdialog: yawpconfig.cppr
+diff -ur yawp-0.3.4-old/applet/utils.h yawp-0.3.4/applet/utils.h
+--- yawp-0.3.4-old/applet/utils.h	2010-07-07 21:42:28.000000000 +0300
++++ yawp-0.3.4/applet/utils.h	2010-08-13 20:33:19.824560364 +0300
+@@ -53,7 +53,7 @@
+ 	inline QString
+ 	GetUnitString( int unit )
+ 	{
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 		KUnitConversion::Value v(1.0, unit);
+ 		QString str = v.unit()->symbol();
+ #else
+@@ -62,7 +62,7 @@
+ /*		switch( unit )
+ 		{
+ 		e.g.:
+-#if KDE_VERSION_MINOR == 4
++#if KDE_VERSION_MINOR >= 4
+ 			case KUnitConversion::Meter:	str = i18n("m"); break;
+ #else if KDE_VERSION_MINOR == 3
+ 
+Only in yawp-0.3.4/applet: utils.hr
+diff -ur yawp-0.3.4-old/applet/weatherdataprocessor.cpp yawp-0.3.4/applet/weatherdataprocessor.cpp
+--- yawp-0.3.4-old/applet/weatherdataprocessor.cpp	2010-07-07 21:42:28.000000000 +0300
++++ yawp-0.3.4/applet/weatherdataprocessor.cpp	2010-08-13 20:33:19.826560364 +0300
+@@ -643,7 +643,7 @@
+ 
+ 	if( fromSystem != distanceSystem )
+ 	{
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 		KUnitConversion::Value v( (double) fValue, fromSystem);
+ 		fValue = v.convertTo(distanceSystem).number();
+ #elif KDE_VERSION_MINOR == 3
+@@ -664,7 +664,7 @@
+ 		return SHRT_MAX;
+ 	if( fromSystem != pressureSystem )
+ 	{
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 		KUnitConversion::Value v( (double) fValue, fromSystem);
+ 		fValue = v.convertTo(pressureSystem).number();
+ #elif KDE_VERSION_MINOR >= 3
+@@ -687,7 +687,7 @@
+ 
+ 	if( fromSystem != temperatureSystem )
+ 	{
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 		KUnitConversion::Value v( (double) fValue, fromSystem);
+ 		fValue = v.convertTo(temperatureSystem).number();
+ #elif KDE_VERSION_MINOR >= 3
+@@ -709,7 +709,7 @@
+ 
+ 	if( fromSystem != speedSystem )
+ 	{
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 		KUnitConversion::Value v( (double) fValue, fromSystem);
+ 		fValue = v.convertTo(speedSystem).number();
+ #elif KDE_VERSION_MINOR >= 3
+Only in yawp-0.3.4/applet: weatherdataprocessor.cppr
+diff -ur yawp-0.3.4-old/ions/ion_google.h yawp-0.3.4/ions/ion_google.h
+--- yawp-0.3.4-old/ions/ion_google.h	2010-07-07 21:42:28.000000000 +0300
++++ yawp-0.3.4/ions/ion_google.h	2010-08-13 20:32:40.514560372 +0300
+@@ -22,7 +22,7 @@
+ #define ION_GOOGLE_H
+ 
+ //--- LOCAL ---
+-#include <units.h>
++#include "units.h"
+ 
+ //--- QT4 ---
+ #include <QDate>
+diff -ur yawp-0.3.4-old/ions/ion_wunderground.cpp yawp-0.3.4/ions/ion_wunderground.cpp
+--- yawp-0.3.4-old/ions/ion_wunderground.cpp	2010-07-07 21:42:28.000000000 +0300
++++ yawp-0.3.4/ions/ion_wunderground.cpp	2010-08-13 20:33:19.824560364 +0300
+@@ -782,7 +782,7 @@
+ 	}
+ 
+ 	int iTempSystem(0), iSpeedSystem(0), iDistanceSystem(0), iPressureSystem(0);
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 	if( data.measureSystem == KLocale::Metric )
+ 	{
+ 		iTempSystem = KUnitConversion::Celsius;
+Only in yawp-0.3.4/ions: ion_wunderground.cppr
+diff -ur yawp-0.3.4-old/ions/units.h yawp-0.3.4/ions/units.h
+--- yawp-0.3.4-old/ions/units.h	2010-07-07 21:42:28.000000000 +0300
++++ yawp-0.3.4/ions/units.h	2010-08-13 20:33:19.828560364 +0300
+@@ -26,7 +26,7 @@
+ 
+ 
+ //#if KDE_IS_VERSION(4,3,70)
+-#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR == 4
++#if (KDE_VERSION_MINOR == 3 && KDE_VERSION_RELEASE >= 70) || KDE_VERSION_MINOR >= 4
+ 	#include <KUnitConversion/Converter>
+ 	#define FAHRENHEIT KUnitConversion::Fahrenheit
+ 	#define CELSIUS KUnitConversion::Celsius
+Only in yawp-0.3.4/ions: units.hr

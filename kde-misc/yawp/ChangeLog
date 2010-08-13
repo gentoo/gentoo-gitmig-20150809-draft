@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/yawp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/ChangeLog,v 1.3 2010/06/03 15:17:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/ChangeLog,v 1.4 2010/08/13 17:47:04 spatz Exp $
+
+*yawp-0.3.4 (13 Aug 2010)
+
+  13 Aug 2010; Dror Levin <spatz@gentoo.org> -yawp-0.3.2.ebuild,
+  -files/yawp-0.3.2-gcc45.patch, +yawp-0.3.4.ebuild,
+  +files/yawp-0.3.4-kde45.patch:
+  Version bump, drop old.
 
   03 Jun 2010; Dror Levin <spatz@gentoo.org> yawp-0.3.2.ebuild,
   +files/yawp-0.3.2-gcc45.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/yawp-0.3.2.ebuild,v 1.2 2010/06/03 15:17:39 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yawp/yawp-0.3.4.ebuild,v 1.1 2010/08/13 17:47:04 spatz Exp $
 
 EAPI=2
 KDE_LINGUAS="af cs de es fr he it pl ru sk sl"
@@ -18,7 +18,7 @@ IUSE="debug"
 RDEPEND=">=kde-base/plasma-workspace-${KDE_MINIMAL}"
 
 PATCHES=(
-	"${FILESDIR}/${P}-gcc45.patch"
+	"${FILESDIR}/${P}-kde45.patch"
 )
 
 DOCS="README TODO"
