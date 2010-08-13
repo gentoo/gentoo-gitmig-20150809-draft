@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/build
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.13 2008/03/19 19:18:06 graaff Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.14 2010/08/13 12:30:01 graaff Exp $
+
+*build-1.15 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +build-1.15.ebuild:
+  Version bump: XEmacs compatibility fixes.
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer
