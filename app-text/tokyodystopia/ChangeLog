@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tokyodystopia
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tokyodystopia/ChangeLog,v 1.3 2010/03/28 12:36:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tokyodystopia/ChangeLog,v 1.4 2010/08/13 10:59:38 patrick Exp $
+
+*tokyodystopia-0.9.15 (13 Aug 2010)
+
+  13 Aug 2010; Patrick Lauer <patrick@gentoo.org>
+  +tokyodystopia-0.9.15.ebuild, +files/remove_docinst.patch:
+  Bump, fixes thanks to Johan Bergstroem. Fixes #331561
 
 *tokyodystopia-0.9.14 (28 Mar 2010)
 
