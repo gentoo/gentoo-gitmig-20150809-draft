@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.25 2010/06/02 10:55:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.26 2010/08/13 10:34:29 patrick Exp $
+
+*tokyocabinet-1.4.46 (13 Aug 2010)
+
+  13 Aug 2010; Patrick Lauer <patrick@gentoo.org> +files/1.4.46.patch,
+  +tokyocabinet-1.4.46.ebuild, +files/remove_docinst.patch:
+  Bump, lots of nice fixes by Johan Bergstroem, fixes #331555
 
 *tokyocabinet-1.4.45 (02 Jun 2010)
 
