@@ -1,0 +1,10 @@
+# ChangeLog for app-xemacs/ede
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ede/ChangeLog,v 1.1 2010/08/13 12:37:58 graaff Exp $
+
+*ede-1.03 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org> +ede-1.03.ebuild,
+  +metadata.xml:
+  Initial import.
+
