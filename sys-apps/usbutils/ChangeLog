@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.99 2010/04/25 18:02:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.100 2010/08/14 00:58:30 vapier Exp $
+
+*usbutils-0.90 (14 Aug 2010)
+
+  14 Aug 2010; Mike Frysinger <vapier@gentoo.org> +usbutils-0.90.ebuild:
+  Version bump #332583 by Samuli Suominen.
 
   25 Apr 2010; Alexis Ballier <aballier@gentoo.org> usbutils-0.87.ebuild,
   +files/usbutils-0.87-fbsd.patch:
