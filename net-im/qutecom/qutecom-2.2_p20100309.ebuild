@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20100309.ebuild,v 1.2 2010/04/13 22:44:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20100309.ebuild,v 1.3 2010/08/14 16:45:31 chithanh Exp $
 
 EAPI="3"
 
-inherit cmake-utils eutils
+inherit cmake-utils eutils flag-o-matic
 
 DESCRIPTION="Multi-protocol instant messenger and VoIP client"
 HOMEPAGE="http://www.qutecom.org/"
@@ -43,6 +43,8 @@ pkg_setup() {
 		ewarn "dev-libs/boost both before and after 1.41 are installed. If the build"
 		ewarn "fails due to undefined boost symbols, remove older boost."
 	fi
+	# fails to find its libraries with --as-needed, bug #315045
+	append-ldflags $(no-as-needed)
 }
 src_configure() {
 	local mycmakeargs="$(cmake-utils_use_enable portaudio PORTAUDIO_SUPPORT)
