@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.154 2010/07/20 01:54:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.155 2010/08/14 17:47:16 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> dasher-4.11.ebuild:
+  alpha/ia64/sh/sparc stable wrt #314899
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> dasher-4.10.1.ebuild,
   dasher-4.11.ebuild:
