@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/spim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.54 2010/07/31 22:17:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.55 2010/08/14 01:46:25 ricmm Exp $
+
+*spim-8.0-r1 (14 Aug 2010)
+
+  14 Aug 2010; <ricmm@gentoo.org> +spim-8.0-r1.ebuild,
+  +files/spim-8.0-r1-respect_env.patch, +files/xspim.svg:
+  Version bump and ebuild improvements. Fix bug 330389.
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org> spim-8.0.ebuild:
   Stable on amd64 wrt bug #328973
