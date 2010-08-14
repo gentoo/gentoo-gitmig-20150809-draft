@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r1.ebuild,v 1.2 2010/08/09 17:29:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r1.ebuild,v 1.3 2010/08/14 15:55:18 truedfx Exp $
 
 EAPI="2"
 
@@ -70,6 +70,7 @@ src_configure() {
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
+		HOSTCC="$(tc-getBUILD_CC)" \
 		AR="$(tc-getAR)" \
 		|| die
 }
