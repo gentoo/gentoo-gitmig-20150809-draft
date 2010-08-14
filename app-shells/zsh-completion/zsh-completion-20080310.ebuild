@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20080310.ebuild,v 1.9 2010/08/13 21:52:58 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/zsh-completion-20080310.ebuild,v 1.10 2010/08/14 07:08:02 cla Exp $
 
 DESCRIPTION="Programmable Completion for zsh (includes emerge and ebuild commands)"
 HOMEPAGE="http://gentoo.org"
-SRC_URI="mirror://${PF}.tar.bz2"
+SRC_URI="mirror://gentoo/${PF}.tar.bz2"
 
 LICENSE="ZSH"
 SLOT="0"
