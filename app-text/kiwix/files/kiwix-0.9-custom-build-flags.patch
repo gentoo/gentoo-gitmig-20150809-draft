@@ -1,0 +1,21 @@
+diff -ur a/configure.ac b/configure.ac
+--- a/configure.ac	2010-08-14 15:37:39.864000026 +0200
++++ b/configure.ac	2010-08-14 15:45:49.650000027 +0200
+@@ -45,8 +45,8 @@
+ 
+   # default $CPPFLAGS and $LDFLAGS
+   CPPFLAGS=""
+-  CFLAGS="-O6"
+-  LDFLAGS=""
++  CFLAGS="${CFLAGS}"
++  LDFLAGS="${LDFLAGS}"
+   LIBS=""
+   LD_PATH=""
+   LD_LIBRARY_PATH=""
+@@ -376,4 +376,4 @@
+   # Save the install prefix in the default application preferences
+   sed -i "s/\"kiwix.install.prefix\"\,\ \"[[^\"]]*\"/\"kiwix.install.prefix\"\,\ \"$(echo $prefix | sed -e 's/\\/\\\\/g' -e 's/\//\\\//g' -e 's/&/\\\&/g')\"/" ./kiwix/defaults/preferences/preferences.js
+ 
+-fi
+\ Kein Zeilenumbruch am Dateiende.
++fi
