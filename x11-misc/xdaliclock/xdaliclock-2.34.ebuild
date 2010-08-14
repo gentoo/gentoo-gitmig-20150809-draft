@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.25.ebuild,v 1.1 2008/05/14 19:11:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/xdaliclock-2.34.ebuild,v 1.1 2010/08/14 10:50:28 xarthisius Exp $
 
 DESCRIPTION="Dali Clock is a digital clock. When a digit changes, it melts into its new shape."
 HOMEPAGE="http://www.jwz.org/xdaliclock"
@@ -21,8 +21,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P}/X11
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/man/man1
-	emake install_prefix="${D}" install || die "emake install failed."
-	dodoc ../README
+	dobin ${PN} || die
+	newman ${PN}.man ${PN}.1 || die
+	dodoc ../README || die
 }

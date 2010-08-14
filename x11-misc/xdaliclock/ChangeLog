@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xdaliclock
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.25 2008/05/14 19:11:43 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdaliclock/ChangeLog,v 1.26 2010/08/14 10:50:28 xarthisius Exp $
+
+*xdaliclock-2.34 (14 Aug 2010)
+
+  14 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -xdaliclock-2.25.ebuild, +xdaliclock-2.34.ebuild:
+  Version bump. Fixes bug 330499. Thanks to Leeman Strout <me@mooluv.com>
+  for report. Remove old.
 
 *xdaliclock-2.25 (14 May 2008)
 
