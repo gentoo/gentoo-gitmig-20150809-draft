@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.124 2010/07/19 19:36:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.125 2010/08/14 11:21:39 maekke Exp $
+
+  14 Aug 2010; Markus Meier <maekke@gentoo.org> libidn-1.19.ebuild:
+  arm stable, bug #327485
 
   19 Jul 2010; Jeroen Roovers <jer@gentoo.org> libidn-1.19.ebuild:
   Stable for PPC (bug #327485).
