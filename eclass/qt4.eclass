@@ -1,6 +1,10 @@
 # Copyright 2005-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.61 2010/01/14 21:15:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.62 2010/08/14 22:55:27 wired Exp $
+
+# @DEPRECATED
+# This eclass has been superseded by qt4-r2
+# Please modify your ebuilds to use that instead
 
 # @ECLASS: qt4.eclass
 # @MAINTAINER:
