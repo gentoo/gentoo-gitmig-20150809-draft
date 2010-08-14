@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.81 2010/08/14 18:00:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.82 2010/08/14 18:09:10 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -230,7 +230,7 @@ qt4-build_src_prepare() {
 	if version_is_at_least 4.6; then
 		find ./config.tests/unix -name "*.test" -type f -exec grep -lZ \$MAKE '{}' \; | \
 			xargs -0 \
-			sed -e "s:\(\$MAKE\):\1 CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getCXX)" "LINK=$(tc-getCXX)":g" \
+			sed -e "s:\(\$MAKE\):\1 CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getCXX)" LINK="$(tc-getCXX)":g" \
 				-i || die "sed test compilers failed"
 	fi
 
