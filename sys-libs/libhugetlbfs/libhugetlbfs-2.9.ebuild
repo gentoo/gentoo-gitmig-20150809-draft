@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/libhugetlbfs-2.9.ebuild,v 1.1 2010/08/04 06:55:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/libhugetlbfs-2.9.ebuild,v 1.2 2010/08/14 00:15:25 vapier Exp $
 
-EAPI=2
+EAPI="2"
+
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="easy hugepage access"
@@ -14,9 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
-DEPEND=""
-
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.9-build.patch #332517
 	epatch "${FILESDIR}"/${PN}-2.6-noexec-stack.patch
 	epatch "${FILESDIR}"/${PN}-2.6-fixup-testsuite.patch
 	sed -i \
@@ -33,10 +33,6 @@ src_prepare() {
 	fi
 }
 
-src_configure() {
-	:
-}
-
 src_compile() {
 	tc-export AR CC
 	emake libs tools || die
@@ -45,7 +41,7 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc HOWTO NEWS README
-	rm "${D}"/usr/bin/oprofile*
+	rm "${D}"/usr/bin/oprofile* || die
 }
 
 src_test_alloc_one() {

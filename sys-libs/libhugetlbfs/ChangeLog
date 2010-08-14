@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libhugetlbfs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/ChangeLog,v 1.5 2010/08/04 06:55:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/ChangeLog,v 1.6 2010/08/14 00:15:25 vapier Exp $
+
+  14 Aug 2010; Mike Frysinger <vapier@gentoo.org> libhugetlbfs-2.9.ebuild,
+  +files/libhugetlbfs-2.9-build.patch:
+  Respect user LDFLAGS when linking apps #332517 by Diego E. Pettenò.
 
 *libhugetlbfs-2.9 (04 Aug 2010)
 
