@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.65 2010/07/25 16:37:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.66 2010/08/14 16:18:44 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> sg3_utils-1.29.ebuild:
+  alpha/ia64/sh/sparc stable
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> sg3_utils-1.29.ebuild:
+  alpha/ia64/sparc stable wrt #314899
 
   25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
   sg3_utils-1.27.20090411.ebuild:
