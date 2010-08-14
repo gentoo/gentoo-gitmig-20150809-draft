@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wildmidi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.3 2010/08/14 20:13:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.4 2010/08/14 20:56:08 hwoarang Exp $
+
+  14 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  wildmidi-0.2.3.4.ebuild:
+  Apply patch from Samuli to fix QA issues, refactor dependencies and remove
+  .la file
 
   14 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   wildmidi-0.2.3.4.ebuild:
