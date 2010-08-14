@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.37.0.ebuild,v 1.3 2009/10/24 09:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.37.0.ebuild,v 1.4 2010/08/14 06:35:54 dirtyepic Exp $
 
 EAPI="2"
 
@@ -76,6 +76,7 @@ src_compile() {
 		CC=$(tc-getCC) ./build.sh ${toolset} $(use_with python) \
 			|| die "building bjam failed"
 	else
+		LDFLAGS=$(echo ${LDFLAGS}) # 293652
 		LIBS=${LDFLAGS} CC=$(tc-getCC) ./build.sh ${toolset} \
 			$(use_with python) || die "building bjam failed"
 	fi
