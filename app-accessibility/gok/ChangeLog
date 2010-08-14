@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.139 2010/08/01 11:25:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.140 2010/08/14 17:57:14 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> gok-2.28.1.ebuild:
+  alpha/ia64/sparc stable wrt #314899
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org> gok-2.30.0.ebuild:
   x86 stable, bug 324077
