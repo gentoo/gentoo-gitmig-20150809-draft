@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.1.1.ebuild,v 1.1 2010/04/16 11:37:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.2.0.ebuild,v 1.1 2010/08/14 17:33:32 ssuominen Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ inherit fdo-mime multilib python
 
 DESCRIPTION="a media player aiming to be similar to AmaroK, but for GTK+"
 HOMEPAGE="http://www.exaile.org/"
-SRC_URI="http://launchpad.net/exaile/0.3.1/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/0.3.2/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
@@ -20,21 +20,22 @@ IUSE="cddb libnotify nls"
 
 RDEPEND="dev-python/dbus-python
 	>=media-libs/mutagen-1.10
-	>=dev-python/pygtk-2.14
+	>=dev-python/pygtk-2.17
 	>=dev-python/pygobject-2.18
 	dev-python/gst-python:0.10
 	media-libs/gst-plugins-good:0.10
 	media-plugins/gst-plugins-meta:0.10
 	libnotify? ( dev-python/notify-python )
 	cddb? ( dev-python/cddb-py )"
-DEPEND="nls? ( dev-util/intltool
+DEPEND="sys-apps/help2man
+	nls? ( dev-util/intltool
 	sys-devel/gettext )"
 
-# Required python 'mox' module missing wrt #315589
-RESTRICT="test"
+RESTRICT="test" #315589
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -44,22 +45,22 @@ src_prepare() {
 }
 
 src_compile() {
-	if use nls; then
-		emake locale || die
-	fi
+	emake manpage $(use nls && echo locale) || die
 }
 
 src_install() {
-	local _no_locale
-	use nls || _no_locale=_no_locale
+	emake \
+		PREFIX=/usr \
+		LIBINSTALLDIR=/$(get_libdir) \
+		DESTDIR="${D}" \
+		install$(use nls || echo _no_locale) || die
 
-	emake PREFIX="/usr" LIBINSTALLDIR="/$(get_libdir)" DESTDIR="${D}" \
-		install${_no_locale} || die
+	dodoc FUTURE README || die
 
-	dodoc README
-
-	insinto /usr/share/exaile/data
-	doins -r data/migrations || die
+	if has_version "<media-sound/exaile-0.3"; then
+		insinto /usr/share/exaile/data
+		doins -r data/migrations || die
+	fi
 }
 
 pkg_postinst() {
