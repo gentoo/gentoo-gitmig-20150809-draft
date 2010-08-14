@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/ethemes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.18 2010/03/04 20:29:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.19 2010/08/14 01:18:50 vapier Exp $
+
+*ethemes-1.0.1 (14 Aug 2010)
+
+  14 Aug 2010; Mike Frysinger <vapier@gentoo.org> +ethemes-1.0.1.ebuild:
+  Version bump #330677.
 
   04 Mar 2010; Raúl Porcel <armin76@gentoo.org> ethemes-0.16.8.0.3.ebuild:
   ia64/sh/sparc stable
