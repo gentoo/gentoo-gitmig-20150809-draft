@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/snns
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.20 2010/06/04 16:03:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.21 2010/08/14 08:38:24 xarthisius Exp $
+
+  14 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/4.2-ldflags.patch, snns-4.2-r8.ebuild:
+  Respect LDFLAGS wrt bug 332475. Thanks to Diego for report.
 
   04 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   snns-4.2-r8.ebuild:

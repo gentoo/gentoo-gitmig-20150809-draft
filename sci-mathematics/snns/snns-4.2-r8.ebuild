@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.8 2010/06/04 16:03:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.9 2010/08/14 08:38:24 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -44,7 +44,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${WORKDIR}/${MYPATCH}.patch"
+	epatch "${WORKDIR}/${MYPATCH}.patch" \
+		"${FILESDIR}/${PV}-ldflags.patch"
 
 	if use python; then
 		epatch "${FILESDIR}/${PV}-fPIC-python.patch"
