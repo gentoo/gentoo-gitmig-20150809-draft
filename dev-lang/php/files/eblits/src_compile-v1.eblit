@@ -1,8 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_compile-v1.eblit,v 1.5 2010/08/08 20:32:22 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_compile-v1.eblit,v 1.6 2010/08/14 19:37:31 mabi Exp $
 
 eblit-php-src_compile() {
+	# snmp seems to run during src_compile, too (bug #324739)
+	addpredict /usr/share/snmp/mibs/.index
+
 	SAPI_DIR="${WORKDIR}/sapis"
 
 	for sapi in ${SAPIS} ; do
