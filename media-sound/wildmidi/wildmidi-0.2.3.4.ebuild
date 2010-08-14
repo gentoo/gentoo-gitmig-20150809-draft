@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4.ebuild,v 1.1 2010/08/14 19:12:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4.ebuild,v 1.2 2010/08/14 19:58:15 hwoarang Exp $
 
 EAPI=3
 
-inherit base flag-o-matic autotools
+inherit base autotools
 
 DESCRIPTION="Midi processing library and a midi player using the gus patch set"
 HOMEPAGE="http://wildmidi.sourceforge.net/"
@@ -26,7 +26,6 @@ src_prepare() {
 }
 
 src_configure() {
-	is-flagq -Werror || myconf="--disable-werror"
-	myconf="${myconf} $(use_enable debug) $(use_with oss)"
+	myconf="${myconf} $(use_enable debug) $(use_with oss) --disable-werror"
 	econf ${myconf}
 }
