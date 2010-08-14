@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/swfdec-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/ChangeLog,v 1.41 2010/08/01 12:07:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/ChangeLog,v 1.42 2010/08/14 17:44:19 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  swfdec-gnome-2.28.0-r1.ebuild:
+  alpha/ia64/sparc stable wrt #314899
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   swfdec-gnome-2.30.0.ebuild:
