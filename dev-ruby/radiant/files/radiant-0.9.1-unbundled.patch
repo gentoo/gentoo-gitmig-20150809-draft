@@ -18,3 +18,17 @@
  require 'rails_generator/scripts/generate'
  
  class Rails::Generator::Base
+--- lib/tasks/database.rake.~1~	2010-08-14 09:59:40.322355364 +0200
++++ lib/tasks/database.rake	2010-08-14 10:01:28.405760795 +0200
+@@ -28,4 +28,9 @@
+       :database_template => ENV['DATABASE_TEMPLATE']
+     )
+   end
+-end
+\ No newline at end of file
++
++  desc "Migrate schema to latest version"
++  task :migrate do
++    ActiveRecord::Migrator.migrate("#{RADIANT_ROOT}/db/migrate/")
++  end
++end
