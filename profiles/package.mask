@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11849 2010/08/14 05:41:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11850 2010/08/14 10:12:35 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -105,10 +105,6 @@ sys-apps/gluelog
 # Merged back into sys-libs/pam (without static build of sys-libs/db).
 # Removal on 2010-09-09
 sys-auth/pam_userdb
-
-# Alin Năstac <mrness@gentoo.org> (08 Aug 2010)
-# Not tested yet
-=net-dialup/ppp-2.4.5*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (06 Aug 2010)
 #  on behalf of QA team
