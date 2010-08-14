@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.727 2010/08/14 19:45:13 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.728 2010/08/14 21:16:43 mpagano Exp $
+
+  14 Aug 2010; Michael Pagano <mpagano@gentoo.org>
+  -gentoo-sources-2.6.35-r2.ebuild:
+  Removing as 2.6.35.2 has serious breakage.
+  https://bugzilla.kernel.org/show_bug.cgi?id=16588
 
 *gentoo-sources-2.6.35-r2 (14 Aug 2010)
 
