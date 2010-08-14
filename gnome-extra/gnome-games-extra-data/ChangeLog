@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games-extra-data
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.76 2010/08/03 05:34:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games-extra-data/ChangeLog,v 1.77 2010/08/14 16:21:40 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  gnome-games-extra-data-2.26.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #314899
 
   03 Aug 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-games-extra-data-2.30.0.ebuild:
