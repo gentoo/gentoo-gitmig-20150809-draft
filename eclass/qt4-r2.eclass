@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.7 2010/07/31 14:40:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.8 2010/08/14 18:00:38 hwoarang Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -249,9 +249,9 @@ eqmake4() {
 		-config ${CONFIG_ADD} \
 		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE="${EPREFIX}"/usr/bin/qmake \
-		QMAKE_CC=$(tc-getCC) \
-		QMAKE_CXX=$(tc-getCXX) \
-		QMAKE_LINK=$(tc-getCXX) \
+		QMAKE_CC="$(tc-getCC)" \
+		QMAKE_CXX="$(tc-getCXX)" \
+		QMAKE_LINK="$(tc-getCXX)" \
 		QMAKE_CFLAGS_RELEASE="${CFLAGS}" \
 		QMAKE_CFLAGS_DEBUG="${CFLAGS}" \
 		QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" \
