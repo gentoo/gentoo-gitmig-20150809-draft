@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4.ebuild,v 1.4 2010/08/14 20:56:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.4.ebuild,v 1.5 2010/08/14 21:01:45 ssuominen Exp $
 
 EAPI=3
 
@@ -28,7 +28,7 @@ src_configure() {
 	econf \
 		--disable-werror \
 		$(use_enable debug) \
-		$(use_with !alsa oss)
+		$(use alsa || echo --with-oss)
 }
 
 src_install() {
