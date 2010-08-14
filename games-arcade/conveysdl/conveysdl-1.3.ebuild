@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.6 2009/05/31 01:41:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.7 2010/08/14 05:50:18 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -30,6 +30,10 @@ src_prepare() {
 		-e 's:SDL_Mi:SDL_mi:' \
 		main.c \
 		|| die "sed failed"
+
+	epatch \
+		"${FILESDIR}"/${P}-arrays.patch \
+		"${FILESDIR}"/${P}-speed.patch
 }
 
 src_compile() {
