@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.2 2010/08/02 02:24:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.3 2010/08/14 03:02:11 sbriesen Exp $
 
 EAPI="3"
 
@@ -28,6 +28,7 @@ RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEP}"
 
 DEPEND=">=virtual/jdk-1.5
+	app-arch/xz-utils
 	virtual/libiconv
 	${COMMON_DEP}"
 
