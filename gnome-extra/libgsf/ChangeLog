@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.160 2010/07/20 04:35:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.161 2010/08/14 16:49:42 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> libgsf-1.14.18.ebuild:
+  alpha/ia64/sh/sparc stable wrt #314899
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libgsf-1.14.15.ebuild,
   libgsf-1.14.17.ebuild, libgsf-1.14.18.ebuild:
