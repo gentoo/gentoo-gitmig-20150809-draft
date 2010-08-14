@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.3a.ebuild,v 1.5 2010/04/06 14:41:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.3a.ebuild,v 1.6 2010/08/14 05:53:18 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -35,7 +35,7 @@ src_install() {
 	dodoc README.txt
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data audio || die "doins data failed"
+	doins -r audio data manual || die "doins data failed"
 
 	newicon data/32.png ${PN}.png
 	make_desktop_entry ${PN} "Light Years Into Space"
