@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.125 2010/08/12 09:24:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.126 2010/08/14 18:41:40 blueness Exp $
+
+*gradm-2.2.0.201008112235 (14 Aug 2010)
+
+  14 Aug 2010; Anthony G. Basile <blueness@gentoo.org>
+  +gradm-2.2.0.201008112235.ebuild, +files/gradm-2.2.0.201008112235.patch:
+  Version bump and fix bug #332471.
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org>
   gradm-2.1.14.201005041005.ebuild:
