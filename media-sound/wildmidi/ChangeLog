@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/wildmidi
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/ChangeLog,v 1.1 2010/08/14 19:12:04 hwoarang Exp $
+
+*wildmidi-0.2.3.4 (14 Aug 2010)
+
+  14 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +wildmidi-0.2.3.4.ebuild, +metadata.xml:
+  Initial commit. Required for mpd-0.15.12. Bug #331471
+
