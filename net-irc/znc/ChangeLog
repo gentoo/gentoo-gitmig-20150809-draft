@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.39 2010/07/19 18:15:14 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.40 2010/08/14 22:41:52 wired Exp $
+
+*znc-0.092-r1 (14 Aug 2010)
+
+  14 Aug 2010; Alex Alexander <wired@gentoo.org> +znc-0.092-r1.ebuild,
+  +files/znc-0.092-dos-fix.patch:
+  fixed security bug #332535
 
   19 Jul 2010; Alex Alexander <wired@gentoo.org> -znc-0.080.ebuild,
   -znc-0.090.ebuild, metadata.xml:
