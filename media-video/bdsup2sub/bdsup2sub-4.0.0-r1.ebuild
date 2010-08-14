@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bdsup2sub/bdsup2sub-4.0.0-r1.ebuild,v 1.1 2010/08/01 00:45:48 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bdsup2sub/bdsup2sub-4.0.0-r1.ebuild,v 1.2 2010/08/14 02:57:57 sbriesen Exp $
 
 EAPI="3"
 
@@ -21,7 +21,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.6"
-DEPEND=">=virtual/jdk-1.6"
+DEPEND=">=virtual/jdk-1.6
+	app-arch/xz-utils"
 
 S="${WORKDIR}/${PN}/${PV}"
 
