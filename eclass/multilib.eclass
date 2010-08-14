@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.78 2010/05/20 08:22:15 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.79 2010/08/14 21:31:29 truedfx Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -701,7 +701,7 @@ multilib_toolchain_setup() {
 	elif [[ ${DEFAULT_ABI_SAVED} == "true" ]] ; then
 		for v in CHOST CBUILD AS CC CXX LD ; do
 			vv="__abi_saved_${v}"
-			export ${v}=${!vv}
+			export ${v}="${!vv}"
 		done
 	fi
 }
