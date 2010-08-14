@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.114 2010/07/07 15:58:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.115 2010/08/14 10:46:42 truedfx Exp $
+
+  14 Aug 2010; Harald van Dĳk <truedfx@gentoo.org>
+  johntheripper-1.7.4.2.ebuild:
+  Fix quoting
 
   07 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   johntheripper-1.7.3.4.ebuild:

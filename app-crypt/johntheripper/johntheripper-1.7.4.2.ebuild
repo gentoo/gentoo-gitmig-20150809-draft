@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.4.2.ebuild,v 1.2 2010/07/07 15:56:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.4.2.ebuild,v 1.3 2010/08/14 10:46:42 truedfx Exp $
 
 EAPI="2"
 
@@ -95,7 +95,7 @@ src_compile() {
 	CPP=$(tc-getCXX) CC=$(tc-getCC) AS=$(tc-getCC) LD=$(tc-getCC)
 #	use mpi && CPP=mpicxx CC=mpicc AS=mpicc LD=mpicc
 	emake -C src/\
-		CPP=${CPP} CC=${CC} AS=${AS} LD=${LD} \
+		CPP="${CPP}" CC="${CC}" AS="${AS}" LD="${LD}" \
 		CFLAGS="-c -Wall ${CFLAGS} -DJOHN_SYSTEMWIDE -DJOHN_SYSTEMWIDE_HOME=\"\\\"/etc/john\\\"\" -DJOHN_SYSTEMWIDE_EXEC=\"\\\"/usr/libexec/john\\\"\"" \
 		LDFLAGS="${LDFLAGS}" \
 		OPT_NORMAL="" \
