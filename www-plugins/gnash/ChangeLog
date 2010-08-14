@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.38 2010/08/13 22:40:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.39 2010/08/14 18:06:21 chithanh Exp $
+
+  14 Aug 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.7_p20100812.ebuild:
+  Attempt to fix generation of hwaccel configure option, bug #332755
 
   13 Aug 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -gnash-0.8.7_p20100706.ebuild, files/gnash-0.8.8-klash.patch:

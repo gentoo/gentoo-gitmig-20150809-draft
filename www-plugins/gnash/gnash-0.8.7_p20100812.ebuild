@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100812.ebuild,v 1.1 2010/08/13 19:02:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100812.ebuild,v 1.2 2010/08/14 18:06:21 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -158,7 +158,7 @@ src_configure() {
 	use nsplugin && myconf="${myconf} --with-npapi-plugindir=/usr/$(get_libdir)/gnash/npapi/"
 
 	# Set hardware acceleration, "none" is always required or else vaapi and xv become automagic
-	hwaccel="none"
+	hwaccel=",none"
 	use xv && hwaccel+=",xv"
 	use vaapi && hwaccel+=",vaapi"
 
