@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.122 2010/08/11 16:14:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.123 2010/08/14 18:59:35 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> gnome-light-2.28.2.ebuild:
+  alpha/ia64/sparc stable wrt #314899
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> gnome-light-2.28.2.ebuild,
   gnome-light-2.30.2.ebuild:
