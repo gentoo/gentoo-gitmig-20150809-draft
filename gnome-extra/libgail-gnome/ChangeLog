@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.111 2010/08/01 11:24:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.112 2010/08/14 18:47:29 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  libgail-gnome-1.20.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #314899
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   libgail-gnome-1.20.3.ebuild:
