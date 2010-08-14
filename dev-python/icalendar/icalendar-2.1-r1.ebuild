@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.1-r1.ebuild,v 1.4 2010/04/25 17:58:12 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.1-r1.ebuild,v 1.5 2010/08/14 20:56:37 nixphoeni Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,8 +23,8 @@ RESTRICT_PYTHON_ABIS="3.*"
 DOCS="CHANGES.txt CREDITS.txt doc/* HISTORY.txt README.txt TODO.txt"
 
 src_prepare() {
-	epatch "${FILESDIR}/01_all_UIDGenerator-fix.patch"
-	epatch "${FILESDIR}/02_all_vDatetime-tzinfo-fix.patch"
+	epatch "${FILESDIR}/2.1_p20100409/01_all_UIDGenerator-fix.patch"
+	epatch "${FILESDIR}/2.1_p20100409/02_all_vDatetime-tzinfo-fix.patch"
 }
 
 src_test() {

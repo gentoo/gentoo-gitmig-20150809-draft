@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.9 2010/08/04 11:49:33 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.10 2010/08/14 20:56:37 nixphoeni Exp $
+
+  14 Aug 2010; Joe Sapp <nixphoeni@gentoo.org> icalendar-2.0.1.ebuild,
+  icalendar-2.1-r1.ebuild:
+  Fixed patch locations for old ebuilds (bug #332665)
 
   04 Aug 2010; Joe Sapp <nixphoeni@gentoo.org>
   -files/01_all_UIDGenerator-fix.patch,
