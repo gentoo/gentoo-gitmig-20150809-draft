@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.77 2010/01/07 15:52:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.78 2010/08/14 05:41:57 vapier Exp $
+
+*iputils-20100418 (14 Aug 2010)
+
+  14 Aug 2010; Mike Frysinger <vapier@gentoo.org> +iputils-20100418.ebuild,
+  +files/iputils-20100418-aliasing.patch,
+  +files/iputils-20100418-makefile.patch,
+  +files/iputils-20100418-ping-CVE-2010-2529.patch,
+  +files/iputils-20100418-printf-size.patch:
+  Version bump #306101 by Andrew Brouwers. Add fix for ping CVE-2010-2529
+  #332527 by Tim Sammut.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   iputils-20071127-r2.ebuild:
