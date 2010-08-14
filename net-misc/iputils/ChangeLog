@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.78 2010/08/14 05:41:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.79 2010/08/14 13:56:28 flameeyes Exp $
+
+  14 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  iputils-20100418.ebuild:
+  Add missing dependency over sysfsutils (bug #332703, reported by Ryan
+  Hill, diagnosed by Lars Wendler).
 
 *iputils-20100418 (14 Aug 2010)
 

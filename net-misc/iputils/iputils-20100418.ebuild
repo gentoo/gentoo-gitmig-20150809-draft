@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418.ebuild,v 1.1 2010/08/14 05:41:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418.ebuild,v 1.2 2010/08/14 13:56:28 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -14,8 +14,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-linux ~x86-linux"
 IUSE="doc idn ipv6 SECURITY_HAZARD static"
 
+# sysfsutils is needed for libsysfs which is used by arping only
 RDEPEND="!net-misc/rarpd
-	idn? ( net-dns/libidn )"
+	idn? ( net-dns/libidn )
+	sys-fs/sysfsutils"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
