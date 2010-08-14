@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.330 2010/08/03 17:19:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.331 2010/08/14 19:18:30 blueness Exp $
+
+*hardened-sources-2.6.32-r13 (14 Aug 2010)
+
+  14 Aug 2010; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-2.6.32-r13.ebuild:
+  Based on vanilla 2.6.32.18 + genpatches +
+  grsecurity-2.2.0-2.6.32.18-201008112233
 
   03 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   kernel-2 deblob support for 2.6.35; bug #324505: deblob-check usage.
