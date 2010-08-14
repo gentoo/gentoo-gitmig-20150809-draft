@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.259 2010/08/14 22:39:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.260 2010/08/14 23:10:25 phajdan.jr Exp $
+
+  14 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  freetype-2.4.2.ebuild:
+  x86 stable wrt security bug #332701
 
   14 Aug 2010; Markos Chandras <hwoarang@gentoo.org> freetype-2.4.2.ebuild:
   Stable on amd64 wrt bug #332701
