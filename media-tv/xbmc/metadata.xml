@@ -7,6 +7,7 @@
  <flag name="rtmp">Enable Real Time Messaging Protocol using librtmp</flag>
  <flag name='vaapi'>Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
  <flag name='vdpau'>enable support for Video Decode and Presentation API for Unix</flag>
+ <flag name='webserver'>Enable internal webserver</flag>
  <flag name='xrandr'>Support X randr extension</flag>
 </use>
 </pkgmetadata>

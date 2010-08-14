@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.63 2010/08/12 05:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.64 2010/08/14 17:56:24 vapier Exp $
+
+  14 Aug 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
+  metadata.xml:
+  Add support for USE=webserver #305229 by Jan Vansteenkiste.
 
   12 Aug 2010; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   metadata.xml:

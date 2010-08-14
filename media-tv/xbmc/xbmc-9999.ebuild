@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.60 2010/08/12 05:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.61 2010/08/14 17:56:24 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="aac alsa altivec avahi css debug hal joystick midi profile pulseaudio rtmp sse sse2 vaapi vdpau xrandr"
+IUSE="aac alsa altivec avahi css debug hal joystick midi profile pulseaudio rtmp sse sse2 vaapi vdpau webserver xrandr"
 
 RDEPEND="virtual/opengl
 	app-arch/bzip2
@@ -74,6 +74,7 @@ RDEPEND="virtual/opengl
 	media-video/ffmpeg
 	rtmp? ( media-video/rtmpdump )
 	avahi? ( net-dns/avahi )
+	webserver? ( net-libs/libmicrohttpd )
 	net-misc/curl
 	|| ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.3 )
 	sys-apps/dbus
@@ -167,7 +168,6 @@ src_configure() {
 		--enable-external-libraries \
 		--enable-goom \
 		--enable-gl \
-		--disable-webserver \
 		$(use_enable avahi) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \
@@ -180,6 +180,7 @@ src_configure() {
 		$(use_enable rtmp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
+		$(use_enable webserver) \
 		$(use_enable xrandr)
 }
 
