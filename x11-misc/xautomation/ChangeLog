@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xautomation
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.25 2009/03/21 21:58:43 nelchael Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautomation/ChangeLog,v 1.26 2010/08/14 10:34:53 xarthisius Exp $
+
+*xautomation-1.03 (14 Aug 2010)
+
+  14 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +xautomation-1.03.ebuild:
+  Version bump. Fixes bug 331485. Thanks to Jakub Klawiter
+  <jklawiter@gmail.com> for report.
 
   21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   -xautomation-0.96.ebuild:
