@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.69 2010/08/10 08:42:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.70 2010/08/14 04:51:19 vapier Exp $
+
+*crossdev-20100814 (14 Aug 2010)
+
+  14 Aug 2010; Mike Frysinger <vapier@gentoo.org> +crossdev-20100814.ebuild:
+  Fix setting of CBUILD in emerge wrapper #331589 by Juan P Daza P.
 
 *crossdev-20100810 (10 Aug 2010)
 
