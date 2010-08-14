@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.3.ebuild,v 1.4 2010/08/11 18:09:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.0.3.ebuild,v 1.5 2010/08/14 21:38:41 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -36,13 +36,14 @@ DEPEND="
 PDEPEND="
 	!dedicated? (
 		openmedia? (
-			games-misc/opengfx
-			games-misc/opensfx
 			games-misc/openmsx
+			games-misc/opensfx
 		)
 		aplaymidi? ( media-sound/alsa-utils )
 		!aplaymidi? ( timidity? ( media-sound/timidity++ ) )
-	)"
+	)
+	openmedia? ( games-misc/opengfx )
+	"
 
 src_configure() {
 	# there is an allegro interface available as well as sdl, but
