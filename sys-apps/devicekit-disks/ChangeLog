@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/devicekit-disks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/ChangeLog,v 1.8 2010/07/06 12:59:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/ChangeLog,v 1.9 2010/08/14 17:12:47 armin76 Exp $
+
+  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> devicekit-disks-009.ebuild:
+  alpha/ia64/sh/sparc stable
 
   06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   devicekit-disks-009.ebuild:
