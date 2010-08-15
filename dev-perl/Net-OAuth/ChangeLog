@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-OAuth
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-OAuth/ChangeLog,v 1.7 2010/06/22 06:31:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-OAuth/ChangeLog,v 1.8 2010/08/15 18:52:14 tove Exp $
+
+  15 Aug 2010; Torsten Veller <tove@gentoo.org> -Net-OAuth-0.25.ebuild:
+  Cleanup
 
 *Net-OAuth-0.27 (22 Jun 2010)
 
