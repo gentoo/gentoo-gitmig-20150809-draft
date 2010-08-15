@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/amap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.44 2009/08/25 23:59:07 jer Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.45 2010/08/15 23:44:20 jer Exp $
+
+*amap-5.2-r2 (15 Aug 2010)
+
+  15 Aug 2010; Jeroen Roovers <jer@gentoo.org> +amap-5.2-r2.ebuild:
+  Respect LDFLAGS (bug #332831). Do not hardwire CC in Makefile.
 
   25 Aug 2009; Jeroen Roovers <jer@gentoo.org> -amap-4.8-r1.ebuild,
   -files/amap-4.8-fix-icky-lvalue-casts.diff, -files/amap-4.8-gcc4.patch,
