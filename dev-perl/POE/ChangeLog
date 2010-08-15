@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.111 2010/08/04 09:08:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/ChangeLog,v 1.112 2010/08/15 19:03:32 tove Exp $
+
+  15 Aug 2010; Torsten Veller <tove@gentoo.org> -POE-1.003-r1.ebuild,
+  -POE-1.287.ebuild, -POE-1.291.ebuild:
+  Cleanup
 
 *POE-1.292 (04 Aug 2010)
 
