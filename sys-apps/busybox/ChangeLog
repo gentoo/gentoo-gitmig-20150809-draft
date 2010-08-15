@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.249 2010/08/14 16:12:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.250 2010/08/15 03:21:49 vapier Exp $
+
+  15 Aug 2010; Mike Frysinger <vapier@gentoo.org> busybox-1.15.3.ebuild:
+  Add -fno-strict-aliasing to stable version #310413 by Doktor Notor.
 
   14 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> busybox-1.16.0.ebuild:
   Compile using CC instead of hardcoded CHOST-gcc

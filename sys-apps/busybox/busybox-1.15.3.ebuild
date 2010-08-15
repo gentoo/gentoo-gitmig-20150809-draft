@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.15.3.ebuild,v 1.9 2010/03/31 18:10:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.15.3.ebuild,v 1.10 2010/08/15 03:21:49 vapier Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -80,6 +80,7 @@ busybox_config_option() {
 
 src_unpack() {
 	unset KBUILD_OUTPUT #88088
+	append-flags -fno-strict-aliasing #310413
 
 	unpack ${MY_P}.tar.bz2
 	cd "${S}"
