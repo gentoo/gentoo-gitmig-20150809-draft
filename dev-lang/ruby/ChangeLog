@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.460 2010/08/13 15:00:43 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.461 2010/08/15 11:54:27 flameeyes Exp $
+
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-1.9.2_rc2.ebuild:
+  Remove libedit USE flag from 1.9.2 because of upstream bug #3698.
 
   13 Aug 2010; Alex Legler <a3li@gentoo.org> ruby-1.8.6_p388-r1.ebuild,
   ruby-1.8.7_p299.ebuild:
