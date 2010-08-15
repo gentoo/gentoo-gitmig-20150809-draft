@@ -1,6 +1,14 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.250 2010/08/10 21:03:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.251 2010/08/15 21:06:10 reavertm Exp $
+
+*poppler-0.14.2 (13 Aug 2010)
+
+  13 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  +poppler-0.14.2.ebuild:
+  Version bump, do not use preserve_old_lib - as one cannot possibly tell what
+  version we're upgrading from which will cause invalid suggestions to run
+  revdep-rebuild and upstream is bumpimg soversion often. Restore ewarn instead.
 
   10 Aug 2010; Markos Chandras <hwoarang@gentoo.org> poppler-0.14.1.ebuild:
   Stable on amd64 wrt bug #331969
