@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fakeweb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.7 2010/07/29 01:54:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakeweb/ChangeLog,v 1.8 2010/08/15 22:30:44 flameeyes Exp $
+
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  fakeweb-1.2.8.ebuild:
+  Block test-unit:2 for testing.
 
   29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   fakeweb-1.2.8.ebuild:

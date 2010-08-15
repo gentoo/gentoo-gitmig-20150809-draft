@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_activerecord/gettext_activerecord-2.1.0-r1.ebuild,v 1.1 2010/05/23 08:06:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_activerecord/gettext_activerecord-2.1.0-r1.ebuild,v 1.2 2010/08/15 22:27:55 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -20,6 +20,8 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/ruby-gettext-2.1.0
 	>=dev-ruby/activerecord-2.3.2"
+
+ruby_add_bdepend "test? ( virtual/ruby-test-unit !dev-ruby/test-unit:2 )"
 
 all_ruby_prepare() {
 	strip-linguas -u po

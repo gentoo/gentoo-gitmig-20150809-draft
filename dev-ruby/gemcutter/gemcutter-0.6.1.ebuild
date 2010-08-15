@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/gemcutter-0.6.1.ebuild,v 1.1 2010/07/20 08:57:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/gemcutter-0.6.1.ebuild,v 1.2 2010/08/15 22:28:53 flameeyes Exp $
 
 EAPI=2
 
@@ -21,4 +21,12 @@ IUSE=""
 
 ruby_add_rdepend dev-ruby/json
 
-ruby_add_bdepend test "dev-ruby/shoulda dev-ruby/webmock dev-ruby/rr dev-ruby/activesupport"
+ruby_add_bdepend "
+	test? (
+		dev-ruby/shoulda
+		dev-ruby/webmock
+		dev-ruby/rr
+		dev-ruby/activesupport
+		virtual/ruby-test-unit
+		!dev-ruby/test-unit:2
+	)"
