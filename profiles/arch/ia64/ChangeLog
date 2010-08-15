@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.84 2010/07/25 19:07:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.85 2010/08/15 14:33:45 armin76 Exp $
+
+  15 Aug 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Cleanup
 
   25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Fix atom for pkgmove from www-client/mozilla-firefox -> www-client/firefox
