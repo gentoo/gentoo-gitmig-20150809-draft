@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.14-r1.ebuild,v 1.1 2010/03/31 11:51:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.14-r1.ebuild,v 1.2 2010/08/15 17:39:44 vapier Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -14,26 +16,21 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="examples"
 
 # remember: cannot dep on autoconf since it needs us
-DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )"
+DEPEND="app-arch/xz-utils"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.4.14-gnulib_spawn.patch # 310335
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gnulib_spawn.patch #310335
+	epatch "${FILESDIR}"/${P}-glibc-2.12.patch #332839
 }
 
-src_compile() {
+src_configure() {
 	# Disable automagic dependency over libsigsegv; see bug #278026
 	export ac_cv_libsigsegv=no
 
 	local myconf=""
 	[[ ${USERLAND} != "GNU" ]] && myconf="--program-prefix=g"
-	econf \
-		--enable-changeword \
-		${myconf} \
-		|| die
-	emake || die
+	econf --enable-changeword ${myconf}
 }
 
 src_test() {
