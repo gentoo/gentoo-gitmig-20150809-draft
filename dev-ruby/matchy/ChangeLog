@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/matchy
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.5 2010/05/28 15:26:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/ChangeLog,v 1.6 2010/08/15 18:05:43 flameeyes Exp $
+
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> matchy-0.5.2.ebuild:
+  Add a workaround for Ruby 1.9.2 (sent upstream a proper fix).
 
   28 May 2010; Joseph Jezak <josejx@gentoo.org> matchy-0.5.2.ebuild:
   Marked ~ppc for bug #302560.
