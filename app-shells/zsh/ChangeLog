@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.148 2010/05/02 18:41:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.149 2010/08/15 12:21:56 tove Exp $
+
+*zsh-4.3.10-r2 (15 Aug 2010)
+
+  15 Aug 2010; Torsten Veller <tove@gentoo.org> +files/zprofile-1,
+  +zsh-4.3.10-r2.ebuild:
+  Add prefix support (#320717), bump zsh-lovers examples, add support for
+  ncurses[static-libs] (#332801), fix paths in miscellaneous scripts
+  (#320717)
 
 *zsh-4.3.10-r1 (02 May 2010)
 
