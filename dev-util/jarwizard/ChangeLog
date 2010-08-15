@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jarwizard
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/ChangeLog,v 1.10 2009/12/15 19:06:11 betelgeuse Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/ChangeLog,v 1.11 2010/08/15 11:26:11 armin76 Exp $
+
+  15 Aug 2010; Raúl Porcel <armin76@gentoo.org> jarwizard-2.50.ebuild:
+  Drop alpha
 
   15 Dec 2009; Petteri Räty <betelgeuse@gentoo.org> jarwizard-2.50.ebuild:
   Fix HOMEPAGE to sourceforge as geocities is gone. Bug #297028.
