@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.3.ebuild,v 1.1 2010/08/06 20:08:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.3-r1.ebuild,v 1.1 2010/08/15 19:56:17 grobian Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ RESTRICT="test" # the test suite will test what's installed.
 LD64=ld64-97.14
 CCTOOLS=cctools-782
 # http://lists.apple.com/archives/Darwin-dev/2009/Sep/msg00025.html
-UNWIND=binutils-apple-3.2-unwind-patches-4
+UNWIND=binutils-apple-3.2-unwind-patches-5
 
 DESCRIPTION="Darwin assembler as(1) and static linker ld(1), Xcode Tools 3.2.3"
 HOMEPAGE="http://www.opensource.apple.com/darwinsource/"
