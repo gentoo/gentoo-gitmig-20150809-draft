@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.707 2010/08/13 17:12:34 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.708 2010/08/15 03:12:27 vapier Exp $
+
+  15 Aug 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.12.1.ebuild:
+  Move into unstable.
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> glibc-2.11.2.ebuild:
   Marked ppc stable for bug #318503.
