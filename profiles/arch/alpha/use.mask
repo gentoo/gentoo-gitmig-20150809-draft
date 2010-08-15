@@ -1,6 +1,6 @@
 # Copyright 2004-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.40 2010/08/15 13:56:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.41 2010/08/15 13:59:06 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -67,6 +67,7 @@ mono
 ocamlopt
 
 # Stuff we don't want
+afs
 schroedinger
 ots
 
@@ -148,10 +149,6 @@ audit
 
 # This works
 -x264
-
-# too complicated/invovled to test and too small user base
-# Tobias Klausmann <klausman@gentoo.org>
-afs
 
 # uses gnat/ada which is too big to support currently
 topal
