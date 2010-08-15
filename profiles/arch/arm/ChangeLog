@@ -1,9 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.90 2010/08/15 11:04:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.91 2010/08/15 11:06:03 armin76 Exp $
 
   15 Aug 2010; Raúl Porcel <armin76@gentoo.org> package.use.mask:
-  Unmask virtuoso use-flag from dev-libs/soprano
+  Unmask virtuoso use-flag from dev-libs/soprano, unmask bluetooth
+  from ofono
 
   09 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> use.mask:
   Mask cblas-external
