@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.39 2010/08/14 18:06:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.40 2010/08/15 10:18:38 chithanh Exp $
+
+  15 Aug 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.7_p20100812.ebuild:
+  Further tweak acceleration settings, bug #332755.
 
   14 Aug 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.7_p20100812.ebuild:
