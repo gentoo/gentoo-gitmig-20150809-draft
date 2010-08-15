@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.2-r1.ebuild,v 1.4 2010/05/22 15:30:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.2-r1.ebuild,v 1.5 2010/08/15 22:22:04 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -20,5 +20,10 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/net-ssh-2.0.17-r1"
 
-ruby_add_bdepend "test? ( dev-ruby/echoe )
-	doc? ( dev-ruby/echoe )"
+ruby_add_bdepend "
+	doc? ( dev-ruby/echoe )
+	test? (
+		dev-ruby/echoe
+		virtual/ruby-test-unit
+		!dev-ruby/test-unit:2
+	)"

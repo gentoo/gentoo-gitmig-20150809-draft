@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.15 2010/05/22 15:30:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.16 2010/08/15 22:22:04 flameeyes Exp $
+
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  net-scp-1.0.2-r1.ebuild:
+  Block test-unit:2 for testing.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   net-scp-1.0.2-r1.ebuild:

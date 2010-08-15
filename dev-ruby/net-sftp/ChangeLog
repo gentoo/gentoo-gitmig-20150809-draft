@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-sftp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.40 2010/05/22 13:40:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-sftp/ChangeLog,v 1.41 2010/08/15 22:21:04 flameeyes Exp $
+
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  net-sftp-2.0.4-r1.ebuild:
+  Block test-unit:2 for testing.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -net-sftp-2.0.4.ebuild, net-sftp-2.0.4-r1.ebuild:
