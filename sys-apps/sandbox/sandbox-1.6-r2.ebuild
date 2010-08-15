@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.6-r2.ebuild,v 1.14 2009/09/08 17:49:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.6-r2.ebuild,v 1.15 2010/08/15 05:22:23 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )
+DEPEND="app-arch/xz-utils
 	>=app-misc/pax-utils-0.1.19" #265376
 RDEPEND=""
 
@@ -33,6 +33,10 @@ sandbox_death_notice() {
 
 src_unpack() {
 	unpack ${A}
+	if [[ ! -d ${S} ]] ; then
+		# When upgrading from older version, lzma unpack may not work #271543
+		lzma -dc "${DISTDIR}/${A}" | tar xf - || die
+	fi
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-disable-qa-static.patch
 	epatch "${FILESDIR}"/${P}-disable-pthread.patch
