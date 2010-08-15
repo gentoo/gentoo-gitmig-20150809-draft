@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.153 2010/08/09 17:34:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.154 2010/08/15 11:15:27 armin76 Exp $
+
+  15 Aug 2010; Raúl Porcel <armin76@gentoo.org> kompare-4.4.5.ebuild:
+  Add ~arm
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> kompare-4.4.5.ebuild:
   Drop alpha ia64 and sparc per the AT Lead permission.
