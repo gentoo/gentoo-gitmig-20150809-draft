@@ -1,0 +1,38 @@
+--- Makefile	2010-08-15 01:18:10.000000000 -0400
++++ Makefile.ne	2010-08-15 01:18:22.000000000 -0400
+@@ -46,7 +46,8 @@
+ OFLAGS = ${OPT_FLAGS} -fno-inline-functions
+ SFLAGS	= -fPIC
+ TFLAGS	= -DMP_THREADS_SUPPORT
+-LDFLAGS	= -shared
++LDFLAGS	= -shared $(LDOPTS)
++LDOPTS =
+ 
+ MPATROL	 = mpatrol
+ MPALLOC	 = mpalloc
+@@ -192,20 +193,20 @@
+ 	-@ rm -f machine.s 2>&1 >/dev/null
+ 
+ mpatrol: mpatrol.o getopt.o version.o
+-	$(CC) $(CFLAGS) $(OFLAGS) -o $@ mpatrol.o getopt.o version.o
++	$(CC) $(LDOPTS) $(OFLAGS) -o $@ mpatrol.o getopt.o version.o
+ 
+ mprof: mprof.o graph.o getopt.o list.o tree.o version.o
+-	$(CC) $(CFLAGS) $(OFLAGS) -o $@ mprof.o graph.o getopt.o list.o tree.o version.o
++	$(CC) $(LDOPTS) $(OFLAGS) -o $@ mprof.o graph.o getopt.o list.o tree.o version.o
+ 
+ mptrace: mptrace.o getopt.o tree.o slots.o utils.o version.o
+ ifeq ($(GUISUP),true)
+-	$(CC) $(CFLAGS) $(OFLAGS) -o $@ mptrace.o getopt.o tree.o slots.o utils.o version.o -L/usr/X11R6/lib -L/usr/X11R5/lib -L/usr/X11/lib -L/usr/X/lib -lXm -lXt -lXp -lXext -lX11
++	$(CC) $(LDOPTS) $(OFLAGS) -o $@ mptrace.o getopt.o tree.o slots.o utils.o version.o -L/usr/X11R6/lib -L/usr/X11R5/lib -L/usr/X11/lib -L/usr/X/lib -lXm -lXt -lXp -lXext -lX11
+ else
+-	$(CC) $(CFLAGS) $(OFLAGS) -o $@ mptrace.o getopt.o tree.o slots.o utils.o version.o
++	$(CC) $(LDOPTS) $(OFLAGS) -o $@ mptrace.o getopt.o tree.o slots.o utils.o version.o
+ endif
+ 
+ mleak: mleak.o getopt.o tree.o version.o
+-	$(CC) $(CFLAGS) $(OFLAGS) -o $@ mleak.o getopt.o tree.o version.o
++	$(CC) $(LDOPTS) $(OFLAGS) -o $@ mleak.o getopt.o tree.o version.o
+ 
+ all: $(ARCHIVE_MPATROL) $(SHARED_MPATROL) $(ARCHTS_MPATROL) $(SHARTS_MPATROL) \
+ 	$(ARCHIVE_MPALLOC) $(SHARED_MPALLOC) $(ARCHIVE_MPTOOLS) \

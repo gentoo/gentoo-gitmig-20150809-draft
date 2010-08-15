@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/mpatrol
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.21 2009/09/23 17:25:21 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/ChangeLog,v 1.22 2010/08/15 19:52:09 hwoarang Exp $
+
+*mpatrol-1.4.8-r3 (15 Aug 2010)
+
+  15 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +mpatrol-1.4.8-r3.ebuild, +files/mpatrol-ldflags.diff:
+  Apply patch from Dane Smith <smithdanea@gmail.com> to respect LDFLAGS and
+  fix multiple QA issues. Keyworded for amd64. Bug #332731
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mpatrol-1.4.8-r1.ebuild,
   mpatrol-1.4.8-r2.ebuild:
