@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/couchdb-python
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.12 2010/08/13 13:04:34 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.13 2010/08/15 10:47:40 djc Exp $
+
+  15 Aug 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +couchdb-python-0.6.1.ebuild:
+  Resurrect 0.6.1 for desktopcouch (bug 332645).
 
 *couchdb-python-0.8 (13 Aug 2010)
 
