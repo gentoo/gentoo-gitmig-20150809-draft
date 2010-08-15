@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/xnap
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xnap/ChangeLog,v 1.8 2007/01/23 16:15:24 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xnap/ChangeLog,v 1.9 2010/08/15 11:25:15 armin76 Exp $
+
+  15 Aug 2010; Raúl Porcel <armin76@gentoo.org> xnap-2.5-r3.ebuild:
+  Drop alpha
 
   23 Jan 2007; Raúl Porcel <armin76@gentoo.org> -xnap-2.5-r2.ebuild:
   Drop old
