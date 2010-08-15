@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.28 2010/03/22 18:55:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.29 2010/08/15 21:03:02 ssuominen Exp $
+
+  15 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> glest-3.2.2.ebuild,
+  +files/glest-3.2.2-glibc212.patch:
+  Missing explicit sys/stat.h include for recent glibc wrt #331667 by Diego
+  E. Pettenò.
 
   22 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> glest-3.2.2.ebuild:
   clean up install and install tutorial (bug #285680)
