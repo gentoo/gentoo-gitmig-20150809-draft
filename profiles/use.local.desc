@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5862 2010/08/14 18:40:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5863 2010/08/15 20:52:26 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2392,6 +2392,7 @@ net-dialup/ppp:mppe-mppc - Enables support for MPPC (Microsoft Point-to-Point Co
 net-dialup/ppp:pam - Enables PAM (Pluggable Authentication Modules) support
 net-dialup/ppp:radius - Enables RADIUS support
 net-dialup/pptpd:gre-extreme-debug - Log all GRE accepted packages when in debug mode (required if you want upstream support)
+net-dialup/xl2tpd:dnsretry - Patch for host lookup retries, activated by redial feature
 net-dns/avahi:autoipd - Build and install the IPv4LL (RFC3927) network address configuration daemon
 net-dns/avahi:bookmarks - Install the avahi-bookmarks application (requires dev-python/twisted)
 net-dns/avahi:howl-compat - Enable compat libraries for howl
