@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/parsec
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.14 2010/07/01 19:58:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.15 2010/08/15 21:08:15 slyfox Exp $
+
+  15 Aug 2010; Sergei Trofimovich <slyfox@gentoo.org> parsec-2.1.0.1.ebuild:
+  Marked ~x86-fbsd (fixes dev-haskell/network depends, bug #206283)
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> parsec-2.1.0.0.ebuild,
   parsec-2.1.0.1.ebuild:
