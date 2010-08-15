@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.192 2010/05/09 14:17:33 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.193 2010/08/15 05:33:18 vapier Exp $
+
+  15 Aug 2010; Mike Frysinger <vapier@gentoo.org> findutils-4.4.2.ebuild:
+  Mark ppc64 stable #314035.
 
   09 May 2010; Chris PeBenito <pebenito@gentoo.org> findutils-4.4.2.ebuild,
   +files/findutils-4.4.2-selinux.diff:
