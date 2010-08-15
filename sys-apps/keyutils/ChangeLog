@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/keyutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.20 2010/08/12 01:25:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.21 2010/08/15 20:43:21 truedfx Exp $
+
+  15 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> keyutils-1.4.ebuild:
+  Fix quoting
 
   12 Aug 2010; Joseph Jezak <josejx@gentoo.org> keyutils-1.2-r2.ebuild:
   Marked ppc/ppc64 stable for bug #300158.
