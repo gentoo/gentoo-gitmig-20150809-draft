@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.250 2010/08/15 03:21:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.251 2010/08/15 03:22:41 vapier Exp $
+
+*busybox-1.17.1 (15 Aug 2010)
+
+  15 Aug 2010; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.17.0-bb.patch, +busybox-1.17.1.ebuild,
+  +files/busybox-1.17.1-mktemp.patch, +files/busybox-1.17.1-sed.patch,
+  +files/busybox-1.17.1-shell.patch:
+  Version bump #327157 by Paolo Pedroni.
 
   15 Aug 2010; Mike Frysinger <vapier@gentoo.org> busybox-1.15.3.ebuild:
   Add -fno-strict-aliasing to stable version #310413 by Doktor Notor.
