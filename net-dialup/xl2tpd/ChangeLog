@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/xl2tpd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.19 2009/07/16 06:19:19 mrness Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.20 2010/08/15 20:33:23 mrness Exp $
+
+*xl2tpd-1.2.6 (15 Aug 2010)
+
+  15 Aug 2010; Alin Năstac <mrness@gentoo.org> -xl2tpd-1.1.12-r1.ebuild,
+  xl2tpd-1.2.4.ebuild, +xl2tpd-1.2.6.ebuild,
+  +files/xl2tpd-1.2.6-as-needed.patch, +files/xl2tpd-1.2.6-qa-fixes.patch,
+  +files/xl2tpd-dnsretry.patch, metadata.xml:
+  Mark version 1.2.4 as stable on amd64 and x86. Add dnsretry USE flag and
+  patch (#307489). Version bump.
 
 *xl2tpd-1.2.4 (16 Jul 2009)
 

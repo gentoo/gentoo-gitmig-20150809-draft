@@ -1,0 +1,25 @@
+diff -Nru xl2tpd-1.2.6.orig/call.c xl2tpd-1.2.6/call.c
+--- xl2tpd-1.2.6.orig/call.c	2010-05-10 22:35:43.000000000 +0200
++++ xl2tpd-1.2.6/call.c	2010-08-15 22:22:10.000000000 +0200
+@@ -682,15 +682,19 @@
+          */
+         if (gconfig.debug_tunnel)
+         {
++            struct in_addr inaddr;
++            inaddr.s_addr = addr;
+             l2tp_log (LOG_DEBUG,
+                  "%s: allocating new tunnel for host %s, port %d.\n",
+-                 __FUNCTION__, IPADDY (addr), ntohs (port));
++                 __FUNCTION__, IPADDY (inaddr), ntohs (port));
+         }
+         if (!(st = new_tunnel ()))
+         {
++            struct in_addr inaddr;
++            inaddr.s_addr = addr;
+             l2tp_log (LOG_WARNING,
+                  "%s: unable to allocate new tunnel for host %s, port %d.\n",
+-                 __FUNCTION__, IPADDY (addr), ntohs (port));
++                 __FUNCTION__, IPADDY (inaddr), ntohs (port));
+             return NULL;
+         };
+         st->peer.sin_family = AF_INET;
