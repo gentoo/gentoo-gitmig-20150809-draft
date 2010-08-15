@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MARC-Record
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-Record/ChangeLog,v 1.4 2010/05/06 06:26:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-Record/ChangeLog,v 1.5 2010/08/15 18:31:33 tove Exp $
+
+  15 Aug 2010; Torsten Veller <tove@gentoo.org> -MARC-Record-2.0.0.ebuild:
+  Cleanup
 
 *MARC-Record-2.0.2 (06 May 2010)
 
