@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.59 2010/07/30 15:24:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.60 2010/08/15 18:53:04 flameeyes Exp $
+
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  capistrano-2.5.19.ebuild:
+  Update to new ruby_add_bdepend syntax, and block test-unit:2 for testing.
 
   30 Jul 2010; Jeremy Olexa <darkside@gentoo.org> capistrano-2.5.19.ebuild:
   Add prefix keywords, as tested in prefix overlay
