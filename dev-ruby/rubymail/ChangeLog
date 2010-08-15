@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubymail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.40 2010/07/05 18:39:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.41 2010/08/15 13:47:22 a3li Exp $
+
+  15 Aug 2010; Alex Legler <a3li@gentoo.org> rubymail-1.0.0-r1.ebuild:
+  Do not call 'rake rdoc' and install docs when USE=-doc. Closes bug 332847
+  by José Romildo Malaquias.
 
 *rubymail-1.0.0-r1 (04 Jul 2010)
 

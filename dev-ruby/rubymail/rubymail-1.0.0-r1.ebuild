@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-1.0.0-r1.ebuild,v 1.1 2010/07/05 18:39:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-1.0.0-r1.ebuild,v 1.2 2010/08/15 13:47:22 a3li Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -27,7 +27,7 @@ each_ruby_compile() {
 }
 
 all_ruby_compile() {
-	rake rdoc || die
+	use doc && (rake rdoc || die)
 }
 
 each_ruby_test() {
@@ -41,6 +41,6 @@ each_ruby_install() {
 
 all_ruby_install() {
 	dodoc NEWS NOTES README THANKS TODO || die
-	dohtml -r html/* || die
+	use doc && (dohtml -r html/* || die)
 	cp -r guide "${D}/usr/share/doc/${PF}" || die
 }
