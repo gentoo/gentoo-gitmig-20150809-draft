@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.0-r1.ebuild,v 1.1 2010/08/01 01:12:12 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.0-r1.ebuild,v 1.2 2010/08/15 13:21:30 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -21,11 +21,13 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 RESTRICT="test"
 
-ruby_add_rdepend ">=dev-ruby/facter-1.5.1"
-ruby_add_rdepend augeas dev-ruby/ruby-augeas
-ruby_add_rdepend ldap dev-ruby/ruby-ldap
-#ruby_add_rdepend rrdtool ">=net-analyzer/rrdtool-1.2.23[ruby]"
-ruby_add_rdepend shadow dev-ruby/ruby-shadow
+ruby_add_rdepend "
+	>=dev-ruby/facter-1.5.1
+	augeas? ( dev-ruby/ruby-augeas )
+	ldap? ( dev-ruby/ruby-ldap )
+	shadow? ( dev-ruby/ruby-shadow )
+	virtual/ruby-ssl"
+#rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
 
 DEPEND="${DEPEND}
 	emacs? ( virtual/emacs )"
@@ -33,10 +35,6 @@ RDEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
 	>=app-portage/eix-0.18.0"
-
-for _ruby in ${USE_RUBY}; do
-	DEPEND="${DEPEND} ruby_targets_${_ruby}? ( $(ruby_implementation_depend $_ruby)[ssl] )"
-done
 
 SITEFILE="50${PN}-mode-gentoo.el"
 
