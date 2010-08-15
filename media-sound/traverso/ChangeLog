@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/traverso
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.26 2009/06/20 13:09:17 aballier Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.27 2010/08/15 11:22:34 aballier Exp $
+
+*traverso-0.49.2 (15 Aug 2010)
+
+  15 Aug 2010; Alexis Ballier <aballier@gentoo.org> +traverso-0.49.2.ebuild:
+  version bump
 
   20 Jun 2009; Alexis Ballier <aballier@gentoo.org> -traverso-0.42.0.ebuild,
   -files/traverso-0.42.0-cmake.patch, -files/traverso-0.42.0-gcc43.patch,
