@@ -1,0 +1,11 @@
+--- plugins/svg/svg.C
++++ plugins/svg/svg.C
+@@ -29,7 +29,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <sys/mman.h>
+-
++#include <sys/stat.h>
+ 
+ #include <libintl.h>
+ #define _(String) gettext(String)

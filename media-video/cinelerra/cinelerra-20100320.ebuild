@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.5 2010/06/11 08:57:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.6 2010/08/15 21:01:01 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic
@@ -53,7 +53,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-x264.patch \
 		"${FILESDIR}"/${PN}-jpeg-7.patch \
 		"${FILESDIR}"/${P}-libpng14.patch \
-		"${FILESDIR}"/${P}-gcc45.patch
+		"${FILESDIR}"/${P}-gcc45.patch \
+		"${FILESDIR}"/${P}-glibc212.patch
 	AT_M4DIR="m4" eautoreconf
 }
 
