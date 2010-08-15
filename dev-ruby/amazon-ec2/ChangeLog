@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amazon-ec2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.8 2010/06/10 22:41:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.9 2010/08/15 19:14:35 flameeyes Exp $
+
+  15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  amazon-ec2-0.9.15.ebuild:
+  Block test-unit:2 for testing.
 
 *amazon-ec2-0.9.15 (10 Jun 2010)
 
