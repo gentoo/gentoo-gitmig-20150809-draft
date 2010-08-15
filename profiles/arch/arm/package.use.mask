@@ -1,17 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.33 2010/08/15 11:06:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.34 2010/08/15 14:19:14 armin76 Exp $
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
 =sys-apps/portage-2.1.8* python3
 =sys-apps/portage-2.1.7* python3
 
-# Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
-# Needs libimobiledevice keyworded (bug 325839)     
-gnome-base/gvfs iphone
-
-# Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
+# Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
 net-libs/xulrunner -ipc
@@ -35,10 +31,6 @@ dev-vcs/subversion kde
 kde-base/dolphin thumbnail
 kde-base/konqueror thumbnail
 
-# Raul Porcel <armin76@gentoo.org> (27 Dec 2009)
-# Needs qt-3
-app-portage/cfg-update kde
-
 # Markus Meier <maekke@gentoo.org> (27 Sep 2009)
 # mask media-gfx/imagemagick[autotrace] as autotrace is not keyworded
 media-gfx/imagemagick autotrace
@@ -46,10 +38,6 @@ media-gfx/imagemagick autotrace
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
 app-admin/gkrellm ntlm
-
-# Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
-# gdm depends on zenity which is not keyworded
->=gnome-base/gdm-2.20 remote
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
 # gdm depends on zenity which is not keyworded

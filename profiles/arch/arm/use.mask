@@ -34,22 +34,16 @@ grace
 # media-gfx/gimp not tested.
 gimp
 
-# Saleem Abdulrasool <compnerd@gentoo.org>
-# With vapier's permission masking this.
-mozilla
-
-hardened
-
-# Krzysztof Pawlik <nelchael@gentoo.org>
-# With vapier's permission masking aoss:
-aoss
-
 # Paul de Vrieze <pauldv@gentoo.org>
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
 java
 java-internal
 java-external
+
+# No hardware to test by the team
+iphone
+ipod
 
 # Stuff that doesn't make sense on this arch
 3dfx
@@ -72,6 +66,7 @@ lasi
 fusion
 debug-utils
 schroedinger
+hardened
 
 # havent tested yet
 cupsddk
@@ -118,7 +113,6 @@ tokyocabinet
 vaapi
 rtmp
 vpx
-ipod
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
