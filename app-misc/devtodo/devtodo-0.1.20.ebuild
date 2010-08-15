@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.14 2010/06/15 14:37:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.20.ebuild,v 1.15 2010/08/15 16:33:28 grobian Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://swapoff.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND="
@@ -23,6 +23,10 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	# fix regex.h issue on case-insensitive file-systems #332235
+	sed -i -e 's/Regex.h/DTRegex.h/' \
+		util/Lexer.h util/Makefile.{am,in} util/Regex.cc || die
+	mv util/{,DT}Regex.h || die
 	eautoreconf
 }
 

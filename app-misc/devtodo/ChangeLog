@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.82 2010/06/15 11:21:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.83 2010/08/15 16:33:28 grobian Exp $
+
+  15 Aug 2010; Fabian Groffen <grobian@gentoo.org> devtodo-0.1.20.ebuild:
+  Fix building on case-insensitive file-systems, marked ~ppc-macos
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> devtodo-0.1.20.ebuild:
   QA, imported prefix changes
