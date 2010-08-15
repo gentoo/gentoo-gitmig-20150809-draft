@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.31 2010/07/29 21:01:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.32 2010/08/15 11:04:22 armin76 Exp $
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
@@ -33,10 +33,6 @@ dev-vcs/subversion kde
 # Mark Loeser <halcy0n@gentoo.org> (15 Feb 2010)
 # need >=net-wireless/bluez-4.61 keyworded
 net-misc/ofono bluetooth
-
-# Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
-# need dev-db/virtuoso-* keyworded
-dev-libs/soprano virtuoso
 
 # Raúl Porcel <armin76@gentoo.org> (20 Jan 2010)
 # Needs mplayer
