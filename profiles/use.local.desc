@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5863 2010/08/15 20:52:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5864 2010/08/15 21:16:35 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2838,6 +2838,8 @@ net-misc/openswan:extra-algorithms - Include additional strong algorithms (Blowf
 net-misc/openswan:ldap - Include LDAP support (used for fetching CRLs)
 net-misc/openswan:ms-bad-proposal - Allow bad IP address proposal offered by an Microsoft L2TP/IPSec servers
 net-misc/openswan:nocrypto-algorithms - Include algorithms that don't even encrypt (1DES)
+net-misc/openswan:nss - Include libnss support (adds smartcard support)
+net-misc/openswan:ssl - Use OpenSSL libraries for BIGNUM support
 net-misc/openswan:weak-algorithms - Include weak algorithms (DH1)
 net-misc/openvpn:eurephia - Apply eurephia patch
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
