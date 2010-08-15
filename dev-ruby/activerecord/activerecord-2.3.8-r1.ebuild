@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.8-r1.ebuild,v 1.1 2010/07/23 07:04:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.8-r1.ebuild,v 1.2 2010/08/15 19:21:00 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -24,11 +24,18 @@ IUSE="mysql postgres sqlite3" #sqlite
 ruby_add_rdepend "~dev-ruby/activesupport-${PV}"
 
 #ruby_add_rdepend sqlite ">=dev-ruby/sqlite-ruby-2.2.2"
-USE_RUBY=ruby18 ruby_add_rdepend "ruby_targets_ruby18 sqlite3" "dev-ruby/sqlite3-ruby"
-USE_RUBY=ruby18 ruby_add_rdepend "ruby_targets_ruby18 mysql" ">=dev-ruby/mysql-ruby-2.7"
-USE_RUBY=ruby18 ruby_add_rdepend "ruby_targets_ruby18 postgres" "dev-ruby/pg"
+USE_RUBY=ruby18 \
+	ruby_add_rdepend "
+		sqlite3? ( dev-ruby/sqlite3-ruby )
+		mysql? ( >=dev-ruby/mysql-ruby-2.7 )
+		postgres? ( dev-ruby/pg )"
 
-ruby_add_bdepend test ">=dev-ruby/mocha-0.9.5 virtual/ruby-test-unit"
+ruby_add_bdepend "
+	test? (
+		>=dev-ruby/mocha-0.9.5
+		virtual/ruby-test-unit
+		!dev-ruby/test-unit:2
+	)"
 
 all_ruby_prepare() {
 	# Custom template not found in package
