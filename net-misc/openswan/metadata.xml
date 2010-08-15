@@ -21,5 +21,7 @@ growing frustrated with the politics surrounding the FreeS/WAN project.</longdes
     (1DES)</flag>
     <flag name="ms-bad-proposal">Allow bad IP address proposal offered by an
     Microsoft L2TP/IPSec servers</flag>
+    <flag name="nss">Include libnss support (adds smartcard support)</flag>
+    <flag name="ssl">Use OpenSSL libraries for BIGNUM support</flag>
   </use>
 </pkgmetadata>

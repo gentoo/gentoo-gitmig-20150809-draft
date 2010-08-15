@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openswan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.72 2009/12/15 14:49:44 pva Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.73 2010/08/15 20:45:47 mrness Exp $
+
+*openswan-2.6.28 (15 Aug 2010)
+
+  15 Aug 2010; Alin Năstac <mrness@gentoo.org> -openswan-2.4.15-r1.ebuild,
+  openswan-2.4.15-r2.ebuild, -openswan-2.6.23-r1.ebuild,
+  -openswan-2.6.23-r2.ebuild, -files/openswan-2.6.23-gentoo.patch,
+  +openswan-2.6.28.ebuild, +files/openswan-2.6.28-gentoo.patch,
+  metadata.xml:
+  Mark version 2.4.15-r2 as stable on amd64 and x86. Version bump (#301813).
 
   15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
   metadata.xml: added required herd tag.

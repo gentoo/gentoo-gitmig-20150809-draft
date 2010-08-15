@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.23-r2.ebuild,v 1.1 2009/12/05 08:01:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.28.ebuild,v 1.1 2010/08/15 20:45:47 mrness Exp $
 
 EAPI="2"
 
-inherit eutils linux-info toolchain-funcs
+inherit eutils linux-info toolchain-funcs flag-o-matic
 
 DESCRIPTION="Open Source implementation of IPsec for the Linux operating system (was SuperFreeS/WAN)."
 HOMEPAGE="http://www.openswan.org/"
@@ -13,14 +13,16 @@ SRC_URI="http://www.openswan.org/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="curl ldap smartcard extra-algorithms weak-algorithms nocrypto-algorithms ms-bad-proposal"
+IUSE="caps curl ldap pam ssl extra-algorithms weak-algorithms nocrypto-algorithms ms-bad-proposal nss"
 
 COMMON_DEPEND="!net-misc/strongswan
 	dev-libs/gmp
 	dev-lang/perl
-	smartcard? ( dev-libs/opensc )
+	caps? ( sys-libs/libcap-ng )
 	curl? ( net-misc/curl )
-	ldap? ( net-nds/openldap )"
+	ldap? ( net-nds/openldap )
+	nss? ( dev-libs/nss )
+	ssl? ( dev-libs/openssl )"
 DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources
 	app-text/xmlto
@@ -56,6 +58,9 @@ pkg_setup() {
 	else
 		die "Unsupported kernel version"
 	fi
+
+	# most code is OK, but programs/pluto code breaks strict aliasing
+	append-cflags -fno-strict-aliasing
 }
 
 src_prepare() {
@@ -68,52 +73,69 @@ src_prepare() {
 }
 
 get_make_options() {
-	echo KERNELSRC=\"${KERNEL_DIR}\" \
-		FINALEXAMPLECONFDIR=/usr/share/doc/${PF} \
-		INC_RCDEFAULT=/etc/init.d \
-		INC_USRLOCAL=/usr \
-		INC_MANDIR=share/man \
-		FINALDOCDIR=/usr/share/doc/${PF}/html \
-		DESTDIR=\"${D}\" \
-		USERCOMPILE=\"${CFLAGS}\" \
+	echo KERNELSRC=\"${KERNEL_DIR}\"\
+		FINALEXAMPLECONFDIR=/usr/share/doc/${PF}\
+		INC_RCDEFAULT=/etc/init.d\
+		INC_USRLOCAL=/usr\
+		INC_MANDIR=share/man\
+		FINALDOCDIR=/usr/share/doc/${PF}/html\
+		DESTDIR=\"${D}\"\
+		USERCOMPILE=\"${CFLAGS}\"\
 		CC=\"$(tc-getCC)\"
-	if use smartcard ; then
-		echo USE_SMARTCARD=true
-	fi
-	if use extra-algorithms ; then
-		echo USE_EXTRACRYPTO=true
-	else
-		echo USE_EXTRACRYPTO=false
-	fi
+
+	use caps\
+		&& echo USE_LIBCAP_NG=true\
+		|| echo USE_LIBCAP_NG=false
+
+	use curl\
+		&& echo USE_LIBCURL=true\
+		|| echo USE_LIBCURL=false
+
+	use ldap\
+		&& echo USE_LDAP=true\
+		|| echo USE_LDAP=false
+
+	echo USE_XAUTH=true
+	use pam\
+		&& echo USE_XAUTHPAM=true\
+		|| echo USE_XAUTHPAM=false
+
+	use nss\
+		&& echo USE_LIBNSS=true\
+		|| echo USE_LIBNSS=false
+
+	use ssl\
+		&& echo HAVE_OPENSSL=true\
+		|| echo HAVE_OPENSSL=false
+
+	use extra-algorithms\
+		&& echo USE_EXTRACRYPTO=true\
+		|| echo USE_EXTRACRYPTO=false
 	if use weak-algorithms ; then
 		echo USE_WEAKSTUFF=true
 		if use nocrypto-algorithms; then
 			echo USE_NOCRYPTO=true
 		fi
+	else
+		echo USE_WEAKSTUFF=false
 	fi
+
 	echo USE_LWRES=false # needs bind9 with lwres support
-	local USETHREADS=false
-	if use curl; then
-		echo USE_LIBCURL=true
-		USETHREADS=true
+	if use curl || use ldap || use pam; then
+		echo HAVE_THREADS=true
+	else
+		echo HAVE_THREADS=false
 	fi
-	if use ldap; then
-		echo USE_LDAP=true
-		USETHREADS=true
-	fi
-	echo HAVE_THREADS=${USETHREADS}
 }
 
 src_compile() {
 	eval set -- $(get_make_options)
-	emake "$@" \
-		${MYMAKE} || die "emake failed"
+	emake "$@" ${MYMAKE} || die "emake failed"
 }
 
 src_install() {
 	eval set -- $(get_make_options)
-	emake "$@" \
-		install || die "emake install failed"
+	emake "$@" install || die "emake install failed"
 
 	dodoc docs/{KNOWN_BUGS*,RELEASE-NOTES*,PATENTS*,debugging*}
 	dohtml doc/*.html
@@ -122,7 +144,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/ipsec-initd ipsec || die "failed to install init script"
 
-	dodir /var/run/pluto || die "failed to create /var/run/pluto"
+	keepdir /var/run/pluto
 }
 
 pkg_preinst() {
