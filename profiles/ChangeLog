@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4473 2010/08/14 10:12:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4474 2010/08/15 07:29:22 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  +default/linux/x86/10.0/developer/make.defaults:
+  added gnu hash style to LDFLAGS for x86 developer profile, so
+  not-respected LDFLAGS are found more easily
 
   14 Aug 2010; Alin Năstac <mrness@gentoo.org> package.mask:
   Unmask net-dialup/ppp-2.4.5.
