@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.109 2010/07/03 14:33:51 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.110 2010/08/15 14:31:37 ford_prefect Exp $
+
+*wordpress-3.0.1 (15 Aug 2010)
+
+  15 Aug 2010; Arun Raghavan <ford_prefect@gentoo.org>
+  +wordpress-3.0.1.ebuild, files/postupgrade-en.txt:
+  Bump to 3.0.1. Tons of fixes and feature additions (and plugin/theme
+  breakages).
 
 *wordpress-2.9.2-r1 (03 Jul 2010)
 
