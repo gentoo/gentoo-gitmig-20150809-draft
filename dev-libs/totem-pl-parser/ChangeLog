@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.62 2010/08/15 21:43:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.63 2010/08/15 22:07:34 eva Exp $
+
+*totem-pl-parser-2.30.2 (15 Aug 2010)
+
+  15 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  totem-pl-parser-2.30.1.ebuild, +totem-pl-parser-2.30.2.ebuild:
+  Version bump, needs libsoup-gnome-2.30. Add missing gobject-introspection
+  in DEPEND.
 
   15 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
   totem-pl-parser-2.30.1.ebuild:
