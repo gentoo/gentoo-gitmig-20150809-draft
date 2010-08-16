@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.127 2010/06/26 14:46:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.128 2010/08/16 09:38:50 ali_bush Exp $
+
+*swt-3.6 (16 Aug 2010)
+
+  16 Aug 2010; Alistair Bush <ali_bush@gentoo.org> +swt-3.6.ebuild,
+  +files/swt-3.6-manifest, +files/as-needed-and-flag-fixes-3.6.patch:
+  Version Bump. Thanks to Matt Whitlock <matt@whitlock.name>
 
   26 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> swt-3.3.1.1-r1.ebuild:
   Comment out support for vulnerable firefox and xulrunner (only in deps).
