@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.6 2010/08/15 21:01:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20100320.ebuild,v 1.7 2010/08/16 17:10:10 sping Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic
 
-DESCRIPTION="Cinelerra - Professional Video Editor - Unofficial GIT-version"
+DESCRIPTION="Professional Video Editor (Unofficial GIT-snapshot)"
 HOMEPAGE="http://www.cinelerra.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
