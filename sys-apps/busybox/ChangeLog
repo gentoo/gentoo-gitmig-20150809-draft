@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.253 2010/08/15 17:29:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.254 2010/08/16 21:23:57 vapier Exp $
+
+*busybox-1.17.1-r1 (16 Aug 2010)
+
+  16 Aug 2010; Mike Frysinger <vapier@gentoo.org> +busybox-1.17.1-r1.ebuild,
+  +files/busybox-1.17.1-mdev.patch, files/busybox-1.17.1-sed.patch:
+  Add more fixes from upstream, and fix default shell config #333005 by Eugene
+  Shalygin.
 
   15 Aug 2010; Mike Frysinger <vapier@gentoo.org> busybox-1.17.1.ebuild:
   Disable rfkill by default #332803 by Hans Nieser.
