@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.21 2010/07/29 02:23:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.22 2010/08/16 22:36:48 flameeyes Exp $
+
+*mocha-0.9.8-r3 (16 Aug 2010)
+
+  16 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -mocha-0.9.8-r2.ebuild, +mocha-0.9.8-r3.ebuild:
+  Reduce the 1.9.2 fix backport as upstream broke it. Thanks to Thomas Nyman
+  in bug #333015 for reporting.
 
   29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   mocha-0.9.8-r2.ebuild, -files/mocha-0.9.8+ruby-1.9.2.patch:
