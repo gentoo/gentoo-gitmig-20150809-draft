@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc4.ebuild,v 1.1 2010/08/05 13:20:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0_rc5.ebuild,v 1.1 2010/08/16 19:57:00 darkside Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils versionator ssl-cert
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
-sieve_snapshot="cac6acdc4d0e"
+sieve_snapshot="0592366457df"
 SRC_URI="http://dovecot.org/releases/${major_minor}/rc/${MY_P}.tar.gz
 	sieve? (
 	http://hg.rename-it.nl/dovecot-2.0-pigeonhole/archive/${sieve_snapshot}.tar.gz
@@ -60,10 +60,6 @@ pkg_setup() {
 	enewuser dovenull -1 -1 /dev/null
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/dovecot-2.0_rc4-asneeded.patch"
-}
-
 src_configure() {
 	local conf=""
 
@@ -103,8 +99,6 @@ src_configure() {
 		# snapshot. should not be necessary for 2.0 release
 		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
 		./autogen.sh || die "autogen failed"
-		# stupid no-op check in Makefile
-		#sed -i -e 's/^check: check-recursive/check: test/' Makefile*
 
 		econf \
 			--localstatedir=/var \
@@ -124,14 +118,12 @@ src_compile() {
 }
 
 src_test() {
-	default_src_test
-	# not yet
-	#if use sieve || use managesieve ; then
-		#einfo "Beginning sieve tests..."
+	emake check
+	if use sieve || use managesieve ; then
 		# snapshot. should not be necessary for 2.0 release
-		#cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
-		#default_src_test
-	#fi
+		cd "$(find ../ -type d -name dovecot-2-0-pigeonhole*)" || die "cd failed"
+		emake check
+	fi
 }
 
 src_install () {
@@ -198,7 +190,7 @@ src_install () {
 		sed -i -e '/driver = pam/,/^[ \t]*}/ s|#args = dovecot|args = "\*"|' \
 			"${confd}/auth-system.conf.ext" \
 			|| die "failed to update PAM settings in auth-system.conf.ext"
-		# mailbase does not provide a managesieve pam file
+		# mailbase does not provide a sieve pam file
 		use managesieve && dosym imap /etc/pam.d/sieve
 		sed -i -e \
 			's/#!include auth-system.conf.ext/!include auth-system.conf.ext/' \

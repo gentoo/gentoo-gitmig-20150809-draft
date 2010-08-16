@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.252 2010/08/11 21:32:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.253 2010/08/16 19:57:00 darkside Exp $
+
+*dovecot-2.0_rc5 (16 Aug 2010)
+
+  16 Aug 2010; Jeremy Olexa <darkside@gentoo.org> -dovecot-2.0_rc4.ebuild,
+  +dovecot-2.0_rc5.ebuild:
+  Version bump - bug #332089 by Eray Aslan. Working sieve tests.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> dovecot-1.2.11-r2.ebuild:
   Marked ppc stable for bug #314533.
