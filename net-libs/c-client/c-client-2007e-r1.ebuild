@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r1.ebuild,v 1.1 2010/08/16 21:06:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r1.ebuild,v 1.2 2010/08/16 21:18:54 jer Exp $
 
 EAPI="2"
 
@@ -62,9 +62,10 @@ src_prepare() {
 
 	# Respect LDFLAGS
 	epatch "${FILESDIR}"/${P}-ldflags.patch
-	sed -e "s/CC=cc/CC=$(tc-getCC)/" -i src/osdep/unix/Makefile
-	sed -e "s/ARRC=ar/ARRC=$(tc-getAR)/" -i src/osdep/unix/Makefile
-	sed -e "s/RANLIB=ranlib/RANLIB=$(tc-getRANLIB)/" -i src/osdep/unix/Makefile
+	sed -e "s/CC=cc/CC=$(tc-getCC)/" \
+		-e "s/ARRC=ar/ARRC=$(tc-getAR)/" \
+		-e "s/RANLIB=ranlib/RANLIB=$(tc-getRANLIB)/" \
+		-i src/osdep/unix/Makefile || die "Respecting build flags"
 
 	elibtoolize
 }
