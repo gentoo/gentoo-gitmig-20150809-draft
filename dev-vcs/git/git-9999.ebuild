@@ -1,9 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.4 2010/06/22 18:47:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.5 2010/08/16 05:47:29 robbat2 Exp $
 
 EAPI=2
 
+GENTOO_DEPEND_ON_PERL=no
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 [ "$PV" == "9999" ] && inherit git
 
@@ -35,7 +36,7 @@ IUSE="+blksha1 +curl cgi doc emacs gtk iconv +perl ppcsha1 tk +threads +webdav x
 CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
-	perl?   ( dev-lang/perl )
+	perl?   ( dev-lang/perl[-build] )
 	tk?     ( dev-lang/tk )
 	curl?   (
 		net-misc/curl
