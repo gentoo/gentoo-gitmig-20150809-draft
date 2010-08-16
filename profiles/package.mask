@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11850 2010/08/14 10:12:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11851 2010/08/16 14:30:24 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -137,10 +137,6 @@ mail-client/claws-mail-bsfilter
 # bugs (bug #303665), and minor ones (bug #240036).
 # Dead upstream.
 dev-lang/hugs98
-
-# Markos Chandras <hwoarang@gentoo.org> (28 Jul 2010)
-# Masking for extensive testing
-=net-p2p/qbittorrent-2.3.0
 
 # Jim Ramsay <lack@gentoo.org> (26 Jul 2010)
 # No longer works (Bug #284182), and no longer needed since app-admin/gkrellm
