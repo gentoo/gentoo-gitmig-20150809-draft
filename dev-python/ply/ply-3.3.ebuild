@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.3.ebuild,v 1.2 2010/06/12 19:25:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.3.ebuild,v 1.3 2010/08/16 16:37:11 djc Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,7 +11,7 @@ DESCRIPTION="Python Lex-Yacc library"
 HOMEPAGE="http://www.dabeaz.com/ply/ http://pypi.python.org/pypi/ply"
 SRC_URI="http://www.dabeaz.com/ply/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="examples"
