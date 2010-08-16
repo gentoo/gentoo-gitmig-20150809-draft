@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.83 2010/05/23 20:12:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.84 2010/08/16 18:36:02 grobian Exp $
+
+  16 Aug 2010; Fabian Groffen <grobian@gentoo.org>
+  python-ldap-2.3.11.ebuild:
+  Fix for Prefix, raise EAPI to 3, marked ~x86-solaris
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> python-ldap-2.3.11.ebuild:
   stable amd64, bug 313149
