@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.029.ebuild,v 1.1 2010/05/28 06:57:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.029.ebuild,v 1.2 2010/08/16 19:02:24 tove Exp $
 
 EAPI=3
 
@@ -33,3 +33,5 @@ PATCHES=( "${FILESDIR}"/xorg.patch
 
 myconf="X11ROOT=${EPREFIX}/usr XFT=1 -I${EPREFIX}/usr/include/ -l${EPREFIX}/usr/$(get_libdir)"
 mydoc="ToDo VERSIONS"
+
+MAKEOPTS+=" -j1" #333049
