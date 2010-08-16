@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.3-r1.ebuild,v 1.1 2010/08/15 19:56:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.3-r1.ebuild,v 1.2 2010/08/16 07:39:37 grobian Exp $
 
 EAPI="3"
 
@@ -79,8 +79,6 @@ src_prepare() {
 	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
 
 	epatch "${WORKDIR}"/ld64-unwind/${LD64}-unlibunwind.patch
-	[[ ${CHOST} == *-darwin10 ]] && \
-		epatch "${WORKDIR}"/ld64-unwind/${LD64}-message-before-abort.patch
 	[[ ${CHOST} == powerpc*-darwin* ]] && \
 		epatch "${FILESDIR}"/ld64-95.2.12-darwin8-no-mlong-branch-warning.patch
 	sed -i -e '/#define LTO_SUPPORT 1/d' other/ObjectDump.cpp || die

@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.14 2010/08/15 19:56:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.15 2010/08/16 07:39:37 grobian Exp $
+
+  16 Aug 2010; Fabian Groffen <grobian@gentoo.org>
+  binutils-apple-3.2.3-r1.ebuild:
+  Heiko's improved unlibunwind patch makes the message before abort patch
+  useless, bug #324769
 
 *binutils-apple-3.2.3-r1 (15 Aug 2010)
 
