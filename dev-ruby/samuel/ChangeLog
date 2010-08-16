@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.6 2010/05/28 17:43:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.7 2010/08/16 11:36:12 flameeyes Exp $
+
+  16 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> samuel-0.3.2.ebuild:
+  Block test-unit:2 for testing.
 
   28 May 2010; Joseph Jezak <josejx@gentoo.org> samuel-0.3.2.ebuild:
   Marked ~ppc.
