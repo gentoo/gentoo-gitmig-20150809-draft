@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.3.ebuild,v 1.1 2010/06/15 18:04:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.3.ebuild,v 1.2 2010/08/16 23:16:03 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -30,7 +30,7 @@ PDEPEND="
 
 S="${WORKDIR}/${MY_P}"
 
-RUBY_PATCHES=( "${P}-drivers-test.patch" )
+RUBY_PATCHES=( "${FILESDIR}/${P}-drivers-test.patch" )
 
 each_ruby_configure() {
 	${RUBY} setup.rb config --prefix=/usr
