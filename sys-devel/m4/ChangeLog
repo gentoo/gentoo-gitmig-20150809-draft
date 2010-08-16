@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.135 2010/08/15 23:45:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.136 2010/08/16 00:30:20 jer Exp $
+
+  16 Aug 2010; Jeroen Roovers <jer@gentoo.org> m4-1.4.14-r1.ebuild:
+  Stable for PPC (bug #307633).
 
   15 Aug 2010; Jeroen Roovers <jer@gentoo.org> m4-1.4.14-r1.ebuild:
   Stable for HPPA (bug #307633).
