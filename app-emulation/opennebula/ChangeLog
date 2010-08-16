@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/opennebula
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/opennebula/ChangeLog,v 1.2 2010/08/15 22:54:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/opennebula/ChangeLog,v 1.3 2010/08/16 18:33:00 dev-zero Exp $
+
+  16 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
+  opennebula-2.0_beta1-r1.ebuild:
+  It's test, not tests (in RESTRICT, thanks to Mr_Bones).
 
 *opennebula-2.0_beta1-r1 (15 Aug 2010)
 

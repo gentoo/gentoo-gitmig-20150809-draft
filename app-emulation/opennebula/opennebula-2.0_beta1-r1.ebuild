@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/opennebula/opennebula-2.0_beta1-r1.ebuild,v 1.1 2010/08/15 22:54:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/opennebula/opennebula-2.0_beta1-r1.ebuild,v 1.2 2010/08/16 18:33:00 dev-zero Exp $
 
 EAPI=3
 USE_RUBY="ruby18"
@@ -33,7 +33,7 @@ ruby_add_rdepend "dev-ruby/nokogiri
 	dev-ruby/crack"
 
 # make sure no eclass is running tests
-RESTRICT="tests"
+RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
