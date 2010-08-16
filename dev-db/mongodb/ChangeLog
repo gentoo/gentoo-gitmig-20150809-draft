@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.8 2010/07/18 12:58:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.9 2010/08/16 15:37:22 lu_zero Exp $
+
+*mongodb-1.6.0 (16 Aug 2010)
+
+  16 Aug 2010; Luca Barbato <lu_zero@gentoo.org>
+  +files/mongodb-1.6.0-fix-scons.patch, +mongodb-1.6.0.ebuild:
+  New version, thanks to Christian van der Leeden <leeden@logicunited.com>
+  for the initial ebuild in bug #331469
 
 *mongodb-1.5.5 (18 Jul 2010)
 *mongodb-1.4.4 (18 Jul 2010)
