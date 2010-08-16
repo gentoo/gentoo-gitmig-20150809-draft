@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.30 2010/07/08 16:29:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.31 2010/08/16 20:05:34 truedfx Exp $
+
+  16 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> tcc-0.9.25.ebuild,
+  +files/tcc-0.9.25-flags.patch:
+  Respect CFLAGS, LDFLAGS (#332599)
 
   08 Jul 2010; Markos Chandras <hwoarang@gentoo.org> tcc-0.9.25.ebuild:
   Make it respect CC variable wrt bug #243892

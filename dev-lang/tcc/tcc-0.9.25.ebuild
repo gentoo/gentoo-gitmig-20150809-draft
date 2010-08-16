@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.25.ebuild,v 1.2 2010/07/08 16:29:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.25.ebuild,v 1.3 2010/08/16 20:05:34 truedfx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,9 +24,7 @@ RESTRICT="test"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	#epatch "${FILESDIR}"/${PN}-0.9.23-anonunion.patch
-	#epatch "${FILESDIR}"/${PN}-0.9.23-asneeded.patch
-	#epatch "${FILESDIR}"/${PN}-0.9.23-nxbit.patch
+	epatch "${FILESDIR}"/${PN}-0.9.25-flags.patch
 
 	# Don't strip
 	sed -i -e 's|$(INSTALL) -s|$(INSTALL)|' Makefile
@@ -43,8 +41,8 @@ src_compile() {
 	local myopts
 	use x86 && myopts="--cpu=x86"
 	use amd64 && myopts="--cpu=x86-64"
-	econf ${myopts}
-	emake CC="$(tc-getCC)" || die "make failed"
+	econf ${myopts} --cc="$(tc-getCC)"
+	emake || die "make failed"
 }
 
 src_install() {
