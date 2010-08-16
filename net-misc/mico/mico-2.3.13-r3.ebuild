@@ -1,20 +1,26 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.4 2010/08/16 08:23:24 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.5 2010/08/16 15:15:40 haubi Exp $
 
 EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
+
 DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
 HOMEPAGE="http://www.mico.org/"
 SRC_URI="http://www.mico.org/${P}.tar.gz"
+
+PATCH_VER=0.1
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~ppc-aix ~ia64-hpux ~amd64-linux ~x86-linux ~sparc-solaris ~x86-winnt"
 IUSE="gtk postgres qt4 ssl tcl threads X"
 RESTRICT="test" #298101
+
+[[ -z ${PATCH_VER} ]] || \
+	SRC_URI="${SRC_URI} mirror://gentoo/${P}-gentoo-patches-${PATCH_VER}.tar.bz2"
 
 # doesn't compile:
 #   bluetooth? ( net-wireless/bluez )
@@ -35,19 +41,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-nolibcheck.patch
-	epatch "${FILESDIR}"/${P}-gcc43.patch
-	epatch "${FILESDIR}"/${P}-pthread.patch
-	epatch "${FILESDIR}"/${P}-aix.patch
-	epatch "${FILESDIR}"/${P}-hpux.patch
-	epatch "${FILESDIR}"/${P}-as-needed.patch #280678
-	epatch "${FILESDIR}"/${P}-qt4-nothread.patch
-	epatch "${FILESDIR}"/${P}-drop-pgsql-header-check.patch
-
-	if [[ ${CHOST} == *-winnt* ]]; then
-		epatch "${FILESDIR}"/${P}-winnt-coss.patch
-		epatch "${FILESDIR}"/${P}-winnt-other.patch
-	fi
+	EPATCH_SUFFIX=patch epatch "${WORKDIR}"/patches
 
 	# cannot use big TOC (AIX only), gdb doesn't like it.
 	# This assumes that the compiler (or -wrapper) uses
@@ -64,11 +58,8 @@ src_configure() {
 	tc-export CC CXX
 
 	if use gtk; then
-		# set up gtk-1 wrapper for gtk-2
-		mkdir "${T}"/path || die "failed to create temporary path"
-		cp "${FILESDIR}"/gtk-config "${T}"/path || die "failed to dupe gtk-config"
-		chmod +x "${T}"/path/gtk-config || die "failed to arm gtk-config"
-		export PATH="${T}"/path:${PATH}
+		# need gtk-1 wrapper for gtk-2
+		export PATH="${WORKDIR}"/helpers:${PATH}
 	fi
 
 	# Don't know which version of JavaCUP would suffice, but there is no
