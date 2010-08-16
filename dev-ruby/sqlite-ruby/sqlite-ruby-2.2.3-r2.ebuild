@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/sqlite-ruby-2.2.3-r2.ebuild,v 1.1 2010/01/30 09:15:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/sqlite-ruby-2.2.3-r2.ebuild,v 1.2 2010/08/16 11:34:16 flameeyes Exp $
 
 EAPI="2"
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README"
@@ -18,20 +18,18 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
-RUBY_PATCHES=( "${P}-19compat.patch" )
+DEPEND="${DEPEND}
+	=dev-db/sqlite-2*"
 
-DEPEND="=dev-db/sqlite-2*"
+RDEPEND="${RDEPEND}
+	=dev-db/sqlite-2*"
 
 each_ruby_configure() {
-	pushd ext
-	${RUBY} extconf.rb || die "Configuration failed."
-	popd
+	${RUBY} -Cext extconf.rb || die "Configuration failed."
 }
 
 each_ruby_compile() {
-	pushd ext
-	emake || die "Compilation failed."
-	popd
+	emake -Cext || die "Compilation failed."
 	cp ext/sqlite_api.so lib || die "Unable to cp shared library."
 }
 

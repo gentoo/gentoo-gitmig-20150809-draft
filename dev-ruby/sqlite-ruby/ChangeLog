@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sqlite-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.43 2010/05/22 15:59:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.44 2010/08/16 11:34:16 flameeyes Exp $
+
+  16 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  sqlite-ruby-2.2.3-r2.ebuild, -files/sqlite-ruby-2.2.3-19compat.patch:
+  Remove Ruby 1.9 patch and Ruby 1.9 support as it was always just partial
+  (fails with --no-undefined).
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   sqlite-ruby-2.2.3-r1.ebuild:
