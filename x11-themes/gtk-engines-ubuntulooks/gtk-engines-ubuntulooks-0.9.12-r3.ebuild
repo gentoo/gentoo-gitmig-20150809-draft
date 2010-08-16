@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-ubuntulooks/gtk-engines-ubuntulooks-0.9.12-r3.ebuild,v 1.4 2009/07/11 00:35:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-ubuntulooks/gtk-engines-ubuntulooks-0.9.12-r3.ebuild,v 1.5 2010/08/16 20:53:28 abcd Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils autotools
 
 PATCH_LEVEL=12
 MY_PN=${PN/gtk-engines-/}
@@ -15,7 +15,7 @@ SRC_URI="mirror://ubuntu/pool/main/u/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.8:2"
@@ -27,6 +27,8 @@ S=${WORKDIR}/${MY_PN}-${PV}
 src_prepare() {
 	epatch "${WORKDIR}"/${MY_PN}_${PV}-${PATCH_LEVEL}.diff
 	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch debian/patches
+
+	eautoreconf # need new libtool for interix
 }
 
 src_configure() {
