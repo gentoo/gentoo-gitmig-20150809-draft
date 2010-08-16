@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.231 2010/08/14 16:57:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.232 2010/08/16 21:41:55 eva Exp $
+
+  16 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-themes-2.24.3.ebuild, gnome-themes-2.30.2.ebuild:
+  Re-add missing phase wrapping.
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org> gnome-themes-2.28.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #314899

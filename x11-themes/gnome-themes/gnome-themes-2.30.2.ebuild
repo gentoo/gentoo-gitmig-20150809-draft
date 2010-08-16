@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.30.2.ebuild,v 1.4 2010/08/01 11:22:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.30.2.ebuild,v 1.5 2010/08/16 21:41:55 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x8
 IUSE="accessibility"
 
 RDEPEND=">=x11-libs/gtk+-2
-	 >=x11-themes/gtk-engines-2.15.3"
+	>=x11-themes/gtk-engines-2.15.3"
 DEPEND="${RDEPEND}
 	>=x11-misc/icon-naming-utils-0.8.7
 	>=dev-util/pkgconfig-0.19
@@ -28,12 +28,16 @@ DOCS="AUTHORS ChangeLog NEWS README"
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"
 
-G2CONF="${G2CONF}
+pkg_setup() {
+	G2CONF="${G2CONF}
 		$(use_enable accessibility all-themes)
 		--disable-test-themes
 		--enable-icon-mapping"
+}
 
 src_prepare() {
+	gnome2_src_prepare
+
 	# Fix bashisms, bug #256337
 	epatch "${FILESDIR}/${PN}-2.24.3-bashism.patch"
 
