@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.0.1.ebuild,v 1.5 2010/01/05 22:02:54 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-1.0.1.ebuild,v 1.6 2010/08/16 19:15:27 abcd Exp $
 
+EAPI=3
 inherit toolchain-funcs multilib
 
 DESCRIPTION="A minimalist, no frills window manager for X."
@@ -11,7 +12,7 @@ HOMEPAGE="http://evilwm.sourceforge.net"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc64-solaris"
 
 RDEPEND="x11-libs/libXext
 	x11-libs/libXrandr"
@@ -20,9 +21,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i 's/^#define DEF_FONT.*/#define DEF_FONT "fixed"/' evilwm.h \
 		|| die "sed font failed"
 	sed -i -e '/^CFLAGS/s/ -Os/ /' \
@@ -30,15 +29,15 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" XROOT="/usr" LDPATH="-L/usr/$(get_libdir)" || die
+	emake CC="$(tc-getCC)" prefix="\$(DESTDIR)/${EPREFIX}/usr" XROOT="${EPREFIX}/usr" LDPATH="-L${EPREFIX}/usr/$(get_libdir)" || die
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" prefix="\$(DESTDIR)/${EPREFIX}/usr" install || die "make install failed"
 
 	dodoc ChangeLog README TODO || die "dodoc failed"
 
-	echo -e "#!/bin/sh\n/usr/bin/${PN}" > "${T}/${PN}"
+	echo -e "#!${EPREFIX}/bin/sh\nexec \"${EPREFIX}/usr/bin/${PN}\"" > "${T}/${PN}"
 	exeinto /etc/X11/Sessions
 	doexe "${T}/${PN}" || die "/etc/X11/Sessions failed"
 
