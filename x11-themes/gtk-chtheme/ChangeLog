@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-chtheme
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/ChangeLog,v 1.21 2010/04/05 22:50:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/ChangeLog,v 1.22 2010/08/16 19:50:26 abcd Exp $
+
+  16 Aug 2010; Jonathan Callen <abcd@gentoo.org>
+  gtk-chtheme-0.3.1-r2.ebuild:
+  Transfer prefix keywords, bump to EAPI=3, use slot dep for x11-libs/gtk+
 
   05 Apr 2010; Alex Alexander <wired@gentoo.org>
   gtk-chtheme-0.3.1-r2.ebuild:

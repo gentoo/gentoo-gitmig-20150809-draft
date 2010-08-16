@@ -1,7 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/gtk-chtheme-0.3.1-r2.ebuild,v 1.2 2010/04/05 22:50:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/gtk-chtheme-0.3.1-r2.ebuild,v 1.3 2010/08/16 19:50:26 abcd Exp $
 
+EAPI=3
 inherit eutils toolchain-funcs
 
 DESCRIPTION="GTK-2.0 Theme Switcher"
@@ -10,17 +11,14 @@ SRC_URI="http://plasmasturm.org/programs/gtk-chtheme/${P}.tar.bz2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
 LICENSE="GPL-2"
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# QA: stop Makefile from stripping the binaries
 	sed -i -e "s:strip:true:" "${S}"/Makefile || die "sed failed"
 	epatch "${FILESDIR}"/${P}-implicit.patch
@@ -37,5 +35,5 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${ED}" install || die "emake install failed"
 }
