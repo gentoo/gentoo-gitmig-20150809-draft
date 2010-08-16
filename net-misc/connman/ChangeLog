@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.15 2010/07/28 11:41:26 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.16 2010/08/16 12:42:55 dagger Exp $
+
+*connman-0.57 (16 Aug 2010)
+
+  16 Aug 2010; Robert Piasek <dagger@gentoo.org> -connman-0.53.ebuild,
+  +connman-0.57.ebuild:
+  Version bump. New version supports static IPv6 configuration among many
+  bug fixes.
 
 *connman-0.55 (28 Jul 2010)
 
