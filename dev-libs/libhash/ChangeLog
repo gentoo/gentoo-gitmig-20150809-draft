@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libhash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.6 2010/05/18 18:50:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/ChangeLog,v 1.7 2010/08/16 00:52:43 jer Exp $
+
+*libhash-1.0.3-r1 (16 Aug 2010)
+
+  16 Aug 2010; Jeroen Roovers <jer@gentoo.org> -libhash-1.0.2.ebuild,
+  +libhash-1.0.3-r1.ebuild:
+  Add SONAME thanks to Nathan Phillip Brink (bug #332937).
 
   18 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libhash-1.0.3.ebuild:
