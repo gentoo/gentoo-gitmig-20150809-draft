@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.121 2010/07/06 00:34:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.122 2010/08/16 23:24:45 jer Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -16,8 +16,7 @@ virtual/commonlisp			dev-lisp/sbcl
 virtual/cron				sys-process/vixie-cron
 virtual/dev-manager			sys-fs/udev
 virtual/dhcpc				net-misc/dhcpcd
-virtual/fam				app-admin/gamin
-virtual/gsasl				net-libs/libgsasl
+virtual/fam					app-admin/gamin
 virtual/gzip				app-arch/gzip
 virtual/imap-c-client		net-libs/c-client
 virtual/imapd				net-mail/courier-imap

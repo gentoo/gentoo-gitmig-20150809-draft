@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.168 2010/08/04 06:30:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.169 2010/08/16 23:24:45 jer Exp $
+
+  16 Aug 2010; Jeroen Roovers <jer@gentoo.org> virtuals:
+  Remove old style virtual/gsasl thanks to peper.
 
   04 Aug 2010; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Use removed from package - sci-visualization/qtiplot xls
