@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.319 2010/08/13 13:53:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.320 2010/08/16 20:13:34 lack Exp $
+
+*gvim-7.3 (16 Aug 2010)
+
+  16 Aug 2010; Jim Ramsay <lack@gentoo.org> +gvim-7.3.ebuild:
+  New release: vim-7.3
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> gvim-7.2.442.ebuild:
   Marked ppc/ppc64 stable for bug #328261.
