@@ -1,6 +1,10 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.54 2010/08/13 14:01:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.55 2010/08/16 19:42:30 ssuominen Exp $
+
+  16 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> atanks-4.6.ebuild,
+  +files/atanks-4.6-glibc212.patch:
+  Fix building with recent glibc wrt #331511 by Diego E. Pettenò.
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> atanks-4.6.ebuild:
   Marked ppc stable for bug #327343.
