@@ -1,0 +1,11 @@
+--- branches/KDE/4.5/kdeutils/ark/plugins/cli7zplugin/cliplugin.cpp	2010/07/20 23:33:28	1152411
++++ branches/KDE/4.5/kdeutils/ark/plugins/cli7zplugin/cliplugin.cpp	2010/07/20 23:34:01	1152412
+@@ -78,7 +78,7 @@
+ 
+ bool CliPlugin::readListLine(const QString& line)
+ {
+-    static const QLatin1String archiveInfoDelimiter("----");
++    static const QLatin1String archiveInfoDelimiter("--");
+     static const QLatin1String entryInfoDelimiter("----------");
+ 
+     switch (m_state) {
