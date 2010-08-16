@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.3 2010/06/17 20:58:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.4 2010/08/16 08:23:24 haubi Exp $
 
 EAPI="2"
 
@@ -44,7 +44,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-qt4-nothread.patch
 	epatch "${FILESDIR}"/${P}-drop-pgsql-header-check.patch
 
-	[[ ${CHOST} == *-winnt* ]] && epatch "${FILESDIR}"/${P}-winnt.patch.bz2
+	if [[ ${CHOST} == *-winnt* ]]; then
+		epatch "${FILESDIR}"/${P}-winnt-coss.patch
+		epatch "${FILESDIR}"/${P}-winnt-other.patch
+	fi
 
 	# cannot use big TOC (AIX only), gdb doesn't like it.
 	# This assumes that the compiler (or -wrapper) uses
