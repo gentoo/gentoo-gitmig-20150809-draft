@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-flat
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.26 2008/03/22 10:28:58 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-flat/ChangeLog,v 1.27 2010/08/16 20:47:49 abcd Exp $
+
+  16 Aug 2010; Jonathan Callen <abcd@gentoo.org>
+  gtk-engines-flat-2.0-r2.ebuild:
+  Transfer prefix keywords, bump to EAPI=3, use slot dep for x11-libs/gtk+
 
   22 Mar 2008; Samuli Suominen <drac@gentoo.org>
   -gtk-engines-flat-0.1.ebuild, -gtk-engines-flat-0.1-r1.ebuild,

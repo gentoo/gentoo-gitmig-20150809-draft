@@ -1,6 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/gtk-engines-rezlooks-0.6.ebuild,v 1.7 2008/12/20 18:58:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/gtk-engines-rezlooks-0.6.ebuild,v 1.8 2010/08/16 20:50:46 abcd Exp $
+
+EAPI=3
+inherit autotools
 
 DESCRIPTION="Rezlooks GTK+ Engine"
 HOMEPAGE="http://www.gnome-look.org/content/show.php?content=39179"
@@ -8,21 +11,29 @@ SRC_URI="http://www.gnome-look.org/content/files/39179-rezlooks-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.8"
+RDEPEND=">=x11-libs/gtk+-2.8:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/rezlooks-${PV}
 
-src_compile() {
+src_prepare() {
+	# automake complains: ChangeLog missing. There however is a Changelog.
+	# to avoid problems with case insensitive fs, move somewhere else first.
+	mv Changelog{,.1}
+	mv Changelog.1 ChangeLog
+
+	eautoreconf # required for interix
+}
+
+src_configure() {
 	econf --disable-dependency-tracking --enable-animation
-	emake || die "make failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS Changelog CREDITS NEWS README
+	dodoc AUTHORS ChangeLog CREDITS NEWS README
 }

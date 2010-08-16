@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-rezlooks
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/ChangeLog,v 1.7 2009/03/20 04:17:52 jmbsvicetto Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/ChangeLog,v 1.8 2010/08/16 20:50:46 abcd Exp $
+
+  16 Aug 2010; Jonathan Callen <abcd@gentoo.org>
+  gtk-engines-rezlooks-0.6.ebuild:
+  Transfer prefix keywords, bump to EAPI=3, use slot dep for x11-libs/gtk+
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
