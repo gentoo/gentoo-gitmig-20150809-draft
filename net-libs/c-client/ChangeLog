@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.62 2010/05/24 14:25:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.63 2010/08/16 21:06:03 jer Exp $
+
+*c-client-2007e-r1 (16 Aug 2010)
+
+  16 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  -files/c-client-2004a-amd64-so-fix.patch, -c-client-2004g.ebuild,
+  -c-client-2004g-r1.ebuild, -files/c-client-2004g_KOLAB_Annotations.patch,
+  -c-client-2006k.ebuild, +c-client-2007e-r1.ebuild,
+  +files/c-client-2007e-ldflags.patch, metadata.xml:
+  Respect LDFLAGS, CC, AR, RANLIB by Olivier Huber (bug #331773). Get rid of
+  the useless patch version variables since they are used only once and
+  obscure casual grep epatch *.ebuild outcome. Install RFCs only when
+  USE=doc.
 
   24 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove wrobel from metadata.xml (#111816)
