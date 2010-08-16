@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aumix
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.72 2010/07/24 16:10:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.73 2010/08/16 02:57:02 jer Exp $
+
+  16 Aug 2010; Jeroen Roovers <jer@gentoo.org> aumix-2.9.1.ebuild:
+  Stable for HPPA (bug #327853).
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> aumix-2.9.1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #327853
