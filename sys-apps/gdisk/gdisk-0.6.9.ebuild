@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/gdisk-0.6.8-r1.ebuild,v 1.1 2010/06/14 21:06:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/gdisk-0.6.9.ebuild,v 1.1 2010/08/16 17:35:41 alexxy Exp $
 
 EAPI="3"
 
