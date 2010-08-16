@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.5.ebuild,v 1.7 2010/06/12 13:48:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.5.ebuild,v 1.8 2010/08/16 19:44:59 abcd Exp $
 
-EAPI=2
+EAPI=3
 
 inherit autotools elisp-common eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="debug emacs +history +xft"
 
 DEPEND="x11-libs/libXinerama
@@ -62,7 +62,7 @@ src_install() {
 	dodoc contrib/{genrpbindings,split.sh} \
 		doc/{ipaq.ratpoisonrc,sample.ratpoisonrc}
 
-	rm -rf "${D}/usr/share/"{doc/ratpoison,ratpoison}
+	rm -rf "${ED}/usr/share/"{doc/ratpoison,ratpoison}
 
 	if use emacs; then
 		elisp-install ${PN} contrib/ratpoison.*
