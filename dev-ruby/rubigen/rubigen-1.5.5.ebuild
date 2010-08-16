@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/rubigen-1.5.5.ebuild,v 1.1 2010/05/26 05:51:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/rubigen-1.5.5.ebuild,v 1.2 2010/08/16 11:44:58 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -31,6 +31,7 @@ ruby_add_bdepend "test? (
 	>=dev-ruby/hoe-2.5.0
 	=${CATEGORY}/${PF}
 	virtual/ruby-test-unit
+	!dev-ruby/test-unit:2
 )"
 
 ruby_add_rdepend "=dev-ruby/activesupport-2.3*"
