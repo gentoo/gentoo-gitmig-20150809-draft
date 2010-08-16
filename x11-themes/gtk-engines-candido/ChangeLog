@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-candido
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-candido/ChangeLog,v 1.3 2008/12/18 10:38:13 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-candido/ChangeLog,v 1.4 2010/08/16 20:33:35 abcd Exp $
+
+  16 Aug 2010; Jonathan Callen <abcd@gentoo.org>
+  gtk-engines-candido-0.9.1.ebuild:
+  Transfer prefix keywords, bump to EAPI=3, use slot dep for x11-libs/gtk+
 
   18 Dec 2008; <ssuominen@gentoo.org> gtk-engines-candido-0.9.1.ebuild:
   x86 stable by request of Josh Saddler (nightmorph)

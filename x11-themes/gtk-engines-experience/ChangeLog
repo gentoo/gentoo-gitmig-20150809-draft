@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-experience
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/ChangeLog,v 1.20 2007/07/28 23:06:30 leio Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/ChangeLog,v 1.21 2010/08/16 20:39:51 abcd Exp $
+
+  16 Aug 2010; Jonathan Callen <abcd@gentoo.org>
+  gtk-engines-experience-0.10.4.ebuild:
+  Transfer prefix keywords, bump to EAPI=3, use slot dep for x11-libs/gtk+
 
   28 Jul 2007; Mart Raudsepp <leio@gentoo.org>
   -gtk-engines-experience-0.10.3.ebuild:
