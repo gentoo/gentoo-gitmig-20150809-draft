@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.11 2009/08/03 10:24:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.12 2010/08/16 19:43:13 abcd Exp $
 
 EAPI="2"
-inherit eutils
+inherit eutils prefix
 
 IUSE="nls xinerama truetype kde gnome imlib disableslit disabletoolbar"
 
@@ -42,6 +42,7 @@ src_prepare() {
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
 	epatch "${FILESDIR}/${PV}/gentoo_style_location.patch"
+	eprefixify util/fluxbox-generate_menu.in
 
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then

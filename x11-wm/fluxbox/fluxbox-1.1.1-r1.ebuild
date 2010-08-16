@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.1-r1.ebuild,v 1.7 2009/07/19 14:46:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.1-r1.ebuild,v 1.8 2010/08/16 19:43:13 abcd Exp $
 
-EAPI="2"
-inherit eutils
+EAPI="3"
+inherit eutils prefix
 
 IUSE="nls xinerama truetype gnome +imlib +slit +toolbar vim-syntax"
 
@@ -36,13 +36,16 @@ PROVIDE="virtual/blackbox"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
 
 src_prepare() {
 	# We need to be able to include directories rather than just plain
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
 	epatch "${FILESDIR}/gentoo_style_location-1.1.x.patch"
+	eprefixify util/fluxbox-generate_menu.in
+
+	epatch "${FILESDIR}"/${P}-osx-has-otool.patch
 
 	# Patch to handle a broken key file gracefully, #263379
 	epatch "${FILESDIR}/macrocmd-crash-1.1.1.patch"
@@ -73,8 +76,8 @@ src_configure() {
 		$(use_enable imlib imlib2) \
 		$(use_enable slit ) \
 		$(use_enable toolbar ) \
-		--sysconfdir=/etc/X11/${PN} \
-		--with-style=/usr/share/fluxbox/styles/Emerge \
+		--sysconfdir="${EPREFIX}"/etc/X11/${PN} \
+		--with-style="${EPREFIX}"/usr/share/fluxbox/styles/Emerge \
 		${myconf}
 }
 

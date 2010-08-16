@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.275 2010/05/29 15:01:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.276 2010/08/16 19:43:13 abcd Exp $
+
+  16 Aug 2010; Jonathan Callen <abcd@gentoo.org> fluxbox-1.0.0.ebuild,
+  +files/fluxbox-1.0.0-interix.patch,
+  files/1.1.0.1/gentoo_style_location.patch, fluxbox-1.0.0-r2.ebuild,
+  fluxbox-1.1.0.1.ebuild, fluxbox-1.1.1-r1.ebuild, fluxbox-1.1.1-r2.ebuild,
+  +files/fluxbox-1.1.1-osx-has-otool.patch,
+  files/gentoo_style_location-1.1.x.patch, fluxbox-9999.ebuild,
+  files/1.0.0/gentoo_style_location.patch:
+  Transfer prefix support from overlay: add prefix keywords, switch to
+  EAPI-3, edit patches to use @GENTOO_PORTAGE_PREFIX@ and run eprefixify,
+  add extra patches for Mac OS X and Interix
 
 *fluxbox-1.1.1-r2 (29 May 2010)
 

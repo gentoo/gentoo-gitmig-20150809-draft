@@ -13,7 +13,7 @@ index aca8b08..b229046 100755
 -    append_menu "[submenu] (${USERSTYLES}) {${STYLEMENUTITLE}}"
 -        append "[stylesdir] (~/.@pkgprefix@fluxbox@pkgsuffix@/styles)"
 +    append_submenu "Styles"
-+        append "[include] (/usr/share/fluxbox/menu.d/styles/)"
++        append "[include] (@GENTOO_PORTAGE_EPREFIX@/usr/share/fluxbox/menu.d/styles/)"
      append_menu_end
  
      # Backgroundmenu
