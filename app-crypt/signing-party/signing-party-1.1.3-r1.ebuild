@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r1.ebuild,v 1.1 2010/08/17 00:04:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r1.ebuild,v 1.2 2010/08/17 15:10:35 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -82,7 +82,7 @@ src_install() {
 	dodoc keyanalyze/{README,ChangeLog}
 	# See app-crypt/keylookup instead
 	#dobin keylookup/keylookup
-	#docinto keylookup 
+	#docinto keylookup
 	#dodoc keylookup/NEWS
 	# sig2dot
 	dobin sig2dot/sig2dot
