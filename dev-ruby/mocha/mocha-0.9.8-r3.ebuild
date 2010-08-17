@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.9.8-r3.ebuild,v 1.1 2010/08/16 22:36:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.9.8-r3.ebuild,v 1.2 2010/08/17 13:39:14 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -16,7 +16,7 @@ DESCRIPTION="A Ruby library for mocking and stubbing using a syntax like that of
 HOMEPAGE="http://mocha.rubyforge.org/"
 
 SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~flameeyes/patches/${PN}/${P}+ruby-1.9.2.patch.bz2"
+	http://dev.gentoo.org/~flameeyes/patches/${PN}/${P}+ruby-1.9.2-r2.patch.bz2"
 
 LICENSE="MIT"
 SLOT="0"
