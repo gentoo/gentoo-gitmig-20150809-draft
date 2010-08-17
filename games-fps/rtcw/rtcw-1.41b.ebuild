@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.11 2010/02/11 23:51:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.12 2010/08/17 07:13:08 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -56,11 +56,19 @@ src_install() {
 
 	games_make_wrapper rtcwmp ./wolf.x86 "${dir}" "${dir}"
 	games_make_wrapper rtcwsp ./wolfsp.x86 "${dir}" "${dir}"
+	# work around buggy video driver (bug #326837)
+	sed -i \
+		-e 's/^exec /__GL_ExtensionStringVersion=17700 exec /' \
+		"${D}/${GAMES_BINDIR}/rtcwsp" \
+		|| die
 
 	if use dedicated; then
 		games_make_wrapper wolf-ded ./wolfded.x86 "${dir}" "${dir}"
 		newinitd "${FILESDIR}"/wolf-ded.rc wolf-ded
-		dosed "s:GENTOO_DIR:${dir}:" /etc/init.d/wolf-ded
+		sed -i \
+			-e "s:GENTOO_DIR:${dir}:" \
+			"${D}"/etc/init.d/wolf-ded \
+			|| die
 	fi
 
 	insinto ${dir}
