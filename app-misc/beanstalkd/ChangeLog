@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beanstalkd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.17 2010/08/01 14:08:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.18 2010/08/17 08:03:12 fauli Exp $
+
+  17 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  beanstalkd-1.4.6.ebuild:
+  stable x86, security bug 322457
 
   01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   beanstalkd-1.4.6.ebuild:
