@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.1-r2.ebuild,v 1.3 2010/01/22 16:50:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.0.1-r2.ebuild,v 1.4 2010/08/17 05:12:04 abcd Exp $
 
-EAPI=1
+EAPI=3
 inherit flag-o-matic
 
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.afterstep.org/apps/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="background cjk xgetdefault"
 
 RDEPEND="media-libs/jpeg:0
@@ -25,10 +25,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Security bug #219746
 	epatch "${FILESDIR}/${P}-display-security-issue.patch"
 	epatch "${FILESDIR}"/${P}-deadkeys.patch
@@ -38,7 +35,7 @@ src_unpack() {
 	failed"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	use cjk && myconf="$myconf
@@ -46,21 +43,23 @@ src_compile() {
 		--enable-thai
 		--enable-big5"
 
+	case "${CHOST}" in
+		*-darwin*) myconf="${myconf} --enable-wtmp" ;;
+		*-interix*) ;;
+		*) myconf="${myconf} --enable-utmp --enable-wtmp"
+	esac
+
 	econf \
 		$(use_enable xgetdefault) \
 		$(use_enable background background-image) \
-		--with-terminfo=/usr/share/terminfo \
+		--with-terminfo="${EPREFIX}"/usr/share/terminfo \
 		--enable-transparency \
 		--enable-fading \
 		--enable-background-image \
 		--enable-menubar \
 		--enable-graphics \
-		--enable-utmp \
-		--enable-wtmp \
 		--with-x \
-		${myconf} || die "econf failed"
-
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
