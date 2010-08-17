@@ -3,7 +3,9 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
-    <flag name="html">Install HTML documentation</flag>
+	  <flag name="html">Install HTML documentation, requires
+		  <pkg>dev-python/docutils</pkg></flag>
     <flag name="unique">Optional libunique support</flag>
+    <flag name="vala">Optional vala support</flag>
   </use>
 </pkgmetadata>
