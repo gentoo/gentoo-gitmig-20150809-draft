@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.159 2010/08/10 16:41:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.160 2010/08/17 18:22:23 hwoarang Exp $
+
+  17 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  libevent-1.4.14b.ebuild:
+  Stable on amd64 wrt bug #331541
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> libevent-1.4.14b.ebuild:
   Stable for HPPA (bug #331541).
