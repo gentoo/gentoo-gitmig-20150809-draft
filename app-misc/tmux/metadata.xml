@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>shell-tools</herd>
 	<maintainer>
-		<email>tcunha@gentoo.org</email>
+		<email>wired@gentoo.org</email>
+		<name>Alex Alexander</name>
 	</maintainer>
 	<longdescription>
 		tmux is a "terminal multiplexer", it enables a number of terminals
