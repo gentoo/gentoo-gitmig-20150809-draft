@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-9999.ebuild,v 1.2 2010/01/03 15:57:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-9999.ebuild,v 1.3 2010/08/17 23:37:23 jer Exp $
 
 EAPI="2"
 
-inherit eutils autotools cvs
+inherit autotools cvs eutils toolchain-funcs
 
 ECVS_SERVER="nvclock.cvs.sourceforge.net:/cvsroot/nvclock"
 ECVS_MODULE="nvclock"
@@ -28,9 +28,19 @@ S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	eautoreconf
+	sed -i \
+		-e 's|^CC=|CC?=|g' \
+		-e 's|^CFLAGS=|CFLAGS+=|g' \
+		-e '/-o .* /s|-o |$(LDFLAGS) -o |g' \
+		$( find . -name Makefile.in ) \
+		|| die "Fixing compiler flags"
+	sed -i src/Makefile.in \
+		-e '/LIBS=@X11_LIBS@/{s|@X11_LIBS@||g;s|-lnvcontrol|& @X11_LIBS@|g}' \
+		|| die "Fixing Makefile.in"
 }
 
 src_configure() {
+	tc-export CC
 	econf --disable-qt $(use_enable gtk) || die "econf failed"
 }
 

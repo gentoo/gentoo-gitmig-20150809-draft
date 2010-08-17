@@ -6,7 +6,7 @@
 		<email>jer@gentoo.org</email>
 		<name>Jeroen Roovers</name>
 	</maintainer>
-	<longdescription lang="en">
-		A utility for overclocking NVidia based video cards.
-	</longdescription>
+	<use>
+		<flag name="gtk">Install the GTK+ based graphical interface</flag>
+	</use>
 </pkgmetadata>
