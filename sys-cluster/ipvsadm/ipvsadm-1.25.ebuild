@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.25.ebuild,v 1.3 2009/11/21 21:59:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.25.ebuild,v 1.4 2010/08/17 21:36:00 swegener Exp $
 
 EAPI=2
 inherit linux-info toolchain-funcs eutils
@@ -27,6 +27,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/ipvsadm-1.25-build-fixup.diff
+	epatch "${FILESDIR}"/ipvsadm-1.25-netlink-conns.diff
 }
 
 src_compile() {
