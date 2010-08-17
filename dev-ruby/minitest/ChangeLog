@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.20 2010/07/24 17:01:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.21 2010/08/17 00:25:35 jer Exp $
+
+  17 Aug 2010; Jeroen Roovers <jer@gentoo.org> minitest-1.5.0.ebuild:
+  Stable for HPPA (bug #321043).
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org> minitest-1.5.0.ebuild:
   ia64/sparc stable wrt #321043
