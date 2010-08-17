@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.4 2010/02/26 19:16:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.5 2010/08/17 07:16:15 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Digital video jukebox (PVR, DVR)."
 HOMEPAGE="http://www.freevo.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="directfb cdparanoia doc dvd encode fbcon flac gphoto2 jpeg lame lirc matrox mixer nls snes sqlite tv tvtime vorbis xine xmame X"
+IUSE="directfb cdparanoia doc dvd encode fbcon flac gphoto2 jpeg lame lirc matrox mixer nls sqlite tv tvtime vorbis xine X"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -48,13 +48,11 @@ RDEPEND=">=dev-lang/python-2.5[xml]
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
 	matrox? ( >=media-video/matroxset-0.3 )
 	mixer? ( media-sound/aumix )
-	snes? ( || ( games-emulation/zsnes games-emulation/snes9x ) )
 	sqlite? ( ~dev-python/pysqlite-1.0.1 )
 	tv? (	media-tv/xmltv
 		tvtime? ( media-tv/tvtime ) )
 	xine? ( media-video/xine-ui )
-	vorbis? ( media-sound/vorbis-tools )
-	xmame? ( games-emulation/xmame )"
+	vorbis? ( media-sound/vorbis-tools )"
 
 pkg_setup() {
 	if ! { use X || use directfb || use fbcon || use matrox ; } ; then

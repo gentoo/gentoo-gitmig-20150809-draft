@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/freevo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.66 2010/01/18 15:49:51 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.67 2010/08/17 07:16:15 mr_bones_ Exp $
+
+  17 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> freevo-1.9.0.ebuild,
+  metadata.xml:
+  Decouple freevo from games packages to avoid the situation described in
+  bug #329817
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Dropping maintenance
