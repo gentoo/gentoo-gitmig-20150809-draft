@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16.ebuild,v 1.1 2009/09/18 14:49:12 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r2.ebuild,v 1.1 2010/08/17 19:47:55 tommy Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ RDEPEND="|| ( >=sys-fs/lvm2-2.02.45
 		sys-fs/device-mapper )
 	selinux? ( sys-libs/libselinux
 		   sys-libs/libsepol )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	static? ( dev-util/pkgconfig )"
 
 S=${WORKDIR}/${PN}/${MY_PV}
 
@@ -39,8 +40,16 @@ pkg_setup() {
 
 src_prepare() {
 	epatch	"${FILESDIR}"/${P}-undo-p-rename.patch \
+		"${FILESDIR}"/${P}-return-all-sets.patch \
 		"${FILESDIR}"/${PN}-destdir-fix.patch \
-		"${FILESDIR}"/${P}-as-needed.patch
+		"${FILESDIR}"/${P}-as-needed2.patch
+
+	if use static; then
+		local myflags
+		myflags=`/usr/bin/pkg-config --libs --static devmapper`
+		sed -i -e "s#^LIBS += -ldl#LIBS += -ldl $myflags#" \
+			tools/Makefile.in || die "sed failed"
+	fi
 
 	# archive the patched source for use with genkernel
 	cd "${WORKDIR}"
