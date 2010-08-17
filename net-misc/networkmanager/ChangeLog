@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.78 2010/08/17 14:28:56 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.79 2010/08/17 14:39:36 dagger Exp $
+
+*networkmanager-0.8.1-r3 (17 Aug 2010)
+
+  17 Aug 2010; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-0.8.1-r2.ebuild, +networkmanager-0.8.1-r3.ebuild:
+  NM now depends on ppp-2.4.5. Fixed bug #330665
 
 *networkmanager-0.8.1-r2 (17 Aug 2010)
 
