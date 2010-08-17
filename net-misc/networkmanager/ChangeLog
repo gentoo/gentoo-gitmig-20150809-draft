@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.77 2010/08/13 07:15:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.78 2010/08/17 14:28:56 dagger Exp $
+
+*networkmanager-0.8.1-r2 (17 Aug 2010)
+
+  17 Aug 2010; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-0.8.1-r1.ebuild, +networkmanager-0.8.1-r2.ebuild,
+  +files/networkmanager-0.8.1-CVE-2010-1172.patch,
+  +files/networkmanager-0.8.1-dhclient3.patch,
+  files/networkmanager-0.8.1-dhcp-configure.patch,
+  +files/networkmanager-0.8.1-glib-2.25.12-workaround.patch,
+  files/nm-system-settings.conf:
+  Gentoo specyfic plugin is now enabled by default!
+  Backported some patches. This should fix bugs #331509, #331547, #332157
 
   13 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   networkmanager-0.8-r1.ebuild:

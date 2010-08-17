@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r1.ebuild,v 1.1 2010/08/04 12:05:53 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r2.ebuild,v 1.1 2010/08/17 14:28:56 dagger Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 SRC_URI="${SRC_URI//${PN}/${MY_PN}}
-	http://dev.gentoo.org/~dagger/files/${PN}-ifnet.patch"
+	http://dev.gentoo.org/~dagger/files/${PN}-ifnet-308267b4.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -55,14 +55,20 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+
+	# Gentoo system-plugin
+	epatch "${DISTDIR}/${PN}-ifnet-308267b4.patch"
+
 	# Fix up the dbus conf file to use plugdev group
 	epatch "${FILESDIR}/${P}-confchanges.patch"
 
 	# Fix problems with dhcpcd/dhclient (bug #330319)
 	epatch "${FILESDIR}/${P}-dhcp-configure.patch"
 
-	# Gentoo system-plugin
-	epatch "${DISTDIR}/${PN}-ifnet.patch"
+	# Backport some important patches
+	epatch "${FILESDIR}/${P}-CVE-2010-1172.patch"
+	epatch "${FILESDIR}/${P}-glib-2.25.12-workaround.patch"
+	epatch "${FILESDIR}/${P}-dhclient3.patch"
 
 	eautoreconf
 }
