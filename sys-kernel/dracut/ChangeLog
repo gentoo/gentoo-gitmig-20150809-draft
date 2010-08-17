@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.5 2010/07/07 05:32:16 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.6 2010/08/17 18:23:40 ramereth Exp $
+
+*dracut-007 (17 Aug 2010)
+*dracut-006-r1 (17 Aug 2010)
+
+  17 Aug 2010; Lance Albertson <ramereth@gentoo.org> +dracut-006-r1.ebuild,
+  +files/dracut-006-console_init-not-necessary.patch,
+  +files/dracut-006-dm-udev-rules.patch, +dracut-007.ebuild,
+  +files/dracut-007-dm-udev-rules.patch,
+  +files/dracut-007-multipath-udev-rules.patch, metadata.xml:
+  Version bump and revision update
+
+  Update 006 with patches from #329003, bump to 007 to resolve #331903.
+  Thanks to Amadeusz Żołnowski for contributing the ebuilds and patches.
 
 *dracut-006 (07 Jul 2010)
 

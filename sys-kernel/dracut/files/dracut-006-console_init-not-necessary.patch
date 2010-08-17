@@ -1,0 +1,26 @@
+From 9d6ec99daf852a429262c46639558823bf937eab Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Amadeusz=20=C5=BBo=C5=82nowski?= <aidecoe@aidecoe.name>
+Date: Sat, 10 Jul 2010 22:54:59 +0200
+Subject: [PATCH] 50plymouth: calling console_init isn't necessary
+
+---
+ modules.d/50plymouth/plymouth-pretrigger.sh |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/modules.d/50plymouth/plymouth-pretrigger.sh b/modules.d/50plymouth/plymouth-pretrigger.sh
+index 8605c61..6bf7f2a 100755
+--- a/modules.d/50plymouth/plymouth-pretrigger.sh
++++ b/modules.d/50plymouth/plymouth-pretrigger.sh
+@@ -15,7 +15,8 @@ if ! getarg rd_NO_PLYMOUTH; then
+ 
+     info "Starting plymouth daemon"
+     [ -x /bin/plymouthd ] && /bin/plymouthd --attach-to-session
+-    /lib/udev/console_init tty0
++    # Workaround for 006.  To be restored in next release.
++    #/lib/udev/console_init tty0
+     /bin/plymouth --show-splash 2>&1 | vinfo
+ fi
+ 
+-- 
+1.7.1
+
