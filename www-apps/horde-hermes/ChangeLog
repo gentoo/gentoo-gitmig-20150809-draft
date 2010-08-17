@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/horde-hermes
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-hermes/ChangeLog,v 1.1 2010/08/17 18:51:20 a3li Exp $
+
+*horde-hermes-1.0.1 (17 Aug 2010)
+
+  17 Aug 2010; Alex Legler <a3li@gentoo.org> +horde-hermes-1.0.1.ebuild,
+  +metadata.xml:
+  Adding hermes, the Horde time-tracking application. Ebuild by me.
+
