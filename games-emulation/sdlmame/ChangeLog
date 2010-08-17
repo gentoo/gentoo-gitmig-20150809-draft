@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.29 2010/05/22 15:06:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.30 2010/08/17 19:58:21 mr_bones_ Exp $
+
+  17 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> sdlmame-0.136.ebuild,
+  +files/sdlmame-0.136-nodebug.patch:
+  add debug use flag (bug #333219) - patch from Martin Väth
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> sdlmame-0.136.ebuild:
   stable amd64, bug 303487

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.136.ebuild,v 1.4 2010/05/22 15:06:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.136.ebuild,v 1.5 2010/08/17 19:58:21 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -18,13 +18,15 @@ SRC_URI="mirror://gentoo/${MY_P}.zip
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="opengl"
+IUSE="opengl debug"
 
 RDEPEND=">=media-libs/libsdl-1.2.10[audio,joystick,opengl?,video]
 	dev-libs/expat
 	x11-libs/libXinerama
-	x11-libs/gtk+:2
-	gnome-base/gconf:2"
+	debug? (
+		x11-libs/gtk+:2
+		gnome-base/gconf
+	)"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	x11-proto/xineramaproto"
@@ -68,6 +70,11 @@ src_prepare() {
 	if use ppc; then
 		einfo "Enabling PPC support"
 		enable_feature BIGENDIAN
+	fi
+
+	if ! use debug; then
+		einfo "Disabling Debugging"
+		epatch "${FILESDIR}"/${P}-nodebug.patch
 	fi
 }
 
