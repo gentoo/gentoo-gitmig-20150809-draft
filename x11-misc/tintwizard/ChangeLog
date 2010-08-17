@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/tintwizard
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.5 2010/07/02 13:10:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.6 2010/08/17 18:15:35 hwoarang Exp $
+
+  17 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  tintwizard-0.3.4-r1.ebuild:
+  Stable on amd64 wrt bug #333149
 
 *tintwizard-0.3.4-r1 (02 Jul 2010)
 
