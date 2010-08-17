@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/dnsproxy-1.16.ebuild,v 1.1 2010/08/07 16:18:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/dnsproxy-1.16.ebuild,v 1.2 2010/08/17 00:43:50 flameeyes Exp $
 
 DESCRIPTION="The dnsproxy daemon is a proxy for DNS queries"
 HOMEPAGE="http://www.wolfermann.org/dnsproxy.html"
@@ -15,7 +15,7 @@ DEPEND="dev-libs/libevent"
 
 src_compile() {
 	econf --with-native-libevent || die "econf failed"
-	make dnsproxy || die "make failed"
+	emake dnsproxy || die "make failed"
 }
 
 src_install() {
