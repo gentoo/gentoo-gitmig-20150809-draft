@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.136.ebuild,v 1.5 2010/08/17 19:58:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.136.ebuild,v 1.6 2010/08/17 19:59:29 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${MY_P}.zip
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="opengl debug"
+IUSE="debug opengl"
 
 RDEPEND=">=media-libs/libsdl-1.2.10[audio,joystick,opengl?,video]
 	dev-libs/expat
