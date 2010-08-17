@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.5.ebuild,v 1.2 2010/06/22 20:05:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.5.ebuild,v 1.3 2010/08/17 19:20:50 ssuominen Exp $
 
 EAPI="2"
 
-inherit autotools linux-mod
+inherit autotools eutils linux-mod
 
 DESCRIPTION="a Linux file system driver that allows you to mount a WebDAV server as a local disk drive. Davfs2 uses fuse (or coda) for kernel driver and neon for WebDAV interface"
 HOMEPAGE="http://savannah.nongnu.org/projects/davfs2"
@@ -22,6 +22,7 @@ DEPEND="dev-libs/libxml2
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-glibc212.patch
 	sed -e "s/^NE_REQUIRE_VERSIONS.*29/& 30/" -i configure.ac
 	eautoreconf
 }
