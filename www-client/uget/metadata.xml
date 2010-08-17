@@ -12,4 +12,7 @@ them, and allows you to import URLs from HTML files. Every category has an
 independent configuration that can be inherited by each download in that
 category.
 </longdescription>
+<use>
+	<flag name='hide-temp-files'>Make temporary files that are used while downloading hidden.</flag>
+</use>
 </pkgmetadata>
