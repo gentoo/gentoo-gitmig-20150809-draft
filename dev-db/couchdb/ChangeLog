@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.32 2010/07/18 21:36:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.33 2010/08/17 06:30:51 djc Exp $
+
+*couchdb-1.0.1 (17 Aug 2010)
+
+  17 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.0.1.ebuild:
+  Version bump to 1.0.1, doesn't have data loss bug (bug 331811).
 
   18 Jul 2010; Jeroen Roovers <jer@gentoo.org> couchdb-0.11.0-r1.ebuild:
   Stable for PPC (bug #327877).
