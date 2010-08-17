@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.708 2010/08/15 03:12:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.709 2010/08/17 01:05:30 vapier Exp $
+
+  17 Aug 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.11.2.ebuild:
+  Add ~mips per #297452.
 
   15 Aug 2010; Mike Frysinger <vapier@gentoo.org> glibc-2.12.1.ebuild:
   Move into unstable.
