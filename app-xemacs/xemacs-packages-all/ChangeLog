@@ -1,6 +1,13 @@
 # ChangeLog for app-xemacs/xemacs-packages-all
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.11 2009/02/07 15:51:08 fauli Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.12 2010/08/17 08:33:36 graaff Exp $
+
+*xemacs-packages-all-2010.07.29 (13 Aug 2010)
+
+  13 Aug 2010; Hans de Graaff <graaff@gentoo.org>
+  +xemacs-packages-all-2010.07.29.ebuild:
+  Version bump. Drop alpha, ppc, sparc, x86 keywords due to new unkeyworded
+  packages, bug 332607.
 
   07 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -xemacs-packages-all-2007.04.27.ebuild:
