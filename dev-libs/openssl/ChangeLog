@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.343 2010/08/14 05:53:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.344 2010/08/17 04:10:10 vapier Exp $
+
+  17 Aug 2010; Mike Frysinger <vapier@gentoo.org> openssl-1.0.0a-r1.ebuild:
+  Automatically rehash ssl certs for people #333069.
 
 *openssl-0.9.8o-r2 (14 Aug 2010)
 
