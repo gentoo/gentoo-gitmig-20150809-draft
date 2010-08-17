@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2_rc2.ebuild,v 1.5 2010/08/16 23:48:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2_rc2.ebuild,v 1.6 2010/08/17 15:57:31 flameeyes Exp $
 
 EAPI=2
 
@@ -167,9 +167,6 @@ src_install() {
 	export LD_LIBRARY_PATH RUBYLIB
 
 	emake DESTDIR="${D}" install || die "make install failed"
-
-	keepdir $(${MINIRUBY} -rrbconfig -e "print Config::CONFIG['sitelibdir']")
-	keepdir $(${MINIRUBY} -rrbconfig -e "print Config::CONFIG['sitearchdir']")
 
 	if use doc; then
 		make DESTDIR="${D}" install-doc || die "make install-doc failed"
