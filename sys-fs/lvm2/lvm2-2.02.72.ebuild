@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.72.ebuild,v 1.2 2010/08/04 07:56:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.72.ebuild,v 1.3 2010/08/17 18:44:22 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -76,6 +76,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.70-locale-muck.patch
 	# --as-needed
 	epatch "${FILESDIR}"/${PN}-2.02.70-asneeded.patch
+	# bug 332905
+	epatch "${FILESDIR}"/${PN}-2.02.72-dynamic-static-ldflags.patch
 
 	eautoreconf
 }
