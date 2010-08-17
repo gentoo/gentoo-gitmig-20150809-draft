@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.115 2010/08/15 23:56:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.116 2010/08/17 17:43:02 hwoarang Exp $
+
+  17 Aug 2010; Markos Chandras <hwoarang@gentoo.org> pax-utils-0.2.1.ebuild:
+  Stable on amd64 wrt bug #332811
 
   15 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pax-utils-0.2.1.ebuild:
