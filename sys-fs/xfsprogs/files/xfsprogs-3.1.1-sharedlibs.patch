@@ -1,8 +1,74 @@
-diff --git a/Makefile b/Makefile
-index 83d1b0a..3e4217d 100644
---- a/Makefile
-+++ b/Makefile
-@@ -66,6 +66,7 @@ io: libxcmd libhandle
+ripped from PLD Linux
+
+--- xfsprogs-3.1.2/libdisk/Makefile
++++ xfsprogs-3.1.2/libdisk/Makefile
+@@ -25,8 +25,10 @@
+ include $(BUILDRULES)
+ 
+ install: default
++	$(INSTALL_LTLIB)
+ 
+ install-dev: default
++	$(INSTALL_LTLIB_DEV)
+ 
+ install-qa: install-dev
+ 
+--- xfsprogs-3.1.2/libxcmd/Makefile
++++ xfsprogs-3.1.2/libxcmd/Makefile
+@@ -32,6 +32,12 @@
+ 
+ include $(BUILDRULES)
+ 
+-install install-dev install-qa: default
++install: default
++	$(INSTALL_LTLIB)
++
++install-dev: default
++	$(INSTALL_LTLIB_DEV)
++
++install-qa: default
+ 
+ -include .dep
+--- xfsprogs-3.1.2/libxfs/Makefile
++++ xfsprogs-3.1.2/libxfs/Makefile
+@@ -41,7 +41,9 @@
+ include $(BUILDRULES)
+ 
+ install: default
++	$(INSTALL_LTLIB_ROOT)
+ 
+ install-dev: default
++	$(INSTALL_LTLIB_DEV)
+ 
+ install-qa: default
+--- xfsprogs-3.1.2/libxlog/Makefile
++++ xfsprogs-3.1.2/libxlog/Makefile
+@@ -12,6 +12,8 @@
+ 
+ CFILES = xfs_log_recover.c util.c
+ 
++LTLIBS = $(LIBUUID) $(LIBXFS)
++
+ # don't want to link xfs_repair with a debug libxlog.
+ DEBUG = -DNDEBUG
+ 
+@@ -19,6 +21,12 @@
+ 
+ include $(BUILDRULES)
+ 
+-install install-dev install-qa: default
++install: default
++	$(INSTALL_LTLIB_ROOT)
++
++install-dev: default
++	$(INSTALL_LTLIB_DEV)
++
++install-qa: default
+ 
+ -include .dep
+--- xfsprogs-3.1.2/Makefile
++++ xfsprogs-3.1.2/Makefile
+@@ -66,6 +66,7 @@
  mkfs: libxfs
  quota: libxcmd
  repair: libxfs libxlog
@@ -10,11 +76,27 @@ index 83d1b0a..3e4217d 100644
  
  ifneq ($(ENABLE_BLKID), yes)
  mkfs: libdisk
-diff --git a/include/buildmacros b/include/buildmacros
-index 62babca..0a3c5ba 100644
---- a/include/buildmacros
-+++ b/include/buildmacros
-@@ -71,17 +71,9 @@ endif
+--- xfsprogs-3.1.2/include/buildmacros
++++ xfsprogs-3.1.2/include/buildmacros
+@@ -56,11 +56,13 @@
+ endif
+ 
+ ifeq ($(ENABLE_SHARED),yes)
+-INSTALL_LTLIB = \
++_INSTALL_LTLIB = \
+ 	cd $(TOPDIR)/$(LIBNAME)/.libs; \
+-	../$(INSTALL) -m 755 -d $(PKG_ROOT_LIB_DIR); \
+-	../$(INSTALL) -m 644 -T so_dot_version $(LIBNAME).lai $(PKG_ROOT_LIB_DIR); \
+-	../$(INSTALL) -T so_dot_current $(LIBNAME).lai $(PKG_ROOT_LIB_DIR)
++	../$(INSTALL) -m 755 -d $(1); \
++	../$(INSTALL) -m 644 -T so_dot_version $(LIBNAME).lai $(1); \
++	../$(INSTALL) -T so_dot_current $(LIBNAME).lai $(1)
++INSTALL_LTLIB_ROOT = $(call _INSTALL_LTLIB,$(PKG_ROOT_LIB_DIR))
++INSTALL_LTLIB = $(call _INSTALL_LTLIB,$(PKG_LIB_DIR))
+ endif
+ 
+ # Libtool thinks the static and shared libs should be in the same dir, so
+@@ -71,17 +71,9 @@
  # /usr/lib.
  ifeq ($(ENABLE_SHARED),yes)
  INSTALL_LTLIB_DEV = \
@@ -35,78 +117,3 @@ index 62babca..0a3c5ba 100644
  else
  INSTALL_LTLIB_DEV = $(INSTALL_LTLIB_STATIC)
  endif
-diff --git a/libdisk/Makefile b/libdisk/Makefile
-index 32416a5..7a144c0 100644
---- a/libdisk/Makefile
-+++ b/libdisk/Makefile
-@@ -25,8 +25,10 @@ default: ltdepend $(LTLIBRARY)
- include $(BUILDRULES)
- 
- install: default
-+	$(INSTALL_LTLIB)
- 
- install-dev: default
-+	$(INSTALL_LTLIB_DEV)
- 
- install-qa: install-dev
- 
-diff --git a/libxcmd/Makefile b/libxcmd/Makefile
-index 60b6f9e..38e53a6 100644
---- a/libxcmd/Makefile
-+++ b/libxcmd/Makefile
-@@ -32,6 +32,12 @@ default: ltdepend $(LTLIBRARY)
- 
- include $(BUILDRULES)
- 
--install install-dev install-qa: default
-+install: default
-+	$(INSTALL_LTLIB)
-+
-+install-dev: default
-+	$(INSTALL_LTLIB_DEV)
-+
-+install-qa: default
- 
- -include .dep
-diff --git a/libxfs/Makefile b/libxfs/Makefile
-index 8f80cdc..fcba668 100644
---- a/libxfs/Makefile
-+++ b/libxfs/Makefile
-@@ -41,8 +41,10 @@ default: ltdepend $(LTLIBRARY)
- include $(BUILDRULES)
- 
- install: default
-+	$(INSTALL_LTLIB)
- 
- install-dev: default
-+	$(INSTALL_LTLIB_DEV)
- 
- install-qa: default
- 
-diff --git a/libxlog/Makefile b/libxlog/Makefile
-index 7358fb1..666ea77 100644
---- a/libxlog/Makefile
-+++ b/libxlog/Makefile
-@@ -12,6 +12,8 @@ LT_AGE = 0
- 
- CFILES = xfs_log_recover.c util.c
- 
-+LTLIBS = $(LIBUUID) $(LIBXFS)
-+
- # don't want to link xfs_repair with a debug libxlog.
- DEBUG = -DNDEBUG
- 
-@@ -19,6 +21,12 @@ default: ltdepend $(LTLIBRARY)
- 
- include $(BUILDRULES)
- 
--install install-dev install-qa: default
-+install: default
-+	$(INSTALL_LTLIB)
-+
-+install-dev: default
-+	$(INSTALL_LTLIB_DEV)
-+
-+install-qa: default
- 
- -include .dep

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.2.ebuild,v 1.2 2010/06/04 02:27:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.2.ebuild,v 1.3 2010/08/17 13:14:59 vapier Exp $
 
 EAPI="3"
 
@@ -19,18 +19,17 @@ IUSE="libedit nls readline static static-libs"
 RDEPEND=">=sys-apps/util-linux-2.17.2
 	!<sys-fs/xfsdump-3
 	readline? (
-		!libedit? ( sys-libs/readline
-			static? ( sys-libs/ncurses )
-		)
+		sys-libs/readline
+		static? ( sys-libs/ncurses )
 	)
-	libedit? ( dev-libs/libedit )"
+	!readline? ( libedit? ( dev-libs/libedit ) )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	if use readline && use libedit ; then
-		ewarn "You enabled both readline and libedit support but only one can be supported"
-		ewarn "Using libedit. Please disable the libedit USE flag if you want readline."
+		ewarn "You have USE='readline libedit' but these are exclusive."
+		ewarn "Defaulting to readline; please disable this USE flag if you want libedit."
 	fi
 
 	if use static && use !static-libs ; then
@@ -40,7 +39,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-3.1.1-sharedlibs.patch"
+	epatch "${FILESDIR}"/${PN}-3.1.1-sharedlibs.patch
 
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
@@ -64,16 +63,16 @@ src_prepare() {
 }
 
 src_configure() {
-	export DEBUG="-DNDEBUG"
-	export OPTIMIZER="${CFLAGS}"
+	export DEBUG=-DNDEBUG
+	export OPTIMIZER=${CFLAGS}
 	unset PLATFORM # if set in user env, this breaks configure
 
-	local myconf=""
+	local myconf
 
-	if use libedit ; then
-		myconf="--disable-readline --enable-editline"
-	elif use readline ; then
+	if use readline ; then
 		myconf="--enable-readline --disable-editline"
+	elif use libedit ; then
+		myconf="--disable-readline --enable-editline"
 	else
 		myconf="--disable-readline --disable-editline"
 	fi
@@ -87,28 +86,18 @@ src_configure() {
 	econf \
 		--bindir=/usr/bin \
 		--libexecdir=/usr/$(get_libdir) \
-		$(use_enable static-libs static) \
 		$(use_enable nls gettext) \
 		${myconf}
 
-	MAKEOPTS="${MAKEOPTS} V=1"
+	MAKEOPTS+=" V=1"
 }
 
 src_install() {
-	# TODO: there is a seldomly triggered parallel install problem where
-	# libxfs.so doesn't get installed before rdeps causing the relink to fail
-	emake -j1 DIST_ROOT="${D}" install install-dev || die "emake install failed"
-
-	dosym libxfs.so.0 /$(get_libdir)/libxfs.so
-	dosym libxlog.so.0 /$(get_libdir)/libxlog.so
-
-	# removing duplicated libraries
-	rm "${D}"/lib*/lib{handle,xcmd}.* "${D}"/usr/lib*/lib{xfs,xlog}.so*
-
-	# removing unnecessary .la files if not needed
-	( use static || use static-libs ) || rm -rf "${D}"/usr/lib*/*.la
+	emake DIST_ROOT="${D}" install install-dev || die
+	prepalldocs
 
 	# handle is for xfsdump, the rest for xfsprogs
-	gen_usr_ldscript libxfs.so libxlog.so
-	prepalldocs
+	gen_usr_ldscript -a xfs xlog
+	# removing unnecessary .la files if not needed
+	use static-libs || rm -f "${D}"/usr/lib*/*.la
 }
