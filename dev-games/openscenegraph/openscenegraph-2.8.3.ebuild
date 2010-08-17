@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.4 2010/08/13 04:00:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.5 2010/08/17 03:56:03 reavertm Exp $
 
 EAPI=2
 
@@ -132,4 +132,12 @@ src_configure() {
 src_compile() {
 	cmake-utils_src_compile
 	use doc && cmake-utils_src_compile doc_openscenegraph doc_openthreads
+}
+
+pkg_postinst() {
+	if has_version 'dev-games/simgear'; then
+		ewarn "dev-games/simgear has been detected and may need to be rebuilt now."
+		ewarn "Please run the following:"
+		ewarn "  # emerge -1 dev-games/simgear"
+	fi
 }

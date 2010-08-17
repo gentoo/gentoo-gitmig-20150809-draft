@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.29 2010/08/13 04:00:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.30 2010/08/17 03:56:03 reavertm Exp $
+
+  17 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  openscenegraph-2.8.2.ebuild, openscenegraph-2.8.3.ebuild:
+  Add postinst message advising to reinstall simgear (it provides only
+  static libs and depends on OSG), bug 326225
 
   13 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   openscenegraph-2.8.3.ebuild:
