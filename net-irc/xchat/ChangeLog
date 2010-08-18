@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.285 2010/08/13 17:18:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.286 2010/08/18 20:45:25 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org> xchat-2.8.8.ebuild:
+  arm stable, bug #329835
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> xchat-2.8.8.ebuild:
   Marked ppc/ppc64 stable for bug #329835.
