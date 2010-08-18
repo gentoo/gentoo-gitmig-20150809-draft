@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.7.ebuild,v 1.3 2010/04/18 00:23:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/shell-fm-0.7.ebuild,v 1.4 2010/08/18 21:05:26 darkside Exp $
 
 EAPI=2
 inherit flag-o-matic toolchain-funcs eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="media-libs/libmad
