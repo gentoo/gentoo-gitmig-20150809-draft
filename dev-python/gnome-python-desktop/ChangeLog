@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.105 2010/08/08 14:14:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.106 2010/08/18 20:47:49 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org>
+  gnome-python-desktop-2.28.0.ebuild:
+  arm stable, bug #314899
 
   08 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   gnome-python-desktop-2.28.0.ebuild:
