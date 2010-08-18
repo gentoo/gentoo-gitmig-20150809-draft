@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.39 2010/07/09 20:25:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.40 2010/08/18 23:35:09 hwoarang Exp $
+
+  18 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  twisted-news-10.1.0.ebuild:
+  Stable on amd64 wrt bug #333211
 
 *twisted-news-10.1.0 (09 Jul 2010)
 
