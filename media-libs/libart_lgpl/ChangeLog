@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.70 2010/08/14 16:14:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.71 2010/08/18 21:45:16 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org>
+  libart_lgpl-2.3.21-r1.ebuild:
+  arm stable, bug #314899
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   libart_lgpl-2.3.21-r1.ebuild:
