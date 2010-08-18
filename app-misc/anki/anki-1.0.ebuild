@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-0.9.9.8.6-r1.ebuild,v 1.2 2010/08/18 17:27:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-1.0.ebuild,v 1.1 2010/08/18 17:27:44 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -42,7 +42,7 @@ PYTHON_MODNAME="anki ankiqt"
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}/${P}-sqlalchemy-0.6.patch"
+#	epatch "${FILESDIR}/${P}-sqlalchemy-0.6.patch"
 }
 
 src_compile() {

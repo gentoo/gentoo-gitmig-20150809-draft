@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.24 2010/06/02 11:46:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.25 2010/08/18 17:27:44 patrick Exp $
+
+*anki-1.0 (18 Aug 2010)
+
+  18 Aug 2010; Patrick Lauer <patrick@gentoo.org> anki-0.9.9.8.6-r1.ebuild,
+  +anki-1.0.ebuild:
+  Bump to 1.0, fixes #331867.
+
+  18 Aug 2010; Patrick Lauer <patrick@gentoo.org> anki-0.9.9.8.6-r1.ebuild:
+  Fixing PyQt deps for #307035
 
   02 Jun 2010; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Assimilating package
