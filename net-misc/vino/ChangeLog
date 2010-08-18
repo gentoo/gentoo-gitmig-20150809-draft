@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.148 2010/08/14 17:46:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.149 2010/08/18 22:35:04 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org> vino-2.28.2.ebuild:
+  arm stable, bug #314899
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org> vino-2.28.2.ebuild:
   alpha/ia64/sparc stable wrt #314899
