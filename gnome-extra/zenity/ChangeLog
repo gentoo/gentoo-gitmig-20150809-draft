@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.187 2010/08/18 21:38:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.188 2010/08/18 21:52:11 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org> zenity-2.28.0-r1.ebuild:
+  arm stable, bug #314899
 
   18 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/zenity-2.15.90-libnotify-support.patch, -zenity-2.24.1.ebuild,
