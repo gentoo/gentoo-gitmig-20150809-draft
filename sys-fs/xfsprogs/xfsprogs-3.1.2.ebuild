@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.2.ebuild,v 1.3 2010/08/17 13:14:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.2.ebuild,v 1.4 2010/08/18 00:33:33 vapier Exp $
 
 EAPI="3"
 
@@ -40,6 +40,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.1-sharedlibs.patch
+	epatch "${FILESDIR}"/${PN}-3.1.2-depend.patch #333155
 
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \

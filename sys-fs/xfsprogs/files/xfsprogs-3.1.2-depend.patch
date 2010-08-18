@@ -1,0 +1,239 @@
+http://bugs.gentoo.org/333155
+
+hackish fix for constant dependency and parallel build failures
+
+--- a/copy/Makefile
++++ b/copy/Makefile
+@@ -13,7 +13,7 @@
+ LTDEPENDENCIES = $(LIBXFS)
+ LLDFLAGS = 
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/db/Makefile
++++ b/db/Makefile
+@@ -30,7 +30,7 @@
+ CFLAGS += -DENABLE_EDITLINE
+ endif
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/estimate/Makefile
++++ b/estimate/Makefile
+@@ -9,7 +9,7 @@
+ LTCOMMAND = xfs_estimate
+ CFILES = xfs_estimate.c
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/fsr/Makefile
++++ b/fsr/Makefile
+@@ -10,7 +10,7 @@
+ CFILES = xfs_fsr.c
+ LLDLIBS = $(LIBHANDLE)
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/growfs/Makefile
++++ b/growfs/Makefile
+@@ -22,7 +22,7 @@
+ LLDFLAGS = 
+ LSRCFILES = xfs_info.sh
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/include/buildrules
++++ b/include/buildrules
+@@ -94,10 +94,9 @@
+ 
+ MAKEDEP := $(MAKEDEPEND) $(CFLAGS)
+ 
+-ltdepend: $(CFILES) $(HFILES)
++# a bit hackish, but works for now
++LTDEP_FILTER = $(SED) -e 's,^\([^:]*\)\.o,\1.lo,'
++DEP_FILTER   = cat
++.dep: $(CFILES) $(HFILES)
+ 	@echo "    [DEP]"
+-	$(Q)$(MAKEDEP) $(CFILES) | $(SED) -e 's,^\([^:]*\)\.o,\1.lo,' > .dep
+-
+-depend: $(CFILES) $(HFILES)
+-	@echo "    [DEP]"
+-	$(Q)$(MAKEDEP) $(CFILES) > .dep
++	$(Q)$(MAKEDEP) $(CFILES) | $(DEP_FILTER) > .dep
+--- a/io/Makefile
++++ b/io/Makefile
+@@ -63,7 +63,7 @@
+ LCFLAGS += -DHAVE_FALLOCATE
+ endif
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/libdisk/Makefile
++++ b/libdisk/Makefile
+@@ -20,7 +20,7 @@
+ LSRCFILES = $(LINUX_DRIVERS)
+ endif
+ 
+-default: ltdepend $(LTLIBRARY)
++default: $(LTLIBRARY)
+ 
+ include $(BUILDRULES)
+ 
+@@ -32,4 +32,5 @@
+ 
+ install-qa: install-dev
+ 
++DEP_FILTER = $(LTDEP_FILTER)
+ -include .dep
+--- a/libhandle/Makefile
++++ b/libhandle/Makefile
+@@ -15,7 +15,7 @@
+ CFILES = handle.c jdm.c
+ LSRCFILES = libhandle.sym
+ 
+-default: ltdepend $(LTLIBRARY)
++default: $(LTLIBRARY)
+ 
+ include $(BUILDRULES)
+ 
+@@ -27,4 +27,5 @@
+ 
+ install-qa: install-dev
+ 
++DEP_FILTER = $(LTDEP_FILTER)
+ -include .dep
+--- a/libxcmd/Makefile
++++ b/libxcmd/Makefile
+@@ -28,7 +28,7 @@
+ LCFLAGS += -DENABLE_EDITLINE
+ endif
+ 
+-default: ltdepend $(LTLIBRARY)
++default: $(LTLIBRARY)
+ 
+ include $(BUILDRULES)
+ 
+@@ -40,4 +40,5 @@
+ 
+ install-qa: default
+ 
++DEP_FILTER = $(LTDEP_FILTER)
+ -include .dep
+--- a/libxfs/Makefile
++++ b/libxfs/Makefile
+@@ -36,7 +36,7 @@
+ # don't try linking xfs_repair with a debug libxfs.
+ DEBUG = -DNDEBUG
+ 
+-default: ltdepend $(LTLIBRARY)
++default: $(LTLIBRARY)
+ 
+ include $(BUILDRULES)
+ 
+@@ -48,4 +48,5 @@
+ 
+ install-qa: default
+ 
++DEP_FILTER = $(LTDEP_FILTER)
+ -include .dep
+--- a/libxlog/Makefile
++++ b/libxlog/Makefile
+@@ -17,7 +17,7 @@
+ # don't want to link xfs_repair with a debug libxlog.
+ DEBUG = -DNDEBUG
+ 
+-default: ltdepend $(LTLIBRARY)
++default: $(LTLIBRARY)
+ 
+ include $(BUILDRULES)
+ 
+@@ -29,4 +29,5 @@
+ 
+ install-qa: default
+ 
++DEP_FILTER = $(LTDEP_FILTER)
+ -include .dep
+--- a/logprint/Makefile
++++ b/logprint/Makefile
+@@ -16,7 +16,7 @@
+ LTDEPENDENCIES = $(LIBXFS) $(LIBXLOG)
+ LLDFLAGS = 
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/mdrestore/Makefile
++++ b/mdrestore/Makefile
+@@ -12,7 +12,7 @@
+ LTDEPENDENCIES = $(LIBXFS)
+ LLDFLAGS = 
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/mkfs/Makefile
++++ b/mkfs/Makefile
+@@ -27,7 +27,7 @@
+ LSRCFILES = $(FSTYP).c
+ LDIRT = $(FSTYP)
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ ifneq ($(ENABLE_BLKID),yes)
+ default: $(FSTYP)
+--- a/quota/Makefile
++++ b/quota/Makefile
+@@ -28,7 +28,7 @@
+ CFLAGS += -DENABLE_EDITLINE
+ endif
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 
+--- a/repair/Makefile
++++ b/repair/Makefile
+@@ -24,7 +24,7 @@
+ LTDEPENDENCIES = $(LIBXFS) $(LIBXLOG)
+ LLDFLAGS = 
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ globals.o: globals.h
+ 
+--- a/rtcp/Makefile
++++ b/rtcp/Makefile
+@@ -9,7 +9,7 @@
+ CFILES = xfs_rtcp.c
+ LLDFLAGS = 
+ 
+-default: depend $(LTCOMMAND)
++default: $(LTCOMMAND)
+ 
+ include $(BUILDRULES)
+ 

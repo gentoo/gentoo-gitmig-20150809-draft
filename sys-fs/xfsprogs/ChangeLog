@@ -1,10 +1,14 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.125 2010/08/17 13:14:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.126 2010/08/18 00:33:33 vapier Exp $
 
-  17 Aug 2010; Mike Frysinger <vapier@gentoo.org> -xfsprogs-3.0.0.ebuild,
-  -xfsprogs-3.0.1-r1.ebuild, files/xfsprogs-3.1.1-sharedlibs.patch,
-  xfsprogs-3.1.2.ebuild:
+  18 Aug 2010; Mike Frysinger <vapier@gentoo.org> xfsprogs-3.1.2.ebuild,
+  +files/xfsprogs-3.1.2-depend.patch:
+  Clean up dependency generation to avoid parallel build issues #333155 by
+  Samuli Suominen.
+
+  17 Aug 2010; Mike Frysinger <vapier@gentoo.org>
+  files/xfsprogs-3.1.1-sharedlibs.patch, xfsprogs-3.1.2.ebuild:
   Clean up library install and prefer readline over editline like upstream
   #311109.
 
