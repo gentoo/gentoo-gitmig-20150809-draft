@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.534 2010/08/13 12:13:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.535 2010/08/18 16:34:43 jer Exp $
+
+*opera-10.70_pre9013 (18 Aug 2010)
+
+  18 Aug 2010; Jeroen Roovers <jer@gentoo.org> +opera-10.70_pre9013.ebuild:
+  http://my.opera.com/desktopteam/blog/new-10-70-snapshot-synchronizing-buil
+  d-numbers-almost
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> opera-10.61.ebuild:
   Marked ppc stable for bug #332449.
