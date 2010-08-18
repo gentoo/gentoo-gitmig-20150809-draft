@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.232 2010/08/16 21:41:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.233 2010/08/18 21:22:50 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org> gnome-themes-2.28.1.ebuild:
+  arm stable, bug #314899
 
   16 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-themes-2.24.3.ebuild, gnome-themes-2.30.2.ebuild:
