@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.4.ebuild,v 1.5 2010/03/08 10:46:13 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.4.ebuild,v 1.6 2010/08/18 16:02:06 grobian Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://software.frodo.looijaard.name/getopt/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
@@ -53,9 +53,9 @@ src_install() {
 	newbin getopt getopt-long
 
 	# at least on interix, the system getopt is ... broken...
-	# util-linx, which would provide the getopt binary, does not build & install
-	# on interix/prefix, so, this has to provide it.
-	[[ ${CHOST} == *-interix* ]] && \
+	# util-linux, which would provide the getopt binary, does not build &
+	# install on interix/prefix, so, this has to provide it.
+	[[ ${CHOST} == *-interix* || ${CHOST} == *-mint* ]] && \
 		dosym getopt-long /usr/bin/getopt
 
 	newman getopt.1 getopt-long.1

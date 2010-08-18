@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/getopt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/ChangeLog,v 1.5 2010/03/08 10:46:13 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/ChangeLog,v 1.6 2010/08/18 16:02:06 grobian Exp $
+
+  18 Aug 2010; Fabian Groffen <grobian@gentoo.org> getopt-1.1.4.ebuild:
+  Fixed for and marked ~m68k-mint, bug #333297
 
   08 Mar 2010; Markus Duft <mduft@gentoo.org> getopt-1.1.4.ebuild:
   on interix, use this as getopt too, not only getopt-long. this resolves
