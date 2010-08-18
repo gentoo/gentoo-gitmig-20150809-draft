@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.21 2010/08/14 20:22:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.22 2010/08/18 16:57:34 patrick Exp $
+
+  18 Aug 2010; Patrick Lauer <patrick@gentoo.org> tdb-1.2.1-r1.ebuild:
+  Fixing manpage installation with USE -tools, fixes #333033
 
 *tdb-1.2.1-r1 (14 Aug 2010)
 
