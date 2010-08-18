@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.208 2010/07/30 18:10:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.209 2010/08/18 20:59:42 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org> tor-0.2.1.26.ebuild:
+  arm stable, bug #329879
 
   30 Jul 2010; Markos Chandras <hwoarang@gentoo.org> tor-0.2.1.26.ebuild:
   Stable on amd64 wrt bug #329879
