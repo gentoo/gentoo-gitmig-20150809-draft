@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.2.ebuild,v 1.9 2010/08/18 16:47:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.8.3.ebuild,v 1.1 2010/08/18 16:47:03 patrick Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ SRC_URI="http://prdownloads.sourceforge.net/zabbix/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="amd64 ppc x86"
-IUSE="agent curl frontend ipv6 jabber ldap mysql oracle postgres proxy server snmp +sqlite3 openipmi"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="agent curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server -ssh snmp +sqlite3"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
@@ -28,12 +28,14 @@ COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	postgres? ( dev-db/postgresql-base )
 	jabber? ( dev-libs/iksemel )
 	curl? ( net-misc/curl )
-	openipmi? ( sys-libs/openipmi )"
+	openipmi? ( sys-libs/openipmi )
+	ssh? ( net-libs/libssh2 )"
+
 RDEPEND="${COMMON_DEPEND}
 	proxy? ( net-analyzer/fping )
 	server? ( net-analyzer/fping
 		app-admin/webapp-config )
-	frontend? ( dev-lang/php[bcmath,ctype,sockets]
+	frontend? ( dev-lang/php[bcmath,ctype,sockets,gd]
 		app-admin/webapp-config )"
 DEPEND="${COMMON_DEPEND}
 	jabber? ( dev-util/pkgconfig )"
@@ -79,7 +81,6 @@ pkg_setup() {
 
 	if useq frontend; then
 		webapp_pkg_setup
-		require_gd
 	fi
 
 	enewgroup zabbix
@@ -182,10 +183,6 @@ pkg_postinst() {
 	fi
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-as-needed.patch"
-}
-
 src_configure() {
 	econf \
 		$(use_enable server) \
@@ -201,6 +198,7 @@ src_configure() {
 		$(use_with jabber) \
 		$(use_with curl libcurl) \
 		$(use_with openipmi openipmi) \
+		$(use_with ssh ssh2) \
 		|| die "econf failed"
 }
 

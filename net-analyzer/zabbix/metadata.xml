@@ -18,5 +18,7 @@ configure different types of notifications for pre-defined events.
 	<flag name='proxy'>Enable proxy support</flag>
 	<flag name='openipmi'>Enable openipmi things</flag>
 	<flag name='server'>Enable zabbix server</flag>
+	<flag name='ssh'>Enable ssh.run items</flag>
+
 </use>
 </pkgmetadata>
