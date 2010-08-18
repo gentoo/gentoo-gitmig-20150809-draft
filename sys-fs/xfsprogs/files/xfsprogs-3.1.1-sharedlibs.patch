@@ -83,7 +83,7 @@ ripped from PLD Linux
  
  ifeq ($(ENABLE_SHARED),yes)
 -INSTALL_LTLIB = \
-+_INSTALL_LTLIB = \
++_INSTALL_LTLIB = set -e; \
  	cd $(TOPDIR)/$(LIBNAME)/.libs; \
 -	../$(INSTALL) -m 755 -d $(PKG_ROOT_LIB_DIR); \
 -	../$(INSTALL) -m 644 -T so_dot_version $(LIBNAME).lai $(PKG_ROOT_LIB_DIR); \
@@ -111,7 +111,7 @@ ripped from PLD Linux
 -	../$(INSTALL) -S $(PKG_LIB_DIR)/$(LIBNAME).la $(PKG_ROOT_LIB_DIR)/$(LIBNAME).la; \
 -	../$(INSTALL) -S $(PKG_ROOT_LIB_DIR)/$(LIBNAME).so $(PKG_LIB_DIR)/$(LIBNAME).so; \
 -	fi
-+	cd $(TOPDIR)/$(LIBNAME); \
++	set -e; cd $(TOPDIR)/$(LIBNAME); \
 +	$(INSTALL) -m 755 -d $(PKG_LIB_DIR); \
 +	env -uDIST_ROOT $(LTINSTALL) $(TOPDIR)/$(LIBNAME)/$(LIBNAME).la $(DIST_ROOT)$(PKG_LIB_DIR)/$(LIBNAME).la
  else
