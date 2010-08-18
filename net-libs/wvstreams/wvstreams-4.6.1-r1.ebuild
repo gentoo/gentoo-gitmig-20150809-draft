@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r1.ebuild,v 1.1 2010/06/04 12:54:18 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r1.ebuild,v 1.2 2010/08/18 11:56:47 ssuominen Exp $
 
 EAPI=2
 inherit autotools toolchain-funcs versionator
@@ -45,7 +45,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-parallel-make.patch \
-		"${FILESDIR}"/${P}-openssl-1.0.0.patch
+		"${FILESDIR}"/${P}-openssl-1.0.0.patch \
+		"${FILESDIR}"/${P}-glibc212.patch
 	eautoreconf
 	cd argp
 	eautoreconf
