@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.8-r1.ebuild,v 1.1 2010/06/04 13:37:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.8-r1.ebuild,v 1.2 2010/08/18 10:47:37 flameeyes Exp $
 
 EAPI=2
 
@@ -27,7 +27,12 @@ RUBY_PATCHES=( "${P}-custom-cookie-fix.patch" )
 ruby_add_rdepend "~dev-ruby/activesupport-${PV}
 	>=dev-ruby/rack-1.1.0"
 
-ruby_add_bdepend test "dev-ruby/activerecord:${SLOT} dev-ruby/actionmailer:${SLOT}"
+ruby_add_bdepend "
+	test? (
+		dev-ruby/activerecord:${SLOT}
+		dev-ruby/actionmailer:${SLOT}
+		!dev-ruby/test-unit:2
+	)"
 
 all_ruby_prepare() {
 	# Custom template not found in package

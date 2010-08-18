@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.155 2010/06/04 13:37:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.156 2010/08/18 10:47:37 flameeyes Exp $
+
+  18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  actionpack-2.3.8-r1.ebuild:
+  Block test-unit-2.
 
 *actionpack-2.3.8-r1 (04 Jun 2010)
 
