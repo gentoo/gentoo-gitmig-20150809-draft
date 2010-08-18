@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.469 2010/08/14 16:41:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.470 2010/08/18 21:01:25 maekke Exp $
+
+  18 Aug 2010; Markus Meier <maekke@gentoo.org> gtk+-2.18.9.ebuild:
+  arm stable, bug #314899
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org> gtk+-2.18.9.ebuild:
   alpha/ia64/sh/sparc stable wrt #314899
