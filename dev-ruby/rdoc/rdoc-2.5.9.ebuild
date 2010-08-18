@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.9.ebuild,v 1.2 2010/08/08 18:20:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-2.5.9.ebuild,v 1.3 2010/08/18 11:12:24 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -29,7 +29,7 @@ ruby_add_bdepend "
 	doc? ( >=dev-ruby/hoe-2.5.0 )
 	test? (
 		>=dev-ruby/hoe-2.5.0
-		virtual/ruby-minitest
+		dev-ruby/minitest
 	)"
 
 all_ruby_prepare() {

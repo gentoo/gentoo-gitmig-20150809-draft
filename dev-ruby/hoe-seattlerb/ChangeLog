@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.10 2010/05/22 23:04:32 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.11 2010/08/18 11:08:01 flameeyes Exp $
+
+  18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  hoe-seattlerb-1.2.2.ebuild:
+  Stop using virtual/ruby-minitest, since it's now unbundled from 1.9 as
+  well.
 
   22 May 2010; Alex Legler <a3li@gentoo.org> hoe-seattlerb-1.2.2.ebuild:
   Add REE18 support

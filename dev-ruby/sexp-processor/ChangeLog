@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sexp-processor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.16 2010/07/19 09:42:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.17 2010/08/18 11:13:30 flameeyes Exp $
+
+  18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  sexp-processor-3.0.3-r1.ebuild, sexp-processor-3.0.4.ebuild:
+  Stop using virtual/ruby-minitest, since it's now unbundled from 1.9 as
+  well.
 
 *sexp-processor-3.0.4 (19 Jul 2010)
 

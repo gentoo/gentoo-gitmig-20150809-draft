@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.32 2010/08/08 18:20:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.33 2010/08/18 11:12:24 flameeyes Exp $
+
+  18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> rdoc-2.5.6.ebuild,
+  rdoc-2.5.9.ebuild:
+  Stop using virtual/ruby-minitest, since it's now unbundled from 1.9 as
+  well.
 
   08 Aug 2010; Hans de Graaff <graaff@gentoo.org> rdoc-2.5.9.ebuild:
   Use less existent nonexistent directory, fixing bug 321059.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.85 2010/08/17 00:29:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.86 2010/08/18 11:05:02 flameeyes Exp $
+
+  18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> hoe-2.5.0.ebuild,
+  hoe-2.6.0-r1.ebuild, hoe-2.6.1.ebuild:
+  Stop using virtual/ruby-minitest, since it's now unbundled from 1.9 as
+  well.
 
   17 Aug 2010; Jeroen Roovers <jer@gentoo.org> hoe-2.5.0.ebuild:
   Stable for HPPA (bug #321043).

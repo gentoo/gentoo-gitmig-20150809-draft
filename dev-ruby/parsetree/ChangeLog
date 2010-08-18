@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.27 2010/07/29 00:15:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.28 2010/08/18 11:10:23 flameeyes Exp $
+
+  18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  parsetree-3.0.5-r1.ebuild:
+  Stop using virtual/ruby-minitest, since it's now unbundled from 1.9 as
+  well.
 
   29 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -parsetree-3.0.5.ebuild:

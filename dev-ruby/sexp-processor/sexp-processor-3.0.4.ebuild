@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/sexp-processor-3.0.4.ebuild,v 1.1 2010/07/19 09:42:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/sexp-processor-3.0.4.ebuild,v 1.2 2010/08/18 11:13:30 flameeyes Exp $
 
 EAPI=2
 
@@ -30,5 +30,5 @@ ruby_add_bdepend "
 	test? (
 		dev-ruby/hoe
 		dev-ruby/hoe-seattlerb
-		virtual/ruby-minitest
+		dev-ruby/minitest
 	)"
