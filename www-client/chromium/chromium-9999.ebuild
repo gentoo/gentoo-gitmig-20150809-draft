@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.76 2010/08/18 01:04:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.77 2010/08/18 03:29:53 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -98,9 +98,9 @@ remove_bundled_lib() {
 	einfo "Removing bundled library $1 ..."
 	local out
 	out="$(find $1 -mindepth 1 \! -iname '*.gyp' -print -delete)" \
-		|| die "failed to remove bundled library $1"
+		|| ewarn "failed to remove bundled library $1"
 	if [[ -z $out ]]; then
-		die "no files matched when removing bundled library $1"
+		ewarn "no files matched when removing bundled library $1"
 	fi
 }
 

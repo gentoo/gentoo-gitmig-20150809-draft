@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.159 2010/08/18 01:04:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.160 2010/08/18 03:29:53 phajdan.jr Exp $
+
+  18 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
+  Make remove_bundled_lib failures non-fatal in the 9999 ebuild, bug #332171
+  by fkhp <fkhp101@tom.com>. Used suggestion by Mike Gilbert
+  <floppymaster@gmail.com>.
 
 *chromium-6.0.495.0 (18 Aug 2010)
 
