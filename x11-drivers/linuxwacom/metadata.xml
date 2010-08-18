@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>x11</herd>
-  <maintainer>
-    <email>ikelos@gentoo.org</email>
-    <name>Mike Auty</name>
-  </maintainer>
   <longdescription>linuxwacom is an open-source XFree86 input driver for Wacom tablets.</longdescription>
   <use>
 	  <flag name='modules'>Build kernel module</flag>
