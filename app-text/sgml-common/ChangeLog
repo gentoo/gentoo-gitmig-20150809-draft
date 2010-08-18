@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.53 2010/04/06 01:26:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.54 2010/08/18 16:52:19 grobian Exp $
+
+  18 Aug 2010; Fabian Groffen <grobian@gentoo.org>
+  sgml-common-0.6.3-r5.ebuild:
+  Marked ~m68k-mint, bug #333209
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org>
   sgml-common-0.6.3-r5.ebuild, files/sgml-common-0.6.3-install-catalog.in,
