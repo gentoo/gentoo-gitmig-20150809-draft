@@ -1,10 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-plugin-samba/gosa-plugin-samba-2.6.10.ebuild,v 1.1 2010/07/29 10:01:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-plugin-samba/gosa-plugin-samba-2.6.10.ebuild,v 1.2 2010/08/18 15:11:29 dev-zero Exp $
 
 EAPI=3
-
-inherit eutils
 
 DESCRIPTION="GOsa plugin for Samba integration"
 HOMEPAGE="https://oss.gonicus.de/labs/gosa/wiki/WikiStart."
@@ -18,23 +16,24 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-lang/php[iconv,imap,ldap,mysql,session,zip]
-	sys-devel/gettext"
-RDEPEND="${DEPEND}
-	~net-nds/gosa-core-${PV}"
+DEPEND=""
+RDEPEND="~net-nds/gosa-core-${PV}
+	~net-nds/gosa-plugin-systems-${PV}"
+
+GOSA_COMPONENT="${PN/gosa-plugin-}"
 
 src_install() {
-	insinto /usr/share/gosa/html/plugins/samba/
+	insinto /usr/share/gosa/html/plugins/${GOSA_COMPONENT}/
 	doins -r html/*
 
-	insinto /usr/share/gosa/locale/plugins/samba/
+	insinto /usr/share/gosa/locale/plugins/${GOSA_COMPONENT}/
 	doins -r locale/*
 
 	insinto /usr/share/gosa/plugins
 	doins -r admin personal
 
-	insinto /usr/share/gosa/doc/plugins/samba/
-	doins help/guide.xml
+	insinto /usr/share/gosa/doc/plugins/${GOSA_COMPONENT}/
+	doins -r help/*
 
 	dodoc contrib/*
 }
