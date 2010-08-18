@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7-r3.ebuild,v 1.2 2010/08/05 18:00:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7-r3.ebuild,v 1.3 2010/08/18 10:29:35 flameeyes Exp $
 
 EAPI="3"
 
@@ -29,8 +29,8 @@ PDEPEND="server? ( dev-ruby/builder[ruby_targets_ruby18] )"
 # rdoc-related stuff, so it's not a mistake.
 ruby_add_bdepend "
 	test? (
-		virtual/ruby-minitest
-		dev-ruby/builder
+		dev-ruby/minitest
+		virtual/ruby-rdoc
 		!dev-ruby/yard
 		!dev-ruby/test-unit:2
 	)"
@@ -48,8 +48,9 @@ all_ruby_prepare() {
 
 	eprefixify lib/rubygems/defaults/operating_system.rb
 
-	# Disable broken tests when changing defaults:
+	# Disable broken tests when changing default values:
 	sed -i -e '/^  def test_self_bindir_default_dir/, /^  end/ s:^:#:' \
+		-e '/^  def test_self_default_dir/, /^  end/ s:^:#:' \
 		test/test_gem.rb || die
 }
 
@@ -63,7 +64,7 @@ each_ruby_test() {
 	unset RUBYOPT
 
 	RUBYLIB="$(pwd)/lib${RUBYLIB+:${RUBYLIB}}" ${RUBY} -Ilib:test \
-		-e 'Dir["test/test_*.rb"].each { |tu| require tu }' || die "tests failed"
+		-e 'Dir["./test/test_*.rb"].each { |tu| require tu }' || die "tests failed"
 }
 
 each_ruby_install() {
