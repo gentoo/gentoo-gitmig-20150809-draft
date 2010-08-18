@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.121 2010/07/15 11:19:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.122 2010/08/18 03:50:35 jer Exp $
+
+  18 Aug 2010; Jeroen Roovers <jer@gentoo.org> PyQt4-4.7.3.ebuild:
+  Stable for HPPA (bug #315775).
 
   15 Jul 2010; Markos Chandras <hwoarang@gentoo.org> PyQt4-4.7.4.ebuild:
   Bump sip dependency to 4.10.3. Fix arm epatch command
