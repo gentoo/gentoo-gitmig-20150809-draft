@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.31 2010/08/01 16:27:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.32 2010/08/18 04:35:58 jer Exp $
+
+  18 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  emacs-common-gentoo-1.2-r1.ebuild:
+  Stable for HPPA (bug #330309).
 
   01 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   emacs-common-gentoo-1.2-r1.ebuild:
