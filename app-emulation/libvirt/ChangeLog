@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.70 2010/08/13 10:59:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.71 2010/08/18 15:38:18 cardoe Exp $
+
+  18 Aug 2010; Doug Goldstein <cardoe@gentoo.org> libvirt-0.8.2-r1.ebuild,
+  libvirt-0.8.3.ebuild, libvirt-0.8.3-r1.ebuild:
+  Add depend on USE=device-mapper when using sys-parted. bug #332971
 
   13 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
   libvirt-0.8.3-r1.ebuild:

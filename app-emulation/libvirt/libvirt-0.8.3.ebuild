@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3.ebuild,v 1.3 2010/08/07 02:43:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.3.ebuild,v 1.4 2010/08/18 15:38:18 cardoe Exp $
 
 BACKPORTS=2
 
@@ -41,7 +41,7 @@ RDEPEND="sys-libs/readline
 	nfs? ( net-fs/nfs-utils )
 	numa? ( sys-process/numactl )
 	openvz? ( sys-kernel/openvz-sources )
-	parted? ( >=sys-apps/parted-1.8 )
+	parted? ( >=sys-apps/parted-1.8[device-mapper] )
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
