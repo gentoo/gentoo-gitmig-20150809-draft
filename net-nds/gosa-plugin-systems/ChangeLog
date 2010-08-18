@@ -1,0 +1,10 @@
+# ChangeLog for net-nds/gosa-plugin-systems
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gosa-plugin-systems/ChangeLog,v 1.1 2010/08/18 15:05:33 dev-zero Exp $
+
+*gosa-plugin-systems-2.6.10 (18 Aug 2010)
+
+  18 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +gosa-plugin-systems-2.6.10.ebuild, +metadata.xml:
+  Initial commit, needed for gosa-plugin-samba and gosa-plugin-mail.
+
