@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.375.125.ebuild,v 1.1 2010/08/17 04:15:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-5.0.375.125.ebuild,v 1.2 2010/08/18 03:22:09 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -29,7 +29,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/jpeg:0
-	=media-libs/libpng-1.2*
+	=media-libs/libpng-1.4*
 	media-video/ffmpeg[threads]
 	sys-apps/dbus
 	sys-libs/zlib
