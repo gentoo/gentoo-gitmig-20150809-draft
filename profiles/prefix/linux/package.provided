@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/package.provided,v 1.1 2009/06/06 03:54:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/package.provided,v 1.2 2010/08/18 16:27:58 darkside Exp $
 
-sys-linux/glibc-0
-sys-linux/linux-sources-0
+# Jeremy Olexa <darkside@gentoo.org> 18 Aug 2010
+# util-linux hasn't worked in Gentoo Prefix for some time. This is a lame
+# workaround for now.
+sys-apps/util-linux-2
