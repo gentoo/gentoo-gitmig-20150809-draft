@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.1.ebuild,v 1.1 2010/07/28 09:49:58 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.1-r1.ebuild,v 1.1 2010/08/18 09:18:52 dagger Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ IUSE="bluetooth"
 RDEPEND=">=dev-libs/glib-2.16
 	>=dev-libs/dbus-glib-0.74
 	>=sys-apps/dbus-1.2
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.18
 	>=gnome-base/gconf-2.20
 	>=gnome-extra/polkit-gnome-0.92
 	>=x11-libs/libnotify-0.4.3
@@ -43,6 +43,11 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 # USE_DESTDIR="1"
+
+src_prepare() {
+	# Fix compilation with DGSEAL_ENABLE gentoo bug #330363
+	epatch "${FILESDIR}/${P}-fix-compilation-with-DGSEAL_ENABLE.patch"
+}
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
