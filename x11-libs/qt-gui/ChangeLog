@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.109 2010/08/04 14:54:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.110 2010/08/18 03:43:25 jer Exp $
+
+  18 Aug 2010; Jeroen Roovers <jer@gentoo.org> qt-gui-4.6.2.ebuild:
+  Stable for HPPA (bug #297299).
 
   04 Aug 2010; Markus Meier <maekke@gentoo.org> qt-gui-4.6.2.ebuild:
   arm stable, bug #297299

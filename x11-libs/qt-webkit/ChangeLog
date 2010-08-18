@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.96 2010/08/12 22:16:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.97 2010/08/18 03:47:54 jer Exp $
+
+  18 Aug 2010; Jeroen Roovers <jer@gentoo.org> qt-webkit-4.6.2-r1.ebuild:
+  Stable for HPPA (bug #297299).
 
 *qt-webkit-4.6.3-r1 (12 Aug 2010)
 
