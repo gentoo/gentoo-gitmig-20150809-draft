@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO-Zlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/ChangeLog,v 1.10 2010/01/19 17:42:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/ChangeLog,v 1.11 2010/08/19 15:09:22 hwoarang Exp $
+
+  19 Aug 2010; Markos Chandras <hwoarang@gentoo.org> IO-Zlib-1.10.ebuild:
+  Stable on amd64 wrt bug #333421
 
   19 Jan 2010; nixnut <nixnut@gentoo.org> IO-Zlib-1.09.ebuild:
   ppc stable #288026
