@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sound</herd>
-  <maintainer>
-    <email>beandog@gentoo.org</email>
-    <name>Steve Dibb</name>
-  </maintainer>
   <use>
     <flag name="id3">Support ID3, ID3v2 tagging of audio files</flag>
     <flag name="normalize">Add support for normalizing audio file volume levels</flag>
