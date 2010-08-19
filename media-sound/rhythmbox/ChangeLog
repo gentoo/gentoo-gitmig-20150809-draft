@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.191 2010/08/12 09:11:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.192 2010/08/19 18:21:57 ssuominen Exp $
+
+  19 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  rhythmbox-0.12.8-r1.ebuild,
+  +files/rhythmbox-0.12.8-namespace-conflict.patch:
+  Fix building with recent glibc wrt #333373 by Michael Weber.
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
   amd64/x86 stable, bug #330773
