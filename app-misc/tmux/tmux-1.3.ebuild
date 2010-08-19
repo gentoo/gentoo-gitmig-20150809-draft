@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.3.ebuild,v 1.1 2010/07/24 16:54:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.3.ebuild,v 1.2 2010/08/19 17:12:27 wired Exp $
+
+EAPI=3
 
 inherit toolchain-funcs
 
@@ -20,9 +22,12 @@ RDEPEND="${DEPEND}
 			app-editors/vim
 			app-editors/gvim ) )"
 
-src_compile() {
+src_configure() {
 	# The configure script isn't created by GNU autotools.
 	./configure || die "configure failed"
+}
+
+src_compile() {
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
@@ -42,4 +47,20 @@ src_install() {
 		insinto /usr/share/vim/vimfiles/ftdetect
 		doins "${FILESDIR}"/tmux.vim || die "doins ftdetect failed"
 	fi
+}
+
+pkg_setup() {
+	ewarn
+	ewarn "Commands 'up-pane', 'down-pane' and 'select-prompt' were removed in version 1.3."
+	ewarn "You may want to update your configuration file accordingly to avoid errors on"
+	ewarn "tmux startup."
+	ewarn
+	ewarn "For the full 1.3 Changelog, together with details on what replaced the above"
+	ewarn "commands, visit http://tmux.cvs.sourceforge.net/viewvc/tmux/tmux/CHANGES."
+	ewarn
+	ewarn "WARNING: after updating to tmux 1.3 you will _not_ be able to connect to any"
+	ewarn "running 1.2 tmux server instances. You'll have to use an existing client to"
+	ewarn "to end your old sessions or kill the old server instances. Otherwise you'll"
+	ewarn "have to temporarily downgrade to tmux 1.2 to access them."
+	ewarn
 }
