@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.320 2010/08/16 20:13:34 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.321 2010/08/19 12:54:57 lack Exp $
+
+  19 Aug 2010; Jim Ramsay <lack@gentoo.org> gvim-7.1.123.ebuild,
+  gvim-7.1.330.ebuild, gvim-7.2.303.ebuild, gvim-7.2.442.ebuild,
+  gvim-7.3.ebuild:
+  Updating SRC_URI, unsure why/when it broke, but having 'unstable' in there
+  was wrong
 
 *gvim-7.3 (16 Aug 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.330.ebuild,v 1.1 2009/02/20 16:01:53 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.330.ebuild,v 1.2 2010/08/19 12:54:57 lack Exp $
 
 inherit vim
 
@@ -10,7 +10,7 @@ VIM_ORG_PATCHES="vim-patches-${PV}.tar"
 GVIMRC_FILE_SUFFIX="-r1"
 GVIM_DESKTOP_SUFFIX="-r1"
 
-SRC_URI="ftp://ftp.vim.org/pub/vim/unstable/unix/vim-${VIM_VERSION}.tar.bz2
+SRC_URI="ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2
 	ftp://ftp.vim.org/pub/vim/extra/vim-${VIM_VERSION}-lang.tar.gz
 	ftp://ftp.vim.org/pub/vim/extra/vim-${VIM_VERSION}-extra.tar.gz
 	mirror://gentoo/${VIM_GENTOO_PATCHES}

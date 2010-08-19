@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.3.ebuild,v 1.1 2010/08/16 20:13:34 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.3.ebuild,v 1.2 2010/08/19 12:54:57 lack Exp $
 
 EAPI=3
 VIM_VERSION="7.3"
@@ -10,7 +10,7 @@ inherit vim
 GVIMRC_FILE_SUFFIX="-r1"
 GVIM_DESKTOP_SUFFIX="-r2"
 
-SRC_URI="ftp://ftp.vim.org/pub/vim/unstable/unix/vim-${VIM_VERSION}.tar.bz2"
+SRC_URI="ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2"
 
 # New release: No patches yet
 #	mirror://gentoo/${VIM_ORG_PATCHES}
