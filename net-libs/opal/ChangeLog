@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.65 2010/07/24 16:47:03 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.66 2010/08/19 17:07:27 pva Exp $
+
+*opal-3.6.8 (19 Aug 2010)
+
+  19 Aug 2010; Peter Volkov <pva@gentoo.org> +opal-3.6.8.ebuild:
+  Version bump, bug #326469 thank Vladimir for report.
 
   24 Jul 2010; Panagiotis Christopoulos <pchrist@gentoo.org>
   opal-3.6.4.ebuild, opal-3.6.4-r1.ebuild, opal-3.6.6.ebuild,
