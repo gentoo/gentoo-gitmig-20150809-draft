@@ -83,8 +83,8 @@ MISC_OTHER="-A -x -j -R -Z"
 
 
 # Some filesystems don't like accesses being memory mapped. This happens for
-# example with ftpwho on JFFS2 filesystems. If you happen to have such a 
-# filesystem on /var set TMPFS_MOUNT to "true".
+# example with ftpwho on JFFS2 filesystems (bug #330563). If you happen to 
+# have such a filesystem on /var set TMPFS_MOUNT to "true".
 TMPFS_MOUNT="false"
 
 # Special mount options (like nosuid or nodev) for the tmpfs mount can be added 
