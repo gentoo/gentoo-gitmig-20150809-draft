@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-chora
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.21 2010/06/19 00:59:30 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-chora/ChangeLog,v 1.22 2010/08/19 13:42:20 hwoarang Exp $
+
+  19 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  horde-chora-2.0.2.ebuild:
+  Stable on amd64 wrt bug #333207
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> horde-chora-2.0.1.ebuild,
   horde-chora-2.0.2.ebuild:

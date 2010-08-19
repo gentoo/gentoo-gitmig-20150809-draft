@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-dimp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-dimp/ChangeLog,v 1.5 2009/12/17 17:44:32 a3li Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-dimp/ChangeLog,v 1.6 2010/08/19 13:42:49 hwoarang Exp $
+
+  19 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  horde-dimp-1.1.4.ebuild:
+  Stable on amd64 wrt bug #333207
 
 *horde-dimp-1.1.4 (17 Dec 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-imp
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.58 2010/07/17 12:15:21 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.59 2010/08/19 13:43:47 hwoarang Exp $
+
+  19 Aug 2010; Markos Chandras <hwoarang@gentoo.org> horde-imp-4.3.7.ebuild:
+  Stable on amd64 wrt bug #333207
 
 *horde-imp-4.3.7 (17 Jul 2010)
 
