@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mojarra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.4 2010/08/19 15:58:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.5 2010/08/19 19:18:19 nelchael Exp $
+
+  19 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org> mojarra-1.2.15.ebuild:
+  Fix SRC_URI for 1.2.15, bug #333479.
 
   19 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   -mojarra-1.2.14.ebuild:

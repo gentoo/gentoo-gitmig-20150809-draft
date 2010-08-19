@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/mojarra-1.2.15.ebuild,v 1.1 2010/08/19 15:03:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/mojarra-1.2.15.ebuild,v 1.2 2010/08/19 19:18:19 nelchael Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ MY_PV="$(get_version_component_range 1-2)_$(get_version_component_range 3)-b01-F
 
 DESCRIPTION="Project Mojarra - GlassFish's Implementation for JavaServer Faces API"
 HOMEPAGE="https://javaserverfaces.dev.java.net/"
-SRC_URI="https://javaserverfaces.dev.java.net/files/documents/1866/146227/${PN}-${MY_PV}-source.zip
+SRC_URI="https://javaserverfaces.dev.java.net/files/documents/1866/151669/${PN}-${MY_PV}-source.zip
 	mirror://gentoo/${PN}-${MY_PV}-patch.bz2"
 
 LICENSE="CDDL"
