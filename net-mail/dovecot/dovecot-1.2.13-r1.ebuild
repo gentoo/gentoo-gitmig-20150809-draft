@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.12.ebuild,v 1.2 2010/07/18 20:44:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.13-r1.ebuild,v 1.1 2010/08/19 02:31:37 darkside Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils versionator ssl-cert
 
@@ -14,12 +14,13 @@ SRC_URI="http://dovecot.org/releases/${major_minor}/${P}.tar.gz
 	managesieve? (
 		http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${PV}-managesieve-${managesieve_version}.diff.gz
 		http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-managesieve-${managesieve_version}.tar.gz
+		http://www.rename-it.nl/dovecot/${major_minor}/dovecot-${major_minor}-sieve-${sieve_version}.tar.gz
 	)"
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
 HOMEPAGE="http://www.dovecot.org/"
 
 SLOT="0"
-LICENSE="LGPL-2.1" # MIT too?
+LICENSE="LGPL-2.1 MIT"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
 
 IUSE="berkdb bzip2 caps cydir dbox doc ipv6 kerberos ldap +maildir managesieve mbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
@@ -40,13 +41,13 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	if use managesieve && ! use sieve; then
-		eerror "managesieve USE flag selected but sieve USE flag unselected"
-		die "USE flag problem"
+		ewarn "managesieve USE flag selected but sieve USE flag unselected"
+		ewarn "sieve USE flag will be turned on"
 	fi
 
 	if use dbox && ! use maildir; then
-		eerror "dbox USE flag needs maildir USE flag enabled"
-		die "USE flag problem"
+		ewarn "dbox USE flag selected but  maildir USE flag unselected"
+		ewarn "maildir USE flag will be turned on"
 	fi
 
 	# Add user and group for login process (same as for fedora/redhat)
@@ -73,12 +74,15 @@ src_configure() {
 	for storage in cydir dbox maildir mbox; do
 		use ${storage} && storages="${storage} ${storages}"
 	done
+	if use dbox && ! use maildir; then
+		storages="${storages/dbox/dbox maildir}"
+	fi
 	[ "${storages}" ] || storages="maildir"
 
 	econf \
-		--sysconfdir=/etc/dovecot \
-		--localstatedir=/var \
-		--with-moduledir="/usr/$( get_libdir )/dovecot" \
+		--sysconfdir="${EPREFIX}/etc/dovecot" \
+		--localstatedir="${EPREFIX}/var" \
+		--with-moduledir="${EPREFIX}/usr/$(get_libdir)/dovecot" \
 		$( use_with berkdb db ) \
 		$( use_with bzip2 bzlib ) \
 		$( use_with caps libcap ) \
@@ -97,7 +101,7 @@ src_configure() {
 		--enable-header-install \
 		${conf}
 
-	if use sieve; then
+	if use sieve || use managesieve; then
 		# The sieve plugin needs this file to be build to determine the plugin
 		# directory and the list of libraries to link to.
 		emake dovecot-config || die "emake dovecot-config failed"
@@ -114,7 +118,7 @@ src_configure() {
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
 
-	if use sieve; then
+	if use sieve || use managesieve; then
 		cd "../dovecot-${major_minor}-sieve-${sieve_version}"
 		emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
 
@@ -126,22 +130,22 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${ED}" install || die "make install failed"
 
 	# insecure:
 	#use suid && fperms u+s /usr/libexec/dovecot/deliver
 	#better:
-	if use suid;then
+	if use suid; then
 		einfo "Changing perms to allow deliver to be suided"
 		fowners root:mail /usr/libexec/dovecot/deliver
 		fperms 4750 /usr/libexec/dovecot/deliver
 	fi
 
-	rm -f "${D}"/etc/dovecot/dovecot-{ldap,sql}-example.conf
+	rm -f "${ED}"/etc/dovecot/dovecot-{ldap,sql}-example.conf
 
 	newinitd "${FILESDIR}"/dovecot-1.2.init dovecot
 
-	rm -rf "${D}"/usr/share/doc/dovecot
+	rm -rf "${ED}"/usr/share/doc/dovecot
 
 	if use ssl; then
 		sed -i -e 's,^CERTDIR=.*,CERTDIR=\$SSLDIR/dovecot,' \
@@ -152,16 +156,16 @@ src_install () {
 	fi
 
 	dodoc AUTHORS NEWS README TODO dovecot-example.conf || die "basic dodoc failed"
-	dodoc doc/* || die "dodoc doc/ failed"
+	dodoc doc/*.{txt,cnf,xml,sh}  || die "dodoc doc/ failed"
 	docinto wiki
 	dodoc doc/wiki/* || die "dodoc doc/wiki/ failed"
 
 	# Create the dovecot.conf file from the dovecot-example.conf file that
 	# the dovecot folks nicely left for us....
-	local conf="${D}/etc/dovecot/dovecot.conf"
-	mv "${D}"/etc/dovecot/dovecot-example.conf "${D}"/etc/dovecot/dovecot.conf
+	local conf="${ED}/etc/dovecot/dovecot.conf"
+	mv "${ED}"/etc/dovecot/dovecot-example.conf "${ED}"/etc/dovecot/dovecot.conf
 
-	# .maildir is the Gentoo default, but we need to support mbox to
+	# .maildir is the Gentoo default, but we need to support mbox too
 	local mail_location="maildir:~/.maildir"
 	if use mbox; then
 		mail_location="mbox:/var/spool/mail/%u:INDEX=/var/dovecot/%u"
@@ -176,8 +180,8 @@ src_install () {
 	if use pam; then
 		sed -i -e '/passdb pam/, /^[ \t]*}/ s|#args = dovecot|args = "\*"|' \
 			"${conf}" || die "failed to update PAM settings in dovecot.conf"
-		# mailbase does not provide a managesieve pam file
-		use managesieve && dosym imap /etc/pam.d/managesieve
+		# mailbase does not provide a sieve pam file
+		use managesieve && dosym imap /etc/pam.d/sieve
 	fi
 
 	# Listen on ipv6 and ipv4
@@ -195,7 +199,7 @@ src_install () {
 
 	# Install SQL configuration
 	if use mysql || use postgres; then
-		cp doc/dovecot-sql-example.conf "${D}"/etc/dovecot/dovecot-sql.conf
+		cp doc/dovecot-sql-example.conf "${ED}"/etc/dovecot/dovecot-sql.conf
 		fperms 600 /etc/dovecot/dovecot-sql.conf
 		sed -i -e '/db sql/,/args/ s|=|= /etc/dovecot-sql.conf|' "${conf}" \
 			|| die "failed to update SQL settings in dovecot-sql.conf"
@@ -204,33 +208,32 @@ src_install () {
 
 	# Install LDAP configuration
 	if use ldap; then
-		cp doc/dovecot-ldap-example.conf "${D}"/etc/dovecot/dovecot-ldap.conf
+		cp doc/dovecot-ldap-example.conf "${ED}"/etc/dovecot/dovecot-ldap.conf
 		fperms 600 /etc/dovecot/dovecot-ldap.conf
 		sed -i -e '/db ldap/,/args/ s|=|= /etc/dovecot-ldap.conf|' "${conf}" \
 			|| die "failed to update LDAP settings in dovecot-ldap.conf"
 		dodoc doc/dovecot-ldap-example.conf
 	fi
 
-	if use sieve; then
+	if use sieve || use managesieve; then
 		cd "../dovecot-${major_minor}-sieve-${sieve_version}"
-		emake DESTDIR="${D}" install || die "make install failed (sieve)"
+		emake DESTDIR="${ED}" install || die "make install failed (sieve)"
 
 		if use managesieve; then
 			cd "../dovecot-${major_minor}-managesieve-${managesieve_version}"
-			emake DESTDIR="${D}" install || die "make install failed (managesieve)"
+			emake DESTDIR="${ED}" install || die "make install failed (managesieve)"
 		fi
 	fi
 
 	dodir /var/run/dovecot
 	fowners root:root /var/run/dovecot
 	fperms 0755 /var/run/dovecot
-	keepdir /var/run/dovecot/login
 	fowners root:dovecot /var/run/dovecot/login
 	fperms 0750 /var/run/dovecot/login
 
 	ewarn "If you are upgrading from Dovecot 1.1, read "
 	ewarn " http://wiki.dovecot.org/Upgrading/1.2"
-	if use sieve; then
+	if use sieve || use managesieve; then
 		ewarn " http://wiki.dovecot.org/LDA/Sieve/Dovecot#Migration_from_CMUSieve"
 		ewarn " In particular, do not forget to change cmusieve to sieve"
 	fi
@@ -240,16 +243,16 @@ pkg_postinst() {
 
 	if use ssl; then
 	# Let's not make a new certificate if we already have one
-		if ! [[ -e "${ROOT}"/etc/ssl/dovecot/server.pem && \
-		-e "${ROOT}"/etc/ssl/dovecot/server.key ]];	then
+		if ! [[ -e "${EROOT}"/etc/ssl/dovecot/server.pem && \
+		-e "${EROOT}"/etc/ssl/dovecot/server.key ]];	then
 			einfo "Creating SSL	certificate"
 			SSL_ORGANIZATION="${SSL_ORGANIZATION:-Dovecot IMAP Server}"
 			install_cert /etc/ssl/dovecot/server
-			chown dovecot:mail "${ROOT}"/etc/ssl/dovecot/server.{key,pem}
+			chown dovecot:mail "${EROOT}"/etc/ssl/dovecot/server.{key,pem}
 		fi
 	fi
 
-	if grep -q '^ssl_key_password' "${ROOT}"/etc/dovecot/dovecot.conf; then
+	if grep -q '^ssl_key_password' "${EROOT}"/etc/dovecot/dovecot.conf; then
 		echo
 		ewarn "You have set ssl_key_password in dovecot.conf!"
 		ewarn "You are URGED to read the advice in the current"
