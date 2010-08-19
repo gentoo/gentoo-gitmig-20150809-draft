@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.30.3.ebuild,v 1.4 2010/08/01 11:44:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.30.3.ebuild,v 1.5 2010/08/19 21:45:12 eva Exp $
 
 EAPI="2"
 
@@ -43,8 +43,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	dev-util/gtk-doc-am
-	doc? ( dev-util/gtk-doc )"
+	>=dev-util/gtk-doc-am-1.13
+	doc? ( >=dev-util/gtk-doc-1.13 )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 ELTCONF="--portage"
