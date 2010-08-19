@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.342 2010/08/14 14:43:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.343 2010/08/19 16:58:41 jer Exp $
+
+  19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove arfrever.
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.23.1.ebuild:
   ia64/s390/sh/sparc stable wrt #320467
