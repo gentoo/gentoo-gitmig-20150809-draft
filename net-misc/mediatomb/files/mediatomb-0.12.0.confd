@@ -24,4 +24,5 @@ MEDIATOMB_LOGFILE="/var/log/mediatomb.log"
 MEDIATOMB_PIDFILE="/var/run/mediatomb.pid"
 
 # Other options you want to pass to MediaTomb.
+# Add "--interface ${MEDIATOMB_INTERFACE}" to bind to a named interface.
 MEDIATOMB_OPTIONS=""

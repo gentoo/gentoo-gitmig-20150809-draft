@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.17 2010/04/18 12:29:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.18 2010/08/19 01:59:51 darkside Exp $
+
+  19 Aug 2010; Jeremy Olexa <darkside@gentoo.org> -mediatomb-0.11.0.ebuild,
+  -mediatomb-0.12.0-r1.ebuild, files/mediatomb-0.12.0.confd,
+  -files/mediatomb.confd, -files/mediatomb.initd:
+  Add helper comment to confd file for bug 274627, comment #4 by Andrew
+  Frink. Old cruft cleanup
 
   18 Apr 2010; Markus Meier <maekke@gentoo.org> mediatomb-0.12.1.ebuild:
   amd64 stable, bug #284886
