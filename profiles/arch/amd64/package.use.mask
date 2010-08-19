@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.69 2010/07/25 19:07:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.70 2010/08/19 19:45:30 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -118,10 +118,6 @@ media-tv/xawtv mmx
 
 # x86_64 opts are enabled with USE sse. so masking the rest
 media-sound/mpg123 mmx 3dnow 3dnowext
-
-# Feb 17th 2007; drizzt@gentoo.org
-# amd64 does not have an emul libao package
-games-emulation/zsnes ao
 
 # Apr 25th 2007: Alexis Ballier <aballier@gentoo.org>
 # Mask mmx for media-libs/mlt
