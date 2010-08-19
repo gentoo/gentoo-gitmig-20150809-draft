@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Pod-Simple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.21 2010/07/14 06:41:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.22 2010/08/19 15:03:45 hwoarang Exp $
+
+  19 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  perl-Pod-Simple-3.14.ebuild:
+  Stable on amd64 wrt bug #333421
 
   14 Jul 2010; Torsten Veller <tove@gentoo.org> perl-Pod-Simple-3.14.ebuild:
   Add perl-5.12 as provider
