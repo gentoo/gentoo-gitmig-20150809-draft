@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.348 2010/07/11 17:29:10 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.349 2010/08/19 21:32:26 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -435,9 +435,10 @@ epatch_user() {
 			EPATCH_FORCE="yes" \
 			EPATCH_MULTI_MSG="Applying user patches from ${EPATCH_SOURCE} ..." \
 			epatch
-			break
+			return 0
 		fi
 	done
+	return 1
 }
 
 # @FUNCTION: emktemp
