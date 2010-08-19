@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>beandog@gentoo.org</email>
+	<email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription lang="en">External drivers for users who don't want to use
   in-kernel drivers.  Ebuild support only.</longdescription>
