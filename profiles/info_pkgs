@@ -8,6 +8,7 @@ sys-devel/automake
 virtual/os-headers
 sys-devel/binutils
 sys-devel/libtool
+sys-devel/make
 dev-lang/python
 sys-apps/sandbox
 dev-util/confcache
