@@ -1,8 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.9.1-r2.ebuild,v 1.1 2010/08/12 13:22:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.9.1-r2.ebuild,v 1.2 2010/08/19 21:36:51 vapier Exp $
 
 EAPI="2"
+
+# Force users doing their own patches to install their own tools
+AUTOTOOLS_AUTO_DEPEND=no
+
 inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
@@ -18,14 +22,13 @@ DEPEND="virtual/os-headers"
 RDEPEND=""
 
 src_prepare() {
-	epatch_user
-	eautoreconf
+	# Only run autotools if user patched something
+	epatch_user && eautoreconf || elibtoolize
 }
 
 src_configure() {
 	econf \
 		--sbindir=/sbin \
-		--libdir=/$(get_libdir) \
 		--libexecdir=/$(get_libdir) \
 		--enable-devel \
 		--enable-libipq \
@@ -58,10 +61,6 @@ src_install() {
 		newconfd "${FILESDIR}"/ip6tables-1.3.2.confd ip6tables || die
 	fi
 
-	# Remove .la from /lib, keep static archives in /usr/lib
-	find "${D}" -type f -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
-	dodir /usr/$(get_libdir)/
-	mv "${D}"/$(get_libdir)/*.a "${D}"/usr/$(get_libdir)/ || die "failed to mv static libs"
-	mv "${D}"{/,/usr/}"$(get_libdir)"/pkgconfig || die "failed to mv pkg-config files"
-	gen_usr_ldscript libip4tc.so libip6tc.so libipq.so libiptc.so libxtables.so
+	# Move important libs to /lib
+	gen_usr_ldscript -a ip{4,6}tc ipq iptc xtables
 }

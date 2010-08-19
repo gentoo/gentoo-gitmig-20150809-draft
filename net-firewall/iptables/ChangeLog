@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.222 2010/08/12 13:22:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.223 2010/08/19 21:36:51 vapier Exp $
+
+  19 Aug 2010; Mike Frysinger <vapier@gentoo.org> iptables-1.4.9.1-r2.ebuild:
+  Only force autotools on people using epatch_user, and clean up the lib move
+  from /usr to / #332175.
 
 *iptables-1.4.9.1-r2 (12 Aug 2010)
 
