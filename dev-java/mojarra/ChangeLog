@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mojarra
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.3 2010/08/19 15:03:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.4 2010/08/19 15:58:45 nelchael Exp $
+
+  19 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -mojarra-1.2.14.ebuild:
+  Remove 1.2.14 due to security issue - bug #322889.
 
 *mojarra-1.2.15 (19 Aug 2010)
 
