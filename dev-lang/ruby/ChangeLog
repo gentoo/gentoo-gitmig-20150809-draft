@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.465 2010/08/18 16:51:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.466 2010/08/19 21:35:06 a3li Exp $
+
+*ruby-1.8.6_p399 (19 Aug 2010)
+
+  19 Aug 2010; Alex Legler <a3li@gentoo.org> -ruby-1.8.6_p388.ebuild,
+  -ruby-1.8.6_p388-r1.ebuild, +ruby-1.8.6_p399.ebuild:
+  Last patchlevel bump for Ruby 1.8.6 to 399, fixes CVE-2010-0541 (bug
+  332957). Also restrict Tk and OpenSSL dependencies and fix rubytests
+  installation path (reported by the x86 team in bug 332597)
 
 *ruby-1.9.2_rc2-r1 (18 Aug 2010)
 

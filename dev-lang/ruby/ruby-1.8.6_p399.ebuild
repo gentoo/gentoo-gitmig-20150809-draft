@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p388-r1.ebuild,v 1.5 2010/08/13 15:00:43 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p399.ebuild,v 1.1 2010/08/19 21:35:06 a3li Exp $
 
 EAPI=2
 
@@ -36,9 +36,9 @@ IUSE="+berkdb debug doc examples +gdbm ipv6 rubytests socks5 ssl threads tk xema
 RDEPEND="
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
-	ssl? ( >=dev-libs/openssl-0.9.8m )
+	ssl? ( >=dev-libs/openssl-0.9.8m <dev-libs/openssl-1.0 )
 	socks5? ( >=net-proxy/dante-1.1.13 )
-	tk? ( dev-lang/tk[threads=] )
+	tk? ( dev-lang/tk[threads=] <dev-lang/tk-8.5 )
 	ncurses? ( sys-libs/ncurses )
 	libedit? ( dev-libs/libedit )
 	!libedit? ( readline? ( sys-libs/readline ) )
@@ -175,7 +175,7 @@ src_install() {
 
 	if use rubytests; then
 		pushd test
-		insinto /usr/share/${PN}-${SLOT}
+		insinto /usr/share/${PN}-${SLOT}/test
 		doins -r .
 		popd
 	fi
