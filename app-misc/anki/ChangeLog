@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.25 2010/08/18 17:27:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.26 2010/08/19 18:19:45 hwoarang Exp $
+
+  19 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  anki-0.9.9.8.6-r1.ebuild:
+  Stable on amd64 wrt bug #329091
 
 *anki-1.0 (18 Aug 2010)
 
