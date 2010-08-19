@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.344 2010/08/17 04:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.345 2010/08/19 22:33:28 vapier Exp $
+
+*openssl-1.0.0a-r2 (19 Aug 2010)
+
+  19 Aug 2010; Mike Frysinger <vapier@gentoo.org> +openssl-1.0.0a-r2.ebuild,
+  metadata.xml:
+  Grab POSIX shell version of c_rehash from PLD #333117. Add a local USE=sslv2
+  flag so people can enable legacy support #332661 by Stefan de Konink.
 
   17 Aug 2010; Mike Frysinger <vapier@gentoo.org> openssl-1.0.0a-r1.ebuild:
   Automatically rehash ssl certs for people #333069.
