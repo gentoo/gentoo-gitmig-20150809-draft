@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.16 2010/02/18 19:02:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.17 2010/08/19 17:02:28 pva Exp $
+
+*ptlib-2.6.7 (19 Aug 2010)
+
+  19 Aug 2010; Peter Volkov <pva@gentoo.org> +ptlib-2.6.7.ebuild:
+  Version bump, bug #326467 thank Vladimir for report.
 
 *ptlib-2.6.6 (18 Feb 2010)
 
