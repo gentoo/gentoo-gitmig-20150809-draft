@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.38 2010/07/04 07:59:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.39 2010/08/19 17:00:30 jer Exp $
+
+  19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove arfrever.
 
   04 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cadaver-0.23.3.ebuild:
