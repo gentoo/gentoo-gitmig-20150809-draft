@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.16 2009/04/21 21:40:41 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.17 2010/08/19 16:49:31 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,7 +19,6 @@ LICENSE="RTCW-ETEULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
-PROPERTIES="interactive"
 RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
@@ -31,7 +30,6 @@ RDEPEND="sys-libs/glibc
 
 S=${WORKDIR}
 
-GAMES_CHECK_LICENSE="yes"
 dir="${GAMES_PREFIX_OPT}/${PN}"
 Ddir="${D}/${dir}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.46 2009/04/21 21:40:41 gengor Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.47 2010/08/19 16:49:31 mr_bones_ Exp $
+
+  19 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  enemy-territory-2.60b.ebuild:
+  GAMES_CHECK_LICENSE functionality is replaced by ACCEPT_LICENSE
 
   21 Apr 2009; Gordon Malm <gengor@gentoo.org> enemy-territory-2.60b.ebuild:
   Minor build fix.
