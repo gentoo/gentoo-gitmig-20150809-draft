@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.36 2010/08/18 12:45:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/ChangeLog,v 1.37 2010/08/19 03:35:39 phajdan.jr Exp $
+
+  19 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  alephone-20100424.ebuild:
+  x86 stable wrt bug #333061
 
   18 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   alephone-20100424.ebuild:

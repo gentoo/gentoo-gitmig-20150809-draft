@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.2 2010/08/18 12:45:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.3 2010/08/19 03:35:39 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/marathon/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 BitstreamVera"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="alsa mad mpeg sndfile speex truetype vorbis"
 
 RDEPEND="media-libs/sdl-net
