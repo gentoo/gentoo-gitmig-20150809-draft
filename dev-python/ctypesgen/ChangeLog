@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.20 2010/08/19 16:54:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.21 2010/08/19 18:57:44 djc Exp $
+
+  19 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  The python herd will take this.
 
   19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove arfrever.
