@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/validation-api
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/validation-api/ChangeLog,v 1.1 2010/08/19 17:11:37 nelchael Exp $
+
+*validation-api-1.0.0 (19 Aug 2010)
+
+  19 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +validation-api-1.0.0.ebuild, +files/build.xml, +metadata.xml:
+  Initial version of Beans Validation API - JSR-303.
+
