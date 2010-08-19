@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.113 2010/07/29 14:04:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.114 2010/08/19 17:00:01 jer Exp $
+
+  19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove arfrever.
 
   29 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   kvirc-4.1_pre4696.ebuild:
