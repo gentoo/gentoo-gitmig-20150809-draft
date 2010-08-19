@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.18 2010/07/27 13:06:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.19 2010/08/19 19:32:20 voyageur Exp $
+
+  19 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org> clang-9999.ebuild:
+  system-cxx-headers was missing in -9999 IUSE, spotted by Jack Lloyd
+  <lloyd@randombit.net> in bug #331679
 
 *clang-2.7-r2 (27 Jul 2010)
 
