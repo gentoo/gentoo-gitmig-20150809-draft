@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.120 2010/06/16 07:40:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.121 2010/08/19 05:25:36 dirtyepic Exp $
+
+*tcl-8.5.8-r2 (19 Aug 2010)
+
+  19 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> +tcl-8.5.8-r2.ebuild,
+  +files/tcl-8.5.8-fortify.patch:
+  Fix buffer overflow with GCC 4.5 and -D_FORTIFY_SOURCE=2 (bug #317727 by
+  Diego).
 
   16 Jun 2010; Justin Lecher <jlec@gentoo.org> tcl-8.5.8-r1.ebuild:
   Compile in src_compile, fix for 324201
