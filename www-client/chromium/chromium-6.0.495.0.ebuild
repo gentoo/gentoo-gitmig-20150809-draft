@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.495.0.ebuild,v 1.1 2010/08/18 01:04:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.495.0.ebuild,v 1.2 2010/08/19 20:03:17 wired Exp $
 
 EAPI="2"
 
@@ -61,6 +61,9 @@ remove_bundled_lib() {
 src_prepare() {
 	# Add Gentoo plugin paths.
 	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
+
+	# gcc 4.5 patch - bug #333345
+	epatch "${FILESDIR}"/"${P}"-gcc-4.5.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"

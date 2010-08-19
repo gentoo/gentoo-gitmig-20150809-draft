@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.161 2010/08/18 03:33:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.162 2010/08/19 20:03:17 wired Exp $
+
+  19 Aug 2010; Alex Alexander <wired@gentoo.org> chromium-6.0.495.0.ebuild,
+  +files/chromium-6.0.495.0-gcc-4.5.patch:
+  fixed gcc-4.5 compilation, thanks to Sergey Dulko for patch. bug #333345
 
   18 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
   Remove ffmpeg from dependencies now that we use the bundled one.
