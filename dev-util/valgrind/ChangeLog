@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.114 2010/05/21 18:59:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.115 2010/08/19 17:58:17 ssuominen Exp $
+
+  19 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> valgrind-3.5.0.ebuild,
+  +files/valgrind-3.5.0-glibc-2.12.patch,
+  +files/valgrind-3.5.0-stat_h.patch:
+  Fix building with recent glibc wrt #332871 by Michal Vaner.
 
   21 May 2010; Peter Volkov <pva@gentoo.org> valgrind-3.5.0.ebuild:
   amd64 stable, bug 304287

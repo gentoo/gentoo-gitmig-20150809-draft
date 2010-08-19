@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.5.0.ebuild,v 1.8 2010/05/21 18:59:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.5.0.ebuild,v 1.9 2010/08/19 17:58:17 ssuominen Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -48,6 +48,10 @@ src_unpack() {
 	# Don't build in empty assembly files for other platforms or we'll get a QA
 	# warning about executable stacks.
 	epatch "${FILESDIR}/valgrind-3.5.0-non-exec-stack.patch"
+
+	# Minimal fixes required for glibc-2.12
+	epatch "${FILESDIR}/valgrind-3.5.0-glibc-2.12.patch"
+	epatch "${FILESDIR}/valgrind-3.5.0-stat_h.patch"
 
 	# Regenerate autotools files
 	eautoreconf
