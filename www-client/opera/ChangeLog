@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.536 2010/08/18 16:49:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.537 2010/08/19 16:22:12 jer Exp $
+
+*opera-10.70_pre9015 (19 Aug 2010)
+
+  19 Aug 2010; Jeroen Roovers <jer@gentoo.org> -opera-10.70_pre6428.ebuild,
+  +opera-10.70_pre9015.ebuild:
+  http://my.opera.com/desktopteam/blog/2010/08/19/content-blocker-synchroniz
+  ation-and-nix-fixes
 
 *opera-10.70_pre9013-r1 (18 Aug 2010)
 
