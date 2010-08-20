@@ -1,0 +1,18 @@
+diff -urN libindi-0.6.2/CMakeLists.txt libindi-0.6.2.new//CMakeLists.txt
+--- libindi-0.6.2/CMakeLists.txt	2010-07-20 06:40:26.000000000 +0200
++++ libindi-0.6.2.new//CMakeLists.txt	2010-08-20 11:04:46.803858551 +0200
+@@ -37,9 +37,11 @@
+ 
+ macro_optional_find_package(CFITSIO)
+ 
+-if (NOT CFITSIO_FOUND OR CFITSIO_VERSION_MAJOR LESS 3)
+-  message(FATAL_ERROR "CFITSIO version too old, Please install cfitsio 3.x and try again. http://indi.sf.net")
+-endif (NOT CFITSIO_FOUND OR CFITSIO_VERSION_MAJOR LESS 3)
++if (WITH_CFITSIO)
++	if (NOT CFITSIO_FOUND OR CFITSIO_VERSION_MAJOR LESS 3)
++  		message(FATAL_ERROR "CFITSIO version too old, Please install cfitsio 3.x and try again. http://indi.sf.net")
++	endif (NOT CFITSIO_FOUND OR CFITSIO_VERSION_MAJOR LESS 3)
++endif (WITH_CFITSIO)
+ 
+ macro_bool_to_01(CFITSIO_FOUND HAVE_CFITSIO_H)
+ macro_log_feature(CFITSIO_FOUND "libcfitsio" "A library for reading and writing data files in FITS (Flexible Image Transport System) data format" "http://indi.sf.net" FALSE "3.03" "Provides INDI with FITS I/O support.")

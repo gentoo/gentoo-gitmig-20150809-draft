@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/indilib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.13 2010/01/19 00:47:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.14 2010/08/20 09:21:12 scarabeus Exp $
+
+*indilib-0.6.2 (20 Aug 2010)
+
+  20 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.6.2-fix_fits_harddep.patch, +indilib-0.6.2.ebuild,
+  +files/0.6.2-fix_symlinks.patch:
+  Version bump.
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> indilib-0.6.ebuild:
   Stable for HPPA too.
