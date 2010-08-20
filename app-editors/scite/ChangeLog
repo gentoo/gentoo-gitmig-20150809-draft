@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.98 2010/08/19 14:08:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.99 2010/08/20 04:28:46 phajdan.jr Exp $
+
+  20 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> scite-2.12.ebuild:
+  x86 stable wrt bug #333447
 
 *scite-2.20 (19 Aug 2010)
 
