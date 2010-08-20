@@ -5,3 +5,4 @@ move www-client/mozilla-firefox www-client/firefox
 slotmove kde-misc/plasma-widget-message-indicator 0 4
 slotmove kde-misc/skanlite 0 4
 move sys-apps/parted sys-block/parted
+slotmove =dev-lang/clojure-1.2.0 1.1 1.2
