@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/asterisk-moh-opsound
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-moh-opsound/ChangeLog,v 1.1 2010/08/20 23:12:53 chainsaw Exp $
+
+*asterisk-moh-opsound-2.03 (20 Aug 2010)
+
+  20 Aug 2010; <chainsaw@gentoo.org> +asterisk-moh-opsound-2.03.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by Jaco Kroon. For bug #328513.
+
