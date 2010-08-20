@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11862 2010/08/19 19:23:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11863 2010/08/20 17:37:22 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -59,6 +59,7 @@ games-emulation/xmame
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (16 Aug 2010)
 # Experimental binary package compiled on Gentoo.
 ~www-client/chromium-bin-5.0.375.125
+~www-client/chromium-bin-5.0.375.127
 
 # Michael Sterrett <mr_bones_@gentoo.org> (13 Aug 2010)
 # Mask for removal 20100913
