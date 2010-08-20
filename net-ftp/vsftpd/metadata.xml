@@ -15,6 +15,11 @@
 		<name>Johan Bergström</name>
 		<description>Proxy Maintainer. CC him on bugs</description>
 	</maintainer>
+	<maintainer>
+		<email>smithdanea@gmail.com</email>
+		<name>Dane Smith</name>
+		<description>Proxy Maintainer. CC him on bugs</description>
+	</maintainer>
 	<longdescription lang="en">
 		Very Secure FTP Daemon written with speed, size and security
 		in mind

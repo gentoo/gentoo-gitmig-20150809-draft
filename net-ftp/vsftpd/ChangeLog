@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.128 2010/08/20 12:47:19 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.129 2010/08/20 19:20:16 hwoarang Exp $
+
+  20 Aug 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add Dane Smith <smithdanea@gmail.com> as proxy maintainer
 
   20 Aug 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
   added myself as maintainer
