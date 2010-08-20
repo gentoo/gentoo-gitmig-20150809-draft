@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.4.2.ebuild,v 1.1 2010/07/02 19:12:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.4.2.ebuild,v 1.2 2010/08/20 11:14:13 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils gnome2-utils flag-o-matic
@@ -21,6 +21,7 @@ COMMON_DEPEND="dev-libs/glib:2
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
 	x11-libs/qt-sql:4[sqlite]
+	x11-libs/qt-test:4
 	gstreamer? ( >=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10
 		projectm? ( media-libs/glew ) )
