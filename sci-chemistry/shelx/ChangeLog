@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/shelx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.16 2010/06/28 08:37:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.17 2010/08/20 15:11:08 dberkholz Exp $
+
+  20 Aug 2010; Donnie Berkholz <dberkholz@gentoo.org>;
+  shelx-20060317-r1.ebuild:
+  OpenMP: Handle full specifier for gfortran correctly so that the default,
+  unset compiler works.
 
   28 Jun 2010; Justin Lecher <jlec@gentoo.org> -shelx-20060317.ebuild,
   shelx-20060317-r1.ebuild:

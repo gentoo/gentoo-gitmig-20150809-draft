@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.5 2010/06/28 08:37:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.6 2010/08/20 15:11:08 dberkholz Exp $
 
 inherit autotools eutils flag-o-matic fortran
 
@@ -54,7 +54,7 @@ src_unpack() {
 
 src_compile() {
 	case $(tc-getF77) in
-		gfortran) append-flags -fopenmp ;;
+		*gfortran) append-flags -fopenmp ;;
 		ifort) append-flags -openmp ;;
 		*) ewarn "Please add any necessary OpenMP build flags to F77FLAGS." ;;
 	esac
