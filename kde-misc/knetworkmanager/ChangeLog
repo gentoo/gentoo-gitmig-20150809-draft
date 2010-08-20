@@ -1,6 +1,17 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.16 2010/03/31 23:17:46 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.17 2010/08/20 23:49:34 tampakrap Exp $
+
+*knetworkmanager-4.4.0_p20100820 (20 Aug 2010)
+
+  20 Aug 2010; Theo Chatzimichos <tampakrap@gentoo.org>
+  +knetworkmanager-4.4.0_p20100820.ebuild:
+  New snapshot. I wanted to unmask this version, but first it needs some
+  testing (with both KDE 4.4.5 and 4.5.0 for compile and runtime issues), as
+  it has a sed to make it compile with KDE 4.4.5
+  The sed reverts upstream commit
+  http://websvn.kde.org/trunk/extragear/base/networkmanagement/applet/CMakeL
+  ists.txt?r1=1164217&r2=1164216&pathrev=1164217
 
 *knetworkmanager-4.4.0_p20100331 (31 Mar 2010)
 
