@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>net-ftp</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
 	</maintainer>
 	<longdescription lang="en">
 		Very Secure FTP Daemon written with speed, size and security
