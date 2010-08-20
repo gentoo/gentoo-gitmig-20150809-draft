@@ -1,6 +1,20 @@
 \# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.266 2010/08/20 15:16:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.267 2010/08/20 23:12:54 chainsaw Exp $
+
+*asterisk-1.6.2.11-r1 (20 Aug 2010)
+
+  20 Aug 2010; <chainsaw@gentoo.org> asterisk-1.2.40.ebuild,
+  asterisk-1.6.2.10.ebuild, asterisk-1.6.2.11.ebuild,
+  +asterisk-1.6.2.11-r1.ebuild,
+  +files/1.6.2/asterisk-1.6.2.11-strip-noapi.patch,
+  +files/1.6.2/asterisk.initd2, +files/1.6.2/asterisk.logrotate,
+  asterisk-1.2.37.ebuild:
+  Tweak nm call to avoid binary deletion as requested by Alexey McSakoff in
+  bug #302736. Bashims removed from init script by Kerin Millar & Federico
+  Santulli, closes bug #309277. Stock audio prompts now split out to
+  separate ebuilds and logrotate support thanks to Jaco Kroon, closes bug
+  #328513 & #329281 respectively.
 
   20 Aug 2010; <chainsaw@gentoo.org>
   -files/1.6.1/asterisk-1.6.1.1-resolve-peer-not-section-header.patch,

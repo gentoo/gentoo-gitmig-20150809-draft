@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.10.ebuild,v 1.2 2010/08/20 23:12:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.11-r1.ebuild,v 1.1 2010/08/20 23:12:54 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -14,14 +14,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="alsa +caps curl dahdi debug freetds iconv jabber ldap lua keepsrc misdn newt +samples oss postgres radius snmp span speex ssl sqlite static vorbis"
+IUSE="alsa +caps dahdi debug freetds iconv jabber ldap lua keepsrc logrotate misdn newt +samples oss postgres radius snmp span speex ssl sqlite static vorbis"
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
 	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
 	caps? ( sys-libs/libcap )
-	curl? ( net-misc/curl )
 	dahdi? ( >=net-libs/libpri-1.4.7
 		net-misc/dahdi-tools )
 	freetds? ( dev-db/freetds )
@@ -43,10 +42,11 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	!<net-misc/asterisk-addons-1.6
 	!net-misc/asterisk-chan_unistim
-	!net-misc/zaptel
-	!net-misc/asterisk-core-sounds
-	!net-misc/asterisk-extra-sounds
-	!net-misc/asterisk-moh-opsound"
+	!net-misc/zaptel"
+
+PDEPEND="net-misc/asterisk-core-sounds
+	net-misc/asterisk-extra-sounds
+	net-misc/asterisk-moh-opsound"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -55,8 +55,8 @@ PATCHES=(
 	"${FILESDIR}/1.6.2/${PN}-1.6.2.8-pri-missing-keyword.patch"
 	"${FILESDIR}/1.6.2/${PN}-1.6.2.8-inband-indications.patch"
 	"${FILESDIR}/1.6.1/${PN}-1.6.1-uclibc.patch"
-	"${FILESDIR}/1.6.1/${PN}-1.6.1.6-fxsks-hookstate.patch"
 	"${FILESDIR}/1.6.2/${PN}-1.6.2.2-nv-faxdetect.patch"
+	"${FILESDIR}/1.6.2/${PN}-1.6.2.11-strip-noapi.patch"
 )
 
 pkg_setup() {
@@ -81,7 +81,6 @@ src_configure() {
 		--with-z \
 		$(use_with alsa asound) \
 		$(use_with caps cap) \
-		$(use_with curl) \
 		$(use_with dahdi pri) \
 		$(use_with dahdi tonezone) \
 		$(use_with dahdi) \
@@ -105,6 +104,13 @@ src_configure() {
 		$(use_with ssl) \
 		$(use_with vorbis ogg) \
 		$(use_with vorbis) || die "econf failed"
+
+	#
+	# blank out sounds/sounds.xml file to prevent
+	# asterisk from installing sounds files (we pull them in via
+	# asterisk-{core,extra}-sounds and asterisk-moh-opsound.
+	#
+	>"${S}"/sounds/sounds.xml
 }
 
 src_compile() {
@@ -145,7 +151,7 @@ src_install() {
 	diropts -m 0750 -o asterisk -g asterisk
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.6.2/asterisk.initd asterisk
+	newinitd "${FILESDIR}"/1.6.2/asterisk.initd2 asterisk
 	newconfd "${FILESDIR}"/1.6.0/asterisk.confd asterisk
 
 	# some people like to keep the sources around for custom patching
@@ -183,6 +189,14 @@ src_install() {
 	dodoc "${FILESDIR}/1.6.2/find_call_sip_trace.sh"
 	dodoc "${FILESDIR}/1.6.2/find_call_ids.sh"
 	dodoc "${FILESDIR}/1.6.2/call_data.txt"
+
+	# install logrotate snippet; bug #329281
+	#
+	if use logrotate
+	then
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}/1.6.2/asterisk.logrotate" asterisk
+	fi
 }
 
 pkg_preinst() {
