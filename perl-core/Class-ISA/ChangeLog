@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Class-ISA
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Class-ISA/ChangeLog,v 1.11 2010/08/19 15:06:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Class-ISA/ChangeLog,v 1.12 2010/08/20 09:45:41 fauli Exp $
+
+  20 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  Class-ISA-0.36.ebuild:
+  stable x86, bug 333421
 
   19 Aug 2010; Markos Chandras <hwoarang@gentoo.org> Class-ISA-0.36.ebuild:
   Stable on amd64 wrt bug #333421
