@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/patron
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.1 2010/07/24 06:04:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.2 2010/08/20 13:31:35 graaff Exp $
+
+*patron-0.4.6-r1 (20 Aug 2010)
+
+  20 Aug 2010; Hans de Graaff <graaff@gentoo.org> -patron-0.4.6.ebuild,
+  +patron-0.4.6-r1.ebuild:
+  Install shared object where patron itself expects it to be.
+
 
 *patron-0.4.6 (24 Jul 2010)
 
