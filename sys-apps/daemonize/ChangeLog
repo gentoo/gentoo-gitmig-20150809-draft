@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/daemonize
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/ChangeLog,v 1.1 2010/07/15 17:11:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/ChangeLog,v 1.2 2010/08/20 04:15:49 phajdan.jr Exp $
+
+  20 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> daemonize-1.6.ebuild:
+  x86 stable wrt bug #333415
 
 *daemonize-1.6 (15 Jul 2010)
 
