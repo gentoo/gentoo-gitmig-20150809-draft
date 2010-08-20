@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Class-ISA
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Class-ISA/ChangeLog,v 1.15 2010/08/19 14:59:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Class-ISA/ChangeLog,v 1.16 2010/08/20 10:30:26 fauli Exp $
+
+  20 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  perl-Class-ISA-0.36.ebuild:
+  stable x86, bug 333421
 
   19 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   perl-Class-ISA-0.36.ebuild:
