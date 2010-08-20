@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/lrmi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.22 2008/12/08 20:57:55 ssuominen Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.23 2010/08/20 13:10:18 spock Exp $
+
+  20 Aug 2010; Michał Januszewski <spock@gentoo.org> lrmi-0.10-r1.ebuild,
+  +files/lrmi-0.10-ldflags.patch:
+  Respect LDFLAGS (bug #331913).
 
   08 Dec 2008; <ssuominen@gentoo.org> lrmi-0.10-r1.ebuild:
   Respect AR, CC and RANLIB.

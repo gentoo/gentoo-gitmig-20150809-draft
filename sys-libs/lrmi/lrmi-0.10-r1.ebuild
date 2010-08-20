@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/lrmi-0.10-r1.ebuild,v 1.4 2008/12/08 20:57:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/lrmi-0.10-r1.ebuild,v 1.5 2010/08/20 13:10:18 spock Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,11 +17,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-kernel-2.6.26.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
 	tc-export CC AR RANLIB
-	emake CFLAGS="${CFLAGS} -Wall" || die "emake failed."
+	emake CFLAGS="${CFLAGS} -Wall" LDFLAGS="${LDFLAGS}" || die "emake failed."
 }
 
 src_install() {
