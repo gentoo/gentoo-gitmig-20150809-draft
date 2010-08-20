@@ -4,6 +4,5 @@
 <herd>base-system</herd>
 <use>
   <flag name='rfc3779'>Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)</flag>
-  <flag name='sslv2'>Enable old/vulnerable SSLv2 protocol -- ONLY do this with closed/legacy systems</flag>
 </use>
 </pkgmetadata>

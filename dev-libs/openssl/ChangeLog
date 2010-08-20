@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.345 2010/08/19 22:33:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.346 2010/08/20 09:59:13 vapier Exp $
+
+  20 Aug 2010; Mike Frysinger <vapier@gentoo.org> openssl-1.0.0a-r2.ebuild,
+  metadata.xml:
+  Drop USE=sslv2 support as it doesnt do what was intended. Will revbump once
+  #332661 shakes out but for now, stop breaking random apps.
 
 *openssl-1.0.0a-r2 (19 Aug 2010)
 

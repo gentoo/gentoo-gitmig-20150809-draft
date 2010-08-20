@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r2.ebuild,v 1.1 2010/08/19 22:33:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r2.ebuild,v 1.2 2010/08/20 09:59:13 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 LICENSE="openssl"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="bindist gmp kerberos rfc3779 sse2 sslv2 test zlib"
+IUSE="bindist gmp kerberos rfc3779 sse2 test zlib"
 
 RDEPEND="gmp? ( dev-libs/gmp )
 	zlib? ( sys-libs/zlib )
@@ -95,7 +95,6 @@ src_compile() {
 		$(use_ssl gmp gmp -lgmp) \
 		$(use_ssl kerberos krb5 --with-krb5-flavor=${krb5}) \
 		$(use_ssl rfc3779) \
-		$(use_ssl sslv2 ssl2) \
 		$(use_ssl zlib) \
 		--prefix=/usr \
 		--openssldir=/etc/ssl \
