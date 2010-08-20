@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/mobile-broadband-provider-info-20100510.ebuild,v 1.2 2010/08/13 07:12:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/mobile-broadband-provider-info-20100510.ebuild,v 1.3 2010/08/20 10:16:51 hwoarang Exp $
 
 inherit gnome.org
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI/${PV}./${PV}}"
 
 LICENSE="CC-PD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE=""
 
 RDEPEND=""

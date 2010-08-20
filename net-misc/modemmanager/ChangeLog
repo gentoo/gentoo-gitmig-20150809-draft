@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.13 2010/08/13 07:14:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.14 2010/08/20 10:18:54 hwoarang Exp $
+
+  20 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  modemmanager-0.4.ebuild:
+  Stable on amd64 wrt bug #321593
 
   13 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   modemmanager-0.4.ebuild:

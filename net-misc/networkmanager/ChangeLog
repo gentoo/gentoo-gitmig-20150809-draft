@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.79 2010/08/17 14:39:36 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.80 2010/08/20 10:18:04 hwoarang Exp $
+
+  20 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  networkmanager-0.8-r1.ebuild:
+  Stable on amd64 wrt bug #321593
 
 *networkmanager-0.8.1-r3 (17 Aug 2010)
 
