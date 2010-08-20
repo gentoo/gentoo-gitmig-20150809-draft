@@ -6,6 +6,11 @@
 		<email>hwoarang@gentoo.org</email>
 		<name>Markos Chandras</name>
 	</maintainer>
+	<maintainer>
+		<email>bugs@bergstroem.nu</email>
+		<name>Johan Bergström</name>
+		<description>Proxy Maintainer. CC him on bugs</description>
+	</maintainer>
 	<longdescription lang="en">
 		Very Secure FTP Daemon written with speed, size and security
 		in mind
