@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.14 2010/07/07 23:41:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.15 2010/08/20 09:26:59 hwoarang Exp $
+
+*libqxt-0.6.0-r2 (20 Aug 2010)
+
+  20 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/libqxt-use-system-qdoc3.patch, +libqxt-0.6.0-r2.ebuild,
+  metadata.xml:
+  Revbump to fix issues reported on bug #331585. New use flags, Adjusted
+  qt-assistant dependency, switched to qt4-r2 and EAPI=3, use systems'
+  qdoc3, fix arguments when crypt use flag was enabled. Many thanks to
+  Davide Pesavento <davidepesa@gmail.com> for his work, patches,review and
+  testing
 
 *libqxt-0.6.0-r1 (07 Jul 2010)
 

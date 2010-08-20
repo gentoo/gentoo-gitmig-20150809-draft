@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>qt</herd>
-  <maintainer>
-    <email>qt@gentoo.org</email>
-  </maintainer>
-  <use>
-    <flag name="crypt">
-      Enable support for blowfish encryption using <pkg>dev-libs/openssl</pkg>
-    </flag>
-    <flag name="sql">
-      Enable support for SQL databases using <pkg>x11-libs/qt-sql</pkg>
-    </flag>
-    <flag name="web">
-      Enable web support using <pkg>dev-libs/fcgi</pkg>
-    </flag>
-  </use>
+<herd>qt</herd>
+<use>
+	<flag name="berkdb">Build the QxtBerkeley module</flag>
+	<flag name="sql">Build the QxtSql module</flag>
+	<flag name="web">Enable fast cgi bindings</flag>
+	<flag name="zeroconf">Build the QxtZeroconf module</flag>
+</use>
 </pkgmetadata>
