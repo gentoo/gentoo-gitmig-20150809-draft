@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.320 2010/07/21 11:22:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.321 2010/08/20 17:04:15 jer Exp $
+
+  20 Aug 2010; Jeroen Roovers <jer@gentoo.org> hal-0.5.12_rc1-r8.ebuild,
+  hal-0.5.13-r2.ebuild, hal-0.5.14.ebuild, hal-0.5.14-r1.ebuild,
+  hal-0.5.14-r2.ebuild:
+  Move from sys-apps/parted to sys-block/parted.
 
   21 Jul 2010; Jeroen Roovers <jer@gentoo.org> hal-0.5.14-r2.ebuild:
   Stable for HPPA (bug #323943).

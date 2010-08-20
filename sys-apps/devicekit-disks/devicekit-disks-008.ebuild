@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/devicekit-disks-008.ebuild,v 1.1 2009/10/29 23:43:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-disks/devicekit-disks-008.ebuild,v 1.2 2010/08/20 17:02:58 jer Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.16.1
 	>=sys-auth/polkit-0.92
 	>=sys-fs/udev-145[extras]
 	>=sys-fs/lvm2-2.02.48-r2
-	>=sys-apps/parted-1.8.8[device-mapper]
+	>=sys-block/parted-1.8.8[device-mapper]
 	>=dev-libs/libatasmart-0.14
 	>=sys-apps/sg3_utils-1.27.20090411
 
