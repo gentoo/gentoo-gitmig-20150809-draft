@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.93 2010/08/18 04:53:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.94 2010/08/20 12:20:40 hwoarang Exp $
+
+  20 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  matplotlib-1.0.0.ebuild:
+  Stable on amd64 wrt bug #333193
 
   18 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   matplotlib-1.0.0.ebuild:
