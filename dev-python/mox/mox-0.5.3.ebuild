@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/mox-0.5.3.ebuild,v 1.1 2010/08/20 22:02:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/mox-0.5.3.ebuild,v 1.2 2010/08/20 22:09:50 ssuominen Exp $
 
 EAPI=3
 
@@ -22,5 +22,9 @@ IUSE=""
 PYTHON_MODNAME="mox.py stubout.py"
 
 src_test() {
-	$(PYTHON) mox_test.py || die
+	testing() {
+		$(PYTHON) mox_test.py || die
+	}
+
+	python_execute_function testing
 }
