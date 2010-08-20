@@ -25,7 +25,7 @@
 		service tag information and your hardware backlight data as well as
 		allow you to modify the backlight settings on a Dell laptop.</flag>
 	<flag name='disk-partition'>Allows HAL to use libparted from
-		<pkg>sys-apps/parted</pkg> to read raw partition data from your disks
+		<pkg>sys-block/parted</pkg> to read raw partition data from your disks
 		and process that data. Future versions of HAL (possibly 0.5.11 and
 		higher) will allow you to create, modify, delete and format partitions
 		from a GUI interface agnostic of your desktop environment.</flag>
