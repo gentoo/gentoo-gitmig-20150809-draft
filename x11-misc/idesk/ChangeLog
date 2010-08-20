@@ -1,12 +1,12 @@
 # ChangeLog for x11-misc/idesk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.52 2010/08/20 07:30:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/ChangeLog,v 1.53 2010/08/20 07:34:54 xarthisius Exp $
 
 *idesk-0.7.5-r2 (20 Aug 2010)
 
   20 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   +idesk-0.7.5-r2.ebuild, +files/idesk-0.7.5-glibc-2.12.patch:
-  Fix building with GLIBC 2.12 wrt bug 333151. Thanks to Charlie Gehlin
+  Fix building with GLIBC 2.12 wrt bug 333515. Thanks to Charlie Gehlin
   <charlie@gehlin.com> for report and scavenging patch.
 
   06 May 2008; Samuli Suominen <drac@gentoo.org> idesk-0.7.5-r1.ebuild:
