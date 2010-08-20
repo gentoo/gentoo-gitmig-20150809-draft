@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tomatoes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.16 2009/01/19 20:20:23 mr_bones_ Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.17 2010/08/20 16:27:02 mr_bones_ Exp $
+
+  20 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  tomatoes-1.55-r2.ebuild:
+  add more use deps (bug #333631)
 
   19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   tomatoes-1.55-r2.ebuild:
