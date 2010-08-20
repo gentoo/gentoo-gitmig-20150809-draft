@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r1.ebuild,v 1.2 2010/08/17 15:10:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r2.ebuild,v 1.1 2010/08/20 18:03:12 robbat2 Exp $
 
 EAPI="2"
 
@@ -77,7 +77,8 @@ src_install() {
 	# keyanalyze
 	# TODO: some of the scripts are intended for webpages, and not really
 	# packaging, so they are NOT installed yet.
-	dobin keyanalyze/{pgpring/pgpring,keyanalyze,process_keys}
+	newbin pgpring/pgpring pgpring-keyanalyze
+	dobin keyanalyze/{keyanalyze,process_keys}
 	docinto keyanalyze
 	dodoc keyanalyze/{README,ChangeLog}
 	# See app-crypt/keylookup instead
