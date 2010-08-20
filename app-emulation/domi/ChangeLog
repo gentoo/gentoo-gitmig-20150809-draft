@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/domi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/ChangeLog,v 1.11 2008/10/05 17:43:22 bangert Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/ChangeLog,v 1.12 2010/08/20 17:00:42 jer Exp $
+
+  20 Aug 2010; Jeroen Roovers <jer@gentoo.org> domi-20060630.ebuild,
+  domi-20060816.ebuild:
+  Move from sys-apps/parted to sys-block/parted.
 
   05 Oct 2008; Thilo Bangert <bangert@gentoo.org>
   +files/fix_install_links.patch, domi-20060816.ebuild:

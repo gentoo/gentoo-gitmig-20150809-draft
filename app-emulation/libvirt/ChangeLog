@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.71 2010/08/18 15:38:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.72 2010/08/20 17:01:37 jer Exp $
+
+  20 Aug 2010; Jeroen Roovers <jer@gentoo.org> libvirt-0.8.2-r1.ebuild,
+  libvirt-0.8.3.ebuild, libvirt-0.8.3-r1.ebuild:
+  Move from sys-apps/parted to sys-block/parted.
 
   18 Aug 2010; Doug Goldstein <cardoe@gentoo.org> libvirt-0.8.2-r1.ebuild,
   libvirt-0.8.3.ebuild, libvirt-0.8.3-r1.ebuild:
