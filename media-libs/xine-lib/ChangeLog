@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.631 2010/08/18 04:17:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.632 2010/08/20 14:35:28 ssuominen Exp $
+
+  20 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xine-lib-1.1.19.ebuild, +files/xine-lib-1.1.19-xvmc.patch:
+  Fix building with recent videoproto wrt #332389 by Rahul Jain, Matteo
+  Azzali and Geoff Leach.
 
   18 Aug 2010; Jeroen Roovers <jer@gentoo.org> xine-lib-1.1.18.1.ebuild:
   Stable for HPPA (bug #317141).
