@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.2.0.ebuild,v 1.1 2010/08/20 07:16:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.2.0.ebuild,v 1.2 2010/08/20 17:36:11 mr_bones_ Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source test"
@@ -12,7 +12,7 @@ HOMEPAGE="http://clojure.org/"
 SRC_URI="http://github.com/downloads/clojure/clojure/${P}.zip"
 
 LICENSE="EPL-1.0"
-SLOT="1.1"
+SLOT="1.2"
 KEYWORDS="~amd64 ~x86"
 IUSE="source"
 
