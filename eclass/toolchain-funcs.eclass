@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.100 2010/05/23 02:00:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.101 2010/08/20 15:04:11 dberkholz Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -79,7 +79,7 @@ tc-getOBJCOPY() { tc-getPROG OBJCOPY objcopy "$@"; }
 # @FUNCTION: tc-getF77
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the Fortran 77 compiler
-tc-getF77() { tc-getPROG F77 f77 "$@"; }
+tc-getF77() { tc-getPROG F77 gfortran "$@"; }
 # @FUNCTION: tc-getFC
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the Fortran 90 compiler
