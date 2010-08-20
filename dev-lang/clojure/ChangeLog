@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/clojure
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.1 2010/07/20 16:29:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.2 2010/08/20 07:16:36 mr_bones_ Exp $
+
+*clojure-1.2.0 (20 Aug 2010)
+
+  20 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> clojure-1.1.0.ebuild,
+  +clojure-1.2.0.ebuild:
+  version bump
 
 *clojure-1.1.0 (20 Jul 2010)
 
