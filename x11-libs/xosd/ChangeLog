@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.79 2010/07/10 13:39:24 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.80 2010/08/20 12:43:09 wired Exp $
+
+  20 Aug 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
+  became maintainer
 
   10 Jul 2010; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   xosd-2.2.14-r1.ebuild, +files/xosd-2.2.14-makefile.patch:

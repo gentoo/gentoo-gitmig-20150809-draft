@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
+		<email>wired@gentoo.org</email>
+		<name>Alex Alexander</name>
 	</maintainer>
 </pkgmetadata>
