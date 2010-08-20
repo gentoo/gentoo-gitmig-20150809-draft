@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="http://connman.net"
@@ -30,6 +30,10 @@ RDEPEND=">=dev-libs/glib-2.16
 
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fix-iptables-test.patch"
+}
 
 src_configure() {
 	econf \
