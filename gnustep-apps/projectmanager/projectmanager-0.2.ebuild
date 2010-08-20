@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/projectmanager-0.2.ebuild,v 1.5 2008/03/08 13:42:12 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/projectmanager/projectmanager-0.2.ebuild,v 1.6 2010/08/20 14:53:15 voyageur Exp $
 
 inherit gnustep-2
 
@@ -14,6 +14,7 @@ SRC_URI="http://download.gna.org/pmanager/${PV}/${MY_PN}-${PV}.tar.bz2"
 KEYWORDS="amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 DEPEND="gnustep-apps/keyarcher
 	gnustep-apps/plconv
@@ -25,7 +26,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-gui12.patch
+	epatch "${FILESDIR}"/${P}-missing_includes.patch
 	epatch "${FILESDIR}"/${P}-pathdomainmask.patch
-	epatch "${FILESDIR}"/${P}-gnustep-base1.15.patch
 }
