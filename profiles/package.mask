@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11863 2010/08/20 17:37:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11864 2010/08/20 21:16:19 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,27 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (21 Aug 2010)
+# Masked for treecleaners, QA
+#
+# etheme, bug 332685
+# btg, bugs 277655, 295006, 295009, 326639 and 326643
+# modplugplay is replaced by modplugtools
+# realbasic, bug 324891
+# playspc, bug 328843
+# qt-faststart, bug 276268
+#
+# Removal in 30 days
+media-video/qt-faststart
+media-sound/modplugplay
+media-sound/playspc
+dev-lang/realbasic
+net-p2p/btg
+x11-themes/etheme-BlueSteel
+x11-themes/etheme-BrushedMetal-Tigert
+x11-themes/etheme-Ganymede
+x11-themes/etheme-ShinyMetal
 
 # Christian Faulhammer <fauli@gentoo.org> (19 Aug 2010)
 # Mask for removal in 30 days
