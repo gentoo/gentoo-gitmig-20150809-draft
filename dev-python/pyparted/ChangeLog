@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.55 2010/08/12 01:03:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.56 2010/08/20 17:02:12 jer Exp $
+
+  20 Aug 2010; Jeroen Roovers <jer@gentoo.org> pyparted-3.4.ebuild:
+  Move from sys-apps/parted to sys-block/parted.
 
   12 Aug 2010; Joseph Jezak <josejx@gentoo.org> pyparted-3.4.ebuild:
   Marked ppc stable for bug #316539.

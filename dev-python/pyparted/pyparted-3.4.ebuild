@@ -1,12 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.4.ebuild,v 1.9 2010/08/12 01:03:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.4.ebuild,v 1.10 2010/08/20 17:02:12 jer Exp $
 
 EAPI="2"
 
 inherit autotools multilib python
 
-DESCRIPTION="Python bindings for sys-apps/parted"
+DESCRIPTION="Python bindings for sys-block/parted"
 HOMEPAGE="https://fedorahosted.org/pyparted/"
 SRC_URI="https://fedorahosted.org/releases/p/y/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="
 	sys-libs/ncurses
 	>=dev-lang/python-2.4
-	>=sys-apps/parted-2.3
+	>=sys-block/parted-2.3
 	dev-python/decorator
 "
 RDEPEND="${DEPEND}"
