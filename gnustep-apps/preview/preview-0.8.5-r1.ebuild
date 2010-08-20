@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.8.5-r1.ebuild,v 1.6 2010/08/20 14:30:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.8.5-r1.ebuild,v 1.7 2010/08/20 14:34:55 voyageur Exp $
 
 inherit gnustep-2
 
@@ -22,5 +22,5 @@ src_unpack() {
 	ln -s ../English.lproj/Preview.gorm French.lproj
 
 	# Fix compilation, patch from debian
-	epatch ${FILESDIR}/${P}-compilation-errors.patch
+	epatch "${FILESDIR}"/${P}-compilation-errors.patch
 }
