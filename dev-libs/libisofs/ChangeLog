@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.67 2010/08/12 12:13:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.68 2010/08/20 20:56:09 ssuominen Exp $
+
+  20 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  libisofs-0.6.34.ebuild:
+  ppc64 stable wrt #331093
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org> libisofs-0.6.28.ebuild:
   arm stable, bug #324165
