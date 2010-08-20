@@ -7,6 +7,10 @@
 		<name>Markos Chandras</name>
 	</maintainer>
 	<maintainer>
+		<email>wired@gentoo.org</email>
+		<name>Alex Alexander</name>
+	</maintainer>
+	<maintainer>
 		<email>bugs@bergstroem.nu</email>
 		<name>Johan Bergström</name>
 		<description>Proxy Maintainer. CC him on bugs</description>
