@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.86 2010/08/13 17:30:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.87 2010/08/20 12:30:50 voyageur Exp $
+
+  20 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-gui-0.16.0.ebuild, -gnustep-gui-0.16.0-r1.ebuild:
+  Drop old stable versions, security bug #325577
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> gnustep-gui-0.18.0.ebuild:
   Marked ppc stable for bug #325577.

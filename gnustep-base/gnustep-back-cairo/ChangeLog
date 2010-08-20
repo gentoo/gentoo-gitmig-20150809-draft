@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.25 2010/08/13 17:33:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.26 2010/08/20 12:32:23 voyageur Exp $
+
+  20 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-back-cairo-0.16.0.ebuild:
+  Drop old stable versions, security bug #325577
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org>
   gnustep-back-cairo-0.18.0.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.101 2010/08/13 17:29:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.102 2010/08/20 12:30:03 voyageur Exp $
+
+  20 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-base-1.18.0-r4.ebuild,
+  -files/gnustep-base-1.18.0-mdns_configure.patch,
+  -gnustep-base-1.20.0.ebuild:
+  Drop old stable versions, security bug #325577
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> gnustep-base-1.20.1.ebuild:
   Marked ppc stable for bug #325577.
