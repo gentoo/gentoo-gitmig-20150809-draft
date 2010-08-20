@@ -1,6 +1,34 @@
 \# ChangeLog for net-misc/asterisk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.265 2010/08/10 23:23:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.266 2010/08/20 15:16:43 chainsaw Exp $
+
+  20 Aug 2010; <chainsaw@gentoo.org>
+  -files/1.6.1/asterisk-1.6.1.1-resolve-peer-not-section-header.patch,
+  -files/1.6.1/asterisk-1.6.1.6-bt-line-test.patch,
+  -files/1.6.1/asterisk-1.6.1.6-lua-includes.patch,
+  -files/1.6.1/asterisk-1.6.1.6-transfer-segfault.patch,
+  -files/1.6.1/asterisk-1.6.1.8-session_expiry.patch,
+  -files/1.6.1/asterisk-1.6.1.12-longer-sip-cid.patch,
+  -files/1.6.1/asterisk-1.6.1.12-parallel-make-v2.patch,
+  -files/1.6.1/asterisk-1.6.1.14-graceful-restart-segfault.patch,
+  -files/1.6.1/asterisk-1.6.1.14-parallel-make.patch,
+  -files/1.6.1/asterisk-1.6.1.19-gsm-pic.patch, -asterisk-1.6.1.20.ebuild,
+  -files/1.6.1/asterisk-1.6.1.20-inband-progress.patch,
+  -files/1.6.1/asterisk-1.6.1-gsm-pic.patch,
+  -files/1.6.1/asterisk-1.6.1-imap-kerberos.patch,
+  -files/1.6.1/asterisk-1.6.1-var_rundir.patch,
+  -files/1.6.2/asterisk-1.6.2.7-gsm-pic.patch, -asterisk-1.6.2.8.ebuild,
+  -files/1.6.2/asterisk-1.6.2.8-gsm-pic.patch, -asterisk-1.6.2.9.ebuild,
+  -files/1.6.1/asterisk.initd,
+  -files/1.6.2/asterisk-1.6.2.7-pri-missing-keyword.patch,
+  -asterisk-1.6.2.9-r1.ebuild, -files/1.6.1/asterisk.initd2,
+  -files/1.6.1/asterisk.initd3, -files/1.6.1/asterisk.rc6,
+  -files/1.6.2/asterisk-1.6.2.0-bt-line-test.patch,
+  -files/1.6.2/asterisk-1.6.2.1-parallel-make.patch,
+  -files/1.6.2/asterisk-1.6.2.2-graceful-restart-segfault.patch,
+  -files/1.6.2/asterisk-1.6.2.2-parallel-make.patch:
+  As jkroon has confirmed that 1.6.1 is no longer required, initiate a
+  clean-up of unneeded ebuilds & patches.
 
 *asterisk-1.6.2.11 (10 Aug 2010)
 
