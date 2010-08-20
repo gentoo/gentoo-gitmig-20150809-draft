@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5881 2010/08/20 17:07:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5882 2010/08/20 17:27:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -242,7 +242,7 @@ app-emulation/libvirt:network - Enable networking support for guests
 app-emulation/libvirt:nfs - Allow the libvirtd daemon store VM images on NFS mounts
 app-emulation/libvirt:numa - Use NUMA for memory segmenting via sys-process/numactl
 app-emulation/libvirt:openvz - Add support for sys-kernel/openvz-sources OpenVZ-based virtual machines
-app-emulation/libvirt:parted - Add support for the sys-apps/parted partition editor
+app-emulation/libvirt:parted - Add support for the sys-block/parted partition editor
 app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
 app-emulation/libvirt:phyp - Support the PHYP hypervisor protocol
 app-emulation/libvirt:qemu - Add support for app-emulation/qemu based virtual machines
@@ -3308,7 +3308,7 @@ sys-apps/hal:acpi - Enables HAL to attempt to read from /proc/acpi/event, if una
 sys-apps/hal:consolekit - Enables HAL to interact with consolekit for determining whether a given process is running on behalf of the person setting at the console.
 sys-apps/hal:crypt - Allows HAL to mount volumes that are encrypted using LUKS. sys-fs/cryptsetup-luks which has recently been renamed to sys-fs/cryptsetup allows you to create such encrypted volumes. HAL will be able to handle volumes that are removable or fixed.
 sys-apps/hal:dell - Builds and installs the Dell addon, which reads data from the Dell SM BIOS via sys-libs/libsmbios. It will read your service tag information and your hardware backlight data as well as allow you to modify the backlight settings on a Dell laptop.
-sys-apps/hal:disk-partition - Allows HAL to use libparted from sys-apps/parted to read raw partition data from your disks and process that data. Future versions of HAL (possibly 0.5.11 and higher) will allow you to create, modify, delete and format partitions from a GUI interface agnostic of your desktop environment.
+sys-apps/hal:disk-partition - Allows HAL to use libparted from sys-block/parted to read raw partition data from your disks and process that data. Future versions of HAL (possibly 0.5.11 and higher) will allow you to create, modify, delete and format partitions from a GUI interface agnostic of your desktop environment.
 sys-apps/hal:doc - Generates documentation that describes HAL's fdi format.
 sys-apps/hal:laptop - Adds support for power management scripts (sys-power/pm-utils)
 sys-apps/hal:selinux - Installs SELinux policies and links HAL to the SELinux libraries.
@@ -3327,8 +3327,6 @@ sys-apps/paludis:portage - Enable experimental support for Portage configuration
 sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM to build (~700Mbytes per job) and adds a dependency upon dev-libs/boost
 sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
-sys-apps/parted:debug -  Enable debugging as encouraged by upstream: [The default configuration] includes --enable-debug (by default), which contains many assertions. Obviously, these "waste" space, but in the past, they have caught potentially dangerous bugs before they would have done damage, so we think it's worth it. Also, it means we get more bug reports ;) 
-sys-apps/parted:device-mapper -  Enable sys-fs/device-mapper support in parted 
 sys-apps/pciutils:network-cron -  Monthly cronjob the update-pciids script 
 sys-apps/pcmcia-cs:trusted - Assume all users are trusted (Build unsafe user-space tools)
 sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
