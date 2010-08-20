@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-addons
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.18 2010/02/19 15:48:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.19 2010/08/20 18:14:22 chainsaw Exp $
+
+  20 Aug 2010; <chainsaw@gentoo.org> -asterisk-addons-1.6.1.2.ebuild:
+  Remove version dependent upon Asterisk 1.6.1; this branch has been removed
+  from portage.
 
 *asterisk-addons-1.6.2.0 (19 Feb 2010)
 
