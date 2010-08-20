@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1-r1.ebuild,v 1.6 2010/07/30 09:40:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1-r1.ebuild,v 1.7 2010/08/20 17:08:15 jer Exp $
 
 EAPI=3
 inherit eutils bash-completion
@@ -19,7 +19,7 @@ COMMON_DEPEND=">=sys-fs/udev-147[extras]
 	>=sys-apps/dbus-1
 	>=dev-libs/dbus-glib-0.82
 	>=sys-auth/polkit-0.92
-	>=sys-apps/parted-1.8.8[device-mapper]
+	>=sys-block/parted-1.8.8[device-mapper]
 	>=sys-fs/lvm2-2.02.66
 	>=dev-libs/libatasmart-0.14
 	>=sys-apps/sg3_utils-1.27.20090411
