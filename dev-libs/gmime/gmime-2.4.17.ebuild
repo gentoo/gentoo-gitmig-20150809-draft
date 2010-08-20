@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.17.ebuild,v 1.6 2010/08/10 12:20:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.17.ebuild,v 1.7 2010/08/20 19:49:24 ssuominen Exp $
 
 inherit gnome2 eutils mono libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="2.4"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc mono"
 
 RDEPEND=">=dev-libs/glib-2.12
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 		app-text/docbook-sgml-utils )
 	mono? ( dev-dotnet/gtk-sharp-gapi )"
 
-DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS PORTING README TODO doc/html/"
+DOCS="AUTHORS ChangeLog NEWS PORTING README TODO doc/html/"
 
 src_unpack() {
 	unpack ${A}
