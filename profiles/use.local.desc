@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5879 2010/08/20 10:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5880 2010/08/20 15:47:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -263,7 +263,6 @@ app-emulation/opennebula:xen - Pull in packages needed to create Xen nodes.
 app-emulation/pearpc:jit - Use the JITC-x86 CPU
 app-emulation/point2play:emerald - For people who are in the Transgaming Emerald Club
 app-emulation/q4wine:development -  Enable developer related stuff
-app-emulation/q4wine:embedded-fuseiso -  Enable q4wine-mount tools 
 app-emulation/q4wine:gnome - Use the gksu sudo GUI for managing the devices
 app-emulation/q4wine:icotools -  Enable icotools support
 app-emulation/q4wine:icoutils -  Enable icoutils support 
