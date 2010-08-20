@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.224 2010/08/20 19:18:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.225 2010/08/20 20:36:11 robbat2 Exp $
+
+*lvm2-2.02.73 (20 Aug 2010)
+
+  20 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.73.ebuild,
+  +files/lvm2-2.02.73-locale-muck.patch:
+  Version bump.
 
   20 Aug 2010; Robin H. Johnson <robbat2@gentoo.org>
   files/lvm-monitoring.initd-2.02.67-r2:
