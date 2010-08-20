@@ -1,6 +1,7 @@
-diff -ur gtkdiskfree-1.9.3.orig/intl/Makefile.in gtkdiskfree-1.9.3/intl/Makefile.in
---- gtkdiskfree-1.9.3.orig/intl/Makefile.in	2002-11-16 13:34:20.000000000 +0200
-+++ gtkdiskfree-1.9.3/intl/Makefile.in	2010-08-20 20:38:58.000000000 +0300
+http://bugs.gentoo.org/333499
+
+--- intl/Makefile.in
++++ intl/Makefile.in
 @@ -202,12 +202,12 @@
  # The dependency for intlh.inst is different in gettext and all other
  # packages.  Because we cannot you GNU make features we have to solve
