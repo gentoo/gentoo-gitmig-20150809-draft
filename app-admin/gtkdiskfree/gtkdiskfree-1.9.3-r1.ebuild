@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3-r1.ebuild,v 1.11 2009/08/25 17:19:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3-r1.ebuild,v 1.12 2010/08/20 17:39:46 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Graphical tool to show free disk space"
@@ -13,24 +14,23 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-tempfile.patch #104565
 	epatch "${FILESDIR}"/${PV}-makefile-DESTDIR.patch
+	epatch "${FILESDIR}"/${P}-make-382.patch
 }
 
-src_compile() {
-	econf $(use_enable nls)
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		$(use_enable nls)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
