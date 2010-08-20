@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.1.ebuild,v 1.1 2010/06/28 00:26:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.1-r1.ebuild,v 1.1 2010/08/20 13:50:49 scarabeus Exp $
 
 EAPI=2
 inherit cmake-utils multilib
@@ -16,7 +16,6 @@ IUSE="+boost debug test"
 
 RDEPEND="dev-lang/lua
 	dev-libs/openssl
-	>=dev-libs/STLport-5.1.5
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/jpeg:0
@@ -46,7 +45,7 @@ src_configure() {
 		"-DPODOFO_HAVE_PNG_LIB=1"
 		"-DPODOFO_HAVE_TIFF_LIB=1"
 		"-DWANT_FONTCONFIG=1"
-		"-DUSE_STLPORT=1"
+		"-DUSE_STLPORT=0"
 		$(cmake-utils_use_want boost)
 		$(cmake-utils_use_has test CPPUNIT)
 		)
