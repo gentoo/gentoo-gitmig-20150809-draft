@@ -16,7 +16,7 @@
 		<flag name='lxc'>Add support for the Linux Containers</flag>
 		<flag name='openvz'>Add support for <pkg>sys-kernel/openvz-sources</pkg>
 			OpenVZ-based virtual machines</flag>
-		<flag name='parted'>Add support for the <pkg>sys-apps/parted</pkg>
+		<flag name='parted'>Add support for the <pkg>sys-block/parted</pkg>
 			partition editor</flag>
 		<flag name='uml'>Add support for User Mode Linux based virtual
 			machines</flag>
