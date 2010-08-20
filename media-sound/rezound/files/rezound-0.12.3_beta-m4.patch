@@ -15,7 +15,7 @@ these flags, see http://bugs.gentoo.org/305305
 -ajv_CXX_FLAG(-Wno-unused-function)
 -ajv_CXX_FLAG(-Wno-unused-variable)
 -ajv_CXX_FLAG(-Wno-unused)
-+CXXFLAGS="$CXXFLAGS -Wall -Wno-unused-function -Wno-unused-variable -Wno-unused"
++CXXFLAGS="$CXXFLAGS -g -Wall -Wno-unused-function -Wno-unused-variable -Wno-unused"
  
  
  
