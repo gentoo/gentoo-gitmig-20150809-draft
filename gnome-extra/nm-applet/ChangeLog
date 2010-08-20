@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.47 2010/08/18 09:18:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.48 2010/08/20 10:18:30 hwoarang Exp $
+
+  20 Aug 2010; Markos Chandras <hwoarang@gentoo.org> nm-applet-0.8.ebuild:
+  Stable on amd64 wrt bug #321593
 
 *nm-applet-0.8.1-r1 (18 Aug 2010)
 
