@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5882 2010/08/20 17:27:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5883 2010/08/20 23:27:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2771,6 +2771,7 @@ net-misc/aria2:metalink - Enables support for metalink
 net-misc/aria2:scripts - Install additional scripts which use aria2's xmlrpc functionality
 net-misc/asterisk:dahdi - Support Digium compatible hardware (formerly known as Zaptel).
 net-misc/asterisk:keepsrc - Install sources into /usr/src for custom patching
+net-misc/asterisk:logrotate - Install a configuration snippet for the logrotate cronjob
 net-misc/asterisk:lowmem - Build Asterisk for environments with low amounts of memory (embedded devices)
 net-misc/asterisk:misdn - Build with mISDN (chan_misdn) support for BRI ISDN cards
 net-misc/asterisk:newt - Include additional tools that require redhats windowing toolkit
@@ -2781,6 +2782,33 @@ net-misc/asterisk:samples - Install sample sound and configuration files (defaul
 net-misc/asterisk:span - Enable support for the spandsp codec
 net-misc/asterisk:zaptel - Enables deprecated zaptel support (use dahdi if available)
 net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
+net-misc/asterisk-core-sounds:alaw - Install the sounds files for the alaw codec.
+net-misc/asterisk-core-sounds:g722 - Install the sounds files for the g722 codec.
+net-misc/asterisk-core-sounds:g729 - Install the sounds files for the g729 codec.
+net-misc/asterisk-core-sounds:gsm - Install the sounds files for the +gsm codec.
+net-misc/asterisk-core-sounds:siren14 - Install the sounds files for the siren14 codec.
+net-misc/asterisk-core-sounds:siren7 - Install the sounds files for the siren7 codec.
+net-misc/asterisk-core-sounds:sln16 - Install the sounds files for the sln16 codec.
+net-misc/asterisk-core-sounds:ulaw - Install the sounds files for the ulaw codec.
+net-misc/asterisk-core-sounds:wav - Install the sounds files for the wav codec.
+net-misc/asterisk-extra-sounds:alaw - Install the sounds files for the alaw codec.
+net-misc/asterisk-extra-sounds:g722 - Install the sounds files for the g722 codec.
+net-misc/asterisk-extra-sounds:g729 - Install the sounds files for the g729 codec.
+net-misc/asterisk-extra-sounds:gsm - Install the sounds files for the +gsm codec.
+net-misc/asterisk-extra-sounds:siren14 - Install the sounds files for the siren14 codec.
+net-misc/asterisk-extra-sounds:siren7 - Install the sounds files for the siren7 codec.
+net-misc/asterisk-extra-sounds:sln16 - Install the sounds files for the sln16 codec.
+net-misc/asterisk-extra-sounds:ulaw - Install the sounds files for the ulaw codec.
+net-misc/asterisk-extra-sounds:wav - Install the sounds files for the wav codec.
+net-misc/asterisk-moh-opsound:alaw - Install the sounds files for the alaw codec.
+net-misc/asterisk-moh-opsound:g722 - Install the sounds files for the g722 codec.
+net-misc/asterisk-moh-opsound:g729 - Install the sounds files for the g729 codec.
+net-misc/asterisk-moh-opsound:gsm - Install the sounds files for the +gsm codec.
+net-misc/asterisk-moh-opsound:siren14 - Install the sounds files for the siren14 codec.
+net-misc/asterisk-moh-opsound:siren7 - Install the sounds files for the siren7 codec.
+net-misc/asterisk-moh-opsound:sln16 - Install the sounds files for the sln16 codec.
+net-misc/asterisk-moh-opsound:ulaw - Install the sounds files for the ulaw codec.
+net-misc/asterisk-moh-opsound:wav - Install the sounds files for the wav codec.
 net-misc/connman:dhclient - Use dhclient from net-misc/dhcp for getting ip.
 net-misc/connman:dnsproxy - Enable dnsproxy support.
 net-misc/connman:ethernet - Enable ethernet support.
