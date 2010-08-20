@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.40 2010/07/12 18:01:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.41 2010/08/20 13:20:35 ssuominen Exp $
+
+*yasm-1.1.0 (20 Aug 2010)
+
+  20 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> +yasm-1.1.0.ebuild,
+  +files/yasm-1.1.0-skip_cython_check.patch:
+  Version bump.
 
   12 Jul 2010; Christian Faulhammer <fauli@gentoo.org> yasm-1.0.1.ebuild:
   stable x86, bug 325273

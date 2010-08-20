@@ -1,0 +1,17 @@
+Skip semi-broken Cython version check because it barfs on 0.13_beta0.
+
+--- configure.ac
++++ configure.ac
+@@ -285,11 +285,7 @@
+     AC_MSG_NOTICE([Checking to see if we can build Python bindings])
+     have_python_bindings=no
+     if test x$have_python = xyes; then
+-        AC_MSG_CHECKING([for Cython >= 0.11.3])
+-        CYTHON_CHECK_VERSION(0.11.3, [AC_MSG_RESULT(yes)
+-                                      have_cython=yes],
+-                                     [AC_MSG_RESULT(no)
+-                                      have_cython=no])
++        have_cython=yes
+ 
+         AM_CHECK_PYTHON_HEADERS(have_python_headers=yes,have_python_headers=no)
+ 
