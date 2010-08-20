@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.1 2010/06/06 12:26:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.2 2010/08/20 10:29:12 hwoarang Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="imlib nls perl"
 
 RDEPEND="x11-libs/gtk+:2
