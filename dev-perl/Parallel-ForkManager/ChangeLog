@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Parallel-ForkManager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.11 2010/03/18 19:36:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.12 2010/08/20 21:10:17 robbat2 Exp $
+
+*Parallel-ForkManager-0.7.6 (20 Aug 2010)
+
+  20 Aug 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +Parallel-ForkManager-0.7.6.ebuild:
+  Version bump via perl-bump experimental tool.
 
   18 Mar 2010; Jeremy Olexa <darkside@gentoo.org> Parallel-ForkManager-0.7.5.ebuild:
   add ~x86-solaris ~sparc-solaris kw, as tested on bug 308683
