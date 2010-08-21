@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.41 2010/08/03 17:21:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.42 2010/08/21 20:15:18 hwoarang Exp $
+
+  21 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  -files/zen-sources-2.6.31_p5-config_fb_fix.patch,
+  -files/zen-sources-2.6.33_rc2_p1-kernel-sysctl.c.patch:
+  Remove unused files
 
   03 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   kernel-2 deblob support for 2.6.35; bug #324505: deblob-check usage.
