@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.72 2010/08/21 18:21:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.73 2010/08/21 19:36:45 vapier Exp $
 
 # @ECLASS: cvs.eclass
 # @MAINTAINER:
@@ -35,6 +35,7 @@ inherit eutils
 # on the cvs connection.  The default of "cvs -q -f -z4" means to be
 # quiet, to disregard the ~/.cvsrc config file and to use maximum
 # compression.
+[[ -z ${ECVS_CVS_COMMAND} ]] && ECVS_CVS_COMMAND="cvs ${ECVS_CVS_OPTIONS} ${ECVS_CVS_COMPRESS}"
 
 # @ECLASS-VARIABLE: ECVS_CVS_COMPRESS
 # @DESCRIPTION:
@@ -45,11 +46,6 @@ inherit eutils
 # @DESCRIPTION:
 # Additional options to the cvs commands.
 [[ -z ${ECVS_CVS_OPTIONS} ]] && ECVS_CVS_OPTIONS="-q -f"
-
-# @ECLASS-VARIABLE: ECVS_CVS_COMMAND
-# @DESCRIPTION:
-# The cvs command.
-[[ -z ${ECVS_CVS_COMMAND} ]] && ECVS_CVS_COMMAND="cvs ${ECVS_CVS_OPTIONS} ${ECVS_CVS_COMPRESS}"
 
 # @ECLASS-VARIABLE: ECVS_UP_OPTS
 # @DESCRIPTION:
@@ -70,12 +66,14 @@ inherit eutils
 : ${ECVS_OFFLINE:=${ESCM_OFFLINE}}
 
 # @ECLASS-VARIABLE: ECVS_LOCAL
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # If this is set, the CVS module will be fetched non-recursively.
 # Refer to the information in the CVS man page regarding the -l
 # command option (not the -l global option).
 
 # @ECLASS-VARIABLE: ECVS_LOCALNAME
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Local name of checkout directory
 #
@@ -106,6 +104,7 @@ inherit eutils
 [ -z "$ECVS_SERVER" ] && ECVS_SERVER="offline"
 
 # @ECLASS-VARIABLE: ECVS_MODULE
+# @REQUIRED
 # @DESCRIPTION:
 # The name of the CVS module to be fetched
 #
@@ -115,6 +114,7 @@ inherit eutils
 #[ -z "$ECVS_MODULE" ] && die "$ECLASS: error: ECVS_MODULE not set, cannot continue"
 
 # @ECLASS-VARIABLE: ECVS_BRANCH
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # The name of the branch/tag to use
 #
@@ -151,6 +151,7 @@ inherit eutils
 [ -z "$ECVS_PASS" ] && ECVS_PASS=""
 
 # @ECLASS-VARIABLE: ECVS_SSH_HOST_KEY
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # If SSH is used for `ext' authentication, use this variable to
 # specify the host key of the remote server.  The format of the value
@@ -160,11 +161,13 @@ inherit eutils
 # remote host key will not be verified.
 
 # @ECLASS-VARIABLE: ECVS_CLEAN
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Set this to get a clean copy when updating (passes the
 # -C option to cvs update)
 
 # @ECLASS-VARIABLE: ECVS_RUNAS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Specifies an alternate (non-root) user to use to run cvs.  Currently
 # b0rked and wouldn't work with portage userpriv anyway without
