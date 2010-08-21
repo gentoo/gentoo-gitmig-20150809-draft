@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-termios
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.24 2010/07/05 19:00:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.25 2010/08/21 20:53:22 flameeyes Exp $
+
+  21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/ruby-termios-ruby19.patch, ruby-termios-0.9.6-r1.ebuild:
+  Remove unused file. Remove examples USE flag, always install them
+  (uncompressed), and die on tests' failure.
 
 *ruby-termios-0.9.6-r1 (05 Jul 2010)
 

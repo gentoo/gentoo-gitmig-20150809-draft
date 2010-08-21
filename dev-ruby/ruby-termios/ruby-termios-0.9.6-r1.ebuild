@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.6-r1.ebuild,v 1.1 2010/07/05 19:00:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ruby-termios-0.9.6-r1.ebuild,v 1.2 2010/08/21 20:53:22 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ SRC_URI="http://github.com/arika/ruby-termios/tarball/version_0_9_6 -> ${P}.tar.
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
-IUSE="examples"
+IUSE=""
 
 S="${WORKDIR}/arika-${PN}-94fd9ac"
 
@@ -26,7 +26,7 @@ each_ruby_compile() {
 }
 
 each_ruby_test() {
-	${RUBY} test/test0.rb
+	${RUBY} test/test0.rb || die "tests failed"
 }
 
 each_ruby_install() {
@@ -35,5 +35,7 @@ each_ruby_install() {
 
 all_ruby_install() {
 	dodoc ChangeLog README termios.rd
-	use examples && docinto examples && dodoc examples/*
+
+	insinto /usr/share/doc/${PF}/examples
+	doins examples/* || die
 }
