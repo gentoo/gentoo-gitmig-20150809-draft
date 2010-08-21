@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.36 2010/05/22 20:13:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.37 2010/08/21 20:08:14 flameeyes Exp $
+
+*ruby-fcgi-0.8.8-r1 (21 Aug 2010)
+
+  21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/ruby-fcgi-0.8.7-19compat.patch, ruby-fcgi-0.8.8.ebuild,
+  +ruby-fcgi-0.8.8-r1.ebuild:
+  Remove unused file and prepare a revision with Ruby 1.9 so 0.8.8 can be
+  stabilized.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -ruby-fcgi-0.8.7-r2.ebuild, -ruby-fcgi-0.8.7-r3.ebuild:
