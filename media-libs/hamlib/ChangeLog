@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.47 2010/06/05 14:16:41 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.48 2010/08/21 19:13:44 phajdan.jr Exp $
+
+  21 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> hamlib-1.2.11.ebuild:
+  x86 stable wrt bug #333603
 
 *hamlib-1.2.11 (05 Jun 2010)
 
