@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/gspoof-3.2.ebuild,v 1.8 2006/09/15 15:27:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/gspoof-3.2.ebuild,v 1.9 2010/08/21 15:23:25 xarthisius Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ DEPEND="=x11-libs/gtk+-2*
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gspoof-def-values.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/gspoof-def-values.patch
 }
 
 src_install() {
@@ -30,5 +30,5 @@ src_install() {
 	insinto /usr/share/gspoof/pixmap
 	doins pixmap/icon.png
 
-	dodoc Makefile README CHANGELOG TODO LICENSE VERSION
+	dodoc Makefile README CHANGELOG TODO VERSION
 }
