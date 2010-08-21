@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.100 2010/08/21 19:36:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.101 2010/08/21 19:39:52 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -92,8 +92,6 @@ unset _automake_atom _autoconf_atom
 # @DESCRIPTION:
 # Additional director(y|ies) aclocal should search
 : ${AT_M4DIR:=${M4DIR}}
-AT_GNUCONF_UPDATE="no"
-
 
 # @FUNCTION: eautoreconf
 # @DESCRIPTION:

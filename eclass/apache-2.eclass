@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.21 2010/07/11 08:22:40 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.22 2010/08/21 19:39:52 vapier Exp $
 
 EAPI="2"
 
@@ -426,7 +426,7 @@ apache-2_src_prepare() {
 
 	# patched-in MPMs need the build environment rebuilt
 	sed -i -e '/sinclude/d' configure.in
-	AT_GNUCONF_UPDATE=yes AT_M4DIR=build eautoreconf
+	AT_M4DIR=build eautoreconf
 }
 
 # @FUNCTION: apache-2_src_configure
