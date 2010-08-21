@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.74 2010/08/21 10:27:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.75 2010/08/21 11:14:48 dev-zero Exp $
+
+  21 Aug 2010; Tiziano Müller <dev-zero@gentoo.org> -STLport-5.1.2.ebuild,
+  -STLport-5.1.3.ebuild:
+  Dropped old (bug #240604).
 
 *STLport-5.2.1 (21 Aug 2010)
 
