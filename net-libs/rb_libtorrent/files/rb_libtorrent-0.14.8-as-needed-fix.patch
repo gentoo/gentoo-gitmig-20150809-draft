@@ -1,8 +1,0 @@
---- Makefile.am.orig	2010-01-14 14:36:08.000000000 +0100
-+++ Makefile.am	2010-01-14 14:41:49.000000000 +0100
-@@ -1,4 +1,5 @@
- ACLOCAL_AMFLAGS = -I m4
-+LIBADD = -lrt
- #DISTCHECK_CONFIGURE_FLAGS = --enable-tests
- SUBDIRS = include zlib src examples test bindings/python
- EXTRA_DIST = autotool.sh docs/manual.html docs/manual.rst docs/extension_protocol.rst \
