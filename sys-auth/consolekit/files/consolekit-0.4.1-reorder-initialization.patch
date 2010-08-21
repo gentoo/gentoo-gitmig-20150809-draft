@@ -1,4 +1,5 @@
 http://bugs.gentoo.org/333349
+http://bugs.freedesktop.org/show_bug.cgi?id=25744
 
 --- src/main.c
 +++ src/main.c
