@@ -1,0 +1,11 @@
+http://cgit.freedesktop.org/ConsoleKit/patch/?id=fc2870a65f6b3ed3b71bcac69c5faf3a9c759c64
+http://bugs.freedesktop.org/show_bug.cgi?id=25642
+
+--- data/org.freedesktop.ConsoleKit.service.in
++++ data/org.freedesktop.ConsoleKit.service.in
+@@ -1,4 +1,4 @@
+ [D-BUS Service]
+ Name=org.freedesktop.ConsoleKit
+-Exec=@sbindir@/console-kit-daemon
++Exec=@sbindir@/console-kit-daemon --no-daemon
+ User=root

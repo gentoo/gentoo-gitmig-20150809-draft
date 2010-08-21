@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.73 2010/08/18 21:50:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.74 2010/08/21 09:35:16 ssuominen Exp $
+
+*consolekit-0.4.1-r1 (21 Aug 2010)
+
+  21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +consolekit-0.4.1-r1.ebuild, +files/consolekit-0.4.1-nodaemon.patch,
+  +files/consolekit-0.4.1-reorder-initialization.patch:
+  Don't take bus name until ready wrt #333349. Don't daemonize when
+  activated.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> consolekit-0.4.1.ebuild:
   arm stable, bug #314899
