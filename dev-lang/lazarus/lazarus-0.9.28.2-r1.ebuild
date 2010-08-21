@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.28.2.ebuild,v 1.1 2010/02/06 09:15:14 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.28.2-r1.ebuild,v 1.1 2010/08/21 18:29:39 truedfx Exp $
 
 EAPI=2
 
@@ -30,6 +30,7 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.26-fpcsrc.patch
+	epatch "${FILESDIR}"/${PN}-0.9.28.2-bug0015627.patch
 
 	# Use default configuration (minus stripping) unless specifically requested otherwise
 	if ! test ${PPC_CONFIG_PATH+set} ; then
