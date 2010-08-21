@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.536 2010/08/09 05:01:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.537 2010/08/21 02:14:18 robbat2 Exp $
+
+*mysql-5.1.50 (21 Aug 2010)
+
+  21 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.50.ebuild:
+  Version bump.
 
 *mysql-5.1.49-r1 (09 Aug 2010)
 *mysql-5.0.91 (09 Aug 2010)
