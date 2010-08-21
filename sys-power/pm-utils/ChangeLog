@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.52 2010/07/30 09:49:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.53 2010/08/21 18:51:57 maekke Exp $
+
+  21 Aug 2010; Markus Meier <maekke@gentoo.org> pm-utils-1.4.1.ebuild:
+  arm stable, bug #329625
 
   30 Jul 2010; Markos Chandras <hwoarang@gentoo.org> pm-utils-1.4.1.ebuild:
   Stable on amd64 wrt bug #329625
