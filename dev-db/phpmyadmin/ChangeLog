@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.392 2010/08/21 16:42:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.393 2010/08/21 18:07:16 phajdan.jr Exp $
+
+  21 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  phpmyadmin-3.3.5.1.ebuild:
+  x86 stable wrt security bug #302745
 
   21 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   phpmyadmin-3.3.5.1.ebuild:
