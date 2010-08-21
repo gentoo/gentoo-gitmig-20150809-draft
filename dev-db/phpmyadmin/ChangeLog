@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.388 2010/07/18 20:24:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.389 2010/08/21 00:18:15 a3li Exp $
+
+*phpmyadmin-3.3.5.1 (21 Aug 2010)
+
+  21 Aug 2010; Alex Legler <a3li@gentoo.org> -phpmyadmin-2.11.9.5.ebuild,
+  -phpmyadmin-2.11.9.6.ebuild, -phpmyadmin-3.2.2.1.ebuild,
+  -phpmyadmin-3.3.2.ebuild, +phpmyadmin-3.3.5.1.ebuild:
+  Version bump for security bug 302745.
 
   18 Jul 2010; Joseph Jezak <josejx@gentoo.org> phpmyadmin-2.11.10.ebuild:
   Marked ppc/ppc64 stable for bug #303761.
