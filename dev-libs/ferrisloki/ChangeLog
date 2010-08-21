@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ferrisloki
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.19 2010/08/21 16:38:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.20 2010/08/21 17:41:56 vapier Exp $
+
+  21 Aug 2010; Mike Frysinger <vapier@gentoo.org> ferrisloki-3.0.3.ebuild:
+  Get STLport detection working #333825 by Samuli Suominen.
 
 *ferrisloki-3.0.3 (21 Aug 2010)
 
