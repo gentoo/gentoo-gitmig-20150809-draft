@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.33-r1.ebuild,v 1.1 2010/08/12 19:51:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-6.0.472.41.ebuild,v 1.1 2010/08/21 05:23:12 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -64,10 +64,6 @@ src_prepare() {
 
 	# Add Gentoo plugin paths.
 	epatch "${FILESDIR}"/${PN}-plugins-path-r0.patch
-
-	# Fix a renderer crash, bug #331661. This is a backport
-	# of the upstream patch.
-	epatch "${FILESDIR}"/${PN}-yuv-crash-r0.patch
 
 	remove_bundled_lib "third_party/bzip2"
 	remove_bundled_lib "third_party/codesighs"
