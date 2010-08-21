@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/jpilot-backup
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.15 2010/07/13 13:49:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.16 2010/08/21 12:12:09 ssuominen Exp $
+
+  21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  jpilot-backup-0.60.ebuild:
+  Make sure ENABLE_GTK2 is defined to avoid implicit declaration of function
+  gtk_spin_button_set_shadow_type.
 
 *jpilot-backup-0.60 (13 Jul 2010)
 

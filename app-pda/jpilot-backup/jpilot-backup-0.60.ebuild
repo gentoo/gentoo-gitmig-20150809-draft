@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/jpilot-backup-0.60.ebuild,v 1.1 2010/07/13 13:49:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/jpilot-backup-0.60.ebuild,v 1.2 2010/08/21 12:12:09 ssuominen Exp $
 
 EAPI=2
-inherit multilib
+inherit flag-o-matic multilib
 
 DESCRIPTION="Backup plugin for jpilot"
 HOMEPAGE="http://www.jlogday.com/code/jpilot-backup/index.html"
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
+	append-cppflags -DENABLE_GTK2
 	econf \
 		--enable-gtk2
 }
