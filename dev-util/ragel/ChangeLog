@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.40 2010/08/05 17:03:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.41 2010/08/21 19:58:03 flameeyes Exp $
+
+  21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/ragel-6.5+gcc-4.4.patch, -files/ragel-6.5-freebsd.patch:
+  Drop unused files.
 
   05 Aug 2010; Markus Meier <maekke@gentoo.org> ragel-6.6.ebuild:
   add ~arm, bug #331061
