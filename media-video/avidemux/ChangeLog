@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.170 2010/08/11 13:56:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.171 2010/08/21 20:07:01 hwoarang Exp $
+
+  21 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  -files/avidemux-2.4.3-x264.patch, -files/avidemux-2.4-libdca.patch:
+  Remove unused files
 
   11 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   avidemux-2.5.3-r2.ebuild:
