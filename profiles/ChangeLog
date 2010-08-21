@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4490 2010/08/21 16:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4491 2010/08/21 21:37:59 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove unneeded masks.
 
   21 Aug 2010; Mike Frysinger <vapier@gentoo.org> package.mask:
   Give ferrisloki/fampp2 a reprieve.

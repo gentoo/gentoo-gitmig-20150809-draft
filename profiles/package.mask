@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11869 2010/08/21 16:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11870 2010/08/21 21:37:59 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -479,43 +479,6 @@ mail-client/nmh
 #
 >=sys-cluster/heartbeat-3.0.3
 
-# Thomas Beierlein <tomjbe@gentoo.org> (22 Jun 2010)
-# Restrict mask to only the sci-libs/libgeda-1.4.3* ebuilds as 
-# otherwise the stable sci-electronics/geda-1.4.0 misses a dep.
-#
-# Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2010)
-#  on behalf of QA team
-#
-# The geda-1.4.3-r1 is the only “split” ebuild for geda;
-# most of its dependencies are stable x86 but not all, so
-# the split itself is not stable; the latest stable on x86 is
-# 1.4.0-r1. The newer versions are no longer split. There is
-# *no* proper blocker or dependency range to avoid collisions
-# between them.
-#
-# Removal on 2010-08-20
-=sci-electronics/geda-1.4.3*
-=sci-libs/libgeda-1.4.3*
-sci-electronics/geda-gattrib
-sci-electronics/geda-gnetlist
-sci-electronics/geda-gschem
-sci-electronics/geda-gsymcheck
-sci-electronics/geda-symbols
-sci-electronics/geda-utils
-sci-electronics/geda-docs
-sci-electronics/geda-examples
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (18 Jun 2010)
-#  on behalf of QA team
-#
-# Collides with FFmpeg, which is a dependency of it. Its
-# functionality should now be part of the main package
-# (officially since 0.6, but also in our previous
-# snapshots). See bug #314985.
-#
-# Removal on 2010-08-17
-media-video/ffprobe
-
 # Patrick Lauer <patrick@gentoo.org> (18 Jun 2010)
 # Only one provider left, so the virtuals serve
 # no purpose and will be removed soon
@@ -609,35 +572,6 @@ net-wireless/ieee80211
 # Fails to self-verify/sign in FIPS mode, pending upstream response before
 # usage for GSoC project.
 app-crypt/hmaccalc
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (29 May 2010)
-#  on behalf of QA team
-#
-# Maintainer needed, no reverse dependencies. Fails tests,
-# code has a strcpy() overflow that aborts with fortified
-# sources (gcc 4.5 for instance). See bug #278139 and 321983.
-#
-# Removal on 2010-07-28
-dev-util/awka
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (26 May 2010)
-#  on behalf of QA team
-#
-# cl-smtp fails to fetch since at least September 2007
-# (bug #193627); cl-pop needs the former.
-#
-# Removal on 2010-07-25
-dev-lisp/cl-smtp
-dev-lisp/cl-pop
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (26 May 2010)
-#  on behalf of QA team
-#
-# Fails to build since at least November 2008, improper
-# dependencies over freetype, bug #247917.
-#
-# Removal on 2010-07-25
-media-video/w3cam
 
 # Luca Barbato <lu_zero@gentoo.org> (21 May 2010)
 # development release
@@ -933,16 +867,6 @@ net-libs/libjingle
 ~www-client/chromium-6.0.472.25
 ~www-client/chromium-6.0.490.1
 ~www-client/chromium-6.0.495.0
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (07 Jan 2010)
-#  on behalf of QA team
-#
-# Fails to fetch, bug #228929, open June 2008, still not
-# fixed.
-#
-# Removal on 2010-03-08
-# Masking breaks deps for ia64.  Address before re-masking (mr_bones_@gentoo.org)
-#dev-java/jrockit-jdk-bin
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
