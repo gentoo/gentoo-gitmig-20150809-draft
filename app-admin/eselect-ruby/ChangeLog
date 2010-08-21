@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.37 2010/08/21 16:12:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.38 2010/08/21 16:49:50 hwoarang Exp $
+
+  21 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  eselect-ruby-20100603.ebuild:
+  Stable on amd64 wrt bug #332957
 
   21 Aug 2010; Jeroen Roovers <jer@gentoo.org> eselect-ruby-20100603.ebuild:
   Stable for PPC (bug #332957).
