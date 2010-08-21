@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.3.5.1.ebuild,v 1.1 2010/08/21 00:18:15 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.3.5.1.ebuild,v 1.2 2010/08/21 09:59:42 a3li Exp $
 
 EAPI="2"
 
@@ -51,6 +51,7 @@ src_install() {
 	webapp_serverowned "${MY_HTDOCSDIR}"/libraries/config.default.php
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-3.1.txt
-	webapp_hook_script "${FILESDIR}"/reconfig-2.8
+	# In recent versions, this should no longer be needed.
+	#webapp_hook_script "${FILESDIR}"/reconfig-2.8
 	webapp_src_install
 }
