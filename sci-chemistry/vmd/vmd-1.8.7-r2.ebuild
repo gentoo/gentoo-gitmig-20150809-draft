@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.1 2010/07/27 18:47:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.2 2010/08/21 23:10:08 alexxy Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="${P}.src.tar.gz"
 SLOT="0"
 LICENSE="vmd"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="tachyon"
+IUSE="msms povray tachyon"
 
 RESTRICT="fetch"
 
@@ -36,6 +36,8 @@ DEPEND="
 
 RDEPEND="${DEPEND}
 	x11-terms/xterm
+	msms? ( sci-chemistry/msms )
+	povray? ( media-gfx/povray )
 	tachyon? ( media-gfx/tachyon )"
 
 VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD"

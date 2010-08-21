@@ -11,6 +11,9 @@
 	</maintainer>
 	<herd>sci-chemistry</herd>
 	<use>
+		<flag name='msms'>Add support for MSMS SAS calcualtion tool</flag>
+		<flag name='povray'>Add support for povray raytracer for HQ
+			images</flag>
 		<flag name='tachyon'>Add support for tachyon raytracer for HQ
 			images</flag>
 	</use>
