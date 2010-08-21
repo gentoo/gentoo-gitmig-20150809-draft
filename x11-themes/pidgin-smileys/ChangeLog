@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/pidgin-smileys
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.6 2010/08/19 19:13:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.7 2010/08/21 12:15:05 xarthisius Exp $
+
+*pidgin-smileys-20100821 (21 Aug 2010)
+
+  21 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +pidgin-smileys-20100821.ebuild, metadata.xml:
+  Version bump. Fixes bug 236221. Adding pidgin-penguin-smileys. Claiming
+  ownership.
 
   19 Aug 2010; Steve Dibb <beandog@gentoo.org> metadata.xml:
   Assign to maintainer-needed
