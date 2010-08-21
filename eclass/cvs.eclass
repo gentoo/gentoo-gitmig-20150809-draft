@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.71 2010/06/19 00:35:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.72 2010/08/21 18:21:06 vapier Exp $
 
 # @ECLASS: cvs.eclass
 # @MAINTAINER:
@@ -62,6 +62,12 @@ inherit eutils
 # CVS options given after the cvs checkout command.
 [ -z "$ECVS_CO_OPTS" ] && ECVS_CO_OPTS=""
 
+# @ECLASS-VARIABLE: ECVS_OFFLINE
+# @DESCRIPTION:
+# Set this variable to a non-empty value to disable the automatic updating of
+# a CVS source tree. This is intended to be set outside the cvs source
+# tree by users.
+: ${ECVS_OFFLINE:=${ESCM_OFFLINE}}
 
 # @ECLASS-VARIABLE: ECVS_LOCAL
 # @DESCRIPTION:
@@ -511,7 +517,7 @@ cvs_src_unpack() {
 
 	local sanitized_pn=$(echo "${PN}" | LC_ALL=C sed -e 's:[^A-Za-z0-9_]:_:g')
 	local offline_pkg_var="ECVS_OFFLINE_${sanitized_pn}"
-	if [ "${!offline_pkg_var}" == "1" -o "$ECVS_OFFLINE" == "1" -o "$ECVS_SERVER" == "offline" ]; then
+	if [[ -n ${!offline_pkg_var}${ECVS_OFFLINE} ]] || [[ "$ECVS_SERVER" == "offline" ]] ; then
 		# We're not required to fetch anything; the module already
 		# exists and shouldn't be updated.
 		if [ -d "${ECVS_TOP_DIR}/${ECVS_LOCALNAME}" ]; then
