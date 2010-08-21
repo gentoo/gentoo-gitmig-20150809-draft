@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.2 2009/11/27 19:39:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.3 2010/08/21 19:44:59 vapier Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -86,7 +86,7 @@ src_unpack() {
 		sed -i -e "s:@libdir@:$(get_libdir):g" mapscript/tcl/Makefile.in \
 			|| die "failed to fix libdir in Makefile.in"
 	fi
-	AT_GNUCONF_UPDATE="no" eautoreconf
+	eautoreconf
 }
 
 src_compile() {
