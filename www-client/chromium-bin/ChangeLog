@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.73 2010/08/18 03:22:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.74 2010/08/21 02:34:59 phajdan.jr Exp $
+
+*chromium-bin-5.0.375.127 (21 Aug 2010)
+
+  21 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-bin-5.0.375.127.ebuild:
+  Bump the experimental binary package. Fixes bug #333269 by Mike Gilbert
+  <floppymaster@gmail.com>.
 
   18 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-bin-5.0.375.125.ebuild:
