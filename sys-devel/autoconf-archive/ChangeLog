@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.31 2010/08/20 15:45:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.32 2010/08/21 21:11:32 scarabeus Exp $
+
+  21 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -autoconf-archive-2008.11.07.ebuild, -autoconf-archive-2009.12.16.ebuild,
+  autoconf-archive-2010.07.06.ebuild, autoconf-archive-2010.08.19.ebuild,
+  metadata.xml:
+  Fixup homepage. Remove old. Stabilise 2010.07.06. Take maintainership.
 
 *autoconf-archive-2010.08.19 (20 Aug 2010)
 

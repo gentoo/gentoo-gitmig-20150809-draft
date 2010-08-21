@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2010.08.19.ebuild,v 1.1 2010/08/20 15:45:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2010.08.19.ebuild,v 1.2 2010/08/21 21:11:32 scarabeus Exp $
 
 EAPI="3"
 
 DESCRIPTION="GNU Autoconf Macro Archive"
-HOMEPAGE="http://autoconf-archive.cryp.to/"
+HOMEPAGE="http://www.gnu.org/software/autoconf-archive/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
@@ -15,8 +15,6 @@ IUSE=""
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodir /usr/share/doc
-	mv "${D}"/usr/share/{${PN},doc/${PF}} || die
-	rm -f "${D}"/usr/share/doc/${PF}/COPYING
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	rm -rf "${D}"/usr/share/${PN} || die
+	dodoc AUTHORS ChangeLog NEWS README TODO || die
 }
