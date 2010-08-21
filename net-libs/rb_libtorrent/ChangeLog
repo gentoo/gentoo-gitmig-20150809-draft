@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.87 2010/07/01 08:32:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.88 2010/08/21 13:21:44 hwoarang Exp $
+
+*rb_libtorrent-0.15.2 (21 Aug 2010)
+*rb_libtorrent-0.14.11 (21 Aug 2010)
+
+  21 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +rb_libtorrent-0.14.11.ebuild, +rb_libtorrent-0.15.2.ebuild:
+  Version bump
 
 *rb_libtorrent-0.15.1 (01 Jul 2010)
 
