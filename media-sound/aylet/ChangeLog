@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aylet
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.14 2007/08/20 17:25:43 jokey Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.15 2010/08/21 02:19:36 ssuominen Exp $
+
+  21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> aylet-0.5.ebuild,
+  files/aylet-0.5-gtk.patch:
+  Respect LDFLAGS wrt #333729 by Diego E. Pettenò.
 
   20 Aug 2007; Markus Ullmann <jokey@gentoo.org> aylet-0.5.ebuild:
   Stable on x86 wrt bug #188881

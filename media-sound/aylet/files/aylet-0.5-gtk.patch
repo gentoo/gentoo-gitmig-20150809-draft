@@ -1,6 +1,20 @@
-diff -ur aylet-0.5.orig/Makefile aylet-0.5/Makefile
---- aylet-0.5.orig/Makefile	2005-12-18 05:05:08.000000000 +0200
-+++ aylet-0.5/Makefile	2007-07-25 17:14:19.000000000 +0300
+--- Makefile
++++ Makefile
+@@ -2,12 +2,12 @@
+ 
+ # You need an ANSI C compiler. gcc is probably best.
+ #
+-CC=gcc
++CC?=gcc
+ 
+ # Compiler options (and sound driver) to use. This one is for Linux,
+ # and other OSS-using systems.
+ #
+-CFLAGS=-O -Wall -DDRIVER_OSS
++CFLAGS+=-Wall -DDRIVER_OSS
+ 
+ # for OpenBSD, uncomment this:
+ #CFLAGS=-O -Wall -DDRIVER_OPENBSD
 @@ -39,14 +39,29 @@
  
  all: aylet xaylet
@@ -21,11 +35,12 @@ diff -ur aylet-0.5.orig/Makefile aylet-0.5/Makefile
 +gtk2: all
 +
  aylet: $(OBJS)
- 	$(CC) -o aylet $(OBJS) $(CURSES_LIB)
+-	$(CC) -o aylet $(OBJS) $(CURSES_LIB)
++	$(CC) $(LDFLAGS) $(CFLAGS) -o aylet $(OBJS) $(CURSES_LIB)
  
  xaylet: $(XOBJS)
 -	$(CC) -o xaylet $(XOBJS) `gtk-config --libs`
-+	$(CC) -o xaylet $(XOBJS) `$(GTKCONFIG) --libs`
++	$(CC) $(LDFLAGS) $(CFLAGS) -o xaylet $(XOBJS) `$(GTKCONFIG) --libs`
  
  uigtk.o: uigtk.c
 -	$(CC) $(CFLAGS) `gtk-config --cflags` -c uigtk.c -o uigtk.o
@@ -33,9 +48,8 @@ diff -ur aylet-0.5.orig/Makefile aylet-0.5/Makefile
  
  installdirs:
  	/bin/sh ./mkinstalldirs $(BINDIR) $(XBINDIR) $(MANDIR)
-diff -ur aylet-0.5.orig/ui.c aylet-0.5/ui.c
---- aylet-0.5.orig/ui.c	2003-11-27 21:42:47.000000000 +0200
-+++ aylet-0.5/ui.c	2007-07-25 17:14:53.000000000 +0300
+--- ui.c
++++ ui.c
 @@ -5,7 +5,9 @@
   */
  
@@ -57,10 +71,8 @@ diff -ur aylet-0.5.orig/ui.c aylet-0.5/ui.c
    }
  
  /* update time display */
-Only in aylet-0.5: ui.c.orig
-diff -ur aylet-0.5.orig/uigtk.c aylet-0.5/uigtk.c
---- aylet-0.5.orig/uigtk.c	2002-09-14 18:45:45.000000000 +0300
-+++ aylet-0.5/uigtk.c	2007-07-25 17:14:22.000000000 +0300
+--- uigtk.c
++++ uigtk.c
 @@ -14,11 +14,13 @@
  #include "ui.h"
  
