@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5883 2010/08/20 23:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5884 2010/08/21 21:27:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2094,7 +2094,6 @@ media-video/ffmpeg:vaapi - Enables VAAPI (Video Acceleration API) for hardware d
 media-video/ffmpeg:vdpau - Enables VDPAU decoders (requires nVidia video cards to offload CPU processing to video card
 media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx
 media-video/ffmpeg2theora:kate - Adds support for Ogg Kate subtitles via libkate.
-media-video/ffprobe:perl - Installs tools written in perl to produce plots based on video frame bitrate and size
 media-video/google2srt:html - Install HTML documentation
 media-video/griffith:csv - Enable proper support for csv import (respectively auto-detection encoding of csv files)
 media-video/gxine:udev - Use sys-fs/udev for autodiscovery of devices; this replaces the deprecated sys-apps/hal autodiscovery code.
@@ -3155,7 +3154,6 @@ sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Wi
 sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/wxmacmolplt:flash - Add support for flash movie generation using media-libs/ming
 sci-electronics/geda:stroke - enable mouse gesture support
-sci-electronics/geda-gschem:stroke - enable mouse gesture support
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
 sci-electronics/kicad:dev-doc - Install developer documentation (requires app-doc/doxygen)
 sci-electronics/pcb:gif - GIF graphics export
