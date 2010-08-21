@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.105 2010/08/11 18:11:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.106 2010/08/21 18:45:54 maekke Exp $
+
+  21 Aug 2010; Markus Meier <maekke@gentoo.org> libusb-1.0.8.ebuild:
+  arm stable, bug #304149
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> libusb-1.0.8.ebuild:
   Marked ppc/ppc64 stable for bug #304149.
