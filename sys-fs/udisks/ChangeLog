@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.15 2010/08/20 17:08:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.16 2010/08/21 09:17:06 ssuominen Exp $
+
+*udisks-1.0.1-r2 (21 Aug 2010)
+
+  21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +udisks-1.0.1-r2.ebuild, +files/udisks-1.0.1-no-floppy.patch:
+  Fix long hangs on probing nonexistant floppies.
 
   20 Aug 2010; Jeroen Roovers <jer@gentoo.org> udisks-1.0.1-r1.ebuild:
   Move from sys-apps/parted to sys-block/parted.
