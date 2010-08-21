@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.122 2010/02/14 00:43:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.123 2010/08/21 22:18:17 vapier Exp $
+
+*wget-1.12-r2 (21 Aug 2010)
+
+  21 Aug 2010; Mike Frysinger <vapier@gentoo.org> +wget-1.12-r2.ebuild,
+  +files/wget-1.12-CVE-2010-2252.patch, files/wget-1.12-sni.patch:
+  Add fix from upstream for CVE-2010-2252 #329941 by Stefan Behte. Tweak by
+  Sergei Trofimovich for IPv6 behavor in SNI patch #333839.
 
   14 Feb 2010; Mike Frysinger <vapier@gentoo.org> wget-1.12-r1.ebuild:
   Upgrade to EAPI=2 so we can set +ssl in IUSE #304887 by Kerin Millar.
