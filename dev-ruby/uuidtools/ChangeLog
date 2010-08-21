@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/uuidtools
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.17 2010/08/16 12:21:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.18 2010/08/21 21:01:10 flameeyes Exp $
+
+*uuidtools-2.1.1-r2 (21 Aug 2010)
+
+  21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/uuidtools-1.0.7+ruby-1.8.7.patch, uuidtools-2.1.1-r1.ebuild,
+  +uuidtools-2.1.1-r2.ebuild:
+  Remove unused file and prepare a revision with Ruby 1.9 so a new one can
+  be stabilized.
 
   16 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   uuidtools-2.1.1-r1.ebuild:
