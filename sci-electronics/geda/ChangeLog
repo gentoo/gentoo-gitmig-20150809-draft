@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.62 2010/07/11 18:56:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.63 2010/08/21 21:12:53 flameeyes Exp $
+
+  21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> -geda-1.4.1.ebuild,
+  -geda-1.4.3.ebuild, -geda-1.4.3-r1.ebuild, -geda-1.6.0-r1.ebuild:
+  Remove non-stable versions as per masking.
 
   11 Jul 2010; Raúl Porcel <armin76@gentoo.org> geda-1.6.1.ebuild:
   sparc stable wrt #285470
