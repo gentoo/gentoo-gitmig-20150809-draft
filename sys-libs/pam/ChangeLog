@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.264 2010/08/01 03:47:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.265 2010/08/21 18:58:03 maekke Exp $
+
+  21 Aug 2010; Markus Meier <maekke@gentoo.org> pam-1.1.1-r2.ebuild:
+  arm stable, bug #329931
 
   01 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> pam-1.1.1-r2.ebuild:
   Add a 'few' more messages at postinst, one warning against common problems
