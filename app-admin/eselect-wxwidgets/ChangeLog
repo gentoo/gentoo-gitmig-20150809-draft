@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.53 2010/08/09 18:24:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.54 2010/08/21 19:08:43 maekke Exp $
+
+  21 Aug 2010; Markus Meier <maekke@gentoo.org>
+  eselect-wxwidgets-1.4.ebuild:
+  arm stable, bug #330017
 
   09 Aug 2010; Jeroen Roovers <jer@gentoo.org> eselect-wxwidgets-1.4.ebuild:
   Stable for HPPA (bug #330017).
