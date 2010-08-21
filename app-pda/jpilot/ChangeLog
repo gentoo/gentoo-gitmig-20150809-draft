@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.40 2010/08/21 11:55:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.41 2010/08/21 14:10:07 tomjbe Exp $
+
+  21 Aug 2010; Thomas Beierlein <tomjbe@gentoo.org> jpilot-1.8.0.ebuild:
+  amd64 stable, bug #333717
 
   21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> jpilot-1.8.0.ebuild,
   +files/jpilot-1.8.0-char.patch:
