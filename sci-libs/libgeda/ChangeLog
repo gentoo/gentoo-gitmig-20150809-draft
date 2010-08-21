@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.52 2010/05/23 18:52:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.53 2010/08/21 21:12:40 flameeyes Exp $
+
+  21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libgeda-1.4.1.ebuild, -libgeda-1.4.3.ebuild, -libgeda-1.4.3-r1.ebuild:
+  Remove non-stable versions as per masking.
 
   23 May 2010; Raúl Porcel <armin76@gentoo.org> libgeda-1.4.3-r1.ebuild:
   sparc stable wrt #285493
