@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ferrisloki
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.17 2008/08/06 09:44:29 ulm Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.18 2010/08/21 16:37:36 vapier Exp $
+
+  21 Aug 2010; Mike Frysinger <vapier@gentoo.org> -ferrisloki-2.0.5.ebuild,
+  -ferrisloki-2.1.1.ebuild, -ferrisloki-2.1.2.ebuild, -ferrisloki-2.2.0.ebuild,
+  -ferrisloki-3.0.1.ebuild:
+  Drop old & broken versions #221139 by Mike Weissman and #323069 by Diego E.
+  Pettenò.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
