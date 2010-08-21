@@ -1,6 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.46 2010/08/13 10:17:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.47 2010/08/21 23:07:52 alexxy Exp $
+
+# Alexey Shvetsov <alexxy@gentoo.org> (22 Aug 2010)
+# sci-chemistry/msms not available for this arch
+sci-chemistry/vmd msms
 
 # Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
 # MKL not available on this arch

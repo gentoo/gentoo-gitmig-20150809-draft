@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.78 2010/08/15 17:30:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.79 2010/08/21 23:07:52 alexxy Exp $
+
+  21 Aug 2010; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  mask msms use for vmd
 
   15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> ppc32/use.mask:
   Remove jruby support until PPC sorts out its deptree.
