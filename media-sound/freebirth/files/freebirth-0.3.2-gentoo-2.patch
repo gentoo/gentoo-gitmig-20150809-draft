@@ -1,6 +1,5 @@
-diff -ur freebirth-0.3.2.orig/freebirth.c freebirth-0.3.2/freebirth.c
---- freebirth-0.3.2.orig/freebirth.c	2000-01-13 20:42:26.000000000 +0200
-+++ freebirth-0.3.2/freebirth.c	2007-07-24 17:36:41.000000000 +0300
+--- freebirth.c
++++ freebirth.c
 @@ -248,15 +248,15 @@
    //bass_e    = env_new(1025,10000,(sample_producer *)osc_blender);
    sl = g_slist_append(sl, bass_e);
@@ -40,9 +39,8 @@ diff -ur freebirth-0.3.2.orig/freebirth.c freebirth-0.3.2/freebirth.c
    gtk_window_set_title(GTK_WINDOW (sample_freq_window), "Sample Pitch");
    sample_freq_box    = gtk_vbox_new(TRUE,10);
    gtk_widget_set_style(sample_freq_window,window_style);
-diff -ur freebirth-0.3.2.orig/fuse_loops.c freebirth-0.3.2/fuse_loops.c
---- freebirth-0.3.2.orig/fuse_loops.c	1999-02-27 04:02:23.000000000 +0200
-+++ freebirth-0.3.2/fuse_loops.c	2007-07-24 17:36:41.000000000 +0300
+--- fuse_loops.c
++++ fuse_loops.c
 @@ -122,7 +122,18 @@
    fprintf(file, "/* generated file -- don't edit */\n");
    fprintf(file, "#include <unistd.h>\n");
@@ -72,9 +70,8 @@ diff -ur freebirth-0.3.2.orig/fuse_loops.c freebirth-0.3.2/fuse_loops.c
    fprintf(file, "  write(fd, buffer, 2 * TBASS_BUFF_SIZE * sizeof(short));\n");
    fprintf(file, "\n");
  
-diff -ur freebirth-0.3.2.orig/gtkdial.c freebirth-0.3.2/gtkdial.c
---- freebirth-0.3.2.orig/gtkdial.c	1999-02-16 01:58:31.000000000 +0200
-+++ freebirth-0.3.2/gtkdial.c	2007-07-24 17:36:41.000000000 +0300
+--- gtkdial.c
++++ gtkdial.c
 @@ -75,8 +75,6 @@
                sizeof (GtkDialClass),
                (GtkClassInitFunc) gtk_dial_class_init,
@@ -84,25 +81,44 @@ diff -ur freebirth-0.3.2.orig/gtkdial.c freebirth-0.3.2/gtkdial.c
              };
  
              dial_type = gtk_type_unique (gtk_widget_get_type (), &dial_info);
-diff -ur freebirth-0.3.2.orig/Makefile freebirth-0.3.2/Makefile
---- freebirth-0.3.2.orig/Makefile	2000-01-13 01:37:14.000000000 +0200
-+++ freebirth-0.3.2/Makefile	2007-07-24 17:36:41.000000000 +0300
-@@ -2,9 +2,9 @@
+--- Makefile
++++ Makefile
+@@ -1,10 +1,9 @@
+ # Makefile for Freebirth 
  #
  
- CC=gcc
+-CC=gcc
 -LOADLIBES=-lm $(shell gtk-config --libs)
 -CFLAGS=-g  -O6  -Wall $(shell gtk-config --cflags)
 -LDFLAGS= 
-+LOADLIBES=-lm -L/usr/lib -lgtk-x11-2.0
-+CFLAGS=-g -Wall $(shell pkg-config --cflags gtk+-2.0)
-+LDFLAGS=$(shell pkg-config --libs gtk+-2.0)
++CC?=gcc
++CFLAGS+=-Wall $(shell pkg-config --cflags gtk+-2.0)
++LIBS=-lm $(shell pkg-config --libs gtk+-2.0)
  
  OFILES=\
  oscillator.o sequencer.o envelope.o filter.o gtkdial.o mixer.o \
-diff -ur freebirth-0.3.2.orig/raw_wave.c freebirth-0.3.2/raw_wave.c
---- freebirth-0.3.2.orig/raw_wave.c	2000-01-13 01:40:33.000000000 +0200
-+++ freebirth-0.3.2/raw_wave.c	2007-07-24 17:36:41.000000000 +0300
+@@ -22,16 +21,18 @@
+ 	-rm -f *.o freebirth fusebirth fused_loop.c Makefile.deps *~ 
+ 
+ freebirth: $(OFILES) fused_loop.o freebirth.o
++	$(CC) $(LDFLAGS) $(CFLAGS) -o freebirth $(OFILES) fused_loop.o freebirth.o $(LIBS)
+ 
+ fused_loop.c: fusebirth
+ 	./fusebirth > fused_loop.c 2>/dev/null
+ 
+ fusebirth: $(OFILES) fuse_loops.o fusebirth.o
++	$(CC) $(LDFLAGS) $(CFLAGS) -o fusebirth $(OFILES) fuse_loops.o fusebirth.o $(LIBS)
+ 
+ fusebirth.o: freebirth.c
+ 	$(CC) -c $(CFLAGS) -DFUSE_LOOPS -o fusebirth.o freebirth.c
+ 
+ Makefile.deps:
+-	gcc -MM $(CFLAGS) $(CFILES) > Makefile.deps
++	$(CC) -MM $(CFLAGS) $(CFILES) > Makefile.deps
+ 
+ include Makefile.deps
+--- raw_wave.c
++++ raw_wave.c
 @@ -21,18 +21,36 @@
  #include "raw_wave.h"
  #include <stdio.h>
@@ -185,9 +201,8 @@ diff -ur freebirth-0.3.2.orig/raw_wave.c freebirth-0.3.2/raw_wave.c
    raw_wave_set_sample_file(out, filename);
  
    out->buffer   = (sample *)malloc(sizeof(sample) * TBASS_BUFF_SIZE);
-diff -ur freebirth-0.3.2.orig/raw_wave.h freebirth-0.3.2/raw_wave.h
---- freebirth-0.3.2.orig/raw_wave.h	2000-01-13 20:44:05.000000000 +0200
-+++ freebirth-0.3.2/raw_wave.h	2007-07-24 17:41:14.000000000 +0300
+--- raw_wave.h
++++ raw_wave.h
 @@ -62,7 +62,7 @@
  event *event_pitch_change_new(int seq_handle, double pitch);
  
