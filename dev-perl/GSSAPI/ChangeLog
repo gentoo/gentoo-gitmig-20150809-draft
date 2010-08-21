@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GSSAPI
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.23 2010/08/01 17:36:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.24 2010/08/21 19:19:35 maekke Exp $
+
+  21 Aug 2010; Markus Meier <maekke@gentoo.org> GSSAPI-0.28.ebuild:
+  arm stable, bug #330565
 
   01 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> GSSAPI-0.28.ebuild:
   x86 stable wrt bug #330565
