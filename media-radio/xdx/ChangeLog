@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xdx
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.19 2010/07/03 12:16:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.20 2010/08/21 19:16:29 phajdan.jr Exp $
+
+  21 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> xdx-2.4.2.ebuild:
+  x86 stable wrt bug #333609
 
   03 Jul 2010; Thomas Beierlein <tomjbe@gentoo.org> -xdx-1.2.ebuild,
   -xdx-2.3.ebuild:
