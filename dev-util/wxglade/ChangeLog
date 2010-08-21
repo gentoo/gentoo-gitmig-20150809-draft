@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.53 2010/07/04 20:37:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.54 2010/08/21 19:47:18 phajdan.jr Exp $
+
+  21 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  wxglade-0.6.3-r1.ebuild:
+  x86 stable wrt bug #333735
 
 *wxglade-0.6.3-r1 (04 Jul 2010)
 
