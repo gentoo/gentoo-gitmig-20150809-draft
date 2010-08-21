@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>media-video</herd>
-	<use>
-		<flag name="perl">Installs tools written in perl to produce plots based on 	video frame bitrate and size</flag>
-	</use>
-</pkgmetadata>
