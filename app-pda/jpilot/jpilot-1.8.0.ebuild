@@ -1,8 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-1.8.0.ebuild,v 1.2 2010/08/01 14:22:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-1.8.0.ebuild,v 1.3 2010/08/21 11:55:08 ssuominen Exp $
 
 EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="Desktop Organizer Software for the Palm Pilot"
 HOMEPAGE="http://www.jpilot.org/"
@@ -22,11 +23,16 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-char.patch
+	mv -vf empty/Ma*anaDB.pdb empty/MananaDB.pdb || die
+
 	sed -i \
 		-e '/^Icon/s:jpilot.xpm:/usr/share/pixmaps/jpilot/jpilot-icon1.xpm:' \
 		jpilot.desktop || die
 
 	echo calendar.c > po/POTFILES.skip
+
+	eautoreconf
 }
 
 src_configure() {
