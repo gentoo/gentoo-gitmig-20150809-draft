@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.165 2010/06/23 18:22:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.166 2010/08/21 22:10:34 vapier Exp $
+
+*openafs-1.4.12.1-r1 (21 Aug 2010)
+
+  21 Aug 2010; Mike Frysinger <vapier@gentoo.org> +openafs-1.4.12.1-r1.ebuild:
+  Add -lresolv linking fix by Andrej Filipcic #305823 by Sébastien Fabbro.
 
   23 Jun 2010; Mark Loeser <halcy0n@gentoo.org> -openafs-1.4.6.ebuild,
   openafs-1.4.9.ebuild, openafs-1.4.10.ebuild, openafs-1.4.11.ebuild,
