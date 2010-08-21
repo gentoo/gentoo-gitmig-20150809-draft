@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.77 2010/08/11 17:46:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.78 2010/08/21 15:26:28 ssuominen Exp $
+
+  21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> tracker-0.8.15.ebuild,
+  tracker-9999.ebuild:
+  Fix devkit-power-gobject dependencies to accept also upower wrt #331243 by
+  Philipp Reinkemeier.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> tracker-0.8.9.ebuild,
   tracker-0.8.15.ebuild:
