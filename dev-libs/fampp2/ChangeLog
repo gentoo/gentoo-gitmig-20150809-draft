@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fampp2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/ChangeLog,v 1.8 2008/07/10 11:57:24 remi Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fampp2/ChangeLog,v 1.9 2010/08/21 16:49:09 vapier Exp $
+
+*fampp2-6.0.1 (21 Aug 2010)
+
+  21 Aug 2010; Mike Frysinger <vapier@gentoo.org> +fampp2-6.0.1.ebuild:
+  Version bump #216271 by Xavian-Anderson Macpherson.
 
   10 Jul 2008; Rémi Cardona <remi@gentoo.org> fampp2-5.1.0.ebuild,
   fampp2-6.0.0.ebuild:
