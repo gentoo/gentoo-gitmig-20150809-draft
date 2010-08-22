@@ -1,8 +1,0 @@
---- ZenTest.rb.orig	2006-01-12 09:01:17.000000000 -0500
-+++ ZenTest.rb	2006-01-12 09:01:23.000000000 -0500
-@@ -1,4 +1,4 @@
--#!/usr/local/bin/ruby -swI .
-+#!/usr/bin/ruby -swI .
- 
- $stdlib = {}
- ObjectSpace.each_object(Module) { |m| $stdlib[m.name] = true }
