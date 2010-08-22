@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.65 2009/12/29 20:15:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.66 2010/08/22 08:30:32 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
 # Copyright 2004-2005 Mamoru Komachi <usata@gentoo.org>
 # Copyright 2007-2008 Christian Faulhammer <fauli@gentoo.org>
-# Copyright 2007-2009 Ulrich Müller <ulm@gentoo.org>
+# Copyright 2007-2010 Ulrich Müller <ulm@gentoo.org>
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -303,10 +303,6 @@ elisp-site-regen() {
 	# auxiliary file for backwards compatibility. Remove any such file.
 	rm -f "${sitelisp}"/00site-gentoo.el
 
-	# set nullglob option, there may be a directory without matching files
-	local old_shopts=$(shopt -p nullglob)
-	shopt -s nullglob
-
 	for sf in "${sitelisp}"/[0-9][0-9]*-gentoo.el \
 		"${sitelisp}"/site-gentoo.d/[0-9][0-9]*.el
 	do
@@ -318,8 +314,6 @@ elisp-site-regen() {
 		done
 		sflist[i]=${sf}
 	done
-
-	eval "${old_shopts}"
 
 	cat <<-EOF >"${T}"/site-gentoo.el
 	;;; site-gentoo.el --- site initialisation for Gentoo-installed packages
@@ -349,6 +343,7 @@ elisp-site-regen() {
 		# This prevents outputting unnecessary text when there
 		# was actually no change.
 		# A case is a remerge where we have doubled output.
+		rm -f "${T}"/site-gentoo.el
 		echo " no changes."
 	else
 		mv "${T}"/site-gentoo.el "${sitelisp}"/site-gentoo.el
@@ -359,9 +354,6 @@ elisp-site-regen() {
 			*) einfo "... ${#sflist[@]} site initialisation files included." ;;
 		esac
 	fi
-
-	# cleanup
-	rm -f "${T}"/site-gentoo.el
 
 	return 0
 }

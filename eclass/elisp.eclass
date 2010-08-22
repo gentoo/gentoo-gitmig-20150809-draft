@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.44 2010/01/30 22:54:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.45 2010/08/22 08:30:32 ulm Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -28,17 +28,20 @@
 # ${PN}.el in src_unpack().
 
 # @ECLASS-VARIABLE: NEED_EMACS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # If you need anything different from Emacs 21, use the NEED_EMACS
 # variable before inheriting elisp.eclass.  Set it to the major version
 # your package uses and the dependency will be adjusted.
 
 # @ECLASS-VARIABLE: ELISP_PATCHES
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Any patches to apply after unpacking the sources. Patches are searched
 # both in ${PWD} and ${FILESDIR}.
 
 # @ECLASS-VARIABLE: SITEFILE
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Name of package's site-init file.  The filename must match the shell
 # pattern "[1-8][0-9]*-gentoo.el"; numbers below 10 and above 89 are
@@ -46,11 +49,13 @@
 # in most cases.
 
 # @ECLASS-VARIABLE: ELISP_TEXINFO
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Space separated list of Texinfo sources. Respective GNU Info files
 # will be generated in src_compile() and installed in src_install().
 
 # @ECLASS-VARIABLE: DOCS
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # DOCS="blah.txt ChangeLog" is automatically used to install the given
 # files by dodoc in src_install().
