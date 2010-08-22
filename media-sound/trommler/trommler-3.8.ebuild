@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.8.ebuild,v 1.6 2009/06/16 18:48:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/trommler-3.8.ebuild,v 1.7 2010/08/22 20:11:30 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -22,25 +22,33 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN/t/T}
 
+src_prepare() {
+	sed -i \
+		-e 's:$(CC):$(CC) $(LDFLAGS):' \
+		Makefile || die
+}
+
 src_compile() {
-	emake export.h || die "emake export.h failed"
-	emake CFLAGS="${CFLAGS} $(pkg-config --cflags gtk+-2.0)" \
-		CC="$(tc-getCC)" || die "emake failed"
+	tc-export CC
+	emake export.h || die
+	emake CFLAGS="${CFLAGS} -Wall $(pkg-config --cflags gtk+-2.0)" || die
 }
 
 src_install() {
 	exeinto /usr/libexec
-	doexe ${PN} || die "doexe failed"
-	newbin "${FILESDIR}"/${PN}.wrapper ${PN} || die "newbin failed"
-	dobin wav2smp playsample || die "dobin failed"
-	if use sox; then
-		dobin smp2wav || die "dobin failed"
-	fi
+	doexe ${PN} || die
+
+	newbin "${FILESDIR}"/${PN}.wrapper ${PN} || die
+	dobin wav2smp playsample || die
+	use sox && { dobin smp2wav || die; }
+
 	insinto /usr/share/${PN}/Drums
-	doins Drums/*.smp || die "doins failed"
+	doins Drums/*.smp || die
 	insinto /usr/share/${PN}/Songs
-	doins Songs/*.sng || die "doins failed"
+	doins Songs/*.sng || die
+
 	dodoc CHANGES README
 	dohtml index.html style.css
+
 	make_desktop_entry ${PN} Trommler
 }
