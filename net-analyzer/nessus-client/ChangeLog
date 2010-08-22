@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-client
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.9 2010/08/07 15:51:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.10 2010/08/22 23:19:39 jer Exp $
+
+*nessus-client-1.0.2-r1 (22 Aug 2010)
+
+  22 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  +nessus-client-1.0.2-r1.ebuild, +files/nessus-client-1.0.2-make.patch:
+  Respect LDFLAGS (bug #333799). Install documentation where it belongs. Fix
+  parallel make.
 
   07 Aug 2010; Jeroen Roovers <jer@gentoo.org> nessus-client-1.0.2.ebuild:
   Remove glitz dependency thanks to Matt Turner (bug #330949).
