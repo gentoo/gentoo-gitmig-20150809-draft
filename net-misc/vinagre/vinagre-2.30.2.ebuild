@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.2.ebuild,v 1.4 2010/08/01 12:09:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.2.ebuild,v 1.5 2010/08/22 16:38:55 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -18,10 +18,12 @@ IUSE="applet avahi +ssh +telepathy test"
 # Telepathy-glib version in tarball is wrong:
 # https://bugzilla.gnome.org/show_bug.cgi?id=614716
 RDEPEND=">=dev-libs/glib-2.17.0
+	dev-libs/dbus-glib
 	>=x11-libs/gtk+-2.16
 	>=gnome-base/gconf-2.16
 	>=net-libs/gtk-vnc-0.3.10
 	>=gnome-base/gnome-keyring-1
+	x11-libs/libX11
 	applet? ( >=gnome-base/gnome-panel-2 )
 	avahi? (
 		>=dev-libs/libxml2-2.6.31
@@ -35,7 +37,7 @@ DEPEND="${RDEPEND}
 	gnome-base/gnome-common
 	>=dev-lang/perl-5
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.40
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
 	test? ( ~app-text/docbook-xml-dtd-4.3 )"
