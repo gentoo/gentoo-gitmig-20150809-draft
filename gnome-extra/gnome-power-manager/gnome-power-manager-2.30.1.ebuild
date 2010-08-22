@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.6 2010/08/11 16:11:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.7 2010/08/22 19:59:00 eva Exp $
 
 EAPI="2"
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnome-power-manager/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+# TODO: handle optional applet build
 IUSE="doc +hal policykit test"
 
 # FIXME: Interactive testsuite (upstream ? I'm so...pessimistic)
@@ -20,21 +21,22 @@ RESTRICT="test"
 # HAL is used purely as a fallback for setting brightness if xrandr fail
 COMMON_DEPEND=">=dev-libs/glib-2.13.0
 	>=x11-libs/gtk+-2.17.7
-	>=gnome-base/gconf-2.10.0
-	>=gnome-base/gnome-keyring-0.6.0
-	>=dev-libs/dbus-glib-0.71
-	>=x11-libs/libnotify-0.4.3
-	>=x11-libs/libwnck-2.10.0
-	>=x11-libs/cairo-1.0.0
-	>=gnome-base/gnome-panel-2
 	>=gnome-base/gconf-2.10
+	>=gnome-base/gnome-keyring-0.6.0
+	>=gnome-base/gnome-panel-2
+	>=dev-libs/dbus-glib-0.71
+	>=dev-libs/libunique-1
 	>=media-libs/libcanberra-0.10[gtk]
 	|| ( sys-power/upower >=sys-apps/devicekit-power-008 )
-	>=dev-libs/libunique-1
-	>=x11-apps/xrandr-1.2
+	>=x11-apps/xrandr-1.3
+	>=x11-libs/cairo-1.0.0
+	>=x11-libs/libnotify-0.4.3
+	>=x11-libs/libwnck-2.10.0
 	x11-libs/libX11
 	x11-libs/libXext
-
+	>=x11-libs/libXrandr-1.3
+	x11-libs/libXrender
+	>=x11-proto/xproto-7.0.15
 	hal? ( >=sys-apps/hal-0.5.9 )
 "
 RDEPEND="${COMMON_DEPEND}
