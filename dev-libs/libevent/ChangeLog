@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.161 2010/08/22 13:00:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.162 2010/08/22 16:27:07 jer Exp $
+
+  22 Aug 2010; Jeroen Roovers <jer@gentoo.org> libevent-1.4.14b.ebuild:
+  Stable for PPC (bug #331541).
 
   22 Aug 2010; Markus Meier <maekke@gentoo.org> libevent-1.4.14b.ebuild:
   arm stable, bug #331541
