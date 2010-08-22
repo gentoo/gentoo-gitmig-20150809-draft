@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5886 2010/08/22 12:27:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5887 2010/08/22 21:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -262,13 +262,10 @@ app-emulation/opennebula:qemu - Pull in packages needed to create Qemu/Kvm nodes
 app-emulation/opennebula:xen - Pull in packages needed to create Xen nodes.
 app-emulation/pearpc:jit - Use the JITC-x86 CPU
 app-emulation/point2play:emerald - For people who are in the Transgaming Emerald Club
-app-emulation/q4wine:development -  Enable developer related stuff
 app-emulation/q4wine:gnome - Use the gksu sudo GUI for managing the devices
-app-emulation/q4wine:icotools -  Enable icotools support
 app-emulation/q4wine:icoutils -  Enable icoutils support 
 app-emulation/q4wine:kde - Use the kdesu sudo GUI for managing the devices
 app-emulation/q4wine:wineappdb -  Enable Win AppDB browser subsystem
-app-emulation/q4wine:winetools -  Enable winetools support
 app-emulation/q4wine:winetriks -  Enable winetricks support 
 app-emulation/qemu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu:esd - Enable esound output for sound emulation
