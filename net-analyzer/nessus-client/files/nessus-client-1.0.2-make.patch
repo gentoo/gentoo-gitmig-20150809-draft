@@ -61,8 +61,8 @@
  clean:
  	cd nessus && $(MAKE) clean
  	cd libnessus && $(MAKE) clean
---- ssl/Makefile.orig	2006-09-12 23:41:31.000000000 +0200
-+++ ssl/Makefile	2010-08-23 01:16:51.000000000 +0200
+--- a/ssl/Makefile	2006-09-12 23:41:31.000000000 +0200
++++ b/ssl/Makefile	2010-08-23 01:16:51.000000000 +0200
 @@ -6,7 +6,7 @@
  all : nessusclient-mkrand
  
