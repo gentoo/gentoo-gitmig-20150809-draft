@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.73 2010/08/21 19:36:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.74 2010/08/22 20:50:52 vapier Exp $
 
 # @ECLASS: cvs.eclass
 # @MAINTAINER:
@@ -547,6 +547,10 @@ cvs_src_unpack() {
 	else
 		cp -Rf "$ECVS_TOP_DIR/$ECVS_LOCALNAME" "$WORKDIR/$ECVS_LOCALNAME/.."
 	fi
+
+	# Not exactly perfect, but should be pretty close #333773
+	export ECVS_VERSION=$(find "$ECVS_TOP_DIR/$ECVS_LOCALNAME/" -ipath '*/CVS/Entries' -exec cat {} + | sort | sha1sum | awk '{print $1}')
+	export ESCM_VERSION=${ECVS_VERSION}
 
 	# If the directory is empty, remove it; empty directories cannot
 	# exist in cvs.  This happens when, for example, kde-source
