@@ -1,0 +1,31 @@
+Respect LDFLAGS
+
+http://bugs.gentoo.org/333873
+https://sourceforge.net/tracker/?func=detail&aid=3050710&group_id=36234&atid=416803
+
+--- lib/Makefile.in
++++ lib/Makefile.in
+@@ -248,7 +248,7 @@
+ 
+ $(LIBGRETL): .deps $(LOBJS) $(AUX_LOBJ)
+ 	$(LDECHO)
+-	$(AMP)$(LIBTOOL) --mode=link $(CCV) -o $@ $(LOBJS) $(AUX_LOBJ) \
++	$(AMP)$(LIBTOOL) --mode=link $(CCV) $(LDFLAGS) -o $@ $(LOBJS) $(AUX_LOBJ) \
+ 	-rpath $(RPATH) $(LIBS) -version-info $(CURRENT):$(REVISION):$(AGE)
+ 
+ .deps:
+--- plugin/Makefile.in
++++ plugin/Makefile.in
+@@ -54,10 +54,10 @@
+   CCECHO = @echo "  CC    $@"
+   LDECHO = @echo "  LD    $@" 
+   CCV = $(CC) > /dev/null
+-  LINK = $(LDECHO); $(LIBTOOL) --mode=link $(CCV) -module -avoid-version -rpath $(plugindir)
++  LINK = $(LDECHO); $(LIBTOOL) --mode=link $(CCV) $(LDFLAGS) -module -avoid-version -rpath $(plugindir)
+ else
+   CCV = $(CC)
+-  LINK = $(LIBTOOL) --mode=link $(CC) -module -avoid-version -rpath $(plugindir)
++  LINK = $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -module -avoid-version -rpath $(plugindir)
+ endif
+ 
+ GRETLINC = -I$(topsrc)/lib/src

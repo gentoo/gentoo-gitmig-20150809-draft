@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.24 2010/05/11 01:34:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.25 2010/08/22 08:34:34 xarthisius Exp $
+
+*gretl-1.9.0-r1 (22 Aug 2010)
+
+  22 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> -gretl-1.8.6.ebuild,
+  -gretl-1.9.0.ebuild, +gretl-1.9.0-r1.ebuild,
+  +files/gretl-1.9.0-ldflags.patch:
+  Respect LDFLAGS wrt bug 333873. Thanks to Diego for report. Remove old.
 
   11 May 2010; Sébastien Fabbro <bicatali@gentoo.org> gretl-1.9.0.ebuild:
   Removed TODO from dodoc

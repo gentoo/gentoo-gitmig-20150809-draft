@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.0.ebuild,v 1.2 2010/05/11 01:34:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.0-r1.ebuild,v 1.1 2010/08/22 08:34:34 xarthisius Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -57,10 +57,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.7.5-locale.patch
-	# fix parallel make
+	epatch "${FILESDIR}"/${PN}-1.7.5-locale.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
+	# fix parallel make reported upstream
 	sed -i \
-		-e 's/make/$(MAKE)/g' \
+		-e 's/make -C/$(MAKE) -C/g' \
 		$(find . -name Makefile.in) || die
 }
 
