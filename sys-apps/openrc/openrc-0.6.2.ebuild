@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.6.2.ebuild,v 1.2 2010/08/21 22:30:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.6.2.ebuild,v 1.3 2010/08/22 20:10:43 anarchy Exp $
 
 EAPI="1"
 
@@ -63,10 +63,16 @@ src_unpack() {
 	else
 		unpack ${A}
 	fi
+
 	cd "${S}"
 	sed -i 's:0444:0644:' mk/sys.mk
 	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile #241342
 	sed -i '/^CFLAGS+=.*_CC_FLAGS_SH/d' mk/cc.mk #289264
+
+	epatch "${FILESDIR}/${PN}-0.6.2-fix-make-3.82.patch" #333461
+
+	# Allow user patches to be applied without modifying the ebuild
+	epatch_user
 }
 
 src_compile() {

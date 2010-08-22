@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.115 2010/08/21 22:30:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.116 2010/08/22 20:10:43 anarchy Exp $
+
+  22 Aug 2010; Jory A. Pratt <anarchy@gentoo.org> openrc-0.6.2.ebuild,
+  +files/openrc-0.6.2-fix-make-3.82.patch:
+  Fix make breakage bug #333461, also allow user to apply conditional
+  patches between releases without modifying ebuild.
 
   21 Aug 2010; Mike Frysinger <vapier@gentoo.org> openrc-0.6.2.ebuild,
   openrc-9999.ebuild:
