@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.79 2010/08/22 12:27:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.80 2010/08/22 16:47:11 phajdan.jr Exp $
+
+  22 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mysql-ruby-2.8.1-r1.ebuild:
+  x86 stable wrt bug #333949
 
 *mysql-ruby-2.8.1-r2 (22 Aug 2010)
 
