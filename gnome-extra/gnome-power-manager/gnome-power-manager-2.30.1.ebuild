@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.7 2010/08/22 19:59:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.8 2010/08/22 20:03:38 eva Exp $
 
 EAPI="2"
 
@@ -44,6 +44,9 @@ RDEPEND="${COMMON_DEPEND}
 	policykit? ( gnome-extra/polkit-gnome )
 "
 DEPEND="${COMMON_DEPEND}
+	x11-proto/randrproto
+	x11-proto/renderproto
+
 	sys-devel/gettext
 	app-text/scrollkeeper
 	app-text/docbook-xml-dtd:4.3
