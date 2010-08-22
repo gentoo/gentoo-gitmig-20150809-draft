@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.37 2010/08/05 21:04:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.38 2010/08/22 12:42:49 hwoarang Exp $
+
+*rednotebook-1.1.1 (22 Aug 2010)
+
+  22 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +rednotebook-1.1.1.ebuild, +files/rednotebook-1.1.1-disable-webkit.patch:
+  Version bump
 
   05 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   -rednotebook-1.0.0.ebuild, rednotebook-1.1.0.ebuild,
