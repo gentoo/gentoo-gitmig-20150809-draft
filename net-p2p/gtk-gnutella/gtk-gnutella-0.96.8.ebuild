@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.8.ebuild,v 1.5 2010/05/24 19:01:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.96.8.ebuild,v 1.6 2010/08/22 07:59:56 graaff Exp $
 
 EAPI="2"
 
@@ -23,6 +23,11 @@ RDEPEND=">=dev-libs/libxml2-2.6.0
 	nls? ( >=sys-devel/gettext-0.11.5 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	# Our awk is new enough, so avoid a warning when trying nawk: #333833
+	sed -i -e 's/${nawk:-$awk}/awk/' Configure || die
+}
 
 src_configure() {
 	# The build script does not support the equivalent --enable
