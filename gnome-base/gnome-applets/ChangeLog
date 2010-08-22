@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.319 2010/08/14 18:44:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.320 2010/08/22 16:34:03 eva Exp $
+
+  22 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-applets-2.26.3.ebuild, gnome-applets-2.30.0-r1.ebuild:
+  Remove unneeded intltool rules fix, drop unneeded dependency.
 
   14 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   gnome-applets-2.28.0.ebuild:

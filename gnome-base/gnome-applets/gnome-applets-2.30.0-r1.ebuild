@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0-r1.ebuild,v 1.4 2010/08/01 11:37:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0-r1.ebuild,v 1.5 2010/08/22 16:34:03 eva Exp $
 
 inherit eutils gnome2 python
 
@@ -34,7 +34,6 @@ RDEPEND=">=x11-libs/gtk+-2.13
 
 	battstat? ( $HALDEPEND )
 	gnome?	(
-		>=gnome-base/libgnomekbd-2.21.4.1
 		gnome-base/gnome-settings-daemon
 
 		>=gnome-extra/gucharmap-2.23
@@ -74,10 +73,6 @@ src_unpack() {
 	# Invest applet tests need gconf/proxy/...
 	sed 's/^TESTS.*/TESTS=/g' -i invest-applet/invest/Makefile.am \
 		invest-applet/invest/Makefile.in || die "disabling invest tests failed"
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-		|| die "intltool rules fix failed"
 }
 
 pkg_setup() {
