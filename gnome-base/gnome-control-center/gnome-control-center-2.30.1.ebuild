@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.30.1.ebuild,v 1.3 2010/08/01 11:46:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.30.1.ebuild,v 1.4 2010/08/22 20:07:28 eva Exp $
 
 EAPI="2"
 
@@ -45,8 +45,6 @@ RDEPEND="x11-libs/libXft
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXxf86misc
-	x11-libs/libXrandr
-	x11-libs/libXrender
 	x11-libs/libXcursor"
 DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto
@@ -54,8 +52,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xf86miscproto
 	x11-proto/kbproto
-	x11-proto/randrproto
-	x11-proto/renderproto
 
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
@@ -78,9 +74,6 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 
 	# Add functionality for setting the default background in gdm, bug 293439
 	# gnome bug #536531
