@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.22 2010/07/18 13:13:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.23 2010/08/22 23:29:52 jer Exp $
+
+  22 Aug 2010; Jeroen Roovers <jer@gentoo.org> pycups-1.9.49.ebuild:
+  Stable for HPPA (bug #322849).
 
   18 Jul 2010; <nixnut@gentoo.org> pycups-1.9.49.ebuild:
   ppc stable #322849

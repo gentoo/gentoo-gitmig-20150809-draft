@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.49.ebuild,v 1.9 2010/07/18 13:13:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.49.ebuild,v 1.10 2010/08/22 23:29:52 jer Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://cyberelk.net/tim/data/pycups/"
 SRC_URI="http://cyberelk.net/tim/data/pycups/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 SLOT="0"
 IUSE="doc examples"
 
