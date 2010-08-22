@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-ssl
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.16 2009/02/23 15:06:58 armin76 Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.17 2010/08/22 16:39:27 phajdan.jr Exp $
+
+  22 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  x86 stable wrt bug #333915
 
   23 Feb 2009; Raúl Porcel <armin76@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
   Add ~arm/~ia64/~s390/~sh wrt #253453
