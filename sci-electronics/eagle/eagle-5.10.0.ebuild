@@ -1,6 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.10.0.ebuild,v 1.2 2010/07/08 03:07:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.10.0.ebuild,v 1.3 2010/08/22 20:19:15 nixphoeni Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -10,7 +12,7 @@ HOMEPAGE="http://www.cadsoft.de"
 KEYWORDS="~amd64 ~x86"
 IUSE="linguas_de linguas_zh doc"
 LICENSE="cadsoft"
-RESTRICT="strip"
+RESTRICT="strip test"
 SLOT="0"
 
 # Cadsoft has used the suffix "_p" in the past which we translate to "r"
@@ -25,10 +27,10 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
-	x86? ( =media-libs/jpeg-6*
-		=media-libs/libpng-1.2* )
+	x86? ( media-libs/jpeg:62
+	       media-libs/libpng:1.2 )
 	amd64? ( app-emulation/emul-linux-x86-baselibs
-		 app-emulation/emul-linux-x86-xlibs )"
+	         app-emulation/emul-linux-x86-xlibs )"
 
 # Append ${PV} since that's what upstream installs to
 INSTALLDIR="/opt/eagle-${PV}"
