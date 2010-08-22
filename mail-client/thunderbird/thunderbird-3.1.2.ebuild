@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.2.ebuild,v 1.1 2010/08/06 12:45:59 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.2.ebuild,v 1.2 2010/08/22 15:51:16 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -114,6 +114,9 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
+
+	# Allow user to apply any additional patches without modifing ebuild
+	epatch_user
 
 	eautoreconf
 
