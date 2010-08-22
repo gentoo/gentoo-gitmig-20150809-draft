@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gtypist
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.18 2010/01/17 23:45:01 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.19 2010/08/22 17:05:19 phajdan.jr Exp $
+
+  22 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gtypist-2.8.3.ebuild:
+  x86 stable wrt bug #333973
 
   17 Jan 2010; Dawid Węgliński <cla@gentoo.org> gtypist-2.8.ebuild:
   Fix path to patch
