@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.30.2.ebuild,v 1.4 2010/08/01 11:40:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.30.2.ebuild,v 1.5 2010/08/22 17:45:15 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -20,11 +20,12 @@ RDEPEND=">=dev-libs/glib-2.16.0
 	gnome-base/gconf
 	nautilus? ( gnome-base/nautilus )"
 DEPEND="${RDEPEND}
-	gnome-base/gnome-common
 	sys-devel/gettext
 	dev-util/intltool
 	dev-util/pkgconfig
 	app-text/gnome-doc-utils"
+# eautoreconf dependency
+#	gnome-base/gnome-common
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
@@ -33,6 +34,7 @@ pkg_setup() {
 		--disable-dependency-tracking
 		--disable-scrollkeeper
 		--disable-run-in-place
+		--disable-packagekit
 		--disable-static
 		$(use_enable nautilus nautilus-actions)"
 }
