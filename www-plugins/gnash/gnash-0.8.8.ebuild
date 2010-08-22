@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.7_p20100812.ebuild,v 1.3 2010/08/15 10:18:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.1 2010/08/22 22:16:55 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -17,7 +17,7 @@ if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://git.savannah.gnu.org/gnash.git"
 	inherit git
 else
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
+	SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 fi
 
 LICENSE="GPL-3"
@@ -131,13 +131,6 @@ pkg_setup() {
 src_prepare() {
 	# TODO: Patch no longer applies
 #	epatch "${FILESDIR}"/${PN}-0.8.7-amf-include.patch
-
-	# Defines $(XPIDL) correctly using sdkdir variable from libxul.pc
-	epatch "${FILESDIR}"/${PN}-0.8.5-xpidl-sdkdir.patch
-
-	# Use pkgconfig to determine XPCOM_IDL_DIR instead of non-portable construct.
-	# Fixes building against xulrunner-1.9.0, bug #284073.
-	epatch "${FILESDIR}"/${PN}-0.8.7-xpcom-idldir.patch
 
 	# Resurect patch from bug #230287
 	epatch "${FILESDIR}"/${PN}-0.8.3-boost-dynamic-link.patch
