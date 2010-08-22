@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.10 2010/08/22 08:23:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.11 2010/08/22 08:25:26 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -248,7 +248,7 @@ xorg-2_font_configure() {
 	fi
 }
 
-# @FUNCTION: x-modular_flags_setup
+# @FUNCTION: xorg-2_flags_setup
 # @DESCRIPTION:
 # Set up CFLAGS for a debug build
 xorg-2_flags_setup() {
