@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/endeavour
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.30 2009/01/18 22:42:04 angelos Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.31 2010/08/22 11:21:13 hwoarang Exp $
+
+*endeavour-2.7.3-r1 (22 Aug 2010)
+
+  22 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +endeavour-2.7.3-r1.ebuild:
+  Patch from Dane Smith <smithdanea@gmail.com> to respect LDFLAGS, added QA
+  fixes, switched to EAPI2. Bug #333529
 
   18 Jan 2009; Christoph Mende <angelos@gentoo.org>
   +files/endeavour-2.7.3-asneeded.patch, endeavour-2.7.3.ebuild:
