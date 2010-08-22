@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418.ebuild,v 1.2 2010/08/14 13:56:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20100418.ebuild,v 1.3 2010/08/22 01:00:58 lu_zero Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -28,6 +28,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/021109-uclibc-no-ether_ntohost.patch
 	epatch "${FILESDIR}"/${PN}-20100418-makefile.patch
+	epatch "${FILESDIR}"/${PN}-20100418-proper-libs.patch
 	epatch "${FILESDIR}"/${PN}-20100418-printf-size.patch
 	epatch "${FILESDIR}"/${PN}-20100418-aliasing.patch
 	epatch "${FILESDIR}"/${PN}-20071127-kernel-ifaddr.patch
