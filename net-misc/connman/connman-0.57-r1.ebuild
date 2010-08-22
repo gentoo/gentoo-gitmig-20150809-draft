@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="bluetooth +caps debug +dhclient dnsproxy doc examples +ethernet google ofono policykit resolvconf threads tools +udev +wifi wimax"
 # gps meego ospm openconnect
 
