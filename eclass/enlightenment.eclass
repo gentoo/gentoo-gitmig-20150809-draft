@@ -1,10 +1,23 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.83 2010/06/19 00:35:11 abcd Exp $
-#
-# Author: vapier@gentoo.org
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.84 2010/08/22 23:31:08 vapier Exp $
+
+# @ECLASS: enlightenment.eclass
+# @MAINTAINER:
+# enlightenment@gentoo.org
+# @BLURB: simplify enlightenment package management
 
 inherit eutils libtool
+
+# @ECLASS-VARIABLE: E_PYTHON
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# if defined, the package is based on Python/distutils
+
+# @ECLASS-VARIABLE: E_CYTHON
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# if defined, the package is Cython bindings (implies E_PYTHON)
 
 # E_STATE's:
 #	release      [default]
@@ -56,6 +69,17 @@ elif [[ -n ${E_SNAP_DATE} ]] ; then
 else
 	E_STATE="release"
 fi
+
+# Parse requested python state
+: ${E_PYTHON:=${E_CYTHON}}
+if [[ -n ${E_PYTHON} ]] ; then
+	WANT_AUTOTOOLS="no"
+
+	PYTHON_DEPEND="2:2.4"
+
+	inherit python distutils
+fi
+
 if [[ ${WANT_AUTOTOOLS} == "yes" ]] ; then
 	WANT_AUTOCONF=${E_WANT_AUTOCONF:-latest}
 	WANT_AUTOMAKE=${E_WANT_AUTOMAKE:-latest}
@@ -88,9 +112,8 @@ IUSE="nls doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND="nls? ( sys-devel/gettext )"
-
-# gettext (via `autopoint`) needs to run cvs #245073
-[[ ${E_STATE} == "live" ]] && DEPEND="${DEPEND} dev-vcs/cvs"
+[[ -n ${E_PYTHON} ]] && DEPEND+=" >=dev-python/setuptools-0.6_rc9"
+[[ -n ${E_CYTHON} ]] && DEPEND+=" >=dev-python/cython-0.12.1"
 
 case ${EURI_STATE:-${E_STATE}} in
 	release) S=${WORKDIR}/${P};;
@@ -159,8 +182,20 @@ enlightenment_src_configure() {
 
 enlightenment_src_compile() {
 	hasq src_configure ${ENLIGHTENMENT_EXPF} || enlightenment_src_configure
-	emake || enlightenment_die "emake failed"
-	use doc && [[ -x ./gendoc ]] && { ./gendoc || enlightenment_die "gendoc failed" ; }
+
+	if [[ -z ${E_PYTHON} ]] ; then
+		emake || enlightenment_die "emake failed"
+	else
+		distutils_src_compile
+	fi
+
+	if use doc ; then
+		if [[ -x ./gendoc ]] ; then
+			./gendoc || enlightenment_die "gendoc failed"
+		else
+			emake doc || enlightenment_die "emake doc failed"
+		fi
+	fi
 }
 
 enlightenment_src_install() {
@@ -175,4 +210,3 @@ enlightenment_src_install() {
 enlightenment_pkg_postinst() {
 	: enlightenment_warning_msg
 }
-
