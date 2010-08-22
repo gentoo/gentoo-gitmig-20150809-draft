@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1-r1.ebuild,v 1.3 2010/08/01 11:43:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1-r1.ebuild,v 1.4 2010/08/22 18:15:19 eva Exp $
 
 EAPI="2"
 
@@ -15,7 +15,6 @@ KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="applet debug gedit libnotify nautilus test"
 
 RDEPEND="
-	>=gnome-base/libglade-2.0
 	>=gnome-base/gconf-2.0
 	>=x11-libs/gtk+-2.18
 	>=dev-libs/glib-2.16
