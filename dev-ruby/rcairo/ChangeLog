@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.39 2010/08/01 09:59:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.40 2010/08/22 12:23:06 flameeyes Exp $
+
+  22 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/rcairo-1.2.0-no-svg.patch:
+  Remove unused file.
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org> rcairo-1.8.1.ebuild:
   Stable on amd64 wrt bug #329807
