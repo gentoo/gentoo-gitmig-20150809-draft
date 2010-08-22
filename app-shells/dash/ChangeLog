@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*dash-0.5.6.1-r1 (22 Aug 2010)
+
+  22 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> -dash-0.5.6.1.ebuild,
+  +dash-0.5.6.1-r1.ebuild, +files/dash-0.5.6.1-read-ifs.patch:
+  Fix IFS handling with read command (#331535)
+
   31 Jul 2010; Lars Wendler <polynomial-c@gentoo.org> dash-0.5.6.1.ebuild:
   non-maintainer commit: Readded keywords. Ebuild now removes offending
   patch which lead to bug #328929. Commit done with kind permission from

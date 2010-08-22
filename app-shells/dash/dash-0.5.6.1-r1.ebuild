@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.6.1.ebuild,v 1.3 2010/07/31 22:09:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.6.1-r1.ebuild,v 1.1 2010/08/22 20:24:45 truedfx Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ src_prepare() {
 	rm  */debian/diff/0006--INPUT-exit-127-if-command_file-is-given-but-doesn-t.diff \
 		|| die #328929
 	epatch */debian/diff/*
+	epatch "${FILESDIR}"/${P}-read-ifs.patch #331535
 
 	# Fix the invalid sort
 	sed -i -e 's/LC_COLLATE=C/LC_ALL=C/g' src/mkbuiltins

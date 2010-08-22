@@ -1,0 +1,70 @@
+diff --git a/src/expand.c b/src/expand.c
+index f2f964c..3ba1a38 100644
+--- a/src/expand.c
++++ b/src/expand.c
+@@ -205,7 +205,7 @@ expandarg(union node *arg, struct arglist *arglist, int flag)
+ 	 * TODO - EXP_REDIR
+ 	 */
+ 	if (flag & EXP_FULL) {
+-		ifsbreakup(p, &exparg);
++		ifsbreakup(p, &exparg, 0);
+ 		*exparg.lastp = NULL;
+ 		exparg.lastp = &exparg.list;
+ 		expandmeta(exparg.list, flag);
+@@ -1022,9 +1022,11 @@ recordregion(int start, int end, int nulonly)
+  * Break the argument string into pieces based upon IFS and add the
+  * strings to the argument list.  The regions of the string to be
+  * searched for IFS characters have been stored by recordregion.
++ * If bltin is set, use bltinlookup to search for IFS in the
++ * environment of the currently executing built-in command.
+  */
+ void
+-ifsbreakup(char *string, struct arglist *arglist)
++ifsbreakup(char *string, struct arglist *arglist, int bltin)
+ {
+ 	struct ifsregion *ifsp;
+ 	struct strlist *sp;
+@@ -1040,7 +1042,13 @@ ifsbreakup(char *string, struct arglist *arglist)
+ 	if (ifslastp != NULL) {
+ 		ifsspc = 0;
+ 		nulonly = 0;
+-		realifs = ifsset() ? ifsval() : defifs;
++		if (!bltin)
++			realifs = ifsset() ? ifsval() : defifs;
++		else {
++			realifs = bltinlookup("IFS");
++			if (realifs == NULL)
++				realifs = defifs;
++		}
+ 		ifsp = &ifsfirst;
+ 		do {
+ 			p = string + ifsp->begoff;
+diff --git a/src/expand.h b/src/expand.h
+index 405af0b..8eb5f07 100644
+--- a/src/expand.h
++++ b/src/expand.h
+@@ -69,7 +69,7 @@ char *_rmescapes(char *, int);
+ int casematch(union node *, char *);
+ void recordregion(int, int, int);
+ void removerecordregions(int); 
+-void ifsbreakup(char *, struct arglist *);
++void ifsbreakup(char *, struct arglist *, int bltin);
+ 
+ /* From arith.y */
+ intmax_t arith(const char *);
+diff --git a/src/miscbltin.c b/src/miscbltin.c
+index 5ab1648..6810f5f 100644
+--- a/src/miscbltin.c
++++ b/src/miscbltin.c
+@@ -85,9 +85,10 @@ readcmd_handle_line(char *line, char **ap, size_t len)
+ 	backup = sstrdup(line);
+ 
+ 	arglist.lastp = &arglist.list;
++	removerecordregions(0);
+ 	recordregion(0, len - 1, 0);
+ 	
+-	ifsbreakup(s, &arglist);
++	ifsbreakup(s, &arglist, 1);
+ 	*arglist.lastp = NULL;
+ 	removerecordregions(0);
+ 
