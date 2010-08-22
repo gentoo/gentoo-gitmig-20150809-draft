@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.2 2010/05/21 16:54:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.3 2010/08/22 07:28:24 graaff Exp $
 #
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -8,7 +8,8 @@
 #
 # Author: Hans de Graaff <graaff@gentoo.org>
 #
-# @BLURB:
+# @BLURB: An eclass to simplify handling of various ruby-gnome2 parts.
+# @DESCRIPTION:
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
 

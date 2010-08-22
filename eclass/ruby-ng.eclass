@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.25 2010/07/30 17:28:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.26 2010/08/22 07:28:24 graaff Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -33,12 +33,14 @@
 #  * all_ruby_configure
 
 # @ECLASS-VARIABLE: USE_RUBY
+# @REQUIRED
 # @DESCRIPTION:
 # This variable contains a space separated list of targets (see above) a package
 # is compatible to. It must be set before the `inherit' call. There is no
 # default. All ebuilds are expected to set this variable.
 
 # @ECLASS-VARIABLE: RUBY_PATCHES
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # A String or Array of filenames of patches to apply to all implementations.
 
