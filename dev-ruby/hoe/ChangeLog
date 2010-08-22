@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.87 2010/08/21 20:46:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.88 2010/08/22 16:40:40 flameeyes Exp $
+
+  22 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> hoe-2.6.0-r1.ebuild:
+  Remove ruby19/ree18 support from 2.6.0-r1 so that it can be marked stable.
 
   21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/hoe-2.4.0-tests.patch:
