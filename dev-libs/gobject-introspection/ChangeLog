@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.8 2010/07/24 17:04:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.9 2010/08/22 17:59:58 abcd Exp $
+
+*gobject-introspection-0.9.3 (22 Aug 2010)
+
+  22 Aug 2010; Jonathan Callen <abcd@gentoo.org>
+  +gobject-introspection-0.9.3.ebuild:
+  Bump to 0.9.3, from gnome overlay
 
   24 Jul 2010; Raúl Porcel <armin76@gentoo.org>
   gobject-introspection-0.9.0.ebuild:
