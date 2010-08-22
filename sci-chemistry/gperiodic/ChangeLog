@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/gperiodic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.12 2009/10/07 20:40:43 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.13 2010/08/22 20:01:10 hwoarang Exp $
+
+*gperiodic-2.0.10-r1 (22 Aug 2010)
+
+  22 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +gperiodic-2.0.10-r1.ebuild:
+  Respect CC, LDFLAGS. Move sed commands to src_prepare. Bug #333849
 
   07 Oct 2009; Markus Meier <maekke@gentoo.org> gperiodic-2.0.10.ebuild:
   amd64/x86 stable, bug #285466
