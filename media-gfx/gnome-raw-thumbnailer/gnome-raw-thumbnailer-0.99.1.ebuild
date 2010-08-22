@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-0.99.1.ebuild,v 1.5 2009/10/21 15:06:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-0.99.1.ebuild,v 1.6 2010/08/22 14:38:35 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 GCONF_DEBUG=no
 
 inherit autotools eutils gnome2
@@ -32,8 +32,11 @@ S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
-	gnome2_src_prepare
-	epatch "${FILESDIR}"/${P}-drop-libgsf.patch
+	epatch "${FILESDIR}"/${P}-drop-libgsf.patch \
+		"${FILESDIR}"/${P}-make-382.patch
+
+	intltoolize --force --copy --automake || die
 	eautoreconf
-	intltoolize -f || die "intltoolize failed."
+
+	gnome2_src_prepare
 }

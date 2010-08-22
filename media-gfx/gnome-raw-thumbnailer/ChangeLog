@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gnome-raw-thumbnailer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/ChangeLog,v 1.6 2009/10/21 15:06:13 maekke Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/ChangeLog,v 1.7 2010/08/22 14:38:35 ssuominen Exp $
+
+  22 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-raw-thumbnailer-0.99.1.ebuild,
+  +files/gnome-raw-thumbnailer-0.99.1-make-382.patch:
+  Fix data/Makefile.am to use tabs instead of 8 spaces for make-3.82 wrt
+  #333715 by Diego E. Pettenò.
 
   21 Oct 2009; Markus Meier <maekke@gentoo.org>
   gnome-raw-thumbnailer-0.99.1.ebuild:

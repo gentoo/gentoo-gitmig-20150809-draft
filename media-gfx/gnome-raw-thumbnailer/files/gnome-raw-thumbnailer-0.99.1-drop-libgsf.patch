@@ -1,5 +1,5 @@
---- trunk/configure.ac	2007/12/03 04:56:32	6
-+++ trunk/configure.ac	2008/01/13 22:16:12	10
+--- configure.ac
++++ configure.ac
 @@ -17,9 +17,9 @@
  
  SCROLLKEEPER_REQUIRED=0.1.4
@@ -13,8 +13,8 @@
  
  PKG_CHECK_MODULES(OPENRAW, libopenraw-gnome-1.0 >= 0.0.4)
  AC_SUBST(OPENRAW_CFLAGS)
---- trunk/src/Makefile.am	2007/10/06 18:46:06	2
-+++ trunk/src/Makefile.am	2008/01/13 22:16:12	10
+--- src/Makefile.am
++++ src/Makefile.am
 @@ -2,7 +2,7 @@
  
  
