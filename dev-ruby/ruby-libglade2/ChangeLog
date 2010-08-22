@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-libglade2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.49 2010/08/01 09:55:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade2/ChangeLog,v 1.50 2010/08/22 12:37:28 flameeyes Exp $
+
+  22 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/ruby-libglade2-0.16.0-upstreamfix.patch:
+  Remove unused file.
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ruby-libglade2-0.19.4.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gtkmozembed
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.29 2010/08/08 12:03:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.30 2010/08/22 12:41:04 flameeyes Exp $
+
+  22 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/ruby-gtkmozembed-0.16.0-seamonkey.patch,
+  -files/ruby-gtkmozembed-0.19.0-gtkmozembed.h-fix.patch:
+  Remove unused file.
 
   08 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   ruby-gtkmozembed-0.19.4-r1.ebuild:
