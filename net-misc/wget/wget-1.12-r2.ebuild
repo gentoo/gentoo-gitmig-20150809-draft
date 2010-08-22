@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.12-r2.ebuild,v 1.1 2010/08/21 22:18:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.12-r2.ebuild,v 1.2 2010/08/22 18:00:16 vapier Exp $
 
 EAPI="2"
 
@@ -27,10 +27,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-CVE-2010-2252.patch #329941
 	epatch "${FILESDIR}"/${PN}-1.12-linking.patch
 	epatch "${FILESDIR}"/${PN}-1.12-sni.patch #301312
 	epatch "${FILESDIR}"/${P}-debug-tests.patch #286173
+	epatch "${FILESDIR}"/${P}-CVE-2010-2252.patch #329941
 }
 
 src_configure() {
