@@ -1,0 +1,66 @@
+diff -ur mercury-compiler-10.04.orig/boehm_gc/Makefile.direct mercury-compiler-10.04/boehm_gc/Makefile.direct
+--- mercury-compiler-10.04.orig/boehm_gc/Makefile.direct	2010-02-24 20:04:32.000000000 +1300
++++ mercury-compiler-10.04/boehm_gc/Makefile.direct	2010-08-22 17:21:08.000000000 +1200
+@@ -351,7 +351,7 @@
+ 		-ldl `./threadlibs`
+ 	./if_not_there on_sparc_sunos5_so $(MAKE) dyn_load.o
+ 	./if_not_there on_sparc_sunos5_so \
+-	$(LINK_SHARED_OBJ) -o lib$(GC_GRADE).so $(OBJS) dyn_load.o -lc
++	$(LINK_SHARED_OBJ) -o lib$(GC_GRADE).so $(OBJS) dyn_load.o -lc $(EXTRA_LDFLAGS)
+ 
+ # Darwin shared library version of the gc.
+ lib$(GC_GRADE).dylib: $(OBJS) $(UTILS)
+diff -ur mercury-compiler-10.04.orig/runtime/Mmakefile mercury-compiler-10.04/runtime/Mmakefile
+--- mercury-compiler-10.04.orig/runtime/Mmakefile	2010-07-16 03:24:52.000000000 +1200
++++ mercury-compiler-10.04/runtime/Mmakefile	2010-08-22 16:44:33.000000000 +1200
+@@ -387,7 +387,7 @@
+ 	$(LINK_SHARED_OBJ) $(ERROR_UNDEFINED)				\
+ 		-o lib$(RT_LIB_NAME).so $(PIC_OBJS)			\
+ 		$(SHLIB_RPATH_OPT)$(FINAL_INSTALL_MERC_GC_LIB_DIR)	\
+-		$(LDFLAGS) $(LDLIBS) $(THREADLIBS)			\
++		$(ALL_LDFLAGS) $(LDLIBS) $(THREADLIBS)			\
+ 		$(SHARED_LIBS)
+ 
+ # For Darwin we should pass the -install_name option.
+diff -ur mercury-compiler-10.04.orig/trace/Mmakefile mercury-compiler-10.04/trace/Mmakefile
+--- mercury-compiler-10.04.orig/trace/Mmakefile	2008-07-30 05:58:58.000000000 +1200
++++ mercury-compiler-10.04/trace/Mmakefile	2010-08-22 16:57:29.000000000 +1200
+@@ -273,6 +273,7 @@
+ 	$(LINK_SHARED_OBJ) $(ERROR_UNDEFINED)				\
+ 		-o lib$(TRACE_LIB_NAME).so $(TRACE_PIC_OBJS)		\
+ 		$(RPATH_1)$(RPATH_2)					\
++		$(ALL_LDFLAGS)                                          \
+ 		$(TRACE_LDFLAGS) $(TRACE_LDLIBS) $(THREADLIBS)		\
+ 		$(SHARED_LIBS)
+ 
+@@ -280,6 +281,7 @@
+ 	$(LINK_SHARED_OBJ) $(ERROR_UNDEFINED)				\
+ 		-o lib$(EVENTSPEC_LIB_NAME).so $(EVENTSPEC_PIC_OBJS)	\
+ 		$(RPATH_1)$(RPATH_2)					\
++		$(ALL_LDFLAGS)                                          \
+ 		$(EVENTSPEC_LDFLAGS) $(EVENTSPEC_LDLIBS) $(THREADLIBS)	\
+ 		$(SHARED_LIBS)
+ 
+diff -ur mercury-compiler-10.04.orig/util/Mmakefile mercury-compiler-10.04/util/Mmakefile
+--- mercury-compiler-10.04.orig/util/Mmakefile	2010-07-12 04:31:03.000000000 +1200
++++ mercury-compiler-10.04/util/Mmakefile	2010-08-22 11:54:02.000000000 +1200
+@@ -41,16 +41,16 @@
+ 
+ .c:
+ 	$(MGNUC) --no-mercury-stdlib-dir \
+-		$(GRADEFLAGS) $(ALL_MGNUCFLAGS) -o $@ $< $(GETOPT_SRC)
++		$(GRADEFLAGS) $(ALL_MGNUCFLAGS) $(ALL_LDFLAGS) -o $@ $< $(GETOPT_SRC)
+ 
+ mkinit: mkinit.c mkinit_common.c mkinit_common.h
+ 	$(MGNUC) --no-mercury-stdlib-dir \
+-		$(GRADEFLAGS) $(ALL_MGNUCFLAGS) -o $@ \
++		$(GRADEFLAGS) $(ALL_MGNUCFLAGS) $(ALL_LDFLAGS) -o $@ \
+ 			mkinit.c mkinit_common.c $(GETOPT_SRC)
+ 
+ mkinit_erl: mkinit_erl.c mkinit_common.c mkinit_common.h
+ 	$(MGNUC) --no-mercury-stdlib-dir \
+-		$(GRADEFLAGS) $(ALL_MGNUCFLAGS) -o $@ \
++		$(GRADEFLAGS) $(ALL_MGNUCFLAGS) $(ALL_LDFLAGS) -o $@ \
+ 			mkinit_erl.c mkinit_common.c $(GETOPT_SRC)
+ 
+ tags:
