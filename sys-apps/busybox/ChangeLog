@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.254 2010/08/16 21:23:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.255 2010/08/22 17:34:06 vapier Exp $
+
+  22 Aug 2010; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.17.1-make.patch:
+  Add fix from upstream for make-3.82 building #332911 by Lars Wendler.
 
 *busybox-1.17.1-r1 (16 Aug 2010)
 
