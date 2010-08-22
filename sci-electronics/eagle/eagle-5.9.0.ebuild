@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.9.0.ebuild,v 1.3 2010/06/24 21:42:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.9.0.ebuild,v 1.4 2010/08/22 19:04:37 nixphoeni Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cadsoft.de"
 KEYWORDS="amd64 x86"
 IUSE="linguas_de doc"
 LICENSE="cadsoft"
-RESTRICT="strip"
+RESTRICT="strip test"
 SLOT="0"
 
 # Cadsoft has used the suffix "_p" in the past which we translate to "r"
@@ -23,7 +23,8 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
-	x86? ( <media-libs/jpeg-7 )
+	x86? ( =media-libs/jpeg-6*
+	       =media-libs/libpng-1.2* )
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 		 app-emulation/emul-linux-x86-xlibs )"
 

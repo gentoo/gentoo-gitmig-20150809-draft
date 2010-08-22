@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.39 2010/07/08 03:07:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.40 2010/08/22 19:04:37 nixphoeni Exp $
+
+  22 Aug 2010; Joe Sapp <nixphoeni@gentoo.org> eagle-5.9.0.ebuild:
+  Added libpng-1.2 dep to RDEPEND per bug #331755; also depend on version 6
+  of media-libs/jpeg instead of <7
 
   08 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> eagle-5.10.0.ebuild:
   Missing QA_DT_HASH to prevent warning about LDFLAGS not being respected.
