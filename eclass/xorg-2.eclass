@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.9 2010/08/11 09:20:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.10 2010/08/22 08:23:24 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -165,7 +165,6 @@ has dri ${IUSE//+} && DEPEND+=" dri? ( >=x11-base/xorg-server-1.6.3.901-r2[-mini
 [[ -n "${DRIVER}" ]] && DEPEND+=" x11-base/xorg-server[xorg]"
 
 # @FUNCTION: xorg-2_pkg_setup
-# @USAGE:
 # @DESCRIPTION:
 # Setup prefix compat
 xorg-2_pkg_setup() {
@@ -173,7 +172,6 @@ xorg-2_pkg_setup() {
 }
 
 # @FUNCTION: xorg-2_src_unpack
-# @USAGE:
 # @DESCRIPTION:
 # Simply unpack source code.
 xorg-2_src_unpack() {
@@ -187,7 +185,6 @@ xorg-2_src_unpack() {
 }
 
 # @FUNCTION: xorg-2_patch_source
-# @USAGE:
 # @DESCRIPTION:
 # Apply all patches
 xorg-2_patch_source() {
@@ -201,7 +198,6 @@ xorg-2_patch_source() {
 }
 
 # @FUNCTION: xorg-2_reconf_source
-# @USAGE:
 # @DESCRIPTION:
 # Run eautoreconf if necessary, and run elibtoolize.
 xorg-2_reconf_source() {
@@ -218,7 +214,6 @@ xorg-2_reconf_source() {
 }
 
 # @FUNCTION: xorg-2_src_prepare
-# @USAGE:
 # @DESCRIPTION:
 # Prepare a package after unpacking, performing all X-related tasks.
 xorg-2_src_prepare() {
@@ -228,7 +223,6 @@ xorg-2_src_prepare() {
 }
 
 # @FUNCTION: xorg-2_font_configure
-# @USAGE:
 # @DESCRIPTION:
 # If a font package, perform any necessary configuration steps
 xorg-2_font_configure() {
@@ -255,7 +249,6 @@ xorg-2_font_configure() {
 }
 
 # @FUNCTION: x-modular_flags_setup
-# @USAGE:
 # @DESCRIPTION:
 # Set up CFLAGS for a debug build
 xorg-2_flags_setup() {
@@ -266,7 +259,6 @@ xorg-2_flags_setup() {
 }
 
 # @FUNCTION: xorg-2_src_configure
-# @USAGE:
 # @DESCRIPTION:
 # Perform any necessary pre-configuration steps, then run configure
 xorg-2_src_configure() {
@@ -275,9 +267,10 @@ xorg-2_src_configure() {
 	xorg-2_flags_setup
 	[[ -n "${FONT}" ]] && xorg-2_font_configure
 
-# @VARIABLE: CONFIGURE_OPTIONS
-# @DESCRIPTION:
-# Any options to pass to configure
+	# @VARIABLE: CONFIGURE_OPTIONS
+	# @DESCRIPTION:
+	# Any options to pass to configure
+	# @DEFAULT_UNSET
 	CONFIGURE_OPTIONS=${CONFIGURE_OPTIONS:=""}
 	if [[ -x ${ECONF_SOURCE:-.}/configure ]]; then
 		if has static-libs ${IUSE//+}; then
@@ -291,7 +284,6 @@ xorg-2_src_configure() {
 }
 
 # @FUNCTION: xorg-2_src_compile
-# @USAGE:
 # @DESCRIPTION:
 # Compile a package, performing all X-related tasks.
 xorg-2_src_compile() {
@@ -299,7 +291,6 @@ xorg-2_src_compile() {
 }
 
 # @FUNCTION: xorg-2_src_install
-# @USAGE:
 # @DESCRIPTION:
 # Install a built package to ${D}, performing any necessary steps.
 # Creates a ChangeLog from git if using live ebuilds.
@@ -326,9 +317,10 @@ xorg-2_src_install() {
 	if [[ -e "${S}"/ChangeLog ]]; then
 		dodoc "${S}"/ChangeLog
 	fi
-# @VARIABLE: DOCS
-# @DESCRIPTION:
-# Any documentation to install
+	# @VARIABLE: DOCS
+	# @DESCRIPTION:
+	# Any documentation to install
+	# @DEFAULT_UNSET
 	if [[ -n ${DOCS} ]]; then
 		dodoc ${DOCS} || die "dodoc failed"
 	fi
@@ -343,7 +335,6 @@ xorg-2_src_install() {
 }
 
 # @FUNCTION: xorg-2_pkg_postinst
-# @USAGE:
 # @DESCRIPTION:
 # Run X-specific post-installation tasks on the live filesystem. The
 # only task right now is some setup for font packages.
@@ -352,7 +343,6 @@ xorg-2_pkg_postinst() {
 }
 
 # @FUNCTION: xorg-2_pkg_postrm
-# @USAGE:
 # @DESCRIPTION:
 # Run X-specific post-removal tasks on the live filesystem. The only
 # task right now is some cleanup for font packages.
@@ -363,7 +353,6 @@ xorg-2_pkg_postrm() {
 }
 
 # @FUNCTION: setup_fonts
-# @USAGE:
 # @DESCRIPTION:
 # Generates needed files for fonts and fixes font permissions
 setup_fonts() {
@@ -373,7 +362,6 @@ setup_fonts() {
 }
 
 # @FUNCTION: remove_font_metadata
-# @USAGE:
 # @DESCRIPTION:
 # Don't let the package install generated font files that may overlap
 # with other packages. Instead, they're generated in pkg_postinst().
@@ -385,7 +373,6 @@ remove_font_metadata() {
 }
 
 # @FUNCTION: create_fonts_scale
-# @USAGE:
 # @DESCRIPTION:
 # Create fonts.scale file, used by the old server-side fonts subsystem.
 create_fonts_scale() {
@@ -399,7 +386,6 @@ create_fonts_scale() {
 }
 
 # @FUNCTION: create_fonts_dir
-# @USAGE:
 # @DESCRIPTION:
 # Create fonts.dir file, used by the old server-side fonts subsystem.
 create_fonts_dir() {
