@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.160 2010/08/17 18:22:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.161 2010/08/22 13:00:08 maekke Exp $
+
+  22 Aug 2010; Markus Meier <maekke@gentoo.org> libevent-1.4.14b.ebuild:
+  arm stable, bug #331541
 
   17 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   libevent-1.4.14b.ebuild:
