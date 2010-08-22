@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.73 2010/07/23 21:48:25 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.74 2010/08/22 06:25:20 keri Exp $
+
+*mercury-extras-10.04-r1 (22 Aug 2010)
+
+  22 Aug 2010; <keri@gentoo.org> +mercury-extras-10.04-r1.ebuild:
+  Respect LDFLAGS
 
   23 Jul 2010; <keri@gentoo.org> mercury-extras-10.04.ebuild,
   files/mercury-extras-10.04-lex.patch,
