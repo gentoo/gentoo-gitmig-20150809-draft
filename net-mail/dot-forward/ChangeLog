@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dot-forward
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.26 2009/09/23 19:05:29 patrick Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.27 2010/08/22 16:40:26 phajdan.jr Exp $
+
+  22 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  dot-forward-0.71-r3.ebuild:
+  x86 stable wrt bug #333915
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   dot-forward-0.71-r2.ebuild:
