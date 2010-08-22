@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.5.2.ebuild,v 1.2 2010/08/22 07:30:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.6.1.ebuild,v 1.1 2010/08/22 07:30:17 hollow Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit gnome2 versionator
+inherit gnome2 versionator eutils
 
 MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Open source photo manager for GNOME"
@@ -28,11 +28,18 @@ RDEPEND=">=dev-db/sqlite-3.5.9:3
 	>=net-libs/libsoup-2.26.0
 	>=net-libs/webkit-gtk-1.1.5
 	>=sys-fs/udev-145[extras]
-	>=x11-libs/gtk+-2.14.4:2"
+	>=x11-libs/gtk+-2.14.4:2
+	>=media-libs/libraw-0.9.0
+	>=media-libs/gexiv2-0.1.0"
 DEPEND="${RDEPEND}
 	=dev-lang/vala-0.8*"
 
 DOCS="AUTHORS MAINTAINERS NEWS README THANKS"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-libraw.patch" || die "libraw patch failed."
+	mv vapi/libraw{,_r}.vapi || die "renaming libraw.vapi failed"
+}
 
 pkg_setup() {
 	G2CONF="--disable-schemas-install

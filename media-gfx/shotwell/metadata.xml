@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
+	<herd>graphics</herd>
 	<maintainer>
 		<email>hollow@gentoo.org</email>
 		<name>Benedikt Böhm</name>
 	</maintainer>
 	<maintainer>
-		<email>nutz@unfoog.de</email>
+		<email>nutz@noova.de</email>
 		<name>Andreas Nüßlein</name>
 		<description>Proxy maintainer. Please CC on bugs.</description>
 	</maintainer>
