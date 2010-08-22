@@ -1,0 +1,48 @@
+'diff --git a/Makefile b/Makefile
+index 51ba805..8e9dac2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -20,6 +20,7 @@ all_samples: bin/raw-identify bin/simple_dcraw  bin/dcraw_emu bin/dcraw_half bin
+ install: library
+ 	@if [ -d /usr/local/include ] ; then cp -R libraw /usr/local/include/ ; else echo 'no /usr/local/include' ; fi
+ 	@if [ -d /usr/local/lib ] ; then cp lib/libraw.a lib/libraw_r.a /usr/local/lib/ ; else echo 'no /usr/local/lib' ; fi
++	@if [ -d /usr/local/lib/pkgconfig ] ; then cp libraw.pc libraw_r.pc /usr/local/lib/pkgconfig ; else echo 'no /usr/local/lib/pkgconfig' ; fi
+ 
+ install-binaries: all_samples
+ 	@if [ -d /usr/local/bin ] ; then cp bin/[a-z]* /usr/local/bin/ ; else echo 'no /usr/local/bin' ; fi
+diff --git a/libraw.pc b/libraw.pc
+new file mode 100644
+index 0000000..15ec862
+--- /dev/null
++++ b/libraw.pc
+@@ -0,0 +1,12 @@
++prefix=/usr
++exec_prefix=${prefix}
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++
++Name: libraw
++Description: Raw image decoder library (non-thread-safe)
++Requires: 
++Version: 0.9.1
++Libs: -L${libdir} -lraw -lstdc++
++Cflags: -I${includedir}/libraw
++
+diff --git a/libraw_r.pc b/libraw_r.pc
+new file mode 100644
+index 0000000..b54242b
+--- /dev/null
++++ b/libraw_r.pc
+@@ -0,0 +1,12 @@
++prefix=/usr
++exec_prefix=${prefix}
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++
++Name: libraw
++Description: Raw image decoder library (thread-safe)
++Requires: 
++Version: 0.9.1
++Libs: -L${libdir} -lraw_r -lstdc++
++Cflags: -I${includedir}/libraw
++
