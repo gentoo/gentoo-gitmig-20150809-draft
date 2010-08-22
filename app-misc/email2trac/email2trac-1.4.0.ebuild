@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/email2trac/email2trac-1.4.0.ebuild,v 1.2 2010/08/12 20:16:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/email2trac/email2trac-1.4.0.ebuild,v 1.3 2010/08/22 07:36:04 hollow Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="=www-apps/trac-0.11*"
 
 pkg_setup() {
 	einfo "You can set the following variables in make.conf:"
@@ -33,7 +33,7 @@ src_prepare() {
 src_configure() {
 	econf --sysconfdir=/etc/${PN}/ \
 		--with-trac_user=${EMAIL2TRAC_TRAC_USER:-apache} \
-		--with-MTA_user=${EMAIL2TRAC_MTA_USER:-nobody}
+		--with-mta_user=${EMAIL2TRAC_MTA_USER:-nobody}
 }
 
 src_install() {
