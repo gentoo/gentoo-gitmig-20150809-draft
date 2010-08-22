@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.32 2010/02/21 07:00:51 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.33 2010/08/22 05:36:39 dirtyepic Exp $
+
+  22 Aug 2010; Ryan Hill <dirtyepic@gentoo.org> gegl-0.1.2.ebuild,
+  +files/gegl-0.1.2-buffer-overflow.patch:
+  Fix buffer overflow in gegl_buffer_header_init() (bug #319789).
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> gegl-0.1.2.ebuild:
   Transfer prefix keywords (no other changes)
