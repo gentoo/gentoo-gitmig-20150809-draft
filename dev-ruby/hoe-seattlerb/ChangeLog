@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.11 2010/08/18 11:08:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.12 2010/08/23 19:34:30 flameeyes Exp $
+
+*hoe-seattlerb-1.2.2-r1 (23 Aug 2010)
+
+  23 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  hoe-seattlerb-1.2.2.ebuild, +hoe-seattlerb-1.2.2-r1.ebuild:
+  Cleanup -r0 for stabilisation, ree18 and ruby19 slated for -r1.
 
   18 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   hoe-seattlerb-1.2.2.ebuild:
