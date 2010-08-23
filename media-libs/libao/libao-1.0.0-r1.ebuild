@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.0.0-r1.ebuild,v 1.1 2010/07/26 08:06:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.0.0-r1.ebuild,v 1.2 2010/08/23 18:41:20 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils libtool
 
 DESCRIPTION="the audio output library"
@@ -39,6 +39,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die
 	dodoc AUTHORS CHANGES README TODO
+	find "${ED}" -name '*.la' -exec rm -f '{}' +
 }
