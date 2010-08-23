@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.2.3.ebuild,v 1.1 2010/06/07 13:41:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.2.3-r1.ebuild,v 1.1 2010/08/23 11:29:16 chainsaw Exp $
 
 EAPI=1
 
@@ -55,7 +55,7 @@ src_install() {
 	if use ipv6; then
 		dobin birdc6
 		dosbin bird6
-		newinitd "${FILESDIR}/initd-v6-${P}" bird || die "V6 init script installation failed"
+		newinitd "${FILESDIR}/initd-v6-${P}" bird6 || die "V6 init script installation failed"
 	fi
 	dobin birdc
 	dosbin bird

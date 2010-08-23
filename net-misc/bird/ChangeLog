@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.12 2010/06/07 13:41:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.13 2010/08/23 11:29:16 chainsaw Exp $
+
+*bird-1.2.3-r1 (23 Aug 2010)
+
+  23 Aug 2010; <chainsaw@gentoo.org> -files/1.1.7-nostrip.patch,
+  -files/initd-v4-bird-1.1.7, -files/initd-v6-bird-1.1.7,
+  -bird-1.1.7.ebuild, -files/1.2.2-v4-v6-build.patch,
+  -files/initd-v4-bird-1.2.2, -files/initd-v6-bird-1.2.2,
+  -bird-1.2.2.ebuild, files/initd-v6-bird-1.2.3, -bird-1.2.3.ebuild,
+  +bird-1.2.3-r1.ebuild:
+  Clean up old ebuilds. Actually install a V6 init script and use the
+  correct name.
 
 *bird-1.2.3 (07 Jun 2010)
 
