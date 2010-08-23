@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.12.ebuild,v 1.5 2010/08/20 19:56:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.12.ebuild,v 1.6 2010/08/23 20:17:06 maekke Exp $
 
 EAPI=2
 inherit libtool eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.balabit.com/downloads/files/eventlog/0.2//eventlog_${PV}.tar
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="static-libs"
 
 DEPEND=""
