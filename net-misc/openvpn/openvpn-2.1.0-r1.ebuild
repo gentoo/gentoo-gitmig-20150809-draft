@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.0-r1.ebuild,v 1.3 2010/08/23 13:45:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1.0-r1.ebuild,v 1.4 2010/08/23 13:49:47 djc Exp $
 
 EAPI=2
 
@@ -44,7 +44,7 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# basic.h defines a type 'bool' that conflicts with the altivec
 	# keyword bool which has to be fixed upstream, see bugs #293840
 	# and #297854.
@@ -68,7 +68,9 @@ src_compile() {
 		$(use_enable threads pthread) \
 		$(use_enable iproute2) \
 		|| die "configure failed"
+}
 
+src_compile() {
 	use static && sed -i -e '/^LIBS/s/LIBS = /LIBS = -static /' Makefile
 
 	emake || die "make failed"
