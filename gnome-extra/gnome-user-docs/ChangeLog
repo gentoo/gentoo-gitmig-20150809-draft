@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-user-docs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/ChangeLog,v 1.42 2010/08/18 22:26:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-docs/ChangeLog,v 1.43 2010/08/23 22:10:21 eva Exp $
+
+  23 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-user-docs-2.24.2-r1.ebuild, -gnome-user-docs-2.28.0.ebuild,
+  -gnome-user-docs-2.28.1.ebuild:
+  Clean up old revisions.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org>
   gnome-user-docs-2.28.2.ebuild:
