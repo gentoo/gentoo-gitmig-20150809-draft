@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-turba
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.44 2010/08/19 13:45:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.45 2010/08/23 21:50:53 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org> horde-turba-2.3.4.ebuild:
+  x86 stable, bug #333207
 
   19 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   horde-turba-2.3.4.ebuild:
