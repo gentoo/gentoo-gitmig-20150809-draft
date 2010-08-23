@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/jpilot-plucker
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/ChangeLog,v 1.11 2010/08/21 14:13:14 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/ChangeLog,v 1.12 2010/08/23 19:30:49 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org> jpilot-plucker-0.02.ebuild:
+  x86 stable, bug #333717
 
   21 Aug 2010; Thomas Beierlein <tomjbe@gentoo.org>
   jpilot-plucker-0.02.ebuild:
