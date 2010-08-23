@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.10 2010/08/01 11:14:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.11 2010/08/23 18:39:00 dev-zero Exp $
+
+  23 Aug 2010; Tiziano Müller <dev-zero@gentoo.org> poco-1.3.6_p2.ebuild:
+  Changed order of -O2 replacement in sed call to avoid stripping an -O2 in
+  our CFLAGS or (even worse) in LDFLAGS, resulting in unoptimized libs or a
+  'file not found error' linker error.
 
   01 Aug 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   files/1.3.6_p2-gentoo.patch:

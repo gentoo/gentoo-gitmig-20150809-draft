@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.6_p2.ebuild,v 1.1 2010/07/20 00:12:44 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.6_p2.ebuild,v 1.2 2010/08/23 18:39:00 dev-zero Exp $
 
 EAPI="2"
 
@@ -80,6 +80,7 @@ src_configure() {
 		|| die "configure failed"
 
 	sed -i \
+		-e 's|-O2||g' \
 		-e "s|CC      = .*|CC      = $(tc-getCC)|" \
 		-e "s|CXX     = .*|CXX     = $(tc-getCXX)|" \
 		-e "s|RANLIB  = .*|RANLIB  = $(tc-getRANLIB)|" \
@@ -89,7 +90,6 @@ src_configure() {
 		-e "s|CXXFLAGS        = |CXXFLAGS        = ${CXXFLAGS} |" \
 		-e "s|LINKFLAGS       =|LINKFLAGS       = ${LDFLAGS} |" \
 		-e "s|SHAREDOPT_LINK  = -Wl,-rpath,\$(LIBPATH)|SHAREDOPT_LINK  =|" \
-		-e 's|-O2||g' \
 		build/config/Linux build/config/FreeBSD || die "sed failed"
 	sed -i -e "s|SHLIBFLAGS)|SHLIBFLAGS) ${LDFLAGS}|" build/rules/lib || die
 }
