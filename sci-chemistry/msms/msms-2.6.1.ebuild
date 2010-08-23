@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms/msms-2.6.1.ebuild,v 1.1 2010/08/21 22:58:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms/msms-2.6.1.ebuild,v 1.2 2010/08/23 10:43:10 flameeyes Exp $
 
 EAPI=3
 
@@ -19,13 +19,13 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-RESTRICT="fetch binchecks"
+RESTRICT="fetch"
 
 S="${WORKDIR}"
 
 pkg_nofetch() {
 	einfo
-	einfo "Please download ${SRC_URI} and place it to ${DISTDIR}"
+	einfo "Please download ${A} from ${HOMEPAGE} and place it to ${DISTDIR}"
 	einfo
 }
 
