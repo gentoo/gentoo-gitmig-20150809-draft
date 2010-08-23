@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5890 2010/08/23 22:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5891 2010/08/23 22:47:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3880,15 +3880,13 @@ x11-wm/windowmaker:modelock - Enable XKB language status lock support. README sa
 x11-wm/windowmaker:vdesktop - Enable dynamic virtual desktop (conflicts with software that works on the edges of the screen)
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
 xfce-base/libxfcegui4:glade - Build glade bindings
-xfce-base/thunar:trash-plugin - Build Trash plug-in for panel
-xfce-base/thunar:udev - Enable gudev support (required by xfce-extra/thunar-volman)
+xfce-base/thunar:udev - Enable udev support (required by xfce-extra/thunar-volman)
 xfce-base/xfce-utils:lock - Enable screen locking
 xfce-base/xfce4-session:fortune - Install tips and tricks app (xfce4-tips), adds dependency on games-misc/fortune-mod
 xfce-base/xfce4-session:gnome-keyring - Support for storing your password.
 xfce-base/xfce4-settings:keyboard - Enable Keyboard layout selection with x11-libs/libxklavier
 xfce-base/xfce4-settings:sound - Enable sound event support with media-libs/libcanberra
-xfce-base/xfdesktop:menu-plugin - Build Menu plug-in for panel
-xfce-base/xfdesktop:thunar - Build support for application launchers using xfce-base/thunar
+xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launchers and folders)
 xfce-extra/thunar-thumbnailers:grace - Enable support for sci-visualization/grace thumbnails
 xfce-extra/thunar-vcs-plugin:git - Enable dev-vcs/git support
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
