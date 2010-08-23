@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-user-share
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.8 2010/08/01 12:04:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.9 2010/08/23 21:47:47 eva Exp $
+
+  23 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-user-share-2.26.0.ebuild, -gnome-user-share-2.28.1.ebuild:
+  Clean up old revisions.
 
   01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   gnome-user-share-2.30.0.ebuild:
