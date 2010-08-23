@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r6.ebuild,v 1.1 2010/08/23 15:44:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r6.ebuild,v 1.2 2010/08/23 23:12:24 dagger Exp $
 
 EAPI="2"
 
@@ -39,7 +39,7 @@ RDEPEND=">=sys-apps/dbus-1.2
 	!gnutls? ( >=dev-libs/nss-3.11 )
 	dhclient? (
 		dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
-		!dhcpcd? ( >=net-misc/dhcp-4.0.0 ) )
+		!dhcpcd? ( net-misc/dhcp ) )
 	!dhclient? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	resolvconf? ( net-dns/openresolv )
 	connection-sharing? (

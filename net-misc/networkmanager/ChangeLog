@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.84 2010/08/23 15:44:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.85 2010/08/23 23:12:24 dagger Exp $
+
+  23 Aug 2010; Robert Piasek <dagger@gentoo.org>
+  networkmanager-0.8.1-r6.ebuild:
+  removed hard dependency on dhcp4. Now dhcp3 can be used as well
 
 *networkmanager-0.8.1-r6 (23 Aug 2010)
 
