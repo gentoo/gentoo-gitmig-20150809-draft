@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.68 2010/08/22 15:14:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.69 2010/08/23 14:52:03 fauli Exp $
+
+  23 Aug 2010; Christian Faulhammer <fauli@gentoo.org> jruby-1.5.2.ebuild:
+  stable x86, security bug 332957
 
 *jruby-1.5.2 (22 Aug 2010)
 
