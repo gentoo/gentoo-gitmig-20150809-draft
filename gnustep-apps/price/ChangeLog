@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/price
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.21 2010/08/19 19:53:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.22 2010/08/23 15:29:01 voyageur Exp $
+
+  23 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org> price-1.0.0.ebuild:
+  include vs import sed no longer needed, as notified by Riccardo Mottola
+  (upstream)
 
 *price-1.0.0 (19 Aug 2010)
 
