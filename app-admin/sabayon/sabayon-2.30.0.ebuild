@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.0.ebuild,v 1.4 2010/08/01 11:59:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.0.ebuild,v 1.5 2010/08/23 20:53:13 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -35,7 +35,8 @@ RDEPEND="${COMMON_DEPEND}
 	x11-libs/gksu"
 
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/intltool-0.40"
+	>=dev-util/intltool-0.40
+	>=app-text/gnome-doc-utils-0.17.3"
 
 DOCS="AUTHORS ChangeLog ISSUES NEWS README TODO"
 
