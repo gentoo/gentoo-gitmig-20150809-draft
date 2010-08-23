@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Simple
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.60 2010/08/15 07:07:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.61 2010/08/23 21:42:39 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org>
+  perl-Test-Simple-0.94.ebuild:
+  arm stable, bug #333421
 
 *perl-Test-Simple-0.96 (15 Aug 2010)
 
