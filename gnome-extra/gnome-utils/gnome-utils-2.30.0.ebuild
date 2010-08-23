@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.30.0.ebuild,v 1.4 2010/08/01 12:05:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.30.0.ebuild,v 1.5 2010/08/23 22:02:19 eva Exp $
 
 EAPI="2"
 
@@ -20,7 +20,8 @@ RDEPEND=">=dev-libs/glib-2.20.0
 	>=gnome-base/libgtop-2.12
 	>=gnome-base/gconf-2
 	>=media-libs/libcanberra-0.4[gtk]
-	x11-libs/libXext"
+	x11-libs/libXext
+	x11-libs/libX11"
 
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
@@ -48,9 +49,6 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 
 	if ! use test ; then
 		sed -e 's/ tests//' -i logview/Makefile.{am,in} || die "sed failed";
