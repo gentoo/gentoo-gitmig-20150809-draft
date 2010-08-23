@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.347 2010/08/20 17:57:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.348 2010/08/23 06:02:48 vapier Exp $
+
+  23 Aug 2010; Mike Frysinger <vapier@gentoo.org> +files/gentoo.config-1.0.0,
+  openssl-1.0.0a-r3.ebuild:
+  Split off gentoo.config for openssl-1.0.0 to take advantage of newer
+  optimized targets #333679 by Sergei Trofimovich.
 
 *openssl-1.0.0a-r3 (20 Aug 2010)
 

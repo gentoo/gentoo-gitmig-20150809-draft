@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.1 2010/08/20 17:57:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0a-r3.ebuild,v 1.2 2010/08/23 06:02:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -51,7 +51,7 @@ src_unpack() {
 	sed -i '/^SET_X/s:=.*:=set -x:' Makefile.shared
 
 	# allow openssl to be cross-compiled
-	cp "${FILESDIR}"/gentoo.config-0.9.8 gentoo.config || die "cp cross-compile failed"
+	cp "${FILESDIR}"/gentoo.config-1.0.0 gentoo.config || die "cp cross-compile failed"
 	chmod a+rx gentoo.config
 
 	append-flags -fno-strict-aliasing
