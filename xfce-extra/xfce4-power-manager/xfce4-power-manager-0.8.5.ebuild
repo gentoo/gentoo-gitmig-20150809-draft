@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.5.ebuild,v 1.4 2010/08/11 20:49:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.5.ebuild,v 1.5 2010/08/23 22:19:47 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.8/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="debug doc +plugins"
+IUSE="debug doc xfce_plugins_brightness"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.70
 	>=dev-libs/glib-2.16:2
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.70
 	>=xfce-base/libxfce4util-4.6
 	>=xfce-base/libxfcegui4-4.6
 	>=xfce-base/xfconf-4.6
-	plugins? ( >=xfce-base/xfce4-panel-4.6 )
+	xfce_plugins_brightness? ( >=xfce-base/xfce4-panel-4.6 )
 	x11-libs/libXext"
 RDEPEND="${COMMON_DEPEND}
 	gnome-base/librsvg"
@@ -37,7 +37,7 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
 		--enable-dpms
-		$(use_enable plugins panel-plugins)
+		$(use_enable xfce_plugins_brightness panel-plugins)
 		$(use_enable doc xsltproc)
 		$(xfconf_use_debug)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"

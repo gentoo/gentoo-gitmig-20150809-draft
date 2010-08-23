@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.0.0.ebuild,v 1.1 2010/08/12 16:38:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.0.0.ebuild,v 1.2 2010/08/23 22:19:47 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/1.0/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug networkmanager +plugins policykit"
+IUSE="debug networkmanager policykit xfce_plugins_brightness"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.18:2
 	>=dev-libs/glib-2.16:2
@@ -27,7 +27,7 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.18:2
 	x11-libs/libXext
 	sys-fs/udisks
 	sys-power/upower
-	plugins? ( >=xfce-base/xfce4-panel-4.6 )
+	xfce_plugins_brightness? ( >=xfce-base/xfce4-panel-4.6 )
 	policykit? ( >=sys-auth/polkit-0.91 )
 	!<xfce-base/xfce-utils-4.6.2-r1"
 RDEPEND="${COMMON_DEPEND}
@@ -46,7 +46,7 @@ pkg_setup() {
 		--disable-hal
 		--enable-dpms
 		$(use_enable networkmanager network-manager)
-		$(use_enable plugins panel-plugins)
+		$(use_enable xfce_plugins_brightness panel-plugins)
 		$(xfconf_use_debug)"
 
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
