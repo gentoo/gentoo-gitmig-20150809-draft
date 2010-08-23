@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.2.ebuild,v 1.8 2010/08/23 21:55:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.2.ebuild,v 1.9 2010/08/23 22:28:52 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -14,7 +14,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/4.6/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+branding debug +menu-plugin thunar"
+IUSE="+branding debug xfce_plugins_menu thunar"
 
 LINGUAS="be ca cs da de el es et eu fi fr he hu it ja ko nb_NO nl pa pl pt_BR ro ru sk sv tr uk vi zh_CN zh_TW"
 
@@ -36,7 +36,7 @@ RDEPEND="gnome-base/libglade
 	thunar? (
 		|| ( ( =xfce-base/exo-0.3* <xfce-base/thunar-1.1.0 ) xfce-extra/thunar-vfs )
 		dev-libs/dbus-glib )
-	menu-plugin? ( >=xfce-base/xfce4-panel-4.6 )"
+	xfce_plugins_menu? ( >=xfce-base/xfce4-panel-4.6 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
@@ -61,7 +61,7 @@ pkg_setup() {
 		$(use_enable thunar file-icons)
 		$(use_enable thunar thunarx)
 		$(use_enable thunar exo)
-		$(use_enable menu-plugin panel-plugin)
+		$(use_enable xfce_plugins_menu panel-plugin)
 		$(xfconf_use_debug)
 		${mycfg}"
 
