@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/unace
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.35 2010/01/01 19:40:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.36 2010/08/23 09:55:19 gmsoft Exp $
+
+*unace-2.5-r2 (23 Aug 2010)
+
+  23 Aug 2010; Guy Martin <gmsoft@gentoo.org> +unace-2.5-r2.ebuild,
+  +files/unace-2.5-endianness-detection.patch:
+  Fix endianess detection, bug #222301.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> unace-2.5-r1.ebuild:
   Transfer Prefix keywords
