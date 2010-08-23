@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.102 2010/08/18 22:30:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.103 2010/08/23 22:09:31 eva Exp $
+
+  23 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-nettool-2.22.1.ebuild, gnome-nettool-2.30.0.ebuild:
+  Drop useless intltool fix.
 
   18 Aug 2010; Markus Meier <maekke@gentoo.org> gnome-nettool-2.28.0.ebuild:
   arm stable, bug #314899
