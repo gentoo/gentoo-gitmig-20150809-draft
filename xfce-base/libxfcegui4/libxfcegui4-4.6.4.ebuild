@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.4.ebuild,v 1.8 2010/08/11 20:47:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.4.ebuild,v 1.9 2010/08/23 23:23:48 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -35,4 +35,11 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 	DOCS="AUTHORS ChangeLog NEWS"
+}
+
+src_install() {
+	xfconf_src_install
+
+	has_version xfce-base/libxfce4ui && rm -f \
+		"${D}"/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 }
