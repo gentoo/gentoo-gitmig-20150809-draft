@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.47 2010/08/12 12:37:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.48 2010/08/23 21:16:17 chithanh Exp $
+
+  23 Aug 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  make.defaults:
+  Add VIDEO_CARDS="nouveau" to make.defaults
 
   12 Aug 2010; Jim Ramsay <lack@gentoo.org> package.use.mask:
   Updating USE masks for www-plugin/adobe-flash: 32bit and 64bit for 10.0

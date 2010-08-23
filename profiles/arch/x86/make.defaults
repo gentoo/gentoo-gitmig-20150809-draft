@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/make.defaults,v 1.5 2009/12/13 21:45:29 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/make.defaults,v 1.6 2010/08/23 21:16:17 chithanh Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -14,7 +14,7 @@ CXXFLAGS="${CFLAGS}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="fbdev glint intel mach64 mga neomagic nv r128 radeon savage sis tdfx trident vesa via vmware voodoo"
+VIDEO_CARDS="fbdev glint intel mach64 mga neomagic nouveau nv r128 radeon savage sis tdfx trident vesa via vmware voodoo"
 
 # 2006/12/21 - Andrej Kacian <ticho@gentoo.org>
 # Defaults for audio drivers
