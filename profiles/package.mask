@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11872 2010/08/23 03:10:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.11873 2010/08/23 03:34:25 zmedico Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1124,7 +1124,8 @@ sys-apps/baselayout-vserver
 
 # Zac Medico <zmedico@gentoo.org> (05 Jan 2009)
 # Portage 2.2 is masked due to known bugs in the
-# package sets and preserve-libs features.
+# package sets and preserve-libs features. See
+# bug #253802 for details.
 >=sys-apps/portage-2.2_pre
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (03 Jan 2009)
