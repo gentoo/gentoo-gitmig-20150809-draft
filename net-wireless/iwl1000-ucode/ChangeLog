@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/iwl1000-ucode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl1000-ucode/ChangeLog,v 1.2 2010/08/23 11:49:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl1000-ucode/ChangeLog,v 1.3 2010/08/23 19:19:30 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org>
+  iwl1000-ucode-128.50.3.1.ebuild:
+  x86 stable, bug #333835
 
   23 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   iwl1000-ucode-128.50.3.1.ebuild:
