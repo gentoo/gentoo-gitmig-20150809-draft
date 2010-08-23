@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.89 2010/08/21 20:11:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.90 2010/08/23 19:51:20 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org> rb_libtorrent-0.15.1.ebuild:
+  amd64/x86 stable, bug #333775
 
   21 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   -files/0.14.6-configure-ldflags-fix.patch,
