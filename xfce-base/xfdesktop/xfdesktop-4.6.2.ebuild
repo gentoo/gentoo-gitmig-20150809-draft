@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.2.ebuild,v 1.7 2010/08/11 20:45:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.2.ebuild,v 1.8 2010/08/23 21:55:10 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -14,7 +14,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/4.6/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+branding debug doc +menu-plugin thunar"
+IUSE="+branding debug +menu-plugin thunar"
 
 LINGUAS="be ca cs da de el es et eu fi fr he hu it ja ko nb_NO nl pa pl pt_BR ro ru sk sv tr uk vi zh_CN zh_TW"
 
@@ -33,36 +33,46 @@ RDEPEND="gnome-base/libglade
 	>=xfce-base/libxfce4menu-4.6
 	>=xfce-base/xfconf-4.6
 	branding? ( >=x11-libs/gtk+-2.10:2[jpeg] )
-	thunar? ( >=xfce-base/thunar-1
-		>=xfce-base/exo-0.3.100
+	thunar? (
+		|| ( ( =xfce-base/exo-0.3* <xfce-base/thunar-1.1.0 ) xfce-extra/thunar-vfs )
 		dev-libs/dbus-glib )
-	menu-plugin? ( =xfce-base/xfce4-panel-4.6* )"
+	menu-plugin? ( >=xfce-base/xfce4-panel-4.6 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
-	dev-util/pkgconfig
-	doc? ( dev-libs/libxslt )"
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	XFCE_LOCALIZED_CONFIGS="/etc/xdg/xfce4/desktop/menu.xml
 		/etc/xdg/xfce4/desktop/xfce-registered-categories.xml"
+
+	PATCHES=(
+		"${FILESDIR}"/${P}-automagic.patch
+		"${FILESDIR}"/${P}-assert.patch
+		)
+
+	# For Xfce 4.7/4.8, panel plug-in is elsewhere and too old exo/thunarx required
+	local mycfg
+	has_version ">=xfce-base/xfce4-panel-4.7" && mycfg="--disable-panel-plugin"
+	has_version "xfce-extra/thunar-vfs" && mycfg+=" --disable-exo --disable-thunarx"
+
 	XFCONF="--disable-dependency-tracking
 		--disable-static
 		$(use_enable thunar file-icons)
 		$(use_enable thunar thunarx)
 		$(use_enable thunar exo)
 		$(use_enable menu-plugin panel-plugin)
-		$(use_enable doc xsltproc)
-		$(use_enable debug)"
+		$(xfconf_use_debug)
+		${mycfg}"
+
 	DOCS="AUTHORS ChangeLog NEWS TODO README"
-	PATCHES=( "${FILESDIR}/${P}-automagic.patch"
-		"${FILESDIR}/${P}-assert.patch" )
 }
 
 src_prepare() {
 	if use branding; then
-		sed -i -e "s:xfce-stripes.png:gentoo-minimal-1280x1024.jpg:" \
-			common/xfdesktop-common.h || die "sed failed"
+		sed -i \
+			-e 's:xfce-stripes.png:gentoo-minimal-1280x1024.jpg:' \
+			common/xfdesktop-common.h || die
 	fi
 	xfconf_src_prepare
 }
@@ -72,7 +82,7 @@ src_install() {
 
 	if use branding; then
 		insinto /usr/share/xfce4/backdrops
-		doins "${DISTDIR}"/gentoo-minimal-1280x1024.jpg || die "doins failed"
+		doins "${DISTDIR}"/gentoo-minimal-1280x1024.jpg || die
 	fi
 
 	local config lang
