@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r3.ebuild,v 1.2 2010/08/23 10:52:31 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r4.ebuild,v 1.1 2010/08/23 11:44:36 dagger Exp $
 
 EAPI="2"
 
-inherit gnome.org eutils autotools
+inherit autotools eutils gnome.org linux-info
 
 # NetworkManager likes itself with capital letters
 MY_PN=${PN/networkmanager/NetworkManager}
@@ -13,12 +13,12 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 SRC_URI="${SRC_URI//${PN}/${MY_PN}}
-	http://dev.gentoo.org/~dagger/files/${PN}-ifnet-308267b4.patch"
+	http://dev.gentoo.org/~dagger/files/${PN}-ifnet-540e40f.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="avahi bluetooth doc nss gnutls dhclient dhcpcd resolvconf connection-sharing"
+IUSE="avahi bluetooth doc nss gnutls dhclient dhcpcd kernel_linux resolvconf connection-sharing"
 
 RDEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.75
@@ -54,10 +54,37 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+sysfs_deprecated_check() {
+	ebegin "Checking for SYSFS_DEPRECATED support"
+
+	if { linux_chkconfig_present SYSFS_DEPRECATED_V2; }; then
+		eerror "Please disable SYSFS_DEPRECATED_V2 support in your kernel config and recompile your kernel"
+		eerror "or NetworkManager will not work correctly."
+		eerror "See http://bugs.gentoo.org/333639 for more info."
+		die "CONFIG_SYSFS_DEPRECATED_V2 support detected!"
+	fi
+	eend $?
+}
+
+pkg_setup() {
+
+	if use kernel_linux; then
+		get_version
+		if linux_config_exists; then
+			sysfs_deprecated_check
+		else
+			ewarn "Was unable to determine your kernel .config"
+			ewarn "Please note that if CONFIG_SYSFS_DEPRECATED_V2 is set in your kernel .config, NetworkManager will not work correctly."
+			ewarn "See http://bugs.gentoo.org/333639 for more info."
+		fi
+
+	fi
+}
+
 src_prepare() {
 
 	# Gentoo system-plugin
-	epatch "${DISTDIR}/${PN}-ifnet-308267b4.patch"
+	epatch "${DISTDIR}/${PN}-ifnet-540e40f.patch"
 
 	# Fix up the dbus conf file to use plugdev group
 	epatch "${FILESDIR}/${P}-confchanges.patch"
