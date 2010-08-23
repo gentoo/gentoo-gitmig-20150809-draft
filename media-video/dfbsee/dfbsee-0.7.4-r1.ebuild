@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.4 2008/10/31 11:31:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.5 2010/08/23 15:48:35 hwoarang Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.directfb.org/dfbsee.xml"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 -sparc x86"
+KEYWORDS="amd64 -sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/DirectFB-0.9.24"
