@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.171 2010/08/23 20:47:12 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.172 2010/08/23 21:54:42 zorry Exp $
+
+  23 Aug 2010; Magnus Granberg <zorry@gentoo.org> package.use.mask:
+  Undo the change for hardened #280413
 
   23 Aug 2010; Magnus Granberg <zorry@gentoo.org> package.use.mask:
   Moved hardened from default/linux/package.use.mask #280413
