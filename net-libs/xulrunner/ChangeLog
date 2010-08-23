@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.351 2010/08/13 19:38:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.352 2010/08/23 14:53:27 darkside Exp $
+
+  23 Aug 2010; Jeremy Olexa <darkside@gentoo.org>
+  xulrunner-1.9.2.8-r1.ebuild:
+  Use system libevent to fix build error on obscure platforms. Approved by
+  mozilla team
 
   13 Aug 2010; Lars Wendler <polynomial-c@gentoo.org>
   xulrunner-1.9.2.8.ebuild:
