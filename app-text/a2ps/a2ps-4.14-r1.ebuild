@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r1.ebuild,v 1.7 2010/07/03 23:03:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r1.ebuild,v 1.8 2010/08/23 07:16:41 vapier Exp $
 
 inherit eutils autotools elisp-common
 
@@ -66,6 +66,8 @@ src_unpack() {
 
 	# fix compilation error due to obstack.h issue, bug 269638
 	epatch "${FILESDIR}/${P}-ptrdiff_t.patch"
+
+	epatch "${FILESDIR}"/${P}-cleanup.patch
 
 	eautoreconf
 }
