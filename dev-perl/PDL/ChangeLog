@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.93 2010/08/20 21:15:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.94 2010/08/23 13:35:23 tove Exp $
+
+  23 Aug 2010; Torsten Veller <tove@gentoo.org> -PDL-2.4.4.ebuild,
+  PDL-2.4.6.ebuild, PDL-2.4.7.ebuild:
+  Not parallel build safe (#300272). Cleanup
 
 *PDL-2.4.7 (20 Aug 2010)
 

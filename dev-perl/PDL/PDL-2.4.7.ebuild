@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.1 2010/08/20 21:15:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.2 2010/08/23 13:35:23 tove Exp $
 
 EAPI=2
 
@@ -30,6 +30,8 @@ DEPEND=">=sys-libs/ncurses-5.2
 mydoc="DEPENDENCIES DEVELOPMENT MANIFEST* Release_Notes TODO"
 
 SRC_TEST="do"
+
+MAKEOPTS+=" -j1" #300272
 
 src_prepare() {
 	epatch "${FILESDIR}/PDL-2.4.2-makemakerfix.patch"
