@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.97 2010/08/22 08:19:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.98 2010/08/23 01:02:10 jer Exp $
+
+  23 Aug 2010; Jeroen Roovers <jer@gentoo.org> vpopmail-5.4.30-r1.ebuild:
+  Stable for HPPA (bug #285213).
 
   22 Aug 2010; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from metadata.xml
