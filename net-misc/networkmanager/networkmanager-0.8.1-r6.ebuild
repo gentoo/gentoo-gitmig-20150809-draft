@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r5.ebuild,v 1.1 2010/08/23 14:29:11 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r6.ebuild,v 1.1 2010/08/23 15:44:52 dagger Exp $
 
 EAPI="2"
 
@@ -96,6 +96,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-CVE-2010-1172.patch"
 	epatch "${FILESDIR}/${P}-glib-2.25.12-workaround.patch"
 	epatch "${FILESDIR}/${P}-dhclient3.patch"
+	epatch "${FILESDIR}/${P}-dhclient3-fix.patch"
 
 	eautoreconf
 }

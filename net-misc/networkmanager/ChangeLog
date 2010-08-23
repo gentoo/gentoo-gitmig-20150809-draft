@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.83 2010/08/23 14:29:11 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.84 2010/08/23 15:44:52 dagger Exp $
+
+*networkmanager-0.8.1-r6 (23 Aug 2010)
+
+  23 Aug 2010; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-0.8.1-r5.ebuild, +networkmanager-0.8.1-r6.ebuild,
+  +files/networkmanager-0.8.1-dhclient3-fix.patch:
+  Fix dhclient-3 backport. That should fix bug #332157 and bug #331547 for
+  good.
 
 *networkmanager-0.8.1-r5 (23 Aug 2010)
 
