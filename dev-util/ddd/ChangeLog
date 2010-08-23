@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/ddd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.59 2009/09/27 23:21:34 vostorga Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.60 2010/08/23 07:43:21 reavertm Exp $
+
+*ddd-3.3.12-r2 (23 Aug 2010)
+
+  23 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org> +ddd-3.3.12-r2.ebuild,
+  metadata.xml:
+  Take over maintenance, cleanup ebuild a bit, add elfutils dep for ppc32/64
+  (bug 291972), install pdf docs instead of html ones (missing figures).
 
   27 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> -ddd-3.3.11.ebuild, -ddd-3.3.12.ebuild:
   Cleaning out old ebuilds
