@@ -1,14 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.158 2010/08/12 18:53:32 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.159 2010/08/23 16:13:45 dagger Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
-
-# Robert Piasek <dagger@gentoo.org> (5 Aug 2010)
-# Mask dhcp use flag for networkmanager as it
-# depends on dhcp 4 which is masked
->=net-misc/networkmanager-0.8.1 dhclient
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (12 Jul 2010)
 # lirc support is broken in the snapshot
