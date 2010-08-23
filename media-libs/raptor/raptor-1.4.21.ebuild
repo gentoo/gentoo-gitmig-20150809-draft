@@ -1,9 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21.ebuild,v 1.2 2010/08/11 15:56:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21.ebuild,v 1.3 2010/08/23 19:11:25 ssuominen Exp $
 
 EAPI=3
-
 inherit eutils libtool
 
 DESCRIPTION="The RDF Parser Toolkit"
@@ -51,11 +50,13 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable unicode nfc-check) \
 		$(use_enable debug) \
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS NOTICE README
 	dohtml NEWS.html README.html RELEASE.html
+	find "${ED}" -name '*.la' -exec rm -f '{}' +
 }
