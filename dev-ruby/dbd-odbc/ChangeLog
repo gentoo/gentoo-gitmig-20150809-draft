@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbd-odbc
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/ChangeLog,v 1.6 2010/08/20 09:38:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/ChangeLog,v 1.7 2010/08/23 15:27:05 hwoarang Exp $
+
+  23 Aug 2010; Markos Chandras <hwoarang@gentoo.org> dbd-odbc-0.2.5.ebuild:
+  Stable on amd64 wrt bug #333087
 
   20 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   dbd-odbc-0.2.5.ebuild:
