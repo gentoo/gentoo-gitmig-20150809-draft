@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmxres
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/ChangeLog,v 1.7 2008/01/12 13:57:08 drac Exp $
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxres/ChangeLog,v 1.8 2010/08/23 17:52:51 voyageur Exp $
+
+  23 Aug 2010; Bernard Cafarelli <voyageur@gentoo.org> wmxres-1.2.ebuild:
+  Respect LDFLAGS, bug #331821 by flameeyes
 
   12 Jan 2008; Samuli Suominen <drac@gentoo.org> -files/wmxres.desktop,
   -files/wmxres-makefile.patch, wmxres-1.2.ebuild:
