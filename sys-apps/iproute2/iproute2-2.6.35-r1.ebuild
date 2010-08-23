@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r1.ebuild,v 1.3 2010/08/14 15:55:18 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r1.ebuild,v 1.4 2010/08/23 02:29:22 vapier Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/networking/iprou
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="atm berkdb minimal"
+IUSE="atm berkdb ipv6 minimal"
 
 RDEPEND="!net-misc/arpd
 	!minimal? ( berkdb? ( sys-libs/db ) )
@@ -48,6 +48,7 @@ src_prepare() {
 	rm -r include/netinet #include/linux include/ip{,6}tables{,_common}.h include/libiptc
 
 	epatch "${FILESDIR}"/${PN}-2.6.29.1-hfsc.patch #291907
+	use ipv6 || epatch "${FILESDIR}"/${PN}-2.6.35-no-ipv6.patch #326849
 
 	epatch_user
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.159 2010/08/14 15:55:18 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.160 2010/08/23 02:29:22 vapier Exp $
+
+  23 Aug 2010; Mike Frysinger <vapier@gentoo.org> iproute2-2.6.35-r1.ebuild,
+  +files/iproute2-2.6.35-no-ipv6.patch:
+  Allow people to disable ipv6 support #326849 by Pinkbyte.
 
   14 Aug 2010; Harald van Dĳk <truedfx@gentoo.org>
   iproute2-2.6.35-r1.ebuild:
