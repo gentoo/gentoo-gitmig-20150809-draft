@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03-r2.ebuild,v 1.8 2009/05/31 18:24:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03-r2.ebuild,v 1.9 2010/08/23 23:18:51 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="configurable talking ASCII cow (and other characters)"
@@ -15,9 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-lang/perl-5"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed	-i \
 		-e '1 c\#!/usr/bin/perl'\
 		-e 's/\$version/\$VERSION/g'\
@@ -27,7 +26,9 @@ src_unpack() {
 	sed -i \
 		-e "s|%PREFIX%/share/cows|/usr/share/${P}/cows|" cowsay.1 \
 			|| die "sed cowsay.1 failed"
-	epatch "${FILESDIR}/${P}"-tongue.patch
+	epatch \
+		"${FILESDIR}/${P}"-tongue.patch \
+		"${FILESDIR}/${P}"-mech.patch
 }
 
 src_install() {
