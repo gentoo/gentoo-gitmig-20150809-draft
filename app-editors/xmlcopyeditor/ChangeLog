@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xmlcopyeditor
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.15 2010/07/25 18:39:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.16 2010/08/23 07:02:15 tove Exp $
+
+  23 Aug 2010; Torsten Veller <tove@gentoo.org>
+  xmlcopyeditor-1.2.0.6.ebuild:
+  Drop RDEPEND on dev-libs/boost (#293064)
 
 *xmlcopyeditor-1.2.0.6 (25 Jul 2010)
 
