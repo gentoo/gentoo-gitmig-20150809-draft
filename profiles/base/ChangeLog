@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.170 2010/08/23 16:11:22 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.171 2010/08/23 20:47:12 zorry Exp $
+
+  23 Aug 2010; Magnus Granberg <zorry@gentoo.org> package.use.mask:
+  Moved hardened from default/linux/package.use.mask #280413
 
   23 Aug 2010; Robert Piasek <dagger@gentoo.org> package.use.mask:
   I've backported dhclient-3 patch to NM 0.8.1, so there is no more need

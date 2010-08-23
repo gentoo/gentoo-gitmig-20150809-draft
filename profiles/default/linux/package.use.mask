@@ -1,9 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.16 2009/08/20 18:55:43 flameeyes Exp $
-
-sys-devel/gcc hardened
-sys-libs/glibc hardened
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.17 2010/08/23 20:47:13 zorry Exp $
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (20 Aug 2009)
 #
