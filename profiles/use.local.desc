@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5887 2010/08/22 21:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.5888 2010/08/23 09:07:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2953,6 +2953,8 @@ net-nds/389-ds-base:dna - Enable dna (distributed numeric assignment ) plugin - 
 net-nds/389-ds-base:ldapi - Enable LDAP over unix domain socket (LDAPI) support
 net-nds/389-ds-base:pam-passthru - Enable pam-passthru plugin - for simple and fast system services used in ldap
 net-nds/389-ds-base:presence - Enable presence plugin - non-stabdart syntax validation
+net-nds/gosa-core:mail - Manage mail accounts and servers with gosa.
+net-nds/gosa-core:samba - Manage samba accounts with gosa.
 net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
 net-nds/nsscache:nssdb - Depend on sys-libs/libnss_db to handle dbm files.
 net-nds/openldap:experimental - Enable experimental backend options
