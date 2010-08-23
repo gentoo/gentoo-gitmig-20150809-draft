@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r4.ebuild,v 1.1 2010/08/23 11:44:36 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.1-r5.ebuild,v 1.1 2010/08/23 14:29:11 dagger Exp $
 
 EAPI="2"
 
@@ -114,12 +114,12 @@ src_configure() {
 	# default is dhcpcd (if none or both are specified), ISC dchclient otherwise
 	if use dhclient ; then
 		if use dhcpcd ; then
-			ECONF="${ECONF} --with-dhcpcd"
+			ECONF="${ECONF} --with-dhcpcd --without-dhclient"
 		else
-			ECONF="${ECONF} --with-dhclient"
+			ECONF="${ECONF} --with-dhclient --without-dhcpcd"
 		fi
 	else
-		ECONF="${ECONF} --with-dhcpcd"
+		ECONF="${ECONF} --with-dhcpcd --without-dhclient"
 	fi
 
 	# default is NSS (if none or both are specified), GnuTLS otherwise
