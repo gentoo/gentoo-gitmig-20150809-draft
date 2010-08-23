@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.251 2010/08/11 16:45:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.252 2010/08/23 22:18:05 eva Exp $
+
+  23 Aug 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -epiphany-2.26.3-r2.ebuild:
+  Clean up old revision.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> epiphany-2.28.2.ebuild,
   epiphany-2.30.2-r1.ebuild:
