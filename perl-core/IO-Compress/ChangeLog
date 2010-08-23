@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO-Compress
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/ChangeLog,v 1.31 2010/08/23 20:01:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/ChangeLog,v 1.32 2010/08/23 21:07:27 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org> IO-Compress-2.024.ebuild:
+  arm stable, bug #333421
 
   23 Aug 2010; Mike Frysinger <vapier@gentoo.org> IO-Compress-2.021.ebuild,
   IO-Compress-2.024.ebuild, IO-Compress-2.025.ebuild, IO-Compress-2.026.ebuild,

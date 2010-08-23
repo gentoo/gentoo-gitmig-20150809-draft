@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Text-Balanced
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.33 2010/08/20 10:09:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Text-Balanced/ChangeLog,v 1.34 2010/08/23 21:19:27 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org> Text-Balanced-2.02.ebuild:
+  arm stable, bug #333421
 
   20 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   Text-Balanced-2.02.ebuild:
