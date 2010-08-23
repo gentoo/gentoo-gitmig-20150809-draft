@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4495 2010/08/23 22:18:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4496 2010/08/23 22:33:43 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/package.use:
+  Enable some Xfce4 plugins by default.
 
   23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   +desc/xfce_plugins.desc:
