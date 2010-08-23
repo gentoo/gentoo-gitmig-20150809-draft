@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8-r1.ebuild,v 1.6 2010/08/20 10:18:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8-r1.ebuild,v 1.7 2010/08/23 10:49:53 dagger Exp $
 
 EAPI="2"
 
@@ -114,7 +114,7 @@ src_install() {
 	# Add keyfile plugin support
 	keepdir /etc/NetworkManager/system-connections
 	insinto /etc/NetworkManager
-	newins "${FILESDIR}/nm-system-settings.conf" nm-system-settings.conf \
+	newins "${FILESDIR}/nm-system-settings.conf-ifnet" nm-system-settings.conf \
 		|| die "newins failed"
 }
 
