@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.71 2010/08/22 11:28:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.72 2010/08/23 15:37:48 hwoarang Exp $
+
+  23 Aug 2010; Markos Chandras <hwoarang@gentoo.org> perl-tk-804.029.ebuild:
+  Stable on amd64 wrt bug #333573
 
   22 Aug 2010; Torsten Veller <tove@gentoo.org>
   -files/perl-tk-804.027-interix-x11.patch:
