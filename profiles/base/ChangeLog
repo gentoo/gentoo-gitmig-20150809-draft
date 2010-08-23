@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.169 2010/08/16 23:24:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.170 2010/08/23 16:11:22 dagger Exp $
+
+  23 Aug 2010; Robert Piasek <dagger@gentoo.org> package.use.mask:
+  I've backported dhclient-3 patch to NM 0.8.1, so there is no more need
+  to mask that flag.
 
   16 Aug 2010; Jeroen Roovers <jer@gentoo.org> virtuals:
   Remove old style virtual/gsasl thanks to peper.
