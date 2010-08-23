@@ -1,6 +1,49 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.709 2010/08/14 18:55:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.710 2010/08/23 05:51:28 zmedico Exp $
+
+*portage-2.2_rc68 (23 Aug 2010)
+
+  23 Aug 2010; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc68.ebuild:
+  2.2_rc68 version bump. This fixes bug #44796 (package.env for
+  per-package environment variables, bug #267103 (add /etc/portage to
+  CONFIG_PROTECT_MASK), bug #275789 (ignore CVS directories inside
+  package.* config directories), bug #278895 (emerge hangs due to
+  orphan ebuild subprocesses, bug #285191 (RDEPEND.implicit warning for
+  repoman), bug #292083 (package.accept_keywords for profiles), bug
+  #305035 (emerge -p support for PORTAGE_RO_DISTDIR), #308835 (econf
+  support for CONFIG_SHELL), bug #309149 (eend display adjustments),
+  bug #309699 (clarify emerge -e docs), bug #309907 (apply package moves
+  to package.license), bug #310135 (disable repoman changelog.ebuildadded
+  check for git), bug #310947 (prevent emerge atom arguments from expanding
+  to unavailable categories), bug #312085 (improved implicit IUSE support
+  for minimal profiles), bug #315615 (fix config file permission issues
+  with userpriv), bug #315709 and bug #315741 (whitespace and unicode
+  handling for PORTDIR_OVERLAY), bug #317133 (exeinto typo in man page),
+  bug #317775 (UnicodeEncodeError in merge list display), bug #317921
+  (variable typo in man page), bug #318241 (include LICENSE file in
+  tarball), bug #320755 (fix ebuild(1) to only run test phase once), bug
+  #321145 (fix error handling in ebuild.sh), bug #321871 (make repoman
+  check all manifest entries), bug #324075 (fix repoman copyright date
+  warnings for git), bug #324191 (FEATURES=compress-build-logs), bug #325505
+  (UnicodeEncodeError in emerge --info), bug #326553 (repoman warning for
+  preserve_old_lib), bug #326561 (emerge warning about unknown FEATURES
+  settings), bug #326787 (intermittent unsatisfied build-time dependencies
+  with --jobs), bug #327507 (make FEATURES=usersync drop privileges
+  for all rsync invocations), bug #327883 (intermittent loss of build
+  logs), bug #328099 (add warning in FEATURES=ccache docs), bug #328317
+  (merge os-headers before libc), bug #328935 (document  substitution in
+  PORTAGE_ELOG_MAILSUBJECT), bug #329159 (disable file owner lookup when
+  collision features are disabled), bug #329803 (make --depclean show a
+  machine-readable list of selected atoms), bug #330179 (fix emerge to show
+  a masking message instead of missing IUSE when appropriate), bug #330645
+  (autouse AttributeError triggered by missing portage group), bug #330937
+  (handle IOError raisedby array.fromfile() in recent python), bug #331271
+  (fix USE_EXPAND wildcards to work correctly with incremental negation),
+  bug #331413 (clarify atom operator docs), bug #332799 (fix emerge-webrsync
+  to only download bz2 snapshots if tarsync is installed), and bug #332967
+  (movefile issue with binary packages). Bug #210077 tracks all bugs
+  fixed since 2.1.8.3 and 2.2_rc67.
 
   14 Aug 2010; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Use runtests.sh in src_test().
