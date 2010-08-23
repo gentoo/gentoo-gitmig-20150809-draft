@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>xfce</herd>
-<use>
-	<flag name='trash-plugin'>Build Trash plug-in for panel</flag>
-	<flag name='udev'>Enable gudev support (required by <pkg>xfce-extra/thunar-volman</pkg>)</flag>
-</use>
+  <herd>xfce</herd>
+  <use>
+    <flag name='udev'>Enable udev support (required by <pkg>xfce-extra/thunar-volman</pkg>)</flag>
+  </use>
 </pkgmetadata>
