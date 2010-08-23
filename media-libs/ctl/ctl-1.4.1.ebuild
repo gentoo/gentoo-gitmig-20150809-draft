@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.11 2010/08/23 19:01:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ctl/ctl-1.4.1.ebuild,v 1.12 2010/08/23 19:05:29 ssuominen Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ampasctl/${P}.tar.gz"
 LICENSE="AMPAS"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND="media-libs/ilmbase"
 DEPEND="${RDEPEND}

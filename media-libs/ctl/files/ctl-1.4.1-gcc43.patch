@@ -1,6 +1,5 @@
-diff -NrU5 ctl-1.4.1.orig/IlmCtl/CtlLex.h ctl-1.4.1/IlmCtl/CtlLex.h
---- ctl-1.4.1.orig/IlmCtl/CtlLex.h	2008-06-20 18:30:55.000000000 +0200
-+++ ctl-1.4.1/IlmCtl/CtlLex.h	2008-06-20 18:31:24.000000000 +0200
+--- IlmCtl/CtlLex.h
++++ IlmCtl/CtlLex.h
 @@ -58,10 +58,11 @@
  //-----------------------------------------------------------------------------
  
@@ -13,9 +12,8 @@ diff -NrU5 ctl-1.4.1.orig/IlmCtl/CtlLex.h ctl-1.4.1/IlmCtl/CtlLex.h
  
  
  class Lex
-diff -NrU5 ctl-1.4.1.orig/IlmCtlMathTest/testAffineRec.cpp ctl-1.4.1/IlmCtlMathTest/testAffineRec.cpp
---- ctl-1.4.1.orig/IlmCtlMathTest/testAffineRec.cpp	2008-06-20 18:30:55.000000000 +0200
-+++ ctl-1.4.1/IlmCtlMathTest/testAffineRec.cpp	2008-06-20 18:37:21.000000000 +0200
+--- IlmCtlMathTest/testAffineRec.cpp
++++ IlmCtlMathTest/testAffineRec.cpp
 @@ -43,13 +43,14 @@
  // OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  // IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -32,9 +30,8 @@ diff -NrU5 ctl-1.4.1.orig/IlmCtlMathTest/testAffineRec.cpp ctl-1.4.1/IlmCtlMathT
  #include <ImathVec.h>
  
  using namespace std;
-diff -NrU5 ctl-1.4.1.orig/IlmCtlMathTest/testGaussRec.cpp ctl-1.4.1/IlmCtlMathTest/testGaussRec.cpp
---- ctl-1.4.1.orig/IlmCtlMathTest/testGaussRec.cpp	2008-06-20 18:30:55.000000000 +0200
-+++ ctl-1.4.1/IlmCtlMathTest/testGaussRec.cpp	2008-06-20 18:37:31.000000000 +0200
+--- IlmCtlMathTest/testGaussRec.cpp
++++ IlmCtlMathTest/testGaussRec.cpp
 @@ -43,13 +43,14 @@
  // OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  // IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -51,9 +48,8 @@ diff -NrU5 ctl-1.4.1.orig/IlmCtlMathTest/testGaussRec.cpp ctl-1.4.1/IlmCtlMathTe
  #include <ImathVec.h>
  
  using namespace std;
-diff -NrU5 ctl-1.4.1.orig/IlmCtlSimd/CtlSimdReg.h ctl-1.4.1/IlmCtlSimd/CtlSimdReg.h
---- ctl-1.4.1.orig/IlmCtlSimd/CtlSimdReg.h	2008-06-20 18:30:55.000000000 +0200
-+++ ctl-1.4.1/IlmCtlSimd/CtlSimdReg.h	2008-06-20 18:31:24.000000000 +0200
+--- IlmCtlSimd/CtlSimdReg.h
++++ IlmCtlSimd/CtlSimdReg.h
 @@ -50,10 +50,11 @@
  #define INCLUDED_CTL_SIMD_REG_H
  
@@ -66,9 +62,8 @@ diff -NrU5 ctl-1.4.1.orig/IlmCtlSimd/CtlSimdReg.h ctl-1.4.1/IlmCtlSimd/CtlSimdRe
  //
  //	Registers for the SIMD color transformation engine
  //
-diff -NrU5 ctl-1.4.1.orig/IlmCtlTest/testExamples.cpp ctl-1.4.1/IlmCtlTest/testExamples.cpp
---- ctl-1.4.1.orig/IlmCtlTest/testExamples.cpp	2008-06-20 18:30:55.000000000 +0200
-+++ ctl-1.4.1/IlmCtlTest/testExamples.cpp	2008-06-20 18:41:52.000000000 +0200
+--- IlmCtlTest/testExamples.cpp
++++ IlmCtlTest/testExamples.cpp
 @@ -43,10 +43,11 @@
  // OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  // IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -81,9 +76,8 @@ diff -NrU5 ctl-1.4.1.orig/IlmCtlTest/testExamples.cpp ctl-1.4.1/IlmCtlTest/testE
  #include <CtlType.h>
  #include <assert.h>
  
-diff -NrU5 ctl-1.4.1.orig/IlmCtlTest/testVarying.cpp ctl-1.4.1/IlmCtlTest/testVarying.cpp
---- ctl-1.4.1.orig/IlmCtlTest/testVarying.cpp	2008-06-20 18:30:55.000000000 +0200
-+++ ctl-1.4.1/IlmCtlTest/testVarying.cpp	2008-06-20 18:43:28.000000000 +0200
+--- IlmCtlTest/testVarying.cpp
++++ IlmCtlTest/testVarying.cpp
 @@ -49,10 +49,11 @@
  #include <CtlSimdInterpreter.h>
  #include <CtlFunctionCall.h>
@@ -96,9 +90,8 @@ diff -NrU5 ctl-1.4.1.orig/IlmCtlTest/testVarying.cpp ctl-1.4.1/IlmCtlTest/testVa
  #include <sstream>
  #include <limits>
  #include <half.h>
-diff -NrU5 ctl-1.4.1.orig/IlmCtlTest/testVaryingReturn.cpp ctl-1.4.1/IlmCtlTest/testVaryingReturn.cpp
---- ctl-1.4.1.orig/IlmCtlTest/testVaryingReturn.cpp	2008-06-20 18:30:55.000000000 +0200
-+++ ctl-1.4.1/IlmCtlTest/testVaryingReturn.cpp	2008-06-20 18:46:34.000000000 +0200
+--- IlmCtlTest/testVaryingReturn.cpp
++++ IlmCtlTest/testVaryingReturn.cpp
 @@ -49,10 +49,11 @@
  #include <CtlSimdInterpreter.h>
  #include <CtlFunctionCall.h>
