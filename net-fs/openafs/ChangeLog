@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.166 2010/08/21 22:10:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.167 2010/08/23 22:01:06 vapier Exp $
+
+*openafs-1.4.12.1-r2 (23 Aug 2010)
+
+  23 Aug 2010; Mike Frysinger <vapier@gentoo.org> +openafs-1.4.12.1-r2.ebuild:
+  Tweak lwp install a bit more #330061 by Andrew Savchenko.
 
 *openafs-1.4.12.1-r1 (21 Aug 2010)
 
