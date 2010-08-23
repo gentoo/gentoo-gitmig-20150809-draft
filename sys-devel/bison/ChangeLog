@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.93 2010/08/13 17:17:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.94 2010/08/23 20:10:02 maekke Exp $
+
+  23 Aug 2010; Markus Meier <maekke@gentoo.org> bison-2.4.2.ebuild:
+  arm stable, bug #331577
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> bison-2.4.2.ebuild:
   Marked ppc/ppc64 stable for bug #331577.
