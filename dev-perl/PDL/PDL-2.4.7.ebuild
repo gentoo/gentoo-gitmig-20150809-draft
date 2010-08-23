@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.2 2010/08/23 13:35:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.7.ebuild,v 1.3 2010/08/23 13:39:54 tove Exp $
 
 EAPI=2
 
@@ -85,7 +85,6 @@ pkg_postinst() {
 		elog "You must create perldl.db by running"
 	fi
 	elog "perl ${VENDOR_ARCH}/PDL/Doc/scantree.pl"
-	epause 3
 	elog "PDL requires that glx and dri support be enabled in"
 	elog "your X configuration for certain parts of the graphics"
 	elog "engine to work. See your X's documentation for futher"
