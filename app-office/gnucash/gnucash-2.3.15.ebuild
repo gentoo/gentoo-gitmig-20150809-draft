@@ -1,9 +1,12 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.3.12.ebuild,v 1.1 2010/05/19 08:32:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.3.15.ebuild,v 1.1 2010/08/23 13:23:44 tove Exp $
 
-EAPI=2
+EAPI=3
 
+#PYTHON_DEPEND="python? 2:2.4"
+
+#inherit eutils python gnome2
 inherit eutils gnome2
 
 DOC_VER="2.2.0"
@@ -16,7 +19,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
-IUSE="+doc ofx hbci chipcard debug quotes sqlite postgres mysql webkit"
+#IUSE="+doc ofx hbci chipcard debug mysql python quotes sqlite postgres webkit"
+IUSE="+doc ofx hbci chipcard debug mysql quotes sqlite postgres webkit"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.in)
 
@@ -89,6 +93,22 @@ pkg_setup() {
 		--disable-doxygen
 		--enable-locale-specific-tax
 		--disable-error-on-warning"
+#		$(use_enable python python-bindings)
+
+#	if use python ; then
+#		python_set_active_version 2
+#		python_pkg_setup
+#	fi
+}
+
+src_unpack() {
+	default
+	cp "${FILESDIR}"/test-dbi-business-stuff.h "${S}"/src/backend/dbi/test || die
+}
+
+src_prepare() {
+	gnome2_src_prepare
+	: > "${S}"/py-compile
 }
 
 src_test() {
