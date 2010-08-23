@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.98 2010/08/11 20:46:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.99 2010/08/23 22:34:39 ssuominen Exp $
+
+  23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> thunar-1.0.1.ebuild,
+  thunar-1.0.2.ebuild, thunar-1.1.1.ebuild:
+  Convert USE="trash-plugin" to XFCE_PLUGINS="trash" expand.
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> thunar-1.0.2.ebuild:
   Marked ppc stable for bug #323729.

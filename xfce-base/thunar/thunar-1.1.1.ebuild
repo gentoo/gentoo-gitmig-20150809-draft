@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.1.ebuild,v 1.5 2010/08/08 13:24:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.1.1.ebuild,v 1.6 2010/08/23 22:34:39 ssuominen Exp $
 
 EAPI=3
 inherit virtualx xfconf
@@ -14,7 +14,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/1.1/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="dbus debug exif libnotify pcre startup-notification test +trash-plugin udev"
+IUSE="dbus debug exif libnotify pcre startup-notification test xfce_plugins_trash udev"
 
 COMMON_DEPEND=">=xfce-base/exo-0.5.3
 	>=dev-libs/glib-2.18:2
@@ -27,7 +27,7 @@ COMMON_DEPEND=">=xfce-base/exo-0.5.3
 	libnotify? ( x11-libs/libnotify )
 	pcre? ( >=dev-libs/libpcre-6 )
 	startup-notification? ( x11-libs/startup-notification )
-	trash-plugin? ( dev-libs/dbus-glib
+	xfce_plugins_trash? ( dev-libs/dbus-glib
 		>=xfce-base/xfce4-panel-4.3.90 )
 	udev? ( >=sys-fs/udev-145[extras] )"
 RDEPEND="${COMMON_DEPEND}
@@ -52,7 +52,7 @@ pkg_setup() {
 		$(use_enable pcre)
 		--with-html-dir=${EPREFIX}/usr/share/doc/${PF}/html"
 
-	if use trash-plugin; then
+	if use xfce_plugins_trash; then
 		XFCONF="${XFCONF} --enable-dbus"
 	else
 		XFCONF="${XFCONF} --disable-tpa-plugin"

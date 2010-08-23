@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.0.2.ebuild,v 1.8 2010/08/11 20:46:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.0.2.ebuild,v 1.9 2010/08/23 22:34:39 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/t/T}
@@ -13,7 +13,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/1.0/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="dbus debug doc exif gnome hal pcre startup-notification +trash-plugin"
+IUSE="dbus debug doc exif gnome hal pcre startup-notification xfce_plugins_trash"
 
 RDEPEND=">=dev-lang/perl-5.6
 	>=dev-libs/glib-2.6:2
@@ -35,7 +35,7 @@ RDEPEND=">=dev-lang/perl-5.6
 	gnome? ( gnome-base/gconf )
 	pcre? ( >=dev-libs/libpcre-6 )
 	startup-notification? ( x11-libs/startup-notification )
-	trash-plugin? ( dev-libs/dbus-glib
+	xfce_plugins_trash? ( dev-libs/dbus-glib
 		>=xfce-base/xfce4-panel-4.6 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
@@ -59,7 +59,7 @@ pkg_setup() {
 		XFCONF="${XFCONF} --with-volume-manager=none"
 	fi
 
-	if use trash-plugin; then
+	if use xfce_plugins_trash; then
 		XFCONF="${XFCONF} --enable-dbus"
 	else
 		XFCONF="${XFCONF} --disable-tpa-plugin"
