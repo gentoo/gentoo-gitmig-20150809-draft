@@ -1,6 +1,10 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.12 2010/08/20 13:50:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.13 2010/08/23 15:00:55 fauli Exp $
+
+  23 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  podofo-0.8.1-r1.ebuild:
+  stable x86, bug 333627
 
 *podofo-0.8.1-r1 (20 Aug 2010)
 
