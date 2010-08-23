@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.118 2010/08/20 07:51:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.119 2010/08/23 07:48:35 djc Exp $
+
+  23 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> docutils-0.7.ebuild:
+  Fix bug 333361: installation on Python 3 bombs out with decoding error.
 
   20 Aug 2010; Christian Faulhammer <fauli@gentoo.org> docutils-0.7.ebuild:
   stable x86, bug 333191
