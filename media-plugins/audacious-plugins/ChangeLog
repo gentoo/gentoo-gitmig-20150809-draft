@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.179 2010/08/13 21:30:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.180 2010/08/23 22:15:01 chainsaw Exp $
+
+*audacious-plugins-2.4_rc3 (23 Aug 2010)
+
+  23 Aug 2010; <chainsaw@gentoo.org> -audacious-plugins-2.4_rc1.ebuild,
+  +audacious-plugins-2.4_rc3.ebuild:
+  One more release candidate. Translation updates, bugfixes, builds again on
+  PowerPC. Closes bug #333365 by John Ross Hunt.
 
 *audacious-plugins-2.4_rc2 (13 Aug 2010)
 
