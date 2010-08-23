@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.173 2010/08/23 13:21:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.174 2010/08/23 13:34:28 djc Exp $
+
+  23 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> -openvpn-2.0.6.ebuild,
+  -openvpn-2.0.7-r2.ebuild, -files/openvpn-2.0.7-pam.patch,
+  -files/openvpn-2.0.7-persistent.patch, -openvpn-2.1_rc19.ebuild,
+  -openvpn-2.1_rc20.ebuild, -openvpn-2.1_rc21.ebuild:
+  Clean up old versions.
 
   23 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Add myself as a maintainer.
