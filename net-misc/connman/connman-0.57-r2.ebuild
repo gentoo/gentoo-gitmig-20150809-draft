@@ -23,7 +23,6 @@ RDEPEND=">=dev-libs/glib-2.16
 	dhclient? ( net-misc/dhcp )
 	ofono? ( net-misc/ofono )
 	policykit? ( >=sys-auth/policykit-0.7 )
-	resolvconf? ( net-dns/openresolv )
 	udev? ( >=sys-fs/udev-141 )
 	wifi? ( >=net-wireless/wpa_supplicant-0.7[dbus] )
 	wimax? ( net-wireless/wimax )"
