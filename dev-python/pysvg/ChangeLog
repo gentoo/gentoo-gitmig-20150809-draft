@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvg
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/ChangeLog,v 1.5 2010/02/07 21:05:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/ChangeLog,v 1.6 2010/08/23 12:44:58 djc Exp $
+
+  23 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> pysvg-0.2.0.ebuild:
+  Update license per HOMEPAGE, see bug 258673.
 
   07 Feb 2010; Peter Volkov <pva@gentoo.org> pysvg-0.1.6.ebuild,
   pysvg-0.2.0.ebuild:
