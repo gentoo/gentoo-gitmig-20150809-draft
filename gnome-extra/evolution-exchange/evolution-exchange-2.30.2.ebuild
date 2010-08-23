@@ -1,10 +1,10 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.2.ebuild,v 1.4 2010/08/01 12:01:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.2.ebuild,v 1.5 2010/08/23 21:36:16 eva Exp $
 
 EAPI="2"
 
-inherit autotools gnome2
+inherit gnome2
 
 DESCRIPTION="Evolution module for connecting to Microsoft Exchange"
 HOMEPAGE="http://www.novell.com/products/desktop/features/evolution.html"
@@ -20,23 +20,22 @@ RDEPEND="
 	>=dev-libs/glib-2.16.0
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/gconf-2.0
-	>=gnome-base/libbonobo-2.20.3
-	>=gnome-base/libglade-2.0
-	>=gnome-base/libgnomeui-2.0
 	dev-libs/libxml2
 	net-libs/libsoup:2.4
-	>=net-nds/openldap-2.1.30-r2"
+	>=net-nds/openldap-2.1.30-r2
+	virtual/krb5"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
-	dev-util/gtk-doc-am
-	doc? ( >=dev-util/gtk-doc-1 )"
+	>=dev-util/gtk-doc-am-1.9
+	doc? ( >=dev-util/gtk-doc-1.9 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
+		--with-krb5=/usr
 		--with-openldap
 		--disable-static
 		$(use_with debug e2k-debug)
@@ -55,7 +54,4 @@ src_prepare() {
 
 	sed 's:-DG.*DISABLE_SINGLE_INCLUDES::g' -i configure.ac configure \
 		|| die "sed 3 failed"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
 }
