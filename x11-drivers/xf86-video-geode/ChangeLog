@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-geode
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.8 2010/06/01 12:37:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.9 2010/08/23 07:46:39 scarabeus Exp $
+
+*xf86-video-geode-2.11.9 (23 Aug 2010)
+
+  23 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-video-geode-2.10.1.ebuild, -xf86-video-geode-2.11.3.ebuild,
+  +xf86-video-geode-2.11.9.ebuild, metadata.xml:
+  Version bump. Drop older. Migrate to new eclass. Add x11 to metadata.xml.
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xf86-video-geode-2.11.8.ebuild:
