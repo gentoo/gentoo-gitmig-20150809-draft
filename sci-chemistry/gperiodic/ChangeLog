@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/gperiodic
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.13 2010/08/22 20:01:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.14 2010/08/23 19:48:31 xarthisius Exp $
+
+*gperiodic-2.0.10-r2 (23 Aug 2010)
+
+  23 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -gperiodic-2.0.7.ebuild, -gperiodic-2.0.10-r1.ebuild,
+  +gperiodic-2.0.10-r2.ebuild, +files/gperiodic-2.0.10-makefile.patch:
+  Simplify ebuild by patching Makefile, correct nls, fix parallel make.
+  Remove old version using built_with_use.
 
 *gperiodic-2.0.10-r1 (22 Aug 2010)
 
